@@ -123,7 +123,7 @@ As you set up apps and app policies, think about your organization's requirement
 | Task | Detail | 
 | ---- | ------ | 
 |[Add Intune Company Portal app ](../apps/apps-company-portal-macos.md)|Learn how to get Company Portal on devices or instruct users how to do it on their own. | 
-|[Add Microsoft Edge](../apps/manage-microsoft-edge.md) | Add and assign Microsoft Edge in Intune. | 
+|[Add Microsoft Edge](../apps/apps-edge-macos.md) | Add and assign Microsoft Edge in Intune. | 
 |[Add Microsoft 365 ](../apps/apps-add-office365-macos.md)| Add and assign Microsoft 365 apps in Intune. | 
 |[Add line-of-business apps ](../apps/lob-apps-macos.md)| Add and assign macOS line-of-business (LOB) apps in Intune.| 
 |[Assign apps to groups ](../apps/apps-deploy.md)|After you add apps to Intune, assign them to users and devices.|

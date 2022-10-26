@@ -1,19 +1,18 @@
 ---
-title: "SMS_SiteAndSubsites Class"
-titleSuffix: "Configuration Manager"
-description: "The SMS_SiteAndSubsites WMI class reads the current site and child site information."
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: SMS_SiteAndSubsites Class
+titleSuffix: Configuration Manager
+description: The SMS_SiteAndSubsites WMI class reads the current site and child site information.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: a0d97ac9-83c1-42cd-a385-903efab4c0e9
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_SiteAndSubsites Server WMI Class
 The `SMS_SiteAndSubsites` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that reads the current site and child site information.  

@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Android Enterprise device settings in Microsoft Intune
-description: On Android Enterprise or Android for Work devices, restrict settings on the device. Restrict copy and paste, notifications, app permissions, data sharing, password length, sign in failures, use fingerprint to unlock, reuse passwords, and enable bluetooth sharing of work contacts. Configure devices as a dedicated device kiosk to run one app, or multiple apps.
+title: Android Enterprise device restriction settings in Microsoft Intune
+description: On Android Enterprise or Android for Work devices, restrict settings on the device using Microsoft Intune. Restrict copy and paste, notifications, app permissions, data sharing, password length, sign in failures, use fingerprint to unlock, reuse passwords, and enable bluetooth sharing of work contacts. Configure devices as a dedicated device kiosk to run one app, or multiple apps.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/18/2022
-ms.topic: conceptual
+ms.date: 10/10/2022
+ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
@@ -28,6 +28,7 @@ ms.custom: intune-azure, seodec18
 ms.collection:
   - M365-identity-device-management
   - highpri
+  - highseo
 ---
 
 # Android Enterprise device settings to allow or restrict features using Intune
@@ -41,7 +42,7 @@ This feature applies to:
 - Android Enterprise corporate owned fully managed (COBO)
 - Android Enterprise corporate owned dedicated devices (COSU)
 
-For Android device administrator, see [Android and Samsung Knox Standard device restrictions](device-restrictions-android.md).
+For AOSP, go to [Android (AOSP) device settings to allow or restrict features using Intune](device-restrictions-android-aosp.md).
 
 ## Before you begin
 
@@ -58,11 +59,11 @@ These settings apply to Android Enterprise enrollment types where Intune control
 
 Some settings aren't supported by all enrollment types. To see which settings are supported by which enrollment types, see the user interface. Each setting is under a heading that indicates the enrollment types that can use the setting.
 
-:::image type="content" source="./media/device-restrictions-android-for-work/setting-headers.png" alt-text="See the Android Enterprise Users and Accounts setting headers and the enrollment types they apply to in Microsoft Intune and Endpoint Manager.":::
+:::image type="content" source="./media/device-restrictions-android-for-work/setting-headers.png" alt-text="Screenshot that shows the Android Enterprise Users and Accounts setting headers and the enrollment types they apply to in Microsoft Intune.":::
 
 For corporate-owned devices with a work profile, some settings only apply in the work profile. These settings have **(work profile-level)** in the setting name. For fully managed and dedicated devices, these settings apply device-wide. 
 
-:::image type="content" source="./media/device-restrictions-android-for-work/work-profile-level.png" alt-text="See the Android Enterprise application settings that apply at the corporate-owned work profile level in Microsoft Intune and Endpoint Manager.":::
+:::image type="content" source="./media/device-restrictions-android-for-work/work-profile-level.png" alt-text="Screenshot that shows the Android Enterprise application settings that apply at the corporate-owned work profile level in Microsoft Intune.":::
 
 ### General
 
@@ -88,7 +89,7 @@ For corporate-owned devices with a work profile, some settings only apply in the
 - **Beam data using NFC (work-profile level)**: **Block** prevents using the Near Field Communication (NFC) technology to beam data from apps. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow using NFC to share data between devices.  
 - **Developer settings**: Choose **Allow** to let users access developer settings on the device. When set to **Not configured** (default), Intune doesn’t change or update this setting. By default, the OS might prevent users from accessing developer settings on the device.
 - **Microphone adjustment**: **Block** prevents users from unmuting the microphone and adjusting the microphone volume. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to use and adjust the volume of the microphone on the device.
-- **Factory reset protection emails**: Choose **Google account email addresses**. Enter the email addresses of device administrators that can unlock the device after it's wiped. Be sure to separate the email addresses with a semi-colon, such as `admin1@gmail.com;admin2@gmail.com`. If an email isn't entered, anyone can unlock the device after it's restored to the factory settings. These emails only apply when a non-user factory reset is run, such as running a factory reset using the recovery menu.
+- **Factory reset protection emails**: Choose **Google account email addresses**. Enter the email addresses of device administrators that can unlock the device after it's wiped. Be sure to separate the email addresses with a semi-colon, such as `admin1@gmail.com;admin2@gmail.com`. These emails only apply when a non-user factory reset is run, such as running a factory reset using the recovery menu.
 
   When set to **Not configured** (default), Intune doesn't change or update this setting.
 
@@ -200,6 +201,22 @@ For corporate-owned devices with a work profile, some settings only apply in the
 
 - **Threat scan on apps**: **Require** (default) enables Google Play Protect to scan apps before and after they're installed. If it detects a threat, it may warn users to remove the app from the device. When set to **Not configured**, Intune doesn't change or update this setting. By default, the OS might not enable or run Google Play Protect to scan apps.
 
+- **Common Criteria mode**: **Require** enables an elevated set of security standards that are most often used in highly sensitive organizations, such as government establishments. Those settings include but aren't limited to:
+
+  - AES-GCM encryption of Bluetooth Long Term Keys
+  - Wi-Fi configuration stores
+  - Blocks bootloader download mode, the manual method for software updates
+  - Mandates additional key zeroization on key deletion
+  - Prevents non-authenticated Bluetooth connections
+  - Requires that FOTA updates have 2048-bit RSA-PSS signature
+
+  When set to **Not configured** (default), Intune doesn't change or update this setting.
+
+  Learn more about Common Criteria:  
+  - [Common Criteria for Information Technology Security Evaluation](https://www.commoncriteriaportal.org) at commoncriteriaportal.org  
+  - [CommonCriteriaMode](https://developers.google.com/android/management/reference/rest/v1/enterprises.policies#commoncriteriamode) in the Android Management API documentation.  
+  - [Knox Deep Dive: Common Criteria Mode](https://www.samsungknox.com/blog/knox-deep-dive-common-criteria-mode) at samsungknox.com
+
 ### Device experience
 
 Use these settings to configure a kiosk-style experience on your dedicated devices, or to customize the home screen experiences on your fully managed devices. You can configure devices to run one app, or run many apps. When a device is set with kiosk mode, only the apps you add are available.
@@ -240,7 +257,7 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
 
           When you add items, select the context menu to remove items, or move them to different positions:
 
-          :::image type="content" source="./media/device-restrictions-android-for-work/custom-layout-context-menu.png" alt-text="Move your apps and folders to different locations on Android Enterprise dedicated devices running in multi-app mode in Microsoft Intune and Endpoint Manager.":::
+          :::image type="content" source="./media/device-restrictions-android-for-work/custom-layout-context-menu.png" alt-text="Screenshot that shows how to move your apps and folders to different locations on Android Enterprise dedicated devices running in multi-app mode in Microsoft Intune.":::
 
       - **Add**: Select your apps from the list.
 
@@ -536,7 +553,7 @@ If you want to enable side-loading, set the **Allow installation from unknown so
 
 - **Clear local data in apps not optimized for Shared device mode**: Add any app not optimized for shared device mode to the list. The app's local data will be cleared whenever a user signs out of an app that's optimized for shared device mode. Available for dedicated devices enrolled with Shared mode running Android 9 and later. 
 
-  When you use this setting, users can't initiate sign out from non-optimized apps and get single sign-out. 
+  When you use this setting, users can't initiate sign out from non-optimized apps and get single sign-out.
   - Users will need to sign out of an app that has been optimized for Shared Device mode. Microsoft apps that are optimized for Shared device mode on Android include Teams and Intune’s Managed Home Screen. 
   - For apps that haven't been optimized for Shared Device mode, deleting application data extends to local app storage only. Data may be left in other areas of the device. User identifying artifacts such as email address and username may be left behind on the app and visible by others. 
   - Non-optimized apps that provide support for multiple accounts could exhibit indeterminate behavior and are therefore not recommended. 
@@ -653,15 +670,17 @@ The Intune default message is translated for all languages in the [Endpoint Mang
 
 You can configure the following settings:
 
-- **Short support message**: When users try to change a setting that's managed by the organization, a short message is shown. Use these settings to customize this message. You can enter a different message for different languages. By default, this message is in **English (United States)**.  
+- **Short support message**: When users try to change a setting that's managed by the organization, a short message is shown.
 
-  - **All, except when specified**: This message is the Intune default message, and is shown for all languages. If you don't select a locale and don't enter a custom message, then this text is automatically shown. This text is also automatically translated to the device's default language.
+  Using the following settings, you can customize this message and enter a different message for different languages. By default, this message is in **English (United States)**.
+
+  - **All, except when specified**: This message is the Intune default message, and is shown for all languages. If you don't enter a custom message, then this text is automatically shown. This text is also automatically translated to the device's default language.
 
     You can change this message. Any changes aren't translated. If you delete all the text in this message and leave this setting blank, then the following original short Intune default message is used and is translated:
 
     `You do not have permission for this action. For more information, contact your IT admin.`
 
-  - **Select Locale**: Select the locale or region to show the message.
+  - **Select Locale**: Select the locale or region to show a different custom message for that specific locale.
 
     For example, to show a custom message on devices using **Spanish** as the default language, select **Spanish (Spain)**. Only devices using the **Spanish (Spain)** default language will see your custom message. All other languages will see the **All, except when specified** message text.
 
@@ -669,19 +688,17 @@ You can configure the following settings:
 
   - **Message**: Enter the text you want shown, a max of 200 characters. The text you enter isn't translated to the device's default language. So if you want to show a message in Spanish, enter the text in Spanish.
 
-- **Long support message**: On the device, in **Settings** > **Security** > **Device admin apps** > **Device Policy**, a long support message is shown. Use this setting to customize this message. You can enter a different message for different languages. By default, this message is in **English (United States)**.  
+- **Long support message**: On the device, in **Settings** > **Security** > **Device admin apps** > **Device Policy**, a long support message is shown.
 
-  In the short message, you can also select **Learn more** to see this long message.
+  Using the following settings, you can customize this message and enter a different message for different languages. By default, this message is in **English (United States)**.
 
-  Using these settings, you can customize this message and enter a different message for different languages.
-
-  - **All, except when specified**: This message is the Intune default message, and is shown for all languages. If you don't select a locale and don't enter a custom message, then this text is automatically shown, and is automatically translated to the device's default language.
+  - **All, except when specified**: This message is the Intune default message, and is shown for all languages. If you don't enter a custom message, then this text is automatically shown, and is automatically translated to the device's default language.
 
     You can change this message. Any changes aren't translated. If you delete all the text in this message and leave this setting blank, then the following original long Intune default message is used and is translated:
 
     `The organization's IT admin can monitor and manage apps and data associated with this device, including settings, permissions, corporate access, network activity and the device's location information.`
 
-  - **Select Locale**: Select the locale or region to show the message.
+  - **Select Locale**: Select the locale or region to show a different custom message for that specific locale.
 
     For example, to show a custom message on devices using **Spanish** as the default language, select **Spanish (Spain)**. Only devices using the **Spanish (Spain)** default language will see your custom message. All other languages will see the **All, except when specified** message text.
 
@@ -689,11 +706,46 @@ You can configure the following settings:
 
   - **Message**: Enter the text you want shown, a max of 4096 characters. The text you enter isn't translated to the device's default language. So if you want to show a message in Spanish, enter the text in Spanish.
 
+- **Lock screen message**: Enter the text you want shown on the device lock screen.
+
+  Using the following settings, you can customize this message and enter a different message for different languages. By default, this message is in **English (United States)**.
+
+  - **All, except when specified**: Enter the text you want shown for all languages, a max of 4096 characters. This text is automatically translated to the device's default language. If you don't enter a custom message, then Intune doesn't change or update this setting. By default, the OS might not show a lock screen message.
+
+  - **Select Locale**: Select the locale or region to show a different custom message for that specific locale.
+
+    For example, to show a custom message on devices using **Spanish** as the default language, select **Spanish (Spain)**. Only devices using the **Spanish (Spain)** default language will see your custom message. All other languages will see the **All, except when specified** message text.
+
+    You can add multiple locales and messages.
+
+  - **Message**: Enter the text you want shown, a max of 4096 characters. The text you enter isn't translated to the device's default language. So if you want to show a message in Spanish, enter the text in Spanish.
+
+  When you configure the **Lock screen message**, you can also use the following device tokens to show device-specific information:
+
+  - `{{AADDeviceId}}`: Azure AD device ID
+  - `{{AccountId}}`: Intune tenant ID or account ID
+  - `{{DeviceId}}`: Intune device ID
+  - `{{DeviceName}}`: Intune device name
+  - `{{domain}}`: Domain name
+  - `{{EASID}}`: Exchange Active Sync ID
+  - `{{IMEI}}`: IMEI of the device
+  - `{{mail}}`: Email address of the user
+  - `{{MEID}}`: MEID of the device
+  - `{{partialUPN}}`: UPN prefix before the @ symbol
+  - `{{SerialNumber}}`: Device serial number
+  - `{{SerialNumberLast4Digits}}`: Last four digits of the device serial number
+  - `{{UserId}}`: Intune user ID
+  - `{{UserName}}`: User name
+  - `{{userPrincipalName}}`: UPN of the user
+
+  > [!NOTE]
+  > Variables aren't validated in the UI and are case sensitive. As a result, you may see profiles saved with incorrect input. For example, if you enter `{{DeviceID}}`, instead of `{{deviceid}}` or `{{DEVICEID}}`, then the literal string is shown instead of the device's unique ID. Be sure to enter the correct information. All lowercase or all uppercase variables are supported, but not a mix.
+
 ## Personally owned devices with a work profile
 
 These settings apply to Android Enterprise personally owned devices with a work profile (BYOD).
 
-### Personally owned devices with a work profile settings
+### Personally owned devices with a work profile - settings
 
 - **Copy and paste between work and personal profiles**: **Block** prevents copy-and-paste between work and personal apps. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to share data using copy-and-paste with apps in the personal profile.
 - **Data sharing between work and personal profiles**: Choose if apps in the work profile can share with apps in the personal profile. For example, you can control sharing actions within applications, such as the **Share…** option in the Chrome browser app. This setting doesn't apply to copy/paste clipboard behavior. Your options:

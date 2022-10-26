@@ -6,10 +6,12 @@ ms.date: 04/11/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: sheetg09
+ms.author: sheetg
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
  
 # List of prerequisite checks for Configuration Manager
@@ -696,6 +698,14 @@ All distribution points in the site have the latest version of software distribu
 *Applies to: Management point, distribution point*
 
 The Configuration Manager computer is a member of a Windows domain.
+
+### Desktop Analytics is being retired
+
+<!--14840670--> 
+Desktop Analytics will be retired on November 30, 2022. Check out the new reports in the Microsoft Endpoint Manager admin center. For more information see: https://go.microsoft.com/fwlink/?linkid=2186861.
+
+<!--14840670-->
+
 
 ### Enable site system roles for HTTPS or Enhanced HTTP
 

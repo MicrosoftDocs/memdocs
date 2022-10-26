@@ -5,18 +5,20 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 description: Info and rules for MMS 2019 docathon
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ROBOTS: NOINDEX
 ms.localizationpriority: null
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # MMS 2019 Docathon
 
-During the Midwest Management Summit (MMS) 2019, the Microsoft content team for Configuration Manager and Microsoft Intune are running a docathon. If you're attending the [Docs.microsoft.com hands-on lab](https://sched.co/N6fd) session on Monday, 6 May, that time is to work on contributions with support from the Microsoft writers. The docathon runs the entirety of the conference, and any registered MMS 2019 attendee can participate.
+During the Midwest Management Summit (MMS) 2019, the Microsoft content team for Configuration Manager and Microsoft Intune are running a docathon. If you're attending the [Microsoft Learn hands-on lab](https://sched.co/N6fd) session on Monday, 6 May, that time is to work on contributions with support from the Microsoft writers. The docathon runs the entirety of the conference, and any registered MMS 2019 attendee can participate.
 
-Why should you participate? Docs.microsoft.com is an open-source platform for Microsoft product documentation, powered by GitHub. Microsoft encourages everyone to contribute to the docs! When you contribute, the platform recognizes you in the list of contributors on every article. The following contributions are some of the types that the community can provide:
+Why should you participate? Microsoft Learn is an open-source platform for Microsoft product documentation powered by GitHub. Microsoft encourages everyone to contribute to the documentation! When you contribute, the platform recognizes you in the list of contributors on every article. The following contributions are some of the types that the community can provide:
 
 - Typos
 - Clarifications
@@ -38,16 +40,16 @@ Create a [GitHub account](https://github.com/join)
 
 #### Additional considerations
 
-- Check your company's policy regarding open-source contributions  
+- Check your company's policy regarding open-source contributions.
 
-    > [!Note]  
+    > [!NOTE]
     > Larger contributions will require that you accept the Microsoft open source [Contributor License Agreement (CLA)](https://cla.opensource.microsoft.com/). Review this agreement in advance.  
 
-- Contributions to docs.microsoft.com count toward MVP award consideration  
+- Contributions to Microsoft Learn count toward MVP award consideration.
 
-- Microsoft employees have a few more required one-time steps, and a slightly different contribution process  
+- Microsoft employees have a few more required one-time steps, and a slightly different contribution process.
 
-For more information, see [GitHub account setup](/contribute/get-started-setup-github) in the docs.microsoft.com Contributor Guide.
+For more information, see [GitHub account setup](/contribute/get-started-setup-github) in our contributor guide.
 
 ## Scope
 
@@ -57,7 +59,7 @@ This event is only covering the following GitHub repositories:
 - [SCCMDocs](https://github.com/MicrosoftDocs/SCCMdocs)
 - [sccm-docs-powershell-ref](https://github.com/MicrosoftDocs/sccm-docs-powershell-ref)
 
-You're also welcome and encouraged to make changes to other docs.microsoft.com content, but it won't credit towards this event.
+You're also welcome and encouraged to make changes to other published content, but it won't give credit for this event.
 
 ## Learn the process
 
@@ -75,18 +77,19 @@ Read info on [how to file issues](../../../use-docs.md#about-feedback) and [how 
 
 Start thinking about and planning your goal for this event. What do you want to accomplish?
 
-- Look through existing issues in the in-scope repositories. Labels such as **good-first-issue** or **help-wanted** can identify good starting points. If you want to tackle one of these issues, comment on it with **#MMS2019Docathon** and tag the @author, asking that they assign the issue to you. In other words, [call dibs](https://www.merriam-webster.com/words-at-play/word-origin-dibs) on it. Repeat this process as many times as you want.  
-    For example, in SCCMDocs, where Aaron is the article author: `@aczechowski I'm claiming this issue for #MMS2019Docathon`
+- Look through existing issues in the in-scope repositories. Labels such as **good-first-issue** or **help-wanted** can identify good starting points. If you want to tackle one of these issues, comment on it with **#MMS2019Docathon** and tag the @author, asking that they assign the issue to you. In other words, [call dibs](https://www.merriam-webster.com/words-at-play/word-origin-dibs) on it. Repeat this process as many times as you want.
+
+  - For example, in SCCMDocs, where Aaron is the article author: `@aczechowski I'm claiming this issue for #MMS2019Docathon`
 
 - You know of an issue with an article, but there's not yet any feedback filed. In other words, there's nothing in the **Feedback** section at the bottom of the article. File a new issue, then use the same instructions as above to claim it.  
 
-    - For example, add a code sample, a real-world example, or a common tip.  
+  - For example, add a code sample, a real-world example, or a common tip.
 
-    - Avoid grammar or style changes, unless you talk with Aaron/Erik in advance.  
+  - Avoid grammar or style changes, unless you talk with Aaron/Erik in advance.
 
-    - Your favorite article has a date older than 90 days, before February 6, 2019. You can review it, and then your edit is to the **ms.date** metadata property. That contribution means: "I reviewed this article, and it's still technically accurate, so refresh the date." File an issue to claim it.  
+  - Your favorite article has a date older than 90 days, before February 6, 2019. You can review it, and then your edit is to the **ms.date** metadata property. That contribution means: "I reviewed this article, and it's still technically accurate, so refresh the date." File an issue to claim it.
 
-    - Check the article feedback first to make sure there isn't an open issue for someone that's already claimed it. This action isn't technically required. If you don't do it, and someone else submits first, we'll only take the first contribution.  
+  - Check the article feedback first to make sure there isn't an open issue for someone that's already claimed it. This action isn't technically required. If you don't do it, and someone else submits first, we'll only take the first contribution.
 
 - The one hour lunch session on Monday is dedicated time to work towards these goals. Aaron & Erik are available to help with questions or problems.
 
@@ -103,9 +106,9 @@ The contest runs all week, 6 - 9 May. Any registered MMS 2019 attendee can parti
 
 - **Most impactful**: Based on the following criteria, judged by Aaron & Erik. If you think your submission should qualify, comment in your pull request to convince us why.
 
-    - Benefit to community (50%)
-    - Adherence to Microsoft Style (25%)
-    - Proper markdown (25%)  
+  - Benefit to community (50%)
+  - Adherence to Microsoft Style (25%)
+  - Proper markdown (25%)
 
 The grand prize winner receives the following prizes:
 
@@ -130,13 +133,13 @@ The following awards are calculated by the number of legitimate contributions to
 
 - [Microsoft Style](/style-guide/welcome/)
 
-    - [Quick start](/contribute/style-quick-start)
+  - [Quickstart](/contribute/style-quick-start)
 
-    - [Top 10 tips for Microsoft style and voice](/style-guide/top-10-tips-style-voice)
+  - [Top 10 tips for Microsoft style and voice](/style-guide/top-10-tips-style-voice)
 
 - [Contributor Guide](/contribute)
 
-- [How to use Markdown for writing Docs](/contribute/markdown-reference)
+- [How to use Markdown in Microsoft Learn articles](/contribute/markdown-reference)
 
 ## Official rules
 
@@ -245,7 +248,7 @@ OFFICIAL RULES
 
 12. WINNERS LIST
 
-    The list of prize winners will be posted to https://aka.ms/mms2019docathon within 30 days of May 9, 2019.
+    The list of prize winners will be posted to [MMS 2019 Docathon](https://aka.ms/mms2019docathon) within 30 days of May 9, 2019.
 
 13. PRIVACY
 

@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 07/07/2022
+ms.date: 07/27/2022
 ms.topic: how-to
 ms.service: cloudpc
 ms.subservice:
@@ -32,6 +32,7 @@ ms.collection: M365-identity-device-management
 
 Users can access their Cloud PCs in two different ways:
 
+- [Windows 365 app](https://support.microsoft.com/topic/cbb0d4d5-69d4-4f00-b050-6dc7a02d02d0 )
 - [windows365.microsoft.com](https://Windows365.microsoft.com)
 - Microsoft Remote Desktop
 
@@ -90,9 +91,9 @@ While on windows365.microsoft.com, users can take actions on their Cloud PCs by 
 
 ### Transfer files to and from a Cloud PC
 
-To transfer files from the local device to the Cloud PC, select the upload icon to launch File Explorer. Select the files to transfer them to the Uploads folder on the Cloud PC.
+To transfer files from the local device to the Cloud PC, select the upload icon to launch File Explorer. Select the files to transfer them to the \This PC\Windows365 virtual drive\Uploads folder on the Cloud PC.
 
-To transfer files from the Cloud PC to the local device, copy the files to the Downloads folder on the Cloud PC. The files will be copied to the Downloads folder of the local device.
+To transfer files from the Cloud PC to the local device, copy the files to the Downloads folder on the Cloud PC. The files will be copied to the \This PC\Windows365 virtual drive\Downloads folder of the local device.
 
 #### Restrict users from transferring files to and from Cloud PCs
 

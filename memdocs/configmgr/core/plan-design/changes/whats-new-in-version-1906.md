@@ -6,11 +6,13 @@ ms.date: 10/01/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ROBOTS: NOINDEX
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # What's new in version 1906 of Configuration Manager current branch
@@ -516,12 +518,12 @@ For more information on the dashboard, prerequisites, and using this data, see [
 ## <a name="bkmk_protect"></a> Protection
 
 ### Windows Defender Application Guard file trust criteria
-
+_Applies to version 2203 or earlier_
 <!--3555858-->
 
 There's a new policy setting that enables users to trust files that normally open in Windows Defender Application Guard (WDAG). Upon successful completion, the files will open on the host device instead of in WDAG.
 
-For more information, see [Create and deploy Windows Defender Application Guard policy](../../../protect/deploy-use/create-deploy-application-guard-policy.md#bkmk_FM).
+For more information, see [Create and deploy Windows Defender Application Guard policy](../../../protect/deploy-use/create-deploy-application-guard-policy.md#bkmk_ABS).
 
 
 ## <a name="bkmk_admin"></a> Configuration Manager console

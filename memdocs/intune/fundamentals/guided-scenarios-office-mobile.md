@@ -13,11 +13,13 @@ ms.subservice: fundamentals
 ms.localizationpriority: medium
 ms.technology:
 
-ms.reviewer: dagerrit
+ms.reviewer: ilwu
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection: 
+- M365-identity-device-management
+- tier3
 ---
 
 # Guided scenario - Secure Microsoft Office mobile apps

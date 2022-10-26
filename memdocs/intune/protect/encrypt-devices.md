@@ -23,6 +23,7 @@ ms.custom: intune-azure
 ms.collection: 
   - M365-identity-device-management
   - highpri
+  - highseo
 ---
 
 # Manage BitLocker policy for Windows devices with Intune
@@ -136,7 +137,8 @@ Depending on the type of policy that you use to silently enable BitLocker, confi
 **Endpoint security disk encryption policy** - Configure the following settings in the BitLocker profile:
 
 - **Hide prompt about third-party encryption** = *Yes*
-- **Alow standard users to enable encryption during Autopilot** = *Yes*
+- **Allow standard users to enable encryption during Autopilot** = *Yes*
+- **Require Key File Creation** = *Blocked or Allowed*
 
 **Device configuration policy** - Configure the following settings in the *Endpoint protection* template or a *custom settings* profile:
 
@@ -187,7 +189,7 @@ To change the disk encryption type between full disk encryption and used space o
 
 #### TPM startup PIN or key
 
-A device **must not require** use of a startup PIN or startup key.
+A device **must not be set to require** a startup PIN or startup key.
 
 When a TPM startup PIN or startup key is required on a device, BitLocker can't silently enable on the device and instead requires interaction from the end user. Settings to configure the TPM startup PIN or key are available in both the endpoint protection template and the BitLocker policy. By default, these policies do not configure these settings.
 
@@ -214,7 +216,7 @@ Following are the relevant settings for each profile type:
 
 ### View details for recovery keys
 
-Intune provides access to the Azure AD blade for BitLocker so you can view BitLocker Key IDs and recovery keys for your Windows 10/11 devices, from within the Microsoft Endpoint Manager admin center. Support to view recovery keys can also [extend to your tenant-attached devices](#view-recovery-keys-for-tenant-attached devices).
+Intune provides access to the Azure AD blade for BitLocker so you can view BitLocker Key IDs and recovery keys for your Windows 10/11 devices, from within the Microsoft Endpoint Manager admin center. Support to view recovery keys can also [extend to your tenant-attached devices](#view-recovery-keys-for-tenant-attached-devices).
 
 To be accessible, the device must have its keys escrowed to Azure AD.
 

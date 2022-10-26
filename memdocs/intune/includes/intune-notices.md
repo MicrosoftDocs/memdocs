@@ -4,12 +4,69 @@ description: include file
 author: ErikjeMS  
 ms.service: microsoft-intune
 ms.topic: include
-ms.date: 06/16/2022
+ms.date: 08/09/2022
 ms.author: erikje
 ms.custom: include file
 ---
 
-These notices provide important information that can help you prepare for future Intune changes and features.  
+These notices provide important information that can help you prepare for future Intune changes and features.
+
+### Plan for Change: Ending support for Company Portal authentication method for iOS/iPadOS ADE enrollment
+
+As we continue to invest in Setup Assistant with modern authentication, which is the Apple supported path to require enrollment during Setup Assistant with optional multi-factor authentication, we plan to remove the Company Portal authentication method from new and existing iOS/iPadOS ADE enrollment profiles in Q1 of CY2023. This will include removing the Run Company Portal in Single App Mode until authentication setting.
+
+### How does this affect you or your users?
+
+In Q1 of CY2023, new enrollments (new devices that are targeted with an existing enrollment profile or devices re-enrolling) that are targeted with an existing enrollment profile with the Company Portal authentication method, will not be able to enroll.
+
+This will not impact existing enrolled devices unless the device is re-enrolled after this change. The device will not be able to re-enroll until the authentication method is switched in the enrollment profile to Setup Assistant with modern authentication.
+
+New iOS/iPadOS enrollment profiles will not have the option to select Company Portal as the authentication method.
+
+If you have not already, you will need to move to use Setup Assistant with modern authentication. Within the Microsoft Endpoint Manager admin center, you will want to either create a new ADE enrollment profile, or edit your existing enrollment profile to use the “Setup assistant with modern authentication.”
+
+**User experience:** The Setup Assistant with modern authentication enrollment flow does change the enrollment screen order where authentication will occur prior to accessing the home screen. If you have user guides that share screenshots, you will want to update those so the guides match the experience of Setup Assistant with modern authentication.
+
+### How can you prepare?
+
+To enroll new devices (or re-enroll) after this change, you will either need to update existing profiles to move to Setup Assistant with modern authentication or create a new enrollment profile with this method.
+
+For related information, see:
+
+- [Move to Setup Assistant with Modern Authentication for Automated Device Enrollment](https://techcommunity.microsoft.com/t5/intune-customer-success/move-to-setup-assistant-with-modern-authentication-for-automated/ba-p/2556536)
+- [Setup Assistant with Modern Auth for ADE (iOS/iPadOS 13+ and macOS 10.15+)](https://aka.ms/MEM-ADEModernAuth-Blog)
+- [Using filters with Setup Assistant with modern auth for ADE for corporate iOS/iPadOS/macOS devices](https://techcommunity.microsoft.com/t5/intune-customer-success/using-filters-with-setup-assistant-with-modern-auth-for-ade-for/ba-p/2670379)
+- [Enroll iOS/iPadOS devices by using ADE](../enrollment/device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile)
+- [Upcoming changes to iOS/iPadOS Company Portal app deployment for Setup Assistant with modern auth](https://aka.ms/ADE-CP-auto-deploy)
+
+### Plan for Change: Ending support for Windows Information Protection
+
+Microsoft Windows [announced](https://go.microsoft.com/fwlink/?linkid=2202124) they are ending support for Windows Information Protection (WIP), Microsoft Endpoint Manager will be discontinuing future investments in managing and deploying WIP. In addition to limiting future investments, we will remove support for WIP *without enrollment* scenario by the end of calendar year 2022.
+
+### How does this affect you or your users?
+
+If you have enabled WIP policies, you should turn off or disable these policies.
+
+### How can you prepare?
+
+We recommend that you take action to disable WIP to ensure users in your organization do not lose access to documents that have been protected by WIP policy. Read the blog [Support tip: End of support guidance for Windows Information Protection](https://aka.ms/Intune-WIP-support) for more details and options for removing WIP from your devices.
+
+### Plan for Change: Ending support for Windows 8.1 <!-- 14740233 -->
+
+Microsoft Intune will be ending support for devices running Windows 8.1 on **October 21, 2022**. Additionally, the sideloading key scenario for line-of-business apps will stop being supported since it is only applicable to Windows 8.1 devices. 
+
+Microsoft strongly recommends that you move to a supported version of Windows 10 or Windows 11, to avoid a scenario where you need service or support that is no longer available.
+
+### How does this affect you or your users?
+
+If you are managing Windows 8.1 devices those devices should be upgraded to a supported version of Windows 10 or Windows 11. There is no impact to existing devices and policies, however, you will not be able to enroll new devices if they are running Windows 8.1.
+
+### How can you prepare?
+
+Upgrade your Windows 8.1 devices, if applicable. To determine which users’ devices are running Windows 8.1 navigate to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Windows** > **Windows devices**, and filter by OS.
+
+**Additional information**
+- [Manage operating system versions with Intune](../fundamentals/manage-os-versions.md)
 
 ### Update your certificate connector for Microsoft Intune
 
@@ -23,7 +80,7 @@ If you're impacted by this change, see MC393815 in the Message center.
 
 Download, install, and configure the latest certificate connector. For more information see, [Install the Certificate Connector for Microsoft Intune](../protect/certificate-connector-install.md).
 
-To check which version of the certificate connector you are using follow these steps:
+To check which version of the certificate connector you are using, follow these steps:
 
 1. On a Windows Server running the Intune Certificate Connector, launch "Add or Remove programs".
 2. A list of installed programs and applications will be displayed.
@@ -102,7 +159,7 @@ To manage the supported OS version in your organization, you can use Microsoft E
 ### Plan for Change: Deploy macOS LOB apps by uploading PKG-type installer files<!-- 14190746 --> 
 We recently announced the general availability to deploy macOS line-of-business (LOB) apps by uploading PKG-type installer files directly in the Microsoft Endpoint Manager admin center. This process no longer requires the use of the Intune App Wrapping Tool for macOS to convert *.pkg* files to *.intunemac* format. 
   
-In July 2022, we will be removing the [Intune App Wrapping Tool for macOS](https://github.com/msintuneappsdk/intune-app-wrapping-tool-mac) from the Microsoft Intune App SDK GitHub repository. Soon after, we will be removing the ability to upload wrapped *.intunemac* files in the Microsoft Endpoint Manager admin center. 
+In August 2022, we removed the ability to upload wrapped *.intunemac* files in the Microsoft Endpoint Manager admin center. 
 
 #### How does this affect you or your users?
 There is no impact to apps previously uploaded with *.intunemac* files. You can upgrade previously uploaded apps by uploading the *.pkg* file type.

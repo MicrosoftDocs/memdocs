@@ -51,7 +51,7 @@ Required data collected by Intune may include, but isn't limited to:
 
 |Category |   Data       |  MAM workload <sup>**1**</sup> |
 |-------- |:------------ |---------------|
-| **Access control information**   | Privacy keys for certificates  | No  |
+| **Access control information**   | Private keys for certificates  | No  |
 |         | Static authenticators (customer's password)             | No  |
 | **Admin and account information** |   Active Directory ID of each customer IT admin | Yes |
 |         |   Admin user first name and last name          | Yes |

@@ -8,10 +8,11 @@ ms.technology: configmgr-other
 ms.topic: reference
 ms.localizationpriority: null
 ROBOTS: NOINDEX
-author: aczechowski
-ms.author: aaroncz
-ms.reviewer: mstewart
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+ms.reviewer: mstewart,aaroncz 
+manager: apoorvseth
+ms.collection: tier3
 ---
 # Doc team test - FrankRoj
 Date: 07/06/2022

@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 08/24/2021
+ms.date: 09/27/2022
 ms.topic: conceptual
 ms.service: cloudpc
 ms.subservice:
@@ -45,9 +45,11 @@ To protect and maintain enrolled devices, Windows 365 processes and copies data 
 
 ## Windows 365 data storage
 
-Depending on a tenant's region and preference, Windows 365 stores its customer content in Azure regions in North America, Europe, or Asia Pacific. Customer content, data and storage associated with the Cloud PC lives in the Azure region that the Cloud PC is provisioned in. For Windows 365 Enterprise, the region is defined in the [on-premises network connection's (ONPC)](azure-network-connections.md) **Virtual network** setting.  Windows 365 Business stores customer data in the Azure region of the Cloud PC itself.
+Depending on a tenant's region and preference, Windows 365 stores its customer content in Azure regions in North America, Europe, or Asia Pacific. Cloud PC virtual disk, customer content, data and storage associated with the Cloud PC lives in the Azure region that the Cloud PC is [provisioned](provisioning.md) in. For Windows 365 Enterprise, the region is defined in the [Azure network connection's](azure-network-connections.md) (ANC) **Virtual network** setting. Windows 365 Business stores customer data in the Azure region of the Cloud PC itself.
 
-Windows 365 stores service-generated metadata in Azure data centers in North America, Europe, or Asia Pacific, as defined by the tenant's country. This storage is mapped based on Microsoft Online tenant's country to the nearest region.
+To manage the Cloud PC, certain data relating to the Cloud PC (like the machine’s name, diagnostic data, and service-generated data) is stored in Azure data centers in North America, Europe, or Asia Pacific, as defined by the tenant's country. This storage is mapped based on Microsoft Online tenant's country to the nearest region.
+
+Other customer data, diagnostic data, or service-generated data may be collected by [Azure Virtual Desktop](/azure/virtual-desktop/data-locations) or [Intune](/mem/intune/protect/privacy-personal-data) because Windows 365 depends on these services.
 
 For more information on where your data is located, see:
 
@@ -60,7 +62,7 @@ For more information on where your data is located, see:
 
 Windows 365 treats both the Cloud PC disk and the data on the VM itself as customer content.
 
-When a user is removed from Windows 365, Windows 365 keeps non-alert personal data for a maximum of 90 days. In passive scenarios, data is kept for a minimum of 90 days and a maximum of 180 days. For security purposes, alert data collected by Microsoft Defender for Endpoint is stored for [180 days if the customer uses Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/data-storage-privacy#what-data-does-microsoft-defender-atp-collect).
+When a user is removed from Windows 365, Windows 365 keeps non-alert personal data for a maximum of 90 days. In passive scenarios, data is kept for a minimum of 90 days and a maximum of 180 days. To access customer data saved in a passive scenario, contact support. For security purposes, alert data collected by Microsoft Defender for Endpoint is stored for [180 days if the customer uses Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/data-storage-privacy#what-data-does-microsoft-defender-atp-collect).
 
 For more information on data retention, see [Data retention, deletion, and destruction in Microsoft 365](/compliance/assurance/assurance-data-retention-deletion-and-destruction-overview).
 
@@ -94,3 +96,5 @@ Audit reports for Windows 365 will be available for download at the [Microsoft S
 ## Next steps
 
 [Plan your Windows 365 deployment](planning-guide.md)
+
+[Learn about data encryption in Windows 365](encryption.md)

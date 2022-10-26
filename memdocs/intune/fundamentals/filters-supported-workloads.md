@@ -2,7 +2,7 @@
 # required metadata
 
 title: Platforms and policy types supported by filters in Microsoft Intune
-description: See the supported apps, compliance policies, and device configuration profiles that support filters in Microsoft Endpoint Manager and Microsoft Intune.
+description: See the supported apps, compliance policies, and device configuration profiles that support filters in Intune.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
@@ -27,7 +27,7 @@ ms.custom:
 ms.collection: M365-identity-device-management
 ---
 
-# List of platforms, policies, and app types supported by filters in Microsoft Endpoint Manager
+# List of platforms, policies, and app types supported by filters in Microsoft Intune
 
 When you create an app, compliance policy, or configuration profile, you assign the policy to groups (users or devices). When you assign the policy, you can also use filters. For example, you can assign policies to Windows client devices running a specific OS version. For more information, see [Use filters when assigning your apps, policies, and profiles](filters.md).
 
@@ -117,8 +117,7 @@ You can use filters for all compliance policies on the following platforms:
 - Android Enterprise
 - iOS/iPadOS
 - macOS
-- Windows 11
-- Windows 10
+- Windows 10 and later
 
 ## Device configuration profiles and Endpoint security
 
@@ -298,6 +297,7 @@ You can use filters for some common device configuration policies on the followi
 
 The following features don't support using filters:
 
+- Custom compliance policies for Windows 10/11 (preview)
 - App configuration policies for Android and iOS/iPadOS
 - App protection policies for Android, iOS/iPadOS, and Windows
 - End user experiences customization policies

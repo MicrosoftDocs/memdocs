@@ -1,19 +1,18 @@
 ---
-title: "SMS_ConfigurationItemSettingReference Class"
-titleSuffix: "Configuration Manager"
-description: "Provides the rule relationship to the settings that are referenced from different configuration items."
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: SMS_ConfigurationItemSettingReference Class
+titleSuffix: Configuration Manager
+description: Provides the rule relationship to the settings that are referenced from different configuration items.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: a44098ad-7baf-4bee-ad5e-240dca2e95bf
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_ConfigurationItemSettingReference Server WMI Class
 The `SMS_ConfigurationItemSettingReference` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that provides the rule relationship to the settings that are referenced from different configuration items.  

@@ -9,11 +9,11 @@ ms.topic: conceptual
 
 
 ms.assetid: 6be79f37-cc77-4ea0-8d1d-7fe8c98d601f
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
+ms.collection: tier3
 ---
 
 # Migration views in Configuration Manager

@@ -9,11 +9,10 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 10/05/2021
-ms.topic: conceptual
+ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
-ms.technology:
 
 # optional metadata
 
@@ -25,7 +24,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 #ms.custom:
-ms.collection: M365-identity-device-management
+ms.collection: 
+- M365-identity-device-management
+- tier3
 ---
 
 # Delivery Optimization settings for Windows devices in Intune
@@ -64,6 +65,9 @@ To configure Intune to use these settings, see [Deliver updates](delivery-optimi
 | [Group ID source](/windows/deployment/update/waas-delivery-optimization-reference#select-the-source-of-group-ids)     | 1803        | Requires **Download mode** be set to *HTTP blended with peering across a private group*.<br><br>Restricts peer selection to a specific group of devices by source.<br><br>If you select **Custom**, you then configure **Group ID (as GUID)**. Use a GUID as the Group ID if you need to create a single group for Local Network Peering for branches that are on different domains or aren't on the same LAN.<br><br>**Default**: Not configured <br><br>Policy CSP: [DOGroupId](/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-dogroupid)     |
 
 ## Bandwidth  
+
+> [!NOTE]
+> **DOMaxDownloadBandwidth** and **DOMaxUploadBandwidth** are [deprecated](/windows/deployment/deploy-whats-new#delivery-optimization) with the Windows 10, version 2004 release. Instead, use **DO Max Foreground Download Bandwidth** and **DO Max Background Download Bandwidth** that can be configured through the Intune [settings catalog](settings-catalog.md).
 
 |Setting  |Windows version  |Details  |
 |---------|---------|---------|

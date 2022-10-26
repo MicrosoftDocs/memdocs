@@ -31,9 +31,9 @@ Before contacting the resources listed below for Windows Autopilot-related issue
 | Audience   |   Support contact     |
 |------------|---------------------------------------|
 | OEM or Channel Partner registering devices as a CSP (via MPC) | Use the help resources available in MPC. Whether you are a named partner or a channel partner (distributor, reseller, SI, etc.), if you’re a CSP registering Autopilot devices through MPC (either manually or through the MPC API), your first-line of support should be the help resources within MPC. |   
-| OEM registering devices using OEM Direct API | Contact MSOEMOPS@microsoft.com. Response time depends on priority: <br>Low – 120 hours <br>Normal – 72 hours <br>High – 24 hours <br>Immediate – 4 hours |
-| Enterprise customers | Contact your Technical Account Manager (TAM), or Account Technology Strategist (ATS), or Customer Service Support (CSS) representative. |
-| End-user | Contact your IT administrator. |
+| OEM registering devices using OEM Direct | Contact MSOEMOPS@microsoft.com. Response time depends on priority: <br>Low – 120 hours <br>Normal – 72 hours <br>High – 24 hours <br>Immediate – 4 hours <br> Please note that MSOEMOPS@microsoft.com is only accessible for OEMs  |
+| Enterprise customers (CompanyIT Administrator) | Contact your Technical Account Manager (TAM), or Account Technology Strategist (ATS), or Customer Service Support (CSS) representative. |
+| End-user | Contact your IT administrator if any, or Channel Partner/OEM. |
 | Microsoft Partner Center (MPC) users | Use the [help resources](https://partner.microsoft.com/support) available in MPC. |
 | Microsoft Store for Business (MSfB) users | Use the help resources available in MSfB. |
 | Intune users | From the Microsoft Endpoint Manager admin center, click [Help and support](https://endpoint.microsoft.com/#blade/Microsoft_Intune_DeviceSettings/TenantAdminMenu/helpSupport). |

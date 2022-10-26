@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/05/2022
+ms.date: 09/21/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -382,7 +382,13 @@ Updates for the Certificate Connector for Microsoft Intune are released periodic
 New updates for the connector can take a week or more to become available for each tenant.
 
 > [!IMPORTANT]  
-> Starting April 2022, certificate connectors earlier than version **6.2101.13.0** will be deprecated and will show a status of *Error*. This status does not affect functionality. Starting June 2022, such connectors will not be able to issue certificates. This includes both the [PFX Certificate Connector for Microsoft Intune](../protect/certificate-connectors.md#pfx-certificate-connector-release-history) and  [Microsoft Intune Connector](../protect/certificate-connectors.md#microsoft-intune-connector-release-history), which on July 29, 2021 were replaced by the *Certificate Connector for Microsoft Intune* (as detailed in this article).
+> Starting April 2022, certificate connectors earlier than version **6.2101.13.0** will be deprecated and will show a status of *Error*. Starting August 2022, these connector versions **won't** be able to revoke certificates. Starting September 2022, these connector versions **won't** be able to issue certificates. This includes both the [PFX Certificate Connector for Microsoft Intune](../protect/certificate-connectors.md#pfx-certificate-connector-release-history) and  [Microsoft Intune Connector](../protect/certificate-connectors.md#microsoft-intune-connector-release-history), which on July 29, 2021 were replaced by the *Certificate Connector for Microsoft Intune* (as detailed in this article).
+
+### September 21, 2022
+
+Version **6.2206.122.0** - Changes in this release:
+
+- Improved telemetry in addition to bug fixes and performance improvements
 
 ### June 30, 2022
 
@@ -434,6 +440,7 @@ This update includes:
 - Additional logging for Digicert PKCS requests
 - Enhancement to cryptography operations made during handling of PKCS requests
 
+<!-- archived update details that are over one year old: 
 ### August 16, 2021
 
 Version **6.2108.18.0**. This update includes:
@@ -447,6 +454,7 @@ Version **6.2107.45.0** - The Certificate Connector for Microsoft Intune is rele
 
 This connector is a unified connector in that it includes the capabilities of both the *PFX Certificate Connector for Microsoft Intune* and *Microsoft Intune Connector*, which it replaces.  With this release, the previous connectors remain supported, but are no longer developed nor available for download. Plan to replace existing installations of the individual with installations of this new unified connector.
 
+-->
 
 ## Next steps
 

@@ -44,7 +44,7 @@ To view the dashboard, sign in to the [Microsoft Endpoint Manager admin center](
 The page is divided into three tabs:
 
 ## Tenant details
-Tenant details provide at-a-glance information about your tenant. View details like your tenant name and location, your MDM Authority, and your tenants service release number. The service release number is a link that opens the [*What's new in Intune*](../fundamentals/whats-new.md) article on Microsoft docs. In *What's new*, you can read about the latest features and updates to the Intune service.  
+Tenant details provide at-a-glance information about your tenant. View details like your tenant name and location, your MDM Authority, and your tenants service release number. The service release number is a link that opens [What's new in Intune](../fundamentals/whats-new.md). In *What's new*, you can read about the latest features and updates to the Intune service.  
 
 On this tab, you'll also find basic information about your available licenses and how many are assigned to users. Licenses for devices aren't shown.
 

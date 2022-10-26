@@ -6,10 +6,11 @@ ms.date: 01/06/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
-author: mestew
-manager: dougeby
-ms.author: mstewart
+ms.author: banreetkaur
+author: banreet
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Remote connection profiles in Configuration Manager

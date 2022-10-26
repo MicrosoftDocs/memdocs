@@ -8,7 +8,7 @@ author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 07/05/2022
-ms.topic: conceptual
+ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
@@ -19,11 +19,14 @@ ms.technology:
 #ROBOTS:
 #audience:
 
+ms.reviewer: tycast
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection: 
+- M365-identity-device-management
+- tier3
 ---
 
 # Add VPN settings on iOS and iPadOS devices in Microsoft Intune
@@ -185,7 +188,7 @@ These settings apply when you choose **Connection type** > **IKEv2**.
     - **Yes, all apps**: Allows all CN app traffic to bypass the VPN​.
     - **Yes, specific apps**: **Add** a list of CN apps whose traffic can bypass the VPN​. Enter the bundle identifiers of CN app. For example, enter `com.contoso.app.id.package`.
 
-  - **Traffic from Captive Websheet app to pass outside VPN**: Captive WebSheet is a built-in web browser that handles captive sign on. **Enable** allows the browser app traffic to bypass the VPN. **Disable** (default) forces WebSheet traffic to use the always-on VPN. The default value is the most secure option.
+  - **Traffic from Captive Websheet app to pass outside VPN**: Captive WebSheet is a built-in web browser that handles captive sign-on. **Enable** allows the browser app traffic to bypass the VPN. **Disable** (default) forces WebSheet traffic to use the always-on VPN. The default value is the most secure option.
   - **Network address translation (NAT) keepalive interval (seconds)**: To stay connected to the VPN, the device sends network packets to remain active. Enter a value in seconds on how often these packets are sent, from 20-1440. For example, enter a value of `60` to send the network packets to the VPN every 60 seconds. By default, this value is set to `110` seconds.
   - **Offload NAT keepalive to hardware when device is asleep**: When a device is asleep, **Enable** (default) has NAT continuously send keep-alive packets so the device stays connected to the VPN. **Disable** turns off this feature.
 
@@ -205,7 +208,6 @@ These settings apply when you choose **Connection type** > **IKEv2**.
       - **ECDSA384**
       - **ECDSA521**
 
-  - **Username and password** (User authentication only): When users connect to the VPN, they're prompted for their username and password.
   - **Shared secret** (Machine authentication only): Allows you to enter a shared secret to send to the VPN server.
     - **Shared secret**: Enter the shared secret, also known as the pre-shared key (PSK). Be sure the value matches the shared secret configured on the VPN server.
 

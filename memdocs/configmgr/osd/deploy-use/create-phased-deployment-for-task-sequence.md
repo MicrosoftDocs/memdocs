@@ -6,10 +6,12 @@ ms.date: 10/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: how-to
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: BalaDelli
+ms.author: baladell
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.reviewer: mstewart,aaroncz 
+ms.collection: tier3
 ---
 
 # Create phased deployments with Configuration Manager

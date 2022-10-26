@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 07/12/2022
+ms.date: 10/14/2022
 ms.topic: overview
 ms.service: cloudpc
 ms.subservice:
@@ -37,7 +37,7 @@ Windows 365 uses both default and custom operating system images to automaticall
 Both marketplace and custom images must meet the following requirements:
 
 - Windows 10 Enterprise version 20H2 or later.
-- Windows 11 Enterprise 21H2.
+- Windows 11 Enterprise 21H2 or later.
 - Generation 2 images.
     > [!Note]
     > We recently made the change to **generation 2** (Gen2) virtual machine images. Newly created custom images must be Gen2. Existing custom images uploaded based on generation 1 will remain active.
@@ -55,7 +55,7 @@ Storing a managed image on Azure incurs storage costs. However, customers can de
 
 ## Gallery images
 
-Windows 365 provides a built-in gallery of Windows Enterprise images accessible through the provisioning policy creation flow. They're replicated to all Azure regions to give you a quick provisioning experience. These images are updated monthly with the latest security updates so that end users have a secure and seamless experience.
+Windows 365 provides a built-in gallery of Windows Enterprise images accessible through the provisioning policy creation flow. They're replicated to the regions in Azure Network Connections, or the provisioned regions if no Azure Network Connections are created. These images are updated monthly with the latest security updates so that end users have a secure and seamless experience.
 
 There are two sets of images available to choose from across the different versions of Windows Enterprise:
 
@@ -91,6 +91,9 @@ If none of the default gallery images meet your requirements, you can upload up 
 For more information on creating such a custom image, see [Create a managed image of a generalized VM in Azure](/azure/virtual-machines/windows/capture-image-resource). For best performance, you should also make sure to optimize your image for a virtual desktop role. For more information on this optimization, see [Optimizing Windows 10, version 2004 for a Virtual Desktop Infrastructure (VDI) role](/windows-server/remote/remote-desktop-services/rds-vdi-recommendations-2004).
 
 A custom image can be created using [any of the images above as a starting point](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftwindowsdesktop.windows-ent-cpc). For example, you can start with an image above and then install more applications and make more configuration changes.
+
+> [!NOTE]
+> For custom images with Teams application, follow the instructions detailed in [Create a Cloud PC custom image that supports Microsoft Teams](create-custom-image-support-teams.md) to configure optimizations that are needed.  
 
 For more information about adding a device image to Windows 365, see [Add and delete custom device images](add-device-images.md).
 

@@ -1,6 +1,21 @@
 {
     "redirections": [
         {
+            "source_path": "memdocs/endpoint-manager-getting-started.md",
+            "redirect_url": "/mem/intune/fundamentals/get-started-with-intune",
+            "redirect_document_id": false
+        }, 
+        {
+            "source_path": "memdocs/intune/developer/app-sdk-android.md",
+            "redirect_url": "/mem/intune/developer/app-sdk-android-phase1",
+            "redirect_document_id": false
+        }, 
+        {
+            "source_path": "memdocs/intune/developer/app-sdk-android-testing-guide.md",
+            "redirect_url": "/mem/intune/developer/app-sdk-android-phase1",
+            "redirect_document_id": false
+        }, 
+        {
             "source_path": "memdocs/intune/fundamentals/end-user-company-portal-messages.md",
             "redirect_url": "/mem/intune/user-help/sign-in-to-the-company-portal",
             "redirect_document_id": false
@@ -1196,10 +1211,51 @@
             "source_path": "windows-365/get-users-started.md",
             "redirect_url":"/windows-365/end-user-access-cloud-pc",
             "redirect_document_id": false
-        }, {
+        }, 
+        {
             "source_path": "memdocs/intune/remote-actions/remote-assist-mobile-devices.md",
             "redirect_url": "/mem/intune/remote-actions/remote-help",
             "redirect_document_id": false
-        }
+        },
+        {
+            "source_path": "memdocs/analytics/productivity-score.md",
+            "redirect_url": "/mem/analytics/adoption-score",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/azure-ad-joined-hybrid-azure-ad-joined.md",
+            "redirect_url": "/mem/solutions/cloud-native-endpoints/azure-ad-joined-hybrid-azure-ad-joined",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/cloud-native-endpoints-known-issues.md",
+            "redirect_url": "/mem/solutions/cloud-native-endpoints/cloud-native-endpoints-known-issues",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/cloud-native-endpoints-on-premises.md",
+            "redirect_url": "/mem/solutions/cloud-native-endpoints/cloud-native-endpoints-on-premises",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/cloud-native-endpoints-overview.md",
+            "redirect_url": "/mem/solutions/cloud-native-endpoints/cloud-native-endpoints-overview",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/cloud-native-endpoints-planning-guide.md",
+            "redirect_url": "/mem/solutions/cloud-native-endpoints/cloud-native-endpoints-planning-guide",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/cloud-native-windows-endpoints.md",
+            "redirect_url": "/mem/solutions/cloud-native-endpoints/cloud-native-windows-endpoints",
+            "redirect_document_id": false
+        },  
+        {
+            "source_path": "memdocs/intune/fundamentals/multi-admin-approval.md",
+            "redirect_url": "/mem/intune/fundamentals/whats-new",
+            "redirect_document_id": false
+        }       
     ]
 }

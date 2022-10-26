@@ -2,12 +2,12 @@
 # required metadata
 
 title: Use Windows cloud configuration in Microsoft Intune
-description: Use a guided scenario to configure Windows 10/11 in a cloud configuration. Cloud config focuses on browsing using Microsoft Intune and Endpoint Manager, and using Microsoft 365 apps.
+description: Use a guided scenario to configure Windows 10/11 in a cloud configuration. Cloud config focuses on browsing using Microsoft Intune and Microsoft 365 apps.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/24/2022
+ms.date: 10/10/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -52,7 +52,7 @@ With Windows 10/11 in cloud configuration:
 
 ## What this guided scenario does
 
-Using Microsoft Endpoint Manager, you can use a guided scenario to deploy a cloud configuration. The guided scenario automatically creates all the resources you need, including the following resources:
+Using Microsoft Intune, you can use a guided scenario to deploy a cloud configuration. The guided scenario automatically creates all the resources you need, including the following resources:
 
 - Creates a new Azure AD security group, or uses an existing Azure AD security group.
 - Deploys the Microsoft Edge and Microsoft Teams apps. For more information on deploying these apps individually, see:
@@ -140,7 +140,7 @@ Choose how your devices are named when they enroll, and choose the prefix of all
 
   Your settings look similar to the following image:
 
-  :::image type="content" source="./media/cloud-configuration/guided-scenario-basics.png" alt-text="Configure the device name template and resource name prefix in a Windows 10/11 cloud configuration guided scenario in Microsoft Intune and Endpoint Manager.":::
+  :::image type="content" source="./media/cloud-configuration/guided-scenario-basics.png" alt-text="Screenshot that shows how to configure the device name template and resource name prefix in a Windows 10/11 cloud configuration guided scenario in Microsoft Intune.":::
 
 - Select **Next**.
 
@@ -181,7 +181,7 @@ Look at the following properties:
 
   As the resources are being created in the Endpoint Manager admin center, the status is shown, similar to the following image:
 
-  :::image type="content" source="./media/cloud-configuration/guided-scenario-deployment-status.png" alt-text="Review the Windows 10/11 in cloud configuration guided scenario deployment status in Microsoft Intune and Endpoint Manager.":::
+  :::image type="content" source="./media/cloud-configuration/guided-scenario-deployment-status.png" alt-text="Screenshot that shows how to review the Windows 10/11 in cloud configuration guided scenario deployment status in Microsoft Intune.":::
 
 If there's an error, then the guided scenario isn't deployed, and all changes are reverted. The [Cloud configuration overview and setup guide](https://aka.ms/CloudConfigGuide) is also a good resource.
 

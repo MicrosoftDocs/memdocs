@@ -21,12 +21,14 @@ ms.assetid: 127dafcb-3f30-4745-a561-f62c9f095907
 #ROBOTS:
 #audience:
 
-ms.reviewer: samyada, demerson
+ms.reviewer: tycast
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection: 
+- M365-identity-device-management
+- tier3
 ---
 
 # Configure Exchange on-premises access for Intune
@@ -104,6 +106,8 @@ Before you can configure Conditional Access, verify the following configurations
 ### Support for PCs
 
 The native **Mail** application on Windows 8.1 and later (when enrolled into MDM with Intune)
+
+[!INCLUDE [windows-phone-81-windows-10-mobile-support](../includes/windows-phone-81-windows-10-mobile-support.md)]
 
 ## Configure Exchange on-premises access
 

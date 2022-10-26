@@ -210,4 +210,4 @@ The assignment completes, and Intune deploys the Classroom profile to the target
 
 ## Next Steps
 
-Now students can share devices between students, and students can pick up any iPad in a classroom, log in with a PIN and have it personalized with their content. For more information about Shared iPads, see the [Apple website](https://www.apple.com/education/it/).
+Now students can share devices between students, and students can pick up any iPad in a classroom, log in with a PIN and have it personalized with their content. For more information about Shared iPads, see the [Apple website](https://www.apple.com/education/).

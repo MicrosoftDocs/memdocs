@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/16/2021
+ms.date: 09/12/2022
 ms.topic: quickstart
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -21,12 +21,14 @@ ms.assetid: dab6f5c8-1ebb-42c4-a7a7-7af001f94e15
 #ROBOTS:
 #audience:
 
-ms.reviewer: mancheen
+ms.reviewer: manchen
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection: 
+- M365-identity-device-management
+- tier3
 ---
 
 # Quickstart: Add and assign a app

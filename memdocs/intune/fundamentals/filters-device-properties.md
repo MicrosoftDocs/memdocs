@@ -2,12 +2,12 @@
 # required metadata
 
 title: Supported filter device properties and operators in Microsoft Intune
-description: When using filters, get more information on the device properties, supported operators, and supported Windows OS SKUs, including examples. Use these features to create rule expressions in Microsoft Intune and Endpoint Manager.
+description: When using filters, get more information on the device properties, supported operators, and supported Windows OS SKUs, including examples. Use these features to create rule expressions in Microsoft Intune.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/10/2022
+ms.date: 10/10/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -27,7 +27,7 @@ ms.custom:
 ms.collection: M365-identity-device-management
 ---
 
-# Device properties, operators, and rule editing when creating filters in Microsoft Endpoint Manager
+# Device properties, operators, and rule editing when creating filters in Microsoft Intune
 
 When you create an app, compliance policy, or configuration profile, you assign that app or policy to groups (users or devices). When you assign the app or policy, you can also use filters. For more information on this feature, see [Use filters when assigning your apps, policies, and profiles](filters.md).
 
@@ -38,6 +38,8 @@ Advanced rule editing is also available. You can use common operators, such as `
 This article describes the different [device properties](#device-properties) and [operators](#supported-operators) you can use in your filters, and gives examples.
 
 ## Device properties
+
+You can use the following device properties in your filter rules:
 
 - **Device Name**: Create a filter rule based on the Intune device name property. Enter a string value for the device's full name (using `-eq`, `-ne`, `-in`, `-notIn` operators), or partial value (using `-startswith`, `-contains`, `-notcontains` operators).
 

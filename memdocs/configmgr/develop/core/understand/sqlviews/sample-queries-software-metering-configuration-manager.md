@@ -9,11 +9,11 @@ ms.topic: conceptual
 
 
 ms.assetid: 2cf7208f-7684-40a0-9402-656a7abcd583
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
+ms.collection: tier3
 ---
 
 # Sample queries for software metering in Configuration Manager

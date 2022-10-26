@@ -8,12 +8,10 @@ author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 01/18/2022
-ms.article: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
 ms.topic: reference
-ms.technology:
 
 # optional metadata
 
