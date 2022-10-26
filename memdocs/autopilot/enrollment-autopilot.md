@@ -9,7 +9,6 @@ ms.reviewer: jubaptis
 manager: dougeby
 ms.date: 02/09/2022
 ms.topic: how-to
-ms.subservice: enrollment
 ms.localizationpriority: high
 ms.prod: windows-client
 ms.technology: itpro-deploy
