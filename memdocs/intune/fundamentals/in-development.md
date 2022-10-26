@@ -240,7 +240,7 @@ Windows Autopilot diagnostics will automatically capture diagnostics about Windo
 
 ## Device security
 
-### Microsoft Tunnel for Mobile Application Management for Android (Preview)<!-- 15769204  -->  
+### Microsoft Tunnel for Mobile Application Management for Android (public preview)<!-- 15769204  -->  
 As a public preview, we’re adding support for Mobile Application Management (MAM) to the Microsoft Tunnel VPN gateway.  With this preview for Android devices that have not enrolled with Intune, supported apps will be able to use Microsoft Tunnel to connect to your organization when working with corporate data and resources. This includes VPN gateway support for:  
 
 - Secure access to on-prem apps and resources using modern authentication
