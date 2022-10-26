@@ -66,6 +66,15 @@ You can use RSS to be notified when this article is updated. For more informatio
 
 ## App management
 
+### Uninstall Win32 apps in the Company Portal<!-- 5145748 -->  
+Users will be able to uninstall Win32 apps in the Company Portal. If a Win32 app can be uninstalled by the user, the user will be able to select **Uninstall** for the Win32 app in the Company Portal. For more information about Win32 apps, go to [Win32 app management in Microsoft Intune](../apps/apps-win32-app-management.md).
+
+### Configure whether to show apps from Configuration Manager in Windows Company Portal<!-- 9135109 -->  
+In the Intune console, you'll be able to choose whether to show or hide Configuration Manager apps from appearing in the Windows Company Portal. This option will be available in [Intune](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Tenant administration** > **Customization**. Next to **Settings**, select **Edit**. The option to **Show** or **Hide** the **Configuration Manager applications will be located in the **App Sources** section of the pane. For related information about configuring the Company Portal app, see [How to configure the Intune Company Portal apps, Company Portal website, and Intune app](../apps/company-portal-app.md).
+
+### Office for Mac moving to macOS Big Sur for minimum OS requirement<!-- 15882812 -->  
+Starting with the forthcoming November 2022 Office for Mac update (16.67), macOS Big Sur 11 or later will be required to receive updates to Office for Mac. If you continue with an older version of macOS, your Office apps will still work, but you'll no longer receive any updates, including security updates. Upgrading your operating system to macOS Big Sur 11 or later will allow Office updates to be delivered for your apps. The October 2022 Office for Mac update (16.66) will be the last build to support macOS Catalina 10.15. For related information, see [Upgrade macOS to continue receiving Microsoft 365 and Office for Mac updates](https://go.microsoft.com/fwlink/?linkid=2015804).
+
 ### Global quiet time app policy settings<!-- 15424417 -->
 The global quiet time settings will allow you to create policies to schedule quiet time for your end users which will automatically mute Microsoft Outlook email and Teams notifications on iOS/iPadOS and Android platforms. These policies can be used to limit end user notifications received after work hours. When this feature is available, you will be able to find it in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **Quiet Time** > **Policies**.  
 
@@ -73,40 +82,38 @@ The global quiet time settings will allow you to create policies to schedule qui
 You will be able to use filters to refine the assignment scope when deploying app configuration profiles for managed devices.
 You can first create a filter using any of the available properties for iOS and Android. Then, in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) you can assign your managed app configuration profile by selecting **Apps** > **App configuration policies** > **Add** > **Managed devices** and go to the assignment page. After selecting a group, you can refine the applicability of the policy by choosing a filter and deciding to use it in **Include** or **Exclude** mode. For related information about filters, see [Use filters when assigning your apps, policies, and profiles in Microsoft Endpoint Manager](filters.md).
 
-## Device management
-
-### New hardware details available for individual devices running on iOS/iPadOS<!-- 15038076 -->
-Select **Devices** > **All devices** > *select one of your listed devices* and open it's **Hardware** details. The following new details are available in the **Hardware** pane of individual devices:
-
- - **Battery level**: Shows the battery level of the device anywhere between 0 and 100, or defaults to null if the battery level cannot be determined. This is available for devices running iOS/iPadOS 5.0 and later.
-- **Resident users**: Shows the number of users currently on the shared iPad device, or defaults to null if the number of users cannot be determined. This is available for devices running iOS/iPadOS 13.4 and later.
-
-For more information, see [View device details with Microsoft Intune](../remote-actions/device-inventory.md).
-
-Applies to:
-- iOS/iPadOS
-
-### Endpoint security firewall rules support for ICMP type<!-- 5653356 -->
-We’re adding a new setting named **IcmpTypesAndCodes** to the endpoint security firewall rules template for Windows 10. To configure this in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Endpoint security** > **Firewall** > **Create Policy** > Platform: *Windows 10, Windows 11, and Windows Server*  > Profile: *Microsoft Defender Firewall Rules*).
-
-With this new setting you’ll be able to configure inbound and outbound rules for [Internet Control Message Protocol](/windows/security/threat-protection/windows-firewall/create-an-inbound-icmp-rule) (ICMP) as part of a firewall rule.
-
-Applies to:  
-- Windows 10, Windows 11, and Windows Server
-
-<!-- ***********************************************-->
-
-## Device enrollment
-
-### iOS/iPadOS Setup Assistant with modern authentication supports Just in Time Registration (public preview)<!-- 15515188 -->  
-Intune will support Just in Time Registration for iOS/iPadOS enrollment scenarios that use Setup Assistant with modern authentication. Just in Time Registration reduces the number of authentication prompts shown to users throughout the provisioning experience, giving them a more seamless onboarding experience. It eliminates the need to have the Company Portal app for Azure AD registration and compliance checks, while automatically establishing SSO across the device. Just In Time Registration will be available in public preview for devices enrolling through Apple Automated Device Enrollment and running iOS/iPadOS 13.0 or later.
-
-### Windows Autopilot diagnostics will capture ESP failures<!-- 1895390 -->
-Windows Autopilot diagnostics will automatically capture diagnostics about Windows Autopilot failures that occur on the Enrollment Status Page (ESP). Diagnostics will be available to download in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
-
 <!-- ***********************************************-->
 
 ## Device configuration
+
+### Device Firmware Configuration Interface (DFCI) will support Panasonic devices<!-- 15729353 -->  
+For Windows 10/11 devices, you can create a DFCI profile to manage UEFI (BIOS) settings (**Devices** > **Configuration profiles** > **Create profile** > **Windows 10 and later** for platform > **Templates** > **Device Firmware Configuration Interface** for profile type).
+
+New Panasonic devices running Windows 10/11 will be enabled for DFCI starting Fall 2022. So, admins can create DFCI profiles to manage the BIOS and then deploy the profiles to these Panasonic devices.
+
+Contact your device vendor or device manufacturer to ensure you get eligible devices.
+
+For more information about DFCI profiles in Intune, go to [Use Device Firmware Configuration Interface (DFCI) profiles on Windows devices in Microsoft Intune](../configuration/device-firmware-configuration-interface-windows.md).
+
+Applies to:
+
+- Windows 10
+- Windows 11
+
+
+### Login and background item management support on macOS devices using the settings catalog<!-- 15751007 -->  
+On macOS devices, you can open items automatically when users sign in to their macOS devices. For example, you can open apps, documents, and folders.
+
+In Intune, the settings catalog will include new Service Management settings that can prevent users from disabling the managed login and background items on their devices in System Settings > General > Login Items.
+
+For more information on the settings catalog, go to:
+
+- [Use the settings catalog to configure settings](../configuration/settings-catalog.md)
+- [Common tasks you can complete using the Settings Catalog](../configuration/settings-catalog-common-features.md)
+
+Applies to:
+
+- macOS 13 and newer
 
 ### New settings for Device Firmware Configuration Interface (DFCI) profiles on Windows devices<!-- 15511597 -->
 You can create a DFCI profile that enables the Windows OS to pass management commands from Intune to UEFI (Unified Extensible Firmware Interface) (**Devices** > **Configuration profiles** > **Create profile** > **Windows 10 and later** for platform > **Templates > Device Firmware Configuration Interface**). 
@@ -128,6 +135,7 @@ You can use this feature to control BIOS settings. There will be new settings yo
 For more information on DFCI profiles, go to [Use Device Firmware Configuration Interface (DFCI) profiles on Windows devices in Microsoft Intune](../configuration/device-firmware-configuration-interface-windows.md) and [DFCI profile settings list](../configuration/device-firmware-configuration-interface-windows-settings.md).
 
 Applies to:
+
 - Windows 11 on supported UEFI
 - Windows 10 RS5 (1809) and later on supported UEFI
 
@@ -166,6 +174,7 @@ When you assign an app or policy, you can filter the assignment using different 
 Two new Windows 11 SE operating system SKU's will added. You'll be able to use these SKUs in your assignment filters to include or exclude Windows 11 SE devices from applying group-targeted policies and applications.
 
 For more information on filters and the device properties you can currently use, go to:
+
 - [Use filters when assigning your apps, policies, and profiles in Microsoft Endpoint Manager](filters.md)
 - [Device properties, operators, and rule editing when creating filters in Microsoft Endpoint Manager](filters-device-properties.md)
 
@@ -201,7 +210,58 @@ Applies to:
 
 <!-- ***********************************************-->
 
+## Device management
+
+### New hardware details available for individual devices running on iOS/iPadOS<!-- 15038076 -->
+Select **Devices** > **All devices** > *select one of your listed devices* and open it's **Hardware** details. The following new details are available in the **Hardware** pane of individual devices:
+
+- **Battery level**: Shows the battery level of the device anywhere between 0 and 100, or defaults to null if the battery level cannot be determined. This is available for devices running iOS/iPadOS 5.0 and later.
+- **Resident users**: Shows the number of users currently on the shared iPad device, or defaults to null if the number of users cannot be determined. This is available for devices running iOS/iPadOS 13.4 and later.
+
+For more information, see [View device details with Microsoft Intune](../remote-actions/device-inventory.md).
+
+Applies to:
+- iOS/iPadOS
+
+### Endpoint security firewall rules support for ICMP type<!-- 5653356 -->
+We’re adding a new setting named **IcmpTypesAndCodes** to the endpoint security firewall rules template for Windows 10. To configure this in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Endpoint security** > **Firewall** > **Create Policy** > Platform: *Windows 10, Windows 11, and Windows Server*  > Profile: *Microsoft Defender Firewall Rules*).
+
+With this new setting you’ll be able to configure inbound and outbound rules for [Internet Control Message Protocol](/windows/security/threat-protection/windows-firewall/create-an-inbound-icmp-rule) (ICMP) as part of a firewall rule.
+
+Applies to:  
+- Windows 10, Windows 11, and Windows Server
+
+<!-- ***********************************************-->
+
+## Device enrollment
+
+### iOS/iPadOS Setup Assistant with modern authentication supports Just in Time Registration (public preview)<!-- 15515188 -->  
+Intune will support Just in Time Registration for iOS/iPadOS enrollment scenarios that use Setup Assistant with modern authentication. Just in Time Registration reduces the number of authentication prompts shown to users throughout the provisioning experience, giving them a more seamless onboarding experience. It eliminates the need to have the Company Portal app for Azure AD registration and compliance checks, while automatically establishing SSO across the device. Just In Time Registration will be available in public preview for devices enrolling through Apple Automated Device Enrollment and running iOS/iPadOS 13.0 or later.
+
+### Windows Autopilot diagnostics will capture ESP failures<!-- 1895390 -->
+Windows Autopilot diagnostics will automatically capture diagnostics about Windows Autopilot failures that occur on the Enrollment Status Page (ESP). Diagnostics will be available to download in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
+
+<!-- ***********************************************-->
+
 ## Device security
+
+### Microsoft Tunnel for Mobile Application Management for Android(Preview)<!-- 15769204  -->  
+As a public preview, we’re adding support for Mobile Application Management (MAM) to the Microsoft Tunnel VPN gateway.  With this preview for Android devices that have not enrolled with Intune, supported apps will be able to use Microsoft Tunnel to connect to your organization when working with corporate data and resources. This includes VPN gateway support for:  
+
+- Secure access to on-prem apps and resources using modern authentication
+- Single Sign On and conditional access.
+
+To use Tunnel for MAM on an unenrolled device will require the following three profiles:  
+
+- An App configuration profile for managed apps, to configure Microsoft Defender on devices for use as the Tunnel client app 
+- A second App configuration profile for managed apps, to configure Microsoft Edge to connect to Tunnel.
+- An App protection profile to enable automatic start of the Microsoft Tunnel connection
+
+For information about using Tunnel on enrolled devices, see [Microsoft Tunnel overview](../protect/microsoft-tunnel-overview.md)
+
+Applies to:
+
+- Android Enterprise
 
 ### Grant apps permission on Android Enterprise devices<!-- 12441244 -->
 For Android Enterprise devices, you’ll soon be able to configure certificate profiles to silently grant specific apps access to use the certificate. This expands on the current behavior where a device user must approve the use of a certificate by an application.
@@ -223,7 +283,7 @@ Applies to:
 
 ### Manage macOS software updates with Intune<!-- 9801186 -->
 You’ll soon be able to use Intune policies to manage macOS software updates for devices that enrolled using Automated Device Enrollment (ADE). The policy will be available in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) at **Devices** > **macOS** > **Update policies for macOS**.
- 
+
 Supported update types will include:
 - Critical updates
 - Firmware updates
@@ -266,6 +326,13 @@ Features of the reusable settings groups will include:
   
 Reusable groups will be configured on a new Tab for *Reusable settings* that will be available when you view endpoint security Firewall policy.  In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Endpoint security** > **Firewall**.
 
+<!-- ***********************************************-->
+
+## Tenant administration
+
+### Deliver organizational messages for Windows 11 (public preview)<!-- 15314747 -->  
+
+Deliver branded personalized messages to employees just above their taskbar, in their Notifications, or when they run the Get Started app on Windows 11 devices. Organizational messages are intended to improve employee communication in remote and hybrid-work scenarios, and to help employees adapt to their new roles more quicky, learn more about their organization, and stay informed of new updates and trainings.  
 
 <!-- ***********************************************-->
 
