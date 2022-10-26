@@ -15,6 +15,7 @@ manager: dougeby
 ms.date: 2/1/2022
 ms.collection: M365-modern-desktop
 ms.topic: troubleshooting
+ms.technology: itpro-deploy
 ---
 
 # Windows Autopilot device guidelines

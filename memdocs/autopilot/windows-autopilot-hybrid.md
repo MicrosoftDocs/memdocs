@@ -13,6 +13,7 @@ ms.localizationpriority: medium
 ms.collection: 
   - M365-identity-device-management
   - highpri
+ms.technology: itpro-deploy
 ---
  
 # Deploy hybrid Azure AD-joined devices by using Intune and Windows Autopilot

@@ -12,6 +12,7 @@ ms.topic: how-to
 ms.collection: 
   - M365-modern-desktop
   - m365initiative-coredeploy
+ms.technology: itpro-deploy
 ---
 
 # OEM registration

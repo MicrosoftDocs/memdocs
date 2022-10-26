@@ -10,6 +10,7 @@ manager: dougeby
 ms.date: 06/15/2022
 ms.collection: M365-modern-desktop
 ms.topic: how-to
+ms.technology: itpro-deploy
 ---
 
 # Setting the BitLocker encryption algorithm for Autopilot devices

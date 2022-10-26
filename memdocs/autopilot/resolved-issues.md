@@ -15,6 +15,7 @@ manager: dougeby
 ms.date: 04/28/2021
 ms.collection: M365-modern-desktop
 ms.topic: troubleshooting
+ms.technology: itpro-deploy
 ---
 
 # Windows Autopilot - resolved issues

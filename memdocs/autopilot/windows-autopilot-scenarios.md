@@ -15,6 +15,7 @@ manager: dougeby
 ms.date: 12/16/2020
 ms.collection: M365-modern-desktop
 ms.topic: conceptual
+ms.technology: itpro-deploy
 ---
 
 

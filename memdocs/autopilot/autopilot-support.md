@@ -15,6 +15,7 @@ ms.reviewer: jubaptis
 manager: dougeby
 ms.collection: M365-modern-desktop
 ms.topic: troubleshooting
+ms.technology: itpro-deploy
 ---
 
 # Windows Autopilot support information

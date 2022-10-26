@@ -18,6 +18,7 @@ ms.topic: conceptual
 ms.custom: 
   - CI 116757
   - CSSTroubleshooting
+ms.technology: itpro-deploy
 ---
 
 # Windows Autopilot configuration requirements

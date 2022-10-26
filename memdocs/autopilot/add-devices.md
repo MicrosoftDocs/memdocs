@@ -13,6 +13,7 @@ ms.collection:
   - M365-modern-desktop
   - m365initiative-coredeploy
   - highpri
+ms.technology: itpro-deploy
 ---
 
 # Manually register devices with Windows Autopilot

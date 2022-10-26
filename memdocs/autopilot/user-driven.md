@@ -17,6 +17,7 @@ ms.collection:
   - M365-modern-desktop
   - highpri
 ms.topic: how-to
+ms.technology: itpro-deploy
 ---
 
 
