@@ -2,7 +2,7 @@
 title: Manual registration of devices for Windows Autopilot
 description: Manual registration overview
 keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune
-ms.prod: w10
+ms.prod: windows-client
 ms.mktglfcycl: deploy
 ms.localizationpriority: medium
 ms.sitesec: library
@@ -15,8 +15,8 @@ manager: dougeby
 ms.date: 8/4/2021
 ms.topic: how-to
 ms.collection: 
-- M365-modern-desktop
-- m365initiative-coredeploy
+  - M365-modern-desktop
+  - m365initiative-coredeploy
 ---
 
 # Manual registration overview

@@ -2,7 +2,7 @@
 title: Windows Autopilot support
 description: Find out who to contact for help with your Windows Autopilot installation.
 keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune
-ms.prod: w10
+ms.prod: windows-client
 ms.mktglfcycl: deploy
 ms.localizationpriority: medium
 ms.sitesec: library

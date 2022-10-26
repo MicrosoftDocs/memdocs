@@ -2,8 +2,8 @@
 title: Troubleshoot Autopilot device import and enrollment
 description: Troubleshoot issues that can occur during Autopilot device import and enrollment
 keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune
-ms.technology: windows
-ms.prod: w10
+ms.technology: itpro-deploy
+ms.prod: windows-client
 ms.mktglfcycl: deploy
 ms.localizationpriority: medium
 ms.sitesec: library
