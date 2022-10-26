@@ -2,8 +2,8 @@
 title: Windows Autopilot troubleshooting overview
 description: Learn how to handle issues as they arise during the Windows Autopilot deployment process.
 keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune
-ms.technology: windows
-ms.prod: w10
+ms.technology: itpro-deploy
+ms.prod: windows-client
 ms.mktglfcycl: deploy
 ms.localizationpriority: medium
 ms.sitesec: library
@@ -14,7 +14,9 @@ ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aczechowski
 ms.date: 10/03/2022
-ms.collection: M365-modern-desktop
+ms.collection:
+  - M365-modern-desktop
+  - highpri
 ms.topic: troubleshooting
 ---
 

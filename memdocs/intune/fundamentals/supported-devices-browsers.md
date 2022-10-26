@@ -45,6 +45,7 @@ Intune supports devices running the following operating systems (OS):
 * Linux
 * macOS
 * Windows
+* Chrome OS  
 
 [!INCLUDE [mdm-supported-devices](../includes/mdm-supported-devices.md)]
 

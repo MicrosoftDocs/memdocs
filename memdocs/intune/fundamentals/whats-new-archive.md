@@ -2080,7 +2080,7 @@ The sync status for automated device enrollment tokens listed on the **Enrollmen
 ### Device management
 
 #### Increasing recommended maximum number of iOS/iPadOS and macOS devices per enrollment token<!--8568668  -->  
-Previously, we recommended that you don't exceed 60,000 iOS/iPadOS or macOS devices per Automated Device Enrollment (ADE) token. This recommended limit is now increased to 200,000 devices per token. For more information about ADE tokens, see [Automatically enroll iOS/iPadOS devices by using Apple's Automated Device Enrollment](../enrollment/device-enrollment-program-enroll-ios.md#supported-volume).
+Previously, we recommended that you don't exceed 60,000 iOS/iPadOS or macOS devices per Automated Device Enrollment (ADE) token. This recommended limit is now increased to 200,000 devices per token. For more information about ADE tokens, see [Automatically enroll iOS/iPadOS devices by using Apple's Automated Device Enrollment](../enrollment/device-enrollment-program-enroll-ios.md).
 
 #### Update of column names in All devices view and Export report<!-- 8854380  -->  
 To accurately reflect the data in the columns, we've updated the column names in the All devices view and the Export report to be "Primary User UPN", "Primary User email address", and "Primary User display name".
@@ -4273,7 +4273,7 @@ To help distributed IT departments and organizations, Intune now supports up to 
 
 Intune now supports up to 1000 Apple Configurator 2 profiles.
 
-For more information, see [Supported volume](../enrollment/device-enrollment-program-enroll-ios.md#supported-volume).
+For more information, see [Limits](../enrollment/device-enrollment-program-enroll-ios.md#limits).
 
 #### All devices page column entry changes<!--6967616 -->
 On the **All devices** page, the entries for the **Managed by** column have changed:
