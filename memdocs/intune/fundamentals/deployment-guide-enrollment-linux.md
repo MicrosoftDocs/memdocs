@@ -30,7 +30,7 @@ ms.collection:
 ---
 
 
-# Deployment guide: Enroll Linux devices in Microsoft Intune
+# Deployment guide: Enroll Linux desktop devices in Microsoft Intune
 
 Linux devices can be enrolled in Intune. Once they're enrolled, they receive the policies you create. Users can use the Microsoft Edge browser to access organization resources online.
 
@@ -69,7 +69,7 @@ Other than having Intune setup, there are minimal administrator tasks with Linux
 
 ## End user tasks
 
-Clearly communicate the steps users should follow. The following steps provide an overview. For the specific steps, go to [Enroll a Linux device in Intune](../user-help/enroll-device-linux.md).
+The following steps provide an overview. For the specific steps, go to [Enroll a Linux device in Intune](../user-help/enroll-device-linux.md).
 
 1. [Download and install Microsoft Edge browser](https://www.microsoft.com/edge) version 102.x and newer.
 2. [Download and install the Microsoft Intune app for Linux](../user-help/microsoft-intune-app-linux.md). The install can take several minutes and requires a reboot. This app registers the device with Intune.
