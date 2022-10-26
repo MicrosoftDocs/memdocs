@@ -32,9 +32,9 @@ ms.collection:
 > [!IMPORTANT]
 > This feature is in public preview. For more information, see [Public preview in Microsoft Intune](../fundamentals/public-preview.md).   
 
-Set up the Chrome Enterprise connector with Microsoft Intune to view company and school-owned Chrome OS devices. This article describes how to create and monitor a connection between the Google Admin console and Microsoft Intune. After you establish a connection, you can: 
+Set up the Chrome Enterprise connector with Microsoft Intune to view and take action on company and school-owned Chrome OS devices. This article describes how to create and monitor a connection between the Google Admin console and Microsoft Intune. After you establish a connection, you can: 
 
-* Sync Chrome OS device information between the Google Admin console and Microsoft Intune.    
+* Sync device information between the Google Admin console and Microsoft Intune.    
 * View device information in your device inventory lists in the Microsoft Endpoint Manager admin center.
 * Apply remote actions, such as deprovision, restart, lost mode, and wipe in the admin center.   
 
@@ -68,8 +68,8 @@ To establish a connection, you must have:
     `https://www.googleapis.com/auth/admin.directory.user.readonly`  
    5. Select **Authorize** to save all changes. 
 5. Return to the Microsoft Endpoint Manager admin center and select **Launch Google to connect now.**     
-6. When prompted to sign in, use your Google Admin account to authenticate with your organization's Google Enterprise domain. The Google Admin account appears in Google Workspace audit logs for all actions applied to Chrome OS devices in the Endpoint Manager admin center. Your account must have:  
-   * Read-only permission to manage Chrome OS devices, as described in [Prerequisites](chrome-enterprise-configure.md#prerequisites).  
+6. When prompted to authenticate with your organization's Google Enterprise domain, use your Google Admin account. The Google Admin account appears in Google Workspace audit logs for all actions applied to Chrome OS devices in the Endpoint Manager admin center. Your account must have:  
+   * Read-only permission to manage Chrome OS devices, as described in [Prerequisites](chrome-enterprise-connector-configure.md#prerequisites).  
    * Access to Google Workspace Admin SDK Directory API.  
 
 After you authenticate, the connection is established and your organization’s enrolled Chrome OS devices begin syncing from the Google Admin console. The status changes to **Active** when syncing is complete. 
@@ -78,12 +78,12 @@ After you authenticate, the connection is established and your organization’s 
    > Sync time varies and depends on the number of Chrome OS devices you have in the Google Admin console.  
 
 ## Monitor connection status  
-Go to **Chrome Enterprise (preview)** in the Microsoft Endpoint Manager admin center to check the overall health of your connection and details about the ongoing and completed syncs. Chrome OS devices should appear shortly after the initial connection. Devices will continue to sync periodically and receive updates.   
+Go to **Chrome Enterprise (preview)** in the Microsoft Endpoint Manager admin center to check the overall health of your connection, and get details about the ongoing and completed syncs. Chrome OS devices should appear shortly after the initial connection. Devices will continue to sync periodically and receive updates.   
 
 Available details include:  
 
 * **Status**: **Syncing** is shown when devices are still being synced. The status changes to **Active** when syncing is complete.  
-* **Last check-in**: Shows the last time Microsoft Intune synced with Google Admin to bring over new devices or update device details and device actions.  
+* **Last check-in**: Shows the last time new devices, device details, or remote actions were synced between Microsoft Intune and the Google Admin console.   
 * **Chrome devices synced**: Shows the number of Chrome OS devices synced with Intune.  
 * **Connected account**: Shows the Google Admin account that's connected to Microsoft Intune.    
 
@@ -92,7 +92,7 @@ These roles can delete the connection between Microsoft Intune and the Google Ad
 * Intune Service Administrator  
 * Custom Intune role that has *Chrome Enterprise delete connection settings permission*  
 
-Deleting your connection removes all Chrome OS devices and Chrome Enterprise connection settings from Intune and Azure Active Directory. After the existing connection is deleted, it will once again allow for a new connection to be established.  
+Deleting your connection removes all Chrome OS devices and Chrome Enterprise connection settings from Intune and Azure Active Directory. After the existing connection is deleted, you'll have space in your tenant to create a new connection.  
 
 To delete the connection in the Microsoft Endpoint Manager admin center:  
 1. Go to **Tenant administration** > **Connectors and tokens**.  
@@ -100,5 +100,5 @@ To delete the connection in the Microsoft Endpoint Manager admin center:
 3. Select **Delete**.  
 
 ## Next steps  
-* View Chrome OS devices and details synced between Google Admin console and Microsoft Intune in the Microsoft Endpoint Manager center. The information can be used to monitor connections or build reports. For more information, see [View reports and device information](chrome-enterprise-details.md).   
-*  Use the remote actions available for Chrome OS devices to deprovision, wipe, restart, or put devices in lost mode. For more information, see [Remote actions for Chrome OS](chrome-enterprise-remote-actions.md).  
+* View Chrome OS devices and details synced between Google Admin console and Microsoft Intune in the Microsoft Endpoint Manager center. The information can be used to monitor connections or build reports. For more information, see [View Chrome OS device information in Intune](chrome-enterprise-device-details.md).   
+*  Use the remote actions available for Chrome OS devices to deprovision, wipe, restart, or put devices in lost mode. For more information, see [Remote device actions for Chrome OS](chrome-enterprise-remote-actions.md).  

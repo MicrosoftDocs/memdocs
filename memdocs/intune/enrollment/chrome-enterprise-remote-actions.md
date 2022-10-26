@@ -32,17 +32,20 @@ ms.collection:
 > [!IMPORTANT]
 > This feature is in public preview. For more information, see [Public preview in Microsoft Intune](../fundamentals/public-preview.md).   
 
-Remotely run device actions on Chrome OS devices synced with Microsoft Intune. There are four remote actions supported on Chrome OS devices: 
+Remotely run device actions on Chrome OS devices synced with Microsoft Intune. There are four remote actions supported on Chrome OS devices:  
 
 * Deprovision  
 * Lost mode, known in Chrome Enterprise as *disabling a device*  
 * Wipe  
 * Restart (only for kiosk devices and managed guest session devices)  
 
-This article describes the remote actions, and provides information about required permissions and known issues. 
+To access remote actions, select a device in your **Chrome Enterprise (preview)** list or go to 
+**Devices** > **All devices**  and select a device. This article describes the remote actions, and provides information about required permissions and known issues. 
 
-## Before you begin    
-[Set up the Chrome Enterprise connector](chrome-enterprise-connector-configure.md) with Microsoft Intune, and enroll devices using the Google Admin console.  
+## Prerequisites     
+[Set up the Chrome Enterprise connector](chrome-enterprise-connector-configure.md) with Microsoft Intune, and enroll devices using the Google Admin console. 
+
+Permission requirements are provided in the sections that follow.  
 
 ## Deprovision  
 Select **Deprovision** to remove Google Admin policies from devices your organization no longer uses. To deprovision a Chrome OS device, you must be assigned a role that has the *Remote tasks: Retire* permission.  

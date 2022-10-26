@@ -54,27 +54,24 @@ Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.co
 * **Ownership**: Chrome OS devices are always marked as **Corporate**.  
 * **Compliance**: Compliance policies are not supported with Chrome OS devices in Intune so they'll appear in this column as **Not evaluated**.  
 
-Select **Filter** to filter the device list by platform. You can also go to the navigation menu and select **Chrome OS (preview)** to for an exclusive view of your Chrome OS devices.    
+Select **Filter** to filter the device list by platform. You can also go to the navigation menu and select **Chrome OS (preview)** for an exclusive view of Chrome OS devices.    
 
 ## View Chrome OS device details  
-Select a device from any of the lists mentioned in this article to view more details about the device. The **Overview** page shows the device name, and lists key properties of the device, such as ownership, serial number, primary user, and device model. 
+Directly select a device to view more details about it. The device's **Overview** page shows the device name, and lists key properties of the device, such as ownership, serial number, primary user, and device model. 
 
 You can also view properties and system info for a device, as described in the following sections.  
 
 ### Properties  
-Go to the navigation menu and select **Properties** to view management information about the device. 
+Select **Properties** to view management information about the device. 
 
-The following properties sync back to the Google Admin console:  
+The following properties sync back to the Google Admin console:. Any changes made to these properties in Intune also show up in the Google Admin console.  
 
 * Management name, known in Google Admin as the *asset ID*      
 * User  
 * Location  
 * Notes  
-
-Any changes made to these properties in Intune also show up in the Google Admin console.  
-
 ### System info  
-Go to the navigation menu and select **System info** to see a real-time snapshot of the information available from the Google Admin console.  
+Select **System info** to see a real-time snapshot of the information available from the Google Admin console.  
 
 ## Next steps  
 Use the remote actions available for Chrome OS devices to deprovision, wipe, restart, or put devices in lost mode. For more information, see [Remote actions for Chrome OS](chrome-enterprise-remote-actions.md).  
