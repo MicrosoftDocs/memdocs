@@ -45,7 +45,9 @@ You can change these defaults by following these steps:
     - **Account type**: Standard User or Local Administrator.
     - **Operating system**: Windows 11 (recommended) or Windows 10.
     - **Language and region ([preview](../public-preview.md))**: Sets the display language, time/date formats, and automatically installs any [Features on Demand](/windows-hardware/manufacture/desktop/features-on-demand-language-fod) like text-to-speech and speech recognition. If the user signs in and doesn't see the correct language, [reset](remotely-manage-business-cloud-pcs.md) the Cloud PC.
-    - **Enroll new Cloud PCs in Microsoft Endpoint Manager**: Select this option to automatically enroll new Cloud PCs in Intune. To see this option, you must have an admin account with an Intune license subscription. For more information, see [Microsoft Intune licensing]( /mem/intune/fundamentals/licenses).
+    - **Enroll new Cloud PCs in Microsoft Endpoint Manager**: Select this option to automatically enroll new Cloud PCs in Intune. This option is only visible to admin accounts that have:
+        - An Intune license subscription. For more information, see [Microsoft Intune licensing]( /mem/intune/fundamentals/licenses).
+        - [Set up Intune](/mem/intune/fundamentals/setup-steps) through step 6 (Set the MDM authority).
 4. Select **Save**.
 
 All new Cloud PCs will be created with the chosen settings. When these settings are changed, they won’t change the operating system, account type, language/region, or Intune enrollment of existing Cloud PCs.

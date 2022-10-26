@@ -38,7 +38,7 @@ You can also read:
 - [Past releases](whats-new-archive.md) in the What's New Archive
 - Information about [how Intune service updates are released](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Microsoft-Intune-Service-Updates/ba-p/358728)
 
-> [!Note]
+> [!NOTE]
 > Each [monthly update](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Microsoft-Intune-Service-Updates/ba-p/358728) may take up to three days to rollout and will be in the following order:
 >
 > - Day 1: Asia Pacific (APAC)
@@ -299,7 +299,8 @@ For more information about protected apps, see [Microsoft Intune protected apps]
 
 ### App management
 
-#### Enhanced app picker for managed apps on Android devices<!-- 14531483 -->  
+#### Enhanced app picker for managed apps on Android devices<!-- 14531483 -->
+
 Android device users can select, view, and remove their default app selections in the Intune Company Portal app. Company Portal securely stores the device user's default choices for managed apps. Users can view and remove their selections in the Company Portal app by going to **Settings** > **Default Apps** > **See defaults**. This feature is an enhancement to the Android custom app picker for managed apps, which is a part of the Android MAM SDK. For more information about how to view default apps, see [View and edit default apps](../user-help/use-managed-apps-on-your-device-android.md#view-and-edit-default-apps). 
 
 ## Week of October 10, 2022
@@ -336,9 +337,9 @@ In Remote help, a link has been added to the non-compliance warning notification
 
 For more information, go to:
 
- - [Microsoft Intune Remote Help](../remote-actions/remote-help.md)
+- [Microsoft Intune Remote Help](../remote-actions/remote-help.md)
 
- - [Monitor Device compliance](../protect/compliance-policy-monitor.md)
+- [Monitor Device compliance](../protect/compliance-policy-monitor.md)
 
 Applies to:
 **Windows 10/11**
@@ -1621,7 +1622,7 @@ For more information, go to
 [Using Azure Virtual Desktop multi-session with Microsoft Intune](../fundamentals/azure-virtual-desktop-multi-session.md)
 
 #### View a managed device's group membership<!-- 4100067 -->
-In **Devices** workload of Intune, you can view the group membership of all Azure AD groups for a managed device. You can select **Group Membership** by signing in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and selecting **Devices** > **All Devices** >  *select a device* > **Group Membership**. For more information, see [Device group membership report](../fundamentals/reports.md#device-group-membership-report-organizational).
+In the monitor section of the **Devices** workload of Intune, you can view the group membership of all Azure AD groups for a managed device. You can select **Group Membership** by signing in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and selecting **Devices** > **All devices** > *select a device* > **Group Membership**. For more information, see [Device group membership report](../fundamentals/reports.md#device-group-membership-report-organizational).
 
 #### Improved certificate reporting details<!-- 13316515 -->
 We’ve changed what Intune displays when you view certificate details for devices and certificate profiles. To view the report, in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) go to > **Devices** > **Monitor** > **Certificates**.
@@ -2235,9 +2236,11 @@ The Settings Catalog has new macOS settings you can configure (**Devices** > **C
 The following settings are also in Settings Catalog. Previously, they were only available in Templates:
 
 **App Management > Associated Domains**:
+
 - Enable Direct Downloads
 
 **Networking > Content Caching**:
+
 - Allow Cache Delete
 - Allow Personal Caching
 - Allow Shared Caching
@@ -2262,6 +2265,7 @@ The following settings are also in Settings Catalog. Previously, they were only 
 - Public Range
 
 **Restrictions**:
+
 - Allow Activity Continuation
 - Allow Adding Game Center Friends
 - Allow Air Drop
@@ -2313,8 +2317,8 @@ There isn't any conflict resolution between policies created using the Settings 
 For more information about configuring Settings catalog profiles in Intune, see [Create a policy using settings catalog in Microsoft Intune](../configuration/settings-catalog.md).
 
 Applies to:
-- macOS
 
+- macOS
 
 ## What's New archive
 

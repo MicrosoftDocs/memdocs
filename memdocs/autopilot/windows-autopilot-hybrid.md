@@ -8,11 +8,12 @@ manager: dougeby
 ms.reviewer: jubaptis
 ms.date: 08/03/2022
 ms.topic: how-to
-ms.prod: w10
+ms.prod: windows-client
 ms.localizationpriority: medium
-ms.collection:
+ms.collection: 
   - M365-identity-device-management
   - highpri
+ms.technology: itpro-deploy
 ---
  
 # Deploy hybrid Azure AD-joined devices by using Intune and Windows Autopilot
