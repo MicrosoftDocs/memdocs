@@ -322,6 +322,12 @@ Features of the reusable settings groups will include:
 Reusable groups will be configured on a new Tab for *Reusable settings* that will be available when you view endpoint security Firewall policy.  In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Endpoint security** > **Firewall**.
 
 <!-- ***********************************************-->
+## Monitor and troubleshoot
+
+#### Review Cloud PC connectivity health checks and errors in Microsoft Endpoint Manager admin center<!-- 13811774  -->  
+You’ll be able to review connectivity health checks and errors in the Microsoft Endpoint Manager admin center to help you understand if your users are experiencing connectivity issues. You’ll also get a troubleshooting tool to help resolve connectivity issues.
+
+<!-- ***********************************************-->
 
 ## Tenant administration
 
