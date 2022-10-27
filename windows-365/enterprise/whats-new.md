@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 10/25/2022
+ms.date: 10/27/2022
 ms.topic: reference
 ms.service: cloudpc
 ms.subservice:
@@ -49,7 +49,7 @@ Learn what new features are available in Windows 365 Enterprise.
 -->
 
 <!-- ########################## -->
-## Week of October 25, 2022
+## Week of October 24, 2022
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
@@ -57,6 +57,15 @@ Learn what new features are available in Windows 365 Enterprise.
 #### Point-in-time restore now generally available<!--37063579-->
 
 Point-in-time restore has moved out of preview and into general availability. For more information, see [Point-in-time restore for Windows 365 Enterprise](restore-overview.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Provisioning
+
+#### New supported Azure region: UAE North<!--41670300-->
+
+A new Azure regions is now supported for Windows 365 Cloud PC provisioning: UAE North.
+
+For more information about supported Azure regions, see [Supported Azure regions for Cloud PC provisioning](requirements.md#supported-azure-regions-for-cloud-pc-provisioning).
 
 <!-- ########################## -->
 ## Week of October 17, 2022
