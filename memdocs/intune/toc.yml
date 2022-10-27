@@ -22,7 +22,6 @@ items:
     items:
     - name: Walkthrough Intune in Microsoft Endpoint Manager
       href: ./fundamentals/tutorial-walkthrough-endpoint-manager.md 
-
     - name: Try Intune for free
       href: ./fundamentals/free-trial-sign-up.md      
   - name: Plan
