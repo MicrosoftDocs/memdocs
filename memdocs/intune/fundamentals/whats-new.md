@@ -26,7 +26,6 @@ search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: 
   - M365-identity-device-management
-  - highpri
   - highseo
 ---
 
@@ -34,7 +33,7 @@ ms.collection:
 
 Learn what's new each week in Microsoft Intune. You can also find [important notices](#notices), [past releases](whats-new-archive.md), and information about [how Intune service updates are released](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Microsoft-Intune-Service-Updates/ba-p/358728).
 
-> [!Note]
+> [!NOTE]
 > Each [monthly update](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Microsoft-Intune-Service-Updates/ba-p/358728) may take up to three days to rollout and will be in the following order:
 >
 > - Day 1: Asia Pacific (APAC)
@@ -61,12 +60,19 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Scripts
 ### Tenant administration
 -->
+## Week of October 24, 2022
+### Device configuration
+#### New network endpoints for Microsoft Intune<!--15847055 -->
 
+New network endpoints have been added to our documentation to accommodate new Azure Scale Units (ASU) that have been added to the Intune service. We recommend updating your firewall rules with the latest list of IP addresses to ensure that all network endpoints for Microsoft Intune are up-to-date.
+
+For the full list go to  [Network endpoints for Microsoft Intune](intune-endpoints.md).
 ## Week of October 17, 2022 
 
 ### App management  
 
 #### Enhanced app picker for managed apps on Android devices<!-- 14531483 -->
+
 Android device users can select, view, and remove their default app selections in the Intune Company Portal app. Company Portal securely stores the device user's default choices for managed apps. Users can view and remove their selections in the Company Portal app by going to **Settings** > **Default Apps** > **See defaults**. This feature is an enhancement to the Android custom app picker for managed apps, which is a part of the Android MAM SDK. For more information about how to view default apps, see [View and edit default apps](../user-help/use-managed-apps-on-your-device-android.md#view-and-edit-default-apps). 
 
 ## Week of October 10, 2022
@@ -107,9 +113,9 @@ In Remote help, a link has been added to the non-compliance warning notification
 
 For more information, go to:
 
- - [Microsoft Intune Remote Help](../remote-actions/remote-help.md)
+- [Microsoft Intune Remote Help](../remote-actions/remote-help.md)
 
- - [Monitor Device compliance](../protect/compliance-policy-monitor.md)
+- [Monitor Device compliance](../protect/compliance-policy-monitor.md)
 
 Applies to:
 **Windows 10/11**
@@ -180,7 +186,7 @@ Applies to:
 - Android Enterprise corporate owned work profile
 
 #### Filter on the user scope or device scope in the Settings Catalog for Windows devices<!-- 13949975 -->
-When you create a Settings Catalog policy, you can use **Add settings** > **Add filter** to filter settings based on the Windows OS edition (**Devices** > **Configuration profiles** > **Create profile** > **Windows 10 and later** for platform > **Settings Catalog (preview)** for profile type).
+When you create a Settings Catalog policy, you can use **Add settings** > **Add filter** to filter settings based on the Windows OS edition (**Devices** > **Configuration profiles** > **Create profile** > **Windows 10 and later** for platform > **Settings Catalog** for profile type).
 
 When you **Add filter**, you can also filter on the settings by user scope or device scope.
 
@@ -625,7 +631,7 @@ Microsoft Intune will now alert you when it detects a hardware change on an Auto
 ### Device configuration
 
 #### New macOS Microsoft AutoUpdate (MAU) settings in the Settings Catalog<!-- 14873468 -->
-The Settings Catalog supports settings for Microsoft AutoUpdate (MAU) (**Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform >**Settings catalog (preview)** for profile type).
+The Settings Catalog supports settings for Microsoft AutoUpdate (MAU) (**Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform >**Settings catalog** for profile type).
 
 The following settings are now available:
 
@@ -1293,7 +1299,7 @@ Applies to:
 - macOS
 
 #### New Microsoft Office and Microsoft Outlook preference settings in the macOS Settings Catalog<!-- 14193331 -->
-The Settings Catalog supports preference settings for Microsoft Office and Microsoft Outlook (**Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform >**Settings catalog (preview)** for profile type). 
+The Settings Catalog supports preference settings for Microsoft Office and Microsoft Outlook (**Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform >**Settings catalog** for profile type). 
 
 The following settings are available:
 
@@ -1393,7 +1399,7 @@ For more information, go to
 [Using Azure Virtual Desktop multi-session with Microsoft Intune](../fundamentals/azure-virtual-desktop-multi-session.md)
 
 #### View a managed device's group membership<!-- 4100067 -->
-In **Devices** workload of Intune, you can view the group membership of all Azure AD groups for a managed device. You can select **Group Membership** by signing in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and selecting **Devices** > **All Devices** >  *select a device* > **Group Membership**. For more information, see [Device group membership report](../fundamentals/reports.md#device-group-membership-report-organizational).
+In the monitor section of the **Devices** workload of Intune, you can view the group membership of all Azure AD groups for a managed device. You can select **Group Membership** by signing in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and selecting **Devices** > **All devices** > *select a device* > **Group Membership**. For more information, see [Device group membership report](../fundamentals/reports.md#device-group-membership-report-organizational).
 
 #### Improved certificate reporting details<!-- 13316515 -->
 We’ve changed what Intune displays when you view certificate details for devices and certificate profiles. To view the report, in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) go to > **Devices** > **Monitor** > **Certificates**.
@@ -1505,7 +1511,7 @@ Intune will no longer remove users from all Intune reports when they are unlicen
 
 #### New Device Control profile for Intune’s endpoint security Attack Surface Reduction policy<!-- 8844611 -->
 
-As part of the continuing [rollout of new profiles for endpoint security policies](/whats-new-archive.#new-profile-templates-and-settings-structure-for-endpoint-security-policies), which began in April 2022, we’ve released a new Device Control profile template for [Attack Surface Reduction](../protect/endpoint-security-asr-policy.md) policy for endpoint security in Intune. This profile replaces the previous profile of the same name for the *Windows 10 and later* platform.
+As part of the continuing [rollout of new profiles for endpoint security policies](whats-new-archive.md#new-profile-templates-and-settings-structure-for-endpoint-security-policies), which began in April 2022, we’ve released a new Device Control profile template for [Attack Surface Reduction](../protect/endpoint-security-asr-policy.md) policy for endpoint security in Intune. This profile replaces the previous profile of the same name for the *Windows 10 and later* platform.
 
 With this replacement, only instances of the new profile can be created. However, any profiles you’ve previously created that use the old profile structure remain available to use, edit, and deploy.
 
@@ -1779,7 +1785,7 @@ There are some new features when using filters:
 
 - Endpoint Security policies support filters. So, when you assign an endpoint security policy, you can use filters to assign the policy based on rules you create.
 
-- When you create a new endpoint security policy, it automatically uses the [new device configuration profile reporting](/whats-new-archive#new-reporting-experience-for-device-configuration-profiles). When you look at the per-policy report, it also has an **Assignment Filter** column (**Devices** > **Configuration profiles** > Select an existing endpoint security policy > **View report**). Use this column to determine if a filter successfully applied to your policy.
+- When you create a new endpoint security policy, it automatically uses the [new device configuration profile reporting](whats-new-archive.md#new-reporting-experience-for-device-configuration-profiles). When you look at the per-policy report, it also has an **Assignment Filter** column (**Devices** > **Configuration profiles** > Select an existing endpoint security policy > **View report**). Use this column to determine if a filter successfully applied to your policy.
 
 For more information on filters, see:
 - [Use filters when assigning your apps, policies, and profiles](filters.md)
@@ -2007,9 +2013,11 @@ The Settings Catalog has new macOS settings you can configure (**Devices** > **C
 The following settings are also in Settings Catalog. Previously, they were only available in Templates:
 
 **App Management > Associated Domains**:
+
 - Enable Direct Downloads
 
 **Networking > Content Caching**:
+
 - Allow Cache Delete
 - Allow Personal Caching
 - Allow Shared Caching
@@ -2034,6 +2042,7 @@ The following settings are also in Settings Catalog. Previously, they were only 
 - Public Range
 
 **Restrictions**:
+
 - Allow Activity Continuation
 - Allow Adding Game Center Friends
 - Allow Air Drop
@@ -2085,8 +2094,8 @@ There isn't any conflict resolution between policies created using the Settings 
 For more information about configuring Settings catalog profiles in Intune, see [Create a policy using settings catalog in Microsoft Intune](../configuration/settings-catalog.md).
 
 Applies to:
-- macOS
 
+- macOS
 
 ## What's New archive
 

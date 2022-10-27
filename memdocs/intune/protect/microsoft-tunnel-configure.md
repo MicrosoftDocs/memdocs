@@ -182,16 +182,6 @@ Before installing Microsoft Tunnel Gateway on a Linux server, configure your ten
 
 8. If you’re using RHEL 8.4 or 8.5, be sure to restart the Tunnel Gateway server by entering `mst-cli server restart` before you attempt to connect clients to it.
 
-### Configure a break and inspect proxy
-
-After installing the Microsoft Tunnel server, you can then configure Microsoft Tunnel to work with a break and inspect proxy server that uses a self-signed certificate. To be successful, Microsoft Tunnel must be able to locate and access the certificate from the Proxy server.
-
-Configuration requires the following steps:
-
-1. The proxy server certificate must be in *PEM* format and saved to a file with a `.crt` extension.
-2. Copy the *.crt* file to the following location on the Linux host: `/etc/mstunnel/ca-trust`
-3. Re-run the installation script.
-
 ## Deploy the Microsoft Tunnel client app
 
 To use the Microsoft Tunnel, devices need access to a Microsoft Tunnel client app. You can deploy the tunnel client app to devices by assigning it to users. The following apps are available:
