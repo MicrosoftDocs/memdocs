@@ -75,14 +75,14 @@ You can use filters to refine the assignment scope when deploying app configurat
 
 ### Device configuration
 
-#### Group Policy analytics automatically applies scope tags assigned to admins when they import Group Policy objects<!-- 16017499 -->
+#### Group Policy analytics automatically applies scope tags assigned to admins when they import Group Policy objects<!-- 16017499 -->  
 In Group Policy analytics, you can import your on-premises GPOs to see the policy settings that support cloud-based MDM providers, including Microsoft Intune. You can also see any deprecated settings or settings not available.
 
 Now, scope tags assigned to admins are automatically applied when these admins import GPOs into Group Policy analytics.
 
-For example, global administrators have "Charlotte", "London", or "Boston" scope tags assigned to their role:
+For example, admins have "Charlotte", "London", or "Boston" scope tags assigned to their role:
 
-- An admin with the "Charlotte" scope tag imports a GPO.
+- An admin with the "Charlotte" scope tag imports a GPO. 
 - The "Charlotte" scope tag is automatically applied to the imported GPO.
 - All admins with the "Charlotte" scope tag can see the imported object.
 - Admins with only the "London" or only the "Boston" scope tags can't see the imported object from the "Charlotte" admin.
