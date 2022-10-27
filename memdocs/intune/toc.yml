@@ -25,7 +25,6 @@ items:
 
     - name: Try Intune for free
       href: ./fundamentals/free-trial-sign-up.md      
-
   - name: Plan
     items:
     - name: Planning overview
