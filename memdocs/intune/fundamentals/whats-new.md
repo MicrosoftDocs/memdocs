@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/24/2022
+ms.date: 10/27/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -74,6 +74,30 @@ You can use RSS to be notified when this page is updated. For more information, 
 You can use filters to refine the assignment scope when deploying app configuration policies for managed devices. You must first [create a filter](../fundamentals/filters.md#create-a-filter) using any of the available properties for iOS and Android. Then, in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) you can assign your managed app configuration policy by selecting **Apps** > **App configuration policies** > **Add** > **Managed devices** and go to the assignment page. After selecting a group, you can refine the applicability of the policy by choosing a filter and deciding to use it in **Include** or **Exclude** mode. For related information about filters, see [Use filters when assigning your apps, policies, and profiles in Microsoft Endpoint Manager](../fundamentals/filters.md).
 
 ### Device configuration
+
+#### Group Policy analytics automatically applies scope tags assigned to admins when they import Group Policy objects<!-- 16017499 -->
+In Group Policy analytics, you can import your on-premises GPOs to see the policy settings that support cloud-based MDM providers, including Microsoft Intune. You can also see any deprecated settings or settings not available.
+
+Now, scope tags assigned to admins are automatically applied when these admins import GPOs into Group Policy analytics.
+
+For example, global administrators have "Charlotte", "London", or "Boston" scope tags assigned to their role:
+
+- An admin with the "Charlotte" scope tag imports a GPO.
+- The "Charlotte" scope tag is automatically applied to the imported GPO.
+- All admins with the "Charlotte" scope tag can see the imported object.
+- Admins with only the "London" or only the "Boston" scope tags can't see the imported object from the "Charlotte" admin.
+
+For admins to see the analytics or migrate the imported GPO to an Intune policy, these admins must have one of the same scope tags as the admin that did the import.
+
+For more information on these features, go to:
+
+- [Analyze your on-premises GPOs using Group Policy analytics in Microsoft Intune](../configuration/group-policy-analytics.md)
+- [Use role-based access control (RBAC) and scope tags for distributed ITUse role-based access control (RBAC) and scope tags for distributed IT](scope-tags.md)
+
+Applies to:
+
+- Windows 11
+- Windows 10
 
 #### New network endpoints for Microsoft Intune<!--15847055 -->
 
