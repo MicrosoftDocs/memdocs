@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 07/26/2022
+ms.date: 10/14/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -116,7 +116,9 @@ Depending on the carrier used by the devices, not all details might be collected
 |EAS activation ID|The device's Exchange ActiveSync identifier.|Windows, iOS/iPadOS, Android|
 |Supervised|If **Yes**, administrators have enhanced control over the device.|iOS/iPadOS|
 |Encrypted|If **Yes**, the data stored on the device is encrypted.|Windows, iOS/iPadOS, Android|
-|Product Name|The product name of the device, such as iPad8,12.|iOS/iPadOS, macOS|
+|Product Name|The product name of the device, such as iPad 8,12.|iOS/iPadOS, macOS|
+|Battery level|Shows the battery level of the device, between 0 and 100, or defaults to null if the battery level cannot be determined.|iOS/iPadOS|
+|Resident users|Shows the number of users currently on the shared iPad device, or defaults to null if the number of users cannot be determined.|iOS/iPadOS|
 
 > [!Note]  
 > For Windows 10 devices that are registered with [Windows Autopilot service](../../autopilot/add-devices.md), Enrolled date might display the time when devices were registered with Autopilot instead of the time when they were enrolled.

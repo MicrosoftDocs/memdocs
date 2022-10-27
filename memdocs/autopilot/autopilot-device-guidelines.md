@@ -2,7 +2,7 @@
 title: Windows Autopilot device guidelines
 description: Learn all about hardware, firmware, and software best practices for Windows Autopilot deployment.
 keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune
-ms.prod: w10
+ms.prod: windows-client
 ms.mktglfcycl: deploy
 ms.localizationpriority: medium
 ms.sitesec: library
@@ -15,6 +15,7 @@ manager: dougeby
 ms.date: 2/1/2022
 ms.collection: M365-modern-desktop
 ms.topic: troubleshooting
+ms.technology: itpro-deploy
 ---
 
 # Windows Autopilot device guidelines
