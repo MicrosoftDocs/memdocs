@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/26/2022
+ms.date: 10/27/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -48,14 +48,16 @@ Use for personal/BYOD and organization-owned devices running Linux.
 | Feature | Use this enrollment option when |
 | --- | --- |
 | You use Ubuntu. | ✔️ |
-| Devices are owned by the organization or school. | ✔️ |
+| Devices are owned by the organization or school. | ✔️ ?? |
 | Devices are personal or BYOD. | ✔️  |
 | You have new or existing devices. | ✔️ |
 | Need to enroll a few devices, or a large number of devices (bulk enrollment). | ✔️ <br/><br/> If you have a large number of devices, then this method will take some time. |
 | Devices are associated with a single user. | ✔️ |
-| Devices are user-less, such as kiosk or dedicated device. | ✔️ |
+| Devices are user-less, such as kiosk or dedicated device. | ✔️ ?? |
 | Devices are managed by another MDM provider. | ❌ <br/><br/> To be fully managed by Intune, users must unenroll from the current MDM provider, and then enroll in Intune. |
 | You use the device enrollment manager (DEM) account. | ❌ <br/><br/> The DEM account isn't supported. |
+
+?? Need to any other features to this table?? 
 
 ---
 
@@ -64,7 +66,7 @@ Use for personal/BYOD and organization-owned devices running Linux.
 Other than having Intune setup, there are minimal administrator tasks with Linux enrollment.
 
 - Be sure your devices are [supported](supported-devices-browsers.md).
-- QR code??
+- QR code?? This is listed in the end user doc, but not sure how it's used or why it's needed. ?? 
 - Intune admins don't do anything to enable Linux enrollment in the Microsoft Endpoint Manager admin center. It's automatically enabled. When users enroll their Linux devices, you'll see them in the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Linux**.
 
 ## End user tasks

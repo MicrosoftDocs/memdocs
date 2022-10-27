@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/26/2022
+ms.date: 10/27/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -75,7 +75,7 @@ This article lists the enrollment prerequisites, has information on using other 
   | Android | none |
   | Android Enterprise | none |
   | iOS/iPadOS | [MDM push certificate](../enrollment/apple-mdm-push-certificate-get.md)<br/>Apple ID |
-  | Linux | none |
+  | Linux | none? Or, add A GNOME graphical desktop environment, which is typically included with Ubuntu Desktop? |
   | macOS | [MDM push certificate](../enrollment/apple-mdm-push-certificate-get.md) |
   | Windows | none |
 
