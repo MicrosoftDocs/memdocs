@@ -9,7 +9,9 @@ ms.author: aaroncz
 ms.reviewer: jubaptis
 manager: dougeby
 ms.date: 09/21/2022
-ms.collection: M365-modern-desktop
+ms.collection:
+  - M365-modern-desktop
+  - highpri
 ms.topic: troubleshooting
 ---
 

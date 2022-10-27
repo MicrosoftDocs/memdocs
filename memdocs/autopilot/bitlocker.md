@@ -1,7 +1,7 @@
 ---
 title: Setting the BitLocker encryption algorithm for Autopilot devices
-description: Microsoft Intune provides a comprehensive set of configuration options to manage BitLocker on Windows devices. 
-ms.prod: w10
+description: Microsoft Intune provides a comprehensive set of configuration options to manage BitLocker on Windows devices.
+ms.prod: windows-client
 ms.localizationpriority: medium
 author: aczechowski
 ms.author: aaroncz
@@ -10,6 +10,7 @@ manager: dougeby
 ms.date: 06/15/2022
 ms.collection: M365-modern-desktop
 ms.topic: how-to
+ms.technology: itpro-deploy
 ---
 
 # Setting the BitLocker encryption algorithm for Autopilot devices

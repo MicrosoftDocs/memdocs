@@ -762,7 +762,7 @@ These settings use the [start policy CSP](/windows/client-management/mdm/policy-
 
 - **Fast user switching**: **Block** prevents switching between users that are logged on simultaneously without logging off. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might show the **Switch user** on the user tile.
 
-  [Start/HideSwitchAccount CSP](/windows/client-management/mdm/policy-csp-start#start-hideswitchaccount)
+  [WindowsLogon/HideFastUserSwitching CSP](/windows/client-management/mdm/policy-csp-windowslogon#windowslogon-hidefastuserswitching)
 
 - **Most used apps**: **Block** hides the most used apps from showing on the start menu. It also disables the corresponding toggle in the Settings app. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might show the most used apps.
 
