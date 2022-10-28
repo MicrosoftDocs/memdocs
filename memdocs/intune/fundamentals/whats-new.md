@@ -152,7 +152,7 @@ Applies to:
 - iOS/iPadOS
 - macOS
 
-For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
+For more information about configuring settings catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
 
 #### New settings for Device Firmware Configuration Interface (DFCI) profiles on Windows devices<!-- 15511597  -->  
 You can create a DFCI profile that enables the Windows OS to pass management commands from Intune to UEFI (Unified Extensible Firmware Interface) (**Devices** > **Configuration profiles** > **Create profile** > **Windows 10 and later** for platform > **Templates > Device Firmware Configuration Interface**)
@@ -432,8 +432,8 @@ Applies to:
 - Android Enterprise corporate owned dedicated devices
 - Android Enterprise corporate owned work profile
 
-#### Filter on the user scope or device scope in the Settings Catalog for Windows devices<!-- 13949975 -->
-When you create a Settings Catalog policy, you can use **Add settings** > **Add filter** to filter settings based on the Windows OS edition (**Devices** > **Configuration profiles** > **Create profile** > **Windows 10 and later** for platform > **Settings Catalog** for profile type).
+#### Filter on the user scope or device scope in the settings catalog for Windows devices<!-- 13949975 -->
+When you create a settings catalog policy, you can use **Add settings** > **Add filter** to filter settings based on the Windows OS edition (**Devices** > **Configuration profiles** > **Create profile** > **Windows 10 and later** for platform > **Settings catalog** for profile type).
 
 When you **Add filter**, you can also filter on the settings by user scope or device scope.
 
@@ -466,10 +466,10 @@ Applies to:
 - Windows 10
 - Windows 11
 
-#### New settings available in the iOS/iPadOS and macOS Settings Catalog<!-- 15349701 -->
-The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. 
+#### New settings available in the iOS/iPadOS and macOS settings catalog<!-- 15349701 -->
+The [settings catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. 
 
-There are new settings available in the Settings Catalog. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can see these settings at **Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type.
+There are new settings available in the settings catalog. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can see these settings at **Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type.
 
 New settings include:
 
@@ -486,7 +486,7 @@ Applies to:
 - iOS/iPadOS
 - macOS
 
-The following settings are also in Settings Catalog. Previously, they were only available in Templates:
+The following settings are also in settings catalog. Previously, they were only available in Templates:
 
 **Privacy > Privacy Preferences Policy Control**:
 
@@ -516,7 +516,7 @@ Applies to:
 
 - macOS
 
-For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
+For more information about configuring settings catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
 
 ### Device enrollment
 
@@ -684,8 +684,8 @@ For more information, go to:
 Applies to:
 -  iOS/iPadOS 15 or later devices enrolled using Apple User Enrollment
 
-#### New macOS settings available in the Settings Catalog <!-- 15020250 -->
-The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. New settings are available in the Settings Catalog. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform > **Settings catalog** for profile type.
+#### New macOS settings available in the settings catalog <!-- 15020250 -->
+The [settings catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. New settings are available in the settings catalog. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform > **Settings catalog** for profile type.
 
 New settings include:
 
@@ -698,7 +698,7 @@ New settings include:
 
 - Allow Universal Control
 
-The following settings are also in Settings Catalog. Previously, they were only available in Templates:
+The following settings are also in settings catalog. Previously, they were only available in Templates:
 
 **Authentication > Extensible Single Sign On**:
 
@@ -747,13 +747,13 @@ The following settings are also in Settings Catalog. Previously, they were only 
 - Team Identifier
 - Type
 
-For more information about configuring Settings catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
+For more information about configuring settings catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
 
 Applies to:
 - macOS
 
-#### New iOS/iPadOS settings in the Settings Catalog<!-- 15020319 -->
-The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. There are new iOS/iPadOS settings available in the Settings Catalog. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** for platform > **Settings catalog** for profile type. Previously, these settings were only available in Templates:
+#### New iOS/iPadOS settings in the settings catalog<!-- 15020319 -->
+The [settings catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. There are new iOS/iPadOS settings available in the settings catalog. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** for platform > **Settings catalog** for profile type. Previously, these settings were only available in Templates:
 
 **Authentication > Extensible Single Sign On**:
 
@@ -790,7 +790,7 @@ The [Settings Catalog](../configuration/settings-catalog.md) lists all the setti
 - Asset Tag Information
 - Lock Screen Footnote
 
-For more information about configuring Settings catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
+For more information about configuring settings catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
 
 Applies to:
 - iOS/iPadOS
@@ -877,8 +877,8 @@ Microsoft Intune will now alert you when it detects a hardware change on an Auto
 
 ### Device configuration
 
-#### New macOS Microsoft AutoUpdate (MAU) settings in the Settings Catalog<!-- 14873468 -->
-The Settings Catalog supports settings for Microsoft AutoUpdate (MAU) (**Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform >**Settings catalog** for profile type).
+#### New macOS Microsoft AutoUpdate (MAU) settings in the settings catalog<!-- 14873468 -->
+The settings catalog supports settings for Microsoft AutoUpdate (MAU) (**Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform >**Settings catalog** for profile type).
 
 The following settings are now available:
 
@@ -917,7 +917,7 @@ The settings can be used to configure preferences for the following applications
 - OneDrive
 - Skype for Business
 
-For more information about the Settings Catalog, go to:
+For more information about the settings catalog, go to:
 - [Tasks you can complete using the Settings Catalog in Intune](../configuration/settings-catalog-common-features.md)
 - [Create a policy using settings catalog in Microsoft Intune](../configuration/settings-catalog.md)
 
@@ -928,8 +928,8 @@ For more information about Microsoft AutoUpdate settings you can configure, go t
 Applies to:
 - macOS
 
-#### New iOS/iPadOS settings in the Settings Catalog<!-- 14875716 -->
-The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. There are new iOS/iPadOS settings available in the Settings Catalog (**Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** for platform > **Settings catalog** for profile type).
+#### New iOS/iPadOS settings in the settings catalog<!-- 14875716 -->
+The [settings catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. There are new iOS/iPadOS settings available in the settings catalog (**Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** for platform > **Settings catalog** for profile type).
 
 New settings include:
 
@@ -944,7 +944,7 @@ New settings include:
 - Proxy Server
 - Username
 
-The following settings are also in Settings Catalog. Previously, they were only available in Templates:
+The following settings are also in settings catalog. Previously, they were only available in Templates:
 
 **User experience > Notifications**:
 - Grouping type
@@ -1118,8 +1118,8 @@ For more information about configuring Settings catalog profiles in Intune, see 
 Applies to:
 - iOS/iPadOS
 
-#### New macOS settings available in the Settings Catalog<!-- 14875745 -->
-The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. New settings are available in the Settings Catalog (**Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform > **Settings catalog** for profile type).
+#### New macOS settings available in the settings catalog<!-- 14875745 -->
+The [settings catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. New settings are available in the settings catalog (**Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform > **Settings catalog** for profile type).
 
 New settings include:
 
@@ -1127,7 +1127,7 @@ New settings include:
 
 - Removable System Extensions
 
-The following settings are also in Settings Catalog. Previously, they were only available in Templates:
+The following settings are also in settings catalog. Previously, they were only available in Templates:
 
 **System configuration > System extensions**:
 - Allow User Overrides
@@ -1135,7 +1135,7 @@ The following settings are also in Settings Catalog. Previously, they were only 
 - Allowed System Extensions
 - Allowed Team Identifiers
 
-For more information about configuring Settings catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
+For more information about configuring settings catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
 
 Applies to:
 - macOS
@@ -1303,8 +1303,8 @@ For more information on these features, go to:
 - [Analyze your on-premises GPOs using Group Policy analytics in Microsoft Endpoint Manager](../configuration/group-policy-analytics.md)
 - [Create a Settings Catalog policy using your imported GPOs in Microsoft Endpoint Manager](../configuration/group-policy-analytics-migrate.md)
 
-#### iOS/iPadOS platform is in Settings Catalog<!-- 13934066 -->
-The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. The iOS/iPadOS platform and some settings are now available in the Settings Catalog (**Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** for platform > **Settings catalog** for profile type).
+#### iOS/iPadOS platform is in settings catalog<!-- 13934066 -->
+The [settings catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. The iOS/iPadOS platform and some settings are now available in the settings catalog (**Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** for platform > **Settings catalog** for profile type).
 
 New settings include:
 
