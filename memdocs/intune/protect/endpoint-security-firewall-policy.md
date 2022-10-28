@@ -70,7 +70,7 @@ Find the endpoint security policies for firewalls under *Manage* in the **Endpoi
 
 #### Add reusable settings groups to profiles for Firewall rules
 
-Microsoft Defender Firewall rule profiles support use of [reusable settings groups](link to article) for the following platforms:
+In public preview, Microsoft Defender Firewall rule profiles support use of [reusable settings groups](../protect/reusable-settings-groups.md) for the following platforms:
 
 - *Windows 10, Windows 11, and Windows Server platform*
 
@@ -166,6 +166,15 @@ You can filter returns for this report by using one or more of the status detail
 To learn more about Firewall rules in Intune, and how to troubleshoot common problems, see the following *Intune Customer Success* blog:
 
 - [How to trace and troubleshoot the Intune Endpoint Security Firewall rule creation process](https://techcommunity.microsoft.com/t5/intune-customer-success/how-to-trace-and-troubleshoot-the-intune-endpoint-security/ba-p/3261452)
+
+**Additional common firewall rule issues:**
+
+Event Viewer: RemotePortRanges or LocalPortRanges "The parameter is incorrect"
+> [!div class="mx-imgBorder"]
+> ![RemotePortRangesFailure](media/endpoint-security-firewall-policy/remoteportrangeparameterincorrect.png)
+- Verify configured ranges are ascending (Example: 1-5 is correct, 5-1 will cause this error)
+- Verify configured ranges are within the overall port range of 0-65535 
+- If either remote port ranges or local port ranges are configured in a rule, protocol **must** also be configured with 6 (TCP) **or** 17 (UDP)
 
 ## Next steps
 

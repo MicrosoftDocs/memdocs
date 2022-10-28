@@ -48,6 +48,14 @@ items:
     displayName: mfa; multifactor   
   - name: Set up enrollment notifications 
     href: enrollment-notifications.md   
+  - name: Configure Chrome Enterprise connector    
+    items: 
+    - name: Configure Chrome Enterprise connector 
+      href: chrome-enterprise-connector-configure.md  
+    - name: View Chrome OS device details 
+      href: chrome-enterprise-device-details.md 
+    - name: Use remote actions for Chrome OS       
+      href: chrome-enterprise-remote-actions.md 
   - name: Set up Windows enrollment
     items:
     - name: Windows enrollment methods
@@ -111,9 +119,13 @@ items:
   - name: Set up iOS/iPadOS enrollment
     href: ios-enroll.md
     items:
-    - name: Automated Device Enrollment
-      href: device-enrollment-program-enroll-ios.md
-      displayName: dep; ade; bulk enroll; ABM
+    - name: Apple automated device enrollment  
+      items: 
+      - name: Set up automated device enrollment 
+        href: device-enrollment-program-enroll-ios.md
+        displayName: dep; ade; bulk enroll; ABM
+      - name: Choose authentication method     
+        href: automated-device-enrollment-authentication.md   
     - name: Shared iOS/iPadOS devices
       items:      
       - name: Shared device overview

@@ -128,24 +128,24 @@ By default, Intune classifies macOS devices as personally-owned. To be classifie
 If you block personally owned Windows devices from enrollment, Intune checks to make sure that each new Windows enrollment request has been authorized for corporate enrollment. Unauthorized enrollments are blocked.  
 
 The following enrollment methods are authorized for corporate enrollment:  
-- The enrolling user is using a [device enrollment manager account]( device-enrollment-manager-enroll.md).
 - The device enrolls through [Windows Autopilot](../../autopilot/enrollment-autopilot.md).
-- The device is registered with Windows Autopilot but isn't an MDM enrollment only option from Windows Settings.
-- The device enrolls through a [bulk provisioning package](windows-bulk-enroll.md).
 - The device enrolls through GPO, or [automatic enrollment from Configuration Manager for co-management](/configmgr/comanage/quickstart-paths#bkmk_path1).
+- The device enrolls through a [bulk provisioning package](windows-bulk-enroll.md).
+- The enrolling user is using a [device enrollment manager account]( device-enrollment-manager-enroll.md).
 
 > [!NOTE]
 > Since a co-managed device enrolls in the Microsoft Intune service based on its Azure AD device token, and not a user token, only the default Intune enrollment restriction will apply to it. 
  
-Intune marks devices going through the following types of enrollments as corporate-owned, and blocks them from enrolling because these methods don't offer the Intune administrator per-device control:  
-- [Automatic MDM enrollment](windows-enroll.md#enable-windows-automatic-enrollment) with [Azure Active Directory join during Windows setup](/azure/active-directory/device-management-azuread-joined-devices-frx)\*.
-- [Automatic MDM enrollment](windows-enroll.md#enable-windows-automatic-enrollment) with [Azure Active Directory join from Windows Settings](/azure/active-directory/user-help/user-help-register-device-on-network)\*.
+Intune marks devices going through the following types of enrollments as corporate-owned, and blocks them from enrolling (unless registered with Autopilot) because these methods don't offer the Intune administrator per-device control:  
+- [Automatic MDM enrollment](windows-enroll.md#enable-windows-automatic-enrollment) with [Azure Active Directory join during Windows setup](/azure/active-directory/device-management-azuread-joined-devices-frx).
+- [Automatic MDM enrollment](windows-enroll.md#enable-windows-automatic-enrollment) with [Azure Active Directory join from Windows Settings](/azure/active-directory/user-help/user-help-register-device-on-network).
  
 Intune also blocks personal devices using these enrollment methods:  
-- [Automatic MDM enrollment](windows-enroll.md#enable-windows-automatic-enrollment) with [Add Work Account from Windows Settings](/azure/active-directory/user-help/user-help-join-device-on-network)\*.
+- [Automatic MDM enrollment](windows-enroll.md#enable-windows-automatic-enrollment) with [Add Work Account from Windows Settings](/azure/active-directory/user-help/user-help-join-device-on-network).
 - [MDM enrollment only]( /windows/client-management/mdm/mdm-enrollment-of-windows-devices#connecting-personally-owned-devices-bring-your-own-device) option from Windows Settings.
 
-\* These won't be blocked if registered with Autopilot.  
+> [!IMPORTANT]
+> Automatic MDM enrollment with Add Work Account from Windows Settings (Workplace Join) will fail if device is registered with Autopilot.
 
 ## Limitations  
 

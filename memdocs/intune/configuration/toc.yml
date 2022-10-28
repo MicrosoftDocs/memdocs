@@ -130,7 +130,7 @@ items:
     displayName: trusted sites
   - name: Windows health monitoring
     href: windows-health-monitoring.md
-    displayName: endpoint analytics, microsoft productivity score 
+    displayName: endpoint analytics, microsoft Adoption Score 
   - name: Education Take a Test app
     href: education-settings-configure.md
   - name: eSIM cellular on Windows

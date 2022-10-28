@@ -8,7 +8,7 @@ keywords:
 author: dougeby 
 ms.author: dougeby
 manager: dougeby
-ms.date: 10/07/2022
+ms.date: 10/18/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -67,27 +67,13 @@ You can use RSS to be notified when this article is updated. For more informatio
 ## App management
 
 ### Global quiet time app policy settings<!-- 15424417 -->
-The global quiet time settings will allow you to create policies to schedule quiet time for your end users which will automatically mute Microsoft Outlook email and Teams notifications on iOS/iPadOS and Android platforms. These policies can be used to limit end user notifications received after work hours. When this feature is available, you will be able to find it in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **Quiet Time** > **Policies**.
-
-### Select default work apps in Intune Company Portal<!-- 14531483 -->
-Android device users will be able to select and save their preferred work apps in Intune Company Portal. They'll be able to select the default apps they want to use for a specific intent or file type, and change or remove their preferences. Company Portal will securely store the device user's preferred defaults. This feature is an enhancement to the Android MAM custom app picker, which is a part of the Android MAM SDK. 
+The global quiet time settings will allow you to create policies to schedule quiet time for your end users which will automatically mute Microsoft Outlook email and Teams notifications on iOS/iPadOS and Android platforms. These policies can be used to limit end user notifications received after work hours. When this feature is available, you will be able to find it in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **Quiet Time** > **Policies**.  
 
 ### Use filters with app configuration profiles for managed devices<!-- 7423842 -->
 You will be able to use filters to refine the assignment scope when deploying app configuration profiles for managed devices.
 You can first create a filter using any of the available properties for iOS and Android. Then, in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) you can assign your managed app configuration profile by selecting **Apps** > **App configuration policies** > **Add** > **Managed devices** and go to the assignment page. After selecting a group, you can refine the applicability of the policy by choosing a filter and deciding to use it in **Include** or **Exclude** mode. For related information about filters, see [Use filters when assigning your apps, policies, and profiles in Microsoft Endpoint Manager](filters.md).
 
 ## Device management
-
-### Intune support for Linux Ubuntu LTS desktops will be generally available<!-- 14616038 -->
-Intune will support Linux Ubuntu LTS desktops. The following initial functionality is planned for this first release for Linux desktop management:
-- Enroll Linux Ubuntu LTS (22.04 and 20.04) desktops into Microsoft Endpoint Manager
-- Enable access to corporate resources via Microsoft Edge 
-- Conditional Access enforcement in Microsoft Edge 
-- Standard Compliance policies
-    - Linux distribution
-    - Device encryption
-    - Password complexity
-- Bash script support for custom compliance policies
 
 ### New hardware details available for individual devices running on iOS/iPadOS<!-- 15038076 -->
 Select **Devices** > **All devices** > *select one of your listed devices* and open it's **Hardware** details. The following new details are available in the **Hardware** pane of individual devices:

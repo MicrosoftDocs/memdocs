@@ -2,7 +2,7 @@
 title: Windows Autopilot software requirements
 description: Inform yourself about software requirements for Windows Autopilot deployment.
 keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, Autopilot, ztd, zero-touch, partner, msfb, intune
-ms.prod: w10
+ms.prod: windows-client
 ms.mktglfcycl: deploy
 ms.localizationpriority: medium
 ms.sitesec: library
@@ -13,13 +13,14 @@ ms.author: aaroncz
 ms.reviewer: jubaptis
 manager: dougeby
 ms.date: 11/12/2021
-ms.collection:
+ms.collection: 
   - M365-modern-desktop
   - highpri
 ms.topic: conceptual
 ms.custom: 
-- CI 116757
-- CSSTroubleshooting
+  - CI 116757
+  - CSSTroubleshooting
+ms.technology: itpro-deploy
 ---
 
 

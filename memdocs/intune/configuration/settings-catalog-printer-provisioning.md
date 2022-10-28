@@ -2,12 +2,12 @@
 # required metadata
 
 title: Configure Universal Print policy using settings catalog in Microsoft Intune
-description: Use the settings catalog in Microsoft Intune and Endpoint Manager to create a Universal Print policy for Windows 10/11 client devices. The policy automatically installs printers on your managed devices.
+description: Use the settings catalog in Microsoft Intune to create a Universal Print policy for Windows 10/11 client devices. The policy automatically installs printers on your managed devices.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/22/2022
+ms.date: 10/10/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -95,7 +95,7 @@ This policy includes your printer information. When you assign the policy, the p
 
 7. In **Configuration settings**, select **Add settings**. In the settings picker, select **Printer Provisioning**, and select the settings you want to configure.
 
-    :::image type="content" source="./media/settings-catalog-printer-provisioning/settings-picker-printer-provisioning.png" alt-text="In the Settings Catalog policy, select printer provisioning to create a universal print policy in Microsoft Intune and Endpoint Manager admin center.":::
+    :::image type="content" source="./media/settings-catalog-printer-provisioning/settings-picker-printer-provisioning.png" alt-text="Screenshot that shows how to select printer provisioning in the settings catalog to create a universal print policy in Microsoft Intune and Endpoint Manager admin center.":::
 
     Close the settings picker.
 
@@ -108,7 +108,7 @@ This policy includes your printer information. When you assign the policy, the p
 
     You can add more printers using the **Add** button:
 
-    :::image type="content" source="./media/settings-catalog-printer-provisioning/add-printer.png" alt-text="In Settings Catalog, add more printers to the universal print policy in Microsoft Intune and Endpoint Manager admin center.":::
+    :::image type="content" source="./media/settings-catalog-printer-provisioning/add-printer.png" alt-text="Screenshot that shows how to add more printers to the universal print policy in the settings catalog in Microsoft Intune and Endpoint Manager admin center.":::
 
 9. Select **Next**.
 

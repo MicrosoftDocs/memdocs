@@ -2,8 +2,8 @@
 title: Troubleshoot Windows Autopilot Azure AD join issues
 description: Troubleshoot issues with Azure AD join issues during the Windows Autopilot deployment process.
 keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune
-ms.technology: windows
-ms.prod: w10
+ms.technology: itpro-deploy
+ms.prod: windows-client
 ms.mktglfcycl: deploy
 ms.localizationpriority: medium
 ms.sitesec: library
