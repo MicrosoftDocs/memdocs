@@ -14,7 +14,9 @@ ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aczechowski
 ms.date: 10/03/2022
-ms.collection: M365-modern-desktop
+ms.collection:
+  - M365-modern-desktop
+  - highpri
 ms.topic: troubleshooting
 ---
 
