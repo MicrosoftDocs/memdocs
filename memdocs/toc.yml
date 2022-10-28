@@ -25,6 +25,6 @@ items:
       - name: Known issues
         href: ./solutions/cloud-native-endpoints/cloud-native-endpoints-known-issues.md
     - name: "Zero Trust: Manage devices with Intune"
-      href: ./solutions/manage-endpoints-with-intune-and-microsoft-365.md
+      href: /microsoft-365/solutions/manage-devices-with-intune-overview
   - name: Get Support
     href: get-support.md
