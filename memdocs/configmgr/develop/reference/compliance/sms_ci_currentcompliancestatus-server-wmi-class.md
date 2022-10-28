@@ -1,19 +1,18 @@
 ---
-title: "SMS_CI_CurrentComplianceStatus Class"
-titleSuffix: "Configuration Manager"
-description: "Represents the compliance status for a baseline configuration item."
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: SMS_CI_CurrentComplianceStatus Class
+titleSuffix: Configuration Manager
+description: Represents the compliance status for a baseline configuration item.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: d36889ae-8c02-441e-996d-64f98c970eae
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_CI_CurrentComplianceStatus Server WMI Class
 The `SMS_CI_CurrentComplianceStatus` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the compliance status for a baseline configuration item.  

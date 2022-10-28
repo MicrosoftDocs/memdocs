@@ -28,6 +28,7 @@ ms.custom: has-adal-ref
 ms.collection:
 - M365-identity-device-management
 - iOS/iPadOS
+- tier3
 ---
 
 # Microsoft Intune App SDK for iOS developer guide
@@ -43,9 +44,9 @@ The Microsoft Intune App SDK for iOS lets you incorporate Intune app protection 
 
 ## Prerequisites
 
-- You will need a macOS computer which has Xcode 11 or later installed.
+- You will need a macOS computer which has Xcode 14.0 or later installed.
 
-- Your app must be targeted for iOS 12.2 or above.
+- Your app must be targeted for iOS 14.0 or above.
 
 - Review the [Intune App SDK for iOS License Terms](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios/blob/master/Microsoft%20License%20Terms%20Intune%20App%20SDK%20for%20iOS.pdf). Print and retain a copy of the license terms for your records. By downloading and using the Intune App SDK for iOS, you agree to such license terms.  If you do not accept them, do not use the software.
 
@@ -1015,6 +1016,7 @@ A newly created SwiftUI app supports UIScenes but does not have a UISceneDelegat
 Here are recommended best practices for developing for iOS:
 
 * The iOS file system is case-sensitive. Ensure that the case is correct for file names like `IntuneMAMResources.bundle`.
+* Registering custom URL schemes allows specific URLs to redirect into your app. iOS and iPadOS allow multiple apps to register the same custom URL scheme and the OS determines which application is invoked. Please refer to the Apple documentation [Defining a custom URL scheme for your app](https://developer.apple.com/documentation/xcode/defining-a-custom-url-scheme-for-your-app) for recommendations to help avoid custom URL scheme collisions and security guidelines for handling malformed URLs.
 
 ## FAQs
 

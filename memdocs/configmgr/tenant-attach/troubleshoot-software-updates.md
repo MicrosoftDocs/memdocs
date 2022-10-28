@@ -5,11 +5,13 @@ description: Troubleshooting software updates for Configuration Manager tenant a
 ms.date: 07/11/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-author: banreet
+author: Banreet
 ms.author: banreetkaur
 ms.manager: apoorvseth
 ms.topic: troubleshooting
 ms.localizationpriority: medium
+ms.reviewer: mstewart,aaroncz 
+ms.collection: tier3
 ---
 
 # Troubleshoot software updates in the admin center

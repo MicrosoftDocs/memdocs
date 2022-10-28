@@ -9,11 +9,11 @@ ms.topic: conceptual
 
 
 ms.assetid: 65066949-cce6-4202-b8e7-f4e1014ee470
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
+ms.collection: tier3
 ---
 
 # Software inventory views in Configuration Manager

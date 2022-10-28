@@ -6,10 +6,12 @@ ms.date: 08/12/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
-author: paasin
-ms.author: paasin
+author: Banreet
+ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Diagnostic and usage data for version 2207

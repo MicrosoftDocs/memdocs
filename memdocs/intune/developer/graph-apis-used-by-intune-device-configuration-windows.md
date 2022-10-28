@@ -28,6 +28,7 @@ ms.custom: intune-azure
 ms.collection:
 - M365-identity-device-management
 - Windows
+- tier3
 ---
 
 # Graph APIs and matching Windows 10 CSPs used in Intune

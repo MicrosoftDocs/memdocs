@@ -201,7 +201,7 @@ To view the **Feature update failures** report, use the following steps:
 > [!IMPORTANT]  
 > To get a complete picture of Windows feature updates status, use the following feature updates reports:
 >
-> - **[Windows 10 and later feature updates (Organizational)](#windows-10-and-later-feature-updates-organizational)**
+> - **[Windows 10 feature updates (Organizational)](#windows-10-feature-updates-organizational)**
 > - **Feature update failures report (Operational)** *(this report)*  
 >
 > Together, these reports provide insight into the update state and compliance of Windows devices in your organization and can help you troubleshoot problems with feature update deployment.  
@@ -387,24 +387,24 @@ Other reports for Microsoft Defender Antivirus include:
 - [Antivirus agent status report](#antivirus-agent-status-report-organizational), an organizational report detailed in this article.
 - [Antivirus policy reports](../protect/endpoint-security-antivirus-policy.md#antivirus-policy-reports), which are available in the Antivirus node under Endpoint security in the Microsoft Endpoint Manager admin center.
 
-## Windows 10 and later feature updates (Organizational)
+## Windows 10 feature updates (Organizational)
 
-A Windows update report, the **Windows 10 and later feature updates** report provides an overall view of compliance for devices that are targeted with a **Feature updates for Windows 10 and later** policy. This report provides the update status based on update state. You can also see specific device update details. The data found in these reports is timely, calls out the device name and state, and other update related details. A summary report is available in the **Windows updates** workload. This report also provides filtering, searching, paging, and sorting.
+A Windows update report, the **Windows 10 feature updates** report provides an overall view of compliance for devices that are targeted with a **Feature updates for Windows 10 and later** policy. This report provides the update status based on update state. You can also see specific device update details. The data found in these reports is timely, calls out the device name and state, and other update related details. A summary report is available in the **Windows updates** workload. This report also provides filtering, searching, paging, and sorting.
 
 For information about how to use this report to resolve update failures, see [Reports for Windows 10 and later feature updates policy](../protect/windows-10-feature-updates.md).
 
-You can view the **Windows 10 and later feature updates** report using the following steps:
+You can view the **Windows 10 feature updates** report using the following steps:
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Reports** > **Windows updates** to view the summary report.
-3. Select the **Reports** tab and select the **Windows Feature Update Report** to see the **Windows 10 and later feature updates** report.
+3. Select the **Reports** tab and select the **Windows Feature Update Report** to see the **Windows 10 feature updates** report.
 4. Select the **Update aggregated status** and **Ownership** filters to refine your report.
 5. Select **Generate report** (or **Generate again**) to retrieve current data.
 
 > [!IMPORTANT]  
 > To get a complete picture of Windows feature updates status, use the following feature updates reports:
 >
-> - Windows 10 and later feature updates (Organizational) *(this report)*
+> - Windows 10 feature updates (Organizational) *(this report)*
 > - [Feature update failures report (Operational)](#feature-update-failures-report-operational)
 >
 > Together, these reports provide insight into the update state and compliance of Windows devices in your organization and can help you troubleshoot problems with feature update deployment.  
@@ -485,7 +485,7 @@ When you select on a group, you can see the Azure AD pane for the group. You can
 To see the report for a device, you can use the following steps:
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Monitor** > *select a device* > **Group Membership**.
+2. Select **Devices** > **All devices** > *select a device* > **Group Membership**.
 
 
 

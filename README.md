@@ -5,7 +5,7 @@ For more information see the [Code of Conduct FAQ](https://opensource.microsoft.
 
 # GitHub repository for Microsoft technical documentation
 
-You've found one of the GitHub repositories that houses the source for content published to [Microsoft Docs](https://docs.microsoft.com/), home of all technical content for Microsoft's Cloud and Enterprise Division.
+You've found one of the GitHub repositories that houses the source for content published to [Microsoft Learn](https://learn.microsoft.com/), home of all technical content for Microsoft's Cloud and Enterprise Division.
 
 ## Contribute to your documentation
 
@@ -15,9 +15,9 @@ We **want and encourage contributions** from our community (users, customers, pa
 
 * **Use your browser**: There are two options:
 
-    **Option 1: Edit directly from Microsoft Docs**
+    **Option 1: Edit directly from Microsoft Learn**
 
-    1. Browse to the [InTune](/mem/intune) article you want to edit.
+    1. Browse to the [Intune](/mem/intune) article you want to edit.
     2. Select **Edit** (top right). This shows the markdown file in the GitHub repository.
     3. Select the pencil icon. When you hover over the pencil icon, you'll see the **Edit this file** tooltip.
     4. Make your changes, and then **commit** your changes.
@@ -36,7 +36,7 @@ We **want and encourage contributions** from our community (users, customers, pa
   
 * **MSFT Employees**: After you create a GitHub account, link it to your Microsoft email address. When your account is linked, you don't have to sign a license agreement to make an update. Follow these steps:
 
-  1. On a device with access to corpnet, go to [GitHub account setup](https://review.docs.microsoft.com/en-us/help/contribute/contribute-get-started-setup-github?branch=master). If you're not on corpnet, this link returns a 404.
+  1. On a device with access to corpnet, go to [GitHub account setup](https://review.learn.microsoft.com/help/contribute/contribute-get-started-setup-github?branch=main). If you're not on corpnet, this link returns a 404.
   
      Creating a GitHub account, and linking to your Microsoft account is a one-time thing. When your account is linked, you don't have to sign a license agreement to make an update.
 

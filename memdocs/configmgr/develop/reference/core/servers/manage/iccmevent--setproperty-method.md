@@ -1,19 +1,18 @@
 ---
-description: Learn how to set an event property in Configuration Manager using ICcmEvent::SetProperty method class.
+description: "Learn how to set an event property in Configuration Manager using ICcmEvent::SetProperty method class."
 title: "ICCMEvent::SetProperty Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 44f3a746-4a3c-489d-bbfb-78cf0ed31fed
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # ICCMEvent::SetProperty Method
 In Configuration Manager, the `ICcmEvent::SetProperty` method sets an event property.  

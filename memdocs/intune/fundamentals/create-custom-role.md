@@ -67,6 +67,11 @@ The following permissions are available when creating custom roles.
 
 | Permission | Description |
 | --- | --- |
+| Android FOTA/Assign | Assign Android firmware over-the-air (FOTA) deployments to Azure AD security groups. |
+| Android FOTA/Delete | Delete and cancel pending Android firmware over-the-air (FOTA) deployments and delete deployment history. |
+| Android FOTA/Create | Create and manage all aspects of Android firmware over-the-air (FOTA) deployments. |
+| Android FOTA/Read | View Android firmware over-the-air (FOTA) deployments, including history and reporting. |
+| Android FOTA/Update | Change existing Android firmware over-the-air (FOTA) deployments and cancel firmware deployments. |
 | Android for work/Read | View the Android for Work configuration used to sync applications with the Play for Work store or view the Android for Work enrollment prerequisites and enrollment profiles. | 
 | Android for work/Update app sync | Manage or change the Android for Work configuration used to sync applications with the Play for Work store, or sync the apps you've approved from the store with Intune. | 
 | Android for work/Update onboarding | Manage or change the Android for work configuration used to enroll Android for Work devices or manage the Android for Work enrollment profiles. | 
@@ -126,10 +131,10 @@ The following permissions are available when creating custom roles.
 | Enrollment programs/Sync device | Initiate the Sync command for Windows Autopilot devices. | 
 | Enrollment programs/Update profile | Manage profiles for the Device Enrollment Program, Apple School Manager, Apple Configurator, or Windows Autopilot. | 
 | Enrollment programs/Update token | Upload the Apple Device Enrollment or Apple School Manager token and sync Apple Device Enrollment Program or Apple School Manager devices. | 
-| Filters/Create | Create new filter. | 
-| Filters/Delete | Delete filters. | 
+| [Filters/Create](/mem/intune/fundamentals/filters#create-a-filter) | Create new filter. | 
+| [Filters/Delete](/mem/intune/fundamentals/filters#delete-a-filter)| Delete filters. | 
 | Filters/Read | View filters.  | 
-| Filters/Update | Edit filters. | 
+| [Filters/Update](/mem/intune/fundamentals/filters#change-an-existing-filter) | Edit filters. | 
 | Intune data warehouse/Read | View all data and reports from the data warehouse. Data can be used by Power BI or other reporting services. | 
 | Managed apps/Assign | Assign application protection policies to Azure AD security groups. | 
 | Managed apps/Create | Create new application protection policies. | 

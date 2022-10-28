@@ -27,6 +27,7 @@ search.appverid: MET150
 ms.collection:
 - M365-identity-device-management
 - Android
+- tier3
 ms.custom: intune-classic
 ---
 
@@ -377,6 +378,7 @@ public abstract void onMAMIdentitySwitchRequired(String identity,
 ```
 
 The `AppIdentitySwitchReason` enum parameter describes the source of the implicit identity switch.
+
 | Enum value | Default SDK behavior | Description |
 | - | - | - |
 | `CREATE` | Allow the identity switch. | The identity switch is occurring because of an activity creation. | 

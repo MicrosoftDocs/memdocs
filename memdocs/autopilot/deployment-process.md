@@ -3,8 +3,8 @@ title: Windows deployment process posters
 description: View and download Windows deployment process flows for Microsoft Endpoint Configuration Manager and Windows Autopilot.
 ms.audience: itpro
 keywords: upgrade, in-place, configuration, deploy
-ms.prod: w10
-ms.technology: windows
+ms.prod: windows-client
+ms.technology: itpro-deploy
 ms.mktglfcycl: deploy
 ms.localizationpriority: medium
 ms.sitesec: library

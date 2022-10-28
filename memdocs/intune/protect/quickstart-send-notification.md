@@ -21,12 +21,14 @@ ms.assetid: a1b89f2d-7937-46bb-926b-b05f6fa9c749
 #ROBOTS:
 #audience:
 
-ms.reviewer: jinyoon
+ms.reviewer: tycast
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection: 
+- M365-identity-device-management
+- tier3
 ---
 
 # Quickstart: Send notifications to noncompliant devices

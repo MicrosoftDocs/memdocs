@@ -2,7 +2,7 @@
 title: Windows Autopilot configuration requirements
 description: Inform yourself about configuration requirements for Windows Autopilot deployment.
 keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, Autopilot, ztd, zero-touch, partner, msfb, intune
-ms.prod: w10
+ms.prod: windows-client
 ms.mktglfcycl: deploy
 ms.localizationpriority: medium
 ms.sitesec: library
@@ -16,8 +16,9 @@ ms.date: 3/21/2021
 ms.collection: M365-modern-desktop
 ms.topic: conceptual
 ms.custom: 
-- CI 116757
-- CSSTroubleshooting
+  - CI 116757
+  - CSSTroubleshooting
+ms.technology: itpro-deploy
 ---
 
 # Windows Autopilot configuration requirements

@@ -5,8 +5,14 @@ items:
   items:
   - name: KB 14840616  Summary of changes in 2207
     href: 2207/14840616.md
+  - name: KB 14959905  Early update ring
+    href: 2207/14959905.md
   - name: KB 14978429  Connected cache update for Microsoft Endpoint Configuration Manager version 2207
     href: 2207/14978429.md
+  - name: KB 15498768 NTLM connection fallback update
+    href: 2207/15498768.md
+  - name: KB 15599094 NTLM client installation update
+    href: 2207/15599094.md
 - name: Version 2203
   items:
   - name: KB 13174460 Summary of changes in 2203
@@ -17,6 +23,8 @@ items:
     href: 2203/14480034.md
   - name: KB 14244456 Update rollup for Microsoft Endpoint Configuration Manager version 2203
     href: 2203/14244456.md
+  - name: KB 15599094 NTLM client installation update
+    href: 2207/15599094.md
 - name: Version 2111
   items:
   - name: KB 10096997 Summary of changes in 2111
@@ -29,6 +37,8 @@ items:
     href: 2111/12819689.md
   - name: KB 12896009 Update rollup for Microsoft Endpoint Configuration Manager version 2111
     href: 2111/12896009.md
+  - name: KB 15599094 NTLM client installation update
+    href: 2207/15599094.md
 - name: Version 2107
   items:
   - name: KB 10096997 Summary of changes in 2107
@@ -39,6 +49,8 @@ items:
     href: 2107/11121541.md
   - name: KB 12636660 Network access account update
     href: 2107/12636660.md
+  - name: KB 15599094 NTLM client installation update
+    href: 2207/15599094.md
 - name: Version 2103
   items:
   - name: KB 9210721 Summary of changes in 2103
@@ -57,6 +69,8 @@ items:
     href: 2103/10589155.md
   - name: KB 10582136 Tenant attach update
     href: 2103/10582136.md
+  - name: KB 15599094 NTLM client installation update
+    href: 2207/15599094.md
 - name: Version 2010
   items:
   - name: KB 4599442 Summary of changes in 2010

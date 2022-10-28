@@ -89,6 +89,9 @@ The Intune **Disable Activation Lock** remote device action removes the Activati
 5. Go to the **Overview** blade for the device, and then select **Wipe**.
 6. After the device is reset, you are prompted for the *Apple ID* and *password*. Leave the *ID* field blank, and then enter the **bypass code** for the *password*. This removes the account from the device. 
 
+>[!NOTE]
+>In order to return activationLockBypassCode property using graph, it needs to explicitly included in the request. 
+>If you send an unfiltered query to Graph API for the device object, a set of default values is returned and activationLockBypassCode will be null.
 
 ## Next steps
 

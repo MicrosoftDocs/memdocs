@@ -8,11 +8,12 @@ manager: dougeby
 ms.reviewer: jubaptis
 ms.date: 08/03/2022
 ms.topic: how-to
-ms.prod: w10
+ms.prod: windows-client
 ms.localizationpriority: medium
-ms.collection:
+ms.collection: 
   - M365-identity-device-management
   - highpri
+ms.technology: itpro-deploy
 ---
  
 # Deploy hybrid Azure AD-joined devices by using Intune and Windows Autopilot
@@ -173,6 +174,8 @@ If your devices aren't yet enrolled, you can register them yourself. For more in
 ### Register devices from an OEM
 
 If you're buying new devices, some OEMs can register the devices for you. For more information, see [OEM registration](oem-registration.md).
+
+### Display registered Autopilot device
 
 Before they're enrolled in Intune, *registered* Autopilot devices are displayed in three places (with names set to their serial numbers):
 

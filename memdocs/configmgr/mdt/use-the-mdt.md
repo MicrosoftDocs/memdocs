@@ -6,11 +6,12 @@ ms.date: 09/09/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-mdt
 ms.topic: article
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: BalaDelli
+ms.author: baladell
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Using the Microsoft Deployment Toolkit  
@@ -8261,7 +8262,7 @@ OverRideProductKey=11111-22222-33333-44444-55555
 |MSR|Unformatted|128 MB|The *Microsoft Reserved Partition* (MSR) is a partition on a data storage device that is labeled with a GUID equal to E3C9E316-0B5C-4DB8-817D-F92DF00215AE. The containing storage device has to use the new GUID Partition Table (GPT) format, not the traditional master boot record (MBR) partition table format.An MSR partition is required on every GPT disk and should be created as the disk is initially partitioned. It should be located after the EFI System Partition (ESP) and any OEM service partitions, but—most importantly—the first data partition must immediately follow it.|  
 |OSDisk|NTFS|Remaining space|Partition on which Windows is located, also known as the *operating system drive*. If BitLocker is used, this is the partition that is encrypted.|  
 
- In addition to the default MDT partition configurations, you can create custom partition configurations. For example, the default MDT partition configurations do not include other utility partitions or recovery images. For more information, see [Understanding Disk Partitions](https://technet.microsoft.com/library/dd799232\(WS.10\).aspx).  
+ In addition to the default MDT partition configurations, you can create custom partition configurations. For example, the default MDT partition configurations do not include other utility partitions or recovery images. For more information, see [Understanding Disk Partitions](/previous-versions/windows/it-pro/windows-7/dd799232\(v=ws.10\)).  
 
 ####  <a name="PrepareforDeploymenttoVirtualHardDiskswithNativeBoot"></a> Prepare for Deployment to Virtual Hard Disks with Native Boot  
  Native boot allows VHDs to run on a computer without a VM or hypervisor.  
@@ -8322,7 +8323,7 @@ OverRideProductKey=11111-22222-33333-44444-55555
 
 -   [UEFI Support and Requirements for Windows Operating Systems](/previous-versions/windows/it-pro/windows-8.1-and-8/hh824898(v=win.10))  
 
--   [Recommended UEFI-Based Disk-Partition Configurations](https://technet.microsoft.com/library/dd744301\(WS.10\).aspx)  
+-   [Recommended UEFI-Based Disk-Partition Configurations](/previous-versions/windows/it-pro/windows-7/dd744301\(v=ws.10\))  
 
 ####  <a name="ConfigureDiskPreparationTaskSequenceSteps"></a> Configure Disk Preparation Task Sequence Steps  
  MDT includes task sequence templates for LTI and ZTI deployments. These task sequence templates include the task sequence steps listed in Table 161, which are used to perform disk-preparation steps.  
