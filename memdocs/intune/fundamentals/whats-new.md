@@ -71,7 +71,7 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### App management
 
 ### Use filters with app configuration policies for managed devices<!-- 7423842  -->  
-You can use filters to refine the assignment scope when deploying app configuration policies for managed devices. You must first [create a filter](../fundamentals/filters.md#create-a-filter) using any of the available properties for iOS and Android. Then, in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) you can assign your managed app configuration policy by selecting **Apps** > **App configuration policies** > **Add** > **Managed devices** and go to the assignment page. After selecting a group, you can refine the applicability of the policy by choosing a filter and deciding to use it in **Include** or **Exclude** mode. For related information about filters, see [Use filters when assigning your apps, policies, and profiles in Microsoft Endpoint Manager](../fundamentals/filters.md).
+You can use filters to refine the assignment scope when deploying app configuration policies for managed devices. You must first [create a filter](../fundamentals/filters.md#create-a-filter) using any of the available properties for iOS and Android. Then, in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) you can assign your managed app configuration policy by selecting **Apps** > **App configuration policies** > **Add** > **Managed devices** and go to the assignment page. After selecting a group, you can refine the applicability of the policy by choosing a filter and deciding to use it in **Include** or **Exclude** mode. For related information about filters, see [Use filters when assigning your apps, policies, and profiles in Microsoft Endpoint Manager admin center](../fundamentals/filters.md).
 
 ### Device configuration
 
@@ -92,7 +92,7 @@ For admins to see the analytics or migrate the imported GPO to an Intune policy,
 For more information on these features, go to:
 
 - [Analyze your on-premises GPOs using Group Policy analytics in Microsoft Intune](../configuration/group-policy-analytics.md)
-- [Use role-based access control (RBAC) and scope tags for distributed ITUse role-based access control (RBAC) and scope tags for distributed IT](scope-tags.md)
+- [Use role-based access control (RBAC) and scope tags for distributed IT](scope-tags.md)
 
 Applies to:
 
@@ -119,10 +119,10 @@ Applies to:
 
 - Windows 11 SE
 
-#### New settings available in the iOS/iPadOS and macOS Settings Catalog <!-- 15514929  -->  
-The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
+#### New settings available in the iOS/iPadOS and macOS settings catalog <!-- 15514929  -->  
+The [settings catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
 
-New settings are available in the Settings Catalog. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can see these settings at **Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type.
+New settings are available in the settings catalog. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can see these settings at **Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type.
 
 New settings include:
 
@@ -189,7 +189,7 @@ Intune supports Just in Time (JIT) Registration for iOS/iPadOS enrollment scenar
 ### Device management
 
 #### Connect Chrome OS devices in Intune (public preview)<!-- 14273312 -->  
-View company or school-owned devices that run on Chrome OS in the Microsoft Endpoint Manager admin center.  Now in public preview, you can establish a connection between the Google Admin Console and Microsoft Intune.  Device information about your Chrome OS endpoints is synced into Intune and viewable in your device inventory list. Basic remote actions, such as restart, wipe, and lost mode are also available in the admin center. For more information about how to set up a connection, see [Configure Chrome Enterprise connector](../enrollment/chrome-enterprise-connector-configure.md).  
+View company or school-owned devices that run on Chrome OS in the Microsoft Endpoint Manager admin center.  Now in public preview, you can establish a connection between the Google Admin console and Microsoft Endpoint Manager admin console.  Device information about your Chrome OS endpoints is synced into Intune and viewable in your device inventory list. Basic remote actions, such as restart, wipe, and lost mode are also available in the admin center. For more information about how to set up a connection, see [Configure Chrome Enterprise connector](../enrollment/chrome-enterprise-connector-configure.md).  
 
 #### Manage macOS software updates with Intune<!-- 9801186 -->  
 You can now use Intune policies to manage macOS software updates for devices that enrolled using Automated Device Enrollment (ADE).  See [Manage macOS software update policies in Intune](../protect/software-updates-macos.md).
@@ -201,7 +201,7 @@ Intune supports the following macOS update types:
 - Configuration file updates
 - All other updates (OS, built-in apps)
 
-In addition to scheduling when a device updates, you’ll can manage behaviors like the following:
+In addition to scheduling when a device updates, you can manage behaviors like the following:
 
 - Download and install: Download or install the update, depending on the current state.
 - Download only: Download the software update without installing it.
@@ -307,7 +307,7 @@ This capability is supported for the following certificate profiles for only And
 - [SCEP](../protect/certificates-profile-scep.md#create-a-scep-certificate-profile)
 
 #### In-app notifications for Microsoft Intune app<!-- 13110609  -->  
-Android (AOSP) device users can now receive compliance notifications in the Microsoft Intune app. This capability is only available on Android Open Source Project (AOSP) user-based devices. For more information, see [AOSP compliance notifications](../user-help/check-compliance-aosp.md#compliance-notifications).
+Android Open Source Project(AOSP) device users can now receive compliance notifications in the Microsoft Intune app. This capability is only available on AOSP user-based devices. For more information, see [AOSP compliance notifications](../user-help/check-compliance-aosp.md#compliance-notifications).
 
 ### Intune apps
 
