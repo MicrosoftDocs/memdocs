@@ -53,8 +53,6 @@ Install these apps on your device prior to enrollment:
 * [Microsoft Edge web browser, version 102.*X* or later](https://www.microsoft.com/edge): The Edge browser is used to access your organization's websites and other online resources.  
 * [Microsoft Intune app](microsoft-intune-app-linux.md): The Linux version of the Microsoft Intune app is used for enrollment. The Intune app registers your device with your org and enrolls it in Intune.   
 
-You also need the enrollment QR code that's provided by your organization.  
-
 ## Enroll device  
 Follow these steps to register your personal Linux device on your organization's network.  
 
