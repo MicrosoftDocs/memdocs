@@ -44,13 +44,16 @@ To manage devices and install apps, your users can install the Company Portal ap
 > [!NOTE]
 > The Company Portal supports Configuration Manager applications. This feature allows end users to see both Configuration Manager and Intune deployed applications in the Company Portal for co-managed customers. This new version of the Company Portal will display Configuration Manager deployed apps for all co-managed customers. This support will help administrators consolidate their different end user portal experiences. For more information, see [Use the Company Portal app on co-managed devices](../../configmgr/comanage/company-portal.md).
 
-## Configure settings to show offline apps
+## Configure settings to show offline apps in Microsoft Store for Business
 1. Sign in to the [Microsoft Store for Business](https://www.microsoft.com/business-store) with your admin account. Ensure that you sign into the Microsoft Store for Business using the same tenant account you use to sign into Intune. Your Microsoft Store for Business account must be associated with Intune. For more information, see [Associate your Microsoft Store for Business account with Intune](../apps/windows-store-for-business.md#associate-your-microsoft-store-for-business-account-with-intune).  
 2. Select the **Manage** tab near the top of the window.
 3. In the left pane, select **Settings**.
 4. Select the **Shop** tab. Then,under **Shopping experience**, set **Show offline apps** to **On**.  
 
 ## Download the offline Company Portal app
+
+In this document, offline apps are referred to as offline apps because they are Microsoft Store for business use, but offline apps are Line-of-business (LOB) apps.
+
 1. Search for and then select the **Company Portal** app. 
 2. Set the **License type** to **Offline**. Offline apps are managed by Intune, whereas online apps are managed by the store. Use offline apps when you need to install and maintain a specific app version.
 3. Select **Get the app** to acquire and add the offline Company Portal app to your inventory. If you already have the offline app, you can select the **Manage** option.
