@@ -33,6 +33,7 @@ The following features are deprecated. You can still use them now, but Microsoft
 
 |Feature|Deprecation first announced|Planned end of support|
 |-------|---------------------------|----------------------|
+| [Community hub service and integration with ConfigMgr](../../../servers/manage/community-hub.md) <!-- ADO-15799335 --> | October 2022 | The first release after March 1, 2023 |
 | [Windows Information Protection](../../../../compliance/deploy-use/create-configuration-items-for-windows-10-devices-managed-with-the-client.md#windows-information-protection) <!-- MAXADO-6010051 --> | July 2022 | TBD |
 | Upgrade from any version of System Center 2012 Configuration Manager to current branch. For more information, see [Upgrade to Configuration Manager current branch](../../../servers/deploy/install/upgrade-to-configuration-manager.md)<!-- 13846745 --> | April 2022 | Version 2303 |
 | The Configuration Manager client for **macOS** and Mac client management. For more information, see [Supported clients: Mac computers](../../configs/supported-operating-systems-for-clients-and-devices.md#mac-computers).<!-- 12927803 --> Migrate management of macOS devices to Microsoft Intune. For more information, see [Deployment guide: Manage macOS devices in Microsoft Intune](../../../../../intune/fundamentals/deployment-guide-platform-macos.md). | January 2022 | December 31, 2022 |

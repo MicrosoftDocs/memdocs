@@ -96,5 +96,6 @@ The specific tasks depend on how you tell users to install the apps.
 
 - [Android enrollment guide](deployment-guide-enrollment-android.md)
 - [iOS/iPadOS enrollment guide](deployment-guide-enrollment-ios-ipados.md)
+- [Linux enrollment guide](deployment-guide-enrollment-linux.md)
 - [macOS enrollment guide](deployment-guide-enrollment-macos.md)
 - [Windows enrollment guide](deployment-guide-enrollment-windows.md)

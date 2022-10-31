@@ -1,18 +1,17 @@
 ---
 title: What's new in Autopilot
 description: News and resources about the latest updates and past versions of Windows Autopilot.
-ms.prod: w10
-ms.technology: windows
+ms.prod: windows-client
+ms.technology: itpro-deploy
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
 manager: aczechowski
 ms.reviewer: jubaptis
 ms.date: 09/22/2022
-ms.collection:
+ms.collection: 
   - M365-modern-desktop
-  - highpri
-ms.topic: article 
+ms.topic: article
 ---
 
 # Windows Autopilot: What's new

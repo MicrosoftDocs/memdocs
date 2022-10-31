@@ -430,5 +430,6 @@ Your users must do the following steps. For the specific user experience, see [e
 
 - [MAM](deployment-guide-enrollment-mamwe.md)
 - [Android enrollment guide](deployment-guide-enrollment-android.md)
+- [Linux enrollment guide](deployment-guide-enrollment-linux.md)
 - [macOS enrollment guide](deployment-guide-enrollment-macos.md)
 - [Windows enrollment guide](deployment-guide-enrollment-windows.md)

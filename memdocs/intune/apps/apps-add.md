@@ -45,22 +45,22 @@ Intune supports a wide range of app types. The available options differ for each
 
 ### Specific app type details
  
-The following table lists the specific app types and how you can add them in the Intune **Add app** pane:
+The following table lists the specific app types and how you can add them in the Intune **Select app type** pane:
 
 | **App-specific type** | **General type** | **App-specific procedures** |
 | --- | --- | --- |
-| Android store apps  | Store app  | Select **Android** as the **app type**, and enter the Google Play store URL for the app. |
-| Android Enterprise apps  | Store app  | Select **Android** as the **app type**, and enter the Managed Google Play store URL for the app. <sup>1</sup> |
-| iOS/iPadOS store apps  | Store app  | Select **iOS** as the **app type**, search for the app, and select the app in Intune. |
-| Microsoft store apps  | Store app  | Select **Windows** as the **app type**, and enter the Microsoft store URL for the app. |
+| Android store apps  | Store app  | Select **Android store app** as the **App type**, click **Select**, then enter the Google Play store URL for the app. |
+| iOS/iPadOS store apps  | Store app  | Select **iOS store app** as the **app type**, search for the app, and select the app in Intune. |
+| Microsoft store apps  | Store app  | Select **Microsoft store app** as the **app type**, and enter the Microsoft store URL for the app. |
 | Managed Google Play apps | Store app  | Select **Managed Google Play** as the **app type**, search for the app, and select the app in Intune. |
+| Android Enterprise apps  | Store app  | Select **Managed Google Play** as the **app type**, search for the app, and select the app in Intune. <sup>1</sup> |
 | Microsoft 365 apps for Windows 10 and later  | Store app (Microsoft 365) | Select **Windows 10 and later** under **Microsoft 365 Apps** as the **app type**, and then select the Microsoft 365 app that you want to install.  |
 | Microsoft 365 apps for macOS | Store app (Microsoft 365) | Select **macOS** under **Microsoft 365 Apps** as the **app type**, and then select the Microsoft 365 app suite. |
 | Microsoft Edge, version 77 and later for Windows 10 and later | Store app | Select **Windows 10 and later** under **Microsoft Edge, version 77 and later** as the **app type**. |
 | Microsoft Edge, version 77 and later for macOS | Store app | Select **macOS** under **Microsoft Edge, version 77 and later** as the **app type**. |
-| Android line-of-business (LOB) apps | LOB app | Select **Line-of-business** app as the **app type**, select the **App package file**, and then enter an Android installation file with the extension **.apk**.  |
+| Android line-of-business (LOB) apps | LOB app | Select **Line-of-business app** app as the **app type**, select the **App package file**, and then enter an Android installation file with the extension **.apk**.  |
 | iOS/iPadOS LOB apps | LOB app | Select **Line-of-business** app as the **app type**, select the **App package file**, and then enter an iOS/iPadOS installation file with the extension **.ipa**.  |
-| Windows LOB apps | LOB app | Select **Line-of-business** app as the app type, select the **App package file**, and then enter a Windows installation file with the extension **.msi**, **.appx**, **.appxbundle**, **.msix**, and **.msixbundle**. |
+| Windows LOB apps | LOB app | Select **Line-of-business app** app as the app type, select the **App package file**, and then enter a Windows installation file with the extension **.msi**, **.appx**, **.appxbundle**, **.msix**, and **.msixbundle**. |
 | Built-in iOS/iPadOS app  | Built-in app | Select **Built-In app** as the **app type**, and then select the built-in app in the list of provided apps.  |
 | Built-in Android app  | Built-in app | Select **Built-In app** as the **app type**, and then select the built-in app in the list of provided apps.  |
 | Web apps  | Web app  | Select **Web link** as the **app type**, and then enter a valid URL pointing to the web app.  |
@@ -69,9 +69,9 @@ The following table lists the specific app types and how you can add them in the
 | Cross platform web apps  | Web app  | Select **Web link** as the **app type**, and then enter a valid URL pointing to the web app.  |
 | Android Enterprise system apps  | Store app  | Select **Android Enterprise system app** as the **app type**, and then enter the app name, publisher, and package file.  |
 | Windows app (Win32)  | LOB app  | Select **Windows app (Win32)** as the **app type**, select the **App package file**, and then select an installation file with the extension **.intunewin**.  |
-| macOS LOB apps | LOB app  | Select **Line-of-business** as the **app type**, select the **App package file**, and then select an installation file with the extension **.pkg**.  |
+| macOS LOB apps | LOB app  | Select **Line-of-business app** as the **app type**, select the **App package file**, and then select an installation file with the extension **.pkg**.  |
 | macOS apps (DMG) | LOB app (non-store app)  | Select **macOS app (DMG)** as the app type, select the **App package** file, and then select an installation file with the extension *.dmg*.  |
-| Microsoft Defender for Endpoint (macOS) | Store app (Microsoft Defender ATP | Select **macOS** under **Microsoft Defender for Endpoint** as the app type and then continue by setting up the app in Intune.  |
+| Microsoft Defender for Endpoint (macOS) | Store app (Microsoft Defender ATP) | Select **macOS** under **Microsoft Defender for Endpoint** as the app type and then continue by setting up the app in Intune.  |
 
 <sup>1</sup> For more information about Android Enterprise and Android work profiles, see [Understanding licensed apps](apps-add.md#understanding-licensed-apps) below.
 

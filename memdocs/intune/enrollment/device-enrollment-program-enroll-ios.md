@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Enroll iOS/iPadOS devices by using ADE
+title: Enroll iOS/iPadOS devices with Apple ADE
 titleSuffix: Microsoft Intune
-description: Learn how to enroll corporate-owned iOS/iPadOS devices by using Automated Device Enrollment (ADE), previously known as Device Enrollment Program (DEP).
+description: Learn how to enroll corporate-owned iOS/iPadOS devices by using Automated Device Enrollment (ADE).  
 keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/06/2022
+ms.date: 10/26/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -31,18 +31,60 @@ ms.collection:
   - highpri
 ---
 
-# Automatically enroll iOS/iPadOS devices by using Apple's Automated Device Enrollment
+# Set up automated device enrollment in Intune  
 
-You can set up Intune to enroll iOS/iPadOS devices purchased through Apple's [Automated Device Enrollment (ADE)](https://deploy.apple.com). Automated Device Enrollment lets you enroll large numbers of devices without ever touching them. Devices like iPhones, iPads, and MacBooks can be shipped directly to users. When a user turns on the device, Setup Assistant, which includes the typical out-of-box-experience for Apple products, runs with preconfigured settings and the device enrolls into management.
+*Applies to iOS/iPadOS*  
 
-To enable ADE, you use the Intune portal and either the [Apple Business Manager (ABM)](https://business.apple.com/) portal or the [Apple School Manager (ASM)](https://school.apple.com/) portal. In either Apple portal, you need a list of serial numbers or a purchase order so you can assign devices to Intune for management. You create ADE enrollment profiles in Intune. These profiles contain settings that are applied to devices during enrollment. ADE can't be used with a [Device Enrollment Manager](device-enrollment-manager-enroll.md) account.
+Corporate-owned devices purchased through Apple Business Manager or Apple School Manager can be enrolled in Intune via automated device enrollment. This enrollment option applies your organization's settings from Apple Business Manager and Apple School Manager and enrolls devices without you needing to touch them. iPhones and iPads can be shipped directly to employees and students. When they turn on their devices, Apple Setup Assistant guides them through setup and enrollment. 
 
-> [!NOTE]
-> ADE sets device configurations that can't necessarily be removed by end users. Therefore, before ADE is used, the device must be wiped to return it to an out-of-box (new) state. For more information, see [Deployment guide: Enroll iOS and iPadOS devices](../fundamentals/deployment-guide-enrollment-ios-ipados.md).
+This article describes how to prepare and set up automated device enrollment in Microsoft Intune.    
 
-If you experience sync problems during the enrollment process, you can look for solutions at [Troubleshoot iOS/iPadOS device enrollment problems](/troubleshoot/mem/intune/troubleshoot-ios-enrollment-errors#error-messages).
+## Overview of features    
+The following table shows the features and scenarios supported with automated device enrollment.  
 
-## Deploy Company Portal app  
+| Feature | Use this enrollment option when |
+| --- | --- |
+| You want supervised mode. | ✔️ <br/><br/> Supervised mode deploys software updates, restricts features, allows and blocks apps, and more.|
+| Devices are owned by the organization or school. | ✔️ |
+| You have new devices. | ✔️ |
+| Need to enroll a few devices, or a large number of devices (bulk enrollment). | ✔️ |
+| Devices are associated with a single user. | ✔️ |
+| Devices are user-less, such as kiosk or dedicated device. | ✔️ |
+| Devices are personal or BYOD. | ❌ <br/><br/> Not recommended. Applications on BYOD or personal devices can be managed using [MAM](../fundamentals/deployment-guide-enrollment-mamwe.md), or [User and Device enrollment](../enrollment/ios-user-enrollment.md). |
+| Devices are managed by another MDM provider. | ❌ <br/><br/> To be fully managed by Intune, users must unenroll from the current MDM provider, and then enroll in Intune. Or, you can use MAM to manage specifics apps on the device. Since these devices are owned by the organization, we recommend enrolling them in Intune. |  
+| You use the device enrollment manager (DEM) account. | ❌ <br/><br/> The DEM account isn't supported. |  
+
+## Prerequisites 
+Before you create the enrollment profile, you must have:       
+
+* Access to [Apple Business Manager portal](https://business.apple.com/) or [Apple School Manager portal](https://school.apple.com/). 
+* An active Apple token (.p7m file). 
+    * For steps, see [Get an Apple Automated Device Enrollment token](device-enrollment-program-enroll-ios.md#get-an-apple-automated-device-enrollment-token) (in this article).  
+* An [Apple MDM push certificate in Intune](../enrollment/apple-mdm-push-certificate-get.md).  
+* New or wiped devices purchased from Apple Business Manager or Apple School Manager.  
+     >[!Tip]
+     >Automated device enrollment applies device configurations that a device user may not be able to remove. Wipe all devices prior to enrollment to return them to an out-of-box state.  
+## Before you begin      
+Read through these enrollment requirements and best practices to prepare for a successful setup and deployment.    
+
+### Choose an authentication method  
+Before you create the enrollment profile, decide how you want users to authenticate on their devices: via the Intune Company Portal app, Setup Assistant (legacy), or Setup Assistant with modern authentication. Using the Company Portal app or Setup Assistant with modern authentication is considered modern authentication, and has features like multi-factor authentication. 
+
+Intune also supports Just in Time Registration for Setup Assistant with modern authentication, which eliminates the need for the Company Portal app for Azure AD registration and compliance. To use JIT Registration, you'll need to create a device configuration policy *before* you create the Apple enrollment profile and configure Setup Assistant with modern authentication. For how-to steps, see [Set up Just in Time Registration](automated-device-enrollment-authentication.md#set-up-just-in-time-registration).  
+
+  > [!IMPORTANT]
+  > JIT Registration is in public preview. For more information, see [Public preview in Microsoft Intune](../fundamentals/public-preview.md).  
+
+Setup Assistant with modern authentication is supported on devices running iOS/iPadOS 13.0 and later. Older iOS/iPadOS devices given this profile will instead use Setup Assistant (legacy) for authentication.  
+
+For more information about your authentication options, see [Authentication methods for automated device enrollment](automated-device-enrollment-authentication.md).  
+
+### What is supervised mode?   
+Supervised mode provides more management control over corporate-owned devices, so you can do things like block screen captures and restrict AirDrop. 
+
+Corporate-owned devices running iOS/iPadOS 11+ and enrolled via automated device enrollment should always be in supervised mode, which you can turn on in the enrollment profile. For more information about supervised mode, see [Turn on iOS/iPadOS supervised mode](../remote-actions/device-supervised-mode.md). Microsoft Intune ignores the *is_supervised* flag for devices running iOS/iPadOS 13.0 and later because these devices are automatically put in supervised mode at the time of enrollment. 
+
+### Deploying the Company Portal app  
 
 > [!IMPORTANT]
 > We don't recommend using the App Store version of the Company Portal app because it isn't compatible with automated device enrollment and doesn't provide the automatic updates and availability like deployment does. 
@@ -61,43 +103,26 @@ To enable automatic app updates for Company Portal, go to your app token setting
 > [!IMPORTANT]
 > During initial enrollment, Intune automatically pushes the app configuration policy settings for devices enrolled with Setup Assistant with modern authentication, configured in [Configure the Company Portal app to support iOS and iPadOS devices enrolled with Automated Device Enrollment](../apps/app-configuration-policies-use-ios.md#configure-the-company-portal-app-to-support-ios-and-ipados-devices-enrolled-with-automated-device-enrollment), when the enrollment profile setting **Install Company Portal** is set to yes. This configuration should not be deployed manually to users because it will cause a conflict with the configuration sent during the initial enrollment. If both are deployed, Intune will incorrectly prompt device users to sign in to Company Portal and download a management profile they've already installed. 
 
-## What is supervised mode?
+### Limits     
+- Maximum enrollment profiles per token: 1,000   
+- Maximum Automated Device Enrollment devices per profile: 200,000 (same as the maximum number of devices per token).
+- Maximum Automated Device Enrollment tokens per Intune account: 2,000  
+- Maximum Automated Device Enrollment devices per token: 200,000
+    - We recommend that you don't exceed 200,000 devices per token. Otherwise you might have sync problems. If you have more than 200,000 devices, split the devices into multiple ADE tokens.  
+    - Apple Business Manager and Apple School Manager sync about 3,000 devices over to Intune per minute. We recommend that you hold off manually syncing from the admin center again until enough time has passed for all of the devices to finish syncing (total number of devices/3,000 devices per minute).  
 
-Apple introduced supervised mode in iOS/iPadOS 5. An iOS/iPadOS device in supervised mode provides more management control, like blocking of screen captures and blocking of the installation of apps from App Store. So it's especially useful for corporate-owned devices. Intune supports configuring devices for supervised mode as part of ADE.
+### Troubleshoot enrollment   
+If you experience sync problems during the enrollment process, you can look for solutions at [Troubleshoot iOS/iPadOS device enrollment problems](/troubleshoot/mem/intune/troubleshoot-ios-enrollment-errors#error-messages). 
 
-Support for unsupervised ADE devices was deprecated in iOS/iPadOS 11. In iOS/iPadOS 11 and later, ADE-configured devices should always be supervised. The ADE *is_supervised* flag will be ignored in iOS/iPadOS 13.0 and later. All iOS/iPadOS devices with version 13.0 and later are automatically supervised when enrolled with Automated Device Enrollment.
 
-<!--
-**Steps to enable enrollment programs from Apple**
-1. [Get an Apple DEP token and assign devices](#get-the-apple-dep-token)
-2. [Create an enrollment profile](#create-an-apple-enrollment-profile)
-3. [Synchronize DEP-managed devices](#sync-managed-device)
-4. [Assign DEP profile to devices](#assign-an-enrollment-profile-to-devices)
-5. [Distribute devices to users](#end-user-experience-with-managed-devices)
--->
+## Get an Apple automated device enrollment token
 
-## Prerequisites
+Before you can enroll iOS/iPadOS devices with ADE, you need an automated device enrollment token (.p7m file) from Apple. This token lets Intune sync information about ADE devices that your organization owns. It also allows Intune to upload enrollment profiles to Apple and to assign devices to those profiles.
 
-- Devices purchased in [Apple's ADE](https://deploy.apple.com)
-- [Mobile device management (MDM) authority](../fundamentals/mdm-authority-set.md)
-- An [Apple MDM push certificate](apple-mdm-push-certificate-get.md)
-
-## Supported volume
-
-- Maximum enrollment profiles per token: 1,000.  
-- Maximum Automated Device Enrollment devices per profile: Same as the maximum number of devices per token (200,000 devices per token).
-- Maximum Automated Device Enrollment tokens per Intune account: 2,000.
-- Maximum Automated Device Enrollment devices per token: We recommend that you don't exceed 200,000 devices per token. Otherwise you might have sync problems. If you have more than 200,000 devices, split the devices into multiple ADE tokens.
-  - About 3,000 devices per minute sync from ABM/ASM over to Intune. We recommend that you wait to manually sync again from the admin console until enough time has passed for all of the devices to sync over (total number of devices/3,000 devices per minute).
-
-## Get an Apple Automated Device Enrollment token
-
-Before you can enroll iOS/iPadOS devices with ADE, you need an ADE token (.p7m) file from Apple. This token lets Intune sync information about ADE devices that your corporation owns. It also allows Intune to upload enrollment profiles to Apple and to assign devices to those profiles.
-
-You use the [Apple Business Manager (ABM)](https://business.apple.com/) or [Apple School Manager (ASM)](https://school.apple.com/) portal to create a token. You also use the ABM or ASM portal to assign devices to Intune for management.
+Use [Apple Business Manager (ABM)](https://business.apple.com/) or [Apple School Manager (ASM)](https://school.apple.com/) to create a token and assign devices to Intune for management.
 
 > [!NOTE]
-> You can use either the ABM portal or the ASM portal to enable ADE. The rest of this article refers to the ABM portal, but the steps are the same for both portals.
+> You can use either the ABM portal or the ASM portal to enable ADE. The rest of this article refers to the ABM portal, but the steps are the same for both portals. 
 
 ### Step 1: Download the Intune public key certificate
 
@@ -185,7 +210,7 @@ Now that you've installed your token, you can create an enrollment profile for A
 5. Select **Next**.
 
 > [!IMPORTANT]
-> If you make changes to existing enrollment profile settings, the new changes will not take effect on assigned devices until devices are reset back to factory settings and reactivated. Reactivation occurs when the Remote Management Payload is received on ADE devices. Renaming the device name template is the only change you can make that doesn't require a factory reset.  
+> If you make changes to existing enrollment profile settings, the new changes won't take effect on assigned devices until devices are reset back to factory settings and reactivated. Reactivation occurs when the Remote Management Payload is received on ADE devices. Renaming the device name template is the only change you can make that doesn't require a factory reset.  
 
 6. In the **User Affinity** list, select an option that determines whether devices with this profile must enroll with or without an assigned user.
     - **Enroll with User Affinity**. Select this option for devices that belong to users who want to use Company Portal for services like installing apps.
@@ -193,45 +218,16 @@ Now that you've installed your token, you can create an enrollment profile for A
 
       In some situations, you might want to associate a primary user on devices enrolled without user affinity. To do this task, you can send the `IntuneUDAUserlessDevice` key to the Company Portal app in an app configuration policy for managed devices. The first user that signs in to the Company Portal app is established as the primary user. If the first user signs out and a second user signs in, the first user remains the primary user of the device. For more information, see [Configure the Company Portal app to support iOS and iPadOS ADE devices](../apps/app-configuration-policies-use-ios.md#configure-the-company-portal-app-to-support-ios-and-ipados-devices-enrolled-with-automated-device-enrollment).
 
-7. If you selected **Enroll with User Affinity** for the **User Affinity** field, you now have the option to choose the authentication method to use when authenticating users. For **Authentication method**, select one of the following options:
+7. If you selected **Enroll with User Affinity** for the **User Affinity** field, you now have the option to choose the authentication method employees must use. For more information about each authentication method, see [Authentication methods for automated device enrollment](automated-device-enrollment-authentication.md).   
 
    ![Screenshot of authentication method options.](./media/device-enrollment-program-enroll-ios/authentication-method.png)
 
-    - **Company Portal**: Authenticate with the Company Portal app if you want to:
-        - Use multifactor authentication.
-        - Prompt users to change their passwords when they first sign in.
-        - Prompt users to reset their expired passwords during enrollment.
+    Your options:
 
-        These features aren't supported when you authenticate by using Apple Setup Assistant.
-    - **Setup Assistant (legacy)**: Use the legacy Setup Assistant if you want users to experience the typical, out-of-box-experience for Apple products. This installs standard preconfigured settings when the device enrolls with Intune management. If you're using Active Directory Federation Services and you're using Setup Assistant to authenticate, a [WS-Trust 1.3 Username/Mixed endpoint](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff608241(v=ws.10)) is required. [Learn more](/powershell/module/adfs/get-adfsendpoint?view=win10-ps&preserve-view=true).
-    - **Setup Assistant with modern authentication**: Devices running iOS/iPadOS 13.0 and later can use this method. Older iOS/iPadOS devices in this profile will fall back to using the **Setup Assistant (legacy)** process.  
-
-        > [!NOTE]
-        > MFA won't work for Setup Assistant with modern authentication if you're using a 3rd party MFA provider to present the MFA screen during enrollment. Only the Azure AD MFA screen works during enrollment. For the latest support updates about custom controls for MFA, see [Upcoming changes to Custom Controls](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/upcoming-changes-to-custom-controls/ba-p/1144696).  
-
-        This method provides the same security as Company Portal authentication but avoids the issue of leaving end users with a device they can't use until the Company Portal installs.  
-
-        The Company Portal will be installed without user interaction (the user won't see the **Install Company Portal** option) in both of the following situations:
-
-        - If you use the **Install Company Portal with VPP** option below (recommended).
-        - If the end user sets up their Apple ID account during Setup Assistant.
-
-        In both of these situations, the Company Portal will be a required app on the device. Also, when the end user gets to the home screen, the correct app configuration policy will automatically be applied to the device.
-
-        Don't send a separate app configuration policy to the Company Portal for iOS/iPadOS devices after enrolling with Setup Assistant with modern authentication. Doing so will result in an error.
-
-        If you don't use the VPP option, the user must supply an Apple ID to install the Company Portal (either during Setup Assistant or when Intune tries to install the Company Portal).
-
-        If a conditional access policy that requires [multi-factor authentication (MFA) applies](multi-factor-authentication.md) at enrollment or during Company Portal sign in, then MFA is required. However, MFA is optional based on the AAD settings in the targeted Conditional Access policy.
-
-        After completing all the Setup Assistant screens, the end user lands on the home page (at which point their user affinity is established). However, until the user signs in to the Company Portal using their Azure AD credentials and taps "Begin" at the "Setup *Company* access" screen, the device:
-
-        - Won’t be fully registered with Azure AD.
-        - Won’t show up in the user’s device list in the Azure AD portal.
-        - Won’t have access to resources protected by conditional access.
-        - Won’t be evaluated for device compliance.
-        - Will be redirected to the Company Portal from other apps if the user tries to open any managed applications that are protected by conditional access.
-
+     - **Company Portal**  
+     - **Setup Assistant (legacy)**
+     - **Setup Assistant with modern authentication**  
+    
 
 8. If you selected **Setup Assistant (legacy)** for the authentication method but you also want to use Conditional Access or deploy company apps on the devices, you need to install Company Portal on the devices and sign in to complete the Azure AD registration. To do so, select **Yes** for **Install Company Portal**. If you want users to receive Company Portal without having to authenticate in to the App Store, in **Install Company Portal with VPP**, select a VPP token. Make sure the token doesn't expire and that you have enough device licenses for the Company Portal app to deploy correctly.
 
@@ -281,17 +277,17 @@ Now that you've installed your token, you can create an enrollment profile for A
 
     * **Maximum seconds after screen lock before password is required**: Enter the number of seconds from 0 to 14,400. If the screen lock exceeds this amount of time, a device password will be required to unlock the device. Available for devices in Shared iPad mode running iPadOS 13.0 and later.  
 
-    * **Maximum seconds of inactivity until user session logs out**: The minimum allowed value for this setting is 30. If there isn't any activity after the defined period, the user session ends and signs the user out. If you leave the entry blank or set it to zero (0), the session will not end due to inactivity. Available for devices in Shared iPad mode running iPadOS 14.5 and later.  
+    * **Maximum seconds of inactivity until user session logs out**: The minimum allowed value for this setting is 30. If there isn't any activity after the defined period, the user session ends and signs the user out. If you leave the entry blank or set it to zero (0), the session won't end due to inactivity. Available for devices in Shared iPad mode running iPadOS 14.5 and later.  
 
     * **Require Shared iPad temporary session only**: Configures the device so that users only see the guest version of the sign-in experience and must sign in as guests. They can't sign in with a Managed Apple ID. Available for devices in Shared iPad mode running iPadOS 14.5 and later.  
     
-        When set to **Yes**, this setting cancels out the following shared iPad settings, because they are not applicable in temporary sessions:  
+        When set to **Yes**, this setting cancels out the following shared iPad settings, because they aren't applicable in temporary sessions:  
 
         - Maximum cached users
         - Maximum seconds after screen lock before password is required 
         - Maximum seconds of inactivity until user session logs out 
 
-    * **Maximum seconds of inactivity until temporary session logs out**: The minimum allowed value for this setting is 30. If there isn't any activity after the defined period, the temporary session ends and signs the user out. If you leave the entry blank or set it to zero (0), the session will not end due to inactivity. Available for devices in Shared iPad mode running iPadOS 14.5 and later.  
+    * **Maximum seconds of inactivity until temporary session logs out**: The minimum allowed value for this setting is 30. If there isn't any activity after the defined period, the temporary session ends and signs the user out. If you leave the entry blank or set it to zero (0), the session won't end due to inactivity. Available for devices in Shared iPad mode running iPadOS 14.5 and later.  
 
         This setting is available when **Require Shared iPad temporary session only** is set to **Yes**.  
 
@@ -390,7 +386,7 @@ Now that Intune has permission to manage your devices, you can synchronize Intun
    - A full sync can run no more than once every seven days. During a full sync, Intune fetches the complete updated list of serial numbers assigned to the Apple MDM server connected to Intune.  
       > [!IMPORTANT]
       > If a device is deleted from Intune, but remains assigned to the ADE enrollment token in the ASM/ABM portal, it will reappear in Intune on the next full sync. If you don't want the device to reappear in Intune, unassign it from the Apple MDM server in the ABM/ASM portal.   
-   - If a device is released from ABM/ASM, it can take up to 45 days for it to be automatically deleted from the devices page in Intune. You can manually delete released devices from Intune one by one if needed. Released devices will be accurately reported as being Removed from ABM/ASM in Intune until they are automatically deleted within 30-45 days.
+   - If a device is released from ABM/ASM, it can take up to 45 days for it to be automatically deleted from the devices page in Intune. You can manually delete released devices from Intune one by one if needed. Released devices will be accurately reported as being Removed from ABM/ASM in Intune until they're automatically deleted within 30-45 days.
    - A delta sync is run automatically every 12 hours. You can also trigger a delta sync by selecting the **Sync** button (no more than once every 15 minutes). All sync requests are given 15 minutes to finish. The **Sync** button is disabled until a sync is completed. This sync will refresh existing device status and import new devices assigned to the Apple MDM server. If a delta sync fails for any reason, the next sync will be a full sync to hopefully resolve any issues. 
 
 ## Assign an enrollment profile to devices

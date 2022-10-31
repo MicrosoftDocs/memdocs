@@ -11,9 +11,9 @@ manager: dougeby
 ms.date: 12/16/2020
 ms.topic: how-to
 ms.collection: 
-- M365-modern-desktop
-- m365initiative-coredeploy
-- highpri
+  - M365-modern-desktop
+  - m365initiative-coredeploy
+  - highpri
 ---
 
 # Windows Autopilot registration overview

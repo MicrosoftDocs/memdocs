@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/29/2022
+ms.date: 10/28/2022
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -66,7 +66,7 @@ Intune offers a range of capabilities to help you get the apps you need on the d
 | Protect company   data in apps with app protection policies | Yes | Yes | No | No <sup>1</sup> |
 | Remove only   corporate data from an installed app (app selective wipe) | Yes | Yes | No | Yes |
 | Monitor app   assignments | Yes | Yes | Yes | Yes |
-| Assign and   track volume-purchased apps from an app store | No | No | No | Yes |
+| Assign and   track volume-purchased apps from an app store | No | Yes | No | Yes |
 | Mandatory   install of apps on devices (required) <sup>2</sup> | Yes | Yes | Yes | Yes |
 | Optional   installation on devices from the Company Portal (available installation) | Yes <sup>3</sup> | Yes | Yes | Yes |
 | Install   shortcut to an app on the web (web link) | Yes <sup>4</sup> | Yes | Yes | Yes |

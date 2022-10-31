@@ -8,7 +8,7 @@ author: MandiOhlinger
 
 ms.author: mandia
 manager: dougeby
-ms.date: 10/10/2022
+ms.date: 10/27/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -121,6 +121,19 @@ Make sure that the file is less than 4 MB and has a proper Unicode encoding. If 
     - **CSP Mapping**: Shows the OMA-URI path for the on-premises policy. You can use the OMA-URI in a [custom device configuration profile](custom-settings-configure.md). For example, you may see `./Device/Vendor/MSFT/BitLocker/RequireDeviceEnryption`.
 
 5. For the settings that have MDM support, you can create a Settings Catalog policy with these settings. For the specific steps, go to [Create a Settings Catalog policy using your imported GPOs in Microsoft Intune (public preview)](group-policy-analytics-migrate.md).
+
+### Scope tags assigned to you are automatically applied when you import
+
+Scope tags assigned to admins are automatically applied when these admins import the GPOs. So, you will only see the imported GPOs if you have one of the same scope tags as the admin that did the import. If you don't have the same scope tag, then you won't see the imported GPO in the reporting or in the list of GPOs.
+
+For example, admins have "Charlotte", "London", or "Boston" scope tags assigned to their role:
+
+- An admin with the "Charlotte" scope tag imports a GPO. 
+- The "Charlotte" scope tag is automatically applied to the imported GPO.
+- All admins with the "Charlotte" scope tag can see the imported object.
+- Admins with only the "London" or only the "Boston" scope tags can't see the imported object from the "Charlotte" admin.
+
+For admins to see the analytics or migrate the imported GPO to an Intune policy, these admins must have one of the same scope tags as the admin that did the import.
 
 ## Supported CSPs and group policies
 

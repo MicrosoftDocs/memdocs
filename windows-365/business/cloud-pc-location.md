@@ -9,7 +9,7 @@ manager: dougeby
 ms.date: 10/11/2021
 audience: Admin
 ms.topic: article
-ms.service: cloudpc
+ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
 ms.technology:
