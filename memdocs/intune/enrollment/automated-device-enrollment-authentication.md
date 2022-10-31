@@ -121,10 +121,11 @@ To set up JIT Registration, create a device configuration policy and configure t
 ## Set up Just in Time Registration  
 > [!IMPORTANT]
 > This feature is in public preview. For more information, see [Public preview in Microsoft Intune](../fundamentals/public-preview.md).  
-Complete these steps to configure Just in Time (JIT) Registration in Intune for Setup Assistant with modern authentication. 
 
 >[!Important]
 >Before you begin, revisit all Conditional Access policies targeted at devices enrolling with JIT Registration, and exclude Microsoft Intune from each policy. 
+
+Complete these steps to configure Just in Time (JIT) Registration in Intune for Setup Assistant with modern authentication. 
 
 1. Sign in to the Microsoft Endpoint Manager admin center. 
 2. [Create an iOS/iPadOS device configuration policy](../configuration/device-features-configure.md) under **Device features** > **Category** > [**Single sign-on app extension**](../configuration/device-features-configure.md#single-sign-on-app-extension).  
