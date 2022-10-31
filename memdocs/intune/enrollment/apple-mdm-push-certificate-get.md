@@ -40,10 +40,10 @@ Upload and renew your Apple MDM push certificates in Microsoft Intune. An Apple 
 - The Intune Company Portal app.
 - Apple bulk enrollment methods, such as the Device Enrollment Program, Apple School Manager, and Apple Configurator.
 
-Certificates must be renewed annually. 
+Certificates must be renewed annually. This article describes how to use Intune to create and renew an Apple MDM push certificate. 
 
-This article describes how to use Intune to create and renew an Apple MDM push certificate.  
-
+## Requirements  
+Use an [Intune-supported web browser](../fundamentals/supported-devices-browsers.md#intune-supported-web-browsers) to create and renew an Apple MDM push certificate. 
 
 ## Steps to get your certificate
 Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Enroll devices** > **Apple enrollment** > **Apple MDM Push Certificate**, and then follow these steps.
@@ -63,13 +63,10 @@ Select **Download your CSR** to download and save the request file locally. The 
 4. Read and agree to the terms and conditions. Then select **Accept**.  
 5. Select **Choose File** and then select the CSR file you downloaded in Intune.  
 6. Select **Upload**. 
-7. On the confirmation page, select **Download**.  The certificate file (.pem) downloads to your device. Save this file for later.   
+7. On the confirmation page, select **Download**. The certificate file (.pem) downloads to your device. Save this file for later.   
 
 > [!NOTE]
 > The certificate is associated with the Apple ID used to create it. As a best practice, use a company email address as your Apple ID and make sure the mailbox is monitored by more than one person, such as by a distribution list. Avoid using a personal Apple ID.  
-
-> [!NOTE]
-> We saw that alternate browser (e.g. brave) don't download a .pem file but a .cer. Using Microsoft Edge or Safari as a browser allow to have the proper file.
 
 #### Managed Apple ID  
 If you plan to federate your existing Azure AD accounts with Apple to use Managed Apple ID, contact Apple to have the existing APNS certificate migrated to your new Managed Apple ID. For more information, see the Apple Support [user guide for Apple School Manager](https://support.apple.com/guide/apple-school-manager/apd6603d9206/web).  
