@@ -42,7 +42,12 @@ There are three different places to monitor app protection policies:
 App protection data is retained for a minimum of 90 days. Any app instances that have checked in to the Intune service within the past 90 days is included in the app protection status report. An *app instance* is a unique user + app + device. 
 
 > [!NOTE]
-> For more information, see [How to create and assign app protection policies](app-protection-policies.md).
+> For iOS 16 and later devices, the "Device Name" value in all app protection reports will be a generic device name.  For more information, see [Apple Developer documentation](https://developer.apple.com/documentation/uikit/uidevice/1620015-name).
+
+> [!NOTE]
+> For more information, see [How to create and assign app protection policies](app-protection-policies.md). 
+
+
 
 ## Summary view
 
