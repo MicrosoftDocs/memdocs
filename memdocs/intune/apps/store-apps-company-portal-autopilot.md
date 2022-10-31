@@ -38,7 +38,7 @@ To manage devices and install apps, your users can optionally use the Company Po
 
 ## Prerequisites
 
-You can choose to install the **Company Portal (Offline)** app using the steps below. The Company Portal app will be installed in device context when assigned to the Autopilot group and will be installed on the device before the user logs in. line-of-business (LOB) apps are updated using Intune, whereas online apps are updated by the store. Use LOB apps when you need to install and maintain a specific app version.
+You can choose to install the **Company Portal (Offline)** app using the steps below. The Company Portal app will be installed in device context when assigned to the Autopilot group and will be installed on the device before the user logs in. Line-of-business (LOB) apps are updated using Intune, whereas online apps are updated by the store. Use LOB apps when you need to install and maintain a specific app version.
 
 For Windows 10 Autopilot provisioned devices, it is recommended that you associate your Microsoft Store for Business account with Intune. For more information, see [How to manage volume purchased apps from the Microsoft Store for Business with Microsoft Intune](windows-store-for-business.md).
 
