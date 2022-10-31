@@ -52,7 +52,7 @@ To manage devices and install apps, your users can install the Company Portal ap
 
 ## Download the offline Company Portal app
 
-In this document, offline apps are referred to as offline apps because they are Microsoft Store for business use, but offline apps are Line-of-business (LOB) apps.
+In this document, offline apps are referred to as offline apps because they are for Microsoft Store for Business use, but offline apps are Line-of-business (LOB) apps.
 
 1. Search for and then select the **Company Portal** app. 
 2. Set the **License type** to **Offline**. Offline apps are managed by Intune, whereas online apps are managed by the store. Use offline apps when you need to install and maintain a specific app version.
