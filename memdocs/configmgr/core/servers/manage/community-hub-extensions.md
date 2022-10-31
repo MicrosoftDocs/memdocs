@@ -2,7 +2,7 @@
 title: Console extensions from Community hub
 titleSuffix: Configuration Manager
 description: Learn about managing Community hub console extensions for Configuration Manager
-ms.date: 31/10/2022
+ms.date: 10/31/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
