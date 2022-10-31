@@ -57,7 +57,7 @@ For more information and guidance, go to:
 
 ## Use your existing devices and use new devices
 
-You can manage new devices and existing devices. Intune supports Android, iOS/iPadOS, macOS, and Windows devices.
+You can manage new devices and existing devices. Intune supports Android, iOS/iPadOS, Linux, macOS, and Windows devices.
 
 There are some things you should know. For example, if existing devices are managed by another MDM provider, they may need to be factory reset. If the devices are using an older OS version, they may not be supported.
 
@@ -72,6 +72,7 @@ For more specific information by platform, go to:
 
 - [Android platform deployment guide](deployment-guide-platform-android.md)
 - [iOS/iPadOS platform deployment guide](deployment-guide-platform-ios-ipados.md)
+- [Linux enrollment deployment guide](deployment-guide-enrollment-linux.md)
 - [macOS platform deployment guide](deployment-guide-platform-macos.md)
 - [Windows enrollment deployment guide](deployment-guide-enrollment-windows.md)
 

@@ -6,7 +6,7 @@ description: Microsoft 365 Enterprise includes Microsoft Intune. See how Intune 
 author: MandiOhlinger
 ms.author: mandia 
 manager: dougeby 
-ms.date: 10/10/2022
+ms.date: 10/26/2022
 ms.topic: overview 
 audience: microsoft-business
 ms.service: microsoft-intune
@@ -53,7 +53,7 @@ As an organization, you might ask - **What should we use to protect our resource
 
 Many organizations, including Microsoft, use Intune to secure proprietary data that users access from their company-owned and personally owned devices. Intune includes device and app policies, software update policies, and installation statuses (charts, tables, and reports). These resources help you secure and monitor data access.
 
-With Intune, you can manage multiple devices per person, and the different platforms that run on each device, including iOS/iPadOS, macOS, Android, and Windows. Intune separates policies and settings by device platform. So it's easy to manage and view devices of a specific platform.
+With Intune, you can manage multiple devices per person, and the different platforms that run on each device, including Android, iOS/iPadOS, Linux, macOS, and Windows. Intune separates policies and settings by device platform. So it's easy to manage and view devices of a specific platform.
 
 For more information about Intune and its benefits, go to:
 

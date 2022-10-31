@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/10/2022
+ms.date: 10/31/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -29,7 +29,7 @@ ms.collection:
   - highseo
 ---
 
-# Deployment guide: Enroll Windows devices in Microsoft Intune
+# Deployment guide: Enroll Windows client devices in Microsoft Intune
 
 Personal and organization-owned devices can be enrolled in Intune. Once they're enrolled, they receive the policies and profiles you create.
 
@@ -68,6 +68,7 @@ You can also use this enrollment method to automatically bulk enroll devices wit
 ---
 | Feature | Use this enrollment option when |
 | --- | --- |
+| You use Windows client. | ✔️ <br/><br/> Configuration Manager supports Windows Server. |
 | You have Azure AD Premium | ✔️ |
 | You'll use Conditional Access (CA) on devices enrolled using [bulk enrollment](../enrollment/windows-bulk-enroll.md) with a provisioning package. | ✔️ On Windows 11 and Windows 10 1803+, CA is available for Windows devices enrolled using bulk enrollment. <br/><br/> ❌ On Windows 10 1709 and older, CA isn't available for Windows devices enrolled using bulk enrollment. |
 | You have remote workers. | ✔️ |
@@ -150,7 +151,7 @@ When users turn on the device, the next steps determine how they're enrolled. Be
 
   For more information on the end user experience, see [enroll Windows client devices](../user-help/enroll-windows-10-device.md).
 
-- If using bulk enrollment, and your end users are familiar with running files from a network share or USB drive, they can complete the enrollment. If they're not comfortable with this step, then it's recommended that the admin enroll.
+- If using bulk enrollment, and your end users are familiar with running files from a network share or USB drive, they can complete the enrollment. If they're not comfortable with this step, then it's recommended that the admin enrolls.
 
 - On personal or BYOD non-Windows client devices, users must install the Company Portal app from the Microsoft Store. Once installed, they open the Company Portal app, and sign in with their organization credentials (`user@contoso.com`). They'll be asked for more information, including the Intune server name. Be sure to give them all the information they need to enter.
 
@@ -165,6 +166,7 @@ For more information on Windows Autopilot, see [Windows Autopilot overview](../.
 ---
 | Feature | Use this enrollment option when |
 | --- | --- |
+| You use Windows client. | ✔️ <br/><br/> Configuration Manager supports Windows Server. |
 | You purchase devices from an [OEM that supports the Windows Autopilot deployment service](https://aka.ms/windowsautopilot), or from resellers or distributors that are in the [Cloud Solution Partners (CSP)](https://partner.microsoft.com/membership/cloud-solution-provider) program. | ✔️ |
 | Devices are hybrid Azure AD joined. | ✔️ <br/><br/> Hybrid Azure AD joined devices are joined to your on-premises Active Directory, and registered with your Azure AD. Devices in Azure AD are available to Intune. Devices that aren't registered in Azure AD aren't available to Intune. <br/><br/>A full Azure AD joined solution might be better for your organization. For more information, see the [Success with remote Windows Autopilot and hybrid Azure Active Directory join](https://techcommunity.microsoft.com/t5/intune-customer-success/success-with-remote-windows-autopilot-and-hybrid-azure-active/ba-p/2749353) blog.|
 | You have remote workers. | ✔️ <br/><br/> The OEM or partner can send devices directly to your users.|
@@ -244,6 +246,7 @@ With User enrollment, you can "register" the devices with Azure AD or "join" the
 ---
 | Feature | Use this enrollment option when |
 | --- | --- |
+| You use Windows client. | ✔️ <br/><br/> Configuration Manager supports Windows Server. |
 | Devices are hybrid Azure AD joined. | ✔️ <br/><br/> Hybrid Azure AD joined devices are joined to your on-premises Active Directory, and registered with your Azure AD. Devices in Azure AD are available to Intune. Devices that aren't registered in Azure AD aren't available to Intune. <br/><br/>A full Azure AD joined solution might be better for your organization. For more information, see the [Success with remote Windows Autopilot and hybrid Azure Active Directory join](https://techcommunity.microsoft.com/t5/intune-customer-success/success-with-remote-windows-autopilot-and-hybrid-azure-active/ba-p/2749353) blog. |
 | You have Azure AD Premium. |❌ Azure AD Premium isn't required.<br/><br/> ✔️   If the devices join Azure AD, then they can use Azure AD Premium features, such as conditional access. |
 | You have remote workers. | ✔️ <br/><br/> Users should know that their personal devices might be managed by the organization IT. |
@@ -327,6 +330,7 @@ For more specific information, see [Enroll a Windows client device automatically
 ---
 | Feature | Use this enrollment option when |
 | --- | --- |
+| You use Windows client. | ✔️ <br/><br/> Configuration Manager supports Windows Server. |
 | Devices are hybrid Azure AD joined. | ✔️ <br/><br/> Hybrid Azure AD joined devices are joined to your on-premises Active Directory, and registered with your Azure AD. Devices in Azure AD are available to Intune. Devices that aren't registered in Azure AD aren't available to Intune. |
 | You have Azure AD Premium. | ✔️ <br/><br/> Group policy enrollment requires Azure AD Premium. |
 | You have remote workers. | ✔️ |
@@ -368,6 +372,7 @@ For more specific information on co-management, see [What is co-management?](../
 ---
 | Feature | Use this enrollment option when |
 | --- | --- |
+| You use Windows client. | ✔️ <br/><br/> Configuration Manager supports Windows Server. |
 | You use Configuration Manager. | ✔️ <br/><br/> Configuration Manager can manage Windows Server. |
 | Devices are hybrid Azure AD joined. | ✔️ <br/><br/> Hybrid Azure AD joined devices are joined to your on-premises Active Directory, and registered with your Azure AD. Devices in Azure AD are available to Intune. Devices that aren't registered in Azure AD aren't available to Intune. |
 | Devices are enrolled in Intune. | ✔️ <br/><br/> You have devices you want to bring to co-management. Devices may have been enrolled using Windows Autopilot, or are direct from your hardware OEM. |
@@ -407,4 +412,5 @@ Configuration Manager may randomize the enrollment, so it may not occur immediat
 - [MAM-WE](deployment-guide-enrollment-mamwe.md)
 - [Android enrollment guide](deployment-guide-enrollment-android.md)
 - [iOS/iPadOS enrollment guide](deployment-guide-enrollment-ios-ipados.md)
+- [Linux enrollment guide](deployment-guide-enrollment-linux.md)
 - [macOS enrollment guide](deployment-guide-enrollment-macos.md)
