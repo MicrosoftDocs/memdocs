@@ -4,7 +4,7 @@ ms.author: erikje
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.topic: include
-ms.date: 10/26/2022
+ms.date: 10/31/2022
 ms.localizationpriority: high
 ---
 
@@ -30,9 +30,11 @@ ms.localizationpriority: high
 
 ### Linux
 
-- Ubuntu Desktop 22.04 and later
-- Ubuntu Desktop 20.04 LTS and later
-- A GNOME graphical desktop environment, which is automatically included with Ubuntu Desktop 22.04 and 20.04 LTS
+- Ubuntu Desktop 22.04.1 LTS with a GNOME graphical desktop environment
+- Ubuntu Desktop 20.04 LTS with a GNOME graphical desktop environment
+
+> [!NOTE]
+> Ubuntu Desktop already has a GNOME graphical desktop environment installed.
 
 ### Microsoft
 
