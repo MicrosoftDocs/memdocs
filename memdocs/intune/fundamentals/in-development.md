@@ -150,7 +150,7 @@ Applies to:
 ## Device security
 
 ### Microsoft Tunnel for Mobile Application Management for Android (public preview)<!-- 15769204  -->  
-As a public preview, we’re adding support for Mobile Application Management (MAM) to the Microsoft Tunnel VPN gateway.  With this preview for Android devices that have not enrolled with Intune, supported apps will be able to use Microsoft Tunnel to connect to your organization when working with corporate data and resources. This includes VPN gateway support for:  
+In a a public preview, we’re adding support for Mobile Application Management (MAM) to the Microsoft Tunnel VPN gateway. With this preview for Android devices that have not enrolled with Intune, supported apps will be able to use Microsoft Tunnel to connect to your organization when working with corporate data and resources. This includes VPN gateway support for:  
 
 - Secure access to on-prem apps and resources using modern authentication
 - Single Sign On and conditional access.
@@ -183,7 +183,7 @@ You’ll be able to review connectivity health checks and errors in the Microsof
 Deliver branded personalized messages to employees just above their taskbar, in their Notifications, or when they run the Get Started app on Windows 11 devices. Organizational messages are intended to improve employee communication in remote and hybrid-work scenarios, and to help employees adapt to their new roles more quickly, learn more about their organization, and stay informed of new updates and trainings.  
 
 ### Access policies for multiple administrative approvals (public preview)<!--9348867   -->
-As a public preview, Intune *access policies* to require that a second administrative account be used to approve a change before the change is applied will soon be available to use. This capability is known as multiple administrative approval (MAA). Access policies will be available in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) at **Tenant administration** > **Multi Admin Administration** > **Access policies**.
+In a public preview, you'll soon be able to use Intune *access policies* to require that a second administrative account be used to approve a change before the change is applied. This capability is known as multiple administrative approval (MAA). Access policies will be available in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) at **Tenant administration** > **Multi Admin Administration** > **Access policies**.
 
 Access policies can protect a type of resource, like App deployments. Each access policy will include a group of users who are *approvers* for the changes protected by the policy. When a resource like an app deployment configuration is protected by an access policy, any changes that are made to the deployment, including creating, deleting, or modifying an existing deployment won't apply until a member of the approvers group for that access policy reviews and approves that change.
 
