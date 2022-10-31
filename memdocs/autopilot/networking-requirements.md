@@ -75,7 +75,7 @@ Once authenticated, Azure AD will trigger enrollment of the device into the Intu
 
 During the OOBE process and after the Windows OS configuration, the Windows Update service retrieves needed updates. If there are problems connecting to Windows Update, see [Windows Update troubleshooting](/windows/deployment/update/windows-update-troubleshooting).
 
-If Windows Update is inaccessible, the Autopilot process will still continue but critical updates won't be available.
+If Windows Update is inaccessible, the Autopilot process won't continue.
 
 ### Delivery Optimization
 
