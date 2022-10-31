@@ -77,6 +77,9 @@ The global quiet time settings will allow you to create policies to schedule qui
 You will be able to use filters to refine the assignment scope when deploying app configuration profiles for managed devices.
 You can first create a filter using any of the available properties for iOS and Android. Then, in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) you can assign your managed app configuration profile by selecting **Apps** > **App configuration policies** > **Add** > **Managed devices** and go to the assignment page. After selecting a group, you can refine the applicability of the policy by choosing a filter and deciding to use it in **Include** or **Exclude** mode. For related information about filters, see [Use filters when assigning your apps, policies, and profiles in Microsoft Endpoint Manager](filters.md).
 
+### Control the display of Managed Google Play apps<!-- 621615  -->
+You will be able to group Managed Google Play apps into collections and control the order that collections are displayed when selecting apps in Intune. You will also be able to make apps visible via search only. This capability will be available in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **All apps** > **Add** > **Managed Google Play app**.
+
 <!-- ***********************************************-->
 
 ## Device configuration
