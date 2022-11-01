@@ -100,8 +100,9 @@ Both the helper and sharer must be able to reach these endpoints over port 443:
 |\*.aadcdn.msftauth.net            | Required for logging in to the application (AAD)|
 |\*.edge.skype.com                 | Used for Azure Communication Service for chat and connection between parties|
 |\*.graph.microsoft.com            | Used for connecting to the Microsoft Graph service|
-|\*.login.microsoftonline.com      | Required for Microsoft login service. Might not be available in preview in all markets or for all localizations.|
+|\*.login.microsoftonline.com      | Required for Microsoft login service. Might not be available in preview in all markets or for all localizations|
 |\*.remoteassistanceprodacs.communication.azure.com|Used for Azure Communication Service for chat and connection between parties|
+|[Allow list for Microsoft Edge endpoints](https://learn.microsoft.com/deployedge/microsoft-edge-security-endpoints) |The app uses Edge WebView2 browser control. This article identifies the domain URLs that you need to add to the allow list to ensure communications through firewalls and other security mechanisms|
 
 ### Data and privacy
 
