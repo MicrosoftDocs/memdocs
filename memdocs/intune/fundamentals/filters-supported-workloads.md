@@ -109,6 +109,11 @@ You can use filters for some common app policies on the following platforms. For
 | Windows app (Win32) | ✔️ |
 | Microsoft Store for Business | ✔️ |
 
+## App configuration policies
+You can use filters for app configuration policies for managed devices on the following platforms:
+- Android Enterprise
+- iOS/iPadOS
+
 ## Compliance policies
 
 You can use filters for all compliance policies on the following platforms:
@@ -172,7 +177,7 @@ You can use filters for some common device configuration policies on the followi
 | Email | ✔️ |
 | Endpoint Protection | N/A |
 | Enrollment restrictions | ❌ |
-| OEMConfig | ❌ |
+| OEMConfig | ✔️ |
 | PKCS certificate | ✔️ |
 | PKCS imported certificate | ✔️ |
 | SCEP certificate | ✔️ |
