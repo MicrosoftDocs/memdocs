@@ -67,7 +67,7 @@ Select **Download your CSR** to download and save the request file locally. The 
 
 > [!NOTE]
 > * The certificate is associated with the Apple ID used to create it. As a best practice, use a company email address as your Apple ID and make sure the mailbox is monitored by more than one person, such as by a distribution list. Avoid using a personal Apple ID.  
-> * To later change the Apple ID associated with your certificate, sign in to the Apple Push Certificates Portal with your new Apple ID, redownload the certificate file, and upload it to Intune with your new Apple ID as described in [Step 4](apple-mdm-push-certificate-get.md#step-4-enter-the-apple-id-used-to-create-your-apple-mdm-push-certificate) and [Step 5](apple-mdm-push-certificate-get.md#step-5-browse-to-your-apple-mdm=push-certificate-to-upload) in this article.    
+> * To later change the Apple ID associated with your certificate, sign in to the Apple Push Certificates Portal with your new Apple ID, redownload the certificate file, and upload it to Intune with your new Apple ID as described in [Step 4](apple-mdm-push-certificate-get.md#step-4-enter-the-apple-id-used-to-create-your-apple-mdm-push-certificate) and [Step 5](apple-mdm-push-certificate-get.md#step-5-browse-to-your-apple-mdm-push-certificate-to-upload) in this article.    
 #### Managed Apple ID  
 If you plan to federate your existing Azure AD accounts with Apple to use Managed Apple ID, contact Apple to have the existing APNS certificate migrated to your new Managed Apple ID. For more information, see the Apple Support [user guide for Apple School Manager](https://support.apple.com/guide/apple-school-manager/apd6603d9206/web).  
 
