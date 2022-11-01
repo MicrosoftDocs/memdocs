@@ -40,10 +40,10 @@ Upload and renew your Apple MDM push certificates in Microsoft Intune. An Apple 
 - The Intune Company Portal app.
 - Apple bulk enrollment methods, such as the Device Enrollment Program, Apple School Manager, and Apple Configurator.
 
-Certificates must be renewed annually. 
+Certificates must be renewed annually. This article describes how to use Intune to create and renew an Apple MDM push certificate. 
 
-This article describes how to use Intune to create and renew an Apple MDM push certificate.  
-
+## Requirements  
+Use an [Intune-supported web browser](../fundamentals/supported-devices-browsers.md#intune-supported-web-browsers) to create and renew an Apple MDM push certificate. 
 
 ## Steps to get your certificate
 Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Enroll devices** > **Apple enrollment** > **Apple MDM Push Certificate**, and then follow these steps.
@@ -63,7 +63,7 @@ Select **Download your CSR** to download and save the request file locally. The 
 4. Read and agree to the terms and conditions. Then select **Accept**.  
 5. Select **Choose File** and then select the CSR file you downloaded in Intune.  
 6. Select **Upload**. 
-7. On the confirmation page, select **Download**.  The certificate file (.pem) downloads to your device. Save this file for later.   
+7. On the confirmation page, select **Download**. The certificate file (.pem) downloads to your device. Save this file for later.   
 
 > [!NOTE]
 > The certificate is associated with the Apple ID used to create it. As a best practice, use a company email address as your Apple ID and make sure the mailbox is monitored by more than one person, such as by a distribution list. Avoid using a personal Apple ID.  
@@ -82,7 +82,7 @@ Return to the admin center and enter your Apple ID as a reminder for when you ne
 ## Renew Apple MDM push certificate
 The Apple MDM push certificate is valid for 365 days. You must renew it annually to maintain iOS/iPadOS and macOS device management. Once the certificate expires, there is a 30-day grace period to renew it.  
 
-Renew the MDM push certificate with the same Apple ID you used to create it.  
+Renew the MDM push certificate with the same Apple account you used to create it.  
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Enroll devices** > **Apple enrollment** > **Apple MDM Push Certificate**.
