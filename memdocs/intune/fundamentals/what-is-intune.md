@@ -172,6 +172,7 @@ For more platform-specific requirements to enroll third party partner devices in
 
 - [Deployment guide: Enroll Android devices in Microsoft Intune](deployment-guide-enrollment-android.md)
 - [Deployment guide: Enroll iOS and iPadOS devices in Microsoft Intune](deployment-guide-enrollment-ios-ipados.md)
+- [Deployment guide: Enroll Linux devices in Microsoft Intune](deployment-guide-enrollment-linux.md)
 - [Deployment guide: Enroll macOS devices in Microsoft Intune](deployment-guide-enrollment-macos.md)
 
 ## Enroll in device management, application management, or both
