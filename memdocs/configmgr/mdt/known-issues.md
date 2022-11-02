@@ -39,7 +39,7 @@ To enable this change in MDT, we recommend that you back up the following file: 
             </Display>
             <RunSynchronous>
                 <RunSynchronousCommand wcm:action="add">
-                    <Description>Lite Touch PE</Description>
+                    <Description>Fix HTA scripts error Windows 11 ADK 22H2</Description>
                     <Order>1</Order>
                     <Path>reg.exe add "HKLM\Software\Microsoft\Internet Explorer\Main" /t REG_DWORD /v JscriptReplacement /d 0 /f</Path>
                 </RunSynchronousCommand>
