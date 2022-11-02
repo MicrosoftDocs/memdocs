@@ -8,7 +8,7 @@ keywords:
 author: smbhardwaj 
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 04/05/2022
+ms.date: 05/03/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -34,8 +34,6 @@ ms.collection:
 Microsoft Endpoint Manager now offers Premium add-ons. You can find premium add-ons in Intune under **Tenant administration** > **Premium add-ons**. The **Summary** blade shows all premium add-ons that have been released, a short description, and the status of the add-on. You can view the status of each add-on as either **Active** or **Available for trial or purchase**. 
 
 Licenses for the Premium add-ons can be added for an additional cost to the licensing options that include Microsoft Endpoint Manager or Intune.
-
-Global and Billing administrators can use the **Premium add-ons** page from the [Microsoft 365 admin center](https://admin.microsoft.com) to start a free trial or purchase licenses for each Premium add-on. 
 
 > [!NOTE]
 > Premium add-ons are currently not supported in Sovereign clouds.

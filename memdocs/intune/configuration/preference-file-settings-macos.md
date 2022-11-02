@@ -53,6 +53,11 @@ These settings are added to a device configuration profile in Intune, and then a
 
 ## Create the profile
 
+> [!NOTE]
+> [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
+>
+> [Tasks you can complete using the Settings Catalog in Intune](settings-catalog-common-features.md) is also a good resource.
+
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Configuration profiles** > **Create profile**.
 3. Enter the following properties:

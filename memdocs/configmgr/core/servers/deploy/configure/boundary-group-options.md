@@ -2,14 +2,16 @@
 title: Boundary group options
 titleSuffix: Configuration Manager
 description: Configure boundary group options to control policy and content distribution.
-ms.date: 08/02/2021
+ms.date: 04/08/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: sheetg09
+ms.author: sheetg
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Boundary group options
@@ -103,17 +105,17 @@ $component.put()
 By default, the management point prioritizes peer cache sources at the top of the list of content locations. This setting reverses that priority for clients that are in the same subnet as the peer cache source.
 
 > [!TIP]
-> This behavior applies to the Configuration Manager client. It doesn't apply when the task sequence downloads content. When the task sequence runs, it prefers peer cache sources over distribution points.<!-- SCCMDocs#1376 -->
+> This behavior applies to the Configuration Manager client. It doesn't apply when the task sequence downloads content. When the task sequence runs, it prefers peer cache sources over distribution points. <!-- SCCMDocs#1376 -->
 
 ## Prefer cloud based sources over on-premises sources
 
 If you have a branch office with a faster internet link, you can prioritize cloud-based sources, which include the following locations:<!-- SCCMDocs#1529 -->
 
 - Cloud management gateway (CMG). Clients will prefer the CMG for both policy and content.
+   - Starting in version 2203, this setting also applies for software update scanning. To reduce the performance impact of this change, existing clients don't automatically switch to a cloud-based software update point. For more information, see [Boundary groups and software update points](boundary-groups-software-update-points.md#bkmk_prefer_cmgsup). <!--7759984-->
 - Microsoft Update
+  - You can only use **Microsoft Update** as a source when you enable the following option in the software update deployment download settings: **If software updates are not available on distribution point in current, neighbor or site boundary groups, download content from Microsoft Updates**.
 
-  > [!NOTE]
-  > You can only use **Microsoft Update** as a source when you enable the following option in the software update deployment download settings: **If software updates are not available on distribution point in current, neighbor or site boundary groups, download content from Microsoft Updates**.
 
 ## Next steps
 

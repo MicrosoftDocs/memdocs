@@ -1,18 +1,18 @@
 ---
-title: "Enable or Disable the Software Updates Client Agent"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: Enable or Disable the Software Updates Client Agent
+description: You enable or disable the Software Updates Client Agent, in Configuration Manager, by modifying the site control file settings.
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: how-to
 ms.assetid: 6993ac90-2dd3-49a5-a14d-fe86356e644c
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Enable or Disable the Software Updates Client Agent
 You enable or disable the Software Updates Client Agent, in Configuration Manager, by modifying the site control file settings.  

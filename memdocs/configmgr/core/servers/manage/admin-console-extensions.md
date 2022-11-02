@@ -6,10 +6,12 @@ ms.date: 12/21/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Manage Configuration Manager console extensions
@@ -82,7 +84,7 @@ Starting in version 2111, the site creates status messages for events related to
 - The user that made the change
 - The ID of the extension
 - The version of the extension
-
+ 
 There are four categories of message events:
 
 - Required or optional

@@ -26,10 +26,15 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune, has-adal-ref
-ms.collection: M365-identity-device-management
+ms.collection: 
+- M365-identity-device-management
+- tier3
 ---
 
 # Microsoft Intune App SDK Xamarin Bindings
+
+> [!NOTE]
+> The current Xamarin bindings for Android platform only support apps targeting Android 9.0 and lower and Xamarin Forms 4.4 and lower. Microsoft is working on improving support for newer versions on Android starting Q2CY2023. More information on the support plan to be provided in Q1CY2023.
 
 > [!NOTE]
 > You may wish to first read the [Get Started with Intune App SDK](app-sdk-get-started.md) article, which explains how to prepare for integration on each supported platform.

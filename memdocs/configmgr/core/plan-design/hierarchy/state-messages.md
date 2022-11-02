@@ -6,10 +6,12 @@ ms.date: 01/11/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # State messages in Configuration Manager

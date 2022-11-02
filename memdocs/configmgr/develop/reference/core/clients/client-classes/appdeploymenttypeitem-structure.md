@@ -1,18 +1,18 @@
 ---
-title: "AppDeploymentTypeItem Structure"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: AppDeploymentTypeItem Structure
+titleSuffix: Configuration Manager
+description: Learn about the AppDeploymentTypeItem structure that contains detection results for an individual deployment type.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: f5c6cf80-8c02-4a8e-aa33-de91ebef8053
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # AppDeploymentTypeItem Structure
 In Configuration Manager, the `AppDeploymentTypeItem` structure contains detection results for an individual deployment type.  

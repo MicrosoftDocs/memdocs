@@ -21,12 +21,14 @@ ms.assetid: 723f4b4e-3090-4811-84ff-6af652abea5a
 #ROBOTS:
 #audience:
 
-ms.reviewer:
+ms.reviewer: scottduf
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection: 
+- M365-identity-device-management
+- tier3
 ---
 
 # Quickstart: Create a group to manage users

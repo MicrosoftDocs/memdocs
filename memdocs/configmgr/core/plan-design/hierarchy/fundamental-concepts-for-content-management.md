@@ -2,14 +2,16 @@
 title: Content management fundamentals
 titleSuffix: Configuration Manager
 description: Use tools and options in Configuration Manager to manage the content that you deploy.
-ms.date: 07/15/2021
+ms.date: 04/08/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Fundamental concepts for content management in Configuration Manager
@@ -181,6 +183,9 @@ For more information on Windows LEDBAT in general, see the [New transport advanc
 
 For more information on how to use Windows LEDBAT with Configuration Manager distribution points, see the setting to **Adjust the download speed to use the unused network bandwidth (Windows LEDBAT)** when you [Configure the general settings of a distribution point](../../servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_config-general).
 
+> [!Note]
+> Staring in Configuration Manager version 2203, you can use LEDBAT with your software update points<!--4639895-->. If a site system has both the distribution point and software update point roles, you can configure LEDBAT independently on the roles. For more information, see the setting **Adjust the download speed to use the unused network bandwidth (Windows LEDBAT)** setting for [Installing software update points](../../../sum/get-started/install-a-software-update-point.md#bkmk_ledbat).  
+
 ## Client locations
 
 The following are locations that clients access content from:
@@ -320,9 +325,13 @@ For more information, see [Boundary groups](../../servers/deploy/configure/bound
 
 ## On-demand content distribution
 
-On-demand content distribution is an option for individual application and package deployments. This option enables on-demand content distribution to preferred servers.  
+On-demand content distribution is an option for individual applications and packages. This option enables on-demand content distribution to preferred servers.  
 
-- To enable this setting for a deployment, enable: **Distribute the content for this package to preferred distribution points**.  
+- To enable On-Demand content distribution for a package/application, do the following : 
+
+    - In the Distribution Point properties, inside the Boundary Groups tab, select : **Enable for on-demand distribution**.  
+
+    -  Inside the distribution settings tab for package/application properties, select : **Enable for on-demand distribution**.  
 
 - When you enable this option for a deployment, and a client requests that content but the content isn't available on any of the client's preferred distribution points, Configuration Manager automatically distributes that content to the client's preferred distribution points.  
 

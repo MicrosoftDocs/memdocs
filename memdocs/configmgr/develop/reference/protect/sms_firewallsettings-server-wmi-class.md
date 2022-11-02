@@ -1,18 +1,18 @@
 ---
-title: "SMS_FirewallSettings Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: SMS_FirewallSettings Class
+description: The SMS_FirewallSettings class is an SMS Provider server class that represents the firewall configuration setting definitions used to define configuration rules.
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: bee70974-26a3-4285-af09-d23c1e99d116
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_FirewallSettings Server WMI Class
 The `SMS_FirewallSettings` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the firewall configuration setting definitions used to define configuration rules. This is a read-only built-in configuration item.  

@@ -9,7 +9,7 @@ ms.author: erikje
 manager: dougeby
 ms.date: 12/08/2021
 ms.topic: how-to
-ms.service: cloudpc
+ms.service: windows-365
 ms.subservice: 
 ms.localizationpriority: high
 ms.technology:
@@ -93,7 +93,7 @@ To assign a Windows 365 Administrator role to a user:
 5. Scroll down to the **Devices** section.
 6. Select **Windows 365 Administrator** > **Save changes**.
 
-You can also assign the Windows 365 admin role through the Microsoft 365 Admin Center and Azure Active Directory.
+You can also assign the Windows 365 Administrator role through the Microsoft 365 Admin Center and Azure Active Directory.
 
 ## Next steps
 

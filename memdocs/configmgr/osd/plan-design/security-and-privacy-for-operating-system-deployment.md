@@ -6,10 +6,12 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: BalaDelli
+ms.author: baladell
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.reviewer: mstewart,aaroncz 
+ms.collection: tier3
 ---
 
 # Security and privacy for OS deployment in Configuration Manager
@@ -201,7 +203,7 @@ Administrative users who are granted the **OS deployment manager** security role
 
 ### Use Enhanced HTTP to reduce the need for a network access account
 
-Starting in version 1806, when you enable [Enhanced HTTP](../../core/plan-design/hierarchy/enhanced-http.md), several OS deployment scenarios don't require a network access account to download content from a distribution point. For more information, see [Task sequences and the network access account](planning-considerations-for-automating-tasks.md#BKMK_TSNetworkAccessAccount).<!--1358278--> 
+Starting in version 1806, when you enable [Enhanced HTTP](../../core/plan-design/hierarchy/enhanced-http.md), several OS deployment scenarios don't require a network access account to download content from a distribution point. For more information, see [Task sequences and the network access account](planning-considerations-for-automating-tasks.md#task-sequences-and-the-network-access-account).<!--1358278-->
 
 
 

@@ -2,14 +2,16 @@
 title: CMG security and privacy
 titleSuffix: Configuration Manager
 description: Learn about guidance and recommendations for security and privacy with the cloud management gateway.
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
-ms.date: 10/25/2021
+author: BalaDelli
+ms.author: baladell
+manager: apoorvseth
+ms.date: 04/08/2022
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.localizationpriority: medium
+ms.reviewer: mstewart,aaroncz 
+ms.collection: tier3
 ---
 
 # Security and privacy for the cloud management gateway
@@ -50,7 +52,21 @@ The CMG connection point uses the following methods:
 
 - Reports traffic per endpoint every five minutes.
 
-Starting in version 2010, Configuration Manager rotates the storage account key for the CMG. This process happens automatically every 180 days.<!-- 8613077 -->
+Configuration Manager rotates the storage account key for the CMG. This process happens automatically every 180 days.<!-- 8613077 -->
+
+### Security mechanisms and protections
+
+The CMG resources in Azure are part of the Azure platform as a service (PaaS). They're protected in the same manner and with the same default protections as all other resources in Azure. It's not supported to change any of the configurations of the CMG resources or architecture in Azure. These changes include the use of any sort of firewall in front the CMG to intercept, filter, or otherwise process traffic before it reaches the CMG. All traffic destined for a CMG is processed through an Azure load balancer. CMG deployments as a virtual machine scale set are protected by Microsoft Defender for Cloud.
+
+#### Service principals and authentication
+
+The service principals are authenticated by the server app registration in Azure AD. This app is also known as the _web app_. You create this app registration automatically when you create the CMG, or manually by an Azure administrator in advance. For more information, see [Manually register Azure AD apps for the CMG](manually-register-azure-ad-apps.md).
+
+The secret keys for the Azure apps are encrypted and stored in the Configuration Manager site database. As part of the setup process, the server app has **Read Directory Data** permission to the Microsoft Graph API. It also has the contributor role on the resource group that hosts the CMG. Each time the app needs to access resources like Microsoft Graph, it gets an access token from Azure, which it uses to access the cloud resource.
+
+Azure AD can automatically rotate the secret key for these apps, or you can do it manually. When the secret key changes, you need to [renew the secret key](../../../servers/deploy/configure/azure-services-wizard.md#bkmk_renew) in Configuration Manager.
+
+For more information, see [Purpose of app registrations](configure-azure-ad.md#purpose-of-app-registrations).
 
 ### Configuration Manager client-facing roles
 

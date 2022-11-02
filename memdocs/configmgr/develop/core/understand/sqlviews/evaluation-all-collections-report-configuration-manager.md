@@ -6,14 +6,13 @@ ms.date: 04/30/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: conceptual
-
-
 ms.assetid: 75e0e5a3-4bb5-421b-a9e1-b4bae4e71961
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Evaluation of the All collections report in Configuration Manager

@@ -6,11 +6,12 @@ ms.date: 11/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
-ms.reviewer: acabello
+author: gowdhamankarthikeyan
+ms.author: gokarthi
+manager: apoorvseth
+ms.reviewer: mstewart,aaroncz 
 ms.localizationpriority: medium
+ms.collection: tier3
 ---
 
 # What's new in Desktop Analytics
@@ -20,7 +21,7 @@ ms.localizationpriority: medium
 >
 > To align investments with this shift, **Desktop Analytics will be retired on November 30, 2022**. Over the next year, the types of insights currently found in Desktop Analytics will be incorporated directly into the Microsoft Endpoint Manager admin center.<!-- 10946169 -->
 >
-> For more information, see [A data-driven approach to managing devices in your organization](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/a-data-driven-approach-to-managing-devices-in-your-organization/ba-p/2932082).
+> For more information, see [Preview app and driver compatibility insights in Endpoint Manager](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/preview-app-and-driver-compatibility-insights-in-endpoint/ba-p/3482136).
 
 ## July 2021
 

@@ -140,7 +140,7 @@ Be sure the device supports OEMConfig, the correct OEMConfig app is added to Int
 
     Select **Next**.
 
-11. In **Assignments**, select the users or groups that will receive your profile. Assign one profile to each device. The OEMConfig model only supports one policy per device.
+11. In **Assignments**, select the users or groups that will receive your profile. Assign one profile to each device. The OEMConfig model only supports one policy per device. An OEMConfig profile that exceeds 350kb will not be assigned, and will show a "pending" status.  
 
     For more information on assigning profiles, see [Assign user and device profiles](device-profile-assign.md).
 

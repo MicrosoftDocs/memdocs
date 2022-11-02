@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/18/2022
+ms.date: 07/29/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -71,7 +71,7 @@ Ensure that the following prerequisites are met when composing shell scripts and
 
 7. In **Review + add**, a summary is shown of the settings you configured. Select **Add** to save the script. When you select **Add**, the script policy is deployed to the groups you chose.
 
-The script you created now appears in the list of scripts.
+The script you created now appears in the list of scripts. If needed, you can view the contents of macOS shell scripts after you upload them to Intune.
 
 ## Monitor a shell script policy
 You can monitor the run status of all assigned scripts for users and devices by choosing one of the following reports:
@@ -98,8 +98,9 @@ The following items are required to collect logs on a macOS device:
 
 #### Collect device logs
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. In **Device status** or **User status** report, select a device.
-3. Select **Collect logs**, provide folder paths of log files separated only by a semicolon (;) without spaces or newlines in between paths.<br>For example, multiple paths should be written as `/Path/to/logfile1.zip;/Path/to/logfile2.log`. 
+2. Navigate to **Devices** > **Scripts** and select a macOS shell script.
+3. In **Device status** or **User status** report, select a device.
+4. Select **Collect logs**, provide folder paths of log files separated only by a semicolon (;) without spaces or newlines in between paths.<br>For example, multiple paths should be written as `/Path/to/logfile1.zip;/Path/to/logfile2.log`. 
 
    >[!IMPORTANT]
    > Multiple log file paths separated using comma, period, newline or quotation marks with or without spaces will result in log collection error. Spaces are also not allowed as separators between paths.
@@ -167,7 +168,7 @@ You can create custom attribute profiles which enable you to collect custom prop
    > - Scripts assigned to user groups applies to any user logging in to the Mac.  
 6. In **Review + add**, a summary is shown of the settings you configured. Select **Add** to save the script. When you select **Add**, the script policy is deployed to the groups you chose.
 
-The script you created now appears in the list of custom attributes. 
+The script you created now appears in the list of custom attributes. If needed, you can view the contents of custom attributes after you upload them to Intune.
 
 ## Monitor a custom attribute policy
 

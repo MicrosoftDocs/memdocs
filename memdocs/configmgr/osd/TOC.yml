@@ -83,8 +83,6 @@ items:
       href: deploy-use/create-a-task-sequence-for-non-operating-system-deployments.md
     - name: Deploy Windows to Go
       href: deploy-use/deploy-windows-to-go.md
-  - name: Manage and create task sequences
-    href: deploy-use/manage-task-sequences-to-automate-tasks.md
   - name: Create task sequences to automate tasks
     items:
     - name: Create a task sequence to install an OS
@@ -99,6 +97,20 @@ items:
       href: deploy-use/create-a-task-sequence-to-capture-and-restore-user-state.md
     - name: Create a custom task sequence
       href: deploy-use/create-a-custom-task-sequence.md
+  - name: Manage task sequences
+    items:
+    - name: Manage task sequences overview
+      href: deploy-use/manage-task-sequences-to-automate-tasks.md
+    - name: High-impact task sequence settings
+      href: deploy-use/high-impact-task-sequence-settings.md
+    - name: Task sequence performance
+      href: deploy-use/task-sequence-performance.md
+    - name: Distribute referenced content
+      href: deploy-use/distribute-task-sequence-referenced-content.md
+    - name: Reduce the size of task sequence policy
+      href: deploy-use/reduce-task-sequence-policy-size.md
+    - name: Export and import task sequences
+      href: deploy-use/export-import-task-sequences.md
   - name: Deploy a task sequence
     href: deploy-use/deploy-a-task-sequence.md
   - name: Deploy a task sequence over the internet

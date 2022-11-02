@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Resolve threats in SandBlast Mobile Protect for Android - Microsoft Intune | Microsoft Docs
-description: Learn how to use SandBlast Mobile Protect for Android to keep your device secure.    
+title: Resolve threats in Harmony Mobile Protect for Android - Microsoft Intune | Microsoft Docs
+description: Learn how to use Harmony Mobile Protect for Android to keep your device secure.    
 keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/21/2020
+ms.date: 04/19/2022
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -22,16 +22,16 @@ searchScope:
 ROBOTS:  
 #audience:
 
-#ms.reviewer: heenamac
+ms.reviewer: heenamac
 #ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
 ms.collection: 
 ---
 
-# Resolve threats found by SandBlast Mobile Protect for Android
+# Resolve threats found by Harmony Mobile Protect for Android
 
-SandBlast Mobile Protect is a mobile threat defender app that's integrated with Intune to alert you to potential threats and compliance problems. As long as the threat or problem exists on your device, you might not be able to:   
+Harmony Mobile Protect is a mobile threat defender app that's integrated with Intune to alert you to potential threats and compliance problems. As long as the threat or problem exists on your device, you might not be able to:   
 
 * Connect to corporate e-mail  
 * Connect to corporate Wi-Fi  
@@ -41,8 +41,8 @@ SandBlast Mobile Protect is a mobile threat defender app that's integrated with 
 
 This article describes how to use the app to view and resolve threats.  
 
-## Set up SandBlast Mobile Protect app    
-Complete the following steps to set up SandBlast Mobile Protect on your device.  
+## Set up Harmony Mobile Protect app    
+Complete the following steps to set up Harmony Mobile Protect on your device.  
 
 1. Install the app from [Google Play](https://go.microsoft.com/fwlink/?linkid=2139455). Your organization might let you know that you need to get the app via notification, email, or by installing the app on your device.  
     * Company Portal/Intune app notification: Tap the push notification to open Google Play.  
@@ -52,13 +52,13 @@ Complete the following steps to set up SandBlast Mobile Protect on your device.
 4. Tap your account (the same one you use to sign in at work or school) to sign in.  
 5. Tap **ACTIVATE** to make the app a device administrator.  
 
-After your initial sign in, the app will scan your device for threats.  
+After your initial sign-in, the app will scan your device for threats.  
 
-## Using SandBlast Mobile Protect    
-SandBlast Mobile Protect detects device threats, app threats, and network security events. This section describes how to use the app to view and resolve each type of threat. 
+## Using Harmony Mobile Protect    
+Harmony Mobile Protect detects device threats, app threats, and network security events. This section describes how to use the app to view and resolve each type of threat. 
 
 ### Get threat notifications         
-By default, SandBlast Mobile Protect uses push notifications and its in-app **Threat Center** to alert you to threats and events. As a best practice, do not turn off these notifications.  
+By default, Harmony Mobile Protect uses push notifications and its in-app **Threat Center** to alert you to threats and events. As a best practice, do not turn off these notifications.  
 
  ### View overall device status  
 The app's main screen shows the current status and threat count, if applicable. 
@@ -75,7 +75,7 @@ A device threat happens when the settings on your device don't meet your organiz
 1. Tap **MY DEVICES** to open the list of settings that were scanned on your device. 
 2. Settings that appear in red do not meet your organization's requirements. Tap a red setting to find out more information about it.
 3. Open the Settings app on your device to adjust the setting.  
-4. If SandBlast Mobile Protect doesn't show the threat as resolved right away, return to the app and tap the circle on the main app page to initiate a new scan.  
+4. If Harmony Mobile Protect doesn't show the threat as resolved right away, return to the app and tap the circle on the main app page to initiate a new scan.  
 
 ### View app threats      
 An app is considered a threat when it poses a security risk to you or your organization's data. Examples of threats include:
@@ -93,7 +93,7 @@ When a threat is present, a red dot appears next to the **MY APPS** icon. To get
 To find out why your organization classifies an app as high, medium, or low risk, contact your IT support person.   
 
 ### View security events   
-A security event occurs when SandBlast Mobile Protect prevents an attack before it happens. This type of event is informational and poses no immediate risk on your device. They could happen if your organization enforces network protection policies, such as requiring you to use a VPN. 
+A security event occurs when Harmony Mobile Protect prevents an attack before it happens. This type of event is informational and poses no immediate risk on your device. They could happen if your organization enforces network protection policies, such as requiring you to use a VPN. 
 
 When an event occurs, you'll see a blue dot next to the **MY NETWORK** icon.  To get more details about a security event:
 
@@ -106,5 +106,5 @@ If you use Company Portal or the Intune app, open the app and sync your device a
 
 Still need help? 
 
-* For the most up-to-date information about SandBlast Mobile Protect, see the SandBlast Mobile Protect user and admin guides on the [Check Point support center website](https://supportcenter.checkpoint.com/supportcenter/portal?eventSubmit_doGoviewsolutiondetails=&solutionid=sk120655). 
+* For the most up-to-date information about Harmony Mobile Protect, see the Harmony Mobile Protect user and admin guides on the [Check Point support center website](https://supportcenter.checkpoint.com/supportcenter/portal?eventSubmit_doGoviewsolutiondetails=&solutionid=sk120655). 
 * For additional help, contact your IT support person. Check out the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980) for contact information.  

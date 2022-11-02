@@ -2,14 +2,16 @@
 title: Approve applications
 titleSuffix: Configuration Manager
 description: Learn about the settings and behaviors for application approval in Configuration Manager.
-ms.date: 12/01/2021
+ms.date: 08/12/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: baladelli
+ms.author: baladell
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Approve applications in Configuration Manager
@@ -125,8 +127,8 @@ With these additional optional prerequisites, recipients can approve or deny the
 
 - Set up a [cloud management gateway](../../core/clients/manage/cmg/overview.md).
 
-    > [!NOTE]
-    > This scenario currently doesn't support CMG deployments with a virtual machine scale set.
+  > [!NOTE]
+  > This scenario doesn't support CMG deployments with a virtual machine scale set until Configuration Manager version 2207 or later is installed.
 
 - Onboard the site to [Azure services](../../core/servers/deploy/configure/azure-services-wizard.md) for **Cloud Management**.
 

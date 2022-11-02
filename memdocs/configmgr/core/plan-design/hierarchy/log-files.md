@@ -2,14 +2,16 @@
 title: Log file reference
 titleSuffix: Configuration Manager
 description: A reference of all log files for Configuration Manager client, server, and dependent components.
-ms.date: 08/02/2021
+ms.date: 04/01/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Log file reference
@@ -114,7 +116,7 @@ The following table lists the log files located on the Configuration Manager cli
 
 |Log name|Description|  
 |--------------|-----------------|  
-|ADALOperationProvider.log|Information about client authentication token requests with Azure Active Directory (Azure AD) Authentication Library (ADAL).|
+|ADALOperationProvider.log|Information about client authentication token requests with Azure Active Directory (Azure AD) Authentication Library (ADAL). (Replaced by CcmAad.log starting in version 2107)|
 |BitLockerManagementHandler.log|Records information about BitLocker management policies.|
 |CAS.log|The Content Access service. Maintains the local package cache on the client.|  
 |Ccm32BitLauncher.log|Records actions for starting applications on the client marked *run as 32 bit*.|  
@@ -126,7 +128,7 @@ The following table lists the log files located on the Configuration Manager cli
 |Ccmperf.log|Records activities related to the maintenance and capture of data related to client performance counters.|  
 |CcmRestart.log|Records client service restart activity.|  
 |CCMSDKProvider.log|Records activities for the client SDK interfaces.|  
-|ccmsqlce.log|Records activities for the SQL Server Compact Edition (CE) that the client uses. This log is typically only used when you enable debug logging, or there's a problem with the component. The client health task (ccmeval) usually self-corrects problems with this component.|
+|ccmsqlce.log|Records activities for the built-in version of SQL Server Compact Edition (CE) that the client uses. This log is typically only used when you enable debug logging, or there's a problem with the component. The client health task (ccmeval) usually self-corrects problems with this component.|
 |CcmUsrCse.log|Records details during user sign on for folder redirection policies.|
 |CCMVDIProvider.log|Records information for clients in a virtual desktop infrastructure (VDI).|
 |CertEnrollAgent.log|Records information for Windows Hello for Business. Specifically communication with the Network Device Enrollment Service (NDES) for certificate requests using the Simple Certificate Enrollment Protocol (SCEP).|
@@ -246,7 +248,6 @@ The following table lists the log files that are on the Configuration Manager si
 |CertMgr.log|Records certificate activities for intrasite communication.|Site system server|  
 |chmgr.log|Records activities of the client health manager.|Site server|  
 |Cidm.log|Records changes to the client settings by the Client Install Data Manager (CIDM).|Site server|  
-|CollectionAADGroupSyncWorker.log | Log file for synchronization of collection membership results to Azure Active Directory. | Site server|
 |colleval.log|Records details about when collections are created, changed, and deleted by the Collection Evaluator.|Site server|  
 |compmon.log|Records the status of component threads monitored for the site server.|Site system server|  
 |compsumm.log|Records Component Status Summarizer tasks.|Site server|  
@@ -315,7 +316,6 @@ The following table lists the log files that are on the Configuration Manager si
 |statesys.log|Records the processing of state system messages.|Site server|  
 |statmgr.log|Records the writing of all status messages to the database.|Site server|  
 |swmproc.log|Records the processing of metering files and settings.|Site server|
-|UXAnalyticsUploadWorker.log|Records data upload to the service for endpoint analytics.|Site server|
 
 ### <a name="BKMK_SiteInstallLog"></a> Site server installation
 
@@ -387,6 +387,7 @@ The following table lists the log files that contain information related to the 
 |Log name|Description|Computer with log file|  
 |--------------|-----------------|----------------------------|  
 |CertMgr.log|Records certificate and proxy account information.|Site server|  
+|CollectionAADGroupSyncWorker.log | Log file for synchronization of collection membership results to Azure Active Directory. |Computer with the service connection point|
 |CollEval.log|Records details about when collections are created, changed, and deleted by the Collection Evaluator.|Primary site and central administration site|  
 |Cloudusersync.log|Records license enablement for users.|Computer with the  service connection point|  
 |Dataldr.log|Records information about the processing of MIF files.|Site server|  
@@ -394,7 +395,7 @@ The following table lists the log files that contain information related to the 
 |Distmgr.log|Records details about content distribution requests.|Top-level site server|  
 |Dmpdownloader.log|Records details about downloads from Microsoft, such as site updates.|Computer with the service connection point|  
 |Dmpuploader.log|Records detail related to uploading database changes to Microsoft.|Computer with the service connection point|  
-|EndpointConnectivityCheckWorker.log|Starting in version 2010, records detail related to checks for important internet endpoints.|Computer with the service connection point|
+|EndpointConnectivityCheckWorker.log|Records detail related to checks for important internet endpoints.|Computer with the service connection point|
 |hman.log|Records information about message forwarding.|Site server|  
 |WsfbSyncWorker.log|Records information about the communication with the Microsoft Store for Business.|Computer with the service connection point|
 |objreplmgr.log|Records the processing of policy and assignment.|Primary site server|  
@@ -406,7 +407,8 @@ The following table lists the log files that contain information related to the 
 |SMS_CLOUDCONNECTION.log|Records information about cloud services.|Computer with the service connection point|
 |Smsprov.log|Records activities of the SMS Provider. Configuration Manager console activities use the SMS Provider.|Computer with the SMS Provider|  
 |SrvBoot.log|Records details about the service connection point installer service.|Computer with the service connection point|  
-|Statesys.log|Records the processing of mobile device management messages.|Primary site and central administration site|  
+|Statesys.log|Records the processing of mobile device management messages.|Primary site and central administration site| 
+|UXAnalyticsUploadWorker.log|Records data upload to the service for endpoint analytics.|Computer with the service connection point|
 
 ### <a name="BKMK_SUPLog"></a> Software update point
 
@@ -601,7 +603,7 @@ The following table lists the log files that contain information related to disc
 
 |Log name|Description|Computer with log file|  
 |--------------|-----------------|----------------------------|  
-|UXAnalyticsUploadWorker.log|Records data upload to the service for endpoint analytics.|Site server|  
+|UXAnalyticsUploadWorker.log|Records data upload to the service for endpoint analytics.|Service connection point|  
 |SensorWmiProvider.log|Records the activity of the WMI provider for the endpoint analytics sensor.|Client|  
 |SensorEndpoint.log|Records the execution of endpoint analytics policy and upload of client data to the site server.|Client|
 |SensorManagedProvider.log|Records the gathering and processing of events and information for endpoint analytics.|Client|
@@ -726,7 +728,7 @@ The following table lists the log files that contain information related to OS d
 |MCSSetup.log|Records details about multicast server role installation.|Site system server|  
 |MCSMSI.log|Records details about multicast server role installation.|Site system server|  
 |Mcsperf.log|Records details about multicast performance counter updates.|Site system server|  
-|MP_ClientIDManager.log|Records management point responses to client ID requests that task sequences start from PXE or boot media.|Site system server|  
+|MP_ClientID.log|Records management point responses to client ID requests that task sequences start from PXE or boot media.|Site system server|  
 |MP_DriverManager.log|Records management point responses to Auto Apply Driver task sequence action requests.|Site system server|  
 |OfflineServicingMgr.log|Records details of offline servicing schedules and update apply actions on operating system Windows Imaging Format (WIM) files.|Site system server|  
 |Setupact.log|Records details about Windows Sysprep and setup logs. For more information, see [Log Files](/windows/deployment/upgrade/log-files).|Client|  

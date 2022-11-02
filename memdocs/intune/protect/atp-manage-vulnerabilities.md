@@ -94,7 +94,7 @@ Following is an example workflow for an application. This same general workflow 
 
 ## Work with security tasks
 
-Before you can work with security tasks, they must be created from within the Defender Security Center. For information on using the Microsoft Defender Security Center to create security tasks, see [Remediate vulnerabilities with threat and vulnerability management](/microsoft-365/security/defender-endpoint/tvm-remediation?view=o365-worldwide#request-remediation) in the Defender for Endpoint documentation.
+Before you can work with security tasks, they must be created from within the Defender Security Center. For information on using the Microsoft Defender Security Center to create security tasks, see [Remediate vulnerabilities with threat and vulnerability management](/microsoft-365/security/defender-endpoint/tvm-remediation?view=o365-worldwide&preserve-view=true#request-remediation) in the Defender for Endpoint documentation.
 
 To manage security tasks:
 

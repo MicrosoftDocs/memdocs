@@ -6,10 +6,12 @@ ms.date: 12/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: overview
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Support Center for Configuration Manager
@@ -51,7 +53,7 @@ Support Center includes Support Center Viewer, a tool that support personnel use
 
 Support Center includes a modern log viewer. This tool replaces CMTrace and provides a customizable interface with support for tabs and dockable windows. It has a fast presentation layer, and can load large log files in seconds.
 
-### Support Center OneTrace (Preview)
+### Support Center OneTrace
 
 <!--3555962-->
 **OneTrace** is a new log viewer with Support Center. It works similarly to CMTrace, with improvements. For more information, see [Support Center OneTrace](support-center-onetrace.md).

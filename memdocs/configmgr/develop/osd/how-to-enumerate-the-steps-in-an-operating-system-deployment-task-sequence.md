@@ -1,18 +1,18 @@
 ---
-title: "Enumerate the Steps in an OS Deployment Task Sequence"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: Enumerate the Steps in an OS Deployment Task Sequence
+description: You enumerate an operating system deployment task sequence, in Configuration Manager, by using a recursive method to scan through the task sequence steps and groups.
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: how-to
 ms.assetid: 6edec44e-6791-42f3-bf4d-5f3d3b78438a
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Enumerate the Steps in an Operating System Deployment Task Sequence
 You enumerate an operating system deployment task sequence, in Configuration Manager, by using a recursive method to scan through the task sequence steps and groups.  

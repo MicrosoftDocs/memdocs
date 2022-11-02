@@ -6,10 +6,12 @@ ms.date: 10/12/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-author: mestew
-ms.author: mstewart
-manager: dougeby
+ms.author: gokarthi
+author: gowdhamankarthikeyan
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # About the service connection point in Configuration Manager
@@ -128,7 +130,7 @@ There are several scenarios in which you may need to move the service connection
 
 - [Recovery](../../manage/recover-sites.md)
 - [Site server high availability](site-server-high-availability.md)
-- [Site expansion](../install/use-the-setup-wizard-to-install-sites.md#bkmk_expand)
+- [Site expansion](../install/setup-wizard-central-primary.md#expand-a-stand-alone-primary-site)
 
 After you move the service connection point, check all site functions. For example, you may need to renew the secret key for any connections to Azure Active Directory (Azure AD) tenants. For more information, see [Renew secret key](azure-services-wizard.md#bkmk_renew).
 

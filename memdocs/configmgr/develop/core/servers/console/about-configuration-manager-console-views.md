@@ -1,17 +1,17 @@
 ---
-title: "Configuration Manager Console Views"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: Configuration Manager Console Views
+description: Configuration Manager console views are displayed in the results pane of the Configuration Manager console.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: conceptual
 ms.assetid: cf102999-d4b1-46c9-a7cb-2af86423f140
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # About Configuration Manager Console Views
 Configuration Manager console views are displayed in the results pane of the Configuration Manager console. You can create your own views and make them available anywhere in the tree view hierarchy.  

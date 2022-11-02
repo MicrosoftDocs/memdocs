@@ -1,18 +1,18 @@
 ---
-title: "OS Deployment Task Sequence Object Model"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: OS Deployment Task Sequence Object Model
+description: In Configuration Manager, operating system deployment task sequences are created and edited by using a Windows Management Instrumentation (WMI) class-based object model.
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: conceptual
 ms.assetid: 4176f9e2-aa68-44e0-bf47-d3cac73ca737
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # Operating System Deployment Task Sequence Object Model
 In Configuration Manager, operating system deployment task sequences are created and edited by using a Windows Management Instrumentation (WMI) class-based object model.  

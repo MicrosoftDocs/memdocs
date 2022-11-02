@@ -1,18 +1,18 @@
 ---
-title: "How to Define the Create Deployment Type Wizard XML File "
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: How to Define the Create Deployment Type Wizard XML File
+description: To define the custom create deployment type wizard XML file, create an XML file based on the schema.
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: how-to
 ms.assetid: 249a6d47-c45f-491d-a846-8082665c6185
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Define the Create Deployment Type Wizard XML File
 To define the custom create deployment type wizard XML file, create an XML file based on the `http://schemas.microsoft.com/SystemsManagementServer/2005/03/ConsoleFramework` schema. The XML file for the Create Application Wizard should be named CreateDeploymentWizard_\<*TechnologyID*>.xml.  

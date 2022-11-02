@@ -1,18 +1,18 @@
 ---
-title: "AddMembershipRules Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: AddMembershipRules Method
+titleSuffix: Configuration Manager
+description: In Configuration Manager, the AddMembershipRules WMI class method adds multiple new rules to the CollectionRules property of the SMS_Collection Server WMI Class object.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 882de2be-1f2f-49e2-b105-37a3b8152002
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # AddMembershipRules Method in Class SMS_Collection
 The `AddMembershipRules` (WMI) class method, in Configuration Manager, adds multiple new rules to the `CollectionRules` property of the [SMS_Collection Server WMI Class](../../../../../develop/reference/core/clients/collections/sms_collection-server-wmi-class.md) object.  

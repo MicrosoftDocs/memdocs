@@ -1,18 +1,18 @@
 ---
-title: "RemoveDistributionPoints Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: RemoveDistributionPoints Method
+titleSuffix: Configuration Manager
+description: The RemoveDistributionPoints WMI class method removes distribution points from this distribution point group.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 9cfacf13-1d30-4a0c-9453-aaa3e9aa677b
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # RemoveDistributionPoints Method in Class SMS_DistributionPointGroup
 The `RemoveDistributionPoints` Windows Management Instrumentation (WMI) class method, in Configuration Manager, removes distribution points from this distribution point group.  

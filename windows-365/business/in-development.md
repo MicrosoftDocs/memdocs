@@ -8,9 +8,9 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 03/09/2022
+ms.date: 10/4/2022
 ms.topic: reference
-ms.service: cloudpc
+ms.service: windows-365
 ms.subservice: 
 ms.assetid: 
 
@@ -53,11 +53,16 @@ To help in your readiness and planning, this page lists Windows 365 Business upd
 -->
 
 <!-- ***********************************************-->
+
 ## Device management
 
-### windows365.microsoft.com will move to general availability<!--38195529-->
+### Admins can restore a Cloud PC to a previous state for a user<!--40784300-->
 
-The windows365.microsoft.com web client will be moving out of preview and into general availability.
+Windows 365 Business admins will be able to restore a Cloud PC to a previous state on behalf of the user. [For more information about restoring Cloud PCs, see](/restore-overview).
+
+<!--***********************************************-->
+<!--## End user experience-->
+
 
 <!-- ***********************************************-->
 ## Monitor and troubleshoot

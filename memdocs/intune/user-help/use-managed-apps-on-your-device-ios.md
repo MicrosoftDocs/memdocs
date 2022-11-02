@@ -30,7 +30,7 @@ ms.collection:
 ---
 
 # Work or school apps for iOS
-Intune-managed apps (*managed* apps for short) are apps that've been configured for you to securely use at work or school. They're specially-configured to meet your organization's security requirements and protect internal data. For example, if you're signed in to one of these apps with your work or school account, your org can restrict certain features, such as copy and paste. Or they could restrict you from saving work files to your device's local storage. These types of restrictions prevent proprietary information from being shared outside of the app or org. 
+Intune-managed apps (*managed* apps for short) are apps that've been configured for you to securely use at work or school. They're specially configured to meet your organization's security requirements and protect internal data. For example, if you're signed in to one of these apps with your work or school account, your org can restrict certain features, such as copy and paste. Or they could restrict you from saving work files to your device's local storage. These types of restrictions prevent proprietary information from being shared outside of the app or org. 
 
 To maximize data protection, your organization might configure several of these apps to work together. For example:  
 1. You connect to your organization's network in a managed browser app, such as Microsoft Edge.  
@@ -76,14 +76,31 @@ The following list describes the settings your IT support person can control wit
 
 - PIN access requirements
 
-- Your sign in, using company credentials
+- Sign-in experience, using company credentials  
 
 - Ability to back up to the cloud
 
 - Ability to take screenshots
 
-- Data encryption requirements
+- Data encryption requirements  
 
+## Approve line-of-business app   
+ By default, your device doesn't trust line-of-business (LOB) apps acquired outside of the App Store, which may prevent your organization's own company apps from being installed. You'll know this is happening if you open an installed LOB app and receive an *untrusted enterprise developer* message. 
+
+![iOS app message - Untrusted Enterprise Developer](../fundamentals/media/end-user-company-portal-messages/end-user-company-portal-messages-01.png)  
+
+This section describes how to provide approval for enterprise developer apps in the device management settings on your device. 
+
+1. Go to **Settings** > **General** > **Device Management**.  
+
+   ![iOS device UI - Device Management](../fundamentals/media/end-user-company-portal-messages/end-user-company-portal-messages-02.png)
+
+3. Select **Management Profile** > **Enterprise app**.
+4. Select the developer name.
+5. Select **Trust developer name**.  
+6. Select **Trust** to confirm approval of the enterprise developer.  
+
+   ![iOS device UI - Trust app message](../fundamentals/media/end-user-company-portal-messages/end-user-company-portal-messages-03.png)  
 
 ## Next steps  
 

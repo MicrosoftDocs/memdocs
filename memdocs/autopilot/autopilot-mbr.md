@@ -1,18 +1,14 @@
 ---
 title: Windows Autopilot motherboard replacement
-description: Windows Autopilot deployment Motherboard Replacement (MBR) scenarios
-keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune
-ms.prod: w10
-ms.mktglfcycl: deploy
+description: Understand how Windows Autopilot deployments function when you replace the motherboard on a device.
+ms.prod: windows-client
+ms.technology: itpro-deploy
 ms.localizationpriority: medium
-ms.sitesec: library
-ms.pagetype: deploy
-audience: itpro
 author: aczechowski
 ms.author: aaroncz
 ms.reviewer: jubaptis
 manager: dougeby
-ms.date: 10/10/2021
+ms.date: 09/23/2022
 ms.collection: M365-modern-desktop
 ms.topic: how-to
 ---
@@ -24,17 +20,17 @@ ms.topic: how-to
 - Windows 11
 - Windows 10
 
-This document offers guidance for Windows Autopilot device repair scenarios that Microsoft partners can use in Motherboard Replacement (MBR) situations, and other servicing scenarios.
+This document offers guidance for Windows Autopilot device repair scenarios that Microsoft partners can use in motherboard replacement (MBR) situations, and other servicing scenarios.
 
 Repairing Autopilot enrolled devices is complex, as it tries to balance OEM requirements with Windows Autopilot requirements. Specifically, OEM requirements include strict uniqueness across motherboards, MAC addresses, and so on. Windows Autopilot requires strict uniqueness at the hardware hash level for each device to enable successful registration. The hardware hash doesn't always accommodate all the OEM hardware component requirements. So these requirements are sometimes at odds, causing issues with some repair scenarios. The hardware hash is also known as the hardware ID.
 
-**Motherboard Replacement (MBR)**
+Starting in the September 2022 release of Intune (2209) with OS releases 19042.2075 or higher, if a motherboard is replaced on an Autopilot registered device, and it goes back to the same tenant without an OS reset, Autopilot will attempt to register the new hardware components. In Intune, you'll see the profile status **Fix pending**. If the OEM resets the OS, you need to re-register the device. If the new hardware components are registered, the device status goes back to the assigned profile. If it's not, you'll see the profile status **Attention required**.
 
-If a motherboard replacement is needed on a Windows Autopilot device, the following process is recommended:
+If a motherboard replacement is needed on a Windows Autopilot device, the following process is recommended if the OS version is below 19042.2075:
 
-1. [Deregister the device](#deregister-the-autopilot-device-from-the-autopilot-program) from Windows Autopilot
+1. If the device isn't going back to the original tenant, [deregister it from Windows Autopilot](#deregister-the-autopilot-device-from-the-autopilot-program). If it's going back to the same tenant, you don't need to deregister it.
 2. [Replace the motherboard](#replace-the-motherboard)
-3. [Capture a new device ID (4K HH)](#capture-a-new-autopilot-device-id-4k-hh-from-the-device)
+3. If the device needs to be re-registered because of a re-image or will be used by a new tenant, [capture a new device ID (4K HH)](#capture-a-new-autopilot-device-id-4k-hh-from-the-device). 
 4. [Reregister the device](#reregister-the-repaired-device-using-the-new-device-id) with Windows Autopilot
 5. [Reset the device](#reset-the-device)
 6. [Return the device](#return-the-repaired-device-to-the-customer)
@@ -138,14 +134,14 @@ Repair technicians must sign in to the repaired device to capture the new device
 
 Those repair facilities with access to the OA3 Tool (which is part of the ADK) can use the tool to capture the 4K Hardware Hash (4K HH).
 
-Instead, the [WindowsAutoPilotInfo PowerShell script](https://www.powershellgallery.com/packages/Get-WindowsAutoPilotInfo) can be used to capture the 4K HH.
+Instead, the [WindowsAutopilotInfo PowerShell script](https://www.powershellgallery.com/packages/Get-WindowsAutopilotInfo) can be used to capture the 4K HH.
 
 > [!NOTE]
 > Other methods in addition to Windows PowerShell are also available to capture the hardware hash. For more information, see [Collect the hardware hash](add-devices.md#collect-the-hardware-hash).
 
-To use the **WindowsAutoPilotInfo** PowerShell script, follow these steps:
+To use the **WindowsAutopilotInfo** PowerShell script, follow these steps:
 
-1. Install the script from the [PowerShell Gallery](https://www.powershellgallery.com/packages/Get-WindowsAutoPilotInfo) or from the command line (command-line installation is shown below).
+1. Install the script from the [PowerShell Gallery](https://www.powershellgallery.com/packages/Get-WindowsAutopilotInfo) or from the command line (command-line installation is shown below).
 2. Navigate to the script directory and run it on the device when the device is either in Full OS or Audit Mode. See the following example.
 
    ```powershell
@@ -179,10 +175,6 @@ To reregister an Autopilot device from Intune, an IT Admin would:
 1. Sign in to Intune.
 2. Navigate to Device enrollment > Windows enrollment > Devices > Import.
 3. Click the **Import** button to upload a csv file containing the device ID of the device to be reregistered. The device ID was the 4K HH captured by the PowerShell script or OA3 tool described previously in this document.
-
-The following video provides a good overview of how to (re)register devices via MSfB.<br>
-
-> [!VIDEO https://www.youtube.com/embed/IpLIZU_j7Z0]
 
 ### Reregister from MPC
 
@@ -410,7 +402,6 @@ Assuming the used HDD was previously deregistered (before being used in this rep
 We don't recommend any of these scenarios.
 
 
-<tr><td>A device repaired more than three times<td>No<td>Autopilot isn't supported when a device is repeatedly repaired. Parts NOT replaced become associated with too many parts that have been replaced. This  makes it difficult to uniquely identify that device in the future.
 <tr><td>Memory replacement<td>Yes<td>Replacing the memory on a damaged device doesn't negatively affect the Autopilot experience on that device. No de/reregistration is needed. The repair technician simply needs to replace the memory.
 <tr><td>GPU replacement<td>Yes<td>Replacing the GPU(s) on a damaged device doesn't negatively affect the Autopilot experience on that device. No de/reregistration is needed. The repair technician simply needs to replace the GPU.
 </table>

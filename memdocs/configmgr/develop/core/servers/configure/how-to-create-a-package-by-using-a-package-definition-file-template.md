@@ -1,18 +1,18 @@
 ---
-title: "Create a Package Using a Package Definition File Template"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: Create a Package Using a Package Definition File Template
+titleSuffix: Configuration Manager
+description: The following example shows how to create a package and program by using a package definition file template in Configuration Manager.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: how-to
 ms.assetid: 5dc3adf6-88e4-4fd1-bd33-ca868a586019
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Create a Package by Using a Package Definition File Template
 The following example shows how to create a package and program by using a package definition file template in Configuration Manager. The package definition file template contains the default values that are used to create `SMS_Package` and `SMS_Program` objects. The following example uses the `SMS_PDF_Package` class and the `GetPDFData` method to load the package definition file template information and to create a package and the related programs.  

@@ -1,18 +1,18 @@
 ---
-title: "SMS_MigrationEntityDependency Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: SMS_MigrationEntityDependency Class
+titleSuffix: Configuration Manager
+description: In Configuration Manager, the SMS_MigrationEntityDependency Windows Management Instrumentation class is an SMS Provider server class that represents the dependency relationship between objects in the Configuration Manager 2007 hierarchy.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: b46865d2-7f86-43d5-8615-4ee16624ba48
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_MigrationEntityDependency Server WMI Class
 The `SMS_MigrationEntityDependency` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the dependency relationship between objects in the Configuration Manager 2007 hierarchy.  

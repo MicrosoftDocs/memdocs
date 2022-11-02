@@ -2,14 +2,16 @@
 title: Launch tenant attached CMPivot
 titleSuffix: Configuration Manager
 description: Launch CMPivot for Microsoft Endpoint Manager tenant attached devices.
-ms.date: 12/03/2020
+ms.date: 07/11/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: high
+ms.reviewer: mstewart,aaroncz 
+ms.collection: tier3
 ---
 
 # <a name="bkmk_cmpivot"></a> Tenant attach: Launch CMPivot from the admin center
@@ -24,7 +26,6 @@ Bring the power of on-premises [CMPivot](../core/servers/manage/cmpivot.md) to t
 The following items are required to use CMPivot from the admin center:
 
 - All of the prerequisites for [Tenant attach: ConfigMgr client details](client-details.md)
-- A minimum of Configuration Manager version 2002 with the [Update Rollup](https://support.microsoft.com/help/4560496/) and the corresponding version of the console installed.
 - Upgrade the target devices to the latest version of the Configuration Manager client.  
 - Target clients require a minimum of PowerShell version 4.
 - To gather data for the following entities, target clients require a minimum of PowerShell version 5.0:  

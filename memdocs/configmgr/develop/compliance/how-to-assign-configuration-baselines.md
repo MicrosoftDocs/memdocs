@@ -1,18 +1,18 @@
 ---
-title: "Assign Configuration Baselines"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: Assign Configuration Baselines
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: how-to
 ms.assetid: 54a9b910-2ed2-480c-adc8-aa61201ae39e
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+description: Learn how to assign a configuration baseline to a collection by creating an assignment instance, populated with a minimum set of required values, and saving.
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Assign Configuration Baselines
 In Configuration Manager, to assign a configuration baseline to a collection, an assignment instance is created, populated with a minimum set of required values, and saved.  

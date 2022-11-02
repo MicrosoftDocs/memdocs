@@ -7,11 +7,11 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/16/2021
+ms.date: 10/19/2022
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: protect
-ms.reviewer: samyada
+ms.reviewer: tycast
 
 # optional metadata
 
@@ -25,6 +25,7 @@ ms.custom: intune-azure
 ms.collection: 
   - M365-identity-device-management
   - highpri
+  - highseo
 ---
 
 # Use compliance policies to set rules for devices you manage with Intune
@@ -36,6 +37,7 @@ Compliance policies in Intune:
 - Define the rules and settings that users and devices must meet to be compliant.
 - Include actions that apply to devices that are noncompliant. Actions for noncompliance can alert users to the conditions of noncompliance and safeguard data on noncompliant devices.
 - Can be [combined with Conditional Access](#integrate-with-conditional-access), which can then block users and devices that don't meet the rules.
+- Can override the configuration of settings that you also manage through device configuration policies. To learn more about conflict resolution for policies, see [If multiple policies are assigned to the same user or device, how do I know which settings gets applied?](../configuration/device-profile-troubleshoot.md#if-multiple-policies-are-assigned-to-the-same-user-or-device-how-do-i-know-which-settings-gets-applied).
 
 There are two parts to compliance policies in Intune:
 
@@ -43,7 +45,8 @@ There are two parts to compliance policies in Intune:
 
 - **Device compliance policy** – Platform-specific rules you configure and deploy to groups of users or devices.  These rules define requirements for devices, like minimum operating systems or the use of disk encryption. Devices must meet these rules to be considered compliant.
 
-Like other Intune policies, compliance policy evaluations for a device depend on when the device checks-in with Intune, and [policy and profile refresh cycles](../configuration/device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned).
+Like other Intune policies, compliance policy evaluations for a device depend on when the device checks-in with Intune, and [policy and profile refresh cycles](../configuration/device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned). 
+ 
 
 ## Compliance policy settings
 
@@ -91,7 +94,7 @@ Compliance policy settings include the following settings:
 
   By default, the period is set to 30 days. You can configure a period from 1 to 120 days.
 
-  You can view details about device compliance to the validity period setting. Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices** > **Monitor** > **Setting compliance**. This setting has a name of **Is active** in the *Setting* column.  For more information about this and related compliance status views, see [Monitor device compliance](compliance-policy-monitor.md).
+  You can view details about a devices compliance to the validity period setting. Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices** > **Monitor** > **Setting compliance**. This setting has a name of **Is active** in the *Setting* column.  For more information about this and related compliance status views, see [Monitor device compliance](compliance-policy-monitor.md).
 
 ## Device compliance policies
 
@@ -123,11 +126,22 @@ The following subjects link to dedicated articles for different aspects of devic
 
   - [Android device administrator](compliance-policy-create-android.md)
   - [Android Enterprise](compliance-policy-create-android-for-work.md)
+  - [Android Open Source Project (AOSP)](compliance-policy-create-android-aosp.md)
   - [iOS](compliance-policy-create-ios.md)
+  - Linux - Support includes [Custom Compliance](../protect/compliance-use-custom-settings.md) and limited settings from the settings catalog for *Allowed Distributions*, *Device Encryptions*, and *Password Policy*.
   - [macOS](compliance-policy-create-mac-os.md)
   - [Windows Holographic for Business](compliance-policy-create-windows.md#windows-holographic-for-business)
   - [Windows 8.1 and later](compliance-policy-create-windows-8-1.md)
+    [!INCLUDE [windows-phone-81-windows-10-mobile-support](../includes/windows-phone-81-windows-10-mobile-support.md)]
   - [Windows 10/11](compliance-policy-create-windows.md)
+
+  Intune also supports compliance policy for Linux (Ubuntu Desktop, version 20.04 LTS and 22.04 LTS), which use the Settings catalog format instead of templates. Dedicated content for the settings in the settings catalog isn't available, but information is available from within the Settings catalog.
+
+- [**Custom compliance settings**](compliance-use-custom-settings.md) – With custom compliance settings you can expand on Intune’s built-in device compliance options.  Custom settings provide flexibility to base compliance on the settings that are available on a device without having to wait for Intune to add those settings.
+
+  You can use custom compliance settings with the following platforms:
+  - Linux – Ubuntu Desktop, version 20.04 LTS and 22.04 LTS
+  - Windows 10/11
 
 ## Monitor compliance status
 
@@ -162,13 +176,18 @@ The following table describes how noncompliant settings are managed when a compl
 
 |**Policy setting**| **Platform** |
 | --- | ----|
-| **PIN or password configuration** | - **Android 4.0 and later**: Quarantined<br>- **Samsung Knox Standard 4.0 and later**: Quarantined<br>- **Android Enterprise**: Quarantined  <br>  <br>- **iOS 8.0 and later**: Remediated<br>- **macOS 10.11 and later**: Remediated  <br>  <br>- **Windows 8.1 and later**: Remediated|
-| **Device encryption** | - **Android 4.0 and later**: Quarantined<br>- **Samsung Knox Standard 4.0 and later**: Quarantined<br>- **Android Enterprise**: Quarantined<br><br>- **iOS 8.0 and later**: Remediated (by setting PIN)<br>- **macOS 10.11 and later**: Quarantined<br><br>- **Windows 8.1 and later**: Not applicable|
-| **Jailbroken or rooted device** | - **Android 4.0 and later**: Quarantined (not a setting)<br>- **Samsung Knox Standard 4.0 and later**: Quarantined (not a setting)<br>- **Android Enterprise**: Quarantined (not a setting)<br><br>- **iOS 8.0 and later**: Quarantined (not a setting)<br>- **macOS 10.11 and later**: Not applicable<br><br>- **Windows 8.1 and later**: Not applicable |
-| **Email profile** | - **Android 4.0 and later**: Not applicable<br>- **Samsung Knox Standard 4.0 and later**: Not applicable<br>- **Android Enterprise**: Not applicable<br><br>- **iOS 8.0 and later**: Quarantined<br>- **macOS 10.11 and later**: Quarantined<br><br>- **Windows 8.1 and later**: Not applicable |
-| **Minimum OS version** | - **Android 4.0 and later**: Quarantined<br>- **Samsung Knox Standard 4.0 and later**: Quarantined<br>- **Android Enterprise**: Quarantined<br><br>- **iOS 8.0 and later**: Quarantined<br>- **macOS 10.11 and later**: Quarantined<br><br>- **Windows 8.1 and later**: Quarantined|
-| **Maximum OS version** | - **Android 4.0 and later**: Quarantined<br>- **Samsung Knox Standard 4.0 and later**: Quarantined<br>- **Android Enterprise**: Quarantined<br><br>- **iOS 8.0 and later**: Quarantined<br>- **macOS 10.11 and later**: Quarantined<br><br>- **Windows 8.1 and later**: Quarantined |
-| **Windows health attestation** | - **Android 4.0 and later**: Not applicable<br>- **Samsung Knox Standard 4.0 and later**: Not applicable<br>- **Android Enterprise**: Not applicable<br><br>- **iOS 8.0 and later**: Not applicable<br>- **macOS 10.11 and later**: Not applicable<br><br>- **Windows 10/11**: Quarantined<br>- **Windows 8.1 and later**: Quarantined |
+| **Allowed Distros** | **Linux** *(only)* - Quarantined |
+| **Device encryption** | - **Android 4.0 and later**: Quarantined <br>- **Samsung Knox Standard 4.0 and later**: Quarantined <br>- **Android Enterprise**: Quarantined <br><br>- **iOS 8.0 and later**: Remediated (by setting PIN) <br>- **macOS 10.11 and later**: Quarantined <br><br>- **Linux**: Quarantined <br><br>- **Windows 10/11**: Quarantined|
+| **Email profile** | - **Android 4.0 and later**: Not applicable<br>- **Samsung Knox Standard 4.0 and later**: Not applicable<br>- **Android Enterprise**: Not applicable<br><br>- **iOS 8.0 and later**: Quarantined <br>- **macOS 10.11 and later**: Quarantined <br><br>- **Linux**: Not applicable <br><br>- **Windows 10/11**: Not applicable |
+| **Jailbroken or rooted device** | - **Android 4.0 and later**: Quarantined (not a setting) <br>- **Samsung Knox Standard 4.0 and later**: Quarantined (not a setting)<br>- **Android Enterprise**: Quarantined (not a setting) <br><br>- **iOS 8.0 and later**: Quarantined (not a setting) <br>- **macOS 10.11 and later**: Not applicable <br><br>- **Linux**: Not applicable <br><br>- **Windows 10/11**: Not applicable |
+| **Maximum OS version** | - **Android 4.0 and later**: Quarantined <br>- **Samsung Knox Standard 4.0 and later**: Quarantined <br>- **Android Enterprise**: Quarantined <br><br>- **iOS 8.0 and later**: Quarantined <br>- **macOS 10.11 and later**: Quarantined <br><br>- **Linux**: See *Allowed Distros* <br><br>- **Windows 10/11**: Quarantined |
+| **Minimum OS version** | - **Android 4.0 and later**: Quarantined <br>- **Samsung Knox Standard 4.0 and later**: Quarantined <br>- **Android Enterprise**: Quarantined <br><br>- **iOS 8.0 and later**: Quarantined <br>- **macOS 10.11 and later**: Quarantined  <br><br>- **Linux**: See *Allowed Distros* <br><br>- **Windows 10/11**: Quarantined|
+| **PIN or password configuration** | - **Android 4.0 and later**: Quarantined <br>- **Samsung Knox Standard 4.0 and later**: Quarantined <br>- **Android Enterprise**: Quarantined  <br><br>- **iOS 8.0 and later**: Remediated <br>- **macOS 10.11 and later**: Remediated <br><br>- **Linux**: Quarantined <br> <br>- **Windows 10/11**: Remediated|
+| **Windows health attestation** | - **Android 4.0 and later**: Not applicable <br>- **Samsung Knox Standard 4.0 and later**: Not applicable <br>- **Android Enterprise**: Not applicable <br><br>- **iOS 8.0 and later**: Not applicable <br>- **macOS 10.11 and later**: Not applicable <br><br>- **Linux**: Not applicable <br><br>- **Windows 10/11**: Quarantined |
+
+
+> [!NOTE]
+> The Company Portal app enters the enrollment remediation flow when the user signs into the app and the device has not successfully checked in with Intune for 30 days or more (or the device is non-compliant due to a _Lost contact_ compliance reason). In this flow, we attempt to initiate a check-in one more time. If that still does not succeed, we issue a retire command to allow the user to re-enroll the device manually.
 
 ---------------------------
 

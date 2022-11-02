@@ -1,18 +1,18 @@
 ---
-title: "How to Create the Windows Installer File "
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: How to Create the Windows Installer File
+description: After the Deployment Type Extension file (*.cmdtx) is created, you are expected to generate a Windows Installer file (\*.msi) which contains the \*.cmdtx file and the UX files.
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: how-to
 ms.assetid: cd6cf0d2-ff17-4d58-a7d5-244c88307b17
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Create the Windows Installer File (*.msi)
 After the Deployment Type Extension file (*.cmdtx) is created, you are expected to generate a Windows Installer file (\*.msi) which contains the \*.cmdtx file and the UX files. The Windows Installer needs to copy the files into the correct locations and register the custom extension with the site server.  

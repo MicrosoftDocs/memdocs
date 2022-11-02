@@ -1,18 +1,18 @@
 ---
-title: "ICIINFO Interface"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: ICIINFO Interface
+titleSuffix: Configuration Manager
+description: ICIINFO can represent a configuration item which has been downloaded and stored by the Desired Configuration Management client or a baseline configuration item in a Desired Configuration Management Agent job in the client data store.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 9c61cbd9-3f54-41da-abf0-05159f43dc86
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # ICIINFO Interface
 The `ICIINFO` interface, in Configuration Manager, can represent the properties of a configuration item which has been downloaded and stored by the Desired Configuration Management client or the properties of a baseline configuration item in a Desired Configuration Management Agent job in the client data store. In both cases, the configuration item is either a (top level/root) baseline or a Software Updates configuration item.  

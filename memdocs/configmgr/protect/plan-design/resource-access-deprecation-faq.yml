@@ -3,11 +3,11 @@ metadata:
   title: FAQ for resource access deprecation
   titleSuffix: Configuration Manager
   description: Frequently asked questions (FAQ) about the end of support for compliance settings for company resource access features.
-  author: aczechowski
-  ms.author: aaroncz
-  ms.reviewer: dannygu
-  manager: dougeby
-  ms.date: 02/17/2022
+  author: banreet
+  ms.author: banreetkaur
+  ms.reviewer: mstewart,aczechowski
+  manager: apoorvseth
+  ms.date: 04/08/2022
   ms.topic: faq
   ms.prod: configuration-manager
   ms.technology: configmgr-protect
@@ -19,7 +19,7 @@ summary: |
 
   Starting in Configuration Manager version 2103, the following company resource access [features are deprecated](../../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md):<!-- 9315387 -->
 
-  - Certificate profiles
+  - Certificate profiles, including the certificate registration point site system role<!--13951253-->
   - VPN profiles
   - Wi-Fi profiles
   - Windows Hello for Business settings
@@ -34,7 +34,18 @@ sections:
       - question: |
           When will these features be removed from Configuration Manager?
         answer: |
-          Starting in version 2203, these features will still be in Configuration Manager, but no longer tested or supported. These features will be removed in version 2207.
+          Starting in version 2203, these features will still be available in Configuration Manager, but no longer tested or supported. When you upgrade to version 2203, the [prerequisite checker will display a warning](../../core/servers/deploy/install/list-of-prerequisite-checks.md#resource-access-policies-are-no-longer-supported).
+
+          In version 2207, the creation of new company resource access profiles including the certificate registration point site system role is disabled. Set/New/Import type PowerShell cmdlets for Resource Access features are deprecated as well.
+
+          These features will be completely removed in 2211.
+
+      - question: |
+          If I'm still using these features, can I upgrade to version 2207?
+        answer: |
+          Yes. If the site has any of these policies, the 2207 prerequisite checker will display a warning. Before you upgrade to version 2211, replace the functionality of these features, and remove the policies from the site.
+
+          If the site has the certificate registration point site system role, you also need to remove it. For more information, see [Remove a site system role](../../core/servers/deploy/install/uninstall-sites-and-hierarchies.md#procedure-to-remove-a-site-system-role).
 
       - question: |
           What functionality is available to replace these features?
@@ -51,12 +62,15 @@ sections:
       - question: |
           What happens if I don't enable co-management?
         answer: |
-          If you currently use these features, they're not tested or supported in version 2203. When you upgrade to version 2207, they'll cause error prerequisite checks. You can't deploy any wi-fi, VPN, Windows Hello for Business, or certificate (SCEP, PFX, or root CA) profiles to Configuration Manager clients. Any existing deployed profiles won't be removed from devices, and will continue to function. These existing profiles will be unmanaged. For example, When a certificate expires, Configuration Manager won't renew it.
+          If you currently use these features, they're not tested or supported in version 2203. When you upgrade to version 2207, they'll cause warning prerequisite checks. You can't create new wi-fi, VPN, Windows Hello for Business, or certificate (SCEP, PFX, or root CA) profiles for Configuration Manager clients. Any existing deployed profiles won't be removed from devices and will continue to function. These existing profiles will be unmanaged. For example, when a certificate expires, Configuration Manager won't renew it.
 
       - question: |
           What happens if I've enabled co-management, but haven't switched the resource access workload?
         answer: |
-          Starting in version 2207, co-managed clients will get their policy for this workload from the Intune management authority. This behavior is the same as if you used Configuration Manager version 2111 or earlier to switch the resource access workload to Intune.
+          Starting in version 2211, the prerequisite checker will display a warning for co-managed clients if the resource access workload is on Configuration Manager. If the resource access slider is towards Configuration Manager, they are not tested or supported in version 2203. Co-management behavior is the same as if you used Configuration Manager 2111 or earlier to switch the resource access workload to Intune. 
+          This Workload slider will be disabled, and you can only use Microsoft Intune to deploy resource access profiles in upcoming Configuration Manager versions. 
+
+  
 
       - question: |
           What alternative options are available?

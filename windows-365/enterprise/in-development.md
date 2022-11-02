@@ -8,9 +8,9 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 03/09/2022
+ms.date: 09/14/2022
 ms.topic: reference
-ms.service: cloudpc
+ms.service: windows-365
 ms.subservice: 
 ms.assetid: 
 
@@ -49,27 +49,26 @@ To help in your readiness and planning, this page lists Windows 365 updates and 
 ## Monitor and troubleshoot
 ## Role-based access control
 ## Security
+## End-user experience
 
 -->
 
 <!-- ***********************************************-->
 <!--## App management-->
 
+
 <!-- ***********************************************-->
-<!--## Device management-->
+<!--## Device provisioning-->
+
+<!--***********************************************-->
+<!--
+## End user experience
+-->
 
 <!-- ***********************************************-->
 ## Monitor and troubleshoot
 
-### End-user error log collection<!--38195529-->
-
-End users will be able to collect error logs.
-
-### End-user feedback<!--38195529-->
-
-End users will be able to provide feedback to Microsoft from within the Windows 365 web client.
-
-### End user manual connectivity check<!--37679345 -->
+### End user manual connectivity check<!--37679345 --> 
 
 End users will be able to manually run connectivity checks on their Cloud PCs from [windows365.microsoft.com](https://windows365.microsoft.com).
 
@@ -77,8 +76,8 @@ End users will be able to manually run connectivity checks on their Cloud PCs fr
 
 The device history report will have new information to help you evaluate Cloud PC performance:
 
-- Top 5 processes impacting CPU spike times
-- Top 5 processes impacting RAM spike times
+- Top five processes impacting CPU spike times
+- Top five processes impacting RAM spike times
 
 <!-- ***********************************************-->
 <!-- ## Provisioning -->

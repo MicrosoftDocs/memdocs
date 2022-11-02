@@ -2,14 +2,16 @@
 title: CMG performance and scale
 titleSuffix: Configuration Manager
 description: Plan how the design the cloud management gateway (CMG) for the best performance at the appropriate scale.
-ms.date: 08/02/2021
+ms.date: 04/08/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: BalaDelli
+ms.author: baladell
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.reviewer: mstewart,aaroncz 
+ms.collection: tier3
 ---
 
 # CMG performance and scale

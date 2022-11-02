@@ -21,7 +21,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-#ms.reviewer:
+ms.reviewer: 
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -42,7 +42,7 @@ By federating your organization’s AAD instance in Apple Business or School Man
 Follow these steps to set up Shared iPads in your environment:
 1. Federate your AAD instance with Apple Business Manager or Apple School Manager. For more information, see [Intro to federated authentication with Apple Business Manager](https://support.apple.com/guide/apple-business-manager/intro-to-federated-authentication-apdb19317543/web).
 2. Create an enrollment profile by navigating to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and selecting **Devices** > **iOS/iPadOS** > **iOS/iPadOS Enrollment** > **Enrollment program tokens* > *select a token* > **Profiles** > **Create profile** > **iOS/iPadOS**. 
-3. Enable **Shared iPad** in the enrollment profile under **Management settings**. Set **User affinity** to **Enroll without user affinity** and **Shared iPad** to **Yes**. Important note - A device wipe will be required if an iOS/iPadOS enrollment profile with Shared iPad enabled is sent to an unsupported device. Unsupported devices include any iPhone models, and iPads running iPadOS/iOS 13.3 and earlier. Supported devices include iPads running iPadOS 13.3 and later. 
+3. Enable **Shared iPad** in the enrollment profile under **Management settings**. Set **User affinity** to **Enroll without user affinity** and **Supervised** to **Yes** and then **Shared iPad** to **Yes**. Important note - A device wipe will be required if an iOS/iPadOS enrollment profile with Shared iPad enabled is sent to an unsupported device. Unsupported devices include any iPhone models, and iPads running iPadOS/iOS 13.3 and earlier. Supported devices include iPads running iPadOS 13.3 and later. Shared iPads must be supervised.
 4. Complete configuring the enrollment profile as desired and then select **Save**.
 5. Assign devices synced from Apple Business Manager by selecting the new enrollment profile, then select **Assign devices** > **Add devices**.
 6. Create a dynamic device group containing devices by using the new enrollment profile for Shared iPad by navigating to **Groups** > **New group**. Set **Membership type** to **dynamic device** and select **Add dynamic query** and set **enrollmentProfileName** to the *name of desired enrollment profile*.
@@ -128,7 +128,7 @@ The following are known limitations when working with shared iPads:
 
 - **Disabled settings and system apps:** Shared iPads provide users access to a limited number of settings and system apps. For more information on what settings and apps are disabled on Shared iPads. For more information, see [Shared iPad and Managed Apple IDs](https://support.apple.com/guide/mdm/shared-ipad-and-managed-apple-ids-mdm9992c9a34/web).
 - **App Store installations are disabled:** The App Store is available by default on Shared iPad. But app installation is disabled for App Store apps when a device is set up as a Shared iPad. It is recommended that you disable App Store using configuration profiles in Intune.
-- **Company Portal and available apps are not supported:** Intune Company Portal app, the Intune Company Portal website are not supported on Shared iPads. Apps must be assigned as “required” to device groups containing the Shared iPad to install. Available apps are supported on Shared iPad.
+- **Company Portal and available apps are not supported:** Intune Company Portal app and the Intune Company Portal website are not supported on Shared iPad. Apps must be assigned as _required_ to device groups containing the Shared iPad to install. Available apps are not supported on Shared iPad.
 - **Passcode complexity cannot be managed on Shared iPad:** The passcode complexity for Shared iPad is a complex 8 character alphanumeric and cannot be changed in Apple Business Manager. The passcode complexity and length settings available in device configuration profile do not apply to Shared iPads. The MDM administrator can set the grace period – a number of minutes during which the user can unlock the iPad without a passcode.
 - **Unsupported scenarios:** Some Intune scenarios are not supported on Shared iPads, namely, app-based and device-based Conditional Access, app protection policies and compliance policies.
 - **Wallpaper is not supported:** Setting a wallpaper image is currently not supported on Shared iPad. For more information on wallpaper, see [iOS/iPadOS Device Features](../configuration/ios-device-features-settings.md#wallpaper). 

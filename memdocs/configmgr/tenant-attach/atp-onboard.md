@@ -1,15 +1,17 @@
 ---
 title: Tenant attach - Onboard Configuration Manager clients to Microsoft Defender for Endpoint from the Microsoft Endpoint Manager admin center
 titleSuffix: Configuration Manager
-description: "Deploy Microsoft Defender for Endpoint Detection and Response (EDR) onboarding policies to Configuration Manager managed clients from the admin center."
+description: Deploy Microsoft Defender for Endpoint Detection and Response (EDR) onboarding policies to Configuration Manager managed clients from the admin center.
 ms.date: 03/21/2022
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-manager: dougeby
-author: mestew
-ms.author: mstewart
+author: Banreet
+ms.author: banreetkaur
 ms.localizationpriority: high
+manager: apoorvseth
+ms.reviewer: mstewart,aaroncz 
+ms.collection: tier3
 ---
 
 # <a name="bkmk_atp"></a> Tenant attach: Onboard Configuration Manager clients to Microsoft Defender for Endpoint from the admin center
@@ -22,7 +24,7 @@ Microsoft Endpoint Manager is an integrated solution for managing all of your de
 
 [!INCLUDE [Prerequisites for Configuration Manager tenant attached devices](./includes/configmgr-endpoint-security-prerequisties.md)]
 - [Microsoft Intune and Microsoft Defender for Endpoint integration enabled](../../intune/protect/advanced-threat-protection-configure.md#enable-microsoft-defender-for-endpoint-in-intune)
-- Client onboarded to [Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/minimum-requirements#licensing-requirements).<!--Adding MDE License Requirement-->
+- Client which meets the minimum requirements for, and is onboarded to [Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/minimum-requirements#licensing-requirements).<!--Adding MDE License Requirement & MAX 6198973-->
 
 ## <a name="bkmk_onboard"></a> Create Microsoft Defender for Endpoint policies
 

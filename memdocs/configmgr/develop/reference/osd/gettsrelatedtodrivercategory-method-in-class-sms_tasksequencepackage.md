@@ -1,18 +1,18 @@
 ---
-title: "GetTSRelatedToDriverCategory Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: GetTSRelatedToDriverCategory Method
+titleSuffix: Configuration Manager
+description: The GetTSRelatedToDriverCategory WMI class method gets task sequence packages related to the specified category.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 2261bb91-979c-49e4-a243-733d2339988e
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # GetTSRelatedToDriverCategory Method in Class SMS_TaskSequencePackage
 The `GetTSRelatedToDriverCategory` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that gets task sequence packages related to the specified category.  

@@ -2,14 +2,16 @@
 title: Monitor operating system deployments
 titleSuffix: Configuration Manager
 description: To help you to monitor operating system deployment objects, the Configuration Manager console provides alerts, reports, and various status indicators.
-ms.date: 05/04/2020
+ms.date: 04/08/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: how-to
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: BalaDelli
+ms.author: baladell
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.reviewer: mstewart,aaroncz 
+ms.collection: tier3
 ---
 
 # Monitor operating system deployments in Configuration Manager
@@ -20,7 +22,7 @@ The Configuration Manager console provides the following ways to help you monito
 
 
 ##  <a name="BKMK_OSDAlerts"></a> Alerts for operating system deployments  
- You can configure an alert in the task sequence  deployment settings to notify administrative users when compliance levels for the  deployment is below the configured percentage.  
+ You can configure an alert in the task sequence deployment settings to notify administrative users when compliance levels for the deployment are below the configured percentage.  
 
  After you configure the alert settings, if the specified conditions occur, Configuration Manager generates an alert. You can review task sequence deployment alerts at the following locations:  
 
@@ -41,8 +43,9 @@ The Configuration Manager console provides the following ways to help you monito
 
 4.  On the **Home** tab, in the **Deployment** group, click **View Status**.  
 
-> [!NOTE]  
-> When an upgrade is initiated, status message 52200 is generated. This contains the user that did the upgrade.  
+> [!TIP]  
+> - When an upgrade is initiated, status message 52200 is generated. This contains the user that did the upgrade.
+> - Starting in version 2203, you can perform client notification actions, including **Run Scripts**, from the **Deployment Status** view.Use the right-click menu on either a group of clients in a **Category** or a single client in the **Asset details** pane to display the client notification actions. <!--7079837-->
 
 ##  <a name="BKMK_TSReports"></a> Operating system deployment reports  
  There are many predefined operating system deployment reports available. They are organized in several categories and can be used to report on specific information about state migration and task sequence deployments. In addition to using the preconfigured reports, you can also create custom software update reports according to the needs of your enterprise. For more information, see [Operations and maintenance for reporting](../../core/servers/manage/operations-and-maintenance-for-reporting.md).  

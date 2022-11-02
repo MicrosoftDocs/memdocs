@@ -1,10 +1,10 @@
 ---
-author: aczechowski
-ms.author: aaroncz
+author: banreet
+ms.author: banreetkaur
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: include
-ms.date: 08/02/2021
+ms.date: 03/15/2022
 ms.localizationpriority: medium
 ---
 
@@ -53,6 +53,7 @@ The CMG connection point needs access to the following endpoints:
 | _Service_ name     | `<prefix>.<region>.cloudapp.azure.com` | `<prefix>.usgovcloudapp.net`            |
 | Storage endpoint 1 | `<prefix>.blob.core.windows.net`       | `<prefix>.blob.core.usgovcloudapi.net`  |
 | Storage endpoint 2 | `<prefix>.table.core.windows.net`      | `<prefix>.table.core.usgovcloudapi.net` |
+| Key vault          | `<prefix>.vault.azure.net`             | `<prefix>.vault.usgovcloudapi.net`      |
 
 The CMG connection point site system supports using a web proxy. For more information on configuring this role for a proxy, see [Proxy server support](../proxy-server-support.md#configure-the-proxy-for-a-site-system-server).
 

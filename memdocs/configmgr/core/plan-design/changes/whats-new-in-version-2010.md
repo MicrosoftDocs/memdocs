@@ -6,10 +6,13 @@ ms.date: 03/09/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: medium
+ROBOTS: NOINDEX
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # What's new in version 2010 of Configuration Manager current branch
@@ -235,7 +238,7 @@ Large task sequences cause problems with client processing. To further help mana
 
 - When you view the list of task sequences in the Configuration Manager console, add the **Size (KB)** column. Use this column to identify large task sequences that can cause problems.<!--7645732-->
 
-For more information, see [Reduce the size of task sequence policy](../../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md#reduce-the-size-of-task-sequence-policy).
+For more information, see [Reduce the size of task sequence policy](../../../osd/deploy-use/reduce-task-sequence-policy-size.md).
 
 ### Analyze SetupDiag errors for feature updates
 
@@ -250,7 +253,7 @@ For more information, see [Manage Windows as a service](../../../osd/deploy-use/
 <!--7721999 & 8177793-->
 Starting in Configuration Manager version 1910, to improve the overall speed of the task sequence, you could activate the Windows power plan for **High Performance**. Starting in this release, you can now use this option on devices with [modern standby](/windows-hardware/design/device-experiences/modern-standby) and other devices that don't have that default power plan.
 
-For more information, see [Performance improvements for power plans](../../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md#bkmk_perf).
+For more information, see [Task sequence performance](../../../osd/deploy-use/task-sequence-performance.md).
 
 ## Protection
 
@@ -367,7 +370,7 @@ For more information, see the [Content library cleanup tool](../hierarchy/conten
 
 <!--7774961-->
 
-You can now use the [Update-Help](/powershell/module/microsoft.powershell.core/update-help) cmdlet to get the latest information for the Configuration Manager PowerShell module. This content is the same as what's published on docs.microsoft.com for the [ConfigurationManager module](/powershell/module/configurationmanager/).
+You can now use the [Update-Help](/powershell/module/microsoft.powershell.core/update-help) cmdlet to get the latest information for the Configuration Manager PowerShell module. This content is the same as what's published for the [ConfigurationManager module](/powershell/module/configurationmanager/).
 
 For more information, see [Configuration Manager PowerShell cmdlets: Update help](/powershell/sccm/overview#update-help).
 

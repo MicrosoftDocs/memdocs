@@ -1,18 +1,18 @@
 ---
-title: "SMS_BrowserHelperObject Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: SMS_BrowserHelperObject Class
+titleSuffix: Configuration Manager
+description: In Configuration Manager, the SMS_BrowserHelperObject class is a client Windows Management Instrumentation class  that enumerates all browser helper objects on a computer.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 9a0597a0-4bb2-47a7-b77e-8b57ca4afb4e
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_BrowserHelperObject Client WMI Class
 The `SMS_BrowserHelperObject` class is a client Windows Management Instrumentation (WMI) class, in Configuration Manager, that enumerates all browser helper objects on a computer.  

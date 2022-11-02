@@ -2,10 +2,9 @@
 # required metadata
 
 title: Lock your device from the Company Portal | Microsoft Docs
-description: 
+description: Remotely lock a lost or stolen device from the Company Portal website.
 keywords:
 author: lenewsad
-
 ms.author: lanewsad
 manager: dougeby
 ms.date: 01/12/2021

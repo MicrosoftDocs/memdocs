@@ -1,16 +1,17 @@
 ---
 title: "SMS_SUMDeploymentStatus Class"
 titleSuffix: "Configuration Manager"
+description: "The SMS_SUMDeploymentStatus WMI class represents per-deployment-state summary for SUM deployments in-console monitoring."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: f263eddd-b038-429c-b052-b69c18351d79
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
+ms.collection: tier3
 
 
 ---

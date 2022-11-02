@@ -1,18 +1,18 @@
 ---
-title: "Synchronize the Software Update Point"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: Synchronize the Software Update Point
+description: In Configuration Manager, software updates must be synchronized before the update information is available in the Configuration Manager console.
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: conceptual
 ms.assetid: b394b01f-a87b-4f15-b364-558184921871
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # About Synchronizing the Software Update Point
 In Configuration Manager, software updates must be synchronized before the update information is available in the Configuration Manager console. Synchronization is initiated at the highest level site in the hierarchy that has a software update point.  
@@ -26,7 +26,7 @@ For more information about software updates, see [Deploy and manage software upd
 
 -   A full synchronization, which synchronizes the whole catalog of updates on the WSUS server. At the end of the full synchronization, the Configuration Manager database will match the content of WSUS filtered by the current subscription.  
 
--   A delta synchronization, which synchronizes only changes (adds and removals) that occurred since the last successful synchronization. A delta synchronization will not examine at updates synchronized earlier and not changed since.  
+-   A delta synchronization, which synchronizes only changes (adds and removals) that occurred since the last successful synchronization. A delta synchronization will not examine any updates synchronized earlier and not changed since.  
 
 > [!IMPORTANT]
 >  While they are nearly identical functionally, a full synchronization will potentially repair updates from previous synchronizations that have gotten damaged or deleted. A delta synchronization will not repair any updates from previous synchronizations.  

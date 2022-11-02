@@ -2,14 +2,16 @@
 title: Product lifecycle dashboard
 titleSuffix: Configuration Manager
 description: View the Microsoft Lifecycle Policy with the product lifecycle dashboard in Configuration Manager.
-ms.date: 04/05/2021
+ms.date: 04/08/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: sheetg09
+ms.author: sheetg
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.reviewer: mstewart,aaroncz 
+ms.collection: tier3
 ---
 
 # Manage Microsoft Lifecycle Policy with Configuration Manager
@@ -28,11 +30,12 @@ To see data in the product lifecycle dashboard, the following components are req
 
 - To get updates for the data on this dashboard, the service connection point must be online. If the service connection point is in offline mode, synchronize it regularly. For more information, see [About the service connection point](../../../servers/deploy/configure/about-the-service-connection-point.md).
 
-- Configure and synchronize the asset intelligence synchronization point. The dashboard uses the asset intelligence catalog as metadata for product titles. Configuration Manager compares this metadata against inventory data in your hierarchy. For more information, see [Configure asset intelligence in Configuration Manager](configuring-asset-intelligence.md).
+- In version 2111 and earlier: Configure and synchronize the asset intelligence synchronization point. The dashboard uses the asset intelligence catalog as metadata for product titles. Configuration Manager compares this metadata against inventory data in your hierarchy. For more information, see [Configure asset intelligence in Configuration Manager](configuring-asset-intelligence.md).
 
-  - If you're configuring the asset intelligence service point for the first time, make sure to [enable asset intelligence hardware inventory classes](configuring-asset-intelligence.md#BKMK_EnableAssetIntelligence). The lifecycle dashboard depends on those asset intelligence hardware inventory classes. The dashboard won't display data until clients scan for and return hardware inventory.
+    > [!NOTE]
+    > Starting in version 2203, the product lifecycle dashboard isn't dependent on the asset intelligence synchronization point.<!-- 13808902 -->
 
-  - In version 2006 and earlier, to view information about Extended Security Updates (ESU) in this dashboard, enable the hardware inventory class **Software Licensing Product - Asset Intelligence (SoftwareLicensingProduct)**. For more information, see [Enable asset intelligence hardware inventory classes](configuring-asset-intelligence.md#BKMK_EnableAssetIntelligence).<!--4962901--> In version 2010 and later, the dashboard uses an attribute in the client discovery data.
+- [Enable asset intelligence hardware inventory classes](configuring-asset-intelligence.md#BKMK_EnableAssetIntelligence). The lifecycle dashboard depends on these classes. The dashboard won't display data until clients scan for and return hardware inventory.
 
 ## Use the product lifecycle dashboard
 
@@ -49,7 +52,7 @@ Based on inventory data the site collects from managed devices, the dashboard di
 
 ### Product lifecycle dashboard
 
-:::image type="content" source="media/product-lifecycle-dashboard.png" alt-text="Screenshot of the product lifecycle dashboard in the console" lightbox="media/product-lifecycle-dashboard.png":::
+:::image type="content" source="media/product-lifecycle-dashboard.png" alt-text="Screenshot of the product lifecycle dashboard in the console." lightbox="media/product-lifecycle-dashboard.png":::
 
 Change the view by selecting one of the following options from the **Product category** list:
 
@@ -68,7 +71,7 @@ The dashboard has the following tiles:
 
     Starting in version 2103, use the time slider to control the timeframe for this tile. The default is 18 months, but you can adjust it from 1 to 36 months.<!--8160460-->
 
-    :::image type="content" source="media/8160460-product-lifecycle-timescale.png" alt-text="Product lifecycle dashboard highlighting new timescale control at 33 months":::
+    :::image type="content" source="media/8160460-product-lifecycle-timescale.png" alt-text="Product lifecycle dashboard highlighting new timescale control at 33 months.":::
 
 - **Lifecycle data for installed products**: This tile gives you a general idea of when a product transitions from supported to the expired state. The chart provides a breakdown of the number of clients where the product is installed, the support availability state, and a link to learn more about the next steps to take. The following information is included in the chart:
 

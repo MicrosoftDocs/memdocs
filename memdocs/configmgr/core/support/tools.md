@@ -6,10 +6,12 @@ ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: overview
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Configuration Manager Tools
@@ -23,7 +25,7 @@ These tools are included in the `CD.Latest\SMSSETUP\Tools` folder on the site se
 All Windows operating systems listed as supported clients in [Supported operating systems for clients and devices](../plan-design/configs/supported-operating-systems-for-clients-and-devices.md) are supported for use with these tools.
 
 > [!NOTE]
-> The [System Center 2012 R2 Configuration Manager Toolkit](https://www.microsoft.com/download/details.aspx?id=50012) is still available from the Microsoft Download Center. For supported versions of Configuration Manager current branch, use the versions of the tools in the CD.Latest folder on the site server. Some tools were formerly in the toolkit but not included current branch. These legacy tools are no longer supported.
+> For supported versions of Configuration Manager current branch, use the versions of the tools in the CD.Latest folder on the site server. Some tools were formerly in the toolkit but not included current branch. These legacy tools are no longer supported.
 
 ## Client tools
 

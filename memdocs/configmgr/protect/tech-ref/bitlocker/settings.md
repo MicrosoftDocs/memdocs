@@ -2,14 +2,16 @@
 title: BitLocker settings reference
 titleSuffix: Configuration Manager
 description: All of the BitLocker management settings available in Configuration Manager
-ms.date: 10/05/2021
+ms.date: 04/12/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: reference
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: BalaDelli
+ms.author: baladell
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.reviewer: mstewart,aaroncz 
+ms.collection: tier3
 ---
 
 # BitLocker settings reference
@@ -28,9 +30,6 @@ BitLocker management policies in Configuration Manager contain the following pol
 
 The following sections describe and suggest configurations for the settings in each group.
 
-> [!NOTE]
-> These settings are based on Configuration Manager version 2002. Version 1910 doesn't include all of these settings.
-
 ## Setup
 
 The settings on this page configure global BitLocker encryption options.
@@ -44,7 +43,7 @@ The settings on this page configure global BitLocker encryption options.
 
 #### Windows 8.1 devices
 
-For Windows 8.1 devices, enable the option for **Drive encryption method and cipher strength**, and select one of the following the encryption methods:
+For Windows 8.1 devices, enable the option for **Drive encryption method and cipher strength**, and select one of the following encryption methods:
 
 - AES 128-bit with Diffuser
 - AES 256-bit with Diffuser
@@ -145,7 +144,7 @@ For more information on how to create this policy with Windows PowerShell, see [
 
 *Suggested configuration*: **Not configured**
 
-Configure BitLocker to use enhanced startup PINs. These PINs permit the use of additional characters such as uppercase and lowercase letters, symbols, numbers, and spaces. This setting applies when you turn on BitLocker.
+Configure BitLocker to use enhanced startup PINs. These PINs permit the use of more characters such as uppercase and lowercase letters, symbols, numbers, and spaces. This setting applies when you turn on BitLocker.
 
 > [!IMPORTANT]
 > Not all computers can support enhanced PINs in the pre-boot environment. Before you enable its use, evaluate whether your devices are compatible with this feature.
@@ -235,7 +234,7 @@ For more information on how to create this policy with Windows PowerShell, see [
 
 ## Fixed drive
 
-The settings on this page configure encryption for additional data drives in a device.
+The settings on this page configure encryption for other data drives in a device.
 
 ### Fixed data drive encryption
 
@@ -410,7 +409,10 @@ When you enable this setting, Configuration Manager automatically and silently b
 
 - **Allow recovery information to be stored in plain text**: Without a BitLocker management encryption certificate for SQL Server, Configuration Manager stores the key recovery information in plain text. For more information, see [Encrypt recovery data in the database](../../deploy-use/bitlocker/encrypt-recovery-data.md).
 
-- **Client checking status frequency (minutes)**: At the configured frequency, the client checks the BitLocker protection policies and status on the computer and also backs up the client recovery key. By default, the Configuration Manager client updates its BitLocker recovery information every 90 minutes.
+- **Client checking status frequency (minutes)**: At the configured frequency, the client checks the BitLocker protection policies and status on the computer and also backs up the client recovery key. By default, the Configuration Manager client checks BitLocker status every 90 minutes.
+
+    > [!IMPORTANT]
+    > Don't set this value to less than 60. A smaller frequency value may cause the client to briefly report inaccurate compliance states.<!-- 13901360 -->
 
 For more information on how to create these policies with Windows PowerShell, see:
 

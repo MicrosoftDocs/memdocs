@@ -1,18 +1,18 @@
 ---
-title: "SMS_G_System_LastSoftwareScan Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: SMS_G_System_LastSoftwareScan Class
+titleSuffix: Configuration Manager
+description: The SMS_G_System_LastSoftwareScan WMI class is an SMS Provider server class that represents information about the most recent software inventory scan on the client computer.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 58be5b96-6237-4fe5-aca9-3b665aff201e
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_G_System_LastSoftwareScan Server WMI Class
 The `SMS_G_System_LastSoftwareScan` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents information about the most recent software inventory scan on the client computer.  

@@ -1,18 +1,18 @@
 ---
-title: "SMS_OS_Details Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: SMS_OS_Details Class
+titleSuffix: Configuration Manager
+description: An SMS Provider server class that describes the supported platforms, such as, operating system, architecture, and versions, on which a program can run.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 1be82e7a-bb57-4ffa-a5c6-96c7f9739761
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_OS_Details Server WMI Class
 The `SMS_OS_Details` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that describes the supported platforms (operating system, architecture, and versions) on which a program can run.  

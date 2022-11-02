@@ -1,18 +1,18 @@
 ---
-title: "Console Extension Architecture"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: Console Extension Architecture
+titleSuffix: Configuration Manager
+description: The Configuration Manager console architecture is built on the following four distinct layers.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: conceptual
 ms.assetid: 4248fae0-66fa-44a9-b5bb-0fa23426194a
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # Configuration Manager Console Extension Architecture
 The Configuration Manager console architecture is built on the following four distinct layers.  

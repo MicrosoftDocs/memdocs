@@ -6,10 +6,12 @@ ms.date: 08/27/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-author: mestew
-ms.author: mstewart
-manager: dougeby
+ms.author: gokarthi
+author: gowdhamankarthikeyan
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # CMPivot for real-time data in Configuration Manager
@@ -137,6 +139,8 @@ The CMPivot window contains the following elements:
 6. The results pane displays the data returned by active clients for the query.  
 
    - The available columns vary based upon the entity and the query.  
+
+   - The color saturation of the data in the results table or chart indicates if the data is live or from the last hardware inventory scan stored in the site database.  For example, black is real-time data from an online client whereas grey is cached data.
 
    - Select a column name to sort the results by that property.  
 

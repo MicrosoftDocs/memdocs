@@ -1,18 +1,18 @@
 ---
-title: "AddDriverContent Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: AddDriverContent Method
+titleSuffix: Configuration Manager
+description: In Configuration Manager, the AddDriverContent Windows Management Instrumentation class method adds a driver to the driver package and replicates the driver content to distribution points.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: f30ff615-6e14-41aa-940d-eb3cd8d51b08
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # AddDriverContent Method in Class SMS_DriverPackage
 The `AddDriverContent` Windows Management Instrumentation (WMI) class method, in Configuration Manager, adds a driver to the driver package and replicates the driver content to distribution points.  

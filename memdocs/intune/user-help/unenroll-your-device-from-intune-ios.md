@@ -38,7 +38,7 @@ You can use the Company Portal app for iOS to remove an Intune-enrolled device s
 - The device is removed from Company Portal.    
 - You lose access to internal file shares and websites from your device.  
 - You lose access to school or work apps from your device.    
-- You might br blocked from connecting to your org's network via Wi-Fi or virtual private network (VPN).  
+- You might be blocked from connecting to your org's network via Wi-Fi or virtual private network (VPN).  
 - Work or school email profiles are removed from the device.  
 - You can't install apps for the device from the Company Portal anymore.   
 - Changes to device settings (for example, disabling the camera or requiring a certain password length) are no longer required.   

@@ -1,36 +1,29 @@
 ---
-# required metadata
-
 title: Create device groups for Windows Autopilot - Microsoft Intune | Microsoft Docs
 titleSuffix: Microsoft Intune
 description: Learn how to create device groups for Windows Autopilot.
-keywords:
+keywords: 
 author: aczechowski
 ms.author: aaroncz
 ms.reviewer: jubaptis
 manager: dougeby
 ms.date: 02/09/2022
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: enrollment
 ms.localizationpriority: high
-ms.technology:
+ms.prod: windows-client
+ms.technology: itpro-deploy
 ms.assetid: a2dc5594-a373-48dc-ba3d-27aff0c3f944
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
+#ROBOTS: 
+#audience: 
 ms.suite: ems
 search.appverid: MET150
-#ms.tgt_pltfrm:
+#ms.tgt_pltfrm: 
 ms.custom: seodec18
 ms.collection: 
-- M365-modern-desktop
-- m365initiative-coredeploy
-- M365-identity-device-management
-- highpri
+  - M365-modern-desktop
+  - m365initiative-coredeploy
+  - M365-identity-device-management
+  - highpri
 ---
 
 # Create device groups
@@ -52,20 +45,19 @@ ms.collection:
 
     - **Group type**: Select **Security**.
     - **Group name** and **Group description**: Enter a name and description for your group.
-    - **Azure AD roles can be assigned to the group (Preview)**: **Yes** allows Azure AD roles to be assigned to the group you're creating. Once set, the group is permanently and always allowed to be assigned Azure AD roles. When set to **No**, Azure AD roles aren't assigned to the this group.
+    - **Azure AD roles can be assigned to the group**: Select **No**, Azure AD roles aren't assigned to this group.
 
       For more information, see [Use cloud groups to manage role assignments in Azure AD](/azure/active-directory/roles/groups-concept).
 
-    - **Membership type**: Choose how devices become members of this group. Select **Assigned**, **Dynamic user**, or **Dynamic Device**. For more information, see [Add groups to organize users and devices](../intune/fundamentals/groups-add.md).
+    - **Membership type**: Choose how devices become members of this group. Select **Dynamic Device**. For more information, see [Add groups to organize users and devices](../intune/fundamentals/groups-add.md).
     - **Owners**: Select users that own the group. Owners can also delete this group.
-    - **Members**: Select Autopilot devices that belong to this group. Autopilot devices that aren't enrolled show the serial number for the device name.
     - **Dynamic device members**: Select **Add dynamic query** > **Add expression**.
 
       Create rules using Autopilot device attributes. Autopilot devices that meet these rules are automatically added to the group. Creating an expression using non-autopilot attributes doesn't guarantee that devices included in the group are registered to Autopilot.
 
       When creating expressions:
       
-      - To create a group that includes all of your Autopilot devices, enter: `(device.devicePhysicalIDs -any (_ -contains "[ZTDId]"))`.
+      - To create a group that includes all of your Autopilot devices, enter: `(device.devicePhysicalIDs -any (_ -contains "[ZTDID]"))`.
       - Intune's group tag field maps to the `OrderID` attribute on Azure AD devices. To create a group that includes all Autopilot devices with a specific group tag (the Azure AD device `OrderID`), enter: `(device.devicePhysicalIds -any (_ -eq "[OrderID]:179887111881"))`.
       - To create a group that includes all your Autopilot devices with a specific Purchase Order ID, enter: `(device.devicePhysicalIds -any (_ -eq "[PurchaseOrderId]:76222342342"))`
  

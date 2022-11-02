@@ -1,18 +1,18 @@
 ---
-title: "Create an OS Deployment Task Sequence"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: Create an OS Deployment Task Sequence
+description: You create a Configuration Manager operating system deployment task sequence by creating an instance of the SMS_TaskSequence class.
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: how-to
 ms.assetid: 10cdc1b1-22b6-4d26-83e8-6f42580c985e
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Create an Operating System Deployment Task Sequence
 You create a Configuration Manager operating system deployment task sequence by creating an instance of the [SMS_TaskSequence](../../develop/reference/osd/sms_tasksequence-server-wmi-class.md) class.  

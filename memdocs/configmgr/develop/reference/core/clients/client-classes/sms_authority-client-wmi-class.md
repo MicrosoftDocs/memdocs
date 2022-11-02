@@ -1,18 +1,18 @@
 ---
-title: "SMS_Authority Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: SMS_Authority Class
+titleSuffix: Configuration Manager
+description: In Configuration Manager, the SMS_Authority class is a client Windows Management Instrumentation class that represents the Configuration Manager site that manages the client.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: c51f2209-2382-4005-a960-c87fea65d04c
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_Authority Client WMI Class
 The `SMS_Authority` class is a client Windows Management Instrumentation (WMI) class, in Configuration Manager, that represents the Configuration Manager site that manages the client.  

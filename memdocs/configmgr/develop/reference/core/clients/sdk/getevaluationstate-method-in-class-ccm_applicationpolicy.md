@@ -1,16 +1,18 @@
 ---
-title: "GetEvaluationState Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: GetEvaluationState Method
+titleSuffix: Configuration Manager
+description: The GetEvaluationState Windows Management Instrumentation (WMI) class method in Configuration Manager.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: abe568e3-3859-44a1-a97b-e9127055480b
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # GetEvaluationState Method in Class CCM_ApplicationPolicy

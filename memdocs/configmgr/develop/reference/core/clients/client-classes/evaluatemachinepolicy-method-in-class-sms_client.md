@@ -1,18 +1,18 @@
 ---
-title: "EvaluateMachinePolicy Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: EvaluateMachinePolicy Method
+description: Learn how the EvaluateMachinePolicy method initiates the evaluation of the policy assigned to a specified computer or device.
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 8f8b7106-2694-4a58-8931-6b18a9a2892b
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # EvaluateMachinePolicy Method in Class SMS_Client
 In Configuration Manager, the `EvaluateMachinePolicy` method initiates the evaluation of the policy assigned to a specified computer or device.  

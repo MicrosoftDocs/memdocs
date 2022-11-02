@@ -7,11 +7,12 @@ ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: conceptual
 ms.assetid: 7dc6cb76-469e-4e4f-b79b-bb391fd4e758
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Get started with Configuration Manager programming
@@ -134,9 +135,7 @@ CMTrace can be found on the Configuration Manager site server, under the "\<Conf
 
 **Client Spy:** A tool that helps you troubleshoot issues related to software distribution, inventory, and software metering on System Center 2012 Configuration Manager clients.  
 
-**Policy Spy:** A policy viewer that helps you review and troubleshoot the policy system on System Center 2012 Configuration Manager clients.  
-
-Client Spy and Policy Spy are both tools contained in the [System Center 2012 Configuration Manager Toolkit](https://www.microsoft.com/download/details.aspx?id=50012)  
+**Policy Spy:** A policy viewer that helps you review and troubleshoot the policy system on System Center 2012 Configuration Manager clients.    
 
 ## Basic Configuration Manager program example  
 

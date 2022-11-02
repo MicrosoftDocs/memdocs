@@ -1,18 +1,18 @@
 ---
-title: "OS Deployment Task Sequences Overview"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: OS Deployment Task Sequences Overview
+description: In Configuration Manager, a task sequence is a series of one or more task steps that can be advertised to Configuration Manager clients to run user-specified actions.
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: conceptual
 ms.assetid: 957ac65f-a14b-4659-84b8-b83190698cc7
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # Operating System Deployment Task Sequences Overview
 In Configuration Manager, a task sequence is a series of one or more task steps that can be advertised to Configuration Manager clients to run user-specified actions. Task sequences are used with operating system deployment to build source computers, capture an operating system image, migrate user and computer settings, and deploy an image to a collection of target computers. Task sequences can also be used to run other Configuration Manager actions, such as deploying Configuration Manager software packages or running custom command lines.  

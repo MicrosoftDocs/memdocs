@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/29/2022
+ms.date: 06/08/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -21,7 +21,7 @@ ms.assetid: 2f6c06bf-e29a-4715-937b-1d2c7cf663d4
 #ROBOTS:
 #audience:
 
-ms.reviewer: chrisbal
+ms.reviewer: ilwu
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -235,6 +235,7 @@ For dedicated, fully managed, and corporate-owned work profile devices, you can 
 
 - **Default**: The app's updates are subject to default conditions (described above). 
 - **High Priority**: The app will update as soon as possible from when a new update is released, disregarding all of the default conditions. This may be disruptive for some users since the update can occur while the device is being used.
+- **Postpone**: When the app receives a new update, a 90-day waiting period is triggered. After 90 days, the app is updated to the newest version available, even if that version was not the update that triggered the waiting period. Note that the 90-day window is not configurable. To terminate the waiting period early, change the update mode to either **Default** or **High Priority**.
 
 To edit the app update mode:
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
@@ -267,7 +268,7 @@ For Managed Google Play apps deployed to Android Enterprise personally-owned wor
 
 ## Working with Managed Google Play closed testing tracks
 
-You can distribute a non-production version of a Managed Google Play app to devices enrolled in an Android Enterprise scenario (**Android Enterprise personally-owned work profile (BYOD)**, **Android Enterprise fully managed (COBO)**, **Android Enterprise dedicated devices (COSU)**, and **Android Enterprise corporate-owned work profile (COPE)**) in order to perform testing. In Intune, you can see whether an app has a pre-production build test track published to it, as well as be able to assign that track to Azure Active Directory user groups or device groups. The workflow for assigning a production version to a group that currently exists is the same as assigning a non-production channel. After deployment, the install status of each track will correspond with the track's version number in Managed Google Play. For more information, see [Google Play's closed test tracks for app pre-release testing](https://support.google.com/googleplay/android-developer/answer/3131213).
+You can distribute a non-production version of a Managed Google Play app to devices enrolled in an Android Enterprise scenario (**Android Enterprise personally-owned work profile (BYOD)**, **Android Enterprise fully managed (COBO)**, **Android Enterprise dedicated devices enrolled with Azure AD shared mode (aka COSU)**, and **Android Enterprise corporate-owned work profile (COPE)**) in order to perform testing. In Intune, you can see whether an app has a pre-production build test track published to it, as well as be able to assign that track to Azure Active Directory user groups or device groups. The workflow for assigning a production version to a group that currently exists is the same as assigning a non-production channel. After deployment, the install status of each track will correspond with the track's version number in Managed Google Play. For more information, see [Google Play's closed test tracks for app pre-release testing](https://support.google.com/googleplay/android-developer/answer/3131213).
 
 > [!NOTE]
 > Required app deployments for non-production app tracks are currently unavilable for devices enrolled in Android Enterprise personally-owned work profile (BYOD).
@@ -283,6 +284,10 @@ When necessary, you can delete Managed Google Play apps from Microsoft Intune. T
 ## Android Enterprise system apps
 
 You can enable an Android Enterprise system app for [Android Enterprise dedicated devices](../enrollment/android-kiosk-enroll.md) or [fully managed devices](../enrollment/android-fully-managed-enroll.md). For more information about adding an Android Enterprise system app, see [Add Android Enterprise system apps to Microsoft Intune](apps-ae-system.md).
+
+## MAM policies with AE dedicated devices enrolled with Azure AD shared mode
+
+Intune-managed Android Enterprise dedicated devices enrolled with Azure AD shared mode can receive MAM policies and can be targeted separately from other Android enterprise devices. ntune-managed Android Enterprise dedicated devices that are not in Shared Device Mode will continue to be blocked from getting MAM. For more information about Intune-managed Android Enterprise dedicated devices enrolled with Azure AD shared mode, see [Android Enterprise dedicated devices](../fundamentals/deployment-guide-enrollment-android.md#android-enterprise-dedicated-devices).
 
 ## Next steps
 

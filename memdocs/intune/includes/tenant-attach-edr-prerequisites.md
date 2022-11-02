@@ -4,14 +4,12 @@ description: include file
 author: brenduns  
 ms.service: microsoft-intune
 ms.topic: include
-ms.date: 10/05/2021
+ms.date: 04/08/2022
 ms.author: brenduns
 ms.custom: include file
 ---
 
 #### Endpoint detection and response
-
-*Support for devices managed by Configuration Manager is in Preview.*
 
 Manage [Endpoint detection and response policy settings for Configuration Manager devices](../protect/endpoint-security-edr-profile-settings.md#endpoint-detection-and-response-configmgr), when you use tenant attach.
 
@@ -30,9 +28,10 @@ Manage [Endpoint detection and response policy settings for Configuration Manage
 
 **Supported Configuration Manager device platforms**:
 
-- Windows 11 and later (x86, x64, ARM64)
+- Windows 8.1 (x86, x64), starting in Configuration Manager version 2010
 - Windows 10 and later (x86, x64, ARM64)
-- Windows 8.1 (x84, x64)
-- Windows Server 2019 and later (x64)
-- Windows Server 2016 (x64)
-- Windows Server 2012 R2 (x64)
+- Windows 11 and later (x86, x64, ARM64)
+- Windows Server 2012 R2 (x64), starting in Configuration Manager version 2010
+- Windows Server 2016 and later(x64)
+
+[!INCLUDE [windows-phone-81-windows-10-mobile-support](../includes/windows-phone-81-windows-10-mobile-support.md)]

@@ -20,7 +20,7 @@ ms.assetid: 6ee841cc-5694-4ba1-8f66-1d58edec30a4
 #ROBOTS:
 #audience:
 
-#ms.reviewer: [ALIAS]
+ms.reviewer: 
 #ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -56,7 +56,7 @@ You can review audit logs in the monitoring group for each Intune workload:
 4. Select **Apply**.
 5. Select an item in the list to see the activity details.
 
-For related information about audit logs, see [Addition information](../fundamentals/monitor-audit-logs.md#additional-information).
+For related information about audit logs, see [Additional information](../fundamentals/monitor-audit-logs.md#additional-information).
 
 ## Route logs to Azure Monitor
 
@@ -74,7 +74,7 @@ Audit logs and operational logs can also be routed to Azure Monitor. In **Tenant
 
 ## Use Graph API to retrieve audit events
 
-For details on using the graph API to get up to one year of audit events, see [List auditEvents](/graph/api/intune-auditing-auditevent-list?view=graph-rest-1.0).
+For details on using the graph API to get up to one year of audit events, see [List auditEvents](/graph/api/intune-auditing-auditevent-list).
 
 ## Next steps
 

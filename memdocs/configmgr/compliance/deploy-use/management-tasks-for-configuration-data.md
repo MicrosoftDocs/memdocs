@@ -6,10 +6,12 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
-author: mestew
-manager: dougeby
-ms.author: mstewart
+author: sheetg09
+manager: apoorvseth
+ms.author: sheetg
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # Manage configuration data in Configuration Manager
 

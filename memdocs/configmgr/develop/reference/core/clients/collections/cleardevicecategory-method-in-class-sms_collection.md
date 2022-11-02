@@ -1,18 +1,18 @@
 ---
-title: "ClearDeviceCategory Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: ClearDeviceCategory Method
+titleSuffix: Configuration Manager
+description: The ClearDeviceCatetory Windows Management Instrumentation class method, in Configuration Manager, clears a category from a set of devices.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 6d300ac7-0565-45ac-8b31-f6567bf9cc42
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # ClearDeviceCategory Method in Class SMS_Collection
 The `ClearDeviceCatetory` Windows Management Instrumentation (WMI) class method, in Configuration Manager, clears a category from a set of devices.  

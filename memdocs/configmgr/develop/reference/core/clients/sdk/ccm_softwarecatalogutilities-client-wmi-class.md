@@ -1,18 +1,18 @@
 ---
-title: "CCM_SoftwareCatalogUtilities Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: CCM_SoftwareCatalogUtilities Class
+titleSuffix: Configuration Manager
+description: The CCM_SoftwareCatalogUtilities WMI class is an SMS Provider server class, in Configuration Manager, that provides a set of utility methods to assist in processing software updates.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 30c0e8cd-bcf7-456f-9d1a-00358d7a75ea
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # CCM_SoftwareCatalogUtilities Client WMI Class
 The `CCM_SoftwareCatalogUtilities` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that provides a set of utility methods to assist in processing software updates.  

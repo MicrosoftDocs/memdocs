@@ -20,12 +20,14 @@ ms.assetid: 126a7489-fe3e-43fd-a681-defb2fe0bb66
 #ROBOTS:
 #audience:
 
-#ms.reviewer: rashok
+ms.reviewer: rashok
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection: 
+- M365-identity-device-management
+- tier3
 ---
 
 # Update cellular data plan (public preview)

@@ -2,7 +2,7 @@
 title: Quickstart - Enroll Intune devices
 titleSuffix: Microsoft Endpoint Manager
 description: In this quickstart, you enroll Intune devices into Endpoint analytics.
-ms.date: 10/05/2021
+ms.date: 05/03/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: quickstart
@@ -43,7 +43,7 @@ To enroll devices to Endpoint analytics, they need to send required functional d
 
 ### Licensing Prerequisites
 
-Devices enrolled in Endpoint analytics need a valid license for the use of Microsoft Endpoint Manager. For more information, see [Microsoft Intune licensing](../intune/fundamentals/licenses.md) or [Microsoft Endpoint Configuration Manager licensing](../configmgr/core/understand/learn-more-editions.md).
+Devices enrolled in Endpoint analytics need a valid license for the use of Microsoft Endpoint Manager. For more information, see [Microsoft Intune licensing](../intune/fundamentals/licenses.md) or [Microsoft Endpoint Configuration Manager licensing](../configmgr/core/understand/learn-more-editions.md). Proactive remediations has an additional licensing requirement, for more information see, the [Endpoint analytics licensing requirements overview](overview.md#licensing-prerequisites).
 
 ### Endpoint analytics permissions
 

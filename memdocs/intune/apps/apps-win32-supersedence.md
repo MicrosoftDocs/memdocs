@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/29/2022
+ms.date: 08/25/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -62,7 +62,7 @@ The following steps help you create a supersedence relationship between apps:
 6. Once this step is finalized, click **Review + save** > **Save**.
 
     > [!IMPORTANT]
-    > Superseding apps do not get automatic targeting. Each app must have explicit targeting to take effect. Superseding apps that are not targeted will be ignored by the agent. If the superseding app is targeted to a device with a superseded app, then the supersedence will take place regardless of whether the superseded app has targeting or not. For more information on Supersedence behavior, please refer to the matrix below. This behavior is in direct contrast to dependencies, which does not require targeting. 
+    > Superseding apps do not get automatic targeting. Each app must have explicit targeting to take effect. Superseding apps that are not targeted will be ignored by the agent. If the superseding app is targeted to a device with a superseded app, then the supersedence will take place regardless of whether the superseded app has targeting or not. For more information on Supersedence behavior, please refer to the matrix below. This behavior is in direct contrast to dependencies, which does not require targeting. Additionally, only apps that are targeted will show install statuses in Microsoft Endpoint Manager admin center.
 
 ## Supersedence behavior
 
@@ -70,13 +70,18 @@ A *superseding app* is an app that updates or replaces other apps. A *superseded
 
 | Scenarios | Targeting for required intent | Targeting for available intent |
 |-|-|-|
-| **Scenario   1:**<br> The superseded app exists on the device and **Uninstall previous version** is set to **Yes**. | The superseded app will be   uninstalled, and the superseding app will be installed on the device.<p> **NOTE:** Even if the superseded app is not targeted, it will be uninstalled. | Both   superseding and superseded apps will be shown in the company portal if they   have the applicable targeting. However, currently only the superseding apps   can be installed. |
-| **Scenario   2:**<br>The superseded app exists on the device and **Uninstall   previous version** is set to **No**. | The superseding app will be   installed on the device. Whether the superseded app will be uninstalled or   not is dependent on the superseding app’s installer. | Both superseding and superseded apps will be shown in the company portal if they have the applicable targeting. However, currently only the superseding apps can be installed. |
+| **Scenario   1:**<br> The superseded app exists on the device and **Uninstall previous version** is set to **Yes**. | The superseded app will be uninstalled, and the superseding app will be installed on the device.<p> **NOTE:** Even if the superseded app is not targeted, it will be uninstalled. | Only superseding apps will be shown in the company portal and can be installed. |
+| **Scenario   2:**<br>The superseded app exists on the device and **Uninstall previous version** is set to **No**. | The superseding app will be installed on the device. Whether the superseded app will be uninstalled or not is dependent on the superseding app’s installer. | Only superseding apps will be shown in the company portal and can be installed. |
 | **Scenario   3:**<br>The superseded app does not exist on the device. | The superseding app will be   installed. | The new app will appear in the   Company Portal. |
 
 ### Understand app update versus app replacement within supersedence
 
-Given that an app could have multiple superseded apps, it is possible for an app to update a set of apps while replacing another set of apps at the same time. Understanding how supersedence is applied when updating an app versus replacing an app can be illustrated based on the following scenario.
+Given that an app could have multiple superseded apps, it is possible for an app to update a set of apps while replacing another set of apps at the same time. 
+
+> [!NOTE]
+> End-users will not be able to check whether a specific Win32 app supersedence operation is an update or replacement in the Company Portal. In addition, when multiple apps supersede an app with available targeting in the Company Portal, the superseded app's details page will navigate to the app page of the first superseding app that was set up. For example, if app A is superseded by app B and C, and app B is superseded by app A first, then app A's detail page in the Company Portal will navigate to App B.
+
+Understanding how supersedence is applied when updating an app versus replacing an app can be illustrated based on the following scenario.
 
 | Customer   scenario | Description | Expected behavior | Additional information |
 |-|-|-|-|
@@ -148,6 +153,7 @@ In the following Supersedence diagram, there are five nodes in total. Hence, fiv
 Additional supersedence limitations:
 - Azure Virtual Desktop multi-session only supports supersedence relationships with system-context (device-based) apps.
 - The Enrollment Status Page (ESP) is not supported with the supersedence public preview. ESP displays provisioning progress after a new device is enrolled, as well as when new users sign into the device. For the supersedence public preview, if an app has a supersedence relationship, it will not be enforced during ESP even if it is included as a selected app in an ESP policy. Additionally, apps that are involved in supersedence relationships will not be sent to the client device during ESP. However, the apps will be sent to the device after ESP completes, and the supersedence relationship will be respected.
+- Only apps that are targeted will show install statuses in Microsoft Endpoint Manager admin center.
 
 ## Next steps
 

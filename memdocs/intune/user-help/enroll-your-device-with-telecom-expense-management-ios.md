@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Enroll your iOS device in telecom expense management with Intune
-description: Learn how to enroll an iOS device into telecom expense management.
+title: Set up Datalert app for iOS  
+description: Set up the Datalert app and service on an Intune-enrolled iOS or iPad device.  
 keywords:
 author: lenewsad
 ms.author: lanewsad
@@ -29,45 +29,47 @@ ms.custom: intune-enduser
 ms.collection: 
 ---
 
-# Enroll your iOS device in telecom expense management
+# Set up Datalert app for iOS and iPad  
 
-Your organization may be using telecom expense management software to ensure that their data and voice plans are being used within acceptable limits. Once you have completed enrolling your device, you will then be prompted select the best category for that device.
+Workplaces use telecom expense management software to ensure that data and voice plans are being used within acceptable limits. If your organization monitors telecom usage, you may be required to install the Datalert app on your enrolled device. This article describes how to install and set up Datalert.  
 
-  ![A screenshot of the "selecting the best category for a device" screen on an iOS device. It shows a selection of corporate or personal enrollment.](./media/ios-enroll-10-tem-select-best-category.png)
+## Install app and sign in    
 
-Select the appropriate option, and you will receive a notification to install the [__Datalert__](https://itunes.apple.com/app/datalert/id771029268?mt=8) app from the App Store. The Datalert app is how your organization can measure data usage. If your organization has configured the Microsoft work or school enrollment option, you will be required to log in with your work or school account. If this hasn't been enabled, you will need to provide information such as your phone number and verify your device using a code to enroll into the Datalert service from the app.
+After enrollment, tap the notification sent to your device to install the [Datalert app](https://play.google.com/store/apps/details?id=fr.memobox.databox) from the App Store. 
 
-  ![A screenshot of the Datalert app welcome screen, which prompts you to move to the next screen after providing a brief explanation about how Datalert can get you the most out of your data plan.](./media/ios-enroll-11-tem-datalert-setup.png)
+If you don't receive a notification, you can still install Datalert from Google Play, but instead of using your work or school account, you must provide your phone number and verify your device using a code. Contact your support person for more information about the code.   
 
-## Enroll into Datalert using your Microsoft work or school account
+  ![A screenshot of the Datalert app welcome screen, which prompts you to move to the next screen after providing a brief explanation about how Datalert can get you the most out of your data plan.](./media/and-enroll-12-tem-datalert-setup.png)  
 
-> [!NOTE]
-> You need to have the [Microsoft Authenticator](/azure/multi-factor-authentication/end-user/microsoft-authenticator-app-how-to) app installed and active on your phone to enroll this way.
+Once you've set up your account with Datalert, you can begin monitoring your data usage by day, week, and month in the app. Your organization can monitor your voice and data plan to prevent overages and unexpected roaming costs. 
 
-1. Select __Enroll with Microsoft account__.
+   ![A screenshot of the Datalert app monitoring today's data usage.](./media/and-enroll-15-tem-datalert-monitoring-active.png)  
 
-   ![An image of the Settings screen of the Datalert app, which offers a phone number field to enroll a device on the top half of the screen and "enroll with Microsoft account" on the bottom, so long as you have a Microsoft Office 365 account and an Intune subscription.](./media/ios-enroll-11a-tem-datalert-enroll-msft-account.png)
 
-2. You'll receive a notification that __"Datalert" wants to open "Authenticator"__. Select __Open__.
+### Set up with work or school account  
+Use your Microsoft work or school account to set up Datalert on your device.  
+
+> [!IMPORTANT]
+>  [Microsoft Authenticator](/azure/multi-factor-authentication/end-user/microsoft-authenticator-app-how-to) must be installed and active on your phone to enroll this way.  
+
+1. Open the Datalert app and select __Enroll with Microsoft account__.  
+
+2. When prompted to open Authenticator, select __Open__.  
 
    ![An image of the popup prompting the user to open the Authenticator app at the request of the Datalert app.](./media/ios-enroll-11b-tem-datalert-open-authenticator.png)
 
-3. Sign in with your __Microsoft school or work account__. Datalert setup will work for a few moments, then should complete. Tap __Finish__ when it completes.
+3. Sign in with your Microsoft work or school account. 
 
-## Enroll into Datalert using your phone number
+4. Wait while Datalert setup runs and then tap __Finish__ when complete.  
 
-1. Provide your device's phone number.
+### Set up with phone number  
+Use your phone number to set up Datalert on your device.  
 
-   ![A screenshot of the Datalert app requesting a phone number.](./media/ios-enroll-12-tem-datalert-phone-number.png)
-
-2. You will then receive a verification code through an SMS message. Provide the code and tap __OK__.
+1. Open Datalert and enter the device phone number.  
+2. A verification code is sent to the device by SMS. Copy and enter the code into the app and then tap __OK__.  
 
    ![A screenshot of the Datalert app requesting the SMS verification code.](./media/ios-enroll-13-tem-datalert-sms.png)
 
-3. Once you've provided the verification code, Datalert setup will complete. Tap __Finish__ and you will be able to monitor your data from the Datalert app.
+3. Wait while Datalert setup runs and then tap __Finish__ when complete. 
 
-   ![A screenshot of the Datalert app monitoring today's data usage.](./media/ios-enroll-14-tem-datalert-monitoring-active.png)
-
-Once you've enrolled, you will begin to see your data usage in the Datalert app.
-
-Still need help? Contact your company support. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).
+Still need help? Contact your support person. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).

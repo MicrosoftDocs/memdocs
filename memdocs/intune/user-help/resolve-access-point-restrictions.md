@@ -23,7 +23,7 @@ searchScope:
 ROBOTS:  
 #audience:
 
-#ms.reviewer: arnab
+ms.reviewer: arnab
 #ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser

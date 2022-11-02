@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/16/2021
+ms.date: 05/19/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -25,6 +25,7 @@ ms.custom: seodec18
 ms.collection: 
   - M365-identity-device-management
   - highpri
+  - highseo
 ---
 
 # Microsoft Intune licensing
@@ -44,6 +45,9 @@ Intune is included in the following licenses:
 - Microsoft 365 Government G5
 - Microsoft 365 Government G3
 - Intune for Education
+
+> [!NOTE]
+> For additonal licensing information about Intune for Education, see [Microsoft 365 Education](/office365/servicedescriptions/office-365-platform-service-description/microsoft-365-education).
 
 ## Microsoft Intune for Education
 
@@ -69,13 +73,37 @@ Microsoft Endpoint Manager offers premium add-ons. Licenses for the premium add-
 ## Additional information
 
 - A Microsoft Intune user and device subscription is available as a standalone, in addition to the bundles listed above.
-- A Microsoft Intune device-only subscription is available to manage kiosks, dedicated devices, phone-room devices, IoT, and other single-use devices that don't require user-based security and management features. For more information, see [Introduction to device licenses in Microsoft Intune](/troubleshoot/mem/intune/device-licenses-introduction).
+- A Microsoft Intune device-only subscription is available to manage kiosks, dedicated devices, phone-room devices, IoT, and other single-use devices that don't require user-based security and management features. For more information, see [Device-only licenses](../fundamentals/licenses.md#device-only-licenses).
 - The appropriate Microsoft Intune license is required if a user or device benefits directly or indirectly from the Microsoft Intune service, including access to the Microsoft Intune service through a [Microsoft API](/legal/microsoft-apis/terms-of-use).
 - Intune isn't included in licenses not in the previous tables.
 
 ## Unlicensed admins
 
 For more information about giving administrators access to Microsoft Endpoint Manager without them having an Intune license, see [Unlicensed admins](unlicensed-admins.md).
+
+## Device-only licenses
+
+Microsoft Intune offers a device-only subscription service that helps organizations manage devices that aren't affiliated with specific users. 
+
+You can purchase device licenses based on your estimated usage. Microsoft Intune device licenses are applicable when a device is enrolled through any of the following methods:
+
+- [Windows Autopilot Self-Deploying mode](/windows/deployment/windows-autopilot/self-deploying)
+- [Apple Device Enrollment Program without user affinity](../enrollment/device-enrollment-program-enroll-ios.md)
+- [Apple School Manager without user affinity](../enrollment/apple-school-manager-set-up-ios.md)
+- [Apple Configurator without user affinity](../enrollment/apple-configurator-enroll-ios.md)
+- [Android Enterprise dedicated](../enrollment/android-kiosk-enroll.md)
+- [Using a device enrollment manager account](../enrollment/device-enrollment-manager-enroll.md)
+
+> [!NOTE]
+> Visit the [Microsoft Licensing](https://www.microsoft.com/licensing/default) page, or contact your account representative if you have any questions or you would like to receive the latest information about product editions, product licensing updates, volume licensing plans, and other information related to your specific use cases.
+
+### Device-only license limitations
+
+When a device is enrolled by using a device license, the following Intune functions aren't supported:
+
+- [Intune app protection policies](../apps/app-protection-policy.md)
+- [Conditional access](../protect/conditional-access.md)
+- User-based management features, such as email and calendaring
 
 ## Confirm your licenses
 
@@ -93,7 +121,7 @@ To confirm your Microsoft Intune license or trial, use the following steps:
 4. Confirm you are an **administrator** with **full** permissions to **all** Intune resources.
 
 > [!NOTE]
-> For more in-depth information about Microsoft Intune, see the learning module: [Set up Microsoft Intune](/learn/modules/set-up-microsoft-intune?azure-portal=true).
+> For more in-depth information about Microsoft Intune, see the learning module: [Set up Microsoft Intune](/training/modules/set-up-microsoft-intune?azure-portal=true).
 
 To check on your Azure AD Premium license, use the following steps:
 

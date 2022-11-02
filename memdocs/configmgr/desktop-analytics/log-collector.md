@@ -6,11 +6,12 @@ ms.date: 07/21/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: how-to
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
-ms.reviewer: acabello
+author: gowdhamankarthikeyan
+ms.author: gokarthi
+manager: apoorvseth
+ms.reviewer: mstewart,aaroncz 
 ms.localizationpriority: medium
+ms.collection: tier3
 ---
 
 # Desktop Analytics log collector

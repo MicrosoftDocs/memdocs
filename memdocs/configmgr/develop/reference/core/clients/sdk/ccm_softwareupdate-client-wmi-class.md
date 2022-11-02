@@ -1,18 +1,18 @@
 ---
-title: "CCM_SoftwareUpdate Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: CCM_SoftwareUpdate Class
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: dd1a5ba5-b611-4b28-888f-7918fcd1d869
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+description: Learn how enumerating the CCM_SoftwareUpdate Client WMI Class gives all the updates that are applicable and need to be installed.
+ms.reviewer: mstewart,aaroncz 
 ---
 # CCM_SoftwareUpdate Client WMI Class
 The `CCM_SoftwareUpdate` WMI class is a client class, in Configuration Manager, that represents a software update.  

@@ -2,19 +2,25 @@
 title: Community hub and GitHub
 titleSuffix: Configuration Manager
 description: Enable and use Community hub in Configuration Manager
-ms.date: 01/05/2022
+ms.date: 06/20/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Community hub and GitHub
 <!--3555935, 3555936-->
 *Applies to: Configuration Manager (current branch)*
+
+> [!IMPORTANT]
+> Starting in March 2023, this feature of Configuration Manager is being removed. 
+All future versions, starting with 2303 will not have the Community hub node in the admin console. The Community hub node in older versions will be redirected to [deprecated features](../../plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).  
 
 The IT Admin community has developed a wealth of knowledge over the years. Rather than reinventing items like Scripts and Reports from scratch, we've built a **Community hub** in Configuration Manager where IT Admins can share with each other. By leveraging the work of others, you can save hours of work. The Community hub fosters creativity by building on others work and having other people build on yours. GitHub already has industry-wide processes and tools built for sharing. Now, the Community hub can leverage those tools directly in the Configuration Manager console as foundational pieces for driving this new community.
 
@@ -40,7 +46,7 @@ Community hub supports the following objects:
    - A supported version of Windows 10 or later
       - Windows Server isn't supported before version 2010, so the Configuration Manager console needs to be installed on a supported Windows client device separate from the site server.
       - Starting in version 2010, [install the Microsoft Edge WebView2 console extension](#bkmk_webview2) to support Windows Server. <!--3555940, 8625943, 8717639 -->
-   - The logged-in user account can't be the built-in administrator account
+
 
 - The [administration service](../../../develop/adminservice/set-up.md) in Configuration Manager needs to be set up and functional.
 
@@ -118,7 +124,7 @@ Since the content is *open-source* style content, admins should always review wh
 <!--3555940, 8625943, 8717639 -->
 *(Introduced in version 2010)*
 
-Starting in Configuration Manager 2010, the Microsoft Edge WebView2 console extension enables the full functionality for Community hub. If WebView2 isn't installed, a banner is shown when you navigate to the **Community hub** node.<!--9598183--> The WebView2 console extension:
+The Microsoft Edge WebView2 console extension enables the full functionality for Community hub. If WebView2 isn't installed, a banner is shown when you navigate to the **Community hub** node.<!--9598183--> The WebView2 console extension:
 
 - Displays the **Community hub** on Windows Server operating systems
 - Enables sign in for GitHub

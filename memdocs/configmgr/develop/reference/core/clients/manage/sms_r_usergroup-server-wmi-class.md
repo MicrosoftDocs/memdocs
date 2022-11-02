@@ -1,18 +1,18 @@
 ---
-title: "SMS_R_UserGroup Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: SMS_R_UserGroup Class
+description: The SMS_R_UserGroup class is an SMS Provider server class that is generated dynamically at SMS Provider run time and contains discovery data for user group objects.
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 1d72e0a2-b590-4bc6-b5d4-6546a3290227
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_R_UserGroup Server WMI Class
 The `SMS_R_UserGroup` Windows Management (WMI) class is an SMS Provider server class, in Configuration Manager, that is generated dynamically at SMS Provider run time and contains discovery data for user group objects.  

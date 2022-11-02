@@ -1,16 +1,18 @@
 ---
-title: "GetNetworkCost Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+description: The GetNetworkCost Windows Management Instrumentation (WMI) class method in the Configuration Manager.
+title: GetNetworkCost Method
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: de103be8-9c09-4014-949b-57372690d704
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # GetNetworkCost Method in Class CCM_ClientUtilities

@@ -1,18 +1,18 @@
 ---
-title: "GetPortalUrlValue Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: GetPortalUrlValue Method
+description: Learn how the GetPortalUrlValue Windows Management Instrumentation (WMI) class method, in Configuration Manager, that returns the portal url for a client.
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: e3cc99be-b85e-48dc-87bc-3d27c92987ac
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # GetPortalUrlValue Method in Class CCM_SoftwareCatalogUtilities
 The `GetPortalUrlValue` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that returns the portal url for a client.   

@@ -1,18 +1,18 @@
 ---
-title: "SMS_InitSettableSecuredCategory Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: SMS_InitSettableSecuredCategory Class
+titleSuffix: Configuration Manager
+description: In Configuration Manager, the SMS_InitSettableSecuredCategory Windows Management Instrumentation class is an SMS Provider server class that represents the list of RBA security categories.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: ec147358-e38e-4d43-ac89-d0fffb4511a3
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_InitSettableSecuredCategory Server WMI Class
 The `SMS_InitSettableSecuredCategory` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the list of RBA security categories.  

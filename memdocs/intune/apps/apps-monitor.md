@@ -40,7 +40,7 @@ Intune provides several ways to monitor the properties of apps that you manage a
 3. In the list of apps, select an app to monitor. You'll then see the app pane, which includes an overview of the device status and the user status.
 
 > [!NOTE]
-> Android Store apps that are deployed as **Available** do not report their installation status.
+> Microsoft Store and Android Store apps that are deployed as **Available** do not report their installation status.
 >
 > For Managed Google Play apps deployed to Android Enterprise personally-owned work profile devices, you can view the status and version number of the app installed on a device using Intune. 
 > 
@@ -89,7 +89,7 @@ A device status list is shown when you select **Device install status** in the *
 | **Last check-in**    | The date of the device's last sync with Intune.                                                                                                                                                                                                                  |
 
 > [!NOTE]
-> Even if the App is targetted to device context and into a device group, the user name will always be reported. You may refer to the corresponded [API Call](/graph/api/intune-apps-mobileappinstallstatus-get?view=graph-rest-beta). Additionally, the system context may appear as "No user".
+> Even if the App is targetted to device context and into a device group, the user name will always be reported. You may refer to the corresponded [API Call](/graph/api/intune-apps-mobileappinstallstatus-get). Additionally, the system context may appear as "No user".
 
 ### User install status
 

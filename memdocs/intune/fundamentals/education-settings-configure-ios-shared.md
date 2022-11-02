@@ -46,7 +46,7 @@ For information about configuring dedicated (1:1) iPad devices to use the Classr
 The prerequisites to use the shared iPad capabilities are:
 
 - Setup [Apple School Manager](../enrollment/apple-school-manager-set-up-ios.md) and [School Data Sync (SDS)](https://support.office.com/article/Apple-School-Manager-integration-with-Intune-for-Education-and-School-Data-Sync-974bd1f9-2c7a-45cb-9447-b58166108617).
-- As part of Apple School Manager setup, configure [Managed Apple IDs](http://help.apple.com/schoolmanager/#/tes78b477c81) for students. [Learn more about Managed Apple IDs](https://support.apple.com/HT205918).
+- As part of Apple School Manager setup, configure [Managed Apple IDs](https://school.apple.com/) for students. [Learn more about Managed Apple IDs](https://support.apple.com/HT205918).
 - Create an enrollment profile for the device serial numbers synced from Apple School Manager.
 
 ## Step 1 - Import your school data into Azure Active Directory
@@ -210,4 +210,4 @@ The assignment completes, and Intune deploys the Classroom profile to the target
 
 ## Next Steps
 
-Now students can share devices between students, and students can pick up any iPad in a classroom, log in with a PIN and have it personalized with their content. For more information about Shared iPads, see the [Apple website](https://www.apple.com/education/it/).
+Now students can share devices between students, and students can pick up any iPad in a classroom, log in with a PIN and have it personalized with their content. For more information about Shared iPads, see the [Apple website](https://www.apple.com/education/).

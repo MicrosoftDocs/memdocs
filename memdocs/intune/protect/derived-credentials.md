@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/03/2021
+ms.date: 10/17/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -25,7 +25,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection: 
+  - M365-identity-device-management
+  - highpri
 ---
 
 # Use derived credentials with Microsoft Intune
@@ -57,6 +59,9 @@ Derived credentials are an implementation of the National Institute of Standards
   **For Windows**:
   - Common profile types like Wi-Fi, and VPN
   
+  > [!NOTE]
+  > Currently, derived credentials as an authentication method for VPN profiles isn't working as expected on Windows devices. This behavior only impacts VPN profiles on Windows devices and will be fixed in a future release (no ETA).
+
 - For Android and iOS/iPadOS, users obtain a derived credential by using their smart card on a computer to authenticate to the derived credential issuer. The issuer then issues to the mobile device a certificate that's derived from their smart card. For Windows, users install the app from the derived credential provider, which installs the certificate to the device for later use.
 - After the device receives the derived credential, it's used for authentication and for S/MIME signing and encryption when apps or resource access profiles require the derived credential.
 
@@ -315,10 +320,13 @@ Use derived credentials for certificate-based authentication to web sites and ap
    - **Description**: Enter a description that gives an overview of the setting, and any other important details.
    - **Platform**: Select **Android Enterprise**.
    - **Profile type**: Under *Fully Managed, Dedicated, and Corporate-Owned Work Profile*, select **Derived credential**.
+   - On the **Apps** page, configure **Certificate access** to manage how certificate access is granted to applications. Choose from:
+     - **Require user approval for apps** *(default)* – Users must approve use of a certificate by all applications.
+     - **Grant silently for specific apps (require user approval for other apps**) – With this option, select **Add apps**, and then select one or more apps that will silently use the certificate without user interaction.
 
-4. Select **OK** to save your changes.
+4. On the **Assignments** page, select the groups that should receive the policy.
+
 5. When finished, select **OK** > **Create** to create the Intune profile. When complete, your profile is shown in the **Devices - Configuration profiles** list.
-6. Select your new profile > **Assignments**. Select the groups that should receive the policy.
 
 Users receive the app or email notification depending on the settings you specified when you set up the derived credential issuer. The notification informs the user to launch the Company Portal so that the derived credential policies can be processed.
 
@@ -329,6 +337,9 @@ You can use derived certificates as an authentication method for Wi-Fi and VPN p
 - **DISA Purebred**
 - **Entrust**
 - **Intercede**
+
+> [!NOTE]
+> Currently, derived credentials as an authentication method for VPN profiles isn't working as expected on Windows devices. This behavior only impacts VPN profiles on Windows devices and will be fixed in a future release (no ETA).
 
 For Windows, users don't work through a smartcard registration process to obtain a certificate for use as a derived credential. Instead, the user needs to install the app for Windows, which is obtained from the derived credential provider. To use derived credentials with Windows, complete the following configurations:
 

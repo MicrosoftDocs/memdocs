@@ -21,18 +21,17 @@ ms.assetid: 2ea5941c-a69b-4e1c-b42c-a1fc0c3a7de7
 #ROBOTS:
 #audience:
 
-#ms.reviewer: coferro
+ms.reviewer: 
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection: 
+- M365-identity-device-management
+- tier3
 ---
 
 # Remove a user from a shared iOS/iPadOS device
-
-
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 The **Remove user** action deletes a user that you select from the local cache on a shared iPad device. The iPad device must be set up to manage the iOS/iPadOS Classroom app by using an [iOS/iPadOS education profile](../fundamentals/education-settings-configure-ios.md). 
 

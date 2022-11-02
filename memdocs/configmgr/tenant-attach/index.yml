@@ -11,12 +11,13 @@ metadata:
   ms.prod: configuration-manager
   ms.technology: configmgr-core
   ms.topic: landing-page
-  author: mestew
-  ms.author: mstewart
-  manager: dougeby
+  author: Banreet
+  ms.author: banreetkaur
+  manager: apoorvseth
   ms.date: 02/08/2022
   ms.localizationpriority: high
-  ms.collection: highpri
+  ms.reviewer: mstewart,aaroncz 
+  ms.collection: tier3
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -28,7 +29,7 @@ landingContent:
           - text: Enable tenant attach
             url: device-sync-actions.md
           - text: Set up tenant attach (step-by-step)
-            url: /learn/modules/setup-tenant-attach-using-configuration-manager/
+            url: /training/modules/setup-tenant-attach-using-configuration-manager/
       - linkListType: reference
         links:
           - text: Troubleshoot tenant attach and device actions

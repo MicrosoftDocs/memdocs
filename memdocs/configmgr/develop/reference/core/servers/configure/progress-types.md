@@ -1,18 +1,18 @@
 ---
-title: "Progress Types"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: Progress Types
+titleSuffix: Configuration Manager
+description: Progress states for a download. For a non-status change (for example, if there was just transfer of bytes), specify NULL for progress type.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 671f44e2-a86d-494f-a81e-235400f6db8d
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # Progress Types
 Progress states for a download.  

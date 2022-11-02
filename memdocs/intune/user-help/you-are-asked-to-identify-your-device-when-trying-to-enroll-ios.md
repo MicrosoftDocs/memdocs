@@ -2,7 +2,7 @@
 # required metadata
 
 title: You need to identify your iOS device when trying to enroll | Microsoft Docs
-description:
+description: For the Company Portal app to work correctly, you must identify if the device you're using has already been enrolled in Intune.
 keywords:
 author: lenewsad
 

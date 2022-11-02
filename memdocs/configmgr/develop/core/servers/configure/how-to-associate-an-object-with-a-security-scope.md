@@ -1,18 +1,18 @@
 ---
-title: "Associate an Object with a Security Scope"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: Associate an Object with a Security Scope
+titleSuffix: Configuration Manager
+description: To assign multiple objects to a scope, use the AddMemberships Method in Class SMS_SecuredCategoryMembership.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: how-to
 ms.assetid: 1ec776b7-f9d3-4cd8-8791-0221b4f8fad3
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Associate an Object with a Security Scope
 > [!TIP]

@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/15/2021
+ms.date: 05/19/2022
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -32,14 +32,16 @@ ms.collection:
 
 # Set up device to automatically lock when screen turns off  
 
-Set up secure lock on your device to prevent others from accessing it when it's idle. Secure lock works by automatically locking the device after the screen turns off. You can configure secure lock to happen immediately after the screen turns off or after another specified amount of time.  
+Set up secure lock on your device to prevent others from accessing it when it's idle. Secure lock works by automatically locking the device after the screen turns off. If you've enrolled your device in Microsoft Intune, you may need to adjust the auto lock time on your device to meet requirements. You can configure secure lock to happen immediately after the screen turns off or after another specified amount of time.  
 
-To access the secure lock settings:
+To access the secure lock settings on your device:  
 
 1. Go to the **Settings** app and tap **Lock screen**.  
 2. Tap **Secure lock settings**. 
-3. If prompted to, enter your PIN. 
+3. Enter your PIN if prompted. 
 4. Tap **Auto lock when screen turns off**.
 5. Select an amount of time. 
 
-Still need help? Contact your IT support person. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).
+The options may be different on your device so refer to your device manufacturer's instructions for the most accurate steps. 
+
+Contact your support person for more information about your organization's screen lock requirements. Sign in to the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980) or app to find helpdesk details. 

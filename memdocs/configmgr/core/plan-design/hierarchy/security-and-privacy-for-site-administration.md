@@ -6,10 +6,12 @@ ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Security and privacy for site administration in Configuration Manager
@@ -187,7 +189,7 @@ When you run setup and create a secondary site, don't select the option to copy 
 
 Instead of copying the files over the network, on the secondary site server, copy the source files from media folder to a local folder. Then, when you run setup to create a secondary site, on the **Installation Source Files** page, select **Use the source files at the following location on the secondary site computer (most secure)**, and specify this folder.  
 
-For more information, see [Install a secondary site](../../servers/deploy/install/use-the-setup-wizard-to-install-sites.md#bkmk_secondary).
+For more information, see [Install a secondary site](../../servers/deploy/install/setup-wizard-secondary.md).
 
 ### Site role installation inherits permissions from drive root
 

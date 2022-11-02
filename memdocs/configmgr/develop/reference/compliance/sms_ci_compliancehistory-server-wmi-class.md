@@ -1,18 +1,18 @@
 ---
-title: "SMS_CI_ComplianceHistory Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: SMS_CI_ComplianceHistory Class
+description: Learn how to use the SMS_CI_ComplianceHistory class in Configuration Manager to get the compliance history for both configuration items and configuration baselines.
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: c37551e3-f22b-42e5-9943-858fb58acdf0
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_CI_ComplianceHistory Server WMI Class
 The `SMS_CI_ComplianceHistory` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that provides the compliance history for both configuration items and configuration baselines.  

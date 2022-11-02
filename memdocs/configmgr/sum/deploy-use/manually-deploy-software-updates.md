@@ -2,14 +2,16 @@
 title: Manually deploy software updates
 titleSuffix: Configuration Manager
 description: Manually create software deployments to get your clients up-to-date with required software updates, or to deploy out-of-band updates.
-author: mestew
-ms.author: mstewart
-manager: dougeby
-ms.date: 07/30/2018
+author: BalaDelli
+ms.author: baladell
+manager: apoorvseth
+ms.date: 04/08/2022
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.localizationpriority: medium
+ms.reviewer: mstewart,aaroncz 
+ms.collection: tier3
 ---
 
 # Manually deploy software updates  
@@ -109,14 +111,14 @@ After you determine the updates you want to deploy, and add them to a software u
        > [!IMPORTANT]  
        >  After you create the software update deployment, you can't change the type of deployment.  
 
-        - Select **Required** to create a mandatory software update deployment. The software updates are automatically installed on clients before the installation deadline you configure.  
+        - Select **Required** to create a mandatory software update deployment. The software updates are automatically installed on clients before the installation deadline you configure. When you deploy a software update group as **Required**, clients download the content in background and honor BITS settings, if configured.
 
-        - Select **Available** to create an optional software update deployment. This deployment is available for users to install from Software Center.  
+        - Select **Available** to create an optional software update deployment. This deployment is available for users to install from Software Center. For software update groups deployed as **Available**, clients download the content in the foreground and ignore BITS settings.
 
        > [!NOTE]  
-       >  When you deploy a software update group as **Required**, clients download the content in background and honor BITS settings, if configured.  
-       > 
-       > For software update groups deployed as **Available**, clients download the content in the foreground and ignore BITS settings.  
+       > Starting in Configuration Manager version 2203, you can select the **Pre-download content for this deployment** setting for **Available** deployments. This setting reduces installation wait times for clients since installation notifications won't be visible in Software Center until the content has fully downloaded. <!--4497776-->
+       > - If an update is in multiple deployments for a client and the **Pre-download content for this deployment** setting is enabled for a least one of the deployments, then the content will pre-download.
+       > - If you edit an existing deployment to use the **Pre-download content for this deployment** setting, the content will only pre-download if the software update is not yet available on the client.
 
    -   **Use Wake-on-LAN to wake up clients for required deployments**: Specifies whether to enable Wake On LAN at the deadline. Wake On LAN sends wake-up packets to computers that require one or more software updates in the deployment. The site wakes up any computers that are in sleep mode at the installation deadline time so the installation can initiate. Clients that are in sleep mode that don't require any software updates in the deployment aren't started. By default, this setting isn't enabled. It's only available for **Required** deployments. Before using this option, configure computers and networks for Wake On LAN. For more information, see [How to configure Wake On LAN](../../core/clients/deploy/configure-wake-on-lan.md).  
 

@@ -1,18 +1,18 @@
 ---
-title: "GetTotalNumResults Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+description: The GetTotalNumResults Windows Management Instrumentation class method gets a count of all members in a collection, including subcollections.
+title: GetTotalNumResults Method
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 2398cf48-ce19-4c12-8008-04501f3f8a11
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # GetTotalNumResults Method in Class SMS_Collection
 The `GetTotalNumResults` Windows Management Instrumentation (WMI) class method gets a count of all members in a collection, including subcollections.  

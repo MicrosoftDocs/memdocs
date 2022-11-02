@@ -1,18 +1,18 @@
 ---
-title: "GetClientPilotingConfigs Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: GetClientPilotingConfigs Method
+titleSuffix: Configuration Manager
+description: In Configuration Manager, the GetClientPilotingConfigs WMI class method gets the configurations for client piloting settings.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 201e931a-1a80-4a50-b166-d1ccbb37d0b4
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # GetClientPilotingConfigs Method in Class SMS_Site
 The `GetClientPilotingConfigs` Windows Management Instrumentation (WMI) class method, in Configuration Manager, gets the configurations for client piloting settings.  

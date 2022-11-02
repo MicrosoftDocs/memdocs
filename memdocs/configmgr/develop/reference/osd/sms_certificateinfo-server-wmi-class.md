@@ -1,18 +1,18 @@
 ---
-title: "SMS_CertificateInfo Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: SMS_CertificateInfo Class
+titleSuffix: Configuration Manager
+description: The SMS_CertificateInfo WMI class is an SMS Provider server class, in Configuration Manager, that defines a media certificate registered by Configuration Manager.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 85ab0d42-8469-4085-a346-ae7ce6e3c14b
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_CertificateInfo Server WMI Class
 The `SMS_CertificateInfo` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that defines a media certificate registered by Configuration Manager and used by client computers to communicate with a management point.  

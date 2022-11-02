@@ -2,7 +2,7 @@
 title: Scores, baselines, and insights in Endpoint Analytics
 titleSuffix: Microsoft Endpoint Manager
 description: Learn about scores, baselines, and insights in Endpoint Analytics
-ms.date: 03/31/2022
+ms.date: 07/07/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -47,11 +47,7 @@ Baseline scores are shown on charts as triangle markers. There's a built-in base
 
 ## <a name="bkmk_per-device"></a> Per device scores
 <!--IN8462182-->
-To help you identify devices that could be impacting user experience, Endpoint analytics shows some scores per device. Reviewing scores per device may help you find and resolve end-user impacting issues before a call is made to the help desk.From the **Endpoint analytics** main page, select the **Device scores** tab to display individual device scores. Sorting by scores can assist you in finding devices that might need attention. The following scores are displayed per device:
-
-- [Endpoint analytics score](enroll-intune.md#bkmk_view)
-- [Startup performance score](startup-performance.md#bkmk_score)
-- [Application reliability score](app-reliability.md#app-reliability-score)
+To help you identify devices that could be impacting user experience, Endpoint analytics shows some scores per device. Reviewing scores per device may help you find and resolve end-user impacting issues before a call is made to the help desk. From the **Endpoint analytics** main page, select the **Device scores** tab to display individual device scores. Sorting by scores can assist you in finding devices that might need attention.
 
 :::image type="content" source="media/8816759-per-device-scores-chart.png" alt-text="Screenshot of Endpoint analytics device scores chart from the overview page." lightbox="media/8816759-per-device-scores-chart.png":::
 
@@ -65,9 +61,16 @@ You can also access per device scores on a device's **User experience** page. Fr
 
 ### <a name="bkmk_drill-in"></a> Device level drill-in from reports
 
-When reviewing your organization's **Startup performance** or **Application reliability** reports, you can display individual device scores. To drill-in to  information for a specific device, select the **Device performance** tab, then choose a device.
+When reviewing your organization's reports, you can display individual device scores. To drill-in to  information for a specific device, select the **Device performance** tab, then choose a device.
 
 :::image type="content" source="media/8816759-per-device-startup-score.png" alt-text="Screenshot of Endpoint analytics startup performance page for a single device." lightbox="media/8816759-per-device-startup-score.png":::
+
+> [!Note]
+> You may notice small differences in values when reviewing detailed reporting when compared to overall less granular scores for devices and models.
+
+## <a name="bkmk_model"></a> Per model scores
+<!--IN14439211-->
+Endpoint analytics shows scores per device model. These scores help admins contextualize the user experience across device models in the environment. Reviewing model scores may help you project and prioritize your next hardware refresh cycle. It can also help you discover devices that no longer meet your organization's current hardware specifications. From the **Endpoint analytics** main page, select the **Model scores** tab to display scores per device model. Scores per device model are available in all Endpoint analytics reports.
 
 ## Filter reports
 <!--7207888-->

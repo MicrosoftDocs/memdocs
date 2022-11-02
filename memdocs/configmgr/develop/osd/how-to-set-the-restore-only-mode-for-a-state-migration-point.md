@@ -1,18 +1,18 @@
 ---
-title: "Set the Restore-Only Mode for a State Migration Point"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: Set the Restore-Only Mode for a State Migration Point
+description: In Configuration Manager, you configure the operating system deployment state migration point to reject new requests to store user data by setting the SMPQuiesceState embedded property.
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: how-to
 ms.assetid: e2cb40c3-7b94-4586-a5c2-75b1ed52f571
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Set the Restore-Only Mode for a State Migration Point
 In Configuration Manager, you configure the operating system deployment state migration point to reject new requests to store user data by setting the **SMPQuiesceState** embedded property.  

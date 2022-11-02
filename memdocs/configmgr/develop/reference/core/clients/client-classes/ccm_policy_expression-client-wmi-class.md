@@ -1,18 +1,18 @@
 ---
-title: "CCM_Policy_Expression Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: CCM_Policy_Expression Class
+titleSuffix: Configuration Manager
+description: A client Windows Management Instruementation class that represents a policy expression, which evaluates to either true or false.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 2ad7dbc5-ee6f-40e2-a03f-413a8236153e
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # CCM_Policy_Expression Client WMI Class
 In Configuration Manager, the `CCM_Policy_Expression` class is a client Windows Management Instruementation (WMI) class that represents a policy expression that evaluates to either `true` or `false`.  

@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/12/2022
+ms.date: 04/14/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -23,7 +23,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection: 
+   - M365-identity-device-management
+   - highpri
 ms.reviewer: mattcall
 
 ---
@@ -44,7 +46,7 @@ When Intune evaluates policy for a device and identifies conflicting configurati
 
 You'll find endpoint security policies under *Manage* in the **Endpoint security** node of the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-![Manage policies](./media/endpoint-security-policy/endpoint-security-policies.png)
+:::image type="content" source="./media/endpoint-security-policy/endpoint-security-policies.png" alt-text="Managing Endpoint security policies in the Microsoft Endpoint Manager admin center":::
 
 Following are brief descriptions of each endpoint security policy type. To learn more about them, including the available profiles for each, follow the links to content dedicated to each policy type:
 

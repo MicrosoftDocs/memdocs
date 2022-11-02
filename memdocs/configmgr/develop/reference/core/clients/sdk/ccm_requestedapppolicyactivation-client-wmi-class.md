@@ -1,18 +1,18 @@
 ---
-title: "CCM_RequestedAppPolicyActivation Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: CCM_RequestedAppPolicyActivation Class
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 9453f2e6-006a-4932-b67f-fda5e149133a
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+description: Learn how the CCM_RequestedAppPolicy Activation class represents a requested application policy activation.
+ms.reviewer: mstewart,aaroncz 
 ---
 # CCM_RequestedAppPolicyActivation Client WMI Class
 The `CCM_RequestedAppPolicyActivation` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a requested application policy activation.  
@@ -47,7 +47,7 @@ Class CCM_RequestedAppPolicyActivation :
 
  Qualifiers: [values]  
 
- Activation action. Possible value are:  
+ Activation action. Possible values are:  
 
 |Value|Activation action|  
 |-|-|  

@@ -2,14 +2,16 @@
 title: Configure discovery
 titleSuffix: Configuration Manager
 description: Configure discovery methods to find resources to manage from your network, Active Directory, and Azure Active Directory.
-ms.date: 12/01/2021
+ms.date: 04/25/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to
-author: mestew
-ms.author: mstewart
-manager: dougeby
+ms.author: gokarthi
+author: gowdhamankarthikeyan
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Configure discovery methods for Configuration Manager
@@ -155,7 +157,9 @@ Although each of these discovery methods is independent of the others, they shar
           Select subcontainers to exclude from this recursive search. This option helps to reduce the number of discovered objects. Select **Add** to choose the containers under the above path. In the Select New Container dialog box, select a child container to exclude. Select **OK** to close the Select New Container dialog box.<!--1358143-->
 
           > [!Tip]  
-          > The list of Active Directory containers in the Active Directory System Discovery Properties window includes a column **Has Exclusions**. When you select containers to exclude, this value is **Yes**.  
+          > - The list of Active Directory containers in the Active Directory System Discovery Properties window includes a column **Has Exclusions**. When you select containers to exclude, this value is **Yes**.
+          > - Starting in version 2203, you can exclude subcontainers in untrusted domains for **Active Directory System Discovery** and **Active Directory User Discovery**. 
+  
 
     3. For each location, specify the account to use as the **Active Directory Discovery Account**. For more information, see [Accounts](../../../plan-design/hierarchy/accounts.md#active-directory-system-discovery-account).  
 
@@ -211,6 +215,9 @@ Starting in version 2103, you can exclude OUs from Active Directory User Discove
 1. Select **Add** to add an exclusion or **Remove** to remove an existing exclusion.
 
 1. Select **OK** to save the Active Directory container configuration.
+
+> [!TIP]
+> Starting in version 2203, you can exclude subcontainers in untrusted domains for **Active Directory System Discovery** and **Active Directory User Discovery**.
 
 ## <a name="azureaadisc"></a> Azure AD User Discovery
 

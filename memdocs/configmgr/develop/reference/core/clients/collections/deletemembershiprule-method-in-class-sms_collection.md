@@ -1,18 +1,18 @@
 ---
-title: "DeleteMembershipRule Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: DeleteMembershipRule Method
+titleSuffix: Configuration Manager
+description: The DeleteMembershipRule Windows Management Instrumentation class method, in Configuration Manager, deletes a membership rule from the collection.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 7efdeb19-a509-454a-af9b-dec12ea9a155
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # DeleteMembershipRule Method in Class SMS_Collection
 The `DeleteMembershipRule` Windows Management Instrumentation (WMI) class method, in Configuration Manager, deletes a membership rule from the collection.  

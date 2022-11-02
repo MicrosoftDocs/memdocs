@@ -2,8 +2,8 @@
 title: Windows Autopilot self-deploying mode (Public Preview)
 description: Self-deploying mode allows a device to be deployed with little to no user interaction. This mode is designed to deploy Windows as a kiosk, digital signage device, or a shared device.
 keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune
-ms.technology: windows
-ms.prod: w10
+ms.technology: itpro-deploy
+ms.prod: windows-client
 ms.mktglfcycl: deploy
 ms.localizationpriority: medium
 ms.sitesec: library
@@ -14,7 +14,7 @@ ms.author: aaroncz
 ms.reviewer: jubaptis
 manager: dougeby
 ms.date: 10/18/2021
-ms.collection:
+ms.collection: 
   - M365-modern-desktop
   - highpri
 ms.topic: how-to
@@ -71,7 +71,7 @@ Optionally, you can use a [device-only subscription](https://techcommunity.micro
 Self-deploying mode uses a device's TPM 2.0 hardware to authenticate the device into an organization's Azure AD tenant. Therefore, devices without TPM 2.0 can't be used with this mode. Devices must also support TPM device attestation. All new Windows devices should meet these requirements. The TPM attestation process also requires access to a set of HTTPS URLs that are unique for each TPM provider. For more information, see the entry for Autopilot self-Deploying mode and Autopilot pre-provisioning in [Networking requirements](networking-requirements.md#tpm). For Windows Autopilot software requirements, see [Windows Autopilot software requirements](./software-requirements.md).
 
 > [!IMPORTANT]
-> If you attempt a self-deploying mode deployment on a device that does not have support TPM 2.0 or on a virtual machine, the process will fail when verifying the device with an 0x800705B4 timeout error (Hyper-V virtual TPMs are not supported). Also note that Windows 10, version 1903 or later is required to use self-deploying mode due to issues with TPM device attestation in Windows 10, version 1809. Since Windows 10 Enterprise 2019 LTSC is based on Windows 10 version 1809, self-deploying mode is also not supported on Windows 10 Enterprise 2019 LTSC.
+> If you attempt a self-deploying mode deployment on a device that does not have support TPM 2.0 or on a virtual machine, the process will fail when verifying the device with an 0x800705B4 timeout error (Hyper-V virtual TPMs are not supported). Also note that Windows 10, version 1903 or later is required to use self-deploying mode due to issues with TPM device attestation in Windows 10, version 1809. 
 >
 > See [Windows Autopilot known issues](known-issues.md) and [Troubleshoot Autopilot device import and enrollment](troubleshoot-device-enrollment.md) to review other known errors and solutions.
 

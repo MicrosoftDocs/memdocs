@@ -1,18 +1,18 @@
 ---
-title: "FormatModuleString Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: FormatModuleString Method
+titleSuffix: Configuration Manager
+description: The FormatModuleString method, in Configuration Manager, loads string resources from the resource DLL.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 8666e465-c05e-435b-a3f8-f57d12a57701
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # FormatModuleString Method
 The `FormatModuleString` method, in Configuration Manager, loads string resources from the resource DLL.  

@@ -6,10 +6,12 @@ ms.date: 09/20/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
-author: mestew
-ms.author: mstewart
-manager: dougeby
+ms.author: sheetg
+author: sheetg09 
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Software metering in Configuration Manager

@@ -2,25 +2,27 @@
 title: Deploy and update Microsoft Edge, version 77 and later
 titleSuffix: Configuration Manager
 description: How to deploy and update Microsoft Edge, version 77 and later with Configuration Manager
-ms.date: 10/13/2021
+ms.date: 05/31/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: baladelli
+ms.author: baladell
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Microsoft Edge Management
 
 *Applies to: Configuration Manager (Current Branch)*
 
-The all-new Microsoft Edge is ready for business. You can deploy [Microsoft Edge, version 77 and later](/deployedge/) to your users. A PowerShell script is used to install the Edge build selected. The script also turns off automatic updates for Edge so they can be managed with Configuration Manager.
+The all-new Microsoft Edge is ready for business. You can deploy [Microsoft Edge, version 77 and later](/deployedge/) to your users. A PowerShell script is used to install the Microsoft Edge build selected. The script also turns off automatic updates for Microsoft Edge so they can be managed with Configuration Manager.
 
 ## <a name="bkmk_Microsoft_Edge"></a> Deploy Microsoft Edge
 <!--4561024-->
-Admins can pick the Beta, Dev, or Stable channel, along with a version of the Microsoft Edge client to deploy. Each release incorporates learnings and improvements from our customers and community.
+Admins can pick the Beta, Dev, or Stable channel, along with a version of the Microsoft Edge client to deploy. Each release incorporates learnings and improvements from our customers and community. For more information, see [Microsoft Edge release schedule](/DeployEdge/microsoft-edge-release-schedule).
 
 ### Prerequisites for deploying
 
@@ -29,7 +31,7 @@ For clients targeted with a Microsoft Edge deployment:
 - PowerShell [Execution Policy](/powershell/module/microsoft.powershell.core/about/about_execution_policies) can't be set to Restricted.
   - PowerShell is executed to perform the installation.
 
-- The Microsoft Edge installer and [CMPivot](../../core/servers/manage/cmpivot.md) are currently signed with the **Microsoft Code Signing PCA 2011** certificate. If you set PowerShell execution policy to **AllSigned**, then you need to make sure that devices trust this signing certificate. You can export the certificate from a computer where you've installed the Configuration Manager console. View the certificate on `"C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\bin\CMPivot.exe"`, and then export the code signing certificate from the certification path. Then import it to the _machine_'s **Trusted Publishers** store on managed devices. You can use the process in the following blog, but make sure to export the _code signing certificate_ from the certification path: [Adding a Certificate to Trusted Publishers using Intune](https://techcommunity.microsoft.com/t5/intune-customer-success/adding-a-certificate-to-trusted-publishers-using-intune/ba-p/1974488).<!--CMADO-7585106, MEMDocs#1571-->
+- The Microsoft Edge installer, Attack Surface Reduction rules engine for tenant attach, and [CMPivot](../../core/servers/manage/cmpivot.md) are currently signed with the **Microsoft Code Signing PCA 2011** certificate. If you set PowerShell execution policy to **AllSigned**, then you need to make sure that devices trust this signing certificate. You can export the certificate from a computer where you've installed the Configuration Manager console. View the certificate on `"C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\bin\CMPivot.exe"`, and then export the code signing certificate from the certification path. Then import it to the _machine_'s **Trusted Publishers** store on managed devices. You can use the process in the following blog, but make sure to export the _code signing certificate_ from the certification path: [Adding a Certificate to Trusted Publishers using Intune](https://techcommunity.microsoft.com/t5/intune-customer-success/adding-a-certificate-to-trusted-publishers-using-intune/ba-p/1974488).<!--CMADO-7585106, MEMDocs#1571-->
 
 [!INCLUDE [Internet endpoints for deploying Microsoft Edge](../../core/plan-design/network/includes/internet-endpoints-deploy-microsoft-edge.md)]
 
@@ -100,6 +102,8 @@ Starting in Configuration Manager 2002, the Microsoft Edge Management dashboard 
 
 ### Prerequisites for the dashboard
 
+For Configuration Manager version 2203 or later, the [WebView2 console extension](../../core/servers/manage/admin-console-extensions.md#bkmk_notification) must be installed. If needed, select the notification bell in the top right corner of the console to install the extension.<!--10024154-->
+
 Enable the following properties in the below [hardware inventory](../../core/clients/manage/inventory/extend-hardware-inventory.md) classes for the Microsoft Edge Management dashboard:
 
 - **Installed Software - Asset Intelligence (SMS_InstalledSoftware)**
@@ -113,6 +117,8 @@ Enable the following properties in the below [hardware inventory](../../core/cli
 - **Browser Usage (SMS_BrowserUsage)**
    - BrowserName
    - UsagePercentage
+
+
 
 ### View the dashboard
 

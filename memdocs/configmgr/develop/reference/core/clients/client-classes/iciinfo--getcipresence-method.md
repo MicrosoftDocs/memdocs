@@ -1,18 +1,18 @@
 ---
 title: "ICIINFO::GetCIPresence"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+titleSuffix: Configuration Manager
+description: "In Configuration Manager, the ICIINFO::GetCIPresence method gets the current presence for the configuration item, including the compliance state for the configuration item."
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 943e216f-5ac5-4962-a053-072f1acbc6c7
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # ICIINFO::GetCIPresence Method
 The `ICIINFO::GetCIPresence` method, in Configuration Manager, gets the current presence for the configuration item. The presence data includes the compliance state for the configuration item.  

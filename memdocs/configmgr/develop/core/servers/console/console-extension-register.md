@@ -1,17 +1,18 @@
 ---
-title: "Console extension registration through community hub"
-description: "Register a console extension through community hub"
-titleSuffix: "Configuration Manager"
-ms.date: "11/19/2021"
-ms.prod: "configuration-manager"
+title: Console extension registration through community hub
+description: Register a console extension through community hub
+titleSuffix: Configuration Manager
+ms.date: 11/19/2021
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: conceptual
 ms.assetid: d15d00a9-a77a-4916-88c6-0ac04234fc1e
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Console extension registration though community hub

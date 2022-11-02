@@ -123,4 +123,4 @@ landingContent:
       - text: Windows Autopilot and Surface devices
         url: /surface/windows-autopilot-and-surface-devices
       - text: Windows Autopilot for HoloLens 2
-        url:  https://docs.microsoft.com/hololens/hololens2-autopilot
+        url: /hololens/hololens2-autopilot

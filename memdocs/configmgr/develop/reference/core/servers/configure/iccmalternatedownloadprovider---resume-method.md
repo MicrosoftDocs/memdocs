@@ -1,18 +1,18 @@
 ---
 title: "ICcmAlternateDownloadProvider : Resume"
-titleSuffix: "Configuration Manager"
-ms.date: "07/25/2017"
-ms.prod: "configuration-manager"
+titleSuffix: Configuration Manager
+description: "The ICcmAlternateDownloadProvider::Resume method instructs the provider to resume a given job."
+ms.date: 07/25/2017
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 5e084332-44bb-468c-980c-ad9273750b39
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # ICcmAlternateDownloadProvider : Resume Method
 The **ICcmAlternateDownloadProvider::Resume** method, in Configuration Manager, instructs the provider to resume a given job.  

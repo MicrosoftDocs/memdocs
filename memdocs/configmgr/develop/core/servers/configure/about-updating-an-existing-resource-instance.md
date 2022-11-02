@@ -1,18 +1,18 @@
 ---
-title: "Update an Existing Resource Instance"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: Update an Existing Resource Instance
+titleSuffix: Configuration Manager
+description: When the Data Discovery Manager, in Configuration Manager, finds an existing resource that matches the data discovery record, the resource instance is updated; otherwise, a new instance is created.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: conceptual
 ms.assetid: 0ccb114a-9666-40f5-a02c-894822f3d359
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # About Updating an Existing Resource Instance
 When the Data Discovery Manager (DDM), in Configuration Manager, finds an existing resource that matches the data discovery record (DDR), the resource instance is updated; otherwise, a new instance is created. The DDM uses the following approach to find a resource match.  

@@ -1,18 +1,18 @@
 ---
-title: "Create Function"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: Create Function
+titleSuffix: Configuration Manager
+description: The Create function creates a status MIF file that Configuration Manager uses to correlate the install status for an advertisement.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 09542d06-6ab2-4835-b4d4-9388d1563369
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # Create Function
 The `Create` function creates a status MIF file that Configuration Manager uses to correlate the install status for an advertisement.  

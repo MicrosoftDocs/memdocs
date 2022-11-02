@@ -9,7 +9,7 @@ manager: dougeby
 ms.date: 01/12/2022
 audience: Admin
 ms.topic: how-to
-ms.service: cloudpc
+ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
 ms.technology:
@@ -43,7 +43,7 @@ Some apps may require that the user have administrator privileges. To change a u
 
 ## Default apps
 
-The following apps are pre-installed on Windows 365 Business Cloud PCs when they are created:
+The following apps are pre-installed on Windows 365 Business Cloud PCs when they're created:
 
 - [Microsoft 365 Apps for Enterprise](/mem/intune/apps/apps-add-office365) (formerly Office 365 Pro Plus)
 - Microsoft Teams

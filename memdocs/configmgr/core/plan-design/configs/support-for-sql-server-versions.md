@@ -2,14 +2,16 @@
 title: Supported SQL Server versions
 titleSuffix: Configuration Manager
 description: Get SQL Server version and configuration requirements for hosting a Configuration Manager site database.
-ms.date: 08/02/2021
+ms.date: 04/01/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Supported SQL Server versions for Configuration Manager
@@ -181,7 +183,7 @@ To identify the SQL Server cardinality estimation compatibility level in use for
 SELECT name, compatibility_level FROM sys.databases
 ```
 
-For more information on SQL Server Compact Edition (CE) compatibility levels and how to set them, see [ALTER DATABASE Compatibility Level (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level).
+For more information on SQL Server compatibility levels and how to set them, see [ALTER DATABASE Compatibility Level (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level).
 
 ### SQL Server features
 

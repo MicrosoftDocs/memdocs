@@ -1,18 +1,18 @@
 ---
 title: "ICIINFO::GetId"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+titleSuffix: Configuration Manager
+description: "In Configuration Manager,the ICIINFO::GetId method gets the ID of the configuration item."
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 03754f1a-0146-4ff3-8d18-bee4fed9a932
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # ICIINFO::GetId Method
 The `ICIINFO::GetId` method, in Configuration Manager, gets the ID of the configuration item.  

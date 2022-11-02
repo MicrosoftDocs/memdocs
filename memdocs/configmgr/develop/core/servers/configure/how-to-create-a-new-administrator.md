@@ -1,18 +1,18 @@
 ---
-title: "Create a New Administrator"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: Create a New Administrator
+titleSuffix: Configuration Manager
+description: Learn how administrative assignments for a user or security group are defined by the roles and security scopes assigned to that user or security group.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: how-to
 ms.assetid: b7749c61-a744-4824-b36b-6ed957d30eb3
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Create a New Administrator
 The administrative assignments for a user or security group are defined by the roles and security scopes assigned to that user or security group. The Windows Management Instrumentation (WMI) `SMS_Admin` class contains all the administrators defined in Configuration Manager. The security roles for an admin are in the `SMS_Admin.Roles` property and the security scopes for an admin are in the `SMS_Admin.Categories` property. Both of these properties expose an array of strings which correspond to the identifier of the role or security scope. Both properties are also marked as `lazy` and are read-only.  
@@ -77,7 +77,7 @@ public void CreateSMSAdmin(WqlConnectionManager connection, string distinguished
 | --------- | ---- | ----------- |
 |`connection`|-   Managed: `WqlConnectionManager`|A valid connection to the SMS Provider.|  
 |`distinguishedName`|-   Managed: `String`|Like "CN=John Doe,OU=UserAccounts,DC=contoso,DC=com"|  
-|`categoryID`|-   Managed: `String`|The RBA secured categories associated with this account .|  
+|`categoryID`|-   Managed: `String`|The RBA secured categories associated with this account.|  
 |`CategoryTypeID`|-   Managed: `Integer`|The type of the category (collection or secured scope).|  
 
 ## Compiling the Code  

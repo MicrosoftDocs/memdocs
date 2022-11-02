@@ -17,7 +17,7 @@ ms.localizationpriority: high
 
 #ROBOTS:
 #audience:
-#ms.reviewer: coferro
+ms.reviewer: coferro
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -100,6 +100,6 @@ When you start a remote session, users see a notification flag on the Company Po
 
 ## Next steps
 
-[Remotely assist mobile devices managed by Microsoft Endpoint Manager](remote-assist-mobile-devices.md)
+[Use remote help with Intune and Microsoft Endpoint Manager](remote-help.md)
 
 [See device details in Intune](device-inventory.md)

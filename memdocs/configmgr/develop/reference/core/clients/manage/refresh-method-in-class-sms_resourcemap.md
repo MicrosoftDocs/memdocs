@@ -1,18 +1,18 @@
 ---
 title: Refresh method in class SMS_ResourceMap
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+titleSuffix: Configuration Manager
+description: The Refresh Windows Management Instrumentation class method, in Configuration Manager, updates resource and inventory class definitions.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: a2d1fee0-c1fc-49a2-8c01-73d31732e1d7
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # Refresh Method in Class SMS_ResourceMap
 The `Refresh` Windows Management Instrumentation (WMI) class method, in Configuration Manager, updates resource (classes derived from [SMS_R_System Server WMI Class](../../../../../develop/reference/core/clients/manage/sms_r_system-server-wmi-class.md)) and inventory (classes derived from [SMS_G_System_Current Server WMI Class](../../../../../develop/reference/core/clients/manage/sms_g_system_current-server-wmi-class.md)) class definitions.  

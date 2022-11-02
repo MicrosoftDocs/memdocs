@@ -2,7 +2,7 @@
 # required metadata
 
 title: Send errors to your company support | Microsoft Docs
-description:
+description: Sometimes you may experience an error while you're using the Company Portal app on your iOS device. When this occurs, you can email details about the error to your company's support person. These details will provide the context needed to troubleshoot the problem for you.
 keywords:
 author: lenewsad
 ms.author: lanewsad

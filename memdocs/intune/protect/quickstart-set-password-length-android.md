@@ -21,13 +21,14 @@ ms.assetid: 81b4fa08-5333-4c54-9f49-8db5f6984ed2
 #ROBOTS:
 #audience:
 
-ms.reviewer:
+ms.reviewer: andreibiswas
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.collection:
 - M365-identity-device-management
 - Android
+- tier3
 ms.custom: intune-azure
 ---
 
@@ -54,7 +55,7 @@ Create a device compliance policy to require your workforce's Android users to e
 
 2.  For **Platform**, select **Android Enterprise**.
 
-3. For **Policy type**, select either **Fully managed, dedicated, and corporate-owned work profile** or **Personally-owned work profile**, and then click **Create**.
+3. For **Profile type**, select either **Fully managed, dedicated, and corporate-owned work profile** or **Personally-owned work profile**, and then click **Create**.
 
 4. On **Basics** step, enter **Android compliance** as the *Name*. Adding a *Description* is optional. Click **Next**.
 

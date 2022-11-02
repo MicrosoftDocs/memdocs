@@ -1,18 +1,18 @@
 ---
-title: "Synchronize with the Software Update Point"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: Synchronize with the Software Update Point
+description: You synchronize the software update point, in Configuration Manager SP1, by calling the SyncNow method.
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: how-to
 ms.assetid: bbc5fb02-8502-4003-8f4d-d69508674ce0
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Synchronize with the Software Update Point
 You synchronize the software update point, in Configuration Manager SP1, by calling the `SyncNow` method.  

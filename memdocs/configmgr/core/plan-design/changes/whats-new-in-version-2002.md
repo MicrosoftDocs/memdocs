@@ -6,11 +6,13 @@ ms.date: 07/27/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ROBOTS: NOINDEX
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # What's new in version 2002 of Configuration Manager current branch
@@ -89,7 +91,7 @@ The site system's proxy settings, including authentication, are now used by:
 - Azure AD user group discovery
 - Synchronizing collection membership results to Azure Active Directory groups
 
-For more information, see [Proxy server support](../network/proxy-server-support.md#bkmk_other).
+For more information, see [Proxy server support](../network/proxy-server-support.md#other-features-that-use-the-proxy).
 
 ## <a name="bkmk_cloud"></a> Cloud-attached management
 

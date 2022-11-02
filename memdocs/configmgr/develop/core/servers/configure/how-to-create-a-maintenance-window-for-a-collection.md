@@ -1,18 +1,18 @@
 ---
-title: "Create a Maintenance Window for a Collection"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: Create a Maintenance Window for a Collection
+titleSuffix: Configuration Manager
+description: Your application can create a Configuration Manager maintenance window by using the SMS_CollectionSettings Server WMI Class and SMS_ServiceWindow Server WMI Classes and properties.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: how-to
 ms.assetid: 4be75225-213b-4a32-a704-71c1fbc700e9
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Create a Maintenance Window for a Collection
 Your application can create a Configuration Manager maintenance window by using the [SMS_CollectionSettings Server WMI Class](../../../../develop/reference/core/clients/collections/sms_collectionsettings-server-wmi-class.md) and [SMS_ServiceWindow Server WMI Class](../../../../develop/reference/core/servers/configure/sms_servicewindow-server-wmi-class.md) classes and properties.  

@@ -8,7 +8,7 @@ author: MandiOhlinger
 
 ms.author: mandia
 manager: dougeby
-ms.date: 01/18/2022
+ms.date: 09/20/2022
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -29,9 +29,12 @@ ms.custom: intune-azure; get-started
 ms.collection:
   - M365-identity-device-management
   - highpri
+  - highseo
 ---
 
 # Apply features and settings on your devices using device profiles in Microsoft Intune
+
+[!INCLUDE [windows-phone-81-windows-10-mobile-support](../includes/windows-phone-81-windows-10-mobile-support.md)]
 
 Microsoft Intune includes settings and features you can enable or disable on different devices within your organization. These settings and features are added to "configuration profiles". You can create profiles for different devices and different platforms, including iOS/iPadOS, Android device administrator, Android Enterprise, and Windows. Then, use Intune to apply or "assign" the profile to the devices.
 
@@ -66,6 +69,7 @@ This feature supports:
 This feature supports:
 
 - Android device administrator
+- Android (AOSP)
 - Android Enterprise
 - iOS/iPadOS
 - macOS
@@ -131,6 +135,7 @@ This feature supports:
 This feature supports:
 
 - Android device administrator
+- Android (AOSP)
 - Android Enterprise
 - iOS/iPadOS
 - macOS
@@ -275,6 +280,9 @@ This feature supports:
 
 - macOS
 
+> [!TIP]
+> macOS settings are continually being added to the [settings catalog](settings-catalog.md). Some of these settings can replace preference files. For more information, go to [Tasks you can complete using the Settings Catalog in Intune](settings-catalog-common-features.md).
+
 ## Settings catalog
 
 The [settings catalog](settings-catalog.md) lists the settings you can configure. It's not template, or a logical grouping of settings.
@@ -285,6 +293,7 @@ On macOS, you can configure Microsoft Edge version 77 and newer using the settin
 
 This feature supports:
 
+- iOS/iPadOS
 - macOS
 - Windows 11
 - Windows 10
@@ -334,6 +343,7 @@ This feature supports:
 This feature supports:
 
 - Android device administrator
+- Android (AOSP)
 - Android Enterprise
 - iOS/iPadOS
 - macOS
@@ -352,13 +362,15 @@ This feature supports:
 
 ## Wired networks
 
-[Wired networks](wired-networks-configure.md) let you create and manage 802.1x wired connections for macOS desktop computers. In your profile, you choose the network interface, select the accepted EAP types, and enter the server trust settings, including PKCS and SCEP certificates.
+[Wired networks](wired-networks-configure.md) let you create and manage 802.1x wired connections for macOS and Windows desktop computers and devices. In your profile, you choose the network interface, select the accepted EAP types, and enter the server trust settings, including PKCS and SCEP certificates.
 
-When you assign the profile, macOS desktop users get access to your corporate wired network without having to configure it themselves.
+When you assign the profile, users get access to your corporate wired network without having to configure it themselves.
 
 This feature supports:
 
 - macOS
+- Windows 11
+- Windows 10
 
 ## Zebra Mobility Extensions (MX)
 

@@ -6,7 +6,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/24/2022
+ms.date: 05/12/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -132,6 +132,9 @@ Device restrictions let you control different settings and features on your devi
 ### [Configure VPN](../configuration/vpn-settings-configure.md)
 
 Virtual private networks (VPNs) give your users secure remote access to your company network. In Intune, you can create a VPN profile that includes specific settings for your devices running Windows Holographic for Business. For example, you can create a VPN profile so all Windows Holographic for Business devices use Citrix VPN as the connection type.
+
+> [!NOTE]
+> When assigning a VPN policy to Windows Holographic for Business devices, assign the profile to the device scope. Currently, Windows Holographic only supports the device scope. When the VPN profile is installed in the device context, it applies to all users on the device. If a user profile is deployed, it's treated as a device profile.
 
 ### [Configure Wi-Fi](../configuration/wi-fi-settings-configure.md)
 

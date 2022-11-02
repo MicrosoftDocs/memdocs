@@ -1,19 +1,18 @@
 ---
 description: Learn how to represent file list information for a Configuration Manager component using SMS_SIIB_Component_FileList class.
-title: "SMS_SIIB_Component_FileList Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: SMS_SIIB_Component_FileList Class
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: eccf8bc7-98bf-444d-b66d-6f782dfe355a
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_SIIB_Component_FileList Server WMI Class
 The `SMS_SIIB_Component_FileList` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents file list information for a Configuration Manager component.  
