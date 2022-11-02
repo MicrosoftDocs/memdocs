@@ -75,7 +75,7 @@ For more information about supported Azure regions, see [Supported Azure regions
 
 #### New Azure Network Connection health check<!--41752775-->
 
-A new check has been added the Azure Network Connectin health checks: **UDP connection server reachable**. For more information, see [Azure network connections health checks](health-checks.md).
+A new check has been added the Azure Network Connection health checks: **UDP connection server reachable**. For more information, see [Azure network connections health checks](health-checks.md).
 
 #### Forensic auditing of Cloud PCs now generally available<!--41237533-->
 
