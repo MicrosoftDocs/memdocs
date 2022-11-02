@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Use Microsoft Intune policies to manage macOSsoftware updates
+title: Use Microsoft Intune policies to manage macOS software updates
 description: Use Microsoft Intune to manage system updates for supervised macOS devices.
 keywords:
 author: brenduns 
