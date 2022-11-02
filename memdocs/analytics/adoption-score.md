@@ -1,6 +1,6 @@
 ---
 title: Endpoint analytics page in Microsoft Adoption Score
-titleSuffix: Microsoft Endpoint Manager
+titleSuffix: Microsoft Intune
 description: Get details about endpoint analytics in Microsoft Adoption Score
 ms.date: 08/25/2022
 ms.prod: configuration-manager
@@ -14,7 +14,7 @@ ms.localizationpriority: high
 
 # Endpoint analytics in Microsoft Adoption Score
 <!--IN8529842, MAX6471785-->
-Understanding how your devices contribute to your end user's experience is critical to any digital transformation effort. Endpoint analytics information was added to the Microsoft Adoption Score to further your understanding. The **Endpoint analytics** page in [Microsoft Adoption Score](/microsoft-365/admin/productivity/productivity-score) shares organizational level insights with the other roles outside of Microsoft Endpoint Manager. The visibility and insights this provides in areas like device boot times and application reliability can help your users by highlighting potential issues within your organization. For instance, Endpoint analytics can expose a long sign-in process or issues with applications unexpectedly stopping.  
+Understanding how your devices contribute to your end user's experience is critical to any digital transformation effort. Endpoint analytics information was added to the Microsoft Adoption Score to further your understanding. The **Endpoint analytics** page in [Microsoft Adoption Score](/microsoft-365/admin/productivity/productivity-score) shares organizational level insights with the other roles outside of Microsoft Intune. The visibility and insights this provides in areas like device boot times and application reliability can help your users by highlighting potential issues within your organization. For instance, Endpoint analytics can expose a long sign-in process or issues with applications unexpectedly stopping.  
 
 ## Endpoint analytics page in the Adoption Score report
 
@@ -36,7 +36,7 @@ The **Endpoint analytics score** is a weighted average of the [Startup performan
 
 ## Startup performance metrics
 
-Selecting the **Learn more** link under the startup performance information give you additional details and a link to **View more in Microsoft Endpoint Manager**. The **Startup performance metrics** are averages of the following items: 
+Selecting the **Learn more** link under the startup performance information give you additional details and a link to **View more in Microsoft Intune**. The **Startup performance metrics** are averages of the following items: 
 
 - **Average device startup time in seconds**
    - **Total boot time**: The combination of the **Group Policy phase** and the **Time to sign-in prompt**
@@ -53,7 +53,7 @@ Selecting the **Learn more** link under the startup performance information give
 
 ## Application reliability metrics
 
-The overall **Application reliability score** for your tenant is shown with the peer benchmark in the chart. Selecting the **Learn more about app reliability** link under the app reliability information gives you additional details and a link to **View more in Microsoft Endpoint Manager**. The following **Application reliability** information is provided from [Microsoft Adoption Score](/microsoft-365/admin/productivity/productivity-score):
+The overall **Application reliability score** for your tenant is shown with the peer benchmark in the chart. Selecting the **Learn more about app reliability** link under the app reliability information gives you additional details and a link to **View more in Microsoft Intune**. The following **Application reliability** information is provided from [Microsoft Adoption Score](/microsoft-365/admin/productivity/productivity-score):
 
 - **Top apps reducing your score in the last 14 days**
    - **App name**: The app identifier in the file manifest provided by your client devices. The app name is typically in executable (or .exe) format.
