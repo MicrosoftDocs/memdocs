@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/27/2022
+ms.date: 11/02/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -66,11 +66,18 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 -->
 
+## Week of October 31, 2022
+
+### App management
+
+#### Primary MTD service app protection policy setting for Intune<!-- 13222514 -->
+Intune now supports both Microsoft Defender for Endpoint and one non-Mobile Threat Defense (MTD) connector to be turned “On” for App Protection Policy evaluation per platform. This enables scenarios where a customer may want to migrate between Microsoft Defender for Endpoint and non-Microsoft MTD service without a pause in protection via risk scores in App Protection Policy. A new setting has been introduced under Conditional Launch health checks titled “Primary MTD service” to specify which service should be enforced for the end user. For more information, see [Android app protection policy settings](../apps/app-protection-policy-settings-android.md) and [iOS app protection policy settings](../apps/app-protection-policy-settings-ios.md).
+
 ## Week of October 24, 2022 (Service release 2210)
 
 ### App management
 
-### Use filters with app configuration policies for managed devices<!-- 7423842  -->  
+#### Use filters with app configuration policies for managed devices<!-- 7423842  -->  
 You can use filters to refine the assignment scope when deploying app configuration policies for managed devices. You must first [create a filter](../fundamentals/filters.md#create-a-filter) using any of the available properties for iOS and Android. Then, in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) you can assign your managed app configuration policy by selecting **Apps** > **App configuration policies** > **Add** > **Managed devices** and go to the assignment page. After selecting a group, you can refine the applicability of the policy by choosing a filter and deciding to use it in **Include** or **Exclude** mode. For related information about filters, see [Use filters when assigning your apps, policies, and profiles in Microsoft Endpoint Manager admin center](../fundamentals/filters.md).
 
 ### Device configuration
