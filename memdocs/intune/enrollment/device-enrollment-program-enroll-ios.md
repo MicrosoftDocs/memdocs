@@ -75,6 +75,9 @@ Intune also supports Just in Time Registration for Setup Assistant with modern a
   > [!IMPORTANT]
   > JIT Registration is in public preview. For more information, see [Public preview in Microsoft Intune](../fundamentals/public-preview.md).  
 
+> [!IMPORTANT]
+  > JIT Registration is not supported for GCC High and cloud tenants at this time.   
+
 Setup Assistant with modern authentication is supported on devices running iOS/iPadOS 13.0 and later. Older iOS/iPadOS devices given this profile will instead use Setup Assistant (legacy) for authentication.  
 
 For more information about your authentication options, see [Authentication methods for automated device enrollment](automated-device-enrollment-authentication.md).  
