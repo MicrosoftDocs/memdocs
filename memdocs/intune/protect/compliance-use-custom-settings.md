@@ -86,14 +86,14 @@ Use the following methods to view details about a device’s compliance status.
 
 - For both Linux and Windows devices, you can view per-setting device compliance details for custom compliance settings in the Microsoft Endpoint Manager admin center.
 
-  In the admin center go to **Reports** > **Devices compliance**, and then select the **Reports** tab. Select the tile for **Noncompliant devices and settings**, and then use the drop-down menus to configure the report. Be sure to select a platform for the OS, and then select **Generate** report.
+  In the admin center go to **Reports** > **Device compliance**, and then select the **Reports** tab. Select the tile for **Noncompliant devices and settings**, and then use the drop-down menus to configure the report. Be sure to select a platform for the OS, and then select **Generate** report.
 
   For more information, see [Monitor Intune Device compliance policies](../protect/compliance-policy-monitor.md).
 
 - On a Linux device, you can open the Intune app to view the device’s status:
 
   - **Compliant** – Your device is compliant with your organization’s policies and should be able to access organizational resources.
-  - **Checking status** – Intune is currently evaluating the devices compliance your organization’s policies.
+  - **Checking status** – Intune is currently evaluating the devices compliance to your organization’s policies.
   - **Not compliant** – The device doesn’t meet your organization’s device and security requirements and might not have access to your organization’s resources.
 
   When the device status is *Not compliant*, select **View issues** to see details about issues that must be addressed to bring that device into compliance. For information on resolving common issues, see [Additional troubleshooting for Linux devices](#additional-troubleshooting-for-linux-devices).
