@@ -66,6 +66,10 @@ This article shows you how to import custom ADMX and ADML files in the Endpoint 
   If you upload `firefox.admx` before `mozilla.adml`, then the import will fail.
 
   To remove a dependency prerequisite, delete the associated ADMX file first. Then, delete the dependency prerequisite. In our Mozilla Firefox example, delete `firefox.admx` and then delete `mozilla.admx`.
+  
+  You can view required namespaces in the ADMX file with the tag 'using prefix'. You will also see these in the error message if an upload is attempted without the uploaded prerequisites.
+  
+- Currently, if a file requires Windows.admx as a prerequisite, this must be uploaded first. We are working to automatically add this namespace and remove this requirement in the future.
 
 - Currently, the combo box setting type isn't supported. ADMX files with the combo box setting type will fail to import. All other setting types are supported.
 
