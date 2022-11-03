@@ -61,13 +61,13 @@ To make it easier to configure services through firewalls, we have onboarded wit
 By using the following PowerShell script, you can retrieve the list of IP addresses for the Intune service. This provides the same list as the subnets indicated in the IP address table below.
 
 ```PowerShell
-(invoke-restmethod -Uri (“https://endpoints.office.com/endpoints/WorldWide?ServiceAreas=MEM&clientrequestid=” + ([GUID]::NewGuid()).Guid)) | ?{$_.ServiceArea -eq "MEM" -and $_.ips} | select -unique -ExpandProperty ips
+(invoke-restmethod -Uri ("https://endpoints.office.com/endpoints/WorldWide?ServiceAreas=MEM`&clientrequestid=" + ([GUID]::NewGuid()).Guid)) | ?{$_.ServiceArea -eq "MEM" -and $_.ips} | select -unique -ExpandProperty ips
 ```
 
 By using the following PowerShell script, you can retrieve the list of FQDNs used by Intune and Autopilot.
 
 ```PowerShell
-(invoke-restmethod -Uri (“https://endpoints.office.com/endpoints/WorldWide?ServiceAreas=MEM&clientrequestid=” + ([GUID]::NewGuid()).Guid)) | ?{$_.ServiceArea -eq "MEM" -and $_.urls} | select -unique -ExpandProperty urls
+(invoke-restmethod -Uri ("https://endpoints.office.com/endpoints/WorldWide?ServiceAreas=MEM`&clientrequestid=" + ([GUID]::NewGuid()).Guid)) | ?{$_.ServiceArea -eq "MEM" -and $_.urls} | select -unique -ExpandProperty urls
 ```
 
 This provides a convenient method to list and review all services required by Intune and autopilot in one location. You will also need FQDN's that are covered as part of M365 Requirements. For reference this is the list of URL's returned, and the service they are tied to.
