@@ -83,7 +83,11 @@ To connect the two tenants, the **AAD Tenant Mapping.ps1** PowerShell script mus
     - Your Azure Government tenant ID, which can be found here: https://portal.azure.us/.
 8. When prompted, press Enter to open a web browser and enter your user name and password for your commercial tenant (GlobalAdmin@contoso.onmicrosoft.com).
 9. When prompted, press Enter to open a web browser and enter your credentials for your Azure Government tenant (GlobalAdmin@fabrikam.onmicrosoft.us).
-10. After the mapping completes, you'll see **Added tenant mapping successfully!**
+10. The script will give you the subscription, resource group, virtual network, and subnet for the tenant.
+11. After the mapping completes, you'll see **Added tenant mapping successfully!**
+12. In Intune, choose **Devices** > **Windows 365** > **Azure network connection** > **Create** > **Azure AD Join**.
+13. On the **Network details** page, provide a **Name**. Then, provide the following information that you got from the script: **Subscription**, **Resource group**, **Virtual network**, and **Subnet**.
+14. Choose **Next** > **Create**.
 
 ## Set permissions to upload custom images
 
