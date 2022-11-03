@@ -7,9 +7,9 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 10/12/2022
+ms.date: 10/27/2022
 ms.topic: reference
-ms.service: cloudpc
+ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
 ms.technology:
@@ -49,6 +49,39 @@ Learn what new features are available in Windows 365 Enterprise.
 -->
 
 <!-- ########################## -->
+## Week of October 24, 2022
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Point-in-time restore now generally available<!--37063579-->
+
+Point-in-time restore has moved out of preview and into general availability. For more information, see [Point-in-time restore for Windows 365 Enterprise](restore-overview.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Provisioning
+
+#### New supported Azure region: UAE North<!--41670300-->
+
+A new Azure regions is now supported for Windows 365 Cloud PC provisioning: UAE North.
+
+For more information about supported Azure regions, see [Supported Azure regions for Cloud PC provisioning](requirements.md#supported-azure-regions-for-cloud-pc-provisioning).
+
+<!-- ########################## -->
+## Week of October 17, 2022
+
+<!-- ***********************************************-->
+### Monitor and troubleshoot
+
+#### New Azure Network Connection health check<!--41752775-->
+
+A new check has been added the Azure Network Connection health checks: **UDP connection server reachable**. For more information, see [Azure network connections health checks](health-checks.md).
+
+#### Forensic auditing of Cloud PCs now generally available<!--41237533-->
+
+Forensic auditing has moved out of preview and into general availability. For more information, see [Digital forensics and Windows 365 Enterprise Cloud PCs](digital-forensics.md) and [Place a Cloud PC under review](place-cloud-pc-under-review.md).
+
+<!-- ########################## -->
 ## Week of October 10, 2022
 
 <!-- ***********************************************-->
@@ -56,7 +89,7 @@ Learn what new features are available in Windows 365 Enterprise.
 
 #### Windows 365 app in public preview<!--41161804-->
 
-A new app to sign in to and manage your Windows 365 Cloud PCs is now in public preview. The app provides functionality similar to the windows365.microsoft.com web site for accessing and managing your Cloud PCs. For more information, see [Installing the Windows 365 app](https://support.microsoft.com/topic/cbb0d4d5-69d4-4f00-b050-6dc7a02d02d0).
+A new app to sign in to and manage your Windows 365 Cloud PCs is now in public preview. The app provides functionality similar to the windows365.microsoft.com web site for accessing and managing your Cloud PCs. For more information, see [Installing the Windows 365 app](https://support.microsoft.com/topic/cbb0d4d5-69d4-4f00-b050-6dc7a02d02d0). 
 
 <!-- ***********************************************-->
 ### Device provisioning
@@ -241,7 +274,7 @@ The **Azure network connection** tab has a new health check: **Intune enrollment
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Monitor and troubleshoot
 
-### Forensic auditing of Cloud PCs<!--38726407-->
+#### Forensic auditing of Cloud PCs<!--38726407-->
 
 You can now place a Cloud PC under review. This action starts a process to create a secure snapshot of a Cloud PC. You can then analyze the snapshot using electronic discovery solutions. For more information, see [Digital forensics and Windows 365 Enterprise Cloud PCs](digital-forensics.md) and [Place a Cloud PC under review](place-cloud-pc-under-review.md).
 

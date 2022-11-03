@@ -8,7 +8,7 @@ keywords:
 author: dougeby 
 ms.author: dougeby
 manager: dougeby
-ms.date: 10/18/2022
+ms.date: 10/31/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -44,12 +44,6 @@ This article and the [What's new](whats-new.md) article are updated periodically
 You can use RSS to be notified when this article is updated. For more information, see [How to use the docs](../../use-docs.md#notifications).
 <!-- **RSS feed**: Find out when this article is updated by copying and pasting the following URL into your feed reader: `https://learn.microsoft.com/api/search/rss?search=%22in+development+-+microsoft+intune%22&locale=en-us` -->
 
-<!--
-## What's coming to Intune in the Azure portal 
-## What's coming to Intune apps
-## Notices
--->
-
 <!-- Common categories:  
 ## App management
 ## Device configuration
@@ -59,118 +53,58 @@ You can use RSS to be notified when this article is updated. For more informatio
 ## Intune apps
 ## Monitor and troubleshoot
 ## Role-based access control
-
+## Tenant administration
+## Notices
 -->
 
 <!-- ***********************************************-->
 
 ## App management
 
+### Uninstall Win32 apps in the Company Portal<!-- 5145748 -->  
+Users will be able to uninstall Win32 apps in the Company Portal. If a Win32 app can be uninstalled by the user, the user will be able to select **Uninstall** for the Win32 app in the Company Portal. For more information about Win32 apps, go to [Win32 app management in Microsoft Intune](../apps/apps-win32-app-management.md).
+
+### Configure whether to show apps from Configuration Manager in Windows Company Portal<!-- 9135109 -->  
+In the Intune console, you'll be able to choose whether to show or hide Configuration Manager apps from appearing in the Windows Company Portal. This option will be available in [Intune](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Tenant administration** > **Customization**. Next to **Settings**, select **Edit**. The option to **Show** or **Hide** the **Configuration Manager applications will be located in the **App Sources** section of the pane. For related information about configuring the Company Portal app, see [How to configure the Intune Company Portal apps, Company Portal website, and Intune app](../apps/company-portal-app.md).
+
+
 ### Global quiet time app policy settings<!-- 15424417 -->
-The global quiet time settings will allow you to create policies to schedule quiet time for your end users which will automatically mute Microsoft Outlook email and Teams notifications on iOS/iPadOS and Android platforms. These policies can be used to limit end user notifications received after work hours. When this feature is available, you will be able to find it in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **Quiet Time** > **Policies**.  
+The global quiet time settings will allow you to create policies to schedule quiet time for your end users which will automatically mute Microsoft Outlook email and Teams notifications on iOS/iPadOS and Android platforms. These policies can be used to limit end user notifications received after work hours. When this feature is available, you will be able to find it in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **Quiet Time** > **Policies**.
 
-### Use filters with app configuration profiles for managed devices<!-- 7423842 -->
-You will be able to use filters to refine the assignment scope when deploying app configuration profiles for managed devices.
-You can first create a filter using any of the available properties for iOS and Android. Then, in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) you can assign your managed app configuration profile by selecting **Apps** > **App configuration policies** > **Add** > **Managed devices** and go to the assignment page. After selecting a group, you can refine the applicability of the policy by choosing a filter and deciding to use it in **Include** or **Exclude** mode. For related information about filters, see [Use filters when assigning your apps, policies, and profiles in Microsoft Endpoint Manager](filters.md).
-
-## Device management
-
-### New hardware details available for individual devices running on iOS/iPadOS<!-- 15038076 -->
-Select **Devices** > **All devices** > *select one of your listed devices* and open it's **Hardware** details. The following new details are available in the **Hardware** pane of individual devices:
-
- - **Battery level**: Shows the battery level of the device anywhere between 0 and 100, or defaults to null if the battery level cannot be determined. This is available for devices running iOS/iPadOS 5.0 and later.
-- **Resident users**: Shows the number of users currently on the shared iPad device, or defaults to null if the number of users cannot be determined. This is available for devices running iOS/iPadOS 13.4 and later.
-
-For more information, see [View device details with Microsoft Intune](../remote-actions/device-inventory.md).
-
-Applies to:
-- iOS/iPadOS
-
-### Endpoint security firewall rules support for ICMP type<!-- 5653356 -->
-We’re adding a new setting named **IcmpTypesAndCodes** to the endpoint security firewall rules template for Windows 10. To configure this in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Endpoint security** > **Firewall** > **Create Policy** > Platform: *Windows 10, Windows 11, and Windows Server*  > Profile: *Microsoft Defender Firewall Rules*).
-
-With this new setting you’ll be able to configure inbound and outbound rules for [Internet Control Message Protocol](/windows/security/threat-protection/windows-firewall/create-an-inbound-icmp-rule) (ICMP) as part of a firewall rule.
-
-Applies to:  
-- Windows 10, Windows 11, and Windows Server
-
-<!-- ***********************************************-->
-
-## Device enrollment
-
-### iOS/iPadOS Setup Assistant with modern authentication supports Just in Time Registration (public preview)<!-- 15515188 -->  
-Intune will support Just in Time Registration for iOS/iPadOS enrollment scenarios that use Setup Assistant with modern authentication. Just in Time Registration reduces the number of authentication prompts shown to users throughout the provisioning experience, giving them a more seamless onboarding experience. It eliminates the need to have the Company Portal app for Azure AD registration and compliance checks, while automatically establishing SSO across the device. Just In Time Registration will be available in public preview for devices enrolling through Apple Automated Device Enrollment and running iOS/iPadOS 13.0 or later.
-
-### Windows Autopilot diagnostics will capture ESP failures<!-- 1895390 -->
-Windows Autopilot diagnostics will automatically capture diagnostics about Windows Autopilot failures that occur on the Enrollment Status Page (ESP). Diagnostics will be available to download in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
+### Control the display of Managed Google Play apps<!-- 621615  -->
+You will be able to group Managed Google Play apps into collections and control the order that collections are displayed when selecting apps in Intune. You will also be able to make apps visible via search only. This capability will be available in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **All apps** > **Add** > **Managed Google Play app**.
 
 <!-- ***********************************************-->
 
 ## Device configuration
 
-### New settings for Device Firmware Configuration Interface (DFCI) profiles on Windows devices<!-- 15511597 -->
-You can create a DFCI profile that enables the Windows OS to pass management commands from Intune to UEFI (Unified Extensible Firmware Interface) (**Devices** > **Configuration profiles** > **Create profile** > **Windows 10 and later** for platform > **Templates > Device Firmware Configuration Interface**). 
+### Device Firmware Configuration Interface (DFCI) will support Panasonic devices<!-- 15729353 -->  
+For Windows 10/11 devices, you can create a DFCI profile to manage UEFI (BIOS) settings (**Devices** > **Configuration profiles** > **Create profile** > **Windows 10 and later** for platform > **Templates** > **Device Firmware Configuration Interface** for profile type).
 
-You can use this feature to control BIOS settings. There will be new settings you can configure in the DFCI policy:
+New Panasonic devices running Windows 10/11 will be enabled for DFCI starting Fall 2022. So, admins can create DFCI profiles to manage the BIOS and then deploy the profiles to these Panasonic devices.
 
-- Cameras:
-  - Front camera
-  - Infrared camera
-  - Rear camera
+Contact your device vendor or device manufacturer to ensure you get eligible devices.
 
-- Radios:
-  - WWAN
-  - NFC
-
-- Ports
-  - SD Card
-
-For more information on DFCI profiles, go to [Use Device Firmware Configuration Interface (DFCI) profiles on Windows devices in Microsoft Intune](../configuration/device-firmware-configuration-interface-windows.md) and [DFCI profile settings list](../configuration/device-firmware-configuration-interface-windows-settings.md).
+For more information about DFCI profiles in Intune, go to [Use Device Firmware Configuration Interface (DFCI) profiles on Windows devices in Microsoft Intune](../configuration/device-firmware-configuration-interface-windows.md).
 
 Applies to:
-- Windows 11 on supported UEFI
-- Windows 10 RS5 (1809) and later on supported UEFI
 
-### New settings available in the iOS/iPadOS and macOS Settings Catalog<!-- 15514929 -->
-The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. 
+- Windows 10
+- Windows 11
 
-New settings are available in the Settings Catalog. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can see these settings at **Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type.
+### Login and background item management support on macOS devices using the settings catalog<!-- 15751007 -->  
+On macOS devices, you can open items automatically when users sign in to their macOS devices. For example, you can open apps, documents, and folders.
 
-New settings include:
+In Intune, the settings catalog will include new Service Management settings that can prevent users from disabling the managed login and background items on their devices in System Settings > General > Login Items.
 
-**Networking > Cellular**:
-- Enable XLAT464
+For more information on the settings catalog, go to:
 
-Applies to:
-- iOS/iPadOS
-
-**Privacy > Privacy Preferences Policy Control**:
-- System Policy App Bundles
+- [Use the settings catalog to configure settings](../configuration/settings-catalog.md)
+- [Common tasks you can complete using the Settings Catalog](../configuration/settings-catalog-common-features.md)
 
 Applies to:
-- macOS
 
-**Restrictions**:
-- Allow Rapid Security Response Installation
-- Allow Rapid Security Response Removal
-
-Applies to:
-- iOS/iPadOS
-- macOS
-
-For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
-
-### Filter app and group policy assignments using Windows 11 SE operating system SKUs<!-- 10588651 -->
-When you assign an app or policy, you can filter the assignment using different device properties, such as device manufacturer, operating system SKU, and more.
-
-Two new Windows 11 SE operating system SKU's will added. You'll be able to use these SKUs in your assignment filters to include or exclude Windows 11 SE devices from applying group-targeted policies and applications.
-
-For more information on filters and the device properties you can currently use, go to:
-- [Use filters when assigning your apps, policies, and profiles in Microsoft Endpoint Manager](filters.md)
-- [Device properties, operators, and rule editing when creating filters in Microsoft Endpoint Manager](filters-device-properties.md)
-
-Applies to:
-- Windows 11 SE
+- macOS 13 and newer
 
 ### New password complexity requirements for Android Enterprise 12+ personally owned devices with a work profile<!-- 12436068 -->
 On Android Enterprise 11 and older personally owned devices with a work profile, you can set the **Required password type** and a **Minimum password length** in device configuration profiles and compliance policies.
@@ -201,72 +135,64 @@ Applies to:
 
 <!-- ***********************************************-->
 
+## Device management
+
+### Endpoint security firewall rules support for ICMP type<!-- 5653356 -->
+We’re adding a new setting named **IcmpTypesAndCodes** to the endpoint security firewall rules template for Windows 10. To configure this in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Endpoint security** > **Firewall** > **Create Policy** > Platform: *Windows 10, Windows 11, and Windows Server*  > Profile: *Microsoft Defender Firewall Rules*).
+
+With this new setting you’ll be able to configure inbound and outbound rules for [Internet Control Message Protocol](/windows/security/threat-protection/windows-firewall/create-an-inbound-icmp-rule) (ICMP) as part of a firewall rule.
+
+Applies to:  
+- Windows 10, Windows 11, and Windows Server
+
+<!-- ***********************************************-->
+
 ## Device security
 
-### Grant apps permission on Android Enterprise devices<!-- 12441244 -->
-For Android Enterprise devices, you’ll soon be able to configure certificate profiles to silently grant specific apps access to use the certificate. This expands on the current behavior where a device user must approve the use of a certificate by an application.
+### Microsoft Tunnel for Mobile Application Management for Android (public preview)<!-- 15769204  -->  
+In a a public preview, we’re adding support for Mobile Application Management (MAM) to the Microsoft Tunnel VPN gateway. With this preview for Android devices that have not enrolled with Intune, supported apps will be able to use Microsoft Tunnel to connect to your organization when working with corporate data and resources. This includes VPN gateway support for:  
 
-You’ll be able to choose to grant certificate access silently to specific apps or to require user approval. When configured for specific apps, you’ll then select which apps have this access as part of the profile, while all other apps will continue to require user approval before being able to use the certificate.
+- Secure access to on-prem apps and resources using modern authentication
+- Single Sign On and conditional access.
 
-This support will be added to profiles for SCEP, PKCS, PKCS imported, and Derived Credential certificate profiles.
+To use Tunnel for MAM on an unenrolled device will require the following three profiles:  
 
-Applies to:  
-- Android Enterprise devices that enroll as Fully Managed, Dedicated, and Corporate-Owned work Profile.
+- An App configuration profile for managed apps, to configure Microsoft Defender on devices for use as the Tunnel client app 
+- A second App configuration profile for managed apps, to configure Microsoft Edge to connect to Tunnel.
+- An App protection profile to enable automatic start of the Microsoft Tunnel connection
 
-### Attack surface reduction rule exclusions on a per-rule basis<!-- 13385644 -->
-Attack surface reduction rules provide valuable controls for protecting your devices. Currently, exclusions are only supported for all of the rules that are enabled on the device.
+For information about using Tunnel on enrolled devices, see [Microsoft Tunnel overview](../protect/microsoft-tunnel-overview.md)
 
-With Intune, you’ll soon be able to configure exclusions for your [attack surface reduction rules](../protect/endpoint-security-asr-policy.md) on a per-rule basis. This will allow you to define exclusions for individual rules versus an exclusion that applies to all of the attack surface reduction rules on a device.
+Applies to:
 
-Applies to:  
-- Windows 10/11
-
-### Manage macOS software updates with Intune<!-- 9801186 -->
-You’ll soon be able to use Intune policies to manage macOS software updates for devices that enrolled using Automated Device Enrollment (ADE). The policy will be available in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) at **Devices** > **macOS** > **Update policies for macOS**.
- 
-Supported update types will include:
-- Critical updates
-- Firmware updates
-- Configuration file updates
-- All other updates (OS, built-in apps)
-
-In addition to scheduling when a device updates, you’ll be able to manage behaviors like the following:
-- Download and install: Download or install the update, depending on the current state.
-- Download only: Download the software update without installing it.
-- Install immediately: Download the software update and trigger the restart countdown notification.
-- Notify only:  Download the software update and notify the user through the App Store.
-- Install later: Download the software update and install it at a later time.
-- Not configured: No action taken on the software update. 
-
-For information from Apple about managing macOS software updates, see [Manage software updates for Apple devices - Apple Support](https://support.apple.com/guide/deployment/manage-software-updates-depc4c80847a/web) in the Apple's Platform Deployment documentation.
-Apple maintains a list of security updates at [Apple security updates - Apple Support](https://support.apple.com/en-us/HT201222). 
-
-### Reusable groups of settings for removable storage in Device Control profiles<!-- 7351534 -->
-You’ll soon be able to add reusable groups of settings to your profiles for device control profiles in your attack surface reduction policies. To configure device control profiles, go to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Endpoint security** >**Attack surface reduction** > **Create Policy** > Platform: *Windows 10 and later* > Profile: *Device Control*.
- 
-The reusable groups for device control profiles will include a collection of settings that support managing *read*, *write*, and *execute* access for removable storage. Examples of common scenarios include:
-- Prevent write and execute access to all but allow specific approved USBs
-- Audit write and execute access to all but block specific unapproved USBs
-- Only allow specific user groups to access specific removable storage on a shared PC
-
-Applies to:  
-- Windows 10 or later
-
-### Reusable groups of settings for Microsoft Defender Firewall Rules<!-- 5653346, 6009541 -->
- You’ll soon be able to add reusable groups of settings to your profiles for Microsoft Defender Firewall Rules. The reusable groups are collections of remote IP addresses and FQDNs that you define one time and can then use with one or more firewall rule profiles. You’ll no longer need to reconfigure the same group of IP addresses in each individual profile that might require them.  
-
-Features of the reusable settings groups will include:  
-- Add one or more remote IP addresses.  
-- Add one or more FQDNs that can auto resolve to the remote IP address, or for one or more simple keywords when auto resolve for the group is off.  
-- Use each settings group with one or more firewall rule profiles and the different  profiles can support different access configurations for the group.  
-
-  For example, you can create two firewall rule profiles that reference the same reusable settings group and assign each profile to a different group of devices. The first profile can block access to all the remote IP addresses in the reusable settings group, while the second profile can be configured to allow access.  
-
-- Edits to a settings group that's in use are automatically applied to the Firewall Rules profiles that use that group.  
-  
-Reusable groups will be configured on a new Tab for *Reusable settings* that will be available when you view endpoint security Firewall policy.  In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Endpoint security** > **Firewall**.
+- Android Enterprise
 
 
+<!-- ***********************************************-->
+## Monitor and troubleshoot
+
+#### Review Cloud PC connectivity health checks and errors in Microsoft Endpoint Manager admin center<!-- 13811774  -->  
+You’ll be able to review connectivity health checks and errors in the Microsoft Endpoint Manager admin center to help you understand if your users are experiencing connectivity issues. You’ll also get a troubleshooting tool to help resolve connectivity issues.
+
+<!-- ***********************************************-->
+
+## Tenant administration
+
+### Deliver organizational messages for Windows 11 (public preview)<!-- 15314747 -->  
+
+Deliver branded personalized messages to employees just above their taskbar, in their Notifications, or when they run the Get Started app on Windows 11 devices. Organizational messages are intended to improve employee communication in remote and hybrid-work scenarios, and to help employees adapt to their new roles more quickly, learn more about their organization, and stay informed of new updates and trainings.  
+
+### Access policies for multiple administrative approvals (public preview)<!--9348867   -->
+In a public preview, you'll soon be able to use Intune *access policies* to require that a second administrative account be used to approve a change before the change is applied. This capability is known as multiple administrative approval (MAA). Access policies will be available in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) at **Tenant administration** > **Multi Admin Administration** > **Access policies**.
+
+Access policies can protect a type of resource, like App deployments. Each access policy will include a group of users who are *approvers* for the changes protected by the policy. When a resource like an app deployment configuration is protected by an access policy, any changes that are made to the deployment, including creating, deleting, or modifying an existing deployment won't apply until a member of the approvers group for that access policy reviews and approves that change.
+
+Approvers will also be able to reject requests, and both the individual requesting a change and the approver can provide notes about the change, or why it was approved or rejected.
+
+Access policies will be supported for the following resources:
+
+- **Apps** – Applies to [app deployments](../apps/apps-add.md), but doesn't apply to app protection policies.
+- **Scripts** – Applies to deploying scripts to devices that run [macOS](../apps/macos-shell-scripts.md) or [Windows](../apps/intune-management-extension.md).
 <!-- ***********************************************-->
 
 ## Notices

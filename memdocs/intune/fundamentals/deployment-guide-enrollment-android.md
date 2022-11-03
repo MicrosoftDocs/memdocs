@@ -322,5 +322,6 @@ Your users must do the following steps. For more specific steps, see [enroll the
 
 - [MAM](deployment-guide-enrollment-mamwe.md)
 - [iOS/iPadOS enrollment guide](deployment-guide-enrollment-ios-ipados.md)
+- [Linux enrollment guide](deployment-guide-enrollment-linux.md)
 - [macOS enrollment guide](deployment-guide-enrollment-macos.md)
 - [Windows enrollment guide](deployment-guide-enrollment-windows.md)

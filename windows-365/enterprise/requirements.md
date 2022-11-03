@@ -7,9 +7,9 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 10/03/2022
+ms.date: 10/27/2022
 ms.topic: how-to
-ms.service: cloudpc
+ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
 ms.technology:
@@ -108,15 +108,16 @@ Windows 365 manages the capacity and availability of underlying Azure resources 
 - Australia East
 - Canada Central
 - East Asia
-- Korea Central
 - Europe North
 - Europe West
 - France Central
 - Germany West Central
 - India Central
 - Japan East
+- Korea Central
 - Norway East
 - Switzerland North
+- UAE North
 - UK South
 
 ### [Windows 365 Government](#tab/gov)

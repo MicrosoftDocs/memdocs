@@ -9,7 +9,7 @@ ms.author: erikje
 manager: dougeby
 ms.date: 10/3/2022
 ms.topic: overview
-ms.service: cloudpc
+ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
 ms.technology:
@@ -59,6 +59,7 @@ The following features are not yet supported for Windows 365 GCC and/or GCCH.
 |RDP Shortpath for public networks|![X](./media/manage-rdp-device-restrictions/xmark.png)|![X](./media/manage-rdp-device-restrictions/xmark.png)|
 |Windows 365 System based alerting on Microsoft Endpoint Manager for Cloud PCs|![X](./media/manage-rdp-device-restrictions/xmark.png)|![X](./media/manage-rdp-device-restrictions/xmark.png)|
 |User initiated feedback in End User Portal and Windows 365 Web Client|![X](./media/manage-rdp-device-restrictions/xmark.png)|![X](./media/manage-rdp-device-restrictions/xmark.png)|
+|Resize VM|![X](./media/manage-rdp-device-restrictions/xmark.png)|![X](./media/manage-rdp-device-restrictions/xmark.png)|
 
 ## Next steps
 

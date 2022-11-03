@@ -7,7 +7,7 @@ keywords: what is Intune, mobile endpoint management, mobile application managem
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/12/2022
+ms.date: 10/26/2022
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -36,7 +36,9 @@ As organizations move to support hybrid and remote workforces, they're challenge
 
 To help with these challenges and tasks, use [Microsoft Intune](https://www.microsoft.com/security/business/endpoint-management/microsoft-intune).
 
-Microsoft Intune is a cloud-based endpoint management solution. It manages user access and simplifies app & device management across your many devices, including mobile devices, desktop computers, and virtual endpoints.
+:::image type="content" source="./media/what-is-intune/what-is-intune.png" alt-text="Image that shows features and benefits of Microsoft Intune.":::
+
+Microsoft Intune is a cloud-based endpoint management solution. It manages user access and simplifies app and device management across your many devices, including mobile devices, desktop computers, and virtual endpoints.
 
 You can protect access and data on organization-owned and users personal devices. And, Intune has compliance and reporting features that support a [Zero Trust security model](/security/zero-trust/zero-trust-overview).
 
@@ -170,6 +172,7 @@ For more platform-specific requirements to enroll third party partner devices in
 
 - [Deployment guide: Enroll Android devices in Microsoft Intune](deployment-guide-enrollment-android.md)
 - [Deployment guide: Enroll iOS and iPadOS devices in Microsoft Intune](deployment-guide-enrollment-ios-ipados.md)
+- [Deployment guide: Enroll Linux devices in Microsoft Intune](deployment-guide-enrollment-linux.md)
 - [Deployment guide: Enroll macOS devices in Microsoft Intune](deployment-guide-enrollment-macos.md)
 
 ## Enroll in device management, application management, or both
