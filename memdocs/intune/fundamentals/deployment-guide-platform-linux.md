@@ -28,7 +28,7 @@ ms.collection: M365-identity-device-management
 
 # Deployment guide: Manage Linux devices in Microsoft Intune
 
-Use this guide to set up Linux desktop device management in Microsoft Intune from start-to-finish. We've compiled a list of the preqrequisites and tasks that are required to secure your organization's data and includes how to:
+Use this guide to set up Linux desktop device management in Microsoft Intune from start-to-finish. We've compiled a list of the preqrequisites and tasks that are required to secure data and manage devices, and includes how to:
 
 * Enable Linux device management in Microsoft Intune
 * Prepare users for enrollment
@@ -38,40 +38,42 @@ Use this guide to set up Linux desktop device management in Microsoft Intune fro
 
 ## Prerequisites  
 
-Complete the following prerequisites to enable macOS device management in Intune:      
+Complete the following prerequisites to prepare for device management in Intune:      
 
 * [Add users](users-add.md) and [groups](groups-add.md)
 * [Assign licenses to users](licenses-assign.md) 
 * [Set mobile device management authority](mdm-authority-set.md) 
 * [Have Global Administrator or Intune administrator Azure Active Directory permissions](role-based-access-control.md)  
-* 
 
- For more detailed information about how to do the initial setup, onboard, or move to Microsoft Intune, see the [Intune setup deployment guide](deployment-guide-intune-setup.md).    
+ For more details and recommendations about how to prepare your organization, onboard, or adopt Intune for mobile device management and mobile application management, see the [Intune setup deployment guide](deployment-guide-intune-setup.md).    
 
 ## Plan for your deployment  
 
-Use the [Microsoft Intune planning guide](intune-planning-guide.md) to define your device management goals, use-case scenarios, and requirements. It will also help you plan for rollout, communication, support, testing, and validation. For example, because the Company Portal app for macOS isn't available in the App Store, we recommend having a communication plan so that end users know how to install Company Portal and enroll their devices.    
+Use the [Microsoft Intune planning guide](intune-planning-guide.md) to define your device management goals, use-case scenarios, and requirements. It will also help you plan for rollout, communication, support, testing, and validation. For example, because you don't have to be there when employees and students are enrolling their devices, we recommend having a communication plan so that people know where to find information about installing and using Company Portal and Microsoft Edge.  
+
+## Set up compliance policies  
+
+
 
 ## Enroll devices  
 
-Configure the enrollment methods and experience for company-owned and personal macOS devices. This step ensures that devices receive Intune policies and configurations after they enroll. Intune supports Bring Your Own Device (BYOD) enrollment, Apple Automated Device Enrollment, and direct enrollment for corporate devices. For information about each enrollment method and how to choose one that's right for your organization, see the [macOS device enrollment guide for Microsoft Intune](deployment-guide-enrollment-macos.md). 
- 
+Employees assigned Intune licenses can enroll their personal Linux devices into Microsoft Intune whenever they want. As an Intune administrator, you don't need to do anything to enable enrollment for employees, other than what's described under [Prerequisites](deployment-guide-platform-linux.md#prerequisites). However, it's important to provide them with help resources in case they need guidance during enrollment.  
+
+>[!TIP]
+> If you require device encryption, share that information with your employees prior to device enrollment so that, when possible, they can opt encrypt their device during OS installation. It's easier and faster than encrypting the device after OS installation. Additionally, make your organization's operating system requirements and password complexity requirements easy to find on your website or in an onboarding email so that employees don't have to delay enrollment. 
 
 | Task | Detail | 
 | ---- | ------ | 
-|[Set up enrollment for user-owned (BYOD) devices](../enrollment/macos-enroll.md)| Complete the prerequisites in this article to enable enrollment for user-owned devices. You'll also find enrollment resources and links to share with device users so that they're supported throughout the enrollment experience. This enrollment method is for organizations that have *Bring Your Own Device* (BYOD) policies. BYOD lets people use their personal devices for work-related things. | 
-|[Set up Apple Automated Device Enrollment (ADE)](../enrollment/device-enrollment-program-enroll-macos.md)|Set up an out-of-the-box enrollment experience that automates enrollment on corporate-owned devices purchased through Apple School Manager or Apple Business Manager. This method is ideal for organizations that have a large number of devices to enroll, because it eliminates the need to touch and configure each device individually.  |  
-|[Set up direct enrollment for corporate devices](../enrollment/device-enrollment-direct-enroll-macos.md)| Set up an enrollment experience for corporate-owned devices that are unaffiliated with a single user, like devices used in a shared space or retail setting. Direct enrollment doesn't wipe the device so it's ideal to use when devices don't need access to local user data. You'll need to transfer the enrollment profile to the Mac directly, which requires a USB connection to a Mac computer running Apple Configurator.|  
-|[Add a device enrollment manager](../enrollment/device-enrollment-manager-enroll.md)| People designated as device enrollment managers (DEM) can enroll up to 1,000 corporate-owned mobile devices at a time. DEM accounts are useful in organizations that enroll and prepare devices before handing them out to users. | 
-| [Identify devices as corporate-owned](../enrollment/corporate-identifiers-add.md)| You can assign corporate-owned status to devices to enable more management and identification capabilities in Intune. Corporate-owned status cannot be assigned to devices enrolled through Apple Business Manager. | 
-|[Change device ownership](../enrollment/corporate-identifiers-add.md#change-device-ownership)|After a device has been enrolled, you can change its ownership label in Intune to corporate-owned or personal-owned. This adjustment changes the way you can manage the device.|  
-|[Troubleshoot enrollment problems](/troubleshoot/mem/intune/troubleshoot-device-enrollment-in-intune)|Troubleshoot and find resolutions to problems that occur during enrollment. |
+|[Install Microsoft Intune app for Linux](../user-help/microsoft-intune-app-linux.md)| Employees must install the Microsoft Intune app on their personal device for enrollment. This article describes how to install, update, and remove the Microsoft Intune app for Linux in the Terminal app. | 
+|[Install Microsoft Edge web browser)](https://www.microsoft.com/edge)| To access protected websites and files, employees must have Microsoft Edge web browser, version 102.*X* or later. After they enroll their device, employees can sign into Microsoft Edge with their work account and access websites and files.   |  
+|[Enroll Linux device in Intune](../enrollment/device-enrollment-direct-enroll-macos.md)| This article is for device users and describes how to enroll a device with the Microsoft Intune app, and includes system requirements, prerequisites, and next steps. |  
+|[Check device status and resolve compliance issues](../enrollment/device-enrollment-direct-enroll-macos.md)| The Microsoft Intune app notifies employees when they have a noncompliant setting on their device, and happens as a result of your Intune compliance or conditional access policies. This article is for device users and describes how to find and interpret device status and compliance issues in the app. |  
 
 ## Create compliance rules  
 
-Create compliance policies to define the rules and conditions that users and devices must meet to access your protected resources. This is how you ensure that devices accessing your data meet your standards. Intune marks devices that fall short of your requirements as *non-compliant* and takes action (such as sending the user a notification, restricting access, or wiping the device) according to your configurations.  
+Create compliance policies in Intune to define the rules and conditions that users and devices must meet to access your organization's protected resource. Compliance policies ensure that devices accessing your network meet your standards. Intune marks devices that fall short of your requirements as *non-compliant* and takes action (such as sending the user a notification, restricting access, or wiping the device) according to your configurations.  
 
-If you create a Conditional Access policy, it can work alongside your device compliance results to block access to resources from noncompliant devices. For a detailed explanation about compliance policies and how to get started, see [Use compliance policies to set rules for devices you manage with Intune](../protect/device-compliance-get-started.md).  
+If you create a Conditional Access policy, it can work alongside your device compliance results to block access to resources in the Microsoft Edge web browser. For a detailed explanation about compliance policies and how to get started, see [Use compliance policies to set rules for devices you manage with Intune](../protect/device-compliance-get-started.md).  
 
 | Task | Detail | 
 | ---- | ------ | 
