@@ -66,6 +66,20 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 -->
 
+## Week of November 7, 2022
+
+### Device Configuration
+
+#### User configuration support for Windows 11 multi-session VMs is now generally available
+
+You can now:
+ - Configure user scope policies using **Settings catalog** and assign to groups of users, including ADMX-ingested policies
+ - Configure user certificates and assign to users
+ - Configure PowerShell scripts to install in the user context and assign to users
+
+Applies to:
+ - **Windows 11**
+ - **Virtual machines** created in [Azure Public and Azure Government clouds](/enterprise-mobility-security/solutions/ems-intune-govt-service-description)
 ## Week of October 31, 2022
 
 ### App management
