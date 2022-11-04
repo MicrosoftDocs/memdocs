@@ -68,7 +68,7 @@ This article shows you how to import custom ADMX and ADML files in the Endpoint 
   To remove a dependency prerequisite, delete the associated ADMX file first. Then, delete the dependency prerequisite. In our Mozilla Firefox example, delete `firefox.admx` and then delete `mozilla.admx`.
   
   > [!TIP]
-  > To see any namespace dependencies, open the ADMX file and search for `using prefix`. If you upload an ADMX file without the prerequisites, an error message states if a namespace dependency is missing.
+  > To see any namespace dependencies, open the ADMX file and search for `using prefix`. If you upload an ADMX file without the dependency, an error message will list the missing namespace.
   
 - Some files may require `Windows.admx` as a prerequisite. This file must be uploaded first. In a future release (no ETA), this namespace will be automatically included and eventually not be required.
 
