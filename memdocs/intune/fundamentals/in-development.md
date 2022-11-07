@@ -126,7 +126,7 @@ There is no impact for existing devices with the **Required password type** and 
 
 For more information on the existing settings you can configure, go to:
 
-- [Android Enterprise personally owned devices with a work profile - configuration profile settings list](../configuration/device-restrictions-android-for-work.md#personally-owned-devices-with-a-work-profile)
+- [Android Enterprise personally owned devices with a work profile - configuration profile settings list](../configuration/device-restrictions-android-enterprise-personal.md)
 - [Android Enterprise personally owned devices with a work profile - compliance policy settings list](../protect/compliance-policy-create-android-for-work.md#personally-owned-work-profile)
 
 Applies to:
