@@ -33,7 +33,7 @@ ms.collection:
 
 # Android Enterprise device settings list to allow or restrict features on corporate-owned devices using Intune
 
-This article describes the different settings you can control and resrict on Android Enterprise devices owned by your organization. As part of your mobile device management (MDM) solution, use these settings to allow or disable features, run apps on dedicated devices, control security, and more.
+This article describes the different settings you can control and restrict on Android Enterprise devices owned by your organization. As part of your mobile device management (MDM) solution, use these settings to allow or disable features, run apps on dedicated devices, control security, and more.
 
 This feature applies to:
 
