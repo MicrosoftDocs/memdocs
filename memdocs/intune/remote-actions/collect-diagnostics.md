@@ -42,6 +42,9 @@ The diagnostic collection is stored for 28 days and then deleted. Each device ca
 
 *Collect diagnostics* is also available as a [Bulk device action](../remote-actions/bulk-device-actions.md) that collects diagnostic logs from up to 25 Windows devices at a time.
 
+> [!NOTE]
+> Microsoft personnel may access device diagnostics to assist in troubleshooting and resolving incidents.
+
 ## Requirements
 
 The *Collect diagnostics* remote action is supported for:
