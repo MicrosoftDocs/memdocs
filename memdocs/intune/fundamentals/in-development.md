@@ -126,7 +126,7 @@ There is no impact for existing devices with the **Required password type** and 
 
 For more information on the existing settings you can configure, go to:
 
-- [Android Enterprise personally owned devices with a work profile - configuration profile settings list](../configuration/device-restrictions-android-for-work.md#personally-owned-devices-with-a-work-profile)
+- [Android Enterprise personally owned devices with a work profile - configuration profile settings list](../configuration/device-restrictions-android-enterprise-personal.md)
 - [Android Enterprise personally owned devices with a work profile - compliance policy settings list](../protect/compliance-policy-create-android-for-work.md#personally-owned-work-profile)
 
 Applies to:
@@ -150,7 +150,7 @@ Applies to:
 ## Device security
 
 ### Microsoft Tunnel for Mobile Application Management for Android (public preview)<!-- 15769204  -->  
-In a a public preview, we’re adding support for Mobile Application Management (MAM) to the Microsoft Tunnel VPN gateway. With this preview for Android devices that have not enrolled with Intune, supported apps will be able to use Microsoft Tunnel to connect to your organization when working with corporate data and resources. This includes VPN gateway support for:  
+In a public preview, we’re adding support for Mobile Application Management (MAM) to the Microsoft Tunnel VPN gateway. With this preview for Android devices that have not enrolled with Intune, supported apps will be able to use Microsoft Tunnel to connect to your organization when working with corporate data and resources. This includes VPN gateway support for:  
 
 - Secure access to on-prem apps and resources using modern authentication
 - Single Sign On and conditional access.
