@@ -150,7 +150,7 @@ Applies to:
 ## Device security
 
 ### Microsoft Tunnel for Mobile Application Management for Android (public preview)<!-- 15769204  -->  
-In a a public preview, we’re adding support for Mobile Application Management (MAM) to the Microsoft Tunnel VPN gateway. With this preview for Android devices that have not enrolled with Intune, supported apps will be able to use Microsoft Tunnel to connect to your organization when working with corporate data and resources. This includes VPN gateway support for:  
+In a public preview, we’re adding support for Mobile Application Management (MAM) to the Microsoft Tunnel VPN gateway. With this preview for Android devices that have not enrolled with Intune, supported apps will be able to use Microsoft Tunnel to connect to your organization when working with corporate data and resources. This includes VPN gateway support for:  
 
 - Secure access to on-prem apps and resources using modern authentication
 - Single Sign On and conditional access.
