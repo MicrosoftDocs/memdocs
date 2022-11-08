@@ -149,11 +149,12 @@ Complete these steps to configure Just in Time (JIT) Registration in Intune for 
      >The Company Portal is still sent to devices as a required app, even though it isn't required for Azure AD registration or compliance. Device users can use the Company Portal app to [gather and upload logs](../user-help/send-logs-to-microsoft-ios.md) if they experience issues in the app.   
 
 ### Best practices for SSO configuration   
-To make the experience easier for device users, we recommend adding all Microsoft Office apps you want the SSO extension to apply to. The user's first sign-in has to happen in an app that's configured with the SSO extension. Otherwise, Azure AD registration can't be completed. For example, if you only add Microsoft Teams, it will be the only app that can initiate Azure AD registration with the SSO extension. In that scenario:     
-    1. The device user tries to sign into a different app first, such as Microsoft Outlook.
-    2. Conditional Access blocks the user from signing in.  
+To make the experience easier for device users, we recommend adding all Microsoft Office apps you want the SSO extension to apply to. The user's first sign-in has to happen in an app that's configured with the SSO extension. Otherwise, Azure AD registration can't be completed. For example, if you only add Microsoft Teams, it will be the only app that can initiate Azure AD registration with the SSO extension. In that scenario:  
 
- After the user signs in to the appropriate app, SSO signs the user into all apps that are a part of the SSO extension policy. At this point, the device user can manually sign into apps that that don't use the SSO extension.  
+   1. The device user tries to sign into a different app first, such as Microsoft Outlook.  
+   2. Conditional Access blocks the user from signing in.  
+    
+After the user signs in to the appropriate app, SSO signs the user into all apps that are a part of the SSO extension policy. At this point, the device user can manually sign into apps that that don't use the SSO extension.  
 
 ### Example of successful authentication  
 The following sequence of events describes an example of what a successful authentication looks like with JIT Registration for Setup Assistant with modern authentication. Your organization's experience may be different depending on your automated device enrollment configurations.    
