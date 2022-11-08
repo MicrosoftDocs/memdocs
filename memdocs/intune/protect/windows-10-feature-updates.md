@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/02/2022
+ms.date: 11/15/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -72,6 +72,19 @@ The following are prerequisites for Intune's Feature updates for Windows 10 and 
   - Microsoft 365 Business Premium
 
   *Review your subscription details for applicability to Windows 11.*
+
+   Beginning in November of 2022, several capabilities for feature updates require a license to use Windows Update for Business deployment service (WUfB DS). Previously some of these capabilities have been in public preview or available without a WUfB DS license.  
+
+  | Capability       | Requires license for Windows Update for Business deployment service  |
+  |------------------|-----------------------------|
+  | Create New Feature Update Policy   | No        |
+  | Gradual Rollout settings           | **Yes**   |
+  | Start Update Immediately or on a Specified Day | No |
+  | View Reports                       | No        |
+  | Intelligent Rollout                | **Yes**   |
+  | Likely Safeguard Holds             | **Yes**   |
+
+  If you’re blocked when creating new policies for capabilities that require WUfB DS and you get your licenses to use WUfB through an Enterprise Agreement (EA), contact the source of your licenses such as your Microsoft account team or the partner who sold you the licenses. The account team or partner can confirm that your tenants licenses meet the WUfB DS license requirements.  
 
 - Devices must:  
   - Run a version of Windows 10/11 that remains in support.
