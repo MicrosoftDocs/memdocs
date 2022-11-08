@@ -56,6 +56,8 @@ For more information, see [Updates and servicing](../../servers/manage/updates.m
 
 - `sccmconnected-a01.cloudapp.net`  
 
+- `definitionupdates.microsoft.com`
+
 - `configmgrbits.azureedge.net`
 
     > [!IMPORTANT]
