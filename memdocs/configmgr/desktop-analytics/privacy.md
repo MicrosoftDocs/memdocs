@@ -83,7 +83,7 @@ For more information about related privacy aspects, see the following articles:
 
 - [Diagnostic Data Viewer overview](/windows/privacy/diagnostic-data-viewer-overview)
 
-- [Licensing terms and documentation](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=31)
+- [Licensing terms and documentation](hhttps://www.microsoft.com/licensing/terms)
 
 - [Log Analytics data security](/azure/azure-monitor/logs/data-security)
 
