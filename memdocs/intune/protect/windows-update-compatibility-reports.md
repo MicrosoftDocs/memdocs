@@ -171,7 +171,7 @@ For more information about a specific compatibility risk, including which device
 
 ### Issue descriptions
 
-We use  information from the Microsoft app compatibility database to describe any existing compatibility issues for publicly available applications from Microsoft or other publishers:
+We use information from the Microsoft app compatibility database to describe any existing compatibility issues for publicly available applications from Microsoft or other publishers:
 
 #### Application is removed during upgrade
 
@@ -183,15 +183,15 @@ Windows can partially or fully remove these assets:
 - Full removal: Windows setup completely removes the app from the device during upgrade.
 - Partial removal: Windows setup partially removes the app from the device. You need to manually uninstall it after you upgrade Windows.
 
-In both the cases, after you upgrade Windows, the user can't use the app.
+In both the cases, after you upgrade Windows, you can't use the app.
 
 #### Blocking upgrade
 
-Windows detected blocking issues, and can't remove the application during upgrade. It may not work on the new OS version. Before upgrading, remove the application. Reinstall and test it on the new OS version.
+Windows detected blocking issues, and can't remove the application during upgrade. It may not work on the new OS version. Before you upgrade, remove the application, reinstall and test it on the new OS version.
 
 #### Blocking upgrade, but can be reinstalled after upgrading
 
-The application is compatible with the new OS version, but won't migrate. Remove the application before upgrading Windows. Reinstall it on the new OS version.
+The application is compatible with the new OS version, but won't migrate. Remove the application before upgrading Windows and then reinstall the application on the new OS version.
 
 #### Blocking upgrade, update application to newest version
 
@@ -215,7 +215,7 @@ Windows will migrate the application, but it detected issues that may impact the
 
 #### May block upgrade, test application
 
-Windows detected issues that may interfere with the upgrade, but need further investigation. Test the application's behavior during upgrade. If it blocks the upgrade, remove it before upgrading. Then reinstall it and test on the new OS version.
+Windows detected issues that may interfere with the upgrade, but needs further investigation. Test the application's behavior during upgrade. If it blocks the upgrade, remove it before upgrading. Then reinstall and test it on the new OS version.
 
 #### Multiple
 
@@ -229,18 +229,17 @@ The application is compatible with the new OS version, but you need to reinstall
 
 The currently installed version of a driver won't migrate to the new OS version. 
 
-- The driver won't migrate to the new OS version and Windows doesn't have  a compatible version. In this case, we recommend checking with the independent hardware vendor (IHV) who manufactures the driver, or the original equipment manufacturer (OEM) who provided the device.
+- The driver won't migrate to the new OS version and Windows doesn't have a compatible version. In this case, we recommend checking with the independent hardware vendor (IHV) who manufactures the driver, or the original equipment manufacturer (OEM) who provided the device.
 - A new driver will be installed during upgrade, and a newer version may be available from Windows Update. If the computer automatically receives updates from Windows Update, no action is required. Otherwise, import a new driver from Windows Update after you upgrade Windows.
 
 #### Safeguards
 
 <!-- 5746559 -->
 
-When an issue may result in a Windows client feature update to fail or rollback, we may apply safeguard holds to prevent affected devices from installing the update in order to safeguard them from these experiences. We remove these holds once a fix is found and verified. To get additional information about safeguard holds in place, see the [Windows release health](/windows/release-health/) page under **Known issues** correspoinding to the relevant release.
+When an issue may result in a Windows client feature update to fail or rollback, we may apply safeguard holds to prevent affected devices from installing the update in order to safeguard them from these experiences. We remove these holds once a fix is found and verified. To get additional information about safeguard holds in place, see the [Windows release health](/windows/release-health/) page under **Known issues** corresponding to the relevant release.
 
-    > [!NOTE]
-    > The safeguard entries aren't a real asset that's installed on your devices. It's a placeholder to help identify apps or drivers in your environment with the safeguard compatibility tag.
-
+> [!NOTE]
+> The safeguard entries aren't a real asset that's installed on your devices. It's a placeholder to help identify apps or drivers in your environment with the safeguard compatibility tag.
 
 ## About reporting data latency
 
