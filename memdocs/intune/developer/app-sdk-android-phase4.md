@@ -378,17 +378,14 @@ This will invoke `publish()` on the application handler for every log message.
 ```java
 /**
  - Global log handler that enables fine grained PII filtering within MAM logs.  
- *
  - To start using this you should build your own log handler and add it via
  - MAMComponents.get(MAMLogHandlerWrapper.class).addHandler(myHandler, false);  
- *
  - You may also remove the handler entirely via
  - MAMComponents.get(MAMLogHandlerWrapper.class).removeHandler(myHandler);
  */
 public interface MAMLogHandlerWrapper {
     /**
      - Add a handler, PII can be toggled.
-     *
      - @param handler handler to add.
      - @param wantsPII if PII is desired in the logs.    
      */
@@ -396,7 +393,6 @@ public interface MAMLogHandlerWrapper {
 
     /**
      - Remove a handler.
-     *
      - @param handler handler to remove.
      */
     void removeHandler(final Handler handler);
@@ -485,7 +481,7 @@ For these tests:
 | Copy text | "Restrict cut, copy and paste between other apps" set to "Policy managed apps" | 0. If your app doesn't have any text to copy, skip. <br> 1. Navigate to all pages in your app that have copyable text. <br> 2. Copy text. <br> 3. Switch to the unmanaged app. <br> 4. Attempt to paste in the unmanaged app. <br> 5. Confirm the paste is blocked. <br> 6. Navigate to the other managed app. <br> 7. Attempt to paste in the managed app. <br> 8. Confirm the paste is allowed. |
 | Paste text | "Restrict cut, copy and paste between other apps" set to "Policy managed apps" | 0. If your app doesn't have any text inputs to paste in, skip. <br> 1. Switch to the unmanaged app. <br> 2. Copy text from the unmanaged app. <br> 3. Navigate to all pages in your app that have text inputs. <br> 5. Attempt to paste from the unmanaged app. <br> 5. Confirm the paste is blocked. <br> 6. Switch to the other managed app. <br> 7. Copy text from the other managed app. <br> 7. Navigate to all pages in your app that have text inputs. <br> 8. Attempt to paste from the other managed app. <br> 9. Confirm the paste is allowed. |
 | Printing | "Printing Org data" set to "Block" | 0. If your app doesn't have any pages or documents that can be printed, skip. <br> 1. Navigate to all pages in your app that invoke Android's print function. <br> 2. Attempt to print from each page. <br> 3. Confirm that printing is blocked. |
-| Managed browser | "Restrict web content transfer with other apps" set to "Microsoft Edge" | 0. If your app doesn't render weblinks, skip. <br> 1. Navigate to all pages in your app that can display weblinks or have text input that render into clickable weblinks. <br> 2. For each page, select on the weblink. <br> 3. Confirm that you are prompted to install Microsoft Edge and the weblink doesn't open in another browser.  |
+| Managed browser | "Restrict web content transfer with other apps" set to "Microsoft Edge" | 0. If your app doesn't render weblinks, skip. <br> 1. Navigate to all pages in your app that can display weblinks or have text input that render into clickable weblinks. <br> 2. For each page, select the weblink. <br> 3. Confirm that you are prompted to install Microsoft Edge and the weblink doesn't open in another browser.  |
 | Restricted keyboard | "Approved keyboards" set to "Required" <br> "Select keyboards to approve" set to just a keyboard package your device doesn't currently have installed | 0. If your app doesn't have any text inputs, skip. <br> 1. Navigate to all pages in your app that have text inputs. <br> 2. Select the text input to bring up the device keyboard. <br> 3. Confirm that you are prompted to install the configured approved keyboard and the current device keyboard doesn't open. |
 
 #### Data Transfer Tests
@@ -565,7 +561,7 @@ If this former isn't called at the right time and/or the latter didn't properly 
 Finally, either look in the logs (or debugging) for the registration result code or explicitly call `getRegisteredAccountStatus` on the account. 
 Codes like NOT_LICENSED can indicate configuration problems with the test account.
 
-#### I didn't see the Get Access screen after logging in (step 10).
+#### I did not see the Get Access screen after logging in (step 10).
 
 If the Company Portal wasn't previously installed, you may need to resume or fully restart your application to see the Get Access screen and have policy properly enforced. 
 This is an expected result based on how SDK-integrated apps leverage code inside the Company Portal app.
@@ -573,7 +569,7 @@ This is an expected result based on how SDK-integrated apps leverage code inside
 If you still don't see the Get Access screen, even after restarting your app and logging in again, the SDK may be failing to either enroll the account or retrieve policy for the account. 
 Double check your source code's implementation of the `MAMServiceAuthenticationCallback`.
 
-#### I didn't see the screen to set or enter an app PIN after logging in (step 11).
+#### I did not see the screen to set or enter an app PIN after logging in (step 11).
 
 Are there other SDK-integrated applications on your test device? 
 The app PIN is shared between all managed apps, and the SDK has a global timer to prevent end users from being prompted for the PIN on every managed app launch or resume.
@@ -604,7 +600,7 @@ If policy is still enforced after logging out, it's likely the account wasn't pr
 
 Following the [Data Protection Tests] steps above, you may run into the following unexpected behaviors:
 
-#### My app isn't receiving or enforcing any policies
+#### My app is not receiving or enforcing any policies
 
 First, confirm that the App Protection Policy is targeted to a group containing your test account.
 See [How to validate your app protection policy setup in Microsoft Intune] for details.
@@ -621,7 +617,7 @@ Check the client [Diagnostics Information] to confirm the SDK has received the c
 
 Next, if policy is configured and retrieved correctly, check if *any- policies are being enforced: [My app isn't receiving or enforcing any policies].
 
-#### My app can't share data with another managed app
+#### My app cannot share data with another managed app
 
 Confirm the App Protection Policy settings targeted to both your app *and the other managed app*.
 It is recommended to have the same policy target both apps.
@@ -636,7 +632,7 @@ Check the client [Diagnostics Information] to confirm the SDK has received the c
 
 Next, if policy is configured and retrieved correctly, check if *any- policies are being enforced: [My app isn't receiving or enforcing any policies].
 
-#### My app can't receive data from another managed app
+#### My app cannot receive data from another managed app
 
 Confirm the App Protection Policy settings targeted to both your app *and the other managed app*.
 It is recommended to have the same policy target both apps.
