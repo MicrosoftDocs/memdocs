@@ -132,12 +132,12 @@ Complete these steps to configure Just in Time (JIT) Registration in Intune for 
 3. For **SSO app extension type**, select **Microsoft Azure AD**.
 4. Add the [app bundle IDs](../configuration/bundle-ids-built-in-ios-apps.md) for the apps using single sign-on (SSO). Add all Office apps you want the extension to apply to, because they aren't automatically added. 
 
-    For best practices and important considerations, see [Best practices for SSO configuration](automated-device-enrollment-authentication.md#best-practices-for-sso-configuration) (in this article).  
+    For best practices and important considerations, see [Best practices for SSO configuration](automated-device-enrollment-authentication.md#best-practices-for-sso-configuration) (in this article). Make sure that you do not have any trailing space(s) before or after the value and key, otherwise JIT registration won't work.   
 5. Under **Additional configuration**, add the required key value pair:  
     * **Key**: device_registration
     * **Type**: String
     * **Value**: {{DEVICEREGISTRATION}}
-4. (Recommended) Add the key value pair that enables SSO in the Safari browser for all apps in the policy: 
+4. (Recommended) Add the key value pair that enables SSO in the Safari browser for all apps in the policy. Make sure that you do not have any trailing space(s) before or after the value and key, otherwise JIT registration won't work.  
     * **Key**: browser_sso_interaction_enabled
     * **Type**: Integer
     * **Value**: 1
