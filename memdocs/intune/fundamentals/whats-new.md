@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/02/2022
+ms.date: 11/09/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -67,6 +67,11 @@ You can use RSS to be notified when this page is updated. For more information, 
 -->
 
 ## Week of November 7, 2022
+
+### App management
+
+#### Ending support for Windows Information Protection<!-- 15991481 -->
+Windows Information Protection (WIP) policies without enrollment is being deprecated. You can no longer create new WIP policies without enrollment. Until December of 2022, you will continue to be able to modify existing policies until the deprecation of the *without enrollment* scenario is complete. For related information, go to [Plan for Change: Ending support for Windows Information Protection](../fundamentals/whats-new.md#plan-for-change-ending-support-for-windows-information-protection).
 
 ### Device Configuration
 
