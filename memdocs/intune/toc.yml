@@ -84,16 +84,16 @@ items:
         - name: Enroll Linux devices in Microsoft Intune
           href: ./fundamentals/deployment-guide-enrollment-linux.md
 
-      - name: Migrate to Microsoft Intune (need to update section)
-        items: 
-        - name: Overview
-          href: ./fundamentals/migration-guide.md
-        - name: Migrate from Basic Mobility and Security
-          href: ./fundamentals/migrate-to-intune.md
-        - name: Device and app management
-          href: ./fundamentals/migration-guide-configure-policies.md
-        - name: App protection
-          href: ./fundamentals/migration-guide-app-protection-policies.md
+    - name: Migrate to Microsoft Intune (need to update section)
+      items: 
+      - name: Overview
+        href: ./fundamentals/migration-guide.md
+      - name: Migrate from Basic Mobility and Security
+        href: ./fundamentals/migrate-to-intune.md
+      - name: Device and app management
+        href: ./fundamentals/migration-guide-configure-policies.md
+      - name: App protection
+        href: ./fundamentals/migration-guide-app-protection-policies.md
 
   - name: Scenarios
     items: 
