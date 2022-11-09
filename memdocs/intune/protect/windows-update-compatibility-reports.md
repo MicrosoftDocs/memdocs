@@ -169,6 +169,78 @@ For more information about a specific compatibility risk, including which device
 - **Overview** - A summary of the compatibility risk, including asset details and the compatibility assessment. When available, the **Guidance** section provides recommended actions to mitigate the compatibility risk.
 - **Affected devices** - A table of the devices that may be impacted by this compatibility risk.
 
+### Issue descriptions
+
+We use information from the Microsoft app compatibility database to describe any existing compatibility issues for publicly available applications from Microsoft or other publishers:
+
+#### Application is removed during upgrade
+
+Windows detected compatibility issues with an application. The application won't migrate to the new OS version. No action is required for the upgrade to continue. Install a compatible version of the application on the new OS version.
+
+<!-- 3594545 -->
+Windows can partially or fully remove these assets:
+
+- Full removal: Windows setup completely removes the app from the device during upgrade.
+- Partial removal: Windows setup partially removes the app from the device. You need to manually uninstall it after you upgrade Windows.
+
+In both the cases, after you upgrade Windows, you can't use the app.
+
+#### Blocking upgrade
+
+Windows detected blocking issues, and can't remove the application during upgrade. It may not work on the new OS version. Before you upgrade, remove the application, reinstall and test it on the new OS version.
+
+#### Blocking upgrade, but can be reinstalled after upgrading
+
+The application is compatible with the new OS version, but won't migrate. Remove the application before upgrading Windows and then reinstall the application on the new OS version.
+
+#### Blocking upgrade, update application to newest version
+
+The existing version of the application isn't compatible with the new OS version and won't migrate. A compatible version of the application is available. Update the application before upgrading.
+
+#### Disk encryption blocking upgrade
+
+The application's encryption features block the upgrade. Disable the encryption feature before you upgrade Windows and enable it after the upgrade.
+
+#### Doesn't work with new OS, but won't block upgrade
+
+The application isn't compatible with the new OS version, but won't block the upgrade. No action is required for the upgrade to continue. Install a compatible version of the application on the new OS version.
+
+#### Doesn't work with new OS, and will block upgrade
+
+The application isn't compatible with the new OS version and will block the upgrade. Remove the application before upgrading. A compatible version of the application may be available.
+
+#### Evaluation may be required on new OS
+
+Windows will migrate the application, but it detected issues that may impact the app's performance on the new OS version. No action is required for the upgrade to continue. Test the application on the new OS version.
+
+#### May block upgrade, test application
+
+Windows detected issues that may interfere with the upgrade, but needs further investigation. Test the application's behavior during upgrade. If it blocks the upgrade, remove it before upgrading. Then reinstall and test it on the new OS version.
+
+#### Multiple
+
+Multiple issues affect the application. 
+
+#### Reinstall application after upgrading
+
+The application is compatible with the new OS version, but you need to reinstall it after you upgrade Windows. The upgrade process removes the application. No action is required for the upgrade to continue. Reinstall the application on the new OS version.
+
+#### Driver won't migrate to new OS
+
+The currently installed version of a driver won't migrate to the new OS version. 
+
+- The driver won't migrate to the new OS version and Windows doesn't have a compatible version. In this case, we recommend checking with the independent hardware vendor (IHV) who manufactures the driver, or the original equipment manufacturer (OEM) who provided the device.
+- A new driver will be installed during upgrade, and a newer version may be available from Windows Update. If the computer automatically receives updates from Windows Update, no action is required. Otherwise, import a new driver from Windows Update after you upgrade Windows.
+
+#### Safeguards
+
+<!-- 5746559 -->
+
+When an issue may result in a Windows client feature update to fail or rollback, we may apply safeguard holds to prevent affected devices from installing the update in order to safeguard them from these experiences. We remove these holds once a fix is found and verified. To get additional information about safeguard holds in place, see the [Windows release health](/windows/release-health/) page under **Known issues** corresponding to the relevant release.
+
+> [!NOTE]
+> The safeguard entries aren't a real asset that's installed on your devices. It's a placeholder to help identify apps or drivers in your environment with the safeguard compatibility tag.
+
 ## About reporting data latency
 
 The data source for these reports is [Windows diagnostic data](/windows/privacy/configure-windows-diagnostic-data-in-your-organization). Data typically uploads from enrolled devices once per day and is then processed in batches before being made available in Intune. The maximum end-to-end latency is approximately 52 hours.
@@ -257,6 +329,10 @@ When report data is exported to a .csv file, the exported data doesn't use the f
 
 > [!NOTE]  
 > **Guidance** information is not included in the .csv export file. The mapping table above includes **Guidance** data for each **Issue** type.
+
+## See also
+
+The FastTrack Center Benefit for Windows provides access to **Desktop App Assure**. This benefit is a service designed to address issues with Windows 10/11 and Microsoft 365 Apps for enterprise compatibility. For more information, see [Desktop App Assure](/fasttrack/win-10-app-assure).
 
 ## Next step
 
