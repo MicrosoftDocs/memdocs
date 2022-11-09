@@ -78,6 +78,8 @@ There are two ways to browse and approve Managed Google Play store apps with Int
 4. Click **Select**. The **Managed Google Play** app store is displayed.
 
     > [!NOTE]
+    > You can create an app collection to organize apps and control the order that collections are displayed for your organization. To create a collection, select **Organize apps** > **Create a collection**. You can also make apps visible via search only.
+    >
     > Your Intune tenant account must be connected to your Android Enterprise account to browse Managed Google Play store apps. For more information, see [Connect your Intune account to your Managed Google Play account](../enrollment/connect-intune-android-enterprise.md).
 
 5. Select an app to view the app details.
