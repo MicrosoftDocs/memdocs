@@ -71,7 +71,7 @@ The following are requirements to qualify for installing expedited quality updat
 
 **Licensing**:
 
-In addition to a license for Intune, your organization must have one of the following subscriptions:
+In addition to a license for Intune, your organization must have one of the following subscriptions that include a license for Windows Update for Business deployment service:
 
 - Windows 10/11 Enterprise E3 or E5 (included in Microsoft 365 F3, E3, or E5)
 - Windows 10/11 Education A3 or A5 (included in Microsoft 365 A3 or A5)
