@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Use custom compliance settings in Microsoft Intune
-description: Use JSON files and discovery scripts to define and discover custom settings for device compliance policies in Intune.
+title: Use custom compliance settings for Linux and Windows devices in Microsoft Intune
+description: Manage custom compliance settings for Linux and Windows devices by using JSON files and discovery scripts in Intune.
 keywords:
 author: brenduns
 ms.author: brenduns
@@ -27,9 +27,9 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# Use custom compliance settings with Intune
+# Use custom compliance policies and settings for Linux and Windows devices with Microsoft Intune
 
-To expand on Intune’s built-in device compliance options, you can add custom compliance settings to compliance policies for managed devices. Custom settings provide flexibility to base compliance on the settings that are available on a device without having to wait for Intune to add these settings.
+Expanding on Intune’s built-in device compliance options, use policies for custom compliance settings for managed Linux and Windows devices. Custom settings provide flexibility to base compliance on the settings that are available on a device without having to wait for Intune to add these settings.
 
 This feature applies to:
 

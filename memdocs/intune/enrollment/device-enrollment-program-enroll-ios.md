@@ -75,11 +75,14 @@ Intune also supports Just in Time Registration for Setup Assistant with modern a
   > [!IMPORTANT]
   > JIT Registration is in public preview. For more information, see [Public preview in Microsoft Intune](../fundamentals/public-preview.md).  
 
+> [!IMPORTANT]
+  > JIT Registration is not supported for GCC High and cloud tenants.   
+
 Setup Assistant with modern authentication is supported on devices running iOS/iPadOS 13.0 and later. Older iOS/iPadOS devices given this profile will instead use Setup Assistant (legacy) for authentication.  
 
 For more information about your authentication options, see [Authentication methods for automated device enrollment](automated-device-enrollment-authentication.md).  
 
-### What is supervised mode?   
+### What is supervised mode?  
 Supervised mode provides more management control over corporate-owned devices, so you can do things like block screen captures and restrict AirDrop. 
 
 Corporate-owned devices running iOS/iPadOS 11+ and enrolled via automated device enrollment should always be in supervised mode, which you can turn on in the enrollment profile. For more information about supervised mode, see [Turn on iOS/iPadOS supervised mode](../remote-actions/device-supervised-mode.md). Microsoft Intune ignores the *is_supervised* flag for devices running iOS/iPadOS 13.0 and later because these devices are automatically put in supervised mode at the time of enrollment. 

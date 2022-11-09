@@ -88,7 +88,7 @@ This article shows you how to create a device restrictions profile. You can also
 
     - [Android device administrator](device-restrictions-android.md)
     - [Android (AOSP)](device-restrictions-android-aosp.md)
-    - [Android Enterprise](device-restrictions-android-for-work.md)
+    - [Android Enterprise corporate-owned devices](device-restrictions-android-for-work.md) and [BYOD personally owned devices](device-restrictions-android-enterprise-personal.md)
     - [iOS/iPadOS](device-restrictions-ios.md)
     - [macOS](device-restrictions-macos.md)
     - [Windows 8.1](device-restrictions-windows-8-1.md)
