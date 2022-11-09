@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/15/2022
+ms.date: 06/02/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -65,27 +65,13 @@ When a device receives a policy for Feature updates:
 
 The following are prerequisites for Intune's Feature updates for Windows 10 and later:
 
-- In addition to a license for Intune, your organization must have one of the following subscriptions which include a license for Windows Update for Business deployment service:
-
+- In addition to a license for Intune, your organization must have one of the following subscriptions:
   - Windows 10/11 Enterprise E3 or E5 (included in Microsoft 365 F3, E3, or E5)
   - Windows 10/11 Education A3 or A5 (included in Microsoft 365 A3 or A5)
   - Windows 10/11 Virtual Desktop Access (VDA) per user
   - Microsoft 365 Business Premium
 
   *Review your subscription details for applicability to Windows 11.*
-
-   Beginning in November of 2022, the Windows Update for Business deployment service (WUfB DS) license will be checked and enforced for several feature update capabilities.
-
-  | Capability       | Requires license for Windows Update for Business deployment service  |
-  |------------------|-----------------------------|
-  | Create New Feature Update Policy   | No        |
-  | Gradual Rollout settings           | **Yes**   |
-  | Start Update Immediately or on a Specified Day | No |
-  | View Reports                       | No        |
-  | Intelligent Rollout                | **Yes**   |
-  | Likely Safeguard Holds             | **Yes**   |
-
-  If you’re blocked when creating new policies for capabilities that require WUfB DS and you get your licenses to use WUfB through an Enterprise Agreement (EA), contact the source of your licenses such as your Microsoft account team or the partner who sold you the licenses. The account team or partner can confirm that your tenants licenses meet the WUfB DS license requirements.  
 
 - Devices must:  
   - Run a version of Windows 10/11 that remains in support.
