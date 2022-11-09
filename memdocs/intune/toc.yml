@@ -76,7 +76,7 @@ items:
         - name: Enroll Windows devices in Microsoft Intune
           href: ./fundamentals/deployment-guide-enrollment-windows.md
         - name: Enroll Android devices in Microsoft Intune
-          href: ./fundamentals/deployment-guide-enrollment.md
+          href: ./fundamentals/deployment-guide-enrollment-android.md
         - name: Enroll iOS and iPadOS devices in Microsoft Intune
           href: ./fundamentals/deployment-guide-enrollment-ios-ipados.md
         - name: Enroll macOS devices in Microsoft Intune
@@ -84,10 +84,10 @@ items:
         - name: Enroll Linux devices in Microsoft Intune
           href: ./fundamentals/deployment-guide-enrollment-linux.md
     
-  - name: Solutions and scenarios
+  - name: Scenarios
     items: 
     - name: Scenarios overview
-      
+      href: ./scenarios/scenario-overview.md
     - name: Guided scenarios
       items: 
       - name: Guided scenarios overview
@@ -172,7 +172,7 @@ items:
           href: ./fundamentals/end-user-apps-windows.md
 
 
-      - name: Set up Intune (change name to something else)
+      - name: Intune tenant administration (change name to something else?)
         items:
         - name: Sign in to Intune
           href: ./fundamentals/account-sign-up.md
