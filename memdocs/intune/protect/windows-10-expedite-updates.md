@@ -75,8 +75,17 @@ In addition to a license for Intune, your organization must have one of the foll
 
 - Windows 10/11 Enterprise E3 or E5 (included in Microsoft 365 F3, E3, or E5)
 - Windows 10/11 Education A3 or A5 (included in Microsoft 365 A3 or A5)
-- Windows 10/11 Virtual Desktop Access (VDA) per user
+- Windows Virtual Desktop Access E3 or E5
 - Microsoft 365 Business Premium
+
+Beginning in November of 2022, the Windows Update for Business deployment service (WUfB DS) license will be checked and enforced for several feature update capabilities.
+
+| Capability       | Requires license for Windows Update for Business deployment service  |
+|------------------|-----------------------------|
+| Create New Expedited Update Policy | **Yes**   |
+| View Reports                       | No        |
+
+If you’re blocked when creating new policies for capabilities that require WUfB DS and you get your licenses to use WUfB through an Enterprise Agreement (EA), contact the source of your licenses such as your Microsoft account team or the partner who sold you the licenses. The account team or partner can confirm that your tenants licenses meet the WUfB DS license requirements. See [Enable subscription activation with an existing EA](/windows/deployment/deploy-enterprise-licenses#enable-subscription-activation-with-an-existing-ea).
 
 **Supported Windows 10/11 versions**:
 
@@ -88,8 +97,9 @@ Only update builds that are generally available are supported. Preview builds, i
 
 - Professional
 - Enterprise
-- Pro Education
 - Education
+- Pro Education
+- Pro for Workstations
 
 **Devices must**:
 
