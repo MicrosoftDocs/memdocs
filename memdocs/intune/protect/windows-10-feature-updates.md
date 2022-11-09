@@ -73,7 +73,7 @@ The following are prerequisites for Intune's Feature updates for Windows 10 and 
 
   *Review your subscription details for applicability to Windows 11.*
 
-   Beginning in November of 2022, several capabilities for feature updates require a license to use Windows Update for Business deployment service (WUfB DS). Previously some of these capabilities have been in public preview or available without a WUfB DS license.  
+   Beginning in November of 2022, the Windows Update for Business deployment service (WUfB DS) license will be checked and enforced for several feature update capabilities.
 
   | Capability       | Requires license for Windows Update for Business deployment service  |
   |------------------|-----------------------------|

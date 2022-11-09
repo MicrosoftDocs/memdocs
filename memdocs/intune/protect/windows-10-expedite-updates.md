@@ -78,7 +78,7 @@ In addition to a license for Intune, your organization must have one of the foll
 - Windows 10/11 Virtual Desktop Access (VDA) per user
 - Microsoft 365 Business Premium
 
-Beginning in November of 2022, several capabilities for  expedite updates require a license to use Windows Update for Business deployment service (WUfB DS). Previously some of these capabilities have been in public preview or available without a WUfB DS license.  
+Beginning in November of 2022, the Windows Update for Business deployment service (WUfB DS) license will be checked and enforced for several feature update capabilities.
 
 | Capability       | Requires license for Windows Update for Business deployment service  |
 |------------------|-----------------------------|
