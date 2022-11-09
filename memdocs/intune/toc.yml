@@ -159,10 +159,6 @@ items:
       href: ./fundamentals/index.yml
       items:
 
-
-
-
-
       - name: Intune tenant administration (change name to something else?)
         items:
         - name: Sign in to Intune
@@ -203,6 +199,7 @@ items:
           href: ./fundamentals/filters-reports-troubleshoot.md
       - name: Use policy sets
         href: ./fundamentals/policy-sets.md
+
       - name: Premium add-ons (will need to sell this and move when it grows)
         href: ./fundamentals/premium-add-ons.md
 
