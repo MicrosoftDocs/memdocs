@@ -190,7 +190,7 @@ The SDK frequently communicates with the Intune service: for enrolling registere
 To successfully communicate with the Intune service, the SDK requires fresh access tokens from apps that have integrated MSAL.
 
 If the SDK isn't able to retrieve a fresh token, it will not be able to communicate with the Intune service, which can delay retrieval and enforcement of new policy settings or admin actions.
-It is critical that your app complete these steps to ensure seamless enforcement of policy.
+It is critical that your app completes these steps to ensure seamless enforcement of policy.
 
 In Stage 2, you integrated MSAL into your application for authentication and acquiring access tokens.
 Here, you'll implement an authentication callback to allow the SDK to request necessary tokens.
