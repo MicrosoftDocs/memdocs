@@ -83,7 +83,18 @@ items:
           href: ./fundamentals/deployment-guide-enrollment-macos.md
         - name: Enroll Linux devices in Microsoft Intune
           href: ./fundamentals/deployment-guide-enrollment-linux.md
-    
+
+      - name: Migrate to Microsoft Intune (need to update section)
+        items: 
+        - name: Overview
+          href: ./fundamentals/migration-guide.md
+        - name: Migrate from Basic Mobility and Security
+          href: ./fundamentals/migrate-to-intune.md
+        - name: Device and app management
+          href: ./fundamentals/migration-guide-configure-policies.md
+        - name: App protection
+          href: ./fundamentals/migration-guide-app-protection-policies.md
+
   - name: Scenarios
     items: 
     - name: Scenarios overview
@@ -147,29 +158,9 @@ items:
     - name: Microsoft Intune fundamentals
       href: ./fundamentals/index.yml
       items:
-      - name: Migrate to Microsoft Intune (need to update section)
-        items: 
-        - name: Overview
-          href: ./fundamentals/migration-guide.md
-        - name: Migrate from Basic Mobility and Security
-          href: ./fundamentals/migrate-to-intune.md
-        - name: Device and app management
-          href: ./fundamentals/migration-guide-configure-policies.md
-        - name: App protection
-          href: ./fundamentals/migration-guide-app-protection-policies.md
 
-      - name: Educate users (where should this go?)
-        items:
-        - name: How to educate your end users
-          href: ./fundamentals/end-user-educate.md    
-        - name: App protection on iOS
-          href: ./fundamentals/end-user-mam-apps-ios.md
-        - name: How to get Android apps
-          href: ./fundamentals/end-user-apps-android.md
-        - name: How to get iOS/iPadOS apps
-          href: ./fundamentals/end-user-apps-ios.md
-        - name: How to get Windows apps
-          href: ./fundamentals/end-user-apps-windows.md
+
+
 
 
       - name: Intune tenant administration (change name to something else?)
@@ -237,6 +228,20 @@ items:
           href: ./fundamentals/monitor-audit-logs.md
         - name: Review logs with Azure Monitor
           href: ./fundamentals/review-logs-using-azure-monitor.md
+
+      - name: Educate users (where should this go?)
+        items:
+        - name: How to educate your end users
+          href: ./fundamentals/end-user-educate.md    
+        - name: App protection on iOS
+          href: ./fundamentals/end-user-mam-apps-ios.md
+        - name: How to get Android apps
+          href: ./fundamentals/end-user-apps-android.md
+        - name: How to get iOS/iPadOS apps
+          href: ./fundamentals/end-user-apps-ios.md
+        - name: How to get Windows apps
+          href: ./fundamentals/end-user-apps-windows.md
+
       - name: Reference
         items: 
         - name: Error codes and descriptions (need to figure out troubleshooting strategy)
