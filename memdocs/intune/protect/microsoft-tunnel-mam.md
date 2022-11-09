@@ -214,7 +214,7 @@ Use of two or more app configuration policies for Microsoft Defender that specif
 
 **Work around**: Target each device with a single app configuration policy for Microsoft Defender, ensuring each unenrolled device is configured to use only one Site.
 
-### GCCH and FIPS support
+### GCC High and FIPS support
 
 The preview for Microsoft Tunnel for unenrolled devices is supported for GGC High environments, but doesn't support Federal Information Processing Standard (FIPS).
 
