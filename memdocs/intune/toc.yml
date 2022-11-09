@@ -114,7 +114,7 @@ items:
       items:
       - name: What is Intune for Education?
         href: ./fundamentals/introduction-intune-education.md
-      - name: Intune for Education documentation
+      - name: Intune for Education docs
         href: /intune-education/
     - name: Government
       items:
@@ -127,7 +127,7 @@ items:
   - name: Platform guides
     items:
     - name: Windows platform guide (new topic)
-
+      href: ./fundamentals/deployment-guide-platform-windows.md
     - name: Android, Android Enterprise platform guide
       href: ./fundamentals/deployment-guide-platform-android.md 
     - name: iOS/iPadOS platform guide
