@@ -54,52 +54,35 @@ items:
 
   - name: Deploy
     items:
-    - name: Intune deployment framework
-      href: ./fundamentals/ph1-deploymentframework.md
-    - name: Deploy Microsoft Intune fundamentals
 
+    - name: Deploy Microsoft Intune
       items:
-      - name: Deploy Intune fundamentals overview
+      - name: Deploy Intune overview
         href: ./fundamentals/ph1-overview.md
-      - name: Step 1 - Set up Microsoft Intune
+      - name: Step 1 - Set up Microsoft Intune fundamentals
         href: ./fundamentals/deployment-guide-intune-setup.md
-      - name: Steps to set up Intune (integrate with step above)
-        href: ./fundamentals/setup-steps.md    
-      - name: Step 2 - Create compliance policies
-        href: ./fundamentals/ph1-compliance-policies.md
-      - name: Step 3 - Assign configuration profiles
-        href: ./fundamentals/ph1-configuration-profile.md
-      - name: Step 4 - Protect apps
+      - name: Step 1 (cont) to set up Intune (integrate with step above)
+        href: ./fundamentals/setup-steps.md
+      - name: Step 2 - Add and protect apps
         href: ./fundamentals/ph1-protect-apps.md
+      - name: Step 3 - Create compliance policies
+        href: ./fundamentals/ph1-compliance-policies.md
+      - name: Step 4 - Assign configuration profiles
+        href: ./fundamentals/ph1-configuration-profile.md
       - name: Step 5 - Enroll devices
-        href: ./fundamentals/ph1-enroll-devices.md
-
-    - name: Additional security recommendations
-      items:
-      - name: Security recommendations overview
-
-      - name: Defender for Endpoint
-
-      - name: Conditional access (change name)
         items:
-        - name: Use conditional access (merge within this section or maybe a solution)
-          href: ./fundamentals/migration-guide-drive-adoption.md
-
-      - name: Tunnel?
-
-      - name: Additional baselines or policies?
-
-    - name: Add and protect apps
-      items: 
-      - name: Add LOB apps?
-
-    - name: Create a servicing strategy (valid? name?)
-      items: 
-      - name: OS updates
-      - name: app updates
-      - name: platform updates
-      
-    - name: What else can add another layer over foundation?
+        - name: Enroll devices overview
+          href: ./fundamentals/deployment-guide-enrollment.md
+        - name: Enroll Windows devices in Microsoft Intune
+          href: ./fundamentals/deployment-guide-enrollment-windows.md
+        - name: Enroll Android devices in Microsoft Intune
+          href: ./fundamentals/deployment-guide-enrollment.md
+        - name: Enroll iOS and iPadOS devices in Microsoft Intune
+          href: ./fundamentals/deployment-guide-enrollment-ios-ipados.md
+        - name: Enroll macOS devices in Microsoft Intune
+          href: ./fundamentals/deployment-guide-enrollment-macos.md
+        - name: Enroll Linux devices in Microsoft Intune
+          href: ./fundamentals/deployment-guide-enrollment-linux.md
     
   - name: Solutions and scenarios
     items: 
@@ -143,16 +126,20 @@ items:
         href: ./fundamentals/intune-us-government-endpoints.md
   - name: Platform guides
     items:
-    - name: Android, Android Enterprise 
+    - name: Windows platform guide (new topic)
+
+    - name: Android, Android Enterprise platform guide
       href: ./fundamentals/deployment-guide-platform-android.md 
-    - name: iOS/iPadOS  
+    - name: iOS/iPadOS platform guide
       href: ./fundamentals/deployment-guide-platform-ios-ipados.md    
-    - name: macOS 
-      href: ./fundamentals/deployment-guide-platform-macOS.md 
-    - name: Windows Holographic
+    - name: macOS platform guide
+      href: ./fundamentals/deployment-guide-platform-macOS.md
+    - name: Linux platform guide (new topic)
+      href: ./fundamentals/deployment-guide-platform-linux.md
+    - name: Windows Holographic platform guide
       href: ./fundamentals/windows-holographic-for-business.md
     - name: Microsoft Surface Management Portal
-      href: ./fundamentals/surface-management-portal.md  
+      href: ./fundamentals/surface-management-portal.md
 
   - name: Feature areas
     items:
