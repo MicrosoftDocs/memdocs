@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/16/2021
+ms.date: 11/08/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -68,13 +68,12 @@ Additionally, you need to have the following license and update:
 - [Azure AD Premium](/azure/active-directory/active-directory-get-started-premium) license
 - [Windows Creators Update](https://blogs.windows.com/windowsexperience/2017/04/11/how-to-get-the-windows-10-creators-update/#o61bC2PdrHslHG5J.97)
 
-
-
-
-
 ## To add a WIP policy
 
 After you set up Intune in your organization, you can create a WIP-specific policy.
+
+>[!IMPORTANT]
+> Windows Information Protection (WIP) policies without enrollment is being deprecated. You can no longer create WIP policies for unenrolled devices.
 
 > [!TIP]  
 > For related information about creating WIP policies for Intune, including available settings and how to configure them, see [Create a Windows Information Protection (WIP) policy with MAM using the portal for Microsoft Intune](/windows/security/information-protection/windows-information-protection/create-wip-policy-using-mam-intune-azure) in the Windows Security documentation library. 
