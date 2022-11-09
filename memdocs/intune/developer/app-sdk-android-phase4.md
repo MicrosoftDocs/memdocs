@@ -377,23 +377,23 @@ This will invoke `publish()` on the application handler for every log message.
 
 ```java
 /**
- - Global log handler that enables fine grained PII filtering within MAM logs.  
- - To start using this you should build your own log handler and add it via
- - MAMComponents.get(MAMLogHandlerWrapper.class).addHandler(myHandler, false);  
- - You may also remove the handler entirely via
- - MAMComponents.get(MAMLogHandlerWrapper.class).removeHandler(myHandler);
+ * Global log handler that enables fine grained PII filtering within MAM logs.  
+ * To start using this you should build your own log handler and add it via
+ * MAMComponents.get(MAMLogHandlerWrapper.class).addHandler(myHandler, false);  
+ * You may also remove the handler entirely via
+ * MAMComponents.get(MAMLogHandlerWrapper.class).removeHandler(myHandler);
  */
 public interface MAMLogHandlerWrapper {
     /**
-     - Add a handler, PII can be toggled.
-     - @param handler handler to add.
-     - @param wantsPII if PII is desired in the logs.    
+     * Add a handler, PII can be toggled.
+     * @param handler handler to add.
+     * @param wantsPII if PII is desired in the logs.    
      */
     void addHandler(final Handler handler, final boolean wantsPII);
 
     /**
-     - Remove a handler.
-     - @param handler handler to remove.
+     * Remove a handler.
+     * @param handler handler to remove.
      */
     void removeHandler(final Handler handler);
 }
