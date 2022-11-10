@@ -112,7 +112,7 @@ items:
         - name: iOS, iPadOS
           href: deployment-guide-enrollment-ios-ipados.md
         - name: Linux
-          href: deployment-guide-enrollment-linux.md
+          href: deployment-guide-enrollment-linux.md  
         - name: macOS
           href: deployment-guide-enrollment-macos.md
         - name: Windows
