@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 10/3/2022
+ms.date: 11/10/2022
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -30,28 +30,28 @@ ms.collection: M365-identity-device-management
 
 # Set up tenants for Windows 365 Government
 
-For Windows 365 to function in the Government Community Cloud (GCC) environment, customers must link their Azure AD (Commercial) tenant with their Azure AD (Government) tenant. This enables Intune running in Azure Commercial to manage Cloud PCs running in Azure Government regions, including the options of using custom images and connecting to your own networks.     
+For Windows 365 to function in the Government Community Cloud (GCC) environment, customers must link their Azure Commercial tenant with their Azure Government tenant. This linkage lets Intune running in Azure Commercial to manage Cloud PCs running in Azure Government regions, including the options of using custom images and connecting to your own networks.     
 
-Use the following procedures to setup Windows 365 in the Government Community Cloud (GCC).
+Use the following procedures to set up Windows 365 in the Government Community Cloud (GCC).
 
 > [!NOTE]
 > These instructions are specifically for GCC.  The instructions on this page do not apply to GCC High.
 
 ## Before you begin
-For both tenant mapping and granting permissions for custom images and/or connecting to your own networks, you will need:
+For both tenant mapping and granting permissions for custom images and/or connecting to your own networks, you'll need:
 
 - An Azure Commercial subscription.
 - An Azure Government subscription.
 - Credentials of a user that has:
     - *Owner* role in your Azure Commercial subscription, AND
-    - *Global Administrator* role in your Azure AD (Commercial) tenant which ends in onmicrosoft.com.
+    - *Global Administrator* role in your Azure Commercial tenant (ending in onmicrosoft.com).
 - Credentials of a user that has:
     - *Owner* role in your Azure Government subscription, AND
-    - *Global Administrator* role in your Azure AD (Government) tenant which ends in onmicrosoft.us.
+    - *Global Administrator* role in your Azure Government tenant (ending in onmicrosoft.us).
 - Administrative rights on a workstation or server with:
     - Windows PowerShell version 5.1. PowerShell 5.1 is [preinstalled](/powershell/scripting/windows-powershell/install/installing-windows-powershell) on Windows 10/11 and Windows Server 2016 or later. Other PowerShell versions may result in errors when performing the tenant mapping.
-    - The following installed. The script will download the missing items below if it is not present.
-        - Nuget provider
+    - The following installed. The script will download the missing items below if it isn't present.
+        - NuGet provider
         - [AzureAD](https://www.powershellgallery.com/packages/AzureAD/2.0.2.140)
         - [MSAL.PS](https://www.powershellgallery.com/packages/MSAL.PS/4.37.0.0)
 
@@ -68,7 +68,7 @@ The Azure Commercial subscription includes a tenant (which ends in onmicrosoft.c
 The Azure Government subscription includes a tenant (which ends in onmicrosoft.us) and the following if you wish to:
 
 **Use Custom Images**
-- See [add a custom image](/windows-365/enterprise/add-device-images) for more information on the process and requirements.
+- For more information, see [add a custom image](/windows-365/enterprise/add-device-images).
 
 **Connect to resources via a private network connection**
 - Azure Virtual Network (VNet).
@@ -101,10 +101,10 @@ To connect the two tenants, the **AAD Tenant Mapping.ps1** PowerShell script mus
     >If the script was previously run successfully, you'll see the error **HttpStatusCode Conflict**. This warning can be ignored to execute the script functions Add and Get.
 4. In PowerShell 5.1, type **A** to add tenant mapping.
 5. A web browser prompt will open.  Enter your **Azure Commercial** credentials (e.g. GlobalAdmin@contoso.onmicrosoft.com). The window will then close after successful authentication. 
-6. A 2nd web browser prompt will open, you will be asked for your **Azure Commercial** credentials again, after that another prompt will ask you to grant permissions.  Check the box **Consent on behalf of your organization** and then click on the **Accept** button. The window will then close.
-7. A 3rd browser prompt will open. Enter your **Azure Government** credentials (e.g. GlobalAdmin@fabrikam.onmicrosoft.us). The window will then close after successful authentication.
-8. A 4th web browser prompt will open, you will be asked for your **Azure Government** credentials again, after that another prompt will ask you to grant permissions.  Check the box **Consent on behalf of your organization** and then click on the **Accept** button. The window will then close.
-8. After the mapping completes, you will see **Added tenant mapping successfully!**
+6. A second web browser prompt will open, you'll be asked for your **Azure Commercial** credentials again, after that another prompt will ask you to grant permissions.  Check the box **Consent on behalf of your organization** and then click on the **Accept** button. The window will then close.
+7. A third browser prompt will open. Enter your **Azure Government** credentials (e.g. GlobalAdmin@fabrikam.onmicrosoft.us). The window will then close after successful authentication.
+8. A fourth web browser prompt will open, you'll be asked for your **Azure Government** credentials again, after that another prompt will ask you to grant permissions.  Check the box **Consent on behalf of your organization** and then click on the **Accept** button. The window will then close.
+8. After the mapping completes, you'll see **Added tenant mapping successfully!**
 
 ## Common tenant mapping issues
 
@@ -114,13 +114,13 @@ If the mapping fails, try the following suggestions:
 
 - **Confirm there isn't an existing tenant mapping.** Only a 1:1 mapping of the Commercial:Government tenant is supported. Run the **AAD Tenant Mapping.ps1** script again and select the **Get** option.  Contact support by filing a support ticket in the Microsoft Intune admin center (intune.microsoft.com) > Tenant Administration > Help and support > Windows 365 via with the error details.
 
-## Set permissions to upload custom images and/or connect to on-premise resources
+## Set permissions to upload custom images and/or connect to on-premises resources
 
-If you are going to use Gallery images to provision Cloud PCs using the Microsoft-hosted network, no further configurations are required.  Stop here.
+If you're going to use Gallery images to provision Cloud PCs using the Microsoft-hosted network, no further configurations are required.  Stop here.
 
-If you are going to upload custom images on the Microsoft-hosted network, keep reading.
+If you're going to upload custom images on the Microsoft-hosted network, keep reading.
 
-When provisioning Windows 365 Cloud PCs without the Microsoft-hosted network, you must define an [Azure Network Connection](azure-network-connections.md) (ANC) that the Cloud PCs will use to connect with other resources, including your on-premises infrastructure. To setup the ANC you will need the existing values for the Azure Government:
+When provisioning Windows 365 Cloud PCs without the Microsoft-hosted network, you must define an [Azure Network Connection](azure-network-connections.md) (ANC) that the Cloud PCs will use to connect with other resources, including your on-premises infrastructure. To set up the ANC you'll need the existing values for the Azure Government:
     - Subscription ID.
     - Resource Group.
     - Virtual Network.
