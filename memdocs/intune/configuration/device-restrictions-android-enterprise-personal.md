@@ -56,7 +56,7 @@ This feature applies to:
 
 These settings apply to Android Enterprise personally owned devices with a work profile (BYOD).
 
-### General
+### General settings
 
 - **Copy and paste between work and personal profiles**: **Block** prevents copy-and-paste between work and personal apps. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to share data using copy-and-paste with apps in the personal profile.
 - **Data sharing between work and personal profiles**: Choose if apps in the work profile can share with apps in the personal profile. For example, you can control sharing actions within applications, such as the **Share…** option in the Chrome browser app. This setting doesn't apply to copy/paste clipboard behavior. Your options:
@@ -141,6 +141,18 @@ These settings apply to Android Enterprise personally owned devices with a work 
 These password settings apply to personally owned devices with a work profile.
 
 - **Minimum password length**: Enter the minimum length the password must have, between 4 and 16 characters.
+
+  This setting applies to:
+
+  - Android Enterprise 11 and older personally owned devices with a work profile
+
+  > [!IMPORTANT]
+  >
+  > - Google is deprecating this setting for Android 12+ personally owned devices with a work profile and replacing it with new password complexity requirements. For more information about this change, go to [Day zero support for Android 13](https://aka.ms/Intune/Android13).
+  > - On Android Enterprise 12+ devices, use the **Password complexity** setting.
+  > - Existing Android Enterprise 12+ devices with the **Minimum password length** setting configured will continue to use this **Minimum password length** setting and the existing value configured. It's recommended to create a new policy for Android Enterprise 12+ devices and configure the **Password complexity** setting.
+  > - New Android Enterprise 12+ devices will automatically use the **Password complexity** setting with the **High** password complexity. So if you don't want a **High** password complexity, then create a new policy for Android Enterprise 12+ devices and configure the **Password complexity** setting.
+
 - **Maximum minutes of inactivity until screen locks**: Enter the length of time devices must be idle before the screen is automatically locked. Users must enter their credentials to regain access. For example, enter `5` to lock the device after 5 minutes of being idle. When the value is blank or set to **Not configured**, Intune doesn't change or update this setting.
 
   On devices, users can't set a time value greater than the configured time in the profile. Users can set a lower time value. For example, if the profile is set to `15` minutes, users can set the value to 5 minutes. Users can't set the value to 30 minutes.
@@ -156,6 +168,22 @@ These password settings apply to personally owned devices with a work profile.
   - **At least alphabetic**: Includes letters in the alphabet. Numbers and symbols aren't required.
   - **At least alphanumeric**: Includes uppercase letters, lowercase letters, and numeric characters.
   - **At least alphanumeric with symbols**: Includes uppercase letters, lowercase letters, numeric characters, punctuation marks, and symbols.
+
+- **Password complexity**: Use this setting to set the password complexity requirements for Android Enterprise 12 and newer devices. Your options:
+
+  - **Not configured**: Intune doesn't change or update this setting. By default, the OS may not require a password.
+  - **Low**: Pattern or PIN with repeating (4444) or ordered (1234, 4321, 2468) sequences are blocked.
+  - **Medium**: PIN with repeating (4444) or ordered (1234, 4321, 2468) sequences are blocked. The length, alphabetic length, or alphanumeric length must be at least 4 characters.
+  - **High**: PIN with repeating (4444) or ordered (1234, 4321, 2468) sequences are blocked. The length must be at least 8 characters. The alphabetic or alphanumeric length must be at least 6 characters.
+
+  This setting applies to:
+
+  - Android Enterprise 12 and newer personally owned devices with a work profile
+
+  > [!IMPORTANT]
+  > 
+  > - New Android Enterprise 12+ devices will automatically use the **Password complexity** setting with the **High** password complexity. So if you don't want a **High** password complexity, then create a new policy for Android Enterprise 12+ devices and configure the **Password complexity** setting.
+  > - Existing Android Enterprise 12+ devices with the **Minimum password length** setting configured will continue to use this **Minimum password length** setting and the existing value configured. It's recommended to create a new policy for Android Enterprise 12+ devices and configure the **Password complexity** setting.
 
 - **Prevent reuse of previous passwords**: Use this setting to restrict users from creating previously used passwords. Enter the number of previously used passwords that can't be used, from 1-24. For example, enter `5` so users can't set a new password to their current password or any of their previous four passwords. When the value is blank, Intune doesn't change or update this setting.
 - **Fingerprint unlock**: **Block** prevents users from using the device's fingerprint scanner to unlock the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to unlock the device using a fingerprint.

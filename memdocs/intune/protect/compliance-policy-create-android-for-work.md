@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/20/2021
+ms.date: 11/15/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -247,39 +247,9 @@ When a device is using an OS version later than the version in the rule, access 
 
 ### System security - *for Personally-Owned Work Profile*
 
-- **Require a password to unlock mobile devices**  
-  - **Not configured** (*default*) - This setting isn't evaluated for compliance or non-compliance.
-  - **Require** - Users must enter a password before they can access their device.  
-
-  This setting applies at the device level. If you only need to require a password at the Personally-Owned Work Profile level, then use a configuration policy. See [Android Enterprise device configuration settings](../configuration/device-restrictions-android-for-work.md).
-
-- **Required password type**  
-  Choose if a password should include only numeric characters, or a mix of numerals and other characters. Your options:
-  - **Device Default**: Because the Device Default varies by device model, use one of the other values for more control and consistency across all devices.
-  - **Low security biometric**
-  - **At least numeric** (*default*): Enter the **minimum password length** a user must enter, between 4 and 16 characters.
-  - **Numeric complex**: Enter the **minimum password length** a user must enter, between 4 and 16 characters.
-  - **At least alphabetic**: Enter the **minimum password length** a user must enter, between 4 and 16 characters.
-  - **At least alphanumeric**: Enter the **minimum password length** a user must enter, between 4 and 16 characters.
-  - **At least alphanumeric with symbols**: Enter the **minimum password length** a user must enter, between 4 and 16 characters.
-
-  Depending on the *password type* you select, the following settings are available:
-
-  - **Maximum minutes of inactivity before password is required**  
-    Enter the idle time before the user must reenter their password. Options include the default of *Not configured*, and from *1 Minute* to *8 hours*.
-
-  - **Number of days until password expires**  
-    Enter the number of days, between 1-365, until the device password must be changed. For example, to change the password after 60 days, enter `60`. When the password expires, users are prompted to create a new password.
-
-  - **Minimum password length**  
-    Enter the minimum length the password must have, between 4 and 16 characters.
-
-  - **Number of previous passwords to prevent reuse**  
-    Enter the number of recent passwords that can't be reused. Use this setting to restrict the user from creating previously used passwords.
-
 #### Encryption - *for Personally-Owned Work Profile*
 
-- **Encryption of data storage on device**  
+- **Require encryption of data storage on device**  
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or non-compliance.
   - **Require** -  Encrypt data storage on your devices.  
 
@@ -316,6 +286,74 @@ When a device is using an OS version later than the version in the rule, access 
   Select the oldest security patch level a device can have. Devices that aren't at least at this patch level are noncompliant. The date must be entered in the YYYY-MM-DD format.
 
   *By default, no date is configured*.
+
+- **Require a password to unlock mobile devices**  
+  - **Not configured** (*default*) - This setting isn't evaluated for compliance or non-compliance.
+  - **Require** - Users must enter a password before they can access their device.  
+
+  This setting applies at the device level. If you only need to require a password at the Personally-Owned Work Profile level, then use a configuration policy. See [Android Enterprise device configuration settings](../configuration/device-restrictions-android-for-work.md).
+
+#### All Android devices  - *for Personally-Owned Work Profile*
+
+- **Number of days until password expires**  
+  Enter the number of days, between 1-365, until the device password must be changed. For example, to change the password after 60 days, enter `60`. When the password expires, users are prompted to create a new password.
+
+- **Number of previous passwords to prevent reuse**  
+  Enter the number of recent passwords that can't be reused. Use this setting to restrict the user from creating previously used passwords.
+
+- **Maximum minutes of inactivity before password is required**  
+  Enter the idle time before the user must reenter their password. Options include the default of *Not configured*, and from *1 Minute* to *8 hours*.
+
+#### Android 12 and later - *for Personally-Owned Work Profile*
+
+- **Password complexity**  
+  Use this setting to set the password complexity requirements for Android Enterprise 12 and newer devices. Your options:
+
+  - **Not configured** - This setting isn't evaluated for compliance or non-compliance.
+  - **Low** - Pattern or PIN with repeating (4444) or ordered (1234, 4321, 2468) sequences are blocked.
+  - **Medium** - PIN with repeating (4444) or ordered (1234, 4321, 2468) sequences are blocked. The length, alphabetic length, or alphanumeric length must be at least 4 characters.
+  - **High** - PIN with repeating (4444) or ordered (1234, 4321, 2468) sequences are blocked. The length must be at least 8 characters. The alphabetic or alphanumeric length must be at least 6 characters.
+
+  On personally owned devices with a work profile, there are two passwords affected by this **Password complexity** setting:
+
+  - The device password that unlocks the device
+  - The work profile password that allows users to access the work profile
+
+  If the device password complexity is too low, then the device password is automatically changed to require a **High** complexity. The end users must update the device password to meet the complexity requirements. Then, they sign into the work profile and are prompted to update the work profile complexity configured in the **Password complexity** setting in your policy.
+
+  > [!IMPORTANT]
+  >
+  > - If the **Required password type** setting is configured in a policy, then:
+  >   - Newly enrolled Android Enterprise 12+ devices will automatically use the **Password complexity** setting with the **High** complexity. So if you don't want a **High** password complexity, then create a new policy for Android Enterprise 12+ devices and configure the **Password complexity** setting.
+  >   - Existing Android Enterprise 12+ devices will continue to use the **Required password type** setting and the existing value configured.
+  >
+  >     If you change an existing policy with the **Required password type** setting configured, then Android Enterprise 12+ devices will automatically use the **Password complexity** setting with the **High** password complexity.
+  >
+  >     It's recommended to create a new policy for Android Enterprise 12+ devices and configure the **Password complexity** setting.
+  > 
+  > - If the **Required password type** setting isn't configured in a policy, then no password policy is automatically applied to newly enrolled Android Enterprise 12+ devices.
+
+#### Android 11 and earlier - *for Personally-Owned Work Profile*
+
+- **Required password type**  
+  Choose if a password should include only numeric characters, or a mix of numerals and other characters. Your options:
+  - **Device Default**: Because the Device Default varies by device model, use one of the other values for more control and consistency across all devices.
+  - **Low security biometric**
+  - **At least numeric** (*default*): Enter the **minimum password length** a user must enter, between 4 and 16 characters.
+  - **Numeric complex**: Enter the **minimum password length** a user must enter, between 4 and 16 characters.
+  - **At least alphabetic**: Enter the **minimum password length** a user must enter, between 4 and 16 characters.
+  - **At least alphanumeric**: Enter the **minimum password length** a user must enter, between 4 and 16 characters.
+  - **At least alphanumeric with symbols**: Enter the **minimum password length** a user must enter, between 4 and 16 characters.
+
+  > [!IMPORTANT]
+  > 
+  > - Google is deprecating this **Required password type** setting for Android 12+ personally owned devices with a work profile and replacing it with new password complexity requirements. For more information about this change, go to [Day zero support for Android 13](https://aka.ms/Intune/Android13).
+  > - On Android Enterprise 12+ devices, use the **Password complexity** setting.
+
+Depending on the *Required password type* you select, the following setting is available:
+
+- **Minimum password length**  
+    Enter the minimum length the password must have, between 4 and 16 characters.
 
 ## Next steps
 
