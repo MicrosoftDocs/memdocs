@@ -38,11 +38,13 @@ Use the following procedures to setup Windows 365 in the Government Community Cl
 > These instructions are specifically for GCC.  The instructions on this page do not apply to GCC High.
 
 ## Before you begin
-- You have both an Azure Commercial and an Azure Government subscription.
-- You must have the *Owner* role in your Azure Commercial subscription.
-- You must have the *Owner* role in your Azure Government subscription.
-- You must have the *Global Administrator* role in your Azure AD (Commercial) tenant which ends in onmicrosoft.com.
-- You must have the *Global Administrator* role in your Azure AD (Government) tenant which ends in onmicrosoft.us.
+- You must have an Azure Commercial AND an Azure Government subscription.
+- You will be required to enter the credentials of a user that has
+    - *Owner* role in your Azure Commercial subscription, AND
+    - *Global Administrator* role in your Azure AD (Commercial) tenant which ends in onmicrosoft.com.
+- You (or another person) will be required to enter the credentials of a user that has
+    - *Owner* role in your Azure Government subscription, AND
+    - *Global Administrator* role in your Azure AD (Government) tenant which ends in onmicrosoft.us.
 - You must have Windows PowerShell version 5.1. Other versions may result in errors when performing the tenant mapping. If you are using Windows 10 or 11, or Windows Server 2016 or later, you should already have Windows PowerShell 5.1 because that is [preinstalled](/powershell/scripting/windows-powershell/install/installing-windows-powershell) with those operating systems.
 
 ## Azure Commercial side
