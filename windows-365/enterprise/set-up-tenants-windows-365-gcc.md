@@ -45,7 +45,9 @@ Use the following procedures to setup Windows 365 in the Government Community Cl
 - You (or another person) will be required to enter the credentials of a user that has
     - *Owner* role in your Azure Government subscription, AND
     - *Global Administrator* role in your Azure AD (Government) tenant which ends in onmicrosoft.us.
-- You must have Windows PowerShell version 5.1. Other versions may result in errors when performing the tenant mapping. If you are using Windows 10 or 11, or Windows Server 2016 or later, you should already have Windows PowerShell 5.1 because that is [preinstalled](/powershell/scripting/windows-powershell/install/installing-windows-powershell) with those operating systems.
+- You must have Windows PowerShell version 5.1.
+    - PowerShell 5.1 is [preinstalled](/powershell/scripting/windows-powershell/install/installing-windows-powershell) on Windows 10/11 and Windows Server 2016 or later.
+    - Other PowerShell versions may result in errors when performing the tenant mapping.
 
 ## Azure Commercial side
 
