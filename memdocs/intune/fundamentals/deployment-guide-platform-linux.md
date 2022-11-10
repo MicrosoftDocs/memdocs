@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Deployment guide for Linux device management in Microsoft Intune  
-description: Use our platform deployment guide to set up Linux device management and compliance polices in Microsoft Intune.    
+title: Deployment guide for Linux device management | Microsoft Intune  
+description: Use our platform deployment guide to set up Linux device management in Microsoft Intune.    
 keywords:
 author: lenewsad
 ms.author: lanewsad
@@ -28,26 +28,21 @@ ms.collection: M365-identity-device-management
 
 # Deployment guide: Manage Linux devices in Microsoft Intune
 
-Learn how to set up endpoint management, compliance polices, and enrollment for Linux desktops in Microsoft Intune. This comprehensive guide describes what you need to do to from start-to-finish to protect and manage Linux apps and endpoints, including how to:       
+This comprehensive guide describes what you need to do to from start-to-finish to protect and manage Linux apps and endpoints usng Microsoft Intune, including how to:       
 
-* Set up your tenant for device enrollment.  
+* Prepare your tenant for device enrollment.  
 * Create Linux device compliance policies. 
 * Add custom compliance settings.   
 * Enforce conditional access policies in Microsoft Edge. 
 * Support employees and students enrolling their desktops.  
 
-Each task links to a help doc on Microsoft Learn that contains more detailed information and how-to steps.      
+Each task links to a help doc on Microsoft Learn that contains more detailed information and how-to steps.   
  
- ## Capabilities 
- Microsoft Intune, Azure Active Directory (AD), and Microsoft Edge power the feature and capabilities for Linux desktop management. 
+## Step 1: Prerequisites  
 
- * Microsoft Intune powers the device management and compliance capabilities. 
- * Azure AD powers conditional access, which is used alongside Microsoft Intune compliance policies. 
- * Microsoft Edge is the web browser app used to provide proteced access to Microsoft 365 web apps.  
+ Microsoft Intune, Azure Active Directory (AD), and Microsoft Edge power the feature and capabilities for Linux desktop management. Microsoft Intune powers the device management and compliance capabilities. Azure AD powers conditional access, which is used alongside Microsoft Intune compliance policies. Microsoft Edge is the web browser app used to provide protected access to Microsoft 365 web apps. 
  
-## Prerequisites  
-
-Complete the following prerequisites to prepare for device management with Microsoft Intune:      
+ Complete the following prerequisites to enable all supported features for Linux devices:  
 
 * [Add users](users-add.md) and [groups](groups-add.md)
 * [Assign licenses to users](licenses-assign.md) 
@@ -56,28 +51,28 @@ Complete the following prerequisites to prepare for device management with Micro
 
  For more details and recommendations about how to prepare your organization, onboard, or adopt Intune for mobile device management and mobile application management, see the [Intune setup deployment guide](deployment-guide-intune-setup.md).    
 
-## Plan for your deployment  
+## Step 2: Plan for your deployment  
 
 Use the [Microsoft Intune planning guide](intune-planning-guide.md) to define your device management goals, use-case scenarios, and requirements. It will also help you plan for rollout, communication, support, testing, and validation. For example, because you don't have to be there when employees and students are enrolling their devices, we recommend having a communication plan so that people know where to find information about installing and using Company Portal and Microsoft Edge.  
 
-## Create device compliance policies    
+## Step 3: Create device compliance policies    
 Create a device compliance policy to ensure that Linux devices accessing your data are secure and meet your organization's standards. The final stage of the enrollment process is the compliance evaluation, which verifies that the settings on the device meet your policies. Device users must resolve all compliance issues to get access to protected resources.  Intune marks devices that fall short of compliance requirements as *non-compliant* and takes additional action (such as sending the user a notification, restricting access, or wiping the device) according to your *action for noncompliance* configurations.  
 
 You can enforce device compliance policies based on Linux distribution type, version, device encryption, or password complexity. All available compliance settings for Linux are in the Microsoft Intune settings catalog. You can use Azure AD conditional access policies in conjunction with device compliance policies to control access to Microsoft 365 web apps in Microsoft Edge. For example, if an employee tries to access Microsoft Teams in Edge without first enrolling or securing their device, they won't be able to sign in.    
 
 >[!TIP]
->  For an overview of compliance policies, see [Use compliance policies to set rules for devices you manage with Intune](../protect/device-compliance-get-started.md).   
+>  For an overview of device compliance policies, see [Compliance overview](../protect/device-compliance-get-started.md#device-compliance-policies).     
 
 | Task | Detail | 
 | ---- | ------ | 
-| [Create a device compliance policy](../protect/create-compliance-policy.md#device-compliance-policies)|Get step-by-step guidance on how to create and assign a device compliance policy for Linux devices.   |      
-| [Add custom compliance settings](../protect/actions-for-noncompliance.md) | With custom compliance settings, you can write your own Bash scripts to address compliance scenarios not yet included in the device compliance options built into Microsoft Intune. This article describes how to create, monitor, and troubleshoot custom compliance policies for Linux devices. Custom compliance settings require you to [create a custom script](../protect/compliance-custom-json) that identifies the settings and value pairs.|  
+| [Create a device compliance policy](../protect/create-compliance-policy.md)|Get step-by-step guidance on how to create and assign a device compliance policy for Linux devices. |  
+| [Add custom compliance settings](../protect/actions-for-noncompliance.md) | With custom compliance settings, you can write your own Bash scripts to address compliance scenarios not yet included in the device compliance options built into Microsoft Intune. This article describes how to create, monitor, and troubleshoot custom compliance policies for Linux devices. Custom compliance settings require you to [create a custom script](../protect/compliance-custom-json.md) that identifies the settings and value pairs.|  
 | [Add actions for noncompliance](../protect/actions-for-noncompliance.md) |Choose what happens when devices no longer meet the conditions of your compliance policy. Examples of actions include sending alerts, remotely locking devices, or retiring devices. You can add actions for noncompliance when you configure a device compliance policy, or later by editing the policy. |  
 | Create [a device-based](../protect/create-conditional-access-intune.md) or [app-based](../protect/app-based-conditional-access-intune-create.md) conditional access policy| Set up a conditional access policy to protect and grant access to Microsoft 365 web apps in the Microsoft Edge browser for Linux. Conditional access blocks noncompliant devices from accessing protected work apps in Edge, and grants access to compliant devices. You must have a device compliance policy for conditional access to work with Linux devices. |        
 
-## Enroll devices  
+## Step 4: Enroll devices  
 
-Employees assigned Intune licenses can enroll their personal Linux devices into Microsoft Intune whenever they want. During enrollment, their device is registed with Azure AD and evaulated for compliance. Enrollment is supported on Linux desktops running Ubuntu LTS, version 22.04 or 20.04. If you've applied a conditional access policy to Edge, users will be prompted to enroll their devices before they can access Microsoft 365 web apps with their work account.    
+Enrollment is supported on Linux desktops running Ubuntu LTS, version 22.04 or 20.04. Employees assigned Intune licenses can enroll their personal Linux devices into Microsoft Intune whenever they want. During enrollment, their device is registered with Azure AD and evaluated for compliance. If you've applied a conditional access policy to Edge, users will be prompted to enroll their devices before they can access Microsoft 365 web apps with their work account.    
 
 As an Intune administrator, you don't need to do anything to enable enrollment for employees, other than what's described under [Prerequisites](deployment-guide-platform-linux.md#prerequisites). However, it's important to provide them with help resources in case they need guidance during enrollment.  
 
