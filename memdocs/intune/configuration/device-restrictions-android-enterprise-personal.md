@@ -139,22 +139,24 @@ These password settings apply to the work profile password on personally owned d
   - **Medium**: PIN with repeating (4444) or ordered (1234, 4321, 2468) sequences are blocked. The length, alphabetic length, or alphanumeric length must be at least 4 characters.
   - **High**: PIN with repeating (4444) or ordered (1234, 4321, 2468) sequences are blocked. The length must be at least 8 characters. The alphabetic or alphanumeric length must be at least 6 characters.
 
-  Before the **Password complexity** setting was available, the **Required password type** and **Minimum password length** settings were used. See [Android 11 and earlier](#android-11-and-earlier) in this article. The **Required password type** and **Minimum password length** settings are being deprecated by Google for Android 12+ personally owned devices with a work profile. So, for Android 12+ personally owned devices with a work profile, use the **Password complexity** setting.
-
   On personally owned devices with a work profile, there are two passwords affected by this **Password complexity** setting:
 
   - The device password that unlocks the device
   - The work profile password that allows users to access the work profile
 
-  If the device password complexity is too low, then the device password is automatically changed to require a **High** complexity. The end users must update the device password to meet the complexity requirements. Then, they sign into the work profile and are prompted to update the work profile complexity configured in the **Password complexity** setting in your policy.
+  If the device password complexity is too low, then the device password is automatically changed to require a **High** complexity. The end users must update the device password to meet the complexity requirements. Then, they sign into the work profile and are prompted to update the work profile complexity configured in the **Password complexity** setting in your policy.  
 
   > [!IMPORTANT]
   >
+  > Before the **Password complexity** setting was available, the **Required password type** and **Minimum password length** settings were used. These settings are still available, but they're deprecated by Google for Android 12+ personally owned devices with a work profile. For information on these settings, go to [Android 11 and earlier](#android-11-and-earlier) (in this article).
+  >
+  > Here's what you need to know:
+  >
   > - If the **Required password type** and **Minimum password length** settings are changed from the default values in a policy, then:
   >   - Newly enrolled Android Enterprise 12+ devices will automatically use the **Password complexity** setting with the **High** complexity. So if you don't want a **High** password complexity, then create a new policy for Android Enterprise 12+ devices and configure the **Password complexity** setting.
-  >   - Existing Android Enterprise 12+ devices will continue to use the **Required password type** and **Minimum password length** settings, and the existing values configured.
+  >   - Existing Android Enterprise 12+ devices will continue to use the **Required password type** and **Minimum password length** settings, and the existing values that are already configured.
   >
-  >     If you change an existing policy with the **Required password type** and **Minimum password length** settings already configured, then Android Enterprise 12+ devices will automatically use the **Password complexity** setting with the **High** complexity.
+  >     If you change an existing policy with the **Required password type** and **Minimum password length** settings that already configured, then Android Enterprise 12+ devices will automatically use the **Password complexity** setting with the **High** complexity.
   >
   >     For Android Enterprise 12+ devices, it's recommended to create a new policy and configure the **Password complexity** setting.
   > 
@@ -210,8 +212,6 @@ These password settings apply to the device password on personally owned devices
   - **Medium**: PIN with repeating (4444) or ordered (1234, 4321, 2468) sequences are blocked. The length, alphabetic length, or alphanumeric length must be at least 4 characters.
   - **High**: PIN with repeating (4444) or ordered (1234, 4321, 2468) sequences are blocked. The length must be at least 8 characters. The alphabetic or alphanumeric length must be at least 6 characters.
 
-  Before the **Password complexity** setting was available, the **Required password type** and **Minimum password length** settings were used. See [Android 11 and earlier](#android-11-and-earlier-1) in this article. The **Required password type** and **Minimum password length** settings are being deprecated by Google for Android 12+ personally owned devices with a work profile. So, for Android 12+ personally owned devices with a work profile, use the **Password complexity** setting.
-
   On personally owned devices with a work profile, there are two passwords affected by this **Password complexity** setting:
 
   - The device password that unlocks the device
@@ -221,11 +221,15 @@ These password settings apply to the device password on personally owned devices
 
   > [!IMPORTANT]
   >
+  > Before the **Password complexity** setting was available, the **Required password type** and **Minimum password length** settings were used. These settings are still available, but they're deprecated by Google for Android 12+ personally owned devices with a work profile. For more information on these settings, go to [Android 11 and earlier](#android-11-and-earlier-1) (in this article).
+  >
+  > Here's what you need to know:
+  >
   > - If the **Required password type** and **Minimum password length** settings are changed from the default values in a policy, then:
   >   - Newly enrolled Android Enterprise 12+ devices will automatically use the **Password complexity** setting with the **High** complexity. So if you don't want a **High** password complexity, then create a new policy for Android Enterprise 12+ devices and configure the **Password complexity** setting.
-  >   - Existing Android Enterprise 12+ devices will continue to use the **Required password type** and **Minimum password length** settings, and the existing values configured.
+  >   - Existing Android Enterprise 12+ devices will continue to use the **Required password type** and **Minimum password length** settings, and the existing values that are already configured.
   >
-  >     If you change an existing policy with the **Required password type** and **Minimum password length** settings already configured, then Android Enterprise 12+ devices will automatically use the **Password complexity** setting with the **High** complexity.
+  >     If you change an existing policy with the **Required password type** and **Minimum password length** settings that already configured, then Android Enterprise 12+ devices will automatically use the **Password complexity** setting with the **High** complexity.
   >
   >     For Android Enterprise 12+ devices, it's recommended to create a new policy and configure the **Password complexity** setting.
   > 
