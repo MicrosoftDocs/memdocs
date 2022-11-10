@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/01/2022
+ms.date: 11/11/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -16,7 +16,7 @@ ms.localizationpriority: medium
 # optional metadata
 
 #ROBOTS:
-#audience:
+#audience: 
 #ms.devlang:
 ms.reviewer: dougeby
 ms.suite: ems
@@ -28,17 +28,26 @@ ms.collection: M365-identity-device-management
 
 # Deployment guide: Manage Linux devices in Microsoft Intune
 
-Use this guide to set up Linux desktop device management in Microsoft Intune from start-to-finish. We've compiled a list of the preqrequisites and tasks that are required to secure data and manage devices, and includes how to:
+Learn how to set up endpoint management, compliance polices, and enrollment for Linux desktops in Microsoft Intune. This comprehensive guide describes what you need to do to from start-to-finish to protect and manage Linux apps and endpoints, including how to:       
 
-* Enable Linux device management in Microsoft Intune
-* Prepare users for enrollment
-* Create Linux device compliancy policy
-* Add custom compliance settings   
-* Enforce conditional access policies in Microsoft Edge  
+* Set up your tenant for device enrollment.  
+* Create Linux device compliance policies. 
+* Add custom compliance settings.   
+* Enforce conditional access policies in Microsoft Edge. 
+* Support employees and students enrolling their desktops.  
 
+Each task links to a help doc on Microsoft Learn that contains more detailed information and how-to steps.      
+ 
+ ## Capabilities 
+ Microsoft Intune, Azure Active Directory (AD), and Microsoft Edge power the feature and capabilities for Linux desktop management. 
+
+ * Microsoft Intune powers the device management and compliance capabilities. 
+ * Azure AD powers conditional access, which is used alongside Microsoft Intune compliance policies. 
+ * Microsoft Edge is the web browser app used to provide proteced access to Microsoft 365 web apps.  
+ 
 ## Prerequisites  
 
-Complete the following prerequisites to prepare for device management in Intune:      
+Complete the following prerequisites to prepare for device management with Microsoft Intune:      
 
 * [Add users](users-add.md) and [groups](groups-add.md)
 * [Assign licenses to users](licenses-assign.md) 
@@ -51,118 +60,48 @@ Complete the following prerequisites to prepare for device management in Intune:
 
 Use the [Microsoft Intune planning guide](intune-planning-guide.md) to define your device management goals, use-case scenarios, and requirements. It will also help you plan for rollout, communication, support, testing, and validation. For example, because you don't have to be there when employees and students are enrolling their devices, we recommend having a communication plan so that people know where to find information about installing and using Company Portal and Microsoft Edge.  
 
-## Set up compliance policies  
+## Create device compliance policies    
+Create a device compliance policy to ensure that Linux devices accessing your data are secure and meet your organization's standards. The final stage of the enrollment process is the compliance evaluation, which verifies that the settings on the device meet your policies. Device users must resolve all compliance issues to get access to protected resources.  Intune marks devices that fall short of compliance requirements as *non-compliant* and takes additional action (such as sending the user a notification, restricting access, or wiping the device) according to your *action for noncompliance* configurations.  
 
+You can enforce device compliance policies based on Linux distribution type, version, device encryption, or password complexity. All available compliance settings for Linux are in the Microsoft Intune settings catalog. You can use Azure AD conditional access policies in conjunction with device compliance policies to control access to Microsoft 365 web apps in Microsoft Edge. For example, if an employee tries to access Microsoft Teams in Edge without first enrolling or securing their device, they won't be able to sign in.    
 
+>[!TIP]
+>  For an overview of compliance policies, see [Use compliance policies to set rules for devices you manage with Intune](../protect/device-compliance-get-started.md).   
+
+| Task | Detail | 
+| ---- | ------ | 
+| [Create a device compliance policy](../protect/create-compliance-policy.md#device-compliance-policies)|Get step-by-step guidance on how to create and assign a device compliance policy for Linux devices.   |      
+| [Add custom compliance settings](../protect/actions-for-noncompliance.md) | With custom compliance settings, you can write your own Bash scripts to address compliance scenarios not yet included in the device compliance options built into Microsoft Intune. This article describes how to create, monitor, and troubleshoot custom compliance policies for Linux devices. Custom compliance settings require you to [create a custom script](../protect/compliance-custom-json) that identifies the settings and value pairs.|  
+| [Add actions for noncompliance](../protect/actions-for-noncompliance.md) |Choose what happens when devices no longer meet the conditions of your compliance policy. Examples of actions include sending alerts, remotely locking devices, or retiring devices. You can add actions for noncompliance when you configure a device compliance policy, or later by editing the policy. |  
+| Create [a device-based](../protect/create-conditional-access-intune.md) or [app-based](../protect/app-based-conditional-access-intune-create.md) conditional access policy| Set up a conditional access policy to protect and grant access to Microsoft 365 web apps in the Microsoft Edge browser for Linux. Conditional access blocks noncompliant devices from accessing protected work apps in Edge, and grants access to compliant devices. You must have a device compliance policy for conditional access to work with Linux devices. |        
 
 ## Enroll devices  
 
-Employees assigned Intune licenses can enroll their personal Linux devices into Microsoft Intune whenever they want. As an Intune administrator, you don't need to do anything to enable enrollment for employees, other than what's described under [Prerequisites](deployment-guide-platform-linux.md#prerequisites). However, it's important to provide them with help resources in case they need guidance during enrollment.  
+Employees assigned Intune licenses can enroll their personal Linux devices into Microsoft Intune whenever they want. During enrollment, their device is registed with Azure AD and evaulated for compliance. Enrollment is supported on Linux desktops running Ubuntu LTS, version 22.04 or 20.04. If you've applied a conditional access policy to Edge, users will be prompted to enroll their devices before they can access Microsoft 365 web apps with their work account.    
+
+As an Intune administrator, you don't need to do anything to enable enrollment for employees, other than what's described under [Prerequisites](deployment-guide-platform-linux.md#prerequisites). However, it's important to provide them with help resources in case they need guidance during enrollment.  
 
 >[!TIP]
-> If you require device encryption, share that information with your employees prior to device enrollment so that, when possible, they can opt encrypt their device during OS installation. It's easier and faster than encrypting the device after OS installation. Additionally, make your organization's operating system requirements and password complexity requirements easy to find on your website or in an onboarding email so that employees don't have to delay enrollment. 
+> If you require device encryption, tell your employees prior to device enrollment so that, when possible, they can opt to encrypt their device during OS installation. It's easier and faster than encrypting the device after OS installation. Additionally, make your organization's operating system requirements and password complexity requirements easy to find on your website or in an onboarding email so that employees don't have to delay enrollment to seek out that information.  
 
 | Task | Detail | 
 | ---- | ------ | 
 |[Install Microsoft Intune app for Linux](../user-help/microsoft-intune-app-linux.md)| Employees must install the Microsoft Intune app on their personal device for enrollment. This article describes how to install, update, and remove the Microsoft Intune app for Linux in the Terminal app. | 
 |[Install Microsoft Edge web browser)](https://www.microsoft.com/edge)| To access protected websites and files, employees must have Microsoft Edge web browser, version 102.*X* or later. After they enroll their device, employees can sign into Microsoft Edge with their work account and access websites and files.   |  
-|[Enroll Linux device in Intune](../enrollment/device-enrollment-direct-enroll-macos.md)| This article is for device users and describes how to enroll a device with the Microsoft Intune app, and includes system requirements, prerequisites, and next steps. |  
-|[Check device status and resolve compliance issues](../enrollment/device-enrollment-direct-enroll-macos.md)| The Microsoft Intune app notifies employees when they have a noncompliant setting on their device, and happens as a result of your Intune compliance or conditional access policies. This article is for device users and describes how to find and interpret device status and compliance issues in the app. |  
-
-## Create compliance rules  
-
-Create compliance policies in Intune to define the rules and conditions that users and devices must meet to access your organization's protected resource. Compliance policies ensure that devices accessing your network meet your standards. Intune marks devices that fall short of your requirements as *non-compliant* and takes action (such as sending the user a notification, restricting access, or wiping the device) according to your configurations.  
-
-If you create a Conditional Access policy, it can work alongside your device compliance results to block access to resources in the Microsoft Edge web browser. For a detailed explanation about compliance policies and how to get started, see [Use compliance policies to set rules for devices you manage with Intune](../protect/device-compliance-get-started.md).  
-
-| Task | Detail | 
-| ---- | ------ | 
-| [Create a compliance policy](../protect/create-compliance-policy.md)|Get step-by-step guidance on how to create and assign a compliance policy to user and device groups.   |       
-| [Add actions for noncompliance](../protect/actions-for-noncompliance.md) |Choose what happens when devices no longer meet the conditions of your compliance policy. You can add actions for noncompliance when you configure a device compliance policy, or later by editing the policy.    |  
-| Create [a device-based](../protect/create-conditional-access-intune.md) or [app-based](../protect/app-based-conditional-access-intune-create.md) Conditional Access policy| Specify the app or services you want to protect and define the conditions for access. |  
-|[Block access to apps that don't use modern authentication](../protect/app-modern-authentication-block.md)  | Create an app-based Conditional Access policy to block apps that use authentication methods other than OAuth2; for example, those apps that use basic and form-based authentication. Before you block access, however, sign in to Azure AD and review the [authentication methods activity report](/azure/active-directory/authentication/howto-authentication-methods-activity) to see if users are using basic authentication to access essential things you forgot about or are unaware of.  For example, things like meeting room calendar kiosks use basic authentication.  |  
-
-
-## Configure device settings     
-
-Use Microsoft Intune to enable or disable settings and features on macOS devices being used for work.  To configure and enforce these settings, create a device configuration profile and then assign the profile to groups in your organization. 
-
-| Task | Detail | 
-| ---- | ------ | 
-|[Create a device profile in Microsoft Intune](../configuration/device-profile-create.md) |Learn about the different types of device profiles you can create for your organization.|  
-|[Configure device features](../configuration/device-features-configure.md)|Configure common macOS features and functionality. For a description of the settings in this area, see the [device features reference](../configuration/macos-device-features-settings.md).|
-|[Configure Wi-Fi profile](../configuration/wi-fi-settings-configure.md)|This profile enables people to find and connect to your organization's Wi-Fi network. For a description of the settings in this area, see the [Wi-Fi settings reference](../configuration/wi-fi-settings-macos.md).|
-|[Configure wired network profile](../configuration/wired-networks-configure.md)|This profile enables people on desktop computers to connect to your organization's wired network. For a description of the settings in this area, see the [wired network reference](../configuration/wi-fi-settings-macos.md).|
-|[Configure VPN profile](../configuration/vpn-settings-configure.md)|Set up a secure VPN option, such as Microsoft Tunnel, for people connecting to your organization's network.  For a description of the settings in this area, see the [VPN settings reference](../configuration/vpn-settings-macos.md). |  
-|[Restrict device features](../configuration/device-restrictions-configure.md)|Protect users from unauthorized access and distractions by limiting the device features they can use at work or school. For a description of the settings in this area, see the [device restrictions reference](../configuration/device-restrictions-macos.md).|
-|[Configure custom profile](../configuration/custom-settings-macos.md)|Add and assign device settings and features that aren't built into Intune.|
-|[Add and manage macOS extensions](../configuration/kernel-extensions-overview-macos.md)|Add kernel extensions and system extensions, which enable users to install app extensions that extend the native capabilities of the operating system. For a description of the settings in this area, see the [macOS extensions reference](../configuration/kernel-extensions-settings-macos.md).|  
-|[Customize branding and enrollment experience](../apps/company-portal-app.md)|Customize the Intune Company Portal and Microsoft Intune app experience with your organization's own words, branding, screen preferences, and contact information.|
-
-## Configure endpoint security  
-
-Use the Intune endpoint security features to configure device security and to manage security tasks for devices at risk. 
-
-| Task | Detail | 
-| ---- | ------ | 
-|[Manage devices with endpoint security features](../protect/endpoint-security-manage-devices.md)|Use the endpoint security settings in Intune to effectively manage device security and remediate issues for devices.|
-|[Use Conditional Access to limit access to Microsoft Tunnel](../protect/microsoft-tunnel-conditional-access.md)|Use Conditional Access policies to gate device access to your Microsoft Tunnel VPN gateway. | 
-|[Add endpoint protection settings](../protect/microsoft-tunnel-conditional-access.md)| Configure common endpoint protection security features, including Firewall, Gatekeeper, and FileVault. For a description of the settings in this area, see the [endpoint protection settings reference](../protect/endpoint-protection-macos.md).   | 
-
-
-## Set up secure authentication methods   
-Set up authentication methods in Intune to ensure that only authorized people access your internal resources. Intune supports multi-factor authentication, certificates, and derived credentials. Certificates can also be used for signing and encryption of email using S/MIME.   
-
-| Task | Detail | 
-| ---- | ------ | 
-|[Require multi-factor authentication (MFA)](../enrollment/multi-factor-authentication.md)| Require people to supply two forms of credentials at time of enrollment.| 
-|[Create a trusted certificate profile](../protect/certificates-trusted-root.md)|Create and deploy a trusted certificate profile before you create a SCEP, PKCS, or PKCS imported certificate profile. The trusted certificate profile deploys the trusted root certificate to devices and users using SCEP, PKCS, and PKCS imported certificates. |
-|[Use SCEP certificates with Intune ](../protect/certificates-scep-configure.md)| Learn what’s needed to use SCEP certificates with Intune, and configure the required infrastructure. After you do that, you can [create a SCEP certificate profile](../protect/certificates-profile-scep.md) or [set up a third-party certification authority with SCEP](../protect/certificate-authority-add-scep-overview.md).|  
-|[Use PKCS certificates with Intune](../protect/certificates-pfx-configure.md)|Configure required infrastructure (such as on-premises certificate connectors), export a PKCS certificate, and add the certificate to an Intune device configuration profile. | 
-|[Use imported PKCS certificates with Intune](../protect/certificates-imported-pfx-configure.md)|Set up imported PKCS certificates, which enable you to [set up and use S/MIME to encrypt email](../protect/certificates-s-mime-encryption-sign.md). 
-
-
-
-## Deploy apps  
-
-As you set up apps and app policies, think about your organization's requirements, such as the platforms you'll support, the tasks people do, the type of apps they need to complete those tasks, and who needs them. You can use Intune to manage the whole device (including apps) or use Intune to manage apps only.  
-
-| Task | Detail | 
-| ---- | ------ | 
-|[Add Intune Company Portal app ](../apps/apps-company-portal-macos.md)|Learn how to get Company Portal on devices or instruct users how to do it on their own. | 
-|[Add Microsoft Edge](../apps/apps-edge-macos.md) | Add and assign Microsoft Edge in Intune. | 
-|[Add Microsoft 365 ](../apps/apps-add-office365-macos.md)| Add and assign Microsoft 365 apps in Intune. | 
-|[Add line-of-business apps ](../apps/lob-apps-macos.md)| Add and assign macOS line-of-business (LOB) apps in Intune.| 
-|[Assign apps to groups ](../apps/apps-deploy.md)|After you add apps to Intune, assign them to users and devices.|
-|[Include and exclude app assignments ](../apps/apps-inc-exl-assignments.md)|Control access and availability to an app by including and excluding selected groups from assignment.| 
-|[Use shell scripts on macOS devices](../apps/macos-shell-scripts.md)|Use shell scripts to extend device management capabilities in Intune beyond what's supported by the macOS operating system.| 
-
-
-## Run remote actions  
-
-After devices are set up, you can use remote actions in Intune to manage and troubleshoot macOS devices from a distance. The following articles introduce you to the remote actions in Intune. If an action is absent or disabled in the portal, then it isn't supported on macOS.  
-
-| Task | Detail | 
-| ---- | ------ | 
-|[Take remote action on devices](../remote-actions/device-management.md)|Learn how to drill down and remotely manage and troubleshoot individual devices in Intune. This article lists all remote actions available in Intune and links to those procedures.   |
-|[Use TeamViewer to remotely administer Intune devices](../remote-actions/teamviewer-support.md)|Configure TeamViewer within Intune, and learn how to remotely administer a device.  |  
-|[Use security tasks to view threats and vulnerabilities](../protect/atp-manage-vulnerabilities.md)|Integrate Intune with Microsoft Defender for Endpoint to take advantage of Defender for Endpoint's threat and vulnerability management and use Intune to remediate endpoint weakness identified by Defender's vulnerability management capability.|  
+|[Enroll Linux device in Intune](../enrollment/device-enrollment-direct-enroll-macos.md)| This article is for device users and describes how to enroll a device with the Microsoft Intune app, and includes system requirements, prerequisites, and next steps. During this step, Microsoft Intune registers the device with Azure AD and creates a device record in Intune. After registration is complete, device compliance checks begin.  |  
+|[Check device status and resolve compliance issues](../enrollment/device-enrollment-direct-enroll-macos.md)| This article is for device users and describes how to resolve compliance issues in the Microsoft Intune app. Compliance checks happen during enrollment and thereafter when the device checks in with Intune. The Intune app notifies employees when they have a noncompliant setting on their device. Intune determines compliance and actions for noncompliance by using your device compliance and conditional access policies.  |  
 
 ## Next steps  
 
 * Check out [Walk through Intune in Microsoft Endpoint Manager](tutorial-walkthrough-endpoint-manager.md) for a tutorial about how to navigate and use Intune. Tutorials are 100 – 200 level content for people new to Intune or a specific scenario.   
 
-* For tutorials about app deployment, see the following Microsoft Tech Community blogs written by the Intune Support Team:  
-
-    *  [Deploying macOS apps with the Intune scripting agent](https://techcommunity.microsoft.com/t5/intune-customer-success/deploying-macos-apps-with-the-intune-scripting-agent/ba-p/2298072).  
-
-    * [Deploying Microsoft 365 Apps for Mac with Microsoft Endpoint Manager - A Deep Dive](https://techcommunity.microsoft.com/t5/intune-customer-success/deploying-microsoft-365-apps-for-mac-with-microsoft-endpoint/ba-p/2243040)
-
+* Check out the [Microsoft Tech Community](https://techcommunity.microsoft.com/t5/microsoft-intune-blog/increase-security-enable-quality-collaboration-for-linux/ba-p/3640485) for the latest information and blogs about Linux desktop management.  
 
 * For other versions of this guide, see:   
 
     *  [Deployment guide: Manage Android devices in Microsoft Intune](deployment-guide-platform-android.md)  
-    *  [Deployment guide: Manage iOS devices in Microsoft Intune](deployment-guide-platform-ios-ipados.md)  
+    *  [Deployment guide: Manage iOS devices in Microsoft Intune](deployment-guide-platform-ios-ipados.md)
+    *  [Deployment guide: Manage macOS devices in Microsoft Intune](deployment-guide-platform-macos.md)  
   
 
 
