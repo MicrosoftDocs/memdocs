@@ -100,9 +100,9 @@ To connect the two tenants, the **AAD Tenant Mapping.ps1** PowerShell script mus
     >[!NOTE]
     >If the script was previously run successfully, you'll see the error **HttpStatusCode Conflict**. This warning can be ignored to execute the script functions Add and Get.
 4. In PowerShell 5.1, type **A** to add tenant mapping.
-5. A web browser prompt will open.  Enter your **Azure Commercial** credentials (e.g. GlobalAdmin@contoso.onmicrosoft.com). The window will then close after successful authentication. 
+5. A web browser prompt will open.  Enter your **Azure Commercial** credentials (for example, GlobalAdmin@contoso.onmicrosoft.com). The window will then close after successful authentication. 
 6. A second web browser prompt will open, you'll be asked for your **Azure Commercial** credentials again, after that another prompt will ask you to grant permissions.  Check the box **Consent on behalf of your organization** and then click on the **Accept** button. The window will then close.
-7. A third browser prompt will open. Enter your **Azure Government** credentials (e.g. GlobalAdmin@fabrikam.onmicrosoft.us). The window will then close after successful authentication.
+7. A third browser prompt will open. Enter your **Azure Government** credentials (for example, GlobalAdmin@fabrikam.onmicrosoft.us). The window will then close after successful authentication.
 8. A fourth web browser prompt will open, you'll be asked for your **Azure Government** credentials again, after that another prompt will ask you to grant permissions.  Check the box **Consent on behalf of your organization** and then click on the **Accept** button. The window will then close.
 8. After the mapping completes, you'll see **Added tenant mapping successfully!**
 
@@ -112,7 +112,7 @@ If the mapping fails, try the following suggestions:
 
 - **Wait at least 10 minutes and try again.** Permission changes must propagate before the mapping can complete.
 
-- **Confirm there isn't an existing tenant mapping.** Only a 1:1 mapping of the Commercial:Government tenant is supported. Run the **AAD Tenant Mapping.ps1** script again and select the **Get** option.  Contact support by filing a support ticket in the Microsoft Intune admin center (intune.microsoft.com) > Tenant Administration > Help and support > Windows 365 via with the error details.
+- **Confirm there isn't an existing tenant mapping.** Only a 1:1 mapping of the Commercial and Government tenants is supported. Run the **AAD Tenant Mapping.ps1** script again and select the **Get** option.  Contact support by filing a support ticket in the Microsoft Intune admin center (intune.microsoft.com) > Tenant Administration > Help and support > Windows 365 via with the error details.
 
 ## Set permissions to upload custom images and/or connect to on-premises resources
 
@@ -120,7 +120,7 @@ If you're going to use Gallery images to provision Cloud PCs using the Microsoft
 
 If you're going to upload custom images on the Microsoft-hosted network, keep reading.
 
-When provisioning Windows 365 Cloud PCs without the Microsoft-hosted network, you must define an [Azure Network Connection](azure-network-connections.md) (ANC) that the Cloud PCs will use to connect with other resources, including your on-premises infrastructure. To set up the ANC you'll need the existing values for the Azure Government:
+When provisioning Windows 365 Cloud PCs without the Microsoft-hosted network, you must define an [Azure Network Connection](azure-network-connections.md) (ANC) that the Cloud PCs will use to connect with other resources, including your on-premises infrastructure. To set up the ANC, you'll need the existing values for the Azure Government:
     - Subscription ID.
     - Resource Group.
     - Virtual Network.
