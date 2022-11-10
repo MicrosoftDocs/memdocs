@@ -57,10 +57,10 @@ The Azure Commercial subscription includes a tenant (which ends in onmicrosoft.c
 
 The Azure Government subscription includes a tenant (which ends in onmicrosoft.us) and the following if you wish to:
 
-#Use Custom Images#
+**Use Custom Images**
 - [Add a custom image](/windows-365/enterprise/add-device-images)
 
-#Connect to resources via a private network connection#
+**Connect to resources via a private network connection**
 - Azure Virtual Network (VNet).
 - Azure VPN Gateway or a dedicated connection via ExpressRoute.
 - Other Azure Resources, including Cloud PC resources.
