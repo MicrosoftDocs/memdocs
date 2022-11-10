@@ -55,20 +55,20 @@ For both tenant mapping and granting permissions for custom images and/or connec
         - [AzureAD](https://www.powershellgallery.com/packages/AzureAD/2.0.2.140)
         - [MSAL.PS](https://www.powershellgallery.com/packages/MSAL.PS/4.37.0.0)
 
-## Azure Commercial side
+## Azure Commercial requirements
 
 The Azure Commercial subscription includes a tenant (which ends in onmicrosoft.com) and the following:
 
 - Windows 365 Government subscription.
 - Enterprise Mobility + Security (EMS)/Microsoft Endpoint Manager subscription.
-- Azure Active Directory information such as Users and Groups.
+- Azure Active Directory tenant with the Users and Groups accessing Windows 365.
 
-## Azure Government side
+## Azure Government requirements
 
 The Azure Government subscription includes a tenant (which ends in onmicrosoft.us) and the following if you wish to:
 
 **Use Custom Images**
-- See [add a custom image](/windows-365/enterprise/add-device-images) for more information on the process.
+- See [add a custom image](/windows-365/enterprise/add-device-images) for more information on the process and requirements.
 
 **Connect to resources via a private network connection**
 - Azure Virtual Network (VNet).
