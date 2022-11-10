@@ -332,6 +332,7 @@ When a device is using an OS version later than the version in the rule, access 
   >     For Android Enterprise 12+ devices, it's recommended to create a new policy and configure the **Password complexity** setting.
   > 
   > - If the **Required password type** setting isn't changed from the **Device default** value in a policy, then no password policy is automatically applied to newly enrolled Android Enterprise 12+ devices.
+  > - The **Password complexity** setting will be enforced in the 2212 release of the Company Portal app.
 
 #### Android 11 and earlier - *for Personally-Owned Work Profile*
 
