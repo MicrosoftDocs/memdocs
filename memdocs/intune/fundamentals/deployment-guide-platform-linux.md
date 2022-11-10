@@ -42,7 +42,7 @@ Each task links to a help doc on Microsoft Learn that contains more detailed inf
 
  Microsoft Intune, Azure Active Directory (AD), and Microsoft Edge power the feature and capabilities for Linux desktop management. Microsoft Intune powers the device management and compliance capabilities. Azure AD powers conditional access, which is used alongside Microsoft Intune compliance policies. Microsoft Edge is the web browser app used to provide protected access to Microsoft 365 web apps. 
  
- Complete the following prerequisites to enable all supported features for Linux devices:  
+ Complete the following prerequisites to enable your tenant's endpoint management capabilities:   
 
 * [Add users](users-add.md) and [groups](groups-add.md)
 * [Assign licenses to users](licenses-assign.md) 
@@ -74,7 +74,7 @@ You can enforce device compliance policies based on Linux distribution type, ver
 
 Enrollment is supported on Linux desktops running Ubuntu LTS, version 22.04 or 20.04. Employees assigned Intune licenses can enroll their personal Linux devices into Microsoft Intune whenever they want. During enrollment, their device is registered with Azure AD and evaluated for compliance. If you've applied a conditional access policy to Edge, users will be prompted to enroll their devices before they can access Microsoft 365 web apps with their work account.    
 
-As an Intune administrator, you don't need to do anything to enable enrollment for employees, other than what's described under [Prerequisites](deployment-guide-platform-linux.md#prerequisites). However, it's important to provide them with help resources in case they need guidance during enrollment.  
+As an Intune administrator, you don't need to do anything to enable enrollment for employees, other than what's described under [Prerequisites](deployment-guide-platform-linux.md#step-1-prerequisites). However, it's important to provide them with help resources in case they need guidance during enrollment.  
 
 >[!TIP]
 > If you require device encryption, tell your employees prior to device enrollment so that, when possible, they can opt to encrypt their device during OS installation. It's easier and faster than encrypting the device after OS installation. Additionally, make your organization's operating system requirements and password complexity requirements easy to find on your website or in an onboarding email so that employees don't have to delay enrollment to seek out that information.  
