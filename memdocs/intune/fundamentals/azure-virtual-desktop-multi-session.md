@@ -45,12 +45,12 @@ You can manage **Windows 10** and **Windows 11 Enterprise multi-session** VMs cr
 
 ## Overview
 
-Device configuration support in Microsoft Intune for Windows 10 or Windows 11 Enterprise multi-session is Generally Available (GA). This means [policies defined in the OS scope](/windows/client-management/mdm/policy-configuration-service-provider) and apps configured to install in the system context can be applied to Azure Virtual Desktop multi-session VMs when assigned to device groups. 
+Device configuration support in Microsoft Intune for Windows 10 or Windows 11 Enterprise multi-session is generally available (GA). This means [policies defined in the OS scope](/windows/client-management/mdm/policy-configuration-service-provider) and apps configured to install in the system context can be applied to Azure Virtual Desktop multi-session VMs when assigned to device groups.
 
 > [!NOTE]
 > Device-based configuration cannot be assigned to users and user-based configuration cannot be assigned to devices. It will be reported as **Error** or **Not applicable**.
 
-User configuration support in Microsoft Intune for Windows 11 multi-session VMs is in public preview. With this you'll be able to:
+User configuration support in Microsoft Intune for Windows 11 multi-session VMs is generally available. With this you'll be able to:
 
  - Configure user scope policies using **Settings catalog** and assign to groups of users. You can use the search bar to search all configurations with scope set to "user".
  
@@ -59,7 +59,7 @@ User configuration support in Microsoft Intune for Windows 11 multi-session VMs 
  - Configure PowerShell scripts to install in the user context and assign to users.
 
 > [!NOTE]
-> User configuration support for Windows 10 multi-session builds will be available later this year.
+> User configuration support for Windows 10 multi-session builds will be available in the future.
 
 
 ## Prerequisites
@@ -128,7 +128,7 @@ Windows 10 or Windows 11 Administrative Templates are supported for Windows 10 o
 
 - ADMX-backed policies are supported. Some policies aren't yet available in the Settings catalog.
 - ADMX-ingested policies are supported, including Office and Microsoft Edge settings available in Office administrative template files and Microsoft Edge administrative template files. For a complete list of ADMX-ingested policy categories, see [Win32 and Desktop Bridge app policy configuration](/windows/client-management/mdm/win32-and-centennial-app-policy-configuration#overview). Some ADMX ingested settings won't be applicable to Windows 10 or Windows 11 Enterprise multi-session.
-- ADMX - ingested policies are not supported for user targetting at this time.
+- ADMX-ingested policies are supported for user targeting only on Windows 11 at this time.
 
 ## Compliance and Conditional access
 
