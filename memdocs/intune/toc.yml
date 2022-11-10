@@ -95,7 +95,7 @@ items:
       - name: App protection
         href: ./fundamentals/migration-guide-app-protection-policies.md
 
-  - name: Scenarios
+  - name: Solutions and scenarios
     items: 
     - name: Scenarios overview
       href: ./scenarios/scenario-overview.md
@@ -118,7 +118,24 @@ items:
       displayName: MDM
     - name: Manage operating system versions
       href: ./fundamentals/manage-os-versions.md
-
+    - name: Move to cloud native endpoints
+      items:
+      - name: Overview and benefits
+        href: ../solutions/cloud-native-endpoints/cloud-native-endpoints-overview.md
+      - name: Tutorial-Get started with cloud native Windows endpoints
+        href: ../solutions/cloud-native-endpoints/cloud-native-windows-endpoints.md
+      - name: Azure AD concepts and on-premises resources
+        items:
+        - name: Azure AD joined vs. Hybrid Azure AD joined
+          href: ../solutions/cloud-native-endpoints/azure-ad-joined-hybrid-azure-ad-joined.md
+        - name: Access on-premises resources
+          href: ../solutions/cloud-native-endpoints/cloud-native-endpoints-on-premises.md
+      - name: Planning guide
+        href: ../solutions/cloud-native-endpoints/cloud-native-endpoints-planning-guide.md
+      - name: Known issues
+        href: ../solutions/cloud-native-endpoints/cloud-native-endpoints-known-issues.md
+    - name: "Zero Trust: Manage devices with Intune"
+      href: /microsoft-365/solutions/manage-devices-with-intune-overview
   - name: Industry guides
     items: 
     - name: Education
