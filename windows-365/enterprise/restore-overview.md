@@ -34,9 +34,9 @@ Point-in-time restore lets an administrator restore a Cloud PC to the exact stat
 
 ## Restore point options
 
-You can choose to save short-term restore points every 4, 6, 12, 16, or 24 hours. Each Cloud PC will have 10 restore points saved at the intervals that you define in the user setting. For example, if you chose four hour intervals, a Cloud PC will have 10 restore points spread out every four hours over the last 40 hours.
+You can choose to save user-defined restore points every 4, 6, 12, 16, or 24 hours. Each Cloud PC will have 10 restore points saved at the intervals that you define in the user setting. For example, if you chose four hour intervals, a Cloud PC will have 10 restore points spread out every four hours over the last 40 hours.
 
-In addition to these configurable short-term restore points, there are also four long-term restore points that aren't configurable. These long-term restore points are saved every seven days.
+In addition to these configurable short-term restore points, there are also default restore points taken every twelve hours that aren't configurable. These default restore points are saved for seven days for a total of 13 default restore points.
 
 As time passes and a new restore point is added, the oldest restore point is removed.
 
