@@ -108,44 +108,33 @@ If the mapping fails, try the following suggestions:
 
 - **Wait at least 10 minutes and try again.** Permission changes must propagate before the mapping can complete.
 
-- **Confirm there isn't an existing tenant mapping.** Only a 1:1 mapping of the Commercial:Government tenant is supported. Run the *AAD Tenant Mapping.ps1** script again and select the **Get** option.  Contact support by filing a support ticket in the Microsoft Intune admin center (intune.microsoft.com) > Tenant Administration > Help and support > Windows 365 via with the error details.
+- **Confirm there isn't an existing tenant mapping.** Only a 1:1 mapping of the Commercial:Government tenant is supported. Run the **AAD Tenant Mapping.ps1** script again and select the **Get** option.  Contact support by filing a support ticket in the Microsoft Intune admin center (intune.microsoft.com) > Tenant Administration > Help and support > Windows 365 via with the error details.
 
-## Set permissions to upload custom images
+## Set permissions to upload custom images and/or connect to on-premise resources
 
 If you are going to use Gallery images to provision Cloud PCs using the Microsoft-hosted network, no further configurations are required.  Stop here.
 
-If you are going to upload custom images on the Microsoft-hosted network, proceed with the instructions below.
+If you are going to upload custom images on the Microsoft-hosted network, keep reading.
+
+When provisioning Windows 365 Cloud PCs without the Microsoft-hosted network, you must define an [Azure Network Connection](azure-network-connections.md) (ANC) that the Cloud PCs will use to connect with other resources, including your on-premises infrastructure. To setup the ANC you will need the existing values for the Azure Government:
+    - Subscription ID.
+    - Resource Group.
+    - Virtual Network.
 
 > [!NOTE]
 > Tenant mapping must be successful before you proceed.
 
 1. Go to the [Windows 365 PowerShell GitHub repository](https://github.com/microsoft/Windows365-PSScripts).
 2. Navigate to the **Windows 365 GCC** folder > **Grant Service Principal Roles in Tenant** folder > select **Grant W365 SP Roles in Tenant.ps1** > **Raw** > save the raw file to a location on your computer as a .ps1 file.
-3. Open Windows PowerShell 5.1 (x64) as Administrator and run the PowerShell script. At the prompt:
-   - For Azure AD join infrastructures, type **1** to enable custom image uploads. You don't need to enable permissions for creating ANC just to upload custom images. 
-   - For hybrid Azure AD join infrastructures, type **3** at the prompt as creating ANCs is a requirement for uploading custom images.
-
-## Set permissions to connect to on-premises resources
-
-When provisioning Windows 365 Cloud PCs without the Microsoft-hosted network, you must define an [Azure Network Connection](azure-network-connections.md) (ANC) that the Cloud PCs will use to connect with other resources, including your on-premises infrastructure. To grant permissions for admins to create ANCs in the Government cloud, follow these steps:
-
-1. Gather the following information. It will be used later in these steps.
-    - Commercial Azure tenant ID.
-    - Azure Government tenant ID.
-    - Subscription ID in the Azure Government tenant.
-    - Resource Group in the Azure Government tenant.
-    - Virtual Network in the Azure Government tenant.
-2. Go to the [Windows 365 PowerShell GitHub repository](https://github.com/microsoft/Windows365-PSScripts).
-3. Navigate to the **Windows 365 GCC** folder > **Grant Service Principal Roles in Tenant** folder > select **Grant W365 SP Roles in Tenant.ps1** > **Raw** > save the raw file to a location on your computer as a .ps1 file.
-4. Open Windows PowerShell 5.1 (x64) as Administrator and run the PowerShell script. Sign in to your Azure Government subscription.
-5. At the prompt, type one of the following options:
-    - **2** to grant permissions to create ANCs.
-    - **3** to grant permissions to create ANCs and upload custom images.
-6. The script lists the subscriptions available for the Azure Government cloud tenant. Select the subscription that you want to grant permissions to.
-8. The resource groups for that subscription are listed. Select the group that you want to use.
-9. Select your vNet.
-10. The script grants the permissions and lists what was configured.
-
+3. Open Windows PowerShell 5.1 (x64) as Administrator and run the PowerShell script.
+4. At the prompt, type one of the following options to grant permissions:
+    - **1** to only upload custom images. For Azure AD join infrastructures, you don't need to create an ANC just to upload custom images.
+    - **2** to only create ANCs.
+    - **3** to create ANCs and upload custom images. For hybrid Azure AD join infrastructures, creating an ANC is a requirement for uploading custom images.
+        - The script lists the Azure Government subscriptions you have access to. Select the subscription that you want to grant permissions to.
+        - The resource groups for that subscription are then listed. Select the group that you want to use.
+        - Select your vNet.
+10. The script will then grant the permissions and lists what was configured.
 
 
 ## Next steps
