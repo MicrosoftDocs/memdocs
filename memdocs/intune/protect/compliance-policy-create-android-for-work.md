@@ -307,9 +307,9 @@ When a device is using an OS version later than the version in the rule, access 
 #### Android 12 and later - *for Personally-Owned Work Profile*
 
 - **Password complexity**  
-  Use this setting to set the password complexity requirements for Android Enterprise 12 and newer devices. Your options:
+  Use this setting to set the password complexity requirements. Your options:
 
-  - **Not configured** - This setting isn't evaluated for compliance or non-compliance.
+  - **None** - This setting isn't evaluated for compliance or non-compliance.
   - **Low** - Pattern or PIN with repeating (4444) or ordered (1234, 4321, 2468) sequences are blocked.
   - **Medium** - PIN with repeating (4444) or ordered (1234, 4321, 2468) sequences are blocked. The length, alphabetic length, or alphanumeric length must be at least 4 characters.
   - **High** - PIN with repeating (4444) or ordered (1234, 4321, 2468) sequences are blocked. The length must be at least 8 characters. The alphabetic or alphanumeric length must be at least 6 characters.
@@ -323,17 +323,22 @@ When a device is using an OS version later than the version in the rule, access 
 
   > [!IMPORTANT]
   >
-  > - If the **Required password type** setting is configured in a policy, then:
+  > - If the **Required password type** setting is changed from the **Device default** value in a policy, then:
   >   - Newly enrolled Android Enterprise 12+ devices will automatically use the **Password complexity** setting with the **High** complexity. So if you don't want a **High** password complexity, then create a new policy for Android Enterprise 12+ devices and configure the **Password complexity** setting.
   >   - Existing Android Enterprise 12+ devices will continue to use the **Required password type** setting and the existing value configured.
   >
   >     If you change an existing policy with the **Required password type** setting configured, then Android Enterprise 12+ devices will automatically use the **Password complexity** setting with the **High** password complexity.
   >
-  >     It's recommended to create a new policy for Android Enterprise 12+ devices and configure the **Password complexity** setting.
+  >     For Android Enterprise 12+ devices, it's recommended to create a new policy and configure the **Password complexity** setting.
   > 
-  > - If the **Required password type** setting isn't configured in a policy, then no password policy is automatically applied to newly enrolled Android Enterprise 12+ devices.
+  > - If the **Required password type** setting isn't changed from the **Device default** value in a policy, then no password policy is automatically applied to newly enrolled Android Enterprise 12+ devices.
 
 #### Android 11 and earlier - *for Personally-Owned Work Profile*
+
+> [!IMPORTANT]
+> 
+> - Google is deprecating these **Required password type** and **Minimum password length** settings for Android 12+ personally owned devices with a work profile and replacing it with new password complexity requirements. For more information about this change, go to [Day zero support for Android 13](https://aka.ms/Intune/Android13).
+  > - On Android Enterprise 12+ devices, use the **Password complexity** setting.
 
 - **Required password type**  
   Choose if a password should include only numeric characters, or a mix of numerals and other characters. Your options:
@@ -344,11 +349,6 @@ When a device is using an OS version later than the version in the rule, access 
   - **At least alphabetic**: Enter the **minimum password length** a user must enter, between 4 and 16 characters.
   - **At least alphanumeric**: Enter the **minimum password length** a user must enter, between 4 and 16 characters.
   - **At least alphanumeric with symbols**: Enter the **minimum password length** a user must enter, between 4 and 16 characters.
-
-  > [!IMPORTANT]
-  > 
-  > - Google is deprecating this **Required password type** setting for Android 12+ personally owned devices with a work profile and replacing it with new password complexity requirements. For more information about this change, go to [Day zero support for Android 13](https://aka.ms/Intune/Android13).
-  > - On Android Enterprise 12+ devices, use the **Password complexity** setting.
 
 Depending on the *Required password type* you select, the following setting is available:
 
