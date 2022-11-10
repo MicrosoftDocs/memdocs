@@ -177,7 +177,7 @@ When MAM policy isn't being enforced as expected, we recommend that you check Co
 You can collect Company Portal logs in one of the following ways:
 - Through the Company Portal
   - Open the Company Portal app
-  - Select on the three dots menu on the up right corner
+  - Select the three dots menu on the up right corner
   - Select Settings
   - Under Diagnostic Logs, select Save Logs
   - Follow the prompt to choose the output directory to save the Company Portal logs. 
