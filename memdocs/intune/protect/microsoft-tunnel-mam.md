@@ -39,7 +39,7 @@ To extend your existing [Microsoft Tunnel configuration](../protect/microsoft-tu
 - App configuration policy for Microsoft Defender. This policy configures Microsoft Defender for Endpoint on a device as the tunnel client app.
 - App protection policy to automatically start the connection to Microsoft Tunnel when the device accesses corporate resources.
 
-With these policies in place, your existing Site and Server configurations for Tunnel support access from devices that aren't enrolled with Intune.
+With these policies in place, your existing Site and Server configurations for Tunnel support access from devices that aren't enrolled with Intune. In addition, you can choose to deploy your configurations for MAM Tunnel to enrolled devices instead of using MDM Tunnel configurations. In this scenario, an enrolled device must use only the the MDM Tunnel configurations or the MAM Tunnel configurations, but not both. For example, enrolled devices cannot have an app like Edge that uses MAM tunnel configurations while other apps use MDM Tunnel configurations. 
 
 ## Prerequisites
 
