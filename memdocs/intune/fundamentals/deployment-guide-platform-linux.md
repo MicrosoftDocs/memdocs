@@ -49,7 +49,7 @@ Each task links to a help doc on Microsoft Learn that contains more detailed inf
 * [Set mobile device management authority](mdm-authority-set.md) 
 * [Have Global Administrator or Intune administrator Azure Active Directory permissions](role-based-access-control.md)  
 
- For more details and recommendations about how to prepare your organization, onboard, or adopt Intune for mobile device management and mobile application management, see the [Intune setup deployment guide](deployment-guide-intune-setup.md).    
+ For more details and recommendations about how to prepare your organization, onboard, or adopt Intune for mobile device management, see the [Intune setup deployment guide](deployment-guide-intune-setup.md).    
 
 ## Step 2: Plan for your deployment  
 
