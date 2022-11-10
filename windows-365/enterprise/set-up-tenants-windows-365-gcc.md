@@ -38,18 +38,22 @@ Use the following procedures to setup Windows 365 in the Government Community Cl
 > These instructions are specifically for GCC.  The instructions on this page do not apply to GCC High.
 
 ## Before you begin
-For both tenant mapping and granting permissions for custom images and/or connecting to your own networks:
+For both tenant mapping and granting permissions for custom images and/or connecting to your own networks, you will need:
 
-- You must have an Azure Commercial AND an Azure Government subscription.
-- You will be required to enter the credentials of a user that has
+- An Azure Commercial subscription.
+- An Azure Government subscription.
+- Credentials of a user that has:
     - *Owner* role in your Azure Commercial subscription, AND
     - *Global Administrator* role in your Azure AD (Commercial) tenant which ends in onmicrosoft.com.
-- You (or another person) will be required to enter the credentials of a user that has
+- Credentials of a user that has:
     - *Owner* role in your Azure Government subscription, AND
     - *Global Administrator* role in your Azure AD (Government) tenant which ends in onmicrosoft.us.
-- You must have Windows PowerShell version 5.1.
-    - PowerShell 5.1 is [preinstalled](/powershell/scripting/windows-powershell/install/installing-windows-powershell) on Windows 10/11 and Windows Server 2016 or later.
-    - Other PowerShell versions may result in errors when performing the tenant mapping.
+- Administrative rights on a workstation or server with:
+    - Windows PowerShell version 5.1. PowerShell 5.1 is [preinstalled](/powershell/scripting/windows-powershell/install/installing-windows-powershell) on Windows 10/11 and Windows Server 2016 or later. Other PowerShell versions may result in errors when performing the tenant mapping.
+    - The following installed. The script will download the missing items below if it is not present.
+        - Nuget provider
+        - [AzureAD](https://www.powershellgallery.com/packages/AzureAD/2.0.2.140)
+        - [MSAL.PS](https://www.powershellgallery.com/packages/MSAL.PS/4.37.0.0)
 
 ## Azure Commercial side
 
@@ -97,9 +101,9 @@ To connect the two tenants, the **AAD Tenant Mapping.ps1** PowerShell script mus
     >If the script was previously run successfully, you'll see the error **HttpStatusCode Conflict**. This warning can be ignored to execute the script functions Add and Get.
 4. In PowerShell 5.1, type **A** to add tenant mapping.
 5. A web browser prompt will open.  Enter your **Azure Commercial** credentials (e.g. GlobalAdmin@contoso.onmicrosoft.com). The window will then close after successful authentication. 
-6. Another web browser prompt will open, you will be asked for your **Azure Commercial** credentials again, after that another prompt will ask you to grant permissions.  Check the box **Consent on behalf of your organization** and then click on the **Accept** button. The window will then close.
-7. A web browser prompt will open. Enter your **Azure Government** credentials (e.g. GlobalAdmin@fabrikam.onmicrosoft.us). The window will then close after successful authentication.
-8. Another web browser prompt will open, you will be asked for your **Azure Government** credentials again, after that another prompt will ask you to grant permissions.  Check the box **Consent on behalf of your organization** and then click on the **Accept** button. The window will then close.
+6. A 2nd web browser prompt will open, you will be asked for your **Azure Commercial** credentials again, after that another prompt will ask you to grant permissions.  Check the box **Consent on behalf of your organization** and then click on the **Accept** button. The window will then close.
+7. A 3rd browser prompt will open. Enter your **Azure Government** credentials (e.g. GlobalAdmin@fabrikam.onmicrosoft.us). The window will then close after successful authentication.
+8. A 4th web browser prompt will open, you will be asked for your **Azure Government** credentials again, after that another prompt will ask you to grant permissions.  Check the box **Consent on behalf of your organization** and then click on the **Accept** button. The window will then close.
 8. After the mapping completes, you will see **Added tenant mapping successfully!**
 
 ## Common tenant mapping issues
