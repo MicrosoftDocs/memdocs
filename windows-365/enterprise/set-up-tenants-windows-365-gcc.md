@@ -85,7 +85,7 @@ If you want to use Azure AD join or hybrid Azure AD join, consider these prepara
 
 ## Map the commercial and government tenants
 
-To connect the two tenants, the **AAD Tenant Mapping.ps1** PowerShell script must be run. This script will give admins either or both of the following abilities:
+To connect the two tenants, the **AAD Tenant Mapping.ps1** PowerShell script must be run. This script is a pre-requisite to give admins either or both of the following abilities:
 
 - Upload custom images for use with Windows 365 Government Cloud PCs.
 - Define Azure Network Connections so that the Windows 365 Government Cloud PCs can access on-premises or Microsoft-hosted resources.
