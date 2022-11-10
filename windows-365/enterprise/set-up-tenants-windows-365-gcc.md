@@ -9,7 +9,7 @@ ms.author: erikje
 manager: dougeby
 ms.date: 10/3/2022
 ms.topic: overview
-ms.service: cloudpc
+ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
 ms.technology:
@@ -43,7 +43,7 @@ Use the following procedures to setup Windows 365 in the Government Community Cl
 - You must have the *Owner* role in your Azure Government subscription.
 - You must have the *Global Administrator* role in your Azure AD (Commercial) tenant which ends in onmicrosoft.com.
 - You must have the *Global Administrator* role in your Azure AD (Government) tenant which ends in onmicrosoft.us.
-- You must have Windows PowerShell version 5.1. Other versions may result in errors when performing the tenant mapping. If you are using Windows 10 or 11, or Windows Server 2016 or later, you should already have Windows PowerShell 5.1 because that is [preinstalled](/powershell/scripting/windows-powershell/install/installing-windows-powershell?view=powershell-5.1) with those operating systems.
+- You must have Windows PowerShell version 5.1. Other versions may result in errors when performing the tenant mapping. If you are using Windows 10 or 11, or Windows Server 2016 or later, you should already have Windows PowerShell 5.1 because that is [preinstalled](/powershell/scripting/windows-powershell/install/installing-windows-powershell) with those operating systems.
 
 ## Azure Commercial side
 
@@ -90,9 +90,10 @@ To connect the two tenants, the **AAD Tenant Mapping.ps1** PowerShell script mus
     >[!NOTE]
     >If the script was previously run successfully, you'll see the error **HttpStatusCode Conflict**. This warning can be ignored to execute the script functions Add and Get.
 4. In PowerShell 5.1, type **A** to add tenant mapping.
-5. A web browser prompt will open.  Enter your **Azure Commercial** credentials (e.g. GlobalAdmin@contoso.onmicrosoft.com). The window will then close after successful authentication.
-6. Another web browser prompt will open.  Check the box **Consent on behalf of your organization** and then click on the **Accept** button. The windows will then close.
+5. A web browser prompt will open.  Enter your **Azure Commercial** credentials (e.g. GlobalAdmin@contoso.onmicrosoft.com). The window will then close after successful authentication. 
+6. Another web browser prompt will open, you will be asked for your **Azure Commercial** credentials again, after that another prompt will ask you to grant permissions.  Check the box **Consent on behalf of your organization** and then click on the **Accept** button. The windows will then close.
 7. A web browser prompt will open. Enter your **Azure Government** credentials (e.g. GlobalAdmin@fabrikam.onmicrosoft.us). The window will then close after successful authentication.
+8. Another web browser prompt will open, you will be asked for your **Azure Government** credentials again, after that another prompt will ask you to grant permissions.  Check the box **Consent on behalf of your organization** and then click on the **Accept** button. The windows will then close.
 8. After the mapping completes, you will see **Added tenant mapping successfully!**
 
 ## Common tenant mapping issues
