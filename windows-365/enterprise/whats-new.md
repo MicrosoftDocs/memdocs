@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 10/27/2022
+ms.date: 11/11/2022
 ms.topic: reference
 ms.service: windows-365
 ms.subservice:
@@ -46,7 +46,23 @@ Learn what new features are available in Windows 365 Enterprise.
 ### Role-based access control
 ### Scripts
 ### End user experience
+### Windows 365 Government
+### Windows 365 app
 -->
+
+<!-- ########################## -->
+## Week of October 24, 2022
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Windows 365 Government
+
+#### Windows 365 Government now supports Windows 11 and Secure boot<!--42089070-->
+
+Windows 365 Government now supports the following features:
+
+- Creating Cloud PCs that use [Secure boot](/windows-hardware/design/device-experiences/oem-secure-boot).
+- Windows 11 options in the gallery images list.
+- Creating custom images running Windows 11 (must be Generation 2 virtual machines).
 
 <!-- ########################## -->
 ## Week of October 24, 2022
