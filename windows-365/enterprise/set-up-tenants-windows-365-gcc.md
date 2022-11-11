@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 10/3/2022
+ms.date: 11/10/2022
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -30,22 +30,49 @@ ms.collection: M365-identity-device-management
 
 # Set up tenants for Windows 365 Government
 
-For Windows 365 to function in the Government Community Cloud (GCC) environment, customers must prepare one commercial Azure domain (.com) tenant with an onmicrosoft.com address. If you want to use configuration options described in this article, you must also prepare one Azure Government domain (.us) tenant with an onmicosoft.us address.
+For Windows 365 to function in the Government Community Cloud (GCC) environment, customers must link their Azure Commercial tenant with their Azure Government tenant. This linkage lets Intune running in Azure Commercial to manage Cloud PCs running in Azure Government regions, including the options of using custom images and connecting to your own networks.     
 
-## Commercial Azure tenant (.com)
+Use the following procedures to set up Windows 365 in the Government Community Cloud (GCC).
 
-The commercial Azure tenant includes:
+> [!NOTE]
+> These instructions are specifically for GCC.  The instructions on this page do not apply to GCC High.
 
-- Windows 365 subscription.
+## Before you begin
+For both tenant mapping and granting permissions for custom images and/or connecting to your own networks, you'll need:
+
+- An Azure Commercial subscription.
+- An Azure Government subscription.
+- Credentials of a user that has:
+    - *Owner* role in your Azure Commercial subscription, AND
+    - *Global Administrator* role in your Azure Commercial tenant (ending in onmicrosoft.com).
+- Credentials of a user that has:
+    - *Owner* role in your Azure Government subscription, AND
+    - *Global Administrator* role in your Azure Government tenant (ending in onmicrosoft.us).
+- Administrative rights on a workstation or server with:
+    - Windows PowerShell version 5.1. PowerShell 5.1 is [preinstalled](/powershell/scripting/windows-powershell/install/installing-windows-powershell) on Windows 10/11 and Windows Server 2016 or later. Other PowerShell versions may result in errors when performing the tenant mapping.
+    - The following installed. The script will download the missing items below if it isn't present.
+        - NuGet provider
+        - [AzureAD](https://www.powershellgallery.com/packages/AzureAD/2.0.2.140)
+        - [MSAL.PS](https://www.powershellgallery.com/packages/MSAL.PS/4.37.0.0)
+
+## Azure Commercial requirements
+
+The Azure Commercial subscription includes a tenant (which ends in onmicrosoft.com) and the following:
+
+- Windows 365 Government subscription.
 - Enterprise Mobility + Security (EMS)/Microsoft Endpoint Manager subscription.
-- Azure Active Directory (Azure AD) information such as Users and Groups.
+- Azure Active Directory tenant with the Users and Groups accessing Windows 365.
 
-## Azure government tenant (.us)
+## Azure Government requirements
 
-The Azure Government tenant includes Microsoft Azure subscription and associated services, such as:
+The Azure Government subscription includes a tenant (which ends in onmicrosoft.us) and the following if you wish to:
 
-- Azure Virtual Network (vNet).
-- Azure ExpressRoute connections.
+**Use Custom Images**
+- For more information, see [add a custom image](/windows-365/enterprise/add-device-images).
+
+**Connect to resources via a private network connection**
+- Azure Virtual Network (VNet).
+- Azure VPN Gateway or a dedicated connection via ExpressRoute.
 - Other Azure Resources, including Cloud PC resources.
 
 >[!NOTE]
@@ -59,73 +86,60 @@ If you want to use Azure AD join or hybrid Azure AD join, consider these prepara
 
 **Hybrid Azure AD joined Cloud PCs**: If you want to use a hybrid Azure AD join infrastructure, you'll need to configure your commercial (.com) tenant and your government (.us) tenants before creating your Azure Virtual Networks.
 
+
 ## Map the commercial and government tenants
 
-To connect the two tenants, the **AAD Tenant Mapping.ps1** PowerShell script must be run. This script will give admins either or both of the following abilities:
+To connect the two tenants, the **AAD Tenant Mapping.ps1** PowerShell script must be run. This script is a pre-requisite to give admins either or both of the following abilities:
 
 - Upload custom images for use with Windows 365 Government Cloud PCs.
 - Define Azure Network Connections so that the Windows 365 Government Cloud PCs can access on-premises or Microsoft-hosted resources.
 
-1. Find the following information. It will be used later in these steps.
-    - [Commercial Azure tenant ID](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant).
-    - Commercial Azure Global administrator user name and password.
-    - [Azure Government tenant ID](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant).
-    - Azure Government Global administrator credentials user name and password.
-2. Make sure you have Windows PowerShell version 5.1. Other versions may result in errors when running the script.
-3. Go to the [Windows 365 PowerShell GitHub repository](https://github.com/microsoft/Windows365-PSScripts).
-4. Navigate to the **Windows 365 GCC** folder > **AAD Tenant Mapping** folder > select **AAD Tenant Mapping.ps1** > **Raw** > right-click in your browser save the raw file to a location on your computer as a .ps1 file.
-5. As an Administrator, open Windows PowerShell (not Windows PowerShell ISE) and run the PowerShell script.
+1. Go to the [Windows 365 PowerShell GitHub repository](https://github.com/microsoft/Windows365-PSScripts).
+2. Navigate to the **Windows 365 GCC** folder > **AAD Tenant Mapping** > select **AAD Tenant Mapping.ps1** > **Raw** > save the raw file to a location on your computer as a .ps1 file.
+3. Open Windows PowerShell 5.1 (x64) as Administrator and run the PowerShell script. It will download missing modules if needed.
     >[!NOTE]
     >If the script was previously run successfully, you'll see the error **HttpStatusCode Conflict**. This warning can be ignored to execute the script functions Add and Get.
-6. In PowerShell 5.1, type **I** to initiate tenant mapping.
-7. After the Initialization completes, type **A** at the prompt. When prompted, type the following information:
-    - Your Commercial tenant ID, which can be found here: https://portal.azure.com/.
-    - Your Azure Government tenant ID, which can be found here: https://portal.azure.us/.
-8. When prompted, press Enter to open a web browser and enter your user name and password for your commercial tenant (*GlobalAdmin@contoso.onmicrosoft.com*).
-9. When prompted, press Enter to open a web browser and enter your credentials for your Azure Government tenant (*GlobalAdmin@fabrikam.onmicrosoft.us*).
-10. The script will give you the **Subscription**, **Resource group**, **Virtual network**, and **Subnet** for the tenant.
-11. After the mapping completes, you'll see **Added tenant mapping successfully!**
-12. In Intune, choose **Devices** > **Windows 365** > **Azure network connection** > **Create** > **Azure AD Join**.
-13. On the **Network details** page, provide a **Name**. Then, using the information returned from the script above, provide the following information: **Subscription**, **Resource group**, **Virtual network**, and **Subnet**.
-14. Choose **Next** > **Create**.
+4. In PowerShell 5.1, type **A** to add tenant mapping.
+5. A web browser prompt will open.  Enter your **Azure Commercial** credentials (for example, GlobalAdmin@contoso.onmicrosoft.com). The window will then close after successful authentication. 
+6. A second web browser prompt will open, you'll be asked for your **Azure Commercial** credentials again, after that another prompt will ask you to grant permissions.  Check the box **Consent on behalf of your organization** and then click on the **Accept** button. The window will then close.
+7. A third browser prompt will open. Enter your **Azure Government** credentials (for example, GlobalAdmin@fabrikam.onmicrosoft.us). The window will then close after successful authentication.
+8. A fourth web browser prompt will open, you'll be asked for your **Azure Government** credentials again, after that another prompt will ask you to grant permissions.  Check the box **Consent on behalf of your organization** and then click on the **Accept** button. The window will then close.
+8. After the mapping completes, you'll see **Added tenant mapping successfully!**
 
-## Set permissions to upload custom images
+## Common tenant mapping issues
 
-If you're going to use Gallery images to provision Cloud PCs using the Microsoft-hosted network, no further configurations are required.
+If the mapping fails, try the following suggestions:
 
-Extra steps are needed to upload custom images on the Microsoft-hosted network. In this case, follow these steps before uploading your custom image:
+- **Wait at least 10 minutes and try again.** Permission changes must propagate before the mapping can complete.
 
-1. Make sure you've already run the TenantMapping.ps script above to connect the Government cloud and Commercial cloud.
-2. Make sure you have both commercial and government credentials.
-3. Go to the [Windows 365 PowerShell GitHub repository](https://github.com/microsoft/Windows365-PSScripts).
-4. Navigate to the **Windows 365 GCC/Grant Service Principal Roles in Tenant** folder > select **Grant W365 SP Roles in Tenant.ps1** > **Raw** > save the raw file to a location on your computer as a .ps1 file.
-5. Run the PowerShell script.
-6. For Azure AD join infrastructures, you don't need to enable permissions for creating ANC just to upload custom images. Therefore, at the prompt, type **1** to enable custom image uploads.
-7. For hybrid Azure AD join infrastructures, creating ANCs is a requirement for uploading custom images. Therefore, at the prompt, type **3**.
+- **Confirm there isn't an existing tenant mapping.** Only a 1:1 mapping of the Commercial and Government tenants is supported. Run the **AAD Tenant Mapping.ps1** script again and select the **Get** option.  Contact support by filing a support ticket in the Microsoft Intune admin center (intune.microsoft.com) > Tenant Administration > Help and support > Windows 365 via with the error details.
 
-## Set permissions to connect to on-premises resources
+## Set permissions to upload custom images and/or connect to on-premises resources
 
-When provisioning Windows 365 Cloud PCs without the Microsoft-hosted network, you must define an [Azure Network Connection](azure-network-connections.md) (ANC) that the Cloud PCs will use to connect with other resources, including your on-premises infrastructure. To grant permissions for admins to create ANCs in the Government cloud, follow these steps:
+If you're going to use Gallery images to provision Cloud PCs using the Microsoft-hosted network, no further configurations are required.  Stop here.
 
-1. Gather the following information. It will be used later in these steps.
-    - Commercial Azure tenant ID.
-    - Commercial Azure Global administrator username and password.
-    - Azure Government tenant ID.
-    - Azure Government Global administrator credentials username and password.
-    - Subscription in the Azure Government tenant.
-    - Resource Group in the Azure Government tenant.
-    - Virtual Network in the Azure Government tenant.
-2. Make sure you have Windows PowerShell version 5.1. Other versions may result in errors when running the script.
-3. Go to the [Windows 365 PowerShell GitHub repository](https://github.com/microsoft/Windows365-PSScripts).
-4. Navigate to the **Windows 365 GCC/Grant Service Principal Roles in Tenant** folder > select **Grant W365 SP Roles in Tenant.ps1** > **Raw** > save the raw file to a location on your computer as a .ps1 file.
-5. Open Windows PowerShell 5.1 and run the PowerShell script. First step is to sign in to your Azure Government cloud tenant.
-6. At the prompt, type one of the following options:
-    - **2** to grant permissions to create ANCs.
-    - **3** to grant permissions to create ANCs and upload custom images.
-7. The script lists the subscriptions available for the Azure Government cloud tenant. Select the subscription that you want to grant permissions to.
-8. The resource groups for that subscription are listed. Select the group that you want to use.
-9. Select your vNet.
-10. The script grants the permissions and lists what was configured.
+If you're going to upload custom images on the Microsoft-hosted network, keep reading.
+
+When provisioning Windows 365 Cloud PCs without the Microsoft-hosted network, you must define an [Azure Network Connection](azure-network-connections.md) (ANC) that the Cloud PCs will use to connect with other resources, including your on-premises infrastructure. To set up the ANC, you'll need the existing values for the Azure Government:
+    - Subscription ID.
+    - Resource Group.
+    - Virtual Network.
+
+> [!NOTE]
+> Tenant mapping must be successful before you proceed.
+
+1. Go to the [Windows 365 PowerShell GitHub repository](https://github.com/microsoft/Windows365-PSScripts).
+2. Navigate to the **Windows 365 GCC** folder > **Grant Service Principal Roles in Tenant** folder > select **Grant W365 SP Roles in Tenant.ps1** > **Raw** > save the raw file to a location on your computer as a .ps1 file.
+3. Open Windows PowerShell 5.1 (x64) as Administrator and run the PowerShell script.
+4. At the prompt, type one of the following options to grant permissions:
+    - **1** to only upload custom images. For Azure AD join infrastructures, you don't need to create an ANC just to upload custom images.
+    - **2** to only create ANCs.
+    - **3** to create ANCs and upload custom images. For hybrid Azure AD join infrastructures, creating an ANC is a requirement for uploading custom images.
+        - The script lists the Azure Government subscriptions you have access to. Select the subscription that you want to grant permissions to.
+        - The resource groups for that subscription are then listed. Select the group that you want to use.
+        - Select your vNet.
+10. The script will then grant the permissions and lists what was configured.
+
 
 ## Next steps
 
