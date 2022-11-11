@@ -51,7 +51,7 @@ Learn what new features are available in Windows 365 Enterprise.
 -->
 
 <!-- ########################## -->
-## Week of October 24, 2022
+## Week of November 7, 2022
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Windows 365 Government
