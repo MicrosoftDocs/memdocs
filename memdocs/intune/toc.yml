@@ -8,13 +8,13 @@ items:
       href: ./fundamentals/what-is-intune.md 
       items:      
       - name: Manage and secure your identities
-        href: manage-identities.md
+        href: ./fundamentals/manage-identities.md
       - name: Manage devices and control features
-        href: manage-devices.md
+        href: ./fundamentals/manage-devices.md
       - name: Manage apps and protect their data
-        href: manage-apps.md
+        href: ./fundamentals/manage-apps.md
       - name: Intune service release information
-        href: intune-service-servicing-information.md
+        href: ./fundamentals/intune-service-servicing-information.md
     - name: What is device management?
       href: what-is-device-management.md
 
