@@ -122,7 +122,7 @@ items:
         - name: iOS/iPadOS  
           href: deployment-guide-platform-ios-ipados.md  
         - name: Linux
-          href: deployment-guide-platform-enrollment-linux.md  
+          href: deployment-guide-platform-linux.md  
         - name: macOS 
           href: deployment-guide-platform-macOS.md 
       - name: Device and app management
