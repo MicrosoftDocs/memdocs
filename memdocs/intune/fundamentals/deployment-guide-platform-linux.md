@@ -28,7 +28,7 @@ ms.collection: M365-identity-device-management
 
 # Deployment guide: Manage Linux devices in Microsoft Intune
 
-This comprehensive guide describes what you need to do to from start-to-finish to protect and manage Linux apps and endpoints usng Microsoft Intune, including how to:       
+This guide describes everything you need to do to protect and manage Linux apps and endpoints using Microsoft Intune, including how to:       
 
 * Prepare your tenant for device enrollment.  
 * Create Linux device compliance policies. 
@@ -36,7 +36,7 @@ This comprehensive guide describes what you need to do to from start-to-finish t
 * Enforce conditional access policies in Microsoft Edge. 
 * Support employees and students enrolling their desktops.  
 
-Each task links to a help doc on Microsoft Learn that contains more detailed information and how-to steps.   
+For each section in this guide, review the associated tasks. Some tasks are required and some, like setting up conditional access, are optional. Select the provided links in each section to go to our recommended help docs on Microsoft Learn, where you can find more detailed information and how-to instructions.        
  
 ## Step 1: Prerequisites  
 
