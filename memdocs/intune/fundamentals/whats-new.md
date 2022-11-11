@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/09/2022
+ms.date: 11/15/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -65,6 +65,156 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Scripts
 ### Tenant administration
 -->
+
+## Week of November 14, 2022
+
+### Device configuration
+
+#### New settings available in the iOS/iPadOS and macOS Settings Catalog <!-- 16068756 -->  
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
+
+New settings are available in the Settings Catalog. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can see these settings at **Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type.
+
+New settings include:
+
+**Networking > DNS Settings**:
+
+- DNS Protocol
+- Server Addresses
+- Server Name
+- Server URL
+- Supplemental Match Domains
+- On Demand Rules
+- Action
+- Action Parameters
+- DNS Domain Match
+- DNS Server Address Match
+- Interface Type Match
+- SSID Match
+- URL String Probe
+- Prohibit Disablement
+
+**File Vault**:
+
+- Defer
+- Defer Don't Ask At User Logout
+- Defer Force At User Login Max Bypass Attempts
+- Enable
+- Show Recovery Key
+- Use Recovery Key
+
+**File Vault > File Vault Recovery Key Escrow**:
+
+- Device Key
+- Location
+
+**Privacy > Privacy Preferences Policy Control**:
+
+- Authorization
+
+**Restrictions**:
+
+- Allow Air Play Incoming Requests
+
+Applies to:
+
+- macOS
+
+**Web > Web Content Filter**:
+
+- Allow List Bookmarks
+- Auto Filter Enabled
+- Deny List URLs
+- Filter Browsers
+- Filter Data Provider Bundle Identifier
+- Filter Data Provider Designated Requirement
+- Filter Grade
+- Filter Packet Provider Bundle Identifier
+- Filter Packet Provider Designated Requirement
+- Filter Packets
+- Filter Sockets
+- Filter Type
+- Organization
+- Password
+- Permitted URLs
+- Plugin Bundle ID
+- Server Address
+- User Defined Name
+- User Name
+- Vendor Config
+
+Applies to:
+
+- iOS/iPadOS
+- macOS
+
+For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
+
+#### Device Firmware Configuration Interface (DFCI) will support Panasonic devices<!-- 15729353 -->  
+For Windows 10/11 devices, you can create a DFCI profile to manage UEFI (BIOS) settings (**Devices** > **Configuration profiles** > **Create profile** > **Windows 10 and later** for platform > **Templates** > **Device Firmware Configuration Interface** for profile type).
+
+New Panasonic devices running Windows 10/11 will be enabled for DFCI starting Fall 2022. So, admins can create DFCI profiles to manage the BIOS and then deploy the profiles to these Panasonic devices.
+
+Contact your device vendor or device manufacturer to ensure you get eligible devices.
+
+For more information about DFCI profiles, go to:
+
+- [Configure Device Firmware Configuration Interface (DFCI) profiles on Windows devices in Microsoft Intune](../configuration/device-firmware-configuration-interface-windows.md)
+- [Device Firmware Configuration Interface (DFCI) management with Windows Autopilot](/mem/autopilot/dfci-management)
+
+Applies to:
+
+- Windows 10
+- Windows 11
+
+#### Login and background item management support on macOS devices using the settings catalog<!-- 15751007  -->  
+On macOS devices, you can open items automatically when users sign in to their macOS devices. For example, you can open apps, documents, and folders.
+
+In Intune, the settings catalog will include new Service Management settings that can prevent users from disabling the managed login and background items on their devices in System Settings > General > Login Items.
+
+For more information on the settings catalog, go to:
+
+- [Use the settings catalog to configure settings](../configuration/settings-catalog.md)
+- [Common tasks you can complete using the Settings Catalog](../configuration/settings-catalog-common-features.md)
+
+Applies to:
+
+- macOS 13 and newer
+
+### Intune apps
+
+#### Newly available protected apps for Intune<!-- 16118715, 16118848, 16135107, 16027039, 15658466, 15658598  -->  
+The following protected apps are now available for Microsoft Intune:
+
+- Varicent by Varicent US OpCo Corporation
+- myBLDNG by Bldng.ai
+- Enterprise Files for Intune by Stratospherix Ltd
+- ArcGIS Indoors for Intune by ESRI
+- Meetings by Decisions by Decisions AS
+- Idenprotect Go by Apply Mobile Ltd
+
+For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
+
+### Monitor and troubleshoot
+
+#### Review Cloud PC connectivity health checks and errors in Microsoft Endpoint Manager admin center<!-- 13811774 -->  
+You can now review connectivity health checks and errors in the Microsoft Endpoint Manager admin center to help you understand if your users are experiencing connectivity issues. You’ll also get a troubleshooting tool to help resolve connectivity issues. To see the checks, select **Devices** > **Windows 365** > **Azure network connections** > *select a connection in the list* > **Overview**.  
+
+### Tenant administration
+
+#### Access policies for multiple Administrator Approval (public preview)<!-- 9348867 -->  
+In public preview, you can use Intune *access policies* to require that a second Administrator Approval account be used to approve a change before the change is applied.  This capability is known as multiple Administrator Approval (MAA).
+
+You create an access policy to protect a type of resource, like App deployments. Each access policy also includes a group of users who are *approvers* for the changes protected by the policy. When a resource like an app deployment configuration is protected by an access policy, any changes that are made to the deployment, including creating, deleting, or modifying an existing deployment won't apply until a member of the approvers group for that access policy reviews and approves that change.
+
+Approvers can also reject requests, and both the individual requesting a change and the approver can provide notes about the change, or why it was approved or rejected.
+
+Access policies are supported for the following resources:
+
+- **Apps** – Applies to [app deployments](../apps/apps-add.md), but doesn't apply to app protection policies.
+- **Scripts** – Applies to deploying scripts to devices that run [macOS](../apps/macos-shell-scripts.md) or [Windows](../apps/intune-management-extension.md).
+
+For more information, see [Use Access policies to require multiple administrative approval](../fundamentals/multi-admin-approval.md).
 
 ## Week of November 7, 2022
 
