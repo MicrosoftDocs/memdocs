@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 10/3/2022
+ms.date: 11/11/2022
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -48,8 +48,6 @@ The following features are not yet supported for Windows 365 GCC and/or GCCH.
 
 | Feature | GCC | GCCH |
 |:----|:----|:----|
-|Windows 11 support|![X](./media/manage-rdp-device-restrictions/xmark.png)|![X](./media/manage-rdp-device-restrictions/xmark.png)|
-|Provision Cloud PCs with Secure Boot and vTPM|![X](./media/manage-rdp-device-restrictions/xmark.png)|![X](./media/manage-rdp-device-restrictions/xmark.png)|
 |Configure installed language and region for provisioning Cloud PCs|![X](./media/manage-rdp-device-restrictions/xmark.png)|![X](./media/manage-rdp-device-restrictions/xmark.png)|
 |Digital forensics and placing a Cloud PC under review|![X](./media/manage-rdp-device-restrictions/xmark.png)|![X](./media/manage-rdp-device-restrictions/xmark.png)|
 |Unified dashboard|![X](./media/manage-rdp-device-restrictions/xmark.png)|![X](./media/manage-rdp-device-restrictions/xmark.png)|
