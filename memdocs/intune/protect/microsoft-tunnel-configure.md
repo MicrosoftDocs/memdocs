@@ -337,6 +337,23 @@ Use the following information to configure the custom settings in a VPN profile 
 | WebProtection     | **True** *(default)* – Web Protection is enabled, and users will see the web protection tab in the Defender for Endpoint app. <br><br> **False** – Web Protection is disabled. If a Tunnel VPN profile is deployed, users will only see the Dashboard and Tunnel tabs in the Defender for Endpoint app.  |Determines whether Defender for Endpoint Web Protection (anti-phishing functionality) is enabled for the app. By default, this functionality is on. |
 | AutoOnboard       | **True** – If Web Protection is enabled, the Defender for Endpoint app is automatically granted permissions for adding VPN connections and the user isn’t prompted to allow this. <br><br> **False** *(default)* – If Web Protection is enabled, the user is prompted to allow the Defender for Endpoint app to add VPN configurations.  | Determines whether Defender for Endpoint Web Protection is enabled without prompting the user to add a VPN connection (because a local VPN is needed for Web Protection functionality). This setting only applies if *WebProtection* is set to **True**.   |
 
+## Configure TunnelOnly mode to comply with the European Union Data Boundary
+ <!-- Configure Tunnelonly mode and the European Union Data Boundary (EUDB)  -->
+
+By end of calendar year 2022, all personal data, including customer Content (CC), EUII, EUPI and Support Data must be stored and processed in the European Union (EU) for EU tenants.  
+
+The Microsoft Tunnel VPN feature in Defender for Endpoint is European Union Data Boundary (EUDB) compliant. However, the Defender for Endpoint threat protection components related to logging are not yet EUDB compliant. EUBD compliance will become available in a future release.
+
+In the meantime, Microsoft Tunnel customers with EU tenants can enable *TunnelOnly* mode in the Defender for Endpoint Client app. To configure this, use the following steps:
+
+1. Follow the steps found in [Install and configure Microsoft Tunnel VPN solution for Microsoft Intune | Microsoft Learn](../protect/microsoft-tunnel-configure#add-app-configuration-support-for-microsoft-defender-for-endpoint-to-a-vpn-profile-for-microsoft-tunnel.md) to create an app configuration policy which disables Defender for Endpoint functionality.
+
+2. Create a key called **TunnelOnly** and set the value to **True**.
+
+By configuring TunnelOnly mode, all Defender for Endpoint functionality is disabled while Tunnel functionality remains available for use in the app.
+
+For more information about the EU Data Boundary, see [EU Data Boundary for the Microsoft Cloud | Frequently Asked Questions](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/eu-data-boundary-for-the-microsoft-cloud-frequently-asked/ba-p/2329098) on the Microsoft security and compliance blog.
+
 ## Upgrade Microsoft Tunnel
 
 Intune periodically releases updates to the Microsoft Tunnel server. To stay in support, tunnel servers must run the most recent release, or at most be one version behind.
