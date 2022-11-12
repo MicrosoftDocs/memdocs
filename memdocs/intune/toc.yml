@@ -71,17 +71,17 @@ items:
     - name: Deploy Microsoft Intune
       items:
       - name: Deploy Intune overview
-        href: ./fundamentals/ph1-overview.md
+        href: ./fundamentals/deployment-plan-overview.md
       - name: Step 1 - Set up Microsoft Intune fundamentals
         href: ./fundamentals/deployment-guide-intune-setup.md
       - name: Step 1 (cont) to set up Intune (integrate with step above)
         href: ./fundamentals/setup-steps.md
       - name: Step 2 - Add and protect apps
-        href: ./fundamentals/ph1-protect-apps.md
+        href: ./fundamentals/deployment-plan-protect-apps.md
       - name: Step 3 - Create compliance policies
-        href: ./fundamentals/ph1-compliance-policies.md
+        href: ./fundamentals/deployment-plan-compliance-policies.md
       - name: Step 4 - Assign configuration profiles
-        href: ./fundamentals/ph1-configuration-profile.md
+        href: ./fundamentals/deployment-plan-configuration-profile.md
       - name: Step 5 - Enroll devices
         items:
         - name: Enroll devices overview
