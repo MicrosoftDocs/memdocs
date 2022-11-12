@@ -74,6 +74,12 @@ This article shows you how to import custom ADMX and ADML files in the Endpoint 
 
 - Currently, the combo box setting type isn't supported. ADMX files with the combo box setting type will fail to import. All other setting types are supported.
 
+- Not all areas of the registry can be set using custom ADMX. For more information go to: https://learn.microsoft.com/en-us/windows/client-management/win32-and-centennial-app-policy-configuration#overview
+
+- ADMX settings that are built into Windows (located at in the C:\Windows\PolicyDefinitions folder) are enabled through configuration service providers (CSP). These should not be imported using the import ADMX feature. The settings catalog or a custom policy should be used instead of ADMX import. More information on these settings here:
+- ADMX-backed policies in Policy CSP
+- https://learn.microsoft.com/en-us/windows/client-management/mdm/policies-in-policy-csp-admx-backed
+
 ## Download the ADMX templates
 
 Download the ADMX templates you want to import. Save these files to an easily accessible folder, like `C:\ADMXTemplates`. Some common ADMX template downloads include:
