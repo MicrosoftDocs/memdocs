@@ -6,6 +6,18 @@ items:
     items:
     - name: Microsoft Intune overview
       href: ./fundamentals/what-is-intune.md 
+      items:      
+      - name: Manage and secure your identities
+        href: ./fundamentals/manage-identities.md
+      - name: Manage devices and control features
+        href: ./fundamentals/manage-devices.md
+      - name: Manage apps and protect their data
+        href: ./fundamentals/manage-apps.md
+      - name: Intune service release information
+        href: ./fundamentals/intune-service-servicing-information.md
+    - name: What is device management?
+      href: what-is-device-management.md
+
     - name: What's new
       items:
       - name: What's new
@@ -95,6 +107,17 @@ items:
         href: ./fundamentals/migration-guide-configure-policies.md
       - name: App protection
         href: ./fundamentals/migration-guide-app-protection-policies.md
+      - name: Policy map between Basic Mobility and Security and Intune (moved from fundamentals)
+        items: 
+        - name: Policy mapping between Basic Mobility and Security and Intune
+          href: ./fundamentals/policy-map-between-basic-mobility-security-intune.md
+        - name: Access requirements policy mapping
+          href: ./fundamentals/policy-map-access-requirements.md
+        - name: Configurations policy mapping
+          href: ./fundamentals/policy-map-configurations.md
+        - name: Miscellaneous policy mapping
+          href: ./fundamentals/policy-map-miscellaneous.md
+
 
   - name: Solutions and scenarios
     items: 
@@ -195,6 +218,7 @@ items:
           href: ./fundamentals/licenses.md
         - name: Set the MDM authority (updates as post 1911 release MDM is auto set to Intune)
           href: ./fundamentals/mdm-authority-set.md
+ 
       - name: Manage roles (why? add "to assign access to resources" or something)
         items:
         - name: Role-based access control
@@ -221,26 +245,13 @@ items:
       - name: Premium add-ons (will need to sell this and move when it grows)
         href: ./fundamentals/premium-add-ons.md
 
-
-
-
-
       - name: Reference
         items: 
         - name: Error codes and descriptions (need to figure out troubleshooting strategy)
           items: 
           - name: Troubleshoot company resource access problems
             href: /troubleshoot/mem/intune/troubleshoot-company-resource-access-problems?toc=/mem/intune/fundamentals/toc.json&bc=/mem/intune/fundamentals/breadcrumb/toc.json
-        - name: Policy map between Basic Mobility and Security and Intune (move to migration content?)
-          items: 
-          - name: Policy mapping between Basic Mobility and Security and Intune
-            href: ./fundamentals/policy-map-between-basic-mobility-security-intune.md
-          - name: Access requirements policy mapping
-            href: ./fundamentals/policy-map-access-requirements.md
-          - name: Configurations policy mapping
-            href: ./fundamentals/policy-map-configurations.md
-          - name: Miscellaneous policy mapping
-            href: ./fundamentals/policy-map-miscellaneous.md
+
 
       - name: Resources
         items:
