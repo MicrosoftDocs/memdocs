@@ -52,11 +52,11 @@ This feature applies to:
 
   - [Android Enterprise personally owned work profile security settings](../enrollment/android-work-profile-security-settings.md)
 
-## Personally owned devices with a work profile settings list
+## Work profile settings
 
 These settings apply to Android Enterprise personally owned devices with a work profile (BYOD).
 
-### General
+### General settings
 
 - **Copy and paste between work and personal profiles**: **Block** prevents copy-and-paste between work and personal apps. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to share data using copy-and-paste with apps in the personal profile.
 - **Data sharing between work and personal profiles**: Choose if apps in the work profile can share with apps in the personal profile. For example, you can control sharing actions within applications, such as the **Share…** option in the Chrome browser app. This setting doesn't apply to copy/paste clipboard behavior. Your options:
@@ -102,53 +102,76 @@ These settings apply to Android Enterprise personally owned devices with a work 
 
   For example, Outlook is installed on your users' work profile. When set to **Enable**, users can put the agenda widget on the device home screen.
 
+### Work Profile Password
+
+These password settings apply to the work profile password on personally owned devices with a work profile.
+
+#### All Android devices
+
 - **Require Work Profile Password**: **Require** forces a passcode policy that only applies to apps in the work profile. By default, users can use the two separately defined PINs. Or, users can combine the PINs into the stronger of the two PINs. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to use work apps without entering a password.
 
   This setting applies to:
 
   - Android 8.0 and newer personally owned devices with a work profile
 
-  Also configure:
-
-  - **Minimum password length**: Enter the minimum length the password must have, between 4 and 16 characters.
-  - **Maximum minutes of inactivity until work profile locks**: Enter the length of time devices must be idle before the screen is automatically locked. Users must enter their credentials to regain access. For example, enter `5` to lock the device after 5 minutes of being idle. When the value is blank or set to **Not configured**, Intune doesn't change or update this setting.
-
-    On devices, users can't set a time value greater than the configured time in the profile. Users can set a lower time value. For example, if the profile is set to `15` minutes, users can set the value to 5 minutes. Users can't set the value to 30 minutes.
-
-  - **Number of sign-in failures before wiping device**: Enter the number of wrong passwords allowed before the work profile on the device is wiped, from 4-11. `0` (zero) might disable the device wipe functionality. When the value is blank, Intune doesn't change or update this setting.
-
-  - **Password expiration (days)**: Enter the number of days until user passwords must be changed (from **1**-**365**).
-  - **Required password type**: Enter the required password complexity level, and whether biometric devices can be used. Your options:
-    - **Device default**
-    - **Low security biometric**: [Strong vs. weak biometrics](https://android-developers.googleblog.com/2018/06/better-biometrics-in-android-p.html) (opens Android's web site)
-    - **Required**
-    - **At least numeric**: Includes numeric characters, such as `123456789`.
-    - **Numeric complex**: Repeated or consecutive numbers, such as `1111` or `1234`, aren't allowed.
-    - **At least alphabetic**: Includes letters in the alphabet. Numbers and symbols aren't required.
-    - **At least alphanumeric**: Includes uppercase letters, lowercase letters, and numeric characters.
-    - **At least alphanumeric with symbols**: Includes uppercase letters, lowercase letters, numeric characters, punctuation marks, and symbols.
-
-  - **Prevent reuse of previous passwords**: Use this setting to restrict users from creating previously used passwords. Enter the number of previously used passwords that can't be used, from 1-24. For example, enter `5` so users can't set a new password to their current password or any of their previous four passwords. When the value is blank, Intune doesn't change or update this setting.
-  - **Face unlock**: **Block** prevents users from using the device's facial recognition to unlock the personally owned work profile. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to unlock the device using facial recognition.
-  - **Fingerprint unlock**: **Block** prevents users from using the device's fingerprint scanner to unlock the personally owned work profile. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to unlock the device using a fingerprint.
-  - **Iris unlock**: **Block** prevents users from using the device's iris scanner to unlock the personally owned work profile. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to unlock the device using the iris scanner.
-  - **Smart Lock and other trust agents**: **Block** prevents Smart Lock or other trust agents from adjusting lock screen settings on compatible devices. If devices are in a trusted location, then this feature, also known as a trust agent, lets you disable or bypass the device lock screen password. For example, bypass the work profile password when devices are connected to a specific Bluetooth device, or when devices are close to an NFC tag. Use this setting to prevent users from configuring Smart Lock.
-
-    When set to **Not configured** (default), Intune doesn't change or update this setting.
-
-### Password
-
-These password settings apply to personally owned devices with a work profile.
-
-- **Minimum password length**: Enter the minimum length the password must have, between 4 and 16 characters.
-- **Maximum minutes of inactivity until screen locks**: Enter the length of time devices must be idle before the screen is automatically locked. Users must enter their credentials to regain access. For example, enter `5` to lock the device after 5 minutes of being idle. When the value is blank or set to **Not configured**, Intune doesn't change or update this setting.
+- **Maximum minutes of inactivity until work profile locks**: Enter the length of time devices must be idle before the screen is automatically locked. Users must enter their credentials to regain access. For example, enter `5` to lock the device after 5 minutes of being idle. When the value is blank or set to **Not configured**, Intune doesn't change or update this setting.
 
   On devices, users can't set a time value greater than the configured time in the profile. Users can set a lower time value. For example, if the profile is set to `15` minutes, users can set the value to 5 minutes. Users can't set the value to 30 minutes.
 
-- **Number of sign-in failures before wiping device**: Enter the number of wrong passwords allowed before the personally owned work profile in the device is wiped, from 4-11. `0` (zero) might disable the device wipe functionality. When the value is blank, Intune doesn't change or update this setting.
-- **Password expiration (days)**: Enter the number of days, until the device password must be changed, from 1-365. For example, enter `90` to expire the password after 90 days. When the password expires, users are prompted to create a new password. When the value is blank, Intune doesn't change or update this setting.
+- **Number of sign-in failures before wiping device**: Enter the number of wrong passwords allowed before the work profile on the device is wiped, from 4-11. `0` (zero) might disable the device wipe functionality. When the value is blank, Intune doesn't change or update this setting.
+
+- **Password expiration (days)**: Enter the number of days until user passwords must be changed (from **1**-**365**).
+
+- **Prevent reuse of previous passwords**: Use this setting to restrict users from creating previously used passwords. Enter the number of previously used passwords that can't be used, from 1-24. For example, enter `5` so users can't set a new password to their current password or any of their previous four passwords. When the value is blank, Intune doesn't change or update this setting.
+- **Face unlock**: **Block** prevents users from using the device's facial recognition to unlock the personally owned work profile. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to unlock the device using facial recognition.
+- **Fingerprint unlock**: **Block** prevents users from using the device's fingerprint scanner to unlock the personally owned work profile. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to unlock the device using a fingerprint.
+- **Iris unlock**: **Block** prevents users from using the device's iris scanner to unlock the personally owned work profile. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to unlock the device using the iris scanner.
+- **Smart Lock and other trust agents**: **Block** prevents Smart Lock or other trust agents from adjusting lock screen settings on compatible devices. If devices are in a trusted location, then this feature, also known as a trust agent, lets you disable or bypass the device lock screen password. For example, bypass the work profile password when devices are connected to a specific Bluetooth device, or when devices are close to an NFC tag. Use this setting to prevent users from configuring Smart Lock.
+
+  When set to **Not configured** (default), Intune doesn't change or update this setting.
+
+#### Android 12 and later
+
+- **Password complexity**: Use this setting to set the password complexity requirements. Your options:
+
+  - **None**: Intune doesn't change or update this setting. By default, the OS may not require a password.
+  - **Low**: Pattern or PIN with repeating (4444) or ordered (1234, 4321, 2468) sequences are blocked.
+  - **Medium**: PIN with repeating (4444) or ordered (1234, 4321, 2468) sequences are blocked. The length, alphabetic length, or alphanumeric length must be at least 4 characters.
+  - **High**: PIN with repeating (4444) or ordered (1234, 4321, 2468) sequences are blocked. The length must be at least 8 characters. The alphabetic or alphanumeric length must be at least 6 characters.
+
+  On personally owned devices with a work profile, there are two passwords affected by this **Password complexity** setting:
+
+  - The device password that unlocks the device
+  - The work profile password that allows users to access the work profile
+
+  If the device password complexity is too low, then the device password is automatically changed to require a **High** complexity. The end users must update the device password to meet the complexity requirements. Then, they sign into the work profile and are prompted to update the work profile complexity configured in the **Password complexity** setting in your policy.  
+
+  > [!IMPORTANT]
+  >
+  > Before the **Password complexity** setting was available, the **Required password type** and **Minimum password length** settings were used. These settings are still available, but they're deprecated by Google for Android 12+ personally owned devices with a work profile. For information on these settings, go to [Android 11 and earlier](#android-11-and-earlier) (in this article).
+  >
+  > Here's what you need to know:
+  >
+  > - If the **Required password type** and **Minimum password length** settings are changed from the default values in a policy, then:
+  >   - Newly enrolled Android Enterprise 12+ devices will automatically use the **Password complexity** setting with the **High** complexity. So if you don't want a **High** password complexity, then create a new policy for Android Enterprise 12+ devices and configure the **Password complexity** setting.
+  >   - Existing Android Enterprise 12+ devices will continue to use the **Required password type** and **Minimum password length** settings, and the existing values that are already configured.
+  >
+  >     If you change an existing policy with the **Required password type** and **Minimum password length** settings that already configured, then Android Enterprise 12+ devices will automatically use the **Password complexity** setting with the **High** complexity.
+  >
+  >     For Android Enterprise 12+ devices, it's recommended to create a new policy and configure the **Password complexity** setting.
+  > 
+  > - If the **Required password type** and **Minimum password length** settings aren't changed from the default values in a policy, then no password policy is automatically applied to newly enrolled Android Enterprise 12+ devices.
+  > - The **Password complexity** setting will be enforced in the 2212 release of the Company Portal app.
+
+#### Android 11 and earlier
+
+> [!IMPORTANT]
+> 
+> - Google is deprecating these **Required password type** and **Minimum password length** settings for Android 12+ personally owned devices with a work profile and replacing it with new password complexity requirements. For more information about this change, go to [Day zero support for Android 13](https://aka.ms/Intune/Android13).
+  > - On Android Enterprise 12+ devices, use the **Password complexity** setting.
+
 - **Required password type**: Enter the required password complexity level, and whether biometric devices can be used. Your options:
-  - **Device default**
+  - **Device default** (default): Intune doesn't change or update this setting. By default, the OS might not require a password.
   - **Low security biometric**: [Strong vs. weak biometrics](https://android-developers.googleblog.com/2018/06/better-biometrics-in-android-p.html) (opens Android's web site)
   - **Required**
   - **At least numeric**: Includes numeric characters, such as `123456789`.
@@ -156,6 +179,21 @@ These password settings apply to personally owned devices with a work profile.
   - **At least alphabetic**: Includes letters in the alphabet. Numbers and symbols aren't required.
   - **At least alphanumeric**: Includes uppercase letters, lowercase letters, and numeric characters.
   - **At least alphanumeric with symbols**: Includes uppercase letters, lowercase letters, numeric characters, punctuation marks, and symbols.
+
+- **Minimum password length**: Enter the minimum length the password must have, between 4 (default) and 16 characters.
+
+## Password
+
+These password settings apply to the device password on personally owned devices with a work profile.
+
+### All Android devices
+
+- **Maximum minutes of inactivity until screen locks**: Enter the length of time devices must be idle before the screen is automatically locked. Users must enter their credentials to regain access. For example, enter `5` to lock the device after 5 minutes of being idle. When the value is blank or set to **Not configured**, Intune doesn't change or update this setting.
+
+  On devices, users can't set a time value greater than the configured time in the profile. Users can set a lower time value. For example, if the profile is set to `15` minutes, users can set the value to 5 minutes. Users can't set the value to 30 minutes.
+
+- **Number of sign-in failures before wiping device**: Enter the number of wrong passwords allowed before the personally owned work profile in the device is wiped, from 4-11. `0` (zero) might disable the device wipe functionality. When the value is blank, Intune doesn't change or update this setting.
+- **Password expiration (days)**: Enter the number of days, until the device password must be changed, from 1-365. For example, enter `90` to expire the password after 90 days. When the password expires, users are prompted to create a new password. When the value is blank, Intune doesn't change or update this setting.
 
 - **Prevent reuse of previous passwords**: Use this setting to restrict users from creating previously used passwords. Enter the number of previously used passwords that can't be used, from 1-24. For example, enter `5` so users can't set a new password to their current password or any of their previous four passwords. When the value is blank, Intune doesn't change or update this setting.
 - **Fingerprint unlock**: **Block** prevents users from using the device's fingerprint scanner to unlock the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to unlock the device using a fingerprint.
@@ -165,7 +203,59 @@ These password settings apply to personally owned devices with a work profile.
 
   When set to **Not configured** (default), Intune doesn't change or update this setting.
 
-### System security
+### Android 12 and later
+
+- **Password complexity**: Use this setting to set the password complexity requirements. Your options:
+
+  - **None**: Intune doesn't change or update this setting. By default, the OS may not require a password.
+  - **Low**: Pattern or PIN with repeating (4444) or ordered (1234, 4321, 2468) sequences are blocked.
+  - **Medium**: PIN with repeating (4444) or ordered (1234, 4321, 2468) sequences are blocked. The length, alphabetic length, or alphanumeric length must be at least 4 characters.
+  - **High**: PIN with repeating (4444) or ordered (1234, 4321, 2468) sequences are blocked. The length must be at least 8 characters. The alphabetic or alphanumeric length must be at least 6 characters.
+
+  On personally owned devices with a work profile, there are two passwords affected by this **Password complexity** setting:
+
+  - The device password that unlocks the device
+  - The work profile password that allows users to access the work profile
+
+  If the device password complexity is too low, then the device password is automatically changed to require a **High** complexity. The end users must update the device password to meet the complexity requirements. Then, they sign into the work profile and are prompted to update the work profile complexity configured in the **Password complexity** setting in your policy.
+
+  > [!IMPORTANT]
+  >
+  > Before the **Password complexity** setting was available, the **Required password type** and **Minimum password length** settings were used. These settings are still available, but they're deprecated by Google for Android 12+ personally owned devices with a work profile. For more information on these settings, go to [Android 11 and earlier](#android-11-and-earlier-1) (in this article).
+  >
+  > Here's what you need to know:
+  >
+  > - If the **Required password type** and **Minimum password length** settings are changed from the default values in a policy, then:
+  >   - Newly enrolled Android Enterprise 12+ devices will automatically use the **Password complexity** setting with the **High** complexity. So if you don't want a **High** password complexity, then create a new policy for Android Enterprise 12+ devices and configure the **Password complexity** setting.
+  >   - Existing Android Enterprise 12+ devices will continue to use the **Required password type** and **Minimum password length** settings, and the existing values that are already configured.
+  >
+  >     If you change an existing policy with the **Required password type** and **Minimum password length** settings that already configured, then Android Enterprise 12+ devices will automatically use the **Password complexity** setting with the **High** complexity.
+  >
+  >     For Android Enterprise 12+ devices, it's recommended to create a new policy and configure the **Password complexity** setting.
+  > 
+  > - If the **Required password type** and **Minimum password length** settings aren't changed from the default values in a policy, then no password policy is automatically applied to newly enrolled Android Enterprise 12+ devices.
+  > - The **Password complexity** setting will be enforced in the 2212 release of the Company Portal app.
+
+### Android 11 and earlier
+
+> [!IMPORTANT]
+> 
+> - Google is deprecating these **Required password type** and **Minimum password length** settings for Android 12+ personally owned devices with a work profile and replacing it with new password complexity requirements. For more information about this change, go to [Day zero support for Android 13](https://aka.ms/Intune/Android13).
+  > - On Android Enterprise 12+ devices, use the **Password complexity** setting.
+
+- **Required password type**: Enter the required password complexity level, and whether biometric devices can be used. Your options:
+  - **Device default** (default): Intune doesn't change or update this setting. By default, the OS might not require a password.
+  - **Low security biometric**: [Strong vs. weak biometrics](https://android-developers.googleblog.com/2018/06/better-biometrics-in-android-p.html) (opens Android's web site)
+  - **Required**
+  - **At least numeric**: Includes numeric characters, such as `123456789`.
+  - **Numeric complex**: Repeated or consecutive numbers, such as `1111` or `1234`, aren't allowed.
+  - **At least alphabetic**: Includes letters in the alphabet. Numbers and symbols aren't required.
+  - **At least alphanumeric**: Includes uppercase letters, lowercase letters, and numeric characters.
+  - **At least alphanumeric with symbols**: Includes uppercase letters, lowercase letters, numeric characters, punctuation marks, and symbols.
+
+- **Minimum password length**: Enter the minimum length the password must have, between 4 (default) and 16 characters.
+
+## System security
 
 - **Threat scan on apps**: **Require** enforces that the **Verify Apps** setting is enabled for work and personal profiles. When set to **Not configured** (default), Intune doesn't change or update this setting.
 
@@ -178,7 +268,7 @@ These password settings apply to personally owned devices with a work profile.
   - A personally owned device with a work profile managed using MDM.
   - A personal profile that's isolated from MDM management.
 
-### Connectivity
+## Connectivity
 
 - **Always-on VPN**: **Enable** sets a VPN client to automatically connect and reconnect to the VPN. Always-on VPN connections stay connected. Or, immediately connect when users lock their device, the device restarts, or the wireless network changes.
 

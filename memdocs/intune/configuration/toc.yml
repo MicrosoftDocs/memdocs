@@ -181,9 +181,9 @@ items:
     items:
     - name: Custom
       href: custom-settings-android-for-work.md
-    - name: Device restrictions - Organization devices
+    - name: Device restrictions-Organization devices
       href: device-restrictions-android-for-work.md
-    - name: Device restrictions - Personal devices 
+    - name: Device restrictions-Personal devices 
       href: device-restrictions-android-enterprise-personal.md
     - name: Email
       href: email-settings-android-enterprise.md
