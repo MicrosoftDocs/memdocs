@@ -72,37 +72,6 @@ The global quiet time settings will allow you to create policies to schedule qui
 
 <!-- ***********************************************-->
 
-## Device configuration
-
-### New password complexity requirements for Android Enterprise 12+ personally owned devices with a work profile<!-- 12436068 -->  
-On Android Enterprise 11 and older personally owned devices with a work profile, you can set the **Required password type** and a **Minimum password length** in device configuration profiles and compliance policies.
-
-Google is deprecating these features for Android 12+ personally owned devices with a work profile and replacing them with new password complexity requirements. For more information about this change, go to [Day zero support for Android 13](https://aka.ms/Intune/Android13).
-
-The new **Password complexity** setting will have the following options:
-
-- **Not configured**: Intune doesn't change or update this setting. By default, the OS may not require a password.
-- **Low**: Pattern or PIN with repeating (4444) or ordered (1234, 4321, 2468) sequences are blocked.
-- **Medium**: PIN with repeating (4444) or ordered (1234, 4321, 2468) sequences are blocked. The length, alphabetic length, or alphanumeric length must be at least 4 characters.
-- **High**: PIN with repeating (4444) or ordered (1234, 4321, 2468) sequences are blocked. The length must be at least 8 characters. The alphabetic or alphanumeric length must be at least 6 characters.
-
-If you currently use the **Required password type** and **Minimum password length** settings in your device configuration and compliance policies on Android 12+, then we recommend using the new **Password complexity** setting instead.
-
-If you continue to use the **Required password type** and **Minimum password length** settings, and don't configure the **Password complexity** setting, then new devices running Android 12+ will default to the **High** password complexity.
-
-There is no impact for existing devices with the **Required password type** and **Minimum password length** settings configured.
-
-For more information on the existing settings you can configure, go to:
-
-- [Android Enterprise personally owned devices with a work profile - configuration profile settings list](../configuration/device-restrictions-android-enterprise-personal.md)
-- [Android Enterprise personally owned devices with a work profile - compliance policy settings list](../protect/compliance-policy-create-android-for-work.md#personally-owned-work-profile)
-
-Applies to:  
-- Android 12.0 and newer
-- Android Enterprise personally owned devices with a work profile
-
-<!-- ***********************************************-->
-
 ## Device management
 
 ### Endpoint security firewall rules support for ICMP type<!-- 5653356 -->  
