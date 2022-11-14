@@ -21,7 +21,7 @@ items:
     - name: App Wrapping Tool for Android
       href: app-wrapper-prepare-android.md
       displayName: dex
-    - name: Intune App SDK for Android
+    - name: Intune App SDK for Android developer guide
       href: app-sdk-android-appendix.md
       items:
       - name: Planning the integration

@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/02/2022
+ms.date: 11/09/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -66,6 +66,25 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 -->
 
+## Week of November 7, 2022
+
+### App management
+
+#### Ending support for Windows Information Protection<!-- 15991481 -->
+Windows Information Protection (WIP) policies without enrollment is being deprecated. You can no longer create new WIP policies without enrollment. Until December of 2022, you will continue to be able to modify existing policies until the deprecation of the *without enrollment* scenario is complete. For related information, go to [Plan for Change: Ending support for Windows Information Protection](../fundamentals/whats-new.md#plan-for-change-ending-support-for-windows-information-protection).
+
+### Device Configuration
+
+#### User configuration support for Windows 11 multi-session VMs is now generally available
+
+You can now:
+ - Configure user scope policies using **Settings catalog** and assign to groups of users, including ADMX-ingested policies
+ - Configure user certificates and assign to users
+ - Configure PowerShell scripts to install in the user context and assign to users
+
+Applies to:
+ - **Windows 11**
+ - **Virtual machines** created in [Azure Public and Azure Government clouds](/enterprise-mobility-security/solutions/ems-intune-govt-service-description)
 ## Week of October 31, 2022
 
 ### App management
