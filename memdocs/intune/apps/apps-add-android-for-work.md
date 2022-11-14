@@ -78,7 +78,7 @@ There are two ways to browse and approve Managed Google Play store apps with Int
 4. Click **Select**. The **Managed Google Play** app store is displayed.
 
     > [!NOTE]
-    > You can create an app collection to organize apps and control the order that collections are displayed for your organization. For more information, see [Use Collections in Managed Google Play](../apps/apps-add-android-for-work.md#using-collections-in-managed-google-play).
+    > You can create an app collection to organize apps and control the order that collections are displayed for your organization. For more information, see [Use Collections in Managed Google Play](../apps/apps-add-android-for-work.md#use-collections-in-managed-google-play).
     >
     > Your Intune tenant account must be connected to your Android Enterprise account to browse Managed Google Play store apps. For more information, see [Connect your Intune account to your Managed Google Play account](../enrollment/connect-intune-android-enterprise.md).
 
@@ -208,13 +208,9 @@ To create a Managed Google Play collection:
 8. When you're done editing, click **save**. A popup box will appear asking you to confirm.
 9. Click **save** on the popup box.
 
-    > [!NOTE]
-    >   It may take some time after editing for the end user to see the changes made to their collections. If the changes haven't finished syncing yet, the end user may see an empty screen with **no results** text if they open the Play Store app. End users can still use the search bar to search for and download apps, even if the screen appears. 
-    >  Once at least one collection is created, all existing approved Managed Google Play apps that are not in any other collection will appear in a default **My work app** collection. Apps approved after initial collection creation will have no collection assignment and will not be automatically added to the **My work app** collection. 
-    > Apps that are not part of any collection will not appear on the end users' Play Store front page. However, the end user can still search for them and install in the Play Store. 
-    > You can add the same Managed Google Play app to multiple collections.
-    > Each collection can contain up to 100 apps.  
-    > For more information on collections, see [Google's documentation](https://support.google.com/googleplay/work/answer/9146438).
+It may take some time after editing for the end user to see the changes made to their collections. If the changes haven't finished syncing yet, the end user may see an empty screen with **no results** text if they open the Play Store app. End users can still use the search bar to search for and download apps, even if the screen appears. Once at least one collection is created, all existing approved Managed Google Play apps that are not in any other collection will appear in a default **My work app** collection. Apps approved after initial collection creation will have no collection assignment and will not be automatically added to the **My work app** collection.
+
+Apps that are not part of any collection will not appear on the end users' Play Store front page. However, the end user can still search for them and install in the Play Store. You can add the same Managed Google Play app to multiple collections. Each collection can contain up to 100 apps. For more information on collections, see [Google's documentation](https://support.google.com/googleplay/work/answer/9146438).
 
 ## Sync a Managed Google Play app with Intune
 
