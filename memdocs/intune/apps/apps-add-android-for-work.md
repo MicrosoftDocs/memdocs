@@ -78,7 +78,7 @@ There are two ways to browse and approve Managed Google Play store apps with Int
 4. Click **Select**. The **Managed Google Play** app store is displayed.
 
     > [!NOTE]
-    > You can create an app collection to organize apps and control the order that collections are displayed for your organization. For more information, see [Using Collections in Managed Google Play](../apps/apps-add-android-for-work.md#using-collections-in-managed-google-play).
+    > You can create an app collection to organize apps and control the order that collections are displayed for your organization. For more information, see [Use Collections in Managed Google Play](../apps/apps-add-android-for-work.md#using-collections-in-managed-google-play).
     >
     > Your Intune tenant account must be connected to your Android Enterprise account to browse Managed Google Play store apps. For more information, see [Connect your Intune account to your Managed Google Play account](../enrollment/connect-intune-android-enterprise.md).
 
@@ -192,9 +192,9 @@ To create a Managed Google Play web link:
     > [!NOTE]
     > Web apps may take several minutes to become available to sync. If the app does not appear the first time you perform a sync, wait a couple minutes and initiate a new sync.
 
-## Using collections in Managed Google Play
+## Use collections in Managed Google Play
 
-Collections are a way to group your Managed Google Play apps and determine the order they appear on the end users' Play Store. 
+Collections are a way to group your Managed Google Play apps and determine the order they appear in the end users' Play Store. 
 
 To create a Managed Google Play collection:
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
