@@ -30,6 +30,16 @@ ms.collection: M365-identity-device-management
 
 Microsoft Intune supports the use of imported public key pair (PKCS) certificates, commonly used for S/MIME encryption with Email profiles. Certain email profiles in Intune support an option to enable S/MIME where you can define an S/MIME signing certificate and S/MIME encryption cert.
 
+> [!IMPORTANT]
+> 
+> As announced in [this Microsoft Tech Community blog](https://techcommunity.microsoft.com/t5/microsoft-entra-azure-ad-blog/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363), support for Azure Active Directory Authentication Library (ADAL) ends in December 2022. For your PowerShell scripts or custom code to continue to work to import user PFX certificates to Intune, they must be updated to leverage [Microsoft Authentication Library](/azure/active-directory/develop/msal-overview) (MSAL). Additionally, the global Intune application ID should be updated with the unique Application (client) ID assigned to your app after registering it in [Azure Active Directory (Azure AD) to prevent future authentication issues](/azure/active-directory/develop/quickstart-register-app)
+> 
+> On GitHub, the sample PowerShell script to help simplify importing PFX certificates has been updated to reference MSAL and the Azure AD Application (client) ID. Script samples in this article are also updated where applicable. 
+> 
+> For more information, view the [PFXImport PowerShell Project](https://github.com/microsoft/Intune-Resource-Access/tree/develop/src/PFXImportPowershell#pfximport-powershell-project) readme file on GitHub, and  download the updated sample script.
+ 
+
+
 S/MIME encryption is challenging because email is encrypted with a specific certificate:
 
 - You must have the private key of the certificate that encrypted the email on the device where you're reading the email so it can be decrypted.
@@ -169,6 +179,12 @@ Select the Key Storage Provider that matches the provider you used to create the
    >     AuthURI = "login.microsoftonline.us"
    >     GraphURI = "https://graph.microsoft.us"
    >     SchemaVersion = "beta"
+   > 
+   >     ClientId = "00000000-0000-0000-0000-000000000000" # Client Id from Azure app registration
+   > 
+   >     ClientSecret = ""  # client secret from app registration when using application permissions to authenticate
+   > 
+   >     TenantId = "00000000-0000-0000-0000-000000000000" # TenantId is required when using client secret
    >     }
    > ```
    >
