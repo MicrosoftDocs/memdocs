@@ -111,18 +111,18 @@ items:
           displayName: COBO
         - name: iOS, iPadOS
           href: deployment-guide-enrollment-ios-ipados.md
-        - name: Linux
-          href: deployment-guide-enrollment-linux.md
         - name: macOS
           href: deployment-guide-enrollment-macos.md
         - name: Windows
           href: deployment-guide-enrollment-windows.md
       - name: Device platform deployment
         items:
-        - name: iOS/iPadOS  
-          href: deployment-guide-platform-ios-ipados.md    
         - name: Android, Android Enterprise 
-          href: deployment-guide-platform-android.md 
+          href: deployment-guide-platform-android.md  
+        - name: iOS/iPadOS  
+          href: deployment-guide-platform-ios-ipados.md  
+        - name: Linux
+          href: deployment-guide-platform-linux.md  
         - name: macOS 
           href: deployment-guide-platform-macOS.md 
       - name: Device and app management
