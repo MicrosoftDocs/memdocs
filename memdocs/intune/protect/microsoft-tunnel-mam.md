@@ -165,7 +165,7 @@ The new policy will appear in the list of app configuration policies.
 
 ## Configure Line of Business applications
 
-If you’ve integrated your LOB apps with the MAM SDK, you can use them with Microsoft Tunnel by adding them as *custom apps* to the three MAM Tunnel policies you’ve [previously created](#configure-policies-to-support-using-mam-with-tunnel).
+If you’ve integrated your LOB apps with the MAM SDK, you can use them with Microsoft Tunnel by adding them as *custom apps* to the three MAM Tunnel policies you’ve [previously created](#configure-policies-to-support-using-mam-with-tunnel).  
 
 For more information about adding custom apps to policies, see the following articles for the two policy types:
 
