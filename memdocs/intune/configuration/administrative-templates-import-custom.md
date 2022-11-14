@@ -76,9 +76,7 @@ This article shows you how to import custom ADMX and ADML files in the Endpoint 
 
 - Not all areas of the registry can be set using custom ADMX. For more information, see [Win32 and Desktop Bridge app ADMX policy Ingestion Overview](/windows/client-management/win32-and-centennial-app-policy-configuration#overview).
 
-- ADMX settings that are built into Windows (located at in the C:\Windows\PolicyDefinitions folder) are enabled through configuration service providers (CSP). These should not be imported using the import ADMX feature. The settings catalog or a custom policy should be used instead of ADMX import. More information on these settings here:
-- ADMX-backed policies in Policy CSP
-- https://learn.microsoft.com/en-us/windows/client-management/mdm/policies-in-policy-csp-admx-backed
+- ADMX settings that are built into Windows (located in the `C:\Windows\PolicyDefinitions` folder) are enabled through configuration service providers (CSPs). These should not be imported using the import ADMX feature. The settings catalog or a custom policy should be used instead of ADMX import. For more information on these settings, see [ADMX-backed policies in Policy CSP](/windows/client-management/mdm/policies-in-policy-csp-admx-backed).
 
 ## Download the ADMX templates
 
