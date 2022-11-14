@@ -36,10 +36,10 @@ Applies to:
 To extend your existing [Microsoft Tunnel configuration](../protect/microsoft-tunnel-configure.md) to support [MAM](../fundamentals/deployment-guide-enrollment-mamwe.md), you’ll create and deploy three profiles that configure this support on your unenrolled devices:
 
 - App configuration policy for Microsoft Defender. This policy configures Microsoft Defender for Endpoint on a device as the VPN tunnel client app.
-- App configuration policy for Microsoft Edge. This policy configures Microsoft Edge to support identity-switch, providing the ability to automatically connect and disconnect the VPN tunnel when switching from a Microsoft "Work or school" account to a Microsoft "personal account" in Edge. 
+- App configuration policy for Microsoft Edge. This policy configures Microsoft Edge to support identity-switch, providing the ability to automatically connect and disconnect the VPN tunnel when switching from a Microsoft "Work or school" account to a Microsoft "personal account" in Microsoft Edge.
 - App protection policy to automatically start the connection to Microsoft Tunnel when the MAM enabled app on the device accesses corporate resources.
 
-With these policies in place, your existing Site and Server configurations for Tunnel support access from devices that aren't enrolled in Intune. In addition, you can choose to deploy your configurations for MAM Tunnel to enrolled devices instead of using MDM Tunnel configurations. In this scenario, an enrolled device must use only the the MDM Tunnel configurations or the MAM Tunnel configurations, but not both. For example, enrolled devices cannot have an app like Edge that uses MAM tunnel configurations while other apps use MDM Tunnel configurations. 
+With these policies in place, your existing Site and Server configurations for Tunnel support access from devices that aren't enrolled in Intune. In addition, you can choose to deploy your configurations for MAM Tunnel to enrolled devices instead of using MDM Tunnel configurations. In this scenario, an enrolled device must use only the MDM Tunnel configurations or the MAM Tunnel configurations, but not both. For example, enrolled devices can't have an app like Microsoft Edge that uses MAM tunnel configurations while other apps use MDM Tunnel configurations.
 
 ## Prerequisites
 
@@ -100,8 +100,8 @@ Create an App configuration policy to configure Microsoft Defender for Endpoint 
    - For *Site Name*, select an available site, and then click **OK**.
 
    - *Per-App VPN (Android only)* is an optional setting.  Select public or custom apps, to restrict the use of use the Tunnel VPN connection to these specified apps.
-   - *Proxy* is an optional setting.  Configure proxy settings to meet your onpremise network requirements. 
-   
+   - *Proxy* is an optional setting.  Configure proxy settings to meet your on-premises network requirements. 
+
    When ready, select **Next** to continue.
 
    :::image type="content" source="./media/Microsoft-tunnel-mam/settings-configuration-defender.png " alt-text="Screen shot of the app configuration policies settings configuration.":::
@@ -111,7 +111,6 @@ Create an App configuration policy to configure Microsoft Defender for Endpoint 
 5. On the *Review + Create* tab, select **Create** to complete creation of the policy and deploy the policy to the assigned groups.
 
 The new policy will appear in the list of App configuration policies.
-
 
 ### App configuration policy for Microsoft Edge
 
@@ -134,9 +133,9 @@ Create an App configuration policy for Microsoft Edge. This policy configures Mi
    - Value = **True**
 
    :::image type="content" source="./media/microsoft-tunnel-mam/name-value-pair-edge.png" alt-text="Screen shot that shows the configuration of the name and value pair.":::
-   
-> [!NOTE]
-> Ensure there are no trailing spaces at the of the General configuration setting.
+
+   > [!NOTE]
+   > Ensure there are no trailing spaces at the end of the General configuration setting.
 
    You can also use this same policy to configure other configurations for Microsoft Edge in the *Microsoft Edge configuration settings* category. After any additional configurations for Microsoft Edge are ready, select **Next**.
 
@@ -148,9 +147,10 @@ The new policy will appear in the list of App configuration policies.
 
 ### App protection policy for Tunnel
 
-Create an app protection policy to automatically start the Microsoft Tunnel VPN connection when the app is launched.  
-> [!NOTE]
-> When the app is started, the Tunnel VPN connection will attempt to start, once started, the device will have access to the onpremise network routes availabe via the Microsoft Tunnel Gateway.  If you wish to limit the tunnel network access to specific apps, then configure the "Per-App VPN (Android only) settings. 
+Create an app protection policy to automatically start the Microsoft Tunnel VPN connection when the app is launched.
+
+> [!NOTE]  
+> When the app is started, the Tunnel VPN connection will attempt to start, once started, the device will have access to the on-premises network routes available via the Microsoft Tunnel Gateway.  If you wish to limit the tunnel network access to specific apps, then configure the "Per-App VPN (Android only) settings.
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Apps** > **App protection policies** > **Create policy** > **Android**.
 
@@ -176,7 +176,7 @@ The new policy will appear in the list of app configuration policies.
 
 ## Configure Line of Business applications
 
-If you’ve integrated your LOB apps with the MAM SDK, you can use them with Microsoft Tunnel by adding them as *custom apps* to the three MAM Tunnel policies you’ve [previously created](#configure-policies-to-support-using-mam-with-tunnel).  
+If you’ve integrated your LOB apps with the MAM SDK, you can use them with Microsoft Tunnel by adding them as *custom apps* to the three MAM Tunnel policies you’ve [previously created](#configure-policies-to-support-using-microsoft-tunnel-for-mam).
 
 For more information about adding custom apps to policies, see the following articles for the two policy types:
 
@@ -190,9 +190,10 @@ To support LOB apps on your unenrolled devices, the apps must deploy as *availab
 The following are known issues or limitations during the public preview.
 
 ### Delivering trusted root certs to unenrolled devices
-When accessing resources protected by SSL/TLS certifcates issued by an onpremise certificate authority (CA), unenrolled devices will require the trusted certificate public keychain of the issuing CA to establish a chain of trust with the onpremises endpoint (i.e., web server, application web service). As a result, a  browser (Edge or 3rd party browser), or application will not trust the endpoint without the necessary onpremise CA keychain (trusted cert). For example, Microsoft Edge reports that the connection isn’t private or is untrusted, and SSL or https connections aren't available. Users can ignore this warning and connect to the endpoint.
 
-Public preview of Microsoft Tunnel for MAM does not provide support for delivering Trusted certificates to unenrolled devices. The ability to issue trusted certifcates to unenrolled devices will be made available in a future Intune update.  
+When unenrolled devices access resources protected by SSL/TLS certificates issued by an on-premises certificate authority (CA), the devices require the trusted certificate public keychain of the issuing CA to establish a chain of trust with the on-premises endpoint (that is, web server, application web service). As a result, a  browser (Microsoft Edge or third party browser), or application won't trust the endpoint without the necessary on-premises CA keychain (trusted cert). For example, Microsoft Edge reports that the connection isn’t private or is untrusted, and SSL or https connections aren't available. Users can ignore this warning and connect to the endpoint.
+
+Public preview of Microsoft Tunnel for MAM doesn't provide support for delivering Trusted certificates to unenrolled devices. The ability to issue trusted certificates to unenrolled devices will be made available in a future Intune update.  
 
 **Work around**: Manually deploy and install the trusted root certificate on unenrolled devices that will use Tunnel.
 
