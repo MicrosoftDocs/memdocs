@@ -161,7 +161,7 @@ These password settings apply to the work profile password on personally owned d
   >     For Android Enterprise 12+ devices, it's recommended to create a new policy and configure the **Password complexity** setting.
   > 
   > - If the **Required password type** and **Minimum password length** settings aren't changed from the default values in a policy, then no password policy is automatically applied to newly enrolled Android Enterprise 12+ devices.
-  > - The **Password complexity** setting will be enforced in the 2212 release of the Company Portal app.
+  > - The **Password complexity** setting will be enforced in the December release of the Company Portal app.
 
 #### Android 11 and earlier
 
@@ -234,7 +234,7 @@ These password settings apply to the device password on personally owned devices
   >     For Android Enterprise 12+ devices, it's recommended to create a new policy and configure the **Password complexity** setting.
   > 
   > - If the **Required password type** and **Minimum password length** settings aren't changed from the default values in a policy, then no password policy is automatically applied to newly enrolled Android Enterprise 12+ devices.
-  > - The **Password complexity** setting will be enforced in the 2212 release of the Company Portal app.
+  > - The **Password complexity** setting will be enforced in the December release of the Company Portal app.
 
 ### Android 11 and earlier
 
