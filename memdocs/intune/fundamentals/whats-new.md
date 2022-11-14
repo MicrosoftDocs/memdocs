@@ -68,6 +68,11 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 ## Week of November 14, 2022
 
+### App management
+
+#### Control the display of Managed Google Play apps<!-- 621615   -->  
+You can group Managed Google Play apps into collections and control the order that collections are displayed when selecting apps in Intune. You can also make apps visible via search only. This capability is available in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **All apps** > **Add** > **Managed Google Play app**. For related information, see [Add a Managed Google Play store app directly in the Intune console](../apps/apps-add-android-for-work.md#add-a-managed-google-play-store-app-directly-in-the-intune-console).
+
 ### Device configuration
 
 #### New settings available in the iOS/iPadOS and macOS Settings Catalog <!-- 16068756 -->  
