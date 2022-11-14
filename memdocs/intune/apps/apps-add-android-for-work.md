@@ -205,7 +205,7 @@ To create a Managed Google Play collection:
 6. Select **Create a collection**. A text box will appear to name the collection.
 7. Enter a collection name and click **Next**.
    Check the approved MGP apps to add to the collection. If you need to approve additional apps for the collection, clicking the **Add apps** button will take you back to the Managed Google Play app store. Also, you can edit the order apps appear in the collection by clicking the arrows next to each app. You can also edit the order of the collections you've created by using the side arrow buttons. The order you set apps and collections in is the order the end user will see them in their Play Store app.
-8. When you're done editing, click **save**. A popup box will appear asking you to confirm. 
+8. When you're done editing, click **save**. A popup box will appear asking you to confirm.
 9. Click **save** on the popup box.
 
     > [!NOTE]
