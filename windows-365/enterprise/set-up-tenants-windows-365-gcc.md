@@ -128,23 +128,27 @@ When provisioning Windows 365 Cloud PCs without the Microsoft-hosted network, yo
 > [!NOTE]
 > Tenant mapping must be successful before you proceed.
 
+Copy and paste the command below to execute in your Azure Government subscription's CloudShell and then go to the section **Script instructions** below.
 
 ```azurepowershell-interactive
-PS Azure:\> curl https://raw.githubusercontent.com/microsoft/Windows365-PSScripts/main/Windows%20365%20GCC/Grant%20Service%20Principal%20Roles%20in%20Tenant/Grant%20W365%20SP%20Roles%20In%20Tenant.ps1 -o GrantW365SProles.ps1 & GrantW365SProles.ps1
+PS Azure:\> curl https://raw.githubusercontent.com/microsoft/Windows365-PSScripts/main/Windows%20365%20GCC/Grant%20Service%20Principal%20Roles%20in%20Tenant/Grant%20W365%20SP%20Roles%20In%20Tenant.ps1 -o GrantW365SProles.ps1 & .\GrantW365SProles.ps1
 ```
 
+OR use the instructions below if you do not have a CloudShell account which requires an Azure Storage account.
 
 1. Go to the [Windows 365 PowerShell GitHub repository](https://github.com/microsoft/Windows365-PSScripts).
 2. Navigate to the **Windows 365 GCC** folder > **Grant Service Principal Roles in Tenant** folder > select **Grant W365 SP Roles in Tenant.ps1** > **Raw** > save the raw file to a location on your computer as a .ps1 file.
-3. Open Windows PowerShell 5.1 (x64) as Administrator and run the PowerShell script.
-4. At the prompt, type one of the following options to grant permissions:
+3. Open Windows PowerShell 5.1 (x64) as Administrator and run the PowerShell script and then go to the section **Script instructions** below.
+
+**Script instructions:**
+1. At the prompt, type one of the following options to grant permissions:
     - **1** to only upload custom images. For Azure AD join infrastructures, you don't need to create an ANC just to upload custom images.
     - **2** to only create ANCs.
     - **3** to create ANCs and upload custom images. For hybrid Azure AD join infrastructures, creating an ANC is a requirement for uploading custom images.
         - The script lists the Azure Government subscriptions you have access to. Select the subscription that you want to grant permissions to.
         - The resource groups for that subscription are then listed. Select the group that you want to use.
         - Select your vNet.
-10. The script will then grant the permissions and lists what was configured.
+2. The script will then grant the permissions and lists what was configured.
 
 
 ## Next steps
