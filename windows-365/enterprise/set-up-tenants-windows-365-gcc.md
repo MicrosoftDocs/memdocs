@@ -131,7 +131,7 @@ When provisioning Windows 365 Cloud PCs without the Microsoft-hosted network, yo
 Copy and paste the command below to execute in your Azure Government subscription's CloudShell and then go to the section **Script instructions** below.
 
 ```azurepowershell-interactive
-PS Azure:\> curl https://raw.githubusercontent.com/microsoft/Windows365-PSScripts/main/Windows%20365%20GCC/Grant%20Service%20Principal%20Roles%20in%20Tenant/Grant%20W365%20SP%20Roles%20In%20Tenant.ps1 -o GrantW365SProles.ps1 & .\GrantW365SProles.ps1
+curl https://raw.githubusercontent.com/microsoft/Windows365-PSScripts/main/Windows%20365%20GCC/Grant%20Service%20Principal%20Roles%20in%20Tenant/Grant%20W365%20SP%20Roles%20In%20Tenant.ps1 -o GrantW365SProles.ps1 & .\GrantW365SProles.ps1
 ```
 
 OR use the instructions below if you do not have a CloudShell account which requires an Azure Storage account.
