@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 11/14/2022
+ms.date: 11/15/2022
 ms.topic: reference
 ms.service: windows-365
 ms.subservice:
@@ -63,6 +63,14 @@ The Windows 365 app installation process has been updated to automatically insta
 #### Azure Active Directory policy updated for Windows 365 app<!--42190185-->
 
 The Azure Active Directory (Azure AD) policy has been updated so that no extra Conditional Access policy change is required to use the Windows 365 app.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Documentation
+
+#### New documentation article: Use the Enrollment Status Page with Cloud PCs
+
+We’ve published a new help documentation article. For more information, see [Use the Enrollment Status Page with Cloud PCs](enrollment-status-page).md).
+
 
 <!-- ########################## -->
 ## Week of November 7, 2022
