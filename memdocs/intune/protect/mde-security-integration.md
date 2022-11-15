@@ -107,7 +107,7 @@ Due to the platform limitations of Server core installations, these aren't suppo
 
 ### PowerShell restrict mode
 
-Security Management for Microsoft Defender for Endpoint won't work for a device that has PowerShell *LanguageMode* configured with *ConstrainedLanguage* mode ‘enabled’. For more information, see [about_Language_Modes](/powershell/module/microsoft.powershell.core/about/about_language_modes?view=powershell-7.2) in the PowerShell documentation.
+Security Management for Microsoft Defender for Endpoint won't work for a device that has PowerShell *LanguageMode* configured with *ConstrainedLanguage* mode ‘enabled’. For more information, see [about_Language_Modes](/powershell/module/microsoft.powershell.core/about/about_language_modes) in the PowerShell documentation.
 
 ## Next steps
 
