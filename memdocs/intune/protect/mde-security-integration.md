@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/10/2022
+ms.date: 11/15/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -99,10 +99,15 @@ The following security settings are pending deprecation. The Security Management
 
 ### Managing security configurations on domain controllers
 
-Currently, devices are not supported to complete a Hybrid Join to Azure Active Directory. Since an Azure Active Directory trust is required, domain controllers aren't currently supported. We're looking at ways to add this support.
+Currently, devices aren't supported to complete a Hybrid Join to Azure Active Directory. Since an Azure Active Directory trust is required, domain controllers aren't currently supported. We're looking at ways to add this support.
+
 ### Server Core installation
 
-Due to the platform limitations of Server core installations, these are not supported by Security Management for Microsoft Defender for Endpoint.
+Due to the platform limitations of Server core installations, these aren't supported by Security Management for Microsoft Defender for Endpoint.
+
+### PowerShell restrict mode
+
+Security Management for Microsoft Defender for Endpoint won't work for a device that has PowerShell *LanguageMode* configured with *ConstrainedLanguage* mode ‘enabled’. For more information, see [about_Language_Modes](/powershell/module/microsoft.powershell.core/about/about_language_modes) in the PowerShell documentation.
 
 ## Next steps
 
