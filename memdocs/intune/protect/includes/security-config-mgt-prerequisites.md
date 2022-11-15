@@ -117,7 +117,7 @@ The following table can help you understand which policies that can configure MD
 To support Microsoft Defender for Endpoint security configuration management through the Microsoft Endpoint Manager admin center, you must enable communication between them from within each console.
 
 1. Sign in to [Microsoft 365 Defender portal](https://security.microsoft.com/) and go to **Settings** > **Endpoints** > **Configuration Management** > **Enforcement Scope** and enable the platforms for security settings management:
-   :::image type="content" source="../media/mde-security-integration/enable-mde-settings-management-defender.png" alt-text="Enable Microsoft Defender for Endpoint settings management in the Microsoft 365 Defender portal." lightbox="../media/mde-security-integration/enable-mde-settings-management-defender.png":::
+   :::image type="content" source="../media/mde-security-integration/enable-mde-settings-management-defender.png" alt-text="Enable Microsoft Defender for Endpoint settings management in the Microsoft 365 Defender portal." lightbox="../media/mde-security-integration/enable-mde-settings-management-defender.png#lightbox":::
 1. In order to test the feature only on a specific set of devices, select **On tagged devices** for the respective platform, and tag the devices with the `MDE-Management` tag
 1. Configure the feature for Microsoft Defender for Cloud onboarded devices and Configuration Manager authority settings to fit your organization's needs:  
    :::image type="content" source="../media/mde-security-integration/pilot-CMAuthority-mde-settings-management-defender.png" alt-text="Configure Pilot mode for Endpoint settings management in the Microsoft 365 Defender portal.":::
