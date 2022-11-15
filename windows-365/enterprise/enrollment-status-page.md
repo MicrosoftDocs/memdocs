@@ -1,13 +1,13 @@
 ---
 # required metadata
-title: Create provisioning policies for Windows 365
+title: Use the Enrollment Status Page with Cloud PCs
 titleSuffix:
-description: Learn how to create provisioning policies for Windows 365.
+description: Learn how to use the Enrollment Status Page with Cloud PCs.
 keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 08/01/2022
+ms.date: 11/15/2022
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice:
@@ -20,7 +20,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: mattsha
+ms.reviewer: ericor
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -28,43 +28,34 @@ ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
 ---
 
-# Create provisioning policies
+# Use the Enrollment Status Page with Cloud PCs
 
-Cloud PCs are created and assigned to users based on provisioning policies. These policies hold key provisioning rules and settings that let the Windows 365 service set up and configure the right Cloud PCs for your users. After provisioning policies are created and assigned to the Azure AD user security groups or Microsoft 365 Groups, the Windows 365 service:
+When a user signs in to a device for the first time, the Enrollment Status Page (ESP) displays the Intune provisioning status. Windows 365 supports the ESP which provides a common experience for users who sign into their physical and Cloud PCs for the first time.  For full information about the ESP, see [Set up the Enrollment Status Page]( /mem/intune/enrollment/windows-enrollment-status).
 
-1. Checks for appropriate licensing for each user.
-2. Configures the Cloud PCs accordingly.
+## Windows 365 and the ESP process
 
-A few things to keep in mind:
+When a Cloud PC is provisioned, the Windows 365 service:
 
-- If a user in an assigned group doesn’t have a Cloud PC license assigned, Windows 365 won’t provision their Cloud PC.
-- For each Cloud PC license assigned to a user, only one provisioning policy is used to set up and configure the Cloud PC. The Windows 365 service always uses the first assigned policy to provision the Cloud PC.
+1. Creates of Cloud PC.
+2. Enrolls the Cloud PC in Intune.
+3. Waits for the user to sign in to the new Cloud PC for the first time.
+    - While waiting, the Cloud PC:
+        - Continues to perform a sync action to request MEM policy.
+        - Performs background actions that are device targeted.
+4. After the user signs in for the first time, the Cloud PC performs user targeted installations and configurations.
+    - If ESP is enabled, the **Account setup** phase of ESP is shown to the user. (The **Device setup** phase is not supported for Cloud PCs. It only occurs during Autopilot in OOBE.)
 
-## Create a provisioning policy
+## Targeting ESP proviles in Windows 365
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows 365** (under **Provisioning**) > **Provisioning policies** > **Create policy**.
+Windows 365 uses a userless enrolment process. There is no pre-registering of resources as used in the Autopilot. Because the ESP profile is set during enrollment, the grouping and targeting is time sensitive. For this reason, using Azure Active Directory (Azure AD) dynamic groups for targeting the ESP profile isn’t not supported.
 
-   ![Screenshot of create policy](./media/create-provisioning-policy/create-policy.png)
-2. On the **General** page, enter a **Name** and **Description** (optional) for the new policy.
+The only way for targeting ESP profiles in Windows 365 is by using the **All devices** built-in virtual group.
 
-   > [!TIP]
-   > Your provisioning policy name cannot contain the following characters: < > & | " ^
+You can also use the **enrollmentProfileName (Enrollment profile name)** property to apply filters for additional targeting granularity. For more information, see [Create a filter for all Cloud PCs from a specific provisioning policy](create-filter.md#create-a-filter-for-all-cloud-pcs-from-a-specific-provisioning-policy).
 
-3. On the **General** page, select a join type, followed by the appropriate network. If you select the combination of **Azure AD Join** and **Microsoft Hosted Network**, you must select a region for Microsoft to host your Cloud PC.
-4. For **Azure network connection**, select the connection to use for this policy > **Next**.
-5. On the **Image** page, for **Image type**, select one of the following options:
-    - **Gallery image**: Choose **Select** > select an image from the gallery > **Select**. Gallery images are default images provided for your use.
-    - **Custom image**:  Choose **Select** > select an image from the list > **Select**. You'll see the list of images that you uploaded using the [Add device images](add-device-images.md) workflow.
-6. Select **Next**.
-7. On the **Configuration** page, under **Windows settings**, choose a **Language & Region**. The selected language pack will be installed on Cloud PCs provisioned with this policy.
-8. Optionally, under **Additional services**, choose a service to be installed on Cloud PCs provisioned with this policy:
-    - **Windows Autopatch** is a cloud service that automates updates for Windows, Microsoft 365 Apps for enterprise, Microsoft Edge, and Microsoft Teams on both physical and virtual devices. For more information, see [What is What is Windows Autopatch?](/windows/deployment/windows-autopatch/overview/windows-autopatch-overview) and the [Windows Autopatch FAQ](https://go.microsoft.com/fwlink/?linkid=2200228).
-    - **Microsoft Managed Desktop** is a cloud service that helps with device deployment, service management and operations, and security. For more information, see [What is Microsoft Managed Desktop?](/managed-desktop/intro/)
-9. Select **Next**.
-10. On the **Assignments** page, choose **Select groups** > choose the groups you want this policy assigned to > **Select** > **Next**. Nested groups aren't currently supported.
-11. On the **Review + create** page, select **Create**. If you used Hybrid Azure AD Join as the join type, it can take up to 60 minutes for the policy creation process to complete. The time depends on when the Azure AD connect sync last happened.
+Both the **All devices** and **enrollmentProfileName** property filter are supported for both Hybrid Azure AD join and Azure AD join identity types. For more information, see [Device join types](/windows-365/enterprise/identity-authentication#device-join-types).
 
 <!-- ########################## -->
 ## Next steps
 
-[Edit provisioning policy](edit-provisioning-policy.md).
+[Learn more about the Enrollment Status Page](/mem/intune/enrollment/windows-enrollment-status).
