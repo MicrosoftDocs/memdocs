@@ -69,7 +69,7 @@ The Azure Active Directory (Azure AD) policy has been updated so that no extra C
 
 #### New documentation article: Use the Enrollment Status Page with Cloud PCs
 
-We’ve published a new help documentation article. For more information, see [Use the Enrollment Status Page with Cloud PCs](enrollment-status-page).md).
+We’ve published a new help documentation article. For more information, see [Use the Enrollment Status Page with Cloud PCs](enrollment-status-page.md).
 
 
 <!-- ########################## -->
