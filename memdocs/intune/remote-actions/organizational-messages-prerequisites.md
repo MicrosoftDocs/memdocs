@@ -65,7 +65,7 @@ Logos must meet these requirements:
     * Get Started app messages: 50 pixels long x 50 - 100 pixels wide  
 
 ## URL requirements  
-The domain for your custom destination URLs must be added to your list of verified Azure AD custom domain names. For more information, see [Add your custom domain - Azure Active Directory](/azure/active-directory/fundamentals/add-custom-domain.md#add-your-custom-domain-name-to-azure-ad).  
+The domain for your custom destination URLs must be added to your list of verified Azure AD custom domain names. For more information, see [Add your custom domain - Azure Active Directory](/azure/active-directory/fundamentals/add-custom-domain#add-your-custom-domain-name-to-azure-ad).  
 
 ## Organizational messages policy requirements      
 You must enable the delivery of organizational messages in all new and existing policies that are targeted at users and devices receiving organizational messages. 
@@ -74,7 +74,7 @@ You must enable the delivery of organizational messages in all new and existing 
  2. For **Enable delivery of organizational messages**, toggle the switch to **Enabled**.     
 
 ## Windows Spotlight policy requirements  
-Certain Windows Spotlight policies block the delivery of organizational messages. This section describes how to change these policies so that delivery is always allowed and works as intended. You can configure these policies using a Microsoft Intune [device restrictions profile template](/configuration/device-restrictions-configure.md) or the [settings catalog](/configuration/settings-catalog.md).  
+Certain Windows Spotlight policies block the delivery of organizational messages. This section describes how to change these policies so that delivery is always allowed and works as intended. You can configure these policies using a Microsoft Intune [device restrictions profile template](../configuration/device-restrictions-configure.md) or the [settings catalog](../configuration/settings-catalog.md).  
 
 >[!IMPORTANT]
 > Make sure to configure these policies in all new and existing policies that are targeted at users and devices receiving organizational messages. 
