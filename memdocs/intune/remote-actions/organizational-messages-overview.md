@@ -38,11 +38,11 @@ Use organizational messages to send important messages to employees on Intune-ma
 * Learn more about their workplace.
 * Stay informed of new and required updates and trainings.  
 
-Organizational messages appear in highly visible places in Windows 11, including the Get Started app, notifications area, and just above the taskbar. This article provides an overview of organizational messages, with known issues, limitations, and FAQs.  
+Organizational messages appear in highly visible places in Windows 11, including the Get Started app, notification area, and just above the taskbar. This article provides an overview of organizational messages, with known issues, limitations, and FAQs.  
 
 ## How it works   
 
-Microsoft Intune provides you with pre-written messages in templates designed for the taskbar area, notifications area, and Get Started app. You can add a custom destination URL in the message to link employees to additional resources or the next step in their onboarding process. You must include a logo so that employees recognize and know the message is from you.  
+Microsoft Intune provides you with pre-written messages in templates designed for the taskbar area, notification area, and Get Started app. You can add a custom destination URL in the message to link employees to additional resources or the next step in their onboarding process. You must include a logo so that employees recognize and know the message is from you.  
 
 Messages are assigned to Azure AD users and scheduled in the admin center. After you create a message, you can track the delivery status and user engagement data for it, and cancel the message if it's no longer needed.   
 
@@ -83,7 +83,7 @@ Contact someone in your organization who is an Azure AD Global Administrator, In
  * Organizational messages writer (Azure AD role)  
 
 ### Why do I need to update other policies before I create a message?  
-The required policies described in [Prerequisites](organizational-messages-prerequisites.md) control access to the taskbar, notifications area, and Get Started app. If the settings are blocked or not configured as described, employees will not receive the messages.   
+The required policies described in [Prerequisites](organizational-messages-prerequisites.md) control access to the taskbar, notification area, and Get Started app. If the settings are blocked or not configured as described, employees will not receive the messages.   
 
 ### Where can I share an idea for organizational messages or suggest an improvement?  
 In the Microsoft Endpoint Manager admin center, select the **Feedback** icon that's next to your account name at the top of the page. Rate your experience and then describe your experience or idea. If you're okay with getting a response from Microsoft, select **Microsoft can email you about your feedback.**  

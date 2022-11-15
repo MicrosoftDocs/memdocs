@@ -69,7 +69,7 @@ Select where you want the message to appear, and its theme.
 ## Step 2: Configure message content  
 On the **Message** page, configure the content for your message. As you enter your information, look at the example message to preview how your message will appear to users.  Options vary by message type. 
 
-For taskbar and notifications area messages:      
+*For taskbar and notification area messages:*      
 
 1. **Add a logo**: Choose an image file. For image requirements, see [Logo requirements](organizational-messages-prerequisites.md#logo-requirements).  
 2. **Provide a link for the message**: To include a URL link in your message:  
@@ -79,15 +79,15 @@ For taskbar and notifications area messages:
 3. **Choose language to preview**: Select a language to preview the localized version of your message. The message is shown to employees in the [display language](https://support.microsoft.com/windows/manage-the-input-and-display-language-settings-in-windows-12a10cb4-8626-9b77-0ccb-5013e0c7c7a2) they've selected on their device. Organizational messages are supported in 15 languages. If the employee's preferred language isn't supported, the message will appear in their preferred fallback language.  
 4. **Preview the message in dark theme**: Toggle the switch **On** to view how your message appears in dark theme. Check to make sure your logo shows up correctly in both light and dark theme.  
 
-For Get Started app messages:  
+*For Get Started app messages:*    
 1. **Add a logo**: Choose an image file. For image requirements, see [Logo requirements](organizational-messages-prerequisites.md#logo-requirements).     
-2. **Select messages**. You must select two messages to show to users.   
+2. **Select messages**: You must select two messages to show to users.   
      1. Select **Add your first message**. 
      2. Choose a theme for your message. Options include: 
         * **Review benefits**
         * **Review organization**
         * **Get started with device**
-     3. **Provide a link for the message**. To include a URL link in your message:
+     3. **Provide a link for the message**: To include a URL link in your message:
         * Select the domain you want to use. The list contains all Azure AD verified custom domain names in your tenant. Example: `www.contoso.com` 
         * (Optional) Select **Add a link path, if needed** and add the path for your URL. Example: `/SoftwareUpdate`   
         * Select the full generated link to make sure it works. Example: `www.contoso.com/SoftwareUpdate`      
@@ -99,8 +99,8 @@ For Get Started app messages:
         * **Update VPN**  
      6. Provide a link for the message like you did for the first one. Select the generated link to make sure it works. 
      7. Select **OK**.  
-3. **Choose language to preview**. Select a language to preview the localized version of your message. The message is shown to employees in the [display language](https://support.microsoft.com/windows/manage-the-input-and-display-language-settings-in-windows-12a10cb4-8626-9b77-0ccb-5013e0c7c7a2) they've selected on their device. Organizational messages are supported in 15 languages. If the employee's preferred language isn't supported, the message will be shown to them in their preferred fallback language.  
-4. **Preview the message in dark theme**. Toggle the switch **On** to view how your message appears in dark theme. Check to make sure your logo shows up correctly in both light and dark theme.   
+3. **Choose language to preview**: Select a language to preview the localized version of your message. The message is shown to employees in the [display language](https://support.microsoft.com/windows/manage-the-input-and-display-language-settings-in-windows-12a10cb4-8626-9b77-0ccb-5013e0c7c7a2) they've selected on their device. Organizational messages are supported in 15 languages. If the employee's preferred language isn't supported, the message will be shown to them in their preferred fallback language.  
+4. **Preview the message in dark theme**: Toggle the switch **On** to view how your message appears in dark theme. Check to make sure your logo shows up correctly in both light and dark theme.   
 
 When you're done configuring the message, select **Next: Schedule** to continue to scheduling options.  
 
@@ -139,7 +139,7 @@ Review your message, scheduling details, and assignments before creating your me
 ## View reporting details    
 In the **Messages** tab, you can view a list of all of your messages and see the following details:  
 
- * **Message type**: Shows whether the message is for the taskbar, notifications area, or Get Started app. Select the hyperlink to see your message, schedule, and assignment settings.    
+ * **Message type**: Shows whether the message is for the taskbar, notification area, or Get Started app. Select the hyperlink to see your message, schedule, and assignment settings.    
  * **Message theme**: Shows the theme you chose for the message.     
  * **Date created**:  Shows the date and time you created the message.   
  * **Status** Shows the status of the message, which includes: 
