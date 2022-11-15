@@ -202,9 +202,9 @@ Applies to:
 - Windows 11
 
 #### Login and background item management support on macOS devices using the settings catalog<!-- 15751007  -->  
-On macOS devices, you can open items automatically when users sign in to their macOS devices. For example, you can open apps, documents, and folders.
+On macOS devices, you can create a policy that automatically opens items when users sign in to their macOS devices. For example, you can open apps, documents, and folders.
 
-In Intune, the settings catalog will include new Service Management settings that can prevent users from disabling the managed login and background items on their devices in System Settings > General > Login Items.
+In Intune, the settings catalog includes new Service Management settings at **Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform > **Settings catalog** > **Login** > **Service Management**. These settings can prevent users from disabling the managed login and background items on their devices.
 
 For more information on the settings catalog, go to:
 
