@@ -106,14 +106,6 @@ Applies to:
 
 <!-- ***********************************************-->
 
-## Tenant administration
-
-### Deliver organizational messages for Windows 11 (public preview)<!-- 15314747 -->  
-
-Deliver branded personalized messages to employees just above their taskbar, in their Notifications, or when they run the Get Started app on Windows 11 devices. Organizational messages are intended to improve employee communication in remote and hybrid-work scenarios, and to help employees adapt to their new roles more quickly, learn more about their organization, and stay informed of new updates and trainings.  
-
-<!-- ***********************************************-->
-
 ## Notices
 
 [!INCLUDE [Intune notices](../includes/intune-notices.md)]
