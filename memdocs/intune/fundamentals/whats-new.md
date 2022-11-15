@@ -78,9 +78,9 @@ You can group Managed Google Play apps into collections and control the order th
 #### New password complexity setting for Android Enterprise 12+ personally owned devices with a work profile<!-- 12436068  -->  
 On Android Enterprise 11 and older personally owned devices with a work profile, you can set the following password settings:
 
-- **Compliance policies** > **Android Enterprise for platform > **Personally owned work profile** > **System security** > **Required password type**, **Minimum password length**
-- **Device configuration profiles** > **Android Enterprise for platform > **Personally owned work profile** > **Device restrictions** > **Work profile settings** > **Required password type**, **Minimum password length**
-- **Device configuration profiles** > **Android Enterprise for platform > **Personally owned work profile** > **Device restrictions** > **Password** > **Required password type**, **Minimum password length**
+- **Compliance policies** > **Android Enterprise for platform** > **Personally owned work profile** > **System security** > **Required password type**, **Minimum password length**
+- **Device configuration profiles** > **Android Enterprise for platform** > **Personally owned work profile** > **Device restrictions** > **Work profile settings** > **Required password type**, **Minimum password length**
+- **Device configuration profiles** > **Android Enterprise for platform** > **Personally owned work profile** > **Device restrictions** > **Password** > **Required password type**, **Minimum password length**
 
 Google is deprecating the **Required password type** and **Minimum password length** settings for Android 12+ personally owned devices with a work profile and replacing them with new password complexity requirements. For more information about this change, go to [Day zero support for Android 13](https://aka.ms/Intune/Android13).
 
@@ -249,6 +249,22 @@ Access policies are supported for the following resources:
 - **Scripts** – Applies to deploying scripts to devices that run [macOS](../apps/macos-shell-scripts.md) or [Windows](../apps/intune-management-extension.md).
 
 For more information, see [Use Access policies to require multiple administrative approval](../fundamentals/multi-admin-approval.md).
+
+#### Deliver organizational messages for Windows 11 (public preview)<!-- 15314747  -->  
+Use Microsoft Intune to deliver important messages and call-to-actions to employees on their devices.  Organizational messages are preconfigured messages intended to improve employee communication in remote and hybrid-work scenarios. They can be used to help employees adapt to new roles, learn more about their organization, and stay informed of new updates and trainings. You can deliver messages  just above the taskbar, in the notifications area, or in the Get Started app on Windows 11 devices.
+
+During public preview, you can:
+
+* Select from a variety of preconfigured, common messages to assign to Azure AD user groups.
+* Add your organization's logo. 
+* Include a custom destination URL in the message that redirects device users to a specific place.
+* Preview messages in 15 supported languages, in dark and light theme.
+* Schedule a delivery window and message frequency.
+* Track the status of messages and the number of views and clicks they receive. Views and clicks are aggregated by messages.
+* Cancel scheduled or active messages.  
+* Configure a new built-in role in Intune called *Organizational Messages Manager*, which allows assigned admins to view and configure messages.  
+
+All configurations need to be done in the Microsoft Endpoint Manager admin center. The Microsoft Graph API isn't available to use with organizational messages. For more information, see [Overview of organizational messages](../remote-actions/organizational-messages-overview.md).
 
 ## Week of November 7, 2022
 
