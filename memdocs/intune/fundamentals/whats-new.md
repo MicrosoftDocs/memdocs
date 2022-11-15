@@ -97,7 +97,7 @@ If you continue to use the **Required password type** and **Minimum password len
 
 For more information on these settings and what happens to existing devices with the deprecated settings configured, go to:
 
-- [Android Enterprise personally owned devices with a work profile - configuration profile settings list](../configuration/device-restrictions-android-for-work.md#personally-owned-devices-with-a-work-profile)
+- [Android Enterprise personally owned devices with a work profile - configuration profile settings list](../configuration/device-restrictions-android-enterprise-personal.md)
 - [Android Enterprise personally owned devices with a work profile - compliance policy settings list](../protect/compliance-policy-create-android-for-work.md#personally-owned-work-profile)
 
 Applies to:
