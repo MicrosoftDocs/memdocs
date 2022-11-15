@@ -259,9 +259,9 @@ items:
           items:
           - name: What's new archive
             items:
-            - name: What's new archive (Azure portal)
+            - name: What's new archive (Azure portal) (Contains WN entries 6 months and older - somewhat relevant? If we give up on keeping aged entries, we might cut this and maintain only the main WN with ~6 months of entries?)
               href: ./fundamentals/whats-new-archive.md
-            - name: What's new archive (classic portal)
+            - name: What's new archive (classic portal) (deprecate/delete this article - its from 2017 and has low value with 174 visitors per month with only 3 clicks, all on the TOC entry for the classic portal) 
               href: ./fundamentals/whats-new-archive-classic.md
           - name: Intune classic features in Azure (need to deprecate)
             href: ./fundamentals/ui-changes.md
