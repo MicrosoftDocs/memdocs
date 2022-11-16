@@ -7,29 +7,29 @@ items:
     - name: Microsoft Intune overview
       href: ./fundamentals/what-is-intune.md 
       items:
-    - name: Manage and secure your identities
-      href: ./fundamentals/manage-identities.md
-    - name: Manage devices and control features
-      href: ./fundamentals/manage-devices.md
-    - name: Manage apps and protect their data
-      href: ./fundamentals/manage-apps.md
+      - name: Manage and secure your identities
+        href: ./fundamentals/manage-identities.md
+      - name: Manage devices and control features
+        href: ./fundamentals/manage-devices.md
+      - name: Manage apps and protect their data
+        href: ./fundamentals/manage-apps.md
     - name: Intune service release information
       href: ./fundamentals/intune-service-servicing-information.md
     - name: What is device management?
       href: ./fundamentals/what-is-device-management.md
 
-  - name: What's new
-    items:
     - name: What's new
-      href: ./fundamentals/whats-new.md
-    - name: What's new in the app UI
-      href: ./fundamentals/whats-new-app-ui.md
-    - name: Features in development
-      href: ./fundamentals/in-development.md   
-    - name: Important notices
-      href: ./fundamentals/whats-new.md#notices
-    - name: Public preview
-      href: ./fundamentals/public-preview.md
+      items:
+      - name: What's new
+        href: ./fundamentals/whats-new.md
+      - name: What's new in the app UI
+        href: ./fundamentals/whats-new-app-ui.md
+      - name: Features in development
+        href: ./fundamentals/in-development.md   
+      - name: Important notices
+        href: ./fundamentals/whats-new.md#notices
+      - name: Public preview
+        href: ./fundamentals/public-preview.md
 
   - name: Evaluate
     items:
