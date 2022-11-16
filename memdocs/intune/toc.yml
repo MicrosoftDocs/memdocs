@@ -80,7 +80,7 @@ items:
         href: ./fundamentals/deployment-plan-protect-apps.md
       - name: Step 3 - Create compliance policies
         href: ./fundamentals/deployment-plan-compliance-policies.md
-      - name: Step 4 - Assign configuration profiles
+      - name: Step 4 - Create configuration profiles
         href: ./fundamentals/deployment-plan-configuration-profile.md
       - name: Step 5 - Enroll devices
         items:
