@@ -30,7 +30,7 @@ ms.collection:
 
 # Manage macOS software update policies in Intune
 
-You can use Microsoft Intune to manage software updates for macOS devices that enrolled via ADE *only*:
+You can use Microsoft Intune to manage software updates for macOS devices that enrolled via Automated Device Enrollment (ADE) *only*:
 
 - [Automated Device Enrollment (ADE)](https://deploy.apple.com/) (using either Apple Business Manager, or Apple School Manager)
 
