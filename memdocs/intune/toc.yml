@@ -197,7 +197,7 @@ items:
   - name: Feature areas (discuss name)
     items:
 
-    - name: Microsoft Intune fundamentals (restructure)
+    - name: Microsoft Intune fundamentals (Hub page - where does this go?)
       href: ./fundamentals/index.yml
 
     - name:  Intune subscription (discuss name)
