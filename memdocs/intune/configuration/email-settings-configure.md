@@ -47,7 +47,7 @@ This article shows you how to create an email profile in Microsoft Intune. It al
 
 - Email profiles are deployed for the user who enrolled the device. To configure the email profile, Intune uses the Azure Active Directory (AD) properties in the email profile of the user during enrollment.
 
-- Microsoft Outlook for iOS/iPadOS and Android devices don't support email profiles. Instead, deploy an app configuration policy. For more information, see [Outlook Configuration setting](../apps/app-configuration-policies-outlook.md).
+- Microsoft Outlook for iOS/iPadOS and Android devices don't support email device configuration profiles. Instead, deploy an app configuration policy. For more information, see [Outlook Configuration setting](../apps/app-configuration-policies-outlook.md).
 
 - Android Enterprise devices don't have a built-in email app on the devices. On Android Enterprise devices, deploy the Gmail app or Nine for Work app, depending on your enrollment method. Both apps support connections to Microsoft Exchange.
 
@@ -103,7 +103,7 @@ This article shows you how to create an email profile in Microsoft Intune. It al
 
     Select **Next**.
 
-10. In **Assignments**, select the users or device groups that will receive your profile. For more information on assigning profiles, see [What you need to know](#what-you-need-to-know) (in this article). [Assign user and device profiles](device-profile-assign.md) also some guidance.
+10. In **Assignments**, select the users or device groups that will receive your profile. For more information on assigning profiles, see [Before you begin](#before-you-begin) (in this article). [Assign user and device profiles](device-profile-assign.md) also some guidance.
 
     Select **Next**.
 
