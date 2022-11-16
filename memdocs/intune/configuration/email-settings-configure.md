@@ -8,7 +8,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/19/2022
+ms.date: 11/16/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -42,6 +42,31 @@ You can use email profiles to configure the built-in email settings for the foll
 - Windows 10
 
 This article shows you how to create an email profile in Microsoft Intune. It also includes links to the different platforms for more specific settings.
+
+## Before you begin
+
+- Email profiles are deployed for the user who enrolled the device. To configure the email profile, Intune uses the Azure Active Directory (AD) properties in the email profile of the user during enrollment.
+
+- Microsoft Outlook for iOS/iPadOS and Android devices don't support email device configuration profiles. Instead, deploy an app configuration policy. For more information, see [Outlook Configuration setting](../apps/app-configuration-policies-outlook.md).
+
+- Android Enterprise devices don't have a built-in email app on the devices. On Android Enterprise devices, deploy the Gmail app or Nine for Work app, depending on your enrollment method. Both apps support connections to Microsoft Exchange.
+
+  For more information, see [email apps on Android Enterprise devices](../apps/app-configuration-policies-use-android.md).
+
+- Email is based on identity and user settings. Email profiles are typically assigned to user groups, not device groups. Some considerations:
+
+  - If the email profile includes user certificates, then assign the email profile to user groups. You may have multiple user certificate profiles that are assigned. These multiple profiles create a chain of profile deployments. Deploy this profile chain to user groups.
+
+    If one profile in this chain is deployed to a device group, users may be continuously prompted to enter their password.
+
+  - Device groups are typically used when there's not a primary user, or if you don't know who the user will be. Email profiles targeted to device groups (not user groups) may not be delivered to the device.
+
+    For example, your email profile targets an all iOS/iPadOS devices group. Be sure all these devices have a user.
+
+    - If any device doesn't have a user, then the email profile may not deploy. You limit the profile, and could miss some devices.
+    - If the device has a primary user, then deploying to device groups should work.
+
+    For more information on possible issues with using device groups, see [Common issues with email profiles](/troubleshoot/mem/intune/troubleshoot-email-profiles-in-microsoft-intune).
 
 ## Create the profile
 
@@ -78,36 +103,11 @@ This article shows you how to create an email profile in Microsoft Intune. It al
 
     Select **Next**.
 
-10. In **Assignments**, select the users or device groups that will receive your profile. For more information on assigning profiles, see [What you need to know](#what-you-need-to-know) (in this article). [Assign user and device profiles](device-profile-assign.md) also some guidance.
+10. In **Assignments**, select the users or device groups that will receive your profile. For more information on assigning profiles, see [Before you begin](#before-you-begin) (in this article). [Assign user and device profiles](device-profile-assign.md) also some guidance.
 
     Select **Next**.
 
 11. In **Review + create**, review your settings. When you select **Create**, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
-
-## What you need to know
-
-- Email profiles are deployed for the user who enrolled the device. To configure the email profile, Intune uses the Azure Active Directory (AD) properties in the email profile of the user during enrollment.
-
-- Microsoft Outlook for iOS/iPadOS and Android devices don't support email profiles. Instead, deploy an app configuration policy. For more information, see [Outlook Configuration setting](../apps/app-configuration-policies-outlook.md).
-
-- Android Enterprise devices don't have a built-in email app on the devices. On Android Enterprise devices, deploy the Gmail app or Nine for Work app, depending on your enrollment method. Both apps support connections to Microsoft Exchange.
-
-  For more information, see [email apps on Android Enterprise devices](../apps/app-configuration-policies-use-android.md).
-
-- Email is based on identity and user settings. Email profiles are typically assigned to user groups, not device groups. Some considerations:
-
-  - If the email profile includes user certificates, then assign the email profile to user groups. You may have multiple user certificate profiles that are assigned. These multiple profiles create a chain of profile deployments. Deploy this profile chain to user groups.
-
-    If one profile in this chain is deployed to a device group, users may be continuously prompted to enter their password.
-
-  - Device groups are typically used when there's not a primary user, or if you don't know who the user will be. Email profiles targeted to device groups (not user groups) may not be delivered to the device.
-
-    For example, your email profile targets an all iOS/iPadOS devices group. Be sure all these devices have a user.
-
-    - If any device doesn't have a user, then the email profile may not deploy. You limit the profile, and could miss some devices.
-    - If the device has a primary user, then deploying to device groups should work.
-
-    For more information on possible issues with using device groups, see [Common issues with email profiles](/troubleshoot/mem/intune/troubleshoot-email-profiles-in-microsoft-intune).
 
 ## Remove an email profile
 

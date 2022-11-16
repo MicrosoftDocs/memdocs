@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 11/14/2022
+ms.date: 11/15/2022
 ms.topic: reference
 ms.service: windows-365
 ms.subservice:
@@ -64,6 +64,14 @@ The Windows 365 app installation process has been updated to automatically insta
 
 The Azure Active Directory (Azure AD) policy has been updated so that no extra Conditional Access policy change is required to use the Windows 365 app.
 
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Documentation
+
+#### New documentation article: Use the Enrollment Status Page with Cloud PCs
+
+We’ve published a new help documentation article. For more information, see [Use the Enrollment Status Page with Cloud PCs](enrollment-status-page.md).
+
+
 <!-- ########################## -->
 ## Week of November 7, 2022
 
@@ -93,7 +101,7 @@ Point-in-time restore has moved out of preview and into general availability. Fo
 
 #### New supported Azure region: UAE North<!--41670300-->
 
-A new Azure regions is now supported for Windows 365 Cloud PC provisioning: UAE North.
+A new Azure region is now supported for Windows 365 Cloud PC provisioning: UAE North.
 
 For more information about supported Azure regions, see [Supported Azure regions for Cloud PC provisioning](requirements.md#supported-azure-regions-for-cloud-pc-provisioning).
 
