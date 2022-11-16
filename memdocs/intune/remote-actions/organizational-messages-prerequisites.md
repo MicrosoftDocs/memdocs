@@ -76,7 +76,7 @@ Enable the delivery of organizational messages in all new and existing policies 
  1. Go to **Settings catalog** > **Experience** > **Enable delivery of organizational messages (User)**. 
  2. For **Enable delivery of organizational messages**, switch the toggle to **Enabled**.     
 
-### Windows Spotlight policies   
+### Windows Spotlight policy     
 Configure these policies using a Microsoft Intune [device restrictions profile template](../configuration/device-restrictions-configure.md) or the [settings catalog](../configuration/settings-catalog.md). Make sure to adjust these policies in all new and existing policies that are targeted at users and devices receiving organizational messages.  
 
 #### Template profiles    
