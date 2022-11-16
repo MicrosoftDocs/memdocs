@@ -6,7 +6,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/15/2022
+ms.date: 11/16/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -77,7 +77,7 @@ On the **Message** page, configure the content for your message. As you enter yo
       * (Optional) Select **Add a link path, if needed** and add the path for your URL. Example: `/SoftwareUpdate`   
       * Select the full generated link to make sure it works. Example: `www.contoso.com/SoftwareUpdate`     
 3. **Choose language to preview**: Select a language to preview the localized version of your message. The message is shown to employees in the [display language](https://support.microsoft.com/windows/manage-the-input-and-display-language-settings-in-windows-12a10cb4-8626-9b77-0ccb-5013e0c7c7a2) they've selected on their device. Organizational messages are supported in 15 languages. If the employee's preferred language isn't supported, the message will appear in their preferred fallback language.  
-4. **Preview the message in dark theme**: Toggle the switch **On** to view how your message appears in dark theme. Check to make sure your logo shows up correctly in both light and dark theme.  
+4. **Preview the message in dark theme**: Turn on the toggle to view how your message appears in dark theme. Check to make sure your logo shows up correctly in both light and dark theme.  
 
 *For Get Started app messages:*    
 1. **Add a logo**: Choose an image file. For image requirements, see [Logo requirements](organizational-messages-prerequisites.md#logo-requirements).     
@@ -100,7 +100,7 @@ On the **Message** page, configure the content for your message. As you enter yo
      6. Provide a link for the message like you did for the first one. Select the generated link to make sure it works. 
      7. Select **OK**.  
 3. **Choose language to preview**: Select a language to preview the localized version of your message. The message is shown to employees in the [display language](https://support.microsoft.com/windows/manage-the-input-and-display-language-settings-in-windows-12a10cb4-8626-9b77-0ccb-5013e0c7c7a2) they've selected on their device. Organizational messages are supported in 15 languages. If the employee's preferred language isn't supported, the message will be shown to them in their preferred fallback language.  
-4. **Preview the message in dark theme**: Toggle the switch **On** to view how your message appears in dark theme. Check to make sure your logo shows up correctly in both light and dark theme.   
+4. **Preview the message in dark theme**: Turn on the toggle to view how your message appears in dark theme. Check to make sure your logo shows up correctly in both light and dark theme.   
 
 When you're done configuring the message, select **Next: Schedule** to continue to scheduling options.  
 
@@ -118,7 +118,7 @@ Your options are:
 
   This option isn't available for the Get Started app.  
  
- * **Always on**: Toggle the switch to **Always on** to make messages visible in the Get Stated app. This option isn't available for messages in the taskbar and notification area.    
+ * **Always on**: Switch the toggle to **Always on** to make messages visible in the Get Stated app. This option isn't available for messages in the taskbar and notification area.    
 
 When you're done scheduling your message, select **Next: Assignments**.     
 
