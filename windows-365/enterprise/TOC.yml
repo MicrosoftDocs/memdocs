@@ -107,6 +107,8 @@ items:
         href: automated-provisioning-steps.md
       - name: Manage Cloud PCs using Configuration Manager
         href: manage-cloud-pcs-using-configuration-manager.md
+      - name: Enrollment Status Page
+        href: enrollment-status-page.md
     - name: Profiles and policies
       items:
       - name: Create a dynamic device group

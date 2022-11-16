@@ -13,7 +13,7 @@ author: aczechowski
 ms.author: aaroncz
 ms.reviewer: jubaptis
 manager: dougeby
-ms.date: 09/19/2022
+ms.date: 11/15/2022
 ms.collection: M365-modern-desktop
 ms.topic: conceptual
 ---
@@ -74,6 +74,7 @@ You can also [change existing DFCI settings](/intune/configuration/device-firmwa
 
 - [Microsoft Surface](/surface/surface-manage-dfci-guide)
 - Acer
+- Panasonic
 
 Other OEMs are pending.
 

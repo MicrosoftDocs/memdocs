@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/14/2022
+ms.date: 11/15/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -68,7 +68,9 @@ This article shows you how to import custom ADMX and ADML files in the Endpoint 
   To remove a dependency prerequisite, delete the associated ADMX file first. Then, delete the dependency prerequisite. In our Mozilla Firefox example, delete `firefox.admx` and then delete `mozilla.admx`.
   
   > [!TIP]
-  > To see any namespace dependencies, open the ADMX file and search for `using prefix`. If you upload an ADMX file without the dependency, an error message will list the missing namespace.
+  > 
+  > - To see any namespace dependencies, open the ADMX file and search for `using prefix`. Any dependencies will be listed.
+  > - If you upload an ADMX file without the dependency, an error message will list the missing namespace.
   
 - Some files may require `Windows.admx` as a prerequisite. This file must be uploaded first. In a future release (no ETA), this namespace will be automatically included and eventually not be required.
 
@@ -76,7 +78,10 @@ This article shows you how to import custom ADMX and ADML files in the Endpoint 
 
 - Not all areas of the registry can be set using custom ADMX. For more information on the registry locations that can be used, go to [Win32 and Desktop Bridge app ADMX policy Ingestion Overview](/windows/client-management/win32-and-centennial-app-policy-configuration#overview).
 
-- ADMX settings that are built into Windows (located in the `C:\Windows\PolicyDefinitions` folder) are enabled through configuration service providers (CSPs). Don't import these built-in settings using the import ADMX feature. Instead, use the [settings catalog](settings-catalog.md) or a [custom profile](custom-settings-configure.md).
+- ADMX settings that are built into Windows (located in the `C:\Windows\PolicyDefinitions` folder) are enabled through configuration service providers (CSPs). 
+
+  - Don't import these built-in settings if your intent is to configure them. Instead, use the [settings catalog](settings-catalog.md) or a [custom profile](custom-settings-configure.md).
+  - Do import these built-in settings if they're a required parent namespace of another file. 
 
   For a list of the ADMX backed CSP settings, go to [ADMX-backed policies in Policy CSP](/windows/client-management/mdm/policies-in-policy-csp-admx-backed).
 
