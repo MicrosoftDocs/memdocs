@@ -223,7 +223,9 @@ items:
           href: ./fundamentals/unlicensed-admins.md          
       - name: Set the MDM authority (updates as post 1911 release MDM is auto set to Intune)
         href: ./fundamentals/mdm-authority-set.md
-
+      - name: Configure multiple admin approval
+        href: ./fundamentals/multi-admin-approval.md
+        
       - name: Manage roles
         items:
         - name: Role-based access control
@@ -242,12 +244,13 @@ items:
 
 
 
+
       - name: Premium add-ons (will need to sell this and move when it grows)
         href: ./fundamentals/premium-add-ons.md
 
       - name: Reference
         items: 
-        - name: Error codes and descriptions (need to figure out troubleshooting strategy)
+        - name: Error codes and descriptions (need to figure out troubleshooting strategy)(move this node to help and support, and hand-off to troubleshooting content)
           items: 
           - name: Troubleshoot company resource access problems
             href: /troubleshoot/mem/intune/troubleshoot-company-resource-access-problems?toc=/mem/intune/fundamentals/toc.json&bc=/mem/intune/fundamentals/breadcrumb/toc.json
@@ -259,25 +262,25 @@ items:
           items:
           - name: What's new archive
             items:
-            - name: What's new archive (Azure portal)
+            - name: What's new archive (Azure portal) (Contains WN entries 6 months+ and older. Retain, but limit its age as well, or remain an eternal tally of past work?)
               href: ./fundamentals/whats-new-archive.md
-            - name: What's new archive (classic portal)
+            - name: What's new archive (classic portal) (deprecate/delete this article) 
               href: ./fundamentals/whats-new-archive-classic.md
           - name: Intune classic features in Azure (need to deprecate)
             href: ./fundamentals/ui-changes.md
           - name: Intune classic groups (need to deprecate)
             href: ./fundamentals/groups-get-started.md
-          - name: iOS/iPadOS education settings
+          - name: iOS/iPadOS education settings  (should this node be in Industry guides > Education?)
             items:
             - name: iPad
               href: ./fundamentals/education-settings-configure-ios.md
             - name: Shared iPads
               href: ./fundamentals/education-settings-configure-ios-shared.md
-          - name: Legacy Intune PC software client
+          - name: Legacy Intune PC software client (deprecate/delete)
             href: ./fundamentals/intune-legacy-pc-client.md
-          - name: Troubleshoot software updates
+          - name: Troubleshoot software updates (move to help and support. Maybe we need an article that provides a clear hand-off to troubleshooting content)
             href: /troubleshoot/mem/intune/troubleshoot-software-updates-in-microsoft-intune
-          - name: Endpoint protection common errors
+          - name: Endpoint protection common errors (move to help and support. Maybe we need an article that provides a clear hand-off to troubleshooting content)
             href: /troubleshoot/mem/intune/troubleshoot-endpoint-protection-in-microsoft-intune
         - name: Intune end-user documentation
           href: /mem/user-help/use-managed-devices-to-get-work-done.md
@@ -1649,3 +1652,14 @@ items:
       href: /mem/use-docs.md 
     - name: Get support
       href: /mem/get-support.md?toc=/mem/intune/fundamentals/toc.json&bc=/mem/intune/fundamentals/breadcrumb/toc.json
+
+    - name: Troubleshooting guide  
+      items:
+      - name: Troubleshooting guide (suggested article for better handoff to Tshooting repo)
+    
+      - name: Troubleshoot software updates (could we replace with link in a Tshooting guide article?)
+        href: /troubleshoot/mem/intune/troubleshoot-software-updates-in-microsoft-intune
+      - name: Endpoint protection common errors (could we replace with link in a Tshooting guide article?)
+        href: /troubleshoot/mem/intune/troubleshoot-endpoint-protection-in-microsoft-intune
+      - name: Troubleshoot company resource access problems (could we replace with link in a Tshooting guide article?)
+        href: /troubleshoot/mem/intune/troubleshoot-company-resource-access-problems?toc=/mem/intune/fundamentals/toc.json&bc=/mem/intune/fundamentals/breadcrumb/toc.json
