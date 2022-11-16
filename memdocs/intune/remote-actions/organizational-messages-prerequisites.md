@@ -71,13 +71,13 @@ The domain for your custom destination URLs must be added to your list of verifi
 There are certain experience and Windows Spotlight policies in Microsoft Intune that block the delivery of organizational messages. This section describes how to adjust all settings so that delivery is always allowed and works as intended. 
 
 ### Organizational messages delivery policy      
-You must enable the delivery of organizational messages in all new and existing policies that are targeted at users and devices receiving organizational messages. 
+Enable the delivery of organizational messages in all new and existing policies that are targeted at users and devices receiving organizational messages. 
 
  1. Go to **Settings catalog** > **Experience** > **Enable delivery of organizational messages (User)**. 
- 2. For **Enable delivery of organizational messages**, toggle the switch to **Enabled**.     
+ 2. For **Enable delivery of organizational messages**, switch the toggle to **Enabled**.     
 
 ### Windows Spotlight policies   
- You can configure these policies using a Microsoft Intune [device restrictions profile template](../configuration/device-restrictions-configure.md) or the [settings catalog](../configuration/settings-catalog.md). Make sure to configure these policies in all new and existing policies that are targeted at users and devices receiving organizational messages.  
+Configure these policies using a Microsoft Intune [device restrictions profile template](../configuration/device-restrictions-configure.md) or the [settings catalog](../configuration/settings-catalog.md). Make sure to adjust these policies in all new and existing policies that are targeted at users and devices receiving organizational messages.  
 
 #### Template profiles    
 Go to **Configuration profiles** > **Templates** > **Device restrictions** > **Windows Spotlight** to edit these settings.    
@@ -110,6 +110,14 @@ The configuration service provider (CSP) policies available for Windows 11 inclu
 * [Experience/AllowWindowsTips](/windows/client-management/mdm/policy-csp-experience#experience-allowwindowstips)   
 * [Experience/AllowWindowsSpotlightOnActionCenter](/windows/client-management/mdm/policy-csp-experience#experience-allowwindowsspotlightonactioncenter)  
 * [Experience/DisableCloudOptimizedContent](/windows/client-management/mdm/policy-csp-experience#experience-disablecloudoptimizedcontent)  
+
+### Microsoft messaging requirements      
+If you currently block messages that come from Microsoft, you can continue to do so while also allowing organizational messages to come through.  
+
+1. Go to **Organizational messages (preview)**.    
+2. In the **Overview** tab, go to step 2 under **Before you create a message**.      
+3. **Decide whether to block messages directly from Microsoft, while allowing admin messages to display**: Switch the toggle to **Allow** to allow both Microsoft messages and organizational messages. Switch the toggle to **Block** to block Microsoft messages and allow organizational messages.   
+
 
 ## Next steps 
 Now that prerequisites are complete, you can [create organizational messages](organizational-messages-create.md) in Microsoft Intune.    
