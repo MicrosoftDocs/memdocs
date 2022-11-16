@@ -194,7 +194,7 @@ items:
     - name: Microsoft Surface Management Portal
       href: ./fundamentals/surface-management-portal.md
 
-  - name: Management areas (discuss name)
+  - name: Feature areas (discuss name)
     items:
 
     - name: Microsoft Intune fundamentals (restructure)
