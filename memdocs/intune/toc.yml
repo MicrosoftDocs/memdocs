@@ -6,15 +6,15 @@ items:
     items:
     - name: Microsoft Intune overview
       href: ./fundamentals/what-is-intune.md 
-      items:      
+      items:
       - name: Manage and secure your identities
         href: ./fundamentals/manage-identities.md
       - name: Manage devices and control features
         href: ./fundamentals/manage-devices.md
       - name: Manage apps and protect their data
         href: ./fundamentals/manage-apps.md
-      - name: Intune service release information
-        href: ./fundamentals/intune-service-servicing-information.md
+    - name: Intune service release information
+      href: ./fundamentals/intune-service-servicing-information.md
     - name: What is device management?
       href: ./fundamentals/what-is-device-management.md
 
@@ -194,7 +194,7 @@ items:
     - name: Microsoft Surface Management Portal
       href: ./fundamentals/surface-management-portal.md
 
-  - name: Management areas (discuss name)
+  - name: Feature areas (discuss name)
     items:
 
     - name: Microsoft Intune fundamentals (restructure)
