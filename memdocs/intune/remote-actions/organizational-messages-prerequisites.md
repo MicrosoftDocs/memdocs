@@ -111,7 +111,7 @@ The configuration service provider (CSP) policies available for Windows 11 inclu
 * [Experience/AllowWindowsSpotlightOnActionCenter](/windows/client-management/mdm/policy-csp-experience#experience-allowwindowsspotlightonactioncenter)  
 * [Experience/DisableCloudOptimizedContent](/windows/client-management/mdm/policy-csp-experience#experience-disablecloudoptimizedcontent)  
 
-### Microsoft messaging requirements      
+### Microsoft messaging policy        
 If you currently block messages that come from Microsoft, you can continue to do so while also allowing organizational messages to come through.  
 
 1. Go to **Organizational messages (preview)**.    
