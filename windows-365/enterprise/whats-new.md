@@ -101,7 +101,7 @@ Point-in-time restore has moved out of preview and into general availability. Fo
 
 #### New supported Azure region: UAE North<!--41670300-->
 
-A new Azure regions is now supported for Windows 365 Cloud PC provisioning: UAE North.
+A new Azure region is now supported for Windows 365 Cloud PC provisioning: UAE North.
 
 For more information about supported Azure regions, see [Supported Azure regions for Cloud PC provisioning](requirements.md#supported-azure-regions-for-cloud-pc-provisioning).
 
