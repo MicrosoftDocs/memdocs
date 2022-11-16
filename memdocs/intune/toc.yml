@@ -16,7 +16,7 @@ items:
       - name: Intune service release information
         href: ./fundamentals/intune-service-servicing-information.md
     - name: What is device management?
-      href: what-is-device-management.md
+      href: ./fundamentals/what-is-device-management.md
 
     - name: What's new
       items:
