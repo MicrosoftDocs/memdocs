@@ -194,33 +194,34 @@ items:
     - name: Microsoft Surface Management Portal
       href: ./fundamentals/surface-management-portal.md
 
-  - name: Feature areas
+  - name: Management areas (discuss name)
     items:
 
     - name: Microsoft Intune fundamentals (restructure)
       href: ./fundamentals/index.yml
-      items:
 
-      - name: Intune tenant administration (change name to something else?)
-        items:
-        - name: Sign in to Intune
-          href: ./fundamentals/account-sign-up.md
-        - name: Unlicensed admins (is this topic still needed? post 2006 it's already on)
-          href: ./fundamentals/unlicensed-admins.md
-        - name: Configure domains
-          href: ./fundamentals/custom-domain-name-configure.md
-        - name: Add users
-          href: ./fundamentals/users-add.md
-        - name: Add groups
-          href: ./fundamentals/groups-add.md
-        - name: Assign licenses
-          href: ./fundamentals/licenses-assign.md
+    - name:  Intune subscription (discuss name)
+      items:
+      - name: Sign in to Intune
+        href: ./fundamentals/account-sign-up.md
+      - name: Configure domains
+        href: ./fundamentals/custom-domain-name-configure.md
+      - name: Add users
+        href: ./fundamentals/users-add.md
+      - name: Add groups
+        href: ./fundamentals/groups-add.md
+      - name: Intune licensing
+        items: 
         - name: Intune licenses
           href: ./fundamentals/licenses.md
-        - name: Set the MDM authority (updates as post 1911 release MDM is auto set to Intune)
-          href: ./fundamentals/mdm-authority-set.md
- 
-      - name: Manage roles (why? add "to assign access to resources" or something)
+        - name: Assign licenses
+          href: ./fundamentals/licenses-assign.md
+        - name: Unlicensed admins (is this topic still needed? post 2006 it's already on)
+          href: ./fundamentals/unlicensed-admins.md          
+      - name: Set the MDM authority (updates as post 1911 release MDM is auto set to Intune)
+        href: ./fundamentals/mdm-authority-set.md
+
+      - name: Manage roles
         items:
         - name: Role-based access control
           href: ./fundamentals/role-based-access-control.md
@@ -230,18 +231,13 @@ items:
           href: ./fundamentals/create-custom-role.md
         - name: Use scope tags (define for what "to determine what admins can see" or something)
           href: ./fundamentals/scope-tags.md
-      - name: Use filters when assigning policies (should it be in config section?)
-        items:
-        - name: Create a filter
-          href: ./fundamentals/filters.md
-        - name: Filter properties
-          href: ./fundamentals/filters-device-properties.md
-        - name: Supported workloads
-          href: ./fundamentals/filters-supported-workloads.md
-        - name: Reporting and troubleshooting (instead of troubleshooting change to conflict resolution or something)
-          href: ./fundamentals/filters-reports-troubleshoot.md
-      - name: Use policy sets (where should this go? If here, add why to title "...to do what...")
-        href: ./fundamentals/policy-sets.md
+
+
+    - name: Manage tenant configurations (discuss name)
+      items:
+
+
+
 
       - name: Premium add-ons (will need to sell this and move when it grows)
         href: ./fundamentals/premium-add-ons.md
@@ -831,7 +827,7 @@ items:
           href: ./protect/tutorial-protect-email-on-unmanaged-devices.md
       - name: Concepts 
         items: 
-        - name: Privacy and personal data
+        - name: Privacy and personal data (copy to own section - does this make sense?)
           href: ./protect/privacy-personal-data.md
           items:
           - name: Optional diagnostic data in client apps
@@ -1328,7 +1324,6 @@ items:
             href: ./enrollment/android-move-device-admin-work-profile.md        
           - name: Samsung Knox Mobile Enrollment 
             href: ./enrollment/android-samsung-knox-mobile-enroll.md
-            displayName: kda; kme
           - name: Android Enterprise security configuration framework
             items:
               - name: Android Enterprise security configuration framework
@@ -1412,6 +1407,33 @@ items:
           - name: Troubleshoot Android device enrollment
             href: /troubleshoot/mem/intune/troubleshoot-android-enrollment
 
+    - name: Assign and deploy policies (do we need a hub page?)
+      items: 
+      - name: Use filters when assigning policies (should it be in config section?)
+        items:
+        - name: Create a filter
+          href: ./fundamentals/filters.md
+        - name: Filter properties
+          href: ./fundamentals/filters-device-properties.md
+        - name: Supported workloads
+          href: ./fundamentals/filters-supported-workloads.md
+        - name: Reporting and troubleshooting (instead of troubleshooting change to conflict resolution or something)
+          href: ./fundamentals/filters-reports-troubleshoot.md
+      - name: Use policy sets (where should this go? If here, add why to title "...to do what...")
+        href: ./fundamentals/policy-sets.md
+      - name: Assign policies
+        items:
+        - name: Assign profiles (will we need this in multiple places?)
+          href: ./configuration/device-profile-assign.md
+        - name: Monitor profiles
+          href: ./configuration/device-profile-monitor.md
+        - name: Troubleshoot profiles
+          items:
+          - name: Troubleshoot policies and profiles
+            href: /troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune
+          - name: Common questions and answers
+            href: ./configuration/device-profile-troubleshoot.md
+
     - name: Remote actions
       href: ./remote-actions/index.yml
       items:
@@ -1472,7 +1494,7 @@ items:
           href: ./remote-actions/device-sync.md
         - name: Examine device inventory
           href: ./remote-actions/device-inventory.md
-        - name: Collect diagnostics
+        - name: Collect diagnostics (is this really remote actions?)
           href: ./remote-actions/collect-diagnostics.md
       - name: Bulk device actions
         href: ./remote-actions/bulk-device-actions.md
@@ -1500,6 +1522,10 @@ items:
         href: ./fundamentals/monitor-audit-logs.md
       - name: Review logs with Azure Monitor
         href: ./fundamentals/review-logs-using-azure-monitor.md
+      - name: Endpoint analytics (link to EA hub page)
+        href: ../analytics/
+      - name: Use the Intune Data Warehouse (copy - contextual toc if this works)
+        href: ./developer/reports-nav-create-intune-reports.md          
 
   - name: Developer guidance
     href: index.yml 
@@ -1580,6 +1606,35 @@ items:
         href: /graph/api/resources/intune-graph-overview
       - name: Graph APIs used to configure devices
         href: ./developer/graph-apis-used-by-intune-device-configuration-windows.md  
+
+  - name: Privacy and personal data (copied to own section - does this make sense?)
+    href: ./protect/privacy-personal-data.md
+    items:
+    - name: Optional diagnostic data in client apps
+      href: ./protect/client-apps-optional-data.md
+    - name: Data collection
+      href: ./protect/privacy-data-collect.md
+    - name: Data storage and processing
+      href: ./protect/privacy-data-store-process.md
+    - name: Data security and sharing
+      href: ./protect/privacy-data-secure-share.md
+      items:
+      - name: Data Apple sends to Intune
+        href: ./protect/data-apple-sends-to-intune.md
+      - name: Data Google sends to Intune
+        href: ./protect/data-google-sends-to-intune.md
+      - name: Data Intune sends to Apple
+        href: ./protect/data-intune-sends-to-apple.md
+      - name: Data Intune sends to Google
+        href: ./protect/data-intune-sends-to-google.md
+      - name: Information shared from Jamf Pro to Intune
+        href: ./protect/data-jamf-sends-to-intune.md
+    - name: View and correct personal data
+      href: ./protect/privacy-data-view-correct.md
+    - name: Audit, export, delete
+      href: ./protect/privacy-data-audit-export-delete.md
+    - name: Windows Information Protection
+      href: ./protect/windows-information-protection-configure.md
 
   - name: Get help and support
     items:
