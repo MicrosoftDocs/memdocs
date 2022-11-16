@@ -1650,11 +1650,11 @@ items:
 
     - name: Troubleshooting guide  
       items:
-      - name: Troubleshooting guide (suggested article)(details about where troubleshooting resources & content lives with link/hand-off to that repository)(Include links to replace TOC entries for articles.Following are three of many)     
+      - name: Troubleshooting guide (suggested article for better handoff to Tshooting repo)
     
-      - name: Troubleshoot software updates (copied from original toc location. Can we replace with link from within a Tshooting guide article?)
+      - name: Troubleshoot software updates (could we replace with link in a Tshooting guide article?)
         href: /troubleshoot/mem/intune/troubleshoot-software-updates-in-microsoft-intune
-      - name: Endpoint protection common errors (copied from original toc location. Can we replace with link from within a Tshooting guide article?)
+      - name: Endpoint protection common errors (could we replace with link in a Tshooting guide article?)
         href: /troubleshoot/mem/intune/troubleshoot-endpoint-protection-in-microsoft-intune
-      - name: Troubleshoot company resource access problems (copied from original toc location. Can we replace with link from within a Tshooting guide article?)
+      - name: Troubleshoot company resource access problems (could we replace with link in a Tshooting guide article?)
         href: /troubleshoot/mem/intune/troubleshoot-company-resource-access-problems?toc=/mem/intune/fundamentals/toc.json&bc=/mem/intune/fundamentals/breadcrumb/toc.json
