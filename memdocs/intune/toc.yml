@@ -30,12 +30,14 @@ items:
         href: ./fundamentals/whats-new.md#notices
       - name: Public preview
         href: ./fundamentals/public-preview.md
+
   - name: Evaluate
     items:
     - name: Walkthrough Intune in Microsoft Endpoint Manager (update for branding)
       href: ./fundamentals/tutorial-walkthrough-endpoint-manager.md 
     - name: Try Intune for free
       href: ./fundamentals/free-trial-sign-up.md      
+
   - name: Plan
     items:
     - name: Planning overview 
@@ -45,7 +47,6 @@ items:
     - name: How to educate your end users (does this work here?)
       href: ./fundamentals/end-user-educate.md    
     - name: Evaluate current GPOs with settings catalog (is this a sub topic?)
-
 
     - name: Supported configurations
       href: ./fundamentals/supported-devices-browsers.md
@@ -67,7 +68,6 @@ items:
 
   - name: Deploy
     items:
-
     - name: Deploy Microsoft Intune
       items:
       - name: Deploy Intune overview
@@ -118,7 +118,6 @@ items:
         - name: Miscellaneous policy mapping
           href: ./fundamentals/policy-map-miscellaneous.md
 
-
   - name: Solutions and scenarios
     items: 
     - name: Scenarios overview
@@ -160,6 +159,7 @@ items:
         href: ../solutions/cloud-native-endpoints/cloud-native-endpoints-known-issues.md
     - name: "Zero Trust: Manage devices with Intune"
       href: /microsoft-365/solutions/manage-devices-with-intune-overview
+
   - name: Industry guides
     items: 
     - name: Education
@@ -176,6 +176,7 @@ items:
         href: ./fundamentals/ems-intune-govt-service-description.md
       - name: Intune US government endpoints
         href: ./fundamentals/intune-us-government-endpoints.md
+
   - name: Platform guides
     items:
     - name: Windows platform guide (new topic)
