@@ -32,12 +32,12 @@ ms.collection: M365-identity-device-management
 
 You have two options for network deployment of the Windows 365 service:
 
-- Microsoft-hosted network (Recommended)
-- Azure Network Connection (ANC)
+- Microsoft-hosted network for simplicity, reliability, and scalability. (Recommended)
+- Azure Network Connection (ANC) to support hybrid Azure Active Directory (Azure AD) join scenarios.
 
 ## Microsoft-hosted network
 
-With this option, Windows 365 is delivered as a SaaS solution. Microsoft fully manages the infrastructure and related services required to deliver functional Cloud PCs to your users. Microsoft also manages the network that the Cloud PCs occupy.
+This is a simple, reliable and scalable option offering Cloud PC connectivity where Microsoft provides the service in a true SaaS approach. Microsoft fully manages the infrastructure and related services required to deliver functional Cloud PCs to your users. Microsoft also manages the network that the Cloud PCs occupy.
 
 The customer’s only responsibility is the configuration and management of the Cloud PCs. Microsoft doesn’t configure anything within the Cloud PC itself.
 
@@ -56,15 +56,15 @@ This option is analogous to providing an employee with a laptop to use at home. 
 
 For example, users can be authenticated with adaptive controls of Azure Conditional Access. Corporate connectivity can be delivered by using VPN. Internet security can use a cloud-based secure web gateway (SWG). The advantage is that devices can be deployed at scale in a very short timeframe whenever needed on an extremely high bandwidth, resilient network.
 
-The diagram below shows the Microsoft hosted network with the Cloud PC and Virtual Network card within a subscription managed by Microsoft.
+The diagram below shows the Microsoft hosted network with the Cloud PC and virtual network card within a subscription managed by Microsoft.
 
-IMAGE
+IMAGE TBS
 
-### Benefits of this Model
+### Benefits of the Microsoft-hosted network option
 
 - No Azure subscription is required. Microsoft provides and fully manages the infrastructure required for the Cloud PC to operate. All you need is the required licenses.
-- No additional costs for network infrastructure. The Azure costs of operating your own Virtual Network (VNet) and virtual appliances don’t apply. Microsoft takes care of the network infrastructure.
-- No Azure networking expertise or management is required. The virtual network is fully managed by Microsoft.
+- No additional costs for network infrastructure. The Azure costs of operating your own virtual network (VNet) and virtual appliances don’t apply. Microsoft takes care of the network infrastructure.
+- No Azure networking expertise or management is required. The VNet is fully managed by Microsoft.
 - Low complexity and rapid deployment. There is low complexity in deploying because of minimal dependencies on customer-side elements.
 - Zero trust alignment. The Zero Trust model of operation for user, endpoint, workload, and data signals is used for verification rather than applying trust to the network location.
 - Simpler troubleshooting and operations. It’s easier to troubleshoot and pinpoint networking issues and adopt modern device management based on Intune policies, security controls, and built-in reporting capabilities.
@@ -81,8 +81,60 @@ Before using the Microsoft-hosted network option, review these considerations:
 - Ping/ICMP is blocked.
 - Local network communications between Cloud PCs are blocked.
 - No direct inbound connectivity is possible to Cloud PCS.
-- Admins can’t reliably connect from one Cloud PC to another Cloud PC. The underlying VNET could be different. Cross Vnet communications are blocked.
+- Admins can’t reliably connect from one Cloud PC to another Cloud PC. The underlying VNet could be different. Cross Vnet communications are blocked.
 - There is no way for admins to control the IP address ranges and/or address space assigned to the Cloud PCs. Windows 365 handles the IP addresses automatically.
+
+## Azure Network Connection option
+
+With the Azure Network Connection (ANC) deployment option, you’re completely in charge of the VNet and its configuration. If you’re using a hybrid Azure AD join model, you must use this deployment option. This provides line-of-sight to your on-premises Azure Directory resources and lets you customize network and security goals like:
+
+- Traffic routes.
+- Ports and protocols.
+- Azure Directory  DS and line-of-business application connectivity.
+- Gateway connections using VPN or ExpressRoute.
+- Address space used by Cloud PCs.
+- Communication permissions between Cloud PCs.
+- Direct RDP connections to Cloud PCs.
+
+You select the VNet from those in your Azure subscription. You’ll configure provisioning policies which create the Cloud PCs in your vNet. You’ll manage the Cloud PC connectivity, including any direct egress from the VNet and desired internet access path.
+
+Azure Network Connection supports two identity deployment models listed below:
+
+- Azure AD join
+- Hybrid Azure AD join
+
+### Azure AD join
+
+When using Azure AD join, you’re not required to create a connection from the VNet to your on-premises network. You must merely make sure that there is outbound internet connectivity to the required endpoints. However, you might want to add an on-premises connection for accessing resources located in your on-premises file servers and applications. You can create the connection by using ExpressRoute or site-to-site VPN, but these options present additional cost and complexity.
+
+For simplicity, when using Azure AD join, we recommend that you use the Microsoft-hosted network option explained above. In that case, you can use a VPN or private access solution over the internet to access corporate resources.
+
+### Hybrid Azure AD join
+
+With Hybrid Azure AD join, a connection to the on-premises network is required from the VNet. The only way to reach the DC infrastructure located there is to use the ANC deployment option. This connection is a critical component so care should be taken to ensure reliability and redundancy. 
+
+### Benefits of the ANC option
+
+- Full control of the VNet. The Cloud PC’s NIC sits in the on-premises network.
+- Direct line-of-sight to on-premises infrastructure. The vNet can be configured with a site-to-site VPN or ExpressRoute connection back to the on-premises network for direct connectivity to Azure Directory infrastructure or services and applications located there.
+- Cloud PC operated like it’s on an on-premises location. The extension of the corporate network to the vNet means the Cloud PC can operate as if it’s within the corporate network boundaries.
+- Simple peering to other VNets. Simple cross connectivity between the Cloud PC VNet and other vNets in Azure. This supports direct connectivity to other Azure-hosted resources the organization uses.
+
+### Considerations
+
+Before using the ANC deployment option, review these considerations:
+
+- Azure subscription required. The VNet used in this scenario is in your own Azure subscription. Therefore, you must have an Azure subscription and the [required licences](/windows-365/enterprise/requirements?tabs=enterprise%2Cent#licensing-requirements).
+- Egress costs. Because the VNet is associated with your own Azure account, any [egress costs](https://azure.microsoft.com/pricing/details/bandwidth/) are incurred to your Azure subscription.
+- Additional costs for network infrastructure. The Azure costs of operating your own VNet are applied to the subscription associated with the vNet.
+- Azure networking expertise or management required. You must provide the expertise and management to maintain your VNet.
+- Higher complexity. You must manage and maintain your network, which is more complex a task than using a Microsoft-hosted network.
+- Rapid deployment. Because there are fewer customer side element configurations, this deployment option is usually faster to deploy.
+- Higher risk. Microsoft sees a higher rate of connectivity issues caused by network configuration when the ANC option is used.
+
+## Simultaneous options
+
+The Microsoft-hosted network and ANC options can be used simultaneously. For example, you can use the ANC option for a subset of your deployment that have unique legacy requirements. For the rest of your deployment without those requirements, you can use the Microsoft-hosted network option.
 
 <!-- ########################## -->
 ## Next steps
