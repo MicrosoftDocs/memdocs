@@ -7,7 +7,7 @@ description: Use Microsoft Intune to create email, VPN, and Wi-Fi device configu
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/16/2022
+ms.date: 11/17/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -80,7 +80,7 @@ To get started, use the following links:
 
 1. Depending on your platform, you might need to deploy an email app first.
 
-    - **Android Enterprise**: These devices don't have a built-in email app. So, you need to add and deploy an email app that supports Microsoft Exchange. Your options:
+    - **Android Enterprise organization-owned**: These devices don't have a built-in email app. So, you need to add and deploy an email app that supports Microsoft Exchange. Your options:
 
       - **Gmail**: The Gmail app is available in the managed Play Store. In Intune, you connect to your Managed Google Play account. Then, you add the Gmail app and deploy this app to your Android Enterprise devices.
 
@@ -88,13 +88,15 @@ To get started, use the following links:
 
       - **Microsoft Outlook**: The Outlook app is available in the managed Play Store. If you have a Microsoft 365 license, then use the Outlook app included with your license; don't use the version in the Play Store.
 
+        ✔️ Requires app configuration policy
+
         To use Outlook as the email app, you add the Outlook app, create an app configuration policy with your organization settings, and deploy this app configuration policy to your Android Enterprise devices.
 
-        ✔️ Requires app configuration policy
-
-      - **Other email apps**: Other enterprise level emails apps are available in the managed Play Store. Remember, they must support Microsoft Exchange. To use any of these other apps, you add the app, create an app configuration policy with your organization settings, and deploy this app configuration policy to your Android Enterprise devices.
+      - **Other email apps**: Other enterprise level emails apps are available in the managed Play Store. Remember, they must support Microsoft Exchange.
 
         ✔️ Requires app configuration policy
+
+        To use any of these other apps, you add the app, create an app configuration policy with your organization settings, and deploy this app configuration policy to your Android Enterprise devices.
 
       For more information on app configuration policies, go to:
 
@@ -103,19 +105,41 @@ To get started, use the following links:
       - [Manage messaging collaboration access by using Outlook for iOS and Android with Microsoft Intune](../apps/app-configuration-policies-outlook.md)
       - [Deploying Outlook for iOS and Android app configuration settings in Exchange Online](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune)
 
+    - **Android Enterprise personally-owned devices with a work profile**: These devices are owned by end users. Users need an email app that supports Microsoft Exchange. Their options:
+
+      - **Gmail**: The Gmail app is available in the Play Store and supports Microsoft Exchange. It's typically installed by end users. So, you don't need to deploy an app.
+
+        ??In Intune, you connect to your Managed Google Play account. Then, you add the Gmail app and deploy this app to your Android Enterprise devices.
+
+      - **Nine Work**: The Gmail app is available in the Play Store and supports Microsoft Exchange. It's typically installed by end users. So, you don't need to deploy an app.
+
+      - **Microsoft Outlook**: The Outlook app is available in the Play Store. Users can install the app themselves. If you have a Microsoft 365 license, then you use the Outlook app included with your license. The choice is yours.
+
+        ✔️ Requires app configuration policy
+
+        To use Outlook as the email app, you add the Outlook app, create an app configuration policy with your organization settings, and deploy this app configuration policy to these personally owned devices.
+
+      - **Other email apps**: Other enterprise level emails apps are available the Play Store. Remember, they must support Microsoft Exchange.
+
+        ✔️ Requires app configuration policy
+
+        To use any of these other apps, you add the app, create an app configuration policy with your organization settings, and deploy this app configuration policy to these personally owned devices.
+
     - **iOS/iPadOS**: You need an email app that supports Microsoft Exchange ActiveSync. Your options:
 
       - **Built-in Mail app**: This app is preinstalled with the OS and supports Microsoft Exchange ActiveSync. So, you don't need to deploy an app.
 
-      - **Microsoft Outlook**: The Outlook app is available in the App Store. If you have a Microsoft 365 license, then use the Outlook app included with your license; don't use the version in the Play Store.
+      - **Microsoft Outlook**: The Outlook app is available in the App Store. If you have a Microsoft 365 license, then use the Outlook app included with your license; don't use the version in the App Store.
+
+        ✔️ Requires app configuration policy
 
         To use Outlook as the email app, you add the Outlook app, create an app configuration policy with your organization settings, and deploy this app configuration policy to your iOS/iPadOS devices.
 
-        ✔️ Requires app configuration policy
-
-      - **Other email apps**: Other enterprise level emails apps are available the App Store. Remember, they must support Microsoft Exchange ActiveSync. To use any of these other apps, you add the app, create an app configuration policy with your organization settings, and deploy this app configuration policy to your iOS/iPadOS devices.
+      - **Other email apps**: Other enterprise level emails apps are available the App Store. Remember, they must support Microsoft Exchange ActiveSync.
 
         ✔️ Requires app configuration policy
+
+        To use any of these other apps, you add the app, create an app configuration policy with your organization settings, and deploy this app configuration policy to your iOS/iPadOS devices.
 
       For more information on app configuration policies, go to:
 
@@ -127,7 +151,7 @@ To get started, use the following links:
     - **Windows**: You need an email app that supports Microsoft Exchange. Your options:
       - **Built-in Mail app**: This app is preinstalled with the OS and supports Microsoft Exchange. So, you don't need to deploy an app.
 
-      - **Microsoft Outlook**: The Outlook app is available in the Microsoft 365 Apps suite. If you have a Microsoft 365 license, then use the Outlook app included with your license; don't use the version in the Play Store.
+      - **Microsoft Outlook**: The Outlook app is available in the Microsoft 365 Apps suite. If you have a Microsoft 365 license, then use the Outlook app included with your license; don't use the version in the Microsoft Store.
 
         To use Outlook as the email app, you add the Outlook app and deploy this app to your Windows devices.
 
