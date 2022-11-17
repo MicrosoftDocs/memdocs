@@ -54,13 +54,15 @@ Many organizations deploy email profiles with preconfigured settings to end user
 
 ✔️ **Automatically connect to user email accounts**
 
-The profile includes the email configuration settings that automatically connect to your email server.
+The profile includes the email configuration settings that connect to your email server.
 
 Depending on the settings you configure, the email profile can automatically connect the end users to their individual email account settings. End users don't have to manually configure their email accounts.
 
 ✔️ **Use enterprise level email apps**
 
-Email profiles in Intune use common and popular email apps, such as Gmail and Outlook. Depending on the OS platform of your devices, the email app is deployed to end user devices. After the app is deployed, then you deploy the email device configuration profile with settings that configure the email app. The email device configuration profile includes settings that automatically connect to your Exchange server.
+Email profiles in Intune use common and popular email apps, such as Gmail and Outlook. The email app is deployed to end user devices. After it's deployed, you deploy the email device configuration profile with settings that configure the email app.
+
+The email device configuration profile includes settings that connect to your Exchange server.
 
 ✔️ **Access work or school email**
 
@@ -70,7 +72,7 @@ Intune has built-in email settings for Android, iOS/iPadOS, and Windows client d
 
 ✔️ **Deploy anytime**
 
-On new devices, it's recommended to deploy the email policy when devices enroll in Intune. If you have existing devices, you can deploy the email policy at any time.
+On new devices, it's recommended to deploy the email app during the enrollment process. When enrollment completes, then deploy the email device configuration policy. If you have existing devices, deploy the email app at any time, and then deploy the email device configuration policy.
 
 ### Get started with email profiles
 
@@ -82,13 +84,11 @@ To get started, use the following links:
 
       - **Gmail**: The Gmail app is available in the managed Play Store. In Intune, you connect to your Managed Google Play account. Then, you add the Gmail app and deploy this app to your Android Enterprise devices.
 
-        ❌ Requires app configuration policy
-
       - **Nine Work**: The Nine Work app is available in the managed Play Store. In Intune, you connect to your Managed Google Play account. Then, you add the Nine Work app and deploy this app to your Android Enterprise devices.
 
-        ❌ Requires app configuration policy
+      - **Microsoft Outlook**: The Outlook app is available in the managed Play Store. If you have a Microsoft 365 license, then use the Outlook app included with your license; don't use the version in the Play Store.
 
-      - **Microsoft Outlook**: The Outlook app is available in the managed Play Store. If you have a Microsoft 365 license, you may already have the Outlook app. To use Outlook as the email app, you add the Outlook app, create an app configuration policy with your organization settings, and deploy this app configuration policy to your Android Enterprise devices.
+        To use Outlook as the email app, you add the Outlook app, create an app configuration policy with your organization settings, and deploy this app configuration policy to your Android Enterprise devices.
 
         ✔️ Requires app configuration policy
 
@@ -107,9 +107,9 @@ To get started, use the following links:
 
       - **Built-in Mail app**: This app is preinstalled with the OS and supports Microsoft Exchange ActiveSync. So, you don't need to deploy an app.
 
-        ❌ Requires app configuration policy
+      - **Microsoft Outlook**: The Outlook app is available in the App Store. If you have a Microsoft 365 license, then use the Outlook app included with your license; don't use the version in the Play Store.
 
-      - **Microsoft Outlook**: The Outlook app is available in the App Store. If you have a Microsoft 365 license, you may already have the Outlook app. To use Outlook as the email app, you add the Outlook app, create an app configuration policy with your organization settings, and deploy this app configuration policy to your iOS/iPadOS devices.
+        To use Outlook as the email app, you add the Outlook app, create an app configuration policy with your organization settings, and deploy this app configuration policy to your iOS/iPadOS devices.
 
         ✔️ Requires app configuration policy
 
@@ -127,20 +127,18 @@ To get started, use the following links:
     - **Windows**: You need an email app that supports Microsoft Exchange. Your options:
       - **Built-in Mail app**: This app is preinstalled with the OS and supports Microsoft Exchange. So, you don't need to deploy an app.
 
-        ❌ Requires app configuration policy
+      - **Microsoft Outlook**: The Outlook app is available in the Microsoft 365 Apps suite. If you have a Microsoft 365 license, then use the Outlook app included with your license; don't use the version in the Play Store.
 
-      - **Microsoft Outlook**: The Outlook app is available in the Microsoft 365 Apps suite. If you have a Microsoft 365 license, you may already have the Outlook app. To use Outlook as the email app, you add the Outlook app and deploy this app to your Windows devices.
+        To use Outlook as the email app, you add the Outlook app and deploy this app to your Windows devices.
 
-        ❌ Requires app configuration policy
+      - **Other email apps**: Other enterprise level emails apps are available in the Microsoft Store. Remember, they must support Microsoft Exchange. In Intune, you connect to your organization store of apps. Then, you add the app and deploy this app to your Windows devices.
 
-      - **Other email apps**: Other enterprise level emails apps are available in the Microsoft Store. Remember, they must support Microsoft Exchange. To use any of these other apps, you add the app, create an app configuration policy (??) with your organization settings, and deploy this app configuration policy to your Windows devices.
-
-        ❌ ✔️ Requires app configuration policy
-
-2. [Create an email device configuration profile in Intune](../configuration/email-settings-configure.md). Depending on the email app your organizations uses, the email device configuration profile might not be needed.
+2. [Create an email device configuration profile in Intune](../configuration/email-settings-configure.md). Depending on the email app your organization uses, the email device configuration profile might not be needed.
 
     - If you use an app configuration policy to deploy an email app, then don't create an email device configuration profile. The email app configuration policy configures the email app for you.
-    - If you don't use an app configuration policy to deploy an email app, then create an email device configuration profile. For example, the following email apps also require an email device configuration profile:
+    - If you don't use an app configuration policy to deploy an email app, then create an email device configuration profile. 
+
+      For example, the following email apps also require an email device configuration profile:
 
       - Gmail on Android Enterprise
       - Nine Work on Android Enterprise
@@ -162,11 +160,13 @@ Many organizations deploy VPN profiles with preconfigured settings to end user d
 
 ✔️ **Work from anywhere**
 
-As end users work from anywhere, they can use the VPN profile to securely connect to their organization's network and access resources.
+As end users work from anywhere, they can use the VPN profile to securely connect to their organization's network to access resources.
 
 ✔️ **Use enterprise level VPN apps**
 
-VPN profiles in Intune use common and popular VPN apps, such as Check Point, Cisco, Microsoft Tunnel, and more. The VPN app is deployed to end user devices. After the app is deployed, then you deploy the VPN connection profile with settings that configure the VPN app. The profile includes settings that automatically connect to your VPN server.
+VPN profiles in Intune use common and popular VPN apps, such as Check Point, Cisco, Microsoft Tunnel, and more. The VPN app is deployed to end user devices. After the app is deployed, then you deploy the VPN connection profile with settings that configure the VPN app.
+
+The VPN device configuration profile includes settings that connect to your VPN server.
 
 ✔️ **Support remote workers**
 
@@ -176,7 +176,7 @@ Intune has built-in VPN settings for Android, iOS/iPadOS, macOS, and Windows cli
 
 ✔️ **Deploy anytime**
 
-On new devices, it's recommended to deploy the VPN app during the enrollment process. When enrollment completes, then deploy the VPN policy. If you have existing devices, deploy the VPN app at any time, and then deploy the VPN policy.
+On new devices, it's recommended to deploy the VPN app during the enrollment process. When enrollment completes, then deploy the VPN device configuration policy. If you have existing devices, deploy the VPN app at any time, and then deploy the VPN device configuration policy.
 
 ### Get started with VPN profiles
 
@@ -188,14 +188,14 @@ To get started, use the following links:
     - For the steps to add apps to Intune, go to [Add apps to Microsoft Intune](../apps/apps-add.md).
 
 2. [Create a VPN configuration profile in Intune](../configuration/vpn-settings-configure.md).
-3. Configure the settings for your platform:
+3. In the VPN device configuration profile, configure the settings for your platform:
 
     - [Android Enterprise VPN settings](../configuration/vpn-settings-android-enterprise.md)
     - [iOS/iPadOS VPN settings](../configuration/vpn-settings-ios.md)
     - [macOS VPN settings](../configuration/vpn-settings-macos.md)
     - [Windows VPN settings](../configuration/vpn-settings-windows-10.md)
 
-4. [Assign the profile](../configuration/device-profile-assign.md) to your users or user groups.
+4. [Assign the VPN device configuration profile](../configuration/device-profile-assign.md) to your users or user groups.
 
 ## Wi-Fi
 
@@ -215,13 +215,13 @@ Intune has built-in Wi-Fi settings for Android, iOS/iPadOS, macOS, and Windows c
 
 ✔️ **Deploy anytime**
 
-On new devices, it's recommended to deploy the Wi-Fi policy when devices enroll in Intune. If you have existing devices, you can deploy the Wi-Fi policy at any time.
+On new devices, it's recommended to deploy the Wi-Fi device configuration policy when devices enroll in Intune. If you have existing devices, you can deploy the Wi-Fi device configuration policy at any time.
 
 ### Get started with Wi-Fi profiles
 
 To get started, use the following links:
 
-1. [Create a Wi-Fi configuration profile in Intune](../configuration/wi-fi-settings-configure.md).
+1. [Create a Wi-Fi device configuration profile in Intune](../configuration/wi-fi-settings-configure.md).
 2. Configure the settings for your platform:
 
     - [Android Enterprise Wi-Fi settings](../configuration/wi-fi-settings-android-enterprise.md)
@@ -229,7 +229,7 @@ To get started, use the following links:
     - [macOS Wi-Fi settings](../configuration/wi-fi-settings-macos.md)
     - [Windows Wi-Fi settings](../configuration/vpn-settings-windows-10.md)
 
-3. [Assign the profile](../configuration/device-profile-assign.md) to your users or user groups.
+3. [Assign the Wi-Fi device configuration profile](../configuration/device-profile-assign.md) to your users or user groups.
 
 ## Do more
 
@@ -237,8 +237,8 @@ Intune has more built-in device settings, depending on how much you want to mana
 
 - **[Administrative templates](../configuration/administrative-templates-windows.md)**: Intune includes built-in ADMX settings that you can configure in a policy and deploy to your devices. You don't need to download any files; they're already built in.
 - **[Device restrictions](../configuration/device-restrictions-configure.md)**: There are many built-in settings that can control different parts of the devices, including security, hardware, data sharing, and more.
-- **[PKCS or SCEP certificates](../protect/certificates-configure.md)**: Use certificate to authenticate and authorize WiFi connections, VPN connections, and end user email account access.
-- **[Analyze your on-premises GPOs and import them in Intune](../configuration/group-policy-analytics.md)**: If you use on-premises GPOs, you can use Group Policy Analytics to analyze your policies and determine of your settings are supported in the cloud. If they're supported, they can be imported into an Intune policy and deployed to your devices.
+- **[PKCS or SCEP certificates](../protect/certificates-configure.md)**: Use certificates to authenticate and authorize Wi-Fi connections, VPN connections, and end user email account access.
+- **[Analyze your on-premises GPOs and import them in Intune](../configuration/group-policy-analytics.md)**: If you use on-premises GPOs, then you can use Group Policy Analytics to analyze your policies and determine if your settings are supported in the cloud. If they're supported, they can be imported into an Intune policy and deployed to your devices.
 - **[Settings catalog](../configuration/settings-catalog.md)**: The settings catalog is a list of all the settings you can configure in Intune. If you use on-premises GPOs to manage your devices, then the settings catalog is a natural transition to cloud-based policies.
 
 For a complete list of all the device configuration profiles you can create, go to [Apply features and settings on your devices using device profiles in Microsoft Intune](../configuration/device-profiles.md).
