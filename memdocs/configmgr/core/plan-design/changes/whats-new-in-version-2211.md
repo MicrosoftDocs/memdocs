@@ -1,8 +1,8 @@
 ---
 title: What's new in version 2211
 titleSuffix: Configuration Manager
-description: Get details about changes and new capabilities introduced in version 2207 of Configuration Manager current branch.
-ms.date: 08/24/2022
+description: Get details about changes and new capabilities introduced in version 2211 of Configuration Manager current branch.
+ms.date: 11/30/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -14,13 +14,13 @@ ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
 
-# What's new in version 2207 of Configuration Manager current branch
+# What's new in version 2211 of Configuration Manager current branch
 
 *Applies to: Configuration Manager (current branch)*
 
-Update 2207 for Configuration Manager current branch is available as an in-console update. Apply this update on sites that run version 2103 or later. <!-- baseline only statement: When installing a new site, this version of Configuration Manager will also be available as a [baseline version](../../servers/manage/updates.md#bkmk_note1) soon after global availability of the in-console update.--> This article summarizes the changes and new features in Configuration Manager, version 2207.
+Update 2211 for Configuration Manager current branch is available as an in-console update. Apply this update on sites that run version 2107 or later. <!-- baseline only statement: When installing a new site, this version of Configuration Manager will also be available as a [baseline version](../../servers/manage/updates.md#bkmk_note1) soon after global availability of the in-console update.--> This article summarizes the changes and new features in Configuration Manager, version 2211.
 
-Always review the latest checklist for installing this update. For more information, see [Checklist for installing update 2207](../../servers/manage/checklist-for-installing-update-2207.md). After you update a site, also review the [Post-update checklist](../../servers/manage/checklist-for-installing-update-2207.md#post-update-checklist).
+Always review the latest checklist for installing this update. For more information, see [Checklist for installing update 2211](../../servers/manage/checklist-for-installing-update-2207.md). After you update a site, also review the [Post-update checklist](../../servers/manage/checklist-for-installing-update-2207.md#post-update-checklist).
 
 To take full advantage of new Configuration Manager features, after you update the site, also update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.
 
@@ -123,13 +123,11 @@ For more information, see [Create and deploy Microsoft Defender Application Guar
 
 ## Configuration Manager console
 
-### Improvements to the console
+### Enhancements in console search experience
 
-- When performing a search on any node in the console, the search bar will now include a **Path** criteria to show that subfolders in the node are included in the search. 
-    
-  - The path criteria is informational and can’t be edited.
+<!--14908615-->
 
-  - By default, all subfolders will be searched when you perform a search in any node that contains subfolders. You can narrow down the search by selecting the “Current Node” option from the search toolbar. 
+The hint text in the search box will now indicate the scope of the search. Also, search experience related issues have been fixed.
 
 ### Improvements to the dark theme
 
