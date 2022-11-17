@@ -4,12 +4,12 @@ description: Inform yourself about known issues that may occur during Windows Au
 ms.prod: windows-client
 ms.technology: itpro-deploy
 ms.localizationpriority: medium
-author: aczechowski
-ms.author: aaroncz
+author: frankroj
+ms.author: frankroj
 ms.reviewer: jubaptis
-manager: dougeby
-ms.date: 11/15/2022
-ms.collection:
+manager: aaroncz
+ms.date: 11/17/2022
+ms.collection: 
   - M365-modern-desktop
   - highpri
 ms.topic: troubleshooting
@@ -17,7 +17,7 @@ ms.topic: troubleshooting
 
 # Windows Autopilot - known issues
 
-_Applies to_
+*Applies to:*
 
 - Windows 11
 - Windows 10
