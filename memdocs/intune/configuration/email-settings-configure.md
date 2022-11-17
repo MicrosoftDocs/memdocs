@@ -64,7 +64,7 @@ This article shows you how to create an email profile in Microsoft Intune. It al
 
     For more information on possible issues with using device groups, see [Common issues with email profiles](/troubleshoot/mem/intune/troubleshoot-email-profiles-in-microsoft-intune).
 
-## Choose your email app
+## Deploy your email app
 
 On user devices, you decide the email apps that can connect to and access organization email. You need to determine the email apps your organization will allow, and then deploy the email app to your users.
 
@@ -86,19 +86,37 @@ There are two types of Android Enterprise devices:
 
   These personal devices have a built-in email app, but these built-in email apps aren't typically used for organization email. Organizations that use conditional access (CA) typically create CA policies to block native mail apps, or only allow specific apps.
 
-  If you don't have CA, then users can use the built-in email app or any other personal email app to connect to organization email. They'll need to know what to enter.
+  If you don't have CA, then users can use the built-in email app or other email apps to connect to organization email. Users will need to know what to enter.
 
 On both types of Android Enterprise devices, you can add and deploy an email app that supports Microsoft Exchange. Your options:
 
 - **Gmail**: The Gmail app is available in the managed Play Store. In Intune, you connect to your Managed Google Play account. Then, you add the Gmail app and deploy this app to your Android Enterprise devices.
 
-  After the app is deployed, you [create an email device configuration profile](#create-the-profile) (in this article), and deploy this profile to your devices. The profile includes the settings that connect the Gmail app to your Microsoft Exchange.
+  After the app is deployed:
+
+  - On **Android Enterprise organization-owned devices**, create an app configuration policy with your organization settings. Then, deploy this app configuration policy to your devices. The policy includes the settings that connect the Gmail app to your Microsoft Exchange.
+
+    To summarize:
+
+    ✔️ Gmail requires an app configuration policy on Android Enterprise organization-owned devices  
+    ✔️ Don't create an email device configuration profile
+
+  - On **Android Enterprise personally owned devices with a work profile**, you [create an email device configuration profile](#create-the-profile) (in this article), and deploy this profile to your devices. The profile includes the settings that connect the Gmail app to your Microsoft Exchange.
 
   If your profile uses Gmail and you want to use modern authentication, then you may have to deploy the Google Chrome app to the work profile.
 
 - **Nine Work**: The Nine Work app is available in the managed Play Store. In Intune, you connect to your Managed Google Play account. Then, you add the Nine Work app and deploy this app to your Android Enterprise devices.
 
-  After the app is deployed, you [create an email device configuration profile](#create-the-profile) (in this article), and deploy this profile to your devices. The profile includes the settings that connect the Nine work app to your Microsoft Exchange.
+  After the app is deployed:
+
+  - On **Android Enterprise organization-owned devices**, create an app configuration policy with your organization settings. Then, deploy this app configuration policy to your devices. The policy includes the settings that connect the Nine work app to your Microsoft Exchange.
+
+    To summarize:
+
+    ✔️ Nine work requires an app configuration policy on Android Enterprise organization-owned devices  
+    ✔️ Don't create an email device configuration profile
+
+  - On **Android Enterprise personally owned devices with a work profile**, you [create an email device configuration profile](#create-the-profile) (in this article), and deploy this profile to your devices. The profile includes the settings that connect the Nine work app to your Microsoft Exchange.
 
 - **Microsoft Outlook**: The Outlook app is available in the managed Play Store. If you have a Microsoft 365 license, then use the Outlook app included with your license; don't use the version in the Play Store.
 
@@ -113,7 +131,7 @@ On both types of Android Enterprise devices, you can add and deploy an email app
 
   If you don't want to customize Outlook or preconfigure it for your users, you don't have to. You still need to deploy your licensed Outlook app using an app configuration policy. After Outlook is installed, users will need to know what to enter to connect to their work or school account.
 
-- **Other email apps**: Other enterprise level emails apps are available in the managed Play Store. Remember, they must support Microsoft Exchange.
+- **Other email apps**: Other enterprise level email apps are available in the managed Play Store. Remember, they must support Microsoft Exchange.
 
   To use any of these other apps, you add the app, create an app configuration policy with your organization settings, and deploy this app configuration policy to your Android Enterprise devices.
 
@@ -149,7 +167,7 @@ On all iOS/iPadOS devices, you can add and deploy an email app that supports Mic
 
   If you don't want to use the built-in Mail app, then organizations that use conditional access (CA) typically create CA policies to block native mail apps. Or, use CA to only allow specific apps.
 
-  If you don't have CA, then users can use the built-in email app or any other personal email app to connect to organization email. They'll need to know what to enter.
+  If you don't have CA, then users can use the built-in email app or other email apps to connect to organization email. Users will need to know what to enter.
 
 - **Microsoft Outlook**: The Outlook app is available in the App Store. If you have a Microsoft 365 license, then use the Outlook app included with your license; don't use the version in the App Store.
 
@@ -159,12 +177,12 @@ On all iOS/iPadOS devices, you can add and deploy an email app that supports Mic
 
   To summarize:
 
-  ✔️ Microsoft Outlook app requires an app configuration policy on Android Enterprise  
+  ✔️ Microsoft Outlook app requires an app configuration policy on iOS/iPadOS  
   ✔️ Don't create an email device configuration profile
 
   If you don't want to customize Outlook or preconfigure it for your users, you don't have to. You still need to deploy your licensed Outlook app using an app configuration policy. After Outlook is installed, users will need to know what to enter to connect to their work or school account.
 
-- **Other email apps**: Other enterprise level emails apps are available the App Store. Remember, they must support Microsoft Exchange ActiveSync.
+- **Other email apps**: Other enterprise level email apps are available in the App Store. Remember, they must support Microsoft Exchange ActiveSync.
 
   To use any of these other apps, you add the app, create an app configuration policy with your organization settings, and deploy this app configuration policy to your iOS/iPadOS devices.
 
@@ -172,7 +190,7 @@ On all iOS/iPadOS devices, you can add and deploy an email app that supports Mic
 
   To summarize:
 
-  ✔️ The app requires an app configuration policy on Android Enterprise  
+  ✔️ The app requires an app configuration policy on iOS/iPadOS  
   ✔️ Don't create an email device configuration profile
 
 For more information on app configuration policies, go to:
@@ -197,13 +215,13 @@ On all Windows devices, you can add and deploy an email app that supports Micros
 
   If you don't want to use the built-in Mail app, then organizations that use conditional access (CA) typically create CA policies to block native mail apps. Or, use CA to only allow specific apps.
 
-  If you don't have CA, then users can use the built-in email app or any other personal email app to connect to organization email. They'll need to know what to enter.
+  If you don't have CA, then users can use the built-in email app or other email apps to connect to organization email. Users will need to know what to enter.
 
 - **Microsoft Outlook**: The Outlook app is available in the Microsoft 365 Apps suite. If you have a Microsoft 365 license, then use the Outlook app included with your license; don't use the version in the Microsoft Store.
 
   To use Outlook as the email app, you add the Outlook app and deploy this app to your Windows devices. After the app is deployed, you [create an email device configuration profile](#create-the-profile) (in this article), and deploy this profile to your devices. The profile includes the settings that connect the Outlook app to your Microsoft Exchange.
 
-- **Other email apps**: Other enterprise level emails apps are available in the Microsoft Store. Remember, they must support Microsoft Exchange. In Intune, you connect to your organization store of apps. Then, you add the app and deploy this app to your Windows devices.
+- **Other email apps**: Other enterprise level email apps are available in the Microsoft Store. Remember, they must support Microsoft Exchange. In Intune, you connect to your organization store of apps. Then, you add the app and deploy this app to your Windows devices.
 
   After the app is deployed, you [create an email device configuration profile](#create-the-profile) (in this article), and deploy this profile to your devices. The profile includes the settings that connect the email app to your Microsoft Exchange.
 
@@ -213,7 +231,7 @@ On all Windows devices, you can add and deploy an email app that supports Micros
 2. Select **Devices** > **Configuration profiles** > **Create profile**.
 3. Enter the following properties:
 
-    - **Platform**: Choose the platform of your devices. Your options:  
+    - **Platform**: Select the platform of your devices. Your options:  
 
         - **Android device administrator** (Samsung Android Knox Standard only)
         - **Android Enterprise** personally owned work profiles
@@ -230,7 +248,7 @@ On all Windows devices, you can add and deploy an email app that supports Micros
 
 6. Select **Next**.
 
-7. In **Configuration settings**, depending on the platform you chose, the settings you can configure are different. Choose your platform for detailed settings:
+7. In **Configuration settings**, depending on the platform you chose, the settings you can configure are different. Select your platform for detailed settings:
 
     - [Android device administrator (Samsung Knox Standard)](email-settings-android.md)
     - [Android Enterprise](email-settings-android-enterprise.md)
@@ -252,7 +270,7 @@ On all Windows devices, you can add and deploy an email app that supports Micros
 
 There are different ways to remove an email profile from devices, even when there's only one email profile on the device:
 
-- **Option 1**: Open the email profile (**Devices** > **Configuration profiles** > select your profile), and choose **Assignments**. The **Include** tab shows the groups that are assigned the profile. Right-click the group > **Remove**. Be sure to **Save** your changes.
+- **Option 1**: Open the email profile (**Devices** > **Configuration profiles** > select your profile), and select **Assignments**. The **Include** tab shows the groups that are assigned the profile. Right-click the group > **Remove**. Be sure to **Save** your changes.
 
 - **Option 2**: [Wipe or retire the device](../remote-actions/devices-wipe.md). You can use these actions to selectively or fully remove data and settings.
 
@@ -260,7 +278,7 @@ There are different ways to remove an email profile from devices, even when ther
 
 You can help secure email profiles using the following options:
 
-- **Certificates**: When you create the email profile, you choose a certificate profile previously created in Intune. This certificate is known as the identity certificate. It authenticates against a trusted certificate profile or a root certificate to confirm a user's device is allowed to connect. The trusted certificate is assigned to the computer that authenticates the email connection. Typically, this computer is the native mail server.
+- **Certificates**: When you create the email profile, you select a certificate profile previously created in Intune. This certificate is known as the identity certificate. It authenticates against a trusted certificate profile or a root certificate to confirm a user's device is allowed to connect. The trusted certificate is assigned to the computer that authenticates the email connection. Typically, this computer is the native mail server.
 
   If you use certificate-based authentication for your email profile, then deploy the email profile, certificate profile, and trusted root profile to the same groups. This deployment makes sure each device can recognize the legitimacy of your certificate authority.
 
