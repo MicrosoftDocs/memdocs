@@ -82,9 +82,6 @@ To get started, use the following links:
 
 2. [Create an email device configuration profile in Intune](../configuration/email-settings-configure.md). Depending on the email app your organization uses, the email device configuration profile might not be needed.
 
-    - If you use an app configuration policy to deploy an email app, then don't create an email device configuration profile. The email app configuration policy configures the email app for you.
-    - If you don't use an app configuration policy to deploy an email app, then create an email device configuration profile.
-
     For some guidance, go to [Add email settings to devices using Intune](../configuration/email-settings-configure.md).
 
 3. In the email device configuration profile, configure the settings for your platform:
