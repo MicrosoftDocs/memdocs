@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/15/2022
+ms.date: 11/17/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -82,7 +82,7 @@ Features of the VPN profiles for the tunnel include:
 - A friendly name for the VPN connection that your end users will see.
 - The site that the VPN client connects to.
 - Per-app VPN configurations that define which apps the VPN profile is used for, and if it's always-on or not. When always-on, the VPN will automatically connect and is used only for the apps you define. If no apps are defined, the always-on connection provides tunnel access for all network traffic from the device.
-- When Defender for Endpoint, the Tunnel client app, is configured to support Tunnel per-app VPNs, users do not need to open Defender to approve those connections and policies. Instead, when the user is signed into the Company Portal on the device or to any other app that uses multi-factor authentication that has a valid token for access, the Tunnel per-app VPN is used automatically.
+- With the Tunnel client app configured to support per-app VPNs and [TunnelOnly](../protect/microsoft-tunnel-migrate-app.md#modify-a-vpn-profile-for-microsoft-tunnel) mode, users don’t need to open or sign-in to Microsoft Defender on their device for the Tunnel to be used. Instead, when the user is signed into the Company Portal on the device or to any other app that uses multi-factor authentication that has a valid token for access, the Tunnel per-app VPN is used automatically.
 - Manual connections to the tunnel when a user launches the VPN and selects *Connect*.
 - On-demand VPN rules that allow use of the VPN when conditions are met for specific FQDNs or IP addresses. (iOS/iPadOS)
 - Proxy support (iOS/iPadOS, Android 10+)
