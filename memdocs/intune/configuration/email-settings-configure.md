@@ -151,7 +151,7 @@ For more information on app configuration policies, go to:
 - [Deploying Outlook for iOS and Android app configuration settings in Exchange Online](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune)
 
 > [!TIP]
-> When you create an app configuration policies, you select the enrollment type – **Managed devices** or **Managed apps**. Be sure you know what to choose.
+> When you create an app configuration policy, you select the enrollment type – **Managed devices** or **Managed apps**. Be sure you know what to choose.
 >
 > For more information on these options, go to [App configuration policies for Microsoft Intune](../apps/app-configuration-policies-overview.md).
 
@@ -200,7 +200,7 @@ For more information on app configuration policies, go to:
 - [Deploying Outlook for iOS and Android app configuration settings in Exchange Online](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune)
 
 > [!TIP]
-> When you create an app configuration policies, you select the enrollment type – **Managed devices** or **Managed apps**. Be sure you know what to choose.
+> When you create an app configuration policy, you select the enrollment type – **Managed devices** or **Managed apps**. Be sure you know what to choose.
 >
 > For more information on these options, go to [App configuration policies for Microsoft Intune](../apps/app-configuration-policies-overview.md).
 
