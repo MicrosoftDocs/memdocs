@@ -50,8 +50,14 @@ A few things to keep in mind:
    > [!TIP]
    > Your provisioning policy name cannot contain the following characters: < > & | " ^
 
-3. On the **General** page, select a join type, followed by the appropriate network. If you select the combination of **Azure AD Join** and **Microsoft Hosted Network**, you must select a region for Microsoft to host your Cloud PC.
-4. For **Azure network connection**, select the connection to use for this policy > **Next**.
+3. On the **General** page, select a **Join type**:
+    - **Hybrid Azure AD Join**: You must select an ANC to use for this policy.
+    - **Azure AD Join**: You have two options for **Network**:
+        - **Azure network connection**: Select an ANC to use for this policy.
+        - **Microsoft hosted network**: Select a **Geography** where your Cloud PCs will be provisioned. Then, for [**Region**](requirements.md#supported-azure-regions-for-cloud-pc-provisioning), you can select:
+            - **Automatic (Recommended)**: The Windows 365 service automatically chooses a region within the selected geography at the time of provisioning. This decreases the chance of provisioning failure.
+            - A specific region: To make sure that your Cloud PCs are only provisioned in the region that you choose.
+4. Select **Next**.
 5. On the **Image** page, for **Image type**, select one of the following options:
     - **Gallery image**: Choose **Select** > select an image from the gallery > **Select**. Gallery images are default images provided for your use.
     - **Custom image**:  Choose **Select** > select an image from the list > **Select**. You'll see the list of images that you uploaded using the [Add device images](add-device-images.md) workflow.
