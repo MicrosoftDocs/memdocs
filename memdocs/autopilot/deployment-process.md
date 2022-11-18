@@ -9,17 +9,17 @@ ms.mktglfcycl: deploy
 ms.localizationpriority: medium
 ms.sitesec: library
 audience: itpro
-author: aczechowski
-ms.author: aaroncz
+author: frankroj
+ms.author: frankroj
 ms.reviewer: jubaptis
-manager: dougeby
-ms.date: 12/16/2020
+manager: aaroncz
+ms.date: 11/17/2022
 ms.topic: conceptual
 ---
 
 # Windows Autopilot deployment process
 
-**Applies to**
+*Applies to:*
 
 - Windows 11
 - Windows 10

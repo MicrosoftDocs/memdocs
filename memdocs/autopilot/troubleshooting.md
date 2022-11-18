@@ -12,9 +12,9 @@ audience: itpro
 author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
-manager: aczechowski
-ms.date: 10/03/2022
-ms.collection:
+manager: aaroncz
+ms.date: 11/17/2022
+ms.collection: 
   - M365-modern-desktop
   - highpri
 ms.topic: troubleshooting
@@ -23,7 +23,7 @@ ms.topic: troubleshooting
 
 # Troubleshooting overview
 
-**Applies to**
+*Applies to:*
 
 - Windows 11
 - Windows 10

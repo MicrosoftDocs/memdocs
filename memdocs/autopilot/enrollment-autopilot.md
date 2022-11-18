@@ -3,11 +3,11 @@ title: Create device groups for Windows Autopilot - Microsoft Intune | Microsoft
 titleSuffix: Microsoft Intune
 description: Learn how to create device groups for Windows Autopilot.
 keywords: 
-author: aczechowski
-ms.author: aaroncz
+author: frankroj
+ms.author: frankroj
 ms.reviewer: jubaptis
-manager: dougeby
-ms.date: 02/09/2022
+manager: aaroncz
+ms.date: 11/17/2022
 ms.topic: how-to
 ms.localizationpriority: high
 ms.prod: windows-client
@@ -28,7 +28,7 @@ ms.collection:
 
 # Create device groups
 
-**Applies to**
+*Applies to:*
 
 - Windows 11
 - Windows 10
