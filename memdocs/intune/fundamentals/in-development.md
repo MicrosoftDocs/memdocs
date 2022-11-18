@@ -62,7 +62,7 @@ You can use RSS to be notified when this article is updated. For more informatio
 ## App management
 
 ### Company Portal automatically installed on Android Enterprise dedicated devices<!-- 6423852  -->
-Microsoft's Company Portal will now be automatically installed on all Android Enterprise (AE) dedicated devices to ensure the appropriate handling of app protection policies. Users will not be able to see or launch the Company Portal, and there are no requirements for users to interact with it. Admins will notice that the Company Portal is automatically installed on their AE dedicated devices, without the ability to uninstall.
+Intune Company Portal will now be automatically installed on all Android Enterprise dedicated devices to ensure the appropriate handling of app protection policies. Users will not be able to see or launch the Company Portal, and there are no requirements for users to interact with it. Admins will notice that the Company Portal is automatically installed on their Android Enterprise dedicated devices, without the ability to uninstall.
 
 ### Uninstall Win32 apps in the Company Portal<!-- 5145748 -->  
 Users will be able to uninstall Win32 apps in the Company Portal. If a Win32 app can be uninstalled by the user, the user will be able to select **Uninstall** for the Win32 app in the Company Portal. For more information about Win32 apps, go to [Win32 app management in Microsoft Intune](../apps/apps-win32-app-management.md).
@@ -172,7 +172,7 @@ Applies to:
 ## Device enrollment
 
 ### Enrollment token lifetime will increase to 65 years for Android Enterprise dedicated devices  <!-- 12775837 -->  
-You'll be able to create an enrollment profile for Android Enterprise dedicated devices that's valid for up to 65 years. If you have an existing profile, the enrollment token will still expire at whatever date you chose when you created the profile, but when you renew it you'll be able to extend the lifetime to 65 years.
+You'll be able to create an enrollment profile for Android Enterprise dedicated devices that's valid for up to 65 years. If you have an existing profile, the enrollment token will still expire on the date you chose when you created the profile, but when you renew it you'll be able to extend the lifetime to 65 years.
 
 <!-- ***********************************************-->
 
@@ -213,16 +213,16 @@ Applies to:
 - Windows 11
 
 ### Microsoft Tunnel for Mobile Application Management for Android (public preview)<!-- 15769204  -->  
-In a public preview, we’re adding support for Mobile Application Management (MAM) to the Microsoft Tunnel VPN gateway. With this preview for Android devices that have not enrolled with Intune, supported apps will be able to use Microsoft Tunnel to connect to your organization when working with corporate data and resources. This includes VPN gateway support for:  
+In a public preview, we’re adding support for mobile application management (MAM) to the Microsoft Tunnel VPN gateway. With this preview for Android devices that have not enrolled with Intune, supported apps will be able to use Microsoft Tunnel to connect to your organization when working with corporate data and resources. This includes VPN gateway support for:  
 
 - Secure access to on-premises apps and resources using modern authentication
 - Single Sign On and conditional access.
 
 To use Tunnel for MAM on an unenrolled device will require the following three profiles:  
 
-- An App configuration profile for managed apps, to configure Microsoft Defender on devices for use as the Tunnel client app 
-- A second App configuration profile for managed apps, to configure Microsoft Edge to connect to Tunnel.
-- An App protection profile to enable automatic start of the Microsoft Tunnel connection
+- An app configuration profile for managed apps, to configure Microsoft Defender on devices for use as the Tunnel client app.
+- A second app configuration profile for managed apps, to configure Microsoft Edge to connect to Tunnel.
+- An app protection profile to enable automatic start of the Microsoft Tunnel connection.
 
 For information about using Tunnel on enrolled devices, see [Microsoft Tunnel overview](../protect/microsoft-tunnel-overview.md)
 
