@@ -3,11 +3,11 @@ title: Windows Autopilot OEM registration process
 description: How OEMs add devices to Windows Autopilot
 ms.prod: windows-client
 ms.localizationpriority: medium
-author: aczechowski
-ms.author: aaroncz
+author: frankroj
+ms.author: frankroj
 ms.reviewer: jubaptis
-manager: dougeby
-ms.date: 12/16/2020
+manager: aaroncz
+ms.date: 11/17/2022
 ms.topic: how-to
 ms.collection: 
   - M365-modern-desktop
@@ -17,7 +17,7 @@ ms.technology: itpro-deploy
 
 # OEM registration
 
-**Applies to**
+*Applies to:*
 
 - Windows 11
 - Windows 10

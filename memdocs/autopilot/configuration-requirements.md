@@ -8,11 +8,11 @@ ms.localizationpriority: medium
 ms.sitesec: library
 ms.pagetype: deploy
 audience: itpro
-author: aczechowski
-ms.author: aaroncz
+author: frankroj
+ms.author: frankroj
 ms.reviewer: jubaptis
-manager: dougeby
-ms.date: 3/21/2021
+manager: aaroncz
+ms.date: 11/17/2022
 ms.collection: M365-modern-desktop
 ms.topic: conceptual
 ms.custom: 
@@ -23,7 +23,7 @@ ms.technology: itpro-deploy
 
 # Windows Autopilot configuration requirements
 
-**Applies to**
+*Applies to:*
 
 - Windows 11
 - Windows 10
