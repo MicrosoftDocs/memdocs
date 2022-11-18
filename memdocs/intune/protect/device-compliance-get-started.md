@@ -62,7 +62,7 @@ Compliance policy settings include the following settings:
   - **Compliant** (*default*): This security feature is off. Devices that aren’t sent a device compliance policy are considered *compliant*.
   - **Not compliant**: This security feature is on. Devices that haven’t received a device compliance policy are considered noncompliant.
 
-  If you use Conditional Access with your device compliance policies, we recommended you change this setting to **Not compliant** to ensure that only devices that are confirmed as compliant can access your resources.
+  If you use Conditional Access with your device compliance policies, change this setting to **Not compliant** to ensure that only devices that are confirmed as compliant can access your resources.
 
   If an end user isn't compliant because a policy isn't assigned to them, then the [Company Portal app](../apps/company-portal-app.md) shows No compliance policies have been assigned.
 
