@@ -141,6 +141,7 @@ OR use the instructions below if you do not have a CloudShell account which requ
 3. Open Windows PowerShell 5.1 (x64) as Administrator and run the PowerShell script and then go to the section **Script instructions** below.
 
 **Script instructions:**
+You will be asked to enter the Azure subscription ID from a list of subscriptions you have access to, where the W365 app permissions will be granted.
 1. At the prompt, type one of the following options to grant permissions:
     - **1** to only upload custom images. For Azure AD join infrastructures, you don't need to create an ANC just to upload custom images.
     - **2** to only create ANCs.
