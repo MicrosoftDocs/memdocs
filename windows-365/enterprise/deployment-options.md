@@ -32,23 +32,24 @@ ms.collection: M365-identity-device-management
 
 You have two options for network deployment of the Windows 365 service:
 
-- Microsoft-hosted network for simplicity, reliability, and scalability. (Recommended)
-- Azure Network Connection (ANC) to support hybrid Azure Active Directory (Azure AD) join scenarios.
+- Use a Microsoft-hosted network
+  - Ideal for the Windows 365 Software-as-a-Service (SaaS)eatures of simplicity, reliability, and scalability.
+  - Supports the Azure Active Directory join identity model.
+  - Recommended option.
+- Use Azure Network Connections (ANC)
+  - Supports both Azure AD join and hybrid Azure AD join identity models.
 
 ## Microsoft-hosted network
 
-This is a simple, reliable and scalable option offering Cloud PC connectivity where Microsoft provides the service in a true SaaS approach. Microsoft fully manages the infrastructure and related services required to deliver functional Cloud PCs to your users. Microsoft also manages the network that the Cloud PCs occupy.
+This is a simple, reliable, and scalable option offering Cloud PC connectivity where Microsoft provides the service in a true SaaS approach. With this option, Microsoft:
+
+- Sets up and fully manages the infrastructure and related services required to deliver functional Cloud PCs to your users.
+- Manages the network that the Cloud PCs occupy.
+- Provides a Zero Trust Framework-aligned model of an End User Computing (EUC) environment.
 
 The customer’s only responsibility is the configuration and management of the Cloud PCs. Microsoft doesn’t configure anything within the Cloud PC itself.
 
 Microsoft recommends that customers use this option for their Windows 365 deployment.
-
-### Azure Active Directory join
-
-The simplest method to deploy Windows 365 in your environment is to use the Azure Active Directory join (Azure AD join) identity model in combination with the Microsoft hosted network. With this option, Microsoft:
-
-- Sets up and manages the underlying infrastructure.
-- Provides a Zero Trust Framework-aligned model of an End User Computing (EUC) environment.
 
 You don’t have to bring in your own Azure subscription(s), plan, design, deploy, or manage the infrastructure. Customers can dedicate their EUC team to focus on managing Cloud PC configurations and security from a single management console provided by Intune.
 
@@ -56,7 +57,7 @@ This option is analogous to providing an employee with a laptop to use at home. 
 
 For example, users can be authenticated with adaptive controls of Azure Conditional Access. Corporate connectivity can be delivered by using VPN. Internet security can use a cloud-based secure web gateway (SWG). The advantage is that devices can be deployed at scale in a very short timeframe whenever needed on an extremely high bandwidth, resilient network.
 
-The diagram below shows the Microsoft hosted network with the Cloud PC and virtual network card within a subscription managed by Microsoft.
+The diagram below shows the Microsoft-hosted network with the Cloud PC and virtual network card within a subscription managed by Microsoft.
 
 IMAGE TBS
 
