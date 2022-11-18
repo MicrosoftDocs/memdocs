@@ -98,7 +98,7 @@ For more information about related privacy aspects, see the following articles:
 
 - [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?LinkId=521839)
 - [Windows 10 and privacy compliance](/windows/privacy/windows-10-and-privacy-compliance)
-- [Licensing terms and documentation](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=31)  
+- [Licensing terms and documentation](https://www.microsoft.com/licensing/terms)  
 - [Security and privacy at Microsoft Azure data centers](https://azure.microsoft.com/global-infrastructure/)  
 - [Confidence in the trusted cloud](https://azure.microsoft.com/overview/trusted-cloud/)  
 - [Trust Center](https://www.microsoft.com/trustcenter)
