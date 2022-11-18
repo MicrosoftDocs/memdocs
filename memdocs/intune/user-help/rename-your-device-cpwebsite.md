@@ -45,6 +45,6 @@ Change your personal device's generic or default model name to a name that you c
 
     ![Zoomed in view of the More icon, highlighted with a red arrow.](./media/rename-reset-device-step3-more-1808.png)  
 
-4. In the box where your device's name appears, type a new name for your device. Then tap the **Rename** button. Your device now appears with the new name.  
+4. In the name field, enter a new name for your device. Then tap the **Rename** button. Your device now appears with the new name.  
 
 Still need help? Contact your company support. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).  
