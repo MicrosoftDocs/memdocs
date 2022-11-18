@@ -197,7 +197,7 @@ Applies to:
 - Windows 11
 
 ### Attack surface reduction policy support for Security settings management for Microsoft Defender for Endpoint <!-- 13816760  -->  
-Attack surface reduction policies will soon support devices managed through the MDE Security configuration scenario. Today, only devices that are enrolled with Intune support this policy type.
+Attack surface reduction policies will soon support devices managed through the [MDE Security configuration](../protect/mde-security-integration.md#which-solution-should-i-use) scenario. Today, only devices that are enrolled with Intune support this policy type.
 
 Applies to:  
 - Windows 10
