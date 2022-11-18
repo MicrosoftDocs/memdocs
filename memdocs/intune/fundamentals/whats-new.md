@@ -66,7 +66,7 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 -->
 
-## Week of November 14, 2022
+## Week of November 14, 2022 (Service release 2211)
 
 ### App management
 
