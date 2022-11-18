@@ -97,13 +97,13 @@ Applies to:
 
 For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
 
-### The Company Portal app will enforce Password Complexity setting on Android Enterprise 12+ personally owned devices with a work profile<!-- 16211313 -->  
+### The Company Portal app will enforce Password Complexity setting on Android Enterprise 12+ personally owned devices with a work profile<!-- 16211313  -->  
 On Android Enterprise 12+ personally owned devices with a work profile, you can create a compliance policy and/or device configuration profile that sets the password complexity. Starting with the 2211 release, this setting is available in the Endpoint Manager admin center:
 
 - **Devices** > **Configuration profiles** > **Create profile** > **Android Enterprise** for platform > Personally owned with a work profile
 - **Devices** > **Compliance policies** > **Create policy** > **Android Enterprise** for platform > Personally owned with a work profile
 
-In the 2212 release, the Company Portal app will enforce the **Password complexity** setting.
+The Company Portal app will enforce the **Password complexity** setting in its December release.
 
 For more information on this setting and the other settings you can configure on personally owned devices with a work profile, go to:
 
