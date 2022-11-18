@@ -58,6 +58,7 @@ Because the China services are operated by a partner from inside China, there ar
 - Mobile Application Management (MAM) availability is conditional on those apps being available in People's Republic of China.
 - Intune operated by 21Vianet doesn't support Android (AOSP) management for corporate devices. 
 - Intune operated by 21Vianet doesn't support Mobile Threat Defense (MTD) connector for Android and iOS devices with MTD vendors.
+- Intune operated by 21Vianet doesn't support partner device management integration with Jamf for macOS devices.
 
 ## You control customer data
 
