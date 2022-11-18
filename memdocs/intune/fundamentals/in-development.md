@@ -107,7 +107,7 @@ In the 2212 release, the Company Portal app will enforce the **Password complexi
 
 For more information on this setting and the other settings you can configure on personally owned devices with a work profile, go to:
 
-- [Device compliance settings for Android Enterprise in Intune](../protect/compliance-policy-create-android-for-work.md#personally-owned-work-profile
+- [Device compliance settings for Android Enterprise in Intune](../protect/compliance-policy-create-android-for-work.md#personally-owned-work-profile)
 - [Android Enterprise device settings list to allow or restrict features on personally owned devices using Intune](../configuration/device-restrictions-android-enterprise-personal.md)
 
 Applies to:
