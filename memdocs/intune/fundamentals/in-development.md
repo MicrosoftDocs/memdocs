@@ -158,6 +158,15 @@ Applies to:
 
 - iOS/iPadOS
 
+### Remote help client app will have a new option to disable chat functionality in the Tenant level setting<!-- 14685052 -->  
+In the Remote help app, admins will have the option to disable chat functionality from the new tenant level setting. Turning on the disable chat feature will remove the chat button in the Remote Help app. This setting can be found in the Remote Help **Settings** tab under **Tenant Administration** in Microsoft Intune.
+
+For more information, see [Configure Remote Help for your tenant](../remote-actions/remote-help.md#configure-remote-help-for-your-tenant).
+
+Applies to:
+
+- Windows 10/11
+
 <!-- ***********************************************-->
 
 ## Device enrollment
