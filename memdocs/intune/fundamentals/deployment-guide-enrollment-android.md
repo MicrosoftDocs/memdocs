@@ -237,7 +237,7 @@ When you create the Intune enrollment profile, you decide if the devices are use
 ---
 | Feature | Use this enrollment option when |
 | --- | --- |
-| Use Google Mobile Services (GMS). | ❌ <br/><br/> Device doesn't support [GMS](https://www.android.com/gms/) (opens Android's web site). Some countries don't support GMS. <br/><br/> If your devices will use GMS, then use [dedicated devices](#android-enterprise-dedicated-devices) (in this article) or [fully managed](#android-enterprise-fully-managed) (in this article) enrollment. |
+| Use Google Mobile Services (GMS). | ❌ <br/><br/> Device doesn't support [GMS](https://www.android.com/gms/) (opens Android's web site). Some countries and regions don't support GMS. <br/><br/> If your devices will use GMS, then use [dedicated devices](#android-enterprise-dedicated-devices) (in this article) or [fully managed](#android-enterprise-fully-managed) (in this article) enrollment. |
 | Devices are owned by the organization or school. | ✔️ |
 | You have new or existing devices. | ✔️ |
 | Need to enroll a few devices, or a large number of devices (bulk enrollment). | ❌ <br/><br/> Can only enroll one device at a time. |

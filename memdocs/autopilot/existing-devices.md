@@ -9,11 +9,11 @@ ms.localizationpriority: medium
 ms.sitesec: library
 ms.pagetype: deploy
 audience: itpro
-author: aczechowski
-ms.author: aaroncz
+author: frankroj
+ms.author: frankroj
 ms.reviewer: jubaptis
-manager: dougeby
-ms.date: 03/21/2022
+manager: aaroncz
+ms.date: 11/17/2022
 ms.collection: 
   - M365-modern-desktop
   - highpri
@@ -22,7 +22,7 @@ ms.topic: how-to
 
 # Windows Autopilot deployment for existing devices
 
-**Applies to**
+*Applies to:*
 
 - Windows 11
 - Windows 10
