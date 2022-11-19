@@ -108,6 +108,9 @@ For information on some features you can configure using the settings catalog, g
     > [!TIP]
     > In the Windows setting tooltips, **Learn more** links to the CSP.
 
+    > [!NOTE]
+    > When a setting requires multiple values, for e.g. "Allowed device IDs" under "Allow installation of devices that match any of these device IDs" or "Services Allowed List" under "Bluetooth" or any similar property, add the values individually instead of combining multiple values in a single field.  
+
 9. Select **Next**.
 10. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use RBAC roles and scope tags for distributed IT](../fundamentals/scope-tags.md).
 
