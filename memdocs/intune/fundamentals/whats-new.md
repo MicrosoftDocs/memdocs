@@ -66,6 +66,26 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 -->
 
+## Week of November 28, 2022
+
+### Device security
+
+#### Microsoft Tunnel Mobile Application Management for Android (Preview)<!-- 15769204 wndraft   WNready   -->  
+
+As a public preview, you can now use Microsoft Tunnel with unenrolled devices. This capability is called [Microsoft Tunnel Mobile Application Management](../protect/microsoft-tunnel-mam.md) (MAM). This preview supports Android, and without any changes to your existing Tunnel infrastructure, supports the Tunnel VPN gateway for:
+
+- Secure access to on-premises apps and resources using modern authentication
+- Single Sign On and conditional access
+
+To use Tunnel MAM, unenrolled devices must install Microsoft Edge, Microsoft Defender for Endpoint, and the Company Portal. You'll then use the Microsoft Endpoint Manager admin center to configure the following profiles for the unenrolled devices:
+
+- An App configuration profile for managed apps, to configure Microsoft Defender on devices for use as the Tunnel client app.
+- A second App configuration profile for managed apps, to configure Microsoft Edge to connect to Tunnel.
+- An App protection profile to enable automatic start of the Microsoft Tunnel connection.
+
+Applies to:  
+- Android Enterprise
+
 ## Week of November 14, 2022 (Service release 2211)
 
 ### App management
