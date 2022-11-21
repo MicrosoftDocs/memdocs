@@ -31,7 +31,7 @@ ms.collection: M365-identity-device-management
 # Set up tenants for Windows 365 Government
 
 > [!NOTE]
-> You do not need an Azure (Commercial or Government) subscription to use Windows 365.
+> You do not need an Azure Government subscription to use Windows 365 Government.
 
 The instructions on this page are only if you must use either or both:
 - **Custom images**. Windows 365 provides optimized gallery images, including images with M365 apps pre-installed(/windows-365/enterprise/device-images); Intune can be used for further customization of [common settings](/mem/intune/configuration/settings-catalog-common-features) and [application deployment](/mem/intune/apps/apps-windows-10-app-deploy) after the gallery image is deployed. If you must use your existing custom image, for more information, see [add a custom image](./add-device-images.md).
