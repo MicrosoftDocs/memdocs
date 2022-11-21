@@ -187,6 +187,8 @@ Example with the computer name: `ccmsetup.exe /mp:SMSMP01`
 
 Example with the FQDN: `ccmsetup.exe /mp:smsmp01.contoso.com`
 
+Example with multiple management points: `ccmsetup.exe /mp:SMSMP01;smsmp01.contoso.com;https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72057598037248100`
+
 This parameter can also specify the URL of a cloud management gateway (CMG). Use this URL to install the client on an internet-based device. To get the value for this parameter, use the following steps:
 
 - Create a CMG. For more information, see [Set up a CMG](../manage/cmg/setup-cloud-management-gateway.md).
