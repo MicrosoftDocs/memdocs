@@ -3,12 +3,12 @@
 
 title: Configure email settings in Microsoft Intune | Microsoft Docs
 titleSuffix:
-description: Create an email profile in Microsoft Intune, and deploy this profile to Android device administrator, Android Enterprise, iOS, iPadOS, and Windows devices. Use email profiles to configure common email settings, including a Microsoft Exchange email server. Add authentication methods to connect to corporate email on devices you manage.
+description: Create an email device configuration profile in Microsoft Intune, and deploy this profile to Android device administrator, Android Enterprise, iOS, iPadOS, and Windows devices. Use email profiles to configure common email settings, including a Microsoft Exchange email server. Add authentication methods to connect to corporate email on devices you manage.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/17/2022
+ms.date: 11/21/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -70,9 +70,9 @@ This article shows you how to create an email profile in Microsoft Intune. It al
 
 On user devices, you decide the email apps that can connect to and access organization email. You also need to determine the email apps your organization will allow, and then deploy the email app to your users.
 
-After the email app is deployed, then you can create and deploy an email device configuration profile, if it's needed.
+After the email app is deployed, then you can create and deploy an email device configuration profile, if it's needed. Depending on the platform and email app you choose, you can use an app configuration policy **or** an email device configuration profile to preconfigure the email app with your organization settings.
 
-This section describes some of the common email apps you can use and what you need to do.
+This section describes some of the common email apps you can use, and the policy or profile type you can use for each platform.
 
 ### Android Enterprise
 
@@ -98,7 +98,7 @@ On both types of Android Enterprise devices, you can add and deploy an email app
 
   After the app is deployed and installed:
 
-  - If you want to customize Outlook or preconfigure it with your organization settings, then you can create an app configuration policy. When the policy is ready, deploy this app configuration policy to your users or user groups. App configuration policies are optional.
+  - If you want to customize Outlook or preconfigure it with your organization settings, then you can [create an app configuration policy](../apps/app-configuration-policies-use-android.md) (opens another Microsoft article). When the policy is ready, deploy this app configuration policy to your users or user groups. App configuration policies are optional.
 
   - If you don't want to customize Outlook or preconfigure it for your users, you don't have to. After Outlook is installed, users need to enter the information that connects to their work or school account, like the email server link and more.
 
@@ -111,7 +111,7 @@ On both types of Android Enterprise devices, you can add and deploy an email app
 
   - On **Android Enterprise organization-owned devices**:
 
-    - If you want to customize Gmail or preconfigure it with your organization settings, then you can create an app configuration policy. When the policy is ready, deploy this app configuration policy to your users or user groups. App configuration policies are optional.
+    - If you want to customize Gmail or preconfigure it with your organization settings, then you can [create an app configuration policy](../apps/app-configuration-policies-use-android.md) (opens another Microsoft article). When the policy is ready, deploy this app configuration policy to your users or user groups. App configuration policies are optional.
 
     - If you don't want to customize Gmail or preconfigure it for your users, you don't have to. After Gmail is installed, users need to enter the information that connects to their work or school account, like the email server link and more.
 
@@ -127,7 +127,7 @@ On both types of Android Enterprise devices, you can add and deploy an email app
 
   - On **Android Enterprise organization-owned devices**:
 
-    - If you want to customize Nine Work or preconfigure it with your organization settings, then you can create an app configuration policy. When the policy is ready, deploy this app configuration policy to your users or user groups. App configuration policies are optional.
+    - If you want to customize Nine Work or preconfigure it with your organization settings, then you can [create an app configuration policy](../apps/app-configuration-policies-use-android.md) (opens another Microsoft article). When the policy is ready, deploy this app configuration policy to your users or user groups. App configuration policies are optional.
 
     - If you don't want to customize Nine Work or preconfigure it for your users, you don't have to. After Nine Work is installed, users need to enter the information that connects to their work or school account, like the email server link and more.
 
@@ -141,7 +141,7 @@ On both types of Android Enterprise devices, you can add and deploy an email app
 
   After the app is deployed and installed:
 
-  - If you want to customize the app or preconfigure it with your organization settings, then you can create an app configuration policy. When the policy is ready, deploy this app configuration policy to your users or user groups. App configuration policies are optional.
+  - If you want to customize the app or preconfigure it with your organization settings, then you can [create an app configuration policy](../apps/app-configuration-policies-use-android.md) (opens another Microsoft article). When the policy is ready, deploy this app configuration policy to your users or user groups. App configuration policies are optional.
 
   - If you don't want to customize the app or preconfigure it for your users, you don't have to. After the app is installed, users need to enter the information that connects to their work or school account, like the email server link and more.
 
@@ -177,7 +177,7 @@ On all iOS/iPadOS devices, you can add and deploy an email app. Your options:
 
   After the app is deployed and installed:
 
-  - If you want to customize Outlook or preconfigure it with your organization settings, then you can create an app configuration policy. When the policy is ready, deploy this app configuration policy to your users or user groups. App configuration policies are optional.
+  - If you want to customize Outlook or preconfigure it with your organization settings, then you can [create an app configuration policy](../apps/app-configuration-policies-use-ios.md) (opens another Microsoft article). When the policy is ready, deploy this app configuration policy to your users or user groups. App configuration policies are optional.
 
   - If you don't want to customize Outlook or preconfigure it for your users, you don't have to. After Outlook is installed, users need to enter the information that connects to their work or school account, like the email server link and more.
 
@@ -191,7 +191,7 @@ On all iOS/iPadOS devices, you can add and deploy an email app. Your options:
 
   After the app is deployed and installed:
 
-  - If you want to customize the app or preconfigure it with your organization settings, then you can create an app configuration policy. When the policy is ready, deploy this app configuration policy to your users or user groups. App configuration policies are optional.
+  - If you want to customize the app or preconfigure it with your organization settings, then you can [create an app configuration policy](../apps/app-configuration-policies-use-ios.md) (opens another Microsoft article). When the policy is ready, deploy this app configuration policy to your users or user groups. App configuration policies are optional.
 
   - If you don't want to customize the app or preconfigure it for your users, you don't have to. After the app is installed, users need to enter the information that connects to their work or school account, like the email server link and more.
 
