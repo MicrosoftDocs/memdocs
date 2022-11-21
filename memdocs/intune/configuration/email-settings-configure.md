@@ -49,7 +49,7 @@ This article shows you how to create an email profile in Microsoft Intune. It al
 
 ## Before you begin
 
-- Email profiles are deployed for the user who enrolled the device. To configure the email profile, Intune uses the Azure Active Directory (AD) properties in the email profile of the user during enrollment.
+- Email profiles are deployed for the user who enrolled the device. To configure the email profile, Intune uses the Azure Active Directory (Azure AD) properties in the email profile of the user during enrollment. The email app your organization uses must support Azure ID identities.
 
 - Email is based on identity and user settings. Email profiles are typically assigned to user groups, not device groups. Some considerations:
 
