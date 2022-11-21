@@ -1,13 +1,13 @@
 ---
-title: Checklist for 2207
+title: Checklist for 2211
 titleSuffix: Configuration Manager
-description: Learn about actions to take before updating to Configuration Manager version 2207.
-ms.date: 08/12/2022
+description: Learn about actions to take before updating to Configuration Manager version 2211.
+ms.date: 12/02/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-author: paasin
-ms.author: paasin
+author: PalikaSingh
+ms.author: palsi
 manager: apoorvseth
 ms.localizationpriority: medium
 ---
@@ -16,13 +16,13 @@ ms.localizationpriority: medium
 
 *Applies to: Configuration Manager (current branch)*
 
-When you use the current branch of Configuration Manager, you can install the in-console update for version 2207 to update your hierarchy from a previous version. <!-- baseline only statement: Version 2203 will also be available as [baseline media](updates.md#bkmk_note1) soon after global availability of the in-console update, so you can use the installation media to install the first site of a new hierarchy.-->
+When you use the current branch of Configuration Manager, you can install the in-console update for version 2211 to update your hierarchy from a previous version. <!-- baseline only statement: Version 2203 will also be available as [baseline media](updates.md#bkmk_note1) soon after global availability of the in-console update, so you can use the installation media to install the first site of a new hierarchy.-->
 
-To get the update for version 2207, you must use a service connection point at the top-level site of your hierarchy. This site system role can be in online or offline mode. To download the update when your service connection point is offline, [use the service connection tool](use-the-service-connection-tool.md).<!-- SCCMDocs#1946 -->
+To get the update for version 2211, you must use a service connection point at the top-level site of your hierarchy. This site system role can be in online or offline mode. To download the update when your service connection point is offline, [use the service connection tool](use-the-service-connection-tool.md).<!-- SCCMDocs#1946 -->
 
 After your hierarchy downloads the update package from Microsoft, find it in the console. In the **Administration** workspace, select the **Updates and Servicing** node.
 
-- When the update is listed as **Available**, the update is ready to install. Before installing version 2207, review the following information [about installing update 2207](#about-installing-update-2207) and the [pre-update checklist](#pre-update-checklist) for configurations to make before starting the update.
+- When the update is listed as **Available**, the update is ready to install. Before installing version 2211, review the following information [about installing update 2207](#about-installing-update-2207) and the [pre-update checklist](#pre-update-checklist) for configurations to make before starting the update.
 
 - If the update displays as **Downloading** and doesn't change, review the **hman.log** and **dmpdownloader.log** for errors.
 
