@@ -31,7 +31,7 @@ ms.collection:
 
 # Rename your device from the Company Portal website
 
-Rename an enrolled, managed device from the Company Portal website. Change a device's generic or default model name to a name that you can quickly identify.
+Change your personal device's generic or default model name to a name that you can quickly identify in Company Portal.  
 
 1. Open the [Company Portal website](https://portal.manage.microsoft.com) and select the __Menu__ button > __Devices__.  
 
@@ -45,6 +45,6 @@ Rename an enrolled, managed device from the Company Portal website. Change a dev
 
     ![Zoomed in view of the More icon, highlighted with a red arrow.](./media/rename-reset-device-step3-more-1808.png)  
 
-4. In the box where your device's name appears, type a new name for your device. Then tap the **Rename** button. Your device now appears with the new name.  
+4. In the name field, enter a new name for your device. Then tap the **Rename** button. Your device now appears with the new name.  
 
 Still need help? Contact your company support. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).  

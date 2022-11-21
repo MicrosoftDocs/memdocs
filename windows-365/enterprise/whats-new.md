@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 10/27/2022
+ms.date: 11/17/2022
 ms.topic: reference
 ms.service: windows-365
 ms.subservice:
@@ -46,7 +46,33 @@ Learn what new features are available in Windows 365 Enterprise.
 ### Role-based access control
 ### Scripts
 ### End user experience
+### Windows 365 Government
+### Windows 365 app
 -->
+
+<!-- ########################## -->
+## Week of November 14, 2022
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Documentation
+
+#### New documentation article: Use the Enrollment Status Page with Cloud PCs
+
+We’ve published a new help documentation article. For more information, see [Use the Enrollment Status Page with Cloud PCs](enrollment-status-page.md).
+
+<!-- ########################## -->
+## Week of November 7, 2022
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Windows 365 Government
+
+#### Windows 365 Government now supports Windows 11 and Secure boot<!--42089070-->
+
+Windows 365 Government now supports the following features:
+
+- Creating Cloud PCs that use [Secure boot](/windows-hardware/design/device-experiences/oem-secure-boot).
+- Windows 11 options in the gallery images list.
+- Creating custom images running Windows 11 (must be Generation 2 virtual machines).
 
 <!-- ########################## -->
 ## Week of October 24, 2022
@@ -63,7 +89,7 @@ Point-in-time restore has moved out of preview and into general availability. Fo
 
 #### New supported Azure region: UAE North<!--41670300-->
 
-A new Azure regions is now supported for Windows 365 Cloud PC provisioning: UAE North.
+A new Azure region is now supported for Windows 365 Cloud PC provisioning: UAE North.
 
 For more information about supported Azure regions, see [Supported Azure regions for Cloud PC provisioning](requirements.md#supported-azure-regions-for-cloud-pc-provisioning).
 

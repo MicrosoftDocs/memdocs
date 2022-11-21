@@ -62,7 +62,7 @@ items:
       items:   
       - name: JSON for custom settings
         href: compliance-custom-json.md    
-      - name: PowerShell script for custom settings
+      - name: Scripts for custom compliance settings
         href: compliance-custom-script.md    
     - name: Actions for noncompliance
       href: actions-for-noncompliance.md

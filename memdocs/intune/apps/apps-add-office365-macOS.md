@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/29/2022
+ms.date: 11/09/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -34,6 +34,9 @@ ms.collection:
 # Assign Microsoft 365 to macOS devices with Microsoft Intune
 
 This app type makes it easy for you to assign Microsoft 365 apps to macOS devices. By using this app type, you can install Word, Excel, PowerPoint, Outlook, OneNote, Teams, and OneDrive. To help keep the apps more secure and up to date, the apps come with Microsoft AutoUpdate (MAU). The apps that you want are displayed as one app in the list of apps in the Intune console.
+
+> [!IMPORTANT]
+> With Office for Mac update (16.67), macOS Big Sur 11 or later will be required to receive updates to Office for Mac. If you continue with an older version of macOS, your Office apps will still work, but you'll no longer receive any updates, including security updates. Upgrading your operating system to macOS Big Sur 11 or later will allow Office updates to be delivered for your apps. The October 2022 Office for Mac update (16.66) will be the last build to support macOS Catalina 10.15. For related information, see [Upgrade macOS to continue receiving Microsoft 365 and Office for Mac updates](https://go.microsoft.com/fwlink/?linkid=2015804).
 
 > [!NOTE]
 > Other versions of Office for Mac can be added to the Microsoft Endpoint Manager admin center. For more information, see [Most current packages for Office for Mac](/officeupdates/update-history-office-for-mac#most-current-packages-for-office-for-mac).
