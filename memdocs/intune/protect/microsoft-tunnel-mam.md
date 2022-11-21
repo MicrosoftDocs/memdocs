@@ -100,7 +100,10 @@ Create an App configuration policy to configure Microsoft Defender for Endpoint 
    - For *Site Name*, select an available site, and then click **OK**.
 
    - *Per-App VPN (Android only)* is an optional setting.  Select public or custom apps, to restrict the use of use the Tunnel VPN connection to these specified apps.
-   - *Proxy* is an optional setting.  Configure proxy settings to meet your on-premises network requirements. 
+   - *Proxy* is an optional setting.  Configure proxy settings to meet your on-premises network requirements.  
+     > [!NOTE]  
+     > Proxy server configurations are not supported with versions of Android prior to version 10.  For more information, see [VpnService.Builder](https://developer.android.com/reference/android/net/VpnService.Builder#setHttpProxy%28android.net.ProxyInfo%29) in that Android developer documentation.
+
 
    When ready, select **Next** to continue.
 
