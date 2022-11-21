@@ -70,7 +70,7 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 ### Device security
 
-#### Microsoft Tunnel Mobile Application Management for Android (Preview)<!-- 15769204 wndraft   WNready   -->  
+#### Microsoft Tunnel Mobile Application Management for Android (Preview)<!-- 15769204 -->  
 
 As a public preview, you can now use Microsoft Tunnel with unenrolled devices. This capability is called [Microsoft Tunnel Mobile Application Management](../protect/microsoft-tunnel-mam.md) (MAM). This preview supports Android, and without any changes to your existing Tunnel infrastructure, supports the Tunnel VPN gateway for:
 
