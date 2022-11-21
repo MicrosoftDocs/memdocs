@@ -12,7 +12,7 @@ manager: apoorvseth
 ms.localizationpriority: medium
 ---
 
-# Checklist for installing update 2207 for Configuration Manager
+# Checklist for installing update 2211 for Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
