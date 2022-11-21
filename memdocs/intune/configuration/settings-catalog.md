@@ -108,10 +108,12 @@ For information on some features you can configure using the settings catalog, g
     > [!TIP]
     > 
     > - In the Windows setting tooltips, **Learn more** links to the CSP.
-    > - When a setting allows multiple values, it's recommended to add each value separately. You can add multiple values in a single field, but you may experience a character limit.
+    > - When a setting allows multiple values, it's recommended to add each value separately.
     > 
     >   For example, you can enter multiple values in the **Bluetooth** > **Services Allowed List** setting. Enter each value on a separate line:
     >   :::image type="content" source="./media/settings-catalog/setting-with-multiple-values.png" alt-text="Screenshot that shows a setting with multiple values on a separate line in the Settings Catalog in Microsoft Intune and the Endpoint Manager admin center":::
+    >
+    >   You can add multiple values in a single field, but you may experience a character limit.
 
 9. Select **Next**.
 10. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use RBAC roles and scope tags for distributed IT](../fundamentals/scope-tags.md).
