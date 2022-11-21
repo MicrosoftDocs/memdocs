@@ -4,11 +4,11 @@ description: Learn how to configure device profiles for Windows Autopilot deploy
 ms.technology: itpro-deploy
 ms.prod: windows-client
 ms.localizationpriority: medium
-author: aczechowski
-ms.author: aaroncz
+author: frankroj
+ms.author: frankroj
 ms.reviewer: jubaptis
-manager: dougeby
-ms.date: 07/18/2022
+manager: aaroncz
+ms.date: 11/17/2022
 ms.collection: 
   - M365-modern-desktop
   - highpri
@@ -17,7 +17,7 @@ ms.topic: how-to
 
 # Configure Autopilot profiles
 
-**Applies to**
+*Applies to:*
 
 - Windows 11
 - Windows 10

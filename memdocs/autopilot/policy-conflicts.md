@@ -9,18 +9,18 @@ ms.localizationpriority: medium
 ms.sitesec: library
 ms.pagetype: deploy
 audience: itpro
-author: aczechowski
-ms.author: aaroncz
+author: frankroj
+ms.author: frankroj
 ms.reviewer: jubaptis
-manager: dougeby
-ms.date: 12/08/2021
+manager: aaroncz
+ms.date: 11/17/2022
 ms.collection: M365-modern-desktop
 ms.topic: troubleshooting
 ---
 
 # Windows Autopilot - Policy Conflicts
 
-**Applies to**
+*Applies to:*
 
 - Windows 11
 - Windows 10

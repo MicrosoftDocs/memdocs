@@ -6,9 +6,9 @@ ms.technology: itpro-deploy
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
-manager: aczechowski
+manager: aaroncz
 ms.reviewer: jubaptis
-ms.date: 09/22/2022
+ms.date: 11/17/2022
 ms.collection: 
   - M365-modern-desktop
 ms.topic: article

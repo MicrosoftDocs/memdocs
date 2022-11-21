@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/09/2022
+ms.date: 11/15/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -65,6 +65,192 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Scripts
 ### Tenant administration
 -->
+
+## Week of November 14, 2022 (Service release 2211)
+
+### App management
+
+#### Control the display of Managed Google Play apps<!-- 621615   -->  
+You can group Managed Google Play apps into collections and control the order that collections are displayed when selecting apps in Intune. You can also make apps visible via search only. This capability is available in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **All apps** > **Add** > **Managed Google Play app**. For related information, see [Add a Managed Google Play store app directly in the Intune console](../apps/apps-add-android-for-work.md#add-a-managed-google-play-store-app-directly-in-the-intune-console).
+
+### Device configuration
+
+#### New password complexity setting for Android Enterprise 12+ personally owned devices with a work profile<!-- 12436068  -->  
+On Android Enterprise 11 and older personally owned devices with a work profile, you can set the following password settings:
+
+- **Compliance policies** > **Android Enterprise for platform** > **Personally owned work profile** > **System security** > **Required password type**, **Minimum password length**
+- **Device configuration profiles** > **Android Enterprise for platform** > **Personally owned work profile** > **Device restrictions** > **Work profile settings** > **Required password type**, **Minimum password length**
+- **Device configuration profiles** > **Android Enterprise for platform** > **Personally owned work profile** > **Device restrictions** > **Password** > **Required password type**, **Minimum password length**
+
+Google is deprecating the **Required password type** and **Minimum password length** settings for Android 12+ personally owned devices with a work profile and replacing them with new password complexity requirements. For more information about this change, go to [Day zero support for Android 13](https://aka.ms/Intune/Android13).
+
+The new **Password complexity** setting has the following options:
+
+- **None**: Intune doesn't change or update this setting. By default, the OS may not require a password.
+- **Low**: Pattern or PIN with repeating (4444) or ordered (1234, 4321, 2468) sequences are blocked.
+- **Medium**: PIN with repeating (4444) or ordered (1234, 4321, 2468) sequences are blocked. The length, alphabetic length, or alphanumeric length must be at least 4 characters.
+- **High**: PIN with repeating (4444) or ordered (1234, 4321, 2468) sequences are blocked. The length must be at least 8 characters. The alphabetic or alphanumeric length must be at least 6 characters.
+
+On Android 12+, if you currently use the **Required password type** and **Minimum password length** settings in a compliance policy or device configuration profile, then we recommend using the new **Password complexity** setting instead.
+
+If you continue to use the **Required password type** and **Minimum password length** settings, and don't configure the **Password complexity** setting, then new devices running Android 12+ might default to the **High** password complexity.
+
+For more information on these settings and what happens to existing devices with the deprecated settings configured, go to:
+
+- [Android Enterprise personally owned devices with a work profile - configuration profile settings list](../configuration/device-restrictions-android-enterprise-personal.md)
+- [Android Enterprise personally owned devices with a work profile - compliance policy settings list](../protect/compliance-policy-create-android-for-work.md#personally-owned-work-profile)
+
+Applies to:
+
+- Android Enterprise 12.0 and newer personally owned devices with a work profile
+
+#### New settings available in the iOS/iPadOS and macOS Settings Catalog <!-- 16068756 -->  
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
+
+New settings are available in the Settings Catalog. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can see these settings at **Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type.
+
+New settings include:
+
+**Networking > DNS Settings**:
+
+- DNS Protocol
+- Server Addresses
+- Server Name
+- Server URL
+- Supplemental Match Domains
+- On Demand Rules
+- Action
+- Action Parameters
+- DNS Domain Match
+- DNS Server Address Match
+- Interface Type Match
+- SSID Match
+- URL String Probe
+- Prohibit Disablement
+
+**File Vault**:
+
+- Defer
+- Defer Don't Ask At User Logout
+- Defer Force At User Login Max Bypass Attempts
+- Enable
+- Show Recovery Key
+- Use Recovery Key
+
+**File Vault > File Vault Recovery Key Escrow**:
+
+- Device Key
+- Location
+
+**Privacy > Privacy Preferences Policy Control**:
+
+- Authorization
+
+**Restrictions**:
+
+- Allow Air Play Incoming Requests
+
+Applies to:
+
+- macOS
+
+**Web > Web Content Filter**:
+
+- Allow List Bookmarks
+- Auto Filter Enabled
+- Deny List URLs
+- Filter Browsers
+- Filter Data Provider Bundle Identifier
+- Filter Data Provider Designated Requirement
+- Filter Grade
+- Filter Packet Provider Bundle Identifier
+- Filter Packet Provider Designated Requirement
+- Filter Packets
+- Filter Sockets
+- Filter Type
+- Organization
+- Password
+- Permitted URLs
+- Plugin Bundle ID
+- Server Address
+- User Defined Name
+- User Name
+- Vendor Config
+
+Applies to:
+
+- iOS/iPadOS
+- macOS
+
+For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
+
+#### Device Firmware Configuration Interface (DFCI) will support Panasonic devices<!-- 15729353 -->  
+For Windows 10/11 devices, you can create a DFCI profile to manage UEFI (BIOS) settings (**Devices** > **Configuration profiles** > **Create profile** > **Windows 10 and later** for platform > **Templates** > **Device Firmware Configuration Interface** for profile type).
+
+New Panasonic devices running Windows 10/11 will be enabled for DFCI starting Fall 2022. So, admins can create DFCI profiles to manage the BIOS and then deploy the profiles to these Panasonic devices.
+
+Contact your device vendor or device manufacturer to ensure you get eligible devices.
+
+For more information about DFCI profiles, go to:
+
+- [Configure Device Firmware Configuration Interface (DFCI) profiles on Windows devices in Microsoft Intune](../configuration/device-firmware-configuration-interface-windows.md)
+- [Device Firmware Configuration Interface (DFCI) management with Windows Autopilot](/mem/autopilot/dfci-management)
+
+Applies to:
+
+- Windows 10
+- Windows 11
+
+#### Login and background item management support on macOS devices using the settings catalog<!-- 15751007  -->  
+On macOS devices, you can create a policy that automatically opens items when users sign in to their macOS devices. For example, you can open apps, documents, and folders.
+
+In Intune, the settings catalog includes new Service Management settings at **Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform > **Settings catalog** > **Login** > **Service Management**. These settings can prevent users from disabling the managed login and background items on their devices.
+
+For more information on the settings catalog, go to:
+
+- [Use the settings catalog to configure settings](../configuration/settings-catalog.md)
+- [Common tasks you can complete using the Settings Catalog](../configuration/settings-catalog-common-features.md)
+
+Applies to:
+
+- macOS 13 and newer
+
+### Intune apps
+
+#### Newly available protected apps for Intune<!-- 16118715, 16118848, 16135107, 16027039, 15658466, 15658598  -->  
+The following protected apps are now available for Microsoft Intune:
+
+- Varicent by Varicent US OpCo Corporation
+- myBLDNG by Bldng.ai
+- Enterprise Files for Intune by Stratospherix Ltd
+- ArcGIS Indoors for Intune by ESRI
+- Meetings by Decisions by Decisions AS
+- Idenprotect Go by Apply Mobile Ltd
+
+For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
+
+### Monitor and troubleshoot
+
+#### Review Cloud PC connectivity health checks and errors in Microsoft Endpoint Manager admin center<!-- 13811774 -->  
+You can now review connectivity health checks and errors in the Microsoft Endpoint Manager admin center to help you understand if your users are experiencing connectivity issues. You’ll also get a troubleshooting tool to help resolve connectivity issues. To see the checks, select **Devices** > **Windows 365** > **Azure network connections** > *select a connection in the list* > **Overview**.  
+
+### Tenant administration
+
+#### Deliver organizational messages for Windows 11 (public preview)<!-- 15314747  -->  
+Use Microsoft Intune to deliver important messages and call-to-actions to employees on their devices.  Organizational messages are preconfigured messages intended to improve employee communication in remote and hybrid-work scenarios. They can be used to help employees adapt to new roles, learn more about their organization, and stay informed of new updates and trainings. You can deliver messages  just above the taskbar, in the notifications area, or in the Get Started app on Windows 11 devices.
+
+During public preview, you can:
+
+* Select from a variety of preconfigured, common messages to assign to Azure AD user groups.
+* Add your organization's logo. 
+* Include a custom destination URL in the message that redirects device users to a specific place.
+* Preview messages in 15 supported languages, in dark and light theme.
+* Schedule a delivery window and message frequency.
+* Track the status of messages and the number of views and clicks they receive. Views and clicks are aggregated by messages.
+* Cancel scheduled or active messages.  
+* Configure a new built-in role in Intune called *Organizational Messages Manager*, which allows assigned admins to view and configure messages.  
+
+All configurations need to be done in the Microsoft Endpoint Manager admin center. The Microsoft Graph API isn't available to use with organizational messages. For more information, see [Overview of organizational messages](../remote-actions/organizational-messages-overview.md).
 
 ## Week of November 7, 2022
 
