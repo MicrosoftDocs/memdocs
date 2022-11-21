@@ -2,7 +2,7 @@
 title: Prerequisite checks
 titleSuffix: Configuration Manager
 description: Reference of the specific prerequisite checks for Configuration Manager updates.
-ms.date: 04/11/2022
+ms.date: 11/30/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
@@ -223,6 +223,12 @@ The RDC library is registered on the Configuration Manager site server.
 Verifies the Windows Installer version.
 
 When this check fails, setup wasn't able to verify the version, or the installed version doesn't meet the minimum requirement of Windows Installer 4.5.
+
+### Microsoft Store for Business deprecation alert
+
+*Applies to: Central administration site, primary site*
+
+Starting in 2211, if you have a Microsoft Store for Business Connector configured, you will see this warning while performing the upgrade. This is in conjunction with the deprecation announcement made [here](../../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md).
 
 ### Minimum .NET Framework version for Configuration Manager console
 
