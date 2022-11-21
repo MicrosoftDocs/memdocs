@@ -38,9 +38,7 @@ The instructions on this page are only if you must use either or both:
 - **Azure Network Connections (ANC)**. ANC lets you provision Cloud PCs that are attached to a virtual network that you manage. For more information, see [create an Azure network connection](/windows-365/enterprise/create-azure-network-connection).
 
 
-For Windows 365 to function in the Government Community Cloud (GCC) environment, customers must link their Azure Commercial tenant with their Azure Government tenant. This linkage lets Intune running in Azure Commercial to manage Cloud PCs running in Azure Government regions, including the options of using custom images and connecting to your own networks.     
-
-Use the following procedures to set up Windows 365 in the Government Community Cloud (GCC).
+For Windows 365 to function in the Government Community Cloud (GCC) environment with custom images and/or ANCs, customers must link their Azure Commercial tenant with their Azure Government tenant. This linkage lets Intune running in Azure Commercial to manage Cloud PCs running in Azure Government regions. Use the following procedures to set up Windows 365 in the Government Community Cloud (GCC).
 
 > [!NOTE]
 > These instructions are specifically for GCC.  The instructions on this page do not apply to GCC High.
