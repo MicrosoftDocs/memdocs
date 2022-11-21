@@ -82,7 +82,7 @@ The Azure Government subscription includes a tenant (which ends in onmicrosoft.u
 - Other Azure Resources, including Cloud PC resources.
 
 >[!NOTE]
-> While the GCC users' Cloud PCs are hosted and secured in the Azure Government cloud, the admin and end user experience is similar to the commercial business user experience. This is because the endpoints for admins and end users are in the commercial Azure domain.
+> While the GCC users' Cloud PCs are hosted and secured in the Azure Government cloud, the endpoints for admins and end users are in the commercial Azure domain.
 
 ## Azure AD options
 
