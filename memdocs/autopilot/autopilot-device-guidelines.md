@@ -8,11 +8,11 @@ ms.localizationpriority: medium
 ms.sitesec: library
 ms.pagetype: deploy
 audience: itpro
-author: aczechowski
-ms.author: aaroncz
+author: frankroj
+ms.author: frankroj
 ms.reviewer: jubaptis
-manager: dougeby
-ms.date: 2/1/2022
+manager: aaroncz
+ms.date: 11/17/2022
 ms.collection: M365-modern-desktop
 ms.topic: troubleshooting
 ms.technology: itpro-deploy
@@ -20,7 +20,7 @@ ms.technology: itpro-deploy
 
 # Windows Autopilot device guidelines
 
-**Applies to**
+*Applies to:*
 
 - Windows 11
 - Windows 10
