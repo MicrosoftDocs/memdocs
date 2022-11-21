@@ -97,7 +97,7 @@ This authentication triggers an Azure Active Directory prompt, allowing any cred
 You can use any authentication type supported by Azure AD, such as [Windows Hello for Business](/windows/security/identity-protection/hello-for-business/hello-overview) and other [passwordless authentication options](/azure/active-directory/authentication/concept-authentication-passwordless.md) (for example, FIDO keys), to authenticate to the service.
 
 ### Smart card authentication
-To use a smart card to authenticate to Azure AD, you must first [configure AD FS for user certificate authentication](/windows-server/identity/ad-fs/operations/configure-user-certificate-authentication) or [configure Azure AD certificate-based authentication](azure/active-directory/authentication/concept-certificate-based-authentication.md).
+To use a smart card to authenticate to Azure AD, you must first [configure AD FS for user certificate authentication](/windows-server/identity/ad-fs/operations/configure-user-certificate-authentication) or [configure Azure AD certificate-based authentication](/azure/active-directory/authentication/concept-certificate-based-authentication.md).
 
 ## Cloud PC authentication
 
