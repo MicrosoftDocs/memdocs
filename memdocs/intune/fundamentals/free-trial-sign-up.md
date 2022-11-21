@@ -9,7 +9,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 11/21/2022
-ms.topic: Conceptual
+ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
@@ -61,7 +61,7 @@ Before setting up Microsoft Intune, review the following requirements:
 
 - [Supported operating systems and browsers](supported-devices-browsers.md)
 - [Network configuration requirements and bandwidth](network-bandwidth-use.md)
-- Basic knowledge of Microsoft Endpoint Manager and endpoint management concepts, see [Microsoft Endpoint Manager fundamentals](../../paths/endpoint-manager-fundamentals/index.yml).
+- Basic knowledge of Microsoft Endpoint Manager and endpoint management concepts, see [Microsoft Endpoint Manager fundamentals](/training/paths/endpoint-manager-fundamentals/).
 - Understand your endpoint management objectives, device inventory considerations, licensing needs, infrastructure objectives, and rollout plans, see [Determine your endpoint management implementation](/learn/modules/determine-endpoint-implementation?azure-portal=true).
 
 ## Review supported configurations
@@ -132,7 +132,7 @@ If bandwidth is a concern, you do have ways to reduce bandwidth that your tenant
 - **Background Intelligent Transfer Service (BITS) and BranchCache:**<br>
     You can use Microsoft Intune to manage Windows PCs either as [mobile devices with mobile device management (MDM)](/mem/intune/enrollment/windows-enroll?azure-portal=true) or as computers with the Intune software client. Microsoft recommends that you use the MDM management solution whenever possible. For more information, see [Background Intelligent Transfer Service (BITS) and BranchCache](/mem/intune/fundamentals/network-bandwidth-use?azure-portal=true#background-intelligent-transfer-service-bits-and-branchcache).
 
-## Sign up for the Intune free trial
+## Sign up for a Microsoft Intune free trial
 
 When you sign up for the Intune free trial, you create a new Intune trial subscription using your work or school account. The trial subscription last 30 days. If you choose, you can convert the trial subscription to a full subscription based on your choice of product licenses. If you already are using your work or school account for a Microsoft service, you can **sign in** with that account and add Intune to your subscription. If you're uncertain whether you have an existing account, you can follow the Intune free trial sign-up steps below to check whether you need to create a new account for Intune.
 
@@ -150,34 +150,34 @@ To sign up for the Microsoft Intune free trial, follow the steps below:
    > [!NOTE]
    > If you already have an account set up with another Microsoft service using your email address, you can choose to sign in to use the account with the Intune trial, or you can create a new account. These steps assume you are creating a new account.
 
-   ![Screenshot of the Microsoft Intune set up account page - Enter email address.](../media/free-trial-sign-up/sign-up-for-intune-01.png)
+   ![Screenshot of the Microsoft Intune set up account page - Enter email address.](./media/free-trial-sign-up/sign-up-for-intune-01.png)
 
 3. Click **Set up account** to create a new account.
 
-   ![Screenshot of the Microsoft Intune set up account page - Set up account.](../media/free-trial-sign-up/sign-up-for-intune-02.png)
+   ![Screenshot of the Microsoft Intune set up account page - Set up account.](./media/free-trial-sign-up/sign-up-for-intune-02.png)
 
 4. Add your name, phone number, company name, company size, and region. Then, click **Next**.
 
-      ![Screenshot of the Microsoft Intune set up account page - Add account details.](../media/free-trial-sign-up/sign-up-for-intune-03.png)
+      ![Screenshot of the Microsoft Intune set up account page - Add account details.](./media/free-trial-sign-up/sign-up-for-intune-03.png)
 
 5. Click **Send Verification Code** to verify the phone number you added.
 
-      ![Screenshot of the Microsoft Intune set up account page - Send verification code.](../media/free-trial-sign-up/sign-up-for-intune-04.png)
+      ![Screenshot of the Microsoft Intune set up account page - Send verification code.](./media/free-trial-sign-up/sign-up-for-intune-04.png)
 
 6. Enter the verification code you receive on your mobile device, then click **Verify**.
 
-      ![Screenshot of the Microsoft Intune set up account page - Verify code.](../media/free-trial-sign-up/sign-up-for-intune-05.png)
+      ![Screenshot of the Microsoft Intune set up account page - Verify code.](./media/free-trial-sign-up/sign-up-for-intune-05.png)
 
 7. Add a domain name for your trial that represents your business or organization. Your name will be added before *.onmicrosoft.com*. Click **Check availability** > **Next**. If you like, you can later change this domain name to your custom domain name.
 
-      ![Screenshot of the Microsoft Intune set up account page - Add domain name.](../media/free-trial-sign-up/sign-up-for-intune-06.png)
+      ![Screenshot of the Microsoft Intune set up account page - Add domain name.](./media/free-trial-sign-up/sign-up-for-intune-06.png)
 
 8. Add your user name and password that you'll use to log in to Microsoft Intune. Review the trial agreement and privacy statement. Click **Sign up** to create your account.
 
     > [!IMPORTANT]
     > Be sure to make a note of your user name and password.
 
-      ![Screenshot of the Microsoft Intune set up account page - Add user name and password.](../media/free-trial-sign-up/sign-up-for-intune-07.png)
+      ![Screenshot of the Microsoft Intune set up account page - Add user name and password.](./media/free-trial-sign-up/sign-up-for-intune-07.png)
 
 9. After your account has been created, you'll see your user name. You'll use this user name to log in to Intune. Additionally, you receive an email message that contains your account information at the email address that you provided during the sign-up process. This email confirms your subscription is active.
 
@@ -226,7 +226,7 @@ You would not rename or remove the initial *onmicrosoft.com* domain name. Howeve
 
 3. Add your domain name and then click **Use this domain**.
 
-    ![Screenshot of Microsoft 365 admin center - Add a new domain.](../media/free-trial-sign-up/sign-up-for-intune-08.png)
+    ![Screenshot of Microsoft 365 admin center - Add a new domain.](./media/free-trial-sign-up/sign-up-for-intune-08.png)
 
     If you are using a common domain registrar like GoDaddy or WordPress, verifying your domain is a quick process. In this case, you'll see a 'sign in' option to verify your domain.<p>
 
@@ -236,7 +236,7 @@ You would not rename or remove the initial *onmicrosoft.com* domain name. Howeve
 
 4. If you see the options to add a TXT record, add an MX record, or add a text file to the domain's website, you'll need to choose how you want to verify your domain. 
 
-   ![Screenshot of Microsoft 365 admin center - Verify your domain.](../media/free-trial-sign-up/sign-up-for-intune-08a.png)
+   ![Screenshot of Microsoft 365 admin center - Verify your domain.](./media/free-trial-sign-up/sign-up-for-intune-08a.png)
 
    The steps to add and verify a custom domain can also be [performed in Azure Active Directory](/azure/active-directory/fundamentals/add-custom-domain?azure-portal=true).
 
@@ -295,7 +295,7 @@ Use the following steps to create a new group:
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Groups** > **New group**:
 
-   [ ![Screenshot of Endpoint Manager with new group selected.](../media/free-trial-sign-up/sign-up-for-intune-09.png) ](../media/free-trial-sign-up/sign-up-for-intune-09.png#lightbox)
+   [ ![Screenshot of Endpoint Manager with new group selected.](./media/free-trial-sign-up/sign-up-for-intune-09.png) ](./media/free-trial-sign-up/sign-up-for-intune-09.png#lightbox)
 
 3. In **Group type**, choose one of the following options:
 
@@ -374,7 +374,7 @@ The following steps allow you to assign Intune licenses to multiple users all at
 4. Click **Assign** > **Add users and groups**.
 5. If you have created a group of users, click the group to add it to the **Selected items** list. Otherwise, select individual users that you have created earlier. Click **Select** to confirm your selection.
 
-   [ ![Screenshot of Azure AD admin center with users selected.](../media/free-trial-sign-up/sign-up-for-intune-15.png) ](../media/free-trial-sign-up/sign-up-for-intune-15.png#lightbox)
+   [ ![Screenshot of Azure AD admin center with users selected.](./media/free-trial-sign-up/sign-up-for-intune-15.png) ](./media/free-trial-sign-up/sign-up-for-intune-15.png#lightbox)
   
 6. Click **Next: Assignment options** to confirm **Microsoft Intune** is **On**.
 7. Click **Review + assign** to confirm your license assignment settings.
