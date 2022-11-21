@@ -224,6 +224,12 @@ Verifies the Windows Installer version.
 
 When this check fails, setup wasn't able to verify the version, or the installed version doesn't meet the minimum requirement of Windows Installer 4.5.
 
+### Microsoft Store for Business deprecation alert
+
+*Applies to: Central administration site, primary site*
+
+Starting in 2211, if you have a Microsoft Store for Business Connector configured, you will see this warning while performing the upgrade. This is in conjunction with the deprecation announcement made [here](../../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md).
+
 ### Minimum .NET Framework version for Configuration Manager console
 
 *Applies to: Configuration Manager console*
