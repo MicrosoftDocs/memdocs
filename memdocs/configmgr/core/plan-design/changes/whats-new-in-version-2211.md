@@ -68,8 +68,13 @@ For more information, see the [compliance settings group of client settings](../
 <!--## Collections-->
 
 
- 
-<!-- ## Software Center -->
+## Software Center
+
+### Featured Apps in Software Center
+<!--3601183-->
+We are now adding the **Featured** tab in Software Center where we will be displaying the featured apps. Using this, IT admin can mark apps as "featured" and encourage end users to use the app. Currently, this feature is available only for "User Available" apps. Also, admins can make the **Featured** tab of Software Center as default tab from Client Settings. 
+
+For more information, see the [Featured Apps in Software Center](../../get-started/2022/technical-preview-2210.md#bkmk_featured-apps-software-center).
 
 ## Software updates
 
