@@ -22,7 +22,7 @@ To get the update for version 2211, you must use a service connection point at t
 
 After your hierarchy downloads the update package from Microsoft, find it in the console. In the **Administration** workspace, select the **Updates and Servicing** node.
 
-- When the update is listed as **Available**, the update is ready to install. Before installing version 2211, review the following information [about installing update 2207](#about-installing-update-2207) and the [pre-update checklist](#pre-update-checklist) for configurations to make before starting the update.
+- When the update is listed as **Available**, the update is ready to install. Before installing version 2211, review the following information [about installing update 2211](#about-installing-update-2207) and the [pre-update checklist](#pre-update-checklist) for configurations to make before starting the update.
 
 - If the update displays as **Downloading** and doesn't change, review the **hman.log** and **dmpdownloader.log** for errors.
 
@@ -38,7 +38,7 @@ For more information about current branch versions, see [Baseline and update ver
 
 ### Sites
 
-Install update 2207 at the top-level site of your hierarchy. Start the installation from your central administration site (CAS) or from your stand-alone primary site. After the update is installed at the top-level site, child sites have the following update behavior:
+Install update 2211 at the top-level site of your hierarchy. Start the installation from your central administration site (CAS) or from your stand-alone primary site. After the update is installed at the top-level site, child sites have the following update behavior:
 
 - Child primary sites install the update automatically after the CAS finishes the installation of the update. You can use service windows to control when a site installs the update. For more information, see [Service windows for site servers](service-windows.md).
 
@@ -63,17 +63,17 @@ The first time you use a Configuration Manager console after the update has fini
 
 <!-- SCCMDocs#1397 -->
 
-As of August 1, 2022, version 2207 is globally available for all customers to install. If you previously opted in to the early update ring, watch for an update to this current branch version.
+As of December 2, 2022, version 2211 is globally available for all customers to install. If you previously opted in to the early update ring, watch for an update to this current branch version.
 
-At this time, version 2207 is released for the early update ring. To install this update, you need to opt in. The following PowerShell script adds your hierarchy or standalone primary site to the early update ring for version 2207:
+At this time, version 2211 is released for the early update ring. To install this update, you need to opt in. The following PowerShell script adds your hierarchy or standalone primary site to the early update ring for version 2207:
 
-[Version 2207 opt-in script](https://go.microsoft.com/fwlink/?linkid=2099733) <!-- This fwlink points to the script package on the Download Center, don't change the link here! Make any changes to the fwlink target -->
+[Version 2211 opt-in script](https://go.microsoft.com/fwlink/?linkid=2099733) <!-- This fwlink points to the script package on the Download Center, don't change the link here! Make any changes to the fwlink target -->
 
 
 Microsoft digitally signs the script, and bundles it inside a signed self-extracting executable.
 
 > [!NOTE]
-> The version 2207 update is only applicable to sites running version 2103 or later.
+> The version 2211 update is only applicable to sites running version 2107 or later.
 
 To opt in to the early update ring:
 
@@ -87,10 +87,10 @@ To opt in to the early update ring:
 
 1. Check for updates. For more information, see [Get available updates](prepare-in-console-updates.md#get-available-updates).
 
-The version 2207 update should now be available in the console.
+The version 2211 update should now be available in the console.
 
 > [!IMPORTANT]
-> This script only adds your site to the early update ring for version 2207. It's not a permanent change.
+> This script only adds your site to the early update ring for version 2211. It's not a permanent change.
 
 ## Pre-update checklist
 
@@ -223,7 +223,7 @@ To define a period during which updates to a site server can be installed, use s
 ### Review supported extensions
 
 <!--SCCMdocs#587-->
-If you extend Configuration Manager with other products from Microsoft, Microsoft partners, or third-party vendors, confirm that those products support and are compatible with version 2207. Check with the product vendor for this information.
+If you extend Configuration Manager with other products from Microsoft, Microsoft partners, or third-party vendors, confirm that those products support and are compatible with version 2211. Check with the product vendor for this information.
 
 > [!TIP]
 > If you develop a third-party add-on to Configuration Manager, you should test your add-on with every monthly [technical preview branch release](../../get-started/technical-preview.md). Regular testing helps confirm compatibility, and allows for early reporting of any issues with standard interfaces.
