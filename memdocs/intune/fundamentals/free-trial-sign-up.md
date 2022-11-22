@@ -52,34 +52,34 @@ When you sign up for the Intune free trial, you create a new Intune trial subscr
 
 To sign up for the Microsoft Intune free trial, follow the steps below:
 
-1. Navigate to the [Intune set up account page](https://admin.microsoft.com/Signup/Signup.aspx?azure-portal=true&OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0%20).
+1. Navigate to the [Intune set up account page](https://go.microsoft.com/fwlink/?linkid=2019088).
 
 2. Enter your email address and click **Next**.
 
    > [!NOTE]
    > If you already have an account set up with another Microsoft service using your email address, you can choose to sign in to use the account with the Intune trial, or you can create a new account. These steps assume you are creating a new account.
 
-   ![Screenshot of the Microsoft Intune set up account page - Enter email address.](./media/free-trial-sign-up/sign-up-for-intune-01.png)
+   :::image type="content" source="./media/free-trial-sign-up/sign-up-for-intune-01.png" alt-text="Screenshot of the Microsoft Intune set up account page - Enter email" border="true":::
 
 3. Click **Set up account** to create a new account.
 
-   ![Screenshot of the Microsoft Intune set up account page - Set up account.](./media/free-trial-sign-up/sign-up-for-intune-02.png)
+   :::image type="content" source="./media/free-trial-sign-up/sign-up-for-intune-02.png" alt-text="Screenshot of the Microsoft Intune set up account page - Set up account" border="true":::
 
-4. Add your name, phone number, company name, company size, and region. Then, click **Next**.
+4. Add your name, phone number, company name, company size, and region. Review the remaining information and click **Next**.
 
-      ![Screenshot of the Microsoft Intune set up account page - Add account details.](./media/free-trial-sign-up/sign-up-for-intune-03.png)
+   :::image type="content" source="./media/free-trial-sign-up/sign-up-for-intune-03.png" alt-text="Screenshot of the Microsoft Intune set up account page - Add account details" border="true":::
 
-5. Click **Send Verification Code** to verify the phone number you added.
+5. Click **Send verification code** to verify the phone number you added.
 
-      ![Screenshot of the Microsoft Intune set up account page - Send verification code.](./media/free-trial-sign-up/sign-up-for-intune-04.png)
+   :::image type="content" source="./media/free-trial-sign-up/sign-up-for-intune-04.png" alt-text="Screenshot of the Microsoft Intune set up account page -  Send verification code" border="true":::
 
 6. Enter the verification code you receive on your mobile device, then click **Verify**.
 
-      ![Screenshot of the Microsoft Intune set up account page - Verify code.](./media/free-trial-sign-up/sign-up-for-intune-05.png)
+   :::image type="content" source="./media/free-trial-sign-up/sign-up-for-intune-05.png" alt-text="Screenshot of the Microsoft Intune set up account page -  Verify code" border="true":::
 
-7. Add a domain name for your trial that represents your business or organization. Your name will be added before *.onmicrosoft.com*. Click **Check availability** > **Next**. If you like, you can later change this domain name to your custom domain name.
+7. Add your **Username** and **Domain name** for your trial that represents your business or organization. Your name will be added before *.onmicrosoft.com*. Click **Save** to check availability. Click **Next** to continue. If you like, you can later change this domain name to your custom domain name.
 
-      ![Screenshot of the Microsoft Intune set up account page - Add domain name.](./media/free-trial-sign-up/sign-up-for-intune-06.png)
+   :::image type="content" source="./media/free-trial-sign-up/sign-up-for-intune-06.png" alt-text="Screenshot of the Microsoft Intune set up account page -  Sign in" border="true":::
 
 8. Add your user name and password that you'll use to log in to Microsoft Intune. Review the trial agreement and privacy statement. Click **Sign up** to create your account.
 
@@ -89,6 +89,8 @@ To sign up for the Microsoft Intune free trial, follow the steps below:
       ![Screenshot of the Microsoft Intune set up account page - Add user name and password.](./media/free-trial-sign-up/sign-up-for-intune-07.png)
 
 9. After your account has been created, you'll see your user name. You'll use this user name to log in to Intune. Additionally, you receive an email message that contains your account information at the email address that you provided during the sign-up process. This email confirms your subscription is active.
+
+   :::image type="content" source="./media/free-trial-sign-up/sign-up-for-intune-07.png" alt-text="Screenshot of the Microsoft Intune set up account page -  Confirmation details" border="true":::
 
 ### Sign in to Intune
 
