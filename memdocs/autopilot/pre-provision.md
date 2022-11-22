@@ -54,7 +54,7 @@ In addition to [Windows Autopilot requirements](software-requirements.md), Windo
 - Windows Pro, Enterprise, or Education editions
 - An Intune subscription.
 - Physical devices that support TPM 2.0 and device attestation. Virtual machines aren't supported. The pre-provisioning process uses Windows Autopilot self-deploying capabilities, so TPM 2.0 is required. The TPM attestation process also requires access to a set of HTTPS URLs that are unique for each TPM provider. For more information, see the entry for Autopilot self-Deploying mode and Autopilot pre-provisioning in [Networking requirements](networking-requirements.md#tpm).
-- Network connectivity.
+- Network connectivity. Using wireless connectivty requires selecting region, language and keyboard before you are able to connect and start provisioning.
 
 > [!IMPORTANT]
 >
