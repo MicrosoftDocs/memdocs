@@ -33,7 +33,7 @@ ms.collection: M365-identity-device-management
 > [!NOTE]
 > You do not need an Azure Government subscription to use Windows 365 Government.
 
-The instructions on this page are only if you must use either or both:
+The fastest way to use Windows 365 is to use AADJ, gallery images and the Microsoft Hosted Network option. The instructions on this page are only if you must use either or both:
 - **Custom images**. Windows 365 provides optimized gallery images, including images with M365 apps pre-installed(/windows-365/enterprise/device-images); Intune can be used for further customization of [common settings](/mem/intune/configuration/settings-catalog-common-features) and [application deployment](/mem/intune/apps/apps-windows-10-app-deploy) after the gallery image is deployed. If you must use your existing custom image, for more information, see [add a custom image](./add-device-images.md).
 - **Azure Network Connections (ANC)**. ANC lets you provision Cloud PCs that are attached to a virtual network that you manage. For more information, see [create an Azure network connection](/windows-365/enterprise/create-azure-network-connection).
 
