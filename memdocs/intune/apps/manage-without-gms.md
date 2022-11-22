@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/14/2022
+ms.date: 11/21/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -61,9 +61,11 @@ Some Intune features rely on components of GMS such as the Google Play store or 
 
 ### Some tasks may be delayed
 
-In environments where GMS is available, Intune relies on push notifications to speed tasks to finish. For example, if you try to remotely wipe the device, notifications generally get to the device in seconds. In conditions where GMS isn't available, push notifications may also not be available. Under these conditions, if the device is enrolled with device administrator and running Company Portal 5.0.5655.0 and above, Intune attempts to check for new tasks and notifications approximately every 15 minutes. Note that this frequency may be affected by the device manufacturer, device usage patterns, and whether battery optimization is enabled for the Company Portal app.
+In environments where GMS is available, Intune relies on push notifications to speed tasks to finish. For example, if you try to remotely wipe the device, notifications generally get to the device in seconds. In conditions where GMS isn't available, push notifications may also not be available.
 
-Android devices enrolled with device administrator or Android (AOSP) management will report to Intune every 8 hours. For example, if a device reports to Intune at 1 PM and the remote tasks are issued at 1:05 PM, Intune will contact the device at 9 PM to complete the tasks.
+All Android devices enrolled with device administrator or Android (AOSP) management report to Intune every 8 hours. For example, if a device reports to Intune at 1 PM and the remote tasks are issued at 1:05 PM, Intune will contact the device at 9 PM to complete the tasks.
+
+In conditions where GMS isn't available, if the device is enrolled with device administrator and running Company Portal 5.0.5655.0 and above, Intune also attempts to check for new tasks and notifications approximately every 15 minutes. Note that this frequency may be affected by the device manufacturer, device usage patterns, and whether battery optimization is enabled for the Company Portal app.
 
 The following tasks can require up to 8 hours to finish: 
 
