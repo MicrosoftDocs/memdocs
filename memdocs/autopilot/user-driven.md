@@ -152,7 +152,7 @@ In addition to these core requirements for user-driven hybrid Azure AD-join, the
 
   - It needs to communicate with the domain controller to authenticate the user.
 
-### User-driven mode for hybrid Azure AD join with VPN support (preview)
+### User-driven mode for hybrid Azure AD join with VPN support
 
 Devices joined to Active Directory require connectivity to an Active Directory domain controller for many activities. These activities include validating the user's credentials when they sign-in, and applying group policy settings. The Autopilot user-driven process for hybrid Azure AD-joined devices validates that the device can contact a domain controller by pinging that domain controller.
 
