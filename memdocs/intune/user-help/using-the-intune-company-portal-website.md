@@ -34,11 +34,11 @@ Use the Intune Company Portal website to remotely manage your work apps and enro
 
 Once you're signed in, you can see your enrolled devices and:  
 
-* [View and manage work apps](manage-apps-cpweb.md): Search and filter your available work apps, including required and already-installed apps. Check the compliance status for each of your devices.  
+* [View and manage work apps](manage-apps-cpweb.md): Search and filter through available work apps, including required and already-installed apps. Check the compliance status for each of your devices.  
 
-* [Remotely lock a device](remote-lock-your-device-cpwebsite.md): Lock a lost or stolen device so that no one else can access it.  
+* [Remotely lock a device](remote-lock-your-device-cpwebsite.md): Lock a lost or stolen device so no one else can access it.  
 
-* [Rename a device](rename-your-device-cpwebsite.md): Change your personal device's generic or default model name so that you can quickly identify in Company Portal.  
+* [Rename a device](rename-your-device-cpwebsite.md): Change the generic or default model name that's shown in Company Portal to something you can quickly identify.  
 
 * [Remove a device](remove-your-device-cpwebsite.md): Remove and unenroll a personal device that's no longer needed for work.  
 
