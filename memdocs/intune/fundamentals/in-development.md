@@ -171,7 +171,7 @@ Applies to:
 
 ## Device enrollment
 
-### Enrollment token lifetime will increase to 65 years for Android Enterprise dedicated devices  <!-- 12775837 -->  
+### Enrollment token lifetime will increase to 65 years for Android Enterprise dedicated devices  <!-- 15094454 -->  
 You'll be able to create an enrollment profile for Android Enterprise dedicated devices that's valid for up to 65 years. If you have an existing profile, the enrollment token will still expire on the date you chose when you created the profile, but when you renew it you'll be able to extend the lifetime to 65 years.
 
 <!-- ***********************************************-->
