@@ -91,8 +91,8 @@ To sign up for the Microsoft Intune free trial, follow the steps below:
 ## Admin experiences
 
 There are two portals that you will use most often:
-- The Microsoft Endpoint Manager admin center ([https://endpoint.microsoft.com/](https://endpoint.microsoft.com/)) is where you can explore the [capabilities of Intune](what-is-intune.md). This is where an admin would work with Intune.
-- The Microsoft 365 admin center ([https://admin.microsoft.com](https://admin.microsoft.com)) is where you can add and manage users, if you are not using Azure Active Directory for this. You can also manage other aspects of your account, including billing and support.
+- The Microsoft 365 admin center ([https://admin.microsoft.com](https://admin.microsoft.com)) is where you can manage your subscription and account details, including billing and support. Also, if you're not using Azure Active Directory, you can add and manage users at this location.
+- The Microsoft Endpoint Manager admin center ([https://endpoint.microsoft.com/](https://endpoint.microsoft.com/)) is where you can explore the [capabilities of Intune](what-is-intune.md). This is where an admin would work with Intune to manage users, devices, and apps.
 
 ## Sign in to Intune
 
@@ -173,7 +173,7 @@ You would not rename or remove the initial *onmicrosoft.com* domain name. Howeve
 
 3. Add your domain name and then click **Use this domain**.
 
-    ![Screenshot of Microsoft 365 admin center - Add a new domain.](./media/free-trial-sign-up/sign-up-for-intune-08.png)
+   :::image type="content" source="./media/free-trial-sign-up/sign-up-for-intune-09.png" alt-text="Screenshot of Microsoft 365 admin center - Add a new domain" border="false":::
 
     If you are using a common domain registrar like GoDaddy or WordPress, verifying your domain is a quick process. In this case, you'll see a 'sign in' option to verify your domain.<p>
 
@@ -183,7 +183,7 @@ You would not rename or remove the initial *onmicrosoft.com* domain name. Howeve
 
 4. If you see the options to add a TXT record, add an MX record, or add a text file to the domain's website, you'll need to choose how you want to verify your domain. 
 
-   ![Screenshot of Microsoft 365 admin center - Verify your domain.](./media/free-trial-sign-up/sign-up-for-intune-08a.png)
+   :::image type="content" source="./media/free-trial-sign-up/sign-up-for-intune-10.png" alt-text="Screenshot of Microsoft 365 admin center - Verify your domain" border="false":::
 
    The steps to add and verify a custom domain can also be [performed in Azure Active Directory](/azure/active-directory/fundamentals/add-custom-domain?azure-portal=true).
 
