@@ -6,7 +6,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/15/2022
+ms.date: 11/23/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -68,6 +68,7 @@ Organizational messages have the following known issues and limitations:
 * Scope groups and scope tags aren't available in organizational messages.   
 * Message priority isn't supported. If you schedule multiple messages of the same type for the same time window, targeted employees will receive the messages in a random order.  
 * We observed that sometimes after admins create a message and receive a success confirmation, a background task fails and limits functionality. The failure isn't communicated in the UI, and the status for the message still appears as **Scheduled**. You'll know this happened if the cancellation option and user engagement details are unavailable. 
+* The [organizational messages delivery policy](organizational-messages-prerequisites.md#organizational-messages-delivery-policy) appears in the admin center, but doesn't work due to a Windows Update delay. You can configure the policy now, but it won't take affect until the next Windows Update comes out at the end of November 2022. In the meantime, the policy isn't required, and doesn't prevent you from creating and deploying organizational messages. If you do configure the policy, it will appear in your summary as **Not applicable** or **Error**.  After the Windows  Update releases, the policy will be required if you want to continue using organizational messages.     
 
 ## Frequently asked questions    
 This section answers frequently asked questions (FAQ) for organizational messages.  
