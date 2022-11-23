@@ -73,7 +73,11 @@ The domain for your custom destination URLs must be added to your list of verifi
 ## Policy requirements  
 There are certain experience and Windows Spotlight policies in Microsoft Intune that block the delivery of organizational messages. This section describes how to adjust all settings so that delivery is always allowed and works as intended. 
 
-### Organizational messages delivery policy      
+### Organizational messages delivery policy 
+
+> [!IMPORTANT]
+> This policy will be available in the preview of the Windows Update monthly rollup which will be released in the end of November 2022. The policy will not be required for devices which don't have the update. 
+
 Enable the delivery of organizational messages in all new and existing policies that are targeted at users and devices receiving organizational messages. 
 
  1. Go to **Settings catalog** > **Experience** > **Enable delivery of organizational messages (User)**. 
