@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/15/2022
+ms.date: 11/23/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -65,6 +65,13 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Scripts
 ### Tenant administration
 -->
+
+## Week of November 28, 2022
+
+### App management
+
+#### Microsoft Store apps in Intune<!-- 12708346 -->
+You can now search, browse, configure, and deploy Microsoft Store apps within Intune. The new Microsoft Store app type implements the Windows Package Manager. This app type features an expanded catalog of apps, which includes both UWP apps and Win32 apps. For more information, see [Add Microsoft Store apps to Microsoft Intune](../apps/store-apps-microsoft.md).
 
 ## Week of November 14, 2022 (Service release 2211)
 

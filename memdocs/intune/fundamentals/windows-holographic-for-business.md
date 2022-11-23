@@ -70,7 +70,7 @@ See also **[Get started with compliance policies](../protect/device-compliance-g
 
 Using Intune, you can add apps to your devices running Windows Holographic for Business. There are many ways to deploy apps, including:
 
-- [Add Microsoft Store apps](../apps/store-apps-windows.md)
+- [Add Microsoft Store apps](../apps/store-apps-microsoft.md)
 - [Add apps you create](../apps/lob-apps-windows.md)
 - [Assign apps to groups](../apps/apps-deploy.md)
 
