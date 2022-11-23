@@ -81,18 +81,20 @@ To sign up for the Microsoft Intune free trial, follow the steps below:
 
    :::image type="content" source="./media/free-trial-sign-up/sign-up-for-intune-06.png" alt-text="Screenshot of the Microsoft Intune set up account page -  Sign in" border="true":::
 
-8. Add your user name and password that you'll use to log in to Microsoft Intune. Review the trial agreement and privacy statement. Click **Sign up** to create your account.
-
-    > [!IMPORTANT]
-    > Be sure to make a note of your user name and password.
-
-      ![Screenshot of the Microsoft Intune set up account page - Add user name and password.](./media/free-trial-sign-up/sign-up-for-intune-07.png)
-
-9. After your account has been created, you'll see your user name. You'll use this user name to log in to Intune. Additionally, you receive an email message that contains your account information at the email address that you provided during the sign-up process. This email confirms your subscription is active.
+8. After your account has been created, you'll see your user name. You'll use this user name to log in to Intune. Additionally, you receive an email message that contains your account information at the email address that you provided during the sign-up process. This email confirms your subscription is active.
 
    :::image type="content" source="./media/free-trial-sign-up/sign-up-for-intune-07.png" alt-text="Screenshot of the Microsoft Intune set up account page -  Confirmation details" border="true":::
 
-### Sign in to Intune
+   > [!NOTE]
+   > If you click **Get Started**, you'll open the **Microsoft 365 admin center** home page. If you click **Manage your subscription**, you'll open **Your products** and view details about your Microsoft Intune Trial subscription.
+
+## Admin experiences
+
+There are two portals that you will use most often:
+- The Microsoft Endpoint Manager admin center ([https://endpoint.microsoft.com/](https://endpoint.microsoft.com/)) is where you can explore the [capabilities of Intune](what-is-intune.md). This is where an admin would work with Intune.
+- The Microsoft 365 admin center ([https://admin.microsoft.com](https://admin.microsoft.com)) is where you can add and manage users, if you are not using Azure Active Directory for this. You can also manage other aspects of your account, including billing and support.
+
+## Sign in to Intune
 
 Once you have signed up for Intune, you can use any device with a [supported browser](/mem/intune/fundamentals/supported-devices-browsers?azure-portal=true#intune-supported-web-browsers) to sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/??zure-portal=true&linkid=2109431) to administer the Intune service.
 
@@ -104,7 +106,7 @@ If you're not already signed in to the portal, complete the following steps:
 1. Open a new browser window and enter **[https://endpoint.microsoft.com](https://endpoint.microsoft.com)** in the address bar.
 2. Use the user ID that you were given in the steps above to sign in. The user ID will look similar to the following: *yourID@yourdomain.onmicrosoft.com*.
 
-    ![Image of the portal sign-in page](./media/free-trial-sign-up/azure-portal-signin.png)
+   :::image type="content" source="./media/free-trial-sign-up/sign-up-for-intune-08.png" alt-text="Image of the portal sign-in page" border="true":::
 
 When you sign up for a trial, you will also receive an email message that contains your account information and the email address that you provided during the sign-up process. This email confirms your trial is active.
 
@@ -113,7 +115,7 @@ When you sign up for a trial, you will also receive an email message that contai
 
 ### View Intune free trial details
 
-To view the Intune product details for your free trial, use the following steps:
+If you haven't already viewed your Intune free trial details, view these details using the following steps:
 
 1. Sign in to the [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?LinkId=698854).
 2. Select **Home** > **Subscription** > **Your products** > **Products** > **Microsoft Intune Trial**.
@@ -128,17 +130,18 @@ To confirm that your MDM authority is set to Intune, use the following steps:
 2. Under the **Tenant details** tab, find **MDM authority**.
 3. Confirm your **MDM authority** is set to **Microsoft Intune**.
 
-If after signing in to the Microsoft Endpoint Manager, you see an orange banner indicating that you haven't yet set the MDM authority, you can activate it at this time. The mobile device management (MDM) authority setting determines how you manage your devices. The MDM authority must be set before users can enroll devices for management.
+> [!IMPORTANT]
+> If after signing in to the Microsoft Endpoint Manager, you see an orange banner indicating that you haven't yet set the MDM authority, you can activate it at this time. The mobile device management (MDM) authority setting determines how you manage your devices. The MDM authority must be set before devices can be enrolled for management.
 
 ### Set the MDM authority to Intune
 
-1. If you do not have the MEM authority set, sign in to the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com). 
+1. If you do not have the MEM authority set, sign in to the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com).
 2. Select the orange banner to open the **Mobile Device Management Authority** setting. The orange banner is only displayed if you haven't yet set the MDM authority. 
 
     > [!NOTE]
     > If you have set the MDM Authority, you will see the MDM authority value on the **Tenant administration** pane. The orange banner is only displayed if you haven't yet set the MDM authority. 
 
-    ![Image of the Choose MDM Authority blade](./media/free-trial-sign-up/choose-mdm-authority.png) 
+   :::image type="content" source="./media/free-trial-sign-up/choose-mdm-authority.png" alt-text="Image of the Choose MDM Authority pane" border="false":::
 
 3. If your MDM Authority is not set, under **Choose MDM Authority**, set your MDM authority to **Intune MDM Authority**.
 
@@ -184,17 +187,11 @@ You would not rename or remove the initial *onmicrosoft.com* domain name. Howeve
 
    The steps to add and verify a custom domain can also be [performed in Azure Active Directory](/azure/active-directory/fundamentals/add-custom-domain?azure-portal=true).
 
-## Confirm your licenses
+## Confirm your license
 
 A Microsoft Intune license is created for you when you sign up for the Intune free trial. As part of this trial, you'll also have a trial Enterprise Mobility + Security (EMS) subscription. An Enterprise Mobility + Security (EMS) subscription includes both Azure Active Directory Premium and Microsoft Intune.
 
 To confirm your Azure Active Directory Premium and Microsoft Intune, see [Confirm your licenses](../fundamentals/licenses.md#confirm-your-licenses).
-
-## Admin experiences
-
-There are two portals that you will use most often:
-- The Microsoft Endpoint Manager admin center ([https://endpoint.microsoft.com/](https://endpoint.microsoft.com/)) is where you can explore the [capabilities of Intune](what-is-intune.md). This is where an admin would work with Intune.
-- The Microsoft 365 admin center ([https://admin.microsoft.com](https://admin.microsoft.com)) is where you can add and manage users, if you are not using Azure Active Directory for this. You can also manage other aspects of your account, including billing and support.
 
 ## Next steps
 
