@@ -17,7 +17,7 @@ ms.localizationpriority: medium
 
 *Applies to: Configuration Manager (technical preview branch)*
 
-This article introduces the features that are available in the technical preview for Configuration Manager, version 2210. Install this version to update and add new features to your technical preview site. When you install a new technical preview site, this release is also available as a baseline version. 
+This article introduces the features that are available in the technical preview for Configuration Manager, version 2211. Install this version to update and add new features to your technical preview site.
 <!-- baseline only statement:  When you install a new technical preview site, this release is also available as a baseline version.-->
 
 Review the [technical preview](../technical-preview.md) article before installing this update. That article familiarizes you with the general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback.
@@ -26,7 +26,7 @@ The following sections describe the new features to try out in this version:
 
 <!-- [!INCLUDE [Example feature name](includes/2208/1234567.md)] -->
 
-[!INCLUDE [Featured Apps in Software Center](includes/2210/3601183.md)]
+
 
 <!-- ## General known issues  -->
 
