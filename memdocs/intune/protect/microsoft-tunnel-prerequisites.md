@@ -208,7 +208,7 @@ For more information, see [Configuring container networking with Podman](https:/
 
 - **Load balancers** *(Optional)*:  If you choose to add a load balancer, consult your vendors documentation for configuration details. Take into consideration network traffic and firewall ports specific to Intune and the Microsoft Tunnel.
 
-- **Per-app VPN and Top-level domain support** - Per-app-VPN use with internal use of top-level domains is not supported by Microsoft Tunnel.
+- **Per-app VPN and Top-level domain support** - Per-app-VPN use with internal use of local top-level domains is not supported by Microsoft Tunnel.
 
 ## Firewall
 
