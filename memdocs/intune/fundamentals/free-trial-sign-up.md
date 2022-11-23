@@ -31,7 +31,7 @@ ms.collection:
 
 # Try Microsoft Intune for free
 
-Microsoft Intune helps you protect your workforce's corporate data by managing devices and apps. By following the steps in this topic, you'll create a free subscription to setup Microsoft Intune in a test environment.
+Microsoft Intune helps you protect your workforce's corporate data by managing devices and apps. By following the steps below, you'll create a free subscription to try Microsoft Intune in a test environment.
 
 Intune, which is a part of [Microsoft Endpoint Manager](/training/paths/endpoint-manager-fundamentals/), provides the cloud infrastructure, the cloud-based mobile device management (MDM), the cloud-based mobile application management (MAM), and the cloud-based PC management for your organization. It lets you protect your organization by controlling features and settings on Android, Android Enterprise, iOS/iPadOS, macOS, and Windows 10/11 devices. It integrates closely with Azure Active Directory (Azure AD) for identity and access control and also Azure Information Protection to help protect your organization's data. If you have on-premises infrastructure, such as Exchange or an Active Directory, you can use Intune connectors to help you connect to external services. Intune is included in Microsoft's [Enterprise Mobility + Security (EMS) suite](https://www.microsoft.com/microsoft-365/enterprise-mobility-security?azure-portal=true).
 
