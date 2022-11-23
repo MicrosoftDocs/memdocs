@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/10/2022
+ms.date: 11/23/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -36,7 +36,7 @@ Devices are evaluated against these filters to meet the rules you configure. The
 Use this article to learn more about the reporting features, and to help troubleshoot filters and conflicts.
 
 > [!IMPORTANT]
-> From evaluation time, the filter evaluation results can take up to 30 minutes to show in Endpoint Manager admin center.
+> From evaluation time, the filter evaluation results can take up to 30 minutes to show in the Endpoint Manager admin center.
 
 ## Reports
 
