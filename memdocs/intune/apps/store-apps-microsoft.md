@@ -58,7 +58,7 @@ Use the following steps to add and deploy a Microsoft Store app.
 
 ### Step 1: Add an app from the Microsoft Store
 
-1. In the [admin portal](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All apps** > **Add**. 
+1. In the [admin portal](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All apps** > **Add**.
 2. In **Select app type** pane, select **Microsoft Store app (new)** under the **Store app** section.
 3. Choose **Select** at the bottom of the page to begin creating an app from the Microsoft Store.
     The app creation experience has three steps:
