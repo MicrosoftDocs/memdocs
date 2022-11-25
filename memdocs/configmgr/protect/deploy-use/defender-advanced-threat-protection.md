@@ -17,9 +17,11 @@ ms.collection: tier3
 
 *Applies to: Configuration Manager (current branch)*
 
-Endpoint Protection can help manage and monitor [Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection). Microsoft Defender for Endpoint helps enterprises detect, investigate, and respond to advanced attacks on their networks. Configuration Manager policies can help you onboard and monitor Windows 10 or later clients.
+Endpoint Protection can help manage and monitor [Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint). Microsoft Defender for Endpoint helps enterprises detect, investigate, and respond to advanced attacks on their networks. Configuration Manager policies can help you onboard and monitor Windows 10 or later clients.
 
-Microsoft Defender for Endpoint's cloud-based portal is [Microsoft Defender Security Center](https://securitycenter.windows.com). By adding and deploying a client onboarding configuration file, Configuration Manager can monitor deployment status and Microsoft Defender for Endpoint agent health. Microsoft Defender for Endpoint is supported on PCs running the Configuration Manager client or [managed by Microsoft Intune](/intune/protect/advanced-threat-protection).
+By adding and deploying a client onboarding configuration file, Configuration Manager can monitor deployment status and Microsoft Defender for Endpoint agent health. Microsoft Defender for Endpoint is supported on PCs running the Configuration Manager client or [managed by Microsoft Intune](/intune/protect/advanced-threat-protection).
+
+Microsoft has gathered all Defender products under one portal, the [Microsoft 365 Defender portal](https://security.windows.com).
 
 ## Prerequisites
 
@@ -58,6 +60,7 @@ Different operating systems have different needs for onboarding to Microsoft Def
 If you choose to use MMA, you need the **Workspace key** and **Workspace ID** to onboard. Configuration Manager also installs the Microsoft Monitoring Agent (MMA) when needed by onboarded devices but it doesn't update the agent automatically.
 
 Up-level operating systems include:
+
 - Windows 10, version 1607 and later
 - Windows 11
 - Windows Server Semi-Annual Channel (SAC), version 1803 or later
@@ -65,10 +68,12 @@ Up-level operating systems include:
 - Windows Server 2022
 
 Down-level operating systems that support MDE Client include:
+
 - Windows Server 2012 R2
 - Windows Server 2016
 
 Down-level operating systems that require MMA Agent:
+
 - Windows 8.1
 
 > [!NOTE]
@@ -82,10 +87,10 @@ When you onboard devices to Microsoft Defender for Endpoint with Configuration M
 > [!WARNING]
 > If your target collection contains down-level devices that require MMA, and you use the instructions for onboarding using MDE Client, then the down-level devices won't be onboarded. The optional **Workspace key** and **Workspace ID** fields are used for onboarding down-level devices that require MMA, but if they aren't included then the policy will fail on down-level clients that require MMA.
 
-
 ### <a name="bkmk_2207_uplevel"></a> Onboard devices using MDE Client to Microsoft Defender for Endpoint (recommended)
 
 Up-level clients require an onboarding configuration file for onboarding to Microsoft Defender for Endpoint. Up-level operating systems include:
+
 - Windows 11
 - Windows 10, version 1607 and later
 - Windows Server Semi-Annual Channel (SAC), version 1803 and later
@@ -93,6 +98,7 @@ Up-level clients require an onboarding configuration file for onboarding to Micr
 - Windows Server 2022
 
 Down-level operating systems that support MDE Client include:
+
 - Windows Server 2012 R2
 - Windows Server 2016
 
@@ -100,7 +106,7 @@ Down-level operating systems that support MDE Client include:
 
 ##### Prerequisites for Windows Server 2012 R2
 
-If you have fully updated your machines with the latest [monthly rollup](https://support.microsoft.com/topic/october-12-2021-kb5006714-monthly-rollup-4dc4a2cd-677c-477b-8079-dcfef2bda09e) package, there are **no** additional prerequisites.
+If you have fully updated your machines with the latest [monthly rollup](https://support.microsoft.com/help/4009470) package, there are **no** additional prerequisites.
 
 The installer package will check if the following components have already been installed via an update:
 
@@ -110,37 +116,37 @@ The installer package will check if the following components have already been i
 ##### Prerequisites for Windows Server 2016
 
 - The Servicing Stack Update (SSU) from September 14, 2021 or later must be installed.
-- The Latest Cumulative Update (LCU) from September 20, 2018 or later must be installed.  It is recommended to install the latest available SSU and LCU on the server.  - The Microsoft Defender Antivirus feature must be enabled/installed and up to date. You can download and install the latest platform version using Windows Update. Alternatively, download the update package manually from the [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4052623) or from [MMPC](https://go.microsoft.com/fwlink/?linkid=870379&arch=x64).
+- The Latest Cumulative Update (LCU) from September 20, 2018 or later must be installed. It is recommended to install the latest available SSU and LCU on the server.
+- The Microsoft Defender Antivirus feature must be enabled/installed and up to date. You can download and install the latest platform version using Windows Update. Alternatively, download the update package manually from the [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4052623) or from [MMPC](https://go.microsoft.com/fwlink/?linkid=870379&arch=x64).
 
 #### Get an onboarding configuration file for up-level devices
 
-1. Go to the [Microsoft Defender Security Center](https://securitycenter.windows.com/) and sign in.
-1. Select **Settings**, then select **Onboarding** under the **Endpoint** heading.
-1. For the operating system, select **Windows 10 and 11**.
+1. Go to the [Microsoft 365 Defender portal](https://security.windows.com/) and sign in.
+1. Select **Settings**, select **Endpoints**, then select **Onboarding** under the **Device management** heading.
+1. For the operating system, select **Windows Server 1803, 2019 and 2022**.
 1. Choose **Microsoft Endpoint Configuration Manager current branch and later** for the deployment method.
-1. Select **Download package**.
+1. Select **Download onboarding package**.
 1. Download the compressed archive (.zip) file and extract the contents.
-    > [!NOTE]
-    > The steps have you download the onboarding file for Windows 10 and 11 but this file is also used for up-level Server operating systems.
 
 > [!IMPORTANT]
 > - The Microsoft Defender for Endpoint configuration file contains sensitive information which should be kept secure.
 > - If your target collection contains down-level devices that require MMA, and you use the instructions for onboarding using MDE Client, then the down-level devices won't be onboarded. The optional **Workspace key** and **Workspace ID** fields are used for onboarding down-level devices, but if they aren't included then the policy will fail on down-level clients.
-
 
 #### Onboard the up-level devices
 
 1. In the Configuration Manager console, navigate to **Administration** > **Client Settings**.
 1. Create custom Client Device Settings or go to the properties of the required client setting and select **Endpoint Protection**
 1. For **Microsoft Defender for Endpoint Client on Windows Server 2012 R2 and Windows Server 2016** setting, The default value is set as **Microsoft Monitoring Agent (legacy)** which needs to be changed to **MDE Client (recommended)**.
-:::image type="content" source="media/9265511-mde-downlevel-support-client-settings.png" alt-text="Screenshot of Client Settings for Endpoint Protection showing different options for down-level server operating system devices." lightbox="media/9265511-mde-downlevel-support-client-settings.png":::
-1. In the Configuration Manager console, navigate to **Assets and Compliance** > **Endpoint Protection** > **Microsoft Defender ATP Policies** and select **Create Microsoft Defender ATP Policy**. The policy wizard opens.  
+
+   :::image type="content" source="media/9265511-mde-downlevel-support-client-settings.png" alt-text="Screenshot of Client Settings for Endpoint Protection showing different options for down-level server operating system devices." lightbox="media/9265511-mde-downlevel-support-client-settings.png":::
+
+1. In the Configuration Manager console, navigate to **Assets and Compliance** > **Endpoint Protection** > **Microsoft Defender ATP Policies** and select **Create Microsoft Defender ATP Policy**. The policy wizard opens.
 1. Type the **Name** and **Description** for the Microsoft Defender for Endpoint policy and select **Onboarding**.
 1. **Browse** to the configuration file you extracted from the downloaded .zip file.
-1. Specify the file samples that are collected and shared from managed devices for analysis.  
+1. Specify the file samples that are collected and shared from managed devices for analysis.
    - **None**
    - **All file types**  
-1. Review the summary and complete the wizard.  
+1. Review the summary and complete the wizard.
 1. Right-click on the policy you created, then select **Deploy** to target the Microsoft Defender for Endpoint policy to clients.
 
 ### <a name="bkmk_2207_any_os"></a> Onboard devices with MDE Client and MMA to Microsoft Defender for Endpoint
@@ -149,23 +155,21 @@ The installer package will check if the following components have already been i
 
 #### Get the configuration file, workspace ID, and workspace key
 
-1. Go to the [Microsoft Defender for Endpoint online service](https://security.microsoft.com/) and sign in.
-1. Select **Settings**, then select **Onboarding** under the **Endpoints** heading.
+1. Go to the [Microsoft 365 Defender portal](https://security.microsoft.com/) and sign in.
+1. Select **Settings**, select **Endpoints**, then select **Onboarding** under the **Device management** heading.
 1. For the operating system, select **Windows 10 and 11**.
 1. Choose **Microsoft Endpoint Configuration Manager current branch and later** for the deployment method.
-1. Select **Download package**.
-   
+1. Select **Download onboarding package**.
+
    :::image type="content" source="media/5229962-onboarding-configuration.png" alt-text="Screenshot of onboarding configuration file download." lightbox="media/5229962-onboarding-configuration.png":::
 
 1. Download the compressed archive (.zip) file and extract the contents.
-1. Select **Settings**, then select **Onboarding** under the **Device management** heading.
-1. For the operating system, select either **Windows 7 SP1 and 8.1** or **Windows Server 2008 R2 Sp1, 2012 R2 and 2016** from the list.
-   - The **Workspace key** and **Workspace ID** will be the same regardless of which of these options you choose.
-1. Copy the values for the **Workspace key** and **Workspace ID** from the **Configure connection** section.
+1. Change the operating system to either **Windows 7 SP1 and 8.1** or **Windows Server 2008 R2 Sp1** from the list.
+   - The **Workspace ID** and **Workspace key** will be the same regardless of which of these options you choose.
+1. Copy the values for the **Workspace ID** and **Workspace key** from the **Configure connection** section.
 
    > [!IMPORTANT]
    > The Microsoft Defender for Endpoint configuration file contains sensitive information which should be kept secure.
-
 
 #### Onboard the devices
 
@@ -180,10 +184,10 @@ The installer package will check if the following components have already been i
    - Verify that the **Workspace key** and **Workspace ID** are in the correct fields. The order in the console may vary from the order in Microsoft Defender for Endpoint online service. <!--8538605-->
    :::image type="content" source="media/5229962-create-atp-policy-wizard.png" alt-text="Screenshot of Microsoft Defender for Endpoint policy configuration wizard." lightbox="media/5229962-create-atp-policy-wizard.png":::
 
-1. Specify the file samples that are collected and shared from managed devices for analysis.  
+1. Specify the file samples that are collected and shared from managed devices for analysis.
    - **None**
    - **All file types**  
-1. Review the summary and complete the wizard.  
+1. Review the summary and complete the wizard.
 1. Right-click on the policy you created, then select **Deploy** to target the Microsoft Defender for Endpoint policy to clients.
 
 ## <a name="bkmk_2203"></a> About onboarding to Microsoft Defender for Endpoint with Configuration Manager (2203 and earlier)
@@ -191,6 +195,7 @@ The installer package will check if the following components have already been i
 Different operating systems have different needs for onboarding to Microsoft Defender for Endpoint. Windows 8.1 and other down-level operating system devices need the **Workspace key** and **Workspace ID** to onboard. Up-level devices, such as Windows Server version 1803, need the onboarding configuration file. Configuration Manager also installs the Microsoft Monitoring Agent (MMA) when needed by onboarded devices but it doesn't update the agent automatically.
 
 Up-level operating systems include:
+
 - Windows 10, version 1607 and later
 - Windows 11
 - Windows Server Semi-Annual Channel (SAC), version 1803 or later
@@ -198,6 +203,7 @@ Up-level operating systems include:
 - Windows Server 2022
 
 Down-level operating systems include:
+
 - Windows 8.1
 - Windows Server 2012 R2
 - Windows Server 2016
@@ -213,28 +219,28 @@ When you onboard devices to Microsoft Defender for Endpoint with Configuration M
 > [!WARNING]
 > If your target collection contains down-level devices, and you use the instructions for onboarding only up-level devices, then the down-level devices won't be onboarded. The optional **Workspace key** and **Workspace ID** fields are used for onboarding down-level devices, but if they aren't included then the policy will fail on down-level clients.
 
-
 ### <a name="bkmk_any_os"></a> Onboard devices with any supported operating system to Microsoft Defender for Endpoint (recommended)
+
  You can onboard devices running any of the [supported operating systems](#bkmk_os) to Microsoft Defender for Endpoint by providing the configuration file, **Workspace key**, and **Workspace ID** to Configuration Manager.
 
 #### Get the configuration file, workspace ID, and workspace key
 
-1. Go to the [Microsoft Defender for Endpoint online service](https://security.microsoft.com/) and sign in.
-1. Select **Settings**, then select **Onboarding** under the **Endpoints** heading.
+
+1. Go to the [Microsoft 365 Defender portal](https://security.microsoft.com/) and sign in.
+1. Select **Settings**, select **Endpoints**, then select **Onboarding** under the **Device management** heading.
 1. For the operating system, select **Windows 10 and 11**.
 1. Choose **Microsoft Endpoint Configuration Manager current branch and later** for the deployment method.
-1. Select **Download package**.
-   
-   :::image type="content" source="media/5229962-onboarding-configuration.png" alt-text="Onboarding configuration file download" lightbox="media/5229962-onboarding-configuration.png":::
+1. Select **Download onboarding package**.
+
+   :::image type="content" source="media/5229962-onboarding-configuration.png" alt-text="Screenshot of onboarding configuration file download." lightbox="media/5229962-onboarding-configuration.png":::
+
 1. Download the compressed archive (.zip) file and extract the contents.
-1. Select **Settings**, then select **Onboarding** under the **Device management** heading.
-1. For the operating system, select either **Windows 7 SP1 and 8.1** or **Windows Server 2008 R2 Sp1, 2012 R2 and 2016** from the list.
-   - The **Workspace key** and **Workspace ID** will be the same regardless of which of these options you choose.
-1. Copy the values for the **Workspace key** and **Workspace ID** from the **Configure connection** section.
+1. Change the operating system to either **Windows 7 SP1 and 8.1** or **Windows Server 2008 R2 Sp1** from the list.
+   - The **Workspace ID** and **Workspace key** will be the same regardless of which of these options you choose.
+1. Copy the values for the **Workspace ID** and **Workspace key** from the **Configure connection** section.
 
    > [!IMPORTANT]
    > The Microsoft Defender for Endpoint configuration file contains sensitive information which should be kept secure.
-
 
 #### Onboard the devices
 
@@ -245,19 +251,18 @@ When you onboard devices to Microsoft Defender for Endpoint with Configuration M
 1. Supply the **Workspace key** and **Workspace ID** then select **Next**.
    - Verify that the **Workspace key** and **Workspace ID** are in the correct fields. The order in the console may vary from the order in Microsoft Defender for Endpoint online service. <!--8538605-->
    :::image type="content" source="media/5229962-create-atp-policy-wizard.png" alt-text="Create Microsoft Defender for Endpoint Policy Wizard" lightbox="media/5229962-create-atp-policy-wizard.png":::
-
-1. Specify the file samples that are collected and shared from managed devices for analysis.  
+1. Specify the file samples that are collected and shared from managed devices for analysis.
    - **None**
    - **All file types**  
-1. Review the summary and complete the wizard.  
+1. Review the summary and complete the wizard.
 1. Right-click on the policy you created, then select **Deploy** to target the Microsoft Defender for Endpoint policy to clients.
-
 
 ### <a name="bkmk_uplevel"></a> Onboard devices running only up-level operating systems to Microsoft Defender for Endpoint
 
 Up-level clients require an onboarding configuration file for onboarding to Microsoft Defender for Endpoint. Up-level operating systems include:
+
 - Windows 11
-- Windows 10, version 1607 and later 
+- Windows 10, version 1607 and later
 - Windows Server Semi-Annual Channel (SAC), version 1803 and later
 - Windows Server 2019
 - Windows Server 2022
@@ -266,66 +271,61 @@ If your target collection contains both up-level and down-level devices, or if y
 
 #### Get an onboarding configuration file for up-level devices
 
-1. Go to the [Microsoft Defender Security Center](https://securitycenter.windows.com/) and sign in.
-1. Select **Settings**, then select **Onboarding** under the **Endpoint** heading.
+1. Go to the [Microsoft 365 Defender portal](https://security.microsoft.com/) and sign in.
+1. Select **Settings**, select **Endpoints**, then select **Onboarding** under the **Device management** heading.
 1. For the operating system, select **Windows 10 and 11**.
 1. Choose **Microsoft Endpoint Configuration Manager current branch and later** for the deployment method.
-1. Select **Download package**.
+1. Select **Download onboarding package**.
+
+   :::image type="content" source="media/5229962-onboarding-configuration.png" alt-text="Screenshot of onboarding configuration file download." lightbox="media/5229962-onboarding-configuration.png":::
+
 1. Download the compressed archive (.zip) file and extract the contents.
     > [!NOTE]
     > The steps have you download the onboarding file for Windows 10 and 11 but this file is also used for up-level Server operating systems.
+1. Change the operating system to either **Windows 7 SP1 and 8.1** or **Windows Server 2008 R2 Sp1** from the list.
+   - The **Workspace ID** and **Workspace key** will be the same regardless of which of these options you choose.
+1. Copy the values for the **Workspace ID** and **Workspace key** from the **Configure connection** section.
 
 > [!IMPORTANT]
 > - The Microsoft Defender for Endpoint configuration file contains sensitive information which should be kept secure.
 > - If your target collection contains down-level devices, and you use the instructions for onboarding only up-level devices, then the down-level devices won't be onboarded. The optional **Workspace key** and **Workspace ID** fields are used for onboarding down-level devices, but if they aren't included then the policy will fail on down-level clients.
 
-
 #### Onboard the up-level devices
 
-1. In the Configuration Manager console, navigate to **Assets and Compliance** > **Endpoint Protection** > **Microsoft Defender ATP Policies** and select **Create Microsoft Defender ATP Policy**. The policy wizard opens.  
+1. In the Configuration Manager console, navigate to **Assets and Compliance** > **Endpoint Protection** > **Microsoft Defender ATP Policies** and select **Create Microsoft Defender ATP Policy**. The policy wizard opens.
 1. Type the **Name** and **Description** for the Microsoft Defender for Endpoint policy and select **Onboarding**.
 1. **Browse** to the configuration file you extracted from the downloaded .zip file.
-1. Specify the file samples that are collected and shared from managed devices for analysis.  
+1. Specify the file samples that are collected and shared from managed devices for analysis.
    - **None**
    - **All file types**  
-1. Review the summary and complete the wizard.  
+1. Review the summary and complete the wizard.
 1. Right-click on the policy you created, then select **Deploy** to target the Microsoft Defender for Endpoint policy to clients.
 
 ## Monitor
 
-1. In the Configuration Manager console, navigate **Monitoring** > **Security** and then select **Microsoft Defender ATP**.  
-
-1. Review the Microsoft Defender for Endpoint dashboard.  
-
-    - **Microsoft Defender ATP Agent Onboarding Status**: The number and percentage of eligible managed client computers with active Microsoft Defender for Endpoint policy onboarded  
-
-    - **Microsoft Defender ATP Agent Health**: Percentage of computer clients reporting status for their Microsoft Defender for Endpoint agent  
-
-        - **Healthy** - Working properly  
-
-        - **Inactive** - No data sent to service during time period  
-
-        - **Agent state** - The system service for the agent in Windows isn't running  
-
-        - **Not onboarded** - Policy was applied but the agent hasn't reported policy onboard  
+1. In the Configuration Manager console, navigate **Monitoring** > **Security** and then select **Microsoft Defender ATP**.
+1. Review the Microsoft Defender for Endpoint dashboard.
+    - **Microsoft Defender ATP Agent Onboarding Status**: The number and percentage of eligible managed client computers with active Microsoft Defender for Endpoint policy onboarded
+    - **Microsoft Defender ATP Agent Health**: Percentage of computer clients reporting status for their Microsoft Defender for Endpoint agent
+        - **Healthy** - Working properly
+        - **Inactive** - No data sent to service during time period
+        - **Agent state** - The system service for the agent in Windows isn't running
+        - **Not onboarded** - Policy was applied but the agent hasn't reported policy onboard
 
 ## Create an offboarding configuration file  
 
-1. Sign in to the [Microsoft Defender Security Center](https://securitycenter.windows.com/).
-1. Select **Settings**, then select **Offboarding** under the **Endpoint** heading.
-1. Select **Windows 10 and 11** for the operating system and **Microsoft Endpoint Configuration Manager current branch and later** for the deployment method.
-   - Using the **Windows 10 and 11** option ensures that all devices in the collection are off boarded and the MMA is uninstalled when needed.
+1. Sign in to the [Microsoft 365 Defender portal](https://security.windows.com/).
+1. Select **Settings**, select **Endpoints** then select **Offboarding** under the **Device management** heading.
+1. Select **Windows 10 and 11** for the operating system.
+   - Using the **Windows 10 and 11** option ensures that all devices in the collection are offboarded and the MMA is uninstalled when needed.
+1. Select **Microsoft Endpoint Configuration Manager current branch and later** for the deployment method.
 1. Download the compressed archive (.zip) file and extract the contents. Offboarding files are valid for 30 days.
-
-1. In the Configuration Manager console, navigate to **Assets and Compliance** > **Endpoint Protection** > **Microsoft Defender ATP Policies** and select **Create Microsoft Defender ATP Policy**. The policy wizard opens.  
-
+1. In the Configuration Manager console, navigate to **Assets and Compliance** > **Endpoint Protection** > **Microsoft Defender ATP Policies** and select **Create Microsoft Defender ATP Policy**. The policy wizard opens.
 1. Type the **Name** and **Description** for the Microsoft Defender for Endpoint policy and select **Offboarding**.
-
 1. **Browse** to the configuration file you extracted from the downloaded .zip file.
+1. Review the summary and complete the wizard.
 
-1. Review the summary and complete the wizard.  
-
-Select **Deploy** to target the Microsoft Defender for Endpoint policy to clients.  
+Select **Deploy** to target the Microsoft Defender for Endpoint policy to clients.
 
 > [!IMPORTANT]
 > The Microsoft Defender for Endpoint configuration files contains sensitive information which should be kept secure.
@@ -333,5 +333,4 @@ Select **Deploy** to target the Microsoft Defender for Endpoint policy to client
 ## Next steps
 
 - [Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection)
-
 - [Troubleshoot Microsoft Defender for Endpoint onboarding issues](/windows/security/threat-protection/microsoft-defender-atp/troubleshoot-onboarding)
