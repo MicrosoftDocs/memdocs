@@ -479,6 +479,10 @@ For Configuration Manager version 2211, this level includes the following data:
 
 - Aggregated statistics for Microsoft Defender for Endpoint policies
 
+- ***[New]*** Count of Microsoft Defender Application Guard policies, deployments, and targeted clients
+
+- ***[New]*** Count of Microsoft Defender Application Control policies, deployments, and targeted clients
+
 ### Migration (Level 2)
 
 - Count of migrated objects (use of migration wizard)
