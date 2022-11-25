@@ -131,18 +131,19 @@ For more information, see [Create and deploy Microsoft Defender Application Guar
 ### Enhancements in console search experience
 
 <!--14908615-->
-
-The hint text in the search box will now indicate the scope of the search. Also, search experience related issues have been fixed.
-
-### Improvements to the dark theme
-
-The dark theme has been available as a pre-release feature since 2203. In this release we've extended the dark theme to additional components such as buttons, context menus, and hyperlinks. Enable this pre-release feature to experience the dark theme.
-  
-
-<!--14908615-->
+When performing a search on any node in the console, the hint text in the search bar will now indicate the scope of the search. Also, search experience related issues have been fixed.
+ - By default, all subfolders are searched when you perform a search in any node that contains subfolders. You can narrow down the search by selecting the “Current Node” option from the search toolbar.
+ - If you want to expand the search to include all nodes, then select the “All Objects” button in the ribbon.
 
 For more information, see [Console changes and tips](../../servers/manage/admin-console-tips.md#bkmk_2207).
 
+### Dark theme is now extended to more dashboards
+
+The dark theme has been available as a pre-release feature since 2203. We've extended the dark theme to additional components such as buttons, context menus, and hyperlinks. Enable this pre-release feature to experience the dark theme.
+In this release we've extended the dark theme to more dashboards, which previously didn't display the dark theme correctly. For example, the O365 Updates Dashboard, PCM Dashboard, and Health Attestation dashboard will now display according to the dark theme, when it's enabled. Pop-ups in the Health attestation dashboard will now adhere to the dark theme.
+
+Enable this pre-release feature to experience the dark theme. For more information, see [Dark theme for the console](../../servers/manage/admin-console.md).
+  
 
 
 <!--## Tools-->
