@@ -26,6 +26,11 @@ To take full advantage of new Configuration Manager features, after you update t
 
 ## Cloud-attached management
 
+### Improvements to Cloud Sync (Collections to AAD Group Sync) feature
+Starting Configuration Manager version 2211, the scalability of this feature has been improved with better throttling and error handling. Additionally, dedicated dashboards for user collections and device collections are added in Monitoring workspace to show Cloud Sync status. The dashboard displays the Cloud Sync status per collection with the mapped Azure AD group, total member count, synced member count, status (success, failed, in progress) and last sync details. 
+
+For more information, see [Synchronize collections to Azure AD Group](../../clients/manage/collections/synchronize-collections-aadgroup.md).
+
 ### Use Intune role-based access control (RBAC) for tenant attached devices 
 <!--8126836, 6415648, 8348644, IN14996522, 13058986-->
 
