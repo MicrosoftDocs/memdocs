@@ -26,6 +26,10 @@ This article describes known issues that can often be resolved by configuration 
 
 ## Known issues
 
+## Autopilot profile not applied after re-imaging to an older OS version
+
+If you enroll a device with the 9C 2022 quality update or later and then re-image an older version, the Autopilot profile will not be applied. The device would need to be re-registered to complete a successful Autopilot deployment.
+
 ### TPM attestation failure with error code 0x81039001
 
 Some devices may intermittently fail TPM attestation during Windows Autopilot pre-provisioning technician flow or self-deployment mode with the error code 0x81039001 E_AUTOPILOT_CLIENT_TPM_MAX_ATTESTATION_RETRY_EXCEEDED. This failure occurs during the 'Securing your hardware' step for Windows Autopilot devices deployed using self-deploying mode or pre-provisioning mode. Subsequent attempts to provision may resolve the issue.
