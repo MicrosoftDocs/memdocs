@@ -305,12 +305,12 @@ If your target collection contains both up-level and down-level devices, or if y
 
 1. In the Configuration Manager console, navigate to **Monitoring** > **Security** and then select **Microsoft Defender ATP**.
 1. Review the Microsoft Defender for Endpoint dashboard.
-    - **Microsoft Defender ATP Agent Onboarding Status**: The number and percentage of eligible managed client computers with active Microsoft Defender for Endpoint policy onboarded
-    - **Microsoft Defender ATP Agent Health**: Percentage of computer clients reporting status for their Microsoft Defender for Endpoint agent
-        - **Healthy** - Working properly
-        - **Inactive** - No data sent to service during time period
-        - **Agent state** - The system service for the agent in Windows isn't running
-        - **Not onboarded** - Policy was applied but the agent hasn't reported policy onboard
+    - **Microsoft Defender ATP Agent Onboarding Status**: The number and percentage of eligible managed client computers with active Microsoft Defender for Endpoint policy onboarded.
+    - **Microsoft Defender ATP Agent Health**: Percentage of computer clients reporting status for their Microsoft Defender for Endpoint agent:
+        - **Healthy** - Working properly.
+        - **Inactive** - No data sent to service during time period.
+        - **Agent state** - The system service for the agent in Windows isn't running.
+        - **Not onboarded** - Policy was applied but the agent hasn't reported policy onboard.
 
 ## Create an offboarding configuration file  
 
