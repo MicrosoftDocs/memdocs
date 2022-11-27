@@ -303,7 +303,7 @@ If your target collection contains both up-level and down-level devices, or if y
 
 ## Monitor
 
-1. In the Configuration Manager console, navigate **Monitoring** > **Security** and then select **Microsoft Defender ATP**.
+1. In the Configuration Manager console, navigate to **Monitoring** > **Security** and then select **Microsoft Defender ATP**.
 1. Review the Microsoft Defender for Endpoint dashboard.
     - **Microsoft Defender ATP Agent Onboarding Status**: The number and percentage of eligible managed client computers with active Microsoft Defender for Endpoint policy onboarded
     - **Microsoft Defender ATP Agent Health**: Percentage of computer clients reporting status for their Microsoft Defender for Endpoint agent
