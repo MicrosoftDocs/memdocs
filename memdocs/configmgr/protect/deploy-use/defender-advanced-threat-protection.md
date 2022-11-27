@@ -135,8 +135,8 @@ The installer package will check if the following components have already been i
 #### Onboard the up-level devices
 
 1. In the Configuration Manager console, navigate to **Administration** > **Client Settings**.
-1. Create custom Client Device Settings or go to the properties of the required client setting and select **Endpoint Protection**
-1. For **Microsoft Defender for Endpoint Client on Windows Server 2012 R2 and Windows Server 2016** setting, The default value is set as **Microsoft Monitoring Agent (legacy)** which needs to be changed to **MDE Client (recommended)**.
+1. Create custom Client Device Settings or go to the properties of the required client setting and select **Endpoint Protection**.
+1. For **Microsoft Defender for Endpoint Client on Windows Server 2012 R2 and Windows Server 2016** setting, the default value is set as **Microsoft Monitoring Agent (legacy)** which needs to be changed to **MDE Client (recommended)**.
 
    :::image type="content" source="media/9265511-mde-downlevel-support-client-settings.png" alt-text="Screenshot of Client Settings for Endpoint Protection showing different options for down-level server operating system devices." lightbox="media/9265511-mde-downlevel-support-client-settings.png":::
 
