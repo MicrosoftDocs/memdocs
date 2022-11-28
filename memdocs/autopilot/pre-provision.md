@@ -10,11 +10,11 @@ ms.sitesec: library
 ms.pagetype: deploy
 audience: itproF
 ms.reviewer: jubaptis
-manager: dougeby
+manager: aaroncz
 ms.audience: itpro
-author: aczechowski
-ms.author: aaroncz
-ms.date: 10/18/2021
+author: frankroj
+ms.author: frankroj
+ms.date: 11/17/2022
 ms.collection: 
   - M365-modern-desktop
   - highpri
@@ -23,7 +23,7 @@ ms.topic: how-to
 
 # Windows Autopilot for pre-provisioned deployment (Public preview)
 
-**Applies to**
+*Applies to:*
 
 - Windows 11
 - Windows 10, version 1903 or later

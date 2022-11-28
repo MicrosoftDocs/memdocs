@@ -73,14 +73,14 @@ The domain for your custom destination URLs must be added to your list of verifi
 ## Policy requirements  
 There are certain experience and Windows Spotlight policies in Microsoft Intune that block the delivery of organizational messages. This section describes how to adjust all settings so that delivery is always allowed and works as intended. 
 
-### Organizational messages delivery policy      
-Enable the delivery of organizational messages in all new and existing policies that are targeted at users and devices receiving organizational messages. 
-
- 1. Go to **Settings catalog** > **Experience** > **Enable delivery of organizational messages (User)**. 
- 2. For **Enable delivery of organizational messages**, switch the toggle to **Enabled**.     
+### Organizational messages delivery policy 
+For more information about this requirement, see [Known issues and limitations](organizational-messages-overview.md#known-issues-and-limitations).  
 
 ### Windows Spotlight policy     
-Configure these policies using a Microsoft Intune [device restrictions profile template](../configuration/device-restrictions-configure.md) or the [settings catalog](../configuration/settings-catalog.md). Make sure to adjust these policies in all new and existing policies that are targeted at users and devices receiving organizational messages.  
+Configure these policies using a Microsoft Intune [device restrictions profile template](../configuration/device-restrictions-configure.md) or the [settings catalog](../configuration/settings-catalog.md). Make sure to adjust these policies in all new and existing policies that are targeted at users and devices receiving organizational messages. 
+
+> [!NOTE]
+> If you use the Windows 10/11 MDM security baseline, you will need to change the **Windows Spotlight** policy to **Not configured**. The Windows Spotlight policy controls organizational messages and messages coming from Microsoft. To continue blocking messages from Microsoft as defined in the Windows 10/11 MDM security baseline, [configure the Microsoft messaging policy](organizational-messages-prerequisites.md#microsoft-messaging-policy).
 
 #### Template profiles    
 Go to **Configuration profiles** > **Templates** > **Device restrictions** > **Windows Spotlight** to edit these settings.    

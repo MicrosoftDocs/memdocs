@@ -4,11 +4,11 @@ description: Overview of Windows Autopilot device registration
 ms.prod: windows-client
 ms.technology: itpro-deploy
 ms.localizationpriority: medium
-author: aczechowski
-ms.author: aaroncz
+author: frankroj
+ms.author: frankroj
 ms.reviewer: jubaptis
-manager: dougeby
-ms.date: 12/16/2020
+manager: aaroncz
+ms.date: 11/17/2022
 ms.topic: how-to
 ms.collection: 
   - M365-modern-desktop
@@ -18,7 +18,7 @@ ms.collection:
 
 # Windows Autopilot registration overview
 
-**Applies to**
+*Applies to:*
 
 - Windows 11
 - Windows 10
@@ -40,7 +40,7 @@ Registration can also be performed within your organization by collecting the ha
 - [Automatic registration](automatic-registration.md)
 - [Manual registration](manual-registration.md)
 
-When you register an Autopilot device, it automatically creates an Azure AD object. The Autopilot deployment process needs this object to identify the device before the user signs in. If you delete this object, the device can fail to enroll through Autopilot. If the device is registered and not enrolled after 180 days, you'll need to re-register the device to complete a successful deployment.
+When you register an Autopilot device, it automatically creates an Azure AD object. The Autopilot deployment process needs this object to identify the device before the user signs in. If you delete this object, the device can fail to enroll through Autopilot. 
 
 > [!NOTE]
 > Don't register to Autopilot the following types of devices:
