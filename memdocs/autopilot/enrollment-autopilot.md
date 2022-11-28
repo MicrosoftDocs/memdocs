@@ -122,6 +122,9 @@ You can group Windows devices by a correlator ID when enrolling using [Autopilot
 > - Always create dynamic group rules matching against the *entire* enrollmentProfileName value
 > - Never name Autopilot or Apple ADE profiles beginning with "OfflineAutopilotprofile-".
 
+If you want all devices in the assigned groups to automatically convert to Autopilot, set Convert all targeted devices to Autopilot to Yes. All non-Autopilot devices in assigned groups will register with the Autopilot deployment service. Allow 48 hours for the registration to be processed. When the device is unenrolled and reset, Autopilot will enroll it. After a device is registered in this way, disabling this option or removing the profile assignment won't remove the device from the Autopilot deployment service. You must remove the device by deregistering the device from Autopilot. 
+
+
 ## Next steps
 
 After you have created a device group, you can configure and apply a Windows Autopilot deployment profile to each device in the group. Deployment profiles determine the deployment mode, and customize the OOBE for your end users. For more information, see [Configure deployment profiles](profiles.md).
