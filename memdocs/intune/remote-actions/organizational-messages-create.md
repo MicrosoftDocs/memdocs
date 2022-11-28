@@ -131,10 +131,11 @@ On the **Schedule** page, schedule the delivery of your message.
    * **Once a week**
    * **Once every two weeks**
    * **Once a month**  
-2. Switch the **Always on** toggle on to make messages visible in the Get Stated app.  
+2. Switch the **Always on** toggle on to make messages visible in the Get Started app.  
 3. Select **Next: Assignments** to continue to assignment options.     
 ---  
 ## Step 3: Assign message  
+# [Taskbar / Notification area / Get Started app](#tab/taskbar+notification+get-started)  
 Assign the message to Azure AD-registered users in your organization. You can only assign messages to Azure AD user groups, not Azure AD device groups. If a group includes both users and devices, Intune will only send the message to the users. 
 
 1. To include groups in the assignment, you have two options:    
@@ -142,9 +143,11 @@ Assign the message to Azure AD-registered users in your organization. You can on
    * **Include all users**: Select the option to assign the message to all Azure AD-registered users.  
 2. If needed, exclude Azure AD groups from the assignment. Under **Exclude**, select **Add groups** and choose the Azure AD groups to leave out.  
 3. Select **Next: Review + Create** to review and finalize your message.      
-
+---  
 ## Step 4: Review and create message  
+# [Taskbar / Notification area / Get Started app](#tab/taskbar+notification+get-started)  
 Review your message, scheduling details, and assignments before creating your message. When you're ready to send the message, select **Create**.  
+---  
 
 ## View reporting details    
 In the **Messages** tab, you can view a list of all of your messages and see the following details:  
