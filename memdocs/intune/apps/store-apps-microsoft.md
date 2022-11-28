@@ -145,7 +145,7 @@ Apps that are deployed from the Microsoft Store are automatically kept up to dat
 
 When a Microsoft Store Win32 app is published to a device as **Required**, but it is already installed (either manually or via the [Microsoft Store for Business](../apps/windows-store-for-business.md)), Intune will take over the management of the application. 
 
-For available Microsoft Store Win32 apps, the end user must click install in the Company Portal before Intune takes over the management of the application. Intune will not attempt to re-install the app.
+For available Microsoft Store Win32 apps, as well as UWP apps, the end user must click install in the Company Portal before Intune takes over the management of the application. Intune will not attempt to re-install the app.
 
 The Microsoft Store supports Win32 app types including **.exe** and **.msi** installers. These apps have external content sourcing hosted by the app publisher. Based on their installer definition in the store, each Win32 app supports either **User** or **System** context installation.For related information, see [Traditional desktop apps in the Microsoft Store on Windows](https://developer.microsoft.com/microsoft-store/desktop-apps).
 
@@ -157,7 +157,7 @@ The following table provides details about how app deployment may be affected by
 
 |     Store Group   Policies    |     Desired   setting    |
 |---|---|
-|     Store\Disable all apps from the Microsoft   Store     | Enable all apps from the Microsoft Store          |
+|     Store\Disable all apps from the Microsoft   Store     | **Not configured** or **Disabled**. Set to **Disabled** if wish to prevent end users from blocking the scenaio.          |
 |     Store\Turn off Automatic Download and   Install of updates    | **Not configured** or **Disabled**. Set to **Disabled** if you need to prevent end users from blocking the scenario.          |
 |     Desktop App Installer\Enable App Installer   Microsoft Store Source    | **Not configured** or **Enabled**. Set to **Enabled** if wish to prevent end users from blocking the scenario.          |
 |     Desktop App Installer\Enable App Installer    | **Not configured** or **Enabled**. Set to **Enabled** if wish to prevent end users from blocking the scenario.          |
