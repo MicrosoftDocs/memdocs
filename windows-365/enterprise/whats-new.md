@@ -70,6 +70,8 @@ For more information, see [Create provisioning policies](create-provisioning-pol
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 
+### Windows 365 app
+
 #### Updated Windows 365 app installation to install dependent applications<!--42190185-->
 
 The Windows 365 app installation process has been updated to automatically install dependent applications.
