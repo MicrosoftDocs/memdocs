@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/05/2022
+ms.date: 12/09/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -36,7 +36,7 @@ With Intune, you can deploy updates to Windows 10/11 devices by using policies f
 
 - **Reports in Intune**:
   - **Windows 10 update rings** – Use a [built-in report](#reports-for-update-rings-for-windows-10-and-later-policy) that's ready by default when you deploy update rings to your devices.
-  - **Windows 10 feature updates** *In public preview* – Use [two built-in reports](#reports-for-windows-10-and-later-feature-updates-policy) that work together to gain a deep picture of update status and issues. These reports require you to configure data collection from devices before the reports can display data about feature updates.
+  - **Windows 10 feature updates** – Use [two built-in reports](#reports-for-windows-10-and-later-feature-updates-policy) that work together to gain a deep picture of update status and issues. These reports require you to configure data collection from devices before the reports can display data about feature updates.
 
 - **Update Compliance**:
 
