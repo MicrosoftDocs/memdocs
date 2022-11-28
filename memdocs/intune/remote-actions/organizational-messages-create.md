@@ -46,9 +46,9 @@ In the Microsoft Endpoint Manager admin center, go to  **Tenant administration**
 If you recently onboarded your tenant to Azure AD, it can take 36 to 64 hours before you're able to use the organizational messages feature.   
 
 ## Step 1: Create a message  
-Create a message and configure the content.  
-# [Taskbar](#tab/taskbar)  
 
+# [Taskbar](#tab/taskbar)  
+Create and configure a message for the taskbar area.  
 1. Go to the **Message** tab and select **Create**.  
 2. For **Message type**, select **Taskbar**.   
 3. For **Message theme**, select **Mandatory update**. This type of message prompts employees to install a mandatory update.   
@@ -59,11 +59,11 @@ Create a message and configure the content.
    * (Optional) Select **Add a link path, if needed** and add the path for your URL. Example: `/SoftwareUpdate`   
    * Select the full generated link to make sure it works. Example: `www.contoso.com/SoftwareUpdate`     
 7. **Choose language to preview**: Select a language to preview the localized version of your message. The message is shown to employees in the [display language](https://support.microsoft.com/windows/manage-the-input-and-display-language-settings-in-windows-12a10cb4-8626-9b77-0ccb-5013e0c7c7a2) they've selected on their device. Organizational messages are supported in 15 languages. If the employee's preferred language isn't supported, the message will appear in their preferred fallback language.  
-8. **Preview the message in dark theme**: Turn on the toggle to view how your message appears in dark theme. Check to make sure your logo shows up correctly in both light and dark theme.   
+8. **Preview the message in dark theme**: Turn on the toggle to view how your message appears in dark theme. Check to make sure your logo shows up correctly in both light and dark theme.  
+9. Select **Next: Schedule** to continue to scheduling options. 
 
-When you're done configuring the message, select **Next: Schedule** to continue to scheduling options.  
-
-# [Notification area](#tab/notifications)  
+# [Notification area](#tab/notification)  
+Create and configure a message for the notification area.  
 1. Go to the **Message** tab and select **Create**.  
 2. For **Message type**, select **Notification area**.   
 3. For **Message theme**, select the type of message you want to create. Your options:  
@@ -83,11 +83,10 @@ When you're done configuring the message, select **Next: Schedule** to continue 
       * Select the full generated link to make sure it works. Example: `www.contoso.com/SoftwareUpdate`     
 6. **Choose language to preview**: Select a language to preview the localized version of your message. The message is shown to employees in the [display language](https://support.microsoft.com/windows/manage-the-input-and-display-language-settings-in-windows-12a10cb4-8626-9b77-0ccb-5013e0c7c7a2) they've selected on their device. Organizational messages are supported in 15 languages. If the employee's preferred language isn't supported, the message will appear in their preferred fallback language.  
 7. **Preview the message in dark theme**: Turn on the toggle to view how your message appears in dark theme. Check to make sure your logo shows up correctly in both light and dark theme.   
+8. Select **Next: Schedule** to continue to scheduling options.   
 
-When you're done configuring the message, select **Next: Schedule** to continue to scheduling options.   
-
-# [Get Started app](#tab/apps)     
-
+# [Get Started app](#tab/get-started)     
+Create and configure a message for the Get Started app.  
 1. Go to the **Message** tab and select **Create**.  
 2. For **Message type**, select **Get Started app**.   
 3. Select **OK**.  
@@ -112,42 +111,37 @@ When you're done configuring the message, select **Next: Schedule** to continue 
      7. Select **OK**.  
 6. **Choose language to preview**: Select a language to preview the localized version of your message. The message is shown to employees in the [display language](https://support.microsoft.com/windows/manage-the-input-and-display-language-settings-in-windows-12a10cb4-8626-9b77-0ccb-5013e0c7c7a2) they've selected on their device. Organizational messages are supported in 15 languages. If the employee's preferred language isn't supported, the message will be shown to them in their preferred fallback language.  
 7. **Preview the message in dark theme**: Turn on the toggle to view how your message appears in dark theme. Check to make sure your logo shows up correctly in both light and dark theme.   
+8. Select **Next: Schedule** to continue to scheduling options.   
+---  
+## Step 2: Schedule a message  
 
-When you're done configuring the message, select **Next: Schedule** to continue to scheduling options.  
+# [Taskbar / Notification area](#tab/taskbar+notification) 
+On the **Schedule** page, schedule the delivery of your message. 
 
-## Step 2: Schedule message  
-Schedule the delivery for your message. 
+1. Configure the time window for your message. Your options:  
 
-# [Taskbar or notification area](#tab/taskbar-or-notification-area)
-Your options are:  
+   * **First day to show message**: Select when to first show the message. To ensure that delivery begins when you want it to, configure this setting 24 hours before you want the message to appear. This option isn't available for the Get Started app.   
+   * **Last day to show message**:  Select the last day to show the message. This date must be at least 7 days after the start date. This option isn't available for the Get Started app.  
+2. Select **Next: Assignments** to continue to assignment options.   
 
-* **First day to show message**: Select when to first show the message. To ensure that delivery begins when you want it to, configure this setting 24 hours before you want the message to appear. This option isn't available for the Get Started app.   
-* **Last day to show message**:  Select the last day to show the message. This date must be at least 7 days after the start date. This option isn't available for the Get Started app.  
+# [Get Started app](#tab/get-started)  
+On the **Schedule** page, schedule the delivery of your message.  
 
-When you're done scheduling your message, select **Next: Assignments**.     
-
-# [Get Started app](#tab/apps)  
-Your options are:  
-
-**Message repeat frequency**: Select how often you want the message to reappear after employees dismiss it. The message will initially go away when the employee dismisses it or completes the call-to-action, but it will reappear at the frequency you select here. Your options: 
-    * **Once a week**
-    * **Once every two weeks**
-    * **Once a month**  
- 
- * **Always on**: Switch the toggle to **Always on** to make messages visible in the Get Stated app. This option isn't available for messages in the taskbar and notification area.    
-
-When you're done scheduling your message, select **Next: Assignments**.     
-
+1. Configure **Message repeat frequency**. Select how often you want the message to reappear after employees dismiss it. The message will initially go away when the employee dismisses it or completes the call-to-action, but will reappear at the frequency you select here. Your options: 
+   * **Once a week**
+   * **Once every two weeks**
+   * **Once a month**  
+2. Switch the **Always on** toggle on to make messages visible in the Get Stated app.  
+3. Select **Next: Assignments** to continue to assignment options.     
+---  
 ## Step 3: Assign message  
 Assign the message to Azure AD-registered users in your organization. You can only assign messages to Azure AD user groups, not Azure AD device groups. If a group includes both users and devices, Intune will only send the message to the users. 
 
-To include groups in the assignment, you have two options:    
- * **Add groups**: Select this option to individually choose from a list of Azure AD groups.  
- * **Include all users**: Select the option to assign the message to all Azure AD-registered users.  
-
-You can also exclude Azure AD groups from the assignment. Under **Exclude**, select **Add groups** and choose the Azure AD groups to leave out.  
-
-When you're done assigning groups, select **Next: Review + Create**.   
+1. To include groups in the assignment, you have two options:    
+   * **Add groups**: Select this option to individually choose from a list of Azure AD groups.  
+   * **Include all users**: Select the option to assign the message to all Azure AD-registered users.  
+2. If needed, exclude Azure AD groups from the assignment. Under **Exclude**, select **Add groups** and choose the Azure AD groups to leave out.  
+3. Select **Next: Review + Create** to review and finalize your message.      
 
 ## Step 4: Review and create message  
 Review your message, scheduling details, and assignments before creating your message. When you're ready to send the message, select **Create**.  
