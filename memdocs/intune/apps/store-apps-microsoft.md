@@ -93,7 +93,7 @@ The Microsoft Store provides a large variety of apps designed to work on your Mi
     |     Name    | The name of the app is pre-populated from the store’s metadata and you have the choice to edit the field. Enter the name of the app as it appears in the Company Portal. Make sure all app names that you use are unique. If the same app name exists twice, only one of the apps appears in the company portal.   |     Required    |
     |     Description    | The description of the app is pre-populated from the store’s metadata and you have the choice to edit the field. The description appears in the Company Portal.          |     Required       |
     |     Publisher    |  The publisher of the app is pre-populated from the store’s metadata and you have the choice to edit the field.           |     Required    |
-    |     Installer   Type    | The installer type of the application package is distinguished by either the UWP or Win32 installer types. For related information, see [Universal Windows Platform (UWP) apps](/windows/uwp/get-started/universal-application-platform-guide) and [Win32 apps](../apps/apps-win32-app-management.md).                |     N/A   Pre-filled    |
+    |     Installer   Type    | The installer type of the application package is distinguished by either the UWP or Win32 installer types. For related information, see [Universal Windows Platform (UWP) apps](/windows/uwp/get-started/universal-application-platform-guide).                |     N/A   Pre-filled    |
     |     Package   Identifier     | The app’s unique ID in the Microsoft Store. This value is read-only and is displayed before Installer Type in the UI.   |     N/A   Pre-filled    |
     |     Install   behavior    | The install behavior of the app. If the app to be installed has the option of either **System** or **User** install behaviors, you must ensure that the installation works on devices as expected. NOTE: If the option is greyed out, the specific store application only supports the selected install behavior.     |     Admin must select **System** or **User**     |
     |     Category       | Optionally, select one or more of the built-in app categories, or select a category that you created. Categories make it easier for users to find the app when they browse through the Company Portal.          |     Optional       |
@@ -132,7 +132,7 @@ The following table provide assignment type details:
 
 ## App update
 
-Apps that are deployed from the Microsoft Store are automatically kept up to date to the latest version of the app. For this feature to work properly for UWP apps, the **Turn off Automatic Download and Install of updates** should not be disabled.
+Apps that are deployed from the Microsoft Store are automatically kept up to date to the latest version of the app. For this feature to work properly for UWP apps, the **Turn off Automatic Download and Install of updates** should not be enabled.
 
 ## Microsoft Store Win32 apps
 
