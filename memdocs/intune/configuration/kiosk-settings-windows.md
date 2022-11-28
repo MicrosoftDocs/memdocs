@@ -201,7 +201,7 @@ Runs multiple app on the device. Apps in this mode are available on the start me
 
   - **Applications**
 
-    - **Add store app**: Add an app from the Microsoft Store for Business. If you don't have any apps listed, then you can get apps, and [add them to Intune](../apps/store-apps-microsoft.md). For example, you can add Kiosk Browser, Excel, OneNote, and more.
+    - **Add store app**: Add an app from the Microsoft Store for Business. If you don't have any apps listed, then you can get apps, and [add them to Intune](../apps/store-apps-windows.md). For example, you can add Kiosk Browser, Excel, OneNote, and more.
 
     - **Add Win32 App**: A Win32 app is a traditional desktop app, such as Visual Studio Code or Google Chrome. Enter the following properties:
 
