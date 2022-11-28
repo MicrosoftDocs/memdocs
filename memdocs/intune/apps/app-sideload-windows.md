@@ -87,7 +87,7 @@ If the cert period has expired then the appx files may stop launching. You shoul
 
 ## Manually deploy Windows 10 Company Portal app
 
-If you do not want to provide access to the Microsoft Store, you can manually deploy the Windows 10 Company Portal app directly from Intune even if you haven't integrated Intune with the Microsoft Store for Business (MSFB). Alternatively, if you have integrated, then you could deploy the Company Portal app using [deploy apps using MSFB](store-apps-microsoft.md).
+If you do not want to provide access to the Microsoft Store, you can manually deploy the Windows 10 Company Portal app directly from Intune even if you haven't integrated Intune with the Microsoft Store for Business (MSFB). Alternatively, if you have integrated, then you could deploy the Company Portal app using [deploy apps using MSFB](store-apps-windows.md).
 
  > [!NOTE]
  > This option will require deploying manual updates each time an app update is released.
