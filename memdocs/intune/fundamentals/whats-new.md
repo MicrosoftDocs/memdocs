@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/15/2022
+ms.date: 11/28/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -65,6 +65,25 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Scripts
 ### Tenant administration
 -->
+
+## Week of November 28, 2022
+
+### Tenant administration
+
+#### Access policies for multiple Administrator Approval (public preview)<!-- 9348867  -->
+
+In public preview, you can use Intune *access policies* to require that a second Administrator Approval account be used to approve a change before the change is applied. This capability is known as multiple Administrator Approval (MAA).
+
+You create an access policy to protect a type of resource, like App deployments. Each access policy also includes a group of users who are *approvers* for the changes protected by the policy. When a resource like an app deployment configuration is protected by an access policy, any changes that are made to the deployment, including creating, deleting, or modifying an existing deployment won't apply until a member of the approvers group for that access policy reviews and approves that change.
+
+Approvers can also reject requests, and both the individual requesting a change and the approver can provide notes about the change, or why it was approved or rejected.
+
+Access policies are supported for the following resources:
+
+- **Apps** – Applies to [app deployments](../apps/apps-add.md), but doesn't apply to app protection policies.
+- **Scripts** – Applies to deploying scripts to devices that run [macOS](../apps/macos-shell-scripts.md) or [Windows](../apps/intune-management-extension.md).
+
+For more information, see [Use Access policies to require multiple administrative approval](../fundamentals/multi-admin-approval.md).
 
 ## Week of November 14, 2022 (Service release 2211)
 
