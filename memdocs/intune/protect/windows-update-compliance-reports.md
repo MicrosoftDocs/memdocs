@@ -59,8 +59,6 @@ Intune offers integrated report views for the Windows update ring policies you d
     --> 
 ## Reports for Windows 10 and later feature updates policy
 
-*This feature is in preview.*
-
 Intune offers integrated reports to view detailed Windows update deployment status for devices using Feature updates for Windows 10 and later policies. To use reports for this feature, you must first configure prerequisites and policies that support data collection from devices.
 
 The data in the Intune reports for Feature updates for Windows 10 and later policy is used only for these reports and doesn't surface in other Intune reports.
@@ -128,8 +126,6 @@ The data for these reports is generated at different times, which depend on the 
 - **Client-based data from Intune devices that are configured to send data to Intune** – This data is processed in batches and refreshes every eight hours, but is only available after you configure data collection. The data contains information like when a client doesn't have enough disk space to install an update. This data is also used in the Windows 10 feature updates organizational report to show the various installation steps a device moves through when installing feature updates.
 
 ### Use the Windows 10 feature updates (Organizational) report
-
-*In public preview*
 
 The **Windows 10 feature updates** report provides an overview of compliance for devices you target with a [Windows feature updates](../protect/windows-10-feature-updates.md) policy.
 
@@ -217,8 +213,6 @@ To use the report:
      - **Needs attention**: The device has some issue and needs attention.
 
 ### Use the Feature update failures (Operational) report
-
-*In public preview*
 
 The **Feature update failures** operational report provides details for devices that you target with a [Windows 10 and later feature updates](../protect/windows-10-feature-updates.md) policy, and that have attempted to install an update. Devices in this report might have an Alert that prevents the device from completing installation of the update.
 
