@@ -42,7 +42,7 @@ To manage Windows data configurations for your tenant, open the [Microsoft Endpo
 
 On the *Windows data* page, you can configure your tenant to support Windows diagnostic data in processor configuration, and to attest ownership of the required Windows E3 or equivalent licenses. It’s possible that some features require only one of the available configurations to be enabled, while other features could require both.
 
-## Windows data
+### Windows data
 
 Use the *Windows data* category to enable use of Intune features in your tenant that require diagnostic data in processor configuration.
 
@@ -59,7 +59,7 @@ To enable support, set **Enable features that require Windows diagnostic data in
 
 To learn more about this configuration, see [Significant changes coming to the Windows diagnostic data processor configuration](/windows/privacy/changes-to-windows-diagnostic-data-collection#significant-changes-coming-to-the-windows-diagnostic-data-processor-configuration) in the Windows privacy documentation.
 
-## Windows license verification
+### Windows license verification
 
 Use the *Windows license verification* category to enable use of Intune features in your tenant that require Windows E3 or equivalent licenses. 
 
