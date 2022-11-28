@@ -3,7 +3,7 @@
 
 title: Enable use of Windows diagnostic data by Intune
 titleSuffix: Microsoft Intune
-description: Enable Windows diagnostic data in processor configuration for your tenant to enable its use by Microsoft Intune. 
+description: Enable Windows diagnostic data in processor configuration for your tenant to enable its use by Microsoft Intune.
 keywords:
 author: brenduns
 ms.author: brenduns
