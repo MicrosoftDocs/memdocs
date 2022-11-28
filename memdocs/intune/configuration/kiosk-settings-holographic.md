@@ -99,7 +99,7 @@ Apps in this mode are available on the start menu. These apps are the only apps 
     - **Add Kiosk browser**: Not supported on Windows Holographic for Business.
 
   - **Applications**
-    - **Add store app**: Select an existing app you added or deployed to Intune as [Client Apps](../apps/apps-add.md), including LOB apps. If you don't have any apps listed, Intune supports many [app types](../apps/apps-add.md) that you [add to Intune](../apps/store-apps-microsoft.md).
+    - **Add store app**: Select an existing app you added or deployed to Intune as [Client Apps](../apps/apps-add.md), including LOB apps. If you don't have any apps listed, Intune supports many [app types](../apps/apps-add.md) that you [add to Intune](../apps/store-apps-windows.md).
     - **Add Win32 app**: Not supported on Windows Holographic for Business.
     - **Add by AUMID**: Use this option to add inbox Windows apps, such as Notepad or Calculator. Enter the following properties:
 
