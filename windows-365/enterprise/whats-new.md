@@ -54,7 +54,21 @@ Learn what new features are available in Windows 365 Enterprise.
 ## Week of November 28, 2022
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
-### Windows 365 app
+
+### Provisioning
+
+#### New Geography option in Windows 365 provisioning policy<!-- 41400209-->
+
+The new **Geography** setting gives admins two ways to choose Azure regions during provisioning.
+
+- You can select a specific region to make sure that your Cloud PCS are only provisioned in that region.
+- You can select **Automatic** to let the Windows 365 service automatically select a region (within the Geography) at the time of provisioning.
+
+Existing provisioning policies will automatically populate the **Geography** and **Region** settings based on existing settings. No admin action is required.  
+
+For more information, see [Create provisioning policies](create-provisioning-policy.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
 
 #### Updated Windows 365 app installation to install dependent applications<!--42190185-->
 
