@@ -53,7 +53,7 @@ After [configuring Microsoft Tunnel](../protect/microsoft-tunnel-configure.md), 
 
 Users of devices that aren't enrolled with Intune must install the following apps on their Android device before they can use the Tunnel for MAM scenario. These apps can all be manually installed from the Google Play store:
 
-1. **Microsoft Defender** - Get it from [Microsoft Defender - Apps on Google Play](https://play.google.com/store/apps/details?id=com.microsoft.scmx&hl=en_US&gl=US&pli=1). Microsoft Defender includes the tunnel client app that the device uses to connect to Microsoft Tunnel.
+1. **Microsoft Defender** - Get it from [Microsoft Defender - Apps on Google Play](https://play.google.com/store/apps/details?id=com.microsoft.scmx&hl=en_US&gl=US&pli=1). Microsoft Defender includes the tunnel client app that the device uses to connect to Microsoft Tunnel. To support Tunnel for MAM, Microsoft Defender for Endpoint must be version **1.0.4722.0101** or higher.
 
 2. **Microsoft Edge** – Get it from [Microsoft Edge: Web Browser - Apps on Google Play](https://play.google.com/store/apps/details?id=com.microsoft.emmx&hl=en_US&gl=US). For the preview, each device must manually enable the Tunnel functionality for Microsoft Edge before the device can use Tunnel. To enable support for Tunnel, users must browse to **edge://flags** from within the Microsoft Edge app, and then search for and select **Tunnel** to enable it.
 
