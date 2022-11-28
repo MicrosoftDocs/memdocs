@@ -30,7 +30,7 @@ ms.collection: M365-identity-device-management
 
 # Enable use of Windows diagnostic data by Intune
 
-Before you can use some Intune features, you must enable *Windows diagnostic data in processor configuration* for your tenant. This enables you as the [controller of Windows diagnostic data](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#enable-windows-diagnostic-data-processor-configuration) collected from your devices to then allow its use by Intune when it is required by features that are dependent on that data.
+Before you can use some Intune features, you must enable *Windows diagnostic data in processor configuration* for your tenant. This enables you as the [controller of Windows diagnostic data](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#enable-windows-diagnostic-data-processor-configuration) collected from your devices to then allow its use by Intune when it's required by features that are dependent on that data.
 
 In addition, several of the features that require Windows diagnostic data also require you to have Windows E3 (or equivalent) licenses, and you must attest to having these licenses to enable use of those features.
 
@@ -40,7 +40,7 @@ Both configuration of the Windows diagnostic data in processor configuration and
 
 To manage Windows data configurations for your tenant, open the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Tenant administration** > **Connectors and tokens** > **Windows data**.
 
-On the *Windows data* page you can configure your tenant to support Windows diagnostic data in processor configuration, and to attest ownership of the required Windows E3 or equivalent licenses. It’s possible that some features require only one of the available configurations to be enabled, while other features could require both.
+On the *Windows data* page, you can configure your tenant to support Windows diagnostic data in processor configuration, and to attest ownership of the required Windows E3 or equivalent licenses. It’s possible that some features require only one of the available configurations to be enabled, while other features could require both.
 
 ## Windows data
 
@@ -52,7 +52,7 @@ The following features require you to enable this support:
 - [Windows feature update compatibility risks report](../protect/windows-update-compatibility-reports.md#use-the-windows-feature-update-compatibility-risks-report)
 - [Windows update app and driver compatibility reports](../protect/windows-update-compatibility-reports.md)
 
-To enable support, set **Enable features that require Windows diagnostic data in processor configuration** to **On**. By default, it is *Off*.
+To enable support, set **Enable features that require Windows diagnostic data in processor configuration** to **On**. By default, it's *Off*.
 
 - While there are other methods to enable this support for a tenant, this toggle only reflects your configuration choice for Intune features.
 - Changing this toggle from *On* to *Off* will disable use of Intune features that require this configuration but might not turn off processor configuration configured by other methods.
@@ -67,16 +67,16 @@ The following features require you to attest to having Windows E3 or equivalent 
 
 - [Windows update app and driver compatibility reports](../protect/windows-update-compatibility-reports.md)
 
-Supported licenses include the following:
+Supported licenses include the following options:
 
 - Windows 10 or later Enterprise E3 or E5; or Microsoft 365 F3, E3, or E5.
 - Windows 10 or later Education A3 or A5; or Microsoft 365 A3 or A5.
 - Windows Virtual Desktop Access E3 or E5.
 
-To confirm you own the required licenses for these features, set **I confirm that my tenant owns one of these license** to **On**. By default, it is *Off*.
+To confirm you own the required licenses for these features, set **I confirm that my tenant owns one of these license** to **On**. By default, it's *Off*.
 
-- Additional features can require these same licenses, but only the features listed in this section currently require this toggle to be set to *On*.
-- Features that require this attestation are not available for use when this toggle is set to *Off*.
+- Other features can require these same licenses, but only the features listed in this section currently require this toggle to be set to *On*.
+- Features that require this attestation aren't available for use when this toggle is set to *Off*.
 
 ## Next Steps
 
