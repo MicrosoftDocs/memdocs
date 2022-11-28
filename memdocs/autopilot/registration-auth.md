@@ -83,7 +83,7 @@ Each OEM has a unique link to provide to their respective customers, which the O
 
 1. OEM emails link to their customer.
 2. Customer logs into the Microsoft Admin Center using a cloud native account (example: [domain].onmicrosoft.com) with global administrator privileges.
-3. Clicks the link in the email, which takes them directly to the following page:
+3. Selects the link in the email, which takes them directly to the following page:
 
     ![Screencap of Accept partner invitation page.](images/csp6.png)
 
