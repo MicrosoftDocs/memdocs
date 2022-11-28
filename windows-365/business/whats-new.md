@@ -48,6 +48,16 @@ Learn what new features are available in Windows 365 Business.
 -->
 
 <!-- ########################## -->
+## Week of November 28, 2022
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Language pre-configuration for Cloud PCs has moved out of preview and into general availability. <!--38310774 -->
+
+Admins can select the **Language and region** option under **Update organization settings* to pre-configure the language for the endpoint devices. For more information, see [Change organizational default settings](change-organization-default-settings.md).
+
+<!-- ########################## -->
 ## Week of October 25, 2022
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
