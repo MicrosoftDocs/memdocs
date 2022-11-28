@@ -235,7 +235,7 @@ To learn how to add apps for each platform to Intune, see:
 - [iOS store apps](store-apps-ios.md)
 - [iOS LOB apps](lob-apps-ios.md)
 - [Web apps (for all platforms)](web-app.md)
-- [Microsoft store apps](store-apps-microsoft.md)
+- [Microsoft store apps](store-apps-windows.md)
 - [Windows LOB app](lob-apps-windows.md)
 - [Microsoft 365 apps for Windows 10](apps-add-office365.md)
 - [Microsoft 365 apps for macOS](apps-add-office365-macos.md)
