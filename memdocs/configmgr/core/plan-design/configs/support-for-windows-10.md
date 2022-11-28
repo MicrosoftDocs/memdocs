@@ -74,6 +74,7 @@ For more information on Windows lifecycle, see the [Windows lifecycle fact sheet
 
   | Media version     | Windows version          |
   |-------------------|--------------------------|
+  | `10.0.19045.2130` | Windows 10, version 22H2 |
   | `10.0.19041.1288` | Windows 10, version 21H2 |
   | `10.0.19041.844`  | Windows 10, version 21H1 |
   | `10.0.19041.508`  | Windows 10, version 20H2 |
