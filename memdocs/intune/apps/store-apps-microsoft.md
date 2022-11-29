@@ -157,7 +157,7 @@ The following table provides details about how app deployment may be affected by
 
 |     Store Group   Policies    |     Desired   setting    |
 |---|---|
-|     Store\Disable all apps from the Microsoft   Store     | **Not configured** or **Disabled**. Set to **Disabled** if wish to prevent end users from blocking the scenaio.          |
+|     Store\Disable all apps from the Microsoft   Store     | **Not configured** or **Disabled**. Set to **Disabled** if wish to prevent end users from blocking the scenario.          |
 |     Store\Turn off Automatic Download and   Install of updates    | **Not configured** or **Disabled**. Set to **Disabled** if you need to prevent end users from blocking the scenario.          |
 |     Desktop App Installer\Enable App Installer   Microsoft Store Source    | **Not configured** or **Enabled**. Set to **Enabled** if wish to prevent end users from blocking the scenario.          |
 |     Desktop App Installer\Enable App Installer    | **Not configured** or **Enabled**. Set to **Enabled** if wish to prevent end users from blocking the scenario.          |
@@ -172,7 +172,7 @@ The following lists the capabilities that are not support by Microsoft Store app
 
 1. Enrollment Status Page (ESP) interactions are not supported.
 2. Device provisioning of Microsoft Store Universal Windows Platform (UWP) applications are not supported.
-3. Any app that has an ARM64 installer is not be supported.
+3. Any app that has an ARM64 installer is not supported.
 
 ## Next steps
 
