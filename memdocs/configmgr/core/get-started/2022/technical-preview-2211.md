@@ -2,7 +2,7 @@
 title: Technical preview 2211
 titleSuffix: Configuration Manager
 description: Learn about new features available in the Configuration Manager technical preview branch version 2211.
-ms.date: 11/25/2022
+ms.date: 11/30/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -24,8 +24,11 @@ Review the [technical preview](../technical-preview.md) article before installin
 
 The following sections describe the new features to try out in this version:
 
-<!-- [!INCLUDE [Example feature name](includes/2208/1234567.md)] -->
+[!INCLUDE [Authorization failure message in admin service now shown in Status message viewer](includes/2211/13022894.md)]
 
+[!INCLUDE [Network Access Account (NAA) account usage alert](includes/2211/14538358.md)]
+
+[!INCLUDE [Improvements to Cloud Sync (Collections to Azure Active Directory Group Synchronization) feature](includes/2211/14716797.md)]
 
 
 <!-- ## General known issues  -->
