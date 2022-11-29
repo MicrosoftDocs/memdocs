@@ -7,7 +7,7 @@ keywords:
 author: brenduns 
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/17/2022
+ms.date: 12/09/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -30,9 +30,7 @@ ms.collection:
 
 # Manage macOS software update policies in Intune
 
-You can use Microsoft Intune to manage software updates for macOS devices that enrolled as [supervised devices](../enrollment/macos-enroll.md#user-approved-enrollment). For macOS, devices that enroll through one of the following methods are supervised:
-
-- [Automated Device Enrollment (ADE)](https://deploy.apple.com/) (using either Apple Business Manager, or Apple School Manager)
+You can use Microsoft Intune to manage software updates for macOS devices that enrolled as [supervised devices](../enrollment/macos-enroll.md#user-approved-enrollment).
 
 This feature applies to:
 
