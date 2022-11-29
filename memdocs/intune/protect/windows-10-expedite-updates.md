@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/02/2022
+ms.date: 10/18/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -71,12 +71,17 @@ The following are requirements to qualify for installing expedited quality updat
 
 **Licensing**:
 
-In addition to a license for Intune, your organization must have one of the following subscriptions:
+In addition to a license for Intune, your organization must have one of the following subscriptions that include a license for Windows Update for Business deployment service:
 
 - Windows 10/11 Enterprise E3 or E5 (included in Microsoft 365 F3, E3, or E5)
 - Windows 10/11 Education A3 or A5 (included in Microsoft 365 A3 or A5)
-- Windows 10/11 Virtual Desktop Access (VDA) per user
+- Windows Virtual Desktop Access E3 or E5
 - Microsoft 365 Business Premium
+
+Beginning in November of 2022, the Windows Update for Business deployment service (WUfB DS) license will be checked and enforced.
+
+
+If you’re blocked when creating new policies for capabilities that require WUfB DS and you get your licenses to use WUfB through an Enterprise Agreement (EA), contact the source of your licenses such as your Microsoft account team or the partner who sold you the licenses. The account team or partner can confirm that your tenants licenses meet the WUfB DS license requirements. See [Enable subscription activation with an existing EA](/windows/deployment/deploy-enterprise-licenses#enable-subscription-activation-with-an-existing-ea).
 
 **Supported Windows 10/11 versions**:
 
@@ -88,8 +93,9 @@ Only update builds that are generally available are supported. Preview builds, i
 
 - Professional
 - Enterprise
-- Pro Education
 - Education
+- Pro Education
+- Pro for Workstations
 
 **Devices must**:
 
@@ -123,11 +129,25 @@ Only update builds that are generally available are supported. Preview builds, i
   - Look for the folder **C:\Program Files\Microsoft Update Health Tools** or review *Add Remove Programs* for **Microsoft Update Health Tools**.
   - As an Admin, run the following PowerShell script:
 
-    `Get-WmiObject -Class Win32_Product | Where-Object {$_.Name -match "Microsoft Update Health Tools"}`
+   ``` PowerShell
+   $Session = New-Object -ComObject Microsoft.Update.Session
+   $Searcher = $Session.CreateUpdateSearcher()
+   $historyCount = $Searcher.GetTotalHistoryCount()
+   $list = $Searcher.QueryHistory(0, $historyCount) | Select-Object -Property "Title"
+   foreach ($update in $list)
+   {
+     if ($update.Title.Contains("4023057"))
+     {
+        return 1
+     }
+   }
+   return 0 
+   ```
+  If the script returns a 1, the device has UHS client. If the script returns a 0, the device doesn’t have UHS client.
 
-    Example results:  
-    :::image type="content" source="./media/windows-10-expedite-updates/example-wmi-query-results.png" alt-text="Example results for the WMI query":::
 
+
+ 
 **Device settings**:
 
 To help avoid conflicts or configurations that can block installation of expedited updates, configure devices as follows. You can use Intune *Update rings for Windows 10 and later* policies to manage these settings.

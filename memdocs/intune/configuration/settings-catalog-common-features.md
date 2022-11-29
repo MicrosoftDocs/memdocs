@@ -2,12 +2,12 @@
 # required metadata
 
 title: Common tasks and features you can configure using settings catalog in Microsoft Intune
-description: Use the settings catalog in Microsoft Intune and Endpoint Manager to configure common features. For example, you can create a Universal Print policy, configure Microsoft Edge and Google Chrome web browser, and use built in settings instead of plist files for macOS devices.
+description: Use the settings catalog in Microsoft Intune to configure common features. For example, you can create a Universal Print policy, configure Microsoft Edge and Google Chrome web browser, and use built in settings instead of plist files for macOS devices.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/02/2022
+ms.date: 10/10/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -54,7 +54,7 @@ This feature applies to:
 
 These web browser settings are built in, and can be configured & deployed to your managed devices. On Windows devices, you can also configure Google Chrome.
 
-:::image type="content" source="./media/settings-catalog-common-features/google-chrome-settings.png" alt-text="In Settings Catalog, Google Chrome settings are built in to Microsoft Intune and Endpoint Manager admin center. Use these settings to create and configure a Google Chrome policy on Windows devices.":::
+:::image type="content" source="./media/settings-catalog-common-features/google-chrome-settings.png" alt-text="Screenshot that shows the Google Chrome settings in the settings catalog that are built in to Microsoft Intune and Endpoint Manager admin center. Use these settings to create and configure a Google Chrome policy on Windows devices.":::
 
 Previously, to configure Google Chrome settings on Windows devices, you created a custom OMA-URI device configuration policy.
 

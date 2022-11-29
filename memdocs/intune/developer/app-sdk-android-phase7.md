@@ -27,6 +27,7 @@ search.appverid: MET150
 ms.collection:
 - M365-identity-device-management
 - Android
+- tier3
 ms.custom: intune-classic
 ---
 
@@ -531,10 +532,7 @@ To do this in your MSAL application, build your Public Client using the Client C
       ]
     }
 ```
-Once you've completed this integration, you'll need to contact the Intune team at `msintuneappsdk@microsoft.com` to add your application to the list of approved apps for app-based CA.
-*Without this step, your app isn't CA compliant and won't appropriately block access to resources.*
-
-When you have received confirmation from the Intune team that your app has been added to the approved list, proceed to [Validating App Protection CA] below.
+Once you've completed the above, proceed to [Validating App Protection CA] below.
 
 ### Implementation Notes
 
@@ -808,7 +806,7 @@ Do continue to refer to this guide and the [Appendix] as you continue to develop
 [Exit Criteria]:#exit-criteria
 [Validating App Protection CA]:#validating-app-protection-ca
 
-<!-- Other SDK Guide Markdown docs -->
+<!-- Other SDK Guide Markdown documentation -->
 [Stage 1: Planning the Integration]:app-sdk-android-phase1.md
 [Key Decisions for SDK integration]:app-sdk-android-phase1.md#key-decisions-for-sdk-integration
 [Stage 5: Multi-Identity]:app-sdk-android-phase5.md
@@ -820,7 +818,7 @@ Do continue to refer to this guide and the [Appendix] as you continue to develop
 [Appendix]:app-sdk-android-appendix.md
 [Quickly testing with changing policy]:app-sdk-android-appendix.md#quickly-testing-with-changing-policy
 
-<!-- Microsoft docs -->
+<!-- Microsoft Learn documentation -->
 [App Protection CA]:/mem/intune/protect/app-based-conditional-access-intune
 [issuing a selective wipe]:/mem/intune/apps/apps-selective-wipe
 [Set up app-based Conditional Access policies with Intune]:/mem/intune/protect/app-based-conditional-access-intune-create

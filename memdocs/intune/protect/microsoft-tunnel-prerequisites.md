@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/15/2022
+ms.date: 11/11/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -60,7 +60,7 @@ Set up a Linux based virtual machine or a physical server on which Microsoft Tun
   | Red Hat (RHEL) 7.4+   | Docker CE                |                    |
   | Red Hat (RHEL) 8.4    | Podman 3.0               |                    |
   | Red Hat (RHEL) 8.5    | Podman 3.0               | This version of RHEL doesn't automatically load the *ip_tables* module into the Linux kernel. When you use this version, plan to [manually load the ip_tables](#manually-load-ip_tables) before Tunnel is installed.|
-  | Red Hat (RHEL) 8.6    | Podman 3.0               | This version of RHEL doesn't automatically load the *ip_tables* module into the Linux kernel. When you use this version, plan to [manually load the ip_tables](#manually-load-ip_tables) before Tunnel is installed.|
+  | Red Hat (RHEL) 8.6    | Podman 4.0 *(default)* <br> Podman 3.0  | This version of RHEL doesn't automatically load the *ip_tables* module into the Linux kernel. When you use this version, plan to [manually load the ip_tables](#manually-load-ip_tables) before Tunnel is installed. <br><br> [Containers created by Podman v3 and earlier](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html-single/8.6_release_notes/index#enhancement_containers) are not usable with Podman v4.0. If upgrading and changing containers from v3 to v4.0, plan to create new containers and to uninstall and then reinstall Microsoft Tunnel.|
   | Ubuntu 18.04           | Docker CE               |                    |
   | Ubuntu 20.04           | Docker CE               |                    |
 
@@ -81,7 +81,7 @@ Set up a Linux based virtual machine or a physical server on which Microsoft Tun
 
 - **Install Docker CE or Podman**: Depending on the version of Linux you use for your Tunnel server, you'll need to install one of the following on the Linux server:
   - Docker version 19.03 CE or later
-  - Podman version 3.0
+  - Podman version 3.0 or 4.0 depending on the version of RHEL
 
   Microsoft Tunnel requires Docker or Podman on the Linux server to provide support for containers. Containers provide a consistent execution environment, health monitoring and proactive remediation, and a clean upgrade experience.
 
@@ -92,8 +92,7 @@ Set up a Linux based virtual machine or a physical server on which Microsoft Tun
     > The preceding link directs you to the CentOS download and installation instructions. Use those same instructions for RHEL 7.4. The version installed on RHEL 7.4 by default is too old to support Microsoft Tunnel Gateway.
   - [Install Docker Engine on Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
   - [Install Podman on Red Hat Enterprise Linux 8.4, 8.5, or 8.6 (scroll down to RHEL8)](https://podman.io/getting-started/installation)  
-    These versions of RHEL don't support Docker. Instead, these versions use Podman, and *podman* is part of a module called "container-tools". In this context, a module is a set of RPM packages that represent a component and that usually install together. A typical module contains packages with an application, packages with the application-specific dependency libraries, packages
-with documentation for the application, and packages with helper utilities. For more information, see [Introduction to modules](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/installing_managing_and_removing_user-space_components/introduction-to-modules_using-appstream) in the Red Hat documentation.
+    These versions of RHEL don't support Docker. Instead, these versions use Podman, and *podman* is part of a module called "container-tools". In this context, a module is a set of RPM packages that represent a component and that usually install together. A typical module contains packages with an application, packages with the application-specific dependency libraries, packages with documentation for the application, and packages with helper utilities. For more information, see [Introduction to modules](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/installing_managing_and_removing_user-space_components/introduction-to-modules_using-appstream) in the Red Hat documentation.
 
 - **Transport Layer Security (TLS) certificate**: The Linux server requires a trusted TLS certificate to secure the connection between devices and the Tunnel Gateway server. You’ll add the TLS certificate, including the full trusted certificate chain, to the server during installation of the Tunnel Gateway.
 
@@ -209,6 +208,8 @@ For more information, see [Configuring container networking with Podman](https:/
 
 - **Load balancers** *(Optional)*:  If you choose to add a load balancer, consult your vendors documentation for configuration details. Take into consideration network traffic and firewall ports specific to Intune and the Microsoft Tunnel.
 
+- **Per-app VPN and Top-level domain support** - Per-app-VPN use with internal use of local top-level domains is not supported by Microsoft Tunnel.
+
 ## Firewall
 
 By default, the Microsoft Tunnel and server use the following ports:
@@ -232,7 +233,6 @@ When creating the Server configuration for the tunnel, you can specify a differe
   - Security Token Service: `*.sts.windows.net`
   - Azure storage for tunnel logs: `*.blob.core.windows.net`
   - Additional storage endpoint urls: 
-  - `*.mwh03prdstr02a.store.core.windows.net`
   - `*.blob.storage.azure.net`
 
 
@@ -243,7 +243,12 @@ When creating the Server configuration for the tunnel, you can specify a differe
 
 ## Proxy
 
-You can use a proxy server with Microsoft Tunnel. The following considerations can help you configure the Linux server and your environment for success:
+You can use a proxy server with Microsoft Tunnel.
+
+> [!NOTE]  
+> Proxy server configurations are not supported with versions of Android prior to version 10.  For more information, see [VpnService.Builder](https://developer.android.com/reference/android/net/VpnService.Builder#setHttpProxy%28android.net.ProxyInfo%29) in that Android developer documentation.
+
+The following considerations can help you configure the Linux server and your environment for success:
 
 ### Configure an outbound proxy for Docker
 
@@ -405,15 +410,15 @@ To use the readiness tool:
 
    You can run the script from any Linux server that is on the same network as the server you plan to install, allowing network admins to run it and troubleshoot network issues independently.
 
-2. To validate your network configuration, run the script with the following commands to first set the execute permissions on the script and then to validate the Tunnel can connect to the correct endpoints:
+2. To validate your network and Linux configuration, run the script with the following commands to set the execute permissions on the script, to validate the Tunnel can connect to the correct endpoints, and then to check for the presence of utilities that Tunnel uses:
 
    - `sudo chmod +x ./mst-readiness`
-   - `sudo ./mst-readiness network`
 
-   The second command runs the following actions and reports on success or error for both:
+   - `sudo ./mst-readiness network` - This command runs the following actions and reports on success or error for both:
+     - Tries to connect to each Microsoft endpoint the tunnel will use.
+     - Checks that the required ports are open in your firewall.
 
-   - Tries to connect to each Microsoft endpoint the tunnel will use.
-   - Checks that the required ports are open in your firewall.
+   - `sudo ./mst-readiness utils` - This command validates that utilities that are used by Tunnel like Docker or Podman and ip_tables are available.
 
 3. To validate that the account you’ll use to install Microsoft Tunnel has the required roles and permissions to complete enrollment, run the script with the following command line: `./mst-readiness account`
 

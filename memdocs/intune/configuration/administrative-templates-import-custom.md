@@ -2,12 +2,12 @@
 # required metadata
 
 title: Import custom and third party partner ADMX templates in Microsoft Intune
-description: You can add, upload, or import custom and third party partner ADMX and ADML files in Microsoft Intune and Endpoint Manager. When they're imported, create a device configuration profile and assign the profile to your Windows 10/11 devices.
+description: You can add, upload, or import custom and third party partner ADMX and ADML files in Microsoft Intune. When they're imported, create a device configuration profile and assign the profile to your Windows 10/11 devices.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/15/2022
+ms.date: 11/15/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -29,7 +29,7 @@ ms.collection:
 
 ---
 
-# Import custom ADMX and ADML administrative templates into Endpoint Manager (public preview)
+# Import custom ADMX and ADML administrative templates into Microsoft Intune (public preview)
 
 You can import custom and third party/partner ADMX and ADML templates into the Endpoint Manager admin center. Once imported, you can create a device configuration policy using these settings, and then assign the policy to your managed devices.
 
@@ -38,10 +38,10 @@ This feature applies to:
 - Windows 11
 - Windows 10
 
-This article shows you how to import custom ADMX and ADML files in the Endpoint Manager admin center. For more information on administrative templates in Endpoint Manager, go to [Use ADMX templates to configure policy settings in Microsoft Intune](administrative-templates-windows.md).
+This article shows you how to import custom ADMX and ADML files in the Endpoint Manager admin center. For more information on administrative templates in Intune, go to [Use ADMX templates to configure policy settings in Microsoft Intune](administrative-templates-windows.md).
 
 > [!TIP]
-> The settings catalog has many settings natively built-in to Endpoint Manager, including Google Chrome. For more information, go to:
+> The settings catalog has many settings natively built-in to Intune, including Google Chrome. For more information, go to:
 >
 > - [Use the settings catalog to configure settings on Windows, iOS/iPadOS and macOS devices](settings-catalog.md)
 > - [Common tasks you can complete using the Settings Catalog](settings-catalog-common-features.md)
@@ -66,8 +66,24 @@ This article shows you how to import custom ADMX and ADML files in the Endpoint 
   If you upload `firefox.admx` before `mozilla.adml`, then the import will fail.
 
   To remove a dependency prerequisite, delete the associated ADMX file first. Then, delete the dependency prerequisite. In our Mozilla Firefox example, delete `firefox.admx` and then delete `mozilla.admx`.
+  
+  > [!TIP]
+  > 
+  > - To see any namespace dependencies, open the ADMX file and search for `using prefix`. Any dependencies will be listed.
+  > - If you upload an ADMX file without the dependency, an error message will list the missing namespace.
+  
+- Some files may require `Windows.admx` as a prerequisite. This file must be uploaded first. In a future release (no ETA), this namespace will be automatically included and eventually not be required.
 
 - Currently, the combo box setting type isn't supported. ADMX files with the combo box setting type will fail to import. All other setting types are supported.
+
+- Not all areas of the registry can be set using custom ADMX. For more information on the registry locations that can be used, go to [Win32 and Desktop Bridge app ADMX policy Ingestion Overview](/windows/client-management/win32-and-centennial-app-policy-configuration#overview).
+
+- ADMX settings that are built into Windows (located in the `C:\Windows\PolicyDefinitions` folder) are enabled through configuration service providers (CSPs). 
+
+  - Don't import these built-in settings if your intent is to configure them. Instead, use the [settings catalog](settings-catalog.md) or a [custom profile](custom-settings-configure.md).
+  - Do import these built-in settings if they're a required parent namespace of another file. 
+
+  For a list of the ADMX backed CSP settings, go to [ADMX-backed policies in Policy CSP](/windows/client-management/mdm/policies-in-policy-csp-admx-backed).
 
 ## Download the ADMX templates
 

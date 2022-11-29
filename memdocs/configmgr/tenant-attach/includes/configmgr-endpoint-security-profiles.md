@@ -1,11 +1,14 @@
 ---
-author: mestew
-ms.author: mstewart
+author: Banreet
+ms.author: banreetkaur
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: include
 ms.localizationpriority: high
 ms.date: 07/11/2022
+manager: apoorvseth
+ms.reviewer: mstewart,aaroncz 
+ms.collection: tier3
 ---
 <!--Don't apply H2/H3 in this include file since they are context driven by article. This file is currently used by endpoint-security-get-started.md and deploy-antivirus-policy.md. -->
 The following profiles are supported for devices you manage with Configuration Manager current branch, through the tenant attach scenario:

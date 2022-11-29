@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 09/02/2022
+ms.date: 10/13/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -53,9 +53,11 @@ The Remote help app supports the following capabilities:
 
 - **Requires Organization login** - To use remote help, both the helper and the sharer must sign in with an Azure Active Directory (Azure AD) account from your organization. You can’t use remote help to assist users who aren’t members of your organization.
 
-- **Compliance Warnings** - Before connecting to a user's device, a helper will see a non-compliance warning about that device if it’s not compliant with its assigned policies. This warning doesn’t block access but provides transparency about the risk of using sensitive data like administrative credentials during the session.
-
-  Unenrolled devices are always reported as non-compliant. This is because until a device enrolls with Intune it can’t receive policies from Intune and as such is unable to establish its compliance status.
+- **Compliance Warnings** - Before connecting to a user's device, a helper will see a non-compliance warning about that device if it’s not compliant with its assigned policies. This warning doesn’t block access but provides transparency about the risk of using sensitive data like administrative credentials during the session. 
+    
+    - Helpers who have access to device views in Intune will see a link in the warning to the device properties page in Microsoft Endpoint Manager. This allows a helper to learn more about why the device is not compliant.
+ 
+    - Unenrolled devices are always reported as non-compliant. This is because until a device enrolls with Intune it can’t receive policies from Intune and as such is unable to establish its compliance status.
 
 - **Role-based access control** – Admins can set RBAC rules that determine the scope of a helper’s access, like:
   - The users who can help others and the range of actions they can do while providing help, like who can run elevated privileges while helping.
@@ -89,16 +91,18 @@ Both the helper and sharer must be able to reach these endpoints over port 443:
 
 | Domain/Name                       | Description                                           |
 |-----------------------------------|-------------------------------------------------------|
-| \*.support.services.microsoft.com | Primary endpoint used for the remote help application    |
-| \*.resources.lync.com             | Required for the Skype framework used by remote help |
-| \*.infra.lync.com                 | Required for the Skype framework used by remote help |
-| \*.latest-swx.cdn.skype.com        | Required for the Skype framework used by remote help |
-| \*.login.microsoftonline.com       | Required for logging in to the application (AAD). Might not be available in preview in all markets or for all localizations.   |
-| \*.channelwebsdks.azureedge.net    | Used for chat services within remote help        |
-| \*.aria.microsoft.com             | Used for accessibility features within the app    |
-| \*.api.support.microsoft.com       | API access for remote help                          |
-| \*.vortex.data.microsoft.com      | Used for diagnostic data                                |
-| \*.channelservices.microsoft.com  | Required for chat services within remote help        |
+|\*.aria.microsoft.com             | Used for accessibility features within the app|
+|\*.events.data.microsoft.com      | Microsoft Telemetry Service |
+|\*.monitor.azure.com              | Required for telemetry and remote service initialization|
+|\*.support.services.microsoft.com | Primary endpoint used for the remote help application|
+|\*.trouter.skype.com              | Used for Azure Communication Service for chat and connection between parties|
+|\*.aadcdn.msauth.net              | Required for logging in to the application (AAD)|
+|\*.aadcdn.msftauth.net            | Required for logging in to the application (AAD)|
+|\*.edge.skype.com                 | Used for Azure Communication Service for chat and connection between parties|
+|\*.graph.microsoft.com            | Used for connecting to the Microsoft Graph service|
+|\*.login.microsoftonline.com      | Required for Microsoft login service. Might not be available in preview in all markets or for all localizations|
+|\*.remoteassistanceprodacs.communication.azure.com|Used for Azure Communication Service for chat and connection between parties|
+|[Allow list for Microsoft Edge endpoints](/deployedge/microsoft-edge-security-endpoints) |The app uses Edge WebView2 browser control. This article identifies the domain URLs that you need to add to the allow list to ensure communications through firewalls and other security mechanisms|
 
 ### Data and privacy
 
@@ -109,7 +113,7 @@ Microsoft logs a small amount of session data to monitor the health of the remot
 - Errors arising from remote help itself, such as unexpected disconnections. This information is stored on the sharer's device in the event viewer.
 - Features used inside the app such as view only and elevation. This information is stored on Microsoft servers for 30 days.
 
-Remote help logs session details to the Windows Event Logs on the device of both the helper and sharer. Microsoft can't access a session or view any actions or keystrokes that occur in the session. Microsoft can't access a session or view any actions or keystrokes that occur in the session.
+Remote help logs session details to the Windows Event Logs on the device of both the helper and sharer. Microsoft can't access a session or view any actions or keystrokes that occur in the session.
 
 The helper and sharer both see the following information about the other individual, taken from their organizational profiles:
 
@@ -191,7 +195,7 @@ To configure your tenant to support remote help, review and complete the followi
 1. Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Tenant administration** > **Remote help**.
 
 2. On the **Settings** tab:
-   1. Set **Enable remote help** to **Enabled** to allow the use of remote help. By default, this setting is *Enabled*.
+   1. Set **Enable remote help** to **Enabled** to allow the use of remote help. By default, this setting is *Disabled*.
    2. Set **Allow remote help to unenrolled devices** to **Enabled** if you want to allow this option. By default, this setting is *Disabled*.
 
 3. Select **Save**.
@@ -342,6 +346,9 @@ Remote help is supported in the following languages:
 - Spanish
 - Swedish
 - Turkish
+
+> [!NOTE] 
+> The Message function in Remote help only supports single byte characters.
 
 ## Known Issues
 

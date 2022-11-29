@@ -7,9 +7,9 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 09/20/2022
+ms.date: 11/28/2022
 ms.topic: reference
-ms.service: cloudpc
+ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
 ms.technology:
@@ -32,7 +32,7 @@ ms.collection: M365-identity-device-management
 
 Learn what new features are available in Windows 365 Enterprise.
 
-> [!Note]
+> [!NOTE]
 > Each monthly update may take up to a week to rollout to all customers.
 
 <!-- Common categories:  
@@ -46,10 +46,158 @@ Learn what new features are available in Windows 365 Enterprise.
 ### Role-based access control
 ### Scripts
 ### End user experience
+### Windows 365 Government
+### Windows 365 app
 -->
 
 <!-- ########################## -->
+## Week of November 28, 2022
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+
+### Provisioning
+
+#### New Geography option in Windows 365 provisioning policy<!-- 41400209-->
+
+The new **Geography** setting gives admins two ways to choose Azure regions during provisioning.
+
+- You can select a specific region to make sure that your Cloud PCS are only provisioned in that region.
+- You can select **Automatic** to let the Windows 365 service automatically select a region (within the Geography) at the time of provisioning.
+
+Existing provisioning policies will automatically populate the **Geography** and **Region** settings based on existing settings. No admin action is required.  
+
+For more information, see [Create provisioning policies](create-provisioning-policy.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+
+### Windows 365 app
+
+#### Updated Windows 365 app installation to install dependent applications<!--42190185-->
+
+The Windows 365 app installation process has been updated to automatically install dependent applications.
+
+#### Azure Active Directory policy updated for Windows 365 app<!--42190185-->
+
+The Azure Active Directory (Azure AD) policy has been updated so that no extra Conditional Access policy change is required to use the Windows 365 app.
+
+<!-- ########################## -->
+## Week of November 14, 2022
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Documentation
+
+#### New documentation article: Use the Enrollment Status Page with Cloud PCs
+
+We’ve published a new help documentation article. For more information, see [Use the Enrollment Status Page with Cloud PCs](enrollment-status-page.md).
+
+<!-- ########################## -->
+## Week of November 7, 2022
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Windows 365 Government
+
+#### Windows 365 Government now supports Windows 11 and Secure boot<!--42089070-->
+
+Windows 365 Government now supports the following features:
+
+- Creating Cloud PCs that use [Secure boot](/windows-hardware/design/device-experiences/oem-secure-boot).
+- Windows 11 options in the gallery images list.
+- Creating custom images running Windows 11 (must be Generation 2 virtual machines).
+
+<!-- ########################## -->
+## Week of October 24, 2022
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Point-in-time restore now generally available<!--37063579-->
+
+Point-in-time restore has moved out of preview and into general availability. For more information, see [Point-in-time restore for Windows 365 Enterprise](restore-overview.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Provisioning
+
+#### New supported Azure region: UAE North<!--41670300-->
+
+A new Azure region is now supported for Windows 365 Cloud PC provisioning: UAE North.
+
+For more information about supported Azure regions, see [Supported Azure regions for Cloud PC provisioning](requirements.md#supported-azure-regions-for-cloud-pc-provisioning).
+
+<!-- ########################## -->
+## Week of October 17, 2022
+
+<!-- ***********************************************-->
+### Monitor and troubleshoot
+
+#### New Azure Network Connection health check<!--41752775-->
+
+A new check has been added the Azure Network Connection health checks: **UDP connection server reachable**. For more information, see [Azure network connections health checks](health-checks.md).
+
+#### Forensic auditing of Cloud PCs now generally available<!--41237533-->
+
+Forensic auditing has moved out of preview and into general availability. For more information, see [Digital forensics and Windows 365 Enterprise Cloud PCs](digital-forensics.md) and [Place a Cloud PC under review](place-cloud-pc-under-review.md).
+
+<!-- ########################## -->
+## Week of October 10, 2022
+
+<!-- ***********************************************-->
+### Apps
+
+#### Windows 365 app in public preview<!--41161804-->
+
+A new app to sign in to and manage your Windows 365 Cloud PCs is now in public preview. The app provides functionality similar to the windows365.microsoft.com web site for accessing and managing your Cloud PCs. For more information, see [Installing the Windows 365 app](https://support.microsoft.com/topic/cbb0d4d5-69d4-4f00-b050-6dc7a02d02d0). 
+
+<!-- ***********************************************-->
+### Device provisioning
+
+#### Support for US Government environments<!--35234096 -->
+
+Government organizations can now use Windows 365 services first in US Government Community Cloud (GCC) High environments and later in GCC environments. All Windows 365 dependency services must also be used by the organization within the associated Government environment. For more information, see [What is Windows 365 Government?](introduction-windows-365-government.md)
+
+<!-- ***********************************************-->
+### Partners
+
+#### Use Citrix HDX Plus with Windows 365 Enterprise<!--41294492-->
+
+You can now use Citrix HDX Plus with Windows 365 Enterprise Cloud PCs. For more information, see [Set up Citrix HDX Plus for Windows 365 Enterprise](set-up-citrix.md).
+
+<!-- ***********************************************-->
+### Monitor and troubleshoot
+
+#### Cloud PC utilization report<!--40636545 -->
+
+A new report is now available for Cloud PCs. The **Cloud PC utilization** report shows how many hours users have been connected to their Cloud PCs. Information for individual Cloud PCs and aggregated data is also shown. For more information, see [Cloud PC utilization report](report-cloud-pc-utilization.md).
+
+#### Cloud PC with connection quality issues report<!--40636545 -->
+
+A new report is now available for Cloud PCs. The **Cloud PCs with connection quality issues** report shows information for round-trip time, available bandwidth, and remoting sign-in time. Information for individual Cloud PCs and aggregated data is also shown. For more information, see [Cloud PC connection quality report](report-cloud-pc-connection-quality.md).
+
+<!-- ########################## -->
+## Week of September 26, 2022 (Service release 2209)
+
+<!-- ***********************************************-->
+### Monitor and troubleshoot
+
+#### System alerts and email notifications (preview)<!--40932899 -->
+
+You can now set up system alerts and automated emails to be notified when certain events, warnings, or errors occur in the Windows 365 service. A subset of critical Cloud PC issues will be sent automatically to admins. In addition, you can define alert rules, such as target audience (devices, user groups, tenants), thresholds, frequency, and notification channels. For more information, see [Alerts](alerts.md).
+
+<!-- ***********************************************-->
+### Miscellaneous
+
+#### Allow list URL change for Windows 365<!--41400001 -->
+
+We've added a new endpoint which the Windows 365 service requires to be accessible: *.infra.windows365.microsoft.com". This is part of ongoing endpoint consolidation work to reduce the number of FQDNs required to be accessible for the service.
+
+<!-- ########################## -->
 ## Week of September 19, 2022
+
+<!-- ***********************************************-->
+### Device management
+
+#### Downsize Cloud PCs (Preview)<!--41076858 -->
+
+You can now downsize a Cloud PC's RAM and specifications (except disk size). For more information, see [Resize a Cloud PC](resize-cloud-pc.md).
 
 <!-- ***********************************************-->
 ### Device provisioning
@@ -60,8 +208,6 @@ New gallery images are now available that include support for Windows 11 version
 
 - Win11 22H2 + M365 Apps
 - Win11 22H2 + Optimizations
-- Win10 22H2 + M365 Apps
-- Win10 22H2 + Optimizations
 
 <!-- ########################## -->
 ## Week of August 29, 2022 (Service release 2208)
@@ -184,7 +330,7 @@ The **Azure network connection** tab has a new health check: **Intune enrollment
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Monitor and troubleshoot
 
-### Forensic auditing of Cloud PCs<!--38726407-->
+#### Forensic auditing of Cloud PCs<!--38726407-->
 
 You can now place a Cloud PC under review. This action starts a process to create a secure snapshot of a Cloud PC. You can then analyze the snapshot using electronic discovery solutions. For more information, see [Digital forensics and Windows 365 Enterprise Cloud PCs](digital-forensics.md) and [Place a Cloud PC under review](place-cloud-pc-under-review.md).
 

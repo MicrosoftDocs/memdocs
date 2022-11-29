@@ -1,19 +1,18 @@
 ---
-title: "Create an Association Between Two Computers"
-titleSuffix: "Configuration Manager"
-description: "You create an association between a reference and destination computer, in Configuration Manager, by calling the AddAssociation Method in Class SMS_StateMigration"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: Create an Association Between Two Computers
+titleSuffix: Configuration Manager
+description: You create an association between a reference and destination computer, in Configuration Manager, by calling the AddAssociation Method in Class SMS_StateMigration
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: how-to
 ms.assetid: f3670fc7-3b07-4812-909b-d225580a7dcb
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Create an Association Between Two Computers in Configuration Manager
 You create an association between a reference and destination computer, in Configuration Manager, by calling the [AddAssociation Method in Class SMS_StateMigration](../../develop/reference/osd/addassociation-method-in-class-sms_statemigration.md).  

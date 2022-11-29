@@ -8,7 +8,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 05/13/2022
-ms.topic: conceptual
+ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
@@ -24,7 +24,7 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: 
   - M365-identity-device-management
-  - highpri
+  - tier3
 zone_pivot_groups: windows-mdm-versions
 ---
 
@@ -1488,7 +1488,7 @@ For more information, see [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlin
 
 - **Turn on Windows SmartScreen**  
   Baseline default: *Yes*  
-   [Learn more](https://go.microsoft.com/fwlink/?linkid=872784l)
+   [Learn more](/windows/client-management/mdm/policy-csp-smartscreen#smartscreen-enablesmartscreeninshell)
 
 - **Block users from ignoring SmartScreen warnings**  
   Baseline default: *Yes*  

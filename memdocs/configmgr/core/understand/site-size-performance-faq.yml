@@ -3,8 +3,8 @@ metadata:
   title: Site size and performance FAQ
   titleSuffix: Configuration Manager
   description: Answers to common Configuration Manager questions about site sizing and performance.
-  author: aczechowski
-  ms.author: aaroncz
+  author: banreet
+  ms.author: banreetkaur
   ms.prod: configuration-manager
   ms.topic: faq
   ms.date: 02/15/2022

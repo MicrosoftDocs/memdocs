@@ -2,13 +2,13 @@
 # required metadata
 
 title: Use group policy analytics to import and analyze GPOs in Microsoft Intune
-description: Import and analyze your group policy objects in Microsoft Intune and Endpoint Manager. See the policies that are supported and aren't supported in cloud MDM providers.
+description: Import and analyze your group policy objects in Microsoft Intune. See the policies that are supported and aren't supported in cloud MDM providers.
 keywords:
 author: MandiOhlinger
 
 ms.author: mandia
 manager: dougeby
-ms.date: 05/31/2022
+ms.date: 10/27/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -31,12 +31,12 @@ ms.collection:
   - highpri
 ---
 
-# Analyze your on-premises GPOs using Group Policy analytics in Microsoft Endpoint Manager (public preview)
+# Analyze your on-premises GPOs using Group Policy analytics in Microsoft Intune (public preview)
 
 > [!TIP]
-> Looking for information on ADMX templates? See [Use Windows 10/11 Administrative Templates to configure group policy settings in Microsoft Endpoint Manager](administrative-templates-windows.md).
+> Looking for information on ADMX templates? See [Use Windows 10/11 Administrative Templates to configure group policy settings in Microsoft Intune](administrative-templates-windows.md).
 
-Microsoft Intune has many of the same settings as your on-premises GPOs. **Group Policy analytics** is a tool in Microsoft Endpoint Manager that:
+Microsoft Intune has many of the same settings as your on-premises GPOs. **Group Policy analytics** is a tool in Microsoft Intune that:
 
 - Analyzes your on-premises GPOs.
 - Shows the settings that are supported by cloud-based MDM providers, including Microsoft Intune.
@@ -52,7 +52,7 @@ This feature applies to:
 - Windows 11
 - Windows 10
 
-This article shows you how export your GPOs, import the GPOs into Endpoint Manager, and review the analysis and results. To migrate or transfer your imported GPOs to an Intune policy, go to [Create a Settings Catalog policy using your imported GPOs in Microsoft Endpoint Manager (public preview)](group-policy-analytics-migrate.md).
+This article shows you how export your GPOs, import the GPOs into Intune, and review the analysis and results. To migrate or transfer your imported GPOs to an Intune policy, go to [Create a Settings Catalog policy using your imported GPOs in Microsoft Intune (public preview)](group-policy-analytics-migrate.md).
 
 ## Before you begin
 
@@ -69,9 +69,9 @@ This article shows you how export your GPOs, import the GPOs into Endpoint Manag
 3. Expand **Group Policy Objects** to see all the available GPOs.
 4. Right-click the GPO you want to migrate and choose **Save report**:
 
-    :::image type="content" source="./media/group-policy-analytics/sample-group-policy-object-save-report.png" alt-text="Open Group Policy management and save a GPO as an XML file report.":::
+    :::image type="content" source="./media/group-policy-analytics/sample-group-policy-object-save-report.png" alt-text="Screenshot that shows how to open Group Policy management and save a GPO as an XML file report.":::
 
-4. Select an easily accessible folder for your export. In **Save as type**, select **XML File**. You'll add this file in Endpoint Manager group policy analytics.
+5. Select an easily accessible folder for your export. In **Save as type**, select **XML File**. You'll add this file in group policy analytics in Intune.
 
 Make sure that the file is less than 4 MB and has a proper Unicode encoding. If the exported file is greater than 4 MB, then reduce the number of settings in the group policy object.
 
@@ -97,15 +97,15 @@ Make sure that the file is less than 4 MB and has a proper Unicode encoding. If 
 
     You can **Import** more GPOs for analysis, **Refresh** the page, and **Filter** the output. You can also **Export** this view to a `.csv` file:
 
-    :::image type="content" source="./media/group-policy-analytics/import-refresh-filter-options.png" alt-text="Import, refresh, filter, or export a group policy object (GPO) to a CSV file in Microsoft Intune and Endpoint Manager admin center.":::
+    :::image type="content" source="./media/group-policy-analytics/import-refresh-filter-options.png" alt-text="Screenshot that shows how to import, refresh, filter, or export a group policy object (GPO) to a CSV file in Microsoft Intune and Endpoint Manager admin center.":::
 
 4. Select the **MDM Support** percentage for a listed GPO. More detailed information about the GPO is shown:  
 
     - **Setting Name**: The name is automatically generated using information in the GPO setting.
     - **Group Policy Setting Category**: Shows the setting category for ADMX settings, such as Internet Explorer and Microsoft Edge. Not all settings have a setting category.
-    - **MDM Support**: 
+    - **MDM Support**:
 
-      - **Yes** means there's a matching setting available in Endpoint Manager. You can configure this setting in the Settings Catalog.
+      - **Yes** means there's a matching setting available in Intune. You can configure this setting in the Settings Catalog.
       - **No** means there isn't a matching setting available to MDM providers, including Intune.
 
     - **Value**: Shows the value imported from the GPO. It shows different values, such `true`, `900`, `Enabled`, `false`, and so on.
@@ -120,7 +120,20 @@ Make sure that the file is less than 4 MB and has a proper Unicode encoding. If 
 
     - **CSP Mapping**: Shows the OMA-URI path for the on-premises policy. You can use the OMA-URI in a [custom device configuration profile](custom-settings-configure.md). For example, you may see `./Device/Vendor/MSFT/BitLocker/RequireDeviceEnryption`.
 
-5. For the settings that have MDM support, you can create a Settings Catalog policy with these settings. For the specific steps, go to [Create a Settings Catalog policy using your imported GPOs in Microsoft Endpoint Manager (public preview)](group-policy-analytics-migrate.md).
+5. For the settings that have MDM support, you can create a Settings Catalog policy with these settings. For the specific steps, go to [Create a Settings Catalog policy using your imported GPOs in Microsoft Intune (public preview)](group-policy-analytics-migrate.md).
+
+### Scope tags assigned to you are automatically applied when you import
+
+Scope tags assigned to admins are automatically applied when these admins import the GPOs. So, you will only see the imported GPOs if you have one of the same scope tags as the admin that did the import. If you don't have the same scope tag, then you won't see the imported GPO in the reporting or in the list of GPOs.
+
+For example, admins have "Charlotte", "London", or "Boston" scope tags assigned to their role:
+
+- An admin with the "Charlotte" scope tag imports a GPO. 
+- The "Charlotte" scope tag is automatically applied to the imported GPO.
+- All admins with the "Charlotte" scope tag can see the imported object.
+- Admins with only the "London" or only the "Boston" scope tags can't see the imported object from the "Charlotte" admin.
+
+For admins to see the analytics or migrate the imported GPO to an Intune policy, these admins must have one of the same scope tags as the admin that did the import.
 
 ## Supported CSPs and group policies
 
@@ -139,7 +152,7 @@ If your imported GPO has settings that aren't in the supported CSPs and Group Po
 
 1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Reports** > **Group policy analytics (preview)**:
 
-    :::image type="content" source="./media/group-policy-analytics/policy-analytics-reports.png" alt-text="Review the report and output of imported GPOs using Group Policy analytics in Microsoft Intune and Endpoint Manager admin center.":::
+    :::image type="content" source="./media/group-policy-analytics/policy-analytics-reports.png" alt-text="Screenshot that shows how to review the report and output of imported GPOs using Group Policy analytics in Microsoft Intune and Endpoint Manager admin center.":::
 
 2. In the **Summary** tab, a summary of the GPO and its policies are shown. Use this information to determine the status of the policies in your GPO:
 
@@ -157,7 +170,7 @@ If your imported GPO has settings that aren't in the supported CSPs and Group Po
     - Select **Generate report** or **Generate again** to get current data.
     - See the list of settings in your GPO.
     - Use the search bar to find specific settings.
-    - Get a time stamp of when the report was last generated. 
+    - Get a time stamp of when the report was last generated.
 
     > [!NOTE]
     > After you add or remove your imported GPOs, it can take about 20 minutes to update the Migration Readiness reporting data.
@@ -174,7 +187,7 @@ Examples of feedback areas:
 
 - You received errors during GPO import or analytics, and you need more specific information.
 - How easy is it to use Group Policy analytics to find the supported group policies in Microsoft Intune?
-- Will this tool help you move some workloads to Endpoint Manager? If yes, what workloads are you considering?
+- Will this tool help you move some workloads to Intune? If yes, what workloads are you considering?
 
 To get information on the customer experience, the feedback is aggregated, and sent to Microsoft. Entering an email is optional, and may be used to get more information.
 
@@ -187,13 +200,13 @@ At any time, you can delete imported GPOs:
 1. Go to **Devices** > **Group Policy analytics (preview)**.
 2. Select the context menu > **Delete**:
 
-    :::image type="content" source="./media/group-policy-analytics/delete-imported-gpo.png" alt-text="Delete or remove the group policy object (GPO) you imported in the Group Policy analyzer in Microsoft Intune and Endpoint Manager admin center.":::
+    :::image type="content" source="./media/group-policy-analytics/delete-imported-gpo.png" alt-text="Screenshot that shows how to delete or remove the group policy object (GPO) you imported in the Group Policy analyzer in Microsoft Intune and Endpoint Manager admin center.":::
 
 ## Next steps
 
-- [Create a Settings Catalog policy using your imported GPOs in Microsoft Endpoint Manager (public preview)](group-policy-analytics-migrate.md)
+- [Create a Settings Catalog policy using your imported GPOs in Microsoft Intune (public preview)](group-policy-analytics-migrate.md)
 
-- [Use Windows 10/11 Administrative Templates to configure group policy settings in Microsoft Endpoint Manager](administrative-templates-windows.md)
+- [Use Windows 10/11 Administrative Templates to configure group policy settings in Microsoft Intune](administrative-templates-windows.md)
 
 ## See also
 

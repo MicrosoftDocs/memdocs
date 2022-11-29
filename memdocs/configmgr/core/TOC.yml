@@ -285,16 +285,14 @@ items:
     items:
     - name: Technical Preview overview
       href: get-started/technical-preview.md
+    - name: 2210 features
+      href: get-started/2022/technical-preview-2210.md
+    - name: 2209 features
+      href: get-started/2022/technical-preview-2209.md
     - name: 2208 features
       href: get-started/2022/technical-preview-2208.md
     - name: 2207 features
-      href: get-started/2022/technical-preview-2207.md       
-    - name: 2206 features
-      href: get-started/2022/technical-preview-2206.md           
-    - name: 2205 features
-      href: get-started/2022/technical-preview-2205.md       
-    - name: 2204 features
-      href: get-started/2022/technical-preview-2204.md        
+      href: get-started/2022/technical-preview-2207.md                     
   - name: Migrate data between hierarchies
     items:
     - name: Migration overview

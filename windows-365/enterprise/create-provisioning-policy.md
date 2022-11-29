@@ -7,9 +7,9 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 08/01/2022
+ms.date: 11/21/2022
 ms.topic: how-to
-ms.service: cloudpc
+ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
 ms.technology:
@@ -50,15 +50,21 @@ A few things to keep in mind:
    > [!TIP]
    > Your provisioning policy name cannot contain the following characters: < > & | " ^
 
-3. On the **General** page, select a join type, followed by the appropriate network. If you select the combination of **Azure AD Join** and **Microsoft Hosted Network**, you must select a region for Microsoft to host your Cloud PC.
-4. For **Azure network connection**, select the connection to use for this policy > **Next**.
+3. On the **General** page, select a **Join type**:
+    - **Hybrid Azure AD Join**: You must select an ANC to use for this policy.
+    - **Azure AD Join**: You have two options for **Network**:
+        - **Azure network connection**: Select an ANC to use for this policy.
+        - **Microsoft hosted network**: Select a **Geography** where your Cloud PCs will be provisioned. Then, for [**Region**](requirements.md#supported-azure-regions-for-cloud-pc-provisioning), you can select:
+            - **Automatic (Recommended)**: The Windows 365 service automatically chooses a region within the selected geography at the time of provisioning. This decreases the chance of provisioning failure.
+            - A specific region: To make sure that your Cloud PCs are only provisioned in the region that you choose.
+4. Select **Next**.
 5. On the **Image** page, for **Image type**, select one of the following options:
     - **Gallery image**: Choose **Select** > select an image from the gallery > **Select**. Gallery images are default images provided for your use.
     - **Custom image**:  Choose **Select** > select an image from the list > **Select**. You'll see the list of images that you uploaded using the [Add device images](add-device-images.md) workflow.
 6. Select **Next**.
 7. On the **Configuration** page, under **Windows settings**, choose a **Language & Region**. The selected language pack will be installed on Cloud PCs provisioned with this policy.
 8. Optionally, under **Additional services**, choose a service to be installed on Cloud PCs provisioned with this policy:
-    - **Windows Autopatch (preview)** is a cloud service that automates updates for Windows, Microsoft 365 Apps for enterprise, Microsoft Edge, and Microsoft Teams on both physical and virtual devices. For more information, see [What is What is Windows Autopatch?](/windows/deployment/windows-autopatch/overview/windows-autopatch-overview) and the [Windows Autopatch FAQ](https://go.microsoft.com/fwlink/?linkid=2200228).
+    - **Windows Autopatch** is a cloud service that automates updates for Windows, Microsoft 365 Apps for enterprise, Microsoft Edge, and Microsoft Teams on both physical and virtual devices. For more information, see [What is What is Windows Autopatch?](/windows/deployment/windows-autopatch/overview/windows-autopatch-overview) and the [Windows Autopatch FAQ](https://go.microsoft.com/fwlink/?linkid=2200228).
     - **Microsoft Managed Desktop** is a cloud service that helps with device deployment, service management and operations, and security. For more information, see [What is Microsoft Managed Desktop?](/managed-desktop/intro/)
 9. Select **Next**.
 10. On the **Assignments** page, choose **Select groups** > choose the groups you want this policy assigned to > **Select** > **Next**. Nested groups aren't currently supported.

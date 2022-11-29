@@ -9,7 +9,7 @@ manager: dougeby
 ms.date: 07/12/2022
 audience: Admin
 ms.topic: troubleshooting
-ms.service: cloudpc
+ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
 ms.technology:
@@ -53,7 +53,7 @@ Upgrading an existing Cloud PC from Windows 10 to Windows 11 using the Settings 
 1. Edit the related provisioning policy to change the gallery image to Windows 11.
 2. Reprovision the Cloud PC.
 
-## In-place Windows updgrade may change computer name
+## In-place Windows upgrade may change computer name
 
 Upgrading an existing Cloud PC between release versions of Windows 10 to Windows 11 may cause the computer name to be changed to a name with a prefix of "pps" while leaving the Intune device name unchanged.
 
@@ -73,10 +73,6 @@ Windows 365 provisioning failures may occur because both:
 2. If yes, review the related GPO. Is PowerShell Execution set to AllSigned?
 3. If it is, either remove the GPO or reset the PowerShell Execution to Unrestricted.
 4. Retry the ANC health check. If the check succeeds, retry provisioning.
-
-## Default and custom Enrollment Status Page profiles for Windows 365 Cloud PCs
-
-Only the default Enrollment Status Page (ESP) profile is supported for Windows 365 Cloud PCs. Custom ESP profiles aren’t supported for Cloud PCs.
 
 ## Cloud PC reports as not compliant for compliance policy
 

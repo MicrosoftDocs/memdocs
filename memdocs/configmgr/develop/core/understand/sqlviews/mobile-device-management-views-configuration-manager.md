@@ -9,11 +9,11 @@ ms.topic: conceptual
 
 
 ms.assetid: 3c8dc27b-0839-488d-9931-c897f136bfad
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
+ms.collection: tier3
 ---
 
 # Mobile device management views in Configuration Manager

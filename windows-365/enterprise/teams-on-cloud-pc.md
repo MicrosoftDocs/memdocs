@@ -9,7 +9,7 @@ ms.author: erikje
 manager: dougeby
 ms.date: 06/10/2022
 ms.topic: overview
-ms.service: cloudpc
+ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
 ms.technology:
@@ -54,8 +54,9 @@ Some of the key benefits of the optimizations are:
 
 Media optimization for Microsoft Teams is only available for the Windows and macOS endpoints. Media optimizations require:
 
-- Remote Desktop client for Windows version 1.2.1026.0 or later (ideally the latest version).
-- Remote Desktop client for macOS version 10.7.7 or later ([preview](..\public-preview.md)). If you upgrade from versions earlier than 10.7.7, you'll also need to go to Microsoft **Remote Desktop Preferences** > **General** and turn on Teams optimizations. If you're using the client for the first time and already have version 10.7.7 or later installed, you won't need to turn that on. In that case, Teams optimizations are turned on by default.
+- Windows 365 app for Windows via the Microsoft Store (ideally the latest version).
+- Remote Desktop client for Windows, version 1.2.1026.0 or later (ideally the latest version).
+- Remote Desktop client for macOS, version 10.7.7 or later ([beta client](https://aka.ms/rdmacbeta)). If you upgrade from versions earlier than 10.7.7, you'll also need to go to Microsoft **Remote Desktop Preferences** > **General** and turn on Teams optimizations. If you're using the client for the first time and already have version 10.7.7 or later installed, you won't need to turn that on. In that case, Teams optimizations are turned on by default.
 
 > [!NOTE]
 > Microsoft Teams installs during the first sign in to the Cloud PC. Installation can take a couple of minutes. Make sure to restart Teams to activate the AV optimizations that redirect audio and video. You can also sign out and in again to your Cloud PC to gain the same result.

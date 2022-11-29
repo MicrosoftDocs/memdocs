@@ -65,13 +65,17 @@ When a device receives a policy for Feature updates:
 
 The following are prerequisites for Intune's Feature updates for Windows 10 and later:
 
-- In addition to a license for Intune, your organization must have one of the following subscriptions:
+- In addition to a license for Intune, your organization must have one of the following subscriptions that include a license for Windows Update for Business deployment service:
   - Windows 10/11 Enterprise E3 or E5 (included in Microsoft 365 F3, E3, or E5)
   - Windows 10/11 Education A3 or A5 (included in Microsoft 365 A3 or A5)
-  - Windows 10/11 Virtual Desktop Access (VDA) per user
+  - Windows Virtual Desktop Access E3 or E5
   - Microsoft 365 Business Premium
 
   *Review your subscription details for applicability to Windows 11.*
+
+   Beginning in November of 2022, the Windows Update for Business deployment service (WUfB DS) license will be checked and enforced.
+  
+  If you’re blocked when creating new policies for capabilities that require WUfB DS and you get your licenses to use WUfB through an Enterprise Agreement (EA), contact the source of your licenses such as your Microsoft account team or the partner who sold you the licenses. The account team or partner can confirm that your tenants licenses meet the WUfB DS license requirements. See [Enable subscription activation with an existing EA](/windows/deployment/deploy-enterprise-licenses#enable-subscription-activation-with-an-existing-ea).
 
 - Devices must:  
   - Run a version of Windows 10/11 that remains in support.
@@ -85,10 +89,11 @@ The following are prerequisites for Intune's Feature updates for Windows 10 and 
   - The *Microsoft Account Sign-In Assistant* (wlidsvc) must be able to run. If the service is blocked or set to *Disabled*, it fails to receive the update. For more information, see [Feature updates aren't being offered while other updates are](/windows/deployment/update/windows-update-troubleshooting#feature-updates-are-not-being-offered-while-other-updates-are). By default, the service is set to *Manual (Trigger Start)*, which allows it to run when needed.
 
 - Feature updates are supported for the following Windows 10/11 editions:  
-  - Windows 10/11 Pro
-  - Windows 10/11 Enterprise
-  - Windows 10/11 Pro Education
-  - Windows 10/11 Education
+  - Pro
+  - Enterprise
+  - Education
+  - Education
+  - Pro for Workstations
 
   > [!NOTE]
   > **Unsupported versions and editions**:  
@@ -118,7 +123,7 @@ The following are prerequisites for Intune's Feature updates for Windows 10 and 
 
      Monitor the report for the policy. To do so, go to **Reports** > **Windows Updates** > **Reports** Tab > **Feature Updates report**. Select the policy you created and then generate the report.
 
-  5. Devices that have a state of *OfferReady* or later, are enrolled for feature updates and protected from updating to anything newer than the update you specified in step 3. See, [Use the Windows 10 and later feature updates (Organizational) report](../protect/windows-update-compliance-reports.md#use-the-windows-10-and-later-feature-updates-organizational-report).
+  5. Devices that have a state of *OfferReady* or later, are enrolled for feature updates and protected from updating to anything newer than the update you specified in step 3. See, [Use the Windows 10 feature updates (Organizational) report](../protect/windows-update-compliance-reports.md#use-the-windows-10-feature-updates-organizational-report).
   6. With devices enrolled for updates and protected, you can safely change the *Windows Update policies* workload from Configuration Manager to Intune. See, [Switch workloads to Intune](/configmgr/comanage/how-to-switch-workloads) in the co-management documentation.
 
 - When the device checks in to the Windows Update service, the device's group membership is validated against the security groups assigned to the feature updates policy settings for any feature update holds.

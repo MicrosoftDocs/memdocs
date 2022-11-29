@@ -6,11 +6,12 @@ ms.date: 07/07/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
-ms.reviewer: acabello
+author: gowdhamankarthikeyan
+ms.author: gokarthi
+manager: apoorvseth
+ms.reviewer: mstewart,aaroncz 
 ms.localizationpriority: medium
+ms.collection: tier3
 ---
 
 # Desktop Analytics data privacy
@@ -82,7 +83,7 @@ For more information about related privacy aspects, see the following articles:
 
 - [Diagnostic Data Viewer overview](/windows/privacy/diagnostic-data-viewer-overview)
 
-- [Licensing terms and documentation](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=31)
+- [Licensing terms and documentation](https://www.microsoft.com/licensing/terms)
 
 - [Log Analytics data security](/azure/azure-monitor/logs/data-security)
 

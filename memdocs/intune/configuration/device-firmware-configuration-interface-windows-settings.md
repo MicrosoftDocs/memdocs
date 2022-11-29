@@ -7,8 +7,8 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/21/2022
-ms.topic: conceptual
+ms.date: 10/19/2022
+ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
@@ -73,7 +73,7 @@ These settings are added to a device configuration profile in Intune, and then a
 
 ## Cameras
 
-- **Cameras**: This setting manages all the hardware cameras built into the device. They don't manage attached peripherals, such as USB webcams.
+- **Cameras**: This setting manages all the hardware cameras built into the device. It doesn't manage attached peripherals, such as USB webcams.
 
   Your options:
 
@@ -81,12 +81,36 @@ These settings are added to a device configuration profile in Intune, and then a
   - **Enabled**: All built-in cameras directly managed by UEFI (BIOS) are enabled. Peripherals, like USB cameras, aren't affected.
   - **Disabled**: All built-in cameras directly managed by UEFI (BIOS) are disabled. Peripherals, like USB cameras, aren't affected.
 
+- **Front cameras**: This setting manages the built-in front visible light cameras managed by UEFI (BIOS). It doesn't manage attached peripherals.
+
+  Your options:
+
+  - **Not configured**: Intune doesn't change or update this setting. By default, the OS might enable the built-in front visible light cameras.
+  - **Enabled**: All built-in front visible light cameras directly managed by UEFI (BIOS) are enabled. Peripherals, like USB cameras, aren't affected.
+  - **Disabled**: All built-in front visible light cameras directly managed by UEFI (BIOS) are disabled. Peripherals, like USB cameras, aren't affected.
+
+- **Rear cameras**: This setting manages the built-in rear visible light cameras managed by UEFI (BIOS). It doesn't manage attached peripherals.
+
+  Your options:
+
+  - **Not configured**: Intune doesn't change or update this setting. By default, the OS might enable the built-in rear cameras.
+  - **Enabled**: All built-in rear visible light cameras directly managed by UEFI (BIOS) are enabled. Peripherals, like USB cameras, aren't affected.
+  - **Disabled**: All built-in rear visible light cameras directly managed by UEFI (BIOS) are disabled. Peripherals, like USB cameras, aren't affected.
+
+- **Infrared (IR) cameras**: This setting manages the built-in infrared cameras managed by UEFI (BIOS). It doesn't manage attached peripherals.
+
+  Your options:
+
+  - **Not configured**: Intune doesn't change or update this setting. By default, the OS might enable the built-in infrared cameras.
+  - **Enabled**: All built-in infrared cameras directly managed by UEFI (BIOS) are enabled. Peripherals, like USB cameras, aren't affected.
+  - **Disabled**: All built-in infrared cameras directly managed by UEFI (BIOS) are disabled. Peripherals, like USB cameras, aren't affected.
+
 ## Microphones and speakers
 
 > [!TIP]
 > Configure the category setting (**Microphones and speakers**) **or** the granular settings (**Microphones**). If you configure all the settings, these settings can cause a conflict. For more information, go to [DFCI profile overview: Conflicts](device-firmware-configuration-interface-windows.md#conflicts).
 
-- **Microphones and speakers**: This setting manages all the microphones and speakers built into the device. They don't manage attached peripherals, such as USB devices.
+- **Microphones and speakers**: This setting manages all the microphones and speakers built into the device. It doesn't manage attached peripherals, such as USB devices.
 
   Your options:
 
@@ -94,7 +118,7 @@ These settings are added to a device configuration profile in Intune, and then a
   - **Enabled**: All built-in microphones and speakers directly managed by UEFI (BIOS) are enabled. Peripherals, like USB devices, aren't affected.
   - **Disabled**: All built-in microphones and speakers directly managed by UEFI (BIOS) are disabled. Peripherals, like USB devices, aren't affected.
 
-- **Microphones**: This setting manages the built-in microphones managed by UEFI (BIOS). They don't manage attached peripherals.
+- **Microphones**: This setting manages the built-in microphones managed by UEFI (BIOS). It doesn't manage attached peripherals.
 
   Your options:
 
@@ -107,7 +131,7 @@ These settings are added to a device configuration profile in Intune, and then a
 > [!TIP]
 > Configure the category setting (**Radios (Bluetooth, Wi-Fi, NFC, etc.)**) **or** the granular settings (**Bluetooth**, **Wi-Fi**). If you configure all the settings, these settings can cause a conflict. For more information, go to [DFCI profile overview: Conflicts](device-firmware-configuration-interface-windows.md#conflicts).
 
-- **Radios (Bluetooth, Wi-Fi, NFC, etc.)**: This setting manages all the built-in radios managed by UEFI (BIOS). They don't manage attached peripherals.
+- **Radios (Bluetooth, Wi-Fi, NFC, etc.)**: This setting manages all the built-in radios managed by UEFI (BIOS). It doesn't manage attached peripherals.
 
   Your options:
 
@@ -118,7 +142,7 @@ These settings are added to a device configuration profile in Intune, and then a
     > [!WARNING]
     > If you disable the **Radios** setting, the device requires a wired network connection. Otherwise, the device may be unmanageable.
 
-- **Bluetooth**: This setting manages the built-in Bluetooth radios managed by UEFI (BIOS). They don't manage attached peripherals.
+- **Bluetooth**: This setting manages the built-in Bluetooth radios managed by UEFI (BIOS). It doesn't manage attached peripherals.
 
   Your options:
 
@@ -126,7 +150,23 @@ These settings are added to a device configuration profile in Intune, and then a
   - **Enabled**: All built-in Bluetooth radios directly managed by UEFI (BIOS) are enabled. Peripherals, like USB devices, aren't affected.
   - **Disabled**: All built-in Bluetooth radios directly managed by UEFI (BIOS) are disabled. Peripherals, like USB devices, aren't affected.
 
-- **Wi-Fi**: This setting manages the built-in Wi-Fi radios managed by UEFI (BIOS). They don't manage attached peripherals.
+- **WWAN**: This setting manages the built-in WWAN radios managed by UEFI (BIOS). It doesn't manage attached peripherals.
+
+  Your options:
+
+  - **Not configured**: Intune doesn't change or update this setting. By default, the OS might enable the built-in WWAN radios.
+  - **Enabled**: All built-in WWAN radios directly managed by UEFI (BIOS) are enabled. Peripherals, like USB devices, aren't affected.
+  - **Disabled**: All built-in WWAN radios directly managed by UEFI (BIOS) are disabled. Peripherals, like USB devices, aren't affected.
+
+- **NFC**: This setting manages the built-in NFC radios managed by UEFI (BIOS). It doesn't manage attached peripherals.
+
+  Your options:
+
+  - **Not configured**: Intune doesn't change or update this setting. By default, the OS might enable the built-in NFC radios.
+  - **Enabled**: All built-in NFC radios directly managed by UEFI (BIOS) are enabled. Peripherals, like USB devices, aren't affected.
+  - **Disabled**: All built-in NFC radios directly managed by UEFI (BIOS) are disabled. Peripherals, like USB devices, aren't affected.
+
+- **Wi-Fi**: This setting manages the built-in Wi-Fi radios managed by UEFI (BIOS). It doesn't manage attached peripherals.
 
   Your options:
 
@@ -163,6 +203,14 @@ These settings are added to a device configuration profile in Intune, and then a
   - **Not configured**: Intune doesn't change or update this setting. By default, the OS might enable the built-in USB type A ports.
   - **Enabled**: All built-in USB type A ports directly managed by UEFI (BIOS) are enabled. Peripherals, like USB devices, aren't affected.
   - **Disabled**: All built-in USB type A ports directly managed by UEFI (BIOS) are disabled. Peripherals, like USB devices, aren't affected.
+
+- **SD card**: This setting manages the built-in SD card ports managed by UEFI (BIOS). It doesn't manage attached peripherals.
+
+  Your options:
+
+  - **Not configured**: Intune doesn't change or update this setting. By default, the OS might enable the built-in SD card ports.
+  - **Enabled**: All built-in SD card ports directly managed by UEFI (BIOS) are enabled. Peripherals, like USB devices, aren't affected.
+  - **Disabled**: All built-in SD card ports directly managed by UEFI (BIOS) are disabled. Peripherals, like USB devices, aren't affected.
 
 ## Wake settings
 

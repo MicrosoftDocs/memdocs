@@ -9,7 +9,7 @@ ms.author: erikje
 manager: dougeby
 ms.date: 07/27/2022
 ms.topic: how-to
-ms.service: cloudpc
+ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
 ms.technology:
@@ -32,6 +32,7 @@ ms.collection: M365-identity-device-management
 
 Users can access their Cloud PCs in two different ways:
 
+- [Windows 365 app](https://support.microsoft.com/topic/cbb0d4d5-69d4-4f00-b050-6dc7a02d02d0 )
 - [windows365.microsoft.com](https://Windows365.microsoft.com)
 - Microsoft Remote Desktop
 

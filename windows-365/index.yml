@@ -4,7 +4,7 @@ summary: Official product documentation for Windows 365
 
 metadata:
   services: service
-  ms.service: cloudpc
+  ms.service: windows-365
   ms.topic: hub-page
   author: erikjeMS
   ms.author: erikje
@@ -48,10 +48,8 @@ additionalContent:
         links:
           - text: Microsoft Endpoint Manager documentation
             url: /mem/index
-          - text: Overview of Microsoft Endpoint Manager
+          - text: Overview of Microsoft Intune family
             url: /mem/endpoint-manager-overview
-          - text: Getting started with Microsoft Endpoint Manager
-            url: /mem/endpoint-manager-getting-started
           - text: Microsoft Endpoint Manager blog
             url: https://aka.ms/memblog
       - title: Microsoft 365

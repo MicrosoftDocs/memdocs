@@ -6,10 +6,12 @@ ms.date: 03/24/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: high
+ms.reviewer: mstewart,aaroncz 
+ms.collection: tier3
 ---
 
 # Tenant attach data collection
@@ -110,7 +112,7 @@ For more information about related privacy aspects, see the following articles:
 
 - [Microsoft Intune Privacy Statement](/legal/intune/microsoft-intune-privacy-statement)
 - [Windows 10 and privacy compliance](/windows/privacy/windows-10-and-privacy-compliance)
-- [Licensing terms and documentation](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=31)  
+- [Licensing terms and documentation](https://www.microsoft.com/licensing/terms)  
 - [Security and privacy at Microsoft Azure data centers](https://azure.microsoft.com/global-infrastructure/)  
 - [Confidence in the trusted cloud](https://azure.microsoft.com/overview/trusted-cloud/)  
 - [Trust Center](https://www.microsoft.com/trustcenter)  

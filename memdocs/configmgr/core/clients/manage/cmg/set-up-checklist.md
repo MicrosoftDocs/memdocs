@@ -6,10 +6,12 @@ ms.date: 04/08/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: overview
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: BalaDelli
+ms.author: baladell
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.reviewer: mstewart,aaroncz 
+ms.collection: tier3
 ---
 
 # Set up checklist for CMG
@@ -64,7 +66,7 @@ Use the following checklist to make sure you have the necessary information and 
 
 - How many VM instances you need for scale and redundancy.
 
-- An Azure **global administrator** role to register apps in Azure AD.
+- An Azure **application developer**, **cloud application administrator**, **application administrator**, or **global administrator** role to register apps in Azure AD.
 
 - An Azure **subscription owner** role for when you create the CMG in Azure.
 

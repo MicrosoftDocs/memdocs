@@ -130,7 +130,7 @@ items:
     displayName: trusted sites
   - name: Windows health monitoring
     href: windows-health-monitoring.md
-    displayName: endpoint analytics, microsoft productivity score 
+    displayName: endpoint analytics, microsoft Adoption Score 
   - name: Education Take a Test app
     href: education-settings-configure.md
   - name: eSIM cellular on Windows
@@ -181,8 +181,10 @@ items:
     items:
     - name: Custom
       href: custom-settings-android-for-work.md
-    - name: Device restrictions
+    - name: Device restrictions-Organization devices
       href: device-restrictions-android-for-work.md
+    - name: Device restrictions-Personal devices 
+      href: device-restrictions-android-enterprise-personal.md
     - name: Email
       href: email-settings-android-enterprise.md
     - name: VPN

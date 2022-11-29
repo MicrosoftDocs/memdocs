@@ -2,14 +2,16 @@
 title: Manually deploy software updates
 titleSuffix: Configuration Manager
 description: Manually create software deployments to get your clients up-to-date with required software updates, or to deploy out-of-band updates.
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: BalaDelli
+ms.author: baladell
+manager: apoorvseth
 ms.date: 04/08/2022
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.localizationpriority: medium
+ms.reviewer: mstewart,aaroncz 
+ms.collection: tier3
 ---
 
 # Manually deploy software updates  

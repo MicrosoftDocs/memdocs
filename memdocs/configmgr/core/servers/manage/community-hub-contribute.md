@@ -2,19 +2,25 @@
 title: Contribute to the Community hub
 titleSuffix: Configuration Manager
 description: Contribute to the Configuration Manager Community hub
-ms.date: 08/02/2021
+ms.date: 10/31/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Contribute to the Community hub
 <!--3555935, 3555936-->
 *Applies to: Configuration Manager (current branch)*
+
+> [!IMPORTANT]
+> Starting in March 2023, this feature of Configuration Manager is being removed. 
+All future versions, starting with 2303 will not have the Community hub node in the admin console. The Community hub node in older versions will be redirected to [deprecated features](../../plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).  
 
 [Community hub](community-hub.md) fosters creativity by building on others work and having other people build on yours. GitHub already has industry-wide processes and tools built for sharing. Now, the Community hub can leverage those tools directly in the Configuration Manager console as foundational pieces for driving this new community. You can share the following objects for use by others in the Configuration Manager community:  
 

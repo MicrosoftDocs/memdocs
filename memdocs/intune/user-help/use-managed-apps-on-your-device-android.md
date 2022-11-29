@@ -101,4 +101,9 @@ Only one work or school account can be associated with the managed apps on your 
 The Azure Information Protection (AIP) mobile apps enable you to view protected emails, PDFs, images, and text files that cannot be opened with your regular apps for these file types. The mobile viewer app is available for Android devices on [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.ipviewer).  
 
 For more information about AIP, see [Mobile viewer apps for Azure Information Protection on iOS and Android](/azure/information-protection/rms-client/mobile-app-faq).  
+## View and edit default apps    
+Company Portal securely saves and stores your default app selections for managed apps. To view and remove your default selections:   
 
+1. Open Company Portal.  
+2. Tap the main menu > **Settings** .  
+3. Scroll down to **Default Apps** and tap **See Defaults** to view and remove your current defaults.    

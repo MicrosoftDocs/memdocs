@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/01/2022
+ms.date: 11/04/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -262,16 +262,6 @@ Edge for iOS and Android allows organizations to disable certain features that a
 |:-----------|:-------------|
 |com.microsoft.intune.mam.managedbrowser.disabledFeatures|**password** disables prompts that offer to save passwords for the end user <br>**inprivate** disables InPrivate browsing <br>**autofill** disables "Save and Fill Addresses" and "Save and Fill Payment info". Autofill will be disabled even for previously saved information. <br><br>To disable multiple features, separate values with `|`. For example, `inprivate|password` disables both InPrivate and password storage. |
 
-#### Disable extensions
-
-You can disable the extension framework, like Coupons, within Edge for iOS and Android to prevent users from installing or using any pre-configured app extensions. To do this, configure the following setting:
-
-|Key |Value |
-|:-----------|:-------------|
-|com.microsoft.intune.mam.managedbrowser.disableExtensionFramework |**true** disables the extension framework <br>**false** (default) enables the extension framework |
-
-> [!NOTE]
-> Edge for iOS does not support disabling extensions.
 
 #### Control Cookie Mode
 
@@ -491,7 +481,7 @@ To see how to view logs on Android devices, see [Send logs to your IT admin by e
 
 The layers of the network architecture are called the network stack. The layers of a network stack are broadly divided into sections, such as Network Interface, Network Driver Interface Specification (NDIS), Protocol Stack, System Drivers, and User-Mode Applications.
 
-By default, Edge for both iOS and Android use the Chromium network stack for internal network communication, including VPN. Edge for iOS also provides the iOS network stack for network communication. 
+By default, Microsoft Edge for both iOS and Android use the Chromium network stack for Microsoft Edge service communication, including sync services and auto search suggestions. Microsoft Edge for iOS also provides the iOS network stack as a configurable option for Microsoft Edge service communication.
 
 Organizations can modify their network stack preference by configuring the following setting.
 
@@ -500,7 +490,7 @@ Organizations can modify their network stack preference by configuring the follo
 |com.microsoft.intune.mam.managedbrowser.NetworkStackPref |**0** (default) use the Chromium network stack <br> **1** use the iOS network stack | 
 
 > [!NOTE]
-> Chromium network stack is recommended. Use iOS network stack when you run into network issues, such as VPN in particular.
+> Using the Chromium network stack is recommended. If you experience sync issues with the Chromium network stack, for example with certain per-app VPN solutions, using the iOS network stack may improve syncing.
 
 ## Next steps
 

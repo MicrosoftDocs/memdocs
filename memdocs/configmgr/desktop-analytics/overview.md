@@ -6,11 +6,12 @@ ms.date: 10/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: overview
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
-ms.reviewer: acabello
+author: gowdhamankarthikeyan
+ms.author: gokarthi
+manager: apoorvseth
+ms.reviewer: mstewart,aaroncz 
 ms.localizationpriority: medium
+ms.collection: tier3
 ---
 
 # What is Desktop Analytics?
@@ -136,7 +137,7 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
 - Network connectivity from devices to the Microsoft public cloud. For more information, see [Internet endpoints to enable data sharing](enable-data-sharing.md#endpoints).
 
 > [!IMPORTANT]
-> Microsoft has a strong commitment to providing the tools and resources that put you in control of your privacy. As a result, Microsoft doesn't collect the following data from devices located in European countries (European Economic Area [EEA], Switzerland, and the United Kingdom):
+> Microsoft has a strong commitment to providing the tools and resources that put you in control of your privacy. As a result, Microsoft doesn't collect the following data from devices located in European countries/regions (European Economic Area [EEA], Switzerland, and the United Kingdom):
 >
 > - Windows diagnostic data from Windows 8.1 devices
 > - App usage data for Windows 7

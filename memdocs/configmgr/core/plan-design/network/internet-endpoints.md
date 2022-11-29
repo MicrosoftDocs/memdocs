@@ -6,10 +6,12 @@ ms.date: 04/08/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Internet access requirements
@@ -53,6 +55,8 @@ For more information, see [Updates and servicing](../../servers/manage/updates.m
 - `download.visualstudio.microsoft.com`  
 
 - `sccmconnected-a01.cloudapp.net`  
+
+- `definitionupdates.microsoft.com`
 
 - `configmgrbits.azureedge.net`
 

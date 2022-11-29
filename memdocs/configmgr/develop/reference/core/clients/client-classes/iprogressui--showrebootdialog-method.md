@@ -1,19 +1,18 @@
 ---
-title: IProgressUI::ShowRebootDialog
+title: "IProgressUI::ShowRebootDialog"
 titleSuffix: Configuration Manager
-description: IProgressUI::ShowRebootDialog method
+description: "IProgressUI::ShowRebootDialog method"
 ms.date: 04/01/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
-
-
 ms.assetid: f9c7b72d-e781-49e2-b5a7-23a3e005596f
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # IProgressUI::ShowRebootDialog method

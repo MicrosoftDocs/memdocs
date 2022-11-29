@@ -39,13 +39,25 @@ ms.collection:
 Use the information in this article to help you add macOS line-of-business apps to Microsoft Intune. 
 
 > [!NOTE]
-> Starting with the release of macOS Catalina 10.15, prior to adding your apps to Intune, check to make sure your macOS LOB apps are notarized. If the developers of your LOB apps did not notarize their apps, the apps will fail to run on your users' macOS devices. For more information about how to check if an app is notarized, visit [Notarize your macOS apps to prepare for macOS Catalina](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Notarizing-your-macOS-apps-to-prepare-for-macOS/ba-p/808579).
-> 
 > macOS LOB apps have a maximum size limit of 2 GB per app.
 > 
 > While users of macOS devices can remove some of the built-in macOS apps like Stocks, and Maps, you cannot use Intune to redeploy those apps. If end users delete these apps, they must go to the app store, and manually re install them.
 
+## App requirements
+The .pkg file must satisfy the following requirements to successfully be deployed using Microsoft Intune.
+
+1. The .pkg file is a component package or a package containing multiple packages.
+2. The .pkg file does not contain a bundle or disk image or .app file.
+2. The .pkg file is signed using a "Developer ID Installer" certificate, obtained from an Apple Developer account.
+3. The .pkg file contains a payload. Packages without a payload will attempt to re-install as long as the app remains assigned to the group.
+
 ## Select the app type
+
+> [!NOTE]
+> In August 2022, we removed the ability to upload wrapped .intunemac files in the Microsoft Endpoint Manager admin center. You can now upload *.pkg* files to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+
+> [!IMPORTANT]
+> The *.pkg* file must be signed using "Developer ID Installer" certificate, obtained from an Apple Developer account. Only *.pkg* files may be used to upload macOS LOB apps to Microsoft Intune. However, conversion of other formats, such as *.dmg* to *.pkg* is supported. For more information about converting non-pkg application types, see [How to deploy DMG or APP-format apps to Intune-managed Macs](https://techcommunity.microsoft.com/t5/intune-customer-success/how-to-deploy-dmg-or-app-format-apps-to-intune-managed-macs/ba-p/1503416).
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All apps** > **Add**.
@@ -53,9 +65,6 @@ Use the information in this article to help you add macOS line-of-business apps 
 4. Click **Select**. The **Add app** steps are displayed.
 
 ## Step 1 - App information
-
-> [!NOTE]
-> The **minimum operating system** for uploading a *.pkg* file is macOS 10.14.
 
 ### Select the app package file
 

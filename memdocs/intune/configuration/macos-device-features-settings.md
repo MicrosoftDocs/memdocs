@@ -24,7 +24,9 @@ ms.suite: ems
 search.appverid:
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection: 
+- M365-identity-device-management
+- tier3
 ---
 
 # macOS device feature settings in Intune

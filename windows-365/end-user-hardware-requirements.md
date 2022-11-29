@@ -7,9 +7,9 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 09/28/2021
+ms.date: 10/12/2022
 ms.topic: how-to
-ms.service: cloudpc
+ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
 ms.technology:
@@ -31,6 +31,10 @@ ms.collection: M365-identity-device-management
 # End-user hardware requirements to access a Cloud PC
 
 To access their Cloud PC, an end-user's hardware must meet certain requirements. These requirements vary depending on which Microsoft Remote Desktop client the end-user installs.
+
+## Windows 365 app
+
+For information about the requirements for running the Windows 365 app, see the [Windows 365 end user documentation](https://support.microsoft.com/topic/cbb0d4d5-69d4-4f00-b050-6dc7a02d02d0 ).
 
 ## Microsoft Remote Desktop client for Windows
 

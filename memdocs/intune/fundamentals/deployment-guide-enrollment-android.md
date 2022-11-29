@@ -237,7 +237,7 @@ When you create the Intune enrollment profile, you decide if the devices are use
 ---
 | Feature | Use this enrollment option when |
 | --- | --- |
-| Use Google Mobile Services (GMS). | ❌ <br/><br/> Device doesn't support [GMS](https://www.android.com/gms/) (opens Android's web site). Some countries don't support GMS. <br/><br/> If your devices will use GMS, then use [dedicated devices](#android-enterprise-dedicated-devices) (in this article) or [fully managed](#android-enterprise-fully-managed) (in this article) enrollment. |
+| Use Google Mobile Services (GMS). | ❌ <br/><br/> Device doesn't support [GMS](https://www.android.com/gms/) (opens Android's web site). Some countries and regions don't support GMS. <br/><br/> If your devices will use GMS, then use [dedicated devices](#android-enterprise-dedicated-devices) (in this article) or [fully managed](#android-enterprise-fully-managed) (in this article) enrollment. |
 | Devices are owned by the organization or school. | ✔️ |
 | You have new or existing devices. | ✔️ |
 | Need to enroll a few devices, or a large number of devices (bulk enrollment). | ❌ <br/><br/> Can only enroll one device at a time. |
@@ -294,7 +294,7 @@ There are some situations when you must use Device Administrator enrollment:
 - Android Enterprise requires access to Google services. Google services may not be available because of geography, or because of the device manufacturer. For example:
 
   - There are places where Google services aren’t available, like China. In this situation, use Android device administrator enrollment.  
-  - Some devices are based on Android, but don't have access to Google Services, such as Amazon Fire tablets. In this situation, use Android device administrator enrollment.
+  - Some devices are based on Android, but don't have access to Google Services, such as Microsoft Teams Android devices and Amazon Fire tablets. In this situation, use Android device administrator enrollment.
 
 - Android OS versions older than 5.0 must use Android device administrator enrollment. Android Enterprise enrollment isn't an option.
 
@@ -322,5 +322,6 @@ Your users must do the following steps. For more specific steps, see [enroll the
 
 - [MAM](deployment-guide-enrollment-mamwe.md)
 - [iOS/iPadOS enrollment guide](deployment-guide-enrollment-ios-ipados.md)
+- [Linux enrollment guide](deployment-guide-enrollment-linux.md)
 - [macOS enrollment guide](deployment-guide-enrollment-macos.md)
 - [Windows enrollment guide](deployment-guide-enrollment-windows.md)

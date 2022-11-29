@@ -9,7 +9,7 @@ ms.author: erikje
 manager: dougeby
 ms.date: 07/07/2022
 ms.topic: how-to
-ms.service: cloudpc
+ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
 ms.technology:
@@ -41,7 +41,7 @@ Virtualization-based workloads let customers use the following systems on their 
 
 To use virtualization-based workloads, the Cloud PC must meet these requirements:
 
-- 8vCPU/32 (Cloud PCs resized from 1vCPU/2GB and 2vCPU/4GB to 8vCPU/32GB aren't supported)
+- 8vCPU/32 Cloud PC (Downsizing to 4vCPU or 2vCPU Cloud PCs will disable nested virtualization)
 - Be in one of these regions (other regions aren't currently supported):
   - US East
   - US East 2

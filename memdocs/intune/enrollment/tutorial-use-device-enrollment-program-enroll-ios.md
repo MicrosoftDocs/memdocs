@@ -117,7 +117,7 @@ Now that you've installed your token, you can create an enrollment profile for c
 
 ## Sync managed devices to Intune
 
-After you set up an enrollment program token with the ABM, ASM, or ADE portal and assign devices there to the MDM server, you can wait for these devices to sync to the Intune service, or manually push a sync. Without a manual sync, devices may take up to 24 hours to show up in the Azure portal.
+After you set up an enrollment program token with the ABM, ASM, or ADE portal and assign devices there to the MDM server, you can wait for these devices to sync to the Intune service, or manually push a sync. Without a manual sync, devices may take up to 12 hours to show up in the Intune portal.
 
 1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS/iPadOS** > **iOS enrollment** > **Enrollment Program Tokens** > choose a token in the list > **Devices** > **Sync**.
 

@@ -9,7 +9,7 @@ ms.author: erikje
 manager: dougeby
 ms.date: 02/08/2022
 ms.topic: overview
-ms.service: cloudpc
+ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
 ms.technology:
@@ -58,12 +58,12 @@ Core provisioning is optimized to only perform necessary steps to make sure a Cl
 After core provisioning is complete, Windows 365 optimizes the configuration to ensure the best end-user Cloud PC experience.
 
 1. **Hide Start Menu power icons**: Hide the shutdown button in the start menu (HKLM:\Software\Microsoft\PolicyManager\default\Start\HideShutDown\value) and Hide the shutdown button in the sign-in screen (HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\System\ShutDownWithoutLogon).
-2. **Disable Windows reset action**: reagent: c.exe /disable
+2. **Disable Windows reset action**: reagentc.exe /disable
 3. **Assign user as administrator (when applicable)**:
   ```$Member = 'user@contoso.com'  # use OnPremisesUserPrincipalName```
   ```Add-LocalGroupMember -Group "Administrators" -Member $Member```
-4. **Set Teams for VDI mode**: Hosted desktop optimization (HKLM:\SOFTWARE\Microsoft\Teams\IsWVDEnvironment).
-5. **Enable time zone Redirection**: Enable the setting (HKLM:\Softare\Policies\Microsoft\Windows NT\Terminal Services\ fEnabletimezoneRedirection).
+4. **Set Teams for VDI mode**: Hosted desktop optimization (HKLM:\Software\Microsoft\Teams\IsWVDEnvironment).
+5. **Enable time zone Redirection**: Enable the setting (HKLM:\Software\Policies\Microsoft\Windows NT\Terminal Services\fEnabletimezoneRedirection).
 6. **Resize OS disk partition to match license**: Resize the OS disk to match the size of the Azure Managed Disk.
 
     ```$DriveLetter = "C"

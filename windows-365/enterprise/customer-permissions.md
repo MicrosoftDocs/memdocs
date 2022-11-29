@@ -9,7 +9,7 @@ ms.author: erikje
 manager: dougeby
 ms.date: 04/05/2022
 ms.topic: overview
-ms.service: cloudpc
+ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
 ms.technology:
@@ -39,13 +39,16 @@ Windows 365 uses the Azure role-based access control (RBAC) permissions required
 
 ## Create Azure network connections
 
-You create ANCs to define the connection between your network and the Windows 365 system so that Cloud PCs can be successfully provisioned. When you create an ANC, the Windows 365 service requires the following permissions:
+You create ANCs to define the connection between your network and the Windows 365 system so that Cloud PCs can be successfully provisioned. When you create an ANC, the Windows 365 [service principal](/azure/active-directory/fundamentals/service-accounts-introduction-azure.md#service-principals) requires the following permissions:
 
 - **Reader permission on the Azure subscription**: This permission is used to simplify the flow when adding a custom image.
 - **Network contributor on the specified resource group**: This permission is used to create network interface cards in the selected resource group.
 - **Network contributor on the virtual network**: This permission is used to attach the created network interface cards to the selected virtual network. 
 
-When you create an ANC, you must be signed in with an account that is an Owner of the subscription.
+When you create an ANC, you must be signed in with an account that is an Owner of the subscription. 
+
+> [!TIP]
+> When you use [Microsoft hosted network option](architecture.md#virtual-network-connectivity) with a gallery image, you do not need to grant the Windows 365 service principal these permissions.
 
 For more information, see [Create Azure network connection](create-azure-network-connection.md).
 
@@ -53,7 +56,7 @@ For more information, see [Create Azure network connection](create-azure-network
 
 If you’ve already created an ANC for the image's associated Azure subscription, no new permissions are needed.
 
-When you use a subscription without an ANC, the Windows 365 service requires the following permission to upload a custom image:
+When you use Windows 365 with a Microsoft hosted network and a custom image, the Windows 365 service principal requires the following permission to upload a custom image:
 
 - Reader of the subscription
 
