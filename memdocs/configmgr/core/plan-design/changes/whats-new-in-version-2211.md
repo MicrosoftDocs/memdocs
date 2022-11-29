@@ -2,7 +2,7 @@
 title: What's new in version 2211
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 2211 of Configuration Manager current branch.
-ms.date: 11/30/2022
+ms.date: 12/02/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -20,7 +20,7 @@ ms.reviewer: mstewart,aaroncz
 
 Update 2211 for Configuration Manager current branch is available as an in-console update. Apply this update on sites that run version 2107 or later. <!-- baseline only statement: When installing a new site, this version of Configuration Manager will also be available as a [baseline version](../../servers/manage/updates.md#bkmk_note1) soon after global availability of the in-console update.--> This article summarizes the changes and new features in Configuration Manager, version 2211.
 
-Always review the latest checklist for installing this update. For more information, see [Checklist for installing update 2211](../../servers/manage/checklist-for-installing-update-2207.md). After you update a site, also review the [Post-update checklist](../../servers/manage/checklist-for-installing-update-2207.md#post-update-checklist).
+Always review the latest checklist for installing this update. For more information, see [Checklist for installing update 2211](../../servers/manage/checklist-for-installing-update-2211.md). After you update a site, also review the [Post-update checklist](../../servers/manage/checklist-for-installing-update-2211.md#post-update-checklist).
 
 To take full advantage of new Configuration Manager features, after you update the site, also update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.
 
@@ -31,105 +31,44 @@ Starting Configuration Manager version 2211, the scalability of this feature has
 
 <!--For more information, see [Synchronize collections to Azure Active Directory Group](../../clients/manage/collections/synchronize-collections-aadgroup.md).-->
 
-### Use Intune role-based access control (RBAC) for tenant attached devices 
-<!--8126836, 6415648, 8348644, IN14996522, 13058986-->
+## Site infrastructure
+<!--14538358-->
 
-You can now use Intune role-based access control (RBAC) when interacting with tenant attached devices from the Microsoft Endpoint Manager admin center. For example, when using Intune as the role-based access control authority, a user with Intune's [Help Desk Operator role](../../../../intune/fundamentals/role-based-access-control.md#built-in-roles) doesn't need an assigned security role or additional permissions from Configuration Manager. For more information, see [Intune role-based access control for tenant attached clients](../../../cloud-attach/use-intune-rbac.md).
+### Network Access Account (NAA) account usage alert
 
-### Enhanced security for Configuration Manager administration service
-<!--12952905-->
-We're introducing a new cloud application with limited access to the administration service. This feature allows cloud management gateway (CMG) to segment the admin privileges between a management point, and the administration service. This enables CMG to restrict access to the administration service. This feature gives admins granular access controls through which users can have access to the administration service and to enforce MFA if necessary.
- 
-For more information, see [Configure Azure services for use with Configuration Manager](../../servers/deploy/configure/azure-services-wizard.md).
+If your site is configured with NAA account, you'll see this new prerequisite warning added. To improve the security of distribution points configured with NAA account, review the existing accounts and their relevant permissions. If it has more than minimal required permission, then remove and add a minimal permission account. Do n't configure any administrator level permission accounts on the NAA. If the site server is configured with HTTPS / EHTTP, it recommended removing NAA account, which is unused.
 
-### Simplified application deployment approval
-<!--13351390#-->
+For more information, see the description of this [permissions-for-the-network-access-account](../../plan-design/hierarchy/accounts.md#permissions-for-the-network-access-account)
 
-An administrator can now approve or deny the request for deploying an application on a device from anywhere they have internet access by selecting a link in the email notification. This feature requires admins to manually add the CMG URL in the Azure Active Directory app as single page application redirect URI. 
+<!--14959706-->
 
-For more information, see [Create an app registration in Azure AD for your app service app](../../../apps/deploy-use/app-approval.md#to-take-action-from-internet).
+### Distribution point content migration
 
-<!--## Site infrastructure-->
+DP content migration support is now available for migrating content from one DP to another DP using PowerShell cmdlets. You can also monitor the DP migration status using these PowerShell cmdlets.
 
-### Include and prefer a cloud source for a management point in a default boundary group
-<!--10674394-->
-Until 2203 current branch, you didn’t have an option to prefer a CMG as a management point in a default boundary group. The clients falling back to a default boundary group could only communicate to non-cloud-based management points. 
+For more information, see the description of this [content migration](../../servers/deploy/configure/deploy-and-manage-content.md#bkmk_distribute)
 
-When a site is initially installed, there's a default site boundary group created for each site, and all the clients use it by default until they're assigned to a custom boundary group.
-
-Starting in Configuration Manager 2207, you can add options via PowerShell to include and prefer cloud sources. For instance, you can set the CMG as the preferred management point for the clients in the default boundary group.
-
-For more information, see [
-Default site boundary group behavior supports cloud source selection](../../../core/servers/deploy/configure/boundary-groups.md#default-site-boundary-group-behavior-supports-cloud-source-selection).
-
-## Client management
-
-### Granular control over compliance settings evaluation
-<!--14120481-->
-You can now define a **Script Execution Timeout (seconds)** when configuring client settings for compliance settings. The timeout value can be set from a minimum of 60 seconds to a maximum of 600 seconds. This new setting allows you more flexibility for configuration items when you need to run scripts that may exceed the default of 60 seconds.
-
-For more information, see the [compliance settings group of client settings](../../clients/deploy/about-client-settings.md#compliance-settings).
+<!--## Client management-->
 
 <!--## Collections-->
 
-
 ## Software Center
 
-### Featured Apps in Software Center
+### <a name="bkmk_featured-apps-software-center"></a> Featured Apps in Software Center
 <!--3601183-->
 We are now adding the **Featured** tab in Software Center where we will be displaying the featured apps. Using this, IT admin can mark apps as "featured" and encourage end users to use the app. Currently, this feature is available only for "User Available" apps. Also, admins can make the **Featured** tab of Software Center as default tab from Client Settings. 
 
 For more information, see the [Featured Apps in Software Center](../../get-started/2022/technical-preview-2210.md#bkmk_featured-apps-software-center).
 
-## Software updates
-
-### Improved manageability of automatic deployment rules (ADRs)
-<!--13507410-->
-
-You'll now be able to organize ADRs with folders. This improvement helps you with better categorization and management of ADRs across your organizational hierarchy by having a structured view across your phased deployments. Folder can also be created with PowerShell cmdlets.
-
-For more information, see [Process to create a folder for automatic deployment rules](../../../sum/deploy-use/automatically-deploy-software-updates.md#process-to-add-a-new-deployment-to-an-existing-adr).
-
-### Enhanced control over monthly maintenance windows
-<!--3601127#-->
-
-Based upon your feedback, we have enhanced monthly maintenance windows scheduling. You can now set monthly maintenance window schedules to better align deployments with the release of monthly software updates by configuring offsets. For example, using an offset of two days after the second Tuesday of the month, sets the maintenance window for Thursday.
-
-For more information, see [How to use maintenance windows in Configuration Manager](../../../core/clients/manage/collections/use-maintenance-windows.md). 
+<!--## Software updates-->
 
 <!--## OS deployment-->
 
-
-## Endpoint Protection
-
-### Improved Microsoft Defender for Endpoint (MDE) onboarding for Windows Server 2012 R2 and Windows Server 2016 
-<!--9265511-->
-Configuration Manager version 2207 now supports automatic deployment of modern, unified Microsoft Defender for Endpoint for Windows Server 2012 R2 & 2016. Windows Server 2012 and 2016 devices that are targeted with Microsoft Defender for Endpoint onboarding policy will use the unified agent versus the existing Microsoft Monitoring Agent based solution, if configured through Client Settings.
-
-For more information, see [Microsoft Defender for Endpoint onboarding](../../../protect/deploy-use/defender-advanced-threat-protection.md).
-
-### Enhanced protection for untrusted environments
-<!-- 14059872 -->
-
-1. Windows Defender Application Guard is now called Microsoft Defender Application Guard in the console. 
-
-1. The **General** settings page in the Microsoft Defender Application Guard now allows you to create policies within Configuration Manager to protect your employees using Microsoft Edge and isolated Windows environments. 
-
-1. The **Application Behavior** settings page allows you to enable or disable cameras and microphones, along with certificate matching of the thumbprints to the isolated container. 
-
-1. The following items were removed:
-   - The Enterprise sites can load non-enterprise content, such as third-party plug-in settings, under the **Host interaction** page.
-   - The file trust criteria policy, under the **File Management** page.
-   
-For more information, see [Create and deploy Microsoft Defender Application Guard policy](../../../protect/deploy-use/create-deploy-application-guard-policy.md#create-a-policy-and-to-browse-the-available-settings).
+<!--## Endpoint Protection-->
 
 <!--## Application management-->
 
-
-
 <!--## Community hub-->
-
-
 
 ## Configuration Manager console
 
@@ -140,17 +79,15 @@ When performing a search on any node in the console, the hint text in the search
  - By default, all subfolders are searched when you perform a search in any node that contains subfolders. You can narrow down the search by selecting the “Current Node” option from the search toolbar.
  - If you want to expand the search to include all nodes, then select the “All Objects” button in the ribbon.
 
-For more information, see [Console changes and tips](../../servers/manage/admin-console-tips.md#bkmk_2207).
+For more information, see [Console changes and tips](../../servers/manage/admin-console-tips.md#configuration-manager-console-changes-and-tips).
 
 ### Dark theme is now extended to more dashboards
 
 The dark theme has been available as a pre-release feature since 2203. We've extended the dark theme to additional components such as buttons, context menus, and hyperlinks. Enable this pre-release feature to experience the dark theme.
 In this release we've extended the dark theme to more dashboards, which previously didn't display the dark theme correctly. For example, the O365 Updates Dashboard, PCM Dashboard, and Health Attestation dashboard will now display according to the dark theme, when it's enabled. Pop-ups in the Health attestation dashboard will now adhere to the dark theme.
 
-Enable this pre-release feature to experience the dark theme. For more information, see [Dark theme for the console](../../servers/manage/admin-console.md).
+Enable this pre-release feature to experience the dark theme. For more information, see [Dark theme for the console](../../servers/manage/admin-console.md#bkmk_dark).
   
-
-
 <!--## Tools-->
 
 <!--## Deprecated features
@@ -159,17 +96,15 @@ Learn about support changes before they're implemented in [removed and deprecate
 
 The following features are deprecated. You can still use them now, but Microsoft plans to end support in the future.
 
-
-
 As previously announced, version 2207 drops support for the following features:
 -->
 
-## Other updates
+<!--## Other updates-->
 
 <!--Starting with this version, the following features are no longer [pre-release](../../servers/manage/pre-release-features.md):
 -->
 
-For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [version 2207 release notes](/powershell/sccm/2207-release-notes).
+<!--For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [version 2207 release notes](/powershell/sccm/2207-release-notes).-->
 
 <!--
 
@@ -188,13 +123,11 @@ The following additional hotfixes are available to address specific issues:
 
 ## Next steps
 
-
-At this time, version 2207 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](../../servers/manage/checklist-for-installing-update-2207.md#early-update-ring).
-
+At this time, version 2211 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](../../servers/manage/checklist-for-installing-update-2211.md#early-update-ring).
 
 <!--As of April 26, 2022, version 2207 is globally available for all customers to install.-->
 
-When you're ready to install this version, see [Installing updates for Configuration Manager](../../servers/manage/updates.md) and [Checklist for installing update 2207](../../servers/manage/checklist-for-installing-update-2207.md).
+When you're ready to install this version, see [Installing updates for Configuration Manager](../../servers/manage/updates.md) and [Checklist for installing update 2211](../../servers/manage/checklist-for-installing-update-2211.md).
 
 > [!TIP]
 > To install a new site, use a baseline version of Configuration Manager.
@@ -206,4 +139,4 @@ When you're ready to install this version, see [Installing updates for Configura
 
 For known significant issues, see the [Release notes](../../servers/deploy/install/release-notes.md).
 
-After you update a site, also review the [Post-update checklist](../../servers/manage/checklist-for-installing-update-2207.md#post-update-checklist).
+After you update a site, also review the [Post-update checklist](../../servers/manage/checklist-for-installing-update-2211.md#post-update-checklist).
