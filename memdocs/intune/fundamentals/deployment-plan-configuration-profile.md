@@ -7,7 +7,7 @@ description: Use Microsoft Intune to create email, VPN, and Wi-Fi device configu
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/17/2022
+ms.date: 11/28/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -27,19 +27,18 @@ ms.collection:
   - highpri
 ---
 
-# Step 4: Create device configuration profiles to apply email, VPN and Wi-Fi connections
+# Step 4 - Create device configuration profiles to secure devices and create email, VPN and Wi-Fi connections
 
-In this step, you're ready to configure a minimum or baseline set of device features that all devices must have, which typically includes:
+In this step, you're ready to configure a minimum or baseline set of device features that all devices must have.
 
-- Email for work or school accounts
-- VPN connection for remote connectivity
-- Wi-Fi connection for on-premises connectivity
+Microsoft recommends that you create the following policies that:
+
+- Focus on device security, including installing antivirus, creating a strong password policy, and installing software updates.
+- Give users access to their organization email and controlled secure access to your network.
 
 These features are configured in device configuration profiles in the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). When the profiles are ready, they can be deployed from Intune to your devices.
 
-:::image type="content" source="./media/deployment-plan-configuration-profile/deploy-email-vpn-wifi.png" alt-text="Image that shows an email, VPN and Wi-Fi profiles deployed from Microsoft Intune to end user devices.":::
-
-This article lists some common baselines device configuration policies that organizations use. Most of these policies in this article focus on access to organization resources. In your organization, you may have a different set of baseline device configuration policies.
+This article lists some common baselines device configuration policies that organizations use. Most of these policies in this article focus on access to organization resources and security. In your organization, you may have a different set of baseline device configuration policies.
 
 This article applies to:
 
@@ -48,7 +47,138 @@ This article applies to:
 - macOS
 - Windows
 
-## Email
+## Create a security baseline
+
+To help keep your organization data and devices secure, you create different policies that focus on security.
+
+In your baseline, Microsoft recommends the following security policies:
+
+- Install antivirus (AV) and regularly scan for malware
+- Use detection and response
+- Turn on the firewall
+- Install software updates regularly
+- Create a strong password policy
+
+This section lists the Intune features you can use to create these security policies. For more granular settings, go to:
+
+- [Android Enterprise security configuration framework](../enrollment/android-configuration-framework.md)
+- [iOS/iPadOS personal device security configurations](../enrollment/ios-ipados-personal-device-security-configurations.md)
+- [Windows security baselines](../protect/security-baselines.md)
+
+
+Defender for Endpoint also applies to Android and iOS/iPadOS; it acts like a tunnel, which is like a VPN, but it's not a VPN. 
+
+macOS uses jamf pro, which is a compliance policy partner
+
+
+
+### Antivirus and scanning
+
+All devices should have antivirus software installed and regularly scan for malware.
+
+Intune integrates with third party partner mobile threat defense (MTD) services that provide AV and threat scanning for Android and iOS/iPadOS devices.
+
+For macOS and Windows, antivirus and scanning is built in to Intune with Microsoft Defender for Endpoint.
+
+| Platform | Policy type |
+| --- | --- |
+| Android Enterprise | Mobile threat defense partner |
+| iOS/iPadOS | Mobile threat defense partner |
+| macOS | Intune Endpoint Security antivirus profile (Microsoft Defender for Endpoint) |
+| Windows client | - Security baselines (recommended)</br>- Intune Endpoint Security antivirus profile (Microsoft Defender for Endpoint) |
+
+For more information on these features, go to:
+
+- [**Android Enterprise** and **iOS/iPadOS** mobile threat defense integration](../protect/mobile-threat-defense.md)
+- [**Windows** security baselines](../protect/security-baselines.md)
+- [**macOS** and **Windows** antivirus policy](../protect/endpoint-security-antivirus-policy.md)
+
+### Detection and response
+
+| Platform | Policy type |
+| --- | --- |
+| Android Enterprise organization owned devices | Mobile threat defense partner |
+| Android Enterprise personally owned devices with a work profile | Mobile threat defense partner |
+| iOS/iPadOS | Mobile threat defense partner |
+| macOS |  |
+| Windows client | - Security baselines (recommended)</br>- Endpoint detection and response profile (Microsoft Defender for Endpoint) |
+
+### Firewall
+
+All devices should have a firewall enabled.
+
+Intune integrates with third party partner mobile threat defense (MTD) services that can manage a firewall for Android and iOS/iPadOS devices. For macOS and Windows, firewall security is built in to Intune with Microsoft Defender for Endpoint.
+
+| Platform | Policy type |
+| --- | --- |
+| Android Enterprise | Mobile threat defense partner |
+| iOS/iPadOS | Mobile threat defense partner |
+| macOS | Intune Endpoint Security firewall profile (Microsoft Defender for Endpoint) |
+| Windows client | - Security baselines (recommended)</br>- Intune Endpoint Security firewall profile (Microsoft Defender for Endpoint) |
+
+For more information on these features, go to:
+
+- [**Android Enterprise** and **iOS/iPadOS** mobile threat defense integration](../protect/mobile-threat-defense.md)
+- [**Windows** security baselines](../protect/security-baselines.md)
+- [**macOS** and **Windows** firewall policy](../protect/endpoint-security-firewall-policy.md)
+
+### Password policy
+
+All devices should have a strong password policy that uses a PIN and blocks simple passcodes, like `1234`.
+
+Intune uses device restrictions profiles to create and configure password requirements. These profiles are then deployed to your user groups or device groups.
+
+| Platform | Policy type |
+| --- | --- |
+| Android Enterprise | Intune device restrictions profile to manage the: <br/>- Device password<br/>- Work profile password |
+| AOSP | Intune device restrictions profile |
+| iOS/iPadOS | Intune device restrictions profile |
+| macOS | Intune device restrictions profile |
+| Windows client | - Security baselines (recommended) </br>- Intune device restrictions profile |
+
+For a list of the settings you can configure, go to:
+
+- **Android Enterprise** device restrictions profile:
+  - [Corporate owned devices > **Device password** and **Work profile password**](../configuration/device-restrictions-android-for-work.md)
+  - [Personally owned devices with a work profile > **Work profile password** and **Password**](../configuration/device-restrictions-android-enterprise-personal.md)
+- [**Android AOSP** device restrictions profile > **Device password**](../configuration/device-restrictions-android-aosp.md)
+- [**iOS/iPadOS** device restrictions profile > **Password**](../configuration/device-restrictions-ios.md)
+- [**macOS** device restrictions profile > **Password**](../configuration/device-restrictions-macos.md)
+- [**Windows** security baselines](../protect/security-baselines.md)
+- [**Windows** client device restrictions profile > **Password**](../configuration/device-restrictions-windows-10.md)
+
+### Software updates
+
+
+| Platform | Policy type |
+| --- | --- |
+| Android Enterprise organization owned devices | System update settings using Intune device restrictions profile |
+| Android Enterprise personally owned devices | Not available <br/><br/>Can use compliance policies to set a minimum patch level, min/max OS version, and more |
+| iOS/iPadOS | Intune update policy |
+| macOS | Intune update policy |
+| Windows client | - Intune feature updates policy </br>- Intune expedited updates policy |
+
+For more information on these features and/or the settings you can configure, go to:
+
+- [**Android Enterprise** device restrictions profile > **System update**](../configuration/device-restrictions-android-for-work.md)
+- [**iOS/iPadOS** software update policies](../protect/software-updates-ios.md)
+- [**macOS** software update policies](../protect/software-updates-macos.md)
+- **Windows**:
+
+  - [Feature updates policy](../protect/windows-10-feature-updates.md)
+  - [Expedited updates policy](../protect/windows-10-expedite-updates.md)
+
+## Access organization email, connect to VPN or Wi-Fi
+
+This section focuses on access resources in your organization. These resources include:
+
+- Email for work or school accounts
+- VPN connection for remote connectivity
+- Wi-Fi connection for on-premises connectivity
+
+:::image type="content" source="./media/deployment-plan-configuration-profile/deploy-email-vpn-wifi.png" alt-text="Image that shows an email, VPN and Wi-Fi profiles deployed from Microsoft Intune to end user devices.":::
+
+### Email
 
 Many organizations deploy email profiles with preconfigured settings to user devices.
 
@@ -60,7 +190,7 @@ Depending on the settings you configure, the email profile can automatically con
 
 ✔️ **Use enterprise level email apps**
 
-Email profiles in Intune use common and popular email apps, such as Gmail and Outlook. The email app is deployed to user devices. After it's deployed, you deploy the email device configuration profile with settings that configure the email app.
+Email profiles in Intune use common and popular email apps, such as Outlook. The email app is deployed to user devices. After it's deployed, you deploy the email device configuration profile with settings that configure the email app.
 
 The email device configuration profile includes settings that connect to your Exchange.
 
@@ -68,13 +198,13 @@ The email device configuration profile includes settings that connect to your Ex
 
 Creating an email profile is a common minimum baseline policy for organizations with users that use email on their devices.
 
-Intune has built-in email settings for Android, iOS/iPadOS, and Windows client devices. When users open their email app, they can automatically connect, authenticate, and synchronize their organizational email accounts on their devices.
+Intune has built in email settings for Android, iOS/iPadOS, and Windows client devices. When users open their email app, they can automatically connect, authenticate, and synchronize their organizational email accounts on their devices.
 
 ✔️ **Deploy anytime**
 
 On new devices, it's recommended to deploy the email app during the enrollment process. When enrollment completes, then deploy the email device configuration policy. If you have existing devices, deploy the email app at any time, and then deploy the email device configuration policy.
 
-### Get started with email profiles
+#### Get started with email profiles
 
 To get started, use the following links:
 
@@ -92,13 +222,21 @@ To get started, use the following links:
 
 4. [Assign the email device configuration profile](../configuration/device-profile-assign.md) to your users or user groups.
 
-## VPN
+### VPN
 
-Many organizations deploy VPN profiles with preconfigured settings to user devices. 
+Many organizations deploy VPN profiles with preconfigured settings to user devices. The VPN connects your devices to your internal organization network.
+
+If your organization uses cloud services with modern authentication and secure identities, then you might not need a VPN profile. Cloud-native services don't require a VPN connection.
+
+If your apps or services aren't cloud-based or aren't cloud-native, then it's recommended to deploy a VPN profile to connect to your internal organization network.
 
 ✔️ **Work from anywhere**
 
+Creating a VPN profile is a common minimum baseline policy for organizations with remote workers and hybrid workers.
+
 As users work from anywhere, they can use the VPN profile to securely connect to your organization's network to access resources.
+
+Intune has built in VPN settings for Android, iOS/iPadOS, macOS, and Windows client devices. On user devices, your VPN connection is shown as an available connection. Users select it. And, depending on the settings in your VPN profile, users can automatically authenticate and connect to the VPN on their devices.
 
 ✔️ **Use enterprise level VPN apps**
 
@@ -106,17 +244,11 @@ VPN profiles in Intune use common enterprise VPN apps, such as Check Point, Cisc
 
 The VPN device configuration profile includes settings that connect to your VPN server.
 
-✔️ **Support remote workers**
-
-Creating a VPN profile is a common minimum baseline policy for organizations with remote workers and hybrid workers.
-
-Intune has built-in VPN settings for Android, iOS/iPadOS, macOS, and Windows client devices. On user devices, your VPN connection is shown as an available connection. Users select it. And, depending on the settings in your VPN profile, users can automatically authenticate and connect to the VPN on their devices.
-
 ✔️ **Deploy anytime**
 
 On new devices, it's recommended to deploy the VPN app during the enrollment process. When enrollment completes, then deploy the VPN device configuration policy. If you have existing devices, deploy the VPN app at any time, and then deploy the VPN device configuration policy.
 
-### Get started with VPN profiles
+#### Get started with VPN profiles
 
 To get started, use the following links:
 
@@ -135,9 +267,9 @@ To get started, use the following links:
 
 4. [Assign the VPN device configuration profile](../configuration/device-profile-assign.md) to your users or user groups.
 
-## Wi-Fi
+### Wi-Fi
 
-Many organizations deploy Wi-Fi profiles with preconfigured settings to user devices. 
+Many organizations deploy Wi-Fi profiles with preconfigured settings to user devices. If your organization has a remote-only workforce, then you don't need to deploy Wi-Fi connection profiles. Wi-Fi profiles are optional and are used for on-premises connectivity.
 
 ✔️ **Connect wirelessly**
 
@@ -149,13 +281,13 @@ The profile includes the Wi-Fi configuration settings that automatically connect
 
 Creating a Wi-Fi profile is a common minimum baseline policy for organizations with mobile devices that work on-premises.
 
-Intune has built-in Wi-Fi settings for Android, iOS/iPadOS, macOS, and Windows client devices. On user devices, your Wi-Fi connection is shown as an available connection. Users select it. And, depending on the settings in your Wi-Fi profile, users can automatically authenticate and connect to the Wi-Fi on their devices.
+Intune has built in Wi-Fi settings for Android, iOS/iPadOS, macOS, and Windows client devices. On user devices, your Wi-Fi connection is shown as an available connection. Users select it. And, depending on the settings in your Wi-Fi profile, users can automatically authenticate and connect to the Wi-Fi on their devices.
 
 ✔️ **Deploy anytime**
 
 On new devices, it's recommended to deploy the Wi-Fi device configuration policy when devices enroll in Intune. If you have existing devices, you can deploy the Wi-Fi device configuration policy at any time.
 
-### Get started with Wi-Fi profiles
+#### Get started with Wi-Fi profiles
 
 To get started, use the following links:
 
@@ -171,10 +303,10 @@ To get started, use the following links:
 
 ## Do more
 
-Intune has more built-in device settings, depending on how much you want to manage on your devices. The following list includes some other features you can configure:
+Intune has more built in device settings, depending on how much you want to manage on your devices. The following list includes some other features you can configure:
 
-- **[Administrative templates](../configuration/administrative-templates-windows.md)**: Intune includes built-in ADMX settings that you add to a policy and then deploy the policy to your devices. You don't need to download any files; they're already built in.
-- **[Device restrictions](../configuration/device-restrictions-configure.md)**: There are many built-in settings that can control different parts of the devices, including security, hardware, data sharing, and more.
+- **[Administrative templates](../configuration/administrative-templates-windows.md)**: Intune includes built in ADMX settings that you add to a policy and then deploy the policy to your devices. You don't need to download any files; they're already built in.
+- **[Device restrictions](../configuration/device-restrictions-configure.md)**: There are many built in settings that can control different parts of the devices, including security, hardware, data sharing, and more.
 - **[PKCS or SCEP certificates](../protect/certificates-configure.md)**: Use certificates to authenticate and authorize Wi-Fi connections, VPN connections, and user email account access.
 - **[Analyze your on-premises GPOs and import them in Intune](../configuration/group-policy-analytics.md)**: If you use on-premises GPOs, then you can use Group Policy Analytics to analyze your policies and determine if your settings are supported in the cloud. If they're supported, they can be imported into an Intune policy and deployed to your devices.
 - **[Settings catalog](../configuration/settings-catalog.md)**: The settings catalog is a list of all the settings you can configure in Intune. If you use on-premises GPOs to manage your devices, then the settings catalog is a natural transition to cloud-based policies.
