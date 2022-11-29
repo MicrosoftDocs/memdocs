@@ -34,9 +34,10 @@ ms.collection: M365-identity-device-management
 
 Cancel a scheduled or active organizational message that you no longer need. 
 
-1. Sign in the admin center and go to **Tenant administration** > **Organizational messages (preview)**.  
-2. Select the **Messages** tab.  
-3. Find your message in the table and scroll to the end of the table row.   
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Go to **Tenant administration** > **Organizational messages (preview)**.  
+2. Select the **Message** tab.  
+3. Find your message in the table and scroll to the end of the row.   
 3. Select the context menu (**...**) > **Cancel**.   
 
 For frequently asked questions, known issues, and limitations, see [Overview of organizational messages](organizational-messages-overview.md).  

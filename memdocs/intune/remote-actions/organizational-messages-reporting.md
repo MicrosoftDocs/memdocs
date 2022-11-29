@@ -35,6 +35,7 @@ ms.collection: M365-identity-device-management
 View the details of your organizational messages in the Microsoft Endpoint Manager admin center. 
 
 ## View details    
+To access reporting details in the admin center:  
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Go to **Tenant administration** > **Organizational messages (preview)**.
