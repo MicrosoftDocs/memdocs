@@ -1,12 +1,12 @@
 ---
 # required metadata
 title: Create organizational messages | Microsoft Intune  
-description: Learn how to create and manage organizational messages in Microsoft Intune.       
+description: Create and manage organizational messages in the Microsoft Endpoint Manager admin center.       
 keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/16/2022
+ms.date: 11/28/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -135,21 +135,18 @@ On the **Schedule** page, schedule the delivery of your message.
 3. Select **Next: Assignments** to continue to assignment options.     
 ---  
 ## Step 3: Assign message  
-# [Taskbar / Notification area / Get Started app](#tab/taskbar+notification+get-started)  
 Assign the message to Azure AD-registered users in your organization. You can only assign messages to Azure AD user groups, not Azure AD device groups. If a group includes both users and devices, Intune will only send the message to the users. 
 
 1. To include groups in the assignment, you have two options:    
    * **Add groups**: Select this option to individually choose from a list of Azure AD groups.  
    * **Include all users**: Select the option to assign the message to all Azure AD-registered users.  
 2. If needed, exclude Azure AD groups from the assignment. Under **Exclude**, select **Add groups** and choose the Azure AD groups to leave out.  
-3. Select **Next: Review + Create** to review and finalize your message.      
----  
-## Step 4: Review and create message  
-# [Taskbar / Notification area / Get Started app](#tab/taskbar+notification+get-started)  
-Review your message, scheduling details, and assignments before creating your message. When you're ready to send the message, select **Create**.  
----  
+3. Select **Next: Review + Create** to review and finalize your message.  
 
-## View reporting details    
+## Step 4: Review and create message  
+Review your message, scheduling details, and assignments before creating your message. When you're ready to send the message, select **Create**.  
+
+## View reporting details  
 In the **Messages** tab, you can view a list of all of your messages and see the following details:  
 
  * **Message type**: Shows whether the message is for the taskbar, notification area, or Get Started app. Select the hyperlink to see your message, schedule, and assignment settings.    
@@ -166,12 +163,6 @@ In the **Messages** tab, you can view a list of all of your messages and see the
  * **Times clicked**: Shows an estimate of the total number of times users clicked the message in the past 180 days.   
  * **Click-through rate**: Shows how often, in percentage, that users clicked the message when shown. This data is determined by dividing times clicked by times shown.  
 
-## Cancel a message  
-To cancel a message that's no longer needed:  
-
-1. Go to the **Messages** tab.  
-2. Find your message in the table and scroll to the end of the row.   
-3. Select the context menu (**...**), and then select **Cancel**.   
 
 ## Next steps  
 For frequently asked questions, known issues, and limitations, see [Overview of organizational messages](organizational-messages-overview.md).  

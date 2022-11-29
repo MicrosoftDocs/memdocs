@@ -1,12 +1,12 @@
 ---
 # required metadata
 title: Prerequisites for organizational messages | Microsoft Intune  
-description: Learn about the prerequisites for organizational messages.      
+description: Find out what's required to use organizational messages in Microsoft Intune.        
 keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/16/2022
+ms.date: 11/28/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -76,36 +76,36 @@ There are certain experience and Windows Spotlight policies in Microsoft Intune 
 ### Organizational messages delivery policy 
 For more information about this requirement, see [Known issues and limitations](organizational-messages-overview.md#known-issues-and-limitations).  
 
-### Windows Spotlight policy     
+### Windows Spotlight policy       
 Configure these policies using a Microsoft Intune [device restrictions profile template](../configuration/device-restrictions-configure.md) or the [settings catalog](../configuration/settings-catalog.md). Make sure to adjust these policies in all new and existing policies that are targeted at users and devices receiving organizational messages. 
 
 > [!NOTE]
 > If you use the Windows 10/11 MDM security baseline, you will need to change the **Windows Spotlight** policy to **Not configured**. The Windows Spotlight policy controls organizational messages and messages coming from Microsoft. To continue blocking messages from Microsoft as defined in the Windows 10/11 MDM security baseline, [configure the Microsoft messaging policy](organizational-messages-prerequisites.md#microsoft-messaging-policy).
 
 #### Template profiles    
-Go to **Configuration profiles** > **Templates** > **Device restrictions** > **Windows Spotlight** to edit these settings.    
+Go to **Devices** > **Windows** > **Configuration profiles**, and in a new or existing template profile select **Device restrictions** > **Windows Spotlight**.    
 
 * To allow taskbar messages:   
   * **Windows Spotlight**: Select **Not configured**.    
-  * **Windows Spotlight Tips**: Select **Not configured**.    
+  * **Windows Tips**: Select **Not configured**.    
 * To allow notification area messages:  
   * **Windows Spotlight**: Select **Not configured**.  
-  * **Windows Spotlight on Action Center**: Select **Not configured**.  
+  * **Windows Spotlight in action center**: Select **Not configured**.  
 * To allow Get Started app messages: 
   * **Windows Spotlight**: Select **Not configured**.      
 
 #### Settings catalog profiles        
-Go to the **Settings catalog** > **Experience** > **Allow Windows Spotlight (User)** to edit these settings.  
+In a new or existing Windows configuration profile, select **Settings catalog** > **Experience**. 
 
 * To allow taskbar messages:  
-  * **Allow Windows Spotlight (User)**: Select **Allow**.    
-  * **Windows Spotlight Tips**: Select **Allow**. 
+  * **Allow Windows Spotlight (User)**: Switch the toggle to **Allow**.    
+  * **Allow Windows Tips**: Switch the toggle to **Allow**.  
 * To allow notification area messages:    
-  * **Windows Spotlight (User)**: Select **Allow**.  
-  * **Windows Spotlight on Action Center**: Select **Allow**.  
+  * **Allow Windows Spotlight (User)**: Switch the toggle to **Allow**.  
+  * **Allow Windows Spotlight on Action Center (User)**: Switch the toggle to **Allow**.  
 * To allow Get Started app messages:  
-  * **Allow Windows Spotlight (User)**: Select **Allow**.   
-   * **Disable Cloud Optimized Content**: Select **Disabled**.   
+  * **Allow Windows Spotlight (User)**: Switch the toggle to **Allow**.   
+   * **Disable Cloud Optimized Content**: Switch the toggle to **Disabled**.   
 
 #### Policy CSP   
 The configuration service provider (CSP) policies available for Windows 11 include:  
