@@ -38,6 +38,9 @@ This feature applies to:
 
 - macOS 12 and later (supervised)
 
+> [!NOTE]
+> Prior to the macOS 12.5 release, devices may download and install additional updates before installing the latest update. 
+
 With policies for macOS software updates, you can:
 
 - Remotely manage how downloads, installations, and notifications should occur when the following types of updates are available for macOS:
@@ -76,6 +79,9 @@ By default, devices check in with Intune about every 8 hours. If an update is av
       - **Install later**: Download the software update and install it later.
 
       - **Not configured**: No action taken on the software update.
+
+      > [!NOTE]
+      > Devices with Apple Silicon require an MDM-issued bootstrap token to authenticate automated, non-interactive updates and upgrades.
 
    2. **Schedule type**: Configure the schedule for this policy:
 
