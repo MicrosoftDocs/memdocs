@@ -32,10 +32,7 @@ ms.collection: M365-identity-device-management
 > [!IMPORTANT]
 > This feature is in public preview. For more information, see [Public preview in Microsoft Intune](../fundamentals/public-preview.md).  
 
-View the details of your organizational messages in the Microsoft Endpoint Manager admin center. 
-
-## View details    
-To access reporting details in the admin center:  
+View the details of your organizational messages in the Microsoft Endpoint Manager admin center.  
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Go to **Tenant administration** > **Organizational messages (preview)**.
@@ -57,9 +54,6 @@ Available details include:
  * **Times clicked**: Shows an estimate of the total number of times users clicked the message in the past 180 days.   
  * **Click-through rate**: Shows how often, in percentage, that users clicked the message when shown. This data is determined by dividing times clicked by times shown.   
 
-## Next steps   
-* To cancel a scheduled or active message, see [Cancel an organizational message](organizational-messages-cancel.md).  
-
-* For frequently asked questions, known issues, and limitations, see [Overview of organizational messages](organizational-messages-overview.md).  
+For frequently asked questions, known issues, and limitations, see [Overview of organizational messages](organizational-messages-overview.md).  
 
 

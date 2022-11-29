@@ -121,20 +121,20 @@ Create and configure a message for the Get Started app.
 # [Taskbar / Notification area](#tab/taskbar+notification) 
 On the **Schedule** page, schedule the delivery of your message. 
 
-1. Configure the time window for your message. Your options:  
+1. Configure the delivery time window. Your options:  
 
-   * **First day to show message**: Select when to first show the message. To ensure that delivery begins when you want it to, configure this setting 24 hours before you want the message to appear. This option isn't available for the Get Started app.   
-   * **Last day to show message**:  Select the last day to show the message. This date must be at least 7 days after the start date. This option isn't available for the Get Started app.  
+   * **First day to show message**: Select when to first show the message. To ensure that delivery begins when you want it to, configure this setting 24 hours before you want the message to appear.   
+   * **Last day to show message**:  Select the last day to show the message. This date must be at least 7 days after the start date.   
 2. Select **Next: Assignments** to continue to assignment options.   
 
 # [Get Started app](#tab/get-started)  
 On the **Schedule** page, schedule the delivery of your message.  
 
-1. Configure **Message repeat frequency**. Select how often you want the message to reappear after employees dismiss it. The message will initially go away when the employee dismisses it or completes the call-to-action, but will reappear at the frequency you select here. Your options: 
+1. Configure the **Message repeat frequency**. Select how often you want the message to reappear after employees dismiss it. The message will initially go away when the employee dismisses it or completes the call-to-action, but will reappear at the frequency you select here. Your options: 
    * **Once a week**
    * **Once every two weeks**
    * **Once a month**  
-2. Switch the **Always on** toggle on to make messages visible in the Get Started app.  
+2. Turn on the **Always on** toggle to make messages visible in the Get Started app.  
 3. Select **Next: Assignments** to continue to assignment options.     
 ---  
 ## Step 3: Assign message  

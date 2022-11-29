@@ -38,7 +38,7 @@ Cancel a scheduled or active organizational message that you no longer need.
 2. Go to **Tenant administration** > **Organizational messages (preview)**.  
 2. Select the **Message** tab.  
 3. Find your message in the table and scroll to the end of the row.   
-3. Select the context menu (**...**) > **Cancel**.   
+3. Select the (**...**) context menu > **Cancel**.   
 
 For frequently asked questions, known issues, and limitations, see [Overview of organizational messages](organizational-messages-overview.md).  
 
