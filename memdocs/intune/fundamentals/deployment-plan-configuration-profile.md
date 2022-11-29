@@ -71,7 +71,7 @@ If you prefer a more granular list of settings and their recommended values, go 
 
 ### Antivirus and scanning
 
-✔️ Install antivirus software and regularly scan for malware
+✔️ **Install antivirus software and regularly scan for malware**
 
 All devices should have antivirus software installed and be regularly scanned for malware. Intune integrates with third party partner mobile threat defense (MTD) services that provide AV and threat scanning. For macOS and Windows, antivirus and scanning are built in to Intune with Microsoft Defender for Endpoint.
 
@@ -82,7 +82,7 @@ Your policy options:
 | Android Enterprise | - Mobile threat defense partner </br>- Microsoft Defender for Endpoint for Android can scan for malware |
 | iOS/iPadOS | Mobile threat defense partner |
 | macOS | Intune Endpoint Security antivirus profile (Microsoft Defender for Endpoint) |
-| Windows client | - Security baselines (recommended)</br>- Intune Endpoint Security antivirus profile (Microsoft Defender for Endpoint) </br>- Mobile threat defense partner |
+| Windows client | - Intune security baselines (recommended)</br>- Intune Endpoint Security antivirus profile (Microsoft Defender for Endpoint) </br>- Mobile threat defense partner |
 
 For more information on these features, go to:
 
@@ -93,7 +93,7 @@ For more information on these features, go to:
 
 ### Detection and response
 
-✔️ Detect attacks near real-time and then act on these threats.
+✔️ **Detect attacks and act on these threats**
 
 When you detect threats quickly, you can help minimize the impact of the threat. When you combine these policies with conditional access, you can block users and devices from accessing organization resources if a threat is detected.
 
@@ -104,7 +104,7 @@ Your policy options:
 | Android Enterprise | - Mobile threat defense partner</br>- Microsoft Defender for Endpoint on Android |
 | iOS/iPadOS | - Mobile threat defense partner</br>- Microsoft Defender for Endpoint on iOS/iPadOS |
 | macOS | Not available |
-| Windows client | - Security baselines (recommended)</br>- Intune endpoint detection and response profile (Microsoft Defender for Endpoint) </br>- Mobile threat defense partner |
+| Windows client | - Intune security baselines (recommended)</br>- Intune endpoint detection and response profile (Microsoft Defender for Endpoint) </br>- Mobile threat defense partner |
 
 For more information on these features, go to:
 
@@ -116,7 +116,7 @@ For more information on these features, go to:
 
 ### Firewall
 
-✔️ Enable the firewall on all devices.
+✔️ **Enable the firewall on all devices**
 
 Some platforms come with a built-in firewall and on others, you may have to install a firewall separately. Intune integrates with third party partner mobile threat defense (MTD) services that can manage a firewall for Android and iOS/iPadOS devices. For macOS and Windows, firewall security is built in to Intune with Microsoft Defender for Endpoint.
 
@@ -127,7 +127,7 @@ Your policy options:
 | Android Enterprise | Mobile threat defense partner |
 | iOS/iPadOS | Mobile threat defense partner |
 | macOS | Intune Endpoint Security firewall profile (Microsoft Defender for Endpoint) |
-| Windows client | - Security baselines (recommended)</br>- Intune Endpoint Security firewall profile (Microsoft Defender for Endpoint) </br>- Mobile threat defense partner |
+| Windows client | - Intune security baselines (recommended)</br>- Intune Endpoint Security firewall profile (Microsoft Defender for Endpoint) </br>- Mobile threat defense partner |
 
 For more information on these features, go to:
 
@@ -137,7 +137,7 @@ For more information on these features, go to:
 
 ### Password policy
 
-✔️ Create a strong password/PIN policy and block simple passcodes.
+✔️ **Create a strong password/PIN policy and block simple passcodes**
 
 PINs unlock devices. On devices that access organization data, including personally owned devices, you should require strong PINs/passcodes and support biometrics. Intune uses device restrictions profiles to create and configure password requirements.
 
@@ -149,7 +149,7 @@ Your policy options:
 | AOSP | Intune device restrictions profile |
 | iOS/iPadOS | Intune device restrictions profile |
 | macOS | Intune device restrictions profile |
-| Windows client | - Security baselines (recommended) </br>- Intune device restrictions profile |
+| Windows client | - Intune security baselines (recommended) </br>- Intune device restrictions profile |
 
 For a list of the settings you can configure, go to:
 
@@ -164,7 +164,7 @@ For a list of the settings you can configure, go to:
 
 ### Software updates
 
-✔️ Regularly install software updates.
+✔️ **Regularly install software updates**
 
 All devices should be updated regularly and policies should be created to make sure these updates are successfully installed. For most platforms, Intune has dedicated policies that focus on managing and installing updates.
 
