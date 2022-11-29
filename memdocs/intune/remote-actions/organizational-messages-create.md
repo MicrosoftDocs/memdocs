@@ -144,7 +144,9 @@ Assign the message to Azure AD-registered users in your organization. You can on
 3. Select **Next: Review + Create** to review and finalize your message.  
 
 ## Step 4: Review and create message  
-Review your message, scheduling details, and assignments before creating your message. When you're ready to send the message, select **Create**.  
+Review your message, scheduling details, and assignments before creating your message. When you're ready to send the message, select **Create**. 
+
+Return to **Organizational messages (prevoew)** and select the **Message** tab to view and edit your new message.  
 
 ## Next steps  
 * Monitor and track the status and user engagement details for scheduled organizational messages. For more information, see [View reporting details for organizational messages](organizational-messages-reporting.md).  
