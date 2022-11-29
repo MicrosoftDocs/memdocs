@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/24/2022
+ms.date: 11/29/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -32,6 +32,8 @@ ms.collection:
 # Microsoft Intune planning guide
 
 A successful Microsoft Intune deployment or migration starts with planning. This guide steps you through common mobile device management (MDM) and mobile application management (MAM) goals. It also provides guidance on inventorying your devices, licensing, reviewing current policies and infrastructure, creating a rollout plan, and more.
+
+![Microsoft Intune MDM migration guide art](./media/migration-guide/MDM-migration-guide-art.PNG)
 
 > [!TIP]
 > The [Intune Adoption Kit](https://aka.ms/IntuneAdoptionKit) includes email templates, and more good information.
