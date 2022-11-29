@@ -49,7 +49,22 @@ An administrator can now approve or deny the request for deploying an applicatio
 
 For more information, see [Create an app registration in Azure AD for your app service app](../../../apps/deploy-use/app-approval.md#to-take-action-from-internet).
 
-<!--## Site infrastructure-->
+## Site infrastructure
+<!--14538358-->
+
+### <a name="bkmk_naa-acount"></a> Network Access Account (NAA) account usage alert
+
+If your site is configured with NAA account, you'll see this new prerequisite warning added. To improve the security of distribution points configured with NAA account, review the existing accounts and their relevant permissions. If it has more than minimal required permission, then remove and add a minimal permission account. Do n't configure any administrator level permission accounts on the NAA. If the site server is configured with HTTPS / EHTTP, it recommended removing NAA account, which is unused.
+
+For more information, see the description of this [permissions-for-the-network-access-account](../../plan-design/hierarchy/accounts.md#permissions-for-the-network-access-account)
+
+<!--14959706-->
+
+### <a name="bkmk_dpcontent"></a> Distribution point content migration
+
+DP content migration support is now available for migrating content from one DP to another DP using PowerShell cmdlets. You can also monitor the DP migration status using these PowerShell cmdlets.
+
+For more information, see the description of this [content migration](../../servers/deploy/configure/deploy-and-manage-content.md#bkmk_dpconmig)
 
 ### Include and prefer a cloud source for a management point in a default boundary group
 <!--10674394-->
