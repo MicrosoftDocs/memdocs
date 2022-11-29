@@ -37,8 +37,8 @@ View the details of your organizational messages in the Microsoft Endpoint Manag
 ## View details    
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Tenant administration** > **Organizational messages (preview)**.
-3. Go to the **Message** tab to see a list of all existing messages and message information.  
+2. Go to **Tenant administration** > **Organizational messages (preview)**.
+3. Select the **Message** tab to see a list of all existing messages and message details.  
 
 Available details include:  
 
