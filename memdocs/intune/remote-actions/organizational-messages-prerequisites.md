@@ -75,7 +75,7 @@ There are certain experience and Windows Spotlight policies in Microsoft Intune 
 
 ### Organizational messages delivery policy  
 > [!IMPORTANT]
-> This policy is required for devices running [Windows 11, version 22H2](http://support.microsoft.com/help/5020044) and later. If you don't enable it, devices running Windows 11, version 22H2 and later can't receive organizational messages. The policy isn't required on devices running earlier builds.  
+> This policy is required for devices running [Windows 11, version 22H2](https://support.microsoft.com/help/5020044) and later. If you don't enable it, devices running Windows 11, version 22H2 and later can't receive organizational messages. The policy isn't required on devices running earlier builds.  
 
 Enable the delivery of organizational messages in all new and existing policies that are targeted at users and devices receiving organizational messages.  
 
