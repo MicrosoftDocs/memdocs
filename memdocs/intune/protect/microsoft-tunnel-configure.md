@@ -270,6 +270,8 @@ After the Microsoft Tunnel installs and devices install the Microsoft Tunnel cli
 
    - **Proxy**:  
      - Configure proxy server details for your environment.  
+       > [!NOTE]  
+       > Proxy server configurations are not supported with versions of Android prior to version 10.  For more information, see [VpnService.Builder](https://developer.android.com/reference/android/net/VpnService.Builder#setHttpProxy%28android.net.ProxyInfo%29) in that Android developer documentation.
 
    For more information about VPN settings, see [Android Enterprise device settings to configure VPN](../configuration/vpn-settings-android-enterprise.md)
 
