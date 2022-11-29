@@ -3,7 +3,7 @@
 
 title: Configure security, email, VPN, and Wi-Fi device configuration profiles
 titleSuffix: Microsoft Intune
-description: Step 4 to deploy Intune Use Microsoft Intune to create email, VPN, and Wi-Fi device configuration profiles as part of the minimum set of policies for your devices.
+description: Step 4 to deploy device configuration profiles as part of the minimum set of policies for your devices using Microsoft Intune. The starting point is to enable the firewall, install AV, scan for malware, install software updates, create a strong PIN policy, and create email, VPN, and Wi-Fi device configuration profiles.
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
