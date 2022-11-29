@@ -40,6 +40,9 @@ Microsoft recommends you create policies that:
 
 These features are configured in device configuration profiles in the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). When the profiles are ready, they can be deployed from Intune to your devices.
 
+> [!TIP]
+> [Take a tour of Intune and the Endpoint Manager admin center](tutorial-walkthrough-endpoint-manager.md).
+
 This article lists the starting point device configuration policies that organizations should use. Most of these policies in this article focus on access to organization resources and security. In your organization, you may have a different set of baseline device configuration policies.
 
 This article applies to:
