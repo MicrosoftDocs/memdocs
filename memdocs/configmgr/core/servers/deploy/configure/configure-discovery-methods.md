@@ -139,7 +139,7 @@ Although each of these discovery methods is independent of the others, they shar
 
     > [!NOTE]  
     > By default, Active Directory Group Discovery discovers only the membership of security groups.
-    > Even if selecting the checkbox, Configuration Manager doesn't discover the Distribution Group itself but its members and populates Distribution group - members relations in the database/
+    > Even if selecting the checkbox, Configuration Manager doesn't discover the Distribution Group itself but its members and populates **Distribution group - members relations** in the database.
 
 5. Select **OK** to save the configuration.  
 
