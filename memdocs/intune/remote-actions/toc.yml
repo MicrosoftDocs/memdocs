@@ -58,10 +58,10 @@ items:
          href: organizational-messages-prerequisites.md  
        - name: Create organizational messages  
          href: organizational-messages-create.md  
-       - name: Cancel organization message 
+       - name: Cancel organizational message 
          href: organizational-messages-cancel.md
-       - name: View reporting details  
-         href: organizational-messages-reporting.md  
+       - name: View reporting details
+         href: organizational-messages-reporting.md
   - name: Other actions
     items:
     - name: Locate device

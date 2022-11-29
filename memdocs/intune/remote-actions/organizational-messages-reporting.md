@@ -34,13 +34,13 @@ ms.collection: M365-identity-device-management
 
 View the details of your organizational messages in the Microsoft Endpoint Manager admin center. 
 
-## Access reporting details    
+## View details    
 
-1. Sign in to the admin center and go to **Tenant administration** > **Organizational messages (preview)**.
-2. Select the **Message** tab to see a list of all existing messages and message information.  
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Tenant administration** > **Organizational messages (preview)**.
+3. Go to the **Message** tab to see a list of all existing messages and message information.  
 
-## Available reporting details  
-The following details are available:   
+Available details include:  
 
  * **Message type**: Shows whether the message is for the taskbar, notification area, or Get Started app. Select the hyperlink to see your message, schedule, and assignment settings.    
  * **Message theme**: Shows the theme you chose for the message.     
@@ -57,8 +57,8 @@ The following details are available:
  * **Click-through rate**: Shows how often, in percentage, that users clicked the message when shown. This data is determined by dividing times clicked by times shown.   
 
 ## Next steps   
-To cancel a scheduled or active message, see [Cancel an organizational message](organizational-messages-cancel.md).  
+* To cancel a scheduled or active message, see [Cancel an organizational message](organizational-messages-cancel.md).  
 
-For frequently asked questions, known issues, and limitations, see [Overview of organizational messages](organizational-messages-overview.md).  
+* For frequently asked questions, known issues, and limitations, see [Overview of organizational messages](organizational-messages-overview.md).  
 
 
