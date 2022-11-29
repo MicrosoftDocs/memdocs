@@ -46,7 +46,7 @@ For more information, see the description of this [permissions-for-the-network-a
 
 DP content migration support is now available for migrating content from one DP to another DP using PowerShell cmdlets. You can also monitor the DP migration status using these PowerShell cmdlets.
 
-For more information, see the description of this [content migration](../../servers/deploy/configure/deploy-and-manage-content.md#bkmk_-distribute-content)
+For more information, see the description of this [content migration](../../servers/deploy/configure/deploy-and-manage-content.md#-distribute-content)
 
 <!--## Client management-->
 
