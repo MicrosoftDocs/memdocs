@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Configure email, VPN, and Wi-Fi device configuration profiles
+title: Configure security, email, VPN, and Wi-Fi device configuration profiles
 titleSuffix: Microsoft Intune
-description: Use Microsoft Intune to create email, VPN, and Wi-Fi device configuration profiles as part of the minimum set of policies for your devices.
+description: Step 4 to deploy Intune Use Microsoft Intune to create email, VPN, and Wi-Fi device configuration profiles as part of the minimum set of policies for your devices.
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/28/2022
+ms.date: 11/29/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -27,18 +27,20 @@ ms.collection:
   - highpri
 ---
 
-# Step 4 - Create device configuration profiles to secure devices and create email, VPN and Wi-Fi connections
+# Step 4 - Create device configuration profiles to secure devices and create connections to organization resources
 
-In this step, you're ready to configure a minimum or baseline set of device features that all devices must have.
+So far, you've set up your Intune subscription, created app protection policies, and created device compliance policies.
 
-Microsoft recommends that you create the following policies that:
+In this step, you're ready to configure a minimum or baseline set of security and device features that all devices must have.
 
-- Focus on device security, including installing antivirus, creating a strong password policy, and installing software updates.
-- Give users access to their organization email and controlled secure access to your network.
+Microsoft recommends you create policies that:
+
+- Focus on device security, including installing antivirus, creating a strong password policy, and regularly installing software updates.
+- Give users access to their organization email and controlled secure access to your network, wherever they are.
 
 These features are configured in device configuration profiles in the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). When the profiles are ready, they can be deployed from Intune to your devices.
 
-This article lists some common baselines device configuration policies that organizations use. Most of these policies in this article focus on access to organization resources and security. In your organization, you may have a different set of baseline device configuration policies.
+This article lists the starting point device configuration policies that organizations should use. Most of these policies in this article focus on access to organization resources and security. In your organization, you may have a different set of baseline device configuration policies.
 
 This article applies to:
 
@@ -47,11 +49,11 @@ This article applies to:
 - macOS
 - Windows
 
-## Create a security baseline
+## Create your security baseline
 
-To help keep your organization data and devices secure, you create different policies that focus on security.
+To help keep your organization data and devices secure, you create different policies that focus on security. You should create a list of security features that all users and/or all devices must have. This list is your security baseline.
 
-In your baseline, Microsoft recommends the following security policies:
+In your baseline, at a minimum, Microsoft recommends the following security policies:
 
 - Install antivirus (AV) and regularly scan for malware
 - Use detection and response
@@ -59,55 +61,60 @@ In your baseline, Microsoft recommends the following security policies:
 - Install software updates regularly
 - Create a strong password policy
 
-This section lists the Intune features you can use to create these security policies. For more granular settings, go to:
+This section lists the Intune and Microsoft services you can use to create these security policies.
+
+If you prefer a more granular list of settings and their recommended values, go to:
 
 - [Android Enterprise security configuration framework](../enrollment/android-configuration-framework.md)
 - [iOS/iPadOS personal device security configurations](../enrollment/ios-ipados-personal-device-security-configurations.md)
 - [Windows security baselines](../protect/security-baselines.md)
 
-
-Defender for Endpoint also applies to Android and iOS/iPadOS; it acts like a tunnel, which is like a VPN, but it's not a VPN. 
-
-macOS uses jamf pro, which is a compliance policy partner
-
-
-
 ### Antivirus and scanning
 
-All devices should have antivirus software installed and regularly scan for malware.
+✔️ Install antivirus software and regularly scan for malware
 
-Intune integrates with third party partner mobile threat defense (MTD) services that provide AV and threat scanning for Android and iOS/iPadOS devices.
-
-For macOS and Windows, antivirus and scanning is built in to Intune with Microsoft Defender for Endpoint.
+All devices should have antivirus software installed and be regularly scanned for malware. Intune integrates with third party partner mobile threat defense (MTD) services that provide AV and threat scanning. For macOS and Windows, antivirus and scanning are built in to Intune with Microsoft Defender for Endpoint.
 
 | Platform | Policy type |
 | --- | --- |
-| Android Enterprise | Mobile threat defense partner |
+| Android Enterprise | - Mobile threat defense partner </br>- Microsoft Defender for Endpoint for Android can scan for malware. |
 | iOS/iPadOS | Mobile threat defense partner |
 | macOS | Intune Endpoint Security antivirus profile (Microsoft Defender for Endpoint) |
-| Windows client | - Security baselines (recommended)</br>- Intune Endpoint Security antivirus profile (Microsoft Defender for Endpoint) |
+| Windows client | - Security baselines (recommended)</br>- Intune Endpoint Security antivirus profile (Microsoft Defender for Endpoint) </br>- Mobile threat defense partner |
 
 For more information on these features, go to:
 
 - [**Android Enterprise** and **iOS/iPadOS** mobile threat defense integration](../protect/mobile-threat-defense.md)
+- [**Android Enterprise** Microsoft Defender for Endpoint overview](/microsoft-365/security/defender-endpoint/mtd)
 - [**Windows** security baselines](../protect/security-baselines.md)
 - [**macOS** and **Windows** antivirus policy](../protect/endpoint-security-antivirus-policy.md)
 
 ### Detection and response
 
+✔️ Detect attacks near real-time and then act on these threats.
+
+When you detect threats quickly, you can help minimize the impact of the threat. When you combine these policies with conditional access, you can block users and devices from accessing organization resources if a threat is detected.
+
 | Platform | Policy type |
 | --- | --- |
-| Android Enterprise organization owned devices | Mobile threat defense partner |
-| Android Enterprise personally owned devices with a work profile | Mobile threat defense partner |
-| iOS/iPadOS | Mobile threat defense partner |
-| macOS |  |
-| Windows client | - Security baselines (recommended)</br>- Endpoint detection and response profile (Microsoft Defender for Endpoint) |
+| Android Enterprise | - Mobile threat defense partner</br>- Microsoft Defender for Endpoint on Android |
+| iOS/iPadOS | - Mobile threat defense partner</br>- Microsoft Defender for Endpoint on iOS/iPadOS |
+| macOS | Not available |
+| Windows client | - Security baselines (recommended)</br>- Intune endpoint detection and response profile (Microsoft Defender for Endpoint) |
+
+For more information on these features, go to:
+
+- **Android Enterprise** and **iOS/iPadOS**:
+  - [Mobile threat defense integration with Intune](../protect/mobile-threat-defense.md)
+  - [Microsoft Defender for Endpoint overview](/microsoft-365/security/defender-endpoint/mtd)
+- [**Windows** security baselines](../protect/security-baselines.md)
+- [**Windows** endpoint detection and response policy](../protect/endpoint-security-edr-policy.md)
 
 ### Firewall
 
-All devices should have a firewall enabled.
+✔️ Enable the firewall on all devices.
 
-Intune integrates with third party partner mobile threat defense (MTD) services that can manage a firewall for Android and iOS/iPadOS devices. For macOS and Windows, firewall security is built in to Intune with Microsoft Defender for Endpoint.
+Some platforms come with a built-in firewall and on others, you may have to install a firewall separately. Intune integrates with third party partner mobile threat defense (MTD) services that can manage a firewall for Android and iOS/iPadOS devices. For macOS and Windows, firewall security is built in to Intune with Microsoft Defender for Endpoint.
 
 | Platform | Policy type |
 | --- | --- |
@@ -124,9 +131,9 @@ For more information on these features, go to:
 
 ### Password policy
 
-All devices should have a strong password policy that uses a PIN and blocks simple passcodes, like `1234`.
+✔️ Create a strong password/PIN policy and block simple passcodes.
 
-Intune uses device restrictions profiles to create and configure password requirements. These profiles are then deployed to your user groups or device groups.
+PINs unlock devices. On devices that access organization data, including personally owned devices, you should require strong PINs/passcodes and support biometrics. Intune uses device restrictions profiles to create and configure password requirements.
 
 | Platform | Policy type |
 | --- | --- |
@@ -149,6 +156,9 @@ For a list of the settings you can configure, go to:
 
 ### Software updates
 
+✔️ Regularly install software updates.
+
+All devices should be updated regularly and policies should be created to make sure these updates are successfully installed. For most platforms, Intune has dedicated policies that focus on managing and installing updates.
 
 | Platform | Policy type |
 | --- | --- |
@@ -303,10 +313,10 @@ To get started, use the following links:
 
 ## Do more
 
-Intune has more built in device settings, depending on how much you want to manage on your devices. The following list includes some other features you can configure:
+Intune has more built-in device settings, depending on how much you want to manage on your devices. The following list includes some other features you can configure:
 
 - **[Administrative templates](../configuration/administrative-templates-windows.md)**: Intune includes built in ADMX settings that you add to a policy and then deploy the policy to your devices. You don't need to download any files; they're already built in.
-- **[Device restrictions](../configuration/device-restrictions-configure.md)**: There are many built in settings that can control different parts of the devices, including security, hardware, data sharing, and more.
+- **[Device restrictions](../configuration/device-restrictions-configure.md)**: There are many built-in settings that can control different parts of the devices, including security, hardware, data sharing, and more.
 - **[PKCS or SCEP certificates](../protect/certificates-configure.md)**: Use certificates to authenticate and authorize Wi-Fi connections, VPN connections, and user email account access.
 - **[Analyze your on-premises GPOs and import them in Intune](../configuration/group-policy-analytics.md)**: If you use on-premises GPOs, then you can use Group Policy Analytics to analyze your policies and determine if your settings are supported in the cloud. If they're supported, they can be imported into an Intune policy and deployed to your devices.
 - **[Settings catalog](../configuration/settings-catalog.md)**: The settings catalog is a list of all the settings you can configure in Intune. If you use on-premises GPOs to manage your devices, then the settings catalog is a natural transition to cloud-based policies.
