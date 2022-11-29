@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/19/2022
+ms.date: 11/29/2022
 ms.topic: end-user-help
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -29,26 +29,22 @@ ms.collection:
 ---
 
 # Check status on Intune Company Portal website 
-View and check device status on the Intune Company Portal website. The device status reveals whether or not your device is compliant with your organization's requirements.  Device check-ins are performed automatically but you can manually initiate one to: 
+View and check device status on the Intune Company Portal website.   During a status check, Company Portal confirms that the settings on your device meet your organization's requirements and confirms whether or not you have access to their resources. Company Portal performs device check-ins regularly and automatically, but you can manually initiate one to:    
 
-* Register changes you just made to your device
-* Refresh your device status 
-* Regain access to your work or school resources 
+* Register recent changes you made to device settings.  
+* Refresh an outdated device status.  
+* Resolve a pending requirement.  
 
-This article describes how to check device status on the Company Portal website. 
+## Device status   
 
-## Device status 
+Company Portal shows the following statuses:  
 
-During a status check, Company Portal confirms that the settings on your device meet your organization's policy requirements, and changes the device status to reflect whether or not you're in compliance. Statuses include:
+* **Can access**: Your device is allowed to access work or school resources.  
+* **Cannot access company resources**: Your device isn't allowed to access work or school resources. Make the required changes shown on the Company Portal website to gain access.  
 
-* **Compliant**: The device can access work or school resources.  
-* **Out of compliance -- can still access company resources**:  The device can access work or school resources for now, but the device doesn't meet requirements. Make the required changes before the given date to maintain access. 
-* **Not in compliance**: The device cannot access work or school resources. Make the required changes to regain access.  
-
-Check-ins are important for maintaining secure access to your organization's resources. 
-If you recently made changes to your device settings, you may need to manually check the status to register your changes with Company Portal. 
 
 ## Check device status  
+To check the status of a device:  
 
 1. Sign in to the Company Portal website.  
 
