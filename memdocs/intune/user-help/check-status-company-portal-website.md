@@ -46,7 +46,7 @@ Company Portal shows the following statuses:
 ## Check device status  
 To check the status of a device:  
 
-1. Sign in to the Company Portal website.  
+1. Sign in to the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).  
 
 2. Select **Devices**, and then select your device.  
 
