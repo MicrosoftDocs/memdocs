@@ -146,23 +146,7 @@ Assign the message to Azure AD-registered users in your organization. You can on
 ## Step 4: Review and create message  
 Review your message, scheduling details, and assignments before creating your message. When you're ready to send the message, select **Create**.  
 
-## View reporting details  
-In the **Messages** tab, you can view a list of all of your messages and see the following details:  
-
- * **Message type**: Shows whether the message is for the taskbar, notification area, or Get Started app. Select the hyperlink to see your message, schedule, and assignment settings.    
- * **Message theme**: Shows the theme you chose for the message.     
- * **Date created**:  Shows the date and time you created the message.   
- * **Status** Shows the status of the message, which includes: 
-    * **Active**: The message is currently being shown to users according to your schedule.  
-    * **Scheduled**: The message isn't currently being shown to users but has been scheduled.  
-    * **Canceled**: The message was canceled and is no longer scheduled to go out to users.  
-    * **Completed**: The message was sent out during the scheduled time and is done being shown.  
- * **Start date**: Shows the start date for the message.  
- * **End date** Shows the end date for the message.  
- * **Times shown**: Shows an estimate of the total number of times the message has been shown to users in the past 180 days.   
- * **Times clicked**: Shows an estimate of the total number of times users clicked the message in the past 180 days.   
- * **Click-through rate**: Shows how often, in percentage, that users clicked the message when shown. This data is determined by dividing times clicked by times shown.  
-
-
 ## Next steps  
-For frequently asked questions, known issues, and limitations, see [Overview of organizational messages](organizational-messages-overview.md).  
+* Monitor and track the status and user engagement details for scheduled organizational messages. For more information, see [View reporting details for organizational messages](organizational-messages-reporting.md).  
+* [Cancel an organizational message](organizational-messages-cancel.md) that's no longer needed. 
+* For frequently asked questions, known issues, and limitations, see [Overview of organizational messages](organizational-messages-overview.md).  
