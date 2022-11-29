@@ -68,7 +68,6 @@ Organizational messages have the following known issues and limitations:
 * Scope groups and scope tags aren't available in organizational messages.   
 * Message priority isn't supported. If you schedule multiple messages of the same type for the same time window, targeted employees will receive the messages in a random order.  
 * We observed that sometimes after admins create a message and receive a success confirmation, a background task fails and limits functionality. The failure isn't communicated in the UI, and the status for the message still appears as **Scheduled**. You'll know this happened if the cancellation option and user engagement details are unavailable. 
-* You can enable the [organizational messages delivery policy](organizational-messages-prerequisites.md#organizational-messages-delivery-policy) now, but it won't take effect until the next [Preview of Monthly Rollup](/troubleshoot/windows-client/deployment/standard-terminology-software-updates#preview-of-monthly-rollup) releases at the end of November 2022. In the meantime, the policy isn't required, and doesn't prevent you from creating and deploying organizational messages. If you do enable the policy, it will appear in your summary as **Not applicable** or **Error**.  After the Preview of Monthly Rollup releases, the policy will be required for devices with that update. The policy isn't required on devices running earlier builds.  
 
 ## Frequently asked questions    
 This section answers frequently asked questions (FAQ) for organizational messages.  
