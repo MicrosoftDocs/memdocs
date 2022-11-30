@@ -1,18 +1,17 @@
 ---
 title: What's new in Autopilot
 description: News and resources about the latest updates and past versions of Windows Autopilot.
-ms.prod: w10
-ms.technology: windows
+ms.prod: windows-client
+ms.technology: itpro-deploy
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
-manager: aczechowski
+manager: aaroncz
 ms.reviewer: jubaptis
-ms.date: 09/22/2022
-ms.collection:
+ms.date: 11/17/2022
+ms.collection: 
   - M365-modern-desktop
-  - highpri
-ms.topic: article 
+ms.topic: article
 ---
 
 # Windows Autopilot: What's new
@@ -88,7 +87,7 @@ The following example shows details for **Deployment info**, which includes **Ne
 
 :::image type="content" source="images/oobe-03.png" alt-text="Windows Autopilot diagnostics page expanded to show details.":::
 
-To enable the diagnostics page, go to the [ESP profile](../intune/enrollment/windows-enrollment-status.md). Select **Yes** to **Turn on log collection and diagnostics page for end users**.
+To enable the diagnostics page, go to the [ESP profile](../intune/enrollment/windows-enrollment-status.md). Make sure **Show app and profile configuration progress** is selected to **Yes**, and then select **Yes** next to **Turn on log collection and diagnostics page for end users**.
 
 The diagnostics page is currently supported for commercial OOBE, and Autopilot user-driven mode. It's currently available on Windows 11. Windows 10 users can still collect and export diagnostic logs when this setting is enabled in Intune.
 

@@ -9,7 +9,7 @@ ms.author: erikje
 manager: dougeby
 ms.date: 08/30/2022
 ms.topic: overview
-ms.service: cloudpc
+ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
 ms.technology:

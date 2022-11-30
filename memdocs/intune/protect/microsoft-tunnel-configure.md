@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/17/2022
+ms.date: 11/11/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -182,16 +182,6 @@ Before installing Microsoft Tunnel Gateway on a Linux server, configure your ten
 
 8. If you’re using RHEL 8.4 or 8.5, be sure to restart the Tunnel Gateway server by entering `mst-cli server restart` before you attempt to connect clients to it.
 
-### Configure a break and inspect proxy
-
-After installing the Microsoft Tunnel server, you can then configure Microsoft Tunnel to work with a break and inspect proxy server that uses a self-signed certificate. To be successful, Microsoft Tunnel must be able to locate and access the certificate from the Proxy server.
-
-Configuration requires the following steps:
-
-1. The proxy server certificate must be in *PEM* format and saved to a file with a `.crt` extension.
-2. Copy the *.crt* file to the following location on the Linux host: `/etc/mstunnel/ca-trust`
-3. Re-run the installation script.
-
 ## Deploy the Microsoft Tunnel client app
 
 To use the Microsoft Tunnel, devices need access to a Microsoft Tunnel client app. You can deploy the tunnel client app to devices by assigning it to users. The following apps are available:
@@ -280,6 +270,8 @@ After the Microsoft Tunnel installs and devices install the Microsoft Tunnel cli
 
    - **Proxy**:  
      - Configure proxy server details for your environment.  
+       > [!NOTE]  
+       > Proxy server configurations are not supported with versions of Android prior to version 10.  For more information, see [VpnService.Builder](https://developer.android.com/reference/android/net/VpnService.Builder#setHttpProxy%28android.net.ProxyInfo%29) in that Android developer documentation.
 
    For more information about VPN settings, see [Android Enterprise device settings to configure VPN](../configuration/vpn-settings-android-enterprise.md)
 
@@ -346,6 +338,23 @@ Use the following information to configure the custom settings in a VPN profile 
 | TunnelOnly        | **True** – All Defender for Endpoint functionality is disabled. This setting should be used if you're using the app only for Tunnel capabilities. <br><br> **False** *(default)* - Defender for Endpoint functionality is enabled.   | Determines whether the Defender app is limited to only Microsoft Tunnel, or if the app also supports the full set of Defender for Endpoint capabilities. |
 | WebProtection     | **True** *(default)* – Web Protection is enabled, and users will see the web protection tab in the Defender for Endpoint app. <br><br> **False** – Web Protection is disabled. If a Tunnel VPN profile is deployed, users will only see the Dashboard and Tunnel tabs in the Defender for Endpoint app.  |Determines whether Defender for Endpoint Web Protection (anti-phishing functionality) is enabled for the app. By default, this functionality is on. |
 | AutoOnboard       | **True** – If Web Protection is enabled, the Defender for Endpoint app is automatically granted permissions for adding VPN connections and the user isn’t prompted to allow this. <br><br> **False** *(default)* – If Web Protection is enabled, the user is prompted to allow the Defender for Endpoint app to add VPN configurations.  | Determines whether Defender for Endpoint Web Protection is enabled without prompting the user to add a VPN connection (because a local VPN is needed for Web Protection functionality). This setting only applies if *WebProtection* is set to **True**.   |
+
+## Configure TunnelOnly mode to comply with the European Union Data Boundary
+ <!-- Configure Tunnelonly mode and the European Union Data Boundary (EUDB)  -->
+
+By end of calendar year 2022, all personal data, including customer Content (CC), EUII, EUPI and Support Data must be stored and processed in the European Union (EU) for EU tenants.  
+
+The Microsoft Tunnel VPN feature in Defender for Endpoint is European Union Data Boundary (EUDB) compliant. However, the Defender for Endpoint threat protection components related to logging are not yet EUDB compliant. EUBD compliance will become available in a future release.
+
+In the meantime, Microsoft Tunnel customers with EU tenants can enable *TunnelOnly* mode in the Defender for Endpoint Client app. To configure this, use the following steps:
+
+1. Follow the steps found in [Install and configure Microsoft Tunnel VPN solution for Microsoft Intune | Microsoft Learn](../protect/microsoft-tunnel-configure.md#add-app-configuration-support-for-microsoft-defender-for-endpoint-to-a-vpn-profile-for-microsoft-tunnel) to create an app configuration policy which disables Defender for Endpoint functionality.
+
+2. Create a key called **TunnelOnly** and set the value to **True**.
+
+By configuring TunnelOnly mode, all Defender for Endpoint functionality is disabled while Tunnel functionality remains available for use in the app.
+
+For more information about the EU Data Boundary, see [EU Data Boundary for the Microsoft Cloud | Frequently Asked Questions](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/eu-data-boundary-for-the-microsoft-cloud-frequently-asked/ba-p/2329098) on the Microsoft security and compliance blog.
 
 ## Upgrade Microsoft Tunnel
 

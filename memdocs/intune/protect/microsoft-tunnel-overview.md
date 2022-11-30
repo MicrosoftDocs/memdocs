@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/15/2022
+ms.date: 11/17/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -82,6 +82,7 @@ Features of the VPN profiles for the tunnel include:
 - A friendly name for the VPN connection that your end users will see.
 - The site that the VPN client connects to.
 - Per-app VPN configurations that define which apps the VPN profile is used for, and if it's always-on or not. When always-on, the VPN will automatically connect and is used only for the apps you define. If no apps are defined, the always-on connection provides tunnel access for all network traffic from the device.
+- For iOS devices that have the Tunnel client app configured to support per-app VPNs and [*TunnelOnly*](../protect/microsoft-tunnel-migrate-app.md#modify-a-vpn-profile-for-microsoft-tunnel) mode set to True, users don’t need to open or sign-in to Microsoft Defender on their device for the Tunnel to be used. Instead, with the user signed-in to the Company Portal on the device or to any other app that uses multi-factor authentication that has a valid token for access, the Tunnel per-app VPN is used automatically. *TunnelOnly* mode is supported for iOS/iPadOS, and disables the Defender functionality, leaving only the Tunnel capabilities.
 - Manual connections to the tunnel when a user launches the VPN and selects *Connect*.
 - On-demand VPN rules that allow use of the VPN when conditions are met for specific FQDNs or IP addresses. (iOS/iPadOS)
 - Proxy support (iOS/iPadOS, Android 10+)
@@ -144,19 +145,13 @@ The Microsoft Tunnel Gateway runs in containers that run on Linux servers.
 
 Many enterprise networks enforce network security for internet traffic using technologies like proxy servers, firewalls, SSL break and inspect, deep packet inspection, and data loss prevention systems. These technologies provide important risk mitigation for generic internet requests but can dramatically reduce performance, scalability, and the quality of end user experience when applied to Microsoft Tunnel Gateway and Intune service endpoints.
 
-The following outlines where break and inspect isn't supported and where it's supported with Microsoft Tunnel Gateway. References are to the architecture diagram from the preceding section.
+The following outlines where break and inspect isn't supported. References are to the architecture diagram from the preceding section.
 
 - **Break and inspect is not supported in the following areas**:
 
   - Tunnel Gateway doesn't support SSL break and inspect, TLS break and inspect, or deep packet inspection for client connections.
   - The Use of firewalls, proxies, load balancers, or any technology that terminates and inspects the client sessions that go into the Tunnel Gateway isn't supported and will cause clients connections to fail. (Refer to **F**, **D**, and **C** in the Architecture diagram).
   - If Tunnel Gateway uses an outbound proxy for internet access, the proxy server can't perform break and inspect. This is because Tunnel Gateway Management Agent uses TLS mutual authentication when connecting to Intune (Refer to **3** in the Architecture diagram above). If break and inspect is enabled on the proxy server, network admins that manage the proxy server must add the Tunnel Gateway server IP address and Fully Qualified Domain Name (FQDN) to an approve-list to these [Intune endpoints](../fundamentals/intune-endpoints.md#access-for-managed-devices).
-
-- **Break and inspect is supported in the following area**:
-
-  The Microsoft Tunnel [client VPN profile](../protect/microsoft-tunnel-configure.md#create-a-vpn-profile) that gets delivered to mobile clients supports a proxy configuration. If using this setting, the proxy (Refer to **G** in the Architecture diagram) specified can use “Break and Inspect” on the client traffic routed out (refer to **7** in the Architecture diagram) of the Tunnel Gateway server to the corporate network.
-
-Configuration of a break and inspect proxy can be completed after the initial Microsoft Tunnel installation. See [Configure a break and inspect proxy](microsoft-tunnel-configure.md#configure-a-break-and-inspect-proxy). 
 
 **Additional details**:
 

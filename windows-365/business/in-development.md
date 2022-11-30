@@ -10,7 +10,7 @@ ms.author: erikje
 manager: dougeby
 ms.date: 10/4/2022
 ms.topic: reference
-ms.service: cloudpc
+ms.service: windows-365
 ms.subservice: 
 ms.assetid: 
 
@@ -55,10 +55,6 @@ To help in your readiness and planning, this page lists Windows 365 Business upd
 <!-- ***********************************************-->
 
 ## Device management
-
-### New setting to easily enroll Business Cloud PCs in Microsoft Endpoint Manager<!--40009143-->
-
-Admins will be able to set a toggle that automatically enrolls new Cloud PCs in to Microsoft Endpoint Manager.
 
 ### Admins can restore a Cloud PC to a previous state for a user<!--40784300-->
 

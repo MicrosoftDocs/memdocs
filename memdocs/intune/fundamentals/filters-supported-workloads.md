@@ -29,9 +29,9 @@ ms.collection: M365-identity-device-management
 
 # List of platforms, policies, and app types supported by filters in Microsoft Intune
 
-When you create an app, compliance policy, or configuration profile, you assign the policy to groups (users or devices). When you assign the policy, you can also use filters. For example, you can assign policies to Windows client devices running a specific OS version. For more information, see [Use filters when assigning your apps, policies, and profiles](filters.md).
+When you create an app, compliance policy, configuration profile, or app configuration policy, you assign the policy to groups (users or devices). When you assign the policy, you can also use filters. For example, you can assign policies to Windows client devices running a specific OS version. For more information, see [Use filters when assigning your apps, policies, and profiles](filters.md).
 
-Filters support some of the different workloads available in Microsoft Intune. This article lists the app types, compliance policies, and device configuration profiles that support filters. It also lists the workloads that aren't supported.
+Filters support some of the different workloads available in Microsoft Intune. This article lists the app types, compliance policies, device configuration profiles, and app configuration policies that support filters. It also lists the workloads that aren't supported.
 
 ## Before you begin
 
@@ -109,6 +109,11 @@ You can use filters for some common app policies on the following platforms. For
 | Windows app (Win32) | ✔️ |
 | Microsoft Store for Business | ✔️ |
 
+## App configuration policies
+You can use filters for app configuration policies for managed devices on the following platforms:
+- Android Enterprise
+- iOS/iPadOS
+
 ## Compliance policies
 
 You can use filters for all compliance policies on the following platforms:
@@ -172,7 +177,7 @@ You can use filters for some common device configuration policies on the followi
 | Email | ✔️ |
 | Endpoint Protection | N/A |
 | Enrollment restrictions | ❌ |
-| OEMConfig | ❌ |
+| OEMConfig | ✔️ |
 | PKCS certificate | ✔️ |
 | PKCS imported certificate | ✔️ |
 | SCEP certificate | ✔️ |
@@ -287,7 +292,7 @@ You can use filters for some common device configuration policies on the followi
 | **Endpoint Security profile** | &nbsp; |
 | Account protection | ✔️ <br/> **Local user group membership** only |
 | Antivirus | ✔️ |
-| Attack surface reduction | ✔️ <br/> Excludes **Web protection (Microsoft Edge Legacy)** and **Application control** |
+| Attack surface reduction | ✔️ <br/> Excludes **Web protection (Microsoft Edge Legacy)**, **Application control**, **App and browser isolation**, and **Device control** |
 | Disk encryption | ❌ |
 | Endpoint detection and response | ✔️ |
 | Firewall | ✔️ |
@@ -298,7 +303,6 @@ You can use filters for some common device configuration policies on the followi
 The following features don't support using filters:
 
 - Custom compliance policies for Windows 10/11 (preview)
-- App configuration policies for Android and iOS/iPadOS
 - App protection policies for Android, iOS/iPadOS, and Windows
 - End user experiences customization policies
 - iOS/iPadOS app provisioning profiles

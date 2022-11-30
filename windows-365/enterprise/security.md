@@ -9,7 +9,7 @@ ms.author: erikje
 manager: dougeby
 ms.date: 07/20/2022
 ms.topic: overview
-ms.service: cloudpc
+ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
 ms.technology:
@@ -92,3 +92,7 @@ The data of the Cloud PC data itself is secured through encryption. For more det
 Securing the data available to users on their Cloud PCs should be no different than securing the data available to users on work-assigned Windows PCs, with the caveat that the Cloud PC is being accessed through Remote Desktop Protocol (RDP).
 
 To manage RDP features available to the user during their Cloud PC connection, see [manage RDP device redirections for Cloud PCs](./manage-rdp-device-redirections.md).
+
+## Next steps
+
+For more information about Windows Update security, see [Windows Update security](/windows/deployment/update/windows-update-security).

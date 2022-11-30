@@ -79,7 +79,7 @@ The Remote help app supports the following capabilities:
 > [!NOTE]
 > Remote help has the following limitations:  
 >
-> - Remote help is not supported on GCC High or DoD Tenants.
+> - Remote help is not supported on GCC, GCC High or DoD Tenants.
 > - You cannot establish a remote help session from one tenant to a different tenant.
 > - May not be available in all markets or localizations.
 
@@ -100,8 +100,9 @@ Both the helper and sharer must be able to reach these endpoints over port 443:
 |\*.aadcdn.msftauth.net            | Required for logging in to the application (AAD)|
 |\*.edge.skype.com                 | Used for Azure Communication Service for chat and connection between parties|
 |\*.graph.microsoft.com            | Used for connecting to the Microsoft Graph service|
-|\*.login.microsoftonline.com      | Required for Microsoft login service. Might not be available in preview in all markets or for all localizations.|
+|\*.login.microsoftonline.com      | Required for Microsoft login service. Might not be available in preview in all markets or for all localizations|
 |\*.remoteassistanceprodacs.communication.azure.com|Used for Azure Communication Service for chat and connection between parties|
+|[Allow list for Microsoft Edge endpoints](/deployedge/microsoft-edge-security-endpoints) |The app uses Edge WebView2 browser control. This article identifies the domain URLs that you need to add to the allow list to ensure communications through firewalls and other security mechanisms|
 
 ### Data and privacy
 
@@ -112,7 +113,7 @@ Microsoft logs a small amount of session data to monitor the health of the remot
 - Errors arising from remote help itself, such as unexpected disconnections. This information is stored on the sharer's device in the event viewer.
 - Features used inside the app such as view only and elevation. This information is stored on Microsoft servers for 30 days.
 
-Remote help logs session details to the Windows Event Logs on the device of both the helper and sharer. Microsoft can't access a session or view any actions or keystrokes that occur in the session. Microsoft can't access a session or view any actions or keystrokes that occur in the session.
+Remote help logs session details to the Windows Event Logs on the device of both the helper and sharer. Microsoft can't access a session or view any actions or keystrokes that occur in the session.
 
 The helper and sharer both see the following information about the other individual, taken from their organizational profiles:
 
@@ -194,7 +195,7 @@ To configure your tenant to support remote help, review and complete the followi
 1. Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Tenant administration** > **Remote help**.
 
 2. On the **Settings** tab:
-   1. Set **Enable remote help** to **Enabled** to allow the use of remote help. By default, this setting is *Enabled*.
+   1. Set **Enable remote help** to **Enabled** to allow the use of remote help. By default, this setting is *Disabled*.
    2. Set **Allow remote help to unenrolled devices** to **Enabled** if you want to allow this option. By default, this setting is *Disabled*.
 
 3. Select **Save**.
