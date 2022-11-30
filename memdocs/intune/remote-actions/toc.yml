@@ -84,10 +84,3 @@ items:
     items:
     - name: Troubleshoot device actions
       href: /troubleshoot/mem/intune/troubleshoot-device-actions
-
-- name: Resources
-  items:
-  - name: Scenario implementation guides 
-    items:
-    - name: Reduce help desk costs
-      href: password-reset.md
