@@ -130,21 +130,21 @@ items:
       - name: Overview
         href: ./fundamentals/migration-guide.md
       - name: Migrate from Basic Mobility and Security
-        href: ./fundamentals/migrate-to-intune.md
+        items: 
+        - name: Migrate from Basic Mobility and Security
+          href: ./fundamentals/migrate-to-intune.md
+        - name: Policy mapping
+          items: 
+          - name: Access requirements policy mapping
+            href: ./fundamentals/policy-map-access-requirements.md
+          - name: Configurations policy mapping
+            href: ./fundamentals/policy-map-configurations.md
+          - name: Miscellaneous policy mapping
+            href: ./fundamentals/policy-map-miscellaneous.md
       - name: Device and app management
         href: ./fundamentals/migration-guide-configure-policies.md
       - name: App protection
         href: ./fundamentals/migration-guide-app-protection-policies.md
-      - name: Policy map between Basic Mobility and Security and Intune (moved from fundamentals)
-        items: 
-        - name: Policy mapping between Basic Mobility and Security and Intune
-          href: ./fundamentals/policy-map-between-basic-mobility-security-intune.md
-        - name: Access requirements policy mapping
-          href: ./fundamentals/policy-map-access-requirements.md
-        - name: Configurations policy mapping
-          href: ./fundamentals/policy-map-configurations.md
-        - name: Miscellaneous policy mapping
-          href: ./fundamentals/policy-map-miscellaneous.md
 
   - name: Solutions and scenarios
     items: 
