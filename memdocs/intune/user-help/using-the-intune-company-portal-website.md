@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/18/2022
+ms.date: 11/29/2022
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -34,7 +34,13 @@ Use the Intune Company Portal website to remotely manage your work apps and enro
 
 Once you're signed in, you can see your enrolled devices and:  
 
-* [View and manage work apps](manage-apps-cpweb.md): Search and filter through available work apps, including required and already-installed apps. Check the compliance status for each of your devices.  
+* [Check status](check-status-company-portal-website.md): Initiate a status check to verify or regain access to your organization's resources.  
+
+* [View and manage work apps](manage-apps-cpweb.md): Search and filter through available work apps, including required and already-installed apps.   
+
+* [Store recovery key](store-recovery-key.md): Store and rotate the FileVault key for an encrypted macOS device.   
+
+* [Get recovery key](get-recovery-key-cpweb.md): Retrieve the stored FileVault key so that you can get back into your locked macOS device.   
 
 * [Remotely lock a device](remote-lock-your-device-cpwebsite.md): Lock a lost or stolen device so no one else can access it.  
 
@@ -45,9 +51,5 @@ Once you're signed in, you can see your enrolled devices and:
 * [Reset a device password](reset-your-passcode-cpwebsite.md): Reset a forgotten password.  
 
 * [Reset device to factory settings](reset-device-company-portal-website.md): Restore a used, lost, or stolen personal device to its out-of-box state.  
-
-* [Store recovery key](store-recovery-key.md): Store and rotate the FileVault key for an encrypted macOS device.   
-
-* [Get recovery key](get-recovery-key-cpweb.md): Retrieve the stored FileVault key so that you can get back into your locked macOS device.   
 
 Some actions aren't available on all operating systems and device types. The reset device password action, for example, won't work on an Android device that has a work profile. 
