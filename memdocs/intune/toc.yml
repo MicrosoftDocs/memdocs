@@ -129,9 +129,9 @@ items:
       items: 
       - name: Overview
         href: ./fundamentals/migration-guide.md
-      - name: Migrate from Basic Mobility and Security (M365)
+      - name: Migrate from Basic Mobility and Security
         items: 
-        - name: Prepare and migrate from Basic Mobility and Security
+        - name: Migrate from Basic Mobility and Security
           href: ./fundamentals/migrate-to-intune.md
         - name: Policy mapping
           items: 
