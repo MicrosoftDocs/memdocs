@@ -46,6 +46,9 @@ This article provides recommendations on when to use MAM. It also includes an ov
 > [!TIP]
 > [!INCLUDE [tips-guidance-plan-deploy-guides](../includes/tips-guidance-plan-deploy-guides.md)]
 
+> [!IMPORTANT]
+> Mobile Application Management (MAM) is deprecated for Windows. After December 2022 customers will not be able to configure any new WIP policies for devices registered via MEM without enrollment. This does not apply to devices enrolled into MEM.
+
 ## Before you begin
 
 For an overview, including any Intune-specific prerequisites, see [Deployment guidance: Enroll devices in Microsoft Intune](deployment-guide-enrollment.md).
