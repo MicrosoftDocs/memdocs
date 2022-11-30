@@ -155,4 +155,5 @@ You will be asked to enter the Azure subscription ID from a list of subscription
 
 ## Next steps
 
-[Learn more about Windows 365 Government](introduction-windows-365-government.md)
+[Learn more about Windows 365 Government](introduction-windows-365-government.md).
+
