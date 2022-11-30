@@ -17,7 +17,7 @@ ms.topic: troubleshooting
 
 # Windows Autopilot - known issues
 
-*Applies to:*
+**Applies to:**
 
 - Windows 11
 - Windows 10
@@ -42,7 +42,7 @@ The Autopilot deployment report (preview) will show a failed status for any devi
 
 Autopilot deployments that take longer than one hour may display an incomplete deployment status in the deployment report. If the device successfully enrolls but doesn't complete provisioning after more than one hour, the device status may not be updated in the report.
 
-### Autopilot profile not being applied when assigned 
+### Autopilot profile not being applied when assigned
 
 In Windows 10 April and some May update releases, there is an issue where the Autopilot profile may fail to apply to the device and the hardware hash may not be harvested. As a result, any settings made in the profile may not be configured for the user such as device renaming. To resolve this issue, the May (KB5015020) cumulative update needs to be applied to the device.
 
@@ -59,6 +59,7 @@ When you attempt an Autopilot reset, you see the following message: _Autopilot r
 1. The Intune Enrollment app must be excluded from any Conditional Access policy requiring **Terms of Use** because it isn't supported.  See [Per-device terms of use](/azure/active-directory/conditional-access/terms-of-use#per-device-terms-of-use).
 
 2. Exceptions to Conditional Access policies to exclude **Microsoft Intune Enrollment** and **Microsoft Intune** cloud apps are needed to complete Autopilot enrollment in cases where restrictive polices are present such as:
+
     - Conditional Access policy 1: Block all apps except those on an exclusion list.
     - Conditional Access policy 2: Require a compliant device for the apps on the exclusion list.
 
@@ -96,7 +97,7 @@ When ESP fails during the pre-provisioning flow and the user selects the reset b
 
 ### TPM attestation failure on Windows 11 error code 0x81039023
 
-Some devices may fail TPM attestation on Windows 11 during the pre-provisioning technician flow or self-deployment mode with the error code 0x81039023. This issue is resolved with the [May Windows cumulative update for Windows 10 and 11](https://answers.microsoft.com/en-us/windows/forum/all/cumulative-updates-for-windows-10-and-windows-11/6d7fccc6-e125-4ae4-9fbb-db7077065c31). 
+Some devices may fail TPM attestation on Windows 11 during the pre-provisioning technician flow or self-deployment mode with the error code 0x81039023. This issue is resolved with the [May 10, 2022 Windows cumulative update for Windows 10](https://support.microsoft.com/topic/may-10-2022-kb5013942-os-builds-19042-1706-19043-1706-and-19044-1706-60b51119-85be-4a34-9e21-8954f6749504) and [May 10, 2022 Windows cumulative update for Windows 11](https://support.microsoft.com/topic/may-10-2022-kb5013943-os-build-22000-675-14aa767a-aa87-414e-8491-b6e845541755).
 
 ### Duplicate device objects with hybrid Azure AD deployments
 
