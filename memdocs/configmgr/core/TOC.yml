@@ -225,6 +225,8 @@ items:
       items:
         - name: Overview of levels
           href: plan-design/diagnostics/levels-overview.md
+        - name: Data for version 2211
+          href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-2211.md
         - name: Data for version 2207
           href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-2207.md
         - name: Data for version 2203
