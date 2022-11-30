@@ -99,7 +99,14 @@ The following features are deprecated. You can still use them now, but Microsoft
 As previously announced, version 2207 drops support for the following features:
 -->
 
-<!--## Other updates-->
+## Other updates
+
+### Resolved duplicate entries for co-managed device in Intune portal 
+
+Previously, device entities of the co-managed devices appeared as two separate entries on Intune portal. One entry corresponding to Intune and another corresponding to ConfigMgr appeared after enrollment. The entries were permanent in some cases. Various scenarios like device entity counts and policy targeting were impacted. The entries were duplicated because Intune is not aware of the AAD ID of devices coming from ConfigMgr. Intune becomes aware only after the daily discovery cycle runs and reports to Intune via CMGS.
+
+The issue is fixed by propagating correct AAD device ID from ConfigMgr during Intune enrolment. This leads to merged entities for co-managed devices in quick time(30-40 mins). We no longer have to wait for discovery cycle to run.
+
 
 <!--Starting with this version, the following features are no longer [pre-release](../../servers/manage/pre-release-features.md):
 -->
