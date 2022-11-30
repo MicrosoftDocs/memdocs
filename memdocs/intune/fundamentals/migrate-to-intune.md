@@ -54,7 +54,7 @@ When you complete the migration, you'll find your migrated policies in Microsoft
 | --- | --- | --- |
 | [Compliance policies](../protect/device-compliance-get-started.md) | Specify the device settings as access requirements. | [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Compliance policies** |
 | [Configuration profiles](../configuration/device-profiles.md) | Specify other settings that aren’t part of the access requirements, including email profiles. | [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Configuration profiles** |
-| [Conditional access policies]( ../protect/conditional-access.md)| Azure AD conditional access blocks access if the settings aren't compliant. | [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Endpoint security** > **Conditional access** > **Classic policies** |
+| [Conditional access policies]( ../protect/conditional-access.md)| Azure AD conditional access blocks access if the settings aren't compliant. | [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Conditional access** > **Classic policies** |
 
 ## Prepare
 
