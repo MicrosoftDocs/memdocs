@@ -93,6 +93,8 @@ Review the following steps before you install an update from within the Configur
 
 Review the applicable update checklist for actions to take before you start the update:
 
+- [Checklist for installing update 2211](checklist-for-installing-update-2211.md)
+
 - [Checklist for installing update 2207](checklist-for-installing-update-2207.md)
 
 - [Checklist for installing update 2203](checklist-for-installing-update-2203.md)
@@ -100,8 +102,6 @@ Review the applicable update checklist for actions to take before you start the 
 - [Checklist for installing update 2111](checklist-for-installing-update-2111.md)
 
 - [Checklist for installing update 2107](checklist-for-installing-update-2107.md)
-
-- [Checklist for installing update 2103](checklist-for-installing-update-2103.md)
 
 
 

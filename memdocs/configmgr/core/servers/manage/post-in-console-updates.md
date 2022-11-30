@@ -158,6 +158,8 @@ To report upgrade failures to Microsoft:
 
 After the site updates, review the post-update checklist for the applicable version:
 
+- [Post-update checklist for version 2211](checklist-for-installing-update-2211.md#post-update-checklist)
+
 - [Post-update checklist for version 2207](checklist-for-installing-update-2207.md#post-update-checklist)
 
 - [Post-update checklist for version 2203](checklist-for-installing-update-2203.md#post-update-checklist)
@@ -166,7 +168,7 @@ After the site updates, review the post-update checklist for the applicable vers
 
 - [Post-update checklist for version 2107](checklist-for-installing-update-2107.md#post-update-checklist)
 
-- [Post-update checklist for version 2103](checklist-for-installing-update-2103.md#post-update-checklist)
+
 
 
 
