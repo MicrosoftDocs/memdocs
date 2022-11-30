@@ -135,7 +135,7 @@ These password settings apply to the work profile password on personally owned d
 - **Password complexity**: Use this setting to set the password complexity requirements. Your options:
 
   - **None**: Intune doesn't change or update this setting. By default, the OS may not require a password.
-  - **Low**: Pattern or PIN with repeating (4444) or ordered (1234, 4321, 2468) sequences are blocked.
+  - **Low**: Pattern or PIN. For PIN, repeating (4444) or ordered (1234, 4321, 2468) sequences are allowed.
   - **Medium**: PIN with repeating (4444) or ordered (1234, 4321, 2468) sequences are blocked. The length, alphabetic length, or alphanumeric length must be at least 4 characters.
   - **High**: PIN with repeating (4444) or ordered (1234, 4321, 2468) sequences are blocked. The length must be at least 8 characters. The alphabetic or alphanumeric length must be at least 6 characters.
 
@@ -158,7 +158,7 @@ These password settings apply to the work profile password on personally owned d
   >
   >     If you change an existing policy with the **Required password type** and **Minimum password length** settings that already configured, then Android Enterprise 12+ devices will automatically use the **Password complexity** setting with the **High** complexity.
   >
-  >     For Android Enterprise 12+ devices, it's recommended to create a new policy and configure the **Password complexity** setting.
+  >     For Android Enterprise 12+ devices, it's recommended to configure the **Password complexity** setting.
   > 
   > - If the **Required password type** and **Minimum password length** settings aren't changed from the default values in a policy, then no password policy is automatically applied to newly enrolled Android Enterprise 12+ devices.
   > - The **Password complexity** setting will be enforced in the December release of the Company Portal app.
@@ -208,7 +208,7 @@ These password settings apply to the device password on personally owned devices
 - **Password complexity**: Use this setting to set the password complexity requirements. Your options:
 
   - **None**: Intune doesn't change or update this setting. By default, the OS may not require a password.
-  - **Low**: Pattern or PIN with repeating (4444) or ordered (1234, 4321, 2468) sequences are blocked.
+  - **Low**: Pattern or PIN. For PIN, repeating (4444) or ordered (1234, 4321, 2468) sequences are allowed.
   - **Medium**: PIN with repeating (4444) or ordered (1234, 4321, 2468) sequences are blocked. The length, alphabetic length, or alphanumeric length must be at least 4 characters.
   - **High**: PIN with repeating (4444) or ordered (1234, 4321, 2468) sequences are blocked. The length must be at least 8 characters. The alphabetic or alphanumeric length must be at least 6 characters.
 
@@ -231,7 +231,7 @@ These password settings apply to the device password on personally owned devices
   >
   >     If you change an existing policy with the **Required password type** and **Minimum password length** settings that already configured, then Android Enterprise 12+ devices will automatically use the **Password complexity** setting with the **High** complexity.
   >
-  >     For Android Enterprise 12+ devices, it's recommended to create a new policy and configure the **Password complexity** setting.
+  >     For Android Enterprise 12+ devices, it's recommended to configure the **Password complexity** setting.
   > 
   > - If the **Required password type** and **Minimum password length** settings aren't changed from the default values in a policy, then no password policy is automatically applied to newly enrolled Android Enterprise 12+ devices.
   > - The **Password complexity** setting will be enforced in the December release of the Company Portal app.
