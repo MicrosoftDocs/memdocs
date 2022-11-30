@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/15/2021
+ms.date: 11/30/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -310,7 +310,7 @@ When a device is using an OS version later than the version in the rule, access 
   Use this setting to set the password complexity requirements. Your options:
 
   - **None** - This setting isn't evaluated for compliance or non-compliance.
-  - **Low** - Pattern or PIN. For PIN, repeating (4444) or ordered (1234, 4321, 2468) sequences are allowed.
+  - **Low** - A pattern or PIN with repeating (4444) or ordered (1234, 4321, 2468) sequences are allowed.
   - **Medium** - PIN with repeating (4444) or ordered (1234, 4321, 2468) sequences are blocked. The length, alphabetic length, or alphanumeric length must be at least 4 characters.
   - **High** - PIN with repeating (4444) or ordered (1234, 4321, 2468) sequences are blocked. The length must be at least 8 characters. The alphabetic or alphanumeric length must be at least 6 characters.
 
