@@ -73,7 +73,7 @@ Once authenticated, Azure AD will trigger enrollment of the device into the Intu
 
 ### Autopilot automatic device diagnostics collection
 
-Ensure access to this URL: lgmsapeweu.blob.core.windows.net for uploading the diagnostics. Diagnostics are available for 28 days before they are removed. 
+For diagnostics to be able to upload successfully from the client, make sure that the URL `lgmsapeweu.blob.core.windows.net` is not blocked on the network. Diagnostics are available for 28 days before they are removed. 
 
 For more information, see [Collect diagnostics from a Windows device](../intune/remote-actions/collect-diagnostics.md).
 
