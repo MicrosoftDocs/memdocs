@@ -3,12 +3,12 @@
 
 title: Migrate device management from Basic Mobility and Security to Intune
 titleSuffix: Microsoft Intune
-description: Learn how to migrate your mobile device management from Basic Mobility and Security (formerly Office 365) to Intune.
+description: Learn how to migrate your mobile device management from Basic Mobility and Security (M365) to Intune.
 keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 12/18/2020
+ms.date: 11/30/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -31,7 +31,7 @@ ms.collection: M365-identity-device-management
 
 # Migrate your mobile device management from Basic Mobility and Security to Intune
 
-This article will help you migrate your mobile device management (MDM) from Basic Mobility and Security (Office 365) to the Microsoft Endpoint Manager portal (Intune).
+This article will help you migrate your mobile device management (MDM) from Basic Mobility and Security (M365) to the Microsoft Intune.
 
 Moving to Intune combines all your MDM in one solution. It lets all your users benefit from the wider set of features offered by Intune. To see a comparison of the features available in the two services, see [Choose between Basic Mobility and Security or Intune](/microsoft-365/admin/basic-mobility-security/choose-between-basic-mobility-and-security-and-intune).
 
@@ -43,7 +43,18 @@ Migrating to Intune requires the following three major steps:
 2. **Migrate policies**: Use the migration evaluation tool to get Intune policy and group recommendations to replace the Basic Mobility and Security policies.
 3. **Migrate users and devices**: Assign licenses to users or groups, which will automatically switch the users to Intune device management at the next refresh cycle.
 
-For a mapping reference of the policies migrated by this tool, see [Policy mapping between Basic Mobility and Security and Intune](policy-map-between-basic-mobility-security-intune.md).
+For a mapping reference of the policies migrated by this tool, see the following topics:
+- [Access requirements policy mapping from Basic Mobility and Security to Intune](../fundamentals/policy-map-access-requirements.md)
+- [Configurations policy mapping from Basic Mobility and Security to Intune](../fundamentals/policy-map-configurations.md)
+- [Miscellaneous policy mapping from Basic Mobility and Security to Intune](../fundamentals/policy-map-miscellaneous.md)
+
+When you complete the migration, you'll find your migrated policies in Microsoft Endpoint Manager admin center in the following locations:
+
+| Intune policy type | Purpose | Intune location |
+| --- | --- | --- |
+| [Compliance policies](../protect/device-compliance-get-started.md) | Specify the device settings as access requirements. | [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Compliance policies** |
+| [Configuration profiles](../configuration/device-profiles.md) | Specify other settings that aren’t part of the access requirements, including email profiles. | [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Configuration profiles** |
+| [Conditional access policies]( ../protect/conditional-access.md)| Azure AD conditional access blocks access if the settings aren't compliant. | [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Endpoint security** > **Conditional access** > **Classic policies** |
 
 ## Prepare
 
