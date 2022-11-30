@@ -136,13 +136,13 @@ The deregistration process will take about 15 minutes. You can accelerate the pr
 
 ## Deregister from Microsoft Admin Center
 
-To deregister an Autopilot device from the Microsoft Admin Center, an IT Admin would:
+To deregister an Autopilot device from the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431):
 
 1. Sign into to the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431)
 2. Navigate to **Devices** > **Autopilot**
-3. Select the device to be deregistered and select the **Delete device** button
+3. Select the device to be deregistered and then select the **Delete device** button
 
-Deregistering a device from Autopilot in MPC does only that. It doesn't perform either of the following actions:
+Deregistering a device from Autopilot in Microsoft Partner Center (MPC) only deregisters the device from Autopilot. It doesn't perform any of the following actions:
 
 - Unenroll the device from the MDM (Intune)
 - Disjoin the device from Azure AD
