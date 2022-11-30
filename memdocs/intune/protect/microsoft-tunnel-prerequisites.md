@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/21/2022
+ms.date: 11/11/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -208,6 +208,8 @@ For more information, see [Configuring container networking with Podman](https:/
 
 - **Load balancers** *(Optional)*:  If you choose to add a load balancer, consult your vendors documentation for configuration details. Take into consideration network traffic and firewall ports specific to Intune and the Microsoft Tunnel.
 
+- **Per-app VPN and Top-level domain support** - Per-app-VPN use with internal use of local top-level domains is not supported by Microsoft Tunnel.
+
 ## Firewall
 
 By default, the Microsoft Tunnel and server use the following ports:
@@ -241,7 +243,12 @@ When creating the Server configuration for the tunnel, you can specify a differe
 
 ## Proxy
 
-You can use a proxy server with Microsoft Tunnel. The following considerations can help you configure the Linux server and your environment for success:
+You can use a proxy server with Microsoft Tunnel.
+
+> [!NOTE]  
+> Proxy server configurations are not supported with versions of Android prior to version 10.  For more information, see [VpnService.Builder](https://developer.android.com/reference/android/net/VpnService.Builder#setHttpProxy%28android.net.ProxyInfo%29) in that Android developer documentation.
+
+The following considerations can help you configure the Linux server and your environment for success:
 
 ### Configure an outbound proxy for Docker
 
