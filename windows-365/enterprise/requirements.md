@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 10/27/2022
+ms.date: 11/21/2022
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice:
@@ -98,27 +98,45 @@ You must use [Microsoft Endpoint Manager admin center](https://admin.microsoft.c
 
 Windows 365 manages the capacity and availability of underlying Azure resources as part of the service. Windows 365 partners closely with Azure to select regions that meet our Windows 365 service requirements for availability and capacity. On availability, we use features like availability zones in Azure to provide in-region resiliency as built-in value to the service. You can create a virtual network or use the Microsoft hosted network for provisioning Cloud PCs in the following Azure regions:
 
+- Asia
+  - East Asia
+  - Southeast Asia
+- Australia
+  - Australia East
+- Canada
+  - Canada Central
+- European Union
+  - North Europe
+  - West Europe
+- France
+  - France Central
+- Germany
+  - Germany West Central
+- India
+  - Central India
+- Japan
+  - Japan East
+- Norway
+  - Norway East
+- South America
+  - Brazil South
+- South Korea
+  - Korea Central
+- Switzerland
+  - Switzerland North
+- UAE
+  - UAE North
+- United Kingdom
+  - UK South
 - US Central
+  - Central US
+  - South Central US
 - US East
-- US East 2
-- US West 2 (Restricted, contact support)
-- US West 3
-- US South central
-- Asia Southeast
-- Australia East
-- Canada Central
-- East Asia
-- Europe North
-- Europe West
-- France Central
-- Germany West Central
-- India Central
-- Japan East
-- Korea Central
-- Norway East
-- Switzerland North
-- UAE North
-- UK South
+  - East US
+  - East US 2
+- US West
+  - West US 2 (Restricted, contact support)
+  - West US 3
 
 ### [Windows 365 Government](#tab/gov)
 
