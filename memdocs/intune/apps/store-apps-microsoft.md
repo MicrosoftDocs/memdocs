@@ -168,11 +168,13 @@ The following table provides details about how app deployment may be affected by
 
 ## Unsupported functionality for Microsoft Store apps
 
-The following lists the capabilities that are not support by Microsoft Store apps:
+The following capabilities aren't supported by Microsoft Store apps:
 
-1. Enrollment Status Page (ESP) interactions are not supported.
+1. Ability to install Microsoft Store apps during Enrollment Status Page. Apps deployed using Microsoft Store app will install after enrollment status page has completed.
 2. Device provisioning of Microsoft Store Universal Windows Platform (UWP) applications are not supported.
 3. Any app that has an ARM64 installer is not supported.
+
+The ability to install Microsoft Store apps during Enrolment Status Page and device provisioning of Microsoft Store Universal Windows Platform (UWP) applications is coming in a future release.
 
 ## Next steps
 
