@@ -50,7 +50,6 @@ The following features require you to enable this support:
 
 - [Windows feature update device readiness report](../protect/windows-update-compatibility-reports.md#use-the-windows-feature-update-device-readiness-report) 
 - [Windows feature update compatibility risks report](../protect/windows-update-compatibility-reports.md#use-the-windows-feature-update-compatibility-risks-report)
-- [Windows update app and driver compatibility reports](../protect/windows-update-compatibility-reports.md)
 
 To enable support, set **Enable features that require Windows diagnostic data in processor configuration** to **On**. By default, it's *Off*.
 
