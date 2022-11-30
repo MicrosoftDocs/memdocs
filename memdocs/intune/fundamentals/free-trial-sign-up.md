@@ -197,3 +197,5 @@ To confirm your Azure Active Directory Premium and Microsoft Intune, see [Confir
 
 In this topic, you've created a free subscription to try Intune in a test environment. For more information about setting up Intune, see [Set up Intune](setup-steps.md).
 
+> [!div class="nextstepaction"]
+> [Quickstart: Create a user](../fundamentals/quickstart-create-user.md)
