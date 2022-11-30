@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Add Microsoft Store apps to Microsoft Intune
+title: Add Microsoft Store apps to Intune (legacy)
 titleSuffix:
-description: Learn about adding Microsoft Store (Windows Store) apps to Microsoft Intune.
+description: Learn about adding Microsoft Store (legacy) apps to Intune.
 keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/25/2022
+ms.date: 11/23/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -28,14 +28,16 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection:
   - M365-identity-device-management
-  - highpri
 ---
 
-# Add Microsoft Store apps to Microsoft Intune
+# Add Microsoft Store apps to Intune (legacy)
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 Before you can assign, monitor, configure, or protect apps, you must add them to Intune. 
+
+> [!IMPORTANT]
+> The steps provided in this topic refer to adding Microsoft Store apps using the legacy method. For the latest method, see  [Add Microsoft Store apps to Microsoft Intune](../apps/store-apps-microsoft.md).
 
 ## Add an app to Intune
 You can add a Microsoft Store app to Intune by doing the following:
