@@ -35,7 +35,7 @@ Microsoft Intune helps you protect your workforce's corporate data by managing d
 
 Intune provides mobile device management (MDM) and mobile app management (MAM) from a secure cloud-based service that is administered using the Microsoft Endpoint Manager admin center. Using Intune, you ensure your workforce's corporate resources (data, devices, and apps) are correctly configured, accessed, and updated, meeting your company's compliance policies and requirements.
 
-When you complete the sign up process, you'll have a new tenant. A tenant is a dedicated instance of Azure Active Directory (Azure AD) where your subscription to Intune is hosted. You can then configure the tenant, add users and groups, and assign licenses to users. When you're ready, you can help users enroll their devices and add apps that they need to begin the modern endpoint management process. As you continue, you can set configuration and protection policies, as well as other endpoint management capabilities.
+When you complete the signup process, you'll have a new tenant. A tenant is a dedicated instance of Azure Active Directory (Azure AD) where your subscription to Intune is hosted. You can then configure the tenant, add users and groups, and assign licenses to users. When you're ready, you can help users enroll their devices and add apps that they need to begin the modern endpoint management process. As you continue, you can set configuration and protection policies, as well as other endpoint management capabilities.
 
 ## Prerequisites
 Before setting up Microsoft Intune, review the following requirements:
@@ -59,42 +59,34 @@ To sign up for the Microsoft Intune free trial, follow the steps below:
    > [!NOTE]
    > If you already have an account set up with another Microsoft service using your email address, you can choose to sign in to use the account with the Intune trial, or you can create a new account. These steps assume you are creating a new account.
 
-   ![Screenshot of the Microsoft Intune set up account page - Enter email address](./media/free-trial-sign-up/sign-up-for-intune-01.png)
+   :::image type="content" source="./media/free-trial-sign-up/sign-up-for-intune-01.png" alt-text="Screenshot of the Microsoft Intune set up account page - Enter email" border="true":::
 
 3. Click **Set up account** to create a new account.
 
-   ![Screenshot of the Microsoft Intune set up account page - Set up account](./media/free-trial-sign-up/sign-up-for-intune-02.png)
+   :::image type="content" source="./media/free-trial-sign-up/sign-up-for-intune-02.png" alt-text="Screenshot of the Microsoft Intune set up account page - Set up account" border="true":::
 
-4.  Add your name, phone number, company name, company size, and region. Then, click **Next**.
+4. Add your name, phone number, company name, company size, and region. Review the remaining information and click **Next**.
 
-    > [!NOTE]
-    > If most of your IT operations and users are in a different locale than you, you may want to select that locale under **Country or region**. Intune uses your regional information to deliver the right services. This setting can't be changed later.
-    
-    ![Screenshot of the Microsoft Intune set up account page - Add account details](./media/free-trial-sign-up/sign-up-for-intune-03.png)
+   :::image type="content" source="./media/free-trial-sign-up/sign-up-for-intune-03.png" alt-text="Screenshot of the Microsoft Intune set up account page - Add account details" border="true":::
 
-5. Click **Send Verification Code** to verify the phone number you added.
+5. Click **Send verification code** to verify the phone number you added.
 
-    ![Screenshot of the Microsoft Intune set up account page - Send verification code](./media/free-trial-sign-up/sign-up-for-intune-04.png)
+   :::image type="content" source="./media/free-trial-sign-up/sign-up-for-intune-04.png" alt-text="Screenshot of the Microsoft Intune set up account page -  Send verification code" border="true":::
 
 6. Enter the verification code you receive on your mobile device, then click **Verify**.
 
-    ![Screenshot of the Microsoft Intune set up account page - Verify code](./media/free-trial-sign-up/sign-up-for-intune-05.png)
+   :::image type="content" source="./media/free-trial-sign-up/sign-up-for-intune-05.png" alt-text="Screenshot of the Microsoft Intune set up account page -  Verify code" border="true":::
 
-7. Add a domain name for your trial that represents your business or organization. Your name will be added before *.onmicrosoft.com*. Click **Check availability** > **Next**. If you like, you can later change this domain name to your custom domain name.
+7. Add your **Username** and **Domain name** for your trial that represents your business or organization. Your name will be added before *.onmicrosoft.com*. Click **Save** to check availability. Click **Next** to continue. If you like, you can later change this domain name to your custom domain name.
 
-    ![Screenshot of the Microsoft Intune set up account page - Add domain name](./media/free-trial-sign-up/sign-up-for-intune-06.png)
+   :::image type="content" source="./media/free-trial-sign-up/sign-up-for-intune-06.png" alt-text="Screenshot of the Microsoft Intune set up account page -  Sign in" border="true":::
 
-    > [!NOTE]
-    > If your organization has its own custom domain that you want to use without *.onmicrosoft.com*, you can change that in the Microsoft 365 admin center described later in this article.
+8. After your account has been created, you'll see your user name. You'll use this user name to log in to Intune. Additionally, you receive an email message that contains your account information at the email address that you provided during the sign-up process. This email confirms your subscription is active.
 
-8. Add your user name and password that you'll use to log in to Microsoft Intune. Review the trial agreement and privacy statement. Click **Sign up** to create your account.
+   :::image type="content" source="./media/free-trial-sign-up/sign-up-for-intune-07.png" alt-text="Screenshot of the Microsoft Intune set up account page -  Confirmation details" border="true":::
 
-    > [!IMPORTANT]
-    > Be sure to make a note of your user name and password.
-
-    ![Screenshot of the Microsoft Intune set up account page - Add user name and password](./media/free-trial-sign-up/sign-up-for-intune-07.png)
-
-9. After your account has been created, you'll see your user name. You'll use this user name to log in to Intune. Additionally, you'll receive an email message that contains your account information at the email address that you provided during the sign-up process. This email confirms your subscription is active.
+   > [!NOTE]
+   > If you click **Get Started**, you'll open the **Microsoft 365 admin center** home page. If you click **Manage your subscription**, you'll open **Your products** and view details about your Microsoft Intune Trial subscription.
 
 ## Sign in to Intune in the Microsoft Endpoint Manager admin center
 
@@ -151,7 +143,7 @@ As mentioned above, if your organization has its own custom domain that you want
 
 4. Verify that you are the owner of the domain that you entered in the previous step. 
     
-    Selecting **send code via email** will send an email to the registered contact of your domain. After you receive the email, copy the code and enter it in the field labeled **Type your verification code here**. If the verification code matches, the domain will be added to your tenant. The email displayed may not look familiar. Some registrars hide the real email address. Also, the email address may be different then what was provided when the domain was registered.
+    Selecting **send code via email** will send an email to the registered contact of your domain. After you receive the email, copy the code and enter it in the field labeled **Type your verification code here**. If the verification code matches, the domain will be added to your tenant. The email displayed may not look familiar. Some registrars hide the real email address. Also, the email address may be different than what was provided when the domain was registered.
 
    ![Screenshot of Microsoft 365 admin center - Verify domain](./media/free-trial-sign-up/domain-custom-verify.png)
 

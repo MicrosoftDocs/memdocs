@@ -353,17 +353,7 @@ When dealing with different types of settings, an Intune SDK version requirement
 ## App protection experience for Android devices
 
  > [!NOTE]
- > App protection policies are not supported on Intune managed Android Enterprise dedicated devices. If your users on Android Enterprise dedicated devices have APP policies
- > applied for another device, then you'll want to take the following steps: 
- > 
- > 1. Ensure that the devices you want target are only Intune managed dedicated devices. The block policy does not take effect if the device is managed by a 3rd party MDM
- > provider.
- > 
- > 2. Ensure that Company Portal is installed on the dedicated device. This is required for the APP block policy to take effect. No end-user interaction is needed in Company
- > Portal app on dedicated devices to block APP functionality, so there is no requirement to make the Company Portal app launchable by end users. The Company Portal simply needs
- > to be installed on the device. For example, you don't need to allow-list it on top of Managed Home Screen.
- > 
- > Note that users targeted with APP policies on non-dedicated devices will not be impacted.
+ > App protection policies (APP) are not supported on Intune managed Android Enterprise dedicated devices without [Shared device mode](/azure/active-directory/develop/msal-shared-devices). On these devices, Company Portal installation is needed for an APP block policy to take effect with no impact to the user. App protection policies are supported on Intune managed Android Enterprise dedicated devices with Shared device mode, as well as on AOSP userless devices that leverage Shared device mode. 
 
 ### Microsoft Teams Android devices
 The Teams app on [Microsoft Teams Android devices](https://www.microsoft.com/microsoft-teams/across-devices/devices?rtc=2) does not support APP (does not receive policy through the Company Portal app). This means that app protection policy settings will not be applied to Teams on Microsoft Teams Android devices. If you have app protection policies configured for these devices, consider creating a group of Teams device users and exclude that group from the related app protection policies. Additionally, consider modifying your Intune Enrollment Policy, Conditional Access Policies and Intune Compliance policies so they have supported settings. If you cannot change your existing policies, you must configure (exclusion) [Device Filters](/MicrosoftTeams/devices/authentication-best-practices-for-android-devices#using-filters-for-devices). Verify each setting against the existing Conditional Access configuration and Intune Compliance policy to know if you have unsupported settings. For related information see [Supported Conditional Access and Intune device compliance policies for Microsoft Teams Rooms and Teams Android Devices](/microsoftteams/rooms/supported-ca-and-compliance-policies?tabs=mtr-a). For information related to Microsoft Teams Rooms, see [Conditional Access and Intune compliance for Microsoft Teams Rooms](/microsoftteams/rooms/conditional-access-and-compliance-for-devices).
