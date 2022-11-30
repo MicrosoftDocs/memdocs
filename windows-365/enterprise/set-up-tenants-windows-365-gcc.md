@@ -128,7 +128,7 @@ When provisioning Windows 365 Cloud PCs without the Microsoft-hosted network, yo
 > [!NOTE]
 > Tenant mapping must be successful before you proceed.
 
-Use the **Copy** button below to copy the script, then paste the command below to execute in your Azure Government subscription's CloudShell.  Next, go to the section **Script instructions** below.
+Use the **Copy** button below to copy the script, then paste the command below into your Azure Government subscription's CloudShell session for execution.  Next, go to the section **Script instructions** below.
 
 ```azurepowershell-interactive
 connect-azaccount -usedeviceauthentication
