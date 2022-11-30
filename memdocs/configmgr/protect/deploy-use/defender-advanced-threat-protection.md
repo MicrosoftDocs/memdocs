@@ -225,7 +225,6 @@ When you onboard devices to Microsoft Defender for Endpoint with Configuration M
 
 #### Get the configuration file, workspace ID, and workspace key
 
-
 1. Go to the [Microsoft 365 Defender portal](https://security.microsoft.com/) and sign in.
 1. Select **Settings**, select **Endpoints**, then select **Onboarding** under the **Device management** heading.
 1. For the operating system, select **Windows 10 and 11**.
