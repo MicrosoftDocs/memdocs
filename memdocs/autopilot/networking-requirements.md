@@ -71,6 +71,12 @@ Once authenticated, Azure AD will trigger enrollment of the device into the Intu
 - [Intune network configuration requirements and bandwidth](../intune/fundamentals/network-bandwidth-use.md)
 - [Network endpoints for Microsoft Intune](../intune/fundamentals/intune-endpoints.md)
 
+### Autopilot automatic device diagnostics collection
+
+For diagnostics to be able to upload successfully from the client, make sure that the URL `lgmsapeweu.blob.core.windows.net` is not blocked on the network. Diagnostics are available for 28 days before they are removed. 
+
+For more information, see [Collect diagnostics from a Windows device](../intune/remote-actions/collect-diagnostics.md).
+
 ### Windows Update
 
 During the OOBE process and after the Windows OS configuration, the Windows Update service retrieves needed updates. If there are problems connecting to Windows Update, see [Windows Update troubleshooting](/windows/deployment/update/windows-update-troubleshooting).
