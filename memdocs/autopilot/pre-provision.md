@@ -23,7 +23,7 @@ ms.topic: how-to
 
 # Windows Autopilot for pre-provisioned deployment (Public preview)
 
-*Applies to:*
+**Applies to:**
 
 - Windows 11
 - Windows 10, version 1903 or later
@@ -58,13 +58,13 @@ In addition to [Windows Autopilot requirements](software-requirements.md), Windo
 
 > [!IMPORTANT]
 >
-> - Because the OEM or vendor performs the pre-provisioning process, this <u>doesn't require access to an end-user's on-prem domain infrastructure</u>. This is unlike a typical hybrid Azure AD-joined scenario because rebooting the device is postponed. The device is resealed before the time when connectivity to a domain controller is expected, and the domain network is contacted when the device is unboxed on-prem by the end-user.
+> - Because the OEM or vendor performs the pre-provisioning process, this **doesn't require access to an end-user's on-prem domain infrastructure**. This is unlike a typical hybrid Azure AD-joined scenario because rebooting the device is postponed. The device is resealed before the time when connectivity to a domain controller is expected, and the domain network is contacted when the device is unboxed on-prem by the end-user.
 >
 > - See [Windows Autopilot known issues](known-issues.md) and [Troubleshoot Autopilot device import and enrollment](troubleshoot-device-enrollment.md) to review known errors and solutions.
 
 ## Preparation
 
-Devices slated for pre-provisioning are registered for Autopilot via the normal registration process. 
+Devices slated for pre-provisioning are registered for Autopilot via the normal registration process.
 
 To be ready to try out Windows Autopilot for pre-provisioned deployment, make sure that you can first successfully use existing Windows Autopilot user-driven scenarios:
 
