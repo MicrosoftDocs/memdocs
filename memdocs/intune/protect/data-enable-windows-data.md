@@ -77,6 +77,6 @@ To confirm you own the required licenses for these features, set **I confirm tha
 - Other features can require these same licenses, but only the features listed in this section currently require this toggle to be set to *On*.
 - Features that require this attestation aren't available for use when this toggle is set to *Off*.
 
-## Next Steps
+## Next steps
 
 To learn more about Windows diagnostic data collection, see [Configure Windows diagnostic data in your organization](/windows/privacy/configure-windows-diagnostic-data-in-your-organization) in the Windows privacy documentation.
