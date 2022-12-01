@@ -19,6 +19,9 @@ ms.collection: tier3
 
 Microsoft Endpoint Manager is an integrated solution for managing all of your devices. Microsoft brings together Configuration Manager and Intune into a single console called **Microsoft Endpoint Manager admin center**. You can upload your Configuration Manager devices to the cloud service and take actions from the **Devices** blade in the admin center.
 
+> [!IMPORTANT]
+> When you attach your Configuration Manager site with a Microsoft Intune tenant, the site sends more data to Microsoft. [Tenant attach data collection] (data-collection.md) article summarizes the data that is sent.
+
 ## <a name="bkmk_edit"></a> Enable device upload when co-management is already enabled
 
 If you have co-management enabled currently, you'll use the co-management properties to enable device upload. When co-management isn't already enabled, [Use the **Cloud Attach Configuration Wizard**](#bkmk_config) to enable device upload instead.  Before you enable tenant attach, verify that the [prerequisites for tenant attach](prerequisites.md) have been met.
