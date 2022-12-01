@@ -6,8 +6,8 @@ ms.date: 08/15/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: overview
-author: banreet
-ms.author: banreetkaur
+author: gowdhamankarthikeyan
+ms.author: gokarthi
 manager: apoorvseth
 ms.localizationpriority: high
 ms.collection: tier3
@@ -34,6 +34,9 @@ By using the recommended default settings, your eligible devices will be cloud a
     - This option is the only one currently available for China21Vianet (Azure China Cloud).
 - Enables [Endpoint analytics](../../analytics/scores.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json)
 - Enables automatic upload of all your devices to Microsoft Endpoint Manager admin center ([tenant attach](../tenant-attach/device-sync-actions.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json))
+
+> [!IMPORTANT]
+> When you attach your Configuration Manager site with a Microsoft Intune tenant, the site sends more data to Microsoft. [Tenant attach data collection](../tenant-attach/data-collection.md) article summarizes the data that is sent.
 
 > [!Note]
 > Ensure that prerequisites for each of the cloud attach features are met. For more information about prerequisites, see, [prerequisites for tenant attach](../tenant-attach/device-sync-actions.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json), [prerequisites for Endpoint analytics](../../analytics/overview.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json), and [prerequisites for co-management](../comanage/overview.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json#prerequisites).
