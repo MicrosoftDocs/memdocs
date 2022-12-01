@@ -404,7 +404,7 @@ sections:
       - question: |
           Where is Windows Autopilot data stored?
         answer: |
-          Windows Autopilot data is stored in the United States (US). It's not stored in a sovereign cloud, even when the Azure AD tenant is registered in a sovereign cloud. This storage applies to all Windows Autopilot data, whatever portal is used to deploy Autopilot.
+          Windows Autopilot data is stored within the European Union (EU). It's not stored in a sovereign cloud, even when the Azure AD tenant is registered in a sovereign cloud. This storage applies to all Windows Autopilot data, whatever portal is used to deploy Autopilot.
 
       - question: |
           Why is Windows Autopilot data stored in the US and not in a sovereign cloud?
