@@ -29,7 +29,7 @@ To take full advantage of new Configuration Manager features, after you update t
 ### Improvements to Cloud Sync (Collections to Azure Active Directory Group Synchronization) feature
 Starting Configuration Manager version 2211, the scalability of this feature has been improved with better throttling and error handling. Additionally, dedicated dashboards for user collections and device collections are added in Monitoring workspace to show Cloud Sync status. The dashboard displays the Cloud Sync status per collection with the mapped Azure AD group, total member count, synced member count, status (success, failed, in progress) and last sync details. 
 
-<!--For more information, see [Synchronize collections to Azure Active Directory Group](../../clients/manage/collections/synchronize-collections-aadgroup.md).-->
+For more information, see [Synchronize collections to Azure Active Directory Group](../../clients/manage/collections/synchronize-collections-aad-group.md).
 
 ## Site infrastructure
 <!--14538358-->
