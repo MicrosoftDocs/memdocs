@@ -38,6 +38,7 @@ Intune provides mobile device management (MDM) and mobile app management (MAM) f
 When you complete the signup process, you'll have a new tenant. A tenant is a dedicated instance of Azure Active Directory (Azure AD) where your subscription to Intune is hosted. You can then configure the tenant, add users and groups, and assign licenses to users. When you're ready, you can help users enroll their devices and add apps that they need to begin the modern endpoint management process. As you continue, you can set configuration and protection policies, as well as other endpoint management capabilities.
 
 ## Prerequisites
+
 Before setting up Microsoft Intune, review the following requirements:
 
 - [Supported operating systems and browsers](supported-devices-browsers.md)
@@ -114,15 +115,15 @@ If after signing in to the Microsoft Endpoint Manager, you see an orange banner 
 
 ### Set the MDM authority to Intune
 
-1. If you do not have the MEM authority set, sign in to the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com). 
-2. Select the orange banner to open the **Mobile Device Management Authority** setting. The orange banner is only displayed if you haven't yet set the MDM authority. 
+1. If you do not have the MDM authority set, sign in to the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com).
+2. Select the orange banner to open the **Mobile Device Management Authority** setting. The orange banner is only displayed if you haven't yet set the MDM authority.
 
     > [!NOTE]
-    > If you have set the MDM Authority, you will see the MDM authority value on the **Tenant administration** pane. The orange banner is only displayed if you haven't yet set the MDM authority. 
+    > If you have set the MDM Authority, you will see the MDM authority value on the **Tenant administration** pane. The orange banner is only displayed if you haven't yet set the MDM authority.
 
-    ![Image of the Choose MDM Authority blade](./media/free-trial-sign-up/choose-mdm-authority.png) 
+    ![Image of the Choose MDM Authority blade](./media/free-trial-sign-up/choose-mdm-authority.png)
 
-4. If your MDM Authority is not set, under **Choose MDM Authority**, set your MDM authority to **Intune MDM Authority**.
+3. If your MDM Authority is not set, under **Choose MDM Authority**, set your MDM authority to **Intune MDM Authority**.
 
 For more information about the MDM authority, see [Set the mobile device management authority](mdm-authority-set.md).
 
@@ -141,8 +142,8 @@ As mentioned above, if your organization has its own custom domain that you want
 
    ![Screenshot of Microsoft 365 admin center - Add domain](./media/free-trial-sign-up/domain-custom-add.png)
 
-4. Verify that you are the owner of the domain that you entered in the previous step. 
-    
+4. Verify that you are the owner of the domain that you entered in the previous step.
+
     Selecting **send code via email** will send an email to the registered contact of your domain. After you receive the email, copy the code and enter it in the field labeled **Type your verification code here**. If the verification code matches, the domain will be added to your tenant. The email displayed may not look familiar. Some registrars hide the real email address. Also, the email address may be different than what was provided when the domain was registered.
 
    ![Screenshot of Microsoft 365 admin center - Verify domain](./media/free-trial-sign-up/domain-custom-verify.png)
@@ -159,6 +160,7 @@ To confirm your Azure Active Directory Premium and Microsoft Intune, see [Confir
 ## Admin experiences
 
 There are two portals that you will use most often:
+
 - The Microsoft Endpoint Manager admin center ([https://endpoint.microsoft.com/](https://endpoint.microsoft.com/)) is where you can explore the [capabilities of Intune](what-is-intune.md). This is where an admin would work with Intune.
 - The Microsoft 365 admin center ([https://admin.microsoft.com](https://admin.microsoft.com)) is where you can add and manage users, if you are not using Azure Active Directory for this. You can also manage other aspects of your account, including billing and support.
 
