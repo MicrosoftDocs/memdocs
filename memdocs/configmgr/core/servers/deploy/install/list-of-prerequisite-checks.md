@@ -2,7 +2,7 @@
 title: Prerequisite checks
 titleSuffix: Configuration Manager
 description: Reference of the specific prerequisite checks for Configuration Manager updates.
-ms.date: 11/30/2022
+ms.date: 12/05/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
@@ -765,6 +765,14 @@ When you install site roles that require HTTPS, configure IIS site bindings on t
 *Applies to: central administration site*
 
 There are discovery records that are no longer valid. These records will be marked for deletion.
+
+### Network Access Account (NAA) account usage alert 
+
+*Applies to: central administration site, Primary site*
+
+If your site is configured with NAA account, you'll see this warning. To improve the security of distribution points configured with NAA account, review the existing accounts and their relevant permissions. If it has more than minimal required permission, then remove and add a minimal permission account. Don't configure any administrator level permission accounts on the NAA. If the site server is configured with HTTPS / EHTTP, it recommended removing NAA account, which is unused.
+
+For more information, see the description of this [permissions-for-the-network-access-account](../../../plan-design/hierarchy/accounts.md#permissions-for-the-network-access-account).
 
 ### Network access protection (NAP) is no longer supported
 
