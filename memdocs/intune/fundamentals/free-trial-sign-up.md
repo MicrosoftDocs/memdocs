@@ -35,9 +35,10 @@ Microsoft Intune helps you protect your workforce's corporate data by managing d
 
 Intune, which is a part of [Microsoft Endpoint Manager](/training/paths/endpoint-manager-fundamentals/), provides the cloud infrastructure, the cloud-based mobile device management (MDM), the cloud-based mobile application management (MAM), and the cloud-based PC management for your organization. It lets you protect your organization by controlling features and settings on Android, Android Enterprise, iOS/iPadOS, macOS, and Windows 10/11 devices. It integrates closely with Azure Active Directory (Azure AD) for identity and access control and also Azure Information Protection to help protect your organization's data. If you have on-premises infrastructure, such as Exchange or an Active Directory, you can use Intune connectors to help you connect to external services. Intune is included in Microsoft's [Enterprise Mobility + Security (EMS) suite](https://www.microsoft.com/microsoft-365/enterprise-mobility-security?azure-portal=true).
 
-When you complete the sign up process, you'll have a new tenant. A tenant is a dedicated instance of Azure Active Directory (Azure AD) where your subscription to Intune is hosted. You can then configure the tenant, add users and groups, and assign licenses to users. When you're ready, you can help users enroll their devices and add apps that they need to begin the modern endpoint management process. As you continue, you can set configuration and protection policies, as well as other endpoint management capabilities.
+When you complete the signup process, you'll have a new tenant. A tenant is a dedicated instance of Azure Active Directory (Azure AD) where your subscription to Intune is hosted. You can then configure the tenant, add users and groups, and assign licenses to users. When you're ready, you can help users enroll their devices and add apps that they need to begin the modern endpoint management process. As you continue, you can set configuration and protection policies, as well as other endpoint management capabilities.
 
 ## Prerequisites
+
 Before setting up Microsoft Intune, review the following requirements:
 
 - [Supported operating systems and browsers](supported-devices-browsers.md)
@@ -91,6 +92,7 @@ To sign up for the Microsoft Intune free trial, follow the steps below:
 ## Admin experiences
 
 There are two portals that you will use most often:
+
 - The Microsoft 365 admin center ([https://admin.microsoft.com](https://admin.microsoft.com)) is where you can manage your subscription and account details, including billing and support. Also, if you're not using Azure Active Directory, you can add and manage users at this location.
 - The Microsoft Endpoint Manager admin center ([https://endpoint.microsoft.com/](https://endpoint.microsoft.com/)) is where you can explore the [capabilities of Intune](what-is-intune.md). This is where an admin would work with Intune to manage users, devices, and apps.
 
@@ -164,6 +166,7 @@ Before you create user accounts or synchronize your on-premises Active Directory
 You would not rename or remove the initial *onmicrosoft.com* domain name. However, you can add, verify, or remove a custom domain name used with Intune to keep your business identity clear. You must have access to your own custom domain name in order to add it to your Intune tenant.
 
 ### Add and verify your custom domain (OPTIONAL)
+
 
 1. Go to [Microsoft 365 admin center](https://admin.microsoft.com/?azure-portal=true) and sign into your administrator account.
 2. In the navigation pane, choose **Setup** > **Get your custom domain set up** > **Get started**.
