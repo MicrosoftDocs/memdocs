@@ -469,7 +469,7 @@ Users with Edge for iOS and Android installed on their iOS or Android device can
 
 1. Open Edge for iOS and Android on your device.
 
-2. Type `about:intunehelp` in the address box.
+2. Type `edge://intunehelp/` in the address box.
 
 3. Edge for iOS and Android launches troubleshooting mode.
 
