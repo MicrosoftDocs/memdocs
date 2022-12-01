@@ -72,7 +72,7 @@ To view classic conditional access policies, in [Azure](https://portal.azure.com
 
 ## Mobile Threat Defense toggle options
 
-You can decide which MTD toggle options you need to enable according to your organization's requirements. Not all of the following options are supported by all Mobile Thread Defense partners:
+You can decide which MTD toggle options you need to enable according to your organization's requirements. Not all of the following options are supported by all Mobile Threat Defense partners:
 
 **MDM Compliance Policy Settings**
 
