@@ -7,8 +7,8 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 manager: apoorvseth
-author: Banreet
-ms.author: banreetkaur
+author: gowdhamankarthikeyan
+ms.author: gokarthi
 ms.localizationpriority: high
 ms.collection: tier3
 ---
