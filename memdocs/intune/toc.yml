@@ -1455,7 +1455,7 @@ items:
           - name: Common questions and answers
             href: ./configuration/device-profile-troubleshoot.md
 
-    - name: Remote actions
+    - name: Initiate remote actions
       href: ./remote-actions/index.yml
       items:
       - name: Device management overview (Change title to remote actions overview or something?)
@@ -1531,7 +1531,7 @@ items:
           - name: Reduce help desk costs
             href: ./remote-actions/password-reset.md
 
-    - name: Reports and monitoring
+    - name: View reports and monitor status
       items:
       - name: Intune reports
         href: ./fundamentals/reports.md
