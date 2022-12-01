@@ -63,7 +63,7 @@ The first time you use a Configuration Manager console after the update has fini
 
 <!-- SCCMDocs#1397 -->
 
-As of December 2, 2022, version 2211 is globally available for all customers to install. If you previously opted in to the early update ring, watch for an update to this current branch version.
+<!-- As of December 2, 2022, version 2211 is globally available for all customers to install. If you previously opted in to the early update ring, watch for an update to this current branch version.-->
 
 At this time, version 2211 is released for the early update ring. To install this update, you need to opt in. The following PowerShell script adds your hierarchy or standalone primary site to the early update ring for version 2211:
 
@@ -315,11 +315,11 @@ If you changed the state of [hardware inventory classes in client settings](../.
 
 When you customize hardware inventory classes, review their configuration after you install the update to make sure they are configured as you intend.
 
-### Restore user state from active deployments
+<!-- ### Restore user state from active deployments-->
 
 <!-- 10362100 -->
 
-If you have any active user state migrations, before you update the Configuration Manager client on those devices, restore the user state. Due to [changes to the encryption algorithm in version 2103](../../plan-design/changes/whats-new-in-version-2103.md#encryption-algorithm-to-capture-and-restore-user-state), the updated client will fail to restore the user state when it tries to use a different encryption algorithm.
+<!-- If you have any active user state migrations, before you update the Configuration Manager client on those devices, restore the user state. Due to [changes to the encryption algorithm in version 2103](../../plan-design/changes/whats-new-in-version-2103.md#encryption-algorithm-to-capture-and-restore-user-state), the updated client will fail to restore the user state when it tries to use a different encryption algorithm.-->
 
 ### Update clients
 
