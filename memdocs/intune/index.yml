@@ -38,9 +38,6 @@ conceptualContent:
   items:
     - title: Plan for Intune adoption
       links:
-        - url: ./fundamentals/migration-guide.md
-          itemType: concept
-          text: Overview
         - url: ./fundamentals/intune-planning-guide.md
           itemType: concept
           text: Planning guide
