@@ -1,7 +1,7 @@
 ---
 title: Synchronize collection members to Azure AD groups
 titleSuffix: Configuration Manager
-description: Synchronize collection members to Azure Azure AD groups.
+description: Synchronize collection members to Azure AD groups.
 ms.date: 11/30/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-client
