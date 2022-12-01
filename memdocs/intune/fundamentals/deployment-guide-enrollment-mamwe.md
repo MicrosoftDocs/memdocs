@@ -47,7 +47,7 @@ This article provides recommendations on when to use MAM. It also includes an ov
 > [!INCLUDE [tips-guidance-plan-deploy-guides](../includes/tips-guidance-plan-deploy-guides.md)]
 
 > [!IMPORTANT]
-> Mobile Application Management (MAM) is deprecated for Windows. After December 2022 customers will not be able to configure any new WIP policies for devices registered via MEM without enrollment. This does not apply to devices enrolled into MEM.
+> Mobile Application Management (MAM) is deprecated for Windows. After December 2022 customers will not be able to configure any new Microsoft Information Protection (WIP) policies for devices registered via MAM without enrollment. This does not apply to devices enrolled in MAM.
 
 ## Before you begin
 
