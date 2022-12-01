@@ -151,7 +151,7 @@ Optional Columns:
 
 - Last Sync Time - Time of last sync cycle
  
-![Collections Cloud Sync Status](media/collection-aad-group-sync.png)
+:::image type="content" source="media/collection-aad-group-sync.png" alt-text="Screenshot of Collections Cloud Sync Status." lightbox="media/collection-aad-group-sync.png":::
 
 ## Verify the Azure AD group membership
 
@@ -163,4 +163,4 @@ Optional Columns:
 
 1. Confirm that the members reflect the resources in the Configuration Manager collection. Only resources with Azure AD identity show in the group.
 
-![Synchronize collections to Azure AD](media/3607475-sync-collection-to-azuread.png)
+:::image type="content" source="media/3607475-sync-collection-to-azuread.png" alt-text="Screenshot of Synchronize collections to Azure AD." lightbox="media/3607475-sync-collection-to-azuread.png":::
