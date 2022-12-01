@@ -101,17 +101,19 @@ Go to **Devices** > **Windows** > **Configuration profiles**, and in a new or ex
   * **Windows Spotlight**: Select **Not configured**.      
 
 #### Settings catalog profiles        
-In a new or existing Windows configuration profile, select **Settings catalog** > **Experience**. 
+In a new or existing Windows configuration profile, select **Settings catalog** > **Add settings**. Use the **Settings picker** to add the settings to your profile. Then adjust the setting toggles as needed under **Configuration settings**.      
+
+All of these settings are in the settings catalog, in the **Experience** category.  
 
 * To allow taskbar messages:  
-  * **Allow Windows Spotlight (User)**: Switch the toggle to **Allow**.    
-  * **Allow Windows Tips**: Switch the toggle to **Allow**.  
+  * Add **Allow Windows Spotlight (User)**: Switch the toggle to **Allow**.    
+  * Add **Allow Windows Tips**: Switch the toggle to **Allow**.  
 * To allow notification area messages:    
-  * **Allow Windows Spotlight (User)**: Switch the toggle to **Allow**.  
-  * **Allow Windows Spotlight on Action Center (User)**: Switch the toggle to **Allow**.  
+  * Add **Allow Windows Spotlight (User)**: Switch the toggle to **Allow**.  
+  * Add **Allow Windows Spotlight on Action Center (User)**: Switch the toggle to **Allow**.  
 * To allow Get Started app messages:  
-  * **Allow Windows Spotlight (User)**: Switch the toggle to **Allow**.   
-   * **Disable Cloud Optimized Content**: Switch the toggle to **Disabled**.   
+  * Add **Allow Windows Spotlight (User)**: Switch the toggle to **Allow**.   
+  * Add **Disable Cloud Optimized Content**: Switch the toggle to **Disabled**.   
 
 #### Policy CSP   
 The configuration service provider (CSP) policies available for Windows 11 include:  
