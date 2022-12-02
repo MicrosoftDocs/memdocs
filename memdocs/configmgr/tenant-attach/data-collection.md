@@ -111,8 +111,6 @@ For any collection that you select for Endpoint policy deployment:
 - **MdeOnboardingState**: Indicates Defender for Endpoint onboarding state for the device
 - **IsVirtualMachine**: Indicates whether the device is a virtual machine
 - **LastUpdateTime**: Time of the last Windows Defender signature update
-- **IsDeleted**: Detected Threat details
-- **SequenceNumber**: Detected Threat sequence number
 - **ThreatID**: The ID of a threat that has been detected by Windows Defender
 - **ThreatName**: The name of the specific threat
 - **Category**: Threat category ID
