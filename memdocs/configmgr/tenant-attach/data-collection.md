@@ -75,7 +75,6 @@ For each device:
 
 ## Microsoft Defender for Endpoint
 <!-- 6505652 -->
-
 For any collection that you select for Endpoint policy deployment:
 
 - **CollectionId**: The unique identifier of the collection. For example, `ABC00014`
@@ -90,42 +89,44 @@ For any collection that you select for Endpoint policy deployment:
 - **TenantId**: The unique identifier of your Azure Active Directory (Azure AD) tenant
 - **HierarchyId**: The unique identifier of your Configuration Manager hierarchy
 - **DeviceId**: The unique identifier of the device in Azure AD
-- **ProductStatus**:
-- **ComputerState**:
-- **DefenderEnabled**: The Status of Defender
-- **RtpEnabled**: 
-- **NisEnabled**: 
-- **QuickScanOverdue**: Defender antivirus scan status
-- **FullScanOverdue**: Defender antivirus scan status
-- **SignatureOutOfDate**: Defender antivirus signature status
-- **RebootRequired**: Device reboot status
-- **FullScanRequired**: Defender antivirus scan status
-- **EngineVersion**: Defender antivirus engine version
-- **SignatureVersion**: Defender antivirus signature version
-- **DefenderVersion**: Defender version
-- **QuickScanTime**: Defender antivirus scan time
-- **FullScanTime**: Defender antivirus scan time
-- **QuickScanSigVersion**: Defender antivirus signature version
-- **FullScanSigVersion**: Defender antivirus signature version
-- **TamperProtectionEnabled**: Defender tamper protection feature status
-- **IsMdeSenseRunning**: Defender sense status
-- **MdeOnboardingState**: Defender for endpoint onboarding status
-- **IsVirtualMachine**: Type of device
-- **LastUpdateTime**: Defender update details
+- **ProductStatus**: Provide the current state of the product
+- **ComputerState**: Provide the current state of the device
+- **DefenderEnabled**: Indicates whether the Windows Defender service is running
+- **RtpEnabled**: Indicates whether real-time protection is running
+- **NisEnabled**: Indicates whether network protection is running
+- **QuickScanOverdue**: Indicates whether a Windows Defender quick scan is overdue for the device
+- **FullScanOverdue**: Indicates whether a Windows Defender full scan is overdue for the device
+- **SignatureOutOfDate**: Indicates whether the Windows Defender signature is outdated
+- **RebootRequired**: Indicates whether a device reboot is needed
+- **FullScanRequired**: Indicates whether a Windows Defender full scan is required
+- **EngineVersion**: Version number of the current Windows Defender engine on the device
+- **SignatureVersion**: Version number of the current Windows Defender signatures on the device
+- **DefenderVersion**: Version number of Windows Defender on the device
+- **QuickScanTime**: Time of the last Windows Defender quick scan of the device
+- **FullScanTime**: Time of the last Windows Defender full scan of the device
+- **QuickScanSigVersion**: Signature version used for the last quick scan of the device
+- **FullScanSigVersion**: Signature version used for the last full scan of the device
+- **TamperProtectionEnabled**: Indicates whether the Windows Defender tamper protection feature is enabled
+- **IsMdeSenseRunning**: Indicates the Windows Defender Advanced Threat Protection Sense running state
+- **MdeOnboardingState**: Indicates Defender for Endpoint onboarding state for the device
+- **IsVirtualMachine**: Indicates whether the device is a virtual machine
+- **LastUpdateTime**: Time of the last Windows Defender signature update
 - **IsDeleted**: Detected Threat details
 - **SequenceNumber**: Detected Threat sequence number
-- **ThreatID**: Detected Threat Id
-- **ThreatName**: Detected Threat name
-- **Category**: Detected Threat category
-- **Severity**: Detected Threat severity
-- **URL**: Detected Threat url
-- **CurrentStatus**: Detected Threat current status
-- **CurrentStatusID**: Detected Threat current status Id
-- **ExecutionStatus**: Detected Threat execution status
-- **LastThreatStatusChangeTime**: Detected Threat status change time
-- **InitialDetectionTime**: Initial Threat detection time
-- **NumberOfDetections**: Number of detections for each Thread Id
+- **ThreatID**: The ID of a threat that has been detected by Windows Defender
+- **ThreatName**: The name of the specific threat
+- **Category**: Threat category ID
+- **Severity**: Threat severity ID
+- **URL**: URL link for additional threat information
+- **CurrentStatus**: Information about the current status of the threat
+- **CurrentStatusID**: Information about the current status of the threat
+- **ExecutionStatus**: Information about the execution status of the threat
+- **LastThreatStatusChangeTime**: The last time this particular threat was changed
+- **InitialDetectionTime**: The first time this particular threat was detected
+- **NumberOfDetections**: Number of times this threat has been detected on a particular client
 
+> [!INFORMATION]
+> For more details on data collected for Microsoft Defender for Endpoint refer [Defender CSP](/windows/client-management/mdm/defender-csp).
 
 ## Azure Application Insights
 <!-- 7544688 -->
