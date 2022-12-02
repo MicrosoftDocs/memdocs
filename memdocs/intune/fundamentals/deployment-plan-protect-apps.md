@@ -34,25 +34,27 @@ Managing applications on devices in your organization is a central part to a sec
 
 Microsoft Endpoint Manager supports two MAM configurations:
 - **[MAM without device management](#mam-without-device-management)**
-- **[MAM with device management](mam-with-device-management)**
+- **[MAM with device management](#mam-with-device-management)**
 
 ### MAM without device management
 
-This configuration allows your organization's apps to be managed, but doesn't enroll the devices to be managed. This configuration is commonly referred to as **MAM without device enrollment**, or **MAM-WE**. IT administrators can manage apps using MAM by using Intune configuration and protection policies on devices not enrolled with Intune MDM. This configuration includes managing apps with Intune on devices enrolled with third-party enterprise mobility management (EMM) providers.
+This configuration allows your organization's apps to be managed by Intune, but doesn't enroll the devices to be managed by Intune. This configuration is commonly referred to as **MAM without device enrollment**, or **MAM-WE**. IT administrators can manage apps using MAM by using Intune configuration and protection policies on devices not enrolled with Intune mobile-device management (MDM).
 
-Mobile Application Management (MAM) allows you to manage and protect your organization's data within an application. Many productivity apps, such as the Microsoft Office apps, can be managed by Intune MAM. See the official list of [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md) available for public use.
+> [!NOTE]
+> This configuration includes managing apps with Intune on devices enrolled with third-party enterprise mobility management (EMM) providers. You can use Intune app protection policies independent of any MDM solution. This independence helps you protect your company's data with or without enrolling devices in a device management solution. By implementing app-level policies, you can restrict access to company resources and keep data within the purview of your IT department.
 
-Your employees use mobile devices for both personal and work tasks. While making sure your employees can be productive, you want to prevent data loss, intentional and unintentional. You'll also want to protect company data that is accessed from devices that are not managed by you.
+Mobile Application Management (MAM) is ideal to help protect organization data on mobile devices used by members of your organization for both personal and work tasks. While making sure your members of your organization can be productive, you want to prevent data loss, intentional and unintentional. You also want to protect company data that is accessed from devices that are not managed by you. MAM allows you to manage and protect your organization's data within an application.
 
-You can use Intune app protection policies independent of any mobile-device management (MDM) solution. This independence helps you protect your company's data with or without enrolling devices in a device management solution. By implementing app-level policies, you can restrict access to company resources and keep data within the purview of your IT department.
+> [!TIP]
+>  Many productivity apps, such as the Microsoft Office apps, can be managed by Intune MAM. See the official list of [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md) available for public use.
 
 ### MAM with device management
 
-This configuration allows your organization's apps and devices to be managed. This configuration is commonly referred to as **MAM + MDM**. IT administrators can manage apps using MAM devices that are enrolled with Intune mobile device management (MDM).
+This configuration allows your organization's apps and devices to be managed. This configuration is commonly referred to as **MAM + MDM**. IT administrators can manage apps using MAM on devices that are enrolled with Intune MDM.
 
 MDM, in addition to MAM, makes sure that the device is protected. For example, you can require a PIN to access the device, or you can deploy managed apps to the device. You can also deploy apps to devices through your MDM solution, to give you more control over app management.
 
-There are additional benefits to using MDM with App protection policies, and companies can use app protection policies with and without MDM at the same time. For example, a member of your organization could have both a phone issued by the company and their own personal tablet. The company phone could be enrolled in MDM and protected by app protection policies while the personal device is protected by app protection policies only.
+There are additional benefits to using MDM with app protection policies, and companies can use app protection policies with and without MDM at the same time. For example, a member of your organization could have both a phone issued by the company and their own personal tablet. The company phone could be enrolled in MDM and protected by app protection policies while the personal device is protected by app protection policies only.
 
 ### Benefits of MAM with Intune
 
