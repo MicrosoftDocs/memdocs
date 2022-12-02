@@ -101,7 +101,7 @@ items:
           href: ./fundamentals/deployment-guide-intune-setup.md
         - name: Step 1 (cont) to set up Intune (integrate with step above)
           href: ./fundamentals/setup-steps.md
-      - name: Step 2 - Add and protect apps
+      - name: Step 2 - Add, configure, and protect apps
         href: ./fundamentals/deployment-plan-protect-apps.md
       - name: Step 3 - Create compliance policies
         href: ./fundamentals/deployment-plan-compliance-policies.md
