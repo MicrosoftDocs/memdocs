@@ -28,7 +28,7 @@ ms.collection:
 ---
 # Step 2 - Add, configure, and protect apps with Intune
 
-Managing applications on devices in your organization is a central part to a secure and productive enterprise ecosystem. You can use Microsoft Intune to manage the apps that your company's workforce uses. By managing apps, you help control which apps your company uses, as well as the configuration and protection of the apps. This functionality is called mobile application management (MAM). MAM in Intune is designed to protect organization data at the application level, including custom apps and store apps. App management can be used on organization-owned devices and personal devices. When it is used with personal devices, only organization-related access and data is managed. This type of app management is called MAM without enrollment (MAM-WE), or from a end-user perspective, bring your own device (BYOD).
+Managing applications on devices in your organization is a central part to a secure and productive enterprise ecosystem. You can use Microsoft Intune to manage the apps that your company's workforce uses. By managing apps, you help control which apps your company uses, as well as the configuration and protection of the apps. This functionality is called mobile application management (MAM). MAM in Intune is designed to protect organization data at the application level, including custom apps and store apps. App management can be used on organization-owned devices and personal devices. When it is used with personal devices, only organization-related access and data is managed. This type of app management is called MAM without enrollment (MAM-WE), or from an end-user perspective, bring your own device (BYOD).
 
 ## MAM configurations
 
@@ -65,8 +65,8 @@ When apps are managed in Intune, administrators can do the following:
   - Require a PIN to open an app in a work context.
   - Control the sharing of data between apps.
   - Prevent the saving of company app data to a personal storage location.
-- **Support apps on a variety of platforms and operating systems.** Each platform is different. Intune and Configuration Manager provides available settings specifically for each supported platform.
-- **See reports about which apps are used, and track their usage.** In addition, Intune and Configuration Manager provides endpoint analytics to help you assess and resolve problems.
+- **Support apps on a variety of platforms and operating systems.** Each platform is different. Intune provides available settings specifically for each supported platform.
+- **See reports about which apps are used, and track their usage.** In addition, Intune provides endpoint analytics to help you assess and resolve problems.
 - **Do a selective wipe by removing only organization data from apps.**
 - **Ensure personal data is kept separate from managed data.** End-user productivity isn't affected and policies don't apply when using the app in a personal context. The policies are applied only in a work context, which gives you the ability to protect company data without touching personal data.
 
@@ -137,19 +137,25 @@ If end users were to enter these settings instead, they could do this incorrectl
 
 The available configuration parameters are ultimately decided by the developers of the app. Documentation from the application vendor should be reviewed to see if an app supports configuration and what configurations are available. For some applications, Intune will populate the available configuration settings.
 
-For more information about app configuration, see [App configuration policies for Microsoft Intune](/mem/intune/apps/app-configuration-policies-overview?azure-portal=true) and [Plan for and configure application management in Configuration Manager](/mem/configmgr/apps/plan-design/plan-for-and-configure-application-management?azure-portal=true).
+For more information about app configuration, see [App configuration policies for Microsoft Intune](/mem/intune/apps/app-configuration-policies-overview?azure-portal=true).
 
 ## Protect apps using Intune
+
+App protection policies (APP) are rules that ensure an organization's data remains safe or contained in a managed app. A policy can be a rule that is enforced when the user attempts to access or move "corporate" data, or a set of actions that are prohibited or monitored when the user is inside the app. A managed app is an app that has app protection policies applied to it, and can be managed by Intune.
+
+Mobile Application Management (MAM) app protection policies allows you to manage and protect your organization's data within an application. Many productivity apps, such as the Microsoft Office apps, can be managed by Intune MAM. See the official list of Microsoft Intune protected apps available for public use.
 
 One of the primary ways that Intune provides mobile app security is through policies. App protection policies allow you to do the following actions:
 - Use Azure AD identity to isolate organization data from personal data. So personal information is isolated from organizational IT awareness. Data accessed using organization credentials are given additional security protection.
 - Help secure access on personal devices by restricting actions users can take with organizational data, such as copy-and-paste, save, and view.
-- Create and deploy on devices that are enrolled in Intune, enrolled in another mobile device management (MDM) service, or not enrolled in any MDM service. 
+- Create and deploy on devices that are enrolled in Intune, enrolled in another mobile device management (MDM) service, or not enrolled in any MDM service.
 
 > [!NOTE]
-> App protection policies are designed to apply uniformly across a group of apps, such as applying a policy across all Office mobile apps. 
+> App protection policies are designed to apply uniformly across a group of apps, such as applying a policy across all Office mobile apps.
 
 Organizations can use app protection policies with and without MDM at the same time. For example, consider an employee that uses both a tablet issued by the company, and their own personal phone. The company tablet is enrolled in MDM and protected by app protection policies while their personal phone is protected by app protection policies only.
+
+For more information about app protection in Intune, see [App protection policies overview](../apps/app-protection-policy.md).
 
 ### End-user requirements to use app protection policies
 
