@@ -33,10 +33,12 @@ Managing applications on devices in your organization is a central part to a sec
 ## MAM configurations
 
 Microsoft Endpoint Manager supports two MAM configurations:
-- **MAM without device management**: This configuration allows your organization's apps to be managed, but doesn't enroll the devices to be managed. This configuration is commonly referred to as **MAM without device enrollment**, or **MAM-WE**. IT administrators can manage apps using MAM by using Intune configuration and protection policies on devices not enrolled with Intune MDM. This configuration includes managing apps with Intune on devices enrolled with third-party enterprise mobility management (EMM) providers.
-- **MAM with device management**: This configuration allows your organization's apps and devices to be managed. This configuration is commonly referred to as **MAM + MDM**. IT administrators can manage apps using MAM devices that are enrolled with Intune mobile device management (MDM). 
+- **[MAM without device management](#mam-without-device-management)**
+- **[MAM with device management](mam-with-device-management)**
 
 ### MAM without device management
+
+This configuration allows your organization's apps to be managed, but doesn't enroll the devices to be managed. This configuration is commonly referred to as **MAM without device enrollment**, or **MAM-WE**. IT administrators can manage apps using MAM by using Intune configuration and protection policies on devices not enrolled with Intune MDM. This configuration includes managing apps with Intune on devices enrolled with third-party enterprise mobility management (EMM) providers.
 
 Mobile Application Management (MAM) allows you to manage and protect your organization's data within an application. Many productivity apps, such as the Microsoft Office apps, can be managed by Intune MAM. See the official list of [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md) available for public use.
 
@@ -45,6 +47,8 @@ Your employees use mobile devices for both personal and work tasks. While making
 You can use Intune app protection policies independent of any mobile-device management (MDM) solution. This independence helps you protect your company's data with or without enrolling devices in a device management solution. By implementing app-level policies, you can restrict access to company resources and keep data within the purview of your IT department.
 
 ### MAM with device management
+
+This configuration allows your organization's apps and devices to be managed. This configuration is commonly referred to as **MAM + MDM**. IT administrators can manage apps using MAM devices that are enrolled with Intune mobile device management (MDM).
 
 MDM, in addition to MAM, makes sure that the device is protected. For example, you can require a PIN to access the device, or you can deploy managed apps to the device. You can also deploy apps to devices through your MDM solution, to give you more control over app management.
 
@@ -63,6 +67,49 @@ When apps are managed in Intune, administrators can do the following:
 - **See reports about which apps are used, and track their usage.** In addition, Intune and Configuration Manager provides endpoint analytics to help you assess and resolve problems.
 - **Do a selective wipe by removing only organization data from apps.**
 - **Ensure personal data is kept separate from managed data.** End-user productivity isn't affected and policies don't apply when using the app in a personal context. The policies are applied only in a work context, which gives you the ability to protect company data without touching personal data.
+
+## App management scenarios
+
+Before implementing app management for your organization, consider the limitations and benefits of each of the following app management scenarios:
+- [Apps without management](#apps-without-management)
+- [App management without device management](#app-management-without-device-management)
+- [App management with device management](#app-management-with-device-management)
+
+### Apps without management
+
+When apps are used without restrictions, company and personal data can get intermingled. Company data can end up in locations like personal storage or transferred to apps beyond your purview and result in data loss. One of the primary reasons to use either **MAM without device enrollment** or **Intune MDM + MAM** is to help protect your organization's data.
+
+### App management without device management
+
+This scenario allows you to manage the apps that your organization uses without enrolling the devices (that contain the apps) to be managed.  
+
+You can use App protection policies to prevent company data from saving to the local storage of the device. You can also restrict data movement to other apps that aren't protected by App protection policies. App protection policy settings include:
+- Data relocation policies like  **Save copies of org data**, and **Restrict cut, copy, and paste**.
+- Access policy settings like **Require simple PIN for access**, and **Block managed apps from running on jailbroken or rooted devices**.
+
+For BYOD devices not enrolled in any MDM solution, app protection policies can help protect company data at the app level.
+However, there are some limitations to be aware of, such as:
+- You can't deploy apps to the device. The end user has to get the apps from the store.
+- You can't provision certificate profiles on these devices.
+- You can't provision company Wi-Fi and VPN settings on these devices.
+
+For more information about app protection in Intune, see [App protection policies overview](/mem/intune/apps/app-protection-policy?azure-portal=true).
+
+### App management with device management
+
+This scenario allows you to manage the apps that your organization uses with the added benefit of enrolling the devices to be managed.  
+
+On enrolled devices that use an MDM service, app protection policies can add an extra layer of protection. For example, a user signs in to a device with their organization credentials. Their organization identity allows access to data that's tied to their personal identity. As that organization data is used, app protection policies control how the data is saved and shared. When users sign in with their personal identity, those same protections (access and restrictions) aren't applied. In this way, IT has control of organization data, while end users maintain control and privacy over their personal data.
+
+The MDM solution adds value by providing the following:
+- Enrolls the device
+- Deploys the apps to the device
+- Provides ongoing device compliance and management
+
+The App protection policies add value by providing the following:
+- Help protect company data from leaking to consumer apps and services
+- Apply restrictions like *save-as*, *clipboard*, or *PIN*, to client apps
+- Wipe company data when needed from apps without removing those apps from the device
 
 ## Add apps to Intune
 
@@ -101,42 +148,6 @@ One of the primary ways that Intune provides mobile app security is through poli
 > App protection policies are designed to apply uniformly across a group of apps, such as applying a policy across all Office mobile apps. 
 
 Organizations can use app protection policies with and without MDM at the same time. For example, consider an employee that uses both a tablet issued by the company, and their own personal phone. The company tablet is enrolled in MDM and protected by app protection policies while their personal phone is protected by app protection policies only.
-
-### Apps without management
-
-When apps are used without restrictions, company and personal data can get intermingled. Company data can end up in locations like personal storage or transferred to apps beyond your purview and result in data loss. One of the primary reasons to use either **MAM without device enrollment** or **Intune MDM + MAM** is to help protect your organization's data.
-
-## App management without device management
-
-This scenario allows you to manage the apps that your organization uses without enrolling the devices (that contain the apps) to be managed.  
-
-You can use App protection policies to prevent company data from saving to the local storage of the device. You can also restrict data movement to other apps that aren't protected by App protection policies. App protection policy settings include:
-- Data relocation policies like  **Save copies of org data**, and **Restrict cut, copy, and paste**.
-- Access policy settings like **Require simple PIN for access**, and **Block managed apps from running on jailbroken or rooted devices**.
-
-For BYOD devices not enrolled in any MDM solution, app protection policies can help protect company data at the app level.
-However, there are some limitations to be aware of, such as:
-- You can't deploy apps to the device. The end user has to get the apps from the store.
-- You can't provision certificate profiles on these devices.
-- You can't provision company Wi-Fi and VPN settings on these devices.
-
-For more information about app protection in Intune, see [App protection policies overview](/mem/intune/apps/app-protection-policy?azure-portal=true).
-
-### App management with device management
-
-This scenario allows you to manage the apps that your organization uses with the added benefit of enrolling the devices to be managed.  
-
-On enrolled devices that use an MDM service, app protection policies can add an extra layer of protection. For example, a user signs in to a device with their organization credentials. Their organization identity allows access to data that's tied to their personal identity. As that organization data is used, app protection policies control how the data is saved and shared. When users sign in with their personal identity, those same protections (access and restrictions) aren't applied. In this way, IT has control of organization data, while end users maintain control and privacy over their personal data.
-
-The MDM solution adds value by providing the following:
-- Enrolls the device
-- Deploys the apps to the device
-- Provides ongoing device compliance and management
-
-The App protection policies add value by providing the following:
-- Help protect company data from leaking to consumer apps and services
-- Apply restrictions like *save-as*, *clipboard*, or *PIN*, to client apps
-- Wipe company data when needed from apps without removing those apps from the device
 
 ### End-user requirements to use app protection policies
 
