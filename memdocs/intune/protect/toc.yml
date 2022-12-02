@@ -137,6 +137,8 @@ items:
       href: microsoft-tunnel-prerequisites.md
     - name: Configure Microsoft Tunnel
       href: microsoft-tunnel-configure.md
+    - name: Microsoft Tunnel for MAM
+      href: microsoft-tunnel-mam.md
     - name: Monitor Microsoft Tunnel
       href: microsoft-tunnel-monitor.md
     - name: Upgrade Microsoft Tunnel
