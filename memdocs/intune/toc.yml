@@ -61,14 +61,11 @@ items:
 
   - name: Plan
     items:
-    - name: Planning overview 
-      href: ./fundamentals/migration-guide.md
     - name: Planning guide
       href: ./fundamentals/intune-planning-guide.md
 
     - name: How to educate your end users (does this work here?)
       href: ./fundamentals/end-user-educate.md
-
 
     - name: Evaluate current GPOs with settings catalog (is this a sub topic?)
 
@@ -127,7 +124,7 @@ items:
 
     - name: Migrate to Microsoft Intune (need to update section for different scenarios)
       items: 
-      - name: Overview
+      - name: Overview - REWRITE or DELETE
         href: ./fundamentals/migration-guide.md
       - name: Migrate from Basic Mobility and Security
         items: 
