@@ -78,7 +78,7 @@ These apps are the apps you want on their devices. Some considerations:
 
   For example, the sales team may require Teams, Excel, and SharePoint. On mobile devices, you can deploy only these apps, instead of deploying the entire Office suite.
 
-- Users expect to read and reply to email and join meetings on all devices, including personal devices. On organization-owned devices, you can deploy Outlook and Teams. And, manage and control all device settings and all app settings, including PIN and password requirements. 
+- Users expect to read and reply to email and join meetings on all devices, including personal devices. On organization-owned devices, you can deploy Outlook and Teams, and manage and control all device settings and all app settings, including PIN and password requirements. 
 
   On personal devices, you might not have this control. So, determine if you want to give users access to organization apps, such as email and meetings.
 
