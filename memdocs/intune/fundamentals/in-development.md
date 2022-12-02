@@ -8,7 +8,7 @@ keywords:
 author: dougeby 
 ms.author: dougeby
 manager: dougeby
-ms.date: 11/21/2022
+ms.date: 12/05/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -113,50 +113,6 @@ For more information on this setting and the other settings you can configure on
 Applies to:
 
 - Android Enterprise 12+ personally owned devices with a work profile
-
-### There are default settings for SSO extension requests on macOS devices<!-- 15082414  -->  
-When you create a single sign-on app extension configuration profile, there are some settings you configure. The following settings will use the following default values for all SSO extension requests:
-
-- **AppPrefixAllowList** key
-  Default value: `com.microsoft.,com.apple.`
-
-- **browser_sso_interaction_enabled** key
-  Default value: `1`
-
-- **disable_explicit_app_prompt** key
-  Default value: `1`
-
-If you configure a value other than the default value, then the configured value will overwrite the default value. 
-
-For example, you don't configure the `AppPrefixAllowList` key. By default, all Microsoft apps (`com.microsoft.`) and all Apple apps (`com.apple.`) will be enabled for SSO. You can overwrite this behavior by adding a different prefix to the list, such as `com.contoso.`.
-
-For more information on the Enterprise SSO plug-in, go to [Use the Microsoft Enterprise SSO plug-in on iOS/iPadOS and macOS devices in Microsoft Intune](../configuration/use-enterprise-sso-plug-in-ios-ipados-macos.md)
-
-Applies to:
-
-- macOS
-
-### There are default settings for SSO extension requests on iOS/iPadOS devices<!-- 15084030 -->  
-When you create a single sign-on app extension configuration profile, there are some settings you configure. The following settings will use the following default values for all SSO extension requests:
-
-- **AppPrefixAllowList** key
-  Default value: `com.apple.`
-
-- **browser_sso_interaction_enabled** key
-  Default value: `1`
-
-- **disable_explicit_app_prompt** key
-  Default value: `1`
-
-If you configure a value other than the default value, then the configured value will overwrite the default value. 
-
-For example, you don't configure the `AppPrefixAllowList` key. By default, all Apple apps (`com.apple.`) will be enabled for SSO. You can overwrite this behavior by adding a different prefix to the list, such as `com.contoso.`.
-
-For more information on the Enterprise SSO plug-in, go to [Use the Microsoft Enterprise SSO plug-in on iOS/iPadOS and macOS devices in Microsoft Intune](../configuration/use-enterprise-sso-plug-in-ios-ipados-macos.md)
-
-Applies to:
-
-- iOS/iPadOS
 
 ### Remote help client app will have a new option to disable chat functionality in the Tenant level setting<!-- 14685052 -->  
 In the Remote help app, admins will have the option to disable chat functionality from the new tenant level setting. Turning on the disable chat feature will remove the chat button in the Remote Help app. This setting can be found in the Remote Help **Settings** tab under **Tenant Administration** in Microsoft Intune.
