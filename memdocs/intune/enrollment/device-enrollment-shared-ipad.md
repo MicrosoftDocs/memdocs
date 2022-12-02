@@ -103,7 +103,7 @@ The following table shows each iOS app type and describes the type of assignment
 |     Web app    |     Not supported    |     User    |
 |     App Store app    |     Not applicable    |     Not applicable    |  
 
-Configure home screen layout settings in a device configuration profile to organize the app layout and folders on the home screen and dock. Assign the profile to Azure AD user groups. For more information, see [Home screen layout](../configuration/ios-device-features-settings#home-screen-layout.md).  
+Configure home screen layout settings in a device configuration profile to organize the app layout and folders on the home screen and dock. Assign the profile to Azure AD user groups. For more information, see [Home screen layout](../configuration/ios-device-features-settings.md#home-screen-layout).  
 
 ## Recommended policy and app assignment for Shared iPads
 
