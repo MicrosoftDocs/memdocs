@@ -125,8 +125,7 @@ For any collection that you select for Endpoint policy deployment:
 - **InitialDetectionTime**: The first time this particular threat was detected
 - **NumberOfDetections**: Number of times this threat has been detected on a particular client
 
-> [!INFORMATION]
-> For more details on data collected for Microsoft Defender for Endpoint refer [Defender CSP](/windows/client-management/mdm/defender-csp).
+For more details on data collected for Microsoft Defender for Endpoint, see [Defender CSP](/windows/client-management/mdm/defender-csp).
 
 ## Azure Application Insights
 <!-- 7544688 -->
