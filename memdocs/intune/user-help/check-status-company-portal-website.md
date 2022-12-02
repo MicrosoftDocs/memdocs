@@ -49,6 +49,7 @@ To check the status of a device:
 After the check, the status updates to show the most current state of your device. Possible statuses include:   
 
 * **Can access**: Your device is allowed to access work or school resources.  
+* **Out of compliance - can still access company resources**: You device is allowed to access work or school resources, but one or more settings don't meet your organization's requirements. Update your device settings by the date shown to keep your access.  
 * **Cannot access company resources**: Your device isn't allowed to access work or school resources. Make the required changes to gain access.  
 
 If you're required to make any changes to the settings, Company Portal will include that information on the same screen.  
