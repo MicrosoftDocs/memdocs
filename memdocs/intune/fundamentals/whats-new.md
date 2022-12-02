@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/28/2022
+ms.date: 12/01/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -181,10 +181,6 @@ New settings include:
 
 - Device Key
 - Location
-
-**Privacy > Privacy Preferences Policy Control**:
-
-- Authorization
 
 **Restrictions**:
 
