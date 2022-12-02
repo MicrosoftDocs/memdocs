@@ -6,8 +6,8 @@ ms.date: 03/24/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
-author: Banreet
-ms.author: banreetkaur
+author: gowdhamankarthikeyan
+ms.author: gokarthi
 manager: apoorvseth
 ms.localizationpriority: high
 ms.reviewer: mstewart,aaroncz 
@@ -85,8 +85,47 @@ For any collection that you select for Endpoint policy deployment:
 - **CountCompliant**: The count of devices that are compliant with this policy
 - **CountNonCompliant**: The count of devices that aren't compliant with this policy
 - **CountFailed**: The count of devices that failed to process this policy
-- **CountActivated**
-- **CountEnforced**
+- **CountActivated**: The count of devices where the policy is activated
+- **CountEnforced**: The count of devices where the policy is enforced
+- **TenantId**: The unique identifier of your Azure Active Directory (Azure AD) tenant
+- **HierarchyId**: The unique identifier of your Configuration Manager hierarchy
+- **DeviceId**: The unique identifier of the device in Azure AD
+- **ProductStatus**:
+- **ComputerState**:
+- **DefenderEnabled**: The Status of Defender
+- **RtpEnabled**: 
+- **NisEnabled**: 
+- **QuickScanOverdue**: Defender antivirus scan status
+- **FullScanOverdue**: Defender antivirus scan status
+- **SignatureOutOfDate**: Defender antivirus signature status
+- **RebootRequired**: Device reboot status
+- **FullScanRequired**: Defender antivirus scan status
+- **EngineVersion**: Defender antivirus engine version
+- **SignatureVersion**: Defender antivirus signature version
+- **DefenderVersion**: Defender version
+- **QuickScanTime**: Defender antivirus scan time
+- **FullScanTime**: Defender antivirus scan time
+- **QuickScanSigVersion**: Defender antivirus signature version
+- **FullScanSigVersion**: Defender antivirus signature version
+- **TamperProtectionEnabled**: Defender tamper protection feature status
+- **IsMdeSenseRunning**: Defender sense status
+- **MdeOnboardingState**: Defender for endpoint onboarding status
+- **IsVirtualMachine**: Type of device
+- **LastUpdateTime**: Defender update details
+- **IsDeleted**: Detected Threat details
+- **SequenceNumber**: Detected Threat sequence number
+- **ThreatID**: Detected Threat Id
+- **ThreatName**: Detected Threat name
+- **Category**: Detected Threat category
+- **Severity**: Detected Threat severity
+- **URL**: Detected Threat url
+- **CurrentStatus**: Detected Threat current status
+- **CurrentStatusID**: Detected Threat current status Id
+- **ExecutionStatus**: Detected Threat execution status
+- **LastThreatStatusChangeTime**: Detected Threat status change time
+- **InitialDetectionTime**: Initial Threat detection time
+- **NumberOfDetections**: Number of detections for each Thread Id
+
 
 ## Azure Application Insights
 <!-- 7544688 -->
