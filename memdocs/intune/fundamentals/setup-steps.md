@@ -40,20 +40,16 @@ If you're currently using Microsoft Endpoint Configuration Manager to manage com
 >[!TIP]
 >If you purchase at least 150 licenses for Intune in an eligible plan, you can use the *FastTrack Center Benefit*. With this service, Microsoft specialists work with you to get your environment ready for Intune. See [FastTrack Center Benefit for Enterprise Mobility + Security (EMS)](/enterprise-mobility-security/Solutions/enterprise-mobility-fasttrack-program).
 
-| Steps | Description  |
+| Steps | Status  |
 |---|---|
-|   1   | [Supported configurations](supported-devices-browsers.md) - Need-to-know info before you start. This section includes supported configurations and networking requirements.|
+|   1   | [Supported configurations](supported-devices-browsers.md) - Need-to-know info before you start. This includes supported configurations and networking requirements.|
 |   2   |  [Sign in to Intune](account-sign-up.md) - Sign in to your trial subscription or create a new Intune subscription. |
 |   3   | [Configure domain name](custom-domain-name-configure.md) - Set DNS registration to connect your company's domain name with Intune. This gives users a familiar domain when connecting to Intune and using resources. |
-|   4   | [Add users](users-add.md) - Add users, or connect Active Directory to sync with Intune. Required unless your devices are "userless" kiosk devices, for example.|
-|   5   | [Add groups](groups-add.md) - Add groups, or connect Active Directory to sync with Intune. Groups are used to assign apps, settings, and other resources.|
+|   4   | [Add users](users-add.md) and [groups](groups-add.md) - Add users and groups, or connect Active Directory to sync with Intune. Required unless your devices are "userless" kiosk devices, for example. Groups are used to assign apps, settings, and other resources.|
 |   5   | [Assign licenses](licenses-assign.md) - Give users permission to use Intune. Each user or userless device requires an Intune license to access the service. |
 |   6   | [Set the MDM authority](mdm-authority-set.md) - Use user and device groups to simplify management tasks. Groups are used to assign apps, settings, and other resources. |
-
-<!-- Smriti's comment. Keeping the remaining steps here. Can be deleted after finalizing the workflow 
 |   7   | [Add apps](../apps/apps-add.md) - Apps can be assigned to groups and automatically or optionally installed. |
 |   8   | [Configure devices](../configuration/device-profiles.md) - Set up profiles that manage device settings. Device profiles can preconfigure settings for email, VPN, Wi-Fi, and device features. They can also restrict devices to help protect both devices and data. |
 |   9   |  [Customize Company Portal](../apps/company-portal-app.md) - Customize the Intune Company Portal that users use to enroll devices and install apps. These settings appear in both the Company Portal app and the Intune Company Portal website.       |
 |  10   | [Enable device enrollment](../enrollment/device-enrollment.md) - Enable Intune management of iOS/iPadOS, Windows, Android, and Mac devices by setting the MDM authority and enabling specific platforms. |
 |  11   |  [Configure app policies](../apps/app-protection-policy.md) - Supply specific settings based on app protection policies in Microsoft Intune. |
--->
