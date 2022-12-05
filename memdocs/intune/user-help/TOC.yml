@@ -299,6 +299,8 @@ items:
 - name: Using the Intune Company Portal website
   href: using-the-intune-company-portal-website.md
   items:
+  - name: Check status 
+    href: check-status-company-portal-website.md 
   - name: Manage apps
     href: manage-apps-cpweb.md
   - name: Store recovery key

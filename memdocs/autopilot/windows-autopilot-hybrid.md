@@ -18,7 +18,7 @@ ms.technology: itpro-deploy
  
 # Deploy hybrid Azure AD-joined devices by using Intune and Windows Autopilot
 
-*Applies to:*
+**Applies to:**
 
 - Windows 11
 - Windows 10
@@ -41,6 +41,8 @@ The device to be enrolled must follow these requirements:
 - Undergo the out-of-box experience (OOBE).
 - Use an authorization type that Azure Active Directory supports in OOBE.
 
+Although not required, configuring hybrid Azure AD join for AD FS enables a faster Windows Autopilot Azure AD registration process during deployments. 
+
 ## Set up Windows automatic enrollment
 
 1. Sign in to Azure, in the left pane, select **Azure Active Directory** > **Mobility (MDM and MAM)** > **Microsoft Intune**.
@@ -53,11 +55,12 @@ The device to be enrolled must follow these requirements:
 
 ## Increase the computer account limit in the Organizational Unit
 
-The Intune Connector for your Active Directory creates autopilot-enrolled computers in the on-premises Active Directory domain. The computer that hosts the Intune Connector must have the rights to create the computer objects within the domain. 
+The Intune Connector for your Active Directory creates autopilot-enrolled computers in the on-premises Active Directory domain. The computer that hosts the Intune Connector must have the rights to create the computer objects within the domain.
 
 In some domains, computers aren't granted the rights to create computers. Additionally, domains have a built-in limit (default of 10) that applies to all users and computers that aren't delegated rights to create computer objects. The rights must be delegated to computers that host the Intune Connector on the organizational unit where hybrid Azure AD-joined devices are created.
 
 The organizational unit that's granted the rights to create computers must match:
+
 - The organizational unit that's entered in the Domain Join profile.
 - If no profile is selected, the computer's domain name for your domain.
 
@@ -86,7 +89,7 @@ The organizational unit that's granted the rights to create computers must match
 9. Select **Create selected objects in this folder** and **Delete selected objects in this folder**.
 
     ![The Active Directory Object Type pane.](./media/windows-autopilot-hybrid/only-following-objects.png)
- 
+
 10. Select **Next**.
 
 11. Under **Permissions**, select the **Full Control** check box. This action selects all the other options.
@@ -141,20 +144,21 @@ If you have a web proxy in your networking environment, ensure that the Intune C
 
 1. In the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/), select **Groups** > **New group**.
 
-1. In the **Group** pane, choose the following options:
+2. In the **Group** pane, choose the following options:
 
     1. For **Group type**, select **Security**.
     2. Enter a **Group name** and **Group description**.
     3. Select a **Membership type**.
 
-1. If you selected **Dynamic Devices** for the membership type, in the **Group** pane, select **Dynamic device members**.
+3. If you selected **Dynamic Devices** for the membership type, in the **Group** pane, select **Dynamic device members**.
 
-1. Select **Edit** in the **Rule syntax** box and enter one of the following code lines:
+4. Select **Edit** in the **Rule syntax** box and enter one of the following code lines:
+
     - To create a group that includes all your Autopilot devices, enter `(device.devicePhysicalIDs -any _ -contains "[ZTDId]")`.
     - Intune's Group Tag field maps to the OrderID attribute on Azure AD devices. If you want to create a group that includes all of your Autopilot devices with a specific Group Tag (OrderID), type: `(device.devicePhysicalIds -any _ -eq "[OrderID]:179887111881")`.
     - To create a group that includes all your Autopilot devices with a specific Purchase Order ID, enter `(device.devicePhysicalIds -any _ -eq "[PurchaseOrderId]:76222342342")`.
 
-1. Select **Save** > **Create**.
+5. Select **Save** > **Create**.
 
 ## Register your Autopilot devices
 
@@ -162,7 +166,7 @@ Select one of the following ways to enroll your Autopilot devices.
 
 ### Register Autopilot devices that are already enrolled
 
-1. Create an Autopilot deployment profile with **Convert all targeted devices to Autopilot** set to **Yes**. 
+1. Create an Autopilot deployment profile with **Convert all targeted devices to Autopilot** set to **Yes**.
 2. Assign the profile to a group that contains the members that you want to automatically register with Autopilot.
 
 For more information, see [Create an Autopilot deployment profile](profiles.md).
@@ -219,17 +223,29 @@ Here's a list of VPN clients that are known to be tested and validated:
 Autopilot deployment profiles are used to configure the Autopilot devices.
 
 1. In the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/), select **Devices** > **Windows** > **Windows enrollment** > **Deployment Profiles** > **Create Profile**.
+
 2. On the **Basics** page, type a **Name** and optional **Description**.
+
 3. If you want all devices in the assigned groups to automatically convert to Autopilot, set **Convert all targeted devices to Autopilot** to **Yes**. All corporate owned, non-Autopilot devices in assigned groups will register with the Autopilot deployment service. Personally owned devices won't be converted to Autopilot. Allow 48 hours for the registration to be processed. When the device is unenrolled and reset, Autopilot will enroll it. After a device is registered in this way, disabling this option or removing the profile assignment won't remove the device from the Autopilot deployment service. You must instead [remove the device directly](add-devices.md#delete-autopilot-devices).
+
 4. Select **Next**.
+
 5. On the **Out-of-box experience (OOBE)** page, for **Deployment mode**, select **User-driven**.
+
 6. In the **Join to Azure AD as** box, select **Hybrid Azure AD joined**.
-7. If you're deploying devices off of the organization's network using VPN support, set the **Skip Domain Connectivity Check** option to **Yes**. For more information, see [User-driven mode for hybrid Azure Active Directory join with VPN support](user-driven.md#user-driven-mode-for-hybrid-azure-ad-join-with-vpn-support-preview).
+
+7. If you're deploying devices off of the organization's network using VPN support, set the **Skip Domain Connectivity Check** option to **Yes**. For more information, see [User-driven mode for hybrid Azure Active Directory join with VPN support](user-driven.md#user-driven-mode-for-hybrid-azure-ad-join-with-vpn-support).
+
 8. Configure the remaining options on the **Out-of-box experience (OOBE)** page as needed.
+
 9. Select **Next**.
+
 10. On the **Scope tags** page, select [scope tags](../intune/fundamentals/scope-tags.md) for this profile.
+
 11. Select **Next**.
+
 12. On the **Assignments** page, select **Select groups to include** > search for and select the device group > **Select**.
+
 13. Select **Next** > **Create**.
 
 It takes about 15 minutes for the device profile status to change from *Not assigned* to *Assigning* and, finally, to *Assigned*.
@@ -237,22 +253,31 @@ It takes about 15 minutes for the device profile status to change from *Not assi
 ## (Optional) Turn on the enrollment status page
 
 1. In the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/), select **Devices** > **Windows** > **Windows enrollment** > **Enrollment Status Page**.
+
 2. In the **Enrollment Status Page** pane, select **Default** > **Settings**.
+
 3. In the **Show app and profile installation progress** box, select **Yes**.
+
 4. Configure the other options as needed.
+
 5. Select **Save**.
 
 ## Create and assign a Domain Join profile
 
 1. In the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/), select **Devices** > **Configuration profiles** > **Create Profile**.
-1. Enter the following properties:
+
+2. Enter the following properties:
     - **Name**: Enter a descriptive name for the new profile.
     - **Description**: Enter a description for the profile.
     - **Platform**: Select **Windows 10 and later**.
     - **Profile type**: Select **Templates**, choose the template name **Domain Join**, and select **Create**.
-1. Enter the **Name** and **Description** and select **Next**.
-1. Provide a **Computer name prefix** and **Domain name**.
-1. (Optional) Provide an **Organizational unit** (OU) in [DN format](/windows/desktop/ad/object-names-and-identities#distinguished-name). Your options include:
+
+3. Enter the **Name** and **Description** and select **Next**.
+
+4. Provide a **Computer name prefix** and **Domain name**.
+
+5. (Optional) Provide an **Organizational unit** (OU) in [DN format](/windows/desktop/ad/object-names-and-identities#distinguished-name). Your options include:
+
     - Provide an OU in which you've delegated control to your Windows 2016 device that is running the Intune Connector.
     - Provide an OU in which you've delegated control to the root computers in your on-premises Active Directory.
     - If you leave this blank, the computer object will be created in the Active Directory default container (`CN=Computers` if you never [changed it](/troubleshoot/windows-server/identity/redirect-users-computers-containers)).
@@ -268,8 +293,9 @@ It takes about 15 minutes for the device profile status to change from *Not assi
     > [!NOTE]
     > Don't use quotation marks around the value in **Organizational unit**.
 
-1. Select **OK** > **Create**. The profile is created and displayed in the list.
-1. [Assign a device profile](../intune/configuration/device-profile-assign.md#assign-a-device-profile) to the same group used at the step [Create a device group](windows-autopilot-hybrid.md#create-a-device-group). Different groups can be used if there's a need to join devices to different domains or OUs.
+6. Select **OK** > **Create**. The profile is created and displayed in the list.
+
+7. [Assign a device profile](../intune/configuration/device-profile-assign.md#assign-a-device-profile) to the same group used at the step [Create a device group](windows-autopilot-hybrid.md#create-a-device-group). Different groups can be used if there's a need to join devices to different domains or OUs.
 
 > [!NOTE]
 > The naming capabilities for Windows Autopilot for Hybrid Azure AD Join don't support variables such as %SERIAL% and only support prefixes for the computer name.

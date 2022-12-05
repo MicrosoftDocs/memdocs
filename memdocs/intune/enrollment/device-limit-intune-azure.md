@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/04/2021
+ms.date: 11/29/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -46,7 +46,7 @@ This article clarifies when these limits are applied based on your configuration
 
 ## Intune device limit restrictions
 
-Intune device limit restrictions set the maximum number of devices that a user can control (maximum setting is 15). To set this **Device limit**, go to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Enrollment restrictions**. For more information, see [Create a device limit restriction](create-device-limit-restrictions.md). 
+Intune device limit restrictions set the maximum number of devices that a user can enroll (maximum setting is 15). To set a device limit restriction, sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Then go to **Devices** > **Enrollment restrictions**. For more information, see [Create a device limit restriction](create-device-limit-restrictions.md).  
 
 ## Azure device limit restriction
 
@@ -102,9 +102,9 @@ Intune device limit restrictions don't apply for the following Windows enrollmen
 - Autopilot enrollments
 - Device enrollment manager enrollments
 
-You can't enforce device limit restrictions for these enrollment types because they're considered shared device scenarios. You can set hard limits for these enrollment types in Azure Active Directory.
+Devices enrolled via these methods are enrolled automatically or by an Intune admin, not by an employee or student, and are considered shared devices.  
 
-For the device limit restriction in Azure, the **Maximum number of devices per user** setting applies to devices that are either Azure AD joined or Azure AD registered. This setting doesn't apply to hybrid Azure AD joined devices.  
+Instead, you can set a [hard limit in Azure Active Directory](device-limit-intune-azure.md#azure-device-limit-restriction) to limit the number of devices that an employee can join or register with Azure AD. The **Maximum number of devices per user** setting in Azure AD applies to devices that are Azure AD joined or Azure AD registered. It doesn't apply to hybrid Azure AD joined devices.  
 
 ### Windows 10/11 example 1
 

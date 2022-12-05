@@ -36,18 +36,39 @@ items:
     - name: Walkthrough Intune in Microsoft Endpoint Manager (update for branding)
       href: ./fundamentals/tutorial-walkthrough-endpoint-manager.md 
     - name: Try Intune for free
-      href: ./fundamentals/free-trial-sign-up.md      
+      items:
+      - name: <Do we need an overview topic to explain the steps?>
+      - name: Sign up for a free Intune trial
+        href: ./fundamentals/free-trial-sign-up.md
+        displayName: tenant; trial; get started, start; help; MDM
+      - name: Create a user
+        href: ./fundamentals/quickstart-create-user.md
+      - name: Create a group
+        href: ./fundamentals/quickstart-create-group.md   
+      - name: Set up automatic enrollment
+        href: ./enrollment/quickstart-setup-auto-enrollment.md
+      - name: Enroll your Windows device
+        href: ./enrollment/quickstart-enroll-windows-device.md        
+      - name: Create a device compliance policy
+        href: ./protect/quickstart-set-password-length-android.md        
+      - name: Send notifications to noncompliant devices
+        href: ./protect/quickstart-send-notification.md        
+      - name: Add and assign a app
+        href: ./apps/quickstart-add-assign-app.md        
+      - name: Create and assign an app protection policy
+        href: ./apps/quickstart-create-assign-app-policy.md        
+      - name: Create and assign a custom role
+        href: ./fundamentals/quickstart-create-custom-role.md        
+      - name: Create a device profile
+        href: ./configuration/quickstart-email-profile.md    
 
   - name: Plan
     items:
-    - name: Planning overview 
-      href: ./fundamentals/migration-guide.md
     - name: Planning guide
       href: ./fundamentals/intune-planning-guide.md
 
-    - name: How to educate your end users (does this work here?)
+    - name: How to educate your end users
       href: ./fundamentals/end-user-educate.md
-
 
     - name: Evaluate current GPOs with settings catalog (is this a sub topic?)
 
@@ -83,7 +104,7 @@ items:
           href: ./fundamentals/deployment-guide-intune-setup.md
         - name: Step 1 (cont) to set up Intune (integrate with step above)
           href: ./fundamentals/setup-steps.md
-      - name: Step 2 - Add and protect apps
+      - name: Step 2 - Add, configure, and protect apps
         href: ./fundamentals/deployment-plan-protect-apps.md
       - name: Step 3 - Create compliance policies
         href: ./fundamentals/deployment-plan-compliance-policies.md
@@ -106,24 +127,24 @@ items:
 
     - name: Migrate to Microsoft Intune (need to update section for different scenarios)
       items: 
-      - name: Overview
+      - name: Overview - REWRITE or DELETE
         href: ./fundamentals/migration-guide.md
       - name: Migrate from Basic Mobility and Security
-        href: ./fundamentals/migrate-to-intune.md
+        items: 
+        - name: Migrate from Basic Mobility and Security
+          href: ./fundamentals/migrate-to-intune.md
+        - name: Policy mapping
+          items: 
+          - name: Access requirements policy mapping
+            href: ./fundamentals/policy-map-access-requirements.md
+          - name: Configurations policy mapping
+            href: ./fundamentals/policy-map-configurations.md
+          - name: Miscellaneous policy mapping
+            href: ./fundamentals/policy-map-miscellaneous.md
       - name: Device and app management
         href: ./fundamentals/migration-guide-configure-policies.md
       - name: App protection
         href: ./fundamentals/migration-guide-app-protection-policies.md
-      - name: Policy map between Basic Mobility and Security and Intune (moved from fundamentals)
-        items: 
-        - name: Policy mapping between Basic Mobility and Security and Intune
-          href: ./fundamentals/policy-map-between-basic-mobility-security-intune.md
-        - name: Access requirements policy mapping
-          href: ./fundamentals/policy-map-access-requirements.md
-        - name: Configurations policy mapping
-          href: ./fundamentals/policy-map-configurations.md
-        - name: Miscellaneous policy mapping
-          href: ./fundamentals/policy-map-miscellaneous.md
 
   - name: Solutions and scenarios
     items: 
@@ -201,13 +222,11 @@ items:
     - name: Microsoft Surface Management Portal
       href: ./fundamentals/surface-management-portal.md
 
-  - name: Feature areas (discuss name)
+  - name: How-to guides
     items:
 
-    - name: Microsoft Intune fundamentals (Hub page - where does this go?)
+    - name: Intune fundamentals
       href: ./fundamentals/index.yml
-
-    - name:  Intune subscription (discuss name)
       items:
       - name: Sign in to Intune
         href: ./fundamentals/account-sign-up.md
@@ -244,50 +263,53 @@ items:
 
     - name: Manage tenant configurations (discuss name)
       items:
-
-
-
-
+      
 
       - name: Premium add-ons (will need to sell this and move when it grows)
-        href: ./fundamentals/premium-add-ons.md
+        items:
+        - name: Premium add-ons (will need to sell this and move when it grows)
+          href: ./fundamentals/premium-add-ons.md
+        - name: Microsoft Tunnel for MAM
+          href: ./protect/microsoft-tunnel-mam.md
+
 
       - name: Reference
         items: 
         - name: Error codes and descriptions (need to figure out troubleshooting strategy)(move this node to help and support, and hand-off to troubleshooting content)
           items: 
-          - name: Troubleshoot company resource access problems
-            href: /troubleshoot/mem/intune/troubleshoot-company-resource-access-problems?toc=/mem/intune/fundamentals/toc.json&bc=/mem/intune/fundamentals/breadcrumb/toc.json
+          - name: Error codes and descriptions (need to figure out troubleshooting strategy)(move this node to help and support, and hand-off to troubleshooting content)
+            items: 
+            - name: Troubleshoot company resource access problems
+              href: /troubleshoot/mem/intune/troubleshoot-company-resource-access-problems?toc=/mem/intune/fundamentals/toc.json&bc=/mem/intune/fundamentals/breadcrumb/toc.json
 
-
-      - name: Resources
-        items:
-        - name: Archive
+        - name: Resources
           items:
-          - name: What's new archive
+          - name: Archive
             items:
-            - name: What's new archive (Azure portal) (Contains WN entries 6 months+ and older. Retain, but limit its age as well, or remain an eternal tally of past work?)
-              href: ./fundamentals/whats-new-archive.md
-            - name: What's new archive (classic portal) (deprecate/delete this article) 
-              href: ./fundamentals/whats-new-archive-classic.md
-          - name: Intune classic features in Azure (need to deprecate)
-            href: ./fundamentals/ui-changes.md
-          - name: Intune classic groups (need to deprecate)
-            href: ./fundamentals/groups-get-started.md
-          - name: iOS/iPadOS education settings  (should this node be in Industry guides > Education?)
-            items:
-            - name: iPad
-              href: ./fundamentals/education-settings-configure-ios.md
-            - name: Shared iPads
-              href: ./fundamentals/education-settings-configure-ios-shared.md
-          - name: Legacy Intune PC software client (deprecate/delete)
-            href: ./fundamentals/intune-legacy-pc-client.md
-          - name: Troubleshoot software updates (move to help and support. Maybe we need an article that provides a clear hand-off to troubleshooting content)
-            href: /troubleshoot/mem/intune/troubleshoot-software-updates-in-microsoft-intune
-          - name: Endpoint protection common errors (move to help and support. Maybe we need an article that provides a clear hand-off to troubleshooting content)
-            href: /troubleshoot/mem/intune/troubleshoot-endpoint-protection-in-microsoft-intune
-        - name: Intune end-user documentation
-          href: /mem/user-help/use-managed-devices-to-get-work-done.md
+            - name: What's new archive
+              items:
+              - name: What's new archive (Azure portal) (Contains WN entries 6 months+ and older. Retain, but limit its age as well, or remain an eternal tally of past work?)
+                href: ./fundamentals/whats-new-archive.md
+              - name: What's new archive (classic portal) (deprecate/delete this article) 
+                href: ./fundamentals/whats-new-archive-classic.md
+            - name: Intune classic features in Azure (need to deprecate)
+              href: ./fundamentals/ui-changes.md
+            - name: Intune classic groups (need to deprecate)
+              href: ./fundamentals/groups-get-started.md
+            - name: iOS/iPadOS education settings  (should this node be in Industry guides > Education?)
+              items:
+              - name: iPad
+                href: ./fundamentals/education-settings-configure-ios.md
+              - name: Shared iPads
+                href: ./fundamentals/education-settings-configure-ios-shared.md
+            - name: Legacy Intune PC software client (deprecate/delete)
+              href: ./fundamentals/intune-legacy-pc-client.md
+            - name: Troubleshoot software updates (move to help and support. Maybe we need an article that provides a clear hand-off to troubleshooting content)
+              href: /troubleshoot/mem/intune/troubleshoot-software-updates-in-microsoft-intune
+            - name: Endpoint protection common errors (move to help and support. Maybe we need an article that provides a clear hand-off to troubleshooting content)
+              href: /troubleshoot/mem/intune/troubleshoot-endpoint-protection-in-microsoft-intune
+          - name: Intune end-user documentation
+            href: /mem/user-help/use-managed-devices-to-get-work-done.md
 
     - name: Manage apps
       href: ./apps/index.yml
@@ -1444,7 +1466,7 @@ items:
           - name: Common questions and answers
             href: ./configuration/device-profile-troubleshoot.md
 
-    - name: Remote actions
+    - name: Initiate remote actions
       href: ./remote-actions/index.yml
       items:
       - name: Device management overview (Change title to remote actions overview or something?)
@@ -1520,7 +1542,7 @@ items:
           - name: Reduce help desk costs
             href: ./remote-actions/password-reset.md
 
-    - name: Reports <!--should this be in its own section?-->
+    - name: View reports and monitor status
       items:
       - name: Intune reports
         href: ./fundamentals/reports.md
@@ -1617,7 +1639,7 @@ items:
       - name: Graph APIs used to configure devices
         href: ./developer/graph-apis-used-by-intune-device-configuration-windows.md  
 
-  - name: Privacy and personal data (copied to own section - does this make sense?)
+  - name: Privacy and personal data
     href: ./protect/privacy-personal-data.md
     items:
     - name: Optional diagnostic data in client apps
@@ -1637,6 +1659,8 @@ items:
         href: ./protect/data-intune-sends-to-apple.md
       - name: Data Intune sends to Google
         href: ./protect/data-intune-sends-to-google.md
+      - name: Enable Windows diagnostic data 
+        href: ./protect/data-enable-windows-data.md
       - name: Information shared from Jamf Pro to Intune
         href: ./protect/data-jamf-sends-to-intune.md
     - name: View and correct personal data
