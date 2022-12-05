@@ -71,7 +71,7 @@ This article shows you how to import custom ADMX and ADML files in the Endpoint 
   
   In the following example, the`kerberos.admx` file requires the `Windows.admx` file:
   
-```Syntax
+```xml
  <policyNamespaces>
     <target prefix="kerberos" namespace="Microsoft.Policies.Kerberos" />
     <using prefix="windows" namespace="Microsoft.Policies.Windows" />
