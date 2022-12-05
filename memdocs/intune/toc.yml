@@ -261,10 +261,21 @@ items:
           href: ./fundamentals/scope-tags.md
 
 
+    - name: Manage tenant configurations (discuss name)
+      items:
+      
+
+      - name: Premium add-ons (will need to sell this and move when it grows)
+        items:
         - name: Premium add-ons (will need to sell this and move when it grows)
           href: ./fundamentals/premium-add-ons.md
+        - name: Microsoft Tunnel for MAM
+          href: ./protect/microsoft-tunnel-mam.md
 
-        - name: Reference
+
+      - name: Reference
+        items: 
+        - name: Error codes and descriptions (need to figure out troubleshooting strategy)(move this node to help and support, and hand-off to troubleshooting content)
           items: 
           - name: Error codes and descriptions (need to figure out troubleshooting strategy)(move this node to help and support, and hand-off to troubleshooting content)
             items: 
@@ -1648,6 +1659,8 @@ items:
         href: ./protect/data-intune-sends-to-apple.md
       - name: Data Intune sends to Google
         href: ./protect/data-intune-sends-to-google.md
+      - name: Enable Windows diagnostic data 
+        href: ./protect/data-enable-windows-data.md
       - name: Information shared from Jamf Pro to Intune
         href: ./protect/data-jamf-sends-to-intune.md
     - name: View and correct personal data
