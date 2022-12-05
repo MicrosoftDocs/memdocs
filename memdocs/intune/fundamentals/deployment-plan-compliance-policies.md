@@ -98,7 +98,7 @@ Tenant-wide settings are configured as *Compliance policy settings*:
 
 b. Configure **Compliance status validity period (days)** to have Intune mark devices as noncompliant when they’ve failed to report a compliance status for longer than the configured time. By being marked noncompliant, devices that might otherwise have access to your organizations resources and be blocked or identified for other actions such as retiring to remove them from management altogether.
 
-To learn more about Compliance Policy Settings at the tenant level, and how to configure them, see [Compliance policy settings](./protect/device-compliance-get-started#compliance-policy-settings.md)
+To learn more about Compliance Policy Settings at the tenant level, and how to configure them, see [Compliance policy settings](../protect/device-compliance-get-started#compliance-policy-settings.md)
 
 ## Core device compliance policy
 
@@ -113,23 +113,23 @@ You want to be sure that the devices that access your apps and data meet your or
 
 The following list of articles is a good place to start to get an understanding of the settings Intune policies natively support:
 
-- [Android device administrator](./protect/compliance-policy-create-android.md)
-- [Android Enterprise](./protect/compliance-policy-create-android-for-work.md)
-- [Android Open-Source Project (AOSP)](./protect/compliance-policy-create-android-aosp.md) 
-- [iOS](./protect/compliance-policy-create-ios.md)
-- [macOS](./protect/compliance-policy-create-mac-os.md)
-- [Windows 10/11](./protect/compliance-policy-create-windows.md)
+- [Android device administrator](../protect/compliance-policy-create-android.md)
+- [Android Enterprise](../protect/compliance-policy-create-android-for-work.md)
+- [Android Open-Source Project (AOSP)](../protect/compliance-policy-create-android-aosp.md) 
+- [iOS](../protect/compliance-policy-create-ios.md)
+- [macOS](../protect/compliance-policy-create-mac-os.md)
+- [Windows 10/11](../protect/compliance-policy-create-windows.md)
 
 > [!TIP]  
 > In addition to the build-in policy options, Intune supports custom compliance settings for Windows and Linux. This lets you define settings for compliance that are not part of Intune’s built-in policy UI. Custom compliance is treated as an advanced compliance configuration. Linux is supported only through custom compliance settings.
 
-When ready to create policies, see [Create a policy](./protect/create-compliance-policy.md). Your policies can also include [Actions for noncompliance](./protect/actions-for-noncompliance.md) that can help users bring their devices into compliance or lock a device that might be at risk. Actions your Intune compliance policies can initiate include:
+When ready to create policies, see [Create a policy](../protect/create-compliance-policy.md). Your policies can also include [Actions for noncompliance](../protect/actions-for-noncompliance.md) that can help users bring their devices into compliance or lock a device that might be at risk. Actions your Intune compliance policies can initiate include:
 
 - Marking a device as noncompliant.
 - Sending email to end users so they can remediate the compliance issue
 - Remotely locking noncompliance devices
 - Add the device to a list of devices for retirement.
-- After your policies roll out to devices, you can then [Monitor device compliance](./protect/compliance-policy-monitor.md) success.
+- After your policies roll out to devices, you can then [Monitor device compliance](../protect/compliance-policy-monitor.md) success.
 
 ## Advanced compliance policy configurations
 
@@ -141,6 +141,6 @@ When ready to create policies, see [Create a policy](./protect/create-compliance
 With robust device compliance policies in place, you can then implement more advanced compliance options, including:
 
 - Integrate device compliance status with Conditional Access to help gate which devices are allowed to access email, other cloud services, or on-premises resources.
-- Expand your device compliance policies by defining [Custom compliance settings](./protect/compliance-use-custom-settings.md) that aren't available natively through the Intune compliance policy UI.
-- Include compliance data from third-party compliance partners, when Intune isn’t your Mobile Device Management authority. With such a configuration, compliance data from those devices can be used with your conditional access policies](./protect/device-compliance-get-started#integrate-with-conditional-access.md).
-- Use data [Mobile Threat Defense partners](./protect/mobile-threat-defense.md) as part of your device compliance policies, and in your Conditional Access policies.
+- Expand your device compliance policies by defining [Custom compliance settings](../protect/compliance-use-custom-settings.md) that aren't available natively through the Intune compliance policy UI.
+- Include compliance data from third-party compliance partners, when Intune isn’t your Mobile Device Management authority. With such a configuration, compliance data from those devices can be used with your conditional access policies](../protect/device-compliance-get-started#integrate-with-conditional-access.md).
+- Use data [Mobile Threat Defense partners](../protect/mobile-threat-defense.md) as part of your device compliance policies, and in your Conditional Access policies.
