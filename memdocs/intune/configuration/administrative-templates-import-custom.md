@@ -67,7 +67,7 @@ This article shows you how to import custom ADMX and ADML files in the Endpoint 
 
   To remove a dependency prerequisite, delete the associated ADMX file first. Then, delete the dependency prerequisite. In our Mozilla Firefox example, delete `firefox.admx` and then delete `mozilla.admx`.
   
-  To see if your ADMX has a dependency, open it in a text editor and look for using references in the policyNamespaces node. For example, this `kerberos.admx` file requires the `Windows.admx` file be uploaded to Intune first
+  To see if your ADMX has a dependency, open it in a text editor and look for `using references` in the `policyNamespaces` node. For example, this `kerberos.admx` file requires the `Windows.admx` file to be uploaded to Intune first:
   
 ```Syntax
  <policyNamespaces>
