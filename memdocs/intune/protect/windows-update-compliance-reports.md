@@ -303,11 +303,11 @@ The following list identifies Alert Messages, and suggested remediation actions:
 
 ## Use Windows Update for Business reports
 
-You can monitor Windows update rollouts by using [Windows Update for Business reports](/windows/deployment/update/wufb-reports-overview). Windows Update for Business reports is offered through the Azure portal and is included as part of Windows 10/11 licenses listed in the [prerequisites](windows/deployment/update/wufb-reports-prerequisites). Azure Log Analytics ingestion and retention charges are not incurred on your Azure subscription for Windows Update for Business reports data.
+You can monitor Windows update rollouts by using [Windows Update for Business reports](/windows/deployment/update/wufb-reports-overview). Windows Update for Business reports is offered through the Azure portal and is included as part of Windows 10/11 licenses listed in the [prerequisites](/windows/deployment/update/wufb-reports-prerequisites). Azure Log Analytics ingestion and retention charges are not incurred on your Azure subscription for Windows Update for Business reports data.
 
 To use this solution, you'll:
 
-- Use an Intune device configuration profile to deploy the [settings](windows/deployment/update/wufb-reports-configuration-intune) to your Windows 10/11 devices.
+- Use an Intune device configuration profile to deploy the [settings](/windows/deployment/update/wufb-reports-configuration-intune) to your Windows 10/11 devices.
 
 - Optionally, deploy a configuration script as a Win32 app to those same devices to validate their configuration for Windows Update for Business reports.
 
