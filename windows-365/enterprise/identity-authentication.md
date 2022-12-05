@@ -135,7 +135,8 @@ Single sign-on (SSO) allows the connection to skip the Cloud PC VM credential pr
 
 Without SSO, the client will prompt users for their session host credentials for every connection. The only way to avoid being prompted is to save the credentials in the client. We recommend you only save credentials on secure devices to prevent other users from accessing your resources.
 
-
+>[!NOTE]
+>To maintain single sign-on to Kerberos-based apps and resources in the Cloud PC environment, you must properly [configure your environment to trust the Azure AD Kerberos service](/azure/active-directory/authentication/howto-authentication-passwordless-security-key-on-premises).
 
 <!-- ########################## -->
 ## Next steps
