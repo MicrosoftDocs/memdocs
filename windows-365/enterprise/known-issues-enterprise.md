@@ -104,7 +104,7 @@ When accessing windows365.microsoft.com, the user receives a message "Your organ
 
 **Troubleshooting steps**: Make sure that:
 
-1. The user has been assigned a Windows 365 license. For more information, see [Windows 365 plans and pricing](https://www.microsoft.com/windows-365/enterprise?rtc=1).
+1. The user has been assigned a Windows 365 license. For more information, see [Assign licenses](assign-licenses.md) and [Windows 365 plans and pricing](https://www.microsoft.com/windows-365/enterprise?rtc=1).
 2. You’ve created a provisioning policy that includes the user. For more information, see [Create provisioning policies]( /windows-365/enterprise/create-provisioning-policy).
 
 ## Next steps
