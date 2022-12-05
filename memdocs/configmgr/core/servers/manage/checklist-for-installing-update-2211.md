@@ -2,7 +2,7 @@
 title: Checklist for 2211
 titleSuffix: Configuration Manager
 description: Learn about actions to take before updating to Configuration Manager version 2211.
-ms.date: 12/02/2022
+ms.date: 12/05/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
