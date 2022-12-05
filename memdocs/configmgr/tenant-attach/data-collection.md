@@ -6,8 +6,8 @@ ms.date: 03/24/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
-author: Banreet
-ms.author: banreetkaur
+author: gowdhamankarthikeyan
+ms.author: gokarthi
 manager: apoorvseth
 ms.localizationpriority: high
 ms.reviewer: mstewart,aaroncz 
@@ -75,7 +75,6 @@ For each device:
 
 ## Microsoft Defender for Endpoint
 <!-- 6505652 -->
-
 For any collection that you select for Endpoint policy deployment:
 
 - **CollectionId**: The unique identifier of the collection. For example, `ABC00014`
@@ -85,8 +84,46 @@ For any collection that you select for Endpoint policy deployment:
 - **CountCompliant**: The count of devices that are compliant with this policy
 - **CountNonCompliant**: The count of devices that aren't compliant with this policy
 - **CountFailed**: The count of devices that failed to process this policy
-- **CountActivated**
-- **CountEnforced**
+- **CountActivated**: The count of devices where the policy is activated
+- **CountEnforced**: The count of devices where the policy is enforced
+- **TenantId**: The unique identifier of your Azure Active Directory (Azure AD) tenant
+- **HierarchyId**: The unique identifier of your Configuration Manager hierarchy
+- **DeviceId**: The unique identifier of the device in Azure AD
+- **ProductStatus**: Provide the current state of the product
+- **ComputerState**: Provide the current state of the device
+- **DefenderEnabled**: Indicates whether the Windows Defender service is running
+- **RtpEnabled**: Indicates whether real-time protection is running
+- **NisEnabled**: Indicates whether network protection is running
+- **QuickScanOverdue**: Indicates whether a Windows Defender quick scan is overdue for the device
+- **FullScanOverdue**: Indicates whether a Windows Defender full scan is overdue for the device
+- **SignatureOutOfDate**: Indicates whether the Windows Defender signature is outdated
+- **RebootRequired**: Indicates whether a device reboot is needed
+- **FullScanRequired**: Indicates whether a Windows Defender full scan is required
+- **EngineVersion**: Version number of the current Windows Defender engine on the device
+- **SignatureVersion**: Version number of the current Windows Defender signatures on the device
+- **DefenderVersion**: Version number of Windows Defender on the device
+- **QuickScanTime**: Time of the last Windows Defender quick scan of the device
+- **FullScanTime**: Time of the last Windows Defender full scan of the device
+- **QuickScanSigVersion**: Signature version used for the last quick scan of the device
+- **FullScanSigVersion**: Signature version used for the last full scan of the device
+- **TamperProtectionEnabled**: Indicates whether the Windows Defender tamper protection feature is enabled
+- **IsMdeSenseRunning**: Indicates the Windows Defender Advanced Threat Protection Sense running state
+- **MdeOnboardingState**: Indicates Defender for Endpoint onboarding state for the device
+- **IsVirtualMachine**: Indicates whether the device is a virtual machine
+- **LastUpdateTime**: Time of the last Windows Defender signature update
+- **ThreatID**: The ID of a threat that has been detected by Windows Defender
+- **ThreatName**: The name of the specific threat
+- **Category**: Threat category ID
+- **Severity**: Threat severity ID
+- **URL**: URL link for additional threat information
+- **CurrentStatus**: Information about the current status of the threat
+- **CurrentStatusID**: Information about the current status of the threat
+- **ExecutionStatus**: Information about the execution status of the threat
+- **LastThreatStatusChangeTime**: The last time this particular threat was changed
+- **InitialDetectionTime**: The first time this particular threat was detected
+- **NumberOfDetections**: Number of times this threat has been detected on a particular client
+
+For more details on data collected for Microsoft Defender for Endpoint, see [Defender CSP](/windows/client-management/mdm/defender-csp).
 
 ## Azure Application Insights
 <!-- 7544688 -->

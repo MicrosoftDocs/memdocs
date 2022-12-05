@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/25/2022
+ms.date: 11/17/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -95,7 +95,7 @@ You can customize the following Microsoft Tunnel health status metrics to change
 
 **To modify a metrics threshold value**:
 
-:::image type="content" source="./media/microsoft-tunnel-monitor/thresholds.png" alt-text="Screen capture of how to select and configure health status threaholds.":::
+:::image type="content" source="./media/microsoft-tunnel-monitor/thresholds.png" alt-text="Screen capture of how to select and configure health status thresholds.":::
 
 1. Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Tenant administration** > **Microsoft Tunnel Gateway** > **Health status**.
 
@@ -192,15 +192,72 @@ For more information about *journalctl*, see the documentation for the version o
 
 The following are known issues for Microsoft Tunnel.
 
-### Devices fail to connect to the Tunnel server
+### Server health
 
-**Issue**: Devices fail to connect to the server, and the Tunnel server *ocserv* log file contains an entry similar to the following: `main: tun.c:655: Can't open /dev/net/tun: Operation not permitted`
+#### Clients can successfully use the Tunnel when Server health status shows as offline<!-- 14878305 -->
+
+**Issue**: On the [Tunnel *Health status* tab](../protect/microsoft-tunnel-monitor.md), a server’s health status reports as offline indicating it's disconnected, even though users can reach the tunnel server and connect to the organization’s resources.  
+
+**Solution**: To resolve this issue, you must reinstall Microsoft Tunnel, which re-enrolls the Tunnel server agent with Intune. To prevent this issue, install updates for the Tunnel agent and server soon after they're released. Use the Tunnel server health metrics in the Microsoft Endpoint Manager admin center to monitor server health.
+
+#### With Podman, you see “Error executing checkup” in the mstunnel_monitor log<!-- 14878316 -->
+
+**Issue**: Podman fails to identify or see the active containers are running, and reports “Error executing checkup” in the [mstunnel_monitor log](../protect/microsoft-tunnel-monitor.md#view-microsoft-tunnel-logs) of the Tunnel server.  The following are examples of the errors: 
+
+- Agent:  
+  ```
+  Error executing Checkup
+  Error details
+  \tscript: 561 /usr/sbin/mst-cli
+  \t\tcommand: $ctr_cli exec $agent_name mstunnel checkup 2> >(FailLogger)
+  \tstack:
+  \t\t<> Checkup /usr/sbin/mst-cli Message: NA
+  \t\t<> MonitorServices /usr/sbin/mst-cli Message: Failure starting service mstunnel-agent
+  \t\t<> main /usr/sbin/mstunnel_monitor Message: NA
+  ```
+
+- Server:  
+  ```
+  Error executing Checkup
+  Error details
+  \tscript: 649 /usr/sbin/mst-cli
+  \t\tcommand: $ctr_cli exec $agent_name mstunnel checkup 2> >(FailLogger)
+  \tstack:
+  \t\t<> Checkup /usr/sbin/mst-cli Message: NA
+  \t\t<> MonitorServices /usr/sbin/mst-cli Message: Failure starting service mstunnel-server
+  \t\t<> main /usr/sbin/mstunnel_monitor Message: NA
+  ```
+
+**Solution**: To resolve this issue, manually [restart the Podman containers](https://docs.podman.io/en/latest/markdown/podman-restart.1.html). Podman should then be able to identify the containers. If the problem persists, or returns, consider using ***cron*** to create a job that automatically restarts the containers when this issue is seen.
+
+#### With Podman, you see System.DateTime errors in the mstunnel-agent log<!-- 14878334  -->
+
+**Issue**: When you use Podman, the mstunnel-agent log might contain errors similar to the following entries:
+
+- `Failed to parse version-info.json for version information.`
+- `System.Text.Json.JsonException: The JSON value could not be converted to System.DateTime`
+
+This issue occurs due to differences in formatting dates between Podman and Tunnel Agent. These errors don't indicate a fatal issue or prevent connectivity.  Beginning with containers released after October 2022, the formatting issues should be resolved.  
+
+**Solution**: To resolve these issues, update the agent container (Podman or Docker) to the latest version. As new sources of these errors are discovered, we’ll continue to fix them in subsequent version updates.
+
+### Connectivity to Tunnel
+
+#### Devices fail to connect to the Tunnel server
+
+**Issue**: Devices fail to connect to the server, and the Tunnel server *ocserv* log file contains an entry similar to the following entry: `main: tun.c:655: Can't open /dev/net/tun: Operation not permitted`
 
 For guidance on viewing Tunnel logs, see [View Microsoft Tunnel logs](#view-microsoft-tunnel-logs) in this article.
 
-**Workaround**: Restart the server using `mst-cli server restart` after the Linux server reboots.
+**Solution**: Restart the server using `mst-cli server restart` after the Linux server reboots.
 
 If this issue persists, consider automating the restart command by using the cron scheduling utility. See [How to use cron on Linux](https://opensource.com/article/21/7/cron-linux) at *opensource.com*.
+
+#### Users can't connect to resources while using Microsoft Edge<!-- 13119847 -->
+
+**Issue**: After you've [migrated from the stand-alone tunnel client app to Microsoft Defender for Endpoint](../protect/microsoft-tunnel-migrate-app.md) and are then using Microsoft Edge, users are unable to access any internal or external websites. Users might also see a message similar to: `You’re not Connected`.
+
+**Solution**: This issue can occur when the standalone Tunnel client app remains installed while the Microsoft Defender for Endpoint app is in use. To resolve this issue, uninstall the standalone Tunnel client app. It's also possible to uninstall the standalone client app prior to installing Microsoft Defender for Endpoint, but doing so might leave your devices unable to use Microsoft Tunnel until the new Tunnel app is in place and fully configured.  
 
 ## Next steps
 
