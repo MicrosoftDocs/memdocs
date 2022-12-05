@@ -661,7 +661,7 @@ The device management point is also deprecated. It's a management point that you
 
 Starting in version 2103, this check warns about the presence of the [Log Analytics connector for Azure Monitor](/azure/azure-monitor/platform/collect-sccm?context=%2fmem%2fconfigmgr%2fcore%2fcontext%2fcore-context). (This feature is called the *OMS Connector* in the Azure Services wizard.)
 
-Starting in version 2107, this connector is removed from the product. This check will be an error that blocks upgrade.<!-- 9649296 -->
+<!-- Starting in version 2107, this connector is removed from the product. This check will be an error that blocks upgrade.--> <!-- 9649296 -->
 
 ### Check if the site uses Upgrade Readiness cloud service connector
 
