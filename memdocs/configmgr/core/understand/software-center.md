@@ -124,7 +124,7 @@ Also, admins can make the **Featured** tab of Software Center as the default tab
 
 If an app is marked as **Featured** and it's deployed to a User Collection as an Available app, it will show under the **Featured** pivot in Software Center.
 
-:::image type="content" source="../../media/3601183-featured-apps-software-center.png" alt-text="Screenshot of wizard for app properties. It displays the checkbox, which needs to be selected to make apps as featured in software center." lightbox="../../media/3601183-featured-apps-software-center.png":::
+:::image type="content" source="media/3601183-featured-apps-software-center.png" alt-text="Screenshot of wizard for app properties. It displays the checkbox, which needs to be selected to make apps as featured in software center." lightbox="media/3601183-featured-apps-software-center.png":::
 
 
 ## Updates
