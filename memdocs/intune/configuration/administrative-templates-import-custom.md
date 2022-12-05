@@ -76,7 +76,6 @@ This article shows you how to import custom ADMX and ADML files in the Endpoint 
   </policyNamespaces>
 ```
 
-  
   > [!TIP]
   > 
   > - To see any namespace dependencies, open the ADMX file and search for `using prefix`. Any dependencies will be listed.
