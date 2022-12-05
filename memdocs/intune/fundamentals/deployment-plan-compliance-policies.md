@@ -44,7 +44,7 @@ ms.collection:
 
 # Step 3 – Plan for compliance policies
 
-*<This article stub remains a work in progress>*
+*This article stub remains a work in progress*
 
 Previously, you’ve set up your Intune subscription and created app protection policies. In this step, you’ll configure device compliance settings and policies to help protect organizational data by requiring devices to meet requirements that you set. You deploy these policies directly to devices, or to users so that any device they use must also meet your requirements. Examples of requirements include:  
 
@@ -98,7 +98,7 @@ Tenant-wide settings are configured as *Compliance policy settings*:
 
 b. Configure **Compliance status validity period (days)** to have Intune mark devices as noncompliant when they’ve failed to report a compliance status for longer than the configured time. By being marked noncompliant, devices that might otherwise have access to your organizations resources and be blocked or identified for other actions such as retiring to remove them from management altogether.
 
-To learn more about Compliance Policy Settings at the tenant level, and how to configure them, see [Compliance policy settings](../protect/device-compliance-get-started#compliance-policy-settings.md)
+To learn more about Compliance Policy Settings at the tenant level, and how to configure them, see [Compliance policy settings](../protect/device-compliance-get-started.md#compliance-policy-settings)
 
 ## Core device compliance policy
 
