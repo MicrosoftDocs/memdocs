@@ -315,6 +315,9 @@ The following features don't support using filters:
 - Terms and conditions
 - Update policies for iOS/iPadOS
 - Feature updates for Windows
+- Enrollment notifications
+- Android AOSP platform workloads
+- Linux platform workloads
 
 ## Next steps
 
