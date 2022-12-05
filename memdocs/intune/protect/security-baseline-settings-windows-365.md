@@ -20,7 +20,7 @@ zone_pivot_groups: windows-365-baseline-versions
 #ROBOTS:
 #audience:
 
-ms.reviewer: laarrizz 
+ms.reviewer: juidaewo 
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:

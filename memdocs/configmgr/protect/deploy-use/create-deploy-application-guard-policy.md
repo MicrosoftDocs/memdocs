@@ -2,7 +2,7 @@
 title: Manage Application Guard policies
 titleSuffix: Configuration Manager
 description: Learn how to create and deploy Microsoft Defender Application Guard policies
-ms.date: 08/12/2022
+ms.date: 12/05/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -80,6 +80,13 @@ To edit Application Guard settings, expand **Endpoint Protection** in the **Asse
 _Applies to version 2203 or earlier_
 
 Devices running Windows 10, version 2004 will show failures in compliance reporting for Microsoft Defender Application Guard File Trust Criteria. This issue occurs because some subclasses were removed from the WMI class `MDM_WindowsDefenderApplicationGuard_Settings01` in Windows 10, version 2004. All other Microsoft Defender Application Guard settings will still apply, only File Trust Criteria will fail. Currently, there are no workarounds to bypass the error. <!--7099444,5946790-->
+
+_Applies to version 2207 or later_
+
+Enabling the policy doesn't install Microsoft Defender Application Guard feature by default. Deploy a PowerShell script via ConfigMgr to all applicable machines.
+
+Use the following commands to enable feature.
+Enable-WindowsOptionalFeature -online -FeatureName "Windows-Defender-ApplicationGuard" <!--15933171-->
 
 ## Next steps
 

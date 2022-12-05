@@ -2,7 +2,7 @@
 title: After the site updates
 titleSuffix: Configuration Manager
 description: Learn what to do after the Configuration Manager site installs an in-console update.
-ms.date: 08/12/2022
+ms.date: 12/05/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to
@@ -158,6 +158,8 @@ To report upgrade failures to Microsoft:
 
 After the site updates, review the post-update checklist for the applicable version:
 
+- [Post-update checklist for version 2211](checklist-for-installing-update-2211.md#post-update-checklist)
+
 - [Post-update checklist for version 2207](checklist-for-installing-update-2207.md#post-update-checklist)
 
 - [Post-update checklist for version 2203](checklist-for-installing-update-2203.md#post-update-checklist)
@@ -166,7 +168,7 @@ After the site updates, review the post-update checklist for the applicable vers
 
 - [Post-update checklist for version 2107](checklist-for-installing-update-2107.md#post-update-checklist)
 
-- [Post-update checklist for version 2103](checklist-for-installing-update-2103.md#post-update-checklist)
+
 
 
 
