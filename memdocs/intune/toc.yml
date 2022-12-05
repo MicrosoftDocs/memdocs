@@ -64,14 +64,11 @@ items:
 
   - name: Plan
     items:
-    - name: Planning overview 
-      href: ./fundamentals/migration-guide.md
     - name: Planning guide
       href: ./fundamentals/intune-planning-guide.md
 
     - name: How to educate your end users
       href: ./fundamentals/end-user-educate.md
-
 
     - name: Evaluate current GPOs with settings catalog (is this a sub topic?)
 
@@ -107,7 +104,7 @@ items:
           href: ./fundamentals/deployment-guide-intune-setup.md
         - name: Step 1 (cont) to set up Intune (integrate with step above)
           href: ./fundamentals/setup-steps.md
-      - name: Step 2 - Add and protect apps
+      - name: Step 2 - Add, configure, and protect apps
         href: ./fundamentals/deployment-plan-protect-apps.md
       - name: Step 3 - Create compliance policies
         href: ./fundamentals/deployment-plan-compliance-policies.md
@@ -130,7 +127,7 @@ items:
 
     - name: Migrate to Microsoft Intune (need to update section for different scenarios)
       items: 
-      - name: Overview
+      - name: Overview - REWRITE or DELETE
         href: ./fundamentals/migration-guide.md
       - name: Migrate from Basic Mobility and Security
         items: 
