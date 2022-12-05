@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Set up Intune
+title : Set up Intune
 titleSuffix: Microsoft Intune
-description: Description for setting up Intune
-author:smbhardwaj
+description: Step 1 for deploying or setting up Intune. The starting point is to review supported configurations, sign-up for the trial, configure the custom domain name, add users and groups to Intune, assign licenses to users, manage roles, grant admin permissions , and set the MDM authority.  
+author: SmritiBhardwaj
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 11/8/2022
+ms.date: 12/05/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
