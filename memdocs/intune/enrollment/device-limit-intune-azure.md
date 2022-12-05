@@ -46,7 +46,7 @@ This article clarifies when these limits are applied based on your configuration
 
 ## Intune device limit restrictions
 
-Intune device limit restrictions set the maximum number of devices that a user can enroll (maximum setting is 15). To set this **Device limit**, go to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Enrollment restrictions**. For more information, see [Create a device limit restriction](create-device-limit-restrictions.md). 
+Intune device limit restrictions set the maximum number of devices that a user can enroll (maximum setting is 15). To set a device limit restriction, sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Then go to **Devices** > **Enrollment restrictions**. For more information, see [Create a device limit restriction](create-device-limit-restrictions.md).  
 
 ## Azure device limit restriction
 
