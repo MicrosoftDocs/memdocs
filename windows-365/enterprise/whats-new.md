@@ -56,7 +56,7 @@ Learn what new features are available in Windows 365 Enterprise.
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Provisioning
 
-### Configure installed language and region for provisioning Cloud PCs generally available<!--38310774 -->
+#### Configure installed language and region for provisioning Cloud PCs generally available<!--38310774 -->
 
 Language pre-configuration for Cloud PCs has moved out of preview and into general availability. Admins can select the **Language and region** option under **Update organization settings** to pre-configure the language for the endpoint devices. See [Change organizational default settings](change-organization-default-settings.md).
 
