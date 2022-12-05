@@ -41,6 +41,8 @@ The device to be enrolled must follow these requirements:
 - Undergo the out-of-box experience (OOBE).
 - Use an authorization type that Azure Active Directory supports in OOBE.
 
+Although not required, configuring hybrid Azure AD join for AD FS enables a faster Windows Autopilot Azure AD registration process during deployments. 
+
 ## Set up Windows automatic enrollment
 
 1. Sign in to Azure, in the left pane, select **Azure Active Directory** > **Mobility (MDM and MAM)** > **Microsoft Intune**.
