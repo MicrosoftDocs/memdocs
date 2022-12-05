@@ -17,7 +17,7 @@ ms.localizationpriority: medium
 #ROBOTS:
 #audience:
 
-ms.reviewer: laarrizz 
+ms.reviewer: juidaewo 
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -1488,7 +1488,7 @@ For more information, see [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlin
 
 - **Turn on Windows SmartScreen**  
   Baseline default: *Yes*  
-   [Learn more](https://go.microsoft.com/fwlink/?linkid=872784l)
+   [Learn more](/windows/client-management/mdm/policy-csp-smartscreen#smartscreen-enablesmartscreeninshell)
 
 - **Block users from ignoring SmartScreen warnings**  
   Baseline default: *Yes*  

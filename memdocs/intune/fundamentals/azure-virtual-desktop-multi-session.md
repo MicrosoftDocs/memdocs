@@ -43,6 +43,9 @@ Windows 10 or Windows 11 Enterprise multi-session is a new Remote Desktop Sessio
 
 You can manage **Windows 10** and **Windows 11 Enterprise multi-session** VMs created in Azure Government Cloud in US Government Community (GCC), GCC High, and DoD. 
 
+> [!IMPORTANT]
+> Microsoft Intune support for Azure Virtual Desktop multi-session is not currently available for Citrix DaaS and VMware Horizon Cloud.
+
 ## Overview
 
 Device configuration support in Microsoft Intune for Windows 10 or Windows 11 Enterprise multi-session is generally available (GA). This means [policies defined in the OS scope](/windows/client-management/mdm/policy-configuration-service-provider) and apps configured to install in the system context can be applied to Azure Virtual Desktop multi-session VMs when assigned to device groups.
@@ -50,7 +53,7 @@ Device configuration support in Microsoft Intune for Windows 10 or Windows 11 En
 > [!NOTE]
 > Device-based configuration cannot be assigned to users and user-based configuration cannot be assigned to devices. It will be reported as **Error** or **Not applicable**.
 
-User configuration support in Microsoft Intune for Windows 11 multi-session VMs is generally available. With this you'll be able to:
+User configuration support in Microsoft Intune for Windows 11 multi-session VMs is generally available. With this you are able to:
 
  - Configure user scope policies using **Settings catalog** and assign to groups of users. You can use the search bar to search all configurations with scope set to "user".
  

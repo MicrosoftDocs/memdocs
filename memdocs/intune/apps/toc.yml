@@ -47,8 +47,10 @@ items:
           href: store-apps-android.md
         - name: iOS store apps
           href: store-apps-ios.md
-        - name: Microsoft store apps
-          href: store-apps-windows.md
+        - name: Microsoft Store apps
+          href: store-apps-microsoft.md
+        - name: Microsoft Store apps (legacy)
+          href: store-apps-windows.md          
         - name: Microsoft Store for Business apps
           href: windows-store-for-business.md
         - name: Managed Google Play apps

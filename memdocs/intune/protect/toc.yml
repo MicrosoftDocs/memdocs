@@ -41,6 +41,8 @@ items:
         href: data-intune-sends-to-apple.md
       - name: Data Intune sends to Google
         href: data-intune-sends-to-google.md
+      - name: Enable Windows diagnostic data
+        href: data-enable-windows-data.md
       - name: Information shared from Jamf Pro to Intune
         href: data-jamf-sends-to-intune.md
     - name: View and correct personal data
@@ -135,6 +137,8 @@ items:
       href: microsoft-tunnel-prerequisites.md
     - name: Configure Microsoft Tunnel
       href: microsoft-tunnel-configure.md
+    - name: Microsoft Tunnel for MAM
+      href: microsoft-tunnel-mam.md
     - name: Monitor Microsoft Tunnel
       href: microsoft-tunnel-monitor.md
     - name: Upgrade Microsoft Tunnel

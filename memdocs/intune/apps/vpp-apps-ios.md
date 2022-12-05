@@ -176,7 +176,10 @@ The end-user will receive prompts for VPP app installation in a number of scenar
 | 6 | CORP – device licensed (supervised device)                           | N                                                                                               | N                                           | N                                 |
 | 7 | Kiosk mode (supervised device) – device licensed | N                                                                                               | N                                           | N                                 |
 | 8 | Kiosk mode (supervised device) – user licensed   | --- | ---                                          | ---                                |
-
+   
+> [!Note]  
+> User and device licensed apps running on supervised devices (scenarios 3 and 6 in the table above) will still prompt for updates if the app is in use or is running in the background. Accepting the prompt to install the app may not result in the app installing. In order to update the app, you must:  close the app, initiate a sync, and leave the device unlocked while the app updates. 
+   
 > [!Note]  
 > It is not recommended to assign VPP apps to Kiosk-mode devices using user licensing.
 
