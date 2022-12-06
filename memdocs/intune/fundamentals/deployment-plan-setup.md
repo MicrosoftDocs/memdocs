@@ -120,3 +120,12 @@ The mobile device management (MDM) authority setting determines how you manage y
 ✔️ **Get started with assigning licenses to users**
 
  If you are changing your tenant to support Intune, you will need to change your MDM authority configuration. For guidance, go to [Set the mobile device management authority](mdm-authority-set.md).
+
+## Customize the Intune company portal
+
+The Company Portal apps, Company Portal website, and Intune app on Android are where users access company data and can do common tasks. Common task may include enrolling devices, installing apps, and locating information (such as for assistance from your IT department).
+
+✔️ **Get started with configuring the company portal**
+
+ Customize the Intune Company Portal that users use to enroll devices and install apps. These settings appear in both the Company Portal app and the Intune Company Portal website.
+ For guidance, go to [Configure the company portal](../apps/company-portal-app.md).
