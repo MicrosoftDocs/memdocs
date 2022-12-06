@@ -53,7 +53,7 @@ items:
         href: ./protect/quickstart-set-password-length-android.md        
       - name: Send notifications to noncompliant devices
         href: ./protect/quickstart-send-notification.md        
-      - name: Add and assign a app
+      - name: Add and assign an app
         href: ./apps/quickstart-add-assign-app.md        
       - name: Create and assign an app protection policy
         href: ./apps/quickstart-create-assign-app-policy.md        
