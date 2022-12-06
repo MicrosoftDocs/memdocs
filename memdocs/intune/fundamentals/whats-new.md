@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/15/2022
+ms.date: 12/01/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -65,6 +65,46 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Scripts
 ### Tenant administration
 -->
+
+## Week of November 28, 2022
+
+### App management
+
+#### Microsoft Store apps in Intune<!-- 12708346 -->  
+You can now search, browse, configure, and deploy Microsoft Store apps within Intune. The new Microsoft Store app type is implemented using the Windows Package Manager. This app type features an expanded catalog of apps, which includes both UWP apps and Win32 apps. Roll out of this feature is expected to complete by December 2, 2022.  For more information, see [Add Microsoft Store apps to Microsoft Intune](../apps/store-apps-microsoft.md).
+
+### Tenant administration
+
+#### Access policies for multiple Administrator Approval (public preview)<!-- 9348867  -->
+In public preview, you can use Intune *access policies* to require that a second Administrator Approval account be used to approve a change before the change is applied. This capability is known as multiple Administrator Approval (MAA).
+
+You create an access policy to protect a type of resource, like App deployments. Each access policy also includes a group of users who are *approvers* for the changes protected by the policy. When a resource like an app deployment configuration is protected by an access policy, any changes that are made to the deployment, including creating, deleting, or modifying an existing deployment won't apply until a member of the approvers group for that access policy reviews and approves that change.
+
+Approvers can also reject requests, and both the individual requesting a change and the approver can provide notes about the change, or why it was approved or rejected.
+
+Access policies are supported for the following resources:
+
+- **Apps** – Applies to [app deployments](../apps/apps-add.md), but doesn't apply to app protection policies.
+- **Scripts** – Applies to deploying scripts to devices that run [macOS](../apps/macos-shell-scripts.md) or [Windows](../apps/intune-management-extension.md).
+
+For more information, see [Use Access policies to require multiple administrative approval](../fundamentals/multi-admin-approval.md).  
+
+### Device security
+
+#### Microsoft Tunnel for Mobile Application Management for Android (Preview)<!-- 15769204 -->  
+As a public preview, you can now use Microsoft Tunnel with unenrolled devices. This capability is called [Microsoft Tunnel for Mobile Application Management](../protect/microsoft-tunnel-mam.md) (MAM). This preview supports Android, and without any changes to your existing Tunnel infrastructure, supports the Tunnel VPN gateway for:
+
+- Secure access to on-premises apps and resources using modern authentication
+- Single Sign On and conditional access
+
+To use Tunnel MAM, unenrolled devices must install Microsoft Edge, Microsoft Defender for Endpoint, and the Company Portal. You can then use the Microsoft Endpoint Manager admin center to configure the following profiles for the unenrolled devices:
+
+- An App configuration profile for managed apps, to configure Microsoft Defender on devices for use as the Tunnel client app.
+- A second App configuration profile for managed apps, to configure Microsoft Edge to connect to Tunnel.
+- An App protection profile to enable automatic start of the Microsoft Tunnel connection.
+
+Applies to:  
+- Android Enterprise
 
 ## Week of November 14, 2022 (Service release 2211)
 
@@ -141,10 +181,6 @@ New settings include:
 
 - Device Key
 - Location
-
-**Privacy > Privacy Preferences Policy Control**:
-
-- Authorization
 
 **Restrictions**:
 
@@ -235,21 +271,6 @@ For more information about protected apps, see [Microsoft Intune protected apps]
 You can now review connectivity health checks and errors in the Microsoft Endpoint Manager admin center to help you understand if your users are experiencing connectivity issues. You’ll also get a troubleshooting tool to help resolve connectivity issues. To see the checks, select **Devices** > **Windows 365** > **Azure network connections** > *select a connection in the list* > **Overview**.  
 
 ### Tenant administration
-
-#### Access policies for multiple Administrator Approval (public preview)<!-- 9348867 -->
-In public preview, you can use Intune *access policies* to require that a second Administrator Approval account be used to approve a change before the change is applied.  This capability is known as multiple Administrator Approval (MAA).
-
-You create an access policy to protect a type of resource, like App deployments. Each access policy also includes a group of users who are *approvers* for the changes protected by the policy. When a resource like an app deployment configuration is protected by an access policy, any changes that are made to the deployment, including creating, deleting, or modifying an existing deployment won't apply until a member of the approvers group for that access policy reviews and approves that change.
-
-Approvers can also reject requests, and both the individual requesting a change and the approver can provide notes about the change, or why it was approved or rejected.
-
-Access policies are supported for the following resources:
-
-- **Apps** – Applies to [app deployments](../apps/apps-add.md), but doesn't apply to app protection policies.
-- **Scripts** – Applies to deploying scripts to devices that run [macOS](../apps/macos-shell-scripts.md) or [Windows](../apps/intune-management-extension.md).
-
-For more information, see [Use Access policies to require multiple administrative approval](../fundamentals/multi-admin-approval.md).
-
 
 #### Deliver organizational messages for Windows 11 (public preview)<!-- 15314747  -->  
 Use Microsoft Intune to deliver important messages and call-to-actions to employees on their devices.  Organizational messages are preconfigured messages intended to improve employee communication in remote and hybrid-work scenarios. They can be used to help employees adapt to new roles, learn more about their organization, and stay informed of new updates and trainings. You can deliver messages  just above the taskbar, in the notifications area, or in the Get Started app on Windows 11 devices.

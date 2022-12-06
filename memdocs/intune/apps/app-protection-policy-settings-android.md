@@ -90,7 +90,6 @@ There are some exempt apps and platform services that Intune app protection poli
   |:------|:----|
   |com.android.phone |Native phone app
   |com.android.vending |Google Play Store |
-  |com.android.documentsui |Android Document Picker|
   |com.google.android.webview |[WebView](https://developer.android.com/reference/android/webkit/WebView.html), which is necessary for many apps including Outlook. |
   |com.android.webview |[Webview](https://developer.android.com/reference/android/webkit/WebView.html), which is necessary for many apps including Outlook.|
   |com.google.android.tts |Google Text-to-speech |
@@ -109,6 +108,8 @@ There are some exempt apps and platform services that Intune app protection poli
   |com.android.providers.media |Android media content provider |The media content provider allowed only for the ringtone selection action. |
   |com.google.android.gms; com.google.android.gsf |Google Play Services packages |These packages are allowed for Google Cloud Messaging actions, such as push notifications. |
   |com.google.android.apps.maps |Google Maps |Addresses are allowed for navigation. |
+  |com.android.documentsui|Android Document Picker|Allowed when opening or creating a file.|
+  |com.google.android.documentsui |Android Document Picker (Android 10+)|Allowed when opening or creating a file.|
 
 For more information, see [Data transfer policy exceptions for apps](app-protection-policies-exception.md).
 

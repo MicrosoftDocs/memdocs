@@ -1,12 +1,12 @@
 ---
 # required metadata
 title: Prerequisites for organizational messages | Microsoft Intune  
-description: Learn about the prerequisites for organizational messages.      
+description: Find out what's required to use organizational messages in Microsoft Intune.        
 keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/16/2022
+ms.date: 11/28/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -73,39 +73,47 @@ The domain for your custom destination URLs must be added to your list of verifi
 ## Policy requirements  
 There are certain experience and Windows Spotlight policies in Microsoft Intune that block the delivery of organizational messages. This section describes how to adjust all settings so that delivery is always allowed and works as intended. 
 
-### Organizational messages delivery policy      
-Enable the delivery of organizational messages in all new and existing policies that are targeted at users and devices receiving organizational messages. 
+### Organizational messages delivery policy  
+> [!IMPORTANT]
+> This policy is required for devices running [Windows 11, version 22H2, build 10.0.22621.900](https://support.microsoft.com/help/5020044) and later. If you don't enable this policy, these devices can't receive organizational messages. The policy isn't required on devices running earlier builds.  
 
- 1. Go to **Settings catalog** > **Experience** > **Enable delivery of organizational messages (User)**. 
- 2. For **Enable delivery of organizational messages**, switch the toggle to **Enabled**.     
+Enable the delivery of organizational messages in all new and existing policies that are targeted at users and devices receiving organizational messages.  
 
-### Windows Spotlight policy     
-Configure these policies using a Microsoft Intune [device restrictions profile template](../configuration/device-restrictions-configure.md) or the [settings catalog](../configuration/settings-catalog.md). Make sure to adjust these policies in all new and existing policies that are targeted at users and devices receiving organizational messages.  
+ 1. Go to **Settings catalog** > **Experience** > **Enable delivery of organizational messages (User)**.  
+ 2. For **Enable delivery of organizational messages**, switch the toggle to **Enabled**.  
+
+### Windows Spotlight policy       
+ Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and configure the Windows Spotlight policies using a Microsoft Intune [device restrictions profile template](../configuration/device-restrictions-configure.md) or the [settings catalog](../configuration/settings-catalog.md). Make sure to adjust these policies in all new and existing policies that are targeted at users and devices receiving organizational messages.  
+
+> [!NOTE]
+> If you use the Windows 10/11 MDM security baseline, you will need to change the **Windows Spotlight** policy to **Not configured**. The Windows Spotlight policy controls organizational messages and messages coming from Microsoft. To continue blocking messages from Microsoft as defined in the Windows 10/11 MDM security baseline, [configure the Microsoft messaging policy](organizational-messages-prerequisites.md#microsoft-messaging-policy).
 
 #### Template profiles    
-Go to **Configuration profiles** > **Templates** > **Device restrictions** > **Windows Spotlight** to edit these settings.    
+Go to **Devices** > **Windows** > **Configuration profiles**, and in a new or existing template profile select **Device restrictions** > **Windows Spotlight**.    
 
 * To allow taskbar messages:   
   * **Windows Spotlight**: Select **Not configured**.    
-  * **Windows Spotlight Tips**: Select **Not configured**.    
+  * **Windows Tips**: Select **Not configured**.    
 * To allow notification area messages:  
   * **Windows Spotlight**: Select **Not configured**.  
-  * **Windows Spotlight on Action Center**: Select **Not configured**.  
+  * **Windows Spotlight in action center**: Select **Not configured**.  
 * To allow Get Started app messages: 
   * **Windows Spotlight**: Select **Not configured**.      
 
 #### Settings catalog profiles        
-Go to the **Settings catalog** > **Experience** > **Allow Windows Spotlight (User)** to edit these settings.  
+In a new or existing Windows configuration profile, select **Settings catalog** > **Add settings**. Use the **Settings picker** to add the settings to your profile. Then adjust the setting toggles as needed under **Configuration settings**.      
+
+All of these settings are in the settings catalog, in the **Experience** category.  
 
 * To allow taskbar messages:  
-  * **Allow Windows Spotlight (User)**: Select **Allow**.    
-  * **Windows Spotlight Tips**: Select **Allow**. 
+  * Add **Allow Windows Spotlight (User)**: Switch the toggle to **Allow**.    
+  * Add **Allow Windows Tips**: Switch the toggle to **Allow**.  
 * To allow notification area messages:    
-  * **Windows Spotlight (User)**: Select **Allow**.  
-  * **Windows Spotlight on Action Center**: Select **Allow**.  
+  * Add **Allow Windows Spotlight (User)**: Switch the toggle to **Allow**.  
+  * Add **Allow Windows Spotlight on Action Center (User)**: Switch the toggle to **Allow**.  
 * To allow Get Started app messages:  
-  * **Allow Windows Spotlight (User)**: Select **Allow**.   
-   * **Disable Cloud Optimized Content**: Select **Disabled**.   
+  * Add **Allow Windows Spotlight (User)**: Switch the toggle to **Allow**.   
+  * Add **Disable Cloud Optimized Content**: Switch the toggle to **Disabled**.   
 
 #### Policy CSP   
 The configuration service provider (CSP) policies available for Windows 11 include:  
@@ -117,10 +125,10 @@ The configuration service provider (CSP) policies available for Windows 11 inclu
 ### Microsoft messaging policy        
 If you currently block messages that come from Microsoft, you can continue to do so while also allowing organizational messages to come through.  
 
-1. Go to **Organizational messages (preview)**.    
+1.  Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Go to **Tenant administration** > **Organizational messages (preview)**.    
 2. In the **Overview** tab, go to step 2 under **Before you create a message**.      
 3. **Decide whether to block messages directly from Microsoft, while allowing admin messages to display**: Switch the toggle to **Allow** to allow both Microsoft messages and organizational messages. Switch the toggle to **Block** to block Microsoft messages and allow organizational messages.   
-
 
 ## Next steps 
 Now that prerequisites are complete, you can [create organizational messages](organizational-messages-create.md) in Microsoft Intune.    

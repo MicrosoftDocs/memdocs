@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 11/15/2022
+ms.date: 11/28/2022
 ms.topic: reference
 ms.service: windows-365
 ms.subservice:
@@ -32,7 +32,7 @@ ms.collection: M365-identity-device-management
 
 Learn what new features are available in Windows 365 Enterprise.
 
-> [!Note]
+> [!NOTE]
 > Each monthly update may take up to a week to rollout to all customers.
 
 <!-- Common categories:  
@@ -51,9 +51,25 @@ Learn what new features are available in Windows 365 Enterprise.
 -->
 
 <!-- ########################## -->
-## Week of November 14, 2022
+## Week of November 28, 2022
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
+
+### Provisioning
+
+#### New Geography option in Windows 365 provisioning policy<!-- 41400209-->
+
+The new **Geography** setting gives admins two ways to choose Azure regions during provisioning.
+
+- You can select a specific region to make sure that your Cloud PCS are only provisioned in that region.
+- You can select **Automatic** to let the Windows 365 service automatically select a region (within the Geography) at the time of provisioning.
+
+Existing provisioning policies will automatically populate the **Geography** and **Region** settings based on existing settings. No admin action is required.  
+
+For more information, see [Create provisioning policies](create-provisioning-policy.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+
 ### Windows 365 app
 
 #### Updated Windows 365 app installation to install dependent applications<!--42190185-->
@@ -64,13 +80,15 @@ The Windows 365 app installation process has been updated to automatically insta
 
 The Azure Active Directory (Azure AD) policy has been updated so that no extra Conditional Access policy change is required to use the Windows 365 app.
 
+<!-- ########################## -->
+## Week of November 14, 2022
+
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Documentation
 
 #### New documentation article: Use the Enrollment Status Page with Cloud PCs
 
 We’ve published a new help documentation article. For more information, see [Use the Enrollment Status Page with Cloud PCs](enrollment-status-page.md).
-
 
 <!-- ########################## -->
 ## Week of November 7, 2022
