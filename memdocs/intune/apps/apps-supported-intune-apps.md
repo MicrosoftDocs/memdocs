@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/07/2022
+ms.date: 12/05/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -27,6 +27,8 @@ The apps listed in this topic are supported partner and Microsoft apps that are 
 > [!NOTE]
 > For your client line-of-business apps, you can incorporate mobile app management using the [Intune App Software Development Kit](../developer/app-sdk.md) (SDK), or the [App Wrapping Tool for iOS](../developer/app-wrapper-prepare-ios.md) and the [App Wrapping Tool for Android](../developer/app-wrapper-prepare-android.md).
 
+## Core app settings
+
 The following tables provide details of supported partner and Microsoft apps that are commonly used with Microsoft Intune. These apps support the **core App Protection Policy settings** which are defined as:
 
 - Protecting work or school account data while leaving personal data untouched in apps that support multi-identity
@@ -38,6 +40,8 @@ The following tables provide details of supported partner and Microsoft apps tha
 - Applying data loss prevention policies without managing the user's device
 - Enabling app protection without requiring enrollment
 - Enabling app protection on devices managed with third-party Unified Endpoint Management solutions
+
+## Advanced app settings
 
 In addition to supporting the core App Protection Policy settings, apps are also capable of supporting **advanced App Protection Policy and App Configuration Policy** settings. These settings require app investment:
 
