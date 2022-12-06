@@ -65,7 +65,7 @@ Every failed ANC or success with warning error state includes the technical deta
 - **Environment and configuration is ready**: Underlying infrastructure is ready for provisioning to succeed.
 - **Intune enrollment restrictions allow Windows enrollment**: Verify that Intune enrollment restrictions are configured to allow Windows enrollment.
 - **Localization language package readiness**: Verify that the operating system and Microsoft 365 language packages are reachable. Also verify that the localization package download link is reachable.
-- **UDP connection server reachable**: Network configuration allows the use of UDP direct connection (STUN).
+- **UDP connection check**: Network configuration allows the use of UDP direct connection (STUN).
 
 <!-- ########################## -->
 ## Next steps
