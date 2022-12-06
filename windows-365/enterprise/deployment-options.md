@@ -33,9 +33,10 @@ ms.collection: M365-identity-device-management
 You have two options for network deployment of the Windows 365 service:
 
 - Use a Microsoft-hosted network
-  - Ideal for the Windows 365 Software-as-a-Service (SaaS)eatures of simplicity, reliability, and scalability.
-  - Supports the Azure Active Directory join identity model.
   - Recommended option.
+  - Ideal for the Windows 365 Software-as-a-Service (SaaS) features of simplicity, reliability, and scalability.
+  - Supports the Azure Active Directory join identity model.
+  - No requirement for Azure subscription or expertise.
 - Use Azure Network Connections (ANC)
   - Supports both Azure AD join and hybrid Azure AD join identity models.
 
@@ -82,7 +83,7 @@ Before using the Microsoft-hosted network option, review these considerations:
 - Ping/ICMP is blocked.
 - Local network communications between Cloud PCs are blocked.
 - No direct inbound connectivity is possible to Cloud PCS.
-- Admins can’t reliably connect from one Cloud PC to another Cloud PC. The underlying VNet could be different. Cross Vnet communications are blocked.
+- The underlying VNet could be different. Cross Vnet communications are blocked.
 - There is no way for admins to control the IP address ranges and/or address space assigned to the Cloud PCs. Windows 365 handles the IP addresses automatically.
 
 ## Azure Network Connection option
@@ -130,8 +131,8 @@ Before using the ANC deployment option, review these considerations:
 - Additional costs for network infrastructure. The Azure costs of operating your own VNet are applied to the subscription associated with the vNet.
 - Azure networking expertise or management required. You must provide the expertise and management to maintain your VNet.
 - Higher complexity. You must manage and maintain your network, which is more complex a task than using a Microsoft-hosted network.
-- Rapid deployment. Because there are fewer customer side element configurations, this deployment option is usually faster to deploy.
-- Higher risk. Microsoft sees a higher rate of connectivity issues caused by network configuration when the ANC option is used.
+- Longer deployment. Deployment is usually longer than with the Microsoft-hosted network option. This extra time is caused by the high number of customer side elements that must be configured first.
+- Higher Risk. An ANC deployment is more complex than a Microsoft-hosted network deployment. This complexity increases the risk of connectivity issues.
 
 ## Simultaneous options
 
