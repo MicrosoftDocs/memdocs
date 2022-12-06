@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 11/28/2022
+ms.date: 12/05/2022
 ms.topic: reference
 ms.service: windows-365
 ms.subservice:
@@ -46,6 +46,16 @@ Learn what new features are available in Windows 365 Business.
 ### Role-based access control
 ### Scripts
 -->
+
+<!-- ########################## -->
+## Week of December 5, 2022
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Provisioning
+
+#### Configure installed language and region for provisioning Cloud PCs generally available<!--38310774 -->
+
+Language pre-configuration for Cloud PCs has moved out of preview and into general availability. Admins can select the **Language and region** option under **Update organization settings** to pre-configure the language for the endpoint devices. See [Change organizational default settings](change-organization-default-settings.md).
 
 <!-- ########################## -->
 ## Week of November 28, 2022
