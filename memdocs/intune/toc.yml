@@ -53,7 +53,7 @@ items:
         href: ./protect/quickstart-set-password-length-android.md        
       - name: Send notifications to noncompliant devices
         href: ./protect/quickstart-send-notification.md        
-      - name: Add and assign a app
+      - name: Add and assign an app
         href: ./apps/quickstart-add-assign-app.md        
       - name: Create and assign an app protection policy
         href: ./apps/quickstart-create-assign-app-policy.md        
@@ -69,8 +69,6 @@ items:
 
     - name: How to educate your end users
       href: ./fundamentals/end-user-educate.md
-
-    - name: Evaluate current GPOs with settings catalog (is this a sub topic?)
 
     - name: Supported configurations
       href: ./fundamentals/supported-devices-browsers.md
@@ -96,12 +94,12 @@ items:
       items:
       - name: Deploy Intune overview
         href: ./fundamentals/deployment-plan-overview.md
+      - name: Get started with your deployment (REPLACE OVERVIEW?)
+        href: ./fundamentals/get-started-with-intune.md
 
       - name: Step 1 - Set up Intune subscription
         href: ./fundamentals/deployment-plan-setup.md
         items:
-        - name: Step 1 - Set up Microsoft Intune fundamentals (some planning, some set up - merge)
-          href: ./fundamentals/deployment-guide-intune-setup.md
         - name: Step 1 (cont) to set up Intune (integrate with step above)
           href: ./fundamentals/setup-steps.md
       - name: Step 2 - Add, configure, and protect apps
@@ -127,8 +125,10 @@ items:
 
     - name: Migrate to Microsoft Intune (need to update section for different scenarios)
       items: 
-      - name: Overview - REWRITE or DELETE
+      - name: Overview - DELETE?
         href: ./fundamentals/migration-guide.md
+      - name: Move to Intune
+        href: ./fundamentals/deployment-guide-intune-setup.md
       - name: Migrate from Basic Mobility and Security
         items: 
         - name: Migrate from Basic Mobility and Security

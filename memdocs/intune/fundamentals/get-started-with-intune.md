@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/25/2022
+ms.date: 12/05/2022
 ms.topic: overview
 ms.service: mem
 ms.subservice: fundamentals
@@ -32,11 +32,11 @@ ms.collection:
   - highseo
 ---
 
-# Get started with Microsoft Intune
+# Get started with Microsoft Intune deployment
 
 Microsoft Intune is a cloud-based service that helps you manage your devices and apps. For more information about what Microsoft Intune can do for your organization, go to [What is Microsoft Intune](what-is-intune.md).
 
-This article provides an overview of the steps to start using Intune, including:
+This article provides an overview of the steps to start your Intune deployment, including:
 
 - Step 1: Plan your move and deployment of Intune
 - Step 2: Determine your licensing needs and any platform requirements
@@ -48,9 +48,7 @@ This article provides an overview of the steps to start using Intune, including:
 - Protect organization app data on personal devices
 - Cloud-attach with Configuration Manager
 
-## Step 1 - Plan your Intune deployment
-
-A successful adoption or migration to Microsoft Intune starts with a plan. Your plan depends on your organization's current device management solution, business goals, and technical requirements.
+## Step 1 - Plan your deployment
 
 Intune gives you options to manage access to your organization using Mobile Device Management (MDM) or Mobile Application Management (MAM). MDM is when users "enroll" their devices in Intune. Once enrolled, they're managed devices, and can receive any policies, rules, and settings used by your organization. For example, you can install specifics apps, create a password policy, install a VPN connection, and more.
 
@@ -111,7 +109,7 @@ This step focuses on setting up Intune and getting it ready for you to manage yo
    You can manually add users or use hybrid identity and Azure AD Connect to sync your on-premises user accounts with Intune. You can also give admin roles to specific users. Users are required unless your devices are "userless" devices, such as kiosk or dedicated devices commonly used by frontline workers.
 
    Azure AD groups can simplify how you manage devices and users in Intune.
-   
+
    For example, your organization wants to require a specific app on Android devices. You can create an Android devices group and deploy a policy with this app to your group.
 
 6. **[Assign licenses](licenses-assign.md)**. For users or devices to enroll in Intune, they require an Intune license.
