@@ -94,7 +94,7 @@ items:
       items:
       - name: Deploy Intune overview
         href: ./fundamentals/deployment-plan-overview.md
-      - name: Get started with Intune (REPLACE OVERVIEW?)
+      - name: Get started with your deployment (REPLACE OVERVIEW?)
         href: ./fundamentals/get-started-with-intune.md
 
       - name: Step 1 - Set up Intune subscription

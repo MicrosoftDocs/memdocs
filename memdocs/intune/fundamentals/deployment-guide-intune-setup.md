@@ -33,7 +33,7 @@ ms.collection:
 
 After you've [planned for the move to Microsoft Intune](intune-planning-guide.md), the next step it to choose the migration approach that's right for your organization. These decisions depend on your current mobile device management (MDM) environment, business goals, and technical requirements.
 
-This migrations guide lists and describes your options to adopt or move to Intune, which include:
+This migration guide lists and describes your options to adopt or move to Intune, which include:
 
 - You don't use a mobile device management solution
 - You use a third party partner MDM solution
@@ -77,7 +77,17 @@ If you currently don't use any MDM or MAM provider, then you have some options:
 
 ## Currently use a third party MDM provider
 
-Devices should only have one MDM provider. If you use another MDM provider, such as Workspace ONE (previously called AirWatch), MobileIron, or MaaS360, then you can move to Intune. Users must unenroll their devices from the current MDM provider, and then enroll in Intune.
+Devices should only have one MDM provider. If you use another MDM provider, such as Workspace ONE (previously called AirWatch), MobileIron, or MaaS360, then you can move to Intune. Users must unenroll their devices from the current MDM provider before they enroll in Intune.
+
+1. [Deploy Intune](deployment-plan-setup.md), including setting the MDM Authority to Intune.
+2. Unenroll devices from the current MDM provider.
+
+    When devices are unenrolled, they aren't receiving your policies, including policies that provide protection. They're vulnerable until they enroll in Intune.
+
+    Be sure you have specific unenroll and include guidance from your existing MDM provider on how to unenroll devices. Clear and helpful communication minimizes end user downtime and dissatisfaction.
+
+3. Optional, but recommended. [Use conditional access](migration-guide-drive-adoption.md) to block devices until they enroll in Intune.
+4. Enroll in Intune. Be sure you give users specific enrollment steps.
 
 For enrollment guidance, see the [Intune enrollment deployment guide](deployment-guide-enrollment.md).
 
@@ -87,10 +97,6 @@ For enrollment guidance, see the [Intune enrollment deployment guide](deployment
 Recommendations:
 
 - If you're moving from a partner MDM/MAM provider, then note the tasks you're running and the features you use. This information gives an idea of what tasks to also do in Intune.
-- When devices are unenrolled, they aren't receiving your policies, including policies that provide protection. They're vulnerable until they enroll in Intune. When devices unenroll, we recommend [using conditional access](migration-guide-drive-adoption.md) to block devices until they enroll in Intune.
-
-  Be sure you have specific unenroll and enroll steps. Include guidance from your existing MDM provider on how to unenroll devices. Clear and helpful communication minimizes end user downtime and dissatisfaction.
-
 - Use a phased approach. Start with a small group of pilot users, and add more groups until you reach full scale deployment.
 - Monitor the helpdesk load and enrollment success of each phase. Leave time in the schedule to evaluate success criteria for each group before migrating the next group. Your pilot deployment should validate the following tasks:
 
