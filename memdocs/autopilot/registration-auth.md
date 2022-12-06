@@ -82,7 +82,7 @@ For a CSP to register Windows Autopilot devices for a customer, the customer mus
 Each OEM has a unique link to provide to their respective customers, which the OEM can request from Microsoft via msoemops@microsoft.com.
 
 1. OEM emails link to their customer.
-2. Customer logs into the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) using a cloud-native account (for example, [domain].onmicrosoft.com) with global administrator privileges.
+2. Customer signs into Microsoft admin center using a cloud-native account (for example, [domain].onmicrosoft.com) with global administrator privileges.
 3. Custom selects the link in the email, which takes them directly to the following page:
 
     ![Screencap of Accept partner invitation page.](images/csp6.png)
