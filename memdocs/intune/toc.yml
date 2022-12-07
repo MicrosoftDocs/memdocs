@@ -131,7 +131,7 @@ items:
         href: ./fundamentals/deployment-guide-intune-setup.md
       - name: Migrate from Microsoft 365
         items: 
-        - name: Migrate from Basic Mobility and Security
+        - name: Move from Microsoft 365 device management
           href: ./fundamentals/migrate-to-intune.md
         - name: Policy mapping
           items: 

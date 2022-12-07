@@ -7,7 +7,7 @@ keywords: migrate from configuration manager to intune, move from airwatch to in
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/06/2022
+ms.date: 12/07/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -39,6 +39,7 @@ This migration guide lists and describes your options to adopt or move to Intune
 - You use a third party partner MDM solution
 - You use Configuration Manager
 - You use on-premises group policy
+- You use Microsoft 365 Basic Mobility and Security
 
 Use this guide to determine the best migration approach, and get some guidance and recommendations.
 
@@ -198,7 +199,7 @@ Next, devices are ready to be enrolled, and receive your policies.
 
 This option applies to Windows client devices. If you use Windows Server OSs, such as Windows Server 2022, then don't use this option. Use Configuration Manager.
 
-1. [Deploy Microsoft 365](/microsoft-365/enterprise/deploy-microsoft-365-enterprise), including creating users and groups.
+1. [Deploy Microsoft 365](/microsoft-365/enterprise/deploy-microsoft-365-enterprise), including creating users and groups. Don't use or configure Microsoft 365 Basic Mobility and Security.
 
     Helpful links:
 
@@ -212,7 +213,7 @@ Next, devices are ready to be enrolled in Intune, and receive your policies.
 
 ## Currently use on-premises group policy
 
-In the cloud, MDM providers, such as Intune, manage settings and features on devices. Group policies objects (GPO) aren't used. When managing devices, Intune device configuration profiles replace on-premises GPO. These profiles use settings exposed by Apple, Google, and Microsoft. Specifically:
+In the cloud, MDM providers, such as Intune, manage settings and features on devices. Group policies objects (GPO) aren't used. When you manage devices, Intune device configuration profiles replace on-premises GPO. These profiles use settings exposed by Apple, Google, and Microsoft. Specifically:
 
 - On Android devices, these profiles use the Android [Management API](https://developers.google.com/android/management/introduction) and [EMM API](https://developers.google.com/android/work/play/emm-api/v1).
 - On Apple devices, these profiles use the [Device management payloads](https://developer.apple.com/documentation/devicemanagement).
@@ -221,6 +222,10 @@ In the cloud, MDM providers, such as Intune, manage settings and features on dev
 When moving devices from group policy, use [Group policy analytics](../configuration/group-policy-analytics.md). In Intune, you import your GPOs, and see which policies are available (and not available) in Intune. For the policies that are available in Intune, you can create a settings catalog policy using the settings you imported. For more information on this feature, go to [Create a Settings Catalog policy using your imported GPOs in Microsoft Intune](../configuration/group-policy-analytics-migrate.md).
 
 Next, [setup Intune](deployment-plan-setup.md).
+
+## Currently use Microsoft 365 Basic Mobility and Security
+
+If you created and deployed Microsoft 365 Basic Mobility and Security policies, then you can migrate the users, groups, and policies to Microsoft Intune. For more information, go to [Migrate from Microsoft 365 Basic Mobility and Security to Intune](migrate-to-intune.md).
 
 ## Tenant to tenant migration
 
