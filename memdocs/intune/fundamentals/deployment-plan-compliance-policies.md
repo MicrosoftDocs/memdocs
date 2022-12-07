@@ -46,13 +46,13 @@ ms.collection:
 
 *This article stub remains a work in progress*
 
-Previously, you’ve set up your Intune subscription and created app protection policies. In this step, you’ll configure device compliance settings and policies to help protect organizational data by requiring devices to meet requirements that you set. You deploy these policies directly to devices, or to users so that any device they use must also meet your requirements. Examples of requirements include:  
+Previously, you’ve set up your Intune subscription and created app protection policies. Next, plan for and configure device compliance settings and policies to help protect organizational data by requiring devices to meet requirements that you set. You'll deploy these policies directly to devices, or to users so that any device they use must also meet your requirements. The following are a few examples of common requirements:
 
 - Minimum operating system versions for different platforms
 - Password or PIN requirements like complexity and length
 - Devices being at or below a *threat level* as determined by mobile threat defense software you use, like Microsoft Defender for Endpoint, or one of Intune’s other supported partners.
 
-Your compliance policies can also take some *actions* when a device fails to meet your requirements, including:
+Your compliance policies can also take certain *actions* when a device fails to meet your requirements, including:
 
 - Remotely lock a noncompliant device.
 - Send email or notifications to a device or user, so the device user can bring it into compliance.
@@ -60,12 +60,12 @@ Your compliance policies can also take some *actions* when a device fails to mee
 
 If you use Conditional Access, your Conditional Access policies can use the results of your device compliance policies to determine which devices can access your organizational resources. This access control is separate from the *actions for noncompliance* that you include in your device compliance policies.
 
-The following sections describe considerations for increasing complexity for device compliance management. While there's no single path or groups of settings that fit all customers, we believe everyone should start by establishing the tenant-wide configurations that define how the Intune compliance service interacts with devices. Those settings can then be followed by:
+The following sections describe considerations for device compliance management, with later sections discussing more advanced configurations and integrations that provide more capabilities. There is no single group of settings of setting configurations that fit all customers. Instead, we believe all environments should start by configuring the tenant-wide device compliance settings that define how the Intune compliance service interacts with devices. Then, with a core foundation for device compliance established, add the additional layers you need to meet your organizational needs and expectations. Some of these additional layers include:  
 
-- Adding platform-specific device configuration policies to enforce your device compliance goals.
-- Establishing deeper protections by integrating device Mobile Threat Defense partners, like Microsoft Defender for Endpoint.
-- Configuring a third-party compliance partner if you use one as your Mobile Device Management authority.
-- Deploying Azure Active Directory (Azure AD) Conditional Access policies that use device compliance status to gate which devices have access to resources.
+- Deploying platform-specific device configuration policies to enforce your device compliance goals.
+- Use of status results from a Mobile Threat Defense partner, like Microsoft Defender for Endpoint or one of many other third-party partners.
+- Integrating a third-party compliance partner when not using Intune as your Mobile Device Management authority.
+- Configuring Azure Active Directory (Azure AD) Conditional Access policies to gate which devices have access to resources based on the devcies compliance status.
 - Defining custom compliance settings (for Windows and Linux) to use settings that aren't yet natively available through the Intune compliance policy UI.
 
 <!-- ## Prerequisites
@@ -84,19 +84,20 @@ The prerequisites for device compliance will depend on the product, features, an
 
 ✔️ **Configure tenant-wide Compliance policy settings**
 
-Set tenant-wide compliance settings that establish how Intune’s compliance service will interact with devices. These settings are a foundation that’s distinct from settings you configure in platform specific device compliance policies. This foundation is the base on which you can build robust device compliance policies and conditional access integration.
+We believe all organizations should understand the use of the tenant-wide compliance settings. These settings apply to all applicable devices, establish how compliance evaluations function in your tenant, and are distinct from other configurations, like the settings you configure and deploy to discrete groups and device platforms.
 
-Tenant-wide settings are configured as *Compliance policy settings*:
+The tenant-wide settings are comprised of following three *Compliance policy settings*:
 
-- Set **Mark devices with no compliance policy assigned as** to be **noncompliant**. This configuration is required if you plan to use compliance policies to help protect your organizations resources from unauthorized access. This configuration supports integrating compliance policies with Conditional Access so you can gate which users and devices can access company resources.
+1. Set **Mark devices with no compliance policy assigned as** to be **noncompliant**. This configuration is required if you plan to use compliance policies to help protect your organizations resources from unauthorized access. This configuration supports integrating compliance policies with Conditional Access so you can gate which users and devices can access company resources.
 
-- If you’ll support access from iOS/iPad devices, consider setting **Enhanced jailbreak detection** to **Enabled**. This enhances the device compliance policy setting *block jailbroken devices* by adding extra criteria for when to run detection. With the device compliance setting and this tenant-wide setting enabled, jailbreak detection runs when: 
-  - The Company Portal app opens.
-  - The device physically moves a significant distance, which is approximately 500 meters or more. Intune can’t guarantee that each significant location change results in a jailbreak detection check, as the check depends on a device's network connection at the time.
+2. Applicable only to iOS/iPad devices, consider setting **Enhanced jailbreak detection** to **Enabled**. This configuration changes how the device compliance policy setting *block jailbroken devices* functions by adding extra criteria for when to run detection. When enabled, this option can effect a devices battery life because devices run additional jailbreak detections when:  
 
-  On iOS 13 and higher, users must select *Always Allow* whenever the device prompts them to continue allowing Company Portal to use their location in the background. If enabled, this will allow more frequent jailbreak detection checks.
+   - The Company Portal app opens.
+   - The device physically moves a significant distance, which is approximately 500 meters or more. Intune can’t guarantee that each significant location change results in a jailbreak detection check, as the check depends on a device's network connection at the time.
 
-b. Configure **Compliance status validity period (days)** to have Intune mark devices as noncompliant when they’ve failed to report a compliance status for longer than the configured time. By being marked noncompliant, devices that might otherwise have access to your organizations resources and be blocked or identified for other actions such as retiring to remove them from management altogether.
+   On iOS 13 and higher, users must select *Always Allow* whenever the device prompts them to continue allowing Company Portal to use their location in the background. If enabled, this will allow more frequent jailbreak detection checks.
+
+3. Configure **Compliance status validity period (days)** to have Intune mark devices as noncompliant when they’ve failed to report a compliance status for longer than the configured time. By being marked noncompliant, devices that might otherwise have access to your organizations resources can be blocked or identified for retirement, making int easier to round up and then remove aged or risky devices from management altogether.
 
 To learn more about Compliance Policy Settings at the tenant level, and how to configure them, see [Compliance policy settings](../protect/device-compliance-get-started.md#compliance-policy-settings)
 
@@ -105,11 +106,17 @@ To learn more about Compliance Policy Settings at the tenant level, and how to c
 ✔️ **Identify your organizations desired compliance configurations for device platform**  
 ✔️ **Deploy device configuration policies for each platform type**
 
-You want to be sure that the devices that access your apps and data meet your organization’s requirements, like device password complexity or being pin-protected. You also want device operating systems to remain are up to date. To support such goals, you must first identify some minimum compliance expectations, and then deploy device configuration policies to evaluate devices against that criteria. These criteria will vary from organization to organization, but the following are some common settings to consider as a start, regardless of the platform type like Windows, iOS/iPadOS, or Android:
+Use device compliance policies to identify when devices that will access your apps and data are in a state that meets your organization’s requirements. These policies support a range of settings that are specific to each platform. Some compliance settings evaluate and report back a status for that device. Other settings can function more like device configuration settings byh enforcing a requirement, such as those for password complexity or PIN requirements.
 
-- Password complexity
-- *Example 2*
-- *Example 3*
+Before creating a series of policies:
+
+- Identify some minimum compliance expectations for your organization. With expectations for device compliance in mind, you can then configure an deploy device configuration policies to support your goals. Requirements and criteria for settings will vary from organization to organization, and in some cases between different groups of users or devices within an organization. Following are some common settings to consider as a start, regardless of the platform type like Windows, iOS/iPadOS, or Android:
+
+  - Password complexity
+  - *Example 2*
+  - *Example 3*
+
+- Consider how different compliance policies can interact with each other, and how compliance settings interact with device configuration settings. It's possible to deploy different configurations for a setting to a device from separate policy sources. When devices receive different configurations for a setting, results might be unexpected. However, with a bit of planning, you can minimize overlap, and aim to reduce the overall number of policies you use to effectively meet your device compliance goals. See [If multiple policies are assigned to the same user or device, how do I know which settings gets applied?](../configuration/device-profile-troubleshoot.md#if-multiple-policies-are-assigned-to-the-same-user-or-device-how-do-i-know-which-settings-gets-applied).
 
 The following list of articles is a good place to start to get an understanding of the settings Intune policies natively support:
 
