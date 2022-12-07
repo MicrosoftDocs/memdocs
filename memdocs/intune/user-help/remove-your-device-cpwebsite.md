@@ -30,7 +30,7 @@ ms.collection:
 ---
 # Remove your device from the Company Portal  
 
-*Applies to*   
+*Applies to*:     
 * *Android*   
 * *iOS/iPadOS*    
 * *macOS*  
