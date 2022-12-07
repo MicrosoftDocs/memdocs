@@ -36,7 +36,7 @@ ms.collection:
 * *macOS*  
 * *Windows 10/11*  
 
-Remotely unenroll and remove personal devices from Microsoft Intune using the Company Portal website. Once you remove a device, it disappears from the Company Portal website and apps. The device may lose access to protected work data, such as files, apps, and email.  
+Remotely unenroll and remove personal devices from Microsoft Intune using the Company Portal website. Once you remove a device, it is unenrolled from Intune and deleted from the Company Portal website and apps. The device may lose access to protected work data, such as files, apps, and email.  
 
 1. On any device, sign in to the [Company Portal website](https://portal.manage.microsoft.com) with your work or school account. 
 2. Select the menu > **Devices**.   
