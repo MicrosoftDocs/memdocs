@@ -29,7 +29,7 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: 
 ---
-
+*Applies to macOS* 
 # Store your personal FileVault key 
 
 Store a FileVault key for your personally encrypted macOS device. In addition to satisfying encryption requirements, storing your key in Intune enables you to: 
