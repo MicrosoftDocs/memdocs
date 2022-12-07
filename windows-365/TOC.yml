@@ -12,7 +12,7 @@ items:
 - name: Public preview 
   href: public-preview.md
 - name: Windows 365 privacy and data 
-  href: \enterprise\privacy-personal-data.md
+  href: enterprise/privacy-personal-data.md
 - name: Windows 365 Business docs
   href: business/index.yml
 - name: Windows 365 Enterprise docs
