@@ -110,14 +110,14 @@ Use device compliance policies to identify when devices that will access your ap
 
 Before creating a series of policies:
 
-- Identify some minimum compliance expectations for your organization. With expectations for device compliance in mind, you can then configure an deploy device configuration policies to support your goals. Requirements and criteria for settings will vary from organization to organization, and in some cases between different groups of users or devices within an organization.  but the following are some common settings to consider as a start, regardless of the platform type like Windows, iOS/iPadOS, or Android:
+- Identify some minimum compliance expectations for your organization. With expectations for device compliance in mind, you can then configure an deploy device configuration policies to support your goals. Requirements and criteria for settings will vary from organization to organization, and in some cases between different groups of users or devices within an organization. Following are some common settings to consider as a start, regardless of the platform type like Windows, iOS/iPadOS, or Android:
 
-- Password complexity
-- *Example 2*
-- *Example 3*
+  - Password complexity
+  - *Example 2*
+  - *Example 3*
 
-- Understand how compliance policies interact with each other, and with devcie configuration settings. Its possible to deploy conflicting settings to a device from varied sources, or to have two confiugurations for the same setting, using different values, apply to a singe device. These scenarios can lead to unexpected results, and with a bit of policy planning, you can minimize overlapp, and hte number of policies required to effectrively meet your device cmopliance goals.
-- 
+- Consider how different compliance policies can interact with each other, and how compliance settings interact with device configuration settings. It's possible to deploy different configurations for a setting to a device from separate policy sources. When devices receive different configurations for a setting, results might be unexpected. However, with a bit of planning, you can minimize overlap, and aim to reduce the overall number of policies you use to effectively meet your device compliance goals. See [If multiple policies are assigned to the same user or device, how do I know which settings gets applied?](https://learn.microsoft.com/en-us/mem/intune/configuration/device-profile-troubleshoot.md#if-multiple-policies-are-assigned-to-the-same-user-or-device-how-do-i-know-which-settings-gets-applied).
+
 The following list of articles is a good place to start to get an understanding of the settings Intune policies natively support:
 
 - [Android device administrator](../protect/compliance-policy-create-android.md)
