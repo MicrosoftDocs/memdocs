@@ -28,11 +28,15 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: 
 ---
-# Remove your device from the Company Portal
+# Remove your device from the Company Portal  
 
-Unenroll and remove devices you no longer need for work or that you no longer have access to. You can remotely unenroll devices by using the Company Portal website. Once you remove a device, it disappears from the Company Portal website and apps. The device may lose its access to protected work data, such as files, apps, and email.  
+*Applies to*   
+* *Android*   
+* *iOS/iPadOS*    
+* *macOS*  
+* *Windows 10/11*  
 
-To remotely remove a device:  
+Remotely unenroll and remove personal devices from Microsoft Intune using the Company Portal website. Once you remove a device, it disappears from the Company Portal website and apps. The device may lose access to protected work data, such as files, apps, and email.  
 
 1. On any device, sign in to the [Company Portal website](https://portal.manage.microsoft.com) with your work or school account. 
 2. Select the menu > **Devices**.   
