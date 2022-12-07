@@ -6,7 +6,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/28/2022
+ms.date: 12/07/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -33,6 +33,9 @@ ms.collection: M365-identity-device-management
 > This feature is in public preview. For more information, see [Public preview in Microsoft Intune](../fundamentals/public-preview.md).  
 
 This article describes the tenant, message, and configuration requirements for organizational messages. Employees will not receive messages until you complete all prerequisites.  
+
+## New Azure AD tenants        
+If you just created your Azure AD tenant, the organizational messages feature won't be available to use right away. The feature becomes available in the Microsoft Endpoint Manager admin center 36 to 64 hours after you create the tenant.  
 
 ## Version requirements  
 Organizational messages are supported on devices running [Windows 11, version 22H2 or later](https://blogs.windows.com/windowsexperience/2022/09/20/how-to-get-the-windows-11-2022-update/).   

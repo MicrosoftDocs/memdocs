@@ -44,9 +44,7 @@ This article describes how to create the following types of organizational messa
 Complete these steps before creating a message.  
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Go to  **Tenant administration** > **Organizational messages (preview)**. 
-3. Spend some time in the **Overview** tab to learn about messaging options and prerequisites. For more information about the steps you need to take before you create a message, see [Prerequisites](organizational-messages-prerequisites.md). 
-
-If you recently onboarded your tenant to Azure AD, it can take 36 to 64 hours before you're able to use the organizational messages feature.   
+3. Spend some time in the **Overview** tab to learn about messaging options and prerequisites. For more information about the steps you need to take before you create a message, see [Prerequisites](organizational-messages-prerequisites.md).   
 
 ## Step 1: Create a message  
 
