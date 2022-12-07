@@ -40,9 +40,9 @@ ms.collection:
 Remotely change the names of your enrolled devices from the Company Portal website.  
 
 1. On any device, sign in to the [Company Portal website](https://portal.manage.microsoft.com) with your work or school account.  
-2. Go to __Devices__.  
+2. Select the menu > **Devices**.   
 3. Select the device you want to rename.  
-4. Select **Rename**. If the rename option isn't visible at the top of your page, select the **More (…)** menu > **Rename**.   
+4. Select **Rename**. If the rename option isn't visible at the top of your page, select the **More (…)** menu to see all overflow actions. Then choose **Rename**.   
 5. Enter a new name for your device. Then select **Rename** to save your changes.   
 
 Need additional help? Contact your support person. For contact details, sign in to the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980) and go to **Helpdesk**.    
