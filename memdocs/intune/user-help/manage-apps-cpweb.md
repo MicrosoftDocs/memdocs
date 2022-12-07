@@ -30,14 +30,15 @@ ms.custom: intune-enduser
 ms.collection: 
 ---  
 
+# Manage apps from the Company Portal website  
+
 *Applies to:* 
 * *Android*   
 * *iOS/iPadOS*   
 * *macOS*   
 * *Windows 10/11*   
 
-# Manage apps from the Company Portal website 
-Visit the [Company Portal website](https://portal.manage.microsoft.com) to view and manage apps from your organization. 
+Sign in to the [Company Portal website](https://portal.manage.microsoft.com) to view and manage apps from your organization. 
 
 ## View all apps  
 From the menu, select **Apps** to see all apps made available by your organization. 
