@@ -106,6 +106,9 @@ When using single sign-on, you'll currently be prompted to authenticate to Azure
 ## Single sign-on users are immediately disconnected when the Cloud PC locks
 When single sign-on is not used, users have the option to see the Cloud PC lock screen and enter credentials to unlock their Windows session. However, when single sign-on is used, the Cloud PC fully disconnects the session so that the user can re-launch the connection through the remote desktop client and perform the Azure AD-based single sign-on authentication flow.
 
+## Single sign-on users are not asked to re-authenticate to Azure AD when connecting from an unmanaged device <!--35593334-->
+When using single sign-on, all authentication behavior (including supported credential types and sign-in frequency) are driven through Azure AD. To enforce periodic re-authentication through Azure AD, create a Conditional Access policy using the [sign-in frequency control](/azure/active-directory/conditional-access/howto-conditional-access-session-lifetime#policy-1-sign-in-frequency-control).
+
 ## Next steps
 
 [Troubleshoot Windows 365 Enterprise Cloud PC](troubleshooting.md)
