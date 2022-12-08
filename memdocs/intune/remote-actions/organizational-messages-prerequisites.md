@@ -6,7 +6,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/28/2022
+ms.date: 12/07/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -33,7 +33,6 @@ ms.collection: M365-identity-device-management
 > This feature is in public preview. For more information, see [Public preview in Microsoft Intune](../fundamentals/public-preview.md).  
 
 This article describes the tenant, message, and configuration requirements for organizational messages. Employees will not receive messages until you complete all prerequisites.  
-
 ## Version requirements  
 Organizational messages are supported on devices running [Windows 11, version 22H2 or later](https://blogs.windows.com/windowsexperience/2022/09/20/how-to-get-the-windows-11-2022-update/).   
 
@@ -129,6 +128,9 @@ If you currently block messages that come from Microsoft, you can continue to do
 2. Go to **Tenant administration** > **Organizational messages (preview)**.    
 2. In the **Overview** tab, go to step 2 under **Before you create a message**.      
 3. **Decide whether to block messages directly from Microsoft, while allowing admin messages to display**: Switch the toggle to **Allow** to allow both Microsoft messages and organizational messages. Switch the toggle to **Block** to block Microsoft messages and allow organizational messages.   
+
+## Attention: New Azure AD tenants        
+If you recently created your Azure AD tenant, the organizational messages feature won't be available to use right away. It will become available 36 to 64 hours after you create the tenant.   
 
 ## Next steps 
 Now that prerequisites are complete, you can [create organizational messages](organizational-messages-create.md) in Microsoft Intune.    
