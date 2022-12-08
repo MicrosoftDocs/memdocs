@@ -42,7 +42,7 @@ You have two options for network deployment of the Windows 365 service:
 
 ## Microsoft-hosted network
 
-This options is simple, reliable, and scalable, offering Cloud PC connectivity where Microsoft provides the service in a true SaaS approach. With this option, Microsoft:
+This option is simple, reliable, and scalable, offering Cloud PC connectivity where Microsoft provides the service in a true SaaS approach. With this option, Microsoft:
 
 - Sets up and fully manages the infrastructure and related services required to deliver functional Cloud PCs to your users.
 - Manages the network that the Cloud PCs occupy.
@@ -128,7 +128,7 @@ With Hybrid Azure AD join, a connection to the on-premises network is required f
 ### Benefits of the ANC option
 
 - Full control of the VNet. The Cloud PC’s NIC sits in the on-premises network.
-- Direct line-of-sight to on-premises infrastructure. The vNet can be configured with a site-to-site VPN or ExpressRoute connection back to the on-premises network for direct connectivity to Azure Directory infrastructure or services and applications located there.
+- Direct line-of-sight to on-premises infrastructure. The vNet can be configured with a site-to-site VPN or ExpressRoute connection back to the on-premises network for direct connectivity to Azure Directory infrastructure or services and applications that are located there.
 - Cloud PC operated like it’s on an on-premises location. The extension of the corporate network to the vNet means the Cloud PC can operate as if it’s within the corporate network boundaries.
 - Simple peering to other VNets. Simple cross connectivity between the Cloud PC VNet and other vNets in Azure. This supports direct connectivity to other Azure-hosted resources the organization uses.
 
