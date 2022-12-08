@@ -7,7 +7,7 @@ keywords: migrate from configuration manager to intune, move from airwatch to in
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/05/2022
+ms.date: 12/08/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -39,6 +39,7 @@ This migration guide lists and describes your options to adopt or move to Intune
 - You use a third party partner MDM solution
 - You use Configuration Manager
 - You use on-premises group policy
+- You use Microsoft 365 Basic Mobility and Security
 
 Use this guide to determine the best migration approach, and get some guidance and recommendations.
 
@@ -60,13 +61,14 @@ Use this guide to determine the best migration approach, and get some guidance a
 
 If you currently don't use any MDM or MAM provider, then you have some options:
 
-- **Microsoft Intune**: If you want a cloud solution for your client devices and Linux, then go straight to Intune. For immediate value on your Android and iOS/iPadOS devices, you can start with [app protection policies](../apps/app-protection-policy.md), as these policies are used on unenrolled devices.
+- **Microsoft Intune**: If you want a cloud solution for your client devices and Linux, then go straight to Intune. For immediate value and protection on your Android and iOS/iPadOS devices, start with app protection policies, as these policies are typically used on unenrolled devices.
 
-  If you're ready for full device management, then you can use Intune to check for compliance, configure device features, deploy apps, and install system & app updates. You also get the benefits of the Endpoint Manager admin center, which is a web-based console.
+  If/when you're ready for full device management, then you can use Intune to check for compliance, configure device features, deploy apps, and install system & app updates. You also get the benefits of the Endpoint Manager admin center, which is a web-based console.
 
-  - [App protection policies overview](../apps/app-protection-policy.md)
   - [Get started with Intune](get-started-with-intune.md)
-  - [Setup your Intune tenant](deployment-plan-setup.md)
+  - [Step 1 - Setup Intune](deployment-plan-setup.md)
+  - [Step 2 - Add, configure, and protect apps with Intune](deployment-plan-protect-apps.md)
+  - [App protection policies overview](../apps/app-protection-policy.md)
 
 - **Configuration Manager**: If you want the features of Configuration Manager (on-premises) combined with the cloud, then consider [tenant attach](#option-1-add-tenant-attach) or [co-management](#option-2-set-up-co-management). With Configuration Manager, you can:
 
@@ -79,20 +81,28 @@ If you currently don't use any MDM or MAM provider, then you have some options:
 
 Devices should only have one MDM provider. If you use another MDM provider, such as Workspace ONE (previously called AirWatch), MobileIron, or MaaS360, then you can move to Intune. Users must unenroll their devices from the current MDM provider before they enroll in Intune.
 
-1. [Deploy Intune](deployment-plan-setup.md), including setting the MDM Authority to Intune.
-2. Unenroll devices from the current MDM provider.
+1. **Setup Intune**, including setting the MDM Authority to Intune.
+
+    For more information, go to [Step 1 - Setup Intune](deployment-plan-setup.md).
+
+2. **Create and deploy app protection policies** on your Android and iOS/iPadOS devices. The idea is to help protect organization data in your apps during the migration and until the devices are fully enrolled and managed by Intune.
+
+    For more information, go to [Step 2 - Add, configure, and protect apps with Intune](deployment-plan-protect-apps.md).
+
+3. **Unenroll devices** from the current MDM provider.
 
     When devices are unenrolled, they aren't receiving your policies, including policies that provide protection. They're vulnerable until they enroll in Intune.
 
     Be sure you have specific unenroll and include guidance from your existing MDM provider on how to unenroll devices. Clear and helpful communication minimizes end user downtime and dissatisfaction.
 
-3. Optional, but recommended. [Use conditional access](migration-guide-drive-adoption.md) to block devices until they enroll in Intune.
-4. Enroll in Intune. Be sure you give users specific enrollment steps.
+4. Optional, but recommended. If you have Azure AD Premium, also **use [conditional access](migration-guide-drive-adoption.md)** to block devices until they enroll in Intune.
 
-For enrollment guidance, see the [Intune enrollment deployment guide](deployment-guide-enrollment.md).
+5. **Enroll in Intune**. Be sure you give users specific enrollment steps.
+
+    For enrollment guidance, go to the [Intune enrollment deployment guide](deployment-guide-enrollment.md).
 
 > [!IMPORTANT]
-> Don't configure Intune and any existing third party MDM solution simultaneously to apply access controls to resources, including Exchange or SharePoint Online.
+> Don't configure Intune and any existing third party MDM solution simultaneously to apply access controls to resources, including Exchange or SharePoint.
 
 Recommendations:
 
@@ -120,8 +130,8 @@ Recommendations:
 Helpful information:
 
 - [Get started with Intune](get-started-with-intune.md)
-- [Setup your Intune tenant](deployment-plan-setup.md)
 - [Intune enrollment deployment guide](deployment-guide-enrollment.md)
+- [Step 1 - Setup Intune and your tenant](deployment-plan-setup.md)
 
 ## Currently use Configuration Manager
 
@@ -142,7 +152,7 @@ For more information, see [enable tenant attach](../../configmgr/tenant-attach/d
 This option uses Configuration Manager for some workloads, and uses Intune for other workloads.
 
 1. In Configuration Manager, set up [co-management](../../configmgr/comanage/how-to-enable.md).
-2. [Deploy Intune](deployment-plan-setup.md), including setting the MDM Authority to Intune.
+2. [Setup Intune](deployment-plan-setup.md), including setting the MDM Authority to Intune.
 
 Next, devices are ready to be enrolled, and receive your policies.
 
@@ -169,7 +179,7 @@ This option is more work for administrators, but can create a more seamless expe
     Hybrid Azure AD support Windows devices. For other prerequisites, including sign-in requirements, see [Plan your hybrid Azure AD join implementation](/azure/active-directory/devices/hybrid-azuread-join-plan).
 
 2. In Configuration Manager, set up [co-management](../../configmgr/comanage/how-to-enable.md).
-3. [Deploy Intune](deployment-plan-setup.md), including setting the MDM Authority to Intune.
+3. [Setup Intune](deployment-plan-setup.md), including setting the MDM Authority to Intune.
 4. In Configuration Manager, [slide all the workloads from Configuration Manager to Intune](../../configmgr/comanage/how-to-switch-workloads.md).
 5. On the devices, uninstall the Configuration Manager client. For more information, see [uninstall the client](../../configmgr/core/clients/manage/manage-clients.md#uninstall-the-client).
 
@@ -189,21 +199,21 @@ Next, devices are ready to be enrolled, and receive your policies.
 
 This option applies to Windows client devices. If you use Windows Server OSs, such as Windows Server 2022, then don't use this option. Use Configuration Manager.
 
-1. [Deploy Microsoft 365](/microsoft-365/enterprise/deploy-microsoft-365-enterprise), including creating users and groups.
+1. [Deploy Microsoft 365](/microsoft-365/enterprise/deploy-microsoft-365-enterprise), including creating users and groups. Don't use or configure Microsoft 365 Basic Mobility and Security.
 
     Helpful links:
 
     - [Microsoft 365 Enterprise deployment guide](/microsoft-365/enterprise/deploy-foundation-infrastructure)
     - Set up [Microsoft 365 Business](/microsoft-365/business/set-up)
 
-2. [Deploy Intune](deployment-plan-setup.md), including setting the MDM Authority to Intune.
+2. [Setup Intune](deployment-plan-setup.md), including setting the MDM Authority to Intune.
 3. On existing devices, uninstall the Configuration Manager client. For more information, see [uninstall the client](../../configmgr/core/clients/manage/manage-clients.md#uninstall-the-client).
 
 Next, devices are ready to be enrolled in Intune, and receive your policies.
 
 ## Currently use on-premises group policy
 
-In the cloud, MDM providers, such as Intune, manage settings and features on devices. Group policies objects (GPO) aren't used. When managing devices, Intune device configuration profiles replace on-premises GPO. These profiles use settings exposed by Apple, Google, and Microsoft. Specifically:
+In the cloud, MDM providers, such as Intune, manage settings and features on devices. Group policies objects (GPO) aren't used. When you manage devices, Intune device configuration profiles replace on-premises GPO. These profiles use settings exposed by Apple, Google, and Microsoft. Specifically:
 
 - On Android devices, these profiles use the Android [Management API](https://developers.google.com/android/management/introduction) and [EMM API](https://developers.google.com/android/work/play/emm-api/v1).
 - On Apple devices, these profiles use the [Device management payloads](https://developer.apple.com/documentation/devicemanagement).
@@ -211,7 +221,13 @@ In the cloud, MDM providers, such as Intune, manage settings and features on dev
 
 When moving devices from group policy, use [Group policy analytics](../configuration/group-policy-analytics.md). In Intune, you import your GPOs, and see which policies are available (and not available) in Intune. For the policies that are available in Intune, you can create a settings catalog policy using the settings you imported. For more information on this feature, go to [Create a Settings Catalog policy using your imported GPOs in Microsoft Intune](../configuration/group-policy-analytics-migrate.md).
 
-Next, [deploy Intune](deployment-plan-setup.md).
+Next, [setup Intune](deployment-plan-setup.md).
+
+## Currently use Microsoft 365 Basic Mobility and Security
+
+If you created and deployed Microsoft 365 Basic Mobility and Security policies, then you can migrate the users, groups, and policies to Microsoft Intune.
+
+For more information, go to [Migrate from Microsoft 365 Basic Mobility and Security to Intune](migrate-to-intune.md).
 
 ## Tenant to tenant migration
 
