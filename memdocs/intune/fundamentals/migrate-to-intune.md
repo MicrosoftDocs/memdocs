@@ -33,7 +33,7 @@ ms.collection: M365-identity-device-management
 
 Microsoft 365 includes a basic set of policies that protect devices and protect Microsoft 365 apps, like Outlook. These policies are managed in the Microsoft 365 Defender portal and are called **Basic Mobility and Security**. For more information on what Basic Mobility and Security offers, go to [Capabilities of Basic Mobility and Security](/microsoft-365/admin/basic-mobility-security/capabilities).
 
-Many organizations want more device management features that are included with Microsoft Intune. For a comparison of the features, go [Choose between Basic Mobility and Security or Intune](/microsoft-365/admin/basic-mobility-security/choose-between-basic-mobility-and-security-and-intune).
+Many organizations want more device management features that are included with Microsoft Intune. For a comparison of the features, go to [Choose between Basic Mobility and Security or Intune](/microsoft-365/admin/basic-mobility-security/choose-between-basic-mobility-and-security-and-intune).
 
 You can migrate from Basic Mobility and Security to Microsoft Intune. Migrating to Intune requires the following three major steps:
 
@@ -45,11 +45,25 @@ This article will help you migrate your mobile device management (MDM) from Micr
 
 ## Before you begin
 
-- Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with Azure AD Global or License administrator rights.
+- Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with an account that has Azure AD Global or License administrator rights.
 
-- Test the steps in this article on a group of test users who have devices enrolled in Basic Mobility and Security. Instead of assigning the actual suggested groups to the policy, assign a test group and confirm that the policies behave as expected.
+- Test the steps in this article on a test users group that have devices enrolled in Basic Mobility and Security. Instead of assigning the actual suggested groups to the policy, assign a test group and confirm that the policies behave as expected.
 
 - After you migrate to Intune, the existing device security policies deployed with Basic Mobility and Security are permanently frozen.
+
+- Intune licenses impact the migration process. For example:
+
+  - Users with Intune licenses assigned to them can start receiving policies immediately, even if they weren't previously managed by Basic Mobility and Security.
+
+    If you want to prevent this, you can unassign the Intune licenses before the migration. 
+
+  - Users without Intune licenses assigned to them should be fine.
+
+  Create separate groups:
+  - Users with Intune licenses assigned
+  - Users without Intune licenses assigned
+
+  Remove licenses
 
 ## Step 1 - Prepare
 
@@ -71,7 +85,9 @@ Before you migrate your Basic Mobility and Security policies, users and groups t
     - Don’t assign Intune licenses to users whose devices are managed by Basic Mobility and Security.
     - Don't assign Intune licenses to enable [app protection policies](../apps/app-protection-policy.md), also known as mobile application management (MAM).
 
-    Only assign Intune licenses to users after the policy migration step is complete. The license assignment controls the migration of devices from Basic Mobility and Security to Intune. Before the first device is moved, make sure that sufficient Intune policies have been created to replace Basic Mobility and Security. For more information on a minimum base set of policies, go to [Get started with Intune](get-started-with-intune.md).
+    Only assign Intune licenses to users after the policy migration step is complete. The license assignment controls the migration of devices from Basic Mobility and Security to Intune.
+
+    Before the first device is moved, make sure that sufficient Intune policies have been created to replace Basic Mobility and Security. For more information on a minimum base set of policies, go to [Get started with Intune](get-started-with-intune.md).
 
 After the migration evaluation process activates, you can't make changes to your device security policies in the Microsoft 365 Defender portal. The existing Basic Mobility and Security policies are still enforced, but changes to these existing policies aren't saved.
 
@@ -90,17 +106,17 @@ After the migration evaluation process activates, you can't make changes to your
 > - Microsoft Intune for Education for Student
 > - Microsoft Intune for Education Prepaid Device
 
-## Step 2 - Migrate policies
+## Step 2 - Evaluate and migrate your existing policies
 
-After you’ve prepared your licenses and Basic Mobility and Security policies described in [Step 1 - Prepare](#step-1---prepare), you can use the **Migration evaluation** in the [Endpoint Manager admin center](https://endpoint.microsoft.com/#view/Microsoft_Intune_Workflows/MifoPolicyListBlade) to get Intune policy recommendations.
+After you’ve prepared your licenses and Basic Mobility and Security policies described in [Step 1 - Prepare](#step-1---prepare), use the [Endpoint Manager admin center Migration evaluation](https://endpoint.microsoft.com/#view/Microsoft_Intune_Workflows/MifoPolicyListBlade) to get Intune policy recommendations.
 
 The tool can migrate your existing Basic Mobility and Security device security policies to Intune as [compliance policies](../protect/device-compliance-get-started.md) and [device configuration profiles](../configuration/device-profiles.md). It also makes recommendations for which groups they should be assigned.
 
-These Intune recommendations are designed to replicate the Basic Mobility and Security policies. **You need to review these recommendations** to make sure that they reflect the old policies.
+These Intune recommendations are designed to replicate the Basic Mobility and Security policies. **You need to review these recommendations** to make sure they reflect the old policies.
 
 To evaluate and migrate policies from Basic Mobility and Security to Intune:
 
-1. Complete the steps in the [Step 1 - Prepare](#prepare) section (in this article).
+1. Complete the steps in the [Step 1 - Prepare](#step-1---prepare) section (in this article).
 2. Open the [Migration evaluation](https://endpoint.microsoft.com/#blade/Microsoft_Intune_Workflows/MifoPolicyListBlade) > select **Start**. It will take a few minutes to complete the evaluation.
 
     > [!NOTE]
@@ -108,19 +124,21 @@ To evaluate and migrate policies from Basic Mobility and Security to Intune:
     > - If you navigate away from the Migration evaluation, the only way to return is to open the [Migration evaluation](https://endpoint.microsoft.com/#blade/Microsoft_Intune_Workflows/MifoPolicyListBlade) link again.
     > - After you start the migration evaluation, you can't create new or edit existing device security policies in the Microsoft 365 Defender portal.
 
-3. Select **Recommendations**. This page displays the Intune policy recommendations based on your Basic Mobility and Security policies. The recommendations are read only and won’t change. The name of each recommendation has a prefix based on the Basic Mobility and Security policy name. You need to review each item in the list, like the following example:
+3. Select **Recommendations**.
+
+    This page displays the Intune policy recommendations based on your Basic Mobility and Security policies. The recommendations are read only and can't be changed. The name of each recommendation has a prefix based on the Basic Mobility and Security policy name. You need to review each item in the list, like the following example:
 
     :::image type="content" source="./media/migrate-to-intune/recommendations-page.png" alt-text="Screenshot of migration evaluation example in the Endpoint Manager admin center after migrating Microsoft 365 Basic Mobility and Security policies to Intune":::
 
-    - You won’t need to review or make changes to the settings controlling conditional access to Office 365 services. They’re backed by classic Azure Active Directory conditional access policies and are directly available through the Azure AD portal. These policies are exactly the same underlying policies managed indirectly through the device security policies in the Microsoft 365 Defender portal. So, there’s no need to review or change them.
-    - Not all device settings offered in device security policies correspond exactly to Intune settings and values. Therefore, they can’t be moved with precise one-to-one mapping. You need to review and possibly adjust these settings.
+    - Not all device settings correspond exactly to Intune settings and values. So, they can’t be moved with precise one-to-one mapping. You need to review and possibly adjust these settings.
+    - The conditional access (CA) settings that control the Office 365 services are the same CA policies in Azure Active Directory. So, you don’t need to review or make changes to them.
 
 4. Select an item in the list. The **Compliance policy recommendation overview** page opens. Review the instructions.
 5. Select **Details** to review the recommended settings and group assignments:
 
     :::image type="content" source="./media/migrate-to-intune/details-page.png" alt-text="Screenshot of details page example in the Endpoint Manager admin center after migrating Microsoft 365 Basic Mobility and Security policies to Intune":::
 
-    The policy recommendations on this page aren't an Intune policy yet. It’s a read-only report documenting the suggested settings and assignments to use. While reviewing the recommendations, keep these points in mind:
+    The policy recommendations on this page are a read-only report documenting the suggested settings and assignments to use. They aren't Intune policies yet. While reviewing the recommendations, keep these points in mind:
 
     - If the groups listed in the recommendation already have Intune policies assigned to them, then these policies may conflict with the recommended settings. To learn how conflicts are handled in Intune, go to [Common questions and answers with device policies and profiles in Microsoft Intune](../configuration/device-profile-troubleshoot.md#if-multiple-policies-are-assigned-to-the-same-user-or-device-how-do-i-know-which-settings-gets-applied).
 
@@ -132,39 +150,44 @@ To evaluate and migrate policies from Basic Mobility and Security to Intune:
     > [!NOTE]
     > For the Windows operating system, only Windows 10/11 desktop devices will have policy migrated for them. Other versions of Windows won't have policy migrated. For more information, see the [Policy mapping for Access Requirements](policy-map-access-requirements.md) and [Policy mapping for Configuration](policy-map-configurations.md).
 
-6. If you want to implement the recommended policy, then select **Open policy**. The policy page opens.
-
-    - In this page, the policy is in draft mode and you can change or update the migrated policies.
-    - The policy doesn’t have any groups assigned to it yet. So, it’s not affecting any users who are licensed for Intune and who are in the same groups assigned to the original device security policy.
-
-      Now, the policy is ready to be assigned to the recommended groups or to other groups.
+6. If you want to implement the recommended policy, then select **Open policy**. The policy page opens and the Intune policy is created. You can change or update the migrated policies.
 
     > [!NOTE]
     > If you delete the policy, the **Open policy** link from the recommendation page won’t work.
 
-7. To assign the recommended groups to the policy, select **Properties** > **Edit** (next to **Assignments**) > use the assignments workflow to assign the groups.
+At this point, the policy is created, but it’s not doing anything yet. The next step is to assign the policy to the recommended groups or other groups you choose.
 
-    When you assign, your newly migrated Intune policies replace the device settings configured in Basic Mobility and Security. If you don’t assign the groups, then devices managed by Basic Mobility and Security could lose settings and email configuration when their users are licensed for Intune. Remember, the Intune license assignment controls the migration of devices from Basic Mobility and Security to Intune.
+## Step 3 - Assign the policies and complete the migration
 
-    Devices managed by the Basic Mobility and Security will migrate after you assign Intune licenses to the users at the next [Intune refresh cycle](../configuration/device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned).
+After the policies are created, they're ready to be assigned. For this migration to complete, all 3 have to be complete: assign, coexistence, and license.
 
-8. Enable [coexistence](mdm-authority-set.md#coexistence). After you enable coexistence, all users that have an Intune license or get assigned an Intune license immediately migrate to Intune.
-9. Assign Intune [licenses](/azure/active-directory/fundamentals/license-users-groups) to the user groups that don't have Intune licenses. The new policies will begin affecting the users' devices after the next [Intune refresh cycle](../configuration/device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned).
+1. Assign the recommended groups to the policy. Select **Open policy** > **Properties** > **Edit** (next to **Assignments**) > use the assignments workflow to assign the groups.
 
-## Step 3 - Migrate users and devices
+    When you assign groups, your newly migrated Intune policies replace the device settings configured in Basic Mobility and Security. If you don’t assign the groups, then devices managed by Basic Mobility and Security could lose settings and email configuration when their users are licensed for Intune. Remember, the Intune license assignment is a key step in the migration of devices from Basic Mobility and Security to Intune device management.
 
-To migrate a user and their devices from Basic Mobility and Security to Intune:
-
-1. Enable [coexistence](mdm-authority-set.md#coexistence). Enabling coexistence will immediately migrate all devices whose users are assigned an Intune license.
 2. Sign in to the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with Azure AD Global or License administrator rights.
-3. Assign Intune licenses to the users you want to migrate by using users or groups:
 
-    - Assign licenses to **Users**. For more information, see [Assign licenses to users](/azure/active-directory/fundamentals/license-users-groups).
-    - Assign licenses to **Groups**. For more information, see [Assign licenses to a group](/azure/active-directory/enterprise-users/licensing-groups-assign).
+3. Enable [coexistence](mdm-authority-set.md#coexistence). When enabled:
 
-4. After a user is licensed for Intune, their devices will automatically switch to Intune management at the next device refresh cycle. See [Refresh cycles](../configuration/device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned).
+    - Users with existing Intune licenses are immediately moved to Intune and the newly migrated policies are applied at the next [Intune refresh cycle](../configuration/device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned).
+    - For users without Intune licenses, coexistence is the second step in the migration process. They'll be moved to Intune in the next step.
+
+4. For users without Intune licenses, assign Intune licenses to the users you want to migrate. Your options:
+
+    - Assign licenses to **Users**. For more information, go to [Assign licenses to users](/azure/active-directory/fundamentals/license-users-groups).
+    - Assign licenses to **Groups**. For more information, go to [Assign licenses to a group](/azure/active-directory/enterprise-users/licensing-groups-assign).
+
+At this point, the key steps are complete:
+
+1. The policies are assigned to your groups.
+2. Coexistence is enabled in Intune.
+3. Intune licenses are assigned.
+
+At the next [Intune device refresh cycle](../configuration/device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned), the devices will automatically switch to Intune management and the new policies will start affecting user devices.
 
 ## After the migration
+
+This section describes what happens behinde the scenes. Just an FYI.
 
 For a mapping reference of the policies migrated by the **Migration evaluation**, go to the following articles:
 
@@ -184,15 +207,20 @@ When you complete the migration, you'll find your migrated policies in Microsoft
 
 ### Start button always appears
 
-The **Start** button will appear each time you open the Migration evaluation page, even if the evaluation is already generated. If you dismiss the **Start** prompt, the previously generated recommendations won’t load.
+Each time you open the use the [Endpoint Manager admin center Migration evaluation](https://endpoint.microsoft.com/#view/Microsoft_Intune_Workflows/MifoPolicyListBlade), the **Start** button shows, even if the evaluation is already generated. If you dismiss the **Start** prompt, then the previously generated recommendations won’t load.
 
 **Workaround**: Start the evaluation again. It won’t create more or duplicate recommendations or policies. Rerunning the migration detects that the evaluation has already succeeded and loads the previous recommendations.
 
 ### Number of sign-in failures before device is wiped setting isn’t migrated
 
-The **Number of sign-in failures before device is wiped** setting isn’t migrated to Intune. 
+The **Number of sign-in failures before device is wiped** setting isn’t migrated to Intune.
 
-**Workaround**: This setting must be manually added to Intune device configuration profiles if it was enabled in the Basic Mobility and Security policy.
+**Workaround**: If this setting was enabled in the Basic Mobility and Security policy, then this setting must be manually added to Intune device configuration profiles. For
+
+- [Android Enterprise device settings list to allow or restrict features on corporate-owned devices using Intune](../configuration/device-restrictions-android-for-work.md)
+- [Android Enterprise device settings list to allow or restrict features on personally owned devices using Intune](../configuration/device-restrictions-android-enterprise-personal.md)
+- [iOS/iPadOS device settings to allow or restrict features using Intune](../configuration/device-restrictions-ios.md)
+- [Windows 10/11 device settings to allow or restrict features using Intune](../configuration/device-restrictions-windows-10.md)
 
 ## Next steps
 
