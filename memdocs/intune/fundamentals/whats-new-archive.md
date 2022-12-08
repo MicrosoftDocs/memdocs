@@ -765,7 +765,7 @@ We have a pair of updates for [security baselines](../protect/security-baselines
   - **Scan scripts that are used in Microsoft browsers** is added to the *Microsoft Defender* category.
   - **Enable tamper protection to prevent Microsoft Defender being disabled** is added to *Windows Security*, which is a new category added with this baseline version.
 
-Plan to [update your baselines](../protect/security-baselines-configure.md#change-the-baseline-version-for-a-profile) to the latest version. To understand what's changed between versions, see [Compare baseline versions](../protect/security-baselines.md#compare-baseline-versions) to learn how to export a .CSV file that shows the changes.
+Plan to [update your baselines](../protect/security-baselines-configure.md#change-the-baseline-version-for-a-profile) to the latest version. To understand what's changed between versions, see [Compare baseline versions](../protect/security-baselines.md) to learn how to export a .CSV file that shows the changes.
 
 #### Use custom settings for Device Compliance for Windows 10/11 devices (public preview)<!-- 7536730 -->
 As a public preview, device compliance policy for Windows 10 and Windows 11 devices supports the addition of custom settings to a device compliance policy. Results from custom settings appear in the Microsoft Endpoint Manager admin center along with other compliance policy details.
@@ -2428,7 +2428,7 @@ We have new versions available for the following [security baselines](../protect
 
 Updated baseline versions bring support for recent settings to help you maintain the best-practice configurations recommended by the respective product teams.
 
-To understand what's changed between versions, see [Compare baseline versions](../protect/security-baselines.md#compare-baseline-versions) to learn how to export a .CSV file that shows the changes.
+To understand what's changed between versions, see [Compare baseline versions](../protect/security-baselines.md) to learn how to export a .CSV file that shows the changes.
 
 #### Endpoint Security Firewall reports<!-- 5653366    -->  
 We’ve added two new reports that are dedicated to Firewall policies in Endpoint Security:
@@ -2976,7 +2976,7 @@ We’ve added a new [security baseline for Edge](../protect/security-baseline-se
 
 Updated baseline versions bring support for recent settings to help you maintain the best-practice configurations recommended by the respective product teams.
 
-To understand what's changed between versions, see [Compare baseline versions](../protect/security-baselines.md#compare-baseline-versions) to learn how to export a .CSV file that shows the changes.
+To understand what's changed between versions, see [Compare baseline versions](../protect/security-baselines.md) to learn how to export a .CSV file that shows the changes.
 
 #### New Microsoft Tunnel version<!-- 8504252 -->
 
@@ -3263,7 +3263,7 @@ We have new versions available for the following [security baselines](../protect
 
 Updated baseline versions bring support for recent settings to help you maintain the best-practice configurations recommended by the respective product teams.
 
-To understand what's changed between versions, see [Compare baseline versions](../protect/security-baselines.md#compare-baseline-versions) to learn how to export a .CSV file that shows the changes.
+To understand what's changed between versions, see [Compare baseline versions](../protect/security-baselines.md) to learn how to export a .CSV file that shows the changes.
 
 #### Use Endpoint security configuration details to identify the source of policy conflicts for devices<!-- 7567503    -->
 

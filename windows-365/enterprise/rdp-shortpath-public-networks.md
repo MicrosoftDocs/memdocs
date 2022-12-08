@@ -28,7 +28,7 @@ ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
 ---
 
-# Use RDP Shortpath for public networks (preview) with Windows 365  
+# Use RDP Shortpath for public networks with Windows 365  
 
 You can now use Remote Desktop Protocol (RDP) Shortpath for public networks with your Windows 365 Cloud PCs. RDP Shortpath for public networks can provide another connection path for improved Cloud PC connectivity, especially in suboptimal network conditions.
 
@@ -44,11 +44,11 @@ To use RDP Shortpath for public networks with Windows 365, you must meet these r
     - To the public IP addresses assigned to NAT gateway or the Azure Firewall in an Azure Hosted Network Scenario.
     - For a Microsoft Hosted network scenario, all public IP spaces.
 
-## Enable the preview of RDP Shortpath for public networks
+## Enable RDP Shortpath for public networks
 
-To participate in the public preview for RDP Shortpath for public networks, visit the following Azure Virtual Desktop documentation page and follow the instructions:
+To enable RDP Shortpath for public networks, visit the following Azure Virtual Desktop documentation page and follow the instructions:
 
-[Enabling the preview of RDP Shortpath for public networks](/azure/virtual-desktop/shortpath-public#enabling-the-preview-of-rdp-shortpath-for-public-networks).
+[Enable RDP Shortpath for public networks](/azure/virtual-desktop/shortpath-public#enabling-the-preview-of-rdp-shortpath-for-public-networks).
 
 ## Verify UDP connectivity
 
@@ -89,4 +89,4 @@ For more technical details on these scenarios, see [General recommendations](/az
 
 ## Next steps
 
-For complete information, see [Azure Virtual Desktop RDP Shortpath for public networks (preview)](/azure/virtual-desktop/shortpath-public).
+For complete information, see [Azure Virtual Desktop RDP Shortpath for public networks](/azure/virtual-desktop/shortpath-public).

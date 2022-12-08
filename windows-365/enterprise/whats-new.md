@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 11/28/2022
+ms.date: 12/5/2022
 ms.topic: reference
 ms.service: windows-365
 ms.subservice:
@@ -51,10 +51,18 @@ Learn what new features are available in Windows 365 Enterprise.
 -->
 
 <!-- ########################## -->
+## Week of December 5, 2022
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Support for RDP Shortpath for public networks now generally available<!--41057892-->
+Support for RDP Shortpath for public networks has moved out of preview and into general availability. For more information about RDP Shortpath, see [Use RDP Shortpath for public networks with Windows 365](rdp-shortpath-public-networks.md).
+
+<!-- ########################## -->
 ## Week of November 28, 2022
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
-
 ### Provisioning
 
 #### New Geography option in Windows 365 provisioning policy<!-- 41400209-->

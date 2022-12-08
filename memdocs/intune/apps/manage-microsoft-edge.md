@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Manage Edge for iOS and Android with Intune 
+title: Manage Microsoft Edge on iOS and Android with Intune
 titleSuffix: 
 description: Use Intune app protection and configuration policies with Edge for iOS and Android to ensure corporate websites are always accessed with safeguards in place. 
 keywords:
@@ -32,7 +32,7 @@ ms.collection:
 ms.custom: intune-azure
 ---
 
-# Manage web access by using Edge for iOS and Android with Microsoft Intune
+# Manage Microsoft Edge on iOS and Android with Intune
 
 Edge for iOS and Android is designed to enable users to browse the web and supports multi-identity. Users can add a work account, as well as a personal account, for browsing. There is complete separation between the two identities, which is like what is offered in other Microsoft mobile apps.
 
