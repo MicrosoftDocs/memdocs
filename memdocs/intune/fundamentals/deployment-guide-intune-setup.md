@@ -7,7 +7,7 @@ keywords: migrate from configuration manager to intune, move from airwatch to in
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/07/2022
+ms.date: 12/08/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -225,7 +225,9 @@ Next, [setup Intune](deployment-plan-setup.md).
 
 ## Currently use Microsoft 365 Basic Mobility and Security
 
-If you created and deployed Microsoft 365 Basic Mobility and Security policies, then you can migrate the users, groups, and policies to Microsoft Intune. For more information, go to [Migrate from Microsoft 365 Basic Mobility and Security to Intune](migrate-to-intune.md).
+If you created and deployed Microsoft 365 Basic Mobility and Security policies, then you can migrate the users, groups, and policies to Microsoft Intune.
+
+For more information, go to [Migrate from Microsoft 365 Basic Mobility and Security to Intune](migrate-to-intune.md).
 
 ## Tenant to tenant migration
 
