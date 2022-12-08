@@ -129,9 +129,9 @@ items:
         href: ./fundamentals/migration-guide.md
       - name: Move to Intune
         href: ./fundamentals/deployment-guide-intune-setup.md
-      - name: Migrate from Basic Mobility and Security
+      - name: Migrate from Microsoft 365
         items: 
-        - name: Migrate from Basic Mobility and Security
+        - name: Move from Microsoft 365 device management
           href: ./fundamentals/migrate-to-intune.md
         - name: Policy mapping
           items: 
@@ -141,9 +141,9 @@ items:
             href: ./fundamentals/policy-map-configurations.md
           - name: Miscellaneous policy mapping
             href: ./fundamentals/policy-map-miscellaneous.md
-      - name: Device and app management
+      - name: Device and app management - DELETE?
         href: ./fundamentals/migration-guide-configure-policies.md
-      - name: App protection
+      - name: App protection - DELETE?
         href: ./fundamentals/migration-guide-app-protection-policies.md
 
   - name: Solutions and scenarios
