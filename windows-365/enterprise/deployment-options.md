@@ -52,6 +52,8 @@ The customer’s only responsibility is the configuration and management of the 
 
 Microsoft recommends that customers use this option for their Windows 365 deployment.
 
+![Diagram of Microsoft-hosted network option](./media/deployment-options/microsoft-hosted-network-option.png)
+
 You don’t have to bring in your own Azure subscription(s), plan, design, deploy, or manage the infrastructure. Customers can dedicate their EUC team to focus on managing Cloud PC configurations and security from a single management console provided by Intune.
 
 This option is analogous to providing an employee with a laptop to use at home. You as an organization don’t control the network the device sits on. You do fully control how the Windows device is configured, secured, and how it connects to your on-premises network. With Windows 365, this control is possible thanks to the end-to-end Zero Trust Security Framework-aligned adaptive security controls and configurations.
@@ -111,9 +113,13 @@ When using Azure AD join, you’re not required to create a connection from the 
 
 For simplicity, when using Azure AD join, we recommend that you use the Microsoft-hosted network option explained above. In that case, you can use a VPN or private access solution over the internet to access corporate resources.
 
+![Diagram of ANC Azure AD join option](./media/deployment-options/azure-network-connection-azure-ad-join.png)
+
 ### Hybrid Azure AD join
 
-With Hybrid Azure AD join, a connection to the on-premises network is required from the VNet. The only way to reach the DC infrastructure located there is to use the ANC deployment option. This connection is a critical component so care should be taken to ensure reliability and redundancy. 
+With Hybrid Azure AD join, a connection to the on-premises network is required from the VNet. The only way to reach the DC infrastructure located there is to use the ANC deployment option. This connection is a critical component so care should be taken to ensure reliability and redundancy.
+
+![Diagram of ANC hybrid Azure AD join option](./media/deployment-options/azure-network-connection-hybrid-azure-ad-join.png)
 
 ### Benefits of the ANC option
 
