@@ -91,7 +91,7 @@ items:
   - name: Deploy
     items:
 
-    - name: Migrate to Microsoft Intune (need to update section for different scenarios)
+    - name: Migrate to Intune (need to update section for different scenarios)
       items: 
       - name: Overview - DELETE?
         href: ./fundamentals/migration-guide.md
