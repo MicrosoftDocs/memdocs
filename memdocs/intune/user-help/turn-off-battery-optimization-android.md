@@ -33,12 +33,12 @@ ms.collection:
 
 *Applies to Company Portal app for Android*  
 
-Your organization may require you to turn battery optimization off. On some devices battery optimization prevents the Company Portal app from running in the background and receiving necessary updates.    
+Your organization may require you to turn off battery optimization. On some devices, battery optimization prevents the Company Portal app from running in the background and receiving necessary updates.    
 
 To turn off battery optimization in the Company Portal app for Android:  
 
 1. Sign in to the Company Portal app with your work or school account.  
 2. Tap **Settings**.  
-3. Next to **Battery Optimization**, flip the switch to turn battery optimization off.         
+3. Next to **Battery Optimization**, flip the switch to the **turn off** position.         
 
 Need additional help? Contact your IT support person. For contact information, sign in to the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980) with your work or school account, and then go to **Helpdesk**.  
