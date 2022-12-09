@@ -33,7 +33,7 @@
     "template": "docs.html",
     "globalMetadata": {
       "layout": "Conceptual",
-      "breadcrumb_path": "/intune/bread/toc.json",
+      "breadcrumb_path": "/mem/breadcrumb/toc.json",
       "product_feedback_displaytext": "Intune Feedback",
       "feedback_product_url": "https://feedbackportal.microsoft.com/feedback/forum/ef1d6d38-fd1b-ec11-b6e7-0022481f8472",
       "feedback_system": "GitHub",
