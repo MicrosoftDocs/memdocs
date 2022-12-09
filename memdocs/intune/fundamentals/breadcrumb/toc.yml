@@ -9,4 +9,7 @@ items:
     items:
     - name: Fundamentals
       tocHref: /mem/intune/fundamentals/
+      topicHref: /mem/
+    - name: Fundamentals
+      tocHref: /mem/intune/fundamentals/
       topicHref: /troubleshoot/mem/intune/
