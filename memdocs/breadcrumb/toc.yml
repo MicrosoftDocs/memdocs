@@ -80,3 +80,6 @@ items:
   - name: Autopilot
     tocHref: /mem/autopilot/
     topicHref: /mem/autopilot/
+  - name: Solutions
+    tocHref: /mem/solutions/
+    topicHref: /mem/solutions/
