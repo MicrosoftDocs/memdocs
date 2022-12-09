@@ -1,16 +1,12 @@
 items:
-- name: Docs
-  tocHref: /
-  topicHref: /
+- name: Microsoft Intune
+  tocHref: /mem/
+  topicHref: /mem/index
   items:
-    - name: Endpoint management
-      tocHref: /mem/
-      topicHref: /mem/
-      items:
-      - name: Intune
-        tocHref: /mem/intune/
-        topicHref: /mem/intune/
-        items:
-        - name: Protect
-          tocHref: /mem/intune/configuration
-          topicHref: /mem/intune/protect/index
+  - name: Intune service
+    tocHref: /mem/intune/
+    topicHref: /mem/intune/
+    items:
+    - name: Protect
+      tocHref: /mem/intune/configuration
+      topicHref: /mem/intune/protect/index

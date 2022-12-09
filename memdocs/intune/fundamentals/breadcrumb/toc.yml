@@ -1,19 +1,15 @@
 items:
-- name: Docs
-  tocHref: /
-  topicHref: /
+- name: Microsoft Intune
+  tocHref: /mem/
+  topicHref: /mem/index
   items:
-    - name: Endpoint management
-      tocHref: /mem/
-      topicHref: /mem/
-      items:
-      - name: Intune
-        tocHref: /mem/intune/
-        topicHref: /mem/intune/
-        items:
-        - name: Fundamentals
-          tocHref: /mem/intune/fundamentals/
-          topicHref: /mem/index
-        - name: Fundamentals
-          tocHref: /mem/intune/fundamentals/
-          topicHref: /troubleshoot/mem/intune/
+  - name: Intune service
+    tocHref: /mem/intune/
+    topicHref: /mem/intune/
+    items:
+    - name: Fundamentals
+      tocHref: /mem/intune/fundamentals/
+      topicHref: /mem/index
+    - name: Fundamentals
+      tocHref: /mem/intune/fundamentals/
+      topicHref: /troubleshoot/mem/intune/
