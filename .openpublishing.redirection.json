@@ -1249,7 +1249,7 @@
         },
         {
             "source_path": "memdocs/intune/protect/context/pr-context.yml",
-            "redirect_url": "/mem/protect",
+            "redirect_url": "/mem/intune/protect",
             "redirect_document_id": false
         },        
         {
