@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/05/2022
+ms.date: 12/08/2022
 ms.topic: overview
 ms.service: mem
 ms.subservice: fundamentals
