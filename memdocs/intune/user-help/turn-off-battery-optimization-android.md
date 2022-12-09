@@ -1,0 +1,42 @@
+---
+# required metadata
+
+title: Turn off battery optimization in Company Portal app | Microsoft Intune  
+description: Turn off battery optimization in the Company Portal app for Android. 
+keywords:
+author: lenewsad
+ms.author: lanewsad
+manager: dougeby
+ms.date: 12/09/2022
+ms.topic: end-user-help
+ms.prod:
+ms.service: microsoft-intune
+ms.subservice: end-user
+ms.technology:
+ms.assetid: d
+searchScope:
+ - User help
+
+# optional metadata
+
+ROBOTS:  
+#audience:
+
+ms.reviewer: abstarr
+ms.suite: ems
+#ms.tgt_pltfrm:
+ms.custom: intune-enduser
+ms.collection: 
+---
+
+# Turn off battery optimization in Company Portal app  
+
+*Applies to Company Portal app for Android*  
+
+This article describes how to turn off battery optimization in the Company Portal app for Android. Your organization may require you to turn off battery optimization because when it's on it prevents the Company Portal app from running in the background and receiving neccessary updates.    
+
+1. Sign in to the Company Portal app with your work or school account.  
+2. Tap **Settings**.  
+3. Next to **Battery Optimization**, flip the switch to turn battery optimization off.         
+
+Need additional help? Contact your IT support person. For contact information, sign in to the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980) with your work or school account, and then go to **Helpdesk**.  
