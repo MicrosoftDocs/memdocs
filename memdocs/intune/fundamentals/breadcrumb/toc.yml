@@ -3,11 +3,11 @@ items:
   tocHref: /
   topicHref: /
   items:
-    - name: Endpoint management
+    - name: Microsoft Intune
       tocHref: /mem/
       topicHref: /mem/
       items:
-      - name: Intune
+      - name: Intune service
         tocHref: /mem/intune/
         topicHref: /mem/intune/
         items:
