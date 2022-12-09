@@ -240,7 +240,7 @@ items:
     - name: Using the Intune docs
       href: ../../use-docs.md 
     - name: Get support
-      href: ../../get-support.md?toc=/mem/intune/fundamentals/toc.json&bc=/mem/intune/bread/toc.json
+      href: ../../get-support.md?toc=/mem/intune/fundamentals/toc.json&bc=/mem/intune/fundamentals/breadcrumb/toc.json
   - name: Reports
     items:
     - name: Intune reports
@@ -258,7 +258,7 @@ items:
   - name: Error codes and descriptions
     items: 
     - name: Troubleshoot company resource access problems
-      href: /troubleshoot/mem/intune/troubleshoot-company-resource-access-problems?toc=/mem/intune/fundamentals/toc.json&bc=/mem/intune/bread/toc.json
+      href: /troubleshoot/mem/intune/troubleshoot-company-resource-access-problems?toc=/mem/intune/fundamentals/toc.json&bc=/mem/fundamentals/breadcrumb/toc.json
   - name: Policy map between Basic Mobility and Security and Intune
     items: 
     - name: Policy mapping between Basic Mobility and Security and Intune
