@@ -8,7 +8,7 @@ keywords:
 author: dougeby 
 ms.author: dougeby
 manager: dougeby
-ms.date: 11/21/2022
+ms.date: 12/09/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -77,43 +77,6 @@ The global quiet time settings will allow you to create policies to schedule qui
 
 ## Device configuration
 
-### New settings available in the macOS Settings Catalog <!-- 16069006   -->  
-The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
-
-New settings are available in the Settings Catalog. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can see these settings at **Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform > **Settings catalog** for profile type.
-
-New settings include:
-
-**File Vault > File Vault Options**:  
-- Destroy FV Key On Standby
-- Block FV From Being Disabled
-- Block FV From Being Enabled
-
-**Restrictions**:  
-- Allow Bluetooth Modification
-
-Applies to:  
-- macOS
-
-For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
-
-### The Company Portal app will enforce Password Complexity setting on Android Enterprise 12+ personally owned devices with a work profile<!-- 16211313  -->  
-On Android Enterprise 12+ personally owned devices with a work profile, you can create a compliance policy and/or device configuration profile that sets the password complexity. Starting with the 2211 release, this setting is available in the Endpoint Manager admin center:
-
-- **Devices** > **Configuration profiles** > **Create profile** > **Android Enterprise** for platform > Personally owned with a work profile
-- **Devices** > **Compliance policies** > **Create policy** > **Android Enterprise** for platform > Personally owned with a work profile
-
-The Company Portal app will enforce the **Password complexity** setting in its December release.
-
-For more information on this setting and the other settings you can configure on personally owned devices with a work profile, go to:
-
-- [Device compliance settings for Android Enterprise in Intune](../protect/compliance-policy-create-android-for-work.md#personally-owned-work-profile)
-- [Android Enterprise device settings list to allow or restrict features on personally owned devices using Intune](../configuration/device-restrictions-android-enterprise-personal.md)
-
-Applies to:
-
-- Android Enterprise 12+ personally owned devices with a work profile
-
 ### There are default settings for SSO extension requests on macOS devices<!-- 15082414  -->  
 When you create a single sign-on app extension configuration profile, there are some settings you configure. The following settings will use the following default values for all SSO extension requests:
 
@@ -158,31 +121,9 @@ Applies to:
 
 - iOS/iPadOS
 
-### Remote help client app will have a new option to disable chat functionality in the Tenant level setting<!-- 14685052 -->  
-In the Remote help app, admins will have the option to disable chat functionality from the new tenant level setting. Turning on the disable chat feature will remove the chat button in the Remote Help app. This setting can be found in the Remote Help **Settings** tab under **Tenant Administration** in Microsoft Intune.
-
-For more information, see [Configure Remote Help for your tenant](../remote-actions/remote-help.md#configure-remote-help-for-your-tenant).
-
-Applies to:
-
-- Windows 10/11
-
-<!-- ***********************************************-->
-
-## Device enrollment
-
-### Enrollment token lifetime will increase to 65 years for Android Enterprise dedicated devices  <!-- 15094454 -->  
-You'll be able to create an enrollment profile for Android Enterprise dedicated devices that's valid for up to 65 years. If you have an existing profile, the enrollment token will still expire on the date you chose when you created the profile, but when you renew it you'll be able to extend the lifetime to 65 years.
-
 <!-- ***********************************************-->
 
 ## Device management
-
-### Update policies for macOS now available for all supervised devices<!-- 16141990   -->  
-You'll soon be able to manage software update policies for macOS devices that weren't supervised through Automated Device Enrollment (ADE). Update policies for macOS are available under **Devices** > **Update policies for macOS (preview)**. For more information on configuring update policies for macOS, see [Use Microsoft Intune policies to manage macOS software updates | Microsoft Learn](../protect/software-updates-macos.md).
-
-Applies to:
-- macOS
 
 ### Endpoint security firewall rules support for ICMP type<!-- 5653356 -->  
 We’re adding a new setting named **IcmpTypesAndCodes** to the endpoint security firewall rules template for Windows 10. To configure this in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Endpoint security** > **Firewall** > **Create Policy** > Platform: *Windows 10, Windows 11, and Windows Server*  > Profile: *Microsoft Defender Firewall Rules*).
@@ -211,24 +152,6 @@ Attack surface reduction policies will soon support devices managed through the 
 Applies to:  
 - Windows 10
 - Windows 11
-
-### Microsoft Tunnel for Mobile Application Management for Android (public preview)<!-- 15769204  -->  
-In a public preview, we’re adding support for mobile application management (MAM) to the Microsoft Tunnel VPN gateway. With this preview for Android devices that have not enrolled with Intune, supported apps will be able to use Microsoft Tunnel to connect to your organization when working with corporate data and resources. This includes VPN gateway support for:  
-
-- Secure access to on-premises apps and resources using modern authentication
-- Single Sign On and conditional access.
-
-To use Tunnel for MAM on an unenrolled device will require the following three profiles:  
-
-- An app configuration profile for managed apps, to configure Microsoft Defender on devices for use as the Tunnel client app.
-- A second app configuration profile for managed apps, to configure Microsoft Edge to connect to Tunnel.
-- An app protection profile to enable automatic start of the Microsoft Tunnel connection.
-
-For information about using Tunnel on enrolled devices, see [Microsoft Tunnel overview](../protect/microsoft-tunnel-overview.md)
-
-Applies to:
-
-- Android Enterprise
 
 <!-- ***********************************************-->
 
