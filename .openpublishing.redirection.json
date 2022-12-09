@@ -33,6 +33,7 @@
         {
             "source_path": "memdocs/intune/user-help/what-happens-if-you-install-the-Company-Portal-app-and-enroll-your-device-in-intune-ios.md",
             "redirect_url": "/mem/intune/user-help/use-managed-devices-to-get-work-done",
+            "redirect_document_id": false
         }, 
         {
             "source_path": "memdocs/intune/user-help/how-to-set-the-period-before-your-android-device-is-locked.md",
@@ -1247,6 +1248,11 @@
             "redirect_url": "/mem/solutions/cloud-native-endpoints/cloud-native-endpoints-planning-guide",
             "redirect_document_id": false
         },
+        {
+            "source_path": "memdocs/intune/protect/context/pr-context.yml",
+            "redirect_url": "/mem/intune/protect",
+            "redirect_document_id": false
+        },        
         {
             "source_path": "memdocs/cloud-native-windows-endpoints.md",
             "redirect_url": "/mem/solutions/cloud-native-endpoints/cloud-native-windows-endpoints",
