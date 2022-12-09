@@ -82,7 +82,7 @@ You only need to enable Microsoft Defender for Endpoint a single time per tenant
 
       When these configurations are *On*, applicable devices that you manage with Intune, and devices you enroll in the future, are connected to Microsoft Defender for Endpoint for compliance.
 
-      For iOS devices, Defender for Endpoint also supports the following settings that help provide the Vulnerability Assessment of apps on Microsoft Defender for Endpoint for iOS. For more information about using the following two settings, see [Configure vulnerability assessment of apps](/microsoft-365/security/defender-endpoint/ios-configure-features?view=o365-21vianet#configure-vulnerability-assessment-of-apps).
+      For iOS devices, Defender for Endpoint also supports the following settings that help provide the Vulnerability Assessment of apps on Microsoft Defender for Endpoint for iOS. For more information about using the following two settings, see [Configure vulnerability assessment of apps](/microsoft-365/security/defender-endpoint/ios-configure-features#configure-vulnerability-assessment-of-apps).
 
       - **Enable App Sync for iOS Devices**:  Set to **On** to allow Defender for Endpoint to request metadata of iOS applications from Intune to use for threat analysis purposes. The iOS device must be MDM-enrolled and will provide updated app data during device check-in.
 
@@ -195,7 +195,7 @@ After you establish the service-to-service connection between Intune and Microso
 
 There isn't a configuration package for devices that run iOS/iPadOS. Instead, see [Overview of Microsoft Defender for Endpoint for iOS](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-ios) in the Microsoft Defender for Endpoint documentation for prerequisites and onboarding instructions for iOS/iPadOS.
 
-For devices that run iOS/iPadOS (in Supervised Mode), there is specialized ability given the increased management capabilities provided by the platform on these types of devices. To take advantage of these capabilities, the Defender app needs to know if a device is in Supervised Mode. Intune allows you to configure the Defender for iOS app through an App Configuration policy (for managed devices) that should be targeted to all iOS Devices as a best practice. For more information, see [Complete deployment for supervised devices](/microsoft-365/security/defender-endpoint/ios-install?view=o365-21vianet#complete-deployment-for-supervised-devices).
+For devices that run iOS/iPadOS (in Supervised Mode), there is specialized ability given the increased management capabilities provided by the platform on these types of devices. To take advantage of these capabilities, the Defender app needs to know if a device is in Supervised Mode. Intune allows you to configure the Defender for iOS app through an App Configuration policy (for managed devices) that should be targeted to all iOS Devices as a best practice. For more information, see [Complete deployment for supervised devices](/microsoft-365/security/defender-endpoint/ios-install?#complete-deployment-for-supervised-devices).
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **App configuration policies** > **Managed devices**.
