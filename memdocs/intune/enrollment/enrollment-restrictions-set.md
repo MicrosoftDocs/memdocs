@@ -45,7 +45,7 @@ ms.collection:
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]  
 
-Device enrollment restrictions let you restrict enrollment based on certain device attributes. When restrictions are applied, users on restricted devices or who exceed the device limit are blocked from enrolling in Microsoft Intune. There are two types of device enrollment restrictions you can configure in Microsoft Intune:   
+Device enrollment restrictions let you restrict devices from enrolling in Intune based on certain device attributes. There are two types of device enrollment restrictions you can configure in Microsoft Intune:   
 
 * **Device platform restrictions**: Restrict devices based on device platform, version, manufacturer, or ownership type.     
 * **Device limit restrictions**: Restrict the number of devices a user can enroll in Intune.  
@@ -163,11 +163,9 @@ Intune also blocks personal devices using these enrollment methods:
   Instead, you can configure a hard limit for these enrollment types in Azure AD. For more information, see [Manage device identities by using the Azure portal](/azure/active-directory/devices/device-management-azure-portal#configure-device-settings).  
 
 ## Next steps  
-
-Create and monitor enrollment restrictions:    
-  * [Create device platform enrollment restrictions](create-device-platform-restrictions.md) 
-  * [Create device limit enrollment restrictions](create-device-limit-restrictions.md)  
-  * [View enrollment reports](view-enrollment-reports.md)  
+Select the type of enrollment restriction you want to apply and create the profile:   
+ * [Create device platform enrollment restrictions](create-device-platform-restrictions.md)    
+ * [Create device limit enrollment restrictions](create-device-limit-restrictions.md)  
 
 
 
