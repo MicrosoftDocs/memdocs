@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/09/2022
+ms.date: 12/12/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -86,7 +86,6 @@ New settings include:
 
 **File Vault > File Vault Options**:
 
-- Destroy FV Key On Standby
 - Block FV From Being Disabled
 - Block FV From Being Enabled
 
