@@ -51,7 +51,7 @@ Device enrollment restrictions let you restrict enrollment based on device attri
 
 Each restriction type comes with one default policy that you can edit and customize as needed. Intune applies the default to all user and userless enrollments until you assign a higher-priority policy.  
 
-This article provides an overview of the available enrollment restrictions. When you're ready to create an enrollment restriction policy, see [Next steps](enrollment-restrictions-set.md) (in this article).   
+This article provides an overview of the available enrollment restrictions. When you're ready to create an enrollment restriction policy, see [Next steps](enrollment-restrictions-set.md#next-steps) (in this article).   
 
 ## Available restrictions  
 You can configure the following restrictions in the admin center: 
@@ -163,7 +163,7 @@ Intune also blocks personal devices using these enrollment methods:
 
 ## Next steps  
 
-Use the table-of-contents to step through each article in the enrollment restrictions how-to guide, or jump to an article using the following links:  
+When you're ready to create enrollment restrictions, see:  
   * [Create device platform enrollment restrictions](create-device-platform-restrictions.md) 
   * [Create device limit enrollment restrictions](create-device-limit-restrictions.md)  
   * [View enrollment reports](view-enrollment-reports.md)  
