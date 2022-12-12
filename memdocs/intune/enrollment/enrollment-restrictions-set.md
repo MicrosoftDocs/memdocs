@@ -30,6 +30,7 @@ ms.collection:
   - M365-identity-device-management
   - highpri
   - highseo
+  - ContentEnagagementFY23  
 ---
 
 # What are enrollment restrictions?      
@@ -51,7 +52,7 @@ Device enrollment restrictions let you restrict enrollment based on device attri
 
 Each restriction type comes with one default policy that you can edit and customize as needed. Intune applies the default to all user and userless enrollments until you assign a higher-priority policy.  
 
-This article provides an overview of the available enrollment restrictions. When you're ready to create an enrollment restriction policy, see [Next steps](enrollment-restrictions-set.md#next-steps) (in this article).   
+This article provides an overview of the available enrollment restrictions, important details and tips to consider when configurating policies, and feature limitations. To start creating restrictions, skip to [Next steps](enrollment-restrictions-set.md#next-steps) (in this article).   
 
 ## Available restrictions  
 You can configure the following restrictions in the admin center: 
