@@ -164,7 +164,7 @@ Intune also blocks personal devices using these enrollment methods:
 
 ## Next steps  
 
-When you're ready to create enrollment restrictions, see:  
+Create and monitor enrollment restrictions:    
   * [Create device platform enrollment restrictions](create-device-platform-restrictions.md) 
   * [Create device limit enrollment restrictions](create-device-limit-restrictions.md)  
   * [View enrollment reports](view-enrollment-reports.md)  
