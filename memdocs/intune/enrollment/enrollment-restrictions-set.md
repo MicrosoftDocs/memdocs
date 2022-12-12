@@ -45,14 +45,14 @@ ms.collection:
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]  
 
-Device enrollment restrictions let you restrict enrollment based on device attributes. When restrictions are applied, users on restricted devices or who exceed the device limit are blocked from enrolling in Microsoft Intune. There are two types of device enrollment restrictions you can configure in Microsoft Intune:   
+Device enrollment restrictions let you restrict enrollment based on certain device attributes. When restrictions are applied, users on restricted devices or who exceed the device limit are blocked from enrolling in Microsoft Intune. There are two types of device enrollment restrictions you can configure in Microsoft Intune:   
 
-* *Device platform restrictions* define which platforms, versions, and management types can enroll. In Intune, you can restrict device platforms, OS versions, manufacturer, and personally owned devices.  
-* *Device limit restrictions* define how many devices each user can enroll. 
+* **Device platform restrictions**: Restrict devices based on device platform, version, manufacturer, or ownership type.     
+* **Device limit restrictions**: Restrict the number of devices a user can enroll in Intune.  
 
-Each restriction type comes with one default policy that you can edit and customize as needed. Intune applies the default to all user and userless enrollments until you assign a higher-priority policy.  
+Each restriction type comes with one default policy that you can edit and customize as needed. Intune applies the default policy to all user and userless enrollments until you assign a higher-priority policy.  
 
-This article provides an overview of the available enrollment restrictions, important details and tips to consider when configurating policies, and feature limitations. To start creating restrictions, skip to [Next steps](enrollment-restrictions-set.md#next-steps) (in this article).   
+This article provides an overview of the available enrollment restrictions, and feature limitations. To start creating restrictions, skip to [Next steps](enrollment-restrictions-set.md#next-steps) (in this article).   
 
 ## Available restrictions  
 You can configure the following restrictions in the admin center: 
