@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 12/09/2022
+ms.date: 12/12/2022
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -33,7 +33,7 @@ ms.collection:
 
 *Applies to Company Portal app for Android*  
 
-Your organization may require you to turn off battery optimization. On some devices, battery optimization prevents the Company Portal app from running in the background and receiving necessary updates.    
+Your organization may require you to turn off battery optimization in the Company Portal app. On some devices, battery optimization prevents Company Portal from running in the background and receiving necessary updates.    
 
 To turn off battery optimization in the Company Portal app for Android:  
 
