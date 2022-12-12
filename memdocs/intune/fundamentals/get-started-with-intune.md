@@ -48,7 +48,7 @@ This article provides an overview of the steps to start your Intune deployment, 
 - Protect organization app data on personal devices
 - Cloud-attach with Configuration Manager
 
-## Step 1 - Plan your deployment
+## Prerequisites
 
 Intune gives you options to manage access to your organization using Mobile Device Management (MDM) or Mobile Application Management (MAM). MDM is when users "enroll" their devices in Intune. Once enrolled, they're managed devices, and can receive any policies, rules, and settings used by your organization. For example, you can install specifics apps, create a password policy, install a VPN connection, and more.
 
@@ -69,7 +69,7 @@ The following articles are good resources:
 > - [Plan your migration to Microsoft Endpoint Manager](/training/modules/paths-to-modern-endpoint-management/)
 > - [Determine your endpoint management implementation](/training/modules/determine-endpoint-implementation/)
 
-## Step 2 - Determine your licensing and get your prerequisites
+## Step 2 - Determine your licensing and get your prerequisites (smriti will not be using this section)
 
 The next step is to determine your license needs and any other prerequisites for your Intune deployment. The following list provides some of the most common prerequisites:
 
@@ -90,7 +90,7 @@ The following articles are good resources:
 - [Deployment guide: Enroll macOS devices in Microsoft Intune](deployment-guide-enrollment-macos.md)
 - [Deployment guide: Enroll Windows devices in Microsoft Intune](deployment-guide-enrollment-windows.md)
 
-## Step 3 - Set up Intune
+## Step 3 - Set up Intune (Smriti says - ok to delete)
 
 Intune uses many features in Azure AD, including your domain, your users, and your groups. You can also create new users and new groups to fit your organization needs. For example, you can create a group called **iOS devices** or **All HR users**. If you have Azure AD Premium, you can use [dynamic groups](groups-add.md) to automatically add users and devices to groups based on rules you create.
 
