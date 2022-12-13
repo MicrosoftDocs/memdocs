@@ -7,7 +7,7 @@ description: Step 4 to deploy device configuration profiles as part of the minim
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/29/2022
+ms.date: 12/12/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -33,24 +33,27 @@ So far, you've set up your Intune subscription, created app protection policies,
 
 In this step, you're ready to configure a minimum or baseline set of security and device features that all devices must have.
 
-Microsoft recommends you create policies that:
-
-- Focus on device security, including installing antivirus, creating a strong password policy, and regularly installing software updates.
-- Give users access to their organization email and controlled secure access to your network, wherever they are.
-
-These features are configured in device configuration profiles in the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). When the profiles are ready, they can be deployed from Intune to your devices.
-
-> [!TIP]
-> [Take a tour of Intune and the Endpoint Manager admin center](tutorial-walkthrough-endpoint-manager.md).
-
-This article lists the starting point device configuration policies that organizations should use. Most of these policies in this article focus on access to organization resources and security. In your organization, you may have a different set of baseline device configuration policies.
-
 This article applies to:
 
 - Android
 - iOS/iPadOS
 - macOS
 - Windows
+
+When you create device configuration profiles, there are different levels and types of policies available. These levels are the minimum Microsoft recommended policies. Know that your environment and business needs may be different.
+
+| Protection level | Recommended policies |
+| --- | --- |
+| **Level 1 - Minimum device configuration** (this article) | Microsoft recommends you create policies that: <br/><br/>- Focus on device security, including installing antivirus, creating a strong password policy, and regularly installing software updates.<br/>- Give users access to their organization email and controlled secure access to your network, wherever they are. |
+| **Level 2 - Enhanced device configuration** | Microsoft recommends you create policies that: <br/><br/>- Add another layer of security using disk encryption and move towards passwordless sign-in.<br/>- Configure more granular device features, settings, and behaviors. |
+| **Level 3 - High device configuration** | Microsoft recommends you create policies that: <br/><br/>- Use certificate based authentication to access resources and use single-sign on for apps.<br/>- Configure specialized devices such as kiosks and shared devices.<br/>- Run Windows PowerShell scripts.<br/>- Prevent malware from communicating with the Windows OS processes. |
+
+This article lists the **Level 1 - Minimum device configuration** device configuration policies that organizations should use. Most of these policies in this article focus on access to organization resources and security. In your organization, you may have a different set of baseline device configuration policies.
+
+These features are configured in device configuration profiles in the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). When the profiles are ready, they can be deployed from Intune to your devices.
+
+> [!TIP]
+> [Take a tour of Intune and the Endpoint Manager admin center](tutorial-walkthrough-endpoint-manager.md).
 
 ## Create your security baseline
 
