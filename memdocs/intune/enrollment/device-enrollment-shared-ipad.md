@@ -60,7 +60,7 @@ You can configure settings in device configuration profiles for a Shared iPad bo
 > - Your Azure AD instance must be federated in Apple Business Manager for user group policy assignment to succeed.
 > - All device configuration profile settings are device applicable for Shared iPad temporary sessions.
 > - User-assigned policies apply to a Shared iPad when the user signs in using their federated Azure AD credentials. See [Apple’s documentation](https://support.apple.com/guide/apple-business-manager-m/apdb19317543/web) on federating an Azure AD instance with Apple Business Manager.
-> - Device-assigned policies apply to a Shared iPad when you initiate a device-sync from MEM admin console or when Intune notifies the device to check in with the Intune service. [Learn more about frequency of device check-in with the Intune service](../configuration/device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned).
+> - Device-assigned policies apply to a Shared iPad when you initiate a device-sync from the Microsoft Endpoint Manager admin center or when Intune notifies the device to check in with the Intune service. [Learn more about frequency of device check-in with the Intune service](../configuration/device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned).
 
 | Profile   type | Setting name | Applicability on device group   assignment | Applicability on user group   assignment |
 |---|---|---|---|

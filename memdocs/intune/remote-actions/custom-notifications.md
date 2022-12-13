@@ -120,8 +120,7 @@ Intune doesn't track the custom notifications you send, and devices don't log th
 
 5. Select **Send** to send the custom notification to the device. Unlike notifications you send to groups, you don't configure an assignment or review the message before sending it.  
 
-Intune processes the message immediately. The only confirmation that the message was sent is the Intune notification you'll receive in the console, which displays the text of the message you sent.  
-
+Intune processes the message immediately. The only confirmation that the message was sent is the Intune notification you'll receive in the admin center, which displays the text of the message you sent.  
 
 ## Receive a custom notification
 

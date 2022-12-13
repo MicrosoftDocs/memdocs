@@ -42,9 +42,9 @@ Intune provides several ways to monitor the properties of apps that you manage a
 > [!NOTE]
 > Microsoft Store and Android Store apps that are deployed as **Available** do not report their installation status.
 >
-> For Managed Google Play apps deployed to Android Enterprise personally-owned work profile devices, you can view the status and version number of the app installed on a device using Intune. 
-> 
-> From the **Installed apps** page of the Windows Company Portal or the Company Portal website, end users can view the installation status and details for device-assigned required apps. This functionality is provided in addition to the installation status and details of user-assigned required apps. 
+> For Managed Google Play apps deployed to Android Enterprise personally-owned work profile devices, you can view the status and version number of the app installed on a device using Intune.
+>
+> From the **Installed apps** page of the Windows Company Portal or the Company Portal website, end users can view the installation status and details for device-assigned required apps. This functionality is provided in addition to the installation status and details of user-assigned required apps.
 
 ## App overview pane
 
@@ -102,7 +102,6 @@ A user status list is shown when you select **User install status** in the **Mon
 | **Installations**   | The number of apps installed by the user. |
 | **Failures**        | The number of failed app installations for the user.     |
 | **Not installed**   | The number of apps not installed by the user. |
-
 
 ## Next steps
 
