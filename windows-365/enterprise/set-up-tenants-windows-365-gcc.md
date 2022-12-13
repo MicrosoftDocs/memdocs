@@ -128,10 +128,11 @@ When provisioning Windows 365 Cloud PCs without the Microsoft-hosted network, yo
 > [!NOTE]
 > Tenant mapping must be successful before you proceed.
 
-Copy and paste the command below to execute in your Azure Government subscription's CloudShell and then go to the section **Script instructions** below.
+Use the **Copy** button below to copy the script, then paste the command below into your Azure Government subscription's CloudShell session for execution.  Next, go to the section **Script instructions** below.
 
 ```azurepowershell-interactive
-curl https://raw.githubusercontent.com/microsoft/Windows365-PSScripts/main/Windows%20365%20GCC/Grant%20Service%20Principal%20Roles%20in%20Tenant/Grant%20W365%20SP%20Roles%20In%20Tenant.ps1 -o GrantW365SProles.ps1 & .\GrantW365SProles.ps1
+connect-azaccount -usedeviceauthentication
+curl https://raw.githubusercontent.com/microsoft/Windows365-PSScripts/main/Windows%20365%20GCC/Grant%20Service%20Principal%20Roles%20in%20Tenant/Grant%20W365%20SP%20Roles%20In%20Tenant.ps1 -o GrantW365SProles.ps1 & ./GrantW365SProles.ps1
 ```
 
 OR use the instructions below if you do not have a CloudShell account which requires an Azure Storage account.
@@ -154,4 +155,5 @@ You will be asked to enter the Azure subscription ID from a list of subscription
 
 ## Next steps
 
-[Learn more about Windows 365 Government](introduction-windows-365-government.md)
+[Learn more about Windows 365 Government](introduction-windows-365-government.md).
+
