@@ -55,7 +55,7 @@ On a managed Mac that has the agent installed, open **Company Portal**, select t
 Alternatively, open **Terminal**, run the `sudo killall IntuneMdmAgent` command to terminate the `IntuneMdmAgent` process. The `IntuneMdmAgent` process will restart immediately, which will initiate a check-in with Intune.
 
 > [!NOTE]
-> The **Sync** action for devices in Microsoft Endpoint Manager Admin Console initiates an MDM check-in and does not force an agent check-in.
+> The **Sync** action for devices in Microsoft Endpoint Manager admin center initiates an MDM check-in and does not force an agent check-in.
 
 ## When is the agent removed?
 

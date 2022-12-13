@@ -34,7 +34,7 @@ ms.collection:
 
 # Add Microsoft 365 Apps to Windows 10/11 devices with Microsoft Intune
 
-Before you can assign, monitor, configure, or protect apps, you must add them to Intune. One of the available [app types](apps-add.md#app-types-in-microsoft-intune) is Microsoft 365 apps for Windows 10 devices. By selecting this app type in Intune, you can assign and install Microsoft 365 apps to devices you manage that run Windows 10. You can also assign and install apps for the Microsoft Project Online desktop client and Microsoft Visio Online Plan 2, if you own licenses for them. The available Microsoft 365 apps are displayed as a single entry in the list of apps in the Intune console within Azure.
+Before you can assign, monitor, configure, or protect apps, you must add them to Intune. One of the available [app types](apps-add.md#app-types-in-microsoft-intune) is Microsoft 365 apps for Windows 10 devices. By selecting this app type in Intune, you can assign and install Microsoft 365 apps to devices you manage that run Windows 10. You can also assign and install apps for the Microsoft Project Online desktop client and Microsoft Visio Online Plan 2, if you own licenses for them. The available Microsoft 365 apps are displayed as a single entry in the list of apps in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 > [!NOTE]
 > Microsoft Office 365 ProPlus has been renamed to **Microsoft 365 Apps for enterprise**. In our documentation, we'll commonly refer to it as **Microsoft 365 Apps**.
@@ -84,7 +84,7 @@ In this step, you provide information about the app suite. This information help
     - **Notes**: Enter any notes that you want to associate with this app.
 2. Click **Next** to display the **Configure app suite** page.
 
-## Step 2 - (**Option 1**) Configure app suite using the configuration designer 
+## Step 2 - (**Option 1**) Configure app suite using the configuration designer
 
 You can choose a method for configuring app setting by selecting a **Configuration settings format**. Setting format options include:
 
@@ -127,7 +127,7 @@ When you choose **Configuration designer** the **Add app** pane will change to o
         You can deploy additional languages for Microsoft 365 Apps managed through Intune. The list of available languages includes the **Type** of language pack (core, partial, and proofing). In the portal, select **Microsoft Intune** > **Apps** > **All apps** > **Add**. In the **App type** list of the **Add app** pane, select **Windows 10** under **Microsoft 365 Apps**. Select **Languages** in the **App Suite Settings** pane. For additional information, see [Overview of deploying languages in Microsoft 365 Apps](/deployoffice/overview-of-deploying-languages-in-office-365-proplus).
 2. Click **Next** to display the **Scope tags** page.
 
-## Step 2 - (**Option 2**) Configure app suite using XML data 
+## Step 2 - (**Option 2**) Configure app suite using XML data
 
 If you selected the **Enter XML data** option under the **Setting format** dropdown box on the **Configure app suite** page, you can configure the Office app suite using a custom configuration file.
 
@@ -190,14 +190,14 @@ Run the [Microsoft Support and Recovery Assistant for Microsoft 365](https://dia
 
 When you are unable to install the Microsoft 365 apps to a device, you must identify whether the issue is Intune-related or OS/Office-related. If you can see the two folders *Microsoft Office* and *Microsoft Office 15* appearing in the *Program Files* directory of the device, you can confirm that Intune has initiated the deployment successfully. If you cannot see the two folders appearing under *Program Files*, you should confirm the below cases:
 
-- The device is properly enrolled into Microsoft Intune. 
+- The device is properly enrolled into Microsoft Intune.
 - There is an active network connection on the device. If the device is in airplane mode, is turned off, or is in a location with no service, the policy will not apply until network connectivity is established.
 - Both Intune and Microsoft 365 network requirements are met and the related IP ranges are accessible based on the following articles:
 
   - [Intune network configuration requirements and bandwidth](/intune/network-bandwidth-use)
   - [Office 365 URLs and IP address ranges](/office365/enterprise/urls-and-ip-address-ranges)
 
-- The correct groups have been assigned the Microsoft 365 app suite. 
+- The correct groups have been assigned the Microsoft 365 app suite.
 
 In addition, monitor the size of the directory *C:\Program Files\Microsoft Office\Updates\Download*. The installation package downloaded from the Intune cloud will be stored in this location. If the size does not increase or only increases very slowly, it is recommended to double-check the network connectivity and bandwidth.
 

@@ -53,7 +53,7 @@ As a result, it's not recommended to assign apps to mixed groups.
 > [!NOTE]
 > When you set a group assignment for an app, the **Not Applicable** type is deprecated and replaced with exclude group functionality.
 >
-> Intune provides pre-created **All Users** and **All Devices** groups in the console. The groups have built-in optimizations for your convenience. It's highly recommended that you use these groups to target all users and all devices instead of any "all users" or "all devices" groups that you might create yourself.  
+> Intune provides pre-created **All Users** and **All Devices** groups in the Microsoft Endpoint Manager admin center. The groups have built-in optimizations for your convenience. It's highly recommended that you use these groups to target all users and all devices instead of any "all users" or "all devices" groups that you might create yourself.  
 >
 > Android enterprise supports including and excluding groups. You can leverage the built-in **All Users** and **All Devices** groups for Android enterprise app assignment.
 

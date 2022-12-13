@@ -226,7 +226,7 @@ Your assigned-intune role requires **Device configurations** permissions to dele
 
 ## Known issues
 
-- **No script run status:** In the unlikely event that a script is received on the device and the device goes offline before the run status is reported, the device will not report run status for the script in the admin console.
+- **No script run status:** In the unlikely event that a script is received on the device and the device goes offline before the run status is reported, the device will not report run status for the script in the admin center.
 
 ## Additional information
 
