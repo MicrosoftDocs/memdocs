@@ -66,7 +66,7 @@ Device-based Conditional Access policies for Exchange online and other Microsoft
 
 When you configure Conditional Access in the Azure AD portal, you have two applications to choose from:
 
-1. **Microsoft Intune** - This application controls access to the Microsoft Endpoint Manager console and data sources. Configure grants/controls on this application when you want to target the Microsoft Endpoint Manager console and data sources.
+1. **Microsoft Intune** - This application controls access to the Microsoft Endpoint Manager admin center and data sources. Configure grants/controls on this application when you want to target the Microsoft Endpoint Manager admin center and data sources.
 2. **Microsoft Intune Enrollment** - This application controls the enrollment workflow. Configure grants/controls on this application when you want to target the enrollment process. For more information, see [Require multi-factor authentication for Intune device enrollments](../enrollment/multi-factor-authentication.md).
 
 ## Conditional Access based on network access control

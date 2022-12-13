@@ -31,8 +31,6 @@ ms.collection: M365-identity-device-management
 
 # Microsoft Intune classic groups in the Azure portal
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
-
 We've heard your feedback and have made changes to how you work with groups in Microsoft Intune.
 If you are using Intune from the Azure portal, your Intune groups have been migrated to Azure Active Directory security groups.
 

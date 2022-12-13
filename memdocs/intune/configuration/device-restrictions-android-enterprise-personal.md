@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/30/2022
+ms.date: 12/12/2022
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -33,7 +33,7 @@ ms.collection:
 
 # Android Enterprise device settings list to allow or restrict features on personally owned devices using Intune
 
-This article describes the different settings you can control on Android Enterprise devices. As part of your mobile device management (MDM) solution, use these settings to allow or disable features, run apps on dedicated devices, control security, and more.
+This article describes the different settings you can control on Android Enterprise devices. As part of your mobile device management (MDM) solution, use these settings to allow or disable features, control security, and more.
 
 This feature applies to:
 
