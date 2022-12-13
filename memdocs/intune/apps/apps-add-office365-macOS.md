@@ -40,7 +40,7 @@ This app type makes it easy for you to assign Microsoft 365 apps to macOS device
 
 > [!NOTE]
 > Other versions of Office for Mac can be added to the Microsoft Endpoint Manager admin center. For more information, see [Most current packages for Office for Mac](/officeupdates/update-history-office-for-mac#most-current-packages-for-office-for-mac).
-> 
+>
 > Microsoft Office 365 ProPlus has been renamed to **Microsoft 365 Apps for enterprise**. In our documentation, we'll commonly refer to it as **Microsoft 365 Apps**.
 
 ## Before you start
@@ -55,7 +55,7 @@ Before you begin adding Microsoft 365 apps to macOS devices, understand the foll
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All apps** > **Add**.
 3. Select **macOS** in the **Microsoft 365 Apps** section of the **Select app type** pane.
-4. 4. Click **Select**. The **Add Microsoft 365 Apps** steps are displayed.
+4. Click **Select**. The **Add Microsoft 365 Apps** steps are displayed.
 
 ## Step 1 - App suite information
 
@@ -76,9 +76,10 @@ In this step, you provide information about the app suite. This information help
 2. Click **Next** to display the **Scope tags** page.
 
 ## Step 2 - Select scope tags (optional)
+
 You can use scope tags to determine who can see client app information in Intune. For full details about scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md).
 
-1. Click **Select scope tags** to optionally add scope tags for the app suite. 
+1. Click **Select scope tags** to optionally add scope tags for the app suite.
 2. Click **Next** to display the **Assignments** page.
 
 ## Step 3 - Assignments
@@ -88,7 +89,7 @@ You can use scope tags to determine who can see client app information in Intune
     >[!Note]
     > You cannot uninstall the 'Microsoft 365 apps for macOS' app suite through Intune.
 
-2. Click **Next** to display the **Review + create** page. 
+2. Click **Next** to display the **Review + create** page.
 
 ## Step 4 - Review + create
 
