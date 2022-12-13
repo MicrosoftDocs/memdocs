@@ -462,7 +462,7 @@ Execute the following tests to more thoroughly validate how other App Protection
 ### Data Protection Tests
 
 The following tests cover specific data protection settings configured within the App Protection Policy.
-When you change the App Protection Policy settings in the Microsoft Endpoint Manager console, the client won't immediately update.
+When you change the App Protection Policy settings in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), the client won't immediately update.
 See [Quickly testing with changing policy] for tips on speeding up testing.
 
 For these tests:
@@ -475,7 +475,7 @@ For these tests:
 6. Log in to the other managed app with the managed test account.
 
 
-| Scenario | App Protection Policy Setting | Test Steps | 
+| Scenario | App Protection Policy Setting | Test Steps |
 | - | - | - |
 | Screenshot | "Screen capture and Google Assistant" set to "Block" | 1. Navigate to all pages in your app. <br> 2. Attempt to take a screenshot on each page. <br> 3. Confirm that screenshots are blocked or the image saved is fully blank. |
 | Copy text | "Restrict cut, copy and paste between other apps" set to "Policy managed apps" | 0. If your app doesn't have any text to copy, skip. <br> 1. Navigate to all pages in your app that have copyable text. <br> 2. Copy text. <br> 3. Switch to the unmanaged app. <br> 4. Attempt to paste in the unmanaged app. <br> 5. Confirm the paste is blocked. <br> 6. Navigate to the other managed app. <br> 7. Attempt to paste in the managed app. <br> 8. Confirm the paste is allowed. |
@@ -612,7 +612,7 @@ Also check logs or debug to verify the `MAMEnrollmentManager.Result`.
 #### My app can share data to an unmanaged app
 
 Confirm that "Send org data to other apps" set to "Policy managed apps".
-Check the Microsoft Endpoint Manager console to confirm the policy is configured and targeted correctly.
+Check the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) to confirm the policy is configured and targeted correctly.
 Check the client [Diagnostics Information] to confirm the SDK has received the configured policy.
 
 Next, if policy is configured and retrieved correctly, check if *any- policies are being enforced: [My app isn't receiving or enforcing any policies].
@@ -627,7 +627,7 @@ Check the policy targeting the other app; if it has "Receive data from other app
 #### My app can receive data from an unmanaged app
 
 Confirm that "Receive data from other apps" set to "Policy managed apps".
-Check the Microsoft Endpoint Manager console to confirm the policy is configured and targeted correctly.
+Check the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) to confirm the policy is configured and targeted correctly.
 Check the client [Diagnostics Information] to confirm the SDK has received the configured policy.
 
 Next, if policy is configured and retrieved correctly, check if *any- policies are being enforced: [My app isn't receiving or enforcing any policies].
