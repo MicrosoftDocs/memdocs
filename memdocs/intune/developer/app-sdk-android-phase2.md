@@ -129,7 +129,6 @@ For more detail on non-Intune-specific MSAL configuration options, see [Android 
 
 For more detail on Sovereign clouds, see [Use MSAL in a national cloud environment].
 
-
 ## Exit Criteria
 
 - Have you integrated MSAL into your application?

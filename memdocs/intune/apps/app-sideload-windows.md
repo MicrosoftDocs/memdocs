@@ -83,7 +83,7 @@ The Intune service can no longer deploy LOB apps for this platform once the exis
 
 Windows 8.1 Desktop/Windows 10 Desktop & Mobile
 
-If the cert period has expired then the appx files may stop launching. You should obtain a new .cer file and follow the instructions to code-sign each deployed appx file and re-upload all appx files and the updated .cer file to the Windows Enterprise Certificates section of the Intune in the Microsoft Endpoint Manager admin center.
+If the cert period has expired then the appx files may stop launching. You should obtain a new .cer file and follow the instructions to code-sign each deployed appx file and re-upload all appx files and the updated .cer file to the Windows Enterprise Certificates section of the Intune in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 ## Manually deploy Windows 10 Company Portal app
 

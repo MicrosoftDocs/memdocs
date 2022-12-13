@@ -41,17 +41,18 @@ In earlier versions of the Intune console, Intune provided several default manag
 ## Add a built-in app
 
 To add a built-in app to your available apps in Microsoft Intune, do the following:
+
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All apps** > **Add**.
 3. In the **Select app type** pane, under the available **Other** types, select **Built-In app**.
 4. Click **Select**. The **Add app** steps are displayed.
 5. In the **Select Built-in apps** page, click **Select app** to select the apps that you want to include.
-6. Select the built-in apps that you want to include. 
+6. Select the built-in apps that you want to include.
 7. Once you have selected the apps, click **Select** on the **Select Built-in apps** pane.
 8. Click **Next** to display the **Scope tags** page.
 9. Click **Select scope tags** to optionally add scope tags for the app. For more information, see [Use role-based access control (RBAC) and scope tags for distributed IT](../fundamentals/scope-tags.md).
 10. Click **Next** to display the **Assignments** page.
-11. Select the group assignments for the app. For more information, see [Add groups to organize users and devices](../fundamentals/groups-add.md). 
+11. Select the group assignments for the app. For more information, see [Add groups to organize users and devices](../fundamentals/groups-add.md).
 12. Click **Next** to display the **Review + create** page. Review the values and settings you entered for the app.
 13. When you are done, click **Create** to add the app to Intune.
 
@@ -60,6 +61,7 @@ To add a built-in app to your available apps in Microsoft Intune, do the followi
 ## Configure app information
 
 You can modify information about the built-in app. This information helps you to identify the app in Intune and helps users find the app in the company portal.
+
 1. Select **Apps** > **All apps** and select the built-in app that you want to modify.  
    A pane for the built-in app is displayed.
 2. Select  **Properties**.
@@ -77,7 +79,7 @@ You can modify information about the built-in app. This information helps you to
     - **Notes**: Enter any notes that you want to associate with this app.
     - **Upload Icon**: Upload an icon that is displayed with the app when users browse the company portal.
 5. Click **Review + save** to display the **Review + create** page. Review the values and settings you entered for the app.
-13. When you are done, click **Save** to update the app in Intune.
+6. When you are done, click **Save** to update the app in Intune.
 
     The **Overview** blade of the app you've created is displayed.
 

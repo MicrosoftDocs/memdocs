@@ -52,7 +52,7 @@ A line-of-business (LOB) app is one that you add from an app installation file. 
 
 ### Select the app package file
 
-1. In the **Add app** pane, click **Select app package file**. 
+1. In the **Add app** pane, click **Select app package file**.
 2. In the **App package file** pane, select the browse button. Then, select a Windows installation file with the extension **.msi**, **.appx**, or **.appxbundle**.
    The app details will be displayed.
 
@@ -84,7 +84,7 @@ A line-of-business (LOB) app is one that you add from an app installation file. 
 
 You can use scope tags to determine who can see client app information in Intune. For full details about scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md).
 
-1. Click **Select scope tags** to optionally add scope tags for the app. 
+1. Click **Select scope tags** to optionally add scope tags for the app.
 2. Click **Next** to display the **Assignments** page.
 
 ## Step 3 - Assignments
