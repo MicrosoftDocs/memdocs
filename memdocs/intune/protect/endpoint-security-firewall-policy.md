@@ -167,14 +167,20 @@ To learn more about Firewall rules in Intune, and how to troubleshoot common pro
 
 - [How to trace and troubleshoot the Intune Endpoint Security Firewall rule creation process](https://techcommunity.microsoft.com/t5/intune-customer-success/how-to-trace-and-troubleshoot-the-intune-endpoint-security/ba-p/3261452)
 
-**Additional common firewall rule issues:**
+Additional common firewall rule issues:
 
-Event Viewer: RemotePortRanges or LocalPortRanges "The parameter is incorrect"
+**Event Viewer: RemotePortRanges or LocalPortRanges "The parameter is incorrect"**
 > [!div class="mx-imgBorder"]
 > ![RemotePortRangesFailure](media/endpoint-security-firewall-policy/remoteportrangeparameterincorrect.png)
 - Verify configured ranges are ascending (Example: 1-5 is correct, 5-1 will cause this error)
 - Verify configured ranges are within the overall port range of 0-65535 
 - If either remote port ranges or local port ranges are configured in a rule, protocol **must** also be configured with 6 (TCP) **or** 17 (UDP)
+
+**Event Viewer: Name "The parameter is incorrect"**
+> [!div class="mx-imgBorder"]
+> ![NameFailure](media/endpoint-security-firewall-policy/nameparameterincorrect.png)
+- If edge traversal is enabled in a rule, the rule direction **must** be set to "This rule applies to inbound traffic".
+
 
 ## Next steps
 
