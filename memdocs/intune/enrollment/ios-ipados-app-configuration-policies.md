@@ -37,8 +37,8 @@ iOS/iPadOS supervised devices are designed to be used for work or school data on
 
 ## Disallow personal accounts for Microsoft apps on iOS/iPadOS devices
 
-1. Add the iOS apps so that they can be deployed to the device. For more information, see [Add iOS store apps to Microsoft Intune](/mem/intune/apps/store-apps-ios).
-2. Create a policy for each Microsoft app as described in [Add app configuration policies for managed iOS/iPadOS devices](/mem/intune/apps/app-configuration-policies-use-ios).
+1. Add the iOS apps so that they can be deployed to the device. For more information, see [Add iOS store apps to Microsoft Intune](../apps/store-apps-ios.md).
+2. Create a policy for each Microsoft app as described in [Add app configuration policies for managed iOS/iPadOS devices](../apps/app-configuration-policies-use-ios.md).
 3. Create the following single key in each policy: 
 
     | Key | Values |
