@@ -163,11 +163,11 @@ Specifically, in this level, you can:
 
   - **Android Enterprise**:
     - [Use and manage Android Enterprise devices with OEMConfig](../configuration/android-oem-configuration-overview.md)
-    - [Dedicated devices that run as a kiosk device settings](../configuration/device-restrictions-android-for-work#dedicated-devices.md)
+    - [Dedicated devices that run as a kiosk device settings](../configuration/device-restrictions-android-for-work.md#dedicated-devices)
 
   - **iOS/iPadOS**
     - [Device settings to run in autonomous single app mode (ASAM)](../configuration/device-restrictions-ios.md#autonomous-single-app-mode-asam)
-    - [Device settings to run as a kiosk](../configuration/device-restrictions-ios.md#kiosk.md)
+    - [Device settings to run as a kiosk](../configuration/device-restrictions-ios.md#kiosk)
 
   - **Windows**
     - [Device settings to run as a dedicated kiosk](../configuration/kiosk-settings.md)
