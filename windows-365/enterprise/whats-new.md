@@ -60,6 +60,13 @@ Learn what new features are available in Windows 365 Enterprise.
 
 Windows 365 now supports creating Azure Active Directory Join Cloud PCs that use single sign-on for Cloud PC login. Existing Cloud PCs won’t have single sign-on configured. For more information, see [Create provisioning policy](create-provisioning-policy.md) and [Edit provisioning policy](edit-provisioning-policy.md).
 
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Documentation
+
+#### New documentation article: Windows 365 deployment options
+
+We’ve published a new help documentation article. For more information, see [Windows 365 deployment options](deployment-options.md).
+
 <!-- ########################## -->
 ## Week of December 5, 2022
 
