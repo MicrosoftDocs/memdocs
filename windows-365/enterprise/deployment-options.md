@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 12/10/2022
+ms.date: 12/14/2022
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice:
@@ -46,7 +46,7 @@ This option is simple, reliable, and scalable, offering Cloud PC connectivity wh
 
 - Sets up and fully manages the infrastructure and related services required to deliver functional Cloud PCs to your users.
 - Manages the network that the Cloud PCs occupy.
-- Provides a Zero Trust Framework-aligned model of an End User Computing (EUC) environment.
+- Provides a Zero Trust Framework-aligned model of an End User Computing (EUC) environment. For more information, see [Learn more about cloud-native endpoints](/mem/solutions/cloud-native-endpoints/cloud-native-endpoints-overview).
 
 The customer’s only responsibility is the configuration and management of the Cloud PCs. Microsoft doesn’t configure anything within the Cloud PC itself.
 
@@ -84,8 +84,7 @@ Before using the Microsoft-hosted network option, review these considerations:
 - Port 25 is blocked.
 - Ping/ICMP is blocked.
 - Local network communications between Cloud PCs are blocked.
-- No direct inbound connectivity is possible to Cloud PCS.
-- The underlying VNet could be different. Cross Vnet communications are blocked.
+- No direct inbound connectivity is possible to Cloud PCs.
 - There's no way for admins to control the IP address ranges and/or address space assigned to the Cloud PCs. Windows 365 handles the IP addresses automatically.
 
 ## Azure Network Connection option
@@ -127,7 +126,7 @@ With Hybrid Azure AD join, a connection to the on-premises network is required f
 
 ### Benefits of the ANC option
 
-- Full control of the VNet. The Cloud PC’s NIC sits in the on-premises network.
+- Full control of the VNet. The Cloud PC’s NIC sits within your own managed VNet.
 - Direct line-of-sight to on-premises infrastructure. The vNet can be configured with a site-to-site VPN or ExpressRoute connection back to the on-premises network for direct connectivity to Azure Directory infrastructure or services and applications that are located there.
 - Cloud PC operated like it’s on an on-premises location. The extension of the corporate network to the vNet means the Cloud PC can operate as if it’s within the corporate network boundaries.
 - Simple peering to other VNets. Simple cross connectivity between the Cloud PC VNet and other vNets in Azure. This supports direct connectivity to other Azure-hosted resources the organization uses.
