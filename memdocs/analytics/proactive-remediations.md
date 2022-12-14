@@ -123,11 +123,10 @@ Proactive remediation scripts need to be encoded in UTF-8. Uploading these scrip
 
    For information about enforcing script signature checks, see [Script requirements](#bkmk_requirements).
 1. Click **Next** then assign any **Scope tags** you need.
-1. In the **Assignments** step, select the device groups to which you want to deploy the script package. When you're ready to deploy the packages to your users or devices, you can also use filters. 
-For more information, see [Create filters in Microsoft Intune](../intune/fundamentals/filters.md). 
->[!NOTE]
-> Don't mix user and device groups across include and exclude assignments. 
-8. Complete the **Review + Create** step for your deployment.
+1. In the **Assignments** step, select the device groups to which you want to deploy the script package. When you're ready to deploy the packages to your users or devices, you can also use filters. For more information, see [Create filters in Microsoft Intune](../intune/fundamentals/filters.md). 
+   >[!NOTE]
+   > Don't mix user and device groups across include and exclude assignments. 
+1. Complete the **Review + Create** step for your deployment.
 
 ## <a name="bkmk_prs_policy"></a> Client policy retrieval and client reporting
 
