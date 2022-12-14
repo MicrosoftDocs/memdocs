@@ -96,7 +96,16 @@ This provides a convenient method to list and review all services required by In
 |euprodimedatasec.azureedge.net| Scripts & Win32 Apps |
 |naprodimedatahotfix.azureedge.net| Scripts & Win32 Apps |
 |naprodimedatapri.azureedge.net| Scripts & Win32 Apps |
-|naprodimedatasec.azureedge.net| Scripts & Win32 Apps |
+|swda01-mscdn.azureedge.net| Scripts & Win32 Apps |
+|swda02-mscdn.azureedge.net| Scripts & Win32 Apps |
+|swdb01-mscdn.azureedge.net| Scripts & Win32 Apps |
+|swdb02-mscdn.azureedge.net| Scripts & Win32 Apps |
+|swdc01-mscdn.azureedge.net| Scripts & Win32 Apps |
+|swdc02-mscdn.azureedge.net| Scripts & Win32 Apps |
+|swdd01-mscdn.azureedge.net| Scripts & Win32 Apps |
+|swdd02-mscdn.azureedge.net| Scripts & Win32 Apps |
+|swdin01-mscdn.azureedge.net| Scripts & Win32 Apps |
+|swdin02-mscdn.azureedge.net| Scripts & Win32 Apps |
 |*.notify.windows.com| Push Notifications |
 |*.wns.windows.com| Push Notifications |
 |*.dl.delivery.mp.microsoft.com| Delivery Optimization |

@@ -162,34 +162,6 @@ To manage these, you can use the following key:
 
 This key can be used both by managed devices and managed apps.
 
-## Data protection app configuration scenarios
-
-Office for iOS and Android supports app configuration policies for the following data protection settings when the app is managed by Microsoft Endpoint Manager with an Intune App Protection Policy applied to the work or school account that is signed into the app and the policy settings are delivered only through a managed apps App Configuration Policy:
-
-- Manage file transfers via Transfer Files action
-- Manage file transfers via Share Nearby action
-
-These settings can be deployed to the app regardless of device enrollment status.
-
-### Manage file transfers
-
-By default, Office for iOS and Android enables users to share content using a variety of mechanisms:
-
-- If the file is hosted in OneDrive or SharePoint, users can initiate a share request directly within the file.
-- Users can transfer files to desktop systems using the **Transfer Files** action.
-- Users can share files to nearby mobile devices using the **Share Nearby** action.
-
-The **Transfer Files** and **Share Nearby** actions only work with media, local files, and files that are not protected by an App Protection Policy. 
-
-|    Key    |    Value    |
-|-------------------------------------------------------------------|-------------|
-|    com.microsoft.office.ShareNearby.IsAllowed.IntuneMAMOnly    |    **true** (default) enables the Share Nearby feature for the work or school account<br>**false** disables the Share Nearby feature for the work or school account    |
-|    com.microsoft.office.TransferFiles.IsAllowed.IntuneMAMOnly    |    **true** (default) enables the Transfer Files feature for the work or school account<br>**false** disables the Transfer Files feature for the work or school account    |
-
-### Deploy app configuration scenarios with Microsoft Endpoint Manager
-
-If you are using Microsoft Endpoint Manager as your mobile app management provider, see [Add app configuration policies for managed apps without device enrollment](app-configuration-policies-managed-app.md) on how to create a  managed apps app configuration policy for the data protection app configuration scenarios. After the configuration is created, you can assign the policy to groups of users.
-
 ## Next steps
 
 - [What are app protection policies?](app-protection-policy.md) 
