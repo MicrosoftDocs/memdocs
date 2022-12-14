@@ -39,7 +39,7 @@ This article applies to:
 - macOS
 - Windows
 
-## Review the Supported Configurations
+## 1 - Review the Supported Configurations
 
 Before you begin setting up Microsoft Intune, you should review the device platforms and operating systems that Intune supports. Additionally, review which web browsers are supported when accessing Intune using Microsoft Endpoint Manager admin center. Also, you should be familiar with the network bandwidth requirements to perform installations and updates using Intune.
 
@@ -47,7 +47,7 @@ Before you begin setting up Microsoft Intune, you should review the device platf
 
  Need-to-know information before you start. For guidance, go to [Supported configurations](supported-devices-browsers.md).
 
-## Sign up for the Microsoft Intune trial
+## 2 - Sign up for the Microsoft Intune trial
 
 Before you sign up for Intune, determine whether you already have a Microsoft Online Services account, Enterprise Agreement, or equivalent volume licensing agreement. A Microsoft volume licensing agreement or other Microsoft cloud services subscription like Microsoft 365 usually includes a work or school account.
 
@@ -58,7 +58,7 @@ Sign in to the Endpoint Manager admin center, and sign up for Intune. If you hav
 
  Sign in to your trial subscription or create a new Intune subscription. For guidance, go to [Sign in to Intune](account-sign-up.md).
 
-## Configure a custom domain name for your Intune tenant
+## 3 - Configure a custom domain name for your Intune tenant
 
 When your organization signs up for Microsoft Intune, you're given an initial domain name hosted in Azure Active Directory (Azure AD) that looks like *your-domain.onmicrosoft.com*.
 In this example, *your-domain* is the domain name that you chose when you signed up. *onmicrosoft.com* is the suffix assigned to all accounts added to subscriptions.
@@ -69,7 +69,7 @@ You can **optionally** configure your organization's custom domain to access Int
 
  Set DNS registration to connect your company's domain name with Intune. This gives users a familiar domain when connecting to Intune and using resources. For guidance, go to [Configure domain name](custom-domain-name-configure.md)
 
-## Add users to Intune
+## 4 - Add users to Intune
 
 The people in your organization each need a user account before they can sign in and access Microsoft Intune. To create user accounts, you can add users to Intune. Once added, you can grant permissions and assign licenses to users. Then later, you can assign different types of policies to users to help and protect them.
 
@@ -81,7 +81,7 @@ You must be an admin (global, license, or a user admin) to add users to Intune. 
 
  Add users, or connect Active Directory to sync with Intune. This step is **required** unless your devices are "userless" kiosk devices. For guidance, go to [Add users](users-add.md).
 
-## Create groups in Intune
+## 5 - Create groups in Intune
 
 Intune uses Azure Active Directory (Azure AD) groups to organize and manage devices and users. As an Intune admin, you can set up groups to suit your organizational needs. For instance, you can create groups to organize users or devices by geographic location, department, or hardware characteristics. Also, you can use groups to manage tasks at scale. For example, you can set policies for many users or deploy apps to a set of devices based on groups.
 
@@ -89,7 +89,7 @@ Intune uses Azure Active Directory (Azure AD) groups to organize and manage devi
 
  Add groups, to assign apps, settings, and other resources. For some guidance, go to [Add groups](groups-add.md).
 
-## Assign licenses to users
+## 6 - Assign licenses to users
 
 Microsoft Intune is available for different organization sizes and needs, from a simple-to-use management experience for schools and small businesses, to more advanced functionality required by enterprise customers. An admin must have a license assigned to them to administer Intune (unless you have selected to allow unlicensed admins).
 
@@ -99,7 +99,7 @@ Whether you added users one at a time or all at once, you must assign each user 
 
  Give users permission to use Intune. Each user or userless device requires an Intune license to access the service. For guidance, go to [Assign licenses](licenses-assign.md).
 
-## Manage Roles and grant admin permissions for Intune
+## 7 - Manage Roles and grant admin permissions for Intune
 
 After you've added users to your Intune tenant, we recommend that you grant a few users administrative permission. Microsoft Intune includes a set of admin roles that you can assign to users in your organization using the Microsoft Endpoint Manager admin center. Each admin role maps to common business functions and gives people in your organization permissions to do specific tasks in the admin centers.
 
@@ -113,7 +113,7 @@ After you've added users to your Intune tenant, we recommend that you grant a fe
 
 4. You can use role-based access control and scope tags to make sure that the right admins have the right access and visibility to the right Intune objects. Roles determine what access admins have to which objects. Scope tags determine which objects admins can see. For guidance, go to [Use role-based access control (RBAC) and scope tags for distributed IT](scope-tags.md)
 
-## Understand the MDM authority
+## 8 - Understand the MDM authority
 
 The mobile device management (MDM) authority setting determines how you manage your devices. By default, the Intune free trial sets your MDM authority to Intune. As an IT admin, you must set an MDM authority before users can enroll devices for management. With the MDM authority set, you can start enrolling devices.
 
@@ -121,7 +121,7 @@ The mobile device management (MDM) authority setting determines how you manage y
 
  If you are changing your tenant to support Intune, you will need to change your MDM authority configuration. For guidance, go to [Set the mobile device management authority](mdm-authority-set.md).
 
-## Customize the Intune company portal
+## 9 - Customize the Intune company portal
 
 The Company Portal apps, Company Portal website, and Intune app on Android are where users access company data and can do common tasks. Common task may include enrolling devices, installing apps, and locating information (such as for assistance from your IT department).
 
