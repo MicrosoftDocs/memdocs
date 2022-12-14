@@ -7,7 +7,7 @@ description: Step 4 to deploy device configuration profiles as part of the minim
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/12/2022
+ms.date: 12/13/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -27,7 +27,7 @@ ms.collection:
   - highpri
 ---
 
-# Step 4 - Create device configuration profiles to secure devices and create connections to organization resources
+# Step 4 - Create device configuration profiles to secure devices and create connections to organization resources (Level 1)
 
 So far, you've set up your Intune subscription, created app protection policies, and created device compliance policies.
 
@@ -42,11 +42,14 @@ This article applies to:
 
 When you create device configuration profiles, there are different levels and types of policies available. These levels are the minimum Microsoft recommended policies. Know that your environment and business needs may be different.
 
-| Protection level | Recommended policies |
-| --- | --- |
-| **Level 1 - Minimum device configuration** (this article) | Microsoft recommends you create policies that: <br/><br/>- Focus on device security, including installing antivirus, creating a strong password policy, and regularly installing software updates.<br/>- Give users access to their organization email and controlled secure access to your network, wherever they are. |
-| **Level 2 - Enhanced device configuration** | Microsoft recommends you create policies that: <br/><br/>- Add another layer of security using disk encryption and move towards passwordless sign-in.<br/>- Configure more granular device features, settings, and behaviors. |
-| **Level 3 - High device configuration** | Microsoft recommends you create policies that: <br/><br/>- Use certificate based authentication to access resources and use single-sign on for apps.<br/>- Configure specialized devices such as kiosks and shared devices.<br/>- Run Windows PowerShell scripts.<br/>- Prevent malware from communicating with the Windows OS processes. |
+- Level 1 - Minimum device configuration (this article)
+- Level 2 - Enhanced device configuration (see INSERT LINK)
+- Level 3 - High device configuration (see INSERT LINK)
+
+In **Level 1 - Minimum device configuration**, Microsoft recommends you create policies that:
+
+- Focus on device security, including installing antivirus, creating a strong password policy, and regularly installing software updates.
+- Give users access to their organization email and controlled secure access to your network, wherever they are.
 
 This article lists the **Level 1 - Minimum device configuration** device configuration policies that organizations should use. Most of these policies in this article focus on access to organization resources and security. In your organization, you may have a different set of baseline device configuration policies.
 
@@ -326,18 +329,6 @@ To get started, use the following links:
     - [Windows Wi-Fi settings](../configuration/vpn-settings-windows-10.md)
 
 3. [Assign the Wi-Fi device configuration profile](../configuration/device-profile-assign.md) to your users or user groups.
-
-## Do more
-
-Intune has more built-in device settings, depending on how much you want to manage on your devices. The following list includes some other features you can configure:
-
-- **[Administrative templates](../configuration/administrative-templates-windows.md)**: Intune includes built in ADMX settings that you add to a policy and then deploy the policy to your devices. You don't need to download any files; they're already built in.
-- **[Device restrictions](../configuration/device-restrictions-configure.md)**: There are many built-in settings that can control different parts of the devices, including security, hardware, data sharing, and more.
-- **[PKCS or SCEP certificates](../protect/certificates-configure.md)**: Use certificates to authenticate and authorize Wi-Fi connections, VPN connections, and user email account access.
-- **[Analyze your on-premises GPOs and import them in Intune](../configuration/group-policy-analytics.md)**: If you use on-premises GPOs, then you can use Group Policy Analytics to analyze your policies and determine if your settings are supported in the cloud. If they're supported, they can be imported into an Intune policy and deployed to your devices.
-- **[Settings catalog](../configuration/settings-catalog.md)**: The settings catalog is a list of all the settings you can configure in Intune. If you use on-premises GPOs to manage your devices, then the settings catalog is a natural transition to cloud-based policies.
-
-For a complete list of all the device configuration profiles you can create, go to [Apply features and settings on your devices using device profiles in Microsoft Intune](../configuration/device-profiles.md).
 
 ## Follow the minimum recommended baseline policies
 

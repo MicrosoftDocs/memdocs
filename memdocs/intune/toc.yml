@@ -120,6 +120,8 @@ items:
         href: ./fundamentals/deployment-plan-overview.md
       - name: Get started with your deployment (REPLACE OVERVIEW?)
         href: ./fundamentals/get-started-with-intune.md
+      - name: Protection and configuration levels (DRAFT)
+        href: ./fundamentals/protection-configuration-levels.md
 
       - name: Step 1 - Set up Intune subscription
         href: ./fundamentals/deployment-plan-setup.md
