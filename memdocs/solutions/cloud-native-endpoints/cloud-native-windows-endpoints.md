@@ -371,12 +371,10 @@ For more information on Windows Defender configuration, including Microsoft Defe
 
 Use Endpoint Security in Microsoft Intune to configure the firewall and firewall rules. For more information, go to [Firewall policy for endpoint security in Intune](../../intune/protect/endpoint-security-firewall-policy.md).
 
+Microsoft Defender Firewall can detect a trusted network using the [NetworkListManager CSP](/windows/client-management/mdm/policy-csp-networklistmanager) and switch to the *domain* firewall profile on endpoints running Windows 11 22H2, Windows 10 20H2 or higher with [2022-12 cumulative update](https://support.microsoft.com/topic/december-13-2022-kb5021233-os-builds-19042-2364-19043-2364-19044-2364-and-19045-2364-44e774aa-60c4-4e38-b7e7-c886d210db3b) applied and Windows 11 21H2 with [2022-12 cumulative update](https://support.microsoft.com/topic/december-13-2022-kb5021234-os-build-22000-1335-56a94ce4-7122-447d-98d8-360e95fc0cf9) applied. Using the *domain* network profile allows you to seperate firewall rules based on a trusted network, a private network, and a public network. These setings can be applied using a Windows custom profile.
+
 > [!NOTE]
-> Azure AD joined devices cannot use the *domain* network profile as they cannot leverage LDAP to detect a domain connection in the same way that domain-joined devices do. Microsoft is aware of this issue and is investigating alternatives that can help to improve this experience in future Windows releases.
->
-> As a workaround, consider leveraging a PowerShell script to detect whether a device is on the corporate network, and if so, switch the current network profile to *private*. The PowerShell cmdlet to change network profiles is: [Set-NetConnectionProfile](/powershell/module/netconnection/set-netconnectionprofile).
->
-> Using *private* as a replacement for *domain* allows you to separate rules based on your domain network and all other networks between the *private* and *public* profiles. However, users with administrative privileges will occasionally be prompted at run time to create new firewall rules and apply them to either public or private profiles. If these users are not aware of the use of the private network profile as a stand-in for the domain profile, unexpected firewall rule configuration may result.
+> Azure AD joined endpoints cannot leverage LDAP to detect a domain connection in the same way that domain-joined endpoints do. Instead, use the [NetworkListManager CSP](/windows/client-management/mdm/policy-csp-networklistmanager) to specify a TLS endpoint that when accessible will switch the endpoint to the *domain* firewall profile.
 
 ### BitLocker Encryption
 
