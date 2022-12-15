@@ -176,8 +176,10 @@ items:
           displayName: vpp; volume purchased
         - name: Volume-purchased iOS apps
           href: vpp-apps-ios.md
-        - name: Microsoft Store for Business apps
+        - name: Volume-purchases Windows apps
           href: windows-store-for-business.md
+        - name: Volume-purchased Android apps
+          href: apps-add-android-for-work.md
         - name: iOS eBooks
           href: vpp-ebooks-ios.md
     - name: Protect apps
