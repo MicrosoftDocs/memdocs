@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/01/2022
+ms.date: 12/05/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -65,6 +65,35 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Scripts
 ### Tenant administration
 -->
+
+## Week of December 12, 2022
+
+### There are default settings for SSO extension requests on iOS, iPadOS, and macOS devices<!-- 15082414-15084030 -->  
+
+When you create a single sign-on app extension configuration profile, there are some settings you configure. The following settings will use the following default values for all SSO extension requests:
+
+- **AppPrefixAllowList** key
+  - macOS default value: `com.microsoft.,com.apple.`
+  - iOS/iPadOS default value: `com.apple.`
+
+- **browser_sso_interaction_enabled** key
+  - macOS default value: `1`
+  - iOS/iPadOS default value: `1`
+
+- **disable_explicit_app_prompt** key
+  - macOS default value: `1`
+  - iOS/iPadOS default value: `1`
+
+If you configure a value other than the default value, then the configured value will overwrite the default value. 
+
+For example, you don't configure the `AppPrefixAllowList` key. By default, all Microsoft apps (`com.microsoft.`) and all Apple apps (`com.apple.`) will be enabled for SSO on macOS devices. You can overwrite this behavior by adding a different prefix to the list, such as `com.contoso.`.
+
+For more information on the Enterprise SSO plug-in, go to [Use the Microsoft Enterprise SSO plug-in on iOS/iPadOS and macOS devices in Microsoft Intune](../configuration/use-enterprise-sso-plug-in-ios-ipados-macos.md)
+
+Applies to:
+
+- iOS/iPadOS
+- macOS
 
 ## Week of November 28, 2022
 
