@@ -99,23 +99,6 @@ Applies to:
 
 For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
 
-#### The Company Portal app enforces the Password Complexity setting on Android Enterprise 12+ personally owned devices with a work profile<!-- 16211313 -->  
-On Android Enterprise 12+ personally owned devices with a work profile, you can create a compliance policy and/or device configuration profile that sets the password complexity:
-
-- **Devices** > **Configuration profiles** > **Create profile** > **Android Enterprise** for platform > Personally owned with a work profile
-- **Devices** > **Compliance policies** > **Create policy** > **Android Enterprise** for platform > Personally owned with a work profile
-
-The Company Portal app enforces the **Password complexity** setting.
-
-For more information on this setting and the other settings you can configure on personally owned devices with a work profile, go to:
-
-- [Device compliance settings for Android Enterprise in Intune](../protect/compliance-policy-create-android-for-work.md#personally-owned-work-profile)
-- [Android Enterprise device settings list to allow or restrict features on personally owned devices using Intune](../configuration/device-restrictions-android-enterprise-personal.md)
-
-Applies to:
-
-- Android Enterprise 12+ personally owned devices with a work profile
-
 ### Device enrollment
 
 #### Enrollment token lifetime increases to 65 years for Android Enterprise dedicated devices  <!-- 15094454  -->  
