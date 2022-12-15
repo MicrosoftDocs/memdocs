@@ -68,7 +68,7 @@ Complete these steps to enable multi-factor authentication during Microsoft Intu
 1. Select the next category, **Cloud apps or actions**.  
    1. Select the **Include** tab.  
    2. Choose **Select apps** > **Select**.   
-   3. Choose **Microsoft Intune Enrollment** > **Select** to add the app. The app picker only lists 33 apps at a time, so if you don't see Microsoft Intune Enrollment in your list, use the search bar to look it up.  
+   3. Choose **Microsoft Intune Enrollment** > **Select** to add the app. Use the search bar in the app picker to find the app.   
      
      For Apple automated device enrollments using Setup Assistant with modern authentication, you have two options to choose from. The following table describes the difference between the *Microsoft Intune* option and *Microsoft Intune Enrollment* option.      
     
