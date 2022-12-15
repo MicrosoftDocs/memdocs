@@ -28,7 +28,7 @@ ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
 ---
 
-# Windows 365 deployment options
+# Windows 365 networking deployment options
 
 You have two options for network deployment of the Windows 365 service:
 
