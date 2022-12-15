@@ -83,7 +83,7 @@ On Android Enterprise 12+ personally owned devices with a work profile, you can 
 - **Devices** > **Configuration profiles** > **Create profile** > **Android Enterprise** for platform > Personally owned with a work profile
 - **Devices** > **Compliance policies** > **Create policy** > **Android Enterprise** for platform > Personally owned with a work profile
 
-The Company Portal app will enforce the **Password complexity** setting in its December release.
+The Company Portal app will enforce the **Password complexity** setting in its January release.
 
 For more information on this setting and the other settings you can configure on personally owned devices with a work profile, go to:
 
