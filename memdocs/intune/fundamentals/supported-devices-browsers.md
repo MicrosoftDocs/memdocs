@@ -8,7 +8,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 10/26/2022
+ms.date: 12/08/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals

@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/05/2022
+ms.date: 12/09/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -36,7 +36,7 @@ With Intune, you can deploy updates to Windows 10/11 devices by using policies f
 
 - **Reports in Intune**:
   - **Windows 10 update rings** – Use a [built-in report](#reports-for-update-rings-for-windows-10-and-later-policy) that's ready by default when you deploy update rings to your devices.
-  - **Windows 10 feature updates** *In public preview* – Use [two built-in reports](#reports-for-windows-10-and-later-feature-updates-policy) that work together to gain a deep picture of update status and issues. These reports require you to configure data collection from devices before the reports can display data about feature updates.
+  - **Windows 10 feature updates** – Use [two built-in reports](#reports-for-windows-10-and-later-feature-updates-policy) that work together to gain a deep picture of update status and issues. These reports require you to configure data collection from devices before the reports can display data about feature updates.
 
 - **Windows Update for Business reports**:
 
@@ -58,8 +58,6 @@ Intune offers integrated report views for the Windows update ring policies you d
    - **End-user update status** – View the Windows device update state. See [windowsUpdateState](/graph/api/resources/intune-shared-windowsupdatestate?view=graph-rest-beta&preserve-view=true).
     --> 
 ## Reports for Windows 10 and later feature updates policy
-
-*This feature is in preview.*
 
 Intune offers integrated reports to view detailed Windows update deployment status for devices using Feature updates for Windows 10 and later policies. To use reports for this feature, you must first configure prerequisites and policies that support data collection from devices.
 
@@ -128,8 +126,6 @@ The data for these reports is generated at different times, which depend on the 
 - **Client-based data from Intune devices that are configured to send data to Intune** – This data is processed in batches and refreshes every eight hours, but is only available after you configure data collection. The data contains information like when a client doesn't have enough disk space to install an update. This data is also used in the Windows 10 feature updates organizational report to show the various installation steps a device moves through when installing feature updates.
 
 ### Use the Windows 10 feature updates (Organizational) report
-
-*In public preview*
 
 The **Windows 10 feature updates** report provides an overview of compliance for devices you target with a [Windows feature updates](../protect/windows-10-feature-updates.md) policy.
 
@@ -217,8 +213,6 @@ To use the report:
      - **Needs attention**: The device has some issue and needs attention.
 
 ### Use the Feature update failures (Operational) report
-
-*In public preview*
 
 The **Feature update failures** operational report provides details for devices that you target with a [Windows 10 and later feature updates](../protect/windows-10-feature-updates.md) policy, and that have attempted to install an update. Devices in this report might have an Alert that prevents the device from completing installation of the update.
 
