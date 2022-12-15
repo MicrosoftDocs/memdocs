@@ -34,7 +34,7 @@ ms.technology: itpro-deploy
 
 Before Windows Autopilot can be used, some configuration tasks are required to support the common Autopilot scenarios.
 
-- Configure Azure Active Directory automatic enrollment. For Microsoft Intune, see [Enable Windows automatic enrollment](../intune/enrollment/windows-enroll.md#windows-auto-enrollment-and-device-registration) for details. If using a different MDM service, contact the vendor for the specific URLs or configuration needed for those services.
+- Configure Azure Active Directory automatic enrollment. For Microsoft Intune, see [Enable Windows automatic enrollment](../intune/enrollment/windows-enroll.md#enable-windows-automatic-enrollment) for details. If using a different MDM service, contact the vendor for the specific URLs or configuration needed for those services.
 - Configure Azure Active Directory custom branding. To display an organization-specific logon page, you must configure Azure Active Directory with the images and text that you want to be displayed. For more information, see [Quickstart: Add company branding to your sign-in page in Azure AD](/azure/active-directory/fundamentals/customize-branding). Key elements for Autopilot include the "square logo", "sign-in page text", and Azure Active Directory tenant name. The tenant name is configured separately in the Azure AD tenant properties.
 - The first logon user needs to have Azure Active Directory join permissions for all deployment scenarios, except for Windows Autopilot self-deployment mode as this method works in a userless context.
 - Optional: To automatically step up from Windows Pro to Windows Enterprise, enable [Windows Subscription Activation](/windows/deployment/windows-10-enterprise-subscription-activation).
