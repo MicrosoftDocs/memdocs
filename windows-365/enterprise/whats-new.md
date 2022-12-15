@@ -65,7 +65,7 @@ Windows 365 now supports creating Azure Active Directory Join Cloud PCs that use
 
 #### New Third-party connector column on All devices page<!--42555983-->
 
-There's a new column on the **All devices page**: Third-party connector. For more information, see [Device management overview for Cloud PCs](device-management-overview.md).
+There's a new column on the **All devices page**: **Third-party connector**. For more information, see [Device management overview for Cloud PCs](device-management-overview.md).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Documentation
