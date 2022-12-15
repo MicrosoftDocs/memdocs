@@ -43,6 +43,6 @@ To retry the Citrix agent installation, follow these steps:
 ![Screenshot of Citrix warning](./media/rety-citrix-agent-installation/citrix-warning.png)
 6. In the new pane, select **Retry Citrix agent installation**. Because the Cloud PC was successfully provisioned, you don't need to retry provisioning.
 
-![Screenshot of Retry Citrix agent installation](./media/rety-citrix-agent-installation/retry-install.png)
+   ![Screenshot of Retry Citrix agent installation](./media/rety-citrix-agent-installation/retry-install.png)
 
 For more information about Citrix, see [Set up Citrix HDX Plus for Windows 365 Enterprise](set-up-citrix.md).
