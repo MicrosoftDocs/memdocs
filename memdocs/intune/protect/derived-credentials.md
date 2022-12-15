@@ -230,13 +230,13 @@ Avoid requiring use of a derived credential to access a process that you'll use 
 
 ## Set up a derived credential issuer
 
-Before you create policies that require use of a derived credential, set up a credential issuer in the Intune console. A derived credential issuer is a tenant-wide setting. Tenants support only a single issuer at a time.
+Before you create policies that require use of a derived credential, set up a credential issuer in the Microsoft Endpoint Manager admin center. A derived credential issuer is a tenant-wide setting. Tenants support only a single issuer at a time.
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Tenant administration** > **Connectors and tokens** > **Derived Credentials**.
 
     > [!div class="mx-imgBorder"]
-    > ![Configure derived credentials in the console](./media/derived-credentials/configure-provider.png)
+    > ![Configure derived credentials in the Microsoft Endpoint Manager admin center](./media/derived-credentials/configure-provider.png)
 
 3. Specify a friendly **Display name** for the derived credential issuer policy.  This name isn't shown to your device users.
 

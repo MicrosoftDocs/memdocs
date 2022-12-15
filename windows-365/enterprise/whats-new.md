@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 12/5/2022
+ms.date: 12/14/2022
 ms.topic: reference
 ms.service: windows-365
 ms.subservice:
@@ -49,6 +49,23 @@ Learn what new features are available in Windows 365 Enterprise.
 ### Windows 365 Government
 ### Windows 365 app
 -->
+
+<!-- ########################## -->
+## Week of December 12, 2022
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Provisioning
+
+#### Provision Azure Active Directory Join Cloud PCs with single sign-on<!--42104318-->
+
+Windows 365 now supports creating Azure Active Directory Join Cloud PCs that use single sign-on for Cloud PC login. Existing Cloud PCs won’t have single sign-on configured. For more information, see [Create provisioning policy](create-provisioning-policy.md) and [Edit provisioning policy](edit-provisioning-policy.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Documentation
+
+#### New documentation article: Windows 365 deployment options
+
+We’ve published a new help documentation article. For more information, see [Windows 365 deployment options](deployment-options.md).
 
 <!-- ########################## -->
 ## Week of December 5, 2022
