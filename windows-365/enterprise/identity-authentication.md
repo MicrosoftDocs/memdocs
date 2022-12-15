@@ -83,7 +83,7 @@ To successfully access a Cloud PC, a user must authenticate, in turn, with both:
 >[!IMPORTANT]
 >In order for authentication to work properly, the user's local machine must also be able to access the URLs in the [Remote Desktop clients](/azure/virtual-desktop/safe-url-list#remote-desktop-clients) section of the [Azure Virtual Desktop required URL list](/azure/virtual-desktop/safe-url-list).
 
-### Windows 365 service authentication
+## Windows 365 service authentication
 
 Users must authenticate with the Windows 365 service when:
 
@@ -93,7 +93,13 @@ Users must authenticate with the Windows 365 service when:
 
 This authentication triggers an Azure Active Directory prompt, allowing any credential type that is supported by both Azure Active Directory and your OS.
 
-### Cloud PC authentication
+### Passwordless authentication
+You can use any authentication type supported by Azure AD, such as [Windows Hello for Business](/windows/security/identity-protection/hello-for-business/hello-overview) and other [passwordless authentication options](/azure/active-directory/authentication/concept-authentication-passwordless) (for example, FIDO keys), to authenticate to the service.
+
+### Smart card authentication
+To use a smart card to authenticate to Azure AD, you must first [configure AD FS for user certificate authentication](/windows-server/identity/ad-fs/operations/configure-user-certificate-authentication) or [configure Azure AD certificate-based authentication](/azure/active-directory/authentication/concept-certificate-based-authentication).
+
+## Cloud PC authentication
 
 Users must authenticate to their Cloud PC when:
 
@@ -124,6 +130,13 @@ The following credential types are supported for Cloud PC authentication:
 - macOS
     - Username and password
 
+### Single sign-on (SSO)
+Single sign-on (SSO) allows the connection to skip the Cloud PC VM credential prompt and automatically sign the user in to Windows through Azure AD authentication. Azure AD authentication provides other benefits including passwordless authentication and support for third-party identity providers.
+
+Without SSO, the client will prompt users for their session host credentials for every connection. The only way to avoid being prompted is to save the credentials in the client. We recommend you only save credentials on secure devices to prevent other users from accessing your resources.
+
+>[!NOTE]
+>To maintain single sign-on to Kerberos-based apps and resources in the Cloud PC environment, you must properly [configure your environment to trust the Azure AD Kerberos service](/azure/active-directory/authentication/howto-authentication-passwordless-security-key-on-premises).
 
 <!-- ########################## -->
 ## Next steps

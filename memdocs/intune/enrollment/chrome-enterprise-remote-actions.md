@@ -2,7 +2,7 @@
 # required metadata
 
 title: Remote actions for Chrome OS devices | Microsoft Intune  
-description: Remotely run device actions on Chrome OS devices in the Microsoft Endpoint Manager admin center.   
+description: Remotely run Microsoft Intune device actions on Chrome OS devices in the Microsoft Endpoint Manager admin center.   
 keywords:
 author: Lenewsad
 ms.author: lanewsad

@@ -42,6 +42,7 @@ App supersedence can only be applied to Win32 apps. For more information, see [A
 A Microsoft Endpoint Manager permission will be required to create and edit Win32 app supersedence and dependency relationships with other apps. The permission is available under the **Mobile apps** category by selecting **Relate**. Starting in the **2202** service release, MEM admins will need this permission to add supersedence and dependency apps when creating or editing a Win32 app in Microsoft Endpoint Manager admin center. To find this permission in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Tenant administration** > **Roles** > **All roles** > **Create**.
 
 This Win32 app supersedence permission has been added to the following built-in roles:
+
 - Application Manager
 - School administrator
 
@@ -51,22 +52,22 @@ The following steps help you create a supersedence relationship between apps:
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All apps**, and then select a Win32 app from the list. If you haven't added a Win32 app, you can follow the steps to [add a Win32 app to Intune](apps-win32-add.md).
-3. After you have selected the existing Win32 app, click **Properties**. 
-3. In the **Supersedence** section, click **Edit** > **Add** to choose apps that should be superseded.
+3. After you have selected the existing Win32 app, click **Properties**.
+4. In the **Supersedence** section, click **Edit** > **Add** to choose apps that should be superseded.
 
     > [!NOTE]
     > There can be a maximum of 10 nodes in a supersedence relationship in Intune.
 
-4. Find and click the apps to apply the supersedence relationship in the **Add Apps** pane. Click **Select** to add the apps to your supersedence list.
-5. In the list of superseded apps, modify the **Uninstall previous version** option for each selected app to specify whether an uninstall command will be sent by Intune to each selected app. If the installer of the current app updates the selected app automatically, then it is not necessary to send an uninstall command. When replacing a selected app with a different app, it may be necessary to turn on the **Uninstall previous version** option to remove and replace the older app.
-6. Once this step is finalized, click **Review + save** > **Save**.
+5. Find and click the apps to apply the supersedence relationship in the **Add Apps** pane. Click **Select** to add the apps to your supersedence list.
+6. In the list of superseded apps, modify the **Uninstall previous version** option for each selected app to specify whether an uninstall command will be sent by Intune to each selected app. If the installer of the current app updates the selected app automatically, then it is not necessary to send an uninstall command. When replacing a selected app with a different app, it may be necessary to turn on the **Uninstall previous version** option to remove and replace the older app.
+7. Once this step is finalized, click **Review + save** > **Save**.
 
     > [!IMPORTANT]
     > Superseding apps do not get automatic targeting. Each app must have explicit targeting to take effect. Superseding apps that are not targeted will be ignored by the agent. If the superseding app is targeted to a device with a superseded app, then the supersedence will take place regardless of whether the superseded app has targeting or not. For more information on Supersedence behavior, please refer to the matrix below. This behavior is in direct contrast to dependencies, which does not require targeting. Additionally, only apps that are targeted will show install statuses in Microsoft Endpoint Manager admin center.
 
 ## Supersedence behavior
 
-A *superseding app* is an app that updates or replaces other apps. A *superseded app* is an app that is being updated or replaced. Supersedence behavior can be illustrated based on the following scenarios. 
+A *superseding app* is an app that updates or replaces other apps. A *superseded app* is an app that is being updated or replaced. Supersedence behavior can be illustrated based on the following scenarios.
 
 | Scenarios | Targeting for required intent | Targeting for available intent |
 |-|-|-|
@@ -76,7 +77,7 @@ A *superseding app* is an app that updates or replaces other apps. A *superseded
 
 ### Understand app update versus app replacement within supersedence
 
-Given that an app could have multiple superseded apps, it is possible for an app to update a set of apps while replacing another set of apps at the same time. 
+Given that an app could have multiple superseded apps, it is possible for an app to update a set of apps while replacing another set of apps at the same time.
 
 > [!NOTE]
 > End-users will not be able to check whether a specific Win32 app supersedence operation is an update or replacement in the Company Portal. In addition, when multiple apps supersede an app with available targeting in the Company Portal, the superseded app's details page will navigate to the app page of the first superseding app that was set up. For example, if app A is superseded by app B and C, and app B is superseded by app A first, then app A's detail page in the Company Portal will navigate to App B.
@@ -99,7 +100,7 @@ In the following scenarios, you should review app detection rules after performi
 
 ## Basic Supersedence Examples
 
-For the purposes of this document, we assume that all apps are targeted (either device or user targeting) and are applicable. 
+For the purposes of this document, we assume that all apps are targeted (either device or user targeting) and are applicable.
 
 ### Legend for supersedence example scenarios
 
@@ -128,7 +129,8 @@ For the purposes of this document, we assume that all apps are targeted (either 
 Supersedence chains occur when multiple apps are part of a supersedence relationship. For example, an IT admin could configure App A to be superseded by App B, and then later configure App B to be superseded by App C. In this scenario, a supersedence chain is created between App A, B, and C (as shown in the first case below). Supersedence chains can have a maximum of 10 related nodes in the chain. For more information about this maximum, see [Supersedence Limitations](#supersedence-limitations).
 
 >The behavior for supersedence chains can summarized as the following:
-- All apps in a supersedence chain will be superseded by the superseding app of the chain. In the example given above, the superseding app of the chain is App C.
+>
+> - All apps in a supersedence chain will be superseded by the superseding app of the chain. In the example given above, the superseding app of the chain is App C.
 
 To better understand the behavior of a supersedence chain, the following table provides a list of cases and resolutions. When reviewing these supersedence chains, assume all apps are targeted and are applicable to the device.
 

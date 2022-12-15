@@ -183,6 +183,6 @@ Apps requiring user affiliation, including the Company Portal app used for insta
 
 ## Next steps  
 
-* Manage enrolled devices in Microsoft Endpoint Manager by using the actions and features available in the admin center. For more information about accessing device management actions and device details in the admin center, see [What is Microsoft Intune device management?](../remote-actions/device-management.md)  
+* Manage Intune-enrolled devices by using the device management actions and features available in the Microsoft Endpoint Manager admin center. For more information, see [What is Microsoft Intune device management?](../remote-actions/device-management.md)  
 
 * For information about enrolling macOS devices via direct enrollment with Apple Configurator, see [Use Direct Enrollment for macOS devices](device-enrollment-direct-enroll-macos.md).

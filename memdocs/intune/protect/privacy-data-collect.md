@@ -118,7 +118,7 @@ Required data collected by Intune may include, but isn't limited to:
 |         |   MAM enrollment status                        | Yes |
 | **Support information** |  Contact information (name, phone number, email address)   | No  |
 |         |   Email discussions with Microsoft support, product, and/or customer experience team members | No  |
-| **Tenant account information** (this data is available from the Microsoft Endpoint Manager admin console |   installedDeviceCount: The number of devices on which the application is installed.  | Yes |
+| **Tenant account information** (this data is available from the Microsoft Endpoint Manager admin center |   installedDeviceCount: The number of devices on which the application is installed.  | Yes |
 |         |   Number of devices or users enrolled          | No  |
 |         |   Number of identified device platforms        | No  |
 |         |   Number of installed devices                  | No  |
