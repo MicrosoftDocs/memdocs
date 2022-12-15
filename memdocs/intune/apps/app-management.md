@@ -95,7 +95,7 @@ The top of the App workload navigation menu provides commonly used app details:
 - **Overview**: Select this option to view the tenant name, the MDM authority, the tenant location, the account status, app installation status, and app protection policy status.
 - **All apps**: Select this option to display a list of all available apps. You can add additional apps from this page. Additionally, you can see the status of each app, as well as whether each app is assigned. For more information, see [Add apps](apps-add.md) and [Assign apps](apps-deploy.md).
 - **Monitor apps**
-    - **App licenses**: View, assign, and monitor volume-purchased apps from the app stores. For more information, see [Manage volume-purchased apps and books with Microsoft Intune](vpp-apps.md).
+    - **App licenses**: View, assign, and monitor volume-purchased apps from the app stores. For more information, see [iOS volume-purchased program (VPP) apps](vpp-apps-ios.md) and [Microsoft Store for Business volume-purchased apps](windows-store-for-business.md).
     - **Discovered apps**: View apps that were assigned by Intune or installed on a device. For more information, see [Intune discovered apps](app-discovered-apps.md).
     - **App install status**: View the status of an app assignment that you created. For more information, see [Monitor app information and assignments with Microsoft Intune](apps-monitor.md#device-and-user-status-graphs).
     - **App protection status**: View the status of an app protection policy for a user that you select.
