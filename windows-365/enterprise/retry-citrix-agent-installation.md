@@ -37,11 +37,12 @@ To retry the Citrix agent installation, follow these steps:
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Windows 365** > **All Cloud PCs**.
 ![Screenshot of navigating to the All Cloud PCs page](./media/rety-citrix-agent-installation/all-cloud-pcs-page.png)
-3. Make sure that the **Third party connector** column is displayed. You can add this column by slecting **Columns** > **Third party connector**.
+3. Make sure that the **Third party connector** column is displayed. You can add this column by selecting **Columns** > **Third party connector**.
 4. In the **Third party connector** column, locate a row that says **Citrix install failed**.
 5. Select the warning (like **Provisioned with warning**) in the **Status** column.
 ![Screenshot of Citrix warning](./media/rety-citrix-agent-installation/citrix-warning.png)
 6. In the new pane, select **Retry Citrix agent installation**. Because the Cloud PC was successfully provisioned, you don't need to retry provisioning.
+
 ![Screenshot of Retry Citrix agent installation](./media/rety-citrix-agent-installation/retry-install.png)
 
 For more information about Citrix, see [Set up Citrix HDX Plus for Windows 365 Enterprise](set-up-citrix.md).
