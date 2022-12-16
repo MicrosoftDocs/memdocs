@@ -57,9 +57,9 @@ You deploy compliance policies to groups of devices or users. When deployed to u
 When devices fail to meet the requirements of a compliance policy, that policy can apply one or more *actions for noncompliance*. Some actions include:
 
 - Remotely locking the noncompliant device.
-- Sending email or notifications to the device or user about the compliance issue, so a device user can bring it back into compliance.
-- Identify a device that might be ready for retirement should it remains out of compliance for an extended time.
-When planning for and deploying your compliance policies, it can help to approach compliance policies through our recommendations through different levels. We recommend starting with the foundational settings which are common to most or all platforms, and then expanding by adding more advanced configurations and integrations that provide more capabilities.
+- Send email or notifications to the device or user about the compliance issue, so a device user can bring it back into compliance.
+- Identify a device that might be ready for retirement should it remain out of compliance for an extended time.
+When you're planning for and deploying your compliance policies, it can help to approach compliance policies through our recommendations through different levels. We recommend starting with the minimal compliance settings, which are common to most or all platforms, and then expanding by adding more advanced configurations and integrations that provide more capabilities.
 
 Because different device platforms support different compliance capabilities or use different names for similar settings, listing each option is beyond this deployment plan. Instead, we’ll provide categories and examples of settings in those categories for each of the following levels:
 
@@ -74,9 +74,9 @@ Generally, our recommendations place well understood and simple to implement set
 ✔️ Configure tenant-wide Compliance policy settings  
 ✔️ Set up responses for noncompliance devices (Actions for noncompliance)  
 ✔️ Establish a core set of compliance settings across platforms you support  
-✔️Understand how device compliance and device configuration policies interact  
+✔️ Understand how device compliance and device configuration policies interact  
 
-The device compliance foundation includes the following subjects which all tenants who plan to use compliance policies should understand and be prepared to use:
+The minimal device compliance settings includes the following subjects that all tenants who plan to use compliance policies should understand and be prepared to use:
 
 - *Compliance policy settings* – Tenant-wide settings that affect how the Intune compliance service works with your devices.
 - *Actions for noncompliance* – These configurations are common to all device compliance policies.
@@ -86,7 +86,7 @@ In addition, we recommend you be familiar with how device compliance policies an
 
 ### Compliance policy settings
 
-All organizations should review and set the tenant-wide  *compliance policy settings*. These settings are foundational to supporting platform specific policies.  They can also mark devices that have not evaluated a compliance policy as noncompliant, which can help you protect your organization from new or unknown devices that might fail to meet your security expectations.
+All organizations should review and set the tenant-wide  *compliance policy settings*. These settings are foundational to supporting platform specific policies. They can also mark devices that haven't evaluated a compliance policy as noncompliant, which can help you protect your organization from new or unknown devices that might fail to meet your security expectations.
 
 - Compliance policy settings are a few configurations you make at the tenant-level that then apply to all devices. They establish how the Intune compliance service functions for your tenant.
 - These settings are configured directly in the Microsoft Endpoint Manager admin center. This is in contrast to device compliance policies that you create for a specific platform, that support different configurations for the same setting through separate policies, and that deploy to discreet groups of devices or users.
@@ -113,13 +113,13 @@ Because each non-default action can be added to a policy multiple times, each wi
 
 For example, you could configure several related actions to occur in a sequence. First, immediately upon being noncompliant you might have Intune send an email to the device’s user, and perhaps an administrator as well. Then a few days later, a second action could send a different email reminder, with details about a deadline for remediating the device. You might also configure a final action to add a device to a list of devices you might want to retire, with the action set to run only after a device continues to remain noncompliant for an excessive period.
 
-While compliance policy can mark a device as noncompliant, you’ll also need a plan for how to remediate noncompliant devices. This could include admins using noncompliant device status to request updates or configurations be made to a device. To provide general guidance to device users you can configure the *send email to end user* action for noncompliance to include useful tips or contacts for resolving a device compliance issue.
+While compliance policy can mark a device as noncompliant, you’ll also need a plan for how to remediate noncompliant devices. This could include admins using noncompliant device status to request updates or configurations be made to a device. To provide general guidance to device users, you can configure the *send email to end user* action for noncompliance to include useful tips or contacts for resolving a device compliance issue.
 
 To learn more, see [Actions for noncompliance](../protect/actions-for-noncompliance.md).
 
 ### Minimal compliance policy recommendations
 
-After you establish tenant-wide compliance policy settings and establish communications or rules for actions for noncompliant devices, you are likely ready to create and deploy device compliance policies to discrete groups of devices or users.
+After you establish tenant-wide compliance policy settings and establish communications or rules for actions for noncompliant devices, you're likely ready to create and deploy device compliance policies to discrete groups of devices or users.
 
 Before you deploy compliance policies, sync on the expected configurations for settings that overlap between device configuration and device compliance teams. Ensure the two policy types agree on the correct configuration, which can help avoid policy conflicts, over enforcement, or for devices to lack the minimal configurations expected by your organization.
 
@@ -129,9 +129,9 @@ We recommend using the following settings in your minimal device compliance poli
 
 | Compliance category and examples             | Details                                       |
 |---------------------------------------------|------------------------------------------------------------|
-| **Operating System versions** </br></br> **All devices**: Evaluate settings and values for operating system versions, including: </br>- Minimum OS  </br>- Maximum OS </br>- OS patch levels </br>- Minor and Major build versions  | Use available settings that define a minimum allowed OS version or build, as well as important patch levels to ensure device operating systems are current and secure. </br></br> Maximum OS settings can help identify new but untested results, as well as beta or developer OS builds that could introduce unknown risks. </br></br> Windows supports an additional setting to set granular ranges, which is included in the advanced compliance level. |
-| **Password configurations** </br></br> **All devices**: Evaluate devices for password structure and length. Common settings  including: </br>- Require a password  or Pin to unlock devices. </br>-Require complex passwords that use combinations of letters, numbers, and symbols. </br>- Set requirements for a minimum password length. </br>- Enforce settings that lock the screen after a period of inactivity, requiring a password or PIN to unlock.| Use compliance to identify devices that lack passwords or use simple passwords  that don’t meet complexity and length requirement that can help protect access to the device.  </br></br> Additional options like password reuse or length of time before a password must be changed are explicitly included at the enhanced compliance level.  |
-| **Antivirus**, **Antispyware**, and **Antimalware** </br></br> **Windows**: Evaluate devices for solutions that register with Windows Security Center to be on and monitoring for: </br>- Antivirus </br>- Antispyware </br>- Microsoft Defender Antimalware </br></br> **Other platforms**: Compliance policies for platforms other than Windows do not include evaluation for these solutions. | Active solutions for Antivirus, Antispyware, and Antimalware solutions are important.</br></br> Windows compliance policy can assess the state of these solutions when they are active and registered  register with Windows Security Center on a device. </br></br>Non-Windows platforms should still run solutions for antivirus, antispyware, and antimalware, even though Intune compliance policies lacks options to evaluate their active presence.  |
+| **Operating System versions** </br></br> **All devices**: Evaluate settings and values for operating system versions, including: </br>- Minimum OS  </br>- Maximum OS </br>- OS patch levels </br>- Minor and Major build versions  | Use available settings that define a minimum allowed OS version or build and important patch levels to ensure device operating systems are current and secure. </br></br> Maximum OS settings can help identify new but untested results, and beta or developer OS builds that could introduce unknown risks. </br></br> Windows supports an additional setting to set granular ranges, which is included in the advanced compliance level. |
+| **Password configurations** </br></br> **All devices**: Evaluate devices for password structure and length. Common settings  including: </br>- Require a password  or Pin to unlock devices. </br>-Require complex passwords that use combinations of letters, numbers, and symbols. </br>- Set requirements for a minimum password length. </br>- Enforce settings that lock the screen after a period of inactivity, requiring a password or PIN to unlock.| Use compliance to identify devices that lack passwords or use simple passwords  that don’t meet complexity and length requirement that can help protect access to the device.  </br></br> Other options like password reuse or length of time before a password must be changed are explicitly included at the enhanced compliance level.  |
+| **Antivirus**, **Antispyware**, and **Antimalware** </br></br> **Windows**: Evaluate devices for solutions that register with Windows Security Center to be on and monitoring for: </br>- Antivirus </br>- Antispyware </br>- Microsoft Defender Antimalware </br></br> **Other platforms**: Compliance policies for platforms other than Windows don't include evaluation for these solutions. | Active solutions for Antivirus, Antispyware, and Antimalware solutions are important.</br></br> Windows compliance policy can assess the state of these solutions when they're active and registered  register with Windows Security Center on a device. </br></br>Non-Windows platforms should still run solutions for antivirus, antispyware, and antimalware, even though Intune compliance policies lack options to evaluate their active presence.  |
 
 ### Understand how device compliance and device configuration policies interact
 
@@ -160,11 +160,11 @@ When a device receives conflicting configurations for a setting either different
 
 
 
-Use device compliance policies to identify when devices that will access your apps and data are in a state that meets your organization’s requirements. These policies support a range of settings that are specific to each platform. Some compliance settings evaluate and report back a status for that device. Other settings can function more like device configuration settings byh enforcing a requirement, such as those for password complexity or PIN requirements.
+Use device compliance policies to identify when devices that will access your apps and data are in a state that meets your organization’s requirements. These policies support a range of settings that are specific to each platform. Some compliance settings evaluate and report back a status for that device. Other settings can function more like device configuration settings by enforcing a requirement, such as those for password complexity or PIN requirements.
 
 Before creating a series of policies:
 
-- Identify some minimum compliance expectations for your organization. With expectations for device compliance in mind, you can then configure an deploy device configuration policies to support your goals. Requirements and criteria for settings will vary from organization to organization, and in some cases between different groups of users or devices within an organization. Following are some common settings to consider as a start, regardless of the platform type like Windows, iOS/iPadOS, or Android:
+- Identify some minimum compliance expectations for your organization. With expectations for device compliance in mind, you can then configure and deploy device configuration policies to support your goals. Requirements and criteria for settings will vary from organization to organization, and in some cases between different groups of users or devices within an organization. Following are some common settings to consider as a start, regardless of the platform type like Windows, iOS/iPadOS, or Android:
 
   - Password complexity
   - *Example 2*
