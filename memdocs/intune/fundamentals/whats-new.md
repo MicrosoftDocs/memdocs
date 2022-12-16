@@ -69,8 +69,6 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 ## Week of December 12, 2022 (Service release 2212)
 
-## Week of December 12, 2022 (Service release 2212)
-
 ### Device configuration
 
 #### Remote help client app includes a new option to disable chat functionality in the Tenant level setting<!-- 14685052 -->  
