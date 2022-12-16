@@ -63,9 +63,9 @@ When you're planning for and deploying your compliance policies, it can help to 
 
 Because different device platforms support different compliance capabilities or use different names for similar settings, listing each option is beyond this deployment plan. Instead, we’ll provide categories and examples of settings in those categories for each of the following levels:
 
-- **Level 1** – [**Minimal compliance settings**](#minimal-compliance-settings). These are configurations that we recommend all tenants have in place.
-- **Level 2** – [**Enhanced compliance settings**](#enhanced-compliance-settings). These include common device configurations such as encryption, or system level file protections.  
-- **Level 3** – [**Advanced compliance settings**](#Advanced-compliance-settings). High level recommendations include those that require deeper integration with other products, such as Conditional Access from Azure AD.
+- **Level 1** – [**Minimal device compliance**](#minimal-devcie-compliance). These are configurations that we recommend all tenants have in place.
+- **Level 2** – [**Enhanced device compliance settings**](#enhanced-device-compliance-settings). These include common device configurations such as encryption, or system level file protections.  
+- **Level 3** – [**Advanced device compliance configurations**](#advanced-device-compliance-configurations). High level recommendations include those that require deeper integration with other products, such as Conditional Access from Azure AD.
 
 Generally, our recommendations place well understood and simple to implement settings at lower levels, providing a strong return for that investment. Settings listed for at higher levels can involve more complexity, such as settings that require integration of third-party products. Be sure to review all the range recommendations and be ready to adjust your own deployment plan to fit your organization’s needs and expectations.
 
@@ -146,7 +146,7 @@ When a device receives conflicting configurations for a setting either different
 
 
 
-## Enhanced device compliance policy
+## Enhanced device compliance settings
 
 ✔️ Deploy device configuration policies for each platform type
 
@@ -192,7 +192,7 @@ When ready to create policies, see [Create a policy](../protect/create-complianc
 - Add the device to a list of devices for retirement.
 - After your policies roll out to devices, you can then [Monitor device compliance](../protect/compliance-policy-monitor.md) success.
 
-## Advanced compliance policy configurations
+## Advanced device compliance configurations
 
 ✔️ **Add data from Mobile Threat Defense partners to your device compliance policies**  
 ✔️ **Integrate a third-party compliance partner with Intune**  
