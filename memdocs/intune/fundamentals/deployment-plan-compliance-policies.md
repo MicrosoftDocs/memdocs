@@ -230,9 +230,3 @@ We recommend using the following settings in your enhanced device compliance pol
 |-------------------------------------------------------|-----------------|
 | **Runtime defenses** <br><br> **Android Enterprise**: <br> - Require the device to be at or under the Device Threat Level <br> - Require the device to be at or under the machine risk score <br><br> **iOS/iPadOS**:<br>  - Require the device to be at or under the Device Threat Level <br> - Require the device to be at or under the machine risk score<br><br> **Windows**: <br> - Require the device to be at or under the machine risk score |When you integrate Intune with a Mobile Threat Defense partner, you can use that partners device threat level evaluation as criteria in your compliance policies.  <br><br> When you've integrated Microsoft Defender for Endpoint with Intune, you can use the risk score from Defender as a compliance check.  |
 
-
-
-
-> [!NOTE]
-> IN PROGRESS > Content after this note is very rough intial draft, and pending further updates - which will align more closely the recent updates above this note] 
-
