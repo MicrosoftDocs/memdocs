@@ -69,10 +69,11 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 ## Week of December 12, 2022 (Service release 2212)
 
+## Week of December 12, 2022 (Service release 2212)
+
 ### Device configuration
 
-#### Remote help client app includes a new option to disable chat functionality in the Tenant level setting<!-- 14685052
--->  
+#### Remote help client app includes a new option to disable chat functionality in the Tenant level setting<!-- 14685052 -->  
 In the Remote help app, admins have the option to disable chat functionality from the new tenant level setting. Turning on the disable chat feature will remove the chat button in the Remote Help app. This setting can be found in the Remote Help **Settings** tab under **Tenant Administration** in Microsoft Intune.
 
 For more information, see [Configure Remote Help for your tenant](../remote-actions/remote-help.md#configure-remote-help-for-your-tenant).
@@ -103,7 +104,7 @@ For more information about configuring Settings Catalog profiles in Intune, see 
 
 ### Device enrollment
 
-#### Enrollment token lifetime increases to 65 years for Android Enterprise dedicated devices  <!-- 15094454  -->  
+#### Enrollment token lifetime increases to 65 years for Android Enterprise dedicated devices<!-- 15094454  -->  
 Now you can create an enrollment profile for Android Enterprise dedicated devices that's valid for up to 65 years.  If you have an existing profile, the enrollment token will still expire at whatever date you chose when you created the profile, but during renewal you can extend the lifetime. For more information about creating an enrollment profile, see [Set up Intune enrollment for Android Enterprise dedicated devices](../enrollment/android-kiosk-enroll.md#create-an-enrollment-profile).
 
 ### Device management
@@ -114,7 +115,7 @@ Software update policies for macOS devices now apply to all macOS supervised dev
 Applies to:  
 - macOS
 
-#### Policy and reports for Windows feature updates and expedited quality updates are now Generally Available<!-- 15738459 -->  
+#### Policy and reports for Windows feature updates and expedited quality updates are now Generally Available<!-- 15738456 -->  
 Both the policies and reports for managing feature updates and quality updates (expedited updates) for Windows 10 and later, are out of preview and now generally available.
 
 For more information about these policies and reports, see:
@@ -126,10 +127,7 @@ For more information about these policies and reports, see:
 Applies to:  
 -  Windows 10/11
 
-=======
-## Week of December 12, 2022
-
-### There are default settings for SSO extension requests on iOS, iPadOS, and macOS devices<!-- 15082414-15084030 -->  
+#### There are default settings for SSO extension requests on iOS, iPadOS, and macOS devices<!-- 15082414-15084030 -->  
 
 When you create a single sign-on app extension configuration profile, there are some settings you configure. The following settings will use the following default values for all SSO extension requests:
 
