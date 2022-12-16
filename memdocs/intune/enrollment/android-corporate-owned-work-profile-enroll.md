@@ -111,11 +111,11 @@ Revoking a token/QR code won't have any effect on devices that are already enrol
 Users can now [enroll their corporate-owned work profile devices](android-dedicated-devices-fully-managed-enroll.md).
 
 > [!NOTE]
-> The **Microsoft Intune** app will be automatically installed during enrollment of a corporate-owned work profile device.  This app is required for enrollment and cannot be uninstalled. 
+> The Microsoft Intune app is automatically installed during enrollment. This app is required for enrollment and can't be uninstalled.  If you deploy the Intune Company Portal app to a device and the user attempts to launch the app, they will be redirected to the Microsoft Intune app, and the Company Portal app icon will be hidden.  
 
 ## Managing apps on Android Enterprise corporate-owned work profile devices
 
-Only apps that have Assignment type [set to Required](../apps/apps-deploy.md#assign-an-app) can be installed on Android Enterprise corporate-owned work profile devices. Apps are installed from the Managed Google Play store in the same manner as Android Enterprise personally-owned work profile devices.
+Apps are installed from the Managed Google Play store in the same manner as Android Enterprise personally-owned work profile devices.
 
 Apps are automatically updated on managed devices when the app developer publishes an update to Google Play.
 
