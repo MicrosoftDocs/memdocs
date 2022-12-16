@@ -72,9 +72,9 @@ When you're planning for and deploying your compliance policies, it can help to 
 
 Because different device platforms support different compliance capabilities or use different names for similar settings, listing each option is beyond this deployment plan. Instead, we’ll provide categories and examples of settings in those categories for each of the following levels:
 
-- **Level 1** – [**Minimal device compliance**](#minimal-device-compliance). These are configurations that we recommend all tenants have in place.
-- **Level 2** – [**Enhanced device compliance settings**](#enhanced-device-compliance-settings). These include common device configurations such as encryption, or system level file protections.  
-- **Level 3** – [**Advanced device compliance configurations**](#advanced-device-compliance-configurations). High level recommendations include those that require deeper integration with other products, such as Conditional Access from Azure AD.
+- **Level 1** – [**Minimal device compliance**](#level-1-minimal-device-compliance). These are configurations that we recommend all tenants have in place.
+- **Level 2** – [**Enhanced device compliance settings**](#level-2-enhanced-device-compliance-settings). These include common device configurations such as encryption, or system level file protections.  
+- **Level 3** – [**Advanced device compliance configurations**](#level-3-advanced-device-compliance-configurations). High level recommendations include those that require deeper integration with other products, such as Conditional Access from Azure AD.
 
 Generally, our recommendations place settings that are considered key configurations that are common across platforms at the minimal compliance level, providing a strong return for your investment. Settings listed for at higher levels can involve more complexity, such as settings that require integration of third-party products. Be sure to review all the range recommendations and be ready to adjust your own deployment plan to fit your organization’s needs and expectations.
 
