@@ -48,6 +48,8 @@ items:
       href: reset-device-company-portal-android.md
     - name: Sync device 
       href: sync-device-android.md  
+    - name: Turn off battery optimization   
+      href: turn-off-battery-optimization-android.md      
     - name: Turn on verbose logging
       href: use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md
     - name: Turn off Microsoft data collection

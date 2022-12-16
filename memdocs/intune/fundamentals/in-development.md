@@ -65,10 +65,12 @@ You can use RSS to be notified when this article is updated. For more informatio
 Intune Company Portal will now be automatically installed on all Android Enterprise dedicated devices to ensure the appropriate handling of app protection policies. Users will not be able to see or launch the Company Portal, and there are no requirements for users to interact with it. Admins will notice that the Company Portal is automatically installed on their Android Enterprise dedicated devices, without the ability to uninstall.
 
 ### Uninstall Win32 apps in the Company Portal<!-- 5145748 -->  
+*The time frame for the release of this update is still being determined.*
+
 Users will be able to uninstall Win32 apps in the Company Portal. If a Win32 app can be uninstalled by the user, the user will be able to select **Uninstall** for the Win32 app in the Company Portal. For more information about Win32 apps, go to [Win32 app management in Microsoft Intune](../apps/apps-win32-app-management.md).
 
 ### Configure whether to show apps from Configuration Manager in Windows Company Portal<!-- 9135109 -->  
-In the Intune console, you'll be able to choose whether to show or hide Configuration Manager apps from appearing in the Windows Company Portal. This option will be available in [Intune](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Tenant administration** > **Customization**. Next to **Settings**, select **Edit**. The option to **Show** or **Hide** the Configuration Manager applications will be located in the **App Sources** section of the pane. For related information about configuring the Company Portal app, see [How to configure the Intune Company Portal apps, Company Portal website, and Intune app](../apps/company-portal-app.md).
+In the Microsoft Endpoint Manager admin center, you'll be able to choose whether to show or hide Configuration Manager apps from appearing in the Windows Company Portal. This option will be available in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Tenant administration** > **Customization**. Next to **Settings**, select **Edit**. The option to **Show** or **Hide** the Configuration Manager applications will be located in the **App Sources** section of the pane. For related information about configuring the Company Portal app, see [How to configure the Intune Company Portal apps, Company Portal website, and Intune app](../apps/company-portal-app.md).
 
 ### Global quiet time app policy settings<!-- 15424417 -->  
 The global quiet time settings will allow you to create policies to schedule quiet time for your end users, which will automatically mute Microsoft Outlook email and Teams notifications on iOS/iPadOS and Android platforms. These policies can be used to limit end user notifications received after work hours. When this feature is available, you will be able to find it in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **Quiet Time** > **Policies**.
@@ -138,7 +140,9 @@ Applies to:
 
 - iOS/iPadOS
 
+
 <!-- ***********************************************-->
+
 
 ## Device management
 

@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/30/2022
+ms.date: 12/14/2022
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -33,7 +33,7 @@ ms.collection:
 
 # Android Enterprise device settings list to allow or restrict features on personally owned devices using Intune
 
-This article describes the different settings you can control on Android Enterprise devices. As part of your mobile device management (MDM) solution, use these settings to allow or disable features, run apps on dedicated devices, control security, and more.
+This article describes the different settings you can control on Android Enterprise devices. As part of your mobile device management (MDM) solution, use these settings to allow or disable features, control security, and more.
 
 This feature applies to:
 
@@ -161,7 +161,6 @@ These password settings apply to the work profile password on personally owned d
   >     For Android Enterprise 12+ devices, it's recommended to configure the **Password complexity** setting.
   > 
   > - If the **Required password type** and **Minimum password length** settings aren't changed from the default values in a policy, then no password policy is automatically applied to newly enrolled Android Enterprise 12+ devices.
-  > - The **Password complexity** setting will be enforced in the December release of the Company Portal app.
 
 #### Android 11 and earlier
 
@@ -234,7 +233,6 @@ These password settings apply to the device password on personally owned devices
   >     For Android Enterprise 12+ devices, it's recommended to configure the **Password complexity** setting.
   > 
   > - If the **Required password type** and **Minimum password length** settings aren't changed from the default values in a policy, then no password policy is automatically applied to newly enrolled Android Enterprise 12+ devices.
-  > - The **Password complexity** setting will be enforced in the December release of the Company Portal app.
 
 ### Android 11 and earlier
 

@@ -66,11 +66,13 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 -->
 
+
 ## Week of December 12, 2022 (Service release 2212)
 
 ### Device configuration
 
-#### Remote help client app includes a new option to disable chat functionality in the Tenant level setting<!-- 14685052 -->  
+#### Remote help client app includes a new option to disable chat functionality in the Tenant level setting<!-- 14685052
+-->  
 In the Remote help app, admins have the option to disable chat functionality from the new tenant level setting. Turning on the disable chat feature will remove the chat button in the Remote Help app. This setting can be found in the Remote Help **Settings** tab under **Tenant Administration** in Microsoft Intune.
 
 For more information, see [Configure Remote Help for your tenant](../remote-actions/remote-help.md#configure-remote-help-for-your-tenant).
@@ -124,6 +126,36 @@ For more information about these policies and reports, see:
 Applies to:  
 -  Windows 10/11
 
+=======
+## Week of December 12, 2022
+
+### There are default settings for SSO extension requests on iOS, iPadOS, and macOS devices<!-- 15082414-15084030 -->  
+
+When you create a single sign-on app extension configuration profile, there are some settings you configure. The following settings will use the following default values for all SSO extension requests:
+
+- **AppPrefixAllowList** key
+  - macOS default value: `com.microsoft.,com.apple.`
+  - iOS/iPadOS default value: `com.apple.`
+
+- **browser_sso_interaction_enabled** key
+  - macOS default value: `1`
+  - iOS/iPadOS default value: `1`
+
+- **disable_explicit_app_prompt** key
+  - macOS default value: `1`
+  - iOS/iPadOS default value: `1`
+
+If you configure a value other than the default value, then the configured value will overwrite the default value. 
+
+For example, you don't configure the `AppPrefixAllowList` key. By default, all Microsoft apps (`com.microsoft.`) and all Apple apps (`com.apple.`) will be enabled for SSO on macOS devices. You can overwrite this behavior by adding a different prefix to the list, such as `com.contoso.`.
+
+For more information on the Enterprise SSO plug-in, go to [Use the Microsoft Enterprise SSO plug-in on iOS/iPadOS and macOS devices in Microsoft Intune](../configuration/use-enterprise-sso-plug-in-ios-ipados-macos.md)
+
+Applies to:
+
+- iOS/iPadOS
+- macOS
+
 ## Week of November 28, 2022
 
 ### App management
@@ -169,7 +201,7 @@ Applies to:
 ### App management
 
 #### Control the display of Managed Google Play apps<!-- 621615   -->  
-You can group Managed Google Play apps into collections and control the order that collections are displayed when selecting apps in Intune. You can also make apps visible via search only. This capability is available in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **All apps** > **Add** > **Managed Google Play app**. For related information, see [Add a Managed Google Play store app directly in the Intune console](../apps/apps-add-android-for-work.md#add-a-managed-google-play-store-app-directly-in-the-intune-console).
+You can group Managed Google Play apps into collections and control the order that collections are displayed when selecting apps in Intune. You can also make apps visible via search only. This capability is available in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **All apps** > **Add** > **Managed Google Play app**. For related information, see [Add a Managed Google Play store app directly in the Intune console](../apps/apps-add-android-for-work.md#add-a-managed-google-play-store-app-directly-in-the-microsoft-endpoint-manager-admin-center).
 
 ### Device configuration
 
@@ -495,7 +527,7 @@ Intune supports Just in Time (JIT) Registration for iOS/iPadOS enrollment scenar
 ### Device management
 
 #### Connect Chrome OS devices in Intune (public preview)<!-- 14273312 -->  
-View company or school-owned devices that run on Chrome OS in the Microsoft Endpoint Manager admin center.  Now in public preview, you can establish a connection between the Google Admin console and Microsoft Endpoint Manager admin console.  Device information about your Chrome OS endpoints is synced into Intune and viewable in your device inventory list. Basic remote actions, such as restart, wipe, and lost mode are also available in the admin center. For more information about how to set up a connection, see [Configure Chrome Enterprise connector](../enrollment/chrome-enterprise-connector-configure.md).  
+View company or school-owned devices that run on Chrome OS in the Microsoft Endpoint Manager admin center.  Now in public preview, you can establish a connection between the Google Admin console and Microsoft Endpoint Manager admin center.  Device information about your Chrome OS endpoints is synced into Intune and viewable in your device inventory list. Basic remote actions, such as restart, wipe, and lost mode are also available in the admin center. For more information about how to set up a connection, see [Configure Chrome Enterprise connector](../enrollment/chrome-enterprise-connector-configure.md).  
 
 #### Manage macOS software updates with Intune<!-- 9801186 -->  
 You can now use Intune policies to manage macOS software updates for devices that enrolled using Automated Device Enrollment (ADE).  See [Manage macOS software update policies in Intune](../protect/software-updates-macos.md).
