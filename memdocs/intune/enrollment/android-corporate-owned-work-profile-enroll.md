@@ -115,7 +115,7 @@ Users can now [enroll their corporate-owned work profile devices](android-dedica
 
 ## Managing apps on Android Enterprise corporate-owned work profile devices
 
-Only apps that have Assignment type [set to Required](../apps/apps-deploy.md#assign-an-app) can be installed on Android Enterprise corporate-owned work profile devices. Apps are installed from the Managed Google Play store in the same manner as Android Enterprise personally-owned work profile devices.
+Apps are installed from the Managed Google Play store in the same manner as Android Enterprise personally-owned work profile devices.
 
 Apps are automatically updated on managed devices when the app developer publishes an update to Google Play.
 
