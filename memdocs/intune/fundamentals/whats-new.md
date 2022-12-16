@@ -113,13 +113,12 @@ Applies to:
 - macOS
 
 #### Policy and reports for Windows feature updates and expedited quality updates are now Generally Available<!-- 15738459 -->  
-Both the policies and reports for managing Windows 10 feature updates and quality updates (expedited updates), are out of preview and now generally available.
+Both the policies and reports for managing feature updates and quality updates (expedited updates) for Windows 10 and later, are out of preview and now generally available.
 
 For more information about these policies and reports, see:
 
 - [Feature updates policy](../protect/windows-10-feature-updates.md)
 - [Expedite quality updates policy](../protect/windows-10-expedite-updates.md)
-- [Windows Update compatibility reports](../protect/windows-update-compatibility-reports.md)
 - [Windows Update compliance reports](../protect/windows-update-compliance-reports.md)
 
 Applies to:  
