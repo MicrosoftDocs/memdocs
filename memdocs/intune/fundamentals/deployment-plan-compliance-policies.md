@@ -63,7 +63,7 @@ When you're planning for and deploying your compliance policies, it can help to 
 
 Because different device platforms support different compliance capabilities or use different names for similar settings, listing each option is beyond this deployment plan. Instead, we’ll provide categories and examples of settings in those categories for each of the following levels:
 
-- **Level 1** – [**Minimal device compliance**](#minimal-devcie-compliance). These are configurations that we recommend all tenants have in place.
+- **Level 1** – [**Minimal device compliance**](#minimal-device-compliance). These are configurations that we recommend all tenants have in place.
 - **Level 2** – [**Enhanced device compliance settings**](#enhanced-device-compliance-settings). These include common device configurations such as encryption, or system level file protections.  
 - **Level 3** – [**Advanced device compliance configurations**](#advanced-device-compliance-configurations). High level recommendations include those that require deeper integration with other products, such as Conditional Access from Azure AD.
 
