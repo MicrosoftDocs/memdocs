@@ -109,9 +109,9 @@ The issue is fixed by propagating correct AAD device ID from ConfigMgr during In
 
 ### Starting with this version, Configuration Manager client doesn’t support the following server 
 
-      •	Windows Server 2008 SP2 Extended Security Updates (ESU) (Azure Only)
-
-If you have these server’s client running please don’t upgrade to 2211 client version. For more information on supported clients and devices see, [supported-operating-systems-for-clients-and-devices](../../../changes/supported-operating-systems-for-clients-and-devices.md).
+      •	Windows Server 2008 SP2 Extended Security Updates (ESU Azure Only)
+      
+If you have these server’s client running please don’t upgrade to 2211 client version. For more information on supported clients and devices see, [supported-operating-systems-for-clients-and-devices](../../plan-design/configs/supported-operating-systems-for-clients-and-devices.md).
 
 <!--Starting with this version, the following features are no longer [pre-release](../../servers/manage/pre-release-features.md):
 -->
