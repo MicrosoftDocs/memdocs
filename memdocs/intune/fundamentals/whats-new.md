@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/12/2022
+ms.date: 12/19/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -100,31 +100,6 @@ Applies to:
 
 For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
 
-### Device enrollment
-
-#### Enrollment token lifetime increases to 65 years for Android Enterprise dedicated devices<!-- 15094454  -->  
-Now you can create an enrollment profile for Android Enterprise dedicated devices that's valid for up to 65 years.  If you have an existing profile, the enrollment token will still expire at whatever date you chose when you created the profile, but during renewal you can extend the lifetime. For more information about creating an enrollment profile, see [Set up Intune enrollment for Android Enterprise dedicated devices](../enrollment/android-kiosk-enroll.md#create-an-enrollment-profile).
-
-### Device management
-
-#### Update policies for macOS now available for all supervised devices<!-- 16141990  -->  
-Software update policies for macOS devices now apply to all macOS supervised devices. Previously, only those devices that enrolled through Automated Device Enrollment (ADE) would qualify to receive updates. For more information on configuring update policies for macOS, see [Use Microsoft Intune policies to manage macOS software updates](../protect/software-updates-macos.md).
-
-Applies to:  
-- macOS
-
-#### Policy and reports for Windows feature updates and expedited quality updates are now Generally Available<!-- 15738456 -->  
-Both the policies and reports for managing feature updates and quality updates (expedited updates) for Windows 10 and later, are out of preview and now generally available.
-
-For more information about these policies and reports, see:
-
-- [Feature updates policy](../protect/windows-10-feature-updates.md)
-- [Expedite quality updates policy](../protect/windows-10-expedite-updates.md)
-- [Windows Update compliance reports](../protect/windows-update-compliance-reports.md)
-
-Applies to:  
--  Windows 10/11
-
 #### There are default settings for SSO extension requests on iOS, iPadOS, and macOS devices<!-- 15082414-15084030 -->  
 
 When you create a single sign-on app extension configuration profile, there are some settings you configure. The following settings will use the following default values for all SSO extension requests:
@@ -151,6 +126,31 @@ Applies to:
 
 - iOS/iPadOS
 - macOS
+
+### Device enrollment
+
+#### Enrollment token lifetime increases to 65 years for Android Enterprise dedicated devices<!-- 15094454  -->  
+Now you can create an enrollment profile for Android Enterprise dedicated devices that's valid for up to 65 years.  If you have an existing profile, the enrollment token will still expire at whatever date you chose when you created the profile, but during renewal you can extend the lifetime. For more information about creating an enrollment profile, see [Set up Intune enrollment for Android Enterprise dedicated devices](../enrollment/android-kiosk-enroll.md#create-an-enrollment-profile).
+
+### Device management
+
+#### Update policies for macOS now available for all supervised devices<!-- 16141990  -->  
+Software update policies for macOS devices now apply to all macOS supervised devices. Previously, only those devices that enrolled through Automated Device Enrollment (ADE) would qualify to receive updates. For more information on configuring update policies for macOS, see [Use Microsoft Intune policies to manage macOS software updates](../protect/software-updates-macos.md).
+
+Applies to:  
+- macOS
+
+#### Policy and reports for Windows feature updates and expedited quality updates are now Generally Available<!-- 15738456 -->  
+Both the policies and reports for managing feature updates and quality updates (expedited updates) for Windows 10 and later, are out of preview and now generally available.
+
+For more information about these policies and reports, see:
+
+- [Feature updates policy](../protect/windows-10-feature-updates.md)
+- [Expedite quality updates policy](../protect/windows-10-expedite-updates.md)
+- [Windows Update compliance reports](../protect/windows-update-compliance-reports.md)
+
+Applies to:  
+-  Windows 10/11
 
 ## Week of November 28, 2022
 
