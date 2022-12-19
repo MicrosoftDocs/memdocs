@@ -4,7 +4,7 @@ ms.author: erikje
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.topic: include
-ms.date: 10/31/2022
+ms.date: 12/08/2022
 ms.localizationpriority: high
 ---
 
@@ -12,7 +12,7 @@ ms.localizationpriority: high
 
 - Apple iOS 14.0 and later
 - Apple iPadOS 14.0 and later
-- macOS 11.6 and later
+- macOS 11.0 and later
 
 > [!NOTE]
 > Intune requires iOS 14.x or later for device enrollment scenarios and app configuration delivered through Managed devices app configuration policies.
@@ -21,7 +21,7 @@ ms.localizationpriority: high
 
 ### Android
 
-- Android 8.0 and later (including Samsung KNOX Standard 2.4 and higher: [requirements](https://www.samsungknox.com/en/knox-platform/supported-devices/2.4+))
+- Android 8.0 and later (including Samsung KNOX Standard 3.0 and higher: [requirements](https://www.samsungknox.com/en/knox-platform/supported-devices/2.4+))
 - Android enterprise: [requirements](https://support.google.com/work/android/topic/9428066)
 - Android open source project devices (AOSP) supported devices
   - RealWear devices (Firmware 11.2 or later)

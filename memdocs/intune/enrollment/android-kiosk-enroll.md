@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Setup Intune enrollment for Android Enterprise dedicated devices
+title: Set up Intune enrollment for Android Enterprise dedicated devices
 titleSuffix: Microsoft Intune
-description: Learn how to enroll Android Enterprise dedicated devices in Intune.
+description: Configure enrollment in Microsoft Intune for Android Enterprise dedicated devices.  
 keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/23/2020
+ms.date: 12/06/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -75,8 +75,8 @@ You must create an enrollment profile so that you can enroll your dedicated devi
     - **Token type**: Choose the type of token you want to use to enroll dedicated devices.
         - **Corporate-owned dedicated device (default)**: This token enrolls devices as a standard Android Enterprise dedicated device. These devices require no user credentials at any point. This is the default token type that dedicated devices will enroll with unless updated by Admin at time of token creation.
         - **Corporate-owned dedicated device with Azure AD shared mode**: This token enrolls devices as a standard Android Enterprise dedicated device and, during enrollment, deploys Microsoft's Authenticator app configured into Azure AD Shared device mode. With this option, users can achieve single sign-in and single sign-out across apps on the device that are integrated with the Azure AD Microsoft Authentication Library and global sign-in/sign-out calls.
-    - **Token expiration date**: The date when the token expires. Google enforces a maximum of 90 days.
-3. Choose **Create** to save the profile.
+    - **Token expiration date**: Enter the date you want the token to expire, up to 65 years in the future. The token expires on the selected date at 12:59:59 PM in the time zone it was created. Acceptable date format: `MM/DD/YYYY` or `YYYY-MM-DD`  
+3. Choose **Create** to save the profile.  
 
 ### Create a device group
 

@@ -6,7 +6,7 @@ f1.keywords:
 ms.author: erikje
 author: ErikjeMS
 manager: dougeby
-ms.date: 07/12/2022
+ms.date: 12/05/2022
 audience: Admin
 ms.topic: troubleshooting
 ms.service: windows-365
@@ -95,6 +95,33 @@ The following device compliance settings may report as **Not Compliant** when be
 1. [Create a filter for all Cloud PCs](create-filter.md#create-a-filter-for-all-cloud-pcs).
 2. For any existing device compliance policies that both evaluate to a Cloud PC and contain either of the **Not Compliant** settings, use this new filter to exclude Cloud PCs from the policy assignment.
 3. Create a new device compliance policy without either of the **Not Compliant** settings and use this new filter to include Cloud PCs for the policy assignment.
+
+## Your organization hasn’t assigned you a Cloud PC
+
+When accessing windows365.microsoft.com, the user receives a message "Your organization hasn't assigned you a Cloud PC".
+
+**Possible cause**: To have access to a Cloud PC, a user must be assigned a license and a provisioning policy must be created.
+
+**Troubleshooting steps**: Make sure that:
+
+1. The user has been assigned a Windows 365 license. For more information, see [Assign licenses](assign-licenses.md) and [Windows 365 plans and pricing](https://www.microsoft.com/windows-365/enterprise?rtc=1).
+2. You’ve created a provisioning policy that includes the user. For more information, see [Create provisioning policies]( /windows-365/enterprise/create-provisioning-policy).
+
+## Single sign-on users see a dialog to allow remote desktop connection during the connection attempt <!--42499792-->
+When using single sign-on, you'll currently be prompted to authenticate to Azure AD and allow the Remote Desktop connection when launching a connection to a new Cloud PC. Azure AD remembers up to 15 devices for 30 days before prompting again. If you see this dialog, select **Yes** to connect.
+
+## Single sign-on user connections are being denied through Azure AD Conditional Access <!--42317382-->
+**Possible cause**: To login through single sign-on, the remote desktop client requests an access token to the **Microsoft Remote Desktop** app in Azure AD which may be the cause of the failed connection.
+
+**Troubleshooting**: Follow the steps to [troubleshoot sign-in problems](/azure/active-directory/conditional-access/troubleshoot-conditional-access).
+
+## Single sign-on users are immediately disconnected when the Cloud PC locks
+When single sign-on is not used, users have the option to see the Cloud PC lock screen and enter credentials to unlock their Windows session. However, when single sign-on is used, the Cloud PC fully disconnects the session so that the user can re-launch the connection through the remote desktop client and perform the Azure AD-based single sign-on authentication flow.
+
+## Single sign-on users are not asked to re-authenticate to Azure AD when connecting from an unmanaged device <!--35593334-->
+When using single sign-on, all authentication behavior (including supported credential types and sign-in frequency) are driven through Azure AD.
+
+**Troubleshooting**: To enforce periodic re-authentication through Azure AD, create a Conditional Access policy using the [sign-in frequency control](/azure/active-directory/conditional-access/howto-conditional-access-session-lifetime#policy-1-sign-in-frequency-control).
 
 ## Next steps
 

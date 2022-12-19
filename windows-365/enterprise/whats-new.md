@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 11/28/2022
+ms.date: 12/14/2022
 ms.topic: reference
 ms.service: windows-365
 ms.subservice:
@@ -51,10 +51,46 @@ Learn what new features are available in Windows 365 Enterprise.
 -->
 
 <!-- ########################## -->
+## Week of December 12, 2022
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Provisioning
+
+#### Provision Azure Active Directory Join Cloud PCs with single sign-on<!--42104318-->
+
+Windows 365 now supports creating Azure Active Directory Join Cloud PCs that use single sign-on for Cloud PC login. Existing Cloud PCs won’t have single sign-on configured. For more information, see [Create provisioning policy](create-provisioning-policy.md) and [Edit provisioning policy](edit-provisioning-policy.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### New Third-party connector column on All devices page<!--42555983-->
+
+There's a new column on the **All devices page**: **Third-party connector**. For more information, see [Device management overview for Cloud PCs](device-management-overview.md).
+
+#### Retry Citrix agent installation<!--42555983-->
+
+You can now use the **Retry Citrix agent installation** option instead of doing a full provisioning retry. For more information, see [Retry Citrix agent installation](retry-citrix-agent-installation.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Documentation
+
+#### New documentation article: Windows 365 deployment options
+
+We’ve published a new help documentation article. For more information, see [Windows 365 deployment options](deployment-options.md).
+
+<!-- ########################## -->
+## Week of December 5, 2022
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Support for RDP Shortpath for public networks now generally available<!--41057892-->
+Support for RDP Shortpath for public networks has moved out of preview and into general availability. For more information about RDP Shortpath, see [Use RDP Shortpath for public networks with Windows 365](rdp-shortpath-public-networks.md).
+
+<!-- ########################## -->
 ## Week of November 28, 2022
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
-
 ### Provisioning
 
 #### New Geography option in Windows 365 provisioning policy<!-- 41400209-->

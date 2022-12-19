@@ -35,7 +35,7 @@ Shared devices are organization-owned multi-user devices. These devices can be s
 
 ## Shared device solutions on iOS and iPadOS 
 
-Microsoft Endpoint Manager supports two types of shared device solutions for iOS and iPadOS: 
+Microsoft Intune supports two types of shared device solutions for iOS and iPadOS: 
 - [Shared iPads](../enrollment/device-enrollment-shared-ipad.md)
 - [Shared Device Mode](/azure/active-directory/develop/msal-ios-shared-devices)
 

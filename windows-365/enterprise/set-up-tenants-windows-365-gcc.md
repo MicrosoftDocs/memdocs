@@ -30,9 +30,15 @@ ms.collection: M365-identity-device-management
 
 # Set up tenants for Windows 365 Government
 
-For Windows 365 to function in the Government Community Cloud (GCC) environment, customers must link their Azure Commercial tenant with their Azure Government tenant. This linkage lets Intune running in Azure Commercial to manage Cloud PCs running in Azure Government regions, including the options of using custom images and connecting to your own networks.     
+> [!NOTE]
+> You do not need an Azure Government subscription to use Windows 365 Government.
 
-Use the following procedures to set up Windows 365 in the Government Community Cloud (GCC).
+The fastest way to use Windows 365 is to use AADJ, gallery images and the Microsoft Hosted Network option. The instructions on this page are only if you must use either or both:
+- **Custom images**. Windows 365 provides optimized gallery images, including images with M365 apps pre-installed(/windows-365/enterprise/device-images); Intune can be used for further customization of [common settings](/mem/intune/configuration/settings-catalog-common-features) and [application deployment](/mem/intune/apps/apps-windows-10-app-deploy) after the gallery image is deployed. If you must use your existing custom image, for more information, see [add a custom image](./add-device-images.md).
+- **Azure Network Connections (ANC)**. ANC lets you provision Cloud PCs that are attached to a virtual network that you manage. For more information, see [create an Azure network connection](/windows-365/enterprise/create-azure-network-connection).
+
+
+For Government Community Cloud (GCC) customers only, the instructions below lets Intune running in Azure Commercial to manage Cloud PCs running in Azure Government regions.
 
 > [!NOTE]
 > These instructions are specifically for GCC.  The instructions on this page do not apply to GCC High.
@@ -76,7 +82,7 @@ The Azure Government subscription includes a tenant (which ends in onmicrosoft.u
 - Other Azure Resources, including Cloud PC resources.
 
 >[!NOTE]
-> While the GCC users' Cloud PCs are hosted and secured in the Azure Government cloud, the admin and end user experience is similar to the commercial business user experience. This is because the endpoints for admins and end users are in the commercial Azure domain.
+> While the GCC users' Cloud PCs are hosted and secured in the Azure Government cloud, the endpoints for admins and end users are in the commercial Azure domain. Users will login to the Cloud PCs using credentials synched with Azure Commercial AAD.
 
 ## Azure AD options
 
@@ -128,10 +134,11 @@ When provisioning Windows 365 Cloud PCs without the Microsoft-hosted network, yo
 > [!NOTE]
 > Tenant mapping must be successful before you proceed.
 
-Copy and paste the command below to execute in your Azure Government subscription's CloudShell and then go to the section **Script instructions** below.
+Use the **Copy** button below to copy the script, then paste the command below into your Azure Government subscription's CloudShell session for execution.  Next, go to the section **Script instructions** below.
 
 ```azurepowershell-interactive
-curl https://raw.githubusercontent.com/microsoft/Windows365-PSScripts/main/Windows%20365%20GCC/Grant%20Service%20Principal%20Roles%20in%20Tenant/Grant%20W365%20SP%20Roles%20In%20Tenant.ps1 -o GrantW365SProles.ps1 & .\GrantW365SProles.ps1
+connect-azaccount -usedeviceauthentication
+curl https://raw.githubusercontent.com/microsoft/Windows365-PSScripts/main/Windows%20365%20GCC/Grant%20Service%20Principal%20Roles%20in%20Tenant/Grant%20W365%20SP%20Roles%20In%20Tenant.ps1 -o GrantW365SProles.ps1 & ./GrantW365SProles.ps1
 ```
 
 OR use the instructions below if you do not have a CloudShell account which requires an Azure Storage account.
@@ -154,4 +161,5 @@ You will be asked to enter the Azure subscription ID from a list of subscription
 
 ## Next steps
 
-[Learn more about Windows 365 Government](introduction-windows-365-government.md)
+[Learn more about Windows 365 Government](introduction-windows-365-government.md).
+
