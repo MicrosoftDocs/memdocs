@@ -45,7 +45,7 @@ When **Remote lock** is applied to a device that doesn’t have a PIN or passwor
 - Android Enterprise work profile devices
 - Android Enterprise fully managed devices
 - Android Enterprise corporate-owned with work profile devices
-- Android Open Source Project (AOSP)
+- Android open source project (AOSP) devices
 - iOS
 - macOS
 
