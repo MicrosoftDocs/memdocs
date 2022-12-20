@@ -628,6 +628,10 @@ Applies to:
 
 - Windows 10/11
 
+> [!Note]
+> Currently having multiple ASR policies and targeting ASR Only Per Rule Exclusions defined in each of them will cause a conflict between them. Combining the policies and only having the Per Rule Exclusions defined in one policy should resolve the conflict.
+> We'll be adding merge functionality across policies for "ASR Only Per Rule Exclusions" as well, but we don't have an ETA yet.
+
 #### Grant apps permission to silently use certificates on Android Enterprise devices<!-- 12441244    -->  
 You can now configure silent use of certificates by apps on Android Enterprise devices that enrolled as **Fully Managed, Dedicated, and Corporate-Owned work Profile**.
 
