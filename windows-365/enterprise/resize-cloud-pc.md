@@ -54,6 +54,8 @@ To resize a Cloud PC, the admin must have any of the following built in Azure Ac
 
 Alternatively, you can assign a custom role that includes the permissions of the built-in roles above.
 
+In order to use **Resize** there should be a license of the appropriate target SKU available which is not assigned to any user.
+
 To **Resize** a Cloud PC, it must have a status of **Provisioned** in the Windows 365 provisioning node
 
 The **Resize** remote action is supported for paid, preview, and trial licenses.
