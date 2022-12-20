@@ -93,7 +93,7 @@ Wait about five to seven minutes before you can verify the group memberships in 
 
 You can use PowerShell to synchronize collections. For more information, see the following cmdlet article:
 
-[Set-CMCollectionCloudSync]((/powershell/module/configurationmanager/set-cmcollectioncloudsync)
+[Set-CMCollectionCloudSync](/powershell/module/configurationmanager/set-cmcollectioncloudsync)
 
 ## Monitor the collection synchronization status
 
