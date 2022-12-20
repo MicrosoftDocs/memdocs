@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/19/2022
+ms.date: 12/20/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -66,6 +66,15 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 -->
 
+## Week of December 19, 2022
+
+### Intune apps
+
+#### Newly available protected app for Intune<!-- 15448654 -->
+The following protected app is now available for Microsoft Intune:
+- Appian for Intune by Appian Corporation (Android)
+
+For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
 
 ## Week of December 12, 2022 (Service release 2212)
 
