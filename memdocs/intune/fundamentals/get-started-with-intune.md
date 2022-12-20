@@ -43,6 +43,7 @@ This article provides an overview of the steps to start your Intune deployment, 
 - Step 3 - Use compliance and conditional access
 - Step 4 - Create device configuration profiles
 - Step 5 - Enroll your devices to be managed
+- Cloud attach with Configuration Manager
 
 ## Prerequisites
 
@@ -82,7 +83,7 @@ This article provides an overview of the steps to start your Intune deployment, 
 
 ## Step 1 - Set up Intune
 
-✔️ In this step, confirm your devices are supported, create your Intune tenant, add users & groups, assign licenses, and more.
+✔️ In this step, **confirm your devices are supported, create your Intune tenant, add users & groups, assign licenses**, and more.
 
 This step focuses on setting up Intune and getting it ready for you to manage your user identities, apps, and devices. Intune uses many features in Azure AD, including your domain, your users, and your groups.
 
@@ -117,7 +118,7 @@ If users with their own personal devices will access organization resources, the
 
 In this step:
 
-✔️ **Create a baseline of compliance policies** that all devices must have, and then assign these app policies during enrollment.
+✔️ **Create a baseline of compliance policies** that all devices must have, and then assign these compliance policies during enrollment.
 
 ✔️ **Enable conditional access** to enforce your compliance policies.
 
@@ -138,11 +139,11 @@ If you prefer, you can enroll your devices before checking compliance. It's your
 
 ## Step 4 - Configure device features
 
-✔️ In this step, create device configuration profiles that **configure a base set of security features and device features** that should be enabled or should be blocked. Then, assign these profiles during enrollment.
+✔️ In this step, **create baseline of security features and device features** that should be enabled or blocked. Assign these profiles during enrollment.
 
 For more specific information, go to [Step 4 - Create device configuration profiles to secure devices and access organization resources](deployment-plan-configuration-profile.md).
 
-Your organization may have a base set of device features that should be configured or should be blocked. These settings are added to device configuration profiles and then the profiles are assigned to your devices before users enroll their devices. During enrollment, the device configuration profiles are automatically deployed. When enrollment completes, these device features are configured.
+Your organization may have a base set of device features that should be configured or should be blocked. These settings are added to device configuration profiles and then the profiles are assigned to your devices before users enroll. During enrollment, the device configuration profiles are automatically deployed. When enrollment completes, these device features are configured.
 
 If you prefer, you can enroll your devices before creating device configuration profiles. It's your choice. At the next Intune check-in, the profiles are assigned.
 
@@ -162,7 +163,7 @@ The following articles are good resources:
 
 For more specific information, go to [Deployment guidance: Enroll devices in Microsoft Intune](deployment-guide-enrollment.md).
 
-To manage devices, the devices must be enrolled in Intune to receive the compliance & conditional access policies, app policies, device configuration policies, and security policies you create. As an admin, you create enrollment policies for your users and devices. Each device platform (Android, iOS/iPadOS, macOS, and Windows) has different enrollment options. You choose what's best for your environment, your scenarios, and how your devices are used.
+To fully manage devices, the devices must be enrolled in Intune to receive the compliance & conditional access policies, app policies, device configuration policies, and security policies you create. As an admin, you create enrollment policies for your users and devices. Each device platform (Android, iOS/iPadOS, macOS, and Windows) has different enrollment options. You choose what's best for your environment, your scenarios, and how your devices are used.
 
 Depending on the enrollment option you choose, users can enroll themselves. Or, you can automate enrollment so users only need to sign in to the device with their organization account.
 
