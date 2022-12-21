@@ -36,7 +36,7 @@ To use these remote actions, you must have either of the following Azure Active 
 - [Global Administrator]( /azure/active-directory/roles/permissions-reference#global-administrator)
 - [Windows 365 Administrator]( /azure/active-directory/roles/permissions-reference#windows-365-administrator)
 
-## Remotely manage Cloud PCs on windows.365.microsoft.com
+## Remotely manage Cloud PCs on windows365.microsoft.com
 
 1. Sign in to [windows365.microsoft.com](https://windows365.microsoft.com).
 2. Select **Your organization’s Cloud PCs**.
