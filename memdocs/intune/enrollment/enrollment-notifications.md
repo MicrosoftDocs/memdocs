@@ -42,10 +42,10 @@ Intune delivers enrollment notifications via email or push notification. You can
 
 Enrollment notifications work on devices running:  
 
-* Android  
-* iOS/iPadOS
+* Android  (excludes DEP scenarios)
+* iOS/iPadOS (excludes DEP or ADE scenarios) 
 * macOS 
-* Windows 10/11 
+* Windows 10/11 (excludes hybrid AADJ) 
 
 This article describes how to create enrollment notifications in the Microsoft Endpoint Manager admin center.  
 
