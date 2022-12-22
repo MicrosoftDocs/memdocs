@@ -47,6 +47,8 @@ Enrollment notifications work on devices running:
 * macOS 
 * Windows 10/11 
 
+[!NOTE] This feature is not supported for userless enrollment scenarios as in such cases there is no user context during the enrollment workflow.
+
 This article describes how to create enrollment notifications in the Microsoft Endpoint Manager admin center.  
 
 ## Example  
