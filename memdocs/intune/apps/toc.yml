@@ -45,7 +45,7 @@ items:
         items:
         - name: Android store apps
           href: store-apps-android.md
-        - name: iOS store apps
+        - name: iOS/iPadOS store apps
           href: store-apps-ios.md
         - name: Microsoft Store apps
           href: store-apps-microsoft.md
@@ -57,7 +57,7 @@ items:
           href: apps-add-android-for-work.md
       - name: Microsoft 365 Suite
         items:
-        - name: Microsoft 365 apps for Windows 10
+        - name: Microsoft 365 apps for Windows
           href: apps-add-office365.md
         - name: Microsoft 365 apps for macOS
           href: apps-add-office365-macos.md
@@ -72,7 +72,7 @@ items:
         items:
         - name: Android LOB apps
           href: lob-apps-android.md
-        - name: iOS LOB apps
+        - name: iOS/iPadOS LOB apps
           href: lob-apps-ios.md
         - name: Windows LOB apps
           href: lob-apps-windows.md
