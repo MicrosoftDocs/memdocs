@@ -38,8 +38,10 @@ You can automatically register an existing device if it's:
 > [!NOTE]
 > Converting all targeted devices to Autopilot isn't supported for transforming a hybrid Azure AD joined device into an Azure AD joined Autopilot device.<!-- MEMDocs#2175 -->
 >
-> Hybrid Azure AD device = On-premise AD domain joined + Azure AD domain joined device
-> Azure AD joined device = Azure AD domain joined only device <!-- MEMDocs#2443 -->
+> - Hybrid Azure AD device = On-premise AD domain joined + Azure AD domain joined device
+> - Azure AD joined device = Azure AD domain joined only device <!-- MEMDocs#2443 -->
+>
+> For more information see [Windows Autopilot deployment for existing devices](existing-devices.md)
 
 For devices that meet these requirements, the MDM service can ask the device for the hardware hash. After it has that, it can automatically register the device with Windows Autopilot.
 
