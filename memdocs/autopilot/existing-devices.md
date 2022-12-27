@@ -31,7 +31,12 @@ Modern desktop deployment with Windows Autopilot helps you easily deploy the lat
 
 _Windows Autopilot for existing devices_ lets you reimage and provision a Windows 8.1 device for Autopilot user-driven mode using a single, native Configuration Manager task sequence. The existing device can be on-premises domain-joined. The end result is a Windows 10 or Windows 11 device joined to either Azure Active Directory (Azure AD) or Active Directory (hybrid Azure AD join).
 
-Converting all targeted devices to Autopilot isn't supported for transforming a hybrid Azure AD device into an Azure AD Autopilot device.
+> [!NOTE]
+> Converting all targeted devices to Autopilot isn't supported for transforming a hybrid Azure AD joined device into an Azure AD joined Autopilot device.
+> 
+> Hybrid Azure AD device = On-premise AD domain joined + Azure AD domain joined device
+> Azure AD joined device = Azure AD domain joined only device <!-- MEMDocs#2443 -->
+
 
 > [!NOTE]
 > Windows Autopilot for existing devices only supports user-driven Azure AD and hybrid Azure AD profiles. Self-deploying and pre-provisioning profiles aren't supported.
