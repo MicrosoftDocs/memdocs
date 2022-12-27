@@ -35,7 +35,7 @@ Learn what's new each week in Microsoft Intune.
 
 You can also read:  
 - [**Important notices**](#notices)
-- [Past releases](whats-new-archive.md) in the What's New Archive
+- [Past releases](whats-new-archive.md) in the What's new archive
 - Information about [how Intune service updates are released](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Microsoft-Intune-Service-Updates/ba-p/358728)
 
 > [!NOTE]
