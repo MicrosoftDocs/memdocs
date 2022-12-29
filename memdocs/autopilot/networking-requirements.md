@@ -150,6 +150,10 @@ For each firmware TPM provider, make sure that the appropriate URL is accessible
 - Qualcomm: `https://ekcert.spserv.microsoft.com/EKCertificate/GetEKCertificate/v1`
 - AMD: `https://ftpm.amd.com/pki/aia`
 
+### Proxy settings 
+Deploying proxy settings for Windows Autopilot should be configured on the proxy server itself. Implementing proxy settings via Intune policy is not fully supported as it may cause issues and unexpected behavior with privileged access deployments. 
+
+
 ## Next steps
 
 [Windows Autopilot licensing requirements](licensing-requirements.md)
