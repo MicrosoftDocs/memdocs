@@ -33,11 +33,8 @@ ms.collection:
 
 You can integrate Microsoft Defender for Endpoint with Microsoft Intune as a Mobile Threat Defense solution. Integration can help you prevent security breaches and limit the impact of breaches within an organization.
 
-Microsoft Defender for Endpoint works with devices that run:
-- Android
-- iOS/iPadOS
-- Windows 10
-- Windows 11
+Go here to check system requirements for Microsoft Defender for Endpoint:  [Click Here](https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/minimum-requirements?view=o365-worldwide "Microsoft Defender for Endpoint System Requirements"
+
 
 To be successful, you'll use the following configurations in concert:
 
