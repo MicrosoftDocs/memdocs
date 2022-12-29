@@ -18,7 +18,7 @@ ms.collection: tier3
 
 # Using query designer to write report SQL statements for Configuration Manager reports
 
-To help you to write SQL statements for Configuration Manager reports, you can use the query design tool found in SQL Server Management Studio. For some administrators, it is much easier to use Query Designer in Microsoft SQL Server to create the SQL statement for the Configuration Manager report. This tool has a variety of features that help in designing and testing queries. For some administrators, it is much easier to use Query Designer in Microsoft SQL Server to create the SQL statement for the Configuration Manager report. This tool has a variety of features that help in designing and testing queries.
+To help you to write SQL statements for Configuration Manager reports, you can use the query design tool found in SQL Server Management Studio. For some administrators, it is much easier to use Query Designer in Microsoft SQL Server to create the SQL statement for the Configuration Manager report. This tool has a variety of features that help in designing and testing queries.
 
 ## Using query designer to create report queries
 
