@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/15/2022
+ms.date: 12/29/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -67,6 +67,12 @@ When you select a policy, you'll see information about the device check-in statu
 ### Device check-in frequency
 
 Devices managed by this capability check in with Microsoft Endpoint Manager every 90 minutes to update policy.
+
+You can manually sync a device on-demand from the [Microsoft 365 Defender portal](https://security.microsoft.com/). Sign-in to the portal and go to **Devices**. Select a device that is managed by MDE, and then select the **Policy sync** button:  
+
+:::image type="content" source="./media/mde-security-integration/policy-sync-from-mde.png" alt-text="Manually sync devices managed by MDE." lightbox="./media/mde-security-integration/policy-sync-from-mde.png":::
+
+The Policy sync button only appears for devices that are successfully managed by MDE. 
 
 ### Devices protected by Tamper Protection
 
