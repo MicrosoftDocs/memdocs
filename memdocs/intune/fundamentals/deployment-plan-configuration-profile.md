@@ -27,7 +27,7 @@ ms.collection:
   - highpri
 ---
 
-# Step 4 - Create device configuration profiles to secure devices and create connections to organization resources (Level 1)
+# Step 4 - Create device configuration profiles to secure devices and create connections to organization resources
 
 So far, you've set up your Intune subscription, created app protection policies, and created device compliance policies.
 
