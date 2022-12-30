@@ -86,6 +86,8 @@ The following platforms are supported for Intune with Microsoft Defender for End
 - iOS/iPadOS
 - Windows 10/11 (Hybrid Azure Active Directory Joined or Azure Active Directory Joined)
 
+For the system requirements for Microsoft Defender for Endpoint, see [Minimum requirements for Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/minimum-requirements).
+
 ## Next steps
 
 - To connect Microsoft Defender for Endpoint to Intune, onboard devices, and configure conditional access policies, see [Configure Microsoft Defender for Endpoint in Intune](../protect/advanced-threat-protection-configure.md).
