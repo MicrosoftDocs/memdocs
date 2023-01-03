@@ -196,7 +196,7 @@ With robust device compliance policies in place, you can then implement more adv
  
 - Integrating device compliance status with *Conditional Access* to help gate which devices are allowed to access email, other cloud services, or on-premises resources.
 
-- Including compliance data from *third-party compliance partners*. With such a configuration, compliance data from those devices can be used with your [conditional access policies](../protect/device-compliance-get-started#integrate-with-conditional-access.md).
+- Including compliance data from *third-party compliance partners*. With such a configuration, compliance data from those devices can be used with your [conditional access policies](../protect/device-compliance-get-started#integrate-with-conditional-access).
 
 - Expanding on built-in device compliance policies by defining custom compliance settings that aren't available natively through the Intune compliance policy UI. <!-- [Custom compliance settings](../protect/compliance-use-custom-settings.md) -->
 
