@@ -35,7 +35,7 @@ Learn what's new each week in Microsoft Intune.
 
 You can also read:  
 - [**Important notices**](#notices)
-- [Past releases](whats-new-archive.md) in the What's New Archive
+- [Past releases](whats-new-archive.md) in the What's new archive
 - Information about [how Intune service updates are released](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Microsoft-Intune-Service-Updates/ba-p/358728)
 
 > [!NOTE]
@@ -48,7 +48,7 @@ You can also read:
 >
 > Some features may roll out over several weeks and might not be available to all customers in the first week.
 >
-> For a list of upcoming Intune feature releases, see [In development for Microsoft Intune](../fundamentals/in-development.md). For new information about Autopilot, see [Windows Autopilot What's New](../../autopilot/windows-autopilot-whats-new.md).
+> For a list of upcoming Intune feature releases, see [In development for Microsoft Intune](../fundamentals/in-development.md). For new information about Autopilot, see [Windows Autopilot What's new](../../autopilot/windows-autopilot-whats-new.md).
 
 You can use RSS to be notified when this page is updated. For more information, see [How to use the docs](../../use-docs.md#notifications).
 <!-- **RSS feed**: Get notified when this page is updated by copying and pasting the following URL into your feed reader: `https://learn.microsoft.com/api/search/rss?search=%22What%27s+new+in+microsoft+intune%3F+-+Azure%22&locale=en-us` -->
@@ -636,6 +636,9 @@ by using the setting **Attack Surface Reduction Only Exclusions**.
 Applies to:
 
 - Windows 10/11
+
+> [!NOTE]  
+> ASR polices do not support merge functionality for *ASR Only Per Rule Exclusions* and a policy conflict can result when multiple polices that configure *ASR Only Per Rule Exclusions* for the same device conflict. To avoid conflicts, combine the configurations for *ASR Only Per Rule Exclusions* into a single ASR policy. We are investigating adding policy merge for *ASR Only Per Rule Exclusions* in a future update.
 
 #### Grant apps permission to silently use certificates on Android Enterprise devices<!-- 12441244    -->  
 You can now configure silent use of certificates by apps on Android Enterprise devices that enrolled as **Fully Managed, Dedicated, and Corporate-Owned work Profile**.
@@ -2024,9 +2027,9 @@ The following protected apps are now available for Microsoft Intune:
 
 For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
 
-## What's New archive
+## What's new archive
 
-For previous months, see the [What's New archive](whats-new-archive.md).
+For previous months, see the [What's new archive](whats-new-archive.md).
 
 ## Notices
 
