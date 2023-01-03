@@ -77,8 +77,7 @@ To successfully access a Cloud PC, a user must authenticate, in turn, with both:
 - The Windows 365 service.
 - The Cloud PC.
 
->[!NOTE]
->Single sign-on (defined as a single authentication prompt that can satisfy both the Windows 365 service authentication and Cloud PC authentication) is not supported at this time.
+Windows 365 offers single sign-on (defined as a single authentication prompt that can satisfy both the Windows 365 service authentication and Cloud PC authentication) as part of the service. See [single sign-on](#single-sign-on-sso) for more information.
 
 >[!IMPORTANT]
 >In order for authentication to work properly, the user's local machine must also be able to access the URLs in the [Remote Desktop clients](/azure/virtual-desktop/safe-url-list#remote-desktop-clients) section of the [Azure Virtual Desktop required URL list](/azure/virtual-desktop/safe-url-list).
