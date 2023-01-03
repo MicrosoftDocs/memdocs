@@ -219,7 +219,7 @@ Here's a list of VPN clients that are known to be tested and validated:
 - DirectAccess
 
 > [!NOTE]
-> When using BYO VPNs, you should select Yes for the “Skip AD connectivity check” option in the Windows Autopilot deployment profile. Always-On VPNs should not require this option since it will connect automatically. 
+> When using BYO VPNs, you should select **Yes** for the **Skip AD connectivity check** option in the Windows Autopilot deployment profile. Always-On VPNs should not require this option since it will connect automatically. 
 
 ## Create and assign an Autopilot deployment profile
 
