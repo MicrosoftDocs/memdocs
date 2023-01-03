@@ -113,6 +113,7 @@ This authentication request is processed by Azure AD for Azure AD Joined Cloud P
 
 The following credential types are supported for Cloud PC authentication:
 - Windows desktop client
+    - [Single sign-on](#single-sign-on-sso)
     - Username and password
     - Smartcard
     - [Windows Hello for Business certificate trust](/windows/security/identity-protection/hello-for-business/hello-hybrid-cert-trust)
@@ -122,6 +123,7 @@ The following credential types are supported for Cloud PC authentication:
 - Windows store client
     - Username and password
 - Web client
+    - [Single sign-on](#single-sign-on-sso)
     - Username and password
 - Android
     - Username and password
@@ -131,6 +133,11 @@ The following credential types are supported for Cloud PC authentication:
     - Username and password
 
 ### Single sign-on (SSO)
+
+>[!Important]
+>Single sign-on as a Cloud PC authentication option is in Public Preview for Azure AD joined Cloud PCs.
+>Single sign-on as a Cloud PC authentication option is not supported for Hybrid Azure AD joined Cloud PCs.
+
 Single sign-on (SSO) allows the connection to skip the Cloud PC VM credential prompt and automatically sign the user in to Windows through Azure AD authentication. Azure AD authentication provides other benefits including passwordless authentication and support for third-party identity providers.
 
 Without SSO, the client will prompt users for their session host credentials for every connection. The only way to avoid being prompted is to save the credentials in the client. We recommend you only save credentials on secure devices to prevent other users from accessing your resources.
