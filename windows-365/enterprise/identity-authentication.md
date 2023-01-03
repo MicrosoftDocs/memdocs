@@ -134,8 +134,9 @@ The following credential types are supported for Cloud PC authentication:
 ### Single sign-on (SSO)
 
 >[!Important]
->Single sign-on as a Cloud PC authentication option is in Public Preview for Azure AD joined Cloud PCs.
->Single sign-on as a Cloud PC authentication option is not supported for Hybrid Azure AD joined Cloud PCs.
+>Single sign-on is in Public Preview for Azure AD joined Cloud PCs.
+>
+>Single sign-on is not supported for Hybrid Azure AD joined Cloud PCs.
 
 Single sign-on (SSO) allows the connection to skip the Cloud PC VM credential prompt and automatically sign the user in to Windows through Azure AD authentication. Azure AD authentication provides other benefits including passwordless authentication and support for third-party identity providers. Single sign-on is available on Cloud PCs using the following operating systems:
 
