@@ -58,7 +58,7 @@ For more information, see the description of this [content migration](../../serv
 <!--3601183-->
 We are now adding the **Featured** tab in Software Center where we will be displaying the featured apps. Using this, IT admins can mark apps as "featured" and encourage end users to use the app. Currently, this feature is available only for "User Available" apps. Also, admins can make the **Featured** tab of Software Center as the default tab from Client Settings. 
 
-For more information, see the [Featured Apps in Software Center](../../get-started/2022/technical-preview-2210.md#bkmk_featured-apps-software-center).
+For more information, see the [Software Center in Configuration Manager](../../understand/software-center.md).
 
 <!--## Software updates-->
 
@@ -107,7 +107,11 @@ Previously, device entities of the co-managed devices appeared as two separate e
 
 The issue is fixed by propagating correct AAD device ID from ConfigMgr during Intune enrollment. This leads to merged entities for co-managed devices in a short period of time (30-40 mins). We no longer have to wait for discovery cycle to run.
 
+### Starting with this version, Configuration Manager client doesn’t support the following server 
 
+ -	Windows Server 2008 SP2 Extended Security Updates (ESU Azure Only)
+      
+If you have these server’s client running please don’t upgrade to 2211 client version. For more information on supported clients and devices see, [supported-operating-systems-for-clients-and-devices](../../plan-design/configs/supported-operating-systems-for-clients-and-devices.md).
 
 <!--Starting with this version, the following features are no longer [pre-release](../../servers/manage/pre-release-features.md):
 -->
@@ -131,9 +135,9 @@ The following additional hotfixes are available to address specific issues:
 
 ## Next steps
 
-At this time, version 2211 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](../../servers/manage/checklist-for-installing-update-2211.md#early-update-ring).
+<!-- At this time, version 2211 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](../../servers/manage/checklist-for-installing-update-2211.md#early-update-ring).-->
 
-<!--As of April 26, 2022, version 2207 is globally available for all customers to install.-->
+As of December 19, 2022, version 2211 is globally available for all customers to install.
 
 When you're ready to install this version, see [Installing updates for Configuration Manager](../../servers/manage/updates.md) and [Checklist for installing update 2211](../../servers/manage/checklist-for-installing-update-2211.md).
 

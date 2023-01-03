@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 09/14/2022
+ms.date: 01/03/2023
 ms.topic: reference
 ms.service: windows-365
 ms.subservice: 
@@ -54,7 +54,11 @@ To help in your readiness and planning, this page lists Windows 365 updates and 
 -->
 
 <!-- ***********************************************-->
-<!--## App management-->
+## App management
+
+### Windows 365 app will support Windows 10<!--42212516-->
+
+In a future update, the Windows 365 app will support Windows 10.
 
 
 <!-- ***********************************************-->
