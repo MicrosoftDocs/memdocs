@@ -148,6 +148,28 @@ Without SSO, the client will prompt users for their session host credentials for
 >[!NOTE]
 >To maintain single sign-on to Kerberos-based apps and resources in the Cloud PC environment, you must properly [configure your environment to trust the Azure AD Kerberos service](/azure/active-directory/authentication/howto-authentication-passwordless-security-key-on-premises).
 
+## In-session authentication
+
+Once you're connected to your Cloud PC, you may be prompted for authentication inside the session. This section explains how to use credentials other than username and password in this scenario.
+
+### In-session passwordless authentication (preview)
+
+> [!IMPORTANT]
+> In-session passwordless authentication is currently in public preview.
+
+Windows 365 supports in-session passwordless authentication (preview) using [Windows Hello for Business](/windows/security/identity-protection/hello-for-business/hello-overview) or security devices like FIDO keys when using the [Windows Desktop client](../end-user-access-cloud-pc.md#remote-desktop). Passwordless authentication is enabled automatically when the Cloud PC and local PC are using the following operating systems:
+
+  - Windows 11 Enterprise with the [2022-09 Cumulative Updates for Windows 11 Preview (KB5017383)](https://support.microsoft.com/kb/KB5017383) or later installed.
+  - Windows 10 Enterprise, versions 20H2 or later with the [2022-09 Cumulative Updates for Windows 10 Preview (KB5017380)](https://support.microsoft.com/kb/KB5017380) or later installed.
+  
+When enabled, all WebAuthn requests in the session are redirected to the local PC. You can use Windows Hello for Business or locally attached security devices to complete the authentication process.
+
+To access Azure AD resources with Windows Hello for Business or security devices, you must enable the FIDO2 Security Key as an authentication method for your users. To enable this method, follow the steps in [Enable FIDO2 security key method](/azure/active-directory/authentication/howto-authentication-passwordless-security-key.md#enable-fido2-security-key-method).
+
+### In-session smart card authentication
+
+To use a smart card in your session, make sure you've installed the smart card drivers on the Cloud PC and enabled [smart card redirection](configure-device-redirections.md#smart-card-redirection). Review the [client comparison chart](/windows-server/remote/remote-desktop-services/clients/remote-desktop-app-compare#other-redirection-devices-etc) to make sure your client supports smart card redirection.
+
 <!-- ########################## -->
 ## Next steps
 
