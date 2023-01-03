@@ -168,7 +168,7 @@ To access Azure AD resources with Windows Hello for Business or security devices
 
 ### In-session smart card authentication
 
-To use a smart card in your session, make sure you've installed the smart card drivers on the Cloud PC and enabled [smart card redirection](configure-device-redirections.md#smart-card-redirection). Review the [client comparison chart](/windows-server/remote/remote-desktop-services/clients/remote-desktop-app-compare#other-redirection-devices-etc) to make sure your client supports smart card redirection.
+To use a smart card in your session, make sure you've installed the smart card drivers on the Cloud PC and allow smart card redirection as part of [managing RDP device redirections for Cloud PCs](manage-rdp-device-redirections). Review the [client comparison chart](/windows-server/remote/remote-desktop-services/clients/remote-desktop-app-compare#other-redirection-devices-etc) to make sure your client supports smart card redirection.
 
 <!-- ########################## -->
 ## Next steps
