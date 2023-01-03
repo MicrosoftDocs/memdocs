@@ -164,7 +164,7 @@ Windows 365 supports in-session passwordless authentication (preview](/windows-3
   
 When enabled, all WebAuthn requests in the session are redirected to the local PC. You can use Windows Hello for Business or locally attached security devices to complete the authentication process.
 
-To access Azure AD resources with Windows Hello for Business or security devices, you must enable the FIDO2 Security Key as an authentication method for your users. To enable this method, follow the steps in [Enable FIDO2 security key method](/azure/active-directory/authentication/howto-authentication-passwordless-security-key.md#enable-fido2-security-key-method).
+To access Azure AD resources with Windows Hello for Business or security devices, you must enable the FIDO2 Security Key as an authentication method for your users. To enable this method, follow the steps in [Enable FIDO2 security key method](/azure/active-directory/authentication/howto-authentication-passwordless-security-key#enable-fido2-security-key-method).
 
 ### In-session smart card authentication
 
