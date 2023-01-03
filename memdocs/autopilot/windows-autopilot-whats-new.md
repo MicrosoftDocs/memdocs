@@ -19,7 +19,7 @@ ms.topic: article
 ## Support for Temporary Access Pass 
 In 2301 Windows Autopilot will support the use of [Temporary Access Pass](/azure/active-directory/authentication/howto-authentication-temporary-access-pass) for Azure AD joined user driven, pre-provisioning and self-deploying mode for shared devices. A Temporary Access Pass is a time-limited passcode that can be configured for multi or single use to allow users to onboard other authentication methods including passwordless methods such as Microsoft Authenticator, FIDO2 or Windows Hello for Business. 
 
-For more information on supported scenarios, see [Temporary Access Pass](windows-autopilot-scenarios#temporary-access-pass.md).
+For more information on supported scenarios, see [Temporary Access Pass](windows-autopilot-scenarios.md#temporary-access-pass).
 
 ## Autopilot automatic device diagnostics collection
 <!--1895390-->
