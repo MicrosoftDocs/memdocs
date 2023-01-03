@@ -52,15 +52,15 @@ This article applies to:
 
 - Android Enterprise (Fully Managed, and Personally owned work profiles)
 - Android Open-Source Project (AOSP)
-- iOS/iPadO
+- iOS/iPadOS
 - Linux
 - macOS
 - Windows
 
 You deploy compliance policies to groups of devices or users. When deployed to users, any device the user signs into must then meet the policies requirements. Some common examples of compliance requirements include:
 
-- Requiring a minimum operating system version
-- Use of a password or PIN that meets certain complexity and length requirements
+- Requiring a minimum operating system version.
+- Use of a password or PIN that meets certain complexity and length requirements.
 - A device being at or below a *threat level* as determined by mobile threat defense software you use. Mobile threat defense software includes Microsoft Defender for Endpoint or one of Intune’s other supported partners.
 
 When devices fail to meet the requirements of a compliance policy, that policy can apply one or more *actions for noncompliance*. Some actions include:
@@ -100,7 +100,7 @@ The minimal device compliance settings include the following subjects that all t
 - *Actions for noncompliance* – These configurations are common to all device compliance policies.
 - *Minimal device compliance policy recommendations* – Thees are the platform specific device compliance settings we believe every tenant should implement to help keep their organizations resources safe.
 
-In addition, we recommend you be familiar with how device compliance policies and device configuration policies are related, and interact.
+In addition, we recommend you be familiar with how device compliance policies and device configuration policies are related and interact.
 
 ### Compliance policy settings
 
