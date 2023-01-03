@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/08/2022
+ms.date: 01/03/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -67,15 +67,25 @@ Antivirus policies include the same settings as found *endpoint protection* or *
 
 ### Prerequisites for tamper protection
 
-You can use Intune to manage tamper protection on Windows devices as part of Antivirus policy. This includes both devices you manage with Intune, and devices you manage with Configuration Manager through the tenant attach scenario.
+Tamper protection is available for devices that are running one of the following versions of Windows:
+
+- Windows 10 and 11 (including Enterprise multi-session)
+- Windows Server version 1803 or later, Windows Server 2019, Windows Server 2022
+- Windows Server 2012 R2 and Windows Server 2016 ([using the modern, unified solution](/microsoft-365/security/defender-endpoint/configure-server-endpoints#new-windows-server-2012-r2-and-2016-functionality-in-the-modern-unified-solution))
+
+> [!NOTE]
+> Devices are required to be onboarded to Microsoft Defender for Endpoint (P1 or P2). Devices may see a delay enabling tamper protection if previously not onboarded to Microsoft Defender for Endpoint. Tamper protection will enable on the first device check-in after onboarding to Microsoft Defender for Endpoint.
+
+You can use Intune to manage tamper protection on Windows devices as part of Windows Security Experience profile (an Antivirus policy). This includes both devices you manage with Intune, and devices you manage with Configuration Manager through the tenant attach scenario.
 
 #### Intune managed devices
 
 Prerequisites to support tamper protection for devices managed by Intune:
 
-- Your environment must meet the [prerequisites for managing  tamper protection with Intune](/windows/security/threat-protection/microsoft-defender-antivirus/prevent-changes-to-security-settings-with-tamper-protection#turn-tamper-protection-on-or-off-for-your-organization-using-intune) as detailed in the Windows documentation.
+- Your environment must meet the [prerequisites for managing  tamper protection with Intune](/windows/security/threat-protection/microsoft-defender-antivirus/prevent-changes-to-security-settings-with-tamper-protection#turn-tamper-protection-on-or-off-for-your-organization-using-intune)
+- Devices are onboarded to Microsoft Defender for Endpoint (P1 or P2)
 
-Profiles for *Antivirus* policy that support tamper protection for [devices managed by Microsoft Endpoint Manager](#devices-managed-by-microsoft-endpoint-manager):
+Profiles for *Antivirus* policy that support tamper protection for [devices managed by Microsoft Endpoint Manager](#devices-managed-by-microsoft-intune):
 
 - Platform: **Windows 10, Windows 11, and Windows Server**
   - Profile: **Windows Security experience**  
@@ -96,6 +106,7 @@ Prerequisites to support managing tamper protection with these profiles:
 - Your environment must meet the [prerequisites for managing  tamper protection with Intune](/windows/security/threat-protection/microsoft-defender-antivirus/prevent-changes-to-security-settings-with-tamper-protection#turn-tamper-protection-on-or-off-for-your-organization-using-intune) as detailed in the Windows documentation.
 - You must use Configuration Manager current branch 2006 or later.
 - You must configure tenant attach to support endpoint protection policies. This includes configuring Configuration Manager device collections for synchronization with Intune.
+- Devices are onboarded to Microsoft Defender for Endpoint (P1 or P2)
 
  Profiles for *Antivirus* policy that support tamper protection for [devices managed by Configuration Manager](#devices-managed-by-configuration-manager):
 
@@ -104,7 +115,7 @@ Prerequisites to support managing tamper protection with these profiles:
 
 ## Antivirus profiles
 
-### Devices managed by Microsoft Endpoint Manager
+### Devices managed by Microsoft Intune
 
 The following profiles are supported for devices you manage with Intune:
 
