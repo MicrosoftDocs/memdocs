@@ -92,7 +92,7 @@ The following articles can help you understand the settings that Intune policies
 ✔️ **Configure tenant-wide Compliance policy settings**  
 ✔️ **Set up responses for noncompliance devices (Actions for noncompliance)**  
 ✔️ **Understand how device compliance and device configuration policies interact**  
-✔️ **Establish a core set of compliance settings across platforms you support**  
+✔️ **Use a core set of minimal compliance settings across platforms you support**  
 
 The minimal device compliance settings include the following subjects that all tenants who plan to use compliance policies should understand and be prepared to use:
 
@@ -165,7 +165,7 @@ We recommend using the following settings in your minimal device compliance poli
 
 ## Level 2 - Enhanced device compliance settings
 
-✔️ **Deploy device configuration policies for supported platform types**  
+✔️ **Use enhanced device configuration policies for supported platform types**  
 
 ### Enhanced compliance settings
 
@@ -188,7 +188,7 @@ We recommend using the following settings in your enhanced device compliance pol
 ✔️ **Integrate a third-party compliance partner with Intune**  
 ✔️ **Define custom compliance settings for Windows and Linux**  
 ✔️ **Use compliance data with Conditional Access to gate access to your organization’s resources**  
-✔️ **Deploy device configuration policies for supported platform types**
+✔️ **Use advanced device configuration policies for supported platform types**
 
 With robust device compliance policies in place, you can then implement more advanced compliance options that go beyond only configuring settings in device compliance policies, including:
 
@@ -202,7 +202,15 @@ With robust device compliance policies in place, you can then implement more adv
 
 ### Integrate data from a Mobile Threat Defense partner
 
-*In progress > Light discussion and links to supporting docs.### Advanced compliance settings.*
+A Mobile Threat Defense (MTD) solution is software for mobile devices that helps to secure them from various cyber threats. By protecting mobile devices, you help protect your organization and resources. When integrated, MTD solutions provide an additional information source to Intune for your device compliance policies. This information can also be used by Conditional Access rules you can use with Intune.
+
+When integrated, Intune supports use of MTD solutions with enrolled devices, and when supported by the MTD solution, unenrolled devices through the use of  [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md) and app protection policies.
+
+We recommend using an MTD partner that is  [supported by Intune](../protect/mobile-threat-defense.md#mobile-threat-defense-partners) and that supports the capabilities your organization needs on the full range of platforms you use.
+
+For example, [Microsoft Defender for Endpoint](../protect/advanced-threat-protection.md) is a Mobile Threat Defense solution you might already use that can be used with the Android, iOS/iPadOS, and Windows platforms. Other solutions, typically support Android and iOS/iPadOS. See [Mobile Threat Defense partners](../protect/mobile-threat-defense.md) to view the list of supported MTD partners.
+
+To learn more about using Mobile Threat Defense software with Intune, start with [Mobile Threat Defense integration with Intune](../protect/mobile-threat-defense.md).
 
 ### Integrate compliance with Conditional Access
 
