@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/20/2022
+ms.date: 01/04/2023
 ms.topic: overview
 ms.service: mem
 ms.subservice: fundamentals
@@ -53,7 +53,7 @@ This article provides an overview of the steps to start your Intune deployment, 
 
   - [Move to cloud-native endpoints](/mem/cloud-native-endpoints-overview)
   - [Planning guide to move to Microsoft Intune](intune-planning-guide.md)
-  - [Deployment guide: Setup or move to Microsoft Intune](deployment-guide-intune-setup.md)
+  - [Deployment guide: Set up or move to Microsoft Intune](deployment-guide-intune-setup.md)
 
   For some online training, go to:
 
@@ -67,7 +67,7 @@ This article provides an overview of the steps to start your Intune deployment, 
   - **[Microsoft 365 apps](https://www.microsoft.com/licensing/product-licensing/microsoft-365-apps)**: Included with Microsoft 365 and is used for productivity apps, including Outlook and Teams.
   - **[Azure Active Directory (Azure AD)](https://www.microsoft.com/security/business/identity-access/azure-active-directory-pricing)**: Included with some Microsoft 365 subscriptions. Azure AD is used for the identity management for users, groups, and devices, which comes with your Intune and Microsoft 365 subscription.
 
-    Azure AD Premium, which might be extra, gives you more features commonly used by organizations, including conditional access, multi factor authentication (MFA), and dynamic groups.
+    Azure AD Premium, which might cost extra, gives you more features commonly used by organizations, including conditional access, multi factor authentication (MFA), and dynamic groups.
 
   - **[Windows Autopilot](/mem/autopilot/licensing-requirements)**: Included with some Microsoft 365 subscriptions. Windows Autopilot gives you modern OS deployment for Windows 10/11 client devices.
   - **Platform specific prerequisites**: Depending on the platforms of your devices, there will probably be other requirements.
@@ -83,7 +83,9 @@ This article provides an overview of the steps to start your Intune deployment, 
 
 ## Step 1 - Set up Intune
 
-✔️ In this step, **confirm your devices are supported, create your Intune tenant, add users & groups, assign licenses**, and more.
+In this step:
+
+✔️ **Confirm your devices are supported, create your Intune tenant, add users & groups, assign licenses**, and more.
 
 This step focuses on setting up Intune and getting it ready for you to manage your user identities, apps, and devices. Intune uses many features in Azure AD, including your domain, your users, and your groups.
 
@@ -139,7 +141,9 @@ If you prefer, you can enroll your devices before checking compliance. It's your
 
 ## Step 4 - Configure device features
 
-✔️ In this step, **create baseline of security features and device features** that should be enabled or blocked. Assign these profiles during enrollment.
+In this step:
+
+✔️ **Create baseline of security features and device features** that should be enabled or blocked. Assign these profiles during enrollment.
 
 For more specific information, go to [Step 4 - Create device configuration profiles to secure devices and access organization resources](deployment-plan-configuration-profile.md).
 
@@ -147,7 +151,7 @@ Your organization may have a base set of device features that should be configur
 
 If you prefer, you can enroll your devices before creating device configuration profiles. It's your choice. At the next Intune check-in, the profiles are assigned.
 
-In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can create different profiles based on your device platform - Android, iOS/iPadOS, macOS, and Windows.
+In the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can create different profiles based on your device platform - Android, iOS/iPadOS, macOS, and Windows.
 
 The following articles are good resources:
 
@@ -159,11 +163,13 @@ The following articles are good resources:
 
 ## Step 5 - Enroll your devices
 
-✔️ In this step, **enroll your devices** in Intune.
+In this step:
 
-For more specific information, go to [Deployment guidance: Enroll devices in Microsoft Intune](deployment-guide-enrollment.md).
+✔️ **Enroll your devices** in Intune.
 
-To fully manage devices, the devices must be enrolled in Intune to receive the compliance & conditional access policies, app policies, device configuration policies, and security policies you create. As an admin, you create enrollment policies for your users and devices. Each device platform (Android, iOS/iPadOS, macOS, and Windows) has different enrollment options. You choose what's best for your environment, your scenarios, and how your devices are used.
+For more specific information, go to [Step 5 - Deployment guidance: Enroll devices in Microsoft Intune](deployment-guide-enrollment.md).
+
+To fully manage devices, the devices must be enrolled in Intune to receive the compliance & conditional access policies, app policies, device configuration policies, and security policies you create. As an admin, you create enrollment policies for your users and devices. Each device platform (Android, iOS/iPadOS, macOS, Windows, and Linux) has different enrollment options. You choose what's best for your environment, your scenarios, and how your devices are used.
 
 Depending on the enrollment option you choose, users can enroll themselves. Or, you can automate enrollment so users only need to sign in to the device with their organization account.
 
@@ -174,10 +180,11 @@ Different platforms have different enrollment requirements. The following articl
 - [What is device enrollment in Intune?](../enrollment/device-enrollment.md)
 - [Enrolled device management capabilities of Microsoft Intune](../enrollment/device-management-capabilities.md)
 - [Deployment guidance: Enroll devices in Microsoft Intune](deployment-guide-enrollment.md)
-- [Deployment guide: Enroll Android devices in Microsoft Intune](deployment-guide-enrollment-android.md)
-- [Deployment guide: Enroll iOS/iPadOS devices in Microsoft Intune](deployment-guide-enrollment-ios-ipados.md)
-- [Deployment guide: Enroll macOS devices in Microsoft Intune](deployment-guide-enrollment-macos.md)
-- [Deployment guide: Enroll Windows devices in Microsoft Intune](deployment-guide-enrollment-windows.md)
+- [Deployment guide: Enroll Android devices](deployment-guide-enrollment-android.md)
+- [Deployment guide: Enroll iOS/iPadOS devices](deployment-guide-enrollment-ios-ipados.md)
+- [Deployment guide: Enroll macOS devices](deployment-guide-enrollment-macos.md)
+- [Deployment guide: Enroll Windows devices](deployment-guide-enrollment-windows.md)
+- [Deployment guide: Enroll Linux desktop devices](deployment-guide-enrollment-linux.md)
 
 ## Cloud attach with Configuration Manager
 
@@ -190,14 +197,12 @@ There are two steps to cloud attach your on-premises devices:
 
 If you currently use Configuration Manager, you get immediate value through tenant attach, and you get more value through co-management.
 
-For guidance on the Microsoft Intune setup that's right for your organization, go to [Deployment guide: Setup or move to Microsoft Intune](deployment-guide-intune-setup.md).
+For guidance on the Microsoft Intune setup that's right for your organization, go to [Deployment guide: Set up or move to Microsoft Intune](deployment-guide-intune-setup.md).
 
 ## Next steps
 
-- [Planning guide to move to Microsoft Intune](intune-planning-guide.md)
-- [Deployment guide: Setup or move to Microsoft Intune](deployment-guide-intune-setup.md)
-- [Get started with device compliance policies](../protect/device-compliance-get-started.md)
-- [What is app management in Microsoft Intune](../apps/app-management.md)
-- [Apply features and settings on your devices using device profiles](../configuration/device-profiles.md)
-- [Deployment guidance: Enroll devices in Microsoft Intune](deployment-guide-enrollment.md)
-- [Deployment guide: Mobile Application Management (MAM) for unenrolled devices in Microsoft Intune](deployment-guide-enrollment-mamwe.md)
+- [Step 1 - Set up Microsoft Intune](deployment-plan-setup.md)
+- [Step 2 - Add, configure, and protect apps with Intune](deployment-plan-protect-apps.md)
+- [Step 3 – Plan for compliance policies](deployment-plan-compliance-policies.md)
+- [Step 4 - Create device configuration profiles to secure devices and access organization resources](deployment-plan-configuration-profile.md)
+- [Step 5 - Deployment guidance: Enroll devices in Microsoft Intune](deployment-guide-enrollment.md)
