@@ -59,7 +59,7 @@ Use this guide to determine the best migration approach, and get some guidance a
 
 ## Currently don't use anything
 
-If you currently don't use any MDM or mobile application manager (MAM) provider, then you have some options:
+If you currently don't use any MDM or mobile application management (MAM) provider, then you have some options:
 
 - **Microsoft Intune**: If you want a cloud solution for your client devices and Linux, then go straight to Intune. For immediate value and protection on your Android and iOS/iPadOS devices, start with app protection policies, as these policies are typically used on unenrolled devices.
 
