@@ -206,25 +206,48 @@ A Mobile Threat Defense (MTD) solution is software for mobile devices that helps
 
 When integrated, Intune supports use of MTD solutions with enrolled devices, and when supported by the MTD solution, unenrolled devices through the use of  [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md) and app protection policies.
 
-We recommend using an MTD partner that is  [supported by Intune](../protect/mobile-threat-defense.md#mobile-threat-defense-partners) and that supports the capabilities your organization needs on the full range of platforms you use.
+Be sure to use an MTD partner that is  [supported by Intune](../protect/mobile-threat-defense.md#mobile-threat-defense-partners) and that supports the capabilities your organization needs on the full range of platforms you use.
 
 For example, [Microsoft Defender for Endpoint](../protect/advanced-threat-protection.md) is a Mobile Threat Defense solution you might already use that can be used with the Android, iOS/iPadOS, and Windows platforms. Other solutions, typically support Android and iOS/iPadOS. See [Mobile Threat Defense partners](../protect/mobile-threat-defense.md) to view the list of supported MTD partners.
 
 To learn more about using Mobile Threat Defense software with Intune, start with [Mobile Threat Defense integration with Intune](../protect/mobile-threat-defense.md).
 
-### Integrate compliance with Conditional Access
-
-*In progress > Light discussion and links to supporting docs.### Advanced compliance settings.*
-
 ### Use data from third-party compliance partners
 
-*In progress > Light discussion and links to supporting docs.### Advanced compliance settings.*
+Intune supports the use of third-party compliance partners where the partner serves as the mobile device management (MDM) authority for a group of devices. When you use a supported compliance partner, you use that partner to configure device compliance for the devices that solution manages. You also configure that partner solution to pass the compliance results to Intune, which then stores that data in Azure AD along with compliance data from Intune. The third-party compliance data is then available for use by Intune when evaluating device compliance policies, and for use by Conditional Access policies.
+
+In some environments, Intune might serve as the only MDM authority you need to use, as by default, Intune is a registered compliance partner for the Android, iOS/iPadOS, and Windows platforms. Other platforms require other compliance partners to serve as a devices MDM authority, like use of Jamf Pro for macOS devices.
+
+If you’ll use a third-party device compliance partner in your environment, ensure they're [supported with Intune](../protect/device-compliance-partners.md#supported-device-compliance-partners). To add support, you’ll need to configure a [connection for the partner](../protect/device-compliance-partners.md#configure-intune-to-work-with-a-device-compliance-partner) from within the Microsoft Endpoint Manager admin center, and follow that partners documentation to complete the integration.
+
+For more information on this subject, see [Support third-party device compliance partners in Intune](../protect/device-compliance-partners.md).
 
 ### Use custom compliance settings
 
-*In progress > Light discussion and links to supporting docs.### Advanced compliance settings.*
+You can expand on Intune’s built-in device compliance options by configuring custom compliance settings for managed Linux and Windows devices.
 
-*In progress > Light discussion and links to supporting docs.### Advanced compliance settings.*
+Custom settings give you the flexibility to base compliance on the settings that are available on a device without having to wait for Intune to add these settings.
+
+To use custom compliance, you must configure a .JSON file that defines values on the device to use for compliance, and a discovery script that runs on the device to evaluate the settings from the JSON. 
+
+To learn more about perquisites, supported platforms, and the JSON and script configurations required for custom compliance, see [Use custom compliance policies and settings for Linux and Windows devices with Microsoft Intune](../ protect/compliance-use-custom-settings.md).
+
+### Integrate compliance with Conditional Access
+
+Conditional Access is an Azure Active Directory (Azure AD) capability that works with Intune to help protect devices. For devices that register with Azure AD, Conditional Access policies can use device and compliance details from Intune to enforce access decisions for users and devices.
+
+Combine Conditional Access policy with:
+
+- [Device compliance policies](../protect/create-conditional-access-intune.md) can require a device be marked as compliant before that device can be used to access your organization’s resources. The Conditional Access policies specify apps services you want to protect, conditions under which the apps or services can be accessed, and the users the policy applies to.
+- [App protection policies](../protect/app-based-conditional-access-intune.md) can add a security layer that ensures only client apps that support Intune app protection policies can access your online resources, like Exchange or other Microsoft 365 services.
+
+Conditional Access also works with the following to help you keep devices secure:
+
+- Microsoft Defender for Endpoint and third-party MTD apps
+- Device compliance partner apps
+- Microsoft Tunnel
+
+To learn more, see [Learn about Conditional Access and Intune](../protect/conditional-access.md).
 
 ### Advanced compliance settings
 
