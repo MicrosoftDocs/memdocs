@@ -245,7 +245,7 @@ IT admins need to have a specific permission within Azure Active Directory to be
 All BitLocker recovery key accesses are audited. For more information on Audit Log entries, see [Azure portal audit logs](/azure/active-directory/devices/device-management-azure-portal#audit-logs).
 
 > [!NOTE]
-> If you delete the Intune object for an Azure AD joined device protected by BitLocker, i will tricker a Intune device sync and it will remove the key protectors for the operating system volume. Removing the key protector leaves BitLocker in a suspended state on that volume. This is necessary because BitLocker recovery information for Azure AD joined devices is attached to the Azure AD computer object and deleting it may leave you unable to recover from a BitLocker recovery event.
+> If you delete the Intune object for an Azure AD joined device protected by BitLocker, the deletion triggers an Intune device sync and removes the key protectors for the operating system volume. Removing the key protector leaves BitLocker in a suspended state on that volume. This is necessary because BitLocker recovery information for Azure AD joined devices is attached to the Azure AD computer object and deleting it may leave you unable to recover from a BitLocker recovery event.
 
 ### View recovery keys for tenant-attached devices
 
