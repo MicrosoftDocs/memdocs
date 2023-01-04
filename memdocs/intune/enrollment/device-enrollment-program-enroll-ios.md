@@ -73,10 +73,7 @@ Before you create the enrollment profile, decide how you want users to authentic
 Intune also supports Just in Time Registration for Setup Assistant with modern authentication, which eliminates the need for the Company Portal app for Azure AD registration and compliance. To use JIT Registration, you'll need to create a device configuration policy *before* you create the Apple enrollment profile and configure Setup Assistant with modern authentication. For how-to steps, see [Set up Just in Time Registration](automated-device-enrollment-authentication.md#set-up-just-in-time-registration).  
 
   > [!IMPORTANT]
-  > JIT Registration is in public preview. For more information, see [Public preview in Microsoft Intune](../fundamentals/public-preview.md).  
-
-> [!IMPORTANT]
-  > JIT Registration is not supported for GCC High and cloud tenants.   
+  > JIT Registration is in public preview. For more information, see [Public preview in Microsoft Intune](../fundamentals/public-preview.md).     
 
 Setup Assistant with modern authentication is supported on devices running iOS/iPadOS 13.0 and later. Older iOS/iPadOS devices given this profile will instead use Setup Assistant (legacy) for authentication.  
 
@@ -212,10 +209,11 @@ Now that you've installed your token, you can create an enrollment profile for A
 4. For **Basics**, give the profile a **Name** and **Description** for administrative purposes. Users don't see these details.
 5. Select **Next**.
 
-> [!IMPORTANT]
-> If you make changes to existing enrollment profile settings, the new changes won't take effect on assigned devices until devices are reset back to factory settings and reactivated. Reactivation occurs when the Remote Management Payload is received on ADE devices. Renaming the device name template is the only change you can make that doesn't require a factory reset.  
+    > [!IMPORTANT]
+    > If you make changes to existing enrollment profile settings, the new changes won't take effect on assigned devices until devices are reset back to factory settings and reactivated. Reactivation occurs when the Remote Management Payload is received on ADE devices. Renaming the device name template is the only change you can make that doesn't require a factory reset.  
 
 6. In the **User Affinity** list, select an option that determines whether devices with this profile must enroll with or without an assigned user.
+
     - **Enroll with User Affinity**. Select this option for devices that belong to users who want to use Company Portal for services like installing apps.
     - **Enroll without User Affinity**. Select this option for devices that aren't affiliated with a single user. Use this option for devices that don't access local user data. This option is typically used for kiosk, point of sale (POS), or shared-utility devices.
 
@@ -230,7 +228,6 @@ Now that you've installed your token, you can create an enrollment profile for A
      - **Company Portal**  
      - **Setup Assistant (legacy)**
      - **Setup Assistant with modern authentication**  
-    
 
 8. If you selected **Setup Assistant (legacy)** for the authentication method but you also want to use Conditional Access or deploy company apps on the devices, you need to install Company Portal on the devices and sign in to complete the Azure AD registration. To do so, select **Yes** for **Install Company Portal**. If you want users to receive Company Portal without having to authenticate in to the App Store, in **Install Company Portal with VPP**, select a VPP token. Make sure the token doesn't expire and that you have enough device licenses for the Company Portal app to deploy correctly.
 
@@ -266,8 +263,8 @@ Now that you've installed your token, you can create an enrollment profile for A
 
 12. If you selected **Enroll without User Affinity** and **Supervised** in the previous steps, you need to decide whether to configure the devices to be [Apple Shared iPad for Business devices](https://support.apple.com/guide/mdm/shared-ipad-overview-cad7e2e0cf56/web). Select **Yes** for **Shared iPad** to enable multiple users to sign in to a single device. Users will authenticate by using their Managed Apple IDs and federated authentication accounts or by using a temporary session (like the Guest account). This option requires iOS/iPadOS 13.4 or later. With Shared iPad, all Setup Assistant panes after activation are automatically skipped. 
 
-
     > [!NOTE]
+    >
     >- A device wipe will be required if an iOS/iPadOS enrollment profile with Shared iPad enabled is sent to an unsupported device. Unsupported devices include any iPhone models, and iPads running iPadOS/iOS 13.3 and earlier. Supported devices include iPads running iPadOS 13.3 and later.  
     >- To set up Apple Shared iPad for Business, configure these settings:
     >   - In the **User Affinity** list, select **Enroll without User Affinity**.
@@ -283,7 +280,7 @@ Now that you've installed your token, you can create an enrollment profile for A
     * **Maximum seconds of inactivity until user session logs out**: The minimum allowed value for this setting is 30. If there isn't any activity after the defined period, the user session ends and signs the user out. If you leave the entry blank or set it to zero (0), the session won't end due to inactivity. Available for devices in Shared iPad mode running iPadOS 14.5 and later.  
 
     * **Require Shared iPad temporary session only**: Configures the device so that users only see the guest version of the sign-in experience and must sign in as guests. They can't sign in with a Managed Apple ID. Available for devices in Shared iPad mode running iPadOS 14.5 and later.  
-    
+
         When set to **Yes**, this setting cancels out the following shared iPad settings, because they aren't applicable in temporary sessions:  
 
         - Maximum cached users
@@ -294,16 +291,15 @@ Now that you've installed your token, you can create an enrollment profile for A
 
         This setting is available when **Require Shared iPad temporary session only** is set to **Yes**.  
 
-
-    > [!NOTE] 
+    > [!NOTE]
+    >
     >- If temporary sessions are enabled, all of the user's data is deleted when they sign out of the session. This means that all targeted policies and apps will come down to the user when they sign-in, and they'll be erased when the user sign outs.  
-    >-  To alter a Shared iPads configuration to not have temporary sessions, the device will need to be fully reset and a new enrollment profile with the updated configurations will need to be sent down to the iPad. 
-         
+    >-  To alter a Shared iPads configuration to not have temporary sessions, the device will need to be fully reset and a new enrollment profile with the updated configurations will need to be sent down to the iPad.
 
 13. In the **Sync with computers** list, select an option for the devices that use this profile. If you select **Allow Apple Configurator by certificate**, you need to choose a certificate under **Apple Configurator Certificates**.
 
-     > [!NOTE]
-     > If you set **Sync with computers** to **Deny all**, the port will be limited on iOS and iPadOS devices. The port will be limited to only charging. It will be blocked from using iTunes or Apple Configurator 2.
+    > [!NOTE]
+    > If you set **Sync with computers** to **Deny all**, the port will be limited on iOS and iPadOS devices. The port will be limited to only charging. It will be blocked from using iTunes or Apple Configurator 2.
     >
     >If you set **Sync with computers** to **Allow Apple Configurator by certificate**, make sure you have a local copy of the certificate that you can use later. You won't be able to make changes to the uploaded copy, and it's important to retain an copy of this certificate. If you want to connect to the iOS/iPadOS device from a macOS device or PC, the same certificate must be installed on the device making the connection to the iOS/iPadOS device.
 
@@ -359,9 +355,10 @@ Now that you've installed your token, you can create an enrollment profile for A
 20. To save the profile, select **Create**.
 
 > [!NOTE]
-> If you need to re-enroll your Automated Device Enrollment device, you need to first wipe the device from the Intune admin console. To re-enroll:
-> 1. Wipe the device from the Intune console.
->     - Alternatively, retire the device from the Intune console and factory reset the device using the Settings app, Apple Configurator 2, or iTunes.
+> If you need to re-enroll your Automated Device Enrollment device, you need to first wipe the device from the Microsoft Endpoint Manager admin center. To re-enroll:
+
+> 1. Wipe the device from the Microsoft Endpoint Manager admin center.</p>
+>    Alternatively, retire the device from the admin center and factory reset the device using the Settings app, Apple Configurator 2, or iTunes.
 > 2. Activate the device again and run through Setup Assistant to receive the *Remote Management Profile*.
 
 ### Dynamic groups in Azure Active Directory
@@ -388,9 +385,9 @@ Now that Intune has permission to manage your devices, you can synchronize Intun
 
    - A full sync can run no more than once every seven days. During a full sync, Intune fetches the complete updated list of serial numbers assigned to the Apple MDM server connected to Intune.  
       > [!IMPORTANT]
-      > If a device is deleted from Intune, but remains assigned to the ADE enrollment token in the ASM/ABM portal, it will reappear in Intune on the next full sync. If you don't want the device to reappear in Intune, unassign it from the Apple MDM server in the ABM/ASM portal.   
+      > If a device is deleted from Intune, but remains assigned to the ADE enrollment token in the ASM/ABM portal, it will reappear in Intune on the next full sync. If you don't want the device to reappear in Intune, unassign it from the Apple MDM server in the ABM/ASM portal.
    - If a device is released from ABM/ASM, it can take up to 45 days for it to be automatically deleted from the devices page in Intune. You can manually delete released devices from Intune one by one if needed. Released devices will be accurately reported as being Removed from ABM/ASM in Intune until they're automatically deleted within 30-45 days.
-   - A delta sync is run automatically every 12 hours. You can also trigger a delta sync by selecting the **Sync** button (no more than once every 15 minutes). All sync requests are given 15 minutes to finish. The **Sync** button is disabled until a sync is completed. This sync will refresh existing device status and import new devices assigned to the Apple MDM server. If a delta sync fails for any reason, the next sync will be a full sync to hopefully resolve any issues. 
+   - A delta sync is run automatically every 12 hours. You can also trigger a delta sync by selecting the **Sync** button (no more than once every 15 minutes). All sync requests are given 15 minutes to finish. The **Sync** button is disabled until a sync is completed. This sync will refresh existing device status and import new devices assigned to the Apple MDM server. If a delta sync fails for any reason, the next sync will be a full sync to hopefully resolve any issues.
 
 ## Assign an enrollment profile to devices
 

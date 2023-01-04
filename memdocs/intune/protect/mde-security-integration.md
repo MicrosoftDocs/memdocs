@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/15/2022
+ms.date: 12/29/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -66,11 +66,17 @@ When you select a policy, you'll see information about the device check-in statu
 
 ### Device check-in frequency
 
-Devices managed by this capability check in with Microsoft Endpoint Manager every 90 minutes to update policy.
+Devices managed by this capability check-in with Microsoft Endpoint Manager every 90 minutes to update policy.
+
+You can manually sync a device on-demand from the [Microsoft 365 Defender portal](https://security.microsoft.com/). Sign-in to the portal and go to **Devices**. Select a device that is managed by MDE, and then select the **Policy sync** button:  
+
+:::image type="content" source="./media/mde-security-integration/policy-sync-from-mde.png" alt-text="Manually sync devices managed by MDE." lightbox="./media/mde-security-integration/policy-sync-from-mde.png":::
+
+The Policy sync button only appears for devices that are successfully managed by MDE. 
 
 ### Devices protected by Tamper Protection
 
-If a device has Tamper Protection turned on, it will not be possible to edit its settings without turning Tamper Protection off. When editing settings for a device with Tamper Protection turned on, Microsoft Endpoint Manager presents a *Failed* setting status with an error code of `-2147024891`.
+If a device has Tamper Protection turned on, it will not be possible to edit its settings without turning off Tamper Protection. When editing settings for a device with Tamper Protection turned on, Microsoft Endpoint Manager presents a *Failed* setting status with an error code of `-2147024891`.
 
 ### Assignment Filters and Security Management for Microsoft Defender for Endpoint
 
@@ -78,7 +84,7 @@ Assignment filters aren't supported for devices communicating through the Micros
 
 ### Deleting and removing devices
 
-Devices that are using this flow will be unable to be deleted from the Microsoft Endpoint Manager admin center. The enrollment state is driven from Microsoft Defender for Endpoint, and deleting them from the admin center would only cause them to be removed temporarily. If devices need to be removed from management, they should be removed from the scope of Configuration Management in the Security Center. Once removed, that change will be propagated across services.
+Devices that use this flow will be unable to be deleted from the Microsoft Endpoint Manager admin center. The enrollment state is driven from Microsoft Defender for Endpoint, and deleting them from the admin center would only cause them to be removed temporarily. If devices need to be removed from management, they should be removed from the scope of Configuration Management in the Security Center. Once removed, that change will be propagated across services.
 
 ### Unable to enable the Security Management for Microsoft Defender for Endpoint workload in Endpoint Security
 

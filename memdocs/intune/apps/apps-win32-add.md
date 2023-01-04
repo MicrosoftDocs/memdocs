@@ -148,8 +148,8 @@ On the **Requirements** page, specify the requirements that devices must meet be
 - **Physical memory required (MB)**: Optionally, add the physical memory (RAM) required to install the app.
 - **Minimum number of logical processors required**: Optionally, add the minimum number of logical processors required to install the app.
 - **Minimum CPU speed required (MHz)**: Optionally, add the minimum CPU speed required to install the app.
-- **Configure additional requirement rules**: 
-    1. Select **Add** to display the **Add a Requirement rule** pane and configure more requirement rules. Select the **Requirement type** value to choose the type of rule that you'll use to determine how a requirement is validated. Requirement rules can be based on file system information, registry values, or PowerShell scripts. 
+- **Configure additional requirement rules**:
+    1. Select **Add** to display the **Add a Requirement rule** pane and configure more requirement rules. Select the **Requirement type** value to choose the type of rule that you'll use to determine how a requirement is validated. Requirement rules can be based on file system information, registry values, or PowerShell scripts.
         - **File**: When you choose **File** as the **Requirement type** value, the requirement rule must detect a file or folder, date, version, or size. 
             - **Path**: The full path of the folder that contains the file or folder to detect.
             - **File or folder**: The file or folder to detect.
@@ -160,7 +160,7 @@ On the **Requirements** page, specify the requirements that devices must meet be
             - **Value name**: The name of the registry value to detect. If this value is empty, the detection will happen on the key. The (default) value of a key will be used as detection value if the detection method is other than file or folder existence.
             - **Registry key requirement**: Select the type of registry key comparison that's used to determine how the requirement rule is validated.
             - **Associated with a 32-bit app on 64-bit clients**: Select **Yes** to search the 32-bit registry on 64-bit clients. Select **No** (default) to search the 64-bit registry on 64-bit clients. 32-bit clients will always search the 32-bit registry.
-        - **Script**: Choose **Script** as the **Requirement type** value when you can't create a requirement rule based on file, registry, or any other method available to you in the Intune console.
+        - **Script**: Choose **Script** as the **Requirement type** value when you can't create a requirement rule based on file, registry, or any other method available to you in the Microsoft Endpoint Manager admin center.
             - **Script file**: For a rule based on a PowerShell script requirement, if the existing code is 0, we'll detect the standard output (STDOUT) in more detail. For example, we can detect STDOUT as an integer that has a value of 1.
             - **Run script as 32-bit process on 64-bit clients**: Select **Yes** to run the script in a 32-bit process on 64-bit clients. Select **No** (default) to run the script in a 64-bit process on 64-bit clients. 32-bit clients run the script in a 32-bit process.
             - **Run this script using the logged on credentials**: Select **Yes** to run the script by using the signed-in device credentials.
@@ -168,13 +168,13 @@ On the **Requirements** page, specify the requirements that devices must meet be
             - **Select output data type**: Select the data type used for determining a requirement rule match.
     2. When you're finished setting the requirement rules, select **OK**.
 
-Select **Next** to display the **Detection rules** page. 
+Select **Next** to display the **Detection rules** page.
 
 ## Step 4: Detection rules
 
 On the **Detection rules** pane, configure the rules to detect the presence of the app. You can choose to add multiple rules:
-    
-- **Rules format**: Select how the presence of the app will be detected. You can choose to either manually configure the detection rules or use a custom script to detect the presence of the app. You must choose at least one detection rule. 
+
+- **Rules format**: Select how the presence of the app will be detected. You can choose to either manually configure the detection rules or use a custom script to detect the presence of the app. You must choose at least one detection rule.
 
   > [!NOTE]
   > The conditions for *all* rules must be met to detect the app.

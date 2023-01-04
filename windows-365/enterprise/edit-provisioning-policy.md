@@ -36,7 +36,7 @@ You can update provisioning policies to change assignments or key attributes, li
 ![Screenshot of edit policy](./media/edit-provisioning-policy/edit-policy.png)
 2. On the policy page, you can edit the **General** information, **Image**, and **Assignments** by selecting **Edit** next to each header.
 
-If you change the network or image in a provisioning policy, no change will occur for previously provisioned Cloud PCs. Newly provisioned Cloud PCs will honor the changes in your provisioning policy. To change the previously provisioned Cloud PCs to align with the changes, you must reprovision those Cloud PCs.
+If you change the network, single sign-on configuration or image in a provisioning policy, no change will occur for previously provisioned Cloud PCs. Newly provisioned Cloud PCs will honor the changes in your provisioning policy. To change the previously provisioned Cloud PCs to align with the changes, you must reprovision those Cloud PCs.
 
 If you edit the name of the provisioning policy in the **General** information, the following will occur:
 

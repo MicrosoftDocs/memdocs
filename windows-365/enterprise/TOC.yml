@@ -45,6 +45,8 @@ items:
       items:
       - name: Planning guide
         href: planning-guide.md
+      - name: Deployment options
+        href: deployment-options.md
       - name: Requirements
         items:
         - name: Requirements
