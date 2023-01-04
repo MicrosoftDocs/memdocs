@@ -7,7 +7,7 @@ description: Add, configure, and protect apps with Intune.
 author: erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/02/2022
+ms.date: 01/04/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -267,3 +267,11 @@ The following list provides the end-user requirements to use app protection poli
 - The end user must have a license for Microsoft Intune assigned to their Azure Active Directory account. See [Manage Intune licenses](../fundamentals/licenses-assign.md) to learn how to assign Intune licenses to end users.
 - The end user must belong to a security group that is targeted by an app protection policy. The same app protection policy must target the specific app being used. App protection policies can be created and deployed in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Security groups can currently be created in the [Microsoft 365 admin center](https://admin.microsoft.com).
 - The end user must sign into the app using their Azure AD account.
+
+## Follow the minimum recommended baseline policies
+
+1. [Set up Microsoft Intune](deployment-plan-setup.md)
+2. 🡺 **Add, configure, and protect apps** (*You are here*)
+3. [Plan for compliance policies](deployment-plan-compliance-policies.md)
+4. [Create device configuration profiles](deployment-plan-configuration-profile.md)
+5. [Enroll devices](deployment-guide-enrollment.md)

@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/01/2022
+ms.date: 01/04/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -146,3 +146,11 @@ Choose your platform, and get started:
 - [Linux enrollment guide](deployment-guide-enrollment-linux.md)
 - [macOS enrollment guide](deployment-guide-enrollment-macos.md)
 - [Windows enrollment guide](deployment-guide-enrollment-windows.md)
+
+## Follow the minimum recommended baseline policies
+
+1. [Set up Microsoft Intune](deployment-plan-setup.md)
+2. [Add, configure, and protect apps](deployment-plan-protect-apps.md)
+3. [Plan for compliance policies](deployment-plan-compliance-policies.md)
+4. [Create device configuration profiles](deployment-plan-configuration-profile.md)
+5. 🡺 **Enroll devices** (*You are here*)

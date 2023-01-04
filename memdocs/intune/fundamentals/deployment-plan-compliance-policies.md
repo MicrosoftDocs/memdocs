@@ -7,7 +7,7 @@ description: Description for configuring compliance policies
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/8/2022
+ms.date: 01/04/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -261,3 +261,10 @@ We recommend using the following settings in your enhanced device compliance pol
 |-------------------------------------------------------|-----------------|
 | **Runtime defenses** <br><br> **Android Enterprise**: <br> - Require the device to be at or under the Device Threat Level <br> - Require the device to be at or under the machine risk score <br><br> **iOS/iPadOS**:<br>  - Require the device to be at or under the Device Threat Level <br> - Require the device to be at or under the machine risk score<br><br> **Windows**: <br> - Require the device to be at or under the machine risk score |When you integrate Intune with a Mobile Threat Defense partner, you can use that partners device threat level evaluation as criteria in your compliance policies.  <br><br> When you've integrated Microsoft Defender for Endpoint with Intune, you can use the risk score from Defender as a compliance check.  |
 
+## Follow the minimum recommended baseline policies
+
+1. [Set up Microsoft Intune](deployment-plan-setup.md)
+2. [Add, configure, and protect apps](deployment-plan-protect-apps.md)
+3. 🡺 **Plan for compliance policies** (*You are here*)
+4. [Create device configuration profiles](deployment-plan-configuration-profile.md)
+5. [Enroll devices](deployment-guide-enrollment.md)
