@@ -7,6 +7,6 @@ items:
     tocHref: /mem/intune/
     topicHref: /mem/intune/
     items:
-    - name: Enrollment
-      tocHref: /mem/intune/enrollment/
-      topicHref: /troubleshoot/mem/intune/
+    - name: Protect
+      tocHref: /mem/intune/configuration
+      topicHref: /mem/intune/protect/index
