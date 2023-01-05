@@ -199,7 +199,7 @@ As a reminder, devices must be registered or joined to Azure AD to enroll in Int
 These are the enrollment scenarios supported in Intune for devices running Windows 10/11.  
 
 > [!IMPORTANT]
-> Make enrollment in Intune easier for employees and students by [enabling automatic enrollment](../enrollment/windows-enroll#enable-windows-automatic-enrollment.md) in the admin center. Where supported, it automatically enrolls the device in Microsoft Intune after the Intune-licensed user registers or joins the device to Azure AD. 
+> Make enrollment in Intune easier for employees and students by [enabling automatic enrollment](../enrollment/windows-enroll.md#enable-windows-automatic-enrollment) in the admin center. Where supported, it automatically enrolls the device in Microsoft Intune after the Intune-licensed user registers or joins the device to Azure AD. 
 
 * Bring your own device (BYOD):  Automatic enrollment is available for personal-owned devices in BYOD scenarios. Intune-licensed device users initialize registration and enrollment by signing into the Company Portal app. We recommend enabling automatic enrollment so that your employees only have to enter their credentials once to start enrollment.  
 
