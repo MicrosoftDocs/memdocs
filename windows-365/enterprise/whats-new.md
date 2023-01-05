@@ -56,7 +56,7 @@ Learn what new features are available in Windows 365 Enterprise.
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Role-based access control
 
-#### Support for custom Windows 365 RBAC roles now generally available!--42650520  -->
+#### Support for custom Windows 365 RBAC roles now generally available<!--42650520  -->
 
 Support for custom Windows 365 role-based access control (RBAC) roles has moved out of preview and into general availability. These custom roles are also now supported for Windows 365 Government (Government Community Cloud and Government Community Cloud High). For more information, see [Custom roles](role-based-access.md#custom-roles-public-preview).
 
