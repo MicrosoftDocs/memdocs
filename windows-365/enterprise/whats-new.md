@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 12/14/2022
+ms.date: 01/05/2023
 ms.topic: reference
 ms.service: windows-365
 ms.subservice:
@@ -49,6 +49,16 @@ Learn what new features are available in Windows 365 Enterprise.
 ### Windows 365 Government
 ### Windows 365 app
 -->
+
+<!-- ########################## -->
+## Week of January 2, 2023
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Role-based access control
+
+#### Support for custom Windows 365 RBAC roles now generally available<!--42650520  -->
+
+Support for custom Windows 365 role-based access control (RBAC) roles has moved out of preview and into general availability. These custom roles are also now supported for Windows 365 Government (Government Community Cloud and Government Community Cloud High). For more information, see [Custom roles](role-based-access.md#custom-roles).
 
 <!-- ########################## -->
 ## Week of December 12, 2022
@@ -651,7 +661,7 @@ To improve reliability, the maximum provisioning timeout has been changed to fiv
 
 #### Custom Windows 365 RBAC roles in public preview<!--36222579  -->
 
-Custom Windows 365 role-based access control (RBAC) roles are now available in the Microsoft Endpoint Manager admin center. You can mix-and-match Windows 365 permissions to create custom roles for your organization's needs. You can also create both Windows 365 and Intune custom roles and give granular admin permissions to admins for both services. For more information, see [Custom roles](role-based-access.md#custom-roles-public-preview).
+Custom Windows 365 role-based access control (RBAC) roles are now available in the Microsoft Endpoint Manager admin center. You can mix-and-match Windows 365 permissions to create custom roles for your organization's needs. You can also create both Windows 365 and Intune custom roles and give granular admin permissions to admins for both services. For more information, see [Custom roles](role-based-access.md#custom-roles).
 
 <!-- ########################## -->
 ## Week of October 11, 2021 (Service release 2109)

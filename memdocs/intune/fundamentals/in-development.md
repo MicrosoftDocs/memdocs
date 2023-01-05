@@ -217,7 +217,7 @@ As a public preview, we’re adding support for Mobile Application Management (M
 Applies to:  
 - iOS/iPadOS
 
-### Software update policies for macOS are now generally available<!-- 12393100 -->  
+### Software update policies for macOS will soon be generally available<!-- 12393100 -->  
 Software update policies for macOS devices will soon be out of preview and generally available. This general availability will apply to supervised devices running macOS 12 (Monterey) and later. We will continue to add improvements to this feature going forward.
 
 For more information, see [Use Microsoft Intune policies to manage macOS software updates](../protect/software-updates-macos.md).

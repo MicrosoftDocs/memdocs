@@ -41,18 +41,8 @@ Endpoint analytics is available in all Intune locations in global Azure. Endpoin
 
 ## <a name="bkmk_datacollection"></a> Data collection
 
-Currently, the basic functionality of Endpoint analytics collects information associated with boot performance records that falls into the [required](../intune/protect/privacy-data-collect.md#required-data) and [optional](../intune/protect/privacy-data-collect.md#optional-data) categories. As we add additional functionality over time, the data collected will vary as needed. The main data points currently being collected are:
+Endpoint analytics data collection falls into the [optional](../intune/protect/privacy-data-collect.md#optional-data) category. Below are some examples of the optional data collected for devices enrolled in endpoint analytics:
 
-### Required data
-
-- Hardware inventory information
-  - **make:** Device manufacturer
-  - **model:** Device model
-  - **deviceClass:** The device classification. For example, Desktop, Server, or Mobile.
-  - **Country:** The device region setting
-- Application inventory, like
-  - **name:** Windows
-  - **ver:** The version of the current OS.
 - Diagnostic, performance, and usage data tied to a user and/or device
   - **logOnId**
   - **bootId:** The system boot ID
@@ -69,7 +59,10 @@ Currently, the basic functionality of Endpoint analytics collects information as
   Most likely equal to the value stored at HKLM\Software\Microsoft\SQMClient\MachineId.
   - **aaddeviceid:** Azure Active Directory device ID
   - **orgId:** Unique GUID representing the Microsoft 365 Tenant
-  
+- Application inventory, like
+  - **name:** Windows
+  - **ver:** The version of the current OS.
+
 > [!Important]  
 > Our data handling policies are described in the [Microsoft Trust Center](https://www.microsoft.com/trust-center/privacy/data-location). We only use your customer data to provide you the services you signed up for. As described during the onboarding process, we anonymize and aggregate the scores from all enrolled organizations to keep the **All organizations (median)** baseline up-to-date.
 
