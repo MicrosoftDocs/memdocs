@@ -7,7 +7,7 @@ keywords: migrate from configuration manager to intune, move from airwatch to in
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/08/2022
+ms.date: 01/04/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -29,7 +29,7 @@ ms.collection:
   - highseo
 ---
 
-# Migration guide: Setup or move to Microsoft Intune
+# Migration guide: Set up or move to Microsoft Intune
 
 After you've [planned for the move to Microsoft Intune](intune-planning-guide.md), the next step it to choose the migration approach that's right for your organization. These decisions depend on your current mobile device management (MDM) environment, business goals, and technical requirements.
 
@@ -59,31 +59,38 @@ Use this guide to determine the best migration approach, and get some guidance a
 
 ## Currently don't use anything
 
-If you currently don't use any MDM or MAM provider, then you have some options:
+If you currently don't use any MDM or mobile application management (MAM) provider, then you have some options:
 
 - **Microsoft Intune**: If you want a cloud solution for your client devices and Linux, then go straight to Intune. For immediate value and protection on your Android and iOS/iPadOS devices, start with app protection policies, as these policies are typically used on unenrolled devices.
 
-  If/when you're ready for full device management, then you can use Intune to check for compliance, configure device features, deploy apps, and install system & app updates. You also get the benefits of the Endpoint Manager admin center, which is a web-based console.
+  If/when you're ready for full device management, then you can use Intune to check for compliance, configure device features, deploy apps, and install system & app updates. You also get the benefits of the [Microsoft Endpoint Manager admin center](tutorial-walkthrough-endpoint-manager.md).
 
-  - [Get started with Intune](get-started-with-intune.md)
-  - [Step 1 - Setup Intune](deployment-plan-setup.md)
-  - [Step 2 - Add, configure, and protect apps with Intune](deployment-plan-protect-apps.md)
   - [App protection policies overview](../apps/app-protection-policy.md)
+  - [Get started with Intune](get-started-with-intune.md)
+  - [Step 1 - Set up Intune](deployment-plan-setup.md)
+  - [Step 2 - Add, configure, and protect apps with Intune](deployment-plan-protect-apps.md)
+  - [Step 3 – Plan for compliance policies](deployment-plan-compliance-policies.md)
+  - [Step 4 - Create device configuration profiles to secure devices](deployment-plan-configuration-profile.md)
+  - [Step 5 - Enroll devices](deployment-guide-enrollment.md)
 
-- **Configuration Manager**: If you want the features of Configuration Manager (on-premises) combined with the cloud, then consider [tenant attach](#option-1-add-tenant-attach) or [co-management](#option-2-set-up-co-management). With Configuration Manager, you can:
+- **Configuration Manager**: If you want the features of Configuration Manager (on-premises) combined with Intune (cloud), then consider [tenant attach](#option-1-add-tenant-attach) or [co-management](#option-2-set-up-co-management).
 
-  - [Manage on-premises devices](../../configmgr/core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md), including Windows Server.
+  Configuration Manager can:
+
+  - [Manage on-premises Windows Server and some client devices](../../configmgr/core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md).
   - [Manage partner or third party software updates](../../configmgr/sum/understand/software-updates-introduction.md).
-  - [Create custom task sequences](../../configmgr/osd/deploy-use/manage-task-sequences-to-automate-tasks.md) when deploying operating systems.
-  - [Deploy and manage many app](../../configmgr/apps/understand/introduction-to-application-management.md) types.
+  - [Create custom task sequences](../../configmgr/osd/deploy-use/manage-task-sequences-to-automate-tasks.md) when deploying the Windows operating system.
+  - [Deploy and manage many app types](../../configmgr/apps/understand/introduction-to-application-management.md).
 
 ## Currently use a third party MDM provider
 
-Devices should only have one MDM provider. If you use another MDM provider, such as Workspace ONE (previously called AirWatch), MobileIron, or MaaS360, then you can move to Intune. Users must unenroll their devices from the current MDM provider before they enroll in Intune.
+Devices should only have one MDM provider. If you use another MDM provider, such as Workspace ONE (previously called AirWatch), MobileIron, or MaaS360, then you can move to Intune.
 
-1. **Setup Intune**, including setting the MDM Authority to Intune.
+Users must unenroll their devices from the current MDM provider before they enroll in Intune.
 
-    For more information, go to [Step 1 - Setup Intune](deployment-plan-setup.md).
+1. **Set up Intune**, including setting the MDM Authority to Intune.
+
+    For more information, go to [Step 1 - Set up Intune](deployment-plan-setup.md).
 
 2. **Create and deploy app protection policies** on your Android and iOS/iPadOS devices. The idea is to help protect organization data in your apps during the migration and until the devices are fully enrolled and managed by Intune.
 
@@ -91,11 +98,13 @@ Devices should only have one MDM provider. If you use another MDM provider, such
 
 3. **Unenroll devices** from the current MDM provider.
 
-    When devices are unenrolled, they aren't receiving your policies, including policies that provide protection. They're vulnerable until they enroll in Intune.
+    When devices are unenrolled, they aren't receiving your policies, including policies that provide protection. They're vulnerable until they enroll in Intune and start receiving your new policies.
 
-    Be sure you have specific unenroll and include guidance from your existing MDM provider on how to unenroll devices. Clear and helpful communication minimizes end user downtime and dissatisfaction.
+    Give users specific unenroll steps and include guidance from your existing MDM provider on how to unenroll devices. Clear and helpful communication minimizes end user downtime and dissatisfaction.
 
 4. Optional, but recommended. If you have Azure AD Premium, also **use [conditional access](migration-guide-drive-adoption.md)** to block devices until they enroll in Intune.
+
+    For more information, go to [Step 3 – Plan for compliance policies](deployment-plan-compliance-policies.md).
 
 5. **Enroll in Intune**. Be sure you give users specific enrollment steps.
 
@@ -108,7 +117,9 @@ Recommendations:
 
 - If you're moving from a partner MDM/MAM provider, then note the tasks you're running and the features you use. This information gives an idea of what tasks to also do in Intune.
 - Use a phased approach. Start with a small group of pilot users, and add more groups until you reach full scale deployment.
-- Monitor the helpdesk load and enrollment success of each phase. Leave time in the schedule to evaluate success criteria for each group before migrating the next group. Your pilot deployment should validate the following tasks:
+- Monitor the helpdesk load and enrollment success of each phase. Leave time in the schedule to evaluate success criteria for each group before migrating the next group.
+
+  Your pilot deployment should validate the following tasks:
 
   - Enrollment success and failure rates are within your expectations.
   - User productivity:
@@ -131,7 +142,7 @@ Helpful information:
 
 - [Get started with Intune](get-started-with-intune.md)
 - [Intune enrollment deployment guide](deployment-guide-enrollment.md)
-- [Step 1 - Setup Intune and your tenant](deployment-plan-setup.md)
+- [Step 1 - Set up Intune and your tenant](deployment-plan-setup.md)
 
 ## Currently use Configuration Manager
 
@@ -141,7 +152,7 @@ If you currently use Configuration Manager, and want to use Intune, then you hav
 
 ### Option 1: Add tenant attach
 
-Tenant attach allows you to upload your Configuration Manager devices to your organization in Intune, also known as a "tenant". After you attach your devices, you use the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) to run remote actions, such as sync machine and user policy. You can also see your on-premises servers, and get OS information.
+Tenant attach allows you to upload your Configuration Manager devices to your organization in Intune, also known as a "tenant". After you attach your devices, you use the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) to run remote actions, such as sync machine and user policy. You can also see your on-premises servers, and get OS information.
 
 Tenant attach is included with your [Configuration Manager co-management license](../../configmgr/core/understand/product-and-licensing-faq.yml) at no extra cost. It's the easiest way to integrate the cloud (Intune) with your on-premises Configuration Manager setup.
 
@@ -152,9 +163,9 @@ For more information, see [enable tenant attach](../../configmgr/tenant-attach/d
 This option uses Configuration Manager for some workloads, and uses Intune for other workloads.
 
 1. In Configuration Manager, set up [co-management](../../configmgr/comanage/how-to-enable.md).
-2. [Setup Intune](deployment-plan-setup.md), including setting the MDM Authority to Intune.
+2. [Set up Intune](deployment-plan-setup.md), including setting the MDM Authority to Intune.
 
-Next, devices are ready to be enrolled, and receive your policies.
+Devices are ready to be enrolled in Intune, and receive your policies.
 
 Helpful information:
 
@@ -179,21 +190,21 @@ This option is more work for administrators, but can create a more seamless expe
     Hybrid Azure AD support Windows devices. For other prerequisites, including sign-in requirements, see [Plan your hybrid Azure AD join implementation](/azure/active-directory/devices/hybrid-azuread-join-plan).
 
 2. In Configuration Manager, set up [co-management](../../configmgr/comanage/how-to-enable.md).
-3. [Setup Intune](deployment-plan-setup.md), including setting the MDM Authority to Intune.
+3. [Set up Intune](deployment-plan-setup.md), including setting the MDM Authority to Intune.
 4. In Configuration Manager, [slide all the workloads from Configuration Manager to Intune](../../configmgr/comanage/how-to-switch-workloads.md).
 5. On the devices, uninstall the Configuration Manager client. For more information, see [uninstall the client](../../configmgr/core/clients/manage/manage-clients.md#uninstall-the-client).
 
     Once Intune is set up, you can create an Intune app configuration policy that uninstalls the Configuration Manager client. For example, you could reverse the steps in [Install the Configuration Manager client by using Intune](../../configmgr/core/clients/deploy/deploy-clients-to-windows-computers.md#bkmk_mdm).
 
-Next, devices are ready to be enrolled, and receive your policies.
+Devices are ready to be enrolled in Intune, and receive your policies.
 
 > [!IMPORTANT]
 > Hybrid Azure AD supports only Windows devices. Configuration Manager supports Windows and macOS devices. For macOS devices managed in Configuration Manager, you can:
 >
-> 1. Uninstall the Configuration Manager client. When you uninstall, the devices aren't receiving your policies, including policies that provide protection. They're vulnerable until they enroll in Intune.
+> 1. Uninstall the Configuration Manager client. When you uninstall, the devices aren't receiving your policies, including policies that provide protection. They're vulnerable until they enroll in Intune and start receiving your new policies.
 > 2. Enroll the devices in Intune to receive policies.
 >
-> To help minimize vulnerabilities, move macOS devices after Intune is setup, and when your enrollment policies are ready to be deployed.
+> To help minimize vulnerabilities, move macOS devices after Intune is set up, and when your enrollment policies are ready to be deployed.
 
 ### Option 4: Start from scratch with Microsoft 365 and Intune
 
@@ -206,14 +217,16 @@ This option applies to Windows client devices. If you use Windows Server OSs, su
     - [Microsoft 365 Enterprise deployment guide](/microsoft-365/enterprise/deploy-foundation-infrastructure)
     - Set up [Microsoft 365 Business](/microsoft-365/business/set-up)
 
-2. [Setup Intune](deployment-plan-setup.md), including setting the MDM Authority to Intune.
+2. [Set up Intune](deployment-plan-setup.md), including setting the MDM Authority to Intune.
 3. On existing devices, uninstall the Configuration Manager client. For more information, see [uninstall the client](../../configmgr/core/clients/manage/manage-clients.md#uninstall-the-client).
 
-Next, devices are ready to be enrolled in Intune, and receive your policies.
+Devices are ready to be enrolled in Intune, and receive your policies.
 
 ## Currently use on-premises group policy
 
-In the cloud, MDM providers, such as Intune, manage settings and features on devices. Group policies objects (GPO) aren't used. When you manage devices, Intune device configuration profiles replace on-premises GPO. These profiles use settings exposed by Apple, Google, and Microsoft. Specifically:
+In the cloud, MDM providers, such as Intune, manage settings and features on devices. Group policies objects (GPO) aren't used. When you manage devices, Intune device configuration profiles replace on-premises GPO. Device configuration profiles use settings exposed by Apple, Google, and Microsoft.
+
+Specifically:
 
 - On Android devices, these profiles use the Android [Management API](https://developers.google.com/android/management/introduction) and [EMM API](https://developers.google.com/android/work/play/emm-api/v1).
 - On Apple devices, these profiles use the [Device management payloads](https://developer.apple.com/documentation/devicemanagement).
@@ -221,7 +234,7 @@ In the cloud, MDM providers, such as Intune, manage settings and features on dev
 
 When moving devices from group policy, use [Group policy analytics](../configuration/group-policy-analytics.md). In Intune, you import your GPOs, and see which policies are available (and not available) in Intune. For the policies that are available in Intune, you can create a settings catalog policy using the settings you imported. For more information on this feature, go to [Create a Settings Catalog policy using your imported GPOs in Microsoft Intune](../configuration/group-policy-analytics-migrate.md).
 
-Next, [setup Intune](deployment-plan-setup.md).
+Next, [set up Intune](deployment-plan-setup.md).
 
 ## Currently use Microsoft 365 Basic Mobility and Security
 

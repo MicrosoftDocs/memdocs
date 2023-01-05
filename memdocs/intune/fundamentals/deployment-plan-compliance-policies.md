@@ -7,7 +7,7 @@ description: Description for configuring compliance policies
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/8/2022
+ms.date: 01/04/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -52,15 +52,15 @@ This article applies to:
 
 - Android Enterprise (Fully Managed, and Personally owned work profiles)
 - Android Open-Source Project (AOSP)
-- iOS/iPadO
+- iOS/iPadOS
 - Linux
 - macOS
 - Windows
 
 You deploy compliance policies to groups of devices or users. When deployed to users, any device the user signs into must then meet the policies requirements. Some common examples of compliance requirements include:
 
-- Requiring a minimum operating system version
-- Use of a password or PIN that meets certain complexity and length requirements
+- Requiring a minimum operating system version.
+- Use of a password or PIN that meets certain complexity and length requirements.
 - A device being at or below a *threat level* as determined by mobile threat defense software you use. Mobile threat defense software includes Microsoft Defender for Endpoint or one of Intune’s other supported partners.
 
 When devices fail to meet the requirements of a compliance policy, that policy can apply one or more *actions for noncompliance*. Some actions include:
@@ -92,7 +92,7 @@ The following articles can help you understand the settings that Intune policies
 ✔️ **Configure tenant-wide Compliance policy settings**  
 ✔️ **Set up responses for noncompliance devices (Actions for noncompliance)**  
 ✔️ **Understand how device compliance and device configuration policies interact**  
-✔️ **Establish a core set of compliance settings across platforms you support**  
+✔️ **Use a core set of minimal compliance settings across platforms you support**  
 
 The minimal device compliance settings include the following subjects that all tenants who plan to use compliance policies should understand and be prepared to use:
 
@@ -100,7 +100,7 @@ The minimal device compliance settings include the following subjects that all t
 - *Actions for noncompliance* – These configurations are common to all device compliance policies.
 - *Minimal device compliance policy recommendations* – Thees are the platform specific device compliance settings we believe every tenant should implement to help keep their organizations resources safe.
 
-In addition, we recommend you be familiar with how device compliance policies and device configuration policies are related, and interact.
+In addition, we recommend you be familiar with how device compliance policies and device configuration policies are related and interact.
 
 ### Compliance policy settings
 
@@ -165,7 +165,7 @@ We recommend using the following settings in your minimal device compliance poli
 
 ## Level 2 - Enhanced device compliance settings
 
-✔️ **Deploy device configuration policies for supported platform types**  
+✔️ **Use enhanced device configuration policies for supported platform types**  
 
 ### Enhanced compliance settings
 
@@ -188,7 +188,7 @@ We recommend using the following settings in your enhanced device compliance pol
 ✔️ **Integrate a third-party compliance partner with Intune**  
 ✔️ **Define custom compliance settings for Windows and Linux**  
 ✔️ **Use compliance data with Conditional Access to gate access to your organization’s resources**  
-✔️ **Deploy device configuration policies for supported platform types**
+✔️ **Use advanced device configuration policies for supported platform types**
 
 With robust device compliance policies in place, you can then implement more advanced compliance options that go beyond only configuring settings in device compliance policies, including:
 
@@ -196,27 +196,58 @@ With robust device compliance policies in place, you can then implement more adv
  
 - Integrating device compliance status with *Conditional Access* to help gate which devices are allowed to access email, other cloud services, or on-premises resources.
 
-- Including compliance data from *third-party compliance partners*. With such a configuration, compliance data from those devices can be used with your conditional access policies](../protect/device-compliance-get-started#integrate-with-conditional-access.md).
+- Including compliance data from *third-party compliance partners*. With such a configuration, compliance data from those devices can be used with your [conditional access policies](../protect/device-compliance-get-started.md#integrate-with-conditional-access).
 
 - Expanding on built-in device compliance policies by defining custom compliance settings that aren't available natively through the Intune compliance policy UI. <!-- [Custom compliance settings](../protect/compliance-use-custom-settings.md) -->
 
 ### Integrate data from a Mobile Threat Defense partner
 
-*In progress > Light discussion and links to supporting docs.### Advanced compliance settings.*
+A Mobile Threat Defense (MTD) solution is software for mobile devices that helps to secure them from various cyber threats. By protecting mobile devices, you help protect your organization and resources. When integrated, MTD solutions provide an additional information source to Intune for your device compliance policies. This information can also be used by Conditional Access rules you can use with Intune.
 
-### Integrate compliance with Conditional Access
+When integrated, Intune supports use of MTD solutions with enrolled devices, and when supported by the MTD solution, unenrolled devices through the use of  [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md) and app protection policies.
 
-*In progress > Light discussion and links to supporting docs.### Advanced compliance settings.*
+Be sure to use an MTD partner that is  [supported by Intune](../protect/mobile-threat-defense.md#mobile-threat-defense-partners) and that supports the capabilities your organization needs on the full range of platforms you use.
+
+For example, [Microsoft Defender for Endpoint](../protect/advanced-threat-protection.md) is a Mobile Threat Defense solution you might already use that can be used with the Android, iOS/iPadOS, and Windows platforms. Other solutions, typically support Android and iOS/iPadOS. See [Mobile Threat Defense partners](../protect/mobile-threat-defense.md) to view the list of supported MTD partners.
+
+To learn more about using Mobile Threat Defense software with Intune, start with [Mobile Threat Defense integration with Intune](../protect/mobile-threat-defense.md).
 
 ### Use data from third-party compliance partners
 
-*In progress > Light discussion and links to supporting docs.### Advanced compliance settings.*
+Intune supports the use of third-party compliance partners where the partner serves as the mobile device management (MDM) authority for a group of devices. When you use a supported compliance partner, you use that partner to configure device compliance for the devices that solution manages. You also configure that partner solution to pass the compliance results to Intune, which then stores that data in Azure AD along with compliance data from Intune. The third-party compliance data is then available for use by Intune when evaluating device compliance policies, and for use by Conditional Access policies.
+
+In some environments, Intune might serve as the only MDM authority you need to use, as by default, Intune is a registered compliance partner for the Android, iOS/iPadOS, and Windows platforms. Other platforms require other compliance partners to serve as a devices MDM authority, like use of Jamf Pro for macOS devices.
+
+If you’ll use a third-party device compliance partner in your environment, ensure they're [supported with Intune](../protect/device-compliance-partners.md#supported-device-compliance-partners). To add support, you’ll need to configure a [connection for the partner](../protect/device-compliance-partners.md#configure-intune-to-work-with-a-device-compliance-partner) from within the Microsoft Endpoint Manager admin center, and follow that partners documentation to complete the integration.
+
+For more information on this subject, see [Support third-party device compliance partners in Intune](../protect/device-compliance-partners.md).
 
 ### Use custom compliance settings
 
-*In progress > Light discussion and links to supporting docs.### Advanced compliance settings.*
+You can expand on Intune’s built-in device compliance options by configuring custom compliance settings for managed Linux and Windows devices.
 
-*In progress > Light discussion and links to supporting docs.### Advanced compliance settings.*
+Custom settings give you the flexibility to base compliance on the settings that are available on a device without having to wait for Intune to add these settings.
+
+To use custom compliance, you must configure a .JSON file that defines values on the device to use for compliance, and a discovery script that runs on the device to evaluate the settings from the JSON. 
+
+To learn more about perquisites, supported platforms, and the JSON and script configurations required for custom compliance, see [Use custom compliance policies and settings for Linux and Windows devices with Microsoft Intune](../ protect/compliance-use-custom-settings.md).
+
+### Integrate compliance with Conditional Access
+
+Conditional Access is an Azure Active Directory (Azure AD) capability that works with Intune to help protect devices. For devices that register with Azure AD, Conditional Access policies can use device and compliance details from Intune to enforce access decisions for users and devices.
+
+Combine Conditional Access policy with:
+
+- [Device compliance policies](../protect/create-conditional-access-intune.md) can require a device be marked as compliant before that device can be used to access your organization’s resources. The Conditional Access policies specify apps services you want to protect, conditions under which the apps or services can be accessed, and the users the policy applies to.
+- [App protection policies](../protect/app-based-conditional-access-intune.md) can add a security layer that ensures only client apps that support Intune app protection policies can access your online resources, like Exchange or other Microsoft 365 services.
+
+Conditional Access also works with the following to help you keep devices secure:
+
+- Microsoft Defender for Endpoint and third-party MTD apps
+- Device compliance partner apps
+- Microsoft Tunnel
+
+To learn more, see [Learn about Conditional Access and Intune](../protect/conditional-access.md).
 
 ### Advanced compliance settings
 
@@ -230,3 +261,10 @@ We recommend using the following settings in your enhanced device compliance pol
 |-------------------------------------------------------|-----------------|
 | **Runtime defenses** <br><br> **Android Enterprise**: <br> - Require the device to be at or under the Device Threat Level <br> - Require the device to be at or under the machine risk score <br><br> **iOS/iPadOS**:<br>  - Require the device to be at or under the Device Threat Level <br> - Require the device to be at or under the machine risk score<br><br> **Windows**: <br> - Require the device to be at or under the machine risk score |When you integrate Intune with a Mobile Threat Defense partner, you can use that partners device threat level evaluation as criteria in your compliance policies.  <br><br> When you've integrated Microsoft Defender for Endpoint with Intune, you can use the risk score from Defender as a compliance check.  |
 
+## Follow the minimum recommended baseline policies
+
+1. [Set up Microsoft Intune](deployment-plan-setup.md)
+2. [Add, configure, and protect apps](deployment-plan-protect-apps.md)
+3. 🡺 **Plan for compliance policies** (*You are here*)
+4. [Create device configuration profiles](deployment-plan-configuration-profile.md)
+5. [Enroll devices](deployment-guide-enrollment.md)

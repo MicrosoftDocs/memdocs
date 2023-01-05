@@ -43,7 +43,12 @@ Windows Autopilot depends on specific features available in Windows client, Azur
 
 Use a supported version of Windows 11. For more information, see [Windows release health](/windows/release-health/).
 
-The following editions are supported: Pro, Pro Education, Pro for Workstations, Enterprise, and Education
+The following editions are supported: 
+  - Windows 11 Pro
+  - Windows 11 Pro Education
+  - Windows 11 Pro for Workstations
+  - Windows 11 Enterprise
+  - Windows 11 Education
 
 ### HoloLens
 

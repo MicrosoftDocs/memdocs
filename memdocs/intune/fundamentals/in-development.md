@@ -8,7 +8,7 @@ keywords:
 author: dougeby 
 ms.author: dougeby
 manager: dougeby
-ms.date: 11/21/2022
+ms.date: 01/04/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -61,7 +61,10 @@ You can use RSS to be notified when this article is updated. For more informatio
 
 ## App management
 
-### Company Portal automatically installed on Android Enterprise dedicated devices<!-- 6423852  -->
+### Block pinning web pages to Managed Home Screen app<!-- 15593458 -->  
+On Android Enterprise dedicated devices using Managed Home Screen, you can now use app configuration to configure the Managed Home Screen app to block pinning browser web pages to Managed Home Screen. The new `key` value is `block_pinning_browser_web_pages_to_MHS`. For more information, see [Configure the Microsoft Managed Home Screen app for Android Enterprise](../apps/app-configuration-managed-home-screen-app.md).
+
+### Company Portal automatically installed on Android Enterprise dedicated devices<!-- 6423852  -->  
 Intune Company Portal will now be automatically installed on all Android Enterprise dedicated devices to ensure the appropriate handling of app protection policies. Users will not be able to see or launch the Company Portal, and there are no requirements for users to interact with it. Admins will notice that the Company Portal is automatically installed on their Android Enterprise dedicated devices, without the ability to uninstall.
 
 ### Uninstall Win32 apps in the Company Portal<!-- 5145748 -->  
@@ -75,29 +78,57 @@ In the Microsoft Endpoint Manager admin center, you'll be able to choose whether
 ### Global quiet time app policy settings<!-- 15424417 -->  
 The global quiet time settings will allow you to create policies to schedule quiet time for your end users, which will automatically mute Microsoft Outlook email and Teams notifications on iOS/iPadOS and Android platforms. These policies can be used to limit end user notifications received after work hours. When this feature is available, you will be able to find it in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **Quiet Time** > **Policies**.
 
-<!-- ***********************************************-->
+<!-- *********************************************** -->
 
 ## Device configuration
 
-### New settings available in the macOS Settings Catalog <!-- 16069006   -->  
-The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
 
-New settings are available in the Settings Catalog. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can see these settings at **Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform > **Settings catalog** for profile type.
+### New settings available in the Apple Settings Catalog <!--16237513 -->  
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. 
+
+New settings are available in the Settings Catalog. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can see these settings at **Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type.
 
 New settings include:
 
-**File Vault > File Vault Options**:  
-- Destroy FV Key On Standby
-- Block FV From Being Disabled
-- Block FV From Being Enabled
+**Accounts > Subscribed Calendars**:
 
-**Restrictions**:  
-- Allow Bluetooth Modification
+- Account Description
+- Account Host Name
+- Account Password
+- Account Use SSL
+- Account Username
 
-Applies to:  
+### Updated descriptions for iOS/iPadOS and macOS settings in the settings catalog<!-- 16360170 -->
+The settings catalog lists all the settings you can configure, and all in one place. For the iOS/iPadOS and macOS settings, the descriptions are updated to include more information.
+
+For more information on the settings catalog, go to:
+
+- [Use the settings catalog to configure settings on Windows, iOS/iPadOS and macOS devices](../configuration/settings-catalog.md)
+- [Common tasks you can complete using the Settings Catalog in Intune](../configuration/settings-catalog-common-features.md)
+
+Applies to:
+
+- iOS/iPadOS
 - macOS
 
-For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
+### Support for multi-SIM iOS/iPadOS device inventory  <!--16360290 -->  
+You'll soon be able to view the service subscription fields on devices that have multiple SIM cards installed under the per-device Hardware section. The inventory fields that are capable of reporting multiple values to Intune are:  
+
+- ICCID
+- IMEI
+- MEID
+- Phone number
+
+These fields will default to using labels returned by the device, such as:  *Primary*, *Secondary*, *CTSubscriptionSlotOne*, and *CTSubscriptionSlotTwo*. These returned labels may be displayed in the language of the local device that is reporting its inventory to Intune.
+
+Applies to:  
+- iOS/iPadOS
+
+### Support for Bulk Device Actions on devices running Android AOSP  <!--15397458 -->  
+You will soon be able to complete "Bulk Device Actions" for devices running Android AOSP. The bulk device actions supported on devices running AOSP are Delete, Wipe and Restart.
+
+Applies to:
+- AOSP
 
 ### The Company Portal app will enforce Password Complexity setting on Android Enterprise 12+ personally owned devices with a work profile<!-- 16211313  -->  
 On Android Enterprise 12+ personally owned devices with a work profile, you can create a compliance policy and/or device configuration profile that sets the password complexity. Starting with the 2211 release, this setting is available in the Endpoint Manager admin center:
@@ -105,7 +136,7 @@ On Android Enterprise 12+ personally owned devices with a work profile, you can 
 - **Devices** > **Configuration profiles** > **Create profile** > **Android Enterprise** for platform > Personally owned with a work profile
 - **Devices** > **Compliance policies** > **Create policy** > **Android Enterprise** for platform > Personally owned with a work profile
 
-The Company Portal app will enforce the **Password complexity** setting in its December release.
+The Company Portal app will enforce the **Password complexity** setting in its January release.
 
 For more information on this setting and the other settings you can configure on personally owned devices with a work profile, go to:
 
@@ -128,7 +159,7 @@ When you create a single sign-on app extension configuration profile, there are 
 - **disable_explicit_app_prompt** key
   Default value: `1`
 
-If you configure a value other than the default value, then the configured value will overwrite the default value. 
+If you configure a value other than the default value, then the configured value will overwrite the default value.
 
 For example, you don't configure the `AppPrefixAllowList` key. By default, all Microsoft apps (`com.microsoft.`) and all Apple apps (`com.apple.`) will be enabled for SSO. You can overwrite this behavior by adding a different prefix to the list, such as `com.contoso.`.
 
@@ -160,31 +191,36 @@ Applies to:
 
 - iOS/iPadOS
 
-### Remote help client app will have a new option to disable chat functionality in the Tenant level setting<!-- 14685052 -->  
-In the Remote help app, admins will have the option to disable chat functionality from the new tenant level setting. Turning on the disable chat feature will remove the chat button in the Remote Help app. This setting can be found in the Remote Help **Settings** tab under **Tenant Administration** in Microsoft Intune.
 
-For more information, see [Configure Remote Help for your tenant](../remote-actions/remote-help.md#configure-remote-help-for-your-tenant).
 
-Applies to:
-
-- Windows 10/11
+### Grace period status visible in Intune Company Portal app for Android <!-- 13498225 -->  
+The Intune Company Portal app for Android will show a grace period status to account for devices that don't meet compliance requirements but are still within their given grace period.  Users will see the date by which they need to become compliant and the instructions for how to become compliant. If they don't update their device by the given date, their status will change to noncompliant.
 
 <!-- ***********************************************-->
 
 ## Device enrollment
 
-### Enrollment token lifetime will increase to 65 years for Android Enterprise dedicated devices  <!-- 15094454 -->  
-You'll be able to create an enrollment profile for Android Enterprise dedicated devices that's valid for up to 65 years. If you have an existing profile, the enrollment token will still expire on the date you chose when you created the profile, but when you renew it you'll be able to extend the lifetime to 65 years.
+### Skip or show Terms of Address pane in Setup Assistant  <!-- 14661838 -->  
+Configure Intune to skip or show a new Setup Assistant pane called **Terms of Address** during Apple Automated Device Enrollment (ADE). The Terms of Address pane lets users on iOS/iPadOS and macOS devices personalize how apps address them.  The pane will be visible during ADE by default. You will be able to hide the pane on devices running iOS/iPadOS 16 and later, or macOS 13 and later. To access Setup Assistant pane settings, sign in to the Microsoft Endpoint Manager admin center. Then in your enrollment profile, expand the **Setup Assistant** category.
 
 <!-- ***********************************************-->
 
 ## Device management
 
-### Update policies for macOS now available for all supervised devices<!-- 16141990   -->  
-You'll soon be able to manage software update policies for macOS devices that weren't supervised through Automated Device Enrollment (ADE). Update policies for macOS are available under **Devices** > **Update policies for macOS (preview)**. For more information on configuring update policies for macOS, see [Use Microsoft Intune policies to manage macOS software updates | Microsoft Learn](../protect/software-updates-macos.md).
+### Microsoft Tunnel for Mobile Application Management for iOS/iPadOS (Preview)<!-- 15769204 -->  
 
-Applies to:
-- macOS
+As a public preview, we’re adding support for Mobile Application Management (MAM) to the Microsoft Tunnel VPN gateway for iOS/iPadOS. With this preview for iOS devices that have not enrolled with Intune, supported apps on those unenrolled devices will be able to use Microsoft Tunnel to connect to your organization when working with corporate data and resources. This includes VPN gateway support for:  
+
+- Secure access to on-prem apps and resources using modern authentication
+- Single Sign On and conditional access.
+
+Applies to:  
+- iOS/iPadOS
+
+### Software update policies for macOS are now generally available<!-- 12393100 -->  
+Software update policies for macOS devices will soon be out of preview and generally available. This general availability will apply to supervised devices running macOS 12 (Monterey) and later. We will continue to add improvements to this feature going forward.
+
+For more information, see [Use Microsoft Intune policies to manage macOS software updates](../protect/software-updates-macos.md).
 
 ### Endpoint security firewall rules support for ICMP type<!-- 5653356 -->  
 We’re adding a new setting named **IcmpTypesAndCodes** to the endpoint security firewall rules template for Windows 10. To configure this in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Endpoint security** > **Firewall** > **Create Policy** > Platform: *Windows 10, Windows 11, and Windows Server*  > Profile: *Microsoft Defender Firewall Rules*).
@@ -214,23 +250,38 @@ Applies to:
 - Windows 10
 - Windows 11
 
-### Microsoft Tunnel for Mobile Application Management for Android (public preview)<!-- 15769204  -->  
-In a public preview, we’re adding support for mobile application management (MAM) to the Microsoft Tunnel VPN gateway. With this preview for Android devices that have not enrolled with Intune, supported apps will be able to use Microsoft Tunnel to connect to your organization when working with corporate data and resources. This includes VPN gateway support for:  
+<!-- ***********************************************-->
 
-- Secure access to on-premises apps and resources using modern authentication
-- Single Sign On and conditional access.
+## Monitor and troubleshoot
 
-To use Tunnel for MAM on an unenrolled device will require the following three profiles:  
+### Support to download mobile app diagnostics from the Microsoft Endpoint Manager admin center<!-- 9353471  -->  
+Admins will soon be able to use the updated troubleshooting experience of the Microsoft Endpoint Manager admin center to access mobile app diagnostics. This includes the mobile app diagnostics and logs that users upload for Company Portal and App Protection.
 
-- An app configuration profile for managed apps, to configure Microsoft Defender on devices for use as the Tunnel client app.
-- A second app configuration profile for managed apps, to configure Microsoft Edge to connect to Tunnel.
-- An app protection profile to enable automatic start of the Microsoft Tunnel connection.
+Applies to:  
+- Android
+- iOS/iPadOS
+- Windows
 
-For information about using Tunnel on enrolled devices, see [Microsoft Tunnel overview](../protect/microsoft-tunnel-overview.md)
+### Intune troubleshooting pane update<!-- 4442647  -->  
+The Intune troubleshooting pane will provide a new experience.  It will provide details about user's devices, policies, applications, and status. The troubleshooting pane will include the following information:  
 
-Applies to:
+- A summary of policy, compliance, and application deployment status.
+- Support for exporting, filtering, and sorting all reports.
+- Support to filter by excluding policies and applications.
+- Support to filter to a user’s single device.
+- Details about available device diagnostics and disabled devices.
+- Details about offline devices that haven't checked-in to the service for three or more days.
 
-- Android Enterprise
+You can find the troubleshooting pane in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Troubleshooting + support** > **Troubleshoot**. To view the new experience during preview, select **Preview upcoming changes to Troubleshooting and provide feedback** to display the **Troubleshooting preview** pane, then select **Try it now**.
+
+<!-- ***********************************************-->
+
+## Tenant administration
+
+### Improved UI experience for multiple certificate connectors<!-- 16263248 -->  
+We’ll soon add pagination controls to the *Certificate connectors* view to help improve the experience when you have more than 25 certificate connectors configured. With the new controls, you’ll be able to see total number of connector records and easily navigate to a specific page when viewing your certificate connectors. 
+
+To view certificate connectors, in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Tenant administration** > **Connectors and tokens** > **Certificate connectors**.
 
 <!-- ***********************************************-->
 

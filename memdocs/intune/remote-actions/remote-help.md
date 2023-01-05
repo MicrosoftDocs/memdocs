@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 10/13/2022
+ms.date: 12/08/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -197,6 +197,7 @@ To configure your tenant to support remote help, review and complete the followi
 2. On the **Settings** tab:
    1. Set **Enable remote help** to **Enabled** to allow the use of remote help. By default, this setting is *Disabled*.
    2. Set **Allow remote help to unenrolled devices** to **Enabled** if you want to allow this option. By default, this setting is *Disabled*.
+   3. Set **Disable chat** to **Yes** to remove the chat functionality in the Remote Help app. By default, chat is enabled and this setting is set to **No**.  
 
 3. Select **Save**.
 

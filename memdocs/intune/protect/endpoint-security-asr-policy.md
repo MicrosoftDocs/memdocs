@@ -146,7 +146,7 @@ Intune supports the following two settings to exclude specific file and folder p
 
   :::image type="content" source="./media/endpoint-security-asr-policy/global-asr-rule-exclusion.png" alt-text="Screen capture of the Attack Surface Reduction Only Exclusions setting.":::
 
-  When a device is assigned at least one policy that configures **Attack Surface Reduction Only Exclusions**, the configured exclusions apply to all attack surface reduction rules that target that device. This occurs because devices receive a superset of attack surface reduction rule settings from all applicable policies, and the settings exclusions cannot be managed for individual settings.  To avoid having exclusions applied to all settings on a device, do not use this setting and instead configure **ASR Only Per Rule Exclusions** for individual settings.
+  When a device is assigned at least one policy that configures **Attack Surface Reduction Only Exclusions**, the configured exclusions apply to all attack surface reduction rules that target that device. This occurs because devices receive a superset of attack surface reduction rule settings from all applicable policies, and the settings exclusions cannot be managed for individual settings. To avoid having exclusions applied to all settings on a device, do not use this setting and instead configure **ASR Only Per Rule Exclusions** for individual settings.
 
   For more information, see the documentation for the Defender CSP: [Defender/AttackSurfaceReductionOnlyExclusions](/windows/client-management/mdm/policy-csp-Defender#defender-attacksurfacereductiononlyexclusions).
 
@@ -158,6 +158,9 @@ Intune supports the following two settings to exclude specific file and folder p
 
   By default, **ASR Only Per Rule Exclusions** is set to **Not configured**.
   
+  > [!IMPORTANT]
+  > ASR polices do not support merge functionality for *ASR Only Per Rule Exclusions* and a policy conflict can result when multiple polices that configure *ASR Only Per Rule Exclusions* for the same device conflict. To avoid conflicts, combine the configurations for *ASR Only Per Rule Exclusions* into a single ASR policy. We are investigating adding policy merge for *ASR Only Per Rule Exclusions* in a future update.
+
   <!-- 
   For more information, see the documentation for the Defender CSP  [Defender/ASROnlyPerRuleExclusions](/windows/client-management/mdm/policy-csp-Defender#defender-asronlyperruleexclusions). 
   -->

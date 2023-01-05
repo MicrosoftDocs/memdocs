@@ -61,6 +61,17 @@ Learn what new features are available in Windows 365 Enterprise.
 Windows 365 now supports creating Azure Active Directory Join Cloud PCs that use single sign-on for Cloud PC login. Existing Cloud PCs won’t have single sign-on configured. For more information, see [Create provisioning policy](create-provisioning-policy.md) and [Edit provisioning policy](edit-provisioning-policy.md).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### New Third-party connector column on All devices page<!--42555983-->
+
+There's a new column on the **All devices page**: **Third-party connector**. For more information, see [Device management overview for Cloud PCs](device-management-overview.md).
+
+#### Retry Citrix agent installation<!--42555983-->
+
+You can now use the **Retry Citrix agent installation** option instead of doing a full provisioning retry. For more information, see [Retry Citrix agent installation](retry-citrix-agent-installation.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Documentation
 
 #### New documentation article: Windows 365 deployment options

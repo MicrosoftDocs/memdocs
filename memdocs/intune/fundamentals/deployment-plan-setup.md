@@ -7,7 +7,7 @@ description: Step 1 for deploying or setting up Intune. The starting point is to
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 12/05/2022
+ms.date: 01/04/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -129,3 +129,11 @@ The Company Portal apps, Company Portal website, and Intune app on Android are w
 
  Customize the Intune Company Portal that users use to enroll devices and install apps. These settings appear in both the Company Portal app and the Intune Company Portal website.
  For guidance, go to [Configure the company portal](../apps/company-portal-app.md).
+
+## Follow the minimum recommended baseline policies
+
+1. 🡺 **Set up Microsoft Intune** (*You are here*)
+2. [Add, configure, and protect apps](deployment-plan-protect-apps.md)
+3. [Plan for compliance policies](deployment-plan-compliance-policies.md)
+4. [Create device configuration profiles](deployment-plan-configuration-profile.md)
+5. [Enroll devices](deployment-guide-enrollment.md)

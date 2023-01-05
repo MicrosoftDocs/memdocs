@@ -116,7 +116,7 @@ items:
 
     - name: Deploy Microsoft Intune
       items:
-      - name: Deploy Intune overview
+      - name: Deploy Intune overview (DELETE?)
         href: ./fundamentals/deployment-plan-overview.md
       - name: Get started with your deployment (REPLACE OVERVIEW?)
         href: ./fundamentals/get-started-with-intune.md
