@@ -135,21 +135,7 @@ items:
       - name: Step 4 - Create configuration profiles
         href: ./fundamentals/deployment-plan-configuration-profile.md
       - name: Step 5 - Enroll devices
-        items:
-        - name: Enroll devices overview
-          href: ./fundamentals/deployment-guide-enrollment.md
-        - name: Enroll Windows devices in Microsoft Intune
-          href: ./fundamentals/deployment-guide-enrollment-windows.md
-        - name: Enroll Android devices in Microsoft Intune
-          href: ./fundamentals/deployment-guide-enrollment-android.md
-        - name: Enroll iOS and iPadOS devices in Microsoft Intune
-          href: ./fundamentals/deployment-guide-enrollment-ios-ipados.md
-        - name: Enroll macOS devices in Microsoft Intune
-          href: ./fundamentals/deployment-guide-enrollment-macos.md
-        - name: Enroll Linux devices in Microsoft Intune
-          href: ./fundamentals/deployment-guide-enrollment-linux.md
-
-
+        href: ./fundamentals/deployment-guide-enroll.md
 
   - name: Solutions and scenarios
     items: 
