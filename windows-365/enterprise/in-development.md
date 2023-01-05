@@ -76,13 +76,6 @@ In a future update, the Windows 365 app will support Windows 10.
 
 End users will be able to manually run connectivity checks on their Cloud PCs from [windows365.microsoft.com](https://windows365.microsoft.com).
 
-### Device history report – new information for Cloud PC performance<!--38310774  -->
-
-The device history report will have new information to help you evaluate Cloud PC performance:
-
-- Top five processes impacting CPU spike times
-- Top five processes impacting RAM spike times
-
 <!-- ***********************************************-->
 <!-- ## Provisioning -->
 
