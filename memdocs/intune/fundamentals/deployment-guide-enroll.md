@@ -207,9 +207,9 @@ These are the enrollment scenarios supported in Intune for devices running Windo
 
 * [Windows Autopilot out-of-box-experience](): Automatic enrollment is supported during the user-driven or self-deploying Windows Autopilot out-of-box-experience (OOBE). This method is for corporate-owned desktops, laptops, and kiosks. Device users get desktop access after required software and policies are installed. An Azure AD Premium license is required for automatic enrollment.   
 
-* [Windows Autopilot for Hybrid Azure AD join](/autopilot/windows-autopilot-hybrid): Automatic enrollment is supported with Windows Autopilot for hybrid Azure AD-joined devices. During the Windows Autopilot out-of-box-experience, the Intune connector for Active Directory enables devices in Active Directory domain services to join to Azure AD, and then automatically enroll in Intune. This method requires you to install the Intune connector for Active Directory on an on-premises server and register devices in Windows Autopilot.  We recommend this method for on-premises environments that use Active Directory domain services and can't currently move their identities to Azure AD. 
+* [Windows Autopilot for Hybrid Azure AD join](../../autopilot/windows-autopilot-hybrid.md): Automatic enrollment is supported with Windows Autopilot for hybrid Azure AD-joined devices. During the Windows Autopilot out-of-box-experience, the Intune connector for Active Directory enables devices in Active Directory domain services to join to Azure AD, and then automatically enroll in Intune. This method requires you to install the Intune connector for Active Directory on an on-premises server and register devices in Windows Autopilot.  We recommend this method for on-premises environments that use Active Directory domain services and can't currently move their identities to Azure AD. 
 
-* [Co-management with Configuration Manager](/configmgr/comanage/autopilot-enrollment): Enable co-management settings in Intune to use Intune features on devices you manage with Configuration Manager. Co-management gives you the option to use both Intune and Configuration Manager features.  For example, you can manage devices with compliance policies and device configuration workloads in Intune, and utilize Configuration Manager for all other features, like app deployment and security policies.   
+* [Co-management with Configuration Manager](../../configmgr/comanage/autopilot-enrollment.md): Enable co-management settings in Intune to use Intune features on devices you manage with Configuration Manager. Co-management gives you the option to use both Intune and Configuration Manager features.  For example, you can manage devices with compliance policies and device configuration workloads in Intune, and utilize Configuration Manager for all other features, like app deployment and security policies.   
 
 * [Bulk enrollment](../enrollment/windows-bulk-enroll.md):  Set up and enroll a large number of devices in Azure AD and Intune without needing to reimage them. This process requires you to create a provisioning package using the Windows Configuration Designer app, and then apply the package during the OOBE, or run it on the device in the Settings app.   
 
@@ -226,17 +226,10 @@ Track [incomplete and abandoned user enrollments](../enrollment/enrollment-repor
 For troubleshooting docs, see [Troubleshoot device enrollment](/troubleshoot/mem/intune/troubleshoot-device-enrollment-in-intune).    
 
 ## Additional resources 
-Additional resources for enrollment are available throughout the Microsoft Intune documentation, and include visual comparisons, how-to steps, tips, and best practices.  
+Additional enrollment guides are available throughout the Microsoft Intune documentation. These guides include visual comparisons, how-to steps, tips, and enrollment best practices for each supported platform.   
 
-There's an enrollment guide for every platform. 
-
-- [Application management without enrollment (MAM-WE)](deployment-guide-enrollment-mamwe.md)
 - [Android device management](deployment-guide-enrollment-android.md)
 - [iOS/iPadOS device management](deployment-guide-enrollment-ios-ipados.md)
 - [Linux device management](deployment-guide-enrollment-linux.md)
 - [macOS device management](deployment-guide-enrollment-macos.md)
-- [Windows device management](deployment-guide-enrollment-windows.md)
-
-Download our visual guide to compare enrollment options and capabilities.   
-
-[![A visual representation of Intune enrollment options by platform](./media/deployment-guide-enrollment/msft-intune-enrollment-options-thumb-landscape.png)](https://download.microsoft.com/download/e/6/2/e6233fdd-a956-4f77-93a5-1aa254ee2917/msft-intune-enrollment-options.pdf) <br/> [Download PDF version](https://download.microsoft.com/download/e/6/2/e6233fdd-a956-4f77-93a5-1aa254ee2917/msft-intune-enrollment-options.pdf) | [Download Visio version](https://download.microsoft.com/download/e/6/2/e6233fdd-a956-4f77-93a5-1aa254ee2917/msft-intune-enrollment-options.vsdx)  
+- [Windows device management](deployment-guide-enrollment-windows.md)    
