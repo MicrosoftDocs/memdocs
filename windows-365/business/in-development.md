@@ -58,7 +58,7 @@ To help in your readiness and planning, this page lists Windows 365 Business upd
 
 ### Admins can restore a Cloud PC to a previous state for a user<!--40784300-->
 
-Windows 365 Business admins will be able to restore a Cloud PC to a previous state on behalf of the user. [For more information about restoring Cloud PCs, see](/restore-overview).
+Windows 365 Business admins will be able to restore a Cloud PC to a previous state on behalf of the user. [For more information about restoring Cloud PCs, see](/windows-365/business/restore-overview).
 
 <!--***********************************************-->
 <!--## End user experience-->
