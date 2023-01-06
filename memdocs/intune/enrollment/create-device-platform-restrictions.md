@@ -33,15 +33,14 @@ ms.collection:
 
 # Create device platform restrictions   
 
-**Applies to**
-* Android  
-* iOS
-* macOS 
-* Windows 10
-* Windows 11 
-
-
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]  
+
+*Applies to:*
+* *Android*  
+* *iOS*
+* *macOS* 
+* *Windows 10*
+* *Windows 11*  
 
 Create a device platform enrollment restriction policy to restrict devices from enrolling in Intune. Available restrictions include:  
 
