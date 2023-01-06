@@ -80,7 +80,7 @@ For example, if you select the **VPP Expiry Date** connector, the **iOS Volume-P
 
 ## Service health and message center  
 
-The Service health and message center page is where you can view details about the Intune *Service health*, *Issues in your environment that require action*, and *Message center* posts that can provide information about updates and planned changes.
+The Service health and message center page are where you can view details about the Intune *Service health*, *Issues in your environment that require action*, and *Message center* posts that can provide information about updates and planned changes.
 
 ### Service health
 
@@ -93,11 +93,11 @@ To view information for *Service Health*, your account must have the **Global Ad
 You can only set up your communication preferences for Intune Service Health through the Microsoft 365 admin center.
 
 ### Issues in your environment that require action  
-Messages that appear as **Issues in your environment that require action** are sent to alert tenant administrators about issues that might require action to resolve.
+The **Issues in your environment that require action** section displays messages that are sent to alert tenant administrators about issues that might require action to resolve.
 
 To view information for *Issues in your environment that require action*, your account must have the **Global Administrator** or **Service support administrator** role in Azure Active Directory or the Microsoft 365 admin center. To assign these permissions, sign in to the [Microsoft 365 admin center](https://admin.microsoft.com) with Global Administrator permissions. Select **Users > Active Users**, and then select the account that requires access. Select **Edit** for Roles, select *Service support administrator* or *Global Administrator*, and then **Save** your edit to assign the permissions.  
 
-Messages that appear as **Issues in your environment that require action** are sent to alert tenant administrators about issues that might require action to resolve.
+You can only set up your communication preferences for Intune Message center through the Microsoft 365 admin center.
 
 ### Intune Message center  
 View informational communications from the Intune service team without having to navigate to the Office Message Center. Communications include messages about changes that have recently happened to the Intune service, or that are on the way for your tenant.  
