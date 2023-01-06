@@ -150,8 +150,8 @@ You must allow traffic in your Azure network configuration to the service URLs a
 | 168.63.129.16:80 | GCC, GCCH |
 | 168.63.129.16:32526 | GCC, GCCH |
 | 168.63.129.16:53 | GCC, GCCH |
-| https://ghp01.ghp.cpcgateway.usgovtrafficmanager.net | GCCH |
-| https://gcp01.gcp.cpcgateway.usgovtrafficmanager.net | GCC |
+| `https://ghp01.ghp.cpcgateway.usgovtrafficmanager.net` | GCCH |
+| `https://gcp01.gcp.cpcgateway.usgovtrafficmanager.net` | GCC |
 | TBD cmd agents / hermes related endpoint | |
 | 168.63.129.16:80 | GCC, GCCH |
 | cpcstprovghpghp01.blob.core.usgovcloudapi.net:443<br>cpcsaamssa1ghpghp01.blob.core.usgovcloudapi.net:443<br>cpcstcnryghpghp01.blob.core.usgovcloudapi.net:443<br>cpcsacnrysa1ghpghp01.blob.core.usgovcloudapi.net:443<br> | GCCH |
