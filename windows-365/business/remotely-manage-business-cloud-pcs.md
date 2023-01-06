@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 12/08/2021
+ms.date: 01/06/2023
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice: 
@@ -31,12 +31,19 @@ ms.collection: M365-identity-device-management
 # Remotely manage Windows 365 Business Cloud PCs
 
 You can remotely manage Windows 365 Business Cloud PCs by using the Microsoft 365 admin center or windows365.microsoft.com. Each supports several remote management [actions](#remote-management-actions).
-To use these remote actions, you must have either of the following Azure Active Directory (Azure AD) role-based access roles:
 
-- [Global Administrator]( /azure/active-directory/roles/permissions-reference#global-administrator)
-- [Windows 365 Administrator]( /azure/active-directory/roles/permissions-reference#windows-365-administrator)
+## Permissions
 
-## Remotely manage Cloud PCs on windows.365.microsoft.com
+To use these remote actions, you must have the appropriate Azure Active Directory (Azure AD) role-based access roles.
+
+| Azure AD role | Microsoft 365 admin center | windows365.microsoft.com |
+| --- | --- | --- |
+| [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) | Grants permissions for all remote actions and full access to the tenant. | Grants permissions for all remote actions and full access to the tenant. |
+| [Windows 365 Administrator](/azure/active-directory/roles/permissions-reference#windows-365-administrator) | No access | Grants permission to take remote actions. |
+| [Global Reader](/azure/active-directory/roles/permissions-reference#global-reader) | Grants permissions to manage Cloud PCs, including remote actions. | No access. |
+| [License Administrator](/azure/active-directory/roles/permissions-reference#license-administrator) | Grants permissions to manage licenses. | No access. |
+
+## Remotely manage Cloud PCs on windows365.microsoft.com
 
 1. Sign in to [windows365.microsoft.com](https://windows365.microsoft.com).
 2. Select **Your organization’s Cloud PCs**.
