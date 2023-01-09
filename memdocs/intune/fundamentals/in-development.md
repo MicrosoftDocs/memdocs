@@ -98,6 +98,34 @@ New settings include:
 - Account Use SSL
 - Account Username
 
+Applies to:
+- iOS/iPadOS
+
+**Networking > Domains**:
+
+- Cross Site Tracking Prevention Relaxed Domains
+
+Applies to:
+- macOS
+
+The following settings are also in Settings Catalog. Previously, they were only available in Templates:
+
+**File Vault**:
+
+- User Enters Missing Info 
+
+Applies to:
+- macOS
+
+**Restrictions**:
+
+- Rating Region
+
+Applies to:
+- iOS/iPadOS
+
+For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
+
 ### Updated descriptions for iOS/iPadOS and macOS settings in the settings catalog<!-- 16360170 -->
 The settings catalog lists all the settings you can configure, and all in one place. For the iOS/iPadOS and macOS settings, the descriptions are updated to include more information.
 
