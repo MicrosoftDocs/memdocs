@@ -175,52 +175,6 @@ Applies to:
 
 - Android Enterprise 12+ personally owned devices with a work profile
 
-### There are default settings for SSO extension requests on macOS devices<!-- 15082414  -->  
-When you create a single sign-on app extension configuration profile, there are some settings you configure. The following settings will use the following default values for all SSO extension requests:
-
-- **AppPrefixAllowList** key
-  Default value: `com.microsoft.,com.apple.`
-
-- **browser_sso_interaction_enabled** key
-  Default value: `1`
-
-- **disable_explicit_app_prompt** key
-  Default value: `1`
-
-If you configure a value other than the default value, then the configured value will overwrite the default value.
-
-For example, you don't configure the `AppPrefixAllowList` key. By default, all Microsoft apps (`com.microsoft.`) and all Apple apps (`com.apple.`) will be enabled for SSO. You can overwrite this behavior by adding a different prefix to the list, such as `com.contoso.`.
-
-For more information on the Enterprise SSO plug-in, go to [Use the Microsoft Enterprise SSO plug-in on iOS/iPadOS and macOS devices in Microsoft Intune](../configuration/use-enterprise-sso-plug-in-ios-ipados-macos.md)
-
-Applies to:
-
-- macOS
-
-### There are default settings for SSO extension requests on iOS/iPadOS devices<!-- 15084030 -->  
-When you create a single sign-on app extension configuration profile, there are some settings you configure. The following settings will use the following default values for all SSO extension requests:
-
-- **AppPrefixAllowList** key
-  Default value: `com.apple.`
-
-- **browser_sso_interaction_enabled** key
-  Default value: `1`
-
-- **disable_explicit_app_prompt** key
-  Default value: `1`
-
-If you configure a value other than the default value, then the configured value will overwrite the default value. 
-
-For example, you don't configure the `AppPrefixAllowList` key. By default, all Apple apps (`com.apple.`) will be enabled for SSO. You can overwrite this behavior by adding a different prefix to the list, such as `com.contoso.`.
-
-For more information on the Enterprise SSO plug-in, go to [Use the Microsoft Enterprise SSO plug-in on iOS/iPadOS and macOS devices in Microsoft Intune](../configuration/use-enterprise-sso-plug-in-ios-ipados-macos.md)
-
-Applies to:
-
-- iOS/iPadOS
-
-
-
 ### Grace period status visible in Intune Company Portal app for Android <!-- 13498225 -->  
 The Intune Company Portal app for Android will show a grace period status to account for devices that don't meet compliance requirements but are still within their given grace period.  Users will see the date by which they need to become compliant and the instructions for how to become compliant. If they don't update their device by the given date, their status will change to noncompliant.
 
