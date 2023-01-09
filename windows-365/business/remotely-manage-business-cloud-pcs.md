@@ -36,12 +36,10 @@ You can remotely manage Windows 365 Business Cloud PCs by using the Microsoft 36
 
 To use these remote actions, you must have the appropriate Azure Active Directory (Azure AD) role-based access roles.
 
-| Azure AD role | Microsoft 365 admin center | windows365.microsoft.com |
+| Admin actions | Roles required for windows365.microsoft.com | Roles required for Microsoft 365 admin center |
 | --- | --- | --- |
-| [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) | Grants permissions for all remote actions and full access to the tenant. | Grants permissions for all remote actions and full access to the tenant. |
-| [Windows 365 Administrator](/azure/active-directory/roles/permissions-reference#windows-365-administrator) | No access | Grants permission to take remote actions. |
-| [Global Reader](/azure/active-directory/roles/permissions-reference#global-reader) | Grants permissions to manage Cloud PCs, including remote actions. | No access. |
-| [License Administrator](/azure/active-directory/roles/permissions-reference#license-administrator) | Grants permissions to manage licenses. | No access. |
+| Windows 365 Business remote management actions (like reset, restart, and so on) | [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) OR [Windows 365 Administrator](/azure/active-directory/roles/permissions-reference#windows-365-administrator) | [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) OR [Windows 365 Administrator](/azure/active-directory/roles/permissions-reference#windows-365-administrator) and [Global Reader](/azure/active-directory/roles/permissions-reference#global-reader) (this grants access to the admin center) |
+| License administration (assignment and removal of licenses from a user) | | [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) OR [Windows 365 Administrator](/azure/active-directory/roles/permissions-reference#windows-365-administrator) and [License Administrator](/azure/active-directory/roles/permissions-reference#license-administrator) | [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) OR [License Administrator](/azure/active-directory/roles/permissions-reference#license-administrator) |
 
 ## Remotely manage Cloud PCs on windows365.microsoft.com
 
