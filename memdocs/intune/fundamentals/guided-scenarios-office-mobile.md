@@ -108,7 +108,7 @@ When you've selected the apps, click **Next**.
 
 In this step, you must configure the requirements for accessing and sharing the corporate files and emails in these apps. By default, users can save data to your organization's OneDrive and SharePoint accounts.
 
-![App protection settings screenshot](./media/guided-scenarios-office-mobile/guided-scenarios-office-mobile-03.png)
+:::image type="content" border="true" source="./media/guided-scenarios-office-mobile/guided-scenarios-office-mobile-03.png" alt-text="App protection settings screenshot":::
 
 The following setting are applied when using the **Enhanced data protection" setting shown above.
 
