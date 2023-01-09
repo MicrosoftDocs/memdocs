@@ -134,7 +134,7 @@ The following credential types are supported for Cloud PC authentication:
 ### Single sign-on (SSO)
 
 >[!Important]
->Single sign-on is in [public preview](/windows-365/public-preview) for Azure AD joined Cloud PCs.
+>Single sign-on is in [public preview](../public-preview.md) for Azure AD joined Cloud PCs.
 >
 >Single sign-on is not supported for Hybrid Azure AD joined Cloud PCs.
 
@@ -155,7 +155,7 @@ Once you're connected to your Cloud PC, you may be prompted for authentication i
 ### In-session passwordless authentication (preview)
 
 > [!IMPORTANT]
-> In-session passwordless authentication is currently in [public preview](/windows-365/public-preview).
+> In-session passwordless authentication is currently in [public preview](../public-preview.md).
 
 Windows 365 supports in-session passwordless authentication (preview](/windows-365/public-preview)) using [Windows Hello for Business](/windows/security/identity-protection/hello-for-business/hello-overview) or security devices like FIDO keys when using the [Windows Desktop client](../end-user-access-cloud-pc.md#remote-desktop). Passwordless authentication is enabled automatically when the Cloud PC and local PC are using the following operating systems:
 
