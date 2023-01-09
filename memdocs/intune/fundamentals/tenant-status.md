@@ -97,7 +97,7 @@ The **Issues in your environment that require action** section displays messages
 
 To view information for *Issues in your environment that require action*, your account must have the **Global Administrator** or **Service support administrator** role in Azure Active Directory or the Microsoft 365 admin center. To assign these permissions, sign in to the [Microsoft 365 admin center](https://admin.microsoft.com) with Global Administrator permissions. Select **Users > Active Users**, and then select the account that requires access. Select **Edit** for Roles, select *Service support administrator* or *Global Administrator*, and then **Save** your edit to assign the permissions.  
 
-You can only set up your communication preferences for Intune Message center through the Microsoft 365 admin center.
+You can only set up your communication preferences for Intune Message center through the Microsoft 365 admin center. To do so, sign in to the [Microsoft 365 admin center](https://admin.microsoft.com/) and go to **Health** > **Service health**. Select **Customize**, and then open the **Email** tab. On the *Email* tab, select the checkbox for **Send me email notifications about service health**, and then configure the additional preferences to meet your requirements.
 
 ### Intune Message center  
 View informational communications from the Intune service team without having to navigate to the Office Message Center. Communications include messages about changes that have recently happened to the Intune service, or that are on the way for your tenant.  
