@@ -38,31 +38,30 @@ ms.localizationpriority: high
 
 ### Microsoft
 
-- Windows 11 (Home, S, Pro, Education, and Enterprise editions)
+- Windows 10/11 (Home, S, Pro, Education, Enterprise, and IoT Enterprise editions)
+- Windows 10/11 Cloud PCs on Windows 365
 
   > [!NOTE]
   > You can continue to use Microsoft Endpoint Manager to manage devices running Windows 11 the same as with Windows 10. If another article doesn't explicitly reference Windows 11, assume that feature support for Windows 10 also includes Windows 11.
   >
   > Some features may not be available on Windows 11. This article lists some [known issues](#windows-11-known-issues). As always, test your policies before broadly deploying them across your devices.
 
-- Surface Hub
-- Windows 10 (Home, S, Pro, Education, and Enterprise versions)
-- Windows 10 and Windows 11 Cloud PCs on Windows 365
-- Windows 10 Enterprise 2021 LTSC
-- Windows 10 Enterprise 2019 LTSC
+- Windows 10 LTSC 2019/2021 (Enterprise and IoT Enterprise editions)
 
-  For more information about managing devices running Windows 10 2019 LTSC, see [What's new in Windows 10 Enterprise 2019 LTSC](/windows/whats-new/ltsc/whats-new-windows-10-2019)
-
-- Windows 10 IoT Enterprise (x86, x64)
+  For more information about managing devices running Windows 10 LTSC 2019, see [What's new in Windows 10 Enterprise LTSC 2019](/windows/whats-new/ltsc/whats-new-windows-10-2019)
+  
+- Windows 10 version 1709 (RS3) and later, Windows 8.1 RT, PCs running Windows 8.1 (Sustaining mode)
+ 
 - Windows Holographic for Business
 
   For more information about managing devices running Windows Holographic for Business, see [Window Holographic for Business support](../fundamentals/windows-holographic-for-business.md).
+
+- Surface Hub
 
 - Windows 10 Teams (Surface Hub)
 
   For more information about managing devices running Windows 10 Teams, see [Manage Surface Hub with MDM](/surface-hub/manage-settings-with-mdm-for-surface-hub)
 
-- Windows 10 version 1709 (RS3) and later, Windows 8.1 RT, PCs running Windows 8.1 (Sustaining mode)
 
 > [!NOTE]
 > Not all Windows editions support all available operating system features being configured through MDM. For more information, see the [Windows configuration service provider reference docs](/windows/configuration/provisioning-packages/how-it-pros-can-use-configuration-service-providers). Each CSP highlights which Windows editions are supported.
