@@ -82,22 +82,19 @@ For example, if you select the **VPP Expiry Date** connector, the **iOS Volume-P
 
 The Service health and message center page are where you can view details about the Intune *Service health*, *Issues in your environment that require action*, and *Message center* posts that can provide information about updates and planned changes.
 
+You can only set up your communication preferences for Intune Message center through the Microsoft 365 admin center. To do so, sign in to the [Microsoft 365 admin center](https://admin.microsoft.com/) and go to **Health** > **Service health**. Select **Customize**, and then open the **Email** tab. On the *Email* tab, select the checkbox for **Send me email notifications about service health**, and then configure the additional preferences to meet your requirements.
 ### Service health
 
 View details for active incidents and advisories in the Microsoft Endpoint Manager admin center. Only incidents that affect your tenant are shown. This information is also available in on the Service health page of the [Microsoft 365 admin center](https://admin.microsoft.com).
 
 When you select an incident, the incident details are presented directly in the Tenant Status page. To view past advisories and incidents, select **See past Incidents/Advisories**. The Microsoft 365 admin center opens and you can then view advisories and incidents from the last 30 days for your tenant.  
 
-To view information for *Service Health*, your account must have the **Global Administrator** or **Service support administrator** role in Azure Active Directory or the Microsoft 365 admin center. To assign these permissions, sign in to the [Microsoft 365 admin center](https://admin.microsoft.com) with Global Administrator permissions. Select **Users > Active Users**, and then select the account that requires access. Select **Edit** for Roles, select *Service support administrator* or *Global Administrator*, and then **Save** your edit to assign the permissions.  
-
-You can only set up your communication preferences for Intune Service Health through the Microsoft 365 admin center.
+To view information for *Service health*, your account must have the **Global Administrator** or **Service support administrator** role in Azure Active Directory or the Microsoft 365 admin center. To assign these permissions, sign in to the [Microsoft 365 admin center](https://admin.microsoft.com) with Global Administrator permissions. Select **Users > Active Users**, and then select the account that requires access. Select **Edit** for Roles, select *Service support administrator* or *Global Administrator*, and then **Save** your edit to assign the permissions.  
 
 ### Issues in your environment that require action  
 The **Issues in your environment that require action** section displays messages that are sent to alert tenant administrators about issues that might require action to resolve.
 
 To view information for *Issues in your environment that require action*, your account must have the **Global Administrator** or **Service support administrator** role in Azure Active Directory or the Microsoft 365 admin center. To assign these permissions, sign in to the [Microsoft 365 admin center](https://admin.microsoft.com) with Global Administrator permissions. Select **Users > Active Users**, and then select the account that requires access. Select **Edit** for Roles, select *Service support administrator* or *Global Administrator*, and then **Save** your edit to assign the permissions.  
-
-You can only set up your communication preferences for Intune Message center through the Microsoft 365 admin center. To do so, sign in to the [Microsoft 365 admin center](https://admin.microsoft.com/) and go to **Health** > **Service health**. Select **Customize**, and then open the **Email** tab. On the *Email* tab, select the checkbox for **Send me email notifications about service health**, and then configure the additional preferences to meet your requirements.
 
 ### Intune Message center  
 View informational communications from the Intune service team without having to navigate to the Office Message Center. Communications include messages about changes that have recently happened to the Intune service, or that are on the way for your tenant.  
@@ -105,8 +102,6 @@ View informational communications from the Intune service team without having to
 By default, the 10 most recent and active messages display. To view older messages, select **See past Messages** to open the *Message center* in the Microsoft 365 admin center.  
 
 To view information for Intune News, your account must have the **Global Administrator** or **Service support administrator** role in Azure Active Directory, or the **Message Center reader** role in the Microsoft 365 admin center.  To assign this permission, sign in to the [Microsoft 365 admin center](https://admin.microsoft.com) with administrator permissions. Select **Users > Active Users**, and then select the account that requires access. Select **Edit** for *Roles*, select *Teams Communications Administrator*, and then **Save** your edit to assign the permissions.  
-
-You can only set up your communication preferences for Intune Message center through the Microsoft 365 admin center.
 
 ## Next steps
 
