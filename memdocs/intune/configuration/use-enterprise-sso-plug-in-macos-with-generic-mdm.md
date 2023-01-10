@@ -79,7 +79,7 @@ In the MDM portal, you create a Device Configuration profile. This profile inc
 
 5. Optionally you can configure other properties. The properties below reflect the defaults used by the Microsoft SSO Extension, but they may be customized to suit your needs:
 
-      [!INCLUDE [Apple SSO Recommended Settings Table Boilerplate](../includes/apple-enterprise-sso-recommended-settings-boilerplate.md)]
+      [!INCLUDE [Apple SSO Recommended Settings Table Boilerplate](../includes/apple-enterprise-sso-recommended-settings-intune-and-generic-mdm-boilerplate.md)]
 
 6. Assign the new policy to the devices that should be targeted to receive the SSO Extension MDM profile.
 
