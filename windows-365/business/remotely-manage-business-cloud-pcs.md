@@ -38,10 +38,10 @@ To use these remote actions, you must have the appropriate Azure Active Director
 
 | Admin actions | Roles required for windows365.microsoft.com | Roles required for Microsoft 365 admin center |
 | --- | --- | --- |
-| Windows 365 Business remote management actions (like reset, restart, and so on) | - [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator)* <br>OR<br>- [Windows 365 Administrator](/azure/active-directory/roles/permissions-reference#windows-365-administrator) | - [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) <br>OR <br> - [Windows 365 Administrator](/azure/active-directory/roles/permissions-reference#windows-365-administrator) and [Global Reader](/azure/active-directory/roles/permissions-reference#global-reader) (this grants access to the admin center) |
+| Windows 365 Business remote management actions (like reset, restart, and so on) | - [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) <br>OR<br>- [Windows 365 Administrator](/azure/active-directory/roles/permissions-reference#windows-365-administrator) | - [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) <br>OR <br> - [Windows 365 Administrator](/azure/active-directory/roles/permissions-reference#windows-365-administrator) and [Global Reader](/azure/active-directory/roles/permissions-reference#global-reader) (this grants access to the admin center) |
 | License administration (assignment and removal of licenses from a user) | - [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) <br>OR<br>- [Windows 365 Administrator](/azure/active-directory/roles/permissions-reference#windows-365-administrator) and [License Administrator](/azure/active-directory/roles/permissions-reference#license-administrator) | - [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) <br>OR<br>- [License Administrator](/azure/active-directory/roles/permissions-reference#license-administrator) |
 
-\* The person who signed up for Microsoft online services automatically becomes a Global admin.
+The person who signed up for Microsoft online services automatically becomes a Global admin.
 
 ## Remotely manage Cloud PCs on windows365.microsoft.com
 

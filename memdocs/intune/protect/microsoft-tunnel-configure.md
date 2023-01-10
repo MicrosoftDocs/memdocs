@@ -180,7 +180,7 @@ Before installing Microsoft Tunnel Gateway on a Linux server, configure your ten
 
 7. After the installation script finishes, you can navigate in Microsoft Endpoint Manager admin center to the **Microsoft Tunnel Gateway** tab to view high-level status for the tunnel. You can also open the **Health status** tab to confirm that the server is online.
 
-8. If you’re using RHEL 8.4 or 8.5, be sure to restart the Tunnel Gateway server by entering `mst-cli server restart` before you attempt to connect clients to it.
+8. If you’re using RHEL 8.4 or later, be sure to restart the Tunnel Gateway server by entering `mst-cli server restart` before you attempt to connect clients to it.
 
 ## Deploy the Microsoft Tunnel client app
 
