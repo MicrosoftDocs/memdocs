@@ -80,7 +80,7 @@ In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwli
 
     - **SSO app extension type**: Select **Microsoft Azure AD**. <br/>
     :::image type="content" source="./media/apple-enterprise-sso-plug-in/iOS-2.png" alt-text="Device features profile settings in Intune":::
-    
+
     - **Enable shared device mode**:  
 
       - **Not configured**: Intune doesn't change or update this setting. _For most scenarios, including Shared iPad, personal devices, and devices with or without user affinity, select this option._
@@ -88,19 +88,12 @@ In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwli
 
     - **App bundle ID**: Enter a list of bundle IDs for apps that don't support MSAL **and** are allowed to use SSO. For more information, see [Applications that don't use MSAL](/azure/active-directory/develop/apple-sso-plugin#enable-sso-for-apps-that-dont-use-a-microsoft-identity-platform-library).
 
-    - **Additional configuration**: To customize the end user experience, you can add the following properties.
+    - **Additional configuration**: To customize the end user experience, you can add the following properties. The properties below reflect the defaults used by the SSO Extension, but they may be customized to suit your needs:
 
-      | Key | Type | Value |
-      | --- | --- | --- |
-      | **AppPrefixAllowList** | String | Enter a list of prefixes for apps that don't support MSAL **and** are allowed to use SSO. For example, enter `com.microsoft.` to allow all Microsoft apps.<br/><br/>Be sure these apps [meet the allowlist requirements](/azure/active-directory/develop/apple-sso-plugin#enable-sso-for-apps-that-dont-use-a-microsoft-identity-platform-library).|
-      | **browser_sso_interaction_enabled** | Integer | When set to `1`, users can sign in from Safari browser, and from apps that don't support MSAL. Enabling this setting allows users to bootstrap the extension from Safari or other apps.|
-      | **browser_sso_disable_mfa** | Integer | Set to `0` (default) to require the Microsoft Enterprise SSO plug-in use multi-factor authentication (MFA) during bootstrap. Requiring MFA during bootstrap reduces prompts for MFA in apps that are protected by conditional access and require MFA. Microsoft recommends MFA be enabled to increase security and improve the user experience.<br/><br/>Set to `1` to disable MFA in bootstrap. Users are prompted by individual apps that require MFA. |
-      | **disable_explicit_app_prompt** | Integer | Some apps might incorrectly enforce end-user prompts at the protocol layer. If you see this problem, users are prompted to sign in, even though the Microsoft Enterprise SSO plug-in works for other apps. <br/><br/>When set to `1` (one), you reduce these prompts. |
-
-:::image type="content" source="./media/apple-enterprise-sso-plug-in/iOS-3.png" alt-text="Additional configuration options in Intune":::
- 
-      > [!TIP]
-      > For more information on these properties, and other properties you can configure, see [Microsoft Enterprise SSO plug-in for Apple devices (preview)](/azure/active-directory/develop/apple-sso-plugin#more-configuration-options).
+      [!INCLUDE [Apple SSO Recommended Settings Table Boilerplate](../includes/apple-enterprise-sso-recommended-settings-boilerplate.md)]
+      
+      When you have completed the configuration of the recommended settings they will appear as below in your Intune configuration profile:
+      :::image type="content" source="./media/apple-enterprise-sso-plug-in/iOS-3.png" alt-text="Additional configuration options in Intune":::
 
 8. Continue creating the profile, and assign the profile to the users or groups that will receive these settings. For the specific steps, see [Create the profile](device-features-configure.md#create-the-profile).
 

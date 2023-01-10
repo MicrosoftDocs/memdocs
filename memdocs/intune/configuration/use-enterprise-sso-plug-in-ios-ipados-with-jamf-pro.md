@@ -121,16 +121,9 @@ In the Jamf Pro portal, you create a Computer or Device configuration profile.
 
     :::image type="content" source="./media/apple-enterprise-sso-plug-in/Jamf-5.png" alt-text="See a sample custom configuration with a PLIST file for Jamf Pro.":::
 
-    - These PLIST settings configure the following SSO Extension options:
+    - These PLIST settings configure the following SSO Extension options. The properties below reflect the defaults used by the SSO Extension, but they may be customized to suit your needs:
 
-      | Key | Type | Value |
-      | --- | --- | --- |
-      | **AppPrefixAllowList** | String | Enter a list of prefixes for apps that don't support MSAL **and** are allowed to use SSO. For example, enter `com.microsoft.` to allow all Microsoft apps.<br/><br/>Be sure these apps [meet the allowlist requirements](/azure/active-directory/develop/apple-sso-plugin#enable-sso-for-apps-that-dont-use-a-microsoft-identity-platform-library).|
-      | **browser_sso_interaction_enabled** | Integer | When set to `1`, users can sign in from Safari browser, and from apps that don't support MSAL. Enabling this setting allows users to bootstrap the extension from Safari or other apps.|
-      | **disable_explicit_app_prompt** | Integer | Some apps might incorrectly enforce end-user prompts at the protocol layer. If you see this problem, users are prompted to sign in, even though the Microsoft Enterprise SSO plug-in works for other apps. <br/><br/>When set to `1` (one), you reduce these   prompts. |
-
-    > [!TIP]
-    > For more information on these properties, and other properties you can configure, see [Microsoft Enterprise SSO plug-in for Apple devices (preview)](/azure/active-directory/develop/apple-sso-plugin#more-configuration-options).
+    [!INCLUDE [Apple SSO Recommended Settings Table Boilerplate](../includes/apple-enterprise-sso-recommended-settings-boilerplate.md)]
 
 6. Select the **Scope** tab. Enter the computers or devices that should be targeted to receive the SSO Extension MDM profile.
 7. Select **Save**.
