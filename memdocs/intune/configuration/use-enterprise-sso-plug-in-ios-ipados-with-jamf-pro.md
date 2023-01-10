@@ -2,7 +2,7 @@
 # required metadata
 
 title: Use the Microsoft Enterprise SSO plug-in on iOS/iPadOS devices in Jamf Pro
-description: Add or create an iOS or iPadOS device profile using the Microsoft Enterprise SSO plug-in in Microsoft Intune. 
+description: Add or create an iOS or iPadOS device profile using the Microsoft Enterprise SSO plug-in in Jamf Pro. 
 keywords:
 author: TBC
 ms.author: alessanc

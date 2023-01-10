@@ -2,7 +2,7 @@
 # required metadata
 
 title: Microsoft Enterprise SSO plug-in in Jamf Pro
-description: Add or create a macOS device profile using the Microsoft Enterprise SSO plug-in in Jamf Pro and Microsoft Intune.
+description: Links to docs on using the Microsoft Enterprise SSO plug-in in Jamf Pro and Microsoft Intune.
 keywords:
 author: MandiOhlinger
 ms.author: miepping
@@ -27,7 +27,7 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# Deploy the Microsoft Enterprise SSO plug-in for Apple Devices (preview)
+# Deploy the Microsoft Enterprise SSO plug-in for Apple Devices (preview) with MDMs
 
 This documentation has been moved. The new documentation locations are below:
 
