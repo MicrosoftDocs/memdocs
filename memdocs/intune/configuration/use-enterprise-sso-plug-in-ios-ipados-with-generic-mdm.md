@@ -27,7 +27,17 @@ ms.custom:
 ms.collection: M365-identity-device-management
 ---
 
-[!INCLUDE [Apple SSO Boilerplate](../includes/apple-enterprise-sso-boilerplate.md)]
+# Configure the Microsoft Enterprise SSO plug-in on iOS/iPadOS devices with a Mobile Device Management solution (MDM)
+
+[!INCLUDE [Apple SSO Boilerplate](../includes/apple-enterprise-sso-intro-boilerplate.md)]
+
+This feature applies to:
+
+- iOS/iPadOS
+
+This article explains how to deploy the Microsoft Enterprise SSO plug-in (preview) for iOS/iPadOS Devices with a generic MDM solution..
+
+[!INCLUDE [Apple SSO Disclaimer Boilerplate](../includes/apple-enterprise-sso-disclaimer-boilerplate.md)]
 
 ## Prerequisites
 
@@ -45,25 +55,13 @@ The Microsoft Authenticator app can be installed manually by users, or deployed 
 > [!NOTE]
 > On iOS and iPadOS devices, Apple requires that the SSO app extension and the Microsoft Authenticator app be installed. Users don't need to use or configure the Microsoft Authenticator app, it just needs to be installed on the device.
 
-## Microsoft Enterprise SSO plug-in vs. Kerberos SSO extension
-
-When you use the SSO app extension, you use the **SSO** or **Kerberos** Payload Type for authentication. The SSO app extension is designed to improve the sign-in experience for apps and websites that use these authentication methods.
-
-The Microsoft Enterprise SSO plug-in uses the **SSO** Payload Type with **Redirect** authentication. The SSO Redirect and Kerberos extension types can both be used on a device at the same time. Be sure to create separate device profiles for each extension type you plan to use on your devices.
-
-To determine the correct SSO extension type for your scenario, use the following table:
-
----
-| Microsoft Enterprise SSO plug-in for Apple Devices | Single sign-on app extension with Kerberos |
-| --- | --- |
-| Uses the **Microsoft Azure AD** SSO app extension type | Uses the **Kerberos** SSO app extension type |
-| Supports the following apps: <br/> - Microsoft 365 <br/> - Apps, websites or services integrated with Azure AD | Supports the following apps: <br/><br/> - Apps, websites or services integrated with AD <br/> |
+[!INCLUDE [Apple Kerberos Extension Boilerplate](../includes/apple-enterprise-sso-kerberos-boilerplate.md)]
 
 ---
 
 For more information on the single sign-on extension, see [Single sign-on app extension](device-features-configure.md#single-sign-on-app-extension).
 
-## Create a single sign-on app extension device configuration profile 
+## Create a single sign-on app extension device configuration profile
 
 In the MDM portal, you will create a Device Configuration profile. This profile includes the settings to configure the SSO app extension on devices.
 
@@ -94,19 +92,7 @@ In the MDM portal, you will create a Device Configuration profile. This profil
 
 When the device checks in with the MDM service, it receives this profile.
 
-## End user experience
-
-:::image type="content" source="./media/apple-enterprise-sso-plug-in/flow-chart-end-user-iOSiPadOS.png" alt-text="End user flow chart when installing SSO app app extension on iOS/iPadOS devices.":::
-
-- If you're not deploying the Microsoft Authenticator using an app policy, then users must install it manually. Users don't need to use the Authenticator app, it just needs to be installed on the device.
-
-- Users sign in to any supported app or website to bootstrap the extension. Bootstrap is the process of signing in for the first time, which sets up the extension.  
-
-- After users sign in successfully, the extension is automatically used to sign in to any other supported app or website.
-
-You can test Single Sign on by opening Safari in [Private mode](https://support.apple.com/guide/ipad/browse-the-web-privately-ipad8ea0fc1a/ipados) (opens Apple's web site) and opening the site https://portal.office.com, no username and password will be required.
-:::image type="content" source="./media/apple-enterprise-sso-plug-in/ipad-sso-animated.gif" alt-text="Animation showing SSO experience on iPadOS":::
-
+[!INCLUDE [Apple iOS End User Experience Boilerplate](../includes/apple-enterprise-sso-ios-end-user-experience-boilerplate.md)]
 
 ## Next steps
 

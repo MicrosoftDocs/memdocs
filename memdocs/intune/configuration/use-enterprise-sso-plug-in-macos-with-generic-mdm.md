@@ -29,13 +29,7 @@ ms.collection: M365-identity-device-management
 
 # Configure the Microsoft Enterprise SSO plug-in on macOS devices with a Mobile Device Management solution (MDM)
 
-The Microsoft Enterprise SSO plug-in (preview) provides single sign-on (SSO) to apps and websites that use Microsoft Azure Active Directory (Azure AD) for authentication, including Microsoft 365. This plug-in uses the Apple single sign-on app extension framework. It reduces the number of authentication prompts users get when using devices managed by Mobile Device Management (MDM), including any MDM that supports configuring SSO profiles.
-
-Once set up, apps that support the Microsoft Authentication Library (MSAL) automatically take advantage of the Microsoft Enterprise SSO plug-in (preview). Apps that don't support MSAL can be allowed to use the extension. Just add the application bundle ID or prefix to the extension configuration.  
-
-For example, to allow a Microsoft app that doesn't support MSAL, add `com.microsoft.` to the **AppPrefixAllowList** property. Be careful with the apps you allow, they'll be able to bypass interactive sign-in prompts for the signed in user.
-
-For more information, see [Microsoft Enterprise SSO plug-in for Apple devices - apps that don't use MSAL](/azure/active-directory/develop/apple-sso-plugin#applications-that-dont-use-msal).
+[!INCLUDE [Apple SSO Boilerplate](../includes/apple-enterprise-sso-intro-boilerplate.md)]
 
 This feature applies to:
 
@@ -43,10 +37,7 @@ This feature applies to:
 
 This article explains how to deploy the Microsoft Enterprise SSO plug-in (preview) for macOS Devices with a generic MDM solution..
 
-> [!IMPORTANT]
-> The Microsoft Enterprise SSO plug-in for Apple Devices is in public preview. This preview version is provided without a service level agreement (SLA). It's not recommended to use in production. Certain features might not be supported or might have restricted behavior. For more information, see:
->
-> - [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/)
+[!INCLUDE [Apple SSO Disclaimer Boilerplate](../includes/apple-enterprise-sso-disclaimer-boilerplate.md)]
 
 ## Prerequisites
 
@@ -65,19 +56,7 @@ To use the Microsoft Enterprise SSO plug-in for Apple devices:
 > On macOS devices, Apple requires the Company Portal app to be installed.
 Users don't need to use the Company Portal app. The app just need to be installed on the device.
 
-## Microsoft Enterprise SSO plug-in vs. Kerberos SSO extension
-
-When you use the SSO app extension, you use the **SSO** or **Kerberos** Payload Type for authentication. The SSO app extension is designed to improve the sign-in experience for apps and websites that use these authentication methods.
-
-The Microsoft Enterprise SSO plug-in uses the **SSO** Payload Type with **Redirect** authentication. The SSO Redirect and Kerberos extension types can both be used on a device at the same time. Be sure to create separate device profiles for each extension type you plan to use on your devices.
-
-To determine the correct SSO extension type for your scenario, use the following table:
-
----
-| Microsoft Enterprise SSO plug-in for Apple Devices | Single sign-on app extension with Kerberos |
-| --- | --- |
-| Uses the **Microsoft Azure AD** SSO app extension type | Uses the **Kerberos** SSO app extension type |
-| Supports the following apps: <br/> - Microsoft 365 <br/> - Apps, websites or services integrated with Azure AD | Supports the following apps: <br/><br/> - Apps, websites or services integrated with AD <br/> |
+[!INCLUDE [Apple Kerberos Extension Boilerplate](../includes/apple-enterprise-sso-kerberos-boilerplate.md)]
 
 ---
 
@@ -115,25 +94,7 @@ In the MDM portal, you create a Device Configuration profile. This profile inc
 
 When the device checks in with the MDM service, it receives this profile.
 
-## End user experience
-
-:::image type="content" source="./media/apple-enterprise-sso-plug-in/flow-chart-end-user-macOS.png" alt-text="End user flow chart when installing SSO app app extension on macOS devices in Microsoft Intune.":::
-
-- If you're not deploying the Company Portal using an app policy, then users must install it manually. Users don't need to use the Company Portal app, it just needs to be installed on the device.
-
-- Users sign in to any supported app or website to bootstrap the extension. Bootstrap is the process of signing in for the first time, which sets up the extension.  
-
-:::image type="content" source="./media/apple-enterprise-sso-plug-in/user-signs-in.png" alt-text="Users signs in to app or website to bootstrap the SSO app extension on macOS devices.":::
-
-- After users sign in successfully, the extension is automatically used to sign in to any other supported app or website.
-
-You can test Single Sign on by opening [Safari in Private mode](https://support.apple.com/guide/safari/browse-privately-ibrw1069/mac)  (opens Apple's web site) and opening the site https://portal.office.com, no username and password will be required.
-:::image type="content" source="./media/apple-enterprise-sso-plug-in/macos-sso-animated.gif" alt-text="Users signs in to app or website to bootstrap the SSO app extension on iOS/iPadOS and macOS devices in Microsoft Intune.":::
-
-On macOS, users are prompted to opt in or out of SSO when they sign in to a work or school app. They can select **Don’t ask me again** to opt out of SSO and block future requests.
-
-Users can also manage their SSO preferences in the Company Portal app for macOS. To edit preferences, go to the Company Portal menu bar > **Company Portal** > **Settings**. They can select or deselect **Don’t ask me to sign in with single sign-on for this device**.
-:::image type="content" source="./media/apple-enterprise-sso-plug-in/macOS-5.png" alt-text="Don’t ask me to sign in with single sign-on for this device.":::
+[!INCLUDE [Apple iOS End User Experience Boilerplate](../includes/apple-enterprise-sso-macos-end-user-experience-boilerplate.md)]
 
 ## Next steps
 
