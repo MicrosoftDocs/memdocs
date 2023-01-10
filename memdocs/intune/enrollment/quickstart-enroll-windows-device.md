@@ -82,7 +82,7 @@ Before enrolling your Windows device, you must confirm the version of Windows th
 
     ![Select Access work school account](./media/quickstart-enroll-windows-device/quickstart-enroll-windows-device-04.png)
 
-3. Sign in to Intune with your work or school account, and then select **Next**. If you followed the [create a user and assign a license](../fundamentals/quickstart-create-user.md) quickstart, you can sign in with the user account that you created.  
+3. Enter the username and password for your work account, and then select **Next**. If you followed the [create a user and assign a license](../fundamentals/quickstart-create-user.md) quickstart, you can sign in with the user account that you created.  
 
    ![Enter your work or school account](./media/quickstart-enroll-windows-device/quickstart-enroll-windows-device-05.png)
 
