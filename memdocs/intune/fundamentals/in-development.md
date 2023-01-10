@@ -8,7 +8,7 @@ keywords:
 author: dougeby 
 ms.author: dougeby
 manager: dougeby
-ms.date: 01/04/2023
+ms.date: 01/09/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -157,23 +157,6 @@ You will soon be able to complete "Bulk Device Actions" for devices running Andr
 
 Applies to:
 - AOSP
-
-### The Company Portal app will enforce Password Complexity setting on Android Enterprise 12+ personally owned devices with a work profile<!-- 16211313  -->  
-On Android Enterprise 12+ personally owned devices with a work profile, you can create a compliance policy and/or device configuration profile that sets the password complexity. Starting with the 2211 release, this setting is available in the Endpoint Manager admin center:
-
-- **Devices** > **Configuration profiles** > **Create profile** > **Android Enterprise** for platform > Personally owned with a work profile
-- **Devices** > **Compliance policies** > **Create policy** > **Android Enterprise** for platform > Personally owned with a work profile
-
-The Company Portal app will enforce the **Password complexity** setting in its January release.
-
-For more information on this setting and the other settings you can configure on personally owned devices with a work profile, go to:
-
-- [Device compliance settings for Android Enterprise in Intune](../protect/compliance-policy-create-android-for-work.md#personally-owned-work-profile)
-- [Android Enterprise device settings list to allow or restrict features on personally owned devices using Intune](../configuration/device-restrictions-android-enterprise-personal.md)
-
-Applies to:
-
-- Android Enterprise 12+ personally owned devices with a work profile
 
 ### Grace period status visible in Intune Company Portal app for Android <!-- 13498225 -->  
 The Intune Company Portal app for Android will show a grace period status to account for devices that don't meet compliance requirements but are still within their given grace period.  Users will see the date by which they need to become compliant and the instructions for how to become compliant. If they don't update their device by the given date, their status will change to noncompliant.
