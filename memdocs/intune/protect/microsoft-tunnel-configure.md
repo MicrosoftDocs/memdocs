@@ -70,6 +70,9 @@ Use of a *Server configuration* lets you create a configuration a single time an
   > 
 
 5. On the **Review + create** tab, review the configuration, and then select **Create** to save it.
+  > [!NOTE]
+  > By default, each VPN session will stay active for only 3600 second (1 hour) before it disconnects (A new session will be established immediately in case the client is set to use AlwaysOn VPN)
+  > Also, you can modify the session timeout value along with other server configuration settings using [graph calls (microsoftTunnelConfiguration)](https://learn.microsoft.com/en-us/graph/api/resources/intune-mstunnel-microsofttunnelconfiguration?view=graph-rest-1.0)
 
 ## Create a Site
 
