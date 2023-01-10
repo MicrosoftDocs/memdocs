@@ -13,7 +13,7 @@ ms.custom: include file
 
 ## End user experience
 
-:::image type="content" source="./media/apple-enterprise-sso-plug-in/flow-chart-end-user-iOSiPadOS.png" alt-text="End user flow chart when installing SSO app app extension on iOS/iPadOS devices.":::
+:::image type="content" source="../configuration/media/apple-enterprise-sso-plug-in/flow-chart-end-user-iOSiPadOS.png" alt-text="End user flow chart when installing SSO app app extension on iOS/iPadOS devices.":::
 
 - If you're not deploying the Microsoft Authenticator using an app policy, then users must install it manually. Users don't need to use the Authenticator app, it just needs to be installed on the device.
 
@@ -22,4 +22,4 @@ ms.custom: include file
 - After users sign in successfully, the extension is automatically used to sign in to any other supported app or website.
 
 You can test Single Sign on by opening Safari in [Private mode](https://support.apple.com/guide/ipad/browse-the-web-privately-ipad8ea0fc1a/ipados) (opens Apple's web site) and opening the site https://portal.office.com, no username and password will be required.
-:::image type="content" source="./media/apple-enterprise-sso-plug-in/ipad-sso-animated.gif" alt-text="Animation showing SSO experience on iPadOS":::
+:::image type="content" source="../configuration/media/apple-enterprise-sso-plug-in/ipad-sso-animated.gif" alt-text="Animation showing SSO experience on iPadOS":::

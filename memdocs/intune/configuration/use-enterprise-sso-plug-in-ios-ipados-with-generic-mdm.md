@@ -9,7 +9,7 @@ ms.author: alessanc
 manager: ianfarr
 ms.date: 12/12/2022
 ms.topic: how-to
-ms.service: 
+ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
 ms.technology:
