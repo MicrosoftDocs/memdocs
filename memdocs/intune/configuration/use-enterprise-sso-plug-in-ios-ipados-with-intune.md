@@ -68,7 +68,7 @@ In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwli
 
 4. Select **Create**.
 
-:::image type="content" source="./media/apple-enterprise-sso-plug-in/iOS-1.png" alt-text="Creating a device configuration profile in Intune":::
+    :::image type="content" source="./media/apple-enterprise-sso-plug-in/iOS-1.png" alt-text="Creating a device configuration profile in Intune":::
 
 5. In **Basics**, enter the following properties:
 
@@ -90,7 +90,7 @@ In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwli
 
     - **Additional configuration**: To customize the end user experience, you can add the following properties. The properties below reflect the defaults used by the SSO Extension, but they may be customized to suit your needs:
 
-      [!INCLUDE [Apple SSO Recommended Settings Table Boilerplate](../includes/apple-enterprise-sso-recommended-settings-boilerplate.md)]
+      [!INCLUDE [Apple SSO Recommended Settings Table Boilerplate](../includes/apple-enterprise-sso-recommended-settings-intune-and-generic-mdm-boilerplate.md)]
       
       When you have completed the configuration of the recommended settings they will appear as below in your Intune configuration profile:
       :::image type="content" source="./media/apple-enterprise-sso-plug-in/iOS-3.png" alt-text="Additional configuration options in Intune":::

@@ -35,7 +35,7 @@ This feature applies to:
 
 - macOS
 
-This article explains how to deploy the Microsoft Enterprise SSO plug-in (preview) for macOS Devices with a generic MDM solution..
+This article explains how to deploy the Microsoft Enterprise SSO plug-in (preview) for macOS Devices with a generic MDM solution.
 
 [!INCLUDE [Apple SSO Disclaimer Boilerplate](../includes/apple-enterprise-sso-disclaimer-boilerplate.md)]
 
@@ -47,10 +47,8 @@ To use the Microsoft Enterprise SSO plug-in for Apple devices:
 - The MDM solution must support configuring [Single Sign-on MDM payload settings for Apple devices](https://support.apple.com/guide/deployment/extensible-single-sign-on-payload-settings-depfd9cdf845/web) with a device policy
 - The device must support the plug-in:
   - macOS 10.15 and newer
-
 - Microsoft Company Portal app installed on the device.
-
-  The Microsoft Company Portal app can be installed manually by users, or deployed with an MDM. You can download the Company Portal app installer from this location: [https://go.microsoft.com/fwlink/?linkid=853070](https://go.microsoft.com/fwlink/?linkid=853070)
+  - The Microsoft Company Portal app can be installed manually by users, or deployed with an MDM. You can download the Company Portal app installer from this location: [https://go.microsoft.com/fwlink/?linkid=853070](https://go.microsoft.com/fwlink/?linkid=853070)
 
 > [!NOTE]
 > On macOS devices, Apple requires the Company Portal app to be installed.
@@ -62,7 +60,7 @@ Users don't need to use the Company Portal app. The app just need to be installe
 
 For more information on the single sign-on extension, see [Single sign-on app extension](device-features-configure.md#single-sign-on-app-extension).
 
-## Create a single sign-on app extension device configuration profile 
+## Create a single sign-on app extension device configuration profile
 
 In the MDM portal, you create a Device Configuration profile. This profile includes the settings to configure the SSO app extension on devices.
 
@@ -76,10 +74,10 @@ In the MDM portal, you create a Device Configuration profile. This profile inc
       | Payload Type | SSO |
       | Extension Identifier | com.microsoft.CompanyPortalMac.ssoextension |
       | Team Identifier | UBF8T346G9
-      | Sign-On Type | **Redirect** |
+      | Sign-On Type | Redirect |
       | URLs | - `https://login.microsoftonline.com` <br/> - `https://login.microsoft.com` <br/> - `https://sts.windows.net` <br/> - `https://login.partner.microsoftonline.cn` <br/> - `https://login.chinacloudapi.cn` <br/>  - `https://login.microsoftonline.us` <br/> - `https://login.usgovcloudapi.net` <br/> - `https://login-us.microsoftonline.com` |
 
-5. Optionally you can configure other properties. The properties below reflect the defaults used by the SSO Extension, but they may be customized to suit your needs:
+5. Optionally you can configure other properties. The properties below reflect the defaults used by the Microsoft SSO Extension, but they may be customized to suit your needs:
 
       [!INCLUDE [Apple SSO Recommended Settings Table Boilerplate](../includes/apple-enterprise-sso-recommended-settings-boilerplate.md)]
 
@@ -87,7 +85,7 @@ In the MDM portal, you create a Device Configuration profile. This profile inc
 
 When the device checks in with the MDM service, it receives this profile.
 
-[!INCLUDE [Apple iOS End User Experience Boilerplate](../includes/apple-enterprise-sso-macos-end-user-experience-boilerplate.md)]
+[!INCLUDE [Apple iOS End User Experience Boilerplate](../includes/apple-enterprise-sso-recommended-settings-intune-and-generic-mdm-boilerplate.md)]
 
 ## Next steps
 

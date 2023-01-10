@@ -23,4 +23,4 @@ To determine the correct SSO extension type for your scenario, use the following
 | Microsoft Enterprise SSO plug-in for Apple Devices | Single sign-on app extension with Kerberos |
 | --- | --- |
 | Uses the **Microsoft Azure AD** SSO app extension type | Uses the **Kerberos** SSO app extension type |
-| Supports the following apps: <br/> - Microsoft 365 <br/> - Apps, websites or services integrated with Azure AD | Supports the following apps: <br/><br/> - Apps, websites or services integrated with AD <br/> |
+| Supports the following apps: <br/> - Microsoft 365 <br/> - Apps, websites or services integrated with Azure AD | Supports the following apps: <br/> - Apps, websites or services integrated with AD <br/> <br/> |

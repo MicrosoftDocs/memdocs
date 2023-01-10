@@ -35,7 +35,6 @@ This feature applies to:
 
 - iOS/iPadOS
 
-
 This article shows how to deploy the Microsoft Enterprise SSO plug-in (preview) for iOS/iPadOS Devices with Jamf Pro.
 
 [!INCLUDE [Apple SSO Disclaimer Boilerplate](../includes/apple-enterprise-sso-disclaimer-boilerplate.md)]
@@ -47,10 +46,8 @@ To use the Microsoft Enterprise SSO plug-in for Apple devices:
 - The device must be managed via Jamf Pro
 - The device must support the plug-in:
   - iOS/iPadOS 13.0 and newer
-
 - Microsoft Authenticator app installed on the device.
-
-  The Microsoft Authenticator app can be installed manually by users, or by deploying the app through Jamf Pro. For a list of options on how to install the Microsoft Authenticator app, see [Jamf Pro's documentation](https://docs.jamf.com/10.24.1/jamf-pro/administrator-guide/Managing_macOS_Installers.html).
+  - The Microsoft Authenticator app can be installed manually by users, or by deploying the app through Jamf Pro. For a list of options on how to install the Microsoft Authenticator app, see [Jamf Pro's documentation](https://docs.jamf.com/10.24.1/jamf-pro/administrator-guide/Managing_macOS_Installers.html).
 
 > [!NOTE]
 > On iOS and iPadOS devices, Apple requires that the SSO app extension and the Microsoft Authenticator app be installed. Users don't need to use the Microsoft Authenticator app, it just needs to be installed on the device.
@@ -123,7 +120,7 @@ In the Jamf Pro portal, you create a Computer or Device configuration profile.
 
     - These PLIST settings configure the following SSO Extension options. The properties below reflect the defaults used by the SSO Extension, but they may be customized to suit your needs:
 
-    [!INCLUDE [Apple SSO Recommended Settings Table Boilerplate](../includes/apple-enterprise-sso-recommended-settings-boilerplate.md)]
+    [!INCLUDE [Apple SSO Recommended Settings Table Boilerplate](../includes/apple-enterprise-sso-recommended-settings-jamf-pro-boilerplate.md)]
 
 6. Select the **Scope** tab. Enter the computers or devices that should be targeted to receive the SSO Extension MDM profile.
 7. Select **Save**.

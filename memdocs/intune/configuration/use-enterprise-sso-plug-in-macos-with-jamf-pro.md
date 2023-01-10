@@ -46,10 +46,8 @@ To use the Microsoft Enterprise SSO plug-in for Apple devices:
 - The device must be managed via Jamf Pro
 - The device must support the plug-in:
   - macOS 10.15 and newer
-
 - Company Portal app installed on the device.
-
-  The Company Portal app can be installed manually by users, or by deploying the app through Jamf Pro. For a list of options on how to install the Company Portal app, see [Jamf Pro's documentation](https://docs.jamf.com/10.24.1/jamf-pro/administrator-guide/Managing_macOS_Installers.html).
+  - The Company Portal app can be installed manually by users, or by deploying the app through Jamf Pro. For a list of options on how to install the Company Portal app, see [Jamf Pro's documentation](https://docs.jamf.com/10.24.1/jamf-pro/administrator-guide/Managing_macOS_Installers.html).
 
 > [!NOTE]
 > On macOS devices, Apple requires that the Company Portal app be installed. Users don't need to use the Company Portal, the app just need to be installed on the device.
@@ -119,9 +117,9 @@ In the Jamf Pro portal, you create a Computer configuration profile. This prof
 
     :::image type="content" source="./media/apple-enterprise-sso-plug-in/sso-extension-custom-configuration-plist.png" alt-text="See a sample custom configuration with a PLIST file for Jamf Pro.":::
 
-    - These PLIST settings configure the following SSO Extension options. The properties below reflect the defaults used by the SSO Extension, but they may be customized to suit your needs:
+    - These PLIST settings configure the following SSO Extension options. The properties below reflect the defaults used by the Microsoft SSO Extension, but they may be customized to suit your needs:
 
-    [!INCLUDE [Apple SSO Recommended Settings Table Boilerplate](../includes/apple-enterprise-sso-recommended-settings-boilerplate.md)]
+    [!INCLUDE [Apple SSO Recommended Settings Table Boilerplate](../includes/apple-enterprise-sso-recommended-settings-jamf-pro-boilerplate.md)]
 
 6. Select the **Scope** tab. Enter the computers or devices that should be targeted to receive the SSO Extension MDM profile.
 7. Select **Save**.

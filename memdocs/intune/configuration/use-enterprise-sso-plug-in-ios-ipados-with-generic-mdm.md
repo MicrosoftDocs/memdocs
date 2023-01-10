@@ -35,7 +35,7 @@ This feature applies to:
 
 - iOS/iPadOS
 
-This article explains how to deploy the Microsoft Enterprise SSO plug-in (preview) for iOS/iPadOS Devices with a generic MDM solution..
+This article explains how to deploy the Microsoft Enterprise SSO plug-in (preview) for iOS/iPadOS Devices with a generic MDM solution.
 
 [!INCLUDE [Apple SSO Disclaimer Boilerplate](../includes/apple-enterprise-sso-disclaimer-boilerplate.md)]
 
@@ -47,10 +47,8 @@ To use the Microsoft Enterprise SSO plug-in for Apple devices:
 - The MDM solution must support configuring [Single Sign-on MDM payload settings for Apple devices](https://support.apple.com/guide/deployment/extensible-single-sign-on-payload-settings-depfd9cdf845/web) with a device policy
 - The device must support the plug-in:
   - iOS/iPadOS 13.0 and newer
-
 - Microsoft Authenticator app installed on the device.
-
-The Microsoft Authenticator app can be installed manually by users, or deployed with an MDM.
+  - The Microsoft Authenticator app can be installed manually by users, or deployed with an MDM.
 
 > [!NOTE]
 > On iOS and iPadOS devices, Apple requires that the SSO app extension and the Microsoft Authenticator app be installed. Users don't need to use or configure the Microsoft Authenticator app, it just needs to be installed on the device.
@@ -79,7 +77,7 @@ In the MDM portal, you will create a Device Configuration profile. This profil
 
 5. Optionally you can configure other properties. The properties below reflect the defaults used by the SSO Extension, but they may be customized to suit your needs:
 
-    [!INCLUDE [Apple SSO Recommended Settings Table Boilerplate](../includes/apple-enterprise-sso-recommended-settings-boilerplate.md)]
+    [!INCLUDE [Apple SSO Recommended Settings Table Boilerplate](../includes/apple-enterprise-sso-recommended-settings-intune-and-generic-mdm-boilerplate.md)]
 
 6. Assign the new policy to the devices that should be targeted to receive the SSO Extension MDM profile.
 

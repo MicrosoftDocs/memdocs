@@ -9,7 +9,7 @@ ms.author: miepping
 ms.custom: include file
 ---
 
-<!-- This include file is used in the Apple Enterprise SSO deployment guide docs. -->
+<!-- This include file is used in the Apple Enterprise SSO deployment guide docs for generic MDMs. -->
 
 | Key | Type | Recommended Value | Description |
 | --- | --- | --- | --- |

@@ -39,7 +39,6 @@ This article shows how to deploy the Microsoft Enterprise SSO plug-in (preview) 
 
 - The device must support the plug-in:
   - macOS 10.15 and newer
-
 - The device is managed with Intune.
   - (Company Portal app installed and configured on the device).
 
@@ -63,7 +62,7 @@ In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwli
 
 4. Select **Create**.
 
-      :::image type="content" source="./media/apple-enterprise-sso-plug-in/macOS-1.png" alt-text="Device features macOS":::
+    :::image type="content" source="./media/apple-enterprise-sso-plug-in/macOS-1.png" alt-text="Device features macOS":::
 
 5. In **Basics**, enter the following properties:
 
@@ -78,9 +77,9 @@ In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwli
 
     - **App bundle ID**: Enter a list of bundle IDs for apps that don't support MSAL **and** are allowed to use SSO. For more information, see [Applications that don't use MSAL](/azure/active-directory/develop/apple-sso-plugin#enable-sso-for-apps-that-dont-use-a-microsoft-identity-platform-library).
 
-    - **Additional configuration**: To customize the end user experience, you can add the following properties. The properties below reflect the defaults used by the SSO Extension, but they may be customized to suit your needs:
+    - **Additional configuration**: To customize the end user experience, you can add the following properties. The properties below reflect the defaults used by the Microsoft SSO Extension, but they may be customized to suit your needs:
 
-      [!INCLUDE [Apple SSO Recommended Settings Table Boilerplate](../includes/apple-enterprise-sso-recommended-settings-boilerplate.md)]
+      [!INCLUDE [Apple SSO Recommended Settings Table Boilerplate](../includes/apple-enterprise-sso-recommended-settings-intune-and-generic-mdm-boilerplate.md)]
 
       When you have completed the configuration of the recommended settings they will appear as below in your Intune configuration profile:
       :::image type="content" source="./media/apple-enterprise-sso-plug-in/iOS-3.png" alt-text="Additional configuration options in Intune":::
