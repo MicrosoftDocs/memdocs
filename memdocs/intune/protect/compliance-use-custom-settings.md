@@ -51,8 +51,6 @@ After you’ve deployed custom compliance settings and devices have reported bac
 - **Azure Active Directory (Azure AD) joined** devices, *including* hybrid Azure AD-joined devices. 
 
   Hybrid Azure AD-joined devices are devices that are joined to Azure AD and also joined to on-premises Active Directory. For more information, see [Plan your hybrid Azure AD join implementation](/azure/active-directory/devices/hybrid-azuread-join-plan).
-  
-  Devices that aren't Azure AD joined or aren't hybrid Azure AD-joined are evaluated as not applicable.
 
 - **Azure AD registered/Workplace joined (WPJ)**
 
