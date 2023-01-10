@@ -3,7 +3,7 @@
 
 title: Tutorial - Use Apple Business Manager to enroll iOS/iPadOS devices in Intune
 titleSuffix: Microsoft Intune
-description: In this tutorial, you'll set up Apple's corporate device enrollment features from ABM to enroll iOS/iPadOS devices in Intune.
+description: In this tutorial, you'll set up Apple corporate device enrollment features with Intune to enroll iOS/iPadOS devices purchased through Apple Business Manager.  
 keywords:
 author: Lenewsad
 ms.author: lanewsad
@@ -15,14 +15,14 @@ ms.subservice: enrollment
 ms.localizationpriority: high
 ms.technology:
 ms.assetid: 
-Customer intent: As an Intune admin, I want to set up the Apple's corporate device enrollment features so that corporate devices can automatically enroll in Intune.
+Customer intent: As an Intune admin, I want to set up automated device enrollment for iOS/iPadOS devices I purchased through Apple Business Manager and managed devices in Intune.  
 ms.collection:
   - M365-identity-device-management
   - highpri
 ---
 
-# Tutorial: Use Apple corporate device enrollment features in Apple Business Manager (ABM) to enroll iOS/iPadOS devices in Intune
-Use Apple Business Manager with Microsoft Intune to simplify and automate enrollment of corporate-owned iOS/iPados OS devices procured through Apple Business Manager. *Automated device enrollment*, which we'll use in this tutorial, enables secure automatic enrollment the first time the user turns on the device by deploying the enrollment profile to devices over-the-air.  
+# Tutorial: Set up Microsoft Intune enrollment for iOS/iPadOS devices in Apple Business Manager  
+Use Apple Business Manager with Microsoft Intune to simplify and automate device enrollment for iOS/iPados OS devices procured through Apple Business Manager. *Automated device enrollment*, which we'll use in this tutorial, enables secure automatic enrollment the first time the user turns on the device by deploying the enrollment profile to devices over-the-air.  
 
 In this tutorial, you'll learn how to:
 > [!div class="checklist"]
