@@ -37,7 +37,7 @@ At the end of this tutorial, devices will be ready to distribute for enrollment.
 - Set [mobile device management (MDM) authority](../fundamentals/mdm-authority-set.md).      
 - Get [Apple MDM Push certificate](apple-mdm-push-certificate-get.md).   
 - Have new or wiped devices purchased from Apple Business Manager.    
-- Add purchase information under device managment settings in [Apple Business Manager](https://business.apple.com).    
+- Add purchase information under device management settings in [Apple Business Manager](https://business.apple.com).    
 
 If you don't have an Intune subscription, [sign up for a free trial account](../fundamentals/free-trial-sign-up.md).    
 
