@@ -79,7 +79,7 @@ Complete these steps to enable multi-factor authentication during Microsoft Intu
 
 1. Under **Conditions** you don't need to configure any settings for MFA.
 1. Select the **Grant** category.  
-   1. Select **Require multifactor authentication** and **Require device to be marked as compliant**.
+   1. Select **Require multifactor authentication**.
    1. Under **For multiple controls**, select **Require all the selected controls**.  
    1. Choose **Select**.
 1. Select the **Session** category.  
