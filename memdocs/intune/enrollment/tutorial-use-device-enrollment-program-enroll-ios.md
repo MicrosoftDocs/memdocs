@@ -41,8 +41,8 @@ At the end of this tutorial, devices will be ready to distribute for enrollment.
 
 If you don't have an Intune subscription, [sign up for a free trial account](../fundamentals/free-trial-sign-up.md).    
 
-## Step 1: Add MDM server and get server token  
-Create an MDM server profile in Apple Business Manager for your Microsoft Intune server, and download the server's token. The token, which we'll upload in the admin center later, creates the connection between Microsoft Intune and Apple Business Manager. It enables Intune to upload enrollment profiles to Apple Business Manager and assign devices to them.   
+## Step 1: Add MDM server      
+Create an MDM server profile for Microsoft Intune in Apple Business Manager. The token you download in this step will enable the connection between Microsoft Intune and Apple Business Manager in a later step.    
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Go to **Devices** > **iOS/iPadOS** > **iOS/iPadOS enrollment**.  
@@ -55,19 +55,19 @@ Create an MDM server profile in Apple Business Manager for your Microsoft Intune
     >[!IMPORTANT] 
     > While you're in Apple Business Manager, don't close the browser tab with Microsoft Endpoint Manager. You'll return to it later.  
 
-6. Add an MDM server and download the server token (P7M file). For details and instructions, see [Link to a third-party MDM server](https://support.apple.com/guide/apple-business-manager/axm1c1be359d/web)(opens Apple Business Manager User Guide). Save the server token as a .p7m file. Once you've downloaded and saved the server token, continue to [Step 2: Assign devices](tutorial-use-device-enrollment-program-enroll-ios.md#step-2-assign-devices).  
+6. Add an MDM server and download the server token (P7M file) in Apple Business Manager. For details and instructions, see [Link to a third-party MDM server](https://support.apple.com/guide/apple-business-manager/axm1c1be359d/web)(opens Apple Business Manager User Guide). Save the server token locally as a P7M file (.p7m). Then continue to [Step 2: Assign devices](tutorial-use-device-enrollment-program-enroll-ios.md#step-2-assign-devices).  
 
 ## Step 2: Assign devices  
 
-While you're in Apple Business Manager, assign devices to your new MDM server (*TestMDMServer* or whatever you named it). For details and instructions, see [Assign, reassign, or unassign devices in Apple Business Manager](https://support.apple.com/guide/apple-business-manager/axmf500c0851/web)(opens Apple Business Manager User Guide). When you're done assigning devices, contnue to [Step 3: Upload MDM server token file](tutorial-use-device-enrollment-program-enroll-ios.md#step-3-upload-mdm-server-token-file).   
+While you're in Apple Business Manager, assign devices to your new MDM server (*TestMDMServer* or whatever you named it). For details and instructions, see [Assign, reassign, or unassign devices in Apple Business Manager](https://support.apple.com/guide/apple-business-manager/axmf500c0851/web)(opens Apple Business Manager User Guide). When you're done assigning devices, continue to [Step 3: Upload MDM server token file](tutorial-use-device-enrollment-program-enroll-ios.md#step-3-upload-mdm-server-token-file).   
 
-## Step 3: Upload MDM server token file     
+## Step 3: Upload MDM server token     
 Return to the Microsoft Endpoint Manager admin center to upload the MDM server token file to Intune. After you upload the token, Microsoft Intune can sync and enroll iOS/iPadOS devices assigned to *TestMDMServer*.   
 
 1. In **Apple ID**, enter the Apple ID you used to create the token.  
 2. Under **Apple token**, upload the server token file you saved earlier. The file must be in P7M format.     
 3. Select **Next**.  
-4. Optionally, apply scope tags to the enrollment token to to limit other admins from accessing or making changes to it. For more information about scope tags, see [Use role-based access control (RBAC) and scope tags for distributed IT](../fundamentals/scope-tags.md). 
+4. Optionally, apply scope tags to the enrollment token to limit other admins from accessing or making changes to it. For more information about scope tags, see [Use role-based access control (RBAC) and scope tags for distributed IT](../fundamentals/scope-tags.md). 
 5. Select **Next**.  
 6. On the **Review + create tab, select **Create** to  finish linking Microsoft Intune and Apple Business Manager.  
 
@@ -78,27 +78,27 @@ Create an enrollment profile for corporate-owned iOS/iPadOS devices. A device en
 
 1. Select your token in the admin center, and then choose **Profiles** > **Create profile** > **iOS/iPadOS**.  
 
-2. On the **Basics** page, enter *TestProfile* for **Name** and *Testing ADE for iOS/iPadOS devices* for **Description**. Users do not see these details.
+2. On the **Basics** page, enter *TestProfile* for **Name** and *Testing ADE for iOS/iPadOS devices* for **Description**. Users don't see these details.
 
 3. Select **Next**.
 
-4. On the **Management Settings** page, decide if you want your devices to enroll with or without **User Affinity**. User Affinity is designed for devices that will be used by particular users. If your users will want to use the Company Portal for services like installing apps, choose **Enroll with User Affinity**. If your users do not need the Company Portal or you want to provision the device for many users, choose **Enroll without User Affinity**.
+4. On the **Management Settings** page, decide if you want your devices to enroll with or without **User Affinity**. User Affinity is designed for devices that will be used by particular users. If your users will want to use the Company Portal for services like installing apps, choose **Enroll with User Affinity**. If your users don't need the Company Portal or you want to provision the device for many users, choose **Enroll without User Affinity**.
 
 5. If you chose to enroll with User Affinity, the **Select where users must authenticate** option appears. Decide if you want to Authenticate with Company Portal or Apple Setup Assistant.
-   - **Company Portal**: Select this option to use Multi-Factor Authentication, allow users to change passwords upon first sign in, or prompt users to reset their expired passwords during enrollment. If you want the Company Portal application to update automatically on end users' devices, separately deploy the Company Portal as a required app to these users through Apple's Volume Purchasing Program (VPP).
+   - **Company Portal**: Select this option to use Multi-Factor Authentication, allow users to change passwords upon first sign-in, or prompt users to reset their expired passwords during enrollment. If you want the Company Portal application to update automatically on end users' devices, separately deploy the Company Portal as a required app to these users through Apple's Volume Purchasing Program (VPP).
    - **Setup Assistant**: Select this option to use Apple's provided basic HTTP authentication through Apple Setup Assistant
   
 6. If you chose to enroll with User Affinity and Authenticate with Company Portal, the **Install Company Portal with VPP** option appears. If you install the Company Portal with a VPP token, your user won't have to enter an Apple ID and Password to download the Company Portal from the app store during enrollment. Choose **Use Token:** under **Install Company Portal with VPP** to select a VPP token that has free licenses of the Company Portal available. If you don't want to use VPP to deploy the Company Portal, choose **Don't use VPP**. 
 
-7. If you chose to enroll with User Affinity, Authenticate with Company Portal, and Install Company Portal with VPP, decide if you want to run the Company Portal in Single App Mode until Authentication. This setting allows you to ensure the user will not have access to other apps until they have finished the corporate enrollment. If you want to restrict the user to this flow until enrollment is completed, choose **Yes** under **Run Company Portal in Single App Mode until authentication**. 
+7. If you chose to enroll with User Affinity, Authenticate with Company Portal, and Install Company Portal with VPP, decide if you want to run the Company Portal in Single App Mode until Authentication. With this setting, you can ensure the user doesn't have access to other apps until they finish the corporate enrollment. If you want to restrict the user to this flow until enrollment is completed, choose **Yes** under **Run Company Portal in Single App Mode until authentication**. 
 
 8. Under **Device Management Settings**, choose **Yes** under **Supervised** (if you chose **Enroll with User Affinity**, this is automatically set to **Yes**). Supervised devices give you the most management options for your corporate iOS/iPadOS devices.
 
-9. Choose **Yes** under **Locked enrollment** to ensure your users cannot remove management of the corporate device. 
+9. Choose **Yes** under **Locked enrollment** to ensure your users can't remove management of the corporate device. 
 
 10. Choose an option under **Sync with Computers** to determine if the iOS/iPadOS devices will be able to sync with computers.
 
-11. By default, Apple names the device with the device type (i.e. iPad). If you want to provide a different name template, choose **Yes** under **Apply device name template**. Enter the name you want to apply to the devices, where the strings *{{SERIAL}}* and *{{DEVICETYPE}}* will substitute each device's serial number and device type. Otherwise, choose **No** under **Apply device name template**.
+11. By default, Apple names the device with the device type, such as *iPad*. If you want to provide a different name template, choose **Yes** under **Apply device name template**. Enter the name you want to apply to the devices, where the strings *{{SERIAL}}* and *{{DEVICETYPE}}* will substitute each device's serial number and device type. Otherwise, choose **No** under **Apply device name template**.
 
 12. Choose **Next**.
 
@@ -106,7 +106,7 @@ Create an enrollment profile for corporate-owned iOS/iPadOS devices. A device en
 
 14. Under **Department Phone**, enter a phone number. This number appears when users tap the **Need help** button during activation.
 
-15. You can **Show** or **Hide** a variety of screens during device activation. For the most seamless enrollment experience, set all screens to **Hide**.
+15. You can **Show** or **Hide** various screens during device activation. For the most seamless enrollment experience, set all screens to **Hide**.
 
 16. Choose **Next** to go to the **Review + Create** page. Select **Create**.  
 
