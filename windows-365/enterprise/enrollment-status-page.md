@@ -54,7 +54,7 @@ There are two ways to target ESP profiles with Cloud PCs:
 - Default ESP profiles targeting the **All devices** built-in virtual group.
 - Custom ESP profiles targeting the **All devices** built-in virtual group and using a filter based on the **enrollmentProfileName (Enrollment profile name)** property. For more information, see [Create a filter for all Cloud PCs from a specific provisioning policy](create-filter.md#create-a-filter-for-all-cloud-pcs-from-a-specific-provisioning-policy).
 
-Both targeting strategies are supported for Hybrid Azure AD join and Azure AD join identity types. For more information, see [Device join types](/windows-365/enterprise/identity-authentication#device-join-types).
+Both targeting strategies are supported for Hybrid Azure AD join and Azure AD join identity types. For more information, see [Device join types](./identity-authentication.md#device-join-types).
 
 <!-- ########################## -->
 ## Next steps
