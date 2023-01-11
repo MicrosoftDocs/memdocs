@@ -239,14 +239,11 @@ Distribute prepared devices throughout your organization. Devices registered wit
 
 ### Enroll Macs during Setup Assistant   
 
-Macs configured in Apple Business Manager or Apple School Manager will automatically enroll in Microsoft Intune during Setup Assistant with a Remote Management prompt.  
-
-> [!NOTE]
-> If the device was assigned to a macOS enrollment profile with user affinity, the device user must sign in to the Company Portal to complete Azure AD registration and conditional access requirements.  
+New or wiped Macs configured in Apple Business Manager or Apple School Manager will automatically enroll in Microsoft Intune during Setup Assistant with a Remote Management prompt. If the device was assigned to a macOS enrollment profile with user affinity, the device user must sign in to the Company Portal to complete Azure AD registration and conditional access requirements.  
 
 ### Enroll Macs after Setup Assistant  
 
-Use these steps to enroll corporate-owned Macs running macOS 10.13 and later in Intune after Setup Assistant completes.  
+Use these steps to enroll existing Macs in Intune. Enrollment takes place after Setup Assistant completes. This procedure is supported on corporate-owned Macs running macOS 10.13 and later.    
 
 1. In the Apple Business Manager or Apple School Manager portal, import the device.
 2. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), make sure that the device is assigned a macOS enrollment profile with or without user affinity.
