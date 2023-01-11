@@ -41,7 +41,7 @@ This article shows how to deploy the Microsoft Enterprise SSO plug-in (preview) 
   - The device is managed with Intune.
   - iOS/iPadOS 13.0 and newer
 - Microsoft Authenticator app installed on the device.
-  The Microsoft Authenticator app can be installed manually by users, or deployed via Intune. For information on how to install the Microsoft Authenticator app, see [Manage Apple volume-purchased apps](../apps/vpp-apps-ios.md).
+  - The Microsoft Authenticator app can be installed manually by users, or deployed via Intune. For information on how to install the Microsoft Authenticator app, see [Manage Apple volume-purchased apps](../apps/vpp-apps-ios.md).
 
 > [!NOTE]
 > On iOS and iPadOS devices, Apple requires that the SSO app extension and the Microsoft Authenticator app be installed. Users don't need to use or configure the Microsoft Authenticator app, it just needs to be installed on the device.
