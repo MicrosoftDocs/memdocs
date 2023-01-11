@@ -232,7 +232,7 @@ items:
         href: pradeo-mobile-threat-defense-connector.md
         items:
         - name: Pradeo and Intune integration
-          href: pradeo-mtd-connector-integration.md
+          href: pradeo-mobile-threat-defense-connector.md
       - name: Set up SentinelOne Mobile
         href: sentinelone-mtd-connector-integration.md
         items:
