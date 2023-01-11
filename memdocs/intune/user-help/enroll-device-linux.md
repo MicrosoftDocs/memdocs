@@ -56,10 +56,11 @@ Install these apps on your device prior to enrollment:
 ## Enroll device  
 Follow these steps to register your personal Linux device on your organization's network.  
 
-1. Open the Microsoft Intune app.  
-2. Sign in with your work or school account.    
-3. Review the pre-enrollment screens. Then select **Next** to begin enrollment. 
-4. Wait a few minutes while the Intune app enrolls your device. 
+1. Open Microsoft Edge. It needs to run at least once after install to initalize componetns that would be used by Microsoft Intune.
+2. Open the Microsoft Intune app.  
+3. Sign in with your work or school account.    
+4. Review the pre-enrollment screens. Then select **Next** to begin enrollment. 
+5. Wait a few minutes while the Intune app enrolls your device. 
    1. If instructed to, update the settings on your device to meet your organization's security requirements.   
    2.  An on-screen confirmation appears when your device is enrolled and ready-to-use for work. You can begin using your device for work right away. 
    3. Sign in to Microsoft Edge with your work or school account to access your org's internal websites.   
