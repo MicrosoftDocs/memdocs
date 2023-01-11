@@ -85,7 +85,7 @@ In the MDM portal, you create a Device Configuration profile. This profile inc
 
 When the device checks in with the MDM service, it receives this profile.
 
-[!INCLUDE [Apple iOS End User Experience Boilerplate](../includes/apple-enterprise-sso-recommended-settings-intune-and-generic-mdm-boilerplate.md)]
+[!INCLUDE [Apple iOS End User Experience Boilerplate](../includes/apple-enterprise-sso-macos-end-user-experience-boilerplate.md)]
 
 ## Next steps
 

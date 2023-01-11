@@ -19,8 +19,6 @@ ms.custom: include file
 
 - Users sign in to any supported app or website to bootstrap the extension. Bootstrap is the process of signing in for the first time, which sets up the extension.  
 
-:::image type="content" source="../configuration/media/apple-enterprise-sso-plug-in/user-signs-in.png" alt-text="Users signs in to app or website to bootstrap the SSO app extension on macOS devices.":::
-
 - After users sign in successfully, the extension is automatically used to sign in to any other supported app or website.
 
 You can test Single Sign on by opening [Safari in Private mode](https://support.apple.com/guide/safari/browse-privately-ibrw1069/mac)  (opens Apple's web site) and opening the site https://portal.office.com, no username and password will be required.
