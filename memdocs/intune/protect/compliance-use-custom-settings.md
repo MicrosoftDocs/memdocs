@@ -56,7 +56,7 @@ After you’ve deployed custom compliance settings and devices have reported bac
 
   Devices [registered](/azure/active-directory/user-help/user-help-register-device-on-network) in Azure Active Directory (AAD), see [Workplace Join as a seamless second factor authentication](/windows-server/identity/ad-fs/operations/join-to-workplace-from-any-device-for-sso-and-seamless-second-factor-authentication-across-company-applications#BKMK_DRS) for more information. Typically these are Bring Your Own Device (BYOD) devices which have had a work or school account added via Settings>Accounts>Access work or school. 
 
-  On WPJ devices, device context PowerShell scripts work, but user context PowerShell scripts are ignored, 
+  On WPJ devices, device context PowerShell scripts work, but user context PowerShell scripts are ignored. 
 
 - **Discovery script** - A PowerShell for Windows or a POSIX-compliant shell script for Linux that you create. The script runs on a device to discover the custom settings defined in your JSON file. The script returns the configuration value of those settings to Intune. You need to upload your script to the Microsoft Endpoint Manager admin center before you create a compliance policy and then select the script you want to use when creating a policy.
 
