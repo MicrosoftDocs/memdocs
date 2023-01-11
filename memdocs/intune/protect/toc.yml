@@ -234,7 +234,7 @@ items:
         - name: Pradeo and Intune integration
           href: pradeo-mtd-connector-integration.md
       - name: Set up SentinelOne Mobile
-        href: sentinelone-mtd-connector.md
+        href: sentinelone-mtd-connector-integration.md
         items:
         - name: SentinelOne Mobile and Intune integration
           href: sentinelone-mtd-connector-integration.md
