@@ -65,7 +65,7 @@ In a future update, the Windows 365 app will support Windows 10.
 
 ### Add more Azure Network Connections to a provisioning policy<!--42906565-->
 
-A new Azure Network Connection (ANC) option lets you add more ANCs to a provisioning policy and define a priority order for their use. By preparing multiple ANCs in different Azure regions, admins can make provisioning more reliable in the rare case capacity constraints in a region.
+A new Azure Network Connection (ANC) option lets you add more ANCs to a provisioning policy and define a priority order for their use. By preparing multiple ANCs in different Azure regions, admins can make provisioning more reliable in the rare case of capacity constraints in a region.
 
 <!--***********************************************-->
 <!--
