@@ -60,9 +60,6 @@ To be eligible for the Windows feature update device readiness and Windows featu
 
 Additionally, you must [enable Windows diagnostic data processor configuration](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#enable-windows-diagnostic-data-processor-configuration).
 
-> [!NOTE]  
-> If your devices are currently enrolled in Desktop Analytics, then the Windows diagnostic data and processor configuration requirements are already met.
-
 ### Users
 
 To view these reports, users must be assigned an Intune role with the **Managed devices** > **View reports** permission. This permission is included in the following built-in roles:
