@@ -39,17 +39,38 @@ When you federate your organization’s Azure AD instance in Apple Business or S
 
 ## Configure Shared iPad
 
-Follow these steps to set up Shared iPads in your environment:
-1. Federate your Azure AD instance with Apple Business Manager or Apple School Manager. For more information, see [Intro to federated authentication with Apple Business Manager](https://support.apple.com/guide/apple-business-manager/intro-to-federated-authentication-apdb19317543/web).
-2. Create an enrollment profile by navigating to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and selecting **Devices** > **iOS/iPadOS** > **iOS/iPadOS Enrollment** > **Enrollment program tokens* > *select a token* > **Profiles** > **Create profile** > **iOS/iPadOS**. 
-3. Enable **Shared iPad** in the enrollment profile under **Management settings**. Set **User affinity** to **Enroll without user affinity** and **Supervised** to **Yes** and then **Shared iPad** to **Yes**. Important note - A device wipe will be required if an iOS/iPadOS enrollment profile with Shared iPad enabled is sent to an unsupported device. Unsupported devices include any iPhone models, and iPads running iPadOS/iOS 13.3 and earlier. Supported devices include iPads running iPadOS 13.3 and later. Shared iPads must be supervised.
-4. Complete configuring the enrollment profile as desired and then select **Save**.
-5. Assign devices synced from Apple Business Manager by selecting the new enrollment profile, then select **Assign devices** > **Add devices**.
-6. Create a dynamic device group containing devices by using the new enrollment profile for Shared iPad by navigating to **Groups** > **New group**. Set **Membership type** to **dynamic device** and select **Add dynamic query** and set **enrollmentProfileName** to the *name of desired enrollment profile*.
-7. Assign required apps and configuration profiles for Shared iPads to the dynamic device group.
-8. For new devices, power on and follow the prompts to set up the device as a Shared iPad. For existing devices, factory reset the device and follow the prompts to set it up as a Shared iPad.
+Follow these steps to set up Shared iPad in your environment.  
 
-## Configure settings for Shared iPads
+>[!IMPORTANT]
+> Shared iPad is supported on supervised iPads running iPadOS 13.3 and later. A device wipe will be required if an enrollment profile enabled with Shared iPad is sent to a device that doesn't support Shared iPad. Shared iPad isn't supported on iPhones, or iPads running iOS/iPadOS version 13.3 and earlier. 
+
+1. Federate your Azure AD instance with Apple Business Manager or Apple School Manager. For more information, see [Intro to federated authentication with Apple Business Manager](https://support.apple.com/guide/apple-business-manager/intro-to-federated-authentication-apdb19317543/web).
+2. Create an enrollment profile.  
+    1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+    2. Go to **Devices** > **iOS/iPadOS** > **iOS/iPadOS Enrollment**.
+    2. Select **Enrollment program tokens**.
+    4. Choose a token, and then select  **Profiles** > **Create profile** > **iOS/iPadOS**. 
+3. Configure these settings in the enrollment profile: 
+ 1. Go to **Management settings** and enable **Shared iPad**.  
+ 2. Set **User affinity** to **Enroll without user affinity**.  
+ 3. Set **Supervised** to **Yes**.  
+ 4. Set **Shared iPad** to **Yes**. 
+4. Select **Save** when you're done configuring the rest of your profile.
+5. Assign devices synced from Apple Business Manager. 
+    1. Select the new enrollment profile.  
+    2. Select **Assign devices** > **Add devices**.  
+6. Create a dynamic device group to automatically assign this profile to devices that fall within your rule parameters. 
+    1. Go to **Groups** > **New group**. 
+    1. For **Membership type**, select **Dynamic Device**. 
+    2. Select **Add dynamic query**.
+    4. In the **Property** column, select  **enrollmentProfileName**. 
+    5. In the **Value** column, enter the name of your enrollment profile.  
+7. Assign all required apps and configuration profiles to the dynamic device group.  
+8. Prepare new and existing devices for setup.     
+  * Turn on new devices and follow the prompts to set them up with Shared iPad. 
+  * Reset existing devices to factory settings and follow the prompts to set them up with Shared iPad.  
+
+## Configure settings for Shared iPads  
 
 > [!NOTE]
 > *This feature is in public preview.*

@@ -62,20 +62,19 @@ To enable automatic grouping, you must create a dynamic group using attribute-ba
 For example, to create a rule that automatically groups devices belonging in the HR category, use the following rule syntax: `device.deviceCategory -eq "HR"`    
 
 ### View categories of all devices 
- Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices** > **All devices** for a list of all devices. The **Device category** column shows the category assigned to each device. 
- 
- If the **Device category** column isn't visible in the table, select **Columns**  and then choose **Category** > **Apply**.  
+To view the device category assigned to each device, go to **Devices** > **All devices**.
+The category is listed in the **Device category** column. To add the column to your table, select **Columns**, and then choose **Category** > **Apply**.  
 
 When you delete a category, devices assigned to it appear as **Unassigned**.  
 
 ### Change the category of a device  
 If you edit a category, be sure to update any Azure AD security groups that reference the category in their rules.  
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **All devices**.
-3. Select a device.
-4. On the device details page, select **Properties**.  
-5. Change your selection in the **Device category** field.  
+1. In the [admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **All devices**.  
+2. Select a device.  
+3. Select **Properties**.  
+4. Change the category listed under **Device category**.  
+5. Select **Save**.      
 
 ## Best practices  
 Device categories are supported on devices running Android, iOS/iPadOS, or Windows. People with Windows devices must use the Company Portal website to select their category. Regardless of platform, any device user can sign in to portal.manage.microsoft.com at anytime and go to **My devices** to select a category. 

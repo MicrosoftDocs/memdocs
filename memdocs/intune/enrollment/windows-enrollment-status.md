@@ -128,9 +128,7 @@ ESP uses the [EnrollmentStatusTracking configuration service provider (CSP)](/wi
 
 Intune applies the default profile to all users and all devices when no other ESP profiles are available to assign. You can configure the default profile to show or hide the ESP.      
  
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Devices**.
-2. Select **Windows** > **Windows enrollment** > **Enrollment Status Page**.  
-2. Select the **Default** profile in the table.  
+1. Select the default profile.  
 3. Select **Properties**. 
 4. Go to the **Settings** section and select **Edit**.  
 5. Configure **Show app and profile installation progress** to set the behavior of the default profile. Your options:
@@ -160,9 +158,7 @@ To prioritize your profiles:
 
 Specify the apps that must be installed before the user can exit the ESP. You can choose up to 100 apps.   
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Devices**.
-2. Select **Windows** > **Windows enrollment** > **Enrollment Status Page**.
-3. Choose a profile > **Settings**.
+1. Choose an enrollment status page profile, and then select **Settings**.
 4. Choose **Yes** for **Show app and profile installation progress**.
 5. Choose **Yes** for **Block device use until all apps and profiles are installed**.
 6. Choose **Selected** for **Block device use until these required apps are installed if they're assigned to the user/device**.
