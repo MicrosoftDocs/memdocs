@@ -49,39 +49,32 @@ For this example, you'll use MDM enrollment so that both corporate and bring-you
 1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **All services** > **M365 Azure Active Directory** > **Azure Active Directory** > **Mobility (MDM and MAM)**.
 2. Select **Get a free Premium trial to use this feature**. Selecting this option will allow auto enrollment using the Azure Active Directory free Premium trial. 
 
-    ![Select the Azure Active Directory free Premium trial](./media/quickstart-setup-auto-enrollment/quickstart-setup-auto-enrollment-01.png)
+    ![Screenshot highlighting the Premium trial banner for the Azure Active Directory free Premium trial in the Azure AD admin center.](./media/quickstart-setup-auto-enrollment/quickstart-setup-auto-enrollment-01.png)
 
 3. Choose the **Enterprise Mobility + Security E5** free trial option. 
-4. Click **Free trial** > **Activate** the free trial.
-
-    ![Choose the Enterprise Mobility + Security E5 free trial](./media/quickstart-setup-auto-enrollment/quickstart-setup-auto-enrollment-02.png)
-
-    > [!NOTE]
-    > It may take a minute to activate. 
+4. Select **Free trial** > **Activate**. It can take a minute to activate. 
 
 3. Select **Microsoft Intune** to configure Intune. 
 
-    ![Choose Microsoft Intune from the list](./media/quickstart-setup-auto-enrollment/quickstart-setup-auto-enrollment-03.png)
+    ![Screenshot highlighting the Microsoft Itnune option in the list in Azure AD.](./media/quickstart-setup-auto-enrollment/quickstart-setup-auto-enrollment-03.png)
 
-4. Select **Some** from the **MDM user scope** to use MDM auto-enrollment to manage enterprise data on your employees' Windows devices. MDM auto-enrollment will be configured for AAD joined devices and bring your own device scenarios.
+4. Select **Some** from the **MDM user scope** to use MDM auto-enrollment to manage enterprise data on your employees' Windows devices. MDM auto-enrollment will be configured for Azure AD joined devices and bring-your-own-device scenarios.
 
-    ![Select 'Some' from the Configure list](./media/quickstart-setup-auto-enrollment/quickstart-setup-auto-enrollment-04.png)
+    ![Screenshot highlighting the "Some" configuration option next to the "MDM user scope" setting.](./media/quickstart-setup-auto-enrollment/quickstart-setup-auto-enrollment-04.png)
 
-5. Click **Select groups** > **Contoso Testers** > **Select** as the assigned group.
+5. Choose **Select groups** > **Contoso Testers** > **Select** as the assigned group.
 
-    ![Select the group to enroll](./media/quickstart-setup-auto-enrollment/quickstart-setup-auto-enrollment-05.png)
+    ![Screenshot of the "Select groups" assignment pane, highlighting the Contoso Testers example group.](./media/quickstart-setup-auto-enrollment/quickstart-setup-auto-enrollment-05.png)
 
-6. Select **Some** from the **MAM Users scope** to manage data on your workforce's devices.
-
-    ![Select the MAM Users scope](./media/quickstart-setup-auto-enrollment/quickstart-setup-auto-enrollment-06.png)
+6. For **MAM User scope**, select **Some** to manage data on your workforce's devices.  
 
 7. Choose **Select groups** > **Contoso Testers** > **Select** as the assigned group. 
-8. Use the default values for the remaining configuration values.
+8. Use the default values for the remaining configuration values on the page.    
 9. Choose **Save**.
 
 ## Clean up resources
 
-To reconfigure Intune automatic enrollment, check out [Set up enrollment for Windows devices](windows-enroll.md).
+To reconfigure Intune automatic enrollment, check out [Set up enrollment for Windows devices](windows-enroll.md).  
 
 ## Next steps
 

@@ -3,7 +3,7 @@
 
 title: Enroll macOS devices - Apple Business Manager or Apple School Manager
 titleSuffix: 
-description: Learn how to enroll macOS devices purchased through Apple Business Manager and Apple School Manager.
+description: Learn how to enroll Macs purchased through Apple Business Manager and Apple School Manager.
 keywords:
 author: Lenewsad
 ms.author: lanewsad
@@ -29,14 +29,11 @@ ms.custom: seodec18
 ms.collection: M365-identity-device-management
 ---
 
-# Automatically enroll macOS devices with the Apple Business Manager or Apple School Manager
+# Automatically enroll Macs with Apple Business Manager or Apple School Manager  
 
-> [!IMPORTANT]
-> Apple recently changed from using the Apple Device Enrollment Program (DEP) to Apple Automated Device Enrollment (ADE). Intune is in the process of updating the Intune user interface to reflect that. Until such changes are complete, you'll continue to see *Device Enrollment Program* in the Intune portal. Wherever that is shown, it now uses Automated Device Enrollment.
+Set up automated device enrollment in Intune for Mac devices purchased through [Apple Business Manager](https://business.apple.com/) or [Apple School Manager](https://school.apple.com/). This enrollment method lets you enroll a large number of devices without needing to touch them or manually transfer them into Microsoft Intune. After you prepare devices in Intune and your chosen Apple portal, you can ship them directly to employees or students. Setup Assistant and enrollment automatically begins when the device turns on.  
 
-You can set up Intune enrollment for macOS devices purchased through Apple's [Apple Business Manager](https://business.apple.com/) or [Apple School Manager](https://school.apple.com/). You can use either of these enrollments for large numbers of devices without ever touching them. You can ship macOS devices directly to users. When the user turns on the device, Setup Assistant runs with preconfigured settings and the device enrolls into Intune management.
-
-To set up enrollment, you use both the Intune and Apple portals. You create enrollment profiles containing settings that applied to devices during enrollment.
+This article describes how to set up and assign an Apple enrollment profile for corporate-owned Mac devices.   
 
 Neither Apple Business Manager enrollment or Apple School Manager work with the [device enrollment manager](device-enrollment-manager-enroll.md).
 
@@ -134,7 +131,7 @@ Now that you've installed your token, you can create an enrollment profile for d
 
 5. On the **Management Settings** page, configure **User Affinity**.  Your options: 
 
-    * Option 1 - **Enroll with User Affinity**: Enroll devices that are associated with a single user. Choose this option for personal devices that belong to employees or students. Users need to use the Company Portal app to install apps. Multifactor authentication (MFA) is available with this option.   
+    * Option 1 - **Enroll with User Affinity**: Enroll devices that are associated with an assigned user. Choose this option for work devices that belong to users, and if you want to require users to have the Company Portal app to install apps. Multifactor authentication (MFA) is available with this option.   
 
       This option requires users to authenticate before enrollment. Select one of the following authentication methods:   
 
@@ -153,21 +150,21 @@ Now that you've installed your token, you can create an enrollment profile for d
 
       - **Setup Assistant (legacy)**: Use the legacy Setup Assistant if you want users to experience the typical, out-of-box-experience for Apple products. This method installs standard preconfigured settings when the device enrolls with Intune management. If you're using Active Directory Federation Services and you're using Setup Assistant to authenticate, a [WS-Trust 1.3 Username/Mixed endpoint](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff608241(v=ws.10)) is required. For more information about retrieving the ADFS endpoint, see [Get-ADfsEndpoint] (/powershell/module/adfs/get-adfsendpoint?view=win10-ps&preserve-view=true).
 
-  - Option 2 - **Enroll without User Affinity**:  Enroll devices that aren't associated with a single user. Use this for shared devices and devices that don't need to access local user data. The Company Portal app doesn't work on these types of devices.   
+    * Option 2 - **Enroll without User Affinity**:  Enroll devices that aren't associated with a single user. Use this for shared devices and devices that don't need to access local user data. The Company Portal app doesn't work on these types of devices.   
 
-8. For **Locked enrollment**, choose whether or not users can unenroll their  devices. Select **Yes** to disable the macOS settings that allow users to remove the management profile in System Preferences or Terminal. After device enrollment, you cannot change this setting without wiping the device.  
+8. **Locked enrollment** prevents users from unenrolling their devices from Intune. Select **Yes** to disable the Mac settings in System Preferences and Terminal that allow users to remove the management profile. After device enrollment, you cannot change this setting without wiping the device.  
 
 9. Select **Next**.   
 
-10. On the **Setup Assistant** page, configure the Setup Assistant experience.
-    
-    1. Enter the following information: 
-        * **Department Name**: This name appears when device users select **About Configuration** during activation. 
+10. On the **Setup Assistant** page, configure the Setup Assistant experience.      
+    1. Enter your department information so that users know who to contact for support:  
+        * **Department Name**: This name appears when device users select **About Configuration** during activation.  
         * **Department Phone**: This phone number appears when device users select **Need Help** during activation.   
-    2. Show or hide Setup Assistant screens during device setup. Your options:  
-        * **Hide**: The screen doesn't appear to users during setup. After device setup, the user can still go to their device settings to set up the feature.  
-        * **Show**: The screen appears during device setup. The user can skip screens that don't require immediate action. After device setup, the user can go to their device settings to set up the feature. 
-       For a description of all Setup Assistant screens you can configure, see [Setup Assistant screens](#setup-assistant-screens) in this article. 
+    2. Select the Setup Assistant screens you want to show or hide during device setup. Your options:  
+        * **Hide**: The screen doesn't appear to users during device setup. After device setup, the user can go to their device settings to set up the feature.  
+        * **Show**: The screen appears to users during device setup. The user can still skip screens that don't require immediate action. After device setup, the user can go to their device settings to set up the feature.  
+        
+          For a description of all Setup Assistant screens you can configure, see [Setup Assistant screens](#setup-assistant-screens) in this article. 
 
 11. Select **Next**.
 
@@ -207,6 +204,7 @@ Now that Intune has permission to manage your devices, you can sync Intune with 
 
    ![Screenshot of Enrollment program token area in the admin center, highlighting the example token, "Devices" link, and "Sync" button.](./media/device-enrollment-program-enroll-macos/image06.png)  
 
+### Sync restrictions  
 To comply with Apple's terms for acceptable enrollment program traffic, Microsoft Intune imposes the following restrictions:  
  - A full sync can run no more than once every seven days. During a full sync, Intune fetches the complete updated list of serial numbers assigned to the Apple MDM server connected to Intune. If you delete a device from Intune without unassigning it from the Apple MDM server in Apple Business Manager or Apple School Manager, it won't be re-imported into Intune until the full sync is run. 
  - If a device is released from ABM/ASM, it can take up to 45 days for it to be automatically deleted from the devices page in Intune. You can manually delete released devices from Intune one by one if needed. Released devices will be accurately reported as being Removed from ABM/ASM in Intune until they are automatically deleted within 30-45 days.
@@ -216,51 +214,54 @@ To comply with Apple's terms for acceptable enrollment program traffic, Microsof
 
 You must assign an enrollment program profile to devices before they can enroll.
 
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **macOS** > **macOS Enrollment** > **Enrollment program tokens** > choose a token in the list.
-2. Choose **Devices** > choose devices in the list > **Assign profile**.
-3. Under **Assign profile**, choose a profile for the devices > **Assign**.
+1. Return to **Enrollment program tokens** and select a token.  
+2. Select **Devices**. 
+3. Choose your devices from the list, and then select **Assign profile**.  
+3. Choose a profile to assign, and then select **Assign**.  
 
 ### Assign a default profile
 
-You can pick a default macOS and iOS/iPadOS profile to be applied to all devices enrolling with a specific token.
+You can assign a default macOS profile to all devices enrolling with a specific token.  
 
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **macOS** > **macOS Enrollment** > **Enrollment program tokens** > choose a token in the list.
-2. Choose **Set Default Profile**, choose a profile in the drop-down list, and then choose **Save**. This profile will be applied to all devices that enroll with the token.
+1. Return to **Enrollment program tokens** and select a token.  
+2. Select **Set Default Profile**.
+3. Choose a profile, and then select **Save**.  
 
 ## Distribute devices
 
-You have enabled management and syncing between Apple and Intune, and assigned a profile to let your devices enroll. You can now distribute devices to users. Devices with user affinity require each user be assigned an Intune license. Devices without user affinity require a device license.
+>[!IMPORTANT]
+> Devices with user affinity require that each user be assigned an Intune license. Devices without user affinity require a device license.  
 
-Devices registered with ABM/ASM and assigned a profile in Intune can be enrolled:
+Distribute prepared devices throughout your organization. Devices registered with Apple Business Manager or Apple School Manager and assigned a profile in Intune can be enrolled:  
 
 - During Setup Assistant for new devices or wiped devices.
-- After Setup Assistant using the profiles command.
+- After Setup Assistant using the profiles command.  
 
-### Enroll your macOS device registered in ABM/ASM with Automated Device Enrollment during Setup Assistant
+### Enroll Macs during Setup Assistant   
 
-Devices configured in ABM/ASM will automatically enroll into management with Intune during Setup Assistant with a Remote Management prompt.
+Macs configured in Apple Business Manager or Apple School Manager will automatically enroll in Microsoft Intune during Setup Assistant with a Remote Management prompt.  
 
 > [!NOTE]
-> If the device was assigned to a macOS enrollment profile with user affinity, you must sign in to the Company Portal for Azure AD registration and Conditional Access.
+> If the device was assigned to a macOS enrollment profile with user affinity, the device user must sign in to the Company Portal to complete Azure AD registration and conditional access requirements.  
 
-### Enroll your macOS device registered in ABM/ASM with Automated Device Enrollment after Setup Assistant
+### Enroll Macs after Setup Assistant  
 
-For macOS 10.13 and later devices, you can follow these steps to enroll.
+Use these steps to enroll corporate-owned Macs running macOS 10.13 and later in Intune after Setup Assistant completes.  
 
 1. In the Apple Business Manager or Apple School Manager portal, import the device.
 2. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), make sure that the device is assigned a macOS enrollment profile with or without user affinity.
-3. Log in to the device as a local administrator account.
+3. Log in to the device as a local administrator account.  
 4. To trigger enrollment, on the **Home** page, open **Terminal** and run the following command:
-    sudo profiles renew -type enrollment
-5. Enter your device password for the local administrator account.
+    sudo profiles renew -type enrollment  
+5. Enter your device password for the local administrator account.  
 6. In the **Device enrollment** window, choose **Details**.
 7. In the **System preferences** window, choose **Profiles**.
 8. Follow the prompts that will download the management profile, certs, and policies from Intune. You can view the profiles on the device anytime by going to **System Preferences** > **Profiles**.
-9. If the device was assigned to a macOS enrollment profile with user affinity, you must sign in to the Company Portal for Azure AD registration and Conditional Access.
+9. If the device was assigned to a macOS enrollment profile with user affinity, you must sign in to the Company Portal to complete Azure AD registration and conditional access requirements.  
 
 ## Renew an ADE token
 
-1. Go to [business.apple.com](http://business.apple.com) and sign in with an account that has the role of Administrator or Device Enrollment Manager.
+1. Go to [business.apple.com](http://business.apple.com) and sign in with an account that has the role of Administrator or Device Enrollment Manager.  
 2. Choose **Settings** > under **MDM Servers** choose your MDM server associated with the token file that you want to renew > **Download Token**.
 
     ![Screenshot of Download Token.](./media/device-enrollment-program-enroll-macos/download-token.png)
