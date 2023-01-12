@@ -65,7 +65,9 @@ Find the endpoint security policies for attack surface reduction under *Manage* 
 
 ### Devices managed by Intune
 
-**Windows 10/11 profiles**:
+#### Platform: Windows 10 and later
+
+Profiles for this platform are supported on Windows 10 and Windows 11, and are used with devices enrolled with Intune. Profiles include:
 
 - **App and browser isolation** – Manage settings for Windows Defender Application Guard (Application Guard), as part of Defender for Endpoint. Application Guard helps to prevent old and newly emerging attacks and can isolate enterprise-defined sites as untrusted while defining what sites, cloud resources, and internal networks are trusted.
 
@@ -113,6 +115,16 @@ Reducing your attack surface means offering attackers fewer ways to perform atta
   To learn more, see [How to control USB devices and other removable media using Microsoft Defender for Endpoint](/windows/security/threat-protection/device-control/control-usb-devices-using-intune) in the Microsoft Defender for Endpoint documentation.
 
 - **Exploit protection** - Exploit protection settings can help protect against malware that uses exploits to infect devices and spread. Exploit protection consists of a number of mitigations that can be applied to either the operating system or individual apps.
+
+#### Platform: Windows 10, Windows 11, and Windows Server
+
+Profiles for this platform can be used with Windows 10 and Windows 11 devices enrolled with Intune, and with devices managed through [Security Management for Microsoft Defender for Endpoint](../protect/mde-security-integration.md).  
+Profiles include:  
+
+- **Attack surface reduction rules** - Configure settings for attack surface reduction rules that target behaviors that malware and malicious apps typically use to infect computers, including:
+  - Executable files and scripts used in Office apps or web mail that attempt to download or run files.
+  - Obfuscated or otherwise suspicious scripts.
+  - Behaviors that apps don't usually start during normal day-to-day work Reducing your attack surface means offering attackers fewer ways to perform attacks.
 
 #### Add reusable settings groups to profiles for Device control
 

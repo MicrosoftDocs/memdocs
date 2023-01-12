@@ -4,7 +4,7 @@ description: include file
 author: brenduns
 ms.service: microsoft-intune
 ms.author: brenduns
-ms.date: 01/09/2023
+ms.date: 01/20/2023
 ms.topic: include
 ---
 ## Prerequisites
@@ -90,18 +90,19 @@ The following table can help you understand which policies that can configure MD
 
 | Microsoft Endpoint Manager  | Workload | Policy | MDE Security configuration  |  Microsoft Endpoint Manager |
 |----------------|----------------|----------------|-------------------|------------|
-| Endpoint security  | Antivirus  | Antivirus                   | ![Supported](../media/mde-security-integration/green-check.png)  | ![Supported](../media/mde-security-integration/green-check.png)  |
-|                    | Antivirus   | Antivirus Exclusions        | ![Supported](../media/mde-security-integration/green-check.png)  | ![Supported](../media/mde-security-integration/green-check.png)  |
+| Endpoint security  | Antivirus  | Antivirus                    | ![Supported](../media/mde-security-integration/green-check.png) | ![Supported](../media/mde-security-integration/green-check.png)  |
+|                    | Antivirus   | Antivirus Exclusions        | ![Supported](../media/mde-security-integration/green-check.png) | ![Supported](../media/mde-security-integration/green-check.png)  |
 |                    | Antivirus   | Windows Security Experience |  | ![Supported](../media/mde-security-integration/green-check.png)  |
-|                    |  Disk Encryption | All |           | ![Supported](../media/mde-security-integration/green-check.png)  |
-|                     | Firewall | Firewall                | ![Supported](../media/mde-security-integration/green-check.png) | ![Supported](../media/mde-security-integration/green-check.png)  |
-|                     | Firewall | Firewall Rules                | ![Supported](../media/mde-security-integration/green-check.png) | ![Supported](../media/mde-security-integration/green-check.png)  |
-|                     | Endpoint detection and response | Endpoint detection and response        | ![Supported](../media/mde-security-integration/green-check.png) | ![Supported](../media/mde-security-integration/green-check.png)  |
-|                      |Attack surface reduction | All    | ![Supported](../media/mde-security-integration/green-check.png)           | ![Supported](../media/mde-security-integration/green-check.png)  |
-|                      |Account Protection | All       |       | ![Supported](../media/mde-security-integration/green-check.png)  |
-|                      | Device Compliance | All    |   | ![Supported](../media/mde-security-integration/green-check.png)  |
-|                      | Conditional Access  | All    |   | ![Supported](../media/mde-security-integration/green-check.png)  |
-|                      | Security baselines | All      |   | ![Supported](../media/mde-security-integration/green-check.png)  |
+|                    | Disk Encryption | All                     |  | ![Supported](../media/mde-security-integration/green-check.png)  |
+|                    | Firewall    | Firewall                    | ![Supported](../media/mde-security-integration/green-check.png) | ![Supported](../media/mde-security-integration/green-check.png)  |
+|                    | Firewall    | Firewall Rules              | ![Supported](../media/mde-security-integration/green-check.png) | ![Supported](../media/mde-security-integration/green-check.png)  |
+|                     | Endpoint detection and response | Endpoint detection and response | ![Supported](../media/mde-security-integration/green-check.png) | ![Supported](../media/mde-security-integration/green-check.png)  |
+|                     |Attack Surface Reduction | All            |  | ![Supported](../media/mde-security-integration/green-check.png)  |
+|                     |Attack Surface Reduction | Attack Surface Reduction Rules  | ![Supported](../media/mde-security-integration/green-check.png) | ![Supported](../media/mde-security-integration/green-check.png)  |
+|                     |Account Protection  | All                 |  | ![Supported](../media/mde-security-integration/green-check.png)  |
+|                     | Device Compliance  | All                 |  | ![Supported](../media/mde-security-integration/green-check.png)  |
+|                     | Conditional Access | All                 |  | ![Supported](../media/mde-security-integration/green-check.png)  |
+|                     | Security baselines | All                 |  | ![Supported](../media/mde-security-integration/green-check.png)  |
 
 **Endpoint security policies** are discrete groups of settings intended for use by security admins who focus on protecting devices in your organization.
 
