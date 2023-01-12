@@ -33,15 +33,16 @@ The device to be enrolled must follow these requirements:
 
 - Use Windows 11 or Windows 10 version 1809 or later.
 - Have access to the internet [following Windows Autopilot network requirements](./networking-requirements.md).
-- Have access to an Active Directory domain controller. The device must be connected to the organization's network so that it can:
-  - Resolve the DNS records for the AD domain and the AD domain controller.
-  - Communicate with the domain controller to authenticate the user.
+- Have access to an Active Directory domain controller.
 - Successfully ping the domain controller of the domain you're trying to join.
 - If using Proxy, WPAD Proxy settings option must be enabled and configured.
 - Undergo the out-of-box experience (OOBE).
 - Use an authorization type that Azure Active Directory supports in OOBE.
 
-Although not required, configuring hybrid Azure AD join for AD FS enables a faster Windows Autopilot Azure AD registration process during deployments. 
+> [!NOTE]
+> 
+
+Although not required, configuring hybrid Azure AD join for AD FS enables a faster Windows Autopilot Azure AD registration process during deployments.
 
 ## Set up Windows automatic enrollment
 
@@ -104,11 +105,18 @@ The organizational unit that's granted the rights to create computers must match
 
 - The Intune Connector for Active Directory must be installed on a computer that's running Windows Server 2016 or later with .NET Framework version 4.7.2 or later.
 
-- The computer must have access to the internet and your Active Directory.
+- The computer hosting the Intune Connector must have access to the internet and your Active Directory.
+
+    > [!NOTE]
+    > The Intune Connector uses standard RPC ports to communicate with Active Directory. For more information, see the following articles:
+    >
+    > - [Service overview and network port requirements for Windows](/troubleshoot/windows-server/networking/service-overview-and-network-port-requirements)
+    > - [How to configure a firewall for Active Directory domains and trusts](/troubleshoot/windows-server/identity/config-firewall-for-ad-domains-and-trusts)
+    > - [Hybrid Identity Required Ports and Protocols](/azure/active-directory/hybrid/reference-connect-ports)
 
 - To increase scale and availability, you can install multiple connectors in your environment. We recommend installing the Connector on a server that's not running any other Intune connectors. Each connector must be able to create computer objects in any domain that you want to support.
 
-- If your organization has multiple domains and you install multiple Intune Connectors, you must use a service account that can create computer objects in all domains, even if you plan to implement hybrid Azure AD join only for a specific domain. If these are untrusted domains, you must uninstall the connectors from domains in which you don't want to use Windows Autopilot. Otherwise, with multiple connectors across multiple domains, all connectors must be able to create computer objects in all domains.
+- If your organization has multiple domains and you install multiple Intune Connectors, you must use a service account that can create computer objects in all domains, even if you plan to implement hybrid Azure AD join only for a specific domain. If these domains are untrusted domains, you must uninstall the connectors from domains in which you don't want to use Windows Autopilot. Otherwise, with multiple connectors across multiple domains, all connectors must be able to create computer objects in all domains.
 
   This connector service account must have the following permissions:
 
@@ -219,7 +227,7 @@ Here's a list of VPN clients that are known to be tested and validated:
 - DirectAccess
 
 > [!NOTE]
-> When using BYO VPNs, you should select **Yes** for the **Skip AD connectivity check** option in the Windows Autopilot deployment profile. Always-On VPNs should not require this option since it will connect automatically. 
+> When using BYO VPNs, you should select **Yes** for the **Skip AD connectivity check** option in the Windows Autopilot deployment profile. Always-On VPNs should not require this option since it will connect automatically.
 
 ## Create and assign an Autopilot deployment profile
 
