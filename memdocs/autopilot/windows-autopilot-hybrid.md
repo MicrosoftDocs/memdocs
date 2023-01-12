@@ -105,7 +105,7 @@ The organizational unit that's granted the rights to create computers must match
 - The server hosting the Intune Connector must have access to the internet and your Active Directory.
 
     > [!NOTE]
-    > The Intune Connector server requires standard domain client access to a domain controller, which includes the RPC port requirements it needs to communicate with Active Directory. For more information, see the following articles:
+    > The Intune Connector server requires standard domain client access to domain controllers, which includes the RPC port requirements it needs to communicate with Active Directory. For more information, see the following articles:
     >
     > - [Service overview and network port requirements for Windows](/troubleshoot/windows-server/networking/service-overview-and-network-port-requirements)
     > - [How to configure a firewall for Active Directory domains and trusts](/troubleshoot/windows-server/identity/config-firewall-for-ad-domains-and-trusts)
