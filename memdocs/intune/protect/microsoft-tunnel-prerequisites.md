@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/11/2022
+ms.date: 01/10/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -54,7 +54,7 @@ Set up a Linux based virtual machine or a physical server on which Microsoft Tun
 
 - **Supported Linux distributions** - The following table details which versions of Linux are supported for the Tunnel server, and the container they require:
 
-  |Distribution version    | Container requirements   | Considerations     |
+  |Distribution version   | Container requirements   | Considerations     |
   |-----------------------|--------------------------|--------------------|
   | CentOS 7.4+           | Docker CE                | CentOS 8+ isn’t supported |
   | Red Hat (RHEL) 7.4+   | Docker CE                |                    |
@@ -64,6 +64,9 @@ Set up a Linux based virtual machine or a physical server on which Microsoft Tun
   | Red Hat (RHEL) 8.7  <!-- This entry is pending podman version details from PM -->  | Podman 4.2 *(default)*   | This version of RHEL doesn't automatically load the *ip_tables* module into the Linux kernel. When you use this version, plan to [manually load the ip_tables](#manually-load-ip_tables) before Tunnel is installed. <br><br> [Containers created by Podman v3 and earlier](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html-single/8.7_release_notes/index#enhancement_containers) are not usable with Podman v4.2 and later. If upgrading and changing containers, plan to create new containers and to uninstall and then reinstall Microsoft Tunnel.|
   | Ubuntu 18.04           | Docker CE               |                    |
   | Ubuntu 20.04           | Docker CE               |                    |
+  | Ubuntu 22.04           | Docker CE               |                    |
+  
+
 
 - **Size the Linux server**: Use the following guidance to meet your expected use:
 
