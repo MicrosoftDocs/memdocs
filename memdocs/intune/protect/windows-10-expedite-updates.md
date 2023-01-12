@@ -63,7 +63,7 @@ The actual time that a device starts to update depends on the device being onlin
 ## Prerequisites
 
 > [!IMPORTANT]
-> This feature is not supported on GCC High/DoD cloud environments.
+> This feature is not supported on GCC and GCC High/DoD cloud environments.
 
 The following are requirements to qualify for installing expedited quality updates with Intune:
 
