@@ -498,7 +498,7 @@ A Cloud PC’s name is now appended to the network interface name within the Azu
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
 
-#### New remote action: remote help<!--38310389-->
+#### New remote action: Remote Help<!--38310389-->
 
 The [Remote Help remote action](/mem/intune/remote-actions/remote-help) (in the Microsoft Endpoint Manager admin center) lets admins start a remote session into an end user’s Cloud PC.
 

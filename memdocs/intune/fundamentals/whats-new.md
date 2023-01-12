@@ -100,8 +100,8 @@ For more information about protected apps, see [Microsoft Intune protected apps]
 
 ### Device configuration
 
-#### Remote help client app includes a new option to disable chat functionality in the Tenant level setting<!-- 14685052 -->  
-In the Remote help app, admins have the option to disable chat functionality from the new tenant level setting. Turning on the disable chat feature will remove the chat button in the Remote Help app. This setting can be found in the Remote Help **Settings** tab under **Tenant Administration** in Microsoft Intune.
+#### Remote Help client app includes a new option to disable chat functionality in the Tenant level setting<!-- 14685052 -->  
+In the Remote Help app, admins have the option to disable chat functionality from the new tenant level setting. Turning on the disable chat feature will remove the chat button in the Remote Help app. This setting can be found in the Remote Help **Settings** tab under **Tenant Administration** in Microsoft Intune.
 
 For more information, see [Configure Remote Help for your tenant](../remote-actions/remote-help.md#configure-remote-help-for-your-tenant).
 
@@ -723,7 +723,7 @@ In the admin center, you can:
 ### Device Security
 
 #### Non-compliance warning message includes a link<!--13694184  -->  
-In Remote help, a link has been added to the non-compliance warning notification **View device compliance information** and it allows a helper to learn more about why the device is not compliant in Microsoft Endpoint Manager.
+In Remote Help, a link has been added to the non-compliance warning notification **View device compliance information** and it allows a helper to learn more about why the device is not compliant in Microsoft Endpoint Manager.
 
 For more information, go to:
 
@@ -929,11 +929,11 @@ With Apple's release of macOS 13 Ventura, Microsoft Intune, the Company Portal a
 
 ### Device management
 
-#### Remote help version: 4.0.1.13 release<!-- 15329690 -->
+#### Remote Help version: 4.0.1.13 release<!-- 15329690 -->
 
-With Remote help 4.0.1.13 fixes were introduced to address an issue that prevented people from having multiple sessions open at the same time. The fixes also addressed an issue where the app was launching without focus, and prevented keyboard navigation and screen readers from working on launch.
+With Remote Help 4.0.1.13 fixes were introduced to address an issue that prevented people from having multiple sessions open at the same time. The fixes also addressed an issue where the app was launching without focus, and prevented keyboard navigation and screen readers from working on launch.
 
-For more information, go to [Use remote help with Intune and Microsoft Endpoint Manager](../remote-actions/remote-help.md)
+For more information, go to [Use Remote Help with Intune and Microsoft Endpoint Manager](../remote-actions/remote-help.md)
 
 ## Week of August 29, 2022
 
@@ -1228,10 +1228,10 @@ For more information, see [View device details with Microsoft Intune](../remote-
 Applies to:
 - iOS/iPadOS, macOS
 
-#### Remote help Version: 4.0.1.12 release<!-- 14999203 -->
-With Remote help 4.0.1.12 various fixes were introduced to address the 'Try again later' message that appears when not authenticated. The fixes also include an improved auto-update capability. 
+#### Remote Help Version: 4.0.1.12 release<!-- 14999203 -->
+With Remote Help 4.0.1.12 various fixes were introduced to address the 'Try again later' message that appears when not authenticated. The fixes also include an improved auto-update capability. 
 
-For more information, see [Use remote help with Intune and Microsoft Endpoint Manager](../remote-actions/remote-help.md)
+For more information, see [Use Remote Help with Intune and Microsoft Endpoint Manager](../remote-actions/remote-help.md)
 
 ### Device enrollment
 
