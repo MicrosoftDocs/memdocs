@@ -59,7 +59,7 @@ When a device receives a policy for Feature updates:
 ## Prerequisites
 
 > [!IMPORTANT]
-> This feature is not supported on GCC High/DoD cloud environments.
+> This feature is not supported on GCC and GCC High/DoD cloud environments.
 
 The following are prerequisites for Intune's Feature updates for Windows 10 and later:
 
