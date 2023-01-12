@@ -102,7 +102,7 @@ The organizational unit that's granted the rights to create computers must match
 
 - The Intune Connector for Active Directory must be installed on a computer that's running Windows Server 2016 or later with .NET Framework version 4.7.2 or later.
 
-- The computer hosting the Intune Connector must have access to the internet and your Active Directory.
+- The server hosting the Intune Connector must have access to the internet and your Active Directory.
 
     > [!NOTE]
     > The Intune Connector server requires standard domain client access to a domain controller, which includes the RPC port requirements it needs to communicate with Active Directory. For more information, see the following articles:
