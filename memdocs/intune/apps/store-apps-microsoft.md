@@ -80,7 +80,7 @@ The Microsoft Store provides a large variety of apps designed to work on your Mi
     > [!NOTE]
     > Specific Microsoft Store apps may not be displayed and available in Intune. Common reasons an app doesn't appear when searching within Intune include the following:
     > - The app is not available in your region
-    > - The app is only available for ages 12 and above
+    > - The app is not available if there is an age restriction
     > - The app is a paid app, which is not supported
     > - The app is an Android app
     > - The app is a Microsoft Store for Business app that is not available publicly in the consumer store
