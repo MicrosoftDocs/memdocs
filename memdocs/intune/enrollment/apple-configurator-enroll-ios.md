@@ -89,6 +89,10 @@ A device enrollment profile defines the settings applied during enrollment. Thes
 
 7. Choose **Create** to save the profile.
 
+Known limits for iOS/iPadOS enrollment with Apple Configurator: 
+-limit of 5,000 devices in the CSV 
+-the total number of devices in the csv file + AC (Apple Configurator) devices already within Intune cannot exceed 75,000
+
 ## Setup Assistant enrollment
 
 ### Add Apple Configurator serial numbers
