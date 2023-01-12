@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/23/2022
+ms.date: 01/10/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -74,11 +74,13 @@ The Microsoft Store provides a large variety of apps designed to work on your Mi
     -	**Name** – The name of the app.
     -	**Publisher** – The publisher of the app.
     -	**Type** – The app package type: Win32 or Universal Windows Platform (UWP).
-2. In the search bar, type the name of the app that you want to find. You can only search by app name. A list of apps are displayed.
+
+2. In the search bar, type the name of the app that you want to find. You can also search by other app details, such as publisher, type, or store app ID.
+   Once you search, a list of apps are displayed.
     > [!NOTE]
     > Specific Microsoft Store apps may not be displayed and available in Intune. Common reasons an app doesn't appear when searching within Intune include the following:
     > - The app is not available in your region
-    > - The app is only available for ages 12 and above
+    > - The app is not available if there is an age restriction
     > - The app is a paid app, which is not supported
     > - The app is an Android app
     > - The app is a Microsoft Store for Business app that is not available publicly in the consumer store
