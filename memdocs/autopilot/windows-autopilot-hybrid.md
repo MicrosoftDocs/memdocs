@@ -130,13 +130,20 @@ Before beginning the installation, make sure that all of the [Intune connector s
 ### Install steps
 
 1. Turn off IE Enhanced Security Configuration. By default Windows Server has Internet Explorer Enhanced Security Configuration turned on. If you're unable to sign in to the Intune Connector for Active Directory, then turn off IE Enhanced Security Configuration for the Administrator. [How to turn off Internet Explorer enhanced security configuration](/archive/blogs/chenley/how-to-turn-off-internet-explorer-enhanced-security-configuration).
+
 2. In the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/), select **Devices** > **Windows** > **Windows enrollment** > **Intune Connector for Active Directory** > **Add**.
+
 3. Follow the instructions to download the Connector.
+
 4. Open the downloaded Connector setup file, *ODJConnectorBootstrapper.exe*, to install the Connector.
+
 5. At the end of the setup, select **Configure**.
+
 6. Select **Sign In**.
+
 7. Enter the Global administrator or Intune administrator role credentials.
  The user account must have an assigned Intune license.
+
 8. Go to **Devices** > **Windows** > **Windows enrollment** > **Intune Connector for Active Directory**, and then confirm that the connection status is **Active**.
 
 > [!NOTE]
@@ -176,6 +183,7 @@ Select one of the following ways to enroll your Autopilot devices.
 ### Register Autopilot devices that are already enrolled
 
 1. Create an Autopilot deployment profile with **Convert all targeted devices to Autopilot** set to **Yes**.
+
 2. Assign the profile to a group that contains the members that you want to automatically register with Autopilot.
 
 For more information, see [Create an Autopilot deployment profile](profiles.md).
