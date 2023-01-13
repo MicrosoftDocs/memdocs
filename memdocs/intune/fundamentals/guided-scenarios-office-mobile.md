@@ -110,7 +110,7 @@ In this step, you must configure the requirements for accessing and sharing the 
 
 :::image type="content" border="true" source="./media/guided-scenarios-office-mobile/guided-scenarios-office-mobile-03.png" alt-text="App protection settings screenshot":::
 
-The following setting are applied when using the **Enhanced data protection** setting shown above.
+The following settings are applied when using the **Enhanced data protection** setting shown above.
 
 | Setting | Description | Value |
 |---------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|
