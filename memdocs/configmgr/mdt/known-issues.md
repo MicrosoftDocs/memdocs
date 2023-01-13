@@ -18,7 +18,7 @@ ms.reviewer: mstewart,aaroncz
 This article provides details of any current known issues and limitations with the Microsoft Deployment Toolkit (MDT). It assumes familiarity with MDT version concepts, features, and capabilities.
 
 > [!IMPORTANT]
-> MDT is not supported with Windows 11.  Any listed known issues for Windows 11 or the Windows 11 ADK is for informational purposes only and does not imply support.
+> MDT is not supported with Windows 11.  Any listed known issues for Windows 11 or the Windows 11 ADK is for informational purposes only and does not imply support. For additional information, please see [Supported platforms](release-notes.md#supported-platforms)
 
 ## HTA applications report Script error after upgrading to ADK for Windows 11, version 22H2
 After you updated your MDT boot image to [ADK for Windows 11, version 22H2](/windows-hardware/get-started/adk-install), HTA applications stop working and a message box is displayed: Script Error - An error has occurred in the script on this page.
