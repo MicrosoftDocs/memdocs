@@ -131,17 +131,19 @@ In this report, you can also:
 - Sort the columns in ascending and descending order.
 - Page through the results using the **Previous** and **Next** buttons.
 
-## Devices without compliance policy (preview) (Organizational)
+### Devices without compliance policy (preview) (Organizational)
+
+*This report is in preview.*
 
 In public preview, this report allows admins to:
 
-- Identify devices that have not been assigned a compliance policy.
+- Identify devices that haven't been assigned a compliance policy.
   
-  We recommend that every device in each tenant be targeted by a compliance policy.
+  We recommend that every device in each tenant is targeted by a compliance policy.
 
-- View the configuration of the tenant-wide *Compliance policy setting* named **Mark devices with no compliance policy assigned as**. By default, this setting marks devices without an assigned policy as *Compliant*.
+- View the configuration of the tenant-wide *Compliance policy setting* named **Mark devices with no compliance policy assigned as**. By default, this setting marks a device without an assigned policy as *Compliant*.
 
-  We recommend that this setting be configured to mark devices that are not targeted by a compliance policy as *Not compliant*. To aid admins in managing this setting, the report provides a link that opens the *Compliance policy settings* node where setting can be changed. For more information, see [Compliance policy settings](../protect/device-compliance-get-started.md#compliance-policy-settings).
+  We recommend that this setting be configured to mark devices that aren't targeted by a compliance policy as *Not compliant*. To aid admins in managing this setting, the report provides a link that opens the *Compliance policy settings* node where setting can be changed. For more information, see [Compliance policy settings](../protect/device-compliance-get-started.md#compliance-policy-settings).
 
 To generate the report, use the following steps:
 
@@ -149,16 +151,14 @@ To generate the report, use the following steps:
 2. Select **Reports** > **Device compliance** > **Reports** tab > **Devices without compliance policy (preview)**.
 3. Select **Generate report**. In the report, look at the following information:
 
-In the report, look for the following columns of information, which can be used to sort the results, and searched:
+The report generates one row per device that hasn't been assigned a compliance policy. In the report, you'll find the following columns of information that can be used to sort the results. The report also supports search:
 
-- **Device name** - The name of hte device as it appears when viewing Devices and creating groups.
+- **Device name** - The name of the device as it appears when viewing Devices and creating groups.
 - **User Principal Name** - The primary user of the device.
-- **OS** - THe operating system of the device, like *Windows*, or *Android*.
+- **OS** - The operating system of the device, like *Windows*, or *Android*.
 - **OS version** - The OS version, like *22000.675* for Windows, or *12.0* for Android.
-- **Device model** - Model information such as a *Surface Book 2*, or *Galaxy Note 10*.
+- **Device model** - Model information such as *Surface Book 2*, or *Galaxy Note 10*.
 - **Device ID**
-
-The report generates one row per device that has not been assigned a compliance policy.
 
 ## Noncompliant devices report (Operational)
 

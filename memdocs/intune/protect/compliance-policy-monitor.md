@@ -169,6 +169,9 @@ On the *Compliance status* page, next to the *Policy compliance* chart, you can 
 
 When you select the tile, it shows all devices without a compliance policy. It also shows the user of the device, the policy deployment status, and the device model.
 
+> [!TIP]  
+> In public preview, there is a new organizational report that identifies all devices in your tenant that have not been assigned a compliance report. See [](../fundamentals/reports.md#devices-without-compliance-policy-preview-organizational).
+
 #### What you need to know
 
 - With the **Mark devices with no compliance policy assigned as** security setting, it's important to identify devices without a compliance policy. Then you can assign at least one compliance policy to them.
