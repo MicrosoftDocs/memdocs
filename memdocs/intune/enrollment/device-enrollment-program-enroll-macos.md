@@ -260,21 +260,18 @@ Distribute prepared devices throughout your organization.
 ## Renew enrollment program token  
 Complete these steps to renew an enrollment program token that's about to expire. 
 
-1. Sign in to [Apple Business Manager](http://business.apple.com) or [Apple School Manager](http://school.apple.com) with an administrator or content manager acount.  
-2. Go to your account settings > MDM servers. Select the MDM server that's associated with the token you want to renew. Download the token.  
-
-    ![Screenshot of Download Token.](./media/device-enrollment-program-enroll-macos/download-token.png)
-
-3. Confirm that you want to download the server token.  
-4. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Device enrollment** > **Apple Enrollment** > **Enrollment program tokens**. Select the enrollment program token.  
+1. Sign in to Apple Business Manager or Apple School Manager and follow these step to download a new MDM server token: 
+    * [Download token in Apple Business Manager](https://support.apple.com/guide/apple-business-manager/axme0f8659ec/web)
+    * [Download token in Apple School Manager](https://support.apple.com/guide/apple-school-manager/axme0f8659ec/web)
+2. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Device enrollment** > **Apple Enrollment** > **Enrollment program tokens**. Select the enrollment program token you want to renew.  
     ![Screenshot of enrollment program tokens.](./media/device-enrollment-program-enroll-ios/enrollmentprogramtokens.png)
 
-5. Select **Renew token** and enter the Apple ID used to create the original token.  
+3. Select **Renew token** and enter the Apple ID used to create the original token.  
     ![Screenshot of generate new token.](./media/device-enrollment-program-enroll-ios/renewtoken.png)
 
-6. Upload the newly downloaded token.  
-7. Select **Next**. You can update scope tags at this time if you want. Otherwise, continue to **Review + create**.   
-8. Select **Create** to save your changes.  
+4. Upload the new token.  
+5. Select **Next**. You can update scope tags at this time if you want. Otherwise, continue to **Review + create**.   
+6. Select **Create** to save your changes.  
 
 ## Next steps
 
