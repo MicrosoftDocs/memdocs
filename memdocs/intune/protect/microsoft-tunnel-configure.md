@@ -315,7 +315,7 @@ Intune supports Microsoft Defender for Endpoint as both an MTD app and as the Mi
 
 For devices [enrolled](../enrollment/android-enroll.md) as *Android Enterprise personally-owned work profile* that use Defender for Endpoint for both purposes, you must use custom settings instead of an app configuration profile. On these devices, the app configuration profile for Defender for Endpoint conflicts with Microsoft Tunnel and can prevent the device from connecting to Microsoft Tunnel.
 
-If you use Microsoft Defender for Endpoint for MTD but not for Microsoft Tunnel, then you continue to use the app configuration profile to configure Microsoft Defender for Endpoint.
+If you use Microsoft Defender for Endpoint for Microsoft Tunnel but not MTD , then you continue to use the app tunnel configuration profile to configure Microsoft Defender for Endpoint as a Tunnel Client.
 
 ### Add app configuration support for Microsoft Defender for Endpoint to a VPN profile for Microsoft Tunnel
 

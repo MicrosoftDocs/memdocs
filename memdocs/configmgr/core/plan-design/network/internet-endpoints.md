@@ -180,6 +180,8 @@ If you use Configuration Manager to deploy and update Microsoft 365 Apps for ent
 
 - `config.office.com` to create custom configurations for Microsoft 365 Apps for enterprise deployments
 
+-  `https://clients.config.office.net` and `https://go.microsoft.com/fwlink/?linkid=2190568` to support deploying updates for Microsoft 365 Apps for enterprise
+
 - `contentstorage.osi.office.net` to support the evaluation of Office add-in readiness<!-- MEMDocs#410 -->
 
 Your top-level site server needs access to the following endpoint to download the Microsoft Apps 365 readiness file:
