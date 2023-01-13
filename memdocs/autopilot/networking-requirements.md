@@ -116,7 +116,7 @@ Windows must be able to tell that the device can access the internet. For more i
 
 ### Windows Notification Services (WNS)
 
-This service is used to enable Windows to receive notifications from apps and services. For more information, see [Microsoft Store](/windows/privacy/manage-connections-from-windows-operating-system-components-to-microsoft-services#26-microsoft-store.
+This service is used to enable Windows to receive notifications from apps and services. For more information, see [Microsoft Store](/windows/privacy/manage-connections-from-windows-operating-system-components-to-microsoft-services#26-microsoft-store).
 
 If the WNS services aren't available, the Autopilot process will still continue without notifications.
 
