@@ -29,6 +29,8 @@ You can use Intune and Windows Autopilot to set up hybrid Azure Active Directory
 
 Successfully configure your [hybrid Azure AD-joined devices](/azure/active-directory/devices/hybrid-azuread-join-plan). Be sure to [verify your device registration](/azure/active-directory/devices/howto-hybrid-join-verify) by using the Get-MsolDevice cmdlet.
 
+### Device enrollment prerequisites
+
 The device to be enrolled must follow these requirements:
 
 - Use Windows 11 or Windows 10 version 1809 or later.
@@ -40,6 +42,31 @@ The device to be enrolled must follow these requirements:
 - Use an authorization type that Azure Active Directory supports in OOBE.
 
 Although not required, configuring hybrid Azure AD join for AD FS enables a faster Windows Autopilot Azure AD registration process during deployments.
+
+### Intune connector server prerequisites
+
+- The Intune Connector for Active Directory must be installed on a computer that's running Windows Server 2016 or later with .NET Framework version 4.7.2 or later.
+
+- The server hosting the Intune Connector must have access to the internet and your Active Directory.
+
+    > [!NOTE]
+    > The Intune Connector server requires standard domain client access to domain controllers, which includes the RPC port requirements it needs to communicate with Active Directory. For more information, see the following articles:
+    >
+    > - [Service overview and network port requirements for Windows](/troubleshoot/windows-server/networking/service-overview-and-network-port-requirements)
+    > - [How to configure a firewall for Active Directory domains and trusts](/troubleshoot/windows-server/identity/config-firewall-for-ad-domains-and-trusts)
+    > - [Hybrid Identity Required Ports and Protocols](/azure/active-directory/hybrid/reference-connect-ports)
+
+- To increase scale and availability, you can install multiple connectors in your environment. We recommend installing the Connector on a server that's not running any other Intune connectors. Each connector must be able to create computer objects in any domain that you want to support.
+
+- If your organization has multiple domains and you install multiple Intune Connectors, you must use a service account that can create computer objects in all domains, even if you plan to implement hybrid Azure AD join only for a specific domain. If these domains are untrusted domains, you must uninstall the connectors from domains in which you don't want to use Windows Autopilot. Otherwise, with multiple connectors across multiple domains, all connectors must be able to create computer objects in all domains.
+
+  This connector service account must have the following permissions:
+
+  - [**Log on as a service**](/windows/security/threat-protection/security-policy-settings/log-on-as-a-service)
+  - Must be part of the **Domain user** group
+  - Must be a member of the local **Administrators** group on the Windows server that hosts the connector
+
+- The Intune Connector requires the [same endpoints as Intune](../intune/fundamentals/intune-endpoints.md).
 
 ## Set up Windows automatic enrollment
 
@@ -98,41 +125,25 @@ The organizational unit that's granted the rights to create computers must match
 
 ## Install the Intune Connector
 
-### Before you begin
-
-- The Intune Connector for Active Directory must be installed on a computer that's running Windows Server 2016 or later with .NET Framework version 4.7.2 or later.
-
-- The server hosting the Intune Connector must have access to the internet and your Active Directory.
-
-    > [!NOTE]
-    > The Intune Connector server requires standard domain client access to domain controllers, which includes the RPC port requirements it needs to communicate with Active Directory. For more information, see the following articles:
-    >
-    > - [Service overview and network port requirements for Windows](/troubleshoot/windows-server/networking/service-overview-and-network-port-requirements)
-    > - [How to configure a firewall for Active Directory domains and trusts](/troubleshoot/windows-server/identity/config-firewall-for-ad-domains-and-trusts)
-    > - [Hybrid Identity Required Ports and Protocols](/azure/active-directory/hybrid/reference-connect-ports)
-
-- To increase scale and availability, you can install multiple connectors in your environment. We recommend installing the Connector on a server that's not running any other Intune connectors. Each connector must be able to create computer objects in any domain that you want to support.
-
-- If your organization has multiple domains and you install multiple Intune Connectors, you must use a service account that can create computer objects in all domains, even if you plan to implement hybrid Azure AD join only for a specific domain. If these domains are untrusted domains, you must uninstall the connectors from domains in which you don't want to use Windows Autopilot. Otherwise, with multiple connectors across multiple domains, all connectors must be able to create computer objects in all domains.
-
-  This connector service account must have the following permissions:
-
-  - [**Log on as a service**](/windows/security/threat-protection/security-policy-settings/log-on-as-a-service)
-  - Must be part of the **Domain user** group
-  - Must be a member of the local **Administrators** group on the Windows server that hosts the connector
-
-- The Intune Connector requires the [same endpoints as Intune](../intune/fundamentals/intune-endpoints.md).
+Before beginning the installation, make sure that all of the [Intune connector server prerequisites](#intune-connector-server-prerequisites) have been met.
 
 ### Install steps
 
 1. Turn off IE Enhanced Security Configuration. By default Windows Server has Internet Explorer Enhanced Security Configuration turned on. If you're unable to sign in to the Intune Connector for Active Directory, then turn off IE Enhanced Security Configuration for the Administrator. [How to turn off Internet Explorer enhanced security configuration](/archive/blogs/chenley/how-to-turn-off-internet-explorer-enhanced-security-configuration).
+
 2. In the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/), select **Devices** > **Windows** > **Windows enrollment** > **Intune Connector for Active Directory** > **Add**.
+
 3. Follow the instructions to download the Connector.
+
 4. Open the downloaded Connector setup file, *ODJConnectorBootstrapper.exe*, to install the Connector.
+
 5. At the end of the setup, select **Configure**.
+
 6. Select **Sign In**.
+
 7. Enter the Global administrator or Intune administrator role credentials.
  The user account must have an assigned Intune license.
+
 8. Go to **Devices** > **Windows** > **Windows enrollment** > **Intune Connector for Active Directory**, and then confirm that the connection status is **Active**.
 
 > [!NOTE]
@@ -172,6 +183,7 @@ Select one of the following ways to enroll your Autopilot devices.
 ### Register Autopilot devices that are already enrolled
 
 1. Create an Autopilot deployment profile with **Convert all targeted devices to Autopilot** set to **Yes**.
+
 2. Assign the profile to a group that contains the members that you want to automatically register with Autopilot.
 
 For more information, see [Create an Autopilot deployment profile](profiles.md).
