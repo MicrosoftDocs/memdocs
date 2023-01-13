@@ -26,6 +26,9 @@ This article describes known issues that can often be resolved by configuration 
 
 ## Known issues
 
+### Kiosk profile not auto logging in 
+There is currently a regression in Windows 10 and Windows 11 1B LCU (KB5022303) where kiosk profiles that have auto log on enabled will not autologin. After Autopilot completes provisioning the device stays on the log in screen prompting for credentials. To workaround this bug, you can manually enter the kiosk user credentials with the username kioskUser0 and no password and it should take you to the desktop. There is a fix pending, no estimated date on the release of the fix at this time. 
+
 ### TPM attestation isn't working on AMD platforms with ASP fTPM
 
 TPM attestation for AMD platforms with ASP firmware TPM may fail with error code 0x80070490 on Windows 10 and Windows 11 systems. There's currently no update available to resolve this issue.
