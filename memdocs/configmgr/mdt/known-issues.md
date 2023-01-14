@@ -50,6 +50,9 @@ To create a new boot image using the out of box Configuration Manager functional
 
 6. Once the **Add Boot Image Wizard** completes and the new boot image has been added, right click on the newly created boot image and select **Update Distribution Points**.
 
+    > [!NOTE]
+    > Don't first distribute the newly created boot image to distribution points before selecting **Update Distribution Points**. The next steps will finish updating the newly created boot image so that it is the same version as the currently installed ADK and Windows PE. This can be accomplished without first distributing the newly created boot image to the distribution points. It is better to finish properly creating the boot image before distributing the boot image to distribution points to avoid unnecessary updates to the distribution points. Distributing the boot image first before finishing updating the boot image will result in unneeded updates to the distribution points.
+
 7. In the **Update Distribution Points Wizard**, select the option **Reload this boot image with the current Windows PE version from the Windows ADK**, select **Next >**, and then **Next >** again.
 
 8. Allow the **Update Distribution Points Wizard** to complete.
@@ -63,6 +66,8 @@ If additional components need to be added to the boot image:
 2. In the boot image properties window, select the **Optional Components** tab
 
 3. Add in the desired optional components. For more information, see [Manage boot images with Configuration Manager: Optional components](/mem/configmgr/osd/get-started/manage-boot-images#optional-components).
+
+Make any additional desired changes to the newly created boot image, such as adding drivers, and then distribute the boot image to distribution points.
 
 > [!NOTE]
 > The above guide only shows x64 boot images since only x64 boot images are supported with the ADK for Windows 11, version 22H2 or newer.
