@@ -31,9 +31,6 @@ ms.collection: M365-identity-device-management
 
 # Set up enrollment notifications   
 
-> [!IMPORTANT]
-> This feature is in public preview. For more information, see [Public preview in Microsoft Intune](../fundamentals/public-preview.md).  
-
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]  
 
 *Applies to: Android, iOS/iPadOS, macOS, Windows 10, Windows 11*  
@@ -72,7 +69,7 @@ Email notifications appear in the user's inbox. Push notifications appear in the
    * **Windows enrollment**  
    * **Apple enrollment**  
    * **Android enrollment**    
-3. Select **Enrollment notifications (preview)**.  
+3. Select **Enrollment notifications**.  
 4. Select **Create notification**. For Apple and Android notifications, select the OS platform you're configuring the notifications for. 
 
     Your options for Apple enrollment are:  
@@ -117,4 +114,4 @@ Email notifications appear in the user's inbox. Push notifications appear in the
 11. Select **Next**. 
 12. In **Review + create**, review the notification details, and then select **Create**.  
 
-Enrollment notifications are sent out to assigned groups when enrollment is triggered. Return to **Enrollment notifications (preview)** to view and edit notifications, or change priority level. 
+Enrollment notifications are sent out to assigned groups when enrollment is triggered. Return to **Enrollment notifications** to view and edit notifications, or change priority level. 
