@@ -135,7 +135,7 @@ With Hybrid Azure AD join, a connection to the on-premises network is required f
 
 Before using the ANC deployment option, review these considerations:
 
-- Azure subscription required. The VNet used in this scenario is in your own Azure subscription. Therefore, you must have an Azure subscription and the [required licenses](/windows-365/enterprise/requirements?tabs=enterprise%2Cent#licensing-requirements).
+- Azure subscription required. The VNet used in this scenario is in your own Azure subscription. Therefore, you must have an Azure subscription and the [required licenses](./requirements.md?tabs=enterprise%2cent#licensing-requirements).
 - Egress costs. Because the VNet is associated with your own Azure account, any [egress costs](https://azure.microsoft.com/pricing/details/bandwidth/) are incurred to your Azure subscription.
 - Extra costs for network infrastructure. The Azure costs of operating your own VNet are applied to the subscription associated with the vNet.
 - Azure networking expertise or management required. You must provide the expertise and management to maintain your VNet.

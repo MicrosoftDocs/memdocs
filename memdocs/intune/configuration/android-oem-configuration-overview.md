@@ -184,6 +184,7 @@ Compared to standard apps, OEMConfig apps expand the managed configurations priv
 | Datalogic | com.datalogic.settings.oemconfig | |
 | Ecom - Ex-Handy 10 | com.ecom.econfig | |
 | Ecom - Smart-Ex 02 | com.ecom.econfig.smart | |
+| Elo | com.elotouch.oemconfig | [Elo OEMConfig Configurations](https://www.elotouch.com/oemconfig-configurations) |
 | Getac | com.getac.app.getacoemconfig | |
 | Honeywell | com.honeywell.oemconfig | |
 | Honeywell - Scanpal EDA | com.honeywell.oemconfig.scanpal | |

@@ -192,7 +192,7 @@ Combine Conditional Access policy with:
 
 - [Device compliance policies](../protect/create-conditional-access-intune.md) can require a device be marked as compliant before that device can be used to access your organization’s resources. The Conditional Access policies specify apps services you want to protect, conditions under which the apps or services can be accessed, and the users the policy applies to.
 
-- [App protection policies](../protect/app-based-conditional-access-intune.md) can add a security layer that ensures only client apps tht support Intune app protection policies can access your online resources, like Exchange or other Microsoft 365 services.
+- [App protection policies](../protect/app-based-conditional-access-intune.md) can add a security layer that ensures only client apps that support Intune app protection policies can access your online resources, like Exchange or other Microsoft 365 services.
 
 Conditional Access also works with the following to help you keep devices secure:
 
