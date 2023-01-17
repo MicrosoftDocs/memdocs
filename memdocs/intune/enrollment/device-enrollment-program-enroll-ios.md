@@ -323,7 +323,7 @@ Now that you've installed your token, you can create an enrollment profile for A
     - If you select **Show**, the screen will be displayed during setup, but only if there are steps to complete after the restore or after the software update. Users can sometimes skip the screen without taking action. They can then later go to the device's **Settings** menu to set up the feature.
     - With Shared iPad, all Setup Assistant panes after activation are automatically skipped regardless of the configuration. 
 
-    For a description of the available screens, see [Setup Assistant screen reference](#setup-assistant-screen-reference)(in this article).  
+    For a description of the available screens, see [Setup Assistant screen reference](#setup-assistant-screen-reference) (in this article).  
 
 19. Select **Next**.
 
@@ -331,7 +331,6 @@ Now that you've installed your token, you can create an enrollment profile for A
 
 > [!NOTE]
 > If you need to re-enroll your Automated Device Enrollment device, you need to first wipe the device from the Microsoft Endpoint Manager admin center. To re-enroll:
-
 > 1. Wipe the device from the Microsoft Endpoint Manager admin center.</p>
 >    Alternatively, retire the device from the admin center and factory reset the device using the Settings app, Apple Configurator 2, or iTunes.
 > 2. Activate the device again and run through Setup Assistant to receive the *Remote Management Profile*.  
@@ -339,7 +338,7 @@ Now that you've installed your token, you can create an enrollment profile for A
 ### Setup Assistant screen reference  
 The following table describes the Setup Assistant screens shown during automated device enrollment for iOS/iPadOS. You can show or hide these screens on supported devices during enrollment.       
 
-| Setup Assistant features | What happens when visible |
+| Setup Assistant screen | What happens when visible |
 |------------------------------------------|------------------------------------------|
 | **Passcode** | Prompt the user for a passcode. Always require a passcode for unsecured devices unless access is controlled in some other way. (For example, a kiosk mode configuration that restricts the device to one app.) For iOS/iPadOS 7.0 and later. |
 | **Location Services** | Prompt the user for their location. For macOS 10.11 and later, and iOS/iPadOS 7.0 and later. |

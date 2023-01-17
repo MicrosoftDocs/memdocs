@@ -178,7 +178,7 @@ Now that you've installed your token, you can create an enrollment profile for d
 ### Setup Assistant screen reference 
 The following table describes the Setup Assistant screens shown during automated device enrollment for Macs. You can show or hide these screens on supported devices during enrollment.    
 
-| Setup Assistant screen settings | What happens when visible  |
+| Setup Assistant screen | What happens when visible  |
 |------------------------------------------|------------------------------------------|
 | **Location Services** | Prompt the user for their location. For macOS 10.11 and later and iOS/iPadOS 7.0 and later. |
 | **Restore** | Display the Apps & Data screen. This screen gives the user the option to restore or transfer data from iCloud Backup when they set up the device. For macOS 10.9 and later, and iOS/iPadOS 7.0 and later. |
