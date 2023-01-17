@@ -35,12 +35,10 @@ ms.collection: M365-identity-device-management
 
 *Applies to: Android, iOS/iPadOS, macOS, Windows 10, Windows 11*  
 
-Set up enrollment notifications in Microsoft Intune to notify employees of newly enrolled devices. Within an enrollment notification, you can:  
+Set up enrollment notifications in Microsoft Intune to notify employees of newly enrolled devices. Enrollment notifications are sent to assigned users via your selected method: email or push notification. Within a notification, you can:  
 
 * Add a custom message for the user, with information about how to report an unrecognized device.  
-* Apply your tenant's branding and customization settings (email notifications only).  
-
-Enrollment notifications are sent to assigned users via your selected method: email or push notification.  
+* Apply your tenant's branding and customization settings (email notifications only).   
 
 ## Example  
 The following example image shows what an enrollment notification looks like to a device user.  
@@ -49,12 +47,12 @@ The following example image shows what an enrollment notification looks like to 
 > ![Example image of an enrollment notification configured in Intune, notifying the recipient that a device named *Nia's iPhone" was enrolled, and includes HTML elements such as bolded font and a hyperlink, device details, contact information, and privacy statement.](./media/enrollment-notifications/enrollment-notification-message.png)  
 
 ## Prerequisites  
-Enrollment notifications work with user-driven enrollment methods. They aren't supported in userless enrollment scenarios. 
-
 To create an enrollment notification, you must: 
 
 * Be a Global Administrator or Intune Administrator. 
 * [Configure branding and customization settings](../apps/company-portal-app.md) in **Tenant administration** > **Customization**.  
+
+Enrollment notifications work with user-driven enrollment methods. They aren't supported in userless enrollment scenarios. 
 
 ## You should know  
 Email notifications appear in the user's inbox. Push notifications appear in the Intune Company Portal apps for iOS/iPadOS, macOS, and Android.  Enrollment push notifications aren't supported in the Company Portal for Windows, so they'll never appear there.  
