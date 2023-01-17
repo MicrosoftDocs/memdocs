@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/26/2022
+ms.date: 01/17/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -349,6 +349,7 @@ Now that you've installed your token, you can create an enrollment profile for A
     | **Restore Completed** | Shows users the Restore Completed screen after a backup and restore is performed during Setup Assistant. |  
     | **Software Update Completed** | Shows the user all software updates that happen during Setup Assistant.|  
     | **Get Started**| Shows users the Get Started welcome screen.  
+    | **Terms of Address**| Give the user the option to choose how they want to be addressed throughout the system: feminine, masculine, or neutral. This Apple feature is available for select languages. For more information, see [Key Features and Enhancements](https://www.apple.com/ios/ios-16/features/)(opens Apple website). For iOS 16/0 and later.      
 
 19. Select **Next**.
 
