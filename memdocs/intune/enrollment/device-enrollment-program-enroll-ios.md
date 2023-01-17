@@ -318,12 +318,10 @@ Now that you've installed your token, you can create an enrollment profile for A
     | **Department** | Appears when users tap **About Configuration** during activation. |
     |    **Department Phone**     | Appears when users tap the **Need Help** button during activation. |
 
-    You can choose to hide Setup Assistant screens on the device during user setup.
+    You can hide Setup Assistant screens on the device during user setup. For a description of all screens, see [Setup Assistant screen reference](#setup-assistant-screen-reference) (in this article).  
     - If you select **Hide**, the screen won't be displayed during setup. After setting up the device, the user can still go to the **Settings** menu to set up the feature.
     - If you select **Show**, the screen will be displayed during setup, but only if there are steps to complete after the restore or after the software update. Users can sometimes skip the screen without taking action. They can then later go to the device's **Settings** menu to set up the feature.
-    - With Shared iPad, all Setup Assistant panes after activation are automatically skipped regardless of the configuration. 
-
-    For a description of the available screens, see [Setup Assistant screen reference](#setup-assistant-screen-reference) (in this article).  
+    - With Shared iPad, all Setup Assistant panes after activation are automatically skipped regardless of the configuration.   
 
 19. Select **Next**.
 
