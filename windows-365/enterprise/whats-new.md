@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 01/05/2023
+ms.date: 01/17/2023
 ms.topic: reference
 ms.service: windows-365
 ms.subservice:
@@ -49,6 +49,17 @@ Learn what new features are available in Windows 365 Enterprise.
 ### Windows 365 Government
 ### Windows 365 app
 -->
+
+<!-- ########################## -->
+## Week of January 16, 2023
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Monitor and troubleshoot
+
+#### Windows 365 Government support for forensic auditing of Cloud PCs<!--41237533-->
+
+Forensic auditing is now available for Windows 365 Government. For more information, see [Digital forensics and Windows 365 Enterprise Cloud PCs](digital-forensics.md) and [Place a Cloud PC under review](place-cloud-pc-under-review.md).
+
 
 <!-- ########################## -->
 ## Week of January 2, 2023
