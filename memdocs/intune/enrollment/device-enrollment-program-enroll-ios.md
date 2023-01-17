@@ -325,13 +325,17 @@ Now that you've installed your token, you can create an enrollment profile for A
 
 19. Select **Next**.
 
-20. To save the profile, select **Create**.
+20. To save the profile, select **Create**.  
 
-> [!NOTE]
-> If you need to re-enroll your Automated Device Enrollment device, you need to first wipe the device from the Microsoft Endpoint Manager admin center. To re-enroll:
-> 1. Wipe the device from the Microsoft Endpoint Manager admin center.</p>
->    Alternatively, retire the device from the admin center and factory reset the device using the Settings app, Apple Configurator 2, or iTunes.
-> 2. Activate the device again and run through Setup Assistant to receive the *Remote Management Profile*.  
+### Dynamic groups in Azure Active Directory
+
+You can use the enrollment **Name** field to create a dynamic group in Azure Active Directory (Azure AD). For more information, see [Azure Active Directory dynamic groups](/azure/active-directory/users-groups-roles/groups-dynamic-membership).
+
+You can use the profile name to define the [enrollmentProfileName parameter](/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices) to assign devices with this enrollment profile.
+
+Prior to device setup, and to ensure quick delivery to devices with user affinity,make sure the enrolling user is a member of an Azure AD user group.   
+
+If you assign dynamic groups to enrollment profiles, there might be a delay in delivering applications and policies to devices after the enrollment.
 
 ### Setup Assistant screen reference  
 The following table describes the Setup Assistant screens shown during automated device enrollment for iOS/iPadOS. You can show or hide these screens on supported devices during enrollment.       
@@ -364,17 +368,7 @@ The following table describes the Setup Assistant screens shown during automated
 | **Get Started**| Shows users the Get Started welcome screen.  
 | **Terms of Address**| Give the user the option to choose how they want to be addressed throughout the system: feminine, masculine, or neutral. This Apple feature is available for select languages. For more information, see [Key Features and Enhancements](https://www.apple.com/ios/ios-16/features/)(opens Apple website). For iOS/iPadOS 16.0 and later.      
 
-### Dynamic groups in Azure Active Directory
-
-You can use the enrollment **Name** field to create a dynamic group in Azure Active Directory (Azure AD). For more information, see [Azure Active Directory dynamic groups](/azure/active-directory/users-groups-roles/groups-dynamic-membership).
-
-You can use the profile name to define the [enrollmentProfileName parameter](/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices) to assign devices with this enrollment profile.
-
-For the fastest policy delivery on ADE devices that have user affinity, make sure the enrolling user is a member, before device setup, of an Azure AD user group.
-
-If you assign dynamic groups to enrollment profiles, there might be a delay in delivering applications and policies to devices after the enrollment.
-
-## Sync managed devices
+## Sync managed devices  
 
 Now that Intune has permission to manage your devices, you can synchronize Intune with Apple to see your managed devices in Intune in the Azure portal.
 
@@ -390,7 +384,7 @@ Now that Intune has permission to manage your devices, you can synchronize Intun
       > [!IMPORTANT]
       > If a device is deleted from Intune, but remains assigned to the ADE enrollment token in the ASM/ABM portal, it will reappear in Intune on the next full sync. If you don't want the device to reappear in Intune, unassign it from the Apple MDM server in the ABM/ASM portal.
    - If a device is released from ABM/ASM, it can take up to 45 days for it to be automatically deleted from the devices page in Intune. You can manually delete released devices from Intune one by one if needed. Released devices will be accurately reported as being Removed from ABM/ASM in Intune until they're automatically deleted within 30-45 days.
-   - A delta sync is run automatically every 12 hours. You can also trigger a delta sync by selecting the **Sync** button (no more than once every 15 minutes). All sync requests are given 15 minutes to finish. The **Sync** button is disabled until a sync is completed. This sync will refresh existing device status and import new devices assigned to the Apple MDM server. If a delta sync fails for any reason, the next sync will be a full sync to hopefully resolve any issues.
+   - A delta sync is run automatically every 12 hours. You can also trigger a delta sync by selecting the **Sync** button (no more than once every 15 minutes). All sync requests are given 15 minutes to finish. The **Sync** button is disabled until a sync is completed. This sync will refresh existing device status and import new devices assigned to the Apple MDM server. If a delta sync fails for any reason, the next sync will be a full sync to hopefully resolve any issues.  
 
 ## Assign an enrollment profile to devices
 
@@ -433,6 +427,14 @@ You enabled management and syncing between Apple and Intune and assigned a profi
    You can resolve this error by trying to download the management again within 15 minutes. If it's been more than 15 minutes, to resolve this error you'll need to factory reset the device. This error occurs because of a 15-minute time limit on SCEP certificates, which is enforced for security.
   
 For information on the end-user experience, see [Enroll your iOS/iPadOS device in Intune by using ADE](../user-help/enroll-your-device-dep-ios.md).
+
+## Re-enroll a device  
+Complete these steps to re-enroll a device that already went though automated device enrollment.     
+
+1. There are two options for resetting the device:  
+    * Wipe the device in the Microsoft Endpoint Manager admin center.  
+    * Retire the device in the admin center, and then reset the device to factory settings using the Settings app, Apple Configurator 2, or iTunes.  
+2. Turn on the device and follow the onscreen steps in Setup Assistant to retrieve the remote management profile.    
 
 ## Renew an Automated Device Enrollment token  
 
