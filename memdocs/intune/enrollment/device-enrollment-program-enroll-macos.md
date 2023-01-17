@@ -257,8 +257,8 @@ Distribute prepared devices throughout your organization.
      > You can confirm which profiles are on the device anytime by returning to **System Preferences** > **Profiles**.  
   9. If you assigned the device to a macOS enrollment profile with user affinity, sign in to the Company Portal app to complete Azure AD registration and conditional access requirements.  
 
-## Renew enrollment program token  
-Complete these steps to renew an enrollment program token that's about to expire. 
+## Get ADE token  
+Complete these steps to renew a server token that's about to expire.  
 
 1. Sign in to Apple Business Manager or Apple School Manager and follow these step to download a new MDM server token: 
     * [Download token in Apple Business Manager](https://support.apple.com/guide/apple-business-manager/axme0f8659ec/web)
