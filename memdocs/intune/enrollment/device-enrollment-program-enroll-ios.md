@@ -333,7 +333,7 @@ You can use the enrollment **Name** field to create a dynamic group in Azure Act
 
 You can use the profile name to define the [enrollmentProfileName parameter](/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices) to assign devices with this enrollment profile.
 
-Prior to device setup, and to ensure quick delivery to devices with user affinity,make sure the enrolling user is a member of an Azure AD user group.   
+Prior to device setup, and to ensure quick delivery to devices with user affinity, make sure the enrolling user is a member of an Azure AD user group.   
 
 If you assign dynamic groups to enrollment profiles, there might be a delay in delivering applications and policies to devices after the enrollment.
 
@@ -429,7 +429,7 @@ You enabled management and syncing between Apple and Intune and assigned a profi
 For information on the end-user experience, see [Enroll your iOS/iPadOS device in Intune by using ADE](../user-help/enroll-your-device-dep-ios.md).
 
 ## Re-enroll a device  
-Complete these steps to re-enroll a device that already went though automated device enrollment.     
+Complete these steps to re-enroll a device that already went through automated device enrollment.     
 
 1. There are two options for resetting the device:  
     * Wipe the device in the Microsoft Endpoint Manager admin center.  
