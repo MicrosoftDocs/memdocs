@@ -47,7 +47,6 @@ For more information about Cloud PCs and Windows 365, see [What is Windows 365?]
 The following features are not yet supported for Windows 365 GCC or GCCH.
 
 - Configure installed language and region for provisioning Cloud PCs
-- Digital forensics and placing a Cloud PC under review
 - Unified dashboard
 - Virtualization-based workloads
 - Endpoint analytics support (this is supported in GCC)
