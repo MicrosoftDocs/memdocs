@@ -138,7 +138,11 @@ items:
     - name: Configure Microsoft Tunnel
       href: microsoft-tunnel-configure.md
     - name: Microsoft Tunnel for MAM
-      href: microsoft-tunnel-mam.md
+      items:
+      - name: MAM Tunnel for Android
+        href:  microsoft-tunnel-mam-android.md
+      - name: MAM Tunnel for iOS
+        href:  microsoft-tunnel-mam-ios.md
     - name: Monitor Microsoft Tunnel
       href: microsoft-tunnel-monitor.md
     - name: Upgrade Microsoft Tunnel
