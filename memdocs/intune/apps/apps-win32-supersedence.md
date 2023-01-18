@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/25/2022
+ms.date: 01/17/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -98,6 +98,20 @@ In the following scenarios, you should review app detection rules after performi
 | In-place   app update | <ul><li>With an   in-place app update, admin can only swap the app content, update the   metadata, and change the detection and install commands.</li>      <li>Admin cannot change any of the fields that are not stored on the   app with an in-place app update.  For   example, the admin cannot modify targeting at the same time as an   update.</li>      <li>Admin can only perform the in-place app update one app at a   time.</li></ul> |
 | Supersedence   app update | <ul><li>Admin can   update an app in its entirety with a new set of   configurations.</li>      <li>Admin can elect to send down an uninstall command to uninstall   previous app versions.</li>      <li>Admin can update devices containing multiple app versions to the   newest app version with one Supersedence configuration. The admin also   maintains access to older version of the app.</li></ul> |
 
+### Understand interactions between dependencies and supersedence
+
+> [!NOTE]
+> Supersedence GA is currently being rolled out. For more information, see [Upcoming improvements to Win32 app supersedence - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/intune-customer-success/upcoming-improvements-to-win32-app-supersedence/ba-p/3713026).
+
+Interactions between dependencies and supersedence include the following:
+
+- Supersedence and dependency relationships can be created in the same app subgraph.
+- Enforcement prefers supersedence over dependency, but if there is a conflict state, Intune will report it.
+    - **Specific example:** A depends on B, C supersedes B. A will report a conflict state.
+    - **Specific example #2:** A depends on B, C replaces A; C installs and A gets replaced. B gets left.
+- Supersedence will not go through in specific scenarios. 
+    - **Example:** A depends on B and C, and B supersedes C.  
+
 ## Basic Supersedence Examples
 
 For the purposes of this document, we assume that all apps are targeted (either device or user targeting) and are applicable.
@@ -147,7 +161,7 @@ To better understand the behavior of a supersedence chain, the following table p
 
 ## Supersedence Limitations
 
-There can only be a maximum of 10 nodes in a single Supersedence graph. The nodes include the superseding app, the superseded apps, and all subsequent related apps. 
+There can only be a maximum of 11 nodes in a single supersedence graph. The nodes include the superseding app, the superseded apps, and all subsequent related apps. 
 In the following Supersedence diagram, there are five nodes in total. Hence, five more nodes could be created until the max node count is reached.
 
 ![Supersedence maximum node count example](./media/apps-win32-supersedence/apps-win32-supersedence-05.png)
@@ -155,6 +169,10 @@ In the following Supersedence diagram, there are five nodes in total. Hence, fiv
 Additional supersedence limitations:
 - Azure Virtual Desktop multi-session only supports supersedence relationships with system-context (device-based) apps.
 - The Enrollment Status Page (ESP) is not supported with the supersedence public preview. ESP displays provisioning progress after a new device is enrolled, as well as when new users sign into the device. For the supersedence public preview, if an app has a supersedence relationship, it will not be enforced during ESP even if it is included as a selected app in an ESP policy. Additionally, apps that are involved in supersedence relationships will not be sent to the client device during ESP. However, the apps will be sent to the device after ESP completes, and the supersedence relationship will be respected.
+
+    > [!NOTE]
+    > ESP support is being rolled out right now as part of Supersedence GA. For more information, see [Upcoming improvements to Win32 app supersedence - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/intune-customer-success/upcoming-improvements-to-win32-app-supersedence/ba-p/3713026). 
+
 - Only apps that are targeted will show install statuses in Microsoft Endpoint Manager admin center.
 
 ## Next steps
