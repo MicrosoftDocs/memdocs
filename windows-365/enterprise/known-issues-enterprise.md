@@ -87,7 +87,7 @@ The following device compliance settings may report as **Not Compliant** when be
 When using single sign-on, you'll currently be prompted to authenticate to Azure AD and allow the Remote Desktop connection when launching a connection to a new Cloud PC. Azure AD remembers up to 15 devices for 30 days before prompting again. If you see this dialog, select **Yes** to connect.
 
 ## Single sign-on user connections are being denied through Azure AD Conditional Access <!--42317382-->
-**Possible cause**: To login through single sign-on, the remote desktop client requests an access token to the **Microsoft Remote Desktop** app in Azure AD which may be the cause of the failed connection.
+**Possible cause**: To log in through single sign-on, the remote desktop client requests an access token to the **Microsoft Remote Desktop** app in Azure AD which may be the cause of the failed connection.
 
 **Troubleshooting**: Follow the steps to [troubleshoot sign-in problems](/azure/active-directory/conditional-access/troubleshoot-conditional-access).
 
