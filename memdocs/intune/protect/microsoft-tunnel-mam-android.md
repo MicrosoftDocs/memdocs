@@ -182,7 +182,7 @@ The new policy will appear in the list of app configuration policies.
 
 ## Configure Line of Business applications
 
-If you’ve integrated your LOB apps with the MAM SDK, you can use them with Microsoft Tunnel by adding them as *custom apps* to the three MAM Tunnel policies you’ve [previously created](../protect/microsoft-tunnel-mam.md#configure-policies-to-support-microsoft-tunnel-for-mam).
+If you’ve integrated your LOB apps with the MAM SDK, you can use them with Microsoft Tunnel by adding them as *custom apps* to the three MAM Tunnel policies you’ve [previously created](#configure-policies-to-support-microsoft-tunnel-for-mam).
 
 For more information about adding custom apps to policies, see the following articles for the two policy types:
 
@@ -241,3 +241,4 @@ The preview for Microsoft Tunnel for unenrolled devices is supported for GGC Hig
 
 - [Configure Microsoft Tunnel](../protect/microsoft-tunnel-configure.md)
 - [Monitor Microsoft Tunnel](../protect/microsoft-tunnel-monitor.md)
+- [MAM Tunnel for iOS](../protect/microsoft-tunnel-mam-ios.md)

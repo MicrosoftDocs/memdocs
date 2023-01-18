@@ -52,7 +52,7 @@ Microsoft Tunnel for MAM supports the following platforms:
 
 The following table identifies key features for the supported platforms:
 
-|                  |Tunnel for Android     | Tunnel for iOS           |
+| Requirements and Features        |Tunnel for Android     | Tunnel for iOS           |
 |------------------|-----------------------|--------------------------|
 | Requirements:    | - Company Portal app (sign-in not required)<br><br> - Defender for Endpoint app     | - No Company Portal app or Defender for Endpoint app requirement   |
 | Features:        | - VPN is provided via the Defender for Endpoint app: <br> --- Per App VPN <br> --- Device Wide VPN <br><br> - *Auto-launch*: VPN automatically starts on app launch   | - VPN is provided via Tunnel for MAM iOS SDK integration <br><br> - Per-App VPN. Tunnel connection is restricted to each targeted app <br><br> - *Auto-launch*: VPN automatically starts on app launch <br><br>   -  No Device Wide VPN <br><br> - Trusted root certificate support for on-premises CA trust (available for public preview) <br><br>  |
