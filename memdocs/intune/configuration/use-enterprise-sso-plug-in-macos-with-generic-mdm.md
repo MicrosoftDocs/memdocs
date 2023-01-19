@@ -7,7 +7,7 @@ keywords:
 author: TBC
 ms.author: alessanc
 manager: ianfarr
-ms.date: 01/18/2023
+ms.date: 01/19/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -47,7 +47,9 @@ To use the Microsoft Enterprise SSO plug-in for Apple devices:
 - The MDM solution must support configuring [Single Sign-on MDM payload settings for Apple devices](https://support.apple.com/guide/deployment/extensible-single-sign-on-payload-settings-depfd9cdf845/web) with a device policy.
 - The device must support the plug-in:
   - macOS 10.15 and newer
-- Microsoft Company Portal app must be installed on the device. The Microsoft Company Portal app can be installed manually by users, or deployed with an MDM policy. You can [download the Company Portal app installer package](https://go.microsoft.com/fwlink/?linkid=853070).
+- The Microsoft Company Portal app must be installed on the device.
+
+  The Microsoft Company Portal app can be installed manually by users, or deployed with an MDM policy. You can [download the Company Portal app installer package](https://go.microsoft.com/fwlink/?linkid=853070).
 
 > [!NOTE]
 > On macOS devices, Apple requires the Company Portal app be installed. Users don't need to use or configure the Company Portal app, it just needs to be installed on the device.

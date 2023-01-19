@@ -7,7 +7,7 @@ keywords:
 author: TBC
 ms.author: alessanc
 manager: ianfarr
-ms.date: 01/18/2023
+ms.date: 01/19/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -51,10 +51,10 @@ To use the Microsoft Enterprise SSO plug-in for Apple devices:
   The Microsoft Authenticator app can be installed manually by users, or by deploying the app through Jamf Pro. For a list of options on how to install the Microsoft Authenticator app, go to [Managing macOS installers using Jamf Pro](https://docs.jamf.com/10.24.1/jamf-pro/administrator-guide/Managing_macOS_Installers.html) (opens Jamf Pro's web site).
 
 > [!NOTE]
-> On iOS and iPadOS devices, Apple requires that the SSO app extension and the Microsoft Authenticator app be installed. Users don't need to use the Microsoft Authenticator app, it just needs to be installed on the device.
-
-> [!NOTE]
-> [Jamf Pro and Intune integration for device compliance](../protect/conditional-access-integrate-jamf.md) is not required to use the SSO app extension.
+>
+> - On iOS and iPadOS devices, Apple requires that the SSO app extension and the Microsoft Authenticator app be installed. Users don't need to use the Microsoft Authenticator app, it just needs to be installed on the device.
+>
+> - **[Jamf Pro and Intune integration for device compliance](../protect/conditional-access-integrate-jamf.md) is not required to use the SSO app extension.**
 
 [!INCLUDE [Apple Kerberos Extension Boilerplate](../includes/apple-enterprise-sso-kerberos-boilerplate.md)]
 

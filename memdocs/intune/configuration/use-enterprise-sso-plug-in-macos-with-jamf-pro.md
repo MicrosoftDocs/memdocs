@@ -7,7 +7,7 @@ keywords:
 author: TBC
 ms.author: alessanc
 manager: ianfarr
-ms.date: 01/18/2023
+ms.date: 01/19/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -46,14 +46,15 @@ To use the Microsoft Enterprise SSO plug-in for Apple devices:
 - The device must be managed via Jamf Pro.
 - The device must support the plug-in:
   - macOS 10.15 and newer
-- The Company Portal app must be installed on the device.
+- The Microsoft Company Portal app must be installed on the device.
 
   The Company Portal app can be installed manually by users, or by deploying the app through Jamf Pro. For a list of options on how to install the Company Portal app, go to [Managing macOS installers using Jamf Pro](https://docs.jamf.com/10.24.1/jamf-pro/administrator-guide/Managing_macOS_Installers.html) (opens Jamf Pro's web site).
 
 > [!NOTE]
-> On macOS devices, Apple requires that the Company Portal app be installed. Users don't need to use the Company Portal, the app just need to be installed on the device.
 >
-> **[Jamf Pro and Intune integration for device compliance](../protect/conditional-access-integrate-jamf.md) is not required to use the SSO app extension.**
+> - On macOS devices, Apple requires that the Company Portal app be installed. Users don't need to use the Company Portal, the app just need to be installed on the device.
+>
+> - **[Jamf Pro and Intune integration for device compliance](../protect/conditional-access-integrate-jamf.md) is not required to use the SSO app extension.**
 
 [!INCLUDE [Apple Kerberos Extension Boilerplate](../includes/apple-enterprise-sso-kerberos-boilerplate.md)]
 

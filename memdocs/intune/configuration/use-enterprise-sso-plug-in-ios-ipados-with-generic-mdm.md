@@ -7,7 +7,7 @@ keywords:
 author: TBC
 ms.author: alessanc
 manager: ianfarr
-ms.date: 01/18/2023
+ms.date: 01/19/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -47,7 +47,7 @@ To use the Microsoft Enterprise SSO plug-in for Apple devices:
 - The MDM solution must support configuring [Single Sign-on MDM payload settings for Apple devices](https://support.apple.com/guide/deployment/extensible-single-sign-on-payload-settings-depfd9cdf845/web) with a device policy.
 - The device must support the plug-in:
   - iOS/iPadOS 13.0 and newer
-- Microsoft Authenticator app installed on the device. The Microsoft Authenticator app can be installed manually by users, or deployed with an MDM policy.
+- The Microsoft Authenticator app must be installed on the device. The Microsoft Authenticator app can be installed manually by users, or deployed with an MDM policy.
 
 > [!NOTE]
 > On iOS and iPadOS devices, Apple requires that the SSO app extension and the Microsoft Authenticator app be installed. Users don't need to use or configure the Microsoft Authenticator app, it just needs to be installed on the device.

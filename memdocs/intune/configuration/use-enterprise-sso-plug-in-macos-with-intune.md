@@ -7,7 +7,7 @@ keywords:
 author: TBC
 ms.author: alessanc
 manager: ianfarr
-ms.date: 01/18/2023
+ms.date: 01/19/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -31,7 +31,11 @@ ms.collection: M365-identity-device-management
 
 [!INCLUDE [Apple SSO Boilerplate](../includes/apple-enterprise-sso-intro-boilerplate.md)]
 
-This article shows how to deploy the Microsoft Enterprise SSO plug-in (preview) for macOS Apple Devices with Intune.
+This feature applies to:
+
+- macOS
+
+This article shows how to deploy the Microsoft Enterprise SSO plug-in (preview) for macOS Apple devices with Intune.
 
 [!INCLUDE [Apple SSO Disclaimer Boilerplate](../includes/apple-enterprise-sso-disclaimer-boilerplate.md)]
 
@@ -39,7 +43,8 @@ This article shows how to deploy the Microsoft Enterprise SSO plug-in (preview) 
 
 - The device must support the plug-in:
   - macOS 10.15 and newer
-- The device is managed with Intune. The Company Portal app must be installed and configured on the device.
+- The device is managed with Intune.
+- The Microsoft Company Portal app must be installed and configured on the device.
 
 [!INCLUDE [Apple Kerberos Extension Boilerplate](../includes/apple-enterprise-sso-kerberos-boilerplate.md)]
 
