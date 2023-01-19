@@ -239,6 +239,9 @@ The preview for Microsoft Tunnel for unenrolled devices is supported for GGC Hig
 
 ## Next steps
 
+- [Overview of Microsoft Tunnel for Mobile Application Management](../protect/microsoft-tunnel-mam.md)
+- [MAM Tunnel for iOS](../protect/microsoft-tunnel-mam-ios.md)
+
+Also see:
 - [Configure Microsoft Tunnel](../protect/microsoft-tunnel-configure.md)
 - [Monitor Microsoft Tunnel](../protect/microsoft-tunnel-monitor.md)
-- [MAM Tunnel for iOS](../protect/microsoft-tunnel-mam-ios.md)

@@ -43,7 +43,7 @@ To extend your existing [Microsoft Tunnel configuration](../protect/microsoft-tu
 
 
 
-## Nex steps
+## Next steps
 
 - [Configure Microsoft Tunnel](../protect/microsoft-tunnel-configure.md)
 - [Monitor Microsoft Tunnel](../protect/microsoft-tunnel-monitor.md)
