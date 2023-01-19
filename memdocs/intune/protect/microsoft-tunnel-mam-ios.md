@@ -206,10 +206,9 @@ The following guidance is specific to requirements for Tunnel for MAM SDK for iO
 
    :::image type="content" source="./media/microsoft-tunnel-mam-ios/app-registration-authentication1.png" alt-text="Configure authentication for the app registration..":::
 
-5. On the *Configure your iOS or macOS app* pane, Enter the *Bundle ID* for the Xcode app to be integrated with Tunnel for MAM SDK for iOS, and then select **Configure**. This opens the iOS/macOS configuration pane: 
+5. On the *Configure your iOS or macOS app* pane, Enter the *Bundle ID* for the Xcode app to be integrated with Tunnel for MAM SDK for iOS, and then select **Configure**. This opens the iOS/macOS configuration pane:
 
    :::image type="content" source="./media/microsoft-tunnel-mam-ios/app-registration-configuration-pane.png" alt-text="Review the app registration configuration pane.":::
-
 
 1
 
