@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Use the Microsoft Enterprise SSO plug-in on iOS/iPadOS devices in Jamf Pro
+title: Configure iOS/iPadOS Enterprise SSO plug-in in Jamf Pro
 description: Add or create an iOS or iPadOS device profile using the Microsoft Enterprise SSO plug-in in Jamf Pro. 
 keywords:
 author: TBC
@@ -35,7 +35,7 @@ This feature applies to:
 
 - iOS/iPadOS
 
-This article shows how to deploy the Microsoft Enterprise SSO plug-in (preview) for iOS/iPadOS Devices with Jamf Pro.
+This article shows how to deploy the Microsoft Enterprise SSO plug-in (preview) for iOS/iPadOS devices with Jamf Pro.
 
 [!INCLUDE [Apple SSO Disclaimer Boilerplate](../includes/apple-enterprise-sso-disclaimer-boilerplate.md)]
 
@@ -43,12 +43,12 @@ This article shows how to deploy the Microsoft Enterprise SSO plug-in (preview) 
 
 To use the Microsoft Enterprise SSO plug-in for Apple devices:
 
-- The device must be managed via Jamf Pro
+- The device must be managed via Jamf Pro.
 - The device must support the plug-in:
   - iOS/iPadOS 13.0 and newer
-- Microsoft Authenticator app installed on the device.
+- The Microsoft Authenticator app must be installed on the device.
 
-  The Microsoft Authenticator app can be installed manually by users, or by deploying the app through Jamf Pro. For a list of options on how to install the Microsoft Authenticator app, go to [Jamf Pro's documentation](https://docs.jamf.com/10.24.1/jamf-pro/administrator-guide/Managing_macOS_Installers.html).
+  The Microsoft Authenticator app can be installed manually by users, or by deploying the app through Jamf Pro. For a list of options on how to install the Microsoft Authenticator app, go to [Managing macOS installers using Jamf Pro](https://docs.jamf.com/10.24.1/jamf-pro/administrator-guide/Managing_macOS_Installers.html) (opens Jamf Pro's web site).
 
 > [!NOTE]
 > On iOS and iPadOS devices, Apple requires that the SSO app extension and the Microsoft Authenticator app be installed. Users don't need to use the Microsoft Authenticator app, it just needs to be installed on the device.
@@ -71,7 +71,7 @@ In the Jamf Pro portal, you create a Computer or Device configuration profile.
 
     :::image type="content" source="./media/apple-enterprise-sso-plug-in/ios-ipados-create-profile-jamf.png" alt-text="Screenshot that shows the Jamf Pro portal and how to create a configuration profile for iOS/iPadOS devices.":::
 
-3. In **Name**, enter a descriptive name for the policy. Name your policies so you can easily identify them later. For example, a good policy name is: **Microsoft Enterprise SSO plug-in**.
+3. In **Name**, enter a descriptive name for the policy. Name your policies so you can easily identify them later. For example, a good policy name is: **iOS/iPadOS: Microsoft Enterprise SSO plug-in**.
 
 4. In the **Options** column, scroll down and select **Single Sign-On Extensions** > **Add**:
 
@@ -117,7 +117,7 @@ In the Jamf Pro portal, you create a Computer or Device configuration profile.
 
     :::image type="content" source="./media/apple-enterprise-sso-plug-in/ios-ipados-custom-configuration-plist-jamf.png" alt-text="Screenshot that shows a sample custom configuration with a PLIST file for Jamf Pro.":::
 
-    These PLIST settings configure the following SSO Extension options. These properties are the default values used by the SSO Extension, but they can be customized for your organization needs:
+    These PLIST settings configure the following SSO Extension options. These properties are the default values used by the Microsoft SSO Extension, but they can be customized for your organization needs:
 
     [!INCLUDE [Apple SSO Recommended Settings Table Boilerplate](../includes/apple-enterprise-sso-recommended-settings-jamf-pro-boilerplate.md)]
 

@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Microsoft Enterprise SSO plug-in in Microsoft Intune (iOS/iPadOS)
+title: Configure iOS/iPadOS Enterprise SSO plug-in in Microsoft Intune
 description: Add or create an iOS or iPadOS device profile using the Microsoft Enterprise SSO plug-in in Microsoft Intune. 
 keywords:
 author: TBC
@@ -63,7 +63,7 @@ In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwli
     - **Platform**: Select **iOS/iPadOS**.
     - **Profile**: Select **Templates** > **Device features**.
 
-4. Select **Create**.
+4. Select **Create**:
 
     :::image type="content" source="./media/apple-enterprise-sso-plug-in/ios-ipados-create-device-features.png" alt-text="Screenshot that shows how to create a device features configuration profile for iOS/iPadOS in Intune." lightbox="./media/apple-enterprise-sso-plug-in/ios-ipados-create-device-features.png":::
 
@@ -88,7 +88,7 @@ In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwli
 
     - **App bundle ID**: Enter a list of bundle IDs for apps that don't support MSAL **and** are allowed to use SSO. For more information, go to [Applications that don't use MSAL](/azure/active-directory/develop/apple-sso-plugin#enable-sso-for-apps-that-dont-use-a-microsoft-identity-platform-library).
 
-    - **Additional configuration**: To customize the end user experience, you can add the following properties. These properties are the default values used by the SSO Extension, but they can be customized for your organization needs:
+    - **Additional configuration**: To customize the end user experience, you can add the following properties. These properties are the default values used by the Microsoft SSO Extension, but they can be customized for your organization needs:
 
       [!INCLUDE [Apple SSO Recommended Settings Table Boilerplate](../includes/apple-enterprise-sso-recommended-settings-intune-and-generic-mdm-boilerplate.md)]
 
@@ -104,7 +104,7 @@ When the device checks in with the Intune service, it will receive this profile.
 
 To check that the profile deployed correctly, in the Endpoint Manager admin center, go to **Devices** > **Configuration Profiles** > select the profile you created and generate a report:
 
-:::image type="content" source="./media/apple-enterprise-sso-plug-in/ios-ipados-enterprise-sso-profile.png" alt-text="Screenshot that shows the device configuration profile deployment report in Intune.":::
+:::image type="content" source="./media/apple-enterprise-sso-plug-in/ios-ipados-enterprise-sso-profile-report.png" alt-text="Screenshot that shows the iOS/iPadOS device configuration profile deployment report in Intune.":::
 
 [!INCLUDE [Apple iOS End User Experience Boilerplate](../includes/apple-enterprise-sso-ios-end-user-experience-boilerplate.md)]
 

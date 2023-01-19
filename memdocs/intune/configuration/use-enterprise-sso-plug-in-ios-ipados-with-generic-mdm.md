@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Configure the Microsoft Enterprise SSO plug-in on iOS/iPadOS devices with an MDM
+title: Configure iOS/iPadOS Enterprise SSO plug-in with any MDM provider
 description: Add or create an iOS or iPadOS device profile using the Microsoft Enterprise SSO plug-in in an MDM. 
 keywords:
 author: TBC
@@ -35,7 +35,7 @@ This feature applies to:
 
 - iOS/iPadOS
 
-This article explains how to deploy the Microsoft Enterprise SSO plug-in (preview) for iOS/iPadOS Devices with a generic MDM solution.
+This article explains how to deploy the Microsoft Enterprise SSO plug-in (preview) for iOS/iPadOS devices with any MDM solution.
 
 [!INCLUDE [Apple SSO Disclaimer Boilerplate](../includes/apple-enterprise-sso-disclaimer-boilerplate.md)]
 
@@ -43,11 +43,11 @@ This article explains how to deploy the Microsoft Enterprise SSO plug-in (previe
 
 To use the Microsoft Enterprise SSO plug-in for Apple devices:
 
-- The device must be managed by a mobile device management (MDM) provider solution.
+- The devices must be managed by a mobile device management (MDM) provider solution.
 - The MDM solution must support configuring [Single Sign-on MDM payload settings for Apple devices](https://support.apple.com/guide/deployment/extensible-single-sign-on-payload-settings-depfd9cdf845/web) with a device policy.
 - The device must support the plug-in:
   - iOS/iPadOS 13.0 and newer
-- Microsoft Authenticator app installed on the device. The Microsoft Authenticator app can be installed manually by users, or deployed with an MDM.
+- Microsoft Authenticator app installed on the device. The Microsoft Authenticator app can be installed manually by users, or deployed with an MDM policy.
 
 > [!NOTE]
 > On iOS and iPadOS devices, Apple requires that the SSO app extension and the Microsoft Authenticator app be installed. Users don't need to use or configure the Microsoft Authenticator app, it just needs to be installed on the device.
@@ -74,7 +74,7 @@ In the MDM portal, create a device configuration profile. This profile include
     | Sign-On Type | **Redirect** |
     | URLs | - `https://login.microsoftonline.com` <br/> - `https://login.microsoft.com` <br/> - `https://sts.windows.net` <br/> - `https://login.partner.microsoftonline.cn` <br/> - `https://login.chinacloudapi.cn` <br/> - `https://login.microsoftonline.us` <br/> - `https://login.usgovcloudapi.net` <br/> - `https://login-us.microsoftonline.com` |
 
-5. Optionally, you can configure other properties. These properties are the default values used by the SSO Extension, but they can be customized for your organization needs:
+5. Optionally, you can configure other properties. These properties are the default values used by the Microsoft SSO Extension, but they can be customized for your organization needs:
 
     [!INCLUDE [Apple SSO Recommended Settings Table Boilerplate](../includes/apple-enterprise-sso-recommended-settings-intune-and-generic-mdm-boilerplate.md)]
 
