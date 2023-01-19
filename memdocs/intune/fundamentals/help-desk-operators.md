@@ -104,7 +104,7 @@ Devices managed Intune.
 
 ### Groups
 
-The **Groups** tab provides the group membership of all Azure AD groups for a specific managed device. For related information, see [Device group membership report](ntune/fundamentals/reports.md#device-group-membership-report-organizational).
+The **Groups** tab provides the group membership of all Azure AD groups for a specific managed device. For related information, see [Device group membership report](../fundamentals/reports.md#device-group-membership-report-organizational).
 
 | Column           | Description                                                                                                                         |
 |--------------------|-------------------------------------------------------------------------------------------------------------------------------------|
