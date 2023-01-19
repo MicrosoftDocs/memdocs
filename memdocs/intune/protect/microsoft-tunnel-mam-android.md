@@ -141,7 +141,8 @@ Create an App configuration policy for Microsoft Edge. This policy configures Mi
    :::image type="content" source="./media/microsoft-tunnel-mam-android/name-value-pair-edge.png" alt-text="Screen shot that shows the configuration of the name and value pair.":::
 
    > [!NOTE]
-   > Ensure there are no trailing spaces at the end of the General configuration setting.
+   > Ensure there are no trailing spaces at the end of the General configuration setting. This setting provides “Identity switch” support to Edge on Android. This enables Edge on Android to automatically connect the VPN when signing in with a “Work account or School account” and disconnect the VPN when switching to a “Personal account” enabling in-Private browsing.
+
 
    You can also use this same policy to configure other configurations for Microsoft Edge in the *Microsoft Edge configuration settings* category. After any additional configurations for Microsoft Edge are ready, select **Next**.
 
