@@ -44,7 +44,7 @@ This article describes how to set up Android (AOSP) device management and enroll
 To enroll and manage AOSP devices, you must have:
 
 * An active Microsoft Intune tenant. 
-* [A supported device.](../fundamentals/supported-devices-browsers.md#android)  
+* RealWear devices, updated to Firmware 11.2 or later.  
 
 You must also: 
 
