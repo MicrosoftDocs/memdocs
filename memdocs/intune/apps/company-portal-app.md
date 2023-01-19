@@ -156,7 +156,7 @@ The following table provides app source specific configuration details:
 #### App source setting options
 
 > [!NOTE]
-> The display of apps from the **Configuration Manager Applications** app source is only be displayed in the Windows Company Portal. However, the display of apps from either the **Azure AD Enterprise Applications** app source or the **Office Online Applications** app source are displayed in in the Windows Company Portal and the Company Portal website.
+> The display of apps from the **Configuration Manager Applications** app source is only displayed in the Windows Company Portal. However, the display of apps from either the **Azure AD Enterprise Applications** app source or the **Office Online Applications** app source are displayed in the Windows Company Portal and the Company Portal website.
 
 You can hide or show **Azure AD Enterprise applications**, **Office Online applications**, and **Configuration Manager applications** in the Company Portal for each end user. **Show** will cause the Company Portal to display the entire applications catalog from the chosen Microsoft service(s) assigned to the user. **Azure AD Enterprise applications** are registered and assigned via the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). **Office Online applications** are assigned using the licensing controls available in the [M365 Admin Center](https://admin.microsoft.com). In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant administration** > **Customization** to find this configuration setting. By default, each additional app source will be set to **Hide**. 
 
