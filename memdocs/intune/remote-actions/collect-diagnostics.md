@@ -189,7 +189,7 @@ Autopilot automatic diagnostic capture is enabled by default. You can disable Au
 
      :::image type="content" source="./media/collect-diagnostics/disable-autopilot-diagnostics.png" alt-text="Screenshot that shows the Device diagnostics pane with the highlighted control for Autopilot automatic diagnostics collection set to Disabled.":::
 
-### WinGet troubleshooting using diagnostic files
+## WinGet troubleshooting using diagnostic files
 [WinGet](/windows/package-manager/winget/) is a command line tool that enables you to discover, install, upgrade, remove, and configure applications on Windows 10 and Windows 11 devices. When working with [Win32 app management in Intune](../apps/apps-win32-app-management.md), you can use the following files to help troubleshoot WinGet:
 - *%TEMP%\winget\defaultstate\*.log*
 - *Microsoft-Windows-AppXDeployment/Operational*
