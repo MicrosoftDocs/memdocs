@@ -210,7 +210,6 @@ The following guidance is specific to requirements for Tunnel for MAM SDK for iO
 
    :::image type="content" source="./media/microsoft-tunnel-mam-ios/app-registration-configuration-pane.png" alt-text="Review the app registration configuration pane.":::
 
-1
 
 
 
