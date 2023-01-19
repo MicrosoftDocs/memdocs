@@ -167,7 +167,7 @@ Add a zero-touch configuration in the [zero-touch enrollment portal](https://par
     "android.app.extra.PROVISIONING_ADMIN_EXTRAS_BUNDLE": {
         "com.google.android.apps.work.clouddpc.EXTRA_ENROLLMENT_TOKEN": "YourEnrollmentToken"
     }
-}
+    }
 
  6. Enter your organization's name and support information, which is shown on screen while users set up their devices.   
  
