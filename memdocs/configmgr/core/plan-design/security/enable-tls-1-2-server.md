@@ -72,7 +72,8 @@ Configuration Manager uses SQL Server Native Client on the following site system
 Automatically configures TLS 1.2 across both client and server for machines running in Azure, on-prem, or multi-cloud environments. To get started configuring TLS 1.2 across your machines, [connect them to Azure using Azure Arc-enabled servers](/azure/azure-arc/servers/learn/quick-enable-hybrid-vm), which comes with the Machine Configuration prerequisite by default. Once connected, TLS 1.2 can be configured with point-and-click simplicity by deploying the built-in policy definition in Azure Portal: [Configure secure communication protocols (TLS 1.1 or TLS 1.2) on Windows servers](https://ms.portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2F828ba269-bf7f-4082-83dd-633417bc391d). The policy scope can be assigned at the subscription, resource group, or management group level, as well as exclude any resources from the policy definition.
 
 After the configuration has been assigned, the compliance status of your resources can be viewed in detail by navigating to the Guest Assignments page and scoping down to the impacted resources.
-For a more detailed step-by-step tutorial, see [here](https://techcommunity.microsoft.com/t5/azure-arc-blog/consistently-upgrade-your-server-tls-protocol-using-azure-arc/ba-p/3664217).
+
+For a detailed, step-by-step tutorial, see [Consistently upgrade your server TLS protocol using Azure Arc and Automanage Machine Configuration](https://techcommunity.microsoft.com/t5/azure-arc-blog/consistently-upgrade-your-server-tls-protocol-using-azure-arc/ba-p/3664217).
 
 
 ## <a name="bkmk_wsus"></a> Update Windows Server Update Services (WSUS)
