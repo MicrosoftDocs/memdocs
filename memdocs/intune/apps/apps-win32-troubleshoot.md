@@ -63,12 +63,6 @@ Agent logs on the client machine are commonly in *C:\ProgramData\Microsoft\Intun
 >
 > For more information, see [Virus scanning recommendations for enterprise computers that are running currently supported versions of Windows](https://support.microsoft.com/help/822158/virus-scanning-recommendations-for-enterprise-computers).
 
-### WinGet troubleshooting using diagnostic files
-[WinGet](/windows/package-manager/winget/) is a command line tool that enables you to discover, install, upgrade, remove, and configure applications on Windows 10 and Windows 11 devices. When working with [Win32 app management in Intune](../apps/apps-win32-app-management.md), you can use the following files to help troubleshoot WinGet:
-- *%TEMP%\winget\defaultstate\*.log*
-- *Microsoft-Windows-AppXDeployment/Operational*
-- *Microsoft-Windows-AppXDeploymentServer/Operational*
-
 ## Detecting the Win32 app file version by using PowerShell
 
 If you have difficulty detecting the Win32 app file version, consider using or modifying the following PowerShell command:
