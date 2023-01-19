@@ -224,7 +224,7 @@ Additionally, Intune supports the following token types in the property list:
 
 Apple's Automated Device Enrollments are not compatible with the app store version of the Company Portal app by default. However, you can configure the Company Portal app to support iOS/iPadOS ADE devices even when users have downloaded the Company Portal from the App Store by using the following steps.
 
-1. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), add the Intune Company Portal app if it has not been added yet, by going to **Apps** > **All apps** > **Add** > **Managed devices**.
+1. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), add the Intune Company Portal app if it has not been added yet, by going to **Apps** > **All apps** > **Add** > **iOS Store App**.
 2. Go to **Apps** > **App configuration policies**, to create an app configuration policy for the Company Portal app.
 3. Create an app configuration policy with the XML below. More information on how to create an app configuration policy and enter XML data can be found at [Add app configuration policies for managed iOS/iPadOS devices](app-configuration-policies-use-ios.md).
 

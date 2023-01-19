@@ -311,7 +311,7 @@ For more information, see [How to create collections in Configuration Manager](.
     > [!IMPORTANT]
     > The Autopilot for existing devices task sequence runs the **Prepare Windows for capture** step, which uses the Windows System Preparation Tool (Sysprep). This action fails if the device is joined to a domain.
     >
-    > Sysprep runs with the `/Generalize` parameter, which on Windows 10 version 1909 deletes the Autopilot profile file. The device then boots into the OOBE phase instead of Autopilot. To fix this issue, see [Windows Autopilot - known issues](known-issues.md).
+    > Sysprep runs with the `/Generalize` parameter, which on Windows 10 version 1909 deletes the Autopilot profile file. The device then boots into the OOBE phase instead of Autopilot. To fix this issue, see [Windows Autopilot - known issues: Windows Autopilot for existing devices doesn't work for Windows 10, version 1903 or 1909](known-issues.md#windows-autopilot-for-existing-devices-doesnt-work-for-windows-10-version-1903-or-1909).
 
 1. On the **Install Configuration manager** page, add any necessary installation properties for your environment.
 
@@ -342,7 +342,7 @@ If you edit the task sequence, it's similar to the default task sequence to appl
 For more information on editing the task sequence, see [Use the task sequence editor](../configmgr/osd/understand/task-sequence-editor.md) and [Task sequence steps](../configmgr/osd/understand/task-sequence-steps.md).
 
 > [!NOTE]
-> On Windows 10 version 1909, the **Prepare Windows for Capture** step deletes the `AutopilotConfigurationFile.json` file. For more information and a workaround, see [Windows Autopilot - known issues](known-issues.md).
+> On Windows 10 version 1909, the **Prepare Windows for Capture** step deletes the `AutopilotConfigurationFile.json` file. For more information and a workaround, see [Windows Autopilot - known issues: Windows Autopilot for existing devices doesn't work for Windows 10, version 1903 or 1909](known-issues.md#windows-autopilot-for-existing-devices-doesnt-work-for-windows-10-version-1903-or-1909).
 
 To make sure the user's data is backed up before the Windows 10 upgrade, use OneDrive for Business [known folder move](/onedrive/redirect-known-folders).
 
