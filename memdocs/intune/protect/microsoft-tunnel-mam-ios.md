@@ -163,7 +163,7 @@ Line of Business apps that use Microsoft Tunnel for MAM iOS require:
 
 ### Microsoft Tunnel Gateway service principal
 
-If not already created for Microsoft Tunnel MDM Conditional Access, you’ll need to provision the Microsoft Tunnel Gateway service principal Cloud app.  For guidance, see [Use Microsoft Tunnel VPN gateway with Conditional Access policies](../protect/microsoft-tunnel-conditional-acces.md#provision-your-tenant).
+If not already created for Microsoft Tunnel MDM Conditional Access, you’ll need to provision the Microsoft Tunnel Gateway service principal Cloud app.  For guidance, see [Use Microsoft Tunnel VPN gateway with Conditional Access policies](../protect/microsoft-tunnel-conditional-access.md#provision-your-tenant).
 
 ### Azure AD App registration
 
@@ -183,7 +183,7 @@ Depending on your needs, choose one of the following options:
   - Token configuration.
   - Verify using Integration assistant
 
-- [Update an existing App registration](#update-an-exiting-app-registration)  
+- [Update an existing App registration](#update-an-existing-app-registration)  
   If you have an iOS app that has been previously integrated with the Intune App SDK for iOS, then you will need to update the existing app registration.
 
 #### Create a new App registration
@@ -217,7 +217,7 @@ The following guidance is specific to requirements for Tunnel for MAM SDK for iO
 
 
 #### Update an existing App registration
-
+ 
 
 
 ## Next steps
