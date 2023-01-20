@@ -42,7 +42,7 @@ To check the status of a device:
 
 2. Tap **Devices**, and then select your device.  
 
-The status is shown under **Device settings status**. The **Last checked** timestamp shows the date and time the last check occured.  
+The status is shown under **Device settings status**. The **Last checked** timestamp shows the date and time the last check occurred.  
 
 ## Status descriptions  
 
