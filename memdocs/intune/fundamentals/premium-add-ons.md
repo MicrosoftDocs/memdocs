@@ -42,7 +42,7 @@ Licenses for the Premium add-ons can be added for an additional cost to the lice
 
 The following Premium add-ons are available: 
 
-- [Remote help](..\remote-actions\remote-help.md)
+- [Remote Help](..\remote-actions\remote-help.md)
 
 ## What happens when you try/buy the Premium add-ons capability 
 
@@ -62,8 +62,8 @@ Administrators who aren't Global or Billing administrators can still see the sta
 
 1. Navigate to **Tenant administration** > **Premium add-ons** as a Global or Billing administrator.
 2. Find the Premium add-on to start a trial. For add-ons that say **Available for trial or purchase** in their status, you don't have a free trial started or any licenses purchased for those add-ons.
-3. Click **View details** and see the details. :::image type="content" source="./media/premium-add-ons/remote-help-details.png" alt-text="Remote help details.":::
-4. Click the **To try or buy, go to Purchase services** link to navigate to the Microsoft 365 Admin Center. A new tab opens on the **Product details** page for the relevant Premium add-on. :::image type="content" source="./media/premium-add-ons/remote-help-product-details.png" alt-text="Remote help product details."::: 
+3. Click **View details** and see the details. :::image type="content" source="./media/premium-add-ons/remote-help-details.png" alt-text="Remote Help details.":::
+4. Click the **To try or buy, go to Purchase services** link to navigate to the Microsoft 365 Admin Center. A new tab opens on the **Product details** page for the relevant Premium add-on. :::image type="content" source="./media/premium-add-ons/remote-help-product-details.png" alt-text="Remote Help product details."::: 
 5. In the Microsoft 365 Admin Center, follow the prompts to **Start free trial** and confirm your order. :::image type="content" source="./media/premium-add-ons/confirm-order.png" alt-text="Confirm order."::: 
 6. Navigate to **Tenant administration** > **Premium add-ons** and see that the Premium add-on capability you added is now **Active**.
 
@@ -85,8 +85,8 @@ For information on how to assign licenses in Microsoft Endpoint Manager admin ce
 
 Each of the Premium add-ons might have their own requirements for how many licenses need to be purchased.
 
-- [Remote help](..\remote-actions\remote-help.md)
+- [Remote Help](..\remote-actions\remote-help.md)
 
 ## Next steps
 
-Learn about [Remote help](..\remote-actions\remote-help.md). 
+Learn about [Remote Help](..\remote-actions\remote-help.md). 

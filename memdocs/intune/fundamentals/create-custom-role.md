@@ -175,12 +175,12 @@ The following permissions are available when creating custom roles.
 | Policy Sets/Delete | Delete Policy Sets. | 
 | Policy Sets/Read | View Policy Sets. | 
 | Policy Sets/Update | Change a Policy Set, or add items to a Policy Set. | 
-| Remote assistance connectors/Read | View the status of the TeamViewer connector and remote help. This permission is not required to initiate remote assistance requests for devices. | 
-| Remote assistance connectors/Update | Manage the state of the TeamViewer connector and remote help. This permission also requires the Remote assistance connectors Read permission to view the status of the TeamViewer connector and remote help. | 
-| Remote assistance connectors/View reports | View, generate and export remote help sessions and monitor reports. | 
-| Remote help app/Elevation | Elevation allows the helper to enter UAC credentials when prompted on the sharer's device when remote help is enabled. Enabling elevation also allows the helper to view and control the sharer's device when the sharer grants the helper access. | 
-| Remote help app/Take full control | Take full control allows the helper to view and control the sharer's device when remote help is enabled. | 
-| Remote help app/View screen | View screen allows the helper to view the sharer's device when remote help is enabled. | 
+| Remote assistance connectors/Read | View the status of the TeamViewer connector and Remote Help. This permission is not required to initiate remote assistance requests for devices. | 
+| Remote assistance connectors/Update | Manage the state of the TeamViewer connector and Remote Help. This permission also requires the Remote assistance connectors Read permission to view the status of the TeamViewer connector and Remote Help. | 
+| Remote assistance connectors/View reports | View, generate and export Remote Help sessions and monitor reports. | 
+| Remote Help app/Elevation | Elevation allows the helper to enter UAC credentials when prompted on the sharer's device when Remote Help is enabled. Enabling elevation also allows the helper to view and control the sharer's device when the sharer grants the helper access. | 
+| Remote Help app/Take full control | Take full control allows the helper to view and control the sharer's device when Remote Help is enabled. | 
+| Remote Help app/View screen | View screen allows the helper to view the sharer's device when Remote Help is enabled. | 
 | Remote tasks/Bypass activation lock | Remove the Activation Lock from supervised devices without requiring the user's Apple ID and password. This may be required if a user leaves the company and returns the device; without the user's Apple ID and password, there is no way to reactivate the device. Or, you need to reassign some devices to a different department during a device refresh in your organization. You can only reassign devices that do not have Activation Lock enabled. You must also have the Managed Device Read permission to view devices in the Azure portal before initiating this remote task. | 
 | Remote tasks/Clean PC | Initiate a Fresh start device action. This action removes any apps that are installed on a Windows 10 PC that is running the Creators Update. Then, it automatically updates the PC to the latest version of Windows. | 
 | Remote tasks/Collect diagnostics | Collect device diagnostics | 
