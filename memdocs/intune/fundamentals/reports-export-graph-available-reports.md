@@ -53,7 +53,7 @@ The following table contains the possible values for the `reportName` parameter.
 |         DetectedAppsAggregate  |            Detected   Apps report        |
 |         FeatureUpdatePolicyFailuresAggregate  |            Under   **Devices** > **Monitor** > **Failure for feature updates**       |
 |         DeviceFailuresByFeatureUpdatePolicy  |            Under   **Devices** > **Monitor** > **Failure for feature updates** > *click   on error*        |
-|         DiscoveredAppsRawData  |            Under **Apps** > **Monitor** > **Discoverd apps** > **Export**         |
+|         DetectedAppsRawData  |            Under **Apps** > **Monitor** > **Discoverd apps** > **Export**         |
 |         FeatureUpdateDeviceState  |            Under   **Reports** > **Window Updates** > **Reports** > **Windows   Feature Update Report**         |
 |         UnhealthyDefenderAgents  |            Under   **Endpoint Security** > **Antivirus** > **Win10 Unhealthy   Endpoints**        |
 |         DefenderAgents  |            Under   **Reports** > **MicrosoftDefender** > **Reports** > **Agent   Status**        |
@@ -399,9 +399,9 @@ You can choose to filter the `DeviceFailuresByFeatureUpdatePolicy` report's outp
 - `RecommendedAction` 
 - `WindowsUpdateVersion` 
 
-## DiscoveredAppsRawData report
+## DetecteddAppsRawData report
 
-The following table contains the possible output when calling the `DiscoveredAppsRawData` report:
+The following table contains the possible output when calling the `DetectedAppsRawData` report:
 
 | Available   properties |
 |-|
