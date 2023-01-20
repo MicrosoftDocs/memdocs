@@ -56,7 +56,7 @@ items:
       href: turn-off-microsoft-usage-data-collection-android.md
   - name: Microsoft Intune app for Android  
     items: 
-    - name: Check device settings status    
+    - name: Check compliance status      
       href: check-compliance-microsoft-intune-app-android.md  
   - name: Microsoft Intune app for AOSP 
     items:

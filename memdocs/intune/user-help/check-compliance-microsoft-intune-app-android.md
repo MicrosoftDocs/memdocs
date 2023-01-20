@@ -33,10 +33,7 @@ ms.collection:
 
 Use the Microsoft Intune app for Android to remotely check the status of a device, and confirm or resolve access issues caused by noncompliant settings. 
 
-During a status check, the Intune app assesses the *device settings status* on an enrolled device, and reports whether or not the settings are compliant with your organization's requirements. If your device doesn't meet requirements, your organization may limit or restrict it from accessing internal resources. When applicable, the status provides information about how to maintain or regain access.    
-
->[!TIP]
-> After you update the settings on a noncompliant device, we recommend running a status check to register the changes with the Intune app.     
+During a status check, the Intune app assesses the *device settings status* on an enrolled device, and reports whether or not the settings are compliant with your organization's requirements. If your device doesn't meet requirements, your organization may limit or restrict it from accessing internal resources. When applicable, the status provides information about how to maintain or regain access.     
 
 ## Check status    
 To check the status of a device:  
@@ -45,9 +42,7 @@ To check the status of a device:
 
 2. Tap **Devices**, and then select your device.  
 
-3. Tap **Check status**. Wait while the Intune app checks your device.  
-
-The updated status appears under **Device settings status**, and the **Last checked** timestamp changes to show the date and time completed.  
+The status is shown under **Device settings status**. The **Last checked** timestamp shows the date and time the last check occured.  
 
 ## Status descriptions  
 
