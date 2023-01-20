@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/08/2022
+ms.date: 01/26/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -283,7 +283,12 @@ Some platforms and configurations do not allow self-service device actions. This
 
 ### App logs
 
-If you are using Azure Government, app logs are offered to the end user to decide how they will share when they initiate the process to get help with an issue. However, if you are not using Azure Government, the Company Portal will send app logs directly to Microsoft when the user initiates the process to get help with an issue. Sending the app logs to Microsoft will make it easier to troubleshoot and resolve issues.
+If you are using Azure Government, app logs are offered to the end user to decide how they will share when they initiate the process to get help with an issue. However, if you are not using Azure Government, Company Portal will send logs to the Microsoft Endpoint Manager admin center when the user initiates the uploading process in the Company Portal app. You can retrieve these logs and other mobile app diagnostics in the admin center.  
+
+To download mobile app logs in the admin center: 
+1. Go to **Troubleshooting + support** > **Troubleshoot (preview)**.
+2. Select the **Diagnostics** tab.
+3. Select the device name or application from the list to download the accompanying diagnostic log.  
 
 > [!NOTE]
 > Consistent with Microsoft and Apple policy, we do not sell any data collected by our service to any third parties for any reason.
