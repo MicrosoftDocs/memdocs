@@ -57,7 +57,7 @@ items:
   - name: Microsoft Intune app for Android  
     items: 
     - name: Check device settings status    
-      href: check-status-microsoft-intune-app-android.md  
+      href: check-compliance-microsoft-intune-app-android.md  
   - name: Microsoft Intune app for AOSP 
     items:
     - name: Check device compliance 

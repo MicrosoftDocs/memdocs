@@ -28,10 +28,10 @@ ms.custom: intune-enduser
 ms.collection: 
 ---
 
-# Check device settings status   
+# Check compliance status in Microsoft Intune app   
 *Applies to Microsoft Intune app for Android*  
 
-Use the Microsoft Intune app to remotely check the status of a device, and confirm or resolve access issues caused by noncompliant settings. 
+Use the Microsoft Intune app for Android to remotely check the status of a device, and confirm or resolve access issues caused by noncompliant settings. 
 
 During a status check, the Intune app assesses the *device settings status* on an enrolled device, and reports whether or not the settings are compliant with your organization's requirements. If your device doesn't meet requirements, your organization may limit or restrict it from accessing internal resources. When applicable, the status provides information about how to maintain or regain access.    
 
