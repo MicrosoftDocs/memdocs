@@ -173,448 +173,446 @@ The following syntax is an example JSON script with all the available configurat
 
 ```json
 {
-    "kind": "androidenterprise#managedConfiguration",
-    "productId": "app:com.microsoft.launcher.enterprise",
-    "managedProperty": [
+  "kind": "androidenterprise#managedConfiguration",
+  "productId": "app:com.microsoft.launcher.enterprise",
+  "managedProperty": [
+    {
+      "key": "lock_home_screen",
+      "valueBool": true
+    },
+    {
+      "key": "wallpaper",
+      "valueString": "default"
+    },
+    {
+      "key": "icon_size",
+      "valueInteger": 2
+    },
+    {
+      "key": "app_folder_icon",
+      "valueInteger": 0
+    },
+    {
+      "key": "screen_orientation",
+      "valueInteger": 1
+    },
+    {
+      "key": "applications",
+      "valueBundleArray": [
         {
-            "key": "lock_home_screen",
-            "valueBool": true
-        },
-        {
-            "key": "wallpaper",
-            "valueString": "default"
-        },
-        {
-            "key": "icon_size",
-            "valueInteger": 2
-        },
-        {
-            "key": "app_folder_icon",
-            "valueInteger": 0
-        },
-        {
-            "key": "screen_orientation",
-            "valueInteger": 1
-        },
-        {
-            "key": "applications",
-            "valueBundleArray": [
-                {
-                    "managedProperty": [
-                        {
-                            "key": "package",
-                            "valueString": "app package name here"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "key": "weblinks",
-            "valueBundleArray": [
-                {
-                    "managedProperty": [
-                        {
-                            "key": "link",
-                            "valueString": "link here"
-                        },
-                        {
-                            "key": "label",
-                            "valueString": "weblink label here"
-                        }
-                    ]
-                }
-            ]
-        },
-		{
-            "key": "widgets",
-            "valueBundleArray": [
-                {
-                    "managedProperty": [
-                        {
-                            "key": "package",
-                            "valueString": "package name of application that exposes the widget here. An example: com.microsoft.launcher.enterprise"
-                        },
-                        {
-                            "key": "widget_class",
-                            "valueString": "class name of widget here. an example: Time"
-                        },
-                        {
-                            "key": "span_x",
-                            "valueInteger": 5
-                        },
-                        {
-                            "key": "span_y",
-                            "valueInteger": 2
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "key": "show_virtual_home",
-            "valueBool": false
-        },
-        {
-            "key": "virtual_home_type",
-            "valueString": "swipe_up"
-        },
-        {
-            "key": "show_virtual_status_bar",
-            "valueBool": true
-        },
-        {
-            "key": "exit_lock_task_mode_code",
-            "valueString": "123456"
-        },
-        {
-            "key": "show_wifi_setting",
-            "valueBool": false
-        },
-        {
-            "key": "show_bluetooth_setting",
-            "valueBool": false
-        },
-        {
-            "key": "show_flashlight_setting",
-            "valueBool": false
-        },
-        {
-            "key": "show_volume_setting",
-            "valueBool": false
-        },
-        {
-            "key": "show_device_info_setting",
-            "valueBool": false
-        },
-	{
-            "key": "show_device_name",
-            "valueBool": false
-        },
-        {
-            "key": "device_name",
-            "valueString": "{{DeviceName}}"
-        },
-        {
-            "key": "device_serial_number",
-            "valueString": "{{SerialNumber}}"
-        },
-        {
-            "key": "show_managed_setting",
-            "valueBool": false
-        },
-        {
-            "key": "enable_easy_access_debugmenu",
-            "valueBool": false
-        },
-        {
-            "key": "enable_wifi_allowlist",
-            "valueBool": false
-        },
-        {
-            "key": "wifi_allowlist",
-            "valueBundleArray": [
-                {
-                    "managedProperty": [
-                        {
-                            "key": "SSID",
-                            "valueString": "name of Wi-Fi network 1 here"
-                        }
-                    ]
-                },   
-                {
-                    "managedProperty": [
-                        {
-                            "key": "SSID",
-                            "valueString": "name of Wi-Fi network 2 here"
-                        }
-                    ]
-                }  
-            ]
-        },
-        {
-            "key": "grid_size",
-            "valueString": "4;5"
-        },
-        {
-            "key": "app_order_enabled",
-            "valueBool": true
-        },
-        {
-            "key": "apps_in_folder_ordered_by_name",
-            "valueBool": true
-        },
-        {
-            "key": "app_orders",
-            "valueBundleArray": [
-                {
-                    "managedProperty": [
-                        {
-                            "key": "package",
-                            "valueString": "com.Microsoft.emmx"
-                        },
-                        {
-                            "key": "type",
-                            "valueString": "application"
-                        },
-                        {
-                            "key": "container",
-                            "valueInteger": 1
-                        },
-                        {
-                            "key": "position",
-                            "valueInteger": 1
-                        }
-                    ]
-                },
-                {
-                    "managedProperty": [
-                        {
-                            "key": "folder_name",
-                            "valueString": "Work"
-                        },
-                        {
-                            "key": "type",
-                            "valueString": "managed_folder"
-                        },
-                        {
-                            "key": "container",
-                            "valueInteger": 1
-                        },
-                        {
-                            "key": "position",
-                            "valueInteger": 2
-                        }
-                    ]
-                },
-                {
-                    "managedProperty": [
-                        {
-                            "key": "package",
-                            "valueString": "com.microsoft.launcher.enterprise"
-                        },
-                        {
-                            "key": "type",
-                            "valueString": "application"
-                        },
-                        {
-                            "key": "class",
-                            "valueString": "com.microsoft.launcher.launcher"
-                        },
-                        {
-                            "key": "container",
-                            "valueInteger": 1
-                        },
-                        {
-                            "key": "position",
-                            "valueInteger": 3
-                        }
-                    ]
-                },
-				{
-                    "managedProperty": [
-                        {
-                            "key": "package",
-                            "valueString": "class name for widget here"
-                        },
-                        {
-                            "key": "type",
-                            "valueString": "widget"
-                        },
-                        {
-                            "key": "container",
-                            "valueInteger": 1
-                        },
-                        {
-                            "key": "position",
-                            "valueInteger": 1
-                        }
-                    ]
-                }	
-            ]
-        },
-        {
-            "key": "managed_folders",
-            "valueBundleArray": [
-                {
-                    "managedProperty": [
-                        {
-                            "key": "folder_name",
-                            "valueString": "Folder name here"
-                        },
-                        {
-                            "key": "applications",
-                            "valueBundleArray": [
-                                {
-                                    "managedProperty": [
-                                        {
-                                            "key": "package",
-                                            "valueString": "com.microsoft.emmx"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "managedProperty": [
-                                        {
-                                            "key": "package",
-                                            "valueString": "com.microsoft.bing"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "managedProperty": [
-                                        {
-                                            "key": "link",
-                                            "valueString": "https://microsoft.com/"
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "managedProperty": [
-                        {
-                            "key": "folder_name",
-                            "valueString": "Example folder name 2"
-                        },
-						{
-                            "key": "is_customer_facing",
-                            "valueBool": true
-                        },
-                        {
-                            "key": "applications",
-                            "valueBundleArray": [
-                                {
-                                    "managedProperty": [
-                                        {
-                                            "key": "package",
-                                            "valueString": "com.microsoft.office.word"
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ]
-                }
-            ]
-        },
-	{
-            "key": "show_notification_badge",
-            "valueBool": true
-        },
-	{
-            "key": "show_screen_saver",
-            "valueBool": true
-        },
-        {
-            "key": "screen_saver_image",
-            "valueString": "URL to desired screen saver image here"
-        },
-        {
-            "key": "screen_saver_show_time",
-            "valueInteger": 0
-        },
-	{
-            "key": "inactive_time_to_show_screen_saver",
-            "valueInteger": 30
-        },
-        {
-            "key": "media_detect_before_screen_saver",
-            "valueBool": true
-        }, 
-	{
-            "key": "enable_max_inactive_time_outside_MHS",
-            "valueBool": false
-        },
-        {
-            "key": "enable_max_absolute_time_outside_MHS",
-            "valueBool": false
-        },
-        {
-            "key": "max_inactive_time_outside_MHS",
-            "valueInteger": 180
-        },
-        {
-            "key": "max_absolute_time_outside_MHS",
-            "valueInteger": 600
-        },
-	{
-            "key": "theme_color",
-            "valueString": "light"
-        },
-        {
-            "key": "enable_mhs_signin",
-            "valueBool": true
-        },
-        {
-            "key": "signin_type",
-            "valueString": "AAD"
-        },
-        {
-            "key": "signin_screen_wallpaper",
-            "valueString": "URL to desired image for signin screen wallpaper here"
-        },
-        {
-            "key": "enable_corporate_logo",
-            "valueBool": true
-        },
-        {
-            "key": "signin_screen_branding_logo",
-            "valueString": "URL to desired image for branding logo here"
-        },
-        {
-            "key": "enable_session_PIN",
-            "valueBool": true
-        },
-        {
-            "key": "session_PIN_complexity",
-            "valueString": "simple"
-        },
-	{
-            "key": "max_number_of_attempts_for_session_PIN",
-            "valueInteger": 0
-        },
-        {
-            "key": "minimum_length_for_session_PIN",
-            "valueInteger": 1
-        },
-        {
-            "key": "max_number_of_attempts_for_exit_PIN",
-            "valueInteger": 0
-        },
-        {
-            "key": "amount_of_time_before_try_exit_PIN_again",
-            "valueInteger": 0
+          "managedProperty": [
+            {
+              "key": "package",
+              "valueString": "app package name here"
+            }
+          ]
         }
+      ]
+    },
+    {
+      "key": "weblinks",
+      "valueBundleArray": [
         {
-            "key": "enable_auto_signout",
-            "valueBool": true
+          "managedProperty": [
+            {
+              "key": "link",
+              "valueString": "link here"
+            },
+            {
+              "key": "label",
+              "valueString": "weblink label here"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "widgets",
+      "valueBundleArray": [
+        {
+          "managedProperty": [
+            {
+              "key": "package",
+              "valueString": "package name of application that exposes the widget here. An example: com.microsoft.launcher.enterprise"
+            },
+            {
+              "key": "widget_class",
+              "valueString": "class name of widget here. an example: Time"
+            },
+            {
+              "key": "span_x",
+              "valueInteger": 5
+            },
+            {
+              "key": "span_y",
+              "valueInteger": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "show_virtual_home",
+      "valueBool": false
+    },
+    {
+      "key": "virtual_home_type",
+      "valueString": "swipe_up"
+    },
+    {
+      "key": "show_virtual_status_bar",
+      "valueBool": true
+    },
+    {
+      "key": "exit_lock_task_mode_code",
+      "valueString": "123456"
+    },
+    {
+      "key": "show_wifi_setting",
+      "valueBool": false
+    },
+    {
+      "key": "show_bluetooth_setting",
+      "valueBool": false
+    },
+    {
+      "key": "show_flashlight_setting",
+      "valueBool": false
+    },
+    {
+      "key": "show_volume_setting",
+      "valueBool": false
+    },
+    {
+      "key": "show_device_info_setting",
+      "valueBool": false
+    },
+    {
+      "key": "show_device_name",
+      "valueBool": false
+    },
+    {
+      "key": "device_name",
+      "valueString": "{{DeviceName}}"
+    },
+    {
+      "key": "device_serial_number",
+      "valueString": "{{SerialNumber}}"
+    },
+    {
+      "key": "show_managed_setting",
+      "valueBool": false
+    },
+    {
+      "key": "enable_easy_access_debugmenu",
+      "valueBool": false
+    },
+    {
+      "key": "enable_wifi_allowlist",
+      "valueBool": false
+    },
+    {
+      "key": "wifi_allowlist",
+      "valueBundleArray": [
+        {
+          "managedProperty": [
+            {
+              "key": "SSID",
+              "valueString": "name of Wi-Fi network 1 here"
+            }
+          ]
         },
         {
-            "key": "inactive_time_to_signout",
-            "valueInteger": 300
+          "managedProperty": [
+            {
+              "key": "SSID",
+              "valueString": "name of Wi-Fi network 2 here"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "grid_size",
+      "valueString": "4;5"
+    },
+    {
+      "key": "app_order_enabled",
+      "valueBool": true
+    },
+    {
+      "key": "apps_in_folder_ordered_by_name",
+      "valueBool": true
+    },
+    {
+      "key": "app_orders",
+      "valueBundleArray": [
+        {
+          "managedProperty": [
+            {
+              "key": "package",
+              "valueString": "com.Microsoft.emmx"
+            },
+            {
+              "key": "type",
+              "valueString": "application"
+            },
+            {
+              "key": "container",
+              "valueInteger": 1
+            },
+            {
+              "key": "position",
+              "valueInteger": 1
+            }
+          ]
         },
         {
-            "key": "auto_signout_time_to_give_user_notice",
-            "valueInteger": 30
+          "managedProperty": [
+            {
+              "key": "folder_name",
+              "valueString": "Work"
+            },
+            {
+              "key": "type",
+              "valueString": "managed_folder"
+            },
+            {
+              "key": "container",
+              "valueInteger": 1
+            },
+            {
+              "key": "position",
+              "valueInteger": 2
+            }
+          ]
         },
         {
-            "key": "enable_PIN_to_resume",
-            "valueBool": true
+          "managedProperty": [
+            {
+              "key": "package",
+              "valueString": "com.microsoft.launcher.enterprise"
+            },
+            {
+              "key": "type",
+              "valueString": "application"
+            },
+            {
+              "key": "class",
+              "valueString": "com.microsoft.launcher.launcher"
+            },
+            {
+              "key": "container",
+              "valueInteger": 1
+            },
+            {
+              "key": "position",
+              "valueInteger": 3
+            }
+          ]
         },
         {
-            "key": "custom_privacy_statement_title",
-            "valueString": "name of custom privacy statement here"
+          "managedProperty": [
+            {
+              "key": "package",
+              "valueString": "class name for widget here"
+            },
+            {
+              "key": "type",
+              "valueString": "widget"
+            },
+            {
+              "key": "container",
+              "valueInteger": 1
+            },
+            {
+              "key": "position",
+              "valueInteger": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "managed_folders",
+      "valueBundleArray": [
+        {
+          "managedProperty": [
+            {
+              "key": "folder_name",
+              "valueString": "Folder name here"
+            },
+            {
+              "key": "applications",
+              "valueBundleArray": [
+                {
+                  "managedProperty": [
+                    {
+                      "key": "package",
+                      "valueString": "com.microsoft.emmx"
+                    }
+                  ]
+                },
+                {
+                  "managedProperty": [
+                    {
+                      "key": "package",
+                      "valueString": "com.microsoft.bing"
+                    }
+                  ]
+                },
+                {
+                  "managedProperty": [
+                    {
+                      "key": "link",
+                      "valueString": "https://microsoft.com/"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         },
         {
-            "key": "custom_privacy_statement_url",
-            "valueString": "link to custom privacy statement here"
-        },
-
-
-    ]
+          "managedProperty": [
+            {
+              "key": "folder_name",
+              "valueString": "Example folder name 2"
+            },
+            {
+              "key": "is_customer_facing",
+              "valueBool": true
+            },
+            {
+              "key": "applications",
+              "valueBundleArray": [
+                {
+                  "managedProperty": [
+                    {
+                      "key": "package",
+                      "valueString": "com.microsoft.office.word"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "show_notification_badge",
+      "valueBool": true
+    },
+    {
+      "key": "show_screen_saver",
+      "valueBool": true
+    },
+    {
+      "key": "screen_saver_image",
+      "valueString": "URL to desired screen saver image here"
+    },
+    {
+      "key": "screen_saver_show_time",
+      "valueInteger": 0
+    },
+    {
+      "key": "inactive_time_to_show_screen_saver",
+      "valueInteger": 30
+    },
+    {
+      "key": "media_detect_before_screen_saver",
+      "valueBool": true
+    },
+    {
+      "key": "enable_max_inactive_time_outside_MHS",
+      "valueBool": false
+    },
+    {
+      "key": "enable_max_absolute_time_outside_MHS",
+      "valueBool": false
+    },
+    {
+      "key": "max_inactive_time_outside_MHS",
+      "valueInteger": 180
+    },
+    {
+      "key": "max_absolute_time_outside_MHS",
+      "valueInteger": 600
+    },
+    {
+      "key": "theme_color",
+      "valueString": "light"
+    },
+    {
+      "key": "enable_mhs_signin",
+      "valueBool": true
+    },
+    {
+      "key": "signin_type",
+      "valueString": "AAD"
+    },
+    {
+      "key": "signin_screen_wallpaper",
+      "valueString": "URL to desired image for signin screen wallpaper here"
+    },
+    {
+      "key": "enable_corporate_logo",
+      "valueBool": true
+    },
+    {
+      "key": "signin_screen_branding_logo",
+      "valueString": "URL to desired image for branding logo here"
+    },
+    {
+      "key": "enable_session_PIN",
+      "valueBool": true
+    },
+    {
+      "key": "session_PIN_complexity",
+      "valueString": "simple"
+    },
+    {
+      "key": "max_number_of_attempts_for_session_PIN",
+      "valueInteger": 0
+    },
+    {
+      "key": "minimum_length_for_session_PIN",
+      "valueInteger": 1
+    },
+    {
+      "key": "max_number_of_attempts_for_exit_PIN",
+      "valueInteger": 0
+    },
+    {
+      "key": "amount_of_time_before_try_exit_PIN_again",
+      "valueInteger": 0
+    },
+    {
+      "key": "enable_auto_signout",
+      "valueBool": true
+    },
+    {
+      "key": "inactive_time_to_signout",
+      "valueInteger": 300
+    },
+    {
+      "key": "auto_signout_time_to_give_user_notice",
+      "valueInteger": 30
+    },
+    {
+      "key": "enable_PIN_to_resume",
+      "valueBool": true
+    },
+    {
+      "key": "custom_privacy_statement_title",
+      "valueString": "name of custom privacy statement here"
+    },
+    {
+      "key": "custom_privacy_statement_url",
+      "valueString": "link to custom privacy statement here"
+    }
+  ]
 }
 ```
 
