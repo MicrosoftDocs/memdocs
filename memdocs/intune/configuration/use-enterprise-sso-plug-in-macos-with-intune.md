@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Microsoft Enterprise SSO plug-in in Microsoft Intune (macOS)
+title: Configure macOS Enterprise SSO plug-in in Microsoft Intune
 description: Add or create an macOS device profile using the Microsoft Enterprise SSO plug-in in Microsoft Intune. 
 keywords:
 author: TBC
 ms.author: alessanc
 manager: ianfarr
-ms.date: 12/12/2022
+ms.date: 01/19/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -19,7 +19,7 @@ ms.technology:
 #ROBOTS:
 #audience:
 
-ms.reviewer: tbc
+ms.reviewer: miepping, tbc
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -31,7 +31,11 @@ ms.collection: M365-identity-device-management
 
 [!INCLUDE [Apple SSO Boilerplate](../includes/apple-enterprise-sso-intro-boilerplate.md)]
 
-This article shows how to deploy the Microsoft Enterprise SSO plug-in (preview) for macOS Apple Devices with Intune.
+This feature applies to:
+
+- macOS
+
+This article shows how to deploy the Microsoft Enterprise SSO plug-in (preview) for macOS Apple devices with Intune.
 
 [!INCLUDE [Apple SSO Disclaimer Boilerplate](../includes/apple-enterprise-sso-disclaimer-boilerplate.md)]
 
@@ -40,13 +44,13 @@ This article shows how to deploy the Microsoft Enterprise SSO plug-in (preview) 
 - The device must support the plug-in:
   - macOS 10.15 and newer
 - The device is managed with Intune.
-  - (Company Portal app installed and configured on the device).
+- The Microsoft Company Portal app must be installed and configured on the device.
 
 [!INCLUDE [Apple Kerberos Extension Boilerplate](../includes/apple-enterprise-sso-kerberos-boilerplate.md)]
 
 ---
 
-For more information on the single sign-on extension, see [Single sign-on app extension](device-features-configure.md#single-sign-on-app-extension).
+For more information on the single sign-on extension, go to [Single sign-on app extension](device-features-configure.md#single-sign-on-app-extension).
 
 ## Create a single sign-on app extension configuration profile
 
@@ -56,13 +60,12 @@ In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwli
 2. Select **Devices** > **Configuration profiles** > **Create profile**.
 3. Enter the following properties:
 
-    - **Platform**: Choose your platform:
-       - **macOS**
-    - **Profile**: Select **Device features**. Or, select **Templates** > **Device features**.
+    - **Platform**: Select **macOS**.
+    - **Profile**: Select **Templates** > **Device features**.
 
-4. Select **Create**.
+4. Select **Create**:
 
-    :::image type="content" source="./media/apple-enterprise-sso-plug-in/macOS-1.png" alt-text="Device features macOS":::
+    :::image type="content" source="./media/apple-enterprise-sso-plug-in/macos-create-device-features.png" alt-text="Screenshot that shows how to create a device features configuration profile for macOS in Intune.":::
 
 5. In **Basics**, enter the following properties:
 
@@ -72,32 +75,34 @@ In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwli
 6. Select **Next**.
 7. In **Configuration settings**, select **Single sign-on app extension**, and configure the following properties:
 
-    - **SSO app extension type**: Select **Microsoft Azure AD**.
-      :::image type="content" source="./media/apple-enterprise-sso-plug-in/macOS-2.png" alt-text="Microsoft Azure AD SSO":::
+    - **SSO app extension type**: Select **Microsoft Azure AD**:
 
-    - **App bundle ID**: Enter a list of bundle IDs for apps that don't support MSAL **and** are allowed to use SSO. For more information, see [Applications that don't use MSAL](/azure/active-directory/develop/apple-sso-plugin#enable-sso-for-apps-that-dont-use-a-microsoft-identity-platform-library).
+      :::image type="content" source="./media/apple-enterprise-sso-plug-in/macos-device-features-sso-extension-type.png" alt-text="Screenshot that shows the SSO app extension type and Microsoft Azure AD for macOS in Intune":::
 
-    - **Additional configuration**: To customize the end user experience, you can add the following properties. The properties below reflect the defaults used by the Microsoft SSO Extension, but they may be customized to suit your needs:
+    - **App bundle ID**: Enter a list of bundle IDs for apps that don't support MSAL **and** are allowed to use SSO. For more information, go to [Applications that don't use MSAL](/azure/active-directory/develop/apple-sso-plugin#enable-sso-for-apps-that-dont-use-a-microsoft-identity-platform-library).
+
+    - **Additional configuration**: To customize the end user experience, you can add the following properties. These properties are the default values used by the Microsoft SSO Extension, but they can be customized for your organization needs:
 
       [!INCLUDE [Apple SSO Recommended Settings Table Boilerplate](../includes/apple-enterprise-sso-recommended-settings-intune-and-generic-mdm-boilerplate.md)]
 
-      When you have completed the configuration of the recommended settings they will appear as below in your Intune configuration profile:
-      :::image type="content" source="./media/apple-enterprise-sso-plug-in/iOS-3.png" alt-text="Additional configuration options in Intune":::
+      When you're done configuring the recommended settings, the settings look similar to the following values in your Intune configuration profile:
 
-8. Continue creating the profile, and assign the profile to the users or groups that will receive these settings. For the specific steps, see [Create the profile](device-features-configure.md#create-the-profile).
+      :::image type="content" source="./media/apple-enterprise-sso-plug-in/macos-sso-extension-additional-configuration.png" alt-text="Screenshot that shows the end user experience configuration options for the Enterprise SSO plug-in on macOS devices in Intune.":::
 
-For guidance on assigning profiles, see [Assign user and device profiles](device-profile-assign.md).
+8. Continue creating the profile, and assign the profile to the users or groups that will receive these settings. For the specific steps, go to [Create the profile](device-features-configure.md#create-the-profile).
 
-When the device checks in with the Intune service, it will receive this profile.
-You can check that the profile was deployed correctly by going to Devices > Configuration Profiles > selecting the profile you have just created and generating a report:
-:::image type="content" source="./media/apple-enterprise-sso-plug-in/macOS-4.png" alt-text="Assignement Status Report":::
+    For guidance on assigning profiles, go to [Assign user and device profiles](device-profile-assign.md).
 
-For more information, see [How long does it take for devices to get a policy](device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned).
+When the device checks in with the Intune service, it will receive this profile. For more information, go to [How long does it take for devices to get a policy](device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned).
+
+To check that the profile deployed correctly, in the Endpoint Manager admin center, go to **Devices** > **Configuration Profiles** > select the profile you created and generate a report:
+
+:::image type="content" source="./media/apple-enterprise-sso-plug-in/macos-enterprise-sso-profile-report.png" alt-text="Screenshot that shows the macOS device configuration profile deployment report in Intune.":::
 
 [!INCLUDE [Apple iOS End User Experience Boilerplate](../includes/apple-enterprise-sso-macos-end-user-experience-boilerplate.md)]
 
 ## Next steps
 
-- For information about the Microsoft Enterprise SSO plug-in, see [Microsoft Enterprise SSO plug-in for Apple devices (preview)](/azure/active-directory/develop/apple-sso-plugin).
+- For information about the Microsoft Enterprise SSO plug-in, go to [Microsoft Enterprise SSO plug-in for Apple devices (preview)](/azure/active-directory/develop/apple-sso-plugin).
 
-- For information from Apple on the single sign-on extension payload, see [Single Sign-On Extensions payload settings](https://support.apple.com/guide/mdm/single-sign-on-extensions-mdmfd9cdf845/web) (opens Apple's web site).
+- For information from Apple on the single sign-on extension payload, go to [single sign-on extensions payload settings](https://support.apple.com/guide/mdm/single-sign-on-extensions-mdmfd9cdf845/web) (opens Apple's web site).

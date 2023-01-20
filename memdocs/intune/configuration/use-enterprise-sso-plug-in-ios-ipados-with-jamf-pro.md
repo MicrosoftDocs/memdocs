@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Use the Microsoft Enterprise SSO plug-in on iOS/iPadOS devices in Jamf Pro
+title: Configure iOS/iPadOS Enterprise SSO plug-in in Jamf Pro
 description: Add or create an iOS or iPadOS device profile using the Microsoft Enterprise SSO plug-in in Jamf Pro. 
 keywords:
 author: TBC
 ms.author: alessanc
 manager: ianfarr
-ms.date: 12/12/2022
+ms.date: 01/19/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -19,7 +19,7 @@ ms.technology:
 #ROBOTS:
 #audience:
 
-ms.reviewer: 
+ms.reviewer: miepping
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -35,7 +35,7 @@ This feature applies to:
 
 - iOS/iPadOS
 
-This article shows how to deploy the Microsoft Enterprise SSO plug-in (preview) for iOS/iPadOS Devices with Jamf Pro.
+This article shows how to deploy the Microsoft Enterprise SSO plug-in (preview) for iOS/iPadOS devices with Jamf Pro.
 
 [!INCLUDE [Apple SSO Disclaimer Boilerplate](../includes/apple-enterprise-sso-disclaimer-boilerplate.md)]
 
@@ -43,48 +43,47 @@ This article shows how to deploy the Microsoft Enterprise SSO plug-in (preview) 
 
 To use the Microsoft Enterprise SSO plug-in for Apple devices:
 
-- The device must be managed via Jamf Pro
+- The device must be managed via Jamf Pro.
 - The device must support the plug-in:
   - iOS/iPadOS 13.0 and newer
-- Microsoft Authenticator app installed on the device.
-  - The Microsoft Authenticator app can be installed manually by users, or by deploying the app through Jamf Pro. For a list of options on how to install the Microsoft Authenticator app, see [Jamf Pro's documentation](https://docs.jamf.com/10.24.1/jamf-pro/administrator-guide/Managing_macOS_Installers.html).
+- The Microsoft Authenticator app must be installed on the device.
+
+  The Microsoft Authenticator app can be installed manually by users, or by deploying the app through Jamf Pro. For a list of options on how to install the Microsoft Authenticator app, go to [Managing macOS installers using Jamf Pro](https://docs.jamf.com/10.24.1/jamf-pro/administrator-guide/Managing_macOS_Installers.html) (opens Jamf Pro's web site).
 
 > [!NOTE]
-> On iOS and iPadOS devices, Apple requires that the SSO app extension and the Microsoft Authenticator app be installed. Users don't need to use the Microsoft Authenticator app, it just needs to be installed on the device.
-
-> [!NOTE]
-> [Jamf Pro and Intune integration for device compliance](../protect/conditional-access-integrate-jamf.md) is not required to use the SSO app extension.
+>
+> - On iOS and iPadOS devices, Apple requires that the SSO app extension and the Microsoft Authenticator app be installed. Users don't need to use the Microsoft Authenticator app, it just needs to be installed on the device.
+>
+> - **[Jamf Pro and Intune integration for device compliance](../protect/conditional-access-integrate-jamf.md) is not required to use the SSO app extension.**
 
 [!INCLUDE [Apple Kerberos Extension Boilerplate](../includes/apple-enterprise-sso-kerberos-boilerplate.md)]
 
 ---
 
-For more information on the single sign-on extension, see [Single sign-on app extension](device-features-configure.md#single-sign-on-app-extension).
+For more information on the single sign-on extension, go to [Single sign-on app extension](device-features-configure.md#single-sign-on-app-extension).
 
 ## Create a single sign-on app extension configuration profile in Jamf Pro
 
 In the Jamf Pro portal, you create a Computer or Device configuration profile. This profile includes the settings to configure the SSO app extension on devices.
 
 1. Sign in to the Jamf Pro portal.
-2. To create an iOS/iPadOS profile, select **Devices** > **Configuration profiles** > **New**.
+2. To create an iOS/iPadOS profile, select **Devices** > **Configuration profiles** > **New**:
 
-    :::image type="content" source="./media/apple-enterprise-sso-plug-in/Jamf-1.png" alt-text="In the Jamf Pro portal, create a configuration profile for macOS devices.":::
+    :::image type="content" source="./media/apple-enterprise-sso-plug-in/ios-ipados-create-profile-jamf.png" alt-text="Screenshot that shows the Jamf Pro portal and how to create a configuration profile for iOS/iPadOS devices.":::
 
-3. **Name**: Enter a descriptive name for the policy. Name your policies so you can easily identify them later. For example, a good policy name is: **Microsoft Enterprise SSO plug-in**.
+3. In **Name**, enter a descriptive name for the policy. Name your policies so you can easily identify them later. For example, a good policy name is: **iOS/iPadOS: Microsoft Enterprise SSO plug-in**.
 
-4. In the **Options** column, scroll down and select **Single Sign-On Extensions** > **Add**.
+4. In the **Options** column, scroll down and select **Single Sign-On Extensions** > **Add**:
 
-    :::image type="content" source="./media/apple-enterprise-sso-plug-in/Jamf-2.png" alt-text="In the Jamf Pro portal, select the configuration profiles SSO option, and select add.":::
+    :::image type="content" source="./media/apple-enterprise-sso-plug-in/ios-ipados-sso-extensions-jamf.png" alt-text="Screenshot that shows the Jamf Pro portal. Select the configuration profiles SSO option and select add for iOS/iPadOS devices.":::
 
-4. Enter the following properties:
+5. Enter the following properties:
 
-    - **Payload Type**: SSO
-    - **Extension Identifier**:
-      - com.microsoft.azureauthenticator.ssoextension
-    - **Team Identifier**:
-      - No value is needed, leave the field blank.
-    - **Sign-On Type**: Redirect
-    - **URLs** (add one by one):
+    - **Payload Type**: Select **SSO**.
+    - **Extension Identifier**: Enter `com.microsoft.azureauthenticator.ssoextension`.
+    - **Team Identifier**: No value is needed, leave the field blank.
+    - **Sign-On Type**: Select **Redirect**.
+    - **URLs**: Enter the following URLs, one at a time:
       - `https://login.microsoftonline.com`
       - `https://login.microsoft.com`
       - `https://sts.windows.net`
@@ -94,11 +93,11 @@ In the Jamf Pro portal, you create a Computer or Device configuration profile.
       - `https://login.usgovcloudapi.net`
       - `https://login-us.microsoftonline.com`
 
-    :::image type="content" source="./media/apple-enterprise-sso-plug-in/Jamf-3.png" alt-text="In the Jamf Pro portal, see the basic configuration settings part 1.":::
+    :::image type="content" source="./media/apple-enterprise-sso-plug-in/ios-ipados-sso-extensions-settings-jamf.png" alt-text="Screenshot that shows the Jamf Pro portal and the payload type, extension identifier, team identifier, and SSO type settings for iOS/iPadOS devices.":::
 
-    :::image type="content" source="./media/apple-enterprise-sso-plug-in/Jamf-4.png" alt-text="In the Jamf Pro portal, see the basic configuration settings part 2.":::
+    :::image type="content" source="./media/apple-enterprise-sso-plug-in/ios-ipados-sso-extensions-urls-jamf.png" alt-text="Screenshot that shows the Jamf Pro portal and the SSO URLs for iOS/iPadOS devices.":::
 
-5. In **Custom Configuration**, you'll define other required properties. Jamf Pro requires that these properties are configured using an uploaded PLIST file. To see the full list of configurable properties, go to [Azure AD Apple SSO Extension documentation](/azure/active-directory/develop/apple-sso-plugin#manual-configuration-for-other-mdm-services).
+6. In **Custom Configuration**, you'll define other required properties. Jamf Pro requires that these properties are configured using an uploaded PLIST file. To see the full list of configurable properties, go to [Azure AD Apple SSO Extension documentation](/azure/active-directory/develop/apple-sso-plugin#manual-configuration-for-other-mdm-services).
 
     The following example is a recommended PLIST file that meets the needs of most organizations:
 
@@ -116,21 +115,21 @@ In the Jamf Pro portal, you create a Computer or Device configuration profile.
     </plist>
     ```
 
-    :::image type="content" source="./media/apple-enterprise-sso-plug-in/Jamf-5.png" alt-text="See a sample custom configuration with a PLIST file for Jamf Pro.":::
+    :::image type="content" source="./media/apple-enterprise-sso-plug-in/ios-ipados-custom-configuration-plist-jamf.png" alt-text="Screenshot that shows a sample custom configuration with a PLIST file for Jamf Pro.":::
 
-    - These PLIST settings configure the following SSO Extension options. The properties below reflect the defaults used by the SSO Extension, but they may be customized to suit your needs:
+    These PLIST settings configure the following SSO Extension options. These properties are the default values used by the Microsoft SSO Extension, but they can be customized for your organization needs:
 
     [!INCLUDE [Apple SSO Recommended Settings Table Boilerplate](../includes/apple-enterprise-sso-recommended-settings-jamf-pro-boilerplate.md)]
 
-6. Select the **Scope** tab. Enter the computers or devices that should be targeted to receive the SSO Extension MDM profile.
-7. Select **Save**.
+7. Select the **Scope** tab. Enter the computers or devices that should be targeted to receive the SSO Extension MDM profile.
+8. Select **Save**.
 
-When the device checks in with the Jamf Pro service, it receives this profile.
+When the device checks in with the Jamf Pro service, it receives the profile.
 
 [!INCLUDE [Apple iOS End User Experience Boilerplate](../includes/apple-enterprise-sso-ios-end-user-experience-boilerplate.md)]
 
 ## Next steps
 
-- For information about the Microsoft Enterprise SSO plug-in, see [Microsoft Enterprise SSO plug-in for Apple devices (preview)](/azure/active-directory/develop/apple-sso-plugin).
+- For information about the Microsoft Enterprise SSO plug-in, go to [Microsoft Enterprise SSO plug-in for Apple devices (preview)](/azure/active-directory/develop/apple-sso-plugin).
 
-- For information from Apple on the single sign-on extension payload, see [Single Sign-On Extensions payload settings](https://support.apple.com/guide/mdm/single-sign-on-extensions-mdmfd9cdf845/web) (opens Apple's web site).
+- For information from Apple on the single sign-on extension payload, go to [single sign-on extensions payload settings](https://support.apple.com/guide/mdm/single-sign-on-extensions-mdmfd9cdf845/web) (opens Apple's web site).
