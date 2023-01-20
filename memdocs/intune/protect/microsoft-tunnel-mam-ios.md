@@ -86,7 +86,7 @@ Create an app configuration policy for apps that will use Tunnel for MAM. This p
    1. Select the app you just added, and then **Select**.
 
    > [!NOTE]  
-   > LOB apps require Intune App SDK for iOS and MSAL integration. MSAL requires an Azure AD App registration.  Ensure the Bundle ID used in the App configuration policy is the same Bundle ID specified in the AAD App registration and the Xcode app project. Xcode is the Integrated Developer Environment that that runs on macOS and used to integrate the Tunnel for MAM iOS SDK with your app.
+   > LOB apps require Intune App SDK for iOS and MSAL integration. MSAL requires an Azure AD app registration.  Ensure the Bundle ID used in the App configuration policy is the same Bundle ID specified in the Azure AD app registration and the Xcode app project. Xcode is the Apple Integrated Developer Environment that that runs on macOS and used to integrate the Tunnel for MAM iOS SDK with your app.
 
    After selecting an app, select **Next**.
 
@@ -135,7 +135,7 @@ This policy provides the necessary data protection and establishes a means of de
    :::image type="content" source="./media/microsoft-tunnel-mam-ios/app-protection-custom-lob-app.png" alt-text="Add the custom app to the app protection policy.":::
 
    > [!NOTE]  
-   > LOB apps require Intune App SDK for iOS and MSAL integration. MSAL requires an Azure AD App registration.  Ensure the Bundle ID used in the App configuration policy is the same Bundle ID specified in the AAD App registration and the Xcode app project.
+   > LOB apps require Intune App SDK for iOS and MSAL integration. MSAL requires an Azure AD app registration.  Ensure the Bundle ID used in the App configuration policy is the same Bundle ID specified in the Azure AD app registration and the Xcode app project.
 
 5. Configure any remaining app protection policy settings based on your deployment and data protection requirements using the *Data protection*, *Access requirements*, and *Conditional launch* tabs.
 
@@ -159,42 +159,42 @@ For information on configuring these profiles, see [Trusted root certificate pro
 Line of Business apps that use Microsoft Tunnel for MAM iOS require:
 
 - A *Microsoft Tunnel Gateway* service principal Cloud app
-- Azure AD App registration
+- Azure AD app registration
 
 ### Microsoft Tunnel Gateway service principal
 
 If not already created for Microsoft Tunnel MDM Conditional Access, you’ll need to provision the Microsoft Tunnel Gateway service principal Cloud app.  For guidance, see [Use Microsoft Tunnel VPN gateway with Conditional Access policies](../protect/microsoft-tunnel-conditional-access.md#provision-your-tenant).
 
-### Azure AD App registration
+### Azure AD app registration
 
-When integrating the Tunnel for MAM iOS SDK into a line-of-business app, the following App registration settings must match your Xcode app project:
+When integrating the Tunnel for MAM iOS SDK into a line-of-business app, the following app registration settings must match your Xcode app project:
 
 - Application ID
 - Tenant ID
 
 Depending on your needs, choose one of the following options:
 
-- [Create a new App registration](#create-a-new-app-registration)  
-  If you have an iOS app that hasn’t been previously integrated with the Intune App SDK for iOS, or the Microsoft Authentication Library (MSAL), then you will need to create a new app registration. The steps to create a new App registration include:  
+- [Create a new app registration](#create-a-new-app-registration)  
+  If you have an iOS app that hasn’t been previously integrated with the Intune App SDK for iOS, or the Microsoft Authentication Library (MSAL), then you'll need to create a new app registration. The steps to create a new app registration include:  
 
-  - App registration.
+  - app registration.
   - Authentication configuration.
   - Adding API Permissions.
   - Token configuration.
   - Verify using Integration assistant
 
-- [Update an existing App registration](#update-an-existing-app-registration)  
-  If you have an iOS app that has been previously integrated with the Intune App SDK for iOS, then you will need to update the existing app registration.
+- [Update an existing app registration](#update-an-existing-app-registration)  
+  If you have an iOS app that has been previously integrated with the Intune App SDK for iOS, then you'll need to review and update the existing app registration.
 
-#### Create a new App registration
+#### Create a new app registration
 
-The Azure AD online docs provide detailed instruction and guidance on how to [create an App registration](/azure/active-directory/develop/howto-create-service-principal-portal#app-registration-app-objects-and-service-principals).
+The Azure AD online docs provide detailed instruction and guidance on how to [create an app registration](/azure/active-directory/develop/howto-create-service-principal-portal#app-registration-app-objects-and-service-principals).
 
 The following guidance is specific to requirements for the Tunnel for MAM iOS SDK integration.
 
 1. In the [Azure AD portal](https://aad.portal.azure.com/) for your tenant, go to *Azure Active Directory*, and then under *Manage*, select **App registrations** > **+ New registration**.
 2. On the *Register an application* page:
-   - Specify a **Name**for the app registration 
+   - Specify a **Name for the app registration 
    - Select **Account in this organizational directory only (*YOUR_TENANT_NAME only - Single tenant*)**.
    - A *Redirect URI* doesn't need to be provided at this time. One will be created automatically during a later step.
   
@@ -204,7 +204,7 @@ The following guidance is specific to requirements for the Tunnel for MAM iOS SD
 
 4. On the *Authentication* pane for your app registration, select **+ Add a platform**, and then select the tile for **iOS/macOS**. This will open the *Configure your iOS or macOS app* pane.  
 
-   :::image type="content" source="./media/microsoft-tunnel-mam-ios/app-registration-authentication1.png" alt-text="Configure authentication for the app registration..":::
+   :::image type="content" source="./media/microsoft-tunnel-mam-ios/app-registration-authentication1.png" alt-text="Configure authentication for the app registration.":::
 
 5. On the *Configure your iOS or macOS app* pane, Enter the *Bundle ID* for the Xcode app to be integrated with the Tunnel for MAM iOS SDK, and then select **Configure**. This opens the iOS/macOS configuration pane:
 
@@ -229,9 +229,9 @@ The following guidance is specific to requirements for the Tunnel for MAM iOS SD
    - Search for *Microsoft Tunnel Gateway*, select the result, and then select the checkbox for *Tunnel Allow*.
    - Select **Add permissions**.
      :::image type="content" source="./media/microsoft-tunnel-mam-ios/request-api-permissions2.png" alt-text="Configure API permissions for Microsoft Tunnel Gateway.":::
-    
+
    To complete the configuration, return to the *API permissions* pane and select **Grant admin consent for YOUR_TENANT**, and then select **Yes**.
-   
+
    :::image type="content" source="./media/microsoft-tunnel-mam-ios/grant-api-permissions-consent.png" alt-text="Grand admin consent.":::
 
 7. Next, while viewing the app registration, select **Token configuration**, and then **+ Add optional claim**. On the *Add optional claim* page, for *Token type* select **Access**, and then for *Claim*, select the checkbox for **acct**. Tunnel for MAM requires this Auth token to authenticate users to Azure AD.
@@ -244,17 +244,92 @@ The following guidance is specific to requirements for the Tunnel for MAM iOS SD
 
    - For *What application types are you building?* select **Mobile app (Android, iOS, Xamarin, UWP)**
    - Set *Is this application calling APIs?* to **No**, and then select **Evaluate my app registration**.
-   
-   :::image type="content" source="./media/microsoft-tunnel-mam-ios/integration-assistant.png" alt-text="Use the App registration Integration assistant to verify settings.":::
+
+   :::image type="content" source="./media/microsoft-tunnel-mam-ios/integration-assistant.png" alt-text="Use the app registration Integration assistant to verify settings.":::
 
    The results should show a status of *Complete* for both *Recommended configurations* and *Discouraged configurations*.
 
+#### Update an existing app registration
 
+When you already have an app registration, you can choose to update it instead of creating a new one. To do so, you'll review the following settings and make changes when needed.
 
+- *Application ID* and *Tenant ID*
+- Authentication configuration
+- API Permissions
+- Token configuration
+- Integration assistant
 
-#### Update an existing App registration
- 
+1. In the [Azure AD portal](https://aad.portal.azure.com/), go to **Azure Active Directory**, and then under *Manage*, select **App registrations**. Next, select the app registration that you want to review and update to open its *Overview* pane. Record the values for the *Application (client) ID* and the *Directory (tenant) ID*.
 
+   These values must exactly match the following values in your Xcode app project: 
+   - info.plist > IntuneMAMSettings
+     - Application (client) ID = ADALClientId
+     - Directory (tenant) ID = ADALAuthority
+
+2. Select **Authentication** and review the app platform type. It must be *iOS/macOS* and have a *Bundle ID* and *Redirect URI*. The Redirect URI must be formed as `msauth.Your_Bundle_ID://auth`.
+
+   Next, select **View** to view the details of the *Bundle ID* and *Redirect URI*. Ensure that a *MSAL Configuration* is present. If it isn't, see [Create an Azure AD app and service principal in the portal - Microsoft Entra](/azure/active-directory/develop/howto-create-service-principal-portal#app-registration-app-objects-and-service-principals) for guidance.
+
+   As in the previous step, compare the values *Bundle ID* and *Redirect URI* with those from your Xcode app project:  
+   - Project > General > Identity: Bundle ID
+   - info.plist > IntuneMAMSettings: ADALRedirectUri
+
+   Also ensure the Xcode Bundle Identifier i your app project matches the app registration Bundle ID:
+
+   :::image type="content" source="./media/microsoft-tunnel-mam-ios/review-authentication.png" alt-text="Compare authentication settings to those in your Xcode.":::
+
+3. Verify, and update the **API permissions**. Ensure you have *Microsoft Graph*, and *Microsoft Mobile Application Management* permissions already set.
+
+   :::image type="content" source="./media/microsoft-tunnel-mam-ios/review-api-permissions.png" alt-text="Review the APP permissions in the app registration.":::
+
+   Next add permissions for the *Microsoft Tunnel Gateway* service principal:
+
+   1. Select **+ Add a permission**.
+   2. Select the **API my organization uses** tab
+   3. Search for *Microsoft Tunnel Gateway*, and select it to **Request API permissions**.
+
+      If *Microsoft Tunnel Gateway* doesn't appear in the list, then it hasn't been provisioned. To provision it, see [Use Microsoft Tunnel VPN gateway with Conditional Access policies]../protect/microsoft-tunnel-conditional-access#provision-your-tenant.md).
+
+   4. Select the **Tunnel_Allow** permission and select on **Add permission** to continue.
+
+   Next, grant *admin consent* for the new permissions:
+
+   1. Select **Grant admin consent for YOUR_TENANT_NAME**.
+   1. In the *Grant admin consent confirmation* dialog, select **Yes**.
+
+   After being updated, you should see the following three API permissions with the status of *Granted for YOUR_TENANT_NAME*:
+   - Microsoft Graph
+   - Microsoft Mobile Management
+   - Microsoft Tunnel Gateway
+
+4. Select **Token configuration** to confirm the settings.  For *Claim* you should see a value for *acct* with a *Token type* of *Access*.
+
+   If *acct* isn't present, select **+Add optional claim** to add a claim:
+
+   1. For *Token type*, select *Access*
+   1. Select the checkbox for *acct*
+   1. Select **Add** to complete the configuration.
+
+5. Select **Integration assistant** to validate the app registration:
+
+   1. For *What application types are you building?* select **Mobile app (Android, iOS, Xamarin, UWP)**
+   1. Set *Is this application calling APIs?* to **No**, and then select **Evaluate my app registration**.
+
+   The results should show a status of *Complete* for both *Recommended configurations* and *Discouraged configurations*.
+
+## Xcode Line of Business app integration
+
+Xcode is the Apple Integrated Developer Environment that that runs on macOS and used to integrate the Tunnel for MAM iOS SDK with your app.
+
+The following are requirements for using Xcode to successfully integrate an iOS App to use MAM tunnel for iOS:
+
+- macOS - To run Xcode.
+- Xcode 14.0 or later.
+- MAM-SDK – min version: 16.1.1
+- MSAL-SDK – min version: 1.2.3
+- Tunnel for MAM iOS SDK, available on GitHub.
+
+For guidance on integrating the SDK, see [Tunnel for MAM iOS SDK](../developer/tunnel-mam-ios-sdk.md).
 
 ## Next steps
 
