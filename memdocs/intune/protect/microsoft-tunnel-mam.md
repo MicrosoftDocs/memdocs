@@ -63,3 +63,5 @@ The following table identifies key features for the supported platforms:
 ## Next steps
 
 [Learn about the Microsoft Tunnel VPN solution for Microsoft Intune](../protect/microsoft-tunnel-overview.md)
+[Use MAM Tunnel for Android](../protect/microsoft-tunnel-mam-android.md)
+[MAM Tunnel for iOS](../protect/microsoft-tunnel-mam-ios.md)

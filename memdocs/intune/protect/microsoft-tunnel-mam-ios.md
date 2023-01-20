@@ -177,7 +177,7 @@ Depending on your needs, choose one of the following options:
 - [Create a new app registration](#create-a-new-app-registration)  
   If you have an iOS app that hasn’t been previously integrated with the Intune App SDK for iOS, or the Microsoft Authentication Library (MSAL), then you'll need to create a new app registration. The steps to create a new app registration include:  
 
-  - app registration.
+  - App registration.
   - Authentication configuration.
   - Adding API Permissions.
   - Token configuration.
@@ -274,7 +274,7 @@ When you already have an app registration, you can choose to update it instead o
    - Project > General > Identity: Bundle ID
    - info.plist > IntuneMAMSettings: ADALRedirectUri
 
-   Also ensure the Xcode Bundle Identifier i your app project matches the app registration Bundle ID:
+   Also ensure the Xcode Bundle Identifier in your app project matches the app registration Bundle ID:
 
    :::image type="content" source="./media/microsoft-tunnel-mam-ios/review-authentication.png" alt-text="Compare authentication settings to those in your Xcode.":::
 
@@ -288,7 +288,7 @@ When you already have an app registration, you can choose to update it instead o
    2. Select the **API my organization uses** tab
    3. Search for *Microsoft Tunnel Gateway*, and select it to **Request API permissions**.
 
-      If *Microsoft Tunnel Gateway* doesn't appear in the list, then it hasn't been provisioned. To provision it, see [Use Microsoft Tunnel VPN gateway with Conditional Access policies]../protect/microsoft-tunnel-conditional-access#provision-your-tenant.md).
+      If *Microsoft Tunnel Gateway* doesn't appear in the list, then it hasn't been provisioned. To provision it, see [Use Microsoft Tunnel VPN gateway with Conditional Access policies](../protect/microsoft-tunnel-conditional-access#provision-your-tenant.md).
 
    4. Select the **Tunnel_Allow** permission and select on **Add permission** to continue.
 
