@@ -80,8 +80,7 @@ The **Summary** tab provides overall details for the user who are managed by Int
 |--------------------|-------------------------------------------------------------------------------------------------------------------------------------|
 | Policy             | The status of the policies available for the user or device.                                                                       |
 | Compliance         | The compliance status for the user or device.                                                                                              |
-| Azure AD join type | The status of each of the users' app protection apps. The possible statuses for the apps are **Checked in** and **Not checked in**. |
-| App protection     | The state of app protection.                                          |
+| App protection     | App protection details.                                          |
 | Applications       | The state of the applications for the user or device.                                                                               |
 | Devices            | The status of the device(s) related to the user.                                                                                |
 | Role and scope     | The role and scope for the user.                                                                                             |
@@ -150,7 +149,7 @@ An app protection policy is available to mobile apps that integrate with EMS tec
 
 ### Updates
 
-A Windows update report that provides an overall view of compliance for devices that are targeted with a **Feature updates for Windows 10 and later** policy. This report provides the update status based on update state. You can also see specific device update details. The data found in these reports is timely, calls out the device name and state, and other update related details. A summary report is available in the **Windows updates** workload. This report also provides filtering, searching, paging, and sorting.
+The update report provides an overall view of updates that are deployed to users. This information also provides filtering, searching, paging, and sorting.
 
 
 | Column    | Description                                                                           |
@@ -187,9 +186,6 @@ Diagnostics for devices and applications.
 
 Use the following resources to help collect device data when troubleshooting user's device issues:
 - [Send iOS/iPadOS enrollment errors to your IT administrator](../user-help/send-errors-to-your-it-admin-ios.md)
-- [Help your company support fix device issues with verbose logging](../user-help/use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md)
-- [Send Android logs to your company support using a USB cable](../user-help/send-logs-to-your-it-admin-by-email-android.md)
-- [Send Android diagnostic data logs to your IT administrator using email](../user-help/send-logs-to-your-it-admin-by-email-android.md)
 - [Send Android enrollment errors to your IT administrator](../user-help/send-logs-to-your-it-admin-by-email-android.md)
 
 ## Next steps
