@@ -13,11 +13,13 @@ These notices provide important information that can help you prepare for future
 
 ### Plan for Change: Ending support for Company Portal authentication method for iOS/iPadOS ADE enrollment
 
-As we continue to invest in Setup Assistant with modern authentication, which is the Apple supported path to require enrollment during Setup Assistant with optional multi-factor authentication, we plan to remove the Company Portal authentication method from new and existing iOS/iPadOS ADE enrollment profiles in Q1 of CY2023. This will include removing the Run Company Portal in Single App Mode until authentication setting.
+As we continue to invest in Setup Assistant with modern authentication, which is the Apple supported path to require enrollment during Setup Assistant with optional multi-factor authentication, we plan to remove the Company Portal authentication method from new and existing iOS/iPadOS ADE enrollment profiles. This will include removing the Run Company Portal in Single App Mode until authentication setting.
+
+**We're no longer moving forward with the change at this time, we'll notify you via the Message Center when it's time to replan for this future change.**
 
 ### How does this affect you or your users?
 
-In Q1 of CY2023, new enrollments (new devices that are targeted with an existing enrollment profile or devices re-enrolling) that are targeted with an existing enrollment profile with the Company Portal authentication method, will not be able to enroll.
+New enrollments (new devices that are targeted with an existing enrollment profile or devices re-enrolling) that are targeted with an existing enrollment profile with the Company Portal authentication method, will not be able to enroll.
 
 This will not impact existing enrolled devices unless the device is re-enrolled after this change. The device will not be able to re-enroll until the authentication method is switched in the enrollment profile to Setup Assistant with modern authentication.
 
@@ -86,37 +88,6 @@ To check which version of the certificate connector you are using, follow these 
 2. A list of installed programs and applications will be displayed.
 3. Look for an entry related to the Microsoft Intune Certificate Connector. There will be a "Version" associated with the connector. **Note:** Names for older connectors may vary.
 
-### Plan for Change: New APP biometrics settings and authorization requirements for Android devices<!--9740832-->
-
-Currently, our biometric settings do not distinguish between [Class 2 and Class 3 Biometrics](https://source.android.com/security/biometric). Expected with Intune’s July (2207) service release, we are modifying fingerprint and biometric settings for Intune app protection policies (APP) that apply to Android devices to accommodate [Class 3 Biometrics](https://developer.android.com/reference/android/hardware/biometrics/BiometricManager.Authenticators#BIOMETRIC_STRONG).
-
-When you create or modify an app protection policy, you will see the following changes on the [Access requirements](/mem/intune/apps/app-protection-policy-settings-android#access-requirements) page:
-
-- The setting **Fingerprint instead of PIN for access** will be rolled into the existing setting **Biometrics instead of PIN for access**. This setting will apply to all biometrics (Class 2 and Class 3).
-- The setting **Override fingerprint with PIN after timeout** will be modified to **Override Biometrics with PIN after timeout**. This setting will apply to all biometrics (Class 2 and Class 3).
-- There is a new setting: **Class 3 Biometrics (Android 9.0+)** with a new sub-setting: **Override Biometrics with PIN after biometric updates**. This sub-setting applies only to Class 3 Biometrics, when selected.
-
-> [!NOTE]
-> Support for Class 3 Biometrics depends on the device, so you may need to contact your device manufacturers to understand device-specific limitations.
-
-#### How does this affect you or your users?
-
-Existing policies that allow fingerprints or biometrics for authentication will be migrated with no user impact.
-
-After this change, if you configure the policy to require **Class 3 Biometrics (Android 9.0+)**, the following will occur:
-
-- For users with Android devices that support Class 3 Biometrics, the user will be prompted to enter their APP PIN the first time they sign in to the APP-protected app. Subsequent sign-ins will use Class 3 Biometrics for authentication. However, if a user does not configure biometrics that satisfy the Class 3 requirements, they will be prompted to enter their PIN with each subsequent sign-in.
-- For users with Android devices that do not support Class 3 Biometrics, the user will be prompted to enter their PIN each time they sign in to the APP-protected app.
-
-If **Override Biometrics with PIN after biometric updates** is also required, users who update their stored Class 3 Biometrics will be prompted to enter their APP PIN the next time they sign in to the APP-protected app.
-
-#### How can you prepare?
-
-Admins should be aware of the combined settings for fingerprints and Class 2 Biometrics. If your existing policy allows for fingerprint authentication but not other biometrics, it will allow for *both* once migrated. Also, if you had previously required an APP PIN after fingerprint timeout, this timeout setting will apply to all biometrics.
-
-> [!NOTE]
-> If you are using the Microsoft Graph API’s FingerprintBlocked and BiometricAuthenticationBlocked, plan to update your APIs to use the new combined FingerprintAndBiometricEnabled API. The current APIs will retain their values for existing policies and the new FingerprintAndBiometricEnabled API will be defaulted to Null for these policies, until the policy has been updated.
-
 ### Plan for change: Intune is moving to support macOS 11.6 and higher later this year<!--14766663-->
 
 Apple is expected to release macOS 13 (Ventura) later this year, Microsoft Intune, the Company Portal app and the Intune mobile device management agent will be moving to support macOS 11.6 (Big Sur) and later. Since the Company Portal app for iOS and macOS are a unified app, this change will occur shortly after the release of iOS/iPadOS 16.
@@ -155,17 +126,6 @@ To check which devices support iOS 14 or iPadOS 14 (if applicable), see the foll
 Check your Intune reporting to see what devices or users might be affected. For devices with mobile device management, go to **Devices** > **All devices** and filter by OS. For devices with app protection policies, go to **Apps** > **Monitor** > **App protection status** > **App Protection report: iOS, Android**.
 
 To manage the supported OS version in your organization, you can use Microsoft Endpoint Manager controls for both mobile device management and APP. For more information, see [Manage operating system versions with Intune](../fundamentals/manage-os-versions.md).
-
-### Plan for Change: Deploy macOS LOB apps by uploading PKG-type installer files<!-- 14190746 --> 
-We recently announced the general availability to deploy macOS line-of-business (LOB) apps by uploading PKG-type installer files directly in the Microsoft Endpoint Manager admin center. This process no longer requires the use of the Intune App Wrapping Tool for macOS to convert *.pkg* files to *.intunemac* format. 
-  
-In August 2022, we removed the ability to upload wrapped *.intunemac* files in the Microsoft Endpoint Manager admin center. 
-
-#### How does this affect you or your users?
-There is no impact to apps previously uploaded with *.intunemac* files. You can upgrade previously uploaded apps by uploading the *.pkg* file type.
-
-#### How can you prepare?
-Moving forward, deploy macOS LOB apps by uploading and deploying PKG-type installer files in the Microsoft Endpoint Manager admin center. 
 
 ### Plan for change: Intune is moving to support Android 8.0 and later in January 2022<!-- 10946003 -->  
 
@@ -217,25 +177,6 @@ Notify your helpdesk, if applicable, about this updated support statement. You a
 
 - Configure a [conditional launch setting for APP](../apps/app-protection-policy-settings-android.md#conditional-launch) with a minimum OS version requirement to warn users.
 - Use a device compliance policy for an [Android device administrator](../protect/compliance-policy-create-android.md) or [Android Enterprise](../protect/compliance-policy-create-android-for-work.md). Set the [action for noncompliance](../protect/actions-for-noncompliance.md) to send a message to users before marking them as noncompliant.
-
-### Take action: Update to the latest version of the Android Company Portal app<!--10488117-->
-
-Starting with the October (2110) service release, Intune will no longer support new Android device administrator enrollments that use Company Portal version 5.04993.0 or earlier. The reason is a change in the integration of Intune with Samsung devices.
-
-#### How does this affect you or your users?
-
-Users who need to enroll Samsung devices in an Android device administrator by using an older version of the Company Portal app (any version earlier than 5.04993.0) will no longer be successful. They'll need to update the Company Portal app to successfully enroll.
-
-#### How can you prepare?
-
-Update any older version of the Company Portal staged in your environment to support Android device administrator enrollments before the Intune October (2110) service release. Inform your users that they'll need to update to the latest version of the Android Company Portal to enroll their Samsung device. 
-
-If applicable, inform your helpdesk in case users don't update the app before enrolling. We also recommend that you keep the Company Portal app updated to ensure that the latest fixes are available on your devices.
-
-#### More information
-
-- [How to update the Company Portal app](../user-help/install-a-new-version-of-the-company-portal-app.md)
-- [Download the Microsoft Intune Company Portal for Android from the official Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=49140)
 
 ### Upgrade to the Microsoft Intune Management Extension<!-- 10102913 -->
 
