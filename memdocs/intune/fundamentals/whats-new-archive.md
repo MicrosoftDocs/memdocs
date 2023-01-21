@@ -304,14 +304,14 @@ For more information, see [Manage Microsoft Defender for Endpoint on devices wit
 ### Device management
 
 
-#### Elevation enhancements to Remote help<!-- 12453415 -->
+#### Elevation enhancements to Remote Help<!-- 12453415 -->
 
 Elevation permissions will no longer be assigned when a session is started. Elevation permissions will now apply only when JIT (just in time) access is requested.  The access is requested with the click of a button on the toolbar. 
 When elevation permissions are assigned, the log off behavior for the sharer has been modified as follows:
- - If the admin (helper) ends the remote help session, the user (sharer) will not be logged off.
+ - If the admin (helper) ends the Remote Help session, the user (sharer) will not be logged off.
  - If the sharer tries to end the session, they will be prompted that they will be logged off if they continue.
  - If the sharer is a local admin on their device, the access UAC prompt option will not be available to the helper as they can guide the sharer to perform elevated actions under their own profile.
-For more information about remote help, see [Use Remote help](../remote-actions/remote-help.md)
+For more information about Remote Help, see [Use Remote Help](../remote-actions/remote-help.md)
 
 ## Week of May 2, 2022
 
@@ -1094,9 +1094,9 @@ For corporate devices, data about managed and unmanaged apps continues to be inc
 
 ### Monitor and troubleshoot
 
-#### Remote help is moving in the Microsoft Endpoint Manager admin center<!-- 12868177 -->
-The remote help page in the Microsoft Endpoint Manager admin center has moved and its now available directly under **Tenant administration** instead of **Connectors and tokens**. 
-For more information about remote help, see [Use remote help](../remote-actions/remote-help.md).
+#### Remote Help is moving in the Microsoft Endpoint Manager admin center<!-- 12868177 -->
+The Remote Help page in the Microsoft Endpoint Manager admin center has moved and its now available directly under **Tenant administration** instead of **Connectors and tokens**. 
+For more information about Remote Help, see [Use Remote Help](../remote-actions/remote-help.md).
 
 ## January 2022
 
@@ -1294,8 +1294,8 @@ Filters allow you to include or exclude devices in policy or app assignments bas
 
 ### Device management
 
-#### Launch Remote help from within the admin center<!-- 12773983 -->
-You can now [launch remote help from within the Microsoft Endpoint Manager admin center](../remote-actions/remote-help.md#how-to-use-remote-help). To do so, in the admin center go to **All devices** and select the device on which assistance is needed. Then select **New remote help session**, which is available from the remote actions bar across the top of the devices view. 
+#### Launch Remote Help from within the admin center<!-- 12773983 -->
+You can now [launch Remote Help from within the Microsoft Endpoint Manager admin center](../remote-actions/remote-help.md#how-to-use-remote-help). To do so, in the admin center go to **All devices** and select the device on which assistance is needed. Then select **New Remote Help session**, which is available from the remote actions bar across the top of the devices view. 
 
 #### Endpoint analytics filtering<!--7207888 -->
 You can now [add filters](../../analytics/scores.md#filter-reports) to the tables in [Endpoint analytics](../../analytics/overview.md) reports. Using filters enables you to discover trends in your environment or spot potential issues.  
@@ -1514,21 +1514,21 @@ For more information, see [Manage Microsoft Defender for Endpoint on devices wit
 
 ### Monitor and troubleshoot
 
-#### Remote help app is available as a public preview<!-- 9843480 -->
+#### Remote Help app is available as a public preview<!-- 9843480 -->
 
-As a public preview, you can use of the remote help app with your Intune tenant. With remote help, users who authenticate to your Azure Active directly can remotely assist others by connecting a remote help session between devices.
+As a public preview, you can use of the Remote Help app with your Intune tenant. With Remote Help, users who authenticate to your Azure Active directly can remotely assist others by connecting a Remote Help session between devices.
 
-With permissions in remote help managed by Intune role-based access controls, you control who has permissions to help others and the actions they can take while assisting. The capabilities of remote help include:
+With permissions in Remote Help managed by Intune role-based access controls, you control who has permissions to help others and the actions they can take while assisting. The capabilities of Remote Help include:
 
-- **Enable remote help for your tenant** –If you choose to turn on remote help, its use is enabled tenant-wide.
-- **Requires Organization login** - To use remote help, both the helper and the sharer must sign in with an Azure Active Directory (Azure AD) account from your organization.
-- **Use remote help with unenrolled devices** – You can choose to allow help to devices that aren't enrolled with Intune.
+- **Enable Remote Help for your tenant** –If you choose to turn on Remote Help, its use is enabled tenant-wide.
+- **Requires Organization login** - To use Remote Help, both the helper and the sharer must sign in with an Azure Active Directory (Azure AD) account from your organization.
+- **Use Remote Help with unenrolled devices** – You can choose to allow help to devices that aren't enrolled with Intune.
 - **Compliance Warnings** - Before connecting to device, a helper will see a non-compliance warning about that device if it’s not compliant to its assigned policies. This warning doesn’t block access but provides transparency about the risk of using sensitive data like administrative credentials during the session.
 - **Role-based access control** – Admins can set RBAC rules that determine the scope of a helper’s access and what the actions they can take while providing assistance.
 - **Elevation of privilege** - When needed, a helper with the correct RBAC permissions can interact with the UAC prompt on the sharer's machine to enter credentials.
-- **Monitor active remote help sessions, and view details about past sessions** – In the Microsoft Endpoint Manager admin center you can view reports that include details about who helped who, on what device, and for how long. You’ll also find details about active sessions.
+- **Monitor active Remote Help sessions, and view details about past sessions** – In the Microsoft Endpoint Manager admin center you can view reports that include details about who helped who, on what device, and for how long. You’ll also find details about active sessions.
 
-This feature is rolling out over the next week and should soon be available for your tenant. For more information, see [Use remote help](../remote-actions/remote-help.md).
+This feature is rolling out over the next week and should soon be available for your tenant. For more information, see [Use Remote Help](../remote-actions/remote-help.md).
 
 #### MDM support data to refresh automatically in Group Policy analytics tool<!-- 7852080 -->
 Now whenever Microsoft makes changes to the mappings in Intune, the **MDM Support** column in the GP analytics tool automatically updates to reflect the changes. The automation is an improvement over the previous behavior, which required you to reimport your Group Policy object (GPO) to refresh the data. For more information about Group Policy analytics, see [Use Group Policy analytics](../configuration/group-policy-analytics.md).  
