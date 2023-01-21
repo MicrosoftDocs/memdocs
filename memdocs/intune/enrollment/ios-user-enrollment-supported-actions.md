@@ -116,6 +116,8 @@ The following options aren't supported on devices enrolled with User Enrollment.
 - VPP license revocation: A notification that the license has been revoked does not appear. The current behavior is that the revocation is successful, but the end user is not notified. 
 - Application reporting: For app types unsupported with User Enrollment, reports may provide irrelevant error messages. 
 - Company Portal app experience: Users see the same text indicating what organizations can see for User and Device Enrollment if the admin has customized the text indicating what organizations can't see.
+- Devices running iOS 15.5 cannot enroll with User Enrollment if MFA text or call is needed on the same device during enrollment. 
+- Devices running iOS 15.7 through iOS 16.1.2 must use MFA call (as opposed to text) in order to enroll with User Enrollment if MFA is needed on the same device during enrollment. 
 
 
 ## Next steps
