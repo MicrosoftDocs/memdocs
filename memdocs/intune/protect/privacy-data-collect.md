@@ -134,9 +134,16 @@ Required data collected by Intune may include, but isn't limited to:
 
 ## Optional data
 
-Data in the optional category isn't essential to the product or service experience. Customers can control the collection of optional data. Intune enables customers to opt in or opt-out of optional data collection. Examples of the optional data consist of data Intune collects for diagnostics and telemetry. We think there are compelling reasons for people to share this optional data as it creates opportunities for new and richer experiences but we understand the importance to provide users the opportunity to make these choices for themselves.
+Data in the optional category isn't essential to the product or service experience. Customers can control the collection of optional data. Intune enables customers to opt in or opt-out of optional data collection. Examples of optional data consist of pseudonymized data that Intune collects for diagnostics and telemetry. We think there are compelling reasons for people to share this optional data as it creates opportunities for new and richer experiences and we understand the importance of providing users the opportunity to make these choices for themselves.
 
-Examples of the optional diagnostic data may include application usage data, error, and performance data. All diagnostic data Microsoft collects during the use of any Microsoft 365 Apps for enterprise applications and services is pseudonymized as defined in the *ISO/IEC 19944-1:2020 (section 8.3.3)* standard.
+Examples of the optional data Microsoft collects during the use of any Microsoft 365 Apps for enterprise applications and services fall into the following categories as defined by the [ISO/IEC 19944-1:2020 Information technology - Cloud computing - Cloud services and devices: Data flow, data categories](https://www.iso.org/standard/79573.html):
+
+-	Details about the device, its configuration and connectivity capabilities, and status. 
+-	Details about the usage of the device, operating system, applications, and services. 
+-	Details about the health of the device, operating system, apps, and drivers. 
+-	Software installation and update information on the device. 
+
+
 
 ## Certain End User Data or Content is never Collected
 
