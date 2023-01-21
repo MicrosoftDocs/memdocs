@@ -139,8 +139,6 @@ items:
 
   - name: Solutions and scenarios
     items: 
-    - name: Scenarios overview (NEEDS WRITTEN)
-      href: ./scenarios/scenario-overview.md
     - name: Guided scenarios
       items: 
       - name: Guided scenarios overview
@@ -181,7 +179,6 @@ items:
     - name: Create an administrative template
       href: ./configuration/tutorial-walkthrough-administrative-templates.md
 
-
   - name: Industry guides
     items: 
     - name: Education
@@ -209,7 +206,7 @@ items:
       href: ./fundamentals/deployment-guide-platform-ios-ipados.md    
     - name: macOS platform guide
       href: ./fundamentals/deployment-guide-platform-macOS.md
-    - name: Linux platform guide (new topic)
+    - name: Linux platform guide
       href: ./fundamentals/deployment-guide-platform-linux.md
     - name: Windows Holographic platform guide
       href: ./fundamentals/windows-holographic-for-business.md
@@ -254,56 +251,12 @@ items:
         - name: Use scope tags (define for what "to determine what admins can see" or something)
           href: ./fundamentals/scope-tags.md
 
-
-    - name: Manage tenant configurations (discuss name)
+    - name: Premium add-ons (will need to sell this and move when it grows)
       items:
-      
-
       - name: Premium add-ons (will need to sell this and move when it grows)
-        items:
-        - name: Premium add-ons (will need to sell this and move when it grows)
-          href: ./fundamentals/premium-add-ons.md
-        - name: Microsoft Tunnel for MAM
-          href: ./protect/microsoft-tunnel-mam.md
-
-
-      - name: Reference
-        items: 
-        - name: Error codes and descriptions (need to figure out troubleshooting strategy)(move this node to help and support, and hand-off to troubleshooting content)
-          items: 
-          - name: Error codes and descriptions (need to figure out troubleshooting strategy)(move this node to help and support, and hand-off to troubleshooting content)
-            items: 
-            - name: Troubleshoot company resource access problems
-              href: /troubleshoot/mem/intune/troubleshoot-company-resource-access-problems?toc=/mem/intune/fundamentals/toc.json&bc=/mem/intune/fundamentals/breadcrumb/toc.json
-
-        - name: Resources
-          items:
-          - name: Archive
-            items:
-            - name: What's new archive
-              items:
-              - name: What's new archive (Azure portal) (Contains WN entries 6 months+ and older. Retain, but limit its age as well, or remain an eternal tally of past work?)
-                href: ./fundamentals/whats-new-archive.md
-              - name: What's new archive (classic portal) (deprecate/delete this article) 
-                href: ./fundamentals/whats-new-archive-classic.md
-            - name: Intune classic features in Azure (need to deprecate)
-              href: ./fundamentals/ui-changes.md
-            - name: Intune classic groups (need to deprecate)
-              href: ./fundamentals/groups-get-started.md
-            - name: iOS/iPadOS education settings  (should this node be in Industry guides > Education?)
-              items:
-              - name: iPad
-                href: ./fundamentals/education-settings-configure-ios.md
-              - name: Shared iPads
-                href: ./fundamentals/education-settings-configure-ios-shared.md
-            - name: Legacy Intune PC software client (deprecate/delete)
-              href: ./fundamentals/intune-legacy-pc-client.md
-            - name: Troubleshoot software updates (move to help and support. Maybe we need an article that provides a clear hand-off to troubleshooting content)
-              href: /troubleshoot/mem/intune/troubleshoot-software-updates-in-microsoft-intune
-            - name: Endpoint protection common errors (move to help and support. Maybe we need an article that provides a clear hand-off to troubleshooting content)
-              href: /troubleshoot/mem/intune/troubleshoot-endpoint-protection-in-microsoft-intune
-          - name: Intune end-user documentation
-            href: /mem/user-help/use-managed-devices-to-get-work-done.md
+        href: ./fundamentals/premium-add-ons.md
+      - name: Microsoft Tunnel for MAM
+        href: ./protect/microsoft-tunnel-mam.md
 
     - name: Manage apps
       href: ./apps/index.yml
@@ -1667,6 +1620,7 @@ items:
 
     - name: Troubleshooting guide  
       items:
+      
       - name: Troubleshooting guide (suggested article for better handoff to Tshooting repo)
     
       - name: Troubleshoot software updates (could we replace with link in a Tshooting guide article?)
@@ -1674,4 +1628,4 @@ items:
       - name: Endpoint protection common errors (could we replace with link in a Tshooting guide article?)
         href: /troubleshoot/mem/intune/troubleshoot-endpoint-protection-in-microsoft-intune
       - name: Troubleshoot company resource access problems (could we replace with link in a Tshooting guide article?)
-        href: /troubleshoot/mem/intune/troubleshoot-company-resource-access-problems?toc=/mem/intune/fundamentals/toc.json&bc=/mem/intune/fundamentals/breadcrumb/toc.json
+        href: /troubleshoot/mem/intune/troubleshoot-company-resource-access-problems
