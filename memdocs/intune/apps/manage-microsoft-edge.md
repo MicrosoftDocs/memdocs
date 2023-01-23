@@ -476,7 +476,7 @@ Users with Edge for iOS and Android installed on their iOS or Android device can
 
 3. Edge for iOS and Android launches troubleshooting mode.
 
-To download Android user-submitted logs, go to **Troubleshooting + support** > **Diagnostics**. For more information, see [Use the troubleshooting dashboard to help users at your company](../fundamentals/help-desk-operators.md). You can retrieve logs sent via Edge for iOS from Microsoft support by giving them the user's incident ID.  
+You can retrieve logs from Microsoft Support by giving them the user's incident ID.  
 
 For a list of the settings stored in the app logs, see [Review client app protection logs](app-protection-policy-settings-log.md). 
 
