@@ -283,12 +283,9 @@ Some platforms and configurations do not allow self-service device actions. This
 
 ### App logs
 
-If you are using Azure Government, app logs are offered to the end user and they choose their sharing preference when they initiate the process in the Company Portal app. However, if you are not using Azure Government, the Company Portal app sends user-submitted logs to the admin center. You can access and download mobile app diagnostics for the Android, iOS/iPadOS, macOS, and AOSP version of the Company Portal app.   
+App users can share their logs with you when requesting help through the Intune Company Portal app. If you're using Azure Government, users get to select their sharing preference when they initiate the sharing process in the Company Portal app. If you're not using Azure Government, Company Portal sends user-submitted logs directly to the admin center, where you can download and view them. Mobile app diagnostics are available for the Android, iOS/iPadOS, macOS, and AOSP version of the Company Portal app.   
 
-To download logs in the admin center: 
-1. Go to **Troubleshooting + support** > **Troubleshoot (preview)**.
-2. Select the **Diagnostics** tab.
-3. Select the device name or application from the list to download the accompanying diagnostic log.  
+To download user-submitted logs, go to **Troubleshooting + support** > **Diagnostics**. For more information, see [Use the troubleshooting dashboard to help users at your company](help-desk-operators).   
 
 > [!NOTE]
 > Consistent with Microsoft and Apple policy, we do not sell any data collected by our service to any third parties for any reason.
