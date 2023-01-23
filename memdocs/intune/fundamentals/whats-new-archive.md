@@ -8433,7 +8433,7 @@ We've updated the help experience in the Company Portal app for Android to align
 - Upload diagnostic logs to Microsoft.
 - Send an email that describes the problem and incident ID to a company support person.  
 
-To check out the updated help experience go to [Send logs using email](../user-help/send-logs-to-your-it-admin-by-email-android.md) and [Send errors to Microsoft](../user-help/send-logs-to-microsoft-android.md).
+To check out the updated help experience, see [Report a problem in Company Portal or Intune app for Android](../user-help/send-logs-to-your-it-admin-by-email-android.md).  
 
 
 #### New enrollment failure trend chart and failure reasons table<!-- 1471783 -->
@@ -9376,7 +9376,7 @@ The Company Portal app for Android can now use geofencing to protect access to c
 
 The Company Portal app for Android has added instruction for end users to help them understand and, where possible, self-solve on new use cases.
 - End users will be guided to the [Azure Active Directory portal](https://account.activedirectory.windowsazure.com/r/#/profile) to remove a device if they have reached the maximum number of devices that they are allowed to add.
-- End users are given steps to follow to help them [fix activation errors on Samsung Knox devices](../user-help/samsung-knox-errors-android.md) or to [turn off power-saving mode](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-faq). If neither of those solutions resolve their issue, we will provide an explanation of how to [submit logs to Microsoft](../user-help/send-logs-to-microsoft-android.md).
+- End users are given steps to follow to help them [fix activation errors on Samsung Knox devices](../user-help/samsung-knox-errors-android.md) or to [turn off power-saving mode](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-faq). If neither of those solutions resolve their issue, we will provide an explanation of how to [Report a problem in Company Portal or Intune app for Android](../user-help/send-logs-to-your-it-admin-by-email-android.md).  
 
 #### New 'Resolve' action available for Android devices<!-- 1583480 -->
 

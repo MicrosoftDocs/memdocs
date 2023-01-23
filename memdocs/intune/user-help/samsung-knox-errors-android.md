@@ -31,7 +31,7 @@ ms.collection:
 
 # Fix common issues with your Samsung Knox device
 
-Troubleshoot common problems associated with managed Samsung Knox devices. To report a problem that isn't listed here, you can [send your diagnostic logs](send-logs-to-microsoft-android.md) through the Company Portal or Microsoft Intune app. Microsoft developers will look at the app-specific logs to diagnose the problem and find a solution.    
+Troubleshoot common problems associated with managed Samsung Knox devices. To report a problem that isn't listed here, you can [send your diagnostic logs](send-logs-to-your-it-admin-by-email-android.md) through the Company Portal or Microsoft Intune app. You support person will look at the app-specific logs to diagnose the problem and find a solution.    
 
 ## Network activation error  
 

@@ -52,7 +52,7 @@ The send logs option in the Company Portal is unavailable for sovereign cloud en
     * From the home screen, tap **Menu** > **Help** > **Send logs**.    
     * From an error message, tap **HELP** or **SEND INFO**, if available. 
 
-    We recommend sending the email as described in this procedure because it gives you the opportunity to explain the problem you encountered to your support person. If you're already in contact with your support person, an email may not be neccessary. To send logs only, with no email support, go to **Help** > **Email Support**, and tap **Upload Logs Only**. 
+    We recommend sending the email as described in this procedure because it gives you the opportunity to explain the problem you encountered to your support person. If you're already in contact with your support person, an email may not be necessary. To send logs only, with no email support, go to **Help** > **Email Support**, and tap **Upload Logs Only**. 
 2. Tap  **SEND LOGS, THEN EMAIL**.  
 3. The app sends your logs. Open your email app when prompted.   
 4. An email message opens with the incident ID pre-populated in the subject field. 

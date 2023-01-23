@@ -48,14 +48,14 @@ Complete the following steps to report a problem you're experiencing in-app or d
 
 3. When prompted to choose a program, select the Mail app or another preferred email app.   
    
-4. The email app will open an email template for you to fill in. Type in a description of the problem you experienced and then send the email to your support person so that they can follow up on the issue.     
+4. The email app will open an email template for you to fill in. Describe the problem and the steps you took leading up to the problem. Then send the email to your support person so that they can follow up on the issue.     
 
 5. Follow up with your support person as needed.  
 
 ## What is a diagnostic log?
 
 Events and errors that occur in the Company Portal app are saved on your device in a special document called a _diagnostic log_. Logs can reveal:  
-* When a problem happened.  
+* When the problem happened.  
 * The steps leading up to the problem.  
 * The state of the app when the problem appeared.   
 

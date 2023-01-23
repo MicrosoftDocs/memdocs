@@ -473,7 +473,7 @@ Users with Edge for iOS and Android installed on their iOS or Android device can
 
 3. Edge for iOS and Android launches troubleshooting mode.
 
-To download user-submitted logs, go to **Troubleshooting + support** > **Diagnostics**. For more information, see [Use the troubleshooting dashboard to help users at your company](help-desk-operators).   
+To download user-submitted logs, go to **Troubleshooting + support** > **Diagnostics**. For more information, see [Use the troubleshooting dashboard to help users at your company](../fundamentals/help-desk-operators.md).   
 
 For a list of the settings stored in the app logs, see [Review client app protection logs](app-protection-policy-settings-log.md). For information about the device user's experience, see [Send logs to your IT admin by email](../user-help/send-logs-to-your-it-admin-by-email-android.md).  
 
