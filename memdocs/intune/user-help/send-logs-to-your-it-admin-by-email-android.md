@@ -45,7 +45,7 @@ Turn on _verbose logging_ in Company Portal to make it easier for your support p
 
 The send logs option in the Company Portal is unavailable for sovereign cloud environments. Instead, you must send logs via email. 
 
-## Share app diagnostic logs    
+## Send logs from Company Portal      
 
 1. There are two ways to share logs and initiate email support in the app:
    
