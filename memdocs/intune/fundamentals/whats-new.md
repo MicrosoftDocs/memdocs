@@ -114,7 +114,7 @@ Applies to:
 - Windows 11
 
 #### SentinelOne – New mobile threat defense partner<!-- 13911932 -->
-You can now use [SentinelOne](../protect/sentinelone-mobile-threat-defense-connector.md) as an integrated mobile threat defense (MTD) partner with Intune. By configuring the SentinelOne connector in Intune, you can control mobile device access to corporate resources using conditional access that's based on risk assessment in your compliance policy. The SentinelOne connector can also send risk levels to app protection policies.
+You can now use [SentinelOne](../protect/sentinelone-mobile-threat-defense-connector.md) as an integrated Mobile Threat Defense (MTD) partner with Intune. By configuring the SentinelOne connector in Intune, you can control mobile device access to corporate resources using conditional access that's based on risk assessment in your compliance policy. The SentinelOne connector can also send risk levels to app protection policies.
 
 ### Device configuration
 
@@ -148,15 +148,14 @@ Applies to:
 - iOS/iPadOS
 - macOS
 
-#### New settings available in the Apple Settings Catalog<!-- 16237513 -->
-The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. 
+#### New settings available in the Apple Settings Catalog<!--16237513  -->
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
 
 New settings are available in the Settings Catalog. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can see these settings at **Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type.
 
 New settings include:
 
 **Accounts > Subscribed Calendars**:
-
 - Account Description
 - Account Host Name
 - Account Password
@@ -165,6 +164,29 @@ New settings include:
 
 Applies to:
 - iOS/iPadOS
+
+**Networking > Domains**:
+- Cross Site Tracking Prevention Relaxed Domains
+
+Applies to:
+- macOS
+
+The following settings are also in Settings Catalog. Previously, they were only available in Templates:
+
+**File Vault**:
+- User Enters Missing Info 
+
+Applies to:
+- macOS
+
+**Restrictions**:
+- Rating Region
+
+Applies to:
+- iOS/iPadOS
+
+For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
+
 
 #### Filter app and policy assignments by the device's Azure AD Join type (`deviceTrustType`)<!-- 8110331 -->
 When you assign an app or policy, you can filter the assignment using different device properties, such as device manufacturer, operating system SKU, and more.
@@ -182,7 +204,7 @@ Applies to:
 ### Monitor and troubleshoot
 
 #### WinGet troubleshooting using diagnostic files<!-- 16724699 -->
-[WinGet](/windows/package-manager/winget/) is a command line tool that enables you to discover, install, upgrade, remove, and configure applications on Windows 10 and Windows 11 devices. When working with [Win32 app management in Intune](../apps/apps-win32-app-management.md), you can now use the following files to help troubleshoot WinGet:
+[WinGet](/windows/package-manager/winget/) is a command line tool that enables you to discover, install, upgrade, remove, and configure applications on Windows 10 and Windows 11 devices. When working with [Win32 app management in Intune](../apps/apps-win32-app-management.md), you can now use the following file locations to help troubleshoot WinGet:
 - *%TEMP%\winget\defaultstate\*.log*
 - *Microsoft-Windows-AppXDeployment/Operational*
 - *Microsoft-Windows-AppXDeploymentServer/Operational*
