@@ -466,7 +466,7 @@ The newly created configuration policy is displayed on the **App configuration**
 ## Use Edge for iOS and Android to access managed app logs  
 
 > [!IMPORTANT]
-> Support for accesing mobile app diagnostics in the admin center is in public preview. For more information, see [Public preview in Microsoft Intune](../fundamentals/public-preview.md).  
+> Support for accessing mobile app diagnostics in the admin center is in public preview. For more information, see [Public preview in Microsoft Intune](../fundamentals/public-preview.md).  
 
 Users with Edge for iOS and Android installed on their iOS or Android device can view the management status of all Microsoft published apps. They can send logs for troubleshooting their managed iOS or Android apps by using the following steps:
 
@@ -476,7 +476,7 @@ Users with Edge for iOS and Android installed on their iOS or Android device can
 
 3. Edge for iOS and Android launches troubleshooting mode.
 
-To download Android user-submitted logs, go to **Troubleshooting + support** > **Diagnostics**. For more information, see [Use the troubleshooting dashboard to help users at your company](../fundamentals/help-desk-operators.md). You can retrieve logs sent via Edge for iOS from Microsoft support by giving them the the user's incident ID.  
+To download Android user-submitted logs, go to **Troubleshooting + support** > **Diagnostics**. For more information, see [Use the troubleshooting dashboard to help users at your company](../fundamentals/help-desk-operators.md). You can retrieve logs sent via Edge for iOS from Microsoft support by giving them the user's incident ID.  
 
 For a list of the settings stored in the app logs, see [Review client app protection logs](app-protection-policy-settings-log.md). 
 
