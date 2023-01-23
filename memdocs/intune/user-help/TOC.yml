@@ -54,6 +54,10 @@ items:
       href: use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md
     - name: Turn off Microsoft data collection
       href: turn-off-microsoft-usage-data-collection-android.md
+  - name: Microsoft Intune app for Android  
+    items: 
+    - name: Check compliance status      
+      href: check-compliance-microsoft-intune-app-android.md  
   - name: Microsoft Intune app for AOSP 
     items:
     - name: Check device compliance 
