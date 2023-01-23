@@ -399,7 +399,7 @@ You can choose to filter the `DeviceFailuresByFeatureUpdatePolicy` report's outp
 - `RecommendedAction` 
 - `WindowsUpdateVersion` 
 
-## DetecteddAppsRawData report
+## DetectedAppsRawData report
 
 The following table contains the possible output when calling the `DetectedAppsRawData` report:
 
