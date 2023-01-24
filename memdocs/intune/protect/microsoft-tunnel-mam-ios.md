@@ -335,9 +335,17 @@ For guidance on integrating the SDK, see [Tunnel for MAM iOS SDK](../developer/t
 
 The following are known issues or limitations during the public preview.
 
-### IP Address for Tunnel Server failing hostname validation 
+### Site Configuration requires DNS hostname
 
-**Work around**: Tunnel certifications need to use hostnames instead of IP addresses. Make sure that the Tunnel certification is using a hostname, not an IP address. 
+Tunnel site settings for "Public IP address or FQDN" requires a publicly resolvable fully qualified domain name to be used.An IP addressed can not be used in the subject name of the TLS/SSL certificate for the tunnel server.
+
+**Work around**: Use a certificate that contains a publicly resolvable FQDN in the subject name, no IP address. 
+
+### Proxy Configuration
+
+If specifying a DNS hostname for the location of the PAC file or proxy server address then a publicly resolvable hostname is required. Additionally any proxy hostnames provided in the PAC file also need to be publicly resolvable.
+
+**Work around: Use the IP address of the DNS hostname for the related PAC file locations and proxy servers
 
 ### Newly created custom app not showing in UX
 
