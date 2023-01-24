@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/16/2022
+ms.date: 01/24/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -79,6 +79,7 @@ The following table lists the Managed Home Screen available configuration keys, 
 | Set screen orientation | integer | 1 | Allows you to set the orientation of the home   screen to portrait mode, landscape mode or allow auto rotate. You can set the   orientation by entering values 1 (for portrait mode), 2 (for Landscape mode),   3 (for Autorotate). | ✔️ |
 | Set device wall paper | string | Default | Allows you to set a wallpaper of your choice. Enter the URL of the image that you want to set as a wallpaper. | ✔️ |
 | Define theme color | string | light | Specify if you want Managed Home   Screen to run in "light" or "dark" mode.  | ❌ |
+| Block pinning browser web pages to MHS | bool | FALSE | Set this restriction to `true` to block users from pinning web pages from any browser onto Managed Home Screen.  | ✔️ |
 
 **Configurations for device peripherals and Managed Home Screen settings**: 
 
@@ -546,6 +547,10 @@ The following syntax is an example JSON script with all the available configurat
         },
         {
             "key": "enable_mhs_signin",
+            "valueBool": true
+        },
+        {
+            "key": "block_pinning_browser_web_pages_to_MHS",
             "valueBool": true
         },
         {

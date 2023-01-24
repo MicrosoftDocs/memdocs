@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/17/2022
+ms.date: 01/20/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -42,6 +42,7 @@ During Mobile Threat Defense (MTD) setup, you've configured a policy for classif
 > - Check Point Harmony Mobile Protect (Android, iOS/iPadOS)
 > - Lookout for Work (Android, iOS/iPadOS)
 > - MVISION Mobile (Android,iOS/iPadOS)
+> - SentinelOne (Android,iOS/iPadOS)
 > - Symantec Endpoint Security (Android, iOS/iPadOS)
 > - Wandera (Android,iOS/iPadOS)
 > - Zimperium (Android,iOS/iPadOS)
@@ -73,8 +74,6 @@ To view classic conditional access policies, in [Azure](https://portal.azure.com
 3. On the **Mobile Threat Defense** pane, choose **Add**.
 
 4. Choose your MTD solution as the **Mobile Threat Defense connector to setup** from the drop-down list.
-
-    <!-- ![MTD setup in Intune](PLACEHOLDER, need a new screenshot of this page) -->
 
 5. Enable the toggle options according to your organization's requirements. Toggle options visible will vary depending on the MTD partner.
 
