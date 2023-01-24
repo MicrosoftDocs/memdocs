@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/31/2022
+ms.date: 01/04/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -79,7 +79,7 @@ This article lists the enrollment prerequisites, has information on using other 
   | macOS | [MDM push certificate](../enrollment/apple-mdm-push-certificate-get.md) |
   | Windows | none |
 
-- Have your user groups and device groups ready to receive your enrollment policies. If you haven't reviewed or created your group structure, and want some guidance, then see [Planning Guide: Task 4: Review existing policies and infrastructure](intune-planning-guide.md#task-4-review-existing-policies-and-infrastructure).
+- Have your user groups and device groups ready to receive your enrollment policies. If you haven't reviewed or created your group structure, and want some guidance, then see [Planning Guide: Step 4 - Review existing policies and infrastructure](intune-planning-guide.md#step-4---review-existing-policies-and-infrastructure).
 
 - If you're bulk enrolling devices, consider creating the **Device enrollment manager** (DEM) account. This account is an Intune permission that's applied to an Azure AD user account. The DEM account can enroll up to 1,000 mobile devices. Use this account to enroll and configure the devices before giving them to users.
 
@@ -129,7 +129,7 @@ There's also a visual guide of the different enrollment options for each platfor
 
 When assigning your profiles, start small, and use a staged approach. Assign the enrollment profile to a pilot or test group. After initial testing, add more users to the pilot group. Then, assign the enrollment profile to more pilot groups.
 
-For more information and suggestions, see the [Planning guide: Task 5: Create a rollout plan](intune-planning-guide.md#task-5-create-a-rollout-plan).
+For more information and suggestions, see the [Planning guide: Step 5 - Create a rollout plan](intune-planning-guide.md#step-5---create-a-rollout-plan).
 
 ## Reporting and troubleshooting
 
@@ -146,3 +146,11 @@ Choose your platform, and get started:
 - [Linux enrollment guide](deployment-guide-enrollment-linux.md)
 - [macOS enrollment guide](deployment-guide-enrollment-macos.md)
 - [Windows enrollment guide](deployment-guide-enrollment-windows.md)
+
+## Follow the minimum recommended baseline policies
+
+1. [Set up Microsoft Intune](deployment-plan-setup.md)
+2. [Add, configure, and protect apps](deployment-plan-protect-apps.md)
+3. [Plan for compliance policies](deployment-plan-compliance-policies.md)
+4. [Create device configuration profiles](deployment-plan-configuration-profile.md)
+5. 🡺 **Enroll devices** (*You are here*)

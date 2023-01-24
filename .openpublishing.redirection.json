@@ -1234,11 +1234,6 @@
             "redirect_document_id": false
         },
         {
-            "source_path": "memdocs/azure-ad-joined-hybrid-azure-ad-joined.md",
-            "redirect_url": "/mem/solutions/cloud-native-endpoints/azure-ad-joined-hybrid-azure-ad-joined",
-            "redirect_document_id": false
-        },
-        {
             "source_path": "memdocs/cloud-native-endpoints-known-issues.md",
             "redirect_url": "/mem/solutions/cloud-native-endpoints/cloud-native-endpoints-known-issues",
             "redirect_document_id": false
@@ -1251,6 +1246,11 @@
         {
             "source_path": "memdocs/cloud-native-endpoints-overview.md",
             "redirect_url": "/mem/solutions/cloud-native-endpoints/cloud-native-endpoints-overview",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/azure-ad-joined-hybrid-azure-ad-joined.md",
+            "redirect_url": "/mem/solutions/cloud-native-endpoints/azure-ad-joined-hybrid-azure-ad-joined",
             "redirect_document_id": false
         },
         {
@@ -1267,6 +1267,6 @@
             "source_path": "memdocs/cloud-native-windows-endpoints.md",
             "redirect_url": "/mem/solutions/cloud-native-endpoints/cloud-native-windows-endpoints",
             "redirect_document_id": false
-        }  
+        }
     ]
 }
