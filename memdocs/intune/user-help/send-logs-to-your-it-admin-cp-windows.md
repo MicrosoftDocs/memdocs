@@ -34,7 +34,7 @@ ms.collection:
 
 Report a problem or error that occurs in the Intune Company Portal app for Windows. This article describes how to share app diagnostic logs with your support person. 
 
->[!NOTE]
+> [!NOTE]
 > App logs are also shared with Microsoft Support in case the problem requires additional help. Your support person will reach out to Microsoft Support with your incident ID to work with them.    
 
 ## How to report problem 
