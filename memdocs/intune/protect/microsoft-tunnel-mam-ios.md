@@ -331,6 +331,16 @@ The following are requirements for using Xcode to successfully integrate an iOS 
 
 For guidance on integrating the SDK, see [Tunnel for MAM iOS SDK](../developer/tunnel-mam-ios-sdk.md).
 
+## Known Issues
+
+The following are known issues or limitations during the public preview.
+
+### Newly created custom app not showing in UX
+When creating a custom app configuration policy, the newly added app may not appear in the list of targeted apps or the list of available custom apps. 
+
+**Work around**: This can be resolved by refreshing the web page and accessing the policy again. 
+Log into the admin console, navigate to Apps -> App Configuration Policies -> Add, select custom apps, add a Bundle or Package ID for iOS, complete the flow, and create the app config policy. Then, edit the basic settings and the newly added bundle ID should appear in the list of targeted custom apps.
+
 ## Next steps
 
 - [Configure Microsoft Tunnel](../protect/microsoft-tunnel-configure.md)
