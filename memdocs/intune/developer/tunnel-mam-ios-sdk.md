@@ -61,15 +61,21 @@ The SDK repository includes the following frameworks. You'll add these framework
 To use the Microsoft Tunnel for MAM SDK for iOS, the following prerequisites are required:
 
 - A macOS computer with Xcode 14.0 or newer installed
-- Your iOS/iPadOS app must be targeted for iOS/iPadOS 14.0 or newer.
-- Install the [Intune App SDK for iOS](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios) (opens a GitHub site). At a minimum, install the 16.1.1 version​.
-- Review the [Intune App SDK for iOS](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios) (opens a GitHub site) license terms in the **Microsoft License Terms Intune App SDK for iOS.pdf** file.
+- Your line of business (LOB) iOS/iPadOS app must be targeted for iOS/iPadOS 14.0 or newer.
+- There are two GitHub SDKs you need to download and integrate with your iOS app in Xcode. Make sure these projects build successfully before you continue with the Microsoft Tunnel for MAM SDK for iOS.
 
-  For your records, keep a copy of the license terms. By downloading and using the Microsoft Tunnel for MAM SDK for iOS, you agree to the license terms. If you don't accept the license terms, then don't use the software.
+  1. **[Intune App SDK for iOS](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios)** (opens a GitHub site): At a minimum, install the 16.1.1 version​.
 
-- Install the [Microsoft Authentication Library (MSAL)](https://github.com/AzureAD/microsoft-authentication-library-for-objc) (opens a GitHub site). At a minimum, install the 1.2.3​ version.
-- Install and set up the [MAM Tunnel-SDK for iOS](https://aka.ms/msintuneappsdk) (opens a GitHub site). ?? THATS THE SDK IN THIS ARTICLE, RIGHT? LINK DOESN'T WORK ??.
-- Public Preview: Download (THIS NEEDS TO BE A LINK TO GITHUB REPO) the files for the Microsoft Tunnel for MAM iOS SDK on GitHub. ?? NO IDEA WHAT THIS MEANS ??
+      At this site, also review the **Microsoft License Terms Intune App SDK for iOS** file.
+
+      For your records, keep a copy of the license terms. By downloading and using the Microsoft Tunnel for MAM SDK for iOS, you agree to the license terms. If you don't accept the license terms, then don't use the software.
+
+  2. **[Microsoft Authentication Library (MSAL)](https://github.com/AzureAD/microsoft-authentication-library-for-objc)** (opens a GitHub site): At a minimum, install the 1.2.3​ version.
+
+- Download the [Microsoft Tunnel for MAM iOS SDK](https://aka.ms/MAMTunneliOSGithubLink) (opens a GitHub site). This SDK is the focus of this article.
+
+  > [!IMPORTANT]
+  > Intune regularly releases updates to the Microsoft Tunnel for MAM SDK. Regularly, check the [Tunnel for MAM SDK for iOS](https://aka.ms/MAMTunneliOSGithubLink) for updates. Add these updates into your software development release cycle. You want to make sure your apps support the Microsoft Tunnel Gateway updates and feature enhancements.
 
 ## How the Microsoft Tunnel for MAM iOS SDK works
 
@@ -91,7 +97,7 @@ The following image describes the flow from a managed app that's successfully in
 0. Upon initial launch of the app, a connection is made using the Tunnel for MAM SDK for iOS.  
 1. The tunnel gets a device authentication token from Azure AD.
 
-    If the device signed in to another MAM enabled app, such as Outlook, Edge, or Microsoft 365 mobile app, then the device may already have an Azure AD authentication token. ?? IF THERE'S ALREADY ONE, IS THE EXISTING TOKEN USED INSTEAD? IF YES, WE NEED TO STATE THAT. ??
+    If the device signed in to another MAM enabled app, like Outlook, Edge, or Microsoft 365 mobile app, then the device may already have an Azure AD authentication token. ?? **OLUCHI** - IF THERE'S ALREADY AN EXISTING TOKEN, THEN IS THE EXISTING TOKEN USED INSTEAD? IF YES, WE NEED TO STATE THAT. ??
 
 2. A TCP Connect happens, which is a TLS Handshake between the token and the tunnel server.
 3. If UDP is enabled on the Microsoft Tunnel Gateway, then a data-channel connection using DTLS is made. If UDP is disabled, then TCP establishes the data channel to Tunnel gateway.
@@ -102,18 +108,6 @@ The following image describes the flow from a managed app that's successfully in
 
     1. A Microsoft Tunnel for MAM API requests to connect to the company resource.
     2. An encrypted web request is created and sent to the corporate resource.
-
-## Build the SDK into your mobile app
-
-?? IS THIS SECTION NEEDED? IT SEEMS TO BE A REPEAT OF THE PREREQS. IF IT'S NOT NEEDED, I CAN MOVE THE IMPORTANT TEXT TO THE PREREQS SECTION. ??
-
-Make sure the Intune App SDK for iOS (MAM-SDK) and the Microsoft Authentication Library (MSAL) is successfully integrated into your iOS/iPadOS mobile app into before proceeding.
-
-- Microsoft Intune App SDK for iOS developer guide | Microsoft Learn 
-- Setup MSAL 
-
-> [!IMPORTANT]
-> Intune regularly releases updates to the Microsoft Tunnel for MAM SDK. Regularly, check the [Tunnel for MAM SDK for iOS](https://aka.ms/MAMTunneliOSGithubLink) for updates. Add these updates into your software development release cycle. You want to make sure your apps support the Microsoft Tunnel Gateway updates and feature enhancements.
 
 ## Xcode Tasks
 
@@ -183,7 +177,8 @@ In the `info.plist` for the Xcode app project, configure the following settings:
 
   If the variable isn't there, then you need to add it:
 
-  1. Using the Intune App SDK for iOS ([a required prerequisite](#prerequisites)), create the **Queried URL Schemes** variable ?? IS "Queried URL Schemes" A VARIABLE? IF NO, WHAT IS IT? ??
+  1. Using the Intune App SDK for iOS ([a required prerequisite](#prerequisites)), create the **Queried URL Schemes**.
+      ?? IS "Queried URL Schemes" A VARIABLE? IF NO, WHAT IS IT? ??
   2. Add the `$(PRODUCT_BUNDLE_IDENTIFIER)` variable.
 
   The following example shows the `$(PRODUCT_BUNDLE_IDENTIFIER)` variable in **URL Types**:
@@ -194,7 +189,7 @@ In the `info.plist` for the Xcode app project, configure the following settings:
 
   In **PROJECT** > **TARGETS** > **Info** > **IntuneMAMSetting**, make sure the following settings are configured with the appropriate Azure AD app registration values:
 
-  - `ADALAuthority`: Enter the Azure AD tenant ID, such as `https://login.microsoftonline.com/USE_YOUR_ Directory (tenant) ID`.
+  - `ADALAuthority`: Enter the Azure AD tenant ID, like `https://login.microsoftonline.com/USE_YOUR_ Directory (tenant) ID`.
   - `ADALClientId`: Enter the application client ID.
   - `ADALRedirectUri`: Enter `msauth.$(PRODUCT_BUNDLE_IDENTIFIER):/auth`.
 
