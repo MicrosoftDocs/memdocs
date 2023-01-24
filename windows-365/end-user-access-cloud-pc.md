@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 07/27/2022
+ms.date: 01/31/2023
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice:
@@ -55,7 +55,7 @@ On their Windows 365 home page, users see the Cloud PCs they have access to in t
 
 ![Windows 365 home.](business/media/get-started-windows-365-business/cloud-pc-home.png)
 
-Users can select **Open in browser** to open their Cloud PC.
+Users can select **Open in browser** or **Open in Remote Desktop app** to open their Cloud PC.
 
 > [!NOTE]  
 > Mobile devices aren’t currently supported for using a browser to open Cloud PC. The Remote Desktop app is supported.
