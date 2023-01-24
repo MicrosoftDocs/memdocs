@@ -2804,7 +2804,7 @@ On the new [*Health check* tab](../protect/microsoft-tunnel-monitor.md#use-the-a
 
 - Last check-in - When the server last checked-in with Intune.
 - Number of current connections - The number of active connections at last check-in
-- Throughput- The megabits per second that traverse the serves NIC at last check-in.
+- Throughput - The megabits per second that traverse the serves NIC at last check-in.
 - CPU usage - The average CPU use.
 - Memory usage - The average memory use.
 - Latency - The average time for IP packets to traverse the NIC.
@@ -3066,7 +3066,7 @@ When you configure **Turn on Application Guard**  in an Intune [App and browser 
 
 Before this release, the setting was named *Turn on Application Guard for Edge (Options)*.
 
-The new options for this setting expand Application Guard support beyond just URL’s for Edge. You can now enable Application Guard to help protect devices by opening potential threats in a hardware isolated Windows VM environment (container). For example, with support for isolated Windows environments, Application Guard can open untrusted Office documents in an isolated Windows VM.
+The new options for this setting expand Application Guard support beyond just URLs for Edge. You can now enable Application Guard to help protect devices by opening potential threats in a hardware isolated Windows VM environment (container). For example, with support for isolated Windows environments, Application Guard can open untrusted Office documents in an isolated Windows VM.
 
 With this change:
 
@@ -3324,9 +3324,9 @@ We've brought consistency across settings to existing options, like *Disable* an
 - **Warn** - On devices that run Windows 10 version 1809 or later, the device user receives a message that they can bypass the setting. For example, on the setting *Block Adobe Reader from creating child processes*, the option of *Warn* presents users with the option to bypass that block and allow Adobe Reader to create a child process. On devices that run earlier versions of Windows 10, the rule enforces the behavior without the option to bypass it.
 
 
-#### Policy merge support for USB device ID’s in Device control profiles for endpoint security Attack surface reduction policy<!-- 7645254   -->
+#### Policy merge support for USB device IDs in Device control profiles for endpoint security Attack surface reduction policy<!-- 7645254   -->
 
-We’ve added support for *policy merge* of USB device ID’s to the [Device control](../protect/endpoint-security-asr-policy.md) profile for the endpoint security Attack surface reduction policy. The following settings from *device control* profiles are evaluated for policy merge:
+We’ve added support for *policy merge* of USB device IDs to the [Device control](../protect/endpoint-security-asr-policy.md) profile for the endpoint security Attack surface reduction policy. The following settings from *device control* profiles are evaluated for policy merge:
 - Allow hardware device installation by device identifiers
 - Block hardware device installation by device identifiers
 - Allow hardware device installation by setup classes
@@ -5970,7 +5970,7 @@ Intune now allows IT admins to publish private Android LOB apps to Managed Googl
 The Windows Company Portal is being updated. You will be able to use multiple filters on the Apps page within the Windows Company Portal. The Device Details page is also being updated with an improved user experience. We are in the process of rolling out these updates to all customers and expect to be completed by the end of next week.
 
 #### macOS support for web apps<!-- 3174427 -->
-Web apps, which allow you to add a'shortcut to a URL on the web, can be installed to the Dock using the macOS Company Portal. End users can access the **Install** action from the app details pa'e for a web app in the macOS Company Portal. For more information about the **Web link** app type, see [Add apps to Microsoft Intune](../apps/apps-add.md) and [Add web apps to Microsoft Intune](../apps/web-app.md).
+Web apps, which allow you to add a shortcut to a URL on the web, can be installed to the Dock using the macOS Company Portal. End users can access the **Install** action from the app details page for a web app in the macOS Company Portal. For more information about the **Web link** app type, see [Add apps to Microsoft Intune](../apps/apps-add.md) and [Add web apps to Microsoft Intune](../apps/web-app.md).
 
 #### macOS support for VPP apps<!-- 3173501  -->
 macOS apps, purchased using Apple Business Manager, are displayed in the console when Apple VPP tokens are synced in Intune. You can assign, revoke and reassign device and user-based licenses for groups using the Intune console. Microsoft Intune helps you manage VPP apps purchased for use at your company by:
@@ -6028,7 +6028,7 @@ In Intune, you create profiles for iOS and macOS devices (**Device configuration
 In this update, the available settings in the Intune portal are categorized by the enrollment type they apply to:
 
 - iOS
-  - User enrollment""
+  - User enrollment
   - Device enrollment
   - Automated device enrollment (supervised)
   - All enrollment types
@@ -9031,7 +9031,7 @@ In contrast, the new **Current User** entity collection only contains users who 
 
 ### Updated Graph APIs<!-- 1736360 -->
 
-In this release, we've updated a few of the Graph API's for Intune that are in beta. Please check out the monthly [Graph API changelog](/graph/changelog) for more information.
+In this release, we've updated a few of the Graph APIs for Intune that are in beta. Please check out the monthly [Graph API changelog](/graph/changelog) for more information.
 
 
 #### Intune supports Windows Information Protection (WIP) denied apps<!-- 1479103 -->
