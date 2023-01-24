@@ -32,7 +32,7 @@ TPM attestation for AMD platforms with ASP firmware TPM may fail with error code
 
 ### Autopilot profile not applied after re-imaging to an older OS version
 
-If you enroll a device with the 9C 2022 quality update or later and then re-image an older version, the Autopilot profile will not be applied. The device would need to be re-registered to complete a successful Autopilot deployment.
+If you enroll a device with the 9C 2022 quality update or later and then re-image an older version, the Autopilot profile will not be applied. The device would need to be re-registered to complete a successful Autopilot deployment. You may see the message "fix pending" in the Autopilot devices blade as this indicates that there was a hardware change on the device.
 
 ### TPM attestation failure with error code 0x81039001
 
