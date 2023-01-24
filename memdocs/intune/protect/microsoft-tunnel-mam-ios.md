@@ -27,7 +27,10 @@ ms.collection: M365-identity-device-management
 
 # Microsoft Tunnel for Mobile Application Management for iOS/iPadOS (public preview)
 
-In public preview, you can use Microsoft Tunnel VPN Gateway with unenrolled iOS devices to support Mobile Application Management (MAM) scenarios. With support for MAM, your unenrolled devices can use Tunnel to securely connect to your organization allowing users and apps safe access to your organizational data.
+In public preview, you can use Microsoft Tunnel VPN Gateway with unenrolled iOS devices to:
+- Provide secure access to on-prem resources using modern-auth, SSO and conditional access,
+- Allow end-users to use their personal device to access company on-premise resources, no MDM (Mobile Device Management) enrollment is required - while company data remains protected, 
+- Allow organizations to adopt a BYOD program, reducing overall total cost of ownership, while ensuring user privacy and corporate data remains protected on BYOD devices.
 
 Applies to:
 
@@ -37,6 +40,9 @@ Applies to:
 > While in public preview, Microsoft Tunnel for MAM is available at no additional cost. When Tunnel for MAM becomes generally available, it will be available as a [**premium add-on**](/fundamentals/premium-add-ons.md) and require an additional cost to the licensing options that include Microsoft Endpoint Manager or Intune.
 
 MAM Tunnel for iOS is a powerful tool that allows organizations to securely manage and protect their mobile applications. The VPN connection for this solution is provided through the Microsoft Tunnel for MAM iOS SDK.
+
+> [!NOTE]
+> MAM Tunnel for iOS public preview is limited to Line of Business apps integrated with the SDK.  Edge for iOS public preview coming soon!
 
 To use the MAM Tunnel for iOS during the public preview, you must update your Line of Business (LOB) apps to integrate the following three SDKs. You’ll find guidance for integrating each SDK later in this article:
 
@@ -67,13 +73,13 @@ The following diagram describes the flow from a managed app that has successfull
 
 MAM Tunnel for iOS uses the following Intune policies and profiles:
 
-- App configuration policy - to configure apps to support account switching and enable the app to automatically connect and disconnect from the VPN tunnel.
-- App protection policy - to configure the Microsoft Tunnel for apps that will use the MAM Tunnel for iOS.
+- App configuration policy - to configure the Microsoft Tunnel Gateway settings for Edge and line-of-business (LOB) apps, and specify any trusted certificates required for on-premises resource access.
+- App protection policy - to configure data protection settings and establish a means of delivering App configuration policy to configure the Microsoft Tunnel settings for Edge and Line of Business (LOB) apps.  
 - Trusted certificate profile - for Apps that connect to on-premises resources that are protected by an SSL/TLS certificate issued by an on-premises or private certificate authority (CA).
 
-### Configure an app configuration policy
+### Configure an app configuration policy for LOB apps
 
-Create an app configuration policy for apps that will use Tunnel for MAM. This policy configures an app to support identity-switch and provides the ability to automatically connect the VPN Tunnel when signing-in or switching to a Microsoft "Work or school" account, and automatically disconnect the VPN tunnel when switching to a Microsoft personal account.
+Create an app configuration policy for apps that will use Tunnel for MAM. This policy configures ... an app to use a specific Microsoft Tunnel Gateway Site, proxy, and trusted certificate(s) for Edge and line-of-business (LOB) apps to use when connecting to on-premise resources.
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Apps** > **App Configuration polices** > **Add** > **Managed Apps**.
 
@@ -104,7 +110,7 @@ Create an app configuration policy for apps that will use Tunnel for MAM. This p
    > - The *General configuration settings* category.
    > - Per-App VPN. The Tunnel for MAM iOS SDK provides Per-App VPN directly to integrated apps.
    >
-   > Additionally, the Public Preview doesn’t support use of a Proxy automatic configuration script (PAC).
+   > Additionally, the Public Preview has a known issue related to Proxy setting - see the "Known Issues" below.
 
    After configuring the Tunnel MAM settings, Select **Next** to open the *Assignments* tab.
 
