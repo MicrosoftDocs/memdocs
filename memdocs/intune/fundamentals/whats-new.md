@@ -66,6 +66,13 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 -->
 
+## Week of January 23, 2023
+
+### App management
+
+#### Block pinning web pages to Managed Home Screen app<!-- 15593458 -->
+On Android Enterprise dedicated devices using Managed Home Screen, you can now use app configuration to configure the Managed Home Screen app to block pinning browser web pages to Managed Home Screen. The new `key` value is `block_pinning_browser_web_pages_to_MHS`. For more information, see [Configure the Microsoft Managed Home Screen app for Android Enterprise](../apps/app-configuration-managed-home-screen-app.md).
+
 ## Week of January 16, 2023
 
 ### App management
