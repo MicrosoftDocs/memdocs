@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/18/2023
+ms.date: 01/24/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -288,7 +288,7 @@ When you already have an app registration, you can choose to update it instead o
    2. Select the **API my organization uses** tab
    3. Search for *Microsoft Tunnel Gateway*, and select it to **Request API permissions**.
 
-      If *Microsoft Tunnel Gateway* doesn't appear in the list, then it hasn't been provisioned. To provision it, see [Use Microsoft Tunnel VPN gateway with Conditional Access policies](../protect/microsoft-tunnel-conditional-access#provision-your-tenant.md).
+      If *Microsoft Tunnel Gateway* doesn't appear in the list, then it hasn't been provisioned. To provision it, see [Use Microsoft Tunnel VPN gateway with Conditional Access policies](microsoft-tunnel-conditional-access.md#provision-your-tenant).
 
    4. Select the **Tunnel_Allow** permission and select on **Add permission** to continue.
 
@@ -337,8 +337,17 @@ The following are known issues or limitations during the public preview.
 
 ### IP Address for Tunnel Server failing hostname validation 
 
-**Work around**:Tunnel certifications need to use hostnames instead of IP addresses. Ensure that the Tunnel certification is using a hostname rather than an IP address. 
+**Work around**: Tunnel certifications need to use hostnames instead of IP addresses. Make sure that the Tunnel certification is using a hostname, not an IP address. 
 
+### Newly created custom app not showing in UX
+
+When creating a custom app configuration policy, the newly added app may not appear in the list of targeted apps or the list of available custom apps. 
+
+**Work around**: This issue can be resolved by refreshing the Endpoint Manager admin center and accessing the policy again:
+
+1. In the Endpoint Manager admin center, go to **Apps** > **App Configuration Policies** > **Add**.
+2. Select custom apps, add a Bundle or Package ID for iOS, complete the flow, and create the app config policy. 
+3. Edit the basic settings. The newly added bundle ID should appear in the list of targeted custom apps.
 
 ## Next steps
 
