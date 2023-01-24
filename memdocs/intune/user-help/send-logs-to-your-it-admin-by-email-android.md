@@ -37,7 +37,7 @@ ms.collection:
 
 Report a problem or error that occurs in the Microsoft Intune and Intune Company Portal apps for Android. This article describes how to share app diagnostic logs with your support person, and how to access logs in the work profile on an Android device. 
 
->[!NOTE]
+> [!NOTE]
 > App logs are also shared with Microsoft Support in case the problem requires additional help. Your support person will reach out to Microsoft Support with your incident ID to work with them.    
 
 ## What you need to know  
