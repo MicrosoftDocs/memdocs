@@ -331,6 +331,15 @@ The following are requirements for using Xcode to successfully integrate an iOS 
 
 For guidance on integrating the SDK, see [Tunnel for MAM iOS SDK](../developer/tunnel-mam-ios-sdk.md).
 
+## Known Issues
+
+The following are known issues or limitations during the public preview.
+
+### IP Address for Tunnel Server failing hostname validation 
+
+**Work around**:Tunnel certifications need to use hostnames instead of IP addresses. Ensure that the Tunnel certification is using a hostname rather than an IP address. 
+
+
 ## Next steps
 
 - [Configure Microsoft Tunnel](../protect/microsoft-tunnel-configure.md)
