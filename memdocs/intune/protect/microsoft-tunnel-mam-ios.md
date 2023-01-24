@@ -335,6 +335,10 @@ For guidance on integrating the SDK, see [Tunnel for MAM iOS SDK](../developer/t
 
 The following are known issues or limitations during the public preview.
 
+### IP Address for Tunnel Server failing hostname validation 
+
+**Work around**: Tunnel certifications need to use hostnames instead of IP addresses. Make sure that the Tunnel certification is using a hostname, not an IP address. 
+
 ### Newly created custom app not showing in UX
 
 When creating a custom app configuration policy, the newly added app may not appear in the list of targeted apps or the list of available custom apps. 
