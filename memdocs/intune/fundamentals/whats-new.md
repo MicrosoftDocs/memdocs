@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/09/2023
+ms.date: 01/17/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -66,9 +66,25 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 -->
 
+## Week of January 23, 2023
+
+### App management
+
+#### Block pinning web pages to Managed Home Screen app<!-- 15593458 -->
+On Android Enterprise dedicated devices using Managed Home Screen, you can now use app configuration to configure the Managed Home Screen app to block pinning browser web pages to Managed Home Screen. The new `key` value is `block_pinning_browser_web_pages_to_MHS`. For more information, see [Configure the Microsoft Managed Home Screen app for Android Enterprise](../apps/app-configuration-managed-home-screen-app.md).
+
+## Week of January 16, 2023
+
+### App management
+
+#### Win32 app supersedence GA<!-- 9318154 -->
+We are in the process of rolling out the feature set for Win32 app supersedence GA, which will add support for apps with supersedence during ESP and also allow supersedence and dependency relationships to be added in the same app subgraph. For more information, see [Win32 app supersedence improvements](https://techcommunity.microsoft.com/t5/intune-customer-success/upcoming-improvements-to-win32-app-supersedence/ba-p/3713026). For information about Win32 app supersedence, see [Add Win32 app supersedence](../apps/apps-win32-supersedence.md).
+
 ## Week of January 9, 2023
 
-### The Company Portal app enforces Password Complexity setting on Android Enterprise 12+ personally owned devices with a work profile<!-- 16211313  -->  
+### Device configuration
+
+#### The Company Portal app enforces Password Complexity setting on Android Enterprise 12+ personally owned devices with a work profile<!-- 16211313  -->  
 
 On Android Enterprise 12+ personally owned devices with a work profile, you can create a compliance policy and/or device configuration profile that sets the password complexity. Starting with the 2211 release, this setting is available in the Endpoint Manager admin center:
 
@@ -100,8 +116,8 @@ For more information about protected apps, see [Microsoft Intune protected apps]
 
 ### Device configuration
 
-#### Remote help client app includes a new option to disable chat functionality in the Tenant level setting<!-- 14685052 -->  
-In the Remote help app, admins have the option to disable chat functionality from the new tenant level setting. Turning on the disable chat feature will remove the chat button in the Remote Help app. This setting can be found in the Remote Help **Settings** tab under **Tenant Administration** in Microsoft Intune.
+#### Remote Help client app includes a new option to disable chat functionality in the Tenant level setting<!-- 14685052 -->  
+In the Remote Help app, admins have the option to disable chat functionality from the new tenant level setting. Turning on the disable chat feature will remove the chat button in the Remote Help app. This setting can be found in the Remote Help **Settings** tab under **Tenant Administration** in Microsoft Intune.
 
 For more information, see [Configure Remote Help for your tenant](../remote-actions/remote-help.md#configure-remote-help-for-your-tenant).
 
@@ -723,7 +739,7 @@ In the admin center, you can:
 ### Device Security
 
 #### Non-compliance warning message includes a link<!--13694184  -->  
-In Remote help, a link has been added to the non-compliance warning notification **View device compliance information** and it allows a helper to learn more about why the device is not compliant in Microsoft Endpoint Manager.
+In Remote Help, a link has been added to the non-compliance warning notification **View device compliance information** and it allows a helper to learn more about why the device is not compliant in Microsoft Endpoint Manager.
 
 For more information, go to:
 
@@ -929,11 +945,11 @@ With Apple's release of macOS 13 Ventura, Microsoft Intune, the Company Portal a
 
 ### Device management
 
-#### Remote help version: 4.0.1.13 release<!-- 15329690 -->
+#### Remote Help version: 4.0.1.13 release<!-- 15329690 -->
 
-With Remote help 4.0.1.13 fixes were introduced to address an issue that prevented people from having multiple sessions open at the same time. The fixes also addressed an issue where the app was launching without focus, and prevented keyboard navigation and screen readers from working on launch.
+With Remote Help 4.0.1.13 fixes were introduced to address an issue that prevented people from having multiple sessions open at the same time. The fixes also addressed an issue where the app was launching without focus, and prevented keyboard navigation and screen readers from working on launch.
 
-For more information, go to [Use remote help with Intune and Microsoft Endpoint Manager](../remote-actions/remote-help.md)
+For more information, go to [Use Remote Help with Intune and Microsoft Endpoint Manager](../remote-actions/remote-help.md)
 
 ## Week of August 29, 2022
 
@@ -1228,10 +1244,10 @@ For more information, see [View device details with Microsoft Intune](../remote-
 Applies to:
 - iOS/iPadOS, macOS
 
-#### Remote help Version: 4.0.1.12 release<!-- 14999203 -->
-With Remote help 4.0.1.12 various fixes were introduced to address the 'Try again later' message that appears when not authenticated. The fixes also include an improved auto-update capability. 
+#### Remote Help Version: 4.0.1.12 release<!-- 14999203 -->
+With Remote Help 4.0.1.12 various fixes were introduced to address the 'Try again later' message that appears when not authenticated. The fixes also include an improved auto-update capability. 
 
-For more information, see [Use remote help with Intune and Microsoft Endpoint Manager](../remote-actions/remote-help.md)
+For more information, see [Use Remote Help with Intune and Microsoft Endpoint Manager](../remote-actions/remote-help.md)
 
 ### Device enrollment
 

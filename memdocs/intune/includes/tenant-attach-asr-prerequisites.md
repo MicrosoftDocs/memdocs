@@ -4,7 +4,7 @@ description: include file
 author: brenduns  
 ms.service: microsoft-intune
 ms.topic: include
-ms.date: 04/08/2022
+ms.date: 01/20/2023
 ms.author: brenduns
 ms.custom: include file
 ---
@@ -21,8 +21,10 @@ Manage [attack surface reduction settings for Configuration Manager devices](../
 
 **Profiles**:
 
+- Attack Surface Reduction Rules (ConfigMgr)
 - Exploit Protection(ConfigMgr)(preview)
 - Web Protection (ConfigMgr)(preview)
+
 
 **Required version of Configuration Manager**:
 

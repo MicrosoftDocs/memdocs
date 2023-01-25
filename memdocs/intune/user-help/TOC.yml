@@ -54,6 +54,10 @@ items:
       href: use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md
     - name: Turn off Microsoft data collection
       href: turn-off-microsoft-usage-data-collection-android.md
+  - name: Microsoft Intune app for Android  
+    items: 
+    - name: Check compliance status      
+      href: check-compliance-microsoft-intune-app-android.md  
   - name: Microsoft Intune app for AOSP 
     items:
     - name: Check device compliance 
@@ -121,9 +125,7 @@ items:
   - name: Get help
     items:
     - name: Report a problem 
-      href: send-logs-to-your-it-admin-by-email-android.md
-    - name: Share diagnostic details  
-      href: send-logs-to-microsoft-android.md
+      href: send-logs-to-your-it-admin-by-email-android.md  
 - name: iOS/iPadOS device management
   items:
   - name: Enrollment
@@ -188,10 +190,8 @@ items:
       href: you-need-to-resolve-a-threat-found-by-zips-ios.md
   - name: Get help
     items:
-    - name: Retrieve iOS/iPadOS logs
-      href: retrieve-ios-app-logs.md
-    - name: Report a problem 
-      href: send-errors-to-your-it-admin-ios.md
+    - name: Retrieve app logs
+      href: retrieve-ios-app-logs.md  
     - name: Share app logs 
       href: send-logs-to-microsoft-ios.md
 - name: Linux device management
@@ -294,7 +294,7 @@ items:
     items:
     - name: Report problems in Company Portal
       href: send-logs-to-your-it-admin-cp-windows.md
-    - name: Export Company Portal diagnostic logs
+    - name: Export management logs for device troubleshooting  
       href: send-logs-to-your-it-admin-settings-windows.md
     - name: Troubleshoot enrollment problems
       href: troubleshoot-your-windows-10-device-windows.md
