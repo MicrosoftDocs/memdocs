@@ -1,11 +1,11 @@
 ---
 title: Use Microsoft Tunnel VPN with iOS/iPad devices that don't enroll with Microsoft Intune
-description: Add support for Mobile Application Management (MAM) for iOS to the Microsoft Tunnel Gateway. Tunnel support for MAM expands access to your organizational resources for devices that can't or haven't enrolled with Microsoft Intune
+description: Add support for Mobile Application Management (MAM) for iOS to the Microsoft Tunnel Gateway. Tunnel support for MAM expands access to your organizational resources for devices that can't or haven't enrolled with Microsoft Intune. Admins should use this article to create policies that support per-app VPN in line of business (LOB) apps.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/24/2023
+ms.date: 01/25/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -25,27 +25,27 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# Microsoft Tunnel for Mobile Application Management for iOS/iPadOS (public preview)
+# Microsoft Tunnel for Mobile Application Management for iOS/iPadOS admin guide (public preview)
 
 In public preview, you can use Microsoft Tunnel VPN Gateway with unenrolled iOS/iPadOS devices to:
 
-- Provide secure access to on-premises resources using modern authenticaton, single sign-on (SSO), and conditional access.
-- Allow end users to use their personal device to access company on-premise resources. MDM (Mobile Device Management) enrollment isn't required and company data stays protected. 
-- Allow organizations to adopt a bring-your-own-device (BYOD) program. BYOD reduces overall total cost of ownership, ensures user privacy, and corporate data remains protected on these devices.
+- Provide secure access to on-premises resources using modern authentication, single sign-on (SSO), and conditional access.
+- Allow end users to use their personal device to access company on-premises resources. MDM (Mobile Device Management) enrollment isn't required and company data stays protected.
+- Allow organizations to adopt a bring-your-own-device (BYOD) program. BYOD or personal devices reduce the overall total cost of ownership, ensure user privacy, and corporate data remains protected on these devices.
 
 Applies to:
 
 - iOS/iPadOS
 
 > [!NOTE]
-> While in public preview, Microsoft Tunnel for MAM is available at no additional cost. When Tunnel for MAM becomes generally available, it will be available as a [**premium add-on**](/fundamentals/premium-add-ons.md) and require an additional cost to the licensing options that include Microsoft Endpoint Manager or Intune.
+> While in public preview, Microsoft Tunnel for MAM is available at no additional cost. When Tunnel for MAM becomes generally available, it will be available as a [**premium add-on**](/fundamentals/premium-add-ons.md). It will require an additional cost to the licensing options that include Microsoft Intune.
 
-MAM Tunnel for iOS is a powerful tool that allows organizations to securely manage and protect their mobile applications. The VPN connection for this solution is provided through the Microsoft Tunnel for MAM iOS SDK.
+Tunnel for MAM iOS is a powerful tool that allows organizations to securely manage and protect their mobile applications. The VPN connection for this solution is provided through the [Microsoft Tunnel for MAM iOS SDK](../developer/tunnel-mam-ios-sdk.md).
 
 > [!NOTE]
-> MAM Tunnel for iOS public preview is limited to Line of Business (LOB) apps integrated with the SDK. Edge for iOS public preview is coming in a future release (no ETA).
+> Microsoft Tunnel for MAM iOS public preview is limited to Line of Business (LOB) apps integrated with the SDK. Edge for iOS public preview is coming in a future release (no ETA).
 
-To use the MAM Tunnel for iOS during the public preview, you must update your Line of Business (LOB) apps to integrate the following three SDKs. You’ll find guidance for integrating each SDK later in this article:
+To use the Microsoft Tunnel for MAM iOS during the public preview, you must update your Line of Business (LOB) apps to integrate the following three SDKs. You’ll find guidance for integrating each SDK later in this article:
 
 - [Intune App SDK for iOS](../developer/app-sdk-ios.md)
 - [Microsoft Authentication Library](../developer/app-sdk-ios.md#setup-msal) (MSAL)
@@ -53,7 +53,8 @@ To use the MAM Tunnel for iOS during the public preview, you must update your Li
 
 ## Tunnel for MAM iOS SDK Architecture
 
-The following diagram describes the flow from a managed app that has successfully been integrated with Tunnel for MAM SKD for iOS. 
+The following diagram describes the flow from a managed app that has successfully been integrated with Tunnel for MAM SKD for iOS.
+
 :::image type="content" source="./media/microsoft-tunnel-mam-ios/tunnel-for-mam-ios-flow.png" alt-text="Drawing of the Microsoft Tunnel Gateway for MAM on iOS architecture.":::
 
 **Actions**:
@@ -72,21 +73,21 @@ The following diagram describes the flow from a managed app that has successfull
 
 ## Configure Intune policies for Microsoft Tunnel for MAM iOS
 
-MAM Tunnel for iOS uses the following Intune policies and profiles:
+Microsoft Tunnel for MAM iOS uses the following Intune policies and profiles:
 
-- App configuration policy - Configures the Microsoft Tunnel Gateway settings for Edge and line-of-business (LOB) apps. You can add any trusted certificates required for on-premises resource access.
-- App protection policy - Configures data protection settings. It also establishes a way to deploy an app configuration policy that configures the Microsoft Tunnel settings for Edge and Line of Business (LOB) apps.
-- Trusted certificate profile - For apps that connect to on-premises resources and are protected by an SSL/TLS certificate issued by an on-premises or private certificate authority (CA).
+- **App configuration policy** - Configures the Microsoft Tunnel Gateway settings for Edge and line-of-business (LOB) apps. You can add any trusted certificates required for on-premises resource access.
+- **App protection policy** - Configures data protection settings. It also establishes a way to deploy an app configuration policy that configures the Microsoft Tunnel settings for Edge and Line of Business (LOB) apps.
+- **Trusted certificate profile** - For apps that connect to on-premises resources and are protected by an SSL/TLS certificate issued by an on-premises or private certificate authority (CA).
 
 ### Configure an app configuration policy for LOB apps
 
-Create an app configuration policy for apps that will use Tunnel for MAM. This policy configures an app to use a specific Microsoft Tunnel Gateway Site, proxy, and trusted certificate(s) for Edge and line-of-business (LOB) apps. These resources are used when connecting to on-premise resources.
+Create an app configuration policy for apps that will use Tunnel for MAM. This policy configures an app to use a specific Microsoft Tunnel Gateway Site, proxy, and trusted certificate(s) for Edge and line-of-business (LOB) apps. These resources are used when connecting to on-premises resources.
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Apps** > **App Configuration polices** > **Add** > **Managed Apps**.
 
 2. On the *Basics* tab, enter a *Name* for the policy and a *Description* (optional).
 
-3. For LOB apps, click on **+ Select custom apps** to open the *Select apps to target* pane. On the *Select apps to target* pane:
+3. For LOB apps, select **+ Select custom apps** to open the *Select apps to target* pane. On the *Select apps to target* pane:
 
    1. For *Bundle or Package ID*, specify the LOB apps Bundle ID
    1. For *Platform*, select **iOS/iPadOS**, and then select **Add**.
@@ -104,10 +105,11 @@ Create an app configuration policy for apps that will use Tunnel for MAM. This p
    1. Set *Use Microsoft Tunnel for MAM* to **Yes**.
    1. For *Connection name*, specify a user facing name for this connection, like *mam-tunnel-vpn*.
    1. Next, select **Select a Site**, and choose one of your Microsoft Tunnel Gateway sites. If you haven’t configured a Tunnel Gateway site, see [Configure Microsoft Tunnel](../protect/microsoft-tunnel-configure.md).
-   1. If your app requires a trusted certificate, select **Root Certificate**, and then select a trusted certificate profile to use. For more information see [Configure a trusted certificate profile](#configure-a-trusted-certificate-profile) later in this article.
+   1. If your app requires a trusted certificate, select **Root Certificate**, and then select a trusted certificate profile to use. For more information, see [Configure a trusted certificate profile](#configure-a-trusted-certificate-profile) later in this article.
 
    > [!NOTE]
-   > MAM Tunnel for iOS doesn’t use the following:  
+   > Microsoft Tunnel for MAM iOS doesn’t use the following:
+   >
    > - The *General configuration settings* category.
    > - Per-App VPN. The Tunnel for MAM iOS SDK provides Per-App VPN directly to integrated apps.
    >
@@ -123,7 +125,7 @@ The new policy will appear in the list of App configuration policies.
 
 ### Configure an app protection policy
 
-An App protection policy is required to configure Microsoft Tunnel for apps that will use the MAM Tunnel for iOS.
+An App protection policy is required to configure Microsoft Tunnel for apps that will use the Microsoft Tunnel for MAM iOS.
 
 This policy provides the necessary data protection and establishes a means of delivering app configuration policy to apps. To create an app protection policy, use the following steps:
 
@@ -135,7 +137,7 @@ This policy provides the necessary data protection and establishes a means of de
 
    :::image type="content" source="./media/microsoft-tunnel-mam-ios/app-protection-target-policy.png" alt-text="Configure the app protection policy to target unmanaged devices.":::
 
-4. For LOB apps, click on **+ Select custom apps**  to open the *Select apps to target* pane. Next, on the *Select apps to target* pane:  
+4. For LOB apps, select on **+ Select custom apps**  to open the *Select apps to target* pane. Next, on the *Select apps to target* pane:  
    1. For *Bundle ID*, specify the LOB apps Bundle ID and then select **Add**.
    1. Select the app you just added,  and then **Select**.
 
@@ -144,7 +146,7 @@ This policy provides the necessary data protection and establishes a means of de
    > [!NOTE]  
    > LOB apps require Intune App SDK for iOS and MSAL integration. MSAL requires an Azure AD app registration.  Ensure the Bundle ID used in the App configuration policy is the same Bundle ID specified in the Azure AD app registration and the Xcode app project.
 
-5. Configure any remaining app protection policy settings based on your deployment and data protection requirements using the *Data protection*, *Access requirements*, and *Conditional launch* tabs.
+5. In the *Data protection*, *Access requirements*, and *Conditional launch* tabs, configure any remaining app protection policy settings based on your deployment and data protection requirements.
 
 6. On the *Assignments* tab, select **Add Groups**, and then select one or more Azure AD user groups that will receive this policy. After configuring groups, select **Next**.
 
@@ -152,11 +154,11 @@ The new policy will appear in the list of App protection policies.
 
 ### Configure a trusted certificate profile
 
-Apps that will use the MAM Tunnel to connect to an on-premises resource protected by an SSL/TLS certificate issued by an on-premises or private certificate authority (CA) require you to configure a *trusted certificate profile*. If your apps don't require this type of connection, you can skip this section, and not add the trusted certificate profile to the app configuration policy.
+Apps that use the MAM Tunnel to connect to an on-premises resource protected by an SSL/TLS certificate issued by an on-premises or private certificate authority (CA) require a *trusted certificate profile*. If your apps don't require this type of connection, then you can skip this section. The trusted certificate profile isn't added to the app configuration policy.
 
-A trusted certificate profile is required to establish a chain of trust with your on-premises infrastructure and allows the device to trust the certificate that's used by the on-premises web or application server, ensuring secure communication between the app and the server.
+A trusted certificate profile is required to establish a chain of trust with your on-premises infrastructure. The profile allows the device to trust the certificate that's used by the on-premises web or application server, ensuring secure communication between the app and the server.
 
-Tunnel for MAM uses the public-key certificate payload contained in the Intune trusted certificate profile but doesn’t require the profile be assigned to any Azure AD user or device groups.  As a result, a trusted certificate profile for any platform can be used. This means that an iOS device can use a trusted certificate profile for Android, iOS, or Windows to meet this requirement.
+Tunnel for MAM uses the public-key certificate payload contained in the Intune trusted certificate profile but doesn’t require the profile be assigned to any Azure AD user or device groups.  As a result, a trusted certificate profile for any platform can be used. So, an iOS device can use a trusted certificate profile for Android, iOS, or Windows to meet this requirement.
 
 During configuration of the app configuration profile for an app that will use Tunnel for MAM, you select the certificate profile that will be used. 
 For information on configuring these profiles, see [Trusted root certificate profiles for Microsoft Intune](../protect/certificates-trusted-root.md). 
@@ -174,7 +176,7 @@ If not already created for Microsoft Tunnel MDM Conditional Access, you’ll nee
 
 ### Azure AD app registration
 
-When integrating the Tunnel for MAM iOS SDK into a line-of-business app, the following app registration settings must match your Xcode app project:
+When you integrate the Tunnel for MAM iOS SDK into a line-of-business app, the following app registration settings must match your Xcode app project:
 
 - Application ID
 - Tenant ID
@@ -182,16 +184,16 @@ When integrating the Tunnel for MAM iOS SDK into a line-of-business app, the fol
 Depending on your needs, choose one of the following options:
 
 - [Create a new app registration](#create-a-new-app-registration)  
-  If you have an iOS app that hasn’t been previously integrated with the Intune App SDK for iOS, or the Microsoft Authentication Library (MSAL), then you'll need to create a new app registration. The steps to create a new app registration include:  
+  If you have an iOS app that hasn’t been previously integrated with the Intune App SDK for iOS, or the Microsoft Authentication Library (MSAL), then you need to create a new app registration. The steps to create a new app registration include:  
 
-  - App registration.
-  - Authentication configuration.
-  - Adding API Permissions.
-  - Token configuration.
+  - App registration
+  - Authentication configuration
+  - Adding API Permissions
+  - Token configuration
   - Verify using Integration assistant
 
 - [Update an existing app registration](#update-an-existing-app-registration)  
-  If you have an iOS app that has been previously integrated with the Intune App SDK for iOS, then you'll need to review and update the existing app registration.
+  If you have an iOS app that previously integrated with the Intune App SDK for iOS, then you need to review and update the existing app registration.
 
 #### Create a new app registration
 
@@ -209,11 +211,11 @@ The following guidance is specific to requirements for the Tunnel for MAM iOS SD
 
 3. On the *Overview* pane, note the values for *Application (client) ID* and the *Directory (tenant) ID*. These values are required for the app registrations Xcode project. After recording the two values, select under *Manage*, select **Authentication**.
 
-4. On the *Authentication* pane for your app registration, select **+ Add a platform**, and then select the tile for **iOS/macOS**. This will open the *Configure your iOS or macOS app* pane.  
+4. On the *Authentication* pane for your app registration, select **+ Add a platform**, and then select the tile for **iOS/macOS**. The *Configure your iOS or macOS app* pane opens.
 
    :::image type="content" source="./media/microsoft-tunnel-mam-ios/app-registration-authentication1.png" alt-text="Configure authentication for the app registration.":::
 
-5. On the *Configure your iOS or macOS app* pane, Enter the *Bundle ID* for the Xcode app to be integrated with the Tunnel for MAM iOS SDK, and then select **Configure**. This opens the iOS/macOS configuration pane:
+5. On the *Configure your iOS or macOS app* pane, Enter the *Bundle ID* for the Xcode app to be integrated with the Tunnel for MAM iOS SDK, and then select **Configure**. The iOS/macOS configuration pane opens.
 
    :::image type="content" source="./media/microsoft-tunnel-mam-ios/app-registration-configuration-pane.png" alt-text="Review the app registration configuration pane.":::
 
@@ -277,13 +279,13 @@ When you already have an app registration, you can choose to update it instead o
 
    Next, select **View** to view the details of the *Bundle ID* and *Redirect URI*. Ensure that a *MSAL Configuration* is present. If it isn't, see [Create an Azure AD app and service principal in the portal - Microsoft Entra](/azure/active-directory/develop/howto-create-service-principal-portal#app-registration-app-objects-and-service-principals) for guidance.
 
-   As in the previous step, compare the values *Bundle ID* and *Redirect URI* with those from your Xcode app project:  
+   As in the previous step, compare the values *Bundle ID* and *Redirect URI* with these values from your Xcode app project:  
    - Project > General > Identity: Bundle ID
    - info.plist > IntuneMAMSettings: ADALRedirectUri
 
    Also ensure the Xcode Bundle Identifier in your app project matches the app registration Bundle ID:
 
-   :::image type="content" source="./media/microsoft-tunnel-mam-ios/review-authentication.png" alt-text="Compare authentication settings to those in your Xcode.":::
+   :::image type="content" source="./media/microsoft-tunnel-mam-ios/review-authentication.png" alt-text="Compare authentication settings to the Bundle ID in your Xcode.":::
 
 3. Verify, and update the **API permissions**. Ensure you have *Microsoft Graph*, and *Microsoft Mobile Application Management* permissions already set.
 
@@ -309,7 +311,7 @@ When you already have an app registration, you can choose to update it instead o
    - Microsoft Mobile Management
    - Microsoft Tunnel Gateway
 
-4. Select **Token configuration** to confirm the settings.  For *Claim* you should see a value for *acct* with a *Token type* of *Access*.
+4. Select **Token configuration** to confirm the settings.  For *Claim*, you should see a value for *acct* with a *Token type* of *Access*.
 
    If *acct* isn't present, select **+Add optional claim** to add a claim:
 
@@ -328,7 +330,7 @@ When you already have an app registration, you can choose to update it instead o
 
 Xcode is the Apple Integrated Developer Environment that that runs on macOS and used to integrate the Tunnel for MAM iOS SDK with your app.
 
-The following are requirements for using Xcode to successfully integrate an iOS App to use MAM tunnel for iOS:
+The following are requirements for using Xcode to successfully integrate an iOS App to use Microsoft Tunnel for MAM iOS:
 
 - macOS - To run Xcode.
 - Xcode 14.0 or later.
@@ -336,27 +338,27 @@ The following are requirements for using Xcode to successfully integrate an iOS 
 - MSAL-SDK – min version: 1.2.3
 - Tunnel for MAM iOS SDK, available on GitHub.
 
-For guidance on integrating the SDK, see [Tunnel for MAM iOS SDK](../developer/tunnel-mam-ios-sdk.md).
+For guidance on integrating the SDK, see [Tunnel for MAM iOS SDK developer guide](../developer/tunnel-mam-ios-sdk.md).
 
 ## Known Issues
 
-The following are known issues or limitations during the public preview.
+The following are known issues or limitations during the public preview. For known issues with the Microsoft Tunnel for MAM iOS SDK, go to [Tunnel for MAM iOS SDK developer guide](../developer/tunnel-mam-ios-sdk.md#known-issues).
 
 ### Site Configuration requires DNS hostname
 
-Tunnel site settings for **Public IP address or FQDN** requires a publicly resolvable fully qualified domain name. An IP address can't be used in the subject name of the TLS/SSL certificate for the tunnel server.
+Tunnel site settings for **Public IP address or FQDN** require a publicly resolvable fully qualified domain name. An IP address can't be used in the subject name of the TLS/SSL certificate for the tunnel server.
 
 **Work around**: Use a certificate that includes a publicly resolvable FQDN in the subject name. Don't use a certificate that includes an IP address in the subject name. 
 
 ### Proxy Configuration
 
-If you enter a DNS hostname for the location of the PAC file or proxy server address, then a publicly resolvable hostname is required. Also, any proxy hostnames inlcuded in the PAC file need to be publicly resolvable.
+If you enter a DNS hostname for the location of the PAC file or proxy server address, then a publicly resolvable hostname is required. Also, any proxy hostnames included in the PAC file need to be publicly resolvable.
 
 **Work around**: Use the IP address of the DNS hostname for the related PAC file locations and proxy servers.
 
 ### Newly created custom app not showing in UX
 
-When creating a custom app configuration policy, the newly added app may not appear in the list of targeted apps or the list of available custom apps. 
+When you create a custom app configuration policy, the newly added app may not appear in the list of targeted apps or the list of available custom apps. 
 
 **Work around**: This issue can be resolved by refreshing the Endpoint Manager admin center and accessing the policy again:
 
