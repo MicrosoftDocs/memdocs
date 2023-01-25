@@ -116,8 +116,6 @@ items:
 
     - name: Deploy Microsoft Intune
       items:
-      - name: Deploy Intune overview (DELETE?)
-        href: ./fundamentals/deployment-plan-overview.md
       - name: Get started with your deployment (REPLACE OVERVIEW?)
         href: ./fundamentals/get-started-with-intune.md
       - name: Protection and configuration levels (DRAFT)
@@ -213,7 +211,7 @@ items:
   - name: How-to guides
     items:
 
-    - name: Set up Intune subscription
+    - name: Set up Intune subscription or use (HUB|Landing|)
       href: ./fundamentals/index.yml
       items:
       - name: Sign in to Intune
@@ -224,15 +222,15 @@ items:
         href: ./fundamentals/users-add.md
       - name: Add groups
         href: ./fundamentals/groups-add.md
-      - name: Intune licensing
+      - name: Manage Intune licenses
         items: 
-        - name: Intune licenses
+        - name: Determine license needs
           href: ./fundamentals/licenses.md
         - name: Assign licenses
           href: ./fundamentals/licenses-assign.md
-        - name: Unlicensed admins (is this topic still needed? post 2006 it's already on)
+        - name: Allow access to unlicensed admins
           href: ./fundamentals/unlicensed-admins.md          
-      - name: Set the MDM authority (updates as post 1911 release MDM is auto set to Intune)
+      - name: Set the MDM authority
         href: ./fundamentals/mdm-authority-set.md
       - name: Configure multiple admin approval
         href: ./fundamentals/multi-admin-approval.md
@@ -245,7 +243,7 @@ items:
           href: ./fundamentals/assign-role.md
         - name: Create a custom role
           href: ./fundamentals/create-custom-role.md
-        - name: Use scope tags (define for what "to determine what admins can see" or something)
+        - name: Use scope tags to determine what admins can see
           href: ./fundamentals/scope-tags.md
 
     - name: Premium add-ons (will need to sell this and move when it grows)
