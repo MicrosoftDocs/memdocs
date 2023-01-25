@@ -100,6 +100,6 @@ When you start a remote session, users see a notification flag on the Company Po
 
 ## Next steps
 
-[Use remote help with Intune and Microsoft Endpoint Manager](remote-help.md)
+[Use Remote Help with Intune and Microsoft Endpoint Manager](remote-help.md)
 
 [See device details in Intune](device-inventory.md)

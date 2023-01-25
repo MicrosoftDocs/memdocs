@@ -190,6 +190,8 @@ The device clean up rule doesn't trigger a wipe or retire.
 
 > [!NOTE]
 > Device cleanup rules aren't available for Jamf-managed devices.
+>
+> You need the permission **Managed Device Cleanup Settings with Update** set to **Yes** to update the device cleanup rules. This permission is part of [Intune Roles](../fundamentals/role-based-access-control.md).
 
 ## Delete devices from the Azure Active Directory portal
 
