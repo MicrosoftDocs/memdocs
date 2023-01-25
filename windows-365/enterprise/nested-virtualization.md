@@ -41,16 +41,16 @@ Virtualization-based workloads let customers use the following systems on their 
 
 To use virtualization-based workloads, the Cloud PC must meet these requirements:
 
-- 4vCPU Cloud PC (Downsizing to 2vCPU Cloud PCs will disable nested virtualization)
+- 4vCPU Cloud PC (Downsizing to 2vCPU Cloud PCs will disable nested virtualization).
 - Be in one of the [supported regions](requirements.md?tabs=enterprise%2Cent#supported-azure-regions-for-cloud-pc-provisioning).
 
 ## Set up virtualization-based workloads
 
 To set up a specific virtualization-based workloads system, see the following articles:
-    - [Set up a WSL development environment](/windows/wsl/setup/environment).
-    - [Windows Subsystem for Android™️](/windows/android/wsa/).
-    - [Install Hyper-V on Windows 10](/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v).
 
+- [Set up a WSL development environment](/windows/wsl/setup/environment).
+- [Windows Subsystem for Android™️](/windows/android/wsa/).
+- [Install Hyper-V on Windows 10](/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v).
 
 <!-- ########################## -->
 ## Next steps
