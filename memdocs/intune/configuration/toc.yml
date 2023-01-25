@@ -95,7 +95,7 @@ items:
     - name: Device features
       href: device-features-configure.md
       displayName: airprint, home screen, lock screen, sso, single sign-on
-    - name: Use Enterprise SSO plug-in
+    - name: Enterprise SSO plug-in overview
       href: use-enterprise-sso-plug-in-ios-ipados-macos.md
       items:
       - name: iOS/iPadOS
