@@ -238,7 +238,12 @@ items:
         href: pradeo-mobile-threat-defense-connector.md
         items:
         - name: Pradeo and Intune integration
-          href: pradeo-mtd-connector-integration.md
+          href: pradeo-mobile-threat-defense-connector.md
+      - name: Set up SentinelOne Mobile
+        href: sentinelone-mobile-threat-defense-connector.md
+        items:
+        - name: SentinelOne Mobile and Intune integration
+          href: sentinelone-mtd-connector-integration.md
       - name: Set up Sophos Mobile
         href: sophos-mtd-connector.md
         items:
