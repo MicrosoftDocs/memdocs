@@ -42,7 +42,7 @@ Virtualization-based workloads let customers use the following systems on their 
 To use virtualization-based workloads, the Cloud PC must meet these requirements:
 
 - 4vCPU Cloud PC (Downsizing to 2vCPU Cloud PCs will disable nested virtualization)
-- Be in one of the [supported regions](requirements?tabs=enterprise%2Cent#supported-azure-regions-for-cloud-pc-provisioning).
+- Be in one of the [supported regions](requirements.md?tabs=enterprise%2Cent#supported-azure-regions-for-cloud-pc-provisioning).
 
 ## Set up virtualization-based workloads
 
