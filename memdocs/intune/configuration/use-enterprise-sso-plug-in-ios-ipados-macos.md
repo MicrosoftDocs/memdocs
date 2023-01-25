@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/24/2023
+ms.date: 01/25/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -36,24 +36,24 @@ This article applies to:
 - iOS/iPadOS
 - macOS
 
-## Get started with your platform and MDM provider
+## Get started with your MDM provider and platform
 
 The Enterprise SSO plug-in can be used in Microsoft Intune, Jamf Pro, or other MDM solutions. For more information about the plug-in, which SSO option to use, and how to create the SSO profile, go to the following articles:
 
-- **Intune**
+- **Deploy using Intune**
 
-  - [Deploy the Microsoft Enterprise SSO plug-in for **iOS** and **iPadOS** using Intune](./use-enterprise-sso-plug-in-ios-ipados-with-intune.md)
-  - [Deploy the Microsoft Enterprise SSO plug-in for **macOS** using Intune](./use-enterprise-sso-plug-in-macos-with-intune.md)
+  - [**iOS/iPadOS**: Deploy the Microsoft Enterprise SSO plug-in using Intune](./use-enterprise-sso-plug-in-ios-ipados-with-intune.md)
+  - [**macOS**: Deploy the Microsoft Enterprise SSO plug-in using Intune](./use-enterprise-sso-plug-in-macos-with-intune.md)
 
-- **Jamf Pro**
+- **Deploy using Jamf Pro**
 
-  - [Deploy the Microsoft Enterprise SSO plug-in for **iOS** and **iPadOS** using Jamf Pro](./use-enterprise-sso-plug-in-ios-ipados-with-jamf-pro.md)
-  - [Deploy the Microsoft Enterprise SSO plug-in for **macOS** using Jamf Pro](./use-enterprise-sso-plug-in-macos-with-jamf-pro.md)
+  - [**iOS/iPadOS**: Deploy the Microsoft Enterprise SSO plug-in using Jamf Pro](./use-enterprise-sso-plug-in-ios-ipados-with-jamf-pro.md)
+  - [**macOS**: Deploy the Microsoft Enterprise SSO plug-in using Jamf Pro](./use-enterprise-sso-plug-in-macos-with-jamf-pro.md)
 
-- **Other MDMs**
+- **Deploy using other MDMs**
 
-  - [Deploy the Microsoft Enterprise SSO plug-in for **iOS** and **iPadOS** using another MDM](./use-enterprise-sso-plug-in-ios-ipados-with-generic-mdm.md)
-  - [Deploy the Microsoft Enterprise SSO plug-in for **macOS** using another MDM](./use-enterprise-sso-plug-in-macos-with-generic-mdm.md)
+  - [**iOS/iPadOS**: Deploy the Microsoft Enterprise SSO plug-in using another MDM](./use-enterprise-sso-plug-in-ios-ipados-with-generic-mdm.md)
+  - [**macOS**: Deploy the Microsoft Enterprise SSO plug-in using another MDM](./use-enterprise-sso-plug-in-macos-with-generic-mdm.md)
 
 ## Next steps
 
