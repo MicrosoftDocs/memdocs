@@ -212,7 +212,7 @@ In the `info.plist` for the Xcode app project, confirm the following settings:
 2. Select **Build options** > **Enable Bitcode**.
 3. Select **No**.
 
-:::image type="content" source="./media/tunnel-mam-ios-sdk/project-targets-build-settings-enable-bitcode-xcode.png" alt-text="Screenshot that shows selecting project, targets, build settings, build options, and disabling bitcode in Xcode on a macOS device.":::
+:::image type="content" source="./media/tunnel-mam-ios-sdk/project-targets-build-settings-enable-bitcode-xcode.png" alt-text="Screenshot that shows selecting project, targets, build settings, build options, and disabling bitcode in Xcode on a macOS device." lightbox="./media/tunnel-mam-ios-sdk/project-targets-build-settings-enable-bitcode-xcode.png":::
 
 ### Step 4 - Add keychain sharing
 
@@ -222,7 +222,7 @@ Keychain sharing may or not be present in the app project. If it's not there, ad
 2. Select **Keychain sharing**.
 3. In the **Keychain Groups** list, add (**+**) `com.microsoft.workplacejoin`.
 
-:::image type="content" source="./media/tunnel-mam-ios-sdk/project-targets-signing-capabilities-keychain-sharing-xcode.png" alt-text="Screenshot that shows selecting project, targets, Signing & Capabilities, keychain sharing, and adding a keychain group in Xcode on a macOS device.":::
+:::image type="content" source="./media/tunnel-mam-ios-sdk/project-targets-signing-capabilities-keychain-sharing-xcode.png" alt-text="Screenshot that shows selecting project, targets, Signing & Capabilities, keychain sharing, and adding a keychain group in Xcode on a macOS device." lightbox="./media/tunnel-mam-ios-sdk/project-targets-signing-capabilities-keychain-sharing-xcode.png":::
 
 ### Step 5 - Integrate the SDK with your app
 
@@ -289,7 +289,8 @@ The developer should:
 
 - Consult and work with the organization's company/organization privacy team. The privacy team can provide guidance on the appropriate data that can be logged and the appropriate ways of handling sensitive data.
 
-- > [!WARNING] Consult the [Microsoft Tunnel for MAM iOS SDK privacy documentation](https://github.com/msintuneappsdk/ms-intune-tunnel-sdk-ios/blob/main/MAM-Tunnel-Privacy-Doc.pdf) (opens a PDF file in GitHub) for specific guidance regarding logging and data privacy.
+> [!WARNING]
+> Consult the [Microsoft Tunnel for MAM iOS SDK privacy documentation](https://github.com/msintuneappsdk/ms-intune-tunnel-sdk-ios/blob/main/MAM-Tunnel-Privacy-Doc.pdf) (opens a PDF file in GitHub) for specific guidance regarding logging and data privacy.
 
 ### MAM-Tunnel log delegate method example
 
