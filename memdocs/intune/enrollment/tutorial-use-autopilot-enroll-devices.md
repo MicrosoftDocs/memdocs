@@ -103,7 +103,7 @@ After creating a device group, you must create a deployment profile so that you 
 2. Select **Deployment Profiles**. 
 3. Select **Create profile** > **Windows PC**.  
 4. On the **Basics** page, name the profile *Autopilot Profile*. In **Description**, enter *Test profile for Autopilot devices*.
-5. Set **Convert all targeted devices to Autopilot** to **Yes**. This setting makes sure that all devices in the list get registered with the Autopilot deployment service. Allow 48 hours for proccessing.
+5. Set **Convert all targeted devices to Autopilot** to **Yes**. This setting makes sure that all devices in the list get registered with the Autopilot deployment service. Allow 48 hours for processing.
 6. Select **Next**.  
 7. Configure the **Out-of-box experience (OOBE)** settings. 
     * **Deployment mode**: Select **User-driven**. Devices with this profile are associated with the user enrolling the device. User credentials are required to enroll the device.

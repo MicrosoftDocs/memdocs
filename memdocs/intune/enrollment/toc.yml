@@ -16,31 +16,7 @@ items:
   - name: Intune and Azure AD device limits  
     href: device-limit-intune-azure.md    
 - name: How-to guides
-  items:
-  - name: Add corporate identifiers  
-    href: corporate-identifiers-add.md
-    displayName: COD 
-  - name: Add device enrollment manager  
-    href: device-enrollment-manager-enroll.md  
-  - name: Configure device categories  
-    href: device-group-mapping.md   
-  - name: Create terms and conditions policy  
-    href: terms-and-conditions-create.md
-  - name: Get Apple MDM push certificate  
-    href: apple-mdm-push-certificate-get.md 
-  - name: Require multi-factor authentication  
-    href: multi-factor-authentication.md
-    displayName: mfa; multifactor   
-  - name: Set up enrollment notifications 
-    href: enrollment-notifications.md   
-  - name: Configure Chrome Enterprise connector    
-    items: 
-    - name: Configure Chrome Enterprise connector 
-      href: chrome-enterprise-connector-configure.md  
-    - name: View Chrome OS device details 
-      href: chrome-enterprise-device-details.md 
-    - name: Use remote actions for Chrome OS       
-      href: chrome-enterprise-remote-actions.md 
+  items:  
   - name: Set up Windows enrollment
     items:
     - name: Windows enrollment methods
@@ -158,10 +134,18 @@ items:
   - name: Set up macOS enrollment
     href: macos-enroll.md
     items:
-    - name: Automated Device Enrollment
+    - name: Set up automated device enrollment for Macs    
       href: device-enrollment-program-enroll-macos.md
-    - name: Direct Enrollment for macOS devices
-      href: device-enrollment-direct-enroll-macos.md       
+    - name: Set up direct enrollment for Macs  
+      href: device-enrollment-direct-enroll-macos.md    
+  - name: Configure Chrome Enterprise connector    
+    items: 
+    - name: Configure Chrome Enterprise connector 
+      href: chrome-enterprise-connector-configure.md  
+    - name: View Chrome OS device details 
+      href: chrome-enterprise-device-details.md 
+    - name: Use remote actions for Chrome OS       
+      href: chrome-enterprise-remote-actions.md    
   - name: Create device enrollment restrictions  
     items:
     - name: Enrollment restrictions overview  
@@ -172,6 +156,24 @@ items:
       href: create-device-limit-restrictions.md 
     - name: View enrollment reports 
       href: view-enrollment-reports.md  
+  - name: Other pre-enrollment configurations      
+    items: 
+    - name: Get Apple MDM push certificate (Prerequisite)  
+      href: apple-mdm-push-certificate-get.md 
+    - name: Add corporate identifiers  
+      href: corporate-identifiers-add.md
+      displayName: COD 
+    - name: Add device enrollment manager  
+      href: device-enrollment-manager-enroll.md  
+    - name: Configure device categories  
+      href: device-group-mapping.md   
+    - name: Create terms and conditions policy  
+      href: terms-and-conditions-create.md  
+    - name: Require multi-factor authentication  
+      href: multi-factor-authentication.md
+      displayName: mfa; multifactor   
+    - name: Set up enrollment notifications 
+      href: enrollment-notifications.md   
   - name: Troubleshoot enrollment
     items:
     - name: Troubleshoot device enrollment
