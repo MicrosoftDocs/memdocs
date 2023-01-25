@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/06/2022
+ms.date: 01/20/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -53,6 +53,10 @@ Supported platforms and profiles:
 
   - Profile: **Exploit Protection(ConfigMgr)(preview)**
   - Profile: **Web Protection (ConfigMgr)(preview)**
+
+- **Windows 10, Windows 11, and Windows Server**: Use this platform for policy you deploy to devices managed through [Security Management for Microsoft Defender for Endpoint](../protect/mde-security-integration.md). 
+
+  - Profile: **Attack Surface Reduction Rules**
 
 ## Attack surface reduction (MDM)
 
@@ -119,8 +123,6 @@ Supported platforms and profiles:
     - **Not configured** (*default*) - Applications inside Microsoft Defender Application Guard can't access the camera and microphone on the user’s device.
     - **Yes** - Applications inside Microsoft Defender Application Guard can access the camera and microphone on the user’s device.
     - **No** - Applications inside Microsoft Defender Application Guard can't access the camera and microphone on the user’s device. This is the same behavior as *Not configured*.
-
-
 
 - **Application guard allow print to local printers**  
 
@@ -214,7 +216,7 @@ Supported platforms and profiles:
 #### Attack Surface Reduction Rules
 
 > [!NOTE]  
-> This section details the settings in Attack Surface Reduction Rules profiles created before April 5, 2022. Profiles created after that date use a new settings format as found in the Settings Catalog. With this change you can no longer create new versions of the old profile and they are no longer being developed. Although you can no longer create new instances of the older profile, you can continue to edit and use instances of it that you previously created. 
+> This section details the settings in Attack Surface Reduction Rules profiles created before April 5, 2022. Profiles created after that date use a new settings format as found in the Settings Catalog. With this change you can no longer create new versions of the old profile and they are no longer being developed. Although you can no longer create new instances of the older profile, you can continue to edit and use instances of it that you previously created.
 >
 > For profiles that use the new settings format, Intune no longer maintains a list of each setting by name. Instead, the name of each setting, its configuration options, and its explanatory text you see in the Microsoft Endpoint Manager admin center are taken directly from the settings authoritative content. That content can provide more information about the use of the setting in its proper context. When viewing a settings information text, you can use its *Learn more* link to open that content.
 
