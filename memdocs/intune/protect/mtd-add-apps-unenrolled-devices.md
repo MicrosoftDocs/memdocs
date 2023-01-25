@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/19/2022
+ms.date: 01/20/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -40,14 +40,15 @@ Optionally, you can use Intune to add and deploy the Microsoft Authenticator, an
 > [!NOTE]
 > This article applies to all Mobile Threat Defense partners that support app protection policies:
 >
-> - Microsoft Defender for Endpoint (Android,iOS/iPadOS)
-> - Better Mobile (Android,iOS/iPadOS)
+> - Microsoft Defender for Endpoint (Android, iOS/iPadOS)
+> - Better Mobile (Android, iOS/iPadOS)
 > - Check Point Harmony Mobile (Android, iOS/iPadOS)
 > - Lookout for Work (Android, iOS/iPadOS)
-> - MVISION Mobile (Android,iOS/iPadOS)
+> - MVISION Mobile (Android, iOS/iPadOS)
+> - SentinelOne (Android, iOS/iPadOS)
 > - Symantec Endpoint Security (Android, iOS/iPadOS)
-> - Wandera (Android,iOS/iPadOS)
-> - Zimperium (Android,iOS/iPadOS)
+> - Wandera (Android, iOS/iPadOS)
+> - Zimperium (Android, iOS/iPadOS)
 >
 > For unenrolled devices, you **do not need an iOS app configuration policy** that sets up the Mobile Threat Defense for iOS app you use with Intune. This is a key difference compared to Intune enrolled devices.
 
@@ -99,6 +100,13 @@ However, should you wish to make the app available to end users via the Intune C
   - See the instructions for [adding Android store apps to Microsoft Intune](../apps/store-apps-android.md). Use this [MVISION Mobile - Play Store URL](https://play.google.com/store/apps/details?id=com.mcafee.mvision&hl=en_CA&gl=US) when completing the **Configure app information** section.
 - **iOS**
   - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [MVISION Mobile - App Store URL](https://apps.apple.com/us/app/mcafee-mvision-mobile/id1435156022) when completing the **Configure app information** section.
+
+### Making SentinelOne available to end users
+
+- **Android**
+  - See the instructions for [adding Android store apps to Microsoft Intune](../apps/store-apps-android.md). Use this [SentinelOne - Play Store URL](https://play.google.com/store/apps/details?id=com.sentinelone.mobile) when completing the **Configure app information** section.
+- **iOS**
+  - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [SentinelOne - App Store URL](https://apps.apple.com/us/app/sentinelone-mobile/id1567458126) when completing the **Configure app information** section.
 
 ### Making Symantec Endpoint Protection Mobile available to end users
 
