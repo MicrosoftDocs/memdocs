@@ -2,12 +2,12 @@
 # required metadata
 
 title: Configure iOS/iPadOS Enterprise SSO plug-in in Microsoft Intune
-description: Add or create an iOS or iPadOS device profile using the Microsoft Enterprise SSO plug-in in Microsoft Intune. 
-keywords:
+description: Learn more about the Microsoft Enterprise SSO plug-in in Microsoft Intune. Add or create an iOS or iPadOS device configuration profile using the Microsoft Enterprise SSO plug-in in Microsoft Intune. 
+keywords: Enterprise SSO plug-in, Microsoft Intune
 author: TBC
 ms.author: alessanc
 manager: ianfarr
-ms.date: 01/19/2023
+ms.date: 01/24/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -30,6 +30,10 @@ ms.collection: M365-identity-device-management
 # Use the Microsoft Enterprise SSO plug-in on iOS/iPadOS devices in Microsoft Intune
 
 [!INCLUDE [Apple SSO Boilerplate](../includes/apple-enterprise-sso-intro-boilerplate.md)]
+
+This article applies to:
+
+- iOS/iPadOS
 
 This article shows how to deploy the Microsoft Enterprise SSO plug-in (preview) for iOS/iPadOS Apple devices with Intune.
 

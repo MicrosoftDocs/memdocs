@@ -2,12 +2,12 @@
 # required metadata
 
 title: Configure macOS Enterprise SSO plug-in in Microsoft Intune
-description: Add or create an macOS device profile using the Microsoft Enterprise SSO plug-in in Microsoft Intune. 
+description: Learn more about the Microsoft Enterprise SSO plug-in in Microsoft Intune. Add or create an macOS device profile using the Microsoft Enterprise SSO plug-in in Microsoft Intune. 
 keywords:
 author: TBC
 ms.author: alessanc
 manager: ianfarr
-ms.date: 01/19/2023
+ms.date: 01/24/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -31,7 +31,7 @@ ms.collection: M365-identity-device-management
 
 [!INCLUDE [Apple SSO Boilerplate](../includes/apple-enterprise-sso-intro-boilerplate.md)]
 
-This feature applies to:
+This article applies to:
 
 - macOS
 

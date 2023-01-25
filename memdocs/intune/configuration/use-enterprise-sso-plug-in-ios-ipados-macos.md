@@ -2,12 +2,12 @@
 # required metadata
 
 title: Microsoft Enterprise SSO plug-in in Microsoft Intune
-description: Links to docs on using the Microsoft Enterprise SSO plug-in in Jamf Pro and Microsoft Intune - replaces older docs.
+description: Overview of Microsoft Enterprise SSO plug-in in Microsoft Intune, Jamf Pro and other MDM solution providers. The Enterprise SSO plug-in is available on iOS/iPadOS and macOS devices.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/05/2022
+ms.date: 01/24/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -29,25 +29,34 @@ ms.collection: M365-identity-device-management
 
 # Deploy the Microsoft Enterprise SSO plug-in for Apple Devices (preview)
 
-This documentation has been moved. The new documentation locations are below:
+In Microsoft Intune, there's a Microsoft Enterprise SSO plug-in. This plug-in provides single sign-on (SSO) to iOS/iPadOS and macOS apps and websites that use Microsoft Azure Active Directory (Azure AD) for authentication.
 
-## Intune
+This article applies to:
 
-- [Deploy the Microsoft Enterprise SSO plug-in for **iOS** and **iPadOS** via Intune](./use-enterprise-sso-plug-in-ios-ipados-with-intune.md)
-- [Deploy the Microsoft Enterprise SSO plug-in for **macOS** via Intune](./use-enterprise-sso-plug-in-macos-with-intune.md)
+- iOS/iPadOS
+- macOS
 
-## Jamf Pro
+## Get started with your platform and MDM provider
 
-- [Deploy the Microsoft Enterprise SSO plug-in for **iOS** and **iPadOS** via Jamf Pro](./use-enterprise-sso-plug-in-ios-ipados-with-jamf-pro.md)
-- [Deploy the Microsoft Enterprise SSO plug-in for **macOS** via Jamf Pro](./use-enterprise-sso-plug-in-macos-with-jamf-pro.md)
+The Enterprise SSO plug-in can be used in Microsoft Intune, Jamf Pro, or other MDM solutions. For more information about the plug-in, which SSO option to use, and how to create the SSO profile, go to the following articles:
 
-## Other MDM
+- **Intune**
 
-- [Deploy the Microsoft Enterprise SSO plug-in for **iOS** and **iPadOS** via another MDM](./use-enterprise-sso-plug-in-ios-ipados-with-generic-mdm.md)
-- [Deploy the Microsoft Enterprise SSO plug-in for **macOS** via another MDM](./use-enterprise-sso-plug-in-macos-with-generic-mdm.md)
+  - [Deploy the Microsoft Enterprise SSO plug-in for **iOS** and **iPadOS** using Intune](./use-enterprise-sso-plug-in-ios-ipados-with-intune.md)
+  - [Deploy the Microsoft Enterprise SSO plug-in for **macOS** using Intune](./use-enterprise-sso-plug-in-macos-with-intune.md)
+
+- **Jamf Pro**
+
+  - [Deploy the Microsoft Enterprise SSO plug-in for **iOS** and **iPadOS** using Jamf Pro](./use-enterprise-sso-plug-in-ios-ipados-with-jamf-pro.md)
+  - [Deploy the Microsoft Enterprise SSO plug-in for **macOS** using Jamf Pro](./use-enterprise-sso-plug-in-macos-with-jamf-pro.md)
+
+- **Other MDMs**
+
+  - [Deploy the Microsoft Enterprise SSO plug-in for **iOS** and **iPadOS** using another MDM](./use-enterprise-sso-plug-in-ios-ipados-with-generic-mdm.md)
+  - [Deploy the Microsoft Enterprise SSO plug-in for **macOS** using another MDM](./use-enterprise-sso-plug-in-macos-with-generic-mdm.md)
 
 ## Next steps
 
-- For information about the Microsoft Enterprise SSO plug-in, see [Microsoft Enterprise SSO plug-in for Apple devices (preview)](/azure/active-directory/develop/apple-sso-plugin).
+- For information about the Microsoft Enterprise SSO plug-in and Azure AD, go to [Microsoft Enterprise SSO plug-in for Apple devices (preview)](/azure/active-directory/develop/apple-sso-plugin).
 
-- For information from Apple on the single sign-on extension payload, see [Single Sign-On Extensions payload settings](https://support.apple.com/guide/mdm/single-sign-on-extensions-mdmfd9cdf845/web) (opens Apple's web site).
+- For information from Apple on the single sign-on extension payload, go to [single sign-on extensions payload settings](https://support.apple.com/guide/mdm/single-sign-on-extensions-mdmfd9cdf845/web) (opens Apple's web site).

@@ -2,12 +2,12 @@
 # required metadata
 
 title: Configure iOS/iPadOS Enterprise SSO plug-in with any MDM provider
-description: Add or create an iOS or iPadOS device profile using the Microsoft Enterprise SSO plug-in in an MDM. 
+description: Add or create an iOS or iPadOS device profile using the Microsoft Enterprise SSO plug-in.
 keywords:
 author: TBC
 ms.author: alessanc
 manager: ianfarr
-ms.date: 01/19/2023
+ms.date: 01/24/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -31,7 +31,7 @@ ms.collection: M365-identity-device-management
 
 [!INCLUDE [Apple SSO Boilerplate](../includes/apple-enterprise-sso-intro-boilerplate.md)]
 
-This feature applies to:
+This article applies to:
 
 - iOS/iPadOS
 
