@@ -185,8 +185,10 @@ Diagnostics for devices and applications.
 ## Collect available data from mobile device
 
 Use the following resources to help collect device data when troubleshooting user's device issues:
-- [Send iOS/iPadOS enrollment errors to your IT administrator](../user-help/send-errors-to-your-it-admin-ios.md)
-- [Send Android enrollment errors to your IT administrator](../user-help/send-logs-to-your-it-admin-by-email-android.md)
+- [Report a problem in Company Portal for iOS](../user-help/send-logs-to-microsoft-ios.md)
+- [Report a problem in Company Portal or Intune app for Android](../user-help/send-logs-to-your-it-admin-by-email-android.md)  
+
+You can access and download user-submitted logs under [**Diagnostics**](#diagnostics).  
 
 ## Next steps
 
