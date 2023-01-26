@@ -132,7 +132,7 @@ The following table describes the supported enrollment methods for Android and A
 * [Corporate-owned devices with a work profile](../enrollment/android-corporate-owned-work-profile-enroll.md): Enroll corporate-owned devices that are also approved for personal use. This method creates a separate work profile on the device so that the user can switch between their personal apps and work apps easily and securely. The device user enrolls the device through the Microsoft Intune app. As an admin, you can manage the apps and data in the work profile.  This method aligns with the *Android Enterprise corporate-owned work profile* solution.  
 
 # [Fully managed](#tab/fully-managed)  
-Enroll corporate-owned devices exclusively for work and not personal use. With this methods, there's one user associated with the enrolled device. You can manage the entire device and enforce policy controls not available with the Android Enterprise work profile method. This method aligns with the *Android Enterprise fully managed* solution.  
+Enroll corporate-owned devices exclusively for work and not personal use. With , there's one user associated with the enrolled device. You can manage the entire device and enforce policy controls not available with the Android Enterprise work profile method. This method aligns with the *Android Enterprise fully managed* solution.  
 
 For more information, see [corporate-owned, fully managed devices](../enrollment/android-dedicated-devices-fully-managed-enroll.md).  
 
