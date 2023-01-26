@@ -66,7 +66,7 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 -->
 
-## Week of January 23, 2023
+## Week of January 23, 2023 (Service release 2301)
 
 ### App management
 
@@ -89,8 +89,8 @@ Software update policies for macOS devices are now generally available. This gen
 
 For more information, see [Use Microsoft Intune policies to manage macOS software updates](../protect/software-updates-macos.md).
 
-#### AutoPilot device diagnostics<!-- 16697347 -->
-AutoPilot diagnostics is available to download in Microsoft Endpoint Manager admin center from either in the Autopilot deployments monitor or Device Diagnostics monitor for an individual device.
+#### Windows AutoPilot device diagnostics<!-- 16697347 -->
+Windows AutoPilot diagnostics is available to download in Microsoft Endpoint Manager admin center from either in the Autopilot deployments monitor or Device Diagnostics monitor for an individual device.
 
 ### Device enrollment
 
@@ -216,7 +216,7 @@ Now in public preview, access user-submitted mobile app diagnostics in the admin
 - *Microsoft-Windows-AppXDeploymentServer/Operational*
 
 #### Intune troubleshooting pane update<!-- 4442647 -->  
-The Intune troubleshooting pane will provide a new experience.  It will provide details about user's devices, policies, applications, and status. The troubleshooting pane will include the following information:
+A new experience for the Intune Troubleshooting pane will provide details about user's devices, policies, applications, and status. The troubleshooting pane will include the following information:
 
 - A summary of policy, compliance, and application deployment status.
 - Support for exporting, filtering, and sorting all reports.
@@ -227,7 +227,7 @@ The Intune troubleshooting pane will provide a new experience.  It will provide 
 
 You can find the troubleshooting pane in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Troubleshooting + support** > **Troubleshoot**. To view the new experience during preview, select **Preview upcoming changes to Troubleshooting and provide feedback** to display the **Troubleshooting preview** pane, then select **Try it now**.
 
-#### New report for Devices without compliance policy (preview)<!--14911124 --> 
+#### New report for devices without compliance policy (preview)<!--14911124 --> 
 We’ve added a new report named **Devices without compliance policy** to the Device compliance reports you can access through the *Reports* node of the Microsoft Endpoint Manager admin center.  This report, which is in preview, uses a  newer reporting format that provides for more capabilities.
 
 To learn about this new organizational report, see [Devices without compliance policy (preview) (Organizational)](../fundamentals/reports.md#devices-without-compliance-policy-preview-organizational).
