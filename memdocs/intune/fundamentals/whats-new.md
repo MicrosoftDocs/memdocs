@@ -206,6 +206,9 @@ Applies to:
 
 ### Monitor and troubleshoot
 
+#### Download mobile app diagnostics in the Microsoft Endpoint Manager admin center (public preview)<!-- 9353471 wnready ->  
+Now in public preview, access user-submitted mobile app diagnostics in the admin center, including app logs sent through Company Portal app for Android, AOSP, or Windows, with support for iOS, macOS, and Microsoft Edge for iOS coming at a later date. For more information about accessing mobile app diagnostics for Company Portal, see [Configure Company Portal](../apps/company-portal-app.md#app-logs).
+
 #### WinGet troubleshooting using diagnostic files<!-- 16724699 -->
 [WinGet](/windows/package-manager/winget/) is a command line tool that enables you to discover, install, upgrade, remove, and configure applications on Windows 10 and Windows 11 devices. When working with [Win32 app management in Intune](../apps/apps-win32-app-management.md), you can now use the following file locations to help troubleshoot WinGet:
 - *%TEMP%\winget\defaultstate\*.log*
