@@ -41,7 +41,7 @@ Set up Intune to enroll user-owned iOS/iPadOS devices via Apple User Enrollment.
 For more information about User Enrollment, see [User Enrollment and MDM](https://support.apple.com/guide/deployment/dep23db2037d/web) (opens Apple support website).  
 
 ## Prerequisites
-The user enrollment option is supported on devices running iOS verion 13 or later, and iPadOS version 13.1 or later. Before beginning setup, complete the following tasks:    
+The user enrollment option is supported on devices running iOS 13 or later, and iPadOS version 13.1 or later. Before beginning setup, complete the following tasks:    
 
 - [Set mobile device management (MDM) authority](../fundamentals/mdm-authority-set.md)
 - [Get Apple MDM Push certificate](apple-mdm-push-certificate-get.md)
@@ -75,7 +75,7 @@ Complete these steps to create an enrollment profile for devices enrolling with 
   
 4. On the **Settings** page, select **User enrollment**. All users assigned this profile will enroll via user enrollment. 
   
-  Alternatively, you can select **Determine based on user choice**, which lets all users assigned this profile pick the enrollment type. If you select this option, users will be presented with these options during enrollment: 
+  Alternatively, you can select **Determine based on user choice**, which lets assigned users select the enrollment type. If you select this option, users will be presented with these options during enrollment: 
 
    * **I own this device**: The user will need to select whether they want to secure the entire device or only secure work-related apps and data. 
    * **(Company) owns this device**: The device will be enrolled via Device Enrollment. 
@@ -100,14 +100,14 @@ After you've created more than one enrollment type profile, you can change the p
 If a conflict occurs because a user is assigned more than one profile, Intune applies the profile with the higher priority.  
 
 ## Removing device from management  
-The volume and cryptographic keys created to manage the work data on the device are erased when the device unerolls from Intune.  
+The volume and cryptographic keys created to manage the work data on the device are erased when the device unenrolls from Intune.  
 
 ## Next steps  
-* Device users sign into the Intune Company Portal app with their work or school account to initiate the enrollment process. For a look at their experience, see [Set up iOS device access to your company resources](../user-help/enroll-your-device-in-intune-ios). Remember, if you don't set up federated authentication with Apple Business Manager, you will need to provide Managed Apple ID credentials to your users so that they can complete enrollment. 
+* Device users sign into the Intune Company Portal app with their work or school account to initiate the enrollment process. For a look at their experience, see [Set up iOS device access to your company resources](../user-help/enroll-your-device-in-intune-ios). Remember, if you don't set up federated authentication with Apple Business Manager, you'll need to provide Managed Apple ID credentials to your users so that they can complete enrollment. 
 
 * For supported management actions, see [User Enrollment supported actions, passwords, and other options](ios-user-enrollment-supported-actions.md).  
 
-* For troubleshooting, seee [Troubleshooting iOS/iPadOS device enrollment errors in Microsoft Intune](/troubleshoot/mem/intune/device-enrollment/troubleshoot-ios-enrollment-errors).  
+* For troubleshooting, see [Troubleshooting iOS/iPadOS device enrollment errors in Microsoft Intune](/troubleshoot/mem/intune/device-enrollment/troubleshoot-ios-enrollment-errors).  
 
 * For supported settings in Intune device configurations profiles, see:   
 
