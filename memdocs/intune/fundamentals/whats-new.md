@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/25/2023
+ms.date: 01/26/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -120,6 +120,22 @@ Applies to:
 You can now use [SentinelOne](../protect/sentinelone-mobile-threat-defense-connector.md) as an integrated Mobile Threat Defense (MTD) partner with Intune. By configuring the SentinelOne connector in Intune, you can control mobile device access to corporate resources using conditional access that's based on risk assessment in your compliance policy. The SentinelOne connector can also send risk levels to app protection policies.
 
 ### Device configuration
+
+#### Device Firmware Configuration Interface (DFCI) will support Fujitsu devices<!--10249866 -->
+
+For Windows 10/11 devices, you can create a DFCI profile to manage UEFI (BIOS) settings (**Devices** > **Configuration profiles** > **Create profile** > **Windows 10 and later** for platform > **Templates** > **Device Firmware Configuration Interface** for profile type).
+
+Some Fujitsu devices running Windows 10/11 are enabled for DFCI. Contact your device vendor or device manufacturer for eligible devices.
+
+For more information about DFCI profiles, go to:
+
+- [Configure Device Firmware Configuration Interface (DFCI) profiles on Windows devices in Microsoft Intune](../configuration/device-firmware-configuration-interface-windows.md)
+- [Device Firmware Configuration Interface (DFCI) management with Windows Autopilot](../autopilot/dfci-management.md)
+
+Applies to:
+
+- Windows 10
+- Windows 11
 
 #### Support for multi-SIM iOS/iPadOS device inventory<!--16360290 -->
 You can now view the service subscription fields on devices that have multiple SIM cards installed under the per-device Hardware section. The inventory fields that are capable of reporting multiple values to Intune are:
