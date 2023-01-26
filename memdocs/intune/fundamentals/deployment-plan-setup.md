@@ -39,6 +39,17 @@ This article applies to:
 - macOS
 - Windows
 
+## Prerequisites
+Before you begin setting up Microsoft Intune, review the [Planning guide](intune-planning-guide.md). Use this guide to plan your move or migration to Intune.  
+The planning guide also,
+ - Lists and describes some common objectives for device management
+ - Lists potential licensing needs
+ - Provides guidance on handling personally owned devices
+ - Recommends reviewing current policies and infrastructure
+ - Gives examples of creating a rollout plan
+ - And more
+ 
+
 ## 1 - Review the Supported Configurations
 
 Before you begin setting up Microsoft Intune, you should review the device platforms and operating systems that Intune supports. Additionally, review which web browsers are supported when accessing Intune using Microsoft Endpoint Manager admin center. Also, you should be familiar with the network bandwidth requirements to perform installations and updates using Intune.
@@ -89,15 +100,22 @@ Intune uses Azure Active Directory (Azure AD) groups to organize and manage devi
 
  Add groups, to assign apps, settings, and other resources. For some guidance, go to [Add groups](groups-add.md).
 
-## 6 - Assign licenses to users
+## 6 - Manage licenses
 
-Microsoft Intune is available for different organization sizes and needs, from a simple-to-use management experience for schools and small businesses, to more advanced functionality required by enterprise customers. An admin must have a license assigned to them to administer Intune (unless you have selected to allow unlicensed admins).
+Intune is available with different subscriptions, including as a stand-alone service. Determine the licensed services your organization needs and then continue to assign each user an Intune license before users can enroll their devices in Intune.
 
-Whether you added users one at a time or all at once, you must assign each user an Intune license before users can enroll their devices in Intune. The Microsoft Intune free trial provides 25 Intune licenses. For a list of licenses, see Licenses that include Intune.
+✔️ **Determine your license needs**
+Microsoft Intune is available for different organization sizes and needs, from a simple-to-use management experience for schools and small businesses, to more advanced functionality required by enterprise customers. An admin must have a license assigned to them to administer Intune (unless you have selected to allow unlicensed admins). 
+For guidance, go to [Microsoft Intune licensing](licenses.md).
 
 ✔️ **Get started with assigning licenses to users**
+Whether you added users one at a time or all at once, you must assign each user an Intune license before users can enroll their devices in Intune. The Microsoft Intune free trial provides 25 Intune licenses. For a list of licenses, see Licenses that include Intune.
+Give users permission to use Intune. Each user or userless device requires an Intune license to access the service. 
+For guidance, go to [Assign licenses](licenses-assign.md).
 
- Give users permission to use Intune. Each user or userless device requires an Intune license to access the service. For guidance, go to [Assign licenses](licenses-assign.md).
+✔️ **Unlicensed admins**
+You can give administrators access to Microsoft Endpoint Manager without them requiring an Intune license. This feature applies to any administrator, including Intune administrators, global administrators, Azure AD administrators, and so on.
+For guidance, go to [Unlicensed admins](unlicensed-admins.md).
 
 ## 7 - Manage Roles and grant admin permissions for Intune
 
@@ -113,22 +131,22 @@ After you've added users to your Intune tenant, we recommend that you grant a fe
 
 4. You can use role-based access control and scope tags to make sure that the right admins have the right access and visibility to the right Intune objects. Roles determine what access admins have to which objects. Scope tags determine which objects admins can see. For guidance, go to [Use role-based access control (RBAC) and scope tags for distributed IT](scope-tags.md)
 
-## 8 - Understand the MDM authority
+## 8 - Set the mobile device management authority
 
 The mobile device management (MDM) authority setting determines how you manage your devices. By default, the Intune free trial sets your MDM authority to Intune. As an IT admin, you must set an MDM authority before users can enroll devices for management. With the MDM authority set, you can start enrolling devices.
 
-✔️ **Get started with assigning licenses to users**
-
- If you are changing your tenant to support Intune, you will need to change your MDM authority configuration. For guidance, go to [Set the mobile device management authority](mdm-authority-set.md).
+✔️ **Get started with MDM authority**
+If you are changing your tenant to support Intune, you will need to change your MDM authority configuration. 
+For guidance, go to [Set the mobile device management authority](mdm-authority-set.md).
 
 ## 9 - Customize the Intune company portal
 
 The Company Portal apps, Company Portal website, and Intune app on Android are where users access company data and can do common tasks. Common task may include enrolling devices, installing apps, and locating information (such as for assistance from your IT department).
 
 ✔️ **Get started with configuring the company portal**
+Customize the Intune Company Portal that users use to enroll devices and install apps. These settings appear in both the Company Portal app and the Intune Company Portal website.
+For guidance, go to [Configure the company portal](../apps/company-portal-app.md).
 
- Customize the Intune Company Portal that users use to enroll devices and install apps. These settings appear in both the Company Portal app and the Intune Company Portal website.
- For guidance, go to [Configure the company portal](../apps/company-portal-app.md).
 
 ## Follow the minimum recommended baseline policies
 
