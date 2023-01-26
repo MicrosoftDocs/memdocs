@@ -83,7 +83,7 @@ In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwli
 
     - **Additional configuration**: To customize the end user experience, you can add the following properties. These properties are the default values used by the Microsoft SSO Extension, but they can be customized for your organization needs:
 
-      [!INCLUDE [Apple SSO Recommended Settings Table Boilerplate](../includes/apple-enterprise-sso-recommended-settings-intune-and-generic-mdm-boilerplate.md)]
+      [!INCLUDE [Apple SSO Recommended Settings Table Boilerplate](../includes/apple-enterprise-sso-recommended-settings-macos-intune-and-generic-mdm-boilerplate.md)]
 
       When you're done configuring the recommended settings, the settings look similar to the following values in your Intune configuration profile:
 

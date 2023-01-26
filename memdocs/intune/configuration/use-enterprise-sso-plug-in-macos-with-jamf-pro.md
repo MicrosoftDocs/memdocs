@@ -90,7 +90,6 @@ In the Jamf Pro portal, you create a Computer configuration profile. This prof
       - `https://login.partner.microsoftonline.cn`
       - `https://login.chinacloudapi.cn`
       - `https://login.microsoftonline.us`
-      - `https://login.usgovcloudapi.net`
       - `https://login-us.microsoftonline.com`
 
     :::image type="content" source="./media/apple-enterprise-sso-plug-in/sso-extension-basic-settings-1.png" alt-text="Screenshot that shows the Jamf Pro portal and the payload type, extension identifier, team identifier, and SSO type settings for macOS devices.":::
@@ -119,7 +118,7 @@ In the Jamf Pro portal, you create a Computer configuration profile. This prof
 
     These PLIST settings configure the following SSO Extension options. These properties are the default values used by the Microsoft SSO Extension, but they can be customized for your organization needs:
 
-    [!INCLUDE [Apple SSO Recommended Settings Table Boilerplate](../includes/apple-enterprise-sso-recommended-settings-jamf-pro-boilerplate.md)]
+    [!INCLUDE [Apple SSO Recommended Settings Table Boilerplate](../includes/apple-enterprise-sso-recommended-settings-macos-jamf-pro-boilerplate.md)]
 
 7. Select the **Scope** tab. Enter the computers or devices that should be targeted to receive the SSO Extension MDM profile.
 8. Select **Save**.
