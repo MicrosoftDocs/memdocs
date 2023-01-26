@@ -103,7 +103,7 @@ If a conflict occurs because a user is assigned more than one profile, Intune ap
 The volume and cryptographic keys created to manage the work data on the device are erased when the device unenrolls from Intune.  
 
 ## Next steps  
-* Device users sign into the Intune Company Portal app with their work or school account to initiate the enrollment process. For a look at their experience, see [Set up iOS device access to your company resources](../user-help/enroll-your-device-in-intune-ios). Remember, if you don't set up federated authentication with Apple Business Manager, you'll need to provide Managed Apple ID credentials to your users so that they can complete enrollment. 
+* Device users sign into the Intune Company Portal app with their work or school account to initiate the enrollment process. For a look at their experience, see [Set up iOS device access to your company resources](../user-help/enroll-your-device-in-intune-ios.md). Remember, if you don't set up federated authentication with Apple Business Manager, you'll need to provide Managed Apple ID credentials to your users so that they can complete enrollment. 
 
 * For supported management actions, see [User Enrollment supported actions, passwords, and other options](ios-user-enrollment-supported-actions.md).  
 
