@@ -33,21 +33,16 @@ ms.collection:
 
 In the final phase of deployment, devices are registered or joined in Azure Active Directory (Azure AD), enrolled in Microsoft Intune, and checked for compliance. 
 
-## Enrollment process explained   
-Enrollment is made up of 3 parts: 
-1. Before enrollment begins, the device user must authenticate to establish a device identity in your org's Azure AD. This step grants the user of the device single sign-on (SSO) access to cloud-based work apps and other resources. Registration in Azure AD is a required step for Intune management. Identity options include:    
-   * *Azure AD registration* is the device identity option available for personal and corporate-owned mobile devices. Users on these devices authenticate by *signing in to work resources like apps and web browsers* using their Azure AD work account. 
-   * *Azure AD joined* is the device identity option available for corporate-owned Windows 10/11 devices utilizing co-management options. Users on these devices authenticate by *signing in to the device* using their Azure AD work account.   
+## Enrollment process       
+Microsoft Intune enrollment is made up of 3 parts.  
 
-2. During enrollment, Microsoft Intune installs a mobile device management (MDM) certificate on the device, which enables Intune to enforce policies and profiles you created, such as:   
+* Before enrollment, the device user must authenticate to establish a device identity in your org's Azure AD. This step grants the user of the device single sign-on (SSO) access to cloud-based work apps and other resources. Registration in Azure AD is a required step for Intune management.      
+  * *Azure AD registration* is the device identity option available for personal and corporate-owned mobile devices. Users on these devices authenticate by signing in to work resources, like apps and web browsers, using their Azure AD work account. 
+   * *Azure AD joined* is the device identity option available for corporate-owned Windows 10/11 devices utilizing co-management options. Users on these devices authenticate by signing in to the device using their Azure AD work account.    
 
-   * Device enrollment restrictions
-   * Configuration profiles
-   * Compliance policies 
-   * Terms and conditions 
-   * Multifactor authentication 
+* During enrollment: Microsoft Intune installs a mobile device management (MDM) certificate on the device, which enables Intune to enforce policies and profiles you created.  
 
-3. After enrollment, the device user is immediately notified of your compliance policies, and must update their device settings to meet requirements. Compliance checks are the last step before the device is granted access to work resources.    
+* After enrollment: The device user is immediately notified of your compliance policies, and must update their device settings to meet requirements. Compliance checks are the last step before the device is granted access to work resources.    
 
    > [TIP]
    > If this is your first time deploying enrollment profiles with Intune, or you're trying a new configuration, start small and use a staged approach. Assign the enrollment profile to a pilot or test group. After initial testing, add more users to the pilot group. If everything is going well, assign the enrollment profile to more pilot groups.  For more information and suggestions, see the [Planning guide: Step 5 - Create a rollout plan](intune-planning-guide.md#step-5---create-a-rollout-plan).  
@@ -202,6 +197,10 @@ Enable enrollment in Intune for personally owned Macs in BYOD scenarios. Intune-
 For more information, see [Set up enrollment for macOS devices in Intune](../enrollment/macos-enroll.md).  
 
 --- 
+## Enrollment for Linux  
+This section describes the enrollment methods and configurations available for user-owned Linux devices. 
+
+---
 
 ## Enrollment for Windows    
 This section describes the enrollment methods and configurations available for Windows 10/11 personal and corporate-owned devices. Microsoft Intune enrollment is supported in cloud environments and with co-management in on-premises environments. 
