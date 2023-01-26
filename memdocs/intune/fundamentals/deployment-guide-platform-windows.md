@@ -70,7 +70,7 @@ Use compliance policies to define the rules and conditions that users and device
 | [Create a compliance policy](../protect/create-compliance-policy.md)|Get step-by-step guidance on how to create and assign a compliance policy to user and device groups.   |       
 | [Add actions for noncompliance](../protect/actions-for-noncompliance.md) |Choose what happens when devices no longer meet the conditions of your compliance policy. Examples of actions include sending alerts, remotely locking devices, or retiring devices. You can add actions for noncompliance when you configure a device compliance policy, or later by editing the policy. |  
 | Create [a device-based](../protect/create-conditional-access-intune.md) or [app-based](../protect/app-based-conditional-access-intune-create.md) Conditional Access policy| Select the apps or services you want to protect and define the conditions for access. |   
-|[Block access to apps that don't use modern authentication](../protect/app-modern-authentication-block.md)  | Create an app-based Conditional Access policy to block apps that use authentication methods other than OAuth2; for example, those apps that use basic and form-based authentication. Before you block access, however, sign in to Azure AD and review the [authentication methods activity report](https://docs.microsoft.com/azure/active-directory/authentication/howto-authentication-methods-activity) to see if users are using basic authentication to access essential things you forgot about or are unaware of. For example, things like meeting room calendar kiosks use basic authentication.  |  *For PM: Is this task applicable to Windows devices?*
+|[Block access to apps that don't use modern authentication](../protect/app-modern-authentication-block.md)  | Create an app-based Conditional Access policy to block apps that use authentication methods other than OAuth2; for example, those apps that use basic and form-based authentication. Before you block access, however, sign in to Azure AD and review the [authentication methods activity report](/azure/active-directory/authentication/howto-authentication-methods-activity) to see if users are using basic authentication to access essential things you forgot about or are unaware of. For example, things like meeting room calendar kiosks use basic authentication.  | 
 | [Add custom compliance settings](../protect/actions-for-noncompliance.md) | With custom compliance settings, you can write your own Bash scripts to address compliance scenarios not yet included in the device compliance options built into Microsoft Intune. This article describes how to create, monitor, and troubleshoot custom compliance policies for Windows devices. Custom compliance settings require you to [create a custom script](../protect/compliance-custom-json.md) that identifies the settings and value pairs.| 
 
 
@@ -85,7 +85,7 @@ Use the Intune endpoint security features to configure device security and to ma
 |[Configure Microsoft Defender for Endpoint in Intune](../protect/advanced-threat-protection-configure.md)|When you integrate Intune with Microsoft Defender for Endpoint, you not only help prevent security breaches, but you can take advantage of Microsoft Defender for Endpoints Threat & Vulnerability Management (TVM) and use Intune to remediate endpoint weakness identified by TVM.| 
 |[Manage BitLocker policy](../protect/encrypt-devices.md)| Ensure that devices are encrypted upon enrollment by creating a policy that configures BitLocker on managed devices. | 
 |[Manage security baseline profiles](../protect/security-baselines-configure.md)| Use the security baselines in Intune to help you secure and protect your users and devices. A security baseline includes the best practices and recommendations for settings that impact security.  | 
-|[Use Windows Update for Business for software updates](../protect/endpoint-security-manage-devices.md)|Configure a Windows Update rollout strategy with Windows Update for Business. This article introduces you to the policy types you can use to manage Windows 10 software updates, and how to transition from update ring deferrals to a feature updates policy.|   *For PM: Does this description sufficiently explain the what/why?*
+|[Use Windows Update for Business for software updates](../protect/endpoint-security-manage-devices.md)|Configure a Windows Update rollout strategy with Windows Update for Business. This article introduces you to the policy types you can use to manage Windows 10 software updates, and how to transition from update ring deferrals to a feature updates policy. *For PM: Does this description sufficiently explain the what/why?*|   
 
 ## Step 5: Configure device settings     
 
@@ -97,7 +97,7 @@ Use Microsoft Intune to enable or disable settings and features on Windows devic
 | ---- | ------ | 
 |[Create a device profile](../configuration/device-profile-create.md) |Create a device profile in Microsoft Intune and find resources about all device profile types. You can also use the [settings catalog](../configuration/settings-catalog.md) to create a policy from scratch.|  
 |[Configure group policy settings](../configuration/administrative-templates-windows.md) |Use Windows 10 templates to configure group policy settings in Microsoft Intune.|  
-|[Configure device features](../configuration/device-features-configure.md)|Configure common Windows features and functionality. For a description of the settings in this area, see the device features reference for [Windows 8.1](..configuration/device-restrictions-windows-8-1.md), Windows 10 and later](../configuration/device-restrictions-windows-10.md), [Windows 10 Teams](../configuration/device-restrictions-windows-10-teams.md), and [Windows Holographic for Business](../configuration/device-restrictions-windows-holographic.md).| 
+|[Configure device features](../configuration/device-features-configure.md)|Configure common Windows features and functionality. For a description of the settings in this area, see the device features reference for [Windows 8.1](../configuration/device-restrictions-windows-8-1.md), Windows 10 and later](../configuration/device-restrictions-windows-10.md), [Windows 10 Teams](../configuration/device-restrictions-windows-10-teams.md), and [Windows Holographic for Business](../configuration/device-restrictions-windows-holographic.md).| 
 |[Configure Wi-Fi profile](../configuration/wi-fi-settings-configure.md)|This profile enables people to find and connect to your organization's Wi-Fi network. For a description of the settings in this area, see the [Wi-Fi settings reference for Windows 10 and later](../configuration/wi-fi-settings-windows.md).|
 |[Import Wi-Fi settings for Windows devices](../configuration/wi-fi-settings-import-windows-8-1.md)|Export Wi-Fi settings to an XML file, and then import the settings into Intune. Using these imported settings, you can create a Wi-Fi profile, and then deploy it to your devices. For a description of the settings in this area, see the [imported Wi-Fi settings reference](../configuration/wi-fi-settings-import-windows-8-1.md).| 
 |[Configure VPN profile](../configuration/vpn-settings-configure.md)|Set up a secure VPN option, such as Microsoft Tunnel, for people connecting to your organization's network.  For a description of the settings in this area, see the [VPN settings reference](../configuration/vpn-settings-windows-10.md). |  
@@ -111,7 +111,7 @@ Use Microsoft Intune to enable or disable settings and features on Windows devic
 |[Configure kiosks and dedicated devices](../configuration/kiosk-settings.md)|Create a kiosk profile to manage devices running in kiosk mode. |  
 |[Customize shared devices](../configuration/shared-user-device-settings.md)|Control access, accounts, and power features on shared PCs or multi-user devices.|  
 |[Configure network boundary](../configuration/network-boundary-windows.md)|Create a network boundary profile to protect your environment from sites you don't trust.  | 
-|[Configure Windows health monitoring](../remote-actions/windows-health-monitoring.md)|Create a Windows health monitoring profile to permit Microsoft to collect data about performance and provide recommendations for improvements. Creating a profile enables the endpoint analytics feature in Microsoft Endpoint Manager, which analyzes collected data, recommends software, helps improve startup performance, and fixes common support issues. |  
+|[Configure Windows health monitoring](../configuration/windows-health-monitoring.md)|Create a Windows health monitoring profile to permit Microsoft to collect data about performance and provide recommendations for improvements. Creating a profile enables the endpoint analytics feature in Microsoft Endpoint Manager, which analyzes collected data, recommends software, helps improve startup performance, and fixes common support issues. |  
 |[Configure education profile for students](../configuration/education-settings-configure.md)| Create an education profile and configure the Take a Test app for students taking tests or exams on enrolled devices. |  
 |[Configure eSim cellular profile](../configuration/esim-device-configuration.md)| You can configure eSIM for ESIM-capable devices, such as the Surface LTE Pro, to connect to the internet over a cellular data connection. This configuration is ideal for global travelers who need to stay connected and flexible while traveling and eliminates the need for a SIM card. | 
 
@@ -126,7 +126,7 @@ Set up authentication methods in Intune to ensure that only authorized people ac
 |[Use PKCS certificates with Intune](../protect/certificates-pfx-configure.md)|Configure required infrastructure (such as on-premises certificate connectors), export a PKCS certificate, and add the certificate to an Intune device configuration profile. | 
 |[Use imported PKCS certificates with Intune](../protect/certificates-imported-pfx-configure.md)|Set up imported PKCS certificates, which enable you to [set up and use S/MIME to encrypt email](../protect/certificates-s-mime-encryption-sign.md). 
 |[Set up a derived credentials issuer](../protect/derived-credentials.md)| Provision Windows devices with certificates that are derived from user smart cards.  
-|[Integrate Windows Hello for Business with Microsoft Intune](../enrollment/multi-factor-authentication.md)| Create a Windows Hello for Business policy to enable or disable Windows Hello for Business during device enrollment. Hello for Business is an alternative sign-in method that uses Active Directory or an Azure Active Directory account to replace a password, smart card, or a virtual smart card. | *For PM: What is difference between this task and [this identity protection task](https://docs.microsoft.com/mem/intune/protect/identity-protection-configure).*
+|[Integrate Windows Hello for Business with Microsoft Intune](../enrollment/multi-factor-authentication.md)| Create a Windows Hello for Business policy to enable or disable Windows Hello for Business during device enrollment. Hello for Business is an alternative sign-in method that uses Active Directory or an Azure Active Directory account to replace a password, smart card, or a virtual smart card. | 
 
 *For PM: Is "Use DigiCert PKI" a task that we want to include in this section?* 
 
@@ -136,43 +136,37 @@ As you set up apps and app policies, think about your organization's requirement
 
 | Task | Detail | 
 | ---- | ------ | 
-|[Add line-of-business apps ](../apps/lob-apps-macos.md)|Add macOS line-of-business (LOB) apps to Intune and assign to groups.| 
+|[Add line-of-business apps ](../apps/lob-apps-mwindows.md)|Add macOS line-of-business (LOB) apps to Intune and assign to groups.| 
 |[Add Microsoft Edge](../apps/manage-microsoft-edge.md) | Add and assign Microsoft Edge in Intune. | 
-|[Add Intune Company Portal app ](../apps/apps-company-portal-macos.md)|Provide instructions to your users to install Company Portal for macOS or install it on devices already enrolled directly from Intune.| 
+|[Add Intune Company Portal app for Autopilot ](../apps/apps-company-portal-autopilot.md)|Install Company Portal on devices during Windows Autopilot setup.| 
 |[Assign apps to groups ](../apps/apps-deploy.md)|After you add apps to Intune, assign them to users and devices.|
-|[Assign Microsoft 365 ](../apps/apps-add-office365-macos.md)|Add Microsoft 365 apps to macOS devices. | 
-|[Add Microsoft Defender for Endpoint](../apps/apps-advanced-threat-protection-macos)|Add Microsoft Defender for Endpoint to Intune.|
+|Assign Microsoft 365 |Add Microsoft 365 apps to Windows devices. | 
+|Add Microsoft Defender for Endpoint|Add Microsoft Defender for Endpoint to Intune.|
 |[Include and exclude app assignments ](../apps/apps-inc-exl-assignments.md)|Control access and availability to an app by including and excluding selected groups from assignment.| 
-|[Use shell scripts on macOS devices](../apps/macos-shell-scripts.md)|Use shell scripts to extend device management capabilities in Intune beyond what's supported by the macOS operating system.| 
+|[Use PowerShell scripts](../apps/intune-management-extension.md)|Use shell scripts to extend device management capabilities in Intune beyond what's supported by the macOS operating system.| 
 
 ## Step 8: Enroll devices  
 
 During enrollment, the device is registered with Azure AD and evaluated for compliance. If you've applied a conditional access policy to Edge, users will be prompted to enroll their devices before they can access Microsoft 365 web apps with their work account.    
 
-Intune supports the following enrollment options:  
-* Windows 10 Automatic enrollment  
-* Windows Autopilot   
-* Group policy  
-* Co-management  
-
 For information about each enrollment method and how to choose one that's right for your organization, see [Windows enrollment methods](../enrollment/windows-enrollment-methods.md) and the [Windows device enrollment guide for Microsoft Intune](deployment-guide-enrollment-windows.md).  
 
-| Task | Detail | 
-| ---- | ------ | 
+| Task | Detail |
+| ---- | ------ |
 |[Set up enrollment for Windows devices](../enrollment/windows-enroll.md)|Simplify enrollment by enabling automatic enrollment, configuring registration and enrollment CNAMEs, and enabling bulk enrollment. |  
 |[Quickstart: Set up automatic enrollment for Windows 10 devices](../enrollment/quickstart-setup-auto-enrollment.md)| Set up Intune to automatically enroll devices when specific users sign in to Windows 10 devices.  | 
 |[Quickstart: Enroll your Windows 10 device](../enrollment/quickstart-enroll-windows-device.md)| Take the role of a device user in your organization and see what it's like to enroll your Windows 10 device into Microsoft Intune. Then confirm your device enrollment in Intune.  | 
 |[Bulk enroll Windows devices](../enrollment/windows-bulk-enroll.md)| Join large numbers of new Windows devices to Azure Active Directory and Intune.|  
 |[Set up the enrollment status page (ESP)](../enrollment/windows-enrollment-status.md)| Create an enrollment status page profile with custom settings to guide users through device setup and enrollment.   |  
 | [Identify devices as corporate-owned](../enrollment/corporate-identifiers-add.md)| Assign corporate-owned status to devices to enable more management and identification capabilities in Intune. | 
-|[Change device ownership](../enrollment/corporate-identifiers-add.md#change-device-ownership)|After a device has been enrolled, you can change its ownership label in Intune to corporate-owned or personal-owned. This adjustment changes the way you can manage the device.|  **Does this apply to Windows?**  
-|[Configure proxy for Intune Active Directory Connector](../enrollment/autopilot-hybrid-connector-proxy.md)| Configure the Intune Connector for Active Directory to work with your existing outbound proxy servers.   |  *Does this make sense here? I'm not familiar w/it.* 
-|[Troubleshoot enrollment problems](https://docs.microsoft.com/troubleshoot/mem/intune/troubleshoot-device-enrollment-in-intune)|Troubleshoot and find resolutions to problems that occur during enrollment. |
+|[Change device ownership](../enrollment/corporate-identifiers-add.md#change-device-ownership)|After a device has been enrolled, you can change its ownership label in Intune to corporate-owned or personal-owned. This adjustment changes the way you can manage the device.|   
+|[Configure proxy for Intune Active Directory Connector](../enrollment/autopilot-hybrid-connector-proxy.md)| Configure the Intune Connector for Active Directory to work with your existing outbound proxy servers.   | 
+|[Troubleshoot enrollment problems](/troubleshoot/mem/intune/troubleshoot-device-enrollment-in-intune)|Troubleshoot and find resolutions to problems that occur during enrollment. |
 
 
 ## Step 9: Run remote actions  
 
-After devices are set up, you can use remote actions in Intune to manage and troubleshoot macOS devices from a distance. The following articles introduce you to the remote actions in Intune. If an action is absent or disabled in the portal, then it isn't supported on macOS.  
+After devices are set up, you can use remote actions in Intune to manage and troubleshoot Windows devices from a distance. The following articles introduce you to the remote actions in Intune. If an action is absent or disabled in the portal, then it isn't supported for Windows.  
 
 | Task | Detail | 
 | ---- | ------ | 
@@ -182,6 +176,8 @@ After devices are set up, you can use remote actions in Intune to manage and tro
 
 ## Help employees and students  
 
+--in progress--
+
 It's important to provide employees and students with help resources in case they need guidance during enrollment.  
 
 >[!TIP]
@@ -189,10 +185,10 @@ It's important to provide employees and students with help resources in case the
 
 | Task | Detail | 
 | ---- | ------ | 
-|[Install Microsoft Intune app for Linux](../user-help/microsoft-intune-app-linux.md)| Employees must install the Microsoft Intune app on their personal device for enrollment. This article describes how to install, update, and remove the Microsoft Intune app for Linux in the Terminal app. | 
-|[Install Microsoft Edge web browser)](https://www.microsoft.com/edge)| To access protected websites and files, employees must have Microsoft Edge web browser, version 102.*X* or later. After they enroll their device, employees can sign into Microsoft Edge with their work account and access websites and files.   |  
-|[Enroll Linux device in Intune](../user-help/enroll-device-linux.md)| This article is for device users and describes how to enroll a device with the Microsoft Intune app, and includes system requirements, prerequisites, and next steps. During this step, Microsoft Intune registers the device with Azure AD and creates a device record in Intune. After registration is complete, device compliance checks begin.  |  
-|[Check device status and resolve compliance issues](../user-help/check-status-linux.md)| This article is for device users and describes how to resolve compliance issues in the Microsoft Intune app. Compliance checks happen during enrollment and thereafter when the device checks in with Intune. The Intune app notifies employees when they have a noncompliant setting on their device. Intune determines compliance and actions for noncompliance by using your device compliance and conditional access policies.  |  
+|Install Intune Company Portal app for Windows| Employees must install the Microsoft Intune app on their personal device for enrollment. This article describes how to install, update, and remove the Company Portal app for Windows. | 
+|Install Microsoft Edge web browser| To access protected websites and files, employees must have Microsoft Edge web browser, version 102.*X* or later. After they enroll their device, employees can sign into Microsoft Edge with their work account and access websites and files.   |  
+|Enroll device in Intune| This article is for device users and describes how to enroll a device with the Microsoft Intune app, and includes system requirements, prerequisites, and next steps. During this step, Microsoft Intune registers the device with Azure AD and creates a device record in Intune. After registration is complete, device compliance checks begin.  |  
+|Check device status and resolve compliance issues| This article is for device users and describes how to resolve compliance issues in the Microsoft Intune app. Compliance checks happen during enrollment and thereafter when the device checks in with Intune. The Intune app notifies employees when they have a noncompliant setting on their device. Intune determines compliance and actions for noncompliance by using your device compliance and conditional access policies.  |  
 
 ## Next steps  
 
