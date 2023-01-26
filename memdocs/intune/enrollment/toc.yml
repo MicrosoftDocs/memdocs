@@ -158,7 +158,7 @@ items:
       href: view-enrollment-reports.md  
   - name: Other pre-enrollment configurations      
     items: 
-    - name: Get Apple MDM push certificate (Prerequisite)  
+    - name: Get Apple MDM push certificate (Apple prerequisite)  
       href: apple-mdm-push-certificate-get.md 
     - name: Add corporate identifiers  
       href: corporate-identifiers-add.md

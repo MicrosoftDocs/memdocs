@@ -3,12 +3,12 @@
 
 title: Categorize devices into groups in Intune
 titleSuffix: Microsoft Intune
-description: Learn how to categorize devices into groups for easier management.
+description: Categorize Intune-managed devices into groups for easier management in the admin center.
 keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/10/2021
+ms.date: 01/25/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -33,9 +33,7 @@ ms.collection: M365-identity-device-management
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Device categories allow you to easily manage and group devices in Microsoft Intune. Create a category, such as *sales* or *accounting*, and Intune will automatically add all devices that fall within that category to the corresponding device group in Intune.    
-
-To enable categories in your tenant, you must create a category in the Microsoft Endpoint Manager admin center and set up dynamic Azure Active Directory (Azure AD) security groups.  
+Device categories allow you to easily manage and group devices in Microsoft Intune. Create a category, such as *sales* or *accounting*, and Intune will automatically add all devices that fall within that category to the corresponding device group in Intune. To enable categories in your tenant, you must create a category in the Microsoft Endpoint Manager admin center and set up dynamic Azure Active Directory (Azure AD) security groups.  
  
 This article describes how to configure and edit device categories.   
 

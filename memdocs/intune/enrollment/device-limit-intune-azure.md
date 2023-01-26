@@ -38,11 +38,7 @@ ms.collection:
 - Windows 10
 - Windows 11
 
-Device limit restrictions can be configured two ways:
-- Intune enrollment
-- Azure Active Directory (AD) joined or Azure AD registered
-
-This article clarifies when these limits are applied based on your configuration.
+Device limit restrictions can be configured two ways: by Intune enrollment, or by Azure Active Directory (AD) joined or Azure AD registered. This article clarifies when these limits are applied based on your configuration.  
 
 ## Intune device limit restrictions
 
