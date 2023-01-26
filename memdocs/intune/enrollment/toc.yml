@@ -108,7 +108,7 @@ items:
       href: backup-restore-ios.md      
     - name: User and Device enrollment
       items:
-      - name: Create the profile
+      - name: Create user enrollment profile  
         href: ios-user-enrollment.md
       - name: User enrollment supported actions
         href: ios-user-enrollment-supported-actions.md

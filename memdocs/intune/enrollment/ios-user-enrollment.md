@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Enroll iOS/iPadOS devices with user enrollment in Microsoft Intune | Microsoft Docs
+title: Enable Apple User Enrollment for iOS/iPadOS in Microsoft Intune | Microsoft Docs
 titleSuffix: Microsoft Intune
-description: Learn how to set up iOS/iPadOS and iPadOS User Enrollment.
+description: Enable Apple User Enrollment in Microsoft Intune for iOS/iPadOS devices.  
 keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 12/21/2020
+ms.date: 01/26/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -31,16 +31,14 @@ ms.collection:
   - highpri
 ---
 
-# Set up Apple User Enrollment for iOS/iPadOS (preview)  
+# Set up Apple User Enrollment for iOS/iPadOS 
 
 > [!IMPORTANT]
 > This feature is in public preview. For more information, see [Public preview in Microsoft Intune](../fundamentals/public-preview.md).  
 
-Set up Intune to enroll user-owned iOS/iPadOS devices via Apple User Enrollment. *User Enrollment* enrolls devices that are a part of BYOD scenarios. Work data is securely kept on a separate volume on the device and in managed apps, away from the user's personal data. Devices enrolled this way do not become supervised. As the admin, you get access to a limited but appropriate subset of Intune management options and restrictions to ensure that your organization's data stays safe. 
+Set up Intune to enroll user-owned iOS/iPadOS devices via Apple User Enrollment. *User Enrollment* enrolls devices that are a part of BYOD scenarios. Devices enrolled this way do not become supervised. Work data is securely kept on a separate volume on the device and in managed apps, away from the user's personal data.  As the admin, you get access to a limited but appropriate subset of Intune management options and restrictions to ensure that your organization's data stays safe. 
 
-For more information about User Enrollment, see [User Enrollment and MDM](https://support.apple.com/guide/deployment/dep23db2037d/web) (opens Apple support website). 
-
-more information about the options available with User Enrollment, see [User Enrollment supported actions, passwords, and other options](ios-user-enrollment-supported-actions.md).  
+For more information about User Enrollment, see [User Enrollment and MDM](https://support.apple.com/guide/deployment/dep23db2037d/web) (opens Apple support website).  
 
 ## Prerequisites
 The user enrollment option is supported on devices running iOS verion 13 or later, and iPadOS version 13.1 or later. Before beginning setup, complete the following tasks:    
@@ -107,6 +105,8 @@ The volume and cryptographic keys created to manage the work data on the device 
 ## Next steps  
 * Device users sign into the Intune Company Portal app with their work or school account to initiate the enrollment process. For a look at their experience, see [Set up iOS device access to your company resources](../user-help/enroll-your-device-in-intune-ios). Remember, if you don't set up federated authentication with Apple Business Manager, you will need to provide Managed Apple ID credentials to your users so that they can complete enrollment. 
 
+* For supported management actions, see [User Enrollment supported actions, passwords, and other options](ios-user-enrollment-supported-actions.md).  
+
 * For troubleshooting, seee [Troubleshooting iOS/iPadOS device enrollment errors in Microsoft Intune](/troubleshoot/mem/intune/device-enrollment/troubleshoot-ios-enrollment-errors).  
 
 * For supported settings in Intune device configurations profiles, see:   
@@ -114,3 +114,4 @@ The volume and cryptographic keys created to manage the work data on the device 
    * [iOS and iPadOS device restrictions](../configuration/device-restrictions-ios.md)
    * [iOS and iPadOS device features](../configuration/ios-device-features-settings.md)  
    * [Set up per-app Virtual Private Network (VPN)](../configuration/vpn-setting-configure-per-app.md)  
+
