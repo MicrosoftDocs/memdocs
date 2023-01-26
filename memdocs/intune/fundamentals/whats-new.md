@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/17/2023
+ms.date: 01/25/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -70,8 +70,188 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 ### App management
 
+#### Configure whether to show Configuration Manager apps in Windows Company Portal<!-- 9135109 -->
+In Intune you can choose whether to show or hide Configuration Manager apps from appearing in the Windows Company Portal. This option is available in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Tenant administration** > **Customization**. Next to **Settings**, select **Edit**. The option to **Show** or **Hide** the Configuration Manager applications are located in the **App Sources** section of the pane. For related information about configuring the Company Portal app, see [How to configure the Intune Company Portal apps, Company Portal website, and Intune app](../apps/company-portal-app.md).
+
 #### Block pinning web pages to Managed Home Screen app<!-- 15593458 -->
 On Android Enterprise dedicated devices using Managed Home Screen, you can now use app configuration to configure the Managed Home Screen app to block pinning browser web pages to Managed Home Screen. The new `key` value is `block_pinning_browser_web_pages_to_MHS`. For more information, see [Configure the Microsoft Managed Home Screen app for Android Enterprise](../apps/app-configuration-managed-home-screen-app.md).
+
+### Device management
+
+#### Grace period status visible in Microsoft Intune app for Android<!-- 13498225 -->  
+The Microsoft Intune app for Android now shows a grace period status to account for devices that don't meet compliance requirements but are still within their given grace period. Users can see the date by which devices must be compliant, and the instructions for how to become compliant. If they don't update their device by the given date, the device is marked as noncompliant. For more information, see the following docs:  
+- [Configure compliance policies with actions for noncompliance](../protect/actions-for-noncompliance.md#available-actions-for-noncompliance)    
+- [Check compliance status](../user-help/check-compliance-microsoft-intune-app-android.md)  
+
+
+#### Software update policies for macOS are now generally available<!-- 12393100 -->   
+Software update policies for macOS devices are now generally available. This general availability applies to supervised devices running macOS 12 (Monterey) and later. We will continue to add improvements to this feature going forward.  
+
+For more information, see [Use Microsoft Intune policies to manage macOS software updates](../protect/software-updates-macos.md).
+
+#### AutoPilot device diagnostics<!-- 16697347 -->
+AutoPilot diagnostics is available to download in Microsoft Endpoint Manager admin center from either in the Autopilot deployments monitor or Device Diagnostics monitor for an individual device.
+
+### Device enrollment
+
+#### Enrollment notifications now generally available<!-- 16545401 -->
+Enrollment notifications are now generally available, and are supported on Windows, Apple, and Android devices. This feature is only supported with user-driven enrollment methods. For more information, see [Set up enrollment notifications](../enrollment/enrollment-notifications.md).  
+
+#### Skip or show Terms of Address pane in Setup Assistant<!-- 14661838 -->  
+Configure Microsoft Intune to skip or show a new Setup Assistant pane called **Terms of Address** during Apple Automated Device Enrollment. The Terms of Address pane lets users on iOS/iPadOS and macOS devices personalize their device by selecting how the system addresses them: feminine, neutral, or masculine.  The pane is visible during enrollment by default, and is available for select languages.  You can hide it on devices running iOS/iPadOS 16 and later, and macOS 13 and later. For more information about the Setup Assistant screens supported in Intune, see:  
+
+- [Setup Assistant screens for Macs](../enrollment/device-enrollment-program-enroll-macos.md#setup-assistant-screen-reference)
+- [Setup Assistant screens for iOS/iPadOS](../enrollment/device-enrollment-program-enroll-ios.md#setup-assistant-screen-reference)
+
+### Device security
+
+####  Attack surface reduction policy support for Security settings management for Microsoft Defender for Endpoint <!-- 13816760 -->  
+Attack surface reduction policy is now supported by devices managed through the [MDE Security configuration](../protect/mde-security-integration.md#which-solution-should-i-use) scenario. To use this policy with devices that use Microsoft Defender for Endpoint but aren't enrolled with Intune:
+
+1. In the Endpoint Security node, create a new *Attack surface reduction* policy.
+2. Select **Windows 10, Windows 11, and Windows Server** as the *Platform*.
+3. Select **Attack Surface Reduction Rules** for the *Profile*.  
+
+Applies to:  
+- Windows 10
+- Windows 11
+
+#### SentinelOne – New mobile threat defense partner<!-- 13911932 -->
+You can now use [SentinelOne](../protect/sentinelone-mobile-threat-defense-connector.md) as an integrated Mobile Threat Defense (MTD) partner with Intune. By configuring the SentinelOne connector in Intune, you can control mobile device access to corporate resources using conditional access that's based on risk assessment in your compliance policy. The SentinelOne connector can also send risk levels to app protection policies.
+
+### Device configuration
+
+#### Support for multi-SIM iOS/iPadOS device inventory<!--16360290 -->
+You can now view the service subscription fields on devices that have multiple SIM cards installed under the per-device Hardware section. The inventory fields that are capable of reporting multiple values to Intune are:
+
+- ICCID
+- IMEI
+- MEID
+- Phone number
+
+These fields will default to using labels returned by the device, such as: *Primary*, *Secondary*, *CTSubscriptionSlotOne*, and *CTSubscriptionSlotTwo*. These returned labels may be displayed in the language of the local device that is reporting its inventory to Intune.
+
+Applies to:
+- iOS/iPadOS
+
+#### Support for Bulk Device Actions on devices running Android AOSP<!--15397458 -->
+You can now complete "Bulk Device Actions" for devices running Android AOSP. The bulk device actions supported on devices running AOSP are Delete, Wipe and Restart.
+
+Applies to:  
+- AOSP
+
+#### Updated descriptions for iOS/iPadOS and macOS settings in the settings catalog<!-- 16360170 -->
+The settings catalog lists all the settings you can configure, and all in one place. For the iOS/iPadOS and macOS settings, for each setting category, the descriptions are updated to include more detailed information.
+
+For more information on the settings catalog, go to:
+- [Use the settings catalog to configure settings on Windows, iOS/iPadOS and macOS devices](../configuration/settings-catalog.md)
+- [Common tasks you can complete using the Settings Catalog in Intune](../configuration/settings-catalog-common-features.md)
+
+Applies to:
+- iOS/iPadOS
+- macOS
+
+#### New settings available in the Apple Settings Catalog<!--16237513  -->
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
+
+New settings are available in the Settings Catalog. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can see these settings at **Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type.
+
+New settings include:
+
+**Accounts > Subscribed Calendars**:
+- Account Description
+- Account Host Name
+- Account Password
+- Account Use SSL
+- Account Username
+
+Applies to:
+- iOS/iPadOS
+
+**Networking > Domains**:
+- Cross Site Tracking Prevention Relaxed Domains
+
+Applies to:
+- macOS
+
+The following settings are also in Settings Catalog. Previously, they were only available in Templates:
+
+**File Vault**:
+- User Enters Missing Info 
+
+Applies to:
+- macOS
+
+**Restrictions**:
+- Rating Region
+
+Applies to:
+- iOS/iPadOS
+
+For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
+
+
+#### Filter app and policy assignments by the device's Azure AD Join type (`deviceTrustType`)<!-- 8110331 -->
+When you assign an app or policy, you can filter the assignment using different device properties, such as device manufacturer, operating system SKU, and more.
+
+A new device filter property `deviceTrustType` is available for Windows 10 and later devices. With this property, you can filter app and policy assignments depending on the Azure AD Join type, with values of "Azure AD Joined", "Hybrid Azure AD Joined", and "Azure AD registered".
+
+For more information on filters and the device properties you can use, go to:
+- [Use filters when assigning your apps, policies, and profiles in Intune](filters.md)
+- [Device properties, operators, and rule editing when creating filters in Intune](filters-device-properties.md)
+
+Applies to:
+
+- Windows 10 and later
+
+### Monitor and troubleshoot
+
+#### WinGet troubleshooting using diagnostic files<!-- 16724699 -->
+[WinGet](/windows/package-manager/winget/) is a command line tool that enables you to discover, install, upgrade, remove, and configure applications on Windows 10 and Windows 11 devices. When working with [Win32 app management in Intune](../apps/apps-win32-app-management.md), you can now use the following file locations to help troubleshoot WinGet:
+- *%TEMP%\winget\defaultstate\*.log*
+- *Microsoft-Windows-AppXDeployment/Operational*
+- *Microsoft-Windows-AppXDeploymentServer/Operational*
+
+#### Intune troubleshooting pane update<!-- 4442647 -->  
+The Intune troubleshooting pane will provide a new experience.  It will provide details about user's devices, policies, applications, and status. The troubleshooting pane will include the following information:
+
+- A summary of policy, compliance, and application deployment status.
+- Support for exporting, filtering, and sorting all reports.
+- Support to filter by excluding policies and applications.
+- Support to filter to a user’s single device.
+- Details about available device diagnostics and disabled devices.
+- Details about offline devices that haven't checked-in to the service for three or more days.
+
+You can find the troubleshooting pane in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Troubleshooting + support** > **Troubleshoot**. To view the new experience during preview, select **Preview upcoming changes to Troubleshooting and provide feedback** to display the **Troubleshooting preview** pane, then select **Try it now**.
+
+#### New report for Devices without compliance policy (preview)<!--14911124 --> 
+We’ve added a new report named **Devices without compliance policy** to the Device compliance reports you can access through the *Reports* node of the Microsoft Endpoint Manager admin center.  This report, which is in preview, uses a  newer reporting format that provides for more capabilities.
+
+To learn about this new organizational report, see [Devices without compliance policy (preview) (Organizational)](../fundamentals/reports.md#devices-without-compliance-policy-preview-organizational).
+
+An older version of this report remains available through the *Devices > Monitor* page of the admin center. Eventually, that older report version will be retired, though it remains available for now.  
+
+#### Service health messages for tenant issues that require administrative attention<!-- 14791676 -->  
+The *Service health and message center page* in the Microsoft Endpoint Manager admin center can now display messages for **Issues in your environment that require action**. These messages are important communications that are sent to a tenant to alert administrators about issues in their environment that might require action to resolve. 
+
+You can view messages for *Issues in your environment that require action* in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by going to **Tenant administration** > **Tenant status** and then selecting the **Service health and message center** tab.
+
+For more information about this page of the admin center, see [View details about your Tenant on the Intune tenant status page](../fundamentals/tenant-status.md).
+
+### Tenant administration
+
+#### Improved UI experience for multiple certificate connectors<!-- 16263248 -->
+We’ve added pagination controls to the *Certificate connectors* view to help improve the experience when you have more than 25 certificate connectors configured. With the new controls, you can see the total number of connector records and easily navigate to a specific page when viewing your certificate connectors.
+
+To view certificate connectors, in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Tenant administration** > **Connectors and tokens** > **Certificate connectors**.
+
+### Intune apps
+
+#### Newly available protected app for Intune<!-- 16620158 -->
+The following protected app is now available for Microsoft Intune:
+- Voltage SecureMail by Voltage Security
+
+For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
 
 ### Scripts
 
@@ -280,7 +460,7 @@ Applies to:
 
 - Android Enterprise 12.0 and newer personally owned devices with a work profile
 
-#### New settings available in the iOS/iPadOS and macOS Settings Catalog <!-- 16068756 -->  
+#### New settings available in the iOS/iPadOS and macOS Settings Catalog<!-- 16068756 -->  
 The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
 
 New settings are available in the Settings Catalog. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can see these settings at **Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type.
