@@ -112,8 +112,9 @@ Changes to DNS records might take up to 72 hours to propagate. You can't verify 
 
 ### Step 2: Verify CNAME (optional)
 
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Windows** > **Windows enrollment** > **CNAME Validation**.
-2. In the **Domain** box, enter the company website and then choose **Test**.
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices** > **Windows** > **Windows enrollment**.  
+2. Select **CNAME Validation**.  
+2. For **Domain**, enter the company website, and then choose **Test**.
 
 ### Additional endpoints that aren't supported
 

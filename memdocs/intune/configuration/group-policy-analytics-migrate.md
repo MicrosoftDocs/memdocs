@@ -8,7 +8,7 @@ author: MandiOhlinger
 
 ms.author: mandia
 manager: dougeby
-ms.date: 10/10/2022
+ms.date: 01/26/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -41,9 +41,15 @@ This article shows you how to create the policy from your imported GPOs. For mor
 
 ## Before you begin
 
-- In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), sign in as the Intune administrator or with a role that has the **Security Baselines** permission.
+- In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), sign in as:
 
-  For example, the **Endpoint Security Manager** role has the **Security Baselines** permission. For more information on the built-in roles, go to [role-based access control](../fundamentals/role-based-access-control.md).
+  - The **Intune administrator**
+
+  **OR**
+
+  - With a role that has the **Security baselines** permission and the **Device configurations/Create** permission
+
+  For more information about the permissions included with the built-in Intune roles, go to [built-in admin roles](../fundamentals/role-based-access-control.md#built-in-roles). For information on custom roles, go to [assign permissions to custom roles](../fundamentals/create-custom-role.md#custom-role-permissions).
 
 - Import your on-premises GPOs, and review the results.
 
