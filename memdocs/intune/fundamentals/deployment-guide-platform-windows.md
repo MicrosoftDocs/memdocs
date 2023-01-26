@@ -138,7 +138,7 @@ As you set up apps and app policies, think about your organization's requirement
 | ---- | ------ | 
 |[Add line-of-business apps ](../apps/lob-apps-windows.md)|Add macOS line-of-business (LOB) apps to Intune and assign to groups.| 
 |[Add Microsoft Edge](../apps/manage-microsoft-edge.md) | Add and assign Microsoft Edge in Intune. | 
-|[Add Intune Company Portal app for Autopilot ](../apps/store-apps-company-portal-autopilott.md)|Assign the offline version of the Company Portal app on devices during Windows Autopilot setup.| 
+|[Add Intune Company Portal app for Autopilot ](../apps/store-apps-company-portal-autopilot.md)|Assign the offline version of the Company Portal app on devices during Windows Autopilot setup.| 
 |[Assign apps to groups ](../apps/apps-deploy.md)|After you add apps to Intune, assign them to users and devices.|
 |Assign Microsoft 365 |Add Microsoft 365 apps to Windows devices. | 
 |Add Microsoft Defender for Endpoint|Add Microsoft Defender for Endpoint to Intune.|
