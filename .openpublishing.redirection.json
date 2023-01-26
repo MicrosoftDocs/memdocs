@@ -1,6 +1,11 @@
 {
     "redirections": [
         {
+            "source_path": "memdocs/intune/configuration/use-enterprise-sso-plug-in-ios-ipados-macos-with-jamf-pro.md",
+            "redirect_url": "/mem/intune/configuration/use-enterprise-sso-plug-in-ios-ipados-macos",
+            "redirect_document_id": false
+        }, 
+        {
             "source_path": "memdocs/intune/user-help/send-errors-to-your-it-admin-ios.md",
             "redirect_url": "/mem/intune/user-help/send-logs-to-microsoft-ios",
             "redirect_document_id": false
