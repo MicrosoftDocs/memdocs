@@ -8,7 +8,7 @@ keywords:
 author: dougeby 
 ms.author: dougeby
 manager: dougeby
-ms.date: 01/09/2023
+ms.date: 01/26/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -171,16 +171,6 @@ Configure Intune to skip or show a new Setup Assistant pane called **Terms of Ad
 <!-- ***********************************************-->
 
 ## Device management
-
-### Microsoft Tunnel for Mobile Application Management for iOS/iPadOS (Preview)<!-- 15769204 -->  
-
-As a public preview, we’re adding support for Mobile Application Management (MAM) to the Microsoft Tunnel VPN gateway for iOS/iPadOS. With this preview for iOS devices that have not enrolled with Intune, supported apps on those unenrolled devices will be able to use Microsoft Tunnel to connect to your organization when working with corporate data and resources. This includes VPN gateway support for:  
-
-- Secure access to on-prem apps and resources using modern authentication
-- Single Sign On and conditional access.
-
-Applies to:  
-- iOS/iPadOS
 
 ### Software update policies for macOS will soon be generally available<!-- 12393100 -->  
 Software update policies for macOS devices will soon be out of preview and generally available. This general availability will apply to supervised devices running macOS 12 (Monterey) and later. We will continue to add improvements to this feature going forward.
