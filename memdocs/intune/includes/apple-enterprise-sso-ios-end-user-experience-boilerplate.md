@@ -13,7 +13,7 @@ ms.custom: include file
 
 ## End user experience
 
-:::image type="content" source="../configuration/media/apple-enterprise-sso-plug-in/flow-chart-end-user-iOSiPadOS.png" alt-text="End user flow chart when installing SSO app app extension on iOS/iPadOS devices.":::
+:::image type="content" source="../configuration/media/apple-enterprise-sso-plug-in/flow-chart-end-user-iosipados.png" alt-text="End user flow chart when installing SSO app app extension on iOS/iPadOS devices.":::
 
 - If you're not deploying the Microsoft Authenticator app using an app policy, then users must install it manually. Users don't need to use the Authenticator app, it just needs to be installed on the device.
 
