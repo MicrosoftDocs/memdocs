@@ -33,12 +33,13 @@ ms.collection:
 
 In the final phase of deployment, devices are registered or joined in Azure Active Directory (Azure AD), enrolled in Microsoft Intune, and checked for compliance. 
 
-Before enrollment begins, [a device identity](/azure/active-directory/devices/overview) needs to be established in your org's Azure AD. This step grants the user of the device single sign-on (SSO) access to cloud-based work apps and other resources. Registration in Azure AD is a required step for Intune management. 
+Enrollment is comprised of 3 parts: 
 
-* *Azure AD registration* is the device identity option available for personal and corporate-owned mobile devices. Users on these devices *sign in to work resources like apps and web browsers* using their Azure AD work account. 
-* *Azure AD joined* is the device identity option available for corporate-owned Windows 10/11 devices utilizing co-management options. Users on these devices *sign in to the device* using their Azure AD work account.   
+1. Before enrollment begins, the device user must authenticate to establish [a device identity](/azure/active-directory/devices/overview) in your org's Azure AD. This step grants the user of the device single sign-on (SSO) access to cloud-based work apps and other resources. Registration in Azure AD is a required step for Intune management. Identity options include:    
+ * *Azure AD registration* is the device identity option available for personal and corporate-owned mobile devices. Users on these devices *sign in to work resources like apps and web browsers* using their Azure AD work account. 
+ * *Azure AD joined* is the device identity option available for corporate-owned Windows 10/11 devices utilizing co-management options. Users on these devices *sign in to the device* using their Azure AD work account.   
 
-During enrollment, Microsoft Intune installs a mobile device management (MDM) certificate on the device, which enables Intune to enforce policies and profiles you created, such as:   
+2. During enrollment, Microsoft Intune installs a mobile device management (MDM) certificate on the device, which enables Intune to enforce policies and profiles you created, such as:   
 
 * Device enrollment restrictions
 * Configuration profiles
@@ -46,7 +47,7 @@ During enrollment, Microsoft Intune installs a mobile device management (MDM) ce
 * Terms and conditions 
 * Multifactor authentication 
 
-After enrollment, the device user is immediately notified of your compliance policies, and must update their device settings to meet requirements. This is the last step before the device is granted access to work resources.  
+3. After enrollment, the device user is immediately notified of your compliance policies, and must update their device settings to meet requirements. This is the last step before the device is granted access to work resources.  
 
 ## Create pilot groups  
 
@@ -57,7 +58,7 @@ For more information and suggestions, see the [Planning guide: Step 5 - Create a
 ## Pre-enrollment configurations  
 This section describes the general enrollment features and profiles available in Microsoft Intune. Configure these settings prior to enrollment.   
 
-### Unenroll and reset existing devices  
+### Step 1: Unenroll and reset existing devices  
 
 If devices are currently enrolled in another MDM provider, unenroll the devices from the existing MDM provider before enrolling them in Intune. The following table shows the devices that require a factory reset before enrolling in Intune. 
 
@@ -78,16 +79,16 @@ If devices are currently enrolled in another MDM provider, unenroll the devices 
 
 Devices that don't require a reset begin installing Intune profiles as soon as they enroll. Previously configured settings may remain on devices if you don't change them in Intune prior to enrollment.   
 
-### Add device enrollment managers     
+### Step 2: Add device enrollment managers     
 We recommend utilizing device enrollment managers when you need to enroll and prepare a large number of devices for distribution. A DEM account can enroll and manage up to 1,000 devices, while a standard non-admin account can only enroll 15 devices. A device enrollment manager (DEM) is a non-administrator Azure AD user who can:
 
 * Enroll up to 1000 corporate-owned devices in Intune
 * Sign in to Intune Company Portal to get company apps
 * Configure access to corporate data by deploying role-specific apps to devices  
 
-For more information and limitations, see [Add device enrollment managers](../enrollment/device-enrollment-manager-enroll.md).  
+Some enrollment methods, such as Apple automated device enrollment, aren't compatible with the device enrollment manager account, so be sure that the method you choose is supported before you begin setup. For more information and limitations, see [Add device enrollment managers](../enrollment/device-enrollment-manager-enroll.md).  
 
-### Create device enrollment restrictions  
+### Step 3: Create device enrollment restrictions  
 Use this feature in the Microsoft Endpoint Manager admin center to restrict certain devices from enrolling in Intune. There are two types of device enrollment restrictions you can configure in Microsoft Intune:
 
 * Device platform restrictions: Restrict devices based on device platform, version, manufacturer, or ownership type.
@@ -100,21 +101,21 @@ For more information, see:
 * [What are enrollment restrictions?](../enrollment/enrollment-restrictions-set.md) 
 * [Recommended device restrictions](../enrollment/device-enrollment-restrictions.md)
 
-### Create terms and conditions policy    
+### Step 4: Create terms and conditions policy    
 Use an Intune terms and conditions policy to disclose legal disclaimers and compliance requirements to device users before enrollment. This policy requires a person to accept your org's terms and conditions before they enroll their device or access protected resources. The terms and conditions are shown to targeted users in the Intune Company Portal app. 
 
 For more control over where your terms appear, configure Azure Active Directory terms of use. These terms are shown to users when they sign in to targeted apps and resources and offer more granular settings than Intune terms and conditions.   
 
 For more information, see [Terms and conditions for user access](../enrollment/terms-and-conditions-create.md).  
 
-### Require multifactor authentication  
+### Step 5: Require multifactor authentication  
 Require multifactor authentication (MFA) during Microsoft Intune enrollment. This feature is available for all platforms except Linux. 
 
-If you require MFA, people wanting to enroll devices must authenticate with a second device and two forms of credentials. This is a one-time conditional step, and ensures that the person on the device is who they say they are. For this feature to take effect, the user must be assigned an Azure AD Premium license. 
+If you require MFA, people wanting to enroll devices must authenticate with a second device and two forms of credentials before they can enroll their device. This is a one-time conditional step, and ensures that the person on the device is who they say they are. For this feature to take effect, the user must be assigned an Azure AD Premium license. 
 
 For more information, see [Require multifactor authentication for Intune device enrollments](../enrollment/multi-factor-authentication.md).   
 
-### Categorize devices into groups  
+### Step 6: Categorize devices into groups  
 Device categories make it easier to manage and group devices in Microsoft Intune by job title, department, or role. Create a category, such as *nursing* or *marketing*, and Intune will automatically add all devices that fall within that category to the corresponding device group in Intune. This feature is available for all platforms except Linux.  
 
 For more information, see [Categorize devices into groups](../enrollment/device-group-mapping.md).  
@@ -133,15 +134,23 @@ You can enroll personal or corporate-owned Android devices in Intune. We recomme
 ### Android enrollment options      
 These are the enrollment options available for Android devices in Intune. 
 
-You can enroll Android Enterprise devices as:   
+# [Work profile](#work-profile/profile)  
 * [Personally owned devices with a work profile](../enrollment/android-work-profile-enroll.md): Enroll personal devices in bring-your-own-device (BYOD) scenarios. This method creates a separate work profile on the personal device so that a person can switch between their personal apps and work apps easily and securely. The device owner enrolls their device through the Intune Company Portal app. As an admin, you can manage the apps and data in the work profile. This method aligns with the *Android Enterprise personally owned work profile* solution.    
-* [Corporate-owned devices with a work profile](../enrollment/android-corporate-owned-work-profile-enroll.md): Enroll corporate-owned devices that are also approved for personal use. This method creates a separate work profile on the device so that the user can switch between their personal apps and work apps easily and securely. The device user enrolls the device through the Microsoft Intune app. As an admin, you can manage the apps and data in the work profile.  This method aligns with the *Android Enterprise corporate-owned work profile* solution.   
-* [Corporate-owned, fully managed devices](../enrollment/android-dedicated-devices-fully-managed-enroll.md): Enroll corporate-owned devices exclusively for work and not personal use. There's one user associated with the device, which they enroll via user-associated devices. You can manage the entire device and enforce policy controls unavailable with the Android Enterprise work profile method. This method aligns with the *Android Enterprise fully managed* solution.   
-* [Corporate-owned, dedicated devices](../enrollment/android-kiosk-enroll.md): Enroll corporate-owned, single use or kiosk devices used for things like digital signage, ticket printing, or inventory management. With Intune, you can limit use on these devices to select apps and web links, and prevent people from using the device outside of the intended scope. This method aligns with the *Android Enterprise dedicated devices* solution.   
+* [Corporate-owned devices with a work profile](../enrollment/android-corporate-owned-work-profile-enroll.md): Enroll corporate-owned devices that are also approved for personal use. This method creates a separate work profile on the device so that the user can switch between their personal apps and work apps easily and securely. The device user enrolls the device through the Microsoft Intune app. As an admin, you can manage the apps and data in the work profile.  This method aligns with the *Android Enterprise corporate-owned work profile* solution.  
+
+# [Fully managed](#fully-managed/fully)  
+[Corporate-owned, fully managed devices](../enrollment/android-dedicated-devices-fully-managed-enroll.md): Enroll corporate-owned devices exclusively for work and not personal use. There's one user associated with the device, which they enroll via user-associated devices. You can manage the entire device and enforce policy controls unavailable with the Android Enterprise work profile method. This method aligns with the *Android Enterprise fully managed* solution.   
+
+ # [Dedicated](#dedicated/dedicated)
+[Corporate-owned, dedicated devices](../enrollment/android-kiosk-enroll.md): Enroll corporate-owned, single use or kiosk devices used for things like digital signage, ticket printing, or inventory management. With Intune, you can limit use on these devices to select apps and web links, and prevent people from using the device outside of the intended scope. This method aligns with the *Android Enterprise dedicated devices* solution.   
+
+# [AOSP](#aosp/aosp)
 
 You can enroll AOSP devices as:    
 * [Corporate-owned, userless devices](../enrollment/android-aosp-corporate-owned-userless-enroll.md): Enroll corporate-owned, userless devices that are built from AOSP and absent of Google Mobile services. These devices don't have a user associated with them and are intended to be shared, like in a library or lab.  
 * [Corporate-owned, user associated devices](../enrollment/android-aosp-corporate-owned-user-associated-enroll.md): Enroll corporate-owned, user-associated devices that are built from AOSP and absent of Google Mobile services. These devices are associated with a single user and intended to be exclusively for work use.  
+
+# [Zero touch](#zero-touch/zero)
 
 We recommend using zero-touch enrollment for bulk enrollments and to simplify enrollment for remote workers:  
 * [Zero-touch enrollment](../enrollment/android-dedicated-devices-fully-managed-enroll.md#enroll-by-using-google-zero-touch): Prepare corporate-owned devices ahead of time so that they automatically provision and enroll as fully manged devices when users turn them on. To use Android zero-touch enrollment, link your zero-touch account to Intune in the Microsoft Endpoint Manager admin center. Zero-touch enrollment must be supported on your devices and affiliated with a supplier that is part of the Android zero-touch enrollment service.  
