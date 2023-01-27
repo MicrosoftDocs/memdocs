@@ -261,9 +261,9 @@ items:
         - name: Use scope tags to determine what admins can see
           href: ./fundamentals/scope-tags.md
 
-    - name: Premium add-ons (will need to sell this and move when it grows)
+    - name: Choose Intune add-ons (Include different options - Intune suite, plan B, ad hoc, etc.)
       items:
-      - name: Premium add-ons (will need to sell this and move when it grows)
+      - name: Intune add-ons
         href: ./fundamentals/premium-add-ons.md
       - name: Microsoft Tunnel for MAM
         href: ./protect/microsoft-tunnel-mam.md
