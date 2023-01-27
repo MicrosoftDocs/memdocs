@@ -449,7 +449,7 @@ The following additional hotfixes are available to address specific issues:
 
 | ID | Title | Date | In-console |
 |---------|---------|---------|---------|
-| [9833643](../../../hotfix/2103/9833643.md) | Console update for Microsoft Configuration Manager version 2103 | May 11, 2021 | No |
+| [9833643](../../../hotfix/2103/9833643.md) | Console update for Microsoft Endpoint Configuration Manager version 2103 | May 11, 2021 | No |
 
 ## Next steps
 

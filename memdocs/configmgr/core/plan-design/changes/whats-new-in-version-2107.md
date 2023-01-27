@@ -444,7 +444,7 @@ The following additional hotfixes are available to address specific issues:
 
 | ID | Title | Date | In-console |
 |---------|---------|---------|---------|
-| [12636660](../../../hotfix/2107/12636660.md) | Client update for Microsoft Configuration Manager version 2107 | December 2, 2021 | No |
+| [12636660](../../../hotfix/2107/12636660.md) | Client update for Microsoft Endpoint Configuration Manager version 2107 | December 2, 2021 | No |
 
 ## Next steps
 
