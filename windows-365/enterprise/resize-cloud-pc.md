@@ -40,9 +40,9 @@ Resizing gives admins the flexibility to upgrade/downgrade the following specifi
 - Increase the disk space for file storing.
 - Decrease the RAM and vCPU cores when a user doesn't need to run CPU intensive applications.
 
-Resizing doesn't you let downsize disk space.
-Resizing preserves user data. Users will be able to access all of their data after the resizing is finished. 
+Resizing doesn't let you downsize disk space.
 
+Resizing preserves user data. Users will be able to access all of their data after the resizing is finished.
 
 ## Requirements
 
@@ -53,6 +53,8 @@ To resize a Cloud PC, the admin must have any of the following built in Azure Ac
 - Intune Reader + Cloud PC Admin roles
 
 Alternatively, you can assign a custom role that includes the permissions of the built-in roles above.
+
+In order to use **Resize** there should be a license of the appropriate target SKU available which is not assigned to any user.
 
 To **Resize** a Cloud PC, it must have a status of **Provisioned** in the Windows 365 provisioning node
 

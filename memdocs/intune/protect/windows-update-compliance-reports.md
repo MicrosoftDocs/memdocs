@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Use Update Compliance reports for Windows Updates in Microsoft Intune
+title: Use Windows Update for Business reports for Windows Updates in Microsoft Intune
 titleSuffix: Microsoft Intune
-description: Use OMS Update Compliance to view report data for Windows Updates you deploy with Intune.
+description: Use Windows Update for Business reports to view data for Windows Updates you deploy with Intune.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/05/2022
+ms.date: 12/09/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -36,13 +36,13 @@ With Intune, you can deploy updates to Windows 10/11 devices by using policies f
 
 - **Reports in Intune**:
   - **Windows 10 update rings** – Use a [built-in report](#reports-for-update-rings-for-windows-10-and-later-policy) that's ready by default when you deploy update rings to your devices.
-  - **Windows 10 feature updates** *In public preview* – Use [two built-in reports](#reports-for-windows-10-and-later-feature-updates-policy) that work together to gain a deep picture of update status and issues. These reports require you to configure data collection from devices before the reports can display data about feature updates.
+  - **Windows 10 feature updates** – Use [two built-in reports](#reports-for-windows-10-and-later-feature-updates-policy) that work together to gain a deep picture of update status and issues. These reports require you to configure data collection from devices before the reports can display data about feature updates.
 
-- **Update Compliance**:
+- **Windows Update for Business reports**:
 
-  [Use Update Compliance with Intune](#use-update-compliance) to monitor Windows update rollouts. Update Compliance is a free service built on Azure Monitor and Log Analytics.
+  [Use Windows Update for Business reports with Intune](#use-windows-update-for-business-reports) to monitor Windows update rollouts. Windows Update for Business reports is a free service built on Azure Monitor and Log Analytics.
 
-For more information, see [Monitor Windows Updates with Update Compliance](/windows/deployment/update/update-compliance-monitor) in the Windows documentation.
+For more information, see [Monitor Windows Updates with Windows Update for Business reports](/windows/deployment/update/wufb-reports-overview) in the Windows documentation.
 
 ## Reports for Update rings for Windows 10 and later policy
 
@@ -58,8 +58,6 @@ Intune offers integrated report views for the Windows update ring policies you d
    - **End-user update status** – View the Windows device update state. See [windowsUpdateState](/graph/api/resources/intune-shared-windowsupdatestate?view=graph-rest-beta&preserve-view=true).
     --> 
 ## Reports for Windows 10 and later feature updates policy
-
-*This feature is in preview.*
 
 Intune offers integrated reports to view detailed Windows update deployment status for devices using Feature updates for Windows 10 and later policies. To use reports for this feature, you must first configure prerequisites and policies that support data collection from devices.
 
@@ -128,8 +126,6 @@ The data for these reports is generated at different times, which depend on the 
 - **Client-based data from Intune devices that are configured to send data to Intune** – This data is processed in batches and refreshes every eight hours, but is only available after you configure data collection. The data contains information like when a client doesn't have enough disk space to install an update. This data is also used in the Windows 10 feature updates organizational report to show the various installation steps a device moves through when installing feature updates.
 
 ### Use the Windows 10 feature updates (Organizational) report
-
-*In public preview*
 
 The **Windows 10 feature updates** report provides an overview of compliance for devices you target with a [Windows feature updates](../protect/windows-10-feature-updates.md) policy.
 
@@ -218,8 +214,6 @@ To use the report:
 
 ### Use the Feature update failures (Operational) report
 
-*In public preview*
-
 The **Feature update failures** operational report provides details for devices that you target with a [Windows 10 and later feature updates](../protect/windows-10-feature-updates.md) policy, and that have attempted to install an update. Devices in this report might have an Alert that prevents the device from completing installation of the update.
 
 > [!IMPORTANT]  
@@ -301,19 +295,19 @@ The following list identifies Alert Messages, and suggested remediation actions:
 | **WUDiskError**  | Windows Update encountered an error while reading or writing to the system drive. | Run the Windows Update Troubleshooter on the device. Retry the installation. |
 | **WUIssue**  | Windows Update couldn't understand the metadata provided by the update service. This error usually indicates a problem with the update. | Contact support. |
 
-## Use Update Compliance
+## Use Windows Update for Business reports
 
-You can monitor Windows update rollouts by using [Update Compliance](/windows/deployment/update/update-compliance-get-started). Update Compliance is offered through the Azure portal and is included as part of Windows 10/11 licenses listed in the [prerequisites](/windows/deployment/update/update-compliance-get-started#update-compliance-prerequisites). Azure Log Analytics ingestion and retention charges are not incurred on your Azure subscription for Update Compliance data.
+You can monitor Windows update rollouts by using [Windows Update for Business reports](/windows/deployment/update/wufb-reports-overview). Windows Update for Business reports is offered through the Azure portal and is included as part of Windows 10/11 licenses listed in the [prerequisites](/windows/deployment/update/wufb-reports-prerequisites). Azure Log Analytics ingestion and retention charges are not incurred on your Azure subscription for Windows Update for Business reports data.
 
 To use this solution, you'll:
 
-- Use an Intune device configuration profile to deploy your [CommercialID](/windows/deployment/update/update-compliance-get-started#get-your-commercialid) to your Windows 10/11 devices. The CommericalID associates the devices with your Log Analytics workspace.
+- Use an Intune device configuration profile to deploy the [settings](/windows/deployment/update/wufb-reports-configuration-intune) to your Windows 10/11 devices.
 
-- Optionally deploy a configuration script as a Win32 app to those same devices to validate their configuration for Update Compliance.
+- Optionally, deploy a configuration script as a Win32 app to those same devices to validate their configuration for Windows Update for Business reports.
 
-- Use the Update Compliance workspace to [Monitor Windows updates](/windows/deployment/update/update-compliance-monitor).
+- Use Windows Update for Business reports to [Monitor Windows updates](/windows/deployment/update/wufb-reports-workbook).
 
-For guidance on this solution, see [Configuring devices for Update Compliance in Microsoft Endpoint Manager](/windows/deployment/update/update-compliance-configuration-mem) in the Update Compliance documentation.
+For guidance on this solution, see [Configuring Microsoft Intune devices for Windows Update For Business reports](/windows/deployment/update/wufb-reports-configuration-intune) in the Windows Update For Business reports documentation.
 
 ## Next steps
 

@@ -76,7 +76,7 @@ Depending on the carrier used by the devices, not all details might be collected
 |Detail|Description|Platform|
 |--------------|----------------------|----|  
 |Name|The name of the device.|Windows, MacOS, iOS, Android|
-|Management name|The device name used only in the console. Changing this name won't change the name on the device.|Windows, MacOS, iOS, Android <br/><br/> NOTE: Management names will not automatically populate for Android Enterprise dedicated, fully managed, and corporate-owned with work profile devices that were enrolled before November 2021. However, the admin may still edit the management name.|
+|Management name|The device name used only in the admin center. Changing this name won't change the name on the device.|Windows, MacOS, iOS, Android <br/><br/> NOTE: Management names will not automatically populate for Android Enterprise dedicated, fully managed, and corporate-owned with work profile devices that were enrolled before November 2021. However, the admin may still edit the management name.|
 |UDID|The device's Unique Device identifier.|Windows, MacOS, iOS|
 |Intune Device ID|A GUID that uniquely identifies the device.|Windows, MacOS, iOS, Android|
 |Serial number|The device's serial number from the manufacturer.|Windows, MacOS, iOS, iPadOS, Android <br/><br/> Intune doesn't display serial number for Android personally-owned work profile devices running Android 12 and newer.|
@@ -120,9 +120,10 @@ Depending on the carrier used by the devices, not all details might be collected
 |Battery level|Shows the battery level of the device, between 0 and 100, or defaults to null if the battery level cannot be determined.|iOS/iPadOS|
 |Resident users|Shows the number of users currently on the shared iPad device, or defaults to null if the number of users cannot be determined.|iOS/iPadOS|
 
-> [!Note]  
-> For Windows 10 devices that are registered with [Windows Autopilot service](../../autopilot/add-devices.md), Enrolled date might display the time when devices were registered with Autopilot instead of the time when they were enrolled.
-> For Android Enterprise corporate-owned work profile devices, reporting for phone number is not supported. For Android Enterprise fully managed and dedicated devices, reporting for phone number is supported; however, certain SIM cards will not write the data and therefore the phone number won't get reported in those cases.
+>[!NOTE]
+ > - For Windows 10 devices that are registered with [Windows Autopilot service](../../autopilot/add-devices.md), Enrolled date displays the time when devices were registered with Autopilot instead of the time when they were enrolled.
+ > - For Android Enterprise corporate-owned work profile devices, reporting for phone number is not supported. For Android Enterprise fully managed and dedicated devices, reporting for phone number is supported; however, certain SIM cards will not write the data and therefore the phone number won't get reported in those cases
+ > - If an iOS/iPadOS device has dual-SIM enabled then both values are collected. 
 
 ## Next steps
 

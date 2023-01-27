@@ -1,6 +1,16 @@
 {
     "redirections": [
         {
+            "source_path": "memdocs/intune/user-help/send-errors-to-your-it-admin-ios.md",
+            "redirect_url": "/mem/intune/user-help/send-logs-to-microsoft-ios",
+            "redirect_document_id": false
+        }, 
+        {
+            "source_path": "memdocs/intune/user-help/send-logs-to-microsoft-android.md",
+            "redirect_url": "/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android",
+            "redirect_document_id": false
+        }, 
+        {
             "source_path": "memdocs/endpoint-manager-getting-started.md",
             "redirect_url": "/mem/intune/fundamentals/get-started-with-intune",
             "redirect_document_id": false
@@ -33,6 +43,7 @@
         {
             "source_path": "memdocs/intune/user-help/what-happens-if-you-install-the-Company-Portal-app-and-enroll-your-device-in-intune-ios.md",
             "redirect_url": "/mem/intune/user-help/use-managed-devices-to-get-work-done",
+            "redirect_document_id": false
         }, 
         {
             "source_path": "memdocs/intune/user-help/how-to-set-the-period-before-your-android-device-is-locked.md",
@@ -264,7 +275,7 @@
         },
         {
             "source_path": "memdocs/intune/user-help/you-get-an-error-while-using-the-company-portal-app-ios.md",  
-            "redirect_url": "/mem/intune/user-help/send-errors-to-your-it-admin-ios",  
+            "redirect_url": "/mem/intune/user-help/send-logs-to-microsoft-ios",  
             "redirect_document_id": false
         },
         {
@@ -1247,6 +1258,11 @@
             "redirect_url": "/mem/solutions/cloud-native-endpoints/cloud-native-endpoints-planning-guide",
             "redirect_document_id": false
         },
+        {
+            "source_path": "memdocs/intune/protect/context/pr-context.yml",
+            "redirect_url": "/mem/intune/protect",
+            "redirect_document_id": false
+        },        
         {
             "source_path": "memdocs/cloud-native-windows-endpoints.md",
             "redirect_url": "/mem/solutions/cloud-native-endpoints/cloud-native-windows-endpoints",

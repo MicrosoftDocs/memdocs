@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/18/2022
+ms.date: 12/09/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -28,8 +28,6 @@ ms.collection: M365-identity-device-management
 ---
 
 # Expedite Windows quality updates in Microsoft Intune
-
-*This feature is in public preview.*
 
 With *Quality updates for Windows 10 and Later* policy, you can expedite the install of the most recent Windows 10/11 security updates as quickly as possible on devices you manage with Microsoft Intune. Deployment of expedited updates is done without the need to pause or edit your existing monthly servicing policies. For example, you might expedite a specific update to mitigate a security threat when your normal update process wouldn’t deploy the update for some time.
 
@@ -65,7 +63,7 @@ The actual time that a device starts to update depends on the device being onlin
 ## Prerequisites
 
 > [!IMPORTANT]
-> This feature is not supported on GCC High/DoD cloud environments.
+> This feature is not supported on GCC and GCC High/DoD cloud environments.
 
 The following are requirements to qualify for installing expedited quality updates with Intune:
 
@@ -175,7 +173,7 @@ Before you can monitor results and update status for expedited updates, your Int
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Devices** > **Windows** > **Quality updates for Windows 10 and later (Preview)** > **Create profile**.
+2. Select **Devices** > **Quality updates for Windows 10 and later** > **Create profile**.
 
    :::image type="content" source="./media/windows-10-expedite-updates/create-quality-update-profile.png" alt-text="Screen capture of the Create profile UI":::
 

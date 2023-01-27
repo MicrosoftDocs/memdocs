@@ -62,6 +62,9 @@ This article describes how to limit access to Office 365 services. You can use t
 10. Select **On** (under **Enable policy**). This policy will restrict users from accessing Office 365 services on non-Cloud PC devices. You may want to select **Report-only** to monitor the policy and build confidence prior to enforcing it.
 11. Select **Create** to complete the creation of policy.
 
+>[!NOTE]
+>If you have configured a provisioning policy to **Use single sign-on (preview)**, you may need to also add the **Microsoft Remote Desktop** to the exclude list in Step 6 for single sign-on connections to work as expected.
+
 ## Other devices
 
 This sample policy can be extended to meet other use cases, like also permitting access to Office 365 services from users' mobile and tablet devices. To do so, make the following changes to the policy:

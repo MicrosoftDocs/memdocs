@@ -68,7 +68,7 @@ items:
       href: device-locate.md
     - name: Rename device
       href: device-rename.md
-    - name: Use remote help
+    - name: Use Remote Help
       href: remote-help.md
     - name: Use TeamViewer for remote administration
       href: teamviewer-support.md

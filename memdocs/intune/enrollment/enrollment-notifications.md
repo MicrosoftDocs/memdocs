@@ -31,23 +31,14 @@ ms.collection: M365-identity-device-management
 
 # Set up enrollment notifications   
 
-> [!IMPORTANT]
-> This feature is in public preview. For more information, see [Public preview in Microsoft Intune](../fundamentals/public-preview.md).  
+[!INCLUDE [azure_portal](../includes/azure_portal.md)]  
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
+*Applies to: Android, iOS/iPadOS, macOS, Windows 10, Windows 11*  
 
-Set up enrollment notifications in Microsoft Intune to notify employees of newly enrolled devices. You can create a custom message for employees and include information in the notification about how to report an unrecognized device. 
+Set up enrollment notifications in Microsoft Intune to notify employees of newly enrolled devices. Enrollment notifications are sent to assigned users via your selected method: email or push notification. Within a notification, you can:  
 
-Intune delivers enrollment notifications via email or push notification. You can apply your tenant's branding and customization settings to email notifications. 
-
-Enrollment notifications work on devices running:  
-
-* Android  
-* iOS/iPadOS
-* macOS 
-* Windows 10/11 
-
-This article describes how to create enrollment notifications in the Microsoft Endpoint Manager admin center.  
+* Add a custom message for the user, with information about how to report an unrecognized device.  
+* Apply your tenant's branding and customization settings (email notifications only).   
 
 ## Example  
 The following example image shows what an enrollment notification looks like to a device user.  
@@ -61,7 +52,7 @@ To create an enrollment notification, you must:
 * Be a Global Administrator or Intune Administrator. 
 * [Configure branding and customization settings](../apps/company-portal-app.md) in **Tenant administration** > **Customization**.  
 
-Enrollment notifications only work with user-driven enrollment methods.   
+Enrollment notifications work with user-driven enrollment methods. They aren't supported in userless enrollment scenarios. 
 
 ## You should know  
 Email notifications appear in the user's inbox. Push notifications appear in the Intune Company Portal apps for iOS/iPadOS, macOS, and Android.  Enrollment push notifications aren't supported in the Company Portal for Windows, so they'll never appear there.  
@@ -76,7 +67,7 @@ Email notifications appear in the user's inbox. Push notifications appear in the
    * **Windows enrollment**  
    * **Apple enrollment**  
    * **Android enrollment**    
-3. Select **Enrollment notifications (preview)**.  
+3. Select **Enrollment notifications**.  
 4. Select **Create notification**. For Apple and Android notifications, select the OS platform you're configuring the notifications for. 
 
     Your options for Apple enrollment are:  
@@ -121,4 +112,4 @@ Email notifications appear in the user's inbox. Push notifications appear in the
 11. Select **Next**. 
 12. In **Review + create**, review the notification details, and then select **Create**.  
 
-Enrollment notifications are sent out to assigned groups when enrollment is triggered. Return to **Enrollment notifications (preview)** to view and edit notifications, or change priority level. 
+Enrollment notifications are sent out to assigned groups when enrollment is triggered. Return to **Enrollment notifications** to view and edit notifications, or change priority level. 

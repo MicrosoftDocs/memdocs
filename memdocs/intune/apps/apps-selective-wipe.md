@@ -33,8 +33,6 @@ ms.collection:
 
 # How to wipe only corporate data from Intune-managed apps
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
-
 When a device is lost or stolen, or if the employee leaves your company, you want to make sure company app data is removed from the device. But you might not want to remove personal data on the device, especially if the device is an employee-owned device.
 
 >[!NOTE]
@@ -49,6 +47,7 @@ To selectively remove company app data, create a wipe request by using the steps
 > Contacts synced directly from the app to the native address book are removed. Any contacts synced from the native address book to another external source can't be wiped. Currently, this only applies to the Microsoft Outlook app.
 
 ## Deployed WIP policies without user enrollment
+
 Windows Information Protection (WIP) policies can be deployed without requiring MDM users to enroll their Windows 10 device. This configuration allows companies to protect their corporate documents based on the WIP configuration, while allowing the user to maintain management of their own Windows devices. Once documents are protected with a WIP policy, the protected data can be selectively wiped by an Intune administrator ([Global administrator or an Intune Service administrator](../fundamentals/users-add.md#types-of-administrators)). By selecting the user and device, and sending a wipe request, all data that was protected via the WIP policy will become unusable. From the Intune in the portal, select **Client app** > **App selective wipe**. For more information, see [Create and deploy Windows Information Protection (WIP) app protection policy with Intune](windows-information-protection-policy-create.md).
 
 ## Create a device based wipe request
@@ -111,10 +110,10 @@ Wipes with pending status are displayed until you manually delete them. To manua
 User wipes will remain in the list until removed by an administrator. To remove a user from the list:
 
 1. On the **Client Apps - App selective wipe** pane select **User-Level Wipe**
-2. From the list, right-click on the user you want to delete, then choose **Delete**. 
-
+2. From the list, right-click on the user you want to delete, then choose **Delete**.
 
 ## See also
+
 [What's app protection policy](app-protection-policy.md)
 
 [What's app management](app-management.md)

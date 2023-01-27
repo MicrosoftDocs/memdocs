@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 11/28/2022
+ms.date: 01/17/2023
 ms.topic: reference
 ms.service: windows-365
 ms.subservice:
@@ -51,10 +51,67 @@ Learn what new features are available in Windows 365 Enterprise.
 -->
 
 <!-- ########################## -->
+## Week of January 16, 2023
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Monitor and troubleshoot
+
+#### Windows 365 Government support for forensic auditing of Cloud PCs<!--41237533-->
+
+Forensic auditing is now available for Windows 365 Government. For more information, see [Digital forensics and Windows 365 Enterprise Cloud PCs](digital-forensics.md) and [Place a Cloud PC under review](place-cloud-pc-under-review.md).
+
+
+<!-- ########################## -->
+## Week of January 2, 2023
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Role-based access control
+
+#### Support for custom Windows 365 RBAC roles now generally available<!--42650520  -->
+
+Support for custom Windows 365 role-based access control (RBAC) roles has moved out of preview and into general availability. These custom roles are also now supported for Windows 365 Government (Government Community Cloud and Government Community Cloud High). For more information, see [Custom roles](role-based-access.md#custom-roles).
+
+<!-- ########################## -->
+## Week of December 12, 2022
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Provisioning
+
+#### Provision Azure Active Directory Join Cloud PCs with single sign-on<!--42104318-->
+
+Windows 365 now supports creating Azure Active Directory Join Cloud PCs that use single sign-on for Cloud PC login. Existing Cloud PCs won’t have single sign-on configured. For more information, see [Create provisioning policy](create-provisioning-policy.md) and [Edit provisioning policy](edit-provisioning-policy.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### New Third-party connector column on All devices page<!--42555983-->
+
+There's a new column on the **All devices page**: **Third-party connector**. For more information, see [Device management overview for Cloud PCs](device-management-overview.md).
+
+#### Retry Citrix agent installation<!--42555983-->
+
+You can now use the **Retry Citrix agent installation** option instead of doing a full provisioning retry. For more information, see [Retry Citrix agent installation](retry-citrix-agent-installation.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Documentation
+
+#### New documentation article: Windows 365 deployment options
+
+We’ve published a new help documentation article. For more information, see [Windows 365 deployment options](deployment-options.md).
+
+<!-- ########################## -->
+## Week of December 5, 2022
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Support for RDP Shortpath for public networks now generally available<!--41057892-->
+Support for RDP Shortpath for public networks has moved out of preview and into general availability. For more information about RDP Shortpath, see [Use RDP Shortpath for public networks with Windows 365](rdp-shortpath-public-networks.md).
+
+<!-- ########################## -->
 ## Week of November 28, 2022
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
-
 ### Provisioning
 
 #### New Geography option in Windows 365 provisioning policy<!-- 41400209-->
@@ -452,7 +509,7 @@ A Cloud PC’s name is now appended to the network interface name within the Azu
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
 
-#### New remote action: remote help<!--38310389-->
+#### New remote action: Remote Help<!--38310389-->
 
 The [Remote Help remote action](/mem/intune/remote-actions/remote-help) (in the Microsoft Endpoint Manager admin center) lets admins start a remote session into an end user’s Cloud PC.
 
@@ -615,7 +672,7 @@ To improve reliability, the maximum provisioning timeout has been changed to fiv
 
 #### Custom Windows 365 RBAC roles in public preview<!--36222579  -->
 
-Custom Windows 365 role-based access control (RBAC) roles are now available in the Microsoft Endpoint Manager admin center. You can mix-and-match Windows 365 permissions to create custom roles for your organization's needs. You can also create both Windows 365 and Intune custom roles and give granular admin permissions to admins for both services. For more information, see [Custom roles](role-based-access.md#custom-roles-public-preview).
+Custom Windows 365 role-based access control (RBAC) roles are now available in the Microsoft Endpoint Manager admin center. You can mix-and-match Windows 365 permissions to create custom roles for your organization's needs. You can also create both Windows 365 and Intune custom roles and give granular admin permissions to admins for both services. For more information, see [Custom roles](role-based-access.md#custom-roles).
 
 <!-- ########################## -->
 ## Week of October 11, 2021 (Service release 2109)

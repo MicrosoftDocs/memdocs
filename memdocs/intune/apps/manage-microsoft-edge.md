@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Manage Edge for iOS and Android with Intune 
+title: Manage Microsoft Edge on iOS and Android with Intune
 titleSuffix: 
 description: Use Intune app protection and configuration policies with Edge for iOS and Android to ensure corporate websites are always accessed with safeguards in place. 
 keywords:
@@ -32,7 +32,7 @@ ms.collection:
 ms.custom: intune-azure
 ---
 
-# Manage web access by using Edge for iOS and Android with Microsoft Intune
+# Manage Microsoft Edge on iOS and Android with Intune
 
 Edge for iOS and Android is designed to enable users to browse the web and supports multi-identity. Users can add a work account, as well as a personal account, for browsing. There is complete separation between the two identities, which is like what is offered in other Microsoft mobile apps.
 
@@ -287,7 +287,7 @@ Edge for Android can be enabled as a kiosk app with the following settings:
 
 ## Data protection app configuration scenarios
 
-Edge for iOS and Android supports app configuration policies for the following data protection settings when the app is managed by Microsoft Endpoint Manager with an Intune App Protection Policy applied to the work or school account that is signed into the app and the policy settings are delivered only through a managed apps App Configuration Policy:
+Edge for iOS and Android supports app configuration policies for the following data protection settings when the app is managed by Microsoft Intune with an Intune App Protection Policy applied to the work or school account that is signed into the app and the policy settings are delivered only through a managed apps App Configuration Policy:
 
 - Manage account synchronization
 - Manage restricted web sites
@@ -306,7 +306,7 @@ By default, Microsoft Edge sync enables users to access their browsing data acro
 
 Sync functionality is enabled via user consent and users can turn sync on or off for each of the data types listed above. For more information see [Microsoft Edge Sync](/DeployEdge/microsoft-edge-enterprise-sync).
 
-Organizations have the capability to disable Edge sync on iOS and Android. 
+Organizations have the capability to disable Edge sync on iOS and Android.
 
 |Key |Value |
 |:--|:----|
@@ -340,7 +340,7 @@ The following sites are always allowed regardless of the defined allow list or b
 - `https://*.microsoftonline.com/*`
 - `https://*.microsoftonline-p.com/*`
 
-#### URL formats for allowed and blocked site list 
+#### URL formats for allowed and blocked site list
 
 You can use various URL formats to build your allowed/blocked sites lists. These permitted patterns are detailed in the following table.
 
@@ -350,7 +350,7 @@ You can use various URL formats to build your allowed/blocked sites lists. These
 - You can specify port numbers in the address. If you do not specify a port number, the values used are:
   - Port 80 for http
   - Port 443 for https
-- Using wildcards for the port number is **not** supported. For example, `http://www.contoso.com:*` and `http://www.contoso.com:*/` are not supported. 
+- Using wildcards for the port number is **not** supported. For example, `http://www.contoso.com:*` and `http://www.contoso.com:*/` are not supported.
 
   |URL |Details |Matches |Does not match |
   |:----|:-------|:----------|:----------------|
@@ -381,7 +381,7 @@ You can use various URL formats to build your allowed/blocked sites lists. These
 You can use Edge for iOS and Android and [Azure AD Application Proxy](/azure/active-directory/active-directory-application-proxy-get-started) together to give users access to intranet sites on their mobile devices. For example: 
 
 - A user is using the Outlook mobile app, which is protected by Intune. They then click a link to an intranet site in an email, and Edge for iOS and Android recognizes that this intranet site has been exposed to the user through Application Proxy. The user is automatically routed through Application Proxy, to authenticate with any applicable multi-factor authentication and Conditional Access, before reaching the intranet site. The user is now able to access internal sites, even on their mobile devices, and the link in Outlook works as expected.
-- A user opens Edge for iOS and Android on their iOS or Android device. If Edge for iOS and Android is protected with Intune, and Application Proxy is enabled, the user can go to an intranet site by using the internal URL they are used to. Edge for iOS and Android recognizes that this intranet site has been exposed to the user through Application Proxy. The user is automatically routed through Application Proxy, to authenticate before reaching the intranet site. 
+- A user opens Edge for iOS and Android on their iOS or Android device. If Edge for iOS and Android is protected with Intune, and Application Proxy is enabled, the user can go to an intranet site by using the internal URL they are used to. Edge for iOS and Android recognizes that this intranet site has been exposed to the user through Application Proxy. The user is automatically routed through Application Proxy, to authenticate before reaching the intranet site.
 
 Before you start:
 
@@ -420,7 +420,7 @@ Organizations can enable NTLM credential caching for particular web sites. For t
 
 If you are using Microsoft Endpoint Manager as your mobile app management provider, the following steps allow you to create a managed apps app configuration policy. After the configuration is created, you can assign its settings to groups of users.
 
-1. Sign into [Microsoft Endpoint Manager](https://endpoint.microsoft.com).
+1. Sign into the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Apps** and then select **App configuration policies**.
 
@@ -463,7 +463,7 @@ If you are using Microsoft Endpoint Manager as your mobile app management provid
 
 The newly created configuration policy is displayed on the **App configuration** blade.
 
-## Use Edge for iOS and Android to access managed app logs
+## Use Edge for iOS and Android to access managed app logs  
 
 Users with Edge for iOS and Android installed on their iOS or Android device can view the management status of all Microsoft published apps. They can send logs for troubleshooting their managed iOS or Android apps by using the following steps:
 
@@ -473,9 +473,9 @@ Users with Edge for iOS and Android installed on their iOS or Android device can
 
 3. Edge for iOS and Android launches troubleshooting mode.
 
-For a list of the settings stored in the app logs, see [Review client app protection logs](app-protection-policy-settings-log.md).
+You can retrieve logs from Microsoft Support by giving them the user's incident ID.  
 
-To see how to view logs on Android devices, see [Send logs to your IT admin by email](../user-help/send-logs-to-your-it-admin-by-email-android.md).
+For a list of the settings stored in the app logs, see [Review client app protection logs](app-protection-policy-settings-log.md). 
 
 ## Switch network stack between Chromium and iOS 
 

@@ -192,7 +192,7 @@ For more information on these insights, see [Remediation steps for Configuration
 > [!TIP]
 > If you're already a customer of Microsoft Unified or Microsoft Premier, sign in to the [Services Hub](https://serviceshub.microsoft.com/assessments/) for additional on-demand assessments.
 >
-> For more information about Microsoft Services, see [Support Solutions](https://www.microsoft.com/enterprise/services/support).
+> For more information about Microsoft Services, see [Support Solutions](https://www.microsoft.com/industrysolutions).
 
 ### Deprecated and unsupported features
 
@@ -205,6 +205,7 @@ The following management insights are about features you may be using which have
 - **Configuration Manager client for macOS end of support**: This insight lists the clients running macOS. Support for the Configuration Manager client for macOS and Mac client management ends on December 31, 2022.<!--12451634-->
 - **Certificate registration point is no longer supported**: This insight checks for installation of the certificate registration point site system role. This feature is no longer supported as of March 2022. Configuration Manager versions released before March 2022 will still be able to install and use certificate registration points.<!--10875436-->
 - **Company resource access policies are no longer supported**: This insight checks for company resource access policies. These features are no longer supported as of March 2022. Company resource access includes email, certificate, VPN, Wi-Fi, and Windows Hello for Business profiles. Configuration Manager versions released before March 2022 will still be able to use company resource access policies.<!--10875436-->
+- **Microsoft Store for Business deprecated**: This insight checks for the presence of Microsoft Store for Business connector. This feature has been deprecated as of Nov 2021.<!--15429955-->
 
 ### Operating system deployment
 

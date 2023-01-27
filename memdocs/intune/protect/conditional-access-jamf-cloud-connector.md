@@ -51,7 +51,7 @@ Use of the Cloud Connector is optional:
 If you plan to replace your previous integration with the Jamf Cloud Connector:
 
 - Use the [procedure to remove your current configuration](#remove-the-jamf-pro-integration-for-a-previously-configured-tenant), which includes deleting the Enterprise apps for Jamf Pro and disabling the manual integration. Then you can use the [procedure to configure the Cloud Connector](#configure-the-cloud-connector-for-a-new-tenant).
-- You won't need to re-register devices. Devices tht are already registered can use the Cloud Connector without further configuration.
+- You won't need to re-register devices. Devices that are already registered can use the Cloud Connector without further configuration.
 - Be sure to configure the Cloud Connector within 24 hours of removing your manual integration to ensure your registered devices can continue to report their status.
 
 For more information about the Jamf Cloud Connector, see [Configuring the macOS Intune Integration using the Cloud Connector](https://docs.jamf.com/technical-papers/jamf-pro/microsoft-intune/10.17.0/Configuring_the_macOS_Intune_Integration_using_the_Cloud_Connector.html) on docs.jamf.com.

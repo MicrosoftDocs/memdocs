@@ -1,56 +1,67 @@
+# Overview
+
+## Learn how to contribute
+
+Anyone who is interested can contribute to the topics. When you contribute, your work will go directly into the content set after being merged. It will then be published to [Microsoft Learn](https://learn.microsoft.com/) and you will be listed as a contributor at: <https://github.com/MicrosoftDocs/memdocs/graphs/contributors>.
+
+### Quickly update an article using GitHub.com
+
+Contributors who only make infrequent or small updates can edit the file directly on GitHub.com without having to install any additional software. This article shows you how. [This two-minute video](https://www.microsoft.com/videoplayer/embed/RE1XQTG) also covers how to contribute.
+
+1. Make sure you're signed in to GitHub.com with your GitHub account.
+2. Browse to the page you want to edit on Microsoft Learn.
+3. On the right-hand side of the page, click **Edit** (pencil icon).
+
+   ![Edit button on Microsoft Learn.](https://learn.microsoft.com/compliance/media/quick-update-edit.png)
+
+4. The corresponding topic file on GitHub opens, where you need to click the **Edit this file** pencil icon.
+
+   ![Edit button on github.com.](https://learn.microsoft.com/compliance/media/quick-update-github.png)
+
+5. The topic opens in a line-numbered editing page where you can make changes to the file. Files in GitHub are written and edited using Markdown language. For help on using Markdown, see [Mastering Markdown](https://guides.github.com/features/mastering-markdown/). Select the **Preview changes** tab to view your changes as you go.
+
+6. When you're finished making changes, go to the **Propose file change** section at the bottom of the page:
+
+   - A brief title is required. By default, the title is the name of the file, but you can change it.
+   - Optionally, you can enter more details in the **Add an optional extended description** box.
+
+   When you're ready, click the green **Propose file change** button.
+
+   ![Propose file change section.](https://learn.microsoft.com/compliance/media/propose-file-change.png)
+
+7. On the **Comparing changes** page that appears, click the green **Create pull request** button.
+
+   ![Comparing changes page.](https://learn.microsoft.com/compliance/media/comparing-changes-page.png)
+
+8. On the **Open a pull request** page that appears, click the green **Create pull request** button.
+
+   ![Open a pull request page.](https://learn.microsoft.com/compliance/media/open-a-pull-request-page.png)
+
+> [!NOTE]
+> Your permissions in the repo determine what you see in the last several steps. People with no special privileges will see the **Propose file change** section and subsequent confirmation pages as described. People with permissions to create and approve their own pull requests will see a similar **Commit changes** section with extra options for creating a new branch and fewer confirmation pages.<br/><br/>The point is: click any green buttons that are presented to you until there are no more.
+
+The writer identified in the metadata of the topic will be notified and will eventually review and approve your changes so the topic will be updated on Microsoft Learn. If there are questions or issues with the updates, the writer will contact you.
+
 ## Microsoft Open Source Code of Conduct
 
 This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
+
 For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
 
-# GitHub repository for Microsoft technical documentation
+### Contributing
 
-You've found one of the GitHub repositories that houses the source for content published to [Microsoft Learn](https://learn.microsoft.com/), home of all technical content for Microsoft's Cloud and Enterprise Division.
+This project welcomes contributions and suggestions.  Most contributions require you to agree to a Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us the rights to use your contribution. For details, visit <https://cla.microsoft.com>.
 
-## Contribute to your documentation
+When you submit a pull request, a CLA-bot will automatically determine whether you need to provide a CLA and decorate the PR appropriately (e.g., label, comment). Simply follow the instructions provided by the bot. You will only need to do this once across all repos using our CLA.
 
-We **want and encourage contributions** from our community (users, customers, partners, friends on other planets) and Microsoft employees to improve your documentation. Here are some tips:
+### Legal Notices
 
-* **Create a GitHub account**: Sign up for free at [GitHub](https://www.github.com).
+Microsoft and any contributors grant you a license to the Microsoft documentation and other content in this repository under the [Creative Commons Attribution 4.0 International Public License](https://creativecommons.org/licenses/by/4.0/legalcode), see the [LICENSE](LICENSE) file, and grant you a license to any code in the repository under the [MIT License](https://opensource.org/licenses/MIT), see the [LICENSE-CODE](LICENSE-CODE) file.
 
-* **Use your browser**: There are two options:
+Microsoft, Windows, Microsoft Azure and/or other Microsoft products and services referenced in the documentation may be either trademarks or registered trademarks of Microsoft in the United States and/or other countries.
 
-    **Option 1: Edit directly from Microsoft Learn**
+The licenses for this project do not grant you rights to use any Microsoft names, logos, or trademarks. Microsoft's general trademark guidelines can be found at <https://go.microsoft.com/fwlink/?LinkID=254653>.
 
-    1. Browse to the [Intune](/mem/intune) article you want to edit.
-    2. Select **Edit** (top right). This shows the markdown file in the GitHub repository.
-    3. Select the pencil icon. When you hover over the pencil icon, you'll see the **Edit this file** tooltip.
-    4. Make your changes, and then **commit** your changes.
-    5. Create the pull request.
+Privacy information can be found at <https://privacy.microsoft.com/>
 
-    **Option 2: Find the article in this repository, and update**
-
-    1. Most topics are in `https://github.com/MicrosoftDocs/memdocs/tree/master/memdocs/intune`. In this folder, search for the topic name, such as `troubleshoot-policies-in-microsoft-intune`.
-    2. Select the link, and click the pencil icon. When you hover over the pencil icon, you'll see the **Edit this file** tooltip.
-    3. Make your changes, and then **commit** your changes.
-    4. Create the pull request.
-
-  When you make an update, you may be prompted to sign a license agreement. This is a one-time task. So any future updates by your GitHub username won't need to sign again. 
-  
-  The value in the `author` metadata (at the top of every topic) lists the GitHub author. In the `troubleshoot-policies-in-microsoft-intune` example, you'll see `MandiOhlinger`. In your pull request, you can also mention (@*authorValue*) the author if you like.
-  
-* **MSFT Employees**: After you create a GitHub account, link it to your Microsoft email address. When your account is linked, you don't have to sign a license agreement to make an update. Follow these steps:
-
-  1. On a device with access to corpnet, go to [GitHub account setup](https://review.learn.microsoft.com/help/contribute/contribute-get-started-setup-github?branch=main). If you're not on corpnet, this link returns a 404.
-  
-     Creating a GitHub account, and linking to your Microsoft account is a one-time thing. When your account is linked, you don't have to sign a license agreement to make an update.
-
-  2. In your browser, go to the article, and select **Edit**. Switch to the private repo (`IntuneDocs-pr`):
-
-     **From**: `https://github.com/MicrosoftDocs/memdocs/...`
-
-     **To**: `https://github.com/MicrosoftDocs/memdocs-pr/...`
-  
-  3. Select the pencil icon, and make your changes.
-
-## Use markdown to format your topic
-
-All the articles in this repository use GitHub-flavored Markdown. Here's a list of resources to get started:
-
-* [Markdown basics](https://help.github.com/articles/basic-writing-and-formatting-syntax/)
-* [Printable markdown cheatsheet](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf)
+Microsoft and any contributors reserve all others rights, whether under their respective copyrights, patents, or trademarks, whether by implication, estoppel or otherwise.
