@@ -13,7 +13,7 @@ ms.custom: include file
 
 ## End user experience
 
-:::image type="content" source="../configuration/media/apple-enterprise-sso-plug-in/flow-chart-end-user-macOS.png" alt-text="End user flow chart when installing SSO app app extension on macOS devices in Microsoft Intune.":::
+:::image type="content" source="../configuration/media/apple-enterprise-sso-plug-in/flow-chart-end-user-macos.png" alt-text="End user flow chart when installing SSO app app extension on macOS devices in Microsoft Intune.":::
 
 - If you're not deploying the Company Portal app using an app policy, then users must install it manually. Users don't need to use the Company Portal app, it just needs to be installed on the device.
 
@@ -29,4 +29,4 @@ On macOS, when users sign in to a work or school app, they're prompted to opt in
 
 Users can also manage their SSO preferences in the Company Portal app for macOS. To edit preferences, go to the Company Portal app menu bar > **Company Portal** > **Settings**. They can select or deselect **Don’t ask me to sign in with single sign-on for this device**.
 
-:::image type="content" source="../configuration/media/apple-enterprise-sso-plug-in/macOS-5.png" alt-text="Don’t ask me to sign in with single sign-on for this device.":::
+:::image type="content" source="../configuration/media/apple-enterprise-sso-plug-in/macos-sso-dont-ask.png" alt-text="Don’t ask me to sign in with single sign-on for this device.":::
