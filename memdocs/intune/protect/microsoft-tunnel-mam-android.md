@@ -95,7 +95,7 @@ Create an App configuration policy to configure Microsoft Defender for Endpoint 
 
 3. On the *Settings* tab, skip the *General configuration settings* category, which isn't used for this policy. For the *Microsoft Tunnel settings* category, make the following configurations:
 
-   - Set *Use Microsoft Tunnel VPN* to **Yes**
+   - Set *Use Microsoft Tunnel VPN* to **Yes**.
    - For *Connection name*, specify the connection name of your VPN.
 
    Next, click **Select a site**:
