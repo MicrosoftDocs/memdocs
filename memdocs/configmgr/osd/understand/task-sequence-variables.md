@@ -1248,7 +1248,7 @@ _Applies to the [Enable BitLocker](task-sequence-steps.md#enable-bitlocker) step
 
 _Applies to version 2203 and later._
 
-The frequency, in seconds, that the BitLocker action will poll the site database for recovery key escrow status. Minimum value is 15 seconds.
+The frequency, in seconds, that the BitLocker action will poll the site database for recovery key escrow status. Minimum value is 15 seconds. Default value is 300 seconds (5 minutes).
 
 ### OSDRecoveryKeyPollingTimeout
 <!--10454717-->
@@ -1256,7 +1256,7 @@ _Applies to the [Enable BitLocker](task-sequence-steps.md#enable-bitlocker) step
 
 _Applies to version 2203 and later._
 
-The maximum number of seconds for the BitLocker action to wait for the recovery key to be escrowed to the site database. Minimum value is 30 seconds.
+The maximum number of seconds for the BitLocker action to wait for the recovery key to be escrowed to the site database. Minimum value is 30 seconds. Default value is 1800 seconds (30 minutes).
 
 ### <a name="OSDRegisteredOrgName-input"></a> OSDRegisteredOrgName (input)
 

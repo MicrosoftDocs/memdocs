@@ -64,9 +64,9 @@ For existing Configuration Manager-managed devices to enroll into Intune for co-
 
 Microsoft Endpoint Manager offers premium add-ons. Licenses for the premium add-ons can be added for an additional cost to the licensing options that include Microsoft Endpoint Manager or Intune. 
 
-- **Remote help**: This add-on capability allows secure, helpdesk-to-endpoint connections with role-based remote access permissions.
+- **Remote Help**: This add-on capability allows secure, helpdesk-to-endpoint connections with role-based remote access permissions.
  
-  - [Learn more about remote help](../remote-actions/remote-help.md)
+  - [Learn more about Remote Help](../remote-actions/remote-help.md)
   
   - For information about trial and purchasing, see [Getting started with premium add-ons](premium-add-ons.md)
   
@@ -126,7 +126,9 @@ To confirm your Microsoft Intune license or trial, use the following steps:
 To check on your Azure AD Premium license, use the following steps:
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
-2. Select **Azure Active Directory**. Under **Basic information**, view your license.
+2. Select **Azure Active Directory**.
+3. Select **Overview**. On the **Overview** pane, select the **Overview** tab if it isn't already selected.
+4. Under **Basic information**, view your license.
 
 If you don't have a license for Azure AD Premium, see [Sign up for Azure Active Directory Premium editions](/azure/active-directory/fundamentals/active-directory-get-started-premium).
 

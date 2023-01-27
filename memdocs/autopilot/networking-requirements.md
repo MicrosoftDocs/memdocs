@@ -116,7 +116,7 @@ Windows must be able to tell that the device can access the internet. For more i
 
 ### Windows Notification Services (WNS)
 
-This service is used to enable Windows to receive notifications from apps and services. For more information, see [Microsoft Store](/windows/privacy/manage-connections-from-windows-operating-system-components-to-microsoft-services#26-microsoft-store.
+This service is used to enable Windows to receive notifications from apps and services. For more information, see [Microsoft Store](/windows/privacy/manage-connections-from-windows-operating-system-components-to-microsoft-services#26-microsoft-store).
 
 If the WNS services aren't available, the Autopilot process will still continue without notifications.
 
@@ -149,6 +149,9 @@ For each firmware TPM provider, make sure that the appropriate URL is accessible
 - Intel: `https://ekop.intel.com/ekcertservice`
 - Qualcomm: `https://ekcert.spserv.microsoft.com/EKCertificate/GetEKCertificate/v1`
 - AMD: `https://ftpm.amd.com/pki/aia`
+
+### Proxy settings 
+Deploying proxy settings for Windows Autopilot should be configured on the proxy server itself. Implementing proxy settings via Intune policy is not fully supported as it may cause issues and unexpected behavior with privileged access deployments. 
 
 ## Next steps
 

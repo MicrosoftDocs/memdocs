@@ -56,7 +56,7 @@ You don’t have to bring in your own Azure subscription(s), plan, design, deplo
 
 This option is analogous to providing an employee with a laptop to use at home. You as an organization don’t control the network the device sits on. You do fully control how the Windows device is configured, secured, and how it connects to your on-premises network. With Windows 365, this control is possible thanks to the end-to-end Zero Trust Security Framework-aligned adaptive security controls and configurations.
 
-For example, users can be authenticated with adaptive controls of Azure Conditional Access. Corporate connectivity can be delivered by using VPN. Internet security can use a cloud-based secure web gateway (SWG). The advantage is that devices can be deployed at scale in a short timeframe whenever needed on a high bandwidth, resilient network.
+For example, users can be authenticated with adaptive controls of Azure AD Conditional Access. Corporate connectivity can be delivered by using VPN. Internet security can use a cloud-based secure web gateway (SWG). The advantage is that devices can be deployed at scale in a short timeframe whenever needed on a high bandwidth, resilient network.
 
 ### Diagram: Microsoft-hosted network option - Azure AD join only
 
@@ -93,7 +93,7 @@ With the Azure Network Connection (ANC) deployment option, you’re completely i
 
 - Traffic routes.
 - Ports and protocols.
-- Azure Directory  DS and line-of-business application connectivity.
+- Active Directory  DS and line-of-business application connectivity.
 - Gateway connections using VPN or ExpressRoute.
 - Address space used by Cloud PCs.
 - Communication permissions between Cloud PCs.
@@ -135,7 +135,7 @@ With Hybrid Azure AD join, a connection to the on-premises network is required f
 
 Before using the ANC deployment option, review these considerations:
 
-- Azure subscription required. The VNet used in this scenario is in your own Azure subscription. Therefore, you must have an Azure subscription and the [required licenses](/windows-365/enterprise/requirements?tabs=enterprise%2Cent#licensing-requirements).
+- Azure subscription required. The VNet used in this scenario is in your own Azure subscription. Therefore, you must have an Azure subscription and the [required licenses](./requirements.md?tabs=enterprise%2cent#licensing-requirements).
 - Egress costs. Because the VNet is associated with your own Azure account, any [egress costs](https://azure.microsoft.com/pricing/details/bandwidth/) are incurred to your Azure subscription.
 - Extra costs for network infrastructure. The Azure costs of operating your own VNet are applied to the subscription associated with the vNet.
 - Azure networking expertise or management required. You must provide the expertise and management to maintain your VNet.
