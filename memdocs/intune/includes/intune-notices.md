@@ -11,6 +11,17 @@ ms.custom: include file
 
 These notices provide important information that can help you prepare for future Intune changes and features.
 
+### Plan for Change: Enable Intune features that use Windows diagnostic data
+Expected in mid-April 2023, Intune features that depend on Windows diagnostic data, such as the [app and driver compatibility reports for Windows updates](../protect/windows-update-compatibility-reports.md), will require you to enable the use of Windows diagnostic data in Intune and confirm you have the required licensing for these features.  
+
+### How does this affect you or your users?
+
+If you are using the app and driver compatibility reports for Windows updates, you will need to share Windows diagnostic data with Intune by enabling the use of Windows diagnostic data in processor configuration in your Intune tenant and confirm your licensing in the Endpoint Manager admin center. 
+
+### How can you prepare?
+
+Navigate to the Endpoint Manager admin center > **Tenant administration** > **Connectors and tokens** > **Windows data** and toggle on "Enable features that require Windows diagnostic data in processor configuration" and set “I confirm that my tenant owns one of these licenses” to **On**. For more information, see [Enable use of Windows diagnostic data by Intune](../protect/data-enable-windows-data.md). 
+
 ### Plan for Change: Ending support for Company Portal authentication method for iOS/iPadOS ADE enrollment
 
 As we continue to invest in Setup Assistant with modern authentication, which is the Apple supported path to require enrollment during Setup Assistant with optional multi-factor authentication, we plan to remove the Company Portal authentication method from new and existing iOS/iPadOS ADE enrollment profiles. This will include removing the Run Company Portal in Single App Mode until authentication setting.
