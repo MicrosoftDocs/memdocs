@@ -57,7 +57,7 @@ When you upgrade the client from versions 2010 or 2103 to version 2107, the foll
 
 When you look at the **Configurations** tab of the Configuration Manager control panel on the client, it will be blank.
 
-This issue is fixed in the build of version 2107 that's now generally available for all customers. If you previously opted in to the early update ring, install the [Update for Microsoft Endpoint Configuration Manager version 2107, early update ring](../../../../hotfix/2107/10503003.md).
+This issue is fixed in the build of version 2107 that's now generally available for all customers. If you previously opted in to the early update ring, install the [Update for Microsoft Configuration Manager version 2107, early update ring](../../../../hotfix/2107/10503003.md).
 
 ## Set up and upgrade
 
@@ -135,7 +135,7 @@ If this query returns `0`, there's currently no issue. If the query returns a no
 
 #### Workaround for task sequence and application policy issue in version 2107 early update ring
 
-This issue is fixed in the build of version 2107 that's now generally available for all customers. If you previously opted in to the early update ring, install the [Update for Microsoft Endpoint Configuration Manager version 2107, early update ring](../../../../hotfix/2107/10503003.md).
+This issue is fixed in the build of version 2107 that's now generally available for all customers. If you previously opted in to the early update ring, install the [Update for Microsoft Configuration Manager version 2107, early update ring](../../../../hotfix/2107/10503003.md).
 
 For OS deployment task sequences to existing clients not with PXE, you may see entries similar to the following strings in the ExecMgr.log on the client:
 
@@ -297,4 +297,4 @@ After you update the site to version 2107, there are two issues with CMPivot que
 
 - The query after the last comma (`,`) is removed.
 
-This issue is fixed in the build of version 2107 that's now generally available for all customers. If you previously opted in to the early update ring, install the [Update for Microsoft Endpoint Configuration Manager version 2107, early update ring](../../../../hotfix/2107/10503003.md).
+This issue is fixed in the build of version 2107 that's now generally available for all customers. If you previously opted in to the early update ring, install the [Update for Microsoft Configuration Manager version 2107, early update ring](../../../../hotfix/2107/10503003.md).

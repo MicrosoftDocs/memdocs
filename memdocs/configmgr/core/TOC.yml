@@ -5,7 +5,7 @@ items:
   items:
   - name: What is Configuration Manager?
     href: understand/introduction.md
-  - name: Microsoft Endpoint Configuration Manager FAQ
+  - name: Microsoft Configuration Manager FAQ
     href: understand/microsoft-endpoint-manager-faq.yml
   - name: What happened to SCCM?
     href: understand/what-happened-to-sccm.md

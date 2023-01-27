@@ -1,6 +1,6 @@
 ---
 title: What happened to SCCM?
-description: Understand the branding change from System Center Configuration Manager to Microsoft Endpoint Configuration Manager
+description: Understand the branding change from System Center Configuration Manager to Microsoft Configuration Manager
 ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -24,4 +24,4 @@ Prior product versions, such as System Center 2012 Configuration Manager, aren't
 For more information, see the following articles:
 
 - [What is Configuration Manager?](introduction.md)
-- [Microsoft Endpoint Configuration Manager FAQ](microsoft-endpoint-manager-faq.yml)
+- [Microsoft Configuration Manager FAQ](microsoft-endpoint-manager-faq.yml)
