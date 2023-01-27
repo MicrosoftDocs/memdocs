@@ -113,10 +113,8 @@ items:
   - name: Deploy
     items:
 
-    - name: Migrate to Intune (need to update section for different scenarios)
+    - name: Migrate to Intune
       items: 
-      - name: Overview - DELETE?
-        href: ./fundamentals/migration-guide.md
       - name: Move to Intune
         href: ./fundamentals/deployment-guide-intune-setup.md
       - name: Migrate from Basic Mobility and Security
@@ -131,10 +129,6 @@ items:
             href: ./fundamentals/policy-map-configurations.md
           - name: Miscellaneous policy mapping
             href: ./fundamentals/policy-map-miscellaneous.md
-      - name: Device and app management - DELETE?
-        href: ./fundamentals/migration-guide-configure-policies.md
-      - name: App protection - DELETE?
-        href: ./fundamentals/migration-guide-app-protection-policies.md
 
     - name: Deploy Microsoft Intune
       items:
@@ -276,18 +270,9 @@ items:
         href: ./protect/microsoft-tunnel-mam.md
 
     - name: Manage apps
-      href: ./apps/index.yml
       items:
-        - name: Overview
-          items:
-          - name: App management overview
-            href: ./apps/app-management.md
-        - name: Quickstarts
-          items:
-          - name: Add and assign an app
-            href: ./apps/quickstart-add-assign-app.md
-          - name: Create and assign an app protection policy
-            href: ./apps/quickstart-create-assign-app-policy.md    
+        - name: App management overview
+          href: ./apps/app-management.md  
 
         - name: Concepts
           items:
@@ -516,12 +501,9 @@ items:
                 href: /troubleshoot/mem/intune/troubleshoot-app-protection-policy-deployment
 
     - name: Configure device settings
-      href: ./configuration/index.yml
       items:
-      - name: Overview
-        items:
-        - name: Device configuration overview
-          href: ./configuration/device-profiles.md
+      - name: Device configuration overview
+        href: ./configuration/device-profiles.md
       - name: How-to guides
         items:
         - name: Profiles - Get started
@@ -785,19 +767,10 @@ items:
             href: ./configuration/vpn-settings-windows-8-1.md
 
     - name: Protect Data and Devices with Intune
-      href: ./protect/index.yml
       items:
-      - name: Overview
-        items:
-          - name: Device protection overview
-            href: ./protect/device-protect.md
-            displayName: compliant; noncompliant; mfa 
-      - name: Quickstarts
-        items:
-        - name: Create a device compliance policy
-          href: ./protect/quickstart-set-password-length-android.md
-        - name: Send notifications to noncompliant devices
-          href: ./protect/quickstart-send-notification.md        
+      - name: Device protection overview
+        href: ./protect/device-protect.md
+        displayName: compliant; noncompliant; mfa  
 
       - name: Concepts 
         items: 
@@ -1200,7 +1173,6 @@ items:
           href: ./protect/data-leak-prevention.md
 
     - name: Enroll devices in Microsoft Intune 
-      href: ./enrollment/index.yml
       items:
       - name: Device enrollment overview
         href: ./enrollment/device-enrollment.md
@@ -1209,12 +1181,6 @@ items:
         href: ./enrollment/device-management-capabilities.md
       - name: Enrollment options
         href: ./enrollment/enrollment-options.md  
-      - name: DELETE -Quickstarts
-        items:
-        - name: Set up automatic enrollment
-          href: ./enrollment/quickstart-setup-auto-enrollment.md
-        - name: Enroll your Windows 10/11 device
-          href: ./enrollment/quickstart-enroll-windows-device.md
 
       - name: Concepts (These seem like they can be part of How to)
         items:
@@ -1375,9 +1341,9 @@ items:
           - name: Troubleshoot Android device enrollment
             href: /troubleshoot/mem/intune/troubleshoot-android-enrollment
 
-    - name: Assign and deploy policies (do we need a hub page?)
+    - name: Assign and deploy policies
       items: 
-      - name: Use filters when assigning policies (should it be in config section?)
+      - name: Use filters when assigning policies
         items:
         - name: Create a filter
           href: ./fundamentals/filters.md
@@ -1387,7 +1353,7 @@ items:
           href: ./fundamentals/filters-supported-workloads.md
         - name: Reporting and troubleshooting (instead of troubleshooting change to conflict resolution or something)
           href: ./fundamentals/filters-reports-troubleshoot.md
-      - name: Use policy sets (where should this go? If here, add why to title "...to do what...")
+      - name: Use policy sets
         href: ./fundamentals/policy-sets.md
       - name: Assign policies
         items:
@@ -1403,9 +1369,8 @@ items:
             href: ./configuration/device-profile-troubleshoot.md
 
     - name: Initiate remote actions
-      href: ./remote-actions/index.yml
       items:
-      - name: Device management overview (Change title to remote actions overview or something?)
+      - name: Remote actions overview (update name?)
         href: ./remote-actions/device-management.md
 
       - name: Locks and passwords
@@ -1496,7 +1461,6 @@ items:
         href: ./developer/reports-nav-create-intune-reports.md          
 
   - name: Developer guidance
-    href: index.yml 
     items:
     - name: Protect apps with Intune App SDK
       href: ./developer/app-sdk.md
