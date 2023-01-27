@@ -251,7 +251,7 @@ The following guidance is specific to requirements for the Tunnel for MAM iOS SD
 
 8. To verify that all settings were applied successfully, select **Integration assistant**:
 
-   - For *What application types are you building?* select **Mobile app (Android, iOS, Xamarin, UWP)**
+   - For *What application types are you building?* select **Mobile app (Android, iOS, Xamarin, UWP)**.
    - Set *Is this application calling APIs?* to **No**, and then select **Evaluate my app registration**.
 
    :::image type="content" source="./media/microsoft-tunnel-mam-ios/integration-assistant.png" alt-text="Use the app registration Integration assistant to verify settings.":::
@@ -315,8 +315,8 @@ When you already have an app registration, you can choose to update it instead o
 
    If *acct* isn't present, select **+Add optional claim** to add a claim:
 
-   1. For *Token type*, select *Access*
-   1. Select the checkbox for *acct*
+   1. For *Token type*, select *Access*.
+   1. Select the checkbox for *acct*.
    1. Select **Add** to complete the configuration.
 
 5. Select **Integration assistant** to validate the app registration:
@@ -332,11 +332,11 @@ Xcode is the Apple Integrated Developer Environment that that runs on macOS and 
 
 The following are requirements for using Xcode to successfully integrate an iOS App to use Microsoft Tunnel for MAM iOS:
 
-- macOS - To run Xcode.
-- Xcode 14.0 or later.
+- macOS - To run Xcode
+- Xcode 14.0 or later
 - MAM-SDK – min version: 16.1.1
 - MSAL-SDK – min version: 1.2.3
-- Tunnel for MAM iOS SDK, available on GitHub.
+- Tunnel for MAM iOS SDK, available on GitHub
 
 For guidance on integrating the SDK, see [Tunnel for MAM iOS SDK developer guide](../developer/tunnel-mam-ios-sdk.md).
 
