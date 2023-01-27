@@ -209,7 +209,7 @@ items:
 
   - name: Platform guides
     items:
-    - name: Windows platform guide (new topic)
+    - name: Windows platform guide
       href: ./fundamentals/deployment-guide-platform-windows.md
     - name: Android, Android Enterprise platform guide
       href: ./fundamentals/deployment-guide-platform-android.md 
@@ -227,8 +227,7 @@ items:
   - name: How-to guides
     items:
 
-    - name: Set up Intune subscription or use (HUB|Landing|)
-      href: ./fundamentals/index.yml
+    - name: Set up Intune subscription
       items:
       - name: Sign in to Intune
         href: ./fundamentals/account-sign-up.md
@@ -1195,7 +1194,7 @@ items:
           href: ./enrollment/terms-and-conditions-create.md
         - name: Intune and Azure AD device limits  
           href: ./enrollment/device-limit-intune-azure.md    
-      - name: How-to guides (likely remove section and bring section up one)
+      - name: How-to guides
         items:
         - name: Enroll devices (deployment guides - need to integrate)
           items:
