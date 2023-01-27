@@ -45,7 +45,7 @@ Enrollment notifications work on devices running:
 * Android  (excludes DEP scenarios)
 * iOS/iPadOS (excludes DEP or ADE scenarios) 
 * macOS 
-* Windows 10/11 (excludes hybrid AADJ) 
+* Windows 10/11 (excludes hybrid Azure AD-joined devices)
 
 This article describes how to create enrollment notifications in the Microsoft Endpoint Manager admin center.  
 
