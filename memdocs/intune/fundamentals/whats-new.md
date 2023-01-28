@@ -112,6 +112,11 @@ As a public preview, you can use the Mobile Application Management (MAM) to the 
 - Secure access to on-premises apps and resources using modern authentication
 - Single Sign On and conditional access
 
+For more information, go to:
+
+- [Microsoft Tunnel for Mobile Application Management for iOS/iPadOS admin guide (public preview)](../protect/microsoft-tunnel-mam-ios.md)
+- [Microsoft Tunnel for MAM iOS SDK developer guide](../developer/tunnel-mam-ios-sdk.md)
+
 Applies to:
 
 - iOS/iPadOS
