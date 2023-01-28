@@ -1,8 +1,8 @@
 ---
-title: Technical preview 2201
+title: Technical preview 2023
 titleSuffix: Configuration Manager
-description: Learn about new features available in the Configuration Manager technical preview branch version 2201.
-ms.date: 01/27/2022
+description: Learn about new features available in the Configuration Manager technical preview branch version 2301.
+ms.date: 01/30/2023
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -14,7 +14,7 @@ ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
 
-# Features in Configuration Manager technical preview version 2201
+# Features in Configuration Manager technical preview version 2301
 
 *Applies to: Configuration Manager (technical preview branch)*
 
