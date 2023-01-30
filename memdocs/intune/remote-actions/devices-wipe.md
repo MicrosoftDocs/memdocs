@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 01/26/2022
+ms.date: 01/09/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -18,7 +18,7 @@ ms.localizationpriority: high
 #ROBOTS:
 #audience:
 
-ms.reviewer: shthilla
+ms.reviewer:
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -166,7 +166,7 @@ Device owners can manually un-enroll their devices as explained in the following
 - [Remove your Windows device from management](../user-help/unenroll-your-device-from-intune-windows.md)
 
 > [!TIP]
-> When a Windows device user un-enrolls their device via the Settings app, Intune does not automatically delete the Intune device or Azure AD records. To remove record of the Intune device, sign in to Microsoft Endpoint Manager and delete the device manually, or wait for your device cleanup rules to take effect. You must also manually delete the Azure AD record, if applicable, because the cleanups rule will not remove it.  
+> When a Windows device user un-enrolls their device via the Settings app, Intune does not automatically delete the Intune device or Azure AD records. To remove record of the Intune device, sign in to Microsoft Intune and delete the device manually, or wait for your device cleanup rules to take effect. You must also manually delete the Azure AD record, if applicable, because the cleanups rule will not remove it.  
 
 ## Delete devices from the Intune portal
 
@@ -190,6 +190,8 @@ The device clean up rule doesn't trigger a wipe or retire.
 
 > [!NOTE]
 > Device cleanup rules aren't available for Jamf-managed devices.
+>
+> You need the permission **Managed Device Cleanup Settings with Update** set to **Yes** to update the device cleanup rules. This permission is part of [Intune Roles](../fundamentals/role-based-access-control.md).
 
 ## Delete devices from the Azure Active Directory portal
 

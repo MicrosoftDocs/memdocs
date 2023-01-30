@@ -7,7 +7,7 @@ description: Use Intune to add Mobile Threat Defense (MTD) apps, Microsoft Authe
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/19/2022
+ms.date: 01/20/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -135,6 +135,32 @@ Create the iOS app configuration policy as described in the [using iOS app confi
 
 Pradeo doesn't support application configuration policy on iOS/iPadOS.  Instead, to get a configured app, work with Pradeo to implement custom IPA or APK files that are preconfigured with the settings you want.
 
+### SentinelOne app configuration policy
+
+- **Android Enterprise**
+   
+   See the instructions for [using Microsoft Intune app configuration policies for Android](../apps/app-configuration-policies-use-android.md) to add the SentinelOne Android app configuration policy. 
+   
+   For **Configuration settings format**, select **Use configuration designer**, and add the following settings: 
+
+| Configuration key  | Value type | Configuration value  |
+|---|---|---|
+|  MDMDeviceID | string  | `{{AzureADDeviceId}}`  |
+|  tenantid | string  | Copy value from admin console “Manage” page in the SentinelOne console |
+|  defaultchannel | string   | Copy value from admin console “Manage” page in the SentinelOne console  |
+
+- **iOS**
+   
+   See the instructions for [using Microsoft Intune app configuration policies for iOS](../apps/app-configuration-policies-use-ios.md) to add the SentinelOne iOS app configuration policy.
+
+   For **Configuration settings format**, select **Use configuration designer**, and add the following settings:
+
+| Configuration key  | Value type | Configuration value  |
+|---|---|---|
+|  MDMDeviceID | string  | `{{AzureADDeviceId}}`  |
+|  tenantid | string  | Copy value from admin console “Manage” page in the SentinelOne console |
+|  defaultchannel | string   | Copy value from admin console “Manage” page in the SentinelOne console  |
+
 ### SEP Mobile app configuration policy
 
 Use the same Azure AD account previously configured in the [Symantec Endpoint Protection Management console](https://techdocs.broadcom.com/us/en/symantec-security-software/endpoint-security-and-management/endpoint-protection/all/getting-up-and-running-on-for-the-first-time-v45150512-d43e1033/logging-on-to-the-console-v8025272-d23e2462.html), which should be the same account used to sign in to the Intune.
@@ -229,6 +255,7 @@ Choose the section that corresponds to your MTD provider:
 - [Lookout for Work](#assigning-lookout-for-work)
 - [MVISION Mobile](#assigning-mvision-mobile)
 - [Pradeo](#assigning-pradeo)
+- [SentinelOne](#assigning-sentinelone)
 - [Sophos Mobile](#assigning-sophos)
 - [Symantec Endpoint Protection Mobile (SEP Mobile)](#assigning-symantec-endpoint-protection-mobile)
 - [Wandera](#assigning-wandera)
@@ -298,6 +325,14 @@ Choose the section that corresponds to your MTD provider:
 
 - **iOS**
   - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [Pradeo app store URL](https://itunes.apple.com/us/app/pradeo-agent/id547979360?mt=8) for the **Appstore URL**.
+
+### Assigning SentinelOne
+
+- **Android**
+  - See the instructions for [adding Android store apps to Microsoft Intune](../apps/store-apps-android.md). Use this [SentinalOne app store URL](https://play.google.com/store/apps/details?id=com.sentinelone.mobile) for the **Appstore URL**.
+
+- **iOS**
+  - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [SentinalOne app store URL](https://apps.apple.com/us/app/sentinelone-mobile/id1567458126) for the **Appstore URL**.
 
 ### Assigning Sophos
 
