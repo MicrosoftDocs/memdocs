@@ -6,8 +6,8 @@ ms.date: 12/05/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-author: Banreet
-ms.author: banreetkaur
+author: PalikaSingh
+ms.author: palsi
 manager: apoorvseth
 ms.reviewer: mstewart,aaroncz 
 ms.localizationpriority: medium
