@@ -771,39 +771,9 @@ items:
         href: ./protect/device-protect.md
         displayName: compliant; noncompliant; mfa  
 
-      - name: Concepts 
-        items: 
-        - name: Privacy and personal data (copy to own section - does this make sense?)
-          href: ./protect/privacy-personal-data.md
-          items:
-          - name: Optional diagnostic data in client apps
-            href: ./protect/client-apps-optional-data.md
-          - name: Data collection
-            href: ./protect/privacy-data-collect.md
-          - name: Data storage and processing
-            href: ./protect/privacy-data-store-process.md
-          - name: Data security and sharing
-            href: ./protect/privacy-data-secure-share.md
-            items:
-            - name: Data Apple sends to Intune
-              href: ./protect/data-apple-sends-to-intune.md
-            - name: Data Google sends to Intune
-              href: ./protect/data-google-sends-to-intune.md
-            - name: Data Intune sends to Apple
-              href: ./protect/data-intune-sends-to-apple.md
-            - name: Data Intune sends to Google
-              href: ./protect/data-intune-sends-to-google.md
-            - name: Information shared from Jamf Pro to Intune
-              href: ./protect/data-jamf-sends-to-intune.md
-          - name: View and correct personal data
-            href: ./protect/privacy-data-view-correct.md
-          - name: Audit, export, delete
-            href: ./protect/privacy-data-audit-export-delete.md
-          - name: Windows Information Protection
-            href: ./protect/windows-information-protection-configure.md
       - name: How-to guides
         items:
-        - name: Set rules on devices to allow access to resources
+        - name: Use compliance rules to protect resources (Set rules on devices to allow access to resources)
           items:
           - name: Compliance overview
             href: ./protect/device-compliance-get-started.md    
