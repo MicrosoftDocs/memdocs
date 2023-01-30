@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/17/2022
+ms.date: 01/30/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -94,7 +94,8 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
 
      Select a type depending on how you'll use the certificate profile:
 
-     - **User**: *User* certificates can contain both user and device attributes in the subject and SAN of the certificate.  
+     - **User**: *User* certificates can contain both user and device attributes in the subject and SAN of the certificate.
+
      - **Device**:  *Device* certificates can only contain device attributes in the subject and SAN of the certificate.
 
        Use **Device** for scenarios such as user-less devices, like kiosks, or for Windows devices. On Windows devices, the certificate is placed in the Local Computer certificate store.
@@ -143,7 +144,7 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
 
        **Common Name (CN)** can be set to any of the following variables:
 
-       - **CN={{UserName}}**: The user name of the user, such as janedoe.
+       - **CN={{UserName}}**: The user name of the user, such as janedoe. 
        - **CN={{UserPrincipalName}}**: The user principal name of the user, such as janedoe@contoso.com.
        - **CN={{AAD_Device_ID}}**: An ID assigned when you register a device in Azure Active Directory (AD). This ID is typically used to authenticate with Azure AD.
        - **CN={{DeviceId}}**: An ID assigned when you enroll a device in Intune.
@@ -195,6 +196,9 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
 
    - **Subject alternative name**:  
      Select how Intune automatically creates the subject alternative name (SAN) in the certificate request. You can specify multiple subject alternative names. For each one, you may select from four SAN attributes and enter a text value for that attribute. The text value can contain variables and static text for the attribute.
+
+     > [!NOTE]
+     > Android Enterprise doesn't support use of the {{UserName}} variable for the SAN.
 
      Select from the available SAN attributes:
 
