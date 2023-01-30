@@ -4,7 +4,7 @@ description: include file
 author: brenduns
 ms.service: microsoft-intune
 ms.author: brenduns
-ms.date: 09/12/2022
+ms.date: 01/20/2023
 ms.topic: include
 ---
 ## Prerequisites
@@ -90,18 +90,19 @@ The following table can help you understand which policies that can configure MD
 
 | Microsoft Endpoint Manager  | Workload | Policy | MDE Security configuration  |  Microsoft Endpoint Manager |
 |----------------|----------------|----------------|-------------------|------------|
-| Endpoint security  | Antivirus  | Antivirus                   | ![Supported](../media/mde-security-integration/green-check.png)  | ![Supported](../media/mde-security-integration/green-check.png)  |
-|                    | Antivirus   | Antivirus Exclusions        | ![Supported](../media/mde-security-integration/green-check.png)  | ![Supported](../media/mde-security-integration/green-check.png)  |
+| Endpoint security  | Antivirus  | Antivirus                    | ![Supported](../media/mde-security-integration/green-check.png) | ![Supported](../media/mde-security-integration/green-check.png)  |
+|                    | Antivirus   | Antivirus Exclusions        | ![Supported](../media/mde-security-integration/green-check.png) | ![Supported](../media/mde-security-integration/green-check.png)  |
 |                    | Antivirus   | Windows Security Experience |  | ![Supported](../media/mde-security-integration/green-check.png)  |
-|                    |  Disk Encryption | All |           | ![Supported](../media/mde-security-integration/green-check.png)  |
-|                     | Firewall | Firewall                | ![Supported](../media/mde-security-integration/green-check.png) | ![Supported](../media/mde-security-integration/green-check.png)  |
-|                     | Firewall | Firewall Rules                | ![Supported](../media/mde-security-integration/green-check.png) | ![Supported](../media/mde-security-integration/green-check.png)  |
-|                     | Endpoint detection and response | Endpoint detection and response        | ![Supported](../media/mde-security-integration/green-check.png) | ![Supported](../media/mde-security-integration/green-check.png)  |
-|                      |Attack surface reduction | All    |           | ![Supported](../media/mde-security-integration/green-check.png)  |
-|                      |Account Protection | All       |       | ![Supported](../media/mde-security-integration/green-check.png)  |
-|                      | Device Compliance | All    |   | ![Supported](../media/mde-security-integration/green-check.png)  |
-|                      | Conditional Access  | All    |   | ![Supported](../media/mde-security-integration/green-check.png)  |
-|                      | Security baselines | All      |   | ![Supported](../media/mde-security-integration/green-check.png)  |
+|                    | Disk Encryption | All                     |  | ![Supported](../media/mde-security-integration/green-check.png)  |
+|                    | Firewall    | Firewall                    | ![Supported](../media/mde-security-integration/green-check.png) | ![Supported](../media/mde-security-integration/green-check.png)  |
+|                    | Firewall    | Firewall Rules              | ![Supported](../media/mde-security-integration/green-check.png) | ![Supported](../media/mde-security-integration/green-check.png)  |
+|                     | Endpoint detection and response | Endpoint detection and response | ![Supported](../media/mde-security-integration/green-check.png) | ![Supported](../media/mde-security-integration/green-check.png)  |
+|                     |Attack Surface Reduction | All            |  | ![Supported](../media/mde-security-integration/green-check.png)  |
+|                     |Attack Surface Reduction | Attack Surface Reduction Rules  | ![Supported](../media/mde-security-integration/green-check.png) | ![Supported](../media/mde-security-integration/green-check.png)  |
+|                     |Account Protection  | All                 |  | ![Supported](../media/mde-security-integration/green-check.png)  |
+|                     | Device Compliance  | All                 |  | ![Supported](../media/mde-security-integration/green-check.png)  |
+|                     | Conditional Access | All                 |  | ![Supported](../media/mde-security-integration/green-check.png)  |
+|                     | Security baselines | All                 |  | ![Supported](../media/mde-security-integration/green-check.png)  |
 
 **Endpoint security policies** are discrete groups of settings intended for use by security admins who focus on protecting devices in your organization.
 
@@ -171,6 +172,7 @@ After creating one or more Azure AD groups that contain devices managed by Micro
 - Firewall
 - Firewall Rules
 - Endpoint Detection and Response
+- Attack Surface Reduction
 
 > [!TIP]
 > Avoid deploying multiple policies that manage the same setting to a device.
@@ -186,21 +188,26 @@ After creating one or more Azure AD groups that contain devices managed by Micro
    - For Firewall policy, select:
      - Platform: **Windows 10, Windows 11, and Windows Server**
      - Profile: **Microsoft Defender Firewall**
-   - For Firewall Rules policy, select:
+   - For Firewall rules policy, select:
      - Platform: **Windows 10, Windows 11, and Windows Server**
      - Profile: **Microsoft Defender Firewall Rules**
-   - For Endpoint Detection and Response policy, select:
+   - For Endpoint detection and response policy, select:
      - Platform: **Windows 10, Windows 11, and Windows Server**
      - Profile: **Endpoint detection and response**
+   - For Attack surface reduction policy, select:
+     - Platform: **Windows 10, Windows 11, and Windows Server**
+     - Profile: **Attack surface reduction rules**
+     
    >[!Note]
    > These profiles apply to both devices communicating through Mobile Device Management (MDM) with Microsoft Intune as well as devices that are communicating using the Microsoft Defender for Endpoint client.
    >
    > Ensure you review your targeting and groups as necessary.
+
 4. Select **Create**.
 5. On the **Basics** page, enter a name and description for the profile, then choose **Next**.
 6. On the **Configuration settings** page, select the settings you want to manage with this profile. To learn more about a setting, expand its information dialog and select the *Learn more* link to view the CSP information for the setting in the on-line documentation.
 
-   When your done configuring settings, select **Next**.
+   When you're done configuring settings, select **Next**.
 
 7. On the **Assignments** page, select the Azure AD groups that will receive this profile. For more information on assigning profiles, see [Assign user and device profiles](/mem/intune/configuration/device-profile-assign).
 
