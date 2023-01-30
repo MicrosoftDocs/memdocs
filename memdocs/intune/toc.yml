@@ -1207,7 +1207,7 @@ items:
           href: ./enrollment/multi-factor-authentication.md
           displayName: mfa; multifactor 
         - name: Create terms and conditions policy  
-           href: ./enrollment/terms-and-conditions-create.md
+          href: ./enrollment/terms-and-conditions-create.md
         - name: Create device enrollment restrictions
           items: 
           - name: Enrollment restrictions overview
