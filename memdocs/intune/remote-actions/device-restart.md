@@ -44,6 +44,7 @@ The **Restart** device action causes the device you choose to be restarted (with
 - Android Enterprise dedicated devices - Supported on Android 8.0 and later
 - Android Enterprise fully managed devices - Supported on Android 8.0 and later
 - Android Enterprise corporate-owned with work profile devices - Not supported 
+- Android Open Source Project (AOSP) devices - Supported 
 - iOS/iPadOS - Supported
 
     > [!Note]  
