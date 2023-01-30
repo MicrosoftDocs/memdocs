@@ -1181,7 +1181,7 @@ items:
       - name: Enrollment options
         href: ./enrollment/enrollment-options.md  
 
-      - name: Concepts (These seem like they can be part of How to)
+      - name: Concepts
         items:
         - name: Corporate identifiers
           href: ./enrollment/corporate-identifiers-add.md
@@ -1196,7 +1196,7 @@ items:
           href: ./enrollment/device-limit-intune-azure.md    
       - name: How-to guides
         items:
-        - name: Enroll devices (deployment guides - need to integrate)
+        - name: Enroll devices
           items:
           - name: Overview
             href: ./fundamentals/deployment-guide-enrollment.md
