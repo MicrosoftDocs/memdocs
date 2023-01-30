@@ -1234,7 +1234,7 @@ items:
           - name: Configure proxy for Intune AD Connector
             href: ./enrollment/autopilot-hybrid-connector-proxy.md  
           - name: View incomplete user enrollments 
-            href: ./enrollment/enrollment-report-company-portal-abandon 
+            href: ./enrollment/enrollment-report-company-portal-abandon.md 
           - name: Tutorial - Set up automatic enrollment
             href: ./enrollment/quickstart-setup-auto-enrollment.md
           - name: Tutorial - Enroll your Windows 10/11 device

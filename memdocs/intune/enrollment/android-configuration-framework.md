@@ -38,8 +38,8 @@ The Android Enterprise security configuration framework is a series of recommend
 1. [Android Enterprise framework deployment methodology](framework-deployment-methodology.md): A recommended methodology for deploying the security configuration framework.
 2. [Android device enrollment restrictions](device-enrollment-restrictions.md): Pre-enrollment device restrictions for Android Enterprise devices.
 3. [Set app configuration policies for Android Enterprise devices](android-app-configuration-policies.md): Configure apps on the devices to disallow personal accounts.
-4. [Android Enterprise personally-owned/corporate-owned work profile security settings](android-work-profile-security-settings.md): Specific configuration settings for basic and high security on personally-owned/corporate-owned work profile devices.
-5. [Android Enterprise fully managed security settings](android-fully-managed-security-settings.md): Specific configuration settings for basic, enhanced, and high security on fully managed devices.
+4. [Security settings for Android Enterprise personally owned/corporate owned work profile](android-work-profile-security-settings.md): Specific configuration settings for basic and high security on personally owned and corporate owned work profile devices.
+5. [Security settings for Android Enterprise fully managed devices](android-fully-managed-security-settings.md): Specific configuration settings for basic, enhanced, and high security on fully managed devices.
 
 ## Android Enterprise enrollment modes
 

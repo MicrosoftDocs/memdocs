@@ -35,14 +35,14 @@ In the final phase of deployment, devices are registered or joined in Azure Acti
 
 This article describes how to prepare enrollment for corporate-owned and user-owned devices and the methods available for each OS platform.  
 
-## Before your begin    
+## Getting started       
 If this is your first time deploying enrollment profiles with Intune, or you're trying a new configuration, start small and use a staged approach. Assign the enrollment profile to a pilot or test group. After initial testing, add more users to the pilot group. If everything is going well, assign the enrollment profile to more pilot groups. For more information and suggestions, see the [Planning guide: Step 5 - Create a rollout plan](intune-planning-guide.md#step-5---create-a-rollout-plan).  
 
-Registration in Azure AD is a required step for Intune management. Before the user can enroll their device, they must authenticate and establish a device identity in your org's Azure AD. This step grants the user single sign-on access to cloud-based work apps and other resources. It's important to know which identity option you're utilizing because it determines the enrollment methods you can use, and also determines the sign-in experience for the device user. Options include:       
-   * **Azure AD registration* is the device identity option available for personal and corporate-owned mobile devices. Users on these devices authenticate by signing in to work resources, like apps and web browsers, using their Azure AD work account. 
+Registration in Azure AD is a required step for Intune management. Before a device can enroll in Intune, the user of the device must authenticate and establish a device identity in your org's Azure AD. This step grants the user single sign-on access to cloud-based work apps and other resources. It's important to know which identity option you're utilizing because it determines the enrollment methods you can use, and also determines the sign-in experience for the device user. Identity options include:       
+   * *Azure AD registration* is the device identity option available for personal and corporate-owned mobile devices. Users on these devices authenticate by signing in to work resources, like apps and web browsers, using their Azure AD work account. 
    * *Azure AD joined* is the device identity option available for corporate-owned Windows 10/11 devices utilizing co-management options. Users on these devices authenticate by signing in to the device using their Azure AD work account.  
 
-## 1 - Pre-enrollment configurations  
+## Pre-enrollment configurations  
 This section describes the general enrollment features and profiles available in Microsoft Intune. Configure these settings, as needed, before creating the enrollment profile for devices. Setting availability varies by OS platform.     
 
 ### Unenroll and reset existing devices  
@@ -98,7 +98,7 @@ If you're looking for more control, including where the terms appear, configure 
 For more information, see [Terms and conditions for user access](../enrollment/terms-and-conditions-create.md).  
 
 ### Require multifactor authentication  
-You can use a conditional access policy in conjuction with a multifactor authentication (MFA) policy to require MFA during Microsoft Intune enrollment. If you require MFA, people wanting to enroll devices must authenticate with a second device and two forms of credentials before they can enroll their device. This is a one-time conditional step, and ensures that the person on the device is who they say they are. For this feature to take effect, the user must be assigned an Azure AD Premium license. 
+You can use a conditional access policy in conjunction with a multifactor authentication (MFA) policy to require users to authenticate via MFA during Microsoft Intune enrollment. If you require MFA, people wanting to enroll devices must authenticate with a second device and two forms of credentials before they can enroll their device. This is a one-time conditional step, and ensures that the person on the device is who they say they are. For this feature to take effect, the user must be assigned an Azure AD Premium license. 
 
 This feature is available for all platforms except Linux. For more information, see [Require multifactor authentication for Intune device enrollments](../enrollment/multi-factor-authentication.md).   
 
@@ -132,10 +132,10 @@ The following table describes the supported enrollment methods for Android and A
 * [Corporate-owned, userless devices](../enrollment/android-aosp-corporate-owned-userless-enroll.md): Enroll devices that are built from the Android Open Source Project (AOSP) and absent of Google Mobile services as *corporate-owned, userless devices*. These devices don't have a user associated with them and are intended to be shared, like in a library or lab.  
 * [Corporate-owned, user associated devices](../enrollment/android-aosp-corporate-owned-user-associated-enroll.md): Enroll devices that are built from AOSP and absent of Google Mobile services as *corporate-owned, user-associated devices*. These devices are associated with a single user and intended to be exclusively for work use.  
 
-* [Zero-touch enrollment](../enrollment/android-dedicated-devices-fully-managed-enroll.md#enroll-by-using-google-zero-touch): We recommend using zero-touch enrollment for bulk enrollments and to simplify enrollment for remote workers. This method lets your prepare corporate-owned devices ahead of time so that they automatically provision and enroll as fully manged devices when users turn them on.     
+* [Zero-touch enrollment](../enrollment/android-dedicated-devices-fully-managed-enroll.md#enroll-by-using-google-zero-touch): We recommend using zero-touch enrollment for bulk enrollments and to simplify enrollment for remote workers. This method lets you prepare corporate-owned devices ahead of time so that they automatically provision and enroll as fully manged devices when users turn them on.     
 
 # [User owned](#tab/user-owned-android)  
-Enroll personal devices in bring-your-own-device (BYOD) scenarios as *personally-owned devices with a work profile*. This method creates a separate work profile on the personal device so that a person can switch between their personal apps and work apps easily and securely. The device owner enrolls their device through the Intune Company Portal app. As an admin, you can manage the apps and data in the work profile. This method aligns with the *Android Enterprise personally owned work profile* solution. 
+Enroll personal devices in bring-your-own-device (BYOD) scenarios as *personally owned devices with a work profile*. This method creates a separate work profile on the personal device so that a person can switch between their personal apps and work apps easily and securely. The device owner enrolls their device through the Intune Company Portal app. As an admin, you can manage the apps and data in the work profile. This method aligns with the *Android Enterprise personally owned work profile* solution. 
 
 For more information, see [Personally owned devices with a work profile](../enrollment/android-work-profile-enroll.md).  
 
@@ -144,9 +144,9 @@ For more information, see [Personally owned devices with a work profile](../enro
 
 >[!NOTE]
 > Android Enterprise device management capabilities supersede Android device administrator capabilities. We only recommend the Android device administrator enrollment method in these scenarios:  
- * For Microsoft Teams certified Android devices.
- * When the device is in an area where Android Enterprise is unavailable.  
- * When devices are incapable of integrating with Google Mobile Services, and the AOSP enrollment options won't work with them. For more information about using Android device administrator when Google Mobile Services is unavailable, see [How to use Intune in environments without Google Mobile Services](../apps/manage-without-gms.md).  
+> * For Microsoft Teams certified Android devices.
+> * When the device is in an area where Android Enterprise is unavailable.  
+> * When devices are incapable of integrating with Google Mobile Services, and the AOSP enrollment options won't work with them. For more information about using Android device administrator when Google Mobile Services is unavailable, see [How to use Intune in environments without Google Mobile Services](../apps/manage-without-gms.md).   
 
 ## Enrollment for Apple devices 
 This section describes the enrollment options available for iOS/iPadOS and Mac devices in Intune. 
@@ -155,7 +155,7 @@ This section describes the enrollment options available for iOS/iPadOS and Mac d
 Complete the following prerequisites before you create the enrollment profile for Apple devices:  
 
 * [Get an Apple MDM push certificate](../enrollment/apple-mdm-push-certificate-get.md) from the Apple Push Certificates Portal and upload it to the admin center. Without the certificate, Intune enrollment features appear unavailable and you can't enroll any devices.  
-* Get an Apple enrollment program token for [iOS/iPadOS](../enrollment/device-enrollment-program-enroll-ios.md#get-an-apple-automated-device-enrollment-token) or [Mac](../enrollment/device-enrollment-program-enroll-macos.md#get-an-apple-ade-token): If you plan to enroll devices via Apple automated device enrollment, create an enrollment program token in the admin center. This token is comprised of an MDM server token and allows Intune, Apple Business Manager, and Apple School Manager to sync information from your Apple enrollment program account.  
+* Get an Apple enrollment program token for [iOS/iPadOS](../enrollment/device-enrollment-program-enroll-ios.md#get-an-apple-automated-device-enrollment-token) or [Mac](../enrollment/device-enrollment-program-enroll-macos.md#create-enrollment-program-token): If you plan to enroll devices via Apple automated device enrollment, create an enrollment program token in the admin center. This token is made up of an MDM server token that allows Intune, Apple Business Manager, and Apple School Manager to sync information from your Apple enrollment program account.  
 
 ### Apple enrollment methods  
 The following table describes the supported enrollment methods for devices running iOS/iPadOS and macOS.     
@@ -164,7 +164,7 @@ The following table describes the supported enrollment methods for devices runni
 * Automated device enrollment [for iOS/iPadOS](../enrollment/device-enrollment-program-enroll-ios.md) and [for Mac devices](../enrollment/device-enrollment-program-enroll-macos.md): 
 Enroll new or wiped devices purchased from Apple Business Manager or Apple School Manager with automated device enrollment. This automated enrollment method for corporate-owned devices applies your organization's settings from Apple Business Manager and Apple School Manager, supports supervision mode, and enrolls devices without you needing to touch them.  When people turn on their devices, Apple Setup Assistant guides them through setup and enrollment.  
 
-* Apple Configurator [for iOS/iPadOS](../enrollment/apple-configurator-enroll-ios.md) and [for Mac devices](../enrollment/device-enrollment-direct-enroll-macos.md)Manually enroll new or existing corporate-owned devices via Apple Configurator. This method is ideal for bulk enrollments and when you don't have access to Apple School Manager, Apple Business Manager, or when you require a wired network connection. You must have physical access to the devices because this method requires you to connect and configure devices on a Mac. There are two different paths you can take:  
+* Apple Configurator [for iOS/iPadOS](../enrollment/apple-configurator-enroll-ios.md) and [for Mac devices](../enrollment/device-enrollment-direct-enroll-macos.md): Manually enroll new or existing corporate-owned devices via Apple Configurator. This method is ideal for bulk enrollments and when you don't have access to Apple School Manager, Apple Business Manager, or when you require a wired network connection. You must have physical access to the devices because this method requires you to connect and configure devices on a Mac. There are two different paths you can take:  
   * Setup Assistant enrollment: This method wipes the device and prepares it for enrollment in Apple Configurator. When users turn on their devices, Setup Assistant begins and devices enroll in Intune. This method requires you to have access to the device serial numbers because you need to input them into the admin center. 
   * Direct enrollment: This method lets you enroll the device prior to distribution, and doesn't wipe the device. Devices enrolled this way aren't associated with a user so we recommend this option for shared or kiosk devices. You don't need to have the serial numbers for this method. The instructions are different for macOS and iOS devices, so be sure to use the correct how-to documentation for devices.  
 
@@ -174,7 +174,7 @@ Enroll new or wiped devices purchased from Apple Business Manager or Apple Schoo
 
 * [Apple User Enrollment](../enrollment/ios-user-enrollment.md): Enable Apple User Enrollment for personally owned iOS/iPadOS devices in BYOD scenarios. This method gives device owners the option to secure the entire device or just work-related apps and data, and keeps managed data and apps on a separate volume away from the user's personal data. Enrollment takes place in the Company Portal app. This enrollment method is in public preview.  
 
-* [Apple Device Enrollmet](../enrollment/ios-user-enrollment.md): Enable Apple Device Enrollment for personally owned iOS/iPadOS devices in BYOD scenarios. This method gives you more control through device configuration settings compared to User Enrollment. For example, you can apply more granular requirements for passcodes. This enrollment method is in public preview.    
+* [Apple Device Enrollment](../enrollment/ios-user-enrollment.md): Enable Apple Device Enrollment for personally owned iOS/iPadOS devices in BYOD scenarios. This method gives you more control through device configuration settings compared to User Enrollment. For example, you can apply more granular requirements for passcodes. This enrollment method is in public preview.    
 
 --- 
 ## Enrollment for Linux  
@@ -187,7 +187,7 @@ This section describes the enrollment methods and configurations available for W
 
 ### Recommended management strategy
 
-As a reminder, devices must be registered or joined to Azure AD to enroll in Intune. The following table shows our recommended management strategy for each device identity option.  
+As a reminder, devices must be registered or joined to Azure AD to enroll in Microsoft Intune. The following table shows our recommended management strategy for each device identity option. 
  
  | Identity | Management | Provisioning| Cloud modernization   
  | --- | --- | ---| --- |
@@ -209,7 +209,7 @@ Automatic enrollment is supported with these identity and provisioning methods:
 
 * [Windows Autopilot for Hybrid Azure AD join](../../autopilot/windows-autopilot-hybrid.md): Automatic enrollment is supported with Windows Autopilot for hybrid Azure AD-joined devices. During the Windows Autopilot out-of-box-experience, the Intune connector for Active Directory enables devices in Active Directory domain services to join to Azure AD, and then automatically enroll in Intune. This method requires you to [install the Intune connector for Active Directory](../enrollment/autopilot-hybrid-connector-proxy.md) on an on-premises server and register devices in Windows Autopilot.  We recommend this method for on-premises environments that use Active Directory domain services and can't currently move their identities to Azure AD. 
 
-* [Co-management](../../configmgr/comanage/quickstart-paths.md): Co-management enrollment is best for environments that already manage devices with Configuration Manager, and want to integrate Microsoft Intune workloads. Co-management is the act of moving workloads from Configuration Manager to Intune and telling the Windows 10 client who the management authority is for that particular workload. For example, you can manage devices with compliance policies and device configuration workloads in Intune, and utilize Configuration Manager for all other features, like app deployment and security policies.   
+* [Co-management](../../configmgr/comanage/quickstart-paths.md): Co-management is best for environments that already manage devices with Configuration Manager, and want to integrate Microsoft Intune workloads. Co-management is the act of moving workloads from Configuration Manager to Intune and telling the Windows client who the management authority is for that particular workload. For example, you can manage devices with compliance policies and device configuration workloads in Intune, and utilize Configuration Manager for all other features, like app deployment and security policies.   
 
 # [User owned](#tab/byod-enrollment) 
 Manual and automatic enrollment are available for users in BYOD scenarios who want to enroll their personal devices. Employees and students who are Intune-licensed can initialize registration and enrollment by signing into the Company Portal app. We recommend enabling automatic enrollment in the admin center so that your employees only have to enter their credentials once to start enrollment.  
@@ -220,12 +220,13 @@ For more information, see [Set up enrollment for Windows devices](../enrollment/
 Set up and enroll a large number of corporate-owned devices in Azure AD and Intune without needing to reimage them. This process requires you to create a provisioning package using the Windows Configuration Designer app, and then apply the package during the OOBE, or run it on the device in the Settings app.  
 
 For more information, see [Bulk enrollment for Windows devices](../enrollment/windows-bulk-enroll.md).  
+
 ---   
 
 ### More enrollment settings for Windows  
 There are other Windows enrollment options in Intune to help improve or simplify the device management experience for you and your employees:     
 
-* [Co-management settings](../../configmgr/comanage/autopilot-enrollment.md): Enable co-management settings to integrate Configuration Manager with Intune. Co-management gives you the option to use both Intune and Configuration Manager features. 
+* [Co-management settings](../../configmgr/comanage/autopilot-enrollment.md): Enable co-management settings to integrate Configuration Manager with Intune. Co-management gives you the option to use both Intune and Configuration Manager features.  
 * [CNAME validation](../enrollment/windows-enroll.md#simplify-windows-enrollment-without-azure-ad-premium): Create a domain name server (DNS) alias (CNAME record type) that redirects enrollment requests to Intune servers, so that people enrolling their devices don't have to manually enter the server address. This option simplifies enrollment in the absence of Azure AD Premium.   
 * [Enrollment Status Page](../enrollment/windows-enrollment-status.md): Enable the Enrollment Status Page so that people going through device setup can view and track installation progress.  
 
@@ -237,7 +238,7 @@ For troubleshooting docs, see [Troubleshoot device enrollment](/troubleshoot/mem
 ## More resources 
 Additional enrollment guides are available throughout the Microsoft Intune documentation. These guides include visual comparisons, how-to steps, tips, and enrollment best practices for each supported platform.   
 
-- [Android enrolllment guide](deployment-guide-enrollment-android.md)
+- [Android enrollment guide](deployment-guide-enrollment-android.md)
 - [iOS/iPadOS enrollment guide](deployment-guide-enrollment-ios-ipados.md)
 - [Linux enrollment guide](deployment-guide-enrollment-linux.md)
 - [macOS enrollment guide](deployment-guide-enrollment-macos.md)
@@ -249,4 +250,4 @@ Additional enrollment guides are available throughout the Microsoft Intune docum
 2. [Add, configure, and protect apps](deployment-plan-protect-apps.md)
 3. [Plan for compliance policies](deployment-plan-compliance-policies.md)
 4. [Create device configuration profiles](deployment-plan-configuration-profile.md)
-5. 🡺 **Enroll devices**  
+5. 🡺 **Enroll devices** (*You are here*)  
