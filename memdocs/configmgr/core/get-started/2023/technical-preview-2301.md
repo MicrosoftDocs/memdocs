@@ -30,7 +30,7 @@ The following sections describe the new features to try out in this version:
 [!INCLUDE [Microsoft Configuration Manager product branding ](includes/2301/15885998.md)]
 [!INCLUDE [Improvements to Cloud Sync (Collections to AAD Group Sync) feature](includes/2301/14716797.md)]
 [!INCLUDE [Update to the default value of supersedence age in months for software updates.](includes/2301/16441147.md)]
-[!INCLUDE [Removing MSfB new config capability & in-product warnings.](includes/2301/10901602.md)]
+[!INCLUDE [Removing Microsoft Store for Business and Education new config capability.](includes/2301/10901602.md)]
 
 ## General known issues
 <!--16822959-->
