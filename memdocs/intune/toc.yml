@@ -1189,45 +1189,16 @@ items:
         - name: Prevent data leaks on non-managed devices
           href: ./protect/data-leak-prevention.md
 
-    - name: Enroll devices in Microsoft Intune 
+    - name: Enroll devices in Microsoft Intune  
       href: ./enrollment/index.yml
       items:
       - name: Device enrollment overview
         href: ./enrollment/device-enrollment.md
         displayName: COD; BYOD; DEM; ADE; USB-SA; USB-Direct; co-management; GPO
-      - name: Enrolled device management capabilities
-        href: ./enrollment/device-management-capabilities.md
-      - name: Enrollment options
-        href: ./enrollment/enrollment-options.md  
-      - name: DELETE -Quickstarts
-        items:
-        - name: Set up automatic enrollment
-          href: ./enrollment/quickstart-setup-auto-enrollment.md
-        - name: Enroll your Windows 10/11 device
-          href: ./enrollment/quickstart-enroll-windows-device.md
-      - name: DELETE - Tutorials
-        items:
-        - name: Use Autopilot to enroll Windows devices
-          href: ./enrollment/tutorial-use-autopilot-enroll-devices.md
-          displayName: OOBE
-        - name: Use the ADE to enroll iOS/iPadOS devices 
-          href: ./enrollment/tutorial-use-device-enrollment-program-enroll-ios.md
-      - name: Concepts (These seem like they can be part of How to)
-        items:
-        - name: Corporate identifiers
-          href: ./enrollment/corporate-identifiers-add.md
-          displayName: COD   
-        - name: Incomplete user enrollment report
-          href: ./enrollment/enrollment-report-company-portal-abandon.md
-        - name: Restrictions
-          href: ./enrollment/enrollment-restrictions-set.md  
-        - name: Terms and conditions
-          href: ./enrollment/terms-and-conditions-create.md
-        - name: Intune and Azure AD device limits  
-          href: ./enrollment/device-limit-intune-azure.md    
+
       - name: How-to guides (likely remove section and bring section up one)
         items:
-        - name: Enroll devices (deployment guides - need to integrate)
+        - name: Enroll devices (deployment guides - need to integrate) ??
           items:
           - name: Overview
             href: ./fundamentals/deployment-guide-enrollment.md
@@ -1242,65 +1213,101 @@ items:
             href: ./fundamentals/deployment-guide-enrollment-macos.md
           - name: Windows
             href: ./fundamentals/deployment-guide-enrollment-windows.md
+        - name: Pre-enrollment configurations  
+          items:
+          - name: Get Apple MDM push certificate   
+            href: ./enrollment/apple-mdm-push-certificate-get.md 
+          - name: Add corporate identifiers
+            href: ./enrollment/corporate-identifiers-add.md
+          - name: Add device enrollment manager  
+            href: ./enrollment/device-enrollment-manager-enroll.md  
+          - name: Configure device categories  
+            href: ./enrollment/device-group-mapping.md   
+          - name: Require multi-factor authentication  
+            href: ./enrollment/multi-factor-authentication.md
+            displayName: mfa; multifactor 
+          - name: Create terms and conditions policy  
+            href: ./enrollment/terms-and-conditions-create.md
+          - name: Create device enrollment restrictions
+            items: 
+            - name: Enrollment restrictions overview
+              href: ./enrollment/enrollment-restrictions-set.md
+            - name: Intune device limits vs. Azure AD device limits  
+              href: ./enrollment/device-limit-intune-azure.md    
+            - name: Create device platform restrictions 
+              href: ./enrollment/create-device-platform-restrictions.md  
+            - name: Create device limit restrictions  
+              href: ./enrollment/create-device-limit-restrictions.md                  
 
         - name: Set up Windows enrollment
           items:
-          - name: Windows enrollment methods
-            href: ./enrollment/windows-enrollment-methods.md
-          - name: Enrollment method capabilities
+          - name: Enrollment method overview  
             href: ./enrollment/enrollment-method-capab.md
-          - name: Windows enrollment
+          - name: Set up manual and automatic enrollment
             href: ./enrollment/windows-enroll.md
-          - name: Bulk enroll
+          - name: Set up bulk enrollment  
             href: ./enrollment/windows-bulk-enroll.md
-          - name: Enrollment Status Page
+          - name: Set up Enrollment Status Page
             href: ./enrollment/windows-enrollment-status.md
           - name: Configure proxy for Intune AD Connector
-            href: ./enrollment/autopilot-hybrid-connector-proxy.md
+            href: ./enrollment/autopilot-hybrid-connector-proxy.md  
+          - name: View incomplete user enrollments 
+            href: ./enrollment/enrollment-report-company-portal-abandon 
+          - name: Tutorial - Set up automatic enrollment
+            href: ./enrollment/quickstart-setup-auto-enrollment.md
+          - name: Tutorial - Enroll your Windows 10/11 device
+            href: ./enrollment/quickstart-enroll-windows-device.md
+          - name: Tutorial - Use Autopilot to enroll Windows devices
+            href: ./enrollment/tutorial-use-autopilot-enroll-devices.md
+
         - name: Set up Android enrollment
           items:
-          - name: Set up Android enrollment
+          - name: Enrollment method overview  
             href: ./enrollment/android-enroll.md
             displayName: wpj
-          - name: Connect Intune to Android Enterprise
-            href: ./enrollment/connect-intune-android-enterprise.md
-          - name: Android personally owned work profile enrollment
-            href: ./enrollment/android-work-profile-enroll.md
-          - name: Android Enterprise dedicated device enrollment
-            href: ./enrollment/android-kiosk-enroll.md
-            displayName: gms
-          - name: Android Enterprise fully managed enrollment
-            href: ./enrollment/android-fully-managed-enroll.md
-            displayName: gms
-          - name: Enroll dedicated, fully managed, or corporate-owned work profile devices
-            href: ./enrollment/android-dedicated-devices-fully-managed-enroll.md
-          - name: Android device administrator enrollment
-            href: ./enrollment/android-enroll-device-administrator.md
-          - name: Enroll Android (AOSP) corporate-owned userless devices
-            href: ./enrollment/android-aosp-corporate-owned-userless-enroll.md    
-          - name: Enroll Android (AOSP) corporate-owned user-associated devices
-            href: ./enrollment/android-aosp-corporate-owned-user-associated-enroll.md  
-          - name: Manage Android Enterprise work profile devices
-            href: ./enrollment/android-enterprise-overview.md 
-          - name: Enroll Android Enterprise corporate-owned work profile devices
-            href: ./enrollment/android-corporate-owned-work-profile-enroll.md     
-          - name: Move device administrator devices to personally owned work profile management
-            href: ./enrollment/android-move-device-admin-work-profile.md        
+          - name: Android Enterprise enrollment solutions    
+            items:
+              - name: Prerequisite- Connect Intune to Android Enterprise 
+                href: ./enrollment/connect-intune-android-enterprise.md
+              - name: Set up Android work profile for personal devices 
+                href: ./enrollment/android-work-profile-enroll.md
+              - name: Set up work profile for corporate owned devices
+                href: ./enrollment/android-corporate-owned-work-profile-enroll.md 
+              - name: Set up enrollment for dedicated devices
+                href: ./enrollment/android-kiosk-enroll.md
+                displayName: gms
+              - name: Set up enrollment for fully managed devices  
+                href: ./enrollment/android-fully-managed-enroll.md
+                displayName: gms
+              - name: Enroll corporate-owned devices  
+                href: ./enrollment/android-dedicated-devices-fully-managed-enroll.md
+          - name: AOSP enrollment solutions  
+            items: 
+              - name: Enroll Android (AOSP) corporate-owned userless devices
+                href: ./enrollment/android-aosp-corporate-owned-userless-enroll.md    
+              - name: Enroll Android (AOSP) corporate-owned user-associated devices
+                href: ./enrollment/android-aosp-corporate-owned-user-associated-enroll.md 
+          - name: Android device administrator    
+            items: 
+              - name: Set up enrollment for Android device administrator 
+                href: ./enrollment/android-enroll-device-administrator.md
+              - name: Move personal devices to Android Enterprise work profile management 
+                href: ./enrollment/android-move-device-admin-work-profile.md  
           - name: Samsung Knox Mobile Enrollment 
-            href: ./enrollment/android-samsung-knox-mobile-enroll.md
+            items: 
+              - name: Enable Samsung Knox Mobile Enrollment
+                href: ./enrollment/android-samsung-knox-mobile-enroll.md
           - name: Android Enterprise security configuration framework
             items:
-              - name: Android Enterprise security configuration framework
+              - name: Overview of security framework
                 href: ./enrollment/android-configuration-framework.md
-              - name: Framework deployment methodology
-                href: ./enrollment/framework-deployment-methodology.md
-              - name: Device enrollment restrictions
+              - name: 1 - Apply device enrollment restrictions
                 href: ./enrollment/device-enrollment-restrictions.md
-              - name: Set app configuration policies
+              - name: 2 - Apply app configuration policies
                 href: ./enrollment/android-app-configuration-policies.md
-              - name: Android personally owned work profile security settings
+              - name: 3 - Apply security settings for personal devices   
                 href: ./enrollment/android-work-profile-security-settings.md
-              - name: Android fully managed-security settings
+              - name: 4 - Apply security settings for fully managed devices 
                 href: ./enrollment/android-fully-managed-security-settings.md         
         - name: Set up iOS/iPadOS enrollment
           href: ./enrollment/ios-enroll.md
@@ -1348,15 +1355,6 @@ items:
             href: ./enrollment/device-enrollment-program-enroll-macos.md
           - name: Direct Enrollment for macOS devices
             href: ./enrollment/device-enrollment-direct-enroll-macos.md      
-        - name: Add device enrollment manager  
-          href: ./enrollment/device-enrollment-manager-enroll.md  
-        - name: Configure device categories  
-          href: ./enrollment/device-group-mapping.md   
-        - name: Get Apple MDM push certificate  
-          href: ./enrollment/apple-mdm-push-certificate-get.md 
-        - name: Require multi-factor authentication  
-          href: ./enrollment/multi-factor-authentication.md
-          displayName: mfa; multifactor   
         - name: Troubleshoot enrollment
           items:
           - name: Troubleshoot device enrollment
@@ -1369,7 +1367,8 @@ items:
           - name: Troubleshoot Windows auto-enrollment
             href: /troubleshoot/mem/intune/troubleshoot-windows-auto-enrollment
           - name: Troubleshoot Android device enrollment
-            href: /troubleshoot/mem/intune/troubleshoot-android-enrollment
+            href: /troubleshoot/mem/intune/troubleshoot-android-enrollment  
+        
 
     - name: Assign and deploy policies (do we need a hub page?)
       items: 
