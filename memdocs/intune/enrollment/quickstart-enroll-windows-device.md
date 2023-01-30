@@ -82,18 +82,15 @@ Before enrolling your Windows device, you must confirm the version of Windows th
 
     ![Select Access work school account](./media/quickstart-enroll-windows-device/quickstart-enroll-windows-device-04.png)
 
-3. Sign in to Intune with your work or school account, and then select **Next**. If you followed the [create a user and assign a license](../fundamentals/quickstart-create-user.md) quickstart, you can sign in with the user account that you created.
-
-    > [!NOTE]
-    > If you setting up an ".onmicrosoft.com", the user account will have **.onmicrosoft.com** as part of the account address. 
+3. Enter the username and password for your work account, and then select **Next**. If you followed the [create a user and assign a license](../fundamentals/quickstart-create-user.md) quickstart, you can sign in with the user account that you created.  
 
    ![Enter your work or school account](./media/quickstart-enroll-windows-device/quickstart-enroll-windows-device-05.png)
 
     You'll see a message indicating that your company or school is registering your device.
 
-4. When you see the **You're all set!** screen, select **Done**. You're done.  
+4. When you see the **You're all set!** screen, select **Done**.   
 
-5. You will now see the added account as part of the **Access work or school** settings on your Windows desktop.  
+5. You will now see the added account as part of the **Access work or school** settings on your device.    
 
    ![Screenshot of newly added account](./media/quickstart-enroll-windows-device/quickstart-enroll-windows-device-06.png)
 
@@ -105,7 +102,7 @@ Before enrolling your Windows device, you must confirm the version of Windows th
 2. Select **Devices** > **All devices** to view the enrolled devices in Intune.
 3. Verify that you have an additional device enrolled within Intune.
 
-   ![Screenshot Intune enrolled devices](./media/quickstart-enroll-windows-device/quickstart-enroll-windows-device-07.png)
+   ![Screenshot of Intune-enrolled devices](./media/quickstart-enroll-windows-device/quickstart-enroll-windows-device-07.png)
 
 ## Clean up resources
 
