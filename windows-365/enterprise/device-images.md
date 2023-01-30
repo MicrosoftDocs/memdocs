@@ -7,9 +7,9 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 10/14/2022
+ms.date: 10/31/2022
 ms.topic: overview
-ms.service: cloudpc
+ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
 ms.technology:
@@ -55,7 +55,7 @@ Storing a managed image on Azure incurs storage costs. However, customers can de
 
 ## Gallery images
 
-Windows 365 provides a built-in gallery of Windows Enterprise images accessible through the provisioning policy creation flow. They're replicated to the regions in Azure Network Connections, or the provisioned regions if no Azure Network Connections are created. These images are updated monthly with the latest security updates so that end users have a secure and seamless experience.
+Windows 365 provides a built-in gallery of Windows Enterprise images accessible through the provisioning policy creation flow. They're replicated to all Azure regions to give you a quick provisioning experience. These images are updated monthly with the latest security updates so that end users have a secure and seamless experience.
 
 There are two sets of images available to choose from across the different versions of Windows Enterprise:
 

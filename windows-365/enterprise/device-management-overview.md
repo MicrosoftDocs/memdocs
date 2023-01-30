@@ -7,9 +7,9 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 08/02/2021
+ms.date: 12/15/2022
 ms.topic: overview
-ms.service: cloudpc
+ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
 ms.technology:
@@ -89,7 +89,9 @@ If a user has multiple Windows 365 SKUs assigned to them, they’ll get multiple
 
 **User**: The user assigned to the Cloud PC.  
 
-**Date modified**: The timestamp of the last change of state of the Cloud PC.  
+**Date modified**: The timestamp of the last change of state of the Cloud PC.
+
+**Third-party connector**: If the third-party connector is installed and used on the Cloud PC, the connector provider is displayed along with the connector status. By default, this column is hidden and needs to be selected from the list of columns to be displayed.
 
 <!-- ########################## -->
 ## Next steps

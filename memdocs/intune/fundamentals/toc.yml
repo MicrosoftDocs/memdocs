@@ -106,7 +106,7 @@ items:
           href: deployment-guide-enrollment.md
         - name: MAM
           href: deployment-guide-enrollment-mamwe.md
-        - name: Android, Android Enterprise
+        - name: Android, Android Enterprise, AOSP
           href: deployment-guide-enrollment-android.md
           displayName: COBO
         - name: iOS, iPadOS
@@ -117,10 +117,12 @@ items:
           href: deployment-guide-enrollment-windows.md
       - name: Device platform deployment
         items:
-        - name: iOS/iPadOS  
-          href: deployment-guide-platform-ios-ipados.md    
         - name: Android, Android Enterprise 
-          href: deployment-guide-platform-android.md 
+          href: deployment-guide-platform-android.md  
+        - name: iOS/iPadOS  
+          href: deployment-guide-platform-ios-ipados.md  
+        - name: Linux
+          href: deployment-guide-platform-linux.md  
         - name: macOS 
           href: deployment-guide-platform-macOS.md 
       - name: Device and app management
@@ -197,7 +199,7 @@ items:
         href: create-custom-role.md
       - name: Use scope tags
         href: scope-tags.md
-    - name: Configure multiple admin approval
+    - name: Configure multiple admin approval  
       href: multi-admin-approval.md
   - name: Enroll devices
     href: ../enrollment/index.yml
@@ -256,7 +258,7 @@ items:
   - name: Error codes and descriptions
     items: 
     - name: Troubleshoot company resource access problems
-      href: /troubleshoot/mem/intune/troubleshoot-company-resource-access-problems?toc=/mem/intune/fundamentals/toc.json&bc=/mem/intune/fundamentals/breadcrumb/toc.json
+      href: /troubleshoot/mem/intune/troubleshoot-company-resource-access-problems?toc=/mem/intune/fundamentals/toc.json&bc=/mem/fundamentals/breadcrumb/toc.json
   - name: Policy map between Basic Mobility and Security and Intune
     items: 
     - name: Policy mapping between Basic Mobility and Security and Intune

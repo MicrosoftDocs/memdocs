@@ -105,7 +105,7 @@ Before you can configure Conditional Access, verify the following configurations
 
 ### Support for PCs
 
-The native **Mail** application on Windows 8.1 and later (when enrolled into MDM with Intune)
+It currently supports the native **Mail** application on Windows 8.1 and later (when enrolled into MDM with Intune).
 
 [!INCLUDE [windows-phone-81-windows-10-mobile-support](../includes/windows-phone-81-windows-10-mobile-support.md)]
 
@@ -135,7 +135,7 @@ Before you can use the following procedure to set up Exchange on-premises access
 
    Select **Save** to save your configuration, and return to the **Exchange access** pane.
 
-6. Next, configure settings for the Intune on-premises Exchange connector. In the console, select **Tenant administration** > **Exchange Access**> **Exchange ActiveSync on-premises connector** and then select the connector for the Exchange organization that you want to configure.
+6. Next, configure settings for the Intune on-premises Exchange connector. In the admin center, select **Tenant administration** > **Exchange Access**> **Exchange ActiveSync on-premises connector** and then select the connector for the Exchange organization that you want to configure.
 
 7. For **User notifications**, select **Edit** to open the **Edit Organization** workflow where you can modify the *User notification* message.
 

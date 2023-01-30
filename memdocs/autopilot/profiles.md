@@ -1,15 +1,15 @@
 ---
 title: Configure Autopilot profiles
 description: Learn how to configure device profiles for Windows Autopilot deployment.
-ms.technology: windows
-ms.prod: w10
+ms.technology: itpro-deploy
+ms.prod: windows-client
 ms.localizationpriority: medium
-author: aczechowski
-ms.author: aaroncz
+author: frankroj
+ms.author: frankroj
 ms.reviewer: jubaptis
-manager: dougeby
-ms.date: 07/18/2022
-ms.collection:
+manager: aaroncz
+ms.date: 11/17/2022
+ms.collection: 
   - M365-modern-desktop
   - highpri
 ms.topic: how-to
@@ -17,7 +17,7 @@ ms.topic: how-to
 
 # Configure Autopilot profiles
 
-**Applies to**
+*Applies to:*
 
 - Windows 11
 - Windows 10
@@ -92,7 +92,9 @@ Autopilot deployment profiles are used to configure the Autopilot devices. You c
     ![Screenshot of Review page.](images/create-profile-review.png)
 
 > [!NOTE]
-> Intune will periodically check for new devices in the assigned groups, and then begin the process of assigning profiles to those devices. This process can take several minutes to complete. Before deploying a device, ensure that this process has completed. You can check under **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program** where you should see the profile status change from "Unassigned" to "Assigning" and finally to "Assigned."
+> Intune will periodically check for new devices in the assigned groups, and then begin the process of assigning profiles to those devices. Due to several different factors involved in the process of Autopilot profile assignment, an estimated time for the assignment can vary from scenario to scenario. These factors can include AAD groups, membership rules, hash of a device, Intune and Autopilot service, and internet connection. The assignment time will vary depending on all the factors and variables involved in a specific scenario.<br>
+<br>
+Before deploying a device, ensure that this process has completed. You can check under **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program** where you should see the profile status change from "Unassigned" to "Assigning" and finally to "Assigned."
 
 ## Edit an Autopilot deployment profile
 

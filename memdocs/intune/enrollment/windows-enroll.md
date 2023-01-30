@@ -34,6 +34,7 @@ ms.collection:
 # Set up enrollment for Windows devices  
 
 **Applies to**
+
 - Windows 10
 - Windows 11
 
@@ -111,8 +112,9 @@ Changes to DNS records might take up to 72 hours to propagate. You can't verify 
 
 ### Step 2: Verify CNAME (optional)
 
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Windows** > **Windows enrollment** > **CNAME Validation**.
-2. In the **Domain** box, enter the company website and then choose **Test**.
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices** > **Windows** > **Windows enrollment**.  
+2. Select **CNAME Validation**.  
+2. For **Domain**, enter the company website, and then choose **Test**.
 
 ### Additional endpoints that aren't supported
 
@@ -126,19 +128,18 @@ Using a method other than the CNAME configuration isn't supported. For example, 
 
 The Microsoft Intune user-help docs provide conceptual information, tutorials, and how-to guides for employees and students setting up their devices. You can point people directly to them or use these articles as guidance when developing and updating your org's own device management docs.  
 
-These articles describe how to enroll devices running Windows: 
+These articles describe how to enroll devices running Windows:
 
- * [Enroll Windows 10/11 device](../user-help/enroll-windows-10-device.md) 
- * [Enroll Windows 8.1 or Windows RT 8.1 device](../user-help/enroll-your-w81-or-rt81-windows.md)
+- [Enroll Windows 10/11 device](../user-help/enroll-windows-10-device.md)
+- [Enroll Windows 8.1 or Windows RT 8.1 device](../user-help/enroll-your-w81-or-rt81-windows.md)
 
 For information about how enrollment affects the device and the information on it, see [What information can my organization see when I enroll my device?](../user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)  
 
 > [!NOTE]
 > End users must access the Company Portal website through Microsoft Edge to view Windows apps that you've assigned for specific versions of Windows. Other browsers, including Google Chrome, Mozilla Firefox, and Internet Explorer do not support this type of filtering.
 
-
 >[!IMPORTANT]
-> If you do not have Auto-MDM enrollment enabled, but you have Windows 10/11 devices that have been joined to Azure AD, two records will be visible in the Intune console after enrollment. You can stop this by making sure that users with Azure AD joined devices go to **Accounts** > **Access work or school** and **Connect** using the same account.
+> If you do not have Auto-MDM enrollment enabled, but you have Windows 10/11 devices that have been joined to Azure AD, two records will be visible in the Microsoft Endpoint Manager admin center after enrollment. You can stop this by making sure that users with Azure AD joined devices go to **Accounts** > **Access work or school** and **Connect** using the same account.
 
 ## Registration and Enrollment CNAMEs
 

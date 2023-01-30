@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/22/2022
+ms.date: 10/17/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -230,13 +230,13 @@ Avoid requiring use of a derived credential to access a process that you'll use 
 
 ## Set up a derived credential issuer
 
-Before you create policies that require use of a derived credential, set up a credential issuer in the Intune console. A derived credential issuer is a tenant-wide setting. Tenants support only a single issuer at a time.
+Before you create policies that require use of a derived credential, set up a credential issuer in the Microsoft Endpoint Manager admin center. A derived credential issuer is a tenant-wide setting. Tenants support only a single issuer at a time.
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Tenant administration** > **Connectors and tokens** > **Derived Credentials**.
 
     > [!div class="mx-imgBorder"]
-    > ![Configure derived credentials in the console](./media/derived-credentials/configure-provider.png)
+    > ![Configure derived credentials in the Microsoft Endpoint Manager admin center](./media/derived-credentials/configure-provider.png)
 
 3. Specify a friendly **Display name** for the derived credential issuer policy.  This name isn't shown to your device users.
 
@@ -320,10 +320,13 @@ Use derived credentials for certificate-based authentication to web sites and ap
    - **Description**: Enter a description that gives an overview of the setting, and any other important details.
    - **Platform**: Select **Android Enterprise**.
    - **Profile type**: Under *Fully Managed, Dedicated, and Corporate-Owned Work Profile*, select **Derived credential**.
+   - On the **Apps** page, configure **Certificate access** to manage how certificate access is granted to applications. Choose from:
+     - **Require user approval for apps** *(default)* – Users must approve use of a certificate by all applications.
+     - **Grant silently for specific apps (require user approval for other apps**) – With this option, select **Add apps**, and then select one or more apps that will silently use the certificate without user interaction.
 
-4. Select **OK** to save your changes.
+4. On the **Assignments** page, select the groups that should receive the policy.
+
 5. When finished, select **OK** > **Create** to create the Intune profile. When complete, your profile is shown in the **Devices - Configuration profiles** list.
-6. Select your new profile > **Assignments**. Select the groups that should receive the policy.
 
 Users receive the app or email notification depending on the settings you specified when you set up the derived credential issuer. The notification informs the user to launch the Company Portal so that the derived credential policies can be processed.
 

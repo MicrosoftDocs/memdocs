@@ -46,15 +46,29 @@ items:
       href: device-remove-user.md
     - name: Find primary user
       href: find-primary-user.md
+  - name: Communication    
+    items: 
+    - name: Send notifications 
+      href: custom-notifications.md 
+    - name: Organizational messages  
+      items: 
+       - name: Overview   
+         href: organizational-messages-overview.md  
+       - name: Prerequisites   
+         href: organizational-messages-prerequisites.md  
+       - name: Create organizational messages  
+         href: organizational-messages-create.md  
+       - name: Cancel organizational message 
+         href: organizational-messages-cancel.md
+       - name: View reporting details
+         href: organizational-messages-reporting.md
   - name: Other actions
     items:
     - name: Locate device
       href: device-locate.md
     - name: Rename device
       href: device-rename.md
-    - name: Send notifications
-      href: custom-notifications.md
-    - name: Use remote help
+    - name: Use Remote Help
       href: remote-help.md
     - name: Use TeamViewer for remote administration
       href: teamviewer-support.md

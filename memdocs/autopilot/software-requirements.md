@@ -2,30 +2,31 @@
 title: Windows Autopilot software requirements
 description: Inform yourself about software requirements for Windows Autopilot deployment.
 keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, Autopilot, ztd, zero-touch, partner, msfb, intune
-ms.prod: w10
+ms.prod: windows-client
 ms.mktglfcycl: deploy
 ms.localizationpriority: medium
 ms.sitesec: library
 ms.pagetype: deploy
 audience: itpro
-author: aczechowski
-ms.author: aaroncz
+author: frankroj
+ms.author: frankroj
 ms.reviewer: jubaptis
-manager: dougeby
-ms.date: 11/12/2021
-ms.collection:
+manager: aaroncz
+ms.date: 11/17/2022
+ms.collection: 
   - M365-modern-desktop
   - highpri
 ms.topic: conceptual
 ms.custom: 
-- CI 116757
-- CSSTroubleshooting
+  - CI 116757
+  - CSSTroubleshooting
+ms.technology: itpro-deploy
 ---
 
 
 # Windows Autopilot software requirements
 
-**Applies to**
+*Applies to:*
 
 - Windows 11
 - Windows 10
@@ -42,7 +43,12 @@ Windows Autopilot depends on specific features available in Windows client, Azur
 
 Use a supported version of Windows 11. For more information, see [Windows release health](/windows/release-health/).
 
-The following editions are supported: Pro, Pro Education, Pro for Workstations, Enterprise, and Education
+The following editions are supported: 
+  - Windows 11 Pro
+  - Windows 11 Pro Education
+  - Windows 11 Pro for Workstations
+  - Windows 11 Enterprise
+  - Windows 11 Education
 
 ### HoloLens
 

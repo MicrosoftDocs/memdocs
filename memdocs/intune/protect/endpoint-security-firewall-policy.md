@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/06/2022
+ms.date: 10/17/2022
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -67,6 +67,23 @@ Find the endpoint security policies for firewalls under *Manage* in the **Endpoi
 > The *Windows 10, Windows 11, and Windows Server* platform supports devices communicating with Endpoint Manager through Microsoft Intune or Microsoft Defender for Endpoint. These profiles also add support for the Windows Server platform which is not supported through Microsoft Intune natively.
 >
 > Profiles for this new platform use the settings format as found in the Settings Catalog. Each new profile template for this new platform includes the same settings as the older profile template it replaces. With this change you can no longer create new versions of the old profiles. Your existing instances of the old profile remain available to use and edit.
+
+#### Add reusable settings groups to profiles for Firewall rules
+
+In public preview, Microsoft Defender Firewall rule profiles support use of [reusable settings groups](../protect/reusable-settings-groups.md) for the following platforms:
+
+- *Windows 10, Windows 11, and Windows Server platform*
+
+The following firewall rule profile settings are available in reusable settings groups:
+
+- Remote IP address ranges
+- FQDN definitions and auto-resolution
+
+When you configure a firewall rule to add one or more reusable settings groups, you’ll also configure the rules Action to define how the settings in those groups are used.
+
+Each rule you add to the profile can include both reusable settings groups and individual settings that are added directly to the rule.  However, consider using each rule for either reusable settings groups or to manage settings you add directly to the rule. This separation can help simplify future configurations or changes you might make.  
+
+For guidance on configuring reusable groups, and then adding them to this profile, see [Use reusable groups of settings with Intune policies](../protect/reusable-settings-groups.md).
 
 ### Devices managed by Configuration Manager
 
@@ -149,6 +166,21 @@ You can filter returns for this report by using one or more of the status detail
 To learn more about Firewall rules in Intune, and how to troubleshoot common problems, see the following *Intune Customer Success* blog:
 
 - [How to trace and troubleshoot the Intune Endpoint Security Firewall rule creation process](https://techcommunity.microsoft.com/t5/intune-customer-success/how-to-trace-and-troubleshoot-the-intune-endpoint-security/ba-p/3261452)
+
+Additional common firewall rule issues:
+
+**Event Viewer: RemotePortRanges or LocalPortRanges "The parameter is incorrect"**
+> [!div class="mx-imgBorder"]
+> ![RemotePortRangesFailure](media/endpoint-security-firewall-policy/remoteportrangeparameterincorrect.png)
+- Verify configured ranges are ascending (Example: 1-5 is correct, 5-1 will cause this error)
+- Verify configured ranges are within the overall port range of 0-65535 
+- If either remote port ranges or local port ranges are configured in a rule, protocol **must** also be configured with 6 (TCP) **or** 17 (UDP)
+
+**Event Viewer: Name "The parameter is incorrect"**
+> [!div class="mx-imgBorder"]
+> ![NameFailure](media/endpoint-security-firewall-policy/nameparameterincorrect.png)
+- If edge traversal is enabled in a rule, the rule direction **must** be set to "This rule applies to inbound traffic".
+
 
 ## Next steps
 

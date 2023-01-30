@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/05/2022
+ms.date: 12/09/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -31,13 +31,11 @@ ms.collection:
 
 # App and driver compatibility reports for Windows updates
 
-*This feature is in preview.*
-
 With Intune, you can deploy updates to Windows 10/11 devices by using policies for [Update rings for Windows 10 and later](../protect/windows-10-update-rings.md) and [Feature updates for Windows 10 and later](../protect/windows-10-feature-updates.md). To help prepare for update deployments, Intune offers integrated reports to help you understand compatibility risks that might impact your devices during or after an update:
 
-- **Windows feature update device readiness report (Preview)** - This report provides per-device information about compatibility risks that are associated with an upgrade or update to a chosen version of Windows.
+- **Windows feature update device readiness report** - This report provides per-device information about compatibility risks that are associated with an upgrade or update to a chosen version of Windows.
 
-- **Windows feature update compatibility risks report (Preview)** - This report provides a summary view of the top compatibility risks across your organization for a chosen version of Windows. You can use this report to understand which compatibility risks impact the greatest number of devices in your organization.
+- **Windows feature update compatibility risks report** - This report provides a summary view of the top compatibility risks across your organization for a chosen version of Windows. You can use this report to understand which compatibility risks impact the greatest number of devices in your organization.
 
 To use these reports, you must first ensure that prerequisites are met and that devices are properly configured for data collection.
 
@@ -62,9 +60,6 @@ To be eligible for the Windows feature update device readiness and Windows featu
 
 Additionally, you must [enable Windows diagnostic data processor configuration](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#enable-windows-diagnostic-data-processor-configuration).
 
-> [!NOTE]  
-> If your devices are currently enrolled in Desktop Analytics, then the Windows diagnostic data and processor configuration requirements are already met.
-
 ### Users
 
 To view these reports, users must be assigned an Intune role with the **Managed devices** > **View reports** permission. This permission is included in the following built-in roles:
@@ -73,7 +68,7 @@ To view these reports, users must be assigned an Intune role with the **Managed 
 - Read Only Operator
 - Help Desk Operator
 
-In addition, to use the **Windows feature update device readiness report (preview)**, users must also have the **Roles** > **Read** permission. This permission is included in the following built-in roles:
+In addition, to use the **Windows feature update device readiness report**, users must also have the **Roles** > **Read** permission. This permission is included in the following built-in roles:
 
 - Endpoint Security Manager
 - Read Only Operator
@@ -82,7 +77,7 @@ In addition, to use the **Windows feature update device readiness report (previe
 
 ## Use the Windows feature update device readiness report
 
-The **Windows feature update device readiness report (preview)**  provides a device-level view of compatibility risks associated with an upgrade or update to a chosen version of Windows.
+The **Windows feature update device readiness report**  provides a device-level view of compatibility risks associated with an upgrade or update to a chosen version of Windows.
 
 > [!IMPORTANT]  
 > The insights in this report are specific to the target version of Windows you select when generating the report. To ensure accuracy of insights, confirm that your selected OS version matches the version of Windows you intend to deploy.
@@ -90,7 +85,7 @@ The **Windows feature update device readiness report (preview)**  provides a dev
 To use this report:
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. In the admin center, go to **Reports** > **Windows updates** > select the **Reports** tab > select **Windows Feature Update Device Readiness Report (Preview)**.
+2. In the admin center, go to **Reports** > **Windows updates** > select the **Reports** tab > select **Windows Feature Update Device Readiness Report**.
 3. Configure settings:
    - Click on **Select Target OS** and choose the version of Windows you plan to deploy.
    - Click on **Select Scope (Tags)** and choose which devices should be in scope for this report.
@@ -134,7 +129,7 @@ For more information about the compatibility risks that impact a specific device
 
 ## Use the Windows feature update compatibility risks report
 
-The **Windows feature update compatibility risks report (preview)**  provides a summary view of the compatibility risks across your organization associated with an upgrade or update to a chosen version of Windows.
+The **Windows feature update compatibility risks report**  provides a summary view of the compatibility risks across your organization associated with an upgrade or update to a chosen version of Windows.
 
 > [!IMPORTANT]  
 > The insights in this report are specific to the target version of Windows you select when generating the report. To ensure accuracy of insights, confirm that your selected OS version matches the version of Windows you intend to deploy.
@@ -142,7 +137,7 @@ The **Windows feature update compatibility risks report (preview)**  provides a 
 To use this report:
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. In the admin center, go to **Reports** > **Windows updates** > select the **Reports** tab > select **Windows Feature Update Compatibility Risks Report (Preview)**.
+2. In the admin center, go to **Reports** > **Windows updates** > select the **Reports** tab > select **Windows Feature Update Compatibility Risks Report**.
 3. Configure settings:
 
    - Click on **Select Target OS** and choose the version of Windows you plan to deploy.
@@ -169,6 +164,78 @@ For more information about a specific compatibility risk, including which device
 - **Overview** - A summary of the compatibility risk, including asset details and the compatibility assessment. When available, the **Guidance** section provides recommended actions to mitigate the compatibility risk.
 - **Affected devices** - A table of the devices that may be impacted by this compatibility risk.
 
+### Issue descriptions
+
+We use information from the Microsoft app compatibility database to describe any existing compatibility issues for publicly available applications from Microsoft or other publishers:
+
+#### Application is removed during upgrade
+
+Windows detected compatibility issues with an application. The application won't migrate to the new OS version. No action is required for the upgrade to continue. Install a compatible version of the application on the new OS version.
+
+<!-- 3594545 -->
+Windows can partially or fully remove these assets:
+
+- Full removal: Windows setup completely removes the app from the device during upgrade.
+- Partial removal: Windows setup partially removes the app from the device. You need to manually uninstall it after you upgrade Windows.
+
+In both the cases, after you upgrade Windows, you can't use the app.
+
+#### Blocking upgrade
+
+Windows detected blocking issues, and can't remove the application during upgrade. It may not work on the new OS version. Before you upgrade, remove the application, reinstall and test it on the new OS version.
+
+#### Blocking upgrade, but can be reinstalled after upgrading
+
+The application is compatible with the new OS version, but won't migrate. Remove the application before upgrading Windows and then reinstall the application on the new OS version.
+
+#### Blocking upgrade, update application to newest version
+
+The existing version of the application isn't compatible with the new OS version and won't migrate. A compatible version of the application is available. Update the application before upgrading.
+
+#### Disk encryption blocking upgrade
+
+The application's encryption features block the upgrade. Disable the encryption feature before you upgrade Windows and enable it after the upgrade.
+
+#### Doesn't work with new OS, but won't block upgrade
+
+The application isn't compatible with the new OS version, but won't block the upgrade. No action is required for the upgrade to continue. Install a compatible version of the application on the new OS version.
+
+#### Doesn't work with new OS, and will block upgrade
+
+The application isn't compatible with the new OS version and will block the upgrade. Remove the application before upgrading. A compatible version of the application may be available.
+
+#### Evaluation may be required on new OS
+
+Windows will migrate the application, but it detected issues that may impact the app's performance on the new OS version. No action is required for the upgrade to continue. Test the application on the new OS version.
+
+#### May block upgrade, test application
+
+Windows detected issues that may interfere with the upgrade, but needs further investigation. Test the application's behavior during upgrade. If it blocks the upgrade, remove it before upgrading. Then reinstall and test it on the new OS version.
+
+#### Multiple
+
+Multiple issues affect the application. 
+
+#### Reinstall application after upgrading
+
+The application is compatible with the new OS version, but you need to reinstall it after you upgrade Windows. The upgrade process removes the application. No action is required for the upgrade to continue. Reinstall the application on the new OS version.
+
+#### Driver won't migrate to new OS
+
+The currently installed version of a driver won't migrate to the new OS version. 
+
+- The driver won't migrate to the new OS version and Windows doesn't have a compatible version. In this case, we recommend checking with the independent hardware vendor (IHV) who manufactures the driver, or the original equipment manufacturer (OEM) who provided the device.
+- A new driver will be installed during upgrade, and a newer version may be available from Windows Update. If the computer automatically receives updates from Windows Update, no action is required. Otherwise, import a new driver from Windows Update after you upgrade Windows.
+
+#### Safeguards
+
+<!-- 5746559 -->
+
+When an issue may result in a Windows client feature update to fail or rollback, we may apply safeguard holds to prevent affected devices from installing the update in order to safeguard them from these experiences. We remove these holds once a fix is found and verified. To get additional information about safeguard holds in place, see the [Windows release health](/windows/release-health/) page under **Known issues** corresponding to the relevant release.
+
+> [!NOTE]
+> The safeguard entries aren't a real asset that's installed on your devices. It's a placeholder to help identify apps or drivers in your environment with the safeguard compatibility tag.
+
 ## About reporting data latency
 
 The data source for these reports is [Windows diagnostic data](/windows/privacy/configure-windows-diagnostic-data-in-your-organization). Data typically uploads from enrolled devices once per day and is then processed in batches before being made available in Intune. The maximum end-to-end latency is approximately 52 hours.
@@ -179,7 +246,7 @@ The data source for these reports is [Windows diagnostic data](/windows/privacy/
 
 When report data is exported to a .csv file, the exported data doesn't use the friendly names you're used to seeing in the online reports. Use the information below to map the data in the exported file into the meaning of the value:
 
-#### Windows feature update device readiness report (preview)
+#### Windows feature update device readiness report
 
 **Ownership**:
 
@@ -219,7 +286,7 @@ When report data is exported to a .csv file, the exported data doesn't use the f
 > [!NOTE]  
 > When exported, the **sys req issues** column is represented as a comma-separated list of all values that apply to the device. For example, a value of "1, 2" means the device does not meet the processor family or the RAM requirement for the target OS version selected.
 
-#### Windows feature update compatibility risks report (preview)
+#### Windows feature update compatibility risks report
 
 **Asset Type**:
 
@@ -257,6 +324,10 @@ When report data is exported to a .csv file, the exported data doesn't use the f
 
 > [!NOTE]  
 > **Guidance** information is not included in the .csv export file. The mapping table above includes **Guidance** data for each **Issue** type.
+
+## See also
+
+The FastTrack Center Benefit for Windows provides access to **Desktop App Assure**. This benefit is a service designed to address issues with Windows 10/11 and Microsoft 365 Apps for enterprise compatibility. For more information, see [Desktop App Assure](/fasttrack/win-10-app-assure).
 
 ## Next step
 

@@ -2,26 +2,27 @@
 title: Automatic registration of existing devices - Windows Autopilot
 description: Automatically add devices to Windows Autopilot
 keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune
-ms.prod: w10
+ms.prod: windows-client
 ms.mktglfcycl: deploy
 ms.localizationpriority: medium
 ms.sitesec: library
 ms.pagetype: deploy
 audience: itpro
-author: aczechowski
-ms.author: aaroncz
+author: frankroj
+ms.author: frankroj
 ms.reviewer: jubaptis
-manager: dougeby
-ms.date: 11/05/2021
+manager: aaroncz
+ms.date: 11/17/2022
 ms.topic: how-to
 ms.collection: 
-- M365-modern-desktop
-- m365initiative-coredeploy
+  - M365-modern-desktop
+  - m365initiative-coredeploy
+ms.technology: itpro-deploy
 ---
 
 # Automatic registration of existing devices
 
-**Applies to**
+*Applies to:*
 
 - Windows 11
 - Windows 10
@@ -36,7 +37,12 @@ You can automatically register an existing device if it's:
 - A corporate device that's not already registered with Autopilot
 
 > [!NOTE]
-> Converting all targeted devices to Autopilot isn't supported for transforming a hybrid Azure AD device into a Azure AD Autopilot device.<!-- MEMDocs#2175 -->
+> Converting all targeted devices to Autopilot isn't supported for transforming a hybrid Azure AD join device into an Azure AD join Autopilot device.<!-- MEMDocs#2175 -->
+>
+> - Hybrid Azure AD join device = On-premise AD domain joined + Azure AD domain joined device
+> - Azure AD join device = Azure AD domain joined only device
+>
+> For more information see [Windows Autopilot deployment for existing devices](existing-devices.md)
 
 For devices that meet these requirements, the MDM service can ask the device for the hardware hash. After it has that, it can automatically register the device with Windows Autopilot.
 

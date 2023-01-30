@@ -42,6 +42,9 @@ The diagnostic collection is stored for 28 days and then deleted. Each device ca
 
 *Collect diagnostics* is also available as a [Bulk device action](../remote-actions/bulk-device-actions.md) that collects diagnostic logs from up to 25 Windows devices at a time.
 
+> [!NOTE]
+> Microsoft personnel may access device diagnostics to assist in troubleshooting and resolving incidents.
+
 ## Requirements
 
 The *Collect diagnostics* remote action is supported for:
@@ -52,7 +55,10 @@ The *Collect diagnostics* remote action is supported for:
 - Microsoft HoloLens 2 2004 and later.
 - Global Admins, Intune Admins, or a role with **Collect diagnostics** (under **Remote tasks**) and **Read** (under **Device compliance policies**) permissions.
 - Corporate-owned devices.
-- Devices that are online and able to communicate with the service during diagnostics.
+- Devices that are online and able to communicate with the service during diagnostics. 
+
+> [!NOTE]
+> For diagnostics to be able to upload successfully from the client, make sure that the URL `lgmsapeweu.blob.core.windows.net` is not blocked on the network.
 
 ## Collect diagnostics
 
@@ -182,6 +188,12 @@ Autopilot automatic diagnostic capture is enabled by default. You can disable Au
 3. Change the control under **Automatically capture diagnostics when devices experience a failure during the Autopilot process on Windows 10 version 1909 or later and Windows 11. Diagnostics may include user identifiable information such as user or device name (preview).** to **Disabled**.
 
      :::image type="content" source="./media/collect-diagnostics/disable-autopilot-diagnostics.png" alt-text="Screenshot that shows the Device diagnostics pane with the highlighted control for Autopilot automatic diagnostics collection set to Disabled.":::
+
+## WinGet troubleshooting using diagnostic files
+[WinGet](/windows/package-manager/winget/) is a command line tool that enables you to discover, install, upgrade, remove, and configure applications on Windows 10 and Windows 11 devices. When working with [Win32 app management in Intune](../apps/apps-win32-app-management.md), you can use the following files to help troubleshoot WinGet:
+- *%TEMP%\winget\defaultstate\*.log*
+- *Microsoft-Windows-AppXDeployment/Operational*
+- *Microsoft-Windows-AppXDeploymentServer/Operational*
 
 ## Known issues with device diagnostics
 

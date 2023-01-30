@@ -45,7 +45,7 @@ Through the [build tooling], the Intune App SDK attempts to minimize the integra
 Prior to the build tooling, developers needed to perform all replacements manually.
 
 > [!NOTE] 
-> Apps *must- now integrate with the SDK [build tooling], which will perform all of these replacements automatically (except for [manifest replacements]).
+> Apps *must* now integrate with the SDK [build tooling], which will perform all of these replacements automatically (except for [manifest replacements]).
 
 Android base classes are replaced with their respective MAM equivalents in order to enable Intune management.
 The SDK classes live between the Android base class and the app's own derived version of that class.
@@ -177,7 +177,7 @@ When MAM policy isn't being enforced as expected, we recommend that you check Co
 You can collect Company Portal logs in one of the following ways:
 - Through the Company Portal
   - Open the Company Portal app
-  - Select on the three dots menu on the up right corner
+  - Select the three dots menu on the up right corner
   - Select Settings
   - Under Diagnostic Logs, select Save Logs
   - Follow the prompt to choose the output directory to save the Company Portal logs. 
@@ -201,7 +201,7 @@ You can avoid this wait and force a check-in through the Company Portal:
 This will immediately schedule a check-in and will retrieve up-to-date policy targeted to your app and account.
 
 ### Troubleshooting AndroidX Migration
-If you integrated the Intune App SDK *before- leveraging AndroidX, you may encounter an error like this while migrating to AndroidX:
+If you integrated the Intune App SDK *before* leveraging AndroidX, you may encounter an error like this while migrating to AndroidX:
 
 ```log
 incompatible types: android.support.v7.app.ActionBar cannot be converted to androidx.appcompat.app.ActionBar

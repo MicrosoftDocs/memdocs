@@ -4,7 +4,7 @@ description: include file
 author: brenduns
 ms.service: microsoft-intune
 ms.author: brenduns
-ms.date: 09/12/2022
+ms.date: 01/20/2023
 ms.topic: include
 ---
 ## Prerequisites
@@ -54,7 +54,7 @@ Policies for Microsoft Defender for Endpoint security management are supported f
 - Windows Server 2019 (with [KB5006744](https://support.microsoft.com/topic/october-19-2021-kb5006744-os-build-17763-2268-preview-e043a8a3-901b-4190-bb6b-f5a4137411c0))
 - Windows Server 2022 (with [KB5006745](https://support.microsoft.com/topic/october-26-2021-kb5006745-os-build-20348-320-preview-8ff9319a-19e7-40c7-bbd1-cd70fcca066c))
 
-Security management for Microsoft Defender for Endpoint will not work on non-persistent desktops, like Virtual Desktop Infrastructure (VDI) clients or Windows Virtual Desktops (WVD).
+Security management for Microsoft Defender for Endpoint will not work on non-persistent desktops, like Virtual Desktop Infrastructure (VDI) clients or Azure Virtual Desktops.
 
 ### Licensing and subscriptions
 
@@ -90,18 +90,19 @@ The following table can help you understand which policies that can configure MD
 
 | Microsoft Endpoint Manager  | Workload | Policy | MDE Security configuration  |  Microsoft Endpoint Manager |
 |----------------|----------------|----------------|-------------------|------------|
-| Endpoint security  | Antivirus  | Antivirus                   | ![Supported](../media/mde-security-integration/green-check.png)  | ![Supported](../media/mde-security-integration/green-check.png)  |
-|                    | Antivirus   | Antivirus Exclusions        | ![Supported](../media/mde-security-integration/green-check.png)  | ![Supported](../media/mde-security-integration/green-check.png)  |
+| Endpoint security  | Antivirus  | Antivirus                    | ![Supported](../media/mde-security-integration/green-check.png) | ![Supported](../media/mde-security-integration/green-check.png)  |
+|                    | Antivirus   | Antivirus Exclusions        | ![Supported](../media/mde-security-integration/green-check.png) | ![Supported](../media/mde-security-integration/green-check.png)  |
 |                    | Antivirus   | Windows Security Experience |  | ![Supported](../media/mde-security-integration/green-check.png)  |
-|                    |  Disk Encryption | All |           | ![Supported](../media/mde-security-integration/green-check.png)  |
-|                     | Firewall | Firewall                | ![Supported](../media/mde-security-integration/green-check.png) | ![Supported](../media/mde-security-integration/green-check.png)  |
-|                     | Firewall | Firewall Rules                | ![Supported](../media/mde-security-integration/green-check.png) | ![Supported](../media/mde-security-integration/green-check.png)  |
-|                     | Endpoint detection and response | Endpoint detection and response        | ![Supported](../media/mde-security-integration/green-check.png) | ![Supported](../media/mde-security-integration/green-check.png)  |
-|                      |Attack surface reduction | All    |           | ![Supported](../media/mde-security-integration/green-check.png)  |
-|                      |Account Protection | All       |       | ![Supported](../media/mde-security-integration/green-check.png)  |
-|                      | Device Compliance | All    |   | ![Supported](../media/mde-security-integration/green-check.png)  |
-|                      | Conditional Access  | All    |   | ![Supported](../media/mde-security-integration/green-check.png)  |
-|                      | Security baselines | All      |   | ![Supported](../media/mde-security-integration/green-check.png)  |
+|                    | Disk Encryption | All                     |  | ![Supported](../media/mde-security-integration/green-check.png)  |
+|                    | Firewall    | Firewall                    | ![Supported](../media/mde-security-integration/green-check.png) | ![Supported](../media/mde-security-integration/green-check.png)  |
+|                    | Firewall    | Firewall Rules              | ![Supported](../media/mde-security-integration/green-check.png) | ![Supported](../media/mde-security-integration/green-check.png)  |
+|                     | Endpoint detection and response | Endpoint detection and response | ![Supported](../media/mde-security-integration/green-check.png) | ![Supported](../media/mde-security-integration/green-check.png)  |
+|                     |Attack Surface Reduction | All            |  | ![Supported](../media/mde-security-integration/green-check.png)  |
+|                     |Attack Surface Reduction | Attack Surface Reduction Rules  | ![Supported](../media/mde-security-integration/green-check.png) | ![Supported](../media/mde-security-integration/green-check.png)  |
+|                     |Account Protection  | All                 |  | ![Supported](../media/mde-security-integration/green-check.png)  |
+|                     | Device Compliance  | All                 |  | ![Supported](../media/mde-security-integration/green-check.png)  |
+|                     | Conditional Access | All                 |  | ![Supported](../media/mde-security-integration/green-check.png)  |
+|                     | Security baselines | All                 |  | ![Supported](../media/mde-security-integration/green-check.png)  |
 
 **Endpoint security policies** are discrete groups of settings intended for use by security admins who focus on protecting devices in your organization.
 
@@ -117,9 +118,9 @@ The following table can help you understand which policies that can configure MD
 To support Microsoft Defender for Endpoint security configuration management through the Microsoft Endpoint Manager admin center, you must enable communication between them from within each console.
 
 1. Sign in to [Microsoft 365 Defender portal](https://security.microsoft.com/) and go to **Settings** > **Endpoints** > **Configuration Management** > **Enforcement Scope** and enable the platforms for security settings management:
-   :::image type="content" source="../media/mde-security-integration/enable-mde-settings-management-defender.png" alt-text="Enable Microsoft Defender for Endpoint settings management in the Microsoft 365 Defender portal.":::
-1. Configure Pilot Mode and Configuration Manager authority settings to fit your organization's needs.
-1. Uncheck both **Windows Client devices** and **Windows Server devices** to be able to use Pilot Mode using tagging:  
+   :::image type="content" source="../media/mde-security-integration/enable-mde-settings-management-defender.png" alt-text="Enable Microsoft Defender for Endpoint settings management in the Microsoft 365 Defender portal." lightbox="../media/mde-security-integration/enable-mde-settings-management-defender.png#lightbox":::
+1. In order to test the feature only on a specific set of devices, select **On tagged devices** for the respective platform, and tag the devices with the `MDE-Management` tag
+1. Configure the feature for Microsoft Defender for Cloud onboarded devices and Configuration Manager authority settings to fit your organization's needs:  
    :::image type="content" source="../media/mde-security-integration/pilot-CMAuthority-mde-settings-management-defender.png" alt-text="Configure Pilot mode for Endpoint settings management in the Microsoft 365 Defender portal.":::
    > [!TIP]
    > Use pilot mode and the proper device tags to test and validate your rollout on a small number of devices. Without using pilot mode, any device that falls into the scope configured will automatically be enrolled.
@@ -171,6 +172,7 @@ After creating one or more Azure AD groups that contain devices managed by Micro
 - Firewall
 - Firewall Rules
 - Endpoint Detection and Response
+- Attack Surface Reduction
 
 > [!TIP]
 > Avoid deploying multiple policies that manage the same setting to a device.
@@ -186,21 +188,26 @@ After creating one or more Azure AD groups that contain devices managed by Micro
    - For Firewall policy, select:
      - Platform: **Windows 10, Windows 11, and Windows Server**
      - Profile: **Microsoft Defender Firewall**
-   - For Firewall Rules policy, select:
+   - For Firewall rules policy, select:
      - Platform: **Windows 10, Windows 11, and Windows Server**
      - Profile: **Microsoft Defender Firewall Rules**
-   - For Endpoint Detection and Response policy, select:
+   - For Endpoint detection and response policy, select:
      - Platform: **Windows 10, Windows 11, and Windows Server**
      - Profile: **Endpoint detection and response**
+   - For Attack surface reduction policy, select:
+     - Platform: **Windows 10, Windows 11, and Windows Server**
+     - Profile: **Attack surface reduction rules**
+     
    >[!Note]
    > These profiles apply to both devices communicating through Mobile Device Management (MDM) with Microsoft Intune as well as devices that are communicating using the Microsoft Defender for Endpoint client.
    >
    > Ensure you review your targeting and groups as necessary.
+
 4. Select **Create**.
 5. On the **Basics** page, enter a name and description for the profile, then choose **Next**.
 6. On the **Configuration settings** page, select the settings you want to manage with this profile. To learn more about a setting, expand its information dialog and select the *Learn more* link to view the CSP information for the setting in the on-line documentation.
 
-   When your done configuring settings, select **Next**.
+   When you're done configuring settings, select **Next**.
 
 7. On the **Assignments** page, select the Azure AD groups that will receive this profile. For more information on assigning profiles, see [Assign user and device profiles](/mem/intune/configuration/device-profile-assign).
 

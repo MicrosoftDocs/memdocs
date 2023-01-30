@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/29/2022
+ms.date: 10/20/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -32,7 +32,7 @@ ms.collection:
 ---
 # Sign line-of-business apps so they can be deployed to Windows devices with Intune
 
-As an Intune administrator, you can deploy line-of-business (LOB) Universal apps to Windows 8.1 Desktop or Windows 10/11 Desktop & Mobile devices, including the Company Portal app. To deploy *.appx* apps to Windows 8.1 Desktop or Windows 10/11 Desktop & Mobile devices you can use code-signing certificate from a public certification authority already trusted by your Windows devices, or you can use your own certificate authority.
+As an Intune administrator, you can deploy line-of-business (LOB) Universal apps to Windows 8.1 Desktop or Windows 10/11 Desktop & Mobile devices, including the Company Portal app. To deploy *.appx* apps to Windows 8.1 Desktop or Windows 10/11 Desktop & Mobile devices you can use code-signing certificate from a public certification authority already trusted by your Windows devices, or you can use your own certificate authority. This process is called sideloading. Sideloading is installing, and then running or testing an app that isn't certified by the Microsoft Store. For example, an app that is internal to your company only.
 
  > [!NOTE]
  > Microsoft Intune will be ending support on October 21, 2022 for devices running Windows 8.1. Intune will no longer support Windows 8.1 sideloading.
@@ -83,7 +83,7 @@ The Intune service can no longer deploy LOB apps for this platform once the exis
 
 Windows 8.1 Desktop/Windows 10 Desktop & Mobile
 
-If the cert period has expired then the appx files may stop launching. You should obtain a new .cer file and follow the instructions to code-sign each deployed appx file and re-upload all appx files and the updated .cer file to the Windows Enterprise Certificates section of the Intune in the Microsoft Endpoint Manager admin center.
+If the cert period has expired then the appx files may stop launching. You should obtain a new .cer file and follow the instructions to code-sign each deployed appx file and re-upload all appx files and the updated .cer file to the Windows Enterprise Certificates section of the Intune in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 ## Manually deploy Windows 10 Company Portal app
 
@@ -133,7 +133,7 @@ Here's how you sign and deploy the app in this way:
 
 1. Download the [Microsoft Intune Signing Script for Windows 10 Company Portal](https://aka.ms/intunecpscript). This script requires the Windows SDK for Windows 10 to be installed on the host computer. To download the Windows SDK, see [Windows 10 SDK for Windows 10](https://go.microsoft.com/fwlink/?linkid=162443).
 2. Download the Windows 10 Company Portal app from the Microsoft Store for Business, as detailed above.  
-3. Run the script with the input parameters detailed in the script header to sign the Windows 10 Company Portal app (extracted below). Dependencies do not need to be passed into the script. These are only required when the app is being uploaded to the Intune Admin Console.
+3. Run the script with the input parameters detailed in the script header to sign the Windows 10 Company Portal app (extracted below). Dependencies do not need to be passed into the script. These are only required when the app is being uploaded to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 |       Parameter       |                                                                    Description                                                                    |
 |-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|

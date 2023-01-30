@@ -9,18 +9,21 @@ metadata:
   ms.sitesec: library
   ms.pagetype: deploy
   audience: itpro
-  author: aczechowski
-  ms.author: aaroncz
+  author: frankroj
+  ms.author: frankroj
   ms.reviewer: jubaptis
-  manager: dougeby
-  ms.date: 03/22/2022
+  manager: aaroncz
+  ms.date: 11/17/2022
   ms.collection:
     - M365-modern-desktop
     - highpri
   ms.topic: faq
 title: Windows Autopilot FAQ
 summary: |
-  **Applies to: Windows 10/11**
+  **Applies to:**
+  
+  - Windows 11
+  - Windows 10
   
   This article provides OEMs, partners, administrators, and end users with answers to some frequently asked questions about deploying Windows with Autopilot.
   
@@ -401,7 +404,7 @@ sections:
       - question: |
           Where is Windows Autopilot data stored?
         answer: |
-          Windows Autopilot data is stored in the United States (US). It's not stored in a sovereign cloud, even when the Azure AD tenant is registered in a sovereign cloud. This storage applies to all Windows Autopilot data, whatever portal is used to deploy Autopilot.
+          Windows Autopilot data is stored within the European Union (EU). It's not stored in a sovereign cloud, even when the Azure AD tenant is registered in a sovereign cloud. This storage applies to all Windows Autopilot data, whatever portal is used to deploy Autopilot.
 
       - question: |
           Why is Windows Autopilot data stored in the US and not in a sovereign cloud?

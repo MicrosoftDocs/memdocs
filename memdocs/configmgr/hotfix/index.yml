@@ -17,6 +17,12 @@ metadata:
   ms.localizationpriority: high
 
 landingContent:
+  - title: Configuration Manager 2211
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: KB 15582417 Summary of changes in 2211
+            url: 2211/15582417.md
   - title: Configuration Manager 2207
     linkLists:
       - linkListType: overview
@@ -27,7 +33,8 @@ landingContent:
             url: 2207/14959905.md
           - text: KB 15599094 NTLM client installation update
             url: 2207/15599094.md
-
+          - text: 15152495 Update rollup for Configuration Manager version 2207
+            url: 2207/15152495.md
   - title: Configuration Manager 2203
     linkLists:
       - linkListType: overview
@@ -35,7 +42,9 @@ landingContent:
           - text: KB 13174460 Summary of changes in 2203
             url: 2203/13174460.md
           - text: KB 13953025 Early update ring
-            url: 2203/13953025.md   
+            url: 2203/13953025.md
+          - text: 14244456 Update rollup for Configuration Manager version 2203
+            url: 2203/14244456.md   
   - title: Configuration Manager 2111
     linkLists:
       - linkListType: overview

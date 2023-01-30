@@ -9,7 +9,7 @@ ms.author: erikje
 manager: dougeby
 ms.date: 02/08/2022
 ms.topic: overview
-ms.service: cloudpc
+ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
 ms.technology:
@@ -82,9 +82,7 @@ Removing the targeting of a provisioning policy that was used for successful Clo
 
 Provisioning policies are assigned to user groups so there’s the possibility of overlapping groups/users.
 
-If a user is assigned to more than one provisioning policy, provisioning will honor the first assigned provisioning policy and ignore all others. If one of the provisioning policies is modified and a Cloud PC is reprovisioned, the Cloud PC will be reprovisioned with the most recently changed provisioning policy.
-
-It’s best practice to avoid any policy targeting overlaps to ensure consistent provisioning.
+If a user is assigned to more than one provisioning policy, provisioning will honor the first assigned provisioning policy and ignore all others. It’s best practice to avoid any policy targeting overlaps to ensure consistent provisioning.
 
 ## Provisioning retry
 

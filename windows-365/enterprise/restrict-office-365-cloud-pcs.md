@@ -9,7 +9,7 @@ ms.author: erikje
 manager: dougeby
 ms.date: 08/23/2021
 ms.topic: how-to
-ms.service: cloudpc
+ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
 ms.technology:
@@ -61,6 +61,9 @@ This article describes how to limit access to Office 365 services. You can use t
     ![Block access screen shot](./media/restrict-office-365-cloud-pcs/block-access.png)
 10. Select **On** (under **Enable policy**). This policy will restrict users from accessing Office 365 services on non-Cloud PC devices. You may want to select **Report-only** to monitor the policy and build confidence prior to enforcing it.
 11. Select **Create** to complete the creation of policy.
+
+>[!NOTE]
+>If you have configured a provisioning policy to **Use single sign-on (preview)**, you may need to also add the **Microsoft Remote Desktop** to the exclude list in Step 6 for single sign-on connections to work as expected.
 
 ## Other devices
 

@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/16/2022
+ms.date: 11/21/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -36,21 +36,21 @@ Microsoft Intune uses Google Mobile Services (GMS) to communicate with the Micro
 > [!NOTE]
 > These GMS related limitations also apply to Device Administrator management and Android (AOSP) Management.
 
-## Install the Intune Company Portal app without access to the Google Play Store 
+## Install the Intune Company Portal app without access to the Google Play Store
 
 ### For users outside of People's Republic of China
 
-If Google Play isn't available, Android devices can download the [Microsoft Intune Company Portal for Android](https://www.microsoft.com/en-us/download/details.aspx?id=49140) and sideload the app. When installed this way, the app doesn't receive updates or fixes automatically. You must be sure to regularly update and patch the app manually. 
+If Google Play isn't available, Android devices can download the [Microsoft Intune Company Portal for Android](https://www.microsoft.com/download/details.aspx?id=49140) and sideload the app. When installed this way, the app doesn't receive updates or fixes automatically. You must be sure to regularly update and patch the app manually.
 
 ### For users in People's Republic of China
 
 Because the Google Play Store is currently not available in People's Republic of China, Android devices must obtain apps from Chinese app marketplaces. For more information, see [Install the Company Portal app in People's Republic of China](../user-help/install-company-portal-android-china.md).
 
-## Limitations of Intune management when GMS is unavailable 
+## Limitations of Intune management when GMS is unavailable
 
 ### Unavailable Intune features
 
-Some Intune features rely on components of GMS such as the Google Play store or Google Play services. Because these components are not available in environments without GMS, the following features in the Intune administrator console may be unavailable.  
+Some Intune features rely on components of GMS such as the Google Play store or Google Play services. Because these components are not available in environments without GMS, the following features in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) may be unavailable.  
 
 | Scenario  | Features  |
 |-----------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -59,15 +59,18 @@ Some Intune features rely on components of GMS such as the Google Play store or 
 | Client apps  | Apps of type **Android** are not available. Use **Line-of-business app** instead to deploy and manage apps.  |
 | Mobile Threat Defense  | Work with your MTD vendor to understand if their solution is integrated with Intune, if it is available in the region of interest, and if it relies on GMS.  |
 
-### Some tasks may be delayed 
+### Some tasks may be delayed
 
-In environments where GMS is available, Intune relies on push notifications to speed tasks to finish. For example, if you try to remotely wipe the device, notifications generally get to the device in seconds. In conditions where GMS isn't available, push notifications may also not be available. Therefore, Intune must wait for the next device check-in time to complete the tasks.  
+In environments where GMS is available, Intune relies on push notifications to speed tasks to finish. For example, if you try to remotely wipe the device, notifications generally get to the device in seconds. In conditions where GMS isn't available, push notifications may also not be available.
 
-Enrolled Android devices report to Intune every 8 hours. For example, if a device reports to Intune at 1 PM and the remote tasks are issued at 1:05 PM, Intune will contact the device at 9 PM to complete the tasks. 
+All Android devices enrolled with device administrator or Android (AOSP) management report to Intune every 8 hours. For example, if a device reports to Intune at 1 PM and the remote tasks are issued at 1:05 PM, Intune will contact the device at 9 PM to complete the tasks.
 
-The following tasks can require up to 8 hours to finish: 
+In conditions where GMS isn't available, if the device is enrolled with device administrator and running Company Portal 5.0.5655.0 and above, Intune also attempts to check for new tasks and notifications approximately every 15 minutes. Note that this frequency may be affected by the device manufacturer, device usage patterns, and whether battery optimization is enabled for the Company Portal app.
 
-**Intune console**:
+The following tasks can require up to 8 hours to finish:
+
+**Microsoft Endpoint Manager admin center**:
+
 - Full wipe
 - Selective wipe
 - New or updated app deployments

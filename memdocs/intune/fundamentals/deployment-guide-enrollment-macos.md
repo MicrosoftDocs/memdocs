@@ -108,7 +108,7 @@ For more specific information on this enrollment type, see [Automatically enroll
 | --- | --- |
 | Devices are owned by the organization or school. | ✔️ |
 | You have new devices. | ✔️ |
-| You have existing devices. | ✔️ <br/><br/> To enroll existing devices, see [Enroll your macOS device registered in ABM/ASM with Automated Device Enrollment after Setup Assistant](../enrollment/device-enrollment-program-enroll-macos.md#enroll-your-macos-device-registered-in-abmasm-with-automated-device-enrollment-after-setup-assistant) (opens another Microsoft article). |
+| You have existing devices. | ✔️ <br/><br/> To enroll existing devices, see [Enroll Macs after Setup Assistant](../enrollment/device-enrollment-program-enroll-macos.md#distribute-devices) (opens another Microsoft article). |
 | Need to enroll a few devices, or a large number of devices (bulk enrollment). | ✔️ |
 | Devices are associated with a single user. | ✔️ |
 | Devices are user-less, such as kiosk or dedicated device. | ✔️ |
@@ -124,7 +124,7 @@ This task list provides an overview. For more specific information, see [Automat
 
 - Be sure your devices are [supported](supported-devices-browsers.md).
 - Need access to the [Apple Business Manager (ABM) portal](https://business.apple.com/), or the [Apple School Manager (ASM) portal](https://school.apple.com/).
-- Be sure the Apple token (.p7m) is active. For more specific information, see [Get an Apple ADE token](../enrollment/device-enrollment-program-enroll-macos.md#get-an-apple-ade-token).
+- Be sure the Apple token (.p7m) is active. For more specific information, see [Create enrollment program token](../enrollment/device-enrollment-program-enroll-macos.md#create-enrollment-program-token).  
 - Be sure the [Apple MDM push certificate](../enrollment/apple-mdm-push-certificate-get.md) is added to Intune, and is active. This certificate is required to enroll macOS devices. For more information, see [Get an Apple MDM push certificate](../enrollment/apple-mdm-push-certificate-get.md).
 - Decide how users will authenticate on their devices: **Setup Assistant (legacy)** or **Setup Assistant with modern authentication**. Make this decision before you create the enrollment profile. Using the **Setup Assistant with modern authentication** is considered modern authentication. Microsoft recommends using **Setup Assistant with modern authentication**.
 
@@ -209,7 +209,7 @@ For more specific information on this enrollment type, see [Use Direct Enrollmen
 | --- | --- |
 | You need a wired connection, or are having a network issue. | ✔️ |
 | Your organization doesn't want administrators to use the ABM or ASM portals, or doesn't want to set up all the requirements.  | ✔️ <br/><br/> The idea of *not* using the ABM or ASM portals is to give administrators less control.|
-| A country doesn't support Apple Business Manager (ABM) or Apple School Manager (ASM). | ✔️ <br/><br/> If your country supports ABS or ASM, then devices should be enrolled using [Automated Device Enrollment](#automated-device-enrollment-ade-supervised) (in this article). |
+| A country/region doesn't support Apple Business Manager (ABM) or Apple School Manager (ASM). | ✔️ <br/><br/> If your country/region supports ABS or ASM, then devices should be enrolled using [Automated Device Enrollment](#automated-device-enrollment-ade-supervised) (in this article). |
 | Devices are owned by the organization or school. | ✔️ |
 | You have new or existing devices. | ✔️ |
 | Need to enroll a few devices, or a large number of devices (bulk enrollment). | ✔️ <br/><br/> If you have a large number of devices, then this method will take some time. |
@@ -247,4 +247,5 @@ For more information on this enrollment option, and its prerequisites, see [macO
 - [MAM](deployment-guide-enrollment-mamwe.md)
 - [Android enrollment guide](deployment-guide-enrollment-android.md)
 - [iOS/iPadOS enrollment guide](deployment-guide-enrollment-ios-ipados.md)
+- [Linux enrollment guide](deployment-guide-enrollment-linux.md)
 - [Windows enrollment guide](deployment-guide-enrollment-windows.md)

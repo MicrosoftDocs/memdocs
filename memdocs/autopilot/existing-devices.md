@@ -2,19 +2,19 @@
 title: Windows Autopilot for existing devices
 description: Modern desktop deployment with Windows Autopilot enables you to easily deploy the latest version of Windows to your existing devices.
 keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune
-ms.prod: w10
-ms.technology: windows
+ms.prod: windows-client
+ms.technology: itpro-deploy
 ms.mktglfcycl: deploy
 ms.localizationpriority: medium
 ms.sitesec: library
 ms.pagetype: deploy
 audience: itpro
-author: aczechowski
-ms.author: aaroncz
+author: frankroj
+ms.author: frankroj
 ms.reviewer: jubaptis
-manager: dougeby
-ms.date: 03/21/2022
-ms.collection:
+manager: aaroncz
+ms.date: 11/17/2022
+ms.collection: 
   - M365-modern-desktop
   - highpri
 ms.topic: how-to
@@ -22,7 +22,7 @@ ms.topic: how-to
 
 # Windows Autopilot deployment for existing devices
 
-**Applies to**
+*Applies to:*
 
 - Windows 11
 - Windows 10
@@ -31,7 +31,8 @@ Modern desktop deployment with Windows Autopilot helps you easily deploy the lat
 
 _Windows Autopilot for existing devices_ lets you reimage and provision a Windows 8.1 device for Autopilot user-driven mode using a single, native Configuration Manager task sequence. The existing device can be on-premises domain-joined. The end result is a Windows 10 or Windows 11 device joined to either Azure Active Directory (Azure AD) or Active Directory (hybrid Azure AD join).
 
-Converting all targeted devices to Autopilot isn't supported for transforming a hybrid Azure AD device into an Azure AD Autopilot device.
+> [!NOTE]
+> Converting all targeted devices to Autopilot isn't supported for transforming a hybrid Azure AD join device into an Azure AD join Autopilot device.
 
 > [!NOTE]
 > Windows Autopilot for existing devices only supports user-driven Azure AD and hybrid Azure AD profiles. Self-deploying and pre-provisioning profiles aren't supported.
@@ -310,7 +311,7 @@ For more information, see [How to create collections in Configuration Manager](.
     > [!IMPORTANT]
     > The Autopilot for existing devices task sequence runs the **Prepare Windows for capture** step, which uses the Windows System Preparation Tool (Sysprep). This action fails if the device is joined to a domain.
     >
-    > Sysprep runs with the `/Generalize` parameter, which on Windows 10 version 1909 deletes the Autopilot profile file. The device then boots into the OOBE phase instead of Autopilot. To fix this issue, see [Windows Autopilot - known issues](known-issues.md).
+    > Sysprep runs with the `/Generalize` parameter, which on Windows 10 version 1909 deletes the Autopilot profile file. The device then boots into the OOBE phase instead of Autopilot. To fix this issue, see [Windows Autopilot - known issues: Windows Autopilot for existing devices doesn't work for Windows 10, version 1903 or 1909](known-issues.md#windows-autopilot-for-existing-devices-doesnt-work-for-windows-10-version-1903-or-1909).
 
 1. On the **Install Configuration manager** page, add any necessary installation properties for your environment.
 
@@ -341,7 +342,7 @@ If you edit the task sequence, it's similar to the default task sequence to appl
 For more information on editing the task sequence, see [Use the task sequence editor](../configmgr/osd/understand/task-sequence-editor.md) and [Task sequence steps](../configmgr/osd/understand/task-sequence-steps.md).
 
 > [!NOTE]
-> On Windows 10 version 1909, the **Prepare Windows for Capture** step deletes the `AutopilotConfigurationFile.json` file. For more information and a workaround, see [Windows Autopilot - known issues](known-issues.md).
+> On Windows 10 version 1909, the **Prepare Windows for Capture** step deletes the `AutopilotConfigurationFile.json` file. For more information and a workaround, see [Windows Autopilot - known issues: Windows Autopilot for existing devices doesn't work for Windows 10, version 1903 or 1909](known-issues.md#windows-autopilot-for-existing-devices-doesnt-work-for-windows-10-version-1903-or-1909).
 
 To make sure the user's data is backed up before the Windows 10 upgrade, use OneDrive for Business [known folder move](/onedrive/redirect-known-folders).
 

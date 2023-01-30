@@ -8,9 +8,9 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 09/14/2022
+ms.date: 01/11/2023
 ms.topic: reference
-ms.service: cloudpc
+ms.service: windows-365
 ms.subservice: 
 ms.assetid: 
 
@@ -54,11 +54,18 @@ To help in your readiness and planning, this page lists Windows 365 updates and 
 -->
 
 <!-- ***********************************************-->
-<!--## App management-->
+## App management
 
+### Windows 365 app will support Windows 10<!--42212516-->
+
+In a future update, the Windows 365 app will support Windows 10.
 
 <!-- ***********************************************-->
-<!--## Device provisioning-->
+## Device provisioning
+
+### Add more Azure Network Connections to a provisioning policy<!--42906565-->
+
+A new Azure Network Connection (ANC) option lets you add more ANCs to a provisioning policy and define a priority order for their use. By preparing multiple ANCs in different Azure regions, admins can make provisioning more reliable in the rare case of capacity constraints in a region.
 
 <!--***********************************************-->
 <!--
@@ -71,13 +78,6 @@ To help in your readiness and planning, this page lists Windows 365 updates and 
 ### End user manual connectivity check<!--37679345 --> 
 
 End users will be able to manually run connectivity checks on their Cloud PCs from [windows365.microsoft.com](https://windows365.microsoft.com).
-
-### Device history report – new information for Cloud PC performance<!--38310774  -->
-
-The device history report will have new information to help you evaluate Cloud PC performance:
-
-- Top five processes impacting CPU spike times
-- Top five processes impacting RAM spike times
 
 <!-- ***********************************************-->
 <!-- ## Provisioning -->

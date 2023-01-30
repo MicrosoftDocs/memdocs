@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 01/26/2022
+ms.date: 01/09/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -18,7 +18,7 @@ ms.localizationpriority: high
 #ROBOTS:
 #audience:
 
-ms.reviewer: shthilla
+ms.reviewer:
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -166,11 +166,11 @@ Device owners can manually un-enroll their devices as explained in the following
 - [Remove your Windows device from management](../user-help/unenroll-your-device-from-intune-windows.md)
 
 > [!TIP]
-> When a Windows device user un-enrolls their device via the Settings app, Intune does not automatically delete the Intune device or Azure AD records. To remove record of the Intune device, sign in to Microsoft Endpoint Manager and delete the device manually, or wait for your device cleanup rules to take effect. You must also manually delete the Azure AD record, if applicable, because the cleanups rule will not remove it.  
+> When a Windows device user un-enrolls their device via the Settings app, Intune does not automatically delete the Intune device or Azure AD records. To remove record of the Intune device, sign in to Microsoft Intune and delete the device manually, or wait for your device cleanup rules to take effect. You must also manually delete the Azure AD record, if applicable, because the cleanups rule will not remove it.  
 
 ## Delete devices from the Intune portal
 
-If you want to remove devices from the Intune portal, you can delete them from the specific device pane. The next time the device checks in, any company data on it will be removed as Intune also retires a device when deleting it from the console.
+If you want to remove devices from the Intune portal, you can delete them from the specific device pane. The next time the device checks in, any company data on it will be removed as Intune also retires a device when deleting it from the admin center.
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Choose **Devices** > **All devices** > choose the devices you want to delete > **Delete**.
@@ -184,13 +184,14 @@ You can configure Intune to automatically remove devices that appear to be inact
 3. In the **Delete devices that haven't checked in for this many days** box, enter a number between 30 and 270.
 4. Choose **Save**.
 
-If a removed device checks in before its device certification expires, it will reappear in the console.
+If a removed device checks in before its device certification expires, it will reappear in the admin center.
 
 The device clean up rule doesn't trigger a wipe or retire.
 
 > [!NOTE]
 > Device cleanup rules aren't available for Jamf-managed devices.
-
+>
+> You need the permission **Managed Device Cleanup Settings with Update** set to **Yes** to update the device cleanup rules. This permission is part of [Intune Roles](../fundamentals/role-based-access-control.md).
 
 ## Delete devices from the Azure Active Directory portal
 
@@ -218,6 +219,7 @@ If you want to completely remove an Apple automated device enrollment (ADE) devi
     ![Screenshot for Apple reassign](./media/devices-wipe/apple-reassign.png)
 
 ## Device states
+
 For a description of device states, see the [managementStates collection](../developer/intune-data-warehouse-collections.md#managementstates).
 
 ## Fresh Start

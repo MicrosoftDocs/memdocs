@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 09/23/2022
+ms.date: 12/05/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -95,7 +95,7 @@ Microsoft supports each technical preview version up until three successive vers
 
 Install a baseline version for up to one year after its release. When you install a new technical preview site, use the latest baseline version:
 
-- **Technical preview version 2206**
+- **Technical preview version 2210**
 
 Download a baseline version from the [Evaluation Center](https://www.microsoft.com/en-in/evalcenter/evaluate-microsoft-endpoint-configuration-manager-technical-preview).
 
@@ -128,16 +128,11 @@ bullet format:
 
 The following features are available with the most recent Configuration Manager technical preview version:
 
-### Technical preview version 2209
+### Technical preview version 2211
 
-- [Improvements to the console](2022/technical-preview-2209.md#bkmk_improvements-to-the-console) <!--14908615-->
-- [Improvements to the dark theme](2022/technical-preview-2209.md#bkmk_improvements-to-the-dark-theme) <!--15346075-->
-- [Other Updates](2022/technical-preview-2209.md#bkmk_other-updates) <!--14975011-->
-
-### Technical preview version 2208
-
-- [Intune RBAC for tenant attached devices](2022/technical-preview-2208.md#bkmk_enable-intune) <!--8126836-->
-- [Dark theme is now extended to additional dashboards](2022/technical-preview-2208.md#bkmk_improvements-to-the-dark-theme) <!--14917369-->
+- [Authorization failure message in admin service now shown in Status message viewer](2022/technical-preview-2211.md#bkmk_audit-admin-service) <!-- 13022894 -->
+- [Network Access Account (NAA) account usage alert](2022/technical-preview-2211.md#bkmk_naa-account)<!-- 14538358 -->
+- [Improvements to Cloud Sync (Collections to Azure Active Directory Group Synchronization) feature](2022/technical-preview-2211.md#bkmk_coll_aad_group_sync)<!-- 14716797 -->
 
 
 > [!NOTE]
@@ -156,7 +151,21 @@ The following features were released with previous versions of the Configuration
 > [!TIP]
 > When a new current branch version is available, features that are available in that version are listed in the latest *What's new* article. For more information, see [What's new in incremental versions](../plan-design/changes/whats-new-incremental-versions.md#supported-versions).
 
-<!-- ### Technical preview version 2111 -->
+### Technical preview version 2210
+
+- [Featured Apps in Software Center](2022/technical-preview-2210.md#bkmk_featured-apps-software-center) <!--3601183-->
+
+
+### Technical preview version 2209
+
+- [Improvements to the console](2022/technical-preview-2209.md#bkmk_improvements-to-the-console) <!--14908615-->
+- [Improvements to the dark theme](2022/technical-preview-2209.md#bkmk_improvements-to-the-dark-theme) <!--15346075-->
+- [Other Updates](2022/technical-preview-2209.md#bkmk_other-updates) <!--14975011-->
+
+### Technical preview version 2208
+
+- [Intune RBAC for tenant attached devices](2022/technical-preview-2208.md#bkmk_enable-intune) <!--8126836-->
+- [Dark theme is now extended to additional dashboards](2022/technical-preview-2208.md#bkmk_improvements-to-the-dark-theme) <!--14917369-->
 
 ### Technical preview version 2207
 

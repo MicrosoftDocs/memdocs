@@ -9,7 +9,7 @@ ms.author: erikje
 manager: dougeby
 ms.date: 08/02/2021
 ms.topic: how-to
-ms.service: cloudpc
+ms.service: windows-365
 ms.subservice: 
 ms.localizationpriority: high
 ms.technology:
@@ -58,6 +58,10 @@ No matter which method you use, the policies will be enforced on the Cloud PC En
     - **Windows Virtual Desktop** (this may also appear as **Azure Virtual Desktop**)
 
     By choosing both of these apps, you make sure that the policy applies to the Cloud PC End-user portal and the connection to the Cloud PC. If you want to exclude apps, you must also choose both these apps.
+    
+   >[!NOTE]
+   >If you have configured a provisioning policy to **Use single sign-on (preview)**, you may need to also add the **Microsoft Remote Desktop** to the exclude list in Step 6 for single sign-on connections to work as expected.
+
 7. If you want to fine-tune your policy, under **Access controls**, choose **0 controls selected**.  Under **Grant**, choose the options that you want to apply to all objects assigned to this policy.
 8. If you want to test your policy first, under **Enable Policy**, set **Report-only** to **Off**. If you set it to **On**, the policy will be applied as soon as you create it.
 9. Select **Create** to create the policy.

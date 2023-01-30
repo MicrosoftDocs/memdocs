@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 2/14/2020
+ms.date: 12/15/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -114,11 +114,10 @@ The following options aren't supported on devices enrolled with User Enrollment.
 
 ## Known issues in preview
 - VPP license revocation: A notification that the license has been revoked does not appear. The current behavior is that the revocation is successful, but the end user is not notified. 
-- VPP application reporting: In the report located at Client Apps > Apps > [App Name] > Device Install Status, VPP applications deployed to User Enrolled devices are reporting as "failed", even when the application successfully deploys to the device. 
-- VPP License Assignment: If the VPP license is already associated with the AppleID, or the user has another device enrolled with Device Enrollment, the license will associate to the AppleID successfully. However, if the only iOS device the user has enrolled is User Enrolled, the VPP license assignment will fail and install will fail with **Can't Find VPP License For App** (0x87D13B95). Re-enrolling the device with Device Enrollment to allow the assignment then re-enrolling again as User Enrollment resolves the assignment.
 - Application reporting: For app types unsupported with User Enrollment, reports may provide irrelevant error messages. 
-- Company Portal app experience: Users see all applications targeted to them, regardless of whether those application types are supported for User Enrolled devices. 
 - Company Portal app experience: Users see the same text indicating what organizations can see for User and Device Enrollment if the admin has customized the text indicating what organizations can't see.
+- Devices running iOS 15.5 cannot enroll with User Enrollment if MFA text or call is needed on the same device during enrollment. 
+- Devices running iOS 15.7 through iOS 16.1.2 must use MFA call (as opposed to text) in order to enroll with User Enrollment if MFA is needed on the same device during enrollment. 
 
 
 ## Next steps

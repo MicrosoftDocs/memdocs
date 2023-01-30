@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/10/2022
+ms.date: 01/24/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -41,7 +41,7 @@ This article describes the different [device properties](#device-properties) and
 
 You can use the following device properties in your filter rules:
 
-- **Device Name**: Create a filter rule based on the Intune device name property. Enter a string value for the device's full name (using `-eq`, `-ne`, `-in`, `-notIn` operators), or partial value (using `-startswith`, `-contains`, `-notcontains` operators).
+- **`deviceName` (Device Name)**: Create a filter rule based on the Intune device name property. Enter a string value for the device's full name (using `-eq`, `-ne`, `-in`, `-notIn` operators), or partial value (using `-startswith`, `-contains`, `-notcontains` operators).
 
   Examples:
 
@@ -58,7 +58,7 @@ You can use the following device properties in your filter rules:
   - Windows 11
   - Windows 10
 
-- **Manufacturer**: Create a filter rule based on the Intune device manufacturer property. Enter the full string value (using `-eq`, `-ne`, `-in`, `-notIn` operators), or partial value (using `-startswith`, `-contains`, `-notcontains` operators).
+- **`manufacturer` (Manufacturer)**: Create a filter rule based on the Intune device manufacturer property. Enter the full string value (using `-eq`, `-ne`, `-in`, `-notIn` operators), or partial value (using `-startswith`, `-contains`, `-notcontains` operators).
 
   Examples:
 
@@ -74,7 +74,7 @@ You can use the following device properties in your filter rules:
   - Windows 11
   - Windows 10
 
-- **Model**: Create a filter rule based on the Intune device model property. Enter the full string value (using `-eq`, `-ne`, `-in`, `-notIn` operators), or partial value (using `-startswith`, `-contains`, `-notcontains` operators).
+- **`model` (Model)**: Create a filter rule based on the Intune device model property. Enter the full string value (using `-eq`, `-ne`, `-in`, `-notIn` operators), or partial value (using `-startswith`, `-contains`, `-notcontains` operators).
 
   Examples:
 
@@ -91,7 +91,7 @@ You can use the following device properties in your filter rules:
   - Windows 11
   - Windows 10
 
-- **Device Category**: Create a filter rule based on the Intune device category property. Enter the full string value (using `-eq`, `-ne`, `-in`, `-notIn` operators), or partial value (using `-startswith`, `-contains`, `-notcontains` operators).
+- **`deviceCategory` (Device Category)**: Create a filter rule based on the Intune device category property. Enter the full string value (using `-eq`, `-ne`, `-in`, `-notIn` operators), or partial value (using `-startswith`, `-contains`, `-notcontains` operators).
 
   Examples:
 
@@ -108,7 +108,7 @@ You can use the following device properties in your filter rules:
   - Windows 11
   - Windows 10
 
-- **OS Version**: Create a filter rule based on the Intune device operating system (OS) version. Enter the full string value (using `-eq`, `-ne`, `-in`, `-notIn` operators), or partial value (using `-startswith`, `-contains`, `-notcontains` operators).
+- **`osVersion` (OS Version)**: Create a filter rule based on the Intune device operating system (OS) version. Enter the full string value (using `-eq`, `-ne`, `-in`, `-notIn` operators), or partial value (using `-startswith`, `-contains`, `-notcontains` operators).
 
   Examples:
 
@@ -125,7 +125,7 @@ You can use the following device properties in your filter rules:
   - Windows 11
   - Windows 10
 
-- **IsRooted**: Create a filter rule based on the device's rooted (Android) or jailbroken (iOS/iPadOS) device property. Select `True`, `False`, or unknown values using the `-eq` and `-ne` operators.
+- **`IsRooted` (Rooted or jailbroken)**: Create a filter rule based on the device's rooted (Android) or jailbroken (iOS/iPadOS) device property. Select `True`, `False`, or unknown values using the `-eq` and `-ne` operators.
 
   Example:
 
@@ -137,7 +137,7 @@ You can use the following device properties in your filter rules:
   - Android Enterprise (Work profile only)
   - iOS/iPadOS
 
-- **Device Ownership**: Create a filter rule based on the device's ownership property in Intune. Select `Personal`, `Corporate`, or unknown values using the `-eq` and `-ne` operators. 
+- **`deviceOwnership` (Ownership)**: Create a filter rule based on the device's ownership property in Intune. Select `Personal`, `Corporate`, or unknown values using the `-eq` and `-ne` operators. 
 
   Example:
 
@@ -152,7 +152,7 @@ You can use the following device properties in your filter rules:
   - Windows 11
   - Windows 10
 
-- **Enrollment Profile Name**: Create a filter rule based on the enrollment profile name. This property is applied to a device when the device enrolls. It's a string value created by you, and matches the Windows Autopilot, Apple Automated Device Enrollment (ADE), or Google enrollment profile applied to the device. To see your enrollment profile names, sign in to the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and go to **Devices** > **Enroll devices**.
+- **`enrollmentProfileName` (Enrollment profile name)**: Create a filter rule based on the enrollment profile name. This property is applied to a device when the device enrolls. It's a string value created by you, and matches the Windows Autopilot, Apple Automated Device Enrollment (ADE), or Google enrollment profile applied to the device. To see your enrollment profile names, sign in to the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and go to **Devices** > **Enroll devices**.
 
   Enter the full string value (using `-eq`, `-ne`, `-in`, `-notIn` operators), or partial value (using `-startswith`, `-contains`, `-notcontains` operators).
 
@@ -160,6 +160,7 @@ You can use the following device properties in your filter rules:
 
   - `(device.enrollmentProfileName -eq "DEP iPhones")`
   - `(device.enrollmentProfileName -startsWith "Autopilot Profile")`
+  - `(device.enrollmentProfileName -ne $null)`
 
   This property applies to:
 
@@ -168,7 +169,20 @@ You can use the following device properties in your filter rules:
   - Windows 11
   - Windows 10
 
-- **Operating System SKU**: Create a filter rule based on the device's Windows client OS SKU. Enter the full string value (using `-eq`, `-ne`, `-in`, `-notIn` operators), or partial value (using `-startswith`, `-contains`, `-notcontains` operators).
+- **`deviceTrustType` (Azure AD Join type)**: Create a filter rule based on the device's Azure AD Join type. Choose between Azure AD Join, Hybrid Azure AD, Azure AD registered or unknown values (with `-eq`, `-ne`, `-in`, `-notIn` operators).
+
+  Examples:
+
+  - `(device.deviceTrustType -eq "Azure AD joined")`
+  - `(device.deviceTrustType -ne "Azure AD registered")`
+  - `(device.deviceTrustType -in ["Hybrid Azure AD joined","Azure AD joined"])`
+
+  This property applies to:
+
+  - Windows 11
+  - Windows 10
+
+- **`operatingSystemSKU` (Operating System SKU)**: Create a filter rule based on the device's Windows client OS SKU. Enter the full string value (using `-eq`, `-ne`, `-in`, `-notIn` operators), or partial value (using `-startswith`, `-contains`, `-notcontains` operators).
 
   Examples:
 
@@ -180,33 +194,35 @@ You can use the following device properties in your filter rules:
 
   | Supported value | OS SKU definition |
   | ---- | --- |
+  | **BusinessN** | Windows 10/11 Professional N (49) |
+  | **CloudEdition** | CloudEdition (Windows 11 SE (203) |
+  | **CloudEditionN** | CloudEditionN (Windows 11 SE N (202) |
+  | **Core** | Windows 10/11 Home (10/111) |
+  | **CoreCountrySpecific** | Windows 10/11 Home China (99) |
+  | **CoreN** | Windows 10/11 Home N (98) |
+  | **CoreSingleLanguage** | Windows 10/11 Home single language (100) |  
   | **Education** | Windows 10/11 Education (121) |
   | **EducationN**  | Windows 10/11 Education (122) |
   | **Enterprise** | Windows 10/11 Enterprise (4) |
   | **EnterpriseEval** | Windows 10/11 Enterprise Evaluation (72) |
   | **EnterpriseG** | Windows 10/11 Enterprise G (171) |
   | **EnterpriseGN** | Windows 10/11 Enterprise G N (172) |
+  | **EnterpriseN** | Windows 10/11 Enterprise N (27) |
+  | **EnterpriseNEval** | Windows 10/11 Enterprise N Evaluation (84) |
   | **EnterpriseS** | Windows 10 Enterprise LTSC (125) |
   | **EnterpriseSEval** | Windows 10 Enterprise LTSC Evaluation (129) |
   | **EnterpriseSN** | Windows 10 Enterprise LTSC N (162) |
-  | **EnterpriseN** | Windows 10/11 Enterprise N (27) |
-  | **EnterpriseNEval** | Windows 10/11 Enterprise N Evaluation (84) |
   | **Holographic** | Windows 10 Holographic (136) |
-  | **Core** | Windows 10/11 Home (10/111) |
-  | **CoreCountrySpecific** | Windows 10/11 Home China (99) |
-  | **CoreN** | Windows 10/11 Home N (98) |
-  | **CoreSingleLanguage** | Windows 10/11 Home single language (100) |
   | **IoTUAP** | Windows 10 IoT Core (123) |
   | **IoTUAPCommercial** | Windows 10 IoT Core Commercial (131) |
   | **IoTEnterprise** | Windows 10/11 IoT Enterprise (188) |
+  | **PPIPro** | Windows 10 TeamOS (119) |
   | **Professional** | Windows 10/11 Professional (48) |
   | **ProfessionalEducation** | Windows 10/11 Professional Education (164) |
   | **ProfessionalEducationN** | Windows 10/11 Professional Education N (165) |
   | **ProfessionalWorkstation** | Windows 10/11 Professional for workstation (161) |
   | **ProfessionalN** | Windows 10/11 Professional for workstation N (162) |
-  | **BusinessN** | Windows 10/11 Professional N (49) |
   | **ProfessionalSingleLanguage** | Windows 10/11 Professional Single Language (138) |
-  | **PPIPro** | Windows 10 TeamOS (119) |
   | **ServerRdsh** | Windows 10/11 Enterprise multi-session (175) |
 
   This property applies to:
@@ -225,7 +241,7 @@ When you create a filter, you can manually create simple or complex rules in the
 
 - The properties, operations, and values are case insensitive.
 - Parentheses and nested parentheses are supported.
-- Entering `Null` or `$Null` as a value isn't supported.
+- You can use `Null` or `$Null` as a value with the `-Equals` and `-NotEquals` operators.
 - Some advanced syntax options, such as nested parentheses, are only available in the rule syntax editor. If you use advanced expressions in the rule syntax editor, then the rule builder is disabled.
 
   For more information on the rule syntax editor and the rule builder, see [Use filters when assigning your apps, policies, and profiles](filters.md)

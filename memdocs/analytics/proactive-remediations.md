@@ -60,7 +60,8 @@ Proactive remediations requires the [licensing for Endpoint analytics](enroll-in
 ### <a name="bkmk_requirements"></a> Script requirements
 
 - You can have up to 200 script packages.
-   - A script package can contain a detection script only or both a detection script and a remediation script.
+- A script package can contain a detection script only or both a detection script and a remediation script. 
+   - A remediation script only runs if the detection script uses exit code `exit 1`, meaning the issue was detected.
 - Ensure the scripts are encoded in UTF-8.
   - If the option **Enforce script signature check** is enabled in the [Settings](#bkmk_prs_deploy) page of creating a script package, then make sure that the scripts are encoded in UTF-8 not UTF-8 BOM.
 - The maximum allowed output size limit is 2048 characters.
@@ -111,6 +112,8 @@ Proactive remediation scripts need to be encoded in UTF-8. Uploading these scrip
    1. Browse to the `.ps1` file.
    1. Choose the file and select **Open** to upload it.
 
+    The detection script must use exit code `exit 1` if the target issue is detected. The remediation script won't run when there's any other exit code, including an empty output, since it results in an *issue is not found* state. Review the [Sample detection script](powershell-scripts.md#bkmk_ps_scripts) for an example of exit code usage.
+
    You need the corresponding detection and remediation script to be in the same package. For example, the `Detect_Expired_User_Certificates.ps1` detection script corresponds with the `Remediate_Expired_User_Certificates.ps1` remediation script.
        [![Endpoint analytics Proactive remediations script settings page.](media/proactive-remediations-script-settings.png)](media/proactive-remediations-script-settings.png#lightbox)
 1. Finish the options on the **Settings** page with the following recommended configurations:
@@ -120,7 +123,9 @@ Proactive remediation scripts need to be encoded in UTF-8. Uploading these scrip
 
    For information about enforcing script signature checks, see [Script requirements](#bkmk_requirements).
 1. Click **Next** then assign any **Scope tags** you need.
-1. In the **Assignments** step, select the device groups to which you want to deploy the script package. When you're ready to deploy the packages to your users or devices, you can also use filters. For more information, see [Create filters in Microsoft Intune](../intune/fundamentals/filters.md).
+1. In the **Assignments** step, select the device groups to which you want to deploy the script package. When you're ready to deploy the packages to your users or devices, you can also use filters. For more information, see [Create filters in Microsoft Intune](../intune/fundamentals/filters.md). 
+   >[!NOTE]
+   > Don't mix user and device groups across include and exclude assignments. 
 1. Complete the **Review + Create** step for your deployment.
 
 ## <a name="bkmk_prs_policy"></a> Client policy retrieval and client reporting

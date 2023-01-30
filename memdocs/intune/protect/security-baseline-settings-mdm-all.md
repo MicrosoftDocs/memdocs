@@ -17,7 +17,7 @@ ms.localizationpriority: medium
 #ROBOTS:
 #audience:
 
-ms.reviewer: laarrizz 
+ms.reviewer: juidaewo 
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -44,7 +44,7 @@ When a new version of a baseline becomes available, it replaces the previous ver
 
 To learn more about using security baselines, see [Use security baselines](security-baselines.md). In that article you'll also find information about how to:
 
-- [Compare baselines](../protect/security-baselines.md#compare-baseline-versions) to discover what's changed from version to version.
+<!-- - [Compare baselines](../protect/security-baselines.md) to discover what's changed from version to version.  -->
 - [Change the baseline version for a profile](../protect/security-baselines-configure.md#change-the-baseline-version-for-a-profile) to update a profile to use the latest version of that baseline.
 
 ::: zone pivot="mdm-november-2021"
@@ -1488,7 +1488,7 @@ For more information, see [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlin
 
 - **Turn on Windows SmartScreen**  
   Baseline default: *Yes*  
-   [Learn more](https://go.microsoft.com/fwlink/?linkid=872784l)
+   [Learn more](/windows/client-management/mdm/policy-csp-smartscreen#smartscreen-enablesmartscreeninshell)
 
 - **Block users from ignoring SmartScreen warnings**  
   Baseline default: *Yes*  

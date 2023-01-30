@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/10/2022
+ms.date: 12/05/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -58,16 +58,40 @@ This article shows you how to import custom ADMX and ADML files in the Endpoint 
 
 - Currently, only `en-us` ADML files are supported.
 
-- Some ADMX files may have dependency prerequisites. Import any dependency ADMX files first. For example, to import Mozilla Firefox ADMX and ADML files, you:
+- Some ADMX files have dependency prerequisites. Import any dependency ADMX files first. If you upload an ADMX file without the dependency, an error message will list the missing namespace.
+
+  For example, to import Mozilla Firefox ADMX and ADML files, you:
 
   1. Import the `mozilla.admx` and `mozilla.adml` files. Make sure the status shows **Available**.
   2. Import the `firefox.admx` and `firefox.adml` files.
 
   If you upload `firefox.admx` before `mozilla.adml`, then the import will fail.
+  
+  To see if your ADMX has a dependency, open the ADMX file in a text editor and look for `using prefix` in the `policyNamespaces` node. Any dependencies will be listed. 
+  
+  In the following example, the`kerberos.admx` file requires the `Windows.admx` file:
+  
+```xml
+ <policyNamespaces>
+    <target prefix="kerberos" namespace="Microsoft.Policies.Kerberos" />
+    <using prefix="windows" namespace="Microsoft.Policies.Windows" />
+  </policyNamespaces>
+```
 
   To remove a dependency prerequisite, delete the associated ADMX file first. Then, delete the dependency prerequisite. In our Mozilla Firefox example, delete `firefox.admx` and then delete `mozilla.admx`.
 
+- Some files may require `Windows.admx` as a prerequisite. This file must be uploaded first. In a future release (no ETA), this namespace will be automatically included and eventually not be required.
+
 - Currently, the combo box setting type isn't supported. ADMX files with the combo box setting type will fail to import. All other setting types are supported.
+
+- Not all areas of the registry can be set using custom ADMX. For more information on the registry locations that can be used, go to [Win32 and Desktop Bridge app ADMX policy Ingestion Overview](/windows/client-management/win32-and-centennial-app-policy-configuration#overview).
+
+- ADMX settings that are built into Windows (located in the `C:\Windows\PolicyDefinitions` folder) are enabled through configuration service providers (CSPs). 
+
+  - Don't import these built-in settings if your intent is to configure them. Instead, use the [settings catalog](settings-catalog.md) or a [custom profile](custom-settings-configure.md).
+  - Do import these built-in settings if they're a required parent namespace of another file. 
+
+  For a list of the ADMX backed CSP settings, go to [ADMX-backed policies in Policy CSP](/windows/client-management/mdm/policies-in-policy-csp-admx-backed).
 
 ## Download the ADMX templates
 

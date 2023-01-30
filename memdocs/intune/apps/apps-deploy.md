@@ -59,7 +59,7 @@ The following table lists the various options for *assigning* apps to users and 
 >
 > To receive app updates on devices that aren't enrolled with Intune, device users must go to their organization's Company Portal and manually install app updates.
 > 
-> *Available assignments* are only valid for user groups, not device groups.
+> For almost all app types and platforms, *Available assignments* are only valid when assiging to user groups, not device groups. Win32 apps can be assigned to either user or device groups.
 > 
 > If Managed Google Play Pre-Production track apps are assigned as required on Android Enterprise personally-owned work profile devices, they will not install on the device. To work around this, create two identical user groups and assign the pre-production track as "available" to one and "required" to the other. The result will be that the pre-production track successfully deploys to the device. 
 
@@ -68,9 +68,10 @@ The following table lists the various options for *assigning* apps to users and 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All apps**.
 3. In the **Apps** pane, select the app you want to assign.
-4. In the **Manage** section of the menu, select **Assignments**.
-5. Select **Add Group** to open the **Add group** pane that is related to the app.
-6. For the specific app, select an **assignment type**:
+4. In the **Manage** section of the menu, select **Properties**.
+5. Scroll down to **Properties** and select **Assignments**.
+6. Select **Add Group** to open the **Add group** pane that is related to the app.
+7. For the specific app, select an **assignment type**:
    - **Available for enrolled devices**: Assign the app to groups of users who can install the app from the Company Portal app or website.
    - **Available with or without enrollment**: Assign this app to groups of users whose devices are not enrolled with Intune. Users must be assigned an Intune license, see [Intune Licenses](../fundamentals/licenses.md).
    - **Required**: The app is installed on devices in the selected groups. Some platforms may have additional prompts for the end user to acknowledge before app installation begins.
@@ -157,6 +158,7 @@ Steps to assign a Managed Google Play app to unmanaged devices:
 When an APP selective wipe is issued in the Intune console, the work account will be automatically removed from the Play Store app and the end user will from that point no longer see work apps in the Play Store app catalog. When the work account is removed from a device, apps installed from the Play Store will remain installed on the device and will not uninstall. 
 
 ## App uninstall setting for iOS managed apps
+
 For iOS/iPadOS devices, you can choose what happens to managed apps on unenrolling the device from Intune or removing the management profile using **Uninstall on device removal** setting. This setting only applies to apps after the device is enrolled and apps are installed as managed. The setting cannot be configured for web apps or web links. Only data protected by Mobile Application Management (MAM) is removed after retirement by an App Selective Wipe.
 
 Default values for the setting are prepopulated for new assignments as follows:

@@ -9,7 +9,7 @@ ms.author: erikje
 manager: dougeby
 ms.date: 10/12/2022
 ms.topic: how-to
-ms.service: cloudpc
+ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
 ms.technology:
@@ -40,7 +40,19 @@ The Windows 365 app doesn't currently support:
 - Windows 11 IoT
 - Configuring Remote Desktop Protocol properties.
 
-## The Windows 365 app doesn’t start the Cloud PC session
+## Can't connect to Cloud PC error
+
+You may get a **Can't connect to Cloud PC** error when you click on the **Connect** button.
+
+To fix this issue:
+
+1. Open Windows **Settings** > **Apps** > **Default apps**.
+2. Find the **AVD host app** and update the default app for .avd files.
+3. Run this command to remove the old Remote Desktop Client cache that could cause this issue:
+
+```reg delete "HKEY_CLASSES_ROOT\progF3672D4C2FFE4422A53C78C345774E2D" /f```
+
+## The Windows 365 app asks to select a new default app 
 
 When the Remote Desktop Client is installed, you'll see a file type association message after trying to connect to your Cloud PC. Make sure to select **Azure Virtual Desktop (HostApp)** to launch the Cloud PC session.
 

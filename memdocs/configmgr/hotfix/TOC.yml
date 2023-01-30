@@ -1,6 +1,10 @@
 items:
 - name: Hotfix documentation
   href: index.yml
+- name: Version 2211
+  items:
+  - name: KB 15582417  Summary of changes in 2211
+    href: 2211/15582417.md
 - name: Version 2207
   items:
   - name: KB 14840616  Summary of changes in 2207
@@ -13,6 +17,8 @@ items:
     href: 2207/15498768.md
   - name: KB 15599094 NTLM client installation update
     href: 2207/15599094.md
+  - name: KB 15152495 Update rollup for Configuration Manager version 2207
+    href: 2207/15152495.md
 - name: Version 2203
   items:
   - name: KB 13174460 Summary of changes in 2203

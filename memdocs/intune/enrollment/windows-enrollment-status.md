@@ -59,13 +59,14 @@ ESP uses the [EnrollmentStatusTracking configuration service provider (CSP)](/wi
 
 ## Create new profile 
 
-1. Select **Windows** > **Windows enrollment** > **Enrollment Status Page**.
-2. Select **Create**.
-3. In **Basics**, enter the following properties:  
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Devices**.
+2. Select **Windows** > **Windows enrollment** > **Enrollment Status Page**.
+3. Select **Create**.
+4. In **Basics**, enter the following properties:  
      - **Name**: Name your profile so you can easily identify it later. 
      - **Description**: Enter a description for the profile. This setting is optional, but recommended.  
-4. Select **Next**. 
-5. In **Settings**, configure the following settings:  
+5. Select **Next**. 
+6. In **Settings**, configure the following settings:  
  
     - **Show app and profile configuration progress**: Your options:
       - **No**: The enrollment status page doesn't appear during device setup. Select this option if you don't want to show the ESP to users.  
@@ -127,9 +128,7 @@ ESP uses the [EnrollmentStatusTracking configuration service provider (CSP)](/wi
 
 Intune applies the default profile to all users and all devices when no other ESP profiles are available to assign. You can configure the default profile to show or hide the ESP.      
  
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Devices**.
-2. Select **Windows** > **Windows enrollment** > **Enrollment Status Page**.  
-2. Select the **Default** profile in the table.  
+1. Select the default profile.  
 3. Select **Properties**. 
 4. Go to the **Settings** section and select **Edit**.  
 5. Configure **Show app and profile installation progress** to set the behavior of the default profile. Your options:
@@ -159,12 +158,11 @@ To prioritize your profiles:
 
 Specify the apps that must be installed before the user can exit the ESP. You can choose up to 100 apps.   
 
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Windows** > **Windows enrollment** > **Enrollment Status Page**.
-2. Choose a profile > **Settings**.
-3. Choose **Yes** for **Show app and profile installation progress**.
-4. Choose **Yes** for **Block device use until all apps and profiles are installed**.
-5. Choose **Selected** for **Block device use until these required apps are installed if they're assigned to the user/device**.
-6. Choose **Select apps** > choose the apps > **Select** > **Save**.
+1. Choose an enrollment status page profile, and then select **Settings**.
+4. Choose **Yes** for **Show app and profile installation progress**.
+5. Choose **Yes** for **Block device use until all apps and profiles are installed**.
+6. Choose **Selected** for **Block device use until these required apps are installed if they're assigned to the user/device**.
+7. Choose **Select apps** > choose the apps > **Select** > **Save**.
 
 The apps that are included in this list are used by Intune to filter the list that should be considered blocking.  It doesn't specify what apps should be installed.  For example, if you configure this list to include "App 1," "App 2," and "App 3" and "App 3" and "App 4" are targeted to the device or user, the ESP will track only "App 3."  "App 4" will still be installed, but the ESP will not wait for it to complete.
 
@@ -272,7 +270,7 @@ This section lists the known issues for the enrollment status page.
 - A reboot during device setup forces the user to enter their credentials before the account setup phase. User credentials aren't preserved during reboot. Instruct the device users to enter their credentials to continue to the account setup phase.  
 - The ESP always times out on devices running Windows 10, version 1903 and earlier, and
 enrolled via the *Add work and school account* option. The ESP waits for Azure AD registration to complete. The issue is fixed on Windows 10 version 1903 and later.  
-- Hybrid Azure AD Autopilot deployment with ESP takes longer than the timeout duration entered in the ESP profile. On Hybrid Azure AD Autopilot deployments, the ESP takes 40 minutes longer than the value set in the ESP profile. For example, you set the timeout duration to 30 minutes in the profile. The ESP can take 30 minutes + 40 minutes. This delay gives the on-prem AD connector time to create the new device record to Azure AD.  
+- Hybrid Azure AD Autopilot deployment with ESP takes longer than the timeout duration entered in the ESP profile. On Hybrid Azure AD Autopilot deployments, the ESP takes 40 minutes longer than the value set in the ESP profile. For example, you set the timeout duration to 30 minutes in the profile. The ESP can take 30 minutes + 40 minutes. This delay gives the on-premises AD connector time to create the new device record to Azure AD.  
 - Windows logon page isn't pre-populated with the username in Autopilot User Driven Mode. If there's a reboot during the Device Setup phase of ESP:
   - the user credentials aren't preserved
   - the user must enter the credentials again before proceeding from Device Setup phase to the Account setup phase

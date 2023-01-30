@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Use custom compliance settings in Microsoft Intune
-description: Use JSON files and discovery scripts to define and discover custom settings for device compliance policies in Intune.
+title: Use custom compliance settings for Linux and Windows devices in Microsoft Intune
+description: Manage custom compliance settings for Linux and Windows devices by using JSON files and discovery scripts in Intune.
 keywords:
 author: brenduns
 ms.author: brenduns
@@ -27,9 +27,9 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# Use custom compliance settings with Intune
+# Use custom compliance policies and settings for Linux and Windows devices with Microsoft Intune
 
-To expand on Intune’s built-in device compliance options, you can add custom compliance settings to compliance policies for managed devices. Custom settings provide flexibility to base compliance on the settings that are available on a device without having to wait for Intune to add these settings.
+Expanding on Intune’s built-in device compliance options, use policies for custom compliance settings for managed Linux and Windows devices. Custom settings provide flexibility to base compliance on the settings that are available on a device without having to wait for Intune to add these settings.
 
 This feature applies to:
 
@@ -51,8 +51,12 @@ After you’ve deployed custom compliance settings and devices have reported bac
 - **Azure Active Directory (Azure AD) joined** devices, *including* hybrid Azure AD-joined devices. 
 
   Hybrid Azure AD-joined devices are devices that are joined to Azure AD and also joined to on-premises Active Directory. For more information, see [Plan your hybrid Azure AD join implementation](/azure/active-directory/devices/hybrid-azuread-join-plan).
-  
-  Devices that aren't Azure AD joined or aren't hybrid Azure AD-joined are evaluated as not applicable.
+
+- **Azure AD registered/Workplace joined (WPJ)**
+
+  Devices [registered](/azure/active-directory/user-help/user-help-register-device-on-network) in Azure Active Directory (AAD), see [Workplace Join as a seamless second factor authentication](/windows-server/identity/ad-fs/operations/join-to-workplace-from-any-device-for-sso-and-seamless-second-factor-authentication-across-company-applications#BKMK_DRS) for more information. Typically these are Bring Your Own Device (BYOD) devices which have had a work or school account added via Settings>Accounts>Access work or school. 
+
+  On WPJ devices, device context PowerShell scripts work, but user context PowerShell scripts are ignored. 
 
 - **Discovery script** - A PowerShell for Windows or a POSIX-compliant shell script for Linux that you create. The script runs on a device to discover the custom settings defined in your JSON file. The script returns the configuration value of those settings to Intune. You need to upload your script to the Microsoft Endpoint Manager admin center before you create a compliance policy and then select the script you want to use when creating a policy.
 
@@ -86,14 +90,14 @@ Use the following methods to view details about a device’s compliance status.
 
 - For both Linux and Windows devices, you can view per-setting device compliance details for custom compliance settings in the Microsoft Endpoint Manager admin center.
 
-  In the admin center go to **Reports** > **Devices compliance**, and then select the **Reports** tab. Select the tile for **Noncompliant devices and settings**, and then use the drop-down menus to configure the report. Be sure to select a platform for the OS, and then select **Generate** report.
+  In the admin center go to **Reports** > **Device compliance**, and then select the **Reports** tab. Select the tile for **Noncompliant devices and settings**, and then use the drop-down menus to configure the report. Be sure to select a platform for the OS, and then select **Generate** report.
 
   For more information, see [Monitor Intune Device compliance policies](../protect/compliance-policy-monitor.md).
 
 - On a Linux device, you can open the Intune app to view the device’s status:
 
   - **Compliant** – Your device is compliant with your organization’s policies and should be able to access organizational resources.
-  - **Checking status** – Intune is currently evaluating the devices compliance your organization’s policies.
+  - **Checking status** – Intune is currently evaluating the devices compliance to your organization’s policies.
   - **Not compliant** – The device doesn’t meet your organization’s device and security requirements and might not have access to your organization’s resources.
 
   When the device status is *Not compliant*, select **View issues** to see details about issues that must be addressed to bring that device into compliance. For information on resolving common issues, see [Additional troubleshooting for Linux devices](#additional-troubleshooting-for-linux-devices).

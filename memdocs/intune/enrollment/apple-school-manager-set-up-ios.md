@@ -37,7 +37,7 @@ You can set up Intune to enroll iOS/iPadOS devices purchased through the [Apple 
 
 To enable Apple School Manager enrollment, you use both the Intune and Apple School Manager portals. A list of serial numbers or a purchase order number is required so you can assign devices to Intune for management. You create Automated Device Enrollment (ADE) enrollment profiles containing settings that applied to devices during enrollment.
 
-Apple School Manager enrollment can't be used with [Apple's Automated Device Enrollment ](device-enrollment-program-enroll-ios.md) or the [device enrollment manager](device-enrollment-manager-enroll.md).
+Apple School Manager enrollment can't be used with the [device enrollment manager](device-enrollment-manager-enroll.md).
 
 **Prerequisites**
 - [Apple Mobile Device Management (MDM) Push certificate](apple-mdm-push-certificate-get.md)
@@ -74,7 +74,7 @@ Before you can enroll corporate-owned iOS/iPadOS devices with Apple School Manag
 
 ### Step 3. Save the Apple ID used to create this token
 
-In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), provide the Apple ID for future reference.
+Return to the [admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and enter the Apple ID. 
 
 ![Screenshot of specifying the Apple ID used to create the enrollment program token and browsing to the enrollment program token.](./media/apple-school-manager-set-up-ios/image03.png)
 
@@ -169,7 +169,10 @@ Now that you've installed your token, you can create an enrollment profile for A
 
 After Intune has been assigned permission to manage your Apple School Manager devices, synchronize Intune with the Apple service to see your managed devices in Intune.
 
-In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431)), choose **Devices** > **iOS/iPadOS** > **iOS/iPadOS enrollment** > **Enrollment program tokens** > choose a token in the list > **Devices** > **Sync**.
+1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **iOS/iPadOS** > **iOS/iPadOS enrollment**. 
+2. Select **Enrollment program tokens**.  
+3. Select a token in the list. 
+3. Select **Devices** > **Sync**.  
 ![Screenshot of the Enrollment Program Devices node and Sync link.](./media/device-enrollment-program-enroll-ios/image06.png)
 
 To follow Apple's terms for acceptable enrollment program traffic, Intune imposes the following restrictions:
@@ -183,9 +186,12 @@ To follow Apple's terms for acceptable enrollment program traffic, Intune impose
 ## Assign a profile to devices
 Apple School Manager devices managed by Intune must be assigned an enrollment profile before they're enrolled.
 
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS/iPadOS** > **iOS/iPadOS enrollment** > **Enrollment program tokens** > choose a token in the list.
-2. Choose **Devices** > choose devices in the list > **Assign profile**.
-3. Under **Assign profile**, choose a profile for the devices, and then choose **Assign**.
+1. In the admin center, select **Devices** > **iOS/iPadOS** > **iOS/iPadOS enrollment**.  
+2. Select **Enrollment program tokens**.  
+3. Select a token in the list.  
+2. Select **Devices**  and choose your devices.  
+3. Select **Assign profile**. Then select a profile for the devices.  
+3. Select **Assign**.  
 
 ## Distribute devices to users
 

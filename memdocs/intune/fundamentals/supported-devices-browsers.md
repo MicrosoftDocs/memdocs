@@ -8,7 +8,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 09/28/2022
+ms.date: 12/08/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -40,10 +40,12 @@ For more information on configuration service provider support, visit the [Confi
 
 Intune supports devices running the following operating systems (OS):
 
-* iOS
-* Android 
+* Android
+* iOS/iPadOS
+* Linux
+* macOS
 * Windows
-* macOS 
+* Chrome OS  
 
 [!INCLUDE [mdm-supported-devices](../includes/mdm-supported-devices.md)]
 

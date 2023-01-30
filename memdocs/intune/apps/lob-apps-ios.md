@@ -33,18 +33,16 @@ ms.collection:
 
 # Add an iOS/iPadOS line-of-business app to Microsoft Intune
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
-
 Use the information in this article to help you add an iOS/iPadOS line-of-business (LOB) app to Microsoft Intune. A line-of-business (LOB) app is an app that you add to Intune from an IPA app installation file. This kind of app is typically written in-house. You will first need to join the iOS Developer Enterprise Program. For more information about how to do this see [Apple's website](https://developer.apple.com/programs/ios/enterprise/).
 
 > [!NOTE]
 > Users of iOS/iPadOS devices can remove some of the built-in iOS/iPadOS apps, like Stocks and Maps. You cannot use Intune to redeploy these apps. If users delete these apps, they must go to the app store and manually reinstall them.
 >
 > iOS/iPadOS LOB apps have a maximum size limit of 2 GB per app.
-> 
+>
 > Bundle identifiers (for example, *com.contoso.app*) are meant to be unique identifiers of an app. For example, to install a beta version of an LOB app next to the production version for testing purposes, the beta version must have a different unique identifier (for example, *com.contoso.app-beta*). Otherwise, the beta version will overlap with the production and be treated as an upgrade. Renaming the .ipa file has no effect on this behavior.
 
-You can deploy LOB apps to Shared iPad devices. For Shared iPad devices, line-of-business apps must be assigned as **required** to a device group containing Shared iPad devices from the Microsoft Endpoint Manager admin center. 
+You can deploy LOB apps to Shared iPad devices. For Shared iPad devices, line-of-business apps must be assigned as **required** to a device group containing Shared iPad devices from the Microsoft Endpoint Manager admin center.
 
 ## Select the app type
 
@@ -57,7 +55,7 @@ You can deploy LOB apps to Shared iPad devices. For Shared iPad devices, line-of
 
 ### Select the app package file
 
-1. In the **Add app** pane, click **Select app package file**. 
+1. In the **Add app** pane, click **Select app package file**.
 2. In the **App package file** pane, select the browse button. Then, select an iOS/iPadOS installation file with the extension **.ipa**.
    The app details will be displayed.
 3. When you're finished, select **OK** on the **App package file** pane to add the app.
@@ -80,9 +78,10 @@ You can deploy LOB apps to Shared iPad devices. For Shared iPad devices, line-of
 2. Click **Next** to display the **Scope tags** page.
 
 ## Step 2 - Select scope tags (optional)
+
 You can use scope tags to determine who can see client app information in Intune. For full details about scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md).
 
-1. Click **Select scope tags** to optionally add scope tags for the app. 
+1. Click **Select scope tags** to optionally add scope tags for the app.
 2. Click **Next** to display the **Assignments** page.
 
 ## Step 3 - Assignments

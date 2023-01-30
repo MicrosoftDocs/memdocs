@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/29/2022
+ms.date: 11/08/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -36,6 +36,9 @@ ms.collection:
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 Enable mobile application management (MAM) for Windows 10/11 by setting the MAM provider in Azure AD. Setting a MAM provider in Azure AD allows you to define the enrollment state when creating a new Windows Information Protection (WIP) policy with Intune. The enrollment state can be either MAM or mobile device management (MDM).
+
+>[!IMPORTANT]
+> Windows Information Protection (WIP) policies without enrollment has been deprecated. You can no longer create WIP policies for unenrolled devices.
 
 ## To configure the MAM provider
 

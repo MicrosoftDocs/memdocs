@@ -52,7 +52,7 @@ After integration is configured, device users learn about Jamf Pro and Intune in
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Devices** > **Compliance policies**. If you're using a previously created policy, select that policy in the console and then go to the next step of this procedure. To create a new policy, select **Create Policy** and then specify details for a policy with a *Platform* of **macOS**. Configure *Settings* and *Actions for noncompliance* to meet your organizational requirements, and then select **Create** to save the policy.
+2. Select **Devices** > **Compliance policies**. If you're using a previously created policy, select that policy in the admin center and then go to the next step of this procedure. To create a new policy, select **Create Policy** and then specify details for a policy with a *Platform* of **macOS**. Configure *Settings* and *Actions for noncompliance* to meet your organizational requirements, and then select **Create** to save the policy.
 
 3. On the policies *Overview* pane, select **Assignments**. Use the available options to configure which Azure Active Directory (Azure AD) users and security groups receive this policy. **Jamf integration with Intune doesn't support compliance policy that targets device groups.**
 

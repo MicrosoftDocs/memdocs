@@ -7,7 +7,7 @@ keywords: SDK
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/24/2022
+ms.date: 11/08/2022
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -50,14 +50,14 @@ The Microsoft Intune App SDK for Android lets you incorporate Intune app protect
 
 The [Microsoft Authentication Library (MSAL)] gives your application the ability to use the Microsoft Cloud by supporting [Microsoft Azure Active Directory (AAD)] and [Microsoft accounts].  
 
-MSAL isn't- specific to Intune.
+MSAL *isn't* specific to Intune.
 Intune has a dependency on AAD; all Intune user accounts are AAD accounts.
 **As a result, the vast majority of Android applications that integrate the Intune App SDK will need to integrate MSAL as a prerequisite.**
 
 This stage of the SDK guide overviews the MSAL integration process as it relates to Intune; **follow the linked MSAL guides in their entirety**.
 
 To simplify the Intune App SDK integration process, **Android app developers are strongly encouraged to fully integrate and test MSAL before downloading the Intune App SDK.**
-The Intune App SDK integration process *does- require code changes around MSAL token acquisition.
+The Intune App SDK integration process *does* require code changes around MSAL token acquisition.
 It will be significantly easier to test the Intune-specific token acquisition changes if you've already confirmed your app's original token acquisition implementation works as expected.
 
 To learn more about AAD, see [What is Azure Active Directory?]
@@ -128,7 +128,6 @@ These settings include:
 For more detail on non-Intune-specific MSAL configuration options, see [Android Microsoft Authentication Library configuration file].
 
 For more detail on Sovereign clouds, see [Use MSAL in a national cloud environment].
-
 
 ## Exit Criteria
 
