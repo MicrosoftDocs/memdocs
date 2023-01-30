@@ -112,6 +112,11 @@ As a public preview, you can use the Mobile Application Management (MAM) to the 
 - Secure access to on-premises apps and resources using modern authentication
 - Single Sign On and conditional access
 
+For more information, go to:
+
+- [Microsoft Tunnel for Mobile Application Management for iOS/iPadOS admin guide (public preview)](../protect/microsoft-tunnel-mam-ios.md)
+- [Microsoft Tunnel for MAM iOS SDK developer guide](../developer/tunnel-mam-ios-sdk.md)
+
 Applies to:
 
 - iOS/iPadOS
@@ -947,7 +952,7 @@ In the admin center, you can:
   - Custom compliance
   - Device encryption
   - Password policy
-- [Apply custom compliance settings](../protect/compliance-use-custom-settings.md) using POSIX-complaint shell scripts for discovery, and JSON files to define the custom settings you want to use.
+- [Apply custom compliance settings](../protect/compliance-use-custom-settings.md) using POSIX-compliant shell scripts for discovery, and JSON files to define the custom settings you want to use.
 
 ## Week of October 03, 2022
 
