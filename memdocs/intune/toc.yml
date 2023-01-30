@@ -1178,10 +1178,8 @@ items:
       - name: Device enrollment overview
         href: ./enrollment/device-enrollment.md
         displayName: COD; BYOD; DEM; ADE; USB-SA; USB-Direct; co-management; GPO
-      - name: How-to guides (likely remove section and bring section up one)
-        items:
-        - name: Enroll devices (deployment guides - need to integrate) ??
-          items:
+      - name: Enrollment deployment guides (deployment guides - need to integrate) ??
+         items:
           - name: Overview
             href: ./fundamentals/deployment-guide-enrollment.md
           - name: MAM
