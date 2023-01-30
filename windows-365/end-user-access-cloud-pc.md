@@ -104,9 +104,9 @@ You can restrict users from transferring files by using RDP drive redirection. F
 Users can view and download connection details.
 
 1. Select the **Connection details** icon > **Show details**.
-    ![Screenshot of Connection icon.](business/media/end-user-access-cloud-pc/connection.png)
+    ![Screenshot of Connection icon.](media/end-user-access-cloud-pc/connection.png)
 2. To download a text file containing the connection details, select **Download report**.
-    ![Screenshot of connection details.](business/media/end-user-access-cloud-pc/connection-details.png)
+    ![Screenshot of connection details.](media/end-user-access-cloud-pc/connection-details.png)
 
 ### User feedback
 
