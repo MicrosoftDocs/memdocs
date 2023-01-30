@@ -35,7 +35,7 @@ This article applies to:
 
 - macOS
 
-This article shows how to deploy the Microsoft Enterprise SSO plug-in (preview) for macOS Apple devices with Intune.
+This article shows how to deploy the Microsoft Enterprise SSO plug-in (preview) for macOS Apple devices with Intune, Jamf Pro, and other MDM solutions.
 
 [!INCLUDE [Apple SSO Disclaimer Boilerplate](../includes/apple-enterprise-sso-disclaimer-boilerplate.md)]
 
