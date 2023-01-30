@@ -56,15 +56,12 @@ For Android Enterprise personally owned work profile high security (Level 3), th
 | Type | Platform | Version | Allows personal devices |
 |--------|--------|--------|--------|
 | Android Enterprise | Allow | Android 9.0 and later | Yes |
-| Android device administrator| Block | All versions | Yes |
-
-## Fully managed security restrictions
-Ensure the organization supports Android Enterprise fully managed device enrollment by reviewing [Enroll the fully managed devices](android-fully-managed-enroll.md#enroll-the-fully-managed-devices). 
+| Android device administrator| Block | All versions | Yes |  
 
 ## Conditional access policies
 Organizations can use Azure AD Conditional Access policies to ensure that users can only access work or school content on enrolled Android devices. To do this, you will need a conditional access policy that targets all potential users. Details on creating this policy can be found in [Require managed devices for cloud app access with Conditional Access](/azure/active-directory/conditional-access/require-managed-devices).
 
-Follow the steps in [Scenario: Require device enrollment for iOS and Android devices](/azure/active-directory/conditional-access/require-managed-devices#scenario-require-device-enrollment-for-ios-and-android-devices), which ensures that only enrolled mobile devices that are compliant can connect to  Microsoft 365 endpoints.
+Follow the steps in [Scenario: Require device enrollment for iOS and Android devices](/azure/active-directory/conditional-access/require-managed-devices#scenario-require-device-enrollment-for-ios-and-android-devices) to ensure that only compliant mobile devices can connect to Microsoft 365 endpoints.  
 
 ## Next steps
 
