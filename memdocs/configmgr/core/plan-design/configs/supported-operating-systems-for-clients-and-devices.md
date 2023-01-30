@@ -41,8 +41,6 @@ To manage the following Windows OS versions, use the client that's included with
 
     For more information, see [Support for Windows 10](support-for-windows-10.md).
 
-- **Windows 8.1** (x86, x64): Professional, Enterprise
-
 For more information on the versions of the Windows Assessment and Deployment Kit (Windows ADK) that Configuration Manager current branch supports, see [Support for the Windows ADK](support-for-windows-adk.md).
 
 #### Azure Virtual Desktop

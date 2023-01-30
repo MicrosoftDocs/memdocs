@@ -151,7 +151,7 @@ Some settings are in a logical category, like **Microphones and Speakers**. Ther
 - With every sync with the Intune service after the first sync, the following behavior happens in a loop:
 
   - Intune applies the category setting (Microphones and Speakers) since it's not compliant. The granular setting (Microphones) becomes non-compliant.
-  - Intune applies the granular setting (Microphones) since it's not compliant. The category setting (Microphones and Speakers) becomes non-complaint.
+  - Intune applies the granular setting (Microphones) since it's not compliant. The category setting (Microphones and Speakers) becomes non-compliant.
 
 To avoid this looping behavior, configure the category setting **or** the granular settings.
 
