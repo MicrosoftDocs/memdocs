@@ -128,11 +128,12 @@ bullet format:
 
 The following features are available with the most recent Configuration Manager technical preview version:
 
-### Technical preview version 2211
+### Technical preview version 2301
 
-- [Authorization failure message in admin service now shown in Status message viewer](2022/technical-preview-2211.md#bkmk_audit-admin-service) <!-- 13022894 -->
-- [Network Access Account (NAA) account usage alert](2022/technical-preview-2211.md#bkmk_naa-account)<!-- 14538358 -->
-- [Improvements to Cloud Sync (Collections to Azure Active Directory Group Synchronization) feature](2022/technical-preview-2211.md#bkmk_coll_aad_group_sync)<!-- 14716797 -->
+- [Removing MSfB new config capability & in-product warnings](2023/technical-preview-2301.md#"bkmk_msfb") <!--10901602-->
+- [Update to the default value of supersedence age in months for software updates.](2023/technical-preview-2301.md#"bkmk_softwareupdates") <!--16441147-->
+- [Microsoft Configuration Manager product branding](2023/technical-preview-2301.md#"bkmk_branding")<!-- 15885998. -->
+- [Improvements to Cloud Sync (Collections to Azure Active Directory Group Synchronization) feature](2023/technical-preview-2301.md#bkmk_coll_aad_group_sync)<!-- 14716797 -->
 
 
 > [!NOTE]
@@ -150,6 +151,12 @@ The following features were released with previous versions of the Configuration
 
 > [!TIP]
 > When a new current branch version is available, features that are available in that version are listed in the latest *What's new* article. For more information, see [What's new in incremental versions](../plan-design/changes/whats-new-incremental-versions.md#supported-versions).
+
+### Technical preview version 2211
+
+- [Authorization failure message in admin service now shown in Status message viewer](2022/technical-preview-2211.md#bkmk_audit-admin-service) <!-- 13022894 -->
+- [Network Access Account (NAA) account usage alert](2022/technical-preview-2211.md#bkmk_naa-account)<!-- 14538358 -->
+- [Improvements to Cloud Sync (Collections to Azure Active Directory Group Synchronization) feature](2022/technical-preview-2211.md#bkmk_coll_aad_group_sync)<!-- 14716797 -->
 
 ### Technical preview version 2210
 
