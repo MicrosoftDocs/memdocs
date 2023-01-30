@@ -98,7 +98,7 @@ The following are examples of syntax that is compliant vs not compliant:
     }
   ```
 
-   For example, `["$a = foo]` - Use of a single equal sign for a string comparison is POSIX-complaint.
+   For example, `["$a = foo]` - Use of a single equal sign for a string comparison is POSIX-compliant.
 
 - Not compliant:
 
@@ -108,7 +108,7 @@ The following are examples of syntax that is compliant vs not compliant:
     }
   ```
 
-   For example, `["$a == foo]` - Use of a double equal sign for a string comparison isn't POSIX-complaint.
+   For example, `["$a == foo]` - Use of a double equal sign for a string comparison isn't POSIX-compliant.
 
 For more information, the following guide might be of use [POSIX Shell Tutorial (grymoire.com)](https://www.grymoire.com/Unix/Sh.html), a third-party website.
 
