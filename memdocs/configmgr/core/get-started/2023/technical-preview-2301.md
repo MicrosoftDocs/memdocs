@@ -41,8 +41,8 @@ Removing SUP role in Admin Console does not reset the supersedence age property 
 
 ## Other Updates
 <!--15358429-->
-Offset for reoccuring monthly maintenance window schedules  
-Based upon your feedback, you can now offset monthly maintenance window schedules to better align deployments with the release of monthly security updates. For example, using an maximum offset of seven days after the second Tuesday of the month, sets the maintenance window for next Monday.   
+Offset for recurring monthly maintenance window schedules  
+Based upon your feedback, you can now offset monthly maintenance window schedules to better align deployments with the release of monthly security updates. For example, using a maximum offset of seven days after the second Tuesday of the month, sets the maintenance window for next Monday.   
 
 ## Next steps
 
