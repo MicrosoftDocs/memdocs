@@ -75,9 +75,37 @@ Users will be able to uninstall Win32 apps in the Company Portal. If a Win32 app
 ### Global quiet time app policy settings<!-- 15424417 -->  
 The global quiet time settings will allow you to create policies to schedule quiet time for your end users, which will automatically mute Microsoft Outlook email and Teams notifications on iOS/iPadOS and Android platforms. These policies can be used to limit end user notifications received after work hours. When this feature is available, you will be able to find it in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **Quiet Time** > **Policies**.
 
+
+
+## Device configuration
+### Disable Activation Lock device action for supervised iOS/iPadOS devices<!-- 15571509 -->  
+You'll soon be able to use the **Disable Activation Lock** device action in Intune to bypass Activation Lock on iOS/iPadOS devices without requiring the current username or password.
+
+This new action will be available under **Devices > iOS/iPadOS > select one of your listed devices > Disable Activation Lock**.
+
+More information on managing Activation Lock is available at [Bypass iOS/iPadOS Activation Lock with Intune - Microsoft Intune | Microsoft Learn](../remote-actions/device-activation-lock-disable.md) or on Apple's website at [Activation Lock for iPhone, iPad, and iPod touch - Apple Support.](https://support.apple.com/en-us/HT201365).
+
+Applies to:  
+- **iOS/iPadOS**
+
+### Size and generation included in iOS/iPadOS model information<!-- 16406692 -->  
+You'll soon be able to view the size and generation for enrolled iOS/iPadOS devices as part of the **Model** attribute in **Hardware device details**. Go to **Devices > All devices** > select one of your listed devices and select **Hardware** to open its details.
+
+For example, iPad Pro 11-inch (3rd generation) will display for the device model instead of iPad Pro 3.
+
+For more information, go to: [See device details in Intune](../remote-actions/device-inventory.md#hardware-device-details)
+
+Applies to:
+- **iOS/iPadOS**
+
 <!-- *********************************************** -->
 
 ## Device management
+
+### View ServiceNow Incidents in the Intune Troubleshooting workspace<!-- 12508062  -->  
+You'll soon be able to view a list of ServiceNow incidents associated with the user you've selected in the Intune Troubleshooting workspace. This new feature will be available under **Troubleshooting + Support** > select a user > **ServiceNow Incidents**. The list of incidents shown have a direct link back to the source incident and show key information from the incident. All incidents listed will link the "Caller" identified in the incident with the user selected for Troubleshooting.
+
+For more information go to [Use the troubleshooting portal to help users at your company](help-desk-operators.md).
 
 ### Add Google accounts to Android Enterprise personally owned devices with a work profile<!-- 9113561 -->  
 On Android Enterprise personally owned devices with a work profile, you can configure settings that restrict device features and settings. Currently, there is an **Add and remove accounts** setting. This setting prevents accounts from being added in the work profile, including preventing Google accounts.
