@@ -1173,26 +1173,12 @@ items:
 
 
     - name: Enroll devices in Microsoft Intune  
-      href: ./enrollment/index.yml
       items:
-      - name: Device enrollment overview
+      - name: Enroll devices in Intune 
+        href: ./fundamentals/deployment-guide-enrollment.md  
+      - name: Device enrollment overview  - DELETE/REPLACE w/enrollment guide overview
         href: ./enrollment/device-enrollment.md
         displayName: COD; BYOD; DEM; ADE; USB-SA; USB-Direct; co-management; GPO
-      - name: Enrollment deployment guides (deployment guides - need to integrate) ??
-        items:
-        - name: Overview
-          href: ./fundamentals/deployment-guide-enrollment.md
-        - name: MAM
-          href: ./fundamentals/deployment-guide-enrollment-mamwe.md
-        - name: Android, Android Enterprise
-          href: ./fundamentals/deployment-guide-enrollment-android.md
-          displayName: COBO
-        - name: iOS, iPadOS
-          href: ./fundamentals/deployment-guide-enrollment-ios-ipados.md
-        - name: macOS
-          href: ./fundamentals/deployment-guide-enrollment-macos.md
-        - name: Windows
-          href: ./fundamentals/deployment-guide-enrollment-windows.md
       - name: Pre-enrollment configurations  
         items:
         - name: Get Apple MDM push certificate   
@@ -1220,7 +1206,9 @@ items:
             href: ./enrollment/create-device-limit-restrictions.md                  
       - name: Set up Windows enrollment
         items:
-        - name: Enrollment method overview  
+        - name: Windows enrollment guide 
+          href: ./fundamentals/deployment-guide-enrollment-windows.md
+        - name: Enrollment method overview  - DELETE/REPLACE w/enrollment guide 
           href: ./enrollment/enrollment-method-capab.md
         - name: Set up manual and automatic enrollment
           href: ./enrollment/windows-enroll.md
@@ -1240,7 +1228,10 @@ items:
           href: ./enrollment/tutorial-use-autopilot-enroll-devices.md
       - name: Set up Android enrollment
         items:
-        - name: Enrollment method overview  
+        - name: Android, Android Enterprise enrollment guide
+          href: ./fundamentals/deployment-guide-enrollment-android.md
+          displayName: COBO
+        - name: Enrollment method overview  - DELETE/REPLACE w/enrollment guide
           href: ./enrollment/android-enroll.md
         - name: Android Enterprise enrollment solutions    
           items:
@@ -1287,6 +1278,10 @@ items:
       - name: Set up iOS/iPadOS enrollment
         href: ./enrollment/ios-enroll.md
         items:
+        - name: iOS, iPadOS enrollment guide
+          href: ./fundamentals/deployment-guide-enrollment-ios-ipados.md
+        - name: Set up iOS/iPadOS enrollment - REMOVE/REPLACE w/enrollment guide
+          href: ./enrollment/ios-enroll.md
         - name: Automated Device Enrollment
           href: ./enrollment/device-enrollment-program-enroll-ios.md
         - name: Shared device overview
@@ -1319,9 +1314,16 @@ items:
             href: ./enrollment/ios-ipados-personal-device-security-configurations.md
           - name: iOS/iPadOS supervised device security configurations
             href: ./enrollment/ios-ipados-supervised-device-security-configurations.md
-      - name: Set up macOS enrollment
-        href: ./enrollment/macos-enroll.md
+      - name: Set up Linux enrollment 
         items:
+        - name: Linux enrollment guide  
+          href: ./fundamentals/deployment-guide-enrollment-linux.md
+      - name: Set up macOS enrollment
+        items:
+        - name: macOS enrollment guide  
+          href: ./fundamentals/deployment-guide-enrollment-macos.md
+        - name: Set up macOS enrollment  - DELETE/REPLACE w/enrollment guide
+          href: ./enrollment/macos-enroll.md
         - name: Automated device enrollment for macOS
           href: ./enrollment/device-enrollment-program-enroll-macos.md
         - name: Direct Enrollment for macOS 
