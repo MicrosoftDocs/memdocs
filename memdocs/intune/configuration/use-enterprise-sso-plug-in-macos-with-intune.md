@@ -45,7 +45,7 @@ To use the Microsoft Enterprise SSO plug-in on macOS devices:
 
 # [Intune](#tab/prereq-intune)
 
-- The device must be managed by Intune.
+- The device is managed by Intune.
 - The device must support the plug-in:
   - macOS 10.15 and newer
 - The Microsoft Company Portal app must be installed and configured on the device.
@@ -59,6 +59,9 @@ To use the Microsoft Enterprise SSO plug-in on macOS devices:
 
   The Company Portal app can be installed manually by users, or by deploying the app through Jamf Pro. For a list of options on how to install the Company Portal app, go to [Managing macOS installers using Jamf Pro](https://docs.jamf.com/10.24.1/jamf-pro/administrator-guide/Managing_macOS_Installers.html) (opens Jamf Pro's web site).
 
+> [!NOTE]
+> On macOS devices, Apple requires the Company Portal app be installed. Users don't need to use or configure the Company Portal app, it just needs to be installed on the device.
+
 # [Other MDMs](#tab/prereq-other-mdm)
 
 - The device is managed by a mobile device management (MDM) provider solution.
@@ -69,10 +72,10 @@ To use the Microsoft Enterprise SSO plug-in on macOS devices:
 
   The Microsoft Company Portal app can be installed manually by users, or deployed with an MDM policy. You can [download the Company Portal app installer package](https://go.microsoft.com/fwlink/?linkid=853070).
 
---- 
-
 > [!NOTE]
 > On macOS devices, Apple requires the Company Portal app be installed. Users don't need to use or configure the Company Portal app, it just needs to be installed on the device.
+
+--- 
 
 [!INCLUDE [Apple Kerberos Extension Boilerplate](../includes/apple-enterprise-sso-kerberos-boilerplate.md)]
 
