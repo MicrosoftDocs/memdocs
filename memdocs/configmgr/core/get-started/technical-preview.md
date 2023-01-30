@@ -130,9 +130,9 @@ The following features are available with the most recent Configuration Manager 
 
 ### Technical preview version 2301
 
-- [Removing MSfB new config capability & in-product warnings](2023/technical-preview-2301.md#"bkmk_msfb") <!--10901602-->
-- [Update to the default value of supersedence age in months for software updates.](2023/technical-preview-2301.md#"bkmk_softwareupdates") <!--16441147-->
-- [Microsoft Configuration Manager product branding](2023/technical-preview-2301.md#"bkmk_branding")<!-- 15885998. -->
+- [Removing MSfB new config capability & in-product warnings](2023/technical-preview-2301.md#bkmk_msfb) <!--10901602-->
+- [Update to the default value of supersedence age in months for software updates.](2023/technical-preview-2301.md#bkmk_softwareupdates) <!--16441147-->
+- [Microsoft Configuration Manager product branding](2023/technical-preview-2301.md#bkmk_branding)<!-- 15885998. -->
 - [Improvements to Cloud Sync (Collections to Azure Active Directory Group Synchronization) feature](2023/technical-preview-2301.md#bkmk_coll_aad_group_sync)<!-- 14716797 -->
 
 
