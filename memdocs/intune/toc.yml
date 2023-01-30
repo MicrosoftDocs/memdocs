@@ -1207,7 +1207,7 @@ items:
           href: ./enrollment/multi-factor-authentication.md
           displayName: mfa; multifactor 
         - name: Create terms and conditions policy  
-          href: ./enrollment/terms-and-conditions-create.md
+          href: ./enrollment/terms-and-conditions-create.md  
         - name: Create device enrollment restrictions
           items: 
           - name: Enrollment restrictions overview
@@ -1284,41 +1284,41 @@ items:
             href: ./enrollment/android-work-profile-security-settings.md
           - name: 4 - Apply security settings for fully managed devices 
             href: ./enrollment/android-fully-managed-security-settings.md         
-    - name: Set up iOS/iPadOS enrollment
-      href: ./enrollment/ios-enroll.md
-      items:
-      - name: Automated Device Enrollment
-        href: ./enrollment/device-enrollment-program-enroll-ios.md
-      - name: Shared device overview
-        href: ./enrollment/device-enrollment-shared-ios.md
-      - name: Shared iPad
-        href: ./enrollment/device-enrollment-shared-ipad.md      
-      - name: Back up and restore
-        href: ./enrollment/backup-restore-ios.md      
-      - name: User and Device enrollment
+      - name: Set up iOS/iPadOS enrollment
+        href: ./enrollment/ios-enroll.md
         items:
-        - name: Create the profile
-          href: ./enrollment/ios-user-enrollment.md
-        - name: User enrollment supported actions
-          href: ./enrollment/ios-user-enrollment-supported-actions.md
-      - name: Enrollment with Apple School Manager
-        href: ./enrollment/apple-school-manager-set-up-ios.md
-      - name: Enrollment with Apple Configurator
-        href: ./enrollment/apple-configurator-enroll-ios.md
-      - name: iOS/iPadOS security configuration framework
-        items:
+        - name: Automated Device Enrollment
+          href: ./enrollment/device-enrollment-program-enroll-ios.md
+        - name: Shared device overview
+          href: ./enrollment/device-enrollment-shared-ios.md
+        - name: Shared iPad
+          href: ./enrollment/device-enrollment-shared-ipad.md      
+        - name: Back up and restore
+          href: ./enrollment/backup-restore-ios.md      
+        - name: User and Device enrollment
+          items:
+          - name: Create the profile
+            href: ./enrollment/ios-user-enrollment.md
+          - name: User enrollment supported actions
+            href: ./enrollment/ios-user-enrollment-supported-actions.md
+        - name: Enrollment with Apple School Manager
+          href: ./enrollment/apple-school-manager-set-up-ios.md
+        - name: Enrollment with Apple Configurator
+          href: ./enrollment/apple-configurator-enroll-ios.md
         - name: iOS/iPadOS security configuration framework
-          href: ./enrollment/ios-ipados-configuration-framework.md
-        - name: Framework deployment methodology
-          href: ./enrollment/ios-ipados-framework-deployment-methodology.md
-        - name: Set app configuration policies
-          href: ./enrollment/ios-ipados-app-configuration-policies.md
-        - name: iOS/iPadOS device compliance security configurations
-          href: ./enrollment/ios-ipados-device-compliance-security-configurations.md
-        - name: iOS/iPadOS personal device security configurations
-          href: ./enrollment/ios-ipados-personal-device-security-configurations.md
-        - name: iOS/iPadOS supervised device security configurations
-          href: ./enrollment/ios-ipados-supervised-device-security-configurations.md
+          items:
+          - name: iOS/iPadOS security configuration framework
+            href: ./enrollment/ios-ipados-configuration-framework.md
+          - name: Framework deployment methodology
+            href: ./enrollment/ios-ipados-framework-deployment-methodology.md
+          - name: Set app configuration policies
+            href: ./enrollment/ios-ipados-app-configuration-policies.md
+          - name: iOS/iPadOS device compliance security configurations
+            href: ./enrollment/ios-ipados-device-compliance-security-configurations.md
+          - name: iOS/iPadOS personal device security configurations
+            href: ./enrollment/ios-ipados-personal-device-security-configurations.md
+          - name: iOS/iPadOS supervised device security configurations
+            href: ./enrollment/ios-ipados-supervised-device-security-configurations.md
       - name: Set up macOS enrollment
         href: ./enrollment/macos-enroll.md
         items:
@@ -1330,7 +1330,6 @@ items:
         items:
         - name: Troubleshoot device enrollment
           href: /troubleshoot/mem/intune/troubleshoot-device-enrollment-in-intune
-          displayName: sso    
         - name: Troubleshoot iOS/iPadOS device enrollment
           href: /troubleshoot/mem/intune/troubleshoot-ios-enrollment-errors
         - name: Troubleshoot Windows device enrollment
