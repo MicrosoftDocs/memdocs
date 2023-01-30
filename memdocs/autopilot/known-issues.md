@@ -30,9 +30,9 @@ This article describes known issues that can often be resolved by configuration 
 
 TPM attestation for AMD platforms with ASP firmware TPM may fail with error code 0x80070490 on Windows 10 and Windows 11 systems. There's currently no update available to resolve this issue.
 
-### Autopilot profile not applied after re-imaging to an older OS version
+### Autopilot profile not applied after reimaging to an older OS version
 
-If you enroll a device with the 9C 2022 quality update or later and then re-image an older version, the Autopilot profile will not be applied. The device would need to be re-registered to complete a successful Autopilot deployment. You may see the message "fix pending" in the Autopilot devices blade as this indicates that there was a hardware change on the device.
+If you enroll a device with Windows Update [KB5017380](https://support.microsoft.com/topic/september-20-2022-kb5017380-os-builds-19042-2075-19043-2075-and-19044-2075-preview-59ab550c-105e-4481-b440-c37f07bf7897) or later on Windows 10 or with Windows Update [KB5017383](https://support.microsoft.com/topic/september-20-2022-kb5017383-os-build-22000-1042-preview-62753265-68e9-45d2-adcb-f996bf3ad393) or later on Windows 11 and then reimage to an older OS version, the Autopilot profile won't be applied. The device would need to be re-registered to complete a successful Autopilot deployment. You may see the message **fix pending** in the Autopilot devices blade which indicates that there was a hardware change on the device.
 
 ### TPM attestation failure with error code 0x81039001
 
