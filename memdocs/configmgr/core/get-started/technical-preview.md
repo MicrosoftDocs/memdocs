@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 12/05/2022
+ms.date: 01/30/2023
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -130,8 +130,8 @@ The following features are available with the most recent Configuration Manager 
 
 ### Technical preview version 2301
 
-- [Removing MSfB new config capability & in-product warnings](2023/technical-preview-2301.md#bkmk_msfb) <!--10901602-->
-- [Update to the default value of supersedence age in months for software updates.](2023/technical-preview-2301.md#bkmk_softwareupdates) <!--16441147-->
+- [Removing Microsoft Store for Business and Education new config capability](2023/technical-preview-2301.md#bkmk_msfb) <!--10901602-->
+- [Update to the default value of supersedence age in months for software updates](2023/technical-preview-2301.md#bkmk_softwareupdates) <!--16441147-->
 - [Microsoft Configuration Manager product branding](2023/technical-preview-2301.md#bkmk_branding)<!-- 15885998. -->
 - [Improvements to Cloud Sync (Collections to Azure Active Directory Group Synchronization) feature](2023/technical-preview-2301.md#bkmk_coll_aad_group_sync)<!-- 14716797 -->
 
