@@ -75,9 +75,8 @@ Users will be able to uninstall Win32 apps in the Company Portal. If a Win32 app
 ### Global quiet time app policy settings<!-- 15424417 -->  
 The global quiet time settings will allow you to create policies to schedule quiet time for your end users, which will automatically mute Microsoft Outlook email and Teams notifications on iOS/iPadOS and Android platforms. These policies can be used to limit end user notifications received after work hours. When this feature is available, you will be able to find it in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **Quiet Time** > **Policies**.
 
-
-
 ## Device configuration
+
 ### Disable Activation Lock device action for supervised iOS/iPadOS devices<!-- 15571509 -->  
 You'll soon be able to use the **Disable Activation Lock** device action in Intune to bypass Activation Lock on iOS/iPadOS devices without requiring the current username or password.
 
@@ -167,12 +166,6 @@ The following device pages will be updated:
 * Windows 10 updates
 * Apple updates
 * Enrollment
-
-### Software update policies for macOS will soon be generally available<!-- 12393100 -->  
-Software update policies for macOS devices will soon be out of preview and generally available. This general availability will apply to supervised devices running macOS 12 (Monterey) and later. We will continue to add improvements to this feature going forward.
-
-For more information, see [Use Microsoft Intune policies to manage macOS software updates](../protect/software-updates-macos.md).
-
 
 ### Endpoint security firewall rules support for ICMP type<!-- 5653356 -->  
 We’re adding a new setting named **IcmpTypesAndCodes** to the endpoint security firewall rules template for Windows 10. To configure this in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Endpoint security** > **Firewall** > **Create Policy** > Platform: *Windows 10, Windows 11, and Windows Server*  > Profile: *Microsoft Defender Firewall Rules*).
