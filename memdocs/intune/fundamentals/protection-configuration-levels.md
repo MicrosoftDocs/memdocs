@@ -56,6 +56,24 @@ This level includes policies that every organization should have, at a minimum. 
 
 ### Apps (level 1)
 
+This level enforces a reasonable amount of data protection and access requirements while minimizing the impact to users.
+
+In this level, Microsoft recommends you configure the following app protection and access:
+
+- Enable basic data protection requirements related to the following:
+  - Allow app basic data transfer
+  - Enforce basic app encryption
+  - Allow specific access functionality
+  
+- Enable access requirements related to the following:
+  - Require PIN, face ID, and biometric access
+  - Enforce supporting access settings based on this level
+
+- Enable conditional application launch related to the following:
+  - Configure app basic access attempts
+  - Restrict app access based on jailbroken/rooted devices
+  - Restrict app access based on basic integrity of devices
+
 ### Device compliance (level 1)
 
 ### Device configuration (level 1)
@@ -85,6 +103,22 @@ This level expands on the minimum set of policies to include more security and e
 Use the settings in this level to add what you've done in Level 1.
 
 ### Apps (level 2)
+
+This level recommends a standard level of application protection for devices where users access more sensitive information.
+
+In addition to Level 1 settings, Microsoft recommends you configure the following app protection and access:
+
+- Enable standard data protection requirements related to the following:
+  - Transfer organization related data
+  - Exempt selected apps data transfer requirements
+  - Transfer telecommunication data
+  - Restrict cut, copy, and paste between apps
+  - Block screen capture
+  
+- Enable conditional application launch related to the following:
+  - Block disabling app account
+  - Enforce device OS conditions
+  - Allow app access based on standard integrity of device
 
 ### Device compliance (level 2)
 
