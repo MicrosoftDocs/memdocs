@@ -46,7 +46,7 @@ Devices must be enrolled before you can see them in the admin center. Enrollment
 To establish a connection, you must have:   
 
 * Access to the Google Admin console  
-* [Read-only permission to manage Chrome OS Devices](https://support.google.com/a/answer/9807615)(opens Google Workspace Admin Help)  
+* [Permission to manage Chrome OS Devices](https://support.google.com/a/answer/9807615)(opens Google Workspace Admin Help)  
 * One of these roles: 
    * Intune Service Administrator 
    * Custom Intune role, with *Chrome Enterprise update connection settings* permission.  
@@ -70,7 +70,7 @@ To establish a connection, you must have:
    5. Select **Authorize** to save all changes. 
 5. Return to the Microsoft Endpoint Manager admin center and select **Launch Google to connect now.**     
 6. When prompted to authenticate with your organization's Google Enterprise domain, use your Google Admin account. The Google Admin account appears in Google Workspace audit logs for all actions applied to Chrome OS devices in the Endpoint Manager admin center. Your account must have:  
-   * Read-only permission to manage Chrome OS devices, as described in [Prerequisites](chrome-enterprise-connector-configure.md#prerequisites).  
+   * Permission to manage Chrome OS devices, as described in [Prerequisites](chrome-enterprise-connector-configure.md#prerequisites).  
    * Access to Google Workspace Admin SDK Directory API.  
 
 After you authenticate, the connection is established and your organization’s enrolled Chrome OS devices begin syncing from the Google Admin console. The status changes to **Active** when syncing is complete. 
