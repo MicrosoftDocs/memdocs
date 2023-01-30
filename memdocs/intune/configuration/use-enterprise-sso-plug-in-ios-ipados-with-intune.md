@@ -7,7 +7,7 @@ keywords: Enterprise SSO plug-in, Microsoft Intune
 author: TBC
 ms.author: alessanc
 manager: ianfarr
-ms.date: 01/24/2023
+ms.date: 01/30/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -41,12 +41,37 @@ This article shows how to deploy the Microsoft Enterprise SSO plug-in (preview) 
 
 ## Prerequisites
 
+To use the Microsoft Enterprise SSO plug-in on iOS/iPadOS devices:
+
+# [Intune](#tab/prereq-intune)
+
+- The device is managed by Intune.
 - The device must support the plug-in:
-  - The device is managed with Intune.
   - iOS/iPadOS 13.0 and newer
 - The Microsoft Authenticator app must be installed on the device.
 
   The Microsoft Authenticator app can be installed manually by users, or deployed using Intune. For information on how to install the Microsoft Authenticator app, go to [Manage Apple volume-purchased apps](../apps/vpp-apps-ios.md).
+
+# [Jamf Pro](#tab/prereq-jamf-pro)
+
+- The device is managed by Jamf Pro.
+- The device must support the plug-in:
+  - iOS/iPadOS 13.0 and newer
+- The Microsoft Authenticator app must be installed on the device.
+
+  The Microsoft Authenticator app can be installed manually by users, or by deploying the app through Jamf Pro. For a list of options on how to install the Microsoft Authenticator app, go to [Managing macOS installers using Jamf Pro](https://docs.jamf.com/10.24.1/jamf-pro/administrator-guide/Managing_macOS_Installers.html) (opens Jamf Pro's web site).
+
+- **[Jamf Pro and Intune integration for device compliance](../protect/conditional-access-integrate-jamf.md) is not required to use the SSO app extension.**
+
+# [Other MDMs](#tab/prereq-other-mdm)
+
+- The device is managed by a mobile device management (MDM) provider solution.
+- The MDM solution must support configuring [Single Sign-on MDM payload settings for Apple devices](https://support.apple.com/guide/deployment/extensible-single-sign-on-payload-settings-depfd9cdf845/web) with a device policy.
+- The device must support the plug-in:
+  - iOS/iPadOS 13.0 and newer
+- The Microsoft Authenticator app must be installed on the device. The Microsoft Authenticator app can be installed manually by users, or deployed with an MDM policy.
+
+--- 
 
 > [!NOTE]
 > On iOS and iPadOS devices, Apple requires that the SSO app extension and the Microsoft Authenticator app be installed. Users don't need to use or configure the Microsoft Authenticator app, it just needs to be installed on the device.
@@ -58,6 +83,8 @@ This article shows how to deploy the Microsoft Enterprise SSO plug-in (preview) 
 For more information on the single sign-on extension, go to [Single sign-on app extension](device-features-configure.md#single-sign-on-app-extension).
 
 ## Create a single sign-on app extension configuration profile
+
+# [Intune](#tab/create-profile-intune)
 
 In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), create a device configuration profile. This profile includes the settings to configure the SSO app extension on devices.
 
@@ -110,6 +137,95 @@ When the device checks in with the Intune service, it will receive this profile.
 To check that the profile deployed correctly, in the Endpoint Manager admin center, go to **Devices** > **Configuration Profiles** > select the profile you created and generate a report:
 
 :::image type="content" source="./media/apple-enterprise-sso-plug-in/ios-ipados-enterprise-sso-profile-report.png" alt-text="Screenshot that shows the iOS/iPadOS device configuration profile deployment report in Intune.":::
+
+# [Jamf Pro](#tab/create-profile-jamf-pro)
+
+In the Jamf Pro portal, you create a Computer or Device configuration profile. This profile includes the settings to configure the SSO app extension on devices.
+
+1. Sign in to the Jamf Pro portal.
+2. To create an iOS/iPadOS profile, select **Devices** > **Configuration profiles** > **New**:
+
+    :::image type="content" source="./media/apple-enterprise-sso-plug-in/ios-ipados-create-profile-jamf.png" alt-text="Screenshot that shows the Jamf Pro portal and how to create a configuration profile for iOS/iPadOS devices.":::
+
+3. In **Name**, enter a descriptive name for the policy. Name your policies so you can easily identify them later. For example, a good policy name is: **iOS/iPadOS: Microsoft Enterprise SSO plug-in**.
+
+4. In the **Options** column, scroll down and select **Single Sign-On Extensions** > **Add**:
+
+    :::image type="content" source="./media/apple-enterprise-sso-plug-in/ios-ipados-sso-extensions-jamf.png" alt-text="Screenshot that shows the Jamf Pro portal. Select the configuration profiles SSO option and select add for iOS/iPadOS devices.":::
+
+5. Enter the following properties:
+
+    - **Payload Type**: Select **SSO**.
+    - **Extension Identifier**: Enter `com.microsoft.azureauthenticator.ssoextension`.
+    - **Team Identifier**: No value is needed, leave the field blank.
+    - **Sign-On Type**: Select **Redirect**.
+    - **URLs**: Enter the following URLs, one at a time:
+      - `https://login.microsoftonline.com`
+      - `https://login.microsoft.com`
+      - `https://sts.windows.net`
+      - `https://login.partner.microsoftonline.cn`
+      - `https://login.chinacloudapi.cn`
+      - `https://login.microsoftonline.us`
+      - `https://login-us.microsoftonline.com`
+
+    :::image type="content" source="./media/apple-enterprise-sso-plug-in/ios-ipados-sso-extensions-settings-jamf.png" alt-text="Screenshot that shows the Jamf Pro portal and the payload type, extension identifier, team identifier, and SSO type settings for iOS/iPadOS devices.":::
+
+    :::image type="content" source="./media/apple-enterprise-sso-plug-in/ios-ipados-sso-extensions-urls-jamf.png" alt-text="Screenshot that shows the Jamf Pro portal and the SSO URLs for iOS/iPadOS devices.":::
+
+6. In **Custom Configuration**, you'll define other required properties. Jamf Pro requires that these properties are configured using an uploaded PLIST file. To see the full list of configurable properties, go to [Azure AD Apple SSO Extension documentation](/azure/active-directory/develop/apple-sso-plugin#manual-configuration-for-other-mdm-services).
+
+    The following example is a recommended PLIST file that meets the needs of most organizations:
+
+    ```xml
+    <?xml version="1.0" encoding="UTF-8"?>
+    <plist version="1.0">
+    <dict>
+        <key>AppPrefixAllowList</key>
+        <string>com.microsoft.,com.apple.,com.jamf.,com.jamfsoftware.</string>
+        <key>browser_sso_interaction_enabled</key>
+        <integer>1</integer>
+        <key>disable_explicit_app_prompt</key>
+        <integer>1</integer>
+    </dict>
+    </plist>
+    ```
+
+    :::image type="content" source="./media/apple-enterprise-sso-plug-in/ios-ipados-custom-configuration-plist-jamf.png" alt-text="Screenshot that shows a sample custom configuration with a PLIST file for Jamf Pro.":::
+
+    These PLIST settings configure the following SSO Extension options. These properties are the default values used by the Microsoft SSO Extension, but they can be customized for your organization needs:
+
+    [!INCLUDE [Apple SSO Recommended Settings Table Boilerplate](../includes/apple-enterprise-sso-recommended-settings-ios-jamf-pro-boilerplate.md)]
+
+7. Select the **Scope** tab. Enter the computers or devices that should be targeted to receive the SSO Extension MDM profile.
+8. Select **Save**.
+
+When the device checks in with the Jamf Pro service, it receives the profile.
+
+# [Other MDMs](#tab/create-profile-other-mdm)
+
+In the MDM portal, create a device configuration profile. This profile includes the settings to configure the SSO app extension on devices.
+
+1. Sign in to the MDM portal.
+2. Create a new device configuration profile.
+3. Select a **Single Sign-On Extensions** or **SSO extension** option. The name varies depending on the MDM solution you're using.
+4. Enter the following properties:
+
+    | **Key** | **Value** |
+    | --- | --- |
+    | Payload Type | SSO |
+    | Extension Identifier | com.microsoft.azureauthenticator.ssoextension |
+    | Sign-On Type | **Redirect** |
+    | URLs | - `https://login.microsoftonline.com` <br/> - `https://login.microsoft.com` <br/> - `https://sts.windows.net` <br/> - `https://login.partner.microsoftonline.cn` <br/> - `https://login.chinacloudapi.cn` <br/> - `https://login.microsoftonline.us` <br/> - `https://login-us.microsoftonline.com` |
+
+5. Optionally, you can configure other properties. These properties are the default values used by the Microsoft SSO Extension, but they can be customized for your organization needs:
+
+    [!INCLUDE [Apple SSO Recommended Settings Table Boilerplate](../includes/apple-enterprise-sso-recommended-settings-ios-intune-and-generic-mdm-boilerplate.md)]
+
+6. Assign the new policy to the devices that should be targeted to receive the SSO Extension MDM profile.
+
+When the device checks in with the MDM service, it receives this profile.
+
+--- 
 
 [!INCLUDE [Apple iOS End User Experience Boilerplate](../includes/apple-enterprise-sso-ios-end-user-experience-boilerplate.md)]
 
