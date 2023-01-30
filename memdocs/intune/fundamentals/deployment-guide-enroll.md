@@ -43,13 +43,14 @@ Registration in Azure AD is a required step for Intune management. Before a devi
    * *Azure AD joined* is the device identity option available for corporate-owned Windows 10/11 devices utilizing co-management options. Users on these devices authenticate by signing in to the device using their Azure AD work account.  
 
 ## Pre-enrollment configurations  
-This section describes the general enrollment features and profiles available in Microsoft Intune. Configure these settings, as needed, before creating the enrollment profile for devices. Setting availability varies by OS platform.     
+Prepare devices for enrollment and configure enrollment features, such as enrollment restrictions, device categorization, and device enrollment managers. These configurations help improve and simplify the enrollment experience for you and device users, and help you stay organized in the admin center.  Configure them before you create the enrollment profile. 
+
+Setting availability varies by OS platform.       
 
 ### Unenroll and reset existing devices  
 
-If devices are currently enrolled in another MDM provider, unenroll the devices from the existing MDM provider before enrolling them in Intune. The following table shows the devices that require a factory reset before enrolling in Intune. 
+If devices are currently enrolled in another MDM provider, unenroll the devices from the existing MDM provider before enrolling them in Intune. The following table shows the devices that require a factory reset before enrolling in Intune.  
 
------
 | Platform | Factory reset required? |
 | --- | --- |
 | Android Enterprise personally owned devices with a work profile (BYOD) | No |
@@ -135,7 +136,7 @@ The following table describes the supported enrollment methods for Android and A
 * [Zero-touch enrollment](../enrollment/android-dedicated-devices-fully-managed-enroll.md#enroll-by-using-google-zero-touch): We recommend using zero-touch enrollment for bulk enrollments and to simplify enrollment for remote workers. This method lets you prepare corporate-owned devices ahead of time so that they automatically provision and enroll as fully manged devices when users turn them on.     
 
 # [User owned](#tab/user-owned-android)  
-Enroll personal devices in bring-your-own-device (BYOD) scenarios as *personally owned devices with a work profile*. This method creates a separate work profile on the personal device so that a person can switch between their personal apps and work apps easily and securely. The device owner enrolls their device through the Intune Company Portal app. As an admin, you can manage the apps and data in the work profile. This method aligns with the *Android Enterprise personally owned work profile* solution. 
+The *Android Enterprise work profile solution for personally owned devices* creates a separate work profile on the enrolling device so that people in BYOD scenarios can switch between their personal apps and work apps easily and securely. The device owner enrolls their device through the Intune Company Portal app. As an admin, you can manage the apps and data in the work profile. 
 
 For more information, see [Personally owned devices with a work profile](../enrollment/android-work-profile-enroll.md).  
 
