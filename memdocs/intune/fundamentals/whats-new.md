@@ -952,7 +952,7 @@ In the admin center, you can:
   - Custom compliance
   - Device encryption
   - Password policy
-- [Apply custom compliance settings](../protect/compliance-use-custom-settings.md) using POSIX-complaint shell scripts for discovery, and JSON files to define the custom settings you want to use.
+- [Apply custom compliance settings](../protect/compliance-use-custom-settings.md) using POSIX-compliant shell scripts for discovery, and JSON files to define the custom settings you want to use.
 
 ## Week of October 03, 2022
 
