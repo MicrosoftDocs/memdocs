@@ -131,7 +131,7 @@ After you drill in, the admin center displays a list of the settings from that p
 
 You deployed a security baseline, but the deployment status shows an error. The following steps give you some guidance on troubleshooting the error.
 
-1. In Intune, select **Security Baselines** > select a baseline > **Profiles**.
+1. In Intune, select **Endpoint security** > **Security Baselines** > select a baseline > **Profiles**.
 
 2. Select a profile > Under **Monitor** > **Per-setting status**.
 
