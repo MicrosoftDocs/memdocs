@@ -38,28 +38,28 @@ items:
     - name: Try Intune tasks
       items:
       - name: <Do we need an overview topic to explain the steps?>
-      - name: Sign up for a free Intune trial
+      - name: Step 1 - Sign up for a free Intune trial
         href: ./fundamentals/free-trial-sign-up.md
         displayName: tenant; trial; get started, start; help; MDM
-      - name: Create a user
+      - name: Step 2 - Create a user and assign a license
         href: ./fundamentals/quickstart-create-user.md
-      - name: Create a group
+      - name: Step 3 - Create a group
         href: ./fundamentals/quickstart-create-group.md   
-      - name: Set up automatic enrollment
+      - name: Step 4 - Set up automatic enrollment
         href: ./enrollment/quickstart-setup-auto-enrollment.md
-      - name: Enroll your Windows device
+      - name: Step 5 - Enroll your Windows device
         href: ./enrollment/quickstart-enroll-windows-device.md        
-      - name: Create a device compliance policy
+      - name: Step 6 - Create a device compliance policy
         href: ./protect/quickstart-set-password-length-android.md        
-      - name: Send notifications to noncompliant devices
+      - name: Step 7 - Send notifications to noncompliant devices
         href: ./protect/quickstart-send-notification.md        
-      - name: Add and assign an app
+      - name: Step 8 - Add and assign an app
         href: ./apps/quickstart-add-assign-app.md        
-      - name: Create and assign an app protection policy
+      - name: Step 9 - Create and assign an app protection policy
         href: ./apps/quickstart-create-assign-app-policy.md        
-      - name: Create and assign a custom role
+      - name: Step 10 - Create and assign a custom role
         href: ./fundamentals/quickstart-create-custom-role.md        
-      - name: Create a device profile
+      - name: Step 11 - Create a device profile
         href: ./configuration/quickstart-email-profile.md    
     - name: Try Intune scenarios
       items:
@@ -771,39 +771,9 @@ items:
         href: ./protect/device-protect.md
         displayName: compliant; noncompliant; mfa  
 
-      - name: Concepts 
-        items: 
-        - name: Privacy and personal data (copy to own section - does this make sense?)
-          href: ./protect/privacy-personal-data.md
-          items:
-          - name: Optional diagnostic data in client apps
-            href: ./protect/client-apps-optional-data.md
-          - name: Data collection
-            href: ./protect/privacy-data-collect.md
-          - name: Data storage and processing
-            href: ./protect/privacy-data-store-process.md
-          - name: Data security and sharing
-            href: ./protect/privacy-data-secure-share.md
-            items:
-            - name: Data Apple sends to Intune
-              href: ./protect/data-apple-sends-to-intune.md
-            - name: Data Google sends to Intune
-              href: ./protect/data-google-sends-to-intune.md
-            - name: Data Intune sends to Apple
-              href: ./protect/data-intune-sends-to-apple.md
-            - name: Data Intune sends to Google
-              href: ./protect/data-intune-sends-to-google.md
-            - name: Information shared from Jamf Pro to Intune
-              href: ./protect/data-jamf-sends-to-intune.md
-          - name: View and correct personal data
-            href: ./protect/privacy-data-view-correct.md
-          - name: Audit, export, delete
-            href: ./protect/privacy-data-audit-export-delete.md
-          - name: Windows Information Protection
-            href: ./protect/windows-information-protection-configure.md
       - name: How-to guides
         items:
-        - name: Set rules on devices to allow access to resources
+        - name: Use compliance rules to protect resources (Set rules on devices to allow access to resources)
           items:
           - name: Compliance overview
             href: ./protect/device-compliance-get-started.md    

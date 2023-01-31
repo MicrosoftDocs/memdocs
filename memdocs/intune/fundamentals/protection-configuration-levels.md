@@ -7,7 +7,7 @@ description: Learn about the different levels of protection and configuration in
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/13/2022
+ms.date: 01/30/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -56,23 +56,25 @@ This level includes policies that every organization should have, at a minimum. 
 
 ### Apps (level 1)
 
-This level enforces a reasonable amount of data protection and access requirements while minimizing the impact to users.
+This level enforces a reasonable amount of data protection and access requirements while minimizing the impact to users. This level ensures that apps are protected with a PIN and encrypted and performs selective wipe operations. For Android devices, this level validates Android device attestation. This is an entry level configuration that provides similar data protection control in Exchange Online mailbox policies and introduces IT and the user population to app protection policies.
 
-In this level, Microsoft recommends you configure the following app protection and access:
-
-- Enable basic data protection requirements related to the following:
+In this level, Microsoft recommends you configure the following protection and access for apps:
+ 
+- Enable basic data protection requirements:
   - Allow app basic data transfer
   - Enforce basic app encryption
-  - Allow specific access functionality
+  - Allow basic access functionality
   
-- Enable access requirements related to the following:
+- Enable basic access requirements:
   - Require PIN, face ID, and biometric access
-  - Enforce supporting access settings based on this level
+  - Enforce supporting basic access settings
 
-- Enable conditional application launch related to the following:
+- Enable basic conditional application launch:
   - Configure app basic access attempts
-  - Restrict app access based on jailbroken/rooted devices
+  - Block app access based on jailbroken/rooted devices
   - Restrict app access based on basic integrity of devices
+
+For more information, see [Level 1 basic app protection](../apps/app-protection-framework.md#level-1-enterprise-basic-data-protection).
 
 ### Device compliance (level 1)
 
@@ -104,21 +106,26 @@ Use the settings in this level to add what you've done in Level 1.
 
 ### Apps (level 2)
 
-This level recommends a standard level of application protection for devices where users access more sensitive information.
+This level recommends a standard level of application protection for devices where users access more sensitive information. This level introduces app protection policy data leakage prevention mechanisms and minimum OS requirements. This is the configuration that is applicable to most mobile users accessing work or school data.
 
-In addition to Level 1 settings, Microsoft recommends you configure the following app protection and access:
+In addition to Level 1 settings, Microsoft recommends you configure the following protection and access for apps:
 
-- Enable standard data protection requirements related to the following:
+- Enable enhanced data protection requirements:
   - Transfer organization related data
-  - Exempt selected apps data transfer requirements
+  - Exempt selected apps data transfer requirements (iOS/iPadOS)
   - Transfer telecommunication data
   - Restrict cut, copy, and paste between apps
-  - Block screen capture
+  - Block screen capture (Android)
   
-- Enable conditional application launch related to the following:
-  - Block disabling app account
-  - Enforce device OS conditions
-  - Allow app access based on standard integrity of device
+- Enable enhanced conditional application launch:
+  - Block disabling application accounts
+  - Enforce minimum device OS requirements
+  - Require minimum patch version (Android)
+  - Require SafetyNet evaluation type (Android)
+  - Require device lock (Android)
+  - Allow app access based on increased integrity of device
+
+For more information, see [Level 2 enhanced app protection](../apps/app-protection-framework.md#level-2-enterprise-enhanced-data-protection).
 
 ### Device compliance (level 2)
 
@@ -154,11 +161,37 @@ Specifically, in this level, you can:
 
 ## Level 3 - High protection and configuration
 
-This level includes enterprise-level policies and may involve different admins in your organization. These policies continue moving to password-less authentication, additional security, and configuring specialized devices.
+This level includes enterprise-level policies and may involve different admins in your organization. These policies continue moving to password-less authentication, additional security, and configuring specialized devices. 
 
 Use the settings in this level to add what you've done in Levels 1 and 2.
 
 ### Apps (level 3)
+
+This level recommends a standard level of application protection for devices where users access more sensitive information. This level introduces advanced data protection mechanisms, enhanced PIN configuration, and app protection policy Mobile Threat Defense. This configuration is desirable for users that are accessing high risk data.
+
+In addition to level 1 and 2 settings, Microsoft recommends you configure the following protection and access for apps:
+
+- Enable high data protection requirements:
+  - High protection when transferring telecommunication data
+  - Receive data from only policy managed apps
+  - Block opening data into organization documents
+  - Allow users to open data from selected services
+  - Block third-party keyboards
+  - Require/select approved keyboards (Android)
+  - Block printing organization data
+  
+- Enable high access requirements:
+  - Block simple PIN and require specific minimum PIN length
+  - Require PIN reset after number of days
+  - Require class 3 Biometrics (Android 9.0+)
+  - Require override of Biometrics with PIN after biometric updates (Android)
+
+- Enable high conditional application launch:
+  - Require device lock (Android)
+  - Require max allowed threat level
+  - Require Max OS version
+
+For more information, see [Level 3 high app protection](../apps/app-protection-framework.md#level-3-enterprise-high-data-protection).
 
 ### Device compliance (level 3)
 
@@ -171,7 +204,6 @@ In this level, you can create policies that:
 - Prevent malware from communicating with the Windows OS processes.
 - Configure specialized devices like kiosks and shared devices.
 - Deploy scripts.
-
 
 Specifically, in this level, you can:
 
