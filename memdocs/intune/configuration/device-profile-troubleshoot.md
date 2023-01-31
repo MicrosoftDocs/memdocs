@@ -26,7 +26,7 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# Common questions, scenarios, and answers with device policies and profiles in Microsoft Intune
+# Common questions, scenarios, and answers with policies and profiles in Microsoft Intune
 
 [!INCLUDE [windows-phone-81-windows-10-mobile-support](../includes/windows-phone-81-windows-10-mobile-support.md)]
 

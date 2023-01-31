@@ -1453,7 +1453,7 @@ items:
       - name: Assign policies to users & groups
         href: ./configuration/device-profile-assign.md
         displayName: deploy, push
-      - name: App policies
+      - name: Assign app policies
         items:
         - name: Assign apps to groups
           href: ./apps/apps-deploy.md

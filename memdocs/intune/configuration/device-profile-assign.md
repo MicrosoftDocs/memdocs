@@ -34,7 +34,7 @@ ms.collection:
 
 When you create an Intune policy, it includes all the settings you added and configured within the policy. When the policy is ready to be deployed, the next step is to "assign" the policy to your user or device groups. When it's assigned, the users and devices receive your policy, and the settings you entered are applied.
 
-In the Endpoint Manager admin center, you can assign:
+In Intune, you can create and assign the following policies:
 
 - App protection policies
 - App configuration policies
@@ -44,13 +44,6 @@ In the Endpoint Manager admin center, you can assign:
 - Enrollment policies
 
 This article shows you how to assign a policy, includes some information on using scope tags, describes when to assign policies to user groups or device groups, and more.
-
-> [!NOTE]  
-> When a policy is removed or no longer assigned to a device, different things can happen, depending on the settings in the policy. The settings are based on CSPs, and each CSP can handle the policy removal differently. For example, a setting might keep the existing value, and not revert back to a default value. The behavior is controlled by each CSP in the operating system. For a list of Windows CSPs, see [configuration service provider (CSP) reference](/windows/client-management/mdm/configuration-service-provider-reference).
->
-> To change a setting to a different value, create a new policy, configure the setting to **Not configured**, and assign the policy. Once applied to the device, users should have control to change the setting to their preferred value.
->
-> When configuring these settings, we suggest deploying to a pilot group. For more Intune rollout advice, see [create a rollout plan](../fundamentals/intune-planning-guide.md).
 
 ## Before you begin
 
@@ -75,13 +68,25 @@ Be sure you have the correct role to assign policies and profiles. For more info
 4. Select **Review + Save**. This step doesn't assign your policy.
 5. Select **Save**. When you save, your policy is assigned. Your groups will receive your policy settings when the devices check in with the Intune service.
 
-## Use scope tags or applicability rules
+## Assignment features you should know and use
 
-When you create or update a policy, you can also add scope tags and applicability rules to the policy.
+- Use **[Filters](filters.md)** to assign a policy based on rules you create. You can create filters for:
 
-**Scope tags** are a great way to filter policies to specific groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md) has more information.
+  - App protection policies
+  - App configuration policies
+  - Compliance policies
+  - Conditional access policies
+  - Device configuration profiles
 
-On Windows 10/11 devices, you can add **applicability rules** so the policy only applies to a specific OS version or a specific Windows edition. [Applicability rules](device-profile-create.md#applicability-rules) has more information.
+  For more information, go to [Use filters when assigning your apps, policies, and profiles in Microsoft Intune](../fundamentals/filters.md).
+
+- **[Policy sets](../fundamentals/policy-sets.md)** create a group or collection of existing apps and policies. When the policy set is created, you can assign the policy set from a single place in the Endpoint Manager admin center.
+
+  For more information, go to [Use policy sets to group collections of management objects in Microsoft Intune](policy-sets.md).
+
+- **[Scope tags](../fundamentals/scope-tags.md)** are a great way to filter policies to specific groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information, go to [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
+
+- On Windows 10/11 devices, you can add **[applicability rules](device-profile-create.md#applicability-rules)** so the policy only applies to a specific OS version or a specific Windows edition. For more information, go to [Applicability rules](device-profile-create.md#applicability-rules).
 
 ## User groups vs. device groups
 
@@ -119,13 +124,23 @@ For example:
 
 To summarize, use user groups when you want your settings and rules to always go with the user, whatever device they use. 
 
-### Windows CSPs
+### Windows CSPs and their behavior
 
 The policy settings for Windows devices are based on the [configuration service providers (CSPs)](/windows/client-management/mdm/configuration-service-provider-reference). These settings map to registry keys or files on the devices.
 
-Intune exposes these CSPs so you can configure these settings and assign them to your Windows devices. These settings are configurable using the built-in templates and using the [settings catalog](settings-catalog.md). In the settings catalog, you'll see that some settings apply to the user scope and some settings apply to the device scope.
+Here's what you need to know about Windows CSPs:
 
-For information on how user scoped and device scoped settings are applied to Windows devices, go to [Settings catalog: Device scope vs. user scope settings](settings-catalog.md#device-scope-vs-user-scope-settings).
+- Intune exposes these CSPs so you can configure these settings and assign them to your Windows devices. These settings are configurable using the built-in templates and using the [settings catalog](settings-catalog.md). In the settings catalog, you'll see that some settings apply to the user scope and some settings apply to the device scope.
+
+  For information on how user scoped and device scoped settings are applied to Windows devices, go to [Settings catalog: Device scope vs. user scope settings](settings-catalog.md#device-scope-vs-user-scope-settings).
+
+- When a policy is removed or no longer assigned to a device, different things can happen, depending on the settings in the policy. Each CSP can handle the policy removal differently.
+
+  For example, a setting might keep the existing value, and not revert back to a default value. The behavior is controlled by each CSP in the operating system. For a list of Windows CSPs, see [configuration service provider (CSP) reference](/windows/client-management/mdm/configuration-service-provider-reference).
+
+  To change a setting to a different value, create a new policy, configure the setting to **Not configured**, and assign the policy. When the policy applies to the device, users should have control to change the setting to their preferred value.
+
+- When configuring these settings, we suggest deploying to a pilot group. For more Intune rollout advice, see [create a rollout plan](../fundamentals/intune-planning-guide.md).
 
 ## Exclude groups from a policy assignment
 
@@ -138,7 +153,7 @@ As a best practice:
 
 For more information on groups, see [Add groups to organize users and devices](../fundamentals/groups-add.md).
 
-### Fundamentals
+### Principles of including and excluding groups
 
 When you assign your policies and policies, apply the following general principles:
 
