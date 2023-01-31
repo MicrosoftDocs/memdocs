@@ -27,7 +27,7 @@ ms.collection:
 - tier3
 ---
 
-# Step 11: Create and assign a custom role
+# Step 10: Create and assign a custom role
 
 In this Intune topic, you'll create a custom role with specific permissions for a security operations department. Then you'll assign the role to a group of such operators. There are several default roles that you can use right away. But by creating custom roles like this one, you have precise access control to all parts of your mobile device management system.
 

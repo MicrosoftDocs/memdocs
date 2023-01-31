@@ -78,4 +78,4 @@ In this topic, you created and assigned an app protection policy. Users of the a
 To continue to evaluate Microsoft Intune, go to the next step:
 
 > [!div class="nextstepaction"]
-> [Step 10: Create and assign a custom role](../fundamentals/create-custom-role.md)
+> [Step 10: Create and assign a custom role](../fundamentals/quickstart-create-custom-role.md)
