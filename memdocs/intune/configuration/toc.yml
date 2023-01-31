@@ -98,22 +98,10 @@ items:
     - name: Enterprise SSO plug-in overview
       href: use-enterprise-sso-plug-in-ios-ipados-macos.md
       items:
-      - name: iOS/iPadOS
-        items:
-        - name: SSO plug-in in Intune
-          href: use-enterprise-sso-plug-in-ios-ipados-with-intune.md
-        - name: SSO plug-in in Jamf Pro
-          href: use-enterprise-sso-plug-in-ios-ipados-with-jamf-pro.md
-        - name: SSO plug-in in other MDMs
-          href: use-enterprise-sso-plug-in-ios-ipados-with-generic-mdm.md
-      - name: macOS
-        items:
-        - name: SSO plug-in in Intune
-          href: use-enterprise-sso-plug-in-macos-with-intune.md
-        - name: SSO plug-in in Jamf Pro
-          href: use-enterprise-sso-plug-in-macos-with-jamf-pro.md
-        - name: SSO plug-in in other MDMs
-          href: use-enterprise-sso-plug-in-macos-with-generic-mdm.md
+      - name: iOS/iPadOS SSO plug-in
+        href: use-enterprise-sso-plug-in-ios-ipados-with-intune.md
+      - name: macOS SSO plug-in
+        href: use-enterprise-sso-plug-in-macos-with-intune.md
   - name: Extensions on macOS
     href: kernel-extensions-overview-macos.md
     displayName: kernel extensions, system extensions

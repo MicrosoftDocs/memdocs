@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/25/2023
+ms.date: 01/30/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -41,29 +41,13 @@ This article applies to:
 
 The Enterprise SSO plug-in can be used in Microsoft Intune, Jamf Pro, or other MDM solutions. For more information about the plug-in, which SSO option to use, and how to create the SSO profile, go to the following articles:
 
-- **Deploy using Intune**
-  ::: zone pivot="all,ios-ipados"
-  - [**iOS/iPadOS**: Deploy the Microsoft Enterprise SSO plug-in using Intune](./use-enterprise-sso-plug-in-ios-ipados-with-intune.md)
-  ::: zone-end
-  ::: zone pivot="all,macos"
-  - [**macOS**: Deploy the Microsoft Enterprise SSO plug-in using Intune](./use-enterprise-sso-plug-in-macos-with-intune.md)
-  ::: zone-end
+::: zone pivot="all,ios-ipados"
+- [**iOS/iPadOS**: Deploy the Microsoft Enterprise SSO plug-in](./use-enterprise-sso-plug-in-ios-ipados-with-intune.md)
+::: zone-end
 
-- **Deploy using Jamf Pro**
-  ::: zone pivot="all,ios-ipados"
-  - [**iOS/iPadOS**: Deploy the Microsoft Enterprise SSO plug-in using Jamf Pro](./use-enterprise-sso-plug-in-ios-ipados-with-jamf-pro.md)
-  ::: zone-end
-  ::: zone pivot="all,macos"
-  - [**macOS**: Deploy the Microsoft Enterprise SSO plug-in using Jamf Pro](./use-enterprise-sso-plug-in-macos-with-jamf-pro.md)
-  ::: zone-end
-
-- **Deploy using other MDMs**
-  ::: zone pivot="all,ios-ipados"
-  - [**iOS/iPadOS**: Deploy the Microsoft Enterprise SSO plug-in using another MDM](./use-enterprise-sso-plug-in-ios-ipados-with-generic-mdm.md)
-  ::: zone-end
-  ::: zone pivot="all,macos"
-  - [**macOS**: Deploy the Microsoft Enterprise SSO plug-in using another MDM](./use-enterprise-sso-plug-in-macos-with-generic-mdm.md)
-  ::: zone-end
+::: zone pivot="all,macos"
+- [**macOS**: Deploy the Microsoft Enterprise SSO plug-in](./use-enterprise-sso-plug-in-macos-with-intune.md)
+::: zone-end
 
 ## Next steps
 
