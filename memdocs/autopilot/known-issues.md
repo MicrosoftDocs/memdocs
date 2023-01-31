@@ -26,13 +26,17 @@ This article describes known issues that can often be resolved by configuration 
 
 ## Known issues
 
+### Kiosk device profile not auto logging in
+
+There's currently a known issue in Windows Update [KB5022303](https://support.microsoft.com/topic/january-10-2023-kb5022303-os-build-22621-1105-c45956c6-4ccb-4216-832c-2ec6309c7629), which applies to both Windows 10 and Windows 11, where Kiosk device profiles that have auto log on enabled won't auto login. After Autopilot completes provisioning, the device stays on the sign-in screen prompting for credentials. To work around this known issue, you can manually enter the kiosk user credentials with the username `kioskUser0` and no password. After entering this username with no password, it should take you to the desktop. There's a fix pending, but no estimated date for the release of the fix at this time.
+
 ### TPM attestation isn't working on AMD platforms with ASP fTPM
 
 TPM attestation for AMD platforms with ASP firmware TPM may fail with error code 0x80070490 on Windows 10 and Windows 11 systems. There's currently no update available to resolve this issue.
 
-### Autopilot profile not applied after re-imaging to an older OS version
+### Autopilot profile not applied after reimaging to an older OS version
 
-If you enroll a device with the 9C 2022 quality update or later and then re-image an older version, the Autopilot profile will not be applied. The device would need to be re-registered to complete a successful Autopilot deployment.
+If you enroll a device with Windows Update [KB5017380](https://support.microsoft.com/topic/september-20-2022-kb5017380-os-builds-19042-2075-19043-2075-and-19044-2075-preview-59ab550c-105e-4481-b440-c37f07bf7897) or later on Windows 10 or with Windows Update [KB5017383](https://support.microsoft.com/topic/september-20-2022-kb5017383-os-build-22000-1042-preview-62753265-68e9-45d2-adcb-f996bf3ad393) or later on Windows 11 and then reimage to an older OS version, the Autopilot profile won't be applied. The device would need to be re-registered to complete a successful Autopilot deployment. You may see the message **fix pending** in the Autopilot devices blade which indicates that there was a hardware change on the device.
 
 ### TPM attestation failure with error code 0x81039001
 
