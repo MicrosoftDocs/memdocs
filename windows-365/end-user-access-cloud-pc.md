@@ -111,6 +111,16 @@ Users can view and download connection details.
   
      ![Screenshot of connection details.](media/end-user-access-cloud-pc/connection-details.png)
 
+### Hardware acceleration
+
+You can turn on hardware acceleration when using the web client to access your Cloud PC. This decreases network latency, improving the web client Cloud PC experience. This option is turned on by default.
+
+To turn hardware acceleration on or off, in the client, select the gear icon > **Use hardware acceleration**.
+
+![Screenshot of hardware acceleration option.](media/end-user-access-cloud-pc/hardware-acceleration.png)
+
+
+
 ### User feedback
 
 Users can provide feedback about their Cloud PC experience by using the feedback icon in the upper right corner.
