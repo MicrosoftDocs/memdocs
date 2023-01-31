@@ -1,15 +1,15 @@
 ---
 # required metadata
 
-title: Quickstart - Try Microsoft Intune for free
+title: Try Microsoft Intune for free
 titleSuffix: 
-description: In this quickstart you will create a free trial subscription, understand supported configurations and networking requirements, and optionally configure your domain name.
+description: Create a free trial subscription, understand supported configurations and networking requirements, and optionally configure your domain name.
 keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/16/2021
-ms.topic: quickstart
+ms.date: 01/30/2023
+ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
@@ -29,9 +29,9 @@ ms.collection:
   - highpri
 ---
 
-# Quickstart: Try Microsoft Intune for free
+# Try Microsoft Intune for free
 
-Microsoft Intune helps you protect your workforce's corporate data by managing devices and apps. In this quickstart, you will create a free subscription to try Intune in a test environment.
+Microsoft Intune helps you protect your workforce's corporate data by managing devices and apps. In this topic, you will create a free subscription to try Intune in a test environment.
 
 Intune provides mobile device management (MDM) and mobile app management (MAM) from a secure cloud-based service that is administered using the Microsoft Endpoint Manager admin center. Using Intune, you ensure your workforce's corporate resources (data, devices, and apps) are correctly configured, accessed, and updated, meeting your company's compliance policies and requirements.
 
@@ -166,9 +166,9 @@ There are two portals that you will use most often:
 
 ## Next steps
 
-In this quickstart, you've created a free subscription to try Intune in a test environment. For more information about setting up Intune, see [Set up Intune](setup-steps.md).
+In this topic, you've created a free subscription to try Intune in a test environment. For more information about setting up Intune, see [Set up Intune](setup-steps.md).
 
-To follow this series of Intune quickstarts, continue to the next quickstart.
+To continue to evaluate Microsoft Intune, go to the next step:
 
 > [!div class="nextstepaction"]
-> [Quickstart: Create a user and assign a license to it](quickstart-create-user.md)
+> [Step 2 - Create a user and assign a license to it](quickstart-create-user.md)
