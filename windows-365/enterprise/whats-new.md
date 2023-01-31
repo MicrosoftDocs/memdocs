@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 01/17/2023
+ms.date: 01/31/2023
 ms.topic: reference
 ms.service: windows-365
 ms.subservice:
@@ -49,6 +49,36 @@ Learn what new features are available in Windows 365 Enterprise.
 ### Windows 365 Government
 ### Windows 365 app
 -->
+
+
+<!-- ########################## -->
+## Week of January 30, 2023 (Service release 2301)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Apps
+
+#### Windows 365 app now supports Windows 10<!--42212516-->
+
+The [Windows 365](https://support.microsoft.com/topic/cbb0d4d5-69d4-4f00-b050-6dc7a02d02d0) app now supports Windows 10.
+
+### Microsoft Teams: Share application windows from Windows 365 Cloud PC<!--43105503-->
+
+In Microsoft Teams, you can now share specific windows from your Cloud PC desktop. Previously, you could only share the full Cloud PC desktop.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### End user experience
+
+#### Open Cloud PCs in a Remote Desktop app from windows365.microsoft.com<!--42949050-->
+
+From windows365.microsoft.com, you can now open a Cloud PC in a Remote Desktop app. For more information, see [Access a Cloud PC](/windows-365/end-user-access-cloud-pc#home-page).
+
+#### Improved feedback interface for end users<!--42949123-->
+
+windows365.microsoft.com has improved the interface for end users to provide feedback.
+
+#### Get Cloud PC connection details from windows365.microsoft.com<!--43105503-->
+
+On windows365.microsoft.com, you can now get Cloud PC connection details like transport protocol, round-trip time, frame rate, and more.
 
 <!-- ########################## -->
 ## Week of January 16, 2023
