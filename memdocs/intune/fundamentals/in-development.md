@@ -136,23 +136,6 @@ A new device action that is in public preview allows you to run a proactive reme
 ### Support to delete stale devices that are managed through Security Management for Microsoft Defender for Endpoint<!-- 14729617   -->  
 You’ll soon be able to select the action to **Delete** a device that’s managed through the [Security Management for Microsoft Defender for Endpoint](../protect/mde-security-integration.md) solution from within the Microsoft Endpoint Manager admin center. The delete option will appear along with other device management options when you view the device’s Overview details. To locate a device managed by this solution, in the admin center go to **Devices** > **All devices**, and then select a device that displays either *MDEJoined* or *MDEManaged* in the *Managed by* column.
 
-### Improvements to Devices area in admin center (public preview) <!-- 12775837  -->  
-The **Devices** area in the admin center will be updated to provide a more consistent UI, with more capable controls and an improved navigation structure so you can find the information you need faster. You will be able to opt in to the public preview to try out the new experience. Changes will include:  
-* A new scenario-focused navigation structure that brings monitoring in line with management workflows.
-* New in-line monitoring pages with easy access to key metrics and reports.
-* Reduction in journey, helping you get to your destination faster.
-* New location for platform pivots that help to create a more consistent navigation model.
-* A consistent way across list views to search, sort, and filter data.
-
-The following device pages will be updated:  
-* Overview
-* All devices
-* Compliance
-* Configuration
-* Windows 10 updates
-* Apple updates
-* Enrollment
-
 ### Endpoint security firewall rules support for ICMP type<!-- 5653356 -->  
 We’re adding a new setting named **IcmpTypesAndCodes** to the endpoint security firewall rules template for Windows 10. To configure this in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Endpoint security** > **Firewall** > **Create Policy** > Platform: *Windows 10, Windows 11, and Windows Server*  > Profile: *Microsoft Defender Firewall Rules*).
 
