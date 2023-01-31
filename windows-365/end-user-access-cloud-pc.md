@@ -99,6 +99,18 @@ To transfer files from the Cloud PC to the local device, copy the files to the D
 
 You can restrict users from transferring files by using RDP drive redirection. For more information, see [Manage RDP device redirections for Cloud PCs](./enterprise/manage-rdp-device-redirections.md).
 
+### Connection details
+
+Users can view and download connection details.
+
+1. Select the **Connection details** icon > **Show details**.
+  
+     ![Screenshot of Connection icon.](media/end-user-access-cloud-pc/connection.png)
+
+2. To download a text file containing the connection details, select **Download report**.
+  
+     ![Screenshot of connection details.](media/end-user-access-cloud-pc/connection-details.png)
+
 ### User feedback
 
 Users can provide feedback about their Cloud PC experience by using the feedback icon in the upper right corner.
