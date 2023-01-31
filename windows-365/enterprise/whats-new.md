@@ -61,7 +61,7 @@ Learn what new features are available in Windows 365 Enterprise.
 
 The [Windows 365](https://support.microsoft.com/topic/cbb0d4d5-69d4-4f00-b050-6dc7a02d02d0) app now supports Windows 10.
 
-### Microsoft Teams: Share application windows from Windows 365 Cloud PC<!--43105503-->
+#### Microsoft Teams: Share application windows from Windows 365 Cloud PC<!--43105503-->
 
 In Microsoft Teams, you can now share specific windows from your Cloud PC desktop. Previously, you could only share the full Cloud PC desktop.
 
