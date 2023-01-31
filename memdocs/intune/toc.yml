@@ -132,7 +132,7 @@ items:
 
     - name: Deploy Microsoft Intune
       items:
-      - name: Get started with your deployment (REPLACE OVERVIEW?)
+      - name: Get started with your deployment
         href: ./fundamentals/get-started-with-intune.md
       - name: Protection and configuration levels (DRAFT)
         href: ./fundamentals/protection-configuration-levels.md
@@ -143,7 +143,7 @@ items:
         href: ./fundamentals/deployment-plan-protect-apps.md
       - name: Step 3 - Create compliance policies
         href: ./fundamentals/deployment-plan-compliance-policies.md
-      - name: Step 4 - Create configuration profiles
+      - name: Step 4 - Configure device features and settings
         href: ./fundamentals/deployment-plan-configuration-profile.md
       - name: Step 5 - Enroll devices
         href: ./fundamentals/deployment-guide-enroll.md

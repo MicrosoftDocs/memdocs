@@ -7,7 +7,7 @@ description: Add, configure, and protect apps with Intune.
 author: erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/04/2023
+ms.date: 01/31/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -273,5 +273,5 @@ The following list provides the end-user requirements to use app protection poli
 1. [Set up Microsoft Intune](deployment-plan-setup.md)
 2. 🡺 **Add, configure, and protect apps** (*You are here*)
 3. [Plan for compliance policies](deployment-plan-compliance-policies.md)
-4. [Create device configuration profiles](deployment-plan-configuration-profile.md)
+4. [Configure device features](deployment-plan-configuration-profile.md)
 5. [Enroll devices](deployment-guide-enrollment.md)

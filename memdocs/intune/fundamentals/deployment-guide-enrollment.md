@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/04/2023
+ms.date: 01/31/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -152,5 +152,5 @@ Choose your platform, and get started:
 1. [Set up Microsoft Intune](deployment-plan-setup.md)
 2. [Add, configure, and protect apps](deployment-plan-protect-apps.md)
 3. [Plan for compliance policies](deployment-plan-compliance-policies.md)
-4. [Create device configuration profiles](deployment-plan-configuration-profile.md)
+4. [Configure device features](deployment-plan-configuration-profile.md)
 5. 🡺 **Enroll devices** (*You are here*)

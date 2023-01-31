@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/04/2023
+ms.date: 01/31/2023
 ms.topic: overview
 ms.service: mem
 ms.subservice: fundamentals
@@ -41,7 +41,7 @@ This article provides an overview of the steps to start your Intune deployment, 
 - Step 1 - Set up Intune
 - Step 2 - Target apps for enrollment
 - Step 3 - Use compliance and conditional access
-- Step 4 - Create device configuration profiles
+- Step 4 - Configure device features and settings
 - Step 5 - Enroll your devices to be managed
 - Cloud attach with Configuration Manager
 
@@ -204,5 +204,5 @@ For guidance on the Microsoft Intune setup that's right for your organization, g
 - [Step 1 - Set up Microsoft Intune](deployment-plan-setup.md)
 - [Step 2 - Add, configure, and protect apps with Intune](deployment-plan-protect-apps.md)
 - [Step 3 – Plan for compliance policies](deployment-plan-compliance-policies.md)
-- [Step 4 - Create device configuration profiles to secure devices and access organization resources](deployment-plan-configuration-profile.md)
+- [Step 4 - Configure device features and settings to secure devices and access organization resources](deployment-plan-configuration-profile.md)
 - [Step 5 - Deployment guidance: Enroll devices in Microsoft Intune](deployment-guide-enrollment.md)
