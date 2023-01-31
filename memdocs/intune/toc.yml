@@ -38,28 +38,28 @@ items:
     - name: Try Intune tasks for free
       items:
       - name: <Do we need an overview topic to explain the steps?>
-      - name: Sign up for a free Intune trial
+      - name: Step 1 - Sign up for a free Intune trial
         href: ./fundamentals/free-trial-sign-up.md
         displayName: tenant; trial; get started, start; help; MDM
-      - name: Create a user
+      - name: Step 2 - Create a user and assign a license
         href: ./fundamentals/quickstart-create-user.md
-      - name: Create a group
+      - name: Step 3 - Create a group
         href: ./fundamentals/quickstart-create-group.md   
-      - name: Set up automatic enrollment
+      - name: Step 4 - Set up automatic enrollment
         href: ./enrollment/quickstart-setup-auto-enrollment.md
-      - name: Enroll your Windows device
+      - name: Step 5 - Enroll your Windows device
         href: ./enrollment/quickstart-enroll-windows-device.md        
-      - name: Create a device compliance policy
+      - name: Step 6 - Create a device compliance policy
         href: ./protect/quickstart-set-password-length-android.md        
-      - name: Send notifications to noncompliant devices
+      - name: Step 7 - Send notifications to noncompliant devices
         href: ./protect/quickstart-send-notification.md        
-      - name: Add and assign an app
+      - name: Step 8 - Add and assign an app
         href: ./apps/quickstart-add-assign-app.md        
-      - name: Create and assign an app protection policy
+      - name: Step 9 - Create and assign an app protection policy
         href: ./apps/quickstart-create-assign-app-policy.md        
-      - name: Create and assign a custom role
+      - name: Step 10 - Create and assign a custom role
         href: ./fundamentals/quickstart-create-custom-role.md        
-      - name: Create a device profile
+      - name: Step 11 - Create a device profile
         href: ./configuration/quickstart-email-profile.md    
     - name: Try Intune scenarios for free
       items:
