@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 10/12/2022
+ms.date: 01/31/2023
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice:
@@ -36,7 +36,6 @@ This article describes issues with the Windows 365 app ([preview](../public-prev
 
 The Windows 365 app doesn't currently support:
 
-- Windows 10
 - Windows 11 IoT
 - Configuring Remote Desktop Protocol properties.
 

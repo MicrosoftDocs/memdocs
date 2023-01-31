@@ -97,7 +97,7 @@ For suggested remediations on, see [Troubleshoot provisioning errors](provisioni
 
 ## Troubleshooting by end users
 
-The end user can troubleshoot some issues that might be preventing them from connecting to their Cloud PC. For more information, see [End-user actions](../end-user-access-cloud-pc.md#user-actions)
+The end user can troubleshoot some issues that might be preventing them from connecting to their Cloud PC. For more information, see [End-user actions](../end-user-access-cloud-pc.md#user-actions).
 
 ## Video playback improvements
 
@@ -119,7 +119,6 @@ When accessing windows365.microsoft.com, the user receives a message "Your organ
 
 1. The user has been assigned a Windows 365 license. For more information, see [Assign licenses](assign-licenses.md) and [Windows 365 plans and pricing](https://www.microsoft.com/windows-365/enterprise?rtc=1).
 2. You’ve created a provisioning policy that includes the user. For more information, see [Create provisioning policies]( /windows-365/enterprise/create-provisioning-policy).
-
 
 <!-- ########################## -->
 ## Next steps
