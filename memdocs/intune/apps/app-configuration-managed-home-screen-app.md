@@ -592,7 +592,7 @@ The following syntax is an example JSON script with all the available configurat
         {
             "key": "amount_of_time_before_try_exit_PIN_again",
             "valueInteger": 0
-        }
+        },
         {
             "key": "enable_auto_signout",
             "valueBool": true
@@ -616,9 +616,7 @@ The following syntax is an example JSON script with all the available configurat
         {
             "key": "custom_privacy_statement_url",
             "valueString": "link to custom privacy statement here"
-        },
-
-
+        }
     ]
 }
 ```
