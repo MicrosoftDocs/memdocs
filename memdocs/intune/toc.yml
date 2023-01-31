@@ -31,11 +31,11 @@ items:
       - name: Public preview
         href: ./fundamentals/public-preview.md
 
-  - name: Evaluate
+  - name: Evaluate and try
     items:
     - name: Walkthrough Intune in Microsoft Endpoint Manager (update for branding)
       href: ./fundamentals/tutorial-walkthrough-endpoint-manager.md 
-    - name: Try Intune tasks for free
+    - name: Try Intune tasks
       items:
       - name: <Do we need an overview topic to explain the steps?>
       - name: Sign up for a free Intune trial
@@ -61,7 +61,7 @@ items:
         href: ./fundamentals/quickstart-create-custom-role.md        
       - name: Create a device profile
         href: ./configuration/quickstart-email-profile.md    
-    - name: Try Intune scenarios for free
+    - name: Try Intune scenarios
       items:
       - name: Protect email on managed devices
         href: ./protect/tutorial-protect-email-on-enrolled-devices.md?toc=/intune/apps/toc.json&bc=/intune/apps/breadcrumb/toc.json
