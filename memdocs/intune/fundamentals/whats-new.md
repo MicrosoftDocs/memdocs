@@ -68,6 +68,16 @@ You can use RSS to be notified when this page is updated. For more information, 
 ## Week of January 30, 2023
 
 ### Device management
+
+#### HTC Vive Focus 3 supported on Microsoft Intune for Android Open Source Devices<!--15670082--> 
+
+Microsoft Intune for Android open source project devices (AOSP) now supports HTC Vive Focus 3. 
+
+For more information go to [Operating systems and browsers supported by Microsoft Intune](../fundamentals/supported-devices-browsers.md)
+
+Applies to:
+
+- Microsoft Intune (AOSP)
 #### Introducing support for laser pointers in Remote Help<!-- 16108312 -->
 
 In Remote Help, you can now use a laser pointer when you are providing assistance on Windows.
