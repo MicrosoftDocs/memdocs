@@ -94,7 +94,7 @@ In Intune, you can use organization owned devices and personally owned devices:
 
 On both types of Android Enterprise devices, you can add and deploy an email app. Your options:
 
-# [Outlook](#tab/outlook)
+# [Outlook](#tab/outlook-android)
 
 The **Microsoft Outlook** app is available in the managed Play Store. To use Outlook as the email app, add the Outlook app to Intune, and assign the app to your users or user groups. The app also installs.
 
@@ -143,7 +143,7 @@ After the app is deployed and installed:
 
   - If you don't want to customize Nine Work or preconfigure it for your users, you don't have to. After Nine Work is installed, users need to enter the information that connects to their work or school account, like the email server link and more.
 
-# [Other email apps](#tab/other-email-apps)
+# [Other email apps](#tab/other-email-apps-android)
 
 **Other email apps** that support Azure AD identities are available in the managed Play Store. To use these email apps, add the app to Intune, and assign the app to your users or user groups. The app also installs.
 
@@ -183,7 +183,7 @@ In Intune, you can use organization owned devices and personally owned devices:
 
 On all iOS/iPadOS devices, you can add and deploy an email app. Your options:
 
-# [Outlook](#tab/outlook)
+# [Outlook](#tab/outlook-ios)
 
 The **Microsoft Outlook** app is available in the App Store. To use Outlook as the email app, add the Outlook app to Intune, and assign the app to your users or user groups. The app also installs.
 
@@ -193,7 +193,7 @@ After the app is deployed and installed:
 
 - If you don't want to customize Outlook or preconfigure it for your users, you don't have to. After Outlook is installed, users need to enter the information that connects to their work or school account, like the email server link and more.
 
-# [Built-in Mail app](#tab/built-in-mail-app)
+# [Built-in Mail app](#tab/built-in-mail-app-ios)
 
 The **Built-in Mail app** is preinstalled with the OS and can be used to access personal email and organization email. If you don't want to use the built-in Mail app, then organizations that use conditional access (CA) can create CA policies to block native mail apps. Or, use CA to only allow specific apps.
 
@@ -201,7 +201,7 @@ The **Built-in Mail app** is preinstalled with the OS and can be used to access 
 
 - If you don't want to customize the Mail app or preconfigure it for your users, you don't have to. To use the Mail app for organization email, users need to enter the information that connects to their work or school account, like the email server link and more.
 
-# [Other email apps](#tab/other-email-apps)
+# [Other email apps](#tab/other-email-apps-ios)
 
 **Other email apps** that support Azure AD identities are available in the App Store. To use these email apps, add the app to Intune, and assign the app to your users or user groups. The app also installs.
 
@@ -238,7 +238,7 @@ In Intune, you can use organization owned devices and personally owned devices:
 
 On all Windows devices, you can add and deploy an email app. Your options:
 
-# [Outlook](#tab/outlook)
+# [Outlook](#tab/outlook-windows)
 
 The **Microsoft Outlook** app is available in the Microsoft 365 Apps suite. To use Outlook as the email app, add the Outlook app to Intune, and assign the app to your users or user groups. The app also installs.
 
@@ -248,7 +248,7 @@ After the app is deployed and installed:
 
 - If you don't want to customize Outlook or preconfigure it for your users, you don't have to. After Outlook is installed, users need to enter the information that connects to their work or school account, like the email server link and more.
 
-# [Built-in Mail app](#tab/built-in-mail-app)
+# [Built-in Mail app](#tab/built-in-mail-app-windows)
 
 The **Built-in Mail app** is preinstalled with the OS and can be used to access personal email and organization email. If you don't want to use the built-in Mail app, then organizations that use conditional access (CA) can create CA policies to block native mail apps. Or, use CA to only allow specific apps.
 
@@ -256,7 +256,7 @@ The **Built-in Mail app** is preinstalled with the OS and can be used to access 
 
 - If you don't want to customize the Mail app or preconfigure it for your users, you don't have to. To use the Mail app for organization email, users need to enter the information that connects to their work or school account, like the email server link and more.
 
-# [Other email apps](#tab/other-email-apps)
+# [Other email apps](#tab/other-email-apps-windows)
 
 **Other email apps** that support Azure AD identities are available in the Microsoft Store. To use these email apps, add the app to Intune, and assign the app to your users or user groups. The app also installs.
 
