@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/31/2023
+ms.date: 02/01/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -75,7 +75,6 @@ Be sure you have the correct role to assign policies and profiles. For more info
   - App protection policies
   - App configuration policies
   - Compliance policies
-  - Conditional access policies
   - Device configuration profiles
 
   For more information, go to [Use filters when assigning your apps, policies, and profiles in Microsoft Intune](../fundamentals/filters.md).
