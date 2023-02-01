@@ -1213,13 +1213,13 @@ items:
           items:
           - name: Overview of security framework
             href: ./enrollment/android-configuration-framework.md
-          - name: 1 - Apply device enrollment restrictions
+          - name: 1 - Configure device enrollment restrictions
             href: ./enrollment/device-enrollment-restrictions.md
-          - name: 2 - Apply app configuration policies
+          - name: 2 - Configure app configuration policies
             href: ./enrollment/android-app-configuration-policies.md
-          - name: 3 - Apply security settings for personal devices   
+          - name: 3 - Configure security settings for personal devices   
             href: ./enrollment/android-work-profile-security-settings.md
-          - name: 4 - Apply security settings for fully managed devices 
+          - name: 4 - Configure security settings for fully managed devices 
             href: ./enrollment/android-fully-managed-security-settings.md         
       - name: Set up iOS/iPadOS enrollment
         href: ./enrollment/ios-enroll.md
@@ -1248,17 +1248,15 @@ items:
           href: ./enrollment/apple-configurator-enroll-ios.md
         - name: iOS/iPadOS security configuration framework
           items:
-          - name: iOS/iPadOS security configuration framework
+          - name: Overview of security configuration framework
             href: ./enrollment/ios-ipados-configuration-framework.md
-          - name: Framework deployment methodology
-            href: ./enrollment/ios-ipados-framework-deployment-methodology.md
-          - name: Set app configuration policies
+          - name: 1 - Configure app configuration policies
             href: ./enrollment/ios-ipados-app-configuration-policies.md
-          - name: iOS/iPadOS device compliance security configurations
+          - name: 2- Configure device compliance security policies
             href: ./enrollment/ios-ipados-device-compliance-security-configurations.md
-          - name: iOS/iPadOS personal device security configurations
+          - name: 3 - Configure device security policies for personal devices
             href: ./enrollment/ios-ipados-personal-device-security-configurations.md
-          - name: iOS/iPadOS supervised device security configurations
+          - name: 4 - Configure device security policies for supervised devices 
             href: ./enrollment/ios-ipados-supervised-device-security-configurations.md
       - name: Set up Linux enrollment 
         items:

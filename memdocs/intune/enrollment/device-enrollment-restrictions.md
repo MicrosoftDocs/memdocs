@@ -31,7 +31,7 @@ ms.collection: M365-identity-device-management
 
 # Android Enterprise device enrollment restrictions for personally owned work profile devices
 
-Before enrolling Android Enterprise personally owned work profile devices for the [Android Enterprise security configuration framework](android-configuration-framework.md), organizations must configure the appropriate restrictions. These restrictions ensure that users can only enroll
+We recommend applying device enrollment restrictions to Android Enterprise devices in BYOD scenarios. Enrollment restrictions ensure that users can only enroll: 
 
 - approved devices.
 - a specified number of devices.
@@ -39,7 +39,7 @@ Before enrolling Android Enterprise personally owned work profile devices for th
 - devices with specified operating systems.
 - devices from specified manufacturers.
 
-For more information on device enrollment restrictions, see [Set enrollment restrictions](enrollment-restrictions-set.md).
+For more information on device enrollment restrictions, see [Set enrollment restrictions](enrollment-restrictions-set.md).  
 
 ## Personally owned work profile basic (level 1) security restrictions
 
@@ -65,4 +65,7 @@ Follow the steps in [Scenario: Require device enrollment for iOS and Android dev
 
 ## Next steps
 
-[Set app configuration policies](android-app-configuration-policies.md)
+1. 🡺 **Configure device enrollment restrictions for personal devices** (*You are here*) 
+2. [Configure app configuration policies](android-app-configuration-policies.md)
+3. [Configure security settings for personal devices](android-work-profile-security-settings.md)  
+4. [Configure security settings for fully managed devices](android-fully-managed-security-settings.md) 
