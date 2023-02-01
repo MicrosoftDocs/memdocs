@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/31/2023
+ms.date: 02/01/2023
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -26,7 +26,7 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# Common questions, scenarios, and answers with policies and profiles in Microsoft Intune
+# Common questions, answers, and scenarios with policies and profiles in Microsoft Intune
 
 [!INCLUDE [windows-phone-81-windows-10-mobile-support](../includes/windows-phone-81-windows-10-mobile-support.md)]
 
@@ -41,7 +41,7 @@ This article applies to the following policies:
 - Device configuration profiles
 - Enrollment policies
 
-## How long does it take for devices to get a policy, profile, or app after they are assigned?
+## Policy refresh intervals
 
 Intune notifies the device to check in with the Intune service. The notification times vary, including immediately up to a few hours. These notification times also vary between platforms.
 
@@ -91,7 +91,7 @@ Conflicts happen when two profile settings are the same. For example, you config
 
 A policy is deployed to the app and takes effect. A second policy is deployed. In this scenario, the first policy takes precedence, and stays applied. The second policy shows a conflict. If both are applied at the same time, meaning that there isn't preceding policy, then both are in conflict. Any conflicting settings are set to the most restrictive values.
 
-### If multiple policies are assigned to the same user or device, how do I know which settings gets applied?
+### Compliance and device configuration policies that conflict
 
 When two or more policies are assigned to the same user or device, then the setting that's applied happens at the individual setting level:
 
@@ -132,7 +132,7 @@ When you delete a profile, or remove a device from a group that's assigned the p
 - A profile applies to a user group. Later, a user is removed from the group. For the settings to be removed from that user, it can take up to 7 hours or more for:
 
   - The profile to be removed from the policy assignment in the Endpoint Manager admin center
-  - The device to sync with the Intune object using the [platform-specific policy refresh cycle](#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned) (in this article)
+  - The device to sync with the Intune object using the [platform-specific policy refresh cycle](#policy-refresh-intervals) (in this article)
 
 ## I changed a device restriction profile, but the changes haven't taken effect
 
