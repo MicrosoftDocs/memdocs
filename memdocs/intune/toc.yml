@@ -1412,8 +1412,8 @@ items:
           href: ./fundamentals/reports-export-graph-available-reports.md          
         - name: Use the Intune Data Warehouse
           href: ./developer/reports-nav-create-intune-reports.md    
-      items:
       - name: Monitor          
+        items:
         - name: Audit logs for Intune activities
           href: ./fundamentals/monitor-audit-logs.md
         - name: Review logs with Azure Monitor
