@@ -70,7 +70,7 @@ Be sure you have the correct role to assign policies and profiles. For more info
 
 ## Assignment features you should know and use
 
-- Use **[Filters](filters.md)** to assign a policy based on rules you create. You can create filters for:
+- Use **[Filters](../fundamentals/filters.md)** to assign a policy based on rules you create. You can create filters for:
 
   - App protection policies
   - App configuration policies
@@ -82,7 +82,7 @@ Be sure you have the correct role to assign policies and profiles. For more info
 
 - **[Policy sets](../fundamentals/policy-sets.md)** create a group or collection of existing apps and policies. When the policy set is created, you can assign the policy set from a single place in the Endpoint Manager admin center.
 
-  For more information, go to [Use policy sets to group collections of management objects in Microsoft Intune](policy-sets.md).
+  For more information, go to [Use policy sets to group collections of management objects in Microsoft Intune](../fundamentals/policy-sets.md).
 
 - **[Scope tags](../fundamentals/scope-tags.md)** are a great way to filter policies to specific groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information, go to [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
 
