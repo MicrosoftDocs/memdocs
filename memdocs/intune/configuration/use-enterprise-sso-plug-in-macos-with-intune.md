@@ -124,7 +124,7 @@ In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwli
 
     For guidance on assigning profiles, go to [Assign user and device profiles](device-profile-assign.md).
 
-When the device checks in with the Intune service, it will receive this profile. For more information, go to [How long does it take for devices to get a policy](device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned).
+When the device checks in with the Intune service, it will receive this profile. For more information, go to [Policy refresh intervals](device-profile-troubleshoot.md#policy-refresh-intervals).
 
 To check that the profile deployed correctly, in the Endpoint Manager admin center, go to **Devices** > **Configuration Profiles** > select the profile you created and generate a report:
 
