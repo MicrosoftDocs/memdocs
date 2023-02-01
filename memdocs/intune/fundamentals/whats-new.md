@@ -65,7 +65,18 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Scripts
 ### Tenant administration
 -->
+## Week of January 30, 2023
 
+### Device management
+#### Introducing support for laser pointers in remote Help<!-- 16108312 -->
+
+In Remote Help, you can now use a laser pointer when you are providing assistance on Windows.
+
+For more information on Remote Help, go to [Remote Help](../remote-actions/remote-help.md).
+
+Applies to:
+
+ - Windows 10/11
 ## Week of January 23, 2023 (Service release 2301)
 
 ### App management
