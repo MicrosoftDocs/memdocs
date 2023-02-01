@@ -125,9 +125,6 @@ To set up JIT Registration:
 > [!IMPORTANT]
 > This feature is in public preview. For more information, see [Public preview in Microsoft Intune](../fundamentals/public-preview.md).  
 
->[!Important]
->Before you begin, revisit all conditional access policies targeted at devices enrolling with JIT Registration, and exclude Microsoft Intune from each policy. 
-
 Complete these steps to configure Just in Time (JIT) Registration in Intune for Setup Assistant with modern authentication. 
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
