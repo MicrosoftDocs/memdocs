@@ -78,6 +78,20 @@ For more information, see [Level 1 basic app protection](../apps/app-protection-
 
 ### Device compliance (level 1)
 
+In this level, device compliance includes configuring the tenant-wide settings that apply to all devices, and deploying minimal compliance policies to all devices to enforce a core set of compliance requirements. Microsoft recommends that these configurations be in place before you allow devices to access your organization’s resources. Level 1 device compliance includes:
+
+- Compliance policy settings – Configure the tenant-wide settings that affect how the Intune compliance service works with your devices.
+- Platform-specific compliance policies – Depending on the platform these include settings that:
+
+  - Require antivirus, antispyware, and antimalware (Windows only)
+  - Establish allowed ranges for a devices operating system version, build, and patch level
+  - Create Password and PIN requirements
+  - Enforce the use of settings that lock a device’s screen after a period of inactivity, requiring a password or PIN to unlock
+
+Each compliance policy also includes *actions for noncompliance*, which are one or more time-ordered actions you configure. Actions for noncompliance are  applied to devices that fail to meet the compliance requirements of the policy. By default, marking a device as non-compliant is an immediate action that’s included in each policy.
+
+For more information, see [Level 1 - Minimal device compliance](../fundamentals/deployment-plan-compliance-policies.md#level-1---minimal-device-compliance).
+
 ### Device configuration (level 1)
 
 In this level, the profiles include settings that focus on security and resource access. Specifically, in this level, Microsoft recommends you configure the following features:
@@ -128,6 +142,32 @@ In addition to Level 1 settings, Microsoft recommends you configure the followin
 For more information, see [Level 2 enhanced app protection](../apps/app-protection-framework.md#level-2-enterprise-enhanced-data-protection).
 
 ### Device compliance (level 2)
+
+At this level, Microsoft recommends adding more complex options to your compliance policies. Many of the settings at this level have platform-specific names that all deliver similar results. The following are the categories or types of settings that Microsoft recommends you use when they're available:
+
+- Applications:
+  - Manage where devices get apps, like Google Play for Android
+  - Allow apps from specific locations
+  - Block apps from unknown sources
+
+- Firewall settings (macOS, Windows)
+
+- Encryption:
+  - Require encryption of data storage
+  - BitLocker (Windows)
+  - FileVault (macOS)
+
+- Password expiration limits, and reuse
+
+- System level file and boot protection:
+  - Block USB debugging (Android)
+  - Block rooted or jailbroken devices (Android, iOS)
+  - Require system integrity protection (macOS)
+  - Require code integrity (Windows)
+  - Require secure boot to be enabled (Windows)
+  - Trusted Platform Module (Windows)
+
+For more information, see [Level 2 - Enhanced device compliance settings](../fundamentals/deployment-plan-compliance-policies.md#level-2---enhanced-device-compliance-settings).
 
 ### Device configuration (level 2)
 
@@ -195,6 +235,16 @@ For more information, see [Level 3 high app protection](../apps/app-protection-f
 
 ### Device compliance (level 3)
 
+At this level, you can expand on Intune’s built-in compliance capabilities through the following capabilities:
+
+- Integrate data a from Mobile Threat Defense (MTD) partner
+  - With an MTD partner, your compliance policies can require devices be at or under a *device threat level* or *machine risk score*, as determined by that partner
+
+- Use a third-party compliance partner with Intune
+- Use scripts to add custom compliance settings to your policies for settings that aren't available from within the Intune UI. (Windows, Linux)
+- Use compliance policy data with Conditional Access policies to gate access to your organization’s resources
+
+For more information, see [Level 3 - Advanced device compliance configurations](../fundamentals/deployment-plan-compliance-policies.md#level-3---advanced-device-compliance-configurations).
 
 ### Device configuration (level 3)
 
