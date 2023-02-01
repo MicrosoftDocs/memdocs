@@ -3,7 +3,7 @@
 
 title: Try Microsoft Intune overview
 titleSuffix: 
-description: Create a free trial subscription, understand supported configurations and networking requirements, and optionally configure your domain name.
+description: Evaluate Microsoft Intune by stepping through common Intune settings.
 keywords:
 author: Erikre
 ms.author: erikre
@@ -35,7 +35,7 @@ Microsoft Intune, which is a part of Microsoft Endpoint Manager, provides the cl
 
 In the following diagram, you can see how Intune interacts with other components in both your on-premises and cloud infrastructure:
 
-[ ![Diagram of Intune infrastructure.](../media/intro-to-endpoint-manager-02.png) ](../media/intro-to-endpoint-manager-02.png#lightbox)
+[ ![Diagram of Intune infrastructure](../media/try-intune-overview-01.png) ](../media/try-intune-overview-01.png#lightbox)
 
 ## Learning objectives
 
