@@ -32,7 +32,7 @@ ms.collection: M365-identity-device-management
 
 Microsoft Intune includes different email settings you can deploy to devices in your organization. Email device configuration profiles include the connection settings used by your email app to access organization email.
 
-Most platforms have a native or built-in email app on the device. Using Intune, you can configure the built-in email app or deploy other email apps that connect to your email system, such as Microsoft Exchange. End users then connect, authenticate, and synchronize their organizational email accounts on their devices.
+Most platforms have a native or built-in email app on the device. Using Intune, you can configure the built-in email app or deploy other email apps that connect to your email system, like Microsoft Exchange. End users then connect, authenticate, and synchronize their organizational email accounts on their devices.
 
 By creating and deploying an email profile, you can confirm settings are standard across many devices. And, help reduce support calls from end users who don't know the correct email settings.
 
@@ -66,7 +66,7 @@ This article shows you how to create an email profile in Microsoft Intune. It al
 
     For more information on possible issues with using device groups, see [Common issues with email profiles](/troubleshoot/mem/intune/troubleshoot-email-profiles-in-microsoft-intune).
 
-## Deploy your email app
+## Step 1 - Deploy your email app
 
 On user devices, you decide the email apps that can connect to and access organization email. You also need to determine the email apps your organization will allow, and then deploy the email app to your users.
 
@@ -268,7 +268,7 @@ After the app is deployed and installed:
 
 ---
 
-## Create the profile
+## Step 2 - Create the profile
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Configuration profiles** > **Create profile**.

@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Quickstart - Set up automatic enrollment in Intune
-description: Quickstart - Set up automatic enrollment for Windows 10/11 devices in Intune.
+title: Set up automatic enrollment in Intune
+description: Set up automatic enrollment for Windows 10/11 devices in Intune.
 services: microsoft-intune
 author: Lenewsad
 ms.author: lanewsad
@@ -10,7 +10,7 @@ ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
 ms.topic: quickstart
-ms.date: 09/22/2020
+ms.date: 01/30/2023
 
 # optional metadata
 
@@ -27,16 +27,16 @@ ms.collection:
   - highpri
 ---
 
-# Quickstart: Set up automatic enrollment for Windows 10/11 devices
+# Step 4: Set up automatic enrollment for Windows 10/11 devices
 
-In this quickstart, you'll set up Microsoft Intune to automatically enroll devices when specific users sign in to Windows 10/11 devices.
+In this topic, you'll set up Microsoft Intune to automatically enroll devices when specific users sign in to Windows 10/11 devices.
 
 If you don't have an Intune subscription, [sign up for a free trial account](../fundamentals/free-trial-sign-up.md).
 
 ## Prerequisites
 
 - Microsoft Intune subscription - [sign up for a free trial account](../fundamentals/free-trial-sign-up.md).
-- To complete this quickstart, you must first [create a user](../fundamentals/quickstart-create-user.md) and [create a group](../fundamentals/quickstart-create-group.md).
+- To complete this evalutation step, you must first [create a user](../fundamentals/quickstart-create-user.md) and [create a group](../fundamentals/quickstart-create-group.md).
 
 ## Sign in to Intune in the Microsoft Endpoint Manager
 
@@ -80,7 +80,7 @@ To reconfigure Intune automatic enrollment, check out [Set up enrollment for Win
 
 In this quickstart, you learned how to set up auto-enrollment for devices running Windows 10/11. For more information about device enrollment, see [What is device enrollment?](device-enrollment.md)
 
-To follow this series of Intune quickstarts, continue to the next quickstart.
+To continue to evaluate Microsoft Intune, go to the next step:
 
 > [!div class="nextstepaction"]
-> [Quickstart: Enroll your Windows 10/11 device](quickstart-enroll-windows-device.md)
+> [Step 5 - Enroll your Windows 10/11 device](quickstart-enroll-windows-device.md)

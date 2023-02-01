@@ -3,6 +3,35 @@
         {
             "source_path": "memdocs/intune/configuration/use-enterprise-sso-plug-in-ios-ipados-macos-with-jamf-pro.md",
             "redirect_url": "/mem/intune/configuration/use-enterprise-sso-plug-in-ios-ipados-macos",
+        {
+        },  
+            "source_path": "memdocs/intune/enrollment/ios-ipados-framework-deployment-methodology.md",
+            "redirect_url": "/mem/intune/enrollment/ios-ipados-configuration-framework",
+            "redirect_document_id": false
+        },  
+        {
+            "source_path": "memdocs/intune/enrollment/device-enrollment.md",
+            "redirect_url": "/mem/intune/fundamentals/deployment-guide-enrollment",
+            "redirect_document_id": false
+        }, 
+        {
+            "source_path": "memdocs/intune/enrollment/framework-deployment-methodology.md",
+            "redirect_url": "/mem/intune/enrollment/android-configuration-framework",
+            "redirect_document_id": false
+        }, 
+        {
+            "source_path": "memdocs/intune/enrollment/windows-enrollment-methods.md",
+            "redirect_url": "/mem/intune/fundamentals/deployment-guide-enroll",
+            "redirect_document_id": false
+        }, 
+        {
+            "source_path": "memdocs/intune/enrollment/enrollment-options.md",
+            "redirect_url": "/mem/intune/enrollment/device-enrollment",
+            "redirect_document_id": false
+        }, 
+        {
+            "source_path": "memdocs/intune/enrollment/device-management-capabilities.md",
+            "redirect_url": "/mem/intune/enrollment/device-enrollment",
             "redirect_document_id": false
         }, 
         {
@@ -1239,11 +1268,6 @@
             "redirect_document_id": false
         },
         {
-            "source_path": "memdocs/azure-ad-joined-hybrid-azure-ad-joined.md",
-            "redirect_url": "/mem/solutions/cloud-native-endpoints/azure-ad-joined-hybrid-azure-ad-joined",
-            "redirect_document_id": false
-        },
-        {
             "source_path": "memdocs/cloud-native-endpoints-known-issues.md",
             "redirect_url": "/mem/solutions/cloud-native-endpoints/cloud-native-endpoints-known-issues",
             "redirect_document_id": false
@@ -1256,6 +1280,11 @@
         {
             "source_path": "memdocs/cloud-native-endpoints-overview.md",
             "redirect_url": "/mem/solutions/cloud-native-endpoints/cloud-native-endpoints-overview",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/azure-ad-joined-hybrid-azure-ad-joined.md",
+            "redirect_url": "/mem/solutions/cloud-native-endpoints/azure-ad-joined-hybrid-azure-ad-joined",
             "redirect_document_id": false
         },
         {
@@ -1272,6 +1301,6 @@
             "source_path": "memdocs/cloud-native-windows-endpoints.md",
             "redirect_url": "/mem/solutions/cloud-native-endpoints/cloud-native-windows-endpoints",
             "redirect_document_id": false
-        }  
+        }
     ]
 }
