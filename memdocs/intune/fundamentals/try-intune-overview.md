@@ -37,6 +37,10 @@ In the following diagram, you can see how Intune interacts with other components
 
 [ ![Diagram of Intune infrastructure](media/try-intune-overview/try-intune-overview-01.png) ](media/try-intune-overview/try-intune-overview-01.png#lightbox)
 
+## Prerequisites
+
+- None
+
 ## Learning objectives
 
 In this topic, you will set up a testing environment to evaluate Intune. Then, you will step through specific actions to better understand and evaluate Intune.
@@ -50,12 +54,6 @@ In this topic, you will set up a testing environment to evaluate Intune. Then, y
 - Create and assign customer roles
 - Create a device profile
 
-Start by signing up for the [Intune free trial](../fundamentals/free-trial-sign-up.md). When you complete the sign up process, you'll have a new tenant and you'll understand the basics of working with Microsoft Intune.
-
-## Prerequisites
-
-- None
-
 ## Benefits of Microsoft Intune
 
 Microsoft Intune helps you and your organization by increasing security and productivity, providing flexibility, and maximizing your management investment.
@@ -68,6 +66,10 @@ Microsoft Intune provides the following:
 - Co-management for cloud and on-premises devices
 
 Learn how Microsoft Endpoint Manager helps you maximize your return on investment. For more information see, [Benefits of Microsoft Endpoint Manager](/training/modules/benefits-microsoft-endpoint-manager/).
+
+## Next steps
+
+Start by signing up for the [Intune free trial](../fundamentals/free-trial-sign-up.md). When you complete the sign up process, you'll have a new tenant and you'll understand the basics of working with Microsoft Intune.
 
 ## Learn more
 
