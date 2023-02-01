@@ -1402,22 +1402,26 @@ items:
 
     - name: View reports and monitor status
       items:
-      - name: Intune reports
-        href: ./fundamentals/reports.md
-      - name: Audit logs for Intune activities
-        href: ./fundamentals/monitor-audit-logs.md
-      - name: Review logs with Azure Monitor
-        href: ./fundamentals/review-logs-using-azure-monitor.md
-      - name: Device configuration profile status
-        href: ./configuration/device-profile-monitor.md
-      - name: Export reports using Graph
-        href: ./fundamentals/reports-export-graph-apis.md
-      - name: Intune reports and properties using Graph
-        href: ./fundamentals/reports-export-graph-available-reports.md
-      - name: Endpoint analytics (link to EA hub page)
-        href: ../analytics/
-      - name: Use the Intune Data Warehouse (copy - contextual toc if this works)
-        href: ./developer/reports-nav-create-intune-reports.md          
+      - name: Reports
+        items:
+        - name: Intune reports
+          href: ./fundamentals/reports.md
+        - name: Export reports using Graph
+          href: ./fundamentals/reports-export-graph-apis.md
+        - name: Intune reports and properties using Graph
+          href: ./fundamentals/reports-export-graph-available-reports.md          
+        - name: Use the Intune Data Warehouse
+          href: ./developer/reports-nav-create-intune-reports.md    
+      items:
+      - name: Monitor          
+        - name: Audit logs for Intune activities
+          href: ./fundamentals/monitor-audit-logs.md
+        - name: Review logs with Azure Monitor
+          href: ./fundamentals/review-logs-using-azure-monitor.md
+        - name: Device configuration profile status
+          href: ./configuration/device-profile-monitor.md
+        - name: Endpoint analytics
+          href: ../analytics/
 
   - name: Developer guidance
     items:
