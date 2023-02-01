@@ -7,7 +7,7 @@ description: Step 4 to deploy device configuration profiles as part of the minim
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/04/2023
+ms.date: 01/31/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -27,7 +27,7 @@ ms.collection:
   - highpri
 ---
 
-# Step 4 - Create device configuration profiles to secure devices and access resources
+# Step 4 - Configure device features and settings to secure devices and access resources
 
 So far, you've set up your Intune subscription, created app protection policies, and created device compliance policies.
 
@@ -344,5 +344,5 @@ To get started:
 1. [Set up Microsoft Intune](deployment-plan-setup.md)
 2. [Add, configure, and protect apps](deployment-plan-protect-apps.md)
 3. [Plan for compliance policies](deployment-plan-compliance-policies.md)
-4. 🡺 **Create device configuration profiles** (*You are here*)
+4. 🡺 **Configure device features** (*You are here*)
 5. [Enroll devices](deployment-guide-enrollment.md)

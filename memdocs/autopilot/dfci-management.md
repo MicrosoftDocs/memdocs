@@ -75,6 +75,7 @@ You can also [change existing DFCI settings](/intune/configuration/device-firmwa
 - [Microsoft Surface](/surface/surface-manage-dfci-guide)
 - Acer
 - Panasonic
+- Fujitsu
 
 Other OEMs are pending.
 

@@ -67,7 +67,7 @@ Configuration Manager uses SQL Server Native Client on the following site system
 - Certificate registration point
 - Data warehouse service point
 
-## <a name="bkmk_sql"></a> Enable TLS 1.2 at-scale using Automanage Machine Configuration and Azure Arc
+## Enable TLS 1.2 at-scale using Automanage Machine Configuration and Azure Arc
 
 Automatically configures TLS 1.2 across both client and server for machines running in Azure, on-prem, or multi-cloud environments. To get started configuring TLS 1.2 across your machines, [connect them to Azure using Azure Arc-enabled servers](/azure/azure-arc/servers/learn/quick-enable-hybrid-vm), which comes with the Machine Configuration prerequisite by default. Once connected, TLS 1.2 can be configured with point-and-click simplicity by deploying the built-in policy definition in Azure Portal: [Configure secure communication protocols (TLS 1.1 or TLS 1.2) on Windows servers](https://ms.portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2F828ba269-bf7f-4082-83dd-633417bc391d). The policy scope can be assigned at the subscription, resource group, or management group level, as well as exclude any resources from the policy definition.
 

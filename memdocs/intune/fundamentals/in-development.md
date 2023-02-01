@@ -8,7 +8,7 @@ keywords:
 author: dougeby 
 ms.author: dougeby
 manager: dougeby
-ms.date: 01/09/2023
+ms.date: 01/26/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -75,16 +75,6 @@ The global quiet time settings will allow you to create policies to schedule qui
 <!-- *********************************************** -->
 
 ## Device management
-
-### Microsoft Tunnel for Mobile Application Management for iOS/iPadOS (Preview)<!-- 15769204 -->  
-
-As a public preview, we’re adding support for Mobile Application Management (MAM) to the Microsoft Tunnel VPN gateway for iOS/iPadOS. With this preview for iOS devices that have not enrolled with Intune, supported apps on those unenrolled devices will be able to use Microsoft Tunnel to connect to your organization when working with corporate data and resources. This includes VPN gateway support for:  
-
-- Secure access to on-prem apps and resources using modern authentication
-- Single Sign On and conditional access.
-
-Applies to:  
-- iOS/iPadOS
 
 ### Endpoint security firewall rules support for ICMP type<!-- 5653356 -->  
 We’re adding a new setting named **IcmpTypesAndCodes** to the endpoint security firewall rules template for Windows 10. To configure this in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Endpoint security** > **Firewall** > **Create Policy** > Platform: *Windows 10, Windows 11, and Windows Server*  > Profile: *Microsoft Defender Firewall Rules*).

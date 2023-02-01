@@ -31,37 +31,37 @@ items:
       - name: Public preview
         href: ./fundamentals/public-preview.md
 
-  - name: Evaluate
+  - name: Evaluate and try
     items:
     - name: Walkthrough Intune in Microsoft Endpoint Manager (update for branding)
       href: ./fundamentals/tutorial-walkthrough-endpoint-manager.md 
-    - name: Try Intune tasks for free
+    - name: Try Intune tasks
       items:
       - name: <Do we need an overview topic to explain the steps?>
-      - name: Sign up for a free Intune trial
+      - name: Step 1 - Sign up for a free Intune trial
         href: ./fundamentals/free-trial-sign-up.md
         displayName: tenant; trial; get started, start; help; MDM
-      - name: Create a user
+      - name: Step 2 - Create a user and assign a license
         href: ./fundamentals/quickstart-create-user.md
-      - name: Create a group
+      - name: Step 3 - Create a group
         href: ./fundamentals/quickstart-create-group.md   
-      - name: Set up automatic enrollment
+      - name: Step 4 - Set up automatic enrollment
         href: ./enrollment/quickstart-setup-auto-enrollment.md
-      - name: Enroll your Windows device
+      - name: Step 5 - Enroll your Windows device
         href: ./enrollment/quickstart-enroll-windows-device.md        
-      - name: Create a device compliance policy
+      - name: Step 6 - Create a device compliance policy
         href: ./protect/quickstart-set-password-length-android.md        
-      - name: Send notifications to noncompliant devices
+      - name: Step 7 - Send notifications to noncompliant devices
         href: ./protect/quickstart-send-notification.md        
-      - name: Add and assign an app
+      - name: Step 8 - Add and assign an app
         href: ./apps/quickstart-add-assign-app.md        
-      - name: Create and assign an app protection policy
+      - name: Step 9 - Create and assign an app protection policy
         href: ./apps/quickstart-create-assign-app-policy.md        
-      - name: Create and assign a custom role
+      - name: Step 10 - Create and assign a custom role
         href: ./fundamentals/quickstart-create-custom-role.md        
-      - name: Create a device profile
+      - name: Step 11 - Create a device profile
         href: ./configuration/quickstart-email-profile.md    
-    - name: Try Intune scenarios for free
+    - name: Try Intune scenarios
       items:
       - name: Protect email on managed devices
         href: ./protect/tutorial-protect-email-on-enrolled-devices.md?toc=/intune/apps/toc.json&bc=/intune/apps/breadcrumb/toc.json
@@ -132,7 +132,7 @@ items:
 
     - name: Deploy Microsoft Intune
       items:
-      - name: Get started with your deployment (REPLACE OVERVIEW?)
+      - name: Get started with your deployment
         href: ./fundamentals/get-started-with-intune.md
       - name: Protection and configuration levels (DRAFT)
         href: ./fundamentals/protection-configuration-levels.md
@@ -143,7 +143,7 @@ items:
         href: ./fundamentals/deployment-plan-protect-apps.md
       - name: Step 3 - Create compliance policies
         href: ./fundamentals/deployment-plan-compliance-policies.md
-      - name: Step 4 - Create configuration profiles
+      - name: Step 4 - Configure device features and settings
         href: ./fundamentals/deployment-plan-configuration-profile.md
       - name: Step 5 - Enroll devices
         href: ./fundamentals/deployment-guide-enroll.md
@@ -247,7 +247,7 @@ items:
           href: ./fundamentals/unlicensed-admins.md          
       - name: Set the MDM authority
         href: ./fundamentals/mdm-authority-set.md
-      - name: Configure multiple admin approval
+      - name: Configure multiple admin approvals
         href: ./fundamentals/multi-admin-approval.md
         
       - name: Manage roles
@@ -631,19 +631,7 @@ items:
         - name: Telecom expenses on Android, iOS/iPadOS
           href: ./configuration/telecom-expenses-monitor.md
           displayName: saaswedo datalert
-        - name: Deploy and monitor
-          items:
-          - name: Assign profiles
-            href: ./configuration/device-profile-assign.md
-            displayName: deploy, push
-          - name: Monitor profiles
-            href: ./configuration/device-profile-monitor.md
-        - name: Troubleshoot
-          items:
-          - name: Troubleshoot policies and profiles
-            href: /troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune
-          - name: Common questions and answers
-            href: ./configuration/device-profile-troubleshoot.md
+
       - name: Configuration profile settings lists
         items:
         - name: Android device administrator
@@ -771,39 +759,9 @@ items:
         href: ./protect/device-protect.md
         displayName: compliant; noncompliant; mfa  
 
-      - name: Concepts 
-        items: 
-        - name: Privacy and personal data (copy to own section - does this make sense?)
-          href: ./protect/privacy-personal-data.md
-          items:
-          - name: Optional diagnostic data in client apps
-            href: ./protect/client-apps-optional-data.md
-          - name: Data collection
-            href: ./protect/privacy-data-collect.md
-          - name: Data storage and processing
-            href: ./protect/privacy-data-store-process.md
-          - name: Data security and sharing
-            href: ./protect/privacy-data-secure-share.md
-            items:
-            - name: Data Apple sends to Intune
-              href: ./protect/data-apple-sends-to-intune.md
-            - name: Data Google sends to Intune
-              href: ./protect/data-google-sends-to-intune.md
-            - name: Data Intune sends to Apple
-              href: ./protect/data-intune-sends-to-apple.md
-            - name: Data Intune sends to Google
-              href: ./protect/data-intune-sends-to-google.md
-            - name: Information shared from Jamf Pro to Intune
-              href: ./protect/data-jamf-sends-to-intune.md
-          - name: View and correct personal data
-            href: ./protect/privacy-data-view-correct.md
-          - name: Audit, export, delete
-            href: ./protect/privacy-data-audit-export-delete.md
-          - name: Windows Information Protection
-            href: ./protect/windows-information-protection-configure.md
       - name: How-to guides
         items:
-        - name: Set rules on devices to allow access to resources
+        - name: Use compliance rules to protect resources (Set rules on devices to allow access to resources)
           items:
           - name: Compliance overview
             href: ./protect/device-compliance-get-started.md    
@@ -1185,27 +1143,17 @@ items:
           href: ./enrollment/apple-mdm-push-certificate-get.md 
         - name: Add corporate identifiers
           href: ./enrollment/corporate-identifiers-add.md
-        - name: Add device enrollment manager  
-          href: ./enrollment/device-enrollment-manager-enroll.md  
-        - name: Configure device categories  
-          href: ./enrollment/device-group-mapping.md   
-        - name: Require multi-factor authentication  
-          href: ./enrollment/multi-factor-authentication.md
-          displayName: mfa; multifactor 
-        - name: Create terms and conditions policy  
-          href: ./enrollment/terms-and-conditions-create.md  
-        - name: Create device enrollment restrictions
-          items: 
-          - name: Enrollment restrictions overview
-            href: ./enrollment/enrollment-restrictions-set.md
-          - name: Intune device limits vs. Azure AD device limits  
-            href: ./enrollment/device-limit-intune-azure.md    
-          - name: Create device platform restrictions 
-            href: ./enrollment/create-device-platform-restrictions.md  
-          - name: Create device limit restrictions  
-            href: ./enrollment/create-device-limit-restrictions.md                  
+          displayName: COD   
+        - name: Incomplete user enrollment report
+          href: ./enrollment/enrollment-report-company-portal-abandon.md
+        - name: Restrictions
+          href: ./enrollment/enrollment-restrictions-set.md  
+        - name: Terms and conditions
+          href: ./enrollment/terms-and-conditions-create.md
+        - name: Intune and Azure AD device limits  
+          href: ./enrollment/device-limit-intune-azure.md    
       - name: Set up Windows enrollment
-        items:
+        items:  
         - name: Windows enrollment guide 
           href: ./fundamentals/deployment-guide-enrollment-windows.md
         - name: Enrollment method overview  - DELETE/REPLACE w/enrollment guide 
@@ -1340,6 +1288,7 @@ items:
           href: /troubleshoot/mem/intune/troubleshoot-windows-auto-enrollment
         - name: Troubleshoot Android device enrollment
           href: /troubleshoot/mem/intune/troubleshoot-android-enrollment  
+
     - name: Assign and deploy policies
       items: 
       - name: Use filters when assigning policies
@@ -1352,20 +1301,27 @@ items:
           href: ./fundamentals/filters-supported-workloads.md
         - name: Reporting and troubleshooting (instead of troubleshooting change to conflict resolution or something)
           href: ./fundamentals/filters-reports-troubleshoot.md
-      - name: Use policy sets
+      - name: Use policy sets to group policies together
         href: ./fundamentals/policy-sets.md
-      - name: Assign policies
+      - name: Assign policies to users & groups
+        href: ./configuration/device-profile-assign.md
+        displayName: deploy, push
+      - name: Assign app policies
         items:
-        - name: Assign profiles (will we need this in multiple places?)
-          href: ./configuration/device-profile-assign.md
-        - name: Monitor profiles
-          href: ./configuration/device-profile-monitor.md
-        - name: Troubleshoot profiles
-          items:
-          - name: Troubleshoot policies and profiles
-            href: /troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune
-          - name: Common questions and answers
-            href: ./configuration/device-profile-troubleshoot.md
+        - name: Assign apps to groups
+          href: ./apps/apps-deploy.md
+          displayName: app assignment; assignment
+        - name: Include and exclude apps
+          href: ./apps/apps-inc-exl-assignments.md
+          displayName: app assignment
+        - name: Deploy Windows 10/11 apps
+          href: ./apps/apps-windows-10-app-deploy.md
+        - name: Deploy apps to Government environments
+          href: ./apps/apps-deploy-gcc-dod.md
+      - name: Common questions and answers
+        href: ./configuration/device-profile-troubleshoot.md
+      - name: Troubleshoot policies and profiles
+        href: /troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune
 
     - name: Initiate remote actions
       items:
@@ -1446,14 +1402,16 @@ items:
       items:
       - name: Intune reports
         href: ./fundamentals/reports.md
-      - name: Export reports using Graph
-        href: ./fundamentals/reports-export-graph-apis.md
-      - name: Intune reports and properties using Graph
-        href: ./fundamentals/reports-export-graph-available-reports.md
       - name: Audit logs for Intune activities
         href: ./fundamentals/monitor-audit-logs.md
       - name: Review logs with Azure Monitor
         href: ./fundamentals/review-logs-using-azure-monitor.md
+      - name: Device configuration profile status
+        href: ./configuration/device-profile-monitor.md
+      - name: Export reports using Graph
+        href: ./fundamentals/reports-export-graph-apis.md
+      - name: Intune reports and properties using Graph
+        href: ./fundamentals/reports-export-graph-available-reports.md
       - name: Endpoint analytics (link to EA hub page)
         href: ../analytics/
       - name: Use the Intune Data Warehouse (copy - contextual toc if this works)
