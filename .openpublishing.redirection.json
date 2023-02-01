@@ -1,6 +1,10 @@
 {
     "redirections": [
         {
+            "source_path": "memdocs/intune/configuration/use-enterprise-sso-plug-in-ios-ipados-macos-with-jamf-pro.md",
+            "redirect_url": "/mem/intune/configuration/use-enterprise-sso-plug-in-ios-ipados-macos",
+        },  
+        {
             "source_path": "memdocs/intune/enrollment/ios-ipados-framework-deployment-methodology.md",
             "redirect_url": "/mem/intune/enrollment/ios-ipados-configuration-framework",
             "redirect_document_id": false

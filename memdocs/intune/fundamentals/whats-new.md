@@ -65,7 +65,18 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Scripts
 ### Tenant administration
 -->
+## Week of January 30, 2023
 
+### Device management
+#### Introducing support for laser pointers in Remote Help<!-- 16108312 -->
+
+In Remote Help, you can now use a laser pointer when you are providing assistance on Windows.
+
+For more information on Remote Help, go to [Remote Help](../remote-actions/remote-help.md).
+
+Applies to:
+
+ - Windows 10/11
 ## Week of January 23, 2023 (Service release 2301)
 
 ### App management
@@ -89,8 +100,8 @@ Software update policies for macOS devices are now generally available. This gen
 
 For more information, see [Use Microsoft Intune policies to manage macOS software updates](../protect/software-updates-macos.md).
 
-#### Windows AutoPilot device diagnostics<!-- 16697347 -->
-Windows AutoPilot diagnostics is available to download in Microsoft Endpoint Manager admin center from either in the Autopilot deployments monitor or Device Diagnostics monitor for an individual device.
+#### Windows Autopilot device diagnostics<!-- 16697347 -->
+Windows Autopilot diagnostics is available to download in Microsoft Endpoint Manager admin center from either in the Autopilot deployments monitor or Device Diagnostics monitor for an individual device.
 
 ### Device enrollment
 
