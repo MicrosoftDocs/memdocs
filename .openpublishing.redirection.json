@@ -1,6 +1,11 @@
 {
     "redirections": [
         {
+            "source_path": "memdocs/intune/enrollment/device-enrollment.md",
+            "redirect_url": "/mem/intune/fundamentals/deployment-guide-enrollment",
+            "redirect_document_id": false
+        }, 
+        {
             "source_path": "memdocs/intune/enrollment/framework-deployment-methodology.md",
             "redirect_url": "/mem/intune/fundamentals/android-configuration-framework",
             "redirect_document_id": false

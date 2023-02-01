@@ -1132,10 +1132,8 @@ items:
 
     - name: Enroll devices in Microsoft Intune  
       items:
-      - name: Enroll devices in Intune 
+      - name: Enrollment overview   
         href: ./fundamentals/deployment-guide-enrollment.md  
-      - name: Device enrollment overview  - DELETE/REPLACE w/enrollment guide overview
-        href: ./enrollment/device-enrollment.md
         displayName: COD; BYOD; DEM; ADE; USB-SA; USB-Direct; co-management; GPO
       - name: Pre-enrollment configurations  
         items:
