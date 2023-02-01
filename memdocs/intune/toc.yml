@@ -1148,14 +1148,26 @@ items:
         - name: Add corporate identifiers
           href: ./enrollment/corporate-identifiers-add.md
           displayName: COD   
-        - name: Incomplete user enrollment report
-          href: ./enrollment/enrollment-report-company-portal-abandon.md
-        - name: Restrictions
-          href: ./enrollment/enrollment-restrictions-set.md  
-        - name: Terms and conditions
+        - name: Add device enrollment manager  
+          href: ./enrollment/device-enrollment-manager-enroll.md   
+        - name: Add device categories  
+          href: ./enrollment/device-group-mapping.md  
+        - name: Require multifactor authentication  
+          href: ./enrollment/multi-factor-authentication.md   
+        - name: Create terms and conditions policy  
           href: ./enrollment/terms-and-conditions-create.md
-        - name: Intune and Azure AD device limits  
-          href: ./enrollment/device-limit-intune-azure.md    
+        - name: Create device enrollment restrictions
+          items:  
+          - name: Enrollment restrictions overview  
+            href: ./enrollment/enrollment-restrictions-set.md  
+          - name: Intune device limits vs. Azure AD device limits    
+            href: ./enrollment/device-limit-intune-azure.md   
+          - name: Create device platform restrictions 
+            href: ./enrollment/create-device-platform-restrictions.md  
+          - name: Create device limit restrictions  
+            href: ./enrollment/create-device-limit-restrictions.md  
+
+  
       - name: Set up Windows enrollment
         items:  
         - name: Windows enrollment guide 
@@ -1180,7 +1192,7 @@ items:
           href: ./enrollment/tutorial-use-autopilot-enroll-devices.md
       - name: Set up Android enrollment
         items:
-        - name: Android, Android Enterprise enrollment guide
+        - name: Android enrollment guide
           href: ./fundamentals/deployment-guide-enrollment-android.md
           displayName: COBO
         - name: Enrollment method overview  - DELETE/REPLACE w/enrollment guide
@@ -1280,6 +1292,8 @@ items:
           href: ./enrollment/device-enrollment-direct-enroll-macos.md      
       - name: Troubleshoot enrollment
         items:
+        - name: Get incomplete user enrollment report
+          href: ./enrollment/enrollment-report-company-portal-abandon.md  
         - name: Troubleshoot device enrollment
           href: /troubleshoot/mem/intune/troubleshoot-device-enrollment-in-intune
         - name: Troubleshoot iOS/iPadOS device enrollment
