@@ -107,7 +107,7 @@ Support for custom Windows 365 role-based access control (RBAC) roles has moved 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Provisioning
 
-#### Provision Azure Active Directory Join Cloud PCs with single sign-on<!--42104318-->
+#### Provision Azure Active Directory Join Cloud PCs with single sign-on (public preview)<!--42104318-->
 
 Windows 365 now supports creating Azure Active Directory Join Cloud PCs that use single sign-on for Cloud PC login. Existing Cloud PCs won’t have single sign-on configured. For more information, see [Create provisioning policy](create-provisioning-policy.md) and [Edit provisioning policy](edit-provisioning-policy.md).
 

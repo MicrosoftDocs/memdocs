@@ -41,7 +41,7 @@ AOSP devices must meet the following requirements to enroll:
 * New or factory-reset 
 * Running Android 10.0 or later 
 * Corporate-owned (not a personal device) 
-* RealWear device, updated to Firmware 11.2 or later
+* [A supported device](../fundamentals/supported-devices-browsers.md#android)  
 
 Additionally, you need the enrollment QR code that's provided by your organization.  
 
