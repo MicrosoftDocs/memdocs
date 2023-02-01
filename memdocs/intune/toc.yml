@@ -37,7 +37,8 @@ items:
       href: ./fundamentals/tutorial-walkthrough-endpoint-manager.md 
     - name: Try Intune tasks
       items:
-      - name: <Do we need an overview topic to explain the steps?>
+      - name: Overview
+        href: ./fundamentals/try-intune-overview.md
       - name: Step 1 - Sign up for a free Intune trial
         href: ./fundamentals/free-trial-sign-up.md
         displayName: tenant; trial; get started, start; help; MDM
