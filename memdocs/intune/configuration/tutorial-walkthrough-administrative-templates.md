@@ -136,7 +136,7 @@ In Intune, policies are applied to users and groups you create. There isn't a hi
 - If two compliance policies are in conflict, then the most restrictive policy applies.
 - If two configuration profiles are in conflict, then the setting isn't applied.
 
-For more information, see [Common questions, issues, and resolutions with device policies and profiles](device-profile-troubleshoot.md#if-multiple-policies-are-assigned-to-the-same-user-or-device-how-do-i-know-which-settings-gets-applied).
+For more information, see [Common questions, issues, and resolutions with device policies and profiles](device-profile-troubleshoot.md#compliance-and-device-configuration-policies-that-conflict).
 
 In these next steps, you create security groups, and add users to these groups. You can add a user to multiple groups. For example, it's normal for a user to have multiple devices, such as a Surface Pro for work, and an Android mobile device for personal. And, it's normal for a person to access organizational resources from these multiple devices.
 
@@ -368,7 +368,7 @@ In this template, we configure some Internet Explorer settings to lock down devi
 
 3. Select **Next**. In **Review + create**, select **Create** to save your changes.
 
-As soon as the profile is saved, it applies to the devices when they check in with Intune. If the devices are connected to the internet, it can happen immediately. For more information on policy refresh times, see [How long does it take for devices to get a policy, profile, or app](device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned).
+As soon as the profile is saved, it applies to the devices when they check in with Intune. If the devices are connected to the internet, it can happen immediately. For more information on policy refresh times, see [How long does it take for devices to get a policy, profile, or app](device-profile-troubleshoot.md#policy-refresh-intervals).
 
 When assigning strict or restrictive policies and profiles, don't lock yourself out. Consider creating a group that's excluded from your policies and profiles. The idea is to have access to troubleshoot. Monitor this group to confirm it's being used as intended.
 
