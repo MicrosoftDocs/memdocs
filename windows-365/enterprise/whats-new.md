@@ -97,7 +97,7 @@ Forensic auditing is now available for Windows 365 Government. For more informat
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Role-based access control
 
-#### Support for custom Windows 365 RBAC roles now generally available<!--42650520  -->
+#### Support for custom Windows 365 RBAC roles now generally available (preview)<!--42650520  -->
 
 Support for custom Windows 365 role-based access control (RBAC) roles has moved out of preview and into general availability. These custom roles are also now supported for Windows 365 Government (Government Community Cloud and Government Community Cloud High). For more information, see [Custom roles](role-based-access.md#custom-roles).
 
