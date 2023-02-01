@@ -35,7 +35,7 @@ Microsoft Intune, which is a part of Microsoft Endpoint Manager, provides the cl
 
 In the following diagram, you can see how Intune interacts with other components in both your on-premises and cloud infrastructure:
 
-[ ![Diagram of Intune infrastructure](../media/try-intune-overview/try-intune-overview-01.png) ](../media/try-intune-overview/try-intune-overview-01.png#lightbox)
+[ ![Diagram of Intune infrastructure](media/try-intune-overview/try-intune-overview-01.png) ](media/try-intune-overview/try-intune-overview-01.png#lightbox)
 
 ## Learning objectives
 
