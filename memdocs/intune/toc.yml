@@ -132,7 +132,7 @@ items:
 
     - name: Deploy Microsoft Intune
       items:
-      - name: Get started with your deployment (REPLACE OVERVIEW?)
+      - name: Get started with your deployment
         href: ./fundamentals/get-started-with-intune.md
       - name: Protection and configuration levels (DRAFT)
         href: ./fundamentals/protection-configuration-levels.md
@@ -143,7 +143,7 @@ items:
         href: ./fundamentals/deployment-plan-protect-apps.md
       - name: Step 3 - Create compliance policies
         href: ./fundamentals/deployment-plan-compliance-policies.md
-      - name: Step 4 - Create configuration profiles
+      - name: Step 4 - Configure device features and settings
         href: ./fundamentals/deployment-plan-configuration-profile.md
       - name: Step 5 - Enroll devices
         href: ./fundamentals/deployment-guide-enroll.md
@@ -247,7 +247,7 @@ items:
           href: ./fundamentals/unlicensed-admins.md          
       - name: Set the MDM authority
         href: ./fundamentals/mdm-authority-set.md
-      - name: Configure multiple admin approval
+      - name: Configure multiple admin approvals
         href: ./fundamentals/multi-admin-approval.md
         
       - name: Manage roles
@@ -631,19 +631,7 @@ items:
         - name: Telecom expenses on Android, iOS/iPadOS
           href: ./configuration/telecom-expenses-monitor.md
           displayName: saaswedo datalert
-        - name: Deploy and monitor
-          items:
-          - name: Assign profiles
-            href: ./configuration/device-profile-assign.md
-            displayName: deploy, push
-          - name: Monitor profiles
-            href: ./configuration/device-profile-monitor.md
-        - name: Troubleshoot
-          items:
-          - name: Troubleshoot policies and profiles
-            href: /troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune
-          - name: Common questions and answers
-            href: ./configuration/device-profile-troubleshoot.md
+
       - name: Configuration profile settings lists
         items:
         - name: Android device administrator
@@ -1447,6 +1435,7 @@ items:
           href: /troubleshoot/mem/intune/troubleshoot-windows-auto-enrollment
         - name: Troubleshoot Android device enrollment
           href: /troubleshoot/mem/intune/troubleshoot-android-enrollment  
+
     - name: Assign and deploy policies
       items: 
       - name: Use filters when assigning policies
@@ -1459,20 +1448,27 @@ items:
           href: ./fundamentals/filters-supported-workloads.md
         - name: Reporting and troubleshooting (instead of troubleshooting change to conflict resolution or something)
           href: ./fundamentals/filters-reports-troubleshoot.md
-      - name: Use policy sets
+      - name: Use policy sets to group policies together
         href: ./fundamentals/policy-sets.md
-      - name: Assign policies
+      - name: Assign policies to users & groups
+        href: ./configuration/device-profile-assign.md
+        displayName: deploy, push
+      - name: Assign app policies
         items:
-        - name: Assign profiles (will we need this in multiple places?)
-          href: ./configuration/device-profile-assign.md
-        - name: Monitor profiles
-          href: ./configuration/device-profile-monitor.md
-        - name: Troubleshoot profiles
-          items:
-          - name: Troubleshoot policies and profiles
-            href: /troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune
-          - name: Common questions and answers
-            href: ./configuration/device-profile-troubleshoot.md
+        - name: Assign apps to groups
+          href: ./apps/apps-deploy.md
+          displayName: app assignment; assignment
+        - name: Include and exclude apps
+          href: ./apps/apps-inc-exl-assignments.md
+          displayName: app assignment
+        - name: Deploy Windows 10/11 apps
+          href: ./apps/apps-windows-10-app-deploy.md
+        - name: Deploy apps to Government environments
+          href: ./apps/apps-deploy-gcc-dod.md
+      - name: Common questions and answers
+        href: ./configuration/device-profile-troubleshoot.md
+      - name: Troubleshoot policies and profiles
+        href: /troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune
 
     - name: Initiate remote actions
       items:
@@ -1553,14 +1549,16 @@ items:
       items:
       - name: Intune reports
         href: ./fundamentals/reports.md
-      - name: Export reports using Graph
-        href: ./fundamentals/reports-export-graph-apis.md
-      - name: Intune reports and properties using Graph
-        href: ./fundamentals/reports-export-graph-available-reports.md
       - name: Audit logs for Intune activities
         href: ./fundamentals/monitor-audit-logs.md
       - name: Review logs with Azure Monitor
         href: ./fundamentals/review-logs-using-azure-monitor.md
+      - name: Device configuration profile status
+        href: ./configuration/device-profile-monitor.md
+      - name: Export reports using Graph
+        href: ./fundamentals/reports-export-graph-apis.md
+      - name: Intune reports and properties using Graph
+        href: ./fundamentals/reports-export-graph-available-reports.md
       - name: Endpoint analytics (link to EA hub page)
         href: ../analytics/
       - name: Use the Intune Data Warehouse (copy - contextual toc if this works)
