@@ -144,7 +144,7 @@ Before diving into compliance policy recommendations by levels, it’s important
 
 Devices that receive compliance policies are  evaluated against the compliance policy configurations with results returned to Intune for possible actions. Some compliance configurations like password requirements result in enforcement on the device, even when device configurations are more lenient.
 
-When a device receives conflicting configurations for a setting either different or similar policy types, conflicts can occur. To help prepare for this scenario, see [If multiple policies are assigned to the same user or device, how do I know which settings gets applied?](../configuration/device-profile-troubleshoot.md#if-multiple-policies-are-assigned-to-the-same-user-or-device-how-do-i-know-which-settings-gets-applied)
+When a device receives conflicting configurations for a setting either different or similar policy types, conflicts can occur. To help prepare for this scenario, see [Compliance and device configuration policies that conflict](../configuration/device-profile-troubleshoot.md#compliance-and-device-configuration-policies-that-conflict)
 
 Consider synchronizing any planned configurations between device configuration and device compliance teams to help identify configuration overlaps. Ensure the two policy types agree on the same configuration for targeted devices as this can help avoid policy conflicts or leaving a device without the configuration or resource access you expect.
 

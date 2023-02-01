@@ -148,7 +148,7 @@ To evaluate and migrate policies from Basic Mobility and Security to Intune:
 
     While reviewing the recommendations, keep the following points in mind:
 
-    - If the groups listed in the recommendation already have Intune policies assigned to them, then these policies may conflict with the recommended settings. To learn how conflicts are handled in Intune, go to [Common questions and answers with device policies and profiles in Microsoft Intune](../configuration/device-profile-troubleshoot.md#if-multiple-policies-are-assigned-to-the-same-user-or-device-how-do-i-know-which-settings-gets-applied).
+    - If the groups listed in the recommendation already have Intune policies assigned to them, then these policies may conflict with the recommended settings. To learn how conflicts are handled in Intune, go to [Common questions and answers with device policies and profiles in Microsoft Intune](../configuration/device-profile-troubleshoot.md#compliance-and-device-configuration-policies-that-conflict).
 
       > [!NOTE]
       > If you make any changes to migrated email profiles or fail to assign them to recommended groups, then users may be asked to re-enter their username and password to access email on their devices when the device migrates to Intune. For more information, go to [policy mapping for Configuration](policy-map-configurations.md).
@@ -179,7 +179,7 @@ After the policies are created, they're ready to be assigned. For this migration
 
 3. **Enable [coexistence](mdm-authority-set.md#coexistence)**. When enabled:
 
-    - Users with existing Intune licenses are immediately moved to Intune and the newly migrated policies are applied at the next [Intune refresh cycle](../configuration/device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned).
+    - Users with existing Intune licenses are immediately moved to Intune and the newly migrated policies are applied at the next [Intune refresh cycle](../configuration/device-profile-troubleshoot.md#policy-refresh-intervals).
     - For users without Intune licenses, coexistence is the second step in the migration process. They'll be moved to Intune in the next step.
 
 4. For users without Intune licenses, **assign Intune licenses** to the users you want to migrate. Your options:
@@ -195,7 +195,7 @@ At this point, the key steps are complete:
 2. Coexistence is enabled in Intune.
 3. Intune licenses are assigned.
 
-At the next [Intune device refresh cycle](../configuration/device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned), the devices will automatically switch to Intune management and the new policies will start affecting user devices.
+At the next [Intune device refresh cycle](../configuration/device-profile-troubleshoot.md#policy-refresh-intervals), the devices will automatically switch to Intune management and the new policies will start affecting user devices.
 
 ## What did I just do?
 
