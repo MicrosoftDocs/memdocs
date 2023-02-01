@@ -55,4 +55,4 @@ When testing changes to Android Enterprise devices, be aware of the [delivery ti
 1. [Configure device enrollment restrictions for personal devices](device-enrollment-restrictions.md)
 2. [Configure app configuration policies](android-app-configuration-policies.md)
 3. [Configure security settings for personal devices](android-work-profile-security-settings.md)  
-4. [Configure security settings for fully managed devices](android-fully-managed-security-settings.md) 
+4. [Configure security settings for fully managed devices](android-fully-managed-security-settings.md)  

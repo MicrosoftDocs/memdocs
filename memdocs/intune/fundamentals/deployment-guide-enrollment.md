@@ -31,16 +31,17 @@ ms.collection:
 
 # Enrollment guidance overview
 
-Together Microsoft Intune and Azure Active Directory (Azure AD) create a secure, streamlined process for registering and enrolling devices that want access to your internal resources. Once users and devices are registered within your Azure AD (also called a *tenant*), then you can utilize Intune for its endpoint management capabilities. The process that enables device management is called *enrollment*. 
+Microsoft Intune, in conjunction with Azure Active Directory (Azure AD), facilitates a secure, streamlined process for registering and enrolling devices that want access to your internal resources. Once users and devices are registered within your Azure AD (also called a *tenant*), then you can utilize Intune for its endpoint management capabilities. The process that enables device management for a device is called *enrollment*. 
 
-During enrollment, Intune installs an MDM certificate on the device. The MDM certificate communicates with the Intune service, and enables Intune to start enforcing your organization's policies, such as:  
+During enrollment, Intune installs an MDM certificate on the enrolling device. The MDM certificate communicates with the Intune service, and enables Intune to start enforcing your organization's policies, such as:  
  
-- Compliance policies that help users and devices meet your rules.
+- Enrollment policies that limit the number or type of devices someone can enroll.  
+- Compliance policies that help users and devices meet your rules.  
 - Configuration profiles that configure work-appropriate features and settings on devices.  
 
-Typically, policies are deployed during enrollment.  any organizations start by creating a baseline of required policies for users and devices, and build them out as needed for different groups and use cases. For example, some groups, depending on their roles in your organization, may require stricter policies than others.  
+Typically, policies are deployed during enrollment.  Some groups, depending on their roles in your organization, may require stricter policies than others. Many organizations start by creating a baseline of required policies for users and devices, and build them out as needed for different groups and use cases. 
 
-You can enroll devices running on the following platforms. For the specific versions, see [Supported operating systems](supported-devices-browsers.md). 
+You can enroll devices running on the following platforms. For a list of supported versions, see [Supported operating systems](supported-devices-browsers.md). 
 
 - Android
 - iOS/iPadOS
@@ -48,7 +49,7 @@ You can enroll devices running on the following platforms. For the specific vers
 - macOS
 - Windows
 
-Enrollment is enabled for all platforms by default. You can restrict specific platforms from enrolling. For more information, see [Create a device platform restriction](create-device-platform-restrictions.md).  
+Enrollment is enabled for all platforms by default, but you can restrict specific platforms from enrolling by using an Intune enrollment restriction policy.     
 
 This article describes the supported device scenarios and enrollment prerequisites, has information about using other MDM providers, and includes links to platform-specific enrollment guidance.  
 
@@ -68,9 +69,9 @@ Devices in bring-your-own-device (BYOD) scenarios can be enrolled in Intune. The
 
 ### Corporate-owned devices  
 
-Microsoft Intune automatically marks certain devices as *corporate-owned*. This classification lets you manage and configure devices with more control and access. For more information about managing and configuring corporate-owned devices, see [Identify devices as corporate-owned](corporate-identifiers-add.md).   
+Microsoft Intune offers more granular settings and policies for devices classified as *corporate-owned*. For example, there are more password policies to choose from in Intune for corporate-owned devices, so you can enforce stricter password requirements. Microsoft Intune automatically marks devices that meet certain criteria as corporate-owned. For more information, see [Identify devices as corporate-owned](../enrollment/corporate-identifiers-add.md).   
 
-## Prerequisites
+## Prerequisites  
 
 - Intune is set up, and ready to enroll users and devices. Be sure:
 
@@ -155,21 +156,21 @@ The MDM certificate renews automatically as long as enrolled devices are communi
 - [Incomplete user enrollments](../enrollment/enrollment-report-company-portal-abandon.md)
 - [Troubleshoot device enrollment](/troubleshoot/mem/intune/troubleshoot-device-enrollment-in-intune)
 
-## Next steps
-
-Choose your platform, and get started:
-
-- [Application Management without enrollment](deployment-guide-enrollment-mamwe.md)
-- [Android enrollment guide](deployment-guide-enrollment-android.md)
-- [iOS/iPadOS enrollment guide](deployment-guide-enrollment-ios-ipados.md)
-- [Linux enrollment guide](deployment-guide-enrollment-linux.md)
-- [macOS enrollment guide](deployment-guide-enrollment-macos.md)
-- [Windows enrollment guide](deployment-guide-enrollment-windows.md)
-
-## Follow the minimum recommended baseline policies
+## Next steps  
 
 1. [Set up Microsoft Intune](deployment-plan-setup.md)
 2. [Add, configure, and protect apps](deployment-plan-protect-apps.md)
 3. [Plan for compliance policies](deployment-plan-compliance-policies.md)
 4. [Configure device features](deployment-plan-configuration-profile.md)
 5. 🡺 **Enroll devices** (*You are here*)
+
+For platform-specific enrollment guidance, see:
+
+- [Application Management without enrollment](deployment-guide-enrollment-mamwe.md)
+- [Android enrollment guide](deployment-guide-enrollment-android.md)
+- [iOS/iPadOS enrollment guide](deployment-guide-enrollment-ios-ipados.md)
+- [Linux enrollment guide](deployment-guide-enrollment-linux.md)
+- [macOS enrollment guide](deployment-guide-enrollment-macos.md)
+- [Windows enrollment guide](deployment-guide-enrollment-windows.md)  
+
+

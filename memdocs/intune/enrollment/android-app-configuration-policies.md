@@ -36,7 +36,7 @@ Android Enterprise fully managed devices are intended exclusively for work or sc
 ## Block personal accounts  
 
 1. Add the apps to Managed Google Play. For more information, see [Add Managed Google Play apps to Android Enterprise devices with Intune](../apps/apps-add-android-for-work.md).
-2. Create an app configuration policy for each Managed Google Play app. For more information, see [Add app configuration policies for managed Android Enterprise devices](../apps/app-configuration-policies-use-android#create-an-app-configuration-policy.md).
+2. Create an app configuration policy for each Managed Google Play app. For more information, see [Add app configuration policies for managed Android Enterprise devices](../apps/app-configuration-policies-use-android.md#create-an-app-configuration-policy).
 3. Create the following single key in each policy:  
 
     | Key | Values |
