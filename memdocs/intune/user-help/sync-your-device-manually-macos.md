@@ -37,7 +37,7 @@ You can force your enrolled Mac to sync with Intune for the latest updates, requ
 Syncing can also help resolve work-related downloads or other processes that are in progress or stalled. If you're experiencing slow or unusual behavior while installing or using a work app, try syncing your device to see if an update or requirement is missing.  
 
 >[!TIP]
-> Contact your support person for help if you need to sync a corporate-owned Mac that doesn't support the Intune Company Portal app. Your support person will need to facilitate the sync on their end.       
+> The Company Portal app is required for this feature. If you're trying to sync a Mac that's owned by your organization, and it doesn't have the Company Portal app, contact your support person for help. They will need to facilitate the sync on their end.         
 
 ## Sync personal Mac  
 
