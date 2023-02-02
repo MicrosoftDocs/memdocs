@@ -1241,7 +1241,6 @@ items:
           - name: 4 - Configure security settings for fully managed devices 
             href: ./enrollment/android-fully-managed-security-settings.md         
       - name: Set up iOS/iPadOS enrollment
-        href: ./enrollment/ios-enroll.md
         items:
         - name: iOS, iPadOS enrollment guide
           href: ./fundamentals/deployment-guide-enrollment-ios-ipados.md
