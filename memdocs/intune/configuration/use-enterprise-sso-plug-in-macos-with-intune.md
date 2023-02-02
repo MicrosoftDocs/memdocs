@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Configure macOS Enterprise SSO plug-in
+title: Configure macOS Enterprise SSO plug-in with MDM
 description: Learn more about the Microsoft Enterprise SSO plug-in. Add or create an macOS device profile using the Microsoft Enterprise SSO plug-in in Microsoft Intune, Jamf Pro, and other MDM solution providers.
 keywords:
 author: TBC
