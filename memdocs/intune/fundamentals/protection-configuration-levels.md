@@ -80,15 +80,23 @@ For more information, see [Level 1 basic app protection](../apps/app-protection-
 
 In this level, device compliance includes configuring the tenant-wide settings that apply to all devices, and deploying minimal compliance policies to all devices to enforce a core set of compliance requirements. Microsoft recommends that these configurations be in place before you allow devices to access your organization’s resources. Level 1 device compliance includes:
 
-- Compliance policy settings – Configure the tenant-wide settings that affect how the Intune compliance service works with your devices.
-- Platform-specific compliance policies – Depending on the platform these include settings that:
+*Compliance policy settings* are a few tenant-wide settings that affect how the Intune compliance service works with your devices.
 
-  - Require antivirus, antispyware, and antimalware (Windows only)
-  - Establish allowed ranges for a devices operating system version, build, and patch level
-  - Create Password and PIN requirements
-  - Enforce the use of settings that lock a device’s screen after a period of inactivity, requiring a password or PIN to unlock
+*Platform-specific compliance policies* include settings for common themes across platforms. The actual setting name and implementation can be different between different platforms:
 
-Each compliance policy also includes *actions for noncompliance*, which are one or more time-ordered actions you configure. Actions for noncompliance are  applied to devices that fail to meet the compliance requirements of the policy. By default, marking a device as non-compliant is an immediate action that’s included in each policy.
+- Require antivirus, antispyware, and antimalware (Windows only)
+- Operating system version:
+  - Maximum OS
+  - Minimum OS
+  - Minor and Major build versions
+  - OS patch levels
+- Password configurations
+  - Enforce lock screen after period of inactivity, requiring a password or pin to unlock
+  - Require complex passwords with combinations of letters, numbers, and symbols
+  - Require a password or PIN to unlock devices
+  - Require minimum password length
+
+*Actions for noncompliance* are automatically included with each platform specific policy. These actions are one or more time-ordered actions you configure that apply to devices that fail to meet the compliance requirements of the policy. By default, marking a device as non-compliant is an immediate action that’s included in each policy.
 
 For more information, see [Level 1 - Minimal device compliance](../fundamentals/deployment-plan-compliance-policies.md#level-1---minimal-device-compliance).
 
@@ -150,14 +158,16 @@ At this level, Microsoft recommends adding more complex options to your complian
   - Allow apps from specific locations
   - Block apps from unknown sources
 
-- Firewall settings (macOS, Windows)
+- Firewall settings
+  - Firewall settings (macOS, Windows)
 
 - Encryption:
   - Require encryption of data storage
   - BitLocker (Windows)
   - FileVault (macOS)
 
-- Password expiration limits, and reuse
+- Passwords
+  - Password expiration and reuse
 
 - System level file and boot protection:
   - Block USB debugging (Android)
@@ -237,7 +247,7 @@ For more information, see [Level 3 high app protection](../apps/app-protection-f
 
 At this level, you can expand on Intune’s built-in compliance capabilities through the following capabilities:
 
-- Integrate data a from Mobile Threat Defense (MTD) partner
+- Integrate data from Mobile Threat Defense (MTD) partner
   - With an MTD partner, your compliance policies can require devices be at or under a *device threat level* or *machine risk score*, as determined by that partner
 
 - Use a third-party compliance partner with Intune
