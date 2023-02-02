@@ -1,8 +1,14 @@
 {
     "redirections": [
         {
+            "source_path": "memdocs/intune/enrollment/enrollment-method-capab.md",
+            "redirect_url": "/mem/intune/fundamentals/deployment-guide-enrollment-windows",
+            "redirect_document_id": false
+        }, 
+        {
             "source_path": "memdocs/intune/configuration/use-enterprise-sso-plug-in-ios-ipados-macos-with-jamf-pro.md",
             "redirect_url": "/mem/intune/configuration/use-enterprise-sso-plug-in-ios-ipados-macos",
+            "redirect_document_id": false
         },  
         {
             "source_path": "memdocs/intune/enrollment/ios-ipados-framework-deployment-methodology.md",
