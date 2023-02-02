@@ -31,7 +31,7 @@ ms.collection:
 
 # Evaluate Microsoft Intune
 
-Microsoft Intune, which is a part of Microsoft Endpoint Manager, provides the cloud infrastructure, the cloud-based mobile device management (MDM), cloud-based mobile application management (MAM), and cloud-based PC management for your organization. It lets you protect your organization by controlling features and settings on Android, Android Enterprise, iOS/iPadOS, macOS, and Windows 10/11 devices. It integrates closely with Azure Active Directory (Azure AD) for identity and access control and Azure Information Protection and advanced threat protection products for data protection. When you use it with Microsoft 365, you can enable your workforce to be productive on all their devices while keeping your organization's information protected. If you have on-premises infrastructure, such as Exchange or an Active Directory, you can use Intune connectors to help you connect to external services. Intune, which is a part of Microsoft Endpoint Manager, is included in Microsoft's [Enterprise Mobility + Security (EMS) suite](https://www.microsoft.com/microsoft-365/enterprise-mobility-security?azure-portal=true). 
+Microsoft Intune, which is a part of the Microsoft Intune family of products, provides the cloud infrastructure, the cloud-based mobile device management (MDM), cloud-based mobile application management (MAM), and cloud-based PC management for your organization. It lets you protect your organization by controlling features and settings on Android, Android Enterprise, iOS/iPadOS, macOS, and Windows 10/11 devices. It integrates closely with Azure Active Directory (Azure AD) for identity and access control and Azure Information Protection and advanced threat protection products for data protection. When you use it with Microsoft 365, you can enable your workforce to be productive on all their devices while keeping your organization's information protected. If you have on-premises infrastructure, such as Exchange or an Active Directory, you can use Intune connectors to help you connect to external services. Intune is included in Microsoft's [Enterprise Mobility + Security (EMS) suite](https://www.microsoft.com/microsoft-365/enterprise-mobility-security?azure-portal=true). 
 
 In the following diagram, you can see how Intune interacts with other components in both your on-premises and cloud infrastructure:
 
@@ -65,7 +65,7 @@ Microsoft Intune provides the following:
 - Greater end users productivity
 - Co-management for cloud and on-premises devices
 
-Learn how Microsoft Endpoint Manager helps you maximize your return on investment. For more information see, [Benefits of Microsoft Endpoint Manager](/training/modules/benefits-microsoft-endpoint-manager/).
+Learn how the Microsoft Intune family of products helps you maximize your return on investment. For more information see, [Benefits of Microsoft Intune](/training/modules/benefits-microsoft-endpoint-manager/).
 
 ## Next steps
 
@@ -73,7 +73,7 @@ Start by signing up for the [Intune free trial](../fundamentals/free-trial-sign-
 
 ## Learn more
 
-For more information about Microsoft Endpoint Manager, see the following resources:
+For more information about Microsoft Intune, see the following resources:
 
-- [Microsoft Endpoint Manager fundamentals](/training/paths/endpoint-manager-fundamentals)
-- [Modern management and security principles driving our Microsoft Endpoint Manager vision](https://techcommunity.microsoft.com/t5/microsoft-endpoint-manager-blog/modern-management-and-security-principles-driving-our-microsoft/ba-p/946797?azure-portal=true)
+- [Microsoft Intune fundamentals](/training/paths/endpoint-manager-fundamentals)
+- [Modern management and security principles driving our Microsoft endpoint management vision](https://techcommunity.microsoft.com/t5/microsoft-endpoint-manager-blog/modern-management-and-security-principles-driving-our-microsoft/ba-p/946797?azure-portal=true)
