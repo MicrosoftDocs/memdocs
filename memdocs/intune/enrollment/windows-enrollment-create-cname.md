@@ -1,9 +1,9 @@
 ---
 # required metadata
 
-title: Set up enrollment for Windows devices by using Microsoft Intune
+title: Enable auto-discovery of Intune enrollment server
 titleSuffix:
-description: Set up enrollment for Windows devices.
+description: Simplify enrollment for users by enabling automatic discovery of the Intune enrollment server. 
 keywords:
 author: Lenewsad
 ms.author: lanewsad
@@ -31,16 +31,16 @@ ms.collection:
   - highpri
 ---
 
-# Enable auto-discovery of enrollment server     
+# Enable auto-discovery of Intune enrollment server     
 *Applies to Windows 10, Windows 11*  
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
- Create a CNAME on your DNS server so that device users don't have to enter the server address during device enrollment. The CNAME record makes enrollment easier for users by enabling automatic discovery of the Intune enrollment server. 
+ Create a CNAME on your DNS server so that device users don't have to enter the server address during device enrollment. Although the CNAME configuration is optional, it makes enrollment easier for users by enabling automatic discovery of the Intune enrollment server. 
 
- If you're enrolling Windows 10/11 devices using MDM automatic enrollment, you don’t have to worry about configuring CNAME records. The MDM server is configured by default when you enable MDM automatic enrollment in your tenant.    
+ If you're enrolling Windows 10/11 devices using MDM automatic enrollment, you don’t have to worry about configuring CNAME DNS records. The MDM server is configured by default when you enable MDM automatic enrollment in your tenant.    
 
-### Step 1: Create CNAME (optional)
+## Step 1: Create CNAME 
 
 Create CNAME DNS resource records for your organization's domain. For example, if your organization's website is contoso.com, create a CNAME record in DNS that redirects *EnterpriseEnrollment.contoso.com* to *enterpriseenrollment-s.manage.microsoft.com*. 
 
@@ -72,7 +72,7 @@ For example:
 
 Changes to DNS records might take up to 72 hours to propagate. You can't verify the DNS change in Intune until the DNS record propagates.
 
-### Step 2: Verify CNAME (optional)
+## Step 2: Verify CNAME 
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices** > **Windows** > **Windows enrollment**.  
 2. Select **CNAME Validation**.  
