@@ -36,14 +36,17 @@ ms.collection:
 - Windows 10 
 - Windows 11 
 
-In this topic, you'll first take the role of an Intune user and enroll a device running Windows 10/11 into Microsoft Intune. Then you'll return to Intune and confirm that the device enrolled.  
+In this tutorial, you will: 
 
-Enrolling your devices into Microsoft Intune allows you to access your organization's secure data, including email, files, and other resources, from your Windows device. This is true for both devices running Windows 10/11 devices (including desktop) and Windows 10 Mobile devices. Enrolling your devices helps secure this access for both you and your organization, and helps keep your work data separate from your personal data. 
+* Try out the device user experience by enrolling a device running Windows 10/11 into Microsoft Intune.  
+* Try out the admin user experience by verifying the enrollment in the Microsoft Endpoint Manager admin center.   
+
+If you don't have an Intune subscription, [sign up for a free trial account](../fundamentals/free-trial-sign-up.md).  
 
 > [!TIP]
-> Find out what happens when you [enroll your device in Intune](../user-help/what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md) and what that means for the [information on your device](../user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md).
-
-If you don't have an Intune subscription, [sign up for a free trial account](../fundamentals/free-trial-sign-up.md).
+> For more information about enrollment for the device user, see these resources:
+> * [About Windows device enrollment with Intune Company Portal](../user-help/what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md)
+. * [What info can your company see when you enroll your device?](../user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md).  
 
 ## Prerequisites
 

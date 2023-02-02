@@ -1174,31 +1174,30 @@ items:
           href: ./fundamentals/deployment-guide-enrollment-windows.md
         - name: Pre-enrollment configurations  
           items:
-          - name: Enable MDM automatic enrollment  
+          - name: Set up automatic enrollment - DUPLICATE 
             href: ./enrollment/windows-enroll.md
-          - name: Enable automatic discovery of MDM server      
+          - name: Enable automatic discovery for MDM server      
             href: ./enrollment/windows-enrollment-create-cname.md
           - name: Set up Intune Connector for Active Directory  
             href: ./enrollment/autopilot-hybrid-connector-proxy.md
           - name: Set up Enrollment Status Page
             href: ./enrollment/windows-enrollment-status.md
-        - name: Enrollment scenarios
+        - name: Enrollment setup scenarios
           - items: 
-            - name: Tutorial - Enroll devices in bulk    
-              href: ./enrollment/windows-bulk-enroll.md
-            - name: Tutorial - Set up automatic enrollment
-              href: ./enrollment/quickstart-setup-auto-enrollment.md
-            - name: Tutorial - Enroll your Windows 10/11 device
-              href: ./enrollment/quickstart-enroll-windows-device.md
-            - name: Tutorial - Use Autopilot to enroll Windows devices
+            - name: Tutorial - Set up enrollment for Windows Autopilot devices     
               href: ./enrollment/tutorial-use-autopilot-enroll-devices.md
+            - name: Tutorial - Enroll devices in bulk using provisioning package     
+              href: ./enrollment/windows-bulk-enroll.md
+            - name: Tutorial - Set up automatic enrollment - DUPLICATE  
+              href: ./enrollment/quickstart-setup-auto-enrollment.md
+            - name: Tutorial - Enroll device in BYOD scenario  
+              href: ./enrollment/quickstart-enroll-windows-device.md
+
       - name: Set up Android enrollment
         items:
         - name: Android enrollment guide
           href: ./fundamentals/deployment-guide-enrollment-android.md
           displayName: COBO
-        - name: Enrollment method overview  - DELETE/REPLACE w/enrollment guide
-          href: ./enrollment/android-enroll.md
         - name: Android Enterprise enrollment solutions    
           items:
           - name: Prerequisite- Connect Intune to Android Enterprise 
@@ -1246,8 +1245,6 @@ items:
         items:
         - name: iOS, iPadOS enrollment guide
           href: ./fundamentals/deployment-guide-enrollment-ios-ipados.md
-        - name: Set up iOS/iPadOS enrollment - REMOVE/REPLACE w/enrollment guide
-          href: ./enrollment/ios-enroll.md
         - name: Automated Device Enrollment
           href: ./enrollment/device-enrollment-program-enroll-ios.md
         - name: Shared device overview
@@ -1284,14 +1281,18 @@ items:
           href: ./fundamentals/deployment-guide-enrollment-linux.md
       - name: Set up macOS enrollment
         items:
-        - name: macOS enrollment guide  
+        - name: Mac enrollment guide  
           href: ./fundamentals/deployment-guide-enrollment-macos.md
-        - name: Set up macOS enrollment  - DELETE/REPLACE w/enrollment guide
-          href: ./enrollment/macos-enroll.md
-        - name: Automated device enrollment for macOS
-          href: ./enrollment/device-enrollment-program-enroll-macos.md
-        - name: Direct Enrollment for macOS 
-          href: ./enrollment/device-enrollment-direct-enroll-macos.md      
+        - name: Pre-enrollment configurations  
+          items: 
+          - name: Mac enrollment configurations  - Break into smaller pieces  
+            href: ./enrollment/macos-enroll.md  
+        - name: Mac enrollment solutions  
+          items: 
+          - name: Set up automated device enrollment for macOS
+            href: ./enrollment/device-enrollment-program-enroll-macos.md
+          - name: Set up Direct Enrollment for macOS 
+            href: ./enrollment/device-enrollment-direct-enroll-macos.md      
       - name: Troubleshoot enrollment
         items:
         - name: Get incomplete user enrollment report
