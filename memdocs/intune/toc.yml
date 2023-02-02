@@ -1183,7 +1183,7 @@ items:
           - name: Set up Enrollment Status Page
             href: ./enrollment/windows-enrollment-status.md
         - name: Enrollment setup scenarios
-          - items: 
+          items: 
             - name: Tutorial - Set up enrollment for Windows Autopilot devices     
               href: ./enrollment/tutorial-use-autopilot-enroll-devices.md
             - name: Tutorial - Enroll devices in bulk using provisioning package     
