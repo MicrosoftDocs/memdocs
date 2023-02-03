@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/17/2023
+ms.date: 01/27/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -65,6 +65,254 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Scripts
 ### Tenant administration
 -->
+## Week of January 30, 2023
+
+### Device management
+
+#### HTC Vive Focus 3 supported on Microsoft Intune for Android Open Source Devices<!--15670082--> 
+
+Microsoft Intune for Android open source project devices (AOSP) now supports HTC Vive Focus 3. 
+
+For more information go to [Operating systems and browsers supported by Microsoft Intune](../fundamentals/supported-devices-browsers.md)
+
+Applies to:
+
+- Microsoft Intune (AOSP)
+#### Introducing support for laser pointers in Remote Help<!-- 16108312 -->
+
+In Remote Help, you can now use a laser pointer when you are providing assistance on Windows.
+
+For more information on Remote Help, go to [Remote Help](../remote-actions/remote-help.md).
+
+Applies to:
+
+ - Windows 10/11
+## Week of January 23, 2023 (Service release 2301)
+
+### App management
+
+#### Configure whether to show Configuration Manager apps in Windows Company Portal<!-- 9135109 -->
+In Intune you can choose whether to show or hide Configuration Manager apps from appearing in the Windows Company Portal. This option is available in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Tenant administration** > **Customization**. Next to **Settings**, select **Edit**. The option to **Show** or **Hide** the Configuration Manager applications are located in the **App Sources** section of the pane. For related information about configuring the Company Portal app, see [How to configure the Intune Company Portal apps, Company Portal website, and Intune app](../apps/company-portal-app.md).
+
+#### Block pinning web pages to Managed Home Screen app<!-- 15593458 -->
+On Android Enterprise dedicated devices using Managed Home Screen, you can now use app configuration to configure the Managed Home Screen app to block pinning browser web pages to Managed Home Screen. The new `key` value is `block_pinning_browser_web_pages_to_MHS`. For more information, see [Configure the Microsoft Managed Home Screen app for Android Enterprise](../apps/app-configuration-managed-home-screen-app.md).
+
+### Device management
+
+#### Grace period status visible in Microsoft Intune app for Android<!-- 13498225 -->  
+The Microsoft Intune app for Android now shows a grace period status to account for devices that don't meet compliance requirements but are still within their given grace period. Users can see the date by which devices must be compliant, and the instructions for how to become compliant. If they don't update their device by the given date, the device is marked as noncompliant. For more information, see the following docs:  
+- [Configure compliance policies with actions for noncompliance](../protect/actions-for-noncompliance.md#available-actions-for-noncompliance)    
+- [Check compliance status](../user-help/check-compliance-microsoft-intune-app-android.md)  
+
+
+#### Software update policies for macOS are now generally available<!-- 12393100 -->   
+Software update policies for macOS devices are now generally available. This general availability applies to supervised devices running macOS 12 (Monterey) and later. We will continue to add improvements to this feature going forward.  
+
+For more information, see [Use Microsoft Intune policies to manage macOS software updates](../protect/software-updates-macos.md).
+
+#### Windows Autopilot device diagnostics<!-- 16697347 -->
+Windows Autopilot diagnostics is available to download in Microsoft Endpoint Manager admin center from either in the Autopilot deployments monitor or Device Diagnostics monitor for an individual device.
+
+### Device enrollment
+
+#### Enrollment notifications now generally available<!-- 16545401 -->
+Enrollment notifications are now generally available, and are supported on Windows, Apple, and Android devices. This feature is only supported with user-driven enrollment methods. For more information, see [Set up enrollment notifications](../enrollment/enrollment-notifications.md).  
+
+#### Skip or show Terms of Address pane in Setup Assistant<!-- 14661838 -->  
+Configure Microsoft Intune to skip or show a new Setup Assistant pane called **Terms of Address** during Apple Automated Device Enrollment. The Terms of Address pane lets users on iOS/iPadOS and macOS devices personalize their device by selecting how the system addresses them: feminine, neutral, or masculine.  The pane is visible during enrollment by default, and is available for select languages.  You can hide it on devices running iOS/iPadOS 16 and later, and macOS 13 and later. For more information about the Setup Assistant screens supported in Intune, see:  
+
+- [Setup Assistant screens for Macs](../enrollment/device-enrollment-program-enroll-macos.md#setup-assistant-screen-reference)
+- [Setup Assistant screens for iOS/iPadOS](../enrollment/device-enrollment-program-enroll-ios.md#setup-assistant-screen-reference)
+
+### Device security
+
+#### Microsoft Tunnel for Mobile Application Management for iOS/iPadOS (Preview)<!-- 15769204, 9851288 -->  
+
+As a public preview, you can use the Mobile Application Management (MAM) to the Microsoft Tunnel VPN gateway for iOS/iPadOS. With this preview for iOS devices that have not enrolled with Intune, supported apps on those unenrolled devices can use Microsoft Tunnel to connect to your organization when working with corporate data and resources. This includes VPN gateway support for:
+
+- Secure access to on-premises apps and resources using modern authentication
+- Single Sign On and conditional access
+
+For more information, go to:
+
+- [Microsoft Tunnel for Mobile Application Management for iOS/iPadOS admin guide (public preview)](../protect/microsoft-tunnel-mam-ios.md)
+- [Microsoft Tunnel for MAM iOS SDK developer guide](../developer/tunnel-mam-ios-sdk.md)
+
+Applies to:
+
+- iOS/iPadOS
+
+####  Attack surface reduction policy support for Security settings management for Microsoft Defender for Endpoint <!-- 13816760 -->  
+Attack surface reduction policy is now supported by devices managed through the [MDE Security configuration](../protect/mde-security-integration.md#which-solution-should-i-use) scenario. To use this policy with devices that use Microsoft Defender for Endpoint but aren't enrolled with Intune:
+
+1. In the Endpoint Security node, create a new *Attack surface reduction* policy.
+2. Select **Windows 10, Windows 11, and Windows Server** as the *Platform*.
+3. Select **Attack Surface Reduction Rules** for the *Profile*.  
+
+Applies to:  
+- Windows 10
+- Windows 11
+
+#### SentinelOne – New mobile threat defense partner<!-- 13911932 -->
+You can now use [SentinelOne](../protect/sentinelone-mobile-threat-defense-connector.md) as an integrated Mobile Threat Defense (MTD) partner with Intune. By configuring the SentinelOne connector in Intune, you can control mobile device access to corporate resources using conditional access that's based on risk assessment in your compliance policy. The SentinelOne connector can also send risk levels to app protection policies.
+
+### Device configuration
+
+#### Device Firmware Configuration Interface (DFCI) will support Fujitsu devices<!--10249866 -->
+
+For Windows 10/11 devices, you can create a DFCI profile to manage UEFI (BIOS) settings (**Devices** > **Configuration profiles** > **Create profile** > **Windows 10 and later** for platform > **Templates** > **Device Firmware Configuration Interface** for profile type).
+
+Some Fujitsu devices running Windows 10/11 are enabled for DFCI. Contact your device vendor or device manufacturer for eligible devices.
+
+For more information about DFCI profiles, go to:
+
+- [Configure Device Firmware Configuration Interface (DFCI) profiles on Windows devices in Microsoft Intune](../configuration/device-firmware-configuration-interface-windows.md)
+- [Device Firmware Configuration Interface (DFCI) management with Windows Autopilot](../../autopilot/dfci-management.md)
+
+Applies to:
+
+- Windows 10
+- Windows 11
+
+#### Support for multi-SIM iOS/iPadOS device inventory<!--16360290 -->
+You can now view the service subscription fields on devices that have multiple SIM cards installed under the per-device Hardware section. The inventory fields that are capable of reporting multiple values to Intune are:
+
+- ICCID
+- IMEI
+- MEID
+- Phone number
+
+These fields will default to using labels returned by the device, such as: *Primary*, *Secondary*, *CTSubscriptionSlotOne*, and *CTSubscriptionSlotTwo*. These returned labels may be displayed in the language of the local device that is reporting its inventory to Intune.
+
+Applies to:
+- iOS/iPadOS
+
+#### Support for Bulk Device Actions on devices running Android AOSP<!--15397458 -->
+You can now complete "Bulk Device Actions" for devices running Android AOSP. The bulk device actions supported on devices running AOSP are Delete, Wipe and Restart.
+
+Applies to:  
+- AOSP
+
+#### Updated descriptions for iOS/iPadOS and macOS settings in the settings catalog<!-- 16360170 -->
+The settings catalog lists all the settings you can configure, and all in one place. For the iOS/iPadOS and macOS settings, for each setting category, the descriptions are updated to include more detailed information.
+
+For more information on the settings catalog, go to:
+- [Use the settings catalog to configure settings on Windows, iOS/iPadOS and macOS devices](../configuration/settings-catalog.md)
+- [Common tasks you can complete using the Settings Catalog in Intune](../configuration/settings-catalog-common-features.md)
+
+Applies to:
+- iOS/iPadOS
+- macOS
+
+#### New settings available in the Apple Settings Catalog<!--16237513  -->
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
+
+New settings are available in the Settings Catalog. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can see these settings at **Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type.
+
+New settings include:
+
+**Accounts > Subscribed Calendars**:
+- Account Description
+- Account Host Name
+- Account Password
+- Account Use SSL
+- Account Username
+
+Applies to:
+- iOS/iPadOS
+
+**Networking > Domains**:
+- Cross Site Tracking Prevention Relaxed Domains
+
+Applies to:
+- macOS
+
+The following settings are also in Settings Catalog. Previously, they were only available in Templates:
+
+**File Vault**:
+- User Enters Missing Info 
+
+Applies to:
+- macOS
+
+**Restrictions**:
+- Rating Region
+
+Applies to:
+- iOS/iPadOS
+
+For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
+
+
+#### Filter app and policy assignments by the device's Azure AD Join type (`deviceTrustType`)<!-- 8110331 -->
+When you assign an app or policy, you can filter the assignment using different device properties, such as device manufacturer, operating system SKU, and more.
+
+A new device filter property `deviceTrustType` is available for Windows 10 and later devices. With this property, you can filter app and policy assignments depending on the Azure AD Join type, with values of "Azure AD Joined", "Hybrid Azure AD Joined", and "Azure AD registered".
+
+For more information on filters and the device properties you can use, go to:
+- [Use filters when assigning your apps, policies, and profiles in Intune](filters.md)
+- [Device properties, operators, and rule editing when creating filters in Intune](filters-device-properties.md)
+
+Applies to:
+
+- Windows 10 and later
+
+### Monitor and troubleshoot
+
+#### Download mobile app diagnostics in the Microsoft Endpoint Manager admin center (public preview)<!-- 9353471 -->  
+Now in public preview, access user-submitted mobile app diagnostics in the admin center, including app logs sent through Company Portal app for Android, AOSP, or Windows, with support for iOS, macOS, and Microsoft Edge for iOS coming at a later date. For more information about accessing mobile app diagnostics for Company Portal, see [Configure Company Portal](../apps/company-portal-app.md#app-logs).
+
+#### WinGet troubleshooting using diagnostic files<!-- 16724699 -->
+[WinGet](/windows/package-manager/winget/) is a command line tool that enables you to discover, install, upgrade, remove, and configure applications on Windows 10 and Windows 11 devices. When working with [Win32 app management in Intune](../apps/apps-win32-app-management.md), you can now use the following file locations to help troubleshoot WinGet:
+- *%TEMP%\winget\defaultstate\*.log*
+- *Microsoft-Windows-AppXDeployment/Operational*
+- *Microsoft-Windows-AppXDeploymentServer/Operational*
+
+#### Intune troubleshooting pane update<!-- 4442647 -->  
+A new experience for the Intune Troubleshooting pane will provide details about user's devices, policies, applications, and status. The troubleshooting pane will include the following information:
+
+- A summary of policy, compliance, and application deployment status.
+- Support for exporting, filtering, and sorting all reports.
+- Support to filter by excluding policies and applications.
+- Support to filter to a user’s single device.
+- Details about available device diagnostics and disabled devices.
+- Details about offline devices that haven't checked-in to the service for three or more days.
+
+You can find the troubleshooting pane in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Troubleshooting + support** > **Troubleshoot**. To view the new experience during preview, select **Preview upcoming changes to Troubleshooting and provide feedback** to display the **Troubleshooting preview** pane, then select **Try it now**.
+
+#### New report for devices without compliance policy (preview)<!--14911124 --> 
+We’ve added a new report named **Devices without compliance policy** to the Device compliance reports you can access through the *Reports* node of the Microsoft Endpoint Manager admin center.  This report, which is in preview, uses a  newer reporting format that provides for more capabilities.
+
+To learn about this new organizational report, see [Devices without compliance policy (preview) (Organizational)](../fundamentals/reports.md#devices-without-compliance-policy-preview-organizational).
+
+An older version of this report remains available through the *Devices > Monitor* page of the admin center. Eventually, that older report version will be retired, though it remains available for now.  
+
+#### Service health messages for tenant issues that require administrative attention<!-- 14791676 -->  
+The *Service health and message center page* in the Microsoft Endpoint Manager admin center can now display messages for **Issues in your environment that require action**. These messages are important communications that are sent to a tenant to alert administrators about issues in their environment that might require action to resolve. 
+
+You can view messages for *Issues in your environment that require action* in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by going to **Tenant administration** > **Tenant status** and then selecting the **Service health and message center** tab.
+
+For more information about this page of the admin center, see [View details about your Tenant on the Intune tenant status page](../fundamentals/tenant-status.md).
+
+### Tenant administration
+
+#### Improved UI experience for multiple certificate connectors<!-- 16263248 -->
+We’ve added pagination controls to the *Certificate connectors* view to help improve the experience when you have more than 25 certificate connectors configured. With the new controls, you can see the total number of connector records and easily navigate to a specific page when viewing your certificate connectors.
+
+To view certificate connectors, in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Tenant administration** > **Connectors and tokens** > **Certificate connectors**.
+
+### Intune apps
+
+#### Newly available protected app for Intune<!-- 16620158 -->
+The following protected app is now available for Microsoft Intune:
+- Voltage SecureMail by Voltage Security
+
+For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
+
+### Scripts
+
+#### Preview PowerShell script package content in Endpoint Analytics<!-- 12930245 -->
+Admins can now see a preview of a PowerShell script's content for proactive remediations. The content will be displayed in a grayed-out box with scrolling capability. Admins will not be able to edit the content of the script in the preview. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Reports** > **Endpoint analytics** > **Proactive remediations**. For related information, see [PowerShell scripts for Proactive remediations](../../analytics/powershell-scripts.md).
 
 ## Week of January 16, 2023
 
@@ -109,8 +357,8 @@ For more information about protected apps, see [Microsoft Intune protected apps]
 
 ### Device configuration
 
-#### Remote help client app includes a new option to disable chat functionality in the Tenant level setting<!-- 14685052 -->  
-In the Remote help app, admins have the option to disable chat functionality from the new tenant level setting. Turning on the disable chat feature will remove the chat button in the Remote Help app. This setting can be found in the Remote Help **Settings** tab under **Tenant Administration** in Microsoft Intune.
+#### Remote Help client app includes a new option to disable chat functionality in the Tenant level setting<!-- 14685052 -->  
+In the Remote Help app, admins have the option to disable chat functionality from the new tenant level setting. Turning on the disable chat feature will remove the chat button in the Remote Help app. This setting can be found in the Remote Help **Settings** tab under **Tenant Administration** in Microsoft Intune.
 
 For more information, see [Configure Remote Help for your tenant](../remote-actions/remote-help.md#configure-remote-help-for-your-tenant).
 
@@ -268,7 +516,7 @@ Applies to:
 
 - Android Enterprise 12.0 and newer personally owned devices with a work profile
 
-#### New settings available in the iOS/iPadOS and macOS Settings Catalog <!-- 16068756 -->  
+#### New settings available in the iOS/iPadOS and macOS Settings Catalog<!-- 16068756 -->  
 The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
 
 New settings are available in the Settings Catalog. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can see these settings at **Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type.
@@ -725,14 +973,14 @@ In the admin center, you can:
   - Custom compliance
   - Device encryption
   - Password policy
-- [Apply custom compliance settings](../protect/compliance-use-custom-settings.md) using POSIX-complaint shell scripts for discovery, and JSON files to define the custom settings you want to use.
+- [Apply custom compliance settings](../protect/compliance-use-custom-settings.md) using POSIX-compliant shell scripts for discovery, and JSON files to define the custom settings you want to use.
 
 ## Week of October 03, 2022
 
 ### Device Security
 
 #### Non-compliance warning message includes a link<!--13694184  -->  
-In Remote help, a link has been added to the non-compliance warning notification **View device compliance information** and it allows a helper to learn more about why the device is not compliant in Microsoft Endpoint Manager.
+In Remote Help, a link has been added to the non-compliance warning notification **View device compliance information** and it allows a helper to learn more about why the device is not compliant in Microsoft Endpoint Manager.
 
 For more information, go to:
 
@@ -938,11 +1186,11 @@ With Apple's release of macOS 13 Ventura, Microsoft Intune, the Company Portal a
 
 ### Device management
 
-#### Remote help version: 4.0.1.13 release<!-- 15329690 -->
+#### Remote Help version: 4.0.1.13 release<!-- 15329690 -->
 
-With Remote help 4.0.1.13 fixes were introduced to address an issue that prevented people from having multiple sessions open at the same time. The fixes also addressed an issue where the app was launching without focus, and prevented keyboard navigation and screen readers from working on launch.
+With Remote Help 4.0.1.13 fixes were introduced to address an issue that prevented people from having multiple sessions open at the same time. The fixes also addressed an issue where the app was launching without focus, and prevented keyboard navigation and screen readers from working on launch.
 
-For more information, go to [Use remote help with Intune and Microsoft Endpoint Manager](../remote-actions/remote-help.md)
+For more information, go to [Use Remote Help with Intune and Microsoft Endpoint Manager](../remote-actions/remote-help.md)
 
 ## Week of August 29, 2022
 
@@ -1237,10 +1485,10 @@ For more information, see [View device details with Microsoft Intune](../remote-
 Applies to:
 - iOS/iPadOS, macOS
 
-#### Remote help Version: 4.0.1.12 release<!-- 14999203 -->
-With Remote help 4.0.1.12 various fixes were introduced to address the 'Try again later' message that appears when not authenticated. The fixes also include an improved auto-update capability. 
+#### Remote Help Version: 4.0.1.12 release<!-- 14999203 -->
+With Remote Help 4.0.1.12 various fixes were introduced to address the 'Try again later' message that appears when not authenticated. The fixes also include an improved auto-update capability. 
 
-For more information, see [Use remote help with Intune and Microsoft Endpoint Manager](../remote-actions/remote-help.md)
+For more information, see [Use Remote Help with Intune and Microsoft Endpoint Manager](../remote-actions/remote-help.md)
 
 ### Device enrollment
 

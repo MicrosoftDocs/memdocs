@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/04/2022
+ms.date: 01/17/2023
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: apps

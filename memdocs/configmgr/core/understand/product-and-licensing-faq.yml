@@ -93,7 +93,7 @@ sections:
             - Assign a full Intune license to the user, and manage their devices through Intune.
             - Unenroll the devices from Basic Mobility and Security.
           
-          - The licensing that you previously had for System Center Configuration Manager still applies to Microsoft Endpoint Configuration Manager. If installing a new site, use existing product keys.
+          - The licensing that you previously had for System Center Configuration Manager still applies to Microsoft Configuration Manager. If installing a new site, use existing product keys.
           
           |Feature | Co-management license | Full Intune license |
           |---------|---------|---------|

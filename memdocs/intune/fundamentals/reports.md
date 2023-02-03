@@ -8,7 +8,7 @@ keywords:
 author: erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/09/2022
+ms.date: 01/13/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -131,7 +131,37 @@ In this report, you can also:
 - Sort the columns in ascending and descending order.
 - Page through the results using the **Previous** and **Next** buttons.
 
+### Devices without compliance policy (preview) (Organizational)
+
+*This report is in preview.*
+
+In public preview, this report allows admins to:
+
+- Identify devices that haven't been assigned a compliance policy.
+  
+  We recommend that every device in each tenant is targeted by a compliance policy.
+
+- View the configuration of the tenant-wide *Compliance policy setting* named **Mark devices with no compliance policy assigned as**. By default, this setting marks a device without an assigned policy as *Compliant*.
+
+  We recommend that this setting be configured to mark devices that aren't targeted by a compliance policy as *Not compliant*. To aid admins in managing this setting, the report provides a link that opens the *Compliance policy settings* node where setting can be changed. For more information, see [Compliance policy settings](../protect/device-compliance-get-started.md#compliance-policy-settings).
+
+To generate the report, use the following steps:
+
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Reports** > **Device compliance** > **Reports** tab > **Devices without compliance policy (preview)**.
+3. Select **Generate report**. In the report, look at the following information:
+
+The report generates one row per device that hasn't been assigned a compliance policy. In the report, you'll find the following columns of information that can be used to sort the results. The report also supports search:
+
+- **Device name** - The name of the device as it appears when viewing Devices and creating groups.
+- **User Principal Name** - The primary user of the device.
+- **OS** - The operating system of the device, like *Windows*, or *Android*.
+- **OS version** - The OS version, like *22000.675* for Windows, or *12.0* for Android.
+- **Device model** - Model information such as *Surface Book 2*, or *Galaxy Note 10*.
+- **Device ID**
+
 ## Noncompliant devices report (Operational)
+
 The **Noncompliant devices** report provides data typically used by Helpdesk or admin roles to identify problems and help remediate issues. The data found in this report is timely, calls out unexpected behavior, and is meant to be actionable. The report is available alongside the workload, making the non-compliant devices report accessible without browsing away from active workflows. This report provides filtering, searching, paging, and sorting capabilities. Also, you can drill down to help troubleshoot.
 
 You can view the **Noncompliant devices** report using the following steps:
@@ -415,7 +445,7 @@ To see a generated report, you can use the following steps:
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All Apps** > *Select an app* > **User Install status**.
 
-## Windows 10 MDM Firewall status (Organizational)
+## MDM Firewall status for Windows 10 and later (Organizational)
 
 *In public preview.*  *This report is also described in [Endpoint security firewall policy](../protect/endpoint-security-firewall-policy.md#mdm-devices-running-windows-10-or-later-with-firewall-off) along with the Windows 10 MDM devices with firewall off report, which is only available from within the endpoint security node.*
 

@@ -29,7 +29,7 @@ ms.collection:
 ---
 
 # Microsoft Intune licensing
-Microsoft Intune is available for different customer needs and organization sizes, from a simple-to-use management experience for schools and small businesses, to more advanced functionality required by enterprise customers. Most licenses that include Microsoft Intune also grant the rights to use Microsoft Endpoint Configuration Manager, as long as the subscription remains active. An admin must have a license assigned to them to administer Intune (unless you [allow unlicensed admins](unlicensed-admins.md)).
+Microsoft Intune is available for different customer needs and organization sizes, from a simple-to-use management experience for schools and small businesses, to more advanced functionality required by enterprise customers. Most licenses that include Microsoft Intune also grant the rights to use Microsoft Configuration Manager, as long as the subscription remains active. An admin must have a license assigned to them to administer Intune (unless you [allow unlicensed admins](unlicensed-admins.md)).
 
 ## Microsoft Intune
 
@@ -64,9 +64,9 @@ For existing Configuration Manager-managed devices to enroll into Intune for co-
 
 Microsoft Endpoint Manager offers premium add-ons. Licenses for the premium add-ons can be added for an additional cost to the licensing options that include Microsoft Endpoint Manager or Intune. 
 
-- **Remote help**: This add-on capability allows secure, helpdesk-to-endpoint connections with role-based remote access permissions.
+- **Remote Help**: This add-on capability allows secure, helpdesk-to-endpoint connections with role-based remote access permissions.
  
-  - [Learn more about remote help](../remote-actions/remote-help.md)
+  - [Learn more about Remote Help](../remote-actions/remote-help.md)
   
   - For information about trial and purchasing, see [Getting started with premium add-ons](premium-add-ons.md)
   

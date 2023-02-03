@@ -18,6 +18,8 @@ items:
       href: app-wrapper-prepare-ios.md
     - name: Intune App SDK for iOS
       href: app-sdk-ios.md
+    - name: Tunnel for MAM iOS SDK
+      href: tunnel-mam-ios-sdk.md
     - name: App Wrapping Tool for Android
       href: app-wrapper-prepare-android.md
       displayName: dex

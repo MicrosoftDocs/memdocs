@@ -51,6 +51,7 @@ The compliance state is then evaluated by conditional access policies, the same 
 
 The following compliance partners are supported as generally available:
 
+- Addigy
 - BlackBerry UEM
 - Citrix Workspace device compliance
 - IBM MaaS360
@@ -59,6 +60,10 @@ The following compliance partners are supported as generally available:
 - MobileIron Device Compliance On-prem
 - SOTI MobiControl
 - VMware Workspace ONE UEM (formerly AirWatch)
+
+> [!NOTE]
+> If you offer an MDM product and would like to onboard as a device compliance partner, fill out this Form: [Intune partner compliance onboarding.](https://aka.ms/IntunePartnerComplianceOnboarding)
+
 
 ## Prerequisites
 

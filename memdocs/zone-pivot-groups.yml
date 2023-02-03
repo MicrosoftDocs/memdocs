@@ -33,3 +33,13 @@ groups:
       title: April 2020
     - id: atp-march-2020
       title: March 2020
+- id: apple-enterprise-sso
+  title: Enterprise single sign-on platform
+  prompt: Select your platform
+  pivots:
+    - id: all
+      title: All platforms
+    - id: ios-ipados
+      title: iOS/iPadOS
+    - id: macos
+      title: macOS

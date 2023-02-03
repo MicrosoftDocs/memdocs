@@ -146,8 +146,6 @@ The following features of Software Center aren't currently available in the Comp
 
 Other known issues:
 
-- If you deploy the same app from both Configuration Manager and Intune, it appears twice in the Company Portal.
-
 - When you search Company Portal, Intune apps always display before Configuration Manager apps.
 
 ## Next steps
