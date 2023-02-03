@@ -39,7 +39,7 @@ Applies to:
 To extend your existing [Microsoft Tunnel configuration](../protect/microsoft-tunnel-configure.md) to support [MAM](../fundamentals/deployment-guide-enrollment-mamwe.md), you’ll create and deploy three profiles that configure this support on your unenrolled devices:
 
 - App configuration policy for Microsoft Defender. This policy configures Microsoft Defender for Endpoint on a device as the VPN tunnel client app.
-- App configuration policy for Microsoft Edge. This policy configures Microsoft Edge to support identity-switch, providing the ability to automatically connect and disconnect the VPN tunnel when switching from a Microsoft "Work or school" account to a Microsoft "personal account" in Microsoft Edge.
+- App configuration policy for Microsoft Edge. This policy configures Microsoft Edge to support identity-switch, which automatically connects and disconnects the VPN tunnel when switching from a Microsoft "Work or school" account to a Microsoft "personal account" in Microsoft Edge.
 - App protection policy to automatically start the connection to Microsoft Tunnel when the MAM enabled app on the device accesses corporate resources.
 
 With these policies in place, your existing Site and Server configurations for Tunnel support access from devices that aren't enrolled in Intune. In addition, you can choose to deploy your configurations for MAM Tunnel to enrolled devices instead of using MDM Tunnel configurations. In this scenario, an enrolled device must use only the MDM Tunnel configurations or the MAM Tunnel configurations, but not both. For example, enrolled devices can't have an app like Microsoft Edge that uses MAM tunnel configurations while other apps use MDM Tunnel configurations.
@@ -80,7 +80,7 @@ When all three are configured and deployed to the same groups, the app protectio
 
 Create an App configuration policy to configure Microsoft Defender for Endpoint on the device for use as the tunnel client app.
 > [!NOTE]
-> Ensure only 1 Defender app configuration policy is targeted to the unenrolled device.  Targeting more than 1 app configuration policy with different tunnel settings for Defender for Endpoint will create tunnel connection issues on the device.
+> Ensure only a single Defender app configuration policy targets the unenrolled device. Targeting more than 1 app configuration policy with different tunnel settings for Defender for Endpoint will create tunnel connection issues on the device.
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Apps** > **App Configuration polices** > **Add** > **Managed Apps**.
 
@@ -144,7 +144,6 @@ Create an App configuration policy for Microsoft Edge. This policy configures Mi
 
    > [!NOTE]
    > Ensure there are no trailing spaces at the end of the General configuration setting. This setting provides “Identity switch” support to Edge on Android. This enables Edge on Android to automatically connect the VPN when signing in with a “Work account or School account” and disconnect the VPN when switching to a “Personal account” enabling in-Private browsing.
-
 
    You can also use this same policy to configure other configurations for Microsoft Edge in the *Microsoft Edge configuration settings* category. After any additional configurations for Microsoft Edge are ready, select **Next**.
 
@@ -246,5 +245,6 @@ The preview for Microsoft Tunnel for unenrolled devices is supported for GGC Hig
 - [MAM Tunnel for iOS](../protect/microsoft-tunnel-mam-ios.md)
 
 Also see:
+
 - [Configure Microsoft Tunnel](../protect/microsoft-tunnel-configure.md)
 - [Monitor Microsoft Tunnel](../protect/microsoft-tunnel-monitor.md)
