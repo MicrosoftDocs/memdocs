@@ -135,7 +135,7 @@ items:
       items:
       - name: Get started with your deployment
         href: ./fundamentals/get-started-with-intune.md
-      - name: Protection and configuration levels (DRAFT)
+      - name: Protection and configuration levels
         href: ./fundamentals/protection-configuration-levels.md
 
       - name: Step 1 - Set up Intune subscription
@@ -508,6 +508,8 @@ items:
         items:
         - name: Profiles - Get started
           href: ./configuration/device-profile-create.md
+        - name: Monitor existing profiles
+          href: ./configuration/device-profile-monitor.md
         - name: Settings catalog
           displayName: gpo, admx
           items:
@@ -1309,22 +1311,9 @@ items:
 
     - name: Assign and deploy policies
       items: 
-      - name: Use filters when assigning policies
-        items:
-        - name: Create a filter
-          href: ./fundamentals/filters.md
-        - name: Filter properties
-          href: ./fundamentals/filters-device-properties.md
-        - name: Supported workloads
-          href: ./fundamentals/filters-supported-workloads.md
-        - name: Reporting and troubleshooting (instead of troubleshooting change to conflict resolution or something)
-          href: ./fundamentals/filters-reports-troubleshoot.md
-      - name: Use policy sets to group policies together
-        href: ./fundamentals/policy-sets.md
       - name: Assign policies to users & groups
-        href: ./configuration/device-profile-assign.md
         displayName: deploy, push
-      - name: Assign app policies
+        href: ./configuration/device-profile-assign.md
         items:
         - name: Assign apps to groups
           href: ./apps/apps-deploy.md
@@ -1338,6 +1327,18 @@ items:
           href: ./apps/apps-deploy-gcc-dod.md
       - name: Common questions and answers
         href: ./configuration/device-profile-troubleshoot.md
+      - name: Use filters when assigning policies
+        items:
+        - name: Create a filter
+          href: ./fundamentals/filters.md
+        - name: Filter properties
+          href: ./fundamentals/filters-device-properties.md
+        - name: Supported workloads
+          href: ./fundamentals/filters-supported-workloads.md
+        - name: Reporting and troubleshooting (instead of troubleshooting change to conflict resolution or something)
+          href: ./fundamentals/filters-reports-troubleshoot.md
+      - name: Use policy sets to group policies together
+        href: ./fundamentals/policy-sets.md
       - name: Troubleshoot policies and profiles
         href: /troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune
 
