@@ -30,7 +30,7 @@ With Windows Autopilot Deployment and Intune, you can manage Unified Extensible 
 
 If a user reinstalls a previous Windows version, installs a separate OS, or formats the hard drive, they can't override DFCI management. This feature can also prevent malware from communicating with OS processes, including elevated OS processes. DFCI's trust chain uses public key cryptography, and doesn't depend on local UEFI password security. This layer of security blocks local users from accessing managed settings from the device's UEFI menus.
 
-For an overview of DFCI benefits, scenarios, and prerequisites, see [Device Firmware Configuration Interface (DFCI) Introduction](https://microsoft.github.io/mu/dyn/mu_plus/DfciPkg/Docs/Dfci_Feature/).
+For an overview of DFCI benefits, scenarios, and prerequisites, see [Device Firmware Configuration Interface (DFCI) Introduction](https://microsoft.github.io/mu/dyn/mu_feature_dfci/DfciPkg/Docs/Dfci_Feature/).
 
 ## DFCI management lifecycle
 
@@ -75,10 +75,11 @@ You can also [change existing DFCI settings](/intune/configuration/device-firmwa
 - [Microsoft Surface](/surface/surface-manage-dfci-guide)
 - Acer
 - Panasonic
+- Fujitsu
 
 Other OEMs are pending.
 
 ## See also
 
-[Microsoft DFCI Scenarios](https://microsoft.github.io/mu/dyn/mu_plus/DfciPkg/Docs/Scenarios/DfciScenarios/)<br>
+[Microsoft DFCI Scenarios](https://microsoft.github.io/mu/dyn/mu_feature_dfci/DfciPkg/Docs/Scenarios/DfciScenarios/)<br>
 [Windows Autopilot and Surface devices](/surface/windows-autopilot-and-surface-devices)<br>
