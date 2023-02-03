@@ -141,7 +141,7 @@ To support Microsoft Defender for Endpoint security configuration management thr
 
 Microsoft Defender for Endpoint supports several options to onboard devices. For current guidance, see [Onboarding tools and methods for Windows devices](/microsoft-365/security/defender-endpoint/security-config-management) in the Defender for Endpoint documentation.
 
-## Co-existence with Microsoft Endpoint Configuration Manager
+## Co-existence with Microsoft Configuration Manager
 
 In some environments it might be desired to use Security Management for Microsoft Defender for Endpoint with [Configuration Manager tenant attach](/mem/configmgr/tenant-attach/endpoint-security-get-started). If you use both, you’ll need to control policy through a single channel, as using more than one channel creates the opportunity for conflicts and undesired results.
 
