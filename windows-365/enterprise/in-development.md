@@ -54,13 +54,6 @@ To help in your readiness and planning, this page lists Windows 365 updates and 
 -->
 
 <!-- ***********************************************-->
-## App management
-
-### Windows 365 app will support Windows 10<!--42212516-->
-
-In a future update, the Windows 365 app will support Windows 10.
-
-<!-- ***********************************************-->
 ## Device provisioning
 
 ### Add more Azure Network Connections to a provisioning policy<!--42906565-->
