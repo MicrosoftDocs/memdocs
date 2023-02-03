@@ -75,6 +75,36 @@ You must create an enrollment profile so that users can enroll corporate-owned w
 3. Choose **Next**.
 5. On the **Review + create** page, choose **Create** to create the policy.
 
+### Access enrollment token  
+After you create a profile, Intune generates a token that's needed for enrollment. There are two ways to access the token:
+
+One way is:
+1. Choose **Devices** > **Android** > **Android enrollment** > **Android Enterprise** > **Corporate-owned devices with work profile**.
+2. From the list, select your enrollment profile. 
+2. Select **Token**. 
+
+Another way to find the token is:
+1. Choose **Devices** > **Android** > **Android enrollment** > **Android Enterprise** > **Corporate-owned devices with work profile**.
+2. Locate your profile in the list, and then select the **More** (**...**) menu that's next to it.
+3. Select **View enrollment token**.  
+
+The token appears as an 8-digit string and a QR code. Use this token to enroll based on the enrollment mechanisms described in the [Android Enterprise corporate-owned device enrollment document](https://learn.microsoft.com/en-us/mem/intune/enrollment/android-dedicated-devices-fully-managed-enroll). 
+
+### Revoke or Export tokens
+
+- **Revoke token**: You can immediately expire the token/QR code. From this point on, the token/QR code is no longer usable. You might use this option if you:
+  - accidentally share the token/QR code with an unauthorized party
+  - complete all enrollments and no longer need the token/QR code
+- **Export token**: You can export the JSON content of the token/QR code. You might use this option to easily paste JSON content to enroll with [Zero Touch Enrollment (ZTE)](https://learn.microsoft.com/en-us/mem/intune/enrollment/android-dedicated-devices-fully-managed-enroll#enroll-by-using-google-zero-touch) or [Knox Mobile Enrollment (KME)](https://learn.microsoft.com/en-us/mem/intune/enrollment/android-dedicated-devices-fully-managed-enroll#enroll-by-using-knox-mobile-enrollment). 
+
+Revoking or exporting a token/QR code won't have any effect on devices that are already enrolled.
+
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and choose **Devices** > **Android** > **Android enrollment** > **Corporate-owned devices with work profile**.
+2. Choose the profile that you want to work with.
+3. Choose **Token**.
+5. To revoke the token, choose **Revoke token** > **Yes**.
+6. 6. To export the token, choose **Export token**.
+
 ### Create a device group
 
 You can target apps and policies to either assigned or dynamic device groups. You can configure dynamic Azure AD device groups to automatically populate devices that are enrolled with a particular enrollment profile by following these steps:
@@ -92,19 +122,6 @@ You can target apps and policies to either assigned or dynamic device groups. Yo
     - In the last field, enter the enrollment profile name that you created earlier.
     For more information about dynamic membership rules, see [Dynamic membership rules for groups in Azure AD](/azure/active-directory/users-groups-roles/groups-dynamic-membership). 
 5. Choose **Add query** > **Create**.
-
-### Revoke tokens
-
-You can immediately expire the token/QR code. From this point on, the token/QR code is no longer usable. You might use this option if you:
-  - accidentally share the token/QR code with an unauthorized party
-  - complete all enrollments and no longer need the token/QR code
-
-Revoking a token/QR code won't have any effect on devices that are already enrolled.
-
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and choose **Devices** > **Android** > **Android enrollment** > **Corporate-owned devices with work profile**.
-2. Choose the profile that you want to work with.
-3. Choose **Token**.
-5. To revoke the token, choose **Revoke token** > **Yes**.
 
 ## Enroll the corporate-owned work profile devices
 
