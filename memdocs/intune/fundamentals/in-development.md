@@ -97,6 +97,20 @@ For more information, go to: [See device details in Intune](../remote-actions/de
 Applies to:
 - **iOS/iPadOS**
 
+### Support for multi-SIM iOS/iPadOS device inventory<!--16360290-->
+
+You'll soon be able to view the service subscription fields on devices that have multiple SIM cards installed under the per-device Hardware section. The inventory fields that are capable of reporting multiple values to Intune are:
+
+- **ICCID**
+- **IMEI**
+- **MEID**
+- **Phone number**
+
+These fields will default to using labels returned by the device, such as:  *Primary*, *Secondary*, *CTSubscriptionSlotOne*, and *CTSubscriptionSlotTwo*. These returned labels may be displayed in the language of the local device that is reporting its inventory to Intune.
+
+Applies to:
+- **iOS/iPadOS**
+
 <!-- *********************************************** -->
 
 ## Device management
