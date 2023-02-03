@@ -179,9 +179,9 @@ Enroll new or wiped devices purchased from Apple Business Manager or Apple Schoo
 
 --- 
 ## Enrollment for Linux  
-Employees and students in BYOD scenarios can enroll their personal Linux desktop devices in Microsoft Intune. Enrollment enables them to access work resources in Microsoft Edge. 
+Employees and students in BYOD scenarios can [enroll personal Linux devices](../user-help/enroll-device-linux.md) in Microsoft Intune. Enrollment enables them to access work resources in Microsoft Edge.  
 
-As an Intune admin, you don't need to do anything to enable Linux enrollment in the admin center. It's automatically enabled so when users enroll their Linux devices, you'll see them in the admin center. For more information, see [Enroll Linux desktop devices in Microsoft Intune](deployment-guide-enrollment-linux.md).  
+As an Intune admin, you don't need to do anything to enable Linux enrollment in the admin center. It's automatically enabled. When users enroll their Linux devices, you'll see them in the admin center. For more information, see [Enroll Linux desktop devices in Microsoft Intune](deployment-guide-enrollment-linux.md).  
 
 ## Enrollment for Windows    
 This section describes the enrollment methods and configurations available for Windows 10/11 personal and corporate-owned devices. Microsoft Intune enrollment is supported in cloud environments and with co-management in on-premises environments. 
