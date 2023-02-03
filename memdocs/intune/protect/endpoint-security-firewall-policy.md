@@ -107,8 +107,6 @@ When rules from multiple rules profiles don't conflict with each other, devices 
 
 ## Firewall policy reports
 
-*Reports for Firewall policy are in public preview.*
-
 The reports for Firewall policy display status details about the firewall status for your managed devices.  Firewall reports support managed devices that run the following operating systems.
 
 - Windows 10/11
@@ -139,7 +137,7 @@ Data is reported through the Windows [DeviceStatus CSP](/windows/client-manageme
 
 ### MDM Firewall status for Windows 10 and later
 
-*This organizational report is also described in [Intune Reports](../fundamentals/reports.md#windows-10-mdm-firewall-status-organizational)*.
+*This organizational report is also described in [Intune Reports](../fundamentals/reports.md#mdm-firewall-status-for-windows-10-and-later-organizational)*.
 
 As an organizational report, this report is available from the **Reports** node.  Open the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and then go to **Reports** > **Firewall** >  **MDM Firewall status for Windows 10 and later**.
 
