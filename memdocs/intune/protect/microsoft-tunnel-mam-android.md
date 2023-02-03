@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/18/2023
+ms.date: 02/03/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -107,6 +107,8 @@ Create an App configuration policy to configure Microsoft Defender for Endpoint 
      > [!NOTE]  
      > Proxy server configurations are not supported with versions of Android prior to version 10.  For more information, see [VpnService.Builder](https://developer.android.com/reference/android/net/VpnService.Builder#setHttpProxy%28android.net.ProxyInfo%29) in that Android developer documentation.
 
+   > [!IMPORTANT]
+   > The public preview for Microsoft Tunnel for MAM Android doesn’t support use of trusted root certificates, even though *Root Certificate* is an available option when configuring the App configuration policy. Configuration of a trusted root certificate for the Android preview should be skipped as it will not work.
 
    When ready, select **Next** to continue.
 
