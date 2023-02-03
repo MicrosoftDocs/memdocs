@@ -28,7 +28,10 @@ ms.collection:
 ---
 
 # Step 4: Set up automatic enrollment for Windows 10/11 devices  
-*Applies to Windows 10, Windows 11*  
+
+**Applies to**:  
+- Windows 10  
+- Windows 11  
 
 In this task, you'll set up Microsoft Intune to automatically enroll corporate owned or user owned devices. You can scope automatic enrollment to some Azure AD users, all users, or none.  
 

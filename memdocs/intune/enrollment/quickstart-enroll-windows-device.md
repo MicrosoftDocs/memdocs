@@ -2,7 +2,7 @@
 # required metadata
 
 title: Evaluate and try - Enroll a device 
-description: In this evaluation task, enroll a device running Windows 10/11 into Microsft Intune.  
+description: In this evaluation task, enroll a device running Windows 10/11 into Microsoft Intune.  
 services: microsoft-intune
 author: Lenewsad
 ms.author: lanewsad
@@ -45,21 +45,16 @@ In this task, you will:
 
 If you don't have an Intune subscription, [sign up for a free trial account](../fundamentals/free-trial-sign-up.md).  
 
-> [!TIP]
-> For more information about enrollment for the device user, see these resources:
-> * [About Windows device enrollment with Intune Company Portal](../user-help/what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md)
-. * [What info can your company see when you enroll your device?](../user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md).  
-
 ## Prerequisites
 
-- Microsoft Intune subscription - [sign up for a free trial account](../fundamentals/free-trial-sign-up.md)
-- To complete this evaluation step, you must complete the steps to [setup automatic enrollment in Intune](quickstart-setup-auto-enrollment.md).
+To complete this evaluation step, you must: 
 
-## Confirm Windows version  
+- Have a Microsoft Intune subscription: [Sign up for a free trial account](../fundamentals/free-trial-sign-up.md)
+- Complete the evaluation step for [setting up automatic enrollment in Intune](quickstart-setup-auto-enrollment.md).  
 
-Before enrolling your device, confirm the version of Windows running on the device.  
+Additionally, before you begin enrollment, confirm the version of Windows running on your device.  
 
-1. Open **Settings**.  
+1. Open the **Settings** app.  
 
 2. Select **System** > **About**. 
 
@@ -75,7 +70,7 @@ Before enrolling your device, confirm the version of Windows running on the devi
     > [!IMPORTANT]
     > The steps in this evaluation step are for these versions of Windows. For information about enrolling earlier versions of Windows, see [Enroll device running Windows 10, version 1511 and earlier](../user-help/enroll-windows-10-device.md#enroll-windows-10-version-1511-and-earlier-device).  
 
-## Step 1: Enroll Windows 10/11 desktop
+## Enroll device  
 
 1. In the Settings app, select **Accounts**.  
 
@@ -93,7 +88,7 @@ Before enrolling your device, confirm the version of Windows running on the devi
 
     If you followed the previous steps, but still can't access your work or school email account and files, see [Troubleshoot Windows 10/11 device access](../user-help/troubleshoot-your-windows-10-device-windows.md).  
 
-## Step 2: Confirm device enrollment in Intune  
+## Confirm device enrollment  
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as a Global Administrator.
 2. Select **Devices** > **All devices** to view all enrolled devices.  
@@ -105,9 +100,12 @@ To unenroll the device, see [Remove your Windows device from management](../user
 
 ## Next steps
 
-In this task, you learned how to enroll a device running Windows 10/11 into Intune. 
+In this task, you learned how to enroll a device running Windows 10/11 into Intune. For more information about the device user experience, see these resources:
+ * [Windows device enrollment with Intune Company Portal](../user-help/what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md)  
+ * [What info can your company see when you enroll your device?](../user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)    
+
 
 To continue to evaluate Microsoft Intune, go to the next step:  
 
 > [!div class="nextstepaction"]
-> [Step 6: Set a required password length for Android devices](../protect/quickstart-set-password-length-android.md)
+> [Step 6: Set a required password length for Android devices](../protect/quickstart-set-password-length-android.md)  
