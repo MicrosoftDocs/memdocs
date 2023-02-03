@@ -107,8 +107,6 @@ When rules from multiple rules profiles don't conflict with each other, devices 
 
 ## Firewall policy reports
 
-*Reports for Firewall policy are in public preview.*
-
 The reports for Firewall policy display status details about the firewall status for your managed devices.  Firewall reports support managed devices that run the following operating systems.
 
 - Windows 10/11
