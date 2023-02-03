@@ -262,7 +262,7 @@ items:
         - name: Use scope tags to determine what admins can see
           href: ./fundamentals/scope-tags.md
 
-    - name: Choose Intune add-ons (Include different options - Intune suite, plan B, ad hoc, etc.)
+    - name: Choose Intune add-ons (Include options - Intune suite, plan B, Endpoint Analytics, etc.)
       items:
       - name: Intune add-ons
         href: ./fundamentals/premium-add-ons.md
@@ -1345,6 +1345,8 @@ items:
           href: ./remote-actions/device-passcode-reset.md
         - name: Windows 10 PIN reset (Need to add Win11)
           href: ./remote-actions/device-windows-pin-reset.md
+        - name: Self-service password reset
+          href: ./remote-actions/password-reset.md
       - name: Remove and restart
         items:
         - name: Remove devices
@@ -1399,13 +1401,6 @@ items:
         items:
         - name: Troubleshoot device actions
           href: /troubleshoot/mem/intune/troubleshoot-device-actions
-
-      - name: Resources (is this content valid?)
-        items:
-        - name: Scenario implementation guides 
-          items:
-          - name: Reduce help desk costs
-            href: ./remote-actions/password-reset.md
 
     - name: View reports and monitor status
       items:
