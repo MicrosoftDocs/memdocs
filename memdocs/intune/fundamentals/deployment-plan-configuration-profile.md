@@ -58,7 +58,7 @@ These features are configured in device configuration profiles in the [Microsoft
 > [!TIP]
 > [Take a tour of Intune and the Endpoint Manager admin center](tutorial-walkthrough-endpoint-manager.md).
 
-## Create your security baseline
+## Level 1 - Create your security baseline
 
 To help keep your organization data and devices secure, you create different policies that focus on security. You should create a list of security features that all users and/or all devices must have. This list is your security baseline.
 
@@ -201,7 +201,7 @@ For more information on these features and/or the settings you can configure, go
   - [Feature updates policy](../protect/windows-10-feature-updates.md)
   - [Expedited updates policy](../protect/windows-10-expedite-updates.md)
 
-## Access organization email, connect to VPN or Wi-Fi
+## Level 1 - Access organization email, connect to VPN or Wi-Fi
 
 This section focuses on accessing resources in your organization. These resources include:
 
@@ -351,7 +351,7 @@ To get started:
 
   | Platform | Use Intune |
   | --- | --- |
-  | **Android** |✔️ On Android devices, disk encryption and Samsung Knox might be built into the operating system. Disk encryption might be automatically enabled *when* you configure the lock screen settings. In Intune, you can create a device restrictions policy that configures lock screen settings. <br/><br/>For a list of the password and lock screen settings you can configure, go to the following articles:<br/><br/>- [Organization owned devices - Device password](../configuration/device-restrictions-android-for-work.md#device-password)<br/>- [Organization owned devices - Work profile password](../configuration/device-restrictions-android-for-work.md#work-profile-password)<br/>- [Personally owned devices - Work profile password](../configuration/device-restrictions-android-enterprise-personal.md#work-profile-password)<br/>- [Personally owned devices - Device password](..configuration/device-restrictions-android-enterprise-personal.md#password) |
+  | **Android** |✔️ On Android devices, disk encryption and Samsung Knox might be built into the operating system. Disk encryption might be automatically enabled *when* you configure the lock screen settings. In Intune, you can create a device restrictions policy that configures lock screen settings. <br/><br/>For a list of the password and lock screen settings you can configure, go to the following articles:<br/><br/>- [Organization owned devices - Device password](../configuration/device-restrictions-android-for-work.md#device-password)<br/>- [Organization owned devices - Work profile password](../configuration/device-restrictions-android-for-work.md#work-profile-password)<br/>- [Personally owned devices - Work profile password](../configuration/device-restrictions-android-enterprise-personal.md#work-profile-password)<br/>- [Personally owned devices - Device password](../configuration/device-restrictions-android-enterprise-personal.md#password) |
   | **iOS/iPadOS** | ❌ On iOS/iPadOS devices, disk encryption and Secure Enclave are built into the operating and automatically enabled. There aren't any Intune settings to configure these features. There are Intune policies that focus on password settings and encrypting backups. <br/><br/>For more specific information, go to [Introduction to Apple platform security](https://support.apple.com/guide/security/intro-to-apple-platform-security-seccd5016d31/web) and [Secure Enclave](https://support.apple.com/guide/security/secure-enclave-sec59b0b31ff/web) (opens Apple's web site). |
   | **macOS** | ✔️ On macOS devices, you can [configure and use FileVault](../protect/encrypt-devices-filevault.md) policies in Intune for disk encryption. |
   | **Windows** | ✔️ On Windows devices, there are Intune endpoint protection policies that [manage BitLocker, including TPM](../protect/encrypt-devices.md) and [manage Windows settings, including secure boot](../protect/endpoint-protection-windows-10.md#windows-encryption). |
@@ -362,7 +362,7 @@ To get started:
 
   | Platform | Use Intune |
   | --- | --- |
-  | **Android** |✔️ On Android devices, you can use Intune to create a device restrictions policy that configures these settings. <br/><br/>For a list of the password settings you can configure, go to the following articles:<br/><br/>- [Organization owned devices - Device password](../configuration/device-restrictions-android-for-work.md#device-password)<br/>- [Organization owned devices - Work profile password](../configuration/device-restrictions-android-for-work.md#work-profile-password)<br/>- [Personally owned devices - Work profile password](../configuration/device-restrictions-android-enterprise-personal.md#work-profile-password)<br/>- [Personally owned devices - Device password](..configuration/device-restrictions-android-enterprise-personal.md#password) |
+  | **Android** |✔️ On Android devices, you can use Intune to create a device restrictions policy that configures these settings. <br/><br/>For a list of the password settings you can configure, go to the following articles:<br/><br/>- [Organization owned devices - Device password](../configuration/device-restrictions-android-for-work.md#device-password)<br/>- [Organization owned devices - Work profile password](../configuration/device-restrictions-android-for-work.md#work-profile-password)<br/>- [Personally owned devices - Work profile password](../configuration/device-restrictions-android-enterprise-personal.md#work-profile-password)<br/>- [Personally owned devices - Device password](../configuration/device-restrictions-android-enterprise-personal.md#password) |
   | **iOS/iPadOS** | ✔️ On iOS/iPadOS devices, you can use Intune to create a device restrictions policy that configures these settings. <br/><br/>For a list of the password settings you can configure, go to [iOS/iPadOS password settings](../configuration/device-restrictions-ios.md#password). <br/><br/>The [settings catalog](../configuration/settings-catalog.md) may also have some relevant password settings.|
   | **macOS** | ✔️ On macOS devices, you can use Intune to create a device restrictions policy that configures these settings. <br/><br/>For a list of the password settings you can configure, go to [macOS password settings](../configuration/device-restrictions-macos.md#password).<br/><br/>The [settings catalog](../configuration/settings-catalog.md) may also have some relevant password settings.|
   | **Windows** | ✔️ On Windows devices, you can use Intune to create a device restrictions policy that configures these settings. <br/><br/>For a list of the password settings you can configure, go to [iOS/iPadOS password settings](../configuration/device-restrictions-windows-10.md#password).<br/><br/>The [settings catalog](../configuration/settings-catalog.md) may also have some relevant password settings. |
@@ -407,7 +407,7 @@ THIS SECTION IS STILL BEING WRITTEN
     - [Azure AD multi-factor authentication](/azure/active-directory/authentication/concept-mfa-howitworks)
     - [Require multi-factor authentication for Intune device enrollments](/enrollment/multi-factor-authentication.md)
 
-- Android Common Criteria mode: https://learn.microsoft.com/en-us/mem/intune/configuration/device-restrictions-android-for-work#system-security
+- [Android Common Criteria mode](../configuration/device-restrictions-android-for-work.md#system-security)
 
 - Microsoft Tunnel: For your Android or iOS/iPadOS devices, use the **Microsoft Tunnel VPN gateway** solution. Microsoft Tunnel uses Linux to allow these devices access to on-premises resources using modern authentication and conditional access.
 

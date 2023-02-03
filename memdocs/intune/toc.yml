@@ -1310,19 +1310,21 @@ items:
     - name: Assign and deploy policies
       items: 
       - name: Assign policies to users & groups
-        href: ./configuration/device-profile-assign.md
         displayName: deploy, push
-        items:
-        - name: Assign apps to groups
-          href: ./apps/apps-deploy.md
-          displayName: app assignment; assignment
-        - name: Include and exclude apps
-          href: ./apps/apps-inc-exl-assignments.md
-          displayName: app assignment
-        - name: Deploy Windows 10/11 apps
-          href: ./apps/apps-windows-10-app-deploy.md
-        - name: Deploy apps to Government environments
-          href: ./apps/apps-deploy-gcc-dod.md
+        href: ./configuration/device-profile-assign.md
+
+        - name: Assign apps
+          items:
+          - name: Assign apps to groups
+            href: ./apps/apps-deploy.md
+            displayName: app assignment; assignment
+          - name: Include and exclude apps
+            href: ./apps/apps-inc-exl-assignments.md
+            displayName: app assignment
+          - name: Deploy Windows 10/11 apps
+            href: ./apps/apps-windows-10-app-deploy.md
+          - name: Deploy apps to Government environments
+            href: ./apps/apps-deploy-gcc-dod.md
       - name: Common questions and answers
         href: ./configuration/device-profile-troubleshoot.md
       - name: Use filters when assigning policies
