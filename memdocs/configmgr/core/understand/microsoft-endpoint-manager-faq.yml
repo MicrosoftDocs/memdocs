@@ -1,8 +1,8 @@
 ### YamlMime:FAQ
 metadata:
-  title: Microsoft Endpoint Configuration Manager FAQ
+  title: Microsoft Configuration Manager FAQ
   titleSuffix: Configuration Manager
-  description: Frequently asked questions about Microsoft Endpoint Configuration Manager
+  description: Frequently asked questions about Microsoft Configuration Manager
   ms.date: 04/16/2021
   ms.prod: configuration-manager
   ms.technology: configmgr-core
@@ -13,7 +13,7 @@ metadata:
   manager: apoorvseth
   ms.collection: highpri
 
-title: Microsoft Endpoint Configuration Manager FAQ
+title: Microsoft Configuration Manager FAQ
 summary: |
   *Applies to: Configuration Manager (current branch, technical preview branch)*
   
@@ -59,7 +59,7 @@ sections:
           - When referring to the entire solution that includes all components: **Microsoft Endpoint Manager**
           
           - When referring to the on-premises component:
-            - On first reference, use the full brand name: **Microsoft Endpoint Configuration Manager**
+            - On first reference, use the full brand name: **Microsoft Configuration Manager**
             - For general use: **Configuration Manager**
             - For space-constrained use: **ConfigMgr**, only in instances where the general use name doesn't fit
           
