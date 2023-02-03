@@ -79,7 +79,7 @@ items:
       - name: Use Autopilot to enroll Windows devices
         href: ./enrollment/tutorial-use-autopilot-enroll-devices.md
         displayName: OOBE
-      - name: Use the ADE to enroll iOS/iPadOS devices 
+      - name: Use automated device enrollment to enroll iOS/iPadOS devices 
         href: ./enrollment/tutorial-use-device-enrollment-program-enroll-ios.md
 
       - name: Create an administrative template
@@ -1143,7 +1143,7 @@ items:
       - name: Enrollment overview   
         href: ./fundamentals/deployment-guide-enrollment.md  
         displayName: COD; BYOD; DEM; ADE; USB-SA; USB-Direct; co-management; GPO
-      - name: Pre-enrollment configurations  
+      - name: Enrollment configurations  
         items:
         - name: Get Apple MDM push certificate   
           href: ./enrollment/apple-mdm-push-certificate-get.md 
@@ -1174,31 +1174,22 @@ items:
         items:  
         - name: Windows enrollment guide 
           href: ./fundamentals/deployment-guide-enrollment-windows.md
-        - name: Enrollment method overview  - DELETE/REPLACE w/enrollment guide 
-          href: ./enrollment/enrollment-method-capab.md
-        - name: Set up manual and automatic enrollment
+        - name: Set up automatic enrollment  
           href: ./enrollment/windows-enroll.md
-        - name: Set up bulk enrollment  
-          href: ./enrollment/windows-bulk-enroll.md
+        - name: Enable automatic discovery for MDM server      
+          href: ./enrollment/windows-enrollment-create-cname.md
+        - name: Set up Intune Connector for Active Directory  
+          href: ./enrollment/autopilot-hybrid-connector-proxy.md
         - name: Set up Enrollment Status Page
           href: ./enrollment/windows-enrollment-status.md
-        - name: Configure proxy for Intune AD Connector
-          href: ./enrollment/autopilot-hybrid-connector-proxy.md  
-        - name: View incomplete user enrollments 
-          href: ./enrollment/enrollment-report-company-portal-abandon.md 
-        - name: Tutorial - Set up automatic enrollment
-          href: ./enrollment/quickstart-setup-auto-enrollment.md
-        - name: Tutorial - Enroll your Windows 10/11 device
-          href: ./enrollment/quickstart-enroll-windows-device.md
-        - name: Tutorial - Use Autopilot to enroll Windows devices
-          href: ./enrollment/tutorial-use-autopilot-enroll-devices.md
+        - name: Set up bulk enrollment and workplace join             
+          href: ./enrollment/windows-bulk-enroll.md  
+ 
       - name: Set up Android enrollment
         items:
         - name: Android enrollment guide
           href: ./fundamentals/deployment-guide-enrollment-android.md
           displayName: COBO
-        - name: Enrollment method overview  - DELETE/REPLACE w/enrollment guide
-          href: ./enrollment/android-enroll.md
         - name: Android Enterprise enrollment solutions    
           items:
           - name: Prerequisite- Connect Intune to Android Enterprise 
@@ -1219,13 +1210,13 @@ items:
             href: ./enrollment/android-aosp-corporate-owned-userless-enroll.md    
           - name: Enroll Android (AOSP) corporate-owned user-associated devices
             href: ./enrollment/android-aosp-corporate-owned-user-associated-enroll.md 
-        - name: Android device administrator    
+        - name: Android device administrator enrollment solutions    
           items: 
           - name: Set up enrollment for Android device administrator 
             href: ./enrollment/android-enroll-device-administrator.md
           - name: Move personal devices to Android Enterprise work profile management 
             href: ./enrollment/android-move-device-admin-work-profile.md  
-        - name: Samsung Knox Mobile Enrollment 
+        - name: Samsung Knox enrollment solutions  
           items: 
           - name: Enable Samsung Knox Mobile Enrollment
             href: ./enrollment/android-samsung-knox-mobile-enroll.md
@@ -1242,13 +1233,10 @@ items:
           - name: 4 - Configure security settings for fully managed devices 
             href: ./enrollment/android-fully-managed-security-settings.md         
       - name: Set up iOS/iPadOS enrollment
-        href: ./enrollment/ios-enroll.md
         items:
         - name: iOS, iPadOS enrollment guide
           href: ./fundamentals/deployment-guide-enrollment-ios-ipados.md
-        - name: Set up iOS/iPadOS enrollment - REMOVE/REPLACE w/enrollment guide
-          href: ./enrollment/ios-enroll.md
-        - name: Automated Device Enrollment
+        - name: Set up automated Device Enrollment
           href: ./enrollment/device-enrollment-program-enroll-ios.md
         - name: Shared device overview
           href: ./enrollment/device-enrollment-shared-ios.md
@@ -1284,14 +1272,18 @@ items:
           href: ./fundamentals/deployment-guide-enrollment-linux.md
       - name: Set up macOS enrollment
         items:
-        - name: macOS enrollment guide  
+        - name: Mac enrollment guide  
           href: ./fundamentals/deployment-guide-enrollment-macos.md
-        - name: Set up macOS enrollment  - DELETE/REPLACE w/enrollment guide
-          href: ./enrollment/macos-enroll.md
-        - name: Automated device enrollment for macOS
-          href: ./enrollment/device-enrollment-program-enroll-macos.md
-        - name: Direct Enrollment for macOS 
-          href: ./enrollment/device-enrollment-direct-enroll-macos.md      
+        - name: Pre-enrollment configurations  
+          items: 
+          - name: Mac enrollment configurations  - Break into smaller pieces  
+            href: ./enrollment/macos-enroll.md  
+        - name: Mac enrollment solutions  
+          items: 
+          - name: Set up automated device enrollment for macOS
+            href: ./enrollment/device-enrollment-program-enroll-macos.md
+          - name: Set up Direct Enrollment for macOS 
+            href: ./enrollment/device-enrollment-direct-enroll-macos.md      
       - name: Troubleshoot enrollment
         items:
         - name: Get incomplete user enrollment report
