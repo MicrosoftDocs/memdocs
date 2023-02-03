@@ -81,7 +81,7 @@ Each reusable settings group includes a subset of settings from the full profile
 
 3. On the **Basics** page, configure a name. The description is optional.
 
-4. On the *Configuration settings* page, configure settings for this group as if configuring settings directly in the supported profile. Use the information text in the admin center for each setting in the reusable settings group as guidance. Follow the *Learn more* link for a setting to view details about the setting from that settings content source.
+4. On the *Configuration settings* page, configure settings for this group as if configuring settings directly in the supported profile. There is a limit of 100 instances per group. Use the information text in the admin center for each setting in the reusable settings group as guidance. Follow the *Learn more* link for a setting to view details about the setting from that settings content source.
 
    > [!TIP]  
    > Carefully *Name* each reusable group you create to ensure you can identify it later. This is important because each reusable group that you create, for any policy type, is visible when adding reusable groups to a policy, even if the group contains settings that would not normally apply to the policy you’re configuring. For example, if you have a reusable group created for Microsoft Defender Firewall rules, that group will be visible and can be selected when adding reusable groups to Device Control policies.
@@ -114,7 +114,7 @@ Add reusable settings groups to profiles while editing or creating the profile. 
 
    :::image type="content" source="./media/reusable-settings-groups/add-reusable-group-to-profile.png" alt-text="Screenshot of the Configuration settings workflow for configuring a reusable group.":::
 
-5. Select one or more of the available groups to add them to this rule, and then save your selections.
+5. Select one or more of the available groups to add them to this rule, and then save your selections. 
 
    :::image type="content" source="./media/reusable-settings-groups/select-groups.png" alt-text="Screenshot that shows the Select Reusable settings pane.":::
 
@@ -147,7 +147,7 @@ The following shows a configuration with only one group selected for Excluded ID
 
    :::image type="content" source="./media/reusable-settings-groups/one-excluded-id-for-device-control.png" alt-text="Screenshot that shows the result of selecting a group for only an excluded ID.":::
 
-6. After adding reusable groups to a profile, complete the policy configuration. When saved, Intune includes the settings from the reusable groups and deploys the profile to devices based on the profile’s assignments.
+6. After adding reusable groups to a profile, complete the policy configuration. When saved, Intune includes the settings from the reusable groups and deploys the profile to devices based on the profile’s assignments. A maximum of 100 reusable groups can be added per profile.
 
 If you have an E5 license, you can use Microsoft Defender for Endpoint to view device control events under the *Device Control report* and *Advanced hunting*. See [Protect your organization's data with device control | Microsoft Docs](/microsoft-365/security/defender-endpoint/device-control-report) in the Defender for Endpoint documentation.
 
