@@ -187,7 +187,7 @@ To opt out of automatic updates, specify enableAutoUpdates=0 as part of the inst
 6. Complete creation of the Windows app to have Intune deploy and install Remote Help on applicable devices.
 
 > [!NOTE]
-> Remote Help only works when targeting a group of devices, and that targeting a group of users will not be successful.
+> Remote Help only works when targeting a group of devices. Targeting a group of users will not be successful.
 
 ## Configure Remote Help for your tenant
 
