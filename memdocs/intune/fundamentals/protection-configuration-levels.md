@@ -7,7 +7,7 @@ description: Learn about the different levels of protection and configuration in
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/30/2023
+ms.date: 02/02/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -56,7 +56,7 @@ This level includes policies that every organization should have, at a minimum. 
 
 ### Apps (level 1)
 
-This level enforces a reasonable amount of data protection and access requirements while minimizing the impact to users. This level ensures that apps are protected with a PIN and encrypted and performs selective wipe operations. For Android devices, this level validates Android device attestation. This is an entry level configuration that provides similar data protection control in Exchange Online mailbox policies and introduces IT and the user population to app protection policies.
+This level enforces a reasonable amount of data protection and access requirements while minimizing the impact to users. This level ensures that apps are protected with a PIN and encrypted and performs selective wipe operations. For Android devices, this level validates Android device attestation. This level is an entry level configuration that provides similar data protection control in Exchange Online mailbox policies. It also introduces IT and the user population to app protection policies.
 
 In this level, Microsoft recommends you configure the following protection and access for apps:
  
@@ -76,7 +76,7 @@ In this level, Microsoft recommends you configure the following protection and a
 
 For more information, see [Level 1 basic app protection](../apps/app-protection-framework.md#level-1-enterprise-basic-data-protection).
 
-### Device compliance (level 1)
+### Compliance (level 1)
 
 In this level, device compliance includes configuring the tenant-wide settings that apply to all devices, and deploying minimal compliance policies to all devices to enforce a core set of compliance requirements. Microsoft recommends that these configurations be in place before you allow devices to access your organization’s resources. Level 1 device compliance includes:
 
@@ -128,7 +128,7 @@ Use the settings in this level to add what you've done in Level 1.
 
 ### Apps (level 2)
 
-This level recommends a standard level of application protection for devices where users access more sensitive information. This level introduces app protection policy data leakage prevention mechanisms and minimum OS requirements. This is the configuration that is applicable to most mobile users accessing work or school data.
+This level recommends a standard level of application protection for devices where users access more sensitive information. This level introduces app protection policy data leakage prevention mechanisms and minimum OS requirements. This level is the configuration that is applicable to most mobile users accessing work or school data.
 
 In addition to Level 1 settings, Microsoft recommends you configure the following protection and access for apps:
 
@@ -149,7 +149,7 @@ In addition to Level 1 settings, Microsoft recommends you configure the followin
 
 For more information, see [Level 2 enhanced app protection](../apps/app-protection-framework.md#level-2-enterprise-enhanced-data-protection).
 
-### Device compliance (level 2)
+### Compliance (level 2)
 
 At this level, Microsoft recommends adding more complex options to your compliance policies. Many of the settings at this level have platform-specific names that all deliver similar results. The following are the categories or types of settings that Microsoft recommends you use when they're available:
 
@@ -181,37 +181,18 @@ For more information, see [Level 2 - Enhanced device compliance settings](../fun
 
 ### Device configuration (level 2)
 
-In this level, Microsoft recommends you create policies that:
+In this level, you're expanding on the settings and features you configured in level 1. Microsoft recommends you create policies that:
 
-- Add another layer of security using disk encryption and move towards password-less sign-in.
+- Add another layer of security by enabling disk encryption, secure boot, and TPM on your devices.
+- Configure your PINs & passwords to expire and manage if/when passwords can be reused.
 - Configure more granular device features, settings, and behaviors.
+- If you have on-premises GPOs, then you can determine if these GPOs are available in Intune.
 
-Specifically, in this level, you can:
-
-- Enable disk encryption on your devices:
-
-  - [**Windows**: Manage BitLocker](../protect/encrypt-devices.md)
-  - [**macOS**: Use FileVault](../protect/encrypt-devices-filevault.md)
-
-- Configure password-less authentication:
-
-  - [**Windows**: Manage Windows Hello for Business when devices enroll](../protect/windows-hello.md)
-  - [**Windows**: Manage Windows Hello for Business after devices enroll](../protect/identity-protection-configure.md)
-  - [Azure AD identity protection overview](/azure/active-directory/identity-protection/overview-identity-protection)
-  - [Azure AD multi-factor authentication](/azure/active-directory/authentication/concept-mfa-howitworks)
-
-- Configure more in-depth settings and use your on-premises GPOs:
-
-  - [**Device restrictions**: Many built-in settings that can control different parts of the devices, including security, hardware, data sharing, and more](../configuration/device-restrictions-configure.md)
-  - [**iOS/iPadOS, macOS, Windows**: Use the Settings catalog to see all the available settings](../configuration/settings-catalog.md)
-  - **Windows 10/11**:
-    - [Use built-in administrative templates](../configuration/administrative-templates-windows.md)
-    - [Analyze your on-premises GPOs and import them in Intune](../configuration/group-policy-analytics.md)
-
+For more specific information on device configuration policies at this level, go to [Level 2 - Enhanced protection and configuration](deployment-plan-configuration-profile.md#level-2---enhanced-protection-and-configuration).
 
 ## Level 3 - High protection and configuration
 
-This level includes enterprise-level policies and may involve different admins in your organization. These policies continue moving to password-less authentication, additional security, and configuring specialized devices. 
+This level includes enterprise-level policies and may involve different admins in your organization. These policies continue moving to password-less authentication, have more security, and configure specialized devices.
 
 Use the settings in this level to add what you've done in Levels 1 and 2.
 
@@ -243,7 +224,7 @@ In addition to level 1 and 2 settings, Microsoft recommends you configure the fo
 
 For more information, see [Level 3 high app protection](../apps/app-protection-framework.md#level-3-enterprise-high-data-protection).
 
-### Device compliance (level 3)
+### Compliance (level 3)
 
 At this level, you can expand on Intune’s built-in compliance capabilities through the following capabilities:
 
@@ -258,54 +239,18 @@ For more information, see [Level 3 - Advanced device compliance configurations](
 
 ### Device configuration (level 3)
 
-In this level, you can create policies that:
+THIS SECTION IS STILL BEING WRITTEN
 
-- Use certificate based authentication to access resources and use single-sign on for apps.
-- Prevent malware from communicating with the Windows OS processes.
+This level focuses on enterprise-level services and features, and can require an infrastructure investment. In this level, you can create policies that:
+
+- Use certificate based authentication and authorization to access resources, such as VPN connections.
+- For your Android or iOS/iPadOS devices, use the Microsoft Tunnel VPN gateway to access on-premises resources.
+- Configure and use single-sign on for apps.
+- Configure device features that apply to the Windows firmware layer.
 - Configure specialized devices like kiosks and shared devices.
-- Deploy scripts.
+- Deploy scripts, if needed.
 
-Specifically, in this level, you can:
-
-- Use certificates for authentication and authorization:
-
-  - [Use PKCS or SCEP certificates for authentication](../protect/certificates-configure.md)
-  - [Use derived credentials](../protect/derived-credentials.md)
-
-- Enable single sign-on (SSO):
-  - [**Android**: Enable cross-app SSO on Android using MSAL](/azure/active-directory/develop/msal-android-single-sign-on)
-  - [**iOS/iPadOS, macOS**: Use the Enterprise SSO plug-in](../configuration/use-enterprise-sso-plug-in-ios-ipados-macos.md)
-  - [**Windows**: Configure SSO with Azure AD](/azure/active-directory/manage-apps/what-is-single-sign-on)
-
-- Create policies that apply to the Windows firmware layer
-
-  - [Use Device Firmware Configuration Interface (DFCI) profiles on Windows devices](../configuration/device-firmware-configuration-interface-windows.md)
-
-- Configure kiosks, shared devices, and other specialized devices:
-
-  - **Android device administrator**
-    - [Use and manage Zebra devices with Zebra Mobility Extensions](../configuration/android-zebra-mx-overview.md)
-    - [Device settings to run as a kiosk](../configuration/device-restrictions-android.md#kiosk)
-
-  - **Android Enterprise**:
-    - [Use and manage Android Enterprise devices with OEMConfig](../configuration/android-oem-configuration-overview.md)
-    - [Dedicated devices that run as a kiosk device settings](../configuration/device-restrictions-android-for-work.md#dedicated-devices)
-
-  - **iOS/iPadOS**
-    - [Device settings to run in autonomous single app mode (ASAM)](../configuration/device-restrictions-ios.md#autonomous-single-app-mode-asam)
-    - [Device settings to run as a kiosk](../configuration/device-restrictions-ios.md#kiosk)
-
-  - **Windows**
-    - [Device settings to run as a dedicated kiosk](../configuration/kiosk-settings.md)
-    - [Device settings to run as a kiosk](../configuration/kiosk-settings-windows.md)
-    - [Shared PC or multi-user devices](../configuration/shared-user-device-settings.md)
-  - **Windows Holographic for Business**
-    - [Device settings to run as a kiosk](../configuration/kiosk-settings-holographic.md)
-    - [Device settings to run as a dedicated kiosk](../configuration/kiosk-settings.md)
-
-- Deploy scripts:
-  - [**macOS**: Use shell scripts](../apps/macos-shell-scripts.md)
-  - [**Windows**: Use Windows PowerShell scripts](../apps/intune-management-extension.md)
+For more specific information on device configuration policies at this level, go to [Level 3 - High protection and configuration](deployment-plan-configuration-profile.md#level-3---high-protection-and-configuration).
 
 ## Next steps
 
