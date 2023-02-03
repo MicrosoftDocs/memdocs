@@ -69,14 +69,48 @@ To set up Android Enterprise dedicated device management, follow these steps:
 
 You must create an enrollment profile so that you can enroll your dedicated devices. When the profile is created, it provides you with an enrollment token (random string) and a QR code. Depending on the Android OS and version of the device, you can use either the token or QR code to [enroll the dedicated device](#enroll-the-dedicated-devices).
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and choose **Devices** > **Android** > **Android enrollment** > **Corporate-owned dedicated devices**.
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and choose **Devices** > **Android** > **Android enrollment** > **Android Enterprise** > **Corporate-owned dedicated devices**.
 2. Choose **Create** and fill out the required fields.
     - **Name**: Type a name that you'll use when assigning the profile to the dynamic device group.
+    - **Description**: Add a profile description (optional).
+    - **Token expiration date**: The date when the token expires. Intune enforces a maximum of 65 years.
     - **Token type**: Choose the type of token you want to use to enroll dedicated devices.
         - **Corporate-owned dedicated device (default)**: This token enrolls devices as a standard Android Enterprise dedicated device. These devices require no user credentials at any point. This is the default token type that dedicated devices will enroll with unless updated by Admin at time of token creation.
         - **Corporate-owned dedicated device with Azure AD shared mode**: This token enrolls devices as a standard Android Enterprise dedicated device and, during enrollment, deploys Microsoft's Authenticator app configured into Azure AD Shared device mode. With this option, users can achieve single sign-in and single sign-out across apps on the device that are integrated with the Azure AD Microsoft Authentication Library and global sign-in/sign-out calls.
     - **Token expiration date**: Enter the date you want the token to expire, up to 65 years in the future. The token expires on the selected date at 12:59:59 PM in the time zone it was created. Acceptable date format: `MM/DD/YYYY` or `YYYY-MM-DD`  
 3. Choose **Create** to save the profile.  
+
+### Access enrollment token  
+After you create a profile, Intune generates a token that's needed for enrollment. There are two ways to access the token:
+
+One way is:
+1. Choose **Devices** > **Android** > **Android enrollment** > **Android Enterprise** > **Corporate-owned dedicated devices**.
+2. From the list, select your enrollment profile. 
+2. Select **Token**. 
+
+Another way to find the token is:
+1. Choose **Devices** > **Android** > **Android enrollment** > **Android Enterprise** > **Corporate-owned dedicated devices**.
+2. Locate your profile in the list, and then select the **More** (**...**) menu that's next to it.
+3. Select **View enrollment token**.  
+
+The token appears as a 20-digit string and a QR code. Use this token to enroll based on the enrollment mechanisms described in the [Android Enterprise corporate-owned device enrollment document](https://learn.microsoft.com/en-us/mem/intune/enrollment/android-dedicated-devices-fully-managed-enroll). 
+ 
+### Replace, remove or export tokens
+
+- **Replace token**: You can generate a new token/QR code when one nears expiration by using Replace Token.
+- **Revoke token**: You can immediately expire the token/QR code. From this point on, the token/QR code is no longer usable. You might use this option if you:
+  - accidentally share the token/QR code with an unauthorized party
+  - complete all enrollments and no longer need the token/QR code
+- **Export token**: You can export the JSON content of the token/QR code. You might use this option to easily paste JSON content to enroll with [Zero Touch Enrollment (ZTE)](https://learn.microsoft.com/en-us/mem/intune/enrollment/android-dedicated-devices-fully-managed-enroll#enroll-by-using-google-zero-touch) or [Knox Mobile Enrollment (KME)](https://learn.microsoft.com/en-us/mem/intune/enrollment/android-dedicated-devices-fully-managed-enroll#enroll-by-using-knox-mobile-enrollment). 
+
+Replacing, revoking, or exporting a token/QR code won't have any effect on devices that are already enrolled.
+
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and choose **Devices** > **Android** > **Android enrollment** > **Corporate-owned dedicated devices**.
+2. Choose the profile that you want to work with.
+3. Choose **Token**.
+4. To replace the token, choose **Replace token**.
+5. To revoke the token, choose **Revoke token**.
+6. To export the token, choose **Export token**.
 
 ### Create a device group
 
@@ -95,21 +129,6 @@ You can target apps and policies to either assigned or dynamic device groups. Yo
     - In the last field, enter the enrollment profile name that you created earlier.
     For more information about dynamic membership rules, see [Dynamic membership rules for groups in Azure AD](/azure/active-directory/users-groups-roles/groups-dynamic-membership).
 5. Choose **Add query** > **Create**.
-
-### Replace or remove tokens
-
-- **Replace token**: You can generate a new token/QR code when one nears expiration by using Replace Token.
-- **Revoke token**: You can immediately expire the token/QR code. From this point on, the token/QR code is no longer usable. You might use this option if you:
-  - accidentally share the token/QR code with an unauthorized party
-  - complete all enrollments and no longer need the token/QR code
-
-Replacing or revoking a token/QR code won't have any effect on devices that are already enrolled.
-
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and choose **Devices** > **Android** > **Android enrollment** > **Corporate-owned dedicated devices**.
-2. Choose the profile that you want to work with.
-3. Choose **Token**.
-4. To replace the token, choose **Replace token**.
-5. To revoke the token, choose **Revoke token**.
 
 ## Enroll the dedicated devices
 
