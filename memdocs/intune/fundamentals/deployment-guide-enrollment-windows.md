@@ -171,7 +171,7 @@ For more information on Windows Autopilot, see [Windows Autopilot overview](../.
 | Devices are hybrid Azure AD joined. | ✔️ <br/><br/> Hybrid Azure AD joined devices are joined to your on-premises Active Directory, and registered with your Azure AD. Devices in Azure AD are available to Intune. Devices that aren't registered in Azure AD aren't available to Intune. <br/><br/>A full Azure AD joined solution might be better for your organization. For more information, see the [Success with remote Windows Autopilot and hybrid Azure Active Directory join](https://techcommunity.microsoft.com/t5/intune-customer-success/success-with-remote-windows-autopilot-and-hybrid-azure-active/ba-p/2749353) blog.|
 | You have remote workers. | ✔️ <br/><br/> The OEM or partner can send devices directly to your users.|
 | Devices are owned by the organization or school. | ✔️ |
-| You have new or existing devices. | ✔️ <br/><br/> You can update existing desktops running older Windows versions, such as Windows 7, to Windows 10. This option also uses Microsoft Endpoint Configuration Manager. |
+| You have new or existing devices. | ✔️ <br/><br/> You can update existing desktops running older Windows versions, such as Windows 7, to Windows 10. This option also uses Microsoft Configuration Manager. |
 | Need to enroll a few devices, or a large number of devices (bulk enrollment). | ✔️ |
 | You have Azure AD Premium. | ✔️ <br/><br/> Windows Autopilot uses Automatic enrollment. Automatic enrollment requires Azure AD Premium. |
 | Devices are associated with a single user. | ✔️ |

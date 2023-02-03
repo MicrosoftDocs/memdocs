@@ -157,7 +157,7 @@ sections:
 
           - [Managing Patch Tuesday with Configuration Manager in a remote work world](https://techcommunity.microsoft.com/t5/configuration-manager-blog/managing-patch-tuesday-with-configuration-manager-in-a-remote/ba-p/1269444)
 
-          - [Managing remote machines with cloud management gateway in Microsoft Endpoint Configuration Manager](https://techcommunity.microsoft.com/t5/configuration-manager-blog/managing-remote-machines-with-cloud-management-gateway-in/ba-p/1233895)
+          - [Managing remote machines with cloud management gateway in Microsoft Configuration Manager](https://techcommunity.microsoft.com/t5/configuration-manager-blog/managing-remote-machines-with-cloud-management-gateway-in/ba-p/1233895)
 
       - question: |
           Does co-management require a cloud management gateway (CMG)?
@@ -179,4 +179,4 @@ sections:
 
           In past versions, Configuration Manager blocked update packages to cloud-based content sources. This constraint was removed so you can distribute third-party software updates. Don't distribute to the CMG any updates that are available from Microsoft Updates.
 
-          Configuration Manager clients have native affinity when using a CMG to get updates directly from the Microsoft Updates cloud service. For more information on how CMG works with Microsoft Updates service and configuration guidance, see the blog post on [Managing remote machines with cloud management gateway in Microsoft Endpoint Configuration Manager](https://techcommunity.microsoft.com/t5/configuration-manager-blog/managing-remote-machines-with-cloud-management-gateway-in/ba-p/1233895).
+          Configuration Manager clients have native affinity when using a CMG to get updates directly from the Microsoft Updates cloud service. For more information on how CMG works with Microsoft Updates service and configuration guidance, see the blog post on [Managing remote machines with cloud management gateway in Microsoft Configuration Manager](https://techcommunity.microsoft.com/t5/configuration-manager-blog/managing-remote-machines-with-cloud-management-gateway-in/ba-p/1233895).

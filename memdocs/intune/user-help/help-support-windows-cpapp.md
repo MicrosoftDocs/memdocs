@@ -68,5 +68,5 @@ Select **Report problem to Microsoft** to open the **Send feedback** page. From 
 Other help and support documentation is available for IT pros and Intune administrators on microsoft.com.
 
 * [Microsoft Learn](/): Home to the technical documentation where you can explore all guides and articles by product.
-* [Microsoft Endpoint Manager documentation](../../index.yml): Official product documentation for Microsoft Endpoint Manager, which includes Microsoft Intune, Microsoft Endpoint Configuration Manager, and Windows Autopilot.  
+* [Microsoft Endpoint Manager documentation](../../index.yml): Official product documentation for Microsoft Endpoint Manager, which includes Microsoft Intune, Microsoft Configuration Manager, and Windows Autopilot.  
 * [Troubleshooting device enrollment in Intune](/troubleshoot/mem/intune/troubleshoot-device-enrollment-in-intune): Microsoft Intune article suggestions for troubleshooting device enrollment issues in Microsoft Intune.
