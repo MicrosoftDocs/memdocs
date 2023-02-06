@@ -508,7 +508,7 @@ items:
 
       - name: How-to guides
         items:
-        - name: Use compliance rules to protect resources (Set rules on devices to allow access to resources)
+        - name: Use compliance rules to protect resources
           items:
           - name: Compliance overview
             href: ./protect/device-compliance-get-started.md    
