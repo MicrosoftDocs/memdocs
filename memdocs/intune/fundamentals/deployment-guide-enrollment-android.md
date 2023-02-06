@@ -29,7 +29,7 @@ ms.collection:
   - highseo
 ---
 
-# Deployment guide: Enroll Android devices in Microsoft Intune
+# Enrollment guide: Enroll Android devices in Microsoft Intune
 
 Personal and organization-owned devices can be enrolled in Intune. Once enrolled, they receive the policies and profiles you create. You have the following options when enrolling Android devices:
 
