@@ -40,7 +40,7 @@ ms.collection:
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Simplify Windows enrollment for you and device users by enabling *automatic enrollment* in Microsoft Intune. This enrollmnet method enables devices to enroll automatically when they join or register in your Azure Active Directory. 
+Simplify Windows enrollment for you and device users by enabling *automatic enrollment* in Microsoft Intune. This enrollment method enables devices to enroll automatically when they join or register in your Azure Active Directory. 
 
 Automatic enrollment can be used in the following onboarding and provisioning scenarios:
 
@@ -82,7 +82,7 @@ For information about how to integrate and use automatic enrollment when provisi
 * [Enroll a Windows client device automatically using Group Policy](/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)
 * [Enable co-management in Configuration Manager](../../configmgr/comanage/how-to-enable.md)  
 
-If you're not using automatic enrollment as part of your enrollment or provisioning solution, we recommend creating a a domain name server (DNS) alias, called a *CNAME* record type, that redirects enrollment requests to Intune servers. For more information, see [Enable auto-discovery of Intune enrollment server](../enrollment/windows-enrollment-create-cname.md).    
+If you're not using automatic enrollment as part of your enrollment or provisioning solution, we recommend creating a domain name server (DNS) alias (known as a *CNAME* record type) that redirects enrollment requests to Intune servers. For more information, see [Enable auto-discovery of Intune enrollment server](../enrollment/windows-enrollment-create-cname.md).    
 
 
 

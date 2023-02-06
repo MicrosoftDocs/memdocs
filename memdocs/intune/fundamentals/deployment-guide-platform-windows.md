@@ -114,7 +114,7 @@ Set up authentication methods in Intune to ensure that only authorized people ac
 
 | Task | Detail | 
 | ---- | ------ | 
-|[Require multi-factor authentication (MFA)](../enrollment/multi-factor-authentication.md)| Require people to supply two forms of credentials at time of device enrollment. This policy works in conjunction with Azure AD conditional accesss policies.| 
+|[Require multi-factor authentication (MFA)](../enrollment/multi-factor-authentication.md)| Require people to supply two forms of credentials at time of device enrollment. This policy works in conjunction with Azure AD conditional access policies.| 
 |[Create a trusted certificate profile](../protect/certificates-trusted-root.md)|Create and deploy a trusted certificate profile before you create a SCEP, PKCS, or PKCS imported certificate profile. The trusted certificate profile deploys the trusted root certificate to devices and users using SCEP, PKCS, and PKCS imported certificates. |
 |[Use SCEP certificates with Intune ](../protect/certificates-scep-configure.md)| Learn what’s needed to use SCEP certificates with Intune, and configure the required infrastructure. Then you can [create a SCEP certificate profile](../protect/certificates-profile-scep.md) or [set up a third-party certification authority with SCEP](../protect/certificate-authority-add-scep-overview.md).|  
 |[Use PKCS certificates with Intune](../protect/certificates-pfx-configure.md)|Configure required infrastructure (such as on-premises certificate connectors), export a PKCS certificate, and add the certificate to an Intune device configuration profile. | 
@@ -146,7 +146,7 @@ For information about each enrollment method and how to choose one that's right 
 | Task | Detail |
 | ---- | ------ |
 |[Enable MDM automatic enrollment](../enrollment/windows-enroll.md)|Simplify enrollment by enabling automatic enrollment, which automatically enrolls devices into Intune that join or register with your Azure AD. |  
-|[Enable automatic discovery of MDM server](../enrollment/windows-enrollment-create-cname.md)| If you dont have Azure AD Premium, we recommend creating a CNAME record for your Intune server. The CNAME record redirects enrollment requests to the right server so that users don't have to type the server name in manually. |
+|[Enable automatic discovery of MDM server](../enrollment/windows-enrollment-create-cname.md)| If you don't have Azure AD Premium, we recommend creating a CNAME record type for Intune enrollment servers. The CNAME record redirects enrollment requests to the right server so that users don't have to type the server name in manually. |
 |[Bulk enroll devices](../enrollment/windows-bulk-enroll.md)| Create a provisioning package in Windows Configuration Designer that simultaneously joins large numbers of new Windows devices to Azure Active Directory and enrolls them in Intune. |  
 |[Set up the enrollment status page (ESP)](../enrollment/windows-enrollment-status.md)| Create an enrollment status page profile with custom settings to guide users through device setup and enrollment.   |  
 |[Change device ownership label](../enrollment/corporate-identifiers-add.md#change-device-ownership)|After a device has been enrolled, you can change its ownership label in Intune to corporate-owned or personal-owned. This adjustment changes the way you manage the device, and can enable more management and identification capabilities in Intune, or limit them.|   
