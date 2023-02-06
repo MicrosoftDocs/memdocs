@@ -1,6 +1,11 @@
 {
     "redirections": [
         {
+            "source_path": "memdocs/intune/fundamentals/end-user-educate.md",
+            "redirect_url": "/mem/intune/fundamentals/intune-planning-guide",
+            "redirect_document_id": false
+        }, 
+        {
             "source_path": "memdocs/intune/enrollment/ios-enroll.md",
             "redirect_url": "/mem/intune/fundamentals/deployment-guide-enrollment-ios-ipados",
             "redirect_document_id": false

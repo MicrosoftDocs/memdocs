@@ -1176,7 +1176,7 @@ items:
           href: ./fundamentals/deployment-guide-enrollment-windows.md
         - name: Set up automatic enrollment  
           href: ./enrollment/windows-enroll.md
-        - name: Enable automatic discovery for MDM server      
+        - name: Enable automatic discovery of MDM server      
           href: ./enrollment/windows-enrollment-create-cname.md
         - name: Set up Intune Connector for Active Directory  
           href: ./enrollment/autopilot-hybrid-connector-proxy.md
@@ -1256,7 +1256,7 @@ items:
           href: ./enrollment/apple-configurator-enroll-ios.md
         - name: iOS/iPadOS security configuration framework
           items:
-          - name: Overview of security configuration framework
+          - name: Overview of security framework
             href: ./enrollment/ios-ipados-configuration-framework.md
           - name: 1 - Configure app configuration policies
             href: ./enrollment/ios-ipados-app-configuration-policies.md
