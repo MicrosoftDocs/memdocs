@@ -29,9 +29,9 @@ ms.collection:
   - highseo
 ---
 
-# Enrollment guidance overview
+# Enrollment guide: Microsoft Intune enrollment   
 
-Microsoft Intune, in conjunction with Azure Active Directory (Azure AD), facilitates a secure, streamlined process for registering and enrolling devices that want access to your internal resources. Once users and devices are registered within your Azure AD (also called a *tenant*), then you can utilize Intune for its endpoint management capabilities. The process that enables device management for a device is called *enrollment*. 
+Microsoft Intune, in conjunction with Azure Active Directory (Azure AD), facilitates a secure, streamlined process for registering and enrolling devices that want access to your internal resources. Once users and devices are registered within your Azure AD (also called a *tenant*), then you can utilize Intune for its endpoint management capabilities. The process that enables device management for a device is called *device enrollment*. 
 
 During enrollment, Intune installs an MDM certificate on the enrolling device. The MDM certificate communicates with the Intune service, and enables Intune to start enforcing your organization's policies, such as:  
  

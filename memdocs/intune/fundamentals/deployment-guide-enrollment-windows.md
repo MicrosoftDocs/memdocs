@@ -29,7 +29,7 @@ ms.collection:
   - highseo
 ---
 
-# Deployment guide: Enroll Windows client devices in Microsoft Intune
+# Enrollment guide: Enroll Windows client devices in Microsoft Intune
 
 Personal and organization-owned devices can be enrolled in Intune. Once they're enrolled, they receive the policies and profiles you create.
 
