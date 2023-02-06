@@ -1206,16 +1206,16 @@ items:
         items:  
         - name: Windows enrollment guide 
           href: ./fundamentals/deployment-guide-enrollment-windows.md
-        - name: Set up automatic enrollment  
-          href: ./enrollment/windows-enroll.md
-        - name: Enable automatic discovery of MDM server      
+        - name: Enable auto-discovery of MDM server      
           href: ./enrollment/windows-enrollment-create-cname.md
         - name: Set up Intune Connector for Active Directory  
-          href: ./enrollment/autopilot-hybrid-connector-proxy.md
-        - name: Set up Enrollment Status Page
-          href: ./enrollment/windows-enrollment-status.md
+          href: ./enrollment/autopilot-hybrid-connector-proxy.
+        - name: Set up automatic enrollment  
+          href: ./enrollment/windows-enroll.md
         - name: Set up bulk enrollment and workplace join             
           href: ./enrollment/windows-bulk-enroll.md  
+        - name: Set up Enrollment Status Page
+          href: ./enrollment/windows-enrollment-status.md
  
       - name: Set up Android enrollment
         items:
