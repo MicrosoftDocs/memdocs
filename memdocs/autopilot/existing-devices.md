@@ -39,7 +39,7 @@ _Windows Autopilot for existing devices_ lets you reimage and provision a Window
 
 ## Prerequisites
 
-- A currently supported version of Microsoft Endpoint Configuration Manager current branch.
+- A currently supported version of Microsoft Configuration Manager current branch.
 - Assigned Microsoft Intune licenses
 - Azure AD Premium
 - A supported version of Windows 10 or Windows 11 imported into Configuration Manager as an [OS image](../configmgr/osd/get-started/manage-operating-system-images.md)
@@ -215,7 +215,7 @@ You can also save the profile to a text file and edit in Notepad. In Notepad, wh
 
 :::image type="content" source="images/notepad.png" alt-text="Save as ANSI encoding in Notepad.":::
 
-After you save the file, move it to a location for a Microsoft Endpoint Configuration Manager package source.
+After you save the file, move it to a location for a Microsoft Configuration Manager package source.
 
 > [!IMPORTANT]
 > The configuration file can only contain one profile. You can use multiple JSON profile files, but each one must be named `AutopilotConfigurationFile.json`. This requirement is for OOBE to follow the Autopilot experience. To use more than one Autopilot profile, create separate Configuration Manager packages.

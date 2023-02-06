@@ -445,7 +445,7 @@ To see a generated report, you can use the following steps:
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All Apps** > *Select an app* > **User Install status**.
 
-## Windows 10 MDM Firewall status (Organizational)
+## MDM Firewall status for Windows 10 and later (Organizational)
 
 *In public preview.*  *This report is also described in [Endpoint security firewall policy](../protect/endpoint-security-firewall-policy.md#mdm-devices-running-windows-10-or-later-with-firewall-off) along with the Windows 10 MDM devices with firewall off report, which is only available from within the endpoint security node.*
 

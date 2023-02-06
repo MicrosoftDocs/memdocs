@@ -58,7 +58,7 @@ Once deployed, you can manage Windows devices with:
 
 - Microsoft Intune
 - Windows Update for Business
-- Microsoft Endpoint Configuration Manager
+- Microsoft Configuration Manager
 - Other similar tools
 
 ## Requirements

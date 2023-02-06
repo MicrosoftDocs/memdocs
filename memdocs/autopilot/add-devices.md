@@ -51,7 +51,7 @@ Device enrollment requires *Intune Administrator* or *Policy and Profile Manager
 
 The following methods are available to harvest a hardware hash from existing devices:
 
-1. Using [Microsoft Endpoint Configuration Manager](#configuration-manager)
+1. Using [Microsoft Configuration Manager](#configuration-manager)
 2. Using [Windows PowerShell](#powershell)
 3. During OOBE by using the [Diagnostics Page](#diagnostics-page-hash-export) (Windows 11 only)
 4. From the Desktop using [Settings > Accounts](#desktop-hash-export)
@@ -73,7 +73,7 @@ After Intune reports the profile as ready to go, you can connect the device to t
 
 ### Configuration Manager
 
-Microsoft Endpoint Configuration Manager automatically collects the hardware hashes for existing Windows devices. For more information, see [Gather information from Configuration Manager for Windows Autopilot](/configmgr/comanage/how-to-prepare-win10#windows-autopilot). You can extract the hash information from Configuration Manager into a CSV file.
+Microsoft Configuration Manager automatically collects the hardware hashes for existing Windows devices. For more information, see [Gather information from Configuration Manager for Windows Autopilot](/configmgr/comanage/how-to-prepare-win10#windows-autopilot). You can extract the hash information from Configuration Manager into a CSV file.
 
 ### PowerShell
 
