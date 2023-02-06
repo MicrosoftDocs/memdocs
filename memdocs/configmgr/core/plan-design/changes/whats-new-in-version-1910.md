@@ -25,13 +25,13 @@ Always review the latest checklist for installing this update. For more informat
 
 To take full advantage of new Configuration Manager features, after you update the site, also update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.
 
-## <a name="bkmk_mem"></a> Microsoft Endpoint Configuration Manager
+## <a name="bkmk_mem"></a> Microsoft Configuration Manager
 
 <!--4960084-->
 
 Configuration Manager is now part of Microsoft Endpoint Manager.
 
-![Microsoft Endpoint Configuration Manager](media/4960084-endpoint-manager-logo.png)
+![Microsoft Configuration Manager](media/4960084-endpoint-manager-logo.png)
 
 Microsoft Endpoint Manager is an integrated solution for managing all of your devices. Microsoft brings together Configuration Manager and Intune with simplified licensing. Continue to make use of your existing Configuration Manager investments while you take advantage of the power of the Microsoft cloud at your own pace.
 

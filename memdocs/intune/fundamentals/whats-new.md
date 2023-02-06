@@ -65,7 +65,28 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Scripts
 ### Tenant administration
 -->
+## Week of January 30, 2023
 
+### Device management
+
+#### HTC Vive Focus 3 supported on Microsoft Intune for Android Open Source Devices<!--15670082--> 
+
+Microsoft Intune for Android open source project devices (AOSP) now supports HTC Vive Focus 3. 
+
+For more information go to [Operating systems and browsers supported by Microsoft Intune](../fundamentals/supported-devices-browsers.md)
+
+Applies to:
+
+- Microsoft Intune (AOSP)
+#### Introducing support for laser pointers in Remote Help<!-- 16108312 -->
+
+In Remote Help, you can now use a laser pointer when you are providing assistance on Windows.
+
+For more information on Remote Help, go to [Remote Help](../remote-actions/remote-help.md).
+
+Applies to:
+
+ - Windows 10/11
 ## Week of January 23, 2023 (Service release 2301)
 
 ### App management
@@ -89,8 +110,8 @@ Software update policies for macOS devices are now generally available. This gen
 
 For more information, see [Use Microsoft Intune policies to manage macOS software updates](../protect/software-updates-macos.md).
 
-#### Windows AutoPilot device diagnostics<!-- 16697347 -->
-Windows AutoPilot diagnostics is available to download in Microsoft Endpoint Manager admin center from either in the Autopilot deployments monitor or Device Diagnostics monitor for an individual device.
+#### Windows Autopilot device diagnostics<!-- 16697347 -->
+Windows Autopilot diagnostics is available to download in Microsoft Endpoint Manager admin center from either in the Autopilot deployments monitor or Device Diagnostics monitor for an individual device.
 
 ### Device enrollment
 
@@ -152,19 +173,6 @@ Applies to:
 
 - Windows 10
 - Windows 11
-
-#### Support for multi-SIM iOS/iPadOS device inventory<!--16360290 -->
-You can now view the service subscription fields on devices that have multiple SIM cards installed under the per-device Hardware section. The inventory fields that are capable of reporting multiple values to Intune are:
-
-- ICCID
-- IMEI
-- MEID
-- Phone number
-
-These fields will default to using labels returned by the device, such as: *Primary*, *Secondary*, *CTSubscriptionSlotOne*, and *CTSubscriptionSlotTwo*. These returned labels may be displayed in the language of the local device that is reporting its inventory to Intune.
-
-Applies to:
-- iOS/iPadOS
 
 #### Support for Bulk Device Actions on devices running Android AOSP<!--15397458 -->
 You can now complete "Bulk Device Actions" for devices running Android AOSP. The bulk device actions supported on devices running AOSP are Delete, Wipe and Restart.
@@ -291,7 +299,7 @@ For more information about protected apps, see [Microsoft Intune protected apps]
 ### Scripts
 
 #### Preview PowerShell script package content in Endpoint Analytics<!-- 12930245 -->
-Admins can now see a preview of a PowerShell script's content for proactive remediations. The content will be displayed in a greyed-out box with scrolling capability. Admins will not be able to edit the content of the script in the preview. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Reports** > **Endpoint analytics** > **Proactive remediations**. For related information, see [PowerShell scripts for Proactive remediations](../../analytics/powershell-scripts.md).
+Admins can now see a preview of a PowerShell script's content for proactive remediations. The content will be displayed in a grayed-out box with scrolling capability. Admins will not be able to edit the content of the script in the preview. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Reports** > **Endpoint analytics** > **Proactive remediations**. For related information, see [PowerShell scripts for Proactive remediations](../../analytics/powershell-scripts.md).
 
 ## Week of January 16, 2023
 

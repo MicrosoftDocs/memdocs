@@ -34,7 +34,7 @@ The following sections describe the new features to try out in this version:
 [!INCLUDE [Search all subfolders for configuration items and configuration baselines](includes/2002-2/5891241.md)]
 [!INCLUDE [Support for 64-bit macOS Catalina](includes/2002-2/3696246.md)]
 [!INCLUDE [Improvements to extend and migrate on-premises site to Microsoft Azure](includes/2002-2/6307931.md)]
-[!INCLUDE [Microsoft Endpoint Configuration Manager cloud features](includes/2002-2/5834830.md)]
+[!INCLUDE [Microsoft Configuration Manager cloud features](includes/2002-2/5834830.md)]
 
 
 
