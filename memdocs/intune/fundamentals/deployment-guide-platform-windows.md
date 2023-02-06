@@ -146,7 +146,7 @@ For information about each enrollment method and how to choose one that's right 
 | Task | Detail |
 | ---- | ------ |
 |[Enable MDM automatic enrollment](../enrollment/windows-enroll.md)|Simplify enrollment by enabling automatic enrollment, which automatically enrolls devices into Intune that join or register with your Azure AD. |  
-|[Enable automatic discovery of MDM server](../enrollment/windows-enrollment-create-cname.md)| If you dont have Azure AD Premium, we recommend creating a CNAME on your DNS server so that device users don't have to manually enter the server address during device enrollment. |
+|[Enable automatic discovery of MDM server](../enrollment/windows-enrollment-create-cname.md)| If you dont have Azure AD Premium, we recommend creating a CNAME record for your Intune server. The CNAME record redirects enrollment requests to the right server so that users don't have to type the server name in manually. |
 |[Bulk enroll devices](../enrollment/windows-bulk-enroll.md)| Create a provisioning package in Windows Configuration Designer that simultaneously joins large numbers of new Windows devices to Azure Active Directory and enrolls them in Intune. |  
 |[Set up the enrollment status page (ESP)](../enrollment/windows-enrollment-status.md)| Create an enrollment status page profile with custom settings to guide users through device setup and enrollment.   |  
 |[Change device ownership label](../enrollment/corporate-identifiers-add.md#change-device-ownership)|After a device has been enrolled, you can change its ownership label in Intune to corporate-owned or personal-owned. This adjustment changes the way you manage the device, and can enable more management and identification capabilities in Intune, or limit them.|   

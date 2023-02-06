@@ -228,7 +228,7 @@ For more information, see [Bulk enrollment for Windows devices](../enrollment/wi
 There are other Windows enrollment options in Intune to help improve or simplify the device management experience for you and your employees:     
 
 * [Co-management settings](../../configmgr/comanage/autopilot-enrollment.md): Enable co-management settings to integrate Configuration Manager with Intune. Co-management gives you the option to use both Intune and Configuration Manager features.  
-* [CNAME validation](../enrollment/windows-enroll.md#simplify-windows-enrollment-without-azure-ad-premium): Create a domain name server (DNS) alias (CNAME record type) that redirects enrollment requests to Intune servers, so that people enrolling their devices don't have to manually enter the server address. This option simplifies enrollment in the absence of Azure AD Premium.   
+* [CNAME validation](../enrollment/windows-enrollment-create-cname.md): Validate a domain name server (DNS) alias (CNAME record type) you created to redirect enrollment requests to Intune servers. The alias simplifies enrollment for users in the absence of Azure AD Premium and automatic enrollment.    
 * [Enrollment Status Page](../enrollment/windows-enrollment-status.md): Enable the Enrollment Status Page so that people going through device setup can view and track installation progress.  
 
 ## Report and troubleshoot  

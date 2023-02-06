@@ -74,12 +74,16 @@ For more information, see [Enroll Windows 10/11 devices](../user-help/enroll-win
 
 * If you do not have Auto-MDM enrollment enabled, but you have Windows 10/11 devices that have been joined to Azure AD, two records will be visible in the Microsoft Endpoint Manager admin center after enrollment. You can stop this by making sure that users with Azure AD joined devices go to **Accounts** > **Access work or school** and **Connect** using the same account.  
 
-## Next steps
+## Next steps  
 
-For information about how to integrate and use automatic enrollment when provisioning devices, see:
+For information about how to integrate and use automatic enrollment when provisioning devices, see:  
 
-* [Tutorial: Use Windows Autopilot to enroll devices in Intune](../enrollment/tutorial-use-autopilot-enroll-devices?branch=release-intune-toc.md)
+* [Tutorial: Use Windows Autopilot to enroll devices in Intune](../enrollment/tutorial-use-autopilot-enroll-devices.md)
 * [Enroll a Windows client device automatically using Group Policy](/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)
 * [Enable co-management in Configuration Manager](../../configmgr/comanage/how-to-enable.md)  
+
+If you're not using automatic enrollment as part of your enrollment or provisioning solution, we recommend creating a a domain name server (DNS) alias, called a *CNAME* record type, that redirects enrollment requests to Intune servers. For more information, see [Enable auto-discovery of Intune enrollment server](../enrollment/windows-enrollment-create-cname.md).    
+
+
 
 

@@ -34,11 +34,11 @@ ms.collection:
 # Enable auto-discovery of Intune enrollment server     
 *Applies to Windows 10, Windows 11*  
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
+[!INCLUDE [azure_portal](../includes/azure_portal.md)]  
 
- Create a CNAME on your DNS server so that device users don't have to enter the server address during device enrollment. Although the CNAME configuration is optional, it makes enrollment easier for users by enabling automatic discovery of the Intune enrollment server. 
+If you're not using automatic enrollment as part of your enrollment or provisioning solution, we recommend creating a a domain name server (DNS) alias, called a *CNAME* record type, for your MDM servers. The CNAME redirects enrollment requests to Intune servers so that device users don't have to enter the server address during device enrollment. Although the CNAME configuration is optional, it makes enrollment easier for users by enabling automatic discovery of the Intune enrollment server and reducing the amount of user interaction required.  
 
- If you're enrolling Windows 10/11 devices using MDM automatic enrollment, you don’t have to worry about configuring CNAME DNS records. The MDM server is configured by default when you enable MDM automatic enrollment in your tenant.    
+If you're enrolling Windows 10/11 devices using [MDM automatic enrollment](windows-enroll.md), you don’t have to worry about configuring CNAME records for your MDM server. The MDM server is configured by default when you enable MDM automatic enrollment in your tenant.    
 
 ## Step 1: Create CNAME 
 
@@ -104,8 +104,10 @@ Although creating CNAME DNS entries is optional, CNAME records make enrollment e
 | Type | Host name | Points to | TTL |
 | --- | --- | --- | --- |
 |CNAME | EnterpriseEnrollment.company_domain.com | EnterpriseEnrollment-s.manage.microsoft.us | 1 hour |
-|CNAME | EnterpriseRegistration.company_domain.com | EnterpriseRegistration.windows.net | 1 hour |
+|CNAME | EnterpriseRegistration.company_domain.com | EnterpriseRegistration.windows.net | 1 hour |  
+
+For more information about automatic enrollment for Windows, see [Set up automatic enrollment](../enrollment/windows-enroll.md).  
 
 ## Next steps
 
-- [Considerations when managing Windows devices using Intune on Azure](../fundamentals/intune-legacy-pc-client.md).
+
