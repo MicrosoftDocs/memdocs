@@ -70,7 +70,7 @@ In Microsoft Teams, you can now share specific windows from your Cloud PC deskto
 
 #### Open Cloud PCs in a Remote Desktop app from windows365.microsoft.com<!--42949050-->
 
-From windows365.microsoft.com, you can now open a Cloud PC in a Remote Desktop app. For more information, see [Access a Cloud PC](/windows-365/end-user-access-cloud-pc#home-page).
+From windows365.microsoft.com, you can now open a Cloud PC in a Remote Desktop app. For more information, see [Access a Cloud PC](../end-user-access-cloud-pc.md#home-page).
 
 #### Improved feedback interface for end users<!--42949123-->
 
