@@ -1200,14 +1200,14 @@ items:
             href: ./enrollment/create-device-platform-restrictions.md  
           - name: Create device limit restrictions  
             href: ./enrollment/create-device-limit-restrictions.md  
+        - name: Configure Chrome Enterprise connector
+          items: 
           - name: Configure Chrome Enterprise connector
-            items: 
-            - name: Configure Chrome Enterprise connector
-              href: ./enrollment/chrome-enterprise-connector-configure.md 
-            - name: View Chrome OS device information in Intune
-              href: ./enrollment/enrollment/chrome-enterprise-device-details.md              
-            - name: Remote device actions for Chrome OS  
-              href: ./enrollment//chrome-enterprise-remote-actions.md  
+            href: ./enrollment/chrome-enterprise-connector-configure.md 
+          - name: View Chrome OS device information in Intune
+            href: ./enrollment/chrome-enterprise-device-details.md              
+          - name: Remote device actions for Chrome OS  
+            href: ./enrollment//chrome-enterprise-remote-actions.md  
   
       - name: Set up Windows enrollment
         items:  
@@ -1221,7 +1221,7 @@ items:
             href: ./enrollment/windows-bulk-enroll.md   
         - name: Enrollment configurations    
           items:
-          - name: Create and validate CNAME records for enrollment          
+          - name: Create and validate CNAME records             
             href: ./enrollment/windows-enrollment-create-cname.md
           - name: Set up Intune Connector for Active Directory  
             href: ./enrollment/autopilot-hybrid-connector-proxy.md
@@ -1263,18 +1263,20 @@ items:
           items: 
           - name: Enable Samsung Knox Mobile Enrollment
             href: ./enrollment/android-samsung-knox-mobile-enroll.md
-        - name: Security configuration framework for Android Enterprise  
-          items:
-          - name: Overview 
-            href: ./enrollment/android-configuration-framework.md
-          - name: 1 - Configure device enrollment restrictions  
-            href: ./enrollment/device-enrollment-restrictions.md
-          - name: 2 - Configure app configuration policies
-            href: ./enrollment/android-app-configuration-policies.md
-          - name: 3 - Configure security settings for personal devices   
-            href: ./enrollment/android-work-profile-security-settings.md
-          - name: 4 - Configure security settings for fully managed devices 
-            href: ./enrollment/android-fully-managed-security-settings.md         
+        - name: Enrollment configurations    
+          items:        
+          - name: Security configuration framework for Android Enterprise  
+            items:
+            - name: Overview 
+              href: ./enrollment/android-configuration-framework.md
+            - name: 1 - Configure device enrollment restrictions  
+              href: ./enrollment/device-enrollment-restrictions.md
+            - name: 2 - Configure app configuration policies
+              href: ./enrollment/android-app-configuration-policies.md
+            - name: 3 - Configure security settings for personal devices   
+              href: ./enrollment/android-work-profile-security-settings.md
+            - name: 4 - Configure security settings for fully managed devices 
+              href: ./enrollment/android-fully-managed-security-settings.md         
       - name: Set up iOS/iPadOS enrollment
         items:
         - name: Overview 
