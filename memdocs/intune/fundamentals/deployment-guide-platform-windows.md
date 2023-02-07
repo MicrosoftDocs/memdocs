@@ -28,15 +28,9 @@ ms.collection: M365-identity-device-management
 
 # Deployment guide: Manage devices running Windows 10/11
 
-This guide describes everything you need to do to protect and manage Windows apps and endpoints using Microsoft Intune, including how to:       
+This guide describes how to protect and manage Windows apps and endpoints using Microsoft Intune, from planning to device enrollment, and includes our setup recommendations and resources.   
 
-* Prepare your tenant for device enrollment.  
-* Create device compliance policies. 
-* Add custom compliance settings.   
-* Enforce conditional access policies in Microsoft Edge. 
-* Support employees and students enrolling their desktops.  
-
-For each section in this guide, review the associated tasks. Some tasks are required and some, like setting up conditional access, are optional. Select the provided links in each section to go to our recommended help docs on Microsoft Learn, where you can find more detailed information and how-to instructions.        
+For each section in this guide, review the associated tasks. Some tasks are required and some, like setting up Azure AD conditional access, are optional. Select the provided links in each section to go to our recommended help docs on Microsoft Learn, where you can find more detailed information and how-to instructions.        
  
 ## Step 1: Prerequisites  
 
@@ -103,11 +97,12 @@ Use Microsoft Intune to enable or disable Windows settings and features on devic
 |[Configure delivery optimization settings](../configuration/delivery-optimization-windows.md)|Use these settings to reduce bandwidth consumption on devices downloading apps and updates.|  
 |[Customize branding and enrollment experience](../apps/company-portal-app.md)|Customize the Intune Company Portal and Microsoft Intune app experience with your organization's own words, branding, screen preferences, and contact information.|
 |[Configure kiosks and dedicated devices](../configuration/kiosk-settings.md)|Create a kiosk profile to manage devices running in kiosk mode. |  
-|[Customize shared devices](../configuration/shared-user-device-settings.md)|Control access, accounts, and power features on shared PCs or multi-user devices.|  
+|[Customize shared devices](../configuration/shared-user-device-settings.md)|Control access, accounts, and power features on shared or multi-user devices.|  
 |[Configure network boundary](../configuration/network-boundary-windows.md)|Create a network boundary profile to protect your environment from sites you don't trust.  | 
 |[Configure Windows health monitoring](../configuration/windows-health-monitoring.md)|Create a Windows health monitoring profile to permit Microsoft to collect data about performance and provide recommendations for improvements. Creating a profile enables the endpoint analytics feature in Microsoft Endpoint Manager, which analyzes collected data, recommends software, helps improve startup performance, and fixes common support issues. |  
 |[Configure education profile for students](../configuration/education-settings-configure.md)| Create an education profile and configure the Take a Test app for students taking tests or exams on enrolled devices. |  
 |[Configure eSim cellular profile](../configuration/esim-device-configuration.md)| You can configure eSIM for ESIM-capable devices, such as the Surface LTE Pro, to connect to the internet over a cellular data connection. This configuration is ideal for global travelers who need to stay connected and flexible while traveling, and eliminates the need for a SIM card. | 
+
 
 ## Step 6: Set up secure authentication methods   
 Set up authentication methods in Intune to ensure that only authorized people access your internal resources. Intune supports multi-factor authentication, certificates, and derived credentials. Certificates can also be used for signing and encryption of email using S/MIME. 
@@ -165,31 +160,29 @@ After devices are set up, you can use remote actions in Intune to manage and tro
 |[Use security tasks to view threats and vulnerabilities](../protect/atp-manage-vulnerabilities.md)|Use Intune to remediate endpoint weakness identified by Microsoft Defender for Endpoint. Before you can work with security tasks, you must integrate Microsoft Defender for Endpoint with Intune. |  
 |[Use organizational messages](../remote-actions/organizational-messages-overview.md)|Use organizational messages to send important messages to employees on Intune-managed devices running Windows 11. Organizational messages can be used to communicate in remote and hybrid work scenarios.|
 
-## Help employees and students   
+## Step 10: Help employees and students   
 
-It's important to provide employees and students with help resources in case they need guidance during enrollment.  
+The resources in this section are in the Microsoft Intune User Help documentation. This documentation is meant for employees, students, and other Intune-licensed device users who are enrolling a personal or company-provided device. Documentation links are available throughout the Intune Company Portal app and point to information about: 
+
+* Enrollment methods, with walkthroughs of how to enroll 
+* Company Portal settings and features  
+* How to unenroll and remove stored data
+* Updating device settings for compliance requirements 
+* How to report app problems    
 
 >[!TIP]
-> Make your organization's operating system requirements and device password requirements easy to find on your website or in an onboarding email so that employees don't have to delay enrollment to seek out that information.  
+> Make your organization's operating system requirements and device password requirements easy to find on your website or in an onboarding email so that employees don't have to delay enrollment to seek out that information. 
 
 | Task | Detail | 
 | ---- | ------ | 
-|Install Intune Company Portal app for Windows| Employees must install the Microsoft Intune app on their personal device for enrollment. This article describes how to install, update, and remove the Company Portal app for Windows. | 
-|Install Microsoft Edge web browser| To access protected websites and files, employees must have Microsoft Edge web browser, version 102.*X* or later. After they enroll their device, employees can sign into Microsoft Edge with their work account and access websites and files.   |  
-|Enroll device in Intune| This article is for device users and describes how to enroll a device with the Microsoft Intune app, and includes system requirements, prerequisites, and next steps. During this step, Microsoft Intune registers the device with Azure AD and creates a device record in Intune. After registration is complete, device compliance checks begin.  |  
-|Check device status and resolve compliance issues| This article is for device users and describes how to resolve compliance issues in the Microsoft Intune app. Compliance checks happen during enrollment and thereafter when the device checks in with Intune. The Intune app notifies employees when they have a noncompliant setting on their device. Intune determines compliance and actions for noncompliance by using your device compliance and conditional access policies.  |  
+|[Install Intune Company Portal app for Windows](../user-help/sign-in-to-the-company-portal.md)| Learn where to get the Company Portal app and how to sign in. | 
+|[Update Company Portal app](../user-help/install-a-new-version-of-the-company-portal-app.md)| This article describes how to install the latest version of Company Portal and how to turn on automatic app updates. | 
+|[Enroll a device](../user-help/enroll-windows-10-device.md)| This article describes how to enroll personal devices running Windows 10 or Windows 11. | 
+|[Unenroll a device](../user-help/enroll-windows-10-device.md)| This article describes how to unenroll a device from Intune and delete the stored cache and logs for Company Portal. | 
 
 ## Next steps  
 
 * Check out [Walk through Intune in Microsoft Endpoint Manager](tutorial-walkthrough-endpoint-manager.md) for a tutorial about how to navigate and use Intune. Tutorials are 100 – 200 level content for people new to Intune or a specific scenario.   
-
-* Check out the [Microsoft Tech Community](https://techcommunity.microsoft.com/t5/microsoft-intune-blog/increase-security-enable-quality-collaboration-for-linux/ba-p/3640485) for the latest information and blogs about Linux desktop management.  
-
-* [Use Autopilot to enroll Windows devices in Intune](../enrollment/tutorial-use-autopilot-enroll-devices.md)  
-* [Create an administrative template to configure group policy](../configuration/tutorial-walkthrough-administrative-templates.md) **For PM: Keep tutorial here in this section or use this to replace entry in device settings section instead?**  
-* [Configure Microsoft Edge policy settings using administrative template](../configuration/tutorial-walkthrough-administrative-templates.md) **For PM: Keep how-to here in this section or replace the entry in device settings section instead?**  
-* [Update Microsoft 365 using administrative template](../configuration/administrative-templates-update-office.md) **For PM: Should this be under device settings section as something they should do or is it better here under tutorials?**  
-* [Protect Exchange Online email on unmanaged devices](../protect/tutorial-protect-email-on-unmanaged-devices.md) **Laura: Does this bullet apply to Windows?  **   
 
 * For other versions of this guide, see:   
 

@@ -29,12 +29,12 @@ ms.custom:
 ms.collection: M365-identity-device-management
 ---
 
-# Shared iPad devices  
+# Set up Shared iPad   
 *Applies to iPadOS 13.4 and later*    
 
 Provisioning a device as a Shared iPad sets it up so that it can be shared among more than one employee or student. iPads enrolled in Intune using automated device enrollment, and without user affinity, can be provisioned as shared iPads. 
 
-A Shared iPad consists of a pre-defined number of *user partitions*. User partitions ensure that each user’s apps, data, and preferences are stored separately on the iPad. If you allow it, these partitions can be backed up to iCloud for seamless transition across other shared iPads in your organization. 
+Shared iPad creates a pre-defined number of *user partitions* on the device. User partitions ensure that each user’s apps, data, and preferences are stored separately on the iPad. If you allow it, these partitions can be backed up to iCloud for seamless transition across other shared iPads in your organization. 
 
 When you federate your organization’s Azure AD instance in Apple Business or School Manager, a device user can sign in on a Shared iPad using their Azure AD username and password. This automatically creates a Managed Apple ID for the user that matches their Azure AD username when they sign in on a Shared iPad for the first time. In addition, at first sign-in on a Shared iPad, the user sets up an alphanumeric passcode for their user partition and the apps assigned to the device are installed to the user partition. The next time the user accesses a Shared iPad, they only need to provide their Managed Apple ID (same as their Azure AD username) and the alphanumeric passcode. 
 
