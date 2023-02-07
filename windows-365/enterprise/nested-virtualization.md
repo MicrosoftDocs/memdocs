@@ -44,11 +44,11 @@ To use virtualization-based workloads, the Cloud PC must meet these requirements
 - 4vCPU Cloud PC (Downsizing to 2vCPU Cloud PCs will disable nested virtualization).
 - Be in one of the [supported regions](requirements.md?tabs=enterprise%2Cent#supported-azure-regions-for-cloud-pc-provisioning).
     - All regions are supported for 8vCPU.  
-    - For 4vCPU, the following regions are not currently supported:
+    - For 4vCPU, the following regions aren't currently supported:
         - Southeast Asia
         - Central India
         - Korea Central
-        - South Centeral US
+        - South Central US
         - East US 2
         - West US 2
         - West US 3
