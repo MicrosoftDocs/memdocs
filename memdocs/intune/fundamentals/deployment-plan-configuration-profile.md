@@ -7,7 +7,7 @@ description: Step 4 to deploy device configuration profiles as part of the minim
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/02/2023
+ms.date: 02/06/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -42,16 +42,24 @@ This article applies to:
 
 When you create device configuration profiles, there are different levels and types of policies available. These levels are the minimum Microsoft recommended policies. Know that your environment and business needs may be different.
 
-- Level 1 - Minimum device configuration (this article)
-- Level 2 - Enhanced device configuration (see INSERT LINK)
-- Level 3 - High device configuration (see INSERT LINK)
+- **Level 1 - Minimum device configuration**: In this level, Microsoft recommends you create policies that:
 
-In **Level 1 - Minimum device configuration**, Microsoft recommends you create policies that:
+  - Focus on device security, including installing antivirus, creating a strong password policy, and regularly installing software updates.
+  - Give users access to their organization email and controlled secure access to your network, wherever they are.
 
-- Focus on device security, including installing antivirus, creating a strong password policy, and regularly installing software updates.
-- Give users access to their organization email and controlled secure access to your network, wherever they are.
+- **Level 2 - Enhanced device configuration**: In this level, Microsoft recommends you create policies that:
 
-This article lists the **Level 1 - Minimum device configuration** device configuration policies that organizations should use. Most of these policies in this article focus on access to organization resources and security.
+  - Expand device security, including configuring disk encryption, enabling secure boot, and adding more password rules.
+  - Use the built-in features and templates to configure more settings that are important for your organization, including analyzing on-premises GPOs.
+
+- **Level 3 - High device configuration**: In this level, Microsoft recommends you create policies that:
+
+  - Move to password-less authentication, including using certificates, configuring single sign-on (SSO) to apps, enabling multi-factor authentication (MFA), and configuring Microsoft Tunnel.
+  - Add extra layers of security using Android common criteria mode or creating DFCI policies for Windows devices.
+  - Use the built-in features to configure kiosk devices, dedicated devices, shared devices, and other specialized devices.
+  - Deploy existing shell scripts.
+
+This article lists the different levels of device configuration policies that organizations should use. Most of these policies in this article focus on access to organization resources and security.
 
 These features are configured in device configuration profiles in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). When the profiles are ready, they can be deployed from Intune to your devices.
 
@@ -148,7 +156,7 @@ For more information on these features, go to:
 
 ✔️ **Create a strong password/PIN policy and block simple passcodes**
 
-PINs unlock devices. On devices that access organization data, including personally owned devices, you should require strong PINs/passcodes and support biometrics. Using biometrics is part of a password-less approach, which is recommended.
+PINs unlock devices. On devices that access organization data, including personally owned devices, you should require strong PINs/passcodes and support biometrics to unlock devices. Using biometrics is part of a password-less approach, which is recommended.
 
 Intune uses device restrictions profiles to create and configure password requirements.
 
@@ -345,6 +353,10 @@ To get started:
 
 ## Level 2 - Enhanced protection and configuration
 
+This level expands on what you've configured in level 1 and adds more security for your devices. In this section, you create a level 2 set of policies that configure other security settings for your devices.
+
+Microsoft recommends the following level 2 security policies:
+
 - Enable **disk encryption, secure boot, and TPM** on your devices. These features combined with a strong PIN policy or biometric unlocking are recommended at this level.
 
   Your options:
@@ -352,8 +364,8 @@ To get started:
   | Platform | Use Intune |
   | --- | --- |
   | **Android** |✔️ On Android devices, disk encryption and Samsung Knox might be built into the operating system. Disk encryption might be automatically enabled *when* you configure the lock screen settings. In Intune, you can create a device restrictions policy that configures lock screen settings. <br/><br/>For a list of the password and lock screen settings you can configure, go to the following articles:<br/><br/>- [Organization owned devices - Device password](../configuration/device-restrictions-android-for-work.md#device-password)<br/>- [Organization owned devices - Work profile password](../configuration/device-restrictions-android-for-work.md#work-profile-password)<br/>- [Personally owned devices - Work profile password](../configuration/device-restrictions-android-enterprise-personal.md#work-profile-password)<br/>- [Personally owned devices - Device password](../configuration/device-restrictions-android-enterprise-personal.md#password) |
-  | **iOS/iPadOS** | ❌ On iOS/iPadOS devices, disk encryption and Secure Enclave are built into the operating and automatically enabled. There aren't any Intune settings to configure these features. There are Intune policies that focus on password settings and encrypting backups. <br/><br/>For more specific information, go to [Introduction to Apple platform security](https://support.apple.com/guide/security/intro-to-apple-platform-security-seccd5016d31/web) and [Secure Enclave](https://support.apple.com/guide/security/secure-enclave-sec59b0b31ff/web) (opens Apple's web site). |
-  | **macOS** | ✔️ On macOS devices, you can [configure and use FileVault](../protect/encrypt-devices-filevault.md) policies in Intune for disk encryption. |
+  | **iOS/iPadOS** | **N/A** On iOS/iPadOS devices, disk encryption and Secure Enclave are built into the operating system and automatically enabled. There aren't any Intune settings to configure these specific features. <br/><br/>For more specific information, go to [Introduction to Apple platform security](https://support.apple.com/guide/security/intro-to-apple-platform-security-seccd5016d31/web) and [Secure Enclave](https://support.apple.com/guide/security/secure-enclave-sec59b0b31ff/web) (opens Apple's web site). <br/><br/>✔️ There are Intune policies that focus on password settings and encrypting backups. |
+  | **macOS** | ✔️ On macOS devices, you can [configure and use FileVault](../protect/encrypt-devices-filevault.md) policies in Intune for disk encryption. <br/><br/>Secure Enclave is built into the operating and automatically enabled. For more specific information, go to [Introduction to Apple platform security](https://support.apple.com/guide/security/intro-to-apple-platform-security-seccd5016d31/web) and [Secure Enclave](https://support.apple.com/guide/security/secure-enclave-sec59b0b31ff/web) (opens Apple's web site).|
   | **Windows** | ✔️ On Windows devices, there are Intune endpoint protection policies that [manage BitLocker, including TPM](../protect/encrypt-devices.md) and [manage Windows settings, including secure boot](../protect/endpoint-protection-windows-10.md#windows-encryption). |
 
 - **Expire passwords and regulate reusing old passwords**. In Level 1, you created a strong PIN or password policy. If you haven't already, be sure you configure your PINs & passwords to expire and set some password-reuse rules.
@@ -367,26 +379,47 @@ To get started:
   | **macOS** | ✔️ On macOS devices, you can use Intune to create a device restrictions policy that configures these settings. <br/><br/>For a list of the password settings you can configure, go to [macOS password settings](../configuration/device-restrictions-macos.md#password).<br/><br/>The [settings catalog](../configuration/settings-catalog.md) may also have some relevant password settings.|
   | **Windows** | ✔️ On Windows devices, you can use Intune to create a device restrictions policy that configures these settings. <br/><br/>For a list of the password settings you can configure, go to [iOS/iPadOS password settings](../configuration/device-restrictions-windows-10.md#password).<br/><br/>The [settings catalog](../configuration/settings-catalog.md) may also have some relevant password settings. |
 
-- Intune includes **hundreds of settings that can manage devices features** and settings, like disabling the built-in camera, controlling notifications, allowing bluetooth, blocking games, and more. You can use the built-in templates or the settings catalog to see all the settings and configure the settings.
+- Intune includes **hundreds of settings that can manage devices features** and settings, like disabling the built-in camera, controlling notifications, allowing bluetooth, blocking games, and more.
 
-  - [**Device restrictions**: Many built-in settings that can control different parts of the devices, including security, hardware, data sharing, and more](../configuration/device-restrictions-configure.md)
-  - [**iOS/iPadOS, macOS, Windows**: Use the Settings catalog to see all the available settings](../configuration/settings-catalog.md)
-  - **Windows 10/11**:
-    - [Use built-in administrative templates](../configuration/administrative-templates-windows.md)
+  You can use the built-in templates or the settings catalog to see and configure the settings.
 
-- If you use **on-premises GPOs** and want to know if these same settings are available in Intune, then use Group Policy analytics. This feature analyzes your GPOs and depending on the analysis, can import them into an Intune policy.
+  - **[Device restrictions templates](../configuration/device-restrictions-configure.md)** have many built-in settings that can control different parts of the devices, including security, hardware, data sharing, and more.
+
+    You can use these templates for the following platforms:
+  
+    - Android
+    - iOS/iPadOS
+    - macOS
+    - Windows
+
+  - **[Use the Settings catalog](../configuration/settings-catalog.md)** to see and configure all the available settings. You can use the settings catalog for the following platforms:
+
+    - iOS/iPadOS
+    - macOS
+    - Windows
+
+  - **[Use the built-in administrative templates](../configuration/administrative-templates-windows.md)**, similar to configuring ADMX templates on-premises. You can use the settings catalog for the following platform:
+
+    - Windows
+
+- If you use **on-premises GPOs** and want to know if these same settings are available in Intune, then use Group Policy analytics. This feature analyzes your GPOs and depending on the analysis, can import them into an Intune settings catalog policy.
 
   For more information, go to [Analyze your on-premises GPOs and import them in Intune](../configuration/group-policy-analytics.md).
 
 ## Level 3 - High protection and configuration
 
 THIS SECTION IS STILL BEING WRITTEN
+- Add MTD, threat levels (Possibly add to level 2)
+
+This level expands on what you've configured in levels 1 and 2. It adds extra security features commonly used on enterprise devices.
+
+Microsoft recommends the following level 3 enterprise security policies:
 
 - **Expand password-less authentication** to other services used by your workforce. In level 1, you enabled biometrics so users can sign in to their devices with a fingerprint or facial recognition. In this level, expand password-less to other parts of the organization.
 
   - **Use certificates to authenticate** email, VPN, and Wi-Fi connections. Certificates are deployed to users and devices, and are then used by users to get access to resources in your organization through these email, VPN, and Wi-Fi connections.
 
-    To learn more about using certificate in Intune, go to:
+    To learn more about using certificates in Intune, go to:
 
     - [Use PKCS or SCEP certificates for authentication](../protect/certificates-configure.md)
     - [Use derived credentials](../protect/derived-credentials.md)
@@ -399,7 +432,7 @@ THIS SECTION IS STILL BEING WRITTEN
     - [**iOS/iPadOS, macOS**: Use the Enterprise SSO plug-in in Intune and other MDMs](../configuration/use-enterprise-sso-plug-in-ios-ipados-macos.md)
     - [**Windows**: Configure SSO with Azure AD](/azure/active-directory/manage-apps/what-is-single-sign-on)
 
-  - When you move to password-less, enable and **use multi-factor authentication** (MFA). MFA adds an extra layer of security, and can help protect your organization from phishing attacks. You can use MFA with authenticator apps, like Microsoft Authenticator, or with a phone call or text message. You can also use MFA when users enroll their devices in Intune.
+  - **Use multi-factor authentication** (MFA). When you move to password-less, MFA adds an extra layer of security, and can help protect your organization from phishing attacks. You can use MFA with authenticator apps, like Microsoft Authenticator, or with a phone call or text message. You can also use MFA when users enroll their devices in Intune.
 
     Multi-factor authentication is a feature of Azure AD and can be used with Azure AD accounts. For more information, go to:
 
@@ -407,19 +440,19 @@ THIS SECTION IS STILL BEING WRITTEN
     - [Azure AD multi-factor authentication](/azure/active-directory/authentication/concept-mfa-howitworks)
     - [Require multi-factor authentication for Intune device enrollments](/enrollment/multi-factor-authentication.md)
 
-- [Android Common Criteria mode](../configuration/device-restrictions-android-for-work.md#system-security)
+  - **Set up Microsoft Tunnel** for your Android and iOS/iPadOS devices. Microsoft Tunnel uses Linux to allow these devices access to on-premises resources using modern authentication and conditional access.
 
-- Microsoft Tunnel: For your Android or iOS/iPadOS devices, use the **Microsoft Tunnel VPN gateway** solution. Microsoft Tunnel uses Linux to allow these devices access to on-premises resources using modern authentication and conditional access.
+    Microsoft Tunnel uses Intune, Azure AD, and Active Directory Federation Services (AD FS). For more information, go to [Microsoft Tunnel for Microsoft Intune](../protect/microsoft-tunnel-overview.md).
 
-  [Microsoft Tunnel for Microsoft Intune](../protect/microsoft-tunnel-overview.md)
+- **Use Android Common Criteria mode** on Android devices that are used by highly sensitive organizations, like government establishments.
 
-- Create policies that apply to the Windows firmware layer
+  For more information on this setting, go to [Android Common Criteria mode](../configuration/device-restrictions-android-for-work.md#system-security).
 
-  Prevent malware from communicating with the Windows OS processes. On your Windows devices, create policies that apply to the Windows firmware layer.
+- Create policies that **apply to the Windows firmware layer**. These policies can help prevent malware from communicating with the Windows OS processes.
 
-  - [Use Device Firmware Configuration Interface (DFCI) profiles on Windows devices](../configuration/device-firmware-configuration-interface-windows.md)
+  For more information on this feature, go to [Use Device Firmware Configuration Interface (DFCI) profiles on Windows devices](../configuration/device-firmware-configuration-interface-windows.md).
 
-- Configure kiosks, shared devices, and other specialized devices:
+- **Configure kiosks, shared devices, and other specialized devices**:
 
   - **Android device administrator**
     - [Use and manage Zebra devices with Zebra Mobility Extensions](../configuration/android-zebra-mx-overview.md)
@@ -441,7 +474,8 @@ THIS SECTION IS STILL BEING WRITTEN
     - [Device settings to run as a kiosk](../configuration/kiosk-settings-holographic.md)
     - [Device settings to run as a dedicated kiosk](../configuration/kiosk-settings.md)
 
-- Deploy scripts:
+- **Deploy shell scripts**:
+
   - [**macOS**: Use shell scripts](../apps/macos-shell-scripts.md)
   - [**Windows**: Use Windows PowerShell scripts](../apps/intune-management-extension.md)
 
