@@ -160,9 +160,9 @@ After devices are set up, you can use remote actions in Intune to manage and tro
 |[Use security tasks to view threats and vulnerabilities](../protect/atp-manage-vulnerabilities.md)|Use Intune to remediate endpoint weakness identified by Microsoft Defender for Endpoint. Before you can work with security tasks, you must integrate Microsoft Defender for Endpoint with Intune. |  
 |[Use organizational messages](../remote-actions/organizational-messages-overview.md)|Use organizational messages to send important messages to employees on Intune-managed devices running Windows 11. Organizational messages can be used to communicate in remote and hybrid work scenarios.|
 
-## Help employees and students   
+## Step 10: Help employees and students   
 
-It's important to provide employees and students with help resources in case they need guidance during enrollment. The resources in this section are in the Microsoft Intune User Help documentation. This documentation is meant for employees, students, and other Intune-licensed device users who are enrolling a personal or company-provided device. Documentation links are available throughout the Intune Company Portal app and includes docs about: 
+The resources in this section are in the Microsoft Intune User Help documentation. This documentation is meant for employees, students, and other Intune-licensed device users who are enrolling a personal or company-provided device. Documentation links are available throughout the Intune Company Portal app and point to information about: 
 
 * Enrollment methods, with walkthroughs of how to enroll 
 * Company Portal settings and features  
@@ -171,7 +171,7 @@ It's important to provide employees and students with help resources in case the
 * How to report app problems    
 
 >[!TIP]
-> Make your organization's operating system requirements and device password requirements easy to find on your website or in an onboarding email so that employees don't have to delay enrollment to seek out that information.  
+> Make your organization's operating system requirements and device password requirements easy to find on your website or in an onboarding email so that employees don't have to delay enrollment to seek out that information. 
 
 | Task | Detail | 
 | ---- | ------ | 
