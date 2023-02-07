@@ -225,7 +225,7 @@ items:
     - name: Microsoft Surface Management Portal
       href: ./fundamentals/surface-management-portal.md
 
-  - name: How-to guides
+  - name: Feature areas
     items:
 
     - name: Set up Intune subscription
@@ -1172,7 +1172,7 @@ items:
 
     - name: Enroll devices in Microsoft Intune  
       items:
-      - name: Enrollment overview   
+      - name: Overview   
         href: ./fundamentals/deployment-guide-enrollment.md  
         displayName: COD; BYOD; DEM; ADE; USB-SA; USB-Direct; co-management; GPO
       - name: Enrollment configurations  
@@ -1192,7 +1192,7 @@ items:
           href: ./enrollment/terms-and-conditions-create.md
         - name: Create device enrollment restrictions
           items:  
-          - name: Enrollment restrictions overview  
+          - name: Overview  
             href: ./enrollment/enrollment-restrictions-set.md  
           - name: Intune device limits vs. Azure AD device limits    
             href: ./enrollment/device-limit-intune-azure.md   
@@ -1204,22 +1204,22 @@ items:
   
       - name: Set up Windows enrollment
         items:  
-        - name: Windows enrollment guide 
+        - name: Overview  
           href: ./fundamentals/deployment-guide-enrollment-windows.md
-        - name: Set up automatic enrollment  
-          href: ./enrollment/windows-enroll.md
-        - name: Enable automatic discovery for MDM server      
+        - name: Create and validate CNAME records         
           href: ./enrollment/windows-enrollment-create-cname.md
         - name: Set up Intune Connector for Active Directory  
           href: ./enrollment/autopilot-hybrid-connector-proxy.md
-        - name: Set up Enrollment Status Page
-          href: ./enrollment/windows-enrollment-status.md
+        - name: Set up automatic enrollment  
+          href: ./enrollment/windows-enroll.md
         - name: Set up bulk enrollment and workplace join             
           href: ./enrollment/windows-bulk-enroll.md  
+        - name: Set up Enrollment Status Page
+          href: ./enrollment/windows-enrollment-status.md
  
       - name: Set up Android enrollment
         items:
-        - name: Android enrollment guide
+        - name: Overview 
           href: ./fundamentals/deployment-guide-enrollment-android.md
           displayName: COBO
         - name: Android Enterprise enrollment solutions    
@@ -1254,7 +1254,7 @@ items:
             href: ./enrollment/android-samsung-knox-mobile-enroll.md
         - name: Android Enterprise security configuration framework
           items:
-          - name: Overview of security framework
+          - name: Overview 
             href: ./enrollment/android-configuration-framework.md
           - name: 1 - Configure device enrollment restrictions
             href: ./enrollment/device-enrollment-restrictions.md
@@ -1266,7 +1266,7 @@ items:
             href: ./enrollment/android-fully-managed-security-settings.md         
       - name: Set up iOS/iPadOS enrollment
         items:
-        - name: iOS, iPadOS enrollment guide
+        - name: Overview 
           href: ./fundamentals/deployment-guide-enrollment-ios-ipados.md
         - name: Set up automated Device Enrollment
           href: ./enrollment/device-enrollment-program-enroll-ios.md
@@ -1288,7 +1288,7 @@ items:
           href: ./enrollment/apple-configurator-enroll-ios.md
         - name: iOS/iPadOS security configuration framework
           items:
-          - name: Overview of security configuration framework
+          - name: Overview 
             href: ./enrollment/ios-ipados-configuration-framework.md
           - name: 1 - Configure app configuration policies
             href: ./enrollment/ios-ipados-app-configuration-policies.md
@@ -1300,11 +1300,13 @@ items:
             href: ./enrollment/ios-ipados-supervised-device-security-configurations.md
       - name: Set up Linux enrollment 
         items:
-        - name: Linux enrollment guide  
+        - name: Linux enrollment guide    
           href: ./fundamentals/deployment-guide-enrollment-linux.md
+        - name: Linux user help 
+          hred: ./user-help/enroll-device-linux.md  
       - name: Set up macOS enrollment
         items:
-        - name: Mac enrollment guide  
+        - name: Overview  
           href: ./fundamentals/deployment-guide-enrollment-macos.md
         - name: Pre-enrollment configurations  
           items: 
