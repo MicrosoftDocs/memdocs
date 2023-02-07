@@ -81,7 +81,7 @@ To take advantage of device compliance status, configure Conditional Access poli
    - Sign-in risk
    - Device platforms
    - Locations
-   - Client as
+   - Client apps
    - Filter for devices
 
    For information about these options, see [Conditions](/azure/active-directory/conditional-access/concept-conditional-access-conditions) in the Azure AD documentation.
