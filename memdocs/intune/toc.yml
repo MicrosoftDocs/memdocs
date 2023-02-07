@@ -1200,7 +1200,14 @@ items:
             href: ./enrollment/create-device-platform-restrictions.md  
           - name: Create device limit restrictions  
             href: ./enrollment/create-device-limit-restrictions.md  
-
+          - name: Configure Chrome Enterprise connector
+            items: 
+            - name: Configure Chrome Enterprise connector
+              href: ./enrollment/chrome-enterprise-connector-configure.md 
+            - name: View Chrome OS device information in Intune
+              href: ./enrollment/enrollment/chrome-enterprise-device-details.md              
+            - name: Remote device actions for Chrome OS  
+              href: ./enrollment//chrome-enterprise-remote-actions.md  
   
       - name: Set up Windows enrollment
         items:  
@@ -1228,7 +1235,7 @@ items:
           displayName: COBO
         - name: Android Enterprise enrollment solutions    
           items:
-          - name: Prerequisite- Connect Intune to Android Enterprise 
+          - name: Prerequisite - Connect Intune to Android Enterprise 
             href: ./enrollment/connect-intune-android-enterprise.md
           - name: Set up Android work profile for personal devices 
             href: ./enrollment/android-work-profile-enroll.md
@@ -1242,15 +1249,15 @@ items:
             href: ./enrollment/android-dedicated-devices-fully-managed-enroll.md
         - name: AOSP enrollment solutions  
           items: 
-          - name: Enroll Android (AOSP) corporate-owned userless devices
+          - name: Enroll corporate-owned, userless devices
             href: ./enrollment/android-aosp-corporate-owned-userless-enroll.md    
-          - name: Enroll Android (AOSP) corporate-owned user-associated devices
+          - name: Enroll corporate-owned, user-associated devices
             href: ./enrollment/android-aosp-corporate-owned-user-associated-enroll.md 
         - name: Android device administrator enrollment solutions    
           items: 
           - name: Set up enrollment for Android device administrator 
             href: ./enrollment/android-enroll-device-administrator.md
-          - name: Move personal devices to Android Enterprise work profile management 
+          - name: Switch to Android Enterprise work profile management 
             href: ./enrollment/android-move-device-admin-work-profile.md  
         - name: Samsung Knox enrollment solutions  
           items: 
@@ -1274,29 +1281,33 @@ items:
           href: ./fundamentals/deployment-guide-enrollment-ios-ipados.md
         - name: Enrollment solutions
           items:
-          - name: Set up Automated Device Enrollment
-            href: ./enrollment/device-enrollment-program-enroll-ios.md
-          - name: Set up enrollment with Apple School Manager
-            href: ./enrollment/apple-school-manager-set-up-ios.md
           - name: Set up enrollment with Apple Configurator
             href: ./enrollment/apple-configurator-enroll-ios.md
-          - name: Set up User Enrollment
+          - name: Set up Apple Automated Device Enrollment
+            items:
+            - name: Set up Automated Device Enrollment 
+              href: ./enrollment/device-enrollment-program-enroll-ios.md
+            - name: Choose enrollment authentication method   
+              href: ./enrollment/automated-device-enrollment-authentication.md
+            - name: Walkthrough - Set up enrollment with Apple School Manager
+              href: ./enrollment/apple-school-manager-set-up-ios.md
+          - name: Set up Apple User Enrollment
             items:
             - name: Overview 
               href: ./enrollment/ios-user-enrollment-supported-actions.md 
-            - name: Create User Enrollment profile  
+            - name: Set up User Enrollment   
               href: ./enrollment/ios-user-enrollment.md  
+          - name: Set up Shared iPad      
+            items:
+            - name: Overview of shared device solutions
+              href: ./enrollment/device-enrollment-shared-ios.md
+            - name: Set up Shared iPad
+              href: ./enrollment/device-enrollment-shared-ipad.md 
         - name: Enrollment configurations  
           items: 
           - name: Back up and restore
             href: ./enrollment/backup-restore-ios.md 
-          - name: Shared iPad
-            items:
-            - name: Overview
-              href: ./enrollment/device-enrollment-shared-ios.md
-            - name: Shared iPad
-              href: ./enrollment/device-enrollment-shared-ipad.md 
-          - name: iOS/iPadOS security configuration framework
+          - name: Security configuration framework for iOS/iPadOS 
             items:
             - name: Overview 
               href: ./enrollment/ios-ipados-configuration-framework.md

@@ -29,17 +29,15 @@ ms.custom:
 ms.collection: M365-identity-device-management
 ---
 
-# What are shared iOS and iPadOS devices?
+# Overview of shared device solutions for iOS/iPadOS
 
-Shared devices are organization-owned multi-user devices. These devices can be special-purpose or multi-purpose as needed in each environment. Shared devices enable front-line workers in healthcare, hospitality, retail, manufacturing, and other industries to access critical applications and tools essential to their role in the organization. In education, shared devices are used as learning aids or test-taking devices in classrooms.
-
-## Shared device solutions on iOS and iPadOS 
+Shared devices are organization-owned multi-user devices. These devices can be special-purpose or multi-purpose as needed in each environment. Shared devices enable front-line workers in healthcare, hospitality, retail, manufacturing, and other industries to access critical applications and tools essential to their role in the organization. In education, shared devices are used as learning aids or test-taking devices in classrooms.  
 
 Microsoft Intune supports two types of shared device solutions for iOS and iPadOS: 
 - [Shared iPads](../enrollment/device-enrollment-shared-ipad.md)
 - [Shared Device Mode](/azure/active-directory/develop/msal-ios-shared-devices)
 
-## Important considerations when choosing a shared device solution for iOS and iPadOS 
+## Compare solutions   
 
 The following table captures the key differences between the two available shared devices solutions on iOS/iPadOS. Review this to select the most appropriate iOS/iPadOS shared device strategy for your organization.
 
