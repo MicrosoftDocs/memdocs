@@ -506,7 +506,7 @@ items:
         href: ./protect/device-protect.md
         displayName: compliant; noncompliant; mfa  
 
-      - name: How-to guides
+      - name: How-to guides  
         items:
         - name: Use compliance rules to protect resources
           items:
@@ -1175,7 +1175,7 @@ items:
       - name: Overview   
         href: ./fundamentals/deployment-guide-enrollment.md  
         displayName: COD; BYOD; DEM; ADE; USB-SA; USB-Direct; co-management; GPO
-      - name: Enrollment configurations  
+      - name: General features and configurations     
         items:
         - name: Get Apple MDM push certificate   
           href: ./enrollment/apple-mdm-push-certificate-get.md 
@@ -1200,22 +1200,33 @@ items:
             href: ./enrollment/create-device-platform-restrictions.md  
           - name: Create device limit restrictions  
             href: ./enrollment/create-device-limit-restrictions.md  
-
+        - name: Configure Chrome Enterprise connector
+          items: 
+          - name: Configure Chrome Enterprise connector
+            href: ./enrollment/chrome-enterprise-connector-configure.md 
+          - name: View Chrome OS device information in Intune
+            href: ./enrollment/chrome-enterprise-device-details.md              
+          - name: Remote device actions for Chrome OS  
+            href: ./enrollment//chrome-enterprise-remote-actions.md  
   
       - name: Set up Windows enrollment
         items:  
         - name: Overview  
           href: ./fundamentals/deployment-guide-enrollment-windows.md
-        - name: Create and validate CNAME records         
-          href: ./enrollment/windows-enrollment-create-cname.md
-        - name: Set up Intune Connector for Active Directory  
-          href: ./enrollment/autopilot-hybrid-connector-proxy.md
-        - name: Set up automatic enrollment  
-          href: ./enrollment/windows-enroll.md
-        - name: Set up bulk enrollment and workplace join             
-          href: ./enrollment/windows-bulk-enroll.md  
-        - name: Set up Enrollment Status Page
-          href: ./enrollment/windows-enrollment-status.md
+        - name: Enrollment solutions  
+          items:  
+          - name: Set up automatic enrollment  
+            href: ./enrollment/windows-enroll.md
+          - name: Set up bulk enrollment and workplace join             
+            href: ./enrollment/windows-bulk-enroll.md   
+        - name: Enrollment configurations    
+          items:
+          - name: Create and validate CNAME records             
+            href: ./enrollment/windows-enrollment-create-cname.md
+          - name: Set up Intune Connector for Active Directory  
+            href: ./enrollment/autopilot-hybrid-connector-proxy.md
+          - name: Set up Enrollment Status Page
+            href: ./enrollment/windows-enrollment-status.md 
  
       - name: Set up Android enrollment
         items:
@@ -1224,7 +1235,7 @@ items:
           displayName: COBO
         - name: Android Enterprise enrollment solutions    
           items:
-          - name: Prerequisite- Connect Intune to Android Enterprise 
+          - name: Prerequisite - Connect Intune to Android Enterprise 
             href: ./enrollment/connect-intune-android-enterprise.md
           - name: Set up Android work profile for personal devices 
             href: ./enrollment/android-work-profile-enroll.md
@@ -1238,86 +1249,99 @@ items:
             href: ./enrollment/android-dedicated-devices-fully-managed-enroll.md
         - name: AOSP enrollment solutions  
           items: 
-          - name: Enroll Android (AOSP) corporate-owned userless devices
+          - name: Enroll corporate-owned, userless devices
             href: ./enrollment/android-aosp-corporate-owned-userless-enroll.md    
-          - name: Enroll Android (AOSP) corporate-owned user-associated devices
+          - name: Enroll corporate-owned, user-associated devices
             href: ./enrollment/android-aosp-corporate-owned-user-associated-enroll.md 
         - name: Android device administrator enrollment solutions    
           items: 
           - name: Set up enrollment for Android device administrator 
             href: ./enrollment/android-enroll-device-administrator.md
-          - name: Move personal devices to Android Enterprise work profile management 
+          - name: Switch to Android Enterprise work profile management 
             href: ./enrollment/android-move-device-admin-work-profile.md  
         - name: Samsung Knox enrollment solutions  
           items: 
           - name: Enable Samsung Knox Mobile Enrollment
             href: ./enrollment/android-samsung-knox-mobile-enroll.md
-        - name: Android Enterprise security configuration framework
-          items:
-          - name: Overview 
-            href: ./enrollment/android-configuration-framework.md
-          - name: 1 - Configure device enrollment restrictions
-            href: ./enrollment/device-enrollment-restrictions.md
-          - name: 2 - Configure app configuration policies
-            href: ./enrollment/android-app-configuration-policies.md
-          - name: 3 - Configure security settings for personal devices   
-            href: ./enrollment/android-work-profile-security-settings.md
-          - name: 4 - Configure security settings for fully managed devices 
-            href: ./enrollment/android-fully-managed-security-settings.md         
+        - name: Enrollment configurations    
+          items:        
+          - name: Security configuration framework for Android Enterprise  
+            items:
+            - name: Overview 
+              href: ./enrollment/android-configuration-framework.md
+            - name: 1 - Configure device enrollment restrictions  
+              href: ./enrollment/device-enrollment-restrictions.md
+            - name: 2 - Configure app configuration policies
+              href: ./enrollment/android-app-configuration-policies.md
+            - name: 3 - Configure security settings for personal devices   
+              href: ./enrollment/android-work-profile-security-settings.md
+            - name: 4 - Configure security settings for fully managed devices 
+              href: ./enrollment/android-fully-managed-security-settings.md         
       - name: Set up iOS/iPadOS enrollment
         items:
         - name: Overview 
           href: ./fundamentals/deployment-guide-enrollment-ios-ipados.md
-        - name: Set up automated Device Enrollment
-          href: ./enrollment/device-enrollment-program-enroll-ios.md
-        - name: Shared device overview
-          href: ./enrollment/device-enrollment-shared-ios.md
-        - name: Shared iPad
-          href: ./enrollment/device-enrollment-shared-ipad.md      
-        - name: Back up and restore
-          href: ./enrollment/backup-restore-ios.md      
-        - name: User and Device enrollment
+        - name: Enrollment solutions
           items:
-          - name: Create the profile
-            href: ./enrollment/ios-user-enrollment.md
-          - name: User enrollment supported actions
-            href: ./enrollment/ios-user-enrollment-supported-actions.md
-        - name: Enrollment with Apple School Manager
-          href: ./enrollment/apple-school-manager-set-up-ios.md
-        - name: Enrollment with Apple Configurator
-          href: ./enrollment/apple-configurator-enroll-ios.md
-        - name: iOS/iPadOS security configuration framework
-          items:
-          - name: Overview 
-            href: ./enrollment/ios-ipados-configuration-framework.md
-          - name: 1 - Configure app configuration policies
-            href: ./enrollment/ios-ipados-app-configuration-policies.md
-          - name: 2- Configure device compliance security policies
-            href: ./enrollment/ios-ipados-device-compliance-security-configurations.md
-          - name: 3 - Configure device security policies for personal devices
-            href: ./enrollment/ios-ipados-personal-device-security-configurations.md
-          - name: 4 - Configure device security policies for supervised devices 
-            href: ./enrollment/ios-ipados-supervised-device-security-configurations.md
+          - name: Set up enrollment with Apple Configurator
+            href: ./enrollment/apple-configurator-enroll-ios.md
+          - name: Set up Apple Automated Device Enrollment
+            items:
+            - name: Set up Automated Device Enrollment 
+              href: ./enrollment/device-enrollment-program-enroll-ios.md
+            - name: Choose enrollment authentication method   
+              href: ./enrollment/automated-device-enrollment-authentication.md
+            - name: Walkthrough - Set up enrollment with Apple School Manager
+              href: ./enrollment/apple-school-manager-set-up-ios.md
+          - name: Set up Apple User Enrollment
+            items:
+            - name: Overview 
+              href: ./enrollment/ios-user-enrollment-supported-actions.md 
+            - name: Set up User Enrollment   
+              href: ./enrollment/ios-user-enrollment.md  
+          - name: Set up Shared iPad      
+            items:
+            - name: Overview of shared device solutions
+              href: ./enrollment/device-enrollment-shared-ios.md
+            - name: Set up Shared iPad
+              href: ./enrollment/device-enrollment-shared-ipad.md 
+        - name: Enrollment configurations  
+          items: 
+          - name: Back up and restore
+            href: ./enrollment/backup-restore-ios.md 
+          - name: Security configuration framework for iOS/iPadOS 
+            items:
+            - name: Overview 
+              href: ./enrollment/ios-ipados-configuration-framework.md
+            - name: 1 - Configure app configuration policies
+              href: ./enrollment/ios-ipados-app-configuration-policies.md
+            - name: 2- Configure device compliance security policies
+              href: ./enrollment/ios-ipados-device-compliance-security-configurations.md
+            - name: 3 - Configure device security policies for personal devices
+              href: ./enrollment/ios-ipados-personal-device-security-configurations.md
+            - name: 4 - Configure device security policies for supervised devices 
+              href: ./enrollment/ios-ipados-supervised-device-security-configurations.md           
+     
       - name: Set up Linux enrollment 
         items:
         - name: Linux enrollment guide    
           href: ./fundamentals/deployment-guide-enrollment-linux.md
-        - name: Linux user help 
+        - name: Intune user help documentation  
           hred: ./user-help/enroll-device-linux.md  
       - name: Set up macOS enrollment
         items:
         - name: Overview  
           href: ./fundamentals/deployment-guide-enrollment-macos.md
-        - name: Pre-enrollment configurations  
-          items: 
-          - name: Mac enrollment configurations  - Break into smaller pieces  
-            href: ./enrollment/macos-enroll.md  
-        - name: Mac enrollment solutions  
+        - name: Enrollment solutions  
           items: 
           - name: Set up automated device enrollment for macOS
             href: ./enrollment/device-enrollment-program-enroll-macos.md
           - name: Set up Direct Enrollment for macOS 
-            href: ./enrollment/device-enrollment-direct-enroll-macos.md      
+            href: ./enrollment/device-enrollment-direct-enroll-macos.md    
+        - name: Enrollment configurations  
+          items: 
+          - name: Configure enrollment settings (make separate articles)  
+            href: ./enrollment/macos-enroll.md    
       - name: Troubleshoot enrollment
         items:
         - name: Get incomplete user enrollment report
