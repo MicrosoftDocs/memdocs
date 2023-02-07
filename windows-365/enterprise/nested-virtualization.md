@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 02/06/2023
+ms.date: 02/07/2023
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice:
@@ -43,6 +43,15 @@ To use virtualization-based workloads, the Cloud PC must meet these requirements
 
 - 4vCPU Cloud PC (Downsizing to 2vCPU Cloud PCs will disable nested virtualization).
 - Be in one of the [supported regions](requirements.md?tabs=enterprise%2Cent#supported-azure-regions-for-cloud-pc-provisioning).
+    - All regions are supported for 8vCPU.  
+    - For 4vCPU, the following regions are not currently supported:
+        - Southeast Asia
+        - Central India
+        - Korea Central
+        - South Centeral US
+        - East US 2
+        - West US 2
+        - West US 3
 
 ## Set up virtualization-based workloads
 
