@@ -28,15 +28,9 @@ ms.collection: M365-identity-device-management
 
 # Deployment guide: Manage devices running Windows 10/11
 
-This guide describes everything you need to do to protect and manage Windows apps and endpoints using Microsoft Intune, including how to:       
+This guide describes how to protect and manage Windows apps and endpoints using Microsoft Intune, from planning to device enrollment, and includes our setup recommendations and resources.   
 
-* Prepare your tenant for device enrollment.  
-* Create device compliance policies. 
-* Add custom compliance settings.   
-* Enforce conditional access policies in Microsoft Edge. 
-* Support employees and students enrolling their desktops.  
-
-For each section in this guide, review the associated tasks. Some tasks are required and some, like setting up conditional access, are optional. Select the provided links in each section to go to our recommended help docs on Microsoft Learn, where you can find more detailed information and how-to instructions.        
+For each section in this guide, review the associated tasks. Some tasks are required and some, like setting up Azure AD conditional access, are optional. Select the provided links in each section to go to our recommended help docs on Microsoft Learn, where you can find more detailed information and how-to instructions.        
  
 ## Step 1: Prerequisites  
 
