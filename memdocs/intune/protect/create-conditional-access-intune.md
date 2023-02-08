@@ -49,20 +49,20 @@ To take advantage of device compliance status, configure Conditional Access poli
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Endpoint security** > **Conditional Access** > **Policies** > **New policy**.
+2. Select **Endpoint security** > **Conditional access** > **Policies** > **New policy**.
 :::image type="content" source="./media/create-conditional-access-intune/create-ca.png" alt-text="Create a new Conditional Access policy":::
 
    The **New** pane opens, which is the configuration pane from Azure AD. The policy you’re creating is an Azure AD policy for Conditional Access. To learn more about this pane and Conditional Access policies, see [Conditional Access policy components](/azure/active-directory/conditional-access/concept-conditional-access-policies) in the Azure AD content.
 
-3. Under **Assignments**, select **Users or workload identities** to configure the Identities in the directory that the policy applies to. To learn more, see [Users and groups](/azure/active-directory/conditional-access/concept-conditional-access-users-groups) in the Azure AD documentation.
+3. Under **Assignments**, configure **Users** to select the Identities in the directory that the policy applies to. To learn more, see [Users and groups](/azure/active-directory/conditional-access/concept-conditional-access-users-groups) in the Azure AD documentation.
 
    - On the **Include** tab, configure the user and groups you want to include.  
    - Use the **Exclude** tab if there are any users, roles, or groups you want to exclude from this policy.
 
    > [!TIP]
-   > Test the policy against a smaller group of users to make sure it works as expected.
+   > Test the policy against a smaller group of users to make sure it works as expected before deploying it to larger groups.
 
-4. Next select **Cloud apps or action**, which is also under *Assignments*. Configure this policy to apply to **Cloud apps**.
+4. Next configure **Cloud apps or actions**, which is also under *Assignments*. For the drop-down selection for what this policy applies to, choose **Cloud apps**.
 
    - On the **Include** tab, use available options to identify the apps and services you want to protect with this Conditional Access policy.
 

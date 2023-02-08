@@ -76,15 +76,19 @@ Create an enrollment profile to enable enrollment on devices.
 4. Select **Next**. Review the details of your profile and then select **Create** to save the profile.  
 
 ### Access enrollment token  
-After you create a profile, Intune generates a token that's needed for enrollment. The token appears as a QR code. During device setup, when prompted to, scan the QR code to enroll the device in Intune.   
+After you create a profile, Intune generates a token that's needed for enrollment. The token appears as a QR code. During device setup, when prompted to, scan the QR code to enroll the device in Intune.
 
 To view the token as a QR code:
 
 1. Go to **Corporate-owned, user-associated devices**.
-2. From the list, select your enrollment profile. 
-2. Select **Token**.   
+2. From the list, select your enrollment profile.
+2. Select **Token**.
 
-From the Token page, you can also export the enrollment profile JSON file.   
+You can also export the enrollment profile JSON file. To create a JSON file:
+
+1. Go to **Corporate-owned, user-associated devices**.
+2. From the list, select your enrollment profile.
+3. Select **Token > Export**.
 
 > [!IMPORTANT]
 >- The QR code will contain any credentials provided in the profile in plain text to allow the device to successfully authenticate with the network. This is required as the user will not be able to join a network from the device.  
@@ -136,7 +140,8 @@ Complete the following steps to create a dynamic Azure AD device group for devic
 5. Choose **Add query** > **Create**.  
 
 
-## Enroll devices    
+## Enroll devices via QR code
+   
 After you set up and assign the Android (AOSP) enrollment profiles, you can enroll devices via QR code. 
 
 1. Turn on your new or factory-reset device.    
@@ -151,6 +156,8 @@ After you set up and assign the Android (AOSP) enrollment profiles, you can enro
     * Microsoft Intune app  
     * Intune Company Portal app  
     * Microsoft Authenticator app  
+
+To use JSON to enroll devices, refer to instructions provided by the device manufacturer.
 
 ## After enrollment 
 

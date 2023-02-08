@@ -77,4 +77,4 @@ If you edit a category, be sure to update any Azure AD security groups that refe
 ## Best practices  
 Device categories are supported on devices running Android, iOS/iPadOS, or Windows. People with Windows devices must use the Company Portal website to select their category. Regardless of platform, any device user can sign in to portal.manage.microsoft.com at anytime and go to **My devices** to select a category. 
 
-If an iOS/iPadOS or Android device is already enrolled before you configure categories, the user will receive a notification about the device on the Company Portal website. The notification informs them that they need to select a category the next time they're in the Company Portal app.    
+If an iOS/iPadOS or Android device is already enrolled before you configure categories, the user will receive a notification about the device the user owns on the Company Portal website. The notification informs them that they need to select a category the next time they're in the Company Portal app.    

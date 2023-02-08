@@ -198,7 +198,10 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
      Select how Intune automatically creates the subject alternative name (SAN) in the certificate request. You can specify multiple subject alternative names. For each one, you may select from four SAN attributes and enter a text value for that attribute. The text value can contain variables and static text for the attribute.
 
      > [!NOTE]
-     > Android Enterprise doesn't support use of the {{UserName}} variable for the SAN.
+     > The following Android Enterprise profiles don’t support use of the {{UserName}} variable for the SAN:  
+     >
+     > - Fully Managed, Dedicated, and Corporate-Owned Work Profile
+
 
      Select from the available SAN attributes:
 

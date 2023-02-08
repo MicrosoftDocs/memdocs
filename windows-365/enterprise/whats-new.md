@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 01/31/2023
+ms.date: 02/07/2023
 ms.topic: reference
 ms.service: windows-365
 ms.subservice:
@@ -52,6 +52,16 @@ Learn what new features are available in Windows 365 Enterprise.
 
 
 <!-- ########################## -->
+## Week of February 6, 2023
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Apps
+
+#### Nested virtualization now supports 4vCPU Cloud PCs<!--42948140-->
+
+Windows 365 nested virtualization now supports 4vCPU Cloud PCs. For more information, see [Set up virutalization-based workloads support](nested-virtualization.md).
+
+<!-- ########################## -->
 ## Week of January 30, 2023 (Service release 2301)
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -70,7 +80,7 @@ In Microsoft Teams, you can now share specific windows from your Cloud PC deskto
 
 #### Open Cloud PCs in a Remote Desktop app from windows365.microsoft.com<!--42949050-->
 
-From windows365.microsoft.com, you can now open a Cloud PC in a Remote Desktop app. For more information, see [Access a Cloud PC](/windows-365/end-user-access-cloud-pc#home-page).
+From windows365.microsoft.com, you can now open a Cloud PC in a Remote Desktop app. For more information, see [Access a Cloud PC](../end-user-access-cloud-pc.md#home-page).
 
 #### Improved feedback interface for end users<!--42949123-->
 

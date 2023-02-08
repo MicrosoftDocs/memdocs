@@ -65,6 +65,23 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Scripts
 ### Tenant administration
 -->
+## Week of February 6, 2023
+
+### Tenant administration
+
+#### Apply recommendations and insights to enrich the Configuration Manager site health and device management experience<!--16957774 -->
+
+You can now use the Microsoft Endpoint Manager admin center to view recommendations and insights for your Configuration Manager sites. These recommendations can help you improve the site health and infrastructure and enrich the device management experience.
+
+Recommendations include:  
+
+- How to simplify your infrastructure
+- Enhance device management
+- Provide device insights
+- Improve the health of the site
+
+To view recommendations, open the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Tenant administration** > **Connectors and tokens** > **Microsoft Endpoint Configuration Manager**,  and select a *site* to view recommendations for that site.  Once selected, you’ll find the *Recommendations* tab that displays each insight along with a *Learn more* link that opens details on how to apply that recommendation.
+
 ## Week of January 30, 2023
 
 ### Device management
@@ -173,19 +190,6 @@ Applies to:
 
 - Windows 10
 - Windows 11
-
-#### Support for multi-SIM iOS/iPadOS device inventory<!--16360290 -->
-You can now view the service subscription fields on devices that have multiple SIM cards installed under the per-device Hardware section. The inventory fields that are capable of reporting multiple values to Intune are:
-
-- ICCID
-- IMEI
-- MEID
-- Phone number
-
-These fields will default to using labels returned by the device, such as: *Primary*, *Secondary*, *CTSubscriptionSlotOne*, and *CTSubscriptionSlotTwo*. These returned labels may be displayed in the language of the local device that is reporting its inventory to Intune.
-
-Applies to:
-- iOS/iPadOS
 
 #### Support for Bulk Device Actions on devices running Android AOSP<!--15397458 -->
 You can now complete "Bulk Device Actions" for devices running Android AOSP. The bulk device actions supported on devices running AOSP are Delete, Wipe and Restart.
