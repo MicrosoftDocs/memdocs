@@ -97,7 +97,7 @@ Email notifications appear in the user's inbox. Push notifications appear in the
     The options for branding and customization are:  
 
     * **Show company logo**: Flip the switch **On** to make your organization's logo visible in the email header. This option becomes available after you've configured Company Portal branding in your tenant.   
-    * **Show device details**: Flip the switch **On** to make the following device details visible in the footer of the email:  
+    * **Show device details**: Flip the switch **On** to make the following device details visible in the footer of the email (this is off by default, turning on can result in a delay of the emails to the device and not all details are guaranteed to populate):  
          * Device name  
          * Model  
          * OS  
