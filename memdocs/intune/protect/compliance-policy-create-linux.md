@@ -91,6 +91,10 @@ Enforce common password requirements for Linux devices:
 
 Users that fail to meet password complexity requirements can receive a message that they must use a strong password to bring the device into compliance.
 
+> [!NOTE]
+> Pending details
+
+
 Intune uses the **pam_pwquality** module to ensure password rules meet an organization’s standards. For information on how to configure the parameters in **pam_pwquality**, refer to the [Ubuntu documentation](https://manpages.ubuntu.com/manpages/focal/man8/pam_pwquality.8.html).
 
 Following is an example configuration line from the */etc/pam.d/common-password* file that enforces passwords that have at least one digit, one uppercase letter, and are at least 12 characters long: `password required pam_pwquality.so dcredit=-1 ucredit=-1 ocredit=-1 minlen=12`
