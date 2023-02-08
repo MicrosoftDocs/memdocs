@@ -1191,7 +1191,7 @@ items:
         - name: Create terms and conditions policy  
           href: ./enrollment/terms-and-conditions-create.md
         - name: Set up enrollment notifications  
-          href: ./enrollment-notifications.md
+          href: ./enrollment/enrollment-notifications.md
         - name: Configure device enrollment restrictions
           items:  
           - name: Overview   
