@@ -67,7 +67,7 @@ To set up Android Enterprise dedicated device management, follow these steps:
 > [!NOTE]
 > If a token has expired, the profile associated with it will not be displayed in **Device enrollment** > **Android enrollment** > **Corporate-owned dedicated devices**. To see all profiles associated with both active and inactive tokens, click on **Filter** and check the boxes for both "Active" and "Inactive" policy states.
 
-You must create an enrollment profile so that you can enroll your dedicated devices. When the profile is created, it provides you with an enrollment token (random string) and a QR code. Depending on the Android OS and version of the device, you can use either the token or QR code to [enroll the dedicated device](#enroll-the-dedicated-devices).
+You must create an enrollment profile so that you can enroll your dedicated devices. When the profile is created, it provides you with an enrollment token in the form of a string and QR code.    
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and choose **Devices** > **Android** > **Android enrollment** > **Android Enterprise** > **Corporate-owned dedicated devices**.
 2. Choose **Create** and fill out the required fields.
@@ -81,7 +81,7 @@ You must create an enrollment profile so that you can enroll your dedicated devi
 3. Choose **Create** to save the profile.  
 
 ### Access enrollment token  
-There are two ways to access the enrollment token.   
+There are two ways to access the enrollment token in the admin center.   
 
 The first way: 
 1. Choose **Devices** > **Android** > **Android enrollment** > **Android Enterprise** > **Corporate-owned dedicated devices**.
@@ -93,7 +93,7 @@ The second way:
 2. Locate your profile in the list, and then select the **More** (**...**) menu that's next to it.
 3. Select **View enrollment token**.  
 
-The token appears as a 20-digit string and a QR code. Use this token to enroll devices via the mechanisms described in [Enroll dedicated, fully managed, or corporate-owned work profile devices](android-dedicated-devices-fully-managed-enroll.md). 
+The token appears as a 20-digit string and a QR code. Use this token to enroll devices via the mechanisms described in [Enroll dedicated, fully managed, or corporate-owned work profile devices](android-dedicated-devices-fully-managed-enroll.md). At the time of enrollment, the device user is prompted for the enrollment token. You can provide the string or QR, as long as it's supported by the Android OS and version of the enrolling device. 
  
 ### Replace, remove, or export token   
 
@@ -103,7 +103,7 @@ Select a token to access these options:
 - **Revoke token**: Immediately expire the token. Once revoked, the token is no longer usable. This option is useful if you:  
   - Accidentally share the token with an unauthorized party.    
   - Complete all enrollments and no longer need the token.    
-- **Export token**: Export the JSON content of the token. This option is useful for obtaining the JSON content that's needed to configure [Google Zero Touch](android-dedicated-devices-fully-managed-enroll.md#enroll-by-using-google-zero-touch) or [Knox Mobile Enrollment](android-dedicated-devices-fully-managed-enroll.md#enroll-by-using-knox-mobile-enrollment). 
+- **Export token**: Export the JSON content of the token. This option is useful for obtaining the JSON content that's needed to configure [Google Zero Touch](android-dedicated-devices-fully-managed-enroll.md#enroll-by-using-google-zero-touch) or [Knox Mobile Enrollment](android-samsung-knox-mobile-enroll.md). 
 
 When applied, these actions don't have any effect on devices that are already enrolled.   
 
