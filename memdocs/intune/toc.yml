@@ -1190,6 +1190,8 @@ items:
           href: ./enrollment/multi-factor-authentication.md   
         - name: Create terms and conditions policy  
           href: ./enrollment/terms-and-conditions-create.md
+        - name: Set up enrollment notifications  
+          href: enrollment-notifications.md
         - name: Configure device enrollment restrictions
           items:  
           - name: Overview   
@@ -1246,7 +1248,7 @@ items:
           - name: Set up enrollment for fully managed devices  
             href: ./enrollment/android-fully-managed-enroll.md
           - name: Enroll corporate-owned devices  
-            href: ./enrollment/android-dedicated-devices-fully-managed-enroll.md
+            href: ./enrollment/android-dedicated-devices-fully-managed-enroll.md 
         - name: AOSP enrollment solutions  
           items: 
           - name: Enroll corporate-owned, userless devices
