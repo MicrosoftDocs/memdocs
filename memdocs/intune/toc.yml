@@ -1172,10 +1172,10 @@ items:
 
     - name: Enroll devices in Microsoft Intune  
       items:
-      - name: Overview   
+      - name: Overview        
         href: ./fundamentals/deployment-guide-enrollment.md  
         displayName: COD; BYOD; DEM; ADE; USB-SA; USB-Direct; co-management; GPO
-      - name: General features and configurations     
+      - name: Configure enrollment features      
         items:
         - name: Get Apple MDM push certificate   
           href: ./enrollment/apple-mdm-push-certificate-get.md 
@@ -1190,9 +1190,9 @@ items:
           href: ./enrollment/multi-factor-authentication.md   
         - name: Create terms and conditions policy  
           href: ./enrollment/terms-and-conditions-create.md
-        - name: Create device enrollment restrictions
+        - name: Configure device enrollment restrictions
           items:  
-          - name: Overview  
+          - name: Overview   
             href: ./enrollment/enrollment-restrictions-set.md  
           - name: Intune device limits vs. Azure AD device limits    
             href: ./enrollment/device-limit-intune-azure.md   
@@ -1211,7 +1211,7 @@ items:
   
       - name: Set up Windows enrollment
         items:  
-        - name: Overview  
+        - name: Get started with Windows enrollment    
           href: ./fundamentals/deployment-guide-enrollment-windows.md
         - name: Enrollment solutions  
           items:  
@@ -1230,7 +1230,7 @@ items:
  
       - name: Set up Android enrollment
         items:
-        - name: Overview 
+        - name: Get started with Android enrollment 
           href: ./fundamentals/deployment-guide-enrollment-android.md
           displayName: COBO
         - name: Android Enterprise enrollment solutions    
@@ -1279,7 +1279,7 @@ items:
               href: ./enrollment/android-fully-managed-security-settings.md         
       - name: Set up iOS/iPadOS enrollment
         items:
-        - name: Overview 
+        - name: Get started with iOS/iPadOS enrollment 
           href: ./fundamentals/deployment-guide-enrollment-ios-ipados.md
         - name: Enrollment solutions
           items:
@@ -1324,13 +1324,13 @@ items:
      
       - name: Set up Linux enrollment 
         items:
-        - name: Linux enrollment guide    
+        - name: Get started with Linux enrollment    
           href: ./fundamentals/deployment-guide-enrollment-linux.md
         - name: Intune user help documentation  
           hred: ./user-help/enroll-device-linux.md  
       - name: Set up macOS enrollment
         items:
-        - name: Overview  
+        - name: Get started with Mac enrollment  
           href: ./fundamentals/deployment-guide-enrollment-macos.md
         - name: Enrollment solutions  
           items: 
@@ -1340,7 +1340,7 @@ items:
             href: ./enrollment/device-enrollment-direct-enroll-macos.md    
         - name: Enrollment configurations  
           items: 
-          - name: Configure enrollment settings (make separate articles)  
+          - name: Configure enrollment settings    
             href: ./enrollment/macos-enroll.md    
       - name: Troubleshoot enrollment
         items:
