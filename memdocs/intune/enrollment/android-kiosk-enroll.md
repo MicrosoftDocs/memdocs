@@ -103,7 +103,7 @@ Select a token to access these options:
 - **Revoke token**: Immediately expire the token. Once revoked, the token is no longer usable. This option is useful if you:  
   - Accidentally share the token with an unauthorized party.    
   - Complete all enrollments and no longer need the token.    
-- **Export token**: Export the JSON content of the token. This option is useful for obtaining the JSON content that's needed to configure [Google Zero Touch](android-dedicated-devices-fully-managed-enroll#enroll-by-using-google-zero-touch) or [Knox Mobile Enrollment](android-dedicated-devices-fully-managed-enroll.md#enroll-by-using-knox-mobile-enrollment). 
+- **Export token**: Export the JSON content of the token. This option is useful for obtaining the JSON content that's needed to configure [Google Zero Touch](android-dedicated-devices-fully-managed-enroll.md#enroll-by-using-google-zero-touch) or [Knox Mobile Enrollment](android-dedicated-devices-fully-managed-enroll.md#enroll-by-using-knox-mobile-enrollment). 
 
 When applied, these actions don't have any effect on devices that are already enrolled.   
 
