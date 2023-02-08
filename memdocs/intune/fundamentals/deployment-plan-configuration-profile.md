@@ -103,10 +103,14 @@ Your policy options:
 
 For more information on these features, go to:
 
-- [**Android Enterprise** and **iOS/iPadOS** mobile threat defense integration](../protect/mobile-threat-defense.md)
-- [**Android Enterprise** Microsoft Defender for Endpoint overview](/microsoft-365/security/defender-endpoint/mtd)
-- [**Windows** security baselines](../protect/security-baselines.md)
-- [**macOS** and **Windows** antivirus policy](../protect/endpoint-security-antivirus-policy.md)
+- **Android Enterprise**:
+  - [Mobile threat defense integration](../protect/mobile-threat-defense.md)
+  - [Microsoft Defender for Endpoint overview](/microsoft-365/security/defender-endpoint/mtd)
+- **iOS/iPadOS** [Mobile threat defense integration](../protect/mobile-threat-defense.md)
+- **macOS** [Antivirus policy](../protect/endpoint-security-antivirus-policy.md)
+- **Windows**:
+  - [Antivirus policy](../protect/endpoint-security-antivirus-policy.md)
+  - [Security baselines](../protect/security-baselines.md)
 
 ### Detection and response
 
@@ -125,11 +129,15 @@ Your policy options:
 
 For more information on these features, go to:
 
-- **Android Enterprise** and **iOS/iPadOS**:
+- **Android Enterprise**:
   - [Mobile threat defense integration with Intune](../protect/mobile-threat-defense.md)
   - [Microsoft Defender for Endpoint overview](/microsoft-365/security/defender-endpoint/mtd)
-- [**Windows** security baselines](../protect/security-baselines.md)
-- [**Windows** endpoint detection and response policy](../protect/endpoint-security-edr-policy.md)
+- **iOS/iPadOS**:
+  - [Mobile threat defense integration with Intune](../protect/mobile-threat-defense.md)
+  - [Microsoft Defender for Endpoint overview](/microsoft-365/security/defender-endpoint/mtd)
+- **Windows**:
+  - [Security baselines](../protect/security-baselines.md)
+  - [Endpoint detection and response policy](../protect/endpoint-security-edr-policy.md)
 
 ### Firewall
 
@@ -148,9 +156,12 @@ Your policy options:
 
 For more information on these features, go to:
 
-- [**Android Enterprise** and **iOS/iPadOS** mobile threat defense integration](../protect/mobile-threat-defense.md)
-- [**Windows** security baselines](../protect/security-baselines.md)
-- [**macOS** and **Windows** firewall policy](../protect/endpoint-security-firewall-policy.md)
+- **Android Enterprise** [Mobile threat defense integration](../protect/mobile-threat-defense.md)
+- **iOS/iPadOS** [Mobile threat defense integration](../protect/mobile-threat-defense.md)
+- **macOS** [Firewall policy](../protect/endpoint-security-firewall-policy.md)
+- **Windows**:
+  - [Security baselines](../protect/security-baselines.md)
+  - [Firewall policy](../protect/endpoint-security-firewall-policy.md)
 
 ### Password policy
 
@@ -175,13 +186,14 @@ For a list of the settings you can configure, go to:
 - **Android Enterprise** device restrictions profile:
   - [Corporate owned devices > **Device password** and **Work profile password**](../configuration/device-restrictions-android-for-work.md)
   - [Personally owned devices with a work profile > **Work profile password** and **Password**](../configuration/device-restrictions-android-enterprise-personal.md)
-- [**Android AOSP** device restrictions profile > **Device password**](../configuration/device-restrictions-android-aosp.md)
-- [**iOS/iPadOS** device restrictions profile > **Password**](../configuration/device-restrictions-ios.md)
-- [**macOS** device restrictions profile > **Password**](../configuration/device-restrictions-macos.md)
-- [**Windows** security baselines](../protect/security-baselines.md)
-- [**Windows** client device restrictions profile > **Password**](../configuration/device-restrictions-windows-10.md)
-- [**Windows**: Manage Windows Hello for Business when devices enroll](../protect/windows-hello.md)
-- [**Windows**: Manage Windows Hello for Business after devices enroll](../protect/identity-protection-configure.md)
+- **Android AOSP** [Device restrictions profile > **Device password**](../configuration/device-restrictions-android-aosp.md)
+- **iOS/iPadOS** [Device restrictions profile > **Password**](../configuration/device-restrictions-ios.md)
+- **macOS** [Device restrictions profile > **Password**](../configuration/device-restrictions-macos.md)
+- **Windows**:
+  - [Security baselines](../protect/security-baselines.md)
+  - [Client device restrictions profile > **Password**](../configuration/device-restrictions-windows-10.md)
+  - [Manage Windows Hello for Business when devices enroll](../protect/windows-hello.md)
+  - [Manage Windows Hello for Business after devices enroll](../protect/identity-protection-configure.md)
 
 ### Software updates
 
@@ -201,11 +213,10 @@ Your policy options:
 
 For more information on these features and/or the settings you can configure, go to:
 
-- [**Android Enterprise** device restrictions profile > **System update**](../configuration/device-restrictions-android-for-work.md)
-- [**iOS/iPadOS** software update policies](../protect/software-updates-ios.md)
-- [**macOS** software update policies](../protect/software-updates-macos.md)
+- **Android Enterprise** [Device restrictions profile > **System update**](../configuration/device-restrictions-android-for-work.md)
+- **iOS/iPadOS** [Software update policies](../protect/software-updates-ios.md)
+- **macOS** [Software update policies](../protect/software-updates-macos.md)
 - **Windows**:
-
   - [Feature updates policy](../protect/windows-10-feature-updates.md)
   - [Expedited updates policy](../protect/windows-10-expedite-updates.md)
 
@@ -441,12 +452,7 @@ Microsoft recommends the following level 2 security policies:
 
 ## Level 3 - High protection and configuration
 
-THIS SECTION IS STILL BEING WRITTEN
-- Add MTD, threat levels (Possibly add to level 2)
-
 This level expands on what you've configured in levels 1 and 2. It adds extra security features commonly used on enterprise devices.
-
-Microsoft recommends the following level 3 enterprise security policies:
 
 - **Expand password-less authentication** to other services used by your workforce. In level 1, you enabled biometrics so users can sign in to their devices with a fingerprint or facial recognition. In this level, expand password-less to other parts of the organization.
 

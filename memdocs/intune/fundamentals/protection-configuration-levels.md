@@ -7,7 +7,7 @@ description: Learn about the different levels of protection and configuration in
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/02/2023
+ms.date: 02/08/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -27,15 +27,15 @@ ms.collection:
   - highpri
 ---
 
-# Layers of protection and configuration in Microsoft Intune
+# Levels of protection and configuration in Microsoft Intune
 
 Microsoft Intune gives admins the ability to [create policies that are applied to users, devices, and apps](what-is-intune.md). These policies can range from a minimum set to more secure or controlled policies. These policies depend on the organization needs, the devices that are used, and what the devices will do.
 
 When you're ready to create policies, you can use the different levels of protection and configuration:
 
-- Level 1 - Minimum protection and configuration
-- Level 2 - Enhanced protection and configuration
-- Level 3 - High protection and configuration
+- [Level 1 - Minimum protection and configuration](#level-1---minimum-protection-and-configuration))
+- [Level 2 - Enhanced protection and configuration](#level-2---enhanced-protection-and-configuration
+- [Level 3 - High protection and configuration](#level-3---high-protection-and-configuration)
 
 Your environment and business needs may have different levels defined. You can use these levels as a starting point and then customize them to fit your needs. For example, you can use the device configuration policies in level 1 and the app policies in level 3.
 
@@ -239,14 +239,10 @@ For more information, see [Level 3 - Advanced device compliance configurations](
 
 ### Device configuration (level 3)
 
-THIS SECTION IS STILL BEING WRITTEN
-
 This level focuses on enterprise-level services and features, and can require an infrastructure investment. In this level, you can create policies that:
 
-- Use certificate based authentication and authorization to access resources, such as VPN connections.
-- For your Android or iOS/iPadOS devices, use the Microsoft Tunnel VPN gateway to access on-premises resources.
-- Configure and use single-sign on for apps.
-- Configure device features that apply to the Windows firmware layer.
+- Expand password-less authentication to other services in your organization, including certificate based authentication, single-sign on for apps, multi-factor authentication (MFA) for an extra layer of security, and the Microsoft Tunnel VPN gateway.
+- Configure device features that apply to the Windows firmware layer. Use Android common criteria mode.
 - Configure specialized devices like kiosks and shared devices.
 - Deploy scripts, if needed.
 
