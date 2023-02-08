@@ -53,7 +53,7 @@ If you want, you can set up an [enrollment status page](enrollment-status.md) (E
 
 1. Open the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com).
 
-1. Go to **Intune > Device enrollment > Windows enrollment** and [Set up the Enrollment Status Page](../intune/enrollment/windows-enrollment-status.md).
+1. Go to **Devices > Enroll Devices > Windows enrollment > Enrollment Status Page** and [Set up the Enrollment Status Page](../intune/enrollment/windows-enrollment-status.md).
 
     :::image type="content" source="images/esp-config.png" alt-text="Enrollment status page policy page in Intune.":::
 
