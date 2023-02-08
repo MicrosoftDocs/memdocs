@@ -31,13 +31,13 @@ ms.collection:
 
 # Device compliance settings for Linux in Intune
 
-This article lists several of the available compliance settings you can configure for Linux devices in Intune.
+This article lists and describes the different compliance settings you can configure for Linux devices in Intune.
 
-For Linux, compliance settings are available from the [settings catalog](../configuration/settings-catalog.md) instead of from a pre-determined template as seen for other platforms. Therefore, when you configure a compliance policy for Linux you must choose the settings you want to include in your policy by browsing the catalog and selecting them.
+For Linux, compliance settings are available from the [settings catalog](../configuration/settings-catalog.md) instead of from a pre-determined template as seen for other platforms. Therefore, when configuring a compliance policy for Linux you choose the settings you want to include in your policy by browsing the catalog and selecting them.
 
 In addition to the platform-specific compliance policy, devices are also governed by tenant-wide compliance policy settings. To manage the tenant-wide compliance policy settings in your tenant, sign in to Microsoft Endpoint Manager admin center and go to **Endpoint security** > **Device compliance** > **Compliance policy settings**.
 
-To learn more about compliance policies, and what they do, see get started with device compliance.
+To learn more about compliance policies, and what they do, see [get started with device compliance](device-compliance-get-started.md).
 
 This feature applies to:
 
@@ -47,17 +47,23 @@ This feature applies to:
 
 Compliance policies for Linux can include settings from the following categories. Where applicable, guidance on configuring the setting is provided.
 
-- **Allowed Distros** - Add entries that define a maximum and minimum OS version for a Linux distribution type.
+### Allowed Distros
+
+Add entries that define a maximum and minimum OS version for a Linux distribution type.
 
 Users of devices that fail to meet the defined criteria need to install a different version or distribution of Linux to bring the device into compliance.
 
-- **Custom Compliance** – Add the settings in this category when you use custom compliance settings for Linux.
+### Custom Compliance
+
+Add the settings in this category when you use custom compliance settings for Linux.
 
 For information about the available settings for custom compliance and how to use them, see [Use custom compliance policies and settings for Linux and Windows devices with Microsoft Intune](../protect/compliance-use-custom-settings.md).
 
-- **Device Encryption** - Add settings to manage disk encryption.
+### Device Encryption
 
-  - Require Device Encryption – Specifies whether device-level encryption is required for writable fixed disks on this computer.
+Add settings to manage disk encryption.
+
+- **Require Device Encryption** – Specifies whether device-level encryption is required for writable fixed disks on this computer.
 
   Users of devices that aren’t encrypted receive a message that they must encrypt the drives to bring the device into compliance.
 
@@ -73,13 +79,15 @@ For information about the available settings for custom compliance and how to us
     - Pseudo-filesystems like */proc* or *tmpfs*
     - The */boot* or */boot/efi* partitions
 
-- **Password Policy** – Enforce common password requirements for Linux devices:
+### Password Policy
 
-  - Minimum Lowercase - Specifies the minimum number of lowercase letters a password must contain.
-  - Minimum Uppercase - Specifies the minimum number of uppercase letters a password must contain.
-  - Minimum Symbols - Specifies the minimum number of symbols a password must contain.
-  - Minimum Length - Specifies the minimum number of total characters a password must contain.
-  - Minimum Digits - Specifies the minimum number of digits a password must contain.
+Enforce common password requirements for Linux devices:
+
+- Minimum Lowercase - Specifies the minimum number of lowercase letters a password must contain.
+- Minimum Uppercase - Specifies the minimum number of uppercase letters a password must contain.
+- Minimum Symbols - Specifies the minimum number of symbols a password must contain.
+- Minimum Length - Specifies the minimum number of total characters a password must contain.
+- Minimum Digits - Specifies the minimum number of digits a password must contain.
 
 Users that fail to meet password complexity requirements can receive a message that they must use a strong password to bring the device into compliance.
 
