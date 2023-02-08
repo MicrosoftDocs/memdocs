@@ -97,12 +97,14 @@ Email notifications appear in the user's inbox. Push notifications appear in the
     The options for branding and customization are:  
 
     * **Show company logo**: Flip the switch **On** to make your organization's logo visible in the email header. This option becomes available after you've configured Company Portal branding in your tenant.   
-    * **Show device details**: Flip the switch **On** to make the following device details visible in the footer of the email (this is off by default, turning on can result in a delay of the emails to the device and not all details are guaranteed to populate):  
+    * **Show device details**:  Device details are turned off by default. Flip the switch **On** to make the following device details visible in the footer of the email:   
          * Device name  
          * Model  
          * OS  
          * OS version  
          * Serial number  
+         
+        Intune may not be able to populate all details. Emails with device details can take longer to deliver.    
     * **Show company name**: Flip the switch **On** to make your organization's name visible in the footer of the email. The tenant value is automatically populated.  
     * **Show contact information**: Flip the switch **On** to show your organization's contact information. The tenant value is automatically populated.  
     * **Show Company portal website link**: Flip the switch **On** to show a link to the Company Portal website. The tenant value is automatically populated. 
