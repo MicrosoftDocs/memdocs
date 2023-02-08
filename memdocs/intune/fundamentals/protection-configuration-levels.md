@@ -33,8 +33,8 @@ Microsoft Intune gives admins the ability to [create policies that are applied t
 
 When you're ready to create policies, you can use the different levels of protection and configuration:
 
-- [Level 1 - Minimum protection and configuration](#level-1---minimum-protection-and-configuration))
-- [Level 2 - Enhanced protection and configuration](#level-2---enhanced-protection-and-configuration
+- [Level 1 - Minimum protection and configuration](#level-1---minimum-protection-and-configuration)
+- [Level 2 - Enhanced protection and configuration](#level-2---enhanced-protection-and-configuration)
 - [Level 3 - High protection and configuration](#level-3---high-protection-and-configuration)
 
 Your environment and business needs may have different levels defined. You can use these levels as a starting point and then customize them to fit your needs. For example, you can use the device configuration policies in level 1 and the app policies in level 3.
@@ -241,7 +241,7 @@ For more information, see [Level 3 - Advanced device compliance configurations](
 
 This level focuses on enterprise-level services and features, and can require an infrastructure investment. In this level, you can create policies that:
 
-- Expand password-less authentication to other services in your organization, including certificate based authentication, single-sign on for apps, multi-factor authentication (MFA) for an extra layer of security, and the Microsoft Tunnel VPN gateway.
+- Expand password-less authentication to other services in your organization, including certificate based authentication, single-sign on for apps, multi-factor authentication (MFA), and the Microsoft Tunnel VPN gateway.
 - Configure device features that apply to the Windows firmware layer. Use Android common criteria mode.
 - Configure specialized devices like kiosks and shared devices.
 - Deploy scripts, if needed.

@@ -452,7 +452,7 @@ Microsoft recommends the following level 2 security policies:
 
 ## Level 3 - High protection and configuration
 
-This level expands on what you've configured in levels 1 and 2. It adds extra security features commonly used on enterprise devices.
+This level expands on what you've configured in levels 1 and 2. It adds extra security features used in enterprise level organizations.
 
 - **Expand password-less authentication** to other services used by your workforce. In level 1, you enabled biometrics so users can sign in to their devices with a fingerprint or facial recognition. In this level, expand password-less to other parts of the organization.
 
