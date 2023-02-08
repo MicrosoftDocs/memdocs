@@ -31,11 +31,11 @@ ms.collection:
 
 # Rename your device from the Company Portal website  
 
-*Applies to:* 
-* *Android*   
-* *iOS/iPadOS*   
-* *macOS*   
-* *Windows 10/11*  
+**Applies to:** 
+* Android   
+* iOS/iPadOS    
+* macOS   
+* Windows 10/11    
 
 Remotely change the names of your enrolled devices from the Company Portal website.  
 
