@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 12/06/2022
+ms.date: 02/08/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -81,36 +81,31 @@ You must create an enrollment profile so that you can enroll your dedicated devi
 3. Choose **Create** to save the profile.  
 
 ### Access enrollment token  
-After you create a profile, Intune generates a token that's needed for enrollment. There are two ways to access the token:
+There are two ways to access the enrollment token.   
 
-One way is:
+The first way: 
 1. Choose **Devices** > **Android** > **Android enrollment** > **Android Enterprise** > **Corporate-owned dedicated devices**.
 2. From the list, select your enrollment profile. 
 2. Select **Token**. 
 
-Another way to find the token is:
+The second way:
 1. Choose **Devices** > **Android** > **Android enrollment** > **Android Enterprise** > **Corporate-owned dedicated devices**.
 2. Locate your profile in the list, and then select the **More** (**...**) menu that's next to it.
 3. Select **View enrollment token**.  
 
-The token appears as a 20-digit string and a QR code. Use this token to enroll based on the enrollment mechanisms described in the [Android Enterprise corporate-owned device enrollment document](https://learn.microsoft.com/en-us/mem/intune/enrollment/android-dedicated-devices-fully-managed-enroll). 
+The token appears as a 20-digit string and a QR code. Use this token to enroll devices via the mechanisms described in [Enroll dedicated, fully managed, or corporate-owned work profile devices](android-dedicated-devices-fully-managed-enroll.md). 
  
-### Replace, remove or export tokens
+### Replace, remove, or export token   
 
-- **Replace token**: You can generate a new token/QR code when one nears expiration by using Replace Token.
-- **Revoke token**: You can immediately expire the token/QR code. From this point on, the token/QR code is no longer usable. You might use this option if you:
-  - accidentally share the token/QR code with an unauthorized party
-  - complete all enrollments and no longer need the token/QR code
-- **Export token**: You can export the JSON content of the token/QR code. You might use this option to easily paste JSON content to enroll with [Zero Touch Enrollment (ZTE)](https://learn.microsoft.com/en-us/mem/intune/enrollment/android-dedicated-devices-fully-managed-enroll#enroll-by-using-google-zero-touch) or [Knox Mobile Enrollment (KME)](https://learn.microsoft.com/en-us/mem/intune/enrollment/android-dedicated-devices-fully-managed-enroll#enroll-by-using-knox-mobile-enrollment). 
+Select a token to access these options:            
 
-Replacing, revoking, or exporting a token/QR code won't have any effect on devices that are already enrolled.
+- **Replace token**: Generate a new token that's nearing expiration.  
+- **Revoke token**: Immediately expire the token. Once revoked, the token is no longer usable. This option is useful if you:  
+  - Accidentally share the token with an unauthorized party.    
+  - Complete all enrollments and no longer need the token.    
+- **Export token**: Export the JSON content of the token. This option is useful for obtaining the JSON content that's needed to configure [Google Zero Touch](android-dedicated-devices-fully-managed-enroll#enroll-by-using-google-zero-touch) or [Knox Mobile Enrollment](android-dedicated-devices-fully-managed-enroll.md#enroll-by-using-knox-mobile-enrollment). 
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and choose **Devices** > **Android** > **Android enrollment** > **Corporate-owned dedicated devices**.
-2. Choose the profile that you want to work with.
-3. Choose **Token**.
-4. To replace the token, choose **Replace token**.
-5. To revoke the token, choose **Revoke token**.
-6. To export the token, choose **Export token**.
+When applied, these actions don't have any effect on devices that are already enrolled.   
 
 ### Create a device group
 
