@@ -1255,7 +1255,7 @@ items:
             href: ./enrollment/android-aosp-corporate-owned-userless-enroll.md    
           - name: Enroll corporate-owned, user-associated devices
             href: ./enrollment/android-aosp-corporate-owned-user-associated-enroll.md 
-        - name: Android device administrator enrollment solutions    
+        - name: Android device administrator solutions    
           items: 
           - name: Set up enrollment for Android device administrator 
             href: ./enrollment/android-enroll-device-administrator.md
@@ -1309,7 +1309,7 @@ items:
               href: ./enrollment/device-enrollment-shared-ipad.md 
         - name: Enrollment configurations  
           items: 
-          - name: Back up and restore
+          - name: Back up and restore for Automated Device Enrollment 
             href: ./enrollment/backup-restore-ios.md 
           - name: Security configuration framework for iOS/iPadOS 
             items:
@@ -1317,7 +1317,7 @@ items:
               href: ./enrollment/ios-ipados-configuration-framework.md
             - name: 1 - Configure app configuration policies
               href: ./enrollment/ios-ipados-app-configuration-policies.md
-            - name: 2- Configure device compliance security policies
+            - name: 2 - Configure device compliance security policies
               href: ./enrollment/ios-ipados-device-compliance-security-configurations.md
             - name: 3 - Configure device security policies for personal devices
               href: ./enrollment/ios-ipados-personal-device-security-configurations.md
