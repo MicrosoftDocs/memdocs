@@ -32,6 +32,12 @@ ms.collection: M365-identity-device-management
 
 All [Azure network connections](azure-network-connections.md) (ANC) get periodically checked to make sure that the environment is ready for provisioning Cloud PCs. If these [checks](health-checks.md) fail, you may need to fix your networking setup on Azure or edit one of the properties provided.
 
+## Requirements
+
+To edit  an ANC, you must have the [Intune Administrator](/azure/active-directory/roles/permissions-reference#intune-administrator), [Windows 365 Administrator](/azure/active-directory/roles/permissions-reference), or [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) role.
+
+## Edit an Azure network connection
+
 To edit an Azure network connection:
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Windows 365** (under **Provisioning**) > **Azure network connection** > select the connection you want to edit > **Properties**.
