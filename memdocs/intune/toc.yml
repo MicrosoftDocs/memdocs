@@ -33,7 +33,7 @@ items:
 
   - name: Evaluate and try
     items:
-    - name: Walkthrough Intune in Microsoft Endpoint Manager (update for branding)
+    - name: Walkthrough Intune admin center
       href: ./fundamentals/tutorial-walkthrough-endpoint-manager.md 
     - name: Try Intune tasks
       items:
@@ -508,7 +508,7 @@ items:
 
       - name: How-to guides  
         items:
-        - name: Use compliance rules to protect resources (Set rules on devices to allow access to resources)
+        - name: Use compliance rules to protect resources
           items:
           - name: Compliance overview
             href: ./protect/device-compliance-get-started.md    
