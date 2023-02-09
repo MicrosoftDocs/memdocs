@@ -31,11 +31,11 @@ ms.collection:
 # Check status on Intune Company Portal website  
 
 
-*Applies to:* 
-* *Android*   
-* *iOS/iPadOS*   
-* *macOS*   
-* *Windows 10/11*     
+**Applies to:** 
+* Android  
+* iOS/iPadOS   
+* macOS   
+* Windows 10/11     
 
 Remotely check the status of a device from the Company Portal website. During a status check. Company Portal assesses the selected device to determine whether or not it has work access. 
 
