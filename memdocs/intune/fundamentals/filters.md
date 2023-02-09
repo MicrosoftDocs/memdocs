@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/10/2022
+ms.date: 02/21/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -52,7 +52,6 @@ This feature applies to:
 - iOS/iPadOS
 - macOS
 - Windows 10/11
-
 
 This article describes the filter architecture, and shows you how to create, update, and delete a filter.
 
@@ -175,7 +174,7 @@ After the filter is created, it's ready to use when assigning your apps or polic
 
       A list of filters that match the policy platform is shown.
 
-5. Select your filter > **Select**.
+5. Select your existing filter > **Select**.
 
     For example, select **Include filtered devices in assignment**, and select the filter:
 
@@ -185,20 +184,24 @@ After the filter is created, it's ready to use when assigning your apps or polic
 
 When the device checks in with the Intune service, the properties defined in the filter are evaluated, and determine if the app or policy should be applied.
 
-## Change an existing filter
+## Review the assignments, change an existing filter
 
-After a filter is created, it can be changed or updated.
+After the filter is assigned to your policies, you can see all the policies that use the filter. After a filter is created, it can also be changed or updated.
 
 1. Sign in to the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Tenant administration** > **Filters**. A list of all the filters is shown.
 
     You can also update filters in **Devices** > **Filters**, or **Apps** > **Filters**.
 
-3. Select the filter you want to change. Select **Rules** > **Edit**, and make your changes:
+3. To see the policies that use this filter, select the **Associated Assignments** tab. The page shows all the apps and policies that use the filter, the groups that receive the filter assignments, and the filter mode (**Include** or **Exclude**):
+
+    :::image type="content" source="./media/filters/associated-assignments-filter-mode.png" alt-text="Screenshot that shows associated assignment tabs for an existing filter in Microsoft Intune.":::
+
+4. To update an existing filter, select the filter you want to change. Select **Rules** > **Edit**, and make your changes:
 
     :::image type="content" source="./media/filters/update-existing-filter.png" alt-text="Screenshot that shows how to change or update an existing filter in Microsoft Intune.":::
 
-4. To save your changes, select **Review + save** > **Save**.
+5. To save your changes, select **Review + save** > **Save**.
 
 ## Delete a filter
 
