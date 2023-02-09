@@ -122,6 +122,13 @@ Support for custom Windows 365 role-based access control (RBAC) roles has moved 
 Windows 365 now supports creating Azure Active Directory Join Cloud PCs that use single sign-on for Cloud PC login. Existing Cloud PCs won’t have single sign-on configured. For more information, see [Create provisioning policy](create-provisioning-policy.md) and [Edit provisioning policy](edit-provisioning-policy.md).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Provisioning
+
+#### Configure installed language and region for provisioning Cloud PCs generally available<!--42137636-->
+
+Language pre-configuration for Cloud PCs has moved out of preview and into general availability. Admins can select the **Language & Region pack** under **Configuration** in their provisioning policy to pre-configure the language for the endpoint devices. For more information, see [Use a provisioning policy to set up a default display language on Cloud PCs](use-provisioning-policy-default-display-language.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
 
 #### New Third-party connector column on All devices page<!--42555983-->
