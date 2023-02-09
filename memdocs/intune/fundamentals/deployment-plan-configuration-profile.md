@@ -7,7 +7,7 @@ description: Step 4 to deploy device configuration profiles as part of the minim
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/06/2023
+ms.date: 02/08/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -103,10 +103,14 @@ Your policy options:
 
 For more information on these features, go to:
 
-- [**Android Enterprise** and **iOS/iPadOS** mobile threat defense integration](../protect/mobile-threat-defense.md)
-- [**Android Enterprise** Microsoft Defender for Endpoint overview](/microsoft-365/security/defender-endpoint/mtd)
-- [**Windows** security baselines](../protect/security-baselines.md)
-- [**macOS** and **Windows** antivirus policy](../protect/endpoint-security-antivirus-policy.md)
+- **Android Enterprise**:
+  - [Mobile threat defense integration](../protect/mobile-threat-defense.md)
+  - [Microsoft Defender for Endpoint overview](/microsoft-365/security/defender-endpoint/mtd)
+- **iOS/iPadOS** [Mobile threat defense integration](../protect/mobile-threat-defense.md)
+- **macOS** [Antivirus policy](../protect/endpoint-security-antivirus-policy.md)
+- **Windows**:
+  - [Antivirus policy](../protect/endpoint-security-antivirus-policy.md)
+  - [Security baselines](../protect/security-baselines.md)
 
 ### Detection and response
 
@@ -125,11 +129,15 @@ Your policy options:
 
 For more information on these features, go to:
 
-- **Android Enterprise** and **iOS/iPadOS**:
+- **Android Enterprise**:
   - [Mobile threat defense integration with Intune](../protect/mobile-threat-defense.md)
   - [Microsoft Defender for Endpoint overview](/microsoft-365/security/defender-endpoint/mtd)
-- [**Windows** security baselines](../protect/security-baselines.md)
-- [**Windows** endpoint detection and response policy](../protect/endpoint-security-edr-policy.md)
+- **iOS/iPadOS**:
+  - [Mobile threat defense integration with Intune](../protect/mobile-threat-defense.md)
+  - [Microsoft Defender for Endpoint overview](/microsoft-365/security/defender-endpoint/mtd)
+- **Windows**:
+  - [Security baselines](../protect/security-baselines.md)
+  - [Endpoint detection and response policy](../protect/endpoint-security-edr-policy.md)
 
 ### Firewall
 
@@ -148,9 +156,12 @@ Your policy options:
 
 For more information on these features, go to:
 
-- [**Android Enterprise** and **iOS/iPadOS** mobile threat defense integration](../protect/mobile-threat-defense.md)
-- [**Windows** security baselines](../protect/security-baselines.md)
-- [**macOS** and **Windows** firewall policy](../protect/endpoint-security-firewall-policy.md)
+- **Android Enterprise** [Mobile threat defense integration](../protect/mobile-threat-defense.md)
+- **iOS/iPadOS** [Mobile threat defense integration](../protect/mobile-threat-defense.md)
+- **macOS** [Firewall policy](../protect/endpoint-security-firewall-policy.md)
+- **Windows**:
+  - [Security baselines](../protect/security-baselines.md)
+  - [Firewall policy](../protect/endpoint-security-firewall-policy.md)
 
 ### Password policy
 
@@ -175,13 +186,14 @@ For a list of the settings you can configure, go to:
 - **Android Enterprise** device restrictions profile:
   - [Corporate owned devices > **Device password** and **Work profile password**](../configuration/device-restrictions-android-for-work.md)
   - [Personally owned devices with a work profile > **Work profile password** and **Password**](../configuration/device-restrictions-android-enterprise-personal.md)
-- [**Android AOSP** device restrictions profile > **Device password**](../configuration/device-restrictions-android-aosp.md)
-- [**iOS/iPadOS** device restrictions profile > **Password**](../configuration/device-restrictions-ios.md)
-- [**macOS** device restrictions profile > **Password**](../configuration/device-restrictions-macos.md)
-- [**Windows** security baselines](../protect/security-baselines.md)
-- [**Windows** client device restrictions profile > **Password**](../configuration/device-restrictions-windows-10.md)
-- [**Windows**: Manage Windows Hello for Business when devices enroll](../protect/windows-hello.md)
-- [**Windows**: Manage Windows Hello for Business after devices enroll](../protect/identity-protection-configure.md)
+- **Android AOSP** [Device restrictions profile > **Device password**](../configuration/device-restrictions-android-aosp.md)
+- **iOS/iPadOS** [Device restrictions profile > **Password**](../configuration/device-restrictions-ios.md)
+- **macOS** [Device restrictions profile > **Password**](../configuration/device-restrictions-macos.md)
+- **Windows**:
+  - [Security baselines](../protect/security-baselines.md)
+  - [Client device restrictions profile > **Password**](../configuration/device-restrictions-windows-10.md)
+  - [Manage Windows Hello for Business when devices enroll](../protect/windows-hello.md)
+  - [Manage Windows Hello for Business after devices enroll](../protect/identity-protection-configure.md)
 
 ### Software updates
 
@@ -201,11 +213,10 @@ Your policy options:
 
 For more information on these features and/or the settings you can configure, go to:
 
-- [**Android Enterprise** device restrictions profile > **System update**](../configuration/device-restrictions-android-for-work.md)
-- [**iOS/iPadOS** software update policies](../protect/software-updates-ios.md)
-- [**macOS** software update policies](../protect/software-updates-macos.md)
+- **Android Enterprise** [Device restrictions profile > **System update**](../configuration/device-restrictions-android-for-work.md)
+- **iOS/iPadOS** [Software update policies](../protect/software-updates-ios.md)
+- **macOS** [Software update policies](../protect/software-updates-macos.md)
 - **Windows**:
-
   - [Feature updates policy](../protect/windows-10-feature-updates.md)
   - [Expedited updates policy](../protect/windows-10-expedite-updates.md)
 
@@ -353,52 +364,85 @@ To get started:
 
 ## Level 2 - Enhanced protection and configuration
 
-This level expands on what you've configured in level 1 and adds more security for your devices. In this section, you create a level 2 set of policies that configure other security settings for your devices.
+This level expands on what you've configured in level 1 and adds more security for your devices. In this section, you create a level 2 set of policies that configure more security settings for your devices.
 
 Microsoft recommends the following level 2 security policies:
 
 - Enable **disk encryption, secure boot, and TPM** on your devices. These features combined with a strong PIN policy or biometric unlocking are recommended at this level.
 
-  Your options:
+  # [Android](#tab/android-disk)
 
-  | Platform | Use Intune |
-  | --- | --- |
-  | **Android** |✔️ On Android devices, disk encryption and Samsung Knox might be built into the operating system. Disk encryption might be automatically enabled *when* you configure the lock screen settings. In Intune, you can create a device restrictions policy that configures lock screen settings. <br/><br/>For a list of the password and lock screen settings you can configure, go to the following articles:<br/><br/>- [Organization owned devices - Device password](../configuration/device-restrictions-android-for-work.md#device-password)<br/>- [Organization owned devices - Work profile password](../configuration/device-restrictions-android-for-work.md#work-profile-password)<br/>- [Personally owned devices - Work profile password](../configuration/device-restrictions-android-enterprise-personal.md#work-profile-password)<br/>- [Personally owned devices - Device password](../configuration/device-restrictions-android-enterprise-personal.md#password) |
-  | **iOS/iPadOS** | **N/A** On iOS/iPadOS devices, disk encryption and Secure Enclave are built into the operating system and automatically enabled. There aren't any Intune settings to configure these specific features. <br/><br/>For more specific information, go to [Introduction to Apple platform security](https://support.apple.com/guide/security/intro-to-apple-platform-security-seccd5016d31/web) and [Secure Enclave](https://support.apple.com/guide/security/secure-enclave-sec59b0b31ff/web) (opens Apple's web site). <br/><br/>✔️ There are Intune policies that focus on password settings and encrypting backups. |
-  | **macOS** | ✔️ On macOS devices, you can [configure and use FileVault](../protect/encrypt-devices-filevault.md) policies in Intune for disk encryption. <br/><br/>Secure Enclave is built into the operating and automatically enabled. For more specific information, go to [Introduction to Apple platform security](https://support.apple.com/guide/security/intro-to-apple-platform-security-seccd5016d31/web) and [Secure Enclave](https://support.apple.com/guide/security/secure-enclave-sec59b0b31ff/web) (opens Apple's web site).|
-  | **Windows** | ✔️ On Windows devices, there are Intune endpoint protection policies that [manage BitLocker, including TPM](../protect/encrypt-devices.md) and [manage Windows settings, including secure boot](../protect/endpoint-protection-windows-10.md#windows-encryption). |
+  On Android devices, disk encryption and Samsung Knox might be built into the operating system. Disk encryption might be automatically enabled *when* you configure the lock screen settings. In Intune, you can create a device restrictions policy that configures lock screen settings.
+
+  For a list of the password and lock screen settings you can configure, go to the following articles:  
+
+  - [Organization owned devices - Device password](../configuration/device-restrictions-android-for-work.md#device-password)
+  - [Organization owned devices - Work profile password](../configuration/device-restrictions-android-for-work.md#work-profile-password)
+  - [Personally owned devices - Work profile password](../configuration/device-restrictions-android-enterprise-personal.md#work-profile-password)
+  - [Personally owned devices - Device password](../configuration/device-restrictions-android-enterprise-personal.md#password)
+
+  # [iOS/iPadOS](#tab/ios-disk)
+
+  On iOS/iPadOS devices, disk encryption and Secure Enclave are built into the operating system and automatically enabled. There aren't any Intune settings to configure these specific features.
+
+  For more specific information, go to [Introduction to Apple platform security](https://support.apple.com/guide/security/intro-to-apple-platform-security-seccd5016d31/web) and [Secure Enclave](https://support.apple.com/guide/security/secure-enclave-sec59b0b31ff/web) (opens Apple's web site).
+
+  There are Intune policies that focus on password settings and encrypting backups.
+
+  # [macOS](#tab/macos-disk)
+
+  On macOS devices, you can [configure and use FileVault](../protect/encrypt-devices-filevault.md) policies in Intune for disk encryption.
+
+  Secure Enclave is built into the operating and automatically enabled. For more specific information, go to [Introduction to Apple platform security](https://support.apple.com/guide/security/intro-to-apple-platform-security-seccd5016d31/web) and [Secure Enclave](https://support.apple.com/guide/security/secure-enclave-sec59b0b31ff/web) (opens Apple's web site).
+
+  # [Windows](#tab/windows-disk)
+
+  On Windows devices, there are Intune endpoint protection policies that [manage BitLocker, including TPM](../protect/encrypt-devices.md) and [manage Windows settings, including secure boot](../protect/endpoint-protection-windows-10.md#windows-encryption).
+
+---
 
 - **Expire passwords and regulate reusing old passwords**. In Level 1, you created a strong PIN or password policy. If you haven't already, be sure you configure your PINs & passwords to expire and set some password-reuse rules.
 
-  Your options:
+  You can use Intune to [create a device restrictions policy](../configuration/device-restrictions-configure.md) or a [settings catalog](../configuration/settings-catalog.md) policy that configures these settings. For more information on the password settings you can configure, go to the following articles:
 
-  | Platform | Use Intune |
-  | --- | --- |
-  | **Android** |✔️ On Android devices, you can use Intune to create a device restrictions policy that configures these settings. <br/><br/>For a list of the password settings you can configure, go to the following articles:<br/><br/>- [Organization owned devices - Device password](../configuration/device-restrictions-android-for-work.md#device-password)<br/>- [Organization owned devices - Work profile password](../configuration/device-restrictions-android-for-work.md#work-profile-password)<br/>- [Personally owned devices - Work profile password](../configuration/device-restrictions-android-enterprise-personal.md#work-profile-password)<br/>- [Personally owned devices - Device password](../configuration/device-restrictions-android-enterprise-personal.md#password) |
-  | **iOS/iPadOS** | ✔️ On iOS/iPadOS devices, you can use Intune to create a device restrictions policy that configures these settings. <br/><br/>For a list of the password settings you can configure, go to [iOS/iPadOS password settings](../configuration/device-restrictions-ios.md#password). <br/><br/>The [settings catalog](../configuration/settings-catalog.md) may also have some relevant password settings.|
-  | **macOS** | ✔️ On macOS devices, you can use Intune to create a device restrictions policy that configures these settings. <br/><br/>For a list of the password settings you can configure, go to [macOS password settings](../configuration/device-restrictions-macos.md#password).<br/><br/>The [settings catalog](../configuration/settings-catalog.md) may also have some relevant password settings.|
-  | **Windows** | ✔️ On Windows devices, you can use Intune to create a device restrictions policy that configures these settings. <br/><br/>For a list of the password settings you can configure, go to [iOS/iPadOS password settings](../configuration/device-restrictions-windows-10.md#password).<br/><br/>The [settings catalog](../configuration/settings-catalog.md) may also have some relevant password settings. |
+  - **Android**: 
+    - [Organization owned devices - Device password settings](../configuration/device-restrictions-android-for-work.md#device-password)
+    - [Organization owned devices - Work profile password settings](../configuration/device-restrictions-android-for-work.md#work-profile-password)
+    - [Personally owned devices - Work profile password settings](../configuration/device-restrictions-android-enterprise-personal.md#work-profile-password)
+    - [Personally owned devices - Device password settings](../configuration/device-restrictions-android-enterprise-personal.md#password)
+
+  - **iOS/iPadOS**: 
+    - [Device restrictions policy > Password settings](../configuration/device-restrictions-ios.md#password)
+    - [Settings catalog](../configuration/settings-catalog.md) > Search for `Passcode`
+
+  - **macOS**: 
+    - [Device restrictions policy > Password settings](../configuration/device-restrictions-macos.md#password)
+    - [Settings catalog](../configuration/settings-catalog.md) > Search for `Passcode`
+
+  - **Windows**: 
+    - [Device restrictions policy > Password settings](../configuration/device-restrictions-windows-10.md#password)
+    - [Settings catalog](../configuration/settings-catalog.md) > Search for `Device lock`
 
 - Intune includes **hundreds of settings that can manage devices features** and settings, like disabling the built-in camera, controlling notifications, allowing bluetooth, blocking games, and more.
 
-  You can use the built-in templates or the settings catalog to see and configure the settings.
+  You can use the [built-in templates](../configuration/device-profiles.md) or the [settings catalog](../configuration/settings-catalog.md) to see and configure the settings.
 
   - **[Device restrictions templates](../configuration/device-restrictions-configure.md)** have many built-in settings that can control different parts of the devices, including security, hardware, data sharing, and more.
 
-    You can use these templates for the following platforms:
+    You can use these templates on the following platforms:
   
     - Android
     - iOS/iPadOS
     - macOS
     - Windows
 
-  - **[Use the Settings catalog](../configuration/settings-catalog.md)** to see and configure all the available settings. You can use the settings catalog for the following platforms:
+  - **[Use the Settings catalog](../configuration/settings-catalog.md)** to see and configure all the available settings. You can use the settings catalog on the following platforms:
 
     - iOS/iPadOS
     - macOS
     - Windows
 
-  - **[Use the built-in administrative templates](../configuration/administrative-templates-windows.md)**, similar to configuring ADMX templates on-premises. You can use the settings catalog for the following platform:
+  - **[Use the built-in administrative templates](../configuration/administrative-templates-windows.md)**, similar to configuring ADMX templates on-premises. You can use the settings catalog on the following platform:
 
     - Windows
 
@@ -408,12 +452,7 @@ Microsoft recommends the following level 2 security policies:
 
 ## Level 3 - High protection and configuration
 
-THIS SECTION IS STILL BEING WRITTEN
-- Add MTD, threat levels (Possibly add to level 2)
-
-This level expands on what you've configured in levels 1 and 2. It adds extra security features commonly used on enterprise devices.
-
-Microsoft recommends the following level 3 enterprise security policies:
+This level expands on what you've configured in levels 1 and 2. It adds extra security features used in enterprise level organizations.
 
 - **Expand password-less authentication** to other services used by your workforce. In level 1, you enabled biometrics so users can sign in to their devices with a fingerprint or facial recognition. In this level, expand password-less to other parts of the organization.
 
