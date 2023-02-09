@@ -65,3 +65,5 @@ To set up a specific virtualization-based workloads system, see the following ar
 ## Next steps
 
 For more information about virtualization-based workloads, see [Run Hyper-V in a Virtual Machine with Nested Virtualization](/virtualization/hyper-v-on-windows/user-guide/nested-virtualization).
+
+[Troubleshooting](troubleshooting.md).
