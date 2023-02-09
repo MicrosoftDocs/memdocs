@@ -262,9 +262,9 @@ items:
         - name: Use scope tags to determine what admins can see
           href: ./fundamentals/scope-tags.md
 
-    - name: Choose Intune add-ons
+    - name: Choose Premium add-ons
       items:
-      - name: Intune add-ons
+      - name: Premium add-ons
         href: ./fundamentals/premium-add-ons.md
       - name: Microsoft Tunnel for MAM
         href: ./protect/microsoft-tunnel-mam.md
@@ -1361,7 +1361,7 @@ items:
 
     - name: Initiate remote actions
       items:
-      - name: Remote actions overview (update name?)
+      - name: Using device actions
         href: ./remote-actions/device-management.md
 
       - name: Locks and passwords
@@ -1370,7 +1370,7 @@ items:
           href: ./remote-actions/device-remote-lock.md
         - name: Reset passcode
           href: ./remote-actions/device-passcode-reset.md
-        - name: Windows 10 PIN reset (Need to add Win11)
+        - name: Windows 10 PIN reset
           href: ./remote-actions/device-windows-pin-reset.md
         - name: Self-service password reset
           href: ./remote-actions/password-reset.md
