@@ -40,12 +40,12 @@ Set up enrollment notifications in Microsoft Intune to notify employees of newly
 * Add a custom message for the user, with information about how to report an unrecognized device.  
 * Apply your tenant's branding and customization settings (email notifications only).   
 
-Enrollment notifications work on devices running:  
+Enrollment notifications are supported on these devices:   
 
-* Android  (excludes DEP scenarios)
-* iOS/iPadOS (excludes DEP or ADE scenarios) 
-* macOS 
-* Windows 10/11 (excludes hybrid Azure AD-joined devices)  
+* Android devices in bring-your-own-device (BYOD) scenarios    
+* iOS/iPadOS devices in BYOD scenarios      
+* Macs   
+* Windows 10/11, excluding hybrid Azure AD-joined devices      
 
 ## Example  
 The following example image shows what an enrollment notification looks like to a device user.  
