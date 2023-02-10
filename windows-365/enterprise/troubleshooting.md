@@ -133,7 +133,7 @@ In certain regions, some users may experience a decline in their 4vCPU Cloud PC 
 
 **Troubleshooting steps:**
 
-- Reprovision the Cloud PC, or
+- [Reprovision](reprovision-cloud-pc.md) the Cloud PC, or
 - Uninstall Hyper-V on the Cloud PC.  
 
 <!-- ########################## -->
