@@ -58,12 +58,7 @@ With the Intune 2202 release, the [enrollment status page](enrollment-status.md)
 - Fixes an issue where it couldn't differentiate between store apps in online or offline mode.
 - Adds a new column for **Version** to see which version of the application is selected.
 
-:::image type="content" source="images/app-picker.png" alt-text="The enrollment status page application picker.":::
-
-## Autopilot agility rolling out
-
-## This feature is currently being deprecated.  
-Autopilot agility is a new feature that allows updates and bug fixes to the OOBE experience. These updates occur before device enrollment, and after the Azure Active Directory (Azure AD) sign in page. It may result in another reboot and authentication prompt to the user. This feature is rolling out to Windows 10 1909 and 2004/20H2 with August cumulative update and isn't yet available for Windows 11. 
+:::image type="content" source="images/app-picker.png" alt-text="The enrollment status page application picker."::: 
 
 ## One-time self-deployment and pre-provisioning
 <!-- 2110 -->
