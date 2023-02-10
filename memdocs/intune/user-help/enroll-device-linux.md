@@ -65,7 +65,7 @@ Follow these steps to register your personal Linux device on your organization's
    3. Sign in to Microsoft Edge with your work or school account to access your org's internal websites.   
 
 > [!NOTE]
-> Ubuntu on WSL2 is not a supported scenario but we are currently investigating ways to add support for it in the future.
+> Ubuntu on WSL2 is not a supported scenario.  
 
 ## Next steps
 As long as your device meets your organization's requirements, it will continue to have work access. Your organization may limit access if the Intune app flags your device as noncompliant. You can view and resolve all compliance issues in the Microsoft Intune app. For more information, see [Check status on Linux devices](check-status-linux.md).  
