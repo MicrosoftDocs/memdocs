@@ -94,16 +94,10 @@ To manually trigger a full health check, sign in to the [Microsoft Endpoint Mana
 
 The ANC wizard requires access to Azure and, optionally, on-premises domain resources. The following permissions are required for the ANC:
 
-- Azure
-  - [Intune Administrator](/azure/active-directory/roles/permissions-reference#intune-administrator) or [Windows 365 Administrator](/azure/active-directory/roles/permissions-reference).
-  - Active directory (Hybrid Azure AD Join ANCs only)
-  - An Active Directory user account with sufficient permissions to join the AD domain into this Organizational Unit.
+- [Intune Administrator](/azure/active-directory/roles/permissions-reference#intune-administrator), [Windows 365 Administrator](/azure/active-directory/roles/permissions-reference), or [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) role.
+- An Active Directory user account with sufficient permissions to join the AD domain into this Organizational Unit( (Hybrid Azure AD Join ANCs only).
 
-To create, edit, or delete an ANC, you'll also need to have one of the following permissions:
-
-- Intune Administrator in Azure AD
-- Cloud PC administrator
-- Global Administrator
+To create or edit an ANC, you'll also need the below Azure role:
 
 For a full list of requirements, see [Windows 365 requirements](requirements.md).
 
