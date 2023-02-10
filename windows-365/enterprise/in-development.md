@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 01/11/2023
+ms.date: 02/09/2023
 ms.topic: reference
 ms.service: windows-365
 ms.subservice: 
@@ -60,6 +60,10 @@ To help in your readiness and planning, this page lists Windows 365 updates and 
 
 A new Azure Network Connection (ANC) option lets you add more ANCs to a provisioning policy and define a priority order for their use. By preparing multiple ANCs in different Azure regions, admins can make provisioning more reliable in the rare case of capacity constraints in a region.
 
+### Cloud PC custom name template<!--42947813-->
+
+You’ll be able to create a template to automatically create unique names for new Cloud PCs.
+
 <!--***********************************************-->
 <!--
 ## End user experience
@@ -68,7 +72,7 @@ A new Azure Network Connection (ANC) option lets you add more ANCs to a provisio
 <!-- ***********************************************-->
 ## Monitor and troubleshoot
 
-### End user manual connectivity check<!--37679345 --> 
+### End user manual connectivity check<!--37679345 -->
 
 End users will be able to manually run connectivity checks on their Cloud PCs from [windows365.microsoft.com](https://windows365.microsoft.com).
 
