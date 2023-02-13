@@ -16,6 +16,9 @@ ms.topic: article
 
 # Windows Autopilot: What's new
 
+## Win32 App Supersedence ESP improvements 
+Starting in January 2023 we're currently in the process of rolling out Win32 app supersedence GA, which will introduce enhancements to ESP behavior around app tracking and app processing. Specifically, admins may notice a change in app counts. For more information, see [Win32 app supersedence improvements](https://techcommunity.microsoft.com/t5/intune-customer-success/upcoming-improvements-to-win32-app-supersedence/ba-p/3713026) and [Add Win32 app supersedence](/mem/intune/apps/apps-win32-supersedence).
+
 ## Support for Temporary Access Pass 
 In 2301 Windows Autopilot will support the use of [Temporary Access Pass](/azure/active-directory/authentication/howto-authentication-temporary-access-pass) for Azure AD joined user driven, pre-provisioning and self-deploying mode for shared devices. A Temporary Access Pass is a time-limited passcode that can be configured for multi or single use to allow users to onboard other authentication methods. These authentication methods include passwordless methods such as Microsoft Authenticator, FIDO2 or Windows Hello for Business. 
 
@@ -55,11 +58,7 @@ With the Intune 2202 release, the [enrollment status page](enrollment-status.md)
 - Fixes an issue where it couldn't differentiate between store apps in online or offline mode.
 - Adds a new column for **Version** to see which version of the application is selected.
 
-:::image type="content" source="images/app-picker.png" alt-text="The enrollment status page application picker.":::
-
-## Autopilot agility rolling out
-
-Autopilot agility is a new feature that allows updates and bug fixes to the OOBE experience. These updates occur before device enrollment, and after the Azure Active Directory (Azure AD) sign in page. It may result in another reboot and authentication prompt to the user. This feature is rolling out to Windows 10 1909 and 2004/20H2 with August cumulative update and isn't yet available for Windows 11.
+:::image type="content" source="images/app-picker.png" alt-text="The enrollment status page application picker."::: 
 
 ## One-time self-deployment and pre-provisioning
 <!-- 2110 -->
