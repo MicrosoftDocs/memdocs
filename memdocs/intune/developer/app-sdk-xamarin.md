@@ -84,7 +84,7 @@ for more information.
 * Secure the output directory that contains the Xamarin app. Consider using a user-level directory for the output.
 
 
-## Enabling Intune app protection polices in your iOS mobile app
+## Enabling Intune app protection policies in your iOS mobile app
 
 > [!IMPORTANT]
 > Intune regularly releases updates to the Intune App SDK. Regularly check the [Intune App SDK Xamarin Bindings](https://github.com/msintuneappsdk/intune-app-sdk-xamarin) for updates and incorporate into your software development release cycle to ensure your apps support the latest App Protection Policy settings.
