@@ -152,6 +152,12 @@ Before beginning the installation, make sure that all of the [Intune connector s
 > - After you sign in to the Connector, it can take several minutes to appear in the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/). It appears only if it can successfully communicate with the Intune service.
 > - Inactive Intune connectors still appear in the Intune Connectors blade and will automatically be cleaned up after 30 days.
 
+After installing the Intune Connector, it will start logging in the **Event Viewer** under the path **Applications and Services Logs** > **Microsoft** > **Intune** > **ODJConnectorService**. Under this path you will find **Admin** and **Operational** logs.
+
+> [!NOTE]
+>
+> The Intune Connector originally logged in the **Event Viewer** directly under **Applications and Services Logs** in a log called **ODJ Connector Service**. However, logging for the Intune Connector has since moved to the path **Applications and Services Logs** > **Microsoft** > **Intune** > **ODJConnectorService**. If you find that the **ODJ Connector Service** log is empty or not updating, please check the new path location.
+
 ### Configure web proxy settings
 
 If you have a web proxy in your networking environment, ensure that the Intune Connector for Active Directory works properly by referring to [Work with existing on-premises proxy servers](../intune/enrollment/autopilot-hybrid-connector-proxy.md).
