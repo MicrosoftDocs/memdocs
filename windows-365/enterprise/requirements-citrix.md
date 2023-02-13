@@ -48,7 +48,7 @@ To use Citrix HDX Plus for Windows 365, you must meet the following requirements
 - For Hybrid Azure Active Directory (Azure AD) joined deployments:
   - The Azure AD domain must be synchronized from the Azure AD domain that the Cloud PCs belong to.
   - Cloud Connectors to allow Citrix Cloud to connect to your Active Directory domain. For more information, see [Citrix Cloud Connector](https://docs.citrix.com/en-us/citrix-cloud/citrix-cloud-resource-locations/citrix-cloud-connector.html).
-- Whitelist endpoint required for VDA registation: \*.apps.cloud.com
+- Allowlist endpoint required for VDA registation: \*.apps.cloud.com
 
 ## Microsoft requirements
 
