@@ -45,7 +45,7 @@ The Intune ServiceNow Connector Integration focuses on creating a basic ticketin
 
 To get started, review the following steps:
 
-- During the Preview, no other licenses or subscriptions are required.  After the ServiceNow integration becomes Generally Available, an active Remote Help trial or add-on license is required.  Go to [Remote Help trial or add-on license.](../premium-add-ons.md)
+- During the Preview, no other licenses or subscriptions are required.  After the ServiceNow integration becomes Generally Available, an active Remote Help trial or add-on license is required.  Go to [Remote Help trial or add-on license.](../fundamentals/premium-add-ons.md)
 
 - You must have the Microsoft Azure Active Directory (Azure AD) Global Admin Role or Azure AD Intune Admin role to make updates to the connector. To view the incidents, you must have the Azure AD Global Admin Role or Azure AD Intune Admin role or have an Intune Role with the Organization | Read permission. For information on  roles, see [Role-based administration control with Intune](role-based-access-control.md)
 
@@ -112,7 +112,7 @@ To create a new CORS rule,
 
 ## ServiceNow incident view in Microsoft Intune
 
-With the ServiceNow connector verified and enabled, you'll be able to view a real time list of ServiceNow incidents for a worker from the Troubleshooting pane. The incident view with details helps you understand if there are other issues previously submitted by employees that may be related or have recurred.
+With the ServiceNow connector verified and enabled, you are able to view a real time list of ServiceNow incidents for a worker from the Troubleshooting pane. The incident view with details helps you understand if there are other issues previously submitted by employees that may be related or have recurred.
 
 1. Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Troubleshooting + support** > **Troubleshoot**. The **Troubleshooting** pane provides specific details for each Intune end-user.
