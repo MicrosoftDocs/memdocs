@@ -50,7 +50,7 @@ Create an [OEMConfig configuration profile](android-oem-configuration-overview.m
 
 On Zebra devices, you can have many profiles on each device simultaneously. This feature allows you to split your Zebra OEMConfig settings into smaller profiles. For example, create a baseline profile that affects all devices. Then, create more profiles that configure settings specific to a device.
 
-Zebra’s OEMConfig schema also uses **Actions**. Actions are operations that run on the device. They don’t configure any settings. Use these actions to trigger a file download, clear the clipboard, and more. For a full list of the supported actions, see [Zebra’s documentation](https://techdocs.zebra.com/oemconfig/about/) (opens Zebra's web site).
+Zebra’s OEMConfig schema also uses **Actions**. Actions are operations that run on the device. They don’t configure any settings. Use these actions to trigger a file download, clear the clipboard, and more. For a full list of the supported actions, see [Zebra’s documentation](https://techdocs.zebra.com/oemconfig/) (opens Zebra's web site).
 
 For example, you create a Zebra OEMConfig profile that applies some settings to the device. Another Zebra OEMConfig profile includes an action that clears the clipboard. You assign the first profile to a Zebra devices group. Later, you need to clear the clipboard on those devices. You assign the second profile to the same devices group, without changing the first profile. The device clipboard gets cleared without resending or affecting the configuration settings created in the first profile.
 
@@ -60,9 +60,9 @@ Multiple profiles will take longer to deploy than a single profile. If the speed
 
 ## Ordering
 
-With multiple profiles on each device, the order that profiles are deployed isn’t guaranteed. This behavior is a Google Play limitation. To run operations in sequence, you can use [Zebra's Transaction Step feature](https://techdocs.zebra.com/oemconfig/mc/#Transaction-Steps) (opens Zebra's web site). 
+With multiple profiles on each device, the order that profiles are deployed isn’t guaranteed. This behavior is a Google Play limitation. To run operations in sequence, you can use [Zebra's Transaction Step feature](https://techdocs.zebra.com/oemconfig/11-4/mc/#transactionsteps) (opens Zebra's web site). 
 
-To summarize, if order matters, use [Zebra's Transaction Step feature](https://techdocs.zebra.com/oemconfig/mc/#Transaction-Steps) (opens Zebra's web site). If order doesn't matter, use multiple Intune profiles. 
+To summarize, if order matters, use [Zebra's Transaction Step feature](https://techdocs.zebra.com/oemconfig/11-4/mc/#transactionsteps) (opens Zebra's web site). If order doesn't matter, use multiple Intune profiles. 
 
 Let's look at some examples:
 
@@ -70,7 +70,7 @@ Let's look at some examples:
 
   Create one Intune profile that has two Transaction Steps. The first step includes Bluetooth settings, and the second step configures the other setting. When Zebra’s OEMConfig app receives the profile, it runs the steps in order.
 
-  For more information, see [Zebra's transaction steps](https://techdocs.zebra.com/oemconfig/mc/#Transaction-Steps) (opens Zebra's web site).
+  For more information, see [Zebra's transaction steps](https://techdocs.zebra.com/oemconfig/11-4/mc/#transactionsteps) (opens Zebra's web site).
 
 - You want all Zebra devices to display time in 24-hour format. For some of these devices, you want to turn the camera off. The time and camera settings don't depend on each other.
 
