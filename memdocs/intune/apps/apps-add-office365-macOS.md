@@ -39,7 +39,7 @@ This app type makes it easy for you to assign Microsoft 365 apps to macOS device
 > With Office for Mac update (16.67), macOS Big Sur 11 or later will be required to receive updates to Office for Mac. If you continue with an older version of macOS, your Office apps will still work, but you'll no longer receive any updates, including security updates. Upgrading your operating system to macOS Big Sur 11 or later will allow Office updates to be delivered for your apps. The October 2022 Office for Mac update (16.66) will be the last build to support macOS Catalina 10.15. For related information, see [Upgrade macOS to continue receiving Microsoft 365 and Office for Mac updates](https://go.microsoft.com/fwlink/?linkid=2015804).
 
 > [!NOTE]
-> Other versions of Office for Mac can be added to the Microsoft Endpoint Manager admin center. For more information, see [Most current packages for Office for Mac](/officeupdates/update-history-office-for-mac#most-current-packages-for-office-for-mac).
+> Other versions of Office for Mac can be added to the Microsoft Intune admin center. For more information, see [Most current packages for Office for Mac](/officeupdates/update-history-office-for-mac#most-current-packages-for-office-for-mac).
 >
 > Microsoft Office 365 ProPlus has been renamed to **Microsoft 365 Apps for enterprise**. In our documentation, we'll commonly refer to it as **Microsoft 365 Apps**.
 
@@ -52,7 +52,7 @@ Before you begin adding Microsoft 365 apps to macOS devices, understand the foll
 
 ## Select Microsoft 365 Apps
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All apps** > **Add**.
 3. Select **macOS** in the **Microsoft 365 Apps** section of the **Select app type** pane.
 4. Click **Select**. The **Add Microsoft 365 Apps** steps are displayed.
