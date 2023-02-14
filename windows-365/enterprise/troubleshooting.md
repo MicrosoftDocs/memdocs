@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 02/06/2023
+ms.date: 02/10/2023
 ms.topic: troubleshooting
 ms.service: windows-365
 ms.subservice: 
@@ -122,11 +122,18 @@ When accessing windows365.microsoft.com, the user receives a message "Your organ
 
 ## Performance decreases with nested virtualization
 
-A small percentage of users may experience a significant performance degradation when nested virtualization is enabled.
+In certain regions, some users may experience a decline in their 4vCPU Cloud PC performance when using nested virtualization. These regions include:
+
+- Southeast Asia
+- Central India
+- South Central US
+- East US 2
+- West US 2
+- West US 3
 
 **Troubleshooting steps:**
 
-- Reprovision the Cloud PC, or
+- [Reprovision](reprovision-cloud-pc.md) the Cloud PC, or
 - Uninstall Hyper-V on the Cloud PC.  
 
 <!-- ########################## -->
