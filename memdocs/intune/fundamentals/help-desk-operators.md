@@ -60,7 +60,7 @@ The **Troubleshooting** pane provides the following tabs to quickly narrow the t
 
 In the **Troubleshooting** pane provides specific details for each Intune end-user. User information can help you understand the current state of users and their devices.  
 
-1. Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Troubleshooting + support** > **Troubleshoot**.
 3. Find and select a **User** by entering a display name or email.
 4. If the user has multiple devices, filter by **Device**.
