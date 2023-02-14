@@ -54,7 +54,7 @@ Purchasing licenses lets you use the Premium add-on capability in your tenant fo
 
 ## How to try or buy the premium add-ons capability 
 
-Premium add-on capabilities are disabled in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) unless you are in the free trial period or have purchased licenses. Global and Billing administrators can choose to start a free trial or purchase licenses for Premium add-ons through the [Microsoft 365 admin center](https://admin.microsoft.com). 
+Premium add-on capabilities are disabled in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) unless you are in the free trial period or have purchased licenses. Global and Billing administrators can choose to start a free trial or purchase licenses for Premium add-ons through the [Microsoft 365 admin center](https://admin.microsoft.com). 
 
 Administrators who aren't Global or Billing administrators can still see the status of their tenant's Premium add-ons trial or active licenses in the centralized Premium add-on page in Endpoint Manager (but can't start a free trial or purchase licenses).  
 
@@ -79,7 +79,7 @@ After you buy licenses via any source, the licenses are available in your Tenant
 
 ## How to assign licenses 
 
-For information on how to assign licenses in Microsoft Endpoint Manager admin center, see [Assign Microsoft Intune licenses](licenses-assign.md)
+For information on how to assign licenses in Microsoft Intune admin center, see [Assign Microsoft Intune licenses](licenses-assign.md)
 
 ## Monitor license use 
 

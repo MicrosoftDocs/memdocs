@@ -114,7 +114,7 @@ A Microsoft Intune license is created for you when you sign up for the Intune fr
 
 To confirm your Microsoft Intune license or trial, use the following steps:
 
-1. Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Tenant administration** > **Tenant status**.<br>
    Under the **Tenant details** tab, you will see the **MDM authority**, the **Total licenses users**, and the **Total Intune licenses**.
 3. Select **Tenant administration** > **Roles** > **My permissions**.
