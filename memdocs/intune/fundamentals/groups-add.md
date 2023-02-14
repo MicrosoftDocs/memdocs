@@ -102,7 +102,7 @@ When assigning policies and apps in the admin center you can choose to assign to
 
 When assigning policies and applications to large groups such as **All users** and **All devices** you may choose to use **Filters**, so that you can dynamically control which devices the policy or app deployment should apply to.
 
-For more guidance on using Filters, see [Use filters when assigning your apps, policies, and profiles in Microsoft Endpoint Manager](../fundamentals/filters.md)
+For more guidance on using Filters, see [Use filters when assigning your apps, policies, and profiles in Microsoft Intune](../fundamentals/filters.md)
 
 
 ## See also

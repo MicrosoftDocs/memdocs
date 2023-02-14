@@ -105,5 +105,5 @@ To view information for Intune News, your account must have the **Global Adminis
 
 ## Next steps
 
-- [Walkthrough Intune in Microsoft Endpoint Manager](../fundamentals/tutorial-walkthrough-endpoint-manager.md)
+- [Walkthrough the Microsoft Intune admin center](../fundamentals/tutorial-walkthrough-endpoint-manager.md)
 - [Get support for Intune](../../get-support.md)
