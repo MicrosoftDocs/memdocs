@@ -193,7 +193,7 @@ To find out which version of the Microsoft Intune app or Microsoft Authenticator
 3. Find your app and then look in the **Application Version** column for the version number.  
 
 ### Troubleshooting + Support     
-Select **Troubleshooting + Support** from the Microsoft Endpoint Manager navigation menu to:
+Go to **Troubleshooting + Support** in the Microsoft Intune admin center to:
 
 * See a list of Android (AOSP) devices enrolled by a user
 * Enable troubleshooting of Android (AOSP) devices the same way you can troubleshoot other user devices. 

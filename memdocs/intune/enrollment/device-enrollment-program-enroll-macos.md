@@ -79,7 +79,7 @@ Add an MDM server for Intune to Apple Business Manager or Apple School Manager, 
     * **Create a token via Apple Business Manager** 
     * **Create a token via Apple School Manager**  
 
-    The selected portal opens in a new browser tab. You can safely switch to the new tab, but keep the tab with Microsoft Endpoint Manager open for access later.    
+    The selected portal opens in a new browser tab. You can safely switch to the new tab, but keep the tab with Microsoft Intune open for later.     
 2. Sign in to the Apple portal with your company Apple ID. Remember, this is the Apple ID you and your org will use to renew and manage the token going forward, so don't use a personal ID.      
 3. Go to your account profile > **Preferences**.  
 4. Go to your MDM server assignments.  
