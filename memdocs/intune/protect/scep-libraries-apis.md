@@ -89,7 +89,7 @@ Integrating the library into your products includes the following steps. These s
 7. Complete [integration testing](#integration-testing) (in this article), and address any issues
 8. Give written guidance to the customer that explains:
 
-   - How the SCEP Server needs to be onboarded in the Microsoft Endpoint Manager admin center
+   - How the SCEP Server needs to be onboarded in the Microsoft Intune admin center
    - How to get the Azure Application Identifier and Azure Application Key needed to configure the library
 
 ### Onboard SCEP server in Azure
