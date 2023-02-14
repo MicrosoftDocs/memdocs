@@ -200,4 +200,4 @@ After you've completed all the [Exit Criteria] above, continue to [Stage 3: Gett
 [give your app access to the Intune app protection service]:/mem/intune/developer/app-sdk-get-started#give-your-app-access-to-the-intune-app-protection-service-optional
 
 <!-- Other Microsoft links -->
-[Microsoft Endpoint Manager admin center]:https://go.microsoft.com/fwlink/?linkid=2109431
+[Microsoft Intune admin center]:https://go.microsoft.com/fwlink/?linkid=2109431
