@@ -53,7 +53,7 @@ Create an MDM server profile for Microsoft Intune in Apple Business Manager. The
 7. Select **Create a token via Apple Business Manager** and sign in to Apple Business Manager with your company Apple ID.  
 
     >[!IMPORTANT] 
-    > While you're in Apple Business Manager, don't close the browser tab with Microsoft Endpoint Manager. You'll return to it later.  
+    > While you're in Apple Business Manager, don't close the browser tab with Microsoft Intune. You'll return to it later.  
 
 6. Add an MDM server called *TestMDMServer* and download the server token for it in Apple Business Manager. For details and instructions, see [Link to a third-party MDM server](https://support.apple.com/guide/apple-business-manager/axm1c1be359d/web)(opens Apple Business Manager User Guide). Save the server token locally as a P7M file (.p7m). Then continue to [Step 2: Assign devices](tutorial-use-device-enrollment-program-enroll-ios.md#step-2-assign-devices).  
 

@@ -38,7 +38,7 @@ If you don't have an Intune subscription, [sign up for a free trial account](../
 - Microsoft Intune subscription - [sign up for a free trial account](../fundamentals/free-trial-sign-up.md).
 - To complete this quickstart, you must first [create a user](../fundamentals/quickstart-create-user.md) and [create a group](../fundamentals/quickstart-create-group.md).
 
-## Sign in to Intune in the Microsoft Endpoint Manager
+## Sign in to Microsoft Intune admin center 
 
 Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as a Global Administrator. If you've already created an Intune Trial subscription, the account you created the subscription with is a Global Administrator.
 

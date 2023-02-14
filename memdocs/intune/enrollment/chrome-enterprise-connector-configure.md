@@ -101,5 +101,5 @@ To delete the connection in the Microsoft Intune admin center:
 3. Select **Delete**.  
 
 ## Next steps  
-* View Chrome OS devices and details synced between Google Admin console and Microsoft Intune in the Microsoft Endpoint Manager center. The information can be used to monitor connections or build reports. For more information, see [View Chrome OS device information in Intune](chrome-enterprise-device-details.md).   
+* View Chrome OS devices and details synced between Google Admin console and the Microsoft Intune admin center. The information can be used to monitor connections or build reports. For more information, see [View Chrome OS device information in Intune](chrome-enterprise-device-details.md).   
 *  Use the remote actions available for Chrome OS devices to deprovision, wipe, restart, or put devices in lost mode. For more information, see [Remote device actions for Chrome OS](chrome-enterprise-remote-actions.md).  
