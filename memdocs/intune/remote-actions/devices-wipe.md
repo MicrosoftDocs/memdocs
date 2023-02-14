@@ -54,7 +54,7 @@ A wipe is useful for resetting a device before you give the device to a new user
 
 ### Wiping a device
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **All devices**.
 3. Select the name of the device that you want to wipe.
 4. In the pane that shows the device name, select **Wipe**.
@@ -149,7 +149,7 @@ Removing company data from an Android personally-owned work profile device remov
 
 ### Retire
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. In the **Devices** pane, select **All devices**.
 3. Select the name of the device that you want to retire.
 4. In the pane that shows the device name, select **Retire**. To confirm, select **Yes**.
@@ -172,14 +172,14 @@ Device owners can manually un-enroll their devices as explained in the following
 
 If you want to remove devices from the Intune portal, you can delete them from the specific device pane. The next time the device checks in, any company data on it will be removed as Intune also retires a device when deleting it from the admin center.
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Choose **Devices** > **All devices** > choose the devices you want to delete > **Delete**.
 
 ### Automatically delete devices with cleanup rules
 
 You can configure Intune to automatically remove devices that appear to be inactive, stale, or unresponsive. These cleanup rules continuously monitor your device inventory so that your device records stay current. Devices deleted in this way are removed from Intune management. This setting affects all devices managed by Intune, not just specific ones.
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Choose **Devices** > **Device cleanup rules** > **Yes**.
 3. In the **Delete devices that haven't checked in for this many days** box, enter a number between 30 and 270.
 4. Choose **Save**.
@@ -209,7 +209,7 @@ You might need to delete devices from Azure AD due to communication issues or mi
 
 If you want to completely remove an Apple automated device enrollment (ADE) device from management by Intune, follow these steps:
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Choose **Devices** > **All devices** > choose the device > **Retire**.
 3. Visit [business.apple.com](http://business.apple.com) and search for the device by its serial number.
 4. In the **Assigned to** menu, choose **Unassigned**.
