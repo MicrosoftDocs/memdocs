@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 11/11/2022
+ms.date: 02/13/2023
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -55,6 +55,7 @@ The following features are not yet supported for Windows 365 GCC or GCCH.
 - Windows 365 System based alerting on Microsoft Endpoint Manager for Cloud PCs
 - User initiated feedback in End User Portal and Windows 365 Web Client
 - Resize VM
+- Citrix HDX Plus for Windows 365
 
 ## Next steps
 
