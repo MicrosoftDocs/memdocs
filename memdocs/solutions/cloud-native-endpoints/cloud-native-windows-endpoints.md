@@ -147,7 +147,7 @@ To test the cloud-native Windows endpoint, we need to start by getting a virtual
    - `Get-WindowsAutopilotInfo.ps1 -GroupTag CloudNative -Online`
 
    > [!NOTE]
-   > Group Tags allow you to create dynamic Azure AD groups based on a subset of devices. Group Tags can be set when importing devices or changed later in the Microsoft Endpoint Manager admin center. We'll use the Group Tag *CloudNative* in Step 4. You can set the tag name to something different for your testing.
+   > Group Tags allow you to create dynamic Azure AD groups based on a subset of devices. Group Tags can be set when importing devices or changed later in the Microsoft Intune admin center. We'll use the Group Tag *CloudNative* in Step 4. You can set the tag name to something different for your testing.
 
 9. When prompted for credentials, sign in with your Intune Administrator account.
 
@@ -157,7 +157,7 @@ To test the cloud-native Windows endpoint, we need to start by getting a virtual
 
 To limit the configurations from this guide to the test devices that you import to Windows Autopilot, create a dynamic Azure AD group. This group should automatically include the devices that import to Windows Autopilot and have the Group Tag *CloudNative*. You can then target all your configurations and applications at this group.
 
-1. Open the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Groups**.
 
@@ -193,7 +193,7 @@ The enrollment status page (ESP) is the mechanism an IT pro uses to control the 
 
 Now we can create the Windows Autopilot profile and assign it to our test device. This profile tells your device to join Azure AD and what settings to apply during OOBE.
 
-1. Open the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Devices** > **Enroll devices** > **Deployment profiles** (under **Windows Autopilot Deployment Program**).
 
@@ -211,7 +211,7 @@ Now we can create the Windows Autopilot profile and assign it to our test device
 
 The Windows Autopilot service will synchronize several times a day. You can also trigger a sync immediately so that your device is ready to test. To synchronize immediately:
 
-1. Open the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Devices** > **Enroll devices** > **Devices**.
 
@@ -255,7 +255,7 @@ The following screenshot shows an example of a settings catalog profile with eac
 
 ### Step 9 - Set up Microsoft Store for Business (or Education)
 
-Before you enable synchronization in the Intune console, you must configure your store account to use Intune as a management tool.
+Before you enable synchronization in the Intune admin center, you must configure your store account to use Intune as a management tool.
 
 1. Ensure that you sign into the [**Microsoft Store for Business (or Education)**](https://www.microsoft.com/business-store) using the same tenant account you use to sign into Intune.
 
@@ -280,13 +280,13 @@ Your cloud-native endpoint will need some applications. To get started, we recom
 
   To deploy Microsoft 365 Apps, go to [Add Microsoft 365 apps to Windows devices using Microsoft Intune](../../intune/apps/apps-add-office365.md)
 
-- **Company Portal**  
-  Deploying the Intune *Company Portal* app to all devices as a required application is recommended. Company Portal is the self-service hub for users that they use to install applications from multiple sources, like Intune, Microsoft Store, and Configuration Manager. Users also use the portal to sync their device with Intune, check compliance status, and so on.
+- **Company Portal app**  
+  Deploying the Intune *Company Portal* app to all devices as a required application is recommended. Company Portal app is the self-service hub for users that they use to install applications from multiple sources, like Intune, Microsoft Store, and Configuration Manager. Users also use the Company Portal app to sync their device with Intune, check compliance status, and so on.
 
   You can set up a relationship between Intune and the Microsoft Store for Business (MSfB). This step gets the Company Portal app as an offline app that can be synched to Intune and targeted at devices. For more information, go to [Add and assign the Windows Company Portal app for Windows Autopilot provisioned devices](../../intune/apps/store-apps-company-portal-autopilot.md).
 
 - **Microsoft Store App** (Whiteboard)  
-  While Intune can deploy a wide variety of apps, we'll deploy a store app (Microsoft Whiteboard) to help keep things simple for this guide. Follow the steps from [Get the offline Company Portal app from the store](../../intune/apps/store-apps-company-portal-autopilot.md#get-the-offline-company-portal-app-from-the-store) but select *Microsoft Whiteboard* as the app. Then, set the app to be *Online* and deploy it as *available* instead of as a required app. The app should later appear within Company Portal for manual installation by the user.
+  While Intune can deploy a wide variety of apps, we'll deploy a store app (Microsoft Whiteboard) to help keep things simple for this guide. Follow the steps from [Get the offline Company Portal app from the store](../../intune/apps/store-apps-company-portal-autopilot.md#get-the-offline-company-portal-app-from-the-store) but select *Microsoft Whiteboard* as the app. Then, set the app to be *Online* and deploy it as *available* instead of as a required app. The app should later appear within Company Portal app for manual installation by the user.
 
 ## Phase 2 - Build a cloud-native Windows endpoint
 
@@ -306,7 +306,7 @@ To build your first cloud-native Windows endpoint, use the same virtual machine 
 Some things to check out on your new cloud-native Windows endpoint:
 
 - The OneDrive folders are redirected. When Outlook opens, it's configured automatically to connect to Office 365.
-- Open **Company Portal** from the **Start Menu** and notice that **Microsoft Whiteboard** is available for installation.
+- Open the **Company Portal** app from the **Start Menu** and notice that **Microsoft Whiteboard** is available for installation.
 - Consider testing access from the device to on-premises resources like file shares, printers, and intranet sites.
 
   > [!NOTE]
@@ -326,7 +326,7 @@ This phase is designed to help you build out security settings for your organiza
 
 ### Microsoft Defender Antivirus (MDAV)
 
-The following settings are recommended as a minimum configuration for Microsoft Defender Antivirus, a built-in OS component of Windows. These settings don't require any specific licensing agreement such as E3 or E5, and can be enabled in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). In the admin center, go to **Endpoint Security** > **Antivirus** > **Create Policy** > **Windows and later** > **Profile type** = **Microsoft Defender Antivirus**.
+The following settings are recommended as a minimum configuration for Microsoft Defender Antivirus, a built-in OS component of Windows. These settings don't require any specific licensing agreement such as E3 or E5, and can be enabled in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). In the admin center, go to **Endpoint Security** > **Antivirus** > **Create Policy** > **Windows and later** > **Profile type** = **Microsoft Defender Antivirus**.
 
 **Cloud Protection**:
 
@@ -383,7 +383,7 @@ Use Endpoint Security in Microsoft Intune to configure encryption with BitLocker
 - For more information about managing BitLocker, go to [Encrypt Windows 10/11 devices with BitLocker in Intune](../../intune/protect/encrypt-devices.md).
 - Check out our blog series on BitLocker at [Enabling BitLocker with Microsoft Intune](https://techcommunity.microsoft.com/t5/intune-customer-success/enabling-bitlocker-with-microsoft-endpoint-manager-microsoft/ba-p/2149784).
 
-These settings can be enabled in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). In the admin center, go to **Endpoint Security** > **Disk encryption** > **Create Policy** > **Windows and later** > **Profile** = **BitLocker**.
+These settings can be enabled in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). In the admin center, go to **Endpoint Security** > **Disk encryption** > **Create Policy** > **Windows and later** > **Profile** = **BitLocker**.
 
 Configuring the following BitLocker settings specified results in silently enabling 128-bit encryption for standard users, which is one of the most common scenarios. However your organization might have different security requirements, so consult the [BitLocker documentation](../../intune/protect/encrypt-devices.md) for additional settings.
 
@@ -539,7 +539,7 @@ The settings catalog is a single location where all configurable Windows setting
 >
 > - Many of the settings you're familiar with from group policy are already available in the settings catalog. For more information, go to [The latest in Group Policy settings parity in Mobile Device Management](https://techcommunity.microsoft.com/t5/intune-customer-success/the-latest-in-group-policy-settings-parity-in-mobile-device/ba-p/2269167).
 >
-> - If you intend to leverage either ADMX templates or settings catalog (recommended), be sure to update your devices with the September 2021 ‘patch Tuesday’ update ([KB5005565](https://support.microsoft.com/topic/september-14-2021-kb5005565-os-builds-19041-1237-19042-1237-and-19043-1237-292cf8ed-f97b-4cd8-9883-32b71e3e6b44)) for Windows 10 versions 2004 and later. This monthly update includes [KB5005101](https://support.microsoft.com/topic/september-1-2021-kb5005101-os-builds-19041-1202-19042-1202-and-19043-1202-preview-82a50f27-a56f-4212-96ce-1554e8058dc1) which brings [1,400+ group policy settings to MDM](https://blogs.windows.com/windows-insider/2021/08/18/releasing-windows-10-build-19043-1198-21h1-to-release-preview-channel/#:~:text=We%20enabled%20over,new%20MDM%20policies.). Failure to apply this update will result in a 'Not Applicable' message alongside the setting in the MEM portal. While initially only appliable to the Enterprise and Edu versions of Windows, as of May 2022, these additional settings now also work on the Pro versions of Windows 10/11. If using the Pro versions of Windows 10/11, ensure that you install [KB5013942](https://support.microsoft.com/topic/may-10-2022-kb5013942-os-builds-19042-1706-19043-1706-and-19044-1706-60b51119-85be-4a34-9e21-8954f6749504) or later on Windows 10 and [KB5013943](https://support.microsoft.com/topic/may-10-2022-kb5013943-os-build-22000-675-14aa767a-aa87-414e-8491-b6e845541755) or later on Windows 11 as mentioned in [The latest in Group Policy settings parity in Mobile Device Management](https://techcommunity.microsoft.com/t5/intune-customer-success/the-latest-in-group-policy-settings-parity-in-mobile-device/ba-p/2269167).
+> - If you intend to leverage either ADMX templates or settings catalog (recommended), be sure to update your devices with the September 2021 ‘patch Tuesday’ update ([KB5005565](https://support.microsoft.com/topic/september-14-2021-kb5005565-os-builds-19041-1237-19042-1237-and-19043-1237-292cf8ed-f97b-4cd8-9883-32b71e3e6b44)) for Windows 10 versions 2004 and later. This monthly update includes [KB5005101](https://support.microsoft.com/topic/september-1-2021-kb5005101-os-builds-19041-1202-19042-1202-and-19043-1202-preview-82a50f27-a56f-4212-96ce-1554e8058dc1) which brings [1,400+ group policy settings to MDM](https://blogs.windows.com/windows-insider/2021/08/18/releasing-windows-10-build-19043-1198-21h1-to-release-preview-channel/#:~:text=We%20enabled%20over,new%20MDM%20policies.). Failure to apply this update will result in a 'Not Applicable' message alongside the setting in the Intune admin center. While initially only appliable to the Enterprise and Edu versions of Windows, as of May 2022, these additional settings now also work on the Pro versions of Windows 10/11. If using the Pro versions of Windows 10/11, ensure that you install [KB5013942](https://support.microsoft.com/topic/may-10-2022-kb5013942-os-builds-19042-1706-19043-1706-and-19044-1706-60b51119-85be-4a34-9e21-8954f6749504) or later on Windows 10 and [KB5013943](https://support.microsoft.com/topic/may-10-2022-kb5013943-os-build-22000-675-14aa767a-aa87-414e-8491-b6e845541755) or later on Windows 11 as mentioned in [The latest in Group Policy settings parity in Mobile Device Management](https://techcommunity.microsoft.com/t5/intune-customer-success/the-latest-in-group-policy-settings-parity-in-mobile-device/ba-p/2269167).
 
 Following are some settings available in the settings catalog that might be relevant to your organization:
 
@@ -591,7 +591,7 @@ Following are some settings available in the settings catalog that might be rele
 
 Windows Device restrictions templates contain many of the settings required to secure and manage a Windows endpoint using Windows Configuration Service Providers (CSPs). More of these settings will be made available in the settings catalog over time. For more information, go to [Device Restrictions](../../intune/configuration/device-restrictions-configure.md).
 
-To create a profile that uses the Device restrictions template, in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Configuration profile** > **Create  profile** > Select **Windows 10 and later** for or *Platform* and **Templates** for *Profile type* > **Device restrictions**.
+To create a profile that uses the Device restrictions template, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Configuration profile** > **Create  profile** > Select **Windows 10 and later** for or *Platform* and **Templates** for *Profile type* > **Device restrictions**.
 
 - **Desktop background picture URL (Desktop only)**  
   Use this setting to set a wallpaper on Windows Enterprise or Windows Education SKUs. You’ll either host the file online or reference a file that has been copied locally. To configure this setting, on the *Configuration settings* tab in the *Device restrictions* profile, expand *Personalization* and configure **Desktop background picture URL (Desktop only)**.
