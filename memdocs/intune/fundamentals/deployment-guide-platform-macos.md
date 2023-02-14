@@ -143,7 +143,7 @@ After devices are set up, you can use remote actions in Intune to manage and tro
 
 ## Next steps  
 
-* Check out [Walk through Intune in Microsoft Endpoint Manager](tutorial-walkthrough-endpoint-manager.md) for a tutorial about how to navigate and use Intune. Tutorials are 100 – 200 level content for people new to Intune or a specific scenario.   
+* Check out [Walk through Intune admin center](tutorial-walkthrough-endpoint-manager.md) for a tutorial about how to navigate and use Intune. Tutorials are 100 – 200 level content for people new to Intune or a specific scenario.   
 
 * For tutorials about app deployment, see the following Microsoft Tech Community blogs written by the Intune Support Team:  
 

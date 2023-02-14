@@ -85,7 +85,7 @@ There are some restrictions when creating filters:
 
 ## Create a filter
 
-1. Sign in to the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Tenant administration** > **Filters** > **Create**.
 
     You can also create filters in:
@@ -155,7 +155,7 @@ There are some restrictions when creating filters:
 
 After the filter is created, it's ready to use when assigning your apps or policies.
 
-1. Sign in to the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Go to your apps, compliance policies, or configuration profiles. For a list of what's supported, see [Supported workloads when creating filters](filters-supported-workloads.md). Select an existing policy, or create a new policy.
 
     For example, select **Devices** > **Compliance policies**, and select an existing policy. Select **Properties** > **Assignments** > **Edit**:
@@ -188,7 +188,7 @@ When the device checks in with the Intune service, the properties defined in the
 
 After the filter is assigned to your policies, you can see all the policies that use the filter.
 
-1. Sign in to the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Tenant administration** > **Filters**. A list of all the filters is shown.
 
     You can also go to **Devices** > **Filters**, or **Apps** > **Filters**.
@@ -203,7 +203,7 @@ After the filter is assigned to your policies, you can see all the policies that
 
 After a filter is created, it can also be changed or updated.
 
-1. Sign in to the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Tenant administration** > **Filters**. A list of all the filters is shown.
 
     You can also update filters in **Devices** > **Filters**, or **Apps** > **Filters**.
@@ -216,7 +216,7 @@ After a filter is created, it can also be changed or updated.
 
 ## Delete a filter
 
-1. Sign in to the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Tenant administration** > **Filters**. A list of all the filters is shown.
 
     You can also delete filters in **Devices** > **Filters**, or **Apps** > **Filters**.

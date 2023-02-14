@@ -33,7 +33,7 @@ ms.collection:
 
 Microsoft Intune helps you protect your workforce's corporate data by managing devices and apps. In this quickstart, you will create a free subscription to try Intune in a test environment.
 
-Intune provides mobile device management (MDM) and mobile app management (MAM) from a secure cloud-based service that is administered using the Microsoft Endpoint Manager admin center. Using Intune, you ensure your workforce's corporate resources (data, devices, and apps) are correctly configured, accessed, and updated, meeting your company's compliance policies and requirements.
+Intune provides mobile device management (MDM) and mobile app management (MAM) from a secure cloud-based service that is administered using the Microsoft Intune admin center. Using Intune, you ensure your workforce's corporate resources (data, devices, and apps) are correctly configured, accessed, and updated, meeting your company's compliance policies and requirements.
 
 When you complete the signup process, you'll have a new tenant. A tenant is a dedicated instance of Azure Active Directory (Azure AD) where your subscription to Intune is hosted. You can then configure the tenant, add users and groups, and assign licenses to users. When you're ready, you can help users enroll their devices and add apps that they need to begin the modern endpoint management process. As you continue, you can set configuration and protection policies, as well as other endpoint management capabilities.
 
@@ -88,7 +88,7 @@ To sign up for the Microsoft Intune free trial, follow the steps below:
    > [!NOTE]
    > If you click **Get Started**, you'll open the **Microsoft 365 admin center** home page. If you click **Manage your subscription**, you'll open **Your products** and view details about your Microsoft Intune Trial subscription.
 
-## Sign in to Intune in the Microsoft Endpoint Manager admin center
+## Sign in to Intune in the Microsoft Intune admin center
 
 If you're not already signed in to the portal, complete the following steps:
 
@@ -106,7 +106,7 @@ When you sign up for a trial, you will also receive an email message that contai
 
 By default, the Mobile Device Management (MDM) authority is set when you create your free trial. You can confirm that the MDM authority is set by using the following steps:
 
-1. If you're not already signed in, sign in to the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com).
+1. If you're not already signed in, sign in to the [Microsoft Intune admin center](https://endpoint.microsoft.com).
 2. Click **Tenant administration**.
 3. View the tenant details. The **MDM authority** should be set to **Microsoft Intune**.
 
@@ -114,7 +114,7 @@ If after signing in to the Microsoft Endpoint Manager, you see an orange banner 
 
 ### Set the MDM authority to Intune
 
-1. If you do not have the MEM authority set, sign in to the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com). 
+1. If you do not have the MEM authority set, sign in to the [Microsoft Intune admin center](https://endpoint.microsoft.com). 
 2. Select the orange banner to open the **Mobile Device Management Authority** setting. The orange banner is only displayed if you haven't yet set the MDM authority. 
 
     > [!NOTE]
@@ -159,7 +159,7 @@ To confirm your Azure Active Directory Premium and Microsoft Intune, see [Confir
 ## Admin experiences
 
 There are two portals that you will use most often:
-- The Microsoft Endpoint Manager admin center ([https://endpoint.microsoft.com/](https://endpoint.microsoft.com/)) is where you can explore the [capabilities of Intune](what-is-intune.md). This is where an admin would work with Intune.
+- The Microsoft Intune admin center ([https://endpoint.microsoft.com/](https://endpoint.microsoft.com/)) is where you can explore the [capabilities of Intune](what-is-intune.md). This is where an admin would work with Intune.
 - The Microsoft 365 admin center ([https://admin.microsoft.com](https://admin.microsoft.com)) is where you can add and manage users, if you are not using Azure Active Directory for this. You can also manage other aspects of your account, including billing and support.
 
 ## Next steps
