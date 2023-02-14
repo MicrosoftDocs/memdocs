@@ -47,7 +47,7 @@ For more information, see [App configuration policies for Microsoft Intune](app-
 
 Use the following steps to create a Managed apps app configuration policy. After the configuration is created, you can assign its settings to groups of users.
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Choose the **Apps** > **App configuration policies** > **Add** > **Managed apps**.
 3. On the **Basics** page, set the following details:
     - **Name**: The name of the profile that will appear in the portal.

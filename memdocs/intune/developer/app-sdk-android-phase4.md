@@ -455,7 +455,7 @@ Execute the following tests to validate the integration.
 
 Execute the following test first to get familiar with the complete end user experience of policy application within your app:
 
-1. Create an Android App Protection Policy in the Microsoft Endpoint Manager admin center (see [Creating a test Android app protection policy] in Stage 1 for details). For this test, configure the policy:
+1. Create an Android App Protection Policy in the Microsoft Intune admin center (see [Creating a test Android app protection policy] in Stage 1 for details). For this test, configure the policy:
     - Under Data Protection, set "Screen capture and Google Assistant" to "Block".
     - Under Access Requirements, leave the default settings. Notably, "PIN for Access" should be "Require".
 2. Ensure the App Protection Policy is targeted to your application. You'll likely need to manually add the package name in the policy creation wizard.
@@ -482,7 +482,7 @@ Execute the following tests to more thoroughly validate how other App Protection
 ### Data Protection Tests
 
 The following tests cover specific data protection settings configured within the App Protection Policy.
-When you change the App Protection Policy settings in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), the client won't immediately update.
+When you change the App Protection Policy settings in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), the client won't immediately update.
 See [Quickly testing with changing policy] for tips on speeding up testing.
 
 For these tests:
@@ -632,7 +632,7 @@ Also check logs or debug to verify the `MAMEnrollmentManager.Result`.
 #### My app can share data to an unmanaged app
 
 Confirm that "Send org data to other apps" set to "Policy managed apps".
-Check the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) to confirm the policy is configured and targeted correctly.
+Check the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) to confirm the policy is configured and targeted correctly.
 Check the client [Diagnostics Information] to confirm the SDK has received the configured policy.
 
 Next, if policy is configured and retrieved correctly, check if *any- policies are being enforced: [My app isn't receiving or enforcing any policies].
@@ -647,7 +647,7 @@ Check the policy targeting the other app; if it has "Receive data from other app
 #### My app can receive data from an unmanaged app
 
 Confirm that "Receive data from other apps" set to "Policy managed apps".
-Check the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) to confirm the policy is configured and targeted correctly.
+Check the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) to confirm the policy is configured and targeted correctly.
 Check the client [Diagnostics Information] to confirm the SDK has received the configured policy.
 
 Next, if policy is configured and retrieved correctly, check if *any- policies are being enforced: [My app isn't receiving or enforcing any policies].
