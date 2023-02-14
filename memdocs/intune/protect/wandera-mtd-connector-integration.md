@@ -65,7 +65,7 @@ Setting up integration between Wandera and Intune does not require any support f
 
 ### Enable support for Wandera in Intune
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Tenant administration** > **Connectors and tokens** > **Mobile Threat Defense** > **Add**.
 3. On the **Add Connector** page, use the dropdown and select **Wandera**. And then select **Create**.  
 4. On the Mobile Threat Defense pane, select the **Wandera** MTD Connector from the list of connectors to open the **Edit connector** pane. Select **Open the Wandera admin console** to open [RADAR](https://radar.wandera.com/login), the Wandera admin console, and sign in. 

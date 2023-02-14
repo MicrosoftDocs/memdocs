@@ -42,7 +42,7 @@ If you have an Exchange Online Dedicated environment and need to find out whethe
 >
 > Beginning in July of 2020, support for the Exchange connector is deprecated, and replaced by Exchange [hybrid modern authentication](/office365/enterprise/hybrid-modern-auth-overview) (HMA).  If you have an Exchange Connector set up in your environment, you’re Intune tenant remains supported for its use, and you’ll continue to have access to UI that supports its configuration. You can continue to use the connector or configure HMA and then uninstall your connector.
 >
-> Use of HMA does not require Intune to setup and use the Exchange Connector. With this change, the UI to configure and manage the Exchange Connector for Intune has been removed from the Microsoft Endpoint Manager admin center, unless you already use an Exchange connector with your subscription.
+> Use of HMA does not require Intune to setup and use the Exchange Connector. With this change, the UI to configure and manage the Exchange Connector for Intune has been removed from the Microsoft Intune admin center, unless you already use an Exchange connector with your subscription.
 
 ## Before you begin
 
@@ -84,7 +84,7 @@ Before you can configure Conditional Access, verify the following configurations
 
 #### To set up Conditional Access for Android Enterprise Personally-Owned Work Profile devices
 
-  1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+  1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
   
   2. Deploy the Gmail or Nine Work app as **Required**.
 
@@ -115,7 +115,7 @@ Support for new installations of the Exchange connector was deprecated in July o
 
 Before you can use the following procedure to set up Exchange on-premises access control, you must install and configure at least one [Intune on-premises Exchange connector](exchange-connector-install.md) for Exchange on-premises.
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Go to **Tenant administration** > **Exchange access**, and then select **Exchange On-premises access**.
 

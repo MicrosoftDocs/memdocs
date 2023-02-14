@@ -838,7 +838,7 @@ For information from Apple about managing macOS software updates, see [Manage so
 Apple maintains a list of security updates at [Apple security updates - Apple Support](https://support.apple.com/en-us/HT201222).
 
 #### Deprovision Jamf Pro from within the Microsoft Intune admin center<!-- 3485465  -->  
-You can now [deprovision your Jamf Pro to Intune integration](../protect/conditional-access-jamf-cloud-connector.md#deprovision-jamf-pro-from-within-the-microsoft-endpoint-manager-admin-center) from within the Microsoft Intune admin center. This can be useful should you no longer have access to the Jamf Pro console, through which you can also deprovision integration.
+You can now [deprovision your Jamf Pro to Intune integration](../protect/conditional-access-jamf-cloud-connector.md#deprovision-jamf-pro-from-within-the-microsoft-intune-admin-center) from within the Microsoft Intune admin center. This can be useful should you no longer have access to the Jamf Pro console, through which you can also deprovision integration.
 
 This capability functions similarly to disconnecting Jamf Pro from within the Jamf Pro console, in that after you remove the integration, your organization's Mac devices are removed from Intune after 90 days.
 

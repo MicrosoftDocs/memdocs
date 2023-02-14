@@ -47,11 +47,11 @@ The following profiles support reusable groups.
 
 Each reusable settings group is a single object that can include multiple settings. After configuring one or more reusable groups for use with a specific profile type, you create or edit a profile to add the groups. Profiles can support multiple groups.
 
-To manage groups of reusable settings, in the Microsoft Endpoint Manager admin center you use the *Reusable settings* tab that’s associated with the policy and profiles you want to use a group with. On the tab, you can create a group, edit the settings in a group, and view the count of policies that inherit settings from each group. Each reusable settings group can be used with only its related profile type.
+To manage groups of reusable settings, in the Microsoft Intune admin center you use the *Reusable settings* tab that’s associated with the policy and profiles you want to use a group with. On the tab, you can create a group, edit the settings in a group, and view the count of policies that inherit settings from each group. Each reusable settings group can be used with only its related profile type.
 
 For example, the following image shows the Reusable settings tab you would use to manage reusable groups for the Microsoft Defender Firewall Rules profile:
 
-:::image type="content" source="./media/reusable-settings-groups/reusable-setting-tab.png" alt-text="Screenshot that shows the Reusable settings tab for Firewall policies in the Microsoft Endpoint Manager admin center.":::
+:::image type="content" source="./media/reusable-settings-groups/reusable-setting-tab.png" alt-text="Screenshot that shows the Reusable settings tab for Firewall policies in the Microsoft Intune admin center.":::
 
 After creating reusable groups, you use an option in a profiles *Configuration settings* page to add groups to that profile. Profiles that include one or more reusable groups will use each setting from each included group as if they were directly configured in the profile.
 
@@ -75,7 +75,7 @@ Each reusable settings group includes a subset of settings from the full profile
 
 **To create a reusable settings group**:
 
-1. Open the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), navigate to the policy for which you want to create a reusable group and then select the **Reusable settings (preview)** tab.
+1. Open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), navigate to the policy for which you want to create a reusable group and then select the **Reusable settings (preview)** tab.
 
 2. Select **Add** to open the *Configure reusable settings (preview)* workflow.
 
@@ -92,7 +92,7 @@ Each reusable settings group includes a subset of settings from the full profile
 
 When you edit the configuration of a reusable group, each profile that uses that group automatically updates to apply the new configuration to devices.
 
-1. Open the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), navigate to the policy for which you want to create a reusable group and then select the **Reusable settings (preview)** tab.
+1. Open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), navigate to the policy for which you want to create a reusable group and then select the **Reusable settings (preview)** tab.
 
 2. Select the reusable settings group you want to edit. This opens the configuration workflow that resembles the workflow for creating a new reusable group.
 
@@ -102,7 +102,7 @@ When you edit the configuration of a reusable group, each profile that uses that
 
 Add reusable settings groups to profiles while editing or creating the profile. On the profiles Configuration settings page, you’ll use an option that supports adding one or more previously created groups.
 
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), create a new profile or select and edit an existing profile.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), create a new profile or select and edit an existing profile.
 
 2. On the *Configuration settings* page, select **Add** to add a new rule, or **Edit rule** to manage a previously created rule.
 
@@ -124,7 +124,7 @@ Add reusable settings groups to profiles while editing or creating the profile. 
 
 Add reusable settings groups to profiles while editing or creating the profile. On the profiles Configuration settings page, you’ll use an option that supports adding one or more previously created groups.
 
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), create a new profile or select and edit an existing profile.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), create a new profile or select and edit an existing profile.
 
 2. On the *Configuration settings* page, expand the Device Control category and select **Add** to add a new rule, or **Edit Entry** to manage a previously created rule.
 
