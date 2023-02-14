@@ -103,7 +103,7 @@ The **Microsoft Intune Management Extension** service gets the scripts from Intu
 ### Deploy the script packages
 Proactive remediation scripts need to be encoded in UTF-8. Uploading these scripts rather than editing them directly in your browser helps ensure that the script encoding is correct so your devices can execute them. 
 
-1. Go to the **Proactive remediations** node in the console.
+1. Go to the **Proactive remediations** node in the Intune admin center.
 1. Choose the **Create script package** button to create a script package.
      [![Endpoint analytics Proactive remediations page. Select the create link.](media/proactive-remediations-create.png)](media/proactive-remediations-create.png#lightbox)
 1. In the **Basics** step, give the script package a **Name** and optionally, a **Description**. The **Publisher** field can be edited, but defaults to your name. **Version** can't be edited.
