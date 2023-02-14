@@ -59,7 +59,7 @@ Learn what new features are available in Windows 365 Enterprise.
 
 #### Nested virtualization now supports 4vCPU Cloud PCs<!--42948140-->
 
-Windows 365 nested virtualization now supports 4vCPU Cloud PCs. For more information, see [Set up virutalization-based workloads support](nested-virtualization.md).
+Windows 365 nested virtualization now supports 4vCPU Cloud PCs. For more information, see [Set up virtualization-based workloads support](nested-virtualization.md).
 
 <!-- ########################## -->
 ## Week of January 30, 2023 (Service release 2301)
