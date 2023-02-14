@@ -47,7 +47,7 @@ At a high level, the full provisioning process looks like this:
 
 ## Provisioning policy objects
 
-A Windows 365 provisioning policy is an object in the Microsoft Endpoint Manager admin console that orchestrates the creation of a Cloud PC.
+A Windows 365 provisioning policy is an object in the Microsoft Intune admin center that orchestrates the creation of a Cloud PC.
 
 As the admin, you provide the following required information when creating a provisioning policy:
 

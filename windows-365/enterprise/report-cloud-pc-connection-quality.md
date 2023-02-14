@@ -34,7 +34,7 @@ The **Cloud PC connection quality** report helps you evaluate your users' connec
 
 ## Use the Cloud PC connection quality report
 
-To get to the **Cloud PC connection quality** report, sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Cloud PC performance (preview)** > **View report** (under **Cloud PCs with connection quality issues**).
+To get to the **Cloud PC connection quality** report, sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Cloud PC performance (preview)** > **View report** (under **Cloud PCs with connection quality issues**).
 
 ![Screenshot of getting to the Cloud PC connection quality report](./media/report-cloud-pc-connection-quality/view-report-connection-quality.png)
 
@@ -63,7 +63,7 @@ You can use **Add filter** to limit the histogram and table data to specific tim
 
 You can see similar quality data on a per-Cloud PC basis:
 
-1. Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **All Devices**.
+1. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **All Devices**.
 2. Select a device and then select **Performance (preview)**.
 3. You'll see **Connection quality (preview)**. Under this chart, select **View report** to see more connection data specific to this Cloud PC.
 
