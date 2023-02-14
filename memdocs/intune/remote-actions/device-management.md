@@ -40,7 +40,7 @@ Not all device actions are available for every platform or device. Available act
 
 ## Get to your devices
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices**. This view shows detailed information about the individual devices, and what you can do with them, including:
 
    - **Overview**: The Overview page shows a visual snapshot of the enrolled devices, how many devices are using the different platforms, and more.
