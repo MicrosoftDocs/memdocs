@@ -124,14 +124,15 @@ Before you run the Create Task Sequence Media Wizard to create media for a CD or
 
     > [!IMPORTANT]  
     > Media uses a FAT32 file system. You can't create media on a USB drive whose content contains a file over 4 GB in size. This doesn't include WIM files since Configuration Manager will split WIM files over 4 GB so that they are under 4 GB and compatible with FAT32 files systems.
-    >
-    > For this reason it is important that when creating stand-alone media on a removable USB drive, that the removable USB drive is created via the Configuration Manager console using the **Removable USB drive** option. Creating an ISO via the **CD/DVD set** option and then copying the contents of the mounted ISO to a removable USB drive may not work since WIM files may not be split when using the **CD/DVD set** option. Stand-alone media on removable USB drives need to be formatted FAT32 so that they are bootable on UEFI devices. UEFI devices will only boot from FAT32 volumes.
 
     - If you select **Removable USB drive**, select the drive where you want to store the content.  
 
         - **Format removable USB drive (FAT32) and make bootable**: By default, let Configuration Manager prepare the USB drive. Many newer UEFI devices require a bootable FAT32 partition. However, this format also limits the size of files and overall capacity of the drive. If you've already formatted and configured the removable drive, disable this option.
 
-    - If you select **CD/DVD set**, specify the capacity of the media (**Media size**) and the name and path of the output file (**Media file**). The wizard writes the output files to this location. For example: `\\servername\folder\outputfile.iso`  
+    > [!IMPORTANT]  
+    > It is important that when creating stand-alone media on a removable USB drive, that the removable USB drive is created via the Configuration Manager console using the **Removable USB drive** option. Creating an ISO via the **CD/DVD set** option and then copying the contents of the mounted ISO to a removable USB drive may not work since WIM files may not be split when using the **CD/DVD set** option. Stand-alone media on removable USB drives need to be formatted FAT32 so that they are bootable on UEFI devices. UEFI devices will only boot from FAT32 volumes.
+
+    - If you select **CD/DVD set**, specify the capacity of the media (**Media size**) and the name and path of the output file (**Media file**). The wizard writes the output files to this location. For example: `\\servername\folder\outputfile.iso`
 
         If the capacity of the media is too small to store the entire content, it creates multiple files. Then you need to store the content on multiple CDs or DVDs. When it requires multiple media files, Configuration Manager adds a sequence number to the name of each output file that it creates.  
 
