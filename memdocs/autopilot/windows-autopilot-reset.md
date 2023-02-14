@@ -139,7 +139,7 @@ To enable a device for a remote Windows Autopilot Reset, the device must be MDM 
 
 To trigger a remote Windows Autopilot Reset via Intune, follow these steps:
 
-1. Navigate to **Devices** tab in the Intune console.
+1. Navigate to **Devices** tab in the Intune admin center.
 2. In the **All devices** view, select the targeted reset devices and then click **More** to view device actions.
 3. Select **Autopilot Reset** to start the reset task.
 

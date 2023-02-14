@@ -28,7 +28,7 @@ After you have [created a device group](enrollment-autopilot.md), you can apply 
 You can create Autopilot profiles through:
 
 1. [Microsoft Admin Center](https://admin.microsoft.com/)
-2. [Intune console](https://endpoint.microsoft.com/)
+2. [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431)
 3. [Intune graph](/graph/api/resources/intune-graph-overview)
 
 For Intune managed devices, pre-provisioning, self-deploying, and co-management profiles can only be created and assigned in Intune.
@@ -37,7 +37,7 @@ For Intune managed devices, pre-provisioning, self-deploying, and co-management 
 
 Autopilot deployment profiles are used to configure the Autopilot devices. You can create up to 350 profiles per tenant.
 
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Windows** > **Windows enrollment** > **Deployment Profiles** > **Create Profile** > **Windows PC** or **HoloLens**. This article explains how to set up Autopilot for Windows PC. For more information about Autopilot and HoloLens, see [Windows Autopilot for HoloLens 2](/hololens/hololens2-autopilot).
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Windows** > **Windows enrollment** > **Deployment Profiles** > **Create Profile** > **Windows PC** or **HoloLens**. This article explains how to set up Autopilot for Windows PC. For more information about Autopilot and HoloLens, see [Windows Autopilot for HoloLens 2](/hololens/hololens2-autopilot).
 2. On the **Basics** page, type a **Name** and optional **Description**.
 
     ![Screenshot of Basics page.](images/create-profile-basics.png)
@@ -100,7 +100,7 @@ Before deploying a device, ensure that this process has completed. You can check
 
 After you've created an Autopilot deployment profile, you can edit certain parts of the deployment profile.
 
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Windows** > **Windows enrollment** > **Deployment profiles**.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Windows** > **Windows enrollment** > **Deployment profiles**.
 2. Select the profile you would like to edit.
 3. Select **Properties** on the left to change the name or description of the deployment profile. Select **Save** after you make changes.
 4. Select **Settings** to make changes to the OOBE settings. Select **Save** after you make changes.
@@ -115,12 +115,12 @@ If a device is registered in Autopilot and a profile is not assigned, it will re
 
 Alerts will show how many Autopilot program devices don't have Autopilot deployment profiles. Use the information in the alert to create profiles and assign them to the unassigned devices. When you click the alert, you see a full list of Windows Autopilot devices and detailed information about them.
 
-To see alerts for unassigned devices, in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Overview** > **Enrollment alerts** > **Unassigned devices**.
+To see alerts for unassigned devices, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Overview** > **Enrollment alerts** > **Unassigned devices**.
 
 ## Autopilot deployments report
 
 You can see details on each device deployed through Windows Autopilot.
-To see the report, go to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Monitor** > **Autopilot deployments**.
+To see the report, go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Monitor** > **Autopilot deployments**.
 The data is available for 30 days after deployment.
 
 This report is in preview. Device deployment records are currently triggered only by new Intune enrollment events. Deployments that don't trigger a new Intune enrollment won't appear this report. This case includes any kind of reset that maintains enrollment and the user portion of Autopilot pre-provisioning.

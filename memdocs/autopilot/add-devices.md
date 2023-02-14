@@ -113,7 +113,7 @@ To install the script directly and capture the hardware hash from the local comp
 
 3. You're prompted to sign in. An account with the Intune Administrator role is sufficient, and the device hash will then be uploaded automatically. 
 
-4. After you confirm the details of the uploaded device hash, run a sync in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Select **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program**) > **Sync**. 
+4. After you confirm the details of the uploaded device hash, run a sync in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Select **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program**) > **Sync**. 
 
 5. After the device appears in your device list, and an Autopilot profile is assigned, restarting the device causes OOBE to run through the Windows Autopilot provisioning process.
 
@@ -176,7 +176,7 @@ During upload of a CSV file, the only validation that Microsoft performs on the 
 
 Now that you've captured hardware hashes in a CSV file, you can add Windows Autopilot devices by importing the file. To import the file by using Intune:
 
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program**) > **Import**.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program**) > **Import**.
 
    ![Screenshot of selections in the admin center for importing Windows Autopilot devices.](images/autopilot-import-device.png)
 
@@ -196,7 +196,7 @@ Now that you've captured hardware hashes in a CSV file, you can add Windows Auto
 
 After you've uploaded an Autopilot device, you can edit certain attributes of the device:
 
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program**).
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program**).
 2. Select the device that you want to edit.
 3. On the pane on the right of the screen, you can edit:
    - Device name
