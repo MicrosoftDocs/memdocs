@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/09/2022
+ms.date: 02/14/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -37,7 +37,7 @@ Not all updates can be expedited. Currently, only Windows 10/11 security updates
 
 With expedited updates, you can speed installation of quality updates like the most recent *patch Tuesday* release or an out-of-band security update for a zero-day flaw.
 
-To speed installation, expedite updates uses available services, like WNS and push notification channels, to deliver the message to devices that there's an expedited update to install. This process enables devices to start the download and install of an expedited update as soon as possible, without having to wait for the device to check in for updates.
+To speed installation, expedite is able to check for expedited updates more frequently than the normal Windows Update scan frequency. This process enables devices to start the download and install of an expedited update as soon as possible, without having to wait for the device to check in for updates.
 
 The actual time that a device starts to update depends on the device being online, its scan timing, whether communication channels to the device are functioning, and other factors like cloud-processing time.
 
