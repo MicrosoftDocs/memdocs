@@ -16,11 +16,11 @@ Expected in mid-April 2023, Intune features that depend on Windows diagnostic da
 
 ### How does this affect you or your users?
 
-If you are using the app and driver compatibility reports for Windows updates, you will need to share Windows diagnostic data with Intune by enabling the use of Windows diagnostic data in processor configuration in your Intune tenant and confirm your licensing in the Endpoint Manager admin center. 
+If you are using the app and driver compatibility reports for Windows updates, you will need to share Windows diagnostic data with Intune by enabling the use of Windows diagnostic data in processor configuration in your Intune tenant and confirm your licensing in the Intune admin center. 
 
 ### How can you prepare?
 
-Navigate to the Endpoint Manager admin center > **Tenant administration** > **Connectors and tokens** > **Windows data** and toggle on "Enable features that require Windows diagnostic data in processor configuration" and set “I confirm that my tenant owns one of these licenses” to **On**. For more information, see [Enable use of Windows diagnostic data by Intune](../protect/data-enable-windows-data.md). 
+Navigate to the Intune admin center > **Tenant administration** > **Connectors and tokens** > **Windows data** and toggle on "Enable features that require Windows diagnostic data in processor configuration" and set “I confirm that my tenant owns one of these licenses” to **On**. For more information, see [Enable use of Windows diagnostic data by Intune](../protect/data-enable-windows-data.md). 
 
 ### Plan for Change: Ending support for Company Portal authentication method for iOS/iPadOS ADE enrollment
 
@@ -36,7 +36,7 @@ This will not impact existing enrolled devices unless the device is re-enrolled 
 
 New iOS/iPadOS enrollment profiles will not have the option to select Company Portal as the authentication method.
 
-If you have not already, you will need to move to use Setup Assistant with modern authentication. Within the Microsoft Endpoint Manager admin center, you will want to either create a new ADE enrollment profile, or edit your existing enrollment profile to use the “Setup assistant with modern authentication.”
+If you have not already, you will need to move to use Setup Assistant with modern authentication. Within the Microsoft Intune admin center, you will want to either create a new ADE enrollment profile, or edit your existing enrollment profile to use the “Setup assistant with modern authentication.”
 
 **User experience:** The Setup Assistant with modern authentication enrollment flow does change the enrollment screen order where authentication will occur prior to accessing the home screen. If you have user guides that share screenshots, you will want to update those so the guides match the experience of Setup Assistant with modern authentication.
 
@@ -54,7 +54,7 @@ For related information, see:
 
 ### Plan for Change: Ending support for Windows Information Protection
 
-Microsoft Windows [announced](https://go.microsoft.com/fwlink/?linkid=2202124) they are ending support for Windows Information Protection (WIP), Microsoft Endpoint Manager will be discontinuing future investments in managing and deploying WIP. In addition to limiting future investments, we will remove support for WIP *without enrollment* scenario by the end of calendar year 2022.
+Microsoft Windows [announced](https://go.microsoft.com/fwlink/?linkid=2202124) they are ending support for Windows Information Protection (WIP). The Microsoft Intune family of products will be discontinuing future investments in managing and deploying WIP. In addition to limiting future investments, we will remove support for WIP *without enrollment* scenario by the end of calendar year 2022.
 
 ### How does this affect you or your users?
 
@@ -76,7 +76,7 @@ If you are managing Windows 8.1 devices those devices should be upgraded to a su
 
 ### How can you prepare?
 
-Upgrade your Windows 8.1 devices, if applicable. To determine which users’ devices are running Windows 8.1 navigate to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Windows** > **Windows devices**, and filter by OS.
+Upgrade your Windows 8.1 devices, if applicable. To determine which users’ devices are running Windows 8.1 navigate to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Windows** > **Windows devices**, and filter by OS.
 
 **Additional information**
 - [Manage operating system versions with Intune](../fundamentals/manage-os-versions.md)
@@ -136,7 +136,7 @@ To check which devices support iOS 14 or iPadOS 14 (if applicable), see the foll
 
 Check your Intune reporting to see what devices or users might be affected. For devices with mobile device management, go to **Devices** > **All devices** and filter by OS. For devices with app protection policies, go to **Apps** > **Monitor** > **App protection status** > **App Protection report: iOS, Android**.
 
-To manage the supported OS version in your organization, you can use Microsoft Endpoint Manager controls for both mobile device management and APP. For more information, see [Manage operating system versions with Intune](../fundamentals/manage-os-versions.md).
+To manage the supported OS version in your organization, you can use Microsoft Intune controls for both mobile device management and APP. For more information, see [Manage operating system versions with Intune](../fundamentals/manage-os-versions.md).
 
 ### Plan for change: Intune is moving to support Android 8.0 and later in January 2022<!-- 10946003 -->  
 
@@ -239,4 +239,4 @@ If you continue to use an unsupported version of Windows 10, your users won't ge
 
 #### How can you prepare?
 
-In the Microsoft Endpoint Manager admin center, use the [discovered apps](../apps/app-discovered-apps.md) feature to find apps with these versions. On a user's device, the Company Portal version is shown on the **Settings** page of the Company Portal. Update to a supported Windows and Company Portal version.  
+In the Microsoft Intune admin center, use the [discovered apps](../apps/app-discovered-apps.md) feature to find apps with these versions. On a user's device, the Company Portal version is shown on the **Settings** page of the Company Portal. Update to a supported Windows and Company Portal version.  
