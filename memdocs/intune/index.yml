@@ -320,7 +320,6 @@ conceptualContent:
           itemType: how-to-guide
           text: Microsoft Intune for Education docs
 
-
     - title: Government
       links:
         - url: ./fundamentals/introduction-intune-government.md
@@ -338,22 +337,7 @@ additionalContent:
   sections:
     - title: Additional resources to manage devices
       items:
-      - title: Intune for Education
-        links: 
-        - text: What is Intune for Education?
-          url: /intune-education/what-is-intune-for-education
-        - text: What's new in Intune for Education?
-          url: /intune-education/whats-new-in-edu
-        - text: How is Intune for Education different from the full version?
-          url: ./fundamentals/introduction-intune-education.md
-      - title: Intune for Government
-        links: 
-        - text: Enterprise Mobility + Security for US Government service description
-          url: /enterprise-mobility-security/solutions/ems-govt-service-description
-        - text: US government endpoints for Intune
-          url: ./fundamentals/intune-us-government-endpoints.md
-        - text: Azure Government site
-          url: https://azure.microsoft.com/global-infrastructure/government/
+
       - title: Microsoft 365
         links: 
         - text: Explore Microsoft 365, a complete solution that includes Intune
