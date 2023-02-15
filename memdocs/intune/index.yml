@@ -47,7 +47,7 @@ productDirectory:
       links:
         - url: ./fundamentals/what-is-intune.md
           text: Microsoft Intune overview
-        - url: ./fundamentals/what-is-device-management
+        - url: ./fundamentals/what-is-device-management.md
           text: What is device management?
         - url: /training/paths/endpoint-manager-fundamentals/
           text: Microsoft Endpoint Manager fundamentals Learning Path
