@@ -31,7 +31,7 @@ When co-management is already enabled, edit the co-management properties to enab
 1. In the Configuration Manager admin console, go to **Administration** > **Overview** > **Cloud Services** > **Cloud Attach**.
    - For version 2103 and earlier, select the **Co-management** node.
 1. In the ribbon, select **Properties** for your co-management production policy.
-1. In the **Configure upload** tab, select **Upload to Microsoft Intune admin center**. Select **Apply**.
+1. In the **Configure upload** tab, select **Upload to Microsoft Endpoint Manager admin center**. Select **Apply**.
    - The default setting for device upload is **All my devices managed by Microsoft Endpoint Configuration Manager**. If needed, you can limit upload to a single device collection.
    - When a single collection is selected, its child collections are also uploaded.
 1. Check the option to **Enable Endpoint analytics for devices uploaded to Microsoft Endpoint Manager** if you also want to get insights for optimizing the end-user experience in [Endpoint Analytics](../../analytics/overview.md).
@@ -63,7 +63,7 @@ When co-management isn't enabled, use the instructions below to enable device up
 1. On the onboarding page, select **AzurePublicCloud** for your environment. Azure Government Cloud and Azure China 21Vianet aren't supported.
    - Starting in version 2107, US Government customers can select **AzureUSGovernmentCloud**.<!-- 8353823 -->
 1. Select **Sign In**. Use your *Global Administrator* account to sign in.
-1. Ensure the **Enable Microsoft Intune admin center** option is selected on the **Cloud attach** page. For version 2103 and earlier, select the **Upload to Microsoft Intune admin center** option on the **Tenant onboarding** page.
+1. Ensure the **Enable Microsoft Endpoint Manager admin center** option is selected on the **Cloud attach** page. For version 2103 and earlier, select the **Upload to Microsoft Endpoint Manager admin center** option on the **Tenant onboarding** page.
    - Make sure the option **Enable automatic client enrollment for co-management** isn't checked if you don't want to enable co-management now. If you do want to enable co-management, select the option.
    - If you enable co-management along with device upload, you'll be given additional pages in the wizard to complete. For more information, see [Enable co-management](../comanage/how-to-enable.md).
 
@@ -112,7 +112,7 @@ When tenant attach is already enabled, edit the co-management properties to disa
 1. In the Configuration Manager admin console, go to **Administration** > **Overview** > **Cloud Services** > **Cloud Attach**.
    - For version 2103 and earlier, select the **Co-management** node.
 1. In the ribbon, select **Properties** for your co-management production policy.
-1. In the **Configure upload** tab, remove the **Upload to Microsoft Intune admin center** selection.
+1. In the **Configure upload** tab, remove the **Upload to Microsoft Endpoint Manager admin center** selection.
 1. Select **Apply**.
 
 ### Offboard from the Microsoft Intune admin center

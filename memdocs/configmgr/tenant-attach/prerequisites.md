@@ -33,7 +33,7 @@ Microsoft Endpoint Manager is an integrated solution for managing all of your de
 
 - An Azure cloud environment.
 
-  - The **Upload to Microsoft Intune admin center** option is disabled for Microsoft Azure China 21Vianet (Azure China Cloud) and Azure US Government Cloud.<!--8815787--> Starting in version 2107, this option is available for US Government customers.
+  - The **Upload to Microsoft Endpoint Manager admin center** option is disabled for Microsoft Azure China 21Vianet (Azure China Cloud) and Azure US Government Cloud.<!--8815787--> Starting in version 2107, this option is available for US Government customers.
 
 - Starting in version 2107, United States Government customers can use the following tenant attach features in the US Government cloud:<!-- 8353823 -->
 
