@@ -38,11 +38,13 @@ To optimize Zoom, you’ll need to install the Zoom VDI Client on the Cloud PC a
 > If you run into issues with Zoom for VDI on your Cloud PC, contact Zoom support.
 
 ## Requirements
-These instructions don't support connections through a web browser.
 
-- **Windows 365 app**: 
-- **Windows Remote Desktop Client**: 
+- **Windows 365 app for Windows**\*
+- **Windows Remote Desktop Client**\*
+- **Windows 365 app**
 - **Operating system**: Windows
+
+\* These don't support connections through a web browser.
 
 ## Install the Zoom VDI client on the Cloud PC
 
