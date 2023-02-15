@@ -46,9 +46,12 @@ productDirectory:
       imageSrc: ./media/icons/learn.svg
       links:
         - url: ./fundamentals/what-is-intune.md
-          text: linktext1a
-        - url: ./file1b.md OR /file1b
-          text: linktext1b
+          text: Microsoft Intune overview
+        - url: ./fundamentals/what-is-device-management
+          text: What is device management?
+        - url: /training/paths/endpoint-manager-fundamentals/
+          text: Microsoft Endpoint Manager fundamentals Learning Path
+
     # Card
     - title: Try and evaluate
       imageSrc: ./media/icons/investigate.svg
@@ -68,7 +71,27 @@ productDirectory:
         - url: ./fundamentals/intune-endpoints.md
           text: Intune endpoints
 
-
+    # Card
+    - title: Deploy
+      imageSrc: ./media/icons/deploy.svg
+      links:
+        - url: ./fundamentals/deployment-guide-intune-setup.md
+          text: "Migration guide: Set up or move to Intune"
+        - url: ./fundamentals/get-started-with-intune.md
+          text: Get started with your Intune deployment
+        - url: fundamentals/protection-configuration-levels.md
+          text: Levels of protection and configuration in Intune
+        
+    # Card
+    - title: Plan
+      imageSrc: ./media/icons/plan.svg
+      links:
+        - url: ./fundamentals/intune-planning-guide.md
+          text: Microsoft Intune planning guide
+        - url: ./fundamentals/supported-devices-browsers.md
+          text: Supported operating systems and browsers
+        - url: ./fundamentals/intune-endpoints.md
+          text: Intune endpoints
 
 
 conceptualContent:
