@@ -29,7 +29,7 @@ ms.collection: tier3
 
 ## <a name="bkmk_asr"></a> Assign Attack surface reduction policy to a collection
 
-1. In a browser, go to the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/).
+1. In a browser, go to the [Microsoft Intune admin center](https://endpoint.microsoft.com/).
 1. Select **Endpoint security** > **Attack surface reduction** then **Create Policy**.
 1. Create a profile with the following settings:
 

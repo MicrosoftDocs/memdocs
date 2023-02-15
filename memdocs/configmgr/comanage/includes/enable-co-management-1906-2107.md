@@ -24,7 +24,7 @@ When you're enabling co-management, you can use the Azure public cloud, Azure Go
      > [!NOTE]
      > Update the Configuration Manager client to the latest version on your devices before you onboard to the Azure China cloud. <!--7630213--> 
 
-   When you select the Azure China cloud or Azure Government cloud, the **Upload to Microsoft Endpoint Manager admin center** option for [tenant attach](../../tenant-attach/device-sync-actions.md) is disabled.
+   When you select the Azure China cloud or Azure Government cloud, the **Upload to Microsoft Intune admin center** option for [tenant attach](../../tenant-attach/device-sync-actions.md) is disabled.
 
 1. Select **Sign In**. Sign in as an Azure AD global administrator, and then select **Next**. You sign in this one time for the purposes of this wizard. The credentials aren't stored or reused elsewhere.
 

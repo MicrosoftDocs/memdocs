@@ -66,7 +66,7 @@ Built-in reports for:
 Allow other personas in your organization outside of the Configuration Manager console to help with key recovery, including key rotation and other BitLocker-related support. For example, help desk administrators can help users with key recovery.
 
 > [!TIP]
-> Starting in version 2107, you can also get BitLocker recovery keys for a tenant-attached device from the Microsoft Endpoint Manager admin center.<!--6979225--> For more information, see [Tenant attach: BitLocker recovery keys](../../tenant-attach/bitlocker-recovery-keys.md).
+> Starting in version 2107, you can also get BitLocker recovery keys for a tenant-attached device from the Microsoft Intune admin center.<!--6979225--> For more information, see [Tenant attach: BitLocker recovery keys](../../tenant-attach/bitlocker-recovery-keys.md).
 
 ### User self-service portal
 

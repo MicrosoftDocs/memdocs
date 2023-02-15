@@ -19,7 +19,7 @@ ms.collection: tier3
 <!--6024387, 6374854, 6521921, intune 7552762 pubpreview July 7, 2020, GA 2201-->
 *Applies to: Configuration Manager (current branch)*
 
-Microsoft Endpoint Manager is an integrated solution for managing all of your devices. Microsoft brings together Configuration Manager and Intune into a single console called **Microsoft Endpoint Manager admin center**. You can see ConfigMgr client details including collections, boundary group membership, and real-time client information for a specific device in the admin center.
+Microsoft Endpoint Manager is an integrated solution for managing all of your devices. Microsoft brings together Configuration Manager and Intune into a single console called **Microsoft Intune admin center**. You can see ConfigMgr client details including collections, boundary group membership, and real-time client information for a specific device in the admin center.
 
 ## Prerequisites
 
@@ -35,7 +35,7 @@ Microsoft Endpoint Manager is an integrated solution for managing all of your de
 
 ## Permissions
 
-The user account accessing tenant attach features within the Microsoft Endpoint Manager admin center needs the following permissions:
+The user account accessing tenant attach features within the Microsoft Intune admin center needs the following permissions:
 
 - The **Read** permission for the device's **Collection** in Configuration Manager.
 - An [Intune role](../../intune/fundamentals/role-based-access-control.md) assigned to the user <!--7980141-->
@@ -51,16 +51,16 @@ The user account accessing tenant attach features within the Microsoft Endpoint 
       - **Last active time**
       - **Last management point**.
 
-   :::image type="content" source="media/6024387-device-details.png" alt-text="Client details in Microsoft Endpoint Manager admin center" lightbox="media/6024387-device-details.png":::
+   :::image type="content" source="media/6024387-device-details.png" alt-text="Client details in Microsoft Intune admin center" lightbox="media/6024387-device-details.png":::
 
 1. Select the **Collections** to list the client's collections. <!--6024390-->
 
-   :::image type="content" source="media/6024387-device-collections.png" alt-text="Client collections in Microsoft Endpoint Manager admin center" lightbox="media/6024387-device-collections.png":::
+   :::image type="content" source="media/6024387-device-collections.png" alt-text="Client collections in Microsoft Intune admin center" lightbox="media/6024387-device-collections.png":::
 
 ## <a name="bkmk_list"></a> List a user’s devices based on usage in the troubleshooting portal
 <!--6974300-->
 
-The troubleshooting portal in [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/) allows you to search for a user and view their associated devices. Tenant attached devices that are assigned [user device affinity automatically based on usage](../apps/deploy-use/link-users-and-devices-with-user-device-affinity.md#set-up-the-site-to-automatically-create-user-device-affinities) will now be returned when searching for a user.
+The troubleshooting portal in [Microsoft Intune admin center](https://endpoint.microsoft.com/) allows you to search for a user and view their associated devices. Tenant attached devices that are assigned [user device affinity automatically based on usage](../apps/deploy-use/link-users-and-devices-with-user-device-affinity.md#set-up-the-site-to-automatically-create-user-device-affinities) will now be returned when searching for a user.
 ### Prerequisites for listing a user's device in the troubleshooting portal
 
 - An environment that's tenant attached with uploaded devices
@@ -70,7 +70,7 @@ The troubleshooting portal in [Microsoft Endpoint Manager admin center](https://
    - 
 ### View a user's devices
 
-1. Go to the  [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/).
+1. Go to the  [Microsoft Intune admin center](https://endpoint.microsoft.com/).
 1. Select **Troubleshooting + support**.
 1. On the **Troubleshoot** page, select **Change user** then search for a user.
 1. The **Devices** chart lists the ConfigMgr devices associated with the user.  

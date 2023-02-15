@@ -18,7 +18,7 @@ ms.collection: tier3
 <!---->
 *Applies to: Configuration Manager (current branch)*
 
-Run [CMPivot](cmpivot-start.md) queries from Microsoft Endpoint Manager admin center. Below are a few common query needs and how CMPivot can be used to meet them. CMPivot uses a subset of the [Kusto Query Language (KQL)](/azure/kusto/query/).
+Run [CMPivot](cmpivot-start.md) queries from Microsoft Intune admin center. Below are a few common query needs and how CMPivot can be used to meet them. CMPivot uses a subset of the [Kusto Query Language (KQL)](/azure/kusto/query/).
 
 Below are a few common query needs and how CMPivot can be used to meet them. CMPivot uses a subset of the [Kusto Query Language (KQL)](/azure/kusto/query/).
 
