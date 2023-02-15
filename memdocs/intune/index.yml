@@ -77,56 +77,6 @@ productDirectory:
 
 conceptualContent:
   sections:
-  - title: Platform and industry guides
-    items:
-    - title: Platform guides
-      links:
-        - url: ./fundamentals/deployment-guide-platform-windows.md
-          itemType: how-to-guide
-          text: Manage Windows 10/11 devices
-        - url: ./fundamentals/deployment-guide-platform-android.md
-          itemType: how-to-guide
-          text: Manage Android devices
-        - url: ./fundamentals/deployment-guide-platform-windows.md
-          itemType: how-to-guide
-          text: Manage iOS/iPadOS devices
-        - url: ./fundamentals/deployment-guide-platform-ios-ipados.md
-          itemType: how-to-guide
-          text: Manage macOS devices
-        - url: ./fundamentals/deployment-guide-platform-macos.md
-          itemType: how-to-guide
-          text: Manage macOS devices
-        - url: ./fundamentals/deployment-guide-platform-linux.md
-          itemType: how-to-guide
-          text: Manage Linux devices
-        - url: ./fundamentals/windows-holographic-for-business.md
-          itemType: how-to-guide
-          text: Manage Windows Holographic and HoloLens devices
-        - url: fundamentals/surface-management-portal.md
-          itemType: how-to-guide
-          text: Microsoft Surface Management portal
-
-    - title: Education guide
-      links:
-        - url: ./fundamentals/introduction-intune-education.md
-          itemType: how-to-guide
-          text: What is Intune for Education?
-        - url: /intune-education/
-          itemType: how-to-guide
-          text: Microsoft Intune for Education docs
-
-
-    - title: Government guide
-      links:
-        - url: ./fundamentals/introduction-intune-government.md
-          itemType: concept
-          text: What is Intune for Government?
-        - url: ./fundamentals/ems-intune-govt-service-description.md
-          itemType: how-to-guide
-          text: Intune US Government service description
-        - url: ./fundamentals/intune-us-government-endpoints.md
-          itemType: reference
-          text: US government endpoints for Intune
 
   - title: How-to guides
     items:
@@ -269,6 +219,21 @@ conceptualContent:
           itemType: how-to-guide
           text: Remove devices
 
+    - title: View reports and monitor status
+      links:
+        - url: ./fundamentals/reports.md
+          itemType: how-to-guide
+          text: Intune reports
+        - url: ./fundamentals/monitor-audit-logs.md
+          itemType: how-to-guide
+          text: Use audit logs to track and monitor events
+        - url: ./configuration/device-profile-monitor.md
+          itemType: how-to-guide
+          text: Monitor device configuration profiles
+        - url: /analytics/
+          itemType: concept
+          text: Endpoint analytics docs
+
     - title: Developer guidance
       links:
         - url: ./developer/intune-graph-apis.md
@@ -320,6 +285,53 @@ conceptualContent:
           itemType: concept
           text: Troubleshoot policies and profiles in Intune
 
+  - title: Platform and industry guides
+    items:
+    - title: Platform guides
+      links:
+        - url: ./fundamentals/deployment-guide-platform-windows.md
+          itemType: how-to-guide
+          text: Manage Windows 10/11 devices
+        - url: ./fundamentals/deployment-guide-platform-android.md
+          itemType: how-to-guide
+          text: Manage Android devices
+        - url: ./fundamentals/deployment-guide-platform-ios-ipados.md
+          itemType: how-to-guide
+          text: Manage iOS/iPadOS devices
+        - url: ./fundamentals/deployment-guide-platform-macos.md
+          itemType: how-to-guide
+          text: Manage macOS devices
+        - url: ./fundamentals/deployment-guide-platform-linux.md
+          itemType: how-to-guide
+          text: Manage Linux devices
+        - url: ./fundamentals/windows-holographic-for-business.md
+          itemType: how-to-guide
+          text: Manage Windows Holographic and HoloLens devices
+        - url: fundamentals/surface-management-portal.md
+          itemType: how-to-guide
+          text: Microsoft Surface Management portal
+
+    - title: Education
+      links:
+        - url: ./fundamentals/introduction-intune-education.md
+          itemType: how-to-guide
+          text: What is Intune for Education?
+        - url: /intune-education/
+          itemType: how-to-guide
+          text: Microsoft Intune for Education docs
+
+
+    - title: Government
+      links:
+        - url: ./fundamentals/introduction-intune-government.md
+          itemType: concept
+          text: What is Intune for Government?
+        - url: ./fundamentals/ems-intune-govt-service-description.md
+          itemType: how-to-guide
+          text: Intune US Government service description
+        - url: ./fundamentals/intune-us-government-endpoints.md
+          itemType: reference
+          text: US government endpoints for Intune
 
     
 additionalContent:
