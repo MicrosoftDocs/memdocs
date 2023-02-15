@@ -8,7 +8,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 02/17/2023
-ms.topic: concept
+ms.topic: overview
 ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
@@ -59,14 +59,14 @@ This encryption proceeds as follows:
 
 1. The Windows 365 checks the service database for an existing symmetric key specific to that tenant.
 2. If a key is not present or has expired, Windows 365 generates a new symmetric key for this tenant using a random number generator. Keys are created per tenant.
-3. If a key already exists for this tenant, it is used in the following steps.
+3. If a key already exists for this tenant, it's used in the following steps.
 4. After getting the (new or existing) tenant key, Windows 365 decrypts the key with the Windows 365 dedicated Enterprise CA certificate. The certificate is stored in the Azure Key Vault managed by Microsoft.
 5. Windows 365 encrypts the password with the decrypted tenant key.
 6. The encrypted password is saved to the Windows 365 service database.
 
 ### Azure Key Vault certificates
 
-Azure Key Vault certificates are generated and renewed automatically by the Azure Key Vault. Certificates expire after one year. Azure automatically regenerates new versions of certificates three months before the certificate expires. Windows 365 regularly checks the certificate status. When there is a new certificate, Windows 365 re-encrypts the tenant key with the latest certificate.
+Azure Key Vault certificates are generated and renewed automatically by the Azure Key Vault. Certificates expire after one year. Azure automatically regenerates new versions of certificates three months before the certificate expires. Windows 365 regularly checks the certificate status. When there's a new certificate, Windows 365 re-encrypts the tenant key with the latest certificate.
 
 ### Password encryption/decryption algorithm
 
@@ -80,17 +80,17 @@ Windows 365 uses an encrypt-then-MAC approach to encrypt the domain credential w
 
 ## Updating credential information
 
-Credentials often change and need updating. Windows 365 won’t proactively detect credential changes in your domain. Instead, Windows 365 relies on customers to manually update the ANC with the updated credential information.
+Credentials often change and need updating. Windows 365 doesn’t proactively detect credential changes in your domain. Instead, Windows 365 relies on customers to manually update the ANC with the updated credential information.
 
 When there’s a change to the domain credential of the ANC, the new credential is re-encrypted and updated to the Windows 365 database.
 
-Note: If the domain credential is changed in your on-premises Active Directory environment, but you don’t manually update the ANC, Windows 365 will still use the old credential for ANC [health checks](health-checks.md). Therefore, these health checks will fail because the credentials on record are outdated. To make sure this doesn’t happen, Edit the Azure network connection](edit-azure-network-connection.md) with the new credentials as soon as possible.
+Note: If the domain credential is changed in your on-premises Active Directory environment, but you don’t manually update the ANC, Windows 365 will still use the old credential for ANC [health checks](health-checks.md). Therefore, these health checks will fail because the credentials on record are outdated. To make sure this failure doesn’t happen, Edit the Azure network connection](edit-azure-network-connection.md) with the new credentials as soon as possible.
 
 ## Removing credential information
 
 After you [delete an ANC](delete-azure-network-connection.md), all the data related to the ANC is immediately and permanently removed from the Windows 365 database.
 
-If the tenant account is deactivated without deleting the ANC, the credential information is retained for 29 days. If the tenant is reactivated within 29 days, the ANC and domain credentials are restored. If the tenant is not reactivated in 29 days, all ANCs and related information, including credentials, are permanently removed.
+If the tenant account is deactivated without deleting the ANC, the credential information is retained for 29 days. If the tenant is reactivated within 29 days, the ANC and domain credentials are restored. If the tenant isn't reactivated in 29 days, all ANCs and related information, including credentials, are permanently removed.
 
 <!-- ########################## -->
 ## Next steps
