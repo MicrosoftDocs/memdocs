@@ -46,7 +46,7 @@ Pre-provisioned deployments use Microsoft Intune in Windows 10, version 1903 and
 ## Prerequisites
 
 > [!IMPORTANT]
-> You cannot automatically re-enroll a device through Windows Autopilot after an initial deployment in pre-provisioning mode. Instead, delete the device record in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). From the admin center, choose **Devices** &gt; **All devices** &gt; choose the devices you want to delete &gt; **Delete**. User assigned policies and apps will still be deployed to the device. For more information, see [Updates to the Windows Autopilot sign-in and deployment experience](https://techcommunity.microsoft.com/t5/intune-customer-success/updates-to-the-windows-autopilot-sign-in-and-deployment/ba-p/2848452).
+> You cannot automatically re-enroll a device through Windows Autopilot after an initial deployment in pre-provisioning mode. Instead, delete the device record in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). From the admin center, choose **Devices** &gt; **All devices** &gt; choose the devices you want to delete &gt; **Delete**. User assigned policies and apps will still be deployed to the device. For more information, see [Updates to the Windows Autopilot sign-in and deployment experience](https://techcommunity.microsoft.com/t5/intune-customer-success/updates-to-the-windows-autopilot-sign-in-and-deployment/ba-p/2848452).
 
 In addition to [Windows Autopilot requirements](software-requirements.md), Windows Autopilot for pre-provisioned deployment also requires:
 

@@ -48,7 +48,7 @@ Most actions support up to 100 devices. For specific details of each remote acti
 
 ## Use a bulk device action
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Choose **Devices** > **All devices** > **Bulk Device Actions**.
 ![Bulk device actions](./media/bulk-device-actions/bulk-device-actions.png)
 3. On the **Bulk device action** page, select an **OS** and **Device action**. Some device actions have additional options or fields to populate. Choose **Next**.

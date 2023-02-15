@@ -27,7 +27,7 @@ items:
     href: end-of-support.md
   - name: Customer permissions
     href: customer-permissions.md  
-  - name: Device configuration with MEM
+  - name: Device configuration with Intune
     href: device-configuration.md
   - name: What is Windows 365 Government
     href: introduction-windows-365-government.md
