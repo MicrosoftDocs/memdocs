@@ -31,7 +31,7 @@ ms.collection: M365-identity-device-management
 
 # Migrate your mobile device management from Basic Mobility and Security to Intune
 
-This article will help you migrate your mobile device management (MDM) from Basic Mobility and Security (Office 365) to the Microsoft Endpoint Manager portal (Intune).
+This article will help you migrate your mobile device management (MDM) from Basic Mobility and Security (Office 365) to the Microsoft Intune admin center.
 
 Moving to Intune combines all your MDM in one solution. It lets all your users benefit from the wider set of features offered by Intune. To see a comparison of the features available in the two services, see [Choose between Basic Mobility and Security or Intune](/microsoft-365/admin/basic-mobility-security/choose-between-basic-mobility-and-security-and-intune).
 

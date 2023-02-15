@@ -188,7 +188,7 @@ For more information, see [Guided scenario - Cloud-managed Modern Desktop](guide
 
 If your Windows devices are currently managed using Configuration Manager, you can still enroll these devices in Intune. This approach is called "co-management". Co-management offers many benefits, including running remote actions on the device (restart, remote control, factory reset), conditional access with device compliance, and more. You can also cloud-attach your devices to Intune.
 
-For more information, see [What is co-management](../../configmgr/comanage/overview.md), [Paths to co-management](../../configmgr/comanage/quickstart-paths.md), and [Endpoint Manager tenant attach](../../configmgr/tenant-attach/device-sync-actions.md).
+For more information, see [What is co-management](../../configmgr/comanage/overview.md), [Paths to co-management](../../configmgr/comanage/quickstart-paths.md), and [tenant attach](../../configmgr/tenant-attach/device-sync-actions.md).
 
 **Task**: Look at what you currently use for mobile device management, what the goals are, and determine the best path. Some considerations:
 

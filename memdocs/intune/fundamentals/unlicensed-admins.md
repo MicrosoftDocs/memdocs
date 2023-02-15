@@ -30,7 +30,7 @@ ms.collection: M365-identity-device-management
 
 # Unlicensed admins
 
-You can give administrators access to Microsoft Endpoint Manager without them requiring an Intune license. This feature applies to any administrator, including Intune administrators, global administrators, Azure AD administrators, and so on. Other features or services, such as those in Azure Active Directory (AD) Premium, may require a license for the administrator.
+You can give administrators access to Microsoft Intune without them requiring an Intune license. This feature applies to any administrator, including Intune administrators, global administrators, Azure AD administrators, and so on. Other features or services, such as those in Azure Active Directory (AD) Premium, may require a license for the administrator.
 
 The Unlicensed admins option has been enabled by default on all accounts created after the 2006 release.
 

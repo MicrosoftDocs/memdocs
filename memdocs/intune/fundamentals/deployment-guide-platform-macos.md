@@ -149,7 +149,7 @@ After devices are set up, you can use remote actions in Intune to manage and tro
 
     *  [Deploying macOS apps with the Intune scripting agent](https://techcommunity.microsoft.com/t5/intune-customer-success/deploying-macos-apps-with-the-intune-scripting-agent/ba-p/2298072).  
 
-    * [Deploying Microsoft 365 Apps for Mac with Microsoft Endpoint Manager - A Deep Dive](https://techcommunity.microsoft.com/t5/intune-customer-success/deploying-microsoft-365-apps-for-mac-with-microsoft-endpoint/ba-p/2243040)
+    * [Deploying Microsoft 365 Apps for Mac with Microsoft Intune - A Deep Dive](https://techcommunity.microsoft.com/t5/intune-customer-success/deploying-microsoft-365-apps-for-mac-with-microsoft-endpoint/ba-p/2243040)
 
 
 * For other versions of this guide, see:   

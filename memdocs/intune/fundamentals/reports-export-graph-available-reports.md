@@ -37,7 +37,7 @@ Microsoft Intune provides many reports in the Microsoft Intune admin center that
 >
 > For more information about making REST API calls, including tools for interacting with Microsoft Graph, see [Use the Microsoft Graph API](/graph/use-the-api).
 
-Microsoft Endpoint Manager will export reports using the following Microsoft Graph API endpoint:
+Microsoft Intune will export reports using the following Microsoft Graph API endpoint:
 
 ```http
 https://graph.microsoft.com/beta/deviceManagement/reports/exportJobs
@@ -45,7 +45,7 @@ https://graph.microsoft.com/beta/deviceManagement/reports/exportJobs
 
 The following table contains the possible values for the `reportName` parameter. These are the currently available reports for export.
 
-|         ReportName (Export Parameter)  |            Associated   Report in Microsoft Endpoint Manager        |
+|         ReportName (Export Parameter)  |            Associated   Report in Microsoft Intune        |
 |-|-|
 |         DeviceCompliance  |            Device   Compliance Org        |
 |         DeviceNonCompliance  |            Non-compliant   devices        |
