@@ -34,43 +34,6 @@ highlightedContent:
       itemType: overview
       url: ./fundamentals/reports.md
 
-
-
-productDirectory:
-  title: Get started
-  summary: Learn about Microsoft Intune, evaluate how it can add value in your organization, and try it out for free. 
-  items:
-    # Card
-    - title: Learn
-      # imageSrc should be square in ratio with no white space
-      imageSrc: ./media/icons/learn.svg
-      links:
-        - url: ./fundamentals/what-is-intune.md
-          text: linktext1a
-        - url: ./file1b.md OR /file1b
-          text: linktext1b
-    # Card
-    - title: Try and evaluate
-      imageSrc: ./media/icons/investigate.svg
-      links:
-        - url: ./fundamentals/tutorial-walkthrough-endpoint-manager.md
-          text: Walkthrough Microsoft Intune admin center
-        - url: ./fundamentals/try-intune-overview.md
-          text: Evaluate and try Intune tasks
-    # Card
-    - title: Plan
-      imageSrc: ./media/icons/plan.svg
-      links:
-        - url: ./fundamentals/intune-planning-guide.md
-          text: Microsoft Intune planning guide
-        - url: ./fundamentals/supported-devices-browsers.md
-          text: Supported operating systems and browsers
-        - url: ./fundamentals/intune-endpoints.md
-          text: Intune endpoints
-
-
-
-
 conceptualContent:
   items:
     - title: Plan for Intune adoption
