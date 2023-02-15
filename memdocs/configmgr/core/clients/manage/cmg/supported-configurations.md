@@ -95,7 +95,7 @@ For more information about support for deploying a task sequence to a client via
 
 #### <a name="bkmk_note3"></a> Note 3: Support for remote tools
 
-As announced at Microsoft Ignite 2021, a public preview of the new remote assistance solution is now available in the Microsoft Endpoint Manager admin center. This cloud-based tool can help you more securely support users of Windows devices.
+As announced at Microsoft Ignite 2021, a public preview of the new remote assistance solution is now available in the Microsoft Intune admin center. This cloud-based tool can help you more securely support users of Windows devices.
 
 For more information, see the following resources:
 
