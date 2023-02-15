@@ -75,7 +75,7 @@ You're presented with the Updates Wizard that displays a list of the product are
    - [Co-management](../../../comanage/overview.md)
    - [Endpoint analytics](../../../../analytics/enroll-configmgr.md)
 
-  If you don't wish to onboard, clear both of the **Enable Microsoft Endpoint Manager admin center** and **Enable automatic client enrollment for co-management** options. <!--1074186-->
+  If you don't wish to onboard, clear both of the **Enable Microsoft Intune admin center** and **Enable automatic client enrollment for co-management** options. <!--1074186-->
 
 ### 2. During the update installation
 

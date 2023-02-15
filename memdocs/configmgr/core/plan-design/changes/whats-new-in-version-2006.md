@@ -29,7 +29,7 @@ To take full advantage of new Configuration Manager features, after you update t
 
 ### Scripts from the admin center
 <!--IN7220536, CM6234688  -->
-Bring the power of the Configuration Manager on-premises [Run scripts](../../../apps/deploy-use/create-deploy-scripts.md) feature to the Microsoft Endpoint Manager admin center. Allow additional personas, like Helpdesk, to run PowerShell scripts from the cloud against an individual Configuration Manager managed device in real time. This gives all the traditional benefits of PowerShell scripts that have already been defined and approved by the Configuration Manager admin to this new environment. For more information, see [Tenant attach: Scripts from the admin center](../../../tenant-attach/scripts.md).
+Bring the power of the Configuration Manager on-premises [Run scripts](../../../apps/deploy-use/create-deploy-scripts.md) feature to the Microsoft Intune admin center. Allow additional personas, like Helpdesk, to run PowerShell scripts from the cloud against an individual Configuration Manager managed device in real time. This gives all the traditional benefits of PowerShell scripts that have already been defined and approved by the Configuration Manager admin to this new environment. For more information, see [Tenant attach: Scripts from the admin center](../../../tenant-attach/scripts.md).
 
 ### <a name="bkmk_timeline"></a> Device timeline in the admin center
 <!--7220536, CM7141381-->
@@ -41,11 +41,11 @@ From the Microsoft Endpoint Management admin center, you can view hardware inven
 
 ### <a name="bkmk_cmpivot"></a> CMPivot from the admin center
 <!--6024392-->
-Bring the power of CMPivot to the Microsoft Endpoint Manager admin center. Allow additional personas, like Helpdesk, to be able to initiate real-time queries from the cloud against an individual ConfigMgr managed device and return the results back to the admin center. This gives all the traditional benefits of CMPivot, which allows IT Admins and other designated personas the ability to quickly assess the state of devices in their environment and take action.
+Bring the power of CMPivot to the Microsoft Intune admin center. Allow additional personas, like Helpdesk, to be able to initiate real-time queries from the cloud against an individual ConfigMgr managed device and return the results back to the admin center. This gives all the traditional benefits of CMPivot, which allows IT Admins and other designated personas the ability to quickly assess the state of devices in their environment and take action.
 
 For more information about CMPivot from the admin center, see [Tenant attach: Launch CMPivot from the admin center](../../../tenant-attach/cmpivot-start.md), [CMPivot overview](../../../tenant-attach/cmpivot-overview-attached.md), and [CMPivot sample scripts](../../../tenant-attach/cmpivot-samples-attached.md).
 
-### <a name="bkmk_atp"></a> Microsoft Defender Antivirus policies in the Microsoft Endpoint Manager admin center
+### <a name="bkmk_atp"></a> Microsoft Defender Antivirus policies in the Microsoft Intune admin center
 <!--4812909-->
 You can now create Microsoft Defender antivirus policies in the Microsoft Endpoint Manager console and deploy them to Configuration Manager collections. For more information including detailed instructions and available settings, see the following articles:
 - [Tenant attach: Onboard Configuration Manager clients to Microsoft Defender for Endpoint from the admin center (preview)](../../../tenant-attach/atp-onboard.md)
@@ -55,7 +55,7 @@ You can now create Microsoft Defender antivirus policies in the Microsoft Endpoi
 
 ### Install applications from the admin center
 <!--7518897, 6024389-->
-You can initiate an application install in real time for a tenant attached device from the Microsoft Endpoint Manager admin center. Starting with Configuration Manager version 2006, the list of applications available for the device also includes applications deployed to the device's currently logged on user. For more information, see [Tenant attach: Install an application from the admin center](../../../tenant-attach/applications.md).  
+You can initiate an application install in real time for a tenant attached device from the Microsoft Intune admin center. Starting with Configuration Manager version 2006, the list of applications available for the device also includes applications deployed to the device's currently logged on user. For more information, see [Tenant attach: Install an application from the admin center](../../../tenant-attach/applications.md).  
 
 ### Import previously created Azure AD application during tenant attach onboarding
 <!--6479246-->
@@ -65,7 +65,7 @@ During a new onboarding, an administrator can specify a previously created appli
 
 ### Endpoint analytics data collection enabled by default
 <!--7065447, 7741111-->
-The **Enable Endpoint analytics data collection** client setting is now enabled by default. This setting allows your managed endpoints to send data, such as startup performance insights, to your Configuration Manager site server. This change affects local data collection only. Endpoint analytics data isn't uploaded to the Microsoft Endpoint Manager admin center until you [enable data upload in Configuration Manager](../../../../analytics/enroll-configmgr.md#bkmk_cm_upload). The new default value applies to the default client settings and any custom client settings created after upgrading to version 2006.
+The **Enable Endpoint analytics data collection** client setting is now enabled by default. This setting allows your managed endpoints to send data, such as startup performance insights, to your Configuration Manager site server. This change affects local data collection only. Endpoint analytics data isn't uploaded to the Microsoft Intune admin center until you [enable data upload in Configuration Manager](../../../../analytics/enroll-configmgr.md#bkmk_cm_upload). The new default value applies to the default client settings and any custom client settings created after upgrading to version 2006.
 
 - If you're upgrading from version 2002 to version 2006, existing custom client settings values are retained. The default value for **Enable Endpoint analytics data collection** in Configuration Manager version 2002 is **No**.
 - If you're upgrading to version 2006 from Configuration Manager version 1910 or prior, any pre-existing custom client settings that contain the **Computer Agent** group of settings inherits the new default of **Yes** for **Enable Endpoint analytics data collection**.
