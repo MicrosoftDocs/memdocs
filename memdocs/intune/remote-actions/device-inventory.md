@@ -44,7 +44,7 @@ This article shows you how to view all your devices, and their properties in the
    - **Overview** shows the device name, and lists some key properties of the device, like whether it's a personal or corporate device, serial number, primary user, and more. You can do the following on the device (depending on the device platform):
       - [Retire](devices-wipe.md#retire)
       - [Wipe](devices-wipe.md#wipe)
-      - [Delete](devices-wipe.md#delete-devices-from-the-intune-portal)
+      - [Delete](devices-wipe.md#delete-devices-from-the-intune-admin-center)
       - [Remote lock](device-remote-lock.md)
       - [Sync](device-sync.md)
       - [Reset passcode](device-passcode-reset.md)
