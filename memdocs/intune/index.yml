@@ -9,7 +9,7 @@ metadata:
   author: dougeby
   ms.author: dougeby
   manager: johmar
-  ms.date: 11/10/2021
+  ms.date: 02/14/2023
   ms.collection: 
   ms.custom: intro-hub-or-landing
 
@@ -24,16 +24,6 @@ highlightedContent:
     - title: Features in development
       itemType: overview
       url: ./fundamentals/in-development.md    
-    - title: Try Intune for free
-      itemType: get-started
-      url: ./fundamentals/free-trial-sign-up.md
-    - title: Set up automatic enrollment for Windows 10 devices
-      itemType: get-started
-      url: ./enrollment/quickstart-setup-auto-enrollment.md
-    - title: Intune reports
-      itemType: overview
-      url: ./fundamentals/reports.md
-
 
 
 productDirectory:
@@ -42,7 +32,7 @@ productDirectory:
   items:
     # Card
     - title: Learn
-      # imageSrc should be square in ratio with no white space
+
       imageSrc: ./media/icons/learn.svg
       links:
         - url: ./fundamentals/what-is-intune.md
@@ -87,18 +77,57 @@ productDirectory:
 
 conceptualContent:
   sections:
-  - title: Guides
+  - title: Platform and industry guides
     items:
     - title: Platform guides
       links:
-        - url: ./fundamentals/setup-steps.md
+        - url: ./fundamentals/deployment-guide-platform-windows.md
           itemType: how-to-guide
-          text: Steps to set up Intune
-    - title: Industry guides
+          text: Manage Windows 10/11 devices
+        - url: ./fundamentals/deployment-guide-platform-android.md
+          itemType: how-to-guide
+          text: Manage Android devices
+        - url: ./fundamentals/deployment-guide-platform-windows.md
+          itemType: how-to-guide
+          text: Manage iOS/iPadOS devices
+        - url: ./fundamentals/deployment-guide-platform-ios-ipados.md
+          itemType: how-to-guide
+          text: Manage macOS devices
+        - url: ./fundamentals/deployment-guide-platform-macos.md
+          itemType: how-to-guide
+          text: Manage macOS devices
+        - url: ./fundamentals/deployment-guide-platform-linux.md
+          itemType: how-to-guide
+          text: Manage Linux devices
+        - url: ./fundamentals/windows-holographic-for-business.md
+          itemType: how-to-guide
+          text: Manage Windows Holographic and HoloLens devices
+        - url: fundamentals/surface-management-portal.md
+          itemType: how-to-guide
+          text: Microsoft Surface Management portal
+
+    - title: Education guide
       links:
-        - url: ./fundamentals/setup-steps.md
+        - url: ./fundamentals/introduction-intune-education.md
           itemType: how-to-guide
-          text: Steps to set up Intune
+          text: What is Intune for Education?
+        - url: /intune-education/
+          itemType: how-to-guide
+          text: Microsoft Intune for Education docs
+
+
+    - title: Government guide
+      links:
+        - url: ./fundamentals/introduction-intune-government.md
+          itemType: concept
+          text: What is Intune for Government?
+        - url: ./fundamentals/ems-intune-govt-service-description.md
+          itemType: how-to-guide
+          text: Intune US Government service description
+        - url: ./fundamentals/intune-us-government-endpoints.md
+          itemType: reference
+          text: US government endpoints for Intune
+
   - title: How-to guides
     items:
    
