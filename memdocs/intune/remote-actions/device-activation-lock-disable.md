@@ -1,9 +1,9 @@
 ---
 # required metadata
 
-title: Bypass iOS/iPadOS Activation Lock with Intune
+title: Disable Activation Lock on Apple devices with Intune
 titleSuffix: Microsoft Intune
-description: Learn how to use Intune to bypass iOS/iPadOS Activation Lock to access locked devices.
+description: Learn how to use Intune to disable Activation Lock on Apple devices to access locked devices.
 keywords:
 author: Smritib17
 ms.author: smbhardwaj
@@ -79,7 +79,7 @@ Additionally, Intune can directly issue the bypass code to Apple's activation se
 Before you can disable Activation Lock on iOS/iPadOS devices, you must enable it by following these instructions:
 
 1. Configure an Intune device restriction profile for iOS/iPadOS using the information in [How to configure device restriction settings](../configuration/device-restrictions-configure.md).
-2. In the [device restriction settings for iOS/iPadOS](../configuration/device-restrictions-ios.md), under the **General** settings, enable the option **Allow Activation Lock**.
+2. In the [device restriction settings for iOS/iPadOS](../configuration/device-restrictions-ios.md), under the **General** settings, enable the option **Allow activation lock**.
 3. Save the profile, and then [assign it](../configuration/device-profile-assign.md) to the devices on which you want to manage Disable Activation Lock.
 
 
