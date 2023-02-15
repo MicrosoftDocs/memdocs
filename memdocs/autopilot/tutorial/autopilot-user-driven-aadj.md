@@ -30,89 +30,112 @@ Before beginning, refer to the [How to: Plan your Azure AD join implementation](
 
 ## Workflow
 
- Configure and assign Autopilot Enrollment Status Page (ESP) > Create Autopilot profile > Create device group > Assign Autopilot profile to device group > Import device > Assign Autopilot profile to device > Assign User to device (optional)
+ Create device group > Configure and assign Autopilot Enrollment Status Page (ESP) > Create Autopilot profile > Assign Autopilot profile to device group > Import device > Assign Autopilot profile to device > Assign User to device (optional)
+
+## Create a device group
+
+Device groups are a collection of devices organized into a Azure AD group. Device groups are used in Autopilot to target devices for specific configurations such what policies to apply to a device and what applications to install on the device.
+
+Device groups can either by dynamic or assigned:
+
+- **Dynamic groups** - Devices are automatically added to the group based on rules
+- **Assigned groups** - Devices are manually added to the group and are static
+
+When configuring Autopilot, dynamic groups are primarily used since a large number of devices are usually involved. Adding the devices in automatically rules makes management of the group a lot easier. Adding a large amount of device in manually via an assigned group would be impractical. However, if there is a small number of devices, for example for testing purposes, an assigned group can also be used.
+
+To create a dynamic device group for use with Autopilot, follow the below steps:
+
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+
+2. Select **Groups** > **New group**.
+
+3. In the **New Group** screen, configure the following properties:
+
+    1. **Group type**: Select **Security**.
+
+    2. **Group name** and **Group description**: Enter a name and description for the device group.
+
+    3. **Azure AD roles can be assigned to the group**: Select **No**.
+
+    4. **Membership type**: Select **Dynamic Device**.
+
+    5. **Owners**: Select users that own the group.
+
+    6. **Dynamic device members**: Select **Add dynamic query**. In the **Dynamic membership rules** screen, select **Add expression**.
+
+      > [!NOTE]
+      > When selecting **Dynamic Device** in step d, this field will change to **Dynamic device members**.
+
+      Rules on what devices will be added to the device group are entered in the **Dynamic membership rules** screen under **Configure Rules**. Rules can be entered in the rule builder via the drop down boxes or the rule syntax can be directly entered via the **Edit** option in the **Rule syntax** section.
+
+      The most common type of dynamic device group when using Autopilot is a device group that contains all Autopilot devices. A dynamic device group that contains all Autopilot devices has the following syntax:
+
+      `(device.devicePhysicalIDs -any (_ -contains "[ZTDID]"))`
+
+      This rule can be entered in by selecting the **Edit** option in the **Rule syntax** section and then pasting in the rule in the **Edit rule syntax** screen under **Rule syntax**. Once the rule has been pasted in, select **OK**, and then select **Save**.
+
+      For more information on creating rules for dynamic groups, see [Dynamic membership rules for groups in Azure Active Directory](/azure/active-directory/enterprise-users/groups-dynamic-membership).
+
+4. Once the dynamic rule has been entered and saved, in the **New Group** screen, select **Create**. This will finish creating the dynamic group.
+
+> [!NOTE]
+> The above steps are creating a dynamic group in Azure AD which is used by Intune and Autopilot. Although the groups can be accessed in the Intune portal, they are Azure AD groups.
+
+> [!TIP]
+> For Configuration Manager admins, device groups are similar to device based collections. Dynamic device groups are similar to query based device collections while assigned device groups are similar to direct membership device collections.
+
+For more information on creating groups in Intune, see the following articles:
+
+- [Create device groups](/mem/autopilot/enrollment-autopilot)
+- [Add groups to organize users and devices](/mem/intune/fundamentals/groups-add)
+- [Manage Azure Active Directory groups and group membership](/azure/active-directory/fundamentals/how-to-manage-groups)
 
 ## Configure and assign Autopilot Enrollment Status Page (ESP)
 
-The first step is to make a decision regarding whether the Enrollment Status Page (ESP) will be used. The main feature of the ESP is that it displays progress and current status to the end user while the device is being set up and enrolled. It can also be used to block a user from using the device until all required policies and applications are installed. The ESP is recommended if the device has many policies and applications that need to be installed. If the ESP is not enabled in these scenarios, it may make end users think that that the device is hung during the setup process due to the amount of time it is taking with no progress or status being displayed.
+The next step is to make a decision regarding whether the Enrollment Status Page (ESP) will be used. The main feature of the ESP is that it displays progress and current status to the end user while the device is being set up and enrolled. It can also be used to block a user from using the device until all required policies and applications are installed. The ESP is recommended if the device has many policies and applications that need to be installed. If the ESP is not enabled in these scenarios, it may make end users think that that the device is hung during the setup process due to the amount of time it is taking with no progress or status being displayed.
 
-To configure and assigned an Autopilot Enrollment Status Page (ESP):
+To show the Autopilot Enrollment Status Page (ESP) during Autopilot, follow the below steps to configure and assign an ESP:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Devices**.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Windows** > **Windows enrollment** > **Enrollment Status Page**.
+2. Select **Devices** > **By platform: Windows**
 
-3. Select **Create**.
+3. Select **Windows enrollment** > **General: Enrollment Status Page**.
 
-4. In **Basics**, enter the following properties:  
-     - **Name**: Name your profile so you can easily identify it later. 
-     - **Description**: Enter a description for the profile. This setting is optional, but recommended.  
+4. In the **Enrollment Status Page**, select **Create**.
 
-5. Select **Next**.
+5. In the **Create profile** screen, under **Basics**, enter a **Name** and **Description** for the ESP profile, and then select **Next**.
 
-6. In **Settings**, configure the following settings:  
+6. In the **Create profile** screen, under **Settings**, toggle the option **Show app and profile configuration progress** to **Yes**.
 
-    - **Show app and profile configuration progress**: Your options:
-      - **No**: The enrollment status page doesn't appear during device setup. Select this option if you don't want to show the ESP to users.  
-      - **Yes**: The enrollment status page appears during device setup.    
+7. After toggling the option **Show app and profile configuration progress** to **Yes**, several new options will appear. Configure these options based on the desired behavior for the ESP. Details on each of these options can be found in the article [Set up the Enrollment Status Page](/mem/intune/enrollment/windows-enrollment-status#create-new-profile).
 
-    - **Show an error when installation takes longer than specified number of minutes**: The default time-out is 60 minutes. Enter a higher value if you think more time is needed to install apps on your devices.
+8. Once the different ESP options under **Settings** have been configured as desired, select **Next**.
 
-    - **Show custom message when time limit or error occur**: Include a message that tells people what happened and who to contact for help. Your options:  
-       - **No**: The default message is shown to users when an error occurs. That message is: "Setup could not be completed. Please try again or contact your support person for help."  
-       - **Yes**: Your custom message is shown to users when an error occurs. Enter your message in the provided text box.  
+9. Under **Assignments**, select **Add groups**.
 
-    - **Turn on log collection and diagnostics page for end users**: The user's logs and diagnostics could aid with troubleshooting, so we recommend turning this on. Your options:  
-       - **No**: The collect logs button isn't shown to users when an installation error occurs. The Windows Autopilot diagnostics page isn't shown on devices running Windows 11.  
-       - **Yes**: The collect logs button is shown to users when an installation error occurs. The Windows Autopilot diagnostics page is shown on devices running Windows 11.  
+10. In the the **Select groups to include** pane, select the device group(s) to target the ESP profile. This normally would be the device group created in the section [Create a device group](#create-a-device-group). After selecting the device group, select **Select**.
 
-    - **Only show page to devices provisioned by out-of-box experience (OOBE)**: Your options:
-       - **No**: The enrollment status page is shown on all Intune-managed and co-managed devices that go through the out-of-box experience (OOBE), and to the first user that signs in to each device. So subsequent users who sign in don't see the ESP. 
-       - **Yes**: The enrollment status page is only shown on devices that go through the out-of-box experience (OOBE).
+    > [!TIP]
+    >
+    > After selecting the device group(s), you can select the **Edit filter** option on each device group added to the assignment to further refine what devices are targeted for the ESP profile. For example, this can be useful if you want to exclude some of the devices that are members in the device group(s) selected.
 
-       > [!TIP]
-       > If you only want the ESP to appear on Autopilot devices during initial device setup, select the **No** option. Then create a new ESP profile, choose the **Yes** option, and target the profile to an Autopilot device group.  
+11. Select **Next**.  
 
-    - **Block device use until all apps and profiles are installed**: Your options:
-       - **No**: Users can leave the ESP before Intune is finished setting up the device. 
-       - **Yes**: Users can't leave the ESP until Intune is done setting up the device. This option unlocks additional settings for this scenario.  
-
-    - **Allow users to reset device if installation error occurs**: Your options:  
-        - **No**: The ESP doesn't give users the option to reset theirs devices when an installation fails.  
-        - **Yes**: The ESP gives users the option to reset their devices when an installation fails.  
-
-    - **Allow users to use device if installation error occurs**: Your options:  
-         - **No**: The ESP doesn't give users the option to bypass the ESP when an installation fails.  
-         - **Yes**: The ESP gives users the option to bypass the ESP and use their devices when an installation fails.
-
-    - **Block device use until these required apps are installed if they are assigned to the user/device**: Your options:  
-         - **All**: All assigned apps must be installed before users can use their devices.  
-         - **Selected**: Select-apps must be installed before users can use their devices. Choose this option to select from your managed apps.  
-
-7. Select **Next**.
-
-8. In **Assignments**, select the groups that will receive your profile. Optionally, select **Edit filter** to restrict the assignment further.
+12. Optionally, in **Scope tags**, assign a tag to limit profile management to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. Then select **Next**.   
 
     > [!NOTE]
-    > Due to OS restrictions, a limited selection of filters are available for ESP assignments. The picker only shows filters that have rules defined for `osVersion`, `operatingSystemSKU`, and `enrollmentProfileName` properties. Filters that contain other properties aren't available.  
+    > Scope tags limit who can see and reprioritize ESP profiles in the admin center. A scoped user can tell the relative priority of their profile even if they can't see all of the other profiles in Intune. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](../../intune/fundamentals/scope-tags.md).  
 
-9. Select **Next**.  
+13. In **Review + create**, review your settings. After you select **Create**, your changes are saved, and the profile is assigned. Once deployed, the profile will be applied the next time the devices check in. You can access the profile from your profiles list. 
 
-10. Optionally, in **Scope tags**, assign a tag to limit profile management to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. Then select **Next**.   
-
-    > [!NOTE]
-    > Scope tags limit who can see and reprioritize ESP profiles in the admin center. A scoped user can tell the relative priority of their profile even if they can't see all of the other profiles in Intune. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md).  
-
-11. In **Review + create**, review your settings. After you select **Create**, your changes are saved, and the profile is assigned. Once deployed, the profile will be applied the next time the devices check in. You can access the profile from your profiles list. 
+> [!TIP]
+> For Configuration Manager admins, an ESP is similar and analogous to ConfigMgr client settings.
 
 [Windows Autopilot Enrollment Status Page](/mem/autopilot/enrollment-status)
 [Set up the Enrollment Status Page](/mem/intune/enrollment/windows-enrollment-status)
 
 ## Create Autopilot profile
-
-## Create device group
-
-[Create device groups](/mem/autopilot/enrollment-autopilot)
 
 ## Assign Autopilot profile to device group
 
