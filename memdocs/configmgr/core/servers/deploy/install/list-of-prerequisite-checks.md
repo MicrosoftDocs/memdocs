@@ -708,7 +708,7 @@ The Configuration Manager computer is a member of a Windows domain.
 ### Desktop Analytics is being retired
 
 <!--14840670--> 
-Desktop Analytics will be retired on November 30, 2022. Check out the new reports in the Microsoft Endpoint Manager admin center. For more information see: https://go.microsoft.com/fwlink/?linkid=2186861.
+Desktop Analytics will be retired on November 30, 2022. Check out the new reports in the Microsoft Intune admin center. For more information see: https://go.microsoft.com/fwlink/?linkid=2186861.
 
 <!--14840670-->
 

@@ -64,7 +64,7 @@ Follow the appropriate guidance to manage RDP device redirections.
 
 To manage any of the redirections by using the Settings Catalog, create and assign a device configuration policy:
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration profiles** > **Create profile**.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration profiles** > **Create profile**.
 
 2. Select the **Windows 10 and later** platform, the **Settings catalog (preview)** profile type, then **Create**.
 

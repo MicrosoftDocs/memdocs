@@ -108,7 +108,7 @@ The **Groups** tab provides the group membership of all Azure AD groups for a sp
 | Column           | Description                                                                                                                         |
 |--------------------|-------------------------------------------------------------------------------------------------------------------------------------|
 | Name               | The name of the group.                                                                                                     |
-| Object ID          | The Object ID is used by Azure Active Directory. Endpoint Manager commonly refers to them as Group ID.                                                                                       |
+| Object ID          | The Object ID is used by Azure Active Directory. Intune commonly refers to them as Group ID.                                                                                       |
 | Membership type    | Provides how you assign and add users. **Assigned** denotes you manually assign users or devices to the group, and manually remove users or devices. **Dynamic User** denotes you create membership rules to automatically add and remove members. **Dynamic Device** denotes you create dynamic group rules to automatically add and remove devices.                                                                                 |
 | Direct or Transitive      | Identifies whether the device is a direct member or a transitive member.                                                                                                       |
 

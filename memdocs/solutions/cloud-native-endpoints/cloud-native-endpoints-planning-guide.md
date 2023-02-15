@@ -416,7 +416,7 @@ This phase transitions new Windows endpoint provisioning to Azure AD joined. Onc
 
   Before resetting an existing Windows endpoint, be sure to:
   
-  1. [Delete the device in Intune](../../intune/remote-actions/devices-wipe.md#delete-devices-from-the-intune-portal).
+  1. [Delete the device in Intune](../../intune/remote-actions/devices-wipe.md#delete-devices-from-the-intune-admin-center).
   2. [Delete the Windows Autopilot device registration](../../autopilot/add-devices.md).
   3. [Delete the existing Azure AD device object](/azure/active-directory/devices/manage-stale-devices).
   

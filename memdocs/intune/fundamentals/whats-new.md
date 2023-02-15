@@ -736,8 +736,8 @@ Two new Windows 11 SE operating system SKU's are available. You can use these SK
 
 For more information on filters and the device properties you can use, go to:
 
-- [Use filters when assigning your apps, policies, and profiles in Microsoft Endpoint Manager](filters.md)
-- [Device properties, operators, and rule editing when creating filters in Microsoft Endpoint Manager](filters-device-properties.md)
+- [Use filters when assigning your apps, policies, and profiles in Microsoft Intune](filters.md)
+- [Device properties, operators, and rule editing when creating filters in Microsoft Intune](filters-device-properties.md)
 
 Applies to:
 
@@ -961,7 +961,7 @@ Android device users can select, view, and remove their default app selections i
 #### Microsoft Endpoint Manager branding change<!-- 15812021 -->  
 As of October 12, 2022, the name Microsoft Endpoint Manager will no longer be used. Going forward, we’ll refer to cloud-based unified endpoint management as Microsoft Intune and on-premises management as Microsoft Configuration Manager. With the launch of advanced management, Microsoft Intune will also become the name of our growing product family for endpoint management solutions at Microsoft.  For details, see [the official announcement](https://aka.ms/itsintune) on the endpoint management Tech Community blog. Documentation changes are ongoing to remove Microsoft Endpoint Manager.
 
-For related information, see [Endpoint management documentation]( ../../index.yml).
+For related information, see [Intune documentation]( ../../index.yml).
 
 #### Grace period status visible in Windows Company Portal<!-- 14746606 -->  
 Windows Company Portal now displays a grace period status to account for devices that don't meet compliance requirements but are still within their given grace period. Users are shown the date by which they need to become compliant and the instructions for how to become compliant. If users don't update their device by the given date, their device status changes to noncompliant. For more information about setting grace periods, see [Configure compliance policies with actions for noncompliance](../protect/actions-for-noncompliance.md#available-actions-for-noncompliance) and [Check access from Device details page](../user-help/check-device-access-windows-cpapp.md#check-access-from-device-details-page).
@@ -984,7 +984,7 @@ In the admin center, you can:
 ### Device Security
 
 #### Non-compliance warning message includes a link<!--13694184  -->  
-In Remote Help, a link has been added to the non-compliance warning notification **View device compliance information** and it allows a helper to learn more about why the device is not compliant in Microsoft Endpoint Manager.
+In Remote Help, a link has been added to the non-compliance warning notification **View device compliance information** and it allows a helper to learn more about why the device is not compliant in Microsoft Intune.
 
 For more information, go to:
 
@@ -1008,7 +1008,7 @@ When you select **?**, the admin center opens the help and support view in a new
 
 ### App management
 
-#### New app types for Microsoft Endpoint Manager<!-- 7210233 -->
+#### New app types for Microsoft Intune<!-- 7210233 -->
 As an admin, you will be able to create and assign two new types of Intune apps:
 - **iOS/iPadOS web clip** 
 - **Windows web link**
@@ -1194,7 +1194,7 @@ With Apple's release of macOS 13 Ventura, Microsoft Intune, the Company Portal a
 
 With Remote Help 4.0.1.13 fixes were introduced to address an issue that prevented people from having multiple sessions open at the same time. The fixes also addressed an issue where the app was launching without focus, and prevented keyboard navigation and screen readers from working on launch.
 
-For more information, go to [Use Remote Help with Intune and Microsoft Endpoint Manager](../remote-actions/remote-help.md)
+For more information, go to [Use Remote Help with Intune and Microsoft Intune](../remote-actions/remote-help.md)
 
 ## Week of August 29, 2022
 
@@ -1278,7 +1278,7 @@ You can create a device configuration policy that uses built-in ADMX templates. 
 You can also import custom and third party/partner ADMX and ADML templates into the Intune admin center. Once imported, you can create a device configuration policy, assign the policy to your devices, and manage the settings in the policy.
 
 For information, go to:
-- [Import custom ADMX and ADML administrative templates into Endpoint Manager](../configuration/administrative-templates-import-custom.md)
+- [Import custom ADMX and ADML administrative templates into Intune](../configuration/administrative-templates-import-custom.md)
 - [Overview: Use Windows 10/11 templates to configure group policy settings in Microsoft Intune](../configuration/administrative-templates-windows.md).
 
 Applies to:
@@ -1305,7 +1305,7 @@ On iOS/iPadOS 15+ devices enrolled using [User Enrollment](../enrollment/ios-use
 
 For more information, go to:
 - [Meet declarative device management](https://aka.ms/DDM2021) (opens Apple's web site)
-- [Microsoft simplifies Endpoint Manager enrollment for Apple updates](https://techcommunity.microsoft.com/t5/microsoft-endpoint-manager-blog/microsoft-simplifies-endpoint-manager-enrollment-for-apple/ba-p/3570319)
+- [Microsoft simplifies Intune enrollment for Apple updates](https://techcommunity.microsoft.com/t5/microsoft-endpoint-manager-blog/microsoft-simplifies-endpoint-manager-enrollment-for-apple/ba-p/3570319)
 - [Use the settings catalog to configure settings on Windows, iOS/iPadOS and macOS devices](../configuration/settings-catalog.md)
 
 Applies to:
@@ -1492,7 +1492,7 @@ Applies to:
 #### Remote Help Version: 4.0.1.12 release<!-- 14999203 -->
 With Remote Help 4.0.1.12 various fixes were introduced to address the 'Try again later' message that appears when not authenticated. The fixes also include an improved auto-update capability. 
 
-For more information, see [Use Remote Help with Intune and Microsoft Endpoint Manager](../remote-actions/remote-help.md)
+For more information, see [Use Remote Help with Intune](../remote-actions/remote-help.md)
 
 ### Device enrollment
 
@@ -1772,7 +1772,7 @@ In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=21094
 
 When you create a filter, you can select **Preview devices** to see a list of enrolled devices that match your filter criteria. In **Preview devices**, you can also search through the list using the device name, OS version, device model, device manufacturer, user principal name of the primary user, and device ID.
 
-For more information on filters, go to [Use filters when assigning your apps, policies, and profiles in Microsoft Endpoint Manager](../fundamentals/filters.md).
+For more information on filters, go to [Use filters when assigning your apps, policies, and profiles in Microsoft Intune](../fundamentals/filters.md).
 
 ## Week of July 18, 2022
 
@@ -1927,8 +1927,8 @@ Using Group Policy analytics, you can import your on-premises GPOs, and create a
 The Migrate feature is now supported on Sovereign Clouds.
 
 For more information on these features, go to:
-- [Analyze your on-premises GPOs using Group Policy analytics in Microsoft Endpoint Manager](../configuration/group-policy-analytics.md)
-- [Create a Settings Catalog policy using your imported GPOs in Microsoft Endpoint Manager](../configuration/group-policy-analytics-migrate.md)
+- [Analyze your on-premises GPOs using Group Policy analytics in Microsoft Intune](../configuration/group-policy-analytics.md)
+- [Create a Settings Catalog policy using your imported GPOs in Microsoft Intune](../configuration/group-policy-analytics-migrate.md)
 
 #### iOS/iPadOS platform is in settings catalog<!-- 13934066 -->
 The [settings catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. The iOS/iPadOS platform and some settings are now available in the settings catalog (**Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** for platform > **Settings catalog** for profile type).

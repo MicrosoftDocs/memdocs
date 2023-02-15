@@ -259,7 +259,7 @@ Scalar functions can be used in expressions. Currently the following scalar func
 ## <a name="bkmk_onprem_only"></a> Additional entities, operators, and functions for CMPivot from Configuration Manager
 
 > [!Important]
-> These items aren't supported when you run CMPivot from Microsoft Endpoint Manager admin center.
+> These items aren't supported when you run CMPivot from Microsoft Intune admin center.
 
 |Type|Item|Description|
 |--|--|---|

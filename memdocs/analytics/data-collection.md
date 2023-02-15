@@ -34,10 +34,10 @@ Endpoint analytics is available in all Intune locations in global Azure. Endpoin
 
     - For Configuration Manager-managed devices, data flows to the Microsoft Endpoint Management Service through the ConfigMgr [tenant attach](../configmgr/tenant-attach/device-sync-actions.md) connector. Devices don't need direct access to the Microsoft public cloud, but the ConfigMgr connector is cloud attached and requires connection to an Intune tenant. Devices send data to the Configuration Manager Server role every 24 hours, and the connector sends data to the Gateway Service every hour. For more information, see [Tenant attach data collection](../configmgr/tenant-attach/data-collection.md)
 
-1. The Microsoft Endpoint Management service processes data for each device and publishes the results for both individual devices and organizational aggregates in the admin console using [MS Graph APIs](/graph/api/resources/intune-device-mgt-conceptual?view=graph-rest-beta&preserve-view=true). The maximum latency end to end is 96 hours.
+1. The Microsoft Endpoint Management service processes data for each device and publishes the results for both individual devices and organizational aggregates in the Intune admin center using [MS Graph APIs](/graph/api/resources/intune-device-mgt-conceptual?view=graph-rest-beta&preserve-view=true). The maximum latency end to end is 96 hours.
   
 > [!Note]  
-> When you first setup Endpoint analytics, add new clients to the [Intune data collection policy](settings.md#bkmk_profile), or [enable device upload](../configmgr/tenant-attach/device-sync-actions.md#bkmk_edit) for a new collection, the reports in endpoint analytics portal may not show complete data right away. The data required to compute the startup score for a device is generated during boot time. Depending on power settings and user behavior, it may take weeks after a device has been enrolled to show the startup score on the admin console.
+> When you first setup Endpoint analytics, add new clients to the [Intune data collection policy](settings.md#bkmk_profile), or [enable device upload](../configmgr/tenant-attach/device-sync-actions.md#bkmk_edit) for a new collection, the reports in endpoint analytics portal may not show complete data right away. The data required to compute the startup score for a device is generated during boot time. Depending on power settings and user behavior, it may take weeks after a device has been enrolled to show the startup score on the Intune admin center.
 
 ## <a name="bkmk_datacollection"></a> Data collection
 

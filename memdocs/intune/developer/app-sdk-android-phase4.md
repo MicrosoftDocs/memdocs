@@ -573,7 +573,7 @@ Following the [First Policy Application Test] steps above, you may run into the 
 
 #### After logging in with a managed account, I am not prompted to install the Company Portal (step 7).
 
-First, visit the admin console and double check that the App Protection Policy is targeted to your test account.
+First, visit the Intune admin center and double check that the App Protection Policy is targeted to your test account.
 
 Second, double check your source code for calls to `registerAccountForMAM` and implementation of `MAMServiceAuthenticationCallback`. 
 If this former isn't called at the right time and/or the latter didn't properly provide a valid token, you won't see the Company Portal prompt.
@@ -594,7 +594,7 @@ Double check your source code's implementation of the `MAMServiceAuthenticationC
 Are there other SDK-integrated applications on your test device? 
 The app PIN is shared between all managed apps, and the SDK has a global timer to prevent end users from being prompted for the PIN on every managed app launch or resume.
 
-Otherwise, visit the admin console and double check that the App Protection Policy has app PIN enabled and is targeted to your test account.
+Otherwise, visit the Intune admin center and double check that the App Protection Policy has app PIN enabled and is targeted to your test account.
 
 As a last resort, restarting your device will reset the PIN timer.
 If the PIN screen doesn't show after restarting your device, it's likely not configured properly in the policy.
@@ -602,7 +602,7 @@ If the PIN screen doesn't show after restarting your device, it's likely not con
 #### I did see the Get Access screen, but screenshots are still allowed (step 12).
 
 While policy is being retrieved, the wrong policy is being applied. 
-First, visit the admin console and double check that the App Protection Policy does disable screenshots and is targeted to your test account. 
+First, visit the Intune admin center and double check that the App Protection Policy does disable screenshots and is targeted to your test account. 
 Second, use the diagnostic console (described above) to check the policy that's been pulled down for your app. 
 If both policies confirm that screenshots should be blocked, check your Gradle build plugin configuration to ensure that MAM replacements are being made.
 

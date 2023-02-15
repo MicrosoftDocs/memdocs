@@ -36,7 +36,7 @@ ms.custom: intune-classic
 
 Managed Google Play is Google's enterprise app store and sole source of applications for Android Enterprise in Intune. You can use Intune to orchestrate app deployment through Managed Google Play for any Android Enterprise scenario (including personally-owned work profile, dedicated, fully managed, and corporate-owned work profile enrollments). How you add Managed Google Play apps to Intune differs from how Android apps are added for non-Android Enterprise scenarios. Store apps, line-of-business (LOB) apps, and web apps are approved in or added to Managed Google Play, and then synchronized into Intune so that they appear in the Client Apps list. Once they appear in the Client Apps list, you can manage assignment of any Managed Google Play app as you would any other app.
 
-To make it easier for you to configure and use Android Enterprise management, upon connecting your Intune tenant to Managed Google Play, Intune will automatically add four common Android Enterprise related apps to the Intune admin console. The four apps are the following:
+To make it easier for you to configure and use Android Enterprise management, upon connecting your Intune tenant to Managed Google Play, Intune will automatically add four common Android Enterprise related apps to the Intune admin center. The four apps are the following:
 
 - **[Microsoft Intune](https://play.google.com/store/apps/details?id=com.microsoft.intune)** - Used for Android Enterprise fully managed scenarios. This app is automatically installed to fully managed devices during the device enrollment process.
 - **[Microsoft Authenticator](https://play.google.com/store/apps/details?id=com.azure.authenticator)** - Helps you sign-in to your accounts if you use two-factor verification. This app is automatically installed to fully managed devices during the device enrollment process.
@@ -69,7 +69,7 @@ There are three types of apps that are available with Managed Google Play:
 
 There are two ways to browse and approve Managed Google Play store apps with Intune:
 
-1. **Directly in the Intune console** - Browse and approve store apps in a view hosted within Intune. This opens directly in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and does not require you to reauthenticate with a different account.
+1. **Directly in the Intune admin center** - Browse and approve store apps in a view hosted within Intune. This opens directly in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and does not require you to reauthenticate with a different account.
 2. **In Managed Google Play console** - You can optionally open the Managed Google Play console directly and approve apps there. See [Sync a Managed Google Play app with Intune](#sync-a-managed-google-play-app-with-intune) for more information.  This requires a separate login using the account you used to connect your Intune tenant to Managed Google Play.
 
 ### Add a Managed Google Play store app directly in the Microsoft Intune admin center

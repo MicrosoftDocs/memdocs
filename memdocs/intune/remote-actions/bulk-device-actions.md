@@ -36,7 +36,7 @@ You can use bulk device actions for the following remote actions:
 - [Autopilot reset](/windows/deployment/windows-autopilot/windows-autopilot-reset#reset-devices-with-remote-windows-autopilot-reset)
 - [Collect diagnostics](collect-diagnostics.md)
 - [Custom notifications](custom-notifications.md#send-a-custom-notification-to-a-single-device)
-- [Delete](devices-wipe.md#delete-devices-from-the-intune-portal)
+- [Delete](devices-wipe.md#delete-devices-from-the-intune-admin-center)
 - [Rename](device-rename.md)
 - [Restart](device-restart.md)
 - [Retire](devices-wipe.md#retire)

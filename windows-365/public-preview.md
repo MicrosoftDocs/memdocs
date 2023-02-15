@@ -32,7 +32,7 @@ ms.collection: M365-identity-device-management
 
 Windows 365 releases features in "public preview". These features are being actively developed, and may not be complete. They're made available on a “Preview” basis. You can test and use these features in production environments and scenarios, and provide feedback.
 
-Preview features have a **(preview)** tag in the admin user interface (Microsoft Endpoint Manager admin center,  Microsoft 365 admin center, and windows365.microsoft.com).
+Preview features have a **(preview)** tag in the admin user interface (Microsoft Intune admin center,  Microsoft 365 admin center, and windows365.microsoft.com).
 
 ## What you need to know
 
