@@ -37,7 +37,7 @@ items:
       href: security.md
     - name: Encryption
       href: encryption.md
-    - name: Domain credential life cycle
+    - name: ANC domain credential life cycle
       href: azure-network-connection-domain-credential.md
   - name: Privacy and data
     href: privacy-personal-data.md
