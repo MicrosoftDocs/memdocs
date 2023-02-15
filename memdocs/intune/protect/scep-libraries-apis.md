@@ -300,7 +300,7 @@ Validating and testing that your solution is properly integrated with Intune is 
 10. Confirm the Trusted Root Certificate are installed on all the devices.
 11. Confirm the SCEP Certificates for the assigned profiles are installed on all the devices.
 12. Confirm the properties of the installed certificates match the properties set in the SCEP profile.
-13. Confirm the issued certificates are properly listed in the Intune console
+13. Confirm the issued certificates are properly listed in the Intune admin center
 
 ## See also
 

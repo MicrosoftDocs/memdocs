@@ -791,7 +791,7 @@ If you're unsure if any of these sections apply to your app, revisit [Key Decisi
 [Register for notifications from the SDK]:app-sdk-android-phase7.md#register-for-notifications-from-the-sdk
 [Handling Implicit Identity Changes in Manually Integrated Apps]:app-sdk-android-appendix.md#handling-implicit-identity-changes-in-manually-integrated-apps
 
-<!-- Links to other MEM docs -->
+<!-- Links to other Intune docs -->
 [Issue a selective wipe from the Microsoft Intune admin center]:/mem/intune/apps/apps-selective-wipe
 
 <!-- Class links -->

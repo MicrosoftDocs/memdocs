@@ -66,7 +66,7 @@ Following is an example workflow for an application. This same general workflow 
 
   This security task appears in the Microsoft Intune admin center with a status of Pending:
 
-  ![View the list of security tasks in the Intune console](./media/atp-manage-vulnerabilities/temp-security-tasks.png)
+  ![View the list of security tasks in the Intune admin center](./media/atp-manage-vulnerabilities/temp-security-tasks.png)
 
 - The Intune admin selects the security task to view details about the task.  The admin then selects **Accept**, which updates the status in Intune, and in Defender for Endpoint to be *Accepted*.
 

@@ -39,7 +39,7 @@ The following tables provide details of supported partner and Microsoft apps tha
 - Enforcing conditional launch behaviors to protect the work or school account data
 - Applying data loss prevention policies without managing the user's device
 - Enabling app protection without requiring enrollment
-- Enabling app protection on devices managed with third-party Unified Endpoint Management solutions
+- Enabling app protection on devices managed with third-party unified endpoint management solutions
 
 ## Advanced app settings
 

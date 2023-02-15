@@ -196,7 +196,7 @@ For guidance, see [Install and configure the Certificate Connector for Microsoft
    - **Profile**: Select **PKCS certificate**. Or, select **Templates** > **PKCS certificate**.
 
    > [!NOTE]
-   > On devices with an Android Enterprise profile, certificates installed using a PKCS certificate profile are not visible on the device. To confirm successful certificate deployment, check the status of the profile in the Intune console.
+   > On devices with an Android Enterprise profile, certificates installed using a PKCS certificate profile are not visible on the device. To confirm successful certificate deployment, check the status of the profile in the Intune admin center.
 
 4. Select **Create**.
 

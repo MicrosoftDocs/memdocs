@@ -8457,7 +8457,7 @@ Intune supports the ability to evaluate compliance on a user-less device, such a
 Intune admins can [delete Autopilot devices](../../autopilot/add-devices.md#delete-autopilot-devices).
 
 #### Improved device deletion experience<!--1832333 -->
-You're no longer be required to remove company data or factory reset a device before [deleting a device from Intune](../remote-actions/devices-wipe.md#delete-devices-from-the-intune-portal).
+You're no longer be required to remove company data or factory reset a device before [deleting a device from Intune](../remote-actions/devices-wipe.md#delete-devices-from-the-intune-admin-center).
 
 To see the new experience, sign in to Intune and select **Devices** > **All devices** > the name of the device > **Delete**.
 
