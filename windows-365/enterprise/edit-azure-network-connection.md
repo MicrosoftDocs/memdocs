@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 02/8/2022
+ms.date: 02/15/2022
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice:
@@ -34,7 +34,7 @@ All [Azure network connections](azure-network-connections.md) (ANC) get periodic
 
 ## Requirements
 
-To edit  an ANC, you must have the [Intune Administrator](/azure/active-directory/roles/permissions-reference#intune-administrator), [Windows 365 Administrator](/azure/active-directory/roles/permissions-reference), or [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) role.
+To edit  an ANC, you must have the [Intune Administrator](/azure/active-directory/roles/permissions-reference#intune-administrator), [Windows 365 Administrator](/azure/active-directory/roles/permissions-reference), or [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) role. You must also have the Subscription Reader role in the Azure Subscription where the VNET associated with the ANC was located.
 
 ## Edit an Azure network connection
 
