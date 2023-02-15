@@ -8,13 +8,16 @@ author: frankroj
 ms.author: frankroj
 manager: aaroncz
 ms.reviewer: jubaptis
-ms.date: 11/17/2022
+ms.date: 2/14/2023
 ms.collection: 
   - M365-modern-desktop
 ms.topic: article
 ---
 
 # Windows Autopilot: What's new
+
+## Bug fix: Intune Management Extension updates during Enrollment Status Page
+In 2302 the Intune Management extension will no longer attempt to upgrade during an active Enrollment Status Page session. Previously, the Intune Management Extension (IME) would attempt to upgrade during the Enrollment Status Page which can cause apps to timeout and subsequently fail the Autopilot deployment. This is more commonly seen in pre-provisioning scenarios where a device may be provisioned with one version of the IME during the technician phase, and may require an update during the user phase.
 
 ## Win32 App Supersedence ESP improvements 
 Starting in January 2023 we're currently in the process of rolling out Win32 app supersedence GA, which will introduce enhancements to ESP behavior around app tracking and app processing. Specifically, admins may notice a change in app counts. For more information, see [Win32 app supersedence improvements](https://techcommunity.microsoft.com/t5/intune-customer-success/upcoming-improvements-to-win32-app-supersedence/ba-p/3713026) and [Add Win32 app supersedence](/mem/intune/apps/apps-win32-supersedence).
