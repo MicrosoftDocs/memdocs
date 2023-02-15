@@ -208,11 +208,11 @@ conceptualContent:
 
     - title: Enroll devices
       links:
-        - url: ./enrollment/deployment-guide-enrollment.md
+        - url: ./fundamentals/deployment-guide-enrollment.md
           itemType: concept
           text: Microsoft Intune enrollment
 
-        - url: ./enrollment/deployment-guide-enrollment-windows.md
+        - url: ./fundamentals/deployment-guide-enrollment-windows.md
           itemType: concept  
           text: Get started with Windows enrollment
         - url: ./fundamentals/deployment-guide-enrollment-android.md
