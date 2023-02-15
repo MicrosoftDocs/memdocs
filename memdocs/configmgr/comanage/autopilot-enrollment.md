@@ -135,7 +135,7 @@ Autopilot into co-management currently doesn't support the following functionali
 
 Use the following process to configure the co-management policy in Intune:
 
-1. Go to the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/).
+1. Go to the [Microsoft Intune admin center](https://endpoint.microsoft.com/).
 
 1. Select the **Devices** menu, select **Enroll devices**, and then select **Windows enrollment**.
 

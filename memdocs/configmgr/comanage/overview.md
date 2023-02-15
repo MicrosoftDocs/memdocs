@@ -82,7 +82,7 @@ Co-management has these prerequisites in the following areas:
     > [!NOTE]
     > An Enterprise Mobility + Security (EMS) subscription includes both Azure Active Directory Premium and Microsoft Intune.
 
-- At least one Intune license for you as the administrator to access the Microsoft Endpoint Manager admin center.
+- At least one Intune license for you as the administrator to access the Microsoft Intune admin center.
 
     > [!TIP]
     > Make sure you assign an Intune license to the account that you use to sign in to your tenant. Otherwise, sign in fails with the error message *An unanticipated error occurred*.<!-- MEMDocs#691 -->

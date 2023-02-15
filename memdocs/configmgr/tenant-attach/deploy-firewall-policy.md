@@ -1,5 +1,5 @@
 ---
-title: Tenant attach - Deploy endpoint firewall from the Microsoft Endpoint Manager admin center  (preview)
+title: Tenant attach - Deploy endpoint firewall from the Microsoft Intune admin center  (preview)
 titleSuffix: Configuration Manager
 description: Create and deploy firewall policies from the Microsoft Endpoint Manager console and for Configuration Manager collections.
 ms.date: 09/27/2021
@@ -29,7 +29,7 @@ ms.collection: tier3
 
 ## <a name="bkmk_firewall"></a> Assign firewall policies to a collection
 
-1. Go to the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/).
+1. Go to the [Microsoft Intune admin center](https://endpoint.microsoft.com/).
 1. Select **Endpoint security** > **Firewall** then **Create Policy**.
 1. Create a profile with the following settings:
    - **Platform**: Windows 10 and later
