@@ -29,7 +29,6 @@ ms.suite: ems
 #ms.custom:
 ms.collection:
 - tier2
-- 
 ---
 
 # What information can my organization see when I enroll my device?

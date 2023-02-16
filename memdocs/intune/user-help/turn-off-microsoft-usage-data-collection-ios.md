@@ -30,7 +30,6 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection:
 - tier2
-- 
 ---
 
 # Share Company Portal usage data with Microsoft     

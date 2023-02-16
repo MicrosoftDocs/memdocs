@@ -29,7 +29,6 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection:
 - tier2
-- 
 ---
 
 # Remotely lock your device from the Company Portal website

@@ -27,7 +27,6 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection:
 - tier2
-- 
 ---
 
 # Check compliance in Company Portal app for Android     

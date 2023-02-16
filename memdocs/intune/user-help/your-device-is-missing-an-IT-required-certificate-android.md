@@ -28,7 +28,6 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection:
 - tier2
-- 
 ---
 
 # Install missing certificate required by your organization  

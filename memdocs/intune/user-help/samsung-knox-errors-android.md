@@ -28,7 +28,6 @@ ms.suite: ems
 #ms.custom:
 ms.collection:
 - tier2
-- 
 ---
 
 # Fix common issues with your Samsung Knox device

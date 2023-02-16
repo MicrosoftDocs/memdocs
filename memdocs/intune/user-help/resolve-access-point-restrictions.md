@@ -29,7 +29,6 @@ ms.reviewer: arnab
 ms.custom: intune-enduser
 ms.collection:
 - tier2
-- 
 ---
 
 # Resolve access point restrictions

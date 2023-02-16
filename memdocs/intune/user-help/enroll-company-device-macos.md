@@ -28,7 +28,6 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection:
 - tier2
-- 
 ---
 
 # Enroll your organization-provided macOS device in management

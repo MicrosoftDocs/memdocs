@@ -28,7 +28,6 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection:
 - tier2
-- 
 ---
 
 # Turn off Microsoft data collection on AOSP device  

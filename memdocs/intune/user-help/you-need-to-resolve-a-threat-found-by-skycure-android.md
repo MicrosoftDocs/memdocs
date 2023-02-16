@@ -30,7 +30,6 @@ ms.reviewer: heenamac
 ms.custom: intune-enduser
 ms.collection:
 - tier2
-- 
 ---
 
 # Resolve a threat found by Symantec Endpoint Protection Mobile on Android

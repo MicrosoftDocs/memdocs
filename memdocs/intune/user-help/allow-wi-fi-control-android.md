@@ -27,7 +27,6 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection:
 - tier2
-- 
 --- 
 
 # Allow Company Portal to control Wi-Fi  

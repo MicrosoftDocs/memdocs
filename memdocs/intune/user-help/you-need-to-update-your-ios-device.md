@@ -29,7 +29,6 @@ ms.suite: ems
 ms.custom: intune-enduser; seodec18
 ms.collection:
 - tier2
-- 
 ---
 
 # Your iOS device doesn't have the required minimum operating system version

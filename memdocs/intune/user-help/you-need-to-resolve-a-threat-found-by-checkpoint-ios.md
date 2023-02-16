@@ -28,7 +28,6 @@ ms.reviewer: heenamac
 ms.custom: intune-enduser
 ms.collection:
 - tier2
-- 
 ---
 
 # Resolve a threat found by Harmony Mobile Protect on iOS

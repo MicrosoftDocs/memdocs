@@ -30,7 +30,6 @@ ms.reviewer: priyar
 ms.custom: intune-enduser, contperf-fy21q1
 ms.collection:
 - tier2
-- 
 ---
  
 # Device password requirements  

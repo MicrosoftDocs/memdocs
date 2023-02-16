@@ -28,7 +28,6 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection:
 - tier2
-- 
 ---
 
 # Reset device passcode from Company Portal website

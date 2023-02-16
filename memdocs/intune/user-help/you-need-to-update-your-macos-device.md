@@ -30,7 +30,6 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection:
 - tier2
-- 
 ---
 
 # Your macOS device doesn't have the required minimum operating system version

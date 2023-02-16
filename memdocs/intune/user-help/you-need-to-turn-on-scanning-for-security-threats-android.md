@@ -29,7 +29,6 @@ ms.reviewer: chrisbal
 ms.custom: intune-enduser
 ms.collection:
 - tier2
-- 
 ---
 
 # Turn on Google Play Protect   

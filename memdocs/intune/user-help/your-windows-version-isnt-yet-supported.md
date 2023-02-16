@@ -31,7 +31,6 @@ ms.suite: ems
 ms.custom: intune-enduser; seodec18
 ms.collection:
 - tier2
-- 
 ---
 # Your Windows device's operating system version isn't yet supported
 

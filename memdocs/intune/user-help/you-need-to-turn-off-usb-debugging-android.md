@@ -29,7 +29,6 @@ ms.reviewer: chrisbal
 ms.custom: intune-enduser; seodec18
 ms.collection:
 - tier2
-- 
 ---
 
 # Turn off USB debugging mode 

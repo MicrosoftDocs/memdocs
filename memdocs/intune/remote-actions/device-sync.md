@@ -26,7 +26,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier3
 - M365-identity-device-management
-  ---
+---
 
 # Sync devices to get the latest policies and actions with Intune
 

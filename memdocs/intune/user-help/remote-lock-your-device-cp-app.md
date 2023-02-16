@@ -26,7 +26,6 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection:
 - tier2
-- 
 ---
 
 # Lock your device from the Company Portal app for Windows  

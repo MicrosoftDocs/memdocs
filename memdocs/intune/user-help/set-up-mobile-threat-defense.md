@@ -28,7 +28,6 @@ ms.reviewer: aanavath
 ms.custom: intune-enduser, contperf-fy21q1
 ms.collection:
 - tier2
-- 
 ---  
 
 # Install mobile threat defense app  

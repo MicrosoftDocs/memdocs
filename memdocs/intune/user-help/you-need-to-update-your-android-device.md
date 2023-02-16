@@ -28,7 +28,6 @@ ms.suite: ems
 ms.custom: intune-enduser; seodec18
 ms.collection:
 - tier2
-- 
 ---
 
 # You need to update your Android device

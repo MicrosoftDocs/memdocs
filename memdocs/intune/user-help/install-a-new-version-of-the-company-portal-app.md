@@ -29,7 +29,6 @@ ms.reviewer: priyar
 ms.custom: intune-enduser
 ms.collection:
 - tier2
-- 
 ---
 
 # Update the Company Portal app  

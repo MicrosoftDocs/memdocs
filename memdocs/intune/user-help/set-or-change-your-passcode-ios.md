@@ -29,7 +29,6 @@ ms.reviewer: esmich
 ms.custom: intune-enduser 
 ms.collection:
 - tier2
-- 
 ---
 
 # Set a device passcode on iOS device  

@@ -27,7 +27,6 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection:
 - tier2
-- 
 ---
 
 # Check access from Company Portal app for Windows
