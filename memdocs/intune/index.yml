@@ -158,6 +158,12 @@ conceptualContent:
         - url: ./protect/actions-for-noncompliance.md
           itemType: how-to-guide
           text: Actions for non-compliant devices
+        - url: ./protect/compliance-use-custom-settings.md
+          itemType: concept
+          text: Use custom compliance policies and settings for Linux and Windows devices 
+        - url: ./protect/device-compliance-partners.md
+          itemType: how-to-guide
+          text: Support third-party device compliance partners 
 
     - title: Control device features and settings
       links:
@@ -196,7 +202,7 @@ conceptualContent:
       links:
         - url: ./fundamentals/deployment-guide-enrollment.md
           itemType: concept
-          text: Microsoft Intune enrollment
+          text: Enrollment overview
 
         - url: ./fundamentals/deployment-guide-enrollment-windows.md
           itemType: concept  
@@ -208,10 +214,10 @@ conceptualContent:
           itemType: concept
           text: Get started with iOS/iPadOS enrollment
         - url: ./fundamentals/deployment-guide-enrollment-linux.md
-          itemType: how-to-guide
+          itemType: concept
           text: Get started with Linux enrollment      
         - url: ./fundamentals/deployment-guide-enrollment-macos.md
-          itemType: how-to-guide
+          itemType: concept
           text: Get started with macOS enrollment
 
     - title: Initiate remote actions
