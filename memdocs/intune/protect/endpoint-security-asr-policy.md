@@ -141,7 +141,7 @@ The following device control profile settings are available in for *removable st
 
 For information about these options, see the following articles in the Microsoft Defender for Endpoint documentation:
 
-- [Printer Protection Overview](/microsoft-365/security/defender-endpoint/printer-protection-overview?view=o365-worldwide)
+- [Printer Protection Overview](/microsoft-365/security/defender-endpoint/printer-protection-overview)
 - [Microsoft Defender for Endpoint Device Control Removable Storage Access Control](/microsoft-365/security/defender-endpoint/device-control-removable-storage-access-control)
 
 When you configure a Device control profile and one or more reusable settings groups, you also configure *Actions* to define how the settings in those groups are used.

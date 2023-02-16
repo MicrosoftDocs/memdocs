@@ -151,7 +151,7 @@ On the profiles Configuration settings page, use an option that supports adding 
    For more information about these options, see the following articles in the Microsoft Defender for Endpoint documentation:
 
    - [Microsoft Defender for Endpoint Device Control Removable Storage Access Control](/microsoft-365/security/defender-endpoint/device-control-removable-storage-access-control) in the Microsoft Defender for Endpoint documentation.
-   - [Printer Protection Overview](/microsoft-365/security/defender-endpoint/printer-protection-overview?view=o365-worldwide)
+   - [Printer Protection Overview](/microsoft-365/security/defender-endpoint/printer-protection-overview)
 
 4. For the rule you saved, select **Set reusable settings** for *Included ID* and *Excluded ID* to meet your needs. Both selections open a *Select reusable settings* pane.
 
