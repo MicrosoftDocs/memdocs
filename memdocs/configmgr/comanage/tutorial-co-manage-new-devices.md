@@ -49,7 +49,7 @@ In this tutorial, you will:
   > [!TIP]  
   > An Enterprise Mobility + Security subscription [free trial](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-trial) includes both Azure Active Directory Premium and Microsoft Intune.  
   >
-  > You no longer need to purchase and assign individual Intune or Enterprise Mobility + Security licenses to your users. For more information, see [Product and licensing FAQ](../core/understand/product-and-licensing-faq.yml#what-changes-with-licensing-for-co-management-in-microsoft-endpoint-manager-).
+  > You no longer need to purchase and assign individual Intune or Enterprise Mobility + Security licenses to your users. For more information, see [Product and licensing FAQ](../core/understand/product-and-licensing-faq.yml#what-changes-with-licensing-for-co-management-in-the-microsoft-intune-family-of-products-).
 
 ### On-premises infrastructure
 

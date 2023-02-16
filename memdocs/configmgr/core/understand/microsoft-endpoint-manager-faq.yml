@@ -66,7 +66,7 @@ sections:
       - question: |
           Are there any licensing changes?
         answer: |
-          Yes! As announced at Microsoft Ignite 2019, if you're licensed for Configuration Manager, then you're also now licensed for Intune to [co-manage](../../comanage/overview.md) your Windows PCs. For more information, see the [Product and licensing FAQ](product-and-licensing-faq.yml#what-changes-with-licensing-for-co-management-in-microsoft-endpoint-manager-).
+          Yes! As announced at Microsoft Ignite 2019, if you're licensed for Configuration Manager, then you're also now licensed for Intune to [co-manage](../../comanage/overview.md) your Windows PCs. For more information, see the [Product and licensing FAQ](product-and-licensing-faq.yml#what-changes-with-licensing-for-co-management-in-the-microsoft-intune-family-of-products-).
           
       - question: |
           Why do I still see "System Center Configuration Manager" some places?

@@ -60,7 +60,7 @@ The user account accessing tenant attach features within the Microsoft Intune ad
 ## <a name="bkmk_list"></a> List a user’s devices based on usage in the troubleshooting portal
 <!--6974300-->
 
-The troubleshooting portal in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) allows you to search for a user and view their associated devices. Tenant attached devices that are assigned [user device affinity automatically based on usage](../apps/deploy-use/link-users-and-devices-with-user-device-affinity.md#set-up-the-site-to-automatically-create-user-device-affinities) will now be returned when searching for a user.
+The troubleshooting portal in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) allows you to search for a user and view their associated devices. Tenant attached devices that are assigned [user device affinity automatically based on usage](../apps/deploy-use/link-users-and-devices-with-user-device-affinity.md#set-up-the-site-to-automatically-create-user-device-affinities) will now be returned when searching for a user.
 ### Prerequisites for listing a user's device in the troubleshooting portal
 
 - An environment that's tenant attached with uploaded devices
@@ -70,7 +70,7 @@ The troubleshooting portal in [Microsoft Intune admin center](https://go.microso
    - 
 ### View a user's devices
 
-1. Go to the  [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 1. Select **Troubleshooting + support**.
 1. On the **Troubleshoot** page, select **Change user** then search for a user.
 1. The **Devices** chart lists the ConfigMgr devices associated with the user.  
