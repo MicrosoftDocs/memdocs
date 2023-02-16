@@ -7,6 +7,8 @@ items:
     href: overview.md
   - name: Scores, baselines, and insights
     href: scores.md
+  - name: Anomaly detection
+    href: anomaly-detection.md
 - name: Quickstarts
   items:
   - name: Enroll Intune devices
