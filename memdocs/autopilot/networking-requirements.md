@@ -112,7 +112,7 @@ If the device can't send diagnostic data, the Autopilot process still continues.
 
 Windows must be able to tell that the device can access the internet. For more information, see [Network Connection Status Indicator (NCSI)](/windows/privacy/manage-connections-from-windows-operating-system-components-to-microsoft-services#14-network-connection-status-indicator).
 
-`www.msftconnecttest.com` must be resolvable via DNS and accessible via HTTP.
+`*.msftconnecttest.com` must be resolvable via DNS and accessible via HTTP.
 
 ### Windows Notification Services (WNS)
 
