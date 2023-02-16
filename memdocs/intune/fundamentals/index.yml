@@ -10,9 +10,8 @@ metadata:
   ms.subservice: fundamentals
   ms.topic: landing-page 
   ms.collection:
-- tier2
-- 
-    - collection
+  - tier2
+  - collection
   author: dougeby
   ms.author: erikre
   manager: dougeby

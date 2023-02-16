@@ -26,7 +26,7 @@ search.appverid: MET150
 ms.collection:
 - tier3
 - M365-identity-device-management
-  ---
+---
 
 
 # Settings for Windows Update that you can manage through Intune policy for Update rings

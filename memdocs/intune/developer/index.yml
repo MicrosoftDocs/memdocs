@@ -10,8 +10,8 @@ metadata:
   ms.subservice: developer
   ms.topic: landing-page 
   ms.collection:
-- tier2
-- collection
+  - tier2
+  - collection
   author: erikre
   ms.author: erikre
   manager: dougeby
