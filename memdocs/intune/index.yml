@@ -190,7 +190,6 @@ conceptualContent:
           itemType: how-to-guide
           text: Use policy sets to group collections of management objects
 
-
     - title: Enroll devices
       links:
         - url: ./fundamentals/deployment-guide-enrollment.md
