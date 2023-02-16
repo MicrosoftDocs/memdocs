@@ -101,9 +101,9 @@ For more information, see the following resources:
 
 - [Remote Help: a new remote assistance tool from Microsoft (blog post)](https://techcommunity.microsoft.com/t5/microsoft-endpoint-manager-blog/remote-help-a-new-remote-assistance-tool-from-microsoft/ba-p/2822622)
 
-- [Enable remote help scenarios with Microsoft Endpoint Manager (demo video)](https://techcommunity.microsoft.com/t5/video-hub/enable-remote-help-scenarios-with-microsoft-endpoint-manager/ba-p/2911349)
+- [Enable remote help scenarios with Microsoft Intune (demo video)](https://techcommunity.microsoft.com/t5/video-hub/enable-remote-help-scenarios-with-microsoft-endpoint-manager/ba-p/2911349)
 
-- [Use Remote Help with Intune and Microsoft Endpoint Manager](../../../../../intune/remote-actions/remote-help.md)
+- [Use Remote Help with Intune and Configuration Manager](../../../../../intune/remote-actions/remote-help.md)
 
 #### <a name="bkmk_note4"></a> Note 4: Support for alternate content providers
 

@@ -27,4 +27,4 @@ Below are a few common query needs and how CMPivot can be used to meet them. CMP
 ## Next steps
 
 For more information, see [Launch CMPivot from the admin center](cmpivot-start.md)
-For more information on entities for your queries, see [Microsoft Endpoint Manager tenant attach: CMPivot usage overview](cmpivot-overview-attached.md).
+For more information on entities for your queries, see [Microsoft Intune tenant attach: CMPivot usage overview](cmpivot-overview-attached.md).

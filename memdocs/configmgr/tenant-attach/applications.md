@@ -18,7 +18,7 @@ ms.collection: tier3
 <!--cm 6024389, in 7220536 pubpreview Aug 10, 2020, GA 2201-->
 *Applies to: Configuration Manager (current branch)*
 
-Microsoft Endpoint Manager is an integrated solution for managing all of your devices. Microsoft brings together Configuration Manager and Intune into a single console called **Microsoft Intune admin center**. From the Microsoft Endpoint Management admin center, you can initiate an application install in real time for a tenant attached device.
+The Microsoft Intune family of products is an integrated solution for managing all of your devices. Microsoft brings together Configuration Manager and Intune into a single console called **Microsoft Intune admin center**. From the Microsoft Endpoint Management admin center, you can initiate an application install in real time for a tenant attached device.
 
    :::image type="content" source="media/6024389-tenant-attach-application-list.png" alt-text="Screenshot of applications in Microsoft Intune admin center." lightbox="media/6024389-tenant-attach-application-list.png":::
 

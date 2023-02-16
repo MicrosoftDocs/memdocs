@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot client details
 titleSuffix: Configuration Manager
-description: Troubleshoot client details for Configuration Manager tenant attach
+description: Troubleshoot client details for Intune tenant attach
 ms.date: 07/11/2022
 ms.topic: troubleshooting
 ms.prod: configuration-manager

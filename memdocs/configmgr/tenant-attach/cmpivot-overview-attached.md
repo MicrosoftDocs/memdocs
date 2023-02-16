@@ -22,7 +22,7 @@ CMPivot allows you to quickly assess the state of a device in your environment a
 
 ## <a name="bkmk_refine"></a> Refine CMPivot queries
 
-When using CMPivot from the Microsoft Endpoint Manager admin console, ensure your queries are tuned for performance. If you request a query with a data set that is too large, you may receive `Error: The query result is too large, retry with additional filters`. Refine your query to be more specific if you see this error. The following operators are commonly used to refine queries:
+When using CMPivot from the Microsoft Intune admin center, ensure your queries are tuned for performance. If you request a query with a data set that is too large, you may receive `Error: The query result is too large, retry with additional filters`. Refine your query to be more specific if you see this error. The following operators are commonly used to refine queries:
 
 - Use `count` if you only need the number of items returned.
 - Use `project` if you only need specific columns.
@@ -39,4 +39,4 @@ When using CMPivot from the Microsoft Endpoint Manager admin console, ensure you
 ## Next steps
 
 For more information, see [Launch CMPivot from the admin center](cmpivot-start.md)
-For more sample scripts, see [Microsoft Endpoint Manager tenant attach: CMPivot script samples](cmpivot-samples-attached.md).
+For more sample scripts, see [Microsoft Intune tenant attach: CMPivot script samples](cmpivot-samples-attached.md).

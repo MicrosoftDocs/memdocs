@@ -19,11 +19,11 @@ ms.collection: tier3
 <!--6024387, 6374854, 6521921, intune 7552762 pubpreview July 7, 2020, GA 2201-->
 *Applies to: Configuration Manager (current branch)*
 
-Microsoft Endpoint Manager is an integrated solution for managing all of your devices. Microsoft brings together Configuration Manager and Intune into a single console called **Microsoft Intune admin center**. You can see ConfigMgr client details including collections, boundary group membership, and real-time client information for a specific device in the admin center.
+The Microsoft Intune family of products is an integrated solution for managing all of your devices. Microsoft brings together Configuration Manager and Intune into a single console called **Microsoft Intune admin center**. You can see ConfigMgr client details including collections, boundary group membership, and real-time client information for a specific device in the admin center.
 
 ## Prerequisites
 
-- All of the prerequisites for [Microsoft Endpoint Manager tenant attach](device-sync-actions.md) and a tenant attached environment.
+- All of the prerequisites for [Microsoft Intune tenant attach](device-sync-actions.md) and a tenant attached environment.
 - One of the following browsers:
   - Microsoft Edge, version 77 and later
   - Google Chrome

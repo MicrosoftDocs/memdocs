@@ -20,7 +20,7 @@ ms.reviewer: mstewart,aaroncz
 
 <!--CMADO-3601237,INADO-4297660-->
 
-Starting in version 2006, the Company Portal is now the cross-platform app portal experience for Microsoft Endpoint Manager. By configuring co-managed devices to also use the Company Portal, you can provide a consistent user experience on all devices.
+Starting in version 2006, the Company Portal app is now the cross-platform app portal experience for Microsoft Intune family of products. By configuring co-managed devices to also use the Company Portal app, you can provide a consistent user experience on all devices.
 
 The Company Portal supports the following actions:
 

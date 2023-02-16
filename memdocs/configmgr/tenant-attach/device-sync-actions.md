@@ -1,5 +1,5 @@
 ---
-title: Enable Microsoft Endpoint Manager tenant attach
+title: Enable Microsoft Intune tenant attach
 titleSuffix: Configuration Manager
 description: Upload your Configuration Manager devices to the cloud service and take actions from the admin center.
 ms.date: 08/12/2022
@@ -13,11 +13,11 @@ ms.localizationpriority: high
 ms.collection: tier3
 ---
 
-# <a name="bkmk_attach"></a> Enable Microsoft Endpoint Manager tenant attach: Device sync and device actions
+# <a name="bkmk_attach"></a> Enable Microsoft Intune tenant attach: Device sync and device actions
 <!--3555758 live 3/4/2020  Configuration Manager version 2002 min-->
 *Applies to: Configuration Manager (current branch)*
 
-Microsoft Endpoint Manager is an integrated solution for managing all of your devices. Microsoft brings together Configuration Manager and Intune into a single console called **Microsoft Intune admin center**. You can upload your Configuration Manager devices to the cloud service and take actions from the **Devices** blade in the admin center.
+The Microsoft Intune family of products is an integrated solution for managing all of your devices. Microsoft brings together Configuration Manager and Intune into a single console called **Microsoft Intune admin center**. You can upload your Configuration Manager devices to the cloud service and take actions from the **Devices** blade in the admin center.
 
 > [!IMPORTANT]
 > When you attach your Configuration Manager site with a Microsoft Intune tenant, the site sends more data to Microsoft. [Tenant attach data collection](data-collection.md) article summarizes the data that is sent.

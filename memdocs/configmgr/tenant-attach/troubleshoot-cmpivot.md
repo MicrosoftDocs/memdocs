@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot CMPivot for devices uploaded to the admin center
 titleSuffix: Configuration Manager
-description: Troubleshooting CMPivot for Configuration Manager tenant attach
+description: Troubleshooting CMPivot for Intune tenant attach
 ms.date: 07/11/2022
 ms.topic: troubleshooting
 ms.prod: configuration-manager

@@ -29,13 +29,13 @@ To take full advantage of new Configuration Manager features, after you update t
 
 <!--4960084-->
 
-Configuration Manager is now part of Microsoft Endpoint Manager.
+Configuration Manager is now part of the Microsoft Intune family of products.
 
 ![Microsoft Configuration Manager](media/4960084-endpoint-manager-logo.png)
 
-Microsoft Endpoint Manager is an integrated solution for managing all of your devices. Microsoft brings together Configuration Manager and Intune with simplified licensing. Continue to make use of your existing Configuration Manager investments while you take advantage of the power of the Microsoft cloud at your own pace.
+The Microsoft Intune family of products is an integrated solution for managing all of your devices. Microsoft brings together Configuration Manager and Intune with simplified licensing. Continue to make use of your existing Configuration Manager investments while you take advantage of the power of the Microsoft cloud at your own pace.
 
-The following Microsoft management solutions are all now part of the Microsoft Endpoint Manager brand:
+The following Microsoft management solutions are all now part of the Microsoft Intune family of products:
 
 - [Configuration Manager](/configmgr)
 - [Intune](/intune)
@@ -49,7 +49,7 @@ For more information, see the following posts from Brad Anderson, Microsoft corp
 - [Vision paper](https://aka.ms/MEMVisionPaper)
 - [Announcement summary video](https://youtu.be/GS7oNPInFuw)
 
-### What things change in Configuration Manager with Microsoft Endpoint Manager?
+### What things change in Configuration Manager?
 
 In version 1910, aside from the name change, Configuration Manager still functions the same. Some of the name changes might impact your use of the following components:
 
@@ -57,7 +57,7 @@ In version 1910, aside from the name change, Configuration Manager still functio
 
 - **Software Center**: Find the Software Center shortcut under the Windows Start menu in the **Microsoft Endpoint Manager** folder.
 
-![Microsoft Endpoint Manager Start menu icons](media/microsoft-endpoint-manager-start-menu.png)
+![Microsoft Intune Start menu icons](media/microsoft-endpoint-manager-start-menu.png)
 
 Make sure to update any internal documentation that you maintain to include these new locations.
 

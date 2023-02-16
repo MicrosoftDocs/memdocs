@@ -1,7 +1,7 @@
 ---
-title: Microsoft Endpoint Manager tenant attach prerequisites
+title: Microsoft Intune tenant attach prerequisites
 titleSuffix: Configuration Manager
-description: Prerequisites for Microsoft Endpoint Manager tenant attach.
+description: Prerequisites for Microsoft Intune tenant attach.
 ms.date: 07/11/2022
 ms.topic: conceptual
 ms.prod: configuration-manager
@@ -14,11 +14,11 @@ ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
 
-# Microsoft Endpoint Manager tenant attach: Prerequisites
+# Microsoft Intune tenant attach: Prerequisites
 <!--3555758 live 3/4/2020  Configuration Manager version 2002 min-->
 *Applies to: Configuration Manager (current branch)*
 
-Microsoft Endpoint Manager is an integrated solution for managing all of your devices. Microsoft brings together Configuration Manager and Intune into a single console called **Microsoft Intune admin center**. You can upload your Configuration Manager devices to the cloud service and take actions from the **Devices** page in the admin center. Some of the features you may want to use include:
+The Microsoft Intune family of products is an integrated solution for managing all of your devices. Microsoft brings together Configuration Manager and Intune into a single console called **Microsoft Intune admin center**. You can upload your Configuration Manager devices to the cloud service and take actions from the **Devices** page in the admin center. Some of the features you may want to use include:
 
 - Run PowerShell [scripts](scripts.md)
 - Install [applications](applications.md)
