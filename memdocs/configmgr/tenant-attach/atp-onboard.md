@@ -28,7 +28,7 @@ The Microsoft Intune family of products is an integrated solution for managing a
 
 ## <a name="bkmk_onboard"></a> Create Microsoft Defender for Endpoint policies
 
-1. Sign in to the [Microsoft Intune admin center](https://endpoint.microsoft.com).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 1. Select **Endpoint security** > **Endpoint detection and response** > **Create Policy**.
 

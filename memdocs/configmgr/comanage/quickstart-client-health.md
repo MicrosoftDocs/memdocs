@@ -52,7 +52,7 @@ To get started with this feature, use the following steps:
 
 ### Review Configuration Manager client health in Intune
 
-1. Sign into the [Microsoft Intune admin center](https://endpoint.microsoft.com/).
+1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 1. In the menu under **Troubleshooting + support**, go to the **Troubleshoot** page.
 

@@ -20,7 +20,7 @@ ms.reviewer: mstewart,aaroncz
 
 Below are a few common query needs and how CMPivot can be used to meet them. CMPivot uses a subset of the [Kusto Query Language (KQL)](/azure/kusto/query).
 
-[!INCLUDE [Sample scripts for both Microsoft Endpoint Manager and Configuration Manager use](includes/cmpivot-samples-shared.md)]
+[!INCLUDE [Sample scripts for both Microsoft Intune and Configuration Manager use](includes/cmpivot-samples-shared.md)]
 
 ## Next steps
 

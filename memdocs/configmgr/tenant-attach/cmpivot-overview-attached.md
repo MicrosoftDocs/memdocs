@@ -1,7 +1,7 @@
 ---
 title: Tenant attached CMPivot usage overview
 titleSuffix: Configuration Manager
-description: CMPivot usage overview for Microsoft Endpoint Manager tenant attached devices.
+description: CMPivot usage overview for Microsoft Intune tenant attached devices.
 ms.date: 01/25/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -33,7 +33,7 @@ When using CMPivot from the Microsoft Intune admin center, ensure your queries a
 > When using CMPivot to query a device, if there isn't a response within 10 minutes, the query will timeout. <!--7802754-->
 
 
-[!INCLUDE [Overview article sections for both Microsoft Endpoint Manager and Configuration Manager use](../core/servers/manage/includes/cmpivot-overview-shared.md)]
+[!INCLUDE [Overview article sections for both Microsoft Intune and Configuration Manager use](../core/servers/manage/includes/cmpivot-overview-shared.md)]
 
 
 ## Next steps

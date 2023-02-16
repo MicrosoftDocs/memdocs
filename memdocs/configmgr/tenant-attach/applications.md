@@ -60,7 +60,7 @@ You can filter the application list based on the status. The application status 
 
 ## <a name="bkmk_deploy"></a> Deploy an application to a device
 
-1. In a browser, navigate to [https://endpoint.microsoft.com](https://endpoint.microsoft.com).
+1. In a browser, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 1. Select **Devices** then **All Devices**.
 1. Select a device that is synced from Configuration Manager via [tenant attach](device-sync-actions.md).
 1. Select **Applications**.
@@ -105,7 +105,7 @@ Administrators can do the following actions for applications in the Microsoft In
 
 #### Uninstall, repair, reinstall, or re-evaluate an application
 
-1. Sign in to the [Microsoft Intune admin center](https://endpoint.microsoft.com).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 1. Go to **Devices** then **All Devices**.
 1. Select a device that is synced from Configuration Manager via [tenant attach](device-sync-actions.md).
 1. Choose **Applications**.
@@ -128,7 +128,7 @@ The option, **An administrator must approve a request for this application on th
 
 ### Review status of an application
 
-1. Go to the [Microsoft Intune admin center](https://endpoint.microsoft.com/) and sign in.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 1. From **Devices** > **All devices**, choose a device managed by **ConfigMgr**.
 1. Select **Applications** then select an application that has a **Status** of **Required**.
 1. Review the details of the schedule for the installation of the application.

@@ -15,7 +15,7 @@ ms.reviewer: mstewart,aaroncz
 
 # What happened to System Center Configuration Manager?
 
-Starting in version 1910, Configuration Manager current branch is now part of Microsoft Endpoint Manager. Version 1906 and earlier are still branded System Center Configuration Manager. The Microsoft Endpoint Manager brand will appear in the product and documentation over the coming months.
+Starting in version 1910, Configuration Manager current branch is now part of the Microsoft Intune family of products. Version 1906 and earlier are still branded System Center Configuration Manager.
 
 There's no change to the other components of the [System Center suite](/system-center).
 
