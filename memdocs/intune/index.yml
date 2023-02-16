@@ -160,10 +160,10 @@ conceptualContent:
           text: Actions for non-compliant devices
         - url: ./protect/compliance-use-custom-settings.md
           itemType: concept
-          text: Use custom compliance policies and settings for Linux and Windows devices
+          text: Use custom compliance policies and settings for Linux and Windows devices 
         - url: ./protect/device-compliance-partners.md
           itemType: how-to-guide
-          text: Support third-party device compliance partners
+          text: Support third-party device compliance partners 
 
     - title: Control device features and settings
       links:
