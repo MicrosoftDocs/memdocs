@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting application installation
 titleSuffix: Configuration Manager
-description: Troubleshooting application installation for Configuration Manager tenant attach
+description: Troubleshooting application installation for Intune tenant attach
 ms.date: 07/11/2022
 ms.topic: troubleshooting
 ms.prod: configuration-manager

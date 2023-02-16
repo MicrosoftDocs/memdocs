@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting resource explorer
 titleSuffix: Configuration Manager
-description: Troubleshooting resource explorer for Configuration Manager tenant attach
+description: Troubleshooting resource explorer for Intune tenant attach
 ms.date: 01/25/2022
 ms.topic: troubleshooting
 ms.prod: configuration-manager

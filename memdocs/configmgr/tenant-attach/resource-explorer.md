@@ -18,7 +18,7 @@ ms.collection: tier3
 <!--cm 6479284 in 7220536 pubpreview Sept 8, 2020, GA 2201-->
 *Applies to: Configuration Manager (current branch)*
 
-Microsoft Endpoint Manager is an integrated solution for managing all of your devices. Microsoft brings together Configuration Manager and Intune into a single console called **Microsoft Intune admin center**. From the Microsoft Endpoint Management admin center, you can view hardware inventory for uploaded Configuration Manager devices by using resource explorer.
+The Microsoft Intune family of products is an integrated solution for managing all of your devices. Microsoft brings together Configuration Manager and Intune into a single console called **Microsoft Intune admin center**. From the Microsoft Endpoint Management admin center, you can view hardware inventory for uploaded Configuration Manager devices by using resource explorer.
 
    :::image type="content" source="media/6479284-resource-explorer.png" alt-text="Resource explorer in Microsoft Intune admin center" lightbox="media/6479284-resource-explorer.png":::
 

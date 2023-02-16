@@ -25,7 +25,7 @@ Always review the latest checklist for installing this update. For more informat
 
 To take full advantage of new Configuration Manager features, after you update the site, also update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.
 
-## <a name="bkmk_tenant"></a> Microsoft Endpoint Manager tenant attach
+## <a name="bkmk_tenant"></a> Microsoft Intune tenant attach
 
 ### Scripts from the admin center
 <!--IN7220536, CM6234688  -->
@@ -33,7 +33,7 @@ Bring the power of the Configuration Manager on-premises [Run scripts](../../../
 
 ### <a name="bkmk_timeline"></a> Device timeline in the admin center
 <!--7220536, CM7141381-->
-When Configuration Manager synchronizes a device to Microsoft Endpoint Manager through tenant attach, you'll be able to see a timeline of events. This timeline shows past activity on the device that can help you troubleshoot problems. For more information, see [Tenant attach: Device timeline in the admin center](../../../tenant-attach/timeline.md).
+When Configuration Manager synchronizes a device to Microsoft Intune through tenant attach, you'll be able to see a timeline of events. This timeline shows past activity on the device that can help you troubleshoot problems. For more information, see [Tenant attach: Device timeline in the admin center](../../../tenant-attach/timeline.md).
 
 ### <a name="bkmk_hinv"></a> Resource explorer in the admin center
 <!--6479284-->
@@ -47,7 +47,7 @@ For more information about CMPivot from the admin center, see [Tenant attach: La
 
 ### <a name="bkmk_atp"></a> Microsoft Defender Antivirus policies in the Microsoft Intune admin center
 <!--4812909-->
-You can now create Microsoft Defender antivirus policies in the Microsoft Endpoint Manager console and deploy them to Configuration Manager collections. For more information including detailed instructions and available settings, see the following articles:
+You can now create Microsoft Defender antivirus policies in the Microsoft Intune admin center and deploy them to Configuration Manager collections. For more information including detailed instructions and available settings, see the following articles:
 - [Tenant attach: Onboard Configuration Manager clients to Microsoft Defender for Endpoint from the admin center (preview)](../../../tenant-attach/atp-onboard.md)
 - [Tenant attach: Deploy endpoint security Antivirus policy from the admin center (preview)](../../../tenant-attach/deploy-antivirus-policy.md)
 - [Settings for Microsoft Defender Antivirus policy for tenant attached devices in Microsoft Intune](../../../../intune/protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json).
@@ -59,7 +59,7 @@ You can initiate an application install in real time for a tenant attached devic
 
 ### Import previously created Azure AD application during tenant attach onboarding
 <!--6479246-->
-During a new onboarding, an administrator can specify a previously created application during onboarding to tenant attach. For more information, see [Microsoft Endpoint Manager tenant attach: Device sync and device actions](../../../tenant-attach/device-sync-actions.md#bkmk_aad_app).
+During a new onboarding, an administrator can specify a previously created application during onboarding to tenant attach. For more information, see [Microsoft Intune tenant attach: Device sync and device actions](../../../tenant-attach/device-sync-actions.md#bkmk_aad_app).
 
 ## <a name="bkmk_ea"></a> Endpoint analytics
 
@@ -114,7 +114,7 @@ Intranet clients can now access a CMG software update point when it's assigned t
 
 <!--CMADO-3601237,INADO-4297660-->
 
-The Company Portal is now the cross-platform app portal experience for Microsoft Endpoint Manager. By configuring co-managed devices to also use the Company Portal, you can provide a consistent user experience on all devices.
+The Company Portal app is now the cross-platform app portal experience for the Microsoft Intune family of products. By configuring co-managed devices to also use the Company Portal app, you can provide a consistent user experience on all devices.
 
 For more information, see [Use the Company Portal app on co-managed devices](../../../comanage/company-portal.md).
 

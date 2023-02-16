@@ -7,7 +7,7 @@ ms.date: 02/25/2021
 ms.localizationpriority: medium
 ---
 
-<!--This file is shared by the CMPivot script samples articles for both Microsoft Endpoint Manager tenant attach and Configuration Manager-->
+<!--This file is shared by the CMPivot script samples articles for both Microsoft Intune tenant attach and Configuration Manager-->
 
 
 ## Operating system

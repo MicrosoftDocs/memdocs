@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting the device timeline
 titleSuffix: Configuration Manager
-description: Troubleshooting the device timeline for Configuration Manager tenant attach
+description: Troubleshooting the device timeline for Intune tenant attach
 ms.date: 07/11/2022
 ms.topic: troubleshooting
 ms.prod: configuration-manager
