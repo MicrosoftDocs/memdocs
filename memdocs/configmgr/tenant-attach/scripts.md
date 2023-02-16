@@ -48,7 +48,7 @@ The user account needs the following permissions:
 
 ## Run a script
 
-1. In a browser, navigate to [https://endpoint.microsoft.com](https://endpoint.microsoft.com).
+1. In a browser, go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 1. Select **Devices** then **All Devices**.
 1. Select a device that is synced from Configuration Manager via [tenant attach](device-sync-actions.md).
 1. Select **Scripts**.

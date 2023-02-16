@@ -29,7 +29,7 @@ To take full advantage of new Configuration Manager features, after you update t
 
 ### Troubleshooting portal lists a user's devices based on usage
 <!--6974300-->
-The troubleshooting portal in [Microsoft Intune admin center](https://endpoint.microsoft.com/) allows you to search for a user and view their associated devices. Starting in this release, tenant attached devices that are assigned user device affinity automatically based on usage will now be returned when searching for a user.
+The troubleshooting portal in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) allows you to search for a user and view their associated devices. Starting in this release, tenant attached devices that are assigned user device affinity automatically based on usage will now be returned when searching for a user.
 
 For more information, see [Tenant attach: ConfigMgr client details in the admin center](../../../tenant-attach/client-details.md#bkmk_list).
 
