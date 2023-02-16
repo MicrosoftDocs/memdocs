@@ -23,10 +23,10 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 #ms.custom:
-ms.collection: 
-  - M365-identity-device-management
-  - tier3
----
+ms.collection:
+- tier3
+- M365-identity-device-management
+  ---
 
 
 # Settings for Windows Update that you can manage through Intune policy for Update rings

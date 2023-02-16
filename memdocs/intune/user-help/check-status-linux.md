@@ -25,7 +25,9 @@ ms.reviewer: ilwu
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
-ms.collection: 
+ms.collection:
+- tier2
+- 
 ---
 
 # Check status in Microsoft Intune app for Linux 

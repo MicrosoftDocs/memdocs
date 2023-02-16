@@ -28,7 +28,9 @@ ms.reviewer: elocholi
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
-ms.collection: 
+ms.collection:
+- tier2
+- 
 ---
 
 # Your macOS device doesn't have the required minimum operating system version

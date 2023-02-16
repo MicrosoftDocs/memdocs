@@ -26,7 +26,9 @@ ms.suite: ems
 ms.custom: 
    - intune-azure
    - contperf-fy21q1
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
  
 # Manage security baseline profiles in Microsoft Intune

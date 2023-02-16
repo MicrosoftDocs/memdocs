@@ -25,6 +25,7 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.collection:
+- tier2
 - Android
 ms.custom: intune-azure;workProfilesUpdate
 
