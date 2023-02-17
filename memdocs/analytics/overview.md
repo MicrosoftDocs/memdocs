@@ -6,8 +6,8 @@ ms.date: 11/15/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: overview
-author: mestew
-ms.author: mstewart
+author: smritib17
+ms.author: smbhardwaj
 manager: dougeby
 #Customer intent: As an Intune or Configuration Manager admin, I want to have visibility into the end-user experience so that I can improve it.
 ms.localizationpriority: high
@@ -45,7 +45,7 @@ You can enroll devices via Configuration Manager or Microsoft Intune.
    - After clicking **Start** for gathering data, other read-only roles can view the data.
 
 ### <a name="bkmk_cm_prereq"></a> To enroll devices via Configuration Manager requires:
-- A minimum of Configuration Manager version 2002 with [KB4560496 - Update rollup for Microsoft Endpoint Configuration Manager version 2002](https://support.microsoft.com/help/4560496) or later
+- A minimum of Configuration Manager version 2002 with [KB4560496 - Update rollup for Microsoft Configuration Manager version 2002](https://support.microsoft.com/help/4560496) or later
 - The Configuration Manager clients upgraded to version 2002 (including [KB4560496](https://support.microsoft.com/help/4560496)) or later
 - [Microsoft Endpoint Manager tenant attach](../configmgr/tenant-attach/device-sync-actions.md) enabled.
 - [Enable Endpoint analytics for devices uploaded to Microsoft Endpoint Manager](enroll-configmgr.md#bkmk_cm_upload).
@@ -58,7 +58,7 @@ Whether enrolling devices via Intune or Configuration Manager, [**Proactive reme
 
 ## Licensing Prerequisites
 
-Devices enrolled in Endpoint analytics need a valid license for the use of Microsoft Endpoint Manager. For more information, see [Microsoft Intune licensing](../intune/fundamentals/licenses.md) or [Microsoft Endpoint Configuration Manager licensing](../configmgr/core/understand/learn-more-editions.md).
+Devices enrolled in Endpoint analytics need a valid license for the use of Microsoft Endpoint Manager. For more information, see [Microsoft Intune licensing](../intune/fundamentals/licenses.md) or [Microsoft Configuration Manager licensing](../configmgr/core/understand/learn-more-editions.md).
 
 Proactive remediations also requires users of the devices to have one of the following licenses:
 - Windows 10/11 Enterprise E3 or E5 (included in Microsoft 365 F3, E3, or E5)

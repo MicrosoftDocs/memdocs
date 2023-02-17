@@ -67,7 +67,7 @@ To enable Intune to manage user permissions for cloud-attached devices, use the 
 1. Select **On** for the **Use Intune RBAC** option, then choose **Apply**.
 1. The change may take about 10 minutes to take effect.
 
-:::image type="content" source="media/14996522-connectors-flyout.png" alt-text="Screenshot of the Microsoft Endpoint Configuration Manager connectors and tokens page in Microsoft Endpoint Manager admin center. The Use Intune RBAC flyout is displayed in the screenshot." lightbox="media/14996522-connectors-flyout.png":::
+:::image type="content" source="media/14996522-connectors-flyout.png" alt-text="Screenshot of the Microsoft Configuration Manager connectors and tokens page in Microsoft Endpoint Manager admin center. The Use Intune RBAC flyout is displayed in the screenshot." lightbox="media/14996522-connectors-flyout.png":::
 
 ## <a name="bkmk_verify-intune-rbac"></a> Verify role-based access control permissions from Intune
 

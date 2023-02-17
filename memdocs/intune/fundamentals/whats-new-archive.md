@@ -304,14 +304,14 @@ For more information, see [Manage Microsoft Defender for Endpoint on devices wit
 ### Device management
 
 
-#### Elevation enhancements to Remote help<!-- 12453415 -->
+#### Elevation enhancements to Remote Help<!-- 12453415 -->
 
 Elevation permissions will no longer be assigned when a session is started. Elevation permissions will now apply only when JIT (just in time) access is requested.  The access is requested with the click of a button on the toolbar. 
 When elevation permissions are assigned, the log off behavior for the sharer has been modified as follows:
- - If the admin (helper) ends the remote help session, the user (sharer) will not be logged off.
+ - If the admin (helper) ends the Remote Help session, the user (sharer) will not be logged off.
  - If the sharer tries to end the session, they will be prompted that they will be logged off if they continue.
  - If the sharer is a local admin on their device, the access UAC prompt option will not be available to the helper as they can guide the sharer to perform elevated actions under their own profile.
-For more information about remote help, see [Use Remote help](../remote-actions/remote-help.md)
+For more information about Remote Help, see [Use Remote Help](../remote-actions/remote-help.md)
 
 ## Week of May 2, 2022
 
@@ -1094,9 +1094,9 @@ For corporate devices, data about managed and unmanaged apps continues to be inc
 
 ### Monitor and troubleshoot
 
-#### Remote help is moving in the Microsoft Endpoint Manager admin center<!-- 12868177 -->
-The remote help page in the Microsoft Endpoint Manager admin center has moved and its now available directly under **Tenant administration** instead of **Connectors and tokens**. 
-For more information about remote help, see [Use remote help](../remote-actions/remote-help.md).
+#### Remote Help is moving in the Microsoft Endpoint Manager admin center<!-- 12868177 -->
+The Remote Help page in the Microsoft Endpoint Manager admin center has moved and its now available directly under **Tenant administration** instead of **Connectors and tokens**. 
+For more information about Remote Help, see [Use Remote Help](../remote-actions/remote-help.md).
 
 ## January 2022
 
@@ -1294,8 +1294,8 @@ Filters allow you to include or exclude devices in policy or app assignments bas
 
 ### Device management
 
-#### Launch Remote help from within the admin center<!-- 12773983 -->
-You can now [launch remote help from within the Microsoft Endpoint Manager admin center](../remote-actions/remote-help.md#how-to-use-remote-help). To do so, in the admin center go to **All devices** and select the device on which assistance is needed. Then select **New remote help session**, which is available from the remote actions bar across the top of the devices view. 
+#### Launch Remote Help from within the admin center<!-- 12773983 -->
+You can now [launch Remote Help from within the Microsoft Endpoint Manager admin center](../remote-actions/remote-help.md#how-to-use-remote-help). To do so, in the admin center go to **All devices** and select the device on which assistance is needed. Then select **New Remote Help session**, which is available from the remote actions bar across the top of the devices view. 
 
 #### Endpoint analytics filtering<!--7207888 -->
 You can now [add filters](../../analytics/scores.md#filter-reports) to the tables in [Endpoint analytics](../../analytics/overview.md) reports. Using filters enables you to discover trends in your environment or spot potential issues.  
@@ -1514,21 +1514,21 @@ For more information, see [Manage Microsoft Defender for Endpoint on devices wit
 
 ### Monitor and troubleshoot
 
-#### Remote help app is available as a public preview<!-- 9843480 -->
+#### Remote Help app is available as a public preview<!-- 9843480 -->
 
-As a public preview, you can use of the remote help app with your Intune tenant. With remote help, users who authenticate to your Azure Active directly can remotely assist others by connecting a remote help session between devices.
+As a public preview, you can use of the Remote Help app with your Intune tenant. With Remote Help, users who authenticate to your Azure Active directly can remotely assist others by connecting a Remote Help session between devices.
 
-With permissions in remote help managed by Intune role-based access controls, you control who has permissions to help others and the actions they can take while assisting. The capabilities of remote help include:
+With permissions in Remote Help managed by Intune role-based access controls, you control who has permissions to help others and the actions they can take while assisting. The capabilities of Remote Help include:
 
-- **Enable remote help for your tenant** –If you choose to turn on remote help, its use is enabled tenant-wide.
-- **Requires Organization login** - To use remote help, both the helper and the sharer must sign in with an Azure Active Directory (Azure AD) account from your organization.
-- **Use remote help with unenrolled devices** – You can choose to allow help to devices that aren't enrolled with Intune.
+- **Enable Remote Help for your tenant** –If you choose to turn on Remote Help, its use is enabled tenant-wide.
+- **Requires Organization login** - To use Remote Help, both the helper and the sharer must sign in with an Azure Active Directory (Azure AD) account from your organization.
+- **Use Remote Help with unenrolled devices** – You can choose to allow help to devices that aren't enrolled with Intune.
 - **Compliance Warnings** - Before connecting to device, a helper will see a non-compliance warning about that device if it’s not compliant to its assigned policies. This warning doesn’t block access but provides transparency about the risk of using sensitive data like administrative credentials during the session.
 - **Role-based access control** – Admins can set RBAC rules that determine the scope of a helper’s access and what the actions they can take while providing assistance.
 - **Elevation of privilege** - When needed, a helper with the correct RBAC permissions can interact with the UAC prompt on the sharer's machine to enter credentials.
-- **Monitor active remote help sessions, and view details about past sessions** – In the Microsoft Endpoint Manager admin center you can view reports that include details about who helped who, on what device, and for how long. You’ll also find details about active sessions.
+- **Monitor active Remote Help sessions, and view details about past sessions** – In the Microsoft Endpoint Manager admin center you can view reports that include details about who helped who, on what device, and for how long. You’ll also find details about active sessions.
 
-This feature is rolling out over the next week and should soon be available for your tenant. For more information, see [Use remote help](../remote-actions/remote-help.md).
+This feature is rolling out over the next week and should soon be available for your tenant. For more information, see [Use Remote Help](../remote-actions/remote-help.md).
 
 #### MDM support data to refresh automatically in Group Policy analytics tool<!-- 7852080 -->
 Now whenever Microsoft makes changes to the mappings in Intune, the **MDM Support** column in the GP analytics tool automatically updates to reflect the changes. The automation is an improvement over the previous behavior, which required you to reimport your Group Policy object (GPO) to refresh the data. For more information about Group Policy analytics, see [Use Group Policy analytics](../configuration/group-policy-analytics.md).  
@@ -2804,7 +2804,7 @@ On the new [*Health check* tab](../protect/microsoft-tunnel-monitor.md#use-the-a
 
 - Last check-in - When the server last checked-in with Intune.
 - Number of current connections - The number of active connections at last check-in
-- Throughput- The megabits per second that traverse the serves NIC at last check-in.
+- Throughput - The megabits per second that traverse the serves NIC at last check-in.
 - CPU usage - The average CPU use.
 - Memory usage - The average memory use.
 - Latency - The average time for IP packets to traverse the NIC.
@@ -2891,7 +2891,7 @@ You can now configure whether a required iOS/iPadOS app is installed as a remova
 You can now deploy line-of-business (LOB) apps to Shared iPad devices. The line-of-business app must be assigned as **required** to a device group containing Shared iPad devices from the Microsoft Endpoint Manager admin center. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All apps** > **Add**. For related information, see [Add an iOS/iPadOS line-of-business app to Microsoft Intune](../apps/lob-apps-ios.md).
 
 #### Microsoft Endpoint Configuration Manager connector<!-- 9229333, CM7138634 -->  
-The connector for Microsoft Endpoint Configuration Manager now displays in the admin center. To review the connector, go to **Tenant administration** > **Connectors and tokens** > **Microsoft Endpoint Configuration Manager**. Select a Configuration Manager hierarchy running version 2006, or later to display additional information about it.
+The connector for Microsoft Configuration Manager now displays in the admin center. To review the connector, go to **Tenant administration** > **Connectors and tokens** > **Microsoft Endpoint Configuration Manager**. Select a Configuration Manager hierarchy running version 2006, or later to display additional information about it.
 
 ### Device configuration
 
@@ -3066,7 +3066,7 @@ When you configure **Turn on Application Guard**  in an Intune [App and browser 
 
 Before this release, the setting was named *Turn on Application Guard for Edge (Options)*.
 
-The new options for this setting expand Application Guard support beyond just URL’s for Edge. You can now enable Application Guard to help protect devices by opening potential threats in a hardware isolated Windows VM environment (container). For example, with support for isolated Windows environments, Application Guard can open untrusted Office documents in an isolated Windows VM.
+The new options for this setting expand Application Guard support beyond just URLs for Edge. You can now enable Application Guard to help protect devices by opening potential threats in a hardware isolated Windows VM environment (container). For example, with support for isolated Windows environments, Application Guard can open untrusted Office documents in an isolated Windows VM.
 
 With this change:
 
@@ -3095,7 +3095,7 @@ To understand what's changed between versions, see [Compare baseline versions](.
 We’ve added two new reports that are dedicated to Firewall policies in Endpoint Security:
 
 - [Windows 10 MDM devices with firewall off](../protect/endpoint-security-policy.md) is found in the Endpoint security node and displays the list of Windows 10 devices with the Firewall turned off. This report identifies each device by device name, device ID, user information, and the Firewall status.
-- [Windows 10 MDM Firewall status](../fundamentals/reports.md#windows-10-mdm-firewall-status-organizational) is an organizational report found in the *Reports* node, which lists the firewall status for your Windows 10 devices. This report displays status information that includes if the firewall is enabled, disabled, limited, or temporarily disabled.
+- [Windows 10 MDM Firewall status](../fundamentals/reports.md#mdm-firewall-status-for-windows-10-and-later-organizational) is an organizational report found in the *Reports* node, which lists the firewall status for your Windows 10 devices. This report displays status information that includes if the firewall is enabled, disabled, limited, or temporarily disabled.
 
 #### Summary view for Defender Antivirus reports<!-- 8846877   -->  
 We’ve updated the view for the Microsoft Defender Antivirus reports found in the **Reports** node of the Microsoft Endpoint Manager admin center. Now, when you select Microsoft Defender Antivirus in the **Reports** node, you’ll see the default view of the **Summary** tab, and a second tab for **Reports**. The **Reports** tab is where you’ll find the previously available [Antivirus agent status](../fundamentals/reports.md#antivirus-agent-status-report-organizational) and [Detected malware](../fundamentals/reports.md#detected-malware-report-organizational) organizational reports.
@@ -3324,9 +3324,9 @@ We've brought consistency across settings to existing options, like *Disable* an
 - **Warn** - On devices that run Windows 10 version 1809 or later, the device user receives a message that they can bypass the setting. For example, on the setting *Block Adobe Reader from creating child processes*, the option of *Warn* presents users with the option to bypass that block and allow Adobe Reader to create a child process. On devices that run earlier versions of Windows 10, the rule enforces the behavior without the option to bypass it.
 
 
-#### Policy merge support for USB device ID’s in Device control profiles for endpoint security Attack surface reduction policy<!-- 7645254   -->
+#### Policy merge support for USB device IDs in Device control profiles for endpoint security Attack surface reduction policy<!-- 7645254   -->
 
-We’ve added support for *policy merge* of USB device ID’s to the [Device control](../protect/endpoint-security-asr-policy.md) profile for the endpoint security Attack surface reduction policy. The following settings from *device control* profiles are evaluated for policy merge:
+We’ve added support for *policy merge* of USB device IDs to the [Device control](../protect/endpoint-security-asr-policy.md) profile for the endpoint security Attack surface reduction policy. The following settings from *device control* profiles are evaluated for policy merge:
 - Allow hardware device installation by device identifiers
 - Block hardware device installation by device identifiers
 - Allow hardware device installation by setup classes
@@ -5428,7 +5428,7 @@ Applies to:
 You can block devices from enrolling based on the manufacturer of the device. This feature applies to Android device administrator and Android Enterprise work profile devices. To see enrollment restrictions, go to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Enrollment restrictions**.
 
 #### Improvements to the iOS/iPadOS Create enrollment type profile UI<!-- 6055005 -->
-For iOS/iPadOS User Enrollment, the **Create enrollment type profile** **Settings** page has been streamlined to improve the **Enrollment type** choice process while keeping the same functionality. To see the new UI, go to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **iOS** > **iOS enrollment** > **Enrollment types** > **Create profile** > **Settings** page. For more information, see [Create a User Enrollment profile in Intune](../enrollment/ios-user-enrollment.md#create-a-user-enrollment-profile-in-intune).
+For iOS/iPadOS User Enrollment, the **Create enrollment type profile** **Settings** page has been streamlined to improve the **Enrollment type** choice process while keeping the same functionality. To see the new UI, go to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **iOS** > **iOS enrollment** > **Enrollment types** > **Create profile** > **Settings** page. For more information, see [Create a User Enrollment profile in Intune](../enrollment/ios-user-enrollment.md#create-enrollment-profile).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
@@ -5545,7 +5545,7 @@ This feature applies to:
 #### Block users from configuring certificate credentials in the managed keystore on Android Enterprise device owner devices<!-- 3311998 -->
 On Android Enterprise device owner devices, you can configure a new setting that blocks users from configuring their certificate credentials in the managed keystore (**Device configuration** > **Profiles** > **Create profile** > **Android Enterprise** for platform > **Device Owner Only > Device Restrictions** for profile type > **Users + Accounts**).
 
-#### New Microsoft Endpoint Configuration Manager co-management licensing<!--5027281-->
+#### New Microsoft Configuration Manager co-management licensing<!--5027281-->
 Configuration Manager customers with Software Assurance can get Intune co-management for Windows 10 PCs without having to purchase an additional Intune license for co-management. Customers no longer need to assign individual Intune/EMS licenses to their end users for co-managing Windows 10.
 - Devices managed by Configuration Manager and enrolled into co-management have almost the same rights as Intune Standalone MDM-managed PCs. However, after resetting they can't be re-provisioned by using Autopilot.
 - Windows 10 devices enrolled into Intune by using other means require full Intune licenses.
@@ -5970,7 +5970,7 @@ Intune now allows IT admins to publish private Android LOB apps to Managed Googl
 The Windows Company Portal is being updated. You will be able to use multiple filters on the Apps page within the Windows Company Portal. The Device Details page is also being updated with an improved user experience. We are in the process of rolling out these updates to all customers and expect to be completed by the end of next week.
 
 #### macOS support for web apps<!-- 3174427 -->
-Web apps, which allow you to add a'shortcut to a URL on the web, can be installed to the Dock using the macOS Company Portal. End users can access the **Install** action from the app details pa'e for a web app in the macOS Company Portal. For more information about the **Web link** app type, see [Add apps to Microsoft Intune](../apps/apps-add.md) and [Add web apps to Microsoft Intune](../apps/web-app.md).
+Web apps, which allow you to add a shortcut to a URL on the web, can be installed to the Dock using the macOS Company Portal. End users can access the **Install** action from the app details page for a web app in the macOS Company Portal. For more information about the **Web link** app type, see [Add apps to Microsoft Intune](../apps/apps-add.md) and [Add web apps to Microsoft Intune](../apps/web-app.md).
 
 #### macOS support for VPP apps<!-- 3173501  -->
 macOS apps, purchased using Apple Business Manager, are displayed in the console when Apple VPP tokens are synced in Intune. You can assign, revoke and reassign device and user-based licenses for groups using the Intune console. Microsoft Intune helps you manage VPP apps purchased for use at your company by:
@@ -6028,7 +6028,7 @@ In Intune, you create profiles for iOS and macOS devices (**Device configuration
 In this update, the available settings in the Intune portal are categorized by the enrollment type they apply to:
 
 - iOS
-  - User enrollment""
+  - User enrollment
   - Device enrollment
   - Automated device enrollment (supervised)
   - All enrollment types
@@ -7430,7 +7430,7 @@ Applies to: Android Enterprise Device Owner
 ### Device enrollment
 
 #### More detailed enrollment restriction failure messaging<!-- 3111564 -->
-More detailed error messages are available when enrollment restrictions are not met. To see these messages, go to **Intune** > **Troubleshoot** > and check the Enrollment Failures table. For more information, see the [enrollment failures list](help-desk-operators.md#enrollment-failure-reference).
+More detailed error messages are available when enrollment restrictions are not met. To see these messages, go to **Intune** > **Troubleshoot** > and check the Enrollment Failures table. 
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device Management
@@ -8433,7 +8433,7 @@ We've updated the help experience in the Company Portal app for Android to align
 - Upload diagnostic logs to Microsoft.
 - Send an email that describes the problem and incident ID to a company support person.  
 
-To check out the updated help experience go to [Send logs using email](../user-help/send-logs-to-your-it-admin-by-email-android.md) and [Send errors to Microsoft](../user-help/send-logs-to-microsoft-android.md).
+To check out the updated help experience, see [Report a problem in Company Portal or Intune app for Android](../user-help/send-logs-to-your-it-admin-by-email-android.md).  
 
 
 #### New enrollment failure trend chart and failure reasons table<!-- 1471783 -->
@@ -9031,7 +9031,7 @@ In contrast, the new **Current User** entity collection only contains users who 
 
 ### Updated Graph APIs<!-- 1736360 -->
 
-In this release, we've updated a few of the Graph API's for Intune that are in beta. Please check out the monthly [Graph API changelog](/graph/changelog) for more information.
+In this release, we've updated a few of the Graph APIs for Intune that are in beta. Please check out the monthly [Graph API changelog](/graph/changelog) for more information.
 
 
 #### Intune supports Windows Information Protection (WIP) denied apps<!-- 1479103 -->
@@ -9376,7 +9376,7 @@ The Company Portal app for Android can now use geofencing to protect access to c
 
 The Company Portal app for Android has added instruction for end users to help them understand and, where possible, self-solve on new use cases.
 - End users will be guided to the [Azure Active Directory portal](https://account.activedirectory.windowsazure.com/r/#/profile) to remove a device if they have reached the maximum number of devices that they are allowed to add.
-- End users are given steps to follow to help them [fix activation errors on Samsung Knox devices](../user-help/samsung-knox-errors-android.md) or to [turn off power-saving mode](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-faq). If neither of those solutions resolve their issue, we will provide an explanation of how to [submit logs to Microsoft](../user-help/send-logs-to-microsoft-android.md).
+- End users are given steps to follow to help them [fix activation errors on Samsung Knox devices](../user-help/samsung-knox-errors-android.md) or to [turn off power-saving mode](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-faq). If neither of those solutions resolve their issue, we will provide an explanation of how to [Report a problem in Company Portal or Intune app for Android](../user-help/send-logs-to-your-it-admin-by-email-android.md).  
 
 #### New 'Resolve' action available for Android devices<!-- 1583480 -->
 

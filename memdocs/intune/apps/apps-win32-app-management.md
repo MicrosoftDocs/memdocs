@@ -25,7 +25,7 @@ ms.collection:
 
 # Win32 app management in Microsoft Intune
 
-Microsoft Intune allows Win32 app management capabilities. Although it's possible for cloud-connected customers to use Microsoft Endpoint Configuration Manager for Win32 app management, Intune-only customers will have greater management capabilities for their Win32 apps. This topic provides an overview of the Intune Win32 app management features and related information.
+Microsoft Intune allows Win32 app management capabilities. Although it's possible for cloud-connected customers to use Microsoft Configuration Manager for Win32 app management, Intune-only customers will have greater management capabilities for their Win32 apps. This topic provides an overview of the Intune Win32 app management features and related information.
 
 > [!NOTE]
 > This app management capability supports both 32-bit and 64-bit operating system architecture for Windows applications.

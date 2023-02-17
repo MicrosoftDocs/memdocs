@@ -6,7 +6,7 @@ f1.keywords:
 ms.author: erikje
 author: ErikjeMS
 manager: dougeby
-ms.date: 12/05/2022
+ms.date: 01/18/2023
 audience: Admin
 ms.topic: troubleshooting
 ms.service: windows-365
@@ -34,24 +34,11 @@ The following items are known issues for Windows 365 Enterprise.
 
 [!INCLUDE [Missing start menu and taskbar when using iPad and the Remote Desktop app to access a Cloud PC](../includes/known-issues.md)]
 
-## Using resize with restore
-
-A [resize](resize-cloud-pc.md) of a Cloud PC eliminates all existing [restore](restore-overview.md) points for that Cloud PC. New restore points will be captured at the intervals defined in the user setting.
-
 ## Windows doesn’t scan for software updates until the first time a user signs in<!--38212344-->
 
 While a Windows PC (physical or Cloud PC) sits idle before the first user signs in, Windows Update doesn’t scan for or install monthly quality patches. Without such scans, the PC might miss important security updates. Without the latest security updates, the device is exposed to security vulnerabilities.
 
  **Troubleshooting steps**: Make sure that a user signs in to new Cloud PCs as soon as possible.
-
-## Windows 10 to 11 in-place upgrade failure<!--40412134-->
-
-Upgrading an existing Cloud PC from Windows 10 to Windows 11 using the Settings app may fail.
-
-**Troubleshooting steps**:
-
-1. Edit the related provisioning policy to change the gallery image to Windows 11.
-2. Reprovision the Cloud PC.
 
 ## In-place Windows upgrade may change computer name
 
@@ -96,22 +83,11 @@ The following device compliance settings may report as **Not Compliant** when be
 2. For any existing device compliance policies that both evaluate to a Cloud PC and contain either of the **Not Compliant** settings, use this new filter to exclude Cloud PCs from the policy assignment.
 3. Create a new device compliance policy without either of the **Not Compliant** settings and use this new filter to include Cloud PCs for the policy assignment.
 
-## Your organization hasn’t assigned you a Cloud PC
-
-When accessing windows365.microsoft.com, the user receives a message "Your organization hasn't assigned you a Cloud PC".
-
-**Possible cause**: To have access to a Cloud PC, a user must be assigned a license and a provisioning policy must be created.
-
-**Troubleshooting steps**: Make sure that:
-
-1. The user has been assigned a Windows 365 license. For more information, see [Assign licenses](assign-licenses.md) and [Windows 365 plans and pricing](https://www.microsoft.com/windows-365/enterprise?rtc=1).
-2. You’ve created a provisioning policy that includes the user. For more information, see [Create provisioning policies]( /windows-365/enterprise/create-provisioning-policy).
-
 ## Single sign-on users see a dialog to allow remote desktop connection during the connection attempt <!--42499792-->
 When using single sign-on, you'll currently be prompted to authenticate to Azure AD and allow the Remote Desktop connection when launching a connection to a new Cloud PC. Azure AD remembers up to 15 devices for 30 days before prompting again. If you see this dialog, select **Yes** to connect.
 
 ## Single sign-on user connections are being denied through Azure AD Conditional Access <!--42317382-->
-**Possible cause**: To login through single sign-on, the remote desktop client requests an access token to the **Microsoft Remote Desktop** app in Azure AD which may be the cause of the failed connection.
+**Possible cause**: To log in through single sign-on, the remote desktop client requests an access token to the **Microsoft Remote Desktop** app in Azure AD which may be the cause of the failed connection.
 
 **Troubleshooting**: Follow the steps to [troubleshoot sign-in problems](/azure/active-directory/conditional-access/troubleshoot-conditional-access).
 

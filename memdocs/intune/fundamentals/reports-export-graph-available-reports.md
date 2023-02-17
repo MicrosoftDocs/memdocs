@@ -53,7 +53,7 @@ The following table contains the possible values for the `reportName` parameter.
 |         DetectedAppsAggregate  |            Detected   Apps report        |
 |         FeatureUpdatePolicyFailuresAggregate  |            Under   **Devices** > **Monitor** > **Failure for feature updates**       |
 |         DeviceFailuresByFeatureUpdatePolicy  |            Under   **Devices** > **Monitor** > **Failure for feature updates** > *click   on error*        |
-|         DiscoveredAppsRawData  |            Under **Apps** > **Monitor** > **Discoverd apps** > **Export**         |
+|         DiscoveredAppsRawData  |            Under **Apps** > **Monitor** > **Discovered apps** > **Export**         |
 |         FeatureUpdateDeviceState  |            Under   **Reports** > **Window Updates** > **Reports** > **Windows   Feature Update Report**         |
 |         UnhealthyDefenderAgents  |            Under   **Endpoint Security** > **Antivirus** > **Win10 Unhealthy   Endpoints**        |
 |         DefenderAgents  |            Under   **Reports** > **MicrosoftDefender** > **Reports** > **Agent   Status**        |

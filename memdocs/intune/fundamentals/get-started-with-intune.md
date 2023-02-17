@@ -228,7 +228,7 @@ To get an overview of app protection policies and how they work, go to:
 
 ## Cloud attach with Configuration Manager
 
-Microsoft Endpoint Configuration Manager helps protect on-premises Windows Server, devices, apps, and data. If you need to manage a combination of cloud and on-premises endpoints, you can cloud attach your Configuration Manager environment to Intune.
+Microsoft Configuration Manager helps protect on-premises Windows Server, devices, apps, and data. If you need to manage a combination of cloud and on-premises endpoints, you can cloud attach your Configuration Manager environment to Intune.
 
 There are two steps to cloud attach your on-premises devices:
 

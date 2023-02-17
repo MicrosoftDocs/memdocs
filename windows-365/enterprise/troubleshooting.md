@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 07/20/2022
+ms.date: 02/10/2023
 ms.topic: troubleshooting
 ms.service: windows-365
 ms.subservice: 
@@ -97,7 +97,7 @@ For suggested remediations on, see [Troubleshoot provisioning errors](provisioni
 
 ## Troubleshooting by end users
 
-The end user can troubleshoot some issues that might be preventing them from connecting to their Cloud PC. For more information, see [End-user actions](../end-user-access-cloud-pc.md#user-actions)
+The end user can troubleshoot some issues that might be preventing them from connecting to their Cloud PC. For more information, see [End-user actions](../end-user-access-cloud-pc.md#user-actions).
 
 ## Video playback improvements
 
@@ -108,6 +108,33 @@ For Cloud PCs, MMR is supported on the following platforms: Windows, macOS, Chro
 For more information, see [Multimedia redirection for Azure Virtual Desktop](/azure/virtual-desktop/multimedia-redirection).
 
 MMR is in [public preview](../public-preview.md) for Windows 365 Cloud PCs.
+
+## Your organization hasn’t assigned you a Cloud PC
+
+When accessing windows365.microsoft.com, the user receives a message "Your organization hasn't assigned you a Cloud PC".
+
+**Possible cause**: To have access to a Cloud PC, a user must be assigned a license and a provisioning policy must be created.
+
+**Troubleshooting steps**: Make sure that:
+
+1. The user has been assigned a Windows 365 license. For more information, see [Assign licenses](assign-licenses.md) and [Windows 365 plans and pricing](https://www.microsoft.com/windows-365/enterprise?rtc=1).
+2. You’ve created a provisioning policy that includes the user. For more information, see [Create provisioning policies]( /windows-365/enterprise/create-provisioning-policy).
+
+## Performance decreases with nested virtualization
+
+In certain regions, some users may experience a decline in their 4vCPU Cloud PC performance when using nested virtualization. These regions include:
+
+- Southeast Asia
+- Central India
+- South Central US
+- East US 2
+- West US 2
+- West US 3
+
+**Troubleshooting steps:**
+
+- [Reprovision](reprovision-cloud-pc.md) the Cloud PC, or
+- Uninstall Hyper-V on the Cloud PC.  
 
 <!-- ########################## -->
 ## Next steps

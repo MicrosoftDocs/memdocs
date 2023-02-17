@@ -358,7 +358,7 @@ Aside from new features, this release also includes additional changes such as b
 
 The following revised update rollup (4575789) is available in the console starting on November 30, 2020: [Revised update rollup for Microsoft Endpoint Configuration Manager current branch, version 2006](https://support.microsoft.com/help/4575789). 
 
-Note this revision supersedes the original release of KB 4578605 [Update rollup for Microsoft Endpoint Configuration Manager version 2006](https://support.microsoft.com/help/4578605).
+Note this revision supersedes the original release of KB 4578605 [Update rollup for Microsoft Configuration Manager version 2006](https://support.microsoft.com/help/4578605).
 
 ### Hotfixes
 
