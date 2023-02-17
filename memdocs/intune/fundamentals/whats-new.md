@@ -65,6 +65,93 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Scripts
 ### Tenant administration
 -->
+
+## Week of February 20, 2023 (Service release 2302)
+
+### App management
+
+#### Latest iOS/iPadOS version available as minimum OS requirement for LOB and store apps<!-- 16433620  -->  
+You can specify iOS/iPadOS 16.0 as the minimum operating system for line-of-business and store app deployments. This setting option is available in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **iOS/iPadOS** > *iOS store app or Line-of-business app*. For more information about managing apps, see [Add apps to Microsoft Intune](../apps/apps-add.md).
+
+#### Newly available protected app for Intune<!-- 15448654  -->  
+The following protected app is now available for Microsoft Intune:
+
+- Egnyte for Intune by Egnyte
+
+For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
+
+### Device configuration
+
+#### Endpoint Manager admin center is renamed to Intune admin center<!-- 15560662   -->  
+The Microsoft Endpoint Manager admin center is now called the **Microsoft Intune admin center**.
+
+In a future update (no ETA), the Intune admin center URL will change from `endpoint.microsoft.com` to `intune.microsoft.com`. The new `intune.microsoft.com` URL is still in development. So, admins should continue using the `endpoint.microsoft.com` URL.
+
+#### A new Associated Assignments tab for your filters<!-- 7538503  -->  
+When you assign an app or policy, you can filter the assignment using different device properties, such as device manufacturer, model, ownership and more by creating and associating a filter object with the assignment.
+
+After you create a filter, there's a new **Associated Assignments tab**. This tab shows all the policy assignments, the groups that receive the filter assignments, and if the filter is using **Exclude** or **Include**:
+
+1. Sign in to the Endpoint Manager admin center.
+2. Go to **Devices** > **Filters** > Select an existing filter > **Associated Assignments tab**.
+
+For more information on filters, go to:
+
+- [Use filters when assigning your apps, policies, and profiles in Intune](filters.md)
+- [Device properties, operators, and rule editing when creating filters in Intune](filters-device-properties.md)
+
+Applies to:  
+- Windows 10 and later
+
+#### Size and generation included in iOS/iPadOS model information<!-- 16406692  -->  
+You can view the size and generation for enrolled iOS/iPadOS devices as part of the **Model** attribute in **Hardware device details**.
+
+Go to **Devices > All devices** > select one of your listed devices and select **Hardware** to open its details. For example, iPad Pro 11-inch (3rd generation) will display for the device model instead of iPad Pro 3. For more information, go to: [See device details in Intune](../remote-actions/device-inventory.md#hardware-device-details)
+
+Applies to:  
+- **iOS/iPadOS**
+
+### Device management
+
+#### Device Control support for Printer Protection (Preview)<!-- 12355154  -->  
+In public preview, Device Control profiles for Attack Surface Reduction policy now support [reusable settings groups for Printer Protection](../protect/reusable-settings-groups.md#add-reusable-groups-to-a-device-control-profile).
+
+Microsoft Defender for Endpoint Device Control [Printer Protection](/microsoft-365/security/defender-endpoint/printer-protection-overview) enables you to audit, allow, or prevent printer with or without exclusions within Intune. It allows you to block users from printing via a non-corporate network printer or non-approved USB printer. This adds an additional layer of security and data protection for work from home and remote work scenarios.
+
+Applies to:  
+- Windows 10
+- Windows 11
+
+#### Support to delete stale devices that are managed through Security Management for Microsoft Defender for Endpoint<!--14729617  -->   
+You can now **Delete** a device that’s managed through the [Security Management for Microsoft Defender for Endpoint](../protect/mde-security-integration.md) solution from within the Microsoft Endpoint Manager admin center. The delete option appears along with other device management options when you view the device’s Overview details. To locate a device managed by this solution, in the admin center go to **Devices** > **All devices**, and then select a device that displays either *MDEJoined* or *MDEManaged* in the *Managed by* column.
+
+#### New settings and setting options available in the Apple Settings Catalog<!-- 16813380  -->  
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
+
+New settings are available in the Settings Catalog. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can see these settings at **Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type.
+
+New settings include:
+
+**Login > Service Management - Managed Login Items**:
+
+- Team Identifier
+
+**Microsoft Office > Microsoft Office**:
+
+- Office Activation Email Address
+
+Applies to:  
+- macOS
+
+**Networking > Domains**:
+
+- Cross Site Tracking Prevention Relaxed Domains
+
+Applies to:  
+- iOS/iPadOS
+
+For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
+
 ## Week of February 6, 2023
 
 ### Tenant administration
