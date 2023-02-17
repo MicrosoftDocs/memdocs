@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/21/2022
+ms.date: 02/14/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -384,6 +384,13 @@ New updates for the connector can take a week or more to become available for ea
 > [!IMPORTANT]  
 > Starting April 2022, certificate connectors earlier than version **6.2101.13.0** will be deprecated and will show a status of *Error*. Starting August 2022, these connector versions **won't** be able to revoke certificates. Starting September 2022, these connector versions **won't** be able to issue certificates. This includes both the [PFX Certificate Connector for Microsoft Intune](../protect/certificate-connectors.md#pfx-certificate-connector-release-history) and  [Microsoft Intune Connector](../protect/certificate-connectors.md#microsoft-intune-connector-release-history), which on July 29, 2021 were replaced by the *Certificate Connector for Microsoft Intune* (as detailed in this article).
 
+### February 15, 2023
+
+Version **6.2301.1.0** - Changes in this release:
+
+- Logging information to correlate with Intune Service logs
+- Logging improvements in PFX Certificate issuance flow
+
 ### September 21, 2022
 
 Version **6.2206.122.0** - Changes in this release:
@@ -408,6 +415,8 @@ Version **6.2203.12.0** - Changes in this release:
 Version **6.2202.38.0**. This update includes:
 
 - Changes to support TLS 1.2 for auto-update
+
+<!-- archived update details that are over one year old: 
 
 ### February 18, 2022
 
@@ -440,7 +449,6 @@ This update includes:
 - Additional logging for Digicert PKCS requests
 - Enhancement to cryptography operations made during handling of PKCS requests
 
-<!-- archived update details that are over one year old: 
 ### August 16, 2021
 
 Version **6.2108.18.0**. This update includes:
