@@ -6,7 +6,7 @@ f1.keywords:
 ms.author: erikje
 author: ErikjeMS
 manager: dougeby
-ms.date: 01/12/2022
+ms.date: 02/16/2023
 audience: Admin
 ms.topic: how-to
 ms.service: windows-365
@@ -96,9 +96,6 @@ Whether you purchased your subscriptions through the Windows 365 products site, 
 As soon as you assign a license to a user, Windows 365 will create a Cloud PC for that user. This process can take up to 30 minutes.
 
 You can assign different Windows 365 Business license types to a user, based on the users business need. See [Windows 365 Business sizing options](windows-365-business-sizing.md)  for guidance on which license type might be suitable for your users.
-
-> [!IMPORTANT]
-> The first time a Windows 365 license is assigned on your tenant, a system account called **Windows 365 BPRT Permanent User** is automatically created in Azure Active Directory. Do not delete this account or make any changes to it (such as changing the name or UPN). If the system account is deleted, the setup might fail. This system account ensures a smooth set up process, and doesn't have any write capabilities or access to your tenant beyond the scoped service capabilities of Windows 365 Business. If you delete this user, follow these [troubleshooting steps](/microsoft-365/admin/setup/troubleshoot-windows-365-business?#step-2-verify-that-the-windows-365-bprt-permanent-user-system-account-is-active).
 
 ## How to get help
 
