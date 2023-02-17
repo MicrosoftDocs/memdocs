@@ -197,6 +197,10 @@ Select this option if you're deploying to an Android Enterprise dedicated, corpo
   - **Automatic**: Use a file to configure the proxy server. Enter the **Proxy server URL** that contains the configuration file. For example, enter `http://proxy.contoso.com`, `10.0.0.11`, or `http://proxy.contoso.com/proxy.pac`.
 
     For more information on PAC files, see [Proxy Auto-Configuration (PAC) file](https://developer.mozilla.org/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file) (opens a non-Microsoft site).
+    
+    > [!NOTE]
+    > When a device is marked corporate, the user gets to have little control and all control will be with the policies enforced.
+    > So when  Wi-Fi Profile is pushed for the device, by design Wi-Fi will be made to turn on.
 
 ## Personally owned work profile
 
