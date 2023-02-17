@@ -6,8 +6,8 @@ ms.date: 09/22/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
-author: mestew
-ms.author: mstewart
+author: smritib17
+ms.author: smbhardwaj
 manager: dougeby
 ms.localizationpriority: high
 ---

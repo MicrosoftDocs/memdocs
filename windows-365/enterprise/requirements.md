@@ -80,12 +80,13 @@ If you choose to provision Hybrid Azure AD joined Cloud PCs, then the following 
 
 ## Licensing requirements
 
-- You must have an Intune license so that you can use Intune to manage the devices.
+- You must have an Intune license to use Intune to manage the devices.
 - Users must have licenses for Windows, Intune, Azure AD, and Windows 365 to use their Cloud PC.
 
 ## Management requirements
 
-You must use [Microsoft Endpoint Manager admin center](https://admin.microsoft.com/) to manage your Cloud PCs.
+- You must use [Microsoft Endpoint Manager admin center](https://admin.microsoft.com/) to manage your Cloud PCs.
+- You must have a Windows 365 Enterprise license to manage Cloud PC configurations.
 
 ## Role and identity requirements
 
