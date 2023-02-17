@@ -6,8 +6,8 @@ ms.date: 05/03/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: quickstart
-author: mestew
-ms.author: mstewart
+author: smritib17
+ms.author: smbhardwaj
 manager: dougeby
 # Customer intent: As a Microsoft Endpoint Manager administrator, I want to enroll Configuration Manager devices into Endpoint analytics so that I can gain insights into the user experience.
 ms.localizationpriority: high
