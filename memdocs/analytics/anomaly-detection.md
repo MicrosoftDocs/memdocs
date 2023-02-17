@@ -44,15 +44,15 @@ Anomaly detection aims at addressing these problems by enabling IT admins with c
 3. Select **Anomalies** tab. The **Anomalies** tab provides a quick overview of the anomalies detected in your organization.
 4. In this example, the **Anomalies** tab shows an *App regression anomaly* with *high severity* impact. You can add filters to refine the list. 
 
-Image here
+   :::image type="content" source="media/anomaly-detection/anomalies-tab.png" alt-text="This is a screenshot of the Anomaly tab in Overview section of Endpoint Anlaytics":::
 
 5. Select an item from the list to display a detailed view with key information such as App name, affected devices, Date created and Latest occurrence (Initial and latest occurrence of the anomaly), and potential factors influencing the anomaly and suggested remediation.
 
-Image here
+   :::image type="content" source="media/anomaly-detection/details-of-anomaly.png" alt-text="This is a screenshot of details displayed when you select an anomaly displayed in the Anomaly tab ":::
 
 6. Select **View Affected Devices** to display a list of devices with key attributes relevant to each device. Additionally, the device timeline shows anomalous events.  
 
-Image here
+   :::image type="content" source="media/anomaly-detection/affected-devices.png" alt-text="This is a screenshot showing a list of affected devices":::
 
 ## Analytical or Statistical Models for determining anomalies
 
@@ -63,11 +63,9 @@ The Analytical Model built detects device cohorts facing anomalous set of stop e
 - **Paired t-tests model**: Paired t-tests are a mathematical method that compares pairs of observations in a dataset, looking for a statistically significant distance between their means. Tests are used on datasets that consist of observations related to each other in some way. For example, count of Stop Error Restarts from the same device before and after a policy change, or app crashes on a device after an OS (operating systems) update.  
 
 - **Population Z-score model**: Population Z-score based statistical models involve calculating the standard deviation and mean of a dataset, and then using those values to determine which data points are anomalous. 
-
 Standard deviation and mean are used to calculate the Z-score for each data point, which represents the number of standard deviations away from the mean. Data points that fall outside a certain range are anomalous. This model is well suited in highlighting outlier devices or apps from the wider baseline but requires sufficiently large datasets to be accurate. 
 
 - **Time Series Z-score model**: Time series Z-score models are a variation of the standard Z-score model designed for detecting anomalies in time series data. Time series data is a sequence of data points collected at regular intervals over time, such as aggregate of Stop Error Restarts. 
-
 Standard deviation and mean are calculated for a sliding window of time, using aggregated metrics. This method allows the model to be sensitive to temporal patterns in the data and adapt to changes in its distribution over time.
 
 ## Next steps 
