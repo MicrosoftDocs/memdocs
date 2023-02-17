@@ -55,7 +55,7 @@ By default, devices check in with Intune about every 8 hours. If an update is av
 ## Configure the policy
 
    > [!TIP]  
-   > For more information on managing software updates and the update experience on devices, see [Manage software updates for Apple devices - Apple Support](https://support.apple.com/en-am/guide/deployment/depafd2fad80/1/web/1.0)) at Apple's Platform Deployment site.
+   > For more information on managing software updates and the update experience on devices, see [Manage software updates for Apple devices - Apple Support](https://support.apple.com/en-am/guide/deployment/depafd2fad80/1/web/1.0) at Apple's Platform Deployment site.
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
