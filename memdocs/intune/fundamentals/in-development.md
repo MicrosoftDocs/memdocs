@@ -122,15 +122,6 @@ Applies to:
 
 ## Device security
 
-### New endpoint security Antivirus template to manage Microsoft Defender update behavior<!-- 11890335  -->  
-You’ll soon be able to use a new endpoint security policy template for Antivirus to manage updates for Microsoft Defender. With this new template you’ll be able to manage settings for the rollout release channel by which devices and users receive Defender Updates that are related to daily security intelligence updates, monthly platform updates, and monthly engine updates.
-
-When available, you’ll find the new template in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Endpoint security** > **Antivirus**.  The settings in the profile will be from the Defender CSP. See [Defender CSP - Windows Client Management](/windows/client-management/mdm/defender-csp).
-
-Applies to:  
-- Windows 10
-- Windows 11
-
 ### Support for tamper protection in policies for Security settings management for Microsoft Defender for Endpoint <!-- 13204113 -->  
 You’ll soon be able to manage Tamper protection for Microsoft Defender for Endpoint on unenrolled devices as part of the [MDE Security configuration](../protect/mde-security-integration.md#which-solution-should-i-use) scenario.
 
