@@ -129,7 +129,7 @@ These permissions can be viewed and modified by Azure admins who hold such permi
 If any of these permissions are revoked, this check will fail. Make sure that the following permissions are granted to the Windows 365 application service principal:
 
 - [Reader](/azure/role-based-access-control/built-in-roles#reader) role on the Azure subscription.
-- [Owner](/azure/role-based-access-control/built-in-roles#owner) role on the specified resource group.
+- [Network Contributor](/azure/role-based-access-control/built-in-roles#network-contributor) role on the specified resource group.
 - [Network Contributor](/azure/role-based-access-control/built-in-roles#network-contributor) role on the virtual network.
 
 The role assignment on the subscription will be granted to the Cloud PC service principal.  

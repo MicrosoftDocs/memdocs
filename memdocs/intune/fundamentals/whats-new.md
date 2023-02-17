@@ -65,6 +65,23 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Scripts
 ### Tenant administration
 -->
+## Week of February 6, 2023
+
+### Tenant administration
+
+#### Apply recommendations and insights to enrich the Configuration Manager site health and device management experience<!--16957774 -->
+
+You can now use the Microsoft Endpoint Manager admin center to view recommendations and insights for your Configuration Manager sites. These recommendations can help you improve the site health and infrastructure and enrich the device management experience.
+
+Recommendations include:  
+
+- How to simplify your infrastructure
+- Enhance device management
+- Provide device insights
+- Improve the health of the site
+
+To view recommendations, open the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Tenant administration** > **Connectors and tokens** > **Microsoft Endpoint Configuration Manager**,  and select a *site* to view recommendations for that site.  Once selected, you’ll find the *Recommendations* tab that displays each insight along with a *Learn more* link that opens details on how to apply that recommendation.
+
 ## Week of January 30, 2023
 
 ### Device management
@@ -306,7 +323,7 @@ Admins can now see a preview of a PowerShell script's content for proactive reme
 ### App management
 
 #### Win32 app supersedence GA<!-- 9318154 -->
-We are in the process of rolling out the feature set for Win32 app supersedence GA, which will add support for apps with supersedence during ESP and also allow supersedence and dependency relationships to be added in the same app subgraph. For more information, see [Win32 app supersedence improvements](https://techcommunity.microsoft.com/t5/intune-customer-success/upcoming-improvements-to-win32-app-supersedence/ba-p/3713026). For information about Win32 app supersedence, see [Add Win32 app supersedence](../apps/apps-win32-supersedence.md).
+We are in the process of rolling out the feature set for Win32 app supersedence GA, which will add support for apps with supersedence during ESP and also allow supersedence and dependency relationships to be added in the same app subgraph. For more information, see [Win32 app supersedence improvements](https://aka.ms/Intune/Win32-Supersedence). For information about Win32 app supersedence, see [Add Win32 app supersedence](../apps/apps-win32-supersedence.md).
 
 ## Week of January 9, 2023
 

@@ -30,7 +30,7 @@ ms.collection: M365-identity-device-management
 
 # Access a Cloud PC
 
-Users can access their Cloud PCs in two different ways:
+Users can access their Cloud PCs in these ways:
 
 - [Windows 365 app](https://support.microsoft.com/topic/cbb0d4d5-69d4-4f00-b050-6dc7a02d02d0 )
 - [windows365.microsoft.com](https://Windows365.microsoft.com)

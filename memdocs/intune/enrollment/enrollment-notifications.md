@@ -40,6 +40,13 @@ Set up enrollment notifications in Microsoft Intune to notify employees of newly
 * Add a custom message for the user, with information about how to report an unrecognized device.  
 * Apply your tenant's branding and customization settings (email notifications only).   
 
+Enrollment notifications are supported on these devices:   
+
+* Android devices in bring-your-own-device (BYOD) scenarios    
+* iOS/iPadOS devices in BYOD scenarios      
+* Macs   
+* Devices running Windows 10/11, excluding hybrid Azure AD-joined devices      
+
 ## Example  
 The following example image shows what an enrollment notification looks like to a device user.  
 
@@ -97,12 +104,12 @@ Email notifications appear in the user's inbox. Push notifications appear in the
     The options for branding and customization are:  
 
     * **Show company logo**: Flip the switch **On** to make your organization's logo visible in the email header. This option becomes available after you've configured Company Portal branding in your tenant.   
-    * **Show device details**: Flip the switch **On** to make the following device details visible in the footer of the email:  
+    * **Show device details**:  Device details are turned off by default. Flip the switch **On** to show device details in the footer of the email. Emails with device details can take longer to deliver. Intune may not be able to populate all details. Details include:       
          * Device name  
          * Model  
          * OS  
          * OS version  
-         * Serial number  
+         * Serial number     
     * **Show company name**: Flip the switch **On** to make your organization's name visible in the footer of the email. The tenant value is automatically populated.  
     * **Show contact information**: Flip the switch **On** to show your organization's contact information. The tenant value is automatically populated.  
     * **Show Company portal website link**: Flip the switch **On** to show a link to the Company Portal website. The tenant value is automatically populated. 
