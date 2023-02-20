@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 02/16/2022
+ms.date: 02/15/2022
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -97,7 +97,7 @@ The ANC wizard requires access to Azure and, optionally, on-premises domain reso
 - [Intune Administrator](/azure/active-directory/roles/permissions-reference#intune-administrator), [Windows 365 Administrator](/azure/active-directory/roles/permissions-reference), or [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) role.
 - An Active Directory user account with sufficient permissions to join the AD domain into this Organizational Unit( (Hybrid Azure AD Join ANCs only).
 
-To create or edit an ANC, you'll also need the below Azure role:
+To create or edit an ANC, you must also have the Subscription Reader role in the Azure Subscription where the VNET associated with the ANC was located.
 
 For a full list of requirements, see [Windows 365 requirements](requirements.md).
 
