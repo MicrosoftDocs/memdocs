@@ -18,7 +18,9 @@ ms.reviewer: manchen
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Enable Win32 apps on S mode devices

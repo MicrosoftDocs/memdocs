@@ -26,7 +26,8 @@ ms.reviewer: priyar
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
-ms.collection: 
+ms.collection:
+- tier2
 ---
 
 # Report a device problem for Windows           

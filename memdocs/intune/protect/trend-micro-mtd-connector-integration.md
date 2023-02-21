@@ -26,7 +26,9 @@ ms.reviewer: aanavath
 search.appverid: MET150
 #ms.tgt_pltfrm:
 #ms.custom:
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Connect Trend Micro Mobile Security as a Service with Microsoft Intune

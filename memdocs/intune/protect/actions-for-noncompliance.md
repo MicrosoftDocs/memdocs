@@ -23,9 +23,10 @@ search.appverid: MET150
 ms.reviewer: tycast
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: 
-  - M365-identity-device-management
-  - highpri
+ms.collection:
+- tier1
+- M365-identity-device-management
+- highpri
 ---
 
 # Configure actions for noncompliant devices in Intune

@@ -22,9 +22,10 @@ ms.reviewer: crisk
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: 
-  - M365-identity-device-management
-  - highpri
+ms.collection:
+- tier1
+- M365-identity-device-management
+- highpri
 ---
 # View details about your Tenant on the Intune tenant status page
 

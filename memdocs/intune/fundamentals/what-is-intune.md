@@ -24,10 +24,11 @@ ms.reviewer: dougeby
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.collection: 
-  - M365-identity-device-management
-  - highpri
-  - highseo
+ms.collection:
+- tier1
+- M365-identity-device-management
+- highpri
+- highseo
 ---
 
 # Microsoft Intune securely manages identities, manages apps, and manages devices

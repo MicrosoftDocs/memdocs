@@ -24,7 +24,9 @@ ms.reviewer: jlynn
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 # Use the troubleshooting dashboard to help users at your company
 

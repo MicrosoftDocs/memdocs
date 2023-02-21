@@ -24,10 +24,11 @@ ms.suite: ems
 ms.custom: 
    - intune-azure
    - contperf-fy21q1
-ms.collection: 
-  - M365-identity-device-management
-  - highpri
-  - highseo
+ms.collection:
+- tier1
+- M365-identity-device-management
+- highpri
+- highseo
 
 ---
 

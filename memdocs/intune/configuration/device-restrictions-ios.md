@@ -24,9 +24,10 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; seodec18
 ms.collection:
-  - M365-identity-device-management
-  - highpri
-  - highseo
+- tier1
+- M365-identity-device-management
+- highpri
+- highseo
 ---
 
 # iOS and iPadOS device settings to allow or restrict features using Intune

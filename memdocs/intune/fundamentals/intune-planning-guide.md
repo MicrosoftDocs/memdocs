@@ -24,9 +24,10 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: get-started
 ms.collection:
-  - M365-identity-device-management
-  - highpri
-  - highseo
+- tier1
+- M365-identity-device-management
+- highpri
+- highseo
 ---
 
 # Microsoft Intune planning guide

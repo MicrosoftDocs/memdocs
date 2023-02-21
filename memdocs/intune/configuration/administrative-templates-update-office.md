@@ -24,7 +24,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Use Update Channel and Target Version settings to update Microsoft 365 with Microsoft Intune Administrative Templates

@@ -25,7 +25,9 @@ ms.reviewer: tycast
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Create a device-based Conditional Access policy
