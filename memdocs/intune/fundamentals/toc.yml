@@ -225,8 +225,12 @@ items:
       href: filters-reports-troubleshoot.md
   - name: Use policy sets
     href: ../fundamentals/policy-sets.md
-  - name: Premium add-ons
-    href: premium-add-ons.md
+  - name: Choose Intune add-ons
+    items:
+    - name: Intune add-ons
+      href: premium-add-ons.md
+    - name: Remote Help
+      href: ../remote-actions/remote-help.md
   - name: Specialty devices with Intune
     href: specialty-devices-with-intune.md    
   - name: Developer guidance
