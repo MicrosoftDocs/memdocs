@@ -168,7 +168,7 @@ For more information about configuring Settings Catalog profiles in Intune, see 
 #### Use Endpoint security Antivirus policy to manage Microsoft Defender update behavior (Preview)<!-- 11890335 -->  
 As part of a public preview for Endpoint security [Antivirus policy](../protect/endpoint-security-antivirus-policy.md), you can use the new profile **Defender Update controls** for the *Windows 10 and later* platform to manage update settings for Microsoft Defender. The new profile includes settings for the rollout release channel by which devices and users receive Defender Updates that are related to daily security intelligence updates, monthly platform updates, and monthly engine updates.
 
-This profile includes the following settings, which are all directly taken from [Defender CSP - Windows Client Management](https://learn.microsoft.com/windows/client-management/mdm/policy-csp-Defender).
+This profile includes the following settings, which are all directly taken from [Defender CSP - Windows Client Management](/windows/client-management/mdm/policy-csp-Defender).
 
 - Engine Updates Channel
 - Platform Updates Channel
