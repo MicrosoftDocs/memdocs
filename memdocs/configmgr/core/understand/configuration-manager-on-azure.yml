@@ -81,7 +81,7 @@ sections:
 
       - question: Which ExpressRoute options should I choose?
         answer: |
-          It depends. ExpressRoute has many different options like unlimited or metered, different speed options, and Intune add-ons. The options you select depend on the Configuration Manager functionality you're using and how much data you plan to distribute. You can control the transfer of Configuration Manager data between site servers and distribution points, but you can't control site server-to-site server communication. When you use a metered data plan, if you place specific sites and site systems on-premises, and use [Configuration Manager's built-in bandwidth controls](../plan-design/hierarchy/fundamental-concepts-for-content-management.md), you can help control the cost of using Azure.
+          It depends. ExpressRoute has many different options like unlimited or metered, different speed options, and premium add-ons. The options you select depend on the Configuration Manager functionality you're using and how much data you plan to distribute. You can control the transfer of Configuration Manager data between site servers and distribution points, but you can't control site server-to-site server communication. When you use a metered data plan, if you place specific sites and site systems on-premises, and use [Configuration Manager's built-in bandwidth controls](../plan-design/hierarchy/fundamental-concepts-for-content-management.md), you can help control the cost of using Azure.
           
       - question: Do I still need to join my site servers to an Active Directory domain?
         answer: |
