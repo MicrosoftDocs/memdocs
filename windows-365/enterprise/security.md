@@ -77,7 +77,7 @@ The following security components are enabled by default on specific Cloud PC SK
     - **Security features supported**:
         - [Microsoft Defender Application Guard](/windows/security/threat-protection/microsoft-defender-application-guard/md-app-guard-overview)
         - [Windows Sandbox](/windows/security/threat-protection/windows-sandbox/windows-sandbox-overview)
-    - **Required configuration**: Cloud PC must have 4 vCPU and 16-GB RAM or more. For more infomraiton, see [set up virtualization-based workloads support](nested-virtualization.md#requirements).
+    - **Required configuration**: Cloud PC must have 4 vCPU and 16-GB RAM or more. For more information, see [set up virtualization-based workloads support](nested-virtualization.md#requirements).
 
 ## Secure Cloud PC data
 
