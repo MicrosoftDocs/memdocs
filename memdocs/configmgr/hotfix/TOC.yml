@@ -5,6 +5,8 @@ items:
   items:
   - name: KB 15582417  Summary of changes in 2211
     href: 2211/15582417.md
+  - name: KB 16643863 Update rollup for Configuration Manager version 2211
+    href: 2211/16643863.md
 - name: Version 2207
   items:
   - name: KB 14840616  Summary of changes in 2207

@@ -40,7 +40,9 @@ Intune integrates with network access control (NAC) partners to help organizatio
 > - Cisco ISE 3.1 and later
 > - Citrix Gateway 13.0-84.11 and later
 > - Citrix Gateway 13.1-12.50 and later
-> - F5 BIG-IP Access Policy Manager 16.1.3.1
+> - F5 BIG-IP Access Policy Manager 14.1.5.2 and later
+> - F5 BIG-IP Access Policy Manager 15.1.7 and later
+> - F5 BIG-IP Access Policy Manager 16.1.3.1 and later
 > - F5 BIG-IP Access Policy Manager 17.0 and later
 > - Ivanti Connect Secure 9.1R16 and later
 >
