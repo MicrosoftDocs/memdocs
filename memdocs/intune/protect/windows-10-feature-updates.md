@@ -23,9 +23,10 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 #ms.custom:
-ms.collection: 
-  - M365-identity-device-management
-  - highpri
+ms.collection:
+- tier1
+- M365-identity-device-management
+- highpri
 ---
 
 # Feature updates for Windows 10 and later policy in Intune
@@ -72,6 +73,8 @@ The following are prerequisites for Intune's Feature updates for Windows 10 and 
   *Review your subscription details for applicability to Windows 11.*
 
    Beginning in November of 2022, the Windows Update for Business deployment service (WUfB DS) license will be checked and enforced.
+  
+   Capabilities supported by client policies on Professional SKU devices will not require a license.  That includes basic controls for deploying a specified feature update and when to start making the update available to devices.   The [Gradual Rollout](/mem/intune/protect/windows-update-rollout-options#make-updates-available-gradually) capability is a cloud only feature, requiring a license that includes the Windows Update for Business deployment service.
   
   If you’re blocked when creating new policies for capabilities that require WUfB DS and you get your licenses to use WUfB through an Enterprise Agreement (EA), contact the source of your licenses such as your Microsoft account team or the partner who sold you the licenses. The account team or partner can confirm that your tenants licenses meet the WUfB DS license requirements. See [Enable subscription activation with an existing EA](/windows/deployment/deploy-enterprise-licenses#enable-subscription-activation-with-an-existing-ea).
 

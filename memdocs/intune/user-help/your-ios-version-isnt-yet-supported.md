@@ -28,7 +28,8 @@ ms.reviewer: chrisgre
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser; seodec18
-ms.collection: 
+ms.collection:
+- tier2
 ---
 
 

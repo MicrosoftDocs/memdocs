@@ -19,8 +19,9 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: contperf-fy21q1
 ms.collection:
-  - M365-identity-device-management
-  - highpri
+- tier1
+- M365-identity-device-management
+- highpri
 ---
 
 # Win32 app management in Microsoft Intune

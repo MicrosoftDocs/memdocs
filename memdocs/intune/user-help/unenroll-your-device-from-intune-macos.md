@@ -26,7 +26,8 @@ ms.reviewer: elocholi
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
-ms.collection: 
+ms.collection:
+- tier2
 ---
 
 
@@ -58,14 +59,7 @@ Follow these steps to remove a device from Company Portal that you no longer nee
 After you complete these steps, you can uninstall Company Portal from your device.  
 
 ## Remove management profile  
-To remove a device after you've left your workplace or school:  
-
-1. Select the Apple menu > **System Preferences** > **Profiles**.
-2. From the list of profiles, select **Management Profile**.
-3. Go down to the bottom of the list and you'll see a **plus (+)** and **minus (-)** sign. Select the **minus (-)** sign.
-4. Follow the onscreen prompts to finish removing the management profile.  
-
-After you complete these steps, you can uninstall Company Portal from your device.  
+To remove a device after you've left your workplace or school, you have to remove the *management profile* that was installed during enrollment. For steps specific to your version of macOS, see [Remove a configuration profile from your Mac](https://support.apple.com/guide/mac-help/configuration-profiles-standardize-settings-mh35561/mac) on the Apple Support website. After you remove the management profile, you can uninstall Company Portal from your device.  
 
 ## Uninstall Company Portal app  
 To uninstall the Company Portal app from a macOS device:

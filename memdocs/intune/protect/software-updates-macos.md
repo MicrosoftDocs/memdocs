@@ -23,9 +23,10 @@ ms.reviewer: beflamm
 search.appverid: MET150
 #ms.tgt_pltfrm:
 #ms.custom:
-ms.collection: 
-  - M365-identity-device-management
-  - highpri
+ms.collection:
+- tier1
+- M365-identity-device-management
+- highpri
 ---
 
 # Manage macOS software update policies in Intune
@@ -53,6 +54,9 @@ With policies for macOS software updates, you can:
 By default, devices check in with Intune about every 8 hours. If an update is available through an update policy, the device downloads the update. The device then installs the update upon next check-in within your schedule configuration.
 
 ## Configure the policy
+
+   > [!TIP]  
+   > For more information on managing software updates and the update experience on devices, see [Manage software updates for Apple devices - Apple Support](https://support.apple.com/en-am/guide/deployment/depafd2fad80/1/web/1.0) at Apple's Platform Deployment site.
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -197,8 +201,6 @@ The Software Update category contains the following settings that can be used to
 - *Critical Update Install*:  If false, disables the automatic installation of critical updates and prevents the user from changing the "Install system data files and security updates" option.
 
 - *Restrict Software Update Require Admin To Install*:  If true, restrict app installations to admin users. This key has the same function as the Restrict Store Require Admin To Install setting in the App Store category.
-
-For more information on managing software updates, see [Manage software updates for Apple devices - Apple Support](https://support.apple.com/guide/deployment/manage-software-updates-depc4c80847a/web) at Apple's Platform Deployment site.
 
 ## Monitor for update installation failures on devices
 

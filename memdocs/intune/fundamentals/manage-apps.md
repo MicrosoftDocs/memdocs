@@ -26,15 +26,16 @@ search.appverid:
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection:
-  - M365-identity-device-management
-  - highpri
+- tier1
+- M365-identity-device-management
+- highpri
 ---
 
 # Manage your apps and app data in Microsoft Intune
 
 Managing and protecting apps and their data is a significant part of any endpoint management strategy and solution. In most environments, user can install public retail apps and possibly access organization data from these apps. Many organizations also have their own private apps and line-of-business apps that need to be deployed & managed, and make sure this app data stays within the organization.
 
-App management can be challenge and Intune can help. Microsoft Intune is a cloud-based service that can manage many apps types. Using Intune, admins can deploy, configure, protect, and update apps that access your organization resources. For more information on Intune and its benefits, go to [What is Microsoft Intune?](what-is-intune.md).
+App management can be challenging and Intune can help. Microsoft Intune is a cloud-based service that can manage many apps types. Using Intune, admins can deploy, configure, protect, and update apps that access your organization resources. For more information on Intune and its benefits, go to [What is Microsoft Intune?](what-is-intune.md).
 
 Microsoft Intune supports Android, iOS/iPadOS, macOS and Windows client devices. So, you can use Intune's app management features across your many devices.
 

@@ -24,7 +24,9 @@ ms.reviewer: juidaewo
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Monitor security baselines and profiles in Microsoft Intune

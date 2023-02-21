@@ -26,7 +26,8 @@ ms.reviewer: arnab
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
-ms.collection: 
+ms.collection:
+- tier2
 ---
 
 # Fix common issues with your Samsung Knox device

@@ -7,7 +7,9 @@ ms.topic: include
 ms.date: 09/14/2022
 ms.author: mandia
 ms.custom: include file
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 <!-- 9.8.2022 - mandia: New text added so this include file applies to Windows 8.1-->
