@@ -92,7 +92,7 @@ After you create a filter, there's a new **Associated Assignments tab**. This ta
 
 1. Sign in to the Endpoint Manager admin center.
 2. Go to **Devices** > **Filters** > Select an existing filter > **Associated Assignments tab**.
-
+ 
 For more information on filters, go to:
 
 - [Use filters when assigning your apps, policies, and profiles in Intune](filters.md)
