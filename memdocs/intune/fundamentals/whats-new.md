@@ -119,6 +119,20 @@ More information on managing Activation Lock is available at [Bypass iOS/iPadOS 
 Applies to:  
 - **iOS/iPadOS**
 
+#### Allow Temporary Enterprise Feature Control is available in the Settings Catalog<!-- 15752120  -->  
+In on-premises group policy, there is an **Enable features introduced via servicing that are off by default** setting.
+
+In Intune, this setting is known as **Allow Temporary Enterprise Feature Control** and is available in the Settings Catalog.
+
+For more information on this feature, go to [Blog: Commercial control for continuous innovation](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/commercial-control-for-continuous-innovation/ba-p/3737575).
+
+The Windows features that are enabled by this policy setting will be released later in 2023. Intune is releasing this policy setting now for your awareness and preparation, which is before any need to use the setting with future Windows 11 releases.
+
+For more information on the settings catalog, go to [Use the settings catalog to configure settings on Windows, iOS/iPadOS and macOS devices](../configuration/settings-catalog.md).
+
+Applies to:
+
+- Windows 11
 
 ### Device management
 
