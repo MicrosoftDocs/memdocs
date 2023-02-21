@@ -26,9 +26,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.collection:
+- tier3
 - M365-identity-device-management
 - Android
-- tier3
 ms.custom: intune-azure
 ---
 

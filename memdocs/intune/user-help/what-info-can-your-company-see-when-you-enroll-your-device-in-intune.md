@@ -27,7 +27,8 @@ ms.reviewer: esmich
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
-ms.collection: 
+ms.collection:
+- tier2
 ---
 
 # What information can my organization see when I enroll my device?
