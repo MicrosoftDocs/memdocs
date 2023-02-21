@@ -27,7 +27,6 @@ The following sections describe the new features to try out in this version:
 
 <!-- [!INCLUDE [Example feature name](includes/2201/1234567.md)] -->
 
-[!INCLUDE [Microsoft Configuration Manager product branding ](includes/2302/15885998.md)]
 [!INCLUDE [Dark theme extended to delete secondary site wizard](includes/2302/15942599.md)]
 [!INCLUDE [Enable Windows features introduced via Windows servicing that are off by default](includes/2302/16834520.md)]
 
