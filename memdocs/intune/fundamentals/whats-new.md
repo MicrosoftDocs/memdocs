@@ -85,8 +85,6 @@ For more information about protected apps, see [Microsoft Intune protected apps]
 #### Endpoint Manager admin center is renamed to Intune admin center<!-- 15560662   -->  
 The Microsoft Endpoint Manager admin center is now called the **Microsoft Intune admin center**.
 
-In a future update (no ETA), the Intune admin center URL will change from `endpoint.microsoft.com` to `intune.microsoft.com`. The new `intune.microsoft.com` URL is still in development. So, admins should continue using the `endpoint.microsoft.com` URL.
-
 #### A new Associated Assignments tab for your filters<!-- 7538503  -->  
 When you assign an app or policy, you can filter the assignment using different device properties, such as device manufacturer, model, ownership and more by creating and associating a filter object with the assignment.
 
