@@ -44,7 +44,7 @@ For the latest product changes, see the following articles:<!-- 8625956 -->
 
 A curated list of important articles.
 
-- [Microsoft Endpoint Manager tenant attach](https://learn.microsoft.com/mem/configmgr/tenant-attach/?WT.mc_id=configmgr-console)
+- [Microsoft Intune tenant attach](https://learn.microsoft.com/mem/configmgr/tenant-attach/?WT.mc_id=configmgr-console)
 - [Endpoint analytics](https://learn.microsoft.com/mem/analytics/?WT.mc_id=configmgr-console)
 - [Desktop Analytics](https://learn.microsoft.com/mem/configmgr/desktop-analytics/?WT.mc_id=configmgr-console)
 - [Co-management for Windows devices](https://learn.microsoft.com/mem/configmgr/comanage/?WT.mc_id=configmgr-console)

@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot client details
 titleSuffix: Configuration Manager
-description: Troubleshoot client details for Configuration Manager tenant attach
+description: Troubleshoot client details for Intune tenant attach
 ms.date: 07/11/2022
 ms.topic: troubleshooting
 ms.prod: configuration-manager
@@ -18,7 +18,7 @@ ms.collection: tier3
 <!--6374854, 6521921-->
 *Applies to: Configuration Manager (current branch)*
 
-When viewing the ConfigMgr client details, you may run across a common error. Use the following information of common error messages to troubleshoot ConfigMgr client details in the Microsoft Endpoint Manager admin center:
+When viewing the ConfigMgr client details, you may run across a common error. Use the following information of common error messages to troubleshoot ConfigMgr client details in the Microsoft Intune admin center:
 
 ## <a name="bkmk_intune"></a> You don’t have access to view this information
 <!--7980141-->
@@ -42,7 +42,7 @@ When viewing the ConfigMgr client details, you may run across a common error. Us
 Typically, this error is caused by an issue with the admin account. Below are the most common issues with the administrative user account:
 
 1. Use the same account to sign in to the admin center. The on-premises identity must be synchronized with and match the cloud identity.
-1. Make sure that Configuration Manager has discovered the administrative user account you're using to access the tenant attach features within Microsoft Endpoint Manager admin center. In the Configuration Manager console, go to the **Assets and Compliance** workspace. Select the **Users** node, and find your user account.
+1. Make sure that Configuration Manager has discovered the administrative user account you're using to access the tenant attach features within Microsoft Intune admin center. In the Configuration Manager console, go to the **Assets and Compliance** workspace. Select the **Users** node, and find your user account.
 
     If your account isn't listed in the **Users** node, check the configuration of the site's [Active Directory User discovery](../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser).
 

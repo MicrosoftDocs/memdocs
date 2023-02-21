@@ -18,7 +18,7 @@ ms.collection: tier3
 <!--CM6234688, IN7220536-->
 *Applies to: Configuration Manager (current branch)*
 
-Bring the power of the Configuration Manager on-premises Run Scripts feature to the Microsoft Endpoint Manager admin center. Allow additional personas, like Helpdesk, to run PowerShell scripts from the cloud against an individual Configuration Manager managed device in real time. This gives all the traditional benefits of PowerShell scripts that have already been defined and approved by the Configuration Manager admin to this new environment.
+Bring the power of the Configuration Manager on-premises Run Scripts feature to the Microsoft Intune admin center. Allow additional personas, like Helpdesk, to run PowerShell scripts from the cloud against an individual Configuration Manager managed device in real time. This gives all the traditional benefits of PowerShell scripts that have already been defined and approved by the Configuration Manager admin to this new environment.
 
 :::image type="content" source="./media/6234688-scripts.png" alt-text="Screenshot of script list in the admin center" lightbox="./media/6234688-scripts.png":::
 
@@ -33,7 +33,7 @@ Running Scripts from the admin center requires the following items:
 - To run PowerShell scripts, the client must be running PowerShell version 3.0 or later.
    - If a script you run contains functionality from a later version of PowerShell, the client on which you run the script must be running that later version of PowerShell.
 - At least one script that is already created and approved in Configuration Manager.
-   - Scripts that have parameters aren't supported at this time and won't be visible in the Microsoft Endpoint Manager admin center.
+   - Scripts that have parameters aren't supported at this time and won't be visible in the Microsoft Intune admin center.
    - Only scripts that are already created and approved appear in the admin center. For more information on approving scripts, see [Approve or deny a script](../apps/deploy-use/create-deploy-scripts.md#run-script-authors-and-approvers).
 
 ## Permissions
@@ -48,7 +48,7 @@ The user account needs the following permissions:
 
 ## Run a script
 
-1. In a browser, navigate to [https://endpoint.microsoft.com](https://endpoint.microsoft.com).
+1. In a browser, go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 1. Select **Devices** then **All Devices**.
 1. Select a device that is synced from Configuration Manager via [tenant attach](device-sync-actions.md).
 1. Select **Scripts**.

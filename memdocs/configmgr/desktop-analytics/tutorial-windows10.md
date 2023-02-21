@@ -22,7 +22,7 @@ This tutorial uses Desktop Analytics and Configuration Manager to deploy Windows
 In this tutorial, you learn how to:
 
 > [!div class="checklist"]
-> - Set up Desktop Analytics in the Microsoft Endpoint Manager admin center
+> - Set up Desktop Analytics in the Microsoft Intune admin center
 > - Connect Configuration Manager and configure device settings
 > - Create a Desktop Analytics deployment plan for Windows 10
 > - Use Configuration Manager to deploy Windows 10 to the pilot group

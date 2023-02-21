@@ -73,7 +73,7 @@ Starting in version 2111, you can use the following [app approval](app-approval.
 
 - From the Configuration Manager console, when you select a device, there's a new action in the **Device** group of the ribbon to **Install Application Group**. For more information, see [Install applications for a device](install-app-for-device.md).
 
-- When you enable tenant attach, you can view status and take actions on app groups from the Microsoft Endpoint Manager admin center. For more information, see [Install an application from the admin center](../../tenant-attach/applications.md).
+- When you enable tenant attach, you can view status and take actions on app groups from the Microsoft Intune admin center. For more information, see [Install an application from the admin center](../../tenant-attach/applications.md).
 
 ## Known issues
 

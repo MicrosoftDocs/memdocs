@@ -27,7 +27,7 @@ Always review the latest checklist for installing this update. For more informat
 
 To take full advantage of new Configuration Manager features, after you update the site, also update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.
 
-## Microsoft Endpoint Manager tenant attach
+## Microsoft Intune tenant attach
 
 ### Display all applications for a device in Microsoft Intune admin center
 <!--8795301-->

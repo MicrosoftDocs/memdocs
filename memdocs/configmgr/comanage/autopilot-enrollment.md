@@ -30,7 +30,7 @@ If the device is targeted with an [Autopilot enrollment status page (ESP) policy
 
 The following scenarios are several common ones that this feature supports:
 
-- Use the full Microsoft Endpoint Manager solution to configure devices to your organizational standards. You want to combine modern provisioning with Autopilot, cloud-attached management with co-management, and existing investments in Configuration Manager task sequences and app deployments.
+- Use the Microsoft Intune family of products to configure devices to your organizational standards. You want to combine modern provisioning with Autopilot, cloud-attached management with co-management, and existing investments in Configuration Manager task sequences and app deployments.
 
 - Install apps in a specific sequence during the Autopilot enrollment status page process.
 
@@ -135,7 +135,7 @@ Autopilot into co-management currently doesn't support the following functionali
 
 Use the following process to configure the co-management policy in Intune:
 
-1. Go to the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/).
+1. Go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 1. Select the **Devices** menu, select **Enroll devices**, and then select **Windows enrollment**.
 
@@ -154,7 +154,7 @@ Use the following process to configure the co-management policy in Intune:
 1. On the **Review + create** page, review the settings and create the policy.
 
 > [!NOTE]
-> If you assign more than one policy to a device, Intune pre-computes which policy it serves to the device. The **Co-management authority** pane in the Microsoft Endpoint Manager admin console lists the policy settings. Set the priority of each setting to help determine which policy a device receives when you assign more than one.
+> If you assign more than one policy to a device, Intune pre-computes which policy it serves to the device. The **Co-management authority** pane in the Microsoft Intune admin center lists the policy settings. Set the priority of each setting to help determine which policy a device receives when you assign more than one.
 
 ### Advanced settings
 

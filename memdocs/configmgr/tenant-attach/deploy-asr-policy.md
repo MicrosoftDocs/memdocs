@@ -1,7 +1,7 @@
 ---
 title: Tenant attach - Create and deploy Attack surface reduction policies from the admin center (preview)
 titleSuffix: Configuration Manager
-description: Create and deploy Attack surface reduction policies from the Microsoft Endpoint Manager console and for Configuration Manager collections.
+description: Create and deploy Attack surface reduction policies from the Microsoft Intune admin center and for Configuration Manager collections.
 ms.date: 05/31/2022
 ms.topic: conceptual
 ms.prod: configuration-manager
@@ -21,7 +21,7 @@ ms.collection: tier3
 > [!IMPORTANT]
 > This information relates to a preview feature which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
- Create Attack surface reduction policies in the Microsoft Endpoint Manager console and deploy them to Configuration Manager collections.
+ Create Attack surface reduction policies in the Microsoft Intune admin center and deploy them to Configuration Manager collections.
 
 <!--Adding Include for Prerequisites-->
 
@@ -29,7 +29,7 @@ ms.collection: tier3
 
 ## <a name="bkmk_asr"></a> Assign Attack surface reduction policy to a collection
 
-1. In a browser, go to the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/).
+1. In a browser, go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 1. Select **Endpoint security** > **Attack surface reduction** then **Create Policy**.
 1. Create a profile with the following settings:
 

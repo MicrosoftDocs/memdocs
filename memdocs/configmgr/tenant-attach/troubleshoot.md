@@ -18,7 +18,7 @@ ms.collection: tier3
 
 *Applies to: Configuration Manager (current branch)*
 
-Configuration Manager clients can be synced to Microsoft Endpoint Manager admin center. Some client actions can be run from the Microsoft Endpoint Manager admin center on the synchronized clients.
+Configuration Manager clients can be synced to Microsoft Intune admin center. Some client actions can be run from the Microsoft Intune admin center on the synchronized clients.
 
 The available actions are:
 - Sync Machine Policy
@@ -26,9 +26,9 @@ The available actions are:
 - App Evaluation Cycle
 
 
-[![Device overview in Microsoft Endpoint Manager admin center](./media/3555758-device-overview-actions.png)](./media/3555758-device-overview-actions.png#lightbox)
+[![Device overview in Microsoft Intune admin center](./media/3555758-device-overview-actions.png)](./media/3555758-device-overview-actions.png#lightbox)
   
-When an admin runs an action from Microsoft Endpoint Manager admin center, the notification request is forwarded to Configuration Manager site, and from the site to the client.
+When an admin runs an action from Microsoft Intune admin center, the notification request is forwarded to Configuration Manager site, and from the site to the client.
 
 ## Log files
 
@@ -50,18 +50,18 @@ Use the following logs located on the client:
 1. Open **CMGatewaySyncUploadWorker.log** from &lt;ConfigMgr install directory>\Logs.
 1. The next sync time is noted by log entries similar to `Next run time will be at approximately: 02/28/2020 16:35:31`.
 1. For device uploads, look for log entries similar to `Batching N records`. **N** is the number of changed devices uploaded since the last upload.
-1. The upload occurs every 15 minutes for changes. Once changes are uploaded, it may take an additional 5 to 10 minutes for client changes to appear in **Microsoft Endpoint Manager admin center**.
+1. The upload occurs every 15 minutes for changes. Once changes are uploaded, it may take an additional 5 to 10 minutes for client changes to appear in **Microsoft Intune admin center**.
 
 
 ## Configuration Manager components and log flow
 
-- **SMS_SERVICE_CONNECTOR**: Uses the Gateway Notification Worker for processing the notification from Microsoft Endpoint Manager admin center.
+- **SMS_SERVICE_CONNECTOR**: Uses the Gateway Notification Worker for processing the notification from Microsoft Intune admin center.
 - **SMS_NOTIFICATION_SERVER**: Gets the notification and creates a client notification.
 - **BgbAgent**: The client gets task and runs the requested action.
 
 ### SMS_SERVICE_CONNECTOR
 
-When an action is initiated from the Microsoft Endpoint Manager admin center, **CMGatewayNotificationWorker.log** processes the request.  
+When an action is initiated from the Microsoft Intune admin center, **CMGatewayNotificationWorker.log** processes the request.  
 
 ```text
 Received new notification. Validating basic notification details...
@@ -70,7 +70,7 @@ Authorized to perform client action. TemplateID: RequestMachinePolicy TenantId: 
 Forwarded BGB remote task. TemplateID: 1 TaskGuid: a43dd1b3-a006-4604-b012-5529380b3b6f TaskParam: TargetDeviceIDs: 1  
 ```
  
-1. A notification is received from Microsoft Endpoint Manager admin center.
+1. A notification is received from Microsoft Intune admin center.
 
    ```text
    Received new notification. Validating basic notification details..
@@ -121,7 +121,7 @@ Validating device action message content...
 Unauthorized to perform client action. TemplateID: RequestMachinePolicy TenantId: a1b2c3a1-b2c3-d4a1-b2c3-d4a1b2c3a1b2 AADUserID: 3a1e89e6-e190-4615-9d38-a208b0eb1c78
 ```  
 
-Ensure the user running the action from the Microsoft Endpoint Manager admin center has the required permissions on Configuration Manager site. For more information, see [Microsoft Endpoint Manager tenant attach prerequisites](prerequisites.md).
+Ensure the user running the action from the Microsoft Intune admin center has the required permissions on Configuration Manager site. For more information, see [Microsoft Intune tenant attach prerequisites](prerequisites.md).
 
 
 
@@ -131,7 +131,7 @@ Ensure the user running the action from the Microsoft Endpoint Manager admin cen
 
 <!-- 10877392 -->
 
-If you have issues viewing the tenant attach details in the Microsoft Endpoint Manager admin center, it may be because of an issue with the hierarchy onboarding configuration. This issue can be caused by onboarding a hierarchy that's already onboarded.
+If you have issues viewing the tenant attach details in the Microsoft Intune admin center, it may be because of an issue with the hierarchy onboarding configuration. This issue can be caused by onboarding a hierarchy that's already onboarded.
 
 You can also detect this issue from entries in the **GenericUploadWorker.log** and **CMGatewayNotificationWorker.log** files. For more information, see [Example errors in log files that require resetting the tenant attach configuration](#example-errors-in-log-files-that-require-resetting-the-tenant-attach-configuration).
 

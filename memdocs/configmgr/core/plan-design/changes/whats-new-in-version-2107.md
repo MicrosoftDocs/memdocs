@@ -32,7 +32,7 @@ To take full advantage of new Configuration Manager features, after you update t
 ### Cloud attach your environment during site update
 <!-- 9563659,7958749-->
 
-Microsoft Endpoint Manager is an integrated solution for managing all of your devices. Cloud attach brings together Configuration Manager and Intune into a single console called **Microsoft Intune admin center**. Starting with this release, sites that aren't already onboarded to Microsoft Endpoint Manager will be prompted to optionally cloud attach as part of the upgrade wizard. Environments are considered cloud attached if at least one of the following features are already enabled:
+The Microsoft Intune family of products is an integrated solution for managing all of your devices. Cloud attach brings together Configuration Manager and Intune into a single console called **Microsoft Intune admin center**. Starting with this release, sites that aren't already onboarded to Microsoft Intune will be prompted to optionally cloud attach as part of the upgrade wizard. Environments are considered cloud attached if at least one of the following features are already enabled:
 
 - [Tenant attach](../../../tenant-attach/device-sync-actions.md)
 - [Co-management](../../../comanage/overview.md)
@@ -76,14 +76,14 @@ For more information, see [Tenant attach: BitLocker recovery keys](../../../tena
 
 <!-- 8353823 -->
 
-United States Government customers can now use the following Microsoft Endpoint Manager tenant attach features in the US Government cloud:
+United States Government customers can now use the following Microsoft Intune tenant attach features in the US Government cloud:
 
 - Account onboarding
 - Tenant sync to Intune
 - Device sync to Intune
 - Device actions in the Microsoft Intune admin center
 
-For more information, see [Microsoft Endpoint Manager tenant attach: Prerequisites](../../../tenant-attach/prerequisites.md).
+For more information, see [Microsoft Intune tenant attach: Prerequisites](../../../tenant-attach/prerequisites.md).
 
 ### Renamed Co-management node to Cloud Attach
 <!--10158821, 10115058-->

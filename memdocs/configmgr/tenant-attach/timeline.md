@@ -16,7 +16,7 @@ ms.localizationpriority: high
 <!--CM7141381, IN7552762 pubpreview Sept 8, 2020, GA 2201-->
 *Applies to: Configuration Manager (current branch)*
 
-Microsoft Endpoint Manager is an integrated solution for managing all of your devices. Microsoft brings together Configuration Manager and Intune into a single console called **Microsoft Endpoint Manager admin center**. When Configuration Manager synchronizes a device to Microsoft Endpoint Manager through tenant attach, you can see a timeline of events. This timeline shows past activity on the device that can help you troubleshoot problems.
+The Microsoft Intune family of products is an integrated solution for managing all of your devices. Microsoft brings together Configuration Manager and Intune into a single console called **Microsoft Intune admin center**. When Configuration Manager synchronizes a device to Microsoft Intune through tenant attach, you can see a timeline of events. This timeline shows past activity on the device that can help you troubleshoot problems.
 
 ## Prerequisites
 
@@ -65,7 +65,7 @@ Devices send events once a day to the admin center. Only events collected after 
 
 ## View the timeline
 
-1. In a browser, navigate to [https://endpoint.microsoft.com](https://endpoint.microsoft.com).
+1. In a browser, go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 1. Select **Devices** then **All Devices**.
 1. Select a device that is synced from Configuration Manager via [tenant attach](device-sync-actions.md).
 1. Select **Timeline**. By default, you're shown events from the last 24 hours.

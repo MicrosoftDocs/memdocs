@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot software updates for devices uploaded to the admin center
 titleSuffix: Configuration Manager
-description: Troubleshooting software updates for Configuration Manager tenant attach
+description: Troubleshooting software updates for Intune tenant attach
 ms.date: 07/11/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -17,7 +17,7 @@ ms.collection: tier3
 # Troubleshoot software updates in the admin center
 <!--13035723-->
 
-When reviewing software updates in the admin center, you may run across some common errors. Use the following information about common error messages to troubleshoot software updates for tenant attached devices in the Microsoft Endpoint Manager admin center:
+When reviewing software updates in the admin center, you may run across some common errors. Use the following information about common error messages to troubleshoot software updates for tenant attached devices in the Microsoft Intune admin center:
 
 ## Common error messages
 
@@ -43,7 +43,7 @@ When reviewing software updates in the admin center, you may run across some com
 Typically, this error is caused by an issue with the admin account. Below are the most common issues with the administrative user account:
 
 1. Use the same account to sign in to the admin center. The on-premises identity must be synchronized with and match the cloud identity.
-1. Make sure that Configuration Manager has discovered the administrative user account you're using to access the tenant attach features within Microsoft Endpoint Manager admin center. In the Configuration Manager console, go to the **Assets and Compliance** workspace. Select the **Users** node and find your user account.
+1. Make sure that Configuration Manager has discovered the administrative user account you're using to access the tenant attach features within Microsoft Intune admin center. In the Configuration Manager console, go to the **Assets and Compliance** workspace. Select the **Users** node and find your user account.
 
     If your account isn't listed in the **Users** node, check the configuration of the site's [Active Directory User discovery](../../configmgr/core/servers/deploy/configure/about-discovery-methods.md).
 

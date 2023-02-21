@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot CMPivot for devices uploaded to the admin center
 titleSuffix: Configuration Manager
-description: Troubleshooting CMPivot for Configuration Manager tenant attach
+description: Troubleshooting CMPivot for Intune tenant attach
 ms.date: 07/11/2022
 ms.topic: troubleshooting
 ms.prod: configuration-manager
@@ -18,7 +18,7 @@ ms.collection: tier3
 <!--6024392-->
 *Applies to: Configuration Manager (current branch)*
 
-Use the following to troubleshoot CMPivot in the Microsoft Endpoint Manager admin center:
+Use the following to troubleshoot CMPivot in the Microsoft Intune admin center:
 
 ## Common issues
 
@@ -36,7 +36,7 @@ Use the following to troubleshoot CMPivot in the Microsoft Endpoint Manager admi
 
 1. Use the same account to sign in to the admin center. The on-premises identity must be synchronized with and match the cloud identity.
 1. Verify the account has **Read** permission for the device's **Collection** in Configuration Manager.
-1. Make sure that Configuration Manager has discovered the administrative user account you're using to access the tenant attach features within Microsoft Endpoint Manager admin center. In the Configuration Manager console, go to the **Assets and Compliance** workspace. Select the **Users** node, and find your user account.
+1. Make sure that Configuration Manager has discovered the administrative user account you're using to access the tenant attach features within Microsoft Intune admin center. In the Configuration Manager console, go to the **Assets and Compliance** workspace. Select the **Users** node, and find your user account.
 
     If your account isn't listed in the **Users** node, check the configuration of the site's [Active Directory User discovery](../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser).
 

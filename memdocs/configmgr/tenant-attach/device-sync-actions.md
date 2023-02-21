@@ -1,5 +1,5 @@
 ---
-title: Enable Microsoft Endpoint Manager tenant attach
+title: Enable Microsoft Intune tenant attach
 titleSuffix: Configuration Manager
 description: Upload your Configuration Manager devices to the cloud service and take actions from the admin center.
 ms.date: 08/12/2022
@@ -13,11 +13,11 @@ ms.localizationpriority: high
 ms.collection: tier3
 ---
 
-# <a name="bkmk_attach"></a> Enable Microsoft Endpoint Manager tenant attach: Device sync and device actions
+# <a name="bkmk_attach"></a> Enable Microsoft Intune tenant attach: Device sync and device actions
 <!--3555758 live 3/4/2020  Configuration Manager version 2002 min-->
 *Applies to: Configuration Manager (current branch)*
 
-Microsoft Endpoint Manager is an integrated solution for managing all of your devices. Microsoft brings together Configuration Manager and Intune into a single console called **Microsoft Endpoint Manager admin center**. You can upload your Configuration Manager devices to the cloud service and take actions from the **Devices** blade in the admin center.
+The Microsoft Intune family of products is an integrated solution for managing all of your devices. Microsoft brings together Configuration Manager and Intune into a single console called **Microsoft Intune admin center**. You can upload your Configuration Manager devices to the cloud service and take actions from the **Devices** blade in the admin center.
 
 > [!IMPORTANT]
 > When you attach your Configuration Manager site with a Microsoft Intune tenant, the site sends more data to Microsoft. [Tenant attach data collection](data-collection.md) article summarizes the data that is sent.
@@ -40,9 +40,9 @@ When co-management is already enabled, edit the co-management properties to enab
 > [!Important]
 > When you enable Endpoint analytics data upload, your default client settings will be automatically updated to allow managed endpoints to send relevant data to your Configuration Manager site server. If you use custom client settings, you may need to update and re-deploy them for data collection to occur. For more details on this, as well as how to configure data collection, such as to limit collection only to a specific set of devices, see the section on [Configuring Endpoint analytics data collection](../../analytics/enroll-configmgr.md#bkmk_cm_enable).
 
- [![Screenshot that shows how to upload devices to Microsoft Endpoint Manager admin center.](../../configmgr/tenant-attach/media/13058986-configure-upload-configmgr.png)](../../configmgr/tenant-attach/media/13058986-configure-upload-configmgr.png#lightbox) 
+ [![Screenshot that shows how to upload devices to Microsoft Intune admin center.](../../configmgr/tenant-attach/media/13058986-configure-upload-configmgr.png)](../../configmgr/tenant-attach/media/13058986-configure-upload-configmgr.png#lightbox) 
  
-<!-- : : : image type="content" source="../../analytics/media/13058986-configure-upload-configmgr.png" alt-text="Upload devices to Microsoft Endpoint Manager admin center." : : : -->
+<!-- : : : image type="content" source="../../analytics/media/13058986-configure-upload-configmgr.png" alt-text="Upload devices to Microsoft Intune admin center." : : : -->
  
 1. Sign in with your *Global Administrator* account when prompted.
 1. Select **Yes** to accept the **Create AAD Application** notification. This action provisions a service principal and creates an Azure AD application registration to facilitate the sync.
@@ -78,7 +78,7 @@ When co-management isn't enabled, use the instructions below to enable device up
 
 ## Scope tags
 <!--IN12698965-->
-Tenant-attached devices receive the [default scope tag](../../intune/fundamentals/scope-tags.md#default-scope-tag) from Microsoft Intune. If you remove the default scope tag from a tenant-attached device, the device won't be displayed at all in the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/). Currently, tenant-attached devices can't be assigned scope tags unlike [co-managed devices](../comanage/overview.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json) can.
+Tenant-attached devices receive the [default scope tag](../../intune/fundamentals/scope-tags.md#default-scope-tag) from Microsoft Intune. If you remove the default scope tag from a tenant-attached device, the device won't be displayed at all in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Currently, tenant-attached devices can't be assigned scope tags unlike [co-managed devices](../comanage/overview.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json) can.
 
 However, sometimes you don’t want certain [Intune roles](../../intune/fundamentals/role-based-access-control.md#built-in-roles) to see tenant-attached devices. For instance, you may not want someone with Intune's **Help Desk Operator** role to see tenant-attached devices because they're servers. In these cases, create or use a custom role in Intune that doesn't have **Default** listed for its **Scope tags**. When [creating custom Intune roles](../../intune/fundamentals/create-custom-role.md#to-create-a-custom-role), keep in mind that the default scope tag is automatically added to all untagged objects.
 
@@ -86,25 +86,25 @@ However, sometimes you don’t want certain [Intune roles](../../intune/fundamen
 
 1. In a browser, navigate to `endpoint.microsoft.com`
 1. Select **Devices** then **All devices** to see the uploaded devices. You'll see **ConfigMgr** in the **Managed by** column for uploaded devices.
-   [![All devices in Microsoft Endpoint Manager admin center](./media/3555758-all-devices.png)](./media/3555758-all-devices.png#lightbox)
+   [![All devices in Microsoft Intune admin center](./media/3555758-all-devices.png)](./media/3555758-all-devices.png#lightbox)
 1. Select a device to load its **Overview** page.
 1. Choose any of the following actions:
    - **Sync Machine Policy**
    - **Sync User Policy**
    - **App Evaluation Cycle**
 
-   [![Device overview in Microsoft Endpoint Manager admin center](./media/3555758-device-overview-actions.png)](./media/3555758-device-overview-actions.png#lightbox)
+   [![Device overview in Microsoft Intune admin center](./media/3555758-device-overview-actions.png)](./media/3555758-device-overview-actions.png#lightbox)
 
 
 ## Display the Configuration Manager connector status from the admin console
  <!--IN9229333, CM7138634-->
-From the Microsoft Endpoint Manager admin center, you can review the status of your Configuration Manager connector. To display the connector status, go to **Tenant administration** > **Connectors and tokens** > **Microsoft Endpoint Configuration Manager**. Select a Configuration Manager hierarchy to display additional information about it.
+From the Microsoft Intune admin center, you can review the status of your Configuration Manager connector. To display the connector status, go to **Tenant administration** > **Connectors and tokens** > **Microsoft Endpoint Configuration Manager**. Select a Configuration Manager hierarchy to display additional information about it.
    
 :::image type="content" source="media/7138634-connector-status.png" alt-text="Microsoft Configuration Manager connector in the admin center" lightbox="media/7138634-connector-status.png":::
 
 ## <a name="bkmk_offboard"></a> Offboard from tenant attach
 
-While we know customers get enormous value by enabling tenant attach, there are rare cases where you might need to offboard a hierarchy. You can offboard from either the Configuration Manager console (recommend method) or from the Microsoft Endpoint Manager admin center.
+While we know customers get enormous value by enabling tenant attach, there are rare cases where you might need to offboard a hierarchy. You can offboard from either the Configuration Manager console (recommend method) or from the Microsoft Intune admin center.
 ### Offboard from the Configuration Manager console
 
 When tenant attach is already enabled, edit the co-management properties to disable device upload and offboard.
@@ -115,17 +115,17 @@ When tenant attach is already enabled, edit the co-management properties to disa
 1. In the **Configure upload** tab, remove the **Upload to Microsoft Endpoint Manager admin center** selection.
 1. Select **Apply**.
 
-### Offboard from the Microsoft Endpoint Manager admin center
+### Offboard from the Microsoft Intune admin center
 <!-- CMADO7043245 INADO9412904 -->
-If needed, you can offboard a Configuration Manager hierarchy from the Microsoft Endpoint Manager admin center. For example, you may need to offboard from the admin center following a disaster recovery scenario where the on-premises environment was removed. Follow the steps below to remove your Configuration Manager hierarchy from the Microsoft Endpoint Manager admin center:
+If needed, you can offboard a Configuration Manager hierarchy from the Microsoft Intune admin center. For example, you may need to offboard from the admin center following a disaster recovery scenario where the on-premises environment was removed. Follow the steps below to remove your Configuration Manager hierarchy from the Microsoft Intune admin center:
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 1. Select **Tenant administration** then **Connectors and tokens**.
 1. Select **Microsoft Endpoint Configuration Manager**.
 1. Choose the name of the site you would like to offboard, then select **Delete**.
    - The connector may be listed as **Unknown** if the site information is lacking. <!--10569820, 10944009-->
 
-When you offboard a hierarchy from the admin center, it may take up to two hours to remove from the Microsoft Endpoint Manager admin center. If you offboard a Configuration Manager 2103 or later site that's online and healthy, the process may only take a few minutes.
+When you offboard a hierarchy from the admin center, it may take up to two hours to remove from the Microsoft Intune admin center. If you offboard a Configuration Manager 2103 or later site that's online and healthy, the process may only take a few minutes.
 
 > [!NOTE]
 > If you are using custom [RBAC roles with Intune](../../intune/fundamentals/role-based-access-control.md#roles), you will need to grant the **Organization** > **Delete** permission to offboard a hierarchy.

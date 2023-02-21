@@ -25,13 +25,13 @@ Always review the latest checklist for installing this update. For more informat
 
 To take full advantage of new Configuration Manager features, after you update the site, also update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.
 
-## <a name="bkmk_tenant"></a> Microsoft Endpoint Manager tenant attach
+## <a name="bkmk_tenant"></a> Microsoft Intune tenant attach
 
 ### <a name="bkmk_attach"></a> Device sync and device actions
 <!--3555758-->
-Microsoft Endpoint Manager is an integrated solution for managing all of your devices. Microsoft brings together Configuration Manager and Intune into a single console called **Microsoft Intune admin center**. Starting in this release you can upload your Configuration Manager devices to the cloud service and take actions from the **Devices** blade in the admin center.
+The Microsoft Intune family of products is an integrated solution for managing all of your devices. Microsoft brings together Configuration Manager and Intune into a single console called **Microsoft Intune admin center**. Starting in this release you can upload your Configuration Manager devices to the cloud service and take actions from the **Devices** blade in the admin center.
 
-For more information, see [Microsoft Endpoint Manager tenant attach](../../../tenant-attach/device-sync-actions.md).
+For more information, see [Microsoft Intune tenant attach](../../../tenant-attach/device-sync-actions.md).
 
 ## <a name="bkmk_infra"></a> Site infrastructure
 
