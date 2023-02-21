@@ -36,7 +36,6 @@ The following sections describe the new features to try out in this version:
 
 <!--Removing SUP role in Admin Console does not reset the supersedence age property in WMI. As a result, while reconfiguring the role, the previously configured value is shown in the configuration window. This property needs to be reset to default value on role removal.-->
 <!--  [!INCLUDE [11018755](includes/2112/known-issue-11018755.md)] -->
-
 <!--## Other Updates
 <!--15358429-->
 <!--Offset for recurring monthly maintenance window schedules.-->
