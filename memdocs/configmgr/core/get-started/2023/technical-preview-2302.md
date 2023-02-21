@@ -30,7 +30,6 @@ The following sections describe the new features to try out in this version:
 [!INCLUDE [Dark theme extended to delete secondary site wizard](includes/2302/15942599.md)]
 [!INCLUDE [Enable Windows features introduced via Windows servicing that are off by default](includes/2302/16834520.md)]
 
-
 <!--## General known issues-->
 <!--16822959-->
 <!--Update to the default value of supersedence age in months for software updates.-->
