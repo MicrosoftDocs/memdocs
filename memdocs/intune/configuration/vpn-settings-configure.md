@@ -24,8 +24,9 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection:
-  - M365-identity-device-management
-  - highpri
+- tier1
+- M365-identity-device-management
+- highpri
 ---
 
 # Create VPN profiles to connect to VPN servers in Intune

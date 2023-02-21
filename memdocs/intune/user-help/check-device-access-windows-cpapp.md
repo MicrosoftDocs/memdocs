@@ -25,7 +25,8 @@ ms.reviewer:
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
-ms.collection: 
+ms.collection:
+- tier2
 ---
 
 # Check access from Company Portal app for Windows

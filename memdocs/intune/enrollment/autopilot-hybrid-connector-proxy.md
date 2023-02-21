@@ -25,7 +25,9 @@ ms.suite: ems
 search.appverid: 
 #ms.tgt_pltfrm:
 ms.custom: 
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Work with existing on-premises proxy servers

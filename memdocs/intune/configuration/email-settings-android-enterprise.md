@@ -24,9 +24,9 @@ search.appverid: MET150
 ms.reviewer: tycast, japoehlm
 #ms.tgt_pltfrm:
 ms.custom: seodec18
-ms.collection: 
-- M365-identity-device-management
+ms.collection:
 - tier3
+- M365-identity-device-management
 ---
 
 # Android Enterprise device settings to configure email, authentication, and synchronization in Intune

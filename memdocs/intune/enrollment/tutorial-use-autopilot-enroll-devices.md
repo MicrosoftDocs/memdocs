@@ -28,8 +28,9 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune
 ms.collection:
-  - M365-identity-device-management
-  - highpri
+- tier1
+- M365-identity-device-management
+- highpri
 ---
 
 # Tutorial: Use Autopilot to enroll Windows devices in Intune

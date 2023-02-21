@@ -26,9 +26,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.collection:
+- tier3
 - M365-identity-device-management
 - macOS
-- tier3
 ---
 
 # Add Microsoft Edge to macOS devices using Microsoft Intune

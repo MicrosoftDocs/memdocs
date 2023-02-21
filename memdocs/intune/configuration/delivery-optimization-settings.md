@@ -24,9 +24,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 #ms.custom:
-ms.collection: 
-- M365-identity-device-management
+ms.collection:
 - tier3
+- M365-identity-device-management
 ---
 
 # Delivery Optimization settings for Windows devices in Intune

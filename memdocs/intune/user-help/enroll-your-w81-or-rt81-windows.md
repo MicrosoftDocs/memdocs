@@ -26,7 +26,8 @@ ms.reviewer: priyar
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
-ms.collection: 
+ms.collection:
+- tier2
 ---
 
 # How to enroll your Windows 8.1 or Windows RT 8.1 device in Intune  

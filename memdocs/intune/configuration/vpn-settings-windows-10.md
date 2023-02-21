@@ -24,9 +24,9 @@ search.appverid: MET150
 ms.reviewer: tycast
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; seodec18
-ms.collection: 
-- M365-identity-device-management
+ms.collection:
 - tier3
+- M365-identity-device-management
 ---
 
 # Windows 10/11 and Windows Holographic device settings to add VPN connections using Intune

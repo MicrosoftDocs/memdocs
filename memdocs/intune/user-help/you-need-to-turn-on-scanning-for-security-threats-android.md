@@ -27,7 +27,8 @@ ms.reviewer: chrisbal
 #ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
-ms.collection: 
+ms.collection:
+- tier2
 ---
 
 # Turn on Google Play Protect   

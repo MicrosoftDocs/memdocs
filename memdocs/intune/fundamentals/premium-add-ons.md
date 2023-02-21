@@ -24,9 +24,10 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: 
-  - M365-identity-device-management 
-  - highpri
+ms.collection:
+- tier1
+- M365-identity-device-management 
+- highpri
 ---
 
 # Use Premium add-ons capabilities with Intune
