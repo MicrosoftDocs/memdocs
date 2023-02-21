@@ -42,9 +42,7 @@ Microsoft Intune can help you manage Activation Lock, a feature of the Find My i
 
 Supported platforms:
 
- - iOS/iPadOS  
- - iOS/iPadOS 7.1 or later
- - Requires supervision  
+- iOS/iPadOS 7.1 or later (supervised)
 
 ## How Activation Lock affects you
 
