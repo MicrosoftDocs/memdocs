@@ -131,7 +131,6 @@ The following features are available with the most recent Configuration Manager 
 ### Technical preview version 2302
 
 - [Dark theme extended to delete secondary site wizard](2023/technical-preview-2302.md#bkmk_dark) <!--15942599-->
-- [Microsoft Configuration Manager product branding](2023/technical-preview-2302.md#bkmk_branding) <!-- 15885998. -->
 - [Enable Windows features introduced via Windows servicing that are off by default](2023/technical-preview-2302.md#bkmk_winfeatures) <!-- 16834520 -->
 
 
