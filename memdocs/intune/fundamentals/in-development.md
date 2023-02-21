@@ -74,16 +74,6 @@ The global quiet time settings will allow you to create policies to schedule qui
 
 ## Device configuration
 
-### Disable Activation Lock device action for supervised iOS/iPadOS devices<!-- 15571509 -->  
-You'll soon be able to use the **Disable Activation Lock** device action in Intune to bypass Activation Lock on iOS/iPadOS devices without requiring the current username or password.
-
-This new action will be available under **Devices > iOS/iPadOS > select one of your listed devices > Disable Activation Lock**.
-
-More information on managing Activation Lock is available at [Bypass iOS/iPadOS Activation Lock with Intune - Microsoft Intune | Microsoft Learn](../remote-actions/device-activation-lock-disable.md) or on Apple's website at [Activation Lock for iPhone, iPad, and iPod touch - Apple Support.](https://support.apple.com/en-us/HT201365).
-
-Applies to:  
-- **iOS/iPadOS**
-
 ### Support for multi-SIM iOS/iPadOS device inventory<!--16360290-->
 
 You'll soon be able to view the service subscription fields on devices that have multiple SIM cards installed under the per-device Hardware section. The inventory fields that are capable of reporting multiple values to Intune are:

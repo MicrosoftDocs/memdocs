@@ -111,6 +111,17 @@ Go to **Devices > All devices** > select one of your listed devices and select *
 Applies to:  
 - **iOS/iPadOS**
 
+#### Disable Activation Lock device action for supervised iOS/iPadOS devices<!-- 15571509 -->  
+You can use the **Disable Activation Lock** device action in Intune to bypass Activation Lock on iOS/iPadOS devices without requiring the current username or password.
+
+This new action will be available under  **Devices > iOS/iPadOS > select one of your listed devices > Disable Activation Lock**.
+
+More information on managing Activation Lock is available at [Bypass iOS/iPadOS Activation Lock with Intune](../remote-actions/device-activation-lock-disable.md) or on Apple's website at [Activation Lock for iPhone, iPad, and iPod touch - Apple Support.](https://support.apple.com/en-us/HT201365)
+
+Applies to:  
+- **iOS/iPadOS**
+
+
 ### Device management
 
 #### Device Control support for Printer Protection (Preview)<!-- 12355154  -->  
