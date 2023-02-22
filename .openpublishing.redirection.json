@@ -1272,6 +1272,11 @@
             "source_path": "memdocs/cloud-native-windows-endpoints.md",
             "redirect_url": "/mem/solutions/cloud-native-endpoints/cloud-native-windows-endpoints",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/fundamentals/premium-add-ons.md",
+            "redirect_url": "/mem/intune/fundamentals/intune-add-ons",
+            "redirect_document_id": false
         }  
     ]
 }

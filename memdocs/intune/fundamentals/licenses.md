@@ -69,7 +69,7 @@ Microsoft Endpoint Manager offers Intune add-ons. Licenses for the Intune add-on
  
   - [Learn more about Remote Help](../remote-actions/remote-help.md)
   
-  - For information about trial and purchasing, see [Getting started with Intune add-ons](premium-add-ons.md)
+  - For information about trial and purchasing, see [Getting started with Intune add-ons](intune-add-ons.md)
   
 ## Additional information
 

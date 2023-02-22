@@ -32,7 +32,7 @@ ms.collection:
 
 # Managing Specialty devices with Microsoft Intune
 
-The ability to manage specialty devices in Intune will require additional licensing with Microsoft  Intune add-ons. To learn more, see [Intune add-ons for Microsoft Intune](premium-add-ons.md)
+The ability to manage specialty devices in Intune will require additional licensing with Microsoft  Intune add-ons. To learn more, see [Intune add-ons for Microsoft Intune](intune-add-ons.md)
 
 ## What are specialized devices in Intune  
 

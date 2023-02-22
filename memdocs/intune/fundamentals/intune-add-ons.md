@@ -41,40 +41,36 @@ Licenses for the Intune add-ons can be added for an additional cost to the licen
 
 ## What add-ons capabilities are available
 
-
-| Add-ons              | Intune Suite | Plan 2 | Stand-alone  |
-|--|--|--|--|
-| Remote Help | ![Supported](./media/certificates-configure/green-check.png) |  | ![Supported](./media/certificates-configure/green-check.png)|
-| Microsoft Tunnel for Mobile Application Management  | ![Supported](./media/certificates-configure/green-check.png) | ![Supported](./media/certificates-configure/green-check.png) |  |
-| Support for specialty devices  | ![Supported](./media/certificates-configure/green-check.png) | ![Supported](./media/certificates-configure/green-check.png) | |
-| Advanced features for Endpoint Analytics  | ![Supported](./media/certificates-configure/green-check.png) | ![Supported](./media/certificates-configure/green-check.png) | |
-| Privilege Management | ![Supported](./media/certificates-configure/green-check.png) | ![Supported](./media/certificates-configure/green-check.png) | |
+|Capability|Standalone add-on|Intune Plan 2|Intune Suite|
+|:---|:---:|:---:|:---:|
+|Remote help|✔️| |✔️|
+|Microsoft Tunnel for Mobile Application Management| |✔️|✔️|
+|Specialized devices management| |✔️|✔️|
+|Advanced endpoint analytics| | |✔️|
 
 The following Intune add-ons are available:
 
 ### Remote Help 
 
-Remote Help is an Intune add-on application that works with Intune and enables your information and front-line workers to get assistance when needed over a remote connection. With this connection, your support staff can remote connect to the user's device. 
+Remote Help is an add-on application that works with Intune and enables your information and front-line workers to get assistance when needed over a remote connection. With this connection, your support staff can remote connect to the user's device. During the session, they can view the device's display and if permitted by the device user, take full control.
 
-During the session, they can view the device's display and if permitted by the device user, take full control. Full control enables a helper to directly make configurations or take actions on the device. 
+For more information, see [Remote Help](..\remote-actions\remote-help.md).
 
-For more information, go to [Remote Help](..\remote-actions\remote-help.md)
+### Microsoft Tunnel for Mobile Application Management
 
-### Microsoft Tunnel for Mobile Application Management 
+When you use the Microsoft Tunnel VPN Gateway, you can extend Tunnel support by adding Tunnel for Mobile Application Management (MAM). Tunnel MAM extends the Microsoft Tunnel VPN gateway to support devices that run Android or iOS, and that aren't enrolled with Microsoft Intune.
 
-When you use the Microsoft Tunnel VPN Gateway, you can extend Tunnel support by adding Tunnel for Mobile Application Management (MAM). Tunnel MAM extends the Microsoft Tunnel VPN gateway to support devices that run Android or iOS, and that aren't enrolled with Microsoft Intune. 
-
-With this solution, your users can use a single device that hasn't enrolled with Intune to gain secure access to the organizations on-premises apps and resources using modern authentication, Single Sign On and conditional access. 
-
-With Tunnel for MAM, your users can use their own device (BYOD) for both work and personal use, without having to grant the organization’s IT department control over that device.
-
-For more information, go to [Microsoft Tunnel for Mobile Application Management](..\protect\microsoft-tunnel-mam.md)
+For more information, see [Microsoft Tunnel for Mobile Application Management](../protect/microsoft-tunnel-mam.md).
 
 ### Managing Specialty devices with Microsoft Intune
 
-A device managed by Microsoft Intune is classified as a specialized device if it meets certain requirements. The ability to manage specialty devices in Intune will require additional licensing with Microsoft Intune add-ons. 
+Specialized devices management enables you to manage specialized devices such as large smart screen devices, AR/VR headsets, printers, and so on.
 
-For more information on specialty devices, go to [Specialty devices](specialty-devices-with-intune.md) 
+For more information, see [Managing specialized devices with Microsoft Intune](specialty-devices-with-intune.md).
+
+### Advanced endpoint analytics
+
+Feature description. For more information, see [Advanced endpoint analytics](../../analytics/overview.md).
 
 
 ## What happens when you try/buy the Intune add-ons capability 
@@ -87,7 +83,7 @@ Purchasing licenses lets you use the Intune add-on capability in your tenant for
 
 ## How to try or buy the Intune add-ons capability 
 
-Intune add-on capabilities are disabled in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) unless you are in the free trial period or have purchased licenses. Global and Billing administrators can choose to start a free trial or purchase licenses for Intune add-ons through the [Microsoft 365 admin center](https://admin.microsoft.com). 
+Intune add-on capabilities are disabled in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) unless you are in the free trial period or have purchased licenses. Global and Billing administrators can choose to start a free trial or purchase licenses for Intune add-ons through the [Microsoft 365 admin center](https://admin.microsoft.com). 
 
 Administrators who aren't Global or Billing administrators can still see the status of their tenant's Intune add-ons trial or active licenses in the centralized Intune add-on page in Endpoint Manager (but can't start a free trial or purchase licenses).  
 
@@ -112,7 +108,7 @@ After you buy licenses via any source, the licenses are available in your Tenant
 
 ## How to assign licenses 
 
-For information on how to assign licenses in Microsoft Endpoint Manager admin center, see [Assign Microsoft Intune licenses](licenses-assign.md)
+For information on how to assign licenses in Microsoft Intune admin center, see [Assign Microsoft Intune licenses](licenses-assign.md)
 
 ## Monitor license use 
 
