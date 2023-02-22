@@ -97,11 +97,14 @@ conceptualContent:
           itemType: concept
           text: Intune licensing
     
-    - title: Choose Intune Add-ons
+    - title: Microsoft Intune add-ons
       links:
-        - url: ./fundamentals/premium-add-ons.md
+        - url: ./fundamentals/intune-add-ons.md
           itemType: how-to-guide
-          text: Use Premium add-ons capabilities with Intune
+          text: Choose Intune add-ons
+        - url: ./fundamentals/remote-help.md
+          itemType: how-to-guide
+          text: Remote help
         - url: ./protect/microsoft-tunnel-mam.md
           itemType: how-to-guide
           text: Microsoft Tunnel for Mobile Application Management
