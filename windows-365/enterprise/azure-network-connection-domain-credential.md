@@ -35,7 +35,7 @@ ms.collection:
 When you create an Azure network connection (ANC) using a hybrid Azure Active Directory (Azure AD) join type, you must include on-premises domain credential information. This requirement makes it possible for the ANC to communicate with your on-premises resources.
 
 This article describes how the on-premises domain credentials are protected and managed by Windows 365 during the whole hybrid Azure AD join ANC life cycle:
- 
+
 1. Providing credentials
 2. Encrypting credentials
 3. Updating credentials
