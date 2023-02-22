@@ -7,7 +7,7 @@ keywords:
 author: Brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/25/2023
+ms.date: 01/31/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -298,6 +298,40 @@ The developer should:
 :::image type="content" source="./media/tunnel-mam-ios-sdk/log-delegate-method-example.png" alt-text="Screenshot that shows a sample Microsoft Tunnel log delegate method in Xcode on a macOS device.":::
 
 :::image type="content" source="./media/tunnel-mam-ios-sdk/log-delegate-method-output-example.png" alt-text="Screenshot that shows a sample Microsoft Tunnel log output in Xcode on a macOS device.":::
+
+## Microsoft Tunnel for Mobile Application Management Privacy information  
+Your privacy is important to us.  Review the following privacy related online documentation:
+
+- [Microsoft Privacy Statement](https://privacy.microsoft.com/privacystatement)
+- [Privacy and personal data in Intune](../protect/privacy-personal-data.md)
+- [Data storage and processing in Intune](../protect/privacy-data-store-process.md)
+
+When integrating the Microsoft Tunnel for MAM iOS SDK into mobile apps, the following data is collected when a developer:
+
+- Enables the Intune MAM telemetry module in the app
+
+**The data collected may include the following areas:**
+
+- Microsoft Tunnel for MAM SDK version
+- Microsoft-generated user information
+  - Device ID
+- Hardware and software information
+  - Device make
+  - Device model
+  - Device OS version
+- Admin and account information
+  - Intune Tenant ID
+  - Azure AD tenant ID
+- Usage measurement:  
+  - VPN initialization
+  - VPN connect and disconnect events
+- Error information
+  - Errors related to VPN connection failure
+
+No user identifiable information is collected.
+
+> [!IMPORTANT]
+> As a developer, when integrating the SDK it is important to not include any user identifiable data when using code to address and capture messages in your application.
 
 ## Known issues
 
