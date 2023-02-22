@@ -102,7 +102,7 @@ conceptualContent:
         - url: ./fundamentals/intune-add-ons.md
           itemType: how-to-guide
           text: Choose Intune add-ons
-        - url: ./fundamentals/remote-help.md
+        - url: ./remote-actions/remote-help.md
           itemType: how-to-guide
           text: Remote help
         - url: ./protect/microsoft-tunnel-mam.md
