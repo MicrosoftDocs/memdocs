@@ -185,9 +185,9 @@ You can manually update a certificate connector even when it supports automatic 
 
 ## Connector status <!-- and version -->
 
-In the Microsoft Endpoint Manager admin center, you can select a certificate connector to view information about its status: <!-- and confirm its version: -->
+In the Microsoft Intune admin center, you can select a certificate connector to view information about its status: <!-- and confirm its version: -->
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431)
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431)
 
 2. Go to **Tenant administration** > **Connectors and tokens** > **Certificate connectors**.
 

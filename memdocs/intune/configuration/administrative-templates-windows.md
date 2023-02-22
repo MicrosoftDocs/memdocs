@@ -65,7 +65,7 @@ This article lists the steps to create a template for Windows client devices, an
 
 ## Create the template
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Configuration profiles** > **Create profile**.
 3. Enter the following properties:
 
@@ -82,18 +82,18 @@ This article lists the steps to create a template for Windows client devices, an
 
 7. In **Configuration settings**, select **All settings** to see an alphabetical list of all the settings. Or, configure settings that apply to devices (**Computer configuration**), and settings that apply to users **(User configuration**):
 
-    :::image type="content" source="./media/administrative-templates-windows/administrative-templates-choose-computer-user-configuration.png" alt-text="Apply ADMX template settings to users and devices in Microsoft Intune and Endpoint Manager admin center.":::
+    :::image type="content" source="./media/administrative-templates-windows/administrative-templates-choose-computer-user-configuration.png" alt-text="Apply ADMX template settings to users and devices in Microsoft Intune and Intune admin center.":::
 
     > [!NOTE]
     > If you're using the **Settings catalog**, then select **Add settings**, and expand **Administrative Templates**. Select any setting to see what you can configure.
     > 
-    > :::image type="content" source="./media/administrative-templates-windows/settings-catalog-administrative-templates.png" alt-text="Expand administrative templates in Settings catalog in Microsoft Intune and Endpoint Manager admin center.":::
+    > :::image type="content" source="./media/administrative-templates-windows/settings-catalog-administrative-templates.png" alt-text="Expand administrative templates in Settings catalog in Microsoft Intune and Intune admin center.":::
     > 
     > For more information on creating policies using the Settings Catalog, see [Use the settings catalog to configure settings](settings-catalog.md).
 
 8. When you select **All settings**, every setting is listed. Scroll down to use the before and next arrows to see more settings:
 
-    :::image type="content" source="./media/administrative-templates-windows/administrative-templates-sample-settings-list.png" alt-text="See a sample list of settings and use previous and next buttons in Endpoint Manager admin center and Microsoft Intune.":::
+    :::image type="content" source="./media/administrative-templates-windows/administrative-templates-sample-settings-list.png" alt-text="See a sample list of settings and use previous and next buttons in Intune admin center and Microsoft Intune.":::
 
 9. Select any setting. For example, filter on **Office**, and select **Activate Restricted Browsing**. A detailed description of the setting is shown. Choose **Enabled**, **Disabled**, or leave the setting as **Not configured** (default). The detailed description also explains what happens when you choose **Enabled**, **Disabled**, or **Not configured**.
 
@@ -104,7 +104,7 @@ This article lists the steps to create a template for Windows client devices, an
 
     For example, select **Computer configuration** > **Windows components** > **Internet Explorer** to see all the device settings that apply to Internet Explorer:
 
-    :::image type="content" source="./media/administrative-templates-windows/administrative-templates-all-internet-explorer-settings-device.png" alt-text="See all device settings that apply to Internet Explorer in Microsoft Intune and Endpoint Manager admin center":::
+    :::image type="content" source="./media/administrative-templates-windows/administrative-templates-all-internet-explorer-settings-device.png" alt-text="See all device settings that apply to Internet Explorer in Microsoft Intune and Intune admin center":::
 
 11. Select **OK** to save your changes.
 
@@ -143,7 +143,7 @@ There are thousands of settings available in these templates. To make it easier 
 
 - In your template, use the **Search** box to find specific settings. You can search by setting, or path. For example, select **All settings**, and search for `copy`. All the settings with `copy` are shown:
 
-  :::image type="content" source="./media/administrative-templates-windows/search-copy-settings.png" alt-text="Search for copy to show all the device settings in administrative templates in Microsoft Intune and Endpoint Manager admin center.":::
+  :::image type="content" source="./media/administrative-templates-windows/search-copy-settings.png" alt-text="Search for copy to show all the device settings in administrative templates in Microsoft Intune and Intune admin center.":::
 
   In another example, search for `microsoft word`. You see the settings you can set for the Microsoft Word program. Search for `explorer` to see the Internet Explorer settings you can add to your template.
 

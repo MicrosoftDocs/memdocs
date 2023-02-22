@@ -74,7 +74,7 @@ Specific app types are supported based on the version of Windows 10 that your us
 
 ## Windows 10 LOB apps
 
-You can sign and upload Windows 10 LOB apps to the Microsoft Endpoint Manager admin center. These can include modern apps, such as Universal Windows Platform (UWP) apps and Windows App Packages (AppX), as well as Win 32 apps, such as simple Microsoft Installer package files (MSI). The admin must manually upload and deploy updates of LOB apps. These updates are automatically installed on user devices that have installed the app. No user intervention is required, and the user has no control over the updates.
+You can sign and upload Windows 10 LOB apps to the Microsoft Intune admin center. These can include modern apps, such as Universal Windows Platform (UWP) apps and Windows App Packages (AppX), as well as Win 32 apps, such as simple Microsoft Installer package files (MSI). The admin must manually upload and deploy updates of LOB apps. These updates are automatically installed on user devices that have installed the app. No user intervention is required, and the user has no control over the updates.
 
 ## Microsoft Store for Business apps
 
@@ -84,7 +84,7 @@ Microsoft Store for Business apps are modern apps, purchased from the Microsoft 
 
 To categorize Microsoft Store for Business apps:
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All apps**.
 3. Select a Microsoft Store for Business app. Then select **Properties** > **App Information** > **Category**.
 4. Select a category.

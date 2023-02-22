@@ -43,7 +43,7 @@ Enable mobile application management (MAM) for Windows 10/11 by setting the MAM 
 
 ## To configure the MAM provider
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **All services** and choose **M365 Azure Active Directory** to switch dashboards.
 3. Select **Azure Active Directory**.
 4. Choose **Mobility (MDM and MAM)** in the **Manage** group.

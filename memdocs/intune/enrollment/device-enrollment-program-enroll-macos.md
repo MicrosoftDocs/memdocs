@@ -67,7 +67,7 @@ This section describes how to create an enrollment program token in Intune. The 
 
 The public key certificate is needed to request a trust-relationship certificate from Apple Business Manager.     
 
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **macOS** > **macOS enrollment**. 
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **macOS** > **macOS enrollment**. 
 2. Select **Enrollment program tokens**. 
 3. Select **Add**.  
 4. Select **I agree** to grant permission to Microsoft to send user and device information to Apple. 
@@ -81,7 +81,7 @@ Add an MDM server for Intune to Apple Business Manager or Apple School Manager, 
     * **Create a token via Apple Business Manager** 
     * **Create a token via Apple School Manager**  
 
-    The selected portal opens in a new browser tab. You can safely switch to the new tab, but keep the tab with Microsoft Endpoint Manager open for access later.    
+    The selected portal opens in a new browser tab. You can safely switch to the new tab, but keep the tab with Microsoft Intune open for later.     
 2. Sign in to the Apple portal with your company Apple ID. Remember, this is the Apple ID you and your org will use to renew and manage the token going forward, so don't use a personal ID.      
 3. Go to your account profile > **Preferences**.  
 4. Go to your MDM server assignments.  
@@ -251,7 +251,7 @@ Complete these steps to renew a server token that's about to expire. This proced
 1. Sign in to Apple Business Manager or Apple School Manager and follow these step to download a new MDM server token: 
     * [Download token in Apple Business Manager](https://support.apple.com/guide/apple-business-manager/axme0f8659ec/web)
     * [Download token in Apple School Manager](https://support.apple.com/guide/apple-school-manager/axme0f8659ec/web)
-2. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Device enrollment** > **Apple Enrollment** > **Enrollment program tokens**. Select the enrollment program token you want to renew.  
+2. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Device enrollment** > **Apple Enrollment** > **Enrollment program tokens**. Select the enrollment program token you want to renew.  
 
 3. Select **Renew token** and enter the Apple ID used to create the original token.  
 4. Upload the new token.  

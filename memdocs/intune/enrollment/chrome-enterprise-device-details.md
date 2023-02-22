@@ -33,7 +33,7 @@ ms.collection:
 > [!IMPORTANT]
 > This feature is in public preview. For more information, see [Public preview in Microsoft Intune](../fundamentals/public-preview.md).   
 
-View details about your Chrome Enterprise connector and Chrome OS devices in the Microsoft Endpoint Manager admin center. Information becomes available after:  
+View details about your Chrome Enterprise connector and Chrome OS devices in the Microsoft Intune admin center. Information becomes available after:  
 
 * You establish the connection between Google Admin console and Microsoft Intune.
 * The initial device sync finishes. 
@@ -48,7 +48,7 @@ To view Chrome OS devices and device details, you must be assigned a role that h
 Devices must be enrolled before you can see them in the admin center. Enrollment for Chrome OS devices is done in the Google Admin center. You can create the connection before or after you enroll devices. For more information, see [Enroll ChromeOS devices](https://support.google.com/chrome/a/answer/1360534) (opens Chrome Enterprise and Education Help).
 
 ## View Chrome OS devices  
-Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices** > **All devices** to view an aggregated list of all devices in Intune, including those running Chrome OS.  The following information is shown for Chrome OS devices: 
+Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices** > **All devices** to view an aggregated list of all devices in Intune, including those running Chrome OS.  The following information is shown for Chrome OS devices: 
 
 * **Device name**: Device names for Chrome OS devices appear as `Chrome- {serialNumber}`. 
 * **Managed by**: Chrome OS devices are managed by **Intune**. 

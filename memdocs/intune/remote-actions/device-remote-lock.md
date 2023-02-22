@@ -60,7 +60,7 @@ When **Remote lock** is applied to a device that doesn’t have a PIN or passwor
 
 ## Remote lock a device
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 3. Select **Devices** > **All devices**.
 4. In the list of devices, select a device, and then select the **Remote lock** action.
 

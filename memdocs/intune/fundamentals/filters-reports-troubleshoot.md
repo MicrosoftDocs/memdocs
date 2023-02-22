@@ -33,16 +33,16 @@ ms.collection:
 
 When you create an app, compliance policy, or configuration profile, you assign the policy to groups (users or devices). When you assign the app or policy, you can also use filters. For example, you can assign policies to Windows 10/11 devices running a specific OS version. For more information, see [Use filters when assigning your apps, policies, and profiles](filters.md).
 
-Devices are evaluated against these filters to meet the rules you configure. The results of the filter evaluations are logged, and reported in the Microsoft Endpoint Manager admin center.
+Devices are evaluated against these filters to meet the rules you configure. The results of the filter evaluations are logged, and reported in the Microsoft Intune admin center.
 
 Use this article to learn more about the reporting features, and to help troubleshoot filters and conflicts.
 
 > [!IMPORTANT]
-> From evaluation time, the filter evaluation results can take up to 30 minutes to show in the Endpoint Manager admin center.
+> From evaluation time, the filter evaluation results can take up to 30 minutes to show in the Intune admin center.
 
 ## Reports
 
-The Endpoint Manager admin center has per-device and per-app reporting information. Use this information to help troubleshoot filter evaluation, and determine why a policy applied or didn’t apply.
+The Intune admin center has per-device and per-app reporting information. Use this information to help troubleshoot filter evaluation, and determine why a policy applied or didn’t apply.
 
 You can use the following reports to get more information on your filters:
 
@@ -55,7 +55,7 @@ This report shows every app or policy with a filter that's been applied. For eac
 
 To see this report, use the following steps:
 
-1. Sign in to the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **All Devices** > select a device > **Filter evaluation**. The following information is shown:
 
     - The filters that were evaluated.
@@ -82,7 +82,7 @@ These reports show filter information for each device that's evaluated in an app
 
 To see these reports, use the following steps:
 
-1. Sign in to the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All apps** > select an app > **Device install status**.
 3. Select the **Filter** column > **Filters evaluated**. The following information is shown:
 

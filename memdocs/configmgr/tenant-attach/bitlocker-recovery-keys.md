@@ -1,7 +1,7 @@
 ---
 title: Tenant attach - BitLocker recovery keys
 titleSuffix: Configuration Manager
-description: View BitLocker recovery keys for tenant-attached devices from the Microsoft Endpoint Manager admin center.
+description: View BitLocker recovery keys for tenant-attached devices from the Microsoft Intune admin center.
 ms.date: 01/25/2022
 ms.topic: conceptual
 ms.prod: configuration-manager
@@ -19,7 +19,7 @@ ms.collection: tier3
 
 <!--6979225-->
 
-You can get BitLocker recovery keys for a tenant-attached device from the Microsoft Endpoint Manager admin center. For example, a help desk technician who doesn't have access to Configuration Manager could use the web-based admin center to help an end user get a recovery key for their device.
+You can get BitLocker recovery keys for a tenant-attached device from the Microsoft Intune admin center. For example, a help desk technician who doesn't have access to Configuration Manager could use the web-based admin center to help an end user get a recovery key for their device.
 
 ## Prerequisites
 
@@ -43,7 +43,7 @@ The administrative user needs the following permissions:
 
 ## View recovery keys
 
-1. In a browser, go to [https://endpoint.microsoft.com](https://endpoint.microsoft.com).
+1. In a browser, go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 1. In the admin center, select **Devices** and then **All Devices**.
 
@@ -55,7 +55,7 @@ The administrative user needs the following permissions:
 
 1. A pane to the right displays the device information, including the BitLocker recovery key. Select the copy icon to copy the key to the clipboard. This action makes it easier to share with a user.
 
-:::image type="content" source="media/6979225-bitlocker-recovery-key.png" alt-text="Recovery Keys pane in the Microsoft Endpoint Manager admin center.":::
+:::image type="content" source="media/6979225-bitlocker-recovery-key.png" alt-text="Recovery Keys pane in the Microsoft Intune admin center.":::
 
 ## Next steps
 
