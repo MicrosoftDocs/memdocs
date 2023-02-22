@@ -10,51 +10,7 @@ items:
     - name: Intune user help
       tocHref: /mem/intune/user-help/
       topicHref: /mem/intune/user-help/
-    - name: Overview
-      tocHref: /mem/intune/fundamentals/
-      topicHref: /mem/intune/fundamentals/what-is-intune
-    - name: Overview
-      tocHref: /mem/intune/fundamentals/
-      topicHref: /mem/intune/fundamentals/manage-identities
-    - name: Overview
-      tocHref: /mem/intune/fundamentals/
-      topicHref: /mem/intune/fundamentals/manage-devices
-    - name: Overview
-      tocHref: /mem/intune/fundamentals/
-      topicHref: /mem/intune/fundamentals/manage-apps
-    - name: Overview
-      tocHref: /mem/intune/fundamentals/
-      topicHref: /mem/intune/fundamentals/intune-service-servicing-information
-    - name: Overview
-      tocHref: /mem/intune/fundamentals/
-      topicHref: /mem/intune/fundamentals/what-is-device-management
-    - name: Overview
-      tocHref: /mem/intune/fundamentals/
-      topicHref: /mem/intune/fundamentals/whats-new
-    - name: Overview
-      tocHref: /mem/intune/fundamentals/
-      topicHref: /mem/intune/fundamentals/in-development
 
-
-    - name: Apps
-      tocHref: /mem/intune/apps/
-      topicHref: /mem/intune/apps/
-
-    - name: Enrollment
-      tocHref: /mem/intune/enrollment/
-      topicHref: /mem/intune/enrollment/
-    - name: Remote actions
-      tocHref: /mem/intune/remote-actions/
-      topicHref: /mem/intune/remote-actions/
-    - name: Configuration
-      tocHref: /mem/intune/configuration/
-      topicHref: /mem/intune/configuration/
-    - name: Protect
-      tocHref: /mem/intune/protect/
-      topicHref: /mem/intune/protect/
-    - name: Developer
-      tocHref: /mem/intune/developer/
-      topicHref: /mem/intune/developer/
   - name: Configuration Manager
     tocHref: /mem/configmgr/
     topicHref: /mem/configmgr/
