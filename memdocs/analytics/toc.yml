@@ -7,11 +7,9 @@ items:
     href: overview.md
   - name: Scores, baselines, and insights
     href: scores.md
-  - name: Anomaly detection
-    href: anomaly-detection.md
 - name: Advanced Endpoint Analytics
   items:
-  - name: What is Advanced Endpoint analytics?
+  - name: What is Advanced Endpoint analytics
   - name: Anomaly detection
     href: anomaly-detection.md
   - name: Enhanced device timelines    
