@@ -70,7 +70,7 @@ Depending on where you want to route the audit log data, you need one of the fol
 
 ## Send logs to Azure monitor
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Reports** > **Diagnostics settings**. The first time you open it, turn it on. Otherwise, add a setting.
 
     :::image type="content" source="./media/review-logs-using-azure-monitor/diagnostics-settings-turn-on.png" alt-text="Screenshot that shows how to turn on Diagnostics settings in Microsoft Intune to send logs to Azure Monitor.":::

@@ -88,9 +88,9 @@ For more information on the single sign-on extension, go to [Single sign-on app 
 
 # [Intune](#tab/create-profile-intune)
 
-In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), create a device configuration profile. This profile includes the settings to configure the SSO app extension on devices.
+In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), create a device configuration profile. This profile includes the settings to configure the SSO app extension on devices.
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Configuration profiles** > **Create profile**.
 3. Enter the following properties:
 
@@ -136,7 +136,7 @@ In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwli
 
 When the device checks in with the Intune service, it will receive this profile. For more information, go to [How long does it take for devices to get a policy](device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned).
 
-To check that the profile deployed correctly, in the Endpoint Manager admin center, go to **Devices** > **Configuration Profiles** > select the profile you created and generate a report:
+To check that the profile deployed correctly, in the Intune admin center, go to **Devices** > **Configuration Profiles** > select the profile you created and generate a report:
 
 :::image type="content" source="./media/apple-enterprise-sso-plug-in/ios-ipados-enterprise-sso-profile-report.png" alt-text="Screenshot that shows the iOS/iPadOS device configuration profile deployment report in Intune.":::
 

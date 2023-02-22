@@ -1,7 +1,7 @@
 ---
 # required metadata
 title: View reporting details for organizational messages | Microsoft Intune  
-description: View the reporting details for existing organizational messages in the Microsoft Endpoint Manager admin center.          
+description: View the reporting details for existing organizational messages in the Microsoft Intune admin center.          
 keywords:
 author: Lenewsad
 ms.author: lanewsad
@@ -34,9 +34,9 @@ ms.collection:
 > [!IMPORTANT]
 > This feature is in public preview. For more information, see [Public preview in Microsoft Intune](../fundamentals/public-preview.md).  
 
-View the details of your organizational messages in the Microsoft Endpoint Manager admin center.  
+View the details of your organizational messages in the Microsoft Intune admin center.  
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Go to **Tenant administration** > **Organizational messages (preview)**.
 3. Select the **Message** tab to see a list of all existing messages and message details.  
 

@@ -58,7 +58,7 @@ After completing the sign-up process you are directed to the Microsoft 365 admin
 
 ## Sign in to Microsoft Intune
 
-Once you have signed up for Intune, you can use any device with a [supported browser](supported-devices-browsers.md#intune-supported-web-browsers) to sign in to [Intune](https://endpoint.microsoft.com) to administer the service.
+Once you have signed up for Intune, you can use any device with a [supported browser](supported-devices-browsers.md#intune-supported-web-browsers) to sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) to administer the service.
 
 By default, your account must have one of the following permissions in Azure AD:
 
@@ -69,15 +69,15 @@ To grant access to administer the service for users with other permissions, then
 
 ### Intune Admin portal URL
 
-Microsoft Endpoint Manager admin center: https://endpoint.microsoft.com
+Microsoft Intune admin center: `https://endpoint.microsoft.com`
 
-Intune for Education: https://intuneeducation.portal.azure.com
+Intune for Education: `https://intuneeducation.portal.azure.com`
 
 ### URLs for Intune services provided by Microsoft 365
 
-Microsoft 365 Business: https://portal.microsoft.com/adminportal
+Microsoft 365 Business: `https://portal.microsoft.com/adminportal`
 
-Microsoft 365 Mobile Device Management: https://admin.microsoft.com/adminportal/home#/MifoDevices
+Microsoft 365 Mobile Device Management: `https://admin.microsoft.com/adminportal/home#/MifoDevices`
 
 ## See also
 
