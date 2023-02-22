@@ -3,7 +3,7 @@
 
 title: Premium add-ons for Microsoft Intune
 titleSuffix: Microsoft Intune
-description: When you purchase licenses for Premium add-ons for Microsoft Intune, you expand the capabilities for device management with Microsoft Endpoint Manager.  
+description: When you purchase licenses for Premium add-ons for Microsoft Intune, you expand the capabilities for device management with Microsoft Intune.  
 keywords:
 author: smbhardwaj 
 ms.author: smbhardwaj
@@ -32,9 +32,9 @@ ms.collection:
 
 # Use Premium add-ons capabilities with Intune
 
-Microsoft Endpoint Manager now offers Premium add-ons. You can find premium add-ons in Intune under **Tenant administration** > **Premium add-ons**. The **Summary** blade shows all premium add-ons that have been released, a short description, and the status of the add-on. You can view the status of each add-on as either **Active** or **Available for trial or purchase**. 
+Microsoft Intune now offers Premium add-ons. You can find premium add-ons in Intune under **Tenant administration** > **Premium add-ons**. The **Summary** blade shows all premium add-ons that have been released, a short description, and the status of the add-on. You can view the status of each add-on as either **Active** or **Available for trial or purchase**. 
 
-Licenses for the Premium add-ons can be added for an additional cost to the licensing options that include Microsoft Endpoint Manager or Intune.
+Licenses for the Premium add-ons can be added for an additional cost to the licensing options that include Microsoft Configuration Manager or Intune.
 
 > [!NOTE]
 > Premium add-ons are currently not supported in Sovereign clouds.
@@ -49,15 +49,15 @@ The following Premium add-ons are available:
 
 Global and Billing administrators can choose to start free trials or purchase licenses for Premium add-ons through the [Microsoft 365 admin center](https://admin.microsoft.com).  
  
-Starting a free trial gives you a 90-day period to use the Premium add-on capability without any charge. Trials can be up to 250 users per tenant. At the end of the trial period, there's a 30-day grace period. After this point, you'll be unable to use the Premium add-on capability in Endpoint Manager for users within your tenant unless you've purchased the appropriate licenses. There's a one-time limit to start a trial for each tenant.  
+Starting a free trial gives you a 90-day period to use the Premium add-on capability without any charge. Trials can be up to 250 users per tenant. At the end of the trial period, there's a 30-day grace period. After this point, you'll be unable to use the Premium add-on capability in Intune for users within your tenant unless you've purchased the appropriate licenses. There's a one-time limit to start a trial for each tenant.  
  
 Purchasing licenses lets you use the Premium add-on capability in your tenant for the duration in which the licenses are active on your tenant based on the option selected during the Billing process. 
 
 ## How to try or buy the premium add-ons capability 
 
-Premium add-on capabilities are disabled in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) unless you are in the free trial period or have purchased licenses. Global and Billing administrators can choose to start a free trial or purchase licenses for Premium add-ons through the [Microsoft 365 admin center](https://admin.microsoft.com). 
+Premium add-on capabilities are disabled in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) unless you are in the free trial period or have purchased licenses. Global and Billing administrators can choose to start a free trial or purchase licenses for Premium add-ons through the [Microsoft 365 admin center](https://admin.microsoft.com). 
 
-Administrators who aren't Global or Billing administrators can still see the status of their tenant's Premium add-ons trial or active licenses in the centralized Premium add-on page in Endpoint Manager (but can't start a free trial or purchase licenses).  
+Administrators who aren't Global or Billing administrators can still see the status of their tenant's Premium add-ons trial or active licenses in the centralized Premium add-on page in Intune (but can't start a free trial or purchase licenses).  
 
 ### How to start a trial through the Microsoft 365 admin center 
 
@@ -80,7 +80,7 @@ After you buy licenses via any source, the licenses are available in your Tenant
 
 ## How to assign licenses 
 
-For information on how to assign licenses in Microsoft Endpoint Manager admin center, see [Assign Microsoft Intune licenses](licenses-assign.md)
+For information on how to assign licenses in Microsoft Intune admin center, see [Assign Microsoft Intune licenses](licenses-assign.md)
 
 ## Monitor license use 
 

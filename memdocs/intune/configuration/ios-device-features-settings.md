@@ -163,7 +163,7 @@ You can add up to **40** pages on a device.
 
 - **List of pages**: **Add** a page, and enter the following properties:
 
-  - **Page name**: Enter a name for the page. This name is used for your reference in the Microsoft Endpoint Manager admin center, and *isn't* shown on the iOS/iPadOS device.
+  - **Page name**: Enter a name for the page. This name is used for your reference in the Microsoft Intune admin center, and *isn't* shown on the iOS/iPadOS device.
 
   You can add up to **60** items (apps and folder combined) on a device.
 
@@ -173,7 +173,7 @@ You can add up to **40** pages on a device.
 
       - **App**: Choose this option to add apps to a page on the screen. Also enter:
 
-        - **App Name**: Enter a name for the app. This name is used for your reference in the Microsoft Endpoint Manager admin center. It *isn't* shown on the iOS/iPadOS device.
+        - **App Name**: Enter a name for the app. This name is used for your reference in the Microsoft Intune admin center. It *isn't* shown on the iOS/iPadOS device.
         - **App Bundle ID**: Enter the bundle ID of the app. See [Bundle IDs for built-in iOS/iPadOS apps](bundle-ids-built-in-ios-apps.md) for some examples.
 
       - **Folder**: Choose this option to add a folder to the dock on the screen.
@@ -183,8 +183,8 @@ You can add up to **40** pages on a device.
         - **Folder name**: Enter a name for the folder. This name is shown to users on devices.
         - **Add**: Adds pages to the folder. Also enter the following properties:
 
-          - **Page name**: Enter a name for the page. This name is used for your reference in the Microsoft Endpoint Manager admin center. It *isn't* shown on the iOS/iPadOS device.
-          - **App Name**: Enter a name for the app. This name is used for your reference in the Microsoft Endpoint Manager admin center. It *isn't* shown on the iOS/iPadOS device.
+          - **Page name**: Enter a name for the page. This name is used for your reference in the Microsoft Intune admin center. It *isn't* shown on the iOS/iPadOS device.
+          - **App Name**: Enter a name for the app. This name is used for your reference in the Microsoft Intune admin center. It *isn't* shown on the iOS/iPadOS device.
           - **App Bundle ID**: Enter the bundle ID of the app. See [Bundle IDs for built-in iOS/iPadOS apps](bundle-ids-built-in-ios-apps.md) for some examples.
 
 #### Example
@@ -212,8 +212,8 @@ When you assign the policy to an iPhone, the page looks similar to the following
   :::image type="content" source="./media/ios-device-features-settings/ios-ipados-app-notifications.png" alt-text="Add app notification in iOS/iPadOS profile in Microsoft Intune":::
 
   - **App bundle ID**: Enter the **App Bundle ID** of the app you want to add. See [Bundle IDs for built-in iOS/iPadOS apps](bundle-ids-built-in-ios-apps.md) for some examples.
-  - **App name**: Enter the name of the app you want to add. This name is used for your reference in the Microsoft Endpoint Manager admin center. It *isn't* shown on devices.
-  - **Publisher**: Enter the publisher of the app you're adding. This name is used for your reference in the Microsoft Endpoint Manager admin center. It *isn't* shown on devices.
+  - **App name**: Enter the name of the app you want to add. This name is used for your reference in the Microsoft Intune admin center. It *isn't* shown on devices.
+  - **Publisher**: Enter the publisher of the app you're adding. This name is used for your reference in the Microsoft Intune admin center. It *isn't* shown on devices.
   - **Notifications**: **Enable** or **Disable** the app from sending notifications to devices.
     - **Show in notifications center**: **Enable** allows the app to show notifications in the device Notification Center. **Disable** prevents the app from showing notifications in the Notification Center.
     - **Show on Lock Screen**: **Enable** shows app notifications on the device lock screen. **Disable** prevents the app from showing notifications on the lock screen.

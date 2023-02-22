@@ -85,7 +85,7 @@ For more information about device IDs, see the following topics:
 
 ## Windows Autopilot devices
 
-Devices that have been registered with the Windows Autopilot service are displayed in the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) under **Devices** > **Enroll devices** > **Windows enrollment** > **Windows Autopilot Deployment Program** > **Devices**:
+Devices that have been registered with the Windows Autopilot service are displayed in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) under **Devices** > **Enroll devices** > **Windows enrollment** > **Windows Autopilot Deployment Program** > **Devices**:
 
 ![Autopilot devices](images/ap-devices.png)
 
@@ -106,7 +106,7 @@ Below we describe the steps an IT Admin would go through to deregister a device 
 
 To deregister an Autopilot device from Intune, an IT Admin would:
 
-1. Sign in to the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431)
+1. Sign in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431)
 
 2. Navigate to **Groups** > **All groups**
 
@@ -136,9 +136,9 @@ The deregistration process will take about 15 minutes. You can accelerate the pr
 
 ## Deregister from Microsoft Admin Center
 
-To deregister an Autopilot device from the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431):
+To deregister an Autopilot device from the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431):
 
-1. Sign into to the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431)
+1. Sign into to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431)
 2. Navigate to **Devices** > **Autopilot**
 3. Select the device to be deregistered and then select the **Delete device** button
 

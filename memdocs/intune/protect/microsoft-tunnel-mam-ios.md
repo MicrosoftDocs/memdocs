@@ -85,7 +85,7 @@ Microsoft Tunnel for MAM iOS uses the following Intune policies and profiles:
 
 Create an app configuration policy for apps that will use Tunnel for MAM. This policy configures an app to use a specific Microsoft Tunnel Gateway Site, proxy, and trusted certificate(s) for Edge and line-of-business (LOB) apps. These resources are used when connecting to on-premises resources.
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Apps** > **App Configuration polices** > **Add** > **Managed Apps**.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Apps** > **App Configuration polices** > **Add** > **Managed Apps**.
 
 2. On the *Basics* tab, enter a *Name* for the policy and a *Description* (optional).
 
@@ -131,7 +131,7 @@ An App protection policy is required to configure Microsoft Tunnel for apps that
 
 This policy provides the necessary data protection and establishes a means of delivering app configuration policy to apps. To create an app protection policy, use the following steps:
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Apps** > **App protection policies** > **+ Create policy** >  and select **iOS/iPadOS**. 
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Apps** > **App protection policies** > **+ Create policy** >  and select **iOS/iPadOS**. 
 2. On the *Basics* tab, enter a *Name* for the policy, and a *Description* (optional), and then select **Next**.
 3. On the *Apps* tab:  
    1. Set *Target apps on all device types* to **No**.
@@ -362,9 +362,9 @@ If you enter a DNS hostname for the location of the PAC file or proxy server add
 
 When you create a custom app configuration policy, the newly added app may not appear in the list of targeted apps or the list of available custom apps. 
 
-**Work around**: This issue can be resolved by refreshing the Endpoint Manager admin center and accessing the policy again:
+**Work around**: This issue can be resolved by refreshing the Intune admin center and accessing the policy again:
 
-1. In the Endpoint Manager admin center, go to **Apps** > **App Configuration Policies** > **Add**.
+1. In the Intune admin center, go to **Apps** > **App Configuration Policies** > **Add**.
 2. Select custom apps, add a Bundle or Package ID for iOS, complete the flow, and create the app config policy. 
 3. Edit the basic settings. The newly added bundle ID should appear in the list of targeted custom apps.
 

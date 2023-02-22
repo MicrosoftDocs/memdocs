@@ -28,7 +28,7 @@ Use Configuration Manager to manage BitLocker Drive Encryption (BDE) for on-prem
 For more general information about BitLocker, see [BitLocker overview](/windows/security/information-protection/bitlocker/bitlocker-overview). For a comparison of BitLocker deployments and requirements, see the [BitLocker deployment comparison chart](/windows/security/information-protection/bitlocker/bitlocker-deployment-comparison).
 
 > [!TIP]
-> To manage encryption on co-managed Windows 10 or later devices using the Microsoft Endpoint Manager cloud service, switch the [**Endpoint Protection** workload](../../comanage/workloads.md#endpoint-protection) to Intune. For more information on using Intune, see [Windows Encryption](/intune/protect/endpoint-protection-windows-10#windows-encryption).
+> To manage encryption on co-managed Windows 10 or later devices using the Microsoft Intune cloud service, switch the [**Endpoint Protection** workload](../../comanage/workloads.md#endpoint-protection) to Intune. For more information on using Intune, see [Windows Encryption](/intune/protect/endpoint-protection-windows-10#windows-encryption).
 
 ## Features
 
@@ -66,7 +66,7 @@ Built-in reports for:
 Allow other personas in your organization outside of the Configuration Manager console to help with key recovery, including key rotation and other BitLocker-related support. For example, help desk administrators can help users with key recovery.
 
 > [!TIP]
-> Starting in version 2107, you can also get BitLocker recovery keys for a tenant-attached device from the Microsoft Endpoint Manager admin center.<!--6979225--> For more information, see [Tenant attach: BitLocker recovery keys](../../tenant-attach/bitlocker-recovery-keys.md).
+> Starting in version 2107, you can also get BitLocker recovery keys for a tenant-attached device from the Microsoft Intune admin center.<!--6979225--> For more information, see [Tenant attach: BitLocker recovery keys](../../tenant-attach/bitlocker-recovery-keys.md).
 
 ### User self-service portal
 
