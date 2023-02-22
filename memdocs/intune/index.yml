@@ -69,7 +69,7 @@ productDirectory:
         - url: ./fundamentals/deployment-guide-intune-setup.md
           text: "Migration guide: Set up or move to Intune"
         - url: ./fundamentals/get-started-with-intune.md
-          text: Get started with your Intune deployment
+          text: "Deployment plan: Get started with your Intune deployment"
         - url: fundamentals/protection-configuration-levels.md
           text: Levels of protection and configuration in Intune
         
