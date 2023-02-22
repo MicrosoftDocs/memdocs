@@ -51,7 +51,7 @@ _Windows Autopilot for existing devices_ lets you reimage and provision a Window
 
 If you want, you can set up an [enrollment status page](enrollment-status.md) (ESP) for Autopilot using Intune.
 
-1. Open the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com).
+1. Open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 1. Go to **Devices > Enroll Devices > Windows enrollment > Enrollment Status Page** and [Set up the Enrollment Status Page](../intune/enrollment/windows-enrollment-status.md).
 

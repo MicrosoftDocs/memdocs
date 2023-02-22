@@ -23,9 +23,10 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: 
-  - M365-identity-device-management
-  - highpri
+ms.collection:
+- tier1
+- M365-identity-device-management
+- highpri
 ms.reviewer: mattcall
 
 ---
@@ -36,7 +37,7 @@ Use the endpoint security Firewall policy in Intune to configure a devices built
 
 While you can configure the same firewall settings by using Endpoint Protection profiles for device configuration, the device configuration profiles include additional categories of settings. These additional settings are unrelated to firewalls and can complicate the task of configuring only firewall settings for your environment.
 
-Find the endpoint security policies for firewalls under *Manage* in the **Endpoint security** node of the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+Find the endpoint security policies for firewalls under *Manage* in the **Endpoint security** node of the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 ## Prerequisites for Firewall profiles
 
@@ -113,7 +114,7 @@ The reports for Firewall policy display status details about the firewall status
 
 ### Summary
 
-Summary is the default view when you open the Firewall node. Open the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and then go to **Endpoint security** > **Firewall** > **Summary**.
+Summary is the default view when you open the Firewall node. Open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and then go to **Endpoint security** > **Firewall** > **Summary**.
 
 This view provides:
 
@@ -122,7 +123,7 @@ This view provides:
 
 ### MDM devices running Windows 10 or later with firewall off
 
-This report is located in the Endpoint security node.  Open the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and then go to **Endpoint security** > **Firewall** >  **MDM devices running Windows 10 or later with firewall off**.
+This report is located in the Endpoint security node.  Open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and then go to **Endpoint security** > **Firewall** >  **MDM devices running Windows 10 or later with firewall off**.
 
 Data is reported through the Windows [DeviceStatus CSP](/windows/client-management/mdm/devicestatus-csp), and identifies each device where the Firewall is off. By default, visible details include:
 
@@ -139,7 +140,7 @@ Data is reported through the Windows [DeviceStatus CSP](/windows/client-manageme
 
 *This organizational report is also described in [Intune Reports](../fundamentals/reports.md#mdm-firewall-status-for-windows-10-and-later-organizational)*.
 
-As an organizational report, this report is available from the **Reports** node.  Open the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and then go to **Reports** > **Firewall** >  **MDM Firewall status for Windows 10 and later**.
+As an organizational report, this report is available from the **Reports** node.  Open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and then go to **Reports** > **Firewall** >  **MDM Firewall status for Windows 10 and later**.
 
 > [!div class="mx-imgBorder"]
 > ![Select firewall reports](media/endpoint-security-firewall-policy/select-firewall-reports.png)
@@ -174,11 +175,15 @@ Additional common firewall rule issues:
 - Verify configured ranges are within the overall port range of 0-65535 
 - If either remote port ranges or local port ranges are configured in a rule, protocol **must** also be configured with 6 (TCP) **or** 17 (UDP)
 
-**Event Viewer: Name "The parameter is incorrect"**
+**Event Viewer: "...Name), Result: (The parameter is incorrect)"**
 > [!div class="mx-imgBorder"]
-> ![NameFailure](media/endpoint-security-firewall-policy/nameparameterincorrect.png)
+> ![Screen capture of the Name Failure](media/endpoint-security-firewall-policy/nameparameterincorrect.png)
 - If edge traversal is enabled in a rule, the rule direction **must** be set to "This rule applies to inbound traffic".
 
+**Event Viewer: "...InterfaceTypes), Result: (The parameter is incorrect)"**
+> [!div class="mx-imgBorder"]
+> ![Screen capture of the Interface Types Failure](media/endpoint-security-firewall-policy/interfacetypesfailure.png)
+- If "All" interface type is enabled in a rule, the other interface types **must not** be selected.
 
 ## Next steps
 

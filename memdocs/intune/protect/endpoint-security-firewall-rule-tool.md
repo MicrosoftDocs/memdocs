@@ -23,9 +23,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: 
-- M365-identity-device-management
+ms.collection:
 - tier3
+- M365-identity-device-management
 ms.reviewer: laarrizz
 ---
 
@@ -62,7 +62,7 @@ Run the tool on a reference machine to migrate that machines current Windows Fir
 
    When more than 150 firewall rules are found, multiple policies are created.
 
-   Policies created by the tool are visible in the [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) in the **Endpoint security** > **Firewall** pane.
+   Policies created by the tool are visible in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) in the **Endpoint security** > **Firewall** pane.
 
    > [!NOTE]
    > By default, only enabled firewall rules are migrated and only firewall rules created by GPO are migrated. The tool supports [switches](#switches) you can use to modify these defaults.  

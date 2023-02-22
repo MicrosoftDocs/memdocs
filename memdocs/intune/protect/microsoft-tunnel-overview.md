@@ -21,10 +21,11 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: 
-  - M365-identity-device-management
-  - highpri
-  - highseo
+ms.collection:
+- tier1
+- M365-identity-device-management
+- highpri
+- highseo
 ---
 
 # Microsoft Tunnel for Microsoft Intune
@@ -47,7 +48,7 @@ Microsoft Tunnel Gateway installs onto a container that runs on a Linux server. 
 
 
 
-Through the Microsoft Endpoint Manager admin center, you’ll:
+Through the Microsoft Intune admin center, you’ll:
 
 - Download the Microsoft Tunnel installation script that you’ll run on the Linux servers.
 - Configure aspects of Microsoft Tunnel Gateway like IP addresses, DNS servers, and ports.

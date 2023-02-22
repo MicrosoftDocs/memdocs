@@ -26,12 +26,14 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: seodec18
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Configurations policy mapping from Basic Mobility and Security to Intune
 
-This article provides mapping details between Basic Mobility and Security to Intune. Specifically, this page maps Office 365 Security and Compliance portal Configurations policies to the equivalent policies in Microsoft Endpoint Manager admin center. Because Intune offers more flexibility, each Office policy will translate into multiple Intune and Azure Active Directory (Azure AD) policies to achieve the same result.
+This article provides mapping details between Basic Mobility and Security to Intune. Specifically, this page maps Office 365 Security and Compliance portal Configurations policies to the equivalent policies in Microsoft Intune admin center. Because Intune offers more flexibility, each Office policy will translate into multiple Intune and Azure Active Directory (Azure AD) policies to achieve the same result.
 
 If you’re migrating from Basic Mobility and Security to Intune, you can use the [Migration evaluation tool](migrate-to-intune.md) to automate much of this mapping.
 

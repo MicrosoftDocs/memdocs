@@ -27,8 +27,9 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection:
-  - M365-identity-device-management
-  - highpri
+- tier1
+- M365-identity-device-management
+- highpri
 ---
 
 # Create a Settings Catalog policy using your imported GPOs in Microsoft Intune (public preview)
@@ -41,7 +42,7 @@ This article shows you how to create the policy from your imported GPOs. For mor
 
 ## Before you begin
 
-- In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), sign in as:
+- In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), sign in as:
 
   - The **Intune administrator**
 
@@ -61,7 +62,7 @@ This article shows you how to create the policy from your imported GPOs. For mor
 
 After you import your GPOs, review the settings that can be migrated. Remember, some settings don't make sense on cloud native endpoints, like Windows 10/11 devices. After they've been reviewed, you can migrate the settings to a Settings Catalog policy.
 
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Group Policy analytics (preview)**.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Group Policy analytics (preview)**.
 2. In the list, your imported GPOs are shown. Next to the GPO you want in your Settings Catalog profile, select the **Migrate** checkbox. You can select one GPO or many GPOs:
 
     :::image type="content" source="./media/group-policy-analytics-migrate/select-migrate-checkbox-imported-gpo.png" alt-text="Screenshot that shows how to select the Migrate checkbox next to your imported GPO in Microsoft Intune." lightbox="./media/group-policy-analytics-migrate/select-migrate-checkbox-imported-gpo.png":::
@@ -134,7 +135,7 @@ When you create the Settings Catalog profile, any settings that can be included 
 
 - **Some settings have a better configuration experience in Endpoint Security**
 
-  If you import AppLocker settings or Firewall rule settings, then the **Migrate** option is disabled and grayed out. Instead, configure these settings using the Endpoint Security workload in the Endpoint Manager admin center.
+  If you import AppLocker settings or Firewall rule settings, then the **Migrate** option is disabled and grayed out. Instead, configure these settings using the Endpoint Security workload in the Intune admin center.
 
   For more information, go to:
   

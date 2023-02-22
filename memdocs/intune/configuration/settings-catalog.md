@@ -24,7 +24,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Use the settings catalog to configure settings on Windows, iOS/iPadOS and macOS devices
@@ -60,7 +62,7 @@ For information on some features you can configure using the settings catalog, g
 
 ## Create the policy
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Configuration profiles** > **Create profile**.
 3. Enter the following properties:
 
@@ -79,11 +81,11 @@ For information on some features you can configure using the settings catalog, g
 
     For example, select **Windows 10 and later**, then select **Authentication** to see all the settings in this category:
 
-    :::image type="content" source="./media/settings-catalog/settings-picker-authentication.png" alt-text="Screenshot that shows the Settings Catalog when you select Windows and Authentication in Microsoft Intune and Endpoint Manager admin center.":::
+    :::image type="content" source="./media/settings-catalog/settings-picker-authentication.png" alt-text="Screenshot that shows the Settings Catalog when you select Windows and Authentication in Microsoft Intune and Intune admin center.":::
 
     For example, select **macOS**. The **Microsoft Edge - All** category lists all the settings you can configure, including any new settings. The other categories include settings that are obsolete, or settings that apply to older versions:
 
-    :::image type="content" source="./media/settings-catalog/macos-settings-picker-edge-all.png" alt-text="Screenshot that shows the Settings Catalog when you select macOS and select a feature or category in Microsoft Intune and Endpoint Manager admin center.":::
+    :::image type="content" source="./media/settings-catalog/macos-settings-picker-edge-all.png" alt-text="Screenshot that shows the Settings Catalog when you select macOS and select a feature or category in Microsoft Intune and Intune admin center.":::
 
     > [!TIP]
     >
@@ -93,11 +95,11 @@ For information on some features you can configure using the settings catalog, g
 
 8. Select any setting you want to configure. Or, choose **Select all these settings**:
 
-    :::image type="content" source="./media/settings-catalog/settings-picker-select-all-settings.png" alt-text="Screenshot that shows the settings when you select all these settings in Microsoft Intune and Endpoint Manager admin center.":::
+    :::image type="content" source="./media/settings-catalog/settings-picker-select-all-settings.png" alt-text="Screenshot that shows the settings when you select all these settings in Microsoft Intune and Intune admin center.":::
 
     After you add your settings, close the settings picker. All the settings are shown, and configured with a default value, such as **Block** or **Allow**. These defaults values are the same default values in the OS. If you don't want to configure a setting, then select the minus:
 
-    :::image type="content" source="./media/settings-catalog/default-setting-value-minus-not-configured.png" alt-text="Screenshot that shows the Settings Catalog and that the default values in Microsoft Intune and Endpoint Manager admin center are the same as the OS default values.":::
+    :::image type="content" source="./media/settings-catalog/default-setting-value-minus-not-configured.png" alt-text="Screenshot that shows the Settings Catalog and that the default values in Microsoft Intune and Intune admin center are the same as the OS default values.":::
 
     When you select the minus (`-`):
 
@@ -111,7 +113,7 @@ For information on some features you can configure using the settings catalog, g
     > - When a setting allows multiple values, it's recommended to add each value separately.
     > 
     >   For example, you can enter multiple values in the **Bluetooth** > **Services Allowed List** setting. Enter each value on a separate line:
-    >   :::image type="content" source="./media/settings-catalog/setting-with-multiple-values.png" alt-text="Screenshot that shows a setting with multiple values on a separate line in the Settings Catalog in Microsoft Intune and the Endpoint Manager admin center":::
+    >   :::image type="content" source="./media/settings-catalog/setting-with-multiple-values.png" alt-text="Screenshot that shows a setting with multiple values on a separate line in the Settings Catalog in Microsoft Intune and the Intune admin center":::
     >
     >   You can add multiple values in a single field, but you may experience a character limit.
 
@@ -136,20 +138,20 @@ There are thousands of settings available in the settings catalog. To make it ea
 
   For example, search for `internet explorer`. All the settings with `internet explorer` are shown. Select a category to see the available settings:
 
-  :::image type="content" source="./media/settings-catalog/search-internet-explorer.png" alt-text="Screenshot that shows the Settings Catalog when you search for Internet Explorer to see all the IE settings in Microsoft Intune and Endpoint Manager admin center.":::
+  :::image type="content" source="./media/settings-catalog/search-internet-explorer.png" alt-text="Screenshot that shows the Settings Catalog when you search for Internet Explorer to see all the IE settings in Microsoft Intune and Intune admin center.":::
 
 - In your policy, use **Add settings** > **Add filter**. Select the key, operator, and value.
 
   When you **filter on OS Edition**, you can filter the settings that apply to specific Windows editions:
 
-  :::image type="content" source="./media/settings-catalog/settings-picker-filter-edition.png" alt-text="Screenshot that shows the Settings Catalog when you filter the settings list by Windows edition in Microsoft Intune and Endpoint Manager admin center.":::
+  :::image type="content" source="./media/settings-catalog/settings-picker-filter-edition.png" alt-text="Screenshot that shows the Settings Catalog when you filter the settings list by Windows edition in Microsoft Intune and Intune admin center.":::
 
   > [!NOTE]
   > For the Edge, Office, and OneDrive settings, the OS version or edition doesn't determine if the settings apply. So, if you filter to a specific edition, like Windows Professional, then the Edge, Office, and OneDrive settings aren't shown.
 
   You can also **filter the settings by device or user scope**. For more information on user scope and device scope, go to [Device scope vs. user scope settings](#device-scope-vs-user-scope-settings) (in this article):
 
-  :::image type="content" source="./media/settings-catalog/settings-picker-filter-scope.png" alt-text="Screenshot that shows the user and device scope filter in the settings catalog in Microsoft Intune and Endpoint Manager admin center.":::
+  :::image type="content" source="./media/settings-catalog/settings-picker-filter-scope.png" alt-text="Screenshot that shows the user and device scope filter in the settings catalog in Microsoft Intune and Intune admin center.":::
 
 ## Copy a profile  
 
@@ -163,19 +165,19 @@ Select **Duplicate** to create a copy of an existing profile. Duplicating is use
 
 ## Reporting and conflicts
 
-You create the policy, and assign it to your groups. In the Endpoint Manager admin center, you can check the status of your policy. The data refreshes automatically, and operates in near real time.
+You create the policy, and assign it to your groups. In the Intune admin center, you can check the status of your policy. The data refreshes automatically, and operates in near real time.
 
-1. In the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Device configuration profiles**. In the list, select the policy you created using the Settings Catalog. The **Profile type** column shows **Settings Catalog**:
+1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Device configuration profiles**. In the list, select the policy you created using the Settings Catalog. The **Profile type** column shows **Settings Catalog**:
 
-    :::image type="content" source="./media/settings-catalog/profile-type-shows-settings-catalog.png" alt-text="Screenshot that shows how to open the settings catalog in Microsoft Intune and Endpoint Manager admin center.":::
+    :::image type="content" source="./media/settings-catalog/profile-type-shows-settings-catalog.png" alt-text="Screenshot that shows how to open the settings catalog in Microsoft Intune and Intune admin center.":::
 
 2. When you select the policy, the device status shows. It shows a summary of your policy state and the policy properties. You can also change or update your policy in the **Configuration settings** section:
 
-    :::image type="content" source="./media/settings-catalog/settings-catalog-policy-device-status-report.png" alt-text="Screenshot that shows how to select the settings catalog policy to see the device status, policy state, and properties in Microsoft Intune and Endpoint Manager admin center.":::
+    :::image type="content" source="./media/settings-catalog/settings-catalog-policy-device-status-report.png" alt-text="Screenshot that shows how to select the settings catalog policy to see the device status, policy state, and properties in Microsoft Intune and Intune admin center.":::
 
 3. Select **View report**. The report shows detailed information, including the device name, the policy status, and more. You can also filter on the deployment status, and **Export** the report to a `.csv` file:
 
-    :::image type="content" source="./media/settings-catalog/settings-catalog-policy-view-report.png" alt-text="Screenshot that shows how to see detailed report information in Microsoft Intune and Endpoint Manager admin center, including device name, policy status, and more." lightbox="./media/settings-catalog/settings-catalog-policy-view-report.png":::
+    :::image type="content" source="./media/settings-catalog/settings-catalog-policy-view-report.png" alt-text="Screenshot that shows how to see detailed report information in Microsoft Intune and Intune admin center, including device name, policy status, and more." lightbox="./media/settings-catalog/settings-catalog-policy-view-report.png":::
 
 4. You can also look at the states of each setting using the **per-setting status**. This status shows the total number of devices affected by each setting in the policy.
 
@@ -203,7 +205,7 @@ Conflicts happen when the same setting is updated to different values. Conflicts
 
 When you create the policy, you have two policy types: **Settings catalog** and **Templates**:
 
-:::image type="content" source="./media/settings-catalog/select-windows-policy-type.png" alt-text="Screenshot that shows when you create a Windows or macOS policy, select settings catalog or templates in Microsoft Intune and Endpoint Manager admin center.":::
+:::image type="content" source="./media/settings-catalog/select-windows-policy-type.png" alt-text="Screenshot that shows when you create a Windows or macOS policy, select settings catalog or templates in Microsoft Intune and Intune admin center.":::
 
 The **Templates** include a logical group of settings, such as kiosk, VPN, Wi-Fi, and more. Use this option if you want to use these groupings to configure your settings.
 

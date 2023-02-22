@@ -6,8 +6,8 @@ ms.date: 05/03/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: quickstart
-author: mestew
-ms.author: mstewart
+author: smritib17
+ms.author: smbhardwaj
 manager: dougeby
 # Customer intent: As a Microsoft Endpoint Manager administrator, I want to enroll Configuration Manager devices into Endpoint analytics so that I can gain insights into the user experience.
 ms.localizationpriority: high
@@ -80,7 +80,7 @@ Onboarding from  the Endpoint analytics portal is required for both  Configurati
 
 ### <a name="bkmk_cm_enable"></a> Configure Endpoint analytics data collection in Configuration Manager
 
-The **Enable Endpoint analytics data collection** client setting allows your managed endpoints to send data necessary for Endpoint analytics to your site server. This setting does not control whether data gets uploaded to the Microsoft Endpoint Manager admin center.
+The **Enable Endpoint analytics data collection** client setting allows your managed endpoints to send data necessary for Endpoint analytics to your site server. This setting does not control whether data gets uploaded to the Microsoft Intune admin center.
 
 The **Enable Endpoint analytics data collection** setting is enabled by default for devices targeted by only the default [client settings](../configmgr/core/clients/deploy/about-client-settings.md). If you're upgrading to version 2006 from Configuration Manager version 1910 or prior, the Endpoint analytics data collection policy will be enabled in your custom client settings upon upgrade. You can enable or disable data collection by following the instructions below: <!--7065447, 7741111-->
 

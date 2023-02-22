@@ -24,7 +24,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Custom compliance discovery scripts for Microsoft Intune
@@ -116,7 +118,7 @@ For more information, the following guide might be of use [POSIX Shell Tutorial 
 
 Before deploying your script in production, test it in an isolated environment to ensure the syntax you use behaves as expected.
 
-1. Sign into Microsoft Endpoint Manager admin center and go to  **Endpoint security** > **Device compliance** > **Scripts** > **Add** > *(choose your platform)*.
+1. Sign into Microsoft Intune admin center and go to  **Endpoint security** > **Device compliance** > **Scripts** > **Add** > *(choose your platform)*.
 2. On **Basics**, provide a *Name*.
 3. On **Settings**, add your script to *Detection script*. Review your script carefully. Intune doesn’t validate the script for syntax or programmatic errors.
 4. ***For Windows only*** - On **Settings**, configure the following behavior for the PowerShell script:
@@ -125,9 +127,9 @@ Before deploying your script in production, test it in an isolated environment t
    - **Enforce script signature check** – For more information, see [about_Signing](/powershell/module/microsoft.powershell.core/about/about_signing?view=powershell-7.1&preserve-view=true) in the PowerShell documentation.
    - **Run script in 64 bit PowerShell Host** – By default, the script runs using the 32-bit PowerShell host. Set this value to *Yes* to force the script to run using the 64-bit host instead.
 
-5. Complete the script creation process. The script is now visible in the *Scripts* pane of the Microsoft Endpoint Manager admin center and is available to select when configuring compliance policies.
+5. Complete the script creation process. The script is now visible in the *Scripts* pane of the Microsoft Intune admin center and is available to select when configuring compliance policies.
 
-Also, note that the workflow for uploading these scripts to the Microsoft Endpoint Manager admin center does not support scope tags at this time. You must be targeted with the default scope tag to create, edit, or see custom compliance discovery scripts.
+Also, note that the workflow for uploading these scripts to the Microsoft Intune admin center does not support scope tags at this time. You must be targeted with the default scope tag to create, edit, or see custom compliance discovery scripts.
 
 ## Next steps
 
