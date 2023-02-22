@@ -49,7 +49,7 @@ The table provides a list of add-on capabilities and how they are available.
 |Microsoft Tunnel for Mobile Application Management| |✔️|✔️|
 |Specialized devices management| |✔️|✔️|
 |Advanced endpoint analytics| | |✔️|
-|Endpoint Privilege Management| | |✔️|
+|Endpoint Privilege Management (preview)| | |✔️|
 
 ### Remote Help
 
