@@ -48,6 +48,18 @@ Licenses for the Intune add-ons can be added for an additional cost to the licen
 |Specialized devices management| |✔️|✔️|
 |Advanced endpoint analytics| | |✔️|
 
+#### Microsoft Intune Suite
+
+Microsoft Intune Suite unifies a series of mission-critical advanced endpoint management and security capabilities. The capabilities of the suite are integrated with Microsoft 365 and Microsoft Security across endpoint platforms for both cloud and on-premises co-managed devices. The Intune Suite provide the following core benefits:
+
+- **Unify endpoint management**: Bring all of your endpoint and security management tools into one place, simplifying workflows for IT and SecOps. 
+- **Strengthen security**: Ensure device health and compliance by utilizing Microsoft Security signals and advanced capabilities to mitigate threats and protect corporate data.  
+- **Reduce costs**: Do more with less by consolidating vendors with Microsoft for efficient, cost-effective licensing. Improve end user productivity and performance across devices. 
+
+#### Microsoft Intune Plan 2
+
+Intune Plan 2 is an add-on that offers advanced endpoint management functionality.
+
 The following Intune add-ons are available:
 
 ### Remote Help 
@@ -70,7 +82,9 @@ For more information, see [Managing specialized devices with Microsoft Intune](s
 
 ### Advanced endpoint analytics
 
-Feature description. For more information, see [Advanced endpoint analytics](../../analytics/overview.md).
+Microsoft Intune Advanced Endpoint analytics provides IT with complete visibility of digital end user experience, enabling proactive detection and remediation of issues before they impact user productivity. These capabilities also offer intelligent recommendations for optimizing and improving IT systems, which simplifies IT tasks with AI driven automation.  
+
+For more information, see [Advanced endpoint analytics](../../analytics/overview.md).
 
 
 ## What happens when you try/buy the Intune add-ons capability 
@@ -112,10 +126,18 @@ For information on how to assign licenses in Microsoft Intune admin center, see 
 
 ## Monitor license use 
 
-Each of the Intune add-ons might have their own requirements for how many licenses need to be purchased.
+Each of the Intune add-ons have their own requirements for how many licenses need to be purchased.
 
 - [Remote Help](..\remote-actions\remote-help.md)
 
 ## Next steps
 
-Learn about [Remote Help](..\remote-actions\remote-help.md). 
+Learn more about:
+
+- [Remote Help](..\remote-actions\remote-help.md).
+
+- [Microsoft Tunnel for Mobile Application Management](../protect/microsoft-tunnel-mam.md).
+
+- [Managing specialized devices with Microsoft Intune](specialty-devices-with-intune.md).
+
+- [Advanced endpoint analytics](../../analytics/overview.md).
