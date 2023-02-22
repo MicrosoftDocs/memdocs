@@ -54,7 +54,7 @@ Anomaly detection aims at addressing these problems by enabling IT admins with c
 
    :::image type="content" source="media/anomaly-detection/affected-devices.png" alt-text="This is a screenshot showing a list of affected devices":::
 
-## Analytical or Statistical Models for determining anomalies
+## Statistical Models for determining anomalies
 
 The Analytical Model built detects device cohorts facing anomalous set of stop error restarts and application hangs/ crashes that need admin attention to mitigate and resolve. Patterns identified from our sensor telemetry and diagnostics logs determine these device cohorts
 
@@ -70,6 +70,8 @@ Standard deviation and mean are calculated for a sliding window of time, using a
 
 ## Next steps 
 
-Organizations go through ups and downs, baselines could vary across geographies, user base and so on. Microsoft plans to use the power of AI (artificial intelligence) and machine learning models to better understand device cohort and to surface what really matters. 
+For more information, go to:
 
-Over time, Anomaly Detection will monitor the health of devices in your organization for user experience and productivity regressions like Boot and Log on times, App Hangs && || Crashes, Network Connectivity, Battery Health, OS Crashes (Blue Screen), then help you correlate with any configuration events occurring on the device like an OS upgrade, a Security update, Driver install/ updates, App Install/ updates to help admins troubleshoot things faster.
+- Enhanced device timelines
+- Device scope  
+

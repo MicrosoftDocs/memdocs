@@ -9,6 +9,13 @@ items:
     href: scores.md
   - name: Anomaly detection
     href: anomaly-detection.md
+- name: Advanced Endpoint Analytics
+  items:
+  - name: What is Advanced Endpoint analytics?
+  - name: Anomaly detection
+    href: anomaly-detection.md
+  - name: Enhanced device timelines    
+  - name: Device scope    
 - name: Quickstarts
   items:
   - name: Enroll Intune devices
