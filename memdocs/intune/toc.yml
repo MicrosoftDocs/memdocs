@@ -149,48 +149,6 @@ items:
       - name: Step 5 - Enroll devices
         href: ./fundamentals/deployment-guide-enroll.md
 
-  - name: Solutions and scenarios
-    items: 
-    - name: Guided scenarios
-      items: 
-      - name: Guided scenarios overview
-        href: ./fundamentals/guided-scenarios-overview.md 
-      - name: Deploy Microsoft Edge for Mobile 
-        href: ./fundamentals/guided-scenarios-edge.md 
-      - name: Cloud-managed Modern Desktop
-        href: ./fundamentals/guided-scenarios-cloud-managed-pc.md   
-      - name: Secure Microsoft Office mobile apps
-        href: ./fundamentals/guided-scenarios-office-mobile.md              
-      - name: Windows 10/11 in cloud configuration
-        href: ./fundamentals/cloud-configuration.md
-    - name: Common scenarios
-      href: ./fundamentals/common-scenarios.md
-    - name: Technology decisions for BYOD with EMS
-      href: ./fundamentals/byod-technology-decisions.md    
-      displayName: MDM
-    - name: Manage operating system versions
-      href: ./fundamentals/manage-os-versions.md
-    - name: Move to cloud native endpoints
-      items:
-      - name: Overview and benefits
-        href: ../solutions/cloud-native-endpoints/cloud-native-endpoints-overview.md
-      - name: Tutorial-Get started with cloud native Windows endpoints
-        href: ../solutions/cloud-native-endpoints/cloud-native-windows-endpoints.md
-      - name: Azure AD concepts and on-premises resources
-        items:
-        - name: Azure AD joined vs. Hybrid Azure AD joined
-          href: ../solutions/cloud-native-endpoints/azure-ad-joined-hybrid-azure-ad-joined.md
-        - name: Access on-premises resources
-          href: ../solutions/cloud-native-endpoints/cloud-native-endpoints-on-premises.md
-      - name: Planning guide
-        href: ../solutions/cloud-native-endpoints/cloud-native-endpoints-planning-guide.md
-      - name: Known issues
-        href: ../solutions/cloud-native-endpoints/cloud-native-endpoints-known-issues.md
-    - name: "Zero Trust: Manage devices with Intune"
-      href: /microsoft-365/solutions/manage-devices-with-intune-overview
-    - name: Create an administrative template
-      href: ./configuration/tutorial-walkthrough-administrative-templates.md
-
   - name: Industry guides
     items: 
     - name: Education
@@ -1449,6 +1407,48 @@ items:
           href: ./configuration/device-profile-monitor.md
         - name: Endpoint analytics
           href: ../analytics/
+
+  - name: Additional solutions and scenarios
+    items: 
+    - name: Guided scenarios
+      items: 
+      - name: Guided scenarios overview
+        href: ./fundamentals/guided-scenarios-overview.md 
+      - name: Deploy Microsoft Edge for Mobile 
+        href: ./fundamentals/guided-scenarios-edge.md 
+      - name: Cloud-managed Modern Desktop
+        href: ./fundamentals/guided-scenarios-cloud-managed-pc.md   
+      - name: Secure Microsoft Office mobile apps
+        href: ./fundamentals/guided-scenarios-office-mobile.md              
+      - name: Windows 10/11 in cloud configuration
+        href: ./fundamentals/cloud-configuration.md
+    - name: Common scenarios
+      href: ./fundamentals/common-scenarios.md
+    - name: Technology decisions for BYOD with EMS
+      href: ./fundamentals/byod-technology-decisions.md    
+      displayName: MDM
+    - name: Manage operating system versions
+      href: ./fundamentals/manage-os-versions.md
+    - name: Move to cloud native endpoints
+      items:
+      - name: Overview and benefits
+        href: ../solutions/cloud-native-endpoints/cloud-native-endpoints-overview.md
+      - name: Tutorial-Get started with cloud native Windows endpoints
+        href: ../solutions/cloud-native-endpoints/cloud-native-windows-endpoints.md
+      - name: Azure AD concepts and on-premises resources
+        items:
+        - name: Azure AD joined vs. Hybrid Azure AD joined
+          href: ../solutions/cloud-native-endpoints/azure-ad-joined-hybrid-azure-ad-joined.md
+        - name: Access on-premises resources
+          href: ../solutions/cloud-native-endpoints/cloud-native-endpoints-on-premises.md
+      - name: Planning guide
+        href: ../solutions/cloud-native-endpoints/cloud-native-endpoints-planning-guide.md
+      - name: Known issues
+        href: ../solutions/cloud-native-endpoints/cloud-native-endpoints-known-issues.md
+    - name: "Zero Trust: Manage devices with Intune"
+      href: /microsoft-365/solutions/manage-devices-with-intune-overview
+    - name: Create an administrative template
+      href: ./configuration/tutorial-walkthrough-administrative-templates.md
 
   - name: Developer guidance
     items:
