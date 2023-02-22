@@ -149,40 +149,6 @@ items:
       - name: Step 5 - Enroll devices
         href: ./fundamentals/deployment-guide-enroll.md
 
-  - name: Industry guides
-    items: 
-    - name: Education
-      items:
-      - name: What is Intune for Education
-        href: ./fundamentals/introduction-intune-education.md
-      - name: Intune for Education docs
-        href: /intune-education/
-    - name: Government
-      items:
-      - name: What is Intune for US Government
-        href: ./fundamentals/introduction-intune-government.md
-      - name: Intune US Government service description
-        href: ./fundamentals/ems-intune-govt-service-description.md
-      - name: Intune US government endpoints
-        href: ./fundamentals/intune-us-government-endpoints.md
-
-  - name: Platform guides
-    items:
-    - name: Windows platform guide
-      href: ./fundamentals/deployment-guide-platform-windows.md
-    - name: Android, Android Enterprise platform guide
-      href: ./fundamentals/deployment-guide-platform-android.md 
-    - name: iOS/iPadOS platform guide
-      href: ./fundamentals/deployment-guide-platform-ios-ipados.md    
-    - name: macOS platform guide
-      href: ./fundamentals/deployment-guide-platform-macOS.md
-    - name: Linux platform guide
-      href: ./fundamentals/deployment-guide-platform-linux.md
-    - name: Windows Holographic platform guide
-      href: ./fundamentals/windows-holographic-for-business.md
-    - name: Microsoft Surface Management Portal
-      href: ./fundamentals/surface-management-portal.md
-
   - name: How-to guides
     items:
 
@@ -1407,6 +1373,40 @@ items:
           href: ./configuration/device-profile-monitor.md
         - name: Endpoint analytics
           href: ../analytics/
+
+  - name: Industry guides
+    items: 
+    - name: Education
+      items:
+      - name: What is Intune for Education
+        href: ./fundamentals/introduction-intune-education.md
+      - name: Intune for Education docs
+        href: /intune-education/
+    - name: Government
+      items:
+      - name: What is Intune for US Government
+        href: ./fundamentals/introduction-intune-government.md
+      - name: Intune US Government service description
+        href: ./fundamentals/ems-intune-govt-service-description.md
+      - name: Intune US government endpoints
+        href: ./fundamentals/intune-us-government-endpoints.md
+
+  - name: Platform guides
+    items:
+    - name: Windows platform guide
+      href: ./fundamentals/deployment-guide-platform-windows.md
+    - name: Android, Android Enterprise platform guide
+      href: ./fundamentals/deployment-guide-platform-android.md 
+    - name: iOS/iPadOS platform guide
+      href: ./fundamentals/deployment-guide-platform-ios-ipados.md    
+    - name: macOS platform guide
+      href: ./fundamentals/deployment-guide-platform-macOS.md
+    - name: Linux platform guide
+      href: ./fundamentals/deployment-guide-platform-linux.md
+    - name: Windows Holographic platform guide
+      href: ./fundamentals/windows-holographic-for-business.md
+    - name: Microsoft Surface Management Portal
+      href: ./fundamentals/surface-management-portal.md
 
   - name: Additional solutions and scenarios
     items: 
