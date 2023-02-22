@@ -225,7 +225,7 @@ items:
     - name: Microsoft Surface Management Portal
       href: ./fundamentals/surface-management-portal.md
 
-  - name: Feature areas
+  - name: How-to guides
     items:
 
     - name: Set up Intune subscription
