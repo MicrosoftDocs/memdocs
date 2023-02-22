@@ -40,7 +40,7 @@ productDirectory:
         - url: ./fundamentals/what-is-device-management.md
           text: What is device management?
         - url: /training/paths/endpoint-manager-fundamentals/
-          text: Microsoft Endpoint Manager fundamentals Learning Path
+          text: Intune fundamentals Learning Path
 
     # Card
     - title: Try and evaluate
