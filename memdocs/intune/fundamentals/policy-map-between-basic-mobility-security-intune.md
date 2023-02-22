@@ -13,8 +13,7 @@ ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
-ms.technology:
-ms.assetid: 
+
 
 # optional metadata
 
@@ -41,9 +40,11 @@ If you choose to migrate your MDM from Basic Mobility and Security to Intune, yo
 Depending on the Basic Mobility and Security policy settings, different Intune and Azure AD policies may be needed to duplicate the behavior. Because Intune offers more flexibility, each source policy can translate into multiple Intune and Azure Active Directory (Azure AD) policies to achieve the same effect. Each device security policy can require up to three compliance policies, six configuration profiles, and five global conditional access policies.
 
 ## Basic Mobility and Security policies in Office 365 Security and Compliance portal
+
 Basic Mobility and Security uses the Office 365 Security and Compliance portal to manage [device security policies](/microsoft-365/admin/basic-mobility-security/set-up#step-4-recommended-manage-device-security-policies).
 
 ## Intune policies in the Microsoft Endpoint Manager admin center
+
 Intune uses the Microsoft Endpoint Manager admin center to manage the following policies to achieve similar results as the Office device security policies:
 
 | Intune policy type | Purpose | Intune location |
@@ -53,7 +54,6 @@ Intune uses the Microsoft Endpoint Manager admin center to manage the following 
 | [Conditional access policies]( ../protect/conditional-access.md)| Azure AD conditional access blocks access if the settings aren't compliant. | [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Endpoint security** > **Conditional access** > **Classic policies** |
 
 Intune and Azure AD policies are more powerful than Office MDM policies and have many more settings to achieve more advanced scenarios. Before you change Intune or Azure AD policies not mentioned in these articles, you should first read the relevant Intune or Azure AD documentation.
-
 
 ## Next steps
 
