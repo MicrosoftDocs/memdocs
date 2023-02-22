@@ -29,6 +29,8 @@ ms.collection:
 
 # Microsoft Tunnel for Mobile Application Management for iOS/iPadOS admin guide (public preview)
 
+[!INCLUDE [intune-add-on-note](../includes/intune-add-on-note.md)]
+
 In public preview, you can use Microsoft Tunnel VPN Gateway with unenrolled iOS/iPadOS devices to:
 
 - Provide secure access to on-premises resources using modern authentication, single sign-on (SSO), and conditional access.

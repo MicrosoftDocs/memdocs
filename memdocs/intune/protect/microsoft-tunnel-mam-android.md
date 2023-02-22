@@ -29,6 +29,8 @@ ms.collection:
 
 # Microsoft Tunnel for Mobile Application Management for Android (public preview)
 
+[!INCLUDE [intune-add-on-note](../includes/intune-add-on-note.md)]
+
 In public preview, you can use Microsoft Tunnel VPN Gateway with unenrolled Android devices to support Mobile Application Management (MAM) scenarios. With support for MAM, your unenrolled devices can use Tunnel to securely connect to your organization allowing users and apps safe access to your organizational data.
 
 Applies to:  
