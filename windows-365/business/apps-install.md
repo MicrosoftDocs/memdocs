@@ -27,7 +27,7 @@ search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection:
 - M365-identity-device-management
-- tier2
+- tier1
 ---
 
 # Install apps
