@@ -26,9 +26,9 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-classic
 ms.collection:
+- tier3
 - M365-identity-device-management
 - iOS/iPadOS
-- tier3
 ---
 
 # Prepare iOS apps for app protection policies with the Intune App Wrapping Tool

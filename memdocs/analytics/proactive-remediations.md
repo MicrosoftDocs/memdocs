@@ -6,8 +6,8 @@ ms.date: 07/05/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: tutorial
-author: mestew
-ms.author: mstewart
+author: smritib17
+ms.author: smbhardwaj
 manager: dougeby
 # Customer intent: As a Microsoft Endpoint Manager administrator, I want to enable and use Proactive remediations in Endpoint analytics so that I can fix common support issues before end-users notice issues.
 ms.localizationpriority: high

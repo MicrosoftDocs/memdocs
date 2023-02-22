@@ -26,7 +26,9 @@ ms.suite: ems
 ms.custom: 
    - intune-azure
    - contperf-fy21q1
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
  
 # Manage security baseline profiles in Microsoft Intune
@@ -83,6 +85,9 @@ Common tasks when working with security baselines include:
 6. On the **Scope tags** tab, select **Select scope tags** to open the *Select tags* pane to assign scope tags to the profile.
 
 7. On the **Assignments** tab, select **Select groups to include** and then  assign the baseline to one or more groups. Use **Select groups to exclude** to fine-tune the assignment.
+
+> [!NOTE]
+> Security baselines must be assigned to either user groups or device groups based on scope of the settings being used. Because of this, multiple baselines may be needed when assigning both user and device based settings.
 
    ![Assign a profile](./media/security-baselines-configure/assignments.png)
 
