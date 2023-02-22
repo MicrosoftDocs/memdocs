@@ -24,10 +24,11 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: 
-  - get-started
-  - intro-get-started
+- get-started
+- intro-get-started
 ms.collection:
-  - M365-identity-device-management
+- tier2
+- M365-identity-device-management
 ---
 
 # Service information for Microsoft Intune release updates

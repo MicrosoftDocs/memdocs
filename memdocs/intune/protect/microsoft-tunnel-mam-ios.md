@@ -22,7 +22,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Microsoft Tunnel for Mobile Application Management for iOS/iPadOS admin guide (public preview)
@@ -38,7 +40,7 @@ Applies to:
 - iOS/iPadOS
 
 > [!NOTE]
-> While in public preview, Microsoft Tunnel for MAM is available at no additional cost. When Tunnel for MAM becomes generally available, it will be available as a [**premium add-on**](/fundamentals/premium-add-ons.md). It will require an additional cost to the licensing options that include Microsoft Intune.
+> While in public preview, Microsoft Tunnel for MAM is available at no additional cost. When Tunnel for MAM becomes generally available, it will be available as a [**premium add-on**](../fundamentals/premium-add-ons.md). It will require an additional cost to the licensing options that include Microsoft Intune.
 
 Tunnel for MAM iOS is a powerful tool that allows organizations to securely manage and protect their mobile applications. The VPN connection for this solution is provided through the [Microsoft Tunnel for MAM iOS SDK](../developer/tunnel-mam-ios-sdk.md).
 

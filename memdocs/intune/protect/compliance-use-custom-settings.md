@@ -24,7 +24,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Use custom compliance policies and settings for Linux and Windows devices with Microsoft Intune
@@ -71,9 +73,6 @@ Before you begin to create a policy that will include custom settings, review th
 You must first upload an applicable discovery script to Intune, and have a ready JSON to add while creating the policy.
 
 When ready, use the normal procedure to [create a compliance policy](create-compliance-policy.md), which includes platform specific instructions for adding custom settings to the policy. Custom settings are added while on the Configuration settings page by configuring the option for *Custom Compliance*.
-
-> [!NOTE]  
-> Assignment filters are not currently supported when assigning compliance policies with custom compliance settings.
 
 > [!NOTE]  
 > When a Windows device receives a compliance policy with custom settings, it checks for the presence of [Intune Management Extensions](../apps/intune-management-extension.md). If not found, the device runs an MSI that installs the extensions, enabling the client to download and run PowerShell scripts that are part of a compliance policy, and to upload compliance results. Actions managed by the services include:
