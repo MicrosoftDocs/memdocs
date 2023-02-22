@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/25/2023
+ms.date: 03/01/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -27,11 +27,11 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Microsoft Tunnel for Mobile Application Management for iOS/iPadOS admin guide (public preview)
+# Microsoft Tunnel for Mobile Application Management for iOS/iPadOS
 
 [!INCLUDE [intune-add-on-note](../includes/intune-add-on-note.md)]
 
-In public preview, you can use Microsoft Tunnel VPN Gateway with unenrolled iOS/iPadOS devices to:
+When you add Microsoft Tunnel for Mobile Application Management (MAM) to your tenant, you can use Microsoft Tunnel VPN Gateway with unenrolled iOS devices to support MAM the following scenarios:
 
 - Provide secure access to on-premises resources using modern authentication, single sign-on (SSO), and conditional access.
 - Allow end users to use their personal device to access company on-premises resources. MDM (Mobile Device Management) enrollment isn't required and company data stays protected.
@@ -41,15 +41,12 @@ Applies to:
 
 - iOS/iPadOS
 
-> [!NOTE]
-> While in public preview, Microsoft Tunnel for MAM is available at no additional cost. When Tunnel for MAM becomes generally available, it will be available as a [**premium add-on**](../fundamentals/premium-add-ons.md). It will require an additional cost to the licensing options that include Microsoft Intune.
-
 Tunnel for MAM iOS is a powerful tool that allows organizations to securely manage and protect their mobile applications. The VPN connection for this solution is provided through the [Microsoft Tunnel for MAM iOS SDK](../developer/tunnel-mam-ios-sdk.md).
 
 > [!NOTE]
-> Microsoft Tunnel for MAM iOS public preview is limited to Line of Business (LOB) apps integrated with the SDK. Edge for iOS public preview is coming in a future release (no ETA).
+> Microsoft Tunnel for MAM iOS is limited to Line of Business (LOB) apps integrated with the SDK. Edge for iOS is coming in a future release (no ETA).
 
-To use the Microsoft Tunnel for MAM iOS during the public preview, you must update your Line of Business (LOB) apps to integrate the following three SDKs. You’ll find guidance for integrating each SDK later in this article:
+To use the Microsoft Tunnel for MAM iOS, you must update your Line of Business (LOB) apps to integrate the following three SDKs. You’ll find guidance for integrating each SDK later in this article:
 
 - [Intune App SDK for iOS](../developer/app-sdk-ios.md)
 - [Microsoft Authentication Library](../developer/app-sdk-ios.md#setup-msal) (MSAL)
@@ -104,7 +101,7 @@ Create an app configuration policy for apps that will use Tunnel for MAM. This p
 
    For more information about adding custom apps to policies, see [App configuration policies for Intune App SDK managed apps](../apps/app-configuration-policies-managed-app.md).
 
-4. On the *Settings* tab, expand *Microsoft Tunnel for Mobile Application Management settings (Preview)* and configure the following options:
+4. On the *Settings* tab, expand *Microsoft Tunnel for Mobile Application Management settings and configure the following options:
 
    1. Set *Use Microsoft Tunnel for MAM* to **Yes**.
    1. For *Connection name*, specify a user facing name for this connection, like *mam-tunnel-vpn*.
@@ -117,7 +114,7 @@ Create an app configuration policy for apps that will use Tunnel for MAM. This p
    > - The *General configuration settings* category.
    > - Per-App VPN. The Tunnel for MAM iOS SDK provides Per-App VPN directly to integrated apps.
    >
-   > Additionally, the Public Preview has a known issue related to the Proxy setting. For more information, go to [Known issues](#known-issues) (in this article).
+   > Additionally, there is a known issue when using a DNS hostname for the location of the PAC file or proxy server address. For more information, see [#proxy-configuration] in the *Known issues* section of this article.
 
    After configuring the Tunnel MAM settings, Select **Next** to open the *Assignments* tab.
 
@@ -346,7 +343,7 @@ For guidance on integrating the SDK, see [Tunnel for MAM iOS SDK developer guide
 
 ## Known Issues
 
-The following are known issues or limitations during the public preview. For known issues with the Microsoft Tunnel for MAM iOS SDK, go to [Tunnel for MAM iOS SDK developer guide](../developer/tunnel-mam-ios-sdk.md#known-issues).
+The following are known issues or limitations for Tunnel for MAM on iOS. For known issues with the Microsoft Tunnel for MAM iOS SDK, go to [Tunnel for MAM iOS SDK developer guide](../developer/tunnel-mam-ios-sdk.md#known-issues).
 
 ### Site Configuration requires DNS hostname
 

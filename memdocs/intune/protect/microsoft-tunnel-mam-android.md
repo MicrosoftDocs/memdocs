@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/03/2023
+ms.date: 03/01/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -27,18 +27,14 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Microsoft Tunnel for Mobile Application Management for Android (public preview)
+# Microsoft Tunnel for Mobile Application Management for Android
 
 [!INCLUDE [intune-add-on-note](../includes/intune-add-on-note.md)]
 
-In public preview, you can use Microsoft Tunnel VPN Gateway with unenrolled Android devices to support Mobile Application Management (MAM) scenarios. With support for MAM, your unenrolled devices can use Tunnel to securely connect to your organization allowing users and apps safe access to your organizational data.
+When you add Microsoft Tunnel for Mobile Application Management (MAM) to your tenant, you can use Microsoft Tunnel VPN Gateway with unenrolled Android devices to support MAM scenarios. With support for MAM, your unenrolled devices can use Tunnel to securely connect to your organization allowing users and apps safe access to your organizational data.
 
 Applies to:  
 - Android Enterprise
-
-> [!NOTE]
-> While in public preview, Microsoft Tunnel for MAM is available at no additional cost. When Tunnel for MAM becomes generally available, it will be available as a [**premium add-on**](../fundamentals/premium-add-ons.md) and require an additional cost to the licensing options that include Microsoft Endpoint Manager or Intune.
-
 
 To extend your existing [Microsoft Tunnel configuration](../protect/microsoft-tunnel-configure.md) to support [MAM](../fundamentals/deployment-guide-enrollment-mamwe.md), you’ll create and deploy three profiles that configure this support on your unenrolled devices:
 
@@ -62,7 +58,7 @@ Users of devices that aren't enrolled with Intune must install the following app
 
 1. **Microsoft Defender** – Get it from [Microsoft Defender - Apps on Google Play](https://play.google.com/store/apps/details?id=com.microsoft.scmx&hl=en_US&gl=US&pli=1). Microsoft Defender includes the tunnel client app that the device uses to connect to Microsoft Tunnel. To support Tunnel for MAM, Microsoft Defender for Endpoint must be version **1.0.4722.0101** or higher.
 
-2. **Microsoft Edge** – Get it from [Microsoft Edge: Web Browser - Apps on Google Play](https://play.google.com/store/apps/details?id=com.microsoft.emmx&hl=en_US&gl=US). For the preview, each device must manually enable the Tunnel functionality for Microsoft Edge before the device can use Tunnel. To enable support for Tunnel, users must browse to **edge://flags** from within the Microsoft Edge app, and then search for and select **Tunnel** to enable it.
+2. **Microsoft Edge** – Get it from [Microsoft Edge: Web Browser - Apps on Google Play](https://play.google.com/store/apps/details?id=com.microsoft.emmx&hl=en_US&gl=US). Each device must manually enable the Tunnel functionality for Microsoft Edge before the device can use Tunnel. To enable support for Tunnel, users must browse to **edge://flags** from within the Microsoft Edge app, and then search for and select **Tunnel** to enable it.
 
 3. **Company Portal** – Get it at [Intune Company Portal - Apps on Google Play](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal&hl=en_US&gl=US). Devices must install the Company Portal app, even though users won’t need to sign into the app or enroll their device with Intune.
 
@@ -112,7 +108,7 @@ Create an App configuration policy to configure Microsoft Defender for Endpoint 
      > Proxy server configurations are not supported with versions of Android prior to version 10.  For more information, see [VpnService.Builder](https://developer.android.com/reference/android/net/VpnService.Builder#setHttpProxy%28android.net.ProxyInfo%29) in that Android developer documentation.
 
    > [!IMPORTANT]
-   > The public preview for Microsoft Tunnel for MAM Android doesn’t support use of trusted root certificates, even though *Root Certificate* is an available option when configuring the App configuration policy. Configuration of a trusted root certificate for the Android preview should be skipped as it will not work.
+   > Microsoft Tunnel for MAM Android doesn’t support use of trusted root certificates, even though *Root Certificate* is an available option when configuring the App configuration policy. Configuration of a trusted root certificate for Android should be skipped as it will not work.
 
    When ready, select **Next** to continue.
 
@@ -199,15 +195,14 @@ To support LOB apps on your unenrolled devices, the apps must deploy as *availab
 
 ## Known Issues
 
-The following are known issues or limitations during the public preview.
-
+The following are known issues or limitations for MAM Tunnel for Android. 
 ### Delivering trusted root certs to unenrolled devices
 
 When unenrolled devices access resources protected by SSL/TLS certificates issued by an on-premises certificate authority (CA), the devices require the trusted certificate public keychain of the issuing CA to establish a chain of trust with the on-premises endpoint (that is, web server, application web service). As a result, a  browser (Microsoft Edge or third party browser), or application won't trust the endpoint without the necessary on-premises CA keychain (trusted cert). For example, Microsoft Edge reports that the connection isn’t private or is untrusted, and SSL or https connections aren't available. Users can ignore this warning and connect to the endpoint.
 
-Public preview of Microsoft Tunnel for MAM doesn't provide support for delivering Trusted certificates to unenrolled devices. The ability to issue trusted certificates to unenrolled devices will be made available in a future Intune update.  
+Microsoft Tunnel for MAM on Android doesn't provide support for delivering Trusted certificates to unenrolled devices.
 
-**Work around**: Manually deploy and install the trusted root certificate on unenrolled devices that will use Tunnel.
+**Work around**: Manually deploy and install the trusted root certificate on unenrolled Android devices that will use Tunnel.
 
 ### Microsoft Edge can't reach internal resources for a short time after being launched
 
@@ -241,7 +236,7 @@ Use of two or more app configuration policies for Microsoft Defender that specif
 
 ### GCC High and FIPS support
 
-The preview for Microsoft Tunnel for unenrolled devices is supported for GGC High environments, but doesn't support Federal Information Processing Standard (FIPS).
+Microsoft Tunnel for MAM is supported for GGC High environments, but doesn't support Federal Information Processing Standard (FIPS).
 
 ## Next steps
 
