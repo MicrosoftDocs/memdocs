@@ -64,7 +64,7 @@ This encryption proceeds as follows:
 5. Windows 365 encrypts the password with the decrypted tenant key.
 6. The encrypted password is saved to the Windows 365 service database.
 
-### Azure Key Vault certificates
+### Windows 365 Enterprise certificates
 
 Azure Key Vault certificates are generated and renewed automatically by the Azure Key Vault. Certificates expire after one year. Azure automatically regenerates new versions of certificates three months before the certificate expires. Windows 365 regularly checks the certificate status. When there's a new certificate, Windows 365 re-encrypts the tenant key with the latest certificate.
 
