@@ -263,11 +263,7 @@ items:
           href: ./fundamentals/scope-tags.md
 
     - name: Choose Intune add-ons
-      items:
-      - name: Intune add-ons
-        href: ./fundamentals/premium-add-ons.md
-      - name: Microsoft Tunnel for MAM
-        href: ./protect/microsoft-tunnel-mam.md
+      href: ./fundamentals/premium-add-ons.md
 
     - name: Manage apps
       items:
@@ -598,6 +594,8 @@ items:
             href: ./protect/microsoft-tunnel-conditional-access.md
           - name: Migrate to the Defender for Endpoint app
             href: ./protect/microsoft-tunnel-migrate-app.md
+          - name: Microsoft Tunnel for MAM
+            href: ./protect/microsoft-tunnel-mam.md     
         - name: Identity protection
           items:
           - name: Windows Hello at device enrollment

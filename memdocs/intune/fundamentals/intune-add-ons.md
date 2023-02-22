@@ -57,7 +57,7 @@ Remote Help is a premium add-on application that works with Intune and enables y
 
 ### Microsoft Tunnel for Mobile Application Management
 
-When you use the Microsoft Tunnel VPN Gateway, you can extend Tunnel support by adding Tunnel for Mobile Application Management (MAM). Tunnel MAM extends the Microsoft Tunnel VPN gateway to support devices that run Android or iOS, and that aren't enrolled with Microsoft Intune. For more information, see [Microsoft Tunnel for Mobile Application Management](../protect/microsoft-tunnel-for-mobile-application-management.md).
+When you use the Microsoft Tunnel VPN Gateway, you can extend Tunnel support by adding Tunnel for Mobile Application Management (MAM). Tunnel MAM extends the Microsoft Tunnel VPN gateway to support devices that run Android or iOS, and that aren't enrolled with Microsoft Intune. For more information, see [Microsoft Tunnel for Mobile Application Management](../protect/microsoft-tunnel-mam.md).
 
 ### Specialized devices management
 
@@ -65,9 +65,10 @@ Specialized devices management enables you to manage specialized devices such as
 
 ### Advanced endpoint analytics
 
-Blurb. For more information, see [Advanced endpoint analytics](advanced-endpoint-analytics.md).
+Blurb. For more information, see [Advanced endpoint analytics](../../analytics/advanced-endpoint-analytics.md).
 
 ### Endpoint Privilege Management (preview)
+
 Blurb. For more information, see [Endpoint Privilege Management](../protect/endpoint-privilege-management.md).
 
 ## What happens when you try/buy the Intune add-ons capability
