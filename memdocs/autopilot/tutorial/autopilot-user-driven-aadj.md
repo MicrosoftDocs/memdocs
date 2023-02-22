@@ -30,13 +30,17 @@ Before beginning, refer to the [How to: Plan your Azure AD join implementation](
 
 ## Workflow
 
-Register/import devices as Autopilot devices > Create device group > Configure and assign Autopilot Enrollment Status Page (ESP) > Create Autopilot profile > Assign Autopilot profile to device group > Assign Autopilot profile to device > Assign User to device (optional)
+Register devices as Autopilot devices > Create device group > Configure and assign Autopilot Enrollment Status Page (ESP) > Create and assign Autopilot profile> Assign Autopilot device to a user (optional)
 
 ## Register devices as Autopilot devices
 
 Before a device can use Autopilot, it must be registered as an Autopilot device. Registering a devices as an Autopilot device can be thought of as importing the device into Autopilot so that Autopilot can be used on the device. It does not mean that the device has ever used the Autopilot service. It just makes the Autopilot service available to the device.
 
-Also note that an Autopilot device is not the same thing as a registered or enrolled device in either Intune or in Azure AD. An Autopilot device can either be an existing registered/enrolled device in Intune/Azure AD, or it can be a new device that has not been registered/enrolled in Intune/Azure AD yet. For example the device can be a newly shipped device from an OEM that has never accessed the environment in the past.
+Also note that a device registered in Autopilot doesn't mean the device is enrolled in Intune. A device may be registered as an Autopilot device but may not exist in Intune. It's not until an Autopilot registered device goes through the Autopilot process for the first time that it becomes enrolled in Intune. After the Autopilot device undergoes the Autopilot process and enrolls in Intune, the Autopilot device subsequently appears as a device in both Azure AD and Intune.
+
+> [!TIP]
+>
+> For Configuration Manager admins, an Autopilot device before undergoing the Autopilot process for the first time can be thought of as the equivalent of an Unknown Computer.
 
 There are several methods to register a device as an Autopilot device in Intune:
 
@@ -47,15 +51,23 @@ There are several methods to register a device as an Autopilot device in Intune:
   - [Diagnostics page hash export](/mem/autopilot/add-devices#diagnostics-page-hash-export)
   - [Desktop hash export](/mem/autopilot/add-devices#desktop-hash-export)
   
-  The above methods of obtaining the hardware hash of a device well documented. The corresponding documentation can be reached by selecting the appropriate option listed above.
+  The above methods of obtaining the hardware hash of a device are well documented. The corresponding documentation can be viewed by selecting the appropriate link listed above.
 
-- Automatically registering device by either an [OEM](/mem/autopilot/oem-registration), including [Microsoft Surface](/surface/surface-autopilot-registration-support) devices, or a [partner](/mem/autopilot/partner-registration)
+- Automatically registering device via:
+  - An [OEM](/mem/autopilot/oem-registration), including [Microsoft Surface](/surface/surface-autopilot-registration-support) devices
+  - A [partner](/mem/autopilot/partner-registration)
 
-  Registering a device via an OEM or partner is also well documented. The corresponding documentation can be reached by selecting the appropriate option listed above.
+  Registering a device via an OEM or partner is also well documented. The corresponding documentation can be viewed by selecting the appropriate link listed above.
 
-For most organizations, using an OEM or partner to register devices as Autopilot devices is the preferred, most common, and more secure method. However for smaller organizations, for testing/lab scenarios, and for emergency scenarios, manually registering devices as Autopilot devices via the hardware hash is also often used.
+For most organizations, using an OEM or partner to register devices as Autopilot devices is the preferred, most common, and most secure method. However for smaller organizations, for testing/lab scenarios, and for emergency scenarios, manually registering devices as Autopilot devices via the hardware hash is also used.
 
-Several of the above methods on obtaining the hardware hash when manually registering devices as Autopilot devices will produce a CSV file with the hardware hash. This CSV file needs to be imported into Intune to register the device as an Autopilot device.
+> [!IMPORTANT]
+>
+> Assuming that a device isn't currently enrolled Intune, remember that registering a device in Autopilot doesn't make it an Intune enrolled device. That device won't enroll into Intune until Autopilot runs on the device for the first time.
+
+### Importing the CSV file with the hardware hash for devices into Intune
+
+Several of the above methods on obtaining the hardware hash when manually registering devices as Autopilot devices will produce a CSV file that contains the hardware hash of the device. This CSV file with the hardware hash needs to be imported into Intune to register the device as an Autopilot device.
 
 After the CSV files has been created, it can be imported into Intune via the following steps:
 
@@ -73,17 +85,20 @@ After the CSV files has been created, it can be imported into Intune via the fol
 
 7. After selecting the CSV file, verify that the correct CSV file is selected under **Specify the path to the list you want to import.**, and then select **Import**. Importing can take several minutes.
 
+8. After the import is complete, in the **Windows Autopilot devices** screen, select  **Sync**.
 
+   A message will display saying that the sync is in progress. The sync process might take a few minutes to complete, depending on how many devices are being synchronized.
 
-8. After import is complete, select **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program**) > **Sync**. 
+    > [!NOTE]
+    >
+    > If another sync is attempted within 10 minutes after initiating a sync, an error will be displayed. Syncs can only occur once every 10 minutes. To attempt a sync again, wait at least 10 minutes before trying again.
 
-   A message says that the synchronization is in progress. The process might take a few minutes to complete, depending on how many devices are being synchronized.
-
-9. Refresh the view to see the new devices.
+9. Select **Refresh** to refresh the view. The newly imported devices should display within a few minutes. If the devices aren't yet displayed, wait a few minutes and then select **Refresh** again.
 
 For more information on registering devices as Autopilot devices, see the following articles:
 
-[Manually register devices with Windows Autopilot](/mem/autopilot/add-devices)
+- [Manually register devices with Windows Autopilot](/mem/autopilot/add-devices)
+- [Windows Autopilot customer consent](/mem/autopilot/registration-auth)
 
 ## Create a device group
 
@@ -143,31 +158,72 @@ For more information on creating groups in Intune, see the following articles:
 - [Add groups to organize users and devices](/mem/intune/fundamentals/groups-add)
 - [Manage Azure Active Directory groups and group membership](/azure/active-directory/fundamentals/how-to-manage-groups)
 
-## Configure and assign Autopilot Enrollment Status Page (ESP)
+## Configure and assign the Enrollment Status Page (ESP)
 
-The next step is to make a decision regarding whether the Enrollment Status Page (ESP) will be used. The main feature of the ESP is that it displays progress and current status to the end user while the device is being set up and enrolled. It can also be used to block a user from using the device until all required policies and applications are installed. The ESP is recommended if the device has many policies and applications that need to be installed. If the ESP is not enabled in these scenarios, it may make end users think that that the device is hung during the setup process due to the amount of time it is taking with no progress or status being displayed.
+The main feature of the Enrollment Status Page (ESP) is to display progress and current status to the end user while the device is being set up and enrolled via the Autopilot process. The other main feature of the ESP is to block a user from signing in and using the device until all required policies and applications are installed. Multiple ESP profiles can be created with different settings and assigned appropriately based on different needs and scenarios.
 
-To show the Autopilot Enrollment Status Page (ESP) during Autopilot, follow the below steps to configure and assign an ESP:
+Out of box there is a default ESP that is assigned to all devices. The default settings in the default ESP is to not show app and profile progress during the Autopilot process. However, it is highly recommended to change this default via a separate custom ESP to show app and profile progress. If the device has many policies and applications that need to be installed and progress is not displayed, it may make end users think that that the device is hung during the setup process due to the amount of time it is taking for all of the policies to be applied and applications to be installed. Additionally, disabling app and profile progress will not block the user from signing into the device and using the device until all policies and applications are installed. This can cause issues if the device is not fully configured and ready for use.
+
+The ESP has two phases:
+
+- Device ESP - ESP that runs during the OOBE process and applies device policies and installs device applications
+- User ESP - ESP that runs after Device ESP that sets up user account, applies user policies, and installs user applications
+
+The ESP configuration has the option to only display app and profile progress during the device ESP phase while disabling during the user ESP phase. This is usually done to allow a user to sign into the device sooner and reach the desktop, but at the consequence that not all of the user policies and applications may be installed. For this reason, it is recommended to show app and profile progress during both phases.
+
+To configure and assign the Autopilot Enrollment Status Page (ESP) so that it shows progress during app and profile configurations, follow the below steps:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Devices** > **By platform: Windows**
+2. In the **Home** screen, select **Devices**.
 
-3. Select **Windows enrollment** > **General: Enrollment Status Page**.
+3. In the **Devices | Overview** screen, under **By platform**, select **Windows**.
 
-4. In the **Enrollment Status Page**, select **Create**.
+4. In the **Windows | Windows devices** screen, select **Windows enrollment** > **General: Enrollment Status Page**.
 
-5. In the **Create profile** screen, under **Basics**, enter a **Name** and **Description** for the ESP profile, and then select **Next**.
+5. In the **Enrollment Status Page**, select **Create**.
 
-6. Under **Settings**, toggle the option **Show app and profile configuration progress** to **Yes**.
+6. In the **Basics** page of the **Create profile** screen, enter a **Name** and **Description** for the ESP profile, and then select **Next**.
 
-7. After toggling the option **Show app and profile configuration progress** to **Yes**, several new options will appear. Configure these options based on the desired behavior for the ESP. Details on each of these options can be found in the article [Set up the Enrollment Status Page](/mem/intune/enrollment/windows-enrollment-status#create-new-profile).
+7. In the **Settings** page, toggle the option **Show app and profile configuration progress** to **Yes**.
 
-8. Once the different ESP options under **Settings** have been configured as desired, select **Next**.
+8. After toggling the option **Show app and profile configuration progress** to **Yes**, several new options will appear. Configure these options based on the desired behavior for the ESP:
 
-9. Under **Assignments**, select **Add groups**.
+   - **Show an error when installation takes longer than specified number of minutes**: The default time-out is 60 minutes. Enter a higher value if you think more time is needed to install apps on the devices.
 
-10. In the the **Select groups to include** pane, select the device group(s) to target the ESP profile. This normally would be the device group(s) created in the section [Create a device group](#create-a-device-group). After selecting the device group, select **Select**.
+   - **Show custom message when time limit or error occur**:
+     - **No**: The default message is shown to users when an error occurs. That message is: **Setup could not be completed. Please try again or contact your support person for help.**
+     - **Yes**: A custom message is shown to users when an error occurs. Enter a custom message in the provided text box.  
+
+   - **Turn on log collection and diagnostics page for end users**:  
+     - **No**: The collect logs button isn't shown to users when an installation error occurs. The Windows Autopilot diagnostics page isn't shown on devices running Windows 11.  
+     - **Yes**: The collect logs button is shown to users when an installation error occurs. The Windows Autopilot diagnostics page is shown on devices running Windows 11. Logs and diagnostics may aid with troubleshooting. For this reason. it's recommend to enable this option.
+
+   - **Only show page to devices provisioned by out-of-box experience (OOBE)**:
+     - **No**: The ESP is shown on all Intune-managed and co-managed devices that go through the out-of-box experience (OOBE), and to the first user that signs in to each device. Subsequent users who sign in won't see the ESP.
+     - **Yes**: The ESP is only shown on devices that go through the out-of-box experience (OOBE).
+
+   - **Block device use until all apps and profiles are installed**:
+     - **No**: Users can leave the ESP before Intune is finished setting up the device.
+     - **Yes**: Users can't leave the ESP until Intune is done setting up the device. Enabling this option unlocks the following additional options:  
+
+       - **Allow users to reset device if installation error occurs**:  
+         - **No**: The ESP doesn't give users the option to reset theirs devices when an installation fails.  
+         - **Yes**: The ESP gives users the option to reset their devices when an installation fails.  
+
+       - **Allow users to use device if installation error occurs**:
+         - **No**: The ESP doesn't give users the option to bypass the ESP when an installation fails.  
+         - **Yes**: The ESP gives users the option to bypass the ESP and use their devices when an installation fails.
+
+       - **Block device use until these required apps are installed if they are assigned to the user/device**:  
+         - **All**: All assigned apps must be installed before users can use their devices.  
+         - **Selected**: Selected apps must be installed before users can use their devices. After enabling this option, select **Select apps** to select the managed apps from Intune that are required to be installed before users can use their device.
+
+9. Once the different ESP options under the **Settings** page have been configured as desired, select **Next**.
+
+10. In the **Assignments** page, select **Add groups**.
+
+11. In the the **Select groups to include** pane, select the device group(s) to target the ESP profile. This normally would be the device group(s) created in the section [Create a device group](#create-a-device-group). After selecting the device group, select **Select**.
 
     > [!TIP]
     >
@@ -175,31 +231,136 @@ To show the Autopilot Enrollment Status Page (ESP) during Autopilot, follow the 
 
     > [!NOTE]
     >
-    > As explained in this step, ESPs are assigned to device groups and not directly to individual devices. To assign an ESP to a specific device, the device must be a member of a device group that has the ESP assigned to it.
+    > ESPs are assigned to device groups and not directly to individual devices. To assign an ESP to a specific device, the device must be a member of a device group that has an ESP assigned to it.
 
-11. Select **Next**.  
+12. Select **Next**.  
 
-12. Under **Scope tags**, select **Next**.
+13. In the **Scope tags** page, select **Next**.
 
     > [!NOTE]
     > **Scope tags** are optional and are a method to control who has access to the ESP configuration. For the purpose of this tutorial, scope tags is being skipped and left at the default scope tag. However if a custom scope tag needs to be specified, do so at this screen. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](/mem/intune/fundamentals/scope-tags).
 
-13. Under **Review + create**, review the settings and verify everything is correct and configured as desired. Once verified, select **Create** to save the changes and assign the ESP profile.
+14. In the **Review + create** page, review the settings and verify everything is correct and configured as desired. Once verified, select **Create** to save the changes and assign the ESP profile.
 
 > [!TIP]
 > For Configuration Manager admins, an ESP is similar and analogous to ConfigMgr client settings.
 
 For more information on the Enrollment Status Page (ESP), see the following articles:
 
-[Windows Autopilot Enrollment Status Page](/mem/autopilot/enrollment-status)
-[Set up the Enrollment Status Page](/mem/intune/enrollment/windows-enrollment-status)
+- [Windows Autopilot Enrollment Status Page](/mem/autopilot/enrollment-status)
+- [Set up the Enrollment Status Page](/mem/intune/enrollment/windows-enrollment-status)
 
-## Create Autopilot profile
+## Create and assign user-driven Azure AD join Autopilot profile
 
-## Assign Autopilot profile to device group
+While the ESP controls what is shown during device and user setup and specifies how soon a user can use their device, the Autopilot profile specifies how the device is configured during Windows Setup, or during OOBE.
 
-## Assign Autopilot profile to device
+When creating an Autopilot profile for the user-driven scenario, devices with this Autopilot profile are associated with the user enrolling the device. User credentials are required to enroll the device.
 
+To create an user-driven Azure AD join Autopilot profile, follow the below steps:
+
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+
+2. In the **Home** screen, select **Devices**.
+
+3. In the **Devices | Overview** screen, under **By platform**, select **Windows**.
+
+4. In the **Windows | Windows devices** screen, select > **Windows enrollment**
+
+5. Under **Windows Autopilot Deployment Program**, select **Deployment Profiles**
+
+6. In the **Windows Autopilot deployment profiles** screen, select  **Create Profile** > **Windows PC**.
+
+7. In the **Basics** page of the **Create profile** screen, type a **Name** and optional **Description** for the Autopilot profile, and then select **Next**.
+
+    > [!NOTE]
+    >
+    > For the purposes of this tutorial, leave the option **Convert all targeted devices to Autopilot** set to **No**. This tutorial is mainly concentrating on new devices while this option mainly covers existing devices.
+
+8. In the **Out-of-box experience (OOBE)** page:
+
+      - For **Deployment mode**, select **User-driven**.
+
+      - For **Join to Azure AD as**, select **Azure AD joined**.
+
+      - For **Microsoft Software License Terms**, select **Hide** to skip the EULA page.
+
+      - For **Privacy settings**, select **Hide** to skip the privacy settings.
+
+      - For **Hide change account options**: Choose **Hide**.
+
+      - For **User account type**, choose the desired account type for the user (**Administrator** or **Standard** user). If **Administrator** is chosen, the user will added to the local Admin group.
+
+      - For **Allow pre-provisioned deployment**, select **No**..
+
+      - For **Language (Region)**, select **Operating system default** to use the default language for the operating system being configured. If another language is desired, select the desired language from the drop down list.
+
+      - For **Automatically configure keyboard**, select **Yes** to skip the keyboard selection page.
+
+      - For **Apply device name template**, select **No**. Alternatively, **Yes** can be chosen to apply a device name templated. Be aware of the following if the name template is selected to **Yes**:
+
+        - Names must be 15 characters or less, and can have letters, numbers, and hyphens.
+        - Names can't be all numbers.
+        - Use the [%SERIAL% macro](/windows/client-management/mdm/accounts-csp) to add a hardware-specific serial number.
+        - Use the [%RAND:x% macro](/windows/client-management/mdm/accounts-csp) to add a random string of numbers, where x equals the number of digits to add.
+
+        > [!NOTE]
+        >
+        > The above settings have been selected to minimize needed user interaction during device setup. However, some of the settings that are hidden can instead be shown as desired.
+        >
+        > Also note that if language and keyboard settings are shown instead of hidden, they require ethernet connectivity. Wi-fi connectivity isn't supported because of the requirement to choose a language, locale, and keyboard to initiate the Wi-fi connection.
+
+9. Once the options in the **Out-of-box experience (OOBE)** page are configured as desired, select **Next**.
+
+10. On the **Assignments** page, under **Included groups**, choose **Add groups**.
+
+11. In the **Select groups to include** page, choose the device group(s) to assign this Autopilot profile to. This is normally the device group created in the step [Create device group](#create-device-group) above. Once done, select **Select**.
+
+12. In the **Create profile** page, select **Next**.
+
+13. On the **Review + Create** page, review and verify that all of the settings are set as desired, and then choose **Create** to create the Autopilot profile.
+
+For more information on creating and assigning Autopilot profiles, see the following articles:
+
+- [Configure Autopilot profiles](/mem/autopilot/profiles)
+
+### Verify device has an Autopilot profile assigned to it
+
+Before deploying a device, ensure that an Autopilot profiles has been assigned to it by checking under **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program** where you should see the profile status change from "Unassigned" to "Assigning" and finally to "Assigned."
+
+> [!NOTE]
+> Intune will periodically check for new devices in the assigned groups, and then begin the process of assigning profiles to those devices. Due to several different factors involved in the process of Autopilot profile assignment, an estimated time for the assignment can vary from scenario to scenario. These factors can include AAD groups, membership rules, hash of a device, Intune and Autopilot service, and internet connection. The assignment time will vary depending on all the factors and variables involved in a specific scenario.<br>
+<br>
+
+## Assign Autopilot device to a user (optional)
+
+> [!NOTE]
+> Assigning a licensed user to a registered Autopilot device using Microsoft Endpoint Manager no longer pre-fills any user information as described below. Please see [Updates to the Windows Autopilot sign-in and deployment experience](https://techcommunity.microsoft.com/t5/intune-customer-success/updates-to-the-windows-autopilot-sign-in-and-deployment/ba-p/2848452) for details on this change. This change does not impact user assigned policies and apps which are still deployed to the device when a licensed user is assigned. See [Windows Autopilot for pre-provisioned deployment](pre-provision.md#preparation) for details on this.
+
+You can assign a licensed Intune user to a specific Autopilot device. This assignment:
+
+- Pre-fills a user from Azure Active Directory in the [company-branded](/azure/active-directory/fundamentals/customize-branding) sign-in page during Windows setup.
+- Lets you set a custom greeting name.
+- Doesn't pre-fill or modify Windows sign-in.
+
+Prerequisites:
+
+- Azure Active Directory Company Branding has been configured.
+- Windows 10, version 1809 or later.
+
+> [!NOTE]
+> Assigning a user to a specific Autopilot device doesn't work if you are using ADFS.
+
+1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program** > choose the device > **Assign user**.
+
+2. Choose an Azure user licensed to use Intune and choose **Select**.
+
+3. In the **User Friendly Name** box, type a friendly name or just accept the default. This string is the friendly name that displays when the user signs in during Windows setup.
+
+4. Choose **Ok**.
+
+For more information on creating and assigning Autopilot profiles, see the following articles:
+
+- [Assign a user to a specific Autopilot device](/mem/autopilot/enrollment-autopilot#assign-a-user-to-a-specific-autopilot-device)
 ## More info
 
-[Windows Autopilot user-driven mode](/mem/autopilot/user-driven)
+- [Windows Autopilot user-driven mode](/mem/autopilot/user-driven)
