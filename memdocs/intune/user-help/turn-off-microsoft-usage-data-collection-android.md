@@ -26,7 +26,8 @@ ms.reviewer: arnab
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
-ms.collection: 
+ms.collection:
+- tier2
 ---
 
 # Turn off Microsoft data collection on Android device  

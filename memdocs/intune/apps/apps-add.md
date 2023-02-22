@@ -19,8 +19,9 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection:
-  - M365-identity-device-management
-  - highpri
+- tier1
+- M365-identity-device-management
+- highpri
 ---
 
 # Add apps to Microsoft Intune

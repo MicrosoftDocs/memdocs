@@ -18,7 +18,9 @@ ms.localizationpriority: high
 ms.reviewer: mikedano
 ms.suite: ems
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Configure Microsoft Edge policy settings in Microsoft Intune

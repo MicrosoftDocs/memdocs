@@ -28,7 +28,8 @@ ms.reviewer: natgreen
 #ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
-ms.collection: 
+ms.collection:
+- tier2
 ---
 
 # Resolve a threat found by Lookout for Work on Android

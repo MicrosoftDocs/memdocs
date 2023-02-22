@@ -27,9 +27,10 @@ ms.custom:
   - get-started
   - intro-get-started
 ms.collection:
-  - M365-identity-device-management
-  - highpri
-  - highseo
+- tier1
+- M365-identity-device-management
+- highpri
+- highseo
 ---
 
 # Get started with your Microsoft Intune deployment
