@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 02/07/2023
+ms.date: 02/21/2023
 ms.topic: reference
 ms.service: windows-365
 ms.subservice:
@@ -50,6 +50,14 @@ Learn what new features are available in Windows 365 Enterprise.
 ### Windows 365 app
 -->
 
+<!-- ########################## -->
+## Week of February 20, 2023
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Partners
+
+#### Citrix HDX Plus support is now generally available<!--38310774 -->
+Windows 365 support for Citrix HDX Plus has moved out of preview and into general availability. For more information, see [Set up Citrix HDX Plus for Windows 365 Enterprise](set-up-citrix.md).
 
 <!-- ########################## -->
 ## Week of February 6, 2023

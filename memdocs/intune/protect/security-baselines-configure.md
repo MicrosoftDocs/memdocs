@@ -86,6 +86,9 @@ Common tasks when working with security baselines include:
 
 7. On the **Assignments** tab, select **Select groups to include** and then  assign the baseline to one or more groups. Use **Select groups to exclude** to fine-tune the assignment.
 
+> [!NOTE]
+> Security baselines must be assigned to either user groups or device groups based on scope of the settings being used. Because of this, multiple baselines may be needed when assigning both user and device based settings.
+
    ![Assign a profile](./media/security-baselines-configure/assignments.png)
 
 8. When you're ready to deploy the baseline, advance to the **Review + create** tab and review the details for the baseline. Select **Create** to save and deploy the profile.

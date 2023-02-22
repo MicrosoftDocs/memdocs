@@ -175,11 +175,15 @@ Additional common firewall rule issues:
 - Verify configured ranges are within the overall port range of 0-65535 
 - If either remote port ranges or local port ranges are configured in a rule, protocol **must** also be configured with 6 (TCP) **or** 17 (UDP)
 
-**Event Viewer: Name "The parameter is incorrect"**
+**Event Viewer: "...Name), Result: (The parameter is incorrect)"**
 > [!div class="mx-imgBorder"]
-> ![NameFailure](media/endpoint-security-firewall-policy/nameparameterincorrect.png)
+> ![Screen capture of the Name Failure](media/endpoint-security-firewall-policy/nameparameterincorrect.png)
 - If edge traversal is enabled in a rule, the rule direction **must** be set to "This rule applies to inbound traffic".
 
+**Event Viewer: "...InterfaceTypes), Result: (The parameter is incorrect)"**
+> [!div class="mx-imgBorder"]
+> ![Screen capture of the Interface Types Failure](media/endpoint-security-firewall-policy/interfacetypesfailure.png)
+- If "All" interface type is enabled in a rule, the other interface types **must not** be selected.
 
 ## Next steps
 
