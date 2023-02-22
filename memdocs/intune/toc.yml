@@ -263,7 +263,7 @@ items:
           href: ./fundamentals/scope-tags.md
 
     - name: Choose Intune add-ons
-      href: ./fundamentals/premium-add-ons.md
+      href: ./fundamentals/intune-add-ons.md
 
     - name: Manage apps
       items:
