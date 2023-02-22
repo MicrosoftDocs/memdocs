@@ -199,8 +199,8 @@ Select this option if you're deploying to an Android Enterprise dedicated, corpo
     For more information on PAC files, see [Proxy Auto-Configuration (PAC) file](https://developer.mozilla.org/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file) (opens a non-Microsoft site).
     
     > [!NOTE]
-    > When a device is marked corporate, the user gets to have little control and all control will be with the policies enforced.
-    > So when  Wi-Fi Profile is pushed for the device, by design Wi-Fi will be made to turn on.
+    > When a device is marked as corporate during enrollment (organization-owned), policies control device features and settings. Users can be prevented from managing features and settings in the policy.
+    > When a Wi-Fi policy is assigned to devices, then Wi-Fi is enabled, and users can be prevented from turning off Wi-Fi.
 
 ## Personally owned work profile
 
