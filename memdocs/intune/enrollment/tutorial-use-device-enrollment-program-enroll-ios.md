@@ -17,8 +17,9 @@ ms.technology:
 ms.assetid: 
 Customer intent: As an Intune admin, I want to set up automated device enrollment for iOS/iPadOS devices I purchased through Apple Business Manager and managed devices in Intune.  
 ms.collection:
-  - M365-identity-device-management
-  - highpri
+- tier1
+- M365-identity-device-management
+- highpri
 ---
 
 # Tutorial: Set up Microsoft Intune enrollment for iOS/iPadOS devices in Apple Business Manager  

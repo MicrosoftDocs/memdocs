@@ -11,6 +11,7 @@ metadata:
   manager: johmar
   ms.date: 02/14/2023
   ms.collection: 
+  - tier1
   ms.custom: intro-hub-or-landing
 
 highlightedContent:
@@ -40,7 +41,7 @@ productDirectory:
         - url: ./fundamentals/what-is-device-management.md
           text: What is device management?
         - url: /training/paths/endpoint-manager-fundamentals/
-          text: Microsoft Endpoint Manager fundamentals Learning Path
+          text: Intune fundamentals Learning Path
 
     # Card
     - title: Try and evaluate

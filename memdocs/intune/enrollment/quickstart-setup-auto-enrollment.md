@@ -23,8 +23,9 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-classic
 ms.collection:
-  - M365-identity-device-management
-  - highpri
+- tier1
+- M365-identity-device-management
+- highpri
 ---
 
 # Step 4: Set up automatic enrollment for Windows 10/11 devices  

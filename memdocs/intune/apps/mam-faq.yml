@@ -24,7 +24,8 @@ metadata:
   #ms.tgt_pltfrm:
   ms.custom: intune-azure
   ms.collection:
-    - M365-identity-device-management
+  - M365-identity-device-management
+  - tier2 
 title: Frequently asked questions about MAM and app protection
 summary: This article provides answers to some frequently asked questions on Intune mobile application management (MAM) and Intune app protection.
 

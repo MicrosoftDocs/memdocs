@@ -1172,7 +1172,7 @@ items:
 
     - name: Enroll devices in Microsoft Intune  
       items:
-      - name: Overview        
+      - name: Enrollment overview        
         href: ./fundamentals/deployment-guide-enrollment.md  
         displayName: COD; BYOD; DEM; ADE; USB-SA; USB-Direct; co-management; GPO
       - name: Configure enrollment features      
@@ -1194,7 +1194,7 @@ items:
           href: ./enrollment/enrollment-notifications.md
         - name: Configure device enrollment restrictions
           items:  
-          - name: Overview   
+          - name: Overview
             href: ./enrollment/enrollment-restrictions-set.md  
           - name: Intune device limits vs. Azure AD device limits    
             href: ./enrollment/device-limit-intune-azure.md   
@@ -1329,7 +1329,7 @@ items:
         - name: Get started with Linux enrollment    
           href: ./fundamentals/deployment-guide-enrollment-linux.md
         - name: Intune user help documentation  
-          hred: ./user-help/enroll-device-linux.md  
+          href: ./user-help/enroll-device-linux.md  
       - name: Set up macOS enrollment
         items:
         - name: Get started with Mac enrollment  
