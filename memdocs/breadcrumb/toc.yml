@@ -10,9 +10,7 @@ items:
     - name: Intune user help
       tocHref: /mem/intune/user-help/
       topicHref: /mem/intune/user-help/
-    - name: Overview
-      tocHref: /mem/intune/fundamentals/
-      topicHref: /mem/intune/fundamentals/what-is-intune
+
   - name: Configuration Manager
     tocHref: /mem/configmgr/
     topicHref: /mem/configmgr/
