@@ -209,7 +209,7 @@ After devices are set up, you can use remote actions in Intune to manage and tro
 
 Check out these enrollment tutorials to learn how to do some of the top tasks in Intune. Tutorials are 100 – 200 level content for people new to Intune or a specific scenario.    
 
-* [Walk through Intune in Microsoft Endpoint Manager](tutorial-walkthrough-endpoint-manager.md) 
+* [Walk through Intune admin center](tutorial-walkthrough-endpoint-manager.md) 
 * [Configure Slack to use Intune for enterprise mobility management (EMM) and app configuration](../apps/tutorial-configure-slack-enterprise-grid.md) 
 
 For the iOS/iPadOS version of this guide, see [Deployment guide: Manage iOS/iPadOS devices in Microsoft Intune](deployment-guide-platform-ios-ipados.md).

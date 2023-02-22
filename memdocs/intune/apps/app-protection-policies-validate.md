@@ -49,7 +49,7 @@ If testing shows that your app protection policy behavior isn't functioning as e
 - Is the status of each of the users' app protection apps as expected. The possible statuses for the apps are **Checked in** and **Not checked in**.
 
 ### User app protection status
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 3. Select **Apps** > **Monitor** >  **App protection status**, and then select the **Assigned users** tile. 
 4. On the **App reporting** page, select **Select user** to bring up a list of users and groups. 
 5. Search for and select a user from the list, then choose **Select user**. At the top of the **App reporting** pane, you can see whether the user is licensed for app protection. You can also see whether the user has a license for Microsoft 365 and the app status for all of the user's devices.

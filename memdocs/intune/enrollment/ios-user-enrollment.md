@@ -63,7 +63,7 @@ Review this information before you begin:
 
 Complete these steps to create an enrollment profile for devices enrolling with the user enrollment option.  
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Go to **Devices** > **iOS/iPadOS** > **iOS/iPadOS enrollment**. 
 2. Select **Enrollment types (preview)**. 
 3. Select **Create profile** > **iOS/iPadOS**. In this profile,  you'll configure the enrollment experience for devices that aren't enrolled via an Apple enrollment program method, such as Apple Business Manager. You can edit this profile after you've created it.  

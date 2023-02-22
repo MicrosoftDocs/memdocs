@@ -43,7 +43,7 @@ items:
     href: quickstart-create-custom-role.md
 - name: Tutorials
   items:
-  - name: Walkthrough Intune in Endpoint Manager admin center
+  - name: Walkthrough Intune in Intune admin center
     href: tutorial-walkthrough-endpoint-manager.md 
 - name: Concepts
   items:

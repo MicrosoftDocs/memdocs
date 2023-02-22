@@ -1,7 +1,7 @@
 ---
 # required metadata
 title: Cancel organizational message | Microsoft Intune  
-description: Cancel an active or scheduled organizational message in the Microsoft Endpoint Manager admin center.       
+description: Cancel an active or scheduled organizational message in the Microsoft Intune admin center.       
 keywords:
 author: Lenewsad
 ms.author: lanewsad
@@ -36,7 +36,7 @@ ms.collection:
 
 Cancel a scheduled or active organizational message that you no longer need. 
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Go to **Tenant administration** > **Organizational messages (preview)**.  
 2. Select the **Message** tab.  
 3. Find your message in the table and scroll to the end of the row.   

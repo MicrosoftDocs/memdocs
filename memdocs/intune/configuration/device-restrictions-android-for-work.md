@@ -59,7 +59,7 @@ This feature applies to:
 
 These settings apply to Android Enterprise enrollment types where Intune controls the entire device, such as Android Enterprise fully managed, dedicated, and corporate-owned work profile devices.
 
-Some settings aren't supported by all enrollment types. To see which settings are supported by the different enrollment types, sign into the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Each setting is under a heading that indicates the enrollment types that can use the setting.
+Some settings aren't supported by all enrollment types. To see which settings are supported by the different enrollment types, sign into the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Each setting is under a heading that indicates the enrollment types that can use the setting.
 
 :::image type="content" source="./media/device-restrictions-android-for-work/setting-headers.png" alt-text="Screenshot that shows the Android Enterprise Users and Accounts setting headers and the enrollment types they apply to in Microsoft Intune.":::
 
