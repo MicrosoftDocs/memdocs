@@ -30,9 +30,6 @@ ms.collection: M365-identity-device-management
 
 # Requirements for using Citrix HDX Plus for Windows 365 Enterprise
 
-> [!IMPORTANT]
-> Citrix HDX Plus is currently in tech preview and isn't officially supported by Citrix.
-
 To use Citrix HDX Plus for Windows 365, you must meet the following requirements:
 
 ## Citrix requirements
