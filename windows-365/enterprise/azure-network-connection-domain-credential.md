@@ -25,7 +25,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; get-started
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- tier2
 ---
 
 # Azure network connection domain credential life cycle
@@ -43,7 +45,7 @@ This article describes how the on-premises domain credentials are protected and 
 
 When you [create an ANC](create-azure-network-connection.md), you must provide Azure AD credential information on the AD domain page:
 
-screencap tbs
+![Screenshot of AD domain page](./media/azure-network-connection-domain-credential/azure-ad-page.png)
 
 This information includes the Azure AD username and domain password.
 
@@ -58,7 +60,7 @@ When the ANC is created, all this information is stored in the Windows 365 servi
 This encryption proceeds as follows:
 
 1. The Windows 365 checks the service database for an existing symmetric key specific to that tenant.
-2. If a key is not present or has expired, Windows 365 generates a new symmetric key for this tenant using a random number generator. Keys are created per tenant.
+2. If a key isn't present or has expired, Windows 365 generates a new symmetric key for this tenant using a random number generator. Keys are created per tenant.
 3. If a key already exists for this tenant, it's used in the following steps.
 4. After getting the (new or existing) tenant key, Windows 365 decrypts the key with the Windows 365 dedicated Enterprise CA certificate. The certificate is stored in the Azure Key Vault managed by Microsoft.
 5. Windows 365 encrypts the password with the decrypted tenant key.
