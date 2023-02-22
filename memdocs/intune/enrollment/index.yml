@@ -13,7 +13,9 @@ metadata:
   ms.author: dougeby
   manager: dougeby
   ms.date: 08/07/2019
-  ms.collection: highpri
+  ms.collection:
+  - tier1
+  - highpri
 
 # linkListType: architecture | deploy | download | get-started | how-to-guide | learn | overview | quickstart | tutorial
 

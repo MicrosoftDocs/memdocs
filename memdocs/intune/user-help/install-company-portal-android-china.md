@@ -27,7 +27,8 @@ ms.reviewer: jeyang
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
-ms.collection: 
+ms.collection:
+- tier2
 ---
 
 # Install Company Portal app in People's Republic of China
