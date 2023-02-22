@@ -23,9 +23,10 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: 
-  - M365-identity-device-management
-  - highpri
+ms.collection:
+- tier1
+- M365-identity-device-management
+- highpri
 ms.reviewer: aanavath
 
 ---
@@ -36,7 +37,7 @@ Endpoint security Disk encryption profiles focus on only the settings that are r
 
 While you can configure the same device settings by using *Endpoint Protection* profiles for device configuration, the device configuration profiles include additional categories of settings. These additional settings are unrelated to disk encryption and can complicate the task of configuring only disk encryption.
 
-Find the endpoint security policies for disk encryption under *Manage* in the **Endpoint security** node of the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+Find the endpoint security policies for disk encryption under *Manage* in the **Endpoint security** node of the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 ## Prerequisites for disk encryption policy
 

@@ -23,10 +23,11 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: 
-  - M365-identity-device-management
-  - highpri
-  - highseo
+ms.collection:
+- tier1
+- M365-identity-device-management
+- highpri
+- highseo
 ms.reviewer: mattcall
 ---
 
@@ -141,16 +142,16 @@ While Intune can integrate with several [Mobile Threat Defense partners](../prot
 
 ## Role-based access control requirements
 
-To manage tasks in the Endpoint security node of the Microsoft Endpoint Manager admin center, an account must:
+To manage tasks in the Endpoint security node of the Microsoft Intune admin center, an account must:
 
 - Be assigned a license for Intune.
-- Have role-based access control (RBAC) permissions equal to the permissions provided by the built-in Intune role of  **Endpoint Security Manager**. The *Endpoint Security Manager* role grants access to the Microsoft Endpoint Manager admin center. This role can be used by individuals who manage security and compliance features, including security baselines, device compliance, conditional access, and Microsoft Defender for Endpoint.
+- Have role-based access control (RBAC) permissions equal to the permissions provided by the built-in Intune role of  **Endpoint Security Manager**. The *Endpoint Security Manager* role grants access to the Microsoft Intune admin center. This role can be used by individuals who manage security and compliance features, including security baselines, device compliance, conditional access, and Microsoft Defender for Endpoint.
 
 For more information, see [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md)
 
 ### Permissions granted by the *Endpoint Security Manager* role
 
-You can view the following list of permissions in the Microsoft Endpoint Manager admin center by going to **Tenant administration** > **Roles** > **All Roles**, select **Endpoint Security Manager** > **Properties**.
+You can view the following list of permissions in the Microsoft Intune admin center by going to **Tenant administration** > **Roles** > **All Roles**, select **Endpoint Security Manager** > **Properties**.
 
 **Permissions:**
 

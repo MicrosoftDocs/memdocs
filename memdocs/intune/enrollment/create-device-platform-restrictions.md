@@ -27,8 +27,9 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection:
-  - M365-identity-device-management
-  - highpri
+- tier1
+- M365-identity-device-management
+- highpri
 ---
 
 # Create device platform restrictions   
@@ -44,7 +45,7 @@ Create a device platform enrollment restriction policy to restrict devices from 
 * Manufacturer
 * Ownership (personally-owned)
 
- You can create a new device platform restriction policy in the Microsoft Endpoint Manager admin center or use the default policy that's already available. You can have up to 25 device platform restriction policies. 
+ You can create a new device platform restriction policy in the Microsoft Intune admin center or use the default policy that's already available. You can have up to 25 device platform restriction policies. 
 
 This article describes the device platform restrictions supported in Microsoft Intune and how to configure them in the admin center.  
 
@@ -58,7 +59,7 @@ Since Intune supports two Android platforms, it's important to understand how OS
 
 ## Create a device platform restriction   
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
 2. Go to **Devices** > **Enroll devices** > **Enrollment device platform restrictions**.  
 3. Select the tab along the top of the page that corresponds with the platform you're configuring. Your options:  
 

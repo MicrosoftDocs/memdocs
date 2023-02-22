@@ -56,7 +56,7 @@ As part of the process to place Cloud PCs under review, Windows 365 may be grant
 
 After setting up an Azure storage account with permissions as explained above, you can place a Cloud PC under review using the following steps:
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select  **Devices** > **All Devices** > choose a device.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select  **Devices** > **All Devices** > choose a device.
     ![Screenshot of choose a device](./media/place-cloud-pc-under-review/choose-device.png)
     
 2. Select the ellipses (**…**) > **Place cloud PC under review**.
@@ -69,7 +69,7 @@ After setting up an Azure storage account with permissions as explained above, y
 
 ## Remove a Cloud PC from review
 
-Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select  **Devices** > **All Devices** > choose a device > **…** > **Remove from review**.
+Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select  **Devices** > **All Devices** > choose a device > **…** > **Remove from review**.
 
 ## Bulk actions
 

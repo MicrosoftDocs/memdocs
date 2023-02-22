@@ -26,7 +26,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure, seoapril2019
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # How to manage volume purchased apps from the Microsoft Store for Business with Microsoft Intune
@@ -36,7 +38,7 @@ ms.collection: M365-identity-device-management
 The [Microsoft Store for Business](https://www.microsoft.com/business-store) gives you a place to find and purchase apps for your organization, individually, or in volume. By connecting the store to Microsoft Intune, you can manage volume-purchased apps from the portal. For example:
 
 * You can synchronize the list of apps you have purchased (or that are free) from the store with Intune.
-* Apps that are synchronized appear in the Microsoft Endpoint Manager admin center; you can assign these apps like any other apps.
+* Apps that are synchronized appear in the Microsoft Intune admin center; you can assign these apps like any other apps.
 * Both Online and Offline licensed versions of Apps are synchronized to Intune. App names will be appended with "Online" or "Offline" in the portal.
 * You can track how many licenses are available, and how many are being used in the admin center.
 * Intune blocks assignment and installation of apps if there are an insufficient number of licenses available.
@@ -66,7 +68,7 @@ Review the following information before you start syncing and assigning apps fro
 
 ## Associate your Microsoft Store for Business account with Intune
 
-Before you enable synchronization in the Microsoft Endpoint Manager admin center, you must configure your store account to use Intune as a management tool:
+Before you enable synchronization in the Microsoft Intune admin center, you must configure your store account to use Intune as a management tool:
 
 1. Ensure that you sign into the [Microsoft Store for Business](https://www.microsoft.com/business-store) using the same tenant account you use to sign into Intune.
 2. In the Business Store, choose the **Manage** tab, select **Settings**, and choose the **Distribute** tab.
@@ -75,11 +77,11 @@ Before you enable synchronization in the Microsoft Endpoint Manager admin center
 > [!NOTE]
 > You could previously only associate one management tool to assign apps with the Microsoft Store for Business. You can now associate multiple management tools with the store, for example, Intune and Configuration Manager.
 
-You can now continue, and set up synchronization in the Microsoft Endpoint Manager admin center.
+You can now continue, and set up synchronization in the Microsoft Intune admin center.
 
 ## Configure synchronization
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Tenant administration** > **Connectors and tokens** > **Microsoft Store for Business**.
 3. Click **Enable**.
 4. If you haven't already done so, click the link to sign up for the Microsoft Store for Business and associate your account as detailed previously.

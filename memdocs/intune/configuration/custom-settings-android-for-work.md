@@ -22,7 +22,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Use custom settings for Android Enterprise devices in Microsoft Intune
@@ -47,7 +49,7 @@ This article shows you how to create a custom profile for Android Enterprise dev
 
 ## Create the profile
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Configuration profiles** > **Create profile**.
 3. Enter the following settings:
 
@@ -100,7 +102,7 @@ This article shows you how to create a custom profile for Android Enterprise dev
 
 In this example, you create a custom profile that restricts copy and paste actions between work and personal apps on Android Enterprise devices.
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Configuration profiles** > **Create profile**.
 3. Enter the following settings:
 

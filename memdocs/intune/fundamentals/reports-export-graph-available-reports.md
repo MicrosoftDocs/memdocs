@@ -25,19 +25,21 @@ ms.reviewer:
 search.appverid: MET150
 #ms.tgt_pltfrm:
 #ms.custom:
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Intune reports and properties available using Graph API
 
-Microsoft Intune provides many reports in the Microsoft Endpoint Manager admin center that can be exported using Graph APIs. Microsoft Graph is a RESTful web API that enables you to access Microsoft Cloud service resources. To export Intune reports, you must use the Microsoft Graph API to make a set of HTTP calls. For more information about , see [Export Intune reports using Graph APIs](../fundamentals/reports-export-graph-apis.md).
+Microsoft Intune provides many reports in the Microsoft Intune admin center that can be exported using Graph APIs. Microsoft Graph is a RESTful web API that enables you to access Microsoft Cloud service resources. To export Intune reports, you must use the Microsoft Graph API to make a set of HTTP calls. For more information about , see [Export Intune reports using Graph APIs](../fundamentals/reports-export-graph-apis.md).
 
 > [!NOTE]
 > Intune reports that have been migrated to a new [Intune reporting infrastructure](https://techcommunity.microsoft.com/t5/intune-customer-success/new-reporting-framework-coming-to-intune/ba-p/1009553#:~:text=New%20Reporting%20Framework%20Coming%20to%20Intune%20%20,Device%20compliance%20logging%20%203%20more%20rows), will be available for export from a single top-level export Graph API.
 >
 > For more information about making REST API calls, including tools for interacting with Microsoft Graph, see [Use the Microsoft Graph API](/graph/use-the-api).
 
-Microsoft Endpoint Manager will export reports using the following Microsoft Graph API endpoint:
+Microsoft Intune will export reports using the following Microsoft Graph API endpoint:
 
 ```http
 https://graph.microsoft.com/beta/deviceManagement/reports/exportJobs
@@ -45,7 +47,7 @@ https://graph.microsoft.com/beta/deviceManagement/reports/exportJobs
 
 The following table contains the possible values for the `reportName` parameter. These are the currently available reports for export.
 
-|         ReportName (Export Parameter)  |            Associated   Report in Microsoft Endpoint Manager        |
+|         ReportName (Export Parameter)  |            Associated   Report in Microsoft Intune        |
 |-|-|
 |         DeviceCompliance  |            Device   Compliance Org        |
 |         DeviceNonCompliance  |            Non-compliant   devices        |

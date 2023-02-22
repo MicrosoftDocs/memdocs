@@ -26,7 +26,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Turn on iOS/iPadOS supervised mode
@@ -42,7 +44,7 @@ For a list of Apple controls that require supervision, see Apple's [Payload sett
 
 ## Turn on supervised mode during enrollment
 
-In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can turn on supervised mode for devices when you [create an Apple enrollment profile in DEP](../enrollment/device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile). Under **Device Management Settings**, check the **Supervised** box.
+In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can turn on supervised mode for devices when you [create an Apple enrollment profile in DEP](../enrollment/device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile). Under **Device Management Settings**, check the **Supervised** box.
 
 ## Turn on supervised mode after enrollment
 

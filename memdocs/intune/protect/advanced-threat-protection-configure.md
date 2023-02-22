@@ -23,10 +23,11 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: 
-  - M365-identity-device-management
-  - highpri
-  - highseo
+ms.collection:
+- tier1
+- M365-identity-device-management
+- highpri
+- highseo
 ---
 
 # Configure Microsoft Defender for Endpoint in Intune
@@ -51,7 +52,7 @@ You only need to enable Microsoft Defender for Endpoint a single time per tenant
 
 ### To enable Microsoft Defender for Endpoint
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Endpoint security** > **Microsoft Defender for Endpoint**, and then select **Open the Microsoft Defender Security Center**. 
 
@@ -71,9 +72,9 @@ You only need to enable Microsoft Defender for Endpoint a single time per tenant
    3. Select **Save preferences**.
 
    > [!NOTE]
-   > Once the connection is established, the services are expected to sync with each other _at least_ once every 24 hours. The number of days without sync until the connection is considered unresponsive is configurable in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Select **Endpoint security** > **Microsoft Defender for Endpoint** > **Number of days until partner is unresponsive**
+   > Once the connection is established, the services are expected to sync with each other _at least_ once every 24 hours. The number of days without sync until the connection is considered unresponsive is configurable in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Select **Endpoint security** > **Microsoft Defender for Endpoint** > **Number of days until partner is unresponsive**
 
-4. Return to **Microsoft Defender for Endpoint** page in the Microsoft Endpoint Manager admin center.
+4. Return to **Microsoft Defender for Endpoint** page in the Microsoft Intune admin center.
 
    1. To use Defender for Endpoint with **compliance policies**, configure the following under **MDM Compliance Policy Settings** for the platforms you support:
       - Set **Connect Android devices** to Microsoft Defender for Endpoint to **On**
@@ -143,7 +144,7 @@ You can also onboard devices using:
 
 ### Create the device configuration profile to onboard Windows devices
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Endpoint security** > **Endpoint detection and response** > **Create Policy**.
 3. For **Platform**, select **Windows 10 and Later**.
 4. For **Profile type**, select **Endpoint detection and response**, and then select **Create**.
@@ -197,7 +198,7 @@ There isn't a configuration package for devices that run iOS/iPadOS. Instead, se
 
 For devices that run iOS/iPadOS (in Supervised Mode), there is specialized ability given the increased management capabilities provided by the platform on these types of devices. To take advantage of these capabilities, the Defender app needs to know if a device is in Supervised Mode. Intune allows you to configure the Defender for iOS app through an App Configuration policy (for managed devices) that should be targeted to all iOS Devices as a best practice. For more information, see [Complete deployment for supervised devices](/microsoft-365/security/defender-endpoint/ios-install?#complete-deployment-for-supervised-devices).
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **App configuration policies** > **Managed devices**.
 3. On the **Basics** page, enter a *Name* and *Description* (optional) for the profile, select **Platform** as **iOS/iPadOS** then choose **Next**.
 4. Select **Targeted app** as **Microsoft Defender for iOS**.
@@ -214,7 +215,7 @@ For devices that run iOS/iPadOS (in Supervised Mode), there is specialized abili
 Further, for devices that run iOS/iPadOS (in Supervised Mode), the Defender for iOS team has made available a custom .mobileconfig profile to deploy to iPad/iOS devices. The .mobileconfig profile will be used to analyze network traffic to ensure a safe browsing experience - a feature of Defender for iOS.
 
 1. Download the .mobile profile, which is hosted here: [https://aka.ms/mdatpiossupervisedprofile](https://aka.ms/mdatpiossupervisedprofile).
-2. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 3. Select **Devices** > **Configuration profiles** > **Create profile**.
 4. For **Platform**, select **iOS/iPadOS**
 5. For **Profile type**, select **Custom**, and then select **Create**.
@@ -235,7 +236,7 @@ For Android, iOS/iPadOS, and Windows devices, the compliance policy determines t
 
 If you're not familiar with creating compliance policy, reference the [Create a policy](../protect/create-compliance-policy.md#create-the-policy) procedure from the *Create a compliance policy in Microsoft Intune* article. The following information is specific to configuring Microsoft Defender for Endpoint as part of a compliance policy.
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Devices** > **Compliance policies** > **Policies** > **Create Policy**.
 
@@ -289,9 +290,9 @@ Use the procedure to [create an application protection policy for either iOS/iPa
 Conditional access policies can use data from Microsoft Defender for Endpoint to block access to resources for devices that exceed the threat level you set. You can block access from the device to corporate resources, such as SharePoint or Exchange Online.
 
 > [!TIP]
-> Conditional access is an Azure Active Directory (Azure AD) technology. The *Conditional access* node found in the Microsoft Endpoint Manager admin center is the node from *Azure AD*.
+> Conditional access is an Azure Active Directory (Azure AD) technology. The *Conditional access* node found in the Microsoft Intune admin center is the node from *Azure AD*.
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Endpoint security** > **Conditional Access** > **New policy**.
 

@@ -28,8 +28,9 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune
 ms.collection:
-  - M365-identity-device-management
-  - highpri
+- tier1
+- M365-identity-device-management
+- highpri
 ---
 
 # Tutorial: Use Autopilot to enroll Windows devices in Intune
@@ -66,7 +67,7 @@ The first step in setting up Windows Autopilot is to add the Windows devices to 
 
 2. Save the CSV file.
 
-3. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and go to **Devices** > **Windows** > **Windows Enrollment**. 
+3. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and go to **Devices** > **Windows** > **Windows Enrollment**. 
 
 4.  Under **Windows Autopilot Deployment Program**, select **Devices**.   
 

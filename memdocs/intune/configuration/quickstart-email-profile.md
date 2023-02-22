@@ -26,9 +26,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: 
-- M365-identity-device-management
+ms.collection:
 - tier3
+- M365-identity-device-management
 ---
 
 # Quickstart: Create an email device profile for iOS/iPadOS
@@ -39,11 +39,11 @@ If you don't have an Intune subscription, [sign up for a free trial account](../
 
 ## Sign in to Intune
 
-Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as a Global Administrator or an Intune Service Administrator. If you have created an Intune Trial subscription, the account you created the subscription with is the Global administrator.
+Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as a Global Administrator or an Intune Service Administrator. If you have created an Intune Trial subscription, the account you created the subscription with is the Global administrator.
 
 ## Create an iOS/iPadOS email profile
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select  and go to **Devices** > **Configuration profiles** > **Create profile**.
    ![Create an email profile for iOS/iPadOS in Intune](./media/quickstart-email-profile/ios-create-profile.png)

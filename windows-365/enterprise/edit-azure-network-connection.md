@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 02/8/2022
+ms.date: 02/15/2022
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice:
@@ -34,13 +34,13 @@ All [Azure network connections](azure-network-connections.md) (ANC) get periodic
 
 ## Requirements
 
-To edit  an ANC, you must have the [Intune Administrator](/azure/active-directory/roles/permissions-reference#intune-administrator), [Windows 365 Administrator](/azure/active-directory/roles/permissions-reference), or [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) role.
+To edit  an ANC, you must have the [Intune Administrator](/azure/active-directory/roles/permissions-reference#intune-administrator), [Windows 365 Administrator](/azure/active-directory/roles/permissions-reference), or [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) role. You must also have the Subscription Reader role in the Azure Subscription where the VNET associated with the ANC was located.
 
 ## Edit an Azure network connection
 
 To edit an Azure network connection:
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Windows 365** (under **Provisioning**) > **Azure network connection** > select the connection you want to edit > **Properties**.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Windows 365** (under **Provisioning**) > **Azure network connection** > select the connection you want to edit > **Properties**.
 2. For all ANCs, you can edit the **General** settings by selecting **Edit** next to each header. You can edit all settings except **Join type**. For Hybrid Azure AD Join connections, you can also edit the **AD domain** settings.
 
 After the edits have been saved, the ANC checks are run to verify the configuration.

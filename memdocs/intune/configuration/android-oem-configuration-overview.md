@@ -25,7 +25,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Use and manage Android Enterprise devices with OEMConfig in Microsoft Intune
@@ -86,7 +88,7 @@ Be sure the device supports OEMConfig, the correct OEMConfig app is added to Int
 
 ## Create an OEMConfig profile
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Configuration profiles** > **Create profile**.
 3. Enter the following properties:
 
@@ -154,7 +156,7 @@ The next time the device checks for configuration updates, the OEM-specific sett
 
 After your profile is deployed, you can check its status:
 
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration profiles**. A list of all your profiles is shown.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration profiles**. A list of all your profiles is shown.
 2. Select your OEMConfig profile. You can get more information on your profile, including successful and failed deployments:
 
     - **Overview**: Shows the profile assignment statuses. For more information on what the statuses mean, see [Monitor device profiles in Microsoft Intune](device-profile-monitor.md).

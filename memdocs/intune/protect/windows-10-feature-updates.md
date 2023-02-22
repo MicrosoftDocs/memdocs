@@ -23,9 +23,10 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 #ms.custom:
-ms.collection: 
-  - M365-identity-device-management
-  - highpri
+ms.collection:
+- tier1
+- M365-identity-device-management
+- highpri
 ---
 
 # Feature updates for Windows 10 and later policy in Intune
@@ -73,6 +74,8 @@ The following are prerequisites for Intune's Feature updates for Windows 10 and 
 
    Beginning in November of 2022, the Windows Update for Business deployment service (WUfB DS) license will be checked and enforced.
   
+   Capabilities supported by client policies on Professional SKU devices will not require a license.  That includes basic controls for deploying a specified feature update and when to start making the update available to devices.   The [Gradual Rollout](/mem/intune/protect/windows-update-rollout-options#make-updates-available-gradually) capability is a cloud only feature, requiring a license that includes the Windows Update for Business deployment service.
+  
   If you’re blocked when creating new policies for capabilities that require WUfB DS and you get your licenses to use WUfB through an Enterprise Agreement (EA), contact the source of your licenses such as your Microsoft account team or the partner who sold you the licenses. The account team or partner can confirm that your tenants licenses meet the WUfB DS license requirements. See [Enable subscription activation with an existing EA](/windows/deployment/deploy-enterprise-licenses#enable-subscription-activation-with-an-existing-ea).
 
 - Devices must:  
@@ -114,7 +117,7 @@ The following are prerequisites for Intune's Feature updates for Windows 10 and 
 
   To prevent this initial delay from impacting your co-managed devices:
   
-  1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+  1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
   2. Go to **Devices** > **Windows** > **Feature updates for Windows 10 and later** > **Create profile**.
   3. For **Deployment settings**, enter a meaningful name and a description for the policy.  Then, Specify the feature update you want devices to be running.  
   4. Complete the policy configuration, including assigning the policy to devices. The policy deploys to devices, though any device that already has the version you’ve selected, or a newer version, won’t be offered the update.
@@ -141,7 +144,7 @@ The following are prerequisites for Intune's Feature updates for Windows 10 and 
 
 ## Create and assign Feature updates for Windows 10 and later policy
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Devices** > **Windows** > **Feature updates for Windows 10 and later** > **Create profile**.
 
@@ -177,7 +180,7 @@ If you’re already using Endpoint analytics, navigate to the [Work from anywher
 
 Windows 11 includes a new license agreement, which can be viewed at [https://www.microsoft.com/useterms/](https://www.microsoft.com/useterms/). This license agreement is automatically accepted by an organization that submits a policy to deploy Windows 11.
 
-When you use configure a policy in the Microsoft Endpoint Manager admin center to deploy any Windows 11 version, the Microsoft Endpoint Manager admin center displays a notice to remind you that by submitting the policy you are accepting the Windows 11 License Agreement terms on behalf of the devices, and your device users. After submitting the feature updates policy, end users won’t see or need to accept the license agreement, making the update process seamless.
+When you use configure a policy in the Microsoft Intune admin center to deploy any Windows 11 version, the Microsoft Intune admin center displays a notice to remind you that by submitting the policy you are accepting the Windows 11 License Agreement terms on behalf of the devices, and your device users. After submitting the feature updates policy, end users won’t see or need to accept the license agreement, making the update process seamless.
 
 This license reminder appears each time you select a Windows 11 build, even if all your Windows devices already run Windows 11. This prompt is provided because Intune doesn’t track which devices will receive the policy, and its possible new devices that run Windows 10 might later enroll and be targeted by the policy.
 

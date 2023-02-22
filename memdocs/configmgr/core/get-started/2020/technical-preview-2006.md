@@ -33,7 +33,7 @@ The following sections describe the new features to try out in this version:
 [!INCLUDE [Improvements to task sequences via CMG](includes/2006/6983320.md)]
 [!INCLUDE [Management insights to optimize for remote workers](includes/2006/6982226.md)]
 [!INCLUDE [Improvements to VPN boundary type](includes/2006/7020519.md)]
-[!INCLUDE [Tenant Attach: Improvements to Configuration Manager actions in Microsoft Endpoint Manager admin center](includes/2006/7518897.md)]
+[!INCLUDE [Tenant Attach: Improvements to Configuration Manager actions in Microsoft Intune admin center](includes/2006/7518897.md)]
 [!INCLUDE [CMG support for endpoint protection policies](includes/2006/4773948.md)]
 [!INCLUDE [Import previously created Azure AD application during tenant attach onboarding](includes/2006/6479246.md)]
 [!INCLUDE [Improvements to client upgrade on a metered connection](includes/2006/6976145.md)]
