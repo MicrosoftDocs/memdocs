@@ -43,14 +43,9 @@ Depending on the Basic Mobility and Security policy settings, different Intune a
 
 Basic Mobility and Security uses the Office 365 Security and Compliance portal to manage [device security policies](/microsoft-365/admin/basic-mobility-security/set-up#step-4-recommended-manage-device-security-policies).
 
-<<<<<<< HEAD
-## Intune policies in the Microsoft Endpoint Manager admin center
-
-Intune uses the Microsoft Endpoint Manager admin center to manage the following policies to achieve similar results as the Office device security policies:
-=======
 ## Intune policies in the Microsoft Intune admin center
+
 Intune uses the Microsoft Intune admin center to manage the following policies to achieve similar results as the Office device security policies:
->>>>>>> b6a35210265f377bc91f5d32f67510e4864bd671
 
 | Intune policy type | Purpose | Intune location |
 | --- | --- | --- |
