@@ -1,6 +1,6 @@
 ---
-title: Step by step tutorial for Windows Autopilot user-driven Azure AD join mode in Intune
-description: Step by step tutorial for Windows Autopilot user-driven Azure AD join mode in Intune.
+title: Windows Autopilot user-driven Azure AD join - Step 2 - Create a device group
+description: Howe to - Windows Autopilot user-driven Azure AD join - Step 2 - Create a device group.
 ms.prod: windows-client
 ms.localizationpriority: medium
 author: frankroj
@@ -15,40 +15,7 @@ ms.collection:
 ms.technology: itpro-deploy
 ---
 
-# Step by step tutorial for Windows Autopilot user-driven Azure AD join mode in Intune
-
-*Applies to:*
-
-- Windows 11
-- Windows 10
-
-## Windows Autopilot user-driven Azure AD join mode overview
-
-This step by step tutorial will guide you through using Intune to perform a Windows Autopilot user-driven scenario when the devices will be strictly Azure AD joined. The purpose of this tutorial is to provide in one article a step by step guide for all the steps required for a successful Autopilot user-driven Azure AD join deployment using Intune. The tutorial is also designed as a walkthrough in a lab or testing scenario, but can be expanded for use in a production environment.
-
-Before beginning, refer to the [How to: Plan your Azure AD join implementation](/azure/active-directory/devices/azureadjoin-plan) to make sure all prerequisites are met for joining devices to Azure AD.
-
-## Windows Autopilot user-driven Azure AD join mode workflow
-
-Register devices as Autopilot devices > Create a device group > Configure and assign Autopilot Enrollment Status Page (ESP) > Create and assign Autopilot profile> Assign Autopilot device to a user (optional)
-
-> [!NOTE]
->
-> The workflow is designed for lab or testing scenarios. However, some of the steps in the workflow are interchangeable. A workflow with some of these steps interchanged may make more sense in a production environment. For example, the **Create a device group** step followed by the **Register devices as Autopilot devices** step may make more sense in a production environment.
-
-## Register devices as Autopilot devices
-
-[!INCLUDE [How to register a device as an Autopilot device in Intune](includes/register-autopilot-device.md)]
-
-## Create a device group
-
-[!INCLUDE [How to create a device group in Intune](includes/create-device-group.md)]
-
-## Configure and assign the Enrollment Status Page (ESP)
-
-[!INCLUDE [How to configure and assign an Enrollment Status Page (ESP) in Intune](includes/configure-and-assign-esp.md)]
-
-## Create and assign user-driven Azure AD join Autopilot profile
+# Create and assign user-driven Azure AD join Autopilot profile
 
 While the ESP controls what is shown during device and user setup and specifies how soon a user can use their device, the Autopilot profile specifies how the device is configured during Windows Setup, or during OOBE.
 
@@ -121,14 +88,6 @@ For more information on creating and assigning Autopilot profiles, see the follo
 
 - [Configure Autopilot profiles](/mem/autopilot/profiles)
 
-### Verify device has an Autopilot profile assigned to it
+## Verify device has an Autopilot profile assigned to it
 
 [!INCLUDE [How to verify a device has an Autopilot profile assigned to it in Intune](includes/verify-autopilot-profile-assignment.md)]
-
-## Assign Autopilot device to a user (optional)
-
-[!INCLUDE [How to assign an Autopilot device to a user](includes/assign-autopilot-device-to-user.md)]
-
-## More info
-
-- [Windows Autopilot user-driven mode](/mem/autopilot/user-driven)

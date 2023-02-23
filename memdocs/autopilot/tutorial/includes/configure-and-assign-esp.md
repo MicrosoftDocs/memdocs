@@ -1,18 +1,12 @@
 ---
-title: How to configure and assign an Enrollment Status Page (ESP) in Intune
-description: Step by step tutorial for configuring and assigning an Enrollment Status Page (ESP) in Intune.
-ms.prod: windows-client
-ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
-ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 02/13/2023
-ms.topic: tutorial
-ms.collection: 
-  - tier1
-  - highpri
 ms.technology: itpro-deploy
+ms.prod: windows-client
+ms.topic: include
+ms.date: 02/23/2023
+ms.localizationpriority: medium
 ---
 
 The main feature of the Enrollment Status Page (ESP) is to display progress and current status to the end user while the device is being set up and enrolled via the Autopilot process. The other main feature of the ESP is to block a user from signing in and using the device until all required policies and applications are installed. Multiple ESP profiles can be created with different settings and assigned appropriately based on different needs and scenarios.

@@ -1,18 +1,12 @@
 ---
-title: How to register a device as an Autopilot device in Intune
-description: Step by step tutorial on how to register a device as an Autopilot device in Intune.
-ms.prod: windows-client
-ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
-ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 02/13/2023
-ms.topic: tutorial
-ms.collection: 
-  - tier1
-  - highpri
 ms.technology: itpro-deploy
+ms.prod: windows-client
+ms.topic: include
+ms.date: 02/23/2023
+ms.localizationpriority: medium
 ---
 
 Before a device can use Autopilot, it must be registered as an Autopilot device. Registering a devices as an Autopilot device can be thought of as importing the device into Autopilot so that Autopilot can be used on the device. It does not mean that the device has ever used the Autopilot service. It just makes the Autopilot service available to the device.

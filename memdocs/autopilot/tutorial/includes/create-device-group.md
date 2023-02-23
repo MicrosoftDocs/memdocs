@@ -1,18 +1,12 @@
 ---
-title: How to create a device group in Intune
-description: Step by step tutorial on how to create a device in Intune.
-ms.prod: windows-client
-ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
-ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 02/13/2023
-ms.topic: tutorial
-ms.collection: 
-  - tier1
-  - highpri
 ms.technology: itpro-deploy
+ms.prod: windows-client
+ms.topic: include
+ms.date: 02/23/2023
+ms.localizationpriority: medium
 ---
 
 Device groups are a collection of devices organized into a Azure AD group. Device groups are used in Autopilot to target devices for specific configurations such what policies to apply to a device and what applications to install on the device.
