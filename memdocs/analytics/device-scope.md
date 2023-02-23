@@ -14,7 +14,7 @@ ms.localizationpriority: high
 # Device scope in Endpoint Analytics
 
 > [!NOTE]
-> This capability is available as an Intune add-on. For more information, see [Intune add-ons](../fundamentals/intune-add-ons.md).
+> This capability is available as an Intune add-on. For more information, see [Intune add-ons](../intune/fundamentals/premium-add-ons.md).
 
 Custom device scopes use Scope tags to slice Endpoint analytics reports to a subset of devices, allowing you to see scores, insights, and recommendations for a specific subset of your enrolled devices.
 

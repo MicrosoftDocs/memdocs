@@ -15,7 +15,7 @@ ms.localizationpriority: high
 # What is Advanced Endpoint Analytics
 
 > [!NOTE]
-> This capability is available as an Intune add-on. For more information, see [Intune add-ons](../fundamentals/intune-add-ons.md).
+> This capability is available as an Intune add-on. For more information, see [Intune add-ons](../intune/fundamentals/premium-add-ons.md).
 
 The Microsoft Intune Suite includes advanced features for Endpoint analytics, such as:
 

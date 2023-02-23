@@ -15,7 +15,7 @@ ms.localizationpriority: high
 # Anomaly Detection in Endpoint analytics
 
 > [!NOTE]
-> This capability is available as an Intune add-on. For more information, see [Intune add-ons](../fundamentals/intune-add-ons.md).
+> This capability is available as an Intune add-on. For more information, see [Intune add-ons](../intune/fundamentals/premium-add-ons.md).
 
 This article explains how anomaly detection in Endpoint Analytics works as an early warning system.
 
