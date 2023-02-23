@@ -148,6 +148,10 @@ At this point, you may also:
 
   3. Save your changes.
 
+## App listing
+
+If you receive an large amount of data while requesting your app listing when using Graph API, you may encounter a 503 Service Unavailable error. We recommended that you try again with a smaller page size, such as 20 or fewer elements.
+
 ## Intune permission scopes
 
 Azure AD and Microsoft Graph use permission scopes to control access to corporate resources.  
@@ -157,9 +161,6 @@ Permission scopes (also called the _OAuth scopes_) control access to specific In
 To learn more:
 - [Azure AD authentication](/azure/active-directory/connect/active-directory-aadconnect-pass-through-authentication)
 - [Application permission scopes](/azure/active-directory/develop/active-directory-v2-scopes)
-
-> [!TIP]
-> If you receive an large amount of data while requesting your app listing when using Graph API, you may encounter a 503 Service Unavailable error. We recommended that you try again with a smaller page size, such as 20 or fewer elements.
 
 When you grant permission to Microsoft Graph, you can specify the following scopes to control access to Intune features:
 The following table summarizes the Intune API permission scopes.  The first column shows the name of the feature as displayed in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and the second column provides the permission scope name.
