@@ -42,7 +42,7 @@ Employees and students who want remote access to work or school resources can en
 In this task, you will: 
 
 * Try out the device user experience by enrolling a device running Windows 10/11 into Microsoft Intune.  
-* Try out the admin user experience by verifying the enrollment in the Microsoft Endpoint Manager admin center.   
+* Try out the admin user experience by verifying the enrollment in the Microsoft Intune admin center.   
 
 If you don't have an Intune subscription, [sign up for a free trial account](../fundamentals/free-trial-sign-up.md).  
 

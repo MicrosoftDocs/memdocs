@@ -64,7 +64,7 @@ If you currently don't use any MDM or mobile application management (MAM) provid
 
 - **Microsoft Intune**: If you want a cloud solution, then consider going straight to Intune. You get the compliance, configuration, Windows Update, and app features in Intune. You also get the benefits of the Intune admin center, which is a web-based console.
 
-  If/when you're ready for full device management, then you can use Intune to check for compliance, configure device features, deploy apps, and install system & app updates. You also get the benefits of the [Microsoft Endpoint Manager admin center](tutorial-walkthrough-endpoint-manager.md).
+  If/when you're ready for full device management, then you can use Intune to check for compliance, configure device features, deploy apps, and install system & app updates. You also get the benefits of the [Microsoft Intune admin center](tutorial-walkthrough-endpoint-manager.md).
 
   - [App protection policies overview](../apps/app-protection-policy.md)
   - [Get started with Intune](get-started-with-intune.md)

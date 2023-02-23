@@ -48,7 +48,7 @@ To complete this evaluation step, you must:
 3. [Create a group](../fundamentals/quickstart-create-group.md).
 4. Sign up for the Azure AD free Premium trial (this article describes how to sign up).
 
-To access Microsoft Intune, sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with a Global Administrator account. If you've already created an Intune Trial subscription, the account you created the subscription with is a Global Administrator.
+To access Microsoft Intune, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with a Global Administrator account. If you've already created an Intune Trial subscription, the account you created the subscription with is a Global Administrator.
 
 ## Set up automatic enrollment
 

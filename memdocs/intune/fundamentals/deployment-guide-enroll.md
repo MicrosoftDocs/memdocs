@@ -79,7 +79,7 @@ Some enrollment methods, such as Apple automated device enrollment, aren't compa
 For more information and limitations, see [Add device enrollment managers](../enrollment/device-enrollment-manager-enroll.md).  
 
 ### Create device enrollment restrictions  
-Use this feature in the Microsoft Endpoint Manager admin center to restrict certain devices from enrolling in Intune. There are two types of device enrollment restrictions you can configure in Microsoft Intune:
+Use this feature in the Microsoft Intune admin center to restrict certain devices from enrolling in Intune. There are two types of device enrollment restrictions you can configure in Microsoft Intune:
 
 * Device platform restrictions: Restrict devices based on device platform, version, manufacturer, or ownership type.
 * Device limit restrictions: Restrict the number of devices a user can enroll in Intune. 

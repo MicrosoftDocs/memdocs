@@ -52,7 +52,7 @@ The planning guide also,
 
 ## 1 - Review the Supported Configurations
 
-Before you begin setting up Microsoft Intune, you should review the device platforms and operating systems that Intune supports. Additionally, review which web browsers are supported when accessing Intune using Microsoft Endpoint Manager admin center. Also, you should be familiar with the network bandwidth requirements to perform installations and updates using Intune.
+Before you begin setting up Microsoft Intune, you should review the device platforms and operating systems that Intune supports. Additionally, review which web browsers are supported when accessing Intune using Microsoft Intune admin center. Also, you should be familiar with the network bandwidth requirements to perform installations and updates using Intune.
 
 ✔️ **Get started with supported configurations**
 
@@ -63,7 +63,7 @@ Before you begin setting up Microsoft Intune, you should review the device platf
 Before you sign up for Intune, determine whether you already have a Microsoft Online Services account, Enterprise Agreement, or equivalent volume licensing agreement. A Microsoft volume licensing agreement or other Microsoft cloud services subscription like Microsoft 365 usually includes a work or school account.
 
 If you already have a work or school account, **sign in** with that account and add Intune to your subscription. Otherwise, you can **sign up** for a new account to use Intune for your organization.
-Sign in to the Endpoint Manager admin center, and sign up for Intune. If you have an existing subscription, you can also sign in to it.
+Sign in to the Microsoft Intune admin center, and sign up for Intune. If you have an existing subscription, you can also sign in to it.
 
 ✔️ **Get started with sign up, or sign in to Intune**
 
@@ -84,7 +84,7 @@ You can **optionally** configure your organization's custom domain to access Int
 
 The people in your organization each need a user account before they can sign in and access Microsoft Intune. To create user accounts, you can add users to Intune. Once added, you can grant permissions and assign licenses to users. Then later, you can assign different types of policies to users to help and protect them.
 
-As an administrator, you can add users individually or in bulk to Intune. The easiest way to add user accounts is to add them one at a time in the Microsoft Endpoint Manager admin center.
+As an administrator, you can add users individually or in bulk to Intune. The easiest way to add user accounts is to add them one at a time in the Microsoft Intune admin center.
 
 You must be an admin (global, license, or a user admin) to add users to Intune. If you set up Intune using the free trial, you are a global admin.
 
@@ -119,7 +119,7 @@ For guidance, go to [Unlicensed admins](unlicensed-admins.md).
 
 ## 7 - Manage Roles and grant admin permissions for Intune
 
-After you've added users to your Intune tenant, we recommend that you grant a few users administrative permission. Microsoft Intune includes a set of admin roles that you can assign to users in your organization using the Microsoft Endpoint Manager admin center. Each admin role maps to common business functions and gives people in your organization permissions to do specific tasks in the admin centers.
+After you've added users to your Intune tenant, we recommend that you grant a few users administrative permission. Microsoft Intune includes a set of admin roles that you can assign to users in your organization using the Microsoft Intune admin center. Each admin role maps to common business functions and gives people in your organization permissions to do specific tasks in the admin centers.
 
 ✔️ **Get started with managing roles**
 

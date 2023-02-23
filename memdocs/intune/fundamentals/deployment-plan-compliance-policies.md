@@ -107,7 +107,7 @@ In addition, we recommend you be familiar with how device compliance policies an
 All organizations should review and set the tenant-wide  *compliance policy settings*. These settings are foundational to supporting platform specific policies. They can also mark devices that haven't evaluated a compliance policy as noncompliant, which can help you protect your organization from new or unknown devices that might fail to meet your security expectations.
 
 - Compliance policy settings are a few configurations you make at the tenant-level that then apply to all devices. They establish how the Intune compliance service functions for your tenant.
-- These settings are configured directly in the Microsoft Endpoint Manager admin center and are distinct from  device compliance policies that you create for specific platforms and deploy to discreet groups of devices or users.
+- These settings are configured directly in the Microsoft Intune admin center and are distinct from  device compliance policies that you create for specific platforms and deploy to discreet groups of devices or users.
 
 To learn more about Compliance Policy Settings at the tenant level, and how to configure them, see [Compliance policy settings](../protect/device-compliance-get-started.md#compliance-policy-settings).
 
@@ -152,7 +152,7 @@ Consider synchronizing any planned configurations between device configuration a
 
 After you establish tenant-wide compliance policy settings and establish communications or rules for actions for noncompliant devices, you're likely ready to create and deploy device compliance policies to discrete groups of devices or users.
 
-Review the platform specific policies in the Microsoft Endpoint Manager admin center to identify which compliance settings are available for each platform and more details about their use. To configure policies, see [Create a compliance policy](../protect/create-compliance-policy.md).
+Review the platform specific policies in the Microsoft Intune admin center to identify which compliance settings are available for each platform and more details about their use. To configure policies, see [Create a compliance policy](../protect/create-compliance-policy.md).
 
 We recommend using the following settings in your minimal device compliance policies:
 
@@ -171,7 +171,7 @@ We recommend using the following settings in your minimal device compliance poli
 
 Support for enhanced level compliance settings varies greatly by platform as compared to the settings found in the minimal recommendations. Some platforms might not support settings that are supported by related platforms. For example, Android AOSP lacks options that exist for Android Enterprise platforms to configure compliance for system level file and boot protections.
 
-Review the platform specific policies in the Microsoft Endpoint Manager admin center to identify which compliance settings are available for each platform and more details about their use. To configure policies, see [Create a compliance policy](../protect/create-compliance-policy.md).
+Review the platform specific policies in the Microsoft Intune admin center to identify which compliance settings are available for each platform and more details about their use. To configure policies, see [Create a compliance policy](../protect/create-compliance-policy.md).
 
 We recommend using the following settings in your enhanced device compliance policies:
 
@@ -218,7 +218,7 @@ Intune supports the use of third-party compliance partners where the partner ser
 
 In some environments, Intune might serve as the only MDM authority you need to use, as by default, Intune is a registered compliance partner for the Android, iOS/iPadOS, and Windows platforms. Other platforms require other compliance partners to serve as a devices MDM authority, like use of Jamf Pro for macOS devices.
 
-If you’ll use a third-party device compliance partner in your environment, ensure they're [supported with Intune](../protect/device-compliance-partners.md#supported-device-compliance-partners). To add support, you’ll need to configure a [connection for the partner](../protect/device-compliance-partners.md#configure-intune-to-work-with-a-device-compliance-partner) from within the Microsoft Endpoint Manager admin center, and follow that partners documentation to complete the integration.
+If you’ll use a third-party device compliance partner in your environment, ensure they're [supported with Intune](../protect/device-compliance-partners.md#supported-device-compliance-partners). To add support, you’ll need to configure a [connection for the partner](../protect/device-compliance-partners.md#configure-intune-to-work-with-a-device-compliance-partner) from within the Microsoft Intune admin center, and follow that partners documentation to complete the integration.
 
 For more information on this subject, see [Support third-party device compliance partners in Intune](../protect/device-compliance-partners.md).
 
@@ -251,7 +251,7 @@ To learn more, see [Learn about Conditional Access and Intune](../protect/condit
 
 ### Advanced compliance settings
 
-Review the platform specific policies in the Microsoft Endpoint Manager admin center to identify which compliance settings are available for each platform and more details about their use. To configure policies, see [Create a compliance policy](../protect/create-compliance-policy.md).
+Review the platform specific policies in the Microsoft Intune admin center to identify which compliance settings are available for each platform and more details about their use. To configure policies, see [Create a compliance policy](../protect/create-compliance-policy.md).
 
 To configure policies, see [Create a compliance policy](../protect/create-compliance-policy.md).
 
