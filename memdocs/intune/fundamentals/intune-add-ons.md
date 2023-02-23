@@ -46,7 +46,7 @@ Some capabilities are available to buy as a standalone add-on. Other capabilitie
 - **Microsoft Intune Plan 2**: Offers advanced endpoint management capabilities, including Remote Help and specialized devices management.
 - **Microsoft Intune Suite**: Unifies a series of mission-critical advanced endpoint management and security capabilities. The capabilities of the suite are integrated with Microsoft 365 and Microsoft Security across endpoint platforms for both cloud and on-premises co-managed devices. The Intune Suite includes all standalone capabilities and all capabilities that come with Intune Plan 2.
 
-The following table provides a list of add-on capabilities and how you can buy them.
+The following table provides a list of add-on capabilities and how you can get them.
 
 |Capability|Standalone add-on|Intune Plan 2|Intune Suite|
 |:---|:---:|:---:|:---:|
