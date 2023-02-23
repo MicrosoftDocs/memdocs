@@ -32,14 +32,14 @@ ms.collection:
 
 # Use Premium add-ons capabilities with Intune
 
-Microsoft Intune now offers Premium add-ons. You can find premium add-ons in Intune under **Tenant administration** > **Premium add-ons**. The **Summary** blade shows all premium add-ons that have been released, a short description, and the status of the add-on. You can view the status of each add-on as either **Active** or **Available for trial or purchase**. 
+Microsoft Intune now offers Premium add-ons. You can find premium add-ons in Intune under **Tenant administration** > **Premium add-ons**. The **Summary** blade shows all premium add-ons that have been released, a short description, and the status of the add-on. You can view the status of each add-on as either **Active** or **Available for trial or purchase**.
 
 Licenses for the Premium add-ons can be added for an additional cost to the licensing options that include Microsoft Configuration Manager or Intune.
 
 > [!NOTE]
 > Premium add-ons are currently not supported in Sovereign clouds.
 
-## What add-ons capabilities are available 
+## What add-ons capabilities are available
 
 The following Premium add-ons are available: 
 
