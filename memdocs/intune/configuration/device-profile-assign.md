@@ -52,25 +52,20 @@ Be sure you have the correct role to assign policies and profiles. For more info
 
 ## Assign a policy to users or groups
 
-<<<<<<< HEAD
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select the policy you want to assign > **Properties** > **Assignments** > **Edit**.
-=======
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Configuration profiles**. All the profiles are listed.
 3. Select the profile you want to assign > **Properties** > **Assignments** > **Edit**:
->>>>>>> b6a35210265f377bc91f5d32f67510e4864bd671
 
     For example, to assign a device configuration profile:
 
     1. Go to **Devices** > **Configuration profiles**. All the profiles are listed.
     2. Select the profile you want to assign > **Properties** > **Assignments** > **Edit**:
 
-        :::image type="content" source="./media/device-profile-assign/properties-select-assignments.png" alt-text="Screenshot that shows how to select assignments to deploy the profile to users and groups in Microsoft Intune.":::
+       :::image type="content" source="./media/device-profile-assign/properties-select-assignments.png" alt-text="Screenshot that shows how to select assignments to deploy the profile to users and groups in Microsoft Intune.":::
 
 3. Select **Included groups** or **Excluded groups**, and then choose **Select groups to include**. When you select your groups, you're choosing an Azure AD group. To select multiple groups, hold down the **Ctrl** key, and select your groups.
 
-    :::image type="content" source="./media/device-profile-assign/select-included-excluded-groups-profile-assignment.png" alt-text="Screenshot that shows how to include or exclude users and groups when assigning or deploying a policy in Microsoft Intune.":::
+   :::image type="content" source="./media/device-profile-assign/select-included-excluded-groups-profile-assignment.png" alt-text="Screenshot that shows how to include or exclude users and groups when assigning or deploying a policy in Microsoft Intune.":::
 
 4. Select **Review + Save**. This step doesn't assign your policy.
 5. Select **Save**. When you save, your policy is assigned. Your groups will receive your policy settings when the devices check in with the Intune service.

@@ -62,11 +62,7 @@ Use this guide to determine the best migration approach, and get some guidance a
 
 If you currently don't use any MDM or mobile application management (MAM) provider, then you have some options:
 
-<<<<<<< HEAD
-- **Microsoft Intune**: If you want a cloud solution for your client devices and Linux, then go straight to Intune. For immediate value and protection on your Android and iOS/iPadOS devices, start with app protection policies, as these policies are typically used on unenrolled devices.
-=======
 - **Microsoft Intune**: If you want a cloud solution, then consider going straight to Intune. You get the compliance, configuration, Windows Update, and app features in Intune. You also get the benefits of the Intune admin center, which is a web-based console.
->>>>>>> b6a35210265f377bc91f5d32f67510e4864bd671
 
   If/when you're ready for full device management, then you can use Intune to check for compliance, configure device features, deploy apps, and install system & app updates. You also get the benefits of the [Microsoft Endpoint Manager admin center](tutorial-walkthrough-endpoint-manager.md).
 
@@ -157,11 +153,7 @@ If you currently use Configuration Manager, and want to use Intune, then you hav
 
 ### Option 1: Add tenant attach
 
-<<<<<<< HEAD
-Tenant attach allows you to upload your Configuration Manager devices to your organization in Intune, also known as a "tenant". After you attach your devices, you use the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) to run remote actions, such as sync machine and user policy. You can also see your on-premises servers, and get OS information.
-=======
 Tenant attach allows you to upload your Configuration Manager devices to your organization in Intune, also known as a "tenant". After you attach your devices, you use the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) to run remote actions, such as sync machine and user policy. You can also see your on-premises servers, and get OS information.
->>>>>>> b6a35210265f377bc91f5d32f67510e4864bd671
 
 Tenant attach is included with your [Configuration Manager co-management license](../../configmgr/core/understand/product-and-licensing-faq.yml) at no extra cost. It's the easiest way to integrate the cloud (Intune) with your on-premises Configuration Manager setup.
 
@@ -337,8 +329,6 @@ This section includes an overview of the steps. Use these steps as guidance, and
 
 3. Sign in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). The policies you imported are shown.
 
-<<<<<<< HEAD
-=======
 ## Deploy Intune
 
 1. Sign in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and sign up for Intune. If you have an existing subscription, you can also sign in to it.
@@ -381,7 +371,6 @@ This section includes an overview of the steps. Use these steps as guidance, and
 
     For more information, see [Role-based access control (RBAC) with Microsoft Intune](role-based-access-control.md).
 
->>>>>>> b6a35210265f377bc91f5d32f67510e4864bd671
 ## Next steps
 
 See the [enrollment deployment guides](deployment-guide-enrollment.md), [device and app management](migration-guide-configure-policies.md), and [app protection](migration-guide-app-protection-policies.md).

@@ -116,18 +116,13 @@ If after signing in to the Microsoft Intune admin center, you see an orange bann
 
 ### Set the MDM authority to Intune
 
-<<<<<<< HEAD
-1. If you do not have the MDM authority set, sign in to the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com).
+1. If you do not have the MDM authority set, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select the orange banner to open the **Mobile Device Management Authority** setting. The orange banner is only displayed if you haven't yet set the MDM authority.
-=======
-1. If you do not have the MDM authority set, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). 
-2. Select the orange banner to open the **Mobile Device Management Authority** setting. The orange banner is only displayed if you haven't yet set the MDM authority. 
->>>>>>> b6a35210265f377bc91f5d32f67510e4864bd671
 
     > [!NOTE]
     > If you have set the MDM Authority, you will see the MDM authority value on the **Tenant administration** pane. The orange banner is only displayed if you haven't yet set the MDM authority.
 
-    ![Image of the Choose MDM Authority blade](./media/free-trial-sign-up/choose-mdm-authority.png)
+   ![Image of the Choose MDM Authority blade](./media/free-trial-sign-up/choose-mdm-authority.png)
 
 3. If your MDM Authority is not set, under **Choose MDM Authority**, set your MDM authority to **Intune MDM Authority**.
 
@@ -165,15 +160,10 @@ To confirm your Azure Active Directory Premium and Microsoft Intune, see [Confir
 
 ## Admin experiences
 
-<<<<<<< HEAD
-There are two portals that you will use most often:
-
-- The Microsoft Endpoint Manager admin center ([https://endpoint.microsoft.com/](https://endpoint.microsoft.com/)) is where you can explore the [capabilities of Intune](what-is-intune.md). This is where an admin would work with Intune.
-=======
 There are two admin centers that you will use most often:
 
-- The Microsoft Intune admin center ([https://endpoint.microsoft.com/](https://endpoint.microsoft.com/)) is where you can explore the [capabilities of Intune](what-is-intune.md). This is where an admin would work with Intune.
->>>>>>> b6a35210265f377bc91f5d32f67510e4864bd671
+- The Microsoft Intune admin center ([https://endpoint.microsoft.com](https://endpoint.microsoft.com/)) is where you can explore the [capabilities of Intune](what-is-intune.md). This is where an admin would work with Intune.
+
 - The Microsoft 365 admin center ([https://admin.microsoft.com](https://admin.microsoft.com)) is where you can add and manage users, if you are not using Azure Active Directory for this. You can also manage other aspects of your account, including billing and support.
 
 ## Next steps
