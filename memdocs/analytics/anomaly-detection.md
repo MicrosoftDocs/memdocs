@@ -14,6 +14,9 @@ ms.localizationpriority: high
 
 # Anomaly Detection in Endpoint analytics
 
+> [!NOTE]
+> This capability is available as an Intune add-on. For more information, see [Intune add-ons](../fundamentals/intune-add-ons.md).
+
 This article explains how anomaly detection in Endpoint Analytics works as an early warning system.
 
 Anomaly detection monitors the health of devices in your organization for user experience and productivity regressions following configuration changes. When a failure occurs, Anomalies correlates relevant deployment objects to enable rapid troubleshooting, suggest root causes and remediation.

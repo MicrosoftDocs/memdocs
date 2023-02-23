@@ -14,6 +14,9 @@ ms.localizationpriority: high
 
 # What is Advanced Endpoint Analytics
 
+> [!NOTE]
+> This capability is available as an Intune add-on. For more information, see [Intune add-ons](../fundamentals/intune-add-ons.md).
+
 The Microsoft Intune Suite includes advanced features for Endpoint analytics, such as:
 
 - **Custom device scopes** allow you to use [Scope tags](../intune/fundamentals/scope-tags.md) to slice Endpoint analytics reports to a subset of devices. You can see scores, insights, and recommendations specific to subsets of your enrolled devices, such as devices you're responsible to manage, or devices belonging to a particular business group or assigned to a specific geographic region. For more information, see [Device scope](device-scope.md).
