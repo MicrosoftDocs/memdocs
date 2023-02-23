@@ -71,7 +71,7 @@ Email notifications appear in the user's inbox. Push notifications appear in the
 > [!TIP]
 > Use the built-in HTML editor to format and style email notifications. Intune supports the following HTML tags: `<a>`, `<strong>`, `<b>`, `<u>`, `<ol>`, `<ul>`, `<li>`, `<p>`, `<br>`, `<code>`, `<table>`, `<tbody>`, `<tr>`, `<td>`, `<thead>`, and`<th>`. It also supports the `href` attribute for hyperlinks.  
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
 2. Go to **Devices** > **Enroll device** and select the platform you're creating notifications for. Your options:  
    * **Windows enrollment**  
    * **Apple enrollment**  

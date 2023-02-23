@@ -42,7 +42,7 @@ Employees and students who want remote access to work or school resources can en
 In this task, you will: 
 
 * Try out the device user experience by enrolling a device running Windows 10/11 into Microsoft Intune.  
-* Try out the admin user experience by verifying the enrollment in the Microsoft Endpoint Manager admin center.   
+* Try out the admin user experience by verifying the enrollment in the Microsoft Intune admin center.   
 
 If you don't have an Intune subscription, [sign up for a free trial account](../fundamentals/free-trial-sign-up.md).  
 
@@ -83,7 +83,7 @@ Additionally, before you begin enrollment, confirm the version of Windows runnin
 
 4. Enter the username and password for your work account. If you followed the [create a user and assign a license](../fundamentals/quickstart-create-user.md) evaluation step, you can use the user account that you created. 
 
-4. Wait for your device to finish registering. When you see the **You're all set!** screen, select **Done**. Your work account should now be visible under **Accounts**.      
+5. Wait for your device to finish registering. When you see the **You're all set!** screen, select **Done**. Your work account should now be visible under **Accounts**.      
 
    ![Screenshot of newly added account](./media/quickstart-enroll-windows-device/quickstart-enroll-windows-device-06.png)
 
@@ -91,9 +91,11 @@ Additionally, before you begin enrollment, confirm the version of Windows runnin
 
 ## Confirm device enrollment  
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as a Global Administrator.
-2. Select **Devices** > **All devices** to view all enrolled devices.  
-3. Verify that the device you enrolled is visible in Intune.  
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as a Global Administrator.
+2. Select **Devices** > **All devices** to view the enrolled devices in Intune.
+3. Verify that you have an additional device enrolled within Intune.
+
+   ![Screenshot of Intune-enrolled devices](./media/quickstart-enroll-windows-device/quickstart-enroll-windows-device-07.png)
 
 ## Clean up resources
 
@@ -104,7 +106,6 @@ To unenroll the device, see [Remove your Windows device from management](../user
 In this task, you learned how to enroll a device running Windows 10/11 into Intune. For more information about the device user experience, see these resources:
  * [Windows device enrollment with Intune Company Portal](../user-help/what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md)  
  * [What info can your company see when you enroll your device?](../user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)    
-
 
 To continue to evaluate Microsoft Intune, go to the next step:  
 

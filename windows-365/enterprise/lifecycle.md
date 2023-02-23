@@ -38,7 +38,7 @@ The Cloud PC lifecycle has five stages:
 
 ## Provision
 
-Windows 365 gives you an optimized experience for deploying your Cloud PCs. The admin experience for setting up your deployment is integrated into the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Cloud PCs are [provisioned](provisioning.md) in the Windows 365 service, connected to Azure, joined to your Azure AD, and enrolled into Microsoft Endpoint Manager.
+Windows 365 gives you an optimized experience for deploying your Cloud PCs. The admin experience for setting up your deployment is integrated into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Cloud PCs are [provisioned](provisioning.md) in the Windows 365 service, connected to Azure, joined to your Azure AD, and enrolled into Microsoft Endpoint Manager.
 
 By assigning a Windows 365 license to a user and adding them to a group targeted with a [provisioning policy](provisioning.md), you trigger automatic provisioning of the user’s Cloud PC.
 

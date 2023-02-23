@@ -44,7 +44,7 @@ This feature applies to:
 
 - The administrator configuring the TeamViewer connector must have an Intune license. You can give administrators access to Microsoft Endpoint Manager without them requiring an Intune license. For more information, see [Unlicensed admins](../fundamentals/unlicensed-admins.md). 
 
-- Only a Global administrator or Intune administrator in the Endpoint Manager admin center can onboard TeamViewer. 
+- Only a Global administrator or Intune administrator in the Intune admin center can onboard TeamViewer. 
 
 - Use a supported Intune-managed device:
 
@@ -71,7 +71,7 @@ By using TeamViewer, you're allowing the TeamViewer for Intune Connector to crea
 
 To provide remote assistance to devices, configure the Intune TeamViewer connector using the following steps:
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Tenant administration** > **Connectors and tokens** > **TeamViewer Connector**.
 3. Select **Connect**, and accept the license agreement.
 4. Select **Log in to TeamViewer to authorize**.
@@ -81,7 +81,7 @@ To provide remote assistance to devices, configure the Intune TeamViewer connect
 
 After the connector is configured, you're ready to remotely administer a device. 
 
-1. In the the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. In the the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **All devices**.
 3. From the list, select the device that you want to remotely administer > **New Remote Assistance Session**. You may have to select the three dots (**...**) to see this option.
 4. After Intune connects to the TeamViewer service, you'll see some information about the device. **Connect** to start the remote session.
@@ -94,7 +94,7 @@ When finished, close the TeamViewer window.
 
 When you start a remote session, users see a notification flag on the Company Portal app icon on their device. A notification also appears when the app opens. Users can then accept the remote assistance request.
 
-:::image type="content" source="./media/teamviewer-support/android-teamviewer.png" alt-text="Use TeamViewer connector to remotely administer Android device in Microsoft Intune and Endpoint Manager admin center":::
+:::image type="content" source="./media/teamviewer-support/android-teamviewer.png" alt-text="Use TeamViewer connector to remotely administer Android device in Microsoft Intune and Intune admin center":::
 
 > [!NOTE]
 > Windows devices that are enrolled using "userless" methods, such as Device Enrollment Manager (DEM) and Windows Configuration Designer (WCD), don't show the TeamViewer notification in the Company Portal app. In these scenarios, it's recommended to use the TeamViewer portal to generate the session.

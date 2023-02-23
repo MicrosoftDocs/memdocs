@@ -1,5 +1,5 @@
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All apps**.
 3. Find and select your app from the list of apps.  
 4. Select **Properties** under **Manage** from the app pane.

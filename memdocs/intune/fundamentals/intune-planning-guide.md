@@ -238,7 +238,7 @@ Some considerations:
 - If you currently use Configuration Manager, then your options include:
 
   - If you want to keep your existing infrastructure, and move some workloads to the cloud, then use co-management. You get the benefit of both services. Existing devices can receive some policies from Configuration Manager (on-premises), and other policies from Intune (cloud).
-  - If you want to keep your existing infrastructure, and use Intune to help monitor your on-premises devices, then use tenant-attach. You get the benefit of using the Endpoint Manager admin center, while still using Configuration Manager to manage devices.
+  - If you want to keep your existing infrastructure, and use Intune to help monitor your on-premises devices, then use tenant-attach. You get the benefit of using the Intune admin center, while still using Configuration Manager to manage devices.
   - If you want a pure cloud solution to manage devices, then move to Intune. Existing Configuration Manager users often prefer to continue using Configuration Manager with tenant attach or co-management.
 
   For more information, go to [co-management workloads](../../configmgr/comanage/workloads.md).
@@ -365,7 +365,7 @@ Some considerations:
 
   When you create groups in the cloud, such as Intune or Microsoft 365, they're created in Azure AD. You don't see the Azure AD branding, but that's what you're using.
 
-  - Creating new groups can be an easy task. They can be created in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). For more information, go to [add groups to organize users and devices](groups-add.md).
+  - Creating new groups can be an easy task. They can be created in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). For more information, go to [add groups to organize users and devices](groups-add.md).
 
   - Moving existing distribution lists (DL) to Azure AD might be more challenging. Once they DLs are in Azure AD, these groups can be used by Intune and Microsoft 365. For more information, go to:
 

@@ -68,7 +68,7 @@ sections:
           
           - The end user must have a license for Microsoft Intune assigned to their Azure Active Directory account. See [Manage Intune licenses](../fundamentals/licenses-assign.md) to learn how to assign Intune licenses to end users.
           
-          - The end user must belong to a security group that is targeted by an app protection policy. The same app protection policy must target the specific app being used. App protection policies can be created and deployed in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Security groups can currently be created in the [Microsoft 365 admin center](https://admin.microsoft.com).
+          - The end user must belong to a security group that is targeted by an app protection policy. The same app protection policy must target the specific app being used. App protection policies can be created and deployed in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Security groups can currently be created in the [Microsoft 365 admin center](https://admin.microsoft.com).
           
           - The end user must sign into the app using their Azure AD account.
           
@@ -127,7 +127,7 @@ sections:
 
       - question: How often will the user be prompted for the Intune PIN?
         answer: |
-           The IT admin can define the Intune app protection policy setting 'Recheck the access requirements after (minutes)' in the Microsoft Endpoint Manager admin center. This setting specifies the amount of time before the access requirements are checked on the device, and the application PIN screen is shown again. However, important details about PIN that affect how often the user will be prompted are: 
+           The IT admin can define the Intune app protection policy setting 'Recheck the access requirements after (minutes)' in the Microsoft Intune admin center. This setting specifies the amount of time before the access requirements are checked on the device, and the application PIN screen is shown again. However, important details about PIN that affect how often the user will be prompted are: 
           
             - **The PIN is shared among apps of the same publisher to improve usability:** On iOS/iPadOS, one app PIN is shared amongst all apps **of the same app publisher**. On Android, one app PIN is shared amongst all apps.
             - **The 'Recheck the access requirements after (minutes)' behavior after a device reboot:** A "PIN timer" tracks the number of minutes of inactivity that determine when to show the Intune app PIN next. On iOS/iPadOS, the PIN timer is unaffected by device reboot. Thus, device restart has no effect on the number of minutes the user has been inactive from an iOS/iPadOS app with Intune PIN policy. On Android, the PIN timer is reset on device reboot. As such, Android apps with Intune PIN policy will likely prompt for an app PIN regardless of the 'Recheck the access requirements after (minutes)' setting value **after a device reboot**.  
@@ -181,7 +181,7 @@ sections:
           
       - question: What is selective wipe for MAM?
         answer: |
-           Selective wipe for MAM simply removes company app data from an app. The request is initiated using the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). To learn how to initiate a wipe request, see [How to wipe only corporate data from apps](apps-selective-wipe.md).
+           Selective wipe for MAM simply removes company app data from an app. The request is initiated using the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). To learn how to initiate a wipe request, see [How to wipe only corporate data from apps](apps-selective-wipe.md).
           
       - question: How quickly does selective wipe for MAM happen?
         answer:  If the user is using the app when selective wipe is initiated, the Intune App SDK checks every 30 minutes for a selective wipe request from the Intune MAM service. It also checks for selective wipe when the user launches the app for the first time and signs in with their work or school account.

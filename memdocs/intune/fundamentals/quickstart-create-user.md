@@ -37,16 +37,16 @@ In this topic, you'll create a user and then assign the user an Intune license. 
 
 - A Microsoft Intune subscription. [Sign up for a free trial account](../fundamentals/free-trial-sign-up.md).
 
-## Sign in to Intune in Microsoft Endpoint Manager
+## Sign in to the Microsoft Intune admin center
 
-Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as a [Global administrator or an Intune Service administrator](users-add.md#types-of-administrators). If you've created an Intune trial subscription, the account you created the subscription with is the Global administrator.
+Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as a [Global administrator or an Intune Service administrator](users-add.md#types-of-administrators). If you've created an Intune trial subscription, the account you created the subscription with is the Global administrator.
 
 ## Create a user
 
 A user must have a user account to enroll in Intune device management. To create a new user:
 
-1. In Microsoft Endpoint Manager, select **Users** > **All users** > **New user**:
-    ![In Microsoft Endpoint Manager, select New user](./media/quickstart-create-user/create-user.png)
+1. In the Microsoft Intune admin center, select **Users** > **All users** > **New user**:
+    ![In the Microsoft Intune admin center, select New user](./media/quickstart-create-user/create-user.png)
 2. In the **Name** box, enter a name, such as *Dewey Kellum*:
     ![Add user details](./media/quickstart-create-user/create-user-02.png)
 3. In the **User name** box, enter a user identifier, such as Dewey@contoso.onmicrosoft.com.

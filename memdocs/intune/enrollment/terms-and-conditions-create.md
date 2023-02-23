@@ -42,7 +42,7 @@ This article describes how to get started with terms and conditions in Intune.
 ## Create terms and conditions
 Complete these steps to create an Intune terms and conditions policy. 
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Tenant administration** > **Terms and conditions**.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Tenant administration** > **Terms and conditions**.
 2. Select **Create**.
 3. On the **Basics** page, enter the following information:
 

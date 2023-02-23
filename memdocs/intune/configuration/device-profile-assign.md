@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Assign policies and profiles in Microsoft Intune
-description: Use the Microsoft Endpoint Manager admin center to assign device configuration profiles and policies to users and devices. Learn how to exclude groups from a policy assignment in Microsoft Intune.
+title: Assign device profiles in Microsoft Intune
+description: Use the Microsoft Intune admin center to assign device configuration profiles and policies to users and devices. Learn how to exclude groups from a profile assignment in Microsoft Intune.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
@@ -52,19 +52,20 @@ Be sure you have the correct role to assign policies and profiles. For more info
 
 ## Assign a policy to users or groups
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select the policy you want to assign > **Properties** > **Assignments** > **Edit**.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Devices** > **Configuration profiles**. All the profiles are listed.
+3. Select the profile you want to assign > **Properties** > **Assignments** > **Edit**:
 
     For example, to assign a device configuration profile:
 
     1. Go to **Devices** > **Configuration profiles**. All the profiles are listed.
     2. Select the profile you want to assign > **Properties** > **Assignments** > **Edit**:
 
-        :::image type="content" source="./media/device-profile-assign/properties-select-assignments.png" alt-text="Screenshot that shows how to select assignments to deploy the profile to users and groups in Microsoft Intune.":::
+       :::image type="content" source="./media/device-profile-assign/properties-select-assignments.png" alt-text="Screenshot that shows how to select assignments to deploy the profile to users and groups in Microsoft Intune.":::
 
 3. Select **Included groups** or **Excluded groups**, and then choose **Select groups to include**. When you select your groups, you're choosing an Azure AD group. To select multiple groups, hold down the **Ctrl** key, and select your groups.
 
-    :::image type="content" source="./media/device-profile-assign/select-included-excluded-groups-profile-assignment.png" alt-text="Screenshot that shows how to include or exclude users and groups when assigning or deploying a policy in Microsoft Intune.":::
+   :::image type="content" source="./media/device-profile-assign/select-included-excluded-groups-profile-assignment.png" alt-text="Screenshot that shows how to include or exclude users and groups when assigning or deploying a policy in Microsoft Intune.":::
 
 4. Select **Review + Save**. This step doesn't assign your policy.
 5. Select **Save**. When you save, your policy is assigned. Your groups will receive your policy settings when the devices check in with the Intune service.
@@ -80,7 +81,7 @@ Be sure you have the correct role to assign policies and profiles. For more info
 
   For more information, go to [Use filters when assigning your apps, policies, and profiles in Microsoft Intune](../fundamentals/filters.md).
 
-- **[Policy sets](../fundamentals/policy-sets.md)** create a group or collection of existing apps and policies. When the policy set is created, you can assign the policy set from a single place in the Endpoint Manager admin center.
+- **[Policy sets](../fundamentals/policy-sets.md)** create a group or collection of existing apps and policies. When the policy set is created, you can assign the policy set from a single place in the Microsoft Intune admin center.
 
   For more information, go to [Use policy sets to group collections of management objects in Microsoft Intune](../fundamentals/policy-sets.md).
 

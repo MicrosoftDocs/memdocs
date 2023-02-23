@@ -64,7 +64,7 @@ This article provides an overview of the steps to start your Intune deployment, 
 
 - Determine your license needs and any other prerequisites for your Intune deployment. The following list provides some of the most common prerequisites:
 
-  - **[Intune subscription](licenses.md)**: Included with some Microsoft 365 subscriptions. You also get access to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), which is a web-based console for managing your devices, apps, and users.
+  - **[Intune subscription](licenses.md)**: Included with some Microsoft 365 subscriptions. You also get access to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), which is a web-based console for managing your devices, apps, and users.
   - **[Microsoft 365 apps](https://www.microsoft.com/licensing/product-licensing/microsoft-365-apps)**: Included with Microsoft 365 and is used for productivity apps, including Outlook and Teams.
   - **[Azure Active Directory (Azure AD)](https://www.microsoft.com/security/business/identity-access/azure-active-directory-pricing)**: Included with some Microsoft 365 subscriptions. Azure AD is used for the identity management for users, groups, and devices, which comes with your Intune and Microsoft 365 subscription.
 
@@ -152,7 +152,7 @@ Your organization may have a base set of device features that should be configur
 
 If you prefer, you can enroll your devices before creating device configuration profiles. It's your choice. At the next Intune check-in, the profiles are assigned.
 
-In the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can create different profiles based on your device platform - Android, iOS/iPadOS, macOS, and Windows.
+In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can create different profiles based on your device platform - Android, iOS/iPadOS, macOS, and Windows.
 
 The following articles are good resources:
 
@@ -193,7 +193,8 @@ Microsoft Configuration Manager helps protect on-premises Windows Server, device
 
 There are two steps to cloud attach your on-premises devices:
 
-1. [Tenant attach](/mem/configmgr/tenant-attach/prerequisites): Register your Intune tenant with your Configuration Manager deployment. Your Configuration Manager devices are shown in the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). On these devices, you can run different actions, including installing apps and running Windows PowerShell scripts using the web-based admin center.
+1. [Tenant attach](/mem/configmgr/tenant-attach/prerequisites): Register your Intune tenant with your Configuration Manager deployment. Your Configuration Manager devices are shown in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). On these devices, you can run different actions, including installing apps and run Windows PowerShell scripts using the web-based admin center.
+
 2. [Co-management](/mem/configmgr/comanage/overview): Manage Windows client devices with Configuration Manager and Microsoft Intune. Some workloads are managed by Configuration Manager, and some workloads are managed by Intune. For example, you can use Configuration Manager to manage Windows updates, and use Intune to manage conditional access policies.
 
 If you currently use Configuration Manager, you get immediate value through tenant attach, and you get more value through co-management.

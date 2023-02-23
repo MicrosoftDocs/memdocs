@@ -45,7 +45,7 @@ You can migrate from Basic Mobility and Security to Microsoft Intune. Migrating 
 
 2. **Evaluate and migrate your existing policies**:
 
-    Use the **Migration evaluation** in the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/#view/Microsoft_Intune_Workflows/MifoPolicyListBlade). The output shows Intune policy and group recommendations that replace the Basic Mobility and Security policies.
+    Use the **Migration evaluation** in the [Microsoft Intune admin center](https://endpoint.microsoft.com/#view/Microsoft_Intune_Workflows/MifoPolicyListBlade). The output shows Intune policy and group recommendations that replace the Basic Mobility and Security policies.
 
 3. **Assign the policies and complete the migration**:
 
@@ -55,7 +55,7 @@ This article will help you migrate your mobile device management (MDM) from Micr
 
 ## Before you begin
 
-- When you sign in to the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), use an account that has Azure AD Global or License administrator rights.
+- When you sign in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), use an account that has Azure AD Global or License administrator rights.
 
 - Test the steps in this article on a test users group that have devices enrolled in Basic Mobility and Security. Confirm that the policies behave as you expect.
 
@@ -114,7 +114,7 @@ After the migration evaluation process activates, you can't make changes to your
 
 ## Step 2 - Evaluate and migrate your existing policies
 
-After you’ve prepared your licenses and reviewed the information in [Step 1 - Prepare](#step-1---prepare), use the [Endpoint Manager admin center Migration evaluation](https://endpoint.microsoft.com/#view/Microsoft_Intune_Workflows/MifoPolicyListBlade) to get Intune policy recommendations.
+After you’ve prepared your licenses and reviewed the information in [Step 1 - Prepare](#step-1---prepare), use the [Microsoft Intune admin center Migration evaluation](https://endpoint.microsoft.com/#view/Microsoft_Intune_Workflows/MifoPolicyListBlade) to get Intune policy recommendations.
 
 The tool can migrate your existing Basic Mobility and Security device security policies to Intune as [compliance policies](../protect/device-compliance-get-started.md) and [device configuration profiles](../configuration/device-profiles.md). It also makes recommendations for which groups the new policies should be assigned.
 
@@ -126,7 +126,7 @@ To evaluate and migrate policies from Basic Mobility and Security to Intune:
 2. Open the [Migration evaluation](https://endpoint.microsoft.com/#blade/Microsoft_Intune_Workflows/MifoPolicyListBlade) > select **Start**. It will take a few minutes to complete the evaluation.
 
     > [!NOTE]
-    > 
+    >
     > - If you navigate away from the Migration evaluation, the only way to return is to open the [Migration evaluation](https://endpoint.microsoft.com/#blade/Microsoft_Intune_Workflows/MifoPolicyListBlade) link again.
     > - After you start the migration evaluation, you can't create new or edit existing device security policies in the Microsoft 365 Defender portal.
 
@@ -136,7 +136,7 @@ To evaluate and migrate policies from Basic Mobility and Security to Intune:
 
     The name of each recommendation has a prefix based on the Basic Mobility and Security policy name. You need to review each item in the list, like the following example:
 
-    :::image type="content" source="./media/migrate-to-intune/recommendations-page.png" alt-text="Screenshot of migration evaluation example in the Endpoint Manager admin center after migrating Microsoft 365 Basic Mobility and Security policies to Intune":::
+    :::image type="content" source="./media/migrate-to-intune/recommendations-page.png" alt-text="Screenshot of migration evaluation example in the Microsoft Intune admin center after migrating Microsoft 365 Basic Mobility and Security policies to Intune":::
 
     - Not all device settings correspond exactly to Intune settings and values. So, they can’t be moved with precise one-to-one mapping. You need to review and possibly adjust these settings.
     - The conditional access (CA) settings that control the Office 365 services are the same CA policies in Azure Active Directory. So, you don’t need to review or make changes to them unless you want to.
@@ -144,7 +144,7 @@ To evaluate and migrate policies from Basic Mobility and Security to Intune:
 4. Select an item in the list. The **Compliance policy recommendation overview** page opens. Review the instructions.
 5. Select **Details** to review the recommended settings and group assignments:
 
-    :::image type="content" source="./media/migrate-to-intune/details-page.png" alt-text="Screenshot of details page example in the Endpoint Manager admin center after migrating Microsoft 365 Basic Mobility and Security policies to Intune":::
+    :::image type="content" source="./media/migrate-to-intune/details-page.png" alt-text="Screenshot of details page example in the Microsoft Intune admin center after migrating Microsoft 365 Basic Mobility and Security policies to Intune":::
 
     The policy recommendations on this page are a read-only report documenting the suggested settings and assignments to use. They aren't Intune policies yet.
 
@@ -157,8 +157,8 @@ To evaluate and migrate policies from Basic Mobility and Security to Intune:
 
     - If there are already Intune-licensed users in the recommended groups, then verify that the recommended policies are appropriate for these users. After you assign the policies to these groups, all Intune licensed users in the groups receive the policies, even users not previously managed by Basic Mobility and Security.
 
-    > [!NOTE]
-    > For the Windows operating system, only Windows 10/11 desktop devices will have policy migrated for them. Other versions of Windows won't have policy migrated. For more information, see the [Policy mapping for Access Requirements](policy-map-access-requirements.md) and [Policy mapping for Configuration](policy-map-configurations.md).
+        > [!NOTE]
+        > For the Windows operating system, only Windows 10/11 desktop devices will have policy migrated for them. Other versions of Windows won't have policy migrated. For more information, see the [Policy mapping for Access Requirements](policy-map-access-requirements.md) and [Policy mapping for Configuration](policy-map-configurations.md).
 
 6. If you want to implement the recommended policy, then select **Open policy**. The policy page opens and the Intune policy is created. You can change or update the migrated policies.
 
@@ -177,7 +177,7 @@ After the policies are created, they're ready to be assigned. For this migration
 
     For more information on the impact of existing Intune licenses, go to [Before you begin](#before-you-begin) (in this article).
 
-2. **Sign in to the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431)** with Azure AD Global or License administrator rights.
+2. **Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431)** with Azure AD Global or License administrator rights.
 
 3. **Enable [coexistence](mdm-authority-set.md#coexistence)**. When enabled:
 
@@ -209,19 +209,19 @@ This section describes what happens behind the scenes when you migrate from Basi
   - [Configurations policy mapping from Basic Mobility and Security to Intune](policy-map-configurations.md)
   - [Miscellaneous policy mapping from Basic Mobility and Security to Intune](policy-map-miscellaneous.md)
 
-- When you complete the migration, your migrated policies are in Endpoint Manager admin center. The new policies include compliance policies, device configuration profiles, and conditional access policies. The new policies are in the following locations:
+- When you complete the migration, your migrated policies are in Microsoft Intune admin center. The new policies include compliance policies, device configuration profiles, and conditional access policies. The new policies are in the following locations:
 
   | Intune policy type | Intune location |
   | --- | --- |
-  | [Compliance policies](../protect/device-compliance-get-started.md)</br></br>Specify the device settings as access requirements. | [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Compliance policies** |
-  | [Configuration profiles](../configuration/device-profiles.md) </br></br> Specify other settings that aren’t part of the access requirements, including email profiles. | [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Configuration profiles** |
-  | [Conditional access policies]( ../protect/conditional-access.md)</br></br> Azure AD conditional access blocks access if the settings aren't compliant. | [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Conditional access** > **Classic policies** |
+  | [Compliance policies](../protect/device-compliance-get-started.md)</br></br>Specify the device settings as access requirements. | [Microsoft Intune Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Compliance policies** |
+  | [Configuration profiles](../configuration/device-profiles.md) </br></br> Specify other settings that aren’t part of the access requirements, including email profiles. | [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Configuration profiles** |
+  | [Conditional access policies]( ../protect/conditional-access.md)</br></br> Azure AD conditional access blocks access if the settings aren't compliant. | [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Conditional access** > **Classic policies** |
 
 ## Known issues
 
 ### Start button always appears
 
-Each time you open the [Endpoint Manager admin center Migration evaluation](https://endpoint.microsoft.com/#view/Microsoft_Intune_Workflows/MifoPolicyListBlade), the **Start** button shows, even if the evaluation is already generated. If you dismiss the **Start** prompt, then the previously generated recommendations won’t load.
+Each time you open the [Microsoft Intune admin center Migration evaluation](https://endpoint.microsoft.com/#view/Microsoft_Intune_Workflows/MifoPolicyListBlade), the **Start** button shows, even if the evaluation is already generated. If you dismiss the **Start** prompt, then the previously generated recommendations won’t load.
 
 **Workaround**: Start the evaluation again. It won’t create more or duplicate recommendations or policies. Rerunning the migration detects that the evaluation has already succeeded and loads the previous recommendations.
 

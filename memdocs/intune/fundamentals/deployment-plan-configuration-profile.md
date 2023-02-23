@@ -61,10 +61,10 @@ When you create device configuration profiles, there are different levels and ty
 
 This article lists the different levels of device configuration policies that organizations should use. Most of these policies in this article focus on access to organization resources and security.
 
-These features are configured in device configuration profiles in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). When the profiles are ready, they can be deployed from Intune to your devices.
+These features are configured in device configuration profiles in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). When the profiles are ready, they can be deployed from Intune to your devices.
 
 > [!TIP]
-> [Take a tour of Intune and the Endpoint Manager admin center](tutorial-walkthrough-endpoint-manager.md).
+> [Take a tour of Intune and the Microsoft Intune admin center](tutorial-walkthrough-endpoint-manager.md).
 
 ## Level 1 - Create your security baseline
 

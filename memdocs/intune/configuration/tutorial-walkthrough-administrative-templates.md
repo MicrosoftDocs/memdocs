@@ -41,7 +41,7 @@ Group policy administrative templates, also known as ADMX templates, include set
 
 ADMX templates are available for the following services:
 
-- **Microsoft Edge**: Download at [Microsoft Edge policy file](https://www.microsoftedgeinsider.com/en-us/enterprise).
+- **Microsoft Edge**: Download at [Microsoft Edge policy file](https://www.microsoftedgeinsider.com/enterprise).
 - **Office**: Download at [Microsoft 365 Apps, Office 2019, and Office 2016](https://www.microsoft.com/download/details.aspx?id=49030).
 - **Windows**: Built in to the Windows client OS.
 
@@ -52,10 +52,11 @@ These templates are built in to Microsoft Intune, and are available as **Adminis
 In this walkthrough, you will:
 
 > [!div class="checklist"]
-> * Get introduced to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-> * Create user groups and create device groups.
-> * Compare the settings in Intune with on-premises ADMX settings.
-> * Create different administrative templates, and configure the settings that target the different groups.
+>
+> - Get introduced to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+> - Create user groups and create device groups.
+> - Compare the settings in Intune with on-premises ADMX settings.
+> - Create different administrative templates, and configure the settings that target the different groups.
 
 By the end of this lab, you'll have the skills to start using Intune and Microsoft 365 to manage your users, and deploy administrative templates.
 
@@ -82,7 +83,7 @@ This feature applies to:
   1. Copy the following Office and Microsoft Edge templates to the [Central Store (sysvol folder)](https://support.microsoft.com/help/3087759/how-to-create-and-manage-the-central-store-for-group-policy-administra):
 
       - [Office administrative templates](https://www.microsoft.com/download/details.aspx?id=49030)
-      - [Microsoft Edge administrative templates > Policy file](https://www.microsoftedgeinsider.com/en-us/enterprise)
+      - [Microsoft Edge administrative templates > Policy file](https://www.microsoftedgeinsider.com/enterprise)
 
   2. Create a group policy to push these templates to a Windows 10/11 Enterprise administrator computer in the same domain as the DC. In this walkthrough:
 
@@ -108,23 +109,23 @@ This feature applies to:
 
         :::image type="content" source="./media/tutorial-walkthrough-administrative-templates/windows-administrative-tools-app.png" alt-text="Screenshot that shows the Windows Administrative Tools apps, including the Group Policy Management app.":::
 
-  - Be sure you have internet access and administrator rights to the Microsoft 365 subscription, which includes the Endpoint Manager admin center.
+  - Be sure you have internet access and administrator rights to the Microsoft 365 subscription, which includes the Intune admin center.
 
-## Open the Endpoint Manager admin center
+## Open the Intune admin center
 
 1. Open a chromium web browser, such as Microsoft Edge version 77 and later.
-2. Go to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Sign in with the following account:
+2. Go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Sign in with the following account:
 
     **User**: Enter the administrator account of your Microsoft 365 tenant subscription.  
     **Password**: Enter its password.
 
 This admin center is focused on device management, and includes Azure services, such as Azure AD and Intune. You might not see the **Azure Active Directory** and **Intune** branding, but you're using them.
 
-You can also open the Endpoint Manager admin center from the [Microsoft 365 admin center](https://admin.microsoft.com):
+You can also open the Intune admin center from the [Microsoft 365 admin center](https://admin.microsoft.com):
 
 1. Go to [https://admin.microsoft.com](https://admin.microsoft.com).
 2. Sign in with the administrator account of your Microsoft 365 tenant subscription.
-3. Select **Show all** > **All admin centers** > **Endpoint management**. The Endpoint Manager admin center opens.
+3. Select **Show all** > **All admin centers** > **Endpoint management**. The Intune admin center opens.
 
     :::image type="content" source="./media/tutorial-walkthrough-administrative-templates/microsoft365-admin-centers.png" alt-text="Screenshot that shows all the admin centers in the Microsoft 365 admin center.":::
 
@@ -142,7 +143,7 @@ For more information, see [Common questions, issues, and resolutions with device
 
 In these next steps, you create security groups, and add users to these groups. You can add a user to multiple groups. For example, it's normal for a user to have multiple devices, such as a Surface Pro for work, and an Android mobile device for personal. And, it's normal for a person to access organizational resources from these multiple devices.
 
-1. In the Endpoint Manager admin center, select **Groups** > **New group**.
+1. In the Intune admin center, select **Groups** > **New group**.
 
 2. Enter the following settings:
 
@@ -217,13 +218,13 @@ In these next steps, you create security groups, and add users to these groups. 
   - West coast IT administrators
   - East coast IT administrators
 
-The users and groups created are also seen in the [Microsoft 365 admin center](https://admin.microsoft.com), Azure AD in the Azure portal, and [Microsoft Intune in the Azure portal](https://go.microsoft.com/fwlink/?linkid=2090973). You can create and manage groups in all these areas for your tenant subscription. **If your goal is device management, use the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431)**.
+The users and groups created are also seen in the [Microsoft 365 admin center](https://admin.microsoft.com), Azure AD in the Azure portal, and [Microsoft Intune in the Azure portal](https://go.microsoft.com/fwlink/?linkid=2090973). You can create and manage groups in all these areas for your tenant subscription. **If your goal is device management, use the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431)**.
 
 ### Review group membership
 
-1. In the Endpoint Manager admin center, select **Users** > select the name of any existing user.
+1. In the Intune admin center, select **Users** > select the name of any existing user.
 
-    :::image type="content" source="./media/tutorial-walkthrough-administrative-templates/select-users-endpoint-manager-admin-center.png" alt-text="Screenshot that shows how to select Users in Microsoft Intune and the Endpoint Manager admin center.":::
+    :::image type="content" source="./media/tutorial-walkthrough-administrative-templates/select-users-endpoint-manager-admin-center.png" alt-text="Screenshot that shows how to select Users in Microsoft Intune and the Intune admin center.":::
 
 2. Review some of the information you can add or change. For example, look at the properties you can configure, such as Job Title, Department, City, Office location, and more. You can use these properties in your dynamic queries when creating dynamic groups.
 3. Select **Groups** to see the membership of this user. You can also remove the user from a group.
@@ -231,13 +232,13 @@ The users and groups created are also seen in the [Microsoft 365 admin center](h
 
 ### What did I just do?
 
-In the Endpoint Manager admin center, you created new security groups, and added existing users and devices to these groups. We'll use these groups in later steps in this walkthrough.
+In the Intune admin center, you created new security groups, and added existing users and devices to these groups. We'll use these groups in later steps in this tutorial.
 
 ## Create a template in Intune
 
 In this section, we create an administrative template in Intune, look at some settings in **Group Policy Management**, and compare the same setting in Intune. The goal is to show a setting in group policy, and show the same setting in Intune.
 
-1. In the Endpoint Manager admin center, select **Devices** > **Configuration profiles** > **Create profile**.
+1. In the Intune admin center, select **Devices** > **Configuration profiles** > **Create profile**.
 2. Enter the following properties:
 
     - **Platform**: Select **Windows 10 and later**.
@@ -287,7 +288,7 @@ In this section, we show a policy in Intune and its matching policy in Group Pol
 
     :::image type="content" source="./media/tutorial-walkthrough-administrative-templates/prevent-enabling-lock-screen-camera-admx-policy.png" alt-text="Screenshot that shows how to see the Computer configuration setting options in group policy.":::
 
-5. In the Endpoint Manager admin center, go to your **Admin template - Windows 10 student devices** template.
+5. In the Intune admin center, go to your **Admin template - Windows 10 student devices** template.
 6. Select **Computer configuration** > **Control Panel** > **Personalization**. Notice the available settings:
 
     :::image type="content" source="./media/tutorial-walkthrough-administrative-templates/computer-configuration-control-panel-personalization-path.png" alt-text="Screenshot that shows the personalization policy setting path in Microsoft Intune.":::
@@ -312,7 +313,7 @@ In this section, we show a policy in Intune and its matching policy in Group Pol
 
 #### Compare a Microsoft Edge policy
 
-1. In the Endpoint Manager admin center, go to your **Admin template - Windows 10 student devices** template.
+1. In the Intune admin center, go to your **Admin template - Windows 10 student devices** template.
 2. Expand **Computer configuration** > **Microsoft Edge** > **Startup, homepage and new tab page**. Notice the available settings.
 
     Do the same for **User configuration**.
@@ -376,7 +377,7 @@ When assigning strict or restrictive policies and profiles, don't lock yourself 
 
 ### What did I just do?
 
-In the Endpoint Manager admin center, you created an administrative template device configuration profile, and assigned this profile to a group you created.
+In the Intune admin center, you created an administrative template device configuration profile, and assigned this profile to a group you created.
 
 ## Create a OneDrive template
 
@@ -507,7 +508,7 @@ This section uses the following resources. We'll install these resources in this
     $configuration = Invoke-MSGraphRequest -Url https://graph.microsoft.com/beta/deviceManagement/groupPolicyConfigurations -Content '{"displayName":"Test Configuration","description":"A test configuration created through PS"}' -HttpMethod POST
     ```
 
-    When these cmdlets succeed, the profile is created. To confirm, go to the Endpoint Manager admin center > **Configuration Profiles**. Your **Test Configuration** profile should be listed.
+    When these cmdlets succeed, the profile is created. To confirm, go to the Intune admin center > **Configuration Profiles**. Your **Test Configuration** profile should be listed.
 
 10. Get all the SettingDefinitions. Enter:
 
@@ -537,7 +538,7 @@ This section uses the following resources. We'll install these resources in this
 
 ### See your policy
 
-1. In the Endpoint Manager admin center > **Configuration Profiles** > **Refresh**.
+1. In the Intune admin center > **Configuration Profiles** > **Refresh**.
 2. Select your **Test Configuration** profile > **Settings**.
 3. In the drop-down list, select **All products**.
 
@@ -571,7 +572,7 @@ When no longer needed, you can:
 
 ## Next steps
 
-In this walkthrough, you got more familiar with the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), used the query builder to create dynamic groups, and created administrative templates in Intune to configure [ADMX settings](/windows/client-management/mdm/understanding-admx-backed-policies). You also compared using ADMX templates on-premises and in the cloud with Intune. As a bonus, you used PowerShell cmdlets to create an administrative template.
+In this tutorial, you got more familiar with the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), used the query builder to create dynamic groups, and created administrative templates in Intune to configure [ADMX settings](/windows/client-management/mdm/understanding-admx-backed-policies). You also compared using ADMX templates on-premises and in the cloud with Intune. As a bonus, you used PowerShell cmdlets to create an administrative template.
 
 For more information on administrative templates in Intune, see:
 

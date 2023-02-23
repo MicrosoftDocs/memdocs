@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/03/2023
+ms.date: 02/17/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -37,7 +37,7 @@ Intune Endpoint security Antivirus policies can help security admins focus on ma
 
 Antivirus policy includes several profiles. Each profile contains only the settings that are relevant for Microsoft Defender for Endpoint antivirus for macOS and Windows devices, or for the user experience in the Windows Security app on Windows devices.
 
-You'll find the antivirus policies under **Manage** in the Endpoint security node of the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+You'll find the antivirus policies under **Manage** in the Endpoint security node of the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 Antivirus policies include the same settings as found *endpoint protection* or *device restriction* templates for [device configuration](../configuration/device-profile-create.md) policy. However, those policy types include additional categories of settings that are unrelated to Antivirus. The additional settings can complicate the task of configuring Antivirus workload. Additionally, the settings found in the Antivirus policy for macOS aren't available through the other policy types. The macOS Antivirus profile replaces the need to configure the settings by using `.plist` files.
 
@@ -162,6 +162,17 @@ The following profiles are supported for devices you manage with Intune:
 
     The Windows security app is used by a number of Windows security features to provide notifications about the health and security of the machine. Security app notifications include firewalls, antivirus products, Windows Defender SmartScreen, and others.
 
+- Platform: **Windows 10 and later**:
+
+  > [!NOTE]  
+  > The *Windows 10 and later* platform is available to create new profiles as part of a public preview for the following profile.
+
+  - Profile: **Defender Updates controls** (public preview) - Manage update settings for Microsoft Defender, including the following settings that are taken directly from the [Defender CSP - Windows Client Management](/windows/client-management/mdm/policy-csp-Defender):
+
+    - Engine Updates Channel
+    - Platform Updates Channel
+    - Security Intelligence Updates Channel
+
 ### Devices managed by Configuration Manager
 
 [!INCLUDE [antivirus policy prerequisites](../includes/tenant-attach-antivirus-prerequisites.md)]
@@ -190,11 +201,11 @@ The following settings support policy merge:
 
 ## Antivirus policy reports
 
-Antivirus policy reports display status details about your endpoint security Antivirus policies and device status. These reports are available in the Endpoint security node of the Microsoft Endpoint Manager admin center.
+Antivirus policy reports display status details about your endpoint security Antivirus policies and device status. These reports are available in the Endpoint security node of the Microsoft Intune admin center.
 
-To view the reports, in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to  Endpoint security and select **Antivirus**. Selecting Antivirus opens the Summary page. Additional report and status views are available as additional pages.
+To view the reports, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to  Endpoint security and select **Antivirus**. Selecting Antivirus opens the Summary page. Additional report and status views are available as additional pages.
 
-In addition to reports detailed in the following sections, additional reports for Microsoft Defender Antivirus are found in the Reports node of the Microsoft Endpoint Manager admin center, as documented in the Intune Reports article:
+In addition to reports detailed in the following sections, additional reports for Microsoft Defender Antivirus are found in the Reports node of the Microsoft Intune admin center, as documented in the Intune Reports article:
 
 - [Antivirus agent status report (Organizational)](../fundamentals/reports.md#antivirus-agent-status-report-organizational)
 - [Detected malware report (Organizational)](../fundamentals/reports.md#detected-malware-report-organizational)

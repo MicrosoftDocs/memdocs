@@ -73,7 +73,7 @@ This task list provides an overview. For more specific information, see [Microso
 
 - Be sure your devices are [supported](supported-devices-browsers.md).
 - To deploy or assign apps to Windows devices, the Windows devices must be enrolled in Microsoft Intune. For any additional requirements, including supported app types, go to [Windows 10/11 app deployment using Microsoft Intune](../apps/apps-windows-10-app-deploy.md).
-- In the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), [add your apps](../apps/apps-supported-intune-apps.md) or [configure your apps](../apps/app-configuration-policies-overview.md). When the apps are on the device, the apps are considered "managed" by Intune. After you add or configure the app, create an [app protection policy](../apps/app-protection-policy-settings-ios.md). For example, create a policy that allows or blocks features within the app, such as copy and paste.
+- In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), [add your apps](../apps/apps-supported-intune-apps.md) or [configure your apps](../apps/app-configuration-policies-overview.md). When the apps are on the device, the apps are considered "managed" by Intune. After you add or configure the app, create an [app protection policy](../apps/app-protection-policy-settings-ios.md). For example, create a policy that allows or blocks features within the app, such as copy and paste.
 - Tell users how to get different apps. For example, you can:
 
   - Direct users to the Company Portal web site at `portal.manage.microsoft.com`. When they sign in with their organization credentials, they see a list of apps, including required apps. They can get apps from this site.

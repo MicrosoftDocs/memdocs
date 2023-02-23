@@ -62,9 +62,9 @@ Use this guide to determine the best migration approach, and get some guidance a
 
 If you currently don't use any MDM or mobile application management (MAM) provider, then you have some options:
 
-- **Microsoft Intune**: If you want a cloud solution for your client devices and Linux, then go straight to Intune. For immediate value and protection on your Android and iOS/iPadOS devices, start with app protection policies, as these policies are typically used on unenrolled devices.
+- **Microsoft Intune**: If you want a cloud solution, then consider going straight to Intune. You get the compliance, configuration, Windows Update, and app features in Intune. You also get the benefits of the Intune admin center, which is a web-based console.
 
-  If/when you're ready for full device management, then you can use Intune to check for compliance, configure device features, deploy apps, and install system & app updates. You also get the benefits of the [Microsoft Endpoint Manager admin center](tutorial-walkthrough-endpoint-manager.md).
+  If/when you're ready for full device management, then you can use Intune to check for compliance, configure device features, deploy apps, and install system & app updates. You also get the benefits of the [Microsoft Intune admin center](tutorial-walkthrough-endpoint-manager.md).
 
   - [App protection policies overview](../apps/app-protection-policy.md)
   - [Get started with Intune](get-started-with-intune.md)
@@ -153,7 +153,7 @@ If you currently use Configuration Manager, and want to use Intune, then you hav
 
 ### Option 1: Add tenant attach
 
-Tenant attach allows you to upload your Configuration Manager devices to your organization in Intune, also known as a "tenant". After you attach your devices, you use the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) to run remote actions, such as sync machine and user policy. You can also see your on-premises servers, and get OS information.
+Tenant attach allows you to upload your Configuration Manager devices to your organization in Intune, also known as a "tenant". After you attach your devices, you use the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) to run remote actions, such as sync machine and user policy. You can also see your on-premises servers, and get OS information.
 
 Tenant attach is included with your [Configuration Manager co-management license](../../configmgr/core/understand/product-and-licensing-faq.yml) at no extra cost. It's the easiest way to integrate the cloud (Intune) with your on-premises Configuration Manager setup.
 
@@ -327,7 +327,49 @@ This section includes an overview of the steps. Use these steps as guidance, and
 
         `C:\psscripts\ExportedIntunePolicies\CompliancePolicies\PolicyName.json`
 
-3. Sign in to the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). The policies you imported are shown.
+3. Sign in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). The policies you imported are shown.
+
+## Deploy Intune
+
+1. Sign in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and sign up for Intune. If you have an existing subscription, you can also sign in to it.
+
+    For more information, see [Sign up, or sign in to Intune](account-sign-up.md).
+
+2. Set **Intune Standalone** as the MDM authority. For more information, see [Set the MDM authority](mdm-authority-set.md).
+
+3. Add your domain account, such as `contoso.com`. Otherwise, `your-domain.onmicrosoft.com` is automatically used for the domain. For example, if you don't add your domain account, then `contoso.onmicrosoft.com` may be used.
+
+    If you're moving to Microsoft 365 from an Office 365 subscription, your domain may already be in Azure AD. Intune uses the same Azure AD, and can use your existing domain.
+
+    For more information, see [Add a custom domain name](custom-domain-name-configure.md).
+
+4. Add [users](users-add.md) and [groups](groups-add.md). These users and groups receive the policies you create in Intune.
+
+    Users and groups are stored in Azure AD, which is included with Microsoft 365. You may not see the Azure AD branding, but that's what you're using. Azure AD is the backend system that stores users, groups, and devices. It also controls access to resources, and authenticates users and devices. Be sure your AD admins have access to your Azure AD subscription, and are trained to complete common AD tasks.
+
+    If you're moving to Microsoft 365 from an Office 365 subscription, your users and groups are already in Azure AD. Intune uses the same Azure AD, and can use the existing users and groups.
+
+    If you want to move existing users from on-premises Active Directory to Azure AD, then you can set up [hybrid identity](/azure/active-directory/hybrid/whatis-hybrid-identity). Hybrid identities exist in both services - on-premises AD and Azure AD. You can also export Active Directory users using the UI or through script. Do an internet search for your options.
+
+    You can create **device groups** when you need to run administrative tasks based on the device identity, not the user identity. They're useful for managing devices that don't have dedicated users, such as kiosk devices, devices shared by shift workers, or devices assigned to a specific location. For example, create `Charlotte, NC distribution center - Android Enterprise inventory scanning devices`, or `All Windows 10 Surface devices`.
+
+    By configuring device groups before device enrollment, you can use device categories to automatically join devices to groups when they enroll. Then, they receive their group's device policies automatically. For more information, see the [Intune enrollment deployment guide](deployment-guide-enrollment.md).
+
+5. Assign Intune licenses to your users. When license are assigned, user devices can enroll in Intune.
+
+    For more information, see [assign licenses](licenses-assign.md).
+
+6. By default, all device platforms can enroll in Intune. If you want to prevent specific platforms, then create a restriction.
+
+    For more information, see [Create a device platform restriction](../enrollment/create-device-platform-restrictions.md).  
+
+7. Customize the Company Portal app so it includes your organization details. Users will use this app to enroll their devices, install apps, and get IT help desk support.
+
+    For more information, see [Configure the Company Portal app](../apps/company-portal-app.md).
+
+8. Create your administrative team. Intune uses role-based access control to control what users can see and change. As a global administrator, you can assign roles to users, such as Help Desk operator, Application Manager, Intune Role Administrator, and more.
+
+    For more information, see [Role-based access control (RBAC) with Microsoft Intune](role-based-access-control.md).
 
 ## Next steps
 

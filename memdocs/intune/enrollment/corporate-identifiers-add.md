@@ -96,7 +96,7 @@ This .csv file when viewed in a text editor appears as:
 
 ### Upload a .csv list of corporate identifiers
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Go to **Devices** > **Enroll devices**.
 3. Select **Corporate device identifiers**. 
 4. Select **Add** > **Upload CSV file**.  
@@ -120,7 +120,7 @@ Imported devices are not necessarily enrolled. Devices can have a state of eithe
 
 ## Delete corporate identifiers
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Enroll devices** > **Corporate device identifiers**.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Enroll devices** > **Corporate device identifiers**.
 2. Select the device identifiers you want to delete, and choose **Delete**.
 3. Confirm the deletion.
 
@@ -134,7 +134,7 @@ For detailed specifications about International Mobile Equipment Identifiers, se
 Devices properties display **Ownership** for each device record in Intune. As an admin, you can specify devices as **Personal** or **Corporate**.
 
 **To change device ownership:**
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **All devices**.  
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **All devices**.  
 1. Select a device.  
 2. Choose **Properties**.  
 3. Specify **Device ownership** as **Personal** or **Corporate**.  

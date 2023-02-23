@@ -78,7 +78,7 @@ The configuration of Trend Micro Mobile Security as a Service and Intune integra
 
 ## Set up Mobile Security as a Service integration
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with an Intune administrator account.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with an Intune administrator account.
 2. Go to **All services** > **Tenant administration**.
 3. Select **Connectors and tokens**.
 4. Under **Cross platform**, select **Mobile Threat Defense**.
