@@ -238,7 +238,7 @@ items:
     - name: Help users troubleshoot problems
       href: help-desk-operators.md
     - name: Use Remote Help
-      href: remote-help.md
+      href: ../remote-actions/remote-help.md
     - name: Using the Intune docs
       href: ../../use-docs.md 
     - name: Get support
