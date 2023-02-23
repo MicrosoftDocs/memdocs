@@ -73,19 +73,15 @@ Specialized devices management is a set of device management, configuration, and
 
 Microsoft Intune Advanced Endpoint analytics is set of analytics-driven capabilities that help IT admins understand, anticipate, and improve the end-user experience. For more information, see [Advanced endpoint analytics](../../analytics/overview.md).
 
-## Choose to try or buy add-on capabilities
+## Try or buy add-on capabilities
 
-Global and Billing administrators can choose to start free trials or purchase licenses for Intune add-ons through the [Microsoft 365 admin center](https://admin.microsoft.com).  
+Global and Billing administrators can choose to start free trials or purchase licenses for Intune add-ons through the [Microsoft 365 admin center](https://admin.microsoft.com). Administrators who aren't Global or Billing administrators can still see the status of their tenant's Intune add-ons trial or active licenses in the centralized Intune add-on page in the Intune admin center. However, they can't start a free trial or purchase licenses.
 
 Starting a free trial gives you a 90-day period to use the Intune add-on capability without any charge. Trials can be up to 250 users per tenant. At the end of the trial period, there's a 30-day grace period. After this point, you'll be unable to use the Intune add-on capability in Microsoft Intune for users within your tenant unless you've purchased the appropriate licenses. There's a one-time limit to start a trial for each tenant.  
 
 Purchasing licenses lets you use the Intune add-on capability in your tenant for the duration in which the licenses are active on your tenant based on the option selected during the Billing process.
 
-## How to try or buy add-on capabilities
-
-Intune add-on capabilities are disabled in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) unless you are in the free trial period or have purchased licenses. Global and Billing administrators can choose to start a free trial or purchase licenses for Intune add-ons through the [Microsoft 365 admin center](https://admin.microsoft.com).
-
-Administrators who aren't Global or Billing administrators can still see the status of their tenant's Intune add-ons trial or active licenses in the centralized Intune add-on page in the Intune admin center. However, they can't start a free trial or purchase licenses.  
+Intune add-on capabilities are disabled in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) unless you are in the free trial period or have purchased licenses.
 
 ### How to start a trial through the Microsoft 365 admin center
 
