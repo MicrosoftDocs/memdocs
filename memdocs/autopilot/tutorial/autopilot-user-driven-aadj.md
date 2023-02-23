@@ -24,13 +24,17 @@ ms.technology: itpro-deploy
 
 ## Overview
 
-This step by step tutorial will guide you through using Intune to perform a Windows Autopilot user-driven scenario when the devices will be strictly Azure AD joined. The purpose of this tutorial is to provide in one article a step by step guide for all the steps required for a successful Autopilot user-driven Azure AD join deployment using Intune.
+This step by step tutorial will guide you through using Intune to perform a Windows Autopilot user-driven scenario when the devices will be strictly Azure AD joined. The purpose of this tutorial is to provide in one article a step by step guide for all the steps required for a successful Autopilot user-driven Azure AD join deployment using Intune. The tutorial is also designed as a walkthrough in a lab or testing scenario, but can be expanded for use in a production environment.
 
 Before beginning, refer to the [How to: Plan your Azure AD join implementation](/azure/active-directory/devices/azureadjoin-plan) to make sure all prerequisites are met for joining devices to Azure AD.
 
 ## Workflow
 
-Register devices as Autopilot devices > Create device group > Configure and assign Autopilot Enrollment Status Page (ESP) > Create and assign Autopilot profile> Assign Autopilot device to a user (optional)
+Register devices as Autopilot devices > Create a device group > Configure and assign Autopilot Enrollment Status Page (ESP) > Create and assign Autopilot profile> Assign Autopilot device to a user (optional)
+
+> [!NOTE]
+>
+> The workflow is designed for lab or testing scenarios. However, some of the steps in the workflow are interchangeable. A workflow with some of these steps interchanged may make more sense in a production environment. For example, the **Create a device group** step followed by the **Register devices as Autopilot devices** step may make more sense in a production environment.
 
 ## Register devices as Autopilot devices
 
@@ -85,7 +89,7 @@ After the CSV files has been created, it can be imported into Intune via the fol
 
 7. After selecting the CSV file, verify that the correct CSV file is selected under **Specify the path to the list you want to import.**, and then select **Import**. Importing can take several minutes.
 
-8. After the import is complete, in the **Windows Autopilot devices** screen, select  **Sync**.
+8. After the import is complete, in the **Windows Autopilot devices** screen, select **Sync**.
 
    A message will display saying that the sync is in progress. The sync process might take a few minutes to complete, depending on how many devices are being synchronized.
 
@@ -243,7 +247,7 @@ To configure and assign the Autopilot Enrollment Status Page (ESP) so that it sh
 14. In the **Review + create** page, review the settings and verify everything is correct and configured as desired. Once verified, select **Create** to save the changes and assign the ESP profile.
 
 > [!TIP]
-> For Configuration Manager admins, an ESP is similar and analogous to ConfigMgr client settings.
+> For Configuration Manager admins, an ESP is similar and analogous to Configuration Manager client settings.
 
 For more information on the Enrollment Status Page (ESP), see the following articles:
 
@@ -323,6 +327,7 @@ For more information on creating and assigning Autopilot profiles, see the follo
 
 - [Configure Autopilot profiles](/mem/autopilot/profiles)
 
+
 ### Verify device has an Autopilot profile assigned to it
 
 Before deploying a device, ensure that an Autopilot profiles has been assigned to it by checking under **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program** where you should see the profile status change from "Unassigned" to "Assigning" and finally to "Assigned."
@@ -333,34 +338,54 @@ Before deploying a device, ensure that an Autopilot profiles has been assigned t
 
 ## Assign Autopilot device to a user (optional)
 
-> [!NOTE]
-> Assigning a licensed user to a registered Autopilot device using Microsoft Endpoint Manager no longer pre-fills any user information as described below. Please see [Updates to the Windows Autopilot sign-in and deployment experience](https://techcommunity.microsoft.com/t5/intune-customer-success/updates-to-the-windows-autopilot-sign-in-and-deployment/ba-p/2848452) for details on this change. This change does not impact user assigned policies and apps which are still deployed to the device when a licensed user is assigned. See [Windows Autopilot for pre-provisioned deployment](pre-provision.md#preparation) for details on this.
+A device that has been registered as an Autopilot device can be also be assigned to a user. If an Autopilot device is assigned to a user, then any user policies and application installs assigned to that user will be applied to the device during the Autopilot process.
 
-You can assign a licensed Intune user to a specific Autopilot device. This assignment:
+To assign an Autopilot device to a user, follow the below steps:
 
-- Pre-fills a user from Azure Active Directory in the [company-branded](/azure/active-directory/fundamentals/customize-branding) sign-in page during Windows setup.
-- Lets you set a custom greeting name.
-- Doesn't pre-fill or modify Windows sign-in.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-Prerequisites:
+2. In the **Home** screen, select **Devices**.
 
-- Azure Active Directory Company Branding has been configured.
-- Windows 10, version 1809 or later.
+3. In the **Devices | Overview** screen, under **By platform**, select **Windows**.
 
-> [!NOTE]
-> Assigning a user to a specific Autopilot device doesn't work if you are using ADFS.
+4. In the **Windows | Windows devices** screen, select **Windows enrollment**.
 
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program** > choose the device > **Assign user**.
+5. Under **Windows Autopilot Deployment Program**, select **Devices**.
 
-2. Choose an Azure user licensed to use Intune and choose **Select**.
+6. In the **Windows Autopilot devices** screen, locate the device to assign a user to.
 
-3. In the **User Friendly Name** box, type a friendly name or just accept the default. This string is the friendly name that displays when the user signs in during Windows setup.
+7. Once the desired device has been located, select the box to the left of the device, making sure that there is check mark in the box, and then select **Assign user** in the toolbar above.
 
-4. Choose **Ok**.
+8. In the **Select user** page, find and select a user for the device, and then select **Select**. If necessary, use the **Search** box to find the desired user.
 
-For more information on creating and assigning Autopilot profiles, see the following articles:
+    > [!NOTE]
+    >
+    > The selected user must be an Azure user licensed to use Intune.
+
+9. In the Autopilot device's property page that automatically opens on the right hand side, under **User friendly name**, the user's name should automatically populate based on what is already in Azure AD. However, if the value is empty or a different friendly name is desired, enter the desired friendly name for the user under **User friendly name** and then select **Save**.
+
+10. The user assignment can be verified by selecting the Autopilot device in the **Windows Autopilot devices** screen. Once the Autopilot device is selected, it will highlight and the Autopilot device's property page will automatically open on the right hand side. The assigned user will be listed under **User** and **User friendly name**.
+
+> [!TIP]
+>
+> For Configuration Manager admins, assigning a user to a device is similar to user device affinity in Configuration Manager.
+
+For more information on assigning a user to an Autopilot device, see the following articles:
 
 - [Assign a user to a specific Autopilot device](/mem/autopilot/enrollment-autopilot#assign-a-user-to-a-specific-autopilot-device)
+
+### Assigning Autopilot device to a user via hardware hash CSV file
+
+Instead of manually assigning a user to an Autopilot device in the Autopilot device's properties, a user can be assigned to the Autopilot device back when the device was imported into Autopilot during the [Register devices as Autopilot devices](#register-devices-as-autopilot-devices) step. This can be done by editing the hardware hash CSV file and adding the **Assigned User** column after the **Hardware Hash** column. The user's User Principal Name (UPN) should then be added as a value under the **Assigned User** column.
+
+> [!IMPORTANT]
+>
+> Use a plain-text editor such as **Notepad** to edit the CSV file. Don't use Microsoft Excel. Editing the CSV file in Excel won't generate a proper usable file for importing into Intune.
+
+For more information on editing the CSV file to add an assigned user to the Autopilot device, see the following article:
+
+[Manually register devices with Windows Autopilot: Ensure that the CSV file meets requirements](/mem/autopilot/add-devices#ensure-that-the-csv-file-meets-requirements)
+
 ## More info
 
 - [Windows Autopilot user-driven mode](/mem/autopilot/user-driven)
