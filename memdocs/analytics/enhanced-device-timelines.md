@@ -18,7 +18,9 @@ The enhanced device timeline allows you to see a history of events that have occ
 > [!NOTE]
 > The **Device timeline** tab replaces the **Application reliability** tab in tenants with advanced Endpoint analytics features enabled. 
 
-You can filter which type of events appear on the device timeline, and select a time range of interest using the **Filter** button. To return to the default view, click **Reset**.
+You can filter the type of events that appear on the device timeline, and select a time range of interest using the **Filter** button. 
+
+To return to the default view, select **Reset**.
 
 Currently, the enhanced device timeline contains app crash, app unresponsive, device boot, device logon, and anomaly detected events. End-to-end latency is generally under 24 hours.  
 
@@ -30,7 +32,7 @@ Currently, the enhanced device timeline contains app crash, app unresponsive, de
 
 ## Limitations 
 
-- When your tenant has advanced Endpoint analytics features enabled, the enhanced **Device timeline** tab replaces the **Application reliability** tab in device drilldown views. In addition to a timeline, the **Application reliability** tab includes the application reliability score for the selected device. To see the device application reliability score with advanced Endpoint analytics features enabled, use the table on the **Device performance** tab and search for the desired device.
+- When your tenant has advanced Endpoint analytics features enabled, the enhanced **Device timeline** tab replaces the **Application reliability** tab in device drill down views. In addition to a timeline, the **Application reliability** tab includes the application reliability score for the selected device. To see the device application reliability score with advanced Endpoint analytics features enabled, use the table on the **Device performance** tab and search for the desired device.
 
 - As the enhanced device timeline is only available for Intune-managed (including co-managed) devices, a device timeline is not currently available for ConfigMgr-only devices in tenants with advanced Endpoint analytics features enabled.
 
