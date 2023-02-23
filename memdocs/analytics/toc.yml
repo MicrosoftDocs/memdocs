@@ -10,10 +10,13 @@ items:
 - name: Advanced Endpoint Analytics
   items:
   - name: Introduction to Advanced Endpoint analytics
+    href: advanced-endpoint-analytics.md
   - name: Anomaly detection
     href: anomaly-detection.md
-  - name: Enhanced device timelines    
-  - name: Device scope    
+  - name: Enhanced device timelines
+    href: enhanced-device-timelines.md    
+  - name: Device scope
+    href: device-scope.md    
 - name: Quickstarts
   items:
   - name: Enroll Intune devices

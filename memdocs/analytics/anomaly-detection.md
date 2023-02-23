@@ -12,7 +12,6 @@ manager: dougeby
 ms.localizationpriority: high
 ---
 
-
 # Anomaly Detection in Endpoint analytics
 
 This article explains how anomaly detection in Endpoint Analytics works as an early warning system.
@@ -50,7 +49,7 @@ Anomaly detection aims at addressing these problems by enabling IT admins with c
 
    :::image type="content" source="media/anomaly-detection/details-of-anomaly.png" alt-text="This is a screenshot of details displayed when you select an anomaly displayed in the Anomaly tab ":::
 
-6. Select **View Affected Devices** to display a list of devices with key attributes relevant to each device. Additionally, the device timeline shows anomalous events.  
+6. Select **View Affected Devices** to display a list of devices with key attributes relevant to each device. Additionally, the device timeline shows anomalous events.   
 
    :::image type="content" source="media/anomaly-detection/affected-devices.png" alt-text="This is a screenshot showing a list of affected devices":::
 
@@ -72,6 +71,7 @@ Standard deviation and mean are calculated for a sliding window of time, using a
 
 For more information, go to:
 
-- Enhanced device timelines
-- Device scope  
+- [Enhanced device timelines](enhanced-device-timelines.md)
+- [Device scope](device-scope.md)
+- [What is advanced Endpoint analytics](advanced-endpoint-analytics.md)  
 
