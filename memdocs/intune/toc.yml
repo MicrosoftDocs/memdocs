@@ -186,7 +186,7 @@ items:
         - name: Use scope tags to determine what admins can see
           href: ./fundamentals/scope-tags.md
 
-    - name: Choose Intune add-ons
+    - name: Use Intune Suite add-ons
       href: ./fundamentals/intune-add-ons.md
 
     - name: Manage apps
