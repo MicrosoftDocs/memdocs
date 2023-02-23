@@ -45,7 +45,7 @@ Intune and Azure AD work together to make sure only managed and compliant device
 
 With Intune, you deploy device compliance policies to determine if a device meets your expected configuration and security requirements. The compliance policy evaluation determines the devices compliance status, which is reported to both Intune and Azure AD. It's in Azure AD that Conditional Access policies can use a device's compliance status to make decisions on whether to allow or block access to your organization's resources from that device.
 
-Device-based Conditional Access policies for Exchange online and other Microsoft 365 products are configured through the [Microsoft Endpoint Manager admin center](../fundamentals/what-is-intune.md).
+Device-based Conditional Access policies for Exchange online and other Microsoft 365 products are configured through the [Microsoft Intune admin center](../fundamentals/what-is-intune.md).
 
 - Learn more about [Require managed devices with Conditional Access in Azure Active Directory](/azure/active-directory/conditional-access/require-managed-devices).
 
@@ -67,7 +67,7 @@ Device-based Conditional Access policies for Exchange online and other Microsoft
 
 When you configure Conditional Access in the Azure AD portal, you have two applications to choose from:
 
-1. **Microsoft Intune** - This application controls access to the Microsoft Endpoint Manager admin center and data sources. Configure grants/controls on this application when you want to target the Microsoft Endpoint Manager admin center and data sources.
+1. **Microsoft Intune** - This application controls access to the Microsoft Intune admin center and data sources. Configure grants/controls on this application when you want to target the Microsoft Intune admin center and data sources.
 2. **Microsoft Intune Enrollment** - This application controls the enrollment workflow. Configure grants/controls on this application when you want to target the enrollment process. For more information, see [Require multi-factor authentication for Intune device enrollments](../enrollment/multi-factor-authentication.md).
 
 ## Conditional Access based on network access control
@@ -127,7 +127,7 @@ Any device used to access Exchange on-premises is checked for compliance when de
 When devices don't meet the conditions set, the end user is guided through the process of enrolling the device to fix the issue that is making the device noncompliant.
 
 > [!NOTE]
-> Beginning in July of 2020, support for the Exchange connector is deprecated, and replaced by Exchange [hybrid modern authentication](/office365/enterprise/hybrid-modern-auth-overview) (HMA). Use of HMA does not require Intune to setup and use the Exchange Connector. With this change, the UI to configure and manage the Exchange Connector for Intune has been removed from the Microsoft Endpoint Manager admin center, unless you already use an Exchange connector with your subscription.
+> Beginning in July of 2020, support for the Exchange connector is deprecated, and replaced by Exchange [hybrid modern authentication](/office365/enterprise/hybrid-modern-auth-overview) (HMA). Use of HMA does not require Intune to setup and use the Exchange Connector. With this change, the UI to configure and manage the Exchange Connector for Intune has been removed from the Microsoft Intune admin center, unless you already use an Exchange connector with your subscription.
 >
 > If you have an Exchange Connector set up in your environment, your Intune tenant remains supported for its use, and you’ll continue to have access to UI that supports its configuration. For more information, see [Install Exchange on-premises connector](../protect/exchange-connector-install.md). You can continue to use the connector or configure HMA and then uninstall your connector.
 >

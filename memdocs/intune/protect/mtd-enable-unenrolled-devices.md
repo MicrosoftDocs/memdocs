@@ -67,7 +67,7 @@ To view classic conditional access policies, in [Azure](https://portal.azure.com
 
 ## To enable the MTD connector
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Tenant administration** > **Connectors and tokens** > **Mobile Threat Defense**. To set up an integration with a 3rd party Mobile Threat Defense vendor, you must be a Global administrator.
 

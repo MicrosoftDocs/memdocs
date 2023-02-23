@@ -455,7 +455,7 @@ Execute the following tests to validate the integration.
 
 Execute the following test first to get familiar with the complete end user experience of policy application within your app:
 
-1. Create an Android App Protection Policy in the Microsoft Endpoint Manager admin center (see [Creating a test Android app protection policy] in Stage 1 for details). For this test, configure the policy:
+1. Create an Android App Protection Policy in the Microsoft Intune admin center (see [Creating a test Android app protection policy] in Stage 1 for details). For this test, configure the policy:
     - Under Data Protection, set "Screen capture and Google Assistant" to "Block".
     - Under Access Requirements, leave the default settings. Notably, "PIN for Access" should be "Require".
 2. Ensure the App Protection Policy is targeted to your application. You'll likely need to manually add the package name in the policy creation wizard.
@@ -482,7 +482,7 @@ Execute the following tests to more thoroughly validate how other App Protection
 ### Data Protection Tests
 
 The following tests cover specific data protection settings configured within the App Protection Policy.
-When you change the App Protection Policy settings in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), the client won't immediately update.
+When you change the App Protection Policy settings in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), the client won't immediately update.
 See [Quickly testing with changing policy] for tips on speeding up testing.
 
 For these tests:
@@ -573,7 +573,7 @@ Following the [First Policy Application Test] steps above, you may run into the 
 
 #### After logging in with a managed account, I am not prompted to install the Company Portal (step 7).
 
-First, visit the admin console and double check that the App Protection Policy is targeted to your test account.
+First, visit the Intune admin center and double check that the App Protection Policy is targeted to your test account.
 
 Second, double check your source code for calls to `registerAccountForMAM` and implementation of `MAMServiceAuthenticationCallback`. 
 If this former isn't called at the right time and/or the latter didn't properly provide a valid token, you won't see the Company Portal prompt.
@@ -594,7 +594,7 @@ Double check your source code's implementation of the `MAMServiceAuthenticationC
 Are there other SDK-integrated applications on your test device? 
 The app PIN is shared between all managed apps, and the SDK has a global timer to prevent end users from being prompted for the PIN on every managed app launch or resume.
 
-Otherwise, visit the admin console and double check that the App Protection Policy has app PIN enabled and is targeted to your test account.
+Otherwise, visit the Intune admin center and double check that the App Protection Policy has app PIN enabled and is targeted to your test account.
 
 As a last resort, restarting your device will reset the PIN timer.
 If the PIN screen doesn't show after restarting your device, it's likely not configured properly in the policy.
@@ -602,7 +602,7 @@ If the PIN screen doesn't show after restarting your device, it's likely not con
 #### I did see the Get Access screen, but screenshots are still allowed (step 12).
 
 While policy is being retrieved, the wrong policy is being applied. 
-First, visit the admin console and double check that the App Protection Policy does disable screenshots and is targeted to your test account. 
+First, visit the Intune admin center and double check that the App Protection Policy does disable screenshots and is targeted to your test account. 
 Second, use the diagnostic console (described above) to check the policy that's been pulled down for your app. 
 If both policies confirm that screenshots should be blocked, check your Gradle build plugin configuration to ensure that MAM replacements are being made.
 
@@ -632,7 +632,7 @@ Also check logs or debug to verify the `MAMEnrollmentManager.Result`.
 #### My app can share data to an unmanaged app
 
 Confirm that "Send org data to other apps" set to "Policy managed apps".
-Check the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) to confirm the policy is configured and targeted correctly.
+Check the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) to confirm the policy is configured and targeted correctly.
 Check the client [Diagnostics Information] to confirm the SDK has received the configured policy.
 
 Next, if policy is configured and retrieved correctly, check if *any- policies are being enforced: [My app isn't receiving or enforcing any policies].
@@ -647,7 +647,7 @@ Check the policy targeting the other app; if it has "Receive data from other app
 #### My app can receive data from an unmanaged app
 
 Confirm that "Receive data from other apps" set to "Policy managed apps".
-Check the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) to confirm the policy is configured and targeted correctly.
+Check the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) to confirm the policy is configured and targeted correctly.
 Check the client [Diagnostics Information] to confirm the SDK has received the configured policy.
 
 Next, if policy is configured and retrieved correctly, check if *any- policies are being enforced: [My app isn't receiving or enforcing any policies].

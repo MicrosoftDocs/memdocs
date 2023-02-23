@@ -35,7 +35,7 @@ ms.collection:
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Device categories allow you to easily manage and group devices in Microsoft Intune. Create a category, such as *sales* or *accounting*, and Intune will automatically add all devices that fall within that category to the corresponding device group in Intune. To enable categories in your tenant, you must create a category in the Microsoft Endpoint Manager admin center and set up dynamic Azure Active Directory (Azure AD) security groups.  
+Device categories allow you to easily manage and group devices in Microsoft Intune. Create a category, such as *sales* or *accounting*, and Intune will automatically add all devices that fall within that category to the corresponding device group in Intune. To enable categories in your tenant, you must create a category in the Microsoft Intune admin center and set up dynamic Azure Active Directory (Azure AD) security groups.  
  
 This article describes how to configure and edit device categories.   
 
@@ -44,7 +44,7 @@ This article describes how to configure and edit device categories.
 You must be a Global Administrator or Intune Administrator to perform these steps.  
 
 ### Step 1: Create device category in Intune  
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Choose **Devices** > **Device categories**.
 3. Select **Create device category** to add a new category.
 4. Enter the name of the new category, such as `HR` and an optional description.

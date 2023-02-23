@@ -43,11 +43,11 @@ Use the information in this article to help you add an iOS/iPadOS line-of-busine
 >
 > Bundle identifiers (for example, *com.contoso.app*) are meant to be unique identifiers of an app. For example, to install a beta version of an LOB app next to the production version for testing purposes, the beta version must have a different unique identifier (for example, *com.contoso.app-beta*). Otherwise, the beta version will overlap with the production and be treated as an upgrade. Renaming the .ipa file has no effect on this behavior.
 
-You can deploy LOB apps to Shared iPad devices. For Shared iPad devices, line-of-business apps must be assigned as **required** to a device group containing Shared iPad devices from the Microsoft Endpoint Manager admin center.
+You can deploy LOB apps to Shared iPad devices. For Shared iPad devices, line-of-business apps must be assigned as **required** to a device group containing Shared iPad devices from the Microsoft Intune admin center.
 
 ## Select the app type
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All apps** > **Add**.
 3. In the **Select app type** pane, under the **Other** app types, select **Line-of-business app**.
 4. Click **Select**. The **Add app** steps are displayed.

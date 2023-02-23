@@ -37,7 +37,7 @@ All reports that have been migrated to the Intune reporting infrastructure will 
 > [!NOTE]
 > For information about making REST API calls, including tools for interacting with Microsoft Graph, see [Use the Microsoft Graph API](/graph/use-the-api).
 
-Microsoft Endpoint Manager will export reports using the following Microsoft Graph API endpoint:
+Microsoft Intune will export reports using the following Microsoft Graph API endpoint:
 
 ```http
 https://graph.microsoft.com/beta/deviceManagement/reports/exportJobs

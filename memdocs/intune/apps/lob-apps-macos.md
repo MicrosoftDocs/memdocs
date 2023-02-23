@@ -58,12 +58,12 @@ The .pkg file must satisfy the following requirements to successfully be deploye
 ## Select the app type
 
 > [!NOTE]
-> In August 2022, we removed the ability to upload wrapped .intunemac files in the Microsoft Endpoint Manager admin center. You can now upload *.pkg* files to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+> In August 2022, we removed the ability to upload wrapped .intunemac files in the Microsoft Intune admin center. You can now upload *.pkg* files to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 > [!IMPORTANT]
 > The *.pkg* file must be signed using "Developer ID Installer" certificate, obtained from an Apple Developer account. Only *.pkg* files may be used to upload macOS LOB apps to Microsoft Intune. However, conversion of other formats, such as *.dmg* to *.pkg* is supported. For more information about converting non-pkg application types, see [How to deploy DMG or APP-format apps to Intune-managed Macs](https://techcommunity.microsoft.com/t5/intune-customer-success/how-to-deploy-dmg-or-app-format-apps-to-intune-managed-macs/ba-p/1503416).
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All apps** > **Add**.
 3. In the **Select app type** pane, under the **Other** app types, select **Line-of-business app**.
 4. Click **Select**. The **Add app** steps are displayed.

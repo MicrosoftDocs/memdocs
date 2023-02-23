@@ -128,7 +128,7 @@ To set up JIT Registration:
 
 Complete these steps to configure Just in Time (JIT) Registration in Intune for Setup Assistant with modern authentication. 
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
 2. [Create an iOS/iPadOS device configuration policy](../configuration/device-features-configure.md) under **Device features** > **Category** > [**Single sign-on app extension**](../configuration/device-features-configure.md#single-sign-on-app-extension).  
 3. For **SSO app extension type**, select **Microsoft Azure AD**.
 4. Add the [app bundle IDs](../configuration/bundle-ids-built-in-ios-apps.md) for any non-Microsoft apps using single sign-on (SSO). The SSO extension automatically applies to all Microsoft apps, so to avoid authentication problems, don't add Microsoft apps to your policy. For more best practices and important considerations, see [Best practices for SSO configuration](automated-device-enrollment-authentication.md#best-practices-for-sso-configuration) (in this article).   
