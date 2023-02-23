@@ -77,7 +77,7 @@ For more information, see [Managing specialized devices with Microsoft Intune](s
 
 Microsoft Intune Advanced Endpoint analytics is set of analytics-driven capabilities that help IT admins understand, anticipate, and improve the end-user experience.
 
-For more information, see [Advanced endpoint analytics](../../analytics/advanced-endpoint-analytics.md).
+For more information, see [Advanced endpoint analytics](../../analytics/overview.md).
 
 
 ## Try or buy add-on capabilities
