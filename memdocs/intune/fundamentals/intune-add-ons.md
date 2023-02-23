@@ -34,17 +34,17 @@ ms.collection:
 
 Microsoft Intune Suite add-ons provide mission-critical advanced endpoint management and security capabilities. You can find Intune Suite add-ons in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) under **Tenant administration** > **Intune add-ons**. The **Summary** blade shows all Intune add-ons that have been released, a short description, and the status of the add-on. Each add-on shows a status of either **Active** or **Available for trial or purchase**.
 
-Licenses for the Intune add-ons can be added for an additional cost to the licensing options that include Microsoft Configuration Manager or Intune.
+Licenses for the Intune add-ons can be added for an additional cost to the licensing options that include Microsoft Intune or Microsoft Configuration Manager.
 
 > [!NOTE]
 > Intune add-ons are currently not supported in Sovereign clouds.
 
 ## Available add-ons capabilities
 
-Some capabilities are available to buy as a standalone add-on. Other capabilities are only available as part of Intune Plan 2 or the Intune Suite.
+Some capabilities are available to buy as a standalone add-on. Other capabilities are only available with Intune Plan 2 or the Intune Suite.
 
 - **Microsoft Intune Plan 2**: Offers advanced endpoint management capabilities, including Remote Help and specialized devices management.
-- **Microsoft Intune Suite**: Unifies a series of mission-critical advanced endpoint management and security capabilities. The capabilities of the suite are integrated with Microsoft 365 and Microsoft Security across endpoint platforms for both cloud and on-premises co-managed devices. The Intune Suite includes all capabilities available as a standalone and part of Intune Plan 2.
+- **Microsoft Intune Suite**: Unifies a series of mission-critical advanced endpoint management and security capabilities. The capabilities of the suite are integrated with Microsoft 365 and Microsoft Security across endpoint platforms for both cloud and on-premises co-managed devices. The Intune Suite includes all standalone capabilities and all capabilities that come with Intune Plan 2.
 
 The following table provides a list of add-on capabilities and how you can buy them.
 
