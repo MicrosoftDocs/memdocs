@@ -60,3 +60,4 @@ Intune and Azure AD policies are more powerful than Office MDM policies and have
 - [Access requirements policy mapping from Basic Mobility and Security to Intune](policy-map-access-requirements.md)
 - [Configurations policy mapping from Basic Mobility and Security to Intune](policy-map-configurations.md)
 - [Miscellaneous policy mapping from Basic Mobility and Security to Intune](policy-map-miscellaneous.md)
+ 
