@@ -140,7 +140,7 @@ If you don't want to use Autopilot devices anymore, you can delete them.
 
 1. If the devices are enrolled in Intune, you must first [delete them from the Azure Active Directory portal](../remote-actions/devices-wipe.md#delete-devices-from-the-azure-active-directory-portal).
 
-2. In the [admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Windows** > **Windows enrollment**. 
+2. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Windows** > **Windows enrollment**. 
 
 3. Under **Windows Autopilot Deployment Program**, select **Devices**.  
 
