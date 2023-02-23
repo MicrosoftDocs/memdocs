@@ -33,6 +33,8 @@ ms.collection:
  
 # Use Remote Help with Microsoft Intune
 
+[!INCLUDE [intune-remote-help-note](../intune-remote-help-note.md)]
+
 Remote Help is a cloud-based solution for secure help desk connections with role-based access controls. With the connection, your support staff can remote connect to the user's device. During the session, they can view the device's display and if permitted by the device user, take full control. Full control enables a helper to directly make configurations or take actions on the device.
 
 This feature applies to:  
