@@ -31,9 +31,9 @@ ms.collection:
 - highseo
 ---
  
-# Use Remote Help with Intune and Microsoft Endpoint Manager
+# Use Remote Help with Microsoft Intune
 
-Now generally available, *Remote Help* is a premium add-on application that works with Intune and enables your information and front-line workers to get assistance when needed over a remote connection. With this connection, your support staff can remote connect to the user's device. During the session, they can view the device's display and if permitted by the device user, take full control. Full control enables a helper to directly make configurations or take actions on the device.
+Remote Help is a cloud-based solution for secure help desk connections with role-based access controls. With the connection, your support staff can remote connect to the user's device. During the session, they can view the device's display and if permitted by the device user, take full control. Full control enables a helper to directly make configurations or take actions on the device.
 
 This feature applies to:  
 - Windows 10/11
