@@ -93,7 +93,7 @@ For more information about these ports, see the following articles:
 Procedures in this article require use of accounts with the following permissions:
 
 - **Jamf Pro console**: An account with permissions to manage Jamf Pro
-- **Microsoft Endpoint Manager admin center**: Global Administrator
+- **Microsoft Intune admin center**: Global Administrator
 - **Azure portal**: Global Administrator
 
 ## Remove the Jamf Pro integration for a previously configured tenant
@@ -116,7 +116,7 @@ If you have not previously set up a connection between Jamf Pro and Intune, or i
 
    When you deselect this setting, you disable the connection but save your configuration.
 
-5. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go **Tenant administration** > **Partner device management**.
+5. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go **Tenant administration** > **Partner device management**.
 
    On the **Partner device management** node, delete the **Application ID** in the **Specify the Azure Active Directory App ID for Jamf** field, and then select **Save**.
 
@@ -183,7 +183,7 @@ If you currently have a manually configured integration between Intune and Jamf 
 
    ![Application ID](./media/conditional-access-jamf-cloud-connector/copy-application-id.png)
 
-   The *Application ID* is copied to your system clipboard for use in the next step, and the **Partner device management** node in the *Microsoft Endpoint Manager admin center* opens. (**Tenant administration** > **Partner device management**).
+   The *Application ID* is copied to your system clipboard for use in the next step, and the **Partner device management** node in the *Microsoft Intune admin center* opens. (**Tenant administration** > **Partner device management**).
 
 10. On the **Partner device management** node, *Paste* the **Application ID** in to the **Specify the Azure Active Directory App ID for Jamf** field, and then select **Save**.
 
@@ -195,7 +195,7 @@ If you currently have a manually configured integration between Intune and Jamf 
 
     ![Successful configuration is confirmed in Jamf Pro](./media/conditional-access-jamf-cloud-connector/successful-configuration.png)
 
-13. In the Microsoft Endpoint Manager admin center, refresh the **Partner device management** node. The connection should now show as **Active**:
+13. In the Microsoft Intune admin center, refresh the **Partner device management** node. The connection should now show as **Active**:
 
     ![Connection status is active](./media/conditional-access-jamf-cloud-connector/active-connection-status.png)
 
@@ -211,9 +211,9 @@ After you configure integration between Intune and Jamf, you need to [apply comp
 
 To remove integration of Jamf Pro with Intune, use the following steps to remove the connection from within the Jamf Pro console. This information applies to both the Cloud Connector and for a manually configured integration.
 
-### Deprovision Jamf Pro from within the Microsoft Endpoint Manager admin center
+### Deprovision Jamf Pro from within the Microsoft Intune admin center
 
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Tenant administration** > **Connectors and tokens** > **Partner device management**.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Tenant administration** > **Connectors and tokens** > **Partner device management**.
 
 2. Select the option **Terminate**. Intune displays a message about the action. Review the message and when ready, select **OK**. The option to *Terminate* the integration only appears when the Jamf connection exists.
 
@@ -228,7 +228,7 @@ Use the following steps to remove the connection from within the Jamf Pro consol
 
 3. Select **Save**. Jamf Pro sends your configuration to Intune and the integration will be terminated.
 
-4. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+4. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 5. Select **Tenant administration** > **Connectors and tokens** > **Partner device management** to verify that the status is now **Terminated**.
 

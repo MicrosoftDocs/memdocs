@@ -149,7 +149,7 @@ Before you begin your migration to Defender for Endpoint, take the time to revie
 
 You'll use this information when you deploy new VPN profiles and the Defender for Endpoint app, to mirror your existing deployments.
 
-1. Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Configuration profiles**. Locate the VPN profiles you use for Microsoft Tunnel for your Android devices. They display a connection type of *Microsoft Tunnel (standalone client)*. You’ll replace these profiles with new profiles that use the Defender for Endpoint app.
+1. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Configuration profiles**. Locate the VPN profiles you use for Microsoft Tunnel for your Android devices. They display a connection type of *Microsoft Tunnel (standalone client)*. You’ll replace these profiles with new profiles that use the Defender for Endpoint app.
 
    1. Select each profile and then **Properties**.
 
@@ -207,7 +207,7 @@ Microsoft Defender for Endpoint with support for Microsoft Tunnel for iOS is ava
 
 ### Review and record your current Tunnel configurations for iOS/iPadOS
 
-Before you begin your migration to Defender for Endpoint, use the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) to review and record the settings you currently use for the following Intune configurations:
+Before you begin your migration to Defender for Endpoint, use the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) to review and record the settings you currently use for the following Intune configurations:
 
 - **VPN profiles for Microsoft Tunnel (standalone client) (preview)**
 
@@ -229,7 +229,7 @@ To enable devices to use Microsoft Defender for Endpoint to connect to Microsoft
 
 Use the following steps to modify a VPN profile to migrate devices from  the standalone tunnel client app to Microsoft Defender for Endpoint as the tunnel client app.
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to > **Devices** > **Configuration profiles** > **iOS/iPadOS**.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to > **Devices** > **Configuration profiles** > **iOS/iPadOS**.
 2. Select the VPN profile you want to edit, and then select **Properties**, and then **Edit** the *Configuration settings*.
 3. On the *Configuration settings* page:
 

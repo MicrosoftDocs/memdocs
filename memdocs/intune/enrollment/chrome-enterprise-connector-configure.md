@@ -36,7 +36,7 @@ ms.collection:
 Set up the Chrome Enterprise connector with Microsoft Intune to view and take action on company and school-owned Chrome OS devices. This article describes how to create and monitor a connection between the Google Admin console and Microsoft Intune. After you establish a connection, you can: 
 
 * Sync device information between the Google Admin console and Microsoft Intune.    
-* View device information in your device inventory lists in the Microsoft Endpoint Manager admin center.
+* View device information in your device inventory lists in the Microsoft Intune admin center.
 * Apply remote actions, such as deprovision, restart, lost mode, and wipe in the admin center.   
 
 One connection is allowed per tenant. 
@@ -54,7 +54,7 @@ To establish a connection, you must have:
 
 ## Create Chrome Enterprise connection  
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Go to **Tenant administration** > **Connectors and tokens**.
 3. Select **Chrome Enterprise (preview)** > **Connect**. 
@@ -63,14 +63,14 @@ To establish a connection, you must have:
    2. Go to **Security** > **Access and data control** > **API Controls**.  
    3. Select **MANAGE DOMAIN WIDE DELEGATION**.   
    4. Select **Add new** to create the API client for your connection.        
-   3. In the Microsoft Endpoint Manager admin center, copy the Client ID and OAuth Scopes.  
+   3. In the Microsoft Intune admin center, copy the Client ID and OAuth Scopes.  
    4. Return to the Google Admin console and paste each value in the **Client ID** and **OAutho scopes (comma-delimited)** spaces, respectively. Intune requires the following scopes:  
     `https://www.googleapis.com/auth/admin.directory.device.chromeos`  
     `https://www.googleapis.com/auth/admin.directory.user.readonly`  
     `https://www.googleapis.com/auth/admin.directory.orgunit.readonly`  
    5. Select **Authorize** to save all changes. 
-5. Return to the Microsoft Endpoint Manager admin center and select **Launch Google to connect now.**     
-6. When prompted to authenticate with your organization's Google Enterprise domain, use your Google Admin account. The Google Admin account appears in Google Workspace audit logs for all actions applied to Chrome OS devices in the Endpoint Manager admin center. Your account must have:  
+5. Return to the Microsoft Intune admin center and select **Launch Google to connect now.**     
+6. When prompted to authenticate with your organization's Google Enterprise domain, use your Google Admin account. The Google Admin account appears in Google Workspace audit logs for all actions applied to Chrome OS devices in the Intune admin center. Your account must have:  
    * Permission to manage Chrome OS devices, as described in [Prerequisites](chrome-enterprise-connector-configure.md#prerequisites).  
    * Access to Google Workspace Admin SDK Directory API.  
 
@@ -80,7 +80,7 @@ After you authenticate, the connection is established and your organization’s 
    > Sync time varies and depends on the number of Chrome OS devices you have in the Google Admin console.  
 
 ## Monitor connection status  
-Go to **Chrome Enterprise (preview)** in the Microsoft Endpoint Manager admin center to check the overall health of your connection, and get details about the ongoing and completed syncs. Chrome OS devices should appear shortly after the initial connection. Devices will continue to sync periodically and receive updates.   
+Go to **Chrome Enterprise (preview)** in the Microsoft Intune admin center to check the overall health of your connection, and get details about the ongoing and completed syncs. Chrome OS devices should appear shortly after the initial connection. Devices will continue to sync periodically and receive updates.   
 
 Available details include:  
 
@@ -96,11 +96,11 @@ These roles can delete the connection between Microsoft Intune and the Google Ad
 
 Deleting your connection removes all Chrome OS devices and Chrome Enterprise connection settings from Intune and Azure Active Directory. After the existing connection is deleted, you'll have space in your tenant to create a new connection.  
 
-To delete the connection in the Microsoft Endpoint Manager admin center:  
+To delete the connection in the Microsoft Intune admin center:  
 1. Go to **Tenant administration** > **Connectors and tokens**.  
 2. Select **Chrome Enterprise (preview)**.  
 3. Select **Delete**.  
 
 ## Next steps  
-* View Chrome OS devices and details synced between Google Admin console and Microsoft Intune in the Microsoft Endpoint Manager center. The information can be used to monitor connections or build reports. For more information, see [View Chrome OS device information in Intune](chrome-enterprise-device-details.md).   
+* View Chrome OS devices and details synced between Google Admin console and the Microsoft Intune admin center. The information can be used to monitor connections or build reports. For more information, see [View Chrome OS device information in Intune](chrome-enterprise-device-details.md).   
 *  Use the remote actions available for Chrome OS devices to deprovision, wipe, restart, or put devices in lost mode. For more information, see [Remote device actions for Chrome OS](chrome-enterprise-remote-actions.md).  

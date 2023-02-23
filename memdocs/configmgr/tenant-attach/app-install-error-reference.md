@@ -16,11 +16,11 @@ ms.collection: tier3
 
 # Application installation common error codes reference
 
-Applications can be installed on clients by creating deployments from the Configuration Manager console or by [targeting applications to tenant attached devices](./applications.md) from the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/). Use the information in this article to assist with troubleshooting application installation errors. <!--8364465-->
+Applications can be installed on clients by creating deployments from the Configuration Manager console or by [targeting applications to tenant attached devices](./applications.md) from the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Use the information in this article to assist with troubleshooting application installation errors. <!--8364465-->
 
 ## <a name="bkmk_general"></a> General troubleshooting tips
 
-Generally, if an application installs successfully on a device with the given command line in the system context, it will install successfully through Configuration Manager and from the Microsoft Endpoint Manager admin center. You can simulate this by using [PSExec](/sysinternals/downloads/psexec). 
+Generally, if an application installs successfully on a device with the given command line in the system context, it will install successfully through Configuration Manager and from the Microsoft Intune admin center. You can simulate this by using [PSExec](/sysinternals/downloads/psexec). 
 
 1. Open an administrative command prompt.
 1. Change directory to where you saved [PSExec](/sysinternals/downloads/psexec).

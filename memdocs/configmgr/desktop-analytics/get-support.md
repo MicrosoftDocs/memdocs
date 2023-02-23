@@ -37,7 +37,7 @@ If the issue is more broadly for Configuration Manager than just analytics, go t
 
 To share your feedback about Desktop Analytics, select the **Send a Smile** icon at the top of the portal on the right side.
 
-![Send a Smile icon in the Microsoft Endpoint Manager admin center portal.](media/5451636-portal-feedback.png)
+![Send a Smile icon in the Microsoft Intune admin center.](media/5451636-portal-feedback.png)
 
 Choose one of the following options:
 

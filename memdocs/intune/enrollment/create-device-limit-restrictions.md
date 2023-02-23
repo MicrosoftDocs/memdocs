@@ -53,7 +53,7 @@ Create a device limit enrollment restriction policy to limit the number of devic
   * Hasn't been deleted from Microsoft Intune  
   * Enrollment type is not in shared mode (check DeviceCountsForDeviceCap for detail)  
 
-You can create a new device limit-enrollment restriction policy in the Microsoft Endpoint Manager admin center or use the default policy that's already available. You can have up to 25 device limit restriction policies. 
+You can create a new device limit-enrollment restriction policy in the Microsoft Intune admin center or use the default policy that's already available. You can have up to 25 device limit restriction policies. 
 
 This article describes how to create and configure a device limit-enrollment restriction policy in the admin center.  
 
@@ -62,7 +62,7 @@ Microsoft Intune provides one default policy for device limit restrictions that 
 
 ## Create a device limit restriction  
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Go to **Devices** > **Enrollment restrictions** > **Create restriction** > **Device limit restriction**.  
 3. On the **Basics** page, give the restriction a **Name** and optional **Description**.
 4. Choose **Next** to go to the **Device limit** page.

@@ -40,7 +40,7 @@ You can also view the status of the Intune connectors you've configured, and hea
 > [!TIP]
 > A tenant is an instance of Azure Active Directory (Azure AD). Your subscription to Intune is hosted by an Azure AD Tenant. For more information, see [Set up a tenant](/azure/active-directory/develop/quickstart-create-new-tenant) in the Azure AD documentation.
 
-To view the dashboard, sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) go to **Tenant administration**, and then select **Tenant Status**.
+To view the dashboard, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) go to **Tenant administration**, and then select **Tenant Status**.
 
 The page is divided into three tabs:
 
@@ -86,7 +86,7 @@ The Service health and message center page are where you can view details about 
 You can only set up your communication preferences for Intune Message center through the Microsoft 365 admin center. To do so, sign in to the [Microsoft 365 admin center](https://admin.microsoft.com/) and go to **Health** > **Service health**. Select **Customize**, and then open the **Email** tab. On the *Email* tab, select the checkbox for **Send me email notifications about service health**, and then configure the additional preferences to meet your requirements.
 ### Service health
 
-View details for active incidents and advisories in the Microsoft Endpoint Manager admin center. Only incidents that affect your tenant are shown. This information is also available in on the Service health page of the [Microsoft 365 admin center](https://admin.microsoft.com).
+View details for active incidents and advisories in the Microsoft Intune admin center. Only incidents that affect your tenant are shown. This information is also available in on the Service health page of the [Microsoft 365 admin center](https://admin.microsoft.com).
 
 When you select an incident, the incident details are presented directly in the Tenant Status page. To view past advisories and incidents, select **See past Incidents/Advisories**. The Microsoft 365 admin center opens and you can then view advisories and incidents from the last 30 days for your tenant.  
 
@@ -106,5 +106,5 @@ To view information for Intune News, your account must have the **Global Adminis
 
 ## Next steps
 
-- [Walkthrough Intune in Microsoft Endpoint Manager](../fundamentals/tutorial-walkthrough-endpoint-manager.md)
+- [Walkthrough the Microsoft Intune admin center](../fundamentals/tutorial-walkthrough-endpoint-manager.md)
 - [Get support for Intune](../../get-support.md)

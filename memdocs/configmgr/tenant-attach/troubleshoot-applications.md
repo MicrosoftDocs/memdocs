@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting application installation
 titleSuffix: Configuration Manager
-description: Troubleshooting application installation for Configuration Manager tenant attach
+description: Troubleshooting application installation for Intune tenant attach
 ms.date: 07/11/2022
 ms.topic: troubleshooting
 ms.prod: configuration-manager
@@ -18,11 +18,11 @@ ms.collection: tier3
 <!--6374854, 6521921-->
 *Applies to: Configuration Manager (current branch)*
 
-Use the following to troubleshoot Configuration Manager applications in the Microsoft Endpoint Manager admin center:
+Use the following to troubleshoot Configuration Manager applications in the Microsoft Intune admin center:
 
-## Common errors from the Microsoft Endpoint Manager admin center
+## Common errors from the Microsoft Intune admin center
 
-When viewing or installing applications from the Microsoft Endpoint Manager admin center, you may run across one of these errors.  
+When viewing or installing applications from the Microsoft Intune admin center, you may run across one of these errors.  
 
 ### <a name="bkmk_intune"></a> You don’t have access to view this information
 <!--7980141-->
@@ -38,7 +38,7 @@ When viewing or installing applications from the Microsoft Endpoint Manager admi
 
 1. Use the same account to sign in to the admin center. The on-premises identity must be synchronized with and match the cloud identity.
 1. Verify the account has **Read** permission for the device's **Collection** in Configuration Manager.
-1. Make sure that Configuration Manager has discovered the administrative user account you're using to access the tenant attach features within Microsoft Endpoint Manager admin center. In the Configuration Manager console, go to the **Assets and Compliance** workspace. Select the **Users** node, and find your user account.
+1. Make sure that Configuration Manager has discovered the administrative user account you're using to access the tenant attach features within Microsoft Intune admin center. In the Configuration Manager console, go to the **Assets and Compliance** workspace. Select the **Users** node, and find your user account.
 
     If your account isn't listed in the **Users** node, check the configuration of the site's [Active Directory User discovery](../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser).
 
@@ -57,7 +57,7 @@ When viewing or installing applications from the Microsoft Endpoint Manager admi
 #### Error code 500 with an unexpected error occurred message
 
 1. If you see `System.Security.SecurityException` in the **AdminService.log**, verify that your user principal name (UPN) discovered by [Active Directory User discovery](../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser) isn't set to a cloud UPN rather than an on-premises UPN. An empty UPN value is also acceptable as it means the Active Directory discovered domain name is used. If you see cloud-only UPN (example: onmicrosoft.com) that's not valid domain UPN (contoso.com), you have an issue and may need to go [set the UPN suffix in Active Directory](/office365/enterprise/prepare-a-non-routable-domain-for-directory-synchronization#add-upn-suffixes-and-update-your-users-to-them).
-1. Install [KB4576782 - Application blade times out in Microsoft Endpoint Manager admin center](https://support.microsoft.com/help/4576782) if you see the below error in the **AdminService.log**:
+1. Install [KB4576782 - Application blade times out in Microsoft Intune admin center](https://support.microsoft.com/help/4576782) if you see the below error in the **AdminService.log**:
    ```log 
    System.Data.Entity.Core.EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details.
    System.Data.SqlClient.SqlException: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
@@ -79,7 +79,7 @@ Unexpected errors are typically caused by either [service connection point](../c
 
 ### <a name="bkmk_sync"></a> The site information hasn't yet synchronized
 
-**Error message:** The site information hasn't yet synchronized from Configuration Manager to the Microsoft Endpoint Manager admin center. Wait up to 15 minutes after you attach the site to your Azure tenant.
+**Error message:** The site information hasn't yet synchronized from Configuration Manager to the Microsoft Intune admin center. Wait up to 15 minutes after you attach the site to your Azure tenant.
 
 **Possible causes:**
 - This error typically occurs when newly onboarding to tenant attach. Wait up to an hour for the information to synchronize.
@@ -87,7 +87,7 @@ Unexpected errors are typically caused by either [service connection point](../c
 
 ### <a name="bkmk_installed"></a> Application shows as installed after creating a new deployment
 
-**Symptom:** An application is shown as installed in the Microsoft Endpoint Manager admin center after creating a new device available requires approval deployment or a user available deployment.
+**Symptom:** An application is shown as installed in the Microsoft Intune admin center after creating a new device available requires approval deployment or a user available deployment.
 
 **Possible cause:** The application state shown for that device is from another active or past deployment.
 

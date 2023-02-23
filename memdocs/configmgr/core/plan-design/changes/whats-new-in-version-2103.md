@@ -27,11 +27,11 @@ Always review the latest checklist for installing this update. For more informat
 
 To take full advantage of new Configuration Manager features, after you update the site, also update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.
 
-## Microsoft Endpoint Manager tenant attach
+## Microsoft Intune tenant attach
 
-### Display all applications for a device in Microsoft Endpoint Manager admin center
+### Display all applications for a device in Microsoft Intune admin center
 <!--8795301-->
-The **Applications** view for a tenant attached device in Microsoft Endpoint Manager admin center now displays more applications from Configuration Manager. Displayed applications include applications that are:
+The **Applications** view for a tenant attached device in Microsoft Intune admin center now displays more applications from Configuration Manager. Displayed applications include applications that are:
 - Deployed to the device
 - Deployed to a user that's logged in to the device, primary user of the device, and applications previously installed for the user
 
@@ -47,7 +47,7 @@ For more information, see [antivirus policies](../../../tenant-attach/deploy-ant
 
 ### User discovery prerequisite simplification
 <!--8126836 -->
-The discovery prerequisite for user accounts accessing tenant attach features within **Microsoft Endpoint Manager admin center** was simplified. The hybrid identity needs to be discovered by one of the following discovery methods instead of both:
+The discovery prerequisite for user accounts accessing tenant attach features within **Microsoft Intune admin center** was simplified. The hybrid identity needs to be discovered by one of the following discovery methods instead of both:
 - Azure Active Directory user discovery
 - Active Directory user discovery
 
@@ -55,7 +55,7 @@ For more information, see [Tenant attach prerequisites](../../../tenant-attach/p
 
 ### Application details
 <!--8364465-->
-When tenant attach is enabled, the applications pane in the Microsoft Endpoint Manager admin center will show an **Error Description** if the application status is **Failed**.
+When tenant attach is enabled, the applications pane in the Microsoft Intune admin center will show an **Error Description** if the application status is **Failed**.
 
 For more information on the error code and troubleshooting steps, see [Application installation common error codes reference](../../../tenant-attach/app-install-error-reference.md).
 
