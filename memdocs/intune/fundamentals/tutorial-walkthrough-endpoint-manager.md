@@ -1,9 +1,9 @@
 ---
 # required metadata
 
-title: Tutorial - Walkthrough Microsoft Intune admin center
+title: Tutorial - Walkthrough the Microsoft Intune admin center
 titleSuffix: Microsoft Intune
-description: In this tutorial, you will tour Microsoft Intune admin center to better understand how to accomplish tasks.
+description: In this tutorial, you will tour Microsoft Intune in the Microsoft Intune admin center to better understand how to accomplish tasks.
 keywords:
 author: Erikre
 ms.author: erikre
@@ -13,7 +13,7 @@ ms.topic: tutorial
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
-Customer intent: As an Intune admin, I want to learn where to find the different features in Microsoft Intune admin center.
+Customer intent: As an Intune admin, I want to learn where to find the different features in Intune from the Microsoft Intune admin center.
 
 # optional metadata
 
@@ -32,10 +32,11 @@ ms.collection:
 
 # Tutorial: Walkthrough Microsoft Intune admin center
 
-Microsoft Intune, which is a part the Microsoft Intune family of products, provides the cloud infrastructure, the cloud-based mobile device management (MDM), cloud-based mobile application management (MAM), and cloud-based PC management for your organization. Intune helps you ensure that your company's devices, apps, and data meet your company's security requirements. You have the control to set which requirements need to be checked and what happens when those requirements aren't met. The [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) is where you can find the Microsoft Intune service, as well as other device management related settings. Understanding the features available in Intune will help you accomplish various Mobile Device Management (MDM) and Mobile Application Management (MAM) tasks.
+Microsoft Intune provides the cloud infrastructure, the cloud-based mobile device management (MDM), cloud-based mobile application management (MAM), and cloud-based PC management for your organization. Intune helps you ensure that your company's devices, apps, and data meet your company's security requirements. You have the control to set which requirements need to be checked and what happens when those requirements aren't met. The [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) is where you can find the Microsoft Intune service, as well as other device management related settings. Understanding the features available in Intune will help you accomplish various Mobile Device Management (MDM) and Mobile Application Management (MAM) tasks.
 
 > [!NOTE]
-> Microsoft Intune is a single, integrated endpoint management platform for managing all your endpoints. This Microsoft Intune admin center integrates Configuration Manager and Microsoft Intune.
+> Microsoft Intune is a single, integrated endpoint management platform for managing all your endpoints. The Microsoft Intune admin center integrates Microsoft Configuration Manager and Microsoft Intune.
+>>>>>>> b6a35210265f377bc91f5d32f67510e4864bd671
 
 In this tutorial, you will:
 > [!div class="checklist"]
@@ -65,9 +66,9 @@ Follow the steps below to better understand Intune in the Microsoft Intune admin
 
     ![Screenshot of the Microsoft Intune admin center - Home page](./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-01.png)
 
-    When you open the Intune, the service is displayed in a pane of your browser. Some of the first workloads you may use in Intune include **Devices**, **Apps**, **Users**, and **Groups**. A workload is simply a sub-area of a service. When you select the workload, it opens that pane as a full page. Other panes slide out from the right side of the pane when they open, and close to reveal the previous pane. 
+    When you open the Microsoft Intune admin center, the service is displayed in a pane of your browser. Some of the first workloads you may use in Intune include **Devices**, **Apps**, **Users**, and **Groups**. A workload is simply a sub-area of a service. When you select the workload, it opens that pane as a full page. Other panes slide out from the right side of the pane when they open, and close to reveal the previous pane. 
 
-    By default, when you open the Microsoft Intune admin center you'll see the **Home page** pane. This pane provides an overall visual snapshot of tenant status and compliance status, as well as other helpful related links.
+    By default, when you open the Microsoft Intune admin center, you'll see the **Home page** pane. This pane provides an overall visual snapshot of tenant status and compliance status, as well as other helpful related links.
 
 2. From the navigation pane, select **Dashboard** to display overall details about the devices and client apps in your Intune tenant. If you are starting with a new Intune tenant, you will not have any enrolled devices yet. 
 
@@ -215,7 +216,7 @@ Follow the steps below to better understand Intune in the Microsoft Intune admin
 
     To create a support ticket, your account must be assigned as an administrator role in Azure Active Directory. Administrator roles include, **Intune administrator**, **Global administrator**, and **Service administrator**.
 
-    For more information, see [How to get support in Microsoft Intune admin center](../../get-support.md).
+    For more information, see [How to get support in Microsoft Intune](../../get-support.md).
 
 15. From the navigation pane, select **Troubleshooting + support** > **Guided scenarios** to display available Intune guided scenarios.
 

@@ -106,7 +106,7 @@ To join Windows endpoints to Azure AD, you have some options:
 
 If the devices can't connect to the DC, then users might be prevented from signing in, and may not receive policy updates.
 
-Many organizations with existing domain joined devices want the benefits and features of Azure AD and Endpoint Management. If your devices can't be fully cloud-native yet, then you can register these existing devices with Azure AD. When you register existing devices in Azure AD, a [device identity](/azure/active-directory/devices/overview) is created, and your devices are hybrid Azure AD joined. They're not considered cloud-native endpoints.
+Many organizations with existing domain joined devices want the benefits and features of Azure AD and endpoint management. If your devices can't be fully cloud-native yet, then you can register these existing devices with Azure AD. When you register existing devices in Azure AD, a [device identity](/azure/active-directory/devices/overview) is created, and your devices are hybrid Azure AD joined. They're not considered cloud-native endpoints.
 
 If your organization is ready and wants to be cloud-native, then [Azure AD joined](#azure-ad-joined) (in this article) is the correct choice. Existing devices will need to be reset. For more specific information and guidance, go to the [High level planning guide](cloud-native-endpoints-planning-guide.md).
 

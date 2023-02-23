@@ -34,7 +34,7 @@ The following illustration shows how diagnostic data flows from individual devic
 
 :::image type="content" source="media/da-data-flow.png" alt-text="Diagram illustrating flow of diagnostic data from devices.":::
 
-1. You sign in to the Microsoft Endpoint Manager admin center, and onboard to Desktop Analytics. You create the Azure AD app to connect with Configuration Manager. When you set up Desktop Analytics, you create an Azure Log Analytics workspace in the location of your choice.
+1. You sign in to the Microsoft Intune admin center, and onboard to Desktop Analytics. You create the Azure AD app to connect with Configuration Manager. When you set up Desktop Analytics, you create an Azure Log Analytics workspace in the location of your choice.
 
 2. You connect Configuration Manager and enroll devices.
 

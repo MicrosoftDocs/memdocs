@@ -48,7 +48,7 @@ To set up Citrix HDX Plus for Windows 365 Enterprise, follow these steps. The fi
 
 To turn on the Citrix connector, follow these steps:
 
-1. As a Global administrator, sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant administration** > **Connectors and tokens**.
+1. As a Global administrator, sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant administration** > **Connectors and tokens**.
 ![Screenshot of navigating to Connectors and tokens](./media/set-up-citrix/connectors-tokens.png)
 2. Select **Windows 365 Citrix connector** > next to **Allow people to use Citrix to connect to their Cloud PCs**, set the toggle to **On**.
 ![Screenshot of turning on the connector](./media/set-up-citrix/turn-on-connector.png)

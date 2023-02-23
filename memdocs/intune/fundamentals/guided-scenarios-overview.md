@@ -47,7 +47,7 @@ Guided scenarios offer specific functionality. The following details help explai
 
 ### Launching  
 
-All guided scenarios are available from the **[Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com)** > **Troubleshooting + support** > **Guided scenarios**.
+All guided scenarios are available from the **[Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431)** > **Troubleshooting + support** > **Guided scenarios**.
 
 Guided scenarios start with an introduction. It explains the purpose of the scenario, and any prerequisites required to complete the setup. At this point, your admin permissions are checked to verify you have all the necessary privileges to complete the scenario.  
 

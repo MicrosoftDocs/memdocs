@@ -2,7 +2,7 @@
 # required metadata
 title: Encrypt macOS devices with FileVault disk encryption with Intune 
 titleSuffix: Microsoft Intune
-description: Encrypt macOS devices with the built-in encryption method FileVault, and manage the recovery keys for encrypted devices from within the Microsoft Endpoint Manager admin center. 
+description: Encrypt macOS devices with the built-in encryption method FileVault, and manage the recovery keys for encrypted devices from within the Microsoft Intune admin center. 
 keywords:
 author: brenduns
 ms.author: brenduns
@@ -70,7 +70,7 @@ Following are the FileVault permissions, which are part of the **Remote tasks** 
 
 ## Create device configuration policy for FileVault
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Devices** > **Configuration profiles** > **Create profile**.
 
@@ -114,7 +114,7 @@ Select **Next**.
 
 ## Create endpoint security policy for FileVault
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Endpoint security** > **Disk encryption** > **Create Policy**.
 
@@ -232,7 +232,7 @@ To enable Intune to manage FileVault on a previously encrypted device, the user 
 
    By default, the device checks in about every eight hours. To expedite device check-in, use one of the following options:
 
-   - An Intune admin can sign-in to Microsoft Endpoint Manager admin center, go to **Devices**, select the device, and then select **Sync**. This notifies the device to immediately check in with Intune.
+   - An Intune admin can sign-in to Microsoft Intune admin center, go to **Devices**, select the device, and then select **Sync**. This notifies the device to immediately check in with Intune.
    - The device user can open the Company Portal app and go to **Settings** > **Sync**. This directs the device to immediately check for policy or profile updates.
 
 3. After Intune assumes management of the encryption, a user can [retrieve their new personal recovery key from a supported location](#retrieve-a-personal-recovery-key).
@@ -264,7 +264,7 @@ Intune supports multiple options to rotate and recover personal recovery keys. O
 
   To rotate a recovery key:
 
-  1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+  1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
   2. Select **Devices** > **All devices**.
 

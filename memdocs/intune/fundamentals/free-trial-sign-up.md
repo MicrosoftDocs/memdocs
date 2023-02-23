@@ -34,7 +34,7 @@ ms.collection:
 
 Microsoft Intune helps you protect your workforce's corporate data by managing devices and apps. In this topic, you will create a free subscription to try Intune in a test environment.
 
-Intune provides mobile device management (MDM) and mobile app management (MAM) from a secure cloud-based service that is administered using the Microsoft Endpoint Manager admin center. Using Intune, you ensure your workforce's corporate resources (data, devices, and apps) are correctly configured, accessed, and updated, meeting your company's compliance policies and requirements.
+Intune provides mobile device management (MDM) and mobile app management (MAM) from a secure cloud-based service that is administered using the Microsoft Intune admin center. Using Intune, you ensure your workforce's corporate resources (data, devices, and apps) are correctly configured, accessed, and updated, meeting your company's compliance policies and requirements.
 
 When you complete the signup process, you'll have a new tenant. A tenant is a dedicated instance of Azure Active Directory (Azure AD) where your subscription to Intune is hosted. You can then configure the tenant, add users and groups, and assign licenses to users. When you're ready, you can help users enroll their devices and add apps that they need to begin the modern endpoint management process. As you continue, you can set configuration and protection policies, as well as other endpoint management capabilities.
 
@@ -90,34 +90,39 @@ To sign up for the Microsoft Intune free trial, follow the steps below:
    > [!NOTE]
    > If you click **Get Started**, you'll open the **Microsoft 365 admin center** home page. If you click **Manage your subscription**, you'll open **Your products** and view details about your Microsoft Intune Trial subscription.
 
-## Sign in to Intune in the Microsoft Endpoint Manager admin center
+## Sign in to Intune in the Microsoft Intune admin center
 
-If you're not already signed in to the portal, complete the following steps:
+If you're not already signed in to the admin center, complete the following steps:
 
 1. Open a new browser window and enter **[https://endpoint.microsoft.com](https://endpoint.microsoft.com)** in the address bar.
 2. Use the user ID that you were given in the steps above to sign in. The user ID will look similar to the following: *yourID@yourdomain.onmicrosoft.com*.
 
-    ![Image of the portal sign-in page](./media/free-trial-sign-up/azure-portal-signin.png)
+    ![Image of the Intune admin center sign-in page](./media/free-trial-sign-up/azure-portal-signin.png)
 
 When you sign up for a trial, you will also receive an email message that contains your account information and the email address that you provided during the sign-up process. This email confirms your trial is active.
 
 > [!TIP]
-> When working with the Microsoft Endpoint Manager, you may have better results working with a browser in regular mode, rather than private mode.
+> When working with the Microsoft Intune, you may have better results working with a browser in regular mode, rather than private mode.
 
-## Confirm the MDM authority in Microsoft Endpoint Manager
+## Confirm the MDM authority in Microsoft Intune
 
 By default, the Mobile Device Management (MDM) authority is set when you create your free trial. You can confirm that the MDM authority is set by using the following steps:
 
-1. If you're not already signed in, sign in to the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com).
+1. If you're not already signed in, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Click **Tenant administration**.
 3. View the tenant details. The **MDM authority** should be set to **Microsoft Intune**.
 
-If after signing in to the Microsoft Endpoint Manager, you see an orange banner indicating that you haven't yet set the MDM authority, you can activate it at this time. The mobile device management (MDM) authority setting determines how you manage your devices. The MDM authority must be set before users can enroll devices for management.
+If after signing in to the Microsoft Intune admin center, you see an orange banner indicating that you haven't yet set the MDM authority, you can activate it at this time. The mobile device management (MDM) authority setting determines how you manage your devices. The MDM authority must be set before users can enroll devices for management.
 
 ### Set the MDM authority to Intune
 
+<<<<<<< HEAD
 1. If you do not have the MDM authority set, sign in to the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com).
 2. Select the orange banner to open the **Mobile Device Management Authority** setting. The orange banner is only displayed if you haven't yet set the MDM authority.
+=======
+1. If you do not have the MDM authority set, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). 
+2. Select the orange banner to open the **Mobile Device Management Authority** setting. The orange banner is only displayed if you haven't yet set the MDM authority. 
+>>>>>>> b6a35210265f377bc91f5d32f67510e4864bd671
 
     > [!NOTE]
     > If you have set the MDM Authority, you will see the MDM authority value on the **Tenant administration** pane. The orange banner is only displayed if you haven't yet set the MDM authority.
@@ -160,9 +165,15 @@ To confirm your Azure Active Directory Premium and Microsoft Intune, see [Confir
 
 ## Admin experiences
 
+<<<<<<< HEAD
 There are two portals that you will use most often:
 
 - The Microsoft Endpoint Manager admin center ([https://endpoint.microsoft.com/](https://endpoint.microsoft.com/)) is where you can explore the [capabilities of Intune](what-is-intune.md). This is where an admin would work with Intune.
+=======
+There are two admin centers that you will use most often:
+
+- The Microsoft Intune admin center ([https://endpoint.microsoft.com/](https://endpoint.microsoft.com/)) is where you can explore the [capabilities of Intune](what-is-intune.md). This is where an admin would work with Intune.
+>>>>>>> b6a35210265f377bc91f5d32f67510e4864bd671
 - The Microsoft 365 admin center ([https://admin.microsoft.com](https://admin.microsoft.com)) is where you can add and manage users, if you are not using Azure Active Directory for this. You can also manage other aspects of your account, including billing and support.
 
 ## Next steps

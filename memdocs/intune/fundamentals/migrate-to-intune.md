@@ -33,7 +33,11 @@ ms.collection:
 
 # Migrate from Microsoft 365 Basic Mobility and Security to Intune
 
+<<<<<<< HEAD
 Microsoft 365 includes a basic set of policies that protect devices and protect Microsoft 365 apps, like Outlook. These policies are managed in the Microsoft 365 Defender portal and are called **Basic Mobility and Security**. For more information on what Basic Mobility and Security offers, go to [Capabilities of Basic Mobility and Security](/microsoft-365/admin/basic-mobility-security/capabilities).
+=======
+This article will help you migrate your mobile device management (MDM) from Basic Mobility and Security (Office 365) to the Microsoft Intune admin center.
+>>>>>>> b6a35210265f377bc91f5d32f67510e4864bd671
 
 Many organizations want more or next-level device management features. Specifically, they want the features that are included with Microsoft Intune. For a comparison of the features, go to [Choose between Basic Mobility and Security or Intune](/microsoft-365/admin/basic-mobility-security/choose-between-basic-mobility-and-security-and-intune).
 
@@ -146,7 +150,16 @@ To evaluate and migrate policies from Basic Mobility and Security to Intune:
 
     :::image type="content" source="./media/migrate-to-intune/details-page.png" alt-text="Screenshot of details page example in the Endpoint Manager admin center after migrating Microsoft 365 Basic Mobility and Security policies to Intune":::
 
+<<<<<<< HEAD
     The policy recommendations on this page are a read-only report documenting the suggested settings and assignments to use. They aren't Intune policies yet.
+=======
+1. Enable [coexistence](../fundamentals/mdm-authority-set.md#coexistence). Enabling coexistence will immediately migrate all devices whose users are assigned an Intune license.
+2. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with Azure AD Global or License administrator rights.
+3. Assign Intune licenses to the users you want to migrate by using Users or Groups:
+    - Assign licenses to **Users**. For more information, see [Assign licenses to users](/azure/active-directory/fundamentals/license-users-groups).
+    - Assign licenses to **Groups**. For more information, see [Assign licenses to a group](/azure/active-directory/enterprise-users/licensing-groups-assign).
+4. After a user is licensed for Intune, their devices will automatically switch to Intune management at the next device refresh cycle. See [Refresh cycles](../configuration/device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned).
+>>>>>>> b6a35210265f377bc91f5d32f67510e4864bd671
 
     While reviewing the recommendations, keep the following points in mind:
 

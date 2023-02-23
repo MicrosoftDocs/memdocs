@@ -43,15 +43,20 @@ Depending on the Basic Mobility and Security policy settings, different Intune a
 
 Basic Mobility and Security uses the Office 365 Security and Compliance portal to manage [device security policies](/microsoft-365/admin/basic-mobility-security/set-up#step-4-recommended-manage-device-security-policies).
 
+<<<<<<< HEAD
 ## Intune policies in the Microsoft Endpoint Manager admin center
 
 Intune uses the Microsoft Endpoint Manager admin center to manage the following policies to achieve similar results as the Office device security policies:
+=======
+## Intune policies in the Microsoft Intune admin center
+Intune uses the Microsoft Intune admin center to manage the following policies to achieve similar results as the Office device security policies:
+>>>>>>> b6a35210265f377bc91f5d32f67510e4864bd671
 
 | Intune policy type | Purpose | Intune location |
 | --- | --- | --- |
-| [Compliance policies](../protect/device-compliance-get-started.md) | Specify the device settings as access requirements. | [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Compliance policies** |
-| [Configuration profiles](../configuration/device-profiles.md) | Specify other settings that aren’t part of the access requirements, including email profiles. | [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Configuration profiles** |
-| [Conditional access policies]( ../protect/conditional-access.md)| Azure AD conditional access blocks access if the settings aren't compliant. | [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Endpoint security** > **Conditional access** > **Classic policies** |
+| [Compliance policies](../protect/device-compliance-get-started.md) | Specify the device settings as access requirements. | [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Compliance policies** |
+| [Configuration profiles](../configuration/device-profiles.md) | Specify other settings that aren’t part of the access requirements, including email profiles. | [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Configuration profiles** |
+| [Conditional access policies]( ../protect/conditional-access.md)| Azure AD conditional access blocks access if the settings aren't compliant. | [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Endpoint security** > **Conditional access** > **Classic policies** |
 
 Intune and Azure AD policies are more powerful than Office MDM policies and have many more settings to achieve more advanced scenarios. Before you change Intune or Azure AD policies not mentioned in these articles, you should first read the relevant Intune or Azure AD documentation.
 

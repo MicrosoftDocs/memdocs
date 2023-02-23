@@ -277,14 +277,14 @@ It's optional to modify the validity period of the certificate template.
 
 After you [create the SCEP certificate template](#create-the-scep-certificate-template), you can edit the template to review the **Validity period** on the **General** tab.
 
-By default, Intune uses the value configured in the template, but you can configure the CA to allow the requester to enter a different value, so that value can be set from within the Microsoft Endpoint Manager admin center.
+By default, Intune uses the value configured in the template, but you can configure the CA to allow the requester to enter a different value, so that value can be set from within the Microsoft Intune admin center.
 
 Plan to use a validity period of five days or greater. When the validity period is less than five days, there is a high likelihood of the certificate entering a near-expiry or expired state, which can cause the MDM agent on devices to reject the certificate before it’s installed.
 
 > [!IMPORTANT]
 > For iOS/iPadOS and macOS, always use a value set in the template.
 
-#### To configure a value that can be set from within the Microsoft Endpoint Manager admin center
+#### To configure a value that can be set from within the Microsoft Intune admin center
 
 On the CA, run the following commands:
 
@@ -359,7 +359,7 @@ To configure the NDES service, use an account that is an *Enterprise Administrat
 
    The following table maps the certificate template purpose to the values in the registry:
 
-   |Certificate template Purpose (On the Request Handling tab)|Registry value to edit|Value seen in the Microsoft Endpoint Manager admin center for the SCEP profile|
+   |Certificate template Purpose (On the Request Handling tab)|Registry value to edit|Value seen in the Microsoft Intune admin center for the SCEP profile|
    |------------------------|-------------------------|---|
    |Signature               |SignatureTemplate        |Digital Signature |
    |Encryption              |EncryptionTemplate       |Key Encipherment  |
@@ -435,7 +435,7 @@ For guidance, see [Install and configure the Certificate Connector for Microsoft
 
 ### To install the Certificate Connector
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Tenant administration** > **Connectors and tokens** > **Certificate connectors** > **Add**.
 

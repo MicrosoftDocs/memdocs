@@ -66,6 +66,7 @@ This article describes how to enable MDM automatic enrollment for personal and c
 The Microsoft Intune user-help docs provide conceptual information, tutorials, and how-to guides for employees and students setting up their devices for work. You can point people directly to the Intune docs, or use these articles as guidance when developing and updating your own device management docs.  
 
 Users on personal devices running Windows 11 or Windows 10 can automatically enroll by adding their work or school account on their device, or by using the Intune Company Portal app. Devices running earlier versions of Windows must enroll using the Intune Company Portal app.
+You can also let unlicensed admins sign in to the Intune admin center. For more information, see [Unlicensed admins](../fundamentals/unlicensed-admins.md).
 
 For more information, see [Enroll Windows 10/11 devices](../user-help/enroll-windows-10-device.md).    
 
@@ -83,8 +84,4 @@ For information about how to integrate and use automatic enrollment when provisi
 * [Enroll a Windows client device automatically using Group Policy](/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)
 * [Enable co-management in Configuration Manager](../../configmgr/comanage/how-to-enable.md)  
 
-If you're not using automatic enrollment as part of your enrollment or provisioning solution, we recommend creating a domain name server (DNS) alias (known as a *CNAME* record type) that redirects enrollment requests to Intune servers. For more information, see [Enable auto-discovery of Intune enrollment server](../enrollment/windows-enrollment-create-cname.md).    
-
-
-
-
+If you're not using automatic enrollment as part of your enrollment or provisioning solution, we recommend creating a domain name server (DNS) alias (known as a *CNAME* record type) that redirects enrollment requests to Intune servers. For more information, see [Enable auto-discovery of Intune enrollment server](../enrollment/windows-enrollment-create-cname.md).

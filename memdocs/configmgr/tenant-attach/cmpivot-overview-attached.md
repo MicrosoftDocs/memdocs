@@ -1,7 +1,7 @@
 ---
 title: Tenant attached CMPivot usage overview
 titleSuffix: Configuration Manager
-description: CMPivot usage overview for Microsoft Endpoint Manager tenant attached devices.
+description: CMPivot usage overview for Microsoft Intune tenant attached devices.
 ms.date: 01/25/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -22,7 +22,7 @@ CMPivot allows you to quickly assess the state of a device in your environment a
 
 ## <a name="bkmk_refine"></a> Refine CMPivot queries
 
-When using CMPivot from the Microsoft Endpoint Manager admin console, ensure your queries are tuned for performance. If you request a query with a data set that is too large, you may receive `Error: The query result is too large, retry with additional filters`. Refine your query to be more specific if you see this error. The following operators are commonly used to refine queries:
+When using CMPivot from the Microsoft Intune admin center, ensure your queries are tuned for performance. If you request a query with a data set that is too large, you may receive `Error: The query result is too large, retry with additional filters`. Refine your query to be more specific if you see this error. The following operators are commonly used to refine queries:
 
 - Use `count` if you only need the number of items returned.
 - Use `project` if you only need specific columns.
@@ -33,10 +33,10 @@ When using CMPivot from the Microsoft Endpoint Manager admin console, ensure you
 > When using CMPivot to query a device, if there isn't a response within 10 minutes, the query will timeout. <!--7802754-->
 
 
-[!INCLUDE [Overview article sections for both Microsoft Endpoint Manager and Configuration Manager use](../core/servers/manage/includes/cmpivot-overview-shared.md)]
+[!INCLUDE [Overview article sections for both Microsoft Intune and Configuration Manager use](../core/servers/manage/includes/cmpivot-overview-shared.md)]
 
 
 ## Next steps
 
 For more information, see [Launch CMPivot from the admin center](cmpivot-start.md)
-For more sample scripts, see [Microsoft Endpoint Manager tenant attach: CMPivot script samples](cmpivot-samples-attached.md).
+For more sample scripts, see [Microsoft Intune tenant attach: CMPivot script samples](cmpivot-samples-attached.md).
