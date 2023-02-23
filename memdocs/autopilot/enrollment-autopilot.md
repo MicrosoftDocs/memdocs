@@ -107,9 +107,14 @@ Prerequisites:
 
 3. In the **User Friendly Name** box, type a friendly name or just accept the default. This string is the friendly name that displays when the user signs in during Windows setup.
 
-    ![Screenshot of friendly name](./media/enrollment-autopilot/friendly-name.png)
+<!--
 
-4. Choose **Ok**.
+Removing screenshot since the UI has changed and it may be confusing (Save instead of OK)
+
+     ![Screenshot of friendly name](./media/enrollment-autopilot/friendly-name.png)
+-->
+
+4. Choose **Save**.
 
 ## Using Autopilot in other portals
 

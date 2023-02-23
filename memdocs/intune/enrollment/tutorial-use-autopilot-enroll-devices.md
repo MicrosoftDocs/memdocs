@@ -88,7 +88,7 @@ The first step in setting up Windows Autopilot is to add the Windows devices to 
 
 Next, you'll create a device group and put the Autopilot devices you just loaded into it.
 
-1. In the [admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Groups** > **New group**.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Groups** > **New group**.
 2. Configure the settings for your new **Group** as follows:    
     1. For **Group type**, select **Security**.  
     2. For **Group name**, enter *Autopilot Group*.  
@@ -101,7 +101,7 @@ Next, you'll create a device group and put the Autopilot devices you just loaded
 
 After creating a device group, you must create a deployment profile so that you can configure the Autopilot devices.
 
-1. In the [admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Windows** > **Windows enrollment**. 
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Windows** > **Windows enrollment**. 
 2. Select **Deployment Profiles**. 
 3. Select **Create profile** > **Windows PC**.  
 4. On the **Basics** page, name the profile *Autopilot Profile*. In **Description**, enter *Test profile for Autopilot devices*.
@@ -141,7 +141,7 @@ If you don't want to use Autopilot devices anymore, you can delete them.
 
 1. If the devices are enrolled in Intune, you must first [delete them from the Azure Active Directory portal](../remote-actions/devices-wipe.md#delete-devices-from-the-azure-active-directory-portal).
 
-2. In the [admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Windows** > **Windows enrollment**. 
+2. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Windows** > **Windows enrollment**. 
 
 3. Under **Windows Autopilot Deployment Program**, select **Devices**.  
 
