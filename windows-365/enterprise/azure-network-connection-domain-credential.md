@@ -43,37 +43,39 @@ This article describes how the on-premises domain credentials are protected and 
 
 ## Provide Azure Active Directory domain credentials
 
-When you [create an ANC](create-azure-network-connection.md), you must provide Azure AD credential information on the AD domain page:
+When you [create an ANC](create-azure-network-connection.md), you must provide credentials of an on-premises Active Directory user account that will be used to domain  join Cloud PCs, on the AD domain page:
 
 ![Screenshot of AD domain page](./media/azure-network-connection-domain-credential/azure-ad-page.png)
 
-This information includes the Azure AD username and domain password.
+This information includes the on-premises user account's username and domain password.
 
 ## Encryption of domain password information
 
-When the ANC is created, all this information is stored in the Windows 365 service database. The service encrypts the domain password information with a well-protected key before saving it to the database.
+When a Azure Network Connection is created, information associated with it is stored in the Windows 365 service database. Windows 365 service encrypts the domain password information with a well-protected key before saving it to the database. Below are the information on the storage location, key type and encryption algorithm used:
 
 - Encryption type: Azure Key Vault certificate
 - Key type: RSA-HSM
 - Algorithm: RSAOAEP256
 
-This encryption proceeds as follows:
+Below are the steps used to encrypt the key:
 
-1. The Windows 365 checks the service database for an existing symmetric key specific to that tenant.
+1. Windows 365 service checks the service database for an existing symmetric key specific to that tenant.
 2. If a key isn't present or has expired, Windows 365 generates a new symmetric key for this tenant using a random number generator. Keys are created per tenant.
 3. If a key already exists for this tenant, it's used in the following steps.
-4. After getting the (new or existing) tenant key, Windows 365 decrypts the key with the Windows 365 dedicated Enterprise CA certificate. The certificate is stored in the Azure Key Vault managed by Microsoft.
-5. Windows 365 encrypts the password with the decrypted tenant key.
-6. The encrypted password is saved to the Windows 365 service database.
+4. After getting the (new or existing) tenant key, Windows 365 decrypts the key with the Windows 365 dedicated Enterprise CA issued certificate.
+5. This certificate is stored in the Azure Key Vault instance managed by Microsoft.
+6. Windows 365 service encrypts the password with the decrypted tenant key.
+7. The encrypted password is saved to the Windows 365 service database.
 
 ### Windows 365 Enterprise certificates
 
-Azure Key Vault certificates are generated and renewed automatically by the Azure Key Vault. Certificates expire after one year. Azure automatically regenerates new versions of certificates three months before the certificate expires. Windows 365 regularly checks the certificate status. When there's a new certificate, Windows 365 re-encrypts the tenant key with the latest certificate.
+Windows 365 service enterprise certificates are generated and renewed automatically by the Azure Key Vault. This certificate has a validity of one year. Windows 365 service regularly checks the status of the certificate and automatically regenerates new certificate, three months before the expiry date. The new certificate generated, is used by Windows 365 service to re-encrypt the tenant keys.
 
-### Password encryption/decryption algorithm
+### Password encryption/decryption algorithm information
 
-Windows 365 uses an encrypt-then-MAC approach to encrypt the domain credential with the per tenant key as described in [RFC 7366](https://www.rfc-editor.org/rfc/rfc7366). The same key is used for both encrypting and decrypting the data.
+Windows 365 uses an encrypt-then-MAC approach to encrypt the domain credential with the per tenant key, as described in [RFC 7366](https://www.rfc-editor.org/rfc/rfc7366). The same key is used for both encrypting and decrypting the data.
 
+Below are the details of the encryption algorithm used:
 - Encrypt algorithm: Advanced Encryption Standard symmetric-key
 - Cipher mode: Cipher-Block-Chaining
 - Key length: 256 bit
@@ -82,12 +84,12 @@ Windows 365 uses an encrypt-then-MAC approach to encrypt the domain credential w
 
 ## Updating credential information
 
-Credentials often change and need updating. Windows 365 doesn’t proactively detect credential changes in your domain. Instead, Windows 365 relies on customers to manually update the ANC with the updated credential information.
+Credentials often change and need updating. Windows 365 doesn’t proactively detect credential changes of the on-premises Active Directory user account associated with ANC. Instead, Windows 365 relies on customers to manually update the ANC with the updated credential information.
 
-When there’s a change to the domain credential of the ANC, the new credential is re-encrypted and updated to the Windows 365 database.
+When there’s a change to the domain credential of the user account associated with an ANC, the new credential should be manually updated by the Windows 365 administrator, which is then re-encrypted and updated in the Windows 365 database.
 
 > [!NOTE]  
-> If the domain credential is changed in your on-premises Active Directory environment, but you don’t manually update the ANC, Windows 365 will still use the old credential for ANC [health checks](health-checks.md). Therefore, these health checks will fail because the credentials on record are outdated. To make sure this failure doesn’t happen, Edit the Azure network connection](edit-azure-network-connection.md) with the new credentials as soon as possible.
+> If the domain credential is changed in your on-premises Active Directory environment, but you don’t manually update the ANC, Windows 365 will still use the old credential for ANC [health checks](health-checks.md), which will result in failed health checks due to invalid credentials. To make sure such failures don’t happen, update the [Azure network connection](edit-azure-network-connection.md) configuration with the new credentials immediately.
 
 ## Removing credential information
 
