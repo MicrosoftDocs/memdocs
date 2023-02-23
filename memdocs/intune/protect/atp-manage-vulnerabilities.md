@@ -13,7 +13,7 @@ ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
 ms.technology:
-ms.reviewer: shpate
+ms.reviewer: aanavath
 
 # optional metadata
 
