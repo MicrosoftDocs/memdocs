@@ -58,7 +58,7 @@ Install the latest version of Power BI Desktop. You can download Power BI Deskto
 > [!Note]  
 > You need permission to **Reports** in Intune. For more information, see [Authorization](reports-api-url.md#authorization).
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Reports** > **Intune Data warehouse** > **Data warehouse**.
 3. Copy the custom feed URL. For example:
 `https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService?api-version=v1.0`

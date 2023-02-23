@@ -47,7 +47,7 @@ Certificates must be renewed annually. This article describes how to use Intune 
 Use an [Intune-supported web browser](../fundamentals/supported-devices-browsers.md#intune-supported-web-browsers) to create and renew an Apple MDM push certificate. 
 
 ## Steps to get your certificate
-Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and choose **Devices** > **Enroll devices** > **Apple enrollment** > **Apple MDM Push Certificate**.  
+Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and choose **Devices** > **Enroll devices** > **Apple enrollment** > **Apple MDM Push Certificate**.  
 
 ### Step 1. Grant Microsoft permission to send user and device information to Apple
 Select **I agree.** to give Microsoft permission to send data to Apple.
@@ -85,7 +85,7 @@ The Apple MDM push certificate is valid for 365 days. You must renew it annually
 
 Renew the MDM push certificate with the same Apple account you used to create it.  
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Enroll devices** > **Apple enrollment** > **Apple MDM Push Certificate**.
 3. Select **Download your CSR** to download and save the request file locally. The file is used to request a trust relationship certificate from the Apple Push Certificates Portal.
 4. Select **Create your MDM push Certificate** to go to the Apple Push Certificates Portal. 

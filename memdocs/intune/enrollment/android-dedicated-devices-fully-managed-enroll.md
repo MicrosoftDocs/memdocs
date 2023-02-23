@@ -97,7 +97,7 @@ This section describes how to:
 * Create a zero-touch configuration in the zero-touch enrollment portal  
 
 ### Create zero-touch configuration in admin center        
-The zero-touch iframe gives you access to the zero-touch enrollment portal and zero-touch configurations in the Microsoft Endpoint Manager admin center. 
+The zero-touch iframe gives you access to the zero-touch enrollment portal and zero-touch configurations in the Microsoft Intune admin center. 
   
 To enable the iframe, you must first add the *update app sync* permission and enable enrollment for corporate-owned, fully managed devices. Once you enable the iframe, you can:  
 
@@ -111,7 +111,7 @@ Complete the steps in this section to enable the iframe. To create configuration
 #### Step 1: Add required permission   
 Add the *update app sync* permission.     
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431)
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431)
 admin.
 2. Select **Tenant administration** > **Roles**. 
 3. Select your role from the list.  

@@ -51,7 +51,7 @@ When users see that they're out of compliance for this reason, they can tap **Re
 
 ## Create device compliance policy
 
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Compliance policies** > **Policies** > **Create Policy**.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Compliance policies** > **Policies** > **Create Policy**.
 
     ![Create policy](./media/android-move-device-admin-work-profile/create-policy.png)
 

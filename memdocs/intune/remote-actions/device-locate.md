@@ -31,7 +31,7 @@ ms.collection:
 
 # Locate lost or stolen devices with Intune
 
-For supported device platforms, you can use a remote device action from within the Microsoft Endpoint Manager admin center to locate a device should it be lost or stolen.
+For supported device platforms, you can use a remote device action from within the Microsoft Intune admin center to locate a device should it be lost or stolen.
 
 In addition to identifying the location a lost or stolen device on a map, some platforms support additional capabilities to help you find them, including:
 
@@ -74,7 +74,7 @@ You need to enable Windows location services in Windows Out of Box Experience (O
 
 ## Locate a lost or stolen device
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices**, and then select **All devices**.
 3. From the list of devices you manage, select a supported device, and choose **...**. Then choose the **Locate device** remote action.
    
@@ -111,7 +111,7 @@ For supported device platforms, you can remotely trigger the device to play an a
 
 To start a lost device sound alert:
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices**, and then select **All devices**.
 3. Select the device you want to activate.
 4. On the devices *Overview* pane:

@@ -80,7 +80,7 @@ Create or choose an existing group in Azure Active Directory (Azure AD). This gr
 
 Import the VPN server's root certificate issued by the CA into a profile created in Intune. The trusted certificate profile instructs the iOS/iPadOS device to automatically trust the CA that the VPN server presents.
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Configuration profiles** > **Create profile**.
 3. Enter the following properties:
 
@@ -97,7 +97,7 @@ Import the VPN server's root certificate issued by the CA into a profile created
 7. In **Configuration settings**, select the folder icon, and browse to your VPN certificate (`.cer` file) that you exported from your VPN administration console.
 8. Select **Next**, and continue creating your profile. For more information, see [Create a VPN profile](vpn-settings-configure.md#create-the-profile).
 
-    :::image type="content" source="./media/vpn-setting-configure-per-app/vpn-per-app-create-trusted-cert.png" alt-text="Create a trusted certificate profile for iOS/iPadOS devices in Microsoft Intune and Endpoint Manager admin center.":::
+    :::image type="content" source="./media/vpn-setting-configure-per-app/vpn-per-app-create-trusted-cert.png" alt-text="Create a trusted certificate profile for iOS/iPadOS devices in Microsoft Intune and Intune admin center.":::
 
 ## Create a SCEP or PKCS certificate profile
 
@@ -110,13 +110,13 @@ To configure and assign the client authentication certificate, see one of the fo
 
 Be sure to configure the certificate for client authentication. You can set client authentication directly in SCEP certificate profiles (**Extended key usage** list > **Client authentication**). For PKCS, set client authentication in the certificate template in the certificate authority (CA).
 
-:::image type="content" source="./media/vpn-setting-configure-per-app/vpn-per-app-create-scep-cert.png" alt-text="Create a SCEP certificate profile in Microsoft Intune and Endpoint Manager admin center. Include the subject name format, key usage, extended key usage, and more.":::
+:::image type="content" source="./media/vpn-setting-configure-per-app/vpn-per-app-create-scep-cert.png" alt-text="Create a SCEP certificate profile in Microsoft Intune and Intune admin center. Include the subject name format, key usage, extended key usage, and more.":::
 
 ## Create a per-app VPN profile
 
 This VPN profile includes the SCEP or PKCS certificate that has the client credentials, the VPN connection information, and the per-app VPN flag that enables the per-app VPN used by the iOS/iPadOS application.
 
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration profiles** > **Create profile**.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration profiles** > **Create profile**.
 2. Select **Devices** > **Configuration profiles** > **Create profile**.
 3. Enter the following properties:
 
@@ -138,13 +138,13 @@ This VPN profile includes the SCEP or PKCS certificate that has the client crede
       - **Authentication certificate**: Select an existing SCEP or PKCS certificate > **OK**.
       - **Split tunneling**: Select **Disable** to force all traffic to use the VPN tunnel when the VPN connection is active. 
 
-      :::image type="content" source="./media/vpn-setting-configure-per-app/vpn-per-app-create-vpn-profile.png" alt-text="In a per-app VPN profile, enter a connection, IP address or FQDN, authentication method, and split tunneling in Microsoft Intune and Endpoint Manager admin center.":::
+      :::image type="content" source="./media/vpn-setting-configure-per-app/vpn-per-app-create-vpn-profile.png" alt-text="In a per-app VPN profile, enter a connection, IP address or FQDN, authentication method, and split tunneling in Microsoft Intune and Intune admin center.":::
 
       For information on the other settings, see [iOS/iPadOS VPN settings](vpn-settings-ios.md).
 
     - **Automatic VPN** > **Type of automatic VPN** > **Per-app VPN**
 
-      :::image type="content" source="./media/vpn-setting-configure-per-app/vpn-per-app-automatic.png" alt-text="In Intune and Endpoint Manager admin center, set Automatic VPN to per-app VPN on iOS/iPadOS devices.":::
+      :::image type="content" source="./media/vpn-setting-configure-per-app/vpn-per-app-automatic.png" alt-text="In Intune and Intune admin center, set Automatic VPN to per-app VPN on iOS/iPadOS devices.":::
 
 7. Select **Next**, and continue creating your profile. For more information, see [Create a VPN profile](vpn-settings-configure.md#create-the-profile).
 
@@ -152,13 +152,13 @@ This VPN profile includes the SCEP or PKCS certificate that has the client crede
 
 After adding your VPN profile, associate the app and Azure AD group to the profile.
 
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All apps**.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All apps**.
 2. Select an app from the list > **Properties** > **Assignments** > **Edit**.
 3. Go to the **Required** or **Available for enrolled devices** section.
 4. Select **Add group** > Select the group [you created](#create-a-group-for-your-vpn-users) (in this article) > **Select**.
 5. In **VPNs**, select the per-app VPN profile [you created](#create-a-per-app-vpn-profile) (in this article).
 
-    :::image type="content" source="./media/vpn-setting-configure-per-app/vpn-per-app-app-to-vpn.png" alt-text="Assign an app to the per-app VPN profile in Microsoft Intune and Endpoint Manager admin center.":::
+    :::image type="content" source="./media/vpn-setting-configure-per-app/vpn-per-app-app-to-vpn.png" alt-text="Assign an app to the per-app VPN profile in Microsoft Intune and Intune admin center.":::
 
 6. Select **OK** > **Save**.
 

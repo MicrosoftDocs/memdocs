@@ -39,7 +39,7 @@ ms.collection:
 
 ## Create an Autopilot device group using Intune
 
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Groups** > **New group**.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Groups** > **New group**.
 
 2. In **New Group**, configure the following properties:
 
@@ -97,7 +97,7 @@ Prerequisites:
 > [!NOTE]
 > Assigning a user to a specific Autopilot device doesn't work if you are using ADFS.
 
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program** > choose the device > **Assign user**.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program** > choose the device > **Assign user**.
 
     ![Screenshot of Assign user](./media/enrollment-autopilot/assign-user.png)
 

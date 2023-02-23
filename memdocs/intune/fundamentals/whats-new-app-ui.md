@@ -48,7 +48,7 @@ The Company Portal for Windows now allows users to select multiple apps and inst
 
 ### UI improvements show Android enrollment is available, not required<!-- 8764312 -->
 
-We updated the iconography in the Company Portal for Android app to make it easier for users to recognize when device enrollment is available but not required. The new iconography appears in scenarios where the device enrollment availability is set to **Available, no prompts** in the Microsoft Endpoint Manager admin center (**Tenant admin** > **Customization** > **Create** or **Edit** a policy > **Settings**).      
+We updated the iconography in the Company Portal for Android app to make it easier for users to recognize when device enrollment is available but not required. The new iconography appears in scenarios where the device enrollment availability is set to **Available, no prompts** in the Microsoft Intune admin center (**Tenant admin** > **Customization** > **Create** or **Edit** a policy > **Settings**).      
 
 Changes include:
 

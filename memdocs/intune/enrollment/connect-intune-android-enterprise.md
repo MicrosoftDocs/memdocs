@@ -55,7 +55,7 @@ Intune makes it easier for you to configure and use Android Enterprise managemen
 > [!NOTE]
 > Due to interaction between Google and Microsoft domains, this step may require that you adjust your browser settings.  Make sure that "portal.azure.com" and "play.google.com" are in the same security zone in your browser.
 
-1. If you haven't already, sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and [set the mobile device management authority](../fundamentals/mdm-authority-set.md) to **Microsoft Intune**.  
+1. If you haven't already, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and [set the mobile device management authority](../fundamentals/mdm-authority-set.md) to **Microsoft Intune**.  
 2. Go to **Devices** > **Android**. 
 3. Select **Android enrollment** > **Managed Google Play**.  If you are using a custom Intune admin role, access to this option requires Organization Read and Update permissions.  
    
@@ -81,7 +81,7 @@ Intune makes it easier for you to configure and use Android Enterprise managemen
 8. Agree to the Android agreement, and then select **Confirm**.  
 
    > [!NOTE]
-   > Choose a scope tag for your Managed Google Play apps. Under this section, you can select a scope tag that will apply to all newly-approved Managed Google Play apps. You must have the following permissions to interact with this section:<ul><li>Android Sync - Read</li><li>Android Sync – UpdateOnBoarding</li></ul><p>Admins without these permissions will not be able to remove the scope tag selected on the pane. Tenant admins, or admins who are in charge of giving admin permissions to others, can update permissions in Microsoft Endpoint Manager admin center > **Tenant Administration** > **Roles**.  
+   > Choose a scope tag for your Managed Google Play apps. Under this section, you can select a scope tag that will apply to all newly-approved Managed Google Play apps. You must have the following permissions to interact with this section:<ul><li>Android Sync - Read</li><li>Android Sync – UpdateOnBoarding</li></ul><p>Admins without these permissions will not be able to remove the scope tag selected on the pane. Tenant admins, or admins who are in charge of giving admin permissions to others, can update permissions in Microsoft Intune admin center > **Tenant Administration** > **Roles**.  
    
       >[!Important]
    > Only link 1 Intune account to a managed Google Play account. Linking multiple accounts is unsupported and prevents basic functionality from working as expected.  
@@ -90,7 +90,7 @@ Intune makes it easier for you to configure and use Android Enterprise managemen
 
 You can turn off Android Enterprise enrollment and management by following these steps:
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with your Intune administrator account.  
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with your Intune administrator account.  
 2. [Retire](../remote-actions/devices-wipe.md#retire) all of the following devices:
     - Android Enterprise personally-owned work profile devices
     - Android Enterprise corporate-owned work profile devices

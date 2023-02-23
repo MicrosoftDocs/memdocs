@@ -53,7 +53,7 @@ App protection data is retained for a minimum of 90 days. Any app instances that
 
 ## Summary view
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **Monitor** > **App protection status**.
 
 The following list provides details about app protection status: 
