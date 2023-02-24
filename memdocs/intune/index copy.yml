@@ -74,12 +74,8 @@ productDirectory:
           text: "Deployment plan: Get started with your Intune deployment"
         - url: fundamentals/protection-configuration-levels.md
           text: Levels of protection and configuration in Intune
+        
 
-    # Card
-    - title: How-to-guides
-      imageSrc: ./media/icons/deploy.svg
-      summary: cardsummary1
-      url: ./index.yml#how-to-guides
 
 
 conceptualContent:
@@ -102,9 +98,6 @@ conceptualContent:
         - url: ./fundamentals/licenses.md
           itemType: concept
           text: Intune licensing
-      footerLink:
-        text: Browse subscription articles
-        url: ./fundamentals/account-sign-up.md
 
     - title: Manage apps
       links:
