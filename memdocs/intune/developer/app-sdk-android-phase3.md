@@ -2,7 +2,7 @@
 # required metadata
 
 title: Microsoft Intune App SDK for Android developer integration and testing guide - Get started with MAM
-description: Get started with MEM before incorporating Intune mobile app management (MAM) into your Android app.
+description: Get started with Intune before incorporating Intune mobile app management (MAM) into your Android app.
 keywords: SDK
 author: Erikre
 ms.author: erikre

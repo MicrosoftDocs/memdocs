@@ -51,7 +51,7 @@ As the admin, you can include and exclude security groups to assign iOS/iPadOS a
 
 ## How to create an iOS mobile app provisioning profile
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **iOS app provisioning profiles** > **Create profile**.
 3. On the **Basics** page, add the following values:
     - **Name** - Provide a name for this mobile provisioning profile.

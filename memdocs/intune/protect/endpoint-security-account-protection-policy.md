@@ -35,7 +35,7 @@ ms.reviewer: mattcall
 
 Use Intune endpoint security policies for account protection to protect the identity and accounts of your users and manage the built-in group memberships on devices.
 
-Find the endpoint security policies for Account protection under *Manage* in the **Endpoint security** node of the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+Find the endpoint security policies for Account protection under *Manage* in the **Endpoint security** node of the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 View [settings for account protection profiles](../protect/endpoint-security-account-protection-profile-settings.md).
 
@@ -109,7 +109,7 @@ Choosing the Manual option can be helpful in scenarios where you want to manage 
 
 ### Conflicts
 
-If policies create a conflict for a group membership, the conflicting settings from each policy are not sent to the device. Instead, the conflict is reported for those policies in the Microsoft Endpoint Manager admin center. To resolve the conflict, reconfigure one or more policies.
+If policies create a conflict for a group membership, the conflicting settings from each policy are not sent to the device. Instead, the conflict is reported for those policies in the Microsoft Intune admin center. To resolve the conflict, reconfigure one or more policies.
 
 ### Reporting
 

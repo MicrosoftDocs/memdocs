@@ -49,7 +49,7 @@ The default scope tag feature is similar to the security scopes feature in Micro
 
 ## To create a scope tag
 
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Tenant administration** > **Roles** > **Scope (Tags)** > **Create**.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Tenant administration** > **Roles** > **Scope (Tags)** > **Create**.
 2. On the **Basics** page, provide a **Name** and optional **Description**. Choose **Next**.
 3. On the **Assignments** page, choose the groups containing the devices that you want to assign this scope tag. Choose **Next**.
 4. On the **Review + create** page, choose **Create**.
@@ -60,7 +60,7 @@ The default scope tag feature is similar to the security scopes feature in Micro
 
 ## To assign a scope tag to a role
 
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Tenant administration** > **Roles** > **All roles** > choose a role > **Assignments** > **Assign**.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Tenant administration** > **Roles** > **All roles** > choose a role > **Assignments** > **Assign**.
 2. On the **Basics** page, provide an **Assignment name** and **Description**. Choose **Next**.
 3. On the **Admin Groups** page, choose **Add groups**, and select the groups that you want as part of this assignment. Users in these groups will have permissions to manage users/devices in the Scope (Groups). Choose **Next**.
 
@@ -79,7 +79,7 @@ The default scope tag feature is similar to the security scopes feature in Micro
 
 For objects that support scope tags, scope tags usually appear under **Properties**. For example, to assign a scope tag to a configuration profile, follow these steps:
 
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Configuration profiles** > choose a profile.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Configuration profiles** > choose a profile.
 
 2. Choose **Properties** > **Scope (Tags)** > **Edit** > **Select scope tags** > choose the tags that you want to add to the profile. You can assign a maximum of 100 scope tags to an object.
 4. Choose **Select** > **Review + save**.

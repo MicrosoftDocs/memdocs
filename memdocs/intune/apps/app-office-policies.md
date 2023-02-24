@@ -55,7 +55,7 @@ You must meet the requirements to use policies for Office apps. For more informa
 
 After you set up Intune for your organization, you can create an Office app policy.
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **Policies for Office apps** > **Create**.
 3. Add the following values:
     - **Name:** Type a name (required) for your new policy.

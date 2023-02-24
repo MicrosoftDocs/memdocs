@@ -43,7 +43,7 @@ For more information about the feature, see [Security baselines in Intune](secur
 
 ## Monitor the baseline and your devices
 
-When you monitor a baseline, you get insight into the security state of your devices based on Microsoft's recommendations. To view these insights, sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Endpoint security** > **Security baselines** and select a security baseline type like the *MDM Security Baseline*. Then, from the *Versions* pane, select the profile instance for which you want to view details to open its *Overview* pane. 
+When you monitor a baseline, you get insight into the security state of your devices based on Microsoft's recommendations. To view these insights, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Endpoint security** > **Security baselines** and select a security baseline type like the *MDM Security Baseline*. Then, from the *Versions* pane, select the profile instance for which you want to view details to open its *Overview* pane. 
 
 The *Overview* pane displays two status views for the selected baseline:
 
@@ -98,7 +98,7 @@ Monitoring the profile gives insight into the deployment state of your devices, 
 
 To help resolve a conflict or error for settings in your security baseline profiles or Endpoint security policies, view the [Device configuration report](../fundamentals/reports.md#device-configuration-report-operational) for a device.  This report view helps you identify where your profiles and policies contain settings that drive a status of Conflict or Error.
 
-You can also reach information about settings in conflict or error through two paths from within Microsoft Endpoint Manager admin center:
+You can also reach information about settings in conflict or error through two paths from within Microsoft Intune admin center:
 
 - **Endpoint security** > **Security baselines** > *select a baseline type* > **Profiles** > *select a baseline instance* > **Device status**  
 - **Devices** > **All devices** > *select a device* > **Device configuration** > *select a Policy* > *select a setting from the list of settings that shows a Conflict or Error*.

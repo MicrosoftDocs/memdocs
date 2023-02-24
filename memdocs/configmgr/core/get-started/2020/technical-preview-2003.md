@@ -27,7 +27,7 @@ The following sections describe the new features to try out in this version:
 
 <!-- [!INCLUDE [Example feature name](includes/2003/1234567.md)] -->
 
-[!INCLUDE [Onboard Configuration Manager clients to Microsoft Defender for Endpoint via the Microsoft Endpoint Manager console](includes/2003/5691658.md)]
+[!INCLUDE [Onboard Configuration Manager clients to Microsoft Defender for Endpoint via the Microsoft Intune admin center](includes/2003/5691658.md)]
 [!INCLUDE [Track configuration item remediations](includes/2003/4261411.md)]
 [!INCLUDE [Show boundary groups for devices](includes/2003/6521835.md)]
 [!INCLUDE [New feedback wizard](includes/2003/3180826.md)]

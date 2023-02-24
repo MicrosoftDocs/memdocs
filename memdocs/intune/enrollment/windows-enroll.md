@@ -65,7 +65,7 @@ Organizations that can use automatic enrollment can also configure [bulk enroll 
 
 Before an administrator can enroll devices to Intune for management, licenses should have already been assigned to the administrator's account. [Read about assigning licenses for device enrollment](../fundamentals/licenses-assign.md).
 
-You can also let unlicensed admins sign in to MEM. For more information, see [Unlicensed admins](../fundamentals/unlicensed-admins.md).
+You can also let unlicensed admins sign in to the Intune admin center. For more information, see [Unlicensed admins](../fundamentals/unlicensed-admins.md).
 
 ## Multi-user support
 
@@ -113,7 +113,7 @@ Changes to DNS records might take up to 72 hours to propagate. You can't verify 
 
 ### Step 2: Verify CNAME (optional)
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices** > **Windows** > **Windows enrollment**.  
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices** > **Windows** > **Windows enrollment**.  
 2. Select **CNAME Validation**.  
 2. For **Domain**, enter the company website, and then choose **Test**.
 
@@ -140,7 +140,7 @@ For information about how enrollment affects the device and the information on i
 > End users must access the Company Portal website through Microsoft Edge to view Windows apps that you've assigned for specific versions of Windows. Other browsers, including Google Chrome, Mozilla Firefox, and Internet Explorer do not support this type of filtering.
 
 >[!IMPORTANT]
-> If you do not have Auto-MDM enrollment enabled, but you have Windows 10/11 devices that have been joined to Azure AD, two records will be visible in the Microsoft Endpoint Manager admin center after enrollment. You can stop this by making sure that users with Azure AD joined devices go to **Accounts** > **Access work or school** and **Connect** using the same account.
+> If you do not have Auto-MDM enrollment enabled, but you have Windows 10/11 devices that have been joined to Azure AD, two records will be visible in the Microsoft Intune admin center after enrollment. You can stop this by making sure that users with Azure AD joined devices go to **Accounts** > **Access work or school** and **Connect** using the same account.
 
 ## Registration and Enrollment CNAMEs
 

@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/20/2023
+ms.date: 02/20/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -85,7 +85,12 @@ Assignment filters aren't supported for devices communicating through the Micros
 
 ### Deleting and removing devices
 
-Devices that use this flow will be unable to be deleted from the Microsoft Intune admin center. The enrollment state is driven from Microsoft Defender for Endpoint, and deleting them from the admin center would only cause them to be removed temporarily. If devices need to be removed from management, they should be removed from the scope of Configuration Management in the Security Center. Once removed, that change will be propagated across services.
+You can delete devices that use this flow using one of two methods:
+
+- From within the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) go to **Devices** > **All devices**, select a device that displays either *MDEJoined* or *MDEManaged* in the *Managed by* column, and then select **Delete**.
+- You can also remove devices from the scope of Configuration Management in the Security Center.
+
+Once a device is removed from either location, that change will propagate to the other service.
 
 ### Unable to enable the Security Management for Microsoft Defender for Endpoint workload in Endpoint Security
 

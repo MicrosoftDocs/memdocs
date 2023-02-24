@@ -43,7 +43,7 @@ You can erase all data from a macOS device, including the operating system. The 
  - For devices running a version of macOS below 12.0.1, macOS will need to be reinstalled. Steps covering how to reinstall macOS are available on the [Apple Support site](https://support.apple.com/en-us/HT204904).
 
 ## How to use Erase
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **All devices** > choose the device you want to erase.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **All devices** > choose the device you want to erase.
 2. Select the ellipsis on the remote device action bar to show additional actions. Select **Erase** then provide a 6-digit number for the **Recovery PIN**. The six-digit PIN is required to reinstall the operating system on the device if the device is not equipped with T2 security chip enabled (i.e. the model year of the device is 2018 and earlier, or the device is running macOS 10.14 or earlier). Be sure to make a note of this PIN and give it to the device owner as it won't be visible after the erase action completes.
 ![Screenshot](./media/device-erase/providepin.png)
 3. Select **Erase** to erase the device.
