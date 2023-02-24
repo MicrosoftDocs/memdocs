@@ -17,6 +17,8 @@ ms.technology: itpro-deploy
 
 # Windows Autopilot user-driven Azure AD join - Step 3 of 5: Configure and assign the Enrollment Status Page (ESP)
 
+## Configure and assign the Enrollment Status Page (ESP)
+
 [!INCLUDE [How to configure and assign an Enrollment Status Page (ESP) in Intune](includes/configure-and-assign-esp.md)]
 
 ## Next step - Step 4 of 5: Create and assign user-driven Azure AD join Autopilot profile

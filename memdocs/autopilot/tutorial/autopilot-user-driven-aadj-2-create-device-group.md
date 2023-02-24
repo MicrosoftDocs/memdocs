@@ -17,6 +17,8 @@ ms.technology: itpro-deploy
 
 # Windows Autopilot user-driven Azure AD join - Step 2 of 5: Create a device group
 
+## Create a device group
+
 [!INCLUDE [How to create a device group in Intune](includes/create-device-group.md)]
 
 ## Next step - Step 3 of 5: Configure and assign the Enrollment Status Page (ESP)

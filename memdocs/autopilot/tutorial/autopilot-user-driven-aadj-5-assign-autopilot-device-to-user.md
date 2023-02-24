@@ -17,9 +17,11 @@ ms.technology: itpro-deploy
 
 # Windows Autopilot user-driven Azure AD join - Step 5 of 5: Assign Autopilot device to a user (optional)
 
+## Assign Autopilot device to a user (optional)
+
 [!INCLUDE [How to assign an Autopilot device to a user](includes/assign-autopilot-device-to-user.md)]
 
-## Assigning Autopilot device to a user via hardware hash CSV file
+### Assigning Autopilot device to a user via hardware hash CSV file
 
 [!INCLUDE [How to assign an Autopilot device to a user via hardware hash CSV file](includes/assign-autopilot-device-to-user-via-csv.md)]
 

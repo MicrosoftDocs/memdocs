@@ -17,6 +17,8 @@ ms.technology: itpro-deploy
 
 # Windows Autopilot user-driven Azure AD join - Step 4 of 5: Create and assign user-driven Azure AD join Autopilot profile
 
+## Create and assign user-driven Azure AD join Autopilot profile
+
 While the ESP controls what is shown during device and user setup and specifies how soon a user can use their device, the Autopilot profile specifies how the device is configured during Windows Setup, or during OOBE.
 
 When creating an Autopilot profile for the user-driven scenario, devices with this Autopilot profile are associated with the user enrolling the device. User credentials are required to enroll the device.
@@ -88,7 +90,7 @@ For more information on creating and assigning Autopilot profiles, see the follo
 
 - [Configure Autopilot profiles](/mem/autopilot/profiles)
 
-## Verify device has an Autopilot profile assigned to it
+### Verify device has an Autopilot profile assigned to it
 
 [!INCLUDE [How to verify a device has an Autopilot profile assigned to it in Intune](includes/verify-autopilot-profile-assignment.md)]
 
