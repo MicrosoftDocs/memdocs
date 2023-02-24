@@ -114,7 +114,7 @@ To create a new CORS rule,
 
 With the ServiceNow connector verified and enabled, you are able to view a real time list of ServiceNow incidents for a worker from the Troubleshooting pane. The incident view with details helps you understand if there are other issues previously submitted by employees that may be related or have recurred.
 
-1. Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Troubleshooting + support** > **Troubleshoot**. The **Troubleshooting** pane provides specific details for each Intune end-user.
 3. Find and select a **User** by entering a display name or email.
 4. In the **Summary** tab, scroll down and select **Authenticate ServiceNow**. Enter the credentials to authenticate you as a help-desk operator with ServiceNow. :::image type="content" source="./media/service-now-integration/troubleshoot-pane.png" alt-text="Screenshot that shows the Intune troubleshooting dashboard with the Summary tab and selected user details":::
