@@ -74,7 +74,7 @@ You can use RSS to be notified when this page is updated. For more information, 
 #### Latest iOS/iPadOS version available as minimum OS requirement for LOB and store apps<!-- 16433620  -->  
 You can specify iOS/iPadOS 16.0 as the minimum operating system for line-of-business and store app deployments. This setting option is available in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **iOS/iPadOS** > *iOS store app or Line-of-business app*. For more information about managing apps, see [Add apps to Microsoft Intune](../apps/apps-add.md).
 
-#### Newly available protected app for Intune<!-- 15448654  -->  
+#### Newly available protected app for Intune<!-- 16655639  -->  
 The following protected app is now available for Microsoft Intune:
 
 - Egnyte for Intune by Egnyte
