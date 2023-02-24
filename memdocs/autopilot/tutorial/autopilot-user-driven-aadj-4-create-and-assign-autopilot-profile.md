@@ -17,6 +17,20 @@ ms.technology: itpro-deploy
 
 # Windows Autopilot user-driven Azure AD join - Step 4 of 5: Create and assign user-driven Azure AD join Autopilot profile
 
+- Step 1: [Register devices as Autopilot devices](autopilot-user-driven-aadj-1-register-device.md)
+
+- Step 2: [Create a device group](autopilot-user-driven-aadj-2-create-device-group.md)
+
+- Step 3: [Configure and assign Autopilot Enrollment Status Page (ESP)](autopilot-user-driven-aadj-3-configure-and-assign-esp.md)
+
+> [!div class="checklist"]
+
+> - **Step 4**: [Create and assign Autopilot profile](autopilot-user-driven-aadj-4-create-and-assign-autopilot-profile.md)
+
+- Step 5: [Assign Autopilot device to a user (optional)](autopilot-user-driven-aadj-5-assign-autopilot-device-to-user.md)
+
+- [Windows Autopilot user-driven Azure AD join overview](autopilot-user-driven-aadj-workflow.md)
+
 ## Create and assign user-driven Azure AD join Autopilot profile
 
 While the ESP controls what is shown during device and user setup and specifies how soon a user can use their device, the Autopilot profile specifies how the device is configured during Windows Setup, or during OOBE.
@@ -99,6 +113,7 @@ For more information on creating and assigning Autopilot profiles, see the follo
 > [!div class="nextstepaction"]
 > [Step 5: Assign Autopilot device to a user (optional)](autopilot-user-driven-aadj-5-assign-autopilot-device-to-user.md)
 
+<!--
 ## Previous step - Step 3 of 5: Configure and assign the Enrollment Status Page (ESP)
 
 > [!div class="nextstepaction"]
@@ -108,3 +123,4 @@ For more information on creating and assigning Autopilot profiles, see the follo
 
 > [!div class="nextstepaction"]
 > [Windows Autopilot user-driven Azure AD join overview](autopilot-user-driven-aadj-workflow.md)
+-->

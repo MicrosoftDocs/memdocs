@@ -17,6 +17,20 @@ ms.technology: itpro-deploy
 
 # Windows Autopilot user-driven Azure AD join - Step 3 of 5: Configure and assign the Enrollment Status Page (ESP)
 
+- Step 1: [Register devices as Autopilot devices](autopilot-user-driven-aadj-1-register-device.md)
+
+- Step 2: [Create a device group](autopilot-user-driven-aadj-2-create-device-group.md)
+
+> [!div class="checklist"]
+
+> - **Step 3**: [Configure and assign Autopilot Enrollment Status Page (ESP)](autopilot-user-driven-aadj-3-configure-and-assign-esp.md)
+
+- Step 4: [Create and assign Autopilot profile](autopilot-user-driven-aadj-4-create-and-assign-autopilot-profile.md)
+
+- Step 5: [Assign Autopilot device to a user (optional)](autopilot-user-driven-aadj-5-assign-autopilot-device-to-user.md)
+
+- [Windows Autopilot user-driven Azure AD join overview](autopilot-user-driven-aadj-workflow.md)
+
 ## Configure and assign the Enrollment Status Page (ESP)
 
 [!INCLUDE [How to configure and assign an Enrollment Status Page (ESP) in Intune](includes/configure-and-assign-esp.md)]
@@ -26,6 +40,7 @@ ms.technology: itpro-deploy
 > [!div class="nextstepaction"]
 > [Step 4: Create and assign user-driven Azure AD join Autopilot profile](autopilot-user-driven-aadj-4-create-and-assign-autopilot-profile.md)
 
+<!--
 ## Previous step - Step 2 of 5: Create a device group
 
 > [!div class="nextstepaction"]
@@ -35,3 +50,4 @@ ms.technology: itpro-deploy
 
 > [!div class="nextstepaction"]
 > [Windows Autopilot user-driven Azure AD join overview](autopilot-user-driven-aadj-workflow.md)
+-->
