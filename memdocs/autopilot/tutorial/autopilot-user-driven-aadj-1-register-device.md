@@ -1,6 +1,6 @@
 ---
-title: Windows Autopilot user-driven Azure AD join - Step 1 - Register devices as Autopilot devices
-description: Howe to - Windows Autopilot user-driven Azure AD join - Step 1 - Register devices as Autopilot devices.
+title: Windows Autopilot user-driven Azure AD join - Step 1 of 5 - Register devices as Autopilot devices
+description: Howe to - Windows Autopilot user-driven Azure AD join - Step 1 of 5 - Register devices as Autopilot devices.
 ms.prod: windows-client
 ms.localizationpriority: medium
 author: frankroj
@@ -15,7 +15,7 @@ ms.collection:
 ms.technology: itpro-deploy
 ---
 
-# Windows Autopilot user-driven Azure AD join - Step 1: Register devices as Autopilot devices
+# Windows Autopilot user-driven Azure AD join - Step 1 of 5: Register devices as Autopilot devices
 
 [!INCLUDE [How to register a device as an Autopilot device in Intune](includes/register-autopilot-device.md)]
 
@@ -27,4 +27,4 @@ ms.technology: itpro-deploy
 ## Back to Windows Autopilot user-driven Azure AD join overview
 
 > [!div class="nextstepaction"]
-> [Windows Autopilot user-driven Azure AD join overview](autopilot-user-driven-aadj-workflow.md)
+> [Step 2: Create a device group](autopilot-user-driven-aadj-workflow.md)

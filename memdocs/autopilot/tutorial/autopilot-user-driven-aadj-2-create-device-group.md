@@ -1,6 +1,6 @@
 ---
-title: Windows Autopilot user-driven Azure AD join - Step 2 - Create a device group
-description: Howe to - Windows Autopilot user-driven Azure AD join - Step 2 - Create a device group.
+title: Windows Autopilot user-driven Azure AD join - Step 2 of 5 - Create a device group
+description: Howe to - Windows Autopilot user-driven Azure AD join - Step 2 of 5 - Create a device group.
 ms.prod: windows-client
 ms.localizationpriority: medium
 author: frankroj
@@ -15,7 +15,7 @@ ms.collection:
 ms.technology: itpro-deploy
 ---
 
-# Windows Autopilot user-driven Azure AD join - Step 2: Create a device group
+# Windows Autopilot user-driven Azure AD join - Step 2 of 5: Create a device group
 
 [!INCLUDE [How to create a device group in Intune](includes/create-device-group.md)]
 
@@ -24,10 +24,10 @@ ms.technology: itpro-deploy
 > [!div class="nextstepaction"]
 > [Step 3: Configure and assign the Enrollment Status Page (ESP)](autopilot-user-driven-aadj-3-configure-and-assign-esp.md)
 
-## Previous step - Step 1: Create a device group
+## Previous step - Step 1: Register devices as Autopilot devices
 
 > [!div class="nextstepaction"]
-> [Step 2: Create a device group](autopilot-user-driven-aadj-2-create-device-group.md)
+> [Step 1: Register devices as Autopilot devices](autopilot-user-driven-aadj-1-register-device.md)
 
 ## Back to Windows Autopilot user-driven Azure AD join overview
 

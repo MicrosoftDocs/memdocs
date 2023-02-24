@@ -1,6 +1,6 @@
 ---
-title: Windows Autopilot user-driven Azure AD join - Step 2 - Create a device group
-description: Howe to - Windows Autopilot user-driven Azure AD join - Step 2 - Create a device group.
+title: Windows Autopilot user-driven Azure AD join - Step 3 of 5 - Configure and assign the Enrollment Status Page (ESP)
+description: Howe to - Windows Autopilot user-driven Azure AD join - Step 3 of 5 - Configure and assign the Enrollment Status Page (ESP).
 ms.prod: windows-client
 ms.localizationpriority: medium
 author: frankroj
@@ -15,7 +15,7 @@ ms.collection:
 ms.technology: itpro-deploy
 ---
 
-# Configure and assign the Enrollment Status Page (ESP)
+# Windows Autopilot user-driven Azure AD join - Step 3 of 5: Configure and assign the Enrollment Status Page (ESP)
 
 [!INCLUDE [How to configure and assign an Enrollment Status Page (ESP) in Intune](includes/configure-and-assign-esp.md)]
 

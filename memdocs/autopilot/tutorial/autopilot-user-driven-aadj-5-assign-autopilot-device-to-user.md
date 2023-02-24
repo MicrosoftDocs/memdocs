@@ -1,6 +1,6 @@
 ---
-title: Windows Autopilot user-driven Azure AD join - Step 2 - Create a device group
-description: Howe to - Windows Autopilot user-driven Azure AD join - Step 2 - Create a device group.
+title: Windows Autopilot user-driven Azure AD join - Step 5 of 5 - Assign Autopilot device to a user
+description: Howe to - Windows Autopilot user-driven Azure AD join - Step 5 of 5 - Assign Autopilot device to a user.
 ms.prod: windows-client
 ms.localizationpriority: medium
 author: frankroj
@@ -15,7 +15,7 @@ ms.collection:
 ms.technology: itpro-deploy
 ---
 
-# Assign Autopilot device to a user (optional)
+# Windows Autopilot user-driven Azure AD join - Step 5 of 5: Assign Autopilot device to a user (optional)
 
 [!INCLUDE [How to assign an Autopilot device to a user](includes/assign-autopilot-device-to-user.md)]
 

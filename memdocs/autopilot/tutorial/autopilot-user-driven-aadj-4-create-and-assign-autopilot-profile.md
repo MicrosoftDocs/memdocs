@@ -1,6 +1,6 @@
 ---
-title: Windows Autopilot user-driven Azure AD join - Step 2 - Create a device group
-description: Howe to - Windows Autopilot user-driven Azure AD join - Step 2 - Create a device group.
+title: Windows Autopilot user-driven Azure AD join - Step 4 of 5 - Create and assign user-driven Azure AD join Autopilot profile
+description: Howe to - Windows Autopilot user-driven Azure AD join - Step 4 of 5 - Create and assign user-driven Azure AD join Autopilot profile.
 ms.prod: windows-client
 ms.localizationpriority: medium
 author: frankroj
@@ -15,7 +15,7 @@ ms.collection:
 ms.technology: itpro-deploy
 ---
 
-# Create and assign user-driven Azure AD join Autopilot profile
+# Windows Autopilot user-driven Azure AD join - Step 4 of 5: Create and assign user-driven Azure AD join Autopilot profile
 
 While the ESP controls what is shown during device and user setup and specifies how soon a user can use their device, the Autopilot profile specifies how the device is configured during Windows Setup, or during OOBE.
 
