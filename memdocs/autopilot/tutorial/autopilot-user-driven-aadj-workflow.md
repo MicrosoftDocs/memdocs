@@ -32,15 +32,28 @@ Before beginning, refer to the [How to: Plan your Azure AD join implementation](
 
 Register devices as Autopilot devices > Create a device group > Configure and assign Autopilot Enrollment Status Page (ESP) > Create and assign Autopilot profile> Assign Autopilot device to a user (optional)
 
+Autopilot user-driven Azure AD join steps:
+> [!div class="checklist"]
+>
+> - [Windows Autopilot user-driven Azure AD join overview](autopilot-user-driven-aadj-workflow.md)
+>
+> - Step 1: [Register devices as Autopilot devices](autopilot-user-driven-aadj-1-register-device.md)
+> - Step 2: [Create a device group](autopilot-user-driven-aadj-2-create-device-group.md)
+> - Step 3: [Configure and assign Autopilot Enrollment Status Page (ESP)](autopilot-user-driven-aadj-3-configure-and-assign-esp.md)
+> - Step 4: [Create and assign Autopilot profile](autopilot-user-driven-aadj-4-create-and-assign-autopilot-profile.md)
+> - Step 5: [Assign Autopilot device to a user (optional)](autopilot-user-driven-aadj-5-assign-autopilot-device-to-user.md)
+
+<!--
 1. [Register devices as Autopilot devices](autopilot-user-driven-aadj-1-register-device.md)
 2. [Create a device group](autopilot-user-driven-aadj-2-create-device-group.md)
 3. [Configure and assign Autopilot Enrollment Status Page (ESP)](autopilot-user-driven-aadj-3-configure-and-assign-esp.md)
 4. [Create and assign Autopilot profile](autopilot-user-driven-aadj-4-create-and-assign-autopilot-profile.md)
 5. [Assign Autopilot device to a user (optional)](autopilot-user-driven-aadj-5-assign-autopilot-device-to-user.md)
+-->
 
 > [!NOTE]
 >
-> The workflow is designed for lab or testing scenarios. However, some of the steps in the workflow are interchangeable. A workflow with some of these steps interchanged may make more sense in a production environment. For example, the **Create a device group** step followed by the **Register devices as Autopilot devices** step may make more sense in a production environment.
+> The workflow is designed for lab or testing scenarios. It can also be used in a production environment. However, some of the steps in the workflow are interchangeable and interchanging some of the steps may make more sense in a production environment. For example, the **Create a device group** step followed by the **Register devices as Autopilot devices** step may make more sense in a production environment.
 
 ## More info
 
