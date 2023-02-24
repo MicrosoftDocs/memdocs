@@ -29,7 +29,7 @@ ms.collection: M365-identity-device-management
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Remote Help, an add-on to Microsoft Intune is the first solution offered in the series of advanced endpoint management solutions launched. Remote Help provides a secure cloud based remote assistance solution for Windows commercial users. The integration between Intune and ServiceNow makes it possible for helpdesk agents to use Intune to troubleshoot endpoint related issues.
+Remote Help, an add-on to Microsoft Intune, provides a secure cloud based remote assistance solution for Windows commercial users. The integration between Intune and ServiceNow makes it possible for helpdesk agents to use Intune to troubleshoot endpoint related issues.
 
 Support organizations need all the tools at their disposal to resolve workers’ technology issues quickly and efficiently. With ServiceNow integration, helpdesk agents licensed to use Remote Help and who use ServiceNow can view incidents to see the details of the tech issue that an employee is facing. This integration allows helpdesk agents to view ServiceNow incidents directly from the Troubleshooting pane in the Microsoft Intune admin center.
 
