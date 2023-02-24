@@ -43,7 +43,7 @@ The following list includes recommended (but not required) prerequisites:
 - Available devices (iOS device, Android device, Windows device, macOS device)
 - Familiarity with [Intune's supported operating systems](../fundamentals/supported-devices-browsers.md)
 - Familiarity with [Network endpoints for Microsoft Intune](../fundamentals/intune-endpoints.md)
-- An [app](une/apps/apps-supported-intune-apps.md) that you would like to add to Intune
+- An [app](../apps/apps-supported-intune-apps.md) that you would like to add to Intune
 
 ## Learning objectives
 
