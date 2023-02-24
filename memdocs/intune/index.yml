@@ -144,15 +144,12 @@ conceptualContent:
         - url: ./protect/device-protect.md
           itemType: concept
           text: Device protection overview
-        - url: ./protect/conditional-access.md
+        - url: ./protect/device-compliance-get-started.md
           itemType: concept
-          text: Conditional access with Intune
+          text: Compliance policies for devices
         - url: ./protect/mobile-threat-defense.md
           itemType: concept
           text: Mobile Threat Defense integration with Intune
-        - url: ./protect/security-baselines.md
-          itemType: how-to-guide
-          text: Start with security baselines for your Windows devices
 
     - title: Create compliance rules for users and devices
       links:
