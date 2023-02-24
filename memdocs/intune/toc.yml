@@ -982,6 +982,7 @@ items:
             href: ./configuration/ios-device-features-settings.md
           - name: Device restrictions
             href: ./configuration/device-restrictions-ios.md
+            displayName: device restrictions ios
           - name: Email
             href: ./configuration/email-settings-ios.md
           - name: VPN
