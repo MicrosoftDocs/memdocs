@@ -25,14 +25,16 @@ ms.reviewer: tycast
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Create a device-based Conditional Access policy
 
 With Microsoft Intune device compliance policies, your Azure Active Directory (Azure AD) Conditional Access policies can use a devices status to either grant or deny access to your organizations apps and services.
 
-You can use the Microsoft Endpoint Manager admin center to configure your device-based Conditional Access policies. From within the admin center you have access to the Conditional Access policy UI as found in Azure AD. Use of the Azure AD UI provides access to all the options you would have if you were to configure the policy from within the Azure portal. The policies you create can specify the apps or services you want to protect, the conditions under which the apps or services can be accessed, and the users the policy applies to.
+You can use the Microsoft Intune admin center to configure your device-based Conditional Access policies. From within the admin center you have access to the Conditional Access policy UI as found in Azure AD. Use of the Azure AD UI provides access to all the options you would have if you were to configure the policy from within the Azure portal. The policies you create can specify the apps or services you want to protect, the conditions under which the apps or services can be accessed, and the users the policy applies to.
 
 To Create a device-based Conditional Access policy your account must have one of the following permissions in Azure AD:
 
@@ -47,7 +49,7 @@ To take advantage of device compliance status, configure Conditional Access poli
 
 ## Create the Conditional Access policy
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Endpoint security** > **Conditional access** > **Policies** > **New policy**.
 :::image type="content" source="./media/create-conditional-access-intune/create-ca.png" alt-text="Create a new Conditional Access policy":::
@@ -69,7 +71,7 @@ To take advantage of device compliance status, configure Conditional Access poli
      If you choose **Select apps**, select the apps and services you want to protect with this policy. 
 
      > [!CAUTION]
-     > If you choose  **All cloud apps**, be sure to review the warning, and then **Exclude** from this policy your account or other relevant users and groups that should retain access to use the Azure portal or Microsoft Endpoint Manager admin center after this policy takes effect.
+     > If you choose  **All cloud apps**, be sure to review the warning, and then **Exclude** from this policy your account or other relevant users and groups that should retain access to use the Azure portal or Microsoft Intune admin center after this policy takes effect.
 
    - Use the **Exclude** tab if there are any apps or services you want to exclude from this policy.
 

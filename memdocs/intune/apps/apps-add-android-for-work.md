@@ -26,6 +26,7 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.collection:
+- tier1
 - M365-identity-device-management
 - Android
 - highpri
@@ -36,7 +37,7 @@ ms.custom: intune-classic
 
 Managed Google Play is Google's enterprise app store and sole source of applications for Android Enterprise in Intune. You can use Intune to orchestrate app deployment through Managed Google Play for any Android Enterprise scenario (including personally-owned work profile, dedicated, fully managed, and corporate-owned work profile enrollments). How you add Managed Google Play apps to Intune differs from how Android apps are added for non-Android Enterprise scenarios. Store apps, line-of-business (LOB) apps, and web apps are approved in or added to Managed Google Play, and then synchronized into Intune so that they appear in the Client Apps list. Once they appear in the Client Apps list, you can manage assignment of any Managed Google Play app as you would any other app.
 
-To make it easier for you to configure and use Android Enterprise management, upon connecting your Intune tenant to Managed Google Play, Intune will automatically add four common Android Enterprise related apps to the Intune admin console. The four apps are the following:
+To make it easier for you to configure and use Android Enterprise management, upon connecting your Intune tenant to Managed Google Play, Intune will automatically add four common Android Enterprise related apps to the Intune admin center. The four apps are the following:
 
 - **[Microsoft Intune](https://play.google.com/store/apps/details?id=com.microsoft.intune)** - Used for Android Enterprise fully managed scenarios. This app is automatically installed to fully managed devices during the device enrollment process.
 - **[Microsoft Authenticator](https://play.google.com/store/apps/details?id=com.azure.authenticator)** - Helps you sign-in to your accounts if you use two-factor verification. This app is automatically installed to fully managed devices during the device enrollment process.
@@ -69,12 +70,12 @@ There are three types of apps that are available with Managed Google Play:
 
 There are two ways to browse and approve Managed Google Play store apps with Intune:
 
-1. **Directly in the Intune console** - Browse and approve store apps in a view hosted within Intune. This opens directly in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and does not require you to reauthenticate with a different account.
+1. **Directly in the Intune admin center** - Browse and approve store apps in a view hosted within Intune. This opens directly in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and does not require you to reauthenticate with a different account.
 2. **In Managed Google Play console** - You can optionally open the Managed Google Play console directly and approve apps there. See [Sync a Managed Google Play app with Intune](#sync-a-managed-google-play-app-with-intune) for more information.  This requires a separate login using the account you used to connect your Intune tenant to Managed Google Play.
 
-### Add a Managed Google Play store app directly in the Microsoft Endpoint Manager admin center
+### Add a Managed Google Play store app directly in the Microsoft Intune admin center
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All apps** > **Add**.
 3. In the **Select app type** pane, under the available **Store app** types, select **Managed Google Play app**.
 4. Click **Select**. The **Managed Google Play** app store is displayed.
@@ -126,12 +127,12 @@ If you prefer to synchronize a Managed Google Play app with Intune rather than a
 
 There are two ways to add LOB apps to Managed Google Play:
 
-1. Directly in the Microsoft Endpoint Manager admin center - This allows you to add LOB apps by submitting just the app APK and a title, directly within Intune. This method does not require you to have a Google developer account and does not require you to pay the fee to register with Google as a developer.  This method is simpler and has a significantly reduced number of steps, and makes LOB apps available for management in as little as ten minutes.
+1. Directly in the Microsoft Intune admin center - This allows you to add LOB apps by submitting just the app APK and a title, directly within Intune. This method does not require you to have a Google developer account and does not require you to pay the fee to register with Google as a developer.  This method is simpler and has a significantly reduced number of steps, and makes LOB apps available for management in as little as ten minutes.
 1. In the Google Play Developer Console - If you have a Google developer account or want to configure advanced distribution features that are only available in the Google Play Developer Console (like adding additional app screenshots), you can use the [Google Play Developer Console](https://play.google.com/apps/publish).
 
-### Managed Google Play private (LOB) app publishing directly in the Microsoft Endpoint Manager admin center
+### Managed Google Play private (LOB) app publishing directly in the Microsoft Intune admin center
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All apps** > **Add**.
 3. In the **Select app type** pane, under the available **Store app** types, select **Managed Google Play app**.
 4. Click **Select**. The **Managed Google Play** app store is displayed within Intune.
@@ -181,7 +182,7 @@ Web links will open with Microsoft Edge or any other browser app you choose to d
 
 To create a Managed Google Play web link:
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All apps** > **Add**.
 3. In the **Select app type** pane, under the available **Store app** types, select **Managed Google Play app**.
 4. Click **Select**. The **Managed Google Play** app store is displayed within Intune.
@@ -201,7 +202,7 @@ Collections are a way to group your Managed Google Play apps and determine the o
 
 To create a Managed Google Play collection:
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All apps** > **Add**.
 3. In the **Select app type** pane, under the available **Store app** types, select **Managed Google Play app**.
 4. Click **Select**. The **Managed Google Play** app store is displayed within Intune.
@@ -220,11 +221,11 @@ Apps that are not part of any collection will not appear on the end users' Play 
 
 If you have approved an app from the store and don't see it in the **Apps** workload, force an immediate sync as follows:
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Tenant administration** > **Connectors and tokens** > **Managed Google Play**.
 3. In the **Managed Google Play** pane, choose **Sync**.  
     The page updates the time and status of the last sync.
-4. In the Microsoft Endpoint Manager admin center select  **Apps** > **All apps**.  
+4. In the Microsoft Intune admin center select  **Apps** > **All apps**.  
     The newly available Managed Google Play app is displayed.
 
 ## Assign a Managed Google Play app to Android Enterprise personally-owned and corporate-owned work profile devices
@@ -266,7 +267,7 @@ For dedicated, fully managed, and corporate-owned work profile devices, you can 
 
 To edit the app update mode:
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All apps**.
 3. Select the app from the apps list.
 4. Select **Properties**.

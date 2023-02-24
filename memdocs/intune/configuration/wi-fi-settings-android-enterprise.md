@@ -24,9 +24,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: seodec18
-ms.collection: 
-- M365-identity-device-management
+ms.collection:
 - tier3
+- M365-identity-device-management
 ---
 
 # Add Wi-Fi settings for Android Enterprise dedicated and fully managed devices in Microsoft Intune
@@ -197,6 +197,10 @@ Select this option if you're deploying to an Android Enterprise dedicated, corpo
   - **Automatic**: Use a file to configure the proxy server. Enter the **Proxy server URL** that contains the configuration file. For example, enter `http://proxy.contoso.com`, `10.0.0.11`, or `http://proxy.contoso.com/proxy.pac`.
 
     For more information on PAC files, see [Proxy Auto-Configuration (PAC) file](https://developer.mozilla.org/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file) (opens a non-Microsoft site).
+    
+    > [!NOTE]
+    > When a device is marked as corporate during enrollment (organization-owned), policies control device features and settings. Users can be prevented from managing features and settings in the policy.
+    > When a Wi-Fi policy is assigned to devices, then Wi-Fi is enabled, and users can be prevented from turning off Wi-Fi.
 
 ## Personally owned work profile
 

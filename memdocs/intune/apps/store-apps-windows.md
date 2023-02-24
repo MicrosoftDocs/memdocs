@@ -27,7 +27,8 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection:
-  - M365-identity-device-management
+- tier2
+- M365-identity-device-management
 ---
 
 # Add Microsoft Store apps to Intune (legacy)
@@ -42,7 +43,7 @@ Before you can assign, monitor, configure, or protect apps, you must add them to
 ## Add an app to Intune
 You can add a Microsoft Store app to Intune by doing the following:
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All apps** > **Add**.
 3. In the **Select app type** pane, under the available **Store app** types, select **Microsoft store app**.
 4. Click **Select**. The **Add app** steps are displayed.

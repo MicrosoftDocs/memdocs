@@ -25,9 +25,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: 
+ms.collection:
+- tier2
 - M365-identity-device-management
-- tier3
 ---
 
 # List of the settings in the Windows 365 Cloud PC security baseline in Intune

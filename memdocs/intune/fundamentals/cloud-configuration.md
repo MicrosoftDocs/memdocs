@@ -25,7 +25,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; get-started
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Guided scenario - Windows 10/11 in cloud configuration
@@ -114,7 +116,7 @@ Using Microsoft Intune, you can use a guided scenario to deploy a cloud configur
 
 ## Step 1 - Introduction
 
-1. Open the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Troubleshooting + support** > **Guided scenarios** > **Deploy Windows 10 and later in cloud configuration** > **Start**.
 3. Select **Next**.
 
@@ -155,7 +157,7 @@ Select the apps you want to deploy to devices. Microsoft recommends deploying th
 - **Select additional M365 apps (optional)**: From the list, add more Microsoft 365 apps that you want on the devices. Remember, keep the list small, and only include apps your users need. The idea is to keep the devices simple.
 
   > [!TIP]
-  > To add apps not listed, or add line-of-business apps, complete this guided scenario. In the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Apps**, and create a policy. Deploy the app policy to the same group that you deployed this cloud config guided scenario. For more information on adding apps, see [Add apps to Microsoft Intune](../apps/apps-add.md).
+  > To add apps not listed, or add line-of-business apps, complete this guided scenario. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Apps**, and create a policy. Deploy the app policy to the same group that you deployed this cloud config guided scenario. For more information on adding apps, see [Add apps to Microsoft Intune](../apps/apps-add.md).
 
 - Select **Next**.
 
@@ -179,13 +181,13 @@ Look at the following properties:
 - **Configurations to be made**: Expand this option to see all the resources that will be created, including the policies.
 - **Deploy**: Select this option to save your changes, and deploy the guided scenario. The groups you added will receive the policies in this guided scenario.
 
-  As the resources are being created in the Endpoint Manager admin center, the status is shown, similar to the following image:
+  As the resources are being created in the Intune admin center, the status is shown, similar to the following image:
 
   :::image type="content" source="./media/cloud-configuration/guided-scenario-deployment-status.png" alt-text="Screenshot that shows how to review the Windows 10/11 in cloud configuration guided scenario deployment status in Microsoft Intune.":::
 
 If there's an error, then the guided scenario isn't deployed, and all changes are reverted. The [Cloud configuration overview and setup guide](https://aka.ms/CloudConfigGuide) is also a good resource.
 
-When it deploys successfully, you can use the monitoring and reporting features in the Endpoint Manager admin center:
+When it deploys successfully, you can use the monitoring and reporting features in the Intune admin center:
 
 - [Intune reports](reports.md)
 - [Monitor device profiles](../configuration/device-profile-monitor.md)

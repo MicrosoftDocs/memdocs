@@ -7,7 +7,9 @@ ms.topic: include
 ms.date: 10/15/2019
 ms.author: dougeby
 ms.custom: include file
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 **Applies to: Intune in the classic portal**
 

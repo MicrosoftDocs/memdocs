@@ -24,7 +24,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Use Update Channel and Target Version settings to update Microsoft 365 with Microsoft Intune Administrative Templates
@@ -45,13 +47,13 @@ Applies to:
 
 Be sure to [enable Microsoft 365 Apps Automatic Updates](/deployoffice/configure-update-settings-for-office-365-proplus) for your Office apps. You can do this using group policy, or the Intune Office 2016 ADMX template:
 
-:::image type="content" source="./media/administrative-templates-update-office/admx-enable-automatic-updates.png" alt-text="In Microsoft Intune and Endpoint Manager admin center, create an administrative ADMX template to Enable Automatic Updates for Office.":::
+:::image type="content" source="./media/administrative-templates-update-office/admx-enable-automatic-updates.png" alt-text="In Microsoft Intune and Intune admin center, create an administrative ADMX template to Enable Automatic Updates for Office.":::
 
 ## Set the Update Channel in the Intune administrative template
 
 1. In your [Intune administrative template](administrative-templates-windows.md#create-the-template), go to the **Update Channel** setting, and enter the channel you want. For example, choose `Semi-Annual Channel`:
 
-    :::image type="content" source="./media/administrative-templates-update-office/admx-enable-update-channel-setting.png" alt-text="In Microsoft Intune and Endpoint Manager admin center, create an administrative ADMX template that sets the Update Channel setting for Office.":::
+    :::image type="content" source="./media/administrative-templates-update-office/admx-enable-update-channel-setting.png" alt-text="In Microsoft Intune and Intune admin center, create an administrative ADMX template that sets the Update Channel setting for Office.":::
 
     > [!NOTE]
     > It's recommended to update more frequently. Semi-annually is only used as an example.

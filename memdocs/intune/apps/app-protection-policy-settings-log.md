@@ -26,7 +26,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Review client app protection logs
@@ -41,7 +43,7 @@ The process to enable and collect logs varies by platform:
   > [!NOTE]
   > On Android Fully Managed devices, in certain instances the Intune Company Portal app may be visible under all apps. This may happen when an app associated with an app protection policy is either not installed or not launched. 
 
-The following tables list the App protection policy setting name and supported values that are recorded in the log. In addition, each setting identifies the policy setting found within Microsoft Endpoint Manager admin center. For detailed information on each setting, see [iOS/iPadOS app protection policy settings](app-protection-policy-settings-ios.md) and [Android app protection policy settings in Microsoft Intune](app-protection-policy-settings-android.md).
+The following tables list the App protection policy setting name and supported values that are recorded in the log. In addition, each setting identifies the policy setting found within Microsoft Intune admin center. For detailed information on each setting, see [iOS/iPadOS app protection policy settings](app-protection-policy-settings-ios.md) and [Android app protection policy settings in Microsoft Intune](app-protection-policy-settings-android.md).
 
 ## iOS/iPadOS App protection policy settings
 

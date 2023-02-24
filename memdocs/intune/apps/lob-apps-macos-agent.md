@@ -27,6 +27,7 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection:
+- tier1
 - M365-identity-device-management
 - macOS
 - highpri
@@ -40,7 +41,7 @@ The Microsoft Intune management agent is necessary to be installed on managed ma
 
 ## How is the agent installed?
 
- The agent is automatically and silently installed on Intune-managed macOS devices that you assign at least one shell script to in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). The agent is installed at `/Library/Intune/Microsoft Intune Agent.app` when applicable and doesn't appear in **Finder** > **Applications** on macOS devices. The agent appears as `IntuneMdmAgent` in **Activity Monitor** when running on macOS devices.
+ The agent is automatically and silently installed on Intune-managed macOS devices that you assign at least one shell script to in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). The agent is installed at `/Library/Intune/Microsoft Intune Agent.app` when applicable and doesn't appear in **Finder** > **Applications** on macOS devices. The agent appears as `IntuneMdmAgent` in **Activity Monitor** when running on macOS devices.
 
 ## What does the agent do?
 
@@ -55,7 +56,7 @@ On a managed Mac that has the agent installed, open **Company Portal**, select t
 Alternatively, open **Terminal**, run the `sudo killall IntuneMdmAgent` command to terminate the `IntuneMdmAgent` process. The `IntuneMdmAgent` process will restart immediately, which will initiate a check-in with Intune.
 
 > [!NOTE]
-> The **Sync** action for devices in Microsoft Endpoint Manager admin center initiates an MDM check-in and does not force an agent check-in.
+> The **Sync** action for devices in Microsoft Intune admin center initiates an MDM check-in and does not force an agent check-in.
 
 ## When is the agent removed?
 

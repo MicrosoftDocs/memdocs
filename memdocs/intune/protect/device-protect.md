@@ -26,7 +26,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-classic
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Protect data and devices with Microsoft Intune
@@ -35,7 +37,7 @@ Microsoft Intune can help you keep your managed devices secure and up to date wh
 
 This article highlights many of Intune’s built-in capabilities and partner technologies you can integrate with Intune. As you learn more about them, you can bring several together for more comprehensive solutions on your journey towards a zero-trust environment.
 
-From the Microsoft Endpoint Manager admin center, Intune [supports managed devices](../fundamentals/supported-devices-browsers.md#intune-supported-operating-systems) that run Android, iOS/iPad, macOS, and Windows 10.
+From the Microsoft Intune admin center, Intune [supports managed devices](../fundamentals/supported-devices-browsers.md#intune-supported-operating-systems) that run Android, iOS/iPad, macOS, and Windows 10.
 
 When you use Configuration Manager to manage on-premises devices, you can extend Intune policies to those devices by configuring [tenant attach](../protect/tenant-attach-intune.md) or [co-management](../../configmgr/comanage/overview.md).
 
@@ -93,7 +95,7 @@ The following are examples of protections and restrictions you can set with app 
 
 ## Use device actions to protect devices and data
 
-From the Microsoft Endpoint Manager admin center, you can run [device actions](../remote-actions/device-management.md#available-device-actions) that help keep a selected device protected. You can run a subset of these actions as [bulk device actions](../remote-actions/bulk-device-actions.md) to affect multiple devices at the same time. And several [remote actions from Intune](../../configmgr/comanage/quickstart-remote-actions.md) can also be used with co-managed devices.
+From the Microsoft Intune admin center, you can run [device actions](../remote-actions/device-management.md#available-device-actions) that help keep a selected device protected. You can run a subset of these actions as [bulk device actions](../remote-actions/bulk-device-actions.md) to affect multiple devices at the same time. And several [remote actions from Intune](../../configmgr/comanage/quickstart-remote-actions.md) can also be used with co-managed devices.
 
 Device actions aren't policy and take effect a single time when invoked.  They apply either immediately if the device is accessible on-line, or when the device next boots up or checks in with Intune. Considered these actions as supplemental to the use of policies that configure and maintain security configurations for a population of devices.
 
@@ -135,7 +137,7 @@ You can use many Intune policies and device actions to [protect the devices you 
 
 - *Tenant attach* sets up synchronization between your Configuration Manager site and your Intune tenant. This synchronization provides you with a single view for all devices that you manage with Microsoft Endpoint Manager.
 
-After establishing a connection between Intune and Configuration Manager, devices from Configuration Manager are available in the Microsoft Endpoint Manager admin center. You can then deploy Intune policies to those devices or use device actions to protect them.
+After establishing a connection between Intune and Configuration Manager, devices from Configuration Manager are available in the Microsoft Intune admin center. You can then deploy Intune policies to those devices or use device actions to protect them.
 
 Some of the protections you can apply include:
 

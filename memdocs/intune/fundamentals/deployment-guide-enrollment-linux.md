@@ -23,10 +23,11 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom:
-ms.collection: 
-  - M365-identity-device-management
-  - highpri
-  - highseo
+ms.collection:
+- tier1
+- M365-identity-device-management
+- highpri
+- highseo
 ---
 
 
@@ -65,7 +66,7 @@ Use for personal/BYOD and organization-owned devices running Linux.
 Other than having Intune setup, there are minimal administrator tasks with Linux enrollment.
 
 - Be sure your devices are [supported](supported-devices-browsers.md).
-- Intune admins don't do anything to enable Linux enrollment in the Microsoft Endpoint Manager admin center. It's automatically enabled. When users enroll their Linux devices, you'll see them in the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Linux**.
+- Intune admins don't do anything to enable Linux enrollment in the Microsoft Intune admin center. It's automatically enabled. When users enroll their Linux devices, you'll see them in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Linux**.
 
 ## End user tasks
 
