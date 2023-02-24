@@ -31,7 +31,7 @@ ms.reviewer: laarrizz
 
 # Endpoint security firewall rule migration tool overview
 
-Many organizations are moving their security configuration to Microsoft Endpoint Manager to make use of modern, cloud-based management. Endpoint security in Endpoint Manager offers rich management experiences of Windows Firewall configuration and granular firewall rule management.
+Many organizations are moving their security configuration to Microsoft Intune to make use of modern, cloud-based management. Endpoint security in Endpoint Manager offers rich management experiences of Windows Firewall configuration and granular firewall rule management.
 
 Because it can be challenging to move large numbers of existing Group Policies for Windows Firewall rules to Endpoint security policies in Endpoint Manager, we've created the **Endpoint security firewall rule migration tool**, which is a PowerShell script.
 

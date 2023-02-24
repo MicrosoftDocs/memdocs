@@ -250,7 +250,7 @@ All BitLocker recovery key accesses are audited. For more information on Audit L
 
 ### View recovery keys for tenant-attached devices
 
-When you’ve configured the tenant attach scenario, Microsoft Endpoint Manager can display recovery key data for tenant attached devices.
+When you’ve configured the tenant attach scenario, Microsoft Intune can display recovery key data for tenant attached devices.
 
 - To support the display of recovery keys for tenant attached devices, your Configuration Manager sites must run version 2107 or later. For sites that run 2107, you must install an update rollup to support Azure AD joined devices: See [KB11121541](../../configmgr/hotfix/2107/11121541.md).
 
