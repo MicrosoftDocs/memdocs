@@ -24,8 +24,10 @@ highlightedContent:
       url: ./fundamentals/whats-new.md
     - title: Features in development
       itemType: overview
-      url: ./fundamentals/in-development.md    
-
+      url: ./fundamentals/in-development.md
+    - title: Microsoft Intune Suite add-ons
+      itemType: overview
+      url: ./fundamentals/intune-add-ons.md
 
 productDirectory:
   title: Get started with Microsoft Intune
@@ -96,18 +98,6 @@ conceptualContent:
         - url: ./fundamentals/licenses.md
           itemType: concept
           text: Intune licensing
-    
-    - title: Microsoft Intune add-ons
-      links:
-        - url: ./fundamentals/intune-add-ons.md
-          itemType: how-to-guide
-          text: Choose Intune add-ons
-        - url: ./remote-actions/remote-help.md
-          itemType: how-to-guide
-          text: Remote help
-        - url: ./protect/microsoft-tunnel-mam.md
-          itemType: how-to-guide
-          text: Microsoft Tunnel for Mobile Application Management
 
     - title: Manage apps
       links:
@@ -250,6 +240,18 @@ conceptualContent:
         - url: /analytics/
           itemType: concept
           text: Endpoint analytics docs
+    
+    - title: Microsoft Intune Suite add-ons
+      links:
+        - url: ./fundamentals/intune-add-ons.md
+          itemType: how-to-guide
+          text: Use Intune Suite add-on capabilities
+        - url: ./remote-actions/remote-help.md
+          itemType: how-to-guide
+          text: Remote help
+        - url: ./protect/microsoft-tunnel-mam.md
+          itemType: how-to-guide
+          text: Microsoft Tunnel for Mobile Application Management
 
     - title: Developer guidance
       links:
