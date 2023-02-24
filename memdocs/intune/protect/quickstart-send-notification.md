@@ -26,9 +26,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: 
-- M365-identity-device-management
+ms.collection:
 - tier3
+- M365-identity-device-management
 ---
 
 # Quickstart: Send notifications to noncompliant devices
@@ -38,7 +38,7 @@ In this quickstart, you'll use Microsoft Intune to send an email notification to
 > [!NOTE]
 > The remote action to send an email notification is not supported on devices that are managed by a [device compliance partner](../protect/device-compliance-partners.md).
 > [!NOTE]
-> For localization, admin must configure the target language from Intune console when creating the notification message template. The notification message language sent to the user will be based on the preferred language configured for the user in AAD. 
+> For localization, admin must configure the target language from Intune admin center when creating the notification message template. The notification message language sent to the user will be based on the preferred language configured for the user in AAD. 
 
 By default, when Intune detects a device that isn't compliant, Intune immediately marks the device as noncompliant. Azure Active Directory (Azure AD) [Conditional Access](/azure/active-directory/active-directory-conditional-access-azure-portal) then blocks the device. When a device isn't compliant, Intune allows you to add actions for noncompliance, which gives you flexibility to decide what to do. For example, you can give users a grace period to be compliant before blocking noncompliant devices.
 
@@ -53,13 +53,13 @@ When using device compliance policies to block devices from corporate resources,
 
 ## Sign in to Intune
 
-Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as a [Global administrator](../fundamentals/users-add.md#types-of-administrators) or an Intune [Service administrator](../fundamentals/users-add.md#types-of-administrators). If you've created an Intune Trial subscription, the account you created the subscription with is the Global administrator.
+Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as a [Global administrator](../fundamentals/users-add.md#types-of-administrators) or an Intune [Service administrator](../fundamentals/users-add.md#types-of-administrators). If you've created an Intune Trial subscription, the account you created the subscription with is the Global administrator.
 
 ## Create a notification message template
 
 To send email to your users, create a notification message template. When a device is noncompliant, the details you enter in the template is shown in the email sent to your users.
 
-1. In Intune, select **Devices** > **Compliance policies** > **Notifications** > **Create notification**.
+1. In the Intune admin center, select **Devices** > **Compliance policies** > **Notifications** > **Create notification**.
 2. Enter the following information for the **Basics** step:
    - **Name**: *Contoso Admin*
    - **Email header – Include company logo**: Set to **Enabled** to show your organization's logo.
@@ -88,7 +88,7 @@ When you create a device compliance policy, Intune automatically creates an acti
 
 The following steps will create a compliance policy for Windows 10 devices:
 
-1. In Microsoft Endpoint Manager, select **Devices** > **Compliance Policies** > **Create Policy**.
+1. In the Intune admin center, select **Devices** > **Compliance Policies** > **Create Policy**.
 2. Under **Platform**, click **Windows 10 and later**.
 3. Click **Create**.
 4. Enter the following information in the **Basics** step followed by **Next**:
@@ -109,13 +109,13 @@ After you have created a noncompliance policy, you can set an action to take pla
 
 The following steps will create an action for noncompliance for Windows 10 devices:
 
-1. In Microsoft Endpoint Manager, select **Devices** > **Windows** > **Compliance policies**.
+1. In the Intune admin center, select **Devices** > **Windows** > **Compliance policies**.
 2. Select your Windows 10 compliance policy from the list.
 3. In the **Windows 10 compliance** policy overview pane, select **Properties**.
 4. Next to the **Action for noncompliance** section, click **Edit**.
 5. In the **Action** drop-down box, select **Send email to end users**.
 6. In the **Schedule (days after noncompliance** drop-down box, select **0**.
-7  Under **Message template**,  click **None selected** to display the **Notification message templates** pane.
+7. Under **Message template**,  click **None selected** to display the **Notification message templates** pane.
 8. Click the template you created earlier in this topic, and then click **Select** to select the message template.
 9. Click **Review + save** < **Save** to save your compliance policy.
 

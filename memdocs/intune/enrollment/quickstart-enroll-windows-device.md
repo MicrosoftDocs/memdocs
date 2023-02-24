@@ -26,8 +26,9 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune
 ms.collection:
-  - M365-identity-device-management
-  - highpri
+- tier1
+- M365-identity-device-management
+- highpri
 ---
 
 # Quickstart: Enroll your Windows device  
@@ -98,7 +99,7 @@ Before enrolling your Windows device, you must confirm the version of Windows th
 
 ## Confirm your device enrollment in Intune  
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as a Global Administrator.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as a Global Administrator.
 2. Select **Devices** > **All devices** to view the enrolled devices in Intune.
 3. Verify that you have an additional device enrolled within Intune.
 

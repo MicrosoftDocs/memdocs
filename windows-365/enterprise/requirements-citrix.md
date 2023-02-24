@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 10/12/2022
+ms.date: 02/24/2023
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -25,22 +25,22 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; get-started
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- tier2
 ---
 
 # Requirements for using Citrix HDX Plus for Windows 365 Enterprise
-
-> [!IMPORTANT]
-> Citrix HDX Plus is currently in tech preview and isn't officially supported by Citrix.
 
 To use Citrix HDX Plus for Windows 365, you must meet the following requirements:
 
 ## Citrix requirements
 
 - Citrix Cloud tenant with HDX Plus for Windows 365 entitlement
-  - Citrix HDX Plus for Windows 365
-  - Citrix DaaS Premium
-  - Citrix DaaS Premium Plus
+  - DaaS Standard for Azure
+  - DaaS Advanced Plus
+  - DaaS Premium
+  - DaaS Premium Plus
 - Citrix admin account with full admin rights
 - Cloud PCs must have access to:
   - https://*.*.nssvc.net on TCP 443 and UDP 443 for HDX sessions over TCP and EDT, respectively. If you can’t allow all subdomains in that manner, you can instead use https://*.c.nssvc.net and https://*.g.nssvc.net. For more information, see the [Citrix Support Knowledge Center article CTX270584](https://support.citrix.com/article/CTX270584/citrix-gateway-service-pointsofpresence-pops).
@@ -48,6 +48,7 @@ To use Citrix HDX Plus for Windows 365, you must meet the following requirements
 - For Hybrid Azure Active Directory (Azure AD) joined deployments:
   - The Azure AD domain must be synchronized from the Azure AD domain that the Cloud PCs belong to.
   - Cloud Connectors to allow Citrix Cloud to connect to your Active Directory domain. For more information, see [Citrix Cloud Connector](https://docs.citrix.com/en-us/citrix-cloud/citrix-cloud-resource-locations/citrix-cloud-connector.html).
+- Allowlist endpoint required for VDA registation: \*.apps.cloud.com
 
 ## Microsoft requirements
 

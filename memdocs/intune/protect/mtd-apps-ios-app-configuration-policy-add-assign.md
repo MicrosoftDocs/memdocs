@@ -25,7 +25,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Add and assign Mobile Threat Defense (MTD) apps with Intune
@@ -199,7 +201,7 @@ See the instructions for [using Microsoft Intune app configuration policies for 
 1. In the **RADAR Wandera Portal**, select the **Add** button under **Configuration settings** format.
 2. Select **Activation Profile URL** from the list of **Configuration Keys**. Select **OK**.
 3. For **Activation Profile URL** select **string** from the **Value type** menu then copy the **Shareable Link URL** from the desired Activation Profile in RADAR.
-4. In the **Intune admin console app configuration UI**, select **Settings**, define **Configuration settings format > Use Configuration Designer** and paste the **Shareable Link URL**.  
+4. In the **Intune admin center app configuration UI**, select **Settings**, define **Configuration settings format > Use Configuration Designer** and paste the **Shareable Link URL**.  
 
 > [!NOTE] 
 > Unlike iOS, you will need to define a unique Android Enterprise app configuration policy for each Wandera Activation Profile. If you don’t require multiple Wandera Activation Profiles, you may use a single Android app configuration for all target devices. When creating Activation Profiles in Wandera, be sure to select “Azure Active Directory” under the Associated User configuration to ensure Wandera is able to synchronize the device with Intune via UEM Connect.
@@ -210,7 +212,7 @@ See the instructions for [using Microsoft Intune app configuration policies for 
 
 1. In **RADAR Wandera Portal**, navigate to **Devices > Activations** and select any activation profile. Select **Deployment Strategies > Managed Devices > Microsoft Intune** and locate the **iOS App Configuration settings**.  
 2. Expand the box to reveal the iOS app configuration XML and copy it to your system clipboard.  
-3. In **Intune admin console app configuration UI Settings,** define **Configuration settings format > Enter XML data**. 
+3. In **Intune admin center app configuration UI Settings,** define **Configuration settings format > Enter XML data**. 
 4. Paste the XML in the app configuration text box.
 
 > [!NOTE]

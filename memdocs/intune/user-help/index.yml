@@ -11,7 +11,9 @@ metadata:
   ms.service: microsoft-intune
   ms.subservice: end-user
   ms.topic: landing-page 
-  ms.collection: collection
+  ms.collection:
+  - tier2
+  - collection
   author: lenewsad
   ms.author: lanewsad
   manager: dougeby

@@ -1,7 +1,7 @@
 ---
 # required metadata
 title: Create organizational messages | Microsoft Intune  
-description: Create and manage organizational messages in the Microsoft Endpoint Manager admin center.       
+description: Create and manage organizational messages in the Microsoft Intune admin center.       
 keywords:
 author: Lenewsad
 ms.author: lanewsad
@@ -22,7 +22,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure 
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Create organizational messages  
@@ -32,7 +34,7 @@ ms.collection: M365-identity-device-management
 > [!IMPORTANT]
 > This feature is in public preview. For more information, see [Public preview in Microsoft Intune](../fundamentals/public-preview.md).  
 
-Create, edit, and monitor [organizational messages](organizational-messages-overview.md) in the Microsoft Endpoint Manager admin center. You can send important messages and call-to-actions to employees on Windows 11 devices managed by Microsoft Intune. 
+Create, edit, and monitor [organizational messages](organizational-messages-overview.md) in the Microsoft Intune admin center. You can send important messages and call-to-actions to employees on Windows 11 devices managed by Microsoft Intune. 
 
 This article describes how to create the following types of organizational messages: 
 
@@ -42,7 +44,7 @@ This article describes how to create the following types of organizational messa
 
 ## Before you create a message   
 Complete these steps before creating a message.  
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Go to  **Tenant administration** > **Organizational messages (preview)**. 
 3. Spend some time in the **Overview** tab to learn about messaging options and prerequisites. 
 

@@ -27,8 +27,9 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection:
-  - M365-identity-device-management
-  - highpri
+- tier1
+- M365-identity-device-management
+- highpri
 ---
 
 # How to wipe only corporate data from Intune-managed apps
@@ -52,7 +53,7 @@ Windows Information Protection (WIP) policies can be deployed without requiring 
 
 ## Create a device based wipe request
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **App selective wipe** > **Create wipe request**.<br>
    The **Create wipe request** pane is displayed.
 3. Click **Select user**, choose the user whose app data you want to wipe, and click **Select** at the bottom of the **Select user** pane.
@@ -73,7 +74,7 @@ The service creates and tracks a separate wipe request for each protected app on
 
 By adding a user to the User-level wipe we will automatically issue wipe commands to all apps on all the user's devices.  The user will continue to get wipe commands at every check-in from all devices.  To re-enable a user, you must remove them from the list.  
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **App selective wipe** > **User-Level Wipe**
 3. Click **Add** and **Select user** pane is displayed.
 4. Chose the user whose app data you would like to wipe and click **Select**.

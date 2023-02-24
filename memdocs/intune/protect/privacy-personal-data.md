@@ -26,13 +26,15 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 
 # Privacy and personal data in Intune
 
-Microsoft Intune operates as a data processor on behalf of the customer as necessary to provide customers with the requested service as set forth in the [Microsoft Online Services Terms (OST)](https://go.microsoft.com/fwlink/p/?LinkId=2098215). Personal data is provided directly through Customer Administrator use of Intune through the Azure portal or Microsoft Endpoint Manager admin center, or from customer devices when enrolled for management. Personal data is also collected at third-party services per the customer’s instructions such as [setting up Apple Volume Purchasing Program](privacy-data-secure-share.md#data-sharing). Customers can receive, transmit, and store data on devices managed by Intune. Personal data is processed and stored within the audited compliance boundary of the Intune service under the technical security measures assured through [Microsoft Online Services Terms (OST)](https://go.microsoft.com/fwlink/p/?LinkId=2098215). 
+Microsoft Intune operates as a data processor on behalf of the customer as necessary to provide customers with the requested service as set forth in the [Microsoft Online Services Terms (OST)](https://go.microsoft.com/fwlink/p/?LinkId=2098215). Personal data is provided directly through Customer Administrator use of Intune through the Azure portal or Microsoft Intune admin center, or from customer devices when enrolled for management. Personal data is also collected at third-party services per the customer’s instructions such as [setting up Apple Volume Purchasing Program](privacy-data-secure-share.md#data-sharing). Customers can receive, transmit, and store data on devices managed by Intune. Personal data is processed and stored within the audited compliance boundary of the Intune service under the technical security measures assured through [Microsoft Online Services Terms (OST)](https://go.microsoft.com/fwlink/p/?LinkId=2098215). 
 
 To help Intune admins set expectations on how your data’s privacy is protected, this article provides information on how Intune collects, stores, retains, processes, secures, shares, audits, and exports personal data. You’ll also learn how to review, correct, and delete your personal data.
 

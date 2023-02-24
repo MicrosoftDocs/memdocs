@@ -24,7 +24,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
  
 # Use Device Firmware Configuration Interface (DFCI) profiles on Windows devices in Microsoft Intune
@@ -91,7 +93,7 @@ This profile includes the DFCI settings you configure.
 > [!TIP]
 > Configuring and assigning DFCI profiles can lock the device beyond repair. So, pay attention to the values you configure.
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Configuration profiles** > **Create profile**.
 3. Enter the following properties:
 

@@ -26,8 +26,9 @@ search.appverid:
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection:
-  - M365-identity-device-management
-  - highpri
+- tier1
+- M365-identity-device-management
+- highpri
 ---
 
 # Manage your devices and control device features in Microsoft Intune
@@ -38,7 +39,7 @@ Enter Microsoft Intune. Intune is a cloud-based service that can control devices
 
 The goal of any organization that's managing devices is to secure devices and the data they access. This task includes organization owned devices and personally owned devices that access your organization resources.
 
-From a service perspective, Intune uses Azure Active Directory (AD) for device storage and permissions. Using the [Microsoft Endpoint Manager admin center](tutorial-walkthrough-endpoint-manager.md), you can manage device tasks and policies in a central location designed for endpoint management.
+From a service perspective, Intune uses Azure Active Directory (AD) for device storage and permissions. Using the [Microsoft Intune admin center](tutorial-walkthrough-endpoint-manager.md), you can manage device tasks and policies in a central location designed for endpoint management.
 
 This article discusses concepts and features you should consider when managing your devices.
 
@@ -139,7 +140,7 @@ In Intune, some common security tasks include:
   - [Manage device security with endpoint security policies in Microsoft Intune](../protect/endpoint-security-policy.md)
   - [Windows Autopatch overview](/windows/deployment/windows-autopatch/overview/windows-autopatch-overview)
 
-- **Manage devices remotely** using the Endpoint Manager admin center. You can remotely lock, restart, locate a lost device, restore a device to its factory settings, and more. These tasks are helpful if a device is lost or stolen, or if you're remotely troubleshooting a device.
+- **Manage devices remotely** using the Intune admin center. You can remotely lock, restart, locate a lost device, restore a device to its factory settings, and more. These tasks are helpful if a device is lost or stolen, or if you're remotely troubleshooting a device.
 
   For more information, go to [Remote actions in Intune](../remote-actions/device-management.md).
 

@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 manager: aaroncz
 ms.reviewer: jubaptis
-ms.date: 11/17/2022
+ms.date: 2/14/2023
 ms.collection: 
   - M365-modern-desktop
 ms.topic: article
@@ -16,16 +16,23 @@ ms.topic: article
 
 # Windows Autopilot: What's new
 
-## Win32 App Supersedence ESP improvements 
+## Bug fix: Intune Management Extension updates during Enrollment Status Page
+
+In 2302, the Intune Management extension will no longer attempt to upgrade during an active Enrollment Status Page session. Previously, the Intune Management Extension (IME) would attempt to upgrade during the Enrollment Status Page, which can cause apps to time out and then fail the Autopilot deployment. This timeout is more commonly seen in pre-provisioning scenarios where a device may be provisioned with one version of the IME during the technician phase, and may require an update during the user phase.
+
+## Win32 App Supersedence ESP improvements
+
 Starting in January 2023 we're currently in the process of rolling out Win32 app supersedence GA, which will introduce enhancements to ESP behavior around app tracking and app processing. Specifically, admins may notice a change in app counts. For more information, see [Win32 app supersedence improvements](https://techcommunity.microsoft.com/t5/intune-customer-success/upcoming-improvements-to-win32-app-supersedence/ba-p/3713026) and [Add Win32 app supersedence](/mem/intune/apps/apps-win32-supersedence).
 
-## Support for Temporary Access Pass 
-In 2301 Windows Autopilot will support the use of [Temporary Access Pass](/azure/active-directory/authentication/howto-authentication-temporary-access-pass) for Azure AD joined user driven, pre-provisioning and self-deploying mode for shared devices. A Temporary Access Pass is a time-limited passcode that can be configured for multi or single use to allow users to onboard other authentication methods. These authentication methods include passwordless methods such as Microsoft Authenticator, FIDO2 or Windows Hello for Business. 
+## Support for Temporary Access Pass
+
+In 2301 Windows Autopilot will support the use of [Temporary Access Pass](/azure/active-directory/authentication/howto-authentication-temporary-access-pass) for Azure AD joined user driven, pre-provisioning and self-deploying mode for shared devices. A Temporary Access Pass is a time-limited passcode that can be configured for multi or single use to allow users to onboard other authentication methods. These authentication methods include passwordless methods such as Microsoft Authenticator, FIDO2 or Windows Hello for Business.
 
 For more information on supported scenarios, see [Temporary Access Pass](windows-autopilot-scenarios.md#temporary-access-pass).
 
 ## Autopilot automatic device diagnostics collection
 <!--1895390-->
+
 Starting with Intune 2209, Intune will automatically capture diagnostics when devices experience a failure during the Autopilot process on Windows 10 version 1909 or later and with Windows 11. When logs are finished processing on a failed device, they will be automatically captured and uploaded to Intune. Diagnostics may include user identifiable information such as user or device name. If the logs are not available in Intune, check if the device is powered-on and has access to the internet. Diagnostics are available for 28 days before they are removed.
 
 For more information, see [Collect diagnostics from a Windows device](../intune/remote-actions/collect-diagnostics.md).
@@ -37,7 +44,7 @@ With Intune 2208 we are updating the Autopilot infrastructure to ensure that the
 ## Update Intune Connector for Active Directory for Hybrid Azure AD joined devices
 <!-- 2209 -->
 
-Starting in September 2022, the Intune Connector for Active Directory (ODJ connector) will require .NET Framework version 4.7.2 or later. If you're not already using .NET 4.7.2 or later, the Intune Connector may not work for Autopilot hybrid Azure AD deployments and will result in failures. When you install a new Intune Connector, don't use the connector installation package that was previously downloaded. Before you install a new connector, update the .NET Framework to version 4.7.2 or later. Download a new version from the **Intune Connector for Active Directory** section of the Microsoft Endpoint Manager admin center. If you're not using the latest version, it may continue to work, but the auto-upgrade feature to provide updates to the Intune Connector won't work.
+Starting in September 2022, the Intune Connector for Active Directory (ODJ connector) will require .NET Framework version 4.7.2 or later. If you're not already using .NET 4.7.2 or later, the Intune Connector may not work for Autopilot hybrid Azure AD deployments and will result in failures. When you install a new Intune Connector, don't use the connector installation package that was previously downloaded. Before you install a new connector, update the .NET Framework to version 4.7.2 or later. Download a new version from the **Intune Connector for Active Directory** section of the Microsoft Intune admin center. If you're not using the latest version, it may continue to work, but the auto-upgrade feature to provide updates to the Intune Connector won't work.
 
 ## Enroll to co-management from Windows Autopilot
 <!-- 11300628 -->

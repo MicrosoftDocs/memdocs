@@ -26,9 +26,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: 
-- M365-identity-device-management
+ms.collection:
 - tier3
+- M365-identity-device-management
 ---
 
 # Enforce compliance on Macs managed with Jamf Pro
@@ -50,7 +50,7 @@ After integration is configured, device users learn about Jamf Pro and Intune in
 
 ## Set up device compliance policies in Intune
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Devices** > **Compliance policies**. If you're using a previously created policy, select that policy in the admin center and then go to the next step of this procedure. To create a new policy, select **Create Policy** and then specify details for a policy with a *Platform* of **macOS**. Configure *Settings* and *Actions for noncompliance* to meet your organizational requirements, and then select **Create** to save the policy.
 
@@ -125,7 +125,7 @@ The console displays a message with the success or failure of the connection. Sh
 
 ## Removing a Jamf-managed device from Intune
 
-To remove a Jamf-managed device, open the Microsoft Endpoint Manager admin center, and select **Devices** > **All devices**, select the device, and then select **Delete**.  Bulk device deletion can be enabled by selecting multiple devices and clicking **Delete**.
+To remove a Jamf-managed device, open the Microsoft Intune admin center, and select **Devices** > **All devices**, select the device, and then select **Delete**.  Bulk device deletion can be enabled by selecting multiple devices and clicking **Delete**.
 
 Get information on how to [remove a Jamf-managed device in the Jamf Pro docs](https://www.jamf.com/jamf-nation/articles/80/unmanaging-computers-while-preserving-their-inventory-information). You can also file a support ticket with [Jamf support](https://www.jamf.com/support/) for more help.
 

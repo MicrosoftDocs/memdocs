@@ -24,9 +24,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 #ms.custom:
-ms.collection: 
-- M365-identity-device-management
+ms.collection:
 - tier3
+- M365-identity-device-management
 ---
 
 # Delivery Optimization settings for Windows devices in Intune
@@ -40,7 +40,7 @@ Applies to:
 
 This article lists some of the settings for Delivery Optimization that Intune supports for devices that run Windows 10 or later.  
 
-Most options in the Microsoft Endpoint Manager admin center directly map to Delivery Optimization settings that are covered in-depth in the Windows documentation. These options include links to relevant content.  Settings or options that are specific to Intune don't contain links to additional content.  
+Most options in the Microsoft Intune admin center directly map to Delivery Optimization settings that are covered in-depth in the Windows documentation. These options include links to relevant content.  Settings or options that are specific to Intune don't contain links to additional content.  
 
 The following tables include:  
 

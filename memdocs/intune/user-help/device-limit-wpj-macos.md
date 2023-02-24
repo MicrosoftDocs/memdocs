@@ -25,7 +25,8 @@ ms.reviewer: elocholi
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
-ms.collection: 
+ms.collection:
+- tier2
 ---
 
 # The limit of macOS devices you can register has been reached

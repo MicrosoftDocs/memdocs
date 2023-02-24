@@ -23,9 +23,10 @@ ms.reviewer: annovich
 search.appverid: MET150
 #ms.tgt_pltfrm:
 #ms.custom:
-ms.collection: 
-  - M365-identity-device-management
-  - highpri
+ms.collection:
+- tier1
+- M365-identity-device-management
+- highpri
 ---
 
 # Manage iOS/iPadOS software update policies in Intune
@@ -58,7 +59,7 @@ Consider testing to assess the impact of OS updates on the app you are running i
 
 ## Configure the policy
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Update policies for iOS/iPadOS** > **Create profile**.
 3. On the **Basics** tab, specify a name for this policy, specify a description (optional), and then select **Next**.
 
@@ -150,7 +151,7 @@ For guidance from the Intune support team, see [Delay visibility of software upd
 
 ## Monitor for update installation failures on devices
 
-In the Microsoft Endpoint Manager admin center, go to **Devices** > **Monitor** > **Installation failures for iOS devices**.
+In the Microsoft Intune admin center, go to **Devices** > **Monitor** > **Installation failures for iOS devices**.
 
 Intune displays a list of supervised iOS/iPadOS devices that are targeted by an update policy. The list doesn't include devices that are up-to-date and healthy because iOS/iPad devices only return information about installation failures.
 
