@@ -99,9 +99,6 @@ For more information on filters, go to:
 - [Use filters when assigning your apps, policies, and profiles in Intune](filters.md)
 - [Device properties, operators, and rule editing when creating filters in Intune](filters-device-properties.md)
 
-Applies to:  
-- Windows 10 and later
-
 #### Size and generation included in iOS/iPadOS model information<!-- 16406692  -->  
 You can view the size and generation for enrolled iOS/iPadOS devices as part of the **Model** attribute in **Hardware device details**.
 
