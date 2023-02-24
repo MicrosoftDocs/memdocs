@@ -151,7 +151,7 @@ conceptualContent:
           itemType: concept
           text: Use Mobile Threat Defense software with Intune
       footerLink:
-        text: Browse the Protect articles
+        text: Browse the articles for data and device protection capabilities
         url: ./protect/device-compliance-get-started.md
 
     - title: Create compliance rules for users and devices
