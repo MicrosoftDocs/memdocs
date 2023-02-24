@@ -26,7 +26,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure;seodec18
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Intune actions and options supported with Apple User Enrollment
@@ -101,21 +103,18 @@ The following options aren't supported on devices enrolled with User Enrollment.
 - Collect app inventory for apps outside of the managed APFS volume.
 - Collect inventory of certificates and provisioning profiles outside of the managed APFS volume.
 - Collect UDID and other persistent device identifiers, such as phone number, serial number, and IMEI
-- User Enrollment supports a unique enrollment ID for each device enrolled, but this ID doesn't persist after unenrollment.
-- The following Intune features aren't supported because of this limitation:
+- User Enrollment supports a unique enrollment ID for each device enrolled, but this ID doesn't persist after unenrollment. 
 - SCEP User profiles with Subject Name Format of Serial Number.
 - Device-level VPN.
 - Device-licensed VPP app deployment.
 - Install App Store apps as managed apps.
 - MDM control of applications outside of the managed APFS volume.
-- Application Protection Policies will still apply to these apps. However, you won't be able to take over management or deploy a managed version of these apps unless the user deletes them from their device.
+  - Application Protection Policies will still apply to these apps. However, you won't be able to take over management or deploy a managed version of these apps unless the user deletes them from their device.
 - Actions, configurations, settings, and commands requiring supervision. 
-
-
-## Known issues in preview
-- VPP license revocation: A notification that the license has been revoked does not appear. The current behavior is that the revocation is successful, but the end user is not notified. 
-- Application reporting: For app types unsupported with User Enrollment, reports may provide irrelevant error messages. 
-- Company Portal app experience: Users see the same text indicating what organizations can see for User and Device Enrollment if the admin has customized the text indicating what organizations can't see.
+- Customized privacy text in the Company Portal. If the admin has customized the text indicating what organizations can/can't see, then users will see the same text indicating what organizations can/can't see for User and Device Enrollment in the Company Portal. 
+- Devices running iOS 15.5 cannot enroll with User Enrollment if MFA text or call is needed on the same device during enrollment. 
+- Devices running iOS 15.7 through iOS 16.3 cannot enroll with User Enrollment with MFA text. MFA call must be used in order to enroll with User Enrollment if MFA is needed on the same device during enrollment. 
+- Application reporting for app types unsupported with User Enrollment. 
 
 
 ## Next steps

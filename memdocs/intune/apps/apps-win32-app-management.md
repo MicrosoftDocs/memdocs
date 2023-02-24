@@ -19,13 +19,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: contperf-fy21q1
 ms.collection:
-  - M365-identity-device-management
-  - highpri
+- tier1
+- M365-identity-device-management
+- highpri
 ---
 
 # Win32 app management in Microsoft Intune
 
-Microsoft Intune allows Win32 app management capabilities. Although it's possible for cloud-connected customers to use Microsoft Endpoint Configuration Manager for Win32 app management, Intune-only customers will have greater management capabilities for their Win32 apps. This topic provides an overview of the Intune Win32 app management features and related information.
+Microsoft Intune allows Win32 app management capabilities. Although it's possible for cloud-connected customers to use Microsoft Configuration Manager for Win32 app management, Intune-only customers will have greater management capabilities for their Win32 apps. This topic provides an overview of the Intune Win32 app management features and related information.
 
 > [!NOTE]
 > This app management capability supports both 32-bit and 64-bit operating system architecture for Windows applications.
@@ -99,7 +100,7 @@ For available apps, the start time will dictate when the app is visible in the c
 
 Set the app availability based on a date and time for a required app by using the following steps:
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All apps**.
 3. In the **Windows app (Win32)** list, select an app.
 4. From the app pane, select **Properties** > **Edit** next to the **Assignments** section. Then select **Add group** below the **Required** assignment type.

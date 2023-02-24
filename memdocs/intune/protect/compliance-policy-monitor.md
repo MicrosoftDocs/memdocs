@@ -23,9 +23,10 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: 
-  - M365-identity-device-management
-  - highpri
+ms.collection:
+- tier1
+- M365-identity-device-management
+- highpri
 ---
 # Monitor results of your Intune Device compliance policies
 
@@ -50,7 +51,7 @@ This article applies to:
 
 Open the **Intune Device compliance dashboard**:
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Devices** > **Overview** > **Compliance status** tab.
 
@@ -67,7 +68,7 @@ When the dashboard opens, you get an overview with all the compliance reports. I
 - Threat agent status
 - Device protection status
 
-:::image type="content" source="./media/compliance-policy-monitor/idc-1.png" alt-text="Screenshot of the Microsoft Endpoint Manager admin center compliance overview and the different reports.":::
+:::image type="content" source="./media/compliance-policy-monitor/idc-1.png" alt-text="Screenshot of the Microsoft Intune admin center compliance overview and the different reports.":::
 
 As you dig in to this reporting, you can also see any specific compliance policies and settings that apply to a specific device, including the compliance state for each setting.
 
@@ -169,11 +170,14 @@ On the *Compliance status* page, next to the *Policy compliance* chart, you can 
 
 When you select the tile, it shows all devices without a compliance policy. It also shows the user of the device, the policy deployment status, and the device model.
 
+> [!TIP]  
+> In public preview, there is a new organizational report that identifies all devices in your tenant that have not been assigned a compliance report. See [Devices without compliance policy (preview) (Organizational)](../fundamentals/reports.md#devices-without-compliance-policy-preview-organizational).
+
 #### What you need to know
 
 - With the **Mark devices with no compliance policy assigned as** security setting, it's important to identify devices without a compliance policy. Then you can assign at least one compliance policy to them.
 
-  The security setting is configurable in the Microsoft Endpoint Manager admin center. Go to **Devices** > **Compliance policies** > **Compliance policy settings**. Then, set **Mark devices with no compliance policy assigned as** to **Compliant** or **Not compliant**.
+  The security setting is configurable in the Microsoft Intune admin center. Go to **Devices** > **Compliance policies** > **Compliance policy settings**. Then, set **Mark devices with no compliance policy assigned as** to **Compliant** or **Not compliant**.
 
 - Users who are assigned a compliance policy of any type aren't shown in the report, regardless of device platform. For example, if you've assigned a Windows compliance policy to a user with an Android device, the device doesn't show up in the report. However, Intune considers that Android device not compliant. To avoid issues, we recommend that you create policies for each device platform and deploy them to all users.
 
@@ -193,7 +197,7 @@ The **Setting compliance** chart shows you all device compliance policy settings
 
 In addition to using the charts on *Compliance status*, you can go to **Reports** > **Device compliance**.
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Devices** > **Monitor**, and then from below **Compliance** select the report you want to view. Some of the available compliance reports include:
 

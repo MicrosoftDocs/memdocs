@@ -26,9 +26,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: 
-- M365-identity-device-management
+ms.collection:
 - tier3
+- M365-identity-device-management
 ---
 
 # Collect diagnostics from a Windows device
@@ -64,7 +64,7 @@ The *Collect diagnostics* remote action is supported for:
 
 To use the *Collect diagnostics* action:
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431)
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431)
 2. Navigate to **Devices** > **Windows** > select a supported device.
 3. On the device’s **Overview** page, select **…** >  **Collect diagnostics** > **Yes**. A pending notification appears on the device’s **Overview** page.
 4. To see the status of the action, select **Device diagnostics monitor**.
@@ -78,7 +78,7 @@ To use the *Collect diagnostics* action:
 
 To view the diagnostics collected after an Autopilot failure:
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431)
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431)
 2. Navigate to **Devices** > **Monitor** > **Autopilot deployments (preview)**.
 3. In the middle pane, select a device.
 4. On the right hand **Properties** pane, under **Device Diagnostics**, select **Download**.
@@ -172,7 +172,7 @@ Files:
 
 The **Collect diagnostics** remote action is enabled by default. You can disable the **Collect diagnostics** remote action for all devices by following these steps:
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431)
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431)
 2. Navigate to **Tenant administration** > **Device diagnostics**.
 3. Change the control under **Device diagnostics are available for corporate-managed devices running Windows 10, version 1909 and later, or Windows 11.** to **Disabled**.
 
@@ -183,11 +183,17 @@ The **Collect diagnostics** remote action is enabled by default. You can disable
 
 Autopilot automatic diagnostic capture is enabled by default. You can disable Autopilot automatic diagnostic capture by following these steps:
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431)
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431)
 2. Navigate to **Tenant administration** > **Device diagnostics**.
 3. Change the control under **Automatically capture diagnostics when devices experience a failure during the Autopilot process on Windows 10 version 1909 or later and Windows 11. Diagnostics may include user identifiable information such as user or device name (preview).** to **Disabled**.
 
      :::image type="content" source="./media/collect-diagnostics/disable-autopilot-diagnostics.png" alt-text="Screenshot that shows the Device diagnostics pane with the highlighted control for Autopilot automatic diagnostics collection set to Disabled.":::
+
+## WinGet troubleshooting using diagnostic files
+[WinGet](/windows/package-manager/winget/) is a command line tool that enables you to discover, install, upgrade, remove, and configure applications on Windows 10 and Windows 11 devices. When working with [Win32 app management in Intune](../apps/apps-win32-app-management.md), you can use the following files to help troubleshoot WinGet:
+- *%TEMP%\winget\defaultstate\*.log*
+- *Microsoft-Windows-AppXDeployment/Operational*
+- *Microsoft-Windows-AppXDeploymentServer/Operational*
 
 ## Known issues with device diagnostics
 

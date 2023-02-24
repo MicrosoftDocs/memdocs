@@ -25,7 +25,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Monitor device configuration profiles in Microsoft Intune
@@ -34,7 +36,7 @@ Intune includes some features to help monitor and manage your device configurati
 
 ## View existing profiles
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Configuration profiles**.
 
 All of your profiles are shown. You also see the platform, the type of profile, and if the profile is assigned.

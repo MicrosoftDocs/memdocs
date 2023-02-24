@@ -95,10 +95,13 @@ items:
     - name: Device features
       href: device-features-configure.md
       displayName: airprint, home screen, lock screen, sso, single sign-on
-    - name: Use Enterprise SSO plug-in
+    - name: Enterprise SSO plug-in overview
       href: use-enterprise-sso-plug-in-ios-ipados-macos.md
-    - name: Use Enterprise SSO plug-in in Jamf Pro
-      href: use-enterprise-sso-plug-in-ios-ipados-macos-with-jamf-pro.md
+      items:
+      - name: iOS/iPadOS SSO plug-in
+        href: use-enterprise-sso-plug-in-ios-ipados-with-intune.md
+      - name: macOS SSO plug-in
+        href: use-enterprise-sso-plug-in-macos-with-intune.md
   - name: Extensions on macOS
     href: kernel-extensions-overview-macos.md
     displayName: kernel extensions, system extensions

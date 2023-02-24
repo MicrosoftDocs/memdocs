@@ -26,7 +26,8 @@ ms.reviewer: esmich
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
-ms.collection: 
+ms.collection:
+- tier2
 ---
 
 # Android device enrollment overview  
@@ -76,7 +77,7 @@ The Company Portal or Microsoft Intune app will automatically check in, or sync,
 When your device is out-of-sync or no longer meets the requirements, its status appears as *Not compliant*. Your access to work and school-related resources might be revoked until your device meets the requirements again. The Company Portal app notifies you of these problems and the steps you need to take to fix them.  
 
 
-## Get remote help from IT support person    
+## Get Remote Help from IT support person    
 When you enroll your device, your company support or IT admin is given access to the device for limited and meaningful reasons.   
 
 They can:  

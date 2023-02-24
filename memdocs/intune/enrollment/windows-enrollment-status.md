@@ -27,8 +27,9 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure;seodec18
 ms.collection:
-  - M365-identity-device-management
-  - highpri
+- tier1
+- M365-identity-device-management
+- highpri
 ---
 
 
@@ -59,7 +60,7 @@ ESP uses the [EnrollmentStatusTracking configuration service provider (CSP)](/wi
 
 ## Create new profile 
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Devices**.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Devices**.
 2. Select **Windows** > **Windows enrollment** > **Enrollment Status Page**.
 3. Select **Create**.
 4. In **Basics**, enter the following properties:  
@@ -128,9 +129,7 @@ ESP uses the [EnrollmentStatusTracking configuration service provider (CSP)](/wi
 
 Intune applies the default profile to all users and all devices when no other ESP profiles are available to assign. You can configure the default profile to show or hide the ESP.      
  
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Devices**.
-2. Select **Windows** > **Windows enrollment** > **Enrollment Status Page**.  
-2. Select the **Default** profile in the table.  
+1. Select the default profile.  
 3. Select **Properties**. 
 4. Go to the **Settings** section and select **Edit**.  
 5. Configure **Show app and profile installation progress** to set the behavior of the default profile. Your options:
@@ -160,9 +159,7 @@ To prioritize your profiles:
 
 Specify the apps that must be installed before the user can exit the ESP. You can choose up to 100 apps.   
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Devices**.
-2. Select **Windows** > **Windows enrollment** > **Enrollment Status Page**.
-3. Choose a profile > **Settings**.
+1. Choose an enrollment status page profile, and then select **Settings**.
 4. Choose **Yes** for **Show app and profile installation progress**.
 5. Choose **Yes** for **Block device use until all apps and profiles are installed**.
 6. Choose **Selected** for **Block device use until these required apps are installed if they're assigned to the user/device**.
@@ -274,7 +271,7 @@ This section lists the known issues for the enrollment status page.
 - A reboot during device setup forces the user to enter their credentials before the account setup phase. User credentials aren't preserved during reboot. Instruct the device users to enter their credentials to continue to the account setup phase.  
 - The ESP always times out on devices running Windows 10, version 1903 and earlier, and
 enrolled via the *Add work and school account* option. The ESP waits for Azure AD registration to complete. The issue is fixed on Windows 10 version 1903 and later.  
-- Hybrid Azure AD Autopilot deployment with ESP takes longer than the timeout duration entered in the ESP profile. On Hybrid Azure AD Autopilot deployments, the ESP takes 40 minutes longer than the value set in the ESP profile. For example, you set the timeout duration to 30 minutes in the profile. The ESP can take 30 minutes + 40 minutes. This delay gives the on-prem AD connector time to create the new device record to Azure AD.  
+- Hybrid Azure AD Autopilot deployment with ESP takes longer than the timeout duration entered in the ESP profile. On Hybrid Azure AD Autopilot deployments, the ESP takes 40 minutes longer than the value set in the ESP profile. For example, you set the timeout duration to 30 minutes in the profile. The ESP can take 30 minutes + 40 minutes. This delay gives the on-premises AD connector time to create the new device record to Azure AD.  
 - Windows logon page isn't pre-populated with the username in Autopilot User Driven Mode. If there's a reboot during the Device Setup phase of ESP:
   - the user credentials aren't preserved
   - the user must enter the credentials again before proceeding from Device Setup phase to the Account setup phase

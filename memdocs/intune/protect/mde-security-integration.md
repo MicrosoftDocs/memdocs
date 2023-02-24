@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/29/2022
+ms.date: 02/20/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -23,24 +23,25 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: 
-  - M365-identity-device-management
-  - highpri
+ms.collection:
+- tier1
+- M365-identity-device-management
+- highpri
 ms.reviewer: mattcall
 
 ---
 
-# Manage Microsoft Defender for Endpoint on devices with Microsoft Endpoint Manager
+# Manage Microsoft Defender for Endpoint on devices with Microsoft Intune
 
-With Microsoft Defender for Endpoint (MDE), you can now deploy security configurations from Microsoft Endpoint Manager directly to your onboarded devices without requiring a full Microsoft Endpoint Manager device enrollment. This capability is known as *Security Management for Microsoft Defender for Endpoint*. With this capability, devices that aren’t managed by a Microsoft Endpoint Manager service can receive security configurations for Microsoft Defender for Endpoint directly from Endpoint Manager.
+With Microsoft Defender for Endpoint (MDE), you can now deploy security configurations from Microsoft Intune directly to your onboarded devices without requiring a full Microsoft Intune device enrollment. This capability is known as *Security Management for Microsoft Defender for Endpoint*. With this capability, devices that aren’t managed by a Microsoft Intune service can receive security configurations for Microsoft Defender for Endpoint directly from Endpoint Manager.
 
 When devices are managed through this capability:
 
-- You use the Microsoft Endpoint Manager admin center to configure endpoint security policies for MDE and assign those policies to Azure AD groups
+- You use the Microsoft Intune admin center to configure endpoint security policies for MDE and assign those policies to Azure AD groups
 - Devices get the policies based on their Azure Active Directory device object. A device that isn’t already present in Azure Active Directory is joined as part of this solution
-- When a device receives a policy, the Defender for Endpoint components on the device enforce the policy and report on the devices status. The device's status is available in the Microsoft Endpoint Manager admin center
+- When a device receives a policy, the Defender for Endpoint components on the device enforce the policy and report on the device's status. The device's status is available in the Microsoft Intune admin center
 
-This scenario extends the Microsoft Endpoint Manager Endpoint Security surface to devices that aren't capable of enrolling in Endpoint Manager. When a device is managed by Endpoint Manager (enrolled to Intune) the device won't process policies for Security Management for Microsoft Defender for Endpoint. Instead, use Intune to deploy policy for Defender for Endpoint to your devices.
+This scenario extends the Microsoft Intune Endpoint Security surface to devices that aren't capable of enrolling in Intune. When a device is managed by Intune (enrolled to Intune) the device won't process policies for Security Management for Microsoft Defender for Endpoint. Instead, use Intune to deploy policy for Defender for Endpoint to your devices.
 
 :::image type="content" source="./media/mde-security-integration/endpoint-security-overview.png" alt-text="Conceptual diagram of the MDE-Attach solution." lightbox="./media/mde-security-integration/endpoint-security-overview.png":::
 
@@ -48,7 +49,7 @@ This scenario extends the Microsoft Endpoint Manager Endpoint Security surface t
 
 ## Monitor status
 
-Status and reports for policies that target devices in this channel are available from the policy node under Endpoint security in the Microsoft Endpoint Manager admin center.
+Status and reports for policies that target devices in this channel are available from the policy node under Endpoint security in the Microsoft Intune admin center.
 
 Drill in to the policy type and then select the policy to view its status. The following policy types support MDE security configuration:
 
@@ -66,7 +67,7 @@ When you select a policy, you'll see information about the device check-in statu
 
 ### Device check-in frequency
 
-Devices managed by this capability check-in with Microsoft Endpoint Manager every 90 minutes to update policy.
+Devices managed by this capability check-in with Microsoft Intune every 90 minutes to update policy.
 
 You can manually sync a device on-demand from the [Microsoft 365 Defender portal](https://security.microsoft.com/). Sign-in to the portal and go to **Devices**. Select a device that is managed by MDE, and then select the **Policy sync** button:  
 
@@ -76,15 +77,20 @@ The Policy sync button only appears for devices that are successfully managed by
 
 ### Devices protected by Tamper Protection
 
-If a device has Tamper Protection turned on, it will not be possible to edit its settings without turning off Tamper Protection. When editing settings for a device with Tamper Protection turned on, Microsoft Endpoint Manager presents a *Failed* setting status with an error code of `-2147024891`.
+If a device has Tamper Protection turned on, it will not be possible to edit its settings without turning off Tamper Protection. When editing settings for a device with Tamper Protection turned on, Microsoft Intune presents a *Failed* setting status with an error code of `-2147024891`.
 
 ### Assignment Filters and Security Management for Microsoft Defender for Endpoint
 
-Assignment filters aren't supported for devices communicating through the Microsoft Defender for Endpoint channel. While assignment filters can be added to a policy that could be targeted at these devices, the device will ignore assignment filters. For assignment filter support, the device must be enrolled in to Microsoft Endpoint Manager.
+Assignment filters aren't supported for devices communicating through the Microsoft Defender for Endpoint channel. While assignment filters can be added to a policy that could be targeted at these devices, the device will ignore assignment filters. For assignment filter support, the device must be enrolled in to Microsoft Intune.
 
 ### Deleting and removing devices
 
-Devices that use this flow will be unable to be deleted from the Microsoft Endpoint Manager admin center. The enrollment state is driven from Microsoft Defender for Endpoint, and deleting them from the admin center would only cause them to be removed temporarily. If devices need to be removed from management, they should be removed from the scope of Configuration Management in the Security Center. Once removed, that change will be propagated across services.
+You can delete devices that use this flow using one of two methods:
+
+- From within the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) go to **Devices** > **All devices**, select a device that displays either *MDEJoined* or *MDEManaged* in the *Managed by* column, and then select **Delete**.
+- You can also remove devices from the scope of Configuration Management in the Security Center.
+
+Once a device is removed from either location, that change will propagate to the other service.
 
 ### Unable to enable the Security Management for Microsoft Defender for Endpoint workload in Endpoint Security
 

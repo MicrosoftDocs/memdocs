@@ -22,9 +22,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: 
-  - M365-identity-device-management
-  - tier3
+ms.collection:
+- tier2
+- M365-identity-device-management
 zone_pivot_groups: windows-mdm-versions
 ---
 

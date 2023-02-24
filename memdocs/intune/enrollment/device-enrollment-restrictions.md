@@ -26,7 +26,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure;seodec18
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Android Enterprise device enrollment restrictions for personally owned work profile devices
@@ -47,7 +49,7 @@ For Android Enterprise personally owned work profile basic security (Level 1), t
 
 | Type | Platform | Version | Allows personal devices |
 |--------|--------|--------|--------|
-| Android Enterprise | Allow | Android 8.0 and later.<p>Microsoft recommends configuring the minimum Android major version to match the supported Android versions for Microsoft apps. OEMs and devices adhering to Android Enterprise recommended requirements must support the current shipping release + one letter upgrade.   Currently, Android recommends Android 9.0 and later for knowledge workers. For more information, see [Android Enterprise Recommended requirements](https://www.android.com/enterprise/recommended/requirements/). | Yes |
+| Android Enterprise | Allow | Android 9.0 and later.<p>Microsoft recommends configuring the minimum Android major version to match the supported Android versions for Microsoft apps. OEMs and devices adhering to Android Enterprise recommended requirements must support the current shipping release + one letter upgrade.   Currently, Android recommends Android 9.0 and later for knowledge workers. For more information, see [Android Enterprise Recommended requirements](https://www.android.com/enterprise/recommended/requirements/). | Yes |
 | Android device administrator| Block | All versions | Yes |
 
 ## Personally owned work profile high (level 3) security restrictions

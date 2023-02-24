@@ -26,7 +26,8 @@ ms.reviewer: ilwu
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
-ms.collection: 
+ms.collection:
+- tier2
 ---
 
 
@@ -63,6 +64,9 @@ Follow these steps to register your personal Linux device on your organization's
    1. If instructed to, update the settings on your device to meet your organization's security requirements.   
    2.  An on-screen confirmation appears when your device is enrolled and ready-to-use for work. You can begin using your device for work right away. 
    3. Sign in to Microsoft Edge with your work or school account to access your org's internal websites.   
+
+> [!NOTE]
+> Ubuntu on WSL2 is not a supported scenario.  
 
 ## Next steps
 As long as your device meets your organization's requirements, it will continue to have work access. Your organization may limit access if the Intune app flags your device as noncompliant. You can view and resolve all compliance issues in the Microsoft Intune app. For more information, see [Check status on Linux devices](check-status-linux.md).  

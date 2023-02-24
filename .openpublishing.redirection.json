@@ -1,6 +1,21 @@
 {
     "redirections": [
         {
+            "source_path": "memdocs/intune/configuration/use-enterprise-sso-plug-in-ios-ipados-macos-with-jamf-pro.md",
+            "redirect_url": "/mem/intune/configuration/use-enterprise-sso-plug-in-ios-ipados-macos",
+            "redirect_document_id": false
+        }, 
+        {
+            "source_path": "memdocs/intune/user-help/send-errors-to-your-it-admin-ios.md",
+            "redirect_url": "/mem/intune/user-help/send-logs-to-microsoft-ios",
+            "redirect_document_id": false
+        }, 
+        {
+            "source_path": "memdocs/intune/user-help/send-logs-to-microsoft-android.md",
+            "redirect_url": "/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android",
+            "redirect_document_id": false
+        }, 
+        {
             "source_path": "memdocs/endpoint-manager-getting-started.md",
             "redirect_url": "/mem/intune/fundamentals/get-started-with-intune",
             "redirect_document_id": false
@@ -265,7 +280,7 @@
         },
         {
             "source_path": "memdocs/intune/user-help/you-get-an-error-while-using-the-company-portal-app-ios.md",  
-            "redirect_url": "/mem/intune/user-help/send-errors-to-your-it-admin-ios",  
+            "redirect_url": "/mem/intune/user-help/send-logs-to-microsoft-ios",  
             "redirect_document_id": false
         },
         {

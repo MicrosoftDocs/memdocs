@@ -46,7 +46,7 @@ Pre-provisioned deployments use Microsoft Intune in Windows 10, version 1903 and
 ## Prerequisites
 
 > [!IMPORTANT]
-> You cannot automatically re-enroll a device through Windows Autopilot after an initial deployment in pre-provisioning mode. Instead, delete the device record in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). From the admin center, choose **Devices** &gt; **All devices** &gt; choose the devices you want to delete &gt; **Delete**. User assigned policies and apps will still be deployed to the device. For more information, see [Updates to the Windows Autopilot sign-in and deployment experience](https://techcommunity.microsoft.com/t5/intune-customer-success/updates-to-the-windows-autopilot-sign-in-and-deployment/ba-p/2848452).
+> You cannot automatically re-enroll a device through Windows Autopilot after an initial deployment in pre-provisioning mode. Instead, delete the device record in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). From the admin center, choose **Devices** &gt; **All devices** &gt; choose the devices you want to delete &gt; **Delete**. User assigned policies and apps will still be deployed to the device. For more information, see [Updates to the Windows Autopilot sign-in and deployment experience](https://techcommunity.microsoft.com/t5/intune-customer-success/updates-to-the-windows-autopilot-sign-in-and-deployment/ba-p/2848452).
 
 In addition to [Windows Autopilot requirements](software-requirements.md), Windows Autopilot for pre-provisioned deployment also requires:
 
@@ -102,10 +102,8 @@ Each of these scenarios consists of two parts, a technician flow and a user flow
 After the customer or IT Admin has targeted all the apps and settings they want for their devices through Intune, the pre-provisioning technician can begin the pre-provisioning process. The technician could be a member of the IT staff, a services partner, or an OEM - each organization can decide who should perform these activities. Regardless of the scenario, the process done by the technician is the same:
 
 - Boot the device.
-- From the first OOBE screen (which could be a language selection or locale selection screen), don't click **Next**. Instead, press the Windows key five times to view an additional options dialog. From that screen, choose the **Windows Autopilot provisioning** option and then click **Continue**.
+- From the first OOBE screen (which could be a language selection, locale selection screen, or the Azure AD sign-in page), don't select **Next**. Instead, press the Windows key five times to view an additional options dialog. From that screen, choose the **Windows Autopilot provisioning** option and then select **Continue**.
 
-> [!NOTE]
-> In Windows 10, version 2004 and later, if the Autopilot deployment profile Language/Region setting is not set to **User Select**, then OOBE will progress past the language/region/keyboard selection screens. This causes the pre-provisioning technician to arrive at the Azure AD login page, which is too late to enter pre-provisioning. This issue is fixed in Windows 11.
 
  ![Windows Autopilot provisioning option.](images/choice.png)
 

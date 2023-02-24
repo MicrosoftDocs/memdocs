@@ -64,7 +64,7 @@ For more information, see [Configure role-based administration](../../../servers
 Remote tools aren't supported for clients that are connected remotely. For example, you can't remote control a client that communicates with the site through a cloud management gateway (CMG). For more information about the network ports required for remote tools, see [Ports used in Configuration Manager](../../../plan-design/hierarchy/ports.md#BKMK_PortsConsole-Client).
 
 > [!TIP]
-> For tenant-attached devices, remote tools are available in the Microsoft Endpoint Manager admin center. For more information, see [Support for remote tools](../cmg/supported-configurations.md#bkmk_note3).
+> For tenant-attached devices, remote tools are available in the Microsoft Intune admin center. For more information, see [Support for remote tools](../cmg/supported-configurations.md#bkmk_note3).
 
 ## Next steps
 

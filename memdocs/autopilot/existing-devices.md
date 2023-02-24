@@ -39,7 +39,7 @@ _Windows Autopilot for existing devices_ lets you reimage and provision a Window
 
 ## Prerequisites
 
-- A currently supported version of Microsoft Endpoint Configuration Manager current branch.
+- A currently supported version of Microsoft Configuration Manager current branch.
 - Assigned Microsoft Intune licenses
 - Azure AD Premium
 - A supported version of Windows 10 or Windows 11 imported into Configuration Manager as an [OS image](../configmgr/osd/get-started/manage-operating-system-images.md)
@@ -51,9 +51,9 @@ _Windows Autopilot for existing devices_ lets you reimage and provision a Window
 
 If you want, you can set up an [enrollment status page](enrollment-status.md) (ESP) for Autopilot using Intune.
 
-1. Open the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com).
+1. Open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-1. Go to **Intune > Device enrollment > Windows enrollment** and [Set up the Enrollment Status Page](../intune/enrollment/windows-enrollment-status.md).
+1. Go to **Devices > Enroll Devices > Windows enrollment > Enrollment Status Page** and [Set up the Enrollment Status Page](../intune/enrollment/windows-enrollment-status.md).
 
     :::image type="content" source="images/esp-config.png" alt-text="Enrollment status page policy page in Intune.":::
 
@@ -215,7 +215,7 @@ You can also save the profile to a text file and edit in Notepad. In Notepad, wh
 
 :::image type="content" source="images/notepad.png" alt-text="Save as ANSI encoding in Notepad.":::
 
-After you save the file, move it to a location for a Microsoft Endpoint Configuration Manager package source.
+After you save the file, move it to a location for a Microsoft Configuration Manager package source.
 
 > [!IMPORTANT]
 > The configuration file can only contain one profile. You can use multiple JSON profile files, but each one must be named `AutopilotConfigurationFile.json`. This requirement is for OOBE to follow the Autopilot experience. To use more than one Autopilot profile, create separate Configuration Manager packages.

@@ -25,13 +25,13 @@ Always review the latest checklist for installing this update. For more informat
 
 To take full advantage of new Configuration Manager features, after you update the site, also update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.
 
-## <a name="bkmk_tenant"></a> Microsoft Endpoint Manager tenant attach
+## <a name="bkmk_tenant"></a> Microsoft Intune tenant attach
 
 ### <a name="bkmk_attach"></a> Device sync and device actions
 <!--3555758-->
-Microsoft Endpoint Manager is an integrated solution for managing all of your devices. Microsoft brings together Configuration Manager and Intune into a single console called **Microsoft Endpoint Manager admin center**. Starting in this release you can upload your Configuration Manager devices to the cloud service and take actions from the **Devices** blade in the admin center.
+The Microsoft Intune family of products is an integrated solution for managing all of your devices. Microsoft brings together Configuration Manager and Intune into a single console called **Microsoft Intune admin center**. Starting in this release you can upload your Configuration Manager devices to the cloud service and take actions from the **Devices** blade in the admin center.
 
-For more information, see [Microsoft Endpoint Manager tenant attach](../../../tenant-attach/device-sync-actions.md).
+For more information, see [Microsoft Intune tenant attach](../../../tenant-attach/device-sync-actions.md).
 
 ## <a name="bkmk_infra"></a> Site infrastructure
 
@@ -114,11 +114,11 @@ Configuration Manager extends its device support with the following methods:
 
 For more information, see [Token-based authentication for CMG](../../clients/deploy/deploy-clients-cmg-token.md).
 
-### Microsoft Endpoint Configuration Manager cloud features
+### Microsoft Configuration Manager cloud features
 
 <!--5834830-->
 
-When new cloud-based features are available in the Microsoft Endpoint Manager admin center, or other attached cloud services for your on-premises Configuration Manager installation, you can now opt in to these new features in the Configuration Manager console. For more information on enabling features in the Configuration Manager console, see [Enable optional features from updates](../../servers/manage/optional-features.md).
+When new cloud-based features are available in the Microsoft Intune admin center, or other attached cloud services for your on-premises Configuration Manager installation, you can now opt in to these new features in the Configuration Manager console. For more information on enabling features in the Configuration Manager console, see [Enable optional features from updates](../../servers/manage/optional-features.md).
 
 ## <a name="bkmk_da"></a> Desktop Analytics
 
@@ -324,11 +324,11 @@ For more information, see [Synchronize Microsoft 365 updates from a disconnected
 <!-- 5229962 -->
 Configuration Manager has expanded its support for onboarding devices to Microsoft Defender for Endpoint. For more information, see [Microsoft Defender for Endpoint](../../../protect/deploy-use/defender-advanced-threat-protection.md).
 
-### <a name="bkmk_atp"></a> Onboard Configuration Manager clients to Microsoft Defender for Endpoint via the Microsoft Endpoint Manager admin center
+### <a name="bkmk_atp"></a> Onboard Configuration Manager clients to Microsoft Defender for Endpoint via the Microsoft Intune admin center
 <!--5691658-->
 You can now deploy Microsoft Defender ATP Endpoint Detection and Response (EDR) onboarding policies to Configuration Manager managed clients. These clients don't require Azure AD or MDM enrollment, and the policy is targeted at ConfigMgr collections rather than Azure AD Groups.
 
-This capability allows customers to manage both Intune MDM and Configuration Manager client EDR/ATP onboarding from a single management experience - the Microsoft Endpoint Manager admin center. For more information, see [Endpoint detection and response policy for endpoint security in Intune](../../../../intune/protect/endpoint-security-edr-policy.md).
+This capability allows customers to manage both Intune MDM and Configuration Manager client EDR/ATP onboarding from a single management experience - the Microsoft Intune admin center. For more information, see [Endpoint detection and response policy for endpoint security in Intune](../../../../intune/protect/endpoint-security-edr-policy.md).
 
 > [!Important]
 > You'll need the hotfix rollup, [KB4563473](https://support.microsoft.com/help/4563473), installed in your environment for this feature.
@@ -427,7 +427,7 @@ For more information on changes to the administration service REST API, see [Adm
 
 Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 2002](https://support.microsoft.com/help/4556203).
 
-The following update rollup (4560496) is available in the console starting on July 15, 2020: [Update rollup for Microsoft Endpoint Configuration Manager version 2002](https://support.microsoft.com/help/4560496).
+The following update rollup (4560496) is available in the console starting on July 15, 2020: [Update rollup for Microsoft Configuration Manager version 2002](https://support.microsoft.com/help/4560496).
 
 ### Hotfixes
 
@@ -435,9 +435,9 @@ The following additional hotfixes are available to address specific issues:
 
 | ID | Title | Date | In-console |
 |---------|---------|---------|---------|
-| [4575339](https://support.microsoft.com/help/4575339) | Devices appear twice in Microsoft Endpoint Configuration Manager admin center | July 23, 2020 | No |
+| [4575339](https://support.microsoft.com/help/4575339) | Devices appear twice in Microsoft Configuration Manager admin center | July 23, 2020 | No |
 | [4575774](https://support.microsoft.com/help/4575774) | New-CMTSStepPrestartCheck cmdlet fails in Configuration Manager, version 2002 | July 24, 2020 | No |
-| [4576782](https://support.microsoft.com/help/4576782) | Application blade times out in Microsoft Endpoint Manager admin center | August 11, 2020 | No |
+| [4576782](https://support.microsoft.com/help/4576782) | Application blade times out in Microsoft Intune admin center | August 11, 2020 | No |
 | [4578123](https://support.microsoft.com/help/4578123) | CMPivot queries return unexpected results in Configuration Manager, version 2002 | August 24, 2020 | No |
 | [4575783](https://support.microsoft.com/help/4575783) | Office updates fail to download in Configuration Manager current branch, version 2002 | November 11, 2020 | Yes |
 <!--

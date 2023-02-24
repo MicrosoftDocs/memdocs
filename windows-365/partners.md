@@ -25,7 +25,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; get-started
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- tier2
 ---
 
 # Windows 365 approved partners
@@ -42,7 +44,7 @@ Securely stream the Microsoft Windows 365 Cloud PC experience to high-performing
 
 - Highly secure Windows 10 IoT LTSC 2021 and in-house Linux-based operating systems.
 - A wide range of hardware with customization options available.
-- Options to manage and deploy Cloud PCs by using Microsoft Endpoint Manager (MEM) and/or the 10ZiG Manager™ for increased safety, remote access, and ease of use.
+- Options to manage and deploy Cloud PCs by using Microsoft Endpoint Manager and/or the 10ZiG Manager™ for increased safety, remote access, and ease of use.
 
 For more information, visit the [10ZiG website](https://www.10zig.com/resources/vdi-blog/microsoft-windows-365-cloud).
 

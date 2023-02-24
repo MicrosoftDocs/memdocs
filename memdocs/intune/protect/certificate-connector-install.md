@@ -23,9 +23,10 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: 
-  - M365-identity-device-management
-  - highpri
+ms.collection:
+- tier1
+- M365-identity-device-management
+- highpri
 ---
 
 # Install the Certificate Connector for Microsoft Intune
@@ -34,7 +35,7 @@ To support your use of certificates with Intune, you can install the Certificate
 
 ## Download and install the connector software
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Tenant administration** > **Connectors and tokens** > **Certificate connectors** > **Add**.
 
@@ -131,7 +132,7 @@ After the configuration completes successfully and the wizard closes, the Certif
 > [!TIP]
 > It might be helpful to rename the connector to reference the server the connector is installed on. 
 > 
-> To rename the connector, in the Microsoft Endpoint Manager portal, select **Tenant administration** > **Connectors and tokens** > **Certificate connectors**. Select the connector you want to rename. In **Name**, enter the name you want to use, and then select **save**.
+> To rename the connector, in the Microsoft Intune admin center, select **Tenant administration** > **Connectors and tokens** > **Certificate connectors**. Select the connector you want to rename. In **Name**, enter the name you want to use, and then select **save**.
 
 ## Modify the connector configuration
 

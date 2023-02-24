@@ -25,9 +25,9 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 
-ms.collection: 
-- M365-identity-device-management
+ms.collection:
 - tier3
+- M365-identity-device-management
 ---
 # Set up the Certificate Connector for Microsoft Intune to support the DigiCert PKI Platform
 
@@ -195,7 +195,7 @@ The PKCS certificates you'll deploy for Intune managed devices must be chained w
 
    d. Select **Download root certificate** to download the trusted root certificate.
 
-2. Create a trusted certificate profile in the Microsoft Endpoint Manager admin center portal. For detailed guidance, see [To create a trusted certificate profile](../protect/certificates-trusted-root.md#to-create-a-trusted-certificate-profile). Be sure to assign this profile to devices that will receive certificates. To assign the profile to groups, see [Assign device profiles](../configuration/device-profile-assign.md).
+2. Create a trusted certificate profile in the Microsoft Intune admin center. For detailed guidance, see [To create a trusted certificate profile](../protect/certificates-trusted-root.md#to-create-a-trusted-certificate-profile). Be sure to assign this profile to devices that will receive certificates. To assign the profile to groups, see [Assign device profiles](../configuration/device-profile-assign.md).
 
    After you create the profile, it appears in the list of profiles in the **Device configuration – Profiles** pane, with a profile type of **Trusted certificate**.  
 
@@ -215,7 +215,7 @@ The certificate profile OID is associated with a certificate profile template in
 
 ## Create a PKCS certificate profile
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Devices** > **Configuration profiles** > **Create profile**.
 

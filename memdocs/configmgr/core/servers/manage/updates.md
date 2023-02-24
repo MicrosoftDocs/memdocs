@@ -78,7 +78,7 @@ The baseline media is available as part of the following releases on the [Volume
 For example, search the VLSC for `Microsoft Endpoint Configmgr (current branch)`. Find the baseline media in the list of files, and download for that release.
 
 > [!NOTE]
-> The search string may be different on other media sites. For example, on the [Visual Studio Subscriptions Portal](https://my.visualstudio.com/), search for `Microsoft Endpoint Configuration Manager`.<!-- memdocs#1962 -->
+> The search string may be different on other media sites. For example, on the [Visual Studio Subscriptions Portal](https://my.visualstudio.com/), search for `Microsoft Configuration Manager`.<!-- memdocs#1962 -->
 
 #### Historical versions
 

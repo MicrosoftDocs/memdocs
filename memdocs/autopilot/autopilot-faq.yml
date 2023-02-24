@@ -311,7 +311,7 @@ sections:
       - question: |
           What is co-management?
         answer: |
-          Co-management enables you to concurrently manage Windows 10 or later devices by using both Microsoft Endpoint Configuration Manager and Microsoft Intune. It lets you cloud-attach your existing investment in Configuration Manager by adding new functionality. By using co-management, you have the flexibility to use the technology solution that works best for your organization.
+          Co-management enables you to concurrently manage Windows 10 or later devices by using both Microsoft Configuration Manager and Microsoft Intune. It lets you cloud-attach your existing investment in Configuration Manager by adding new functionality. By using co-management, you have the flexibility to use the technology solution that works best for your organization.
 
           When a Windows device has the Configuration Manager client and is enrolled to Intune, you get the benefits of both services. You control which workloads, if any, you switch the authority from Configuration Manager to Intune. Configuration Manager continues to manage all other workloads, including those workloads that you don't switch to Intune, and all other features of Configuration Manager that co-management doesn't support.
 
@@ -450,7 +450,8 @@ sections:
           - Azure China 21Vianet
           - Azure Government
           
-          If you use global Azure, there are no region restrictions. For example, Contoso uses global Azure but has employees working in China. The Contoso employees working in China can still use Autopilot to deploy devices. If Contoso uses Azure China 21Vianet, the Contoso employees can't use Autopilot.
+          If you use global Azure, there are no region restrictions. For example, Contoso uses global Azure but has employees working in China. The Contoso employees working in China can still use Autopilot to deploy devices. If Contoso uses Azure China 21Vianet, the Contoso employees can't use Autopilot. 
+          While Autopilot is available in global tenants, users in China may experience poor connectivity and high latency when deploying due to ISP-related issues. If you are experiencing these issues when deploying in the region, please contact your local ISP for support.
 
       - question: |
           Why does TPM provisioning/attestation take longer during the first boot on a device?

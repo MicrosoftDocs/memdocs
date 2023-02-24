@@ -23,7 +23,7 @@ ms.reviewer: mstewart,aaroncz
 All learn.microsoft.com links should include `?WT.mc_id=configmgr-console` campaign ID at the end for tracking links from the console.
 -->
 
-# Microsoft Endpoint Configuration Manager documentation
+# Microsoft Configuration Manager documentation
 
 *This page only displays in English in the Configuration Manager console.*
 
@@ -44,7 +44,7 @@ For the latest product changes, see the following articles:<!-- 8625956 -->
 
 A curated list of important articles.
 
-- [Microsoft Endpoint Manager tenant attach](https://learn.microsoft.com/mem/configmgr/tenant-attach/?WT.mc_id=configmgr-console)
+- [Microsoft Intune tenant attach](https://learn.microsoft.com/mem/configmgr/tenant-attach/?WT.mc_id=configmgr-console)
 - [Endpoint analytics](https://learn.microsoft.com/mem/analytics/?WT.mc_id=configmgr-console)
 - [Desktop Analytics](https://learn.microsoft.com/mem/configmgr/desktop-analytics/?WT.mc_id=configmgr-console)
 - [Co-management for Windows devices](https://learn.microsoft.com/mem/configmgr/comanage/?WT.mc_id=configmgr-console)
@@ -72,7 +72,7 @@ Guided walkthroughs to assist with troubleshooting Configuration Manager compone
 - [Troubleshoot Microsoft Connected Cache](https://learn.microsoft.com/mem/configmgr/core/servers/deploy/configure/troubleshoot-microsoft-connected-cache?WT.mc_id=configmgr-console)
 - [Troubleshoot BitLocker](https://learn.microsoft.com/mem/configmgr/protect/tech-ref/bitlocker/troubleshoot?WT.mc_id=configmgr-console)
 
-For more information, see [Microsoft Endpoint Configuration Manager troubleshooting](https://learn.microsoft.com/troubleshoot/mem/configmgr/welcome-configuration-manager).
+For more information, see [Microsoft Configuration Manager troubleshooting](https://learn.microsoft.com/troubleshoot/mem/configmgr/welcome-configuration-manager).
 
 ## Support articles
 
@@ -81,6 +81,6 @@ The complete list of all hotfix and update rollup related articles, starting wit
 The short form URL for version 2010 and newer hotfix related articles is `https://aka.ms/KB#######`. For example, [https://aka.ms/KB9210721](https://aka.ms/KB9210721).
 Hotfix related articles for version 2006 and prior are still available on support.microsoft.com.
 
-The Microsoft knowledge base articles previously found at support.microsoft.com are published to [Microsoft Endpoint Configuration Manager Troubleshooting](https://learn.microsoft.com/troubleshoot/mem/configmgr/welcome-configuration-manager). Troubleshooting articles created after October 2020 don't have a KB article ID.
+The Microsoft knowledge base articles previously found at support.microsoft.com are published to [Microsoft Configuration Manager Troubleshooting](https://learn.microsoft.com/troubleshoot/mem/configmgr/welcome-configuration-manager). Troubleshooting articles created after October 2020 don't have a KB article ID.
 
 To subscribe to Atom or RSS notification of new Configuration Manager support articles, see [Support content updates](https://support.microsoft.com/help/4089498/) and select **Microsoft Endpoint Configuration Manager (current branch)**.

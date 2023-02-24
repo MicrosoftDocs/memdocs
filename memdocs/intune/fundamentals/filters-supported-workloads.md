@@ -24,7 +24,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom:
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # List of platforms, policies, and app types supported by filters in Microsoft Intune
@@ -146,7 +148,7 @@ You can use filters for some common device configuration policies on the followi
 | Email | N/A |
 | Email (Samsung KNOX only) | ✔️ |
 | Endpoint Protection | N/A |
-| Enrollment restrictions | ❌ |
+| Enrollment device platform restrictions | ❌ |
 | MX profile (Zebra only) | ✔️ |
 | PKCS certificate | ✔️ |
 | PKCS imported certificate | ✔️ |
@@ -176,7 +178,7 @@ You can use filters for some common device configuration policies on the followi
 | Device Features | N/A |
 | Email | ✔️ |
 | Endpoint Protection | N/A |
-| Enrollment restrictions | ❌ |
+| Enrollment device platform restrictions | ❌ |
 | OEMConfig | ✔️ |
 | PKCS certificate | ✔️ |
 | PKCS imported certificate | ✔️ |
@@ -206,7 +208,7 @@ You can use filters for some common device configuration policies on the followi
 | Device Features | ✔️ |
 | Email | ✔️ |
 | Endpoint Protection | N/A |
-| Enrollment restrictions | ✔️ |
+| Enrollment device platform restrictions | ✔️ |
 | PKCS certificate | ✔️ |
 | PKCS imported certificate | ✔️ |
 | SCEP certificate | ✔️ |
@@ -235,7 +237,7 @@ You can use filters for some common device configuration policies on the followi
 | Device features | ✔️ |
 | Email | N/A |
 | Endpoint Protection | ✔️ |
-| Enrollment restrictions | ✔️ |
+| Enrollment device platform restrictions | ✔️ |
 | Extensions | ✔️ |
 | PKCS certificate | ✔️ |
 | PKCS imported certificate | ✔️ |
@@ -274,7 +276,7 @@ You can use filters for some common device configuration policies on the followi
 | Email | ✔️ |
 | Endpoint analytics proactive remediations scripts|✔️ |
 | Endpoint Protection | ✔️ |
-| Enrollment restrictions | ✔️ |
+| Enrollment device platform restrictions | ✔️ <br/> Support for a subset of filter properties including device `osVersion`, `operatingSystemSKU`, and `enrollmentProfileName` |
 | Identity Protection | ✔️ |
 | Kiosk | ✔️ |
 | Microsoft Defender for Endpoint (Windows 10/11 Desktop) | ✔️ |

@@ -23,9 +23,10 @@ search.appverid: MET150
 ms.reviewer: tycast
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: 
-  - M365-identity-device-management
-  - highpri
+ms.collection:
+- tier1
+- M365-identity-device-management
+- highpri
 ---
 
 # Configure actions for noncompliant devices in Intune
@@ -43,7 +44,7 @@ For each action you set, you can configure a schedule that determines when that 
 Not all actions are available for all platforms.
 
    > [!NOTE]
-   > The Microsoft Endpoint Manager admin center displays the _schedule (days after noncompliance)_ in days. However it is possible to specify a more granular interval (hours), using decimal fractions such as 0.25 (6 hours), 0.5 (12 hours), 1.5 (36 hours), and so on. While other values are possible, they can only be configured using [Microsoft Graph](/graph/overview) and not via the admin center. Attempting to use other values in the admin center, such as 0.33 (8 hours) will result in an error when attempting to save the policy.
+   > The Microsoft Intune admin center displays the _schedule (days after noncompliance)_ in days. However it is possible to specify a more granular interval (hours), using decimal fractions such as 0.25 (6 hours), 0.5 (12 hours), 1.5 (36 hours), and so on. While other values are possible, they can only be configured using [Microsoft Graph](/graph/overview) and not via the admin center. Attempting to use other values in the admin center, such as 0.33 (8 hours) will result in an error when attempting to save the policy.
 
 ## Available actions for noncompliance
 
@@ -100,7 +101,7 @@ When you enable this action:
   - macOS
   - Windows 10/11
 
-  When this action applies to a device, that device is added to a list of devices in the Microsoft Endpoint Manager admin center at **Devices** > **Compliance policies** > **Retire Noncompliant Devices**. The device isn't retired until an admin takes explicit action to retire the device.
+  When this action applies to a device, that device is added to a list of devices in the Microsoft Intune admin center at **Devices** > **Compliance policies** > **Retire Noncompliant Devices**. The device isn't retired until an admin takes explicit action to retire the device.
   
   > [!NOTE]
   > Only devices to which the **Retire the noncompliant device** action has been triggered appear in the **Retire Selected Devices** view. To see a list of all devices that are not compliant, see the **Noncompliant devices** report mentioned in [Monitor device compliance policy](../protect/compliance-policy-monitor.md#view-compliance-reports).
@@ -172,7 +173,7 @@ When you specify multiple messages and locales, non-compliant end users receive 
 
 ### To create the template
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Endpoint security** > **Device compliance** > **Notifications** > **Create notification**.
 3. On the **Basics** page, configure the following settings:
 
@@ -220,7 +221,7 @@ When you create a device compliance policy, Intune automatically creates an acti
 
 You can add optional actions when you create a compliance policy, or update an existing policy.
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Devices** > **Compliance policies** > **Policies**, select one of your policies, and then select **Properties**.
 

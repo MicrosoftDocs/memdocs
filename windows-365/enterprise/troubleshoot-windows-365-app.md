@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 10/12/2022
+ms.date: 01/31/2023
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice:
@@ -25,18 +25,19 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; get-started
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- tier2
 ---
 
-# Troubleshoot the Windows 365 app (preview)
+# Troubleshoot the Windows 365 app
 
-This article describes issues with the Windows 365 app ([preview](../public-preview.md)) for Windows client and how to fix them.
+This article describes issues with the Windows 365 app for Windows client and how to fix them.
 
 ## Limitations
 
 The Windows 365 app doesn't currently support:
 
-- Windows 10
 - Windows 11 IoT
 - Configuring Remote Desktop Protocol properties.
 

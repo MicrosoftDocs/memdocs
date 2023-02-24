@@ -8,7 +8,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/21/2022
+ms.date: 02/01/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -25,7 +25,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Add email settings to devices using Intune
@@ -94,56 +96,66 @@ In Intune, you can use organization owned devices and personally owned devices:
 
 On both types of Android Enterprise devices, you can add and deploy an email app. Your options:
 
-- **Microsoft Outlook**: The Outlook app is available in the managed Play Store. To use Outlook as the email app, add the Outlook app to Intune, and assign the app to your users or user groups. The app also installs.
+# [Outlook](#tab/outlook-android)
 
-  After the app is deployed and installed:
+The **Microsoft Outlook** app is available in the managed Play Store. To use Outlook as the email app, add the Outlook app to Intune, and assign the app to your users or user groups. The app also installs.
 
-  - If you want to customize Outlook or preconfigure it with your organization settings, then you can [create an app configuration policy](../apps/app-configuration-policies-use-android.md) (opens another Microsoft article). When the policy is ready, deploy this app configuration policy to your users or user groups. App configuration policies are optional.
+After the app is deployed and installed:
 
-  - If you don't want to customize Outlook or preconfigure it for your users, you don't have to. After Outlook is installed, users need to enter the information that connects to their work or school account, like the email server link and more.
+- If you want to customize Outlook or preconfigure it with your organization settings, then you can [create an app configuration policy](../apps/app-configuration-policies-use-android.md) (opens another Microsoft article). When the policy is ready, deploy this app configuration policy to your users or user groups. App configuration policies are optional.
 
-- **Gmail**: The Gmail app is available in the managed Play Store. To use Gmail as the email app, add the Gmail app to Intune, and assign the app to your users or user groups. The app also installs.
+- If you don't want to customize Outlook or preconfigure it for your users, you don't have to. After Outlook is installed, users need to enter the information that connects to their work or school account, like the email server link and more.
 
-  > [!TIP]
-  > If your profile uses Gmail and you want to use modern authentication, then you may have to deploy the Google Chrome app to the work profile.
+# [Gmail](#tab/gmail)
 
-  After the app is deployed and installed:
+The **Gmail** app is available in the managed Play Store. To use Gmail as the email app, add the Gmail app to Intune, and assign the app to your users or user groups. The app also installs.
 
-  - On **Android Enterprise organization-owned devices**:
+> [!TIP]
+> If your profile uses Gmail and you want to use modern authentication, then you may have to deploy the Google Chrome app to the work profile.
 
-    - If you want to customize Gmail or preconfigure it with your organization settings, then you can [create an app configuration policy](../apps/app-configuration-policies-use-android.md) (opens another Microsoft article). When the policy is ready, deploy this app configuration policy to your users or user groups. App configuration policies are optional.
+After the app is deployed and installed:
 
-    - If you don't want to customize Gmail or preconfigure it for your users, you don't have to. After Gmail is installed, users need to enter the information that connects to their work or school account, like the email server link and more.
+- On **Android Enterprise organization-owned devices**:
 
-  - On **Android Enterprise personally owned devices with a work profile**:
+  - If you want to customize Gmail or preconfigure it with your organization settings, then you can [create an app configuration policy](../apps/app-configuration-policies-use-android.md) (opens another Microsoft article). When the policy is ready, deploy this app configuration policy to your users or user groups. App configuration policies are optional.
 
-    - If you want to customize Gmail or preconfigure it with your organization settings, then you can [create an email device configuration profile](#create-the-profile) (in this article). When the profile is ready, deploy this email device configuration profile to your users or user groups. The profile includes the settings that connect the Gmail app to your email system, such as Microsoft Exchange. Email device configuration profiles are optional.
+  - If you don't want to customize Gmail or preconfigure it for your users, you don't have to. After Gmail is installed, users need to enter the information that connects to their work or school account, like the email server link and more.
 
-    - If you don't want to customize Gmail or preconfigure it for your users, you don't have to. After Gmail is installed, users need to enter the information that connects to their work or school account, like the email server link and more.
+- On **Android Enterprise personally owned devices with a work profile**:
 
-- **Nine Work**: The Nine Work app is available in the managed Play Store. To use Nine Work as the email app, add the Nine Work app to Intune, and assign the app to your users or user groups. The app also installs.
+  - If you want to customize Gmail or preconfigure it with your organization settings, then you can [create an email device configuration profile](#create-the-profile) (in this article). When the profile is ready, deploy this email device configuration profile to your users or user groups. The profile includes the settings that connect the Gmail app to your email system, such as Microsoft Exchange. Email device configuration profiles are optional.
 
-  After the app is deployed and installed:
+  - If you don't want to customize Gmail or preconfigure it for your users, you don't have to. After Gmail is installed, users need to enter the information that connects to their work or school account, like the email server link and more.
 
-  - On **Android Enterprise organization-owned devices**:
+# [Nine Work](#tab/nine-work)
 
-    - If you want to customize Nine Work or preconfigure it with your organization settings, then you can [create an app configuration policy](../apps/app-configuration-policies-use-android.md) (opens another Microsoft article). When the policy is ready, deploy this app configuration policy to your users or user groups. App configuration policies are optional.
+The **Nine Work** app is available in the managed Play Store. To use Nine Work as the email app, add the Nine Work app to Intune, and assign the app to your users or user groups. The app also installs.
 
-    - If you don't want to customize Nine Work or preconfigure it for your users, you don't have to. After Nine Work is installed, users need to enter the information that connects to their work or school account, like the email server link and more.
+After the app is deployed and installed:
 
-  - On **Android Enterprise personally owned devices with a work profile**:
+- On **Android Enterprise organization-owned devices**:
 
-    - If you want to customize Nine Work or preconfigure it with your organization settings, then you can [create an email device configuration profile](#create-the-profile) (in this article). When the profile is ready, deploy this email device configuration profile to your users or user groups. The profile includes the settings that connect the Nine Work app to your email system, such as Microsoft Exchange. Email device configuration profiles are optional.
+  - If you want to customize Nine Work or preconfigure it with your organization settings, then you can [create an app configuration policy](../apps/app-configuration-policies-use-android.md) (opens another Microsoft article). When the policy is ready, deploy this app configuration policy to your users or user groups. App configuration policies are optional.
 
-    - If you don't want to customize Nine Work or preconfigure it for your users, you don't have to. After Nine Work is installed, users need to enter the information that connects to their work or school account, like the email server link and more.
+  - If you don't want to customize Nine Work or preconfigure it for your users, you don't have to. After Nine Work is installed, users need to enter the information that connects to their work or school account, like the email server link and more.
 
-- **Other email apps**: Other email apps that support Azure AD identities are available in the managed Play Store. To use these email apps, add the app to Intune, and assign the app to your users or user groups. The app also installs.
+- On **Android Enterprise personally owned devices with a work profile**:
 
-  After the app is deployed and installed:
+  - If you want to customize Nine Work or preconfigure it with your organization settings, then you can [create an email device configuration profile](#create-the-profile) (in this article). When the profile is ready, deploy this email device configuration profile to your users or user groups. The profile includes the settings that connect the Nine Work app to your email system, such as Microsoft Exchange. Email device configuration profiles are optional.
 
-  - If you want to customize the app or preconfigure it with your organization settings, then you can [create an app configuration policy](../apps/app-configuration-policies-use-android.md) (opens another Microsoft article). When the policy is ready, deploy this app configuration policy to your users or user groups. App configuration policies are optional.
+  - If you don't want to customize Nine Work or preconfigure it for your users, you don't have to. After Nine Work is installed, users need to enter the information that connects to their work or school account, like the email server link and more.
 
-  - If you don't want to customize the app or preconfigure it for your users, you don't have to. After the app is installed, users need to enter the information that connects to their work or school account, like the email server link and more.
+# [Other email apps](#tab/other-email-apps-android)
+
+**Other email apps** that support Azure AD identities are available in the managed Play Store. To use these email apps, add the app to Intune, and assign the app to your users or user groups. The app also installs.
+
+After the app is deployed and installed:
+
+- If you want to customize the app or preconfigure it with your organization settings, then you can [create an app configuration policy](../apps/app-configuration-policies-use-android.md) (opens another Microsoft article). When the policy is ready, deploy this app configuration policy to your users or user groups. App configuration policies are optional.
+
+- If you don't want to customize the app or preconfigure it for your users, you don't have to. After the app is installed, users need to enter the information that connects to their work or school account, like the email server link and more.
+
+---
 
 For more information on app configuration policies, go to:
 
@@ -173,27 +185,35 @@ In Intune, you can use organization owned devices and personally owned devices:
 
 On all iOS/iPadOS devices, you can add and deploy an email app. Your options:
 
-- **Microsoft Outlook**: The Outlook app is available in the App Store. To use Outlook as the email app, add the Outlook app to Intune, and assign the app to your users or user groups. The app also installs.
+# [Outlook](#tab/outlook-ios)
 
-  After the app is deployed and installed:
+The **Microsoft Outlook** app is available in the App Store. To use Outlook as the email app, add the Outlook app to Intune, and assign the app to your users or user groups. The app also installs.
 
-  - If you want to customize Outlook or preconfigure it with your organization settings, then you can [create an app configuration policy](../apps/app-configuration-policies-use-ios.md) (opens another Microsoft article). When the policy is ready, deploy this app configuration policy to your users or user groups. App configuration policies are optional.
+After the app is deployed and installed:
 
-  - If you don't want to customize Outlook or preconfigure it for your users, you don't have to. After Outlook is installed, users need to enter the information that connects to their work or school account, like the email server link and more.
+- If you want to customize Outlook or preconfigure it with your organization settings, then you can [create an app configuration policy](../apps/app-configuration-policies-use-ios.md) (opens another Microsoft article). When the policy is ready, deploy this app configuration policy to your users or user groups. App configuration policies are optional.
 
-- **Built-in Mail app**: This app is preinstalled with the OS and can be used to access personal email and organization email. If you don't want to use the built-in Mail app, then organizations that use conditional access (CA) can create CA policies to block native mail apps. Or, use CA to only allow specific apps.
+- If you don't want to customize Outlook or preconfigure it for your users, you don't have to. After Outlook is installed, users need to enter the information that connects to their work or school account, like the email server link and more.
 
-  - If you want to customize the Mail app or preconfigure it with your organization settings, then you can [create an email device configuration profile](#create-the-profile) (in this article). When the profile is ready, deploy this email device configuration profile to your users or user groups. The profile includes the settings that connect the Mail app to your email system, such as Microsoft Exchange. Email device configuration profiles are optional.
+# [Built-in Mail app](#tab/built-in-mail-app-ios)
 
-  - If you don't want to customize the Mail app or preconfigure it for your users, you don't have to. To use the Mail app for organization email, users need to enter the information that connects to their work or school account, like the email server link and more.
+The **Built-in Mail app** is preinstalled with the OS and can be used to access personal email and organization email. If you don't want to use the built-in Mail app, then organizations that use conditional access (CA) can create CA policies to block native mail apps. Or, use CA to only allow specific apps.
 
-- **Other email apps**: Other email apps that support Azure AD identities are available in the App Store. To use these email apps, add the app to Intune, and assign the app to your users or user groups. The app also installs.
+- If you want to customize the Mail app or preconfigure it with your organization settings, then you can [create an email device configuration profile](#create-the-profile) (in this article). When the profile is ready, deploy this email device configuration profile to your users or user groups. The profile includes the settings that connect the Mail app to your email system, such as Microsoft Exchange. Email device configuration profiles are optional.
 
-  After the app is deployed and installed:
+- If you don't want to customize the Mail app or preconfigure it for your users, you don't have to. To use the Mail app for organization email, users need to enter the information that connects to their work or school account, like the email server link and more.
 
-  - If you want to customize the app or preconfigure it with your organization settings, then you can [create an app configuration policy](../apps/app-configuration-policies-use-ios.md) (opens another Microsoft article). When the policy is ready, deploy this app configuration policy to your users or user groups. App configuration policies are optional.
+# [Other email apps](#tab/other-email-apps-ios)
 
-  - If you don't want to customize the app or preconfigure it for your users, you don't have to. After the app is installed, users need to enter the information that connects to their work or school account, like the email server link and more.
+**Other email apps** that support Azure AD identities are available in the App Store. To use these email apps, add the app to Intune, and assign the app to your users or user groups. The app also installs.
+
+After the app is deployed and installed:
+
+- If you want to customize the app or preconfigure it with your organization settings, then you can [create an app configuration policy](../apps/app-configuration-policies-use-ios.md) (opens another Microsoft article). When the policy is ready, deploy this app configuration policy to your users or user groups. App configuration policies are optional.
+
+- If you don't want to customize the app or preconfigure it for your users, you don't have to. After the app is installed, users need to enter the information that connects to their work or school account, like the email server link and more.
+
+---
 
 For more information on app configuration policies, go to:
 
@@ -220,31 +240,39 @@ In Intune, you can use organization owned devices and personally owned devices:
 
 On all Windows devices, you can add and deploy an email app. Your options:
 
-- **Microsoft Outlook**: The Outlook app is available in the Microsoft 365 Apps suite. To use Outlook as the email app, add the Outlook app to Intune, and assign the app to your users or user groups. The app also installs.
+# [Outlook](#tab/outlook-windows)
 
-  After the app is deployed and installed:
+The **Microsoft Outlook** app is available in the Microsoft 365 Apps suite. To use Outlook as the email app, add the Outlook app to Intune, and assign the app to your users or user groups. The app also installs.
 
-  - If you want to customize Outlook or preconfigure it with your organization settings, then you can [create an email device configuration profile](#create-the-profile) (in this article). When the profile is ready, deploy this email device configuration profile to your users or user groups. The profile includes the settings that connect the Outlook app to your email system, such as Microsoft Exchange. Email device configuration profiles are optional.
+After the app is deployed and installed:
 
-  - If you don't want to customize Outlook or preconfigure it for your users, you don't have to. After Outlook is installed, users need to enter the information that connects to their work or school account, like the email server link and more.
+- If you want to customize Outlook or preconfigure it with your organization settings, then you can [create an email device configuration profile](#create-the-profile) (in this article). When the profile is ready, deploy this email device configuration profile to your users or user groups. The profile includes the settings that connect the Outlook app to your email system, such as Microsoft Exchange. Email device configuration profiles are optional.
 
-- **Built-in Mail app**: This app is preinstalled with the OS and can be used to access personal email and organization email. If you don't want to use the built-in Mail app, then organizations that use conditional access (CA) can create CA policies to block native mail apps. Or, use CA to only allow specific apps.
+- If you don't want to customize Outlook or preconfigure it for your users, you don't have to. After Outlook is installed, users need to enter the information that connects to their work or school account, like the email server link and more.
 
-  - If you want to customize the Mail app or preconfigure it with your organization settings, then you can [create an email device configuration profile](#create-the-profile) (in this article). When the profile is ready, deploy this email device configuration profile to your users or user groups. The profile includes the settings that connect the Mail app to your email system, such as Microsoft Exchange. Email device configuration profiles are optional.
+# [Built-in Mail app](#tab/built-in-mail-app-windows)
 
-  - If you don't want to customize the Mail app or preconfigure it for your users, you don't have to. To use the Mail app for organization email, users need to enter the information that connects to their work or school account, like the email server link and more.
+The **Built-in Mail app** is preinstalled with the OS and can be used to access personal email and organization email. If you don't want to use the built-in Mail app, then organizations that use conditional access (CA) can create CA policies to block native mail apps. Or, use CA to only allow specific apps.
 
-- **Other email apps**: Other email apps that support Azure AD identities are available in the Microsoft Store. To use these email apps, add the app to Intune, and assign the app to your users or user groups. The app also installs.
+- If you want to customize the Mail app or preconfigure it with your organization settings, then you can [create an email device configuration profile](#create-the-profile) (in this article). When the profile is ready, deploy this email device configuration profile to your users or user groups. The profile includes the settings that connect the Mail app to your email system, such as Microsoft Exchange. Email device configuration profiles are optional.
 
-  After the app is deployed and installed:
+- If you don't want to customize the Mail app or preconfigure it for your users, you don't have to. To use the Mail app for organization email, users need to enter the information that connects to their work or school account, like the email server link and more.
 
-  - If you want to customize the email app or preconfigure it with your organization settings, then you can [create an email device configuration profile](#create-the-profile) (in this article). When the profile is ready, deploy this email device configuration profile to your users or user groups. The profile includes the settings that connect the email app to your email system, such as Microsoft Exchange. Email device configuration profiles are optional.
+# [Other email apps](#tab/other-email-apps-windows)
 
-  - If you don't want to customize the app or preconfigure it for your users, you don't have to. After the app is installed, users need to enter the information that connects to their work or school account, like the email server link and more.
+**Other email apps** that support Azure AD identities are available in the Microsoft Store. To use these email apps, add the app to Intune, and assign the app to your users or user groups. The app also installs.
+
+After the app is deployed and installed:
+
+- If you want to customize the email app or preconfigure it with your organization settings, then you can [create an email device configuration profile](#create-the-profile) (in this article). When the profile is ready, deploy this email device configuration profile to your users or user groups. The profile includes the settings that connect the email app to your email system, such as Microsoft Exchange. Email device configuration profiles are optional.
+
+- If you don't want to customize the app or preconfigure it for your users, you don't have to. After the app is installed, users need to enter the information that connects to their work or school account, like the email server link and more.
+
+---
 
 ## Create the profile
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Configuration profiles** > **Create profile**.
 3. Enter the following properties:
 

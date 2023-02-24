@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 01/11/2023
+ms.date: 02/09/2023
 ms.topic: reference
 ms.service: windows-365
 ms.subservice: 
@@ -23,7 +23,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: seodec18, references_regions
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- tier2
 ---
 
 # In development for Windows 365 Enterprise
@@ -54,18 +56,15 @@ To help in your readiness and planning, this page lists Windows 365 updates and 
 -->
 
 <!-- ***********************************************-->
-## App management
-
-### Windows 365 app will support Windows 10<!--42212516-->
-
-In a future update, the Windows 365 app will support Windows 10.
-
-<!-- ***********************************************-->
 ## Device provisioning
 
 ### Add more Azure Network Connections to a provisioning policy<!--42906565-->
 
 A new Azure Network Connection (ANC) option lets you add more ANCs to a provisioning policy and define a priority order for their use. By preparing multiple ANCs in different Azure regions, admins can make provisioning more reliable in the rare case of capacity constraints in a region.
+
+### Cloud PC custom name template<!--42947813-->
+
+You’ll be able to create a template to automatically create unique names for new Cloud PCs.
 
 <!--***********************************************-->
 <!--
@@ -75,7 +74,7 @@ A new Azure Network Connection (ANC) option lets you add more ANCs to a provisio
 <!-- ***********************************************-->
 ## Monitor and troubleshoot
 
-### End user manual connectivity check<!--37679345 --> 
+### End user manual connectivity check<!--37679345 -->
 
 End users will be able to manually run connectivity checks on their Cloud PCs from [windows365.microsoft.com](https://windows365.microsoft.com).
 

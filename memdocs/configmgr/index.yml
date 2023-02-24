@@ -1,6 +1,6 @@
 ### YamlMime:Hub 
-title: Microsoft Endpoint Configuration Manager documentation
-summary: "Official product documentation for the following components of Microsoft Endpoint Manager: Configuration Manager, co-management, and Desktop Analytics"
+title: Microsoft Configuration Manager documentation
+summary: "Official product documentation for Configuration Manager, co-management, and Desktop Analytics"
 metadata:
    ms.topic: hub-page
    ms.prod: configuration-manager
@@ -35,7 +35,7 @@ conceptualContent:
   items:
     - title: Cloud-attached management
       links:
-        - text: Microsoft Endpoint Manager tenant attach
+        - text: Microsoft Intune tenant attach
           url: ./tenant-attach/index.yml
           itemType: overview
         - text: Endpoint analytics

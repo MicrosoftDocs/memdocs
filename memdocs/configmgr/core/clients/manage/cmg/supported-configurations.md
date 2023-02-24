@@ -95,15 +95,15 @@ For more information about support for deploying a task sequence to a client via
 
 #### <a name="bkmk_note3"></a> Note 3: Support for remote tools
 
-As announced at Microsoft Ignite 2021, a public preview of the new remote assistance solution is now available in the Microsoft Endpoint Manager admin center. This cloud-based tool can help you more securely support users of Windows devices.
+As announced at Microsoft Ignite 2021, a public preview of the new remote assistance solution is now available in the Microsoft Intune admin center. This cloud-based tool can help you more securely support users of Windows devices.
 
 For more information, see the following resources:
 
-- [Remote help: a new remote assistance tool from Microsoft (blog post)](https://techcommunity.microsoft.com/t5/microsoft-endpoint-manager-blog/remote-help-a-new-remote-assistance-tool-from-microsoft/ba-p/2822622)
+- [Remote Help: a new remote assistance tool from Microsoft (blog post)](https://techcommunity.microsoft.com/t5/microsoft-endpoint-manager-blog/remote-help-a-new-remote-assistance-tool-from-microsoft/ba-p/2822622)
 
-- [Enable remote help scenarios with Microsoft Endpoint Manager (demo video)](https://techcommunity.microsoft.com/t5/video-hub/enable-remote-help-scenarios-with-microsoft-endpoint-manager/ba-p/2911349)
+- [Enable remote help scenarios with Microsoft Intune (demo video)](https://techcommunity.microsoft.com/t5/video-hub/enable-remote-help-scenarios-with-microsoft-endpoint-manager/ba-p/2911349)
 
-- [Use remote help with Intune and Microsoft Endpoint Manager](../../../../../intune/remote-actions/remote-help.md)
+- [Use Remote Help with Intune and Configuration Manager](../../../../../intune/remote-actions/remote-help.md)
 
 #### <a name="bkmk_note4"></a> Note 4: Support for alternate content providers
 

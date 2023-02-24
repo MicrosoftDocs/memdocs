@@ -23,7 +23,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Use WDAC and Windows PowerShell to allow or blocks apps on HoloLens 2 devices with Microsoft Intune
@@ -186,7 +188,7 @@ This example uses Windows PowerShell to create a Windows Defender Application Co
 
 11. Create the custom device configuration profile in Intune:
 
-    1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), create a Windows 10/11 custom device configuration profile.
+    1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), create a Windows 10/11 custom device configuration profile.
 
         For the specific steps, see [Create a custom profile using OMA-URI in Intune](custom-settings-configure.md).
 

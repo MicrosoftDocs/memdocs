@@ -1,8 +1,8 @@
 ### YamlMime:FAQ
 metadata:
-  title: Microsoft Endpoint Configuration Manager FAQ
+  title: Microsoft Configuration Manager FAQ
   titleSuffix: Configuration Manager
-  description: Frequently asked questions about Microsoft Endpoint Configuration Manager
+  description: Frequently asked questions about Microsoft Configuration Manager
   ms.date: 04/16/2021
   ms.prod: configuration-manager
   ms.technology: configmgr-core
@@ -13,11 +13,11 @@ metadata:
   manager: apoorvseth
   ms.collection: highpri
 
-title: Microsoft Endpoint Configuration Manager FAQ
+title: Microsoft Configuration Manager FAQ
 summary: |
   *Applies to: Configuration Manager (current branch, technical preview branch)*
   
-  Since October 2019, Configuration Manager is part of Microsoft Endpoint Manager. This article provides answers to frequently asked questions.
+  Since October 2019, Configuration Manager is part of the Microsoft Intune family of products. This article provides answers to frequently asked questions.
   
   ## Summary
   
@@ -29,17 +29,17 @@ sections:
   - name:  FAQs
     questions:
       - question: |
-          What is Microsoft Endpoint Manager?
+          What is the Microsoft Intune family of products?
         answer: |
-          Microsoft Endpoint Manager is an integrated solution for managing all of your devices. Microsoft brings together Configuration Manager and Intune with simplified licensing. Continue to use your existing Configuration Manager investments, while taking advantage of the power of the Microsoft cloud at your own pace.
+          The Microsoft Intune family of products is an integrated solution for managing all of your devices. Microsoft brings together Configuration Manager and Intune with simplified licensing. Continue to use your existing Configuration Manager investments, while taking advantage of the power of the Microsoft cloud at your own pace.
           
-          The following Microsoft management solutions are all now part of the **Microsoft Endpoint Manager** brand:
+          The following Microsoft management solutions are all now part of the **Microsoft Intune** brand:
           
           - [Configuration Manager](../../index.yml)
           - [Intune](../../../intune/index.yml)
           - [Desktop Analytics](../../desktop-analytics/overview.md)
           - [Autopilot](../../../autopilot/enrollment-autopilot.md)
-          - Other features in the [Microsoft Endpoint Manager admin console](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/microsoft-intune-rolls-out-an-improved-streamlined-endpoint/ba-p/937760)
+          - Other features in the [Microsoft Intune admin center](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/microsoft-intune-rolls-out-an-improved-streamlined-endpoint/ba-p/937760)
           
           For more information, see the following posts from Brad Anderson, former Microsoft corporate vice president for Microsoft 365:
           
@@ -47,7 +47,7 @@ sections:
           - [Vision paper](https://aka.ms/MEMVisionPaper)
           
       - question: |
-          What things change in Configuration Manager with Microsoft Endpoint Manager?
+          What things change in Configuration Manager and the Microsoft Intune family of products?
         answer: |
           Aside from the name change, Configuration Manager still functions the same.
           
@@ -56,17 +56,17 @@ sections:
       - question: |
           How do we refer to the product now?
         answer: |
-          - When referring to the entire solution that includes all components: **Microsoft Endpoint Manager**
+          - When referring to the entire solution that includes all components: **Microsoft Intune family of products**
           
           - When referring to the on-premises component:
-            - On first reference, use the full brand name: **Microsoft Endpoint Configuration Manager**
+            - On first reference, use the full brand name: **Microsoft Configuration Manager**
             - For general use: **Configuration Manager**
             - For space-constrained use: **ConfigMgr**, only in instances where the general use name doesn't fit
           
       - question: |
           Are there any licensing changes?
         answer: |
-          Yes! As announced at Microsoft Ignite 2019, if you're licensed for Configuration Manager, then you're also now licensed for Intune to [co-manage](../../comanage/overview.md) your Windows PCs. For more information, see the [Product and licensing FAQ](product-and-licensing-faq.yml#what-changes-with-licensing-for-co-management-in-microsoft-endpoint-manager-).
+          Yes! As announced at Microsoft Ignite 2019, if you're licensed for Configuration Manager, then you're also now licensed for Intune to [co-manage](../../comanage/overview.md) your Windows PCs. For more information, see the [Product and licensing FAQ](product-and-licensing-faq.yml#what-changes-with-licensing-for-co-management-in-the-microsoft-intune-family-of-products-).
           
       - question: |
           Why do I still see "System Center Configuration Manager" some places?

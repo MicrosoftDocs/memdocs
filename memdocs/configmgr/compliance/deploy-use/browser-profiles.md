@@ -19,7 +19,7 @@ ms.reviewer: mstewart,aaroncz
 > [!IMPORTANT]
 > If you're using Microsoft Edge version 77 or later, and are trying to open the settings pane, enter `edge://settings/profiles` in the browser address bar instead of search. For more information, see [Get to know Microsoft Edge](https://support.microsoft.com/help/17171/microsoft-edge-get-to-know).
 >
-> This article is for IT professionals to manage Microsoft Edge Legacy settings with Microsoft Endpoint Configuration Manager.
+> This article is for IT professionals to manage Microsoft Edge Legacy settings with Microsoft Configuration Manager.
 
 *Applies to: Configuration Manager (current branch)*
 

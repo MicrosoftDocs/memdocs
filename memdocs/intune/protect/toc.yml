@@ -138,7 +138,13 @@ items:
     - name: Configure Microsoft Tunnel
       href: microsoft-tunnel-configure.md
     - name: Microsoft Tunnel for MAM
-      href: microsoft-tunnel-mam.md
+      items:
+      - name: MAM Tunnel Overview
+        href: microsoft-tunnel-mam.md
+      - name: MAM Tunnel for Android
+        href: microsoft-tunnel-mam-android.md
+      - name: MAM Tunnel for iOS
+        href: microsoft-tunnel-mam-ios.md
     - name: Monitor Microsoft Tunnel
       href: microsoft-tunnel-monitor.md
     - name: Upgrade Microsoft Tunnel
@@ -232,7 +238,12 @@ items:
         href: pradeo-mobile-threat-defense-connector.md
         items:
         - name: Pradeo and Intune integration
-          href: pradeo-mtd-connector-integration.md
+          href: pradeo-mobile-threat-defense-connector.md
+      - name: Set up SentinelOne Mobile
+        href: sentinelone-mobile-threat-defense-connector.md
+        items:
+        - name: SentinelOne Mobile and Intune integration
+          href: sentinelone-mtd-connector-integration.md
       - name: Set up Sophos Mobile
         href: sophos-mtd-connector.md
         items:

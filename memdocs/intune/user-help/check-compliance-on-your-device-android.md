@@ -25,18 +25,17 @@ ms.reviewer: arnab
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
-ms.collection: 
+ms.collection:
+- tier2
 ---
 
-# Check compliance on your Android device  
-Manually start a device check-in from the Company Portal to:
+# Check compliance in Company Portal app for Android     
+*Applies to Intune Company Portal app for Android*  
 
-* Update your device status 
-* Regain access to your work or school resources 
+Use the Intune Company Portal app to remotely check the status of an enrolled device, and confirm or resolve access issues caused by noncompliant settings. During a status check, Company Portal confirms whether or not the selected device meets your organization's requirements. If your device doesn't meet requirements, your organization may limit or restrict it from accessing internal resources until you make changes.     
 
-During a check-in, Company Portal will confirm that the settings on your device meet your organization's policy requirements.  Your organization can limit or restrict access to work or school resources until you check in.  
-
-If you recently made changes to your device settings, you may need to manually check in to register these changes with Company Portal. 
+>[!TIP]
+> After you update the settings on a noncompliant device, we recommend running a status check to register the changes with the Intune app.  
 
 1. Open the Company Portal app for Android on your device.  
 

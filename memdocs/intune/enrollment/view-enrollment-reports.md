@@ -27,8 +27,9 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection:
-  - M365-identity-device-management
-  - highpri
+- tier1
+- M365-identity-device-management
+- highpri
 ---
 
 # View enrollment reports
@@ -43,7 +44,7 @@ ms.collection:
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]  
 
-Your can use the following reports in the Microsoft Endpoint Manager admin center to monitor and troubleshoot issues with enrollment restrictions and enrollment status page assignments:  
+Your can use the following reports in the Microsoft Intune admin center to monitor and troubleshoot issues with enrollment restrictions and enrollment status page assignments:  
 
 - Enrollment failures report  
 - Troubleshooting + support page  
@@ -54,7 +55,7 @@ This article describes each report and how to access them in the admin center.
 ## Enrollment failures report  
 Use the enrollment failures report to view enrollment failures for all users or for select users. This report shows each failed enrollment attempt along with the date it occurred, reason for failure, OS, OS version, username, and enrollment method.  
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Devices** > **Monitor** > **Enrollment failures**.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Monitor** > **Enrollment failures**.
 2. Select **All users** or **Select user**, depending on the scenario you're troubleshooting.
 3. Select a row in the table for more details about the failure and recommended remediation steps.  
 
@@ -64,7 +65,7 @@ Use the enrollment failures report to view enrollment failures for all users or 
 ## Troubleshooting + support page  
 Use the enrollment failures report on the Troubleshooting + support page to view enrollment failures for a select user. This report shows every failed enrollment attempt the user encountered along with the date it occurred, reason for failure, OS, OS version, username, and enrollment method. You can also view other data about the user on this page, including all assignments, devices, and app protection statuses they're associated with.    
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Troubleshooting + support** > **Select user**.
+1. In the [admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Troubleshooting + support** > **Select user**.
 2. Choose a user > **Select**. 
 3. Under **Enrollment failures**, select a row to view more details about the failure and recommended remediation steps.  
 
@@ -80,7 +81,7 @@ The device enrollment page shows the enrollment policies (both enrollment restri
 
 To access report data:   
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Devices** > **All devices**.
+1. In the [admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **All devices**.
 2. Select an enrolled iOS/iPadOS, macOS, or Windows device.  
 3. Under **Monitor**, select **Enrollment**.  
 4. Review the report data. 

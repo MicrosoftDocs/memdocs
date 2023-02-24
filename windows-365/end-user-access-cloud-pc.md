@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 07/27/2022
+ms.date: 01/31/2023
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice:
@@ -25,12 +25,14 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; get-started
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- tier1
 ---
 
 # Access a Cloud PC
 
-Users can access their Cloud PCs in two different ways:
+Users can access their Cloud PCs in these ways:
 
 - [Windows 365 app](https://support.microsoft.com/topic/cbb0d4d5-69d4-4f00-b050-6dc7a02d02d0 )
 - [windows365.microsoft.com](https://Windows365.microsoft.com)
@@ -55,7 +57,7 @@ On their Windows 365 home page, users see the Cloud PCs they have access to in t
 
 ![Windows 365 home.](business/media/get-started-windows-365-business/cloud-pc-home.png)
 
-Users can select **Open in browser** to open their Cloud PC.
+Users can select **Open in browser** or **Open in Remote Desktop app** to open their Cloud PC.
 
 > [!NOTE]  
 > Mobile devices aren’t currently supported for using a browser to open Cloud PC. The Remote Desktop app is supported.
@@ -98,6 +100,18 @@ To transfer files from the Cloud PC to the local device, copy the files to the D
 #### Restrict users from transferring files to and from Cloud PCs
 
 You can restrict users from transferring files by using RDP drive redirection. For more information, see [Manage RDP device redirections for Cloud PCs](./enterprise/manage-rdp-device-redirections.md).
+
+### Connection details
+
+Users can view and download connection details.
+
+1. Select the **Connection details** icon > **Show details**.
+  
+     ![Screenshot of Connection icon.](media/end-user-access-cloud-pc/connection.png)
+
+2. To download a text file containing the connection details, select **Download report**.
+  
+     ![Screenshot of connection details.](media/end-user-access-cloud-pc/connection-details.png)
 
 ### User feedback
 

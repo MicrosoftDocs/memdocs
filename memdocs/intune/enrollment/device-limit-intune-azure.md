@@ -3,7 +3,7 @@
 
 title: Understand Intune and Azure AD device limit restrictions
 titleSuffix: Microsoft Intune
-description: Learn the differences between Intune device limit restrictions and Azure AD's delimit restrictions. 
+description: Learn the differences between Intune device limit restrictions and Azure AD device limit restrictions. 
 keywords:
 author: Lenewsad
 ms.author: lanewsad
@@ -25,8 +25,9 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection:
-  - M365-identity-device-management
-  - highpri
+- tier1
+- M365-identity-device-management
+- highpri
 ---
 
 # Understand Intune and Azure AD device limit restrictions  
@@ -38,15 +39,11 @@ ms.collection:
 - Windows 10
 - Windows 11
 
-Device limit restrictions can be configured two ways:
-- Intune enrollment
-- Azure Active Directory (AD) joined or Azure AD registered
-
-This article clarifies when these limits are applied based on your configuration.
+Device limit restrictions can be configured two ways: by Intune enrollment, or by Azure Active Directory (AD) joined or Azure AD registered. This article clarifies when these limits are applied based on your configuration.  
 
 ## Intune device limit restrictions
 
-Intune device limit restrictions set the maximum number of devices that a user can enroll (maximum setting is 15). To set a device limit restriction, sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Then go to **Devices** > **Enrollment restrictions**. For more information, see [Create a device limit restriction](create-device-limit-restrictions.md).  
+Intune device limit restrictions set the maximum number of devices that a user can enroll. You can allow a user to enroll up to 15 devices. To set a device limit restriction, sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Then go to **Devices** > **Enrollment restrictions**. For more information, see [Create a device limit restriction](create-device-limit-restrictions.md).  
 
 ## Azure device limit restriction
 

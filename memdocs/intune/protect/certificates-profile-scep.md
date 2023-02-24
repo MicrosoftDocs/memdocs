@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/17/2022
+ms.date: 01/30/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -20,10 +20,11 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: 
-  - M365-identity-device-management
-  - highpri
-  - highseo
+ms.collection:
+- tier1
+- M365-identity-device-management
+- highpri
+- highseo
 ---
 
 # Create and assign SCEP certificate profiles in Intune
@@ -45,7 +46,7 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
 
 ## Create a SCEP certificate profile
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select  and go to **Devices** > **Configuration profiles** > **Create profile**.
 
@@ -94,7 +95,8 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
 
      Select a type depending on how you'll use the certificate profile:
 
-     - **User**: *User* certificates can contain both user and device attributes in the subject and SAN of the certificate.  
+     - **User**: *User* certificates can contain both user and device attributes in the subject and SAN of the certificate.
+
      - **Device**:  *Device* certificates can only contain device attributes in the subject and SAN of the certificate.
 
        Use **Device** for scenarios such as user-less devices, like kiosks, or for Windows devices. On Windows devices, the certificate is placed in the Local Computer certificate store.
@@ -143,7 +145,7 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
 
        **Common Name (CN)** can be set to any of the following variables:
 
-       - **CN={{UserName}}**: The user name of the user, such as janedoe.
+       - **CN={{UserName}}**: The user name of the user, such as janedoe. 
        - **CN={{UserPrincipalName}}**: The user principal name of the user, such as janedoe@contoso.com.
        - **CN={{AAD_Device_ID}}**: An ID assigned when you register a device in Azure Active Directory (AD). This ID is typically used to authenticate with Azure AD.
        - **CN={{DeviceId}}**: An ID assigned when you enroll a device in Intune.
@@ -196,6 +198,12 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
    - **Subject alternative name**:  
      Select how Intune automatically creates the subject alternative name (SAN) in the certificate request. You can specify multiple subject alternative names. For each one, you may select from four SAN attributes and enter a text value for that attribute. The text value can contain variables and static text for the attribute.
 
+     > [!NOTE]
+     > The following Android Enterprise profiles don’t support use of the {{UserName}} variable for the SAN:  
+     >
+     > - Fully Managed, Dedicated, and Corporate-Owned Work Profile
+
+
      Select from the available SAN attributes:
 
      - **Email address**
@@ -240,7 +248,7 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
 
    - **Certificate validity period**:
 
-     You can enter a value that is lower than the validity period in the certificate template, but not higher. If you configured the certificate template to [support a custom value that can be set from within the Intune console](certificates-scep-configure.md#modify-the-validity-period-of-the-certificate-template), use this setting to specify the amount of remaining time before the certificate expires.
+     You can enter a value that is lower than the validity period in the certificate template, but not higher. If you configured the certificate template to [support a custom value that can be set from within the Intune admin center](certificates-scep-configure.md#modify-the-validity-period-of-the-certificate-template), use this setting to specify the amount of remaining time before the certificate expires.
 
      Intune supports a validity period of up to 24 months.
 

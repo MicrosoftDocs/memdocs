@@ -28,8 +28,9 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune
 ms.collection:
-  - M365-identity-device-management
-  - highpri
+- tier1
+- M365-identity-device-management
+- highpri
 ---
 
 # Tutorial: Use Autopilot to enroll Windows devices in Intune
@@ -66,51 +67,60 @@ The first step in setting up Windows Autopilot is to add the Windows devices to 
 
 2. Save the CSV file.
 
-3. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Windows** > **Windows Enrollment** > **Devices** (under **Windows Autopilot Deployment Program**) > **Import**.
+3. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and go to **Devices** > **Windows** > **Windows Enrollment**. 
 
-    ![Screenshot of Windows Autopilot devices](./media/enrollment-autopilot/autopilot-import-device.png)
+4.  Under **Windows Autopilot Deployment Program**, select **Devices**.   
 
-4. Under **Add Windows Autopilot devices**, browse to the CSV file you saved.
+    ![Screenshot of Windows Autopilot devices](./media/enrollment-autopilot/autopilot-import-device.png)  
 
-    ![Screenshot of Adding Windows Autopilot devices](./media/tutorial-use-autopilot-enroll-devices/autopilot-import-device2.png)
+5. Select **Import**.  
 
-5. Choose **Import** to start importing the device information. Importing can take several minutes.
+6. The **Add Autopilot devices** pane opens. Choose the **Select a file** folder icon and browse to your CSV file.  
 
-4. After import is complete, choose **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program** > **Sync**. A message displays that the synchronization is in progress. The process might take a few minutes to complete, depending on how many devices you're synchronizing.
+5. Select **Import** to start importing device information. Importing can take several minutes.  
 
-5. Refresh the view to see the new devices.
+4. After import is complete, return to **Windows Autopilot Deployment Program** > **Devices**, and select **Sync**.   Synchronization might take a few minutes to complete, depending on how many devices you're synchronizing. 
+
+5. Select **Refresh** to see the imported devices.
 
 ## Create an Autopilot device group
 
 Next, you'll create a device group and put the Autopilot devices you just loaded into it.
 
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Groups** > **New group**.
-2. In the **Group** blade:
-    1. For **Group type**, choose **Security**.
-    2. For **Group name**, enter *Autopilot Group*. For **Group description**, enter *Test group for Autopilot devices*.
-    3. For **Membership type**, choose either **Assigned**.
-3. In the **Group** blade, choose **Members** and add the Autopilot devices to the group. Autopilot devices that aren't yet enrolled are devices where the name equals the serial number of the device.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Groups** > **New group**.
+2. Configure the settings for your new **Group** as follows:    
+    1. For **Group type**, select **Security**.  
+    2. For **Group name**, enter *Autopilot Group*.  
+    3. For **Group description**, enter *Test group for Autopilot devices*.  
+    4. For **Membership type**, select **Assigned**.
+    5. Select the link under **Members** to add Autopilot devices to the group. Autopilot devices that aren't yet enrolled are devices where the name equals the serial number of the device.
 4. Choose **Create**.  
 
 ## Create an Autopilot deployment profile
 
 After creating a device group, you must create a deployment profile so that you can configure the Autopilot devices.
 
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Windows** > **Windows enrollment** > **Deployment Profiles** > **Create Profile**.
-2. On the **Basics** page, for **Name**, enter *Autopilot Profile*. For **Description**, enter *Test profile for Autopilot devices*.
-3. Set **Convert all targeted devices to Autopilot** to **Yes**. This setting makes sure that all devices in the list get registered with the Autopilot deployment service. Allow 48 hours for the registration to be processed.
-4. Select **Next**.
-5. On the **Out-of-box experience (OOBE)** page, for **Deployment mode**, choose **User-driven**. Devices with this profile are associated with the user enrolling the device. User credentials are required to enroll the device.
-6. In the **Join to Azure AD as** box, choose **Azure AD joined**.
-7. Configure the following options and leave others set to the default:
-    - **End-user license agreement (EULA)**: **Hide**
-    - **Privacy settings**: **Show**
-    - **User account type**: **Standard**
-8. Select **Next**.
-9. On the **Assignments** page, choose **Selected groups** for **Assign to**.
-10. Choose **Select groups to include**, choose **Autopilot Group**.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Windows** > **Windows enrollment**. 
+2. Select **Deployment Profiles**. 
+3. Select **Create profile** > **Windows PC**.  
+4. On the **Basics** page, name the profile *Autopilot Profile*. In **Description**, enter *Test profile for Autopilot devices*.
+5. Set **Convert all targeted devices to Autopilot** to **Yes**. This setting makes sure that all devices in the list get registered with the Autopilot deployment service. Allow 48 hours for processing.
+6. Select **Next**.  
+7. Configure the **Out-of-box experience (OOBE)** settings. 
+    * **Deployment mode**: Select **User-driven**. Devices with this profile are associated with the user enrolling the device. User credentials are required to enroll the device.
+    * **Join to Azure AD as**: Select **Azure AD joined**.
+8. Configure the following settings. 
+    - **Microsoft Software License Terms**: Select **Hide**.  
+    - **Privacy settings**: Select **Show**
+    - **User account type**: Select **Standard**.    
+ Leave all other settings on the page set to the default.    
+9. Select **Next**.  
+10. Optionally, add scope tags to limit the admins who can access and manage this profile in the admin center.  
+11. Select **Next**.  
+12. On the **Assignments** page, under **Included groups**, select **Add groups**.   
+10. Pick **Autopilot Group** > **Select**.  
 11. Select **Next**.
-12. On the **Review + Create** page, choose **Create** to create the profile.
+12. On the **Review + Create** page, select **Create** to finish creating the profile.
 
 ## Hardware change detection  
 Microsoft Intune notifies you when it detects a hardware change on an Autopilot-registered device. When a hardware change occurs, Intune updates the device's profile status to one of the following states:
@@ -130,11 +140,13 @@ If you don't want to use Autopilot devices anymore, you can delete them.
 
 1. If the devices are enrolled in Intune, you must first [delete them from the Azure Active Directory portal](../remote-actions/devices-wipe.md#delete-devices-from-the-azure-active-directory-portal).
 
-2. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program**).
+2. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Windows** > **Windows enrollment**. 
 
-3. Choose the devices you want to delete, and then choose **Delete**.
+3. Under **Windows Autopilot Deployment Program**, select **Devices**.  
 
-4. Confirm the deletion by choosing **Yes**. It can take a few minutes to delete.
+3. Choose the devices you want to delete, and then select **Delete**.
+
+4. When prompted to, select **Yes** to confirm the deletion. It can take a few minutes to delete. 
 
 ## Next steps
 
