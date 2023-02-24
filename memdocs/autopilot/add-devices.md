@@ -134,7 +134,7 @@ During OOBE, press **Ctrl-Shift-D** to bring up the Diagnostics Page. From this 
 
 ### Desktop hash export
 
-1. From the Windows 10 or Windows 11 Desktop, click **Settings** > **Accounts** > **Access work or school**.
+1. From the Windows 10 or Windows 11 Start menu, right click and select **Settings** > **Accounts** > **Access work or school**.
 2. Export log files. The logs will include a CSV file with the hardware hash.
    - Windows 11: In the **Export your management log files** tile, click **Export**. 
    - Windows 10: Click the **Export your management log files** link.
