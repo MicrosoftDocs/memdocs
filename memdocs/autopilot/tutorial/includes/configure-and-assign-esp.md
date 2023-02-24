@@ -72,7 +72,7 @@ To configure and assign the Autopilot Enrollment Status Page (ESP) so that it sh
 
 10. In the **Assignments** page, select **Add groups**.
 
-11. In the the **Select groups to include** pane, select the device group(s) to target the ESP profile. This normally would be the device group(s) created in the section [Create a device group](#create-a-device-group). After selecting the device group, select **Select**.
+11. In the the **Select groups to include** pane, select the device group(s) to target the ESP profile. This normally would be the device group(s) created in the previous step. After selecting the device group, select **Select**.
 
     > [!TIP]
     >
