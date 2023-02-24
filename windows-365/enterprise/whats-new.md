@@ -51,6 +51,38 @@ Learn what new features are available in Windows 365 Enterprise.
 -->
 
 <!-- ########################## -->
+## Week of February 27, 2023
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Apps
+
+#### Windows 365 app is now generally available<!--41929443-->
+
+The Windows 365 app has moved out of preview and into general availability. For more information, see [Installing the Windows 365 app](https://support.microsoft.com/topic/cbb0d4d5-69d4-4f00-b050-6dc7a02d02d0).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Hardware acceleration for Cloud PCs using the browser<!--43105503-->
+
+On windows365.microsoft.com, you can turn on hardware acceleration for your Cloud PC (while connecting using the web client). This option is turned on by default and it decreases network latency, improving the windows365.microsoft.com web client Cloud PC experience.
+
+#### Configure installed language and region for provisioning Cloud PCs in GCC/H environments<!--43290793 -->
+
+When creating a provisioning policy, admins can now configure the installed language and region for new Cloud PCs in US Government Community Cloud (GCC) and GCC High environments. For more information, see [Provide users a localized Windows experience](provide-localized-windows-experience.md)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device provisioning
+
+#### Add more Azure Network Connections to a provisioning policy<!--42906565-->
+
+A new Azure Network Connection (ANC) option lets you add more ANCs to a provisioning policy and define a priority order for their use. By preparing multiple ANCs in different Azure regions, admins can make provisioning more reliable in the rare case capacity constraints in a region.
+
+#### GCC/H support for geography option in Windows 365 provisioning policy<!-- 41400209-->
+
+The **Geography** setting in provisioning policies is now supported for US Government Community Cloud (GCC) and GCC High environments. For more information, see [Create provisioning policies](create-provisioning-policy.md).
+
+<!-- ########################## -->
 ## Week of February 20, 2023
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
