@@ -35,15 +35,3 @@ For an overview of the Windows Autopilot user-driven Azure AD join workflow, see
 
 > [!div class="nextstepaction"]
 > [Step 3: Configure and assign the Enrollment Status Page (ESP)](autopilot-user-driven-aadj-3-configure-and-assign-esp.md)
-
-<!--
-## Previous step - Step 1 of 5: Register devices as Autopilot devices
-
-> [!div class="nextstepaction"]
-> [Step 1: Register devices as Autopilot devices](autopilot-user-driven-aadj-1-register-device.md)
-
-## Back to Windows Autopilot user-driven Azure AD join overview
-
-> [!div class="nextstepaction"]
-> [Windows Autopilot user-driven Azure AD join overview](autopilot-user-driven-aadj-workflow.md)
--->

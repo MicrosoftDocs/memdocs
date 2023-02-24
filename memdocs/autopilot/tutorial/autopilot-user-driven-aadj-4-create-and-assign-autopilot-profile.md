@@ -108,15 +108,3 @@ For more information on creating and assigning Autopilot profiles, see the follo
 
 > [!div class="nextstepaction"]
 > [Step 5: Assign Autopilot device to a user (optional)](autopilot-user-driven-aadj-5-assign-autopilot-device-to-user.md)
-
-<!--
-## Previous step - Step 3 of 5: Configure and assign the Enrollment Status Page (ESP)
-
-> [!div class="nextstepaction"]
-> [Step 3: Configure and assign the Enrollment Status Page (ESP)](autopilot-user-driven-aadj-3-configure-and-assign-esp.md)
-
-## Back to Windows Autopilot user-driven Azure AD join overview
-
-> [!div class="nextstepaction"]
-> [Windows Autopilot user-driven Azure AD join overview](autopilot-user-driven-aadj-workflow.md)
--->
