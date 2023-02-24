@@ -81,9 +81,6 @@ The following protected app is now available for Microsoft Intune:
 
 For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
 
-#### System context support for UWP apps<!-- 16544103  -->  
-In addition to user context, you can now deploy Universal Windows Platform (UWP) apps from the **Microsoft Store app (new)** in system context. If a provisioned *.appx* app is deployed in system context, the app will auto-install for each user that logs in. If an individual end user uninstalls the user context app, the app will still show as installed because it is still provisioned. In addition, the app must not already be installed for any users on the device. Our general recommendation is to not mix install contexts when deploying apps. Note that Win32 apps from the **Microsoft Store app (new)** already supports system context.
-
 ### Device configuration
 
 #### Endpoint Manager admin center is renamed to Intune admin center<!-- 15560662   -->  
