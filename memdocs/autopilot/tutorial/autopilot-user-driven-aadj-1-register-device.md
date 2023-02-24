@@ -20,11 +20,13 @@ ms.technology: itpro-deploy
 Autopilot user-driven Azure AD join steps:
 > [!div class="checklist"]
 >
-> - [Register devices as Autopilot devices](autopilot-user-driven-aadj-1-register-device.md)
-> - [Create a device group](autopilot-user-driven-aadj-2-create-device-group.md)
-> - [Configure and assign Autopilot Enrollment Status Page (ESP)](autopilot-user-driven-aadj-3-configure-and-assign-esp.md)
-> - [Create and assign Autopilot profile](autopilot-user-driven-aadj-4-create-and-assign-autopilot-profile.md)
-> - [Assign Autopilot device to a user (optional)](autopilot-user-driven-aadj-5-assign-autopilot-device-to-user.md)
+> - [Windows Autopilot user-driven Azure AD join overview](autopilot-user-driven-aadj-workflow.md)
+>
+> - **Step 1**: [Register devices as Autopilot devices](autopilot-user-driven-aadj-1-register-device.md)
+> - Step 2: [Create a device group](autopilot-user-driven-aadj-2-create-device-group.md)
+> - Step 3: [Configure and assign Autopilot Enrollment Status Page (ESP)](autopilot-user-driven-aadj-3-configure-and-assign-esp.md)
+> - Step 4: [Create and assign Autopilot profile](autopilot-user-driven-aadj-4-create-and-assign-autopilot-profile.md)
+> - Step 5: [Assign Autopilot device to a user (optional)](autopilot-user-driven-aadj-5-assign-autopilot-device-to-user.md)
 
 ## Register devices as Autopilot devices
 
@@ -35,7 +37,9 @@ Autopilot user-driven Azure AD join steps:
 > [!div class="nextstepaction"]
 > [Step 2: Create a device group](autopilot-user-driven-aadj-2-create-device-group.md)
 
+<!--
 ## Back to Windows Autopilot user-driven Azure AD join overview
 
 > [!div class="nextstepaction"]
 > [Windows Autopilot user-driven Azure AD join overview](autopilot-user-driven-aadj-workflow.md)
+-->
