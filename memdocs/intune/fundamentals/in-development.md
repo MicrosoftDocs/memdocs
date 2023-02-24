@@ -59,11 +59,8 @@ You can use RSS to be notified when this article is updated. For more informatio
 -->
 
 <!-- ***********************************************-->
-
+ 
 ## App management
-
-### Latest iOS/iPadOS version available as minimum OS requirement for LOB and store apps<!-- 16433620  -->  
-You'll soon be able to specify iOS/iPadOS 16.0 as the minimum operating system for line-of-business and store app deployments. This new setting option will be available in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **iOS/iPadOS** > *iOS store app or Line-of-business app*. For more information about managing apps, see [Add apps to Microsoft Intune](../apps/apps-add.md).
 
 ### Company Portal automatically installed on Android Enterprise dedicated devices<!-- 6423852  -->  
 Intune Company Portal will now be automatically installed on all Android Enterprise dedicated devices to ensure the appropriate handling of app protection policies. Users will not be able to see or launch the Company Portal, and there are no requirements for users to interact with it. Admins will notice that the Company Portal is automatically installed on their Android Enterprise dedicated devices, without the ability to uninstall.
@@ -77,26 +74,6 @@ Users will be able to uninstall Win32 apps in the Company Portal. If a Win32 app
 The global quiet time settings will allow you to create policies to schedule quiet time for your end users, which will automatically mute Microsoft Outlook email and Teams notifications on iOS/iPadOS and Android platforms. These policies can be used to limit end user notifications received after work hours. When this feature is available, you will be able to find it in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **Quiet Time** > **Policies**.
 
 ## Device configuration
-
-### Disable Activation Lock device action for supervised iOS/iPadOS devices<!-- 15571509 -->  
-You'll soon be able to use the **Disable Activation Lock** device action in Intune to bypass Activation Lock on iOS/iPadOS devices without requiring the current username or password.
-
-This new action will be available under **Devices > iOS/iPadOS > select one of your listed devices > Disable Activation Lock**.
-
-More information on managing Activation Lock is available at [Bypass iOS/iPadOS Activation Lock with Intune - Microsoft Intune | Microsoft Learn](../remote-actions/device-activation-lock-disable.md) or on Apple's website at [Activation Lock for iPhone, iPad, and iPod touch - Apple Support.](https://support.apple.com/en-us/HT201365).
-
-Applies to:  
-- **iOS/iPadOS**
-
-### Size and generation included in iOS/iPadOS model information<!-- 16406692 -->  
-You'll soon be able to view the size and generation for enrolled iOS/iPadOS devices as part of the **Model** attribute in **Hardware device details**. Go to **Devices > All devices** > select one of your listed devices and select **Hardware** to open its details.
-
-For example, iPad Pro 11-inch (3rd generation) will display for the device model instead of iPad Pro 3.
-
-For more information, go to: [See device details in Intune](../remote-actions/device-inventory.md#hardware-device-details)
-
-Applies to:
-- **iOS/iPadOS**
 
 ### Support for multi-SIM iOS/iPadOS device inventory<!--16360290-->
 
@@ -121,35 +98,8 @@ You'll soon be able to view a list of ServiceNow incidents associated with the u
 
 For more information go to [Use the troubleshooting portal to help users at your company](help-desk-operators.md).
 
-### New settings and setting options available in the Apple Settings Catalog<!-- 16813380 -->  
-The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
-
-New settings are available in the Settings Catalog. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can see these settings at **Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type.
-
-New settings include:
-
-**Login > Service Management - Managed Login Items**:  
-- Team Identifier
-
-**Microsoft Office > Microsoft Office**:  
-- Office Activation Email Address
-
-Applies to:  
-- macOS
-
-**Networking > Domains**:  
-- Cross Site Tracking Prevention Relaxed Domains
-
-Applies to:  
-- iOS/iPadOS
-
-For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
-
 ### On-demand proactive remediation for a Windows device<!-- 14783338  -->  
 A new device action that is in public preview allows you to run a proactive remediation on-demand to a single Windows device. The **Run** remediation device action will allow you to resolve issues without having to wait for a proactive remediation to run on its assigned schedule. You will also be able to view the status of proactive remediations under **Remediations** in the **Monitor** section of a device.
-
-### Support to delete stale devices that are managed through Security Management for Microsoft Defender for Endpoint<!-- 14729617   -->  
-You’ll soon be able to select the action to **Delete** a device that’s managed through the [Security Management for Microsoft Defender for Endpoint](../protect/mde-security-integration.md) solution from within the Microsoft Intune admin center. The delete option will appear along with other device management options when you view the device’s Overview details. To locate a device managed by this solution, in the admin center go to **Devices** > **All devices**, and then select a device that displays either *MDEJoined* or *MDEManaged* in the *Managed by* column.
 
 ### Endpoint security firewall rules support for ICMP type<!-- 5653356 -->  
 We’re adding a new setting named **IcmpTypesAndCodes** to the endpoint security firewall rules template for Windows 10. To configure this in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Endpoint security** > **Firewall** > **Create Policy** > Platform: *Windows 10, Windows 11, and Windows Server*  > Profile: *Microsoft Defender Firewall Rules*).
@@ -162,15 +112,6 @@ Applies to:
 <!-- ***********************************************-->
 
 ## Device security
-
-### New endpoint security Antivirus template to manage Microsoft Defender update behavior<!-- 11890335  -->  
-You’ll soon be able to use a new endpoint security policy template for Antivirus to manage updates for Microsoft Defender. With this new template you’ll be able to manage settings for the rollout release channel by which devices and users receive Defender Updates that are related to daily security intelligence updates, monthly platform updates, and monthly engine updates.
-
-When available, you’ll find the new template in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Endpoint security** > **Antivirus**.  The settings in the profile will be from the Defender CSP. See [Defender CSP - Windows Client Management](/windows/client-management/mdm/defender-csp).
-
-Applies to:  
-- Windows 10
-- Windows 11
 
 ### Support for tamper protection in policies for Security settings management for Microsoft Defender for Endpoint <!-- 13204113 -->  
 You’ll soon be able to manage Tamper protection for Microsoft Defender for Endpoint on unenrolled devices as part of the [MDE Security configuration](../protect/mde-security-integration.md#which-solution-should-i-use) scenario.
