@@ -8,7 +8,7 @@ keywords:
 author: smritib17 
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 02/21/2023
+ms.date: 02/24/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -32,21 +32,21 @@ ms.collection:
 
 # Use Intune Suite add-on capabilities
 
-Microsoft Intune Suite add-ons provide mission-critical advanced endpoint management and security capabilities. You can find Intune Suite add-ons in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) under **Tenant administration** > **Intune add-ons**. The **Summary** blade shows all Intune add-ons that have been released, a short description, and the status of the add-on. Each add-on shows a status of either **Active** or **Available for trial or purchase**.
+Microsoft Intune Suite provides mission-critical advanced endpoint management and security capabilities into Microsoft Intune. You can find add-ons to Intune in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) under **Tenant administration** > **Intune add-ons**. The **Summary** blade shows all available Intune add-ons, a short description, and the status of the add-on. Each add-on shows a status of either **Active** or **Available for trial or purchase**.
 
-Licenses for the Intune add-ons can be added for an additional cost to the licensing options that include Microsoft Intune or Microsoft Configuration Manager.
+Licenses for the Intune add-ons can be added for an additional cost to the licensing options that include Microsoft Intune or Microsoft Configuration Manager. For more information, see [Licenses available for Microsoft Intune](https://review.learn.microsoft.com/mem/intune/fundamentals/licenses.md).
 
 > [!NOTE]
 > Intune add-ons are currently not supported in Sovereign clouds.
 
-## Available add-ons capabilities
+## Available add-ons
 
 Some capabilities are available to buy as a standalone add-on. Other capabilities are only available with Intune Plan 2 or the Intune Suite.
 
 - **Microsoft Intune Plan 2**: Offers advanced endpoint management capabilities, including Remote Help and specialized devices management.
 - **Microsoft Intune Suite**: Unifies a series of mission-critical advanced endpoint management and security capabilities. The capabilities of the suite are integrated with Microsoft 365 and Microsoft Security across endpoint platforms for both cloud and on-premises co-managed devices. The Intune Suite includes all standalone capabilities and all capabilities that come with Intune Plan 2.
 
-The following table provides a list of add-on capabilities and how you can get them.
+The following table provides a list of add-on capabilities and associated Intune Plan. For information about Microsoft Intune Plans and pricing, see [Intune Plans and pricing](https://aka.ms/IntuneSuitePricing).
 
 |Capability|Standalone add-on|Intune Plan 2|Intune Suite|
 |:---|:---:|:---:|:---:|
@@ -54,8 +54,6 @@ The following table provides a list of add-on capabilities and how you can get t
 |Microsoft Tunnel for Mobile Application Management| |✔️|✔️|
 |Specialized devices management| |✔️|✔️|
 |Advanced endpoint analytics| | |✔️|
-
-For pricing information, see **link**.
 
 ### Remote Help
 
@@ -73,7 +71,7 @@ Specialized devices management is a set of device management, configuration, and
 
 Microsoft Intune Advanced Endpoint analytics is set of analytics-driven capabilities that help IT admins understand, anticipate, and improve the end-user experience. For more information, see [Advanced endpoint analytics](../../analytics/overview.md).
 
-## Try or buy add-on capabilities
+## Try or buy Intune add-ons
 
 Global and Billing administrators can choose to start free trials or purchase licenses for Intune add-ons through the [Microsoft 365 admin center](https://admin.microsoft.com). Administrators who aren't Global or Billing administrators can still see the status of their tenant's Intune add-ons trial or active licenses in the centralized Intune add-on page in the Intune admin center. However, they can't start a free trial or purchase licenses.
 
