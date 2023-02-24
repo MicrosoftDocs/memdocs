@@ -78,9 +78,23 @@ productDirectory:
     # Card
     - title: How-to-guides
       imageSrc: ./media/icons/deploy.svg
-      summary: cardsummary1
+      summary: Use how-to guides to perform common tasks in Intune
       url: ./index.yml#how-to-guides
-
+    # Card
+    - title: Platform and industry guides
+      imageSrc: ./media/icons/deploy.svg
+      summary: The platform and industry guides to consolidate information specific to a platform or industry.
+      url: ./index.yml#platform-and-industry-guides
+          # Card
+    - title: Additional resources to manage devices
+      imageSrc: ./media/icons/deploy.svg
+      summary: Use this resource to find information about related technologies, such as Microsoft 365.
+      url: ./index.yml#additional-resources-to-manage-devices
+          # Card
+    - title: Intune community resources
+      imageSrc: ./media/icons/deploy.svg
+      summary: Resources to help you connect with the Intune community.
+      url: ./index.yml#intune-community-resources
 
 conceptualContent:
   sections:
