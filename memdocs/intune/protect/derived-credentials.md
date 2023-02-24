@@ -153,7 +153,7 @@ Review the platform-specific user workflow for the devices you'll use with deriv
   The renewal process happens like this:
   - The derived credential issuer needs to issue new or updated certificates before the previous certificates are 80% of the way through their validity period.
   - The device checks in during the renewal period (the last 20% of the validity period).
-  - Microsoft Endpoint Manager notifies the user through email or an app notification to launch the Company Portal.
+  - Microsoft Intune notifies the user through email or an app notification to launch the Company Portal.
   - The user launches the Company Portal and taps the derived credential notification, and then the derived credential certificates are copied to the device
 
 
@@ -180,7 +180,7 @@ Review the platform-specific user workflow for the devices you'll use with deriv
   The renewal process happens like this:
   - The derived credential issuer needs to issue new or updated certificates before the previous certificates are 80% of the way through their validity period.
   - The device checks in during the renewal period (the last 20% of the validity period).
-  - Microsoft Endpoint Manager notifies the user through email or an app notification to launch the Company Portal.
+  - Microsoft Intune notifies the user through email or an app notification to launch the Company Portal.
   - The user launches the Company Portal and taps the derived credential notification, and then the derived credential certificates are copied to the device
 
 #### Intercede
@@ -204,7 +204,7 @@ Review the platform-specific user workflow for the devices you'll use with deriv
   The renewal process happens like this:
   - The derived credential issuer needs to issue new or updated certificates before the previous certificates are 80% of the way through their validity period.
   - The device checks in during the renewal period (the last 20% of the validity period).
-  - Microsoft Endpoint Manager notifies the user through email or an app notification to launch the Company Portal.
+  - Microsoft Intune notifies the user through email or an app notification to launch the Company Portal.
   - The user launches the Company Portal and taps the derived credential notification, and then the derived credential certificates are copied to the device
 
 ### 3) Deploy a trusted root certificate to devices
