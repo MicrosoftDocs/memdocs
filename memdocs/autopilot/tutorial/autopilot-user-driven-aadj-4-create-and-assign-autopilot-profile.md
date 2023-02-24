@@ -92,12 +92,12 @@ For more information on creating and assigning Autopilot profiles, see the follo
 
 [!INCLUDE [How to verify a device has an Autopilot profile assigned to it in Intune](includes/verify-autopilot-profile-assignment.md)]
 
-## Next step - Step 5: Assign Autopilot device to a user (optional)
+## Next step - Step 5 of 5: Assign Autopilot device to a user (optional)
 
 > [!div class="nextstepaction"]
 > [Step 5: Assign Autopilot device to a user (optional)](autopilot-user-driven-aadj-5-assign-autopilot-device-to-user.md)
 
-## Previous step - Step 3: Configure and assign the Enrollment Status Page (ESP)
+## Previous step - Step 3 of 5: Configure and assign the Enrollment Status Page (ESP)
 
 > [!div class="nextstepaction"]
 > [Step 3: Configure and assign the Enrollment Status Page (ESP)](autopilot-user-driven-aadj-3-configure-and-assign-esp.md)

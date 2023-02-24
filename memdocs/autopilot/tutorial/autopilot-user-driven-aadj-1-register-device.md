@@ -19,7 +19,7 @@ ms.technology: itpro-deploy
 
 [!INCLUDE [How to register a device as an Autopilot device in Intune](includes/register-autopilot-device.md)]
 
-## Next step - Step 2: Create a device group
+## Next step - Step 2 of 5: Create a device group
 
 > [!div class="nextstepaction"]
 > [Step 2: Create a device group](autopilot-user-driven-aadj-2-create-device-group.md)
@@ -27,4 +27,4 @@ ms.technology: itpro-deploy
 ## Back to Windows Autopilot user-driven Azure AD join overview
 
 > [!div class="nextstepaction"]
-> [Step 2: Create a device group](autopilot-user-driven-aadj-workflow.md)
+> [Windows Autopilot user-driven Azure AD join overview](autopilot-user-driven-aadj-workflow.md)

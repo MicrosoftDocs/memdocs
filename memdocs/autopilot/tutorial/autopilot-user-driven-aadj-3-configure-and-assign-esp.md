@@ -19,12 +19,12 @@ ms.technology: itpro-deploy
 
 [!INCLUDE [How to configure and assign an Enrollment Status Page (ESP) in Intune](includes/configure-and-assign-esp.md)]
 
-## Next step - Step 4: Create and assign user-driven Azure AD join Autopilot profile
+## Next step - Step 4 of 5: Create and assign user-driven Azure AD join Autopilot profile
 
 > [!div class="nextstepaction"]
 > [Step 4: Create and assign user-driven Azure AD join Autopilot profile](autopilot-user-driven-aadj-4-create-and-assign-autopilot-profile.md)
 
-## Previous step - Step 2: Create a device group
+## Previous step - Step 2 of 5: Create a device group
 
 > [!div class="nextstepaction"]
 > [Step 2: Create a device group](autopilot-user-driven-aadj-2-create-device-group.md)

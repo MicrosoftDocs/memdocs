@@ -19,12 +19,12 @@ ms.technology: itpro-deploy
 
 [!INCLUDE [How to create a device group in Intune](includes/create-device-group.md)]
 
-## Next step - Step 3: Configure and assign the Enrollment Status Page (ESP)
+## Next step - Step 3 of 5: Configure and assign the Enrollment Status Page (ESP)
 
 > [!div class="nextstepaction"]
 > [Step 3: Configure and assign the Enrollment Status Page (ESP)](autopilot-user-driven-aadj-3-configure-and-assign-esp.md)
 
-## Previous step - Step 1: Register devices as Autopilot devices
+## Previous step - Step 1 of 5: Register devices as Autopilot devices
 
 > [!div class="nextstepaction"]
 > [Step 1: Register devices as Autopilot devices](autopilot-user-driven-aadj-1-register-device.md)
