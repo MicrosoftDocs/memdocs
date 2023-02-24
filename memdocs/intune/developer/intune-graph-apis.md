@@ -150,7 +150,7 @@ At this point, you may also:
 
 ## App listing
 
-If you receive an large amount of data while requesting your app listing when using Graph API, you may encounter a 503 Service Unavailable error. We recommended that you try again with a smaller page size, such as 20 or fewer elements.
+If you receive a large amount of data while requesting your app listing when using Graph API, you may encounter a 503 Service Unavailable error. We recommended that you try again with a smaller page size, such as 20 or fewer elements.
 
 ## Intune permission scopes
 
