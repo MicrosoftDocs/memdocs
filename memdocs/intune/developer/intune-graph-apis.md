@@ -8,7 +8,7 @@ keywords: intune graphapi c# powershell permission roles
 author: dougeby
 manager: dougeby
 ms.author: dougeby
-ms.date: 02/28/2022
+ms.date: 02/23/2023
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -147,6 +147,10 @@ At this point, you may also:
   2. Change the value of the `availableToOtherTenants` setting to `true`.
 
   3. Save your changes.
+
+## App listing
+
+If you receive a large amount of data while requesting your app listing when using Graph API, you may encounter a 503 Service Unavailable error. We recommended that you try again with a smaller page size, such as 20 or fewer elements.
 
 ## Intune permission scopes
 
