@@ -146,12 +146,12 @@ conceptualContent:
           text: Device protection overview
         - url: ./protect/device-compliance-get-started.md
           itemType: concept
-          text: Compliance policies for devices
-        - url: ./protect/mobile-threat-defense.md
+          text: Deploy security baselines to your Windows devices
+        - url: ./protect/security-baselines.md
           itemType: concept
-          text: Mobile Threat Defense integration with Intune
+          text: Use Mobile Threat Defense software with Intune
       footerLink:
-        text: See all the Protect How-to guides
+        text: Browse the Protect articles
         url: ./protect/device-compliance-get-started.md
 
     - title: Create compliance rules for users and devices
