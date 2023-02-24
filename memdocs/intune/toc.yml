@@ -186,7 +186,7 @@ items:
         - name: Use scope tags to determine what admins can see
           href: ./fundamentals/scope-tags.md
 
-    - name: Choose Intune add-ons
+    - name: Use Intune Suite add-ons
       href: ./fundamentals/intune-add-ons.md
 
     - name: Manage apps
@@ -1334,8 +1334,6 @@ items:
           href: ./remote-actions/device-rename.md
         - name: Send notifications
           href: ./remote-actions/custom-notifications.md
-        - name: Use remote help
-          href: ./remote-actions/remote-help.md
         - name: Use TeamViewer for remote administration
           href: ./remote-actions/teamviewer-support.md
         - name: Synchronize device
@@ -1566,6 +1564,8 @@ items:
       href: ./fundamentals/tenant-status.md
     - name: Help users troubleshoot problems
       href: ./fundamentals/help-desk-operators.md
+    - name: Use remote help
+      href: ./remote-actions/remote-help.md
     - name: Using the Intune docs
       href: /mem/use-docs.md 
     - name: Get support
