@@ -177,7 +177,7 @@ If you want to remove devices from the Intune admin center, you can delete them 
 2. Choose **Devices** > **All devices** > choose the devices you want to delete > **Delete**.
 
 > [!IMPORTANT]
-> The Delete action will trigger a Bitlocker suspension when Bitlocker encryption is managed by Intune. To create a Bitlocker profile: [Manage BitLocker policy for Windows devices with Intune](../protect/encrypt-devices.md)
+> The delete action will trigger a BitLocker suspension when BitLocker encryption is managed by Intune. To create a BitLocker profile, see [Manage BitLocker policy for Windows devices with Intune](../protect/encrypt-devices.md).
 
 ### Automatically delete devices with cleanup rules
 
