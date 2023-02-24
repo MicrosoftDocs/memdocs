@@ -150,6 +150,9 @@ conceptualContent:
         - url: ./protect/mobile-threat-defense.md
           itemType: concept
           text: Mobile Threat Defense integration with Intune
+      footerLink:
+        text: See all the Protect How-to guides
+        url: ./protect/device-compliance-get-started.md
 
     - title: Create compliance rules for users and devices
       links:
