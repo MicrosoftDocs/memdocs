@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/20/2022
+ms.date: 02/24/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -114,20 +114,12 @@ When you assign a Microsoft Store for Business app, a license is used by each us
 
 To remove an app that is synced from the Microsoft Store for Business, you need to log into the Microsoft Store for Business and complete the following steps. The process is the same whether the app is free or not. 
 
-1. Look for the app that you want to remove under **Products & services**, **Apps & software** and select it.
-2. In the **Users** pane select all users, click on the **...** symbol under the **Actions** column and choose to **Reclaim license** 
-
-![microsoft-store-for-business-remove-app-01](https://user-images.githubusercontent.com/126062511/220634297-eb887549-7dc8-45a1-a8ec-2b8cf57ce26d.png)
-
-3. Open the **Private store availability** tab of the app and change its availability to **No one**
-
-![microsoft-store-for-business-remove-app-02](https://user-images.githubusercontent.com/126062511/220635540-b0ae2c21-b3b3-4e90-828b-8c696c98eefa.png)
-
-4. Click on the **Product details** link on the top then click on the **...** button next to **Install**. If the previous steps have been completed successfully a **Remove product** option should be available. Use it to remove the app from the Microsoft Store for Business. 
-
-![microsoft-store-for-business-remove-app-03](https://user-images.githubusercontent.com/126062511/220637298-fcb876c1-4041-4c88-a045-7f746a28652a.png)
-
-5. Sync the apps using the Microsoft for Business Store connector in Intune in order to remove the app from the list of Windows apps in Intune
+1. Ensure that you sign into the [Microsoft Store for Business](https://www.microsoft.com/business-store) using the same tenant account you use to sign into Intune.
+2. Look for the app that you want to remove by selecting **Products & services** > **Apps & software** and select it.
+3. In the **Users** pane select all users, click on the **...** symbol under the **Actions** column and choose to **Reclaim license**.
+4. Open the **Private store availability** tab of the app and change its availability to **No one**.
+5. Click on the **Product details** link on the top then click on the **...** button next to **Install**. If the previous steps have been completed successfully a **Remove product** option will be available. Click **Remove product** to remove the app from the Microsoft Store for Business. 
+6. Sync the apps using the Microsoft for Business Store connector in Intune in order to remove the app from the list of Windows apps in Intune.
 
 ## Next steps
 
