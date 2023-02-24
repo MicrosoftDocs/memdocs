@@ -67,7 +67,7 @@ Company Portal for macOS can be downloaded and installed using the [macOS LOB ap
 
 Company Portal for macOS can be downloaded and installed using the [macOS Shell Scripts](macos-shell-scripts.md) feature. This option will always install the current version of Company Portal for macOS, but will not provide you with application install reporting you might be used to when deploying applications using [macOS LOB apps](lob-apps-macos.md).
 
-1. Download a sample script to install Company Portal for macOS from [Intune Shell Script Samples - Company Portal](/mem/intune/apps/macos-shell-scripts).
+1. Download a sample script to install Company Portal for macOS from [Intune Shell Script Samples - Company Portal](https://github.com/microsoft/shell-intune-samples).
 
 2. Follow instructions to deploy the macOS Shell Script using [macOS Shell Scripts](macos-shell-scripts.md). 
     - Set **Run script as signed-in user** to **No** (to run in the system context).
