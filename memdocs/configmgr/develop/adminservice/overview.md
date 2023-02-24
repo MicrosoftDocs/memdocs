@@ -42,7 +42,7 @@ Configuration Manager natively uses the administration service for the following
 
 - The **Security** [node of the console](set-up.md#enable-console-usage)
 
-- Microsoft Endpoint Manager [tenant attach](../../tenant-attach/device-sync-actions.md)
+- Microsoft Intune [tenant attach](../../tenant-attach/device-sync-actions.md)
 
 - [Community hub](../../core/servers/manage/community-hub.md)
 

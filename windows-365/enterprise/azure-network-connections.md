@@ -32,7 +32,7 @@ ms.collection:
 
 # Azure network connection overview
 
-An Azure network connection (ANC) is an object in the Microsoft Endpoint Manager admin center that provides Cloud PC provisioning profiles with required information to connect to network-based resources. ANCs are used:
+An Azure network connection (ANC) is an object in the Microsoft Intune admin center that provides Cloud PC provisioning profiles with required information to connect to network-based resources. ANCs are used:
 
 - When a Cloud PC is initially provisioned.
 - When Windows 365 periodically checks the connection to the on-premises infrastructure to ensure the best end-user experience.
@@ -86,11 +86,11 @@ ANC checks are performed once every one to six hours.
 
 The comprehensive, end-to end health check can take up to 30 minutes. The health checks are run on a temporary Azure virtual machine that is automatically created specifically for this purpose. This virtual machine is created automatically and deleted when the health checks are completed. The virtual machine is connected to your specified vNet and checks are performed to ensure provisioning should be successful.
 
-After a check is complete, the results are posted on the Azure network connection pane of the Microsoft Endpoint Manager admin center. For information about the check results, see [Azure network connections health checks](health-checks.md).  
+After a check is complete, the results are posted on the Azure network connection pane of the Microsoft Intune admin center. For information about the check results, see [Azure network connections health checks](health-checks.md).  
 
 ## Retry health check
 
-To manually trigger a full health check, sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows 365 (under Provisioning)** > **Azure network connection** > select an Azure network connection > **Retry**.
+To manually trigger a full health check, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows 365 (under Provisioning)** > **Azure network connection** > select an Azure network connection > **Retry**.
 
 ## Permissions required for Azure network connections
 

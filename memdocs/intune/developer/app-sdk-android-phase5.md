@@ -53,7 +53,7 @@ The Microsoft Intune App SDK for Android lets you incorporate Intune app protect
 The terms "user", "account", and "identity" are often used interchangeably.
 This guide attempts to differentiate as follows:
 
-- **User**: the human being using the software product. Further differentiated as **end user**, the human using the Android app, and **admin** / **admin user** / **IT admin** / **IT Pro**, the human using the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+- **User**: the human being using the software product. Further differentiated as **end user**, the human using the Android app, and **admin** / **admin user** / **IT admin** / **IT Pro**, the human using the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 - **Account**: the software record belonging to an organization that uniquely identifies a user's entity. A human user can have multiple accounts.
 - **Identity**: the set of data that the Intune App SDK uses to uniquely identify an account.
 
@@ -761,10 +761,10 @@ For these tests, install your app and the Intune Company Portal; log in with bot
 
 | Scenario | Preconditions | Steps |  
 | - | - | - |
-| Supplemental wipe handler | Your app has implemented a handler for `WIPE_USER_AUXILIARY_DATA` | - [Issue a selective wipe from the Microsoft Endpoint Manager admin center]. <br> - Confirm (typically via logging) that your wipe handler has executed successfully. <br> - Confirm that the managed account is removed from your app and all that account's data has been removed. <br> - Confirm that the unmanaged account is still logged in, none of the unmanaged account's data has been removed, and policy is still not applied.
-| Overridden wipe handler | Your app has implemented a handler for `WIPE_USER_DATA` | - [Issue a selective wipe from the Microsoft Endpoint Manager admin center]. <br> - Confirm (typically via logging) that your wipe handler has executed successfully. <br> - Confirm that the managed account is removed from your app and all that account's data has been removed. <br> - Confirm that the unmanaged account is still logged in, none of the unmanaged account's data has been removed, and policy is still not applied. <br> - Confirm that your app has either exited gracefully or is still in a healthy state after your wipe handler finishes.
-| Manual file protection | - Your app calls `MAMFileProtectionManager.protect` <br> - Your app has implemented a handler for `WIPE_USER_DATA` | - Ensure you have exercised scenarios where your app would manually protect at least one file belonging to the managed account. <br> - [Issue a selective wipe from the Microsoft Endpoint Manager admin center]. <br> - Confirm that the files are removed. |
-| Manual data buffer protection | - Your app calls `MAMDataProtectionManager.protect` <br> - Your app has implemented a handler for either `WIPE_USER_AUXILIARY_DATA` or `WIPE_USER_DATA` | - Ensure you have exercised scenarios where your app would manually protect at least one data buffer belonging to the managed account. <br> - [Issue a selective wipe from the Microsoft Endpoint Manager admin center]. <br> - Confirm that the data buffers are removed from whatever files they were stored in, and your app can still read the unmanaged data from those files. |
+| Supplemental wipe handler | Your app has implemented a handler for `WIPE_USER_AUXILIARY_DATA` | - [Issue a selective wipe from the Microsoft Intune admin center]. <br> - Confirm (typically via logging) that your wipe handler has executed successfully. <br> - Confirm that the managed account is removed from your app and all that account's data has been removed. <br> - Confirm that the unmanaged account is still logged in, none of the unmanaged account's data has been removed, and policy is still not applied.
+| Overridden wipe handler | Your app has implemented a handler for `WIPE_USER_DATA` | - [Issue a selective wipe from the Microsoft Intune admin center]. <br> - Confirm (typically via logging) that your wipe handler has executed successfully. <br> - Confirm that the managed account is removed from your app and all that account's data has been removed. <br> - Confirm that the unmanaged account is still logged in, none of the unmanaged account's data has been removed, and policy is still not applied. <br> - Confirm that your app has either exited gracefully or is still in a healthy state after your wipe handler finishes.
+| Manual file protection | - Your app calls `MAMFileProtectionManager.protect` <br> - Your app has implemented a handler for `WIPE_USER_DATA` | - Ensure you have exercised scenarios where your app would manually protect at least one file belonging to the managed account. <br> - [Issue a selective wipe from the Microsoft Intune admin center]. <br> - Confirm that the files are removed. |
+| Manual data buffer protection | - Your app calls `MAMDataProtectionManager.protect` <br> - Your app has implemented a handler for either `WIPE_USER_AUXILIARY_DATA` or `WIPE_USER_DATA` | - Ensure you have exercised scenarios where your app would manually protect at least one data buffer belonging to the managed account. <br> - [Issue a selective wipe from the Microsoft Intune admin center]. <br> - Confirm that the data buffers are removed from whatever files they were stored in, and your app can still read the unmanaged data from those files. |
 
 ## Next Steps
 
@@ -791,8 +791,8 @@ If you're unsure if any of these sections apply to your app, revisit [Key Decisi
 [Register for notifications from the SDK]:app-sdk-android-phase7.md#register-for-notifications-from-the-sdk
 [Handling Implicit Identity Changes in Manually Integrated Apps]:app-sdk-android-appendix.md#handling-implicit-identity-changes-in-manually-integrated-apps
 
-<!-- Links to other MEM docs -->
-[Issue a selective wipe from the Microsoft Endpoint Manager admin center]:/mem/intune/apps/apps-selective-wipe
+<!-- Links to other Intune docs -->
+[Issue a selective wipe from the Microsoft Intune admin center]:/mem/intune/apps/apps-selective-wipe
 
 <!-- Class links -->
 [AppIdentitySwitchReason]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/AppIdentitySwitchReason.html

@@ -60,7 +60,7 @@ ESP uses the [EnrollmentStatusTracking configuration service provider (CSP)](/wi
 
 ## Create new profile 
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Devices**.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Devices**.
 2. Select **Windows** > **Windows enrollment** > **Enrollment Status Page**.
 3. Select **Create**.
 4. In **Basics**, enter the following properties:  

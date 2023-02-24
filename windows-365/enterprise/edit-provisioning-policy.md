@@ -34,7 +34,7 @@ ms.collection:
 
 You can update provisioning policies to change assignments or key attributes, like image and network connection.
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows 365** (under **Provisioning**) > **Provisioning policies** > select a policy.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows 365** (under **Provisioning**) > **Provisioning policies** > select a policy.
 ![Screenshot of edit policy](./media/edit-provisioning-policy/edit-policy.png)
 2. On the policy page, you can edit the **General** information, **Image**, and **Assignments** by selecting **Edit** next to each header.
 

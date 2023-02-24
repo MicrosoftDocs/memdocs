@@ -30,9 +30,9 @@ ms.collection:
 - tier2
 ---
 
-# Troubleshoot the Windows 365 app (preview)
+# Troubleshoot the Windows 365 app
 
-This article describes issues with the Windows 365 app ([preview](../public-preview.md)) for Windows client and how to fix them.
+This article describes issues with the Windows 365 app for Windows client and how to fix them.
 
 ## Limitations
 

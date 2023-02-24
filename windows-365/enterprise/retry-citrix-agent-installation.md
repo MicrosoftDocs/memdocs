@@ -36,7 +36,7 @@ If provisioning for a Citrix HDX Plus Cloud PC succeeds, but the Citrix agent in
 
 To retry the Citrix agent installation, follow these steps:
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Windows 365** > **All Cloud PCs**.
 ![Screenshot of navigating to the All Cloud PCs page](./media/rety-citrix-agent-installation/all-cloud-pcs-page.png)
 3. Make sure that the **Third party connector** column is displayed. You can add this column by selecting **Columns** > **Third party connector**.

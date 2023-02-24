@@ -38,7 +38,7 @@ This article provides suggestions for troubleshooting Windows 365 issues.
 
 For instructions on how to get help and open a support ticket, see  [How to get support in Microsoft Endpoint Manager](/mem/get-support). Support is included as part of your Windows 365 subscription.
 
-Since Cloud PCs work like most physical devices, you can use existing troubleshooting documentation to troubleshoot issues with [Windows client](/troubleshoot/windows-client/welcome-windows-client), [Microsoft 365 services](/microsoft-365/), and [Microsoft Endpoint Manager admin center](/mem/get-support).
+Since Cloud PCs work like most physical devices, you can use existing troubleshooting documentation to troubleshoot issues with [Windows client](/troubleshoot/windows-client/welcome-windows-client), [Microsoft 365 services](/microsoft-365/), and [Microsoft Intune admin center](/mem/get-support).
 
 ## Audio and video redirection not working
 
@@ -48,7 +48,7 @@ After the installation, the optimizations to redirect audio and video to your lo
 
 ## Conditional access
 
-Make sure that you apply conditional access policies to both the dedicated Windows 365 cloud app and the Azure Virtual Desktop cloud app. You can apply these policies in the conditional access UI of Microsoft Endpoint Manager admin center or Azure Active Directory.
+Make sure that you apply conditional access policies to both the dedicated Windows 365 cloud app and the Azure Virtual Desktop cloud app. You can apply these policies in the conditional access UI of Microsoft Intune admin center or Azure Active Directory.
 
 Any conditional access policy that you apply will affect:
 

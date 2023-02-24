@@ -51,7 +51,7 @@ This article:
 
 To register an app to use Microsoft Graph API:
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://admin.microsoft.com/) using administrative credentials. As appropriate, you may use:
+1. Sign in to the [Microsoft Intune admin center](https://admin.microsoft.com/) using administrative credentials. As appropriate, you may use:
     - The tenant admin account.
     - A tenant user account with the **Users can register applications setting** enabled.
 2. Select **All services** > **Azure Active Directory** > **App registrations**.

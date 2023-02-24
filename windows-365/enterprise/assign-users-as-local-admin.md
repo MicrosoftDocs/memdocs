@@ -43,7 +43,7 @@ When managing settings, keep the following points in mind:
 
 ## Add a new setting
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows 365** (under **Provisioning**) > **...** > **User Settings** > **Add**.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows 365** (under **Provisioning**) > **...** > **User Settings** > **Add**.
 ![Screenshot of add user setting](./media/assign-users-as-local-admin/user-settings.png)
 2. Under **Settings**, enter a **Name** for the setting and set **Enable Local admin** to **On**.
 3. Select **Next**.  
@@ -54,7 +54,7 @@ When managing settings, keep the following points in mind:
 
 ## Edit a user setting
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows 365** (under **Provisioning**) > **...**  > **User Settings**.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows 365** (under **Provisioning**) > **...**  > **User Settings**.
 2. The **User Settings** page shows the current settings.  
 3. Select the name of the user setting that you want to edit.
 4. The policy setting for **Enable Local Admin** and assigned groups appears.  
@@ -67,7 +67,7 @@ When managing settings, keep the following points in mind:
 
 ## Delete a user setting
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows 365** (under **Provisioning**) > **...**  > **User Settings**.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows 365** (under **Provisioning**) > **...**  > **User Settings**.
 2. On the **User settings** page, you can view the created settings.  
 3. Select the ellipses (**…**) > **Delete**.
 4. Select **Yes** on the confirmation pop up to delete the setting permanently.

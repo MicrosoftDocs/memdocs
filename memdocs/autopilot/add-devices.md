@@ -113,7 +113,7 @@ To install the script directly and capture the hardware hash from the local comp
 
 3. You're prompted to sign in. An account with the Intune Administrator role is sufficient, and the device hash will then be uploaded automatically. 
 
-4. After you confirm the details of the uploaded device hash, run a sync in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Select **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program**) > **Sync**. 
+4. After you confirm the details of the uploaded device hash, run a sync in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Select **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program**) > **Sync**. 
 
 5. After the device appears in your device list, and an Autopilot profile is assigned, restarting the device causes OOBE to run through the Windows Autopilot provisioning process.
 
@@ -134,7 +134,7 @@ During OOBE, press **Ctrl-Shift-D** to bring up the Diagnostics Page. From this 
 
 ### Desktop hash export
 
-1. From the Windows 10 or Windows 11 Desktop, click **Settings** > **Accounts** > **Access work or school**.
+1. From the Windows 10 or Windows 11 Start menu, right click and select **Settings** > **Accounts** > **Access work or school**.
 2. Export log files. The logs will include a CSV file with the hardware hash.
    - Windows 11: In the **Export your management log files** tile, click **Export**. 
    - Windows 10: Click the **Export your management log files** link.
@@ -176,7 +176,7 @@ During upload of a CSV file, the only validation that Microsoft performs on the 
 
 Now that you've captured hardware hashes in a CSV file, you can add Windows Autopilot devices by importing the file. To import the file by using Intune:
 
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program**) > **Import**.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program**) > **Import**.
 
    ![Screenshot of selections in the admin center for importing Windows Autopilot devices.](images/autopilot-import-device.png)
 
@@ -196,7 +196,7 @@ Now that you've captured hardware hashes in a CSV file, you can add Windows Auto
 
 After you've uploaded an Autopilot device, you can edit certain attributes of the device:
 
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program**).
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program**).
 2. Select the device that you want to edit.
 3. On the pane on the right of the screen, you can edit:
    - Device name
@@ -216,7 +216,7 @@ You can delete Windows Autopilot devices that aren't enrolled in Intune:
 
 Completely removing a device from your tenant requires you to delete the Intune, Azure AD, and Windows Autopilot device records. You can do all these deletions from Intune, in this order:
 
-1. If the devices are enrolled in Intune, [delete them from the Intune All devices pane](../intune/remote-actions/devices-wipe.md#delete-devices-from-the-intune-portal).
+1. If the devices are enrolled in Intune, [delete them from the Intune All devices pane](../intune/remote-actions/devices-wipe.md#delete-devices-from-the-intune-admin-center).
 2. Delete the devices from Windows Autopilot at **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program**). Choose the devices that you want to delete, and then select **Delete**. The deletion process can take a few minutes to complete.
 3. Delete the devices from Azure AD at **Devices** > **Azure AD devices**.
 

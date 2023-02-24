@@ -50,7 +50,7 @@ Conditional Access policies aren't set for your tenant by default.  You can targ
 
 No matter which method you use, the policies will be enforced on the Cloud PC End-user portal and the connection to the Cloud PC.
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Endpoint Security** > **Conditional Access** > **New Policy**.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Endpoint Security** > **Conditional Access** > **New Policy**.
 2. Provide a **Name** for your specific Conditional Access policy.
 3. On the **New Policy** tab, under **Users and groups**, choose **Specific users included**. Select the specific user or group you want to target with the CA policy. You can also **Exclude certain users or groups** to fine-tune the assignment.
 4. Under **Cloud apps or actions**, select **No cloud apps, action, or authentication contexts selected**.

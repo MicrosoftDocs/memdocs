@@ -34,7 +34,7 @@ ms.collection:
 
 Point-in-time restore can be configured in a new or existing user setting. All users in groups assigned to the user setting have permission to use the point-in-time restore feature.  You can configure point-in-time restore to let your enterprise users start a restore on their Cloud PC. You can also configure the system to have a different cadence for short-term restore points.
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Windows 365** > **User Settings** > **Add**. (Alternately, you can edit an existing user setting.)
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Windows 365** > **User Settings** > **Add**. (Alternately, you can edit an existing user setting.)
 ![Screenshot of add user setting](./media/restore-configure/add-user-setting.png)
 2. On the **Add user setting** page:
     1. Type a **Name**.
