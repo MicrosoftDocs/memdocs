@@ -3,12 +3,12 @@
 
 title: Use Intune Suite add-on capabilities
 titleSuffix: Microsoft Intune
-description: Microsoft Intune Suite add-ons unify a series of mission-critical advanced endpoint management and security capabilities. The capabilities of the suite are integrated with Microsoft 365 and Microsoft Security across endpoint platforms for both cloud and on-premises co-managed devices.  
+description: Microsoft Intune Suite unifies a series of mission-critical advanced endpoint management and security capabilities. The capabilities of the suite are integrated with Microsoft 365 and Microsoft Security across endpoint platforms for both cloud and on-premises co-managed devices.  
 keywords:
 author: smritib17 
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 05/03/2022
+ms.date: 02/24/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -25,28 +25,29 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection:
-- tier1
-- M365-identity-device-management 
+- M365-identity-device-management
 - highpri
+- tier1
 ---
 
 # Use Intune Suite add-on capabilities
 
-Microsoft Intune Suite add-ons provide mission-critical advanced endpoint management and security capabilities. You can find Intune Suite add-ons in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) under **Tenant administration** > **Intune add-ons**. The **Summary** blade shows all Intune add-ons that have been released, a short description, and the status of the add-on. Each add-on shows a status of either **Active** or **Available for trial or purchase**. 
+Microsoft Intune Suite provides mission-critical advanced endpoint management and security capabilities into Microsoft Intune. You can find add-ons to Intune in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) under **Tenant administration** > **Intune add-ons**. The **Summary** blade shows all available Intune add-ons, a short description, and the status of the add-on. Each add-on shows a status of either **Active** or **Available for trial or purchase**.
 
-Licenses for the Intune add-ons can be added for an additional cost to the licensing options that include Microsoft Intune or Microsoft Configuration Manager.
+Licenses for the Intune add-ons can be added for an additional cost to the licensing options that include Microsoft Intune or Microsoft Configuration Manager. For more information, see [Licenses available for Microsoft Intune](licenses.md).
+
 
 > [!NOTE]
 > Intune add-ons are currently not supported in Sovereign clouds.
 
-## Available add-ons capabilities
+## Available add-ons
 
 Some capabilities are available to buy as a standalone add-on. Other capabilities are only available with Intune Plan 2 or the Intune Suite.
 
 - **Microsoft Intune Plan 2**: Offers advanced endpoint management capabilities, including Remote Help and specialized devices management.
 - **Microsoft Intune Suite**: Unifies a series of mission-critical advanced endpoint management and security capabilities. The capabilities of the suite are integrated with Microsoft 365 and Microsoft Security across endpoint platforms for both cloud and on-premises co-managed devices. The Intune Suite includes all standalone capabilities and all capabilities that come with Intune Plan 2.
 
-The following table provides a list of add-on capabilities and how you can get them.
+The following table provides a list of add-on capabilities and associated Intune Plan. For information about Microsoft Intune Plans and pricing, see [Intune Plans and pricing](https://aka.ms/IntuneSuitePricing).
 
 |Capability|Standalone add-on|Intune Plan 2|Intune Suite|
 |:---|:---:|:---:|:---:|
@@ -54,8 +55,6 @@ The following table provides a list of add-on capabilities and how you can get t
 |Microsoft Tunnel for Mobile Application Management| |✔️|✔️|
 |Specialized devices management| |✔️|✔️|
 |Advanced endpoint analytics| | |✔️|
-
-For pricing information, see **link**.
 
 ### Remote Help 
 
@@ -79,15 +78,12 @@ Microsoft Intune Advanced Endpoint analytics is set of analytics-driven capabili
 
 For more information, see [Advanced endpoint analytics](../../analytics/overview.md).
 
+## Try or buy Intune add-ons
 
-## Try or buy add-on capabilities
+Global and Billing administrators can choose to start free trials or purchase licenses for Intune add-ons through the [Microsoft 365 admin center](https://admin.microsoft.com). Administrators who aren't Global or Billing administrators can still see the status of their tenant's Intune add-ons trial or active licenses in the centralized Intune add-on page in the Intune admin center. However, they can't start a free trial or purchase licenses.
 
-Global and Billing administrators can choose to start free trials or purchase licenses for Intune add-ons through the [Microsoft 365 admin center](https://admin.microsoft.com). 
-
-Administrators who aren't Global or Billing administrators can still see the status of their tenant's Intune add-ons trial or active licenses in the centralized Intune add-on page in the Intune admin center. However, they can't start a free trial or purchase licenses. 
- 
 Starting a free trial gives you a 90-day period to use the Intune add-on capability without any charge. Trials can be up to 250 users per tenant. At the end of the trial period, there's a 30-day grace period. After this point, you'll be unable to use the Intune add-on capability in Microsoft Intune for users within your tenant unless you've purchased the appropriate licenses. There's a one-time limit to start a trial for each tenant.  
- 
+
 Purchasing licenses lets you use the Intune add-on capability in your tenant for the duration in which the licenses are active on your tenant based on the option selected during the Billing process.
 
 Intune add-on capabilities are disabled in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) unless you are in the free trial period or have purchased licenses. 
@@ -95,11 +91,11 @@ Intune add-on capabilities are disabled in [Microsoft Intune admin center](https
 ### How to start a trial through the Microsoft 365 admin center
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as a Global or Billing administrator.
-1. Navigate to **Tenant administration** > **Intune add-ons** as a Global or Billing administrator.
+1. Navigate to **Tenant administration** > **Intune add-ons**.
 1. Find the Intune add-on to start a trial. For add-ons that say **Available for trial or purchase** in their status, you don't have a free trial started or any licenses purchased for those add-ons.
-1. Click **View details** to see the details. For example, this screenshot shows details for Remote Help add-on. :::image type="content" source="./media/premium-add-ons/remote-help-details.png" alt-text="Remote Help details.":::
-1. Click the **To try or buy, go to Purchase services** link to navigate to the Microsoft 365 Admin Center. A new tab opens on the **Product details** page for the selected Intune add-on. For example, this screenshot shows the Product details tab for Remote help add-on. :::image type="content" source="./media/premium-add-ons/remote-help-product-details.png" alt-text="A screenshot of Remote Help add-on details."::: 
-1. In the Microsoft 365 Admin Center, follow the prompts to **Start free trial** and confirm your order. :::image type="content" source="./media/premium-add-ons/confirm-order.png" alt-text="Confirm order."::: 
+1. Click **View details** to see the details.
+1. Click the **To try or buy, go to Purchase services** link to navigate to the Microsoft 365 admin center. A new tab opens on the **Product details** page for the selected Intune add-on.
+1. In the Microsoft 365 Admin Center, follow the prompts to **Start free trial** and confirm your order.
 1. Navigate to **Tenant administration** > **Intune add-ons** and see that the Intune add-on capability you added is now **Active**.
 
 ### How to purchase Intune add-ons

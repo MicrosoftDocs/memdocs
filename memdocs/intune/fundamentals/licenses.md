@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/19/2021
+ms.date: 02/24/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -63,7 +63,7 @@ For existing Configuration Manager-managed devices to enroll into Intune for co-
 
 ## Intune Suite add-ons 
 
-Microsoft Intune Suite add-ons provide mission-critical advanced endpoint management and security capabilities. You can find Intune Suite add-ons in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) under **Tenant administration** > **Intune add-ons**.
+Microsoft Intune Suite provides mission-critical advanced endpoint management and security capabilities into Microsoft Intune. You can find add-ons to Intune in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) under **Tenant administration** > **Intune add-ons**. The **Summary** blade shows all available Intune add-ons, a short description, and the status of the add-on. Each add-on shows a status of either **Active** or **Available for trial or purchase**.
 
 Licenses for the Intune add-ons can be added for an additional cost to the licensing options that include Microsoft Intune or Microsoft Configuration Manager.
 
