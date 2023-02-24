@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/16/2021
+ms.date: 02/24/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -110,15 +110,13 @@ The update to the line-of-business app will be installed automatically.
 
 > [!NOTE]
 > For the Intune service to successfully deploy a new IPA file to the device, you must update the CFBundleVersion string in the Info.plist file in your IPA package. You are allowed to upgrade an app by increasing the value, or downgrade an app by decreasing the value, however you cannot upload a new version of CFBundleVersion if the new app is identical to the existing one.
-> [!NOTE]
-> For an iOS LOB app targeted with available intent, auto-update of the application will happen as long as the following conditions are met:
 
-End user needs to request that particular Intune app install from the company portal and the app install succeeds and the app becomes managed once.
-The app is still remained on the device and the end user not uninstalling it.
-The targeting for the user is not changed (app assignment with available intent is not removed and user is not removed from the group membership in the life cycle of the app assignment).
-If the previous version of the app is installed through required intent then available app update will not happen. The app will be updated automatically as long as the user/device is part of required intent Group.
+For an iOS LOB app targeted with available intent, auto-update of the application will happen as long as the following conditions are met:
 
-If the app has both available and required deployments targeted, the resolved intent becomes RequiredAndAvailable.(Note: you cannot create Available and Required Deployments to same AAD Group, but you can with different AAD group with same members on it). If the app got installed automatically on the devices after the Required deployment is created (not manually installed from company portal) and the required deployment is removed later, the Available app update wont happen automatically on those devices and the users have to request from Company Portal.
+- The end user must request the specific Intune app from the Company Portal and the app must be successfully installed, or the app is on the device and the end user has not installed it.
+- The targeting for the user has not changed (app assignment with available intent is not removed and user is not removed from the group membership in the life cycle of the app assignment).
+- If the previous version of the app is installed through required intent, then the available app update will not happen. The app will be updated automatically as long as the user/device is part of required intent group.
+- If the app has both available and required deployments targeted, the resolved intent becomes 'RequiredAndAvailable'. **Note:** You cannot create **Available** and **Required** deployments to the same AAD Group, but you can use different AAD group with same members in it. If the app was installed automatically on devices after the **Required** deployment is created (not manually installed from Company Portal) and the required deployment is later removed, the **Available** app update won't happen automatically on those devices and the users have to request the app from Company Portal.
 
 ## Next steps
 
