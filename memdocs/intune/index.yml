@@ -94,7 +94,7 @@ productDirectory:
     - title: Intune community resources
       imageSrc: ./media/icons/community.svg
       summary: Resources to help you connect with the Intune community.
-      url: ./index#intune-community-resources
+      url: ./index.yml#intune-community-resources
 
 conceptualContent:
   sections:
