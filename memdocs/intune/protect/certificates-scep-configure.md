@@ -140,7 +140,7 @@ For Android Enterprise, the version of encryption on a device determines whether
 
 > [!NOTE]
 >
-> Microsoft Endpoint Manager can’t identify the type of encryption on an Android device.
+> Microsoft Intune can’t identify the type of encryption on an Android device.
 
 The version of Android on a device can affect the available encryption type:
 
