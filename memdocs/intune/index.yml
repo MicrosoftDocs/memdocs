@@ -85,16 +85,16 @@ productDirectory:
       imageSrc: ./media/icons/guide.svg
       summary: Guides to consolidate information specific to a platform or industry.
       url: ./index.yml#platform-and-industry-guides
-          # Card
+    # Card
     - title: Additional resources to manage devices
       imageSrc: ./media/icons/resources.svg
       summary: Resource to find information about related technologies, such as Microsoft 365.
       url: ./index.yml#additional-resources-to-manage-devices
-          # Card
+    # Card
     - title: Intune community resources
       imageSrc: ./media/icons/community.svg
       summary: Resources to help you connect with the Intune community.
-      url: ./#intune-community-resources
+      url: ./index#intune-community-resources
 
 conceptualContent:
   sections:
