@@ -47,7 +47,7 @@ productDirectory:
 
     # Card
     - title: Try and evaluate
-      imageSrc: ./media/icons/getstarted.svg
+      imageSrc: ./media/icons/investigate.svg
       links:
         - url: ./fundamentals/tutorial-walkthrough-endpoint-manager.md
           text: Walkthrough Microsoft Intune admin center
@@ -74,27 +74,9 @@ productDirectory:
           text: "Deployment plan: Get started with your Intune deployment"
         - url: fundamentals/protection-configuration-levels.md
           text: Levels of protection and configuration in Intune
+        
 
-    # Card
-    - title: How-to-guides
-      imageSrc: ./media/icons/how-to.svg
-      summary: Guides to help you perform common tasks in Intune
-      url: ./index.yml#how-to-guides
-    # Card
-    - title: Platform and industry guides
-      imageSrc: ./media/icons/guide.svg
-      summary: Guides that consolidate information specific to a platform or industry.
-      url: ./index.yml#platform-and-industry-guides
-    # Card
-    - title: Additional resources to manage devices
-      imageSrc: ./media/icons/resources.svg
-      summary: Resource to find information about related technologies, such as Microsoft 365.
-      url: ./index.yml#additional-resources-to-manage-devices
-    # Card
-    - title: Intune community resources
-      imageSrc: ./media/icons/community.svg
-      summary: Resources to help you connect with the Intune community.
-      url: ./index.yml#intune-community-resources
+
 
 conceptualContent:
   sections:
@@ -116,9 +98,6 @@ conceptualContent:
         - url: ./fundamentals/licenses.md
           itemType: concept
           text: Intune licensing
-      footerLink:
-        text: Browse all Intune subscription articles
-        url: ./fundamentals/account-sign-up.md
 
     - title: Manage apps
       links:
@@ -155,15 +134,15 @@ conceptualContent:
         - url: ./protect/device-protect.md
           itemType: concept
           text: Device protection overview
-        - url: ./protect/device-compliance-get-started.md
+        - url: ./protect/conditional-access.md
           itemType: concept
-          text: Deploy security baselines to your Windows devices
+          text: Conditional access with Intune
+        - url: ./protect/mobile-threat-defense.md
+          itemType: concept
+          text: Mobile Threat Defense integration with Intune
         - url: ./protect/security-baselines.md
-          itemType: concept
-          text: Use Mobile Threat Defense software with Intune
-      footerLink:
-        text: Browse the articles for data and device protection capabilities
-        url: ./protect/device-compliance-get-started.md
+          itemType: how-to-guide
+          text: Start with security baselines for your Windows devices
 
     - title: Create compliance rules for users and devices
       links:
@@ -261,9 +240,6 @@ conceptualContent:
         - url: /analytics/
           itemType: concept
           text: Endpoint analytics docs
-      footerLink:
-        text: Browse all reporting and monitoring articles
-        url: ./fundamentals/reports.md
     
     - title: Microsoft Intune Suite add-ons
       links:
