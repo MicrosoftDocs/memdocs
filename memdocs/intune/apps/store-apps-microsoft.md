@@ -164,7 +164,7 @@ The following table provides details about how app deployment may be affected by
 
 |     Store Group   Policies    |     Desired   setting    |
 |---|---|
-|     Store\Disable all apps from the Microsoft   Store     | **Not configured** or **Disabled**. Set to **Disabled** if wish to prevent end users from blocking the scenario.          |
+|     Store\Disable all apps from the Microsoft   Store     | **Not configured** or **Enabled**. Set to **Enabled** if wish to prevent end users from blocking the scenario.          |
 |     Store\Turn off Automatic Download and   Install of updates    | **Not configured** or **Disabled**. Set to **Disabled** if you need to prevent end users from blocking the scenario.          |
 |     Desktop App Installer\Enable App Installer   Microsoft Store Source    | **Not configured** or **Enabled**. Set to **Enabled** if wish to prevent end users from blocking the scenario.          |
 |     Desktop App Installer\Enable App Installer    | **Not configured** or **Enabled**. Set to **Enabled** if wish to prevent end users from blocking the scenario.          |
