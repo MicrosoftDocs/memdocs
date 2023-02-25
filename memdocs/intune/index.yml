@@ -261,6 +261,9 @@ conceptualContent:
         - url: /analytics/
           itemType: concept
           text: Endpoint analytics docs
+      footerLink:
+        text: Browse all reporting and monitoring articles
+        url: reports.md
     
     - title: Microsoft Intune Suite add-ons
       links:
