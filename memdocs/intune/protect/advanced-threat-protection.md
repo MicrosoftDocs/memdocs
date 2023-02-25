@@ -45,7 +45,7 @@ Microsoft Defender for Endpoint works with devices that run:
 - Windows Server 2016
 - Windows Server Semi-Annual Enterprise Channel
 - Windows Server 2019 and later
-- Windows Server 2019 core edition
+- Windows Server 2019 Core edition
 - Windows Server 2022
 
 To be successful, you'll use the following configurations in concert:
