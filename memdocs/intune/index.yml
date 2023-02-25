@@ -78,12 +78,12 @@ productDirectory:
     # Card
     - title: How-to-guides
       imageSrc: ./media/icons/how-to.svg
-      summary: Use how-to guides to perform common tasks in Intune
+      summary: Guides to help you perform common tasks in Intune
       url: ./index.yml#how-to-guides
     # Card
     - title: Platform and industry guides
       imageSrc: ./media/icons/guide.svg
-      summary: Guides to consolidate information specific to a platform or industry.
+      summary: Guides that consolidate information specific to a platform or industry.
       url: ./index.yml#platform-and-industry-guides
     # Card
     - title: Additional resources to manage devices
