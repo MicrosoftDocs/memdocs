@@ -263,7 +263,7 @@ conceptualContent:
           text: Endpoint analytics docs
       footerLink:
         text: Browse all reporting and monitoring articles
-        url: reports.md
+        url: ./fundamentals/reports.md
     
     - title: Microsoft Intune Suite add-ons
       links:
