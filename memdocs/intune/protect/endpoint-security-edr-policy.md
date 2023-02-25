@@ -2,7 +2,7 @@
 # required metadata
 
 title: Manage endpoint detection and response settings with endpoint security policies in Microsoft Intune | Microsoft Docs
-description: Configure and deploy policies for devices you manage with endpoint security endpoint detection and response policy in Microsoft Endpoint Manager. 
+description: Configure and deploy policies for devices you manage with endpoint security endpoint detection and response policy in Microsoft Intune. 
 keywords:
 author: brenduns
 ms.author: brenduns
@@ -53,7 +53,7 @@ Find the endpoint security policies for EDR under *Manage* in the **Endpoint sec
 
 **General**:
 
-- **Tenant for Microsoft Defender for Endpoint** – Your Microsoft Defender for Endpoint tenant must be integrated with your Microsoft Endpoint Manager tenant (Intune subscription) before you can create EDR policies. See [Use Microsoft Defender for Endpoint](advanced-threat-protection.md) in the Intune documentation.
+- **Tenant for Microsoft Defender for Endpoint** – Your Microsoft Defender for Endpoint tenant must be integrated with your Microsoft Intune tenant (Intune subscription) before you can create EDR policies. See [Use Microsoft Defender for Endpoint](advanced-threat-protection.md) in the Intune documentation.
 
 **Support for Configuration Manager clients**:
 
@@ -63,7 +63,7 @@ Find the endpoint security policies for EDR under *Manage* in the **Endpoint sec
 
 ## EDR profiles
 
-### Devices managed by Microsoft Endpoint Manager
+### Devices managed by Microsoft Intune
 
 **Intune** – The following are supported for devices you manage with Intune:
 
@@ -102,7 +102,7 @@ The following sections cover the required tasks:
 > To learn more about using Microsoft Defender for Endpoint with Configuration Manager, see the following articles in the Configuration Manager content:
 >
 > - [Onboard Configuration Manager clients to Microsoft Defender for Endpoint via the Microsoft Intune admin center](../../configmgr/core/get-started/2020/technical-preview-2003.md#bkmk_atp)
-> - [Microsoft Endpoint Manager tenant attach: Device sync and device actions](../../configmgr/core/get-started/2020/technical-preview-2002-2.md#bkmk_attach)
+> - [Microsoft Intune tenant attach: Device sync and device actions](../../configmgr/core/get-started/2020/technical-preview-2002-2.md#bkmk_attach)
 
 ### Task 1: Install the update for Configuration Manager
 
