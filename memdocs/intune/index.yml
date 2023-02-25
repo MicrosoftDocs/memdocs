@@ -117,7 +117,7 @@ conceptualContent:
           itemType: concept
           text: Intune licensing
       footerLink:
-        text: Browse subscription articles
+        text: Browse all Intune subscription articles
         url: ./fundamentals/account-sign-up.md
 
     - title: Manage apps
