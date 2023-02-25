@@ -34,13 +34,12 @@ Before beginning, refer to the [Plan your hybrid Azure Active Directory join imp
 
 Register devices as Autopilot devices > Create a device group > Configure and assign Autopilot Enrollment Status Page (ESP) > Create and assign Autopilot profile > Verify hybrid Azure AD join
 
-Autopilot user-driven Azure AD join steps:
+Autopilot user-driven hybrid Azure AD join steps:
 > [!div class="checklist"]
-> - Step 1: [Register devices as Autopilot devices](autopilot-user-driven-aadj-1-register-device.md)
-> - Step 2: [Create a device group](autopilot-user-driven-aadj-2-create-device-group.md)
-> - Step 3: [Configure and assign Autopilot Enrollment Status Page (ESP)](autopilot-user-driven-aadj-3-configure-and-assign-esp.md)
-> - Step 4: [Create and assign Autopilot profile](autopilot-user-driven-aadj-4-create-and-assign-autopilot-profile.md)
-> - Step 5: [Verify hybrid Azure AD join](/azure/active-directory/devices/howto-hybrid-join-verify)
+> - Step 1: [Register devices as Autopilot devices](autopilot-user-driven-haad-1-register-device.md)
+> - Step 2: [Create a device group](autopilot-user-driven-haad-2-create-device-group.md)
+> - Step 3: [Configure and assign Autopilot Enrollment Status Page (ESP)](autopilot-user-driven-haad-3-configure-and-assign-esp.md)
+> - Step 4: [Create and assign hybrid Azure AD join Autopilot profile](autopilot-user-driven-haad-4-create-and-assign-autopilot-profile.md)
 
 > [!NOTE]
 >

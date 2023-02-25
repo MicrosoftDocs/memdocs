@@ -1,6 +1,6 @@
 ---
-title: Windows Autopilot user-driven Azure AD join - Step 4 of 5 - Create and assign user-driven Azure AD join Autopilot profile
-description: Howe to - Windows Autopilot user-driven Azure AD join - Step 4 of 5 - Create and assign user-driven Azure AD join Autopilot profile.
+title: Windows Autopilot user-driven hybrid Azure AD join - Step 4 of 4 - Create and assign user-driven hybrid Azure AD join Autopilot profile
+description: Howe to - Windows Autopilot hybrid user-driven Azure AD join - Step 4 of 4 - Create and assign hybrid user-driven Azure AD join Autopilot profile.
 ms.prod: windows-client
 ms.localizationpriority: medium
 author: frankroj
@@ -15,19 +15,18 @@ ms.collection:
 ms.technology: itpro-deploy
 ---
 
-# Windows Autopilot user-driven Azure AD join - Step 4 of 5: Create and assign user-driven Azure AD join Autopilot profile
+# Windows Autopilot user-driven hybrid Azure AD join - Step 4 of 4: Create and assign user-driven hybrid Azure AD join Autopilot profile
 
-Autopilot user-driven Azure AD join steps:
-- Step 1: [Register devices as Autopilot devices](autopilot-user-driven-aadj-1-register-device.md)
-- Step 2: [Create a device group](autopilot-user-driven-aadj-2-create-device-group.md)
-- Step 3: [Configure and assign Autopilot Enrollment Status Page (ESP)](autopilot-user-driven-aadj-3-configure-and-assign-esp.md)
+Autopilot user-driven hybrid Azure AD join steps:
+- Step 1: [Register devices as Autopilot devices](autopilot-user-driven-haad-1-register-device.md)
+- Step 2: [Create a device group](autopilot-user-driven-haad-2-create-device-group.md)
+- Step 3: [Configure and assign Autopilot Enrollment Status Page (ESP)](autopilot-user-driven-haad-3-configure-and-assign-esp.md)
 > [!div class="checklist"]
-> - **Step 4: Create and assign Azure AD join Autopilot profile**
-- Step 5: [Assign Autopilot device to a user (optional)](autopilot-user-driven-aadj-5-assign-autopilot-device-to-user.md)
+> - **Step 4: Create and assign hybrid Azure AD join Autopilot profile**
 
-For an overview of the Windows Autopilot user-driven Azure AD join workflow, see [Windows Autopilot user-driven Azure AD join overview](autopilot-user-driven-aadj-workflow.md)
+For an overview of the Windows Autopilot user-driven hybrid Azure AD join workflow, see [Windows Autopilot user-driven hybrid Azure AD join overview](autopilot-user-driven-haad-workflow.md)
 
-## Create and assign user-driven Azure AD join Autopilot profile
+## Create and assign user-driven hybrid Azure AD join Autopilot profile
 
 While the ESP controls what is shown during device and user setup and specifies how soon a user can use their device, the Autopilot profile specifies how the device is configured during Windows Setup, or during OOBE.
 
@@ -104,7 +103,9 @@ For more information on creating and assigning Autopilot profiles, see the follo
 
 [!INCLUDE [How to verify a device has an Autopilot profile assigned to it in Intune](includes/verify-autopilot-profile-assignment.md)]
 
+<!--
 ## Next step - Step 5 of 5: Assign Autopilot device to a user (optional)
 
 > [!div class="nextstepaction"]
 > [Step 5: Assign Autopilot device to a user (optional)](autopilot-user-driven-aadj-5-assign-autopilot-device-to-user.md)
+-->
