@@ -1,7 +1,7 @@
 items:
 - name: Endpoint management
   href: index.yml
-- name: Endpoint management overview (update for Intune product family)
+- name: Endpoint management overview
   href: endpoint-manager-overview.md
 - name: Get Support
   href: get-support.md

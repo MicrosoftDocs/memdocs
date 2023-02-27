@@ -1562,7 +1562,7 @@ items:
     - name: Using the Intune docs
       href: /mem/use-docs.md 
     - name: Get support
-      href: /mem/get-support.md?toc=/mem/intune/fundamentals/toc.json&bc=/mem/intune/fundamentals/breadcrumb/toc.json
+      href: /mem/get-support.md?toc=/mem/intune/toc.json&bc=/mem/intune/breadcrumb/toc.json
 
   - name: Troubleshoot issues
     href: /troubleshoot/mem/intune/welcome-intune/index.yml?toc=/mem/intune/toc.json&bc=/mem/intune/breadcrumb/toc.json
