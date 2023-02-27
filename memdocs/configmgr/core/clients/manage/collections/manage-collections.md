@@ -168,7 +168,7 @@ There are several reasons why the site can't delete a dependent collection:
 
 - **Used by cloud attach**: For more information, see [Enable cloud attach for Configuration Manager](../../../../cloud-attach/enable.md).
 
-- **Use for upload to Microsoft Endpoint Manager**: For more information, see [Make Configuration Manager collections available to assign Endpoint security policies](../../../../tenant-attach/endpoint-security-get-started.md#bkmk_collections).
+- **Use for upload to Microsoft Intune**: For more information, see [Make Configuration Manager collections available to assign Endpoint security policies](../../../../tenant-attach/endpoint-security-get-started.md#bkmk_collections).
 
 The details window lists collections that can't be deleted with the reason why.
 

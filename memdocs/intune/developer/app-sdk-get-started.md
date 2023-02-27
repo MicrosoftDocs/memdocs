@@ -25,9 +25,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune, has-adal-ref
-ms.collection: 
-- M365-identity-device-management
+ms.collection:
 - tier3
+- M365-identity-device-management
 ---
 
 # Get started with the Microsoft Intune App SDK
@@ -116,7 +116,7 @@ Microsoft Intune collects data on usage statistics for your app.
 
 ## Line-of-business app version numbers
 
-Line-of-business apps in Intune now display the version number for iOS and Android apps. The number displays in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) in the app list and in the app overview blade. End users can see the app number in the Company Portal app and in the web portal.
+Line-of-business apps in Intune now display the version number for iOS and Android apps. The number displays in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) in the app list and in the app overview blade. End users can see the app number in the Company Portal app and in the web portal.
 
 ### Full version number
 
@@ -176,7 +176,7 @@ After you finish the necessary steps to integrate your iOS or Android app with t
 
 If your app is using its own custom Azure Active Directory (AAD) settings for authentication, then the following steps should be taken for both public store apps, as well as internal LOB apps. The steps **do not need to be taken if your app is using the Intune SDK default client ID**. 
 
-Once you have registered your app within an Azure tenant, and it is showing up under **All Applications**, you must give your app access to the Intune app protection service (previously known as MAM service). In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431):
+Once you have registered your app within an Azure tenant, and it is showing up under **All Applications**, you must give your app access to the Intune app protection service (previously known as MAM service). In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431):
 
 1. Go to the **Azure Active Directory** blade.
 2. Under **App registrations**, go to the listing set up for the application.

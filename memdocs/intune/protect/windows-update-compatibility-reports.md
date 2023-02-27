@@ -23,10 +23,11 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 #ms.custom:
-ms.collection: 
-  - M365-identity-device-management
-  - highpri
-  - highseo
+ms.collection:
+- tier1
+- M365-identity-device-management
+- highpri
+- highseo
 ---
 
 # App and driver compatibility reports for Windows updates
@@ -49,6 +50,8 @@ The Windows feature update device readiness and Windows feature update compatibi
 - Windows 10/11 Education A3 or A5 (included in Microsoft 365 A3 or A5)
 - Windows 10/11 Virtual Desktop Access (VDA) per user
 
+Before using these reports, you must attest to having the required licenses on the [Windows data page](../protect/data-enable-windows-data.md#windows-license-verification) of the Intune admin center.
+
 ### Devices
 
 To be eligible for the Windows feature update device readiness and Windows feature update compatibility risks reports, devices must:
@@ -58,7 +61,7 @@ To be eligible for the Windows feature update device readiness and Windows featu
 - Be managed by Intune (including co-managed devices) or a supported version of the Configuration Manager client with [tenant attach enabled](../../configmgr/tenant-attach/device-sync-actions.md)
 - Have [Windows diagnostic data enabled](/windows/privacy/configure-windows-diagnostic-data-in-your-organization) at the [Required level](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#diagnostic-data-settings) or higher
 
-Additionally, you must [enable Windows diagnostic data processor configuration](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#enable-windows-diagnostic-data-processor-configuration).
+Additionally, you must set the [Enable features that require Windows diagnostic data in processor configuration](../protect/data-enable-windows-data.md#windows-data) setting in **Tenant administration** > **Connectors and tokens** > **Windows data** to On.
 
 ### Users
 
@@ -84,7 +87,7 @@ The **Windows feature update device readiness report**  provides a device-level 
 
 To use this report:
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. In the admin center, go to **Reports** > **Windows updates** > select the **Reports** tab > select **Windows Feature Update Device Readiness Report**.
 3. Configure settings:
    - Click on **Select Target OS** and choose the version of Windows you plan to deploy.
@@ -136,7 +139,7 @@ The **Windows feature update compatibility risks report**  provides a summary vi
 
 To use this report:
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. In the admin center, go to **Reports** > **Windows updates** > select the **Reports** tab > select **Windows Feature Update Compatibility Risks Report**.
 3. Configure settings:
 
