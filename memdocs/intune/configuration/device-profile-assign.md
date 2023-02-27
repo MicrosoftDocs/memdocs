@@ -2,7 +2,7 @@
 # required metadata
 
 title: Assign device profiles in Microsoft Intune
-description: Use the Microsoft Endpoint Manager admin center to assign device configuration profiles and policies to users and devices. Learn how to exclude groups from a profile assignment in Microsoft Intune.
+description: Use the Microsoft Intune admin center to assign device configuration profiles and policies to users and devices. Learn how to exclude groups from a profile assignment in Microsoft Intune.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
@@ -26,8 +26,9 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure, contperf-fy21q1
 ms.collection:
-  - M365-identity-device-management
-  - highpri
+- tier1
+- M365-identity-device-management
+- highpri
 ---
 
 # Assign user and device configuration profiles in Microsoft Intune
@@ -51,7 +52,7 @@ Be sure you have the correct role to assign profiles. For more information, see 
 
 ## Assign a device profile
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Configuration profiles**. All the profiles are listed.
 3. Select the profile you want to assign > **Properties** > **Assignments** > **Edit**:
 

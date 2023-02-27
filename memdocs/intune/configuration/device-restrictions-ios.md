@@ -24,9 +24,10 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; seodec18
 ms.collection:
-  - M365-identity-device-management
-  - highpri
-  - highseo
+- tier1
+- M365-identity-device-management
+- highpri
+- highseo
 ---
 
 # iOS and iPadOS device settings to allow or restrict features using Intune
@@ -648,7 +649,7 @@ You can also **Import** a CSV file with the list of app names and their bundle I
 - **Type of restricted apps list**: Create a list of apps that users aren't allowed to install or use. Your options:
 
   - **Not configured** (default): Intune doesn't change or update this setting. By default, the OS might allow access to apps you assign, and built-in apps.
-  - **Prohibited apps**: List the apps (not managed by Intune) that users aren't allowed to install and run. Users aren't prevented from installing a prohibited app. If a user installs an app from this list, then the device is reported in the **Devices with restricted apps** report ([Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Monitor** > **Devices with restricted apps**). 
+  - **Prohibited apps**: List the apps (not managed by Intune) that users aren't allowed to install and run. Users aren't prevented from installing a prohibited app. If a user installs an app from this list, then the device is reported in the **Devices with restricted apps** report ([Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Monitor** > **Devices with restricted apps**). 
   - **Approved apps**: List the apps that users are allowed to install. To stay compliant, users must not install other apps. Apps that are managed by Intune are automatically allowed, including the Company Portal app. Users aren't prevented from installing an app that isn't on the approved list. But if they do, it's reported in Intune.
 
 To add apps to these lists, you can:

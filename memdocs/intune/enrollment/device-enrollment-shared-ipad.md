@@ -26,7 +26,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: 
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Shared iPad devices  
@@ -47,7 +49,7 @@ Follow these steps to set up Shared iPad in your environment.
 
 1. Federate your Azure AD instance with Apple Business Manager or Apple School Manager. For more information, see [Intro to federated authentication with Apple Business Manager](https://support.apple.com/guide/apple-business-manager/intro-to-federated-authentication-apdb19317543/web).
 2. Create an enrollment profile.  
-    1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+    1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
     2. Go to **Devices** > **iOS/iPadOS** > **iOS/iPadOS Enrollment**.
     2. Select **Enrollment program tokens**.
     4. Choose a token, and then select  **Profiles** > **Create profile** > **iOS/iPadOS**. 

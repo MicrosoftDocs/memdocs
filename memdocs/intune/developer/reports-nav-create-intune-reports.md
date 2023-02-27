@@ -24,9 +24,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-classic
-ms.collection: 
-- M365-identity-device-management
+ms.collection:
 - tier3
+- M365-identity-device-management
 ---
 
 # Use the Microsoft Intune Data Warehouse
@@ -40,7 +40,7 @@ Use the Intune Data Warehouse to build reports that provide insight into your en
 
 ## Data Warehouse benefits
 
-The Data Warehouse provides you access to more information about your mobile environment than the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). With the Intune Data Warehouse you can access:
+The Data Warehouse provides you access to more information about your mobile environment than the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). With the Intune Data Warehouse you can access:
 
 - Historical Intune data
 - Data refreshed on a daily cadence
