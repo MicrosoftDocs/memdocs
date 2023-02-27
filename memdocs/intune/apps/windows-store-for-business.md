@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/20/2022
+ms.date: 02/24/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -112,12 +112,14 @@ When you assign a Microsoft Store for Business app, a license is used by each us
 
 ## Remove apps
 
-To remove an app that is synced from the Microsoft Store for Business, you need to log into the Microsoft Store for Business and refund the app. The process is the same whether the app is free or not. For a free app, the store will refund $0. The example below shows a refund for a free app. 
+To remove an app that is synced from the Microsoft Store for Business, you need to log into the Microsoft Store for Business and complete the following steps. The process is the same whether the app is free or not. 
 
-![Screenshot of remove app details](./media/windows-store-for-business/microsoft-store-for-business-01.png)
-
-> [!NOTE]
-> Removing an app's visibility in the private store won't keep Intune from syncing the app. You must refund the app to fully remove the app.
+1. Ensure that you sign into the [Microsoft Store for Business](https://www.microsoft.com/business-store) using the same tenant account you use to sign into Intune.
+2. Look for the app that you want to remove by selecting **Products & services** > **Apps & software** and select it.
+3. In the **Users** pane select all users, click on the **...** symbol under the **Actions** column and choose to **Reclaim license**.
+4. Open the **Private store availability** tab of the app and change its availability to **No one**.
+5. Click on the **Product details** link on the top then click on the **...** button next to **Install**. If the previous steps have been completed successfully a **Remove product** option will be available. Click **Remove product** to remove the app from the Microsoft Store for Business. 
+6. Sync the apps using the Microsoft for Business Store connector in Intune in order to remove the app from the list of Windows apps in Intune.
 
 ## Next steps
 
