@@ -76,7 +76,7 @@ productDirectory:
           text: Levels of protection and configuration in Intune
 
     # Card
-    - title: How-to-guides
+    - title: How-to guides
       imageSrc: ./media/icons/how-to.svg
       summary: Guides to help you perform common tasks in Intune
       url: ./index.yml#how-to-guides
@@ -104,7 +104,7 @@ conceptualContent:
    
     - title: Set up Intune subscription
       links:
-        - url: ./fundamentals/setup-steps.md
+        - url: ./fundamentals/deployment-plan-setup.md
           itemType: how-to-guide
           text: Steps to set up Intune
         - url: ./fundamentals/supported-devices-browsers.md
