@@ -8,7 +8,7 @@ keywords:
 author: dougeby 
 ms.author: dougeby
 manager: dougeby
-ms.date: 02/01/2023
+ms.date: 03/02/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -62,6 +62,15 @@ You can use RSS to be notified when this article is updated. For more informatio
  
 ## App management
 
+### Changes to app backup and restore behavior on iOS/iPadOS and macOS devices<!-- 16261392 -->  
+As an app setting, you can select to **Prevent iCloud app backup** for iOS/iPadOS and macOS devices. You will have the option to *not* back up managed App Store apps and line-of-business (LOB) apps on iOS/iPadOS, as well as managed App Store apps on macOS devices (macOS LOB apps won’t support this feature), for both user and device licensed VPP/non-VPP apps. This will include both new and existing App Store/LOB apps sent with and without VPP that are being added to Intune and targeted to users and devices.
+
+Preventing the backup of the specified managed apps will ensure that these apps can be properly deployed via Intune when the device is enrolled and restored from backup. If the admin configures the new setting for new or existing apps in their tenant, managed apps can and will be re-installed for devices, but Intune will no longer allow them to be backed up.
+
+The new setting will appear in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by modifying the properties of an app. For an existing app, you can select **Apps** > **iOS/iPadOS** or **macOS** > *select the app* > **Properties** > Assignment **Edit**. If no group assignment has been set, click **Add group** to add a group. Modify either the setting under **VPN**, **Uninstall on device removal**, or **Install as removable**. Then, select **Prevent iCloud app backup**. The **Prevent iCloud app backup** setting is used to prevent backup of app data for the application. Set to **No** to allow the app to be backed up by iCloud.
+
+For more information, see [Changes to applications’ backup and restore behavior on iOS/iPadOS and macOS devices](https://techcommunity.microsoft.com/t5/intune-customer-success/changes-to-applications-backup-and-restore-behavior-on-ios/ba-p/3692064).
+
 ### Company Portal automatically installed on Android Enterprise dedicated devices<!-- 6423852  -->  
 Intune Company Portal will now be automatically installed on all Android Enterprise dedicated devices to ensure the appropriate handling of app protection policies. Users will not be able to see or launch the Company Portal, and there are no requirements for users to interact with it. Admins will notice that the Company Portal is automatically installed on their Android Enterprise dedicated devices, without the ability to uninstall.
 
@@ -75,6 +84,49 @@ The global quiet time settings will allow you to create policies to schedule qui
 
 ## Device configuration
 
+### New settings and setting options available in the macOS Settings Catalog <!-- 16813395  -->  
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
+
+New settings are available in the Settings Catalog. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can see these settings at **Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform > **Settings catalog** for profile type.
+
+New settings include:
+
+**Microsoft Defender > Tamper protection**:
+
+- Enforcement level
+
+**Microsoft Office > Microsoft OneDrive**:
+
+- Automatic upload bandwidth percentage
+- Automatically and silently enable the Folder Backup feature (aka Known Folder Move)
+- Block apps from downloading online-only files
+- Block external sync
+- Disable automatic sign in
+- Disable download toasts
+- Disable personal accounts
+- Disable tutorial
+- Display a notification to users once their folders have been redirected
+- Enable Files On-Demand
+- Enable simultaneous edits for Office apps
+- Force users to use the Folder Backup feature (aka Known Folder Move)
+- Hide dock icon
+- Ignore named files
+- Include ~/Desktop in Folder Backup (aka Known Folder Move)
+- Include ~/Documents in Folder Backup (aka Known Folder Move)
+- Open at login
+- Prevent users from using the Folder Backup feature (aka Known Folder Move)
+- Prompt users to enable the Folder Backup feature (aka Known Folder Move)
+- Set maximum download throughput
+- Set maximum upload throughput
+- SharePoint Prioritization
+- SharePoint Server Front Door URL
+- SharePoint Server Tenant Name
+
+Applies to:  
+- macOS
+
+For more information about configuring Settings Catalog profiles in Intune, go to [Create a policy using settings catalog](../configuration/settings-catalog.md).
+
 ### Support for multi-SIM iOS/iPadOS device inventory<!--16360290-->
 
 You'll soon be able to view the service subscription fields on devices that have multiple SIM cards installed under the per-device Hardware section. The inventory fields that are capable of reporting multiple values to Intune are:
@@ -86,12 +138,54 @@ You'll soon be able to view the service subscription fields on devices that have
 
 These fields will default to using labels returned by the device, such as:  *Primary*, *Secondary*, *CTSubscriptionSlotOne*, and *CTSubscriptionSlotTwo*. These returned labels may be displayed in the language of the local device that is reporting its inventory to Intune.
 
-Applies to:
+Applies to:  
 - **iOS/iPadOS**
 
 <!-- *********************************************** -->
 
+
+## Device enrollment
+
+#### Intune's AAD frontline worker iPad experience<!-- 6367427  -->  
+Intune will support a frontline worker (FLW) experience for iPhones and iPads. The foundation for this experience is based on support for both the Azure Active Directory (AAD) shared device mode and the Microsoft Enterprise SSO plug-in (Microsoft Azure AD SSO extension). We also will release ZTP (Zero Touch Provisioning) which allows user enrollment without any user action.
+
+<!-- *********************************************** -->
+
 ## Device management
+
+### Add Google accounts to Android Enterprise personally owned devices with a work profile<!-- 9113561  -->  
+On Android Enterprise personally owned devices with a work profile, you can configure settings that restrict device features and settings. Currently, there is an **Add and remove accounts** setting. This setting prevents accounts from being added in the work profile, including preventing Google accounts.
+
+This setting is changing, and you will be able to add Google accounts. The **Add and remove accounts** setting options will be:
+
+- **Block all accounts types**: Prevents users from manually adding or removing accounts in the work profile. For example, when you deploy the Gmail app into the work profile, you can prevent users from adding or removing accounts in this work profile.
+- **Allow all accounts types**: Allows all accounts, including Google accounts. These Google accounts are blocked from installing apps from the **Managed Google Play Store**. This option requires Google Play app version 80970100 or higher.
+- **Allow all accounts types, except Google accounts** (default): Intune doesn't change or update this setting. By default, the OS might allow adding accounts in the work profile.
+
+For more information on the settings you can configure, go to [Android Enterprise device settings list to allow or restrict features on personally owned devices using Intune](../configuration/device-restrictions-android-enterprise-personal.md).
+
+Applies to:
+
+- Android Enterprise personally owned devices with a work profile
+
+### Improvements to Devices area in admin center (public preview) <!-- 12775837  -->  
+The **Devices** area in the admin center will be updated to provide a more consistent UI, with more capable controls and an improved navigation structure so you can find the information you need faster. You will be able to opt in to the public preview to try out the new experience. Changes will include:  
+
+* A new scenario-focused navigation structure that brings monitoring in line with management workflows.
+* New in-line monitoring pages with easy access to key metrics and reports.
+* Reduction in journey, helping you get to your destination faster.
+* New location for platform pivots that help to create a more consistent navigation model.
+* A consistent way across list views to search, sort, and filter data.
+
+The following device pages will be updated:  
+
+* Overview
+* All devices
+* Compliance
+* Configuration
+* Windows 10 updates
+* Apple updates
+* Enrollment
 
 ### View ServiceNow Incidents in the Intune Troubleshooting workspace<!-- 12508062  -->  
 You'll soon be able to view a list of ServiceNow incidents associated with the user you've selected in the Intune Troubleshooting workspace. This new feature will be available under **Troubleshooting + Support** > select a user > **ServiceNow Incidents**. The list of incidents shown have a direct link back to the source incident and show key information from the incident. All incidents listed will link the "Caller" identified in the incident with the user selected for Troubleshooting.
@@ -121,6 +215,13 @@ When this support is available, your tamper protection configurations from *Wind
 Applies to:  
 - Windows 10
 - Windows 11
+
+<!-- ***********************************************-->
+
+## Tenant administration
+
+### Add CMPivot queries to Favorites folder<!-- 16702226  -->  
+You will be able to add your frequently used queries to a **Favorites** folder in CMPivot. CMPivot allows you to quickly assess the state of a device managed by Configuration Manager via Tenant Attach and take action. The functionality is similar to one already present in the Configuration Manager console. This addition will help you keep all your most used queries in one place. You can also add tags to your queries to help search and find queries. The queries saved in the Configuration Manager console will not automatically be added to your **Favorites** folder. You will need to create new queries and add them to this folder. For more information about CMPivot, see [Tenant attach: CMPivot usage overview](../../configmgr/tenant-attach/cmpivot-overview-attached.md).
 
 <!-- ***********************************************-->
 
