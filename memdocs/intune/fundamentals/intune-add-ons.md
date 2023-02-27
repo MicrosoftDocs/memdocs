@@ -44,10 +44,10 @@ Licenses for the Intune add-ons can be added for an additional cost to the licen
 
 Some capabilities are available to buy as a standalone add-on. Other capabilities are only available with Intune Plan 2 or the Intune Suite.
 
-- **Microsoft Intune Plan 2**: Offers advanced endpoint management capabilities, including Remote Help and specialized devices management.
-- **Microsoft Intune Suite**: Unifies a series of mission-critical advanced endpoint management and security capabilities. The capabilities of the suite are integrated with Microsoft 365 and Microsoft Security across endpoint platforms for both cloud and on-premises co-managed devices. The Intune Suite includes all standalone capabilities and all capabilities that come with Intune Plan 2.
+- **Microsoft Intune Plan 2**: Offers advanced endpoint management capabilities, including management and configuration of specialty devices and Microsoft Tunnel for Mobile Application Management.
+- **Microsoft Intune Suite**: Unifies a series of mission-critical advanced endpoint management and security capabilities. The capabilities of the suite are integrated with Microsoft 365 and Microsoft Security across endpoint platforms for both cloud and on-premises co-managed devices. The Intune Suite includes Remote Help (standalone) and all capabilities that come with Intune Plan 2.
 
-The following table provides a list of add-on capabilities and associated Intune Plan. For information about Microsoft Intune Plans and pricing, see [Intune Plans and pricing](https://aka.ms/IntuneSuitePricing).
+The following table provides a list of add-on capabilities and associated Intune Plans. For information about Microsoft Intune Plans and pricing, see [Intune Plans and pricing](https://aka.ms/IntuneSuitePricing).
 
 |Capability|Standalone add-on|Intune Plan 2|Intune Suite|
 |:---|:---:|:---:|:---:|
