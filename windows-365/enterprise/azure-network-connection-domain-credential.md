@@ -49,11 +49,7 @@ When you [create an ANC](create-azure-network-connection.md), you must provide c
 
 ## Encryption of domain password information
 
-<<<<<<< HEAD
-When the ANC is created, all this information is stored in the Windows 365 service. The service encrypts the domain password information with a well-protected key before saving it.
-=======
-When an ANC is created, information associated with it is stored in the Windows 365 service database. The Windows 365 service encrypts the domain password information with a well-protected key before saving it to the database. Encryption details include:
->>>>>>> 791f7aaaec5f447d001e808cf81b87aa43c624ff
+When an ANC is created, information associated with it is stored in the Windows 365 service. The Windows 365 service encrypts the domain password information with a well-protected key before saving it. Encryption details include:
 
 - Encryption type: Azure Key Vault certificate
 - Key type: RSA-HSM
@@ -61,22 +57,13 @@ When an ANC is created, information associated with it is stored in the Windows 
 
 The automated encryption steps proceed as follows:
 
-<<<<<<< HEAD
-1. The Windows 365 checks the service for an existing symmetric key specific to that tenant.
-2. If a key isn't present or has expired, Windows 365 generates a new symmetric key for this tenant using a random number generator. Keys are created per tenant.
-3. If a key already exists for this tenant, it's used in the following steps.
-4. After getting the (new or existing) tenant key, Windows 365 decrypts the key with the Windows 365 dedicated Enterprise CA certificate. The certificate is stored in the Azure Key Vault managed by Microsoft.
-5. Windows 365 encrypts the password with the decrypted tenant key.
-6. The encrypted password is saved to the Windows 365 service.
-=======
-1. The Windows 365 service checks the service database for an existing symmetric key specific to that tenant.
+1. The Windows 365 service checks the service for an existing symmetric key specific to that tenant.
 2. If a key isn't present or has expired, Windows 365 generates a new symmetric key for this tenant using a random number generator. Keys are created per tenant.
 3. If a key already exists for this tenant, it's used in the following steps.
 4. After getting the (new or existing) tenant key, Windows 365 decrypts the key with the Windows 365 dedicated Enterprise CA issued certificate.
 5. This certificate is stored in the Azure Key Vault instance managed by Microsoft.
 6. Windows 365 service encrypts the password with the decrypted tenant key.
-7. The encrypted password is saved to the Windows 365 service database.
->>>>>>> 791f7aaaec5f447d001e808cf81b87aa43c624ff
+7. The encrypted password is saved to the Windows 365 service.
 
 ### Windows 365 Enterprise certificates
 
@@ -98,11 +85,7 @@ Ecryption algorithm details include:
 
 Credentials often change and need updating. Windows 365 doesn’t proactively detect credential changes of the on-premises Active Directory user account associated with ANC. Instead, Windows 365 relies on customers to manually update the ANC with the updated credential information.
 
-<<<<<<< HEAD
-When there’s a change to the domain credential of the ANC, the new credential is re-encrypted and updated to the Windows 365 service.
-=======
-When there’s a change to the domain credential of the user account associated with an ANC, the new credential should be manually updated by the Windows 365 administrator. The new credential is then automatically re-encrypted and updated in the Windows 365 database.
->>>>>>> 791f7aaaec5f447d001e808cf81b87aa43c624ff
+When there’s a change to the domain credential of the user account associated with an ANC, the new credential should be manually updated by the Windows 365 administrator. The new credential is then automatically re-encrypted and updated in the Windows 365 service.
 
 > [!NOTE]  
 > If the domain credential is changed in your on-premises Active Directory environment, but you don’t manually update the ANC, Windows 365 will still use the old credential for ANC [health checks](health-checks.md). Therefore, these health checks will fail because the credentials on record are no longer valid. To make sure such failures don’t happen, [update the [Azure network connection](edit-azure-network-connection.md) configuration with the new credentials immediately.
