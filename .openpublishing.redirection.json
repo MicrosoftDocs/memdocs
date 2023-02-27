@@ -1324,8 +1324,8 @@
             "redirect_document_id": false
         },
         {
-            "source_path": "memdocs/fundamentals/setup-steps.md",
-            "redirect_url": "/mem/fundamentals/deployment-plan-setup",
+            "source_path": "memdocs/intune/fundamentals/setup-steps.md",
+            "redirect_url": "/mem/intune/fundamentals/deployment-plan-setup",
             "redirect_document_id": false
         },
         {
