@@ -387,7 +387,7 @@ conceptualContent:
     
 additionalContent:
   sections:
-    - title: Additional resources to manage devices
+    - title: Additional technical resources
       items:
 
       - title: Microsoft 365
@@ -408,6 +408,31 @@ additionalContent:
           url: /azure/active-directory/devices/
         - text: Hybrid identity documentation
           url: /azure/active-directory/hybrid/
+      - title: Windows client documentation
+        links: 
+        - text: Windows 11 overview
+          url: /windows/whats-new/windows-11-overview
+        - text: Configure Windows client
+          url: /windows/configuration/
+        - text: Windows client deployment
+          url: /windows/deployment/
+        - text: Windows client management
+          url: /windows/client-management/
+        - text: Windows 10 security documentation
+          url: /windows/security/
+
+      - title: Windows 365 documentation
+        links: 
+        - text: Windows 365 Enterprise documentation
+          url: /windows-365/enterprise/
+        - text: Windows 365 overview
+          url: /windows-365/enterprise/overview
+        - text: Windows 365 planning guide
+          url: /windows-365/enterprise/planning-guide
+        - text: Windows client deployment
+          url: /windows-365/enterprise/deployment-overview
+
+
     - title: Intune community resources
       items:
         # Card
