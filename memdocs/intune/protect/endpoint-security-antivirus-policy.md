@@ -2,7 +2,7 @@
 # required metadata
 
 title: Manage antivirus settings with endpoint security policies in Microsoft Intune | Microsoft Docs
-description: Configure and deploy policies and use reports for devices you manage with endpoint security antivirus policy in Microsoft Endpoint Manager. 
+description: Configure and deploy policies and use reports for devices you manage with endpoint security antivirus policy in Microsoft Intune. 
 keywords:
 author: brenduns
 ms.author: brenduns
@@ -64,7 +64,7 @@ Antivirus policies include the same settings as found *endpoint protection* or *
 
 - **Set up Defender for Endpoint Security Configuration Management** - To support deploying antivirus policy to devices communicating with Endpoint Manager via Defender for Endpoint, configure *Security Management for Microsoft Defender for Endpoint*.
   
-  To set up security management for MDE, see [Manage Microsoft Defender for Endpoint on devices with Microsoft Endpoint Manager](../protect/mde-security-integration.md).
+  To set up security management for MDE, see [Manage Microsoft Defender for Endpoint on devices with Microsoft Intune](../protect/mde-security-integration.md).
 
 ### Prerequisites for tamper protection
 
@@ -86,7 +86,7 @@ Prerequisites to support tamper protection for devices managed by Intune:
 - Your environment must meet the [prerequisites for managing  tamper protection with Intune](/windows/security/threat-protection/microsoft-defender-antivirus/prevent-changes-to-security-settings-with-tamper-protection#turn-tamper-protection-on-or-off-for-your-organization-using-intune)
 - Devices are onboarded to Microsoft Defender for Endpoint (P1 or P2)
 
-Profiles for *Antivirus* policy that support tamper protection for [devices managed by Microsoft Endpoint Manager](#devices-managed-by-microsoft-intune):
+Profiles for *Antivirus* policy that support tamper protection for [devices managed by Microsoft Intune](#devices-managed-by-microsoft-intune):
 
 - Platform: **Windows 10, Windows 11, and Windows Server**
   - Profile: **Windows Security experience**  

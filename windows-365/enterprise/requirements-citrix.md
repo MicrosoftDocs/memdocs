@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 02/13/2023
+ms.date: 02/24/2023
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -25,7 +25,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; get-started
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- tier2
 ---
 
 # Requirements for using Citrix HDX Plus for Windows 365 Enterprise
@@ -35,9 +37,10 @@ To use Citrix HDX Plus for Windows 365, you must meet the following requirements
 ## Citrix requirements
 
 - Citrix Cloud tenant with HDX Plus for Windows 365 entitlement
-  - Citrix HDX Plus for Windows 365
-  - Citrix DaaS Premium
-  - Citrix DaaS Premium Plus
+  - DaaS Standard for Azure
+  - DaaS Advanced Plus
+  - DaaS Premium
+  - DaaS Premium Plus
 - Citrix admin account with full admin rights
 - Cloud PCs must have access to:
   - https://*.*.nssvc.net on TCP 443 and UDP 443 for HDX sessions over TCP and EDT, respectively. If you can’t allow all subdomains in that manner, you can instead use https://*.c.nssvc.net and https://*.g.nssvc.net. For more information, see the [Citrix Support Knowledge Center article CTX270584](https://support.citrix.com/article/CTX270584/citrix-gateway-service-pointsofpresence-pops).

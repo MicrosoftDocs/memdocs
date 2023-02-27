@@ -208,9 +208,9 @@ After a *Refresh*, the new baseline profile appears in the admin center.
 
 ## Older baseline versions
 
-Microsoft Endpoint Manager updates the versions of built-in Security Baselines depending on the changing needs of a typical organization. Each new release results in a version update to a particular baseline. The expectation is that customers will be using the latest baseline version as a starting point to their Device Configuration profiles.
+Microsoft Intune updates the versions of built-in Security Baselines depending on the changing needs of a typical organization. Each new release results in a version update to a particular baseline. The expectation is that customers will be using the latest baseline version as a starting point to their Device Configuration profiles.
 
-When there are no longer any profiles that use an older baseline listed in your tenant, Microsoft Endpoint Manager will only list the latest baseline version available.
+When there are no longer any profiles that use an older baseline listed in your tenant, Microsoft Intune will only list the latest baseline version available.
 
 If you have a profile associated with an older baseline, that older baseline will continue to be listed.
 
