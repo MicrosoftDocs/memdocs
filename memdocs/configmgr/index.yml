@@ -35,7 +35,7 @@ conceptualContent:
   items:
     - title: Cloud-attached management
       links:
-        - text: Microsoft Endpoint Manager tenant attach
+        - text: Microsoft Intune tenant attach
           url: ./tenant-attach/index.yml
           itemType: overview
         - text: Endpoint analytics

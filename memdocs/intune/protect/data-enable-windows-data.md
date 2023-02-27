@@ -25,7 +25,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Enable use of Windows diagnostic data by Intune
@@ -34,11 +36,11 @@ Before you can use some Intune features, you must enable *Windows diagnostic dat
 
 In addition, several of the features that require Windows diagnostic data also require you to have Windows E3 (or equivalent) licenses, and you must attest to having these licenses to enable use of those features.
 
-Both configuration of the Windows diagnostic data in processor configuration and the license attestation are configured on the **Windows data** page of the Microsoft Endpoint Manager admin center.
+Both configuration of the Windows diagnostic data in processor configuration and the license attestation are configured on the **Windows data** page of the Microsoft Intune admin center.
 
 ## Manage Windows data configurations
 
-To manage Windows data configurations for your tenant, open the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Tenant administration** > **Connectors and tokens** > **Windows data**.
+To manage Windows data configurations for your tenant, open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Tenant administration** > **Connectors and tokens** > **Windows data**.
 
 On the *Windows data* page, you can configure your tenant to support Windows diagnostic data in processor configuration, and to attest ownership of the required Windows E3 or equivalent licenses. It’s possible that some features require only one of the available configurations to be enabled, while other features could require both.
 

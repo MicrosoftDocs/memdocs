@@ -26,7 +26,9 @@ ms.suite: ems
 ms.custom: 
    - intune-azure
    - contperf-fy21q1
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
  
 # Manage security baseline profiles in Microsoft Intune
@@ -56,7 +58,7 @@ Common tasks when working with security baselines include:
 
 ## Create the profile
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Endpoint security** > **Security baselines** to view the list of available baselines.
 
@@ -83,6 +85,9 @@ Common tasks when working with security baselines include:
 6. On the **Scope tags** tab, select **Select scope tags** to open the *Select tags* pane to assign scope tags to the profile.
 
 7. On the **Assignments** tab, select **Select groups to include** and then  assign the baseline to one or more groups. Use **Select groups to exclude** to fine-tune the assignment.
+
+> [!NOTE]
+> Security baselines must be assigned to either user groups or device groups based on scope of the settings being used. Because of this, multiple baselines may be needed when assigning both user and device based settings.
 
    ![Assign a profile](./media/security-baselines-configure/assignments.png)
 
@@ -140,7 +145,7 @@ Before you update a baseline profile to a new version, create a copy of it so yo
 
 Before you update the version of a profile that's assigned to groups, [test the version update](#test-the-conversion-and-updated-baseline) on a copy of profile so you can then validate the new baselines settings on test group of devices.
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Endpoint security** > **Security baselines**, and then select the tile for the baseline type that has the profile you want to change.
 
@@ -180,7 +185,7 @@ After you duplicate a baseline, review and edit the new instance to make changes
 
 ### To duplicate a baseline
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Go to **Endpoint security** > **Security baselines**, select the type of baseline you want to duplicate, and then select **Profiles**.
 3. Right-click on the profile you want to duplicate and select **Duplicate**, or select the ellipsis (**…**) to the right of the baseline and select **Duplicate**.
 4. Provide a **New name** for the baseline, and then select **Save**.
@@ -203,9 +208,9 @@ After a *Refresh*, the new baseline profile appears in the admin center.
 
 ## Older baseline versions
 
-Microsoft Endpoint Manager updates the versions of built-in Security Baselines depending on the changing needs of a typical organization. Each new release results in a version update to a particular baseline. The expectation is that customers will be using the latest baseline version as a starting point to their Device Configuration profiles.
+Microsoft Intune updates the versions of built-in Security Baselines depending on the changing needs of a typical organization. Each new release results in a version update to a particular baseline. The expectation is that customers will be using the latest baseline version as a starting point to their Device Configuration profiles.
 
-When there are no longer any profiles that use an older baseline listed in your tenant, Microsoft Endpoint Manager will only list the latest baseline version available.
+When there are no longer any profiles that use an older baseline listed in your tenant, Microsoft Intune will only list the latest baseline version available.
 
 If you have a profile associated with an older baseline, that older baseline will continue to be listed.
 

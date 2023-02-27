@@ -2,7 +2,7 @@
 # required metadata
 title: Restore multiple Cloud PCs in bulk
 titleSuffix:
-description: Learn how to restore multiple Cloud PCs using the Microsoft Endpoint Manager admin center.
+description: Learn how to restore multiple Cloud PCs using the Microsoft Intune admin center.
 keywords:
 author: ErikjeMS 
 ms.author: erikje
@@ -25,14 +25,16 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: 
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- tier2
 ---
 
 # Restore multiple Cloud PCs in bulk
 
-You can use the Microsoft Endpoint Manager admin center to bulk restore multiple Cloud PCs.
+You can use the Microsoft Intune admin center to bulk restore multiple Cloud PCs.
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **All devices** > **Bulk Device Actions**.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **All devices** > **Bulk Device Actions**.
 ![Screenshot of bulk device actions](./media/restore-bulk/bulk-device-actions.png)
 2. On the **Basics** page, select the following options:
     1. **OS**: Windows

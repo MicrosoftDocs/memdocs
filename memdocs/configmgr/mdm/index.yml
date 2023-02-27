@@ -1,12 +1,12 @@
 ### YamlMime:Landing
 
 title: Mobile device management (MDM) documentation
-summary: Use Microsoft Endpoint Manager to manage mobile devices in your organization, either on-premises or cloud-based
+summary: Use the Microsoft Intune family of products to manage mobile devices in your organization, either on-premises or cloud-based
 
 metadata:
   title: Mobile device management
   titleSuffix: Configuration Manager
-  description: Use Microsoft Endpoint Manager to manage mobile devices in your organization, either on-premises or cloud-based
+  description: Use Microsoft Intune and Configuration Manager to manage mobile devices in your organization, either on-premises or cloud-based
   ms.prod: configuration-manager
   ms.technology: configmgr-mdm
   ms.topic: landing-page
@@ -55,5 +55,5 @@ landingContent:
             url: /intune/fundamentals/what-is-device-management
       - linkListType: tutorial
         links:
-          - text: Walkthrough Intune in Microsoft Endpoint Manager
+          - text: Walkthrough the Microsoft Intune admin center
             url: /intune/fundamentals/tutorial-walkthrough-endpoint-manager

@@ -24,7 +24,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Use custom compliance policies and settings for Linux and Windows devices with Microsoft Intune
@@ -42,9 +44,9 @@ Before you can add custom settings to a policy, you’ll need to prepare a JSON 
 
 - Scripts are specific to different platforms and delivered to devices through the compliance policy. When policy is evaluated, the script detects the settings from the JSON file, and then reports the results to Intune. Windows uses a PowerShell script and Linux uses a POSIX-compliant shell script.
 
-  The scripts must be uploaded to the Microsoft Endpoint Manager admin center before you create a compliance policy. You select the script when you’re configuring a policy to support custom settings.
+  The scripts must be uploaded to the Microsoft Intune admin center before you create a compliance policy. You select the script when you’re configuring a policy to support custom settings.
 
-After you’ve deployed custom compliance settings and devices have reported back, you'll be able to view the results alongside the built-in compliance setting details in the Microsoft Endpoint Manager admin center.  Custom compliance settings can be used for conditional access decisions, the same way built-in compliance settings are.  Together they form a compound rule set, equally affecting the device compliance state.
+After you’ve deployed custom compliance settings and devices have reported back, you'll be able to view the results alongside the built-in compliance setting details in the Microsoft Intune admin center.  Custom compliance settings can be used for conditional access decisions, the same way built-in compliance settings are.  Together they form a compound rule set, equally affecting the device compliance state.
 
 ## Prerequisites
 
@@ -58,7 +60,7 @@ After you’ve deployed custom compliance settings and devices have reported bac
 
   On WPJ devices, device context PowerShell scripts work, but user context PowerShell scripts are ignored. 
 
-- **Discovery script** - A PowerShell for Windows or a POSIX-compliant shell script for Linux that you create. The script runs on a device to discover the custom settings defined in your JSON file. The script returns the configuration value of those settings to Intune. You need to upload your script to the Microsoft Endpoint Manager admin center before you create a compliance policy and then select the script you want to use when creating a policy.
+- **Discovery script** - A PowerShell for Windows or a POSIX-compliant shell script for Linux that you create. The script runs on a device to discover the custom settings defined in your JSON file. The script returns the configuration value of those settings to Intune. You need to upload your script to the Microsoft Intune admin center before you create a compliance policy and then select the script you want to use when creating a policy.
 
   To create a custom compliance script, see [Custom compliance discovery scripts for Microsoft Intune](../protect/compliance-custom-script.md).
 
@@ -73,9 +75,6 @@ You must first upload an applicable discovery script to Intune, and have a ready
 When ready, use the normal procedure to [create a compliance policy](create-compliance-policy.md), which includes platform specific instructions for adding custom settings to the policy. Custom settings are added while on the Configuration settings page by configuring the option for *Custom Compliance*.
 
 > [!NOTE]  
-> Assignment filters are not currently supported when assigning compliance policies with custom compliance settings.
-
-> [!NOTE]  
 > When a Windows device receives a compliance policy with custom settings, it checks for the presence of [Intune Management Extensions](../apps/intune-management-extension.md). If not found, the device runs an MSI that installs the extensions, enabling the client to download and run PowerShell scripts that are part of a compliance policy, and to upload compliance results. Actions managed by the services include:
 >
 > - Checking for new or updated PowerShell scripts every eight hours.
@@ -88,7 +87,7 @@ When ready, use the normal procedure to [create a compliance policy](create-comp
 
 Use the following methods to view details about a device’s compliance status.
 
-- For both Linux and Windows devices, you can view per-setting device compliance details for custom compliance settings in the Microsoft Endpoint Manager admin center.
+- For both Linux and Windows devices, you can view per-setting device compliance details for custom compliance settings in the Microsoft Intune admin center.
 
   In the admin center go to **Reports** > **Device compliance**, and then select the **Reports** tab. Select the tile for **Noncompliant devices and settings**, and then use the drop-down menus to configure the report. Be sure to select a platform for the OS, and then select **Generate** report.
 
@@ -141,7 +140,7 @@ Policies support the use of a single script. However, each script supports check
 
 To identify settings that aren't compliant for a device:
 
-- [In the Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can identify devices that aren't compliant with policy. **Navigate** to **Reports** > **Device compliance**, select the *Reports* tab, and then select the tile for **Noncompliant devices and settings**. Use the drop-downs to configure the report you want, and then select **Generate** report.
+- [In the Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can identify devices that aren't compliant with policy. **Navigate** to **Reports** > **Device compliance**, select the *Reports* tab, and then select the tile for **Noncompliant devices and settings**. Use the drop-downs to configure the report you want, and then select **Generate** report.
 
 The admin center displays a separate line for each setting that isn’t compliant on a device.  
 

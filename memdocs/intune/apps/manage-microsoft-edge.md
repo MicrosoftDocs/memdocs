@@ -26,6 +26,7 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.collection:
+- tier1
 - M365-identity-device-management
 - Android
 - highpri
@@ -154,7 +155,7 @@ Edge for iOS and Android offers organizations several options for adjusting the 
 These settings allow you to customize the New Tab Page for Edge for iOS and Android to display your organization's logo and brand color as the page background.
 
 To upload your organization's logo and color, first complete the following steps:
-1. Within [Microsoft Endpoint Manager](https://endpoint.microsoft.com), navigate to **Tenant Administration** > **Customization**. Next to **Settings**, click **Edit**.
+1. Within [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), navigate to **Tenant Administration** > **Customization**. Next to **Settings**, click **Edit**.
 2. To set your brand's logo, next to **Show in header**, choose "Organization logo only". Transparent background logos are recommended.
 3. To set your brand's background color, select a **Theme color**. Edge for iOS and Android applies a lighter shade of the color on the New Tab Page, which ensures the page has high readability.
 
@@ -420,7 +421,7 @@ Organizations can enable NTLM credential caching for particular web sites. For t
 
 If you are using Microsoft Endpoint Manager as your mobile app management provider, the following steps allow you to create a managed apps app configuration policy. After the configuration is created, you can assign its settings to groups of users.
 
-1. Sign into the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Apps** and then select **App configuration policies**.
 

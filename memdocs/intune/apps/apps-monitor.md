@@ -26,7 +26,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Monitor app information and assignments with Microsoft Intune
@@ -35,7 +37,7 @@ ms.collection: M365-identity-device-management
 
 Intune provides several ways to monitor the properties of apps that you manage and to manage app assignment status.
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All apps**.
 3. In the list of apps, select an app to monitor. You'll then see the app pane, which includes an overview of the device status and the user status.
 

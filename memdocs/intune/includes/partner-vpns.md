@@ -7,7 +7,9 @@ ms.topic: include
 ms.date: 04/14/2022
 ms.author: mandia
 ms.custom: include file
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 <!-- This include file is used in the VPN settings lists for all platforms in /configuration. -->

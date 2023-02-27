@@ -25,7 +25,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; get-started
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- tier2
 ---
 
 # Troubleshoot Windows 365 Business Cloud PC setup issues
@@ -65,7 +67,7 @@ Users who are assigned a Cloud PC must have an Intune license assigned to them t
 > [!IMPORTANT]
 > To assign licenses, you must be a Global or Licensing admin, or have a role with licensing permissions.
 
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/p/?linkid=2169290), select **Users** > **All Users**.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/p/?linkid=2169290), select **Users** > **All Users**.
 2. In the **All users** list, select a user.
 3. On the user **Profile** page, select **Licenses**.
 4. On the **Licenses** page, select **Assignments**.

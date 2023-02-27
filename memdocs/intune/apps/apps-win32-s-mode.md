@@ -18,7 +18,9 @@ ms.reviewer: manchen
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Enable Win32 apps on S mode devices
@@ -53,7 +55,7 @@ The steps to allow Win32 apps to run on a Windows 10 device in S mode are the fo
 
 To create a Windows 10 S mode supplemental policy, use the following steps:
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **S mode supplemental policies** > **Create policy**.
 3. Before adding the **Policy file**, you must create and sign it. For more information, see:
     - [Create a WDAC policy using PowerShell tools and convert it to a binary format](/windows/security/threat-protection/windows-defender-application-control/lob-win32-apps-on-s)
@@ -85,7 +87,7 @@ Currently, to remove the S mode supplemental policy from the device, you must as
 
 The S mode supplemental policy, which is enforced at device level, only has device level reporting.​ Device level reporting is available for success and error conditions.
 
-Reporting values that are shown in the Microsoft Endpoint Manager admin center for S mode reporting polices:
+Reporting values that are shown in the Microsoft Intune admin center for S mode reporting polices:
 
 - **Success**: The S mode supplemental policy is in effect.
 - **Unknown**: The status of the S mode supplemental policy is not known.

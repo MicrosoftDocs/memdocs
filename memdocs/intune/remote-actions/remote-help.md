@@ -24,10 +24,11 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: 
-  - M365-identity-device-management
-  - highpri
-  - highseo
+ms.collection:
+- tier1
+- M365-identity-device-management
+- highpri
+- highseo
 ---
  
 # Use Remote Help with Intune and Microsoft Endpoint Manager
@@ -55,7 +56,7 @@ The Remote Help app supports the following capabilities:
 
 - **Compliance Warnings** - Before connecting to a user's device, a helper will see a non-compliance warning about that device if it’s not compliant with its assigned policies. This warning doesn’t block access but provides transparency about the risk of using sensitive data like administrative credentials during the session. 
     
-    - Helpers who have access to device views in Intune will see a link in the warning to the device properties page in Microsoft Endpoint Manager. This allows a helper to learn more about why the device is not compliant.
+    - Helpers who have access to device views in Intune will see a link in the warning to the device properties page in the Microsoft Intune admin center. This allows a helper to learn more about why the device is not compliant.
  
     - Unenrolled devices are always reported as non-compliant. This is because until a device enrolls with Intune it can’t receive policies from Intune and as such is unable to establish its compliance status.
 
@@ -65,7 +66,7 @@ The Remote Help app supports the following capabilities:
 
 - **Elevation of privilege** - When needed, a helper with the correct RBAC permissions can interact with the  UAC prompt on the sharer's machine to enter credentials. For example, your Help Desk employees might enter their administrative credentials to complete an action on the sharer’s device that requires administrative permissions.
 
-- **Monitor active Remote Help sessions, and view details about past sessions** – In the Microsoft Endpoint Manager admin center you can view reports that include details about who helped who, on what device, and for how long. You’ll also find details about active sessions.
+- **Monitor active Remote Help sessions, and view details about past sessions** – In the Microsoft Intune admin center you can view reports that include details about who helped who, on what device, and for how long. You’ll also find details about active sessions.
 
   For unenrolled devices, auditing and reporting about the Remote Help sessions is limited.
 
@@ -192,7 +193,7 @@ To configure your tenant to support Remote Help, review and complete the followi
 
 ### Task 1 – Enable Remote Help
 
-1. Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Tenant administration** > **Remote Help**.
+1. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Tenant administration** > **Remote Help**.
 
 2. On the **Settings** tab:
    1. Set **Enable Remote Help** to **Enabled** to allow the use of remote help. By default, this setting is *Disabled*.
@@ -225,7 +226,7 @@ By default, the built-in **Help Desk Operator** role sets all of these permissio
 
 After creating the custom roles that you'll use to provide different users with Remote Help permissions, assign users to those roles.
 
-1. Sign into [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Tenant administration**  > **Roles** >  and select a role that grants Remote Help app permissions.
+1. Sign into [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Tenant administration**  > **Roles** >  and select a role that grants Remote Help app permissions.
 
 2. Select **Assignments**  > **Assign** to open **Add Role Assignment**.
 
@@ -268,9 +269,9 @@ As a sharer, when you’ve requested help and both you and the helper are ready 
 
 As a helper, after receiving a request from a user who wants assistance by using the Remote Help app:
 
-1. Start the Remote Help app on your device. You can start the app from within the Microsoft Endpoint Manager admin center:
+1. Start the Remote Help app on your device. You can start the app from within the Microsoft Intune admin center:
 
-   1. Sign into [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices** > **All devices** and select the device on which assistance is needed.
+   1. Sign into [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices** > **All devices** and select the device on which assistance is needed.
 
    2. From the remote actions bar across the top of the device view, select **New Remote Help session**. This action opens the Remote Help app.
 
@@ -290,9 +291,9 @@ As a helper, after receiving a request from a user who wants assistance by using
 
 ## Monitoring and reports
 
-You can monitor the use of Remote Help from within Microsoft Endpoint Manager.
+You can monitor the use of Remote Help from within the Microsoft Intune admin center.
 
-1. Sign into the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Tenant admin** > **Remote Help**.
+1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Tenant admin** > **Remote Help**.
 
 2. On the Monitor tab, you’ll see a count of active sessions and historical data about past sessions.
 
@@ -383,5 +384,5 @@ Version 4.0.0.0 - GA release
 
 ## Next steps
 
-[Get support in Microsoft Endpoint Manager admin center](../../get-support.md)
+[Get support in Microsoft Intune admin center](../../get-support.md)
   
