@@ -86,7 +86,7 @@ productDirectory:
       summary: Guides that consolidate information specific to a platform or industry.
       url: ./index.yml#platform-and-industry-guides
     # Card
-    - title: Additional resources to manage devices
+    - title: Additional technical resources
       imageSrc: ./media/icons/resources-device.svg
       summary: Resource to find information about related technologies, such as Microsoft 365.
       url: ./index.yml#additional-resources-to-manage-devices

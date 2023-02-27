@@ -122,7 +122,7 @@ items:
           href: ./fundamentals/policy-map-configurations.md
         - name: Miscellaneous policy mapping
           href: ./fundamentals/policy-map-miscellaneous.md
-  - name: Deploy Intune (recommended plan)
+  - name: Deploy Intune
     items:
     - name: Get started with your deployment
       href: ./fundamentals/get-started-with-intune.md
