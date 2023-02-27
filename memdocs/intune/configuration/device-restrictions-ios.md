@@ -693,12 +693,12 @@ This feature applies to:
 
 ### Settings apply to: Automated device enrollment (supervised)
 
-- **Type of apps list**: Create a list of apps to show or hide. You can show or hide built-in apps and line-of-business apps. Apple's web site has a list of [built-in Apple apps](https://support.apple.com/en-us/HT211833). Your options:
+- **Type of apps list**: Create a list of apps to show or hide. You can show or hide built-in apps and line-of-business apps. Apple's web site has a list of [built-in Apple apps](https://support.apple.com/HT211833). Your options:
 
   - **Not configured** (default): Intune doesn't change or update this setting.
   - **Hidden apps**: Enter a list of apps that are hidden from users. Users can't view, or open these apps.
   
-    Apple prevents hiding some native apps. For example, you can't hide the **Settings** app on the device. [Delete built-in Apple apps](https://support.apple.com/en-us/HT211833) lists the apps that can be hidden.
+    Apple prevents hiding some native apps. For example, you can't hide the **Settings** app on the device. [Delete built-in Apple apps](https://support.apple.com/HT211833) lists the apps that can be hidden.
   
   - **Visible apps**: Enter a list of apps that users can view and launch. No other apps can be viewed or launched.
 
@@ -712,7 +712,7 @@ This feature applies to:
 
   You can also use iTunes to find the app, and then use the **Copy Link** task to get the app URL.
 
-- **App Bundle ID**: Enter the app [bundle ID](bundle-ids-built-in-ios-apps.md) of the app you want. You can show or hide built-in apps and line-of-business apps. Apple's web site has a list of [built-in Apple apps](https://support.apple.com/en-us/HT211833).
+- **App Bundle ID**: Enter the app [bundle ID](bundle-ids-built-in-ios-apps.md) of the app you want. You can show or hide built-in apps and line-of-business apps. Apple's web site has a list of [built-in Apple apps](https://support.apple.com/HT211833).
 - **App name**: Enter the app name of the app you want. You can show or hide built-in apps and line-of-business apps. Apple's web site has a list of [built-in Apple apps](https://support.apple.com/en-us/HT211833).
 - **Publisher**: Enter the publisher of the app you want.
 
