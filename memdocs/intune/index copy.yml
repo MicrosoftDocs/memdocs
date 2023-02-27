@@ -47,7 +47,7 @@ productDirectory:
 
     # Card
     - title: Try and evaluate
-      imageSrc: ./media/icons/investigate.svg
+      imageSrc: ./media/icons/getstarted.svg
       links:
         - url: ./fundamentals/tutorial-walkthrough-endpoint-manager.md
           text: Walkthrough Microsoft Intune admin center
