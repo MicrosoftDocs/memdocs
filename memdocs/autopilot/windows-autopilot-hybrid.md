@@ -220,11 +220,11 @@ After your Autopilot devices are *enrolled*, they're displayed in four places:
 After your Autopilot devices are enrolled, their names become the hostname of the device. By default, the hostname begins with *DESKTOP-*.
 A device object is pre-created in Azure AD once a device is registered in Autopilot. When a device goes through a hybrid Azure AD deployment, by design, another device object is created resulting in duplicate entries.
 
-## Supported BYO VPNs
+## BYO VPNs
 
-Here's a list of VPN clients that are known to be tested and validated:
+The following is a list of VPN clients that have been tested and validated:
 
-### Supported clients
+### VPN clients
 
 - In-box Windows VPN client
 - Cisco AnyConnect (Win32 client)
@@ -235,7 +235,12 @@ Here's a list of VPN clients that are known to be tested and validated:
 - SonicWall (Win32 client)
 - FortiClient VPN (Win32 client)
 
-### Not supported clients
+> [!NOTE]
+> The above above list of VPN clients isn't a comprehensive list of all VPN clients that work with Autopilot. Contact the respective VPN vendor regarding compatibility and supportability with Autopilot. Additionally, also contact the VPN vendor for any issues with using the VPN client with Autopilot.
+
+### Not supported VPN clients
+
+The following VPN solutions are known not to work with Autopilot and therefore aren't supported for use with Autopilot:
 
 - UWP-based VPN plug-ins
 - Anything that requires a user cert
