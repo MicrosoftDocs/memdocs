@@ -13,9 +13,9 @@ items:
     href: advanced-endpoint-analytics.md
   - name: Anomaly detection
     href: anomaly-detection.md
-  - name: Enhanced device timelines
+  - name: Enhanced device timeline
     href: enhanced-device-timeline.md    
-  - name: Device scope
+  - name: Device scopes
     href: device-scopes.md    
 - name: Quickstarts
   items:
