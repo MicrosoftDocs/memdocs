@@ -2,7 +2,7 @@
 # required metadata
 
 title: Manage endpoint security policies in Microsoft Intune | Microsoft Docs
-description: Security Administrators can use the Endpoint Security policies and profiles to focus on security configuration of devices in Microsoft Endpoint Manager. 
+description: Security Administrators can use the Endpoint Security policies and profiles to focus on security configuration of devices in Microsoft Intune. 
 keywords:
 author: brenduns
 ms.author: brenduns
@@ -23,9 +23,10 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: 
-   - M365-identity-device-management
-   - highpri
+ms.collection:
+- tier2
+- M365-identity-device-management
+- highpri
 ms.reviewer: mattcall
 
 ---
@@ -44,9 +45,9 @@ When Intune evaluates policy for a device and identifies conflicting configurati
 - [Endpoint security profiles](#manage-conflicts)
 - [Security baselines](../protect/security-baselines-monitor.md#resolve-conflicts-for-security-baselines)
 
-You'll find endpoint security policies under *Manage* in the **Endpoint security** node of the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+You'll find endpoint security policies under *Manage* in the **Endpoint security** node of the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-:::image type="content" source="./media/endpoint-security-policy/endpoint-security-policies.png" alt-text="Managing Endpoint security policies in the Microsoft Endpoint Manager admin center":::
+:::image type="content" source="./media/endpoint-security-policy/endpoint-security-policies.png" alt-text="Managing Endpoint security policies in the Microsoft Intune admin center":::
 
 Following are brief descriptions of each endpoint security policy type. To learn more about them, including the available profiles for each, follow the links to content dedicated to each policy type:
 
@@ -66,7 +67,7 @@ The following sections apply to all of the endpoint security policies.
 
 ## Create an endpoint security policy
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Endpoint security** and then select the type of policy you want to configure, and then select **Create Policy**. Choose from the following policy types:
    - Antivirus
@@ -117,7 +118,7 @@ After creating the new policy, review and edit the policy to make changes to its
 
 ### To duplicate a policy
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select the policy that you want to copy. Next, select **Duplicate** or select the ellipsis (**…**) to the right of the policy and select **Duplicate**.
 3. Provide a **New name** for the policy, and then select **Save**.
 

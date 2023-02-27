@@ -25,7 +25,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Set up a telecom expense management service in Intune
@@ -56,7 +58,7 @@ To use the Datalert service with Intune, there are some configuration settings i
 
 ## Prerequisites
 
-- A subscription to Microsoft Intune, and access to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431)
+- A subscription to Microsoft Intune, and access to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431)
 - A subscription to [Datalert](http://www.datalert.biz/) (opens Datalert's web site)
 
 ## Telecom expense management providers
@@ -111,11 +113,11 @@ Intune integrates with the following telecom expense management provider:
 
 After you complete Step 1, your connection is automatically enabled. In Intune, the connection status shows **Active**. To confirm the status is active, use the following steps:
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Tenant administration** > **Connectors and tokens** > **Telecom Expense Management**. Look for the **Active** connection status:
 
-    :::image type="content" source="./media/telecom-expenses-monitor/tem-azure-portal-enable-service.png" alt-text="[A screenshot that shows Microsoft Intune with a successful and active connection status with Datalert in the Endpoint Manager admin center." lightbox="./media/telecom-expenses-monitor/tem-azure-portal-enable-service.png":::
+    :::image type="content" source="./media/telecom-expenses-monitor/tem-azure-portal-enable-service.png" alt-text="[A screenshot that shows Microsoft Intune with a successful and active connection status with Datalert in the Intune admin center." lightbox="./media/telecom-expenses-monitor/tem-azure-portal-enable-service.png":::
 
 ### Step 3: Deploy the Datalert app to devices
 
@@ -140,7 +142,7 @@ These categories are shown to users during enrollment ([enroll Android devices](
 
 The following steps add the Datalert app. As an example, iOS/iPadOS is used. [Add apps](../apps/apps-add.md) and [use scope tags](../fundamentals/scope-tags.md) have more specific information on these steps.
 
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All apps** > **Add**.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All apps** > **Add**.
 
 2. Select your **App type**. For example, for iOS/iPadOS, select **Store App - iOS/iPadOS**.
 
@@ -185,7 +187,7 @@ For the end-user experience, the following articles may help:
 
 ## Turn off the Datalert service
 
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant administration** > **Connectors and tokens** > **Telecom Expense Management**.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant administration** > **Connectors and tokens** > **Telecom Expense Management**.
 2. Set **Enable Telecom Expense Management and block cellular or roaming data on devices that exceed usage quotas you configure** to **Disable**.
 3. **Save** your changes.
 

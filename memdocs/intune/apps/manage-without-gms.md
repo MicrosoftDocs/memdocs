@@ -26,7 +26,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # How to use Intune in environments without Google Mobile Services
@@ -50,7 +52,7 @@ Because the Google Play Store is currently not available in People's Republic of
 
 ### Unavailable Intune features
 
-Some Intune features rely on components of GMS such as the Google Play store or Google Play services. Because these components are not available in environments without GMS, the following features in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) may be unavailable.  
+Some Intune features rely on components of GMS such as the Google Play store or Google Play services. Because these components are not available in environments without GMS, the following features in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) may be unavailable.  
 
 | Scenario  | Features  |
 |-----------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -69,7 +71,7 @@ In conditions where GMS isn't available, if the device is enrolled with device a
 
 The following tasks can require up to 8 hours to finish:
 
-**Microsoft Endpoint Manager admin center**:
+**Microsoft Intune admin center**:
 
 - Full wipe
 - Selective wipe

@@ -27,6 +27,7 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection:
+- tier1
 - M365-identity-device-management
 - macOS
 - highpri
@@ -58,7 +59,7 @@ It is not recommended that multiple apps that are not dependent on each other ar
 
 ## Select the app type
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All apps** > **Add**.
 3. In the **Select app type** pane, under the **Other** app types, select **macOS app (DMG)**.
 4. Click **Select**. The **Add app** steps are displayed.

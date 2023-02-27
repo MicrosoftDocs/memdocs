@@ -24,7 +24,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 #ms.custom:
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Rollout options for Windows Updates in Microsoft Intune
@@ -90,7 +92,7 @@ To learn more, see [Manage safeguards using the Windows Update for Business depl
 
 ### Enable intelligent rollouts
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Go to **Devices** > **Configuration profiles** > **Create profile**.
 

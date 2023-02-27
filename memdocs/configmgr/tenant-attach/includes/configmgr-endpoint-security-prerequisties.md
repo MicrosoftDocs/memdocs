@@ -16,7 +16,7 @@ ms.collection: tier3
 
 ## Prerequisites
 
-- Access to the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/).
+- Access to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 - An environment that's [tenant attached with uploaded devices](../device-sync-actions.md).
 - A supported version of Configuration Manager and the corresponding version of the console installed.
    - Upgrade the target devices to the latest version of the Configuration Manager client.

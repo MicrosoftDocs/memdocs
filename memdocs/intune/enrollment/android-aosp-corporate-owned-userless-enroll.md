@@ -26,7 +26,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Set up Intune enrollment for Android (AOSP) corporate-owned userless devices    
@@ -59,7 +61,7 @@ Create an enrollment profile to enable enrollment on devices.
 > [!TIP]
 > Intune also generates a token in plain text form, but that one can't be used to enroll devices.   
 
-1.	Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Devices** > **Android** > **Android enrollment** > **Corporate-owned, userless devices**.  
+1.	Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Devices** > **Android** > **Android enrollment** > **Corporate-owned, userless devices**.  
 2.	Select **Create** and fill out the required fields.
     - **Name**: Type a name to use when assigning the profile to the dynamic device group.  
     - **Description**: Add a profile description (optional).  
@@ -106,7 +108,7 @@ You can also export the enrollment profile JSON file. To create a JSON file:
 ### Replace token  
 Generate a new token to replace one that's nearing its expiration date. Replacing a token does not affect devices that are already enrolled.  
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
 2. Select **Devices** > **Android** > **Android enrollment** > **Corporate-owned, userless devices**.  
 3. Choose the profile that you want to work with.
 4. Select **Token** > **Replace token**.
@@ -121,7 +123,7 @@ Revoke a token to immediately expire it and make it unusable. For example, it's 
 
  Revoking a token does not affect devices that are already enrolled.
 
-1.	Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
+1.	Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
 2. Select **Devices** > **Android** > **Android enrollment** > **Corporate-owned, userless devices**.
 2.	Choose the profile that you want to work with.
 3.	Select **Token** > **Revoke token** > **Yes**.   
@@ -133,7 +135,7 @@ Dynamic device groups are configured to automatically add and remove devices bas
 
 Complete the following steps to create a dynamic Azure AD device group for devices enrolled with an Android (AOSP) corporate-owned, userless enrollment profile.  
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and choose **Groups** > **All groups** > **New group**.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and choose **Groups** > **All groups** > **New group**.
 2. In the **Group** blade, fill out the required fields as follows:
     - **Group type**: Security
     - **Group name**: Type an intuitive name (like Factory 1 devices)
@@ -193,7 +195,7 @@ To find out which version of the Microsoft Intune app or Microsoft Authenticator
 3. Find your app and then look in the **Application Version** column for the version number.  
 
 ### Troubleshooting + Support     
-Select **Troubleshooting + Support** from the Microsoft Endpoint Manager navigation menu to:
+Go to **Troubleshooting + Support** in the Microsoft Intune admin center to:
 
 * See a list of Android (AOSP) devices enrolled by a user
 * Enable troubleshooting of Android (AOSP) devices the same way you can troubleshoot other user devices. 

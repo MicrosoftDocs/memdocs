@@ -26,7 +26,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Audit, export, or delete personal data in Intune
@@ -53,7 +55,7 @@ Admins can export end user personal data, including accounts, service data, and 
 
 To export a user's personal data, you can use:
 
-- the *Export* option on the *All devices* node of the Microsoft Endpoint Manager admin center to export a list of devices. You can also copy device data directly.
+- the *Export* option on the *All devices* node of the Microsoft Intune admin center to export a list of devices. You can also copy device data directly.
 - the [Export-IntuneData.ps1 script](https://aka.ms/intunedataexport).
 
 ## Delete end user personal data

@@ -26,7 +26,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # View and correct personal data
@@ -37,7 +39,7 @@ Based on their access permissions, Intune admins can view some personal data tha
 
 ## View personal data
 
-Admins can see end user personal information in various Nodes of the Intune UI in the Microsoft Endpoint Manager admin center. The following articles explain what information admins do and don't have access to:
+Admins can see end user personal information in various Nodes of the Intune UI in the Microsoft Intune admin center. The following articles explain what information admins do and don't have access to:
 
 - [See device details](../remote-actions/device-inventory.md) in Intune explains how you can review details about an end user's device.
 - [Monitor app information and assignments](../apps/apps-monitor.md) explains how to see details about apps installed on an end user's device.

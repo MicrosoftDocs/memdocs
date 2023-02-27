@@ -24,9 +24,10 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-classic; get-started
-ms.collection: 
-  - M365-identity-device-management
-  - highpri
+ms.collection:
+- tier1
+- M365-identity-device-management
+- highpri
 ---
 
 # Add users and grant administrative permission to Intune
@@ -35,7 +36,7 @@ As an administrator, you can add users directly or synchronize users from your o
 
 ## Add users to Intune
 
-You can manually add users to your Intune subscription via the [Microsoft 365 admin center](https://admin.microsoft.com) or the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). An administrator can edit user accounts to assign Intune licenses. You can assign licenses in either the Microsoft 365 admin center or the Microsoft Endpoint Manager admin center. For more information on using the Microsoft 365 admin center, see [Add users individually or in bulk to the Microsoft 365 admin center](https://support.office.com/article/Add-users-individually-or-in-bulk-to-Office-365-Admin-Help-1970f7d6-03b5-442f-b385-5880b9c256ec).
+You can manually add users to your Intune subscription via the [Microsoft 365 admin center](https://admin.microsoft.com) or the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). An administrator can edit user accounts to assign Intune licenses. You can assign licenses in either the Microsoft 365 admin center or the Microsoft Intune admin center. For more information on using the Microsoft 365 admin center, see [Add users individually or in bulk to the Microsoft 365 admin center](https://support.office.com/article/Add-users-individually-or-in-bulk-to-Office-365-Admin-Help-1970f7d6-03b5-442f-b385-5880b9c256ec).
 
 ### Add Intune users in the Microsoft 365 admin center
 
@@ -58,7 +59,7 @@ You can manually add users to your Intune subscription via the [Microsoft 365 ad
 
 ### Add Intune users in the Azure portal
 
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Users** > **All users** > **New user** > **Create user**.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Users** > **All users** > **New user** > **Create user**.
 2. Specify the following user details:
    - **User name** - The new name that the user will use to sign in to Azure Active Directory.
    - **Name** - The user's given name. 
@@ -86,7 +87,7 @@ After you've added users to your Intune subscription, we recommend that you gran
 
 ### Give admin permissions in the Azure portal
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with a global administrator account > **Users** > then choose the user you want to give admin permissions.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with a global administrator account > **Users** > then choose the user you want to give admin permissions.
 2. Select **Assigned roles** > **Add assignments**.
 3. In the **Directory roles** pane, select the roles you want to assign to the user > **Add** 
 

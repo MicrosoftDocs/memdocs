@@ -24,7 +24,9 @@ ms.reviewer: jlynn
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 # Use the troubleshooting dashboard to help users at your company
 
@@ -60,7 +62,7 @@ The **Troubleshooting** pane provides the following tabs to quickly narrow the t
 
 In the **Troubleshooting** pane provides specific details for each Intune end-user. User information can help you understand the current state of users and their devices.  
 
-1. Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Troubleshooting + support** > **Troubleshoot**.
 3. Find and select a **User** by entering a display name or email.
 4. If the user has multiple devices, filter by **Device**.
@@ -108,7 +110,7 @@ The **Groups** tab provides the group membership of all Azure AD groups for a sp
 | Column           | Description                                                                                                                         |
 |--------------------|-------------------------------------------------------------------------------------------------------------------------------------|
 | Name               | The name of the group.                                                                                                     |
-| Object ID          | The Object ID is used by Azure Active Directory. Endpoint Manager commonly refers to them as Group ID.                                                                                       |
+| Object ID          | The Object ID is used by Azure Active Directory. Intune commonly refers to them as Group ID.                                                                                       |
 | Membership type    | Provides how you assign and add users. **Assigned** denotes you manually assign users or devices to the group, and manually remove users or devices. **Dynamic User** denotes you create membership rules to automatically add and remove members. **Dynamic Device** denotes you create dynamic group rules to automatically add and remove devices.                                                                                 |
 | Direct or Transitive      | Identifies whether the device is a direct member or a transitive member.                                                                                                       |
 

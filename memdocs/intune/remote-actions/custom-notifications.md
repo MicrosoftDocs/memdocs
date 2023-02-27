@@ -25,7 +25,9 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Send custom notifications in Intune
@@ -87,7 +89,7 @@ If you have the Company Portal app open on an Android device, the notification r
 
 ## Send a custom notification to groups
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with an account that has permissions to create and send notifications, and go to **Tenant administration** > **Custom notifications**.  
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with an account that has permissions to create and send notifications, and go to **Tenant administration** > **Custom notifications**.  
 
 2. On the Basics tab, specify the following, and then select **Next** to continue.  
    - **Title** – Specify a title for this notification. Titles are limited to 50 characters.  
@@ -107,7 +109,7 @@ Intune doesn't track the custom notifications you send, and devices don't log th
 
 ## Send a custom notification to a single device
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with an account that has permissions to create and send notifications, and then go to **Devices** > **All devices**.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with an account that has permissions to create and send notifications, and then go to **Devices** > **All devices**.
 
 2. Double-click the name of the managed device to which you want to send a notification, to open that devices *Overview* page.
 

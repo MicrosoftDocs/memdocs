@@ -26,6 +26,7 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection:
+- tier2
 - M365-identity-device-management
 - iOS/iPadOS
 ---
@@ -62,7 +63,7 @@ Before you start, get a VPP token from Apple and upload it to your Intune accoun
 
 ## To get and upload an Apple Business Manager location token
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Tenant administration** > **Connectors and tokens** > **Apple VPP tokens**.
 3. On the list of VPP tokens pane, click **Create**.
 5. On the **New VPP Token** pane, specify the following information:

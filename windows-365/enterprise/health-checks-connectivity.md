@@ -25,7 +25,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; get-started
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- tier2
 ---
 
 # Connectivity health checks
@@ -36,7 +38,7 @@ You can review any failed connectivity checks and use the **Troubleshoot this co
 
 ## View Cloud PC connectivity status
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Windows 365** > **All Cloud PCs**.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Windows 365** > **All Cloud PCs**.
 2. Select a connection in the list > **Overview** > **Performance (preview)**.
 
 If the Cloud PC is connected, the status will show as **Available**.

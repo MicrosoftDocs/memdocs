@@ -27,7 +27,8 @@ ms.reviewer: shburbid
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
-ms.collection: 
+ms.collection:
+- tier2
 ---
 
 # Change User Access Control setting  
