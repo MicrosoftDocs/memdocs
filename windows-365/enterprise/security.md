@@ -25,7 +25,9 @@ ms.suite: ems
 search.appverid: 
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; get-started
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- tier2
 ---
 
 # Windows 365 security

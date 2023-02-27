@@ -135,7 +135,7 @@ You can use many Intune policies and device actions to [protect the devices you 
 
 - *Co-management* enables you to concurrently manage a Windows 10 device with both Configuration Manager and Intune. You install the Configuration Manager client and enroll the device to Intune. The device communicates with both services.
 
-- *Tenant attach* sets up synchronization between your Configuration Manager site and your Intune tenant. This synchronization provides you with a single view for all devices that you manage with Microsoft Endpoint Manager.
+- *Tenant attach* sets up synchronization between your Configuration Manager site and your Intune tenant. This synchronization provides you with a single view for all devices that you manage with Microsoft Intune.
 
 After establishing a connection between Intune and Configuration Manager, devices from Configuration Manager are available in the Microsoft Intune admin center. You can then deploy Intune policies to those devices or use device actions to protect them.
 
