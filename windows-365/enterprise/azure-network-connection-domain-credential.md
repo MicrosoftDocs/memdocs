@@ -51,7 +51,7 @@ This information includes the Azure AD username and domain password.
 
 ## Encryption of domain password information
 
-When the ANC is created, all this information is stored in the Windows 365 service database. The service encrypts the domain password information with a well-protected key before saving it to the database.
+When the ANC is created, all this information is stored in the Windows 365 service. The service encrypts the domain password information with a well-protected key before saving it.
 
 - Encryption type: Azure Key Vault certificate
 - Key type: RSA-HSM
@@ -59,12 +59,12 @@ When the ANC is created, all this information is stored in the Windows 365 servi
 
 This encryption proceeds as follows:
 
-1. The Windows 365 checks the service database for an existing symmetric key specific to that tenant.
+1. The Windows 365 checks the service for an existing symmetric key specific to that tenant.
 2. If a key isn't present or has expired, Windows 365 generates a new symmetric key for this tenant using a random number generator. Keys are created per tenant.
 3. If a key already exists for this tenant, it's used in the following steps.
 4. After getting the (new or existing) tenant key, Windows 365 decrypts the key with the Windows 365 dedicated Enterprise CA certificate. The certificate is stored in the Azure Key Vault managed by Microsoft.
 5. Windows 365 encrypts the password with the decrypted tenant key.
-6. The encrypted password is saved to the Windows 365 service database.
+6. The encrypted password is saved to the Windows 365 service.
 
 ### Windows 365 Enterprise certificates
 
@@ -84,14 +84,14 @@ Windows 365 uses an encrypt-then-MAC approach to encrypt the domain credential w
 
 Credentials often change and need updating. Windows 365 doesn’t proactively detect credential changes in your domain. Instead, Windows 365 relies on customers to manually update the ANC with the updated credential information.
 
-When there’s a change to the domain credential of the ANC, the new credential is re-encrypted and updated to the Windows 365 database.
+When there’s a change to the domain credential of the ANC, the new credential is re-encrypted and updated to the Windows 365 service.
 
 > [!NOTE]  
 > If the domain credential is changed in your on-premises Active Directory environment, but you don’t manually update the ANC, Windows 365 will still use the old credential for ANC [health checks](health-checks.md). Therefore, these health checks will fail because the credentials on record are outdated. To make sure this failure doesn’t happen, Edit the Azure network connection](edit-azure-network-connection.md) with the new credentials as soon as possible.
 
 ## Removing credential information
 
-After you [delete an ANC](delete-azure-network-connection.md), all the data related to the ANC is immediately and permanently removed from the Windows 365 database.
+After you [delete an ANC](delete-azure-network-connection.md), all the data related to the ANC is immediately and permanently removed from the Windows 365 service.
 
 If the tenant account is deactivated without deleting the ANC, the credential information is retained for 29 days. If the tenant is reactivated within 29 days, the ANC and domain credentials are restored. If the tenant isn't reactivated in 29 days, all ANCs and related information, including credentials, are permanently removed.
 
