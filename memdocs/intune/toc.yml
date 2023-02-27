@@ -65,9 +65,9 @@ items:
     - name: Try Intune scenarios
       items:
       - name: Protect email on managed devices
-        href: ./protect/tutorial-protect-email-on-enrolled-devices.md?toc=/intune/apps/toc.json&bc=/intune/apps/breadcrumb/toc.json
+        href: ./protect/tutorial-protect-email-on-enrolled-devices.md
       - name: Protect email on unmanaged devices
-        href: ./protect/tutorial-protect-email-on-unmanaged-devices.md?toc=/intune/apps/toc.json&bc=/intune/apps/breadcrumb/toc.json
+        href: ./protect/tutorial-protect-email-on-unmanaged-devices.md
       - name: Configure Slack to use Intune 
         href: ./apps/tutorial-configure-slack-enterprise-grid.md
 
@@ -397,7 +397,7 @@ items:
             - name: Troubleshoot
               items:
               - name: Help users troubleshoot problems
-                href: ./fundamentals/help-desk-operators.md?toc=/intune/apps/toc.json&bc=/intune/apps/breadcrumb/toc.json
+                href: ./fundamentals/help-desk-operators.md
               - name: Troubleshoot app installation problems
                 href: /troubleshoot/mem/intune/troubleshoot-app-install
               - name: App installation error reference
@@ -680,7 +680,7 @@ items:
         - name: Troubleshoot
           items:
           - name: Troubleshoot policies and profiles
-            href: /troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune?bc=%2fprotect%2fbreadcrumb%2ftoc.json&toc=%2fintune%2fprotect%2ftoc.json
+            href: /troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune
           - name: Troubleshoot Conditional Access
             href: /troubleshoot/mem/intune/troubleshoot-conditional-access
           - name: Troubleshoot certificate connector
@@ -989,7 +989,7 @@ items:
           - name: Device restrictions
             href: ./configuration/device-restrictions-macos.md
           - name: Endpoint protection
-            href: ./protect/endpoint-protection-macos.md?toc=/intune/configuration/toc.json&bc=/intune/configuration/breadcrumb/toc.json
+            href: ./protect/endpoint-protection-macos.md
           - name: Extensions
             href: ./configuration/kernel-extensions-settings-macos.md
           - name: VPN
@@ -1015,9 +1015,9 @@ items:
           - name: Email
             href: ./configuration/email-settings-windows-10.md
           - name: Endpoint protection
-            href: ./protect/endpoint-protection-windows-10.md?toc=/intune/configuration/toc.json&bc=/intune/configuration/breadcrumb/toc.json
+            href: ./protect/endpoint-protection-windows-10.md
           - name: Identity protection
-            href: ./protect/identity-protection-windows-settings.md?toc=/intune/configuration/toc.json&bc=/intune/configuration/breadcrumb/toc.json
+            href: ./protect/identity-protection-windows-settings.md
           - name: Kiosk
             href: ./configuration/kiosk-settings-windows.md
           - name: Secure assessment
@@ -1560,9 +1560,9 @@ items:
     - name: Use remote help
       href: ./remote-actions/remote-help.md
     - name: Using the Intune docs
-      href: /mem/use-docs.md 
+      href: /mem/use-docs?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
     - name: Get support
-      href: /mem/get-support.md?toc=/mem/intune/toc.json&bc=/mem/intune/breadcrumb/toc.json
+      href: /mem/get-support?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
 
   - name: Troubleshoot issues
-    href: /troubleshoot/mem/intune/welcome-intune/?toc=/mem/intune/toc.json&bc=/mem/intune/breadcrumb/toc.json
+    href: /troubleshoot/mem/intune/welcome-intune/
