@@ -24,7 +24,7 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection:
-- tier2
+- tier3
 - M365-identity-device-management
 ms.reviewer: mattcall
 
