@@ -1,7 +1,7 @@
 ---
-title: Enhanced device timelines in Endpoint Analytics
+title: Enhanced device timeline in Endpoint Analytics
 titleSuffix: Microsoft Endpoint Manager
-description: Learn about Enhanced device timelines in Advanced Endpoint Analytics
+description: Learn about Enhanced device timeline as an advanced feature in Endpoint Analytics
 ms.date: 02/22/2023
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
@@ -11,7 +11,7 @@ ms.author: smbhardwaj
 manager: dougeby
 ms.localizationpriority: high
 ---
-# Enhanced device timelines in Endpoint Analytics
+# Enhanced device timeline in Endpoint Analytics
 
 > [!NOTE]
 > This capability is available as an Intune add-on. For more information, see [Intune add-ons](../intune/fundamentals/premium-add-ons.md).
@@ -37,12 +37,12 @@ Currently, the enhanced device timeline contains app crash, app unresponsive, de
 
 - When your tenant has advanced Endpoint analytics features enabled, the enhanced **Device timeline** tab replaces the **Application reliability** tab in device drill down views. In addition to a timeline, the **Application reliability** tab includes the application reliability score for the selected device. To see the device application reliability score with advanced Endpoint analytics features enabled, use the table on the **Device performance** tab and search for the desired device.
 
-- As the enhanced device timeline is only available for Intune-managed (including co-managed) devices, a device timeline is not currently available for ConfigMgr-only devices in tenants with advanced Endpoint analytics features enabled.
+- As the enhanced device timeline is only available for Intune-managed (including co-managed) devices, a device timeline is not currently available for Configuration Manager-only devices in tenants with advanced Endpoint analytics features enabled.
 
 ## Next Steps
 
 For more information, go to:
 
 - [Anomaly detection](anomaly-detection.md)
-- [Device scope](device-scope.md)
+- [Device scopes](device-scopes.md)
 - [What is advanced Endpoint analytics](advanced-endpoint-analytics.md) 

@@ -1,7 +1,7 @@
 ---
 title: What is Advanced Endpoint Analytics
 titleSuffix: Microsoft Endpoint Manager
-description: Learn about Advanced Endpoint Analytics
+description: Learn about advanced features in Endpoint Analytics
 ms.date: 02/22/2023
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
@@ -19,11 +19,11 @@ ms.localizationpriority: high
 
 The Microsoft Intune Suite includes advanced features for Endpoint analytics, such as:
 
-- **Custom device scopes** allow you to use [Scope tags](../intune/fundamentals/scope-tags.md) to slice Endpoint analytics reports to a subset of devices. You can see scores, insights, and recommendations specific to subsets of your enrolled devices, such as devices you're responsible to manage, or devices belonging to a particular business group or assigned to a specific geographic region. For more information, see [Device scope](device-scope.md).
+- **Custom device scopes** allow you to use [Scope tags](../intune/fundamentals/scope-tags.md) to slice Endpoint analytics reports to a subset of devices. You can see scores, insights, and recommendations specific to subsets of your enrolled devices, such as devices you're responsible to manage, or devices belonging to a particular business group or assigned to a specific geographic region. For more information, see [Device scopes](device-scopes.md).
 
 - **Anomalies** monitors the health of devices in your organization for user experience and productivity regressions following configuration changes. For more information, see [Anomaly detection](anomaly-detection.md).
 
-- An **enhanced device timeline** includes more events and lower data latency to assist with troubleshooting device issues. For more information, see [Enhanced device timelines](enhanced-device-timelines.md).
+- An **enhanced device timeline** includes more events and lower data latency to assist with troubleshooting device issues. For more information, see [Enhanced device timeline](enhanced-device-timeline.md).
 
 With advanced endpoint analytics these features are automatically integrated into the existing base Endpoint analytics experience in the Intune admin center under **Reports** > **Endpoint analytics**.
 
@@ -58,6 +58,6 @@ When license requirements are met, then Advanced Endpoint analytics features are
 For more information, go to:
 
 - [Anomaly detection](anomaly-detection.md)
-- [Device scope](device-scope.md)
-- [Enhanced device timelines](enhanced-device-timelines.md)  
+- [Device scopes](device-scopes.md)
+- [Enhanced device timeline](enhanced-device-timeline.md)  
 

@@ -1,7 +1,7 @@
 ---
-title: Device scope in Endpoint Analytics
+title: Device scopes in Endpoint Analytics
 titleSuffix: Microsoft Endpoint Manager
-description: Learn about Device scope in Advanced Endpoint Analytics
+description: Learn about Device scopes as an advanced feature in Endpoint Analytics
 ms.date: 02/22/2023
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
@@ -11,7 +11,7 @@ ms.author: smbhardwaj
 manager: dougeby
 ms.localizationpriority: high
 ---
-# Device scope in Endpoint Analytics
+# Device scopes in Endpoint Analytics
 
 > [!NOTE]
 > This capability is available as an Intune add-on. For more information, see [Intune add-ons](../intune/fundamentals/premium-add-ons.md).
@@ -29,7 +29,7 @@ Custom device scopes are supported on the following Endpoint analytics reports:
 ## Permissions  
 
 Custom device scopes use Intune Scope tags, hence other permissions are required for some actions. 
-To create a custom device scope, a user must have the **Roles/Read** [role permission](../intune/fundamentals/create-custom-role.md#custom-role-permissions) and this permission is in the following built-in roles:
+To create custom device scopes, a user must have the **Roles/Read** [role permission](../intune/fundamentals/create-custom-role.md#custom-role-permissions) and this permission is in the following built-in roles:
 
 - Endpoint Security Manager
 
@@ -40,30 +40,30 @@ To create a custom device scope, a user must have the **Roles/Read** [role permi
 - Intune Role Administrator  
 
 > [!NOTE]
-> Once a custom device scope is created, it can be used by other users who have access to Endpoint analytics.
+> After custom device scopes are created, they can be used by other users who have access to Endpoint analytics.
 
 ## Create and manage custom device scopes 
 
 You can create and manage custom device scopes by using the **Manage device scopes** menu in Endpoint analytics.  
 
 1. Navigate to a supported report within Endpoint analytics, such as Startup performance, in the Intune admin center under **Reports** > **Endpoint analytics** > **Startup performance**.
-2. Select **Device scope** menu in the center of the page.  
-3. Select **Manage device scopes** to open the flyout.
+2. Select **Device scope** menu.  
+3. Select **Manage device scopes** to open the flyout where you can create and modify your custom device scopes.
 
-To create a new custom device scope:
+To create custom device scopes:
 
 1. Open the **Manage device scopes** menu.
 1. Select a Scope tag from the dropdown and select **Save**.
 1. Give your new custom device scope a Name and select **OK**.
 
-The new custom device scope appears in your list of saved device scopes. By default, custom devices scopes are in the *Off* state. To activate a custom device scope, toggle the **State** setting to *On*. Data processing starts for the selected device scope.  
+The new custom device scope appears in your list of saved device scopes. By default, custom devices scopes are in the *Off* state. To activate custom device scopes, toggle the **State** setting to *On*. Data processing starts for the selected device scope.  
 
 > [!NOTE]
-> Once activated, custom device scopes can take up to 24 hours to process. During this period, custom device scopes that are still processing will not be usable. 
+> Once activated, custom device scopes can take up to 24 hours to process. During this period, custom device scopes that are still processing will not be usable.
 
-Only the user who created the custom device scopes or a Global administrator can delete the custom device scopes. 
+Only the user who created the custom device scopes or a Global administrator can delete the custom device scopes.
 
-To delete a custom device scope:
+To delete custom device scopes:
 
 1. Open the **Manage device scopes** menu.
 2. Find the custom device scope you would like to delete and select the menu. 
@@ -97,7 +97,7 @@ To return to viewing all devices, navigate to the **Device scope** menu, select 
 
 For more information, go to:
 
-- [Enhanced device timelines](enhanced-device-timelines.md)
+- [Enhanced device timeline](enhanced-device-timeline.md)
 - [Anomaly detection](anomaly-detection.md)
 - [What is advanced Endpoint analytics](advanced-endpoint-analytics.md)  
   

@@ -14,9 +14,9 @@ items:
   - name: Anomaly detection
     href: anomaly-detection.md
   - name: Enhanced device timelines
-    href: enhanced-device-timelines.md    
+    href: enhanced-device-timeline.md    
   - name: Device scope
-    href: device-scope.md    
+    href: device-scopes.md    
 - name: Quickstarts
   items:
   - name: Enroll Intune devices
