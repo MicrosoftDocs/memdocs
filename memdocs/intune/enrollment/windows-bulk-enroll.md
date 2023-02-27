@@ -81,6 +81,9 @@ Azure AD users are standard users on these devices and receive assigned Intune p
 7. Provide your Azure AD credentials to get a bulk token.
    ![Screenshot of signing in to the Windows Configuration Designer app](./media/windows-bulk-enroll/bulk-enroll-cred.png)
 
+> [!NOTE]
+> The account used to request the bulk token must be included in the [MDM user scope](https://learn.microsoft.com/en-us/mem/intune/enrollment/windows-enroll#enable-windows-automatic-enrollment) that is specified in Azure Active Directory.
+
 8. In the **Stay signed in to all your apps** page, select **No, sign in to this app only**. If you keep the check box selected and press OK, the device you are using will become managed by your organization. If you do not intend for your device to be managed, make sure to select **No, sign in to this app only**. 
 
 9. Click **Next** when **Bulk Token** is fetched successfully.
