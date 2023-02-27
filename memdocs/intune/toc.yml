@@ -89,24 +89,22 @@ items:
     items:
     - name: Planning guide
       href: ./fundamentals/intune-planning-guide.md
-
     - name: Supported operating systems and browsers
       href: ./fundamentals/supported-devices-browsers.md
-      items:
-      - name: Network configuration
-        href: ./fundamentals/network-bandwidth-use.md
-      - name: Using Windows 10 VMs with Intune
-        href: ./fundamentals/windows-10-virtual-machines.md
-      - name: Using Azure Virtual Desktop with Intune
-        href: ./fundamentals/azure-virtual-desktop.md
-      - name: Using Azure Virtual Desktop multi-session
-        href: ./fundamentals/azure-virtual-desktop-multi-session.md
-      - name: Intune endpoints
-        href: ./fundamentals/intune-endpoints.md
-      - name: China endpoints
-        href: ./fundamentals/china-endpoints.md
-      - name: Intune operated by 21Vianet in China
-        href: ./fundamentals/china.md
+    - name: Network configuration
+      href: ./fundamentals/network-bandwidth-use.md
+    - name: Using Windows 10 VMs with Intune
+      href: ./fundamentals/windows-10-virtual-machines.md
+    - name: Using Azure Virtual Desktop with Intune
+      href: ./fundamentals/azure-virtual-desktop.md
+    - name: Using Azure Virtual Desktop multi-session
+      href: ./fundamentals/azure-virtual-desktop-multi-session.md
+    - name: Intune endpoints
+      href: ./fundamentals/intune-endpoints.md
+    - name: China endpoints
+      href: ./fundamentals/china-endpoints.md
+    - name: Intune operated by 21Vianet in China
+      href: ./fundamentals/china.md
 
   - name: Migrate to Intune
     items: 
