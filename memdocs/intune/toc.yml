@@ -178,9 +178,6 @@ items:
         - name: Use scope tags to determine what admins can see
           href: ./fundamentals/scope-tags.md
 
-    - name: Use Intune Suite add-ons
-      href: ./fundamentals/intune-add-ons.md
-
     - name: Manage apps
       items:
         - name: App management overview
@@ -1273,6 +1270,9 @@ items:
           href: /troubleshoot/mem/intune/troubleshoot-windows-auto-enrollment
         - name: Troubleshoot Android device enrollment
           href: /troubleshoot/mem/intune/troubleshoot-android-enrollment  
+
+    - name: Use Intune Suite add-ons
+      href: ./fundamentals/intune-add-ons.md
 
     - name: Initiate remote actions
       items:
