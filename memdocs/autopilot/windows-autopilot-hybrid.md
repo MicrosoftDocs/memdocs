@@ -236,7 +236,7 @@ The following is a list of VPN clients that have been tested and validated:
 - FortiClient VPN (Win32 client)
 
 > [!NOTE]
-> The above above list of VPN clients isn't a comprehensive list of all VPN clients that work with Autopilot. Contact the respective VPN vendor regarding compatibility and supportability with Autopilot. Additionally, also contact the VPN vendor for any issues with using the VPN client with Autopilot.
+> The above above list of VPN clients isn't a comprehensive list of all VPN clients that work with Autopilot. Contact the respective VPN vendor regarding compatibility and supportability with Autopilot or regarding any issues with using a VPN solution with Autopilot.
 
 ### Not supported VPN clients
 
