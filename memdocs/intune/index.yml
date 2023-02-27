@@ -418,7 +418,7 @@ additionalContent:
           url: /windows/deployment/
         - text: Windows client management
           url: /windows/client-management/
-        - text: Windows 10 security documentation
+        - text: Windows security
           url: /windows/security/
 
       - title: Windows 365 documentation
