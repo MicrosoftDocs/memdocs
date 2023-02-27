@@ -168,4 +168,4 @@ Hello for Business is an alternative sign-in method that uses an Azure Active Di
 
 ## Next steps
 
-[Set up Intune](setup-steps.md).
+[Set up Intune](deployment-plan-setup.md).
