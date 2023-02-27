@@ -408,7 +408,7 @@ additionalContent:
           url: /azure/active-directory/devices/
         - text: Hybrid identity documentation
           url: /azure/active-directory/hybrid/
-      - title: Windows client documentation
+      - title: Windows client
         links: 
         - text: Windows 11 overview
           url: /windows/whats-new/windows-11-overview
@@ -421,7 +421,7 @@ additionalContent:
         - text: Windows security
           url: /windows/security/
 
-      - title: Windows 365 documentation
+      - title: Windows 365
         links: 
         - text: Windows 365 Enterprise documentation
           url: /windows-365/enterprise/
