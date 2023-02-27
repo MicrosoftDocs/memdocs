@@ -29,11 +29,11 @@ ms.collection:
 
 # Monitor Microsoft Tunnel
 
-After installation of Microsoft Tunnel, you can view the server configuration and server health in the Microsoft Endpoint Manager admin center (endpoint.microsoft.com).  
+After installation of Microsoft Tunnel, you can view the server configuration and server health in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 ## Use the admin center UI
 
-Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and go to **Tenant administration** > **Microsoft Tunnel Gateway** > **Health status**.
+Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and go to **Tenant administration** > **Microsoft Tunnel Gateway** > **Health status**.
 
 Select a server and then open the **Health check** tab to view that servers health status metrics. By default, each metric uses predefined threshold values that determine the status. The following metrics [support customization of these thresholds](#manage-health-status-thresholds):
 
@@ -99,7 +99,7 @@ You can customize the following Microsoft Tunnel health status metrics to change
 
 :::image type="content" source="./media/microsoft-tunnel-monitor/thresholds.png" alt-text="Screen capture of how to select and configure health status thresholds.":::
 
-1. Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Tenant administration** > **Microsoft Tunnel Gateway** > **Health status**.
+1. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Tenant administration** > **Microsoft Tunnel Gateway** > **Health status**.
 
 2. Select **Configure thresholds**.
 
@@ -129,7 +129,7 @@ The health status trend charts are available for the following metrics:
 
 To view trend charts:
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Go to **Tenant administration** > **Microsoft Tunnel Gateway** > **Health status** > *Select a server*, and then select **Trends**
 
@@ -200,7 +200,7 @@ The following are known issues for Microsoft Tunnel.
 
 **Issue**: On the [Tunnel *Health status* tab](../protect/microsoft-tunnel-monitor.md), a server’s health status reports as offline indicating it's disconnected, even though users can reach the tunnel server and connect to the organization’s resources.  
 
-**Solution**: To resolve this issue, you must reinstall Microsoft Tunnel, which re-enrolls the Tunnel server agent with Intune. To prevent this issue, install updates for the Tunnel agent and server soon after they're released. Use the Tunnel server health metrics in the Microsoft Endpoint Manager admin center to monitor server health.
+**Solution**: To resolve this issue, you must reinstall Microsoft Tunnel, which re-enrolls the Tunnel server agent with Intune. To prevent this issue, install updates for the Tunnel agent and server soon after they're released. Use the Tunnel server health metrics in the Microsoft Intune admin center to monitor server health.
 
 #### With Podman, you see “Error executing checkup” in the mstunnel_monitor log<!-- 14878316 -->
 

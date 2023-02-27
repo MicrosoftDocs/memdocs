@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/20/2022
+ms.date: 02/24/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -38,7 +38,7 @@ ms.collection:
 The [Microsoft Store for Business](https://www.microsoft.com/business-store) gives you a place to find and purchase apps for your organization, individually, or in volume. By connecting the store to Microsoft Intune, you can manage volume-purchased apps from the portal. For example:
 
 * You can synchronize the list of apps you have purchased (or that are free) from the store with Intune.
-* Apps that are synchronized appear in the Microsoft Endpoint Manager admin center; you can assign these apps like any other apps.
+* Apps that are synchronized appear in the Microsoft Intune admin center; you can assign these apps like any other apps.
 * Both Online and Offline licensed versions of Apps are synchronized to Intune. App names will be appended with "Online" or "Offline" in the portal.
 * You can track how many licenses are available, and how many are being used in the admin center.
 * Intune blocks assignment and installation of apps if there are an insufficient number of licenses available.
@@ -68,7 +68,7 @@ Review the following information before you start syncing and assigning apps fro
 
 ## Associate your Microsoft Store for Business account with Intune
 
-Before you enable synchronization in the Microsoft Endpoint Manager admin center, you must configure your store account to use Intune as a management tool:
+Before you enable synchronization in the Microsoft Intune admin center, you must configure your store account to use Intune as a management tool:
 
 1. Ensure that you sign into the [Microsoft Store for Business](https://www.microsoft.com/business-store) using the same tenant account you use to sign into Intune.
 2. In the Business Store, choose the **Manage** tab, select **Settings**, and choose the **Distribute** tab.
@@ -77,11 +77,11 @@ Before you enable synchronization in the Microsoft Endpoint Manager admin center
 > [!NOTE]
 > You could previously only associate one management tool to assign apps with the Microsoft Store for Business. You can now associate multiple management tools with the store, for example, Intune and Configuration Manager.
 
-You can now continue, and set up synchronization in the Microsoft Endpoint Manager admin center.
+You can now continue, and set up synchronization in the Microsoft Intune admin center.
 
 ## Configure synchronization
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Tenant administration** > **Connectors and tokens** > **Microsoft Store for Business**.
 3. Click **Enable**.
 4. If you haven't already done so, click the link to sign up for the Microsoft Store for Business and associate your account as detailed previously.
@@ -112,12 +112,14 @@ When you assign a Microsoft Store for Business app, a license is used by each us
 
 ## Remove apps
 
-To remove an app that is synced from the Microsoft Store for Business, you need to log into the Microsoft Store for Business and refund the app. The process is the same whether the app is free or not. For a free app, the store will refund $0. The example below shows a refund for a free app. 
+To remove an app that is synced from the Microsoft Store for Business, you need to log into the Microsoft Store for Business and complete the following steps. The process is the same whether the app is free or not. 
 
-![Screenshot of remove app details](./media/windows-store-for-business/microsoft-store-for-business-01.png)
-
-> [!NOTE]
-> Removing an app's visibility in the private store won't keep Intune from syncing the app. You must refund the app to fully remove the app.
+1. Ensure that you sign into the [Microsoft Store for Business](https://www.microsoft.com/business-store) using the same tenant account you use to sign into Intune.
+2. Look for the app that you want to remove by selecting **Products & services** > **Apps & software** and select it.
+3. In the **Users** pane select all users, click on the **...** symbol under the **Actions** column and choose to **Reclaim license**.
+4. Open the **Private store availability** tab of the app and change its availability to **No one**.
+5. Click on the **Product details** link on the top then click on the **...** button next to **Install**. If the previous steps have been completed successfully a **Remove product** option will be available. Click **Remove product** to remove the app from the Microsoft Store for Business. 
+6. Sync the apps using the Microsoft for Business Store connector in Intune in order to remove the app from the list of Windows apps in Intune.
 
 ## Next steps
 

@@ -190,7 +190,7 @@ After devices are set up, you can use remote actions in Intune to manage and tro
 ## Next steps  
 Check out these enrollment tutorials to learn how to do some of the top tasks in Intune. Tutorials are 100 – 200 level content for people new to Intune or a specific scenario.    
 
-* [Walk through Intune in Microsoft Endpoint Manager](tutorial-walkthrough-endpoint-manager.md) 
+* [Walk through Intune admin center](tutorial-walkthrough-endpoint-manager.md) 
 * [Use Apple corporate device enrollment features in Apple Business Manager (ABM) to enroll iOS/iPadOS devices in Intune](../enrollment/tutorial-use-device-enrollment-program-enroll-ios.md)
 * [Protect Exchange Online email on managed devices](../protect/tutorial-protect-email-on-enrolled-devices.md)
 * [Protect Exchange Online email on unmanaged devices](../protect/tutorial-protect-email-on-unmanaged-devices.md)

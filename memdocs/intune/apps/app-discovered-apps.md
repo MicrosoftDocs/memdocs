@@ -39,7 +39,7 @@ Intune **discovered apps** is a list of detected apps on the Intune enrolled dev
 
 Intune provides an aggregated list of detected apps on the Intune enrolled devices in your tenant.
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **Monitor** > **Discovered apps**.
 
 >[!NOTE]
@@ -49,7 +49,7 @@ Intune provides an aggregated list of detected apps on the Intune enrolled devic
 
 Intune also provides the list of discovered apps for the individual device in your tenant.
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **All Devices**.
 3. Select a device.
 4. To view detected apps for this device, select **Discovered Apps** in the **Monitor** section.
@@ -66,13 +66,16 @@ The following list provides the app platform type, the apps that are monitored f
 | Windows RT | Only managed apps | Only managed apps | Every 7 days from device enrollment |
 | iOS/iPadOS | Only managed apps | All apps installed on the device | Every 7 days from device enrollment |
 | macOS | Only managed apps | All apps installed on the device | Every 7 days from device enrollment |
-| Android | Only managed apps | All apps installed on the device | Every 7 days from device enrollment |
-| Android Enterprise | Only managed apps | Only apps installed on the Android Enterprise work profile device | Every 7 days from device enrollment |
+| Android device administrator | Only managed apps | All apps installed on the device | Every 7 days from device enrollment |
+| Android Enterprise personally-owned enrollment | Only managed apps in the work profile | Not applicable | Every 7 days from device enrollment |
+| Android Enterprise corporate-owned enrollments | Not applicable| Not yet supported | Not Applicable |
+| AOSP enrollments | Not applicable | Not yet supported | Not applicable |
 
 > [!NOTE]
 > - Windows 10/11 co-managed devices, as shown in the [client apps](../../configmgr/comanage/workloads.md#client-apps) workload in Configuration Manager, do not currently collect app inventory through the Intune Management Extension (IME) as per the above schedule. To mitigate this issue, the [client apps](../../configmgr/comanage/workloads.md#client-apps) workload in Configuration Manager should be switched to Intune for the IME to be installed on the device (IME is required for Win32 inventory and PowerShell deployment). Note that any changes or updates on this behavior are announced in [in development](../fundamentals/in-development.md) and/or [what's new](../fundamentals/whats-new.md).
 > - Personally-owned macOS devices enrolled before November 2019 may continue to show all apps installed on the device until the devices are enrolled again.
-> - Android Enterprise Fully Managed, Dedicated, and Corporate-Owned Work Profile devices do not display discovered apps.
+> - Android Enterprise corporate-owned enrollments (fully managed, dedicated, and corporate-owned work profile) do not display discovered apps. 
+> - Android Open Source Project (AOSP) enrollments do not display discovered apps. 
 > - For customers using a Mobile Threat Defense partner with Intune, [App Sync data](../protect/mtd-connector-enable.md) is sent to Mobile Threat Defense partners at an interval based on device check-in, and should not be confused with the refresh interval for the Discovered Apps report.
 
 The number of discovered apps may not match the app install status count. Possibilities for inconsistencies include:

@@ -53,7 +53,7 @@ In this guide, you sign up for Intune, add your domain name, configure Intune as
 
 If you currently don't use any MDM or MAM provider, then you have some options:
 
-- **Microsoft Intune**: If you want a cloud solution, then consider going straight to Intune. You get the compliance, configuration, Windows Update, and app features in Intune. You also get the benefits of the Endpoint Manager admin center, which is a web-based console.
+- **Microsoft Intune**: If you want a cloud solution, then consider going straight to Intune. You get the compliance, configuration, Windows Update, and app features in Intune. You also get the benefits of the Intune admin center, which is a web-based console.
 
   Next, [deploy Intune](#deploy-intune) (in this article).
   
@@ -112,7 +112,7 @@ If you currently use Configuration Manager, and want to use Intune, then you hav
 
 ### Option 1: Add tenant attach
 
-Tenant attach allows you to upload your Configuration Manager devices to your organization in Intune, also known as a "tenant". After you attach your devices, you use the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) to run remote actions, such as sync machine and user policy. You can also see your on-premises servers, and get OS information.
+Tenant attach allows you to upload your Configuration Manager devices to your organization in Intune, also known as a "tenant". After you attach your devices, you use the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) to run remote actions, such as sync machine and user policy. You can also see your on-premises servers, and get OS information.
 
 Tenant attach is included with your [Configuration Manager co-management license](../../configmgr/core/understand/product-and-licensing-faq.yml) at no extra cost. It's the easiest way to integrate the cloud (Intune) with your on-premise Configuration Manager setup.
 
@@ -278,11 +278,11 @@ This section includes an overview of the steps. Use these steps as guidance, and
 
         `C:\psscripts\ExportedIntunePolicies\CompliancePolicies\PolicyName.json`
 
-3. Sign in to the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). The policies you imported are shown.
+3. Sign in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). The policies you imported are shown.
 
 ## Deploy Intune
 
-1. Sign in to the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and sign up for Intune. If you have an existing subscription, you can also sign in to it.
+1. Sign in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and sign up for Intune. If you have an existing subscription, you can also sign in to it.
 
     For more information, see [Sign up, or sign in to Intune](account-sign-up.md).
 

@@ -55,10 +55,10 @@ By default, devices check in with Intune about every 8 hours. If an update is av
 
 ## Configure the policy
 
-   > [!TIP]  
-   > For more information on managing software updates and the update experience on devices, see [Manage software updates for Apple devices - Apple Support](https://support.apple.com/en-am/guide/deployment/depafd2fad80/1/web/1.0) at Apple's Platform Deployment site.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+    > [!TIP]  
+    > For more information on managing software updates and the update experience on devices, see [Manage software updates for Apple devices - Apple Support](https://support.apple.com/en-am/guide/deployment/depafd2fad80/1/web/1.0) at Apple's Platform Deployment site.
 
 2. Select **Devices** > **Update policies for macOS** > **Create profile**.
 
@@ -204,7 +204,7 @@ The Software Update category contains the following settings that can be used to
 
 ## Monitor for update installation failures on devices
 
-In the Microsoft Endpoint Manager admin center, go to **Devices** > **Monitor** > **Installation status for macOS devices**.
+In the Microsoft Intune admin center, go to **Devices** > **Monitor** > **Installation status for macOS devices**.
 
 Intune displays a list of supervised macOS devices that are targeted by an update policy. The list doesn't include devices that are up-to-date and healthy because macOS devices only return information about installation failures.
 

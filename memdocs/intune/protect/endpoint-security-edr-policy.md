@@ -2,7 +2,7 @@
 # required metadata
 
 title: Manage endpoint detection and response settings with endpoint security policies in Microsoft Intune | Microsoft Docs
-description: Configure and deploy policies for devices you manage with endpoint security endpoint detection and response policy in Microsoft Endpoint Manager. 
+description: Configure and deploy policies for devices you manage with endpoint security endpoint detection and response policy in Microsoft Intune. 
 keywords:
 author: brenduns
 ms.author: brenduns
@@ -46,24 +46,24 @@ EDR policies include platform-specific profiles to manage settings for EDR. The 
 
 EDR policies deploy to groups of devices in Azure Active Directory (Azure AD) that you manage with Intune, and to collections of on-premises devices that you manage with Configuration Manager, including Windows servers. The EDR policies for the different management paths require different onboarding packages. Therefore, you’ll create separate EDR policies for the different types of devices you manage.
 
-Find the endpoint security policies for EDR under *Manage* in the **Endpoint security** node of the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+Find the endpoint security policies for EDR under *Manage* in the **Endpoint security** node of the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 
 ## Prerequisites for EDR policies
 
 **General**:
 
-- **Tenant for Microsoft Defender for Endpoint** – Your Microsoft Defender for Endpoint tenant must be integrated with your Microsoft Endpoint Manager tenant (Intune subscription) before you can create EDR policies. See [Use Microsoft Defender for Endpoint](advanced-threat-protection.md) in the Intune documentation.
+- **Tenant for Microsoft Defender for Endpoint** – Your Microsoft Defender for Endpoint tenant must be integrated with your Microsoft Intune tenant (Intune subscription) before you can create EDR policies. See [Use Microsoft Defender for Endpoint](advanced-threat-protection.md) in the Intune documentation.
 
 **Support for Configuration Manager clients**:
 
 - **Set up tenant attach for Configuration Manager devices** - To support deploying EDR policy to devices managed by Configuration Manager, configure *tenant attach*. This includes configuring Configuration Manager device collections to support endpoint security policies from Intune.
 
-  To set up tenant attach, including the synchronization of Configuration Manager collections to the Microsoft Endpoint Manager admin center and enabling them to work with endpoint security policies, see [Configure tenant attach to support endpoint protection policies](../protect/tenant-attach-intune.md).
+  To set up tenant attach, including the synchronization of Configuration Manager collections to the Microsoft Intune admin center and enabling them to work with endpoint security policies, see [Configure tenant attach to support endpoint protection policies](../protect/tenant-attach-intune.md).
 
 ## EDR profiles
 
-### Devices managed by Microsoft Endpoint Manager
+### Devices managed by Microsoft Intune
 
 **Intune** – The following are supported for devices you manage with Intune:
 
@@ -101,12 +101,12 @@ The following sections cover the required tasks:
 > [!TIP]
 > To learn more about using Microsoft Defender for Endpoint with Configuration Manager, see the following articles in the Configuration Manager content:
 >
-> - [Onboard Configuration Manager clients to Microsoft Defender for Endpoint via the Microsoft Endpoint Manager admin center](../../configmgr/core/get-started/2020/technical-preview-2003.md#bkmk_atp)
-> - [Microsoft Endpoint Manager tenant attach: Device sync and device actions](../../configmgr/core/get-started/2020/technical-preview-2002-2.md#bkmk_attach)
+> - [Onboard Configuration Manager clients to Microsoft Defender for Endpoint via the Microsoft Intune admin center](../../configmgr/core/get-started/2020/technical-preview-2003.md#bkmk_atp)
+> - [Microsoft Intune tenant attach: Device sync and device actions](../../configmgr/core/get-started/2020/technical-preview-2002-2.md#bkmk_attach)
 
 ### Task 1: Install the update for Configuration Manager
 
-Configuration Manager version 2002 requires an update to support use with Endpoint detection and response policies you deploy from the Microsoft Endpoint Manager admin center.
+Configuration Manager version 2002 requires an update to support use with Endpoint detection and response policies you deploy from the Microsoft Intune admin center.
 
 **Update details**:
 
@@ -116,11 +116,11 @@ You’ll find this update as an *in-console update* for Configuration Manager 20
 
 To install this update, follow the guidance from [Install in-console updates](../../configmgr/core/servers/manage/install-in-console-updates.md) in the Configuration Manager documentation.
 
-After installing the update, return here to continue configuring your environment to support EDR policy from the Microsoft Endpoint Manager admin center.
+After installing the update, return here to continue configuring your environment to support EDR policy from the Microsoft Intune admin center.
 
 ### Task 2: Configure tenant attach and synchronize collections
 
-With Tenant attach you specify collections of devices from your Configuration Manager deployment to synchronize with the Microsoft Endpoint Manager admin center. After collections synchronize, use the admin center to view information about those devices and to deploy EDR policy from Intune to them.  
+With Tenant attach you specify collections of devices from your Configuration Manager deployment to synchronize with the Microsoft Intune admin center. After collections synchronize, use the admin center to view information about those devices and to deploy EDR policy from Intune to them.  
 
 For more information about the Tenant attach scenario, see [Enable tenant attach](../../configmgr/tenant-attach/device-sync-actions.md) in the Configuration Manager content.
 
@@ -147,7 +147,7 @@ When you integrate your Microsoft Defender for Endpoint subscription with Intune
 
 You choose the type of policy to create while configuring a new EDR policy, by choosing a platform for the policy.
 
-Before you can deploy policy to devices managed by Configuration Manager, set up Configuration Manager to support EDR policy from the Microsoft Endpoint Manager admin center. See [Configure tenant attach to support endpoint protection policies](../protect/tenant-attach-intune.md).
+Before you can deploy policy to devices managed by Configuration Manager, set up Configuration Manager to support EDR policy from the Microsoft Intune admin center. See [Configure tenant attach to support endpoint protection policies](../protect/tenant-attach-intune.md).
 
 > [!TIP]
 > In addition to EDR policy, you can use [device configuration](../protect/advanced-threat-protection-configure.md) policy to onboard devices to Microsoft Defender for Endpoint. However, device configuration policies don't support tenant attached devices.
@@ -156,7 +156,7 @@ Before you can deploy policy to devices managed by Configuration Manager, set up
 
 ### Create EDR policies
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Endpoint security** > **Endpoint detection and response** > **Create Policy**.
 
@@ -187,7 +187,7 @@ Before you can deploy policy to devices managed by Configuration Manager, set up
 8. On the **Assignments** page, select the groups or collections that will receive this policy. The choice depends on the platform and profile you selected:
 
    - For Intune, you’ll select groups from Azure AD.
-   - For Configuration Manager, you'll select collections from Configuration Manager that you’ve synced to Microsoft Endpoint Manager admin center and enabled for Microsoft Defender for Endpoint policy.
+   - For Configuration Manager, you'll select collections from Configuration Manager that you’ve synced to Microsoft Intune admin center and enabled for Microsoft Defender for Endpoint policy.
 
    You can choose not to assign groups or collections at this time, and later edit the policy to add an assignment.
 
@@ -199,7 +199,7 @@ Before you can deploy policy to devices managed by Configuration Manager, set up
 
 ## EDR policy reports
 
-You can view details about the EDR policies you deploy in the Microsoft Endpoint Manager admin center. To view details, go to **Endpoint security** > **Endpoint deployment and response**, and select a policy for which you want to view compliance details:
+You can view details about the EDR policies you deploy in the Microsoft Intune admin center. To view details, go to **Endpoint security** > **Endpoint deployment and response**, and select a policy for which you want to view compliance details:
 
 - For policies that target the **Windows 10, Windows 11, and Windows Server** platform (Intune), you’ll see an overview of compliance to the policy. You can also select the chart to view a list of devices that received the policy, and drill-in to individual devices for more details.
 

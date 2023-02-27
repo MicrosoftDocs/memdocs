@@ -189,7 +189,7 @@ For more information, see [Guided scenario - Cloud-managed Modern Desktop](guide
 
 If your Windows devices are currently managed using Configuration Manager, you can still enroll these devices in Intune. This approach is called "co-management". Co-management offers many benefits, including running remote actions on the device (restart, remote control, factory reset), conditional access with device compliance, and more. You can also cloud-attach your devices to Intune.
 
-For more information, see [What is co-management](../../configmgr/comanage/overview.md), [Paths to co-management](../../configmgr/comanage/quickstart-paths.md), and [Endpoint Manager tenant attach](../../configmgr/tenant-attach/device-sync-actions.md).
+For more information, see [What is co-management](../../configmgr/comanage/overview.md), [Paths to co-management](../../configmgr/comanage/quickstart-paths.md), and [tenant attach](../../configmgr/tenant-attach/device-sync-actions.md).
 
 **Task**: Look at what you currently use for mobile device management, what the goals are, and determine the best path. Some considerations:
 
@@ -198,7 +198,7 @@ For more information, see [What is co-management](../../configmgr/comanage/overv
 - If you currently use Configuration Manager, then your options include:
 
   - If you want to keep your existing infrastructure, and move some workloads to the cloud, then use co-management. You get the benefit of both services. Existing devices can receive some policies from Configuration Manager (on-premises), and other policies from Intune (cloud).
-  - If you want to keep your existing infrastructure, and use Intune to help monitor your on-premises devices, then use tenant-attach. You get the benefit of using the Endpoint Manager admin center, while still using Configuration Manager to manage devices.
+  - If you want to keep your existing infrastructure, and use Intune to help monitor your on-premises devices, then use tenant-attach. You get the benefit of using the Intune admin center, while still using Configuration Manager to manage devices.
   - If you want a pure cloud solution to manage devices, then move to Intune. This scenario is rare. Existing Configuration Manager users often prefer to continue using Configuration Manager. The [setup deployment guide](deployment-guide-intune-setup.md) has some good information.
 
   For more information, see [co-management workloads](../../configmgr/comanage/workloads.md).
@@ -286,7 +286,7 @@ With these goals in mind, create a baseline of your policies. If you have multip
 
   When you create groups in the cloud, such as Intune or Microsoft 365, they're created in Azure AD. You don't see the Azure AD branding, but that's what you're using.
 
-  - Creating new groups is an easy task. They can be created in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). For more information, see [add groups to organize users and devices](groups-add.md).
+  - Creating new groups is an easy task. They can be created in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). For more information, see [add groups to organize users and devices](groups-add.md).
 
   - Moving existing distribution lists (DL) to Azure AD might be more challenging. Once they DLs are in Azure AD, these groups can be used by Intune and Microsoft 365. For more information, see:
 

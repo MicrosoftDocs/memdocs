@@ -25,7 +25,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; get-started
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- tier2
 ---
 
 # Compare Windows 365 Business and Enterprise
@@ -56,7 +58,7 @@ Windows 365 is available in two editions: [Windows 365 Business](./business/inde
 | Policy management | Not Supported. | Group Policy Objects (GPO) and Intune MDM are supported. |
 | Application deployment | Supported only if you have Intune license. | Supported. |
 | Windows updates | Default Windows Update for Business settings are configured for users. With an Intune license, these settings can be edited. | Can be managed by using Microsoft Endpoint Manager. |
-| Device management | Device management is limited to assigning and unassigning of Cloud PC licenses in the Microsoft Admin Center. Some device management is possible in Microsoft Endpoint Manager if you have an Intune license but Cloud PCs won't be visible in the Windows 365 blade. | Microsoft Endpoint Manager admin center options, including image management, link and access on-premises resources, granular targeting of policies, resizing Cloud PCs, other user experience settings, and all the policy-based management options available to physical devices. |
+| Device management | Device management is limited to assigning and unassigning of Cloud PC licenses in the Microsoft Admin Center. Some device management is possible in Microsoft Endpoint Manager if you have an Intune license but Cloud PCs won't be visible in the Windows 365 blade. | Microsoft Intune admin center options, including image management, link and access on-premises resources, granular targeting of policies, resizing Cloud PCs, other user experience settings, and all the policy-based management options available to physical devices. |
 | Monitoring | Not supported. | Endpoint Analytics reporting and monitoring, service health, and operational health alerts. |
 | Troubleshooting | Not supported | Microsoft Endpoint Manager troubleshooting including the Troubleshooting blade, device management actions, and reprovisioning of Cloud PCs to their initial state. |
 | Partner/programmatic access | Not supported | Partners can manage Cloud PCs through Microsoft 365 Lighthouse or restful web APIs (Graph) to support Managed Service Provider tooling for up to 300 seats.  |
@@ -67,7 +69,7 @@ Windows 365 is available in two editions: [Windows 365 Business](./business/inde
 | Capability | Windows 365 Business | Windows 365 Enterprise |
 | --- | --- | --- |
 | Management | Users can [restart, reset, rename, and troubleshoot](./end-user-access-cloud-pc.md#user-actions) their Cloud PCs on the Windows 365 homepage. | Users can [restart, rename, and troubleshoot](end-user-access-cloud-pc.md) their Cloud PCs on the Windows 365 homepage. |
-| Role | By default, each user is a Standard User on their Cloud PC. To grant Local Administrator permissions to a specific user on a Cloud PC, see [Remote management actions](./business/remotely-manage-business-cloud-pcs.md#remote-management-actions). To grant Local Administrator permissions for Cloud PCs that you create in the future, see [Change organizational default settings](./business/change-organization-default-settings.md).| By default, each user is assigned a standard user role on their Cloud PC. This role can be changed by the admin in the Microsoft Endpoint Manager admin center.|
+| Role | By default, each user is a Standard User on their Cloud PC. To grant Local Administrator permissions to a specific user on a Cloud PC, see [Remote management actions](./business/remotely-manage-business-cloud-pcs.md#remote-management-actions). To grant Local Administrator permissions for Cloud PCs that you create in the future, see [Change organizational default settings](./business/change-organization-default-settings.md).| By default, each user is assigned a standard user role on their Cloud PC. This role can be changed by the admin in the Microsoft Intune admin center.|
 | Access | Users can access their Cloud PC at windows365.microsoft.com or by using Microsoft Remote Desktop. | Users can access their Cloud PC at windows365.microsoft.com or by using Microsoft Remote Desktop. |
 | Platform | Any platform that supports Microsoft Remote Desktop clients. [Learn more.](/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients)  | Any platform that supports Microsoft Remote Desktop clients. [Learn more.](/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients)  |
 
@@ -75,7 +77,7 @@ Windows 365 is available in two editions: [Windows 365 Business](./business/inde
 
 | Capability | Windows 365 Business | Windows 365 Enterprise |
 | --- | --- | --- |
-| Conditional Access | Conditional Access policies can be deployed only by using Azure AD with an Azure AD P1 license. | Conditional Access policies can be deployed by using the Microsoft Endpoint Manager admin center or Azure AD. |
+| Conditional Access | Conditional Access policies can be deployed only by using Azure AD with an Azure AD P1 license. | Conditional Access policies can be deployed by using the Microsoft Intune admin center or Azure AD. |
 | [Per-user multi-factor authentication (MFA)](/azure/active-directory/authentication/howto-mfa-userstates) | Only MFA using [Azure AD Conditional Access](/azure/active-directory/authentication/tutorial-enable-azure-mfa) is supported. Legacy per-user MFA isn't supported. | Legacy per-user MFA is supported for user connections to Hybrid Azure AD joined Cloud PCs.  It's not supported for user connections to Azure AD joined Cloud PCs. |
 | Security baselines | Not supported. | Dedicated Security Baselines can be edited and deployed by using Microsoft Endpoint Manager. |
 | Microsoft Defender for Endpoint | Supported if the customer separately has the requisite E5 license. | Integration with Defender for Endpoint. If the customer has an E5 license, all Cloud PCs will respond to Defender for Endpoint policies and show up in MDE dashboards. |

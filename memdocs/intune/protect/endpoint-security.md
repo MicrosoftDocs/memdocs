@@ -2,7 +2,7 @@
 # required metadata
 
 title: Manage endpoint security in Microsoft Intune | Microsoft Docs
-description: Learn how Security Administrators can use the Endpoint Security node to manage device security and remediate issues for devices in Microsoft Endpoint Manager. 
+description: Learn how Security Administrators can use the Endpoint Security node to manage device security and remediate issues for devices in Microsoft Intune. 
 keywords:
 author: brenduns
 ms.author: brenduns
@@ -56,7 +56,7 @@ The following sections of this article discuss the different tasks you can do fr
 
 ## Manage devices
 
-The Endpoint security node includes the *All devices* view, where you can view a list of all devices from your Azure AD that are available in Microsoft Endpoint Manager.
+The Endpoint security node includes the *All devices* view, where you can view a list of all devices from your Azure AD that are available in Microsoft Intune.
 
 From this view, you can select devices to drill in for more information like which policies a device isn't compliant with. You can also use access from this view to remediate issues for a device, including, restarting a device, start a scan for malware, or rotate BitLocker keys on a Window 10 device.
 
@@ -142,16 +142,16 @@ While Intune can integrate with several [Mobile Threat Defense partners](../prot
 
 ## Role-based access control requirements
 
-To manage tasks in the Endpoint security node of the Microsoft Endpoint Manager admin center, an account must:
+To manage tasks in the Endpoint security node of the Microsoft Intune admin center, an account must:
 
 - Be assigned a license for Intune.
-- Have role-based access control (RBAC) permissions equal to the permissions provided by the built-in Intune role of  **Endpoint Security Manager**. The *Endpoint Security Manager* role grants access to the Microsoft Endpoint Manager admin center. This role can be used by individuals who manage security and compliance features, including security baselines, device compliance, conditional access, and Microsoft Defender for Endpoint.
+- Have role-based access control (RBAC) permissions equal to the permissions provided by the built-in Intune role of  **Endpoint Security Manager**. The *Endpoint Security Manager* role grants access to the Microsoft Intune admin center. This role can be used by individuals who manage security and compliance features, including security baselines, device compliance, conditional access, and Microsoft Defender for Endpoint.
 
 For more information, see [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md)
 
 ### Permissions granted by the *Endpoint Security Manager* role
 
-You can view the following list of permissions in the Microsoft Endpoint Manager admin center by going to **Tenant administration** > **Roles** > **All Roles**, select **Endpoint Security Manager** > **Properties**.
+You can view the following list of permissions in the Microsoft Intune admin center by going to **Tenant administration** > **Roles** > **All Roles**, select **Endpoint Security Manager** > **Properties**.
 
 **Permissions:**
 

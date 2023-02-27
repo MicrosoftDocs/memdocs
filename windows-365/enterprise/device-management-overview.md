@@ -25,16 +25,18 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; get-started
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- tier2
 ---
 
 # Device management overview for Cloud PCs
 
-To manage your Cloud PCs, you’ll use Microsoft Intune, a service of [Microsoft Endpoint Manager](https://admin.microsoft.com/). Intune is a 100% cloud-based mobile device management (MDM) and mobile application management (MAM) provider for your apps and devices (including Cloud PCs). To sign in to Intune, go to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+To manage your Cloud PCs, you’ll use Microsoft Intune, a service of [Microsoft Endpoint Manager](https://admin.microsoft.com/). Intune is a 100% cloud-based mobile device management (MDM) and mobile application management (MAM) provider for your apps and devices (including Cloud PCs). To sign in to Intune, go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 ## Cloud PC overview page
 
-The Overview tab is the landing page for managing your Cloud PCs. To see it, sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Windows 365** (under **Provisioning**).
+The Overview tab is the landing page for managing your Cloud PCs. To see it, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Windows 365** (under **Provisioning**).
 
 Here you'll see some info to give you a quick idea of how your Cloud PCs are doing:
 

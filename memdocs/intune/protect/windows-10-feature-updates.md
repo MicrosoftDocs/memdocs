@@ -117,7 +117,7 @@ The following are prerequisites for Intune's Feature updates for Windows 10 and 
 
   To prevent this initial delay from impacting your co-managed devices:
   
-  1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+  1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
   2. Go to **Devices** > **Windows** > **Feature updates for Windows 10 and later** > **Create profile**.
   3. For **Deployment settings**, enter a meaningful name and a description for the policy.  Then, Specify the feature update you want devices to be running.  
   4. Complete the policy configuration, including assigning the policy to devices. The policy deploys to devices, though any device that already has the version you’ve selected, or a newer version, won’t be offered the update.
@@ -129,7 +129,7 @@ The following are prerequisites for Intune's Feature updates for Windows 10 and 
 
 - When the device checks in to the Windows Update service, the device's group membership is validated against the security groups assigned to the feature updates policy settings for any feature update holds.
 
-- Managed devices that receive feature update policy are automatically enrolled with the [Windows Update for Business deployment service](/windows/deployment/update/deployment-service-overview). The deployment service manages the updates a device receives. The service is utilized by Microsoft Endpoint Manager and works with your Intune policies for Windows updates to deploy feature updates to devices.
+- Managed devices that receive feature update policy are automatically enrolled with the [Windows Update for Business deployment service](/windows/deployment/update/deployment-service-overview). The deployment service manages the updates a device receives. The service is utilized by Microsoft Intune and works with your Intune policies for Windows updates to deploy feature updates to devices.
 
   When a device is no longer assigned to any feature update policies, Intune waits 90 days to unenroll that device from feature update management and to unenroll that device from the deployment service. This delay allows time to assign the device to a different policy and ensure that in the meantime the device doesn’t receive a feature update that wasn't intended.
 
@@ -144,7 +144,7 @@ The following are prerequisites for Intune's Feature updates for Windows 10 and 
 
 ## Create and assign Feature updates for Windows 10 and later policy
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Devices** > **Windows** > **Feature updates for Windows 10 and later** > **Create profile**.
 
@@ -172,7 +172,7 @@ When there are multiple versions of Windows 11 available, you can choose to depl
 
 The first step in preparing for a Windows 11 upgrade is to ensure your devices meet the [minimum system requirements for Windows 11](/windows/whats-new/windows-11-requirements#hardware-requirements).
 
-You can use [Endpoint analytics in Microsoft Endpoint Manager](../../analytics/overview.md) to determine which of your devices meet the hardware requirements. If some of your devices don't meet all the requirements, you can see exactly which ones aren't met. To use Endpoint analytics, your devices must be managed by Intune, co-managed, or have the Configuration Manager client version 2107 or newer with tenant attach enabled.
+You can use [Endpoint analytics in Microsoft Intune](../../analytics/overview.md) to determine which of your devices meet the hardware requirements. If some of your devices don't meet all the requirements, you can see exactly which ones aren't met. To use Endpoint analytics, your devices must be managed by Intune, co-managed, or have the Configuration Manager client version 2107 or newer with tenant attach enabled.
 
 If you’re already using Endpoint analytics, navigate to the [Work from anywhere report](../../analytics/work-from-anywhere.md), and select the Windows score category in the middle to open a flyout with aggregate Windows 11 readiness information. For more granular details, go to the Windows tab at the top of the report. On the Windows tab, you’ll see device-by-device readiness information.
 
@@ -180,7 +180,7 @@ If you’re already using Endpoint analytics, navigate to the [Work from anywher
 
 Windows 11 includes a new license agreement, which can be viewed at [https://www.microsoft.com/useterms/](https://www.microsoft.com/useterms/). This license agreement is automatically accepted by an organization that submits a policy to deploy Windows 11.
 
-When you use configure a policy in the Microsoft Endpoint Manager admin center to deploy any Windows 11 version, the Microsoft Endpoint Manager admin center displays a notice to remind you that by submitting the policy you are accepting the Windows 11 License Agreement terms on behalf of the devices, and your device users. After submitting the feature updates policy, end users won’t see or need to accept the license agreement, making the update process seamless.
+When you use configure a policy in the Microsoft Intune admin center to deploy any Windows 11 version, the Microsoft Intune admin center displays a notice to remind you that by submitting the policy you are accepting the Windows 11 License Agreement terms on behalf of the devices, and your device users. After submitting the feature updates policy, end users won’t see or need to accept the license agreement, making the update process seamless.
 
 This license reminder appears each time you select a Windows 11 build, even if all your Windows devices already run Windows 11. This prompt is provided because Intune doesn’t track which devices will receive the policy, and its possible new devices that run Windows 10 might later enroll and be targeted by the policy.
 
@@ -190,7 +190,7 @@ For more information including general licensing details, see the [Windows 11 do
 
 To deploy Windows 11, you’ll create and deploy a feature updates policy just as you might have done previously for a Windows 10 device. It’s the [same process](#create-and-assign-feature-updates-for-windows-10-and-later-policy) though instead of selecting a Windows 10 version, you’ll select a Windows 11 version from the *Feature update to deploy* dropdown list. The dropdown list displays both Windows 10 and Windows 11 version updates that are in support.
 
-- Policies for Windows 11 and Windows 10 can exist side by side in Microsoft Endpoint Manager.
+- Policies for Windows 11 and Windows 10 can exist side by side in Microsoft Intune.
 - Deploying an older Windows version to a device won’t downgrade the device. Devices only install an update when it's newer than the devices current version.
 - Deploying a Windows 11 update to a Windows 10 device that supports Windows 11, [upgrades that device](#upgrade-devices-to-windows-11).
 - Avoid deploying a Windows 11 policy to a Windows 10 device that doesn't support Windows 11.  
