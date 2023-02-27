@@ -1397,7 +1397,7 @@ items:
     - name: Microsoft Surface Management Portal
       href: ./fundamentals/surface-management-portal.md
 
-  - name: Additional solutions and scenarios
+  - name: Additional scenarios
     items: 
     - name: Guided scenarios
       items: 
