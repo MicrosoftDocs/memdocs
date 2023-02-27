@@ -168,7 +168,7 @@ There are two admin centers that you will use most often:
 
 ## Next steps
 
-In this topic, you've created a free subscription to try Intune in a test environment. For more information about setting up Intune, see [Set up Intune](setup-steps.md).
+In this topic, you've created a free subscription to try Intune in a test environment. For more information about setting up Intune, see [Set up Intune](deployment-plan-setup.md).
 
 To continue to evaluate Microsoft Intune, go to the next step:
 

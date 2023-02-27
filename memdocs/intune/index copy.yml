@@ -47,7 +47,7 @@ productDirectory:
 
     # Card
     - title: Try and evaluate
-      imageSrc: ./media/icons/investigate.svg
+      imageSrc: ./media/icons/getstarted.svg
       links:
         - url: ./fundamentals/tutorial-walkthrough-endpoint-manager.md
           text: Walkthrough Microsoft Intune admin center
@@ -86,7 +86,7 @@ conceptualContent:
    
     - title: Set up Intune subscription
       links:
-        - url: ./fundamentals/setup-steps.md
+        - url: ./fundamentals/deployment-plan-setup.md
           itemType: how-to-guide
           text: Steps to set up Intune
         - url: ./fundamentals/supported-devices-browsers.md

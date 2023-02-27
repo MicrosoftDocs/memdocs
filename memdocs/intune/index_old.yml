@@ -55,7 +55,7 @@ conceptualContent:
         url: ./fundamentals/index.yml          
     - title: Set up Intune
       links:
-        - url: ./fundamentals/setup-steps.md
+        - url: ./fundamentals/deployment-plan-setup.md
           itemType: how-to-guide
           text: Steps to set up Intune
         - url: ./fundamentals/supported-devices-browsers.md

@@ -76,7 +76,7 @@ productDirectory:
           text: Levels of protection and configuration in Intune
 
     # Card
-    - title: How-to-guides
+    - title: How-to guides
       imageSrc: ./media/icons/how-to.svg
       summary: Guides to help you perform common tasks in Intune
       url: ./index.yml#how-to-guides
@@ -87,7 +87,7 @@ productDirectory:
       url: ./index.yml#platform-and-industry-guides
     # Card
     - title: Additional resources to manage devices
-      imageSrc: ./media/icons/resources.svg
+      imageSrc: ./media/icons/resources-device.svg
       summary: Resource to find information about related technologies, such as Microsoft 365.
       url: ./index.yml#additional-resources-to-manage-devices
     # Card
@@ -104,7 +104,7 @@ conceptualContent:
    
     - title: Set up Intune subscription
       links:
-        - url: ./fundamentals/setup-steps.md
+        - url: ./fundamentals/deployment-plan-setup.md
           itemType: how-to-guide
           text: Steps to set up Intune
         - url: ./fundamentals/supported-devices-browsers.md
@@ -321,12 +321,21 @@ conceptualContent:
         - url: ./fundamentals/monitor-audit-logs.md
           itemType: concept
           text: Use audit logs to track and monitor events
+      footerLink:
+        text: Browse all help and support articles
+        url: ./fundamentals/tenant-status.md
+
+    - title: Troubleshoot issues
+      links:
         - url: /troubleshoot/mem/intune/troubleshoot-app-install
           itemType: concept
           text: Troubleshoot app installation issues
         - url: /troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune
           itemType: concept
           text: Troubleshoot policies and profiles in Intune
+      footerLink:
+        text: Browse all troubleshooting articles
+        url: ./troubleshoot/mem/intune/welcome-intune/index?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
 
   - title: Platform and industry guides
     items:
@@ -378,7 +387,7 @@ conceptualContent:
     
 additionalContent:
   sections:
-    - title: Additional resources to manage devices
+    - title: Additional technical resources
       items:
 
       - title: Microsoft 365
@@ -399,6 +408,31 @@ additionalContent:
           url: /azure/active-directory/devices/
         - text: Hybrid identity documentation
           url: /azure/active-directory/hybrid/
+      - title: Windows client documentation
+        links: 
+        - text: Windows 11 overview
+          url: /windows/whats-new/windows-11-overview
+        - text: Configure Windows client
+          url: /windows/configuration/
+        - text: Windows client deployment
+          url: /windows/deployment/
+        - text: Windows client management
+          url: /windows/client-management/
+        - text: Windows security
+          url: /windows/security/
+
+      - title: Windows 365 documentation
+        links: 
+        - text: Windows 365 Enterprise documentation
+          url: /windows-365/enterprise/
+        - text: Windows 365 overview
+          url: /windows-365/enterprise/overview
+        - text: Windows 365 planning guide
+          url: /windows-365/enterprise/planning-guide
+        - text: Windows client deployment
+          url: /windows-365/enterprise/deployment-overview
+
+
     - title: Intune community resources
       items:
         # Card
