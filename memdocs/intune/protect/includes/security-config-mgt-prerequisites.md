@@ -139,7 +139,7 @@ To support Microsoft Defender for Endpoint security configuration management thr
 
 ## Onboard devices to Microsoft Defender for Endpoint
 
-Microsoft Defender for Endpoint supports several options to onboard devices. For current guidance, see [Onboarding tools and methods for Windows devices](/microsoft-365/security/defender-endpoint/security-config-management) in the Defender for Endpoint documentation.
+Microsoft Defender for Endpoint supports several options to onboard devices. For current guidance, see [Onboard devices and configure Microsoft Defender for Endpoint capabilities](/microsoft-365/security/defender-endpoint/onboard-configure) in the Defender for Endpoint documentation.
 
 ## Co-existence with Microsoft Configuration Manager
 
