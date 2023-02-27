@@ -90,10 +90,7 @@ items:
     - name: Planning guide
       href: ./fundamentals/intune-planning-guide.md
 
-    - name: How to educate your end users
-      href: ./fundamentals/end-user-educate.md
-
-    - name: Supported configurations
+    - name: Supported operating systems and browsers
       href: ./fundamentals/supported-devices-browsers.md
       items:
       - name: Network configuration
@@ -111,43 +108,38 @@ items:
       - name: Intune operated by 21Vianet in China
         href: ./fundamentals/china.md
 
-  - name: Deploy
-    items:
-
-    - name: Migrate to Intune
+  - name: Migrate to Intune
+    items: 
+    - name: Move to Intune
+      href: ./fundamentals/deployment-guide-intune-setup.md
+    - name: Migrate from Basic Mobility and Security
       items: 
-      - name: Move to Intune
-        href: ./fundamentals/deployment-guide-intune-setup.md
-      - name: Migrate from Basic Mobility and Security
+      - name: Move from Microsoft 365 device management
+        href: ./fundamentals/migrate-to-intune.md
+      - name: Policy mapping
         items: 
-        - name: Move from Microsoft 365 device management
-          href: ./fundamentals/migrate-to-intune.md
-        - name: Policy mapping
-          items: 
-          - name: Access requirements policy mapping
-            href: ./fundamentals/policy-map-access-requirements.md
-          - name: Configurations policy mapping
-            href: ./fundamentals/policy-map-configurations.md
-          - name: Miscellaneous policy mapping
-            href: ./fundamentals/policy-map-miscellaneous.md
-
-    - name: Deploy Microsoft Intune
-      items:
-      - name: Get started with your deployment
-        href: ./fundamentals/get-started-with-intune.md
-      - name: Protection and configuration levels
-        href: ./fundamentals/protection-configuration-levels.md
-
-      - name: Step 1 - Set up Intune subscription
-        href: ./fundamentals/deployment-plan-setup.md
-      - name: Step 2 - Add, configure, and protect apps
-        href: ./fundamentals/deployment-plan-protect-apps.md
-      - name: Step 3 - Create compliance policies
-        href: ./fundamentals/deployment-plan-compliance-policies.md
-      - name: Step 4 - Configure device features and settings
-        href: ./fundamentals/deployment-plan-configuration-profile.md
-      - name: Step 5 - Enroll devices
-        href: ./fundamentals/deployment-guide-enroll.md
+        - name: Access requirements policy mapping
+          href: ./fundamentals/policy-map-access-requirements.md
+        - name: Configurations policy mapping
+          href: ./fundamentals/policy-map-configurations.md
+        - name: Miscellaneous policy mapping
+          href: ./fundamentals/policy-map-miscellaneous.md
+  - name: Deploy Intune (recommended plan)
+    items:
+    - name: Get started with your deployment
+      href: ./fundamentals/get-started-with-intune.md
+    - name: Protection and configuration levels
+      href: ./fundamentals/protection-configuration-levels.md
+    - name: Step 1 - Set up Intune subscription
+      href: ./fundamentals/deployment-plan-setup.md
+    - name: Step 2 - Add, configure, and protect apps
+      href: ./fundamentals/deployment-plan-protect-apps.md
+    - name: Step 3 - Create compliance policies
+      href: ./fundamentals/deployment-plan-compliance-policies.md
+    - name: Step 4 - Configure device features and settings
+      href: ./fundamentals/deployment-plan-configuration-profile.md
+    - name: Step 5 - Enroll devices
+      href: ./fundamentals/deployment-guide-enroll.md
 
   - name: How-to guides
     items:
@@ -1572,14 +1564,5 @@ items:
     - name: Get support
       href: /mem/get-support.md?toc=/mem/intune/fundamentals/toc.json&bc=/mem/intune/fundamentals/breadcrumb/toc.json
 
-    - name: Troubleshooting guide  
-      items:
-      
-      - name: Troubleshooting guide (suggested article for better handoff to Tshooting repo)
-    
-      - name: Troubleshoot software updates (could we replace with link in a Tshooting guide article?)
-        href: /troubleshoot/mem/intune/troubleshoot-software-updates-in-microsoft-intune
-      - name: Endpoint protection common errors (could we replace with link in a Tshooting guide article?)
-        href: /troubleshoot/mem/intune/troubleshoot-endpoint-protection-in-microsoft-intune
-      - name: Troubleshoot company resource access problems (could we replace with link in a Tshooting guide article?)
-        href: /troubleshoot/mem/intune/troubleshoot-company-resource-access-problems
+  - name: Troubleshoot issues
+    href: /troubleshoot/mem/intune/welcome-intune/index.yml?toc=/mem/intune/toc.json&bc=/mem/intune/breadcrumb/toc.json
