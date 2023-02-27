@@ -2,7 +2,7 @@
 # required metadata
 
 title: Manage account protection settings with endpoint security policies in Microsoft Intune | Microsoft Docs
-description: Deploy policies for endpoint security account protection policies to devices you manage with  in Microsoft Endpoint Manager.
+description: Deploy policies for endpoint security account protection policies to devices you manage with  in Microsoft Intune.
 keywords:
 author: brenduns
 ms.author: brenduns

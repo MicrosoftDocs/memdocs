@@ -41,7 +41,6 @@ A device managed by Microsoft Intune will be classified as a specialized device 
 - Large smart screen devices, over 30” in size
 - AR/VR headsets
 - Wearable headsets
-- Printers
 - Conference room meeting devices, a software-based room system that provides an integrated experience for audio conferencing, wireless screen sharing, or video conferencing
 - Excludes
     - Laptops and tablet devices
