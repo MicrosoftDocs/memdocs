@@ -149,11 +149,24 @@ Applies to:
 
 <!-- *********************************************** -->
 
-
 ## Device enrollment
 
 #### Intune's AAD frontline worker iPad experience<!-- 6367427  -->  
 Intune will support a frontline worker (FLW) experience for iPhones and iPads. The foundation for this experience is based on support for both the Azure Active Directory (AAD) shared device mode and the Microsoft Enterprise SSO plug-in (Microsoft Azure AD SSO extension). We also will release ZTP (Zero Touch Provisioning) which allows user enrollment without any user action.
+
+## Install Intune policies during Setup Assistant with awaiting final configuration command (public preview)<!-- 13156553 -->  
+Intune will support a new setting called **Await final configuration** in specific iOS/iPadOS automated device enrollment profiles. This setting enables a locked experience in Setup Assistant to prevent device users from accessing restricted content or changing settings until the majority of Intune device configuration policies are installed. Just before the home screen loads, Setup Assistant will pause and let Intune finish installing critical device configuration policies. Device users will be locked into the experience on the **Awaiting final configuration** screen, and won't be able to access the home screen until the device is released with the [release device from await configuration](https://developer.apple.com/documentation/devicemanagement/release_device_from_await_configuration) command. The amount of time the device is on that screen until it is released to the home screen will vary depending on the number of policies and apps applied to the device.
+
+This setting is applied once during the out-of-box automated device enrollment experience. The device user won't experience it again unless they re-enroll their device. You'll be able to utilize the locked experience on devices targeted with new and existing enrollment profiles. Supported devices include:  
+
+* iOS/iPadOS 13+ devices enrolling with Setup Assistant with modern authentication
+* iOS/iPadOS 13+ devices enrolling without user affinity
+* iOS/iPadOS 13+ devices enrolling with Azure AD shared mode
+
+You will also be able to enable or disable this feature in new and existing enrollment profiles.
+
+### New setting gives Intune admins control over device-to-category mapping<!-- 15029839  -->  
+Control visibility of the device category prompt in Intune Company Portal. Instead of making device users select the category, like they currently do, you'll be able to hide the prompt and leave the device-to-category mapping up to Intune admins. The new setting will be available in the admin center under **Tenant Administration** > **Customization** > **Device Categories**.
 
 <!-- *********************************************** -->
 
@@ -192,6 +205,12 @@ The following device pages will be updated:
 * Windows 10 updates
 * Apple updates
 * Enrollment
+
+### View status for pending and failed organizational messages<!-- 17017707 -->  
+We're adding two more states to organizational message reporting details to make it easier to track pending and failed messages in the admin center.
+
+- Pending: The message has not been scheduled yet and is currently in progress.
+- Failed: The message failed to schedule due to a service error.  
 
 ### View ServiceNow Incidents in the Intune Troubleshooting workspace<!-- 12508062  -->  
 You'll soon be able to view a list of ServiceNow incidents associated with the user you've selected in the Intune Troubleshooting workspace. This new feature will be available under **Troubleshooting + Support** > select a user > **ServiceNow Incidents**. The list of incidents shown have a direct link back to the source incident and show key information from the incident. All incidents listed will link the "Caller" identified in the incident with the user selected for Troubleshooting.
