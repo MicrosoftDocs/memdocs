@@ -25,7 +25,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Rename a device in Intune
@@ -52,7 +54,7 @@ This feature doesn't support renaming hybrid Azure AD Windows devices.
 
 ## Rename a device
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Choose **Devices** > **All devices** > choose a device > **...** > **Rename device**.
 3. In the **Rename device** pane, type the new name in the text box. You can use letters, numbers, and hyphens. The name must contain at least one letter or hyphen. Android Enterprise dedicated, fully managed, and corporate-owned work profile devices are an exception, and don’t require a letter or hyphen.
 4. If you want to restart the device after renaming it, choose **Yes** next to **Restart after rename**.
@@ -85,7 +87,7 @@ You can choose to rename devices in bulk, based on the device platform. The bulk
 
 To use the bulk rename action:
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Choose **Devices** > **All devices** > **Bulk Device Actions**.
 3. On the Basics page, for *OS* select the platform of the devices you want to rename, and then for *Device action* select **Rename**.
 4. Complete the configuration wizard.

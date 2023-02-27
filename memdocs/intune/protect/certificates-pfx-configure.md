@@ -22,9 +22,10 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; seodec18
 
-ms.collection: 
-  - M365-identity-device-management
-  - highpri
+ms.collection:
+- tier1
+- M365-identity-device-management
+- highpri
 ---
 # Configure and use PKCS certificates with Intune
 
@@ -130,7 +131,7 @@ For guidance, see [Install and configure the Certificate Connector for Microsoft
 
 ## Create a trusted certificate profile
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select  and go to **Devices** > **Configuration profiles** > **Create profile**.
 
@@ -178,7 +179,7 @@ For guidance, see [Install and configure the Certificate Connector for Microsoft
 
 ## Create a PKCS certificate profile
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select  and go to **Devices** > **Configuration profiles** > **Create profile**.
 
@@ -196,7 +197,7 @@ For guidance, see [Install and configure the Certificate Connector for Microsoft
    - **Profile**: Select **PKCS certificate**. Or, select **Templates** > **PKCS certificate**.
 
    > [!NOTE]
-   > On devices with an Android Enterprise profile, certificates installed using a PKCS certificate profile are not visible on the device. To confirm successful certificate deployment, check the status of the profile in the Intune console.
+   > On devices with an Android Enterprise profile, certificates installed using a PKCS certificate profile are not visible on the device. To confirm successful certificate deployment, check the status of the profile in the Intune admin center.
 
 4. Select **Create**.
 

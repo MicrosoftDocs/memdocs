@@ -26,14 +26,16 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Data collection in Intune
 
 When users enroll their corporate or personal devices with Intune, Intune collects, processes, and shares some personal data to support business operations, conduct business with the customer and to support the service. Intune collects personal data from the following sources:
 
-- The administrators use of the Intune in the Microsoft Endpoint Manager admin center.
+- The administrators use of the Intune in the Microsoft Intune admin center.
 - End-user devices (when devices are enrolled for Intune management and during usage).
 - Customer accounts at third party services (per admin's instructions).
 - Diagnostic, performance, and usage information.
@@ -118,7 +120,7 @@ Required data collected by Intune may include, but isn't limited to:
 |         |   MAM enrollment status                        | Yes |
 | **Support information** |  Contact information (name, phone number, email address)   | No  |
 |         |   Email discussions with Microsoft support, product, and/or customer experience team members | No  |
-| **Tenant account information** (this data is available from the Microsoft Endpoint Manager admin center |   installedDeviceCount: The number of devices on which the application is installed.  | Yes |
+| **Tenant account information** (this data is available from the Microsoft Intune admin center |   installedDeviceCount: The number of devices on which the application is installed.  | Yes |
 |         |   Number of devices or users enrolled          | No  |
 |         |   Number of identified device platforms        | No  |
 |         |   Number of installed devices                  | No  |

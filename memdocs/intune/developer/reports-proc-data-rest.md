@@ -24,9 +24,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-classic
-ms.collection: 
-- M365-identity-device-management
+ms.collection:
 - tier3
+- M365-identity-device-management
 ---
 
 # Get data from the Intune Data Warehouse API with a REST client
@@ -94,7 +94,7 @@ You need the following information to make a REST call using Postman:
 
 You also need the endpoint. To get your Data Warehouse endpoint, you will need the custom feed URL. You can get the OData endpoint from the Data Warehouse pane.
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 3. Open the **Data Warehouse** pane by selecting **Reports** > **Data warehouse**.
 4. Copy the custom feed url under **OData feed for reporting service**. It should look something like: `https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService?api-version=v1.0`
 
@@ -198,7 +198,7 @@ The following sample contains a simple REST client. The code uses the **httpClie
    * applicationId - The application ID of the native app that was created in AAD.
    *
    * warehouseUrl   - The data warehouse URL for your tenant. This can be found in
-   *      the Microsoft Endpoint Manager admin center.
+   *      the Microsoft Intune admin center.
    *
    * collectionName - The name of the warehouse entity collection you would like to
    *      access.

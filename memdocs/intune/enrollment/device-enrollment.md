@@ -27,8 +27,9 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; get-started
 ms.collection:
-  - M365-identity-device-management
-  - highpri
+- tier1
+- M365-identity-device-management
+- highpri
 ---
 
 # What is device enrollment in Intune?  
@@ -45,7 +46,7 @@ Microsoft Intune enables mobile device management for:
 * Corporate-owned devices, including phones, tablets, and PCs owned by your organization and distributed to employees and students for use at work or school. 
 
 ### Personal devices  
-Microsoft Intune supports bring-your-own-device, or *BYOD*, enrollment. This type of enrollment enables employees and students to use their personal devices for work or school things. As the admin, you're required to add device users in the Microsoft Endpoint Manager admin center, configure their enrollment experience, and set up Intune policies. Enrollment is initiated and completed by the device user in the Intune Company Portal app.  
+Microsoft Intune supports bring-your-own-device, or *BYOD*, enrollment. This type of enrollment enables employees and students to use their personal devices for work or school things. As the admin, you're required to add device users in the Microsoft Intune admin center, configure their enrollment experience, and set up Intune policies. Enrollment is initiated and completed by the device user in the Intune Company Portal app.  
 
 > [!NOTE]
 > Intune marks devices that are Azure AD-registered as personally-owned devices.  

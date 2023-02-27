@@ -26,6 +26,7 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.collection:
+- tier2
 - M365-identity-device-management
 - macOS
 ---
@@ -47,7 +48,7 @@ Before you can deploy, configure, monitor, or protect apps, you must add them to
 
 You can add Microsoft Defender for Endpoint to Intune using the following steps:
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All apps** > **Add**.
 3. In the **App type** list under the **Microsoft Defender for Endpoint**, select **macOS**.
 

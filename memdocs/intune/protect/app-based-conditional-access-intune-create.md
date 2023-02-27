@@ -26,7 +26,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Set up app-based Conditional Access policies with Intune
@@ -42,11 +44,11 @@ Before you can use app-based Conditional Access policies, you need to have [Intu
 
 Conditional Access is an Azure Active Directory (Azure AD) technology. The Conditional Access node you access from *Intune* is the same node that you access from *Azure AD*. Because it's the same node, you don't need to switch between Intune and Azure AD to configure policies.
 
-Before you can create Conditional Access policies from the Microsoft Endpoint Manager admin center, you must have an Azure AD Premium license.
+Before you can create Conditional Access policies from the Microsoft Intune admin center, you must have an Azure AD Premium license.
 
 ### To create an app-based Conditional Access policy
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431)
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431)
 
 2. Select **Endpoint security** > **Conditional access** > **New policy**.
 

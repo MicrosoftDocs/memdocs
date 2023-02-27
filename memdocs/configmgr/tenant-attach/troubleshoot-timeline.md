@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting the device timeline
 titleSuffix: Configuration Manager
-description: Troubleshooting the device timeline for Configuration Manager tenant attach
+description: Troubleshooting the device timeline for Intune tenant attach
 ms.date: 07/11/2022
 ms.topic: troubleshooting
 ms.prod: configuration-manager
@@ -18,11 +18,11 @@ ms.collection: tier3
 <!--CM7141381, IN7552762 pubpreview Sept8, 2020, GA 2201 -->
 *Applies to: Configuration Manager (current branch)*
 
-Use the following to troubleshoot the device timeline in the Microsoft Endpoint Manager admin center:
+Use the following to troubleshoot the device timeline in the Microsoft Intune admin center:
 
-## <a name="bkmk_common"></a> Common errors from the Microsoft Endpoint Manager admin center
+## <a name="bkmk_common"></a> Common errors from the Microsoft Intune admin center
 
-When viewing or synching the timeline from the Microsoft Endpoint Manager admin center, you may run across one of these errors.  
+When viewing or synching the timeline from the Microsoft Intune admin center, you may run across one of these errors.  
 
 ### <a name="bkmk_401"></a> The necessary configuration is missing in Azure Active Directory
 
@@ -30,7 +30,7 @@ When viewing or synching the timeline from the Microsoft Endpoint Manager admin 
 
 **Possible causes:**
 
-- Make sure [Azure AD user discovery](../core/servers/deploy/configure/about-discovery-methods.md#azureaddisc) and [Active Directory User discovery](../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser) are configured and the user account accessing tenant attach features from the Microsoft Endpoint Manager admin center is discovered by both.
+- Make sure [Azure AD user discovery](../core/servers/deploy/configure/about-discovery-methods.md#azureaddisc) and [Active Directory User discovery](../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser) are configured and the user account accessing tenant attach features from the Microsoft Intune admin center is discovered by both.
 - The user account might need an [Intune role](../../intune/fundamentals/role-based-access-control.md) assigned. <!--7980141-->
 
 ### <a name="bkmk_403"></a> Unable to get timeline information
@@ -47,7 +47,7 @@ Verify the account has the following permissions:
 
 ### <a name="bkmk_404"></a> Unable to get timeline information
 
-**Error message:** The device information hasn't yet synchronized from Configuration Manager to Microsoft Endpoint Manager admin center. Wait up to 15 minutes after you attach the site to your Azure tenant.
+**Error message:** The device information hasn't yet synchronized from Configuration Manager to Microsoft Intune admin center. Wait up to 15 minutes after you attach the site to your Azure tenant.
 
 **Possible resolution:** Wait for approximately 15 minutes and the issue should be resolved automatically.
 

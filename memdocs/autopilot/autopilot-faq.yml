@@ -450,7 +450,8 @@ sections:
           - Azure China 21Vianet
           - Azure Government
           
-          If you use global Azure, there are no region restrictions. For example, Contoso uses global Azure but has employees working in China. The Contoso employees working in China can still use Autopilot to deploy devices. If Contoso uses Azure China 21Vianet, the Contoso employees can't use Autopilot.
+          If you use global Azure, there are no region restrictions. For example, Contoso uses global Azure but has employees working in China. The Contoso employees working in China can still use Autopilot to deploy devices. If Contoso uses Azure China 21Vianet, the Contoso employees can't use Autopilot. 
+          While Autopilot is available in global tenants, users in China may experience poor connectivity and high latency when deploying due to ISP-related issues. If you are experiencing these issues when deploying in the region, please contact your local ISP for support.
 
       - question: |
           Why does TPM provisioning/attestation take longer during the first boot on a device?

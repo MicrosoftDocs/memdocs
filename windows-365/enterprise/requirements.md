@@ -25,7 +25,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; get-started
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- tier2
 ---
 
 # Requirements for Windows 365
@@ -85,7 +87,7 @@ If you choose to provision Hybrid Azure AD joined Cloud PCs, then the following 
 
 ## Management requirements
 
-- You must use [Microsoft Endpoint Manager admin center](https://admin.microsoft.com/) to manage your Cloud PCs.
+- You must use [Microsoft Intune admin center](https://admin.microsoft.com/) to manage your Cloud PCs.
 - You must have a Windows 365 Enterprise license to manage Cloud PC configurations.
 
 ## Role and identity requirements
