@@ -73,7 +73,7 @@ The Cloud PC web client (accessible from windows365.microsoft.com) has an improv
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
 
-#### Hardware acceleration for Cloud PCs using the browser<!--43105503-->
+#### Hardware acceleration for the windows365.microsoft.com web client<!--43105503-->
 
 On the windows365.microsoft.com web client, you can now benefit from hardware acceleration. This option is turned on by default and improves motion performance for activities like scrolling, moving windows, or playback of video.
 
