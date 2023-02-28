@@ -43,6 +43,8 @@ Applies to:
 
 Tunnel for MAM iOS is a powerful tool that allows organizations to securely manage and protect their mobile applications. The VPN connection for this solution is provided through the [Microsoft Tunnel for MAM iOS SDK](../developer/tunnel-mam-ios-sdk.md).
 
+In addition to using MAM Tunnel with unenrolled devices, you can also use it with enrolled devices. However, an enrolled device must use only the MDM Tunnel configurations or the MAM Tunnel configurations, but not both. For example, enrolled devices can't have an app like Microsoft Edge that uses MAM tunnel configurations while other apps use MDM Tunnel configurations.
+
 > [!NOTE]
 > Microsoft Tunnel for MAM iOS is limited to Line of Business (LOB) apps integrated with the SDK. Edge for iOS is coming in a future release (no ETA).
 
@@ -52,13 +54,14 @@ To use the Microsoft Tunnel for MAM iOS, you must update your Line of Business (
 - [Microsoft Authentication Library](../developer/app-sdk-ios.md#setup-msal) (MSAL)
 - [Tunnel for MAM iOS SDK](../developer/tunnel-mam-ios-sdk.md)
 
+
 ## Tunnel for MAM iOS SDK Architecture
 
 The following diagram describes the flow from a managed app that has successfully been integrated with Tunnel for MAM SKD for iOS.
 
 :::image type="content" source="./media/microsoft-tunnel-mam-ios/tunnel-for-mam-ios-flow.png" alt-text="Drawing of the Microsoft Tunnel Gateway for MAM on iOS architecture.":::
 
-**Actions**:
+### Actions
 
 0. Upon initial launch of the app, a connection is made via the Tunnel for MAM SDK.  
 1. An authentication token is required to authenticate.  
@@ -66,18 +69,35 @@ The following diagram describes the flow from a managed app that has successfull
 2. A TCP Connect (TLS Handshake occurs with the token to the tunnel server.  
 3. If UDP is enabled on the Microsoft Tunnel Gateway, a data-channel connection using DTLS is made.  If UDP is disabled, then TCP is used to establish the data channel to Tunnel gateway.  See TCP, UDP notes in the [Microsoft Tunnel Architecture](../protect/microsoft-tunnel-overview.md#architecture).  
 4. When the mobile app makes a connection to an on-premises corporate resource:  
-   1. A Microsoft Tunnel for MAM API connect request for that company resource occurs.  
-   2. An encrypted web request gets made to the corporate resource.  
+   1. A Microsoft Tunnel for MAM API connect request for that company resource occurs.
+   2. An encrypted web request gets made to the corporate resource.
 
 > [!NOTE]  
 > The Tunnel for MAM iOS SDK provides VPN Tunnel. It’s scoped to the networking layer within the app. VPN connections are not displayed in iOS settings.
+>
+> Each active line-of-business (LOB) app that's integrated with Tunnel for MAM iOS-SDK and that runs in the foreground represents an active client connection on the Tunnel Gateway server. The mst-cli command line tool can be used to monitor active client connections. For information about the mst-cli command-line tool, see [Reference for Microsoft Tunnel Gateway](../protect/microsoft-tunnel-reference.md).
+
+### Required Microsoft service endpoints
+
+Clients that use the MAM Tunnel do not use Tunnel when accessing the following URL's. Ensure these endpoints are not blocked by Firewalls and that they are directly accessible from MAM Tunnel clients:
+
+- login.microsoftonline.com
+- mamservice.manage.microsoft.com
+- msauth.net
+- msftauth.net
+- login.live.com
+- go.microsoft.com
+- browser.events.data.microsoft.com
+- msauthimages.net
+- msftauthimages.net
+- account.activedirectory.windowsazure.com
 
 ## Configure Intune policies for Microsoft Tunnel for MAM iOS
 
 Microsoft Tunnel for MAM iOS uses the following Intune policies and profiles:
 
-- **App configuration policy** - Configures the Microsoft Tunnel Gateway settings for Edge and line-of-business (LOB) apps. You can add any trusted certificates required for on-premises resource access.
-- **App protection policy** - Configures data protection settings. It also establishes a way to deploy an app configuration policy that configures the Microsoft Tunnel settings for Edge and Line of Business (LOB) apps.
+- **App configuration policy** - Configures the Microsoft Tunnel Gateway settings for Edge and LOB apps. You can add any trusted certificates required for on-premises resource access.
+- **App protection policy** - Configures data protection settings. It also establishes a way to deploy an app configuration policy that configures the Microsoft Tunnel settings for Edge and LOB apps.
 - **Trusted certificate profile** - For apps that connect to on-premises resources and are protected by an SSL/TLS certificate issued by an on-premises or private certificate authority (CA).
 
 ### Configure an app configuration policy for LOB apps
@@ -159,10 +179,13 @@ Apps that use the MAM Tunnel to connect to an on-premises resource protected by 
 
 A trusted certificate profile is required to establish a chain of trust with your on-premises infrastructure. The profile allows the device to trust the certificate that's used by the on-premises web or application server, ensuring secure communication between the app and the server.
 
-Tunnel for MAM uses the public-key certificate payload contained in the Intune trusted certificate profile but doesn’t require the profile be assigned to any Azure AD user or device groups.  As a result, a trusted certificate profile for any platform can be used. So, an iOS device can use a trusted certificate profile for Android, iOS, or Windows to meet this requirement.
+Tunnel for MAM uses the public-key certificate payload contained in the Intune trusted certificate profile but doesn’t require the profile be assigned to any Azure AD user or device groups. As a result, a trusted certificate profile for any platform can be used. So, an iOS device can use a trusted certificate profile for Android, iOS, or Windows to meet this requirement.
 
-During configuration of the app configuration profile for an app that will use Tunnel for MAM, you select the certificate profile that will be used. 
-For information on configuring these profiles, see [Trusted root certificate profiles for Microsoft Intune](../protect/certificates-trusted-root.md). 
+> [!IMPORTANT]
+> Tunnel for MAM iOS SDK requires that trusted certificates use the **DER encoded binary X.50** certificate format.
+
+During configuration of the app configuration profile for an app that will use Tunnel for MAM, you select the certificate profile that will be used.
+For information on configuring these profiles, see [Trusted root certificate profiles for Microsoft Intune](../protect/certificates-trusted-root.md).
 
 ## Configure Line of Business apps in the Azure AD portal
 
@@ -344,6 +367,11 @@ For guidance on integrating the SDK, see [Tunnel for MAM iOS SDK developer guide
 ## Known Issues
 
 The following are known issues or limitations for Tunnel for MAM on iOS. For known issues with the Microsoft Tunnel for MAM iOS SDK, go to [Tunnel for MAM iOS SDK developer guide](../developer/tunnel-mam-ios-sdk.md#known-issues).
+
+### MAM Tunnel not supported when using the MDM Tunnel
+You can choose to use MAM Tunnel with enrolled devices instead of using MDM Tunnel configurations. However, an enrolled device must use only the MDM Tunnel configurations or the MAM Tunnel configurations, but not both. For example, enrolled devices can't have an app like Microsoft Edge that uses MAM tunnel configurations while other apps use MDM Tunnel configurations.
+
+**Work around**: None.
 
 ### Site Configuration requires DNS hostname
 
