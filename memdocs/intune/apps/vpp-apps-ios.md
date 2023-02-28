@@ -219,10 +219,14 @@ You can renew an Apple Business Manager location token (Apple VPP token) by down
 To renew an Apple Business Manager location token (Apple VPP token), use the following steps:
 
 1. Navigate to [Apple Business Manager](https://business.apple.com/) or [Apple School Manager](https://school.apple.com/).
-2. Download the existing token in **Apple Business (or School) Manager**, by selecting **Preferences** > **Payments and Billing** > **Apps and Books** > **Server Tokens**.
-3. Update the token in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Tenant administration** > **Connectors and tokens** > **Apple VPP tokens**.
-4. Select the VPP token you are renewing, click **Edit** on the Basics category, upload the new token on this page, and then save your changes.
+2. Navigate to **Apple Business (or School) Manager**, by selecting **Preferences** > **Payments and Billing** > **Apps and Books** > **Content  Tokens**.
+3. Click on **Download** and save the token file.
+4. Update the token in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Tenant administration** > **Connectors and tokens** > **Apple VPP tokens**.
+5. Select the VPP token you are renewing, click **Edit** on the Basics category, upload the new token on this page, and then save your changes.
 
+> [!NOTE]
+> The expiration date listed in InTune may take some time to reflect the new certificate expiration date after renew.  To confirm the renew was successful refresh the page until the expiration date has been updated.
+   
 > [!NOTE]
 > You must renew the existing Apple VPP token or location token when the user who set up the token in Apple Business Manager changes their password or the user leaves your Apple Business Manager organization. Tokens that are not renewed will show "invalid" status in Intune.
 
