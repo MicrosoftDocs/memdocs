@@ -68,7 +68,7 @@ For Windows 10/11 devices:
 
 As appropriate, share the following links to provide additional information:
 
-* [Where to find work or school apps for iOS/iPadOS](../user-help/use-managed-apps-on-your-device.md) 
+* [Where to find work or school apps for iOS/iPadOS](../user-help/use-managed-apps-on-your-device-ios.md) 
 * [Where to find work or school apps for Android](../user-help/use-managed-apps-on-your-device-android.md)
 
 ## Next steps

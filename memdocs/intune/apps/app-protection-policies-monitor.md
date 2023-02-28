@@ -187,4 +187,4 @@ Follow these steps to generate App Protection .csv file or App Configuration .cs
  
 ## See also
 - [Manage data transfer between iOS/iPadOS apps](data-transfer-between-apps-manage-ios.md)
-- [Where to find work or school apps for iOS/iPadOS (user help)](../user-help/use-managed-apps-on-your-device.md) 
+- [Where to find work or school apps for iOS/iPadOS (user help)](../user-help/use-managed-apps-on-your-device-ios.md) 

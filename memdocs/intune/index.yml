@@ -219,11 +219,11 @@ conceptualContent:
         - url: ./fundamentals/deployment-guide-enrollment.md
           itemType: concept
           text: Device enrollment overview
-          itemType: concept 
+
         - url: ./fundamentals/deployment-guide-enrollment-ios-ipados.md
           itemType: concept
           text: Get started with iOS/iPadOS enrollment           
-        - url: ./fundamentals/enrollment-restrictions-set.md
+        - url: ./enrollment/enrollment-restrictions-set.md
           itemType: concept
           text: Device enrollment restrictions overview 
 

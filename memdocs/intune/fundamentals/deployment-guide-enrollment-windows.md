@@ -92,7 +92,7 @@ Depending on the options you configure, Azure AD Premium might be required.
 
 - Be sure your devices are running Windows 10/11. For a complete list, see [supported device platforms](supported-devices-browsers.md).
 
-- Optional. Instead of users entering the Intune server name, you can create a CNAME record that's easier to enter, such as `EnterpriseEnrollment.contoso.com`. CNAME records associate a domain name with a specific server. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), test your CNAME record to make sure it's configured correctly. For more information, see [create a CNAME record](../enrollment/windows-enroll.md#simplify-windows-enrollment-without-azure-ad-premium).
+- Optional. Instead of users entering the Intune server name, you can create a CNAME record that's easier to enter, such as `EnterpriseEnrollment.contoso.com`. CNAME records associate a domain name with a specific server. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), test your CNAME record to make sure it's configured correctly. For more information, see [create a CNAME record](../enrollment/windows-enrollment-create-cname.md).
 - In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Windows Enrollment** > **Automatic Enrollment**. In the configuration, you set the **MDM user scope** and **MAM user scope**:
 
   - **MDM user scope**: When set to **Some** or **All**, devices are joined to Azure AD, and devices are managed by Intune. It doesn't matter who's signed in to the device, or if devices are personal or BYOD. When set to **None**, devices aren't joined to Azure AD, and aren't managed by Intune.
@@ -131,7 +131,7 @@ Depending on the options you configure, Azure AD Premium might be required.
     - Be sure your devices are hybrid Azure AD-joined devices. The devices must be registered in local AD and in Azure AD.  
     - In local on-premises AD, create an **Enable automatic MDM enrollment using default Azure AD credentials** group policy. When group policy is refreshed, this policy is pushed to the devices, and users complete the configuration using their domain account (example: `user@contoso.com`).  
 
-   In the Intune admin center, you can use [Group Policy analytics](../configuration/group-policy-analytics,md) to see your on-premises group policies settings that are supported by cloud MDM providers, including Microsoft Intune. 
+   In the Intune admin center, you can use [Group Policy analytics](../configuration/group-policy-analytics.md) to see your on-premises group policies settings that are supported by cloud MDM providers, including Microsoft Intune. 
   
      >[!TIP]
      > If you want a cloud native solution to manage devices, then Windows Autopilot (in this article) might be the best enrollment option for your organization. 
@@ -288,7 +288,7 @@ Other than having Intune setup, there are minimal administrator tasks with this 
 
 - Be sure your devices are running Windows 10 and newer. For a complete list, see [supported device platforms](supported-devices-browsers.md).
 
-- Optional. Instead of users entering the Intune server name, you can create a CNAME record that's easier to enter, such as `EnterpriseEnrollment.contoso.com`. CNAME records associate a domain name with a specific server. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), test your CNAME record to make sure it's configured correctly. For more information, see [create a CNAME record](../enrollment/windows-enroll.md#simplify-windows-enrollment-without-azure-ad-premium).
+- Optional. Instead of users entering the Intune server name, you can create a CNAME record that's easier to enter, such as `EnterpriseEnrollment.contoso.com`. CNAME records associate a domain name with a specific server. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), test your CNAME record to make sure it's configured correctly. For more information, see [create a CNAME record](../enrollment/windows-enrollment-create-cname.md).
 
 - Decide if users can do organization work on personal devices. On personal devices, users are typically administrators, and used a personal email account (`user@outlook.com`) to configure the device. To register these devices in Azure AD, use the Settings app. As an admin, tell users the options they should choose. Be specific.
 
