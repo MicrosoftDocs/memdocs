@@ -35,8 +35,6 @@ ms.collection:
 
 User Enrollment supports a subset of device management options. If a pre-existing configuration profile is applied to a User Enrollment device, only settings supported by User Enrollment will be applied to that device.
 
-> [!NOTE]
-> Support for Apple's User Enrollment in Intune is currently in preview for iOS and iPadOS.
 
 ## Password settings
 
