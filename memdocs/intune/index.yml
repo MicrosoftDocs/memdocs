@@ -218,23 +218,14 @@ conceptualContent:
       links:
         - url: ./fundamentals/deployment-guide-enrollment.md
           itemType: concept
-          text: Enrollment overview
+          text: Device enrollment overview
 
-        - url: ./fundamentals/deployment-guide-enrollment-windows.md
-          itemType: concept  
-          text: Get started with Windows enrollment
-        - url: ./fundamentals/deployment-guide-enrollment-android.md
-          itemType: concept
-          text: Get started with Android enrollment
         - url: ./fundamentals/deployment-guide-enrollment-ios-ipados.md
           itemType: concept
-          text: Get started with iOS/iPadOS enrollment
-        - url: ./fundamentals/deployment-guide-enrollment-linux.md
+          text: Get started with iOS/iPadOS enrollment           
+        - url: ./enrollment/enrollment-restrictions-set.md
           itemType: concept
-          text: Get started with Linux enrollment      
-        - url: ./fundamentals/deployment-guide-enrollment-macos.md
-          itemType: concept
-          text: Get started with macOS enrollment
+          text: Device enrollment restrictions overview 
 
     - title: Initiate remote actions
       links:
