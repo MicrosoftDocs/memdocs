@@ -66,6 +66,15 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Scripts
 ### Tenant administration
 -->
+## Week of February 27, 2023
+
+### Device configuration
+
+#### View ServiceNow Incidents in the Intune Troubleshooting workspace (Preview)<!-- 12508062 -->
+
+In public preview, you can view a list of ServiceNow incidents associated with the user you've selected in the Intune Troubleshooting workspace.  This new feature is available under **Troubleshooting + Support** > select a user > **ServiceNow Incidents**.  The list of incidents shown have a direct link back to the source incident and show key information from the incident.  All incidents listed will link the "Caller" identified in the incident with the user selected for Troubleshooting.
+
+For more information go to [Use the troubleshooting portal to help users at your company](service-now-integration.md).
 
 ## Week of February 20, 2023 (Service release 2302)
 
