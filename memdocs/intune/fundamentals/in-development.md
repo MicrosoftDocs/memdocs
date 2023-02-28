@@ -212,6 +212,30 @@ We're adding two more states to organizational message reporting details to make
 - Pending: The message has not been scheduled yet and is currently in progress.
 - Failed: The message failed to schedule due to a service error.  
 
+### Endpoint security firewall policy support for log configurations<!-- 16730565  -->  
+We’re adding several new settings to the endpoint security Firewall policy to support configuration of firewall logging options. These settings will be added to the *Defender Firewall* profile template for the *Windows 10 and later* platform, and be available for the Domain, Private, and Public profiles in that template. [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Endpoint security** > **Firewall** > *Platform*: **Windows 10, Windows 11, and Windows Server** > *Profile*: **Microsoft Defender Firewall**.
+
+ The following settings are being added:  
+- Enable Log Success Connections
+- Log File Path
+- Enable Log Dropped Packets
+- Enable Log Ignored Rules
+
+For more information about these settings, see [Firewall configuration service provider (CSP)](/windows/client-management/mdm/Firewall-csp?WT.mc_id=Portal-fx).
+
+Applies to:  
+- Windows 10
+- Windows 11
+
+### Endpoint security firewall rules support for Mobile Broadband (MBB)<!-- 16730577 -->  
+We’re updating the *Microsoft Defender Firewall Rules* profiles for endpoint security Firewall policies to include **Mobile Broadband** as an option for the **Interface Types** setting.  [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Endpoint security** > **Firewall** > *Platform*: Any that support Windows > *Profile*: **Microsoft Defender Firewall Rules**.
+
+For more information, see [Firewall configuration service provider (CSP)](/windows/client-management/mdm/Firewall-csp?WT.mc_id=Portal-fx).
+
+Applies to:  
+- Windows 10
+- Windows 11
+
 ### View ServiceNow Incidents in the Intune Troubleshooting workspace<!-- 12508062  -->  
 You'll soon be able to view a list of ServiceNow incidents associated with the user you've selected in the Intune Troubleshooting workspace. This new feature will be available under **Troubleshooting + Support** > select a user > **ServiceNow Incidents**. The list of incidents shown have a direct link back to the source incident and show key information from the incident. All incidents listed will link the "Caller" identified in the incident with the user selected for Troubleshooting.
 
