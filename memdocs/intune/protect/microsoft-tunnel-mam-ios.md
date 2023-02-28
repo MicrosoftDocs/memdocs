@@ -45,9 +45,6 @@ Tunnel for MAM iOS is a powerful tool that allows organizations to securely mana
 
 In addition to using MAM Tunnel with unenrolled devices, you can also use it with enrolled devices. However, an enrolled device must use only the MDM Tunnel configurations or the MAM Tunnel configurations, but not both. For example, enrolled devices can't have an app like Microsoft Edge that uses MAM tunnel configurations while other apps use MDM Tunnel configurations.
 
-> [!NOTE]
-> Microsoft Tunnel for MAM iOS is limited to Line of Business (LOB) apps integrated with the SDK. Edge for iOS is coming in a future release (no ETA).
-
 To use the Microsoft Tunnel for MAM iOS, you must update your Line of Business (LOB) apps to integrate the following three SDKs. Find guidance for integrating each SDK later in this article:
 
 - [Intune App SDK for iOS](../developer/app-sdk-ios.md)
