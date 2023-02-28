@@ -25,6 +25,7 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection:
+- tier2
 - M365-identity-device-management
 - macOS
 ---
@@ -57,7 +58,7 @@ Ensure that the following prerequisites are met when composing shell scripts and
 
 ## Create and assign a shell script policy
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **macOS** > **Shell scripts** > **Add**.
 3. In **Basics**, enter the following properties, and select **Next**:
    - **Name**: Enter a name for the shell script.
@@ -109,7 +110,7 @@ The following items are required to collect logs on a macOS device:
 
 #### Collect device logs
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Navigate to **Devices** > **Scripts** and select a macOS shell script.
 3. In **Device status** or **User status** report, select a device.
 4. Select **Collect logs**, provide folder paths of log files separated only by a semicolon (;) without spaces or newlines in between paths.<br>For example, multiple paths should be written as `/Path/to/logfile1.zip;/Path/to/logfile2.log`.
@@ -121,7 +122,7 @@ The following items are required to collect logs on a macOS device:
 
    >[!NOTE]
    >
-   > - Collected logs are encrypted on the device, transmitted and stored in Microsoft Azure storage for 30 days. Stored logs are decrypted on demand and downloaded using Microsoft Endpoint Manager admin center.
+   > - Collected logs are encrypted on the device, transmitted and stored in Microsoft Azure storage for 30 days. Stored logs are decrypted on demand and downloaded using Microsoft Intune admin center.
    > - In addition to the admin-specified logs, the Intune management agent logs are also collected from these folders: `/Library/Logs/Microsoft/Intune` and `~/Library/Logs/Microsoft/Intune`. The agent log file-names are `IntuneMDMDaemon date--time.log` and `IntuneMDMAgent date--time.log`.
    > - If any admin-specified file is missing or has the wrong file-extension, you will find these file-names listed in `LogCollectionInfo.txt`.
 
@@ -146,7 +147,7 @@ You can create custom attribute profiles which enable you to collect custom prop
 
 ### Create and assign a custom attribute for macOS devices
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **macOS** > **Custom attributes** > **Add**.
 3. In **Basics**, enter the following properties, and select **Next**:
    - **Name**: Enter a name for the script.
@@ -214,7 +215,7 @@ There could be several reasons:
 
 ### How frequently is script run status reported?
 
-Script run status is reported to Microsoft Endpoint Manager admin center as soon as script run is complete. If a script is scheduled to run periodically at a set frequency, it only reports status the first time it runs.
+Script run status is reported to Microsoft Intune admin center as soon as script run is complete. If a script is scheduled to run periodically at a set frequency, it only reports status the first time it runs.
 
 ### When are shell scripts run again?
 

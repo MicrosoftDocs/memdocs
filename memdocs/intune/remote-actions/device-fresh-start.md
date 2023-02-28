@@ -23,9 +23,10 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: 
-  - M365-identity-device-management
-  - highpri
+ms.collection:
+- tier1
+- M365-identity-device-management
+- highpri
 ---
 
 # Use Fresh Start to reset Windows 10 devices with Intune
@@ -35,7 +36,7 @@ ms.collection:
 
 The **Fresh Start** device action removes any apps that are installed on a PC running Windows 10, version 1709 or later. Fresh Start helps remove pre-installed (OEM) apps that are typically installed with a new PC. 
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Devices** > **All devices**.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Devices** > **All devices**.
 2. From the list of devices you manage, choose a Windows 10 desktop device.
 3. Click **Fresh Start**. 
 4. Select **Retain user data on this device** to:

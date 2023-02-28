@@ -17,9 +17,9 @@ ms.reviewer: ilwu
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.collection: 
+ms.collection:
+- tier2
 - M365-identity-device-management
-- tier3
 ---
 
 # Guided scenario - Secure Microsoft Office mobile apps

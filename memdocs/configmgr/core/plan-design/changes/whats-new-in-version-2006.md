@@ -25,15 +25,15 @@ Always review the latest checklist for installing this update. For more informat
 
 To take full advantage of new Configuration Manager features, after you update the site, also update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.
 
-## <a name="bkmk_tenant"></a> Microsoft Endpoint Manager tenant attach
+## <a name="bkmk_tenant"></a> Microsoft Intune tenant attach
 
 ### Scripts from the admin center
 <!--IN7220536, CM6234688  -->
-Bring the power of the Configuration Manager on-premises [Run scripts](../../../apps/deploy-use/create-deploy-scripts.md) feature to the Microsoft Endpoint Manager admin center. Allow additional personas, like Helpdesk, to run PowerShell scripts from the cloud against an individual Configuration Manager managed device in real time. This gives all the traditional benefits of PowerShell scripts that have already been defined and approved by the Configuration Manager admin to this new environment. For more information, see [Tenant attach: Scripts from the admin center](../../../tenant-attach/scripts.md).
+Bring the power of the Configuration Manager on-premises [Run scripts](../../../apps/deploy-use/create-deploy-scripts.md) feature to the Microsoft Intune admin center. Allow additional personas, like Helpdesk, to run PowerShell scripts from the cloud against an individual Configuration Manager managed device in real time. This gives all the traditional benefits of PowerShell scripts that have already been defined and approved by the Configuration Manager admin to this new environment. For more information, see [Tenant attach: Scripts from the admin center](../../../tenant-attach/scripts.md).
 
 ### <a name="bkmk_timeline"></a> Device timeline in the admin center
 <!--7220536, CM7141381-->
-When Configuration Manager synchronizes a device to Microsoft Endpoint Manager through tenant attach, you'll be able to see a timeline of events. This timeline shows past activity on the device that can help you troubleshoot problems. For more information, see [Tenant attach: Device timeline in the admin center](../../../tenant-attach/timeline.md).
+When Configuration Manager synchronizes a device to Microsoft Intune through tenant attach, you'll be able to see a timeline of events. This timeline shows past activity on the device that can help you troubleshoot problems. For more information, see [Tenant attach: Device timeline in the admin center](../../../tenant-attach/timeline.md).
 
 ### <a name="bkmk_hinv"></a> Resource explorer in the admin center
 <!--6479284-->
@@ -41,13 +41,13 @@ From the Microsoft Endpoint Management admin center, you can view hardware inven
 
 ### <a name="bkmk_cmpivot"></a> CMPivot from the admin center
 <!--6024392-->
-Bring the power of CMPivot to the Microsoft Endpoint Manager admin center. Allow additional personas, like Helpdesk, to be able to initiate real-time queries from the cloud against an individual ConfigMgr managed device and return the results back to the admin center. This gives all the traditional benefits of CMPivot, which allows IT Admins and other designated personas the ability to quickly assess the state of devices in their environment and take action.
+Bring the power of CMPivot to the Microsoft Intune admin center. Allow additional personas, like Helpdesk, to be able to initiate real-time queries from the cloud against an individual ConfigMgr managed device and return the results back to the admin center. This gives all the traditional benefits of CMPivot, which allows IT Admins and other designated personas the ability to quickly assess the state of devices in their environment and take action.
 
 For more information about CMPivot from the admin center, see [Tenant attach: Launch CMPivot from the admin center](../../../tenant-attach/cmpivot-start.md), [CMPivot overview](../../../tenant-attach/cmpivot-overview-attached.md), and [CMPivot sample scripts](../../../tenant-attach/cmpivot-samples-attached.md).
 
-### <a name="bkmk_atp"></a> Microsoft Defender Antivirus policies in the Microsoft Endpoint Manager admin center
+### <a name="bkmk_atp"></a> Microsoft Defender Antivirus policies in the Microsoft Intune admin center
 <!--4812909-->
-You can now create Microsoft Defender antivirus policies in the Microsoft Endpoint Manager console and deploy them to Configuration Manager collections. For more information including detailed instructions and available settings, see the following articles:
+You can now create Microsoft Defender antivirus policies in the Microsoft Intune admin center and deploy them to Configuration Manager collections. For more information including detailed instructions and available settings, see the following articles:
 - [Tenant attach: Onboard Configuration Manager clients to Microsoft Defender for Endpoint from the admin center (preview)](../../../tenant-attach/atp-onboard.md)
 - [Tenant attach: Deploy endpoint security Antivirus policy from the admin center (preview)](../../../tenant-attach/deploy-antivirus-policy.md)
 - [Settings for Microsoft Defender Antivirus policy for tenant attached devices in Microsoft Intune](../../../../intune/protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json).
@@ -55,17 +55,17 @@ You can now create Microsoft Defender antivirus policies in the Microsoft Endpoi
 
 ### Install applications from the admin center
 <!--7518897, 6024389-->
-You can initiate an application install in real time for a tenant attached device from the Microsoft Endpoint Manager admin center. Starting with Configuration Manager version 2006, the list of applications available for the device also includes applications deployed to the device's currently logged on user. For more information, see [Tenant attach: Install an application from the admin center](../../../tenant-attach/applications.md).  
+You can initiate an application install in real time for a tenant attached device from the Microsoft Intune admin center. Starting with Configuration Manager version 2006, the list of applications available for the device also includes applications deployed to the device's currently logged on user. For more information, see [Tenant attach: Install an application from the admin center](../../../tenant-attach/applications.md).  
 
 ### Import previously created Azure AD application during tenant attach onboarding
 <!--6479246-->
-During a new onboarding, an administrator can specify a previously created application during onboarding to tenant attach. For more information, see [Microsoft Endpoint Manager tenant attach: Device sync and device actions](../../../tenant-attach/device-sync-actions.md#bkmk_aad_app).
+During a new onboarding, an administrator can specify a previously created application during onboarding to tenant attach. For more information, see [Microsoft Intune tenant attach: Device sync and device actions](../../../tenant-attach/device-sync-actions.md#bkmk_aad_app).
 
 ## <a name="bkmk_ea"></a> Endpoint analytics
 
 ### Endpoint analytics data collection enabled by default
 <!--7065447, 7741111-->
-The **Enable Endpoint analytics data collection** client setting is now enabled by default. This setting allows your managed endpoints to send data, such as startup performance insights, to your Configuration Manager site server. This change affects local data collection only. Endpoint analytics data isn't uploaded to the Microsoft Endpoint Manager admin center until you [enable data upload in Configuration Manager](../../../../analytics/enroll-configmgr.md#bkmk_cm_upload). The new default value applies to the default client settings and any custom client settings created after upgrading to version 2006.
+The **Enable Endpoint analytics data collection** client setting is now enabled by default. This setting allows your managed endpoints to send data, such as startup performance insights, to your Configuration Manager site server. This change affects local data collection only. Endpoint analytics data isn't uploaded to the Microsoft Intune admin center until you [enable data upload in Configuration Manager](../../../../analytics/enroll-configmgr.md#bkmk_cm_upload). The new default value applies to the default client settings and any custom client settings created after upgrading to version 2006.
 
 - If you're upgrading from version 2002 to version 2006, existing custom client settings values are retained. The default value for **Enable Endpoint analytics data collection** in Configuration Manager version 2002 is **No**.
 - If you're upgrading to version 2006 from Configuration Manager version 1910 or prior, any pre-existing custom client settings that contain the **Computer Agent** group of settings inherits the new default of **Yes** for **Enable Endpoint analytics data collection**.
@@ -114,7 +114,7 @@ Intranet clients can now access a CMG software update point when it's assigned t
 
 <!--CMADO-3601237,INADO-4297660-->
 
-The Company Portal is now the cross-platform app portal experience for Microsoft Endpoint Manager. By configuring co-managed devices to also use the Company Portal, you can provide a consistent user experience on all devices.
+The Company Portal app is now the cross-platform app portal experience for the Microsoft Intune family of products. By configuring co-managed devices to also use the Company Portal app, you can provide a consistent user experience on all devices.
 
 For more information, see [Use the Company Portal app on co-managed devices](../../../comanage/company-portal.md).
 

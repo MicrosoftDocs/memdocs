@@ -22,7 +22,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Configure Microsoft Tunnel for Intune
@@ -38,7 +40,7 @@ Use of a *Server configuration* lets you create a configuration a single time an
 
 ### To create a Server configuration
 
-1. Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Microsoft Tunnel Gateway** > *select the* **Server configurations** *tab* > **Create new**.
+1. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Microsoft Tunnel Gateway** > *select the* **Server configurations** *tab* > **Create new**.
 
 2. On the **Basics** tab, enter a *Name* and *Description* *(optional)* and select **Next**.
 
@@ -80,7 +82,7 @@ Sites are logical groups of servers that host Microsoft Tunnel. You’ll assign 
 
 ### To create a Site configuration
 
-1. Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Microsoft Tunnel Gateway** > *select the* **Sites** *tab* > **Create**.
+1. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Microsoft Tunnel Gateway** > *select the* **Sites** *tab* > **Create**.
 
 2. On the **Create a site** pane, specify the following properties:
 
@@ -120,7 +122,7 @@ Before installing Microsoft Tunnel Gateway on a Linux server, configure your ten
 
    - Download the tool directly by using a web browser. Go to <https://aka.ms/microsofttunneldownload> to download the file **mstunnel-setup**.
 
-   - Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Microsoft Tunnel Gateway**, select the **Servers** tab,  select **Create** to open the *Create a server* pane, and then select **Download script**.
+   - Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Microsoft Tunnel Gateway**, select the **Servers** tab,  select **Create** to open the *Create a server* pane, and then select **Download script**.
 
      ![Screen capture for download of installation script](./media/microsoft-tunnel-configure/download-installation-script.png)
 
@@ -173,7 +175,7 @@ Before installing Microsoft Tunnel Gateway on a Linux server, configure your ten
 
 6. After setup installs the certificate and creates the Tunnel Gateway services, you’re prompted to sign in and authenticate with Intune. The user account must have either the Intune Administrator or Global Administrator roles assigned. The account you use to complete the authentication must have an Intune license. The credentials of this account aren't saved and are only used for initial sign-in to Azure Active Directory. After successful authentication, Azure app IDs/secret keys are used for authentication between the Tunnel Gateway and Azure Active Directory.
 
-   This authentication registers Tunnel Gateway with Microsoft Endpoint Manager and your Intune tenant.
+   This authentication registers Tunnel Gateway with Microsoft Intune and your Intune tenant.
 
    1. Open a web browser to <https://Microsoft.com/devicelogin> and enter the device code that’s provided by the installation script, and then sign in with your Intune admin credentials.
 
@@ -181,7 +183,7 @@ Before installing Microsoft Tunnel Gateway on a Linux server, configure your ten
 
    3. After you select a Site, setup pulls the Server configuration for that Site from Intune, and applies it to your new server to complete the Microsoft Tunnel installation.
 
-7. After the installation script finishes, you can navigate in Microsoft Endpoint Manager admin center to the **Microsoft Tunnel Gateway** tab to view high-level status for the tunnel. You can also open the **Health status** tab to confirm that the server is online.
+7. After the installation script finishes, you can navigate in Microsoft Intune admin center to the **Microsoft Tunnel Gateway** tab to view high-level status for the tunnel. You can also open the **Health status** tab to confirm that the server is online.
 
 8. If you’re using RHEL 8.4 or later, be sure to restart the Tunnel Gateway server by entering `mst-cli server restart` before you attempt to connect clients to it.
 
@@ -247,7 +249,7 @@ After the Microsoft Tunnel installs and devices install the Microsoft Tunnel cli
 
 ### Android
 
-1. Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Configuration profiles** > **Create profile**.
+1. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Configuration profiles** > **Create profile**.
 
 2. For *Platform*, select **Android Enterprise**. For *Profile* select **VPN** for either **Corporate-Owned Work Profile** or **Personally-Owned Work Profile**, and then select **Create**.
 
@@ -287,7 +289,7 @@ After the Microsoft Tunnel installs and devices install the Microsoft Tunnel cli
 
 ### iOS
 
-1. Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Device Configuration** > **Create profile**.
+1. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Device Configuration** > **Create profile**.
 
 2. For *Platform*, select **iOS/iPadOS**, and then for *Profile* select **VPN**, and then **Create**.
 
@@ -393,7 +395,7 @@ For more information about *mst-cli*, see [Reference for Microsoft Tunnel](../pr
 
 To uninstall the product, run **./mst-cli uninstall** from the Linux server as root. 
 
-After the product is uninstalled, delete the corresponding server record in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) under **Tenant administration** > **Microsoft Tunnel Gateway** > **Servers**.
+After the product is uninstalled, delete the corresponding server record in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) under **Tenant administration** > **Microsoft Tunnel Gateway** > **Servers**.
 
 ## Next steps
 

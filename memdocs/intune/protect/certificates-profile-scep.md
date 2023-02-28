@@ -20,10 +20,11 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: 
-  - M365-identity-device-management
-  - highpri
-  - highseo
+ms.collection:
+- tier1
+- M365-identity-device-management
+- highpri
+- highseo
 ---
 
 # Create and assign SCEP certificate profiles in Intune
@@ -45,7 +46,7 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
 
 ## Create a SCEP certificate profile
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select  and go to **Devices** > **Configuration profiles** > **Create profile**.
 
@@ -247,7 +248,7 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
 
    - **Certificate validity period**:
 
-     You can enter a value that is lower than the validity period in the certificate template, but not higher. If you configured the certificate template to [support a custom value that can be set from within the Intune console](certificates-scep-configure.md#modify-the-validity-period-of-the-certificate-template), use this setting to specify the amount of remaining time before the certificate expires.
+     You can enter a value that is lower than the validity period in the certificate template, but not higher. If you configured the certificate template to [support a custom value that can be set from within the Intune admin center](certificates-scep-configure.md#modify-the-validity-period-of-the-certificate-template), use this setting to specify the amount of remaining time before the certificate expires.
 
      Intune supports a validity period of up to 24 months.
 

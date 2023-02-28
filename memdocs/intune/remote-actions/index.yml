@@ -1,7 +1,7 @@
 ### YamlMime:Landing
 
 title: Remotely run device actions with Intune
-summary: Intune gives admins the ability to remotely run device actions. By using these remote actions from the Intune portal, you can restart devices, reset passcodes, locate lost or stolen devices, and more.
+summary: Intune gives admins the ability to remotely run device actions. By using these remote actions from the Intune admin center, you can restart devices, reset passcodes, locate lost or stolen devices, and more.
 metadata:
   title: Remotely run device actions with Intune
   description: Intune lets you run actions remotely.
@@ -9,9 +9,10 @@ metadata:
   ms.service: microsoft-intune
   ms.subservice: remote-actions
   ms.topic: landing-page 
-  ms.collection: 
-    - collection
-    - highpri
+  ms.collection:
+  - tier2
+  - collection
+  - highpri
   author: Smritib17
   ms.author: smbhardwaj
   ms.date: 09/13/2019  

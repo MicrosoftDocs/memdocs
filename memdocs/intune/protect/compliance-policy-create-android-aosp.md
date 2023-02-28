@@ -25,7 +25,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Device compliance settings for Android (AOSP) in Intune
@@ -36,7 +38,7 @@ This article lists the compliance settings you can configure for Android (AOSP) 
 * Device properties  
 * System security   
 
- Devices are also governed by tenant-wide compliance policy settings. To manage the tenant-wide compliance policy settings in your tenant, sign in to Microsoft Endpoint Manager admin center and go to **Endpoint security** > **Device compliance** > **Compliance policy settings**.  
+ Devices are also governed by tenant-wide compliance policy settings. To manage the tenant-wide compliance policy settings in your tenant, sign in to Microsoft Intune admin center and go to **Endpoint security** > **Device compliance** > **Compliance policy settings**.  
 
  To learn more about compliance policies, and what they do, see [get started with device compliance](device-compliance-get-started.md).  
 

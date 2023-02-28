@@ -25,7 +25,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 
@@ -40,7 +42,7 @@ This article introduces the Certificate Connector for Microsoft Intune, its life
 
 ## Connector overview
 
-To use the certificate connector, you’ll first download software from within the Microsoft Endpoint Manager admin center, which you’ll then install on a Windows Server.
+To use the certificate connector, you’ll first download software from within the Microsoft Intune admin center, which you’ll then install on a Windows Server.
 
 During the installation, you can install one or more connector features, including support for:
 
@@ -124,9 +126,9 @@ You can manually update a certificate connector even when it supports automatic 
 
 ## Connector status
 
-In the Microsoft Endpoint Manager admin center, you can select a certificate connector to view information about its status:
+In the Microsoft Intune admin center, you can select a certificate connector to view information about its status:
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431)
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431)
 
 2. Go to **Tenant administration** > **Connectors and tokens** > **Certificate connectors**.
 
@@ -453,7 +455,7 @@ This update includes:
 
 Version **6.2108.18.0**. This update includes:
 
-- A fix to correctly display the current connector status in Microsoft Endpoint Manager admin center.
+- A fix to correctly display the current connector status in Microsoft Intune admin center.
 - A fix to correctly report on failures to deliver SCEP certificates.
 
 ### July 29, 2021

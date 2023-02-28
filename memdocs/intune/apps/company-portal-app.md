@@ -27,8 +27,9 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection:
-  - M365-identity-device-management
-  - highpri
+- tier1
+- M365-identity-device-management
+- highpri
 ---
 
 # How to configure the Intune Company Portal apps, Company Portal website, and Intune app
@@ -42,7 +43,7 @@ The Company Portal apps, Company Portal website, and Intune app on Android are w
 
 ## Customizing the user experience
 
-By customizing the end-user experience, you will help provide a familiar and helpful experience for your end users. To do this, navigate to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and select **Tenant Administration** > **Customization**, where you can either edit the default policy or create up to 10 group targeted policies. These settings will apply to the Company Portal apps, Company Portal website, and Intune app on Android.
+By customizing the end-user experience, you will help provide a familiar and helpful experience for your end users. To do this, navigate to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and select **Tenant Administration** > **Customization**, where you can either edit the default policy or create up to 10 group targeted policies. These settings will apply to the Company Portal apps, Company Portal website, and Intune app on Android.
 
 ## Branding
 
@@ -158,7 +159,7 @@ The following table provides app source specific configuration details:
 > [!NOTE]
 > The display of apps from the **Configuration Manager Applications** app source is only displayed in the Windows Company Portal. However, the display of apps from either the **Azure AD Enterprise Applications** app source or the **Office Online Applications** app source are displayed in the Windows Company Portal and the Company Portal website.
 
-You can hide or show **Azure AD Enterprise applications**, **Office Online applications**, and **Configuration Manager applications** in the Company Portal for each end user. **Show** will cause the Company Portal to display the entire applications catalog from the chosen Microsoft service(s) assigned to the user. **Azure AD Enterprise applications** are registered and assigned via the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). **Office Online applications** are assigned using the licensing controls available in the [M365 Admin Center](https://admin.microsoft.com). In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant administration** > **Customization** to find this configuration setting. By default, each additional app source will be set to **Hide**. 
+You can hide or show **Azure AD Enterprise applications**, **Office Online applications**, and **Configuration Manager applications** in the Company Portal for each end user. **Show** will cause the Company Portal to display the entire applications catalog from the chosen Microsoft service(s) assigned to the user. **Azure AD Enterprise applications** are registered and assigned via the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). **Office Online applications** are assigned using the licensing controls available in the [M365 Admin Center](https://admin.microsoft.com). In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant administration** > **Customization** to find this configuration setting. By default, each additional app source will be set to **Hide**. 
 
 ### Customizing Remove and Reset device actions 
 
@@ -295,7 +296,7 @@ You can download user-submitted mobile app diagnostics in the admin center for t
 
 ## Company Portal app notifications
 
-The Company Portal app can store, as well as display, push notifications sent to your users' devices from the Microsoft Endpoint Manager admin center. Users who have opted in to receive Company Portal push notifications can view and manage the customized stored messages that you send to their devices in the **Notifications** tab of the Company Portal.
+The Company Portal app can store, as well as display, push notifications sent to your users' devices from the Microsoft Intune admin center. Users who have opted in to receive Company Portal push notifications can view and manage the customized stored messages that you send to their devices in the **Notifications** tab of the Company Portal.
 
 > [!NOTE]
 > Users must updated to recent versions of the Android Company Portal (version 5.0.5291.0, released in October 2021) or Android Intune app (version 2021.09.04, released in September 2021) to receive custom notifications on Android devices. If users do not update prior to Intune's November (2111) service release and they are sent a custom notification, they will instead receive a notification telling them to update their app to view the notification. Once they update their app, they will see the message sent by your organization in the Notifications section in the app.

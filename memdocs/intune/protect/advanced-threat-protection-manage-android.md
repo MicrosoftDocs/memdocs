@@ -23,7 +23,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Configure Microsoft Defender for Endpoint on Android devices managed by Intune
@@ -50,7 +52,7 @@ To configure web protection on devices, use the following procedures to create a
 
 ### Disable web protection for Android device administrator
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Devices** > **Configuration profiles** > **Create profile**.
 
@@ -99,7 +101,7 @@ To configure web protection on devices, use the following procedures to create a
    > You can't disable web protection for the Android Enterprise personally owned work profile if you've configured the [Auto Setup of Always-on VPN device
      configuration policy](/windows/security/threat-protection/microsoft-defender-atp/android-intune#auto-setup-of-always-on-vpn) on the enrolled devices.
    
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Apps** > **App configuration policies** > **Add**, and then select **Managed devices**.
 
