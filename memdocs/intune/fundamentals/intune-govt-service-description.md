@@ -21,7 +21,7 @@ ms.reviewer: pfetty
 
 The Intune U.S. government service description is as an overview of the service offering in the GCC High and DoD environments. It lists the feature differences compared to the commercial offering of Microsoft Intune.
 
-To learn more about Intune for GCC customers, go to [EMS offers for US Government and Microsoft 365 interoperability](ems-govt-service-description.md#ems-offers-for-us-government-and-microsoft-365-interoperability).
+To learn more about Intune for GCC customers, go to [EMS offers for US Government and Microsoft 365 interoperability](/enterprise-mobility-security/solutions/ems-govt-service-description#ems-offers-for-us-government-and-microsoft-365-interoperability).
 
 ## Get started with Intune for US Government GCC High and DoD
 
@@ -36,7 +36,7 @@ Intune has two service instances:
 
   These government instances are also known as **IL4** and **IL5**, where **IL** refers to Information Level.
 
-:::image type="content" source="./media/ems-intune-govt-service-description/migration-public-government-cloud.png" alt-text="Screenshot that shows the Microsoft government cloud, including GCC High and DoD services, is physically separate from the public cloud and commercial cloud instances.":::
+:::image type="content" source="./media/intune-govt-service-description/migration-public-government-cloud.png" alt-text="Screenshot that shows the Microsoft government cloud, including GCC High and DoD services, is physically separate from the public cloud and commercial cloud instances.":::
 
 ### What you need to know
 
