@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 02/21/2023
+ms.date: 02/28/2023
 ms.topic: reference
 ms.service: windows-365
 ms.subservice:
@@ -61,6 +61,14 @@ Learn what new features are available in Windows 365 Enterprise.
 #### Windows 365 app is now generally available<!--41929443-->
 
 The Windows 365 app has moved out of preview and into general availability. For more information, see [Installing the Windows 365 app](https://support.microsoft.com/topic/cbb0d4d5-69d4-4f00-b050-6dc7a02d02d0).
+
+#### Improved video playback by using multimedia redirection is now generally available<!--43524455-->
+
+Improved video playback performance on your Cloud PCs by using multimedia redirection (MMR) has moved out of preview and into general availability. For more information, see [Video playback improvement](troubleshooting.md#video-playback-improvements).
+
+#### Cloud PC web client: improved feedback interface for end users<!--43309221-->
+
+The Cloud PC web client (accessible from windows365.microsoft.com) has an improved feedback interface for end users to provide feedback.
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
