@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/23/2022
+ms.date: 02/17/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -59,14 +59,14 @@ This feature is supported for the following platforms:
 | Platform | IMEI numbers | Serial numbers |
 |---|---|---|
 | Windows | Not supported | Not supported |
-| iOS/iPadOS | Supported in some cases. See Important below.  | Supported |
+| iOS/iPadOS | Supported in some cases. See Important note below.  | Supported |
 | macOS | Not supported | Supported |
 | Android device administrator, before Android v10 | Supported | Supported |
 | Android device administrator, Android v10 and later | Not supported | Not supported |
 | Android Enterprise personally-owned work profile, before Android 12 | Supported | Supported |
 | Android Enterprise personally-owned work profile, Android 12 and later | Not supported | Not supported |
-| Android Enterprise corporate-owned work profile | Not supported | Not Supported |
-| Android Enterprise fully managed | Not supported | Not Supported |
+| Android Enterprise corporate-owned work profile | Not supported | Not supported |
+| Android Enterprise fully managed | Not supported | Not supported |
 | Android Enterprise dedicated devices | Not supported | Not supported |
 
 <!-- When you upload serial numbers for corporate-owned iOS/iPadOS devices, they must be paired with a corporate enrollment profile. Devices must then be enrolled using either Apple's Automated Device Enrollment or Apple Configurator to have them appear as corporate-owned. -->
@@ -139,7 +139,7 @@ Devices properties display **Ownership** for each device record in Intune. As an
 2. Choose **Properties**.  
 3. Specify **Device ownership** as **Personal** or **Corporate**.  
 
-   ![Device properties showing Device category and Device ownership options](./media/corporate-identifiers-add/device-properties.png)  
+   :::image type="content" source="./media/corporate-identifiers-add/device-properties.png" alt-text="Screenshot of the Managed device properties showing Device category and Device ownership options.":::
 
 When a device's ownership type is changed from *Corporate* to *Personal*, Intune deletes all app information previously collected from that device within seven days. If applicable, Intune will also delete the phone number on record. Intune will still collect an inventory of apps installed by the IT admin on the device and will still collect a partial phone number for the device after it is marked as personal.
 
