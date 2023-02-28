@@ -19,7 +19,7 @@ ms.localizationpriority: high
 The enhanced device timeline allows you to see a history of events that have occurred on a specific device. When viewing a specific device in Endpoint analytics, the enhanced device timeline is viewable on the **Device timeline** tab.  
 
 > [!NOTE]
-> The **Device timeline** tab replaces the **Application reliability** tab in tenants with advanced Endpoint analytics features enabled. 
+> The **Device timeline** tab replaces the **Application reliability** tab in tenants that have advanced features in Endpoint analytics. 
 
 You can filter the type of events that appear on the device timeline, and select a time range of interest using the **Filter** button. 
 
@@ -35,9 +35,9 @@ Currently, the enhanced device timeline contains app crash, app unresponsive, de
 
 ## Limitations 
 
-- When your tenant has advanced Endpoint analytics features enabled, the enhanced **Device timeline** tab replaces the **Application reliability** tab in device drill down views. In addition to a timeline, the **Application reliability** tab includes the application reliability score for the selected device. To see the device application reliability score with advanced Endpoint analytics features enabled, use the table on the **Device performance** tab and search for the desired device.
+- When your tenant has advanced features in Endpoint analytics, the enhanced **Device timeline** tab replaces the **Application reliability** tab in device drill down views. In addition to a timeline, the **Application reliability** tab includes the application reliability score for the selected device. To see the device application reliability score, use the table on the **Device performance** tab and search for the desired device.
 
-- As the enhanced device timeline is only available for Intune-managed (including co-managed) devices, a device timeline is not currently available for Configuration Manager-only devices in tenants with advanced Endpoint analytics features enabled.
+- As the enhanced device timeline is only available for Intune-managed (including co-managed) devices, a device timeline is not currently available for Configuration Manager-only devices in tenants that have advanced features in Endpoint analytics.
 
 ## Next Steps
 
