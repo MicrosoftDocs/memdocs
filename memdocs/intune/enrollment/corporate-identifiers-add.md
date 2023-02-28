@@ -139,7 +139,7 @@ Devices properties display **Ownership** for each device record in Intune. As an
 2. Choose **Properties**.  
 3. Specify **Device ownership** as **Personal** or **Corporate**.  
 
-   :::image type="content" source="./media/corporate-identifiers-add/device-properties.png" alt-text="Managed device properties showing Device category and Device ownership options.":::
+   :::image type="content" source="./media/corporate-identifiers-add/device-properties.png" alt-text="Screenshot of the Managed device properties showing Device category and Device ownership options.":::
 
 When a device's ownership type is changed from *Corporate* to *Personal*, Intune deletes all app information previously collected from that device within seven days. If applicable, Intune will also delete the phone number on record. Intune will still collect an inventory of apps installed by the IT admin on the device and will still collect a partial phone number for the device after it is marked as personal.
 
