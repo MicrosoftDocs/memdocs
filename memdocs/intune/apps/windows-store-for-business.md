@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/24/2023
+ms.date: 02/27/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -63,6 +63,7 @@ Review the following information before you start syncing and assigning apps fro
 
 > [!NOTE]
 > Online Microsoft Store for Business apps can be used only for user context install; that is, when deployed through Intune, you need to target user groups. Device licensed offline Microsoft Store for Business apps can be installed in device context; that is, when deployed through Intune, you can target device groups as well as user groups.
+
 > [!NOTE]
 > If you disable access to the Store on managed devices (either manually, via policy or Group Policy), Online licensed apps will fail to install.
 
@@ -75,9 +76,9 @@ Before you enable synchronization in the Microsoft Intune admin center, you must
 3. If you don't specifically have **Microsoft Intune** available as a mobile device management tool, choose **Add management tool** to add **Microsoft Intune**. If you don't have **Microsoft Intune** activated as your mobile device management tool, click **Activate** next to **Microsoft Intune**. Note that you should activate **Microsoft Intune** rather than **Microsoft Intune Enrollment**.
 
 > [!NOTE]
-> You could previously only associate one management tool to assign apps with the Microsoft Store for Business. You can now associate multiple management tools with the store, for example, Intune and Configuration Manager.
+> Previously you could associate only one management tool to assign apps with the Microsoft Store for Business. Now you can associate multiple management tools with the store, for example, Intune and Configuration Manager.
 
-You can now continue, and set up synchronization in the Microsoft Intune admin center.
+Continue to set up synchronization in the Microsoft Intune admin center.
 
 ## Configure synchronization
 
@@ -116,9 +117,12 @@ To remove an app that is synced from the Microsoft Store for Business, you need 
 
 1. Ensure that you sign into the [Microsoft Store for Business](https://www.microsoft.com/business-store) using the same tenant account you use to sign into Intune.
 2. Look for the app that you want to remove by selecting **Products & services** > **Apps & software** and select it.
+   :::image type="content" source="./media/windows-store-for-business/microsoft-store-for-business-02.png" alt-text="Screenshot of the app listing in the Microsoft Store." lightbox="./media/windows-store-for-business/microsoft-store-for-business-02.png":::
 3. In the **Users** pane select all users, click on the **...** symbol under the **Actions** column and choose to **Reclaim license**.
+   :::image type="content" source="./media/windows-store-for-business/microsoft-store-for-business-03.png" alt-text="Screenshot of the app license available in the Microsoft Store."  lightbox="./media/windows-store-for-business/microsoft-store-for-business-03.png" :::
 4. Open the **Private store availability** tab of the app and change its availability to **No one**.
-5. Click on the **Product details** link on the top then click on the **...** button next to **Install**. If the previous steps have been completed successfully a **Remove product** option will be available. Click **Remove product** to remove the app from the Microsoft Store for Business. 
+   :::image type="content" source="./media/windows-store-for-business/microsoft-store-for-business-04.png" alt-text="Screenshot of app license private store availability." lightbox="./media/windows-store-for-business/microsoft-store-for-business-04.png":::
+5. Select the **Product details** link on the top and then select the **...** button next to **Install**. If the previous steps have been completed successfully, a **Remove product** option will be available. Select **Remove product** to remove the app from the Microsoft Store for Business. 
 6. Sync the apps using the Microsoft for Business Store connector in Intune in order to remove the app from the list of Windows apps in Intune.
 
 ## Next steps
