@@ -60,6 +60,10 @@ During provisioning, the Cloud PC is connected to the Azure subnet and joined to
 
 The ANC settings are applied to the Cloud PC only at the time of provisioning.
 
+### Alternate ANCs
+
+To help make provisioning Cloud PCs more reliable in the rare case of capacity constraints in a region, you have the option to assign alternate ANCs to a provisioning policy. You can define the priority order of the ANCs that the policy will use. If the first ANC is unavailable, the policy will automatically use the second ANC in the priority list. If the second one is unavailable, it will move on to the next, and so on. This lets administrators prepare multiple ANCs in different Azure regions, making provisioning more reliable. You don't have to use multiple ANCs.
+
 ## First health check
 
 The information included in the ANC is used to provision a Cloud PC. For provisioning to succeed, the resources referenced in the ANC must be healthy and accessible. After an ANC object is created, Windows 365 verifies that:
