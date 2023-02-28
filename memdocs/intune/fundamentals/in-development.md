@@ -77,6 +77,14 @@ You'll soon be able to view and manage VPP apps with only the **Mobile apps** pe
 ### Install required apps during pre-provisioning<!-- 12716381   -->  
 A new toggle will be available in the Enrollment Status Page (ESP) profile that allows you to select whether you want to attempt to install required applications during pre-provisioning (white glove) technician phase. We understand that installing as many applications as possible during pre-provisioning is desired to reduce the end user set up time. To help you achieve this, we have implemented an option to attempt the installation of all the required apps assigned to a device during technician phase. In case of app install failure, ESP will continue except for the apps specified in ESP profile. To enable this function, you will need to edit your Enrollment Status Page profile by selecting **Yes** on the new setting entitled **Only fail selected apps in technician phase**. This setting will only appear if you have blocking apps selected. For information about ESP, go to [Set up the Enrollment Status Page](../enrollment/windows-enrollment-status.md).
 
+### Additional minimum OS versions for Win32 apps<!-- 16842404  -->  
+Intune will support additional minimum operating system versions for Windows 10 and 11 when installing Win32 apps. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **Windows** > **Add** > **Windows app (Win32)**. In the **Requirements** tab next to **Minimum operating system**, select one of the available operating systems. Additional OS options will include the following:
+
+- Windows 10 21H2
+- Windows 10 22H2
+- Windows 11 21H2
+- Windows 11 22H2
+
 ### Company Portal automatically installed on Android Enterprise dedicated devices<!-- 6423852  -->  
 Intune Company Portal will now be automatically installed on all Android Enterprise dedicated devices to ensure the appropriate handling of app protection policies. Users will not be able to see or launch the Company Portal, and there are no requirements for users to interact with it. Admins will notice that the Company Portal is automatically installed on their Android Enterprise dedicated devices, without the ability to uninstall.
 
