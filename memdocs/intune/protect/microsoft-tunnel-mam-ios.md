@@ -379,7 +379,7 @@ For example, enrolled devices can't have an app like Microsoft Edge that uses MA
 ### Site Configuration requires DNS hostname
 
 Tunnel site settings for **Public IP address or FQDN** require a publicly resolvable fully qualified domain name. An IP address can't be used in the subject name of the TLS/SSL certificate for the tunnel server.
-
+ 
 **Work around**: Use a certificate that includes a publicly resolvable FQDN in the subject name. Don't use a certificate that includes an IP address in the subject name.
 
 ### Proxy Configuration
