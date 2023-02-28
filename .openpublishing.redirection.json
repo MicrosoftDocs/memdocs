@@ -4,8 +4,8 @@
             "source_path": "memdocs/intune/fundamentals/introduction-intune-government.md",
             "redirect_url": "/mem/intune/fundamentals/intune-govt-service-description",
             "redirect_document_id": false
-        }, 
-
+        },
+        {
             "source_path": "memdocs/intune/fundamentals/end-user-apps-ios.md",
             "redirect_url": "/mem/intune/user-help/use-managed-apps-on-your-device-ios",
             "redirect_document_id": false
