@@ -195,23 +195,23 @@ To view the Noncompliant policies report:
 > [!NOTE]
 > *This report is in preview.*
 
-## Windows 10 unhealthy endpoints report (Operational)
-The **Windows 10 unhealthy endpoints** report surfaces data typically used by Helpdesk or admin roles to identify problems and help remediate issues. The data found in this report is timely, calls out the unhealthy device, the primary user principal name (UPN), and the status of many settings. The report is available as a tab within the primary **Antivirus** workload. This report provides filtering, searching, paging, and sorting. 
+## Unhealthy endpoints report (Operational)
+The **Unhealthy endpoints** report surfaces data typically used by Helpdesk or admin roles to identify problems and help remediate issues with Windows endpoints. The data found in this report is timely, calls out the unhealthy device, the primary user principal name (UPN), and the status of many settings. The report is available as a tab within the primary **Antivirus** workload. This report provides filtering, searching, paging, and sorting. 
 
-You can view the **Windows 10 unhealthy endpoints** report using the following steps:
+You can view the **Unhealthy endpoints** report using the following steps:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Endpoint security** > **Antivirus** > **Windows 10 unhealthy endpoints** tab.
+2. Select **Endpoint security** > **Antivirus** > **Unhealthy endpoints** tab.
 
 For information about the actions you can take with this report, see [Bulk actions for device reports](reports.md#bulk-actions-for-device-reports).
 
-## Windows 10 active malware report (Operational)
-The **Windows 10 active malware** report provides data to identify devices with malware problems and help remediate issues. The data found in this report is timely, calls out the unhealthy device, the user name, and severity. The report is available as a tab within the primary **Antivirus** workload. This report provides filtering, searching, paging, and sorting. 
+## Active malware report (Operational)
+The **Active malware** report provides data to identify devices with malware problems and help remediate issues with Windows endpoints. The data found in this report is timely, calls out the unhealthy device, the user name, and severity. The report is available as a tab within the primary **Antivirus** workload. This report provides filtering, searching, paging, and sorting. 
 
-You can view the **Windows 10 active malware** report using the following steps:
+You can view the **Active malware** report using the following steps:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Endpoint security** > **Antivirus** > **Windows 10 active malware** tab.
+2. Select **Endpoint security** > **Antivirus** > **Active malware** tab.
 
 For information about the actions you can take with this report, see [Bulk actions for device reports](reports.md#bulk-actions-for-device-reports).
 
@@ -229,7 +229,7 @@ To view the **Feature update failures** report, use the following steps:
 > [!IMPORTANT]  
 > To get a complete picture of Windows feature updates status, use the following feature updates reports:
 >
-> - **[Windows 10 feature updates (Organizational)](#windows-10-feature-updates-organizational)**
+> - **[Windows 10 feature updates (Organizational)](#windows-10-and-later-feature-updates-organizational)**
 > - **Feature update failures report (Operational)** *(this report)*  
 >
 > Together, these reports provide insight into the update state and compliance of Windows devices in your organization and can help you troubleshoot problems with feature update deployment.  
@@ -359,8 +359,8 @@ The **Co-management eligibility** report provides an eligibility evaluation for 
 To see a generated report of device state, you can use the following steps:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Reports** > **Cloud attached devices** > **Reports** tab > **Co-management eligibility**.
-1. Select **Generate report** (or **Generate again**) to retrieve current data.
+2. Select **Devices** > **Monitor** > **Cloud attached devices** > **Reports** tab > **Co-Management Eligibility**.
+3. Select **Generate report** (or **Generate again**) to retrieve current data.
 
 For related information, see [What is co-management?](../../configmgr/comanage/overview.md).
 
@@ -415,24 +415,24 @@ Other reports for Microsoft Defender Antivirus include:
 - [Antivirus agent status report](#antivirus-agent-status-report-organizational), an organizational report detailed in this article.
 - [Antivirus policy reports](../protect/endpoint-security-antivirus-policy.md#antivirus-policy-reports), which are available in the Antivirus node under Endpoint security in the Microsoft Intune admin center.
 
-## Windows 10 feature updates (Organizational)
+## Windows 10 and later feature updates (Organizational)
 
-A Windows update report, the **Windows 10 feature updates** report provides an overall view of compliance for devices that are targeted with a **Feature updates for Windows 10 and later** policy. This report provides the update status based on update state. You can also see specific device update details. The data found in these reports is timely, calls out the device name and state, and other update related details. A summary report is available in the **Windows updates** workload. This report also provides filtering, searching, paging, and sorting.
+A Windows update report, the **Windows 10 and later feature updates** report provides an overall view of compliance for devices that are targeted with a **Feature updates for Windows 10 and later** policy. This report provides the update status based on update state. You can also see specific device update details. The data found in these reports is timely, calls out the device name and state, and other update related details. A summary report is available in the **Windows updates** workload. This report also provides filtering, searching, paging, and sorting.
 
 For information about how to use this report to resolve update failures, see [Reports for Windows 10 and later feature updates policy](../protect/windows-10-feature-updates.md).
 
-You can view the **Windows 10 feature updates** report using the following steps:
+You can view the **Windows 10 and later feature updates** report using the following steps:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Reports** > **Windows updates** to view the summary report.
-3. Select the **Reports** tab and select the **Windows Feature Update Report** to see the **Windows 10 feature updates** report.
+3. Select the **Reports** tab and select the **Windows Feature Update Report** to see the **Windows 10 and later feature updates** report.
 4. Select the **Update aggregated status** and **Ownership** filters to refine your report.
 5. Select **Generate report** (or **Generate again**) to retrieve current data.
 
 > [!IMPORTANT]  
 > To get a complete picture of Windows feature updates status, use the following feature updates reports:
 >
-> - Windows 10 feature updates (Organizational) *(this report)*
+> - Windows 10 and later feature updates (Organizational) *(this report)*
 > - [Feature update failures report (Operational)](#feature-update-failures-report-operational)
 >
 > Together, these reports provide insight into the update state and compliance of Windows devices in your organization and can help you troubleshoot problems with feature update deployment.  
@@ -448,9 +448,9 @@ To see a generated report, you can use the following steps:
 
 ## MDM Firewall status for Windows 10 and later (Organizational)
 
-*In public preview.*  *This report is also described in [Endpoint security firewall policy](../protect/endpoint-security-firewall-policy.md#mdm-devices-running-windows-10-or-later-with-firewall-off) along with the Windows 10 MDM devices with firewall off report, which is only available from within the endpoint security node.*
+*This report is also described in [Endpoint security firewall policy](../protect/endpoint-security-firewall-policy.md#mdm-devices-running-windows-10-or-later-with-firewall-off) along with the MDM devices running Windows 10 or later with firewall off report, which is only available from within the Endpoint security node.*
 
-The **Windows 10 MDM Firewall status** report provides a high-level view of the firewall status for your managed devices. To view this report, open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and then go to **Reports** > **Firewall** >  **Windows 10 MDM Firewall status**.
+The **MDM Firewall status for Windows 10 and later** report provides a high-level view of the firewall status for your managed devices. To view this report, open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and then go to **Reports** > **Firewall** >  **MDM Firewall status for Windows 10 and later**.
 
 > [!div class="mx-imgBorder"]
 > ![Select firewall reports](media/intune-reports/select-firewall-reports.png)
@@ -470,12 +470,12 @@ Status details include:
 
 ## Co-managed workloads report (Organizational)
 
-The **Co-Manage Workloads** report provides a report of devices that are currently co-managed. For each device, the report shows the management authority for the Compliance, Resource Access, Device Configuration, Windows Update for Business, Endpoint Protection, Modern Apps, and Office Apps workloads. The report also aggregates all device workloads to show a summary of total workload management. Co-management enables you to concurrently manage Windows 10 devices by using both Configuration Manager and Microsoft Intune. 
+The **Co-Manage Workloads** report provides a report of devices that are currently co-managed. For each device, the report shows the management authority for the Compliance, Resource Access, Device Configuration, Windows Update for Business, Endpoint Protection, Modern Apps, and Office Apps workloads. The report also aggregates all device workloads to show a summary of total workload management. Co-management enables you to concurrently manage Windows 10 and later devices by using both Configuration Manager and Microsoft Intune. 
 
 To see a generated report of device state, you can use the following steps:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Reports** > **Cloud attached devices** > **Reports** tab >  **Co-Managed Workloads**.
+2. Select **Devices** > **Monitor** > **Cloud attached devices** > **Reports** tab >  **Co-Managed Workloads**.
 3. Select **Generate report** (or **Generate again**) to retrieve current data.
 
 For related information, see [What is co-management?](../../configmgr/comanage/overview.md)
@@ -569,7 +569,7 @@ Log Analytics is the primary tool in the Azure portal for writing log queries an
 Workbooks combine text, Analytics queries, Azure Metrics, and parameters into rich interactive reports. Workbooks are editable by any other team members who have access to the same Azure resources. For more information about workbooks, see [Azure Monitor workbooks](/azure/azure-monitor/app/usage-workbooks). Also, you can work with and contribute to workbook templates. For more information, see [Azure Monitor Workbook Templates](https://go.microsoft.com/fwlink/?linkid=867045).
 
 ## Bulk actions for device reports
-The **Windows 10 unhealthy endpoints** and **Windows 10 active malware** reports provide bulk actions that are applicable to the devices selected within each report. To use a bulk action, you select a row corresponding to each device (up to 100 devices at a time) and select the action. The following actions available:
+The **Unhealthy endpoints** and **Active malware** reports provide bulk actions that are applicable to the Windows devices selected within each report. To use a bulk action, you select a row corresponding to each device (up to 100 devices at a time) and select the action. The following actions available:
 
 - **Restart** - This action performs a restart of the selected devices.
 - **Quick scan** - This action performs a Windows Defender quick scan of the selected devices. 

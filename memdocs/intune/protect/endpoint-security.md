@@ -2,7 +2,7 @@
 # required metadata
 
 title: Manage endpoint security in Microsoft Intune | Microsoft Docs
-description: Learn how Security Administrators can use the Endpoint Security node to manage device security and remediate issues for devices in Microsoft Endpoint Manager. 
+description: Learn how Security Administrators can use the Endpoint Security node to manage device security and remediate issues for devices in Microsoft Intune. 
 keywords:
 author: brenduns
 ms.author: brenduns
@@ -56,7 +56,7 @@ The following sections of this article discuss the different tasks you can do fr
 
 ## Manage devices
 
-The Endpoint security node includes the *All devices* view, where you can view a list of all devices from your Azure AD that are available in Microsoft Endpoint Manager.
+The Endpoint security node includes the *All devices* view, where you can view a list of all devices from your Azure AD that are available in Microsoft Intune.
 
 From this view, you can select devices to drill in for more information like which policies a device isn't compliant with. You can also use access from this view to remediate issues for a device, including, restarting a device, start a scan for malware, or rotate BitLocker keys on a Window 10 device.
 

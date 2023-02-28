@@ -77,18 +77,18 @@ The following diagram is a conceptual representation of the Microsoft Defender f
 
 1. Devices onboard to Microsoft Defender for Endpoint.
 2. A trust is established between each device and Azure AD. When a device has an existing trust, that is used. When devices haven't registered, a new trust is created.
-3. Devices use their Azure AD Identity to communicate with Endpoint Manager. This identity enables Microsoft Endpoint Manager to distribute policies that are targeted to the devices when they check in.
+3. Devices use their Azure AD Identity to communicate with Intune. This identity enables Microsoft Intune to distribute policies that are targeted to the devices when they check in.
 4. Defender for Endpoint reports the status of the policy back to Endpoint Manager.
 
 ## Which solution should I use?
 
-Microsoft Endpoint Manager includes several methods and policy types to manage the configuration of Defender for Endpoint on devices.
+Microsoft Intune includes several methods and policy types to manage the configuration of Defender for Endpoint on devices.
 
-When your device protection needs extend beyond managing Defender for Endpoint, see [Device protection overview](/mem/intune/protect/device-protect) to learn about additional capabilities provided by Microsoft Endpoint Manager to help protect devices, including *device compliance*, *managed apps*, *app protection policies*, and integration with third-party compliance and *mobile threat defense* partners.
+When your device protection needs extend beyond managing Defender for Endpoint, see [Device protection overview](/mem/intune/protect/device-protect) to learn about additional capabilities provided by Microsoft Intune to help protect devices, including *device compliance*, *managed apps*, *app protection policies*, and integration with third-party compliance and *mobile threat defense* partners.
 
-The following table can help you understand which policies that can configure MDE settings are supported by devices that are managed by the different scenarios. When you deploy a policy that’s supported for both *MDE security configuration* and *Microsoft Endpoint Manager*, a single instance of that policy can be processed by devices that run MDE only and devices that are managed by either Intune or Configuration Manager.
+The following table can help you understand which policies that can configure MDE settings are supported by devices that are managed by the different scenarios. When you deploy a policy that’s supported for both *MDE security configuration* and *Microsoft Intune*, a single instance of that policy can be processed by devices that run MDE only and devices that are managed by either Intune or Configuration Manager.
 
-| Microsoft Endpoint Manager  | Workload | Policy | MDE Security configuration  |  Microsoft Endpoint Manager |
+| Microsoft Intune  | Workload | Policy | MDE Security configuration  |  Microsoft Intune |
 |----------------|----------------|----------------|-------------------|------------|
 | Endpoint security  | Antivirus  | Antivirus                    | ![Supported](../media/mde-security-integration/green-check.png) | ![Supported](../media/mde-security-integration/green-check.png)  |
 |                    | Antivirus   | Antivirus Exclusions        | ![Supported](../media/mde-security-integration/green-check.png) | ![Supported](../media/mde-security-integration/green-check.png)  |
@@ -125,21 +125,21 @@ To support Microsoft Defender for Endpoint security configuration management thr
    > [!TIP]
    > Use pilot mode and the proper device tags to test and validate your rollout on a small number of devices. Without using pilot mode, any device that falls into the scope configured will automatically be enrolled.
 
-1. Make sure the relevant users have permissions to manage endpoint security settings in Microsoft Endpoint Manager. If not already provided, request for your IT administrator to grant applicable users the Microsoft Endpoint Manager’s **Endpoint Security Manager** [built-in RBAC role](/mem/intune/fundamentals/role-based-access-control).
+1. Make sure the relevant users have permissions to manage endpoint security settings in Microsoft Intune. If not already provided, request for your IT administrator to grant applicable users the Microsoft Intune's **Endpoint Security Manager** [built-in RBAC role](/mem/intune/fundamentals/role-based-access-control).
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 1. Select **Endpoint security** > **Microsoft Defender for Endpoint**, and set **Allow Microsoft Defender for Endpoint to enforce Endpoint Security Configurations** to **On**.
 
    :::image type="content" source="../media/mde-security-integration/enable-mde-settings-management-mem.png" alt-text="Enable Microsoft Defender for Endpoint settings management in the Microsoft Intune admin center.":::
    
-   When you set this option to *On*, all devices in the platform scope in Microsoft Defender for Endpoint that aren't managed by Microsoft Endpoint Manager will qualify to onboard to Microsoft Defender for Endpoint.
+   When you set this option to *On*, all devices in the platform scope in Microsoft Defender for Endpoint that aren't managed by Microsoft Intune will qualify to onboard to Microsoft Defender for Endpoint.
 
 > [!TIP]
 > Users that are delegated the ability to manage endpoint security settings may not have the ability to implement tenant-wide configurations in Endpoint Manager.  Check with your Endpoint Manager administrator for more information on roles and permissions in your organization.
 
 ## Onboard devices to Microsoft Defender for Endpoint
 
-Microsoft Defender for Endpoint supports several options to onboard devices. For current guidance, see [Onboarding tools and methods for Windows devices](/microsoft-365/security/defender-endpoint/security-config-management) in the Defender for Endpoint documentation.
+Microsoft Defender for Endpoint supports several options to onboard devices. For current guidance, see [Onboard devices and configure Microsoft Defender for Endpoint capabilities](/microsoft-365/security/defender-endpoint/onboard-configure) in the Defender for Endpoint documentation.
 
 ## Co-existence with Microsoft Configuration Manager
 
@@ -177,7 +177,7 @@ After creating one or more Azure AD groups that contain devices managed by Micro
 > [!TIP]
 > Avoid deploying multiple policies that manage the same setting to a device.
 >
-> Microsoft Endpoint Manager supports deploying multiple instances of each endpoint security policy type to the same device, with each policy instance being received by the device separately. Therefore, a device might receive separate configurations for the same setting from different policies, which results in a conflict. Some settings (like Antivirus Exclusions) will merge on the client and apply successfully.
+> Microsoft Intune supports deploying multiple instances of each endpoint security policy type to the same device, with each policy instance being received by the device separately. Therefore, a device might receive separate configurations for the same setting from different policies, which results in a conflict. Some settings (like Antivirus Exclusions) will merge on the client and apply successfully.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Go to **Endpoint security** and then select the type of policy you want to configure, either Antivirus or Firewall, and then select **Create Policy**.

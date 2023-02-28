@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 02/21/2023
+ms.date: 02/28/2023
 ms.topic: reference
 ms.service: windows-365
 ms.subservice:
@@ -25,7 +25,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; get-started
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- tier2
 ---
 
 # What's new in Windows 365 Enterprise
@@ -51,6 +53,46 @@ Learn what new features are available in Windows 365 Enterprise.
 -->
 
 <!-- ########################## -->
+## Week of February 27, 2023
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Apps
+
+#### Windows 365 app is now generally available<!--41929443-->
+
+The Windows 365 app has moved out of preview and into general availability. For more information, see [Installing the Windows 365 app](https://support.microsoft.com/topic/cbb0d4d5-69d4-4f00-b050-6dc7a02d02d0).
+
+#### Improved video playback by using multimedia redirection is now generally available<!--43524455-->
+
+Improved video playback performance on your Cloud PCs by using multimedia redirection (MMR) has moved out of preview and into general availability. For more information, see [Video playback improvement](troubleshooting.md#video-playback-improvements).
+
+#### Cloud PC web client: improved feedback interface for end users<!--43309221-->
+
+The Cloud PC web client (accessible from windows365.microsoft.com) has an improved feedback interface for end users to provide feedback.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Hardware acceleration for the windows365.microsoft.com web client<!--43105503-->
+
+On the windows365.microsoft.com web client, you can now benefit from hardware acceleration. This option is turned on by default and improves motion performance for activities like scrolling, moving windows, or playback of video.
+
+#### Configure installed language and region for provisioning Cloud PCs in GCC/H environments<!--43290793 -->
+
+When creating a provisioning policy, admins can now configure the installed language and region for new Cloud PCs in US Government Community Cloud (GCC) and GCC High environments. For more information, see [Provide users a localized Windows experience](provide-localized-windows-experience.md)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device provisioning
+
+#### Add more Azure Network Connections to a provisioning policy<!--42906565-->
+
+A new Azure Network Connection (ANC) option lets you add more ANCs to a provisioning policy and define a priority order for their use. By preparing multiple ANCs in different Azure regions, admins can make provisioning more reliable in the rare case capacity constraints in a region.
+
+#### GCC/H support for geography option in Windows 365 provisioning policy<!-- 41400209-->
+
+The **Geography** setting in provisioning policies is now supported for US Government Community Cloud (GCC) and GCC High environments. For more information, see [Create provisioning policies](create-provisioning-policy.md).
+
+<!-- ########################## -->
 ## Week of February 20, 2023
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -67,7 +109,7 @@ Windows 365 support for Citrix HDX Plus has moved out of preview and into genera
 
 #### Nested virtualization now supports 4vCPU Cloud PCs<!--42948140-->
 
-Windows 365 nested virtualization now supports 4vCPU Cloud PCs. For more information, see [Set up virutalization-based workloads support](nested-virtualization.md).
+Windows 365 nested virtualization now supports 4vCPU Cloud PCs. For more information, see [Set up virtualization-based workloads support](nested-virtualization.md).
 
 <!-- ########################## -->
 ## Week of January 30, 2023 (Service release 2301)

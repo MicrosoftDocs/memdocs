@@ -175,7 +175,7 @@ Before installing Microsoft Tunnel Gateway on a Linux server, configure your ten
 
 6. After setup installs the certificate and creates the Tunnel Gateway services, you’re prompted to sign in and authenticate with Intune. The user account must have either the Intune Administrator or Global Administrator roles assigned. The account you use to complete the authentication must have an Intune license. The credentials of this account aren't saved and are only used for initial sign-in to Azure Active Directory. After successful authentication, Azure app IDs/secret keys are used for authentication between the Tunnel Gateway and Azure Active Directory.
 
-   This authentication registers Tunnel Gateway with Microsoft Endpoint Manager and your Intune tenant.
+   This authentication registers Tunnel Gateway with Microsoft Intune and your Intune tenant.
 
    1. Open a web browser to <https://Microsoft.com/devicelogin> and enter the device code that’s provided by the installation script, and then sign in with your Intune admin credentials.
 
