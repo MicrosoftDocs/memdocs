@@ -162,7 +162,7 @@ This setting is applied once during the out-of-box automated device enrollment e
 * iOS/iPadOS 13+ devices enrolling without user affinity
 * iOS/iPadOS 13+ devices enrolling with Azure AD shared mode
 
-You will be able to enable or disable this feature in new and existing enrollment profiles with the new setting.
+You will be able to enable or disable this feature in new and existing enrollment profiles with the new setting. We recommend you set it to **Yes** to utilizing the Awaiting final configuration feature during Setup Assistant. The default for existing enrollment profiles is No, and the default for new enrollment profiles is Yes. 
 
 ### New setting gives Intune admins control over device-to-category mapping<!-- 15029839  -->  
 Control visibility of the device category prompt in Intune Company Portal. Instead of making device users select the category, like they currently do, you'll be able to hide the prompt and leave the device-to-category mapping up to Intune admins. The new setting will be available in the admin center under **Tenant Administration** > **Customization** > **Device Categories**.
