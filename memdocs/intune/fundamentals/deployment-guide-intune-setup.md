@@ -151,7 +151,7 @@ Configuration Manager supports Windows Servers, and Windows & macOS client devic
 
 If you currently use Configuration Manager, and want to use Intune, then you have the following options.
 
-### Option 1: Add tenant attach
+### Option 1 - Add tenant attach
 
 Tenant attach allows you to upload your Configuration Manager devices to your organization in Intune, also known as a "tenant". After you attach your devices, you use the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) to run remote actions, such as sync machine and user policy. You can also see your on-premises servers, and get OS information.
 
@@ -159,7 +159,7 @@ Tenant attach is included with your [Configuration Manager co-management license
 
 For more information, see [enable tenant attach](../../configmgr/tenant-attach/device-sync-actions.md).
 
-### Option 2: Set up co-management
+### Option 2 - Set up co-management
 
 This option uses Configuration Manager for some workloads, and uses Intune for other workloads.
 
@@ -175,7 +175,7 @@ Helpful information:
 - [Switch Configuration Manager workloads to Intune](../../configmgr/comanage/how-to-switch-workloads.md)
 - [Configuration Manager product and licensing FAQ](../../configmgr/core/understand/product-and-licensing-faq.yml)
 
-### Option 3: Move from Configuration Manager to Intune
+### Option 3 - Move from Configuration Manager to Intune
 
 Most existing Configuration Manager customers want to keep using Configuration Manager. It includes services that are beneficial for on-premises devices.
 
@@ -207,7 +207,7 @@ Devices are ready to be enrolled in Intune, and receive your policies.
 >
 > To help minimize vulnerabilities, move macOS devices after Intune is set up, and when your enrollment policies are ready to be deployed.
 
-### Option 4: Start from scratch with Microsoft 365 and Intune
+### Option 4 - Start from scratch with Microsoft 365 and Intune
 
 This option applies to Windows client devices. If you use Windows Server OSs, such as Windows Server 2022, then don't use this option. Use Configuration Manager.
 

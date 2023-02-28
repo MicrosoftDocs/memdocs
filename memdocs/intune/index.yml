@@ -183,21 +183,18 @@ conceptualContent:
 
     - title: Control device features and settings
       links:
-        - url: ./configuration/device-profiles.md
+        - url: ./configuration/device-profile-create.md
           itemType: concept
-          text: Device configuration overview
-        - url: ./configuration/device-restrictions-configure.md
-          itemType: how-to-guide
-          text: Restrict or manage device settings and features
-        - url: ./configuration/vpn-settings-configure.md
-          itemType: how-to-guide
-          text: Add a VPN connection to devices
+          text: Create a device configuration policy
         - url: ./configuration/group-policy-analytics.md
           itemType: how-to-guide
           text: Analyze your on-premises GPOs with Intune
         - url: ./configuration/settings-catalog.md
           itemType: how-to-guide
           text: Learn more about the settings catalog
+      footerLink:
+        text: Browse all device configuration articles
+        url: ./configuration/device-profiles.md
 
     - title: Assign and deploy policies
       links:
@@ -375,10 +372,7 @@ conceptualContent:
 
     - title: Government
       links:
-        - url: ./fundamentals/introduction-intune-government.md
-          itemType: concept
-          text: What is Intune for Government?
-        - url: ./fundamentals/ems-intune-govt-service-description.md
+        - url: ./fundamentals/intune-govt-service-description.md
           itemType: how-to-guide
           text: Intune US Government service description
         - url: ./fundamentals/intune-us-government-endpoints.md

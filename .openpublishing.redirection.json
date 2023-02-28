@@ -1,6 +1,12 @@
 {
     "redirections": [
         {
+            "source_path": "memdocs/intune/fundamentals/introduction-intune-government.md",
+            "redirect_url": "/mem/intune/fundamentals/intune-govt-service-description",
+            "redirect_document_id": false
+        }, 
+
+        {
             "source_path": "memdocs/intune/fundamentals/end-user-educate.md",
             "redirect_url": "/mem/intune/fundamentals/intune-planning-guide",
             "redirect_document_id": false

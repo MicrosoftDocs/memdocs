@@ -341,10 +341,7 @@ conceptualContent:
 
     - title: Government
       links:
-        - url: ./fundamentals/introduction-intune-government.md
-          itemType: concept
-          text: What is Intune for Government?
-        - url: ./fundamentals/ems-intune-govt-service-description.md
+        - url: ./fundamentals/intune-govt-service-description.md
           itemType: how-to-guide
           text: Intune US Government service description
         - url: ./fundamentals/intune-us-government-endpoints.md
