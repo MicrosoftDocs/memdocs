@@ -19,7 +19,7 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: 
 ms.collection:
-- tier2
+- tier1
 - M365-identity-device-management
 ---
 
