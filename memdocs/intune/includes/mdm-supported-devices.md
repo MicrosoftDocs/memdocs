@@ -31,7 +31,7 @@ ms.localizationpriority: high
 
 ### Linux
 
-- Ubuntu Desktop 22.04.1 LTS with a GNOME graphical desktop environment
+- Ubuntu Desktop 22.04 LTS with a GNOME graphical desktop environment
 - Ubuntu Desktop 20.04 LTS with a GNOME graphical desktop environment
 
 > [!NOTE]
