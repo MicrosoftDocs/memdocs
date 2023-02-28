@@ -266,6 +266,9 @@ With the public preview you’ll be able to configure policies for *automatic* a
 
 Endpoint Privilege Management is part of the [Intune Suite](../fundamentals/intune-add-ons.md) offering, and free to try while it remains in public preview.
 
+### Additional reporting information related to tenant attach devices<!-- 9220597  -->
+We're adding the ability to view information for tenant attach devices in the existing antivirus reports under the Endpoint Security workload. There will be a new column to differentiate between devices managed by Intune and devices managed by Configuration Manager. This reporting information will be available in [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Endpoint security** > **Antivirus**.
+
 ### Support for tamper protection in policies for Security settings management for Microsoft Defender for Endpoint <!-- 13204113 -->  
 You’ll soon be able to manage Tamper protection for Microsoft Defender for Endpoint on unenrolled devices as part of the [MDE Security configuration](../protect/mde-security-integration.md#which-solution-should-i-use) scenario.
 
