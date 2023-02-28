@@ -212,7 +212,7 @@ Microsoft Tunnel for MAM on Android doesn't provide support for delivering Trust
 
 ### Defender for Endpoint certificate error when suing a TLS/SSL certificate from a private certificate authority
 
-A Microsoft Tunnel Gateway server that use a TLS/SSL certificate issued by a private (on-premises) CA  generates a Defender for Endpoint certificate error when attempting to connect.
+When Microsoft Tunnel Gateway server uses a TLS/SSL certificate issued by a private (on-premises) CA, Microsoft Defender for Endpoint generates a certificate error when attempting to connect.
 
 **Work around**: Manually install the corresponding trusted root certificate of the private certificate authority on the Android device. A future update of the Defender for Endpoint app will provide support and remove the need to manually install the trusted root certificate.
 
