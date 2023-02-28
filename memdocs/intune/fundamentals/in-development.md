@@ -168,6 +168,9 @@ You will be able to enable or disable this feature in new and existing enrollmen
 ### New setting gives Intune admins control over device-to-category mapping<!-- 15029839  -->  
 Control visibility of the device category prompt in Intune Company Portal. Instead of making device users select the category, like they currently do, you'll be able to hide the prompt and leave the device-to-category mapping up to Intune admins. The new setting will be available in the admin center under **Tenant Administration** > **Customization** > **Device Categories**.
 
+### Support for multiple enrollment profiles and tokens for fully managed devices <!-- 14205233 -->  
+Create multiple enrollment profiles and tokens for Android Enterprise fully managed devices. With this new functionality, you'll also be able to use the *EnrollmentProfileName* dynamic device property to automatically assign enrollment profiles to fully managed devices. The enrollment token that came with your tenant will remain in a default profile.
+
 <!-- *********************************************** -->
 
 ## Device management
