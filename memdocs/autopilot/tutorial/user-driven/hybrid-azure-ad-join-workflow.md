@@ -36,18 +36,23 @@ Register devices as Autopilot devices > Create a device group > Configure and as
 
 Autopilot user-driven hybrid Azure AD join steps:
 > [!div class="checklist"]
-> -
-> -
-> - Step 1: 
-> - Step 1: [Register devices as Autopilot devices](autopilot-user-driven-haad-1-register-device.md)
-> - Step 2: [Create a device group](autopilot-user-driven-haad-2-create-device-group.md)
-> - Step 3: [Configure and assign Autopilot Enrollment Status Page (ESP)](autopilot-user-driven-haad-3-configure-and-assign-esp.md)
-> - Step 4: [Create and assign hybrid Azure AD join Autopilot profile](autopilot-user-driven-haad-4-create-and-assign-autopilot-profile.md)
-> - Step 5: [Configure and assign domain join profile](autopilot-user-driven-haad-5-create-and-assign-domain-join-profile.md)
+> - Step 1: [Set up Windows automatic enrollment](hybrid-azure-ad-join-automatic-enrollment.md)
+> - Step 2: [Increase the computer account limit in the Organizational Unit](hybrid-azure-ad-join-computer-account-limit.md)
+> - Step 3: [Install the Intune Connector](hybrid-azure-ad-join-intune-connector.md)
+> - Step 4: [Register devices as Autopilot devices](hybrid-azure-ad-join-register-device.md)
+> - Step 5: [Create a device group](hybrid-azure-ad-join-device-group.md)
+> - Step 6: [Configure and assign Autopilot Enrollment Status Page (ESP)](hybrid-azure-ad-join-esp.md)
+> - Step 7: [Create and assign hybrid Azure AD join Autopilot profile](hybrid-azure-ad-join-autopilot-profile.md)
+> - Step 8: [Configure and assign domain join profile](hybrid-azure-ad-join-domain-join-profile.md)
 
 > [!NOTE]
 >
 > Although the workflow is designed for lab or testing scenarios, it can also be used in a production environment. Some of the steps in the workflow are interchangeable and interchanging some of the steps may make more sense in a production environment. For example, the **Create a device group** step followed by the **Register devices as Autopilot devices** step may make more sense in a production environment.
+
+## Step 1 of 7: Set up Windows automatic enrollment
+
+> [!div class="nextstepaction"]
+> [Step 1: Set up Windows automatic enrollment](hybrid-azure-ad-join-automatic-enrollment.md)
 
 ## More info
 

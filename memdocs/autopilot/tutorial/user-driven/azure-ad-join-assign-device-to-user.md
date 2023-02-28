@@ -1,0 +1,38 @@
+---
+title: Windows Autopilot user-driven Azure AD join - Step 7 of 7 - Assign Autopilot device to a user
+description: How to - Windows Autopilot user-driven Azure AD join - Step 7 of 7 - Assign Autopilot device to a user.
+ms.prod: windows-client
+ms.localizationpriority: medium
+author: frankroj
+ms.author: frankroj
+ms.reviewer: jubaptis
+manager: aaroncz
+ms.date: 02/13/2023
+ms.topic: tutorial
+ms.collection: 
+  - tier1
+  - highpri
+ms.technology: itpro-deploy
+---
+
+# User-driven Azure AD join: Assign Autopilot device to a user (optional)
+
+Autopilot user-driven Azure AD join steps:
+- Step 1: [Set up Windows automatic enrollment](azure-ad-join-automatic-enrollment.md)
+- Step 2: [Configure device settings](azure-ad-join-device-settings.md)
+- Step 3: [Register devices as Autopilot devices](azure-ad-join-register-device.md)
+- Step 4: [Create a device group](azure-ad-join-device-group.md)
+- Step 5: [Configure and assign Autopilot Enrollment Status Page (ESP)](azure-ad-join-esp.md)
+- Step 6: [Create and assign Autopilot profile](azure-ad-join-autopilot-profile.md)
+> [!div class="checklist"]
+> - **Step 7: Assign Autopilot device to a user (optional)**
+
+For an overview of the Windows Autopilot user-driven Azure AD join workflow, see [Windows Autopilot user-driven Azure AD join overview](azure-ad-join-workflow.md)
+
+## Assign Autopilot device to a user (optional)
+
+[!INCLUDE [How to assign an Autopilot device to a user](../includes/assign-autopilot-device-to-user.md)]
+
+## Assigning Autopilot device to a user via hardware hash CSV file
+
+[!INCLUDE [How to assign an Autopilot device to a user via hardware hash CSV file](../includes/assign-autopilot-device-to-user-via-csv.md)]

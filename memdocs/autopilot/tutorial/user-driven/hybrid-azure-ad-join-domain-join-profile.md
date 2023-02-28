@@ -1,6 +1,6 @@
 ---
-title: Windows Autopilot user-driven hybrid Azure AD join - Step 5 of 5 - Create and assign a domain join profile
-description: Howe to - Windows Autopilot hybrid user-driven Azure AD join - Step 5 of 5 - Create and assign a domain join profile.
+title: Windows Autopilot user-driven hybrid Azure AD join - Step 8 of 8 - Create and assign a domain join profile
+description: How to - Windows Autopilot hybrid user-driven Azure AD join - Step 8 of 8 - Create and assign a domain join profile.
 ms.prod: windows-client
 ms.localizationpriority: medium
 author: frankroj
@@ -15,15 +15,20 @@ ms.collection:
 ms.technology: itpro-deploy
 ---
 
-# Windows Autopilot user-driven hybrid Azure AD join - Step 5 of 5: Create and assign a domain join profile
+# User-driven hybrid Azure AD join: Create and assign a domain join profile
 
 Autopilot user-driven hybrid Azure AD join steps:
-- Step 1: [Register devices as Autopilot devices](autopilot-user-driven-haad-1-register-device.md)
-- Step 2: [Create a device group](autopilot-user-driven-haad-2-create-device-group.md)
-- Step 3: [Configure and assign Autopilot Enrollment Status Page (ESP)](autopilot-user-driven-haad-3-configure-and-assign-esp.md)
-- Step 4: [Create and assign hybrid Azure AD join Autopilot profile](autopilot-user-driven-haad-4-create-and-assign-autopilot-profile.md)
+- Step 1: [Set up Windows automatic enrollment](hybrid-azure-ad-join-automatic-enrollment.md)
+- Step 2: [Increase the computer account limit in the Organizational Unit](hybrid-azure-ad-join-computer-account-limit.md)
+- Step 3: [Install the Intune Connector](hybrid-azure-ad-join-intune-connector.md)
+- Step 4: [Register devices as Autopilot devices](hybrid-azure-ad-join-register-device.md)
+- Step 5: [Create a device group](hybrid-azure-ad-join-device-group.md)
+- Step 6: [Configure and assign Autopilot Enrollment Status Page (ESP)](hybrid-azure-ad-join-esp.md)
+- Step 7: [Create and assign hybrid Azure AD join Autopilot profile](hybrid-azure-ad-join-autopilot-profile.md)
 > [!div class="checklist"]
-> - **Step 5: Configure and assign domain join profile**
+> - Step 8: [Configure and assign domain join profile](hybrid-azure-ad-join-domain-join-profile.md)
+
+For an overview of the Windows Autopilot hybrid user-driven Azure AD join workflow, see [Windows Autopilot user-driven hybrid Azure AD join overview](autopilot-user-driven-haad-workflow.md)
 
 ## Create and assign a domain join profile
 
@@ -80,4 +85,3 @@ Autopilot user-driven hybrid Azure AD join steps:
 12. In the **Applicability Rules** page, select **Next**. No configuration is needed in this page.
 
 13. On the **Review + Create** page, review and verify that all of the settings are set as desired, and then choose **Create** to create the domain join profile.
-

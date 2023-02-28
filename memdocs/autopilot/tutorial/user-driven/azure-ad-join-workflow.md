@@ -36,15 +36,22 @@ Register devices as Autopilot devices > Create a device group > Configure and as
 
 Autopilot user-driven Azure AD join steps:
 > [!div class="checklist"]
-> - Step 1: [Register devices as Autopilot devices](autopilot-user-driven-aadj-1-register-device.md)
-> - Step 2: [Create a device group](autopilot-user-driven-aadj-2-create-device-group.md)
-> - Step 3: [Configure and assign Autopilot Enrollment Status Page (ESP)](autopilot-user-driven-aadj-3-configure-and-assign-esp.md)
-> - Step 4: [Create and assign Autopilot profile](autopilot-user-driven-aadj-4-create-and-assign-autopilot-profile.md)
-> - Step 5: [Assign Autopilot device to a user (optional)](autopilot-user-driven-aadj-5-assign-autopilot-device-to-user.md)
+> - Step 1: [Set up Windows automatic enrollment](azure-ad-join-automatic-enrollment.md)
+> - Step 2: [Configure device settings](azure-ad-join-device-settings.md)
+> - Step 3: [Register devices as Autopilot devices](azure-ad-join-register-device.md)
+> - Step 4: [Create a device group](azure-ad-join-device-group.md)
+> - Step 5: [Configure and assign Autopilot Enrollment Status Page (ESP)](azure-ad-join-esp.md)
+> - Step 6: [Create and assign Autopilot profile](azure-ad-join-autopilot-profile.md)
+> - Step 7: [Assign Autopilot device to a user (optional)](azure-ad-join-assign-device-to-user.md)
 
 > [!NOTE]
 >
 > Although the workflow is designed for lab or testing scenarios, it can also be used in a production environment. Some of the steps in the workflow are interchangeable and interchanging some of the steps may make more sense in a production environment. For example, the **Create a device group** step followed by the **Register devices as Autopilot devices** step may make more sense in a production environment.
+
+## Step 1 of 7: Set up Windows automatic enrollment
+
+> [!div class="nextstepaction"]
+> [Step 1: Set up Windows automatic enrollment](azure-ad-join-automatic-enrollment.md)
 
 ## More info
 

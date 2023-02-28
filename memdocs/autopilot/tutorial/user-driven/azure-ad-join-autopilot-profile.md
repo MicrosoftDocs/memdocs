@@ -1,6 +1,6 @@
 ---
-title: Windows Autopilot user-driven Azure AD join - Step 4 of 5 - Create and assign user-driven Azure AD join Autopilot profile
-description: Howe to - Windows Autopilot user-driven Azure AD join - Step 4 of 5 - Create and assign user-driven Azure AD join Autopilot profile.
+title: Windows Autopilot user-driven Azure AD join - Step 6 of 7 - Create and assign user-driven Azure AD join Autopilot profile
+description: How to - Windows Autopilot user-driven Azure AD join - Step 6 of 7 - Create and assign user-driven Azure AD join Autopilot profile.
 ms.prod: windows-client
 ms.localizationpriority: medium
 author: frankroj
@@ -15,17 +15,19 @@ ms.collection:
 ms.technology: itpro-deploy
 ---
 
-# Windows Autopilot user-driven Azure AD join - Step 4 of 5: Create and assign user-driven Azure AD join Autopilot profile
+# User-driven Azure AD join: Create and assign user-driven Azure AD join Autopilot profile
 
 Autopilot user-driven Azure AD join steps:
-- Step 1: [Register devices as Autopilot devices](autopilot-user-driven-aadj-1-register-device.md)
-- Step 2: [Create a device group](autopilot-user-driven-aadj-2-create-device-group.md)
-- Step 3: [Configure and assign Autopilot Enrollment Status Page (ESP)](autopilot-user-driven-aadj-3-configure-and-assign-esp.md)
+- Step 1: [Set up Windows automatic enrollment](azure-ad-join-automatic-enrollment.md)
+- Step 2: [Configure device settings](azure-ad-join-device-settings.md)
+- Step 3: [Register devices as Autopilot devices](azure-ad-join-register-device.md)
+- Step 4: [Create a device group](azure-ad-join-device-group.md)
+- Step 5: [Configure and assign Autopilot Enrollment Status Page (ESP)](azure-ad-join-esp.md)
 > [!div class="checklist"]
-> - **Step 4: Create and assign Azure AD join Autopilot profile**
-- Step 5: [Assign Autopilot device to a user (optional)](autopilot-user-driven-aadj-5-assign-autopilot-device-to-user.md)
+> - **Step 6: Create and assign Autopilot profile**
+- Step 7: [Assign Autopilot device to a user (optional)](azure-ad-join-assign-device-to-user.md)
 
-For an overview of the Windows Autopilot user-driven Azure AD join workflow, see [Windows Autopilot user-driven Azure AD join overview](autopilot-user-driven-aadj-workflow.md)
+For an overview of the Windows Autopilot user-driven Azure AD join workflow, see [Windows Autopilot user-driven Azure AD join overview](azure-ad-join-workflow.md)
 
 ## Create and assign user-driven Azure AD join Autopilot profile
 
@@ -106,9 +108,9 @@ For more information on creating and assigning Autopilot profiles, see the follo
 
 ## Verify device has an Autopilot profile assigned to it
 
-[!INCLUDE [How to verify a device has an Autopilot profile assigned to it in Intune](includes/verify-autopilot-profile-assignment.md)]
+[!INCLUDE [How to verify a device has an Autopilot profile assigned to it in Intune](../includes/verify-autopilot-profile-assignment.md)]
 
-## Next step - Step 5 of 5: Assign Autopilot device to a user (optional)
+## Next step - Step 7 of 7: Assign Autopilot device to a user (optional)
 
 > [!div class="nextstepaction"]
-> [Step 5: Assign Autopilot device to a user (optional)](autopilot-user-driven-aadj-5-assign-autopilot-device-to-user.md)
+> [Step 7: Assign Autopilot device to a user (optional)](azure-ad-join-assign-device-to-user.md)
