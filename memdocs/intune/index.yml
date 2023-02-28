@@ -335,7 +335,7 @@ conceptualContent:
           text: Troubleshoot policies and profiles in Intune
       footerLink:
         text: Browse all troubleshooting articles
-        url: ./troubleshoot/mem/intune/welcome-intune/index?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+        url: /troubleshoot/mem/intune/welcome-intune/index?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
 
   - title: Platform and industry guides
     items:
