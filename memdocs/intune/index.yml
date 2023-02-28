@@ -104,18 +104,19 @@ conceptualContent:
    
     - title: Set up Intune subscription
       links:
-        - url: ./fundamentals/deployment-plan-setup.md
+        - url: ./fundamentals/account-sign-up.md
           itemType: how-to-guide
-          text: Steps to set up Intune
-        - url: ./fundamentals/supported-devices-browsers.md
-          itemType: reference
-          text: Supported operating systems and browsers
-        - url: ./fundamentals/role-based-access-control.md
-          itemType: reference
-          text: Role-based access control
+          text: Sign up or sign in to Microsoft Intune
+        - url: ./fundamentals/users-add.md
+          itemType: how-to-guide
+          text: Add users
         - url: ./fundamentals/licenses.md
           itemType: concept
           text: Intune licensing
+        - url: ./fundamentals/role-based-access-control.md
+          itemType: reference
+          text: Role-based access control
+        
       footerLink:
         text: Browse all Intune subscription articles
         url: ./fundamentals/account-sign-up.md
