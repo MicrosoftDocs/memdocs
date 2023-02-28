@@ -15,7 +15,7 @@ ms.localizationpriority: high
 # What is advanced Endpoint analytics
 
 > [!NOTE]
-> This capability is available as an Intune add-on. For more information, see [Intune add-ons](../intune/fundamentals/premium-add-ons.md).
+> This capability is available as an Intune add-on. For more information, see [Intune add-ons](../intune/fundamentals/intune-add-ons.md).
 
 The Microsoft Intune Suite includes advanced features for Endpoint analytics, such as:
 
@@ -38,7 +38,7 @@ The advanced features in Endpoint analytics build on top of the existing base En
 
 In addition to [license requirements](enroll-intune.md#licensing-prerequisites) for Endpoint analytics, an add-on license is required to use advanced features in Endpoint analytics. 
 
-The advanced features in Endpoint analytics are included as an Intune-add on under [Microsoft Intune Suite](../intune/fundamentals/premium-add-ons.md) and requires an extra cost to the licensing options that include Microsoft Endpoint Manager or Intune.
+The advanced features in Endpoint analytics are included as an Intune-add on under [Microsoft Intune Suite](../intune/fundamentals/intune-add-ons.md) and requires an extra cost to the licensing options that include Microsoft Endpoint Manager or Intune.
 
 ## Mixed licensing scenarios
 
