@@ -7,7 +7,7 @@ keywords: configure, manage, capabilities, attack surface reduction, next-genera
 author: brenduns 
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/06/2022
+ms.date: 02/28/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -99,7 +99,7 @@ You only need to enable Microsoft Defender for Endpoint a single time per tenant
       - Set **Connect Android devices** to Microsoft Defender for Endpoint for app protection policy evaluation to **On**.  
       - Set **Connect iOS devices** to Microsoft Defender for Endpoint for app protection policy evaluation to **On**.  
 
-    For more information about both MDM Compliance Policy Settings and App Protection Policy Settings, see [Mobile Threat Defense toggle options](../protect/mtd-connector-enable.md#mobile-threat-defense-toggle-options).
+    To set up an integration Microsoft Defender for Endpoint for compliance and app protection policy evaluation, you must have a role that includes the *Mobile Threat Defense* permission in Intune. The *Endpoint Security Manager* built-in admin role for Intune has this permission included. For more information about both MDM Compliance Policy Settings and App Protection Policy Settings, see [Mobile Threat Defense toggle options](../protect/mtd-connector-enable.md#mobile-threat-defense-toggle-options).
 
 5. Select **Save**.
 
