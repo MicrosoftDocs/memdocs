@@ -74,7 +74,7 @@ If you currently don't use any MDM or mobile application management (MAM) provid
   - [Step 4 - Create device configuration profiles to secure devices](deployment-plan-configuration-profile.md)
   - [Step 5 - Enroll devices](deployment-guide-enrollment.md)
 
-- **Configuration Manager**: If you want the features of Configuration Manager (on-premises) combined with Intune (cloud), then consider [tenant attach](#option-1-add-tenant-attach) or [co-management](#option-2-set-up-co-management).
+- **Configuration Manager**: If you want the features of Configuration Manager (on-premises) combined with Intune (cloud), then consider [tenant attach](#option-1---add-tenant-attach) or [co-management](#option-2---set-up-co-management).
 
   Configuration Manager can:
 
@@ -184,7 +184,7 @@ These steps are an overview, and are only included for those users who want a 10
 - Register existing on-premises Active Directory Windows client devices as devices in Azure Active Directory (AD).
 - Move your existing on-premises Configuration Manager workloads to Intune.
 
-This option is more work for administrators, but can create a more seamless experience for existing Windows client devices. For new Windows client devices, it's recommended to [start from scratch with Microsoft 365 and Intune](#option-4-start-from-scratch-with-microsoft-365-and-intune) (in this article).
+This option is more work for administrators, but can create a more seamless experience for existing Windows client devices. For new Windows client devices, it's recommended to [start from scratch with Microsoft 365 and Intune](#option-4---start-from-scratch-with-microsoft-365-and-intune) (in this article).
 
 1. Set up [hybrid Active Directory and Azure AD](/azure/active-directory/devices/hybrid-azuread-join-plan) for your devices. Hybrid Azure AD joined devices are joined to your on-premises Active Directory, and registered with your Azure AD. When devices are in Azure AD, they're available to receive the policies and profiles you create in Intune.
 

@@ -15,6 +15,10 @@ ms.suite: ems
 
 # optional metadata
 ms.reviewer: pfetty
+ms.collection:
+- tier1
+- M365-identity-device-management
+- highpri
 ---
 
 # Microsoft Intune for US Government GCC High and DoD service description
@@ -27,7 +31,7 @@ To learn more about Intune for GCC customers, go to [EMS offers for US Governmen
 
 The Intune GCC High and DoD offering are built on the Microsoft Azure Government Cloud. It's designed to interoperate with Microsoft 365 GCC High and DoD environments. 
 
-For more information about Intune, and what you can do, go to [Microsoft Intune securely manages identities, manages apps, and manages devices](/mem/intune/fundamentals/what-is-intune). Use this documentation as your starting point for deploying and using Microsoft Intune.
+For more information about Intune, and what you can do, go to [Microsoft Intune securely manages identities, manages apps, and manages devices](what-is-intune.md). Use this documentation as your starting point for deploying and using Microsoft Intune.
 
 Intune has two service instances:
 
@@ -42,7 +46,7 @@ Intune has two service instances:
 
 - There isn't a built-in way to migrate from the commercial service to the government cloud, and vice versa. To migrate, devices need to unenroll from the current tenant, and then re-enroll to the new tenant.
 
-  This approach is similar to unenrolling from another MDM service and enrolling in Intune. For more information, go to [Deployment guide: Setup or move to Microsoft Intune](/mem/intune/fundamentals/deployment-guide-intune-setup#currently-use-a-third-party-mdm-provider).
+  This approach is similar to unenrolling from another MDM service and enrolling in Intune. For more information, go to [Deployment guide: Setup or move to Microsoft Intune](deployment-guide-intune-setup.md#currently-use-a-third-party-mdm-provider).
 
 - In the government cloud, the Intune service instance is shared with GCC High and DoD tenants. This architecture is slightly different than other services, such as Microsoft 365 and Azure.
 
@@ -56,15 +60,15 @@ Intune has two service instances:
 - Microsoft Store for Business is not available to GCC High and DoD customers.
 - Intune for GCC High only supports the Mobile Threat Defense (MTD) connectors for Android and iOS devices with MTD vendors that **also have support** in this government environment. When you sign in to a GCC-H tenant, you'll see the connectors enabled for those specific vendors.
 - Microsoft Endpoint Manager Endpoint Analytics and Log Analytics are not currently available for U.S. Government customers.
-- Intune for GCC High does not support the [TeamViewer connector](/mem/intune/remote-actions/teamviewer-support) or TeamViewer feature.
+- Intune for GCC High does not support the [TeamViewer connector](../remote-actions/teamviewer-support.md) or TeamViewer feature.
 - Intune for GCC High and DoD does not support Android (AOSP) management for corporate devices.
-- Intune for GCC High and DoD does not support [Feature updates](/mem/intune/protect/windows-10-feature-updates).
-- Intune for GCC High and DoD does not support [Expedited updates](/mem/intune/protect/windows-10-expedite-updates).
+- Intune for GCC High and DoD does not support [Feature updates](../protect/windows-10-feature-updates.md).
+- Intune for GCC High and DoD does not support [Expedited updates](../protect/windows-10-expedite-updates.md).
 - [Android based Teams devices](/microsoftteams/rooms/teams-devices-feature-comparison#feature-comparison-between-windows-and-android) are not fully supported in GCC High and DoD clouds. Planning is underway. 
   - Android based Teams devices may still function correctly in GCC High and DoD clouds. If a functionality issue is discovered, support is best effort.
   - Windows based Teams devices are fully supported in GCC High and DoD clouds. 
-- Intune for GCC High and DoD doesn't support management of [Linux](/mem/intune/user-help/enroll-device-linux) devices.
+- Intune for GCC High and DoD doesn't support management of [Linux](../user-help/enroll-device-linux.md) devices.
 
 ## Next steps
 
-To learn more about Intune and how to get started, go to the [Microsoft Intune planning guide](/mem/intune/fundamentals/intune-planning-guide).
+To learn more about Intune and how to get started, go to the [Microsoft Intune planning guide](intune-planning-guide.md).
