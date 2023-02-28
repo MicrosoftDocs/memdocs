@@ -86,9 +86,9 @@ productDirectory:
       summary: Guides that consolidate information specific to a platform or industry.
       url: ./index.yml#platform-and-industry-guides
     # Card
-    - title: Additional technical resources
+    - title: Related services
       imageSrc: ./media/icons/resources-device.svg
-      summary: Resource to find information about related technologies, such as Microsoft 365.
+      summary: Resource to find information about related services, such as Microsoft 365.
       url: ./index.yml#related-services
     # Card
     - title: Intune community resources
