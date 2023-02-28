@@ -69,7 +69,7 @@ You must select an [ANC](azure-network-connections.md) for your provisioning pol
 
 To select an ANC, follow these steps:
 
-1. On the On the **General** page, for **Azure network connection**, select one or more ANCs. For more information about using multiple ANCs, see [Alternate ANCs](azure-network-connections.md#alternate-ancs).
+1. On the **General** page, for **Azure network connection**, select one or more ANCs. For more information about using multiple ANCs, see [Alternate ANCs](azure-network-connections.md#alternate-ancs).
 
 2. If you select more than one ANC, you can set the priority order for those ANCs. To do so, hover over an ANC > click and drag on the three dots > drag the ANC to a different position in the list.
 
