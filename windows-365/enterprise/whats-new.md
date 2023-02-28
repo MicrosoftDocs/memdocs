@@ -67,7 +67,7 @@ The Windows 365 app has moved out of preview and into general availability. For 
 
 #### Hardware acceleration for Cloud PCs using the browser<!--43105503-->
 
-On windows365.microsoft.com, you can turn on hardware acceleration for your Cloud PC (while connecting using the web client). This option is turned on by default and it decreases network latency, improving the windows365.microsoft.com web client Cloud PC experience.
+On the windows365.microsoft.com web client, you can now benefit from hardware acceleration. This option is turned on by default and improves motion performance for activities like scrolling, moving windows, or playback of video.
 
 #### Configure installed language and region for provisioning Cloud PCs in GCC/H environments<!--43290793 -->
 
