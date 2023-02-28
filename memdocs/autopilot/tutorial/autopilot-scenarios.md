@@ -20,6 +20,8 @@ ms.technology: itpro-deploy
 1. Windows Autopilot user-driven mode
    1. [Azure AD join](autopilot-user-driven-aadj-workflow.md)
    2. [Hybrid Azure AD join](autopilot-user-driven-haad-workflow.md)
+      1. On-premise
+      2. VPN
 2. Windows Autopilot self-deploying mode
 3. Windows Autopilot Pre-provisioning
 4. Windows Autopilot for existing devices

@@ -31,6 +31,6 @@ For an overview of the Windows Autopilot user-driven Azure AD join workflow, see
 
 [!INCLUDE [How to assign an Autopilot device to a user](includes/assign-autopilot-device-to-user.md)]
 
-### Assigning Autopilot device to a user via hardware hash CSV file
+## Assigning Autopilot device to a user via hardware hash CSV file
 
 [!INCLUDE [How to assign an Autopilot device to a user via hardware hash CSV file](includes/assign-autopilot-device-to-user-via-csv.md)]

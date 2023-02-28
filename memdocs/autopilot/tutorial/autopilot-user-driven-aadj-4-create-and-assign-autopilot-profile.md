@@ -63,9 +63,9 @@ To create an user-driven Azure AD join Autopilot profile, follow the below steps
 
       - For **Privacy settings**, select **Hide** to skip the privacy settings.
 
-      - For **Hide change account options**: Choose **Hide**.
+      - For **Hide change account options**, select Choose **Hide**.
 
-      - For **User account type**, choose the desired account type for the user (**Administrator** or **Standard** user). If **Administrator** is chosen, the user will added to the local Admin group.
+      - For **User account type**, select the desired account type for the user (**Administrator** or **Standard** user). If **Administrator** is chosen, the user will be added to the local Admin group.
 
       - For **Allow pre-provisioned deployment**, select **No**..
 
@@ -80,19 +80,23 @@ To create an user-driven Azure AD join Autopilot profile, follow the below steps
         - Use the [%SERIAL% macro](/windows/client-management/mdm/accounts-csp) to add a hardware-specific serial number.
         - Use the [%RAND:x% macro](/windows/client-management/mdm/accounts-csp) to add a random string of numbers, where x equals the number of digits to add.
 
-        > [!NOTE]
-        >
-        > The above settings have been selected to minimize needed user interaction during device setup. However, some of the settings that are hidden can instead be shown as desired.
-        >
-        > Also note that if language and keyboard settings are shown instead of hidden, they require ethernet connectivity. Wi-fi connectivity isn't supported because of the requirement to choose a language, locale, and keyboard to initiate the Wi-fi connection.
+      > [!NOTE]
+      >
+      > The above settings have been selected to minimize needed user interaction during device setup. However, some of the settings that are hidden can instead be shown as desired. For example, some regions may require that **Privacy settings** always be shown.
+      >
+      > Also note that if language and keyboard settings are shown instead of hidden, they require ethernet connectivity. Wi-fi connectivity isn't supported because of the requirement to choose a language, locale, and keyboard to initiate the Wi-fi connection.
 
 9. Once the options in the **Out-of-box experience (OOBE)** page are configured as desired, select **Next**.
 
 10. On the **Assignments** page, under **Included groups**, choose **Add groups**.
 
-11. In the **Select groups to include** page, choose the device group(s) to assign this Autopilot profile to. This is normally the device group created in the step [Create device group](autopilot-user-driven-aadj-2-create-device-group.md) above. Once done, select **Select**.
+11. In the **Select groups to include** page, choose the device group(s) to assign this Autopilot profile to. This is normally the device group created in the step [Create device group](autopilot-user-driven-aadj-2-create-device-group). Once done, select **Select**.
 
-12. In the **Create profile** page, select **Next**.
+    > [!NOTE]
+    >
+    > Make sure to add the correct device groups under **Included groups** and not under **Excluded groups**. Accidentally adding the desired device groups under **Excluded groups** will result in those devices being excluded and they won't receive the Autopilot profile.
+
+12. In the **Assignments** page, verify the correct device group(s) appear under **Included groups** > **Groups** and then select **Next**.
 
 13. On the **Review + Create** page, review and verify that all of the settings are set as desired, and then choose **Create** to create the Autopilot profile.
 
@@ -100,7 +104,7 @@ For more information on creating and assigning Autopilot profiles, see the follo
 
 - [Configure Autopilot profiles](/mem/autopilot/profiles)
 
-### Verify device has an Autopilot profile assigned to it
+## Verify device has an Autopilot profile assigned to it
 
 [!INCLUDE [How to verify a device has an Autopilot profile assigned to it in Intune](includes/verify-autopilot-profile-assignment.md)]
 
