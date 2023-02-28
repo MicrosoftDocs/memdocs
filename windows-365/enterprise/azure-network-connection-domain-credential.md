@@ -88,7 +88,7 @@ Credentials often change and need updating. Windows 365 doesn’t proactively de
 When there’s a change to the domain credential of the user account associated with an ANC, the new credential should be manually updated by the Windows 365 administrator. The new credential is then automatically re-encrypted and updated in the Windows 365 service.
 
 > [!NOTE]  
-> If the domain credential is changed in your on-premises Active Directory environment, but you don’t manually update the ANC, Windows 365 will still use the old credential for ANC [health checks](health-checks.md). Therefore, these health checks will fail because the credentials on record are no longer valid. To make sure such failures don’t happen, [update the [Azure network connection](edit-azure-network-connection.md) configuration with the new credentials immediately.
+> If the domain credential is changed in your on-premises Active Directory environment, but you don’t manually update the ANC, Windows 365 will still use the old credential for ANC [health checks](health-checks.md). Therefore, these health checks will fail because the credentials on record are no longer valid. To make sure such failures don’t happen, [update the Azure network connection](edit-azure-network-connection.md) configuration with the new credentials immediately.
 
 ## Removing credential information
 
