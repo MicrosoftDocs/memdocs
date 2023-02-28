@@ -1329,6 +1329,11 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "memdocs/configmgr/core/understand/what-happened-to-sccm.md",
+            "redirect_url": "/mem/configmgr/core/understand/introduction",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "memdocs/intune/fundamentals/premium-add-ons.md",
             "redirect_url": "/mem/intune/fundamentals/intune-add-ons",
             "redirect_document_id": false

@@ -1397,7 +1397,7 @@ items:
     - name: Microsoft Surface Management Portal
       href: ./fundamentals/surface-management-portal.md
 
-  - name: Additional scenarios
+  - name: Scenario-based guidance
     items: 
     - name: Guided scenarios
       items: 
@@ -1413,9 +1413,6 @@ items:
         href: ./fundamentals/cloud-configuration.md
     - name: Common scenarios
       href: ./fundamentals/common-scenarios.md
-    - name: Technology decisions for BYOD with EMS
-      href: ./fundamentals/byod-technology-decisions.md    
-      displayName: MDM
     - name: Manage operating system versions
       href: ./fundamentals/manage-os-versions.md
     - name: Move to cloud native endpoints
@@ -1438,6 +1435,9 @@ items:
       href: /microsoft-365/solutions/manage-devices-with-intune-overview
     - name: Create an administrative template
       href: ./configuration/tutorial-walkthrough-administrative-templates.md
+    - name: Technology decisions for BYOD with EMS
+      href: ./fundamentals/byod-technology-decisions.md    
+      displayName: MDM      
 
   - name: Developer guidance
     items:
