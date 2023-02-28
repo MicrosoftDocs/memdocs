@@ -130,4 +130,9 @@ With the ServiceNow connector verified and enabled, you are able to view a real 
 Intune exchanges the following information with ServiceNow:
 CALLERID, NAME, NUMBER, UNIVERSAL PRINCIPAL NAME, URGENCY, IMPACT, SEVERITY, ASSIGNMENT_GROUP, OPENEDAT, STATE, PRIORITY, SHORT DESCRIPTION, SYSID.
 
+## Next steps
+
+- [Get support in Microsoft Intune admin center](../../get-support.md)
+
+- [Use Remote Help](../remote-actions/remote-help.md)
 
