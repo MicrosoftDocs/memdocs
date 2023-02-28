@@ -86,9 +86,9 @@ productDirectory:
       summary: Guides that consolidate information specific to a platform or industry.
       url: ./index.yml#platform-and-industry-guides
     # Card
-    - title: Additional technical resources
+    - title: Related services
       imageSrc: ./media/icons/resources-device.svg
-      summary: Resource to find information about related technologies, such as Microsoft 365.
+      summary: Resource to find information about related services, such as Microsoft 365.
       url: ./index.yml#related-services
     # Card
     - title: Intune community resources
@@ -215,23 +215,14 @@ conceptualContent:
       links:
         - url: ./fundamentals/deployment-guide-enrollment.md
           itemType: concept
-          text: Enrollment overview
+          text: Device enrollment overview
 
-        - url: ./fundamentals/deployment-guide-enrollment-windows.md
-          itemType: concept  
-          text: Get started with Windows enrollment
-        - url: ./fundamentals/deployment-guide-enrollment-android.md
-          itemType: concept
-          text: Get started with Android enrollment
         - url: ./fundamentals/deployment-guide-enrollment-ios-ipados.md
           itemType: concept
-          text: Get started with iOS/iPadOS enrollment
-        - url: ./fundamentals/deployment-guide-enrollment-linux.md
+          text: Get started with iOS/iPadOS enrollment           
+        - url: ./enrollment/enrollment-restrictions-set.md
           itemType: concept
-          text: Get started with Linux enrollment      
-        - url: ./fundamentals/deployment-guide-enrollment-macos.md
-          itemType: concept
-          text: Get started with macOS enrollment
+          text: Device enrollment restrictions overview 
 
     - title: Initiate remote actions
       links:

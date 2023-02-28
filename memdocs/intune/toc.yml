@@ -192,18 +192,8 @@ items:
             href: ./apps/manage-without-gms.md      
           - name: MAM FAQ
             href: ./apps/mam-faq.yml
-            displayName: MAM
-            items: 
-            - name: Educate users
-              items:
-              - name: App protection on iOS
-                href: ./fundamentals/end-user-mam-apps-ios.md
-              - name: How to get Android apps
-                href: ./fundamentals/end-user-apps-android.md
-              - name: How to get iOS/iPadOS apps
-                href: ./fundamentals/end-user-apps-ios.md
-              - name: How to get Windows apps
-                href: ./fundamentals/end-user-apps-windows.md            
+            displayName: MAM          
+           
         - name: How-to guides
           items:
             - name: Add apps 
@@ -1082,7 +1072,7 @@ items:
 
     - name: Enroll devices in Microsoft Intune  
       items:
-      - name: Enrollment overview        
+      - name: Device enrollment overview        
         href: ./fundamentals/deployment-guide-enrollment.md  
         displayName: COD; BYOD; DEM; ADE; USB-SA; USB-Direct; co-management; GPO
       - name: Configure enrollment features      
@@ -1104,7 +1094,7 @@ items:
           href: ./enrollment/enrollment-notifications.md
         - name: Configure device enrollment restrictions
           items:  
-          - name: Overview
+          - name: Overview  
             href: ./enrollment/enrollment-restrictions-set.md  
           - name: Intune device limits vs. Azure AD device limits    
             href: ./enrollment/device-limit-intune-azure.md   
@@ -1119,7 +1109,7 @@ items:
           - name: View Chrome OS device information in Intune
             href: ./enrollment/chrome-enterprise-device-details.md              
           - name: Remote device actions for Chrome OS  
-            href: ./enrollment//chrome-enterprise-remote-actions.md  
+            href: ./enrollment/chrome-enterprise-remote-actions.md  
   
       - name: Set up Windows enrollment
         items:  

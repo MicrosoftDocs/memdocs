@@ -6,6 +6,25 @@
             "redirect_document_id": false
         }, 
 
+            "source_path": "memdocs/intune/fundamentals/end-user-apps-ios.md",
+            "redirect_url": "/mem/intune/user-help/use-managed-apps-on-your-device-ios",
+            "redirect_document_id": false
+        }, 
+        {
+            "source_path": "memdocs/intune/fundamentals/end-user-mam-apps-ios.md",
+            "redirect_url": "/mem/intune/user-help/use-managed-apps-on-your-device-ios",
+            "redirect_document_id": false
+        }, 
+        {
+            "source_path": "memdocs/intune/fundamentals/end-user-apps-windows.md",
+            "redirect_url": "/mem/intune/user-help/install-apps-cpapp-windows",
+            "redirect_document_id": false
+        }, 
+        {
+            "source_path": "memdocs/intune/fundamentals/end-user-apps-android.md",
+            "redirect_url": "/mem/intune/user-help/use-managed-apps-on-your-device-android",
+            "redirect_document_id": false
+        }, 
         {
             "source_path": "memdocs/intune/fundamentals/end-user-educate.md",
             "redirect_url": "/mem/intune/fundamentals/intune-planning-guide",
