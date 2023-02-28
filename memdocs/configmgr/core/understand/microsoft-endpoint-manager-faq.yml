@@ -17,13 +17,7 @@ title: Microsoft Configuration Manager FAQ
 summary: |
   *Applies to: Configuration Manager (current branch, technical preview branch)*
   
-  Since October 2019, Configuration Manager is part of the Microsoft Intune family of products. This article provides answers to frequently asked questions.
-  
-  ## Summary
-  
-  Start by watching the following two-minute video from Brad Anderson, former Microsoft corporate vice president for Microsoft 365:
-          
-  > [!VIDEO https://www.youtube.com/embed/GS7oNPInFuw]
+  Configuration Manager is part of the Microsoft Intune family of products. This article provides answers to frequently asked questions.
 
 sections:
   - name:  FAQs
@@ -39,12 +33,6 @@ sections:
           - [Intune](../../../intune/index.yml)
           - [Desktop Analytics](../../desktop-analytics/overview.md)
           - [Autopilot](../../../autopilot/enrollment-autopilot.md)
-          - Other features in the [Microsoft Intune admin center](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/microsoft-intune-rolls-out-an-improved-streamlined-endpoint/ba-p/937760)
-          
-          For more information, see the following posts from Brad Anderson, former Microsoft corporate vice president for Microsoft 365:
-          
-          - [Announcement blog post](https://aka.ms/cmannounce)
-          - [Vision paper](https://aka.ms/MEMVisionPaper)
           
       - question: |
           What things change in Configuration Manager and the Microsoft Intune family of products?
@@ -66,7 +54,7 @@ sections:
       - question: |
           Are there any licensing changes?
         answer: |
-          Yes! As announced at Microsoft Ignite 2019, if you're licensed for Configuration Manager, then you're also now licensed for Intune to [co-manage](../../comanage/overview.md) your Windows PCs. For more information, see the [Product and licensing FAQ](product-and-licensing-faq.yml#what-changes-with-licensing-for-co-management-in-the-microsoft-intune-family-of-products-).
+          If you're licensed for Configuration Manager, then you're also licensed for Intune to [co-manage](../../comanage/overview.md) your Windows PCs. For more information, see the [Product and licensing FAQ](product-and-licensing-faq.yml#what-changes-with-licensing-for-co-management-in-the-microsoft-intune-family-of-products-).
           
       - question: |
           Why do I still see "System Center Configuration Manager" some places?

@@ -19,9 +19,7 @@ ms.reviewer: mstewart,aaroncz
 
 *Applies to: Configuration Manager (current branch)*
 
-Starting in version 1910, Configuration Manager is now part of the Microsoft Intune family of products.
-
-![Microsoft Configuration Manager](media/4960084-endpoint-manager-logo.png)
+Configuration Manager is part of the Microsoft Intune family of products.
 
 The Microsoft Intune family of products is an integrated solution for managing all of your devices. Microsoft brings together Configuration Manager and Intune, without a complex migration, and with simplified licensing. Continue to leverage your existing Configuration Manager investments, while taking advantage of the power of the Microsoft cloud at your own pace.
 
@@ -29,9 +27,8 @@ The following Microsoft management solutions are all now part of the **Microsoft
 
 - [Configuration Manager](/configmgr)
 - [Intune](/intune)
-- [Desktop Analytics](../../desktop-analytics/overview.md)
-- [Autopilot](/intune/enrollment/enrollment-autopilot)
-- Other features in the [Device Management Admin Console](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/microsoft-intune-rolls-out-an-improved-streamlined-endpoint/ba-p/937760)
+- [Endpoint analytics](/analytics)
+- [Autopilot](/autopilot)
 
 For more information, see [Microsoft Configuration Manager FAQ](microsoft-endpoint-manager-faq.yml).
 
