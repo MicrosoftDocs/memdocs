@@ -307,6 +307,6 @@ Validating and testing that your solution is properly integrated with Intune is 
 ## See also
 
 - [Add 3rd party CA overview](certificate-authority-add-scep-overview.md)
-- [Setup Intune](../fundamentals/setup-steps.md)
+- [Setup Intune](../fundamentals/deployment-plan-setup.md)
 - [Device enrollment](../enrollment/device-enrollment.md)
 - [Configure SCEP certificate profiles](certificates-profile-scep.md) (the Microsoft NDES Server\Connector setup isn't used for this scenario)

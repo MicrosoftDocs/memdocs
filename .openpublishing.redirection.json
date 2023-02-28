@@ -1,8 +1,58 @@
 {
     "redirections": [
         {
+            "source_path": "memdocs/intune/fundamentals/end-user-educate.md",
+            "redirect_url": "/mem/intune/fundamentals/intune-planning-guide",
+            "redirect_document_id": false
+        }, 
+        {
+            "source_path": "memdocs/intune/enrollment/ios-enroll.md",
+            "redirect_url": "/mem/intune/fundamentals/deployment-guide-enrollment-ios-ipados",
+            "redirect_document_id": false
+        }, 
+        {
+            "source_path": "memdocs/intune/enrollment/android-enroll.md",
+            "redirect_url": "/mem/intune/fundamentals/deployment-guide-enrollment-android",
+            "redirect_document_id": false
+        }, 
+        {
+            "source_path": "memdocs/intune/enrollment/enrollment-method-capab.md",
+            "redirect_url": "/mem/intune/fundamentals/deployment-guide-enrollment-windows",
+            "redirect_document_id": false
+        }, 
+        {
             "source_path": "memdocs/intune/configuration/use-enterprise-sso-plug-in-ios-ipados-macos-with-jamf-pro.md",
             "redirect_url": "/mem/intune/configuration/use-enterprise-sso-plug-in-ios-ipados-macos",
+            "redirect_document_id": false
+        },  
+        {
+            "source_path": "memdocs/intune/enrollment/ios-ipados-framework-deployment-methodology.md",
+            "redirect_url": "/mem/intune/enrollment/ios-ipados-configuration-framework",
+            "redirect_document_id": false
+        },  
+        {
+            "source_path": "memdocs/intune/enrollment/device-enrollment.md",
+            "redirect_url": "/mem/intune/fundamentals/deployment-guide-enrollment",
+            "redirect_document_id": false
+        }, 
+        {
+            "source_path": "memdocs/intune/enrollment/framework-deployment-methodology.md",
+            "redirect_url": "/mem/intune/enrollment/android-configuration-framework",
+            "redirect_document_id": false
+        }, 
+        {
+            "source_path": "memdocs/intune/enrollment/windows-enrollment-methods.md",
+            "redirect_url": "/mem/intune/fundamentals/deployment-guide-enroll",
+            "redirect_document_id": false
+        }, 
+        {
+            "source_path": "memdocs/intune/enrollment/enrollment-options.md",
+            "redirect_url": "/mem/intune/enrollment/device-enrollment",
+            "redirect_document_id": false
+        }, 
+        {
+            "source_path": "memdocs/intune/enrollment/device-management-capabilities.md",
+            "redirect_url": "/mem/intune/enrollment/device-enrollment",
             "redirect_document_id": false
         }, 
         {
@@ -1239,11 +1289,6 @@
             "redirect_document_id": false
         },
         {
-            "source_path": "memdocs/azure-ad-joined-hybrid-azure-ad-joined.md",
-            "redirect_url": "/mem/solutions/cloud-native-endpoints/azure-ad-joined-hybrid-azure-ad-joined",
-            "redirect_document_id": false
-        },
-        {
             "source_path": "memdocs/cloud-native-endpoints-known-issues.md",
             "redirect_url": "/mem/solutions/cloud-native-endpoints/cloud-native-endpoints-known-issues",
             "redirect_document_id": false
@@ -1256,6 +1301,11 @@
         {
             "source_path": "memdocs/cloud-native-endpoints-overview.md",
             "redirect_url": "/mem/solutions/cloud-native-endpoints/cloud-native-endpoints-overview",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/azure-ad-joined-hybrid-azure-ad-joined.md",
+            "redirect_url": "/mem/solutions/cloud-native-endpoints/azure-ad-joined-hybrid-azure-ad-joined",
             "redirect_document_id": false
         },
         {
@@ -1272,6 +1322,21 @@
             "source_path": "memdocs/cloud-native-windows-endpoints.md",
             "redirect_url": "/mem/solutions/cloud-native-endpoints/cloud-native-windows-endpoints",
             "redirect_document_id": false
-        }  
+        },
+        {
+            "source_path": "memdocs/intune/fundamentals/setup-steps.md",
+            "redirect_url": "/mem/intune/fundamentals/deployment-plan-setup",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/configmgr/core/understand/what-happened-to-sccm.md",
+            "redirect_url": "/mem/configmgr/core/understand/introduction",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/fundamentals/premium-add-ons.md",
+            "redirect_url": "/mem/intune/fundamentals/intune-add-ons",
+            "redirect_document_id": false
+        }
     ]
 }

@@ -1,15 +1,15 @@
 ---
 # required metadata
 
-title: Quickstart - Create and assign an app protection policy
+title: Create and assign an app protection policy
 titleSuffix: Microsoft Intune
-description: In this quickstart you will use Microsoft Intune to create and assign and app protection policy.
+description: In this topic, you will use Microsoft Intune to create and assign and app protection policy.
 keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 12/16/2021
-ms.topic: quickstart
+ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: medium
@@ -31,15 +31,15 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Quickstart: Create and assign an app protection policy
+# Step 9: Create and assign an app protection policy
 
-In this quickstart, you will use Intune to create and assign an app protection policy to a client app on an end user's device. Intune uses app protection policies to confirm that your apps are meeting your organization's data protection requirements.
+In this topic, you will use Intune to create and assign an app protection policy to a client app on an end user's device. Intune uses app protection policies to confirm that your apps are meeting your organization's data protection requirements.
 
 If you don't have an Intune subscription, [sign up for a free trial account](../fundamentals/free-trial-sign-up.md).
 
 ## Prerequisites
 
-- To complete this quickstart, you must [create a user](../fundamentals/quickstart-create-user.md), [create a group](../fundamentals/quickstart-create-group.md), [enroll a device](../enrollment/quickstart-setup-auto-enrollment.md), and [add and assign an app](quickstart-add-assign-app.md).
+- To complete this evaluation step, you must [create a user](../fundamentals/quickstart-create-user.md), [create a group](../fundamentals/quickstart-create-group.md), [enroll a device](../enrollment/quickstart-setup-auto-enrollment.md), and [add and assign an app](quickstart-add-assign-app.md).
 
 ## Sign in to Intune
 
@@ -73,9 +73,9 @@ You'll now see the app protection policy in Intune.
 
 ## Next steps
 
-In this quickstart, you created and assigned an app protection policy. Users of the app that have this policy assigned will not be able to cut, copy, or paste any content between the assigned app and other non-managed apps on the device. This type of protection will help protect your organization's data. For more information about app protection policies in Intune, see [What are app protection policies?](app-protection-policy.md)
+In this topic, you created and assigned an app protection policy. Users of the app that have this policy assigned will not be able to cut, copy, or paste any content between the assigned app and other non-managed apps on the device. This type of protection will help protect your organization's data. For more information about app protection policies in Intune, see [What are app protection policies?](app-protection-policy.md)
 
-To follow this series of Intune quickstarts, continue to the next quickstart.
+To continue to evaluate Microsoft Intune, go to the next step:
 
 > [!div class="nextstepaction"]
-> [Quickstart: Create and assign a custom role](../fundamentals/create-custom-role.md)
+> [Step 10: Create and assign a custom role](../fundamentals/quickstart-create-custom-role.md)

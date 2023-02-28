@@ -1,0 +1,284 @@
+### YamlMime:Hub
+title: Microsoft Intune documentation
+summary: Official product documentation for Microsoft Intune
+
+metadata:
+  services: service
+  ms.service: microsoft-intune
+  ms.topic: hub-page
+  author: dougeby
+  ms.author: dougeby
+  manager: johmar
+  ms.date: 11/10/2021
+  ms.collection: 
+  ms.custom: intro-hub-or-landing
+
+highlightedContent:
+  items:
+    - title: What is Intune?
+      itemType: overview
+      url: ./fundamentals/what-is-intune.md
+    - title: What's new in Intune
+      itemType: overview
+      url: ./fundamentals/whats-new.md
+    - title: Features in development
+      itemType: overview
+      url: ./fundamentals/in-development.md    
+    - title: Try Intune for free
+      itemType: get-started
+      url: ./fundamentals/free-trial-sign-up.md
+    - title: Set up automatic enrollment for Windows 10 devices
+      itemType: get-started
+      url: ./enrollment/quickstart-setup-auto-enrollment.md
+    - title: Intune reports
+      itemType: overview
+      url: ./fundamentals/reports.md
+
+conceptualContent:
+  items:
+    - title: Plan for Intune adoption
+      links:
+        - url: ./fundamentals/intune-planning-guide.md
+          itemType: concept
+          text: Planning guide
+        - url: ./fundamentals/deployment-guide-enrollment-android.md
+          itemType: concept
+          text: Android enrollment guide
+        - url: ./fundamentals/deployment-guide-enrollment-ios-ipados.md
+          itemType: concept
+          text: iOS/iPadOS enrollment guide
+        - url: ./fundamentals/deployment-guide-enrollment-windows.md
+          itemType: concept
+          text: Windows enrollment guide
+      footerLink:
+        text: See more
+        url: ./fundamentals/index.yml          
+    - title: Set up Intune
+      links:
+        - url: ./fundamentals/deployment-plan-setup.md
+          itemType: how-to-guide
+          text: Steps to set up Intune
+        - url: ./fundamentals/supported-devices-browsers.md
+          itemType: reference
+          text: Supported operating systems and browsers
+        - url: ./fundamentals/role-based-access-control.md
+          itemType: reference
+          text: Role-based access control
+        - url: ./fundamentals/licenses.md
+          itemType: concept
+          text: Intune licensing
+      footerLink:
+        text: See more
+        url: ./fundamentals/index.yml        
+    - title: Enroll devices
+      links:
+        - url: ./enrollment/device-enrollment.md
+          itemType: concept
+          text: Device enrollment overview
+        - url: ./enrollment/device-management-capabilities.md
+          itemType: concept  
+          text: Enrolled device management capabilities
+        - url: ./enrollment/windows-enrollment-methods.md
+          itemType: how-to-guide
+          text: Intune enrollment methods for Windows devices
+        - url: ./enrollment/windows-enroll.md
+          itemType: how-to-guide
+          text: Set up enrollment for Windows
+        - url: ./enrollment/ios-enroll.md
+          itemType: how-to-guide
+          text: Set up enrollment for iOS devices        
+        - url: ./enrollment/android-enroll.md
+          itemType: how-to-guide
+          text: Set up enrollment for Android devices
+      footerLink:
+        text: See more
+        url: ./enrollment/index.yml
+    - title: Remotely manage devices
+      links:
+        - url: ./remote-actions/device-management.md
+          itemType: concept
+          text: Device management overview
+        - url: ./remote-actions/custom-notifications.md
+          itemType: how-to-guide
+          text: Send custom notifications
+        - url: ./remote-actions/devices-wipe.md
+          itemType: how-to-guide
+          text: Remove devices
+      footerLink:
+        text: See more
+        url: ./remote-actions/index.yml           
+    - title: Create compliance rules for users and devices
+      links:
+        - url: ./protect/device-compliance-get-started.md
+          itemType: concept
+          text: Compliance overview
+        - url: ./protect/actions-for-noncompliance.md
+          itemType: how-to-guide
+          text: Actions for non-compliant devices
+      footerLink:
+        text: See more
+        url: ./protect/index.yml            
+    - title: Control device features and settings
+      links:
+        - url: ./configuration/device-profiles.md
+          itemType: concept
+          text: Device configuration overview
+        - url: ./configuration/device-restrictions-configure.md
+          itemType: how-to-guide
+          text: Restrict settings and features
+        - url: ./configuration/vpn-settings-configure.md
+          itemType: how-to-guide
+          text: Add a VPN to devices
+        - url: ./configuration/administrative-templates-windows.md
+          itemType: how-to-guide
+          text: Configure group policy ADMX settings
+      footerLink:
+        text: See more
+        url: ./configuration/index.yml            
+    - title: Protect devices and data
+      links:
+        - url: ./protect/device-protect.md
+          itemType: concept
+          text: Device protection overview
+        - url: ./protect/conditional-access.md
+          itemType: concept
+          text: Conditional access with Intune
+        - url: ./protect/mobile-threat-defense.md
+          itemType: concept
+          text: Mobile Threat Defense integration with Intune
+      footerLink:
+        text: See more
+        url: ./protect/index.yml
+    - title: Manage apps
+      links:
+        - url: ./apps/app-management.md
+          itemType: concept
+          text: App management overview
+        - url: ./apps/apps-add.md
+          itemType: how-to-guide
+          text: Add apps to Intune
+        - url: ./apps/apps-deploy.md
+          itemType: how-to-guide
+          text: Assign apps to groups
+        - url: ./apps/app-configuration-policies-overview.md
+          itemType: overview
+          text: App configuration policies
+      footerLink:
+        text: See more
+        url: ./apps/index.yml          
+    - title: App protection policies
+      links:
+        - url: ./apps/app-protection-policy.md
+          itemType: concept
+          text: App protection policies overview
+        - url: ./apps/app-protection-policies.md
+          itemType: overview
+          text: Create app protection policies
+        - url: ./apps/app-protection-policies-validate.md
+          itemType: how-to-guide
+          text: Validate app protection policies
+        - url: ./apps/app-protection-policies-monitor.md
+          itemType: how-to-guide
+          text: Monitor app protection policies
+      footerLink:
+        text: See more
+        url: ./apps/index.yml            
+    - title: Help and support
+      links:
+        - url: ../get-support.md
+          itemType: concept
+          text: How to get support for Microsoft Intune?
+        - url: ./fundamentals/help-desk-operators.md
+          itemType: concept
+          text: Help users troubleshoot problems
+        - url: ./fundamentals/monitor-audit-logs.md
+          itemType: concept
+          text: Use audit logs to track and monitor events
+        - url: /troubleshoot/mem/intune/troubleshoot-app-install
+          itemType: concept
+          text: Troubleshoot app installation issues
+        - url: /troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune
+          itemType: concept
+          text: Troubleshoot policies and profiles in Intune
+    - title: Developer
+      links:
+        - url: ./developer/intune-graph-apis.md
+          itemType: concept
+          text: Access the Intune APIs in Microsoft Graph
+        - url: https://github.com/Microsoft/Intune-PowerShell-SDK/
+          itemType: concept
+          text: Use PowerShell cmdlets to automate actions
+        - url: ./developer/reports-nav-create-intune-reports.md
+          itemType: concept
+          text: Use the Microsoft Intune Data Warehouse
+        - url: ./developer/app-sdk.md
+          itemType: overview
+          text: Microsoft Intune App SDK overview
+        - url: ./developer/reports-nav-create-intune-reports.md
+          itemType: concept
+          text: Use the Microsoft Intune Data Warehouse
+      footerLink:
+        text: See more
+        url: ./developer/index.yml          
+additionalContent:
+  sections:
+    - title: Additional resources to manage devices
+      items:
+      - title: Intune for Education
+        links: 
+        - text: What is Intune for Education?
+          url: /intune-education/what-is-intune-for-education
+        - text: What's new in Intune for Education?
+          url: /intune-education/whats-new-in-edu
+        - text: How is Intune for Education different from the full version?
+          url: ./fundamentals/introduction-intune-education.md
+      - title: Intune for Government
+        links: 
+        - text: Enterprise Mobility + Security for US Government service description
+          url: /enterprise-mobility-security/solutions/ems-govt-service-description
+        - text: US government endpoints for Intune
+          url: ./fundamentals/intune-us-government-endpoints.md
+        - text: Azure Government site
+          url: https://azure.microsoft.com/global-infrastructure/government/
+      - title: Microsoft 365
+        links: 
+        - text: Explore Microsoft 365, a complete solution that includes Intune
+          url: /microsoft-365/
+        - text: Microsoft 365 Enterprise documentation
+          url: /microsoft-365/enterprise/
+        - text: Microsoft 365 Enterprise foundation infrastructure
+          url: /microsoft-365/enterprise/deploy-foundation-infrastructure
+      - title: Azure Active Directory
+        links: 
+        - text: User management documentation
+          url: /azure/active-directory/fundamentals/active-directory-manage-groups
+        - text: Authentication documentation
+          url: /azure/active-directory/authentication/
+        - text: Device identity documentation
+          url: /azure/active-directory/devices/
+        - text: Hybrid identity documentation
+          url: /azure/active-directory/hybrid/
+    - title: Intune community resources
+      items:
+        # Card
+        - title: Intune technical forums
+          summary: Ask technical questions in the product forums
+          url: /answers/products/mem
+        # Card
+        - title: Intune tech community conversations
+          summary: Check out active conversations from the technical community
+          url: https://techcommunity.microsoft.com/t5/Microsoft-Intune/bd-p/Microsoft-Intune
+        # Card
+        - title: Feedback for Intune
+          summary: Share product ideas with the engineering team
+          url: https://feedbackportal.microsoft.com/feedback/forum/ef1d6d38-fd1b-ec11-b6e7-0022481f8472
+        # Card
+        - title: "#Intune on Twitter"
+          summary: Stay current with the active Twitter community
+          url: https://twitter.com/hashtag/msintune
+        # Card
+        - title: Intune Customer Success
+          summary: Get help on the Intune Customer Success site  
+          url: https://techcommunity.microsoft.com/t5/Intune-Customer-Success/bg-p/IntuneCustomerSuccess
+
+  footer: "Have feedback or want to contribute to docs? [See this resource](../use-docs.md)!"

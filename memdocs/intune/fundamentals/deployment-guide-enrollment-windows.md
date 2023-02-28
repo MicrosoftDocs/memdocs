@@ -30,7 +30,7 @@ ms.collection:
 - highseo
 ---
 
-# Deployment guide: Enroll Windows client devices in Microsoft Intune
+# Enrollment guide: Enroll Windows client devices in Microsoft Intune
 
 Personal and organization-owned devices can be enrolled in Intune. Once they're enrolled, they receive the policies and profiles you create.
 
@@ -87,6 +87,7 @@ You can also use this enrollment method to automatically bulk enroll devices wit
 ### Automatic enrollment administrator tasks
 
 - Be sure your devices are running Windows 10/11. For a complete list, see [supported device platforms](supported-devices-browsers.md).
+
 - Optional. Instead of users entering the Intune server name, you can create a CNAME record that's easier to enter, such as `EnterpriseEnrollment.contoso.com`. CNAME records associate a domain name with a specific server. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), test your CNAME record to make sure it's configured correctly. For more information, see [create a CNAME record](../enrollment/windows-enroll.md#simplify-windows-enrollment-without-azure-ad-premium).
 - In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Windows Enrollment** > **Automatic Enrollment**. In the configuration, you set the **MDM user scope** and **MAM user scope**:
 
@@ -138,7 +139,7 @@ When users turn on the device, the next steps determine how they're enrolled. Be
   1. Open the **Settings** app > **Accounts** > **Access work or school** > **Connect**.
   2. In **Connect**, users choose to enter an **Email address**, or choose to **Join this device to Azure Active Directory**:
 
-      - **Email address**: Users enter their organization email address. They're asked for more information, including the Intune server name or [CNAME record](../enrollment/windows-enroll.md#registration-and-enrollment-cnames). Be sure to give them all the information they need to enter.
+      - **Email address**: Users enter their organization email address. They're asked for more information, including the Intune server name or [CNAME record](../enrollment/windows-enrollment-create-cname.md). Be sure to give them all the information they need to enter.
 
         This option registers the device in Azure AD. They show as personal, and show as Azure AD registered in the Intune admin center. The organization user is managed by Intune, not the device.
 
