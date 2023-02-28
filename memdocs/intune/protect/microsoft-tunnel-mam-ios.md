@@ -369,7 +369,10 @@ For guidance on integrating the SDK, see [Tunnel for MAM iOS SDK developer guide
 The following are known issues or limitations for Tunnel for MAM on iOS. For known issues with the Microsoft Tunnel for MAM iOS SDK, go to [Tunnel for MAM iOS SDK developer guide](../developer/tunnel-mam-ios-sdk.md#known-issues).
 
 ### MAM Tunnel not supported when using the MDM Tunnel
-You can choose to use MAM Tunnel with enrolled devices instead of using MDM Tunnel configurations. However, an enrolled device must use only the MDM Tunnel configurations or the MAM Tunnel configurations, but not both. For example, enrolled devices can't have an app like Microsoft Edge that uses MAM tunnel configurations while other apps use MDM Tunnel configurations.
+
+You can choose to use MAM Tunnel with enrolled devices instead of using MDM Tunnel configurations. However, deploying both MAM and MDM Tunnel configurations including App configuration policies, to the same device is not supported and results in client networking failures.
+
+For example, enrolled devices can't have an app like Microsoft Edge that uses MAM tunnel configurations while other apps use MDM Tunnel configurations.
 
 **Work around**: None.
 
@@ -377,7 +380,7 @@ You can choose to use MAM Tunnel with enrolled devices instead of using MDM Tunn
 
 Tunnel site settings for **Public IP address or FQDN** require a publicly resolvable fully qualified domain name. An IP address can't be used in the subject name of the TLS/SSL certificate for the tunnel server.
 
-**Work around**: Use a certificate that includes a publicly resolvable FQDN in the subject name. Don't use a certificate that includes an IP address in the subject name. 
+**Work around**: Use a certificate that includes a publicly resolvable FQDN in the subject name. Don't use a certificate that includes an IP address in the subject name.
 
 ### Proxy Configuration
 
@@ -394,6 +397,21 @@ When you create a custom app configuration policy, the newly added app may not a
 1. In the Intune admin center, go to **Apps** > **App Configuration Policies** > **Add**.
 2. Select custom apps, add a Bundle or Package ID for iOS, complete the flow, and create the app config policy. 
 3. Edit the basic settings. The newly added bundle ID should appear in the list of targeted custom apps.
+
+### Conditional Access policies might require use of Microsoft Azure Authenticator app
+
+When you have Conditional Access policies for Microsoft Tunnel Gateway that *Require multifactor authentication* as a *Grant Access* control, devices must use the [Microsoft Authenticator app](/azure/active-directory/authentication/concept-authentication-authenticator-app).
+
+**Work around**: None.
+
+### Limitations when using Edge on iOS/iPadOS
+
+Tunnel for MAM does not support:  
+
+- On-premises sites using Kerberos or NTLM integrated authentication webserver login.
+- Federated azure active directory tenants. Support for federated tenants will take place in a future update.
+
+**Work around**: None.
 
 ## Next steps
 
