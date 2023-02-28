@@ -9,7 +9,7 @@ author: MandiOhlinger
   
 ms.author: mandia
 manager: dougeby
-ms.date: 09/22/2022
+ms.date: 02/28/2023
 ms.topic: conceptual
 ms.service: mem
 ms.subservice:
@@ -83,7 +83,7 @@ For more information and guidance, go to [Known issues and limitations with clou
 
 ## Roles and permissions control access
 
-Intune uses role-based access control (RBAC). The roles you assign determine who has access to your organization's resources and what they can do with those resources. The Intune admin center includes some built-in roles focused on endpoint management, such as Application Manager, Policy and Profile Manager, and more.
+For the different admin-type of tasks, Intune uses role-based access control (RBAC). The roles you assign determine the resources an admin can access in the Intune admin center, and what they can do with those resources. There are some built-in roles focused on endpoint management, such as Application Manager, Policy and Profile Manager, and more.
 
 Since Intune uses Azure AD, you also have access to the built-in Azure AD roles, such as Global Administrator and Intune Service Administrator.
 
