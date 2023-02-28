@@ -145,24 +145,26 @@ Create an app configuration policy for apps that will use Tunnel for MAM. This p
 The new policy will appear in the list of App configuration policies.
 
 ### Configure an app configuration policy for Edge
+
 Create an App configuration policy for Microsoft Edge. This policy configures Edge on the device to connect to Microsoft Tunnel. 
-  > [!NOTE]  
-   >If you already have an ACP policy created for your LOB App, you can edit that policy to include Edge and the required Key/Value Pair settings.
+ 
+> [!NOTE]  
+>If you already have an ACP policy created for your LOB App, you can edit that policy to include Edge and the required Key/Value Pair settings.
 
 1. go to Apps > App Configuration polices > Add > Managed Apps.
 2. On the Basics tab:
-a. Enter a Name for the policy, and a Description (optional).
-b. Click on Select public apps, select Microsoft Edge for iOS, and then click Select.
-2. After Microsoft Edge is listed for Public apps, select Next.
+   1. Enter a Name for the policy, and a Description (optional).
+   2. Click on Select public apps, select Microsoft Edge for iOS, and then click Select.
+   3. After Microsoft Edge is listed for Public apps, select Next.
 3. On the Settings tab, configure the Name and Value pair in the General configuration settings
 category as follows:
 
-Input the following Name and Value pair to set up an Edge/Tunnel profile: 
-Name  | com.microsoft.intune.mam.managedbrowser.TunnelAvailable.IntuneMAMOnly 
-Value | True
+   Input the following Name and Value pair to set up an Edge/Tunnel profile:  
+   Name  | com.microsoft.intune.mam.managedbrowser.TunnelAvailable.IntuneMAMOnly 
+   Value | True
 
- > [!NOTE]  
-   > Ensure there are no trailing spaces at the end of the General configuration setting. This setting provides “Identity switch” support to Edge on iOS. This enables Edge on iOS to automatically connect the VPN when signing in with a “Work account or School account” and disconnect the VPN when switching to a “Personal account” enabling in-Private browsing
+   > [!NOTE]  
+   > Ensure there are no trailing spaces at the end of the General configuration setting. This setting provides “Identity switch” support to Edge on iOS. This enables Edge on iOS to automatically connect the VPN when signing in with a “Work account or School account” and disconnect the VPN when switching to a “Personal account” enabling in-Private browsing.
 
 If you have other Edge specific configurations you want to configure, do so with this same policy. 
 
