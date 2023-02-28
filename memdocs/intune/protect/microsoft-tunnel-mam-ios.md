@@ -144,6 +144,40 @@ Create an app configuration policy for apps that will use Tunnel for MAM. This p
 
 The new policy will appear in the list of App configuration policies.
 
+### Configure an app configuration policy for Edge
+
+Create an App configuration policy for Microsoft Edge. This policy configures Edge on the device to connect to Microsoft Tunnel. 
+ 
+> [!NOTE]  
+>If you already have an ACP policy created for your LOB App, you can edit that policy to include Edge and the required Key/Value Pair settings.
+
+1. go to Apps > App Configuration polices > Add > Managed Apps.
+2. On the Basics tab:
+   1. Enter a Name for the policy, and a Description (optional).
+   2. Click on Select public apps, select Microsoft Edge for iOS, and then click Select.
+   3. After Microsoft Edge is listed for Public apps, select Next.
+3. On the Settings tab, configure the Name and Value pair in the General configuration settings
+category as follows:
+
+   Input the following Name and Value pair to set up an Edge/Tunnel profile:  
+   Name  | com.microsoft.intune.mam.managedbrowser.TunnelAvailable.IntuneMAMOnly 
+   Value | True
+
+   > [!NOTE]  
+   > Ensure there are no trailing spaces at the end of the General configuration setting. This setting provides “Identity switch” support to Edge on iOS. This enables Edge on iOS to automatically connect the VPN when signing in with a “Work account or School account” and disconnect the VPN when switching to a “Personal account” enabling in-Private browsing.
+
+If you have other Edge specific configurations you want to configure, do so with this same policy. 
+
+4. You can also use this same policy to configure other configurations for Microsoft Edge in the 
+Microsoft Edge configuration settings category. After any additional configurations for Microsoft 
+Edge are ready, select Next.
+5. On the Assignments tab, select Add Groups, and then select one or more Azure Active Directory 
+groups that will receive this policy. After configuring groups, select Next.
+6. On the Review + Create tab, select Create to complete creation of the policy and deploy the 
+policy to the assigned groups.
+
+
+
 ### Configure an app protection policy
 
 An App protection policy is required to configure Microsoft Tunnel for apps that will use the Microsoft Tunnel for MAM iOS.
