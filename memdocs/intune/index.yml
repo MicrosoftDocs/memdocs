@@ -89,7 +89,7 @@ productDirectory:
     - title: Additional technical resources
       imageSrc: ./media/icons/resources-device.svg
       summary: Resource to find information about related technologies, such as Microsoft 365.
-      url: ./index.yml#additional-resources-to-manage-devices
+      url: ./index.yml#related-services
     # Card
     - title: Intune community resources
       imageSrc: ./media/icons/community.svg
