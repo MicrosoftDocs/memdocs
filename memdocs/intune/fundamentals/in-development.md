@@ -202,13 +202,27 @@ We're adding two more states to organizational message reporting details to make
 ### Endpoint security firewall policy support for log configurations<!-- 16730565  -->  
 We’re adding several new settings to the endpoint security Firewall policy to support configuration of firewall logging options. These settings will be added to the *Defender Firewall* profile template for the *Windows 10 and later* platform, and be available for the Domain, Private, and Public profiles in that template. [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Endpoint security** > **Firewall** > *Platform*: **Windows 10, Windows 11, and Windows Server** > *Profile*: **Microsoft Defender Firewall**.
 
- The following settings are being added:  
+The following settings are being added:  
 - Enable Log Success Connections
 - Log File Path
 - Enable Log Dropped Packets
 - Enable Log Ignored Rules
 
 For more information about these settings, see [Firewall configuration service provider (CSP)](/windows/client-management/mdm/Firewall-csp?WT.mc_id=Portal-fx).
+
+Applies to:  
+- Windows 10
+- Windows 11
+
+### Endpoint security firewall policy support for network list manager settings<!-- 9803477  -->  
+We’re adding a pair of network list manager settings to endpoint security Firewall policy. Network list manager settings help to determine when an Azure AD device is or isn’t on your on-premises domain subnets so firewall rules can properly apply. These settings will be added to the *Microsoft Defender Firewall* profile template for the *Windows 10, Windows 11, and Windows Server* platform.
+
+The following settings will be part of a new category, *Network List Manager*:
+
+- Allowed Tls Authentication Endpoints
+- Configured Tls Authentication Network Name
+
+For information about Network Categorization settings, see [NetworkListManager CSP](/windows/client-management/mdm/policy-csp-networklistmanager).
 
 Applies to:  
 - Windows 10
