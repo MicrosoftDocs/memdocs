@@ -69,7 +69,7 @@ To set up Android Enterprise corporate-owned work profile device management, fol
 
 You must create an enrollment profile so that users can enroll corporate-owned work profile devices. When the profile is created, it provides you with an enrollment token (random string) and a QR code. Depending on the Android OS and version of the device, you can use either the token or QR code to [enroll the dedicated device](#enroll-the-corporate-owned-work-profile-devices).
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and choose **Devices** > **Android** > **Android enrollment** > **Corporate-owned devices with work profile**.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and choose **Devices** > **Android** > **Android enrollment** > **Corporate-owned devices with work profile**.
 2. Choose **Create profile** and fill out the fields.
     - **Name**: Type a name that you'll use when assigning the profile to the dynamic device group.
     - **Description**: Add a profile description (optional).
@@ -100,7 +100,7 @@ The token appears as an eight-digit string and a QR code. Use this token to enro
 
 Revoking or exporting a token/QR code won't have any effect on devices that are already enrolled.
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and choose **Devices** > **Android** > **Android enrollment** > **Corporate-owned devices with work profile**.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and choose **Devices** > **Android** > **Android enrollment** > **Corporate-owned devices with work profile**.
 2. Choose the profile that you want to work with.
 3. Choose **Token**.
 5. To revoke the token, choose **Revoke token** > **Yes**.
@@ -110,7 +110,7 @@ Revoking or exporting a token/QR code won't have any effect on devices that are 
 
 You can target apps and policies to either assigned or dynamic device groups. You can configure dynamic Azure AD device groups to automatically populate devices that are enrolled with a particular enrollment profile by following these steps:
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and choose **Groups** > **All groups** > **New group**.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and choose **Groups** > **All groups** > **New group**.
 2. In the **Group** blade, fill out the required fields as follows:
     - **Group type**: Security
     - **Group name**: Type an intuitive name (like Factory 1 devices)

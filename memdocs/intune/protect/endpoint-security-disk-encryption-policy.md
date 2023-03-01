@@ -2,7 +2,7 @@
 # required metadata
 
 title: Manage disk encryption with endpoint security policies in Microsoft Intune | Microsoft Docs
-description: Configure and deploy policies for devices you manage with endpoint security disk encryption policy in Microsoft Endpoint Manager. 
+description: Configure and deploy policies for devices you manage with endpoint security disk encryption policy in Microsoft Intune. 
 keywords:
 author: brenduns
 ms.author: brenduns
@@ -37,7 +37,7 @@ Endpoint security Disk encryption profiles focus on only the settings that are r
 
 While you can configure the same device settings by using *Endpoint Protection* profiles for device configuration, the device configuration profiles include additional categories of settings. These additional settings are unrelated to disk encryption and can complicate the task of configuring only disk encryption.
 
-Find the endpoint security policies for disk encryption under *Manage* in the **Endpoint security** node of the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+Find the endpoint security policies for disk encryption under *Manage* in the **Endpoint security** node of the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 ## Prerequisites for disk encryption policy
 

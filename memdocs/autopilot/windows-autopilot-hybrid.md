@@ -131,7 +131,7 @@ Before beginning the installation, make sure that all of the [Intune connector s
 
 1. Turn off IE Enhanced Security Configuration. By default Windows Server has Internet Explorer Enhanced Security Configuration turned on. If you're unable to sign in to the Intune Connector for Active Directory, then turn off IE Enhanced Security Configuration for the Administrator. [How to turn off Internet Explorer enhanced security configuration](/archive/blogs/chenley/how-to-turn-off-internet-explorer-enhanced-security-configuration).
 
-2. In the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/), select **Devices** > **Windows** > **Windows enrollment** > **Intune Connector for Active Directory** > **Add**.
+2. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows** > **Windows enrollment** > **Intune Connector for Active Directory** > **Add**.
 
 3. Follow the instructions to download the Connector.
 
@@ -149,7 +149,7 @@ Before beginning the installation, make sure that all of the [Intune connector s
 > [!NOTE]
 >
 > - The Global administrator role is a temporary requirement at the time of installation.
-> - After you sign in to the Connector, it can take several minutes to appear in the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/). It appears only if it can successfully communicate with the Intune service.
+> - After you sign in to the Connector, it can take several minutes to appear in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). It appears only if it can successfully communicate with the Intune service.
 > - Inactive Intune connectors still appear in the Intune Connectors blade and will automatically be cleaned up after 30 days.
 
 After installing the Intune Connector, it will start logging in the **Event Viewer** under the path **Applications and Services Logs** > **Microsoft** > **Intune** > **ODJConnectorService**. Under this path you will find **Admin** and **Operational** logs.
@@ -164,7 +164,7 @@ If you have a web proxy in your networking environment, ensure that the Intune C
 
 ## Create a device group
 
-1. In the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/), select **Groups** > **New group**.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Groups** > **New group**.
 
 2. In the **Group** pane, choose the following options:
 
@@ -220,11 +220,11 @@ After your Autopilot devices are *enrolled*, they're displayed in four places:
 After your Autopilot devices are enrolled, their names become the hostname of the device. By default, the hostname begins with *DESKTOP-*.
 A device object is pre-created in Azure AD once a device is registered in Autopilot. When a device goes through a hybrid Azure AD deployment, by design, another device object is created resulting in duplicate entries.
 
-## Supported BYO VPNs
+## BYO VPNs
 
-Here's a list of VPN clients that are known to be tested and validated:
+The following is a list of VPN clients that have been tested and validated:
 
-### Supported clients
+### VPN clients
 
 - In-box Windows VPN client
 - Cisco AnyConnect (Win32 client)
@@ -235,7 +235,12 @@ Here's a list of VPN clients that are known to be tested and validated:
 - SonicWall (Win32 client)
 - FortiClient VPN (Win32 client)
 
-### Not supported clients
+> [!NOTE]
+> The above above list of VPN clients isn't a comprehensive list of all VPN clients that work with Autopilot. Contact the respective VPN vendor regarding compatibility and supportability with Autopilot or regarding any issues with using a VPN solution with Autopilot.
+
+### Not supported VPN clients
+
+The following VPN solutions are known not to work with Autopilot and therefore aren't supported for use with Autopilot:
 
 - UWP-based VPN plug-ins
 - Anything that requires a user cert
@@ -248,7 +253,7 @@ Here's a list of VPN clients that are known to be tested and validated:
 
 Autopilot deployment profiles are used to configure the Autopilot devices.
 
-1. In the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/), select **Devices** > **Windows** > **Windows enrollment** > **Deployment Profiles** > **Create Profile**.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows** > **Windows enrollment** > **Deployment Profiles** > **Create Profile**.
 
 2. On the **Basics** page, type a **Name** and optional **Description**.
 
@@ -278,7 +283,7 @@ It takes about 15 minutes for the device profile status to change from *Not assi
 
 ## (Optional) Turn on the enrollment status page
 
-1. In the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/), select **Devices** > **Windows** > **Windows enrollment** > **Enrollment Status Page**.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows** > **Windows enrollment** > **Enrollment Status Page**.
 
 2. In the **Enrollment Status Page** pane, select **Default** > **Settings**.
 
@@ -290,7 +295,7 @@ It takes about 15 minutes for the device profile status to change from *Not assi
 
 ## Create and assign a Domain Join profile
 
-1. In the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/), select **Devices** > **Configuration profiles** > **Create Profile**.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration profiles** > **Create Profile**.
 
 2. Enter the following properties:
     - **Name**: Enter a descriptive name for the new profile.

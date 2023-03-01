@@ -32,10 +32,7 @@ ms.collection:
 - highpri
 ---
 
-# Set up Apple User Enrollment for iOS/iPadOS 
-
-> [!IMPORTANT]
-> This feature is in public preview. For more information, see [Public preview in Microsoft Intune](../fundamentals/public-preview.md).  
+# Set up Apple User Enrollment for iOS/iPadOS  
 
 Set up Intune to enroll user-owned iOS/iPadOS devices via Apple User Enrollment. *User Enrollment* enrolls devices that are a part of BYOD scenarios. Devices enrolled this way do not become supervised. Work data is securely kept on a separate volume on the device and in managed apps, away from the user's personal data.  As the admin, you get access to a limited but appropriate subset of Intune management options and restrictions to ensure that your organization's data stays safe. 
 
@@ -63,9 +60,9 @@ Review this information before you begin:
 
 Complete these steps to create an enrollment profile for devices enrolling with the user enrollment option.  
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Go to **Devices** > **iOS/iPadOS** > **iOS/iPadOS enrollment**. 
-2. Select **Enrollment types (preview)**. 
+2. Select **Enrollment types**. 
 3. Select **Create profile** > **iOS/iPadOS**. In this profile,  you'll configure the enrollment experience for devices that aren't enrolled via an Apple enrollment program method, such as Apple Business Manager. You can edit this profile after you've created it.  
 2. On the **Basics** page, enter a name and description for the profile so that you can distinguish it from other profiles in the admin center. Device users don't see these details. 
 
@@ -95,7 +92,7 @@ Complete these steps to create an enrollment profile for devices enrolling with 
 
 After you've created more than one enrollment type profile, you can change the priority order in which they're applied. Intune applies the profiles in the order you prioritize them.  
 
-1. Go back to **Enrollment types (preview)** to view your profiles.  
+1. Go back to **Enrollment types** to view your profiles.  
 2. Drag and drop the profiles in the list to reorder their priority.  
 
 If a conflict occurs because a user is assigned more than one profile, Intune applies the profile with the higher priority.  

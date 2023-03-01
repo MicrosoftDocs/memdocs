@@ -57,7 +57,7 @@ This article shows you how export your GPOs, import the GPOs into Intune, and re
 
 ## Before you begin
 
-- In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), sign in as the Intune administrator or with a role that has the **Security Baselines** permission.
+- In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), sign in as the Intune administrator or with a role that has the **Security Baselines** permission.
 
   For example, the **Endpoint Security Manager** role has the **Security Baselines** permission. For more information on the built-in roles, see [role-based access control](../fundamentals/role-based-access-control.md).
 
@@ -78,7 +78,7 @@ Make sure that the file is less than 4 MB and has a proper Unicode encoding. If 
 
 ## Import GPOs and run analytics
 
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Group Policy analytics (preview)**.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Group Policy analytics (preview)**.
 2. Select **Import**, and then select your saved XML file. You can select multiple files at the same time. When you select the XML file, Intune automatically analyzes the GPO in the XML file.
 
     Check the sizes of your individual GPO XML files. A single GPO can't be bigger than 4 MB. If a single GPO is larger than 4 MB, then the import will fail. XML files without the appropriate unicode ending will also fail.
@@ -98,7 +98,7 @@ Make sure that the file is less than 4 MB and has a proper Unicode encoding. If 
 
     You can **Import** more GPOs for analysis, **Refresh** the page, and **Filter** the output. You can also **Export** this view to a `.csv` file:
 
-    :::image type="content" source="./media/group-policy-analytics/import-refresh-filter-options.png" alt-text="Screenshot that shows how to import, refresh, filter, or export a group policy object (GPO) to a CSV file in Microsoft Intune and Endpoint Manager admin center.":::
+    :::image type="content" source="./media/group-policy-analytics/import-refresh-filter-options.png" alt-text="Screenshot that shows how to import, refresh, filter, or export a group policy object (GPO) to a CSV file in Microsoft Intune and Intune admin center.":::
 
 4. Select the **MDM Support** percentage for a listed GPO. More detailed information about the GPO is shown:  
 
@@ -151,9 +151,9 @@ If your imported GPO has settings that aren't in the supported CSPs and Group Po
 
 ## Group Policy migration readiness report
 
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Reports** > **Group policy analytics (preview)**:
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Reports** > **Group policy analytics (preview)**:
 
-    :::image type="content" source="./media/group-policy-analytics/policy-analytics-reports.png" alt-text="Screenshot that shows how to review the report and output of imported GPOs using Group Policy analytics in Microsoft Intune and Endpoint Manager admin center.":::
+    :::image type="content" source="./media/group-policy-analytics/policy-analytics-reports.png" alt-text="Screenshot that shows how to review the report and output of imported GPOs using Group Policy analytics in Microsoft Intune and Intune admin center.":::
 
 2. In the **Summary** tab, a summary of the GPO and its policies are shown. Use this information to determine the status of the policies in your GPO:
 
@@ -182,7 +182,7 @@ Currently, the Group Policy analytics (preview) tool only supports non-ADMX sett
 
 ## Send product feedback
 
-You can provide feedback on Group Policy Analytics. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Group Policy analytics (preview)** > **Got feedback**.
+You can provide feedback on Group Policy Analytics. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Group Policy analytics (preview)** > **Got feedback**.
 
 Examples of feedback areas:
 
@@ -201,7 +201,7 @@ At any time, you can delete imported GPOs:
 1. Go to **Devices** > **Group Policy analytics (preview)**.
 2. Select the context menu > **Delete**:
 
-    :::image type="content" source="./media/group-policy-analytics/delete-imported-gpo.png" alt-text="Screenshot that shows how to delete or remove the group policy object (GPO) you imported in the Group Policy analyzer in Microsoft Intune and Endpoint Manager admin center.":::
+    :::image type="content" source="./media/group-policy-analytics/delete-imported-gpo.png" alt-text="Screenshot that shows how to delete or remove the group policy object (GPO) you imported in the Group Policy analyzer in Microsoft Intune and Intune admin center.":::
 
 ## Next steps
 

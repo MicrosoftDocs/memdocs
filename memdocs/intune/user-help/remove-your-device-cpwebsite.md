@@ -22,12 +22,12 @@ searchScope:
 ROBOTS:  
 #audience:
 
-ms.reviewer: jieyang
+ms.reviewer: jieyan
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
 ms.collection:
-- tier2
+- tier1
 ---
 # Remove your device from the Company Portal  
 

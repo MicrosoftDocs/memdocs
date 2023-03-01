@@ -20,7 +20,7 @@ searchScope:
 ROBOTS:  
 #audience:
 
-ms.reviewer: jieyang
+ms.reviewer: jieyan
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser

@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/10/2023
+ms.date: 02/21/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -45,6 +45,7 @@ Admins can browse, deploy, and monitor Microsoft Store applications inside Intun
 > - You can install and uninstall with required app deployments
 > - You can monitor the installation progress and results for store apps
 > - Win32 store apps are supported (in preview)  
+> - System context and user context are supported for UWP apps
 
 ## Prerequisites
 
@@ -59,7 +60,7 @@ Use the following steps to add and deploy a Microsoft Store app.
 
 ### Step 1: Add an app from the Microsoft Store
 
-1. In the [admin portal](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All apps** > **Add**.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All apps** > **Add**.
 2. In **Select app type** pane, select **Microsoft Store app (new)** under the **Store app** section.
 3. Choose **Select** at the bottom of the page to begin creating an app from the Microsoft Store.
     The app creation experience has three steps:
@@ -152,6 +153,9 @@ For available Microsoft Store Win32 apps, as well as UWP apps, the end user must
 
 The Microsoft Store supports Win32 app types including **.exe** and **.msi** installers. These apps have external content sourcing hosted by the app publisher. Based on their installer definition in the store, each Win32 app supports either **User** or **System** context installation.For related information, see [Traditional desktop apps in the Microsoft Store on Windows](https://developer.microsoft.com/microsoft-store/desktop-apps).
 
+## Microsoft Store UWP apps
+In addition to user context, you can deploy Universal Windows Platform (UWP) apps from the **Microsoft Store app (new)** in system context. If a provisioned *.appx* app is deployed in system context, the app will auto-install for each user that logs in. If an individual end user uninstalls the user context app, the app will still show as installed because it is still provisioned. In addition, the app must not already be installed for any users on the device. Our general recommendation is to not mix install contexts when deploying apps.
+
 ## Store group policies restrictions
 
 Some **Store Group Policies** may affect app deployments from the Microsoft Store. 
@@ -160,7 +164,7 @@ The following table provides details about how app deployment may be affected by
 
 |     Store Group   Policies    |     Desired   setting    |
 |---|---|
-|     Store\Disable all apps from the Microsoft   Store     | **Not configured** or **Disabled**. Set to **Disabled** if wish to prevent end users from blocking the scenario.          |
+|     Store\Disable all apps from the Microsoft   Store     | **Not configured** or **Enabled**. Set to **Enabled** if wish to prevent end users from blocking the scenario.          |
 |     Store\Turn off Automatic Download and   Install of updates    | **Not configured** or **Disabled**. Set to **Disabled** if you need to prevent end users from blocking the scenario.          |
 |     Desktop App Installer\Enable App Installer   Microsoft Store Source    | **Not configured** or **Enabled**. Set to **Enabled** if wish to prevent end users from blocking the scenario.          |
 |     Desktop App Installer\Enable App Installer    | **Not configured** or **Enabled**. Set to **Enabled** if wish to prevent end users from blocking the scenario.          |
@@ -173,11 +177,8 @@ The following table provides details about how app deployment may be affected by
 
 The following capabilities aren't supported by Microsoft Store apps:
 
-1. Ability to install Microsoft Store apps during Enrollment Status Page. Apps deployed using Microsoft Store app will install after enrollment status page has completed.
-2. Device provisioning of Microsoft Store Universal Windows Platform (UWP) applications are not supported.
-3. Any app that has an ARM64 installer is not supported.
-
-The ability to install Microsoft Store apps during Enrolment Status Page and device provisioning of Microsoft Store Universal Windows Platform (UWP) applications is coming in a future release.
+1. Ability to install Microsoft Store apps during Enrollment Status Page. Apps deployed using Microsoft Store app will install after enrollment status page has completed. The ability to install Microsoft Store apps during Enrolment Status Page is coming in a future release.
+2. Any app that has an ARM64 installer is not supported.
 
 ## Next steps
 

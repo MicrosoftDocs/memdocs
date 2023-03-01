@@ -32,7 +32,7 @@ ms.collection:
 ---
 
 # Miscellaneous policy mapping from Basic Mobility and Security to Intune
-This article provides mapping details between Basic Mobility and Security to Intune. Specifically, this page maps the following Office 365 Security and Compliance portal policies and device properties to the equivalent policies and properties in Microsoft Endpoint Manager admin center:
+This article provides mapping details between Basic Mobility and Security to Intune. Specifically, this page maps the following Office 365 Security and Compliance portal policies and device properties to the equivalent policies and properties in Microsoft Intune admin center:
 - Device properties and actions
 - Organization-wide device access settings 
 - Device security policies Name and Description

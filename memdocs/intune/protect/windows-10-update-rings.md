@@ -72,7 +72,7 @@ The following prerequisites must be met to use Windows updates for Windows 10/11
 
 ## Create and assign update rings
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Devices** > **Windows** > **Update rings for Windows 10 and later** > **Create profile**.
 

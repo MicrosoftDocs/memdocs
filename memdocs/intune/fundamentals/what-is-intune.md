@@ -78,9 +78,9 @@ Some key features and benefits of Intune include:
 
   For more information, go to [Mobile Threat Defense integration with Intune](../protect/mobile-threat-defense.md).
 
-- You **use a web-based admin center** that focuses on endpoint management, including data-driven reporting. Admins can sign into the Endpoint Manager admin center from any device that has internet access.
+- You **use a web-based admin center** that focuses on endpoint management, including data-driven reporting. Admins can sign into the Intune admin center from any device that has internet access.
 
-  For more information, go to [Walkthrough the Endpoint Manager admin center](tutorial-walkthrough-endpoint-manager.md). To sign in to the admin center, go to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+  For more information, go to [Walkthrough the Intune admin center](tutorial-walkthrough-endpoint-manager.md). To sign in to the admin center, go to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
   This admin center uses [Microsoft Graph](/graph/overview) REST APIs to programmatically access the Intune service. Every action in the admin center is a Microsoft Graph call. If you’re not familiar with Graph, and want to learn more, go to [Graph integrates with Microsoft Intune](/graph/intune-concept-overview).
 
@@ -145,7 +145,7 @@ Microsoft Intune integrates with other Microsoft products and services that focu
 
 ## Integrates with third party partner devices and apps
 
-The Endpoint Manager admin center makes it easy to connect to different partner services, including:
+The Intune admin center makes it easy to connect to different partner services, including:
 
 - **Managed Google Play**: When you connect to your Managed Google Play account, admins can access your organization's private store for Android apps, and deploy these apps to your devices.
 

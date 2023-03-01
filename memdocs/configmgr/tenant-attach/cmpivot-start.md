@@ -1,7 +1,7 @@
 ---
 title: Launch tenant attached CMPivot
 titleSuffix: Configuration Manager
-description: Launch CMPivot for Microsoft Endpoint Manager tenant attached devices.
+description: Launch CMPivot for Microsoft Intune tenant attached devices.
 ms.date: 07/11/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -19,7 +19,7 @@ ms.collection: tier3
 *Applies to: Configuration Manager (current branch)* 
 
 <!--6024392-->
-Bring the power of on-premises [CMPivot](../core/servers/manage/cmpivot.md) to the Microsoft Endpoint Manager admin center. Allow additional personas, like Helpdesk, to be able to initiate real-time queries from the cloud against an individual ConfigMgr managed device and return the results back to the admin center. This gives all the traditional benefits of CMPivot, which allows IT Admins and other designated personas the ability to quickly assess the state of devices in their environment and take action.
+Bring the power of on-premises [CMPivot](../core/servers/manage/cmpivot.md) to the Microsoft Intune admin center. Allow additional personas, like Helpdesk, to be able to initiate real-time queries from the cloud against an individual ConfigMgr managed device and return the results back to the admin center. This gives all the traditional benefits of CMPivot, which allows IT Admins and other designated personas the ability to quickly assess the state of devices in their environment and take action.
 
 ## Prerequisites
 
@@ -45,7 +45,7 @@ The user account needs the following permissions:
 
 ## <a name="bkmk_launch"></a> Launch CMPivot
 
-1. In a browser, navigate to [https://endpoint.microsoft.com](https://endpoint.microsoft.com).
+1. In a browser, go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 1. Select **Devices** then **All Devices**.
 1. Select a device that is synced from Configuration Manager via [tenant attach](device-sync-actions.md).
 1. Select **CMPivot**.
@@ -55,7 +55,7 @@ The user account needs the following permissions:
 
 To close CMPivot and return to the device information, use the `X` icon in the top right of CMPivot.
 
-   :::image type="content" source="media/6024392-close-cmpivot.png" alt-text="Close CMPivot with the X icon in Microsoft Endpoint Manager admin center" lightbox="media/6024392-close-cmpivot.png":::
+   :::image type="content" source="media/6024392-close-cmpivot.png" alt-text="Close CMPivot with the X icon in Microsoft Intune admin center" lightbox="media/6024392-close-cmpivot.png":::
 
 ## Next steps
 
