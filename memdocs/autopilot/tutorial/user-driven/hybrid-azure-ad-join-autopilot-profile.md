@@ -29,7 +29,7 @@ Autopilot user-driven hybrid Azure AD join steps:
 > - **Step 7: Create and assign hybrid Azure AD join Autopilot profile**
 - Step 8: [Configure and assign domain join profile](hybrid-azure-ad-join-domain-join-profile.md)
 
-For an overview of the Windows Autopilot user-driven hybrid Azure AD join workflow, see [Windows Autopilot user-driven hybrid Azure AD join overview](autopilot-user-driven-haad-workflow.md)
+For an overview of the Windows Autopilot hybrid user-driven Azure AD join workflow, see [Windows Autopilot user-driven hybrid Azure AD join overview](hybrid-azure-ad-join-workflow.md)
 
 ## Create and assign user-driven hybrid Azure AD join Autopilot profile
 
@@ -79,7 +79,7 @@ To create an user-driven Azure AD join Autopilot profile, follow the below steps
 
       - For **Automatically configure keyboard**, select **Yes** to skip the keyboard selection page.
 
-      - The **Apply device name template** is greyed out for hybrid Azure AD join scenarios. Although not as robust, device names can be specified during the [Configure and assign domain join profile](autopilot-user-driven-haad-5-create-and-assign-domain-join-profile) step.
+      - The **Apply device name template** is greyed out for hybrid Azure AD join scenarios. Although not as robust, device names can be specified during the [Configure and assign domain join profile](hybrid-azure-ad-join-domain-join-profile.md) step.
 
       > [!NOTE]
       >
@@ -91,7 +91,7 @@ To create an user-driven Azure AD join Autopilot profile, follow the below steps
 
 10. On the **Assignments** page, under **Included groups**, choose **Add groups**.
 
-11. In the **Select groups to include** page, choose the device group(s) to assign this Autopilot profile to. This is normally the device group created in the step [Create device group](autopilot-user-driven-haad-2-create-device-group). Once done, select **Select**.
+11. In the **Select groups to include** page, choose the device group(s) to assign this Autopilot profile to. This is normally the device group created in the step [Create device group](hybrid-azure-ad-join-device-group.md). Once done, select **Select**.
 
     > [!NOTE]
     >
