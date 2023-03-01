@@ -92,7 +92,7 @@ To create an user-driven Azure AD join Autopilot profile, follow the below steps
 
 10. On the **Assignments** page, under **Included groups**, choose **Add groups**.
 
-11. In the **Select groups to include** page, choose the device group(s) to assign this Autopilot profile to. This is normally the device group created in the step [Create device group](autopilot-user-driven-aadj-2-create-device-group). Once done, select **Select**.
+11. In the **Select groups to include** page, choose the device group(s) to assign this Autopilot profile to. This is normally the device group created in the step [Create device group](azure-ad-join-device-group.md). Once done, select **Select**.
 
     > [!NOTE]
     >
