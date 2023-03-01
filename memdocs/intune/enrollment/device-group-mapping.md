@@ -21,13 +21,13 @@ ms.assetid: 7b668c37-40b9-4c69-8334-5d8344e78c24
 #ROBOTS:
 #audience:
 
-ms.reviewer: jieyang
+ms.reviewer: scotduff
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure;seodec18
 ms.collection:
-- tier2
+- tier1
 - M365-identity-device-management
 ---
 

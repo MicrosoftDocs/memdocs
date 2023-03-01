@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/20/2023
+ms.date: 03/01/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -77,7 +77,7 @@ The Policy sync button only appears for devices that are successfully managed by
 
 ### Devices protected by Tamper Protection
 
-If a device has Tamper Protection turned on, it will not be possible to edit its settings without turning off Tamper Protection. When editing settings for a device with Tamper Protection turned on, Microsoft Intune presents a *Failed* setting status with an error code of `-2147024891`.
+If a device has Tamper Protection turned on, it will not be possible to edit its settings without turning off Tamper Protection. 
 
 ### Assignment Filters and Security Management for Microsoft Defender for Endpoint
 
