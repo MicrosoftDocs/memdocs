@@ -1,18 +1,18 @@
 ---
-title: "AddDistributionPoints Method in SMS_TaskSequencePackage"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: AddDistributionPoints Method in SMS_TaskSequencePackage
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 56aed021-c205-4b29-9d2e-e67e279e044d
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+description: Learn how the AddDistributionPoints Method adds the distribution points for the task sequence package.
+ms.reviewer: mstewart,aaroncz 
 ---
 # AddDistributionPoints Method in Class SMS_TaskSequencePackage
 The `AddDistributionPoints` Windows Management Instrumentation (WMI) class method, in Configuration Manager, adds the distribution points for the task sequence package.  

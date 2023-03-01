@@ -7,8 +7,8 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/07/2022
-ms.topic: conceptual
+ms.date: 11/17/2022
+ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
@@ -21,10 +21,12 @@ ms.technology:
 
 ms.suite: ems
 search.appverid: MET150
-ms.reviewer: maholdaa
+ms.reviewer: tycast, japoehlm
 #ms.tgt_pltfrm:
 ms.custom: seodec18
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier3
+- M365-identity-device-management
 ---
 
 # Android Enterprise device settings to configure email, authentication, and synchronization in Intune
@@ -41,8 +43,11 @@ As an Intune administrator, you can create and assign email settings to Android 
 
 ## Before you begin
 
+- Deploy your email app. For more information, go to [Configure email apps](email-settings-configure.md).
+
+  - If your profile will use Gmail and you want to use modern authentication, then you may have to deploy the Google Chrome app to the work profile.
+
 - Create an [Android Enterprise email device configuration profile](email-settings-configure.md) > **Personally-owned work profile**.
-- Or, create an [app configuration policy](../apps/app-configuration-policies-use-android.md).
 
 ## Android Enterprise
 

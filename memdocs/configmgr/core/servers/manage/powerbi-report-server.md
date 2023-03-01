@@ -2,14 +2,16 @@
 title: Integrate with Power BI Report Server
 titleSuffix: Configuration Manager
 description: Integrate Power BI Report Server with Configuration Manager reporting for modern visualization and better performance.
-ms.date: 11/03/2021
+ms.date: 04/08/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+ms.author: gokarthi
+author: gowdhamankarthikeyan
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Integrate with Power BI Report Server
@@ -28,15 +30,20 @@ Save Power BI Desktop report files (.PBIX) and deploy them to the Power BI Repor
 
 - Download [Microsoft Power BI Report Server-September 2019](https://www.microsoft.com/download/details.aspx?id=57270), or later.
    - Don't install Power BI Report Server right away. For the proper process based on your environment, see [Configure the reporting services point](#configure-the-reporting-services-point).
+   - It's recommended that you use a [supported version of Power BI Report Server](/power-bi/report-server/support-timeline). For versioning information, see the [Change log for Power BI Report Server](/power-bi/report-server/changelog).
 
-- Download Microsoft Power BI Desktop (Optimized for Power BI Report Server). Use a version released between September 2019 and [January 2021](https://www.microsoft.com/download/details.aspx?id=55330). For versioning information, see the [Change log for Power BI Report Server](/power-bi/report-server/changelog). <!--12428948, Power BI Desktop versioning information, latest version link, (currently unsupported with CM) is https://www.microsoft.com/download/details.aspx?id=57271 -->
+- Download Microsoft Power BI Desktop (Optimized for Power BI Report Server - September 2019), or later. It's recommended that you use a [supported version](/power-bi/report-server/support-timeline). For versioning information, see the [Change log for Power BI Report Server](/power-bi/report-server/changelog).
 
-    > [!IMPORTANT]
-    > Use versions of Power BI Desktop:
-    > - That are from the [Microsoft Download Center](https://www.microsoft.com/download/). Don't use a version from the Microsoft Store
-    > - [That states they're **Optimized for Power BI Report Server**](/power-bi/report-server/install-powerbi-desktop). Don't use versions that aren't **Optimized for Power BI Report Server**.
-    > - That were released no earlier than September 2019 and no later than January 2021. [Microsoft Power BI Desktop (Optimized for Power BI Report Server - January 2021)](https://www.microsoft.com/download/details.aspx?id=55330) is recommended. <!--12428948, Power BI Desktop versioning information, latest version link, (currently unsupported with CM) is https://www.microsoft.com/download/details.aspx?id=57271 -->
+   Use versions of Power BI Desktop:
+   - That are from the [Microsoft Download Center](https://www.microsoft.com/download/). Don't use a version from the Microsoft Store.
+   - [That states they're **Optimized for Power BI Report Server**](/power-bi/report-server/install-powerbi-desktop). Don't use versions that aren't **Optimized for Power BI Report Server**.
 
+   > [!Note]
+   > When using Configuration Manager version 2111 or earlier with Power BI Desktop (Optimized for Power BI Report Server - May 2021) or later, you may notice the following behavior:<!--12428948, 2203CB-12487076 -->
+   > - You might experience delays updating the data source on newly updated reports.
+   > - You may receive `The remote server returned an error; (400) Bad Request.` errors in the **SRSRP.log**.
+   > For more information about the relevant change to Power BI Desktop (optimized for Power BI Report Server) May 2021, see [Change data source connection strings in Power BI reports](/power-bi/report-server/connect-data-source-apis). The version before the connection change ocurred is [January 2021](https://www.microsoft.com/download/details.aspx?id=55330).
+ 
 - Power BI integration uses the same role-based administration for reporting.
    - Power BI Report Server doesn't support reports that are enabled for role-based access. All report viewers will see the same results, whatever their assigned scope.
 

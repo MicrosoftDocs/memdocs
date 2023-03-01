@@ -1,19 +1,18 @@
 ---
-title: "Add an OS Deployment Task Sequence Action"
-titleSuffix: "Configuration Manager"
-description: "Add an OS deployment task sequence action to a task sequence by creating an instance of an SMS_TaskSequence_Action derived class, and then add it to the steps of the task sequence."
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: Add an OS Deployment Task Sequence Action
+titleSuffix: Configuration Manager
+description: Add an OS deployment task sequence action to a task sequence by creating an instance of an SMS_TaskSequence_Action derived class, and then add it to the steps of the task sequence.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: how-to
 ms.assetid: b03f13c1-d358-455b-a684-0bd8e8bd940a
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Add an Operating System Deployment Task Sequence Action
 An operating system deployment task sequence action is added to a task sequence, in Configuration Manager, by creating an instance of an [SMS_TaskSequence_Action](../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md) derived class and then adding it to the steps of the task sequence.  

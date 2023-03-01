@@ -1,16 +1,17 @@
 ---
 title: "SMS_UpdatesAssignment Class"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the SMS_UpdatesAssignment WMI class is an SMS Provider server class that represents a deployment."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: e470bca9-d185-4d49-80c7-47802c515cf7
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
+ms.collection: tier3
 
 
 ---

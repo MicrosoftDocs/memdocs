@@ -18,14 +18,28 @@ items:
       href: app-wrapper-prepare-ios.md
     - name: Intune App SDK for iOS
       href: app-sdk-ios.md
+    - name: Tunnel for MAM iOS SDK
+      href: tunnel-mam-ios-sdk.md
     - name: App Wrapping Tool for Android
       href: app-wrapper-prepare-android.md
       displayName: dex
-    - name: Intune App SDK for Android
-      href: app-sdk-android.md
+    - name: Intune App SDK for Android developer guide
+      href: app-sdk-android-appendix.md
       items:
-      - name: Intune App SDK for Android testing guide
-        href: app-sdk-android-testing-guide.md        
+      - name: Planning the integration
+        href: app-sdk-android-phase1.md
+      - name: MSAL prerequisite
+        href: app-sdk-android-phase2.md
+      - name: Getting started with MAM
+        href: app-sdk-android-phase3.md
+      - name: MAM integration essentials
+        href: app-sdk-android-phase4.md
+      - name: Multi-Identity
+        href: app-sdk-android-phase5.md
+      - name: App configuration
+        href: app-sdk-android-phase6.md
+      - name: App participation features
+        href: app-sdk-android-phase7.md
     - name: Intune App SDK Xamarin Bindings
       href: app-sdk-xamarin.md
   - name: Use the Intune Data Warehouse
@@ -78,6 +92,6 @@ items:
     - name: Use Azure AD to access Intune APIs in Microsoft Graph
       href: intune-graph-apis.md
     - name: Intune API reference
-      href: /graph/api/resources/intune-graph-overview?view=graph-rest-beta
+      href: /graph/api/resources/intune-graph-overview?view=graph-rest-beta&preserve-view=true
     - name: Graph APIs used to configure devices
       href: graph-apis-used-by-intune-device-configuration-windows.md

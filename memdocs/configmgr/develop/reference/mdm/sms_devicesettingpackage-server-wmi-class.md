@@ -1,19 +1,18 @@
 ---
-title: "SMS_DeviceSettingPackage Class"
-titleSuffix: "Configuration Manager"
-description: "An SMS Provider server class that represents a device setting package in the database." 
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: SMS_DeviceSettingPackage Class
+titleSuffix: Configuration Manager
+description: An SMS Provider server class that represents a device setting package in the database.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 85557c6d-9b3a-4c1c-aff7-b45dee1edec9
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_DeviceSettingPackage Server WMI Class
 The `SMS_DeviceSettingPackage` Windows Management Instrumentation (WMI) class is an SMS Provider server class that represents a device setting package in the database.  

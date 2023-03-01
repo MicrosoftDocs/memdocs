@@ -1,19 +1,18 @@
 ---
-title: "DeleteAssociation Method"
-titleSuffix: "Configuration Manager"
-description: "Delete the computer association between two system resources used in state migration."  
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: DeleteAssociation Method
+titleSuffix: Configuration Manager
+description: Delete the computer association between two system resources used in state migration.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 9b318231-7072-428e-9201-5fbdc8ba8d1c
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # DeleteAssociation Method in Class SMS_StateMigration
 The `DeleteAssociation` Windows Management Instrumentation (WMI) class method, in Configuration Manager, deletes the computer association between two system resources used in state migration.  

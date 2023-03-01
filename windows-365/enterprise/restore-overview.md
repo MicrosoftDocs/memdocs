@@ -7,9 +7,9 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 03/03/2022
+ms.date: 10/25/2022
 ms.topic: conceptual
-ms.service: cloudpc
+ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
 ms.technology:
@@ -25,10 +25,12 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: 
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- tier2
 ---
 
-# Point-in-time restore for Windows 365 Enterprise (preview)
+# Point-in-time restore for Windows 365 Enterprise
 
 Point-in-time restore lets an administrator restore a Cloud PC to the exact state it was at an earlier point in time. Admins can also give users permission to restore their own Cloud PCs.
 
@@ -41,6 +43,10 @@ In addition to these configurable short-term restore points, there are also four
 As time passes and a new restore point is added, the oldest restore point is removed.
 
 [!INCLUDE [Restore risks and best practices](../includes/restore-risks-best-practices.md)]
+
+## Disaster recovery
+
+When a restore is started, the virtual infrastructure used for the Cloud PC remains the same. If the infrastructure is unavailable, but appropriate alternate infrastructure is available in the same Azure region, then the Cloud PC is automatically placed in the available infrastructure. This makes sure that, in the case of a disaster recovery scenario in an Azure zone, that the Cloud PC is resilient through recovery to a different Zone in the region. The recovery to an alternate infrastructure is automatic. There is nothing required of the administrator or user other than to start the restore.
 
 <!-- ########################## -->
 ## Next steps

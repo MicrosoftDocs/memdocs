@@ -16,3 +16,4 @@ _themes/
 .openpublishing.build.mdproj
 .openpublishing.buildcore.ps1
 packages.config
+.DS_Store

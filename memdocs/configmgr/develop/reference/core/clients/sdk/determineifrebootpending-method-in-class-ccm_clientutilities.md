@@ -1,16 +1,18 @@
 ---
-title: "DetermineIfRebootPending Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: DetermineIfRebootPending Method
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 3a3d65ac-be3c-471c-9819-2bbb28be3b15
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
+ms.collection: tier3
+description: Learn how DetermineIfRebootPending is simplified from Managed Object Format code and defines the method.
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # DetermineIfRebootPending Method in Class CCM_ClientUtilities

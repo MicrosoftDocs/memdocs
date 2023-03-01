@@ -1,18 +1,18 @@
 ---
-title: "InitiateClientOperation Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: InitiateClientOperation Method
+titleSuffix: Configuration Manager
+description: In Configuration Manager, the InitiateClientOperation WMI class method initiates a client operation.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 0ec680b1-981e-4da4-81f0-7eab784ef2dc
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # InitiateClientOperation Method in Class SMS_ClientOperation
 The `InitiateClientOperation` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that initiates a client operation.   

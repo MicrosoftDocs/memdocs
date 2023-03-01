@@ -1,19 +1,18 @@
 ---
-title: "Call an Object Class Method by Using WMI"
-titleSuffix: "Configuration Manager"
-description: "To call a SMS Provider class method, use the SWbemServices object ExecMethod method to call methods that are defined by the class."
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: Call an Object Class Method by Using WMI
+titleSuffix: Configuration Manager
+description: To call a SMS Provider class method, use the SWbemServices object ExecMethod method to call methods that are defined by the class.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: how-to
 ms.assetid: b83b28f0-0af9-44b9-a7c8-4901e3e08b51
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Call a Configuration Manager Object Class Method by Using WMI
 To call a SMS Provider class method, in Configuration Manager, you use the [SWbemServices](/windows/win32/wmisdk/swbemservices) object [ExecMethod](/windows/win32/wmisdk/swbemservices-execmethod) method to call methods that are defined by the class.  

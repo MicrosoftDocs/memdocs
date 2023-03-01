@@ -1,19 +1,18 @@
 ---
-title: "ExportDefaultBootImage Method"
-titleSuffix: "Configuration Manager"
-description: "The ExportDefaultBootImage WMI class method finalizes a boot image and then exports the image from the specified source to the specified location."
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: ExportDefaultBootImage Method
+titleSuffix: Configuration Manager
+description: The ExportDefaultBootImage WMI class method finalizes a boot image and then exports the image from the specified source to the specified location.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: dcbcd570-3d2b-48ea-bec3-2a7273910e07
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # ExportDefaultBootImage Method in Class SMS_BootImagePackage
 The `ExportDefaultBootImage` Windows Management Instrumentation (WMI) class method, in Configuration Manager, finalizes a boot image and then exports the image from the specified source to the specified location.  

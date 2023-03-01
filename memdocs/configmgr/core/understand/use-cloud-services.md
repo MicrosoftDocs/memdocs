@@ -6,10 +6,12 @@ ms.date: 07/15/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Use cloud services with Configuration Manager
@@ -56,7 +58,7 @@ You can connect the site to Azure for several scenarios:
 - Cloud management gateway to manage internet-based clients. For more information, see [Cloud management gateway overview](../clients/manage/cmg/overview.md).
 - Deploy apps from the Microsoft Store for Business and Education. For more information, see [Manage apps from the Microsoft Store for Business and Education](../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md).
 - Use Windows data to gain insights into apps and drivers to help upgrade devices to Windows 10. For more information, see [What is Desktop Analytics?](../../desktop-analytics/overview.md).
-- [Microsoft Endpoint Manager tenant attach](../../tenant-attach/device-sync-actions.md)
+- [Microsoft Intune tenant attach](../../tenant-attach/device-sync-actions.md)
 
 These are different than using an Azure virtual machine, on which you deploy a site system role.
 

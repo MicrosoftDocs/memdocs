@@ -2,7 +2,7 @@
 # required metadata
 
 title: How do I find the serial number on my macOS device?
-description:
+description: To locate the serial number, go to the Apple menu > About This Mac.
 keywords:
 author: lenewsad
 
@@ -23,11 +23,12 @@ searchScope:
 ROBOTS:  
 #audience:
 
-ms.reviewer: elocholi
+ms.reviewer: 
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
-ms.collection: 
+ms.collection:
+- tier3
 ---
 
 # How do I find the serial number on my macOS device?

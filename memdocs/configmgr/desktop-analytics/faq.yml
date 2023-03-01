@@ -7,9 +7,9 @@ metadata:
   ms.prod: configuration-manager
   ms.technology: configmgr-analytics
   ms.topic: faq
-  author: aczechowski
-  ms.author: aaroncz
-  manager: dougeby
+  author: banreet
+  ms.author: banreetkaur
+  manager: apoorvseth
   ms.reviewer: acabello
 title: Desktop Analytics FAQ
 summary: |
@@ -99,7 +99,7 @@ sections:
       - question: |
           Where is my organization's data stored?
         answer: |
-          Windows diagnostic data from your computers is encrypted, sent to, and processed at Microsoft-managed secure data centers located in the United States. Microsoft provides the analysis of the Desktop Analytics-related data to you through the Desktop Analytics solution in the Microsoft Endpoint Manager admin center. Desktop Analytics is supported in most regions where [Log Analytics is available](https://azure.microsoft.com/global-infrastructure/services/?products=monitor&regions=all). If you select an international Azure region, your diagnostic data is still sent to and processed in Microsoft's secure data centers in the United States.
+          Windows diagnostic data from your computers is encrypted, sent to, and processed at Microsoft-managed secure data centers located in the United States. Microsoft provides the analysis of the Desktop Analytics-related data to you through the Desktop Analytics solution in the Microsoft Intune admin center. Desktop Analytics is supported in most regions where [Log Analytics is available](https://azure.microsoft.com/global-infrastructure/services/?products=monitor&regions=all). If you select an international Azure region, your diagnostic data is still sent to and processed in Microsoft's secure data centers in the United States.
 
   - name: Existing Windows Analytics customers
     questions:
@@ -137,7 +137,7 @@ sections:
           - Windows Defender status
 
           > [!Note]
-          > All existing Update Compliance features, including those not available in Desktop Analytics, remain available in the [Update Compliance](/windows/deployment/update/update-compliance-get-started) solution in the Microsoft Endpoint Manager admin center.
+          > All existing Update Compliance features, including those not available in Desktop Analytics, remain available in the [Update Compliance](/windows/deployment/update/update-compliance-get-started) solution in the Microsoft Intune admin center.
 
           **Device Health**
 

@@ -2,25 +2,25 @@
 title: Troubleshoot Autopilot OOBE issues
 description: How to troubleshoot Autopilot OOBE issues
 keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune
-ms.technology: windows
-ms.prod: w10
+ms.technology: itpro-deploy
+ms.prod: windows-client
 ms.mktglfcycl: deploy
 ms.localizationpriority: medium
 ms.sitesec: library
 ms.pagetype: deploy
 audience: itpro
-author: aczechowski
-ms.author: aaroncz
+author: frankroj
+ms.author: frankroj
 ms.reviewer: jubaptis
-manager: dougeby
-ms.date: 07/30/2021
+manager: aaroncz
+ms.date: 11/17/2022
 ms.collection: M365-modern-desktop
 ms.topic: troubleshooting
 ---
 
 # Troubleshoot Autopilot OOBE issues
 
-**Applies to:**
+*Applies to:*
 
 - Windows 11
 - Windows 10

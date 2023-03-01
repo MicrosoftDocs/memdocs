@@ -1,18 +1,18 @@
 ---
 title: "ICIINFO::GetCategory"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+titleSuffix: Configuration Manager
+description: "The ICIINFO::GetCategory method gets a localized category name by index and the group name of the category."
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 76c96b11-787a-4a37-b592-f0bdd4e094ea
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # ICIINFO::GetCategory Method
 The `ICIINFO::GetCategory` method, in Configuration Manager, gets a localized category name by index and the group name of the category.  

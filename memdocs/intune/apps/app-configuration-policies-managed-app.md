@@ -26,14 +26,16 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier1
+- M365-identity-device-management
 ---
 
 # App configuration policies for Intune App SDK managed apps
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-The Intune App Software Development Kit (SDK) supports app configuration delivery through the mobile app management (MAM) channel. Within the Intune portal, the MAM channel is referred to as a Managed Apps app configuration policy. The MAM channel is different than the mobile device management (MDM) OS platform channels that are offered when a device is enrolled.
+The Intune App Software Development Kit (SDK) supports app configuration delivery through the mobile app management (MAM) channel. Within the Intune admin center, the MAM channel is referred to as a Managed Apps app configuration policy. The MAM channel is different than the mobile device management (MDM) OS platform channels that are offered when a device is enrolled.
 
 To support app configuration through the MAM channel, the app must be integrated with [Intune App SDK](../developer/app-sdk.md). Line-of-business apps can either integrate the Intune App SDK or use the [Intune App Wrapping Tool](../developer/apps-prepare-mobile-application-management.md). For a comparison between the Intune App SDK and the Intune App Wrapping Tool, see [Prepare line-of-business apps for app protection policies](../developer/apps-prepare-mobile-application-management.md#feature-comparison).
 
@@ -47,7 +49,7 @@ For more information, see [App configuration policies for Microsoft Intune](app-
 
 Use the following steps to create a Managed apps app configuration policy. After the configuration is created, you can assign its settings to groups of users.
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Choose the **Apps** > **App configuration policies** > **Add** > **Managed apps**.
 3. On the **Basics** page, set the following details:
     - **Name**: The name of the profile that will appear in the portal.
@@ -63,7 +65,7 @@ Use the following steps to create a Managed apps app configuration policy. After
 
     For information about app configuration settings for specific Microsoft apps, see:
 
-    - [Manage web access by using Edge for iOS and Android with Microsoft Intune](manage-microsoft-edge.md)
+    - [Manage Microsoft Edge on iOS and Android with Intune](manage-microsoft-edge.md)
     - [Manage collaboration experiences in Office for iOS and Android with Microsoft Intune](manage-microsoft-office.md)
     - [Deploying Outlook for iOS and Android app configuration settings](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune)
     - [Manage collaboration experiences in Teams for iOS and Android with Microsoft Intune](manage-microsoft-teams.md)

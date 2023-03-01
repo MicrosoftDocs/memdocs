@@ -6,10 +6,12 @@ ms.date: 08/02/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: how-to
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: baladelli
+ms.author: baladell
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Deploy applications with Configuration Manager
@@ -107,7 +109,7 @@ On the **Deployment Settings** page, specify the following information:
 
 - **Allow clients on a metered Internet connection to download content after the installation deadline, which might incur additional costs**: This option is only available for deployments with a purpose of **Required**.
 
-- **Automatically upgrade any superseded version of this application**: The client upgrades any superseded version of the application with the superseding application.
+- **Automatically upgrade any superseded versions of this application**: The client upgrades any superseded version of the application with the superseding application.
 
     > [!NOTE]
     > This option works regardless of administrator approval. If an administrator already approved the superseded version, they don't need to also approve the superseding version. Approval is only for new requests, not superseding upgrades.<!--515824-->

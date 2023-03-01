@@ -6,18 +6,19 @@ ms.date: 12/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: overview
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: high
-ms.collection: highpri
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Cloud attach your Configuration Manager environment
 <!--9251060-->
 *Applies to: Configuration Manager (current branch)*
 
-Attaching your Configuration Manager environment the cloud allows you to continue to modernizing and streamlining your management solution. Cloud attach allows you to transform your existing environment without having to worry about much disruption or risk. A Configuration Manager environment is considered cloud attached when it uses at least one of the three primary cloud attach features. You can enable these three features in any order you wish, or all at once.
+Attaching your Configuration Manager environment to the cloud allows you to continue to modernize and streamline your management solution. Cloud attach allows you to transform your existing environment without having to worry about much disruption or risk. A Configuration Manager environment is considered cloud attached when it uses at least one of the three primary cloud attach features. You can enable these three features in any order you wish, or all at once.
 
 - [Tenant attach](#tenant-attach)
 - [Endpoint analytics](#endpoint-analytics)
@@ -25,7 +26,7 @@ Attaching your Configuration Manager environment the cloud allows you to continu
 
 ## Tenant attach
 
-Tenant attach provides immediate value by having your device records in the cloud and being able to take actions on these devices from the cloud-based console. You can get real-time data from Configuration Manager clients including clients connected from the internet. When you upload your clients to Microsoft Endpoint Manager admin center, some of the features you may want to use include:
+Tenant attach provides immediate value by having your device records in the cloud and being able to take actions on these devices from the cloud-based console. You can get real-time data from Configuration Manager clients including clients connected from the internet. When you upload your clients to Microsoft Intune admin center, some of the features you may want to use include:
 
 - Run PowerShell [scripts](../tenant-attach/scripts.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json)
 - Install [applications](../tenant-attach/applications.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json)

@@ -25,7 +25,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-classic
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # What to expect when your iOS/iPadOS app is managed by app protection policies
@@ -57,7 +59,7 @@ Apps that support multi-identity let you use different work and personal account
 Users might experience the PIN prompt differently across all of their apps, depending on how you configure the policies.  For example, you might configure your policies so that:       
 * Microsoft Outlook prompts the user for a PIN when they launch the app. 
 * OneDrive prompts the user for a pin when they sign in to their work account.  
-* Microsoft Word, PowerPoint, and Excel prompts the user for a pin when they access documents that are stored in the company OneDrive for Business location.  
+* Microsoft Word, PowerPoint, and Excel prompt the user for a pin when they access documents that are stored in the company OneDrive for Business location.  
 
 - Learn more about the apps that support [app protection and multi-identity](https://www.microsoft.com/cloud-platform/microsoft-intune-apps) with Intune.  
 
@@ -76,6 +78,5 @@ The following example scenario describes how multiple user accounts are treated:
 
 User A works for two companies—**Company X** and **Company Y**. User A has a work account for each company, and both use Intune to deploy app protection policies. **Company X** deploys app protection policies **before** **Company Y**. The account that's associated with **Company X** gets the app protection policy first. If you want the user account that's associated with Company Y to be managed by the app protection policies, you must remove the user account that's associated with Company X and add the user account that's associated with Company Y.  
 
-## Next steps
-
-[What to expect when your Android app is managed by app protection policies](end-user-mam-apps-android.md)
+## Next steps  
+Android device users, whether enrolled in Intune or not, can access their work or school apps securely from their mobile devices. For more information about installing or accessing managed apps on an Android device, see [Managed work and school apps for Android](../user-help/use-managed-apps-on-your-device-android.md).  

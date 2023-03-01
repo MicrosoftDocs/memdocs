@@ -26,7 +26,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # How to monitor app protection policies
@@ -42,11 +44,16 @@ There are three different places to monitor app protection policies:
 App protection data is retained for a minimum of 90 days. Any app instances that have checked in to the Intune service within the past 90 days is included in the app protection status report. An *app instance* is a unique user + app + device. 
 
 > [!NOTE]
-> For more information, see [How to create and assign app protection policies](app-protection-policies.md).
+> For iOS 16 and later devices, the "Device Name" value in all app protection reports will be a generic device name.  For more information, see [Apple Developer documentation](https://developer.apple.com/documentation/uikit/uidevice/1620015-name).
+
+> [!NOTE]
+> For more information, see [How to create and assign app protection policies](app-protection-policies.md). 
+
+
 
 ## Summary view
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **Monitor** > **App protection status**.
 
 The following list provides details about app protection status: 
@@ -79,7 +86,7 @@ Users with devices that are flagged by the **Require threat scan on apps** condi
 
 ## Reporting view
 
-You can find the same reports at the top of the **App protection status** pane. To view these reports, select **Apps** > **App protection status** > **Reports**. The **Reports** pane provides several reports based on user and app, including the following:
+You can find the same reports at the top of the **App protection status** pane. To view these reports, select **Apps** > **Monitor** > **App protection status** > **Reports**. The **Reports** pane provides several reports based on user and app, including the following:
 
 ### User report
 
@@ -180,5 +187,4 @@ Follow these steps to generate App Protection .csv file or App Configuration .cs
  
 ## See also
 - [Manage data transfer between iOS/iPadOS apps](data-transfer-between-apps-manage-ios.md)
-- [What to expect when your Android app is managed by app protection policies](../fundamentals/end-user-mam-apps-android.md)
 - [What to expect when your iOS/iPadOS app is managed by app protection policies](../fundamentals/end-user-mam-apps-ios.md)

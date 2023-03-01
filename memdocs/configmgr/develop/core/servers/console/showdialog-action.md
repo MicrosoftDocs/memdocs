@@ -1,17 +1,17 @@
 ---
-title: "Configuration Manager ShowDialog Action"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: Configuration Manager ShowDialog Action
+ms.date: 09/20/2016
+description: In Configuration Manager, the ShowDialog action opens a property sheet or regular dialog box in the console. With the ShowDialog action, you can display existing dialog boxes or extension dialog boxes that you create.
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: conceptual
 ms.assetid: f5912944-21ac-40d2-a026-f9b2ea69d9c7
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # Configuration Manager ShowDialog Action
 The `ShowDialog` action, in Configuration Manager, opens a property sheet or regular dialog box in the Configuration Manager console. With the `ShowDialog` action, you can display existing dialog boxes or extension dialog boxes that you create.  

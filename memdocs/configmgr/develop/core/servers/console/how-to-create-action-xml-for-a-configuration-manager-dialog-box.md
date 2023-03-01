@@ -1,18 +1,18 @@
 ---
-title: "Create Action XML for a Dialog Box"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+description: Learn how to create action XML for dialog boxes.
+title: Create Action XML for a Dialog Box
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: how-to
 ms.assetid: b946a1cb-d54a-48d3-a3f1-5db70c426513
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Create Action XML for a Configuration Manager Dialog Box
 In Configuration Manager, to display a dialog box in the Configuration Manager console, you create a [Configuration Manager ShowDialog Action](../../../../develop/core/servers/console/showdialog-action.md) action. To define the `ShowDialog` action, you create an XML file that describes a [ActionDescription](/previous-versions/system-center/developer/cc147252(v=msdn.10)) element.  

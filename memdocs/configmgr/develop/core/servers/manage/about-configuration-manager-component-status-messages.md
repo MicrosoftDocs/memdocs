@@ -1,18 +1,18 @@
 ---
-title: "About Component Status Messages"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: About Component Status Messages
+titleSuffix: Configuration Manager
+description: The message text for both the Configuration Manager components and the raw user-defined messages is contained in message DLLs.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: conceptual
 ms.assetid: fb0d7f0c-a341-4c41-a84f-16c027433e2d
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # About Configuration Manager Component Status Messages
 The message text for both the Configuration Manager components and the raw user-defined messages is contained in message DLLs. The [SMS_StatMsgInsStrings Server WMI Class](../../../../develop/reference/core/servers/manage/sms_statmsginsstrings-server-wmi-class.md) class contains the insertion strings for those messages that use insertion strings. To read the SMS component and raw user-defined messages, you must know the message DLL that contains the message text.  

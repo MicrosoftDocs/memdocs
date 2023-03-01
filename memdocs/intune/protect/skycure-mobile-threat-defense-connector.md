@@ -26,7 +26,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier3
+- M365-identity-device-management
 ---
 
 # Symantec Endpoint Protection Mobile connector
@@ -48,9 +50,9 @@ You can enable SEP Mobile risk assessment through Intune device compliance polic
 
 ## Supported platforms
 
-- **Android 4.1 and later**
+- **Android 5.0 and later**
 
-- **iOS 8 and later**
+- **iOS 10 and later**
 
 ## Pre-requisites
 
@@ -92,11 +94,11 @@ When malicious apps such as malware are detected on devices, you can block devic
 
 *Block when malicious apps are detected:*
 
-![Conceptual image of Malicious apps detected](./media/skycure-mobile-threat-defense-connector/symantec-arch-1.png)
+:::image type="content" source="./media/skycure-mobile-threat-defense-connector/symantec-arch-1.png" alt-text="Product flow for blocking access due to malicious apps.":::
 
 *Access granted on remediation:*
 
-![Image of Access granted on remediation after malicious apps detected](./media/skycure-mobile-threat-defense-connector/symantec-arch-2.png)
+:::image type="content" source="./media/skycure-mobile-threat-defense-connector/symantec-arch-2.png" alt-text="Product flow for granting access when malicious apps are remediated.":::
 
 ### Control access based on threat to network
 
@@ -104,32 +106,32 @@ Detect threats like **Man-in-the-middle** in network, and protect access to Wi-F
 
 *Block network access through Wi-Fi:*
 
-![Block network access through Wi-Fi](./media/skycure-mobile-threat-defense-connector/symantec-arch-3.png)
+:::image type="content" source="./media/skycure-mobile-threat-defense-connector/symantec-arch-3.png" alt-text="Product flow for blocking access through Wi-Fi due to an alert.":::
 
 *Access granted on remediation:*
 
-![Access granted on remediation](./media/skycure-mobile-threat-defense-connector/symantec-arch-4.png)
-
+:::image type="content" source="./media/skycure-mobile-threat-defense-connector/symantec-arch-4.png" alt-text=" Product flow for granting access through Wi-Fi after the alert is remediated. ":::
 ### Control access to SharePoint Online based on threat to network
 
 Detect threats like **Man-in-the-middle** in network, and prevent synchronization of corporate files based on the device risk.
 
 *Block SharePoint Online when network threats are detected:*
 
-![Block SharePoint Online when network threats are detected](./media/skycure-mobile-threat-defense-connector/symantec-arch-5.png)
+:::image type="content" source="./media/skycure-mobile-threat-defense-connector/symantec-arch-5.png" alt-text="Product flow for blocking access to the organizations files due to an alert.":::
 
 *Access granted on remediation:*
 
-![Access granted on remediation for Sharepoint example](./media/skycure-mobile-threat-defense-connector/symantec-arch-6.png)
+:::image type="content" source="./media/skycure-mobile-threat-defense-connector/symantec-arch-6.png" alt-text="Product flow for granting access to the organizations files after the alert is remediated.":::
 
 ### Control access on unenrolled devices based on threats from malicious apps
 
 When the Symantec Endpoint Protection Mobile Threat Defense solution considers a device to be infected:
-![App protection policy blocks due to detected malware](./media/skycure-mobile-threat-defense-connector/symantec-app-policy-block.png)
+
+:::image type="content" source="./media/skycure-mobile-threat-defense-connector/symantec-app-policy-block.png" alt-text="Product flow for App protection policies to block access due to malware.":::
 
 Access is granted on remediation:
 
-![Access is granted on remediation for App protection policy](./media/skycure-mobile-threat-defense-connector/symantec-app-policy-remediated.png)
+:::image type="content" source="./media/skycure-mobile-threat-defense-connector/symantec-app-policy-remediated.png" alt-text=" Product flow for App protection policies to grant access after malware is remediated.":::
 
 ## Next steps
 

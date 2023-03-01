@@ -27,24 +27,24 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure;seodec18
 ms.collection:
-  - M365-identity-device-management
-  - highpri
+- tier1
+- M365-identity-device-management
+- highpri
 ---
 
-# Set up Intune enrollment of Android Enterprise fully managed devices 
+# Set up Intune enrollment of Android Enterprise fully managed devices
 
 Android Enterprise fully managed devices are corporate-owned devices associated with a single user and used exclusively for work and not personal use. Admins can manage the entire device and enforce policy controls unavailable to personally-owned/corporate-owned work profiles, such as:
+
 - Allow app installation only from Managed Google Play.
 - Block uninstallation of managed apps.
 - Prevent users from factory resetting devices, and so on.
 
-Intune helps you deploy apps and settings to Android Enterprise devices, including Android Enterprise fully managed devices. For specific details about Android Enterprise, see [Android Enterprise requirements](https://support.google.com/work/android/answer/6174145?hl=en&ref_topic=6151012).
+Microsoft Intune helps you deploy apps and settings to Android Enterprise devices, including Android Enterprise fully managed devices. For specific details about Android Enterprise, see [Android Enterprise requirements](https://support.google.com/work/android/answer/6174145?hl=en&ref_topic=6151012).
 
 ## Technical requirements
 
-You must have an Intune standalone tenant to manage Android Enterprise fully managed devices. Fully managed device management isn't available in the legacy Silverlight management console.
-
-Devices must meet these requirements to be managed as an Android Enterprise fully managed device:
+You must have an Intune standalone tenant to manage Android Enterprise fully managed devices. Devices must meet these requirements to be managed as an Android Enterprise fully managed device:
 
 - Android OS version 8.0 and above.
 - Devices must run a build of Android that has Google Mobile Services (GMS) connectivity. Devices must have GMS available and must be able to connect to GMS.
@@ -62,7 +62,7 @@ To set up Android Enterprise fully managed device management, follow these steps
 
 ### Enable corporate owned user devices
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and choose **Devices** > **Android** > **Android enrollment**  > **Corporate-owned, fully managed user devices**.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and choose **Devices** > **Android** > **Android enrollment**  > **Corporate-owned, fully managed user devices**.
 2. Under **Allow users to enroll corporate-owned user devices**, choose **Yes**.
 
 > [!NOTE]
@@ -71,8 +71,10 @@ To set up Android Enterprise fully managed device management, follow these steps
 When this setting is set to **Yes**, it provides you with an enrollment token (a random string) and a QR code for your Intune tenant. This single enrollment token is valid for all your users and won't expire. Depending on the Android OS and version of the device, you can use either the token or QR code to enroll the device.
 
 ## Enroll the fully managed devices
+
 You can now [enroll your fully managed devices](android-dedicated-devices-fully-managed-enroll.md) (but not when using DEM accounts).
 
 ## Next steps
+
 - [Add Android Enterprise fully managed device configuration policies](../configuration/device-restrictions-android-for-work.md#fully-managed-dedicated-and-corporate-owned-work-profile)
 - [Configure app configuration policies for Android Enterprise fully managed devices](../apps/app-configuration-policies-use-android.md)

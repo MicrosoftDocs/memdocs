@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/28/2022
+ms.date: 05/23/2022
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -26,6 +26,7 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: has-adal-ref
 ms.collection:
+- tier3
 - M365-identity-device-management
 - iOS/iPadOS
 ---
@@ -43,9 +44,9 @@ The Microsoft Intune App SDK for iOS lets you incorporate Intune app protection 
 
 ## Prerequisites
 
-- You will need a macOS computer which has Xcode 11 or later installed.
+- You will need a macOS computer which has Xcode 14.0 or later installed.
 
-- Your app must be targeted for iOS 12.2 or above.
+- Your app must be targeted for iOS 14.0 or above.
 
 - Review the [Intune App SDK for iOS License Terms](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios/blob/master/Microsoft%20License%20Terms%20Intune%20App%20SDK%20for%20iOS.pdf). Print and retain a copy of the license terms for your records. By downloading and using the Intune App SDK for iOS, you agree to such license terms.  If you do not accept them, do not use the software.
 
@@ -82,8 +83,7 @@ To enable the Intune App SDK, follow these steps:
 
    **Option 2 - Static Library**:  Link `libIntuneMAMSwift.xcframework` and `IntuneMAMSwiftStub.xcframework` to the target: Drag `libIntuneMAMSwift.xcframework` and `IntuneMAMSwiftStub.xcframework` to the **Frameworks, Libraries, and Embedded Content** list of the project target.  
 
-
-    :::image type="content" source="media/app-sdk-ios/intune-app-sdk-ios-linked-static-lib.png" alt-text="Intune App SDK iOS Static Library: Xcode Frameworks, Libraries, and Embedded Content sample":::
+    :::image type="content" source="media/app-sdk-ios/intune-app-sdk-ios-linked-static-lib.png" alt-text="Screenshot of the Intune App SDK iOS Static Library: Xcode Frameworks, Libraries, and Embedded Content sample.":::
 
      Add the `IntuneMAMResources.bundle` resource bundle to the project by dragging the resource bundle under **Copy Bundle Resources** within **Build Phases**.
 
@@ -172,29 +172,32 @@ In `- startProvidingItemAtURL:completionHandler:` check if you should encrypt fi
 
 In `- importDocumentAtURL:toParentItemIdentifier:completionHandler:` check whether the file is encrypted using `isFileEncrytped:` API in `IntuneMAMFileProtectionManager`. If it is then decrypt it using `decryptFile:toCopyPath:` API of `IntuneMAMFileProtectionManager`.
 
-## Configure MSAL
+## Setup MSAL
 
 The Intune App SDK uses the [Microsoft Authentication Library](https://github.com/AzureAD/microsoft-authentication-library-for-objc) for its authentication and conditional launch scenarios. It also relies on MSAL to register the user identity with the MAM service for management without device enrollment scenarios.
 
-Typically, MSAL requires apps to register with Azure Active Directory (AAD) and create a unique client ID and redirect URI, to guarantee the security of the tokens granted to the app. If your app already uses MSAL to authenticate users, the app must use its existing registration values and override the Intune App SDK default values. This ensures that users are not prompted for authentication twice (once by the Intune App SDK and once by the app).
+### Set up and configure an AAD app registration
+MSAL requires apps to [register](/azure/active-directory/develop/quickstart-register-app) with Azure Active Directory (AAD) and create a unique client ID and redirect URI, to guarantee the security of the tokens granted to the app. If your application already uses MSAL for its own authentication, then there should already be an AAD app registration/client ID/redirect URI associated with the app. 
 
 If your app does not already use MSAL, you will need to configure an app registration in AAD and specify the client ID and redirect URI that the Intune SDK should use.  
 
+If your app currently uses ADAL to authenticate users, see [Migrate applications to MSAL for iOS and macOS](/azure/active-directory/develop/migrate-objc-adal-msal) for more information on migrating your app from ADAL to MSAL.
+
 It is recommended that your app links to the latest release of [MSAL](https://github.com/AzureAD/microsoft-authentication-library-for-objc/releases).
 
-### Link to MSAL binaries
+### Link MSAL to Your Project
 
-Follow [these instructions](https://github.com/AzureAD/microsoft-authentication-library-for-objc#installation) to link your app to the MSAL binaries.
+Follow the [installation](https://github.com/AzureAD/microsoft-authentication-library-for-objc#installation) section to put the MSAL binaries in your app.
 
-1. If your app does not have any keychain access groups defined, add the app's bundle ID as the first group.
+### Configure MSAL
 
-2. Enable MSAL single sign-on (SSO) by adding `com.microsoft.adalcache` to the keychain access groups.
+Follow the [configuration](https://github.com/AzureAD/microsoft-authentication-library-for-objc#configuring-msal) section to configure MSAL. Make sure you follow all the steps in the configuration section. Disregard step one if your app is already registered in AAD. 
 
-3. In the case you are explicitly setting the MSAL shared cache keychain group, make sure it is set to `<appidprefix>.com.microsoft.adalcache`. MSAL will set this for you unless you override it. If you want to specify a custom keychain group to replace `com.microsoft.adalcache`, specify that in the Info.plist file under IntuneMAMSettings, by using the key `ADALCacheKeychainGroupOverride`.
+The points below contain additional information to configure MSAL and link to it. Follow these if they apply to your application.
 
-### If your app does not use MSAL
-
-If your app does not already use MSAL for its own authentication mechanism, then you will need to create an app registration in AAD with a custom redirect URI, for more informawtion see [Migrating from ADAL Objective C to MSAL Objective C](https://github.com/AzureAD/microsoft-authentication-library-for-objc/wiki/Migrating-from-ADAL-Objective-C-to-MSAL-Objective-C#app-registration-migration). You will also need to add permissions to the registration. For more information, see [Give your app access to the Intune app protection service](../developer/app-sdk-get-started.md#give-your-app-access-to-the-intune-app-protection-service-optional).
+* If your app does not have any keychain access groups defined, add the app's bundle ID as the first group.
+* Enable MSAL single sign-on (SSO) by adding `com.microsoft.adalcache` to the keychain access groups.
+* In the case you are explicitly setting the MSAL shared cache keychain group, make sure it is set to `<appidprefix>.com.microsoft.adalcache`. MSAL will set this for you unless you override it. If you want to specify a custom keychain group to replace `com.microsoft.adalcache`, specify that in the Info.plist file under IntuneMAMSettings, by using the key `ADALCacheKeychainGroupOverride`.
 
 
 ### Configure MSAL settings for the Intune App SDK
@@ -211,11 +214,13 @@ The following configurations are required:
 
 1. In the project's Info.plist file, under the **IntuneMAMSettings** dictionary with the key name `ADALClientId`, specify the client ID to be used for MSAL calls.
 
-2. Also under the **IntuneMAMSettings** dictionary with the key name `ADALRedirectUri`, specify the redirect URI to be used for MSAL calls. Alternatively, you could specify `ADALRedirectScheme` instead, if the application's redirect URI is in the format `scheme://bundle_id`.
+2. If the Azure AD app registration which maps to the client ID configured in step 1 is configured for use in only a single AAD tenant, configure the `ADALAuthority` key under the **IntuneMAMSettings** dictionary within the application's Info.plist file. Specify the Azure AD authority to be used by MSAL for acquiring tokens for the Intune mobile application management service.
+
+3. Also under the **IntuneMAMSettings** dictionary with the key name `ADALRedirectUri`, specify the redirect URI to be used for MSAL calls. Alternatively, you could specify `ADALRedirectScheme` instead, if the application's redirect URI is in the format `scheme://bundle_id`.
 
 Alternatively, apps can override these Azure AD settings at runtime. To do this, simply set the `aadAuthorityUriOverride`, `aadClientIdOverride`, and `aadRedirectUriOverride` properties on the `IntuneMAMSettings` class.
 
-3. Ensure the steps to give your iOS app permissions to the app protection policy (APP) service are followed. Use the instructions in the [getting started with the Intune SDK guide](app-sdk-get-started.md#next-steps-after-integration) under "[Give your app access to the Intune app protection service (optional)](app-sdk-get-started.md#give-your-app-access-to-the-intune-app-protection-service-optional)".  
+4. Ensure the steps to give your iOS app permissions to the app protection policy (APP) service are followed. Use the instructions in the [getting started with the Intune SDK guide](app-sdk-get-started.md#next-steps-after-integration) under "[Give your app access to the Intune app protection service (optional)](app-sdk-get-started.md#give-your-app-access-to-the-intune-app-protection-service-optional)".  
 
 > [!NOTE]
 > The Info.plist approach is recommended for all settings which are static and do not need to be determined at runtime. Values assigned to the `IntuneMAMSettings` class properties at runtime take precedence over any corresponding values specified in the Info.plist, and will persist even after the app is restarted. The SDK will continue to use them for policy check-ins until the user is unenrolled or the values are cleared or changed.
@@ -236,14 +241,13 @@ Some of these settings might have been covered in previous sections, and some do
 Setting  | Type  | Definition | Required?
 --       |  --   |   --       |  --
 ADALClientId  | String  | The app's Azure AD client identifier. | Required for all apps that use MSAL. |
-ADALAuthority | String | The app's Azure AD authority in use. You should use your own environment where AAD accounts have been configured. For more information, see [Application configuration options](/azure/active-directory/develop/msal-client-application-configuration). | Optional. Recommended if the app is a custom line-of-business application built for use within a single organization/AAD tenant. If this value is absent, the common AAD authority is used.|
+ADALAuthority | String | The app's Azure AD authority in use. You should use your own environment where AAD accounts have been configured. For more information, see [Application configuration options](/azure/active-directory/develop/msal-client-application-configuration). | Required if the app is a custom line-of-business application built for use within a single organization/AAD tenant. If this value is absent, the common AAD authority is used (which is only supported for multi-tenant applications).|
 ADALRedirectUri  | String  | The app's Azure AD redirect URI. | ADALRedirectUri or ADALRedirectScheme is required for all apps that use MSAL and any ADAL app that accesses a non-Intune AAD resource.  |
 ADALRedirectScheme  | String  | The app's Azure AD redirect scheme. This can be used in place of ADALRedirectUri if the application's redirect URI is in the format `scheme://bundle_id`. | ADALRedirectUri or ADALRedirectScheme is required for all apps that use MSAL and any ADAL app that accesses a non-Intune AAD resource. |
 ADALLogOverrideDisabled | Boolean  | Specifies whether the SDK will route all MSAL logs (including MSAL calls from the app, if any) to its own log file. Defaults to NO. Set to YES if the app will set its own MSAL log callback. | Optional. |
 ADALCacheKeychainGroupOverride | String  | Specifies the keychain group to use for the MSAL cache, instead of "com.microsoft.adalcache". Note that this doesn't have the app-id prefix. That will be prefixed to the provided string at runtime. | Optional. |
 AppGroupIdentifiers | Array of strings  | Array of app groups from the app's entitlements com.apple.security.application-groups section. | Required if the app uses application groups. |
 ContainingAppBundleId | String | Specifies the bundle ID of the extension's containing application. | Required for iOS extensions. |
-DebugSettingsEnabled| Boolean | If set to YES, test policies within the Settings bundle can be applied. Applications should *not* be shipped with this setting enabled. | Optional. Defaults to no. |
 AutoEnrollOnLaunch| Boolean| Specifies whether the app should attempt to automatically enroll on launch if an existing managed identity is detected and it has not yet done so. Defaults to NO. <br><br> Notes: If no managed identity is found or no valid token for the identity is available in the MSAL cache, the enrollment attempt will silently fail without prompting for credentials, unless the app has also set MAMPolicyRequired to YES. | Optional. Defaults to no. |
 MAMPolicyRequired| Boolean| Specifies whether the app will be blocked from starting if the app does not have an Intune app protection policy. Defaults to NO. <br><br> Notes: Apps cannot be submitted to the App Store with MAMPolicyRequired set to YES. When setting MAMPolicyRequired to YES, AutoEnrollOnLaunch should also be set to YES. | Optional. Defaults to no. |
 MAMPolicyWarnAbsent | Boolean| Specifies whether the app will warn the user during launch if the app does not have an Intune app protection policy. <br><br> Note: Users will still be allowed to use the app without policy after dismissing the warning. | Optional. Defaults to no. |
@@ -270,7 +274,7 @@ FinishLaunchingAtStartup | Boolean | If the app is using `[BGTaskScheduler regis
 
 ### Overview
 
-To receive Intune app protection policy, apps must initiate an enrollment request with the Intune MAM service. Apps can be configured in the Intune console to receive app protection policy with or without device enrollment. [Mobile Application Management (MAM)](../apps/android-deployment-scenarios-app-protection-work-profiles.md#mam), allows apps to be managed by Intune without the need for the device to be enrolled in Intune mobile device management (MDM). In both cases, enrolling with the Intune MAM service is required to receive policy.
+To receive Intune app protection policy, apps must initiate an enrollment request with the Intune MAM service. Apps can be configured in the Intune admin center to receive app protection policy with or without device enrollment. [Mobile Application Management (MAM)](../apps/android-deployment-scenarios-app-protection-work-profiles.md#mam), allows apps to be managed by Intune without the need for the device to be enrolled in Intune mobile device management (MDM). In both cases, enrolling with the Intune MAM service is required to receive policy.
 
 > [!Important]
 > The Intune App SDK for iOS uses 256-bit encryption keys when encryption is enabled by App Protection Policies. All apps will need to have a current SDK version to allow protected data sharing.
@@ -505,7 +509,7 @@ The Intune MAM SDK provides support for the following save locations defined in 
 * `IntuneMAMSaveLocationSharePoint` - This location represents both SharePoint online and AAD Hybrid Modern Auth SharePoint on-prem locations. The identity associated with the SharePoint account should be passed in as the second argument.
 * `IntuneMAMSaveLocationLocalDrive` - This location represents app-sandbox storage that can only be accessed by the app. This location should **not** be used for saving via a file picker or for saving to files through a share extension. If an identity can be associated with the app-sandbox storage, it should be passed in as the second argument. If there is no identity, `nil` should be passed instead. (For example, an app might use separate app-sandbox storage containers for different accounts. In this case, the account that owns the container being accessed should be used as the second argument.)
 * `IntuneMAMSaveLocationCameraRoll` - This location represents the iOS Photo Library. Because there is no account associated with the iOS Photo Library, only `nil` should be passed as the second argument when this location is used. 
-* `IntuneMAMSaveLocationAccountDocument` - This location represents any organization location not previously listed that can be tied to a managed account. The organization account associated with the location should be passed in as the second argument.  (e.g. Uploading a photo to a organization’s LOB cloud service that is tied to the organization account.)
+* `IntuneMAMSaveLocationAccountDocument` - This location represents any organization location not previously listed that can be tied to a managed account. The organization account associated with the location should be passed in as the second argument.  (e.g. Uploading a photo to an organization’s LOB cloud service that is tied to the organization account.)
 * `IntuneMAMSaveLocationOther` - This location represents any non-organizational, not previously listed, or any unknown location. If an account is associated with the location, it should be passed in as the second argument. Otherwise, `nil` should be used instead.
 
 ##### Special considerations for save locations
@@ -532,7 +536,7 @@ The Intune MAM SDK provides support for the following open locations defined in 
 * `IntuneMAMOpenLocationCamera` - This location **only** represents new images taken by the camera. Because there is no account associated with the iOS camera, only `nil` should be passed as the second argument when this location is used. For opening data from the iOS Photo Library, use  `IntuneMAMOpenLocationPhotos`.
 * `IntuneMAMOpenLocationPhotos` - This location **only** represents existing images within the iOS Photo Library. Because there is no account associated with the iOS Photo Library, only `nil` should be passed as the second argument when this location is used. For opening images taken directly from the iOS camera, use `IntuneMAMOpenLocationCamera`.
 * `IntuneMAMOpenLocationLocalStorage` - This location represents app-sandbox storage that can only be accessed by the app. This location should **not** be used for opening files from a file picker or handling incoming files from an openURL. If an identity can be associated with the app-sandbox storage, it should be passed in as the second argument. If there is no identity, `nil` should be passed instead. (e.g. an app might use separate app-sandbox storage containers for different accounts. In this case, the account that owns the container being accessed should be used as the second argument.) 
-* `IntuneMAMOpenLocationAccountDocument` - This location represents any organization location not previously listed that can be tied to a managed account. The organization account associated with the location should be passed in as the second argument. (e.g. Downloading a photo from a organization’s LOB cloud service that is tied to the organization account.)
+* `IntuneMAMOpenLocationAccountDocument` - This location represents any organization location not previously listed that can be tied to a managed account. The organization account associated with the location should be passed in as the second argument. (e.g. Downloading a photo from an organization’s LOB cloud service that is tied to the organization account.)
 * `IntuneMAMOpenLocationOther` - This location represents any non-organizational location, not previously listed, or any unknown location. If an account is associated with the location, it should be passed in as the second argument. Otherwise, `nil` should be used instead.
 
 ##### Special considerations for open locations
@@ -653,7 +657,7 @@ New UI:
 
 MAM targeted configuration (also know as MAM app config) allows an app to receive configuration data through the Intune SDK. The format and variants of this data must be defined and communicated to Intune customers by the app owner/developer.
 
-Intune administrators can target and deploy configuration data via the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and Intune Graph API. As of version 7.0.1 of the Intune App SDK for iOS, apps that are participating in MAM targeted configuration can be provided MAM targeted configuration data via the MAM Service. The application configuration data is pushed through our MAM Service directly to the app instead of through the MDM channel. The Intune App SDK provides a class to access the data retrieved from these consoles. The following items are prerequisites:
+Intune administrators can target and deploy configuration data via the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and Intune Graph API. As of version 7.0.1 of the Intune App SDK for iOS, apps that are participating in MAM targeted configuration can be provided MAM targeted configuration data via the MAM Service. The application configuration data is pushed through our MAM Service directly to the app instead of through the MDM channel. The Intune App SDK provides a class to access the data retrieved from these consoles. The following items are prerequisites:
 
 * The app needs to be enrolled with the Intune MAM service before you access the MAM targeted config UI. For more information, see [Receive app protection policy](#receive-app-protection-policy).
 
@@ -671,7 +675,7 @@ For more information about how to create a MAM targeted app configuration policy
 App Protection Conditional Access blocks access to server tokens until Intune has confirmed app protection policy has been applied. This feature will require changes to your add user flows. Once a customer enables App Protection CA, applications in that customer's tenant that access protected resources will not be able to acquire an access token unless they support this feature.
 
 ### Dependencies
-In addition to the Intune SDK, you will need these two components to enable App Protectoin CA in your app.
+In addition to the Intune SDK, you will need these two components to enable App Protection CA in your app.
 
 1. iOS Authenticator app
 2. MSAL authentication library 1.0 or greater
@@ -800,8 +804,8 @@ guard let authorityURL = URL(string: kAuthority) else {
 Test Case	| How to test	|	Expected Outcome	|
 --	| --	| --	|
 MAM-CA always applied		| Ensure the user is targeted for both App Protection CA and MAM policy before enrolling in your app.|  Verify that your app handles the remediation cases described above and the app can get an access token.	|
-MAM-CA applied after user enrolled	| The user should be logged into the app already, but not targeted for App Protetion CA.	| Target the user for App Protetion CA in the console and verify that you correctly handle MAM remediation	|
-MAM-CA noncompliance	| Set up a App Protection CA policy, but do not assign a MAM policy.	| The user should not be able to acquire an access token. This is useful for testing how your app handles IntuneMAMComplianceStatus error cases.	|
+MAM-CA applied after user enrolled	| The user should be logged into the app already, but not targeted for App Protection CA.	| Target the user for App Protection CA in the console and verify that you correctly handle MAM remediation	|
+MAM-CA noncompliance	| Set up an App Protection CA policy, but do not assign a MAM policy.	| The user should not be able to acquire an access token. This is useful for testing how your app handles IntuneMAMComplianceStatus error cases.	|
 
 ## Telemetry
 
@@ -897,6 +901,10 @@ By default, apps are considered single identity. The SDK sets the process identi
 
     The app does not have to call `setUIPolicyIdentity` in response to this call. If the SDK needs the app to switch to an unmanaged user account, the empty string will be passed into the `identitySwitchRequired` call.
 
+* **SDK-initiated identity auto-enroll**:
+
+     When the SDK needs to auto-enroll a user in the app to perform an action, apps must implement the `addIdentity:completionHandler:` method in `IntuneMAMPolicyDelegate`. The application must then call the completion handler and pass in IntuneMAMAddIdentityResultSuccess if the app is able to add the identity or IntuneMAMAddIdentityResultFailed otherwise.
+
 * **Selective wipe**:
 
     When the app is selectively wiped, the SDK will call the `wipeDataForAccount` method in `IntuneMAMPolicyDelegate`. The app is responsible for removing the specified user's account and any data associated with it. The SDK is capable of removing all files owned by the user and will do so if the app returns FALSE from the `wipeDataForAccount` call.
@@ -906,7 +914,14 @@ By default, apps are considered single identity. The SDK sets the process identi
 ## Siri Intents
 
 If your app integrates with Siri Intents or makes Siri Intent Donations, please make sure to read the comments for `areSiriIntentsAllowed` in `IntuneMAMPolicy.h` for instructions on supporting this scenario. 
+
+> [!NOTE]
+> In iOS 16 and above, a new App Intents system framework is available for creating Swift App Intents. Apps that implement an App Intent should first check the `areSiriIntentsAllowed` property on the IntuneMAMPolicy object for the user.
     
+ ## Printing
+
+ If your app implements printing and provides a custom print action on a custom menu, be sure to utilize `UIPrintInteractionController.isPrintingAvailable()` to determine if you should add your print action to your custom menu.
+ 
 ## Notifications
 
 If your app receives notifications, please make sure to read the comments for `notificationPolicy` in `IntuneMAMPolicy.h` for instructions on supporting this scenario.  It is recommended that apps register for `IntuneMAMPolicyDidChangeNotification` described in `IntuneMAMPolicyManager.h`, and communicate this value to their `UNNotificationServiceExtension` via the keychain.
@@ -921,7 +936,7 @@ In iOS, web views can be used to surface a wide variety of web content without h
 
 Because web views exist within the app, they expose it to potential data leaks. If a user is able to navigate to arbitrary external web pages within an app (either through intentional app design or by clever maneuvering through exposed links in the rendered web page's html content), then the user may be able to leak managed data from the app. 
 
-The Intune MAM SDK provides several APIs for handling different scenarios where both managed and unmanaged content is surfaced through web views within an app. **These APIs only need to be called if there is a managed user signed into the app.** Please see the table below as a quick guide on which API applies to which scenario. 
+The Intune MAM SDK provides several APIs for handling different scenarios where both managed and unmanaged content are surfaced through web views within an app. **These APIs only need to be called if there is a managed user signed into the app.** Please see the table below as a quick guide on which API applies to which scenario. 
 
 | Scenario | APIs |
 | - | - |
@@ -974,12 +989,12 @@ If a web view is used to display user or organizational content but has a risk o
 
 > The `setWebViewPolicyDelegate:forWebViewer:` method must be called directly on a WKWebView or SFSafariViewController.
 
-Each time the web view navigates to a new page, the `isExternalURL:` delegate method will be called. Applications should determine if the URL passed to the delegate method represents an internal website where user or organizational data can be pasted in or an external website that could leak organizational data. Returning `NO` will tell the SDK that the website being loaded is a organizational location where user or organizational data can be shared. Returning `YES` will cause the SDK to open the URL in a managed browser rather than the WKWebView or SFSafariViewController if current policy settings require it. This will ensure that no user or organizational data from within the app can be leaked to the external website.
+Each time the web view navigates to a new page, the `isExternalURL:` delegate method will be called. Applications should determine if the URL passed to the delegate method represents an internal website where user or organizational data can be pasted in or an external website that could leak organizational data. Returning `NO` will tell the SDK that the website being loaded is an organizational location where user or organizational data can be shared. Returning `YES` will cause the SDK to open the URL in a managed browser rather than the WKWebView or SFSafariViewController if current policy settings require it. This will ensure that no user or organizational data from within the app can be leaked to the external website.
 
 
 ### Web View APIs Example
 
-An app is built with five web views (A, B, C, D, and E). Web views A, B, and C do not display user or organizational data. Web view D displays a organization page available to all users of the company. Web view E renders the user's documents which may contain links.
+An app is built with five web views (A, B, C, D, and E). Web views A, B, and C do not display user or organizational data. Web view D displays an organization page available to all users of the company. Web view E renders the user's documents which may contain links.
 
 Since the majority of web views are unmanaged (A, B, and C), we can set `TreatAllWebViewsAsUnmanaged` to reduce the number of times we need to call `setWebViewPolicy:forWebViewer:`.
 
@@ -999,6 +1014,7 @@ A newly created SwiftUI app supports UIScenes but does not have a UISceneDelegat
 Here are recommended best practices for developing for iOS:
 
 * The iOS file system is case-sensitive. Ensure that the case is correct for file names like `IntuneMAMResources.bundle`.
+* Registering custom URL schemes allows specific URLs to redirect into your app. iOS and iPadOS allow multiple apps to register the same custom URL scheme and the OS determines which application is invoked. Please refer to the Apple documentation [Defining a custom URL scheme for your app](https://developer.apple.com/documentation/xcode/defining-a-custom-url-scheme-for-your-app) for recommendations to help avoid custom URL scheme collisions and security guidelines for handling malformed URLs.
 
 ## FAQs
 

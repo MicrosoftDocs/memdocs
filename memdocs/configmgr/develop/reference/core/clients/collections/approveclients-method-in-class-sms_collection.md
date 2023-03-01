@@ -1,18 +1,18 @@
 ---
-title: "ApproveClients Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: ApproveClients Method
+titleSuffix: Configuration Manager
+description: In Configuration Manager, the ApproveClients WMI class method approves specified client computers to join the site.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: b6ebe9e7-0e31-4b88-a157-dd1b2fa3da1b
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # ApproveClients Method in Class SMS_Collection
 The `ApproveClients` Windows Management Instrumentation (WMI) class method, in Configuration Manager, approves specified client computers to join the site.  

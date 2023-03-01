@@ -25,7 +25,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; get-started
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Assign a role to an Intune user
@@ -36,7 +38,7 @@ To create, edit, or assign roles, your account must have one of the following pe
 - **Global Administrator**
 - **Intune Service Administrator**
 
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Tenant administration** > **Roles** > **All roles**.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Tenant administration** > **Roles** > **All roles**.
 
 2. On the **Endpoint Manager roles - All roles** blade, choose the built-in role you want to assign > **Assignments** > **+ Assign**.
 
@@ -54,6 +56,9 @@ To create, edit, or assign roles, your account must have one of the following pe
 7. On the **Scope (Tags)** page, choose tags where this role assignment will be applied. Choose **Next**.
 
 8. On the **Review + Create** page, when you're done, choose **Create**. The new assignment is displayed in the list of assignments.
+
+    > [!NOTE] 
+    > When you create scope groups and assign a scope tag, you can only target groups that are listed in the Scope (Groups) of your role assignment.
 
 ## Next steps
 - [Learn more about role-based access control in Intune](role-based-access-control.md)

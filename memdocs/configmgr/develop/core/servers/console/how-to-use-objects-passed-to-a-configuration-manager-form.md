@@ -1,18 +1,18 @@
 ---
-title: "Use Objects Passed to a Form"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: Use Objects Passed to a Form
+titleSuffix: Configuration Manager
+description: Learn how to use the SmsPageControl.PropertyManager object to access objects selected in the Configuration Manager console.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: how-to
 ms.assetid: 673544cd-2f4c-4425-94a4-0269bfb7c329
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Use Objects Passed to a Configuration Manager Form
 In Configuration Manager, you use the [SmsPageControl.PropertyManager](/previous-versions/system-center/developer/cc146982(v=msdn.10)) object to access objects that are selected in the Configuration Manager console.  

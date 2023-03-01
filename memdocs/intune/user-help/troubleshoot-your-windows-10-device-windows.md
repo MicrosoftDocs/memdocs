@@ -27,7 +27,8 @@ ms.reviewer: amanh
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
-ms.collection: 
+ms.collection:
+- tier2
 ---
 
 
@@ -45,11 +46,11 @@ This article describes how to resolve access issues for an enrolled Windows 10/1
 A connection to Wi-Fi is required to access work or school resources. Verify that you're connected to Wi-Fi and then try accessing the resources again.  
 
 ## Add work or school account in Settings app  
-These steps are the same you'd use to enroll your device. However, if your account isn't appearing in the **Settings** app, you may need to run through these steps again.  
+If your account isn't appearing in the **Settings** app, go through the setup steps in the Settings app again.  
 
 1. Open the **Settings** app. 
 2. Select **Accounts**.
-3. This next step varies depending on the version of Windows you're using. 
+3. Identify the version of Windows you're using and then:   
     * Windows 10 (version 1607 and later) and Windows 11: Select **Access work or school**.
     * Windows 10, version 1511 and earlier: Select **Work access**.  
 4. Check for your account. If it's not listed, select the **Connect** plus sign button to add it. 
@@ -57,8 +58,8 @@ These steps are the same you'd use to enroll your device. However, if your accou
 6. Follow the onscreen prompts to finish connecting.  
 7. When complete, your account will be added as a connection. You'll have access to any resources your organization makes available.   
 
-## Contact IT support for access requirements  
-If you see your work or school account listed in the Settings app, your device and account are already connected. Contact your IT support person for further help with access problems. They may have restrictions or requirements in place that are preventing you from accessing certain resources.  
+## Contact IT support for access problems   
+If you see your work or school account listed in the Settings app, then your device and account are already connected. Contact your IT support person for further help. They may have put restrictions or requirements in place that prevent you from accessing certain resources.  
 
 ## Error messages  
 

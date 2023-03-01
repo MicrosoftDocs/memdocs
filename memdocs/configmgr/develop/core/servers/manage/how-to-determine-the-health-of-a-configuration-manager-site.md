@@ -1,18 +1,18 @@
 ---
-title: "Determine the Health of a Site"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: Determine the Health of a Site
+titleSuffix: Configuration Manager
+description: In Configuration Manager, you can determine the overall health or status of a site by inspecting the SMS_SummarizerSiteStatus object Status property.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: how-to
 ms.assetid: 2b49a2b8-b141-4ed3-9b94-925a6cca1711
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Determine the Health of a Configuration Manager Site
 You can determine the overall health or status of a site, in Configuration Manager, by inspecting the `SMS_SummarizerSiteStatus` object `Status` property. The `Status` property has three possible values:  

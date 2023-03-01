@@ -7,7 +7,7 @@ keywords:
 author: brenduns 
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/21/2020
+ms.date: 04/29/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -20,11 +20,13 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: laarrizz
+ms.reviewer: juidaewo
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Monitor security baselines and profiles in Microsoft Intune
@@ -35,20 +37,20 @@ Intune provides several options to monitor security baselines. You can:
 - Monitor the security baselines profile that applies to your users and devices.
 - View how the settings from a selected profile are set on a selected device.
 
-You can also view the *Endpoint security configurations* that apply to individual devices, which include security baselines.
+You can also view the [Device configuration report](../fundamentals/reports.md#device-configuration-report-operational) to see which device configuration based policies apply to individual devices, which include security baselines.
 
 For more information about the feature, see [Security baselines in Intune](security-baselines.md).
 
 ## Monitor the baseline and your devices
 
-When you monitor a baseline, you get insight into the security state of your devices based on Microsoft's recommendations. To view these insights, sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Endpoint security** > **Security baselines** and select a security baseline type like the *MDM Security Baseline*. Then, from the *Versions* pane, select the profile instance for which you want to view details to open its *Overview* pane. 
+When you monitor a baseline, you get insight into the security state of your devices based on Microsoft's recommendations. To view these insights, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Endpoint security** > **Security baselines** and select a security baseline type like the *MDM Security Baseline*. Then, from the *Versions* pane, select the profile instance for which you want to view details to open its *Overview* pane. 
 
 The *Overview* pane displays two status views for the selected baseline:
 
 - **Security baseline posture** chart - This chart displays high-level details about device status for the baseline version. The available details:
   - **Matches default baseline** – This status identifies when a devices configuration matches the default (unmodified) baseline configuration.
   - **Matches custom settings** – This status identifies when a devices configuration matches the customized version of the baseline that you've deployed. 
-  - **Misconfigured** – This status is a roll up that represents three status conditions from a device: *Error*, *Pending*, or *Conflict*. These separate states are available from other views, like the *Security baseline posture by category*, a list view that appears below this chart.
+  - **Misconfigured** – This status is a roll-up that represents three status conditions from a device: *Error*, *Pending*, or *Conflict*. These separate states are available from other views, like the *Security baseline posture by category*, a list view that appears below this chart.
   - **Not applicable** - This status represents a device that can’t receive the policy. For example, the policy updates a setting specific to the latest version of Windows, but the device runs an older (earlier) version that doesn’t support that setting. 
 
 - **Security baseline posture by category** - A list view that displays device status by category. In this list view, the same details as the *Security baseline posture* chart are available. However, in place of *Misconfigured* you’ll see three columns for the status states that make up Misconfigured:
@@ -66,7 +68,7 @@ When you drill-in to the two preceding views, you can view the following details
 - **Not applicable**: The device can't receive the policy. For example, the policy updates a setting specific to the latest version of Windows, but the device runs an older (earlier) version that doesn’t support that setting.
 
 From the *Version* view, you can select **Device Status**. The Device Status view displays a list of the devices that receive this baseline and includes the following details:
-- *USER PRINCIPAL NAME* - This displays the user profile associated with the baseline on the device. 
+- *USER PRINCIPAL NAME* - The user profile associated with the baseline on the device. 
 - *SECURITY BASELINE POSTURE* - This column displays the devices state:
   - **Succeeded**: Policy is applied.
   - **Error**: The policy failed to apply. The message typically displays with an error code that links to an explanation.
@@ -94,71 +96,44 @@ Monitoring the profile gives insight into the deployment state of your devices, 
 
 ## Resolve conflicts for security baselines
 
-To help resolve a conflict or error for settings in your security baseline profiles or Endpoint security policies, view the **Endpoint security configuration** of a device.  This device-based view helps you identify where your profiles and policies contain settings that drive a status of Conflict or Error. 
+To help resolve a conflict or error for settings in your security baseline profiles or Endpoint security policies, view the [Device configuration report](../fundamentals/reports.md#device-configuration-report-operational) for a device.  This report view helps you identify where your profiles and policies contain settings that drive a status of Conflict or Error.
 
-You can reach information about settings in conflict or error through two paths from within Microsoft Endpoint Manager admin center:
+You can also reach information about settings in conflict or error through two paths from within Microsoft Intune admin center:
 
-- **Endpoint security** > **Security baselines** > *select a baseline type* > **Profiles** > *select a baseline instance* > **Device Status** > **Endpoint security configuration** > *settings that show a Conflict or Errors*.
-- **Devices** > *select a device* > **Endpoint security configuration** > *select a profile or baseline* > *select a setting from the list of settings that shows a Conflict or Errors*.
-
-On the **Endpoint security configuration** view of a device, Intune displays each baseline profile and policy from endpoint security that’s assigned to that device. This view also identifies the associated User Principal Name for each entry, and the status of the baseline profile or policy. A profile or policy can appear multiple times on a device, once for each different User Principal Name associated with it. 
-
-<!-- pending
-The **Baseline status** represents the worst available status from any applicable setting in that profile or policy. For example, if on the device a single setting from a profile is found to be in conflict while the rest of the baselines’ settings are successful, the *Baseline status* is set to *Conflict*. 
-
-The available status from best to worst:
-
-- **Success** - The setting on the device matches the value as configured in the profile, and there are no conflicting configurations. This is either a default and recommended value, or a custom value specified by an administrator when the profile was configured.
-- **Error** - The profile and settings failed to apply.
-- **Conflict** - The setting conflicts with another instance of the setting from another policy, has an error, or is pending an update. This setting isn’t sent to the device until the conflict is resolved.
---> 
+- **Endpoint security** > **Security baselines** > *select a baseline type* > **Profiles** > *select a baseline instance* > **Device status**  
+- **Devices** > **All devices** > *select a device* > **Device configuration** > *select a Policy* > *select a setting from the list of settings that shows a Conflict or Error*.
 
 ### Drill in to identify and resolve conflicts
 
-1. While viewing the Endpoint security configuration of a device, select a profile to drill-in to learn more about the issue that results in a conflict or error status.
+1. While viewing the [Device configuration report](../fundamentals/reports.md#device-configuration-report-operational) for a device, select a policy to drill-in to learn more about the issue that results in a conflict or error status.
 
-   When you drill-in, Intune displays a list of settings for that profile that includes each setting that wasn’t set as *Not configured*, and the status of that setting. The display can be organized by Category, Setting name, or State. If you filter on the State you can quickly focus on only settings that have an error or conflict.  
+   When you drill-in, Intune displays a list of settings for that policy that includes each setting that wasn’t set as *Not configured*, and the status of that setting.
 
 2. To view details about a specific setting, select it to open the **Settings details** pane. In this pane you’ll see:
+
    - Setting – The name of the setting.
-   - State – The status of the setting on the device. 
-   - Source Profile – This is a list of each Endpoint security profile or security baseline that configures the same setting but with a different value.
+   - State – The status of the setting on the device.
+   - Source Profiles – A list of each conflicting profile that configures the same setting but with a different value.
 
-   > [!TIP]  
-   > Unlike device configuration profiles, Endpoint security profiles won’t provide error codes or related details.
-
-3. To reconfigure conflicting profiles, select a record from the **Source Profile** list to open a view of that profiles configuration. From the profile’s configuration view, you can review and edit settings in that profile to remove the conflict.
+3. To reconfigure conflicting profiles, select a record from the **Source Profile** list to open *Overview* for that profile. Select the profiles **Properties** and you can then review and edit settings in that profile to remove the conflict.
 
 ## View settings from profiles that apply to a device
 
-You can select a profile for a Security Baseline, and drill-in to view a list of settings from that profile as they apply to an individual device.  To view that list, drill into **Endpoint security** > **Security baselines** > *select the security baseline type* > *select the Profile you want to view* > **Device status**. You can also view the list by going to **Endpoint Security** > **All devices** > *select a device* > **Endpoint security configuration** > *select a baseline version*.
+You can select a profile for a Security Baseline, and drill-in to view a list of settings from that profile as they apply to an individual device. To  drill in:
 
-After selecting a device, Microsoft Endpoint Manager admin center displays a list of the settings from that profile that includes the category the setting is from and the configuration state on the device. Configuration states include the following values:
+- **Endpoint Security** > **All devices** > *select a device* > Device configuration > *select a baseline policy instance* 
 
-- **Success** – The setting on the device matches the value as configured in the profile. This is either the baselines default and recommended value, or a custom value specified by an administrator when the profile was configured.
+After you drill in, the admin center displays a list of the settings from that profile and the settings status. Status states include:
+
+- **Succeeded** – The setting on the device matches the value as configured in the profile. This is either the baselines default and recommended value, or a custom value specified by an administrator when the profile was configured.
 - **Conflict** – The setting is in conflict with another policy, has an error, or is pending an update.
-- **Not applicable** – The setting is not applied by the profile.
-
-> [!NOTE]
-> The status values for settings will update in a future release to provide more granular details.
-
-## View Endpoint security configurations per device
-
-View details about the security configurations that apply to an individual device, which can help you isolate settings that  are misconfigured.
-
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-
-2. Go to  **Devices** > **All devices** and select the device you want to view.
-
-3. In the *Monitor* category, select **Endpoint security configuration** to view the list of security configurations that apply to that device.
-
-4. You can select an Endpoint security configuration to drill in and view additional details about the evaluation of that security configuration on the device.
+- **Error** - The settings failed to apply.
 
 ## Troubleshoot using per-setting status
 
 You deployed a security baseline, but the deployment status shows an error. The following steps give you some guidance on troubleshooting the error.
 
-1. In Intune, select **Security Baselines** > select a baseline > **Profiles**.
+1. In Intune, select **Endpoint security** > **Security Baselines** > select a baseline > **Profiles**.
 
 2. Select a profile > Under **Monitor** > **Per-setting status**.
 

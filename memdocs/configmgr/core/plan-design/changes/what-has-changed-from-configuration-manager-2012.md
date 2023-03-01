@@ -6,10 +6,12 @@ ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # What's changed from System Center 2012 Configuration Manager
@@ -19,7 +21,7 @@ ms.localizationpriority: medium
 The current branch of Configuration Manager introduces important changes from System Center 2012 Configuration Manager. This article identifies significant changes and new capabilities found in the original baseline version 1511 of Configuration Manager current branch. To learn about changes introduced in recent updates for Configuration Manager, see [What's new in Configuration Manager incremental versions](whats-new-incremental-versions.md).
 
 > [!NOTE]
-> Since October 2019, Configuration Manager is part of Microsoft Endpoint Manager. For more information, see [Microsoft Endpoint Configuration Manager FAQ](../../understand/microsoft-endpoint-manager-faq.yml).
+> Since October 2019, Configuration Manager is part of Microsoft Intune family of products. For more information, see [Microsoft Configuration Manager FAQ](../../understand/microsoft-endpoint-manager-faq.yml).
 
 The December 2015 release (version 1511) of Configuration Manager was the initial release of the current Configuration Manager product from Microsoft. It's typically referred to as Configuration Manager current branch. *Current branch* indicates this version supports incremental updates to the product. It also provides a way to distinguish between this release and previous releases of Configuration Manager.  
 
@@ -29,15 +31,15 @@ Configuration Manager current branch:
 
 - Supports incremental, in-product updates, also called update versions. The initial release was version 1511. Later versions are released several times a year as in-console updates, like version 1910.  
 
-- Is installed using a baseline version. While 1511 was the original baseline version, new baseline versions are also released from time to time, like 2103. Baseline versions can be used to install a new Configuration Manager site and hierarchy, or to upgrade from a supported version of System Center 2012 Configuration Manager.  
+- Is installed using a baseline version. While 1511 was the original baseline version, new baseline versions are also released from time to time, like 2203. Baseline versions can be used to install a new Configuration Manager site and hierarchy, or to upgrade from a supported version of System Center 2012 Configuration Manager.  
 
 ## <a name="bkmk_updates"></a> In-console updates
 
 Configuration Manager uses an in-console service method called **Updates and Servicing** that makes it easy to locate and install recommended updates.  
 
-Some versions are only available as updates for existing sites from within the Configuration Manager console. You can't use these updates to install a new Configuration Manager site. For example, the 1910 update is only available from within the Configuration Manager console. It's used to update a site that already runs a supported version of Configuration Manager.
+Some versions are only available as updates for existing sites from within the Configuration Manager console. You can't use these updates to install a new Configuration Manager site. For example, the 2111 update is only available from within the Configuration Manager console. It's used to update a site that already runs a supported version of Configuration Manager.
 
-Periodically, an update version is also released as a new *baseline* version. For example, update version 2103 is also a baseline. Use a baseline version to install a new site or hierarchy. Don't start with an older baseline version like 2002, and upgrade your way to the most current version. Always use the latest baseline.
+Periodically, an update version is also released as a new *baseline* version. For example, update version 2203 is also a baseline. Use a baseline version to install a new site or hierarchy. Don't start with an older baseline version like 2111, and upgrade your way to the most current version. Always use the latest baseline.
 
 For more information, see the following articles:
 

@@ -1,18 +1,18 @@
 ---
-title: "Deploy a Site System Role"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: Deploy a Site System Role
+titleSuffix: Configuration Manager
+description: The features and capabilities of a site are determined by the site roles applied to it. Configuring a site is performed through Windows Management Instrumentation (WMI) classes.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: how-to
 ms.assetid: e9e44ed6-c85e-44b6-9446-3e859c3bfcc4
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Deploy a Site System Role (Example:  Fallback Status Point)
 The features and capabilities of a site are determined by the site roles applied to it. A site can contain one or more site roles. Some roles depend on other roles. For more information about specific site roles see [Configure sites and hierarchies for Configuration Manager](../../../core/servers/deploy/configure/configure-sites-and-hierarchies.md).  

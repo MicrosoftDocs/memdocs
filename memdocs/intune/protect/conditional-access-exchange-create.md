@@ -21,12 +21,14 @@ ms.assetid: 127dafcb-3f30-4745-a561-f62c9f095907
 #ROBOTS:
 #audience:
 
-ms.reviewer: samyada, demerson
+ms.reviewer: tycast
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier3
+- M365-identity-device-management
 ---
 
 # Configure Exchange on-premises access for Intune
@@ -40,7 +42,7 @@ If you have an Exchange Online Dedicated environment and need to find out whethe
 >
 > Beginning in July of 2020, support for the Exchange connector is deprecated, and replaced by Exchange [hybrid modern authentication](/office365/enterprise/hybrid-modern-auth-overview) (HMA).  If you have an Exchange Connector set up in your environment, you’re Intune tenant remains supported for its use, and you’ll continue to have access to UI that supports its configuration. You can continue to use the connector or configure HMA and then uninstall your connector.
 >
-> Use of HMA does not require Intune to setup and use the Exchange Connector. With this change, the UI to configure and manage the Exchange Connector for Intune has been removed from the Microsoft Endpoint Manager admin center, unless you already use an Exchange connector with your subscription.
+> Use of HMA does not require Intune to setup and use the Exchange Connector. With this change, the UI to configure and manage the Exchange Connector for Intune has been removed from the Microsoft Intune admin center, unless you already use an Exchange connector with your subscription.
 
 ## Before you begin
 
@@ -82,7 +84,7 @@ Before you can configure Conditional Access, verify the following configurations
 
 #### To set up Conditional Access for Android Enterprise Personally-Owned Work Profile devices
 
-  1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+  1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
   
   2. Deploy the Gmail or Nine Work app as **Required**.
 
@@ -103,7 +105,9 @@ Before you can configure Conditional Access, verify the following configurations
 
 ### Support for PCs
 
-The native **Mail** application on Windows 8.1 and later (when enrolled into MDM with Intune)
+It currently supports the native **Mail** application on Windows 8.1 and later (when enrolled into MDM with Intune).
+
+[!INCLUDE [windows-phone-81-windows-10-mobile-support](../includes/windows-phone-81-windows-10-mobile-support.md)]
 
 ## Configure Exchange on-premises access
 
@@ -111,7 +115,7 @@ Support for new installations of the Exchange connector was deprecated in July o
 
 Before you can use the following procedure to set up Exchange on-premises access control, you must install and configure at least one [Intune on-premises Exchange connector](exchange-connector-install.md) for Exchange on-premises.
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Go to **Tenant administration** > **Exchange access**, and then select **Exchange On-premises access**.
 
@@ -131,7 +135,7 @@ Before you can use the following procedure to set up Exchange on-premises access
 
    Select **Save** to save your configuration, and return to the **Exchange access** pane.
 
-6. Next, configure settings for the Intune on-premises Exchange connector. In the console, select **Tenant administration** > **Exchange Access**> **Exchange ActiveSync on-premises connector** and then select the connector for the Exchange organization that you want to configure.
+6. Next, configure settings for the Intune on-premises Exchange connector. In the admin center, select **Tenant administration** > **Exchange Access**> **Exchange ActiveSync on-premises connector** and then select the connector for the Exchange organization that you want to configure.
 
 7. For **User notifications**, select **Edit** to open the **Edit Organization** workflow where you can modify the *User notification* message.
 

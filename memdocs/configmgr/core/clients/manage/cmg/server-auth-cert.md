@@ -2,15 +2,16 @@
 title: CMG server authentication certificate
 titleSuffix: Configuration Manager
 description: The CMG uses HTTPS for secure client communication over the public internet. You can get a certificate from a public provider, or issue one from your public key infrastructure (PKI).
-ms.date: 08/23/2021
+ms.date: 04/08/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: how-to
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: BalaDelli
+ms.author: baladell
+manager: apoorvseth
 ms.localizationpriority: medium
-ms.collection: highpri
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # CMG server authentication certificate
@@ -95,6 +96,8 @@ The interface reflects whether the domain name is available or already in use by
 
 > [!IMPORTANT]
 > Don't create the service in the portal, just use this process to check the name availability.
+
+Repeat this process for the **Key Vault** resource. The virtual machine scale set deployment creates a key vault with the same name, which also needs to be globally unique.<!-- memdocs#1883 -->
 
 ### Content-enabled CMG storage account
 

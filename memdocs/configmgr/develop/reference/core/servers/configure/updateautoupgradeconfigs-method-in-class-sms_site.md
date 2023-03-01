@@ -1,18 +1,18 @@
 ---
-title: "UpdateAutoUpgradeConfigs Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: UpdateAutoUpgradeConfigs Method
+titleSuffix: Configuration Manager
+description: The UpdateAutoUpgradeConfigs Windows Management Instrumentation class method, in Configuration Manager, updates configurations for auto-upgrade settings.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 4214f7a0-03e3-4e3a-bb31-5b958e45c5d0
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # UpdateAutoUpgradeConfigs Method in Class SMS_Site
 The `UpdateAutoUpgradeConfigs` Windows Management Instrumentation (WMI) class method, in Configuration Manager, updates configurations for auto-upgrade settings.  

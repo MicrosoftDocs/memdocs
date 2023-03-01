@@ -2,14 +2,16 @@
 title: Monitor orchestration groups
 titleSuffix: Configuration Manager
 description: Monitor and reset orchestration groups.
-ms.date: 12/01/2021
+ms.date: 07/11/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: BalaDelli
+ms.author: baladell
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.reviewer: mstewart,aaroncz 
+ms.collection: tier3
 ---
 
 # Monitor orchestration groups in Configuration Manager
@@ -37,6 +39,8 @@ From the **Assets and Compliance** workspace, select the **Orchestration Group**
 - **Orchestration Group Member Timeout (in minutes)**: Value of **Orchestration Group member timeout (in minutes)** set on the **General** page when creating the group, or the **General** tab when editing the group.
 - **Orchestration Group ID**: ID of the group, The ID is used in logs and the database.
 - **Orchestration Group Unique ID**: Unique ID of the group, The Unique ID is used in logs and the database.
+- **Last Modified Time**: The time the orchestration group was last modified (starting in version 2203). <!--12500680, 12976470-->
+- **Last Modified By**: The user that last modified the orchestration group (starting in version 2203). <!--12500680, 12976470-->
 
 ## Orchestration groups details tabs
 
@@ -74,6 +78,10 @@ In the **Orchestration Group** node, select an orchestration group. In the ribbo
 - **OG Unique ID**: Unique ID of the orchestration group the member belongs to.
 - **Resource ID**: Resource ID of the device.
 
+## <a name="bkmk_alerts"></a> Alerts for orchestration groups
+*(Introduced in version 2203)*
+
+Starting in version 2203, if an orchestration group fails, an alert is generated. In the Configuration Manager console, go to the **Monitoring** workspace, expand **Alerts**, and then select **Active Alerts** or **All Alerts**. For more information about alerts, see [Configure alerts](../../core/servers/manage/configure-alerts.md).
 
 ## Log files
 

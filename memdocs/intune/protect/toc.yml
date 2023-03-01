@@ -41,6 +41,8 @@ items:
         href: data-intune-sends-to-apple.md
       - name: Data Intune sends to Google
         href: data-intune-sends-to-google.md
+      - name: Enable Windows diagnostic data
+        href: data-enable-windows-data.md
       - name: Information shared from Jamf Pro to Intune
         href: data-jamf-sends-to-intune.md
     - name: View and correct personal data
@@ -62,10 +64,8 @@ items:
       items:   
       - name: JSON for custom settings
         href: compliance-custom-json.md    
-      - name: PowerShell script for custom settings
+      - name: Scripts for custom compliance settings
         href: compliance-custom-script.md    
-    - name: Location-based compliance
-      href: ./create-compliance-policy.md
     - name: Actions for noncompliance
       href: actions-for-noncompliance.md
     - name: Monitor device compliance
@@ -91,6 +91,8 @@ items:
       items:
         - name: Manage security policies
           href: endpoint-security-policy.md
+        - name: Use reusable settings groups
+          href: reusable-settings-groups.md
         - name: Antivirus
           href: endpoint-security-antivirus-policy.md
         - name: Disk encryption
@@ -113,7 +115,7 @@ items:
         href: advanced-threat-protection-manage-android.md
       - name: Monitor Defender for Endpoint
         href: advanced-threat-protection-monitor.md
-      - name: MDE Security Configuration Management (Preview)
+      - name: MDE Security Configuration Management
         href: mde-security-integration.md
     - name: Firewall rule migration
       href: endpoint-security-firewall-rule-tool.md  
@@ -135,6 +137,14 @@ items:
       href: microsoft-tunnel-prerequisites.md
     - name: Configure Microsoft Tunnel
       href: microsoft-tunnel-configure.md
+    - name: Microsoft Tunnel for MAM
+      items:
+      - name: MAM Tunnel Overview
+        href: microsoft-tunnel-mam.md
+      - name: MAM Tunnel for Android
+        href: microsoft-tunnel-mam-android.md
+      - name: MAM Tunnel for iOS
+        href: microsoft-tunnel-mam-ios.md
     - name: Monitor Microsoft Tunnel
       href: microsoft-tunnel-monitor.md
     - name: Upgrade Microsoft Tunnel
@@ -145,9 +155,9 @@ items:
       href: microsoft-tunnel-migrate-app.md
   - name: Identity protection
     items:
-    - name: Windows Hello
+    - name: Windows Hello at device enrollment
       href: windows-hello.md
-    - name: Identity protection
+    - name: Windows Hello after device enrollment
       href: identity-protection-configure.md
   - name: Conditional Access
     items:
@@ -209,10 +219,10 @@ items:
         items:
         - name: BlackBerry and Intune integration
           href: blackberry-mtd-connector-integration.md
-      - name: Set up Check Point
+      - name: Set up Check Point Harmony
         href: checkpoint-sandblast-mobile-mobile-threat-defense-connector.md
         items:
-        - name: Check Point and Intune integration
+        - name: Check Point Harmony and Intune integration
           href: checkpoint-sandblast-mobile-mtd-connector-integration.md
       - name: Set up Lookout
         href: lookout-mobile-threat-defense-connector.md
@@ -228,7 +238,12 @@ items:
         href: pradeo-mobile-threat-defense-connector.md
         items:
         - name: Pradeo and Intune integration
-          href: pradeo-mtd-connector-integration.md
+          href: pradeo-mobile-threat-defense-connector.md
+      - name: Set up SentinelOne Mobile
+        href: sentinelone-mobile-threat-defense-connector.md
+        items:
+        - name: SentinelOne Mobile and Intune integration
+          href: sentinelone-mtd-connector-integration.md
       - name: Set up Sophos Mobile
         href: sophos-mtd-connector.md
         items:
@@ -239,6 +254,11 @@ items:
         items:
         - name: Symantec and Intune integration
           href: skycure-mtd-connector-integration.md
+      - name: Set up Trend Micro Mobile Security as a Service
+        href: trend-micro-mobile-threat-defense-connector.md
+        items:
+        - name: Trend Micro Mobile Security as a Service and Intune integration
+          href: trend-micro-mtd-connector-integration.md 
       - name: Set up Wandera
         href: wandera-mtd-connector.md
         items:
@@ -305,10 +325,14 @@ items:
         href: windows-10-expedite-updates.md
       - name: Windows rollout options
         href: windows-update-rollout-options.md
+      - name: Windows Update compatibility reports
+        href: windows-update-compatibility-reports.md
       - name: Windows Update compliance reports
         href: windows-update-compliance-reports.md         
     - name: iOS update policies
       href: software-updates-ios.md 
+    - name: macOS update policies
+      href: software-updates-macos.md
   - name: Troubleshoot
     items:
     - name: Troubleshoot policies and profiles

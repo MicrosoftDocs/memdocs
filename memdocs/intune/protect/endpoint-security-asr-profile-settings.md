@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/01/2021
+ms.date: 01/20/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -23,7 +23,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier3
+- M365-identity-device-management
 ms.reviewer: mattcall
 
 ---
@@ -52,6 +54,10 @@ Supported platforms and profiles:
   - Profile: **Exploit Protection(ConfigMgr)(preview)**
   - Profile: **Web Protection (ConfigMgr)(preview)**
 
+- **Windows 10, Windows 11, and Windows Server**: Use this platform for policy you deploy to devices managed through [Security Management for Microsoft Defender for Endpoint](../protect/mde-security-integration.md). 
+
+  - Profile: **Attack Surface Reduction Rules**
+
 ## Attack surface reduction (MDM)
 
 ### App and browser isolation profile
@@ -61,7 +67,7 @@ Supported platforms and profiles:
 - **Turn on Application Guard**  
   CSP: [AllowWindowsDefenderApplicationGuard](/windows/client-management/mdm/windowsdefenderapplicationguard-csp#allowwindowsdefenderapplicationguard)
 
-  - **Not configured** (*default*) - Microsoft Defender Application Guard is not configured for Microsoft Edge or isolated Windows environments.
+  - **Not configured** (*default*) - Microsoft Defender Application Guard isn't configured for Microsoft Edge or isolated Windows environments.
   - **Enabled for Edge** - Application Guard opens unapproved sites in a Hyper-V virtualized browsing container.
   - **Enabled for isolated Windows environments** - Application Guard is turned on for any applications enabled for App Guard within Windows.
   - **Enabled for Edge AND isolated Windows environments** - Application Guard is configured for both scenarios.
@@ -118,8 +124,6 @@ Supported platforms and profiles:
     - **Yes** - Applications inside Microsoft Defender Application Guard can access the camera and microphone on the user’s device.
     - **No** - Applications inside Microsoft Defender Application Guard can't access the camera and microphone on the user’s device. This is the same behavior as *Not configured*.
 
-
-
 - **Application guard allow print to local printers**  
 
   - **Not configured** (*default*)
@@ -147,7 +151,7 @@ Supported platforms and profiles:
 
   To add thumbprints one at a time, select **Add**. You can use **Import** to specify a .CSV file that contains multiple thumbprint entries that are all added to the profile at the same time. When you use a .CSV file, each thumbprint must be separated by a comma. For example: `b4e72779a8a362c860c36a6461f31e3aa7e58c14,1b1d49f06d2a697a544a1059bd59a7b058cda924`
 
-  All entries that are listed in the profile are active. You do not need to select a checkbox for a thumbprint entry to make it active. Instead, use the checkboxes to help you manage the entries that have been added to the profile. For example, you can select the checkbox of one or more certificate thumbprint entries and then **Delete** those entries from the profile with a single action.
+  All entries that are listed in the profile are active. You don't need to select a checkbox for a thumbprint entry to make it active. Instead, use the checkboxes to help you manage the entries that have been added to the profile. For example, you can select the checkbox of one or more certificate thumbprint entries and then **Delete** those entries from the profile with a single action.
 
 - **Windows network isolation policy**  
   
@@ -211,6 +215,11 @@ Supported platforms and profiles:
 
 #### Attack Surface Reduction Rules
 
+> [!NOTE]  
+> This section details the settings in Attack Surface Reduction Rules profiles created before April 5, 2022. Profiles created after that date use a new settings format as found in the Settings Catalog. With this change you can no longer create new versions of the old profile and they are no longer being developed. Although you can no longer create new instances of the older profile, you can continue to edit and use instances of it that you previously created.
+>
+> For profiles that use the new settings format, Intune no longer maintains a list of each setting by name. Instead, the name of each setting, its configuration options, and its explanatory text you see in the Microsoft Intune admin center are taken directly from the settings authoritative content. That content can provide more information about the use of the setting in its proper context. When viewing a settings information text, you can use its *Learn more* link to open that content.
+
 - **Block persistence through WMI event subscription**  
   [Reduce attack surfaces with attack surface reduction rules](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
 
@@ -218,9 +227,9 @@ Supported platforms and profiles:
 
   This rule prevents malware from abusing WMI to attain persistence on a device. Fileless threats employ various tactics to stay hidden, to avoid being seen in the file system, and to gain periodic execution control. Some threats can abuse the WMI repository and event model to stay hidden.
 
-  - **Not configured** (default) – The setting returns to the Windows default, which is off and persistence is not blocked.
+  - **Not configured** (default) – The setting returns to the Windows default, which is off and persistence isn't blocked.
   - **Block** – Persistence through WMI is blocked.
-  - **Audit** – Evaluate how this rule affects your organization if its enabled (set to Block).
+  - **Audit** – Evaluate how this rule affects your organization if it's enabled (set to Block).
   - **Disable** - Turn this rule off. Persistence is not blocked.
 
   To learn more about this setting, see [Block persistence through WMI event subscription](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx#block-persistence-through-wmi-event-subscription).
@@ -390,6 +399,12 @@ Supported platforms and profiles:
 
 #### Device Control
 
+> [!NOTE]  
+> This section details the settings found in Device control profiles created before May 23, 2022. Profiles created after that date use a new settings format as found in the Settings Catalog. Although you can no longer create new instances of the original profile, you can continue to edit and use your existing profiles.  
+>
+> For profiles that use the new settings format, Intune no longer maintains a list of each setting by name. Instead, the name of each setting, its configuration options, and its explanatory text you see in the Microsoft Intune admin center are taken directly from the settings authoritative content. That content can provide more information about the use of the setting in its proper context. When viewing a settings information text, you can use its *Learn more* link to open that content.
+
+
 - **Allow hardware device installation by device identifiers**  
   - **Not configured** *(default)*
   - **Yes** - Windows can install or update any device whose Plug and Play hardware ID or compatible ID appears in the list you create unless another policy setting specifically prevents that installation. If you enable this policy setting on a remote desktop server, the policy setting affects redirection of the specified devices from a remote desktop client to the remote desktop server.
@@ -542,6 +557,11 @@ Supported platforms and profiles:
 ### Exploit protection profile
 
 #### Exploit protection
+
+> [!NOTE]  
+> This section details the settings you can find in Exploit protection profiles created before April 5, 2022. Profiles created after that date use a new settings format as found in the Settings Catalog. With this change you can no longer create new versions of the old profile and they are no longer being developed. Although you can no longer create new instances of the older profile, you can continue to edit and use instances of it that you previously created.
+>
+> For profiles that use the new settings format, Intune no longer maintains a list of each setting by name. Instead, the name of each setting, its configuration options, and its explanatory text you see in the Microsoft Intune admin center are taken directly from the settings authoritative content. That content can provide more information about the use of the setting in its proper context. When viewing a settings information text, you can use its *Learn more* link to open that content.
 
 - **Upload XML**  
   CSP: [ExploitProtectionSettings](/windows/client-management/mdm/policy-csp-exploitguard#exploitguard-exploitprotectionsettings)

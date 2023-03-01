@@ -25,7 +25,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune, has-adal-ref
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier3
+- M365-identity-device-management
 ---
 
 # Get started with the Microsoft Intune App SDK
@@ -96,7 +98,7 @@ You will need one of the following developer guides to help you integrate the In
 
 In addition to enabling your app for app protection policy, the following is required for your app to properly function with Azure ActiveDirectory (AAD) app based Conditional Access:
 
-* App is built with the [Azure ActiveDirectory Authentication Library](/azure/active-directory/develop/active-directory-authentication-libraries) and enabled for AAD broker authentication.
+* App is built with the [Microsoft Authentication Library](/azure/active-directory/develop/reference-v2-libraries) and enabled for AAD broker authentication.
 
 * The [AAD Client ID](/azure/app-service/app-service-mobile-how-to-configure-active-directory-authentication#configure-a-native-client-application) for your app must be unique across iOS and Android platforms.
 
@@ -114,7 +116,7 @@ Microsoft Intune collects data on usage statistics for your app.
 
 ## Line-of-business app version numbers
 
-Line-of-business apps in Intune now display the version number for iOS and Android apps. The number displays in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) in the app list and in the app overview blade. End users can see the app number in the Company Portal app and in the web portal.
+Line-of-business apps in Intune now display the version number for iOS and Android apps. The number displays in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) in the app list and in the app overview blade. End users can see the app number in the Company Portal app and in the web portal.
 
 ### Full version number
 
@@ -174,7 +176,7 @@ After you finish the necessary steps to integrate your iOS or Android app with t
 
 If your app is using its own custom Azure Active Directory (AAD) settings for authentication, then the following steps should be taken for both public store apps, as well as internal LOB apps. The steps **do not need to be taken if your app is using the Intune SDK default client ID**. 
 
-Once you have registered your app within an Azure tenant, and it is showing up under **All Applications**, you must give your app access to the Intune app protection service (previously known as MAM service). In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431):
+Once you have registered your app within an Azure tenant, and it is showing up under **All Applications**, you must give your app access to the Intune app protection service (previously known as MAM service). In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431):
 
 1. Go to the **Azure Active Directory** blade.
 2. Under **App registrations**, go to the listing set up for the application.
@@ -183,9 +185,6 @@ Once you have registered your app within an Azure tenant, and it is showing up u
 5. In the search box, enter **Microsoft Mobile Application Management**.
 6. Under **Delegated Permissions**, select the **DeviceManagementManagedApps.ReadWrite: Read and Write the User's App Management Data*** checkbox.
 7. Click **Add permissions**.
-
-> [!NOTE]
-> If your app restricts you from signing in due to an error accessing this resource: https\://intunemam.microsoftonline.com, you must send a note to msintuneappsdk@microsoft.com with your app's Client ID. This is a manual approval process today.
 
 ### Badge your app (optional)
 

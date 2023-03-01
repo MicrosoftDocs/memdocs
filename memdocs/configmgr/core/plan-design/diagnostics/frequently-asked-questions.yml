@@ -7,9 +7,9 @@ metadata:
   ms.prod: configuration-manager
   ms.technology: configmgr-core
   ms.topic: faq
-  author: aczechowski
-  ms.author: aaroncz
-  manager: dougeby
+  author: banreet
+  ms.author: banreetkaur
+  manager: apoorvseth
 
 title: Frequently asked questions about diagnostics and usage data
 summary: |
@@ -76,7 +76,7 @@ sections:
         answer: |
           Yes, when you integrate those services with Configuration Manager. As part of the interaction with any cloud service, Configuration Manager sends some data to that service. This data is specific to that cloud service, and separate from Configuration Manager diagnostics and usage data. For more information on the specific data used in the interaction with another cloud service, see the documentation for that service.
           
-          For example, the following cloud services are a part of Microsoft Endpoint Manager:
+          For example, the following cloud services are a part of Microsoft Intune family of products:
           
           - [Desktop Analytics data privacy](../../../desktop-analytics/privacy.md)
           - [Tenant attach data collection](../../../tenant-attach/data-collection.md)

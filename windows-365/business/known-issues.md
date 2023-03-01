@@ -9,7 +9,7 @@ manager: dougeby
 ms.date: 11/04/2021
 audience: Admin
 ms.topic: troubleshooting
-ms.service: cloudpc
+ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
 ms.technology:
@@ -25,7 +25,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: get-started
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- tier2
 ---
 
 # Known issues: Windows 365 Business
@@ -54,11 +56,11 @@ There are two workarounds for this issue:
 
 Users can manually change their language/locale in the URL for most websites.
 
-For example, in the following URL, change the language/locale from "en-us" to "fr-fr" to get the French version:
+For example, in the following URL, change the language/locale from `en-us` to `fr-fr` to get the French version:
 
-docs.microsoft.com/**en-us**/microsoft-365/admin/setup/get-started-windows-365-business
+Before: `https://learn.microsoft.com/en-us/microsoft-365/admin/setup/get-started-windows-365-business`
 
-docs.microsoft.com/**fr-fr**/microsoft-365/admin/setup/get-started-windows-365-business
+After: `https://learn.microsoft.com/fr-fr/microsoft-365/admin/setup/get-started-windows-365-business`
 
 #### Set search engine location
 
@@ -72,7 +74,7 @@ When users sign into their Cloud PCs from windows365.microsoft.com, the Microsof
 
 To turn on Narrator when accessing your Cloud PC from the web interface:
 
-1. Go to [windows365.microsoft.com](https://windows365.microsoft.com/).
+1. Go to [Windows 365](https://windows365.microsoft.com/).
 
 2. Sign into your Cloud PC.
 
@@ -86,11 +88,11 @@ Sending outbound email messages directly on port 25 from a Windows 365 Business 
 
 If your email service uses Simple Mail Transfer Protocol (SMTP) for your email client application, you can use their web interface, if available.
 
-Or you can ask your email service provider for help to configure their email client app to use secure SMTP over Transport Layer Security (TLS), which uses a different port.
+Or you can ask your email service provider for help with configuring their email client app to use secure SMTP over Transport Layer Security (TLS), which uses a different port.
 
 ## Virtual Private Network support<!--38270291-->
 
-Because of the many Virtual Private Network (VPN) solutions available, Microsoft can't confirm which services work with Windows 365 Business. For more information, consult your VPN provider. For organizations that have advanced networking needs, Windows 365 Enterprise is recommended. For more information, see [Network requirements](../enterprise/requirements-network.md).
+Because of the many Virtual Private Network (VPN) solutions available, Microsoft can't confirm which services work with Windows 365 Business. If you need more information, consult with your VPN provider. For organizations that have advanced networking needs, Windows 365 Enterprise is recommended. For more information, see [Network requirements](../enterprise/requirements-network.md).
 
 [!INCLUDE [Missing start menu and taskbar when using iPad and the Remote Desktop app to access a Cloud PC](../includes/known-issues.md)]
 

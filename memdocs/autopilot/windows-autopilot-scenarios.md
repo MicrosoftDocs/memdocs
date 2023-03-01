@@ -2,25 +2,26 @@
 title: Windows Autopilot scenarios and capabilities
 description: Follow along with several typical Windows Autopilot deployment scenarios, such as redeploying a device in a business-ready state.
 keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune, white glove, pre-provision
-ms.prod: w10
+ms.prod: windows-client
 ms.mktglfcycl: deploy
 ms.localizationpriority: medium
 ms.sitesec: library
 ms.pagetype: deploy
 audience: itpro
-author: aczechowski
-ms.author: aaroncz
+author: frankroj
+ms.author: frankroj
 ms.reviewer: jubaptis
-manager: dougeby
-ms.date: 12/16/2020
+manager: aaroncz
+ms.date: 11/17/2022
 ms.collection: M365-modern-desktop
 ms.topic: conceptual
+ms.technology: itpro-deploy
 ---
 
 
 # Windows Autopilot scenarios and capabilities
 
-**Applies to**
+*Applies to:*
 
 - Windows 11
 - Windows 10
@@ -50,6 +51,9 @@ These scenarios are summarized in the following video.
 > [!video https://www.microsoft.com/videoplayer/embed/RE4Ci1b?autoplay=false]
 
 ## Windows Autopilot capabilities
+
+### Temporary Access Pass
+Organizations leveraging [Temporary Access Pass](/azure/active-directory/authentication/howto-authentication-temporary-access-pass) can use this feature with Windows Autopilot Azure AD join user driven, pre-provisioning, and self-deploying mode for shared devices. Temporary Access Pass is not supported by the native Windows login credential provider so it requires the enablement of WebSign-in. To enable this feature in your organization you can follow the CSP details outlined in [Policy CSP - Authentication](/windows/client-management/mdm/policy-csp-authentication#authentication-enablewebsignin). This feature is not supported with Windows Autopilot hybrid Azure AD join devices and is not applicable on self-deploying mode kiosks.
 
 ### Windows Autopilot is self-updating during OOBE
 

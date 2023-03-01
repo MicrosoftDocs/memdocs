@@ -1,18 +1,18 @@
 ---
-title: "Console Node XML"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+description: Learn how to use the Configuration Manager Console Node XML to cause a grid view to appear in the view panel displaying the RoleName and SiteCode properties.
+title: Console Node XML
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: conceptual
 ms.assetid: ae7c2e8f-06e9-487d-ba09-4b30cce7574c
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # Configuration Manager Console Node XML
 The node XML for the Configuration Manager console is in workspace XML files located in the %*ProgramFiles*%\Microsoft Endpoint Manager\AdminConsole\XmlStorage\ConsoleRoot\ folder. Your extension node XML files, however, are placed in the folder AdminConsole\XmlStorage\Extensions\Nodes\\<GUID\>, where \<GUID> is the namespace GUID identifier for the parent node.  

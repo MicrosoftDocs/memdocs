@@ -3,39 +3,35 @@ items:
   tocHref: /
   topicHref: /
   items:
-  - name: Enterprise Mobility + Security
-    tocHref: /enterprise-mobility-security/
-    topicHref: /enterprise-mobility-security/
+  - name: Endpoint management
+    tocHref: /mem/
+    topicHref: /mem/
     items:
-    - name: Microsoft Endpoint Manager
-      tocHref: /mem/
-      topicHref: /mem/
+    - name: Intune
+      tocHref: /mem/intune/
+      topicHref: /mem/intune/
       items:
-      - name: Intune
-        tocHref: /mem/intune/
-        topicHref: /mem/intune/
-        items:
-        - name: Intune user help
-          tocHref: /mem/intune/user-help/
-          topicHref: /mem/intune/user-help/use-managed-devices-to-get-work-done
-        - name: Apps
-          tocHref: /mem/intune/apps/
-          topicHref: /mem/intune/apps/
-        - name: Fundamentals
-          tocHref: /mem/intune/fundamentals/
-          topicHref: /mem/intune/fundamentals/
-        - name: Enrollment
-          tocHref: /mem/intune/enrollment/
-          topicHref: /mem/intune/enrollment/
-        - name: Remote actions
-          tocHref: /mem/intune/remote-actions/
-          topicHref: /mem/intune/remote-actions/
-        - name: Configuration
-          tocHref: /mem/intune/configuration/
-          topicHref: /mem/intune/configuration/
-        - name: Protect
-          tocHref: /mem/intune/protect/
-          topicHref: /mem/intune/protect/
-        - name: Developer
-          tocHref: /mem/intune/developer/
-          topicHref: /mem/intune/developer/
+      - name: Intune user help
+        tocHref: /mem/intune/user-help/
+        topicHref: /mem/intune/user-help/use-managed-devices-to-get-work-done
+      - name: Apps
+        tocHref: /mem/intune/apps/
+        topicHref: /mem/intune/apps/
+      - name: Fundamentals
+        tocHref: /mem/intune/fundamentals/
+        topicHref: /mem/intune/fundamentals/
+      - name: Enrollment
+        tocHref: /mem/intune/enrollment/
+        topicHref: /mem/intune/enrollment/
+      - name: Remote actions
+        tocHref: /mem/intune/remote-actions/
+        topicHref: /mem/intune/remote-actions/
+      - name: Configuration
+        tocHref: /mem/intune/configuration/
+        topicHref: /mem/intune/configuration/
+      - name: Protect
+        tocHref: /mem/intune/protect/
+        topicHref: /mem/intune/protect/
+      - name: Developer
+        tocHref: /mem/intune/developer/
+        topicHref: /mem/intune/developer/

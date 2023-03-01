@@ -5,11 +5,13 @@ ms.date: 02/10/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
-author: mestew
-ms.author: mstewart
+author: BalaDelli
+ms.author: baladell
 description: Learn how to configure Windows Server Updates Services to auto-approve definition updates.
-manager: dougeby
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.reviewer: mstewart,aaroncz 
+ms.collection: tier3
 ---
 
 # Enable Endpoint Protection malware definitions to download from WSUS for Configuration Manager

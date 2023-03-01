@@ -6,10 +6,12 @@ ms.date: 01/10/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Supported OS versions for clients and devices for Configuration Manager
@@ -39,8 +41,6 @@ To manage the following Windows OS versions, use the client that's included with
 
     For more information, see [Support for Windows 10](support-for-windows-10.md).
 
-- **Windows 8.1** (x86, x64): Professional, Enterprise
-
 For more information on the versions of the Windows Assessment and Deployment Kit (Windows ADK) that Configuration Manager current branch supports, see [Support for the Windows ADK](support-for-windows-adk.md).
 
 #### Azure Virtual Desktop
@@ -66,13 +66,13 @@ For more information, see the following articles:
 
 ### Supported server OS versions
 
-- **Windows Server 2022**: Standard, Datacenter <sup>[Note 1](#bkmk_note1)</sup> (_starting in Configuration Manager version 2107_)<!-- 10200029 -->
+- **Windows Server 2022**: IoT, Standard, Datacenter <sup>[Note 1](#bkmk_note1)</sup> (_starting in Configuration Manager version 2107_)<!-- 10200029 -->
 
-- **Windows Server 2019**: Standard, Datacenter <sup>[Note 1](#bkmk_note1)</sup>
+- **Windows Server 2019**: IoT, Standard, Datacenter <sup>[Note 1](#bkmk_note1)</sup>
 
 - **Windows Server 2016**: Standard, Datacenter <sup>[Note 1](#bkmk_note1)</sup>
 
-- **Windows Storage Server 2016**: Workgroup, Standard
+- **Windows Storage Server 2016**: Workgroup, Standard, IoT
 
 - **Windows Server 2012 R2** (x64): Standard, Datacenter <sup>[Note 1](#bkmk_note1)</sup>
 

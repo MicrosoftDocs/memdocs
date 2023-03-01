@@ -1,18 +1,18 @@
 ---
-title: "SMS_TaskSequence_OSExpressionGroup Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: SMS_TaskSequence_OSExpressionGroup Class
+titleSuffix: Configuration Manager
+description: In Configuration Manager, the SMS_TaskSequence_OSExpressionGroup WMI class is an SMS Provider server class that represents an evaluation of a single operating system platform in a task sequence.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 1d399a59-c2e6-44ae-a0d2-032f2f6e022a
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_TaskSequence_OSExpressionGroup Server WMI Class
 The `SMS_TaskSequence_OSExpressionGroup` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents an evaluation of a single operating system platform in a task sequence. An object of this type is always contained by an [SMS_TaskSequence_OSConditionGroup Server WMI Class](../../../develop/reference/osd/sms_tasksequence_osconditiongroup-server-wmi-class.md) object.  

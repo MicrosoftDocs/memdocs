@@ -7,9 +7,9 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 08/02/2021
+ms.date: 04/05/2022
 ms.topic: how-to
-ms.service: cloudpc
+ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
 ms.technology:
@@ -25,7 +25,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; get-started
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- tier2
 ---
 
 # Add or delete custom device images
@@ -39,27 +41,28 @@ If you want to use a custom device image, you can add it into your Azure subscri
 
 ## Add a custom device image
 
-For both hybrid Azure Active Directory (Azure AD) join and Azure AD join connections, you can upload the custom image to the Windows 365 service by following these steps:
+You can upload the custom image to the Windows 365 service by following these steps:
 
-1. For Azure AD join on-premises network connections (OPNC) without your own network, you must first [create an on-premises network connection](create-on-premises-network-connection.md) with the Azure subscription associated with the targeted custom images.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-
-3. Select **Devices** > **Windows 365** (under **Provisioning**) > **Device images** > **Add**.
+2. Select **Devices** > **Windows 365** (under **Provisioning**) > **Custom images** > **Add**.
 ![Screenshot of add device image](./media/add-device-images/add-device-image.png)
 
-4. In the **Add image** pane, provide the following information:
+3. In the **Add image** pane, provide the following information:
     - **Image name**: The name of the image you want to add.
     - **Image version**: A version number of the image with this format: Major(int).Minor(int).Patch(int) format. For example: 0.0.1, 1.5.13.
-    - **Source Image**: Choose an image to add. The list will populate with all custom images from your subscription that meet the pre-requisites.
+    - **Subscription**: Choose the Azure subscription where the image came from.
+    - **Source Image**: Choose an image to add. The list will populate with all custom images from your chosen subscription that meet the pre-requisites.
 
-5. Select **Add** to add the image to your device image list.
+4. Select **Add** to add the image to your device image list.
+
+After successfully uploading the image, you'll see the uploaded image when selecting an image to create a provisioning policy.  
 
 ## Delete a custom device image
 
 You can delete a custom image from Windows 365 by following these steps:
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows 365** (under **Provisioning**) > **Device images**.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows 365** (under **Provisioning**) > **Custom images**.
 2. On the **Device images** page, select the check box next to the image > **Delete**.
 3. Select **Yes** on the confirmation pop up to permanently delete the image.
 

@@ -2,23 +2,26 @@
 title: Doc team test
 titleSuffix: Configuration Manager
 description: A test article for the doc team's use.
-ms.date: 12/20/2021
+ms.date: 07/06/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: reference
 ms.localizationpriority: null
 ROBOTS: NOINDEX
-author: aczechowski
-ms.author: aaroncz
-ms.reviewer: mstewart
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+ms.reviewer: mstewart,aaroncz 
+manager: apoorvseth
+ms.collection: tier3
 ---
-# Doc team test - Baladell
-Date: 1/19/2022
+# Doc team test - FrankRoj
+Date: 07/06/2022
 
 # Doc team test
 
 This article is for testing purposes only. This is for the team only. Editing done by IDC Team testing only 1/12/2022
+
+Frank's testing on 07/06/2022
 
 ## Basic Markdown and GFM
 
@@ -53,7 +56,7 @@ To link to a markdown file in the same repo, use **file-relative links**. Use th
 
 Examples:
 
-- [Microsoft Endpoint Configuration Manager documentation](in-console-documentation.md)
+- [Microsoft Configuration Manager documentation](in-console-documentation.md)
 - [Assets in Desktop Analytics](../../desktop-analytics/about-assets.md)
 
 To link to a header in the same markdown file, find the section anchor and link using `#` (for example, `#blockquote`). Use the Docs Authoring Pack to help.

@@ -6,10 +6,12 @@ ms.date: 10/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: how-to
-author: aczechowski
-manager: dougeby
-ms.author: aaroncz
+author: baladelli
+manager: apoorvseth
+ms.author: baladell
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # Create and deploy an application with Configuration Manager
 

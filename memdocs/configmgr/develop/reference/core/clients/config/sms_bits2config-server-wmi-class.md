@@ -1,19 +1,18 @@
 ---
 description: Learn how to specify Background Intelligent Transfer settings for client computers using SMS_BITS2Config class.
-title: "SMS_BITS2Config Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: SMS_BITS2Config Class
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 0369ae43-38f0-4dc2-b65f-34fe0f5b93c5
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_BITS2Config Server WMI Class
 The `SMS_BITS2Config` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that specifies Background Intelligent Transfer settings for client computers.  

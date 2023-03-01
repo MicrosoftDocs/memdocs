@@ -1,19 +1,18 @@
 ---
-title: "SMS_ClientOperation Class"
-titleSuffix: "Configuration Manager"
+title: SMS_ClientOperation Class
+titleSuffix: Configuration Manager
 description: An SMS Provider server class that represents a set of client actions.
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: f523822e-1638-42bc-8997-c52ac4d53a82
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_ClientOperation Server WMI Class
 The `SMS_ClientOperation` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a set of client actions.  

@@ -1,18 +1,18 @@
 ---
-title: "PackNALPath Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: PackNALPath Method
+titleSuffix: Configuration Manager
+description: Encode a network abstraction layer (NAL) path from its components. A NAL path is an abstract representation of a network path or a user account.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: bd0d9061-a06f-4dbc-b9b4-8f103bf954fe
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # PackNALPath Method in Class SMS_NAL_Methods
 The `PackNALPath` method, in Configuration Manager, encodes a network abstraction layer (NAL) path from its components. A NAL path is an abstract representation of a network path or a user account.  

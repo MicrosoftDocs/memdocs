@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/02/2021
+ms.date: 07/20/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -20,24 +20,26 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-#ms.reviewer: spenspshumwa
+ms.reviewer: 
 #ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 #ms.custom:
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Intune reports and properties available using Graph API
 
-Microsoft Intune provides many reports in the console that can be exported using Graph APIs. Microsoft Graph is a RESTful web API that enables you to access Microsoft Cloud service resources. To export Intune reports, you must use the Microsoft Graph API to make a set of HTTP calls. For more information about , see [Export Intune reports using Graph APIs](../fundamentals/reports-export-graph-apis.md).
+Microsoft Intune provides many reports in the Microsoft Intune admin center that can be exported using Graph APIs. Microsoft Graph is a RESTful web API that enables you to access Microsoft Cloud service resources. To export Intune reports, you must use the Microsoft Graph API to make a set of HTTP calls. For more information about , see [Export Intune reports using Graph APIs](../fundamentals/reports-export-graph-apis.md).
 
 > [!NOTE]
 > Intune reports that have been migrated to a new [Intune reporting infrastructure](https://techcommunity.microsoft.com/t5/intune-customer-success/new-reporting-framework-coming-to-intune/ba-p/1009553#:~:text=New%20Reporting%20Framework%20Coming%20to%20Intune%20%20,Device%20compliance%20logging%20%203%20more%20rows), will be available for export from a single top-level export Graph API.
-> 
+>
 > For more information about making REST API calls, including tools for interacting with Microsoft Graph, see [Use the Microsoft Graph API](/graph/use-the-api).
 
-Microsoft Endpoint Manager will export reports using the following Microsoft Graph API endpoint:
+Microsoft Intune will export reports using the following Microsoft Graph API endpoint:
 
 ```http
 https://graph.microsoft.com/beta/deviceManagement/reports/exportJobs
@@ -45,7 +47,7 @@ https://graph.microsoft.com/beta/deviceManagement/reports/exportJobs
 
 The following table contains the possible values for the `reportName` parameter. These are the currently available reports for export.
 
-|         ReportName (Export Parameter)  |            Associated   Report in Microsoft Endpoint Manager        |
+|         ReportName (Export Parameter)  |            Associated   Report in Microsoft Intune        |
 |-|-|
 |         DeviceCompliance  |            Device   Compliance Org        |
 |         DeviceNonCompliance  |            Non-compliant   devices        |
@@ -53,7 +55,7 @@ The following table contains the possible values for the `reportName` parameter.
 |         DetectedAppsAggregate  |            Detected   Apps report        |
 |         FeatureUpdatePolicyFailuresAggregate  |            Under   **Devices** > **Monitor** > **Failure for feature updates**       |
 |         DeviceFailuresByFeatureUpdatePolicy  |            Under   **Devices** > **Monitor** > **Failure for feature updates** > *click   on error*        |
-|         DiscoveredAppsRawData  |            Under **Apps** > **Monitor** > **Discoverd apps** > **Export**         |
+|         DiscoveredAppsRawData  |            Under **Apps** > **Monitor** > **Discovered apps** > **Export**         |
 |         FeatureUpdateDeviceState  |            Under   **Reports** > **Window Updates** > **Reports** > **Windows   Feature Update Report**         |
 |         UnhealthyDefenderAgents  |            Under   **Endpoint Security** > **Antivirus** > **Win10 Unhealthy   Endpoints**        |
 |         DefenderAgents  |            Under   **Reports** > **MicrosoftDefender** > **Reports** > **Agent   Status**        |
@@ -172,7 +174,8 @@ The following table contains the possible output when calling the `UserInstallSt
 | NotInstalledCount |
 | NotApplicableCount    |
 
-There are no filters for this report.
+You can choose to filter the `UserInstallStatusAggregateByApp` report's output based on the following column:
+- `ApplicationId`
 
 ## DeviceCompliance report
 
@@ -681,6 +684,18 @@ You can choose to filter the `DevicesWithInventory` report's output based on the
 - `JailBroken` 
 - `EnrollmentType` 
 - `PartnerFeaturesBitmask` 
+
+The `ProcessorArchitecture` mappings for Windows 10+ are the following:
+- 9 = x64
+- 5 = ARM
+- 12 = ARM64
+- 0 = x86
+- default = Unknown
+
+The `ProcessorArchitecture` mappings for macOS are the following:
+- 9 = x64
+- 12 = ARM64
+- default = unknown
 
 ## FirewallStatus  
 

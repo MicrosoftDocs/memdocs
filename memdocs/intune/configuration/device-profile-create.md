@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/18/2022
+ms.date: 10/10/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -26,15 +26,18 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection:
-  - M365-identity-device-management
-  - highpri
+- tier1
+- M365-identity-device-management
+- highpri
 ---
 
 # Create a device profile in Microsoft Intune
 
+[!INCLUDE [windows-phone-81-windows-10-mobile-support](../includes/windows-phone-81-windows-10-mobile-support.md)]
+
 Device profiles allow you to add and configure settings, and then push these settings to devices in your organization. You have some options when creating policies:
 
-- **Administrative templates**: On Windows 10/11 devices, these templates are ADMX settings that you configure. If you're familiar with ADMX policies or group policy objects (GPO), then using administrative templates is a natural step to Microsoft Intune and Endpoint Manager.
+- **Administrative templates**: On Windows 10/11 devices, these templates are ADMX settings that you configure. If you're familiar with ADMX policies or group policy objects (GPO), then using administrative templates is a natural step to Microsoft Intune.
 
   For more information, see [Administrative Templates](administrative-templates-windows.md)
 
@@ -42,7 +45,7 @@ Device profiles allow you to add and configure settings, and then push these set
 
   For more information, see [Security baselines](../protect/security-baselines.md).
 
-- **Settings catalog**: On Windows 10/11 devices, use the settings catalog to see all the available settings, and in one location. For example, you can see all the settings that apply to BitLocker, and create a policy that just focuses on BitLocker. On macOS devices, use the settings catalog to configure Microsoft Edge version 77 and settings. 
+- **Settings catalog**: On Windows 10/11 devices, use the settings catalog to see all the available settings, and in one location. For example, you can see all the settings that apply to BitLocker, and create a policy that just focuses on BitLocker. On macOS devices, use the settings catalog to configure Microsoft Edge version 77 and settings.
 
   For more information, see [Settings catalog](settings-catalog.md).
 
@@ -64,9 +67,9 @@ This article:
 
 ## Create the profile
 
-Profiles are created in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). In this admin center, select **Devices**. You have the following options:
+Profiles are created in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). In this admin center, select **Devices**. You have the following options:
 
-:::image type="content" source="./media/device-profile-create/devices-overview.png" alt-text="In Endpoint Manager and Microsoft Intune, select Devices to see what you can configure and manage.":::
+:::image type="content" source="./media/device-profile-create/devices-overview.png" alt-text="Screenshot that shows how to select Devices to see what you can configure and manage in Microsoft Intune.":::
 
 - **Overview**: Lists the status of your profiles, and provides more details on the profiles you assigned to users and devices.
 - **Monitor**: Check the status of your profiles for success or failure, and also view logs on your profiles.
@@ -118,11 +121,11 @@ Then, choose the profile. Depending on the platform you choose, the settings you
 
 For example, if you select **iOS/iPadOS** for the platform, your options look similar to the following profile:
 
-:::image type="content" source="./media/device-profile-create/create-device-profile.png" alt-text="Create an iOS/iPadOS device configuration policy and profile in Endpoint Manager and Microsoft Intune.":::
+:::image type="content" source="./media/device-profile-create/create-device-profile.png" alt-text="Screenshot that shows how to create an iOS/iPadOS device configuration policy and profile in Microsoft Intune.":::
 
 If you select **Windows 10 and later** for the platform, your options look similar to the following profile:
 
-:::image type="content" source="./media/device-profile-create/windows-create-device-profile.png" alt-text="Create a Windows device configuration policy and profile in Endpoint Manager and Microsoft Intune.":::
+:::image type="content" source="./media/device-profile-create/windows-create-device-profile.png" alt-text="Screenshot that shows how to create a Windows device configuration policy and profile in Microsoft Intune.":::
 
 ## Scope tags
 
@@ -166,7 +169,7 @@ When you assign the profile to the groups, the applicability rules act as a filt
 
 1. Select **Applicability Rules**. You can choose the **Rule**, and **Property**:
 
-    :::image type="content" source="./media/device-profile-create/applicability-rules.png" alt-text="Add an applicability rule to a Windows 10 device configuration profile in Endpoint Manager and Microsoft Intune.":::
+    :::image type="content" source="./media/device-profile-create/applicability-rules.png" alt-text="Screenshot that shows how to add an applicability rule to a Windows 10 device configuration profile in Microsoft Intune.":::
 
 2. In **Rule**, choose if you want to include or exclude users or groups. Your options:
 
@@ -214,7 +217,7 @@ When creating profiles, consider the following recommendations:
 
   The following image shows an example of a setting that can apply to users, apply to devices, or apply to both:
 
-  :::image type="content" source="./media/device-profile-create/setting-applies-to-user-and-device.png" alt-text="Intune admin template that applies to user and devices in Endpoint Manager and Microsoft Intune.":::
+  :::image type="content" source="./media/device-profile-create/setting-applies-to-user-and-device.png" alt-text="Screenshot that shows an Intune admin template that applies to user and devices in Microsoft Intune.":::
 
 - Every time you create a restrictive policy, communicate this change to your users. For example, if you're changing the passcode requirement from four (4) characters to six (6) characters, let your users know before your assign the policy.
 

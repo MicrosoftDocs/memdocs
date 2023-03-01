@@ -25,6 +25,7 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection:
+- tier1
 - M365-identity-device-management
 - Windows
 - highpri
@@ -40,8 +41,8 @@ This feature applies to:
 
 > [!NOTE]
 > Once the Intune management extension prerequisites are met, the Intune management extension is installed automatically when a PowerShell script or Win32 app is assigned to the user or device. For more information, see Intune Management Extensions [prerequisites](../apps/intune-management-extension.md#prerequisites).
-> 
-> PowerShell scripts, which are not officially supported on Workplace join (WPJ) devices, can be deployed to WPJ devices. Specifically, device context PowerShell scripts work on WPJ devices, but user context PowerShell scripts are ignored by design. User context scripts will be ignored on WPJ devices and will not be reported to the Microsoft Endpoint Manager console.
+>
+> PowerShell scripts, which are not officially supported on Workplace join (WPJ) devices, can be deployed to WPJ devices. Specifically, device context PowerShell scripts work on WPJ devices, but user context PowerShell scripts are ignored by design. User context scripts will be ignored on WPJ devices and will not be reported to the Microsoft Intune admin center.
 
 ## Move to modern management
 
@@ -69,13 +70,13 @@ The Intune management extension supplements the in-box Windows 10 MDM features. 
 
 The Intune management extension has the following prerequisites. Once they're met, the Intune management extension installs automatically when a PowerShell script or Win32 app is assigned to the user or device.
 
-- Devices running Windows 10 version 1607 or later. If the device is enrolled using [bulk auto-enrollment](../enrollment/windows-bulk-enroll.md), devices must run Windows 10 version 1709 or later. The Intune management extension isn't supported on Windows 10 in S mode, as S mode doesn't allow running non-store apps. 
+- Devices running Windows 10 version 1607 or later. If the device is enrolled using [bulk auto-enrollment](../enrollment/windows-bulk-enroll.md), devices must run Windows 10 version 1709 or later. The Intune management extension isn't supported on Windows 10 in S mode, as S mode doesn't allow running non-store apps.
   
 - Devices joined to Azure Active Directory (AD), including:  
   
   - Hybrid Azure AD-joined: Devices joined to Azure Active Directory (AAD), and also joined to on-premises Active Directory (AD). See [Plan your hybrid Azure Active Directory join implementation](/azure/active-directory/devices/hybrid-azuread-join-plan) for guidance.
   
-- Azure AD registered/Workplace joined (WPJ): Devices [registered](/azure/active-directory/user-help/user-help-register-device-on-network) in Azure Active Directory (AAD), see [Workplace Join as a seamless second factor authentication](/windows-server/identity/ad-fs/operations/join-to-workplace-from-any-device-for-sso-and-seamless-second-factor-authentication-across-company-applications#BKMK_DRS) for more information. Typically these are Bring Your Own Device (BYOD) devices which have had a work or school account added via Settings>Accounts>Access work or school.    
+- Azure AD registered/Workplace joined (WPJ): Devices [registered](/azure/active-directory/user-help/user-help-register-device-on-network) in Azure Active Directory (AAD), see [Workplace Join as a seamless second factor authentication](/windows-server/identity/ad-fs/operations/join-to-workplace-from-any-device-for-sso-and-seamless-second-factor-authentication-across-company-applications#BKMK_DRS) for more information. Typically these are Bring Your Own Device (BYOD) devices which have had a work or school account added via Settings>Accounts>Access work or school.
 
 - Devices enrolled in Intune, including:
 
@@ -91,34 +92,34 @@ The Intune management extension has the following prerequisites. Once they're me
 
   - Co-managed devices that use Configuration Manager and Intune. When installing Win32 apps, make sure the **Apps** workload is set to **Pilot Intune** or **Intune**. PowerShell scripts will be run even if the **Apps** workload is set to **Configuration Manager**. The Intune management extension will be deployed to a device when you target a PowerShell script to the device. Remember, the device must be an Azure AD or Hybrid Azure AD joined device. And, it must be running Windows 10 version 1607 or later. See the following articles for guidance:
   
-    - [What is co-management](/configmgr/comanage/overview) 
+    - [What is co-management](/configmgr/comanage/overview)
     - [Client apps workload](/configmgr/comanage/workloads#client-apps)
     - [How to switch Configuration Manager workloads to Intune](/configmgr/comanage/how-to-switch-workloads)
 - Scripts deployed to clients running the Intune management extension will fail to run if the device's system clock is exceedingly out of date by months or years. Once the system clock is brought up to date, script will run as expected.  
- 
+
 > [!NOTE]
 > For information about using Window 10 VMs, see [Using Windows 10 virtual machines with Intune](../fundamentals/windows-10-virtual-machines.md).
 
 ## Create a script policy and assign it
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Scripts** > **Add** > **Windows 10 and later**.
 
     ![Screenshot that shows creating a new script for a Windows 10 device.](./media/intune-management-extension/create-script-windows.png)
 
 3. In **Basics**, enter the following properties, and select **Next**:
-    - **Name**: Enter a name for the PowerShell script. 
+    - **Name**: Enter a name for the PowerShell script.
     - **Description**: Enter a description for the PowerShell script. This setting is optional, but recommended.
 4. In **Script settings**, enter the following properties, and select **Next**:
     - **Script location**: Browse to the PowerShell script. The script must be less than 200 KB (ASCII).
     - **Run this script using the logged on credentials**: Select **Yes** to run the script with the user's credentials on the device. Choose **No** (default) to run the script in the system context. Many administrators choose **Yes**. If the script is required to run in the system context, choose **No**.
-    - **Enforce script signature check**: Select **Yes** if the script must be signed by a trusted publisher. Select **No** (default) if there isn't a requirement for the script to be signed. 
+    - **Enforce script signature check**: Select **Yes** if the script must be signed by a trusted publisher. Select **No** (default) if there isn't a requirement for the script to be signed.
     - **Run script in 64-bit PowerShell host**: Select **Yes** to run the script in a 64-bit PowerShell host on a 64-bit client architecture. Select **No** (default) runs the script in a 32-bit PowerShell host.
 
       When setting to **Yes** or **No**, use the following table for new and existing policy behavior:
 
       | Run script in 64-bit host | Client architecture | New script | Existing policy script |
-      | --- | --- | --- | --- | 
+      | --- | --- | --- | --- |
       | No | 32-bit  | 32-bit PowerShell host supported | Runs only in 32-bit PowerShell host, which works on 32-bit and 64-bit architectures. |
       | Yes | 64-bit | Runs script in 64-bit PowerShell host for 64-bit architectures. When ran on 32-bit, the script runs in a 32-bit PowerShell host. | Runs script in 32-bit PowerShell host. If this setting changes to 64-bit, the script opens (it doesn't run) in a 64-bit PowerShell host, and reports the results. When ran on 32-bit, the script runs in 32-bit PowerShell host. |
 
@@ -187,7 +188,7 @@ In **PowerShell scripts**, select the script to monitor, choose **Monitor**, and
 
 ## Intune management extension logs
 
-Agent logs on the client machine are typically in `\ProgramData\Microsoft\IntuneManagementExtension\Logs`. You can use [CMTrace.exe](/configmgr/core/support/cmtrace) to view these log files.
+Agent logs on the client machine are typically in `C:\ProgramData\Microsoft\IntuneManagementExtension\Logs`. You can use [CMTrace.exe](/configmgr/core/support/cmtrace) to view these log files.
 
 ![Screenshot or sample cmtrace agent logs in Microsoft Intune](./media/apps-win32-app-management/apps-win32-app-10.png)  
 
@@ -201,10 +202,10 @@ In **PowerShell scripts**, right-click the script, and select **Delete**.
 
 **Possible resolutions**:
 
-- The device isn't joined to Azure AD. Be sure the devices meet the [prerequisites](#prerequisites) (in this article). 
+- The device isn't joined to Azure AD. Be sure the devices meet the [prerequisites](#prerequisites) (in this article).
 - There are no PowerShell scripts or Win32 apps assigned to the groups that the user or device belongs.
 - The device can't check in with the Intune service. For example, there's no internet access, no access to Windows Push Notification Services (WNS), and so on.
-- The device is in S mode. The Intune management extension isn't supported on devices running in S mode. 
+- The device is in S mode. The Intune management extension isn't supported on devices running in S mode.
 
 To see if the device is auto-enrolled, you can:
 
@@ -236,7 +237,7 @@ To see if the device is auto-enrolled, you can:
 
 - To isolate scripting problems, you can:
 
-  - Review the PowerShell execution configuration on your devices. See the [PowerShell execution policy](/powershell/module/microsoft.powershell.security/set-executionpolicy?view=powershell-7.1) for guidance.
+  - Review the PowerShell execution configuration on your devices. See the [PowerShell execution policy](/powershell/module/microsoft.powershell.security/set-executionpolicy) for guidance.
   - Run a sample script using the Intune management extension. For example, create the `C:\Scripts` directory, and give everyone full control. Run the following script:
 
     ```powershell

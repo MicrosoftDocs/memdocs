@@ -11,41 +11,12 @@ items:
     href: device-management-capabilities.md
   - name: Enrollment options
     href: enrollment-options.md  
-- name: Quickstarts
-  items:
-  - name: Set up automatic enrollment
-    href: quickstart-setup-auto-enrollment.md
-  - name: Enroll your Windows 10/11 device
-    href: quickstart-enroll-windows-device.md
-- name: Tutorials
-  items:
-  - name: Use Autopilot to enroll Windows devices
-    href: tutorial-use-autopilot-enroll-devices.md
-    displayName: OOBE
-  - name: Use the ADE to enroll iOS/iPadOS devices 
-    href: tutorial-use-device-enrollment-program-enroll-ios.md
 - name: Concepts
   items:
-  - name: Terms and conditions
-    href: terms-and-conditions-create.md
-  - name: Restrictions
-    href: enrollment-restrictions-set.md
-  - name: Understand Intune and Azure AD device limits
-    href: device-limit-intune-azure.md
-  - name: Apple MDM push certificate
-    href: apple-mdm-push-certificate-get.md
-  - name: Corporate identifiers
-    href: corporate-identifiers-add.md
-    displayName: COD
-  - name: Multi-factor authentication
-    href: multi-factor-authentication.md
-    displayName: mfa; multifactor        
-  - name: Device enrollment manager
-    href: device-enrollment-manager-enroll.md
-  - name: Map devices to groups
-    href: device-group-mapping.md    
+  - name: Intune and Azure AD device limits  
+    href: device-limit-intune-azure.md    
 - name: How-to guides
-  items:
+  items:  
   - name: Set up Windows enrollment
     items:
     - name: Windows enrollment methods
@@ -53,13 +24,22 @@ items:
     - name: Enrollment method capabilities
       href: enrollment-method-capab.md
     - name: Windows enrollment
-      href: windows-enroll.md
+      href: windows-enroll.md   
+    - name: Configure proxy for Intune AD Connector
+      href: autopilot-hybrid-connector-proxy.md   
+    - name: Quickstart - Enable automatic enrollment 
+      href: quickstart-setup-auto-enrollment.md
+    - name: Use Windows Autopilot to enroll devices
+      href: tutorial-use-autopilot-enroll-devices.md
+      displayName: OOBE
     - name: Bulk enroll
       href: windows-bulk-enroll.md
     - name: Enrollment Status Page
-      href: windows-enrollment-status.md
-    - name: Configure proxy for Intune AD Connector
-      href: autopilot-hybrid-connector-proxy.md
+      href: windows-enrollment-status.md  
+    - name: View incomplete user enrollments  
+      href: enrollment-report-company-portal-abandon.md   
+    - name: Quickstart - Enroll your Windows 10/11 device  
+      href: quickstart-enroll-windows-device.md
   - name: Set up Android enrollment
     items:
     - name: Set up Android enrollment
@@ -67,7 +47,7 @@ items:
       displayName: wpj
     - name: Connect Intune to Android Enterprise
       href: connect-intune-android-enterprise.md
-    - name: Android personally-owned work profile enrollment
+    - name: Android personally owned work profile enrollment
       href: android-work-profile-enroll.md
     - name: Android Enterprise dedicated device enrollment
       href: android-kiosk-enroll.md
@@ -87,7 +67,7 @@ items:
       href: android-enterprise-overview.md 
     - name: Enroll Android Enterprise corporate-owned work profile devices
       href: android-corporate-owned-work-profile-enroll.md     
-    - name: Move device administrator devices to personally-owned work profile management
+    - name: Move device administrator devices to personally owned work profile management
       href: android-move-device-admin-work-profile.md        
     - name: Samsung Knox Mobile Enrollment 
       href: android-samsung-knox-mobile-enroll.md
@@ -102,16 +82,22 @@ items:
           href: device-enrollment-restrictions.md
         - name: Set app configuration policies
           href: android-app-configuration-policies.md
-        - name: Android personally-owned work profile security settings
+        - name: Android personally owned work profile security settings
           href: android-work-profile-security-settings.md
         - name: Android fully managed-security settings
           href: android-fully-managed-security-settings.md         
   - name: Set up iOS/iPadOS enrollment
     href: ios-enroll.md
     items:
-    - name: Automated Device Enrollment
-      href: device-enrollment-program-enroll-ios.md
-      displayName: dep; ade; bulk enroll; ABM
+    - name: Apple automated device enrollment  
+      items: 
+      - name: Set up automated device enrollment 
+        href: device-enrollment-program-enroll-ios.md
+        displayName: dep; ade; bulk enroll; ABM
+      - name: Choose authentication method     
+        href: automated-device-enrollment-authentication.md  
+      - name: Tutorial - Enroll devices with automated device enrollment 
+        href: tutorial-use-device-enrollment-program-enroll-ios.md 
     - name: Shared iOS/iPadOS devices
       items:      
       - name: Shared device overview
@@ -122,7 +108,7 @@ items:
       href: backup-restore-ios.md      
     - name: User and Device enrollment
       items:
-      - name: Create the profile
+      - name: Create user enrollment profile  
         href: ios-user-enrollment.md
       - name: User enrollment supported actions
         href: ios-user-enrollment-supported-actions.md
@@ -148,12 +134,46 @@ items:
   - name: Set up macOS enrollment
     href: macos-enroll.md
     items:
-    - name: Automated Device Enrollment
+    - name: Set up automated device enrollment for Macs    
       href: device-enrollment-program-enroll-macos.md
-    - name: Direct Enrollment for macOS devices
-      href: device-enrollment-direct-enroll-macos.md      
-  - name: Incomplete enrollment report
-    href: enrollment-report-company-portal-abandon.md
+    - name: Set up direct enrollment for Macs  
+      href: device-enrollment-direct-enroll-macos.md    
+  - name: Configure Chrome Enterprise connector    
+    items: 
+    - name: Configure Chrome Enterprise connector 
+      href: chrome-enterprise-connector-configure.md  
+    - name: View Chrome OS device details 
+      href: chrome-enterprise-device-details.md 
+    - name: Use remote actions for Chrome OS       
+      href: chrome-enterprise-remote-actions.md    
+  - name: Create device enrollment restrictions  
+    items:
+    - name: Enrollment restrictions overview  
+      href: enrollment-restrictions-set.md
+    - name: Create device platform restrictions 
+      href: create-device-platform-restrictions.md 
+    - name: Create device limit restrictions 
+      href: create-device-limit-restrictions.md 
+    - name: View enrollment reports 
+      href: view-enrollment-reports.md  
+  - name: Other pre-enrollment configurations      
+    items: 
+    - name: Get Apple MDM push certificate (Apple prerequisite)  
+      href: apple-mdm-push-certificate-get.md 
+    - name: Add corporate identifiers  
+      href: corporate-identifiers-add.md
+      displayName: COD 
+    - name: Add device enrollment manager  
+      href: device-enrollment-manager-enroll.md  
+    - name: Configure device categories  
+      href: device-group-mapping.md   
+    - name: Create terms and conditions policy  
+      href: terms-and-conditions-create.md  
+    - name: Require multi-factor authentication  
+      href: multi-factor-authentication.md
+      displayName: mfa; multifactor   
+    - name: Set up enrollment notifications 
+      href: enrollment-notifications.md   
   - name: Troubleshoot enrollment
     items:
     - name: Troubleshoot device enrollment

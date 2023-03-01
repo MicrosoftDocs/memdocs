@@ -25,6 +25,7 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.collection:
+- tier2
 - Android
 ms.custom: intune-azure;workProfilesUpdate
 
@@ -80,7 +81,7 @@ This feature applies to:
 
 ### Android Enterprise personally-owned work profiles
 
-Android Enterprise personally-owned work profiles are the core Android Enterprise deployment scenario and the only scenario targeted at BYOD use cases. The Android Enterprise personally-owned work profile is a separate partition created at the Android OS level that can be managed by Intune.
+Android Enterprise personally-owned work profiles are the core Android Enterprise deployment scenario. The Android Enterprise personally-owned work profile is a separate partition created at the Android OS level that can be managed by Intune.
 
 An Android Enterprise personally-owned work profile includes the following features:
 

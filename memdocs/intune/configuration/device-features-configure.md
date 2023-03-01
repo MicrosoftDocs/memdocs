@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/02/2021
+ms.date: 01/25/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -24,7 +24,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Add iOS, iPadOS, or macOS device feature settings in Intune
@@ -49,7 +51,7 @@ This article describes the different features you can configure, and shows you h
 
 ## Create the profile
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Configuration profiles** > **Create profile**.
 3. Enter the following properties:
 
@@ -179,7 +181,7 @@ Applies to:
 
 Most Line of Business (LOB) apps require some level of user authentication to support security. In many cases, the authentication requires users to enter the same credentials repeatedly. To improve the user experience, developers can create apps that use single sign-on (SSO). Using single sign-on reduces the number of times a user must enter credentials.
 
-The single sign-on profile is based on Kerberos. Kerberos is a network authentication protocol that uses secret key cryptography to authenticate client-server applications. The Intune settings define Kerberos account information when accessing servers or specific apps, and handle Kerberos challenges for web pages and native apps. Apple recommends you use the [Kerberos SSO app extension](#single-sign-on-app-extension) (in this article) settings instead of the SSO settings.  
+**The single sign-on profile is based on Kerberos**. Kerberos is a network authentication protocol that uses secret key cryptography to authenticate client-server applications. The Intune settings define Kerberos account information when accessing servers or specific apps, and handle Kerberos challenges for web pages and native apps. Apple recommends you use the [Kerberos SSO app extension](#single-sign-on-app-extension) (in this article) settings instead of the SSO settings.  
 
 To use single sign-on, be sure you have:
 
@@ -210,7 +212,7 @@ In Intune, use these settings to configure an SSO app extension created by your 
 
 For a list of the settings you can configure in Intune, see [iOS/iPadOS SSO app extension](ios-device-features-settings.md#single-sign-on-app-extension) and [macOS SSO app extension](macos-device-features-settings.md#single-sign-on-app-extension).
 
-For more information on developing an SSO app extension, watch [Extensible Enterprise SSO](https://developer.apple.com/videos/play/tech-talks/301) on Apple's web site. To read Apple's description of the feature, visit [Single Sign-On Extensions payload settings](https://support.apple.com/guide/mdm/single-sign-on-extensions-mdmfd9cdf845/web). 
+For more information on developing an SSO app extension, watch [Extensible Enterprise SSO](https://developer.apple.com/videos/play/tech-talks/301) on Apple's web site. To read Apple's description of the feature, visit [single sign-on extensions payload settings](https://support.apple.com/guide/mdm/single-sign-on-extensions-mdmfd9cdf845/web). 
 
 > [!NOTE]
 > The **Single sign-on app extension** feature is different than the **Single sign-on** feature:

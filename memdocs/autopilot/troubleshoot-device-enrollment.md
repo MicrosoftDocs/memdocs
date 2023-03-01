@@ -2,26 +2,28 @@
 title: Troubleshoot Autopilot device import and enrollment
 description: Troubleshoot issues that can occur during Autopilot device import and enrollment
 keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune
-ms.technology: windows
-ms.prod: w10
+ms.technology: itpro-deploy
+ms.prod: windows-client
 ms.mktglfcycl: deploy
 ms.localizationpriority: medium
 ms.sitesec: library
 ms.pagetype: deploy
 audience: itpro
-author: aczechowski
-ms.author: aaroncz
+author: frankroj
+ms.author: frankroj
 ms.reviewer: jubaptis
-manager: dougeby
-ms.date: 10/19/2021
-ms.collection: M365-modern-desktop
+manager: aaroncz
+ms.date: 11/17/2022
+ms.collection: 
+  - M365-modern-desktop
+  - highpri
 ms.topic: troubleshooting
 ---
 
 
 # Troubleshoot Autopilot device import and enrollment
 
-**Applies to**
+*Applies to:*
 
 - Windows 11
 - Windows 10
@@ -51,7 +53,7 @@ This change impacts all Autopilot deployments that use the self-deployment or pr
 
 To redeploy the device through Autopilot:
 
-1. Delete the device record in Intune. For the specific steps, see [Delete devices from the Endpoint Manager admin center](../intune/remote-actions/devices-wipe.md#delete-devices-from-the-intune-portal).
+1. Delete the device record in Intune. For the specific steps, see [Delete devices from the Intune admin center](../intune/remote-actions/devices-wipe.md#delete-devices-from-the-intune-admin-center).
 2. Redeploy the Autopilot deployment profile.
 
 ### Cause B
@@ -62,7 +64,7 @@ Windows MDM enrollment is disabled in your Intune tenant.
 
 To fix this issue in a stand-alone Intune environment, follow these steps:
 
-1. In the Microsoft Endpoint Manager admin center, chooses **Devices** > **Enrollment restrictions**, and then choose a device type restriction.
+1. In the Microsoft Intune admin center, chooses **Devices** > **Enrollment restrictions**, and then choose a device type restriction.
 1. Choose **Properties** > **Edit** next to Platform settings. Then select **Allow for Windows (MDM)**.
 1. Select **Review** and then **Save**.
 

@@ -21,11 +21,12 @@ ms.assetid: 81b4fa08-5333-4c54-9f49-8db5f6984ed2
 #ROBOTS:
 #audience:
 
-ms.reviewer:
+ms.reviewer: andreibiswas
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.collection:
+- tier3
 - M365-identity-device-management
 - Android
 ms.custom: intune-azure
@@ -44,17 +45,17 @@ If you don't have an Intune subscription, [sign up for a free trial account](../
 
 ## Sign in to Intune
 
-Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as a [Global administrator](../fundamentals/users-add.md#types-of-administrators) or an Intune [Service administrator](../fundamentals/users-add.md#types-of-administrators).
+Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as a [Global administrator](../fundamentals/users-add.md#types-of-administrators) or an Intune [Service administrator](../fundamentals/users-add.md#types-of-administrators).
 
 ## Create a device compliance policy
 
 Create a device compliance policy to require your workforce's Android users to enter a password of a specific length before access is granted to information on their Android Enterprise devices.
 
-1. Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Compliance Policies** > **Create Policy**.
+1. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Compliance Policies** > **Create Policy**.
 
 2.  For **Platform**, select **Android Enterprise**.
 
-3. For **Policy type**, select either **Fully managed, dedicated, and corporate-owned work profile** or **Personally-owned work profile**, and then click **Create**.
+3. For **Profile type**, select either **Fully managed, dedicated, and corporate-owned work profile** or **Personally-owned work profile**, and then click **Create**.
 
 4. On **Basics** step, enter **Android compliance** as the *Name*. Adding a *Description* is optional. Click **Next**.
 

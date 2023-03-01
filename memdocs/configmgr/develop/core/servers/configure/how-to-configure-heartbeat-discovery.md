@@ -1,18 +1,18 @@
 ---
-title: "Configure Heartbeat Discovery"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+description: Learn how to configure the Heartbeat Discovery settings by modifying the necessary site control file settings in Configuration Manager.
+title: Configure Heartbeat Discovery
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: how-to
 ms.assetid: 276572f8-15b9-4c7f-9b6f-a08582de668a
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Configure Heartbeat Discovery
 In Configuration Manager, you configure the Heartbeat Discovery settings by modifying the necessary site control file settings.  

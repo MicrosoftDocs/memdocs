@@ -1,18 +1,18 @@
 ---
-title: "Managed SMS Provider Fundamentals"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: Managed SMS Provider Fundamentals
+titleSuffix: Configuration Manager
+description: The managed SMS Provider library is a .NET Framework library that wraps the System.Management classes, provides a Configuration Manager-centric object model, and provides a wrapper for accessing the Configuration Manager site control file.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: conceptual
 ms.assetid: 18924a3e-0cc3-4aa8-98bc-b6beca182d4e
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # Managed SMS Provider Fundamentals in Configuration Manager
 The managed SMS Provider library is a .NET Framework library that wraps the System.Management classes and provides a Configuration Manager-centric object model. It also provides a wrapper for accessing the Configuration Manager site control file.  

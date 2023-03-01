@@ -1,23 +1,15 @@
 items:
-- name: Docs
-  tocHref: /
-  topicHref: /
+- name: Microsoft Intune
+  tocHref: /mem/
+  topicHref: /mem/index
   items:
-  - name: Enterprise Mobility + Security
-    tocHref: /enterprise-mobility-security/
-    topicHref: /enterprise-mobility-security/
+  - name: Intune service
+    tocHref: /mem/intune/
+    topicHref: /mem/intune/
     items:
-    - name: Microsoft Endpoint Manager
-      tocHref: /mem/
+    - name: Fundamentals
+      tocHref: /mem/intune/fundamentals/
       topicHref: /mem/
-      items:
-      - name: Intune
-        tocHref: /mem/intune/
-        topicHref: /mem/intune/index
-        items:
-        - name: Fundamentals
-          tocHref: /mem/intune/fundamentals/
-          topicHref: /mem/index
-        - name: Fundamentals
-          tocHref: /mem/intune/fundamentals/
-          topicHref: /troubleshoot/mem/intune/
+    - name: Fundamentals
+      tocHref: /mem/intune/fundamentals/
+      topicHref: /troubleshoot/mem/intune/

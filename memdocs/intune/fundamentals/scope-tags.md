@@ -17,14 +17,15 @@ ms.subservice: fundamentals
 #ROBOTS:
 #audience:
 
-#ms.reviewer: craigma
+ms.reviewer: craigma
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: 
-  - M365-identity-device-management
-  - highpri
+ms.collection:
+- tier1
+- M365-identity-device-management
+- highpri
 ---
 
 # Use role-based access control (RBAC) and scope tags for distributed IT
@@ -44,18 +45,22 @@ For example, let's say a Seattle regional office admin has the Policy and Profil
 ## Default scope tag
 The default scope tag is automatically added to all untagged objects that support scope tags.
 
-The default scope tag feature is similar to the security scopes feature in Microsoft Endpoint Configuration Manager. 
+The default scope tag feature is similar to the security scopes feature in Microsoft Configuration Manager. 
 
 ## To create a scope tag
 
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Tenant administration** > **Roles** > **Scope (Tags)** > **Create**.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Tenant administration** > **Roles** > **Scope (Tags)** > **Create**.
 2. On the **Basics** page, provide a **Name** and optional **Description**. Choose **Next**.
 3. On the **Assignments** page, choose the groups containing the devices that you want to assign this scope tag. Choose **Next**.
 4. On the **Review + create** page, choose **Create**.
 
+    > [!IMPORTANT]
+    > Auto scope tags assignments will overwrite mannually assigned scope tags.
+    > If a device is assigned multiple scope tags through group assignment, all scope tags will apply.
+
 ## To assign a scope tag to a role
 
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Tenant administration** > **Roles** > **All roles** > choose a role > **Assignments** > **Assign**.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Tenant administration** > **Roles** > **All roles** > choose a role > **Assignments** > **Assign**.
 2. On the **Basics** page, provide an **Assignment name** and **Description**. Choose **Next**.
 3. On the **Admin Groups** page, choose **Add groups**, and select the groups that you want as part of this assignment. Users in these groups will have permissions to manage users/devices in the Scope (Groups). Choose **Next**.
 
@@ -74,7 +79,7 @@ The default scope tag feature is similar to the security scopes feature in Micro
 
 For objects that support scope tags, scope tags usually appear under **Properties**. For example, to assign a scope tag to a configuration profile, follow these steps:
 
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Configuration profiles** > choose a profile.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Configuration profiles** > choose a profile.
 
 2. Choose **Properties** > **Scope (Tags)** > **Edit** > **Select scope tags** > choose the tags that you want to add to the profile. You can assign a maximum of 100 scope tags to an object.
 4. Choose **Select** > **Review + save**.
@@ -88,7 +93,7 @@ When working with scope tags, remember these details:
     - Autopilot Devices
     - Device compliance locations
     - Jamf devices
-- VPP apps and ebooks associated with the VPP token inherit the scope tags assigned to the associated VPP token.
+- Volume Purchase Program (VPP) apps and ebooks associated with the VPP token inherit the scope tags assigned to the associated VPP token.
 - When an admin creates an object in Intune, all scope tags assigned to that admin will be automatically assigned to the new object.
 - Intune RBAC doesn't apply to Azure Active Directory roles. So, the Intune Service Admins and Global Admins roles have full admin access to Intune no matter what scope tags they have.
 - If a role assignment has no scope tag, that IT admin can see all objects based on the IT admins permissions. Admins that have no scope tags essentially have all scope tags.

@@ -1,19 +1,18 @@
 ---
 description: Learn how to represent a site system summarizer using the SMS_SiteSystemSummarizer class in Configuration Manager.
-title: "SMS_SiteSystemSummarizer Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: SMS_SiteSystemSummarizer Class
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: fea44c9c-78e2-456e-863e-de8863894892
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_SiteSystemSummarizer Server WMI Class
 The `SMS_SiteSystemSummarizer` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a site system summarizer. The site system summarizer reports physical system health data for each system and each system role in the Configuration Manager site.  

@@ -1,18 +1,18 @@
 ---
-title: "SMS_Certificate Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: SMS_Certificate Class
+titleSuffix: Configuration Manager
+description: An SMS Provider server class that contains all of the certificates that are registered to the server.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 1e35b0f1-e436-4358-b7e3-b970452ffb25
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_Certificate Server WMI Class
 The `SMS_Certificate` Windows Management Instrumentation (WMI) class is an SMS Provider server class that contains all of the certificates that are registered to the server.  

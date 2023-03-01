@@ -1,19 +1,18 @@
 ---
-title: "AddLicense Method"
-titleSuffix: "Configuration Manager"
-description: "The AddLicense Windows Management Instrumentation (WMI) class method adds license information to an application deployment type."
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: AddLicense Method
+titleSuffix: Configuration Manager
+description: The AddLicense Windows Management Instrumentation (WMI) class method adds license information to an application deployment type.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 50a606a7-8f99-4c24-b59a-10f330fe017d
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # AddLicense Method in Class SMS_DeploymentTypeLicenseAssociation
 The `AddLicense` Windows Management Instrumentation (WMI) class method, in Configuration Manager, adds license information to an application deployment type.  

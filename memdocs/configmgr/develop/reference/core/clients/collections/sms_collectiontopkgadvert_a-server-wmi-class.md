@@ -1,18 +1,18 @@
 ---
-title: "SMS_CollectionToPkgAdvert_a Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: SMS_CollectionToPkgAdvert_a Class
+titleSuffix: Configuration Manager
+description: In Configuration Manager, the SMS_CollectionToPkgAdvert_a association WMI class is an SMS Provider server class that uses the CollectionID property to relate an SMS_Advertisement Server WMI Class object with its target SMS_Collection Server WMI Class object.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 4ca32d14-75da-4af6-aa74-9c5720a2a56e
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_CollectionToPkgAdvert_a Server WMI Class
 The `SMS_CollectionToPkgAdvert_a` association Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that uses the `CollectionID` property to relate an [SMS_Advertisement Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_advertisement-server-wmi-class.md) object with its target [SMS_Collection Server WMI Class](../../../../../develop/reference/core/clients/collections/sms_collection-server-wmi-class.md) object.  

@@ -1,18 +1,18 @@
 ---
-title: "AddDistributionPoints Method in Class SMS_Package"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+description: Learn how to use the AddDistributionPoints method in Class SMS_Package to add distribution points for the package.
+title: AddDistributionPoints Method in Class SMS_Package
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 5574c8a9-6e88-4b8c-bafb-104971833826
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # AddDistributionPoints Method in Class SMS_Package
 The `AddDistributionPoints` Windows Management Instrumentation (WMI) class method, in Configuration Manager, adds the distribution points for the package.  

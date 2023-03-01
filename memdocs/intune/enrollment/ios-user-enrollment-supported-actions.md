@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 2/14/2020
+ms.date: 12/15/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -26,15 +26,15 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure;seodec18
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Intune actions and options supported with Apple User Enrollment
 
 User Enrollment supports a subset of device management options. If a pre-existing configuration profile is applied to a User Enrollment device, only settings supported by User Enrollment will be applied to that device.
 
-> [!NOTE]
-> Support for Apple's User Enrollment in Intune is currently in preview for iOS and iPadOS.
 
 ## Password settings
 
@@ -101,24 +101,18 @@ The following options aren't supported on devices enrolled with User Enrollment.
 - Collect app inventory for apps outside of the managed APFS volume.
 - Collect inventory of certificates and provisioning profiles outside of the managed APFS volume.
 - Collect UDID and other persistent device identifiers, such as phone number, serial number, and IMEI
-- User Enrollment supports a unique enrollment ID for each device enrolled, but this ID doesn't persist after unenrollment.
-- The following Intune features aren't supported because of this limitation:
+- User Enrollment supports a unique enrollment ID for each device enrolled, but this ID doesn't persist after unenrollment. 
 - SCEP User profiles with Subject Name Format of Serial Number.
 - Device-level VPN.
 - Device-licensed VPP app deployment.
 - Install App Store apps as managed apps.
 - MDM control of applications outside of the managed APFS volume.
-- Application Protection Policies will still apply to these apps. However, you won't be able to take over management or deploy a managed version of these apps unless the user deletes them from their device.
+  - Application Protection Policies will still apply to these apps. However, you won't be able to take over management or deploy a managed version of these apps unless the user deletes them from their device.
 - Actions, configurations, settings, and commands requiring supervision. 
-
-
-## Known issues in preview
-- VPP license revocation: A notification that the license has been revoked does not appear. The current behavior is that the revocation is successful, but the end user is not notified. 
-- VPP application reporting: In the report located at Client Apps > Apps > [App Name] > Device Install Status, VPP applications deployed to User Enrolled devices are reporting as "failed", even when the application successfully deploys to the device. 
-- VPP License Assignment: If the VPP license is already associated with the AppleID, or the user has another device enrolled with Device Enrollment, the license will associate to the AppleID successfully. However, if the only iOS device the user has enrolled is User Enrolled, the VPP license assignment will fail and install will fail with **Can't Find VPP License For App** (0x87D13B95). Re-enrolling the device with Device Enrollment to allow the assignment then re-enrolling again as User Enrollment resolves the assignment.
-- Application reporting: For app types unsupported with User Enrollment, reports may provide irrelevant error messages. 
-- Company Portal app experience: Users see all applications targeted to them, regardless of whether those application types are supported for User Enrolled devices. 
-- Company Portal app experience: Users see the same text indicating what organizations can see for User and Device Enrollment if the admin has customized the text indicating what organizations can't see.
+- Customized privacy text in the Company Portal. If the admin has customized the text indicating what organizations can/can't see, then users will see the same text indicating what organizations can/can't see for User and Device Enrollment in the Company Portal. 
+- Devices running iOS 15.5 cannot enroll with User Enrollment if MFA text or call is needed on the same device during enrollment. 
+- Devices running iOS 15.7 through iOS 16.3 cannot enroll with User Enrollment with MFA text. MFA call must be used in order to enroll with User Enrollment if MFA is needed on the same device during enrollment. 
+- Application reporting for app types unsupported with User Enrollment. 
 
 
 ## Next steps

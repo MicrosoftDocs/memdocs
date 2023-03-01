@@ -26,7 +26,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 # Prevent data leaks on non-managed devices using Microsoft Intune
 
@@ -67,7 +69,7 @@ For Windows 10/11 devices:
 As appropriate, share the following links to provide additional information:
 
 * [What to expect when your iOS/iPadOS app is managed by app protection policies](../fundamentals/end-user-mam-apps-ios.md)
-* [What to expect when your Android app is managed by app protection policies](../fundamentals/end-user-mam-apps-android.md)
+* [What to expect when your Android app is managed by app protection policies](../user-help/use-managed-apps-on-your-device-android.md)
 
 ## Next steps
 

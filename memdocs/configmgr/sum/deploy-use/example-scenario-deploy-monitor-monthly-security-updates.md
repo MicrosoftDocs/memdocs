@@ -6,10 +6,12 @@ ms.date: 10/21/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: BalaDelli
+ms.author: baladell
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.reviewer: mstewart,aaroncz 
+ms.collection: tier3
 ---
 
 # Example scenario to deploy and monitor monthly software updates

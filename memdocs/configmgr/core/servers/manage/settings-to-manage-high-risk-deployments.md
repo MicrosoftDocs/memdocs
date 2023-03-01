@@ -2,14 +2,16 @@
 title: Manage high-risk deployments
 titleSuffix: Configuration Manager
 description: Configure deployment verification site settings in Configuration Manager to warn admins if they create a high-risk deployment.
-ms.date: 02/26/2020
+ms.date: 03/10/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Settings to manage high-risk deployments for Configuration Manager
@@ -54,6 +56,6 @@ To reduce the risk of an unwanted high-risk deployment, you can configure size l
 
 ## Next steps
 
-[Manage task sequences - high-impact settings](../../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md#high-impact-settings)
+[High-impact task sequence settings](../../../osd/deploy-use/high-impact-task-sequence-settings.md)
 
 [Configure sites and hierarchies](../deploy/configure/configure-sites-and-hierarchies.md)

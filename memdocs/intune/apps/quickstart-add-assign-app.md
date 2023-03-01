@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/16/2021
+ms.date: 09/12/2022
 ms.topic: quickstart
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -21,12 +21,14 @@ ms.assetid: dab6f5c8-1ebb-42c4-a7a7-7af001f94e15
 #ROBOTS:
 #audience:
 
-ms.reviewer: mancheen
+ms.reviewer: manchen
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier3
+- M365-identity-device-management
 ---
 
 # Quickstart: Add and assign a app
@@ -41,7 +43,7 @@ If you don't have an Intune subscription, [sign up for a free trial account](../
 
 ## Sign in to Intune
 
-Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as a [Global administrator or an Intune Service administrator](../fundamentals/users-add.md#types-of-administrators). If you have created an Intune Trial subscription, the account you created the subscription with is the Global administrator.
+Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as a [Global administrator or an Intune Service administrator](../fundamentals/users-add.md#types-of-administrators). If you have created an Intune Trial subscription, the account you created the subscription with is the Global administrator.
 
 ## Add the app to Intune
 
@@ -49,8 +51,8 @@ An app can be included so that Intune can manage aspects of the app.
 
 Use the following steps to add an app to Intune:
 
-1. Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All apps** > **Add**. 
-2. In the **App type** drop-down box, select **Windows 10**.
+1. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All apps** > **Add**. 
+2. In the **App type** drop-down box, select **Windows 10 and later** from **Microsoft 365 Apps**.
 3. Click **Select**. The **Add app** steps are displayed.
 4. Confirm the default details in the **App suite information** step and click **Next**.
 5. Confirm the default settings in the **App settings** step and click **Next**.

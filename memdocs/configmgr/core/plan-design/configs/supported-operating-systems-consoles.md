@@ -6,10 +6,12 @@ ms.date: 10/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Supported OS versions for Configuration Manager consoles

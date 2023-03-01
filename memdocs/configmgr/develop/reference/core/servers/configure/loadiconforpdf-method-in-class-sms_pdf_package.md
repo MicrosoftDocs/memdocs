@@ -1,18 +1,18 @@
 ---
-title: "LoadIconForPDF Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: LoadIconForPDF Method
+titleSuffix: Configuration Manager
+description: In Configuration Manager, the LoadIconForPDF Windows Management Instrumentation class method imports a required icon for a package definition file.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 9936a9b1-243b-4bc7-a48c-ee6942b795d1
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # LoadIconForPDF Method in Class SMS_PDF_Package
 The `LoadIconForPDF` Windows Management Instrumentation (WMI) class method, in Configuration Manager, imports a required icon for a package definition file.  

@@ -1,18 +1,18 @@
 ---
-title: "DeleteClientOperation Method "
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: DeleteClientOperation Method 
+titleSuffix: Configuration Manager
+description: A class method that deletes a client operation.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 5fcf06b9-8f18-40a3-9286-d69c8cbc2512
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # DeleteClientOperation Method in Class SMS_ClientOperation
 The `DeleteClientOperation` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that deletes a client operation.   

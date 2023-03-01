@@ -6,10 +6,12 @@ ms.date: 11/15/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # How to view diagnostics and usage data for Configuration Manager

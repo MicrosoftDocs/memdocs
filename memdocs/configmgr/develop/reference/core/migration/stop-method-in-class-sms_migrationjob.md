@@ -1,18 +1,18 @@
 ---
-title: "Stop Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+description: Learn how to stop the migration job in Configuration Manager using the Stop class method.
+title: Stop Method
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 24a6f364-95bd-4f92-9c68-9edf45f97bc7
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # Stop Method in Class SMS_MigrationJob
 The `Stop` Windows Management Instrumentation (WMI) class method, in Configuration Manager, stops the migration job.  

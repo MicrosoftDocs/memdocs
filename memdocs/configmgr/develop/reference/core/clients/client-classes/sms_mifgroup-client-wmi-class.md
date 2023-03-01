@@ -1,18 +1,18 @@
 ---
-title: "SMS_MIFGroup Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: SMS_MIFGroup Class
+titleSuffix: Configuration Manager
+description: A client Windows Management Instrumentation class that serves as a dynamic instance provider class allowing WMI reporting of Management Information Format files that extend the client inventory.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: c1005ab0-1ae1-41c3-b2a6-c0a69c5a248a
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_MIFGroup Client WMI Class
 The `SMS_MifGroup` class is a client Windows Management Instrumentation (WMI) class, in Configuration Manager, that serves as a dynamic instance provider class allowing WMI reporting of Management Information Format (MIF) files that extend the client inventory.  

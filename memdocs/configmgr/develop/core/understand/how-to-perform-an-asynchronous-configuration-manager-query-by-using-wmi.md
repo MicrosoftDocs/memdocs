@@ -1,21 +1,21 @@
 ---
-title: "Perform an Asynchronous Query by Using WMI"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+description: Learn how to perform a synchronous query for Configuration Manager objects and implement a sink method to handle query results.
+title: Perform an Asynchronous Query by Using WMI
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: how-to
 ms.assetid: ff1c49fa-dede-4a22-b0e8-38460c4aa057
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Perform an Asynchronous Configuration Manager Query by Using WMI
-In Configuration Manager, you perform an synchronous query for Configuration Manager objects by calling the [SWbemServices](/windows/win32/wmisdk/swbemservices) object [ExecQueryAsync](/windows/win32/api/wbemcli/nf-wbemcli-iwbemservices-execqueryasync) method and by implementing a sink method to handle query results.  
+In Configuration Manager, you perform a synchronous query for Configuration Manager objects by calling the [SWbemServices](/windows/win32/wmisdk/swbemservices) object [ExecQueryAsync](/windows/win32/api/wbemcli/nf-wbemcli-iwbemservices-execqueryasync) method and by implementing a sink method to handle query results.  
 
  To handle each returned object, create an [objWbemSink.OnObjectReady](/windows/win32/wmisdk/swbemsink-onobjectready) event subroutine. To be notified when the query is completed, create a [objWbemSink.OnCompleted](/windows/win32/wmisdk/swbemsink-oncompleted) event subroutine.  
 

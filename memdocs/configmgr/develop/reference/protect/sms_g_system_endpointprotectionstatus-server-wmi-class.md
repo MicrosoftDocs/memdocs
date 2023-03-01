@@ -1,18 +1,18 @@
 ---
-title: "SMS_G_System_EndpointProtectionStatus Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+description: Learn how to use the SMS_G_System_EndpointProtectionStatus class to represent the status of Endpoint Protection.
+title: SMS_G_System_EndpointProtectionStatus Class
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 16d8b116-f852-48fb-9979-5d195397b0c5
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_G_System_EndpointProtectionStatus Server WMI Class
 The `SMS_G_System_EndpointProtectionStatus` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents status of Endpoint Protection.  

@@ -7,8 +7,8 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/14/2022
-ms.topic: conceptual
+ms.date: 07/18/2022
+ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
@@ -24,11 +24,16 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; seodec18
 ms.collection:
-  - M365-identity-device-management
-  - highpri
+- tier1
+- M365-identity-device-management
+- highpri
+- highseo
 ---
 
 # iOS and iPadOS device settings to allow or restrict features using Intune
+
+> [!NOTE]
+> [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
 
 This article describes the different settings you can control on iOS and iPadOS devices. As part of your mobile device management (MDM) solution, use these settings to allow or disable features, set password rules, allow or restrict specific apps, and more.
 
@@ -118,7 +123,6 @@ When you're ready to proceed, create an [iOS/iPadOS device restrictions configur
   - iOS 13.0 and newer
   - iPadOS 13.0 and newer  
 
-
 ## Autonomous single app mode (ASAM)
 
 Use these settings to configure iOS/iPadOS devices to run specific apps in autonomous single app mode (ASAM). When ASAM is configured, and users start one of the configured apps, then the device is locked to that app. App/task switching is disabled until users exit the allowed app.
@@ -153,7 +157,17 @@ You can also **Import** a CSV file with the list of app names and their bundle I
 
 - **Require Safari fraud warnings**: **Yes** requires fraud warnings to be shown in the web browser on devices. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not show these warnings.
 
-### Settings apply to: Device enrollment, Automated device enrollment (supervised)
+- **Block Siri for dictation**: **Yes** prevents connections to Siri servers. Users can't use Siri to dictate text. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow Siri to be used for dictation. Also available for user enrollment.
+
+  This feature applies to:  
+  - iOS/iPadOS 14.5 and newer  
+
+- **Block Siri for translation**: **Yes** prevents connections to Siri servers so that users can't use Siri to translate text. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow Siri to be used for translation. Also available for user enrollment.
+
+  This feature applies to:  
+  - iOS/iPadOS 15.0 and newer  
+
+### Settings apply to: Device enrollment and Automated device enrollment (supervised)
 
 - **Block internet search results from Spotlight**: **Yes** stops Spotlight from returning any results from an Internet search. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow Spotlight search connect to the Internet to provide search results.
 
@@ -166,16 +180,6 @@ You can also **Import** a CSV file with the list of app names and their bundle I
 - **Block Safari JavaScript**: **Yes** prevents Java scripts in the browser from running on devices. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow Java scripts.
 
 - **Block Safari Pop-ups**: **Yes** blocks all pop-ups in the Safari web browser. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow the pop-up blocker.
-
-- **Block Siri for dictation**: **Yes** prevents connections to Siri servers. Users can't use Siri to dictate text. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow Siri to be used for dictation.
-
-  This feature applies to:  
-  - iOS/iPadOS 14.5 and newer  
-
-- **Block Siri for translation**: **Yes** prevents connections to Siri servers so that users can't use Siri to translate text. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow Siri to be used for translation.  
-
-  This feature applies to:  
-  - iOS/iPadOS 15.0 and newer  
 
 ### Settings apply to: Automated device enrollment (supervised)
 
@@ -212,7 +216,7 @@ You can also **Import** a CSV file with the list of app names and their bundle I
   - iOS 4.0 and newer
   - iPadOS 13.0 and newer
 
-- **Block Find My iPhone**: **Yes** prevents this feature in the Find My app. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow using this Find My app feature to get the approximate location of the device.
+- **Block Find My iPhone**: In the Find My app, **Yes** disables/hides the **Devices** tab. **Yes** may also prevent pairing of AirTags. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow using the **Devices** tab in the Find My app to get the approximate location of the device.
 
   This feature applies to:  
   - iOS 13.0 and newer
@@ -322,7 +326,7 @@ You can also **Import** a CSV file with the list of app names and their bundle I
 
 ## Domains
 
-### Settings apply to: Device enrollment, Automated device enrollment (supervised)
+### Settings apply to: Device enrollment and Automated device enrollment (supervised)
 
 - **Unmarked email domains**: Add one or more domain URLs to the list. When users receive an email from a domain other than the domains you enter, the email is marked as untrusted in the iOS/iPadOS Mail app.
 
@@ -344,7 +348,7 @@ You can also **Import** a CSV file with the list of app names and their bundle I
 
 - **Block screenshots and screen recording**: **Yes** prevents screenshots or screen captures on devices. In iOS/iPadOS 9.0 and newer, it also blocks screen recordings. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might let users capture the screen contents as an image or as a video.
 
-### Settings apply to: Device enrollment, Automated device enrollment (supervised)
+### Settings apply to: Device enrollment and Automated device enrollment (supervised)
 
 - **Block Untrusted TLS certificates**: **Yes** prevents untrusted Transport Layer Security (TLS) certificates on devices. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow TLS certificates.
 - **Block over-the-air PKI updates**: **Yes** prevents your users from receiving software updates unless devices are connected to a computer. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow a device to receive software updates without being connected to a computer.
@@ -565,7 +569,7 @@ You can also **Import** a CSV file with the list of app names and their bundle I
 
 - **Number of sign-in failures before wiping device**: Enter the number of failed sign-ins before the device is wiped, from 2-11. It's not recommended to set this value to `2` or `3`. It's common to enter the wrong password. Wiping the device after two or three incorrect password attempts happens often. It's recommended to set this value to at least `4`.
   
-  iOS/iPadOS has built-in security that can impact this setting. For example, iOS/iPadOS may delay triggering the policy depending on the number of sign in failures. It may also consider repeatedly entering the same passcode as one attempt. Apple's [iOS/iPadOS security guide](https://www.apple.com/business/site/docs/iOS_Security_Guide.pdf) (opens Apple's web site) is a good resource, and provides more specific details on passcodes. 
+  iOS/iPadOS has built-in security that can impact this setting. For example, iOS/iPadOS may delay triggering the policy depending on the number of sign-in failures. It may also consider repeatedly entering the same passcode as one attempt. Apple's [iOS/iPadOS security guide](https://www.apple.com/business/site/docs/iOS_Security_Guide.pdf) (opens Apple's web site) is a good resource, and provides more specific details on passcodes. 
   
 - **Maximum minutes after screen lock before password is required**<sup>1</sup>: Enter how long devices stay idle before users must reenter their password. If the time you enter is longer than what's currently set on the device, then the device ignores the time you enter.
 
@@ -640,12 +644,12 @@ You can also **Import** a CSV file with the list of app names and their bundle I
 
 ## Restricted apps
 
-### Settings apply to: Device enrollment, Automated device enrollment (supervised)
+### Settings apply to: Device enrollment and Automated device enrollment (supervised)
 
 - **Type of restricted apps list**: Create a list of apps that users aren't allowed to install or use. Your options:
 
   - **Not configured** (default): Intune doesn't change or update this setting. By default, the OS might allow access to apps you assign, and built-in apps.
-  - **Prohibited apps**: List the apps (not managed by Intune) that users aren't allowed to install and run. Users aren't prevented from installing a prohibited app. If a user installs an app from this list, then the device is reported in the **Devices with restricted apps** report ([Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Monitor** > **Devices with restricted apps**). 
+  - **Prohibited apps**: List the apps (not managed by Intune) that users aren't allowed to install and run. Users aren't prevented from installing a prohibited app. If a user installs an app from this list, then the device is reported in the **Devices with restricted apps** report ([Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Monitor** > **Devices with restricted apps**). 
   - **Approved apps**: List the apps that users are allowed to install. To stay compliant, users must not install other apps. Apps that are managed by Intune are automatically allowed, including the Company Portal app. Users aren't prevented from installing an app that isn't on the approved list. But if they do, it's reported in Intune.
 
 To add apps to these lists, you can:
@@ -689,12 +693,12 @@ This feature applies to:
 
 ### Settings apply to: Automated device enrollment (supervised)
 
-- **Type of apps list**: Create a list of apps to show or hide. You can show or hide built-in apps and line-of-business apps. Apple's web site has a list of [built-in Apple apps](https://support.apple.com/HT208094). Your options:
+- **Type of apps list**: Create a list of apps to show or hide. You can show or hide built-in apps and line-of-business apps. Apple's web site has a list of [built-in Apple apps](https://support.apple.com/HT211833). Your options:
 
   - **Not configured** (default): Intune doesn't change or update this setting.
   - **Hidden apps**: Enter a list of apps that are hidden from users. Users can't view, or open these apps.
   
-    Apple prevents hiding some native apps. For example, you can't hide the **Settings** app on the device. [Delete built-in Apple apps](https://support.apple.com/HT208094) lists the apps that can be hidden.
+    Apple prevents hiding some native apps. For example, you can't hide the **Settings** app on the device. [Delete built-in Apple apps](https://support.apple.com/HT211833) lists the apps that can be hidden.
   
   - **Visible apps**: Enter a list of apps that users can view and launch. No other apps can be viewed or launched.
 
@@ -708,8 +712,8 @@ This feature applies to:
 
   You can also use iTunes to find the app, and then use the **Copy Link** task to get the app URL.
 
-- **App Bundle ID**: Enter the app [bundle ID](bundle-ids-built-in-ios-apps.md) of the app you want. You can show or hide built-in apps and line-of-business apps. Apple's web site has a list of [built-in Apple apps](https://support.apple.com/HT208094).
-- **App name**: Enter the app name of the app you want. You can show or hide built-in apps and line-of-business apps. Apple's web site has a list of [built-in Apple apps](https://support.apple.com/HT208094).
+- **App Bundle ID**: Enter the app [bundle ID](bundle-ids-built-in-ios-apps.md) of the app you want. You can show or hide built-in apps and line-of-business apps. Apple's web site has a list of [built-in Apple apps](https://support.apple.com/HT211833).
+- **App name**: Enter the app name of the app you want. You can show or hide built-in apps and line-of-business apps. Apple's web site has a list of [built-in Apple apps](https://support.apple.com/en-us/HT211833).
 - **Publisher**: Enter the publisher of the app you want.
 
 You can also:
@@ -721,7 +725,7 @@ You can also:
 
 ## Wireless
 
-### Settings apply to: Device enrollment, Automated device enrollment (supervised)
+### Settings apply to: Device enrollment and Automated device enrollment (supervised)
 
 - **Block data roaming**: **Yes** prevents data roaming over the cellular network. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow data roaming when the device is on a cellular network.
 

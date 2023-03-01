@@ -1,19 +1,18 @@
 ---
-description: Learn how to update the enabled/disabled state of a feature using UpdateFeatureState WMI class method. 
-title: "UpdateFeatureState Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+description: Learn how to update the enabled/disabled state of a feature using UpdateFeatureState WMI class method.
+title: UpdateFeatureState Method
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 04077212-ba47-4e6b-8e98-80f99051c1d8
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # UpdateFeatureState Method in Class SMS_Site
 The `UpdateFeatureState` Windows Management Instrumentation (WMI) class method, in Configuration Manager, updates the enabled/disabled state of a feature.  

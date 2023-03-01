@@ -1,22 +1,24 @@
 ---
 title: Troubleshoot CMPivot for devices uploaded to the admin center
 titleSuffix: Configuration Manager
-description: Troubleshooting CMPivot for Configuration Manager tenant attach
-ms.date: 01/25/2022
+description: Troubleshooting CMPivot for Intune tenant attach
+ms.date: 07/11/2022
 ms.topic: troubleshooting
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-manager: dougeby
-author: mestew
-ms.author: mstewart
+manager: apoorvseth
+author: Banreet
+ms.author: banreetkaur
 ms.localizationpriority: high
+ms.reviewer: mstewart,aaroncz 
+ms.collection: tier3
 ---
 
 # Troubleshoot CMPivot for devices uploaded to the admin center
 <!--6024392-->
 *Applies to: Configuration Manager (current branch)*
 
-Use the following to troubleshoot CMPivot in the Microsoft Endpoint Manager admin center:
+Use the following to troubleshoot CMPivot in the Microsoft Intune admin center:
 
 ## Common issues
 
@@ -34,7 +36,7 @@ Use the following to troubleshoot CMPivot in the Microsoft Endpoint Manager admi
 
 1. Use the same account to sign in to the admin center. The on-premises identity must be synchronized with and match the cloud identity.
 1. Verify the account has **Read** permission for the device's **Collection** in Configuration Manager.
-1. Make sure that Configuration Manager has discovered the administrative user account you're using to access the tenant attach features within Microsoft Endpoint Manager admin center. In the Configuration Manager console, go to the **Assets and Compliance** workspace. Select the **Users** node, and find your user account.
+1. Make sure that Configuration Manager has discovered the administrative user account you're using to access the tenant attach features within Microsoft Intune admin center. In the Configuration Manager console, go to the **Assets and Compliance** workspace. Select the **Users** node, and find your user account.
 
     If your account isn't listed in the **Users** node, check the configuration of the site's [Active Directory User discovery](../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser).
 
@@ -63,28 +65,12 @@ Unexpected errors are typically caused by either [service connection point](../c
 
 ## Known issues
 
-### Inconsistent results for some operators with Configuration Manager version 2002
-<!--7784718, 7884272-->
-When using CMPivot from the Microsoft Endpoint Manager admin center with Configuration Manager version 2002, you may get inconsistent results for the following operators:
-
-- Summarize by
-- Take
-- Order by
-- Top
-- Count
-- Distinct
-
-**Resolution**: Install [KB4578123 - CMPivot queries return unexpected results in Configuration Manager current branch, version 2002](https://support.microsoft.com/help/4578123).
 
 ### <a name="bkmk_dblhop"></a> When the SMS provider is remote from the CAS, you may encounter an internal server error from the admin console
 
 **Error message:** On-prem error code: 500 internal server error
 
-**Scenario 1:** When running Configuration Manager version 2002 and there is a remote provider for the CAS, then you may encounter an internal server error from the admin console.
-
-**Scenario 2:** When running Configuration Manager version 2006, you may also encounter this error if the service connection point fails to connect to the provider on the primary site and falls back to the provider for the CAS. 
-
-**Scenario 3:** If the CAS has been upgraded to version 2006 but the primary site hasn't been upgraded yet, then the requests will be routed through the CAS provider. If the provider is remote, you may encounter an internal server error from the admin console. 
+**Possible scenario:** If the CAS has been upgraded to a new version but the primary site hasn't been upgraded yet, then the requests will be routed through the CAS provider. If the provider is remote, you may encounter an internal server error from the admin console. 
 
 **Workaround:** Follow the instructions for the [CAS has a remote provider](../core/servers/manage/cmpivot-changes.md#cas-has-a-remote-provider) scenario in the CMPivot article to work around this "double hop" scenario.
 

@@ -23,11 +23,12 @@ searchScope:
 ROBOTS:  
 #audience:
 
-#ms.reviewer: arnab
+ms.reviewer: arnab
 #ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
-ms.collection: 
+ms.collection:
+- tier2
 ---
 
 # Resolve access point restrictions

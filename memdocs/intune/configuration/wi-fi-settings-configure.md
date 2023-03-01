@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/20/2022
+ms.date: 09/20/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -25,11 +25,14 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection:
-  - M365-identity-device-management
-  - highpri
+- tier1
+- M365-identity-device-management
+- highpri
 ---
 
 # Add and use Wi-Fi settings on your devices in Microsoft Intune
+
+[!INCLUDE [windows-phone-81-windows-10-mobile-support](../includes/windows-phone-81-windows-10-mobile-support.md)]
 
 Wi-Fi is a wireless network that's used by many mobile devices to get network access. Microsoft Intune includes built-in Wi-Fi settings that can be deployed to users and devices in your organization. This group of settings is called a "profile", and can be assigned to different users and groups. Once assigned, your users get access your organization's Wi-Fi network without configuring it themselves.
 
@@ -47,6 +50,7 @@ Wi-Fi profiles support the following device platforms:
 
 - Android 5 and newer
 - Android Enterprise and kiosk
+- Android (AOSP)
 - iOS 11.0 and newer
 - iPadOS 13.0 and newer
 - macOS X 10.12 and newer
@@ -54,18 +58,16 @@ Wi-Fi profiles support the following device platforms:
 - Windows 10
 - Windows Holographic for Business
 
-> [!NOTE]
-> For devices running Windows 8.1, you can import a Wi-Fi configuration that was previously exported from another device. For more information, see [Import Wi-Fi settings for Windows devices](wi-fi-settings-import-windows-8-1.md).
-
 ## Create the profile
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Configuration profiles** > **Create profile**.
 3. Enter the following properties:
 
     - **Platform**: Choose the platform of your devices. Your options:
 
       - **Android device administrator**
+      - **Android (AOSP)**
       - **Android Enterprise**
       - **iOS/iPadOS**
       - **macOS**
@@ -89,6 +91,7 @@ Wi-Fi profiles support the following device platforms:
 7. In **Configuration settings**, depending on the platform you chose, the settings you can configure are different. Select your platform for detailed settings:
 
     - [Android device administrator](wi-fi-settings-android.md)
+    - [Android (AOSP)](wi-fi-settings-android-aosp.md)
     - [Android Enterprise](wi-fi-settings-android-enterprise.md), including dedicated devices
     - [iOS/iPadOS](wi-fi-settings-ios.md)
     - [macOS](wi-fi-settings-macos.md)

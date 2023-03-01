@@ -6,10 +6,12 @@ ms.date: 10/06/2016
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
-manager: dougeby
-author: mestew
-ms.author: mstewart
+manager: apoorvseth
+author: BalaDelli
+ms.author: baladell
 ms.localizationpriority: medium
+ms.reviewer: mstewart,aaroncz 
+ms.collection: tier3
 ---
 
 # Prepare for software updates management

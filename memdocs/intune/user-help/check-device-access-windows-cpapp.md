@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/05/2018
+ms.date: 10/11/2022
 ms.topic: end-user-help
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -25,7 +25,8 @@ ms.reviewer:
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
-ms.collection: 
+ms.collection:
+- tier2
 ---
 
 # Check access from Company Portal app for Windows
@@ -47,11 +48,13 @@ Complete the steps in this article to check access from the Company Portal app f
 
     ![Example screenshot of the Company Portal app for Windows, Device details page, highlighting the Check Access button.](./media/1809_CheckAccess_Checking_Status.png) 
 
-4. Look at the status update. It will show that your device **Can access your organization's resources** or **Cannot access your organization's resources**.  
-
+4. Look at the status update. It will show that your device **Can access your organization's resources**, **Cannot access your organization's resources**, or **Can access company resources, but action required**.
    ![Example screenshot of the Company Portal app for Windows, Device details page, highlighting the Status section.](./media/1809_CheckAccess_Device_details_status1.png)  
    
-5. If your device can't access resources, go to the alert at the top of the page. Click **More** to expand its details. Click **Less** to collapse them.  
+5. If your device can't access resources or can access resources but action is required, go to the alert at the top of the page. Click **More** to expand its details. Click **Less** to collapse them.
+
+    > [!IMPORTANT]
+    > When you can still access resources, but an action is required, you will need to take the required remediation actions by the specified date, or you'll lose access to resources.
 
     ![Example screenshot of the Company Portal app for Windows, Device details page, highlighting the alert at the top of the page.](./media/1809_CheckAccess_Device_details_alert1.png)  
 

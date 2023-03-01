@@ -1,18 +1,18 @@
 ---
-title: "SMS_MDMBulkEnrollmentProfiles Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+description: Learn how to represent On-premises Mobile Device Management (MDM) bulk enrollment profiles using SMS_BulkEnrollmentProfiles class.
+title: SMS_MDMBulkEnrollmentProfiles Class
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 57c1746d-4ee1-41db-b7a8-33dad15e2b96
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_MDMBulkEnrollmentProfiles Server WMI Class
 The  `SMS_BulkEnrollmentProfiles` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents On-premises Mobile Device Management  (MDM)  bulk enrollment profiles.  

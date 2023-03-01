@@ -1,17 +1,17 @@
 ---
-title: "Configuration Manager Tally Intervals"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: Configuration Manager Tally Intervals
+ms.date: 09/20/2016
+description: The Configuration Manager is configured with 16 default tally intervals, which are maintained in the site control file shown in the following table.
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: conceptual
 ms.assetid: 792581fa-e652-4009-a702-91c2aad49904
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # About Configuration Manager Tally Intervals
 Configuration Manager is configured with 16 default tally intervals. The intervals for a site are maintained in the site control file. The values are stored in the order that is shown in the following table. For information about accessing these values in the site control file, see the example at the end of this topic.  

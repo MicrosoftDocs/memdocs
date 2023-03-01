@@ -1,18 +1,18 @@
 ---
-title: "SetPowerManagementSettings Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: SetPowerManagementSettings Method
+titleSuffix: Configuration Manager
+description: A class method that sets power management settings on a client.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 67b81f44-b468-492c-bd79-f4f396861577
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SetPowerManagementSettings Method in Class CCM_PowerManagementSettings
 The `SetPowerManagementSettings` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that sets power management settings on a client.   

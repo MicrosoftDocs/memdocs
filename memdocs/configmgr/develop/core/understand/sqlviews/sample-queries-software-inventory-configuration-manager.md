@@ -9,11 +9,11 @@ ms.topic: conceptual
 
 
 ms.assetid: baffc7d9-86a8-4e36-8230-ea4da8cf1f87
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
+ms.collection: tier3
 ---
 
 # Sample queries for software inventory in Configuration Manager

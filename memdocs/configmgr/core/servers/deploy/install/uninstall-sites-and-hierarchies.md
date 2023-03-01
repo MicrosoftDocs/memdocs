@@ -6,10 +6,12 @@ ms.date: 02/16/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: sheetg09
+ms.author: sheetg
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Uninstall roles, sites, and hierarchies in Configuration Manager
@@ -124,7 +126,7 @@ You might want to uninstall a primary site from your hierarchy for the following
 - Consolidate sites to reduce costs and complexity
 - Reconfigure or redesign the sites of the hierarchy
 
-Before you uninstall a child primary site that uses [distributed views](../../../plan-design/hierarchy/database-replication.md#bkmk_distviews) for its replication link to the CAS, first turn off distributed views in your hierarchy. For more information, see [Uninstall a primary site that is configured with distributed views](#bkmk_distviews).
+Before you uninstall a child primary site that uses [distributed views](../../../plan-design/hierarchy/database-replication.md#distributed-views) for its replication link to the CAS, first turn off distributed views in your hierarchy. For more information, see [Uninstall a primary site that is configured with distributed views](#bkmk_distviews).
 
 ### <a name="bkmk_pri-plan"></a> Plan to uninstall a primary site
 
@@ -142,7 +144,7 @@ Before you uninstall a primary site, review the following tasks:
 
   - Client reassignment may impact reports and queries that rely on inventory data, and state-based compliance. Consider temporarily adjusting any client cycles during the transition.
 
-  - Review all client assignment methods to make sure that none refer to this primary site.
+  - Review all client assignment methods to make sure that none refers to this primary site.
 
 - Check if any actively used objects in the hierarchy have static references to the site code. For example, collection queries, task sequences, or administrative scripts.
 

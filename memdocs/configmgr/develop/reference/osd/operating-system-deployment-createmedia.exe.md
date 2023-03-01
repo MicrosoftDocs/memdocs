@@ -6,11 +6,12 @@ ms.date: 02/16/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # OS deployment CreateMedia.exe

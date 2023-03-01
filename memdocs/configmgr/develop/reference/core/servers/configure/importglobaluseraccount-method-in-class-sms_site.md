@@ -1,18 +1,18 @@
 ---
-title: "ImportGlobalUserAccount Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: ImportGlobalUserAccount Method
+titleSuffix: Configuration Manager
+description: A Windows Management Instrumentation class method that encrypts data that's shared in the hierarchy.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 3300967b-9080-4b60-901f-e52bc2234f8e
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # ImportGlobalUserAccount Method in Class SMS_Site
 The `ImportGlobalUserAccount` Windows Management Instrumentation (WMI) class method, in Configuration Manager, encrypts data that is shared in the hierarchy.   

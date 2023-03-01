@@ -2,12 +2,12 @@
 # required metadata
 
 title: Assign device profiles in Microsoft Intune
-description: Use the Microsoft Endpoint Manager admin center to assign device profiles and policies to users and devices. Learn how to exclude groups from a profile assignment in Microsoft Intune.
+description: Use the Microsoft Intune admin center to assign device configuration profiles and policies to users and devices. Learn how to exclude groups from a profile assignment in Microsoft Intune.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/18/2022
+ms.date: 10/10/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -26,15 +26,18 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure, contperf-fy21q1
 ms.collection:
-  - M365-identity-device-management
-  - highpri
+- tier1
+- M365-identity-device-management
+- highpri
 ---
 
-# Assign user and device profiles in Microsoft Intune
+# Assign user and device configuration profiles in Microsoft Intune
 
-You create a profile, and it includes all the settings you entered. The next step is to deploy or "assign" the profile to your user or device groups. When it's assigned, the users and devices receive your profile, and the settings you entered are applied.
+You create a device configuration profile, and it includes all the settings you entered. The next step is to deploy or "assign" the profile to your user or device groups. When it's assigned, the users and devices receive your profile, and the settings you entered are applied.
 
-This article shows you how to assign a profile, and includes some information on using scope tags on your profiles.
+This article shows you how to assign a profile, and includes some information on using scope tags on your device configuration profiles. 
+
+For information on device configuration profiles, and what you can configure, go to [Apply features and settings on your devices using device profiles in Microsoft Intune](device-profiles.md).
 
 > [!NOTE]  
 > When a profile is removed or no longer assigned to a device, different things can happen, depending on the settings in the profile. The settings are based on CSPs, and each CSP can handle the profile removal differently. For example, a setting might keep the existing value, and not revert back to a default value. The behavior is controlled by each CSP in the operating system. For a list of Windows CSPs, see [configuration service provider (CSP) reference](/windows/client-management/mdm/configuration-service-provider-reference).
@@ -49,15 +52,15 @@ Be sure you have the correct role to assign profiles. For more information, see 
 
 ## Assign a device profile
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Configuration profiles**. All the profiles are listed.
 3. Select the profile you want to assign > **Properties** > **Assignments** > **Edit**:
 
-    :::image type="content" source="./media/device-profile-assign/properties-select-assignments.png" alt-text="Select assignments to deploy the profile to users and groups in Microsoft Intune and Endpoint Manager":::
+    :::image type="content" source="./media/device-profile-assign/properties-select-assignments.png" alt-text="Screenshot that shows how to select assignments to deploy the profile to users and groups in Microsoft Intune.":::
 
 4. Select **Included groups** or **Excluded groups**, and then choose **Select groups to include**. When you select your groups, you're choosing an Azure AD group. To select multiple groups, hold down the **Ctrl** key, and select your groups.
 
-    :::image type="content" source="./media/device-profile-assign/select-included-excluded-groups-profile-assignment.png" alt-text="Include or exclude users and groups when assigning or deploying a profile in Microsoft Intune and Endpoint Manager.":::
+    :::image type="content" source="./media/device-profile-assign/select-included-excluded-groups-profile-assignment.png" alt-text="Screenshot that shows how to include or exclude users and groups when assigning or deploying a profile in Microsoft Intune.":::
 
 5. Select **Review + Save**. This step doesn't assign your profile.
 6. Select **Save**. When you save, your profile is assigned. Your groups will receive your profile settings when the devices check in with the Intune service.
@@ -106,6 +109,14 @@ For example:
 
 To summarize, use user groups when you want your settings and rules to always go with the user, whatever device they use. 
 
+### Windows CSPs
+
+The policy settings for Windows devices are based on the [configuration service providers (CSPs)](/windows/client-management/mdm/configuration-service-provider-reference). These settings map to registry keys or files on the devices.
+
+Intune exposes these CSPs so you can configure these settings and assign them to your Windows devices. These settings are configurable using the built-in templates and using the [settings catalog](settings-catalog.md). In the settings catalog, you'll see that some settings apply to the user scope and some settings apply to the device scope.
+
+For information on how user scoped and device scoped settings are applied to Windows devices, go to [Settings catalog: Device scope vs. user scope settings](settings-catalog.md#device-scope-vs-user-scope-settings).
+
 ## Exclude groups from a profile assignment
 
 Intune device configuration profiles let you include and exclude groups from profile assignment.
@@ -116,7 +127,6 @@ As a best practice:
 - Create and assign different profiles specifically for your device groups.
 
 For more information on groups, see [Add groups to organize users and devices](../fundamentals/groups-add.md).
-
 
 ### Fundamentals
 
@@ -145,7 +155,7 @@ Use the following matrix to understand support for excluding groups:
 - ❌: Not supported
 - ❕ : Partially supported
 
-:::image type="content" source="./media/device-profile-assign/include-exclude-user-device-groups-matrix.png" alt-text="Supported options include or exclude groups from a profile assignment":::
+:::image type="content" source="./media/device-profile-assign/include-exclude-user-device-groups-matrix.png" alt-text="Screenshot that shows the supported options to include or exclude groups from a profile assignment.":::
 
 | Scenario | Support|
 | --- | --- |

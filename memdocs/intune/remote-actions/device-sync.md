@@ -18,18 +18,17 @@ ms.localizationpriority: high
 #ROBOTS:
 #audience:
 
-#ms.reviewer: coferro
+ms.reviewer: 
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: 
-  - M365-identity-device-management
-  - highpri
+ms.collection:
+- tier3
+- M365-identity-device-management
 ---
 
 # Sync devices to get the latest policies and actions with Intune
-
 
 The **Sync** device action forces the selected device to immediately check in with Intune. When a device checks in, it immediately receives any pending actions or policies that have been assigned to it. This feature can help you immediately validate and troubleshoot policies you've assigned, without waiting for the next scheduled check-in.
 
@@ -42,10 +41,10 @@ The **Sync** device action forces the selected device to immediately check in wi
 
 ## Sync a device
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). 
-3. Select **Devices** > **All devices**.
-4. In the list of devices you manage, select a device to open its *Overview* pane, and then select **Sync**.
-5. To confirm, select **Yes**.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). 
+2. Select **Devices** > **All devices**.
+3. In the list of devices you manage, select a device to open its *Overview* pane, and then select **Sync**.
+4. To confirm, select **Yes**.
 
 To see the status of the sync action, choose **Devices** > **Monitor** > **Device actions**.
 
@@ -54,7 +53,6 @@ You can find standard Intune policy check-in frequencies in the [Refresh cycle t
 ## Retryable error codes
 
 When an administrator runs the **Sync** device action, iOS/iPadOS and Android apps that failed and raised a retryable error code are still available to the device. However, apps that raised a nonretryable error code must wait seven days before they're available to the device.
-
 
 | Error code  | Suggested description | Retryable |
 |---|---|---|

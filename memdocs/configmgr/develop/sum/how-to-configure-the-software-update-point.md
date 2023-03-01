@@ -1,19 +1,18 @@
 ---
-title: "Configure the Software Update Point"
-titleSuffix: "Configuration Manager"
-description: "You configure the software update point, in Configuration Manager, by modifying the site control file settings."
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: Configure the Software Update Point
+titleSuffix: Configuration Manager
+description: You configure the software update point, in Configuration Manager, by modifying the site control file settings.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: how-to
 ms.assetid: 021e834d-aa7c-4b82-831d-97f110f7da73
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Configure the Software Update Point
 You configure the software update point, in Configuration Manager, by modifying the site control file settings.  

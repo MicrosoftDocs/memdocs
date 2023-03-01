@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/21/2022
+ms.date: 10/24/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -25,7 +25,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Monitor device configuration profiles in Microsoft Intune
@@ -34,7 +36,7 @@ Intune includes some features to help monitor and manage your device configurati
 
 ## View existing profiles
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Configuration profiles**.
 
 All of your profiles are shown. You also see the platform, the type of profile, and if the profile is assigned.
@@ -79,9 +81,21 @@ After you create your device profile, Intune provides graphical charts. These ch
       - **Assignments**: See the users and groups that receive policy, and see any existing [filters](../fundamentals/filters.md) in the policy. Select **Edit** to update the policy assignment, and add or remove a filter.
       - **Applicability Rules**: On your Windows devices, see the [applicability rules](device-profile-create.md#applicability-rules) used in the policy. Select **Edit** to add or remove an applicability rule.
 
-    - **Device status**: The devices assigned to the profile are listed, and it shows if the profile is successfully deployed. You can select a specific device to get even more details, including the installed apps.
-    - **User status**: Lists the user names with devices affected by this profile, and if the profile successfully deployed. You can select a specific user to get even more details.
-    - **Per-setting status**: Filters the output by showing the individual settings within the profile, and shows if the setting is successfully applied.
+    - **Device and user check-in status**: Shows the number of **all** users or devices that checked-in with the profile. If one device has multiple users, this report shows the status for each user. When the user or devices check-in, they receive the settings in your profile.
+
+      Select **View report** to see the following information:
+      
+      - The devices that received the profile
+      - The user names with devices that received the profile
+      - The check-in status and the last time the user/device checked in with the profile
+
+      You can also select a specific device to get more details and use the filter column to see the assignment filter options.
+
+    - **Device assignment status**: Shows information for the user that last checked-in. Select **Generate report** to see the latest profile assignment states for the devices that received the profile. You can also filter the assignment status to see only errors, conflicts, and more.
+
+      It's normal for the numbers in the **Device and user check-in status** and **Device assignment status** reports to be different. 
+
+    - **Per setting status**: Shows the individual settings in the profile, and their status.
 
 > [!TIP]
 > [Intune reports](../fundamentals/reports.md) is a great resource, and describes all the reporting features you can use.

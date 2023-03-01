@@ -1,18 +1,18 @@
 ---
-title: "EvaluateAllPolicies Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: EvaluateAllPolicies Method
+titleSuffix: Configuration Manager
+description: A Windows Management Instrumentation class method that evaluates all policies.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 1d2b4471-ed93-42d5-b1d7-bf3990b69f84
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # EvaluateAllPolicies Method in Class CCM_ApplicationPolicy
 The `EvaluateAllPolicies` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that evaluated all policies.   

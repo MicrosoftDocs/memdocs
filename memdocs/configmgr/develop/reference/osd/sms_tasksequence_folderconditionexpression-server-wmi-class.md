@@ -1,18 +1,18 @@
 ---
-title: "SMS_TaskSequence_FolderConditionExpression Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: SMS_TaskSequence_FolderConditionExpression Class
+titleSuffix: Configuration Manager
+description: An SMS Provider server class that represents a condition expression to check for the existence of a folder and when it was created.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 03960b7a-7ca6-40f8-bca0-538cb8f7700d
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_TaskSequence_FolderConditionExpression Server WMI Class
 The `SMS_TaskSequence_FolderConditionExpression` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a condition expression to check for the existence of a folder and when it was created.  

@@ -1,18 +1,18 @@
 ---
-title: "SMS_OSDeploymentKitInstalledVersion Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+description: Learn how to represent a mapping of server names to an installed Assessment and Deployment Kit (ADK) version using SMS_OSDeploymentKitInstalledVersion class.
+title: SMS_OSDeploymentKitInstalledVersion Class
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 634cb192-7fcd-4e8d-8730-3c1ed832bb61
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_OSDeploymentKitInstalledVersion Server WMI Class
 The `SMS_OSDeploymentKitInstalledVersion` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a mapping of server names to an  installed Assessment and Deployment Kit (ADK) version.  

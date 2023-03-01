@@ -2,14 +2,16 @@
 title: Management insights
 titleSuffix: Configuration Manager
 description: Learn about the management insights functionality available in the Configuration Manager console.
-ms.date: 08/11/2021
+ms.date: 04/08/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Management insights in Configuration Manager
@@ -99,6 +101,7 @@ Insights are organized into the following management insight groups:
 - [Cloud services](#cloud-services)
 - [Collections](#collections)
 - [Configuration Manager Assessment](#configuration-manager-assessment)
+- [Deprecated and unsupported features](#deprecated-and-unsupported-features)
 - [Optimize for remote workers](#optimize-for-remote-workers)
 - [Proactive maintenance](#proactive-maintenance)
 - [Security](#security)
@@ -189,21 +192,34 @@ For more information on these insights, see [Remediation steps for Configuration
 > [!TIP]
 > If you're already a customer of Microsoft Unified or Microsoft Premier, sign in to the [Services Hub](https://serviceshub.microsoft.com/assessments/) for additional on-demand assessments.
 >
-> For more information about Microsoft Services, see [Support Solutions](https://www.microsoft.com/enterprise/services/support).
+> For more information about Microsoft Services, see [Support Solutions](https://www.microsoft.com/industrysolutions).
+
+### Deprecated and unsupported features
+
+*(Introduced in version 2203)*
+
+The following management insights are about features you may be using which have been deprecated or are no longer supported. These features may be removed from the product in a future release.
+
+- **Site system roles associated with deprecated or removed features**: This insight checks for installed site system roles for deprecated features that will be removed in a future release.<!--12451634-->
+- **Check if the site uses the asset intelligence sync point role**: This insight checks for installation of the asset intelligence synchronization point role. <!--12451634-->
+- **Configuration Manager client for macOS end of support**: This insight lists the clients running macOS. Support for the Configuration Manager client for macOS and Mac client management ends on December 31, 2022.<!--12451634-->
+- **Certificate registration point is no longer supported**: This insight checks for installation of the certificate registration point site system role. This feature is no longer supported as of March 2022. Configuration Manager versions released before March 2022 will still be able to install and use certificate registration points.<!--10875436-->
+- **Company resource access policies are no longer supported**: This insight checks for company resource access policies. These features are no longer supported as of March 2022. Company resource access includes email, certificate, VPN, Wi-Fi, and Windows Hello for Business profiles. Configuration Manager versions released before March 2022 will still be able to use company resource access policies.<!--10875436-->
+- **Microsoft Store for Business deprecated**: This insight checks for the presence of Microsoft Store for Business connector. This feature has been deprecated as of Nov 2021.<!--15429955-->
 
 ### Operating system deployment
 
 <!--6982275-->
 
-Starting in version 2006, the following management insights help you manage the policy size of task sequences. When the size of the task sequence policy exceeds 32 MB, the client fails to process the large policy. The client then fails to run the task sequence deployment.
+The following management insights help you manage the policy size of task sequences. When the size of the task sequence policy exceeds 32 MB, the client fails to process the large policy. The client then fails to run the task sequence deployment.
 
 - **Large task sequences may contribute to exceeding maximum policy size**: If you deploy these task sequences, clients may not be able to process the large policy objects. Reduce the size of the task sequence policy to prevent potential policy processing issues.<!-- D9A15248-832E-4780-8151-ACD1B9E53FE1 -->
 
 - **Total policy size for task sequences exceeds policy limit**: Clients can't process the policy for these task sequences because it's too large. Reduce the size of the task sequence policy to allow the deployment to run on clients.<!-- 6568F6A3-D1D8-4E63-940B-FE44F8349802 -->
 
-For more information, see [Reduce the size of task sequence policy](../../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md#reduce-the-size-of-task-sequence-policy).
+For more information, see [Reduce the size of task sequence policy](../../../osd/deploy-use/reduce-task-sequence-policy-size.md).
 
-In version 2006, the following insight moved to this group from the **Proactive Maintenance** group:
+This group also includes the following insight:
 
 - **Unused boot images**: Boot images not referenced for PXE boot or task sequence use. For more information, see [Manage boot images](../../../osd/get-started/manage-boot-images.md).<!-- 4C1FBA51-AD56-4CA8-8326-066F65D24F0E -->
 
@@ -235,6 +251,8 @@ The insights in this group highlight potential configuration issues to avoid thr
 - **Unused configuration items**: Configuration items that aren't part of a configuration baseline and are older than 30 days. For more information, see [Create configuration baselines](../../../compliance/deploy-use/create-configuration-baselines.md).<!-- 0597907B-17D4-4EA5-92E4-CCE692E1468D -->
 
 - **Update Microsoft .NET Framework on site systems**: <!--10402814-->Starting in version 2107, Configuration Manager requires Microsoft .NET Framework version 4.6.2 for site servers, specific site systems, clients, and the console. Before you run setup to install or update the site, first update .NET and restart the system. If possible in your environment, install the latest version of .NET version 4.8. For more information, [Site and site system prerequisites](../../plan-design/configs/site-and-site-system-prerequisites.md#net-version-requirements).
+
+- **Update servers running Windows Server 2012 and 2012 R2**:<!--9519162--> Detects servers that are running Windows Server 2012 or 2012 R2 operating systems. The support lifecycle for these operating systems ends on October 9, 2023. For more information, see the [Product lifecycle](/lifecycle/announcements/sql-server-2012-windows-server-2012-end-of-support).
 
 - **Upgrade peer cache sources to the latest version of the Configuration Manager client**:<!--1358008--> Identify clients that serve as a peer cache source but haven't upgraded from a pre-1806 client version. Pre-1806 clients can't be used as a peer cache source for clients that run version 1806 or later. Select **Take action** to open a device view that displays the list of clients.<!-- B51C6733-F9FF-46BC-8F5E-624F2CBED719 -->
 

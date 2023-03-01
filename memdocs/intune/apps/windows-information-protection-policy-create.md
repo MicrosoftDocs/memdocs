@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/16/2021
+ms.date: 12/05/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -27,11 +27,15 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection:
+- tier2
 - M365-identity-device-management
 - Windows
 ---
 
 # Create and deploy Windows Information Protection (WIP) policy with Intune
+
+[!INCLUDE [wip-deprecation](../../includes/wip-deprecation.md)]
+<!-- MAXADO-6010051 -->
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
@@ -65,19 +69,18 @@ Additionally, you need to have the following license and update:
 - [Azure AD Premium](/azure/active-directory/active-directory-get-started-premium) license
 - [Windows Creators Update](https://blogs.windows.com/windowsexperience/2017/04/11/how-to-get-the-windows-10-creators-update/#o61bC2PdrHslHG5J.97)
 
-
-
-
-
 ## To add a WIP policy
 
 After you set up Intune in your organization, you can create a WIP-specific policy.
+
+>[!IMPORTANT]
+> Windows Information Protection (WIP) policies without enrollment has been deprecated. You can no longer create WIP policies for unenrolled devices.
 
 > [!TIP]  
 > For related information about creating WIP policies for Intune, including available settings and how to configure them, see [Create a Windows Information Protection (WIP) policy with MAM using the portal for Microsoft Intune](/windows/security/information-protection/windows-information-protection/create-wip-policy-using-mam-intune-azure) in the Windows Security documentation library. 
 
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **App protection policies** > **Create policy**.
 3. Add the following values:
     - **Name:** Type a name (required) for your new policy.
@@ -88,7 +91,7 @@ After you set up Intune in your organization, you can create a WIP-specific poli
 
 ## To add recommended apps to your protected apps list
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **App protection policies**.
 3. On the **App protection policies** pane, choose the policy you want to modify. The **Intune App Protection** pane is displayed.
 4. Choose **Protected apps** from the **Intune App Protection** pane. The **Protected apps** pane opens showing you all apps that are already included in the list for this app protection policy.
@@ -101,7 +104,7 @@ After you set up Intune in your organization, you can create a WIP-specific poli
 
 **To add a Store app**
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **App protection policies**.
 3. On the **App protection policies** pane, choose the policy you want to modify. The **Intune App Protection** pane is displayed.
 4. Choose **Protected apps** from the **Intune App Protection** pane. The **Protected apps** pane opens showing you all apps that are already included in the list for this app protection policy.
@@ -114,7 +117,7 @@ After you set up Intune in your organization, you can create a WIP-specific poli
 ## Add a desktop app to your protected apps list
 
 **To add a desktop app**
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **App protection policies**.
 3. On the **App protection policies** pane, choose the policy you want to modify. The **Intune App Protection** pane is displayed.
 4. Choose **Protected apps** from the **Intune App Protection** pane. The **Protected apps** pane opens showing you all apps that are already included in the list for this app protection policy.

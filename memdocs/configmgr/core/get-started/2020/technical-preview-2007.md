@@ -6,11 +6,13 @@ ms.date: 07/27/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ROBOTS: NOINDEX
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Features in Configuration Manager technical preview version 2007
@@ -25,7 +27,7 @@ The following sections describe the new features to try out in this version:
 
 <!-- [!INCLUDE [Example feature name](includes/2007/1234567.md)] -->
 
-[!INCLUDE [Tenant attach: View hardware inventory in Microsoft Endpoint Manager admin center](includes/2007/6479284.md)]
+[!INCLUDE [Tenant attach: View hardware inventory in Microsoft Intune admin center](includes/2007/6479284.md)]
 [!INCLUDE [Improvements to client data sources dashboard](includes/2007/7102084.md)]
 [!INCLUDE [Fixed-width font now used in some console areas](includes/2007/7632637.md)]
 [!INCLUDE [Manage task sequence policy size](includes/2007/6888853.md)]

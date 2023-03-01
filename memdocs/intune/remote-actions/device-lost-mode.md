@@ -20,12 +20,14 @@ ms.assetid: 126a7489-fe3e-43fd-a681-defb2fe0bb66
 #ROBOTS:
 #audience:
 
-#ms.reviewer: coferro
+ms.reviewer: coferro
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Enable lost mode on iOS/iPadOS devices with Intune
@@ -47,7 +49,7 @@ This feature is not supported for the following:
 
 ## Enable lost mode
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 3. Select **Devices**, and then select **All devices**.
 4. From the list of devices you manage, choose an iOS/iPadOS device, and then choose the **Lost mode (supervised only)**.
 5. Under **Lost mode**, select **Enable**.

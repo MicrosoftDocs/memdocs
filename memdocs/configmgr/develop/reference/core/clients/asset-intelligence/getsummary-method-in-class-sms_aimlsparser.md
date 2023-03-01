@@ -1,18 +1,18 @@
 ---
-title: "GetSummary Method in Class SMS_AIMLSParser"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+description: The GetSummary Windows Management Instrumentation (WMI) class method, in Configuration Manager, retrieves the counts of imported Microsoft and non-Microsoft license count.
+title: GetSummary Method in Class SMS_AIMLSParser
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 0c53d501-e55a-4224-bb40-154a16ff3855
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # GetSummary Method in Class SMS_AIMLSParser
 The `GetSummary` Windows Management Instrumentation (WMI) class method, in Configuration Manager, retrieves the counts of imported Microsoft License count and non-Microsoft license count.  

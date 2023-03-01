@@ -1,18 +1,18 @@
 ---
-title: "List Maintenance Windows and Properties for a Collection"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: List Maintenance Windows and Properties for a Collection
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: how-to
 ms.assetid: ea92b17f-06f1-4f96-a99d-551d5422092d
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+description: Learn how to list the maintenance windows and properties for a specific collection with provided examples and links.
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to List the Maintenance Windows and Properties for a Specific Collection
 The following example shows how to list the maintenance windows for a specific collection by using the [SMS_CollectionSettings Server WMI Class](../../../../develop/reference/core/clients/collections/sms_collectionsettings-server-wmi-class.md) class. Maintenance windows are created by using the [SMS_ServiceWindow Server WMI Class](../../../../develop/reference/core/servers/configure/sms_servicewindow-server-wmi-class.md) class and then stored as embedded objects in [SMS_CollectionSettings](../../../../develop/reference/core/clients/collections/sms_collectionsettings-server-wmi-class.md) instances, one per collection.  
@@ -167,7 +167,7 @@ public void ListMaintenanceWindowsAndPropertiesForASpecificCollection(WqlConnect
 ## .NET Framework Security  
  For more information about securing Configuration Manager applications, see [Configuration Manager role-based administration](../../../../develop/core/servers/configure/role-based-administration.md).  
 
-## See Also  
+## See also  
  [About maintenance windows](about-maintenance-windows.md)
  [Software distribution overview](software-distribution-overview.md)
  [About deployments](about-software-distribution-deployments.md)

@@ -6,10 +6,12 @@ ms.date: 12/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: how-to
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: gowdhamankarthikeyan
+ms.author: gokarthi
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # How to create collections in Configuration Manager
@@ -145,7 +147,7 @@ In the **Query Rule Properties** dialog box, specify the following information.
 
 - **Resource class**: Select the type of resource you want to search for and add to the collection. Select a value from **System Resource** to search for inventory data returned from client computers or from **Unknown Computer** to select from values returned by unknown computers.
 
-- **Edit Query Statement**: Opens the **Query Statement Properties** dialog box, where you can write a query to use as the rule for the collection. On the General tab, if you select the option to **Omit duplicate rows (select distinct)**, it may result in less rows returned but potentially quicker results. For more information about queries, see [Introduction to queries](../../../servers/manage/introduction-to-queries.md).
+- **Edit Query Statement**: Opens the **Query Statement Properties** dialog box, where you can write a query to use as the rule for the collection. On the General tab, if you select the option to **Omit duplicate rows (select distinct)**, it may result in fewer rows returned but potentially quicker results. For more information about queries, see [Introduction to queries](../../../servers/manage/introduction-to-queries.md).
 
    - Starting in Configuration Manager 2010, you can preview the results when you're creating or editing a query for collection membership. For more information, see the [Preview collection queries](#bkmk-preview) section.
 
@@ -214,91 +216,10 @@ You can use PowerShell to create and import collections. For more information, s
 
 ## <a name="bkmk_aadcollsync"></a> Synchronize members to Azure AD groups
 
-<!--3607475-->
-
-You can enable the synchronization of collection memberships to an Azure Active Directory (Azure AD) group. This synchronization allows you to use your existing on premises grouping rules in the cloud by creating Azure AD group memberships based on collection membership results. You can synchronize device or user collections. Only resources with an Azure AD record are reflected in the Azure AD group. Both hybrid Azure AD-joined and Azure AD-joined devices are supported. The synchronization of collection memberships is a one-way process from Configuration Manager to Azure AD. Ideally, Configuration Manager should be the authority for managing the membership for the target Azure AD groups.
-
-Synchronizations can either be full or incremental and they have slightly different behaviors: <!--9718854-->
-
-- Full synchronization: Occurs on the first synchronization after enabling it. You can force a full synchronization by selecting the collection, and then choosing **Synchronize Membership** from the ribbon. A full synchronization will overwrite members of the Azure AD group.
-
-- Incremental synchronization: Occurs every 5 minutes. Changes made in Azure AD aren't reflected in Configuration Manager collections, but they aren't overwritten by Configuration Manager. <!--For example, if the Configuration Manager collection has two devices, and the Azure AD group has three different devices, after an incremental synchronization, the Azure AD group has five devices.-->
-
-Example synchronization scenario:
-1. From Azure AD, create a group called `Group1` and add `DeviceA`, `DeviceB`, and `DeviceC`.
-   - Ideally, objects wouldn't be added from Azure AD since Configuration Manager should manage the group membership. 
-1. From Configuration Manager, create a collection called `Collection1` then add `DeviceB`, and `DeviceC`.
-1. [Enable synchronization](#enable-the-collection-to-synchronize) for `Collection1` to `Group1`.
-1. The first synchronization is a full synchronization so, `Group1` now contains `DeviceB`, and `DeviceC`. `DeviceA` was removed from the group during the full synchronization.
-1. Remove `DeviceC` from `Collection1` and wait for an incremental synchronization.
-1. `Group1` now contains only `DeviceB`.
-1. From Azure AD, add `DeviceD` to `Group1` and wait for an incremental synchronization.
-1. `Group1` now contains `DeviceB` and `DeviceD`.
-1. From Configuration Manager, select `Collection1`, and choose **Synchronize Membership** from the ribbon to force a full synchronization.
-1. `Group1` now contains only `DeviceB`
-
-### Prerequisites for Azure AD synchronization
-
-- Integration with Azure AD for [cloud management](../../../servers/deploy/configure/azure-services-wizard.md)
-
-- [Azure AD user discovery](../../../servers/deploy/configure/about-discovery-methods.md#azureaddisc)
-
-- An HTTPS or [Enhanced HTTP](../../../plan-design/hierarchy/enhanced-http.md)-enabled management point
-
-- Access to the **All Systems** collection
-
-### Create a group and set the owner in Azure AD
-
-1. Sign in to the [Azure portal](https://portal.azure.com).
-
-1. Navigate to **Azure Active Directory** > **Groups** > **All groups**.
-
-1. Select **New group**, enter a **Group name**, and optionally enter a **Group description**.
-
-1. Make sure that **Membership type** is **Assigned**.
-
-1. Select **Owners**, then add the identity that will create the synchronization relationship in Configuration Manager.
-
-1. Select **Create** to finish creating the Azure AD group.
-
-### Enable collection synchronization for the Azure service
-
-1. In the Configuration Manager console, go to the **Administration** workspace. Expand **Cloud Services**, and select the **Azure Services** node.
-
-1. Select the cloud management service for the Azure AD tenant where you created the group. Then in the ribbon, select **Properties**.
-
-1. Switch to the **Collection Synchronization** tab, and select the option to **Enable Azure Directory Group Sync**.
-
-1. Select **OK** to save the setting.
-
-### Enable the collection to synchronize
-
-1. In the Configuration Manager console, go to the **Assets and Compliance** workspace, and select either the **Device Collections** or **User Collections** node.
-
-1. Select the collection to sync. Then in the ribbon, select **Properties**.
-
-1. Switch to the **Cloud Sync** tab, and select **Add**.
-
-1. If necessary, change the **Tenant** to where you created the Azure AD group.
-
-1. Type in your search criteria in the **Name starts with** field, then select **Search**. If you leave the criteria blank, the search returns all groups from the tenant. If it prompts you to sign in, use the identity you specified as the owner for the Azure AD group.
-
-1. Choose the target group, and then select **OK** to add the group. Select **OK** again to exit the collection's properties.
-
-Wait about five to seven minutes before you can verify the group memberships in the Azure portal. To start a full synchronization, select the collection, and then in the ribbon select **Synchronize Membership**.
-
-### Verify the Azure AD group membership
-
-1. Go to the [Azure portal](https://portal.azure.com).
-
-1. Navigate to **Azure Active Directory** > **Groups** > **All groups**.
-
-1. Find the group you created and select **Members**.
-
-1. Confirm that the members reflect the resources in the Configuration Manager collection. Only resources with Azure AD identity show in the group.
-
-![Synchronize collections to Azure AD](media/3607475-sync-collection-to-azuread.png)
+[Synchronize collection members to Azure AD groups](synchronize-collections-aad-group.md)
 
 ## Next steps
 
 [Manage collections](manage-collections.md)
+
+[Synchronize collection members to Azure AD groups](synchronize-collections-aad-group.md)

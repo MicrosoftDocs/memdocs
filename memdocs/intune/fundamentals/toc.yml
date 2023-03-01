@@ -4,10 +4,19 @@ items:
 - name: Overview
   expanded: true
   items:
-  - name: Microsoft Intune overview
-    href: what-is-intune.md 
-    displayName: ems; emm; azure ad; active directory; ad
-  - name: Device management overview
+  - name: What is Intune?
+    href: what-is-intune.md
+    displayName: mem; ems; emm; azure ad; active directory
+    items:      
+    - name: Manage and secure your identities
+      href: manage-identities.md
+    - name: Manage devices and control features
+      href: manage-devices.md
+    - name: Manage apps and protect their data
+      href: manage-apps.md
+    - name: Intune service release information
+      href: intune-service-servicing-information.md
+  - name: What is device management?
     href: what-is-device-management.md
     displayName: teamviewer 
   - name: What's new
@@ -34,7 +43,7 @@ items:
     href: quickstart-create-custom-role.md
 - name: Tutorials
   items:
-  - name: Walkthrough Intune in Microsoft Endpoint Manager
+  - name: Walkthrough Intune in Intune admin center
     href: tutorial-walkthrough-endpoint-manager.md 
 - name: Concepts
   items:
@@ -73,6 +82,8 @@ items:
     href: surface-management-portal.md  
 - name: How-to guides
   items:
+  - name: Get started
+    href: get-started-with-intune.md
   - name: Plan and Deploy
     items:
     - name: Overview
@@ -95,7 +106,7 @@ items:
           href: deployment-guide-enrollment.md
         - name: MAM
           href: deployment-guide-enrollment-mamwe.md
-        - name: Android, Android Enterprise
+        - name: Android, Android Enterprise, AOSP
           href: deployment-guide-enrollment-android.md
           displayName: COBO
         - name: iOS, iPadOS
@@ -106,10 +117,12 @@ items:
           href: deployment-guide-enrollment-windows.md
       - name: Device platform deployment
         items:
-        - name: iOS/iPadOS  
-          href: deployment-guide-platform-ios-ipados.md    
         - name: Android, Android Enterprise 
-          href: deployment-guide-platform-android.md 
+          href: deployment-guide-platform-android.md  
+        - name: iOS/iPadOS  
+          href: deployment-guide-platform-ios-ipados.md  
+        - name: Linux
+          href: deployment-guide-platform-linux.md  
         - name: macOS 
           href: deployment-guide-platform-macOS.md 
       - name: Device and app management
@@ -120,10 +133,6 @@ items:
       items:
       - name: How to educate your end users
         href: end-user-educate.md    
-      - name: Company Portal messages
-        href: end-user-company-portal-messages.md
-      - name: App protection on Android
-        href: end-user-mam-apps-android.md
       - name: App protection on iOS
         href: end-user-mam-apps-ios.md
       - name: How to get Android apps
@@ -190,6 +199,8 @@ items:
         href: create-custom-role.md
       - name: Use scope tags
         href: scope-tags.md
+    - name: Configure multiple admin approval  
+      href: multi-admin-approval.md
   - name: Enroll devices
     href: ../enrollment/index.yml
   - name: Remotely manage devices
@@ -214,6 +225,10 @@ items:
       href: filters-reports-troubleshoot.md
   - name: Use policy sets
     href: ../fundamentals/policy-sets.md
+  - name: Intune Suite add-ons
+    href: intune-add-ons.md
+  - name: Specialty devices with Intune
+    href: specialty-devices-with-intune.md    
   - name: Developer guidance
     href: ../developer/index.yml
   - name: Get help and support
@@ -222,6 +237,10 @@ items:
       href: tenant-status.md
     - name: Help users troubleshoot problems
       href: help-desk-operators.md
+    - name: ServiceNow integration with Microsoft Intune
+      href: service-now-integration.md
+    - name: Use Remote Help
+      href: remote-help.md
     - name: Using the Intune docs
       href: ../../use-docs.md 
     - name: Get support
@@ -243,7 +262,7 @@ items:
   - name: Error codes and descriptions
     items: 
     - name: Troubleshoot company resource access problems
-      href: /troubleshoot/mem/intune/troubleshoot-company-resource-access-problems?toc=/mem/intune/fundamentals/toc.json&bc=/mem/intune/fundamentals/breadcrumb/toc.json
+      href: /troubleshoot/mem/intune/troubleshoot-company-resource-access-problems?toc=/mem/intune/fundamentals/toc.json&bc=/mem/fundamentals/breadcrumb/toc.json
   - name: Policy map between Basic Mobility and Security and Intune
     items: 
     - name: Policy mapping between Basic Mobility and Security and Intune

@@ -10,6 +10,8 @@ items:
     href: what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md
   - name: Get Intune Company Portal  
     href: sign-in-to-the-company-portal.md
+  - name: Update Intune Company Portal 
+    href: install-a-new-version-of-the-company-portal-app.md
   - name: Device password requirements
     href: password-does-not-meet-it-administrator-requirements.md
   - name: Install mobile threat defense app
@@ -24,8 +26,10 @@ items:
       href: enroll-device-android-company-portal.md
     - name: Enroll with Android work profile
       href: enroll-device-android-work-profile.md
-    - name: Enroll with Microsoft Intune app
-      href: enroll-device-android-microsoft-intune-app.md
+    - name: Enroll Android with Microsoft Intune app 
+      href: enroll-device-android-microsoft-intune-app.md 
+    - name: Enroll AOSP with Microsoft Intune app 
+      href: enroll-device-aosp.md
     - name: Enroll with derived credentials
       items:
       - name: Enroll with Entrust
@@ -44,11 +48,26 @@ items:
       href: reset-device-company-portal-android.md
     - name: Sync device 
       href: sync-device-android.md  
+    - name: Turn off battery optimization   
+      href: turn-off-battery-optimization-android.md      
     - name: Turn on verbose logging
       href: use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md
     - name: Turn off Microsoft data collection
       href: turn-off-microsoft-usage-data-collection-android.md
-
+  - name: Microsoft Intune app for Android  
+    items: 
+    - name: Check compliance status      
+      href: check-compliance-microsoft-intune-app-android.md  
+  - name: Microsoft Intune app for AOSP 
+    items:
+    - name: Check device compliance 
+      href: check-compliance-aosp.md 
+    - name: Sync device 
+      href: sync-device-aosp.md 
+    - name: Configure logging settings 
+      href: intune-app-logs-aosp.md 
+    - name: Turn off Microsoft data collection 
+      href: turn-off-microsoft-usage-data-collection-aosp.md 
   - name: Update device settings
     items:
     - name: Move to new device management setup
@@ -91,22 +110,22 @@ items:
       href: use-microsoft-tunnel-android.md
     - name: Installing Company Portal app in China 
       href: install-company-portal-android-china.md
+    - name: Set up Datalert app for Android   
+      href: enroll-your-device-with-telecom-expense-management-android.md 
   - name: Resolve a threat in MTD app
     items:
     - name: Lookout for Work
       href: you-need-to-resolve-a-threat-found-by-lookout-for-work-android.md
     - name: Symantec Endpoint Protection Mobile
       href: you-need-to-resolve-a-threat-found-by-skycure-android.md
-    - name: SandBlast Mobile Protect
+    - name: Harmony Mobile Protect
       href: you-need-to-resolve-a-threat-found-by-checkpoint-android.md
     - name: Zimperium zIPS
       href: you-need-to-resolve-a-threat-found-by-zips-android.md
   - name: Get help
     items:
-    - name: Report problem to IT support
-      href: send-logs-to-your-it-admin-by-email-android.md
-    - name: Share logs with Microsoft developers
-      href: send-logs-to-microsoft-android.md
+    - name: Report a problem 
+      href: send-logs-to-your-it-admin-by-email-android.md  
 - name: iOS/iPadOS device management
   items:
   - name: Enrollment
@@ -138,7 +157,9 @@ items:
     - name: Where to find work or school apps for iOS/iPadOS
       href: use-managed-apps-on-your-device-ios.md
     - name: Use Microsoft Tunnel for iOS
-      href: use-microsoft-tunnel-iOS.md
+      href: use-microsoft-tunnel-iOS.md 
+    - name: Set up Datalert app for iOS   
+      href: enroll-your-device-with-telecom-expense-management-ios.md
   - name: Update device settings
     items:
     - name: Set or change your passcode
@@ -163,18 +184,24 @@ items:
       href: you-need-to-resolve-a-threat-found-by-lookout-for-work-ios.md
     - name: Symantec Endpoint Protection Mobile
       href: you-need-to-resolve-a-threat-found-by-skycure-ios.md
-    - name: SandBlast Mobile Protect
+    - name: Harmony Mobile Protect
       href: you-need-to-resolve-a-threat-found-by-checkpoint-ios.md
     - name: Zimperium zIPS
       href: you-need-to-resolve-a-threat-found-by-zips-ios.md
   - name: Get help
     items:
-    - name: Retrieve iOS/iPadOS logs
-      href: retrieve-ios-app-logs.md
-    - name: Report problem to IT support
-      href: send-errors-to-your-it-admin-ios.md
-    - name: Share logs with Microsoft developers
+    - name: Retrieve app logs
+      href: retrieve-ios-app-logs.md  
+    - name: Share app logs 
       href: send-logs-to-microsoft-ios.md
+- name: Linux device management
+  items: 
+  - name: Enroll your Linux device 
+    href: enroll-device-linux.md
+  - name: Get Microsoft Intune app for Linux 
+    href: microsoft-intune-app-linux.md
+  - name: Check device status  
+    href: check-status-linux.md   
 - name: macOS device management
   items:
   - name: Enrollment
@@ -185,9 +212,11 @@ items:
       href: enroll-your-device-in-intune-macos-cp.md
     - name: Enroll your organization-provided macOS device
       href: enroll-company-device-macos.md
+    - name: Unenroll Mac 
+      href: unenroll-your-device-from-intune-macos.md 
   - name: Company Portal for macOS
     items:
-    - name: Manually sync macOS device
+    - name: Sync macOS device
       href: sync-your-device-manually-macos.md
     - name: Manage Company Portal preferences
       href: intune-company-portal-preferences-macos.md
@@ -207,11 +236,9 @@ items:
       href: device-limit-wpj-macos.md
     - name: Help for JAMF-managed devices in Intune
       href: device-little-different-jamf.md
-    - name: Remove device from Intune 
-      href: unenroll-your-device-from-intune-macos.md
   - name: Get help
     items:
-    - name: Report Company Portal problems
+    - name: Report a problem  
       href: send-errors-macos.md
 - name: Windows device management
   items:
@@ -267,13 +294,15 @@ items:
     items:
     - name: Report problems in Company Portal
       href: send-logs-to-your-it-admin-cp-windows.md
-    - name: Export Company Portal diagnostic logs
+    - name: Export management logs for device troubleshooting  
       href: send-logs-to-your-it-admin-settings-windows.md
     - name: Troubleshoot enrollment problems
       href: troubleshoot-your-windows-10-device-windows.md
 - name: Using the Intune Company Portal website
   href: using-the-intune-company-portal-website.md
   items:
+  - name: Check status 
+    href: check-status-company-portal-website.md 
   - name: Manage apps
     href: manage-apps-cpweb.md
   - name: Store recovery key

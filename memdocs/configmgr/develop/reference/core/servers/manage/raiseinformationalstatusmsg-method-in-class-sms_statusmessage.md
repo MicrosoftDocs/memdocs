@@ -1,18 +1,18 @@
 ---
-title: "RaiseInformationalStatusMsg Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+description: Learn how to create an informational status message in Configuration Manager using RaiseInformationalStatusMsg class.
+title: RaiseInformationalStatusMsg Method
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: ac2025cc-b5e0-47bc-81ed-d276b5058679
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # RaiseInformationalStatusMsg Method in Class SMS_StatusMessage
 The `RaiseInformationalStatusMsg` Windows Management Instrumentation (WMI) class method, in Configuration Manager, creates an informational status message.  

@@ -26,7 +26,9 @@ ms.reviewer: aanavath
 search.appverid: MET150
 #ms.tgt_pltfrm:
 #ms.custom:
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier3
+- M365-identity-device-management
 ---
 
 # Integrate Wandera Mobile Threat Protection with Intune  
@@ -63,7 +65,7 @@ Setting up integration between Wandera and Intune does not require any support f
 
 ### Enable support for Wandera in Intune
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Tenant administration** > **Connectors and tokens** > **Mobile Threat Defense** > **Add**.
 3. On the **Add Connector** page, use the dropdown and select **Wandera**. And then select **Create**.  
 4. On the Mobile Threat Defense pane, select the **Wandera** MTD Connector from the list of connectors to open the **Edit connector** pane. Select **Open the Wandera admin console** to open [RADAR](https://radar.wandera.com/login), the Wandera admin console, and sign in. 
@@ -80,7 +82,7 @@ Setting up integration between Wandera and Intune does not require any support f
 9. You will be automatically returned back to the RADAR admin console.  If the authorization was successful, you will see a green tick mark next to the Grant button.
 10. Repeat the consent process for the remaining listed integrations by clicking on their corresponding Grant buttons until you have green tick marks next to each.
 
-11.	Return to the Intune console, and resume editing the Wandera MTD Connector. Set all of the available toggles to On, and then Save the configuration.
+11.	Return to the Intune admin center, and resume editing the Wandera MTD Connector. Set all of the available toggles to On, and then Save the configuration.
 
     ![Enable Wandera](./media/wandera-mtd-connector-integration/enable-wandera.png)
 
@@ -110,7 +112,7 @@ In this section, you will download **required** iOS device configuration files a
 1. In **RADAR**, navigate to the Activation Profile you want to deploy (Devices > Activations), then click the **Deployment Strategies tab > Managed Devices > Microsoft Endpoint Manager**.
 2. Expand the **Apple iOS Supervised** or **Apple iOS Unsupervised** sections based upon your device fleet configuration.
 3. Download the provided configuration profile(s) and prepare to upload them in a following step.
-4. Open **Microsoft Intune admin console** and navigate to **Devices > iOS/iPadOS > Configuration profiles**.  Click **Create profile**.
+4. Open **Microsoft Intune admin center** and navigate to **Devices > iOS/iPadOS > Configuration profiles**.  Click **Create profile**.
 5. In the panel that appears, choose **iOS/iPadOS** under **Platform**, then **Custom** under Profile. Then click **Create**.
 6. In the **Name** field, provide a descriptive title for the configuration, ideally matching what you named the Activation Profile in RADAR. This will help ease cross referencing in the future. Alternatively, provide the Activation Profile code if desired. We recommend indicating if the configuration is for Supervised or Unsupervised devices by suffixing the name as such.
 7. Optionally provide a **Description** providing more details for other administrators about the purpose/use of the configuration. Click **Next**.

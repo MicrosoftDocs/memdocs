@@ -1,19 +1,18 @@
 ---
 description: Learn how to use the application management deployment technology installer to define the properties and methods used on the client to install the application.
-title: "How to Define the Installer"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: How to Define the Installer
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: how-to
 ms.assetid: f18ca88b-a1e2-46d0-8740-00d36dc09e0e
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Define the Installer
 To define the application management deployment technology installer, use an instance of the `Microsoft.ConfigurationManagement.ApplicationManagement.Installer` class. The new class instance will define the properties and methods used on the client to actually install the application.  

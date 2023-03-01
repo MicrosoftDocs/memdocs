@@ -1,18 +1,18 @@
 ---
-title: "RemoveMemberships Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: RemoveMemberships Method
+titleSuffix: Configuration Manager
+description: The RemoveMemberships Windows Management Instrumentation (WMI) class method is a batch operation to remove objects from categories.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: c4b9f471-d878-49bb-8244-c5004e974e83
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # RemoveMemberships Method in Class SMS_SecuredCategoryMembership
 The `RemoveMemberships` Windows Management Instrumentation (WMI) class method, in Configuration Manager, is a batch operation to remove objects from categories.  

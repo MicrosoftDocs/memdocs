@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/03/2021
+ms.date: 10/17/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -25,7 +25,10 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier1
+- M365-identity-device-management
+- highpri
 ---
 
 # Use derived credentials with Microsoft Intune
@@ -57,6 +60,9 @@ Derived credentials are an implementation of the National Institute of Standards
   **For Windows**:
   - Common profile types like Wi-Fi, and VPN
   
+  > [!NOTE]
+  > Currently, derived credentials as an authentication method for VPN profiles isn't working as expected on Windows devices. This behavior only impacts VPN profiles on Windows devices and will be fixed in a future release (no ETA).
+
 - For Android and iOS/iPadOS, users obtain a derived credential by using their smart card on a computer to authenticate to the derived credential issuer. The issuer then issues to the mobile device a certificate that's derived from their smart card. For Windows, users install the app from the derived credential provider, which installs the certificate to the device for later use.
 - After the device receives the derived credential, it's used for authentication and for S/MIME signing and encryption when apps or resource access profiles require the derived credential.
 
@@ -147,7 +153,7 @@ Review the platform-specific user workflow for the devices you'll use with deriv
   The renewal process happens like this:
   - The derived credential issuer needs to issue new or updated certificates before the previous certificates are 80% of the way through their validity period.
   - The device checks in during the renewal period (the last 20% of the validity period).
-  - Microsoft Endpoint Manager notifies the user through email or an app notification to launch the Company Portal.
+  - Microsoft Intune notifies the user through email or an app notification to launch the Company Portal.
   - The user launches the Company Portal and taps the derived credential notification, and then the derived credential certificates are copied to the device
 
 
@@ -174,7 +180,7 @@ Review the platform-specific user workflow for the devices you'll use with deriv
   The renewal process happens like this:
   - The derived credential issuer needs to issue new or updated certificates before the previous certificates are 80% of the way through their validity period.
   - The device checks in during the renewal period (the last 20% of the validity period).
-  - Microsoft Endpoint Manager notifies the user through email or an app notification to launch the Company Portal.
+  - Microsoft Intune notifies the user through email or an app notification to launch the Company Portal.
   - The user launches the Company Portal and taps the derived credential notification, and then the derived credential certificates are copied to the device
 
 #### Intercede
@@ -198,7 +204,7 @@ Review the platform-specific user workflow for the devices you'll use with deriv
   The renewal process happens like this:
   - The derived credential issuer needs to issue new or updated certificates before the previous certificates are 80% of the way through their validity period.
   - The device checks in during the renewal period (the last 20% of the validity period).
-  - Microsoft Endpoint Manager notifies the user through email or an app notification to launch the Company Portal.
+  - Microsoft Intune notifies the user through email or an app notification to launch the Company Portal.
   - The user launches the Company Portal and taps the derived credential notification, and then the derived credential certificates are copied to the device
 
 ### 3) Deploy a trusted root certificate to devices
@@ -225,13 +231,13 @@ Avoid requiring use of a derived credential to access a process that you'll use 
 
 ## Set up a derived credential issuer
 
-Before you create policies that require use of a derived credential, set up a credential issuer in the Intune console. A derived credential issuer is a tenant-wide setting. Tenants support only a single issuer at a time.
+Before you create policies that require use of a derived credential, set up a credential issuer in the Microsoft Intune admin center. A derived credential issuer is a tenant-wide setting. Tenants support only a single issuer at a time.
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Tenant administration** > **Connectors and tokens** > **Derived Credentials**.
 
     > [!div class="mx-imgBorder"]
-    > ![Configure derived credentials in the console](./media/derived-credentials/configure-provider.png)
+    > ![Configure derived credentials in the Microsoft Intune admin center](./media/derived-credentials/configure-provider.png)
 
 3. Specify a friendly **Display name** for the derived credential issuer policy.  This name isn't shown to your device users.
 
@@ -300,7 +306,7 @@ You can specify **Derived credential** for the following profile types and purpo
 
 Use derived credentials for certificate-based authentication to web sites and applications. To deliver a derived credential for app authentication:
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Configuration profiles** > **Create profile**.
 3. Enter the following settings:
 
@@ -315,10 +321,13 @@ Use derived credentials for certificate-based authentication to web sites and ap
    - **Description**: Enter a description that gives an overview of the setting, and any other important details.
    - **Platform**: Select **Android Enterprise**.
    - **Profile type**: Under *Fully Managed, Dedicated, and Corporate-Owned Work Profile*, select **Derived credential**.
+   - On the **Apps** page, configure **Certificate access** to manage how certificate access is granted to applications. Choose from:
+     - **Require user approval for apps** *(default)* – Users must approve use of a certificate by all applications.
+     - **Grant silently for specific apps (require user approval for other apps**) – With this option, select **Add apps**, and then select one or more apps that will silently use the certificate without user interaction.
 
-4. Select **OK** to save your changes.
+4. On the **Assignments** page, select the groups that should receive the policy.
+
 5. When finished, select **OK** > **Create** to create the Intune profile. When complete, your profile is shown in the **Devices - Configuration profiles** list.
-6. Select your new profile > **Assignments**. Select the groups that should receive the policy.
 
 Users receive the app or email notification depending on the settings you specified when you set up the derived credential issuer. The notification informs the user to launch the Company Portal so that the derived credential policies can be processed.
 
@@ -329,6 +338,9 @@ You can use derived certificates as an authentication method for Wi-Fi and VPN p
 - **DISA Purebred**
 - **Entrust**
 - **Intercede**
+
+> [!NOTE]
+> Currently, derived credentials as an authentication method for VPN profiles isn't working as expected on Windows devices. This behavior only impacts VPN profiles on Windows devices and will be fixed in a future release (no ETA).
 
 For Windows, users don't work through a smartcard registration process to obtain a certificate for use as a derived credential. Instead, the user needs to install the app for Windows, which is obtained from the derived credential provider. To use derived credentials with Windows, complete the following configurations:
 
@@ -361,7 +373,7 @@ After you change the issuer, users are prompted to get a new derived credential 
 > [!IMPORTANT]
 > If you delete an issuer and immediately reconfigure that same issuer, you must still update profiles and devices to use derived credentials from that issuer. Derived credentials that were obtained before you delete the issuer are no longer valid.
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Tenant administration** > **Connectors and tokens** > **Derived Credentials**.
 3. Select **Delete** to remove the current derived credential issuer.
 4. Configure a new issuer.

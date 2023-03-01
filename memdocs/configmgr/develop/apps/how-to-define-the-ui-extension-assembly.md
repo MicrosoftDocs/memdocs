@@ -1,18 +1,18 @@
 ---
-title: "Define the UI Extension Assembly"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: Define the UI Extension Assembly
+titleSuffix: Configuration Manager
+description: From the Configuration Manager, the custom wizard assembly is responsible for collecting data and passing it on to the wizard.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: how-to
 ms.assetid: 77311f19-a9dd-4383-8e21-fa460d45b28c
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Define the UI Extension Assembly
 The custom wizard assembly is responsible for collecting any data passed in from the Configuration Manager console, and passing it on to the wizard.  The assembly should be named, AdminUI.DeploymentType.\< *AssemblySuffix*>.dll.  

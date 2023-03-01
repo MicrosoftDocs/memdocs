@@ -1,18 +1,18 @@
 ---
-title: "Enable or Disable a Windows Driver"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: Enable or Disable a Windows Driver
+titleSuffix: Configuration Manager
+description: Enable or disable a Windows driver in the operating system deployment driver catalog by setting the IsEnabled property of the SMS_Driver Server WMI Class object.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: how-to
 ms.assetid: c13462bf-4652-46c4-9f26-818951bb7fe0
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Enable or Disable a Windows Driver in Configuration Manager
 You enable or disable a Windows driver in the operating system deployment driver catalog, in Configuration Manager, by setting the `IsEnabled` property of the [SMS_Driver Server WMI Class](../../develop/reference/osd/sms_driver-server-wmi-class.md) object. A driver can be disabled to prevent it from being installed by the Auto Apply Driver action in a task sequence.  
@@ -21,7 +21,7 @@ You enable or disable a Windows driver in the operating system deployment driver
 
 1.  Set up a connection to the SMS Provider. For more information, see [SMS Provider fundamentals](../core/understand/sms-provider-fundamentals.md).  
 
-2.  Get the `SMS_Driver` object for the driver you want enable or disable.  
+2.  Get the `SMS_Driver` object for the driver you want to enable or disable.  
 
 3.  Set the `IsEnabled` property to `true` to enable the driver, or to `false` to disable the driver.  
 

@@ -6,10 +6,12 @@ ms.date: 10/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: sheetg09
+ms.author: sheetg
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Client installation methods in Configuration Manager
@@ -162,7 +164,7 @@ For more information about how to manually install the client on each of platfor
 
 -   Can install and assign computers on the internet.  
 
--   Can automate with Windows AutoPilot and Microsoft Intune for co-management.  
+-   Can automate with Windows Autopilot and Microsoft Intune for co-management.  
 
 #### Disadvantages
 

@@ -26,7 +26,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier1
+- M365-identity-device-management
 ---
 
 # Monitor app information and assignments with Microsoft Intune
@@ -35,16 +37,16 @@ ms.collection: M365-identity-device-management
 
 Intune provides several ways to monitor the properties of apps that you manage and to manage app assignment status.
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All apps**.
 3. In the list of apps, select an app to monitor. You'll then see the app pane, which includes an overview of the device status and the user status.
 
 > [!NOTE]
-> Android Store apps that are deployed as **Available** do not report their installation status.
+> Microsoft Store and Android Store apps that are deployed as **Available** do not report their installation status.
 >
-> For Managed Google Play apps deployed to Android Enterprise personally-owned work profile devices, you can view the status and version number of the app installed on a device using Intune. 
-> 
-> From the **Installed apps** page of the Windows Company Portal or the Company Portal website, end users can view the installation status and details for device-assigned required apps. This functionality is provided in addition to the installation status and details of user-assigned required apps. 
+> For Managed Google Play apps deployed to Android Enterprise personally-owned work profile devices, you can view the status and version number of the app installed on a device using Intune.
+>
+> From the **Installed apps** page of the Windows Company Portal or the Company Portal website, end users can view the installation status and details for device-assigned required apps. This functionality is provided in addition to the installation status and details of user-assigned required apps.
 
 ## App overview pane
 
@@ -89,7 +91,7 @@ A device status list is shown when you select **Device install status** in the *
 | **Last check-in**    | The date of the device's last sync with Intune.                                                                                                                                                                                                                  |
 
 > [!NOTE]
-> Even if the App is targetted to device context and into a device group, the user name will always be reported. You may refer to the corresponded [API Call](/graph/api/intune-apps-mobileappinstallstatus-get?view=graph-rest-beta). Additionally, the system context may appear as "No user".
+> Even if the App is targetted to device context and into a device group, the user name will always be reported. You may refer to the corresponded [API Call](/graph/api/intune-apps-mobileappinstallstatus-get). Additionally, the system context may appear as "No user".
 
 ### User install status
 
@@ -102,7 +104,6 @@ A user status list is shown when you select **User install status** in the **Mon
 | **Installations**   | The number of apps installed by the user. |
 | **Failures**        | The number of failed app installations for the user.     |
 | **Not installed**   | The number of apps not installed by the user. |
-
 
 ## Next steps
 

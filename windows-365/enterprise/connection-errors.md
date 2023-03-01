@@ -9,7 +9,7 @@ ms.author: erikje
 manager: dougeby
 ms.date: 02/10/2022
 ms.topic: reference
-ms.service: cloudpc
+ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
 ms.technology:
@@ -25,7 +25,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; get-started
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- tier2
 ---
 
 # Troubleshoot Cloud PC connection errors
@@ -107,7 +109,7 @@ Connection problems may be caused by settings delivered by group policies. To te
 
 ### On-premises Group Policy Objects (GPO) may affect a Cloud PC's provisioning or behavior
 
-Settings delivered by group policies may cause connection problems. To test this, you can move the Cloud PC to a separate OU that's blocked from receiving group policies.
+Settings delivered by group policies may cause connection problems. To test this problem, you can move the Cloud PC to a separate OU that's blocked from receiving group policies.
 
 ## Next steps
 

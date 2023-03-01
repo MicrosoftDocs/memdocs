@@ -6,17 +6,22 @@ ms.date: 07/22/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: BalaDelli
+ms.author: baladell
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.reviewer: mstewart,aaroncz 
+ms.collection: tier3
 ---
 
 # Configure Endpoint Protection on a standalone client
 
 *Applies to: Configuration Manager (current branch)*
 
-Your organization may have a number of standalone clients that you cannot manage or protect with Microsoft Endpoint Configuration Manager. Without any endpoint protection in place, these standalone clients are vulnerable to potential malware attacks. To protect such standalone clients, you can manually configure them with Endpoint Protection, as described in this topic.
+Your organization may have a number of standalone clients that you cannot manage or protect with Microsoft Configuration Manager. Without any endpoint protection in place, these standalone clients are vulnerable to potential malware attacks. To protect such standalone clients, you can manually configure them with Endpoint Protection, as described in this topic.
+
+> [!NOTE]
+> If you install the endpoint protection client on a device that's not managed by Configuration Manager, a [Management License (ML)](https://www.microsoft.com/licensing/product-licensing/client-access-license) may be required for the device.
 
 To configure Endpoint Protection on a standalone client manually:
 

@@ -21,12 +21,14 @@ ms.assetid: cde4d389-1770-4226-85a3-a2f3b3fb92a3
 #ROBOTS:
 #audience:
 #ms.devlang:
-#ms.reviewer: aanavath
+ms.reviewer: aanavath
 #ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 #ms.custom:
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier3
+- M365-identity-device-management
 ---
 
 # Pradeo Mobile Threat Defense connector with Intune
@@ -40,9 +42,9 @@ You can configure Conditional Access policies based on Pradeo risk assessment en
 
 ## Supported platforms
 
-- **Android 4.0.3 and later**
+- **Android 5.1 and later**
 
-- **iOS 7 and later**
+- **iOS 12.1 and later**
 
 ## Prerequisites
 
@@ -76,11 +78,11 @@ When malicious apps such as malware are detected on devices, you can block devic
 
 *Block when malicious apps are detected:*
 
-![Conceptual image of Malicious apps detected](./media/pradeo-mobile-threat-defense-connector/pradeo-maliciousapps-blocked.png)
+:::image type="content" source="./media/pradeo-mobile-threat-defense-connector/pradeo-maliciousapps-blocked.png" alt-text="Product flow for blocking access due to malicious apps.":::
 
 *Access granted on remediation:*
 
-![Malicious apps detected access granted](./media/pradeo-mobile-threat-defense-connector/pradeo-maliciousapps-unblocked.png)
+:::image type="content" source="./media/pradeo-mobile-threat-defense-connector/pradeo-maliciousapps-unblocked.png" alt-text="Product flow for granting access when malicious apps are remediated.":::
 
 ### Control access based on threat to network
 
@@ -88,11 +90,11 @@ Detect threats to your network like **Man-in-the-middle** attacks, and protect a
 
 *Block network access through Wi-Fi:*
 
-![Block network access through Wi-Fi](./media/pradeo-mobile-threat-defense-connector/pradeo-network-wifi-blocked.png)
+:::image type="content" source="./media/pradeo-mobile-threat-defense-connector/pradeo-network-wifi-blocked.png" alt-text="Product flow for blocking access through Wi-Fi due to an alert.":::
 
 *Access granted on remediation:*
 
-![Conceptual image of Access granted on remediation](./media/pradeo-mobile-threat-defense-connector/pradeo-network-wifi-unblocked.png)
+:::image type="content" source="./media/pradeo-mobile-threat-defense-connector/pradeo-network-wifi-unblocked.png" alt-text=" Product flow for granting access through Wi-Fi after the alert is remediated.":::
 
 ### Control access to SharePoint Online based on threat to network
 
@@ -100,23 +102,11 @@ Detect threats to your network like **Man-in-the-middle** attacks, and prevent s
 
 *Block SharePoint Online when network threats are detected:*
 
-![Block SharePoint Online when network threats are detected](./media/pradeo-mobile-threat-defense-connector/pradeo-network-spo-blocked.png)
+:::image type="content" source="./media/pradeo-mobile-threat-defense-connector/pradeo-network-spo-blocked.png" alt-text="Product flow for blocking access to the organizations files due to an alert.":::
 
 *Access granted on remediation:*
 
-![Conceptual image of Access granted on remediation for Sharepoint example](./media/pradeo-mobile-threat-defense-connector/pradeo-network-spo-unblocked.png)
-
-<!-- 
-### Control access on unenrolled devices based on threats from malicious apps
-
-When the Pradeo Mobile Threat Defense solution considers a device to be infected:
-
-![App protection policy blocks due to detected malware](./media/pradeo-mobile-threat-defense-connector/pradeo-app-policy-block.png)
-
-Access is granted on remediation:
-
-![Access is granted on remediation for App protection policy](./media/pradeo-mobile-threat-defense-connector/pradeo-app-policy-remediated.png)
--->
+:::image type="content" source="./media/pradeo-mobile-threat-defense-connector/pradeo-network-spo-unblocked.png" alt-text="Product flow for granting access to the organizations files after the alert is remediated.":::
 
 ## Next steps
 

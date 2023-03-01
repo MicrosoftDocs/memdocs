@@ -9,11 +9,11 @@ ms.topic: conceptual
 
 
 ms.assetid: 965581db-786b-413e-a444-26533a339642
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
+ms.collection: tier3
 ---
 
 # Sample queries for site administration in Configuration Manager

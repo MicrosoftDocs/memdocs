@@ -26,7 +26,8 @@ ms.reviewer: kakyker
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
-ms.collection: 
+ms.collection:
+- tier2
 ---
 
 
@@ -49,7 +50,7 @@ To force a sync:
 
 
 ## Next steps  
-Once you've completed these steps, you may receive notifications from Company Portal about updating your device settings. Microsoft Docs offers step-by-step articles to help guide you through these updates. To find these articles in the table of contents, choose **Android device management** > **Update device settings**.  
+Once you've completed these steps, you may receive notifications from Company Portal about updating your device settings. Microsoft Learn offers step-by-step articles to help guide you through these updates. To find these articles in the table of contents, choose **Android device management** > **Update device settings**.  
 
 The Company Portal **Sync** feature is different from the **Check device settings** feature. The latter feature forces Company Portal to verify that your settings meet your organization's requirements. Whenever Company Portal prompts you to make changes to your settings, make the change and then select **Check device settings** to regain access to work or school apps. For more information about this feature, see [Check device compliance](check-compliance-on-your-device-android.md).   
 

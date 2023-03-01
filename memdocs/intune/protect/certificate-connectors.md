@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/28/2022
+ms.date: 04/13/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -27,7 +27,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier3
+- M365-identity-device-management
 ---
 
 # Certificate connectors for Microsoft Intune
@@ -183,9 +185,9 @@ You can manually update a certificate connector even when it supports automatic 
 
 ## Connector status <!-- and version -->
 
-In the Microsoft Endpoint Manager admin center, you can select a certificate connector to view information about its status: <!-- and confirm its version: -->
+In the Microsoft Intune admin center, you can select a certificate connector to view information about its status: <!-- and confirm its version: -->
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431)
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431)
 
 2. Go to **Tenant administration** > **Connectors and tokens** > **Certificate connectors**.
 
@@ -271,7 +273,7 @@ All events are tagged with a Task Category to aid in filtering.  Task categories
 Updates for the two certificate connectors are released periodically. When we update a connector, you can read about the changes here.
 
 > [!IMPORTANT]
-> On June 1, 2022, Intune certificate connectors earlier than version 6.2101.13.0 will no longer allow you to issue certificates to users and devices. See the note at the to start of this article for detail on moving to the new **Certificate Connector for Microsoft**.
+> Starting April 2022, certificate connectors earlier than version **6.2101.13.0** will be deprecated and will show a status of *Error*. This status does not affect functionality. Starting June 2022, such connectors will not be able to issue certificates. See the note at the to start of this article for details on moving to the new **Certificate Connector for Microsoft**.
 
 ### PFX Certificate Connector release history
 
@@ -319,7 +321,7 @@ Version **6.2101.13.0**. This new connector version adds [improvements for loggi
 
 - Requires .NET Framework version 4.7.2
 - Replaces the use of the *Microsoft Intune Connector* for use with PKCS certificate profiles. The *PFX Certificate Connector* is now the only connector required to use PKCS #12 or Imported PFX certificates.
-- Adds support for using PKCS certificate profiles with all supported platforms except Windows 8.1.
+- Adds support for using PKCS certificate profiles with all supported platforms 
 - Adds support for certificate revocation for Outlook S/MIME.
 
 #### November 18, 2019

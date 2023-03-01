@@ -25,6 +25,7 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.collection:
+- tier1
 - M365-identity-device-management
 - Android
 ms.custom: intune-azure
@@ -36,15 +37,15 @@ ms.custom: intune-azure
 
 A line-of-business (LOB) app is an app that you add to Intune from an app installation file. This kind of app is typically written in-house. Intune installs the LOB app on the user's device.
 
-> [!Note]
+> [!NOTE]
 > For more information about LOB apps and the Google Play Developer Console, see [Managed Google Play private (LOB) app publishing using the Google Developer Console](apps-add-android-for-work.md?#managed-google-play-private-lob-app-publishing-using-the-google-developer-console). 
 
-> [!Note]
-> For Android Enterprise devices, see [Add Managed Google Play apps to Android Enterprise devices with Intune](apps-add-android-for-work.md). 
+> [!NOTE]
+> For Android Enterprise devices, see [Add Managed Google Play apps to Android Enterprise devices with Intune](apps-add-android-for-work.md).
 
 ## Select the app type
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All apps** > **Add**.
 3. In the **Select app type** pane, under the **Other** app types, select **Line-of-business app**.
 4. Click **Select**. The **Add app** steps are displayed.
@@ -53,7 +54,7 @@ A line-of-business (LOB) app is an app that you add to Intune from an app instal
 
 ### Select the app package file
 
-1. In the **Add app** pane, click **Select app package file**. 
+1. In the **Add app** pane, click **Select app package file**.
 2. In the **App package file** pane, select the browse button. Then, select an Android installation file with the extension **.apk**.
    The app details will be displayed.
 3. When you're finished, select **OK** on the **App package file** pane to add the app.
@@ -76,6 +77,7 @@ A line-of-business (LOB) app is an app that you add to Intune from an app instal
 2. Click **Next** to display the **Scope tags** page.
 
 ## Step 2 - Select scope tags (optional)
+
 You can use scope tags to determine who can see client app information in Intune. For full details about scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md).
 
 1. Click **Select scope tags** to optionally add scope tags for the app.
@@ -99,7 +101,7 @@ You can use scope tags to determine who can see client app information in Intune
 
 If **Check apps from external sources** is enabled on the Android device, the user will be prompted before installing the update. Otherwise the update will be installed automatically.
 
-> [!Note]
+> [!NOTE]
 > For the Intune service to successfully deploy a new APK file to the device, you must increment the `android:versionCode` string in the AndroidManifest.xml file in your APK package.
 
 ## Next steps

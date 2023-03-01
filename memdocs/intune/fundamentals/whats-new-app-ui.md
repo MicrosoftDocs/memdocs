@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: UI updates for Intune end-user apps | Microsoft Docs
+title: UI updates for Intune end-user apps
 titleSuffix: Microsoft Intune
 description: Find out what has changed in UI for apps that work on end-user devices with Microsoft Intune.
 keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/19/2021 
+ms.date: 06/06/2022 
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -26,7 +26,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 # UI updates for Intune end-user apps  
 
@@ -36,6 +38,32 @@ Learn about the most recent updates to the Microsoft Intune apps. We regularly a
 * Update your organization's documentation or helpdesk procedures.  
 
 If you're an employee or student, be sure to check out the screenshots and links to the Company Portal help documentation. For more information about how to use the Company Portal app, see the [Company Portal user help documentation](../user-help/use-managed-devices-to-get-work-done.md).  
+
+## Week of August 1, 2022
+
+### Company Portal for Windows bulk app install<!-- 6401437 -->
+The Company Portal for Windows now allows users to select multiple apps and install in bulk. We recommend that users use the multi-app installation option for better performance when installing more than one app. From the **Apps** tab of the Company Portal for Windows, select the multi-select view button on the top right corner of the page. Then, select the checkbox next to each app that you need to install. Next, select the **Install Selected** button to start installation. All selected apps will install at the same time without requiring users to right-click each app or navigate to each app's page. For related information, see [Install and share apps on your device](../user-help/install-apps-cpapp-windows.md) and [How to configure the Intune Company Portal apps, Company Portal website, and Intune app](../apps/company-portal-app.md).
+
+## Week of June 6, 2022  
+
+### UI improvements show Android enrollment is available, not required<!-- 8764312 -->
+
+We updated the iconography in the Company Portal for Android app to make it easier for users to recognize when device enrollment is available but not required. The new iconography appears in scenarios where the device enrollment availability is set to **Available, no prompts** in the Microsoft Intune admin center (**Tenant admin** > **Customization** > **Create** or **Edit** a policy > **Settings**).      
+
+Changes include:
+
+ - On the Devices screen, users will no longer see a red exclamation point next to non-enrolled devices.  
+ - On the Device Details screen, users will no longer see a red exclamation point next to the enrollment message. Instead, they will see the info **(i)** icon.  
+
+   
+|Updated Devices screen|Previous Devices screen|   
+|---|---|   
+|<img alt="Screenshot of Company Portal **Devices** screen with red exclamation point icon next to non-managed device." src="./media/whats-new-app-ui/company-portal-android-devices-icon-after-2206.png" width="300"> |<img alt="Screenshot of Company Portal **Devices** screen with no icon next to non-managed device" src="./media/whats-new-app-ui/company-portal-android-devices-icon-before-2206.png" width="300">|  
+
+ 
+|Updated Device Details screen|Previous Device Details screen|   
+|---|---|   
+|<img alt="Screenshot of Company Portal **Devices** screen with with info icon next to message." src="./media/whats-new-app-ui/company-portal-android-device-details-icon-after-2206.png" width="300"> |<img alt="Screenshot of Company Portal **Devices** screen with info icon next to message." src="./media/whats-new-app-ui/company-portal-android-device-details-icon-before-2206.png" width="300">|  
 
 ## Week of November 15, 2021  
 
@@ -66,7 +94,7 @@ When they swipe right, they'll learn how to get more work apps from the Google P
  > [!div class="mx-imgBorder"]
  > ![Screenshot of Company Portal **Get more apps for work** screen.](./media/whats-new-app-ui/get-more-apps-cp-2011.png)  
 
-Finally, on the **Help** page > **Frequently Asked Questions** section, there's a new link to a Microsoft Docs article about how to find work profile apps.  
+Finally, on the **Help** page > **Frequently Asked Questions** section, there's a new link to a Microsoft technical article about how to find work profile apps.
 
  > [!div class="mx-imgBorder"]
  > ![Screenshot of Company Portal Help screen highlighting the new FAQ doc link.](./media/whats-new-app-ui/company-portal-work-profile-link.png)  
@@ -89,7 +117,7 @@ In the Company Portal app on Android devices, the **Update device settings** pag
 
 This user experience is improved. The listed settings are expanded by default to show the description, and show the **Resolve** button, when applicable. Previously, the issues were collapsed by default. This new default behavior reduces the number of clicks, so users can resolve issues more quickly.
 
-## Week of June 8, 2020 
+## Week of June 8, 2020
 
 ### Updates to informational screen in Company Portal for iOS/iPadOS <!-- 7032452 -->
 We've updated an informational screen in Company Portal for iOS/iPadOS to better explain what an admin can see and do on devices. These clarifications are only about corporate-owned devices. Only the text has been updated, no actual modifications have been made to what the admin can see or do on user devices. To learn more about what's visible to an admin, see [What information can my organization see when I enroll my device?](../user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)  
@@ -110,8 +138,7 @@ We've updated the icons in Company Portal to create a more modern look and feel 
 |---|
 |![Image of Company Portal for macOS, Devices tab, highlighting updated icons.](./media/whats-new-app-ui/company-portal-macos-icons-after-2005.png)|  
 
-
-## Week of May 4, 2020  
+## Week of May 4, 2020
 ### Company Portal for Android guides users to get apps after work profile enrollment <!-- 6103999 -->
 We've improved the in-app guidance in Company Portal to make it easier for users to find and install apps. After they enroll in work profile management, users will get a message explaining how to find suggested apps in the badged version of Google Play. The last step in [Enroll device with Android profile](../user-help/enroll-device-android-work-profile.md) has been updated to show the new message. 
 
@@ -146,7 +173,7 @@ End-users can now launch web apps directly from the Windows Company Portal app. 
 
 ![Example image of a web app launched from the Windows Company Portal app](./media/whats-new-app-ui/webapp-open-in-browser.png)  
 
-### Improved macOS enrollment experience in Company Portal <!-- 5074349 WNready -->  
+### Improved macOS enrollment experience in Company Portal <!-- 5074349 WNready -->
 The Company Portal for macOS enrollment experience has a simpler enrollment process that aligns more closely with the Company Portal for iOS enrollment experience. Device users now see:  
 
 * A sleeker user interface.  
@@ -156,7 +183,7 @@ The Company Portal for macOS enrollment experience has a simpler enrollment proc
 
 ## Week of October 28, 2019  
 
-### Improved checklist design in Company Portal app for Android <!-- 5550857 -->  
+### Improved checklist design in Company Portal app for Android <!-- 5550857 -->
 The setup checklist in the Company Portal app for Android has been updated with a lightweight design and new icons. The changes align with the recent updates made to the Company Portal app for iOS/iPadOS. For a look at the updated enrollment steps, see [Enroll with Android work profile](../user-help/enroll-device-android-work-profile.md) and [Enroll your Android device](../user-help/enroll-device-android-company-portal.md).  
 
 The following screens show the updated checklist for Android work profile enrollment:
@@ -186,10 +213,8 @@ The Microsoft Intune app for Android has been updated with the following improve
     Notifications and bottom navigation example:<br>
     <img src="./media/whats-new-app-ui/intune-app-android-device-notify.png" alt="Screenshot of Microsoft Intune app for Android - Notification" width="300">   
 
-
 ## Week of June 24, 2019  
 
-### View all installed apps from new Company Portal web page <!-- 4224326 -->
 The Company Portal website's new **Installed Apps** page lists all managed apps (both required and available) that are installed on a user's devices. In addition to assignment type, users can see the app's publisher, date published, and current installation status. If you haven't made any apps required or available to your users, they'll see a message explaining that no company apps have been installed. To see the new page on the web, go to the [Company Portal website](https://portal.manage.microsoft.com) and click **Installed Apps**.   
 
 ![Screenshot of Company Portal website, Installed Apps page.](./media/whats-new-app-ui/intune-installed-apps-1907.png)     
@@ -197,7 +222,7 @@ The Company Portal website's new **Installed Apps** page lists all managed apps 
 ### New view lets app users see all managed apps installed on device <!-- 2352913 -->
 The Company Portal app for Windows now lists all managed apps (both required and available) that are installed on a user's device. Users can also see attempted and pending app installations, and their current statuses. If you haven't made apps required or available to your users, they'll see a message explaining that no company apps have been installed. To see the new view, go to the Company Portal navigation pane and select **Apps** > **Installed Apps**.   
 
-![Example screenshot of the Company Portal app for Windows 10, Installed apps page. ](./media/whats-new-app-ui/installed-apps-cp-1906.png)  
+![Example screenshot of the Company Portal app for Windows 10, Installed apps page.](./media/whats-new-app-ui/installed-apps-cp-1906.png)  
 
 
 ## Week of June 17, 2019  

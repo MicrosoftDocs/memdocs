@@ -1,18 +1,18 @@
 ---
-title: "SMS_TaskSequencePackageReference Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: SMS_TaskSequencePackageReference Class
+titleSuffix: Configuration Manager
+description: An SMS Provider server class, in Configuration Manager, that represents a Configuration Manager application or package in the task sequence.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: c0fc7232-fd4e-44f2-8aec-f1ae80d6fc90
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_TaskSequencePackageReference Server WMI Class
 The `SMS_TaskSequencePackageReference` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a Configuration Manager application or package in the task sequence.  

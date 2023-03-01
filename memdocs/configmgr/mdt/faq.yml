@@ -6,9 +6,9 @@ metadata:
   ms.prod: configuration-manager
   ms.technology: configmgr-mdt
   ms.topic: faq
-  author: aczechowski
-  ms.author: aaroncz
-  manager: dougeby
+  author: BalaDelli
+  ms.author: baladell
+  manager: apoorvseth
   ms.localizationpriority: null
   ms.collection: openauth
 title: Microsoft Deployment Toolkit frequently asked questions (FAQ)

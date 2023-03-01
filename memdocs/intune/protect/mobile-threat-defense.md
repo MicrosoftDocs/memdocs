@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/13/2021
+ms.date: 01/20/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -26,7 +26,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Mobile Threat Defense integration with Intune
@@ -102,12 +104,14 @@ Learn how to protect access to company resource based on device, network, and ap
 
 - [Better Mobile](better-mobile-threat-defense-connector.md)
 - [BlackBerry Protect Mobile](blackberry-mobile-threat-defense-connector.md)
-- [Check Point SandBlast Mobile](checkpoint-sandblast-mobile-mobile-threat-defense-connector.md)
+- [Check Point Harmony Mobile](checkpoint-sandblast-mobile-mobile-threat-defense-connector.md)
 - [Lookout for Work](lookout-mobile-threat-defense-connector.md)
 - [Microsoft Defender for Endpoint](../protect/advanced-threat-protection.md)
 - [MVISION Mobile](mcafee-mobile-threat-defense-connector.md)
 - [Pradeo](pradeo-mobile-threat-defense-connector.md)
+- [SentinelOne](Sentinelone-mobile-threat-defense-connector.md)
 - [Sophos Mobile](sophos-mtd-connector.md)
 - [Symantec Endpoint Protection Mobile](skycure-mobile-threat-defense-connector.md)
+- [Trend Micro Mobile Security as a Service](trend-micro-mobile-threat-defense-connector.md)
 - [Wandera Mobile Threat Defense](wandera-mtd-connector.md)
 - [Zimperium](zimperium-mobile-threat-defense-connector.md)

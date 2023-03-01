@@ -1,18 +1,18 @@
 ---
-title: "SMS_DCMDeploymentCompliantAssetDetails Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+description: Learn how to represent compliant asset details for a deployment using SMS_DCMDeploymentCompliantAssetDetails class.
+title: SMS_DCMDeploymentCompliantAssetDetails Class
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 3f694e79-24c2-4c18-b4b9-095fa12df1e8
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_DCMDeploymentCompliantAssetDetails Server WMI Class
 The `SMS_DCMDeploymentCompliantAssetDetails` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents compliant asset details for a deployment.  

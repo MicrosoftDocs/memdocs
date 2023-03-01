@@ -2,12 +2,12 @@
 title: Work from anywhere report in Endpoint analytics
 titleSuffix: Microsoft Endpoint Manager
 description: The Work from anywhere report in Endpoint analytics provides insights to help your end users be productive from anywhere.
-ms.date: 02/23/2022
+ms.date: 03/31/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
-author: mestew
-ms.author: mstewart
+author: smritib17
+ms.author: smbhardwaj
 manager: dougeby
 ms.localizationpriority: high
 ms.collection: highpri
@@ -22,7 +22,10 @@ The ability for employees to work from anywhere productively is essential in tod
 
 ## <a name="bkmk_score"></a> Work from anywhere score
 
-The **Work from anywhere score** is a number between 0 and 100. The score represents a weighted average of the percent of devices that have deployed the various insights for helping your end users be productive from anywhere. The score is computed for all Intune and Configuration Manager devices that have opted into [Endpoint analytics](overview.md).
+The **Work from anywhere score** is a number between 0 and 100. The score represents a weighted average of the percent of devices that have deployed the various insights for helping your end users be productive from anywhere. The score is computed for all active Intune and Configuration Manager devices that have opted into [Endpoint analytics](overview.md).
+
+> [!Note]
+> A device is considered active and will appear in the **Work from anywhere** report if it has uploaded at least one Endpoint analytics event, such as a boot, sign-in, or application crash event, in the past 29 days.
 
 The following metrics are weighted and used to compute the **Work from anywhere score**:
 
@@ -51,7 +54,7 @@ Benefits of each cloud management type:<!--IN7207657-->
 |Benefits|[**Cloud management gateway (CMG)**](../configmgr/core/clients/manage/cmg/overview.md)|[**Tenant attach**](../configmgr/tenant-attach/device-sync-actions.md)|[**Co-management**](../configmgr/comanage/overview.md)|[**Intune**](../intune/fundamentals/what-is-intune.md)|
 |---|---|---|---|---|
 | Manage your clients anywhere | :::image type="content" source="media/green-check.png" border="false" alt-text="Yes."::: | :::image type="content" source="media/green-check.png" border="false" alt-text="Yes."::: | :::image type="content" source="media/green-check.png" border="false" alt-text="Yes."::: | :::image type="content" source="media/green-check.png" border="false" alt-text="Yes."::: |
-| View and take action on all Windows PCs from Microsoft Endpoint Manager admin center| |:::image type="content" source="media/green-check.png" border="false" alt-text="Yes.":::| :::image type="content" source="media/green-check.png" border="false" alt-text="Yes.":::| :::image type="content" source="media/green-check.png" border="false" alt-text="Yes."::: |
+| View and take action on all Windows PCs from Microsoft Intune admin center| |:::image type="content" source="media/green-check.png" border="false" alt-text="Yes.":::| :::image type="content" source="media/green-check.png" border="false" alt-text="Yes.":::| :::image type="content" source="media/green-check.png" border="false" alt-text="Yes."::: |
 | Modernize your directory approach with Azure AD | |:::image type="content" source="media/green-check.png" border="false" alt-text="Yes.":::| :::image type="content" source="media/green-check.png" border="false" alt-text="Yes.":::| :::image type="content" source="media/green-check.png" border="false" alt-text="Yes."::: |
 |Enhance Zero Trust with conditional access| | |:::image type="content" source="media/green-check.png" border="false" alt-text="Yes.":::| :::image type="content" source="media/green-check.png" border="false" alt-text="Yes."::: |
 | Make device provisioning easier by enabling Windows Autopilot |  | |:::image type="content" source="media/green-check.png" border="false" alt-text="Yes.":::| :::image type="content" source="media/green-check.png" border="false" alt-text="Yes."::: |
@@ -93,6 +96,9 @@ In the **Windows** tab, a device-by-device view of Windows 11 hardware readiness
 
 The built-in baseline of **All organizations (median)** doesn't currently have metrics for the subscore metrics listed in the sections above.
 
+## Known issues
+
+[!INCLUDE [Endpoint analytics export to csv value mapping known issue](includes/known-issue-csv-mapping.md)]
 ## Next steps
 
 - View [Startup performance](startup-performance.md)

@@ -3,11 +3,7 @@ items:
   tocHref: /
   topicHref: /
   items:
-  - name: Enterprise Mobility + Security
-    tocHref: /enterprise-mobility-security/
-    topicHref: /enterprise-mobility-security/
-    items:
-    - name: Microsoft Endpoint Manager
+    - name: Endpoint management
       tocHref: /mem/
       topicHref: /mem/
       items:

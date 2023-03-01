@@ -26,6 +26,7 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.collection:
+- tier2
 - M365-identity-device-management
 - Android
 ---
@@ -41,19 +42,19 @@ You can use an Intune app configuration policy to configure Google Chrome for An
 
 ## Add the Google Chrome app to Intune
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All apps** > **Add** then add the **Managed Google Play** app.
 3. Go to Managed Google Play, search with **Google Chrome** and approve.
 
     ![Search and approve Google Chrome](./media/apps-configure-chrome-android/search.png)
 
-4. Assign Google Chrome to a user group as a required app type. Google Chrome will be deployed automatically when the device is enrolled into Intune.
+4. Assign Google Chrome to a group as a required app type. Google Chrome will be deployed automatically when the device is enrolled into Intune.
 
 For additional details about adding a Managed Google Play app to Intune, see [Managed Google Play store apps](apps-add-android-for-work.md#managed-google-play-store-apps).
 
 ## Add app configuration for managed AE devices
 
-1. From the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **App configuration policies** > **Add** > **Managed devices**.
+1. From the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **App configuration policies** > **Add** > **Managed devices**.
 2. Set the following details:
     - **Name** - The name of the profile that appears in the portal.
     - **Description** - The description of the profile that appears in the portal.

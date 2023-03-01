@@ -1,18 +1,18 @@
 ---
-title: "SMS_Package Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: SMS_Package Class
+titleSuffix: Configuration Manager
+description: The SMS_Package Windows Management Instrumentation class is an SMS Provider server class, in Configuration Manager, that contains information about Configuration Manager packages.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 59e73a1c-ff5a-485c-bff7-41aab12e5623
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_Package Server WMI Class
 The `SMS_Package` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that contains information about Configuration Manager packages.  

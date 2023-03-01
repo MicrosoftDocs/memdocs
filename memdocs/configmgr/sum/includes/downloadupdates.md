@@ -1,10 +1,12 @@
 ---
-author: mestew
-ms.author: mstewart
+author: BalaDelli
+ms.author: baladell
 ms.prod: configuration-manager
 ms.topic: include
 ms.date: 08/10/2021
 ms.localizationpriority: medium
+ms.reviewer: mstewart,aaroncz 
+ms.collection: tier3
 ---
 
 1.  In the Configuration Manager console, go to the **Software Library** workspace, and select the **Software Updates** node.  

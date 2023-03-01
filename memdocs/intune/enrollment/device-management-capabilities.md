@@ -25,7 +25,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-classic
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 # Enrolled device management capabilities of Microsoft Intune
 
@@ -54,7 +56,7 @@ Users gain access to the company portal, which enables them to install apps, enr
 |--------------|-----------|--------------------|
 |App deployment and management|Provides a range of tools to help you manage mobile apps through their lifecycle, including app deployment from installation files and app stores, detailed monitoring of app status, and app removal.|[Deploy apps in Microsoft Intune](../apps/apps-deploy.md)|
 |Compliant and noncompliant apps|Lets you specify lists of compliant apps (that users are allowed to install) and noncompliant apps (that users aren't allowed to install).|[iOS policy settings in Microsoft Intune](../configuration/device-restrictions-ios.md)|
-|Mobile application management|Configures restrictions for apps by using mobile application management for all devices that are both managed with Intune and not managed with Intune. You can increase the security of your company data by restricting operations such as copy and paste, external backup of data, and the transfer of data between apps.|[Configure and deploy mobile application management policies in the Microsoft Intune console](../developer/app-wrapper-prepare-android.md)|
+|Mobile application management|Configures restrictions for apps by using mobile application management for all devices that are both managed with Intune and not managed with Intune. You can increase the security of your company data by restricting operations such as copy and paste, external backup of data, and the transfer of data between apps.|[Configure and deploy mobile application management policies in Intune](../developer/app-wrapper-prepare-android.md)|
 |iOS mobile app configuration|Uses mobile app configuration policies to supply settings for iOS/iPadOS apps that might be required when the user runs the app. For example, an app might require the user to specify a port number or logon information. You can streamline app configuration and reduce the number of support calls.|[Configure iOS/iPadOS apps with mobile app configuration policies in Microsoft Intune](../apps/app-configuration-policies-use-ios.md)|
 |iOS/iPadOS mobile app provisioning profiles|Helps you deploy provisioning profiles to iOS/iPadOS apps that are nearing expiration. |[Use iOS/iPadOS mobile provisioning profile policies to prevent your apps from expiring](../apps/app-provisioning-profile-ios.md)|
 |Managed browser|Configures managed browser policies to control the websites that device users can visit. In addition, you can also apply mobile application management policies to the managed browser.|[Manage Internet access using managed browser policies with Microsoft Intune](../apps/manage-microsoft-edge.md)|

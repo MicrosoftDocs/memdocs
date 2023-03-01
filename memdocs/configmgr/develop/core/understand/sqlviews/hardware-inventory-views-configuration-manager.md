@@ -7,11 +7,11 @@ ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: conceptual
 ms.assetid: 8726c91b-de9d-4df0-9eb8-f9f62e109152
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
+ms.collection: tier3
 ---
 
 # Hardware inventory views in Configuration Manager
@@ -524,30 +524,6 @@ The view can be joined with other views by using the **ResourceID** column.
 Lists information about the computer boot times. This includes BIOS duration, boot duration, event log start,  group policy duration, system start time and update duration.
 
 The view can be joined with other views by using the **ResourceID** column.
-
-### v_GS_SYSTEMBOOTSUMMARY
-
-Lists summary information about the computer boot times. This includes Latest, Maximum and median's for  BIOS duration, Boot duration, core boot duration, event log start,  group policy duration, and update duration.
-
-The view can be joined with other views by using the **ResourceID** column.
-
-#### Sample Query
-
-```sql
-Select
-    RV.Netbios_Name0 as 'Computer',
-    SBS.LatestBiosDuration0 as 'Latest BIOS Duration',
-    SBS.LatestBootDuration0 as 'Latest Boot Duration',
-    SBS.LatestCoreBootDuration0 as 'Latest Core Boot Duration',
-    SBS.LatestEventLogStart0 as 'Latest Event Log Start',
-    SBS.LatestGPDuration0 as 'Latest Group Policy Duration',
-    SBS.LatestUpdateDuration0 as 'Latest Update Duration'
-from
-    dbo.v_R_System_Valid RV
-    inner join dbo.v_GS_SYSTEMBOOTSUMMARY SBS on RV.ResourceID = SBS.ResourceID
-Order by
-    RV.Netbios_Name0
-```
 
 ### v_GS_TAPE_DRIVE
 

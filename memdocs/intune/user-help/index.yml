@@ -11,7 +11,9 @@ metadata:
   ms.service: microsoft-intune
   ms.subservice: end-user
   ms.topic: landing-page 
-  ms.collection: collection
+  ms.collection:
+  - tier2
+  - collection
   author: lenewsad
   ms.author: lanewsad
   manager: dougeby
@@ -55,10 +57,6 @@ landingContent:
   # Card (optional)
   - title: Set up iOS/iPadOS device 
     linkLists:
-    - linkListType: overview
-      links:
-      - text: About iOS/iPadOS device enrollment
-        url: what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios.md 
     - linkListType: how-to-guide
       links: 
       - text: Enroll iOS/iPadOS device 

@@ -19,17 +19,27 @@ items:
     href: lifecycle.md
   - name: Provisioning
     href: provisioning.md
-  - name: On-premises network connections
-    href: on-premises-network-connections.md
+  - name: Azure network connections
+    href: azure-network-connections.md
   - name: Device images
     href: device-images.md
   - name: Lifecycle and operating system end of support
     href: end-of-support.md
-  - name: Device configuration with MEM
+  - name: Customer permissions
+    href: customer-permissions.md  
+  - name: Device configuration with Intune
     href: device-configuration.md
-  - name: Encryption
-    href: encryption.md
-  - name: Privacy and personal data
+  - name: What is Windows 365 Government
+    href: introduction-windows-365-government.md
+  - name: Security
+    items:
+    - name: Windows 365 security
+      href: security.md
+    - name: Encryption
+      href: encryption.md
+    - name: ANC domain credential life cycle
+      href: azure-network-connection-domain-credential.md
+  - name: Privacy and data
     href: privacy-personal-data.md
 - name: How-to guides
   items:
@@ -37,6 +47,8 @@ items:
       items:
       - name: Planning guide
         href: planning-guide.md
+      - name: Deployment options
+        href: deployment-options.md
       - name: Requirements
         items:
         - name: Requirements
@@ -55,22 +67,38 @@ items:
         href: deployment-overview.md
       - name: Assign licenses
         href: assign-licenses.md
-      - name: On-premises network connection
+      - name: Azure network connection
         items:
-        - name: Create on-premises network connection
-          href: create-on-premises-network-connection.md
-        - name: Edit on-premises network connection
-          href: edit-on-premises-network-connection.md
-        - name: Delete on-premises network connection
-          href: delete-on-premises-network-connection.md
-      - name: Provide localized Windows experience
-        href: provide-localized-windows-experience.md
+        - name: Create Azure network connection
+          href: create-azure-network-connection.md
+        - name: Edit Azure network connection
+          href: edit-azure-network-connection.md
+        - name: Delete Azure network connection
+          href: delete-azure-network-connection.md
+      - name: Provide a localized Windows experience
+        items:
+        - name: Provide a localized Windows experience
+          href: provide-localized-windows-experience.md
+        - name: Use a policy to set up default display language
+          href: use-provisioning-policy-default-display-language.md
+        - name: Create a custom image with languages installed
+          href: create-custom-image-languages.md
       - name: Device images
         items:
         - name: Add or delete device images
           href: add-device-images.md
         - name: Convert image to Gen 2
           href: device-images-convert-generation-2.md
+      - name: Prepare for Windows 365 Government
+        items:
+        - name: Set up tenants for Windows 365 Government
+          href: set-up-tenants-windows-365-gcc.md
+      - name: Citrix HDX Plus for Windows 365
+        items:
+        - name: Requirements
+          href: requirements-citrix.md
+        - name: Set up Citrix HDX Plus for Windows 365
+          href: set-up-citrix.md
     - name: Provisioning
       items:
       - name: Create and assign provisioning policy
@@ -81,6 +109,10 @@ items:
         href: delete-provisioning-policy.md
       - name: Automated provisioning steps
         href: automated-provisioning-steps.md
+      - name: Manage Cloud PCs using Configuration Manager
+        href: manage-cloud-pcs-using-configuration-manager.md
+      - name: Enrollment Status Page
+        href: enrollment-status-page.md
     - name: Profiles and policies
       items:
       - name: Create a dynamic device group
@@ -103,6 +135,10 @@ items:
         href: set-conditional-access-policies.md
       - name: Manage RDP device redirections 
         href: manage-rdp-device-redirections.md
+      - name: Enable screen capture protection
+        href: /azure/virtual-desktop/screen-capture-protection?context=/windows-365/context/pr-context
+      - name: Restrict Office 365 access to Cloud PCs 
+        href: restrict-office-365-cloud-pcs.md
     - name: Apps
       items:
       - name: App overview
@@ -115,6 +151,8 @@ items:
           href: teams-on-cloud-pc.md
         - name: Create custom image to support Teams
           href: create-custom-image-support-teams.md
+      - name: Nested virtualization
+        href: nested-virtualization.md
       - name: App Assure
         href: app-assure.md
       - name: Optimize Cisco Webex
@@ -125,8 +163,12 @@ items:
       items:
       - name: Overview
         href: device-management-overview.md
+      - name: Alerts
+        href: alerts.md
       - name: Remotely manage Cloud PC devices 
         href: remotely-manage-cloud-pc.md
+      - name: RDP Shortpath for public networks 
+        href: rdp-shortpath-public-networks.md
       - name: Reprovision a Cloud PC
         href: reprovision-cloud-pc.md
       - name: Resize a Cloud PC
@@ -143,12 +185,22 @@ items:
           href: restore-bulk.md
       - name: End grace period
         href: end-grace-period.md
+      - name: Digital forensics
+        items:
+        - name: Overview
+          href: digital-forensics.md
+        - name: Place a Cloud PC under review
+          href: place-cloud-pc-under-review.md
     - name: Reports
       items:
       - name: Resource performance report
         href: report-resource-performance.md
       - name: Remoting connection report
         href: report-remoting-connection.md
+      - name: Cloud PC utilization report
+        href: report-cloud-pc-utilization.md
+      - name: Cloud PC connection quality report
+        href: report-cloud-pc-connection-quality.md
     - name: Windows updates
       items:
       - name: Windows 10 quality updates
@@ -158,25 +210,31 @@ items:
     - name: End-user experience
       items:
       - name: End-user hardware requirements
-        href: end-user-hardware-requirements.md
+        href: ../end-user-hardware-requirements.md
       - name: Access a Cloud PC
-        href: end-user-access-cloud-pc.md
+        href: ../end-user-access-cloud-pc.md
 - name: Troubleshoot
   items:
     - name: Troubleshooting
       href: troubleshooting.md
     - name: Known issues 
       href: known-issues-enterprise.md
-    - name: On-premises network connections
-      href: troubleshoot-on-premises-network-connection.md
-    - name: On-premises network connection health checklist
+    - name: Azure network connections
+      href: troubleshoot-azure-network-connection.md
+    - name: Azure network connection health checklist
       href: health-checks.md
+    - name: Connectivity health checks
+      href: health-checks-connectivity.md
     - name: Remote Desktop client
       href: /azure/virtual-desktop/troubleshoot-client?context=/windows-365/context/pr-context
     - name: Connection errors
       href: connection-errors.md
     - name: Provisioning errors
       href: provisioning-errors.md
+    - name: Citrix HDX Plus
+      href: troubleshoot-citrix-hdx-plus.md
+    - name: Windows 365 app
+      href: troubleshoot-windows-365-app.md
 - name: Reference
   items:
     - name: Get audit logs by using PowerShell

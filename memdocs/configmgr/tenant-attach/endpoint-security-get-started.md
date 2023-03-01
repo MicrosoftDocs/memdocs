@@ -1,22 +1,24 @@
 ---
 title: Get started - Create and deploy endpoint security policies from the admin center (preview)
 titleSuffix: Configuration Manager
-description: Create and deploy endpoint security policies from the Microsoft Endpoint Manager console and for Configuration Manager collections.
+description: Create and deploy endpoint security policies from the Microsoft Intune admin center and for Configuration Manager collections.
 ms.date: 03/21/2022
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-manager: dougeby
-author: mestew
-ms.author: mstewart
+manager: apoorvseth
+author: Banreet
+ms.author: banreetkaur
 ms.localizationpriority: high
+ms.reviewer: mstewart,aaroncz 
+ms.collection: tier3
 ---
 
 # <a name="bkmk_atp"></a> Get started: Create and deploy endpoint security policies from the admin center
 <!--5691658-->
 *Applies to: Configuration Manager (current branch)*
 
-Microsoft Endpoint Manager is an integrated solution for managing all of your devices. Microsoft brings together Configuration Manager and Intune into a single console called **Microsoft Endpoint Manager admin center**.
+The Microsoft Intune family of products is an integrated solution for managing all of your devices. Microsoft brings together Configuration Manager and Intune into a single console called **Microsoft Intune admin center**.
 
 <!--Adding Include for Prerequisites-->
 

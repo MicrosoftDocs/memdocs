@@ -1,19 +1,18 @@
 ---
 description: Learn how to add an integer property to the data discovery record (DDR) using DDRAddInteger function.
-title: "DDRAddInteger"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: DDRAddInteger
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: cfd88c36-bb38-487b-8ed0-9bfbf470ae2b
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # DDRAddInteger
 The `DDRAddInteger` function, in Configuration Manager, adds an integer property to the data discovery record (DDR).  

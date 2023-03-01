@@ -5,11 +5,13 @@ ms.date: 02/17/2021
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-other
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 description: Additional links for Configuration Manager help documentation
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Online documentation for Configuration Manager
@@ -22,7 +24,7 @@ Welcome to the Configuration Manager documentation library. Find the documentati
 
 ### Online documentation
 
-View the online documentation for the current branch of Configuration Manager at [docs.microsoft.com/configmgr](/configmgr):  
+View the online documentation for the current branch of Configuration Manager in [Microsoft Configuration Manager documentation](/configmgr):  
 
 - [Introduction to Configuration Manager](../understand/introduction.md)  
 

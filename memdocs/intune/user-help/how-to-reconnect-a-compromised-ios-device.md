@@ -2,7 +2,7 @@
 # required metadata
 
 title: How to reconnect a compromised iOS device | Microsoft Docs
-description:
+description: "Using a jailbroken device can compromise security and might be a threat to your company resources."
 keywords:
 author: lenewsad
 ms.author: lanewsad
@@ -26,7 +26,8 @@ ms.reviewer: chrisgre
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
-ms.collection: 
+ms.collection:
+- tier2
 ---
 
 # How to reconnect a compromised iOS device

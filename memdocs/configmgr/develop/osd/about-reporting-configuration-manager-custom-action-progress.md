@@ -1,19 +1,18 @@
 ---
-title: "Report Custom Action Progress"
-titleSuffix: "Configuration Manager"
-description: "A custom action can report progress information that is used to display a progress indicator."  
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: Report Custom Action Progress
+titleSuffix: Configuration Manager
+description: A custom action can report progress information that is used to display a progress indicator.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: conceptual
 ms.assetid: e1fe4037-cd2a-416d-afe4-8a2de2ba4f33
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # About Reporting Configuration Manager Custom Action Progress
 While a custom action is running on a Configuration Manager client, it can report progress information that is used to display a progress indicator.  

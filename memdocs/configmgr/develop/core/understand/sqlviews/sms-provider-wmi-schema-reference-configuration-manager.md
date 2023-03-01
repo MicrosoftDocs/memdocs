@@ -9,11 +9,11 @@ ms.topic: conceptual
 
 
 ms.assetid: fbce5da1-e33a-49b9-ab0a-5290a7ef2592
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
+ms.collection: tier3
 ---
 
 # SMS provider WMI schema reference in Configuration Manager

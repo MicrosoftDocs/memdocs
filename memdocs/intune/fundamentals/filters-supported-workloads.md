@@ -2,12 +2,12 @@
 # required metadata
 
 title: Platforms and policy types supported by filters in Microsoft Intune
-description: See the supported apps, compliance policies, and device configuration profiles that support filters in Microsoft Endpoint Manager and Microsoft Intune.
+description: See the supported apps, compliance policies, and device configuration profiles that support filters in Intune.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/21/2022
+ms.date: 04/27/2022
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -24,14 +24,16 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom:
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
-# List of platforms, policies, and app types supported by filters in Microsoft Endpoint Manager
+# List of platforms, policies, and app types supported by filters in Microsoft Intune
 
-When you create an app, compliance policy, or configuration profile, you assign the policy to groups (users or devices). When you assign the policy, you can also use filters. For example, you can assign policies to Windows client devices running a specific OS version. For more information, see [Use filters when assigning your apps, policies, and profiles](filters.md).
+When you create an app, compliance policy, configuration profile, or app configuration policy, you assign the policy to groups (users or devices). When you assign the policy, you can also use filters. For example, you can assign policies to Windows client devices running a specific OS version. For more information, see [Use filters when assigning your apps, policies, and profiles](filters.md).
 
-Filters support some of the different workloads available in Microsoft Intune. This article lists the app types, compliance policies, and device configuration profiles that support filters. It also lists the workloads that aren't supported.
+Filters support some of the different workloads available in Microsoft Intune. This article lists the app types, compliance policies, device configuration profiles, and app configuration policies that support filters. It also lists the workloads that aren't supported.
 
 ## Before you begin
 
@@ -109,6 +111,11 @@ You can use filters for some common app policies on the following platforms. For
 | Windows app (Win32) | ✔️ |
 | Microsoft Store for Business | ✔️ |
 
+## App configuration policies
+You can use filters for app configuration policies for managed devices on the following platforms:
+- Android Enterprise
+- iOS/iPadOS
+
 ## Compliance policies
 
 You can use filters for all compliance policies on the following platforms:
@@ -117,8 +124,7 @@ You can use filters for all compliance policies on the following platforms:
 - Android Enterprise
 - iOS/iPadOS
 - macOS
-- Windows 11
-- Windows 10
+- Windows 10 and later
 
 ## Device configuration profiles and Endpoint security
 
@@ -142,7 +148,7 @@ You can use filters for some common device configuration policies on the followi
 | Email | N/A |
 | Email (Samsung KNOX only) | ✔️ |
 | Endpoint Protection | N/A |
-| Enrollment restrictions | ❌ |
+| Enrollment device platform restrictions | ❌ |
 | MX profile (Zebra only) | ✔️ |
 | PKCS certificate | ✔️ |
 | PKCS imported certificate | ✔️ |
@@ -172,8 +178,8 @@ You can use filters for some common device configuration policies on the followi
 | Device Features | N/A |
 | Email | ✔️ |
 | Endpoint Protection | N/A |
-| Enrollment restrictions | ❌ |
-| OEMConfig | ❌ |
+| Enrollment device platform restrictions | ❌ |
+| OEMConfig | ✔️ |
 | PKCS certificate | ✔️ |
 | PKCS imported certificate | ✔️ |
 | SCEP certificate | ✔️ |
@@ -202,7 +208,7 @@ You can use filters for some common device configuration policies on the followi
 | Device Features | ✔️ |
 | Email | ✔️ |
 | Endpoint Protection | N/A |
-| Enrollment restrictions | ✔️ |
+| Enrollment device platform restrictions | ✔️ |
 | PKCS certificate | ✔️ |
 | PKCS imported certificate | ✔️ |
 | SCEP certificate | ✔️ |
@@ -231,7 +237,7 @@ You can use filters for some common device configuration policies on the followi
 | Device features | ✔️ |
 | Email | N/A |
 | Endpoint Protection | ✔️ |
-| Enrollment restrictions | ✔️ |
+| Enrollment device platform restrictions | ✔️ |
 | Extensions | ✔️ |
 | PKCS certificate | ✔️ |
 | PKCS imported certificate | ✔️ |
@@ -270,7 +276,7 @@ You can use filters for some common device configuration policies on the followi
 | Email | ✔️ |
 | Endpoint analytics proactive remediations scripts|✔️ |
 | Endpoint Protection | ✔️ |
-| Enrollment restrictions | ✔️ |
+| Enrollment device platform restrictions | ✔️ <br/> Support for a subset of filter properties including device `osVersion`, `operatingSystemSKU`, and `enrollmentProfileName` |
 | Identity Protection | ✔️ |
 | Kiosk | ✔️ |
 | Microsoft Defender for Endpoint (Windows 10/11 Desktop) | ✔️ |
@@ -286,19 +292,19 @@ You can use filters for some common device configuration policies on the followi
 | Wi-Fi | ✔️ |
 | Windows health monitoring | ✔️ |
 | **Endpoint Security profile** | &nbsp; |
-| Account protection | ✔️ |
+| Account protection | ✔️ <br/> **Local user group membership** only |
 | Antivirus | ✔️ |
-| Attack surface reduction | ✔️ |
-| Disk encryption | ✔️ |
+| Attack surface reduction | ✔️ <br/> Excludes **Web protection (Microsoft Edge Legacy)**, **Application control**, **App and browser isolation**, and **Device control** |
+| Disk encryption | ❌ |
 | Endpoint detection and response | ✔️ |
 | Firewall | ✔️ |
-| Security Baselines | ✔️ |
+| Security Baselines | ❌ |
 
 ## Not supported
 
 The following features don't support using filters:
 
-- App configuration policies for Android and iOS/iPadOS
+- Custom compliance policies for Windows 10/11 (preview)
 - App protection policies for Android, iOS/iPadOS, and Windows
 - End user experiences customization policies
 - iOS/iPadOS app provisioning profiles
@@ -311,6 +317,9 @@ The following features don't support using filters:
 - Terms and conditions
 - Update policies for iOS/iPadOS
 - Feature updates for Windows
+- Enrollment notifications
+- Android AOSP platform workloads
+- Linux platform workloads
 
 ## Next steps
 

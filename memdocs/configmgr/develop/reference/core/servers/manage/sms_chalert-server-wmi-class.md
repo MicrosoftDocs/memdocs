@@ -1,18 +1,18 @@
 ---
-title: "SMS_CHAlert Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: SMS_CHAlert Class
+titleSuffix: Configuration Manager
+description: An SMS Provider server class that represents client status alerts.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 8f534910-a91f-4c04-83e5-c6ae1f8dbed2
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_CHAlert Server WMI Class
 The `SMS_CHAlert` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents client status alerts.  

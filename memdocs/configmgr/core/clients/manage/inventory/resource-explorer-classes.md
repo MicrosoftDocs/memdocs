@@ -6,10 +6,12 @@ ms.date: 08/02/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: gowdhamankarthikeyan
+ms.author: gokarthi
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # Resource Explorer default inventory classes
 

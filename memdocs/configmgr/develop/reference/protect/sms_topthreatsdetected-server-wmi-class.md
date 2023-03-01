@@ -1,19 +1,18 @@
 ---
-title: "SMS_TopThreatsDetected Class"
-titleSuffix: "Configuration Manager"
-description: "The SMS_TopThreatsDetected class summarizes the top threats found in the last 24 hours per collection."
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: SMS_TopThreatsDetected Class
+titleSuffix: Configuration Manager
+description: The SMS_TopThreatsDetected class summarizes the top threats found in the last 24 hours per collection.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: d15d9933-913a-418e-8474-4310ddbc367b
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_TopThreatsDetected Server WMI Class
 The `SMS_TopThreatsDetected` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that summarizes the top threats found in the last 24 hours per collection.  

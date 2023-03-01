@@ -25,7 +25,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: 
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier3
+- M365-identity-device-management
 ---
 
 # Line-of-business app versioning
@@ -40,7 +42,7 @@ The following items are considered as the version property of the app:
 
 ## Locations where you can view the app version
 
-In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can view the app version in the following locations:
+In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can view the app version in the following locations:
 
 - When you add the app to Intune, the version is displayed in the **App package file** pane. The version value will be used for the **identityVersion** property.
 

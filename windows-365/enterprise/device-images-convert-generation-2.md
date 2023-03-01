@@ -9,7 +9,7 @@ ms.author: erikje
 manager: dougeby
 ms.date: 02/22/2022
 ms.topic: how-to
-ms.service: cloudpc
+ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
 ms.technology:
@@ -25,7 +25,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; get-started
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- tier1
 ---
 
 # Convert an existing custom device image to a generation 2 virtual machine

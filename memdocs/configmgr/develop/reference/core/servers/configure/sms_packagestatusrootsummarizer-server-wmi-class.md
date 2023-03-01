@@ -1,18 +1,18 @@
 ---
-title: "SMS_PackageStatusRootSummarizer Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+description: The SMS_PackageStatusRootSummarizer Windows Management Instrumentation class is an SMS Provider server class, in Configuration Manager, that lists the distribution summary for a given package.
+title: SMS_PackageStatusRootSummarizer Class
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 7899997c-7846-44f5-882c-add161280dca
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_PackageStatusRootSummarizer Server WMI Class
 The `SMS_PackageStatusRootSummarizer` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that lists the distribution summary for a given package for all sites in a hierarchy.  

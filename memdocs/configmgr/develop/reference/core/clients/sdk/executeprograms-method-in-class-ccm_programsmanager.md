@@ -1,19 +1,18 @@
 ---
 description: Learn how to manage downloads of legacy software distribution programs in Configuration Manager with ExecutePrograms class.
-title: "ExecutePrograms Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: ExecutePrograms Method
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 0e3b8430-0571-4ae8-9e6f-e9e6a130adf1
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # ExecutePrograms Method in Class CCM_ProgramsManager
 The `ExecutePrograms` WMI class method, in Configuration Manager, manages downloads of legacy software distribution programs.  

@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 07/16/2021
+ms.date: 08/24/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -23,9 +23,10 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; get-started
-ms.collection: 
-  - M365-identity-device-management
-  - highpri
+ms.collection:
+- tier1
+- M365-identity-device-management
+- highpri
 ---
 
 # Role-based access control (RBAC) with Microsoft Intune
@@ -36,12 +37,10 @@ To create, edit, or assign roles, your account must have one of the following pe
 - **Global Administrator**
 - **Intune Service Administrator** (also known as **Intune Administrator**)
 
-For advice and suggestions about Intune RBAC, you can check out this series of five videos  that showcase examples and walkthroughs: [1](https://www.youtube.com/watch?v=5deXLMLcnKY), [2](https://www.youtube.com/watch?v=38dnMBLuxbQ), [3](https://www.youtube.com/watch?v=XOsIsRIfxis), [4](https://www.youtube.com/watch?v=5yOLajFFMHE), [5](https://www.youtube.com/watch?v=P5DDvsSF4Wk).
-
 ## Roles
 A role defines the set of permissions granted to users assigned to that role.
 You can use both the built-in and custom roles. Built-in roles cover some common Intune scenarios. You can [create your own custom roles](create-custom-role.md) with the exact set of permissions you need. Several Azure Active Directory roles have permissions to Intune.
-To see a role, choose **Intune** > **Tenant administration** > **Roles** > **All roles** > choose a role. You'll can manage the role on the following pages:
+To see a role in the **Intune admin center**, go to **Tenant administration** > **Roles** > **All roles** > choose a role. You can manage the role on the following pages:
 
 - **Properties**: The name, description, permissions, and scope tags for the role. 
 - **Assignments**: A list of [role assignments](assign-role.md) defining which users have access to which users/devices. A role can have multiple assignments, and a user can be in multiple assignments.
@@ -54,11 +53,14 @@ You can assign built-in roles to groups without further configuration. You can't
 
 - **Application Manager**: Manages mobile and managed applications, can read device information and can view device configuration profiles.
 - **Endpoint Security Manager**: Manages security and compliance features, such as security baselines, device compliance, conditional access, and Microsoft Defender for Endpoint.
-- **Help Desk Operator**: Performs remote tasks on users and devices, and can assign applications or policies to users or devices.
-- **Intune Role Administrator**: Manages custom Intune roles and adds assignments for built-in Intune roles. It's the only Intune role that can assign permissions to Administrators.
-- **Policy and Profile Manager**: Manages compliance policy, configuration profiles, Apple enrollment, corporate device identifiers, and security baselines.
 - **Read Only Operator**: Views user, device, enrollment, configuration, and application information. Can't make changes to Intune.
 - **School Administrator**: Manages Windows 10 devices in [Intune for Education](introduction-intune-education.md).
+- **Policy and Profile Manager**: Manages compliance policy, configuration profiles, Apple enrollment, corporate device identifiers, and security baselines.
+- **Help Desk Operator**: Performs remote tasks on users and devices, and can assign applications or policies to users or devices.
+- **Intune Role Administrator**: Manages custom Intune roles and adds assignments for built-in Intune roles. It's the only Intune role that can assign permissions to Administrators.
+- **Cloud PC Administrator**: A Cloud PC Administrator has read and write access to all Cloud PC features located within the Cloud PC blade.
+- **Cloud PC Reader**: A Cloud PC Reader has read access to all Cloud PC features located within the Cloud PC blade.
+
 
 ### Custom roles
 You can create your own roles with custom permissions. For more information about custom roles, see [Create a custom role](create-custom-role.md).
@@ -74,7 +76,7 @@ You can create your own roles with custom permissions. For more information abou
 | Security Reader | Read only | Read only |
 | Compliance Administrator | None | Read only |
 | Compliance Data Administrator | None | Read only |
-| Global Reader | Read Only | Read Only |
+| Global Reader (This role is equivalent to the Intune *Help Desk Operator* role) | Read Only | Read Only |
 | Reports Reader | Read Only| None |
 
 > [!TIP]
@@ -92,8 +94,11 @@ To see a role assignment, choose **Intune** > **Tenant administration** > **Role
 
 - **Basics**: The assignments name and description.
 - **Members**: All users in the listed Azure security groups have permission to manage the users/devices that are listed in Scope (Groups).
-- **Scope (Groups)**: All users/devices in these Azure security groups can be managed by the users in Members.
+- **Scope (Groups)**: Scope Groups are Azure AD security groups of users or devices or both for which administrators in that role assignment are limited to performing operations on. For example deployment of a policy or application to a user or remotely locking a device. All users and devices in these Azure AD security groups can be managed by the users in Members.
 - **[Scope (Tags)](scope-tags.md)**: Users in Members can see the resources that have the same scope tags.
+
+> [!NOTE]
+> Scope Tags are freeform text values that an administrator defines and then adds to a Role Assignment. The scope tag added on a role controls visibility of the role itself, while the scope tag added in role assignment limits the visibility of Intune objects (such as policies and apps) or devices to only administrators in that role assignment because the role assignment contains one or more matching scope tags.
 
 ### Multiple role assignments
 If a user has multiple role assignments, permissions, and scope tags, those role assignments extend to different objects as follows:

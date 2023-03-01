@@ -23,9 +23,10 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: 
-  - M365-identity-device-management
-  - highpri
+ms.collection:
+- tier1
+- M365-identity-device-management
+- highpri
 ---
 
 # Trusted root certificate profiles for Microsoft Intune
@@ -54,12 +55,12 @@ SCEP certificate profiles directly reference a trusted certificate profile. PKCS
 Create a separate trusted certificate profile for each device platform you want to support, just as you'll do for SCEP, PKCS, and PKCS imported certificate profiles.
 
 > [!IMPORTANT]
-> Trusted root profiles that you create for the platform *Windows 10 and later*, display in the Microsoft Endpoint Manager admin center as profiles for the platform *Windows 8.1 and later*.
+> Trusted root profiles that you create for the platform *Windows 10 and later*, display in the Microsoft Intune admin center as profiles for the platform *Windows 8.1 and later*.
 >
 > This is a known issue with the presentation of the platform for Trusted certificate profiles. While the profile displays a platform of Windows 8.1 and later, it is functional for Windows 10/11.
 
 > [!NOTE]
-> The *Trusted Certificate* profile in Intune can only be used to deliver either root or intermediate certificates. The purpose of deploying such certificates is to establish a chain of trust. Using the trusted certificate profile to deliver certificates other than root or intermediate certificates is not supported by Microsoft. You might be blocked from importing certificates which are not deemed to be root or intermediate certificates when selecting the trusted certificate profile in the Microsoft Endpoint Manager admin center. Even if you are able to import and deploy a certificate which is neither a root or intermediate certificate using this profile type, you will likely encounter unexpected results between different platforms such as iOS and Android.
+> The *Trusted Certificate* profile in Intune can only be used to deliver either root or intermediate certificates. The purpose of deploying such certificates is to establish a chain of trust. Using the trusted certificate profile to deliver certificates other than root or intermediate certificates is not supported by Microsoft. You might be blocked from importing certificates which are not deemed to be root or intermediate certificates when selecting the trusted certificate profile in the Microsoft Intune admin center. Even if you are able to import and deploy a certificate which is neither a root or intermediate certificate using this profile type, you will likely encounter unexpected results between different platforms such as iOS and Android.
 
 ### Trusted certificate profiles for Android device administrator
 
@@ -100,7 +101,7 @@ After naming the certificate, it can be saved.
 
 ### To create a trusted certificate profile
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select  and go to **Devices** > **Configuration profiles** > **Create profile**.
 
@@ -127,6 +128,8 @@ After naming the certificate, it can be saved.
    - **User certificate store - Intermediate**
 
    ![Create a profile and upload a trusted certificate](./media/certificates-trusted-root/certificates-configure-profile-fill.png)
+   
+   [!INCLUDE [windows-phone-81-windows-10-mobile-support](../includes/windows-phone-81-windows-10-mobile-support.md)] 
 
 8. Select **Next**.
 

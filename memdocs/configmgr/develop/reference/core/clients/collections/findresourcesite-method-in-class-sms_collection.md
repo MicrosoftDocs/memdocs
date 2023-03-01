@@ -1,19 +1,18 @@
 ---
 title: FindResourceSite method in class SMS_Collection
-titleSuffix: "Configuration Manager"
-description: "In Configuration Manager, the FindResourceSite WMI class method gets site code information for resources."
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+titleSuffix: Configuration Manager
+description: In Configuration Manager, the FindResourceSite WMI class method gets site code information for resources.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 79e82dd3-a3c1-434d-a5f8-60db7d3bc8db
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # FindResourceSite Method in Class SMS_Collection
 The `FindResourceSite` Windows Management Instrumentation (WMI) class method, in Configuration Manager, gets site code information for resources.  

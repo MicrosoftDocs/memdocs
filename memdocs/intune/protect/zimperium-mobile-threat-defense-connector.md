@@ -26,7 +26,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt-pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier3
+- M365-identity-device-management
 ---
 
 # Zimperium Mobile Threat Defense connector with Intune
@@ -37,9 +39,9 @@ You can configure Conditional Access policies based on Zimperium risk assessment
 
 ## Supported platforms
 
-- **Android 4.1 and later**
+- **Android 5.1 and later**
 
-- **iOS 8 and later**
+- **iOS 10 and later**
 
 ## Prerequisites
 
@@ -81,13 +83,11 @@ When malicious apps such as malware are detected on devices, you can block devic
 
 *Block when malicious apps are detected:*
 
-> [!div class="mx-imgBorder"]
-> ![Conceptual image of Malicious apps detected](./media/zimperium-mobile-threat-defense-connector/Maliciousapps-blocked-zimperium.png)
+:::image type="content" source="./media/zimperium-mobile-threat-defense-connector/maliciousapps-blocked-zimperium.png" alt-text="Product flow for blocking access due to malicious apps.":::
 
 *Access granted on remediation:*
 
-> [!div class="mx-imgBorder"]
-> ![Conceptual image of access granted after remediation](./media/zimperium-mobile-threat-defense-connector/maliciousapps-unblocked-zimperium.png)
+:::image type="content" source="./media/zimperium-mobile-threat-defense-connector/maliciousapps-unblocked-zimperium.png" alt-text="Product flow for granting access when malicious apps are remediated.":::
 
 ### Control access based on threat to network
 
@@ -95,13 +95,11 @@ Detect threats like **Man-in-the-middle** in network, and protect access to Wi-F
 
 *Block network access through Wi-Fi:*
 
-> [!div class="mx-imgBorder"]
-> ![Block network access through Wi-Fi](./media/zimperium-mobile-threat-defense-connector/network-wifi-blocked-zimperium.png)
+:::image type="content" source="./media/zimperium-mobile-threat-defense-connector/network-wifi-blocked-zimperium.png" alt-text="Product flow for blocking access through Wi-Fi due to an alert.":::
 
 *Access granted on remediation:*
 
-> [!div class="mx-imgBorder"]
-> ![Access granted on remediation](./media/zimperium-mobile-threat-defense-connector/network-wifi-unblocked-zimperium.png)
+:::image type="content" source="./media/zimperium-mobile-threat-defense-connector/network-wifi-unblocked-zimperium.png" alt-text=" Product flow for granting access through Wi-Fi after the alert is remediated.":::
 
 ### Control access to SharePoint Online based on threat to network
 
@@ -109,25 +107,21 @@ Detect threats like **Man-in-the-middle** in network, and prevent synchronizatio
 
 *Block SharePoint Online when network threats are detected:*
 
-> [!div class="mx-imgBorder"]
-> ![Block SharePoint Online when network threats are detected](./media/zimperium-mobile-threat-defense-connector/network-spo-blocked-zimperium.png)
+:::image type="content" source="./media/zimperium-mobile-threat-defense-connector/network-spo-blocked-zimperium.png" alt-text="Product flow for blocking access to the organizations files due to an alert.":::
 
 *Access granted on remediation:*
 
-> [!div class="mx-imgBorder"]
-> ![Access granted on remediation for Sharepoint example](./media/zimperium-mobile-threat-defense-connector/network-spo-unblocked-zimperium.png)
+:::image type="content" source="./media/zimperium-mobile-threat-defense-connector/network-spo-unblocked-zimperium.png" alt-text="Product flow for granting access to the organizations files after the alert is remediated.":::
 
 ### Control access on unenrolled devices based on threats from malicious apps
 
 When the Zimperium Mobile Threat Defense solution considers a device to be infected:
 
-> [!div class="mx-imgBorder"]
-> ![App protection policy blocks due to detected malware](./media/zimperium-mobile-threat-defense-connector/zimperium-mobile-app-policy-block.png)
+:::image type="content" source="./media/zimperium-mobile-threat-defense-connector/zimperium-mobile-app-policy-block.png" alt-text="Product flow for App protection policies to block access due to malware.":::
 
 Access is granted on remediation:
 
-> [!div class="mx-imgBorder"]
-> ![Access is granted on remediation for App protection policy](./media/zimperium-mobile-threat-defense-connector/zimperium-mobile-app-policy-remediated.png)
+:::image type="content" source="./media/zimperium-mobile-threat-defense-connector/zimperium-mobile-app-policy-remediated.png" alt-text="Product flow for App protection policies to grant access after malware is remediated.":::
 
 ## Next steps
 

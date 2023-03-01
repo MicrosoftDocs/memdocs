@@ -1,18 +1,18 @@
 ---
+description: Learn how to add the distribution points for the device setting package using the AddDistributionPoints class in Configuration Manager.
 title: AddDistributionPoints method in class SMS_DeviceSettingPackage
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 088452fb-874b-48b9-8294-a416d41febb7
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # AddDistributionPoints Method in Class SMS_DeviceSettingPackage
 The `AddDistributionPoints` Windows Management Instrumentation (WMI) class method, in Configuration Manager, adds the distribution points for the device setting package.  

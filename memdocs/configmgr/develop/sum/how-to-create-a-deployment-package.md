@@ -1,19 +1,18 @@
 ---
-title: "Create a Deployment Package"
-titleSuffix: "Configuration Manager"
-description: "A software updates deployment package initiated by creating an instance of the SMS_SoftwareUpdatesPackage class and populating the properties."  
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: Create a Deployment Package
+titleSuffix: Configuration Manager
+description: A software updates deployment package initiated by creating an instance of the SMS_SoftwareUpdatesPackage class and populating the properties.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: how-to
 ms.assetid: e32f4162-ec92-475f-8b39-f283de85d9e0
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Create a Deployment Package
 You create a software updates deployment package, in Configuration Manager, by creating an instance of the `SMS_SoftwareUpdatesPackage` class and populating the properties.  

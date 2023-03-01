@@ -25,7 +25,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: apps; get-started
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier1
+- M365-identity-device-management
 ---
 
 # Overview of the app lifecycle in Microsoft Intune

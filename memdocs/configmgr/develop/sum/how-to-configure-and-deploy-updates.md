@@ -1,19 +1,18 @@
 ---
-title: "Configure and Deploy Updates"
-titleSuffix: "Configuration Manager"
+title: Configure and Deploy Updates
+titleSuffix: Configuration Manager
 description: Learn how to use the Configuration Manager SDK to configure and deploy software updates
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: how-to
 ms.assetid: bd5be2ec-0db9-4bdb-adc6-452c2103b5b4
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Configure and Deploy Updates
 You create a software updates deployment, in Configuration Manager, by creating an instance of the [SMS_UpdatesAssignment Server WMI Class](../../develop/reference/sum/sms_updatesassignment-server-wmi-class.md) and populating the properties.  

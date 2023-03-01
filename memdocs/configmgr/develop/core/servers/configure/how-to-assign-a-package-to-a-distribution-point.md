@@ -1,18 +1,18 @@
 ---
-title: "Assign a Package to a Distribution Point"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: Assign a Package to a Distribution Point
+titleSuffix: Configuration Manager
+description: In Configuration Manager, the following example shows how to assign a distribution point to a package by using the SMS_DistributionPoint and SMS_SystemResourceList classes.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: how-to
 ms.assetid: e6b6bb80-6c63-4bc0-9f7e-8f8194e281e9
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Assign a Package to a Distribution Point
 The following example shows how to assign a distribution point to a package by using the `SMS_DistributionPoint` and `SMS_SystemResourceList` classes in Configuration Manager. You only need to assign a distribution point to a package if the package contains source files (PkgSourcePath). The package is not advertised until the program source files have been propagated to a distribution point share. You can use the default distribution point share, or you can specify a share to use. You can also specify more than one distribution point to use to distribute your package source files, although this example does not demonstrate that.  

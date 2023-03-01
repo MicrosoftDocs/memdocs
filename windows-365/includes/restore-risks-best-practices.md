@@ -2,7 +2,7 @@
 title: include file
 description: include file
 author: ErikjeMS  
-ms.service: cloudpc
+ms.service: windows-365
 ms.topic: include
 ms.date: 03/03/2022
 ms.author: erikje
@@ -20,4 +20,4 @@ Cloud PCs have same risks as all Windows PCs when performing a full disk restore
 ## Best practices
 
 - To minimize data loss and the risk of a rolling password conflict, choose a restore point that is as close as possible to the current time.
-- After a restoration is complete, the user should immediately sign into their Cloud PC to verify that they can successfully connect. If a user can't connect, or experiences unexpected behavior, try a second restoration to a different restore point that is more recent. On rare occasions you may need to reprovision/reset a Cloud PC if all restore points have obsolete rolling credentials.
+- After a restoration is complete, the user should immediately sign into their Cloud PC to verify that they can successfully connect. If a user can't connect, or experiences unexpected behavior, try a second restoration to a different restore point that is more recent. On rare occasions, you may need to reprovision/reset a Cloud PC if all restore points have obsolete rolling credentials.

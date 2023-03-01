@@ -1,19 +1,18 @@
 ---
-title: "SMS_ProductFileInfo Class"
-titleSuffix: "Configuration Manager"
-description: "The SMS_ProductFileInfo WMI class represents a combination of file and product information for inventory and metering."
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: SMS_ProductFileInfo Class
+titleSuffix: Configuration Manager
+description: The SMS_ProductFileInfo WMI class represents a combination of file and product information for inventory and metering.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: ef754afa-1157-4213-8db5-b855c0bde8a5
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_ProductFileInfo Server WMI Class
 The `SMS_ProductFileInfo` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a combination of file and product information for inventory and metering.  

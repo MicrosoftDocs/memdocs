@@ -6,10 +6,12 @@ ms.date: 09/21/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: how-to
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: BalaDelli
+ms.author: baladell
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.reviewer: mstewart,aaroncz 
+ms.collection: tier3
 ---
 
 # BitLocker administration and monitoring website
@@ -87,7 +89,7 @@ For more information about TPM ownership, see [Configure MBAM to escrow the TPM 
 ## Drive recovery
 
 > [!TIP]
-> Starting in version 2107, you can also get BitLocker recovery keys for a tenant-attached device from the Microsoft Endpoint Manager admin center.<!--6979225--> For more information, see [Tenant attach: BitLocker recovery keys](../../../tenant-attach/bitlocker-recovery-keys.md).
+> Starting in version 2107, you can also get BitLocker recovery keys for a tenant-attached device from the Microsoft Intune admin center.<!--6979225--> For more information, see [Tenant attach: BitLocker recovery keys](../../../tenant-attach/bitlocker-recovery-keys.md).
 
 ### <a name="bkmk_recovery"></a> Recover a drive in recovery mode
 

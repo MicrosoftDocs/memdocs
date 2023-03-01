@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/16/2021
+ms.date: 08/01/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -23,9 +23,11 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-classic; get-started
-ms.collection: 
-  - M365-identity-device-management
-  - highpri
+ms.collection:
+- tier1
+- M365-identity-device-management
+- highpri
+- EngageScoreOct2022
 ---
 
 # Assign licenses to users so they can enroll devices in Intune
@@ -35,11 +37,11 @@ Whether you manually add users or synchronize from your on-premises Active Direc
 > [!NOTE]
 > Users assigned Intune app protection policy and not enrolling their devices into Microsoft Intune will also require an Intune license to receive policy.
 
-## Assign an Intune license Microsoft Endpoint Manager admin center
+## Assign an Intune license Microsoft Intune admin center
 
-You can use the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) to manually add cloud-based users and assign licenses to both cloud-based user accounts and accounts synchronized from your on-premises Active Directory to Azure AD.
+You can use the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) to manually add cloud-based users and assign licenses to both cloud-based user accounts and accounts synchronized from your on-premises Active Directory to Azure AD.
 
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Users** > **All Users** > choose a user > **Licenses** > **Assignments**.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Users** > **All Users** > choose a user > **Licenses** > **Assignments**.
 
 2. Choose the box for **Intune** > **Save**. If you want to use the Enterprise Mobility + Security E5 or other license, choose that box instead.
 
@@ -67,12 +69,12 @@ See this [overview of School Data Sync](https://support.office.com/article/Overv
 
 - Each **user** that you assign a user software license to may access and use the online services and related software (including System Center software) to manage applications and up to 15 MDM devices.
 - You can purchase licenses for any devices separately from user licenses. Device licenses do not need to be assigned to the devices. Each device that accesses and uses the online services and related software (including System Center software) must have a device license.
-- If a device is used by more than one user, each requires a device software license or all users require a user software license.
+- If a device is used by more than one user, each device requires a device based software license or all users require a user software license.
 - If you remove a license from a user that has managed devices, it may affect the compliance or management of those devices.  
 
 ## How to restore users accidentally unlicensed
 
-- If you have accidentally removed the license for one or more users, you can restore their device compliance and management by re-assigning the license for those users. For more information, see [Assign Microsoft Intune licenses](../fundamentals/licenses-assign.md#assign-an-intune-license-microsoft-endpoint-manager-admin-center).
+- If you have accidentally removed the license for one or more users, you can restore their device compliance and management by re-assigning the license for those users. For more information, see [Assign Microsoft Intune licenses](../fundamentals/licenses-assign.md#assign-an-intune-license-microsoft-intune-admin-center).
 
 ## Understanding the type of licenses you have purchased
 
@@ -108,7 +110,7 @@ To view the number of free and used licenses on a Microsoft Intune subscription,
 A list of the **Account ID**, the **Active Units**, and the **Consumed Units** will appear. Note that this will also display any Microsoft Office 365 licenses on the subscription.
 
 > [!NOTE]
-> To confirm your Azure Active Directory Premium and Microsoft Intune using Microsoft Endpoint Manager admin center, see [Confirm your licenses](../fundamentals/licenses.md#confirm-your-licenses).
+> To confirm your Azure Active Directory Premium and Microsoft Intune using Microsoft Intune admin center, see [Confirm your licenses](../fundamentals/licenses.md#confirm-your-licenses).
 
 ## Use PowerShell to selectively manage EMS user licenses
 Organizations that use Microsoft Enterprise Mobility + Security (formerly Enterprise Mobility Suite) might have users who only require Azure Active Directory Premium or Intune services in the EMS package. You can assign one or a subset of services using [Azure Active Directory PowerShell cmdlets](/previous-versions/azure/jj151815(v=azure.100)).

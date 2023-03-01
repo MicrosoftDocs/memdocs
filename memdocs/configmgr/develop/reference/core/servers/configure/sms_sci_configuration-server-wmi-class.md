@@ -1,18 +1,18 @@
 ---
-title: "SMS_SCI_Configuration Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: SMS_SCI_Configuration Class
+titleSuffix: Configuration Manager
+description: In Configuration Manager, the SMS_SCI_Configuration Windows Management Instrumentation class is an SMS Provider server class that represents a configuration item, which is a generic named container of properties and property lists, for a site server component.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 2fae6449-b766-4353-83de-2c1de25e7932
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_SCI_Configuration Server WMI Class
 The `SMS_SCI_Configuration` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a configuration item, which is a generic named container of properties and property lists, for a site server component.  

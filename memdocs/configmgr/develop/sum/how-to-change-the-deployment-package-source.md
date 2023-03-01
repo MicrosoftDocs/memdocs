@@ -1,18 +1,18 @@
 ---
-title: "Change the Deployment Package Source"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: Change the Deployment Package Source
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: how-to
 ms.assetid: d931362e-25f6-4316-ab95-32b5771f670c
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-description: "You change the deployment package source for a software updates deployment package in Configuration Manager by obtaining an instance of the SMS_SoftwareUpdatesPackage class and using the ValidateNewPackageSource method."
-
+ms.collection: tier3
+description: You change the deployment package source for a software updates deployment package in Configuration Manager by obtaining an instance of the SMS_SoftwareUpdatesPackage class and using the ValidateNewPackageSource method.
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Change the Deployment Package Source
 You change the deployment package source for a software updates deployment package, in Configuration Manager, by obtaining an instance of the [SMS_SoftwareUpdatesPackage](../../develop/reference/sum/sms_softwareupdatespackage-server-wmi-class.md) class and by using the [ValidateNewPackageSource](../../develop/reference/sum/validatenewpackagesource-method-in-class-sms_softwareupdatespackage.md) method.  

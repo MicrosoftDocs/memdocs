@@ -2,14 +2,16 @@
 title: Accounts used
 titleSuffix: Configuration Manager
 description: Identify and manage the Windows groups, accounts, and SQL Server objects used in Configuration Manager.
-ms.date: 08/02/2021
+ms.date: 03/29/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Accounts used in Configuration Manager
@@ -300,6 +302,9 @@ For more information, see [Active Directory forest discovery](../../servers/depl
 
 ### Certificate registration point account
 
+> [!WARNING]
+> Starting in version 2203, the certificate registration point is no longer supported.<!--13951253--> For more information, see [Frequently asked questions about resource access deprecation](../../../protect/plan-design/resource-access-deprecation-faq.yml).
+
 The certificate registration point uses the **Certificate registration point account** to connect to the Configuration Manager database. It uses its computer account by default, but you can configure a user account instead. When the certificate registration point is in an untrusted domain from the site server, you must specify a user account. This account requires only **Read** access to the site database, because the state message system handles write tasks.
 
 For more information, see [Introduction to certificate profiles](../../../protect/deploy-use/introduction-to-certificate-profiles.md).
@@ -421,7 +426,7 @@ The network access account is still required for the following actions:
 
 - **Apply OS Image** task sequence step option to **Access content directly from the distribution point**. This option is primarily for Windows Embedded scenarios with low disk space where caching content to the local disk is costly. For more information, see [Access content directly from the distribution point](../../../osd/understand/task-sequence-steps.md#access-content-directly-from-the-distribution-point)
 
-- Task Sequence properties setting to **Run another program first**. This setting runs a package and program from a network share before the task sequence starts. For more information, see [Manage task sequences to automate tasks: Advanced settings](../../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md#bkmk_prop-advanced).
+- Task Sequence properties setting to **Run another program first**. This setting runs a package and program from a network share before the task sequence starts. For more information, see [Task sequences properties: Advanced tab](../../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md#advanced-tab).
 
 - Managing clients in untrusted domains and cross-forest scenarios allow multiple network access accounts.
 
@@ -505,6 +510,9 @@ When expanding a standalone site to include a central administration site, this 
 The site server uses the **Site system installation account** to install, reinstall, uninstall, and set up site systems. If you set up the site system to require the site server to initiate connections to this site system, Configuration Manager also uses this account to pull data from the site system after it installs the site system and any roles. Each site system can have a different installation account, but you can set up only one installation account to manage all roles on that site system.
 
 This account requires local administrative permissions on the target site systems. Additionally, this account must have **Access this computer from the network** in the security policy on the target site systems.
+
+> [!IMPORTANT]
+> If you are specifying an account in a remote domain or forest, be sure to specify the domain FQDN before the user name, and not just the domain NetBIOS name.  For example, specify Corp.Contoso.com\UserName instead of just Corp\UserName.  This allows Configuration Manager to use Kerberos when the account is used to authenticate to the remote site system.  Using the FQDN often fixes authentication failures resulting from recent hardening changes around NTLM in Windows monthly updates.
 
 > [!TIP]
 > If you have many domain controllers and these accounts are used across domains, before you set up the site system, check that Active Directory has replicated these accounts.

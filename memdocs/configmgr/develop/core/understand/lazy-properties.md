@@ -1,18 +1,18 @@
 ---
+description: Learn how to use lazy properties, which are properties that exist and contain data, but the data is not available through the SMS Administrator console.
 title: SMS object lazy properties
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: conceptual
 ms.assetid: b6eb9f5c-78a8-4ded-b032-5d8c4f533694
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # Lazy Properties
 A small number of SMS object properties are described as lazy. This means that the property exists and contains data, but the data is not available through the SMS Administrator console. In practical terms, the property is not visible in Query Builder.  

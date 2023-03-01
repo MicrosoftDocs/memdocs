@@ -8,9 +8,9 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 03/09/2022
+ms.date: 10/4/2022
 ms.topic: reference
-ms.service: cloudpc
+ms.service: windows-365
 ms.subservice: 
 ms.assetid: 
 
@@ -23,7 +23,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: seodec18
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- tier2
 ---
 
 # In development for Windows 365 Business
@@ -52,23 +54,9 @@ To help in your readiness and planning, this page lists Windows 365 Business upd
 
 -->
 
-<!-- ***********************************************-->
-## Device management
-
-### windows365.microsoft.com will move to general availability<!--38195529-->
-
-The windows365.microsoft.com web client will be moving out of preview and into general availability.
 
 <!-- ***********************************************-->
 ## Monitor and troubleshoot
-
-### End-user error log collection<!--38195529-->
-
-End users will be able to collect error logs.
-
-### End-user feedback<!--38195529-->
-
-End users will be able to provide feedback to Microsoft from within the Windows 365 web client.
 
 ### End user manual connectivity check<!--37679345 -->
 

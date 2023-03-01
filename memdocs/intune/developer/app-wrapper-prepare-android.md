@@ -25,6 +25,7 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.collection:
+- tier3
 - M365-identity-device-management
 - Android
 ms.custom: intune-classic
@@ -132,7 +133,7 @@ The wrapped app and a log file are generated and saved in the output path you sp
 
 The main scenarios in which you would need to rewrap your applications are as follows:
 
-- The application itself has released a new version. The previous version of the app was wrapped and uploaded to the Intune console.
+- The application itself has released a new version. The previous version of the app was wrapped and uploaded to the Microsoft Intune admin center.
 
 - The Intune App Wrapping Tool for Android has released a new version that enables key bug fixes, or new, specific Intune application protection policy features. This happens every 6-8 weeks through GitHub repo for the [Microsoft Intune App Wrapping Tool for Android](https://github.com/msintuneappsdk/intune-app-wrapping-tool-android).
 

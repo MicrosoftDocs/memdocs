@@ -7,12 +7,11 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/08/2022
-ms.topic: conceptual
+ms.date: 09/20/2022
+ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
-ms.reviewer: tycast
 ms.technology:
 
 # optional metadata
@@ -20,11 +19,14 @@ ms.technology:
 #ROBOTS:
 #audience:
 
+ms.reviewer: tycast
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier3
+- M365-identity-device-management
 ---
 
 # Add Wi-Fi settings for Windows 10/11 devices in Intune
@@ -182,7 +184,7 @@ Enterprise profiles use Extensible Authentication Protocol (EAP) to authenticate
 
     - **Certificate server names**: Enter one or more common names used in the certificates issued by your trusted certificate authority (CA). If you enter this information, you can bypass the dynamic trust dialog shown on user devices when they connect to this Wi-Fi network.  
 
-    - **Root certificate for server validation**: Select the trusted root certificate profile used to authenticate the connection.  
+    - **Root certificates for server validation**: Select the trusted root certificate profile used to authenticate the connection.  
 
     - **Perform server validation**: When set to **Yes**, in PEAP negotiation phase 1, devices validate the certificate, and verify the server. Select **No** to block or prevent this validation. When set to **Not configured**, Intune doesn't change or update this setting.
 
@@ -225,7 +227,4 @@ For any settings not available in Intune, you can export Wi-Fi settings from ano
 
 The profile is created, but may not be doing anything. Be sure to [assign the profile](device-profile-assign.md), and [monitor its status](device-profile-monitor.md).
 
-## More resources
-
-- [Windows 8.1 Wi-Fi settings](wi-fi-settings-import-windows-8-1.md)
-- [Wi-Fi settings overview](wi-fi-settings-configure.md), including other platforms
+[Wi-Fi settings overview](wi-fi-settings-configure.md), including other platforms

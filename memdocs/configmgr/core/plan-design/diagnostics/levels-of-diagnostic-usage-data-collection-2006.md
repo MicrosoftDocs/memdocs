@@ -6,10 +6,13 @@ ms.date: 10/06/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: medium
+ROBOTS: NOINDEX
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Diagnostic and usage data for version 2006

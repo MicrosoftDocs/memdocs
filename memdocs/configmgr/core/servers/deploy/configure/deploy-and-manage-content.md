@@ -6,10 +6,12 @@ ms.date: 02/16/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+ms.author: baladell 
+author: BalaDelli
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Deploy and manage content for Configuration Manager
@@ -350,6 +352,100 @@ You can use the **RetryContentReplication** WMI method from the Configuration Ma
 Only use this method to force replication when you need to redistribute content after there were issues with normal replication of content. You can typically confirm this state in the **Monitoring** node of the console.
 
 For more information about this SDK option, see [RetryContentReplication method in class SMS_CM_UpdatePackages](../../../../develop/reference/sum/retrycontentreplication-method-in-class-sms_cm_updatepackages.md).
+
+## <a name="bkmk_dpconmig"></a> Distribution point content migration
+<!--10928371-->
+Content migration support is now available for migrating content from one DP to another DP using PowerShell cmdlets. You can also monitor the DP migration status using these PowerShell cmdlets. 
+
+There are multiple scenarios where the content of one distribution point needs to be migrated to another distribution point. 
+1) Cloud distribution points (CDP) hosted on Azure classic services are getting deprecated by mid of 2024. You need to migrate CDP content to another distribution point.
+2) Migration of cloud migration gateway v1 (CMGv1) hosted with *.cloudapp.net domain is also getting deprecated, hence you may need to migrate CMGv1 content to another distribution point.
+3) You may need to migrate local distribution point content to other local distribution point or CMG. 
+
+#### Prerequisites
+
+1) The user's security role permission should have "Copy to Distribution Point" enabled under Distribution Point.
+2) If you want to deprecate the source distribution point, make sure that the source, and destination distribution points have the same boundary group.
+3) The destination distribution point should be installed already and able to receive the content. 
+
+> [!NOTE]
+> You can't currently configure this behavior from the Configuration Manager console.   
+>For more information on configuring this behavior with PowerShell, see the cmdlet details in the following section.   
+>Distribution failure status is not shown in admin console when source distribution point is locked during migration and sending new content to source distribution point.   
+>Get and Stop DP migration cmdlets works only on the site server where the DP migration is initiated. 
+
+### Start-CMDistributionPointMigration 
+
+Use this cmdlet to initiate distribution point content migration. You can pass the desired parameters such as SourceDistributionPointName and DestinationDistributionPointName per your distribution point migration scenario. 
+You can also pass the LockSourceDistributionPoint parameter to lock the source distribution point. This parameter is used to deprecate the source distribution point scenarios (for example: CDP Migration). 
+If the source DP is locked during migration, you won't be able to distribute the new content to the source dp, but the endpoints will be able to download the content that is already available in the source DP. 
+For deprecation scenarios, you can delete the source distribution point after the distribution content migration is completed.  
+
+#### Syntax
+
+```powershell
+Start-CMDistributionPointMigration -SourceDistributionPointName <FQDN for source distribution point> -DestinationDistributionPointName <FQDN for destination distribution point> 
+```
+
+#### Examples
+
+```powershell
+Start-CMDistributionPointMigration -SourceDistributionPointName <FQDN for source distribution point> -DestinationDistributionPointName <FQDN for destination distribution point> -LockSourceDistributionPoint  
+Start-CMDistributionPointMigration -SourceDistributionPointName <FQDN for source distribution point> -DestinationDistributionPointName <FQDN for destination distribution point> 
+```
+
+#### Parameters
+
+- **SourceDistributionPointName**: Use the parameter to specify the source distribution point from where content will be migrated.
+
+- **DestinationDistributionPointName**: Use the parameter to specify the destination distribution point where you want the content to be copied.
+
+- **LockSourceDistributionPoint**: Use when you need to initiate distribution point migration with source distribution point locked. 
+
+
+### Get-CMDistributionPointMigrationStatus 
+
+Use this cmdlet to monitor the distribution point migration status.
+
+#### Syntax
+
+```powershell
+Get-CMDistributionPointMigrationStatus -SourceDistributionPointName <FQDN for source distribution point> -DestinationDistributionPointName <FQDN for destination distribution point> 
+```
+
+### Get-CMDistributionPointMigrationContentStatus 
+
+Use this cmdlet to monitor the distribution point content migration status.
+
+#### Syntax
+
+```powershell
+Get-CMDistributionPointMigrationContentStatus -SourceDistributionPointName <FQDN for source distribution point> -DestinationDistributionPointName <FQDN for destination distribution point>
+```
+
+### Stop-CMDistributionPointMigration 
+
+Use this cmdlet to stop the distribution point migration. In case you have mistakenly locked the source distribution point, you can use this cmdlet to unlock the source distribution point. Unlocking the source distribution point will stop the distribution point migration. To restart the migration, use the Start-CMDistributionPointMigration cmdlet.
+
+#### Syntax
+
+```powershell
+Stop-CMDistributionPointMigration -SourceDistributionPointName <FQDN for source distribution point> -DestinationDistributionPointName <FQDN for destination distribution point> 
+```
+
+#### Examples
+
+```powershell
+Stop-CMDistributionPointMigration -SourceDistributionPointName <FQDN for source distribution point> -DestinationDistributionPointName <FQDN for destination distribution point> -LockSourceDistributionPoint  
+Stop-CMDistributionPointMigration -SourceDistributionPointName <FQDN for source distribution point> -DestinationDistributionPointName <FQDN for destination distribution point> 
+```
+
+> [!NOTE]
+> You can't currently configure this behavior from the Configuration Manager console.   
+>For more information on configuring this behavior with PowerShell, see the cmdlet details in the following section.   
+>Distribution failure status is not shown in admin console when source distribution point is locked during migration and sending new content to source distribution point.   
+>Get and Stop DP migration cmdlets works only on the site server where the DP migration is initiated.
+
 
 ### Remove content
 

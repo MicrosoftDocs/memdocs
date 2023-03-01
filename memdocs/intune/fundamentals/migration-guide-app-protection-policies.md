@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/16/2021
+ms.date: 06/09/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -21,29 +21,28 @@ ms.assetid: 93cda587-bf56-4d41-b123-9fe203fad788
 #ROBOTS:
 #audience:
 
-ms.reviewer: dagerrit
+ms.reviewer: ilwu
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 #ms.custom:
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier1
+- M365-identity-device-management
 ---
 
-# Configure app protection policies (optional)
+# Configure app protection policies for migration (optional)
 
+App protection policies (APP) are rules that ensure an organization's data remains safe or contained in a managed app. A policy can be a rule that is enforced when the user attempts to access or move "corporate" data, or a set of actions that are prohibited or monitored when the user is inside the app. A managed app is an app that has app protection policies applied to it, and can be managed by Intune.
 
-App protection policies allow you to:
+App protection policies are often used to do the following tasks:
 * Encrypt apps
 * Define a PIN when the app is accessed
 * Block apps from running on jail-broken or rooted devices, and many other protections.
 
-If the user's phone is lost or stolen, you can selectively wipe the corporate data remotely while leaving the personal data intact.
+For instance, if the user's phone is lost or stolen, you can selectively wipe the corporate data remotely while leaving the personal data intact.
 
 App protection policies apply security at the app level and do not require device enrollment. You can use them with devices enrolled into Intune or not. Additionally, you can apply them to devices enrolled into a third-party MDM provider.
-
-## App protection policies with LOB apps
-
-You can also extend the mobile app protection policies to your line-of-business (LOB) apps by using the [Microsoft Intune App SDK](../developer/app-sdk-get-started.md) or the Microsoft Intune App Wrapping Tool for both iOS/iPadOS and Android platforms. For more information, see [App Wrapping Tool for iOS](../developer/app-wrapper-prepare-ios.md) and [App Wrapping Tool for Android](./../developer/app-wrapper-prepare-android.md). In addition, see [Prepare LOB apps for app protection](../developer/apps-prepare-mobile-application-management.md).
 
 ## How do app protection policies help during migration?
 
@@ -54,6 +53,10 @@ This period can leave your organization more vulnerable to device theft and corp
 Intune can offer corporate data protections during the migration so you can still have security coverage for your corporate data when there's no device-level management.
 
 As you disable Conditional Access in the old MDM provider, users can still be productive while you on-board them into Intune.
+
+## App protection policies with LOB apps
+
+You can also extend the mobile app protection policies to your line-of-business (LOB) apps by using the [Microsoft Intune App SDK](../developer/app-sdk-get-started.md) or the Microsoft Intune App Wrapping Tool for both iOS/iPadOS and Android platforms. For more information, see [App Wrapping Tool for iOS](../developer/app-wrapper-prepare-ios.md) and [App Wrapping Tool for Android](./../developer/app-wrapper-prepare-android.md). In addition, see [Prepare LOB apps for app protection](../developer/apps-prepare-mobile-application-management.md).
 
 ## Task list for app protection policies
 

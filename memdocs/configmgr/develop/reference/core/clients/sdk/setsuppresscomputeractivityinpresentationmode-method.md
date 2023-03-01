@@ -1,18 +1,18 @@
 ---
-title: "SetSuppressComputerActivityInPresentationMode Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+description: Learn how to set the value for SuppressComputerActivityInPresentationMode in Configuration Manager using SetSuppressComputerActivityInPresentationMode class.
+title: SetSuppressComputerActivityInPresentationMode Method
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: d7bf33f9-10e3-4257-938a-fcebaa5c5bd4
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SetSuppressComputerActivityInPresentationMode Method in Class CCM_ClientUXSettings
 The `SetSuppressComputerActivityInPresentationMode` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that sets the value for `SuppressComputerActivityInPresentationMode`.   

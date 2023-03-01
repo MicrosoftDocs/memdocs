@@ -1,18 +1,18 @@
 ---
-title: "ResolveConflict Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: ResolveConflict Method
+titleSuffix: Configuration Manager
+description: In Configuration Manager, the ResolveConflict Windows Management Instrumentation class method is used to resolve conflicts that result by creating or editing software entries, and the same software entry created by Microsoft through the online synchronization.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: b58c5608-7db3-407f-a981-d0e411d06964
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # ResolveConflict Method in Class SMS_AISoftwareList
 The `ResolveConflict` Windows Management Instrumentation (WMI) class method, in Configuration Manager, is used to resolve conflicts that result by creating or editing software entries, and the same software entry being created by Microsoft through the online synchronization.  

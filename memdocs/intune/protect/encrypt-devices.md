@@ -2,7 +2,7 @@
 # required metadata
 title: Encrypt Windows devices with BitLocker in Intune 
 titleSuffix: Microsoft Intune
-description: Use policy from Microsoft Endpoint Manager admin center to encrypt devices with the BitLocker built-in encryption method, and manage the recovery keys for those encrypted devices.
+description: Use policy from Microsoft Intune admin center to encrypt devices with the BitLocker built-in encryption method, and manage the recovery keys for those encrypted devices.
 keywords:
 author: brenduns
 ms.author: brenduns
@@ -20,9 +20,11 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: 
-  - M365-identity-device-management
-  - highpri
+ms.collection:
+- tier1
+- M365-identity-device-management
+- highpri
+- highseo
 ---
 
 # Manage BitLocker policy for Windows devices with Intune
@@ -61,7 +63,7 @@ Use one of the following procedures to create the policy type you prefer.
 
 ### Create an endpoint security policy for BitLocker
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Endpoint security** > **Disk encryption** > **Create Policy**.
 
@@ -87,7 +89,7 @@ Use one of the following procedures to create the policy type you prefer.
 
 ### Create a device configuration profile for BitLocker
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Devices** > **Configuration profiles** > **Create profile**.
 
@@ -136,7 +138,8 @@ Depending on the type of policy that you use to silently enable BitLocker, confi
 **Endpoint security disk encryption policy** - Configure the following settings in the BitLocker profile:
 
 - **Hide prompt about third-party encryption** = *Yes*
-- **Alow standard users to enable encryption during Autopilot** = *Yes*
+- **Allow standard users to enable encryption during Autopilot** = *Yes*
+- **Require Key File Creation** = *Blocked or Allowed*
 
 **Device configuration policy** - Configure the following settings in the *Endpoint protection* template or a *custom settings* profile:
 
@@ -187,7 +190,7 @@ To change the disk encryption type between full disk encryption and used space o
 
 #### TPM startup PIN or key
 
-A device **must not require** use of a startup PIN or startup key.
+A device **must not be set to require** a startup PIN or startup key.
 
 When a TPM startup PIN or startup key is required on a device, BitLocker can't silently enable on the device and instead requires interaction from the end user. Settings to configure the TPM startup PIN or key are available in both the endpoint protection template and the BitLocker policy. By default, these policies do not configure these settings.
 
@@ -214,11 +217,11 @@ Following are the relevant settings for each profile type:
 
 ### View details for recovery keys
 
-Intune provides access to the Azure AD blade for BitLocker so you can view BitLocker Key IDs and recovery keys for your Windows 10/11 devices, from within the Microsoft Endpoint Manager admin center. Support to view recovery keys can also [extend to your tenant-attached devices](#view-recovery-keys-for-tenant-attached devices).
+Intune provides access to the Azure AD blade for BitLocker so you can view BitLocker Key IDs and recovery keys for your Windows 10/11 devices, from within the Microsoft Intune admin center. Support to view recovery keys can also [extend to your tenant-attached devices](#view-recovery-keys-for-tenant-attached-devices).
 
 To be accessible, the device must have its keys escrowed to Azure AD.
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Devices** > **All devices**.
 
@@ -243,11 +246,11 @@ IT admins need to have a specific permission within Azure Active Directory to be
 All BitLocker recovery key accesses are audited. For more information on Audit Log entries, see [Azure portal audit logs](/azure/active-directory/devices/device-management-azure-portal#audit-logs).
 
 > [!NOTE]
-> If you delete the Azure AD object for an Azure AD joined device protected by BitLocker, the next time that device syncs with Azure AD it will remove the key protectors for the operating system volume. Removing the key protector leaves BitLocker in a suspended state on that volume. This is necessary because BitLocker recovery information for Azure AD joined devices is attached to the Azure AD computer object and deleting it may leave you unable to recover from a BitLocker recovery event.
+> If you delete the Intune object for an Azure AD joined device protected by BitLocker, the deletion triggers an Intune device sync and removes the key protectors for the operating system volume. Removing the key protector leaves BitLocker in a suspended state on that volume. This is necessary because BitLocker recovery information for Azure AD joined devices is attached to the Azure AD computer object and deleting it may leave you unable to recover from a BitLocker recovery event.
 
 ### View recovery keys for tenant-attached devices
 
-When you’ve configured the tenant attach scenario, Microsoft Endpoint Manager can display recovery key data for tenant attached devices.
+When you’ve configured the tenant attach scenario, Microsoft Intune can display recovery key data for tenant attached devices.
 
 - To support the display of recovery keys for tenant attached devices, your Configuration Manager sites must run version 2107 or later. For sites that run 2107, you must install an update rollup to support Azure AD joined devices: See [KB11121541](../../configmgr/hotfix/2107/11121541.md).
 
@@ -273,7 +276,7 @@ For information about BitLocker deployments and requirements, see the [BitLocker
 
 #### To rotate the BitLocker recovery key
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Devices** > **All devices**.
 

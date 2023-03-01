@@ -1,19 +1,18 @@
 ---
-title: "How to Define the Hosting Technology"
-titleSuffix: "Configuration Manager"
-description: "The hosting technology is defined by implementing the `Microsoft.ConfigurationManagement.ApplicationManagement.HostingTechnology` class."
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: How to Define the Hosting Technology
+titleSuffix: Configuration Manager
+description: The hosting technology is defined by implementing the `Microsoft.ConfigurationManagement.ApplicationManagement.HostingTechnology` class.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: how-to
 ms.assetid: 242c1cf6-3cb8-4ed7-89fb-501130832730
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Define the Hosting Technology
 To define a custom application management hosting technology, implement the `Microsoft.ConfigurationManagement.ApplicationManagement.HostingTechnology` class. The new class instance will define the hosting technology for a specific file type.  

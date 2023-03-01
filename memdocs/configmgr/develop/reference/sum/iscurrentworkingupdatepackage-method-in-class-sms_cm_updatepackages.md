@@ -1,18 +1,18 @@
 ---
-title: "IsCurrentWorkingUpdatePackage Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: IsCurrentWorkingUpdatePackage Method
+titleSuffix: Configuration Manager
+description: The IsCurrentWorkingUpdatePackage WMI class method checks whether the update package is the package that setup is currently working on.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 01f3462e-0d03-455d-a05e-375fb8681337
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # IsCurrentWorkingUpdatePackage Method in Class SMS_CM_UpdatePackages
 The `IsCurrentWorkingUpdatePackage` Windows Management Instrumentation (WMI) class method, in Configuration Manager, checks whether the update package is the package that setup is currently working on.  

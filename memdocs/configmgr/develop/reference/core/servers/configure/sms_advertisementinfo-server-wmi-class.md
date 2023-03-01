@@ -1,18 +1,18 @@
 ---
-title: "SMS_AdvertisementInfo Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: SMS_AdvertisementInfo Class
+description: Learn how to use the SMS_AdvertisementInfo class in Configuration Manager to provide information about a specific advertisement.
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: de34161a-9f17-4b93-b1b0-5020f0533886
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_AdvertisementInfo Server WMI Class
 The `SMS_AdvertisementInfo` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that provides information about a specific advertisement.  

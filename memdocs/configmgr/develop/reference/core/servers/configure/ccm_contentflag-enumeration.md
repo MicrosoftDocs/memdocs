@@ -1,18 +1,18 @@
 ---
-title: "CCM_CONTENTFLAG Enumeration"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: CCM_CONTENTFLAG Enumeration
+titleSuffix: Configuration Manager
+description: Learn about the CCM_CONTENTFLAG Enumeration that contains options for transferring content.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 759cd7fa-2980-4b1a-905a-1bb1a21402af
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # CCM_CONTENTFLAG Enumeration
 The **CCM_CONTENTFLAG** enumeration contains options for transferring content.  

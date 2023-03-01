@@ -7,7 +7,7 @@ keywords:
 author: brenduns 
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/04/2022
+ms.date: 08/11/2022
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,15 +18,18 @@ ms.localizationpriority: high
 #ROBOTS:
 #audience:
 
-ms.reviewer: laarrizz
+ms.reviewer: juidaewo
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: 
    - intune-azure
    - contperf-fy21q1
-ms.collection: 
-  - M365-identity-device-management
-  - highpri
+ms.collection:
+- tier1
+- M365-identity-device-management
+- highpri
+- highseo
+
 ---
 
 # Use security baselines to configure Windows devices in Intune
@@ -46,7 +49,11 @@ This feature applies to:
 
 You deploy security baselines to groups of users or devices in Intune, and the settings apply to devices that run Windows 10/11. For example, the *MDM Security Baseline* automatically enables BitLocker for removable drives, automatically requires a password to unlock a device, automatically disables basic authentication, and more. When a default value doesn't work for your environment, customize the baseline to apply the settings you need.
 
-Separate baseline types can include the same settings but use different default values for those settings. It's important to understand the defaults in the baselines you choose to use, and to then modify each baseline to fit your organizational needs.
+Separate baseline types can include the same settings and use different default values for those settings. It's important to understand the defaults in the baselines you choose to use, and to then modify each baseline to fit your organizational needs.
+
+In almost all scenarios, the default settings in the security baselines are the most restrictive. You should confirm that these settings don't conflict with other policy settings or features in your environment.
+
+For example, the default settings for firewall configuration might not merge connection security rules and local policy rules with MDM rules. So, if you're using delivery optimization, then you should validate these configurations before assigning the security baseline.
 
 > [!NOTE]
 > Microsoft doesn't recommend using preview versions of security baselines in a production environment. The settings in a preview baseline might change over the course of the preview.
@@ -86,7 +93,7 @@ The following security baseline instances are available for use with Intune. Use
   - [Preview: October 2019 (Edge version 77 and later)](security-baseline-settings-edge.md?pivots=edge-october-2019)
 
 - **Windows 365 Security Baseline**
-  - [Windows 365 Security Baseline version 2101](security-baseline-settings-windows-365.md)
+  - [October 2021](security-baseline-settings-windows-365.md)
 
 After a new version for a profile releases, settings in profiles based on the older versions become read-only. You can continue using those older profiles, including editing their name, description, and assignments, but you won't be able to edit settings for them or create new profiles based on the older versions.
 
@@ -96,7 +103,7 @@ When you're ready to use the more recent version of a baseline, you can create n
 
 Each new version instance of a baseline can add or remove settings or introduce other changes. For example, as new Windows settings become available with new versions of Windows 10/11, the MDM Security Baseline might receive a new version instance that includes the newest settings.
 
-In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), under **Endpoint security** > **Security baselines** you'll see a list of the available baselines. The list includes:
+In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), under **Endpoint security** > **Security baselines** you'll see a list of the available baselines. The list includes:
 - The baseline template name.
 - How many profiles you have that use that type of baseline.
 - How many separate instances (versions) of the baseline type are available.
@@ -105,16 +112,6 @@ In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink
 To view more information about the baseline versions you use, select a baseline type, like *MDM Security Baseline* to open its *Profiles* pane, and then select **Versions**. Intune displays details about the versions of that baseline that are in use by your profiles. The details include the most recent and current baseline version. You can select a single version to view deeper details about the profiles that use that version.
 
 You can choose to [change of the version](security-baselines-configure.md#change-the-baseline-version-for-a-profile) of a baseline that's in use with a given profile. When you change the version, you don't have to create a new baseline profile to take advantage of updated versions. Instead you can select a baseline profile and use the built-in option to change the instance version for that profile to a new one.
-
-### Compare baseline versions
-
-On the **Versions** pane for a security baseline is a list of each version of this baseline that you've deployed. This list also includes the most recent and active version of the baseline. When you create a new security baseline *profile*, the profile uses that most recent version of the security baseline. You can continue using profiles based on older versions, including editing their name, description, and assignments, but you won't be able to edit settings for those older profile versions.
-
-To understand what's changed between versions, select the checkboxes for two different versions, and then select **Compare baselines**. You're then prompted to download a CSV file that details those differences.
-
-The download identifies each setting in the two baseline versions, and notes if this setting has changed (*notEqual*) or has remained the same (*equal*). Details also include the default value for the setting by version, and if the setting was *added* to the more recent version, or *removed* from the more recent version.
-
-![Compare baselines](./media/security-baselines/compare-baselines.png)
 
 ## Avoid conflicts
 

@@ -1,18 +1,18 @@
 ---
-title: "View Monthly Usage Summary Information"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: View Monthly Usage Summary Information
+titleSuffix: Configuration Manager
+description: Use the SMS_MeteredFiles, SMS_MonthlyUsageSummary, SMS_MeteredUser, and SMS_R_System classes to view the monthly usage summary information.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: how-to
 ms.assetid: 6c9c4ddf-0c0a-48ca-b9ef-099d2043fe27
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to View Monthly Usage Summary Information
 You view monthly usage summary information, in Configuration Manager, by using the [SMS_MeteredFiles](../../develop/reference/apps/sms_meteredfiles-server-wmi-class.md), [SMS_MonthlyUsageSummary](../../develop/reference/apps/sms_monthlyusagesummary-server-wmi-class.md), [SMS_MeteredUser](../../develop/reference/apps/sms_metereduser-server-wmi-class.md) and [SMS_R_System](../../develop/reference/core/clients/manage/sms_r_system-server-wmi-class.md) classes.  

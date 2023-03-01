@@ -8,7 +8,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 04/16/2021
+ms.date: 08/23/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -25,7 +25,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-classic; get-started
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Intune operated by 21Vianet in China  
@@ -47,15 +49,18 @@ Because the China services are operated by a partner from inside China, there ar
 - Management of Windows 10 is supported by using the modern MDM channel.
 - Intune operated by 21Vianet doesn't support on-premises Exchange Connector.
 - Windows Autopilot and Business Store features aren't currently available.
+- Microsoft Endpoint Manager Endpoint Analytics and Log Analytics features aren't currently available.
 - Because Google Mobile Services isn't available in China, customers in Intune operated by 21Vianet can't use features that require Google Mobile Services. These features include:
   - Google Play Protect capabilities such as SafetyNet device attestation.
   - Managing apps from the Google Play Store.
   - Android Enterprise capabilities. For more information, see this [Google documentation](https://support.google.com/work/android/answer/6270910?hl=en).
-- The Intune Company Portal app for Android uses Google Mobile Services  to communicate with the Microsoft Intune service. Because Google Play services isn't available in China, some tasks can require up to 8 hours to finish. For more information, see this [article](../apps/manage-without-gms.md#limitations-of-intune-device-administrator-management-when-gms-is-unavailable). 
+- The Intune Company Portal app for Android uses Google Mobile Services  to communicate with the Microsoft Intune service. Because Google Play services isn't available in China, some tasks can require up to 8 hours to finish. For more information, see this [article](../apps/manage-without-gms.md#limitations-of-intune-management-when-gms-is-unavailable). 
 - To follow local regulations and provide improved functionality, the Intune client experience (Company Portal app) may differ in China.
 - Fencing isn't available.
 - Mobile Application Management (MAM) availability is conditional on those apps being available in People's Republic of China.
-- Intune operated by 21Vianet doesn't support Android (AOSP) management for corporate devices.  
+- Intune operated by 21Vianet doesn't support Android (AOSP) management for corporate devices. 
+- Intune operated by 21Vianet doesn't support Mobile Threat Defense (MTD) connector for Android and iOS devices with MTD vendors.
+- Intune operated by 21Vianet doesn't support partner device management integration with Jamf for macOS devices.
 
 ## You control customer data
 
@@ -76,8 +81,8 @@ With Microsoft Azure, Intune, Microsoft 365, and Power BI operated by 21Vianet, 
 
 The Tenant Administrator role for Intune operated by 21Vianet can request data for data subjects in the following ways:
 
-- Using the Azure Active Directory Admin Center, a Tenant Administrator can permanently delete a data subject from Azure Active Directory and related services. For more information, see [Azure Data Subject Requests - Delete](/microsoft-365/compliance/gdpr-dsr-azure?view=o365-worldwide#step-5-delete)
-- System-generated logs for Microsoft services operated by 21Vianet can be exported by Tenant Administrators using the Data Log Export. For more information, see [Azure Data Subject Requests - Export](/microsoft-365/compliance/gdpr-dsr-azure?view=o365-worldwide#step-6-export).
+- Using the Azure Active Directory Admin Center, a Tenant Administrator can permanently delete a data subject from Azure Active Directory and related services. For more information, see [Azure Data Subject Requests - Delete](/microsoft-365/compliance/gdpr-dsr-azure#step-5-delete)
+- System-generated logs for Microsoft services operated by 21Vianet can be exported by Tenant Administrators using the Data Log Export. For more information, see [Azure Data Subject Requests - Export](/microsoft-365/compliance/gdpr-dsr-azure#step-6-export).
 
 ## Next steps
 

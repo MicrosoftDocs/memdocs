@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/12/2022
+ms.date: 05/19/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -26,6 +26,7 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection:
+- tier1
 - M365-identity-device-management
 - iOS/iPadOS
 - Android
@@ -75,7 +76,7 @@ Regardless of whether the device is enrolled in a unified endpoint management (U
 For more information on the available settings, see [Android app protection policy settings](app-protection-policy-settings-android.md) and [iOS app protection policy settings](app-protection-policy-settings-ios.md).
 
 > [!IMPORTANT]
-> To apply Intune app protection policies against apps on Android devices that are not enrolled in Intune, the user must also install the Intune Company Portal. For more information, see [What to expect when your Android app is managed by app protection policies](../fundamentals/end-user-mam-apps-android.md).
+> To apply Intune app protection policies against apps on Android devices that are not enrolled in Intune, the user must also install the Intune Company Portal.  
 
 ## Utilize app configuration
 
@@ -111,7 +112,7 @@ This configuration scenario only works with enrolled devices. However, any UEM p
 
 ## General app configuration scenarios
 
-Office for iOS and Android offers administrators the ability to customize the default configuration for several in-app settings.  This capability is offered for both enrolled devices via any UEM provider and for devices that are not enrolled when Office for iOS and Android has an Intune App Protection Policy applied.
+Office for iOS/iPadOS and Android offers administrators the ability to customize the default configuration for several in-app settings using either [iOS/iPadOS](../apps/app-configuration-policies-use-ios.md) or [Android](../apps/app-configuration-policies-use-android.md) app configuration policies.  This capability is offered for both enrolled devices via any UEM provider and for devices that are not enrolled when Office for iOS and Android has an Intune App Protection Policy applied.
 
 > [!NOTE]
 > If an App Protection Policy is targeted to the users, the recommendation is to deploy the general app configuration settings in a **Managed Apps** enrollment model. This ensures the App Configuration Policy is deployed to both enrolled devices and unenrolled devices. 
@@ -119,6 +120,8 @@ Office for iOS and Android offers administrators the ability to customize the de
 Office supports the following settings for configuration:
 
 - Manage the creation of Sticky Notes
+- Set add-ins preference
+- Manage Teams apps running on Office app for Android
 
 ### Manage the creation of Sticky Notes
 
@@ -128,34 +131,37 @@ By default, Office for iOS and Android enables users to create Sticky Notes. For
 |-------------------------------------------------------------------|-------------|
 |    com.microsoft.office.NotesCreationEnabled    |    **true** (default) enables Sticky Notes creation for the work or school account<br>**false** disables Sticky Notes creation for the work or school account    |
 
+### Set add-ins preference
 
-## Data protection app configuration scenarios
-
-Office for iOS and Android supports app configuration policies for the following data protection settings when the app is managed by Microsoft Endpoint Manager with an Intune App Protection Policy applied to the work or school account that is signed into the app and the policy settings are delivered only through a managed apps App Configuration Policy:
-
-- Manage file transfers via Transfer Files action
-- Manage file transfers via Share Nearby action
-
-These settings can be deployed to the app regardless of device enrollment status.
-
-### Manage file transfers
-
-By default, Office for iOS and Android enables users to share content using a variety of mechanisms:
-
-- If the file is hosted in OneDrive or SharePoint, users can initiate a share request directly within the file.
-- Users can transfer files to desktop systems using the **Transfer Files** action.
-- Users can share files to nearby mobile devices using the **Share Nearby** action.
-
-The **Transfer Files** and **Share Nearby** actions only work with media, local files, and files that are not protected by an App Protection Policy. 
+For iOS/iPadOS devices running Office, you (as the admin) can set whether Office add-ins are enabled. These app settings can be deployed using an [app configuration policy](../apps/app-configuration-policies-use-ios.md) in Intune.
 
 |    Key    |    Value    |
 |-------------------------------------------------------------------|-------------|
-|    com.microsoft.office.ShareNearby.IsAllowed.IntuneMAMOnly    |    **true** (default) enables the Share Nearby feature for the work or school account<br>**false** disables the Share Nearby feature for the work or school account    |
-|    com.microsoft.office.TransferFiles.IsAllowed.IntuneMAMOnly    |    **true** (default) enables the Transfer Files feature for the work or school account<br>**false** disables the Transfer Files feature for the work or school account    |
+|    com.microsoft.office.OfficeWebAddinDisableAllCatalogs    |    **true** (default) disables the entire add-in platform<br>**false** enables the add-in platform    |
 
-### Deploy app configuration scenarios with Microsoft Endpoint Manager
+If you need to enable or disable the Office Store portion of the platform for iOS devices, you can use the following key.
 
-If you are using Microsoft Endpoint Manager as your mobile app management provider, see [Add app configuration policies for managed apps without device enrollment](app-configuration-policies-managed-app.md) on how to create a  managed apps app configuration policy for the data protection app configuration scenarios. After the configuration is created, you can assign the policy to groups of users.
+|    Key    |    Value    |
+|-------------------------------------------------------------------|-------------|
+|    com.microsoft.office.OfficeWebAddinDisableOMEXCatalog    |    **true** (default) disables only the Office Store portion of the platform<br>**false** enables the Office Store portion of the platform<br>**NOTE:** Sideloaded will continue to work.    |
+
+For more information about adding configuration keys, see [Add app configuration policies for managed iOS/iPadOS devices](../apps/app-configuration-policies-use-ios.md).
+
+### Manage Teams apps running on Office app for Android
+
+IT admins can manage access to Teams apps by creating [custom permission policies](/MicrosoftTeams/teams-app-permission-policies#create-a-custom-app-permission-policy) and [assigning these policies to users](/MicrosoftTeams/policy-assignment-overview) using Teams admin center. You can now also run Teams personal tab apps in Office app for Android. Teams personal tab apps built using [Microsoft Teams JavaScript client SDK v2](/microsoftteams/platform/tabs/how-to/using-teams-client-sdk?tabs=javascript%2Cmanifest-teams-toolkit) (version 2.0.0) and [Teams App manifest](/microsoftteams/platform/resources/schema/manifest-schema) (version 1.13) appear in Office app for Android under the “Apps” menu.
+
+There may be additional management requirements specific to Office app for Android. You may want to:
+- Only allow specific users in your organization to try enhanced Teams apps on Office app for Android, or
+- Block all users in your organization from using enhanced Teams apps on Office app for Android.
+
+To manage these, you can use the following key:
+
+|    Key    |    Value    |
+|-------------------------------------------------------------------|-------------|
+|    com.microsoft.office.officemobile.TeamsApps.IsAllowed    |    **true** (default) enables Teams apps on Office app for Android<br>**false** disables Teams apps on Office app for Android    |
+
+This key can be used both by managed devices and managed apps.
 
 ## Next steps
 

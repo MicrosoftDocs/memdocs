@@ -6,11 +6,12 @@ ms.date: 05/04/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: troubleshooting
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: medium
-ms.collection: highpri
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Common issues when enabling TLS 1.2
@@ -65,7 +66,7 @@ If the service connection point doesn't upload data to SCCMConnectedService, [up
 
 ## Configuration Manager console displays Intune onboarding dialog box
 
-If the Intune onboarding dialog box appears when the console tries to connect to the Microsoft Endpoint Manager admin center, [update the .NET Framework](enable-tls-1-2-client.md#bkmk_net), and enable strong cryptography on each computer. After you make the changes, remember to restart the computers.
+If the Intune onboarding dialog box appears when the console tries to connect to the Microsoft Intune admin center, [update the .NET Framework](enable-tls-1-2-client.md#bkmk_net), and enable strong cryptography on each computer. After you make the changes, remember to restart the computers.
 
 ## Configuration Manager console displays failure to sign in to Azure
 

@@ -6,11 +6,12 @@ ms.date: 02/16/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: reference
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
-ms.reviewer: bmoran
+author: sheetg09
+ms.author: sheetg
+manager: apoorvseth
+ms.reviewer: mstewart,aaroncz 
 ms.localizationpriority: medium
+ms.collection: tier3
 ---
 
 # Azure AD authentication workflow

@@ -9,7 +9,7 @@ ms.author: erikje
 manager: dougeby
 ms.date: 02/08/2022
 ms.topic: overview
-ms.service: cloudpc
+ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
 ms.technology:
@@ -25,26 +25,28 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; get-started
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- tier2
 ---
 
 # Windows 365 architecture
 
-Windows 365 provides a per-user per-month license model by hosting Cloud PCs on behalf of customers in Microsoft Azure. In this model, there’s no need to consider storage, compute infrastructure architecture, or costs. The Windows 365 architecture also lets you use your existing investments in Azure networking and security. Each Cloud PC is provisioned according to the configuration you define in the Windows 365 section of the Microsoft Endpoint Manager admin center.
+Windows 365 provides a per-user per-month license model by hosting Cloud PCs on behalf of customers in Microsoft Azure. In this model, there’s no need to consider storage, compute infrastructure architecture, or costs. The Windows 365 architecture also lets you use your existing investments in Azure networking and security. Each Cloud PC is provisioned according to the configuration you define in the Windows 365 section of the Microsoft Intune admin center.
 
 ## Virtual network connectivity
 
 Each Cloud PC has a virtual network interface card (NIC) in Microsoft Azure. You have two NIC management options:
 
 - If you use Azure Active Directory (Azure AD) Join and a Microsoft hosted network, you don’t need to bring an Azure subscription or manage the NIC.
-- If you bring your own network and use an on-premises network connection, the NICs are created by Windows 365 in your Azure subscription.
+- If you bring your own network and use an Azure network connection (ANC), the NICs are created by Windows 365 in your Azure subscription.
 
-The NICs are attached to an Azure Virtual Network based on your [on-premises network connection (OPNC)](on-premises-network-connections.md) configuration.
+The NICs are attached to an Azure Virtual Network based on your [Azure network connection (ANC)](azure-network-connections.md) configuration.
 
 Windows 365 is [supported in many Azure regions](requirements.md#supported-azure-regions-for-cloud-pc-provisioning). You can control which Azure region is used in two ways:
 
 - By selecting the Microsoft-hosted network and an Azure region.
-- By selecting an Azure virtual network from your Azure subscription when [creating an OPNC](create-on-premises-network-connection.md).
+- By selecting an Azure virtual network from your Azure subscription when [creating an ANC](create-azure-network-connection.md).
 
 The Azure virtual network's region determines where the Cloud PC is created and [hosted](architecture.md#hosted-on-behalf-of-architecture).
 
@@ -58,7 +60,7 @@ By using your own Azure virtual network, Windows 365 lets you use Virtual Networ
 - [Network virtual appliances](https://azure.microsoft.com/blog/best-practices-to-consider-before-deploying-a-network-virtual-appliance/) (NVAs)
 
 > [!TIP]
-> For web filtering and network protection for Cloud PCs, consider using the [Network Protection](/microsoft-365/security/defender-endpoint/network-protection) and [Web Protection](/microsoft-365/security/defender-endpoint/web-protection-overview) features of Microsoft Defender for Endpoint. These features can be deployed across both physical and virtual endpoints by using the Microsoft Endpoint Manager admin center.
+> For web filtering and network protection for Cloud PCs, consider using the [Network Protection](/microsoft-365/security/defender-endpoint/network-protection) and [Web Protection](/microsoft-365/security/defender-endpoint/web-protection-overview) features of Microsoft Defender for Endpoint. These features can be deployed across both physical and virtual endpoints by using the Microsoft Intune admin center.
 
 ## Microsoft Endpoint Manager integration
 
@@ -67,7 +69,7 @@ By using your own Azure virtual network, Windows 365 lets you use Virtual Networ
 > [!TIP]
 > Be sure to allow access to [Windows Notification Services (WNS)](/mem/intune/fundamentals/intune-endpoints#windows-push-notification-services-wns). You might not immediately notice an impact if access is blocked. However, WNS enables Microsoft Endpoint Manager to trigger actions on Windows endpoints immediately instead of waiting for normal policy polling intervals on those devices or policy polling at startup/logon behavior. WNS [recommends](/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config) direct connectivity from the Windows client to WNS.
 
-You only need to grant access to a subset of endpoints based on your Microsoft Endpoint Manager tenant location. To find your tenant location (or Azure Scale Unit (ASU)), sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Tenant administration** > **Tenant details**. Under **Tenant location**, you’ll see something similar to "North America 0501" or "Europe 0202". The rows in the Microsoft Endpoint Manager documentation are differentiated by geographic region. Regions are indicated by the first two letters in the names (na = North America, eu = Europe, ap = Asia Pacific). Because tenants may be relocated within a region, it’s best to allow access to an entire region rather than a specific endpoint in that region.
+You only need to grant access to a subset of endpoints based on your Microsoft Endpoint Manager tenant location. To find your tenant location (or Azure Scale Unit (ASU)), sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Tenant administration** > **Tenant details**. Under **Tenant location**, you’ll see something similar to "North America 0501" or "Europe 0202". The rows in the Microsoft Endpoint Manager documentation are differentiated by geographic region. Regions are indicated by the first two letters in the names (na = North America, eu = Europe, ap = Asia Pacific). Because tenants may be relocated within a region, it’s best to allow access to an entire region rather than a specific endpoint in that region.
 
 For more information about Microsoft Endpoint Manager service regions and data location information, see [Data storage and processing in Intune](/mem/intune/protect/privacy-data-store-process).
 
@@ -88,7 +90,7 @@ When configuring Cloud PCs to use Azure AD Join, Azure AD provides:
 - The domain join mechanism for the Cloud PCs.
 - User authentication for RDP connections.
 
-For more information on how the identity services impact the deployment, management, and usage of Cloud PCs, see [identity and authentication](identity-authentication.md).
+For more information on how the identity services affect the deployment, management, and usage of Cloud PCs, see [identity and authentication](identity-authentication.md).
 
 ### Azure AD
 
@@ -127,7 +129,7 @@ Windows 365 Cloud PCs don't support third-party connection brokers.
 
 The "hosted on behalf of" architecture lets Microsoft services, after they’re delegated appropriate and scoped permissions to a virtual network by a subscription owner, attach hosted Azure services to a customer subscription. This connectivity model lets a Microsoft service provide software-as-a-service and user licensed services as opposed to standard consumption-based services.
 
-The following diagrams show the logical architecture for an Azure AD Join configuration using a Microsoft hosted network, an Azure AD Join configuration using a customer's network connection ("bring your own network"), and a Hybrid Azure AD Join configuration using an OPNC, respectively.
+The following diagrams show the logical architecture for an Azure AD Join configuration using a Microsoft hosted network, an Azure AD Join configuration using a customer's network connection ("bring your own network"), and a Hybrid Azure AD Join configuration using an ANC, respectively.
 
 ![Azure AD Join architecture with Microsoft hosted network](media/architecture/aadjhostednetwork.png)
 
@@ -137,9 +139,9 @@ The following diagrams show the logical architecture for an Azure AD Join config
 
 All Cloud PC connectivity is provided by the virtual network interface card. The "hosted on behalf of" architecture means that the Cloud PCs exist in the subscription owned by Microsoft. Therefore, Microsoft incurs the costs for running and managing this infrastructure.
 
-Windows 365 manages the capacity and in-region availability in the Windows 365 subscriptions. Windows 365 determines the size and type of VM based on the [license](cloud-pc-size-recommendations.md) you [assign to the user](assign-licenses.md). Windows 365 determines the Azure region to host your Cloud PCs in based on the virtual network you select when [creating an on-prem network connection](create-on-premises-network-connection.md).
+Windows 365 manages the capacity and in-region availability in the Windows 365 subscriptions. Windows 365 determines the size and type of VM based on the [license](cloud-pc-size-recommendations.md) you [assign to the user](assign-licenses.md). Windows 365 determines the Azure region to host your Cloud PCs in based on the virtual network you select when [creating an on-premises network connection](create-azure-network-connection.md).
 
-Windows 365 aligns with Microsoft 365 data protection policies and provisions. Customer data within Microsoft's enterprise cloud services is protected by various technologies and processes:
+Windows 365 aligns with Microsoft 365 data protection policies. Customer data within Microsoft's enterprise cloud services is protected by various technologies and processes:
 
 - Various forms of encryption.
 - Isolated logically from other tenants.

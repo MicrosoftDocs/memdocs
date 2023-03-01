@@ -1,18 +1,18 @@
 ---
-title: "Computer Management"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: Computer Management
+description: Computer management in Configuration Manager operating system deployment covers the following areas.
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: conceptual
 ms.assetid: 57146de9-c8ca-480d-9f6f-41c88525b326
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # About Computer Management
 Computer management in Configuration Manager operating system deployment covers the following areas.  

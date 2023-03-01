@@ -9,7 +9,7 @@ ms.author: erikje
 manager: dougeby
 ms.date: 02/08/2022
 ms.topic: overview
-ms.service: cloudpc
+ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
 ms.technology:
@@ -25,7 +25,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; get-started
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- tier2
 ---
 
 # Provisioning overview
@@ -42,16 +44,16 @@ Admins need only provide a few configuration details to set up the provisioning 
 At a high level, the full provisioning process looks like this:
 
 1. You [create a provisioning policy](create-provisioning-policy.md) to manage who gets access to Cloud PCs. The provisioning policies are the engines that build, configure, and make Cloud PCs available to end users. Within a policy, you’ll provide details for the network, the [image](device-images.md) used to create each Cloud PC, and an Azure Active Directory (Azure AD) user group.
-2. When a user in the Azure AD user group is assigned a Windows 365 license, Windows 365 automatically provisions a Cloud PC and sends access information to the user. This automation has three stages, which are invisible to the administrator. For more information on this automated process, see the [Details of the automated provisioning process article](automated-provisioning-steps.md).
-3. The end user receives the access information and can then sign in to the Windows Cloud PC from anywhere.
+2. When a user in the Azure AD user group is assigned a Windows 365 license, Windows 365 automatically provisions a Cloud PC for the user. This automation has three stages, which are invisible to the administrator. For more information on this automated process, see the [Details of the automated provisioning process article](automated-provisioning-steps.md).
+3. Once provisioned, the end user can then sign in to the Windows Cloud PC from anywhere.
 
 ## Provisioning policy objects
 
-A Windows 365 provisioning policy is an object in the Microsoft Endpoint Manager admin console that orchestrates the creation of a Cloud PC.
+A Windows 365 provisioning policy is an object in the Microsoft Intune admin center that orchestrates the creation of a Cloud PC.
 
 As the admin, you provide the following required information when creating a provisioning policy:
 
-- **Network**: A Microsoft-hosted network or an on-premises network connection (OPNC) dictates how the device will join Azure AD and how its network will be managed. Depending on the join type, an OPNC may have information detailing:
+- **Network**: A Microsoft-hosted network or an Azure network connection (ANC) dictates how the device will join Azure AD and how its network will be managed. Depending on the join type, an ANC may have information detailing:
   - The Azure subscription that will be associated with the Cloud PC.
   - The domain and Organizational Unit (OU) to join.
   - The Active Directory credentials to use.
@@ -82,9 +84,7 @@ Removing the targeting of a provisioning policy that was used for successful Clo
 
 Provisioning policies are assigned to user groups so there’s the possibility of overlapping groups/users.
 
-If a user is assigned to more than one provisioning policy, provisioning will honor the first assigned provisioning policy and ignore all others. If one of the provisioning policies is modified and a Cloud PC is reprovisioned, the Cloud PC will be reprovisioned with the most recently changed provisioning policy.
-
-It’s best practice to avoid any policy targeting overlaps to ensure consistent provisioning.
+If a user is assigned to more than one provisioning policy, provisioning will honor the first assigned provisioning policy and ignore all others. It’s best practice to avoid any policy targeting overlaps to ensure consistent provisioning.
 
 ## Provisioning retry
 
@@ -135,4 +135,4 @@ Any on-premises Azure AD computer accounts that were joined to the domain during
 <!-- ########################## -->
 ## Next steps
 
-[Learn about on-premises network connections](on-premises-network-connections.md)
+[Learn about Azure network connections](azure-network-connections.md)

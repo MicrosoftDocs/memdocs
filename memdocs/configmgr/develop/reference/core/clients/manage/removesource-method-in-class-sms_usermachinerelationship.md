@@ -1,19 +1,18 @@
 ---
 description: Article describing how to use RemoveSource in Configuration Manager to remove a source for the relationship between a user and a device.
-title: "RemoveSource Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: RemoveSource Method
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 683ee78e-5a8f-480c-8c95-db1333178c98
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # RemoveSource Method in Class SMS_UserMachineRelationship
 The `RemoveSource` Windows Management Instrumentation (WMI) class method, in Configuration Manager, removes a source for the relationship between a user and a device.  

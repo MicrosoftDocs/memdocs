@@ -1,11 +1,12 @@
 ---
 # required metadata
-title: Windows 10/11 settings you can deploy with Microsoft Intune to protect managed Windows devices
-description: Use Microsoft Intune endpoint protection profiles to manage settings that help protect your enrolled Windows 10 and 11 devices. 
+
+title: Settings you can manage with Intune Endpoint Protection profiles for Windows 10/11 devices
+description: View the available settings in Intune endpoint protection profiles for managed Windows 10 and 11 devices. 
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/03/2022
+ms.date: 04/22/2022
 ms.topic: reference
 ms.service: microsoft-intune
 
@@ -19,18 +20,17 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; seodec18
-ms.collection: 
-  - M365-identity-device-management
-  - highpri
+ms.collection:
+- tier3
+- M365-identity-device-management
 ---
 
-# Windows settings you can deploy with Intune policy to protect Windows devices
+# Windows settings you can manage through an Intune Endpoint Protection profile
 
 > [!NOTE]
 > [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
 
-Microsoft Intune includes many settings to help protect your devices. This article describes some of the settings you can enable and configure in Windows 10 and Windows 11 devices. These settings are created in an endpoint protection configuration profile in Intune to control security, including BitLocker and Microsoft Defender.  
-
+Microsoft Intune includes many settings to help protect your devices. This article describes the settings in the device configuration *Endpoint protection* template. To manage device security, you can also use [endpoint security policies](../protect/endpoint-security-policy.md), which focus directly on subsets of device security. 
 To configure Microsoft Defender Antivirus, see [Windows device restrictions](../configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus) or use [endpoint security Antivirus policy](endpoint-security-antivirus-policy.md).  
 
 ## Before you begin  
@@ -41,7 +41,7 @@ For more information about configuration service providers (CSPs), see [Configur
 
 ## Microsoft Defender Application Guard  
 
-While using Microsoft Edge, Microsoft Defender Application Guard protects your environment from sites that aren't trusted by your organization. When users visit sites that aren't listed in your isolated network boundary, the sites open in a Hyper-V virtual browsing session. Trusted sites are defined by a network boundary, which are configured in Device Configuration. For more information, see [Create a network boundary on Windows devices](../configuration/network-boundary-windows.md).
+For Microsoft Edge, Microsoft Defender Application Guard protects your environment from sites that aren't trusted by your organization. With Application Guard, sites that aren't in your isolated network boundary open in a Hyper-V virtual browsing session. Trusted sites are defined by a network boundary, which are configured in Device Configuration. For more information, see [Create a network boundary on Windows devices](../configuration/network-boundary-windows.md).
 
 Application Guard is only available for 64-bit Windows devices. Using this profile installs a Win32 component to activate Application Guard.  
 
@@ -219,7 +219,7 @@ The following settings are each listed in this article a single time, but all ap
   This option is ignored if *Stealth mode* is set to *Block*.  
 
   - **Not configured**  
-  - **Block** - IPSec secured packets do not receive exemptions.  
+  - **Block** - IPSec secured packets don't receive exemptions.  
   - **Allow** - Enable exemptions. The firewall's stealth mode MUST NOT prevent the host computer from responding to unsolicited network traffic that is secured by IPsec.
 
 - **Shielded**  
@@ -341,7 +341,8 @@ Custom Firewall rules support the following options:
 - **Application(s)**  
   **Default**: All  
 
-  Control connections for an app or program. Select one of the following options, and then complete the additional configuration:  
+  Control connections for an app or program. Apps and programs can be specified either by *file path*, *package family name*, or *service name*:
+
   - **Package family name** – Specify a package family name. To find the package family name, use the PowerShell command **Get-AppxPackage**.   
     Firewall CSP: [FirewallRules/*FirewallRuleName*/App/PackageFamilyName](/windows/client-management/mdm/firewall-csp#packagefamilyname)  
  
@@ -351,7 +352,7 @@ Custom Firewall rules support the following options:
   - **Windows service** – Specify the Windows service short name if it's a service and not an application that sends or receives traffic. To find the service short name, use the PowerShell command **Get-Service**.  
     Firewall CSP: [FirewallRules/*FirewallRuleName*/App/ServiceName](/windows/client-management/mdm/firewall-csp#servicename)  
 
-  - **All**– *No additional configuration is available*.  
+  - **All**– *No configurations is required* 
 
 #### IP address settings  
 
@@ -364,8 +365,8 @@ Specify the local and remote addresses to which this rule applies.
   Select **Any address** or **Specified address**.  
 
   When you use *Specified address*, you add one or more addresses as a comma-separated list of local addresses that are covered by the rule. Valid tokens include:  
-  - Use an asterisk "*" for *any* local address. If you use an asterisk, it must be the only token you use.  
-  - To specify a subnet use either the subnet mask or network prefix notation. If neither a subnet mask nor a network prefix is specified, the subnet mask defaults to 255.255.255.255.  
+  - Use an asterisk `*` for *any* local address. If you use an asterisk, it must be the only token you use.  
+  - Specify a subnet by either the subnet mask or network prefix notation. If a subnet mask or a network prefix isn't specified, the subnet mask defaults to 255.255.255.255.  
   - A valid IPv6 address.  
   - An IPv4 address range in the format of "start address - end address" with no spaces included.  
   - An IPv6 address range in the format of "start address - end address" with no spaces included.  
@@ -378,16 +379,16 @@ Specify the local and remote addresses to which this rule applies.
 
   When you use *Specified address*, you add one or more addresses as a comma-separated list of remote addresses that are covered by the rule. Tokens aren't case-sensitive. Valid tokens include:  
   - Use an asterisk "*" for *any* remote address. If you use an asterisk, it must be the only token you use.  
-  - "Defaultgateway"  
-  - "DHCP"  
-  - "DNS"  
-  - "WINS"  
-  - "Intranet" (supported on Windows versions 1809 and later)  
-  - "RmtIntranet" (supported on Windows versions 1809 and later)  
-  - "Internet" (supported on Windows versions 1809 and later)  
-  - "Ply2Renders" (supported on Windows versions 1809 and later)  
-  - "LocalSubnet" indicates any local address on the local subnet.  
-  - To specify a subnet use either the subnet mask or network prefix notation. If neither a subnet mask nor a network prefix is specified, the subnet mask defaults to 255.255.255.255.  
+  - `Defaultgateway`  
+  - `DHCP`  
+  - `DNS`  
+  - `WINS`  
+  - `Intranet` (supported on Windows versions 1809 and later)  
+  - `RmtIntranet` (supported on Windows versions 1809 and later)  
+  - `Internet` (supported on Windows versions 1809 and later)  
+  - `Ply2Renders` (supported on Windows versions 1809 and later)  
+  - `LocalSubnet` indicates any local address on the local subnet.  
+  - Specify a subnet by either the subnet mask or network prefix notation. If a subnet mask or a network prefix isn't specified, the subnet mask defaults to 255.255.255.255.  
   - A valid IPv6 address.  
   - An IPv4 address range in the format of "start address - end address" with no spaces included.  
   - An IPv6 address range in the format of "start address - end address" with no spaces included.  
@@ -399,7 +400,7 @@ Specify the local and remote ports to which this rule applies.
   **Default**: Any  
   Firewall CSP: [FirewallRules/*FirewallRuleName*/Protocol](/windows/client-management/mdm/firewall-csp#protocol)  
   Select from the following, and complete any required configurations:  
-  - **All** – No additional configuration is available.  
+  - **All** – No configuration is available.  
   - **TCP** – Configure local and remote ports. Both options support All ports or Specified ports. Enter Specified ports by using a comma-separated list.  
     - **Local ports** -    Firewall CSP: [FirewallRules/*FirewallRuleName*/LocalPortRanges](/windows/client-management/mdm/firewall-csp#localportranges)  
     - **Remote ports** -   Firewall CSP: [FirewallRules/*FirewallRuleName*/RemotePortRanges](/windows/client-management/mdm/firewall-csp#remoteportranges)  
@@ -604,7 +605,7 @@ These settings apply specifically to operating system data drives.
   BitLocker CSP: [SystemDrivesRecoveryOptions](/windows/client-management/mdm/bitlocker-csp#systemdrivesrecoveryoptions)  
 
   - **Enable** - Control how BitLocker-protected operating system drives recover when the required start-up information isn't available.  
-  - **Not configured** - Default recovery options are supported for BitLocker recovery. By default, a DRA is allowed, the recovery options are chosen by the user, including the recovery password and recovery key, and recovery information isn't backed up to AD DS.  
+  - **Not configured** - Default recovery options are supported including DRA. The end user can specify recovery options. Recovery information isn't backed up to AD DS.  
 
   When set to *Enable*, you can configure the following settings:  
 
@@ -787,7 +788,7 @@ To learn more, see [Attack surface reduction rules](/windows/security/threat-pro
 
 **Merge behavior for Attack surface reduction rules in Intune**:
 
-Attack surface reduction rules support a merger of settings from different policies, to create a superset of policy for each device. Only the settings that are not in conflict are merged, while those that are in conflict are not added to the superset of rules. Previously, if two policies included conflicts for a single setting, both policies were flagged as being in conflict, and no settings from either profile would be deployed.
+Attack surface reduction rules support a merger of settings from different policies, to create a superset of policy for each device. Only the settings that aren't in conflict are merged, while settings that are in conflict aren't added to the superset of rules. Previously, if two policies included conflicts for a single setting, both policies were flagged as being in conflict, and no settings from either profile would be deployed.
 
 Attack surface reduction rule merge behavior is as follows:
 
@@ -795,8 +796,8 @@ Attack surface reduction rule merge behavior is as follows:
   - Devices > Configuration policy > Endpoint protection profile > Microsoft Defender Exploit Guard > **Attack Surface Reduction**
   - Endpoint security > Attack surface reduction policy > **Attack surface reduction rules**
   - Endpoint security > Security baselines > Microsoft Defender for Endpoint Baseline > **Attack Surface Reduction Rules**.
-- Settings that do not have conflicts are added to a superset of policy for the device.
-- When two or more policies have conflicting settings, the conflicting settings are not added to the combined policy, while settings that don’t conflict are added to the superset policy that applies to a device.
+- Settings that don't have conflicts are added to a superset of policy for the device.
+- When two or more policies have conflicting settings, the conflicting settings aren't added to the combined policy. Settings that don’t conflict are added to the superset policy that applies to a device.
 - Only the configurations for conflicting settings are held back.
 
 **Settings in this profile**:
@@ -997,11 +998,11 @@ Block outbound connections from any app to IP addresses or domains with low repu
 - **Upload XML**  
   **Default**: *Not configured*  
 
-  To use exploit protection to [protect devices from exploits](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection), create an XML file that includes the system and application mitigation settings you want. There are two methods to create the XML file:  
+  To use *Exploit protection* to [protect devices from exploits](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection), create an XML file that includes the system and application mitigation settings you want. There are two methods to create the XML file:  
 
   - *PowerShell* - Use one or more of the *Get-ProcessMitigation*, *Set-ProcessMitigation*, and *ConvertTo-ProcessMitigationPolicy* PowerShell cmdlets. The cmdlets configure mitigation settings, and export an XML representation of them.  
 
-  - *Microsoft Defender Security Center UI* - In the Microsoft Defender Security Center, click on App & browser control and then scroll to the bottom of the resulting screen to find Exploit Protection. First, use the System settings and Program settings tabs to configure mitigation settings. Then, find the Export settings link at the bottom of the screen to export an XML representation of them.  
+  - *Microsoft Defender Security Center UI* - In the Microsoft Defender Security Center, select *App & browser control* and then scroll to the bottom of the resulting screen to find Exploit Protection. First, use the System settings and Program settings tabs to configure mitigation settings. Then, find the Export settings link at the bottom of the screen to export an XML representation of them.  
 
 - **User editing of the exploit protection interface**  
   **Default**: Not configured  
@@ -1012,7 +1013,7 @@ Block outbound connections from any app to IP addresses or domains with low repu
 
 ## Microsoft Defender Application Control  
 
-Choose additional apps that either need to be audited by, or can be trusted to run by Microsoft Defender Application Control. Windows components and all apps from Windows store are automatically trusted to run.  
+Choose apps to be audited by or that are trusted to be run by Microsoft Defender Application Control. Windows components and all apps from Windows store are automatically trusted to run.  
 
 - **Application control code integrity policies**  
   **Default**: Not configured  
@@ -1022,7 +1023,7 @@ Choose additional apps that either need to be audited by, or can be trusted to r
   
     After being enabled on a device, Application Control can only be disabled by changing the mode from *Enforce* to *Audit only*. Changing the mode from *Enforce* to *Not Configured* results in Application Control continuing to be enforced on assigned devices.  
 
-  - **Not Configured** - Application Control is not added to devices. However, settings that were previously added continue to be enforced on assigned devices. 
+  - **Not Configured** - Application Control isn't added to devices. However, settings that were previously added continue to be enforced on assigned devices. 
  
   - **Audit only** - Applications aren't blocked. All events are logged in the local client's logs.  
 
@@ -1173,7 +1174,7 @@ Block end-user access to the various areas of the Microsoft Defender Security Ce
   Turn Tamper Protection on or off on devices. To use Tamper Protection, you must [integrate Microsoft Defender for Endpoint with Intune](advanced-threat-protection.md), and have [Enterprise Mobility + Security E5 Licenses](../fundamentals/licenses.md).  
   - **Not configured** - No change is made to device settings.
   - **Enabled** - Tamper Protection is turned on and restrictions are enforced on devices.
-  - **Disabled** - Tamper Protection is turned off and restrictions are not enforced.
+  - **Disabled** - Tamper Protection is turned off and restrictions aren't enforced.
 
 ### IT contact Information  
 
@@ -1280,7 +1281,7 @@ Use these options to configure the local security settings on Windows 10/11 devi
   **Default**:  Not configured  
   CSP: [Devices_RestrictCDROMAccessToLocallyLoggedOnUserOnly](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)  
 
-  - **Enabled** - Only the interactively logged-on user can use the CD-ROM media. If this policy is enabled, and no one is logged on interactively, then the CD-ROM is accessed over the network.  
+  - **Enabled** - Only the interactively logged-on user can use the CD-ROM media. If this policy is enabled and no one is logged on interactively, then the CD-ROM is accessed over the network.  
   - **Not configured** - Anyone has access to the CD-ROM.  
 
 - **Format and eject removable media**  
@@ -1465,8 +1466,8 @@ Use these options to configure the local security settings on Windows 10/11 devi
   LocalPoliciesSecurityOptions CSP: [Shutdown_AllowSystemToBeShutDownWithoutHavingToLogOn](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)  
 
   
-  - **Block** - Hide the shutdown option on the Windows sign in screen. Users must sign in to the device, and then shut down.  
-  - **Not configured** - Allow users to shut down the device from the Windows sign in screen.  
+  - **Block** - Hide the shutdown option on the Windows sign-in screen. Users must sign in to the device, and then shut down.  
+  - **Not configured** - Allow users to shut down the device from the Windows sign-in screen.  
 
 ### User account control  
 

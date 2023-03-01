@@ -1,18 +1,18 @@
 ---
-title: "SetCategorizationRequest Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: SetCategorizationRequest Method
+titleSuffix: Configuration Manager
+description: In Configuration Manager, the SetCategorizationRequest Windows Management Instrumentation class method initiates a System Center Online software categorization request.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 9c2b8373-39ed-4296-863d-70ddb4cbb3b0
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SetCategorizationRequest Method in Class SMS_AISoftwareList
 The `SetCategorizationRequest` Windows Management Instrumentation (WMI) class method, in Configuration Manager, initiates a System Center Online software categorization request.  

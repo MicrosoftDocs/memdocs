@@ -1,18 +1,18 @@
 ---
-title: "Remove a Windows Driver from a Boot Image Package"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: Remove a Windows Driver from a Boot Image Package
+description: In Configuration Manager, you remove a Windows driver from an operating system deployment boot image package by removing it from the ReferencedDrivers property of the SMS_BootImagePackage Server WMI Class object.
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: how-to
 ms.assetid: 0d142253-1065-4b18-be64-d0513c7a3044
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Remove a Windows Driver from a Boot Image Package
 In Configuration Manager, you remove a Windows driver from an operating system deployment boot image package by removing it from the `ReferencedDrivers` property of the [SMS_BootImagePackage Server WMI Class](../../develop/reference/osd/sms_bootimagepackage-server-wmi-class.md) object.  

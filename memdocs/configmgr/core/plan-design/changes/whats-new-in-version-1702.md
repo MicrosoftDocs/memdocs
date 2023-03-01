@@ -6,11 +6,13 @@ ms.date: 05/02/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ROBOTS: NOINDEX
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # What&#39;s new in version 1702 of Configuration Manager
 
@@ -115,7 +117,7 @@ Use the [content library cleanup tool](../hierarchy/content-library-cleanup-tool
 You can use the OMS connector to connect to OMS Log Analytics in Microsoft Azure Government cloud. This requires you to modify a configuration file before you install the OMS connector so that the connector can work with the Government cloud. For more information, see [Use the OMS connector with the Azure Government cloud](/azure/azure-monitor/platform/collect-sccm).
 
 ### Software update points are added to boundary groups
-Beginning with version 1702, clients use boundary groups to find a new software update point, and to fallback and find a new software update point if their current one is no longer accessible. You can add individual software update points to different boundary groups to control which servers a client can find. For more information, see [software update points](../../servers/deploy/configure/boundary-groups-software-update-points.md) in the [configuring boundary groups](../../servers/deploy/configure/boundary-groups.md) topic.
+Beginning with version 1702, clients use boundary groups to find a new software update point, and to fall back and find a new software update point if their current one is no longer accessible. You can add individual software update points to different boundary groups to control which servers a client can find. For more information, see [software update points](../../servers/deploy/configure/boundary-groups-software-update-points.md) in the [configuring boundary groups](../../servers/deploy/configure/boundary-groups.md) topic.
 
 
 <!-- ## Migration  -->
@@ -174,7 +176,7 @@ This release includes the following improvements to Software Center warning mess
 - The default high-impact deployment message for in-place upgrades now states that
 your apps, data, and settings are automatically migrated. Previously, the default message for any operating system installation indicated that all apps, data, and settings would be lost, which was not true for an in-place upgrade.
 
-For details, see [Configure high-impact task sequence settings](../../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md#set-a-task-sequence-as-a-high-impact-task-sequence)
+For more information, see [Set a task sequence as high-impact](../../../osd/deploy-use/high-impact-task-sequence-settings.md#set-a-task-sequence-as-high-impact).
 
 ### Return to previous page when a task sequence fails
 You can now return to a previous page when you run a task sequence and there is a failure. Prior to this release, you had to restart the task sequence when there was a failure. For example, you can use the **Previous** button in the following scenarios:

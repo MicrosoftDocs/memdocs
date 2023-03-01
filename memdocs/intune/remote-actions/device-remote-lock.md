@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 02/17/2022
+ms.date: 12/19/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -20,12 +20,14 @@ ms.assetid: 3b67f285-229d-4a0f-ae34-0402a20b4518
 #ROBOTS:
 #audience:
 
-#ms.reviewer: coferro
+ms.reviewer: coferro
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Remotely lock devices with Intune
@@ -45,6 +47,7 @@ When **Remote lock** is applied to a device that doesn’t have a PIN or passwor
 - Android Enterprise work profile devices
 - Android Enterprise fully managed devices
 - Android Enterprise corporate-owned with work profile devices
+- Android Open Source Project (AOSP) devices
 - iOS
 - macOS
 
@@ -57,7 +60,7 @@ When **Remote lock** is applied to a device that doesn’t have a PIN or passwor
 
 ## Remote lock a device
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 3. Select **Devices** > **All devices**.
 4. In the list of devices, select a device, and then select the **Remote lock** action.
 

@@ -1,19 +1,18 @@
 ---
-title: "SMS_UserSettings Class"
-titleSuffix: "Configuration Manager"
-description: "The SMS_UserSettings class describes attributes that are specific to a single user that is managed by Configuration Manager."
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: SMS_UserSettings Class
+titleSuffix: Configuration Manager
+description: The SMS_UserSettings class describes attributes that are specific to a single user that is managed by Configuration Manager.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: faa33a29-a719-4288-ac1f-5fb35f2b5f1b
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_UserSettings Server WMI Class
 The `SMS_UserSettings` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that describes attributes that are specific to a single user that is managed by Configuration Manager.  

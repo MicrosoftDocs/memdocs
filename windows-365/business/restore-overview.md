@@ -7,9 +7,9 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 03/03/2022
+ms.date: 10/21/2022
 ms.topic: conceptual
-ms.service: cloudpc
+ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
 ms.technology:
@@ -25,12 +25,16 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: 
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- tier2
 ---
 
-# Point-in-time restore for Windows 365 Business (preview)
+# Point-in-time restore for Windows 365 Business
 
 Point-in-time restore lets end users restore a Cloud PC to the exact state it was at an earlier point in time.
+
+Windows 365 Business admins can also restore Cloud PCs to an earlier state on behalf of their users.
 
 ## Restore point intervals
 
@@ -44,7 +48,7 @@ As time passes and a new short-term or long-term restore point is added, the old
 
 ## End user interface
 
-To restore their Cloud PC, an end user must sign in to https://windows365.microsoft.com, select the gear icon, select **Restore (preview)**, and follow the onscreen prompts.
+To restore their Cloud PC, an end user must sign in to https://windows365.microsoft.com, select the gear icon, select **Restore**, and follow the onscreen prompts.
 
 <!-- ########################## -->
 ## Next steps

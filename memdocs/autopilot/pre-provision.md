@@ -2,20 +2,20 @@
 title: Windows Autopilot for pre-provisioned deployment
 description: Windows Autopilot for pre-provisioned deployment
 keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune, pre-provisioning, white glove, provision
-ms.prod: w10
-ms.technology: windows
+ms.prod: windows-client
+ms.technology: itpro-deploy
 ms.mktglfcycl: deploy
 ms.localizationpriority: medium
 ms.sitesec: library
 ms.pagetype: deploy
 audience: itproF
 ms.reviewer: jubaptis
-manager: dougeby
+manager: aaroncz
 ms.audience: itpro
-author: aczechowski
-ms.author: aaroncz
-ms.date: 10/18/2021
-ms.collection:
+author: frankroj
+ms.author: frankroj
+ms.date: 11/17/2022
+ms.collection: 
   - M365-modern-desktop
   - highpri
 ms.topic: how-to
@@ -23,7 +23,7 @@ ms.topic: how-to
 
 # Windows Autopilot for pre-provisioned deployment (Public preview)
 
-**Applies to**
+**Applies to:**
 
 - Windows 11
 - Windows 10, version 1903 or later
@@ -46,7 +46,7 @@ Pre-provisioned deployments use Microsoft Intune in Windows 10, version 1903 and
 ## Prerequisites
 
 > [!IMPORTANT]
-> You cannot automatically re-enroll a device through Windows Autopilot after an initial deployment in pre-provisioning mode. Instead, delete the device record in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). From the admin center, choose **Devices** &gt; **All devices** &gt; choose the devices you want to delete &gt; **Delete**. User assigned policies and apps will still be deployed to the device. For more information, see [Updates to the Windows Autopilot sign-in and deployment experience](https://techcommunity.microsoft.com/t5/intune-customer-success/updates-to-the-windows-autopilot-sign-in-and-deployment/ba-p/2848452).
+> You cannot automatically re-enroll a device through Windows Autopilot after an initial deployment in pre-provisioning mode. Instead, delete the device record in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). From the admin center, choose **Devices** &gt; **All devices** &gt; choose the devices you want to delete &gt; **Delete**. User assigned policies and apps will still be deployed to the device. For more information, see [Updates to the Windows Autopilot sign-in and deployment experience](https://techcommunity.microsoft.com/t5/intune-customer-success/updates-to-the-windows-autopilot-sign-in-and-deployment/ba-p/2848452).
 
 In addition to [Windows Autopilot requirements](software-requirements.md), Windows Autopilot for pre-provisioned deployment also requires:
 
@@ -54,17 +54,17 @@ In addition to [Windows Autopilot requirements](software-requirements.md), Windo
 - Windows Pro, Enterprise, or Education editions
 - An Intune subscription.
 - Physical devices that support TPM 2.0 and device attestation. Virtual machines aren't supported. The pre-provisioning process uses Windows Autopilot self-deploying capabilities, so TPM 2.0 is required. The TPM attestation process also requires access to a set of HTTPS URLs that are unique for each TPM provider. For more information, see the entry for Autopilot self-Deploying mode and Autopilot pre-provisioning in [Networking requirements](networking-requirements.md#tpm).
-- Physical devices with Ethernet connectivity are required to perform pre-provisioning. Wi-Fi connectivity isn't supported because of the requirement to choose a language, locale, and keyboard to make that Wi-Fi connection. Enforcing this requirement in a pre-provisioning process could prevent the user from choosing their own language, locale, and keyboard when they receive the device. For more information, see [Using a wireless network connection with Windows Autopilot white glove](https://oofhours.com/2019/11/14/using-a-wireless-network-connection-with-windows-autopilot-white-glove/).
+- Network connectivity. Using wireless connectivity requires selecting region, language and keyboard before you are able to connect and start provisioning.
 
 > [!IMPORTANT]
 >
-> - Because the OEM or vendor performs the pre-provisioning process, this <u>doesn't require access to an end-user's on-prem domain infrastructure</u>. This is unlike a typical hybrid Azure AD-joined scenario because rebooting the device is postponed. The device is resealed before the time when connectivity to a domain controller is expected, and the domain network is contacted when the device is unboxed on-prem by the end-user.
+> - Because the OEM or vendor performs the pre-provisioning process, this **doesn't require access to an end-user's on-prem domain infrastructure**. This is unlike a typical hybrid Azure AD-joined scenario because rebooting the device is postponed. The device is resealed before the time when connectivity to a domain controller is expected, and the domain network is contacted when the device is unboxed on-prem by the end-user.
 >
 > - See [Windows Autopilot known issues](known-issues.md) and [Troubleshoot Autopilot device import and enrollment](troubleshoot-device-enrollment.md) to review known errors and solutions.
 
 ## Preparation
 
-Devices slated for pre-provisioning are registered for Autopilot via the normal registration process. 
+Devices slated for pre-provisioning are registered for Autopilot via the normal registration process.
 
 To be ready to try out Windows Autopilot for pre-provisioned deployment, make sure that you can first successfully use existing Windows Autopilot user-driven scenarios:
 
@@ -102,10 +102,8 @@ Each of these scenarios consists of two parts, a technician flow and a user flow
 After the customer or IT Admin has targeted all the apps and settings they want for their devices through Intune, the pre-provisioning technician can begin the pre-provisioning process. The technician could be a member of the IT staff, a services partner, or an OEM - each organization can decide who should perform these activities. Regardless of the scenario, the process done by the technician is the same:
 
 - Boot the device.
-- From the first OOBE screen (which could be a language selection or locale selection screen), don't click **Next**. Instead, press the Windows key five times to view an additional options dialog. From that screen, choose the **Windows Autopilot provisioning** option and then click **Continue**.
+- From the first OOBE screen (which could be a language selection, locale selection screen, or the Azure AD sign-in page), don't select **Next**. Instead, press the Windows key five times to view an additional options dialog. From that screen, choose the **Windows Autopilot provisioning** option and then select **Continue**.
 
-> [!NOTE]
-> In Windows 10, version 2004 and later, if the Autopilot deployment profile Language/Region setting is not set to **User Select**, then OOBE will progress past the language/region/keyboard selection screens. This causes the pre-provisioning technician to arrive at the Azure AD login page, which is too late to enter pre-provisioning. This issue is fixed in Windows 11.
 
  ![Windows Autopilot provisioning option.](images/choice.png)
 

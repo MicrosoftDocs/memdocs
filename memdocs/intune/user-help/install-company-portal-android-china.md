@@ -27,7 +27,8 @@ ms.reviewer: jeyang
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
-ms.collection: 
+ms.collection:
+- tier2
 ---
 
 # Install Company Portal app in People's Republic of China
@@ -36,9 +37,9 @@ Install the Intune Company Portal app to access school or work resources from yo
 
 * [Google Play](https://go.microsoft.com/fwlink/?linkid=871947) (not available everywhere)
 * [Lenovo](https://go.microsoft.com/fwlink/?linkid=2125082)
-* [Xiaomi](https://go.microsoft.com/fwlink/?linkid=836947)
 * Huawei
 * OPPO 
+<!--* [Xiaomi](https://go.microsoft.com/fwlink/?linkid=836947)-->
 
 Company Portal is also available from the [Baidu App Store](https://go.microsoft.com/fwlink/?linkid=2133565). To find it:  
  

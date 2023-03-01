@@ -20,12 +20,14 @@ ms.assetid: 6ee841cc-5694-4ba1-8f66-1d58edec30a4
 #ROBOTS:
 #audience:
 
-#ms.reviewer: [ALIAS]
+ms.reviewer: 
 #ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 #ms.custom:
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Use audit logs to track and monitor events in Microsoft Intune
@@ -47,7 +49,7 @@ Users with the following permissions can review audit logs:
 
 You can review audit logs in the monitoring group for each Intune workload:
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Tenant administration** > **Audit logs**.
 3. To filter the results, select **Filter** and refine the results using the following options.
     - **Category**: such as **Compliance**, **Device**, and **Role**.
@@ -56,13 +58,13 @@ You can review audit logs in the monitoring group for each Intune workload:
 4. Select **Apply**.
 5. Select an item in the list to see the activity details.
 
-For related information about audit logs, see [Addition information](../fundamentals/monitor-audit-logs.md#additional-information).
+For related information about audit logs, see [Additional information](../fundamentals/monitor-audit-logs.md#additional-information).
 
 ## Route logs to Azure Monitor
 
 Audit logs and operational logs can also be routed to Azure Monitor. In **Tenant administration** > **Audit logs**, select **Export**:
 
-:::image type="content" source="./media/monitor-audit-logs/audit-logs-export-data-settings.png" alt-text="Export log data to Azure monitor by selecting Export data settings in Microsoft Intune and Endpoint Manager admin center.":::
+:::image type="content" source="./media/monitor-audit-logs/audit-logs-export-data-settings.png" alt-text="Export log data to Azure monitor by selecting Export data settings in Microsoft Intune and Intune admin center.":::
 
 > [!NOTE]
 >
@@ -74,7 +76,7 @@ Audit logs and operational logs can also be routed to Azure Monitor. In **Tenant
 
 ## Use Graph API to retrieve audit events
 
-For details on using the graph API to get up to one year of audit events, see [List auditEvents](/graph/api/intune-auditing-auditevent-list?view=graph-rest-1.0).
+For details on using the graph API to get up to one year of audit events, see [List auditEvents](/graph/api/intune-auditing-auditevent-list).
 
 ## Next steps
 

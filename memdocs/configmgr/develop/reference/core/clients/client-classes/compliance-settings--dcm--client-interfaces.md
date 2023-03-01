@@ -1,18 +1,18 @@
 ---
-title: "Compliance Settings Client Interfaces"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: Compliance Settings Client Interfaces
+titleSuffix: Configuration Manager
+description: Learn about the configuration management COM automation classes and related types used by client applications to manage configuration items on the client computer.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 5b566a81-4d1b-4d19-94cb-0fb6589cf76c
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # Compliance Settings (DCM) Client Interfaces
 In Configuration Manager, the desired configuration management COM automation classes and related types are used by client applications to manage configuration items on the client computer. They concern client-side behavior only and are called externally by the Desired Configuration Management Agent, which is enabled by default on the client computer. For more information about the agent, see [Enable or disable the compliance settings agent](../../../../compliance/how-to-enable-or-disable-the-compliance-settings--dcm--agent.md).  

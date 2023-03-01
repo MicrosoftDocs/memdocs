@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/24/2022
+ms.date: 10/10/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -23,9 +23,11 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: get-started
-ms.collection: 
-  - M365-identity-device-management
-  - highpri
+ms.collection:
+- tier1
+- M365-identity-device-management
+- highpri
+- highseo
 ---
 
 # Deployment guide: Setup or move to Microsoft Intune
@@ -41,7 +43,7 @@ In this guide, you sign up for Intune, add your domain name, configure Intune as
 
 - **Intune subscription**: Intune is licensed as a stand-alone Azure service, a part of [Enterprise Mobility + Security (EMS)](https://www.microsoft.com/microsoft-365/enterprise-mobility-security), and included with [Microsoft 365](https://www.microsoft.com/licensing/product-licensing/microsoft-365-enterprise). For more information on how to get Intune, see [Intune licensing](licenses.md).
 
-  In most scenarios, [Microsoft 365](https://www.microsoft.com/licensing/product-licensing/microsoft-365-enterprise) may be the best option, as it gives you EMS, [Microsoft Endpoint Manager](../../endpoint-manager-overview.md), and Office 365.
+  In most scenarios, [Microsoft 365](https://www.microsoft.com/licensing/product-licensing/microsoft-365-enterprise) may be the best option, as it gives you EMS, [Microsoft Intune](what-is-intune.md), and Office 365 apps.
 
   You can also [sign up for a free trial account](../fundamentals/free-trial-sign-up.md).
 
@@ -51,13 +53,13 @@ In this guide, you sign up for Intune, add your domain name, configure Intune as
 
 If you currently don't use any MDM or MAM provider, then you have some options:
 
-- **Intune + Endpoint Manager**: If you want a cloud solution, then consider going straight to Intune. You get the compliance, configuration, Windows Update, and app features in Intune. You also get the benefits of the Endpoint Manager admin center, which is a web-based console.
+- **Microsoft Intune**: If you want a cloud solution, then consider going straight to Intune. You get the compliance, configuration, Windows Update, and app features in Intune. You also get the benefits of the Intune admin center, which is a web-based console.
 
   Next, [deploy Intune](#deploy-intune) (in this article).
   
-- **Configuration Manager + Endpoint Manager**: If you want the features of Configuration Manager (on-premises) combined with the cloud, then consider [tenant attach](#option-1-add-tenant-attach) or [co-management](#option-2-set-up-co-management). With Configuration Manager, you can:
+- **Configuration Manager**: If you want the features of Configuration Manager (on-premises) combined with the cloud, then consider [tenant attach](#option-1-add-tenant-attach) or [co-management](#option-2-set-up-co-management). With Configuration Manager, you can:
 
-  - [Manage on-premises devices](../../configmgr/core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md), including Windows Server or Windows 8.1 devices.
+  - [Manage on-premises devices](../../configmgr/core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md), including Windows Server.
   - [Manage partner or third party software updates](../../configmgr/sum/understand/software-updates-introduction.md).
   - [Create custom task sequences](../../configmgr/osd/deploy-use/manage-task-sequences-to-automate-tasks.md) when deploying operating systems.
   - [Deploy and manage many app](../../configmgr/apps/understand/introduction-to-application-management.md) types. 
@@ -110,7 +112,7 @@ If you currently use Configuration Manager, and want to use Intune, then you hav
 
 ### Option 1: Add tenant attach
 
-Tenant attach allows you to upload your Configuration Manager devices to your organization in Intune, also known as a "tenant". After you attach your devices, you use the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) to run remote actions, such as sync machine and user policy. You can also see your on-premises servers, and get OS information.
+Tenant attach allows you to upload your Configuration Manager devices to your organization in Intune, also known as a "tenant". After you attach your devices, you use the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) to run remote actions, such as sync machine and user policy. You can also see your on-premises servers, and get OS information.
 
 Tenant attach is included with your [Configuration Manager co-management license](../../configmgr/core/understand/product-and-licensing-faq.yml) at no extra cost. It's the easiest way to integrate the cloud (Intune) with your on-premise Configuration Manager setup.
 
@@ -188,7 +190,7 @@ In the cloud, MDM providers, such as Intune, manage settings and features on dev
 - On Apple devices, these profiles use the [Device management payloads](https://developer.apple.com/documentation/devicemanagement).
 - On Windows devices, these profiles use the [Windows configuration service providers (CSPs)](/windows/client-management/mdm/configuration-service-provider-reference).
 
-When moving devices from group policy, use [Group policy analytics](../configuration/group-policy-analytics.md). In Endpoint Manager, you import your GPOs, and see which policies are available (and not available) in Intune.
+When moving devices from group policy, use [Group policy analytics](../configuration/group-policy-analytics.md). In Intune, you import your GPOs, and see which policies are available (and not available) in Intune.
 
 Next, [deploy Intune](#deploy-intune) (in this article).
 
@@ -276,11 +278,11 @@ This section includes an overview of the steps. Use these steps as guidance, and
 
         `C:\psscripts\ExportedIntunePolicies\CompliancePolicies\PolicyName.json`
 
-3. Sign in to the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). The policies you imported are shown.
+3. Sign in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). The policies you imported are shown.
 
 ## Deploy Intune
 
-1. Sign in to the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and sign up for Intune. If you have an existing subscription, you can also sign in to it.
+1. Sign in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and sign up for Intune. If you have an existing subscription, you can also sign in to it.
 
     For more information, see [Sign up, or sign in to Intune](account-sign-up.md).
 
@@ -292,7 +294,7 @@ This section includes an overview of the steps. Use these steps as guidance, and
 
     For more information, see [Add a custom domain name](custom-domain-name-configure.md).
 
-4. Add [users](users-add.md) and [groups](groups-add.md). These users and groups receive the policies you create in Endpoint Manager.
+4. Add [users](users-add.md) and [groups](groups-add.md). These users and groups receive the policies you create in Intune.
 
     Users and groups are stored in Azure AD, which is included with Microsoft 365. You may not see the Azure AD branding, but that's what you're using. Azure AD is the backend system that stores users, groups, and devices. It also controls access to resources, and authenticates users and devices. Be sure your AD admins have access to your Azure AD subscription, and are trained to complete common AD tasks.
 
@@ -310,7 +312,7 @@ This section includes an overview of the steps. Use these steps as guidance, and
 
 6. By default, all device platforms can enroll in Intune. If you want to prevent specific platforms, then create a restriction.
 
-    For more information, see [Create a device type restriction](../enrollment/enrollment-restrictions-set.md#create-a-device-type-restriction).
+    For more information, see [Create a device platform restriction](../enrollment/create-device-platform-restrictions.md).  
 
 7. Customize the Company Portal app so it includes your organization details. Users will use this app to enroll their devices, install apps, and get IT help desk support.
 

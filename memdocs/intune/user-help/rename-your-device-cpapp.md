@@ -26,7 +26,8 @@ ms.reviewer:
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
-ms.collection: 
+ms.collection:
+- tier2
 ---
 
 # Rename device from the Company Portal app for Windows
@@ -36,7 +37,7 @@ Rename a device to make it easier to recognize from other devices. The Company P
 * Android  
 
 ## Rename device from **Device details** page  
-Complete the following step to remove a device from the Company Portal **Device details** page. 
+Complete the following step to rename a device from the Company Portal **Device details** page. 
 
 1. Open the Company Portal app and go to **My Devices**.  
 
@@ -50,7 +51,7 @@ Complete the following step to remove a device from the Company Portal **Device 
      ![Example screenshot of the Company Portal app for Windows, Device details page, Rename popup field.](./media/1808_RenameApp_Popup.png)  
 
 ## Rename device from device context menu  
-Complete the following step to remove a device through the [context menu](/windows/uwp/design/controls-and-patterns/menus) actions.  
+Complete the following step to rename a device through the [context menu](/windows/uwp/design/controls-and-patterns/menus) actions.  
 
 1. On the **Home** page of the Company Portal app, go to **My Devices**.
 

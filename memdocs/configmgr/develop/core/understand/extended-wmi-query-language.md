@@ -1,18 +1,18 @@
 ---
-title: "Extended WMI Query Language"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: Extended WMI Query Language
+titleSuffix: Configuration Manager
+description: A superset of the Windows Management Instrumentation (WMI) Query Language (WQL) known as Extended WQL. Configuration Manager supports both WQL and Extended WQL.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: conceptual
 ms.assetid: ea9ebb36-8bd7-49ed-a0d5-8dc6dba104d0
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # Configuration Manager Extended WMI Query Language
 Configuration Manager supports a superset of the Windows Management Instrumentation (WMI) Query Language (WQL) known as Extended WQL. Both WQL and Extended WQL are retrieval-only languages that are used to create queries. Neither language can be used to create, modify, or delete classes or instances.  

@@ -8,11 +8,10 @@ author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 01/19/2022
-ms.topic: conceptual
+ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
-ms.technology:
 
 # optional metadata
 
@@ -25,8 +24,9 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; seodec18
 ms.collection:
-  - M365-identity-device-management
-  - highpri
+- tier1
+- M365-identity-device-management
+- highpri
 ---
 
 # Windows 10/11 and newer device settings to run as a kiosk in Intune
@@ -87,7 +87,7 @@ Runs only one app on the device, such as a web browser or Store app.
 
     > [!NOTE]
     > This setting enables the Microsoft Edge browser on the device.
-    > 
+    >
     > - To configure Microsoft Edge version 77 and newer settings, use the [Settings Catalog](settings-catalog.md), or create an [Administrative template](administrative-templates-configure-edge.md).
     > - To configure Microsoft Edge version 45 and older, create a [device restrictions profile](device-restrictions-configure.md), and [configure the settings](device-restrictions-windows-10.md#microsoft-edge-legacy-version-45-and-older).
 

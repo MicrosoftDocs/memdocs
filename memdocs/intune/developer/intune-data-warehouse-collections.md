@@ -24,7 +24,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier3
+- M365-identity-device-management
 ---
 
 # Intune Data Warehouse Collections
@@ -325,7 +327,7 @@ The **deviceEnrollmentType** entity indicates how a device was enrolled. The enr
 | 6                | WindowsBulkUserless                | Windows 10 Bulk enrollment through   ICD with certificate.                               |
 | 7                | WindowsAutoEnrollment              | Windows 10 automatic enrollment.   (Add work account)                                    |
 | 8                | WindowsBulkAzureDomainJoin         | Windows 10 bulk Azure AD Join.                                                           |
-| 9                | WindowsCoManagement                | Windows 10 co-management triggered   by AutoPilot or Group Policy.                       |
+| 9                | WindowsCoManagement                | Windows 10 co-management triggered   by Autopilot or Group Policy.                       |
 | 10               | WindowsAzureADJoinsUsingDeviceAuth | Windows 10 Azure AD Join using   Device Auth.                                            |
 
 ## enrollmentActivities 

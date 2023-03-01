@@ -1,18 +1,18 @@
 ---
-title: "SMS_ConfigurationItemSettings Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+description: Learn how to represent configuration item settings using the SMS_ConfigurationItemSettings class in Configuration Manager.
+title: SMS_ConfigurationItemSettings Class
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 1a412c5a-39de-4ba0-8fe7-c52f67cd076d
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_ConfigurationItemSettings Server WMI Class
 The `SMS_ConfigurationItemSettings` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents configuration item settings.  

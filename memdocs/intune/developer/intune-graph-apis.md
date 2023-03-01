@@ -8,7 +8,7 @@ keywords: intune graphapi c# powershell permission roles
 author: dougeby
 manager: dougeby
 ms.author: dougeby
-ms.date: 02/28/2022
+ms.date: 02/23/2023
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -21,12 +21,14 @@ ms.assetid: 79A67342-C06D-4D20-A447-678A6CB8D70A
 #ROBOTS:
 #audience:
 
-#ms.reviewer: jamiesil
+ms.reviewer: jamiesil
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure, has-adal-ref
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier3
+- M365-identity-device-management
 ---
 # How to use Azure AD to access the Intune APIs in Microsoft Graph
 
@@ -66,7 +68,7 @@ To learn more, see:
 
 To register an app to use Microsoft Graph API:
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) using administrative credentials.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) using administrative credentials.
 
     As appropriate, you may use:
     - The tenant admin account.
@@ -146,6 +148,10 @@ At this point, you may also:
 
   3. Save your changes.
 
+## App listing
+
+If you receive a large amount of data while requesting your app listing when using Graph API, you may encounter a 503 Service Unavailable error. We recommended that you try again with a smaller page size, such as 20 or fewer elements.
+
 ## Intune permission scopes
 
 Azure AD and Microsoft Graph use permission scopes to control access to corporate resources.  
@@ -157,7 +163,7 @@ To learn more:
 - [Application permission scopes](/azure/active-directory/develop/active-directory-v2-scopes)
 
 When you grant permission to Microsoft Graph, you can specify the following scopes to control access to Intune features:
-The following table summarizes the Intune API permission scopes.  The first column shows the name of the feature as displayed in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and the second column provides the permission scope name.
+The following table summarizes the Intune API permission scopes.  The first column shows the name of the feature as displayed in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and the second column provides the permission scope name.
 
 _Enable Access_ setting | Scope name
 :--|---
@@ -173,7 +179,7 @@ __Read Microsoft Intune Device Configuration and Policies__ | [DeviceManagementC
 __Read and write Microsoft Intune configuration__ | [DeviceManagementServiceConfig.ReadWrite.All](#svc-rw)
 __Read Microsoft Intune configuration__ | DeviceManagementServiceConfig.Read.All
 
-The table lists the settings as they appear in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). The following sections describe the scopes in alphabetical order.
+The table lists the settings as they appear in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). The following sections describe the scopes in alphabetical order.
 
 At this time, all Intune permission scopes require administrator access.  This means you need corresponding credentials when running apps or scripts that access Intune API resources.
 

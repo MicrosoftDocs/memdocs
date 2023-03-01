@@ -1,18 +1,18 @@
 ---
-title: "RequestMachinePolicy Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: RequestMachinePolicy Method
+titleSuffix: Configuration Manager
+description: In Configuration Manager, the RequestMachinePolicy method initiates a request for machine policy.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 3a2d4d06-074f-4174-9398-e3df3d230414
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # RequestMachinePolicy Method in Class SMS_Client
 The `RequestMachinePolicy` method, in Configuration Manager, initiates a request for machine policy.  

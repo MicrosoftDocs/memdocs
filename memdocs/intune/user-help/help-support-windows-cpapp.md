@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Get help and support in Company Portal for Windows devices | Microsoft Docs
+title: Get help and support in Company Portal for Windows devices
 description: Learn how to get help and support in Company Portal for Windows.   
 keywords:
 author: lenewsad
@@ -25,7 +25,8 @@ ms.reviewer:
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
-ms.collection: 
+ms.collection:
+- tier2
 ---
 
 # Get help and support in Company Portal for Windows devices  
@@ -55,7 +56,7 @@ For the step-by-step procedure, see [Send logs to your company support from the 
 Use your organization's helpdesk details, such as phone number, emails, and website to quickly troubleshoot work or school access.  
 
 ## Find answers to frequently asked questions  
-The **Frequently asked questions** section lists some of the most common questions people ask when enrolling their devices. Select a question to go to the most relevant help article on Docs.microsoft.com. Select **See all help topics** to browse through all Windows enrollment articles.   
+The **Frequently asked questions** section lists some of the most common questions people ask when enrolling their devices. Select a question to go to the most relevant help article on Microsoft Learn. Select **See all help topics** to browse through all Windows enrollment articles.
 
 ## Report app problems to Microsoft  
 Select **Report problem to Microsoft** to open the **Send feedback** page. From there, you can:  
@@ -65,10 +66,8 @@ Select **Report problem to Microsoft** to open the **Send feedback** page. From 
 * Leave a review for the app in Microsoft Store   
 
 ## IT pro and administrator documentation  
-Other help and support documentation is available for IT pros and Intune administrators on docs.microsoft.com. 
+Other help and support documentation is available for IT pros and Intune administrators on microsoft.com.
 
-* [Docs.microsoft.com](https://docs.microsoft.com): Home to the Microsoft technical documentation where you can explore all guides and articles by product. 
-* [Microsoft Endpoint Manager documentation](/mem): Official product documentation for Microsoft Endpoint Manager, which includes Microsoft Intune, Microsoft Endpoint Configuration Manager, and Windows Autopilot.  
-* [Troubleshooting device enrollment in Intune](/troubleshoot/mem/intune/troubleshoot-device-enrollment-in-intune): Microsoft Intune article suggestions for troubleshooting device enrollment issues in Microsoft Intune.  
-
-
+* [Microsoft Learn](/): Home to the technical documentation where you can explore all guides and articles by product.
+* [Microsoft Endpoint Manager documentation](../../index.yml): Official product documentation for Microsoft Endpoint Manager, which includes Microsoft Intune, Microsoft Configuration Manager, and Windows Autopilot.  
+* [Troubleshooting device enrollment in Intune](/troubleshoot/mem/intune/troubleshoot-device-enrollment-in-intune): Microsoft Intune article suggestions for troubleshooting device enrollment issues in Microsoft Intune.

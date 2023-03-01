@@ -6,14 +6,13 @@ ms.date: 04/30/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: conceptual
-
-
 ms.assetid: cf84f727-0993-455b-9184-313bc10a3ce2
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Compliance settings views in Configuration Manager

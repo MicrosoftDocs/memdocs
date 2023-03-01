@@ -1,18 +1,18 @@
 ---
-title: "DDRAddStringArray"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: DDRAddStringArray
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 2763cae0-56ae-4ea0-8654-fcc95613831b
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+description: Learn how the DDRAddStringArray function, in Configuration Manager, adds a string array property to the data discovery record.
+ms.reviewer: mstewart,aaroncz 
 ---
 # DDRAddStringArray
 The `DDRAddStringArray` function, in Configuration Manager, adds a string array property to the data discovery record (DDR).  

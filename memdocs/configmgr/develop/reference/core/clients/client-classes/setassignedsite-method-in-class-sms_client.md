@@ -1,18 +1,18 @@
 ---
-title: "SetAssignedSite Methodt"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+description: Learn how the SetAssignedSite method, in Configuration Manager, sets the client's assigned site.
+title: SetAssignedSite Methodt
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 2a8b79cd-9aaa-4aff-a8cb-74d8b8102dfd
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SetAssignedSite Method in Class SMS_Client
 The `SetAssignedSite` method, in Configuration Manager, sets the client's assigned site.  

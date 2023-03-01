@@ -1,18 +1,18 @@
 ---
-title: "SMS_InstalledSoftwareMS Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: SMS_InstalledSoftwareMS Class
+titleSuffix: Configuration Manager
+description: This SMS_InstalledSoftwareMS class is no longer used in Configuration Manager.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 3d13ea8d-dd55-4b85-bb54-596b677366c5
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_InstalledSoftwareMS Client WMI Class
 > [!IMPORTANT]

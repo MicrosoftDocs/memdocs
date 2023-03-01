@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/16/2021
+ms.date: 02/27/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -26,7 +26,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure, seoapril2019
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # How to manage volume purchased apps from the Microsoft Store for Business with Microsoft Intune
@@ -36,13 +38,16 @@ ms.collection: M365-identity-device-management
 The [Microsoft Store for Business](https://www.microsoft.com/business-store) gives you a place to find and purchase apps for your organization, individually, or in volume. By connecting the store to Microsoft Intune, you can manage volume-purchased apps from the portal. For example:
 
 * You can synchronize the list of apps you have purchased (or that are free) from the store with Intune.
-* Apps that are synchronized appear in the Intune administration console; you can assign these apps like any other apps.
+* Apps that are synchronized appear in the Microsoft Intune admin center; you can assign these apps like any other apps.
 * Both Online and Offline licensed versions of Apps are synchronized to Intune. App names will be appended with "Online" or "Offline" in the portal.
-* You can track how many licenses are available, and how many are being used in the Intune administration console.
+* You can track how many licenses are available, and how many are being used in the admin center.
 * Intune blocks assignment and installation of apps if there are an insufficient number of licenses available.
-* Apps managed by Microsoft Store for Business will automatically revoke licenses when a user leaves the enterprise, or when the administrator removes the user and the user devices.
+* Intune will revoke app licenses for apps managed by Microsoft Store for Business when the user is deleted from Azure AD.
 
 ## Before you start
+
+> [!IMPORTANT]
+> Microsoft Store for Business will be retired in the first quarter of 2023. However, admins can still leverage the connection to Store for Business and Education from their UEM solution to deploy apps to managed Windows 11 devices until they are retired in 2023.
 
 Review the following information before you start syncing and assigning apps from the Microsoft Store for Business:
 
@@ -57,24 +62,27 @@ Review the following information before you start syncing and assigning apps fro
 - Enrolled devices must be using the 1511 release of Windows 10 or later.
 
 > [!NOTE]
+> Online Microsoft Store for Business apps can be used only for user context install; that is, when deployed through Intune, you need to target user groups. Device licensed offline Microsoft Store for Business apps can be installed in device context; that is, when deployed through Intune, you can target device groups as well as user groups.
+
+> [!NOTE]
 > If you disable access to the Store on managed devices (either manually, via policy or Group Policy), Online licensed apps will fail to install.
 
 ## Associate your Microsoft Store for Business account with Intune
 
-Before you enable synchronization in the Intune console, you must configure your store account to use Intune as a management tool:
+Before you enable synchronization in the Microsoft Intune admin center, you must configure your store account to use Intune as a management tool:
 
 1. Ensure that you sign into the [Microsoft Store for Business](https://www.microsoft.com/business-store) using the same tenant account you use to sign into Intune.
 2. In the Business Store, choose the **Manage** tab, select **Settings**, and choose the **Distribute** tab.
 3. If you don't specifically have **Microsoft Intune** available as a mobile device management tool, choose **Add management tool** to add **Microsoft Intune**. If you don't have **Microsoft Intune** activated as your mobile device management tool, click **Activate** next to **Microsoft Intune**. Note that you should activate **Microsoft Intune** rather than **Microsoft Intune Enrollment**.
 
 > [!NOTE]
-> You could previously only associate one management tool to assign apps with the Microsoft Store for Business. You can now associate multiple management tools with the store, for example, Intune and Configuration Manager.
+> Previously you could associate only one management tool to assign apps with the Microsoft Store for Business. Now you can associate multiple management tools with the store, for example, Intune and Configuration Manager.
 
-You can now continue, and set up synchronization in the Intune console.
+Continue to set up synchronization in the Microsoft Intune admin center.
 
 ## Configure synchronization
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Tenant administration** > **Connectors and tokens** > **Microsoft Store for Business**.
 3. Click **Enable**.
 4. If you haven't already done so, click the link to sign up for the Microsoft Store for Business and associate your account as detailed previously.
@@ -105,12 +113,17 @@ When you assign a Microsoft Store for Business app, a license is used by each us
 
 ## Remove apps
 
-To remove an app that is synced from the Microsoft Store for Business, you need to log into the Microsoft Store for Business and refund the app. The process is the same whether the app is free or not. For a free app, the store will refund $0. The example below shows a refund for a free app. 
+To remove an app that is synced from the Microsoft Store for Business, you need to log into the Microsoft Store for Business and complete the following steps. The process is the same whether the app is free or not. 
 
-![Screenshot of remove app details](./media/windows-store-for-business/microsoft-store-for-business-01.png)
-
-> [!NOTE]
-> Removing an app's visibility in the private store won't keep Intune from syncing the app. You must refund the app to fully remove the app.
+1. Ensure that you sign into the [Microsoft Store for Business](https://www.microsoft.com/business-store) using the same tenant account you use to sign into Intune.
+2. Look for the app that you want to remove by selecting **Products & services** > **Apps & software** and select it.
+3. In the **Users** pane select all users, click on the **...** symbol under the **Actions** column and choose to **Reclaim license**.
+   :::image type="content" source="./media/windows-store-for-business/microsoft-store-for-business-03.png" alt-text="Screenshot of the app license available in the Microsoft Store."  lightbox="./media/windows-store-for-business/microsoft-store-for-business-03.png" :::
+4. Open the **Private store availability** tab of the app and change its availability to **No one**.
+   :::image type="content" source="./media/windows-store-for-business/microsoft-store-for-business-04.png" alt-text="Screenshot of app license private store availability." lightbox="./media/windows-store-for-business/microsoft-store-for-business-04.png":::
+5. Select the **Product details** link on the top and then select the **...** button next to **Install**. If the previous steps have been completed successfully, a **Remove product** option will be available. Select **Remove product** to remove the app from the Microsoft Store for Business. 
+  :::image type="content" source="./media/windows-store-for-business/microsoft-store-for-business-02.png" alt-text="Screenshot of the app listing in the Microsoft Store." lightbox="./media/windows-store-for-business/microsoft-store-for-business-02.png":::
+6. Sync the apps using the Microsoft for Business Store connector in Intune in order to remove the app from the list of Windows apps in Intune.
 
 ## Next steps
 

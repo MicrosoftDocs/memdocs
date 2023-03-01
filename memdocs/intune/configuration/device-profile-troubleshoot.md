@@ -7,13 +7,11 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/07/2022
+ms.date: 10/24/2022
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
-ms.technology:
-ms.assetid: 
 
 # optional metadata
 
@@ -25,10 +23,14 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Common questions and answers with device policies and profiles in Microsoft Intune
+
+[!INCLUDE [windows-phone-81-windows-10-mobile-support](../includes/windows-phone-81-windows-10-mobile-support.md)]
 
 Get answers to common questions when working with device profiles and policies in Intune. This article also lists the check-in time intervals, provides more detains on conflicts, and more.
 
@@ -46,7 +48,6 @@ If a device doesn't check in to get the policy or profile after the first notifi
 | macOS | About every 8 hours |
 | Android | About every 8 hours |
 | Windows 10/11 PCs enrolled as devices | About every 8 hours |
-| Windows Phone | About every 8 hours |
 | Windows 8.1 | About every 8 hours |
 
 If devices recently enroll, then the compliance, non-compliance, and configuration check-in runs more frequently. The check-ins are **estimated** at:
@@ -57,10 +58,9 @@ If devices recently enroll, then the compliance, non-compliance, and configurati
 | macOS | Every 15 minutes for 1 hour, and then around every 8 hours | 
 | Android | Every 3 minutes for 15 minutes, then every 15 minutes for 2 hours, and then around every 8 hours | 
 | Windows 10/11 PCs enrolled as devices | Every 3 minutes for 15 minutes, then every 15 minutes for 2 hours, and then around every 8 hours | 
-| Windows Phone | Every 5 minutes for 15 minutes, then every 15 minutes for 2 hours, and then around every 8 hours | 
 | Windows 8.1 | Every 5 minutes for 15 minutes, then every 15 minutes for 2 hours, and then around every 8 hours | 
 
-At any time, users can open the Company Portal app, **Settings** > **Sync** to immediately check for policy or profile updates.
+At any time, users can open the Company Portal app, **Devices** > **Check Status** or **Settings** > **Sync** to immediately check for policy or profile updates. For related information about the Intune Management Extension agent or Win32 apps, see [Win32 app management in Microsoft Intune](../apps/apps-win32-app-management.md).
 
 ## What actions cause Intune to immediately send a notification to a device?
 
@@ -82,6 +82,8 @@ When two or more policies are assigned to the same user or device, then the sett
 
 - If a configuration policy setting conflicts with a setting in another configuration policy, this conflict is shown in Intune. Manually resolve these conflicts.
 
+In the Intune admin center, there are few places you can create configuration policies, including Group Policy analytics, Endpoint Security, Security Baselines, and more. If there's a conflict and you have multiple policies, then check all the places you've configured policies. Also, the built-in reporting features can help with conflicts. For more information on the available reports, go to [Intune reports](../fundamentals/reports.md).
+
 ## What happens when app protection policies conflict with each other? Which one is applied to the app?
 
 Conflict values are the most restrictive settings available in an app protection policy. The exception is numeric entry fields, such as PIN attempts before reset. Numeric entry fields are set the same as the values, as if you created a MAM policy using the recommended settings option.
@@ -90,11 +92,13 @@ Conflicts happen when two profile settings are the same. For example, you config
 
 A policy is deployed to the app and takes effect. A second policy is deployed. In this scenario, the first policy takes precedence, and stays applied. The second policy shows a conflict. If both are applied at the same time, meaning that there isn't preceding policy, then both are in conflict. Any conflicting settings are set to the most restrictive values.
 
-## What happens when iOS/iPadOS custom policies conflict?
+## What happens when iOS/iPadOS or macOS custom policies conflict?
 
 Intune doesn't evaluate the payload of Apple Configuration files or a custom Open Mobile Alliance Uniform Resource Identifier (OMA-URI) policy. It merely serves as the delivery mechanism.
 
-When you assign a custom policy, confirm that the configured settings don't conflict with compliance, configuration, or other custom policies. If a custom policy and its settings conflict, then the settings are applied randomly.
+When you assign a custom policy, confirm that the configured settings don't conflict with compliance, configuration, or other custom policies. If a custom policy and its settings conflict, then the settings are applied randomly by Apple.
+
+The built-in reporting features can help with conflicts. For more information on the available reports, go to [Intune reports](../fundamentals/reports.md).
 
 ## What happens when a profile is deleted or no longer applicable?
 
@@ -116,7 +120,7 @@ When you delete a profile, or remove a device from a group that's assigned the p
 
 - A profile applies to a user group. Later, a user is removed from the group. For the settings to be removed from that user, it can take up to 7 hours or more for:
 
-  - The profile to be removed from the policy assignment in the Endpoint Manager admin center
+  - The profile to be removed from the policy assignment in the Intune admin center
   - The device to sync with the Intune object using the [platform-specific policy refresh cycle](#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned) (in this article)
 
 ## I changed a device restriction profile, but the changes haven't taken effect
@@ -132,6 +136,21 @@ Some settings on Windows client devices may show as "Not Applicable". When this 
 
 To learn more about the version and SKU requirements for the different settings, see the [Configuration Service Provider (CSP) reference](/windows/client-management/mdm/configuration-service-provider-reference).
 
+## When devices enroll, there is a delay in applying apps and policies assigned to dynamic device groups
+
+During enrollment, you can use Azure AD dynamic device groups. For example, you can create a dynamic device group based on a device's name or enrollment profile.
+
+The enrollment profile is applied to the device record during initial device setup. Azure AD dynamic grouping isn't instant. The device may not be in the dynamic group for some time, possibly minutes to hours depending on other changes being made in your tenant.
+
+If the device isn't added to the group, then your apps and policies aren't assigned to the device during the initial Intune check-in. The policies may not apply until the next scheduled check-in.
+
+If fast delivery of apps and policies is important to your setup/enrollment scenario, then assign your apps and policies to user groups, not dynamic device groups. User groups are pre-populated with members before device setup and don't have this delay.
+
+For more information on dynamic groups, go to:
+
+- [Add groups to organize users and devices in Intune](../fundamentals/groups-add.md)
+- [Dynamic membership rules for groups in Azure AD](/azure/active-directory/enterprise-users/groups-dynamic-membership)
+
 ## Next steps
 
-Need extra help? See [How to get support in Microsoft Endpoint Manager](../../get-support.md).
+Need extra help? See [How to get support in Microsoft Intune](../../get-support.md).

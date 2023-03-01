@@ -1,25 +1,24 @@
 items:
 - name: Configure device settings
   href: index.yml
-- name: Overview
+- name: Device configuration overview and profile types
   expanded: true
-  items:
-  - name: Device configuration overview
-    href: device-profiles.md
-- name: Quickstarts
-  items:
-  - name: Create an email device profile
-    href: quickstart-email-profile.md
-- name: Tutorials
-  items:
-  - name: Create an administrative template
-    href: tutorial-walkthrough-administrative-templates.md
+  href: device-profiles.md
+
 - name: How-to guides
   items:
   - name: Profiles - Get started
     href: device-profile-create.md
   - name: Settings catalog
-    href: settings-catalog.md
+    displayName: gpo, admx
+    items:
+    - name: Overview and get started
+      href: settings-catalog.md
+    - name: Common tasks
+      href: settings-catalog-common-features.md
+    - name: Universal Print policy
+      displayName: printers
+      href: settings-catalog-printer-provisioning.md
   - name: Custom settings
     displayName: oma-uri, csp
     items:
@@ -34,6 +33,8 @@ items:
     items:
     - name: Configure email
       href: email-settings-configure.md
+    - name: Email example
+      href: quickstart-email-profile.md
     - name: Issues and resolutions 
       href: /troubleshoot/mem/intune/troubleshoot-email-profiles-in-microsoft-intune
   - name: VPN
@@ -61,13 +62,21 @@ items:
     items:
     - name: Group Policy analytics
       href: group-policy-analytics.md
+    - name: Create policy using imported GPOs
+      href: group-policy-analytics-migrate.md
     - name: Create administrative templates
       href: administrative-templates-windows.md
-    - name: Update Office using administrative templates
+    - name: Tutorial - Comparing administrative templates with on-premises GPOs
+      href: tutorial-walkthrough-administrative-templates.md
+    - name: Add custom and partner ADMX
+      href: administrative-templates-import-custom.md
+    - name: Update Office using ADMX
       href: administrative-templates-update-office.md
-    - name: Create Microsoft Edge policy
+    - name: Create Microsoft Edge policy using ADMX
       href: administrative-templates-configure-edge.md
-  - name: BIOS settings on Windows
+    - name: Restrict USB devices using ADMX
+      href: administrative-templates-restrict-usb.md
+  - name: UEFI BIOS settings on Windows
     href: device-firmware-configuration-interface-windows.md
     displayName: dfci, firmware
   - name: Domain Join on Windows
@@ -78,24 +87,27 @@ items:
     displayName: delivery optimization, windows updates
   - name: Upgrade Windows and S mode
     href: edition-upgrade-configure-windows-10.md
+  - name: Wired networks
+    href: wired-networks-configure.md
+    displayName: 802.1x
   - name: Device features on iOS/iPadOS and macOS
     items:
     - name: Device features
       href: device-features-configure.md
       displayName: airprint, home screen, lock screen, sso, single sign-on
-    - name: Use Enterprise SSO plug-in
+    - name: Enterprise SSO plug-in overview
       href: use-enterprise-sso-plug-in-ios-ipados-macos.md
-    - name: Use Enterprise SSO plug-in in Jamf Pro
-      href: use-enterprise-sso-plug-in-ios-ipados-macos-with-jamf-pro.md
+      items:
+      - name: iOS/iPadOS SSO plug-in
+        href: use-enterprise-sso-plug-in-ios-ipados-with-intune.md
+      - name: macOS SSO plug-in
+        href: use-enterprise-sso-plug-in-macos-with-intune.md
   - name: Extensions on macOS
     href: kernel-extensions-overview-macos.md
     displayName: kernel extensions, system extensions
   - name: Preference file on macOS
     href: preference-file-settings-macos.md
     displayName: property list files, plist
-  - name: Wired networks on macOS
-    href: wired-networks-configure.md
-    displayName: 802.1x
   - name: Mobility Extensions on Zebra devices
     displayName: mx, android, stagenow
     items:
@@ -121,7 +133,7 @@ items:
     displayName: trusted sites
   - name: Windows health monitoring
     href: windows-health-monitoring.md
-    displayName: endpoint analytics, microsoft productivity score 
+    displayName: endpoint analytics, microsoft Adoption Score 
   - name: Education Take a Test app
     href: education-settings-configure.md
   - name: eSIM cellular on Windows
@@ -143,129 +155,126 @@ items:
       href: /troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune
     - name: Common questions and answers
       href: device-profile-troubleshoot.md
-- name: Reference
+
+- name: Configuration profile settings lists
   items:
-  - name: Configuration profile settings
+  - name: Android device administrator
+    items: 
+    - name: Custom
+      items:
+      - name: Custom settings
+        href: custom-settings-android.md
+      - name: Allow/block apps for Samsung Knox Standard
+        href: samsung-knox-apps-allow-block.md
+    - name: Device restrictions
+      href: device-restrictions-android.md
+    - name: Email
+      href: email-settings-android.md
+    - name: VPN
+      href: vpn-settings-android.md
+    - name: Wi-Fi
+      href: wi-fi-settings-android.md
+  - name: Android (AOSP) 
+    items: 
+    - name: Device restrictions
+      href: device-restrictions-android-aosp.md  
+    - name: Wi-Fi
+      href: wi-fi-settings-android-aosp.md
+  - name: Android Enterprise
     items:
-    - name: Android device administrator
-      items: 
-      - name: Custom
-        items:
-        - name: Custom settings
-          href: custom-settings-android.md
-        - name: Allow/block apps for Samsung Knox Standard
-          href: samsung-knox-apps-allow-block.md
-      - name: Device restrictions
-        href: device-restrictions-android.md
-      - name: Email
-        href: email-settings-android.md
-      - name: VPN
-        href: vpn-settings-android.md
-      - name: Wi-Fi
-        href: wi-fi-settings-android.md
-    - name: Android (AOSP) 
-      items: 
-      - name: Device restrictions
-        href: device-restrictions-android-aosp.md  
-    - name: Android Enterprise
-      items:
-      - name: Custom
-        href: custom-settings-android-for-work.md
-      - name: Device restrictions
-        href: device-restrictions-android-for-work.md
-      - name: Email
-        href: email-settings-android-enterprise.md
-      - name: VPN
-        href: vpn-settings-android-enterprise.md
-      - name: Wi-Fi
-        href: wi-fi-settings-android-enterprise.md
-    - name: iOS/iPadOS
-      items:
-      - name: Custom
-        href: custom-settings-ios.md
-      - name: Device features
-        href: ios-device-features-settings.md
-      - name: Device restrictions
-        href: device-restrictions-ios.md
-      - name: Email
-        href: email-settings-ios.md
-      - name: VPN
-        href: vpn-settings-ios.md
-      - name: Wi-Fi
-        href: wi-fi-settings-ios.md
-      - name: Bundle IDs for built-in apps
-        href: bundle-ids-built-in-ios-apps.md
-    - name: macOS
-      items:
-      - name: Custom
-        href: custom-settings-macos.md
-      - name: Device features
-        href: macos-device-features-settings.md
-      - name: Device restrictions
-        href: device-restrictions-macos.md
-      - name: Endpoint protection
-        href: ../protect/endpoint-protection-macos.md?toc=/intune/configuration/toc.json&bc=/intune/configuration/breadcrumb/toc.json
-      - name: Extensions
-        href: kernel-extensions-settings-macos.md
-      - name: VPN
-        href: vpn-settings-macos.md
-      - name: Wi-Fi
-        href: wi-fi-settings-macos.md
-      - name: Wired networks
-        href: wired-network-settings-macos.md
-    - name: Windows 10/11
-      items:
-      - name: Custom
-        href: custom-settings-windows-10.md
-      - name: Delivery optimization
-        href: delivery-optimization-settings.md
-      - name: Device restrictions
-        href: device-restrictions-windows-10.md
-      - name: Device restrictions (Windows 10 Team)
-        href: device-restrictions-windows-10-teams.md
-      - name: Edition upgrade and mode switch
-        href: edition-upgrade-windows-settings.md
-      - name: Email
-        href: email-settings-windows-10.md
-      - name: Endpoint protection
-        href: ../protect/endpoint-protection-windows-10.md?toc=/intune/configuration/toc.json&bc=/intune/configuration/breadcrumb/toc.json
-      - name: Identity protection
-        href: ../protect/identity-protection-windows-settings.md?toc=/intune/configuration/toc.json&bc=/intune/configuration/breadcrumb/toc.json
-      - name: Kiosk
-        href: kiosk-settings-windows.md
-      - name: Secure assessment
-        href: education-settings-windows.md
-      - name: Shared multi-user device
-        href: shared-user-device-settings-windows.md
-      - name: VPN
-        href: vpn-settings-windows-10.md
-      - name: Wi-Fi
-        href: wi-fi-settings-windows.md
-    - name: Windows Holographic for Business
-      items:
-      - name: Custom
-        href: custom-settings-windows-holographic.md
-      - name: Device restrictions
-        href: device-restrictions-windows-holographic.md
-      - name: Edition upgrade and mode switch
-        href: holographic-upgrade.md
-      - name: Kiosk
-        href: kiosk-settings-holographic.md
-      - name: Shared multi-user device
-        href: shared-user-device-settings-windows-holographic.md 
-    - name: Windows 8.1
-      items:
-      - name: Device restrictions
-        href: device-restrictions-windows-8-1.md
-      - name: VPN
-        href: vpn-settings-windows-8-1.md
-    - name: Windows Phone 8.1
-      items:
-      - name: Custom
-        href: custom-settings-windows-phone-8-1.md
-      - name: Device restrictions
-        href: device-restrictions-windows-phone-8-1.md
-      - name: Email
-        href: email-settings-windows-phone-8-1.md
-      - name: VPN
-        href: vpn-settings-windows-phone-8-1.md
+    - name: Custom
+      href: custom-settings-android-for-work.md
+    - name: Device restrictions-Organization devices
+      href: device-restrictions-android-for-work.md
+    - name: Device restrictions-Personal devices 
+      href: device-restrictions-android-enterprise-personal.md
+    - name: Email
+      href: email-settings-android-enterprise.md
+    - name: VPN
+      href: vpn-settings-android-enterprise.md
+    - name: Wi-Fi
+      href: wi-fi-settings-android-enterprise.md
+  - name: iOS/iPadOS
+    items:
+    - name: Custom
+      href: custom-settings-ios.md
+    - name: Device features
+      href: ios-device-features-settings.md
+    - name: Device restrictions
+      href: device-restrictions-ios.md
+    - name: Email
+      href: email-settings-ios.md
+    - name: VPN
+      href: vpn-settings-ios.md
+    - name: Wi-Fi
+      href: wi-fi-settings-ios.md
+    - name: Bundle IDs for built-in apps
+      href: bundle-ids-built-in-ios-apps.md
+  - name: macOS
+    items:
+    - name: Custom
+      href: custom-settings-macos.md
+    - name: Device features
+      href: macos-device-features-settings.md
+    - name: Device restrictions
+      href: device-restrictions-macos.md
+    - name: Endpoint protection
+      href: ../protect/endpoint-protection-macos.md?toc=/intune/configuration/toc.json&bc=/intune/configuration/breadcrumb/toc.json
+    - name: Extensions
+      href: kernel-extensions-settings-macos.md
+    - name: VPN
+      href: vpn-settings-macos.md
+    - name: Wi-Fi
+      href: wi-fi-settings-macos.md
+    - name: Wired networks
+      href: wired-network-settings-macos.md
+  - name: Windows 10/11
+    items:
+    - name: Custom
+      href: custom-settings-windows-10.md
+    - name: Delivery optimization
+      href: delivery-optimization-settings.md
+    - name: Device Firmware Configuration Interface (DFCI)
+      href: device-firmware-configuration-interface-windows-settings.md
+    - name: Device restrictions
+      href: device-restrictions-windows-10.md
+    - name: Device restrictions (Windows 10 Team)
+      href: device-restrictions-windows-10-teams.md
+    - name: Edition upgrade and mode switch
+      href: edition-upgrade-windows-settings.md
+    - name: Email
+      href: email-settings-windows-10.md
+    - name: Endpoint protection
+      href: ../protect/endpoint-protection-windows-10.md?toc=/intune/configuration/toc.json&bc=/intune/configuration/breadcrumb/toc.json
+    - name: Identity protection
+      href: ../protect/identity-protection-windows-settings.md?toc=/intune/configuration/toc.json&bc=/intune/configuration/breadcrumb/toc.json
+    - name: Kiosk
+      href: kiosk-settings-windows.md
+    - name: Secure assessment
+      href: education-settings-windows.md
+    - name: Shared multi-user device
+      href: shared-user-device-settings-windows.md
+    - name: VPN
+      href: vpn-settings-windows-10.md
+    - name: Wi-Fi
+      href: wi-fi-settings-windows.md
+    - name: Wired network
+      href: wired-network-settings-windows.md
+  - name: Windows Holographic for Business
+    items:
+    - name: Custom
+      href: custom-settings-windows-holographic.md
+    - name: Device restrictions
+      href: device-restrictions-windows-holographic.md
+    - name: Edition upgrade and mode switch
+      href: holographic-upgrade.md
+    - name: Kiosk
+      href: kiosk-settings-holographic.md
+    - name: Shared multi-user device
+      href: shared-user-device-settings-windows-holographic.md 
+  - name: Windows 8.1
+    items:
+    - name: Device restrictions
+      href: device-restrictions-windows-8-1.md
+    - name: VPN
+      href: vpn-settings-windows-8-1.md

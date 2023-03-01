@@ -1,19 +1,18 @@
 ---
 description: Learn how to install an application using the Install Windows Management Instrumentation (WMI) class method.
-title: "Install Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: Install Method
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 8666bb0c-1969-4c88-92db-853ed3128412
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # Install Method in Class CCM_Application
 The `Install` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that installs an application.   

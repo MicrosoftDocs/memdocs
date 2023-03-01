@@ -1,18 +1,18 @@
 ---
-title: "GetChainedPullDPs Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: GetChainedPullDPs Method
+titleSuffix: Configuration Manager
+description: The GetChainedPullDPs WMI class method, in Configuration Manager, ensures that when a source distribution point is assigned, a looping chain is not generated.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 063a6390-8eb4-459d-b0b6-34592afe6326
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # GetChainedPullDPs Method in Class SMSDistributionPointInfo
 The `GetChainedPullDPs` Windows Management Instrumentation (WMI) class method, in Configuration Manager, ensures that when a source distribution point is assigned, a looping chain is not generated. (If distribution point 1 is the source of distribution point 2, and distribution point 2 is the source of distribution point 3, then distribution point 3 cannot be source of distribution point 1).  

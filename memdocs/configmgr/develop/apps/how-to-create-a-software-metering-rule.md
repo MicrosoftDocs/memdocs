@@ -1,18 +1,18 @@
 ---
-title: "How to Create a Software Metering Rule"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: How to Create a Software Metering Rule
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: how-to
 ms.assetid: 9929aeac-7f48-4151-b228-d66be910a9c8
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-description: "You can create a software metering rule in Configuration Manager by creating an instance of the SMS_MeteredProductRule class and populating the properties."
-
+ms.collection: tier3
+description: You can create a software metering rule in Configuration Manager by creating an instance of the SMS_MeteredProductRule class and populating the properties.
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Create a Software Metering Rule
 You create a software metering rule, in Configuration Manager, by creating an instance of the `SMS_MeteredProductRule` class and populating the properties.  

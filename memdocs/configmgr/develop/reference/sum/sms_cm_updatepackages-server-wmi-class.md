@@ -1,19 +1,18 @@
 ---
-title: "SMS_CM_UpdatePackages Class"
-titleSuffix: "Configuration Manager"
-description: "An SMS Provider server class, in Configuration Manager, that represents update packages."  
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: SMS_CM_UpdatePackages Class
+titleSuffix: Configuration Manager
+description: An SMS Provider server class, in Configuration Manager, that represents update packages.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 18ca108c-5c3c-4022-b72b-b3a62ce53549
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_CM_UpdatePackages Server WMI Class
 The  `SMS_CM_UpdatePackages` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents update packages.  

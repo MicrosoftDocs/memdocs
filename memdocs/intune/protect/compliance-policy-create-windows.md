@@ -8,7 +8,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 5/5/2021
-ms.topic: conceptual
+ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
@@ -18,14 +18,16 @@ ms.localizationpriority: medium
 #ROBOTS:
 #audience:
 
-ms.reviewer: samyada
+ms.reviewer: tycast
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: 
-  - M365-identity-device-management
-  - highpri
+ms.collection:
+- tier1
+- M365-identity-device-management
+- highpri
+- highseo
 ---
 
 # Device Compliance settings for Windows 10/11 in Intune
@@ -197,7 +199,9 @@ Applies only to co-managed devices running Windows 10/11. Intune-only devices re
   [Firewall CSP](/windows/client-management/mdm/firewall-csp)
 
   > [!NOTE]
-  > If the device immediately syncs after a reboot, or immediately syncs waking from sleep, then this setting may report as an **Error**. This scenario might not affect the overall device compliance status. To re-evaluate the compliance status, manually [sync the device](../user-help/sync-your-device-manually-windows.md).
+  > - If the device immediately syncs after a reboot, or immediately syncs waking from sleep, then this setting may report as an **Error**. This scenario might not affect the overall device compliance status. To re-evaluate the compliance status, manually [sync the device](../user-help/sync-your-device-manually-windows.md).
+  >
+  > - If a configuration is applied (for example, via a group policy) to a device that configures Defender Firewall to allow all inbound traffic, or turns off the firewall, setting **Firewall** to **Require** will return **Not compliant**, even if Intune device configuration policy turns Firewall on. This is because the group policy object overrides the Intune policy. To fix this issue, we recommend that you remove any conflicting group policy settings, or that you migrate your Firewall-related group policy settings to Intune device configuration policy. In general, we recommend that you [keep default settings](/windows/security/threat-protection/windows-firewall/best-practices-configuring#keep-default-settings), including blocking inbound connections. For more information, see [Best practices for configuring Windows Defender Firewall](/windows/security/threat-protection/windows-firewall/best-practices-configuring).
 
 - **Trusted Platform Module (TPM)**:  
   - **Not configured** (*default*) -  Intune doesn't check the device for a TPM chip version.

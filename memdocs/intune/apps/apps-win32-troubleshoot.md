@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/04/2022
+ms.date: 01/17/2023
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,7 +18,9 @@ ms.reviewer: manchen
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier1
+- M365-identity-device-management
 ---
 
 # Troubleshoot Win32 app issues
@@ -35,7 +37,7 @@ When you're troubleshooting Win32 apps used in Microsoft Intune, you can use a n
 
 ## App troubleshooting details
 
-You can view installation issues, such as when the app was created, modified, targeted, and delivered to a device. The [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) provides these and other details on the **Troubleshoot + support** pane. For more information, see [App troubleshooting details](/troubleshoot/mem/intune/troubleshoot-app-install#app-troubleshooting-details).
+You can view installation issues, such as when the app was created, modified, targeted, and delivered to a device. The [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) provides these and other details on the **Troubleshoot + support** pane. For more information, see [App troubleshooting details](/troubleshoot/mem/intune/troubleshoot-app-install#app-troubleshooting-details).
 
 ## Troubleshooting app issues by using logs
 

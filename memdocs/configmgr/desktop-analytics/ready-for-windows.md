@@ -6,12 +6,13 @@ ms.date: 04/21/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
-ms.reviewer: acabello
+author: gowdhamankarthikeyan
+ms.author: gokarthi
+manager: apoorvseth
+ms.reviewer: mstewart,aaroncz 
 ROBOTS: NOINDEX
 ms.localizationpriority: medium
+ms.collection: tier3
 ---
 
 # Ready for modern desktop retirement FAQ

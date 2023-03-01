@@ -9,7 +9,7 @@ ms.author: erikje
 manager: dougeby
 ms.date: 08/02/2021
 ms.topic: how-to
-ms.service: cloudpc
+ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
 ms.technology:
@@ -25,25 +25,27 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; get-started
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- tier2
 ---
 
 # Deploy security baselines
 
-Windows 365 Security Baselines are a set of policy templates built on security best practices and experience from real world implementations. You can use security baselines to get security recommendations that can help lower risks. The Windows 365 baselines enable security configurations for Windows 10, Edge, and Microsoft Defender for Endpoint. They include versioning features and help customers choose when to update user policies to the latest release.
+Windows 365 Security Baselines are a set of policy templates built on security best practices and experience from real world implementations. You can use security baselines to get security recommendations that can help lower risks. The Windows 365 baselines enable security configurations for Windows 10, Microsoft Edge, and Microsoft Defender for Endpoint. They include versioning features and help customers choose when to update user policies to the latest release.
 
 Windows 365-branded security baselines are a group of tested and validated recommended settings available in Microsoft Endpoint Manager that apply to the following areas:
 
 - Windows 10 settings: 1809
 - MDATP settings: version 4
-- Edge settings: April 2020 (Edge version 80 and later)
+- Microsoft Edge settings: April 2020 (Microsoft Edge version 80 and later)
 
 You can optionally apply Windows 365 security baselines to the Azure AD groups containing Cloud PC devices in your tenant.  
 
 > [!TIP] 
 > Like any configuration change, it is always a good idea to test the security baseline on a pilot group of Cloud PCs. For information on how to build a rollout plan in Microsoft Endpoint Manager, see the [Microsoft Intune planning guide](/mem/intune/fundamentals/intune-planning-guide#task-5-create-a-rollout-plan). For information on Microsoft Defender for Endpoint features can be tested, see [Test how Microsoft Defender for Endpoint features work in audit mode](/microsoft-365/security/defender-endpoint/audit-windows-defender).
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) select **Endpoint Security** > **View Security Baselines**.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) select **Endpoint Security** > **View Security Baselines**.
 ![Screenshot of view security baselines](./media/deploy-security-baselines/view-security-baselines.png)
 2. Select **Cloud PC Security Baseline (Preview)**.
 3. Select **Create Profile** and provide a name for your profile.

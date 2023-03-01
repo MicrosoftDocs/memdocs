@@ -45,19 +45,19 @@ items:
         items:
         - name: Android store apps
           href: store-apps-android.md
-        - name: iOS store apps
+        - name: iOS/iPadOS store apps
           href: store-apps-ios.md
-        - name: Windows Phone 8.1 store apps
-          href: store-apps-windows-phone-8-1.md
-        - name: Windows store apps
-          href: store-apps-windows.md
+        - name: Microsoft Store apps
+          href: store-apps-microsoft.md
+        - name: Microsoft Store apps (legacy)
+          href: store-apps-windows.md          
         - name: Microsoft Store for Business apps
           href: windows-store-for-business.md
         - name: Managed Google Play apps
           href: apps-add-android-for-work.md
       - name: Microsoft 365 Suite
         items:
-        - name: Microsoft 365 apps for Windows 10
+        - name: Microsoft 365 apps for Windows
           href: apps-add-office365.md
         - name: Microsoft 365 apps for macOS
           href: apps-add-office365-macos.md
@@ -72,10 +72,8 @@ items:
         items:
         - name: Android LOB apps
           href: lob-apps-android.md
-        - name: iOS LOB apps
+        - name: iOS/iPadOS LOB apps
           href: lob-apps-ios.md
-        - name: Windows Phone LOB apps
-          href: lob-apps-windows-phone.md
         - name: Windows LOB apps
           href: lob-apps-windows.md
         - name: Sideload Windows LOB apps

@@ -1,19 +1,18 @@
 ---
 description: Learn how to relate an SMS Package Server class object with the SMS PackageAccessByUsers Server class object used to access its distribution points.
-title: "SMS_PkgToPkgAccess_a Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: SMS_PkgToPkgAccess_a Class
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 17a0dc88-ede7-43f5-9d36-f2fb38db0514
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_PkgToPkgAccess_a Server WMI Class
 The `SMS_PkgToPkgAccess_a` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that uses the `PackageID` property to relate an [SMS_Package Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_package-server-wmi-class.md) object with the [SMS_PackageAccessByUsers Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_packageaccessbyusers-server-wmi-class.md) object used to access the package on its distribution points.  

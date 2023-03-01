@@ -1,18 +1,18 @@
 ---
-title: "SMS_PackageStatusDistPointsSummarizer Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: SMS_PackageStatusDistPointsSummarizer Class
+titleSuffix: Configuration Manager
+description: The SMS_PackageStatusDistPointsSummarizer WMI class is an SMS Provider server class, in Configuration Manager, that lists the distribution summary for packages a given distribution point.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 9b365b0d-404c-4c37-a39a-3849c9d6d906
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_PackageStatusDistPointsSummarizer Server WMI Class
 The `SMS_PackageStatusDistPointsSummarizer` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that lists the distribution summary for packages on given site for a given distribution point.  

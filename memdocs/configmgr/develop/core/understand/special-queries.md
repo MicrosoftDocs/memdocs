@@ -1,19 +1,18 @@
 ---
-title: "Special Queries"
-titleSuffix: "Configuration Manager"
-description: "Extended WMI Query Language (WQL) supports queries that are specific to Configuration Manager needs."
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: Special Queries
+titleSuffix: Configuration Manager
+description: Extended WMI Query Language (WQL) supports queries that are specific to Configuration Manager needs.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: conceptual
 ms.assetid: d9378514-6125-4bbe-b0bf-7e84e688203e
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # Configuration Manager Special Queries
 Extended WMI Query Language (WQL) supports queries that are specific to Configuration Manager needs. The following table describes the additional queries that are supported.  

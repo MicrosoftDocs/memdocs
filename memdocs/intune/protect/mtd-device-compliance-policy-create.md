@@ -26,7 +26,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier3
+- M365-identity-device-management
 ---
 
 # Create Mobile Threat Defense (MTD) device compliance policy with Intune
@@ -46,7 +48,7 @@ Prerequisites for device compliance policy with MTD:
 
 ## To create an MTD device compliance policy
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Endpoint security** > **Device Compliance** > **Create Policy**.
 
@@ -80,7 +82,7 @@ Prerequisites for device compliance policy with MTD:
 
 To assign, or change the assignment of a device compliance policy to users:
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Endpoint security** > **Device compliance**.
 

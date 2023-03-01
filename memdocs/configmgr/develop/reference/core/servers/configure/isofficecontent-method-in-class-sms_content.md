@@ -1,19 +1,18 @@
 ---
-title: "IsOfficeContent Method"
-titleSuffix: "Configuration Manager"
+title: IsOfficeContent Method
+titleSuffix: Configuration Manager
 description: Learn about the IsOfficeContent class method. In Configuration Manager, this method specifies whether content is Microsoft 365 content.
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 037e759f-b8ea-4f6b-b33d-b59056efc02f
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # IsOfficeContent Method in Class SMS_Content
 The `IsOfficeContent` Windows Management Instrumentation (WMI) class method, in Configuration Manager, specifies whether content is Microsoft 365 content.  

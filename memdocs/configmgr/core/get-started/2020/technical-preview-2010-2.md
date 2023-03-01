@@ -6,11 +6,13 @@ ms.date: 10/30/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ROBOTS: NOINDEX
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Features in Configuration Manager technical preview version 2010.2
@@ -27,7 +29,7 @@ The following sections describe the new features to try out in this version:
 
 [!INCLUDE [Tenant attach: Troubleshooting portal lists a user's devices based on usage](includes/2010-2/6974300.md)]
 [!INCLUDE [Tenant attach: Create and deploy firewall policies](includes/2010-2/7768130.md)]
-[!INCLUDE [Enhancements to applications in Microsoft Endpoint Manager admin center](includes/2010-2/7979972.md)]
+[!INCLUDE [Enhancements to applications in Microsoft Intune admin center](includes/2010-2/7979972.md)]
 [!INCLUDE [Improvements to BitLocker management](includes/2010-2/6979223.md)]
 [!INCLUDE [Improvements to deploy an OS over CMG using boot media](includes/2010-2/3555923.md)]
 [!INCLUDE [Desktop Analytics support for new Windows 10 data levels](includes/2010-2/6979470.md)]

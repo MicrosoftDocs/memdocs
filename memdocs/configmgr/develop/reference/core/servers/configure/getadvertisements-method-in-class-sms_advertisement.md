@@ -1,18 +1,18 @@
 ---
-title: "GetAdvertisements Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: GetAdvertisements Method
+titleSuffix: Configuration Manager
+description: A Windows Management Instrumentation class method that gets the advertisement ID for a computer.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 269422ee-e896-49ca-9cdc-c648055d1395
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # GetAdvertisements Method in Class SMS_Advertisement
 The `GetAdvertisements` Windows Management Instrumentation (WMI) class method, in Configuration Manager, gets the advertisement id for a computer.  

@@ -9,7 +9,7 @@ ms.author: erikje
 manager: dougeby
 ms.date: 11/30/2021
 ms.topic: how-to
-ms.service: cloudpc
+ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
 ms.technology:
@@ -25,7 +25,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; get-started
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- tier2
 ---
 
 # Lifecycle policies and end of support for Cloud PC operating systems

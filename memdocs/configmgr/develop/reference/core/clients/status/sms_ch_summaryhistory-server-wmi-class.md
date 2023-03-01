@@ -1,18 +1,18 @@
 ---
-title: "SMS_CH_SummaryHistory Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+description: Learn how to use the SMS_CH_SummaryHistory class to represent client summary histories.
+title: SMS_CH_SummaryHistory Class
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 91fa4d66-d2cb-4fac-abeb-2b95508bbc2a
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_CH_SummaryHistory Server WMI Class
 The `SMS_CH_SummaryHistory` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the client summary history.  

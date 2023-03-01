@@ -6,10 +6,12 @@ ms.date: 10/08/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: sheetg09
+ms.author: sheetg
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Configure a SQL Server Always On availability group for Configuration Manager

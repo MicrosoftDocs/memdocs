@@ -9,11 +9,11 @@ ms.topic: conceptual
 
 
 ms.assetid: dc2b403f-b824-47ed-a68f-f9473573e199
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
+ms.collection: tier3
 ---
 
 # Sample queries for security in Configuration Manager

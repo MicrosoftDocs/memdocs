@@ -9,9 +9,9 @@ metadata:
   ms.service: microsoft-intune
   ms.subservice: fundamentals
   ms.topic: landing-page 
-  ms.collection: 
-    - collection
-    - highpri
+  ms.collection:
+  - tier2
+  - collection
   author: dougeby
   ms.author: erikre
   manager: dougeby

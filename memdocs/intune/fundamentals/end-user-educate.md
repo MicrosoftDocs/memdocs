@@ -26,7 +26,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: get-started
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # How to educate your end users about Microsoft Intune
@@ -35,7 +37,7 @@ Microsoft Intune helps you enable your workforce with mobile devices while prote
 
 As you implement Microsoft Intune, it's important that employees understand the need for device management and enterprise mobility. Without an explanation from you, some users might feel that you're infringing on their privacy. User concern for privacy increases when you deploy Intune as a [BYOD solution](/enterprise-mobility-security/solutions/byod-design-considerations-guide).
 
-> [!Important]
+> [!IMPORTANT]
 > Understanding and proactively addressing user concerns about why your company needs to manage devices is critical to a successful rollout.
 
 Successful adoption isn't just about distributing new, functional technology throughout your workforce. It's also about getting users to understand and embrace the new technology. That's why it's important for users to understand and embrace the data security that Intune provides.

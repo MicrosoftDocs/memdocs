@@ -2,7 +2,7 @@
 # required metadata
 
 title: Install your company's Virtual Private Network (VPN) | Microsoft Docs
-description:
+description: How to install your company's Virtual Private Network (VPN).
 keywords:
 author: lenewsad
 ms.author: lanewsad
@@ -22,11 +22,12 @@ searchScope:
 ROBOTS:  
 #audience:
 
-ms.reviewer: chrisbal
+ms.reviewer: 
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
-ms.collection: 
+ms.collection:
+- tier3
 ---
 
 

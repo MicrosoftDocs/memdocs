@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/15/2022
+ms.date: 06/17/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -22,7 +22,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Upgrade Microsoft Tunnel for Microsoft Intune
@@ -83,7 +85,7 @@ You can view information about the status of Microsoft Tunnel servers, including
 
 For sites that don't support automatic upgrade, you can also view when upgrades to a new version are available.
 
-Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Microsoft Tunnel Gateway** > **Health status**.  Select a server and then open the **Health check** tab to view the following information about it:
+Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Microsoft Tunnel Gateway** > **Health status**.  Select a server and then open the **Health check** tab to view the following information about it:
 
 - **Server version** - The status of the Tunnel Gateway Server software, in the context of the most recent version available.
 
@@ -100,7 +102,7 @@ Sites that have the setting *Automatically upgrade servers at this site* set to 
 To understand when an upgrade is available for servers, use the [Health check](#view-tunnel-server-status) tab to review server status.
 ### To approve an upgrade
 
-1. Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Microsoft Tunnel Gateway** > **Sites**.
+1. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Microsoft Tunnel Gateway** > **Sites**.
 
 2. Select the site with an **Upgrade type** of **Manual**.
 
@@ -128,7 +130,7 @@ Use the [Health check](#view-tunnel-server-status) tab to understand when newer 
 
 #### To approve installation of an upgrade
 
-1. Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Microsoft Tunnel Gateway** > **Sites**.
+1. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Microsoft Tunnel Gateway** > **Sites**.
 
 2. Select the site with an **Upgrade type** of **Manual**.
 
@@ -143,6 +145,127 @@ Updates for the Microsoft Tunnel release periodically. When a new version is ava
 After an update releases, it rolls out to tenants over the following days. This rollout time means new updates might not be available for your tunnel servers for a few days.
 
 The Microsoft Tunnel version for a server isn’t available in the Intune UI at this time. Instead, run the following command on the Linux server that hosts the tunnel to identify the hash values of  *agentImageDigest* and *serverImageDiegest*: `cat /etc/mstunnel/images_configured`
+
+### March 1, 2023
+
+Image hash values:
+
+- **agentImageDigest**:  sha256:c4478f5e54dc1536523113885095b6eda37da1b2a31461347cd85ea8a7d487b5
+
+- **serverImageDigest**: sha256:cf706bc6a5ea8a743bab84ed8be9901733738881e2e84d0f9083654e9c5cd317
+
+Changes in this release:
+- Minor bug fixes
+- Updated Microsoft Tunnel Server Gateway EULA
+
+
+### February 2, 2023
+
+Image hash values:
+
+- **agentImageDigest**:  sha256:9140d4e7f397d0a7c6c203b0c74a4f11b66affee3d36837298a50821b5dca9a4
+
+- **serverImageDigest**: sha256:709219327f6aff5f81f6b6dc9f644334ccefd6af2f75ed4461ae06885bff9551
+
+Changes in this release:
+- Minor bug fixes
+
+
+### November 16, 2022
+
+Image hash values:
+
+- **agentImageDigest**:  sha256:517a2267b5b4fbbd58ab46be22202158e55562bfb8f79eb7ef4fc35a0fc3cc8d
+
+- **serverImageDigest**: sha256:3a367955746522fe89fc8f0fb6edc259aefe0e681db652281b1ff264fdcce6dc
+
+Changes in this release:
+- Minor bug fixes
+- Security improvements
+- Journalctl logging fix in mst-cli
+
+
+
+### September 23, 2022
+
+Image hash values:
+
+- **agentImageDigest**:  sha256:df03d4ad8469511a4b649dcbbad5dbaa5c7f10cdc9640b7801190623090a67ae
+
+- **serverImageDigest**: sha256:0f66f2b5463e283c1621fc4250f69fac97ebda77bef8f570ed181b78000d762c
+
+Changes in this release:
+- Minor bug fixes
+- Security improvements
+- Mst-readiness script enhancements
+- Add Azure storage endpoint 
+
+
+### August 22, 2022
+
+Image hash values:
+
+- **agentImageDigest**:  sha256:186ff8d5c9a70085adc01778251f577988fef9b456801dc30e846f1a2bc3784c
+
+- **serverImageDigest**: sha256:ec5bd023b5582e58b6b9eb6aa41a9b064003f5b2b228508115bf6d42be9564a3
+
+Changes in this release:
+- Security improvements
+- Mst-readiness script enhancements
+
+
+### July 27, 2022
+
+Image hash values:
+
+- **agentImageDigest**:  sha256:94e08d27c4f18706b2e3d92594d8a173446638a641240ae86a18a583be257cae
+
+- **serverImageDigest**: sha256:683ff13cfc16824741e961f04b94bce766777a5dcc80f019af234b4c9948fd66
+
+Changes in this release:
+- Minor bug fixes
+- Set process limit to 6000 in the server container 
+
+
+### June 30, 2022
+
+Image hash values:
+
+- **agentImageDigest**:  sha256:b42b8e158cebb91b6a69f2bdcedffde18a5f3f12cc502509c8aa9fea80f4daaa
+
+- **serverImageDigest**: sha256:aa45b73bf143f1e440329853362cb4f300d9cc865d758534a94b983c8286ca4d
+
+Changes in this release:
+- Minor bug fixes
+- Advanced setting improvements in Microsoft Tunnel configurations 
+- Logging improvements
+
+
+### April 27, 2022
+
+Image hash values:
+
+- **agentImageDigest**:  sha256:588c0c59fb9e0032640e78b06cfe12c7be0b28b1d8ca01ad87fb315da4088446
+
+- **serverImageDigest**: sha256:81d42ec83b5157068b81d6243d46601b8c003e99513426ffb90d9cbac31bd271
+
+Changes in this release:
+- Minor bug fixes
+- Security bug fixes
+- Agent changes for forced cert renewal 
+- ADAL depcrecation, enables MSAL authentication during Agent enrollment 
+
+### April 4, 2022
+
+Image hash values:
+
+- **agentImageDigest**:  sha256:14a5f496bf9d36ba1577e8e6059f5d06b7c03abe319eaba91a4ac88eeafc4825
+
+- **serverImageDigest**: sha256:f21481a2a299cb2beed7faadf4faba50fdcf1bb591d193ee78d1e0505bcaa192
+
+Changes in this release:
+- Minor bug fixes
+- Access log enhancements
 
 ### February 16, 2022
 
@@ -166,7 +289,7 @@ Image hash values:
 Changes in this release:
 
 - Minor bug fixes
-- A new version of the *mst-readiness* tool is available for download. We recommend using the updated script, which now checks the Linux server build for the presence of the *ip_tables* module. While most Linux distributions load this module be default, some versions, like RHEL 8.5, do not.
+- A new version of the *mst-readiness* tool is available for download. We recommend using the updated script, which now checks the Linux server build for the presence of the *ip_tables* module. While most Linux distributions load this module be default, some versions, like RHEL 8.5 and RHEL 8.6, do not.
 
   For more information including where to download the tool, see [Run the readiness tool](../protect/Microsoft-tunnel-prerequisites.md#run-the-readiness-tool).  
 

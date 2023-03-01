@@ -1,18 +1,18 @@
 ---
-title: "AddChangeNotification Method in SMS_BootImagePackage"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+description: Learn how to add a boot image package change notification using AddChangeNotification class in Configuration Manager.
+title: AddChangeNotification Method in SMS_BootImagePackage
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: b2c6fb90-fe4d-472b-b200-133e8d336d31
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # AddChangeNotification Method in Class SMS_BootImagePackage
 The `AddChangeNotification` Windows Management Instrumentation (WMI) class method, in Configuration Manager, adds a boot image package change notification.  

@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/29/2022
+ms.date: 01/17/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,7 +18,9 @@ ms.reviewer: manchen
 ms.suite: ems
 search.appverid: MET150
 ms.custom: 
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier1
+- M365-identity-device-management
 ---
 
 # Add Win32 app supersedence
@@ -39,9 +41,10 @@ Supersedence relationships can be created when adding or modifying a Win32 app w
 
 App supersedence can only be applied to Win32 apps. For more information, see [Add a Win32 app](apps-win32-add.md) to Intune.
 
-A Microsoft Endpoint Manager permission will be required to create and edit Win32 app supersedence and dependency relationships with other apps. The permission is available under the **Mobile apps** category by selecting **Relate**. Starting in the **2202** service release, MEM admins will need this permission to add supersedence and dependency apps when creating or editing a Win32 app in Microsoft Endpoint Manager admin center. To find this permission in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Tenant administration** > **Roles** > **All roles** > **Create**.
+A Microsoft Endpoint Manager permission will be required to create and edit Win32 app supersedence and dependency relationships with other apps. The permission is available under the **Mobile apps** category by selecting **Relate**. Starting in the **2202** service release, Intune admins will need this permission to add supersedence and dependency apps when creating or editing a Win32 app in Microsoft Intune admin center. To find this permission in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Tenant administration** > **Roles** > **All roles** > **Create**.
 
 This Win32 app supersedence permission has been added to the following built-in roles:
+
 - Application Manager
 - School administrator
 
@@ -49,34 +52,39 @@ This Win32 app supersedence permission has been added to the following built-in 
 
 The following steps help you create a supersedence relationship between apps:
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All apps**, and then select a Win32 app from the list. If you haven't added a Win32 app, you can follow the steps to [add a Win32 app to Intune](apps-win32-add.md).
-3. After you have selected the existing Win32 app, click **Properties**. 
-3. In the **Supersedence** section, click **Edit** > **Add** to choose apps that should be superseded.
+3. After you have selected the existing Win32 app, click **Properties**.
+4. In the **Supersedence** section, click **Edit** > **Add** to choose apps that should be superseded.
 
     > [!NOTE]
     > There can be a maximum of 10 nodes in a supersedence relationship in Intune.
 
-4. Find and click the apps to apply the supersedence relationship in the **Add Apps** pane. Click **Select** to add the apps to your supersedence list.
-5. In the list of superseded apps, modify the **Uninstall previous version** option for each selected app to specify whether an uninstall command will be sent by Intune to each selected app. If the installer of the current app updates the selected app automatically, then it is not necessary to send an uninstall command. When replacing a selected app with a different app, it may be necessary to turn on the **Uninstall previous version** option to remove and replace the older app.
-6. Once this step is finalized, click **Review + save** > **Save**.
+5. Find and click the apps to apply the supersedence relationship in the **Add Apps** pane. Click **Select** to add the apps to your supersedence list.
+6. In the list of superseded apps, modify the **Uninstall previous version** option for each selected app to specify whether an uninstall command will be sent by Intune to each selected app. If the installer of the current app updates the selected app automatically, then it is not necessary to send an uninstall command. When replacing a selected app with a different app, it may be necessary to turn on the **Uninstall previous version** option to remove and replace the older app.
+7. Once this step is finalized, click **Review + save** > **Save**.
 
     > [!IMPORTANT]
-    > Superseding apps do not get automatic targeting. Each app must have explicit targeting to take effect. Superseding apps that are not targeted will be ignored by the agent. If the superseding app is targeted to a device with a superseded app, then the supersedence will take place regardless of whether the superseded app has targeting or not. For more information on Supersedence behavior, please refer to the matrix below. This behavior is in direct contrast to dependencies, which does not require targeting. 
+    > Superseding apps do not get automatic targeting. Each app must have explicit targeting to take effect. Superseding apps that are not targeted will be ignored by the agent. If the superseding app is targeted to a device with a superseded app, then the supersedence will take place regardless of whether the superseded app has targeting or not. For more information on Supersedence behavior, please refer to the matrix below. This behavior is in direct contrast to dependencies, which does not require targeting. Additionally, only apps that are targeted will show install statuses in Microsoft Intune admin center.
 
 ## Supersedence behavior
 
-A *superseding app* is an app that updates or replaces other apps. A *superseded app* is an app that is being updated or replaced. Supersedence behavior can be illustrated based on the following scenarios. 
+A *superseding app* is an app that updates or replaces other apps. A *superseded app* is an app that is being updated or replaced. Supersedence behavior can be illustrated based on the following scenarios.
 
 | Scenarios | Targeting for required intent | Targeting for available intent |
 |-|-|-|
-| **Scenario   1:**<br> The superseded app exists on the device and **Uninstall previous version** is set to **Yes**. | The superseded app will be   uninstalled, and the superseding app will be installed on the device.<p> **NOTE:** Even if the superseded app is not targeted, it will be uninstalled. | Both   superseding and superseded apps will be shown in the company portal if they   have the applicable targeting. However, currently only the superseding apps   can be installed. |
-| **Scenario   2:**<br>The superseded app exists on the device and **Uninstall   previous version** is set to **No**. | The superseding app will be   installed on the device. Whether the superseded app will be uninstalled or   not is dependent on the superseding app’s installer. | Both superseding and superseded apps will be shown in the company portal if they have the applicable targeting. However, currently only the superseding apps can be installed. |
+| **Scenario   1:**<br> The superseded app exists on the device and **Uninstall previous version** is set to **Yes**. | The superseded app will be uninstalled, and the superseding app will be installed on the device.<p> **NOTE:** Even if the superseded app is not targeted, it will be uninstalled. | Only superseding apps will be shown in the company portal and can be installed. |
+| **Scenario   2:**<br>The superseded app exists on the device and **Uninstall previous version** is set to **No**. | The superseding app will be installed on the device. Whether the superseded app will be uninstalled or not is dependent on the superseding app’s installer. | Only superseding apps will be shown in the company portal and can be installed. |
 | **Scenario   3:**<br>The superseded app does not exist on the device. | The superseding app will be   installed. | The new app will appear in the   Company Portal. |
 
 ### Understand app update versus app replacement within supersedence
 
-Given that an app could have multiple superseded apps, it is possible for an app to update a set of apps while replacing another set of apps at the same time. Understanding how supersedence is applied when updating an app versus replacing an app can be illustrated based on the following scenario.
+Given that an app could have multiple superseded apps, it is possible for an app to update a set of apps while replacing another set of apps at the same time.
+
+> [!NOTE]
+> End-users will not be able to check whether a specific Win32 app supersedence operation is an update or replacement in the Company Portal. In addition, when multiple apps supersede an app with available targeting in the Company Portal, the superseded app's details page will navigate to the app page of the first superseding app that was set up. For example, if app A is superseded by app B and C, and app B is superseded by app A first, then app A's detail page in the Company Portal will navigate to App B.
+
+Understanding how supersedence is applied when updating an app versus replacing an app can be illustrated based on the following scenario.
 
 | Customer   scenario | Description | Expected behavior | Additional information |
 |-|-|-|-|
@@ -92,9 +100,23 @@ In the following scenarios, you should review app detection rules after performi
 | In-place   app update | <ul><li>With an   in-place app update, admin can only swap the app content, update the   metadata, and change the detection and install commands.</li>      <li>Admin cannot change any of the fields that are not stored on the   app with an in-place app update.  For   example, the admin cannot modify targeting at the same time as an   update.</li>      <li>Admin can only perform the in-place app update one app at a   time.</li></ul> |
 | Supersedence   app update | <ul><li>Admin can   update an app in its entirety with a new set of   configurations.</li>      <li>Admin can elect to send down an uninstall command to uninstall   previous app versions.</li>      <li>Admin can update devices containing multiple app versions to the   newest app version with one Supersedence configuration. The admin also   maintains access to older version of the app.</li></ul> |
 
+### Understand interactions between dependencies and supersedence
+
+> [!NOTE]
+> Supersedence GA is currently being rolled out. For more information, see [Upcoming improvements to Win32 app supersedence - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/intune-customer-success/upcoming-improvements-to-win32-app-supersedence/ba-p/3713026).
+
+Interactions between dependencies and supersedence include the following:
+
+- Supersedence and dependency relationships can be created in the same app subgraph.
+- Enforcement prefers supersedence over dependency, but if there is a conflict state, Intune will report it.
+    - **Specific example:** A depends on B, C supersedes B. A will report a conflict state.
+    - **Specific example #2:** A depends on B, C replaces A; C installs and A gets replaced. B gets left.
+- Supersedence will not go through in specific scenarios. 
+    - **Example:** A depends on B and C, and B supersedes C.  
+
 ## Basic Supersedence Examples
 
-For the purposes of this document, we assume that all apps are targeted (either device or user targeting) and are applicable. 
+For the purposes of this document, we assume that all apps are targeted (either device or user targeting) and are applicable.
 
 ### Legend for supersedence example scenarios
 
@@ -123,7 +145,8 @@ For the purposes of this document, we assume that all apps are targeted (either 
 Supersedence chains occur when multiple apps are part of a supersedence relationship. For example, an IT admin could configure App A to be superseded by App B, and then later configure App B to be superseded by App C. In this scenario, a supersedence chain is created between App A, B, and C (as shown in the first case below). Supersedence chains can have a maximum of 10 related nodes in the chain. For more information about this maximum, see [Supersedence Limitations](#supersedence-limitations).
 
 >The behavior for supersedence chains can summarized as the following:
-- All apps in a supersedence chain will be superseded by the superseding app of the chain. In the example given above, the superseding app of the chain is App C.
+>
+> - All apps in a supersedence chain will be superseded by the superseding app of the chain. In the example given above, the superseding app of the chain is App C.
 
 To better understand the behavior of a supersedence chain, the following table provides a list of cases and resolutions. When reviewing these supersedence chains, assume all apps are targeted and are applicable to the device.
 
@@ -140,7 +163,7 @@ To better understand the behavior of a supersedence chain, the following table p
 
 ## Supersedence Limitations
 
-There can only be a maximum of 10 nodes in a single Supersedence graph. The nodes include the superseding app, the superseded apps, and all subsequent related apps. 
+There can only be a maximum of 11 nodes in a single supersedence graph. The nodes include the superseding app, the superseded apps, and all subsequent related apps. 
 In the following Supersedence diagram, there are five nodes in total. Hence, five more nodes could be created until the max node count is reached.
 
 ![Supersedence maximum node count example](./media/apps-win32-supersedence/apps-win32-supersedence-05.png)
@@ -148,6 +171,11 @@ In the following Supersedence diagram, there are five nodes in total. Hence, fiv
 Additional supersedence limitations:
 - Azure Virtual Desktop multi-session only supports supersedence relationships with system-context (device-based) apps.
 - The Enrollment Status Page (ESP) is not supported with the supersedence public preview. ESP displays provisioning progress after a new device is enrolled, as well as when new users sign into the device. For the supersedence public preview, if an app has a supersedence relationship, it will not be enforced during ESP even if it is included as a selected app in an ESP policy. Additionally, apps that are involved in supersedence relationships will not be sent to the client device during ESP. However, the apps will be sent to the device after ESP completes, and the supersedence relationship will be respected.
+
+    > [!NOTE]
+    > ESP support is being rolled out right now as part of Supersedence GA. For more information, see [Upcoming improvements to Win32 app supersedence - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/intune-customer-success/upcoming-improvements-to-win32-app-supersedence/ba-p/3713026). 
+
+- Only apps that are targeted will show install statuses in Microsoft Intune admin center.
 
 ## Next steps
 

@@ -21,12 +21,14 @@ ms.assetid: 723f4b4e-3090-4811-84ff-6af652abea5a
 #ROBOTS:
 #audience:
 
-ms.reviewer:
+ms.reviewer: scottduf
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier3
+- M365-identity-device-management
 ---
 
 # Quickstart: Create a group to manage users
@@ -43,15 +45,15 @@ If you don't have an Intune subscription, [sign up for a free trial account](fre
 - Microsoft Intune subscription - [sign up for a free trial account](../fundamentals/free-trial-sign-up.md).
 - To complete this quickstart, you must [create a user](quickstart-create-user.md).
 
-## Sign in to Intune in the Microsoft Endpoint Manager
+## Sign in to the Microsoft Intune admin center
 
-Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as a [Global administrator or an Intune Service administrator](users-add.md#types-of-administrators). If you have created an Intune Trial subscription, the account you created the subscription with is the Global administrator.
+Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as a [Global administrator or an Intune Service administrator](users-add.md#types-of-administrators). If you have created an Intune Trial subscription, the account you created the subscription with is the Global administrator.
 
 ## Create a group
 
 You will create a group that will be used later in this quickstart series. To create a group:
 
-1. Once you've opened the [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), select **Groups** > **New group**.
+1. Once you've opened the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Groups** > **New group**.
 2. In the **Group type** dropdown box, select **Security**.
 3. In the **Group name** field, enter the name for the new group (for example, **Contoso Testers**).
 4. Add a **Group description** for the group.

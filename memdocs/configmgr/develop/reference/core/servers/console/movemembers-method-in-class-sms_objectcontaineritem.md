@@ -1,18 +1,18 @@
 ---
-title: "MoveMembers Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+description: Learn how to use Configuration Manager MoveMembers Windows Management Instrumentation (WMI) class method to move folder items to another folder.
+title: MoveMembers Method
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 55a605ba-93f2-4b63-b34e-a36d41659665
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # MoveMembers Method in Class SMS_ObjectContainerItem
 The `MoveMembers` Windows Management Instrumentation (WMI) class method, in Configuration Manager, moves folder items to another folder.  

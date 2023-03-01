@@ -1,17 +1,17 @@
 ---
-title: "Configuration Manager Site Control File"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: Configuration Manager Site Control File
+description: Site control in Configuration Manager defines the settings for a specific site.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: conceptual
 ms.assetid: 1283e2a3-d4e2-4fba-a6c3-7dcd94598a0d
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # About the Configuration Manager Site Control File
 Site control in Configuration Manager defines the settings for a specific site. The settings for each site are contained in the database and are accessed through Windows Management Instrumentation (WMI) when working with scripting languages, and through the managed SMS Provider library when working with a managed language.  

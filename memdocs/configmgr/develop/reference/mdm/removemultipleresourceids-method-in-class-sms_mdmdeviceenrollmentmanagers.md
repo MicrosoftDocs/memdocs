@@ -1,18 +1,18 @@
 ---
-title: "RemoveMultipleResourceIds Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: RemoveMultipleResourceIds Method
+titleSuffix: Configuration Manager
+description: The RemoveMultipleResourceIds WMI class method deletes multiple resource IDs.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: e90daafd-62cd-4939-ad9b-ec65f92eb692
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # RemoveMultipleResourceIds Method in Class SMS_MDMDeviceEnrollmentManagers
 The `RemoveMultipleResourceIds` Windows Management Instrumentation (WMI) class method, in Configuration Manager, deletes multiple resource IDs.  

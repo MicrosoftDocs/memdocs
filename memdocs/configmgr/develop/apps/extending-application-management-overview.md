@@ -1,18 +1,18 @@
 ---
-title: "Extending Application Management Overview"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: Extending Application Management Overview
+titleSuffix: Configuration Manager
+description: Partners that must continue to use a specific deployment technology not natively supported by Configuration Manager, can extend the Application Management model to support a custom deployment type.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: conceptual
 ms.assetid: b12131ec-cbe0-4c93-9729-e78d904a1a11
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # Extending Application Management Overview
 By default, Application Management supports creating numerous deployment types such as Windows Installer, Script Installer, Microsoft Application Virtualization, Nokia SIS files and Windows Mobile Cabinet file deployment technologies. Partners that must continue to use a specific deployment technology not natively supported by Configuration Manager, can extend the Application Management model to support a custom deployment type.  
@@ -21,7 +21,7 @@ By default, Application Management supports creating numerous deployment types s
 
  The deployment type object is composed of multiple objects: deployment technology, hosting technology, installer technology, content importer and the installer. The installer object is a key extension point, as it provides the properties for a technology, as well as the logic for detection, installation and uninstallation of the technology on the client system.  
 
- Extending the application model requires extending the Configuration Manager consoles and Configuration Manager clients that will leverage the custom deployment type. On the server, the extension is accomplished though creating and registering a custom deployment technology assembly and by extending Configuration Manager console (adding custom property sheets and wizards). The client extension is accomplished through extending WMI and adding a custom handler (a public COM class and methods). It should be noted that the client extension closely maps to the installer object, defined as part of the deployment type. The properties and methods defined in the installer object map directly to the property values are stored in WMI and the public COM methods defined in the custom handler.  
+ Extending the application model requires extending the Configuration Manager consoles and Configuration Manager clients that will leverage the custom deployment type. On the server, the extension is accomplished through creating and registering a custom deployment technology assembly and by extending Configuration Manager console (adding custom property sheets and wizards). The client extension is accomplished through extending WMI and adding a custom handler (a public COM class and methods). It should be noted that the client extension closely maps to the installer object, defined as part of the deployment type. The properties and methods defined in the installer object map directly to the property values are stored in WMI and the public COM methods defined in the custom handler.  
 
  In conceptualizing a custom deployment type, it might be useful to consider the in-product handling of Windows Installer files (*.msi).  
 

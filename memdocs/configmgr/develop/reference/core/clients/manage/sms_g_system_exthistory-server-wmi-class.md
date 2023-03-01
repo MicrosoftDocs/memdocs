@@ -1,19 +1,18 @@
 ---
 description: Learn how to create an abstract base class representing operating system extended history for a client computer using SMS_G_System_ExtHistory.
-title: "SMS_G_System_ExtHistory Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: SMS_G_System_ExtHistory Class
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 4d8e6146-36dc-4c88-9d38-15c89ca4ee6f
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_G_System_ExtHistory Server WMI Class
 The `SMS_G_System_ExtHistory` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that serves as an abstract base class representing operating system extended history for a client computer.  

@@ -26,7 +26,8 @@ ms.reviewer: priyar
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
-ms.collection: 
+ms.collection:
+- tier2
 ---
 
 
@@ -61,7 +62,7 @@ In addition to everything under [What happens on all devices after enrollment](w
 
 - Intune Endpoint Protection might be installed on your computer. This software checks for viruses and malware.
 
-- IT support can collect or delete data from your computer's hard drive.
+- IT support can't view or make changes to anything on your hard drive but Intune needs access to the hard drive on your Windows device to make sure that it's configured to meet your organization's device/security requirements. This is the same kind of access that Intune needs on a mobile device (for example, on an Android or iOS device).  
 
 - IT support can install apps and updates on your computer.
 

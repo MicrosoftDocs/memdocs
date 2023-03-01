@@ -6,11 +6,12 @@ ms.date: 10/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: medium
-ms.collection: highpri
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # What's new in version 2107 of Configuration Manager current branch
@@ -31,7 +32,7 @@ To take full advantage of new Configuration Manager features, after you update t
 ### Cloud attach your environment during site update
 <!-- 9563659,7958749-->
 
-Microsoft Endpoint Manager is an integrated solution for managing all of your devices. Cloud attach brings together Configuration Manager and Intune into a single console called **Microsoft Endpoint Manager admin center**. Starting with this release, sites that aren't already onboarded to Microsoft Endpoint Manager will be prompted to optionally cloud attach as part of the upgrade wizard. Environments are considered cloud attached if at least one of the following features are already enabled:
+The Microsoft Intune family of products is an integrated solution for managing all of your devices. Cloud attach brings together Configuration Manager and Intune into a single console called **Microsoft Intune admin center**. Starting with this release, sites that aren't already onboarded to Microsoft Intune will be prompted to optionally cloud attach as part of the upgrade wizard. Environments are considered cloud attached if at least one of the following features are already enabled:
 
 - [Tenant attach](../../../tenant-attach/device-sync-actions.md)
 - [Co-management](../../../comanage/overview.md)
@@ -67,7 +68,7 @@ For more information, see [Cost of CMG: Virtual machine scale set](../../clients
 
 <!--6979225-->
 
-Get BitLocker recovery keys for a tenant-attached device from the Microsoft Endpoint Manager admin center. For example, a help desk technician who doesn't have access to Configuration Manager could use the web-based admin center to help an end user get a recovery key for their device.
+Get BitLocker recovery keys for a tenant-attached device from the Microsoft Intune admin center. For example, a help desk technician who doesn't have access to Configuration Manager could use the web-based admin center to help an end user get a recovery key for their device.
 
 For more information, see [Tenant attach: BitLocker recovery keys](../../../tenant-attach/bitlocker-recovery-keys.md).
 
@@ -75,14 +76,14 @@ For more information, see [Tenant attach: BitLocker recovery keys](../../../tena
 
 <!-- 8353823 -->
 
-United States Government customers can now use the following Microsoft Endpoint Manager tenant attach features in the US Government cloud:
+United States Government customers can now use the following Microsoft Intune tenant attach features in the US Government cloud:
 
 - Account onboarding
 - Tenant sync to Intune
 - Device sync to Intune
-- Device actions in the Microsoft Endpoint Manager admin center
+- Device actions in the Microsoft Intune admin center
 
-For more information, see [Microsoft Endpoint Manager tenant attach: Prerequisites](../../../tenant-attach/prerequisites.md).
+For more information, see [Microsoft Intune tenant attach: Prerequisites](../../../tenant-attach/prerequisites.md).
 
 ### Renamed Co-management node to Cloud Attach
 <!--10158821, 10115058-->

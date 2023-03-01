@@ -1,18 +1,18 @@
 ---
-title: "SMS_ImageServicingProgress Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: SMS_ImageServicingProgress Class
+titleSuffix: Configuration Manager
+description: The SMS_ImageServicingProgress WMI class is an SMS Provider server class that represents software update installation status in offline servicing image.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: b027fd11-e537-48d4-8863-f56ff19b0755
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_ImageServicingProgress Server WMI Class
 The `SMS_ImageServicingProgress` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents software update installation status in offline servicing image.  

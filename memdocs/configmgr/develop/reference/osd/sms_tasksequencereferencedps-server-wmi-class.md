@@ -1,18 +1,18 @@
 ---
-title: "SMS_TaskSequenceReferenceDps Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: SMS_TaskSequenceReferenceDps Class
+titleSuffix: Configuration Manager
+description: Learn about the simplified syntax, methods, properties, and requirements of the SMS_TaskSequenceReferenceDps server class.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: de43cd2c-26e6-426a-8dd9-4977fcdea31c
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-description: Learn about the simplified syntax, methods, properties, and requirements of the SMS_TaskSequenceReferenceDps server class.
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_TaskSequenceReferenceDps Server WMI Class
 The `SMS_TaskSequenceReferenceDps` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the package that is available for the task sequence at a specified distribution point.  

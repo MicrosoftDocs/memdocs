@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Send errors from your Mac device to your company support | Microsoft Docs
-description: Company Portal provides you with an email template and helps you upload the diagnostic details to give your IT team the context to support you. 
+title: Report a problem in Company Portal for macOS  | Microsoft Docs
+description: Report an enrollment or app problem in the Intune Company Portal app for Mac devices.  
 keywords:
 author: lenewsad
 
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/27/2021
+ms.date: 01/23/2023
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -27,31 +27,32 @@ ms.reviewer: elocholi
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
-ms.collection: 
+ms.collection:
+- tier2
 ---
 
 # Report Company Portal app problems  
 
-Sometimes unexplained errors occur in the Company Portal app. When it happens, you can get help by emailing your IT support person. Company Portal provides you with an email template and helps you upload the diagnostic details to give your IT team the context to support you. 
+Report a problem or error that occurs in the Intune Company Portal app for macOS. This article describes how to share app diagnostic logs with your support person, and how to send a diagnostic report to Microsoft.    
 
-## Report problem to IT support person 
+## Share app diagnostic logs with support person      
+Reproduce the problem, if you can, and then complete these steps to share the details of the event with your support person.   
+1. In the Company Portal app, go to the menu bar and select the **Help** menu > **Save Diagnostic Report**. 
+2. Choose a location to save the file. 
+3. Open your email app and attach the diagnostics file to a new email.   
+6. In the body of the email, describe the steps you took right up until the error occurred, and describe any messages or behavior you noticed.   
+7. Send the email to your support person, and follow up with them after the email if needed.      
 
-1. When you receive an error message, select **Report**.
+## Send diagnostic report to Microsoft    
 
-2. Select the **Help** menu > **Save Diagnostic Report**. Choose a location to save the file. 
+Microsoft uses the Company Portal-specific diagnostics to learn from and improve upon future products. First, try to reproduce the problem so that you receive the error message again. Then select **Report** to immediately upload and share the diagnostic logs. 
 
-3. Email the file to your IT support person. If your email app is configured, you can send the diagnostic report by going to **Help** > **Send Diagnostic Report** > **Email details**. You will need to fill in the email address for your support person. 
+If the error message can't be reproduced, you can access the diagnostics options from the Help menu.   
 
-4. In the body of the email, describe your experience with the app. If you can remember them, include the steps you took before the error occurred. 
+1. Go to the Company Portal menu bar and select **Help**. 
+2. Select **Send diagnostic report**.  
 
-## Share diagnostic details with Company Portal developers 
+## Contact information  
+To find your organization's contact information, sign in to the Company Portal app or [website](https://go.microsoft.com/fwlink/?linkid=2010980) and select **Support**.   
 
-App developers want to hear from you when unexpected behavior, such as a crash, occurs in Company Portal. Your diagnostic details could help developers find the root cause of a problem and prevent it from happening to other users. 
 
-To share your diagnostic logs with Microsoft:
-
-1. Open the Company Portal app.
-2. Click the **Help** menu > **Send Diagnostic Report**.  After the logs are uploaded, you'll receive an incident ID. Copy and save the ID.
-3. Select **Email details**. In the body of the email, describe your experience with the app. If you can remember them, include the steps you took before the error occurred. 
-
-Still need help? Contact your company support. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).

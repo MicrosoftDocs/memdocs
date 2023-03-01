@@ -6,14 +6,13 @@ ms.date: 04/30/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: conceptual
-
-
 ms.assetid: 3c4286f0-b210-4ea3-a58e-342b2f9a98f2
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Evaluation of the Computer information for a specific computer report in Configuration Manager

@@ -1,6 +1,6 @@
 ### YamlMime:Hub
-title: Microsoft Endpoint Manager documentation
-summary: Official product documentation for Microsoft Endpoint Manager
+title: Endpoint management documentation
+summary: Learn more about how Microsoft Intune and Microsoft Configuration Manager can help you secure, deploy, and manage users, apps, and endpoint devices.
 
 metadata:
   services: service
@@ -9,93 +9,125 @@ metadata:
   author: dougeby
   ms.author: dougeby
   manager: johmar
-  ms.date: 09/23/2021
+  ms.date: 10/12/2022
   ms.localizationpriority: high
-  ms.collection: highpri
+  ms.collection: 
+  ms.custom: intro-hub-or-landing
 
 highlightedContent:
   items:
-    - title: Overview of Microsoft Endpoint Manager
+    - title: Endpoint management overview
       itemType: overview
       url: endpoint-manager-overview.md
-    - title: Getting started with Microsoft Endpoint Manager
-      itemType: get-started
-      url: endpoint-manager-getting-started.md
-    - title: Microsoft Endpoint Manager (product page)
-      itemType: get-started
-      url: https://www.microsoft.com/microsoft-365/microsoft-endpoint-manager
-    - title: "Tutorial: Walkthrough Intune in Microsoft Endpoint Manager"
-      itemType: tutorial
-      url: ./intune/fundamentals/tutorial-walkthrough-endpoint-manager.md
+    - title: Cloud attach your Configuration Manager environment
+      itemType: overview
+      url: https://learn.microsoft.com/mem/configmgr/cloud-attach/overview
+    - title: Move to cloud native endpoints
+      itemType: overview
+      url: cloud-native-endpoints-overview.md
     - title: Secure your remote workforce
       itemType: get-started
       url: /enterprise-mobility-security/remote-work/
-    - title: Microsoft Endpoint Manager fundamentals
-      itemType: learn
-      url: /learn/paths/endpoint-manager-fundamentals/
+    - title: The latest in tech skilling for Microsoft Endpoint Manager
+      itemType: overview
+      url: https://techcommunity.microsoft.com/t5/microsoft-endpoint-manager-blog/the-latest-in-tech-skilling-for-microsoft-endpoint-manager/ba-p/3291643
+    - title: Training on Microsoft Learn
+      itemType: get-started
+      url: https://docs.microsoft.com/search/?terms=intune&category=Learn
+    - title: How to use the endpoint management docs
+      itemType: overview
+      url: ./use-docs.md
 
-conceptualContent:
+# productDirectory section (optional)
+productDirectory:
+  title: Get started with Microsoft Intune
   items:
-    - title: Microsoft Intune
-      links:
-        - url: ./intune/index.yml
-          itemType: overview
-          text: Microsoft Intune documentation 
-        - url: ./intune/fundamentals/index.yml
-          itemType: overview
-          text: Plan for and set up Intune   
-        - url: ./intune/enrollment/index.yml
-          itemType: overview
-          text: Enroll devices   
-        - url: ./intune/remote-actions/index.yml
-          itemType: overview
-          text: Remotely manage devices   
-        - url: ./intune/protect/index.yml
-          itemType: overview
-          text: Create compliance rules for users and devices 
-        - url: ./intune/configuration/index.yml
-          itemType: overview
-          text: Control device features and settings   
-        - url: ./intune/apps/index.yml
-          itemType: concept
-          text: Manage and protect apps
-    - title: Microsoft Endpoint Configuration Manager
-      links:
-        - url: ./configmgr/index.yml
-          itemType: get-started
-          text: Microsoft Endpoint Configuration Manager documentation
-        - url: ./configmgr/comanage/index.yml
-          itemType: concept
-          text: Manage device workloads in Configuration Manager and Intune
-        - url: ./configmgr/desktop-analytics/index.yml
-          itemType: overview
-          text: Use Desktop Analytics for update readiness                  
-        - url: ./configmgr/core/index.yml
-          itemType: overview
-          text: Manage your infrastructure
-        - url: ./configmgr/apps/index.yml
-          itemType: concept
-          text: Manage apps
-        - url: ./configmgr/osd/index.yml
-          itemType: concept
-          text: Operating system deployment
-        - url: ./configmgr/sum/index.yml
-          itemType: concept
-          text: Software updates
-        - url: ./configmgr/compliance/index.yml
-          itemType: concept
-          text: Manage configuration and compliance of devices
-        - url: ./configmgr/protect/index.yml
-          itemType: concept
-          text: Protect your infrastructure and data
-    - title: Windows Autopilot
-      links:
-        - url: ./autopilot/index.yml
-          itemType: concept
-          text: Windows Autopilot documentation
-        - url: ./autopilot/enrollment-autopilot.md
-          itemType: how-to-guide
-          text: "Intune: Enroll Windows devices using Windows Autopilot"
-        - url: ./autopilot/existing-devices.md
-          itemType: how-to-guide
-          text: "Configuration Manager: Use Windows Autopilot for existing devices"
+    # Card
+    - title: Microsoft Intune docs
+      imageSrc: ./media/microsoft-intune.svg
+      summary: Microsoft Intune is a cloud-based service that helps enable your workforce to be productive while keeping your corporate data protected.
+      url: ./intune/index.yml
+    # Card
+    - title: Microsoft Configuration Manager docs
+      imageSrc: ./media/configmgr.svg
+      summary: Configuration Manager is an on-premises and cloud-connected device management solution to manage devices, deploy apps and software updates, etc.
+      url: ./configmgr/index.yml
+    # Card
+    - title: Windows Autopilot docs
+      imageSrc: ./media/autopilot.svg
+      summary: Windows Autopilot is a collection of technologies used to set up and pre-configure new devices, getting them ready for productive use, and to reset, repurpose, and recover devices. 
+      url: ./autopilot/index.yml      
+    # Card
+    - title: Endpoint analytics docs
+      imageSrc: ./media/endpoint-analytics.svg
+      summary: Endpoint analytics can help identify policies or hardware issues that may be slowing down devices and help you proactively make improvements before end-users generate a help desk ticket.
+      url: ./analytics/index.yml    
+
+# additionalContent section (optional)
+# Card with summary style
+additionalContent:
+  # Supports up to 4 subsections
+  sections:
+    - title: Solutions & scenarios
+      items:
+        # Card
+        - title: Support remote and hybrid workers with cloud native endpoints
+          summary: Cloud-native endpoints are devices that can be deployed from anywhere. They receive their applications and configurations dynamically from the cloud, and can easily be reset or restored.
+          url: ./solutions/cloud-native-endpoints/cloud-native-endpoints-overview.md
+        - title: Manage devices with Intune and Microsoft 365
+          summary: A core component of enterprise-level security includes managing and protecting devices. Whether you’re building a Zero Trust security architecture, hardening your environment against ransomware, or building in protections to support remote workers, managing devices is part of the strategy.
+          url: /microsoft-365/solutions/manage-devices-with-intune-overview
+        - title: Set up your infrastructure for hybrid work
+          summary: Solution to secure and optimize your worker’s productivity and collaboration, you need to allow on-site and remote workers to access your organization's on-premises and cloud-based information, tools, and resources easily and securely.
+          url: /microsoft-365/solutions/empower-people-to-work-remotely
+        - title: Zero Trust guidance
+          summary: Learn about the Zero Trust security model, its principles, and how to implement a Zero Trust architecture using the deployment plans.
+          url: /security/zero-trust/
+
+    - title: Related services
+      items:
+        # Card
+        - title: Windows Autopatch docs
+          summary: Windows Autopatch is a cloud service that automates Windows, Microsoft 365 Apps for enterprise, Microsoft Edge, and Microsoft Teams updates to improve security and productivity across your organization.
+          url: /windows/deployment/windows-autopatch/
+        # Card
+        - title: Azure Active Directory
+          summary: Azure Active Directory (Azure AD) is a cloud-based identity and access management service.
+          url: /azure/active-directory/
+        # Card
+        - title: Windows client docs for IT Pros
+          summary: Evaluate, plan, deploy, secure, and manage devices running Windows 10 and Windows 11.
+          url: /windows/resources/
+        # Card
+        - title: Windows 365 docs
+          summary: Windows 365 is a cloud-based service that automatically creates a new type of Windows virtual machine (Cloud PCs) for your end users. 
+          url: /windows-365/
+        # Card
+        - title: Microsoft Defender for Endpoint
+          summary: Microsoft Defender for Endpoint delivers preventative protection, post-breach detection, automated investigation, and response.
+          url: /microsoft-365/security/defender-endpoint/
+
+    - title: Microsoft Intune community & support
+      items:
+        # Card
+        - title: Microsoft Endpoint Manager Blog
+          summary: Read Microsoft Endpoint Manager blog posts, including announcements, support tips, troubleshooting tips, and more.
+          url: https://techcommunity.microsoft.com/t5/microsoft-endpoint-manager-blog/bg-p/MicrosoftEndpointManagerBlog
+        # Card
+        - title: Intune Customer Success blog
+          summary: Read blog posts written by the Intune support team, including announcements, support tips, troubleshooting tips, and more.
+          url: https://techcommunity.microsoft.com/t5/intune-customer-success/bg-p/IntuneCustomerSuccess         
+        # Card
+        - title: Configuration Manager blog
+          summary: Read Configuration manager blog posts, including announcements, support tips, troubleshooting tips, and more.
+          url: https://techcommunity.microsoft.com/t5/configuration-manager-blog/bg-p/ConfigurationManagerBlog
+        # Card
+        - title: Microsoft Endpoint Manager Tech Community discussions
+          summary: Collaborate, share and learn from experts
+          url: https://techcommunity.microsoft.com/t5/microsoft-endpoint-manager/ct-p/microsoft-endpoint-manager
+        # Card
+        - title: "Twitter: #MSIntune"
+          summary: Keep current with the active Twitter community
+          url: https://twitter.com/hashtag/msintune
+  # footer (optional)
+  footer: "Found a problem with Microsoft Intune docs? [Let us know](use-docs.md#about-feedback)!"

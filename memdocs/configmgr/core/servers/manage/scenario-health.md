@@ -6,10 +6,12 @@ ms.date: 09/09/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Monitor scenario health in Configuration Manager
@@ -73,7 +75,7 @@ With this health information, you can see how long it takes for SQL Server to ex
 ## Client action health
 
 <!--7699511-->
-Monitor the health of the fast channel used for client actions. If your environment is [tenant attached with devices uploaded](../../../tenant-attach/device-sync-actions.md), this feature helps you see potential issues with client actions from the Microsoft Endpoint Manager admin center. You can also use this feature for on-premises client actions. For example, CMPivot, run scripts, and device wake-up.
+Monitor the health of the fast channel used for client actions. If your environment is [tenant attached with devices uploaded](../../../tenant-attach/device-sync-actions.md), this feature helps you see potential issues with client actions from the Microsoft Intune admin center. You can also use this feature for on-premises client actions. For example, CMPivot, run scripts, and device wake-up.
 
 Configuration Manager includes the following tests for this scenario:
 

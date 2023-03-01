@@ -1,19 +1,18 @@
 ---
 description: Learn how to check if the default application catalog website point in the client agent settings is set to portalUrl.
-title: "CheckPortalUrl Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: CheckPortalUrl Method
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 377797dd-dd3c-476f-995c-647dbda78123
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # CheckPortalUrl Method for Class SMS_ClientSettings
 The `CheckPortalUrl` Windows Management Instrumentation (WMI) class method, in Configuration Manager, checks whether the default application catalog website point in the default or custom client agent settings is set to `portalUrl`.  

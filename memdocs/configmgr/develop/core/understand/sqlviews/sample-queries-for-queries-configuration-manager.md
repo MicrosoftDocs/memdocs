@@ -9,11 +9,11 @@ ms.topic: conceptual
 
 
 ms.assetid: f03a4839-c731-44c3-99e7-fffc4885cae9
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
+ms.collection: tier3
 ---
 
 # Sample queries for the query view in Configuration Manager

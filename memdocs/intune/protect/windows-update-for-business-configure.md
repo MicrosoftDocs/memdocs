@@ -23,9 +23,10 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 #ms.custom:
-ms.collection: 
-  - M365-identity-device-management
-  - highpri
+ms.collection:
+- tier1
+- M365-identity-device-management
+- highpri
 ---
 
 # Manage Windows 10 and Windows 11 software updates in Intune
@@ -46,7 +47,7 @@ Intune provides the following policy types to manage updates, which you assign t
 
   Update ring policies are supported for devices that run Windows 10 version 1607 or later, and Windows 11.
 
-- **Feature updates for Windows 10 and later** *(public preview)*: This policy updates devices to the Windows version you specify, and then freezes the feature set version on those devices. This version freeze remains in place until you choose to update them to a later Windows version. While the feature version remains static, devices can continue to install quality and security updates that are available for their feature version.
+- **Feature updates for Windows 10 and later**: This policy updates devices to the Windows version you specify, and then freezes the feature set version on those devices. This version freeze remains in place until you choose to update them to a later Windows version. While the feature version remains static, devices can continue to install quality and security updates that are available for their feature version.
 
   Feature updates policies are supported for devices that run on supported versions of Windows 10 and Windows 11. You can also use Feature updates policy to [upgrade your devices that run Windows 10 to Windows 11](../protect/windows-10-feature-updates.md#upgrade-devices-to-windows-11).
 
@@ -70,11 +71,11 @@ Use the following process to ensure Windows Update has processed your feature up
 
 #### Switch to feature updates policy
 
-1. In the Microsoft Endpoint Manager admin center, create a [feature updates policy](../protect/windows-10-feature-updates.md) that configures your desired Windows version, and assign it to applicable devices.
+1. In the Microsoft Intune admin center, create a [feature updates policy](../protect/windows-10-feature-updates.md) that configures your desired Windows version, and assign it to applicable devices.
 
    After the saved policy is assigned to devices, it will take a few minutes for Windows Update to process the policy.
 
-2. View the [Windows 10 and later feature updates (Organizational)](../protect/windows-update-compliance-reports.md#use-the-windows-10-and-later-feature-updates-organizational-report) report for the feature update policy, and verify devices have a state of **OfferReady** before you proceed.  Once all devices show **OfferReady**, Windows Update has completed processing the policy.
+2. View the [Windows 10 feature updates (Organizational)](../protect/windows-update-compliance-reports.md#use-the-windows-10-feature-updates-organizational-report) report for the feature update policy, and verify devices have a state of **OfferReady** before you proceed.  Once all devices show **OfferReady**, Windows Update has completed processing the policy.
 
 3. After devices are verified to be in the **OfferReady** state you can safely reconfigure the [Windows 10 and later update ring policy](../protect/windows-10-update-rings.md) for that same set of devices to change the setting **Feature update deferral period (days)** to a value of **0**.
 

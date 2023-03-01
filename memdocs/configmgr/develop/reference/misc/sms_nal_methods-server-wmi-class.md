@@ -1,19 +1,18 @@
 ---
-title: "SMS_NAL_Methods Class"
-titleSuffix: "Configuration Manager"
-description: "The `SMS_NAL_Methods` Windows Management Instrumentation (WMI) class, in Configuration Manager, defines and manipulates a network abstraction layer (NAL) path."
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: SMS_NAL_Methods Class
+titleSuffix: Configuration Manager
+description: The `SMS_NAL_Methods` Windows Management Instrumentation (WMI) class, in Configuration Manager, defines and manipulates a network abstraction layer (NAL) path.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: b9e16ee5-11c1-4d82-9ff4-73612137e243
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_NAL_Methods Server WMI Class
 The `SMS_NAL_Methods` Windows Management Instrumentation (WMI) class, in Configuration Manager, defines and manipulates a network abstraction layer (NAL) path.  

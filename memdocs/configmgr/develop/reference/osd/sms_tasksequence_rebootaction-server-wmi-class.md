@@ -1,18 +1,18 @@
 ---
-title: "SMS_TaskSequence_RebootAction Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: SMS_TaskSequence_RebootAction Class
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 718afd29-a3cc-436a-9cb7-7e35e0e77f59
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
+ms.collection: tier3
 description: Learn about the simplified syntax, methods, properties, and requirements of the SMS_TaskSequence_RebootAction server class.
-
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_TaskSequence_RebootAction Server WMI Class
 The `SMS_TaskSequence_RebootAction` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a task sequence action that specifies restart options for the target computer.  

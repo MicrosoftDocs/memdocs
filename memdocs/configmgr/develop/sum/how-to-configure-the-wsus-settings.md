@@ -1,18 +1,18 @@
 ---
-title: "Configure the WSUS Settings"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: Configure the WSUS Settings
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: how-to
 ms.assetid: c6d0f7c3-d794-4f15-89ce-dbdbb57d133c
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-description: "Windows Server Update Services (WSUS) component settings are configured in Configuration Manager by modifying the site control file."
-
+ms.collection: tier3
+description: Windows Server Update Services (WSUS) component settings are configured in Configuration Manager by modifying the site control file.
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Configure the WSUS Settings
 You configure the Windows Server Update Services (WSUS) component settings, in Configuration Manager, by modifying the site control file. For more information, see [Windows Server Update Services](/windows-server/administration/windows-server-update-services/get-started/windows-server-update-services-wsus).  

@@ -1,19 +1,18 @@
 ---
-title: "SMS_ApplicationAssignment Class"
-titleSuffix: "Configuration Manager"
-description: "The SMS_ApplicationAssignment WMI class represents the assignment of an application to a collection. "
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: SMS_ApplicationAssignment Class
+titleSuffix: Configuration Manager
+description: The SMS_ApplicationAssignment WMI class represents the assignment of an application to a collection. 
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: d4022814-fd1f-4c85-b6e2-787aa3f94953
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_ApplicationAssignment Server WMI Class
 The `SMS_ApplicationAssignment` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the assignment of an application to a collection.  

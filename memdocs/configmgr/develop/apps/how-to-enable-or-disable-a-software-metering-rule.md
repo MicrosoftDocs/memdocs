@@ -1,19 +1,18 @@
 ---
-title: "Enable or Disable a Software Metering Rule"
-titleSuffix: "Configuration Manager"
-description: "Enable or disable a software metering rule, in Configuration Manager, by loading an instance of the software metering rule."
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: Enable or Disable a Software Metering Rule
+titleSuffix: Configuration Manager
+description: Enable or disable a software metering rule, in Configuration Manager, by loading an instance of the software metering rule.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: how-to
 ms.assetid: 13812f78-4627-4427-a32c-7c8bfe64a307
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Enable or Disable a Software Metering Rule
 You enable or disable a software metering rule, in Configuration Manager, by loading the instance of the software metering rule that is identified by the software metering rule ID and then setting the Enabled value.  

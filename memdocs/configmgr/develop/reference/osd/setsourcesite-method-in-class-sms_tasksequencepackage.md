@@ -1,18 +1,18 @@
 ---
-title: "SetSourceSite Method in SMS_TaskSequencePackage"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: SetSourceSite Method in SMS_TaskSequencePackage
+description: Learn how to use the SetSourceSite method in Configuration Manager to set the code of the source site for the task sequence package.
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 54863fd1-b98b-4491-9c30-bd0236495bad
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SetSourceSite Method in Class SMS_TaskSequencePackage
 The `SetSourceSite` Windows Management Instrumentation (WMI) class method, in Configuration Manager, sets the code of the source site for the task sequence package.  

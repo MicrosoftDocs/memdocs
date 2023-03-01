@@ -6,10 +6,12 @@ ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
-author: mestew
-manager: dougeby
-ms.author: mstewart
+author: sheetg09
+manager: apoorvseth
+ms.author: sheetg
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to create child configuration items in Configuration Manager
 

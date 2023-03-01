@@ -25,7 +25,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Prerequisites for the Certificate Connector for Microsoft Intune
@@ -56,7 +58,7 @@ Requirements for the computer where you install the connector software:
 
 Requirements for PKCS certificate templates:
 
-- Certificate templates you’ll use for PKCS requests must be configured with permissions that allow the certificate connector service account to auto enroll the certificate.
+- Certificate templates you’ll use for PKCS requests must be configured with permissions that allow the certificate connector service account to enroll the certificate.
 - The certificate templates must be added to the Certification Authority (CA).
 
 > [!NOTE]

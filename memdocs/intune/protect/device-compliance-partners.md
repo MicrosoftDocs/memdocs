@@ -13,7 +13,7 @@ ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
 ms.technology:
-ms.reviewer: samyada
+ms.reviewer: tycast
 
 # optional metadata
 
@@ -24,7 +24,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Support third-party device compliance partners in Intune
@@ -51,6 +53,7 @@ The compliance state is then evaluated by conditional access policies, the same 
 
 The following compliance partners are supported as generally available:
 
+- Addigy
 - BlackBerry UEM
 - Citrix Workspace device compliance
 - IBM MaaS360
@@ -60,9 +63,13 @@ The following compliance partners are supported as generally available:
 - SOTI MobiControl
 - VMware Workspace ONE UEM (formerly AirWatch)
 
+> [!NOTE]
+> If you offer an MDM product and would like to onboard as a device compliance partner, fill out this Form: [Intune partner compliance onboarding.](https://aka.ms/IntunePartnerComplianceOnboarding)
+
+
 ## Prerequisites
 
-- A subscription to Microsoft Intune, and access to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+- A subscription to Microsoft Intune, and access to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 - Device users must be assigned a license for Intune.
 
@@ -76,7 +83,7 @@ Enable support for a device compliance partner to use compliance state data from
 
 ### Add a compliance partner to Intune
 
-1. Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Go to **Tenant Administration** > **Connectors and Tokens** > **Partner Compliance management** > **Add Compliance Partner**.
 
@@ -99,7 +106,7 @@ Your configuration now appears on the Partner compliance management page.
 
 ### Modify the configuration for a compliance partner
 
-1. Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Go to **Tenant Administration** > **Connectors and Tokens** > **Partner Compliance management**, and then select the partner configuration you want to modify. Configurations are ordered by platform type.
 
@@ -111,7 +118,7 @@ Your configuration now appears on the Partner compliance management page.
 
 6. *This step only applies when you use VMware Workspace ONE*:
 
-   From within the Workspace ONE UEM console, you must manually synchronize the changes you saved in the Microsoft Endpoint Manager admin center. Until you manually sync changes, Workspace ONE UEM isn’t aware of configuration changes, and users in new groups you’ve assigned won’t successfully report compliance.
+   From within the Workspace ONE UEM console, you must manually synchronize the changes you saved in the Microsoft Intune admin center. Until you manually sync changes, Workspace ONE UEM isn’t aware of configuration changes, and users in new groups you’ve assigned won’t successfully report compliance.
 
    To manually sync from Azure Services:
    1. Sign in to your VMware Workspace ONE UEM console.
@@ -126,7 +133,7 @@ To enable a device compliance partner to work with Intune, you must complete con
 
 - [Citrix Endpoint Management integration with Microsoft Endpoint Manager](https://docs.citrix.com/en-us/citrix-endpoint-management/integration-with-mem.html)
 
-- [VMware Workspace ONE UEM](https://docs.vmware.com/en/VMware-Workspace-ONE-UEM/services/Directory_Service_Integration/GUID-800FB831-AA66-4094-8F5A-FA5899A3C70C.html)  
+- [VMware Workspace ONE UEM](https://docs.vmware.com/en/VMware-Workspace-ONE-UEM/2102/Directory_Service_Integration/GUID-800FB831-AA66-4094-8F5A-FA5899A3C70C.html)  
 
 ## Enroll your devices to your device compliance partner
 
@@ -145,4 +152,4 @@ Use additional documentation from your third-party partner to create compliance 
 - [Blackberry UEM](https://docs.blackberry.com/en/id-comm-collab/blackberry-workspaces/blackberry-workspaces-plug-in-for-blackberry-uem/4_9/compatibility-matrix/imm1460398825659/ioz1460399956336)
 - [Citrix Endpoint Management - Integrate with Azure AD Conditional Access](https://docs.citrix.com/en-us/citrix-endpoint-management/prepare-to-enroll-devices-and-deliver-resources.html#integrate-with-azure-ad-conditional-access)
 - [MobileIron Device Compliance Cloud](https://forums.ivanti.com/s/article/MobileIron-Cloud-Azure-Device-Compliance-for-iOS-and-Android)
-- [VMware Workspace ONE UEM](https://docs.vmware.com/en/VMware-Workspace-ONE-UEM/services/Directory_Service_Integration/GUID-800FB831-AA66-4094-8F5A-FA5899A3C70C.html)
+- [VMware Workspace ONE UEM](https://docs.vmware.com/en/VMware-Workspace-ONE-UEM/2102/Directory_Service_Integration/GUID-800FB831-AA66-4094-8F5A-FA5899A3C70C.html)

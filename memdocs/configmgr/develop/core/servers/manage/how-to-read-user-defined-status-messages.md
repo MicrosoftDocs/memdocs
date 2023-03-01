@@ -1,18 +1,18 @@
 ---
-title: "Read User-Defined Status Messages"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: Read User-Defined Status Messages
+titleSuffix: Configuration Manager
+description: In Configuration Manager, you can read user-defined status messages, on the site server, by querying the SMS Provider.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: how-to
 ms.assetid: 710c50b4-d898-4244-ba77-f5499d737ce4
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Read User-Defined Status Messages
 In Configuration Manager, you can read user-defined status messages, on the site server, by querying the SMS Provider.  

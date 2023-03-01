@@ -1,19 +1,18 @@
 ---
 description: Learn how to add the type of relationship between a user and a device in Configuration Manager using AddType.
-title: "AddType Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: AddType Method
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 8b292712-09c5-438e-adc1-0458c96a50dd
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # AddType Method in Class SMS_UserMachineRelationship
 The `AddType` Windows Management Instrumentation (WMI) class method, in Configuration Manager, adds a type of the relationship between a user and a device.  

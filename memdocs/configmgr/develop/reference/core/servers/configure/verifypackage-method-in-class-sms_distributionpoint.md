@@ -1,18 +1,18 @@
 ---
-title: "VerifyPackage Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: VerifyPackage Method
+titleSuffix: Configuration Manager
+description: A class method that verifies the integrity of the files in a package by calculating the hash of each file.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 143aeb29-3c4d-400b-910f-0783b9ca0c5c
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # VerifyPackage Method in Class SMS_DistributionPoint
 The `VerifyPackage` Windows Management Instrumentation (WMI) class method, in Configuration Manager, verifies the integrity of all the files in the package by calculating the hash of each file.  

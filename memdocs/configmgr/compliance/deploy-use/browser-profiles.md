@@ -2,14 +2,16 @@
 title: Configure Microsoft Edge settings
 titleSuffix: Configuration Manager
 description: Configure settings for the Microsoft Edge Legacy web browser on Windows 10 clients
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: sheetg09
+ms.author: sheetg
+manager: apoorvseth
 ms.date: 03/02/2021
 ms.topic: how-to
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Configure Microsoft Edge Legacy settings in Configuration Manager
@@ -17,7 +19,7 @@ ms.localizationpriority: medium
 > [!IMPORTANT]
 > If you're using Microsoft Edge version 77 or later, and are trying to open the settings pane, enter `edge://settings/profiles` in the browser address bar instead of search. For more information, see [Get to know Microsoft Edge](https://support.microsoft.com/help/17171/microsoft-edge-get-to-know).
 >
-> This article is for IT professionals to manage Microsoft Edge Legacy settings with Microsoft Endpoint Configuration Manager.
+> This article is for IT professionals to manage Microsoft Edge Legacy settings with Microsoft Configuration Manager.
 
 *Applies to: Configuration Manager (current branch)*
 

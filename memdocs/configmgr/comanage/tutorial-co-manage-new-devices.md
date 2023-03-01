@@ -2,15 +2,17 @@
 title: Tutorial - Enable co-management for internet devices
 titleSuffix: Configuration Manager
 description: Learn how to configure co-management for new internet-based Windows 10 or later devices by using Configuration Manager and Microsoft Intune.
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: gowdhamankarthikeyan
+ms.author: gokarthi
+manager: apoorvseth
 ms.date: 08/24/2021
 ms.topic: tutorial
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.localizationpriority: medium
 #Customer intent: As a Configuration Manager admin, I want enable co-management so I can manage some client workloads from Intune and others from Configuration Manager.
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Tutorial: Enable co-management for new internet-based devices
@@ -47,7 +49,7 @@ In this tutorial, you will:
   > [!TIP]  
   > An Enterprise Mobility + Security subscription [free trial](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-trial) includes both Azure Active Directory Premium and Microsoft Intune.  
   >
-  > You no longer need to purchase and assign individual Intune or Enterprise Mobility + Security licenses to your users. For more information, see [Product and licensing FAQ](../core/understand/product-and-licensing-faq.yml#what-changes-with-licensing-for-co-management-in-microsoft-endpoint-manager-).
+  > You no longer need to purchase and assign individual Intune or Enterprise Mobility + Security licenses to your users. For more information, see [Product and licensing FAQ](../core/understand/product-and-licensing-faq.yml#what-changes-with-licensing-for-co-management-in-the-microsoft-intune-family-of-products-).
 
 ### On-premises infrastructure
 
@@ -389,7 +391,7 @@ Then, when a previously unmanaged Windows 10 or later device enrolls with Intune
 
 ### Create an Intune app to install the Configuration Manager client
 
-1. From the primary site server, sign in to the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com). Then, go to **Apps** > **All Apps** > **Add**.
+1. From the primary site server, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Then, go to **Apps** > **All Apps** > **Add**.
 
 2. For app type, select **Line-of-business app** under **Other**.
 
@@ -418,7 +420,7 @@ Then, when a previously unmanaged Windows 10 or later device enrolls with Intune
 
 The following procedure deploys the app for installing the Configuration Manager client that you created in the previous procedure:
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com). Select **Apps** > **All Apps**, and then select **ConfigMgr Client Setup Bootstrap**. That's the app that you created to deploy the Configuration Manager client.  
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Select **Apps** > **All Apps**, and then select **ConfigMgr Client Setup Bootstrap**. That's the app that you created to deploy the Configuration Manager client.  
 
 2. Select **Properties**, and then select **Edit** for **Assignments**. Select **Add group** under **Required** assignments to set the Azure AD groups that have users and devices that you want to participate in co-management.  
 

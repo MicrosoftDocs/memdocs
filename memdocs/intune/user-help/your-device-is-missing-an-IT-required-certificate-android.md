@@ -2,7 +2,7 @@
 # required metadata
 
 title: Install missing required certificate
-description:
+description: If your device isn't enrolled in Intune, and it's missing a required certificate, you won't be able to sign in to the Company Portal app.
 keywords:
 author: lenewsad
 ms.author: lanewsad
@@ -26,7 +26,8 @@ ms.reviewer: arnab
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
-ms.collection: 
+ms.collection:
+- tier2
 ---
 
 # Install missing certificate required by your organization  

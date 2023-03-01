@@ -2,26 +2,27 @@
 title: Manual registration of devices for Windows Autopilot
 description: Manual registration overview
 keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune
-ms.prod: w10
+ms.prod: windows-client
 ms.mktglfcycl: deploy
 ms.localizationpriority: medium
 ms.sitesec: library
 ms.pagetype: deploy
 audience: itpro
-author: aczechowski
-ms.author: aaroncz
+author: frankroj
+ms.author: frankroj
 ms.reviewer: jubaptis
-manager: dougeby
-ms.date: 8/4/2021
+manager: aaroncz
+ms.date: 11/17/2022
 ms.topic: how-to
 ms.collection: 
-- M365-modern-desktop
-- m365initiative-coredeploy
+  - M365-modern-desktop
+  - m365initiative-coredeploy
+ms.technology: itpro-deploy
 ---
 
 # Manual registration overview
 
-**Applies to**
+*Applies to:*
 
 - Windows 11
 - Windows 10
@@ -48,9 +49,9 @@ To [manually register a device](add-devices.md), you must first capture its hard
 After the hardware hashes have been captured from existing devices, they can be uploaded in any of the following ways:
 
 - [Microsoft Intune](add-devices.md). This is the preferred mechanism for all customers.
-  - The Microsoft Endpoint Manager admin center is used for Intune device enrollment.
+  - The Microsoft Intune admin center is used for Intune device enrollment.
 - [Partner Center](https://msdn.microsoft.com/partner-center/autopilot). This is used by CSP partners to register devices on behalf of customers.
-- [Microsoft 365 Business & Office 365 Admin](https://support.office.com/article/Create-and-edit-AutoPilot-profiles-5cf7139e-cfa1-4765-8aad-001af1c74faa). This is typically used by small and medium businesses (SMBs) who manage their devices using Microsoft 365 Business.
+- [Microsoft 365 Business & Office 365 Admin](https://support.office.com/article/Create-and-edit-Autopilot-profiles-5cf7139e-cfa1-4765-8aad-001af1c74faa). This is typically used by small and medium businesses (SMBs) who manage their devices using Microsoft 365 Business.
 - [Microsoft Store for Business](/microsoft-store/add-profile-to-devices#manage-autopilot-deployment-profiles). You might already be using MSfB to manage your apps and settings.
 
 >[!IMPORTANT]

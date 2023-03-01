@@ -7,23 +7,25 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/12/2020
-ms.topic: conceptual
+ms.date: 09/20/2022
+ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
-ms.technology:
 
 # optional metadata
 
 #ROBOTS:
 #audience:
 
+ms.reviewer: tycast
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier3
+- M365-identity-device-management
 ---
 
 # Android device settings to configure VPN in Intune
@@ -38,7 +40,9 @@ As an Intune administrator, you can create and assign VPN settings to Android de
 
 ## Before you begin
 
-Create an [Android device administrator VPN device configuration profile](vpn-settings-configure.md).
+- Create an [Android device administrator VPN device configuration profile](vpn-settings-configure.md).
+
+- [!INCLUDE [partner-vpns](../includes/partner-vpns.md)]
 
 ## Base VPN
 
@@ -69,4 +73,4 @@ Create an [Android device administrator VPN device configuration profile](vpn-se
 
 [Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
 
-You can also create VPN profiles for [Android Enterprise](vpn-settings-android-enterprise.md), [iOS/iPadOS](vpn-settings-ios.md), [macOS](vpn-settings-macos.md), [Windows 10 and later](vpn-settings-windows-10.md), and [Windows 8.1](vpn-settings-windows-8-1.md) devices.
+You can also create VPN profiles for [Android Enterprise](vpn-settings-android-enterprise.md), [iOS/iPadOS](vpn-settings-ios.md), [macOS](vpn-settings-macos.md), and [Windows 10 and later](vpn-settings-windows-10.md).

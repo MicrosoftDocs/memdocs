@@ -3,12 +3,12 @@
 
 title: Data Intune sends to Google
 titleSuffix: Microsoft Intune
-description: List of data that Intune sends to Google.
+description: List of data that Intune sends to Google when Android enterprise device management is enabled with Intune.
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: brenduns
+ms.author: brenduns
 manager: dougeby
-ms.date: 11/16/2020
+ms.date: 04/08/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -27,12 +27,12 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Data Intune sends to Google
-
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 When Android enterprise device management is enabled on a device, Microsoft Intune establishes a connection with Google and shares user and device information with Google. Before Microsoft Intune can establish a connection, you must create a Google account.
 
@@ -48,8 +48,6 @@ The following table lists the data that Microsoft Intune sends to Google when de
 | Google User | Google | Managing the work profile for Personally-Owned Work Profile (BYOD) scenarios. | Unique identifier to represent the linked Gmail account. Example: 114223373813435875042 |
 | Application Data | Originated in Intune when saving application policy. |  | Application Name string. Example: app:com.microsoft.windowsintune.companyportal |
 | Enterprise Service Account | Originated in Google upon Intune request. | Used for authentication between Intune and Google for transactions involving this customer. | There are several parts:<br> **Enterprise Id**: documented previously.<br>**UPN**: generated UPN used in authentication on behalf of customer.<br>Example: w49d77900526190e26708c31c9e8a0@pfwp-commicrosoftonedfmdm2.google.com.iam.gserviceaccount.com<br>**Key**: Base64 encoded blob used in auth requests, stored encrypted in the service, but this is what the blob looks like:<br> Unique Identifier to represent the customer's key<br>Example: a70d4d53eefbd781ce7ad6a6495c65eb15e74f1f |
-
+| Registration Token | Originated in Google upon device enrollment. | Used to identify device when sending push notifications to the Company Portal app. |  |
 
 To stop using Android enterprise device management with Microsoft Intune and delete the data, you must both disable the Microsoft Intune Android enterprise device management and also delete your Google account. Refer to Google account how to perform account management.
-
-

@@ -1,18 +1,18 @@
 ---
-title: "SMS_StatMsgAttributes Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: SMS_StatMsgAttributes Class
+description: Learn how the SMS_StatMsgAttributes class is an SMS Provider server class that represents optional data associated with a status message.
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 437e32f3-8fbd-4843-811e-9d53d8dce9d9
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_StatMsgAttributes Server WMI Class
 The `SMS_StatMsgAttributes` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents optional data associated with a status message.  

@@ -2,7 +2,7 @@
 # required metadata
 
 title: Unable to get macOS device managed
-description:
+description: If you receive either of these messages while trying to get your macOS device managed, contact your company support.
 keywords:
 author: lenewsad
 
@@ -27,7 +27,8 @@ ms.reviewer:
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
-ms.collection: 
+ms.collection:
+- tier2
 ---
 
 

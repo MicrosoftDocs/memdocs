@@ -6,10 +6,12 @@ ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to
-author: aczechowski
-manager: dougeby
-ms.author: aaroncz
+author: banreet
+manager: apoorvseth
+ms.author: banreetkaur
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Service windows for site servers

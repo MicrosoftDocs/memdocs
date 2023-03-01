@@ -6,10 +6,12 @@ ms.date: 02/16/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: reference
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: sheetg09
+ms.author: sheetg
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # About client settings in Configuration Manager
@@ -171,8 +173,9 @@ Select **Schedule** to create the default schedule for configuration baseline de
 
 Choose **Yes** if you want to deploy [user data and profiles](../../../compliance/deploy-use/create-user-data-and-profiles-configuration-items.md) configuration items.
 
+## Script Execution Timeout (seconds)
 
-
+Starting in version 2207, you can define a **Script Execution Timeout (seconds)**. The timeout value can be set from a minimum of 60 seconds to a maximum of 600 seconds. This new setting allows you more flexibility for configuration items when you need to run scripts that may exceed the default of 60 seconds. <!--14120481-->
 ## Computer agent  
 
 ### User notifications for required deployments
@@ -676,7 +679,7 @@ _Applies to version 2103 and later_
 
 Enable this option for Software Center to use the Microsoft Edge WebView2 browser control. The WebView2 browser control provides improved security and user experience. For example, more websites should work with these custom tabs without displaying script errors or security warnings.
 
-If it's not already installed, the Configuration Manager client installs the **Microsoft Edge WebView2 runtime (fixed version)** on the device. Clients download the WebView2 redistributable installation file from the management point. The installer is over 100 MB in size. If you need to enable this setting on a large number of clients, and are concerned about the effect of network usage, predeploy the WebView2 runtime as an application. Use the software distribution features of Configuration Manager to better control the content distribution and timing of software installation.<!-- 12769440 -->
+If it's not already installed, the Configuration Manager client installs the **Microsoft Edge WebView2 runtime (fixed version)** on the device. The installer is over 100 MB in size. If you need to enable this setting on a large number of clients, and are concerned about the effect of network usage, predeploy the WebView2 runtime as an application. Use the software distribution features of Configuration Manager to better control the content distribution and timing of software installation.<!-- 12769440 -->
 
 > [!NOTE]
 > - If the client device isn't running .NET Framework version 4.6.2 or later, it falls back to use the Internet Explorer browser control. Starting in version 2107, the client requires .NET version 4.6.2, and version 4.8 is recommended.<!--10402814--> For more information, see [Prerequisites for deploying clients to Windows computers](prerequisites-for-deploying-clients-to-windows-computers.md#more-details-about-microsoft-net).

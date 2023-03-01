@@ -24,7 +24,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ms.reviewer: lacranda
 ---
 
@@ -48,6 +50,9 @@ The majority of this article applies to SCEP and PKCS certificate profiles, but 
 Manual deletion of a certificate is a scenario that applies across platforms and certificates provisioned by SCEP or PKCS certificate profiles. For example, a user might delete a certificate from a device, when the device remains targeted by a certificate policy.
 
 In this scenario, after the certificate is deleted, the next time the device checks in with Intune it's found to be out of compliance as it is missing the expected certificate. Intune then issues a new certificate to restore the device to compliance. No other action is needed to restore the certificate.
+
+> [!NOTE]
+> SCEP certificates are [removed but not revoked](certificate-authority-add-scep-overview.md#removing-certificates) when using a third-party certification authority.
 
 ## Windows devices
 

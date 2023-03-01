@@ -26,25 +26,24 @@ ms.reviewer: jieyang
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
-ms.collection: 
+ms.collection:
+- tier2
 ---
 
-# Rename your device from the Company Portal website
+# Rename your device from the Company Portal website  
 
-Rename an enrolled, managed device from the Company Portal website. Change a device's generic or default model name to a name that you can quickly identify.
+**Applies to:** 
+* Android   
+* iOS/iPadOS    
+* macOS   
+* Windows 10/11    
 
-1. Open the [Company Portal website](https://portal.manage.microsoft.com) and select the __Menu__ button > __Devices__.  
+Remotely change the names of your enrolled devices from the Company Portal website.  
 
-2. Select the device you want to rename.
+1. On any device, sign in to the [Company Portal website](https://portal.manage.microsoft.com) with your work or school account.  
+2. Select the menu > **Devices**.   
+3. Select the device you want to rename.  
+4. Select **Rename**. If the rename option isn't visible at the top of your page, select the **More (…)** menu to see all overflow actions. Then choose **Rename**.   
+5. Enter a new name for your device. Then select **Rename** to save your changes.   
 
-    ![A screenshot of the Devices page, with 2 tiles that show unidentified, generically named devices. A gray banner sits directly below the devices and prompts user to identify the device they are using or add a new one.](./media/rename-reset-device-step2-1808.png)   
-
-3. Select **Rename**. If the rename option isn't visible at the top of your page, select **More (…)** > **Rename**.   
-
-   ![Device details page for a selected device on the Company Portal website, with a list of links at the top showing Rename, Remove, Reset Device, Reset Passcode, and Remote Lock. ](./media/rename-reset-device-1808.png)   
-
-    ![Zoomed in view of the More icon, highlighted with a red arrow.](./media/rename-reset-device-step3-more-1808.png)  
-
-4. In the box where your device's name appears, type a new name for your device. Then tap the **Rename** button. Your device now appears with the new name.  
-
-Still need help? Contact your company support. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).  
+Need additional help? Contact your support person. For contact details, sign in to the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980) and go to **Helpdesk**.    

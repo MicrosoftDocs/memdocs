@@ -9,11 +9,11 @@ ms.topic: conceptual
 
 
 ms.assetid: be1ea4b0-b003-488e-bb88-860d37d6b72c
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
+ms.collection: tier3
 ---
 
 # SQL statement reference for Configuration Manager reports

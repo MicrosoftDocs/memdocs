@@ -9,7 +9,7 @@ ms.author: erikje
 manager: dougeby
 ms.date: 08/02/2021
 ms.topic: conceptual
-ms.service: cloudpc
+ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
 ms.technology:
@@ -42,13 +42,16 @@ The following redirections can be managed by using the appropriate setting:
 | --- | --- |
 | Audio input | Allow audio recording redirection |
 | Audio output | Allow audio and video playback redirection |
-| Cameras | Don't allow video capture redirection |
-| Clipboard | Don't allow Clipboard redirection |
-| Printers | Don't allow client printer redirection |
-| COM ports | Don't allow COM port redirection |
-| Drives | Don't allow drive redirection |
-| Smartcards | Don't allow smart card device redirection |
-| USB drives| Don't allow supported Plug and Play device redirection |
+| Cameras | Do not allow video capture redirection |
+| Clipboard | Do not allow Clipboard redirection |
+| COM ports | Do not allow COM port redirection |
+| Drives | Do not allow drive redirection |
+| Location | Do not allow location redirection |
+| Printers | Do not allow client printer redirection |
+| Smartcards | Do not allow smart card device redirection |
+| USB drives| Do not allow supported Plug and Play device redirection |
+
+
 
 There are two ways to manage these redirections:
 
@@ -61,7 +64,7 @@ Follow the appropriate guidance to manage RDP device redirections.
 
 To manage any of the redirections by using the Settings Catalog, create and assign a device configuration policy:
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration profiles** > **Create profile**.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration profiles** > **Create profile**.
 
 2. Select the **Windows 10 and later** platform, the **Settings catalog (preview)** profile type, then **Create**.
 
@@ -87,7 +90,7 @@ For more help using the settings catalog to create a device configuration policy
 
 ## Use a GPO to manage RDP device redirections
 
-To manage any of the redirections by using GPO, create and assign a GPO in your Windows Server Active Directory domain. Make sure to use the corresponding policies as shown in the (RDP device redirection settings table)(#rdp-device-redirection-settings). To learn more about the policies, download the [Group Policy Settings Reference Spreadsheet](https://www.microsoft.com/download/101451).
+To manage any of the redirections by using GPO, create and assign a GPO in your Windows Server Active Directory domain. Make sure to use the corresponding policies as shown in the [RDP device redirection settings table](#rdp-device-redirection-settings). To learn more about the policies, download the [Group Policy Settings Reference Spreadsheet](https://www.microsoft.com/download/101451).
 
 <!-- ########################## -->
 ## Next steps

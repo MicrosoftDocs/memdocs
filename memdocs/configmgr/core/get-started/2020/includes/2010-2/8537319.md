@@ -1,6 +1,6 @@
 ---
-author: aczechowski
-ms.author: aaroncz
+author: Banreet
+ms.author: banreetkaur
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: include

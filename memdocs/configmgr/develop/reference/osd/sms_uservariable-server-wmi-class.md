@@ -1,19 +1,18 @@
 ---
-title: "SMS_UserVariable Class"
-titleSuffix: "Configuration Manager"
-description: "The SMS_UserVariable Windows Management Instrumentation (WMI) class defines the settings of a specific user."
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: SMS_UserVariable Class
+titleSuffix: Configuration Manager
+description: The SMS_UserVariable Windows Management Instrumentation (WMI) class defines the settings of a specific user.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: aaeefdd5-32ac-4b17-ad1d-fd9cb50b9ae0
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_UserVariable Server WMI Class
 The `SMS_UserVariable` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that defines the settings of a specific user (such as IsCloudUser=True/False).  

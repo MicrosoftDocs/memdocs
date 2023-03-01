@@ -26,6 +26,7 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-classic
 ms.collection:
+- tier3
 - M365-identity-device-management
 - iOS/iPadOS
 ---
@@ -47,13 +48,13 @@ Before you run the App Wrapping Tool, you need to fulfill some general prerequis
 
 * Download the [Microsoft Intune App Wrapping Tool for iOS](https://github.com/msintuneappsdk/intune-app-wrapping-tool-ios) from GitHub.
 
-* A macOS computer that has the Xcode toolset version 11 or later installed.
+* A macOS computer that has the Xcode toolset version 14.0 or later installed.
 
 * The input iOS app must be developed and signed by your company or an independent software vendor (ISV).
 
   * The input app file must have the extension **.ipa** or **.app**.
 
-  * The input app must be compiled for iOS 12.2 or later.
+  * The input app must be compiled for iOS 14.0 or later.
 
   * The input app cannot be encrypted.
 
@@ -96,7 +97,7 @@ You will need the following to distribute apps wrapped by Intune:
 
 8. After agreeing to license, finish by **purchasing and activating the program**.
 
-9. If you are the team agent (the person who joins the Apple Developer Enterprise Program on behalf of your organization), build your team first by inviting team members and assigning roles. To learn how to manage your team, read the Apple documentation on [Managing Your Developer Account Team](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/ManagingYourTeam/ManagingYourTeam.html#//apple_ref/doc/uid/TP40012582-CH16-SW1).
+9. If you are the team agent (the person who joins the Apple Developer Enterprise Program on behalf of your organization), build your team first by inviting team members and assigning roles. To learn how to manage your team, read the Apple documentation on [Managing Your Developer Account Team](https://help.apple.com/developer-account/#/dev3e8818774).
 
 ### Steps to create an Apple signing certificate
 
@@ -203,6 +204,16 @@ Open the macOS Terminal and run the following command:
 
 You can use the following command line parameters with the App Wrapping Tool:
 
+> [!NOTE]
+> If you are using MFA authentication the -aa, -ac, and -ar parameters are not optional. You need to specify them in order to allow the MFA redirection to work during the sign-in process.
+>
+> **Example:** The following example command runs the App Wrapping Tool, incorporating the required commands when MFA is used in the authentication process.
+> 
+>```bash
+>./IntuneMAMPackager/Contents/MacOS/IntuneMAMPackager -i ~/Desktop/MyApp.ipa -o ~/Desktop/MyApp_Wrapped.ipa -p ~/Desktop/My_Provisioning_Profile_.mobileprovision -c "12 A3 BC 45 D6 7E F8 90 1A 2B 3C DE F4 AB C5 D6 E7 89 0F AB" -aa https://login.microsoftonline.com/common -ac "Client ID of the input app if the app uses the Microsoft Authentication Library" -ar "Redirect/Reply URI of the input app if the app uses the Microsoft Authentication Library"  -v true
+>```
+
+
 |Property|How to use it|
 |---------------|--------------------------------|
 |**-i**|`<Path of the input native iOS application file>`. The file name must end in .app or .ipa. |
@@ -210,16 +221,16 @@ You can use the following command line parameters with the App Wrapping Tool:
 |**-p**|`<Path of your provisioning profile for iOS apps>`|
 |**-c**|`<SHA1 hash of the signing certificate>`|
 |**-h**| Shows detailed usage information about the available command line properties for the App Wrapping Tool. |
-|**-aa**|(Optional) `<Authority URI of the input app if the app uses the Microsoft Authentication Library>` i.e `https://login.microsoftonline.com/common` |
-|**-ac**|(Optional) `<Client ID of the input app if the app uses the Microsoft Authentication Library>` This is the guid in the Client ID field from your app's listing in the App Registration blade. |
-|**-ar**|(Optional) `<Redirect/Reply URI of the input app if the app uses the Microsoft Authentication Library>` This is the Redirect URI configured in your App Registration. Typically it would be the URL protocol of the application that the Microsoft Authenticator app would return to after brokered authentication. |
+|**-aa**|(Optional when MFA is not used) `<Authority URI of the input app if the app uses the Microsoft Authentication Library>` i.e `https://login.microsoftonline.com/common` |
+|**-ac**|(Optional when MFA is not used) `<Client ID of the input app if the app uses the Microsoft Authentication Library>` This is the guid in the Client ID field from your app's listing in the App Registration blade. |
+|**-ar**|(Optional when MFA is not used) `<Redirect/Reply URI of the input app if the app uses the Microsoft Authentication Library>` This is the Redirect URI configured in your App Registration. Typically it would be the URL protocol of the application that the Microsoft Authenticator app would return to after brokered authentication. |
 |**-v**| (Optional) Outputs verbose messages to the console. It is recommended to use this flag to debug any errors. |
 |**-e**| (Optional) Use this flag to have the App Wrapping Tool remove missing entitlements as it processes the app. See [Setting app entitlements](#setting-app-entitlements) for more details.|
 |**-xe**| (Optional) Prints information about the iOS extensions in the app and what entitlements are required to use them. See  [Setting app entitlements](#setting-app-entitlements) for more details. |
 |**-x**| (Optional) `<An array of paths to extension provisioning profiles>`. Use this if your app needs extension provisioning profiles.|
 |**-b**|(Optional) Use -b without an argument if you want the wrapped output app to have the same bundle version as the input app (not recommended). <br/><br/> Use `-b <custom bundle version>` if you want the wrapped app to have a custom CFBundleVersion. If you choose to specify a custom CFBundleVersion, it's a good idea to increment the native app's CFBundleVersion by the least significant component, like 1.0.0 -> 1.0.1. |
-|**-citrix**|(Optional) Include the Citrix XenMobile App SDK (network-only variant). You must have the [Citrix MDX Toolkit](https://docs.citrix.com/en-us/mdx-toolkit/about-mdx-toolkit.html) installed to use this option. |
 |**-f**|(Optional) `<Path to a plist file specifying arguments.>` Use this flag in front of the [plist](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/PropertyLists/Introduction/Introduction.html) file if you choose to use the plist template to specify the rest of the IntuneMAMPackager properties like -i, -o, and -p. See Use a plist to input arguments. |
+|**-dt**|(Optional) Disable collection of Microsoft Intune client telemetry.
 
 ### Use a plist to input arguments
 
@@ -240,8 +251,8 @@ In the IntuneMAMPackager/Contents/MacOS folder, open `Parameters.plist` (a blank
 | Remove Missing Entitlements |Boolean|false| Same as -e|
 | Prevent Default Build Update |Boolean|false| Equivalent to using -b without arguments|
 | Build String Override |String|empty| The custom CFBundleVersion of the wrapped output app|
-| Include Citrix XenMobile App SDK (network-only variant)|Boolean|false| Same as -citrix|
 | Extension Provisioning Profile Paths |Array of Strings|empty| An array of extension provisioning profiles for the app.
+| Disable Telemetry |Boolean|false| Same as -dt
 
 Run the IntuneMAMPackager with the plist as the sole argument:
 
@@ -253,7 +264,7 @@ Run the IntuneMAMPackager with the plist as the sole argument:
 
 After the wrapping process completes, the message "The application was successfully wrapped" will be displayed. If an error occurs, see [Error messages](#error-messages-and-log-files) for help.
 
-The wrapped app is saved in the output folder you specified previously. You can upload the app to the Intune admin console and associate it with a mobile application management policy.
+The wrapped app is saved in the output folder you specified previously. You can upload the app to the Intune admin center and associate it with a mobile application management policy.
 
 > [!IMPORTANT]
 > When uploading a wrapped app, you can try to update an older version of the app if an older (wrapped or native) version was already deployed to Intune. If you experience an error, upload the app as a new app and delete the older version.
@@ -264,7 +275,7 @@ You can now deploy the app to your user groups and target app protection policie
 
 The main scenarios in which you would need to rewrap your applications are as follows:
 
-* The application itself has released a new version. The previous version of the app was wrapped and uploaded to the Intune console.
+* The application itself has released a new version. The previous version of the app was wrapped and uploaded to the Intune admin center.
 * The Intune App Wrapping Tool for iOS has released a new version that enables key bug fixes, or new, specific Intune application protection policy features. This happens after 6-8 weeks through GitHub repo for the [Microsoft Intune App Wrapping Tool for iOS](https://github.com/msintuneappsdk/intune-app-wrapping-tool-ios).
 
 For iOS/iPadOS, while it is possible to wrap with different cert/provisioning profile than the original used to sign the app, if the entitlements specified in the app are not included in the new provisioning profile, wrapping will fail. Using the "-e" command-line option, which removes any missing entitlements from the app, to force wrapping to not fail in this scenario can cause broken functionality in the app.
@@ -336,7 +347,7 @@ The App Wrapping Tool for iOS has some requirements that must be met in order to
 
 ## Setting app entitlements
 
-Before wrapping your app, you can grant *[entitlements](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/EntitlementKeyReference/Chapters/AboutEntitlements.html)* to give the app additional permissions and capabilities that exceed what an app can typically do. An *entitlement file* is used during code signing to specify special permissions within your app (for example, access to a shared keychain). Specific app services called *capabilities* are enabled within Xcode during app development. Once enabled, the capabilities are reflected in your entitlements file. For more information about entitlements and capabilities, see [Adding Capabilities](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/AddingCapabilities/AddingCapabilities.html) in the iOS Developer Library. For a complete list of supported capabilities, see [Supported capabilities](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/SupportedCapabilities/SupportedCapabilities.html).
+Before wrapping your app, you can grant *[entitlements](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/EntitlementKeyReference/Chapters/AboutEntitlements.html)* to give the app additional permissions and capabilities that exceed what an app can typically do. An *entitlement file* is used during code signing to specify special permissions within your app (for example, access to a shared keychain). Specific app services called *capabilities* are enabled within Xcode during app development. Once enabled, the capabilities are reflected in your entitlements file. For more information about entitlements and capabilities, see [Adding Capabilities](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/AddingCapabilities/AddingCapabilities.html) in the iOS Developer Library. For a complete list of supported capabilities, see [Supported capabilities](https://help.apple.com/developer-account/#/dev21218dfd6).
 
 ### Supported capabilities for the App Wrapping Tool for iOS
 
@@ -418,7 +429,7 @@ Use the following security and privacy best practices when you use the App Wrapp
 
 - The signing certificate, provisioning profile, and the line-of-business app you specify must be on the same macOS machine that you use to run the app wrapping tool. If the files are on a UNC path, ensure that these are accessible from the macOS machine. The path must be secured via IPsec or SMB signing.
 
-    The wrapped application imported into the admin console should be on the same computer that you run the tool on. If the file is on a UNC path, ensure that it is accessible on the computer running the admin console. The path must be secured via IPsec or SMB signing.
+    The wrapped application imported into the admin center should be on the same computer that you run the tool on. If the file is on a UNC path, ensure that it is accessible on the computer running the admin center. The path must be secured via IPsec or SMB signing.
 
 - The environment where the App Wrapping Tool is downloaded from the GitHub repository needs to be secured via IPsec or SMB signing.
 
@@ -430,32 +441,7 @@ Use the following security and privacy best practices when you use the App Wrapp
 
 - When you monitor the documents folder on your device from within a wrapped app, you might see a folder named .msftintuneapplauncher. If you change or delete this file, it might affect the correct functioning of restricted apps.
 
-## Intune App Wrapping Tool for iOS with Citrix MDX mVPN
-
-This feature is an integration with the Citrix MDX app wrapper for iOS/iPadOS. The integration is simply an additional, optional command-line flag, `-citrix` to the general Intune App Wrapping Tools.
-
-### Requirements
-
-To use the `-citrix` flag, you will also need to install the [Citrix MDX app wrapper for iOS](https://docs.citrix.com/en-us/mdx-toolkit/10/xmob-mdx-kit-app-wrap-ios.html) on the same macOS machine. The downloads are found on [Citrix XenMobile Downloads](https://www.citrix.com/downloads/xenmobile/) and are restricted to Citrix customers only after signing in. Make sure this is installed in the default location: `/Applications/Citrix/MDXToolkit`. 
-
-> [!NOTE] 
-> Support for Intune and Citrix integration is limited to iOS 10+ devices only.
-
-### Use the `-citrix` flag
-
-Simply run your general app wrapping command and with the `-citrix` flag appended. The `-citrix` flag currently does not take any arguments.
-
-**Usage format**:
-
-```bash
-./IntuneMAMPackager/Contents/MacOS/IntuneMAMPackager -i /<path of input app>/<app filename> -o /<path to output folder>/<app filename> -p /<path to provisioning profile> -c <SHA1 hash of the certificate> [-b [<output app build string>]] [-v] [-e] [-x /<array of extension provisioing profile paths>] [-citrix]
-```
-
-**Example command**:
-
-```bash
-./IntuneMAMPackager/Contents/MacOS/IntuneMAMPackager -i ~/Desktop/MyApp.ipa -o ~/Desktop/MyApp_Wrapped.ipa -p ~/Desktop/My_Provisioning_Profile_.mobileprovision -c 12A3BC45D67EF8901A2B3CDEF4ABC5D6E7890FAB  -v true -citrix
-```
+- Registering custom URL schemes allows specific URLs to redirect into your app. iOS and iPadOS allow multiple apps to register the same custom URL scheme and the OS determines which application is invoked. Please refer to the Apple documentation [Defining a custom URL scheme for your app](https://developer.apple.com/documentation/xcode/defining-a-custom-url-scheme-for-your-app) for recommendations to help avoid custom URL scheme collisions and security guidelines for handling malformed URLs.
 
 ## See also
 

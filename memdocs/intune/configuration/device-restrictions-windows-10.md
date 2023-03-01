@@ -8,7 +8,7 @@ author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 01/18/2022
-ms.topic: conceptual
+ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
@@ -25,8 +25,10 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; seodec18
 ms.collection:
-  - M365-identity-device-management
-  - highpri
+- tier1
+- M365-identity-device-management
+- highpri
+- highseo
 ---
 
 # Windows 10/11 device settings to allow or restrict features using Intune
@@ -43,7 +45,7 @@ These settings apply to:
 
 These settings are added to a device configuration profile in Intune, and then assigned or deployed to your Windows client devices.
 
-> [!Note]
+> [!NOTE]
 > Some settings are only available on specific Windows editions, such as Enterprise. To see the supported editions, refer to the [policy CSPs](/windows/client-management/mdm/policy-configuration-service-provider) (opens another Microsoft web site).
 >  
 > In a Windows 10/11 device restrictions profile, most configurable settings are deployed at the device level using device groups. Policies deployed to user groups apply to targeted users. The policies also apply to users who have an Intune license, and users that sign in to that device.
@@ -174,7 +176,7 @@ These settings use the [Bluetooth policy CSP](/windows/client-management/mdm/pol
 These settings use the [accounts policy CSP](/windows/client-management/mdm/policy-csp-accounts), which also lists the supported Windows editions.
 
 > [!IMPORTANT]
-> Blocking or disabling these Microsoft account settings can impact enrollment scenarios that require users to sign in to Azure AD. For example, you're using [AutoPilot pre-provisioned](../../autopilot/pre-provision.md) (previously called white glove). Typically, users are shown an Azure AD sign in window. When these settings are set to **Block** or **Disable**, the Azure AD sign in option may not show. Instead, users are asked to accept the EULA, and create a local account, which may not be what you want.
+> Blocking or disabling these Microsoft account settings can impact enrollment scenarios that require users to sign in to Azure AD. For example, you're using [Autopilot pre-provisioned](../../autopilot/pre-provision.md) (previously called white glove). Typically, users are shown an Azure AD sign in window. When these settings are set to **Block** or **Disable**, the Azure AD sign in option may not show. Instead, users are asked to accept the EULA, and create a local account, which may not be what you want.
 
 - **Microsoft account**: **Block** prevents users from associating a Microsoft account with the device. **Block** may also affect some enrollment scenarios that rely on users to complete the enrollment process. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow adding and using a Microsoft account.
 - **Non-Microsoft account**: **Block** prevents users from adding non-Microsoft accounts using the user interface. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to add email accounts that aren't associated with a Microsoft account.
@@ -183,7 +185,7 @@ These settings use the [accounts policy CSP](/windows/client-management/mdm/poli
   - **Not configured** (default): Intune doesn't change or update this setting. By default, the OS might allow users to start and stop the **Microsoft Account Sign-In Assistant** (wlidsvc) service.
   - **Disabled**: Sets the Microsoft Sign-in Assistant service (wlidsvc) to Disabled, and prevents users from manually starting it.
 
-      **Disable** may also affect some enrollment scenarios that rely on users to complete the enrollment. For example, you're using [AutoPilot pre-provisioned](../../autopilot/pre-provision.md). Typically, users are shown an Azure AD sign in window. When set to **Disable**, the Azure AD sign in option may not show. Instead, users are asked to accept the EULA, and create a local account, which may not be what you want.
+      **Disable** may also affect some enrollment scenarios that rely on users to complete the enrollment. For example, you're using [Autopilot pre-provisioned](../../autopilot/pre-provision.md). Typically, users are shown an Azure AD sign in window. When set to **Disable**, the Azure AD sign in option may not show. Instead, users are asked to accept the EULA, and create a local account, which may not be what you want.
 
 ## Cloud Printer
 
@@ -445,10 +447,8 @@ This device restrictions profile is directly related to the kiosk profile you cr
 - **Clear browsing data on exit** (desktop only): **Yes** clears the history, and browsing data when users exit Microsoft Edge. **No** (default) uses the OS default, which may cache the browsing data.
 - **Sync browser settings between user's devices**: Choose how you want to sync browser settings between devices. Your options:
   - **Allow**: Allow syncing of Microsoft Edge browser settings between user's devices
-  - **Block and enable user override**: Block syncing of Microsoft Edge browser settings between user's devices. Users can override this setting.
+  - **Block and enable user override**: Block syncing of Microsoft Edge browser settings between user's devices. Users can override this setting. When this option is selected, users can override the admin designation.
   - **Block**: Block syncing of Microsoft Edge browser setting between users devices. Users can't override this setting.
-
-When "block and enable user override" is selected, user can override admin designation.
 
 - **Allow Password Manager**: **Yes** (default) allows Microsoft Edge to automatically use Password Manager, which allows users to save and manage passwords on the device. **No** prevents Microsoft Edge from using Password Manager.
 - **Cookies**: Choose how cookies are handled in the web browser. Your options:
@@ -763,7 +763,7 @@ These settings use the [start policy CSP](/windows/client-management/mdm/policy-
 
 - **Fast user switching**: **Block** prevents switching between users that are logged on simultaneously without logging off. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might show the **Switch user** on the user tile.
 
-  [Start/HideSwitchAccount CSP](/windows/client-management/mdm/policy-csp-start#start-hideswitchaccount)
+  [WindowsLogon/HideFastUserSwitching CSP](/windows/client-management/mdm/policy-csp-windowslogon#windowslogon-hidefastuserswitching)
 
 - **Most used apps**: **Block** hides the most used apps from showing on the start menu. It also disables the corresponding toggle in the Settings app. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might show the most used apps.
 

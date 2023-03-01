@@ -7,12 +7,11 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/23/2022
-ms.topic: conceptual
+ms.date: 10/13/2022
+ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
-ms.technology:
 
 # optional metadata
 
@@ -25,7 +24,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: seodec18
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier3
+- M365-identity-device-management
 ---
 
 # Add Wi-Fi settings for Android Enterprise dedicated and fully managed devices in Microsoft Intune
@@ -35,7 +36,7 @@ You can create a profile with specific Wi-Fi settings, and then deploy this prof
 This feature applies to:
 
 - Android Enterprise personally owned devices with a work profile (BYOD)
-- Android Enterprise corporate-owned work profile (COPE)
+- Android Enterprise corporate owned work profile (COPE)
 - Android Enterprise corporate owned fully managed (COBO)
 - Android Enterprise corporate owned dedicated devices (COSU)
 
@@ -46,7 +47,7 @@ This article describes these settings. [Use Wi-Fi on your devices](wi-fi-setting
 Create an [Android Enterprise Wi-Fi device configuration profile](wi-fi-settings-configure.md):
 
 - Fully managed, dedicated, and corporate-owned work profile
-- Personally-owned work profile
+- Personally owned work profile
 
 ## Fully Managed, Dedicated, and Corporate-Owned Work Profile
 
@@ -67,6 +68,26 @@ Select this option if you're deploying to an Android Enterprise dedicated, corpo
   - **Open (no authentication)**: Only use this option if the network is unsecured.
   - **WEP-Pre-shared key**: Enter the password in **Pre-shared key**. When your organization's network is set up or configured, a password or network key is also configured. Enter this password or network key for the PSK value.
   - **WPA-Pre-shared key**: Enter the password in **Pre-shared key**. When your organization's network is set up or configured, a password or network key is also configured. Enter this password or network key for the PSK value.
+
+- **Proxy settings**: Select a proxy configuration. Your options:
+
+  - **None**: No proxy settings are configured.
+  - **Manual**: Manually configure the proxy settings:
+    - **Proxy server address**: Enter the IP address of the proxy server. For example, enter `10.0.0.22`.
+    - **Port number**: Enter the port number of the proxy server. For example, enter `8080`.
+    - **Exclusion list**:  Enter a hostname or IP address that won't use the proxy. You can use the `*` wildcard character and enter multiple host names and IP addresses. If you enter multiple host names or IP addresses, they must be on a separate line. For example, you can enter:
+
+      ```
+      *.contoso.com
+      test.contoso1.com
+      mysite.contoso2.com
+      10.0.0.5
+      10.0.0.6
+      ```
+
+  - **Automatic**: Use a file to configure the proxy server. Enter the **Proxy server URL** that contains the configuration file. For example, enter `http://proxy.contoso.com`, `10.0.0.11`, or `http://proxy.contoso.com/proxy.pac`.
+
+    For more information on PAC files, see [Proxy Auto-Configuration (PAC) file](https://developer.mozilla.org/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file) (opens a non-Microsoft site).
 
 ### Enterprise
 
@@ -92,6 +113,11 @@ Select this option if you're deploying to an Android Enterprise dedicated, corpo
       On Android 11 and newer, new Wi-Fi profiles may require this setting be configured. Otherwise, the devices may not connect to your Wi-Fi network.
 
     - **Root certificate for server validation**: Select an existing trusted root certificate profile. When the client connects to the network, this certificate is presented to the server, and authenticates the connection.
+
+      > [!NOTE]
+      > Depending on your Android OS version and your Wi-Fi authentication infrastructure, the certificate requirements can vary. You may need to add your secure hash algorithm(s) (SHA) from the certificate used by your network policy server (NPS). Or, if your Radius or NPS server has a publicly signed certificate, then a root certificate may not be needed for validation.
+      > 
+      > A good practice is to enter the **Radius server name** and add a **Root certificate for server validation**.
 
     - **Authentication method**: Select the authentication method used by your device clients. Your options:
       - **Derived credential**: Use a certificate that's derived from a user's smart card. If no derived credential issuer is configured, Intune prompts you to add one. For more information, see [Use derived credentials in Microsoft Intune](../protect/derived-credentials.md).
@@ -152,7 +178,31 @@ Select this option if you're deploying to an Android Enterprise dedicated, corpo
 
       - **Identity privacy (outer identity)**: Enter the text sent in the response to an EAP identity request. This text can be any value, such as `anonymous`. During authentication, this anonymous identity is initially sent, and then followed by the real identification sent in a secure tunnel.
 
-## Personally-owned work profile
+- **Proxy settings**: Select a proxy configuration. Your options:
+
+  - **None**: No proxy settings are configured.
+  - **Manual**: Manually configure the proxy settings:
+    - **Proxy server address**: Enter the IP address of the proxy server. For example, enter `10.0.0.22`.
+    - **Port number**: Enter the port number of the proxy server. For example, enter `8080`.
+    - **Exclusion list**:  Enter a hostname or IP address that won't use the proxy. You can use the `*` wildcard character and enter multiple host names and IP addresses. If you enter multiple host names or IP addresses, they must be on a separate line. For example, you can enter:
+
+      ```
+      *.contoso.com
+      test.contoso1.com
+      mysite.contoso2.com
+      10.0.0.5
+      10.0.0.6
+      ```
+
+  - **Automatic**: Use a file to configure the proxy server. Enter the **Proxy server URL** that contains the configuration file. For example, enter `http://proxy.contoso.com`, `10.0.0.11`, or `http://proxy.contoso.com/proxy.pac`.
+
+    For more information on PAC files, see [Proxy Auto-Configuration (PAC) file](https://developer.mozilla.org/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file) (opens a non-Microsoft site).
+    
+    > [!NOTE]
+    > When a device is marked as corporate during enrollment (organization-owned), policies control device features and settings. Users can be prevented from managing features and settings in the policy.
+    > When a Wi-Fi policy is assigned to devices, then Wi-Fi is enabled, and users can be prevented from turning off Wi-Fi.
+
+## Personally owned work profile
 
 ### Basic
 
@@ -221,6 +271,6 @@ Select this option if you're deploying to an Android Enterprise dedicated, corpo
 
 The profile is created, but might not be doing anything. Be sure to [assign this profile](device-profile-assign.md) and [monitor its status.](device-profile-monitor.md).
 
-You can also create Wi-Fi profiles for [Android](wi-fi-settings-android.md), [iOS/iPadOS](wi-fi-settings-ios.md), [macOS](wi-fi-settings-macos.md), [Windows 10](wi-fi-settings-windows.md), and [Windows 8.1](wi-fi-settings-import-windows-8-1.md) devices.
+You can also create Wi-Fi profiles for [Android](wi-fi-settings-android.md), [iOS/iPadOS](wi-fi-settings-ios.md), [macOS](wi-fi-settings-macos.md), and [Windows 10](wi-fi-settings-windows.md).
 
 [Troubleshoot common issues with Wi-Fi profiles](/troubleshoot/mem/intune/troubleshoot-wi-fi-profiles#common-issues).

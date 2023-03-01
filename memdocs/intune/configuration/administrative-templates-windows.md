@@ -2,12 +2,12 @@
 # required metadata
 
 title: Use ADMX templates on Windows 10/11 devices in Microsoft Intune
-description: Use Administrative templates in Microsoft Intune and Endpoint Manager to create groups of settings for Windows 10/11 client devices. Use these settings in a device configuration profile to control Office programs, Microsoft Edge, secure Internet Explorer, access OneDrive, use remote desktop, enable Auto-Play, set power management settings, use HTTP printing, control user sign-in, and change the event log size.
+description: Use Administrative templates in Microsoft Intune to create groups of settings for Windows 10/11 client devices. Use these settings in a device configuration profile. You can control Office programs, Microsoft Edge, secure Internet Explorer, access OneDrive, use remote desktop, enable Auto-Play, set power management settings, use HTTP printing, control user sign-in, and change the event log size.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/29/2022
+ms.date: 10/10/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -25,8 +25,9 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection:
-  - M365-identity-device-management
-  - highpri
+- tier1
+- M365-identity-device-management
+- highpri
 ---
 
 # Use Windows 10/11 templates to configure group policy settings in Microsoft Intune
@@ -44,7 +45,9 @@ The Intune templates are 100% cloud-based, are built in to Intune (no downloadin
 
 - The **Office and Microsoft Edge** settings are ADMX-ingested, and use the same Office administrative template files and Microsoft Edge administrative template files that you would download in on-premises environments.
 
-When managing devices in your organization, you want to create groups of settings that apply to different device groups. You also want a simple view of the settings you can configure. You can complete this task using **Administrative Templates** in Microsoft Intune.
+- You can import custom and third party ADMX and ADML files. For more information, including the steps, go to [Import custom or partner ADMX files](administrative-templates-import-custom.md).
+
+When managing devices in your organization, you want to create groups of settings that apply to different device groups. You also want a simple view of the settings you can configure. You can complete this task using **Administrative Templates** in Microsoft Intune. 
 
 As part of your mobile device management (MDM) solution, use these template settings as a one-stop shop to manage your Windows client devices.
 
@@ -62,7 +65,7 @@ This article lists the steps to create a template for Windows client devices, an
 
 ## Create the template
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Configuration profiles** > **Create profile**.
 3. Enter the following properties:
 
@@ -79,18 +82,18 @@ This article lists the steps to create a template for Windows client devices, an
 
 7. In **Configuration settings**, select **All settings** to see an alphabetical list of all the settings. Or, configure settings that apply to devices (**Computer configuration**), and settings that apply to users **(User configuration**):
 
-    :::image type="content" source="./media/administrative-templates-windows/administrative-templates-choose-computer-user-configuration.png" alt-text="Apply ADMX template settings to users and devices in Microsoft Intune and Endpoint Manager admin center.":::
+    :::image type="content" source="./media/administrative-templates-windows/administrative-templates-choose-computer-user-configuration.png" alt-text="Apply ADMX template settings to users and devices in Microsoft Intune and Intune admin center.":::
 
     > [!NOTE]
     > If you're using the **Settings catalog**, then select **Add settings**, and expand **Administrative Templates**. Select any setting to see what you can configure.
     > 
-    > :::image type="content" source="./media/administrative-templates-windows/settings-catalog-administrative-templates.png" alt-text="Expand administrative templates in Settings catalog in Microsoft Intune and Endpoint Manager admin center.":::
+    > :::image type="content" source="./media/administrative-templates-windows/settings-catalog-administrative-templates.png" alt-text="Expand administrative templates in Settings catalog in Microsoft Intune and Intune admin center.":::
     > 
     > For more information on creating policies using the Settings Catalog, see [Use the settings catalog to configure settings](settings-catalog.md).
 
 8. When you select **All settings**, every setting is listed. Scroll down to use the before and next arrows to see more settings:
 
-    :::image type="content" source="./media/administrative-templates-windows/administrative-templates-sample-settings-list.png" alt-text="See a sample list of settings and use previous and next buttons in Endpoint Manager admin center and Microsoft Intune.":::
+    :::image type="content" source="./media/administrative-templates-windows/administrative-templates-sample-settings-list.png" alt-text="See a sample list of settings and use previous and next buttons in Intune admin center and Microsoft Intune.":::
 
 9. Select any setting. For example, filter on **Office**, and select **Activate Restricted Browsing**. A detailed description of the setting is shown. Choose **Enabled**, **Disabled**, or leave the setting as **Not configured** (default). The detailed description also explains what happens when you choose **Enabled**, **Disabled**, or **Not configured**.
 
@@ -101,7 +104,7 @@ This article lists the steps to create a template for Windows client devices, an
 
     For example, select **Computer configuration** > **Windows components** > **Internet Explorer** to see all the device settings that apply to Internet Explorer:
 
-    :::image type="content" source="./media/administrative-templates-windows/administrative-templates-all-internet-explorer-settings-device.png" alt-text="See all device settings that apply to Internet Explorer in Microsoft Intune and Endpoint Manager admin center":::
+    :::image type="content" source="./media/administrative-templates-windows/administrative-templates-all-internet-explorer-settings-device.png" alt-text="See all device settings that apply to Internet Explorer in Microsoft Intune and Intune admin center":::
 
 11. Select **OK** to save your changes.
 
@@ -140,7 +143,7 @@ There are thousands of settings available in these templates. To make it easier 
 
 - In your template, use the **Search** box to find specific settings. You can search by setting, or path. For example, select **All settings**, and search for `copy`. All the settings with `copy` are shown:
 
-  :::image type="content" source="./media/administrative-templates-windows/search-copy-settings.png" alt-text="Search for copy to show all the device settings in administrative templates in Microsoft Intune and Endpoint Manager admin center.":::
+  :::image type="content" source="./media/administrative-templates-windows/search-copy-settings.png" alt-text="Search for copy to show all the device settings in administrative templates in Microsoft Intune and Intune admin center.":::
 
   In another example, search for `microsoft word`. You see the settings you can set for the Microsoft Word program. Search for `explorer` to see the Internet Explorer settings you can add to your template.
 
@@ -150,10 +153,21 @@ There are thousands of settings available in these templates. To make it easier 
 
   :::image type="content" source="./media/administrative-templates-windows/show-all-internet-explorer-settings-user-configuration.png" alt-text="In the ADMX template, select user configuration, and search or filter for Internet Explorer in Microsoft Intune.":::
 
+## Create a Known Issue Rollback (KIR) policy
+
+On your enrolled devices, you can use administrative templates to create a Known Issue Rollback (KIR) policy, and deploy this policy to your Windows devices. For the specific steps, go to [Deploy a KIR activation using Microsoft Intune ADMX policy ingestion to managed devices](/troubleshoot/windows-client/group-policy/use-group-policy-to-deploy-known-issue-rollback#deploy-a-kir-activation-using-microsoft-intune-admx-policy-ingestion-to-the-managed-devices).
+
+For more information on KIR, and what it is, go to:
+
+- [Known Issue Rollback: Helping you keep Windows devices protected and productive](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/known-issue-rollback-helping-you-keep-windows-devices-protected/ba-p/2176831)
+- [How to use on-premises Group Policy or Intune to deploy a Known Issue Rollback](/troubleshoot/windows-client/group-policy/use-group-policy-to-deploy-known-issue-rollback)
+
 ## Next steps
 
-The template is created, but may not be doing anything yet. Be sure to [assign the template (also called a profile)](device-profile-assign.md) and [monitor the policy status](device-profile-monitor.md).
+- The template is created, but may not be doing anything yet. Be sure to [assign the template (also called a profile)](device-profile-assign.md) and [monitor the policy status](device-profile-monitor.md).
 
-Update [Microsoft 365 using administrative templates](administrative-templates-update-office.md).
-
-[Tutorial: Use the cloud to configure group policy on Windows client devices with ADMX templates and Microsoft Intune](tutorial-walkthrough-administrative-templates.md)
+- [Update Office using administrative templates](administrative-templates-update-office.md).
+- [Restrict USB devices using administrative templates](administrative-templates-restrict-usb.md).
+- [Create Microsoft Edge policy using ADMX](administrative-templates-configure-edge.md).
+- [Import custom or partner ADMX files](administrative-templates-import-custom.md).
+- [Tutorial: Use the cloud to configure group policy on Windows client devices with ADMX templates and Microsoft Intune](tutorial-walkthrough-administrative-templates.md)

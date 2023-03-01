@@ -1,18 +1,18 @@
 ---
-title: "GetEULA Method in SMS_SoftwareUpdate"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+description: Learn how to get the localized Microsoft Software License Terms content of a configuration item using GetEULA class.
+title: GetEULA Method in SMS_SoftwareUpdate
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: bfab1311-5658-4992-9c56-a24b6cda73e5
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # GetEULA Method in Class SMS_SoftwareUpdate
 The `GetEULA` Windows Management Instrumentation (WMI) class method, in Configuration Manager, gets the localized Microsoft Software License Terms content of a configuration item.  

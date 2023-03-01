@@ -2,12 +2,12 @@
 title: Tutorial - Proactive remediations
 titleSuffix: Microsoft Endpoint Manager
 description: A tutorial on using Proactive remediations to enhance the user
-ms.date: 03/07/2022
+ms.date: 07/05/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: tutorial
-author: mestew
-ms.author: mstewart
+author: smritib17
+ms.author: smbhardwaj
 manager: dougeby
 # Customer intent: As a Microsoft Endpoint Manager administrator, I want to enable and use Proactive remediations in Endpoint analytics so that I can fix common support issues before end-users notice issues.
 ms.localizationpriority: high
@@ -60,13 +60,17 @@ Proactive remediations requires the [licensing for Endpoint analytics](enroll-in
 ### <a name="bkmk_requirements"></a> Script requirements
 
 - You can have up to 200 script packages.
-   - A script package can contain a detection script only or both a detection script and a remediation script.
+- A script package can contain a detection script only or both a detection script and a remediation script. 
+   - A remediation script only runs if the detection script uses exit code `exit 1`, meaning the issue was detected.
 - Ensure the scripts are encoded in UTF-8.
+  - If the option **Enforce script signature check** is enabled in the [Settings](#bkmk_prs_deploy) page of creating a script package, then make sure that the scripts are encoded in UTF-8 not UTF-8 BOM.
 - The maximum allowed output size limit is 2048 characters.
 - If the option **Enforce script signature check** is enabled in the [Settings](#bkmk_prs_deploy) page of creating a script package, the script runs using the device's PowerShell execution policy. The default execution policy for Windows client computers is **Restricted**. The default execution for Windows Server devices is **RemoteSigned**. For more information, see [PowerShell execution policies](/powershell/module/microsoft.powershell.core/about/about_execution_policies#powershell-execution-policies).
    - Scripts built into Proactive remediations are signed and the certificate is added to the **Trusted Publishers** certificate store of the device.
    - When using third-party scripts that are signed, make sure the certificate is in the **Trusted Publishers** certificate store. As with any certificate, the certificate authority must be trusted by the device.
   - Scripts without **Enforce script signature check** use the **Bypass** execution policy.
+- Don't put secrets in scripts. Consider using parameters to handle secrets instead. <!--13957089-->
+- Don't put reboot commands in detection or remediations scripts. <!--13957089-->
 
 ## <a name="bkmk_prs_deploy"></a> Deploy built-in script packages
 
@@ -99,7 +103,7 @@ The **Microsoft Intune Management Extension** service gets the scripts from Intu
 ### Deploy the script packages
 Proactive remediation scripts need to be encoded in UTF-8. Uploading these scripts rather than editing them directly in your browser helps ensure that the script encoding is correct so your devices can execute them. 
 
-1. Go to the **Proactive remediations** node in the console.
+1. Go to the **Proactive remediations** node in the Intune admin center.
 1. Choose the **Create script package** button to create a script package.
      [![Endpoint analytics Proactive remediations page. Select the create link.](media/proactive-remediations-create.png)](media/proactive-remediations-create.png#lightbox)
 1. In the **Basics** step, give the script package a **Name** and optionally, a **Description**. The **Publisher** field can be edited, but defaults to your name. **Version** can't be edited.
@@ -107,6 +111,8 @@ Proactive remediation scripts need to be encoded in UTF-8. Uploading these scrip
    1. Select the folder icon.
    1. Browse to the `.ps1` file.
    1. Choose the file and select **Open** to upload it.
+
+    The detection script must use exit code `exit 1` if the target issue is detected. The remediation script won't run when there's any other exit code, including an empty output, since it results in an *issue is not found* state. Review the [Sample detection script](powershell-scripts.md#bkmk_ps_scripts) for an example of exit code usage.
 
    You need the corresponding detection and remediation script to be in the same package. For example, the `Detect_Expired_User_Certificates.ps1` detection script corresponds with the `Remediate_Expired_User_Certificates.ps1` remediation script.
        [![Endpoint analytics Proactive remediations script settings page.](media/proactive-remediations-script-settings.png)](media/proactive-remediations-script-settings.png#lightbox)
@@ -117,9 +123,26 @@ Proactive remediation scripts need to be encoded in UTF-8. Uploading these scrip
 
    For information about enforcing script signature checks, see [Script requirements](#bkmk_requirements).
 1. Click **Next** then assign any **Scope tags** you need.
-1. In the **Assignments** step, select the device groups to which you want to deploy the script package. When you're ready to deploy the packages to your users or devices, you can also use filters. For more information, see [Create filters in Microsoft Intune](../intune/fundamentals/filters.md).     
+1. In the **Assignments** step, select the device groups to which you want to deploy the script package. When you're ready to deploy the packages to your users or devices, you can also use filters. For more information, see [Create filters in Microsoft Intune](../intune/fundamentals/filters.md). 
+   >[!NOTE]
+   > Don't mix user and device groups across include and exclude assignments. 
 1. Complete the **Review + Create** step for your deployment.
 
+## <a name="bkmk_prs_policy"></a> Client policy retrieval and client reporting
+
+The client retrieves policy for proactive remediations scripts at the following times:
+
+- After a restart of the device or Intune management extension service
+- After a user signs into the client
+- Once every 8 hours
+   - The 8 hour script retrieval schedule is fixed based on when the Intune management extension service starts. The schedule isn't altered by user sign ins.
+
+The client reports proactive remediation information at the following times:
+
+- When a script is set to run once, the results are reported after the script runs.
+- Recurring scripts follow a 7 day reporting cycle:
+  - Within the first 6 days, the client reports only if a change occurs. The first time the script runs would be considered a change.
+  - Every 7 days the client sends a report even if there wasn't a change.
 
 ## <a name="bkmk_prs_monitor"></a> Monitor your script packages
 

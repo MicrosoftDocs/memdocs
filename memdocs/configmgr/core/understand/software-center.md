@@ -2,14 +2,16 @@
 title: Software Center user guide
 titleSuffix: Configuration Manager
 description: Learn about the features and functionality of Software Center
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+ms.author: baladell 
+author: BalaDelli
+manager: apoorvseth
 ms.date: 06/10/2020
 ms.topic: end-user-help
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Software Center user guide
@@ -113,6 +115,17 @@ To share a link to a specific app, after you select the app, select the **Share*
 :::image type="content" source="media/software-center-share-app-window.png" alt-text="Share an app from Software Center":::
 
 **Copy** the string, and paste elsewhere, such as an email message. For example, `softwarecenter:SoftwareID=ScopeId_73F3BB5E-5EDC-4928-87BD-4E75EB4BBC34/Application_b9e438aa-f5b5-432c-9b4f-6ebeeb132a5a`. Anyone else in your organization with Software Center can use the link to open the same application.
+
+### Featured Apps
+
+**Featured** tab in Software Center displays featured apps. With this tab, IT admin can mark apps as "featured" and encourage end users to use these apps. 
+Currently, this feature is available only for "User Available" apps. 
+Also, admins can make the **Featured** tab of Software Center as the default tab from Client Settings. 
+
+If an app is marked as **Featured** and it's deployed to a User Collection as an Available app, it will show under the **Featured** pivot in Software Center.
+
+:::image type="content" source="media/3601183-featured-apps-software-center.png" alt-text="Screenshot of wizard for app properties. It displays the checkbox, which needs to be selected to make apps as featured in software center." lightbox="media/3601183-featured-apps-software-center.png":::
+
 
 ## Updates
 

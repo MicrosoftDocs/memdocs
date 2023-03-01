@@ -9,7 +9,7 @@ ms.author: erikje
 manager: dougeby
 ms.date: 09/30/2021
 ms.topic: overview
-ms.service: cloudpc
+ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
 ms.technology:
@@ -24,8 +24,10 @@ ms.reviewer: ivivano
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: intune-azure; get-started
-ms.collection: M365-identity-device-management
+ms.custom: intune-azure; get-started; intro-hub-or-landing
+ms.collection:
+- M365-identity-device-management
+- tier2
 ---
 
 # What is Windows 365?

@@ -26,7 +26,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # How to configure Intune settings for the iOS/iPadOS Classroom app
@@ -80,7 +82,7 @@ You can import information into SDS by using one of the following methods:
 
 ### Configure general settings
 
-1. Sign in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 3. On the **Intune** pane, choose **Device configuration**.
 2. On the **Device configuration** pane under the **Manage** section, choose **Profiles**.
 5. On the profiles pane, choose **Create profile**.

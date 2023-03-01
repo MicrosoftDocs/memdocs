@@ -1,18 +1,18 @@
 ---
-title: "Create a Data Discovery Record"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: Create a Data Discovery Record
+titleSuffix: Configuration Manager
+description: Specify the resource type, the discovery process, the site that discovered the resource, and the resource properties.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: how-to
 ms.assetid: aab98600-7a43-4a03-ba05-3fcb828e6c82
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Create a Data Discovery Record
 The data discovery record (DDR), in Configuration Manager, specifies the resource type, the discovery process, the site that discovered the resource, and the resource properties. Configuration Manager provides six library functions that you use to create your own DDRs. For more information. see [About Creating a Data Discovery Record](../../../../develop/core/servers/configure/about-creating-a-data-discovery-record.md).  

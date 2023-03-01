@@ -1,18 +1,18 @@
 ---
+description: Learn how to update the statistics for the application using UpdateStats class method in Configuration Manager.
 title: UpdateStats method in class SMS_Application
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 862e040f-6e43-4dd9-9142-a012679ad147
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # UpdateStats Method in Class SMS_Application
 The `UpdateStats` Windows Management Instrumentation (WMI) class method, in Configuration Manager, updates the statistics for this application.  

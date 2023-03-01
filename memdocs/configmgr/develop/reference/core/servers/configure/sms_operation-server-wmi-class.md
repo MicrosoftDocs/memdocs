@@ -1,18 +1,18 @@
 ---
-title: "SMS_Operation Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+description: Learn how to use SMS_Operation class in Configuration Manager, which is embedded by SMS_RbacSecuredObject and describes the various operations.
+title: SMS_Operation Class
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: ea1053c7-f7e8-4641-8328-2e4c4d6bb93c
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_Operation Server WMI Class
 The `SMS_Operation` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that is embedded by `SMS_RbacSecuredObject` and describes the various operations.  

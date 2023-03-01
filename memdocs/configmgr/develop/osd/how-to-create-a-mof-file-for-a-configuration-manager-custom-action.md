@@ -1,19 +1,18 @@
 ---
-title: "Create a MOF File for a Custom Action"
-titleSuffix: "Configuration Manager"
-description: "A custom task sequence action, its properties and its user interface controls are defined by creating a managed object format (MOF) file to describe the class."
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: Create a MOF File for a Custom Action
+titleSuffix: Configuration Manager
+description: A custom task sequence action, its properties and its user interface controls are defined by creating a managed object format (MOF) file to describe the class.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: how-to
 ms.assetid: c0e8adb8-58e6-4954-abeb-ba7d2344de06
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Create a MOF File for a Configuration Manager Custom Action
 You define a custom task sequence action, its properties and its user interface controls by creating a managed object format (MOF) file to describe the class. The MOF file is then compiled by using Mofcomp.exe.  

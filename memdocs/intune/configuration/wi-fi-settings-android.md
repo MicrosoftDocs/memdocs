@@ -13,19 +13,20 @@ ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
-ms.technology:
 
 # optional metadata
 
 #ROBOTS:
 #audience:
 
-ms.reviewer: maholdaa
+ms.reviewer: maholdaa, tycast
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier3
+- M365-identity-device-management
 ---
 
 # Add Wi-Fi settings for devices running Android device administrator in Microsoft Intune

@@ -1,19 +1,18 @@
 ---
-title: "SMS_G_System_AppClientState Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-description: "The `SMS_G_System_AppClientState` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents application state."
-ms.prod: "configuration-manager"
+title: SMS_G_System_AppClientState Class
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+description: The `SMS_G_System_AppClientState` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents application state.
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: d346eaee-b7eb-4072-9b74-06916e15d18c
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_G_System_AppClientState Server WMI Class
 The `SMS_G_System_AppClientState` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents application state.  

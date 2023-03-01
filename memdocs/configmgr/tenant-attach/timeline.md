@@ -2,13 +2,13 @@
 title: Tenant attach - Device timeline
 titleSuffix: Configuration Manager
 description: View the timeline for Configuration Manager devices from the admin center.
-ms.date: 01/25/2022
+ms.date: 07/11/2022
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-manager: dougeby
-author: mestew
-ms.author: mstewart
+manager: apoorvseth
+author: Banreet
+ms.author: banreetkaur
 ms.localizationpriority: high
 ---
 
@@ -16,14 +16,13 @@ ms.localizationpriority: high
 <!--CM7141381, IN7552762 pubpreview Sept 8, 2020, GA 2201-->
 *Applies to: Configuration Manager (current branch)*
 
-Microsoft Endpoint Manager is an integrated solution for managing all of your devices. Microsoft brings together Configuration Manager and Intune into a single console called **Microsoft Endpoint Manager admin center**. When Configuration Manager synchronizes a device to Microsoft Endpoint Manager through tenant attach, you can see a timeline of events. This timeline shows past activity on the device that can help you troubleshoot problems.
+The Microsoft Intune family of products is an integrated solution for managing all of your devices. Microsoft brings together Configuration Manager and Intune into a single console called **Microsoft Intune admin center**. When Configuration Manager synchronizes a device to Microsoft Intune through tenant attach, you can see a timeline of events. This timeline shows past activity on the device that can help you troubleshoot problems.
 
 ## Prerequisites
 
 The following items are needed to use the timeline from the admin center:
 
 - All of the prerequisites for [Tenant attach: ConfigMgr client details](client-details.md#prerequisites).
-- A minimum of Configuration Manager version 2002 with the [Update Rollup](https://support.microsoft.com/help/4560496/) and the corresponding version of the console installed.
 - Enable Endpoint analytics data collection in Configuration Manager:
    1. In the Configuration Manager console, go to **Administration** > **Client Settings** > **Default Client Settings**.
    1. Right-click and select **Properties** then select the **Computer Agent** settings.
@@ -66,7 +65,7 @@ Devices send events once a day to the admin center. Only events collected after 
 
 ## View the timeline
 
-1. In a browser, navigate to [https://endpoint.microsoft.com](https://endpoint.microsoft.com).
+1. In a browser, go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 1. Select **Devices** then **All Devices**.
 1. Select a device that is synced from Configuration Manager via [tenant attach](device-sync-actions.md).
 1. Select **Timeline**. By default, you're shown events from the last 24 hours.

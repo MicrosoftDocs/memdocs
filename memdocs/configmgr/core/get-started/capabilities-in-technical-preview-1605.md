@@ -6,11 +6,13 @@ ms.date: 01/23/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-author: aczechowski
-manager: dougeby
-ms.author: aaroncz
+author: Banreet
+manager: apoorvseth
+ms.author: banreetkaur
 ROBOTS: NOINDEX
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # Capabilities in Technical Preview 1605 for Configuration Manager
 

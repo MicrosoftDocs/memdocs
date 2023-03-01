@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/29/2022
+ms.date: 11/09/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -27,17 +27,21 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection:
+- tier1
 - M365-identity-device-management
 - macOS
 ---
 
 # Assign Microsoft 365 to macOS devices with Microsoft Intune
 
-This app type makes it easy for you to assign Microsoft 365 apps to macOS devices. By using this app type, you can install Word, Excel, PowerPoint, Outlook, OneNote, Teams, and OneDrive. To help keep the apps more secure and up to date, the apps come with Microsoft AutoUpdate (MAU). The apps that you want are displayed as one app in the list of apps in the Intune console.
+This app type makes it easy for you to assign Microsoft 365 apps to macOS devices. By using this app type, you can install Word, Excel, PowerPoint, Outlook, OneNote, Teams, and OneDrive. To help keep the apps more secure and up to date, the apps come with Microsoft AutoUpdate (MAU). The apps that you want are displayed as one app in the list of apps in the Intune admin center.
+
+> [!IMPORTANT]
+> With Office for Mac update (16.67), macOS Big Sur 11 or later will be required to receive updates to Office for Mac. If you continue with an older version of macOS, your Office apps will still work, but you'll no longer receive any updates, including security updates. Upgrading your operating system to macOS Big Sur 11 or later will allow Office updates to be delivered for your apps. The October 2022 Office for Mac update (16.66) will be the last build to support macOS Catalina 10.15. For related information, see [Upgrade macOS to continue receiving Microsoft 365 and Office for Mac updates](https://go.microsoft.com/fwlink/?linkid=2015804).
 
 > [!NOTE]
-> Other versions of Office for Mac can be added to the Microsoft Endpoint Manager admin center. For more information, see [Most current packages for Office for Mac](/officeupdates/update-history-office-for-mac#most-current-packages-for-office-for-mac).
-> 
+> Other versions of Office for Mac can be added to the Microsoft Intune admin center. For more information, see [Most current packages for Office for Mac](/officeupdates/update-history-office-for-mac#most-current-packages-for-office-for-mac).
+>
 > Microsoft Office 365 ProPlus has been renamed to **Microsoft 365 Apps for enterprise**. In our documentation, we'll commonly refer to it as **Microsoft 365 Apps**.
 
 ## Before you start
@@ -49,10 +53,10 @@ Before you begin adding Microsoft 365 apps to macOS devices, understand the foll
 
 ## Select Microsoft 365 Apps
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All apps** > **Add**.
 3. Select **macOS** in the **Microsoft 365 Apps** section of the **Select app type** pane.
-4. 4. Click **Select**. The **Add Microsoft 365 Apps** steps are displayed.
+4. Click **Select**. The **Add Microsoft 365 Apps** steps are displayed.
 
 ## Step 1 - App suite information
 
@@ -73,9 +77,10 @@ In this step, you provide information about the app suite. This information help
 2. Click **Next** to display the **Scope tags** page.
 
 ## Step 2 - Select scope tags (optional)
+
 You can use scope tags to determine who can see client app information in Intune. For full details about scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md).
 
-1. Click **Select scope tags** to optionally add scope tags for the app suite. 
+1. Click **Select scope tags** to optionally add scope tags for the app suite.
 2. Click **Next** to display the **Assignments** page.
 
 ## Step 3 - Assignments
@@ -85,7 +90,7 @@ You can use scope tags to determine who can see client app information in Intune
     >[!Note]
     > You cannot uninstall the 'Microsoft 365 apps for macOS' app suite through Intune.
 
-2. Click **Next** to display the **Review + create** page. 
+2. Click **Next** to display the **Review + create** page.
 
 ## Step 4 - Review + create
 

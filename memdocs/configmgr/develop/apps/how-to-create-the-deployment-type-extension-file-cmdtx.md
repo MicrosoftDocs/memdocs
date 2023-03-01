@@ -1,18 +1,18 @@
 ---
-title: "How to Create the Deployment Type Extension File "
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: How to Create the Deployment Type Extension File
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: how-to
 ms.assetid: c576b3fd-5eb3-4e57-9c20-3158f8d0b7cb
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-description: "Creating a Deployment Type Extension File is the first step in installing the application management extension files. The application management extension must be installed on each Configuration Manager administrator console computer that will create a custom deployment technology."
-
+ms.collection: tier3
+description: Creating a Deployment Type Extension File is the first step in installing the application management extension files. The application management extension must be installed on each Configuration Manager administrator console computer that will create a custom deployment technology.
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Create the Deployment Type Extension File (*.cmdtx)
 The application management extension must be installed on each Configuration Manager administrator console computer that will create a custom deployment technology. The first step in installing the application management extension files is to create a deployment type extension file (*.cmdtx).  

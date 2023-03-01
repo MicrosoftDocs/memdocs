@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/31/2021
+ms.date: 01/30/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -20,9 +20,11 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: 
-  - M365-identity-device-management
-  - highpri
+ms.collection:
+- tier1
+- M365-identity-device-management
+- highpri
+- highseo
 ---
 
 # Create and assign SCEP certificate profiles in Intune
@@ -38,12 +40,13 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
 >
 > For more information about this limitation, see [Trusted certificate profiles for Android device administrator](../protect/certificates-trusted-root.md#trusted-certificate-profiles-for-android-device-administrator).
 
+ [!INCLUDE [windows-phone-81-windows-10-mobile-support](../includes/windows-phone-81-windows-10-mobile-support.md)] 
 > [!TIP]
 > *SCEP certificate* profiles are supported for [Windows Enterprise multi-session remote desktops](../fundamentals/azure-virtual-desktop-multi-session.md).
 
 ## Create a SCEP certificate profile
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select  and go to **Devices** > **Configuration profiles** > **Create profile**.
 
@@ -55,11 +58,26 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
 
      SCEP certificate profiles for the *Fully Managed, Dedicated, and Corporate-Owned Work Profile* profile have the following limitations:
 
-      1. Under Monitoring, certificate reporting isn't available for Device Owner SCEP certificate profiles.
+     1. Under Monitoring, certificate reporting isn't available for **Device Owner** SCEP certificate profiles.
+     1. You can't use Intune to revoke certificates that were provisioned by SCEP certificate profiles for **Device Owner**. You can manage revocation through an external process or directly with the certification authority.
+     1. For Android Enterprise dedicated devices, SCEP certificate profiles are supported for Wi-Fi network configuration, VPN, and authentication. SCEP certificate profiles on Android Enterprise dedicated devices aren't supported for app authentication.
 
-      2. You can't use Intune to revoke certificates that were provisioned by SCEP certificate profiles for Device Owners. You can manage revocation through an external process or directly with the certification authority.
+     For **Android (AOSP)**, the following limitations apply:
 
-      3. For Android Enterprise dedicated devices, SCEP certificate profiles are supported for Wi-Fi network configuration, VPN, and authentication. SCEP certificate profiles on Android Enterprise dedicated devices aren't supported for app authentication.
+     1. Under Monitoring, certificate reporting isn't available for **Device Owner** SCEP certificate profiles.
+     1. You can't use Intune to revoke certificates that were provisioned by SCEP certificate profiles for **Device Owners**. You can manage revocation through an external process or directly with the certification authority.
+     1. SCEP certificate profiles are supported for Wi-Fi network configuration.  VPN configuration profile support is not available. A future update may include support for VPN configuration profiles.  
+     1. The following 3 variables are not available for use on Android (AOSP) SCEP certificate profiles.  Support for these variables will come in a future update.
+        - onPremisesSamAccountName
+        - OnPrem_Distinguished_Name
+        - Department
+
+     > [!NOTE]
+     > **Device Owner** is equivalent to Corporate Owned devices. The following are considered as Device Owner:
+     > - Android Enterprise - Fully Managed, Dedicated, and Corporate-Owned Work Profile
+     > - Android AOSP
+     >   - User-affinity
+     >   - User-less
 
 4. Select **Create**.
 
@@ -73,11 +91,12 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
 
    - **Certificate type**:
 
-     *(Applies to:  Android, Android Enterprise, iOS/iPadOS, macOS, Windows 8.1, and Windows 10/11)*
+     *(Applies to:  Android, Android Enterprise, Android (AOSP), iOS/iPadOS, macOS, Windows 8.1, and Windows 10/11)*
 
      Select a type depending on how you'll use the certificate profile:
 
-     - **User**: *User* certificates can contain both user and device attributes in the subject and SAN of the certificate.  
+     - **User**: *User* certificates can contain both user and device attributes in the subject and SAN of the certificate.
+
      - **Device**:  *Device* certificates can only contain device attributes in the subject and SAN of the certificate.
 
        Use **Device** for scenarios such as user-less devices, like kiosks, or for Windows devices. On Windows devices, the certificate is placed in the Local Computer certificate store.
@@ -126,10 +145,12 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
 
        **Common Name (CN)** can be set to any of the following variables:
 
-       - **CN={{UserName}}**: The user name of the user, such as janedoe.
+       - **CN={{UserName}}**: The user name of the user, such as janedoe. 
        - **CN={{UserPrincipalName}}**: The user principal name of the user, such as janedoe@contoso.com.
        - **CN={{AAD_Device_ID}}**: An ID assigned when you register a device in Azure Active Directory (AD). This ID is typically used to authenticate with Azure AD.
        - **CN={{DeviceId}}**: An ID assigned when you enroll a device in Intune.
+        > [!NOTE]
+         > Avoid using {{DeviceId}} for subject name on Windows devices. In certain instances, certificate generated with this subject name causes sync with Intune to fail.
        - **CN={{SERIALNUMBER}}**: The unique serial number (SN) typically used by the manufacturer to identify a device.
        - **CN={{IMEINumber}}**: The International Mobile Equipment Identity (IMEI) unique number used to identify a mobile phone.
        - **CN={{OnPrem_Distinguished_Name}}**: A sequence of relative distinguished names separated by comma, such as *CN=Jane Doe,OU=UserAccounts,DC=corp,DC=contoso,DC=com*.
@@ -177,6 +198,12 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
    - **Subject alternative name**:  
      Select how Intune automatically creates the subject alternative name (SAN) in the certificate request. You can specify multiple subject alternative names. For each one, you may select from four SAN attributes and enter a text value for that attribute. The text value can contain variables and static text for the attribute.
 
+     > [!NOTE]
+     > The following Android Enterprise profiles don’t support use of the {{UserName}} variable for the SAN:  
+     >
+     > - Fully Managed, Dedicated, and Corporate-Owned Work Profile
+
+
      Select from the available SAN attributes:
 
      - **Email address**
@@ -221,7 +248,7 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
 
    - **Certificate validity period**:
 
-     You can enter a value that is lower than the validity period in the certificate template, but not higher. If you configured the certificate template to [support a custom value that can be set from within the Intune console](certificates-scep-configure.md#modify-the-validity-period-of-the-certificate-template), use this setting to specify the amount of remaining time before the certificate expires.
+     You can enter a value that is lower than the validity period in the certificate template, but not higher. If you configured the certificate template to [support a custom value that can be set from within the Intune admin center](certificates-scep-configure.md#modify-the-validity-period-of-the-certificate-template), use this setting to specify the amount of remaining time before the certificate expires.
 
      Intune supports a validity period of up to 24 months.
 
@@ -257,9 +284,12 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
 
    - **Hash algorithm**:
 
-     *(Applies to Android, Android enterprise, Windows 8.1, and Windows 10/11)*
+     *(Applies to Android, Android (AOSP), Android enterprise, Windows 8.1, and Windows 10/11)*
 
      Select one of the available hash algorithm types to use with this certificate. Select the strongest level of security that the connecting devices support.
+     
+     NOTE: Android AOSP and Android Enterprise devices will select the strongest algorithm supported - SHA-1 will be ignored, and SHA-2 will be used instead. 
+
 
    - **Root Certificate**:
 
@@ -274,11 +304,15 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
    - **Renewal threshold (%)**:
 
      Enter the percentage of the certificate lifetime that remains before the device requests renewal of the certificate. For example, if you enter 20, the renewal of the certificate will be attempted when the certificate is 80% expired. Renewal attempts continue until renewal is successful. Renewal generates a new certificate, which results in a new public/private key pair.
+     
+     > [!NOTE]
+     > Renewal behavior on iOS/iPadOS and macOS: Certificates can only be renewed during the renewal threshold phase. In addition, the device has to be unlocked while synching with Intune. If the renewal was not successful, the expired certificate will remain on the device and Intune does not trigger a renewal anymore. Also, Intune does not offer an option to redeploy expired certificates. Affected devices need to be excluded from the SCEP profile temporarily to remove the expired certificate and request a new one.
 
    - **SCEP Server URLs**:
 
      Enter one or more URLs for the NDES Servers that issue certificates via SCEP. For example, enter something like `https://ndes.contoso.com/certsrv/mscep/mscep.dll`.
 
+     To allow devices on the internet to get certificates, you must specify the NDES URL external to your corporate network.
      The URL can be HTTP or HTTPS. However, to support the following devices, the SCEP Server URL must use HTTPS:
      - Android device administrator
      - Android Enterprise device owner
@@ -295,17 +329,24 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
 
      If a device fails to reach the same NDES server successfully during any of the three calls to the NDES server, the SCEP request fails. For example, this might happen when a load-balancing solution provides a different URL for the second or third call to the NDES server, or provides a different actual NDES server based on a virtualized URL for NDES. After a failed request, a device tries the process again on its next policy cycle, starting with the randomized list of NDES URLs (or a single URL for iOS/iPadOS).  
 
-8. Select **Next**.
+8. This step applies only to **Android Enterprise** devices profiles for **Fully Managed, Dedicated, and Corporate-Owned work Profile**.  
 
-9. In **Assignments**, select the user or groups that will receive your profile. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
+   In **Apps**, configure **Certificate access** to manage how certificate access is granted to applications. Choose from:
 
-   Select **Next**.
+   - **Require user approval for apps** *(default)* – Users must approve use of a certificate by all applications.
+   - **Grant silently for specific apps (require user approval for other apps)** – With this option, select **Add apps**, and then select one or more apps that will silently use the certificate without user interaction.
 
-10. (*Applies to Windows 10/11 only*) In **Applicability Rules**, specify applicability rules to refine the assignment of this profile. You can choose to assign or not assign the profile based on the OS edition or version of a device.
+9. Select **Next**.
 
-   For more information, see [Applicability rules](../configuration/device-profile-create.md#applicability-rules) in *Create a device profile in Microsoft Intune*.
+10. In **Assignments**, select the user or groups that will receive your profile. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
 
-11. In **Review + create**, review your settings. When you select Create, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
+    Select **Next**.
+
+11. (*Applies to Windows 10/11 only*) In **Applicability Rules**, specify applicability rules to refine the assignment of this profile. You can choose to assign or not assign the profile based on the OS edition or version of a device.
+
+    For more information, see [Applicability rules](../configuration/device-profile-create.md#applicability-rules) in *Create a device profile in Microsoft Intune*.
+
+12. In **Review + create**, review your settings. When you select Create, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
 
 ### Avoid certificate signing requests with escaped special characters
 

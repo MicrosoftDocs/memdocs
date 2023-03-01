@@ -37,6 +37,7 @@
       "feedback_github_repo": "MicrosoftDocs/memdocs",
       "feedback_product_url": "https://github.com/MicrosoftDocs/memdocs/issues",
       "brand": "Windows 365",
+      "uhfHeaderId": "MSDocsHeader-Windows365",
       "searchScope": ["Windows 365"],     
       "contributors_to_exclude": [
         "PRMerger9",
@@ -57,7 +58,6 @@
         "Ja-Dunn",
         "jomolnar",
         "KatieCumming",
-        "rjagiewich",
         "deneha",
         "ktoliver",
         "itechedit",
@@ -68,8 +68,6 @@
         "rmca14",
         "trishamc",
         "Jak-MS",
-        "garycentric",
-        "jborsecnik",
         "Kellylorenebaker",
         "ShannonLeavitt",
         "v-albemi",
@@ -78,7 +76,16 @@
         "atookey",
         "tfosmark",
         "sdwheeler",
-        "meganbradley"
+        "meganbradley",
+        "rjagiewich",
+        "garycentric",
+        "jborsecnik",
+        "tiburd",
+	      "AngelaMotherofDragons",
+	      "dstrome",
+        "v-dihans",
+        "claydetels19",
+        "traya1"
       ]          
     },
     "fileMetadata": {

@@ -12,7 +12,6 @@ ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
-ms.technology:
 
 # optional metadata
 
@@ -24,10 +23,15 @@ ms.suite: ems
 search.appverid:
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier3
+- M365-identity-device-management
 ---
 
 # iOS and iPadOS device settings to use common iOS/iPadOS features in Intune
+
+> [!NOTE]
+> [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
 
 Intune includes some built-in settings to allow iOS/iPadOS users to use different Apple features on their devices. For example, you can control AirPrint printers, add apps and folders to the dock and home screen pages, show app notifications, show asset tag details on the lock screen, use single sign-on authentication, and use certificate authentication.
 
@@ -83,26 +87,26 @@ This feature applies to:
 - Automated device enrollment (supervised)
 
 > [!NOTE]
-> 
+>
 > - Only add an app once to the dock, page, folder on a page, or folder in the dock. Adding the same app in any two places prevents the app from showing on devices, and may show reporting errors.
 >
 >   For example, if you add the camera app to a dock and a page, the camera app isn't shown, and reporting might show an error for the policy. To add the camera app to the home screen layout, choose only the dock or a page, not both.
 >
 > - When you apply a home screen layout, it overwrites any user-defined layout. So, it's recommended to use home screen layouts on userless devices.
-> 
+>
 > - You can have preexisting apps installed on the device that are not included in the home screen layout configuration. These apps are shown in alphabetical order after the configured apps.
 
 ### Home screen
 
-Use this feature to add apps. And, see how these apps look on pages, the dock, and within folders. It also shows you the app icons. Volume Purchase Program (VPP) apps, line-of business apps, and web link apps (web app URLs) are populated from the [client apps you add](../apps/apps-add.md). 
+Use this feature to add apps. And, see how these apps look on pages, the dock, and within folders. It also shows you the app icons. Volume Purchase Program (VPP) apps, line-of business apps, and web link apps (web app URLs) are populated from the [client apps you add](../apps/apps-add.md).
 
 - **Layout size**: Choose an appropriate grid size for the device's home screen. An app or folder takes up one place in the grid. If the target device doesn't support the selected size, some apps may not fit and will be pushed to the next available position on a new page. For reference:  
 
-    - iPhone 6 and later support 4 columns x 6 rows  
+  - iPhone 6 and later support 4 columns x 6 rows  
 
-    - iPhone 5 supports 4 columns x 5 rows  
+  - iPhone 5 supports 4 columns x 5 rows  
 
-    - iPads support 5 columns x 6 rows  
+  - iPads support 5 columns x 6 rows  
 
 - **+**: Select the add button to add apps.
 - **Create folder or add apps**: Add an **App** or a **Folder**:
@@ -159,7 +163,7 @@ You can add up to **40** pages on a device.
 
 - **List of pages**: **Add** a page, and enter the following properties:
 
-  - **Page name**: Enter a name for the page. This name is used for your reference in the Microsoft Endpoint Manager admin center, and *isn't* shown on the iOS/iPadOS device.
+  - **Page name**: Enter a name for the page. This name is used for your reference in the Microsoft Intune admin center, and *isn't* shown on the iOS/iPadOS device.
 
   You can add up to **60** items (apps and folder combined) on a device.
 
@@ -169,7 +173,7 @@ You can add up to **40** pages on a device.
 
       - **App**: Choose this option to add apps to a page on the screen. Also enter:
 
-        - **App Name**: Enter a name for the app. This name is used for your reference in the Microsoft Endpoint Manager admin center. It *isn't* shown on the iOS/iPadOS device.
+        - **App Name**: Enter a name for the app. This name is used for your reference in the Microsoft Intune admin center. It *isn't* shown on the iOS/iPadOS device.
         - **App Bundle ID**: Enter the bundle ID of the app. See [Bundle IDs for built-in iOS/iPadOS apps](bundle-ids-built-in-ios-apps.md) for some examples.
 
       - **Folder**: Choose this option to add a folder to the dock on the screen.
@@ -179,8 +183,8 @@ You can add up to **40** pages on a device.
         - **Folder name**: Enter a name for the folder. This name is shown to users on devices.
         - **Add**: Adds pages to the folder. Also enter the following properties:
 
-          - **Page name**: Enter a name for the page. This name is used for your reference in the Microsoft Endpoint Manager admin center. It *isn't* shown on the iOS/iPadOS device.
-          - **App Name**: Enter a name for the app. This name is used for your reference in the Microsoft Endpoint Manager admin center. It *isn't* shown on the iOS/iPadOS device.
+          - **Page name**: Enter a name for the page. This name is used for your reference in the Microsoft Intune admin center. It *isn't* shown on the iOS/iPadOS device.
+          - **App Name**: Enter a name for the app. This name is used for your reference in the Microsoft Intune admin center. It *isn't* shown on the iOS/iPadOS device.
           - **App Bundle ID**: Enter the bundle ID of the app. See [Bundle IDs for built-in iOS/iPadOS apps](bundle-ids-built-in-ios-apps.md) for some examples.
 
 #### Example
@@ -208,8 +212,8 @@ When you assign the policy to an iPhone, the page looks similar to the following
   :::image type="content" source="./media/ios-device-features-settings/ios-ipados-app-notifications.png" alt-text="Add app notification in iOS/iPadOS profile in Microsoft Intune":::
 
   - **App bundle ID**: Enter the **App Bundle ID** of the app you want to add. See [Bundle IDs for built-in iOS/iPadOS apps](bundle-ids-built-in-ios-apps.md) for some examples.
-  - **App name**: Enter the name of the app you want to add. This name is used for your reference in the Microsoft Endpoint Manager admin center. It *isn't* shown on devices.
-  - **Publisher**: Enter the publisher of the app you're adding. This name is used for your reference in the Microsoft Endpoint Manager admin center. It *isn't* shown on devices.
+  - **App name**: Enter the name of the app you want to add. This name is used for your reference in the Microsoft Intune admin center. It *isn't* shown on devices.
+  - **Publisher**: Enter the publisher of the app you're adding. This name is used for your reference in the Microsoft Intune admin center. It *isn't* shown on devices.
   - **Notifications**: **Enable** or **Disable** the app from sending notifications to devices.
     - **Show in notifications center**: **Enable** allows the app to show notifications in the device Notification Center. **Disable** prevents the app from showing notifications in the Notification Center.
     - **Show on Lock Screen**: **Enable** shows app notifications on the device lock screen. **Disable** prevents the app from showing notifications on the lock screen.
@@ -273,7 +277,7 @@ This feature applies to:
   - `{{UserId}}`:  Intune user ID
   - `{{UserName}}`:  User name
   - `{{userPrincipalName}}`:  UPN of the user
- 
+
   > [!NOTE]
   > Variables aren't validated in the UI, and are case sensitive. As a result, you may see profiles saved with incorrect input. For example, if you enter `{{DeviceID}}` instead of `{{deviceid}}` or '{{DEVICEID}}', then the literal string is shown instead of the device's unique ID. Be sure to enter the correct information. All lowercase or all uppercase variables are supported, but not a mix.
 
@@ -302,7 +306,6 @@ This feature applies to:
 
   - **Azure AD device ID**
   - **SAM account name**: Intune populates the on-premises Security Accounts Manager (SAM) account name.
-
 
 - **Apps**: **Add** apps on users devices that can use single sign-on.
 
@@ -363,7 +366,7 @@ This feature applies to:
     > [!IMPORTANT]
     > The Microsoft Azure AD SSO extension is in public preview. This preview version is provided without a service level agreement (SLA). It's not recommended to use in production. Certain features might not be supported, or might have restricted behavior. For more information, see [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms).
 
-    The SSO plug-in acts as an advanced authentication broker that offers security and user experience improvements. All apps that use the Microsoft Authenticator app for authentication continue to get SSO with the [Microsoft Enterprise SSO plug-in for Apple devices](/azure/active-directory/develop/apple-sso-plugin). 
+    The SSO plug-in acts as an advanced authentication broker that offers security and user experience improvements. All apps that use the Microsoft Authenticator app for authentication continue to get SSO with the [Microsoft Enterprise SSO plug-in for Apple devices](/azure/active-directory/develop/apple-sso-plugin).
 
     > [!IMPORTANT]
     > To achieve SSO with the Microsoft Azure AD SSO app extension type, first install the iOS/iPadOS Microsoft Authenticator app on devices. The Authenticator app delivers the Microsoft Enterprise SSO plug-in to devices, and the MDM SSO app extension settings activate the plug-in. Once Authenticator and the SSO app extension profile are installed on devices, users must enter their credentials to sign in, and establish a session on their devices. This session is then used across different applications without requiring users to authenticate again. For more information about Authenticator, see [What is the Microsoft Authenticator app](/azure/active-directory/user-help/user-help-auth-app-overview).
@@ -421,13 +424,14 @@ This feature applies to:
 - **Set as default realm** (Kerberos only): **Yes** sets the **Realm** value you entered as the default realm. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not set a default realm.
 
   > [!TIP]
+  >
   > - Select **Yes** for this setting if you're configuring multiple Kerberos SSO app extensions in your organization.
   > - Select **Yes** for this setting if you're using multiple realms. It sets the **Realm** value you entered as the default realm.
   > - If you only have one realm, leave it **Not configured** (default).
 
-- **Block Autodiscover** (Kerberos only): **Yes** prevents the Kerberos extension from automatically using LDAP and DNS to determine its Active Directory site name. 
+- **Block Autodiscover** (Kerberos only): **Yes** prevents the Kerberos extension from automatically using LDAP and DNS to determine its Active Directory site name.
 
-- **Allow only managed apps** (Kerberos only): When set to **Yes**, the Kerberos extension allows only managed apps, and any apps entered with the app bundle ID to access the credential. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow non-managed apps to access the credential. 
+- **Allow only managed apps** (Kerberos only): When set to **Yes**, the Kerberos extension allows only managed apps, and any apps entered with the app bundle ID to access the credential. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow non-managed apps to access the credential.
 
   This feature applies to:
   
@@ -437,7 +441,7 @@ This feature applies to:
 
   > [!TIP]
   >
-  > - You can also use variables in the principal name by entering curly brackets `{{ }}`. For example, to show the username, enter       `Username: {{username}}`. 
+  > - You can also use variables in the principal name by entering curly brackets `{{ }}`. For example, to show the username, enter       `Username: {{username}}`.
   > - However, be careful with variable substitution because variables aren't validated in the UI and they are case sensitive. Be sure to enter the correct information.
 
 - **Active Directory site code** (Kerberos only): Enter the name of the Active Directory site that the Kerberos extension should use. You may not need to change this value, as the Kerberos extension may automatically find the Active Directory site code.
@@ -480,7 +484,8 @@ You can experience unexpected behavior when a profile with no image is assigned 
 - **Wallpaper Image**: Upload an existing .png, .jpg, or .jpeg image you want to use. Be sure the file size is less than 750 KB. You can also **remove** an image that you added.
 
 > [!TIP]
-> - When configuring a wallpaper policy, Microsoft recommends enabling the [Block modification of Wallpaper](device-restrictions-ios.md#general) setting. This setting prevents users from changing the wallpaper. 
+>
+> - When configuring a wallpaper policy, Microsoft recommends enabling the [Block modification of Wallpaper](device-restrictions-ios.md#general) setting. This setting prevents users from changing the wallpaper.
 > - To display different images on the lock screen and home screen, create a profile with the lock screen image. Create another profile with the home screen image. Assign both profiles to your iOS/iPadOS user or device groups.
 
 ## Next steps

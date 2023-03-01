@@ -1,18 +1,18 @@
 ---
-title: "DeleteContextID Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+description: Learn how to delete the status queue that is associated with the specified context ID for the boot image package using the DeleteContextID.
+title: DeleteContextID Method
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 84bd0bb1-641d-418d-93ca-6f7720927005
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # DeleteContextID Method in Class SMS_BootImagePackage
 The `DeleteContextID` Windows Management Instrumentation (WMI) class method, in Configuration Manager, deletes the status queue that is associated with the specified context ID for the boot image package.  

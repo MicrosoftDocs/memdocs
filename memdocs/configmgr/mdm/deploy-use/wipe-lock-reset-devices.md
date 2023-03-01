@@ -6,10 +6,12 @@ ms.date: 08/14/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-mdm
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: gowdhamankarthikeyan
+ms.author: gokarthi
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.reviewer: mstewart,aaroncz 
+ms.collection: tier3
 ---
 
 # Manage devices and protect data with on-premises MDM in Configuration Manager

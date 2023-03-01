@@ -1,19 +1,18 @@
 ---
 description: Learn how to encrypt data using the specified site server's public key and return the encrypted data using EncryptDataEx.
-title: "EncryptDataEx Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: EncryptDataEx Method
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 97b54531-f6ab-4e08-81ce-97e6775f5a22
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # EncryptDataEx Method in Class SMS_Site
 The `EncryptDataEx` Windows Management Instrumentation (WMI) class method, in Configuration Manager, encrypts data using the specified site server's public key and returns the encrypted data.  
