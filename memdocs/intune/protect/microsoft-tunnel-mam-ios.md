@@ -125,14 +125,6 @@ Create an app configuration policy for apps that use Tunnel for MAM. This policy
    1. Next, select **Select a Site**, and choose one of your Microsoft Tunnel Gateway sites. If you haven’t configured a Tunnel Gateway site, see [Configure Microsoft Tunnel](../protect/microsoft-tunnel-configure.md).
    1. If your app requires a trusted certificate, select **Root Certificate**, and then select a trusted certificate profile to use. For more information, see [Configure a trusted certificate profile](#configure-a-trusted-certificate-profile) later in this article.
 
-   > [!NOTE]
-   > Microsoft Tunnel for MAM iOS doesn’t use the following:
-   >
-   > - The *General configuration settings* category.
-   > - Per-App VPN. The Tunnel for MAM iOS SDK provides Per-App VPN directly to integrated apps.
-   >
-   > Additionally, there is a known issue when using a DNS hostname for the location of the PAC file or proxy server address. For more information, see [#proxy-configuration] in the *Known issues* section of this article.
-
    After configuring the Tunnel MAM settings, Select **Next** to open the *Assignments* tab.
 
 5. On the *Assignments* tab, select **Add Groups**, and then select one or more Azure AD user groups that will receive this policy. After configuring groups, select **Next**.
@@ -412,7 +404,6 @@ Tunnel site settings for **Public IP address or FQDN** require a publicly resolv
 ### Proxy Configuration
 
 If you enter a DNS hostname for the location of the PAC file or proxy server address, then a publicly resolvable hostname is required. Also, any proxy hostnames included in the PAC file need to be publicly resolvable.
-
 **Work around**: Use the IP address of the DNS hostname for the related PAC file locations and proxy servers.
 
 ### Newly created custom app not showing in UX
