@@ -31,7 +31,13 @@ For an overview of the Windows Autopilot user-driven Azure AD join workflow, see
 
 ## Configure device settings
 
-## Next step - Step 3 of 7: Register devices as Autopilot devices
+## Next step: Register devices as Autopilot devices
 
 > [!div class="nextstepaction"]
 > [Step 3: Register devices as Autopilot devices](azure-ad-join-register-device.md)
+
+## More information
+
+For more information on configuring device settings, see the following article(s):
+
+- [Configure device settings](/azure/active-directory/devices/device-management-azure-portal#configure-device-settings)

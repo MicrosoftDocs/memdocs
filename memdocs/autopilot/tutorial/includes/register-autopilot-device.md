@@ -40,7 +40,7 @@ For most organizations, using an OEM or partner to register devices as Autopilot
 >
 > Assuming that a device isn't currently enrolled Intune, remember that registering a device in Autopilot doesn't make it an Intune enrolled device. That device won't enroll into Intune until Autopilot runs on the device for the first time.
 
-### Importing the hardware hash CSV file for devices into Intune
+## Importing the hardware hash CSV file for devices into Intune
 
 Several of the above methods on obtaining the hardware hash when manually registering devices as Autopilot devices will produce a CSV file that contains the hardware hash of the device. This CSV file with the hardware hash needs to be imported into Intune to register the device as an Autopilot device.
 
@@ -48,24 +48,28 @@ After the CSV files has been created, it can be imported into Intune via the fol
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Devices** > **By platform: Windows**.
+2. In the **Home** screen, select **Devices**.
 
-3. Select **Windows enrollment** > **Windows Autopilot Deployment Program: Devices**.
+3. In the **Devices | Overview** screen, under **By platform**, select **Windows**.
 
-4. In the **Windows Autopilot devices** screen, select **Import**.
+4. In the **Windows | Windows enrollment** screen, select **Windows enrollment**
 
-5. In the **Add Windows Autopilot devices** pane, under **Specify the path to the list you want to import.**, select the blue select a file folder.
+5. Under **Windows Autopilot Deployment Program**, select **Devices**.
 
-6. Browse to the CSV file obtained using one of the above methods to obtain the hardware hash of a device.
+6. In the **Windows Autopilot devices** screen, select **Import**.
 
-7. After selecting the CSV file, verify that the correct CSV file is selected under **Specify the path to the list you want to import.**, and then select **Import**. Importing can take several minutes.
+7. In the **Add Windows Autopilot devices** pane, under **Specify the path to the list you want to import.**, select the blue select a file folder.
 
-8. After the import is complete, in the **Windows Autopilot devices** screen, select **Sync**.
+8. Browse to the CSV file obtained using one of the above methods to obtain the hardware hash of a device.
 
-   A message will display saying that the sync is in progress. The sync process might take a few minutes to complete, depending on how many devices are being synchronized.
+9. After selecting the CSV file, verify that the correct CSV file is selected under **Specify the path to the list you want to import.**, and then select **Import**. Importing can take several minutes.
+
+10. After the import is complete, in the **Windows Autopilot devices** screen, select **Sync**.
+
+       A message will display saying that the sync is in progress. The sync process might take a few minutes to complete, depending on how many devices are being synchronized.
 
     > [!NOTE]
     >
     > If another sync is attempted within 10 minutes after initiating a sync, an error will be displayed. Syncs can only occur once every 10 minutes. To attempt a sync again, wait at least 10 minutes before trying again.
 
-9. Select **Refresh** to refresh the view. The newly imported devices should display within a few minutes. If the devices aren't yet displayed, wait a few minutes and then select **Refresh** again.
+11. Select **Refresh** to refresh the view. The newly imported devices should display within a few minutes. If the devices aren't yet displayed, wait a few minutes and then select **Refresh** again.

@@ -34,14 +34,11 @@ For an overview of the Windows Autopilot hybrid user-driven Azure AD join workfl
 
 [!INCLUDE [How to configure and assign an Enrollment Status Page (ESP) in Intune](../includes/configure-and-assign-esp.md)]
 
-## Next step - Step 7 of 8: Create and assign user-driven hybrid Azure AD join Autopilot profile
+## Next step: Create and assign user-driven hybrid Azure AD join Autopilot profile
 
 > [!div class="nextstepaction"]
 > [Step 7: Create and assign hybrid Azure AD join Autopilot profile](hybrid-azure-ad-join-autopilot-profile.md)
 
 ## More information
 
-For more information on the Enrollment Status Page (ESP), see the following articles:
-
-- [Windows Autopilot Enrollment Status Page](/mem/autopilot/enrollment-status)
-- [Set up the Enrollment Status Page](/mem/intune/enrollment/windows-enrollment-status)
+[!INCLUDE [More information ESP](../includes/more-info-esp.md)]

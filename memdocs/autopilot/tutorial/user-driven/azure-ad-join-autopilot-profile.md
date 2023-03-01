@@ -110,7 +110,11 @@ For more information on creating and assigning Autopilot profiles, see the follo
 
 [!INCLUDE [How to verify a device has an Autopilot profile assigned to it in Intune](../includes/verify-autopilot-profile-assignment.md)]
 
-## Next step - Step 7 of 7: Assign Autopilot device to a user (optional)
+## Next step: Assign Autopilot device to a user (optional)
 
 > [!div class="nextstepaction"]
 > [Step 7: Assign Autopilot device to a user (optional)](azure-ad-join-assign-device-to-user.md)
+
+## More information
+
+[!INCLUDE [More information Autopilot profile](../includes/more-info-autopilot-profile.md)]

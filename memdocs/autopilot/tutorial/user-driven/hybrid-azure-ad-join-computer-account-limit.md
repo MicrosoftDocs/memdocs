@@ -32,7 +32,13 @@ For an overview of the Windows Autopilot hybrid user-driven Azure AD join workfl
 
 ## Increase the computer account limit in the Organizational Unit
 
-## Next step - Step 3 of 8: Install the Intune Connector
+## Next step: Install the Intune Connector
 
 > [!div class="nextstepaction"]
 > [Step 3: Install the Intune Connector](hybrid-azure-ad-join-intune-connector.md)
+
+## More information
+
+For more information on increasing the computer account limit in an Organizational Unit, see the following article(s):
+
+-[Increase the computer account limit in the Organizational Unit](/mem/autopilot/windows-autopilot-hybrid#increase-the-computer-account-limit-in-the-organizational-unit)

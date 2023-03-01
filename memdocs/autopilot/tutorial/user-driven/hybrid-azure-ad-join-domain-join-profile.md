@@ -85,3 +85,9 @@ For an overview of the Windows Autopilot hybrid user-driven Azure AD join workfl
 12. In the **Applicability Rules** page, select **Next**. No configuration is needed in this page.
 
 13. On the **Review + Create** page, review and verify that all of the settings are set as desired, and then choose **Create** to create the domain join profile.
+
+## More information
+
+For more information on domain join profiles, see the following article(s):
+
+- [Create and assign a Domain Join profile](/mem/autopilot/windows-autopilot-hybrid#create-and-assign-a-domain-join-profile)

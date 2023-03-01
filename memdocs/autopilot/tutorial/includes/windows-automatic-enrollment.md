@@ -29,4 +29,8 @@ In order for Windows Autopilot to work, devices need to be able to enroll in Int
       2. In the **Select groups** page, select the desired group(s) to add. Use ctrl+select to select multiple groups.
       3. Once all of the desired group(s) have been selected, select **Select**.
 
+        > [!NOTE]
+        >
+        > The group(s) selected must be an Azure AD group that contains user objects.
+
 6. In the **Configure** screen, select **Save**.

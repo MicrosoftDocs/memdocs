@@ -1,6 +1,6 @@
 ---
-title: Windows Autopilot user-driven hybrid Azure AD join - Step 1 of 8 - Set up Windows automatic enrollment in Intune
-description: How to - Windows Autopilot user-driven hybrid Azure AD join - Step 1 of 8 - Set up Windows automatic enrollment in Intune.
+title: Windows Autopilot user-driven hybrid Azure AD join - Step 1 of 8 - Set up Windows automatic Intune enrollment
+description: How to - Windows Autopilot user-driven hybrid Azure AD join - Step 1 of 8 - Set up Windows automatic Intune enrollment.
 ms.prod: windows-client
 ms.localizationpriority: medium
 author: frankroj
@@ -15,7 +15,7 @@ ms.collection:
 ms.technology: itpro-deploy
 ---
 
-# User-driven hybrid Azure AD join: Set up Windows automatic enrollment
+# User-driven hybrid Azure AD join: Set up Windows automatic Intune enrollment
 
 Autopilot user-driven hybrid Azure AD join steps:
 > [!div class="checklist"]
@@ -30,16 +30,15 @@ Autopilot user-driven hybrid Azure AD join steps:
 
 For an overview of the Windows Autopilot hybrid user-driven Azure AD join workflow, see [Windows Autopilot user-driven hybrid Azure AD join overview](hybrid-azure-ad-join-workflow.md)
 
-## Set up Windows automatic enrollment
+## Set up Windows automatic Intune enrollment
 
 [!INCLUDE [Set up Windows automatic enrollment](../includes/windows-automatic-enrollment.md)]
 
-## Next step - Step 2 of 8: Increase the computer account limit in the Organizational Unit
+## Next step: Increase the computer account limit in the Organizational Unit
 
 > [!div class="nextstepaction"]
 > [Step 2: Increase the computer account limit in the Organizational Unit](hybrid-azure-ad-join-computer-account-limit.md)
 
 ## More information
 
-- [Enable Windows automatic enrollment](/mem/intune/enrollment/windows-enroll#enable-windows-automatic-enrollment)
-- [Set up Windows automatic enrollment](/mem/autopilot/windows-autopilot-hybrid#set-up-windows-automatic-enrollment)
+[!INCLUDE [More information automatic enrollment](../includes/more-info-automatic-enrollment.md)]

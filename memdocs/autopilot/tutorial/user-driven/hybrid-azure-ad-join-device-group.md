@@ -34,15 +34,11 @@ For an overview of the Windows Autopilot hybrid user-driven Azure AD join workfl
 
 [!INCLUDE [How to create a device group in Intune](../includes/create-device-group.md)]
 
-## Next step - Step 5 of 8: Configure and assign the Enrollment Status Page (ESP)
+## Next step: Configure and assign the Enrollment Status Page (ESP)
 
 > [!div class="nextstepaction"]
 > [Step 5: Configure and assign Autopilot Enrollment Status Page (ESP)](hybrid-azure-ad-join-esp.md)
 
 ## More information
 
-For more information on creating groups in Intune, see the following articles:
-
-- [Create device groups](/mem/autopilot/enrollment-autopilot)
-- [Add groups to organize users and devices](/mem/intune/fundamentals/groups-add)
-- [Manage Azure Active Directory groups and group membership](/azure/active-directory/fundamentals/how-to-manage-groups)
+[!INCLUDE [More information device group](../includes/more-info-device-group.md)]

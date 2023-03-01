@@ -39,6 +39,6 @@ For an overview of the Windows Autopilot user-driven Azure AD join workflow, see
 
 ## More information
 
-For more information on assigning a user to an Autopilot device, see the following articles:
+For more information on assigning a user to an Autopilot device, see the following article(s):
 
 - [Assign a user to a specific Autopilot device](/mem/autopilot/enrollment-autopilot#assign-a-user-to-a-specific-autopilot-device)

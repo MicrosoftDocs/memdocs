@@ -55,4 +55,6 @@ Autopilot user-driven Azure AD join steps:
 
 ## More info
 
+For more information on Windows Autopilot user-driven Azure AD join, see the following article(s):
+
 - [Windows Autopilot user-driven mode](/mem/autopilot/user-driven)

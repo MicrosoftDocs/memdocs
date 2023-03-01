@@ -32,7 +32,13 @@ For an overview of the Windows Autopilot hybrid user-driven Azure AD join workfl
 
 ## Install the Intune Connector
 
-## Next step - Step 4 of 8: Register devices as Autopilot devices
+## Next step: Register devices as Autopilot devices
 
 > [!div class="nextstepaction"]
 > [Step 4: Register devices as Autopilot devices](hybrid-azure-ad-join-register-device.md)
+
+## More information
+
+For more information on the Intune connector, see the following article(s):
+
+- [Install the Intune Connector](/mem/autopilot/windows-autopilot-hybrid#install-the-intune-connector)

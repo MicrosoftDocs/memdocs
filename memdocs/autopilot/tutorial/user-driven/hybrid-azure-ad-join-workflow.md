@@ -54,6 +54,8 @@ Autopilot user-driven hybrid Azure AD join steps:
 > [!div class="nextstepaction"]
 > [Step 1: Set up Windows automatic Intune enrollment](hybrid-azure-ad-join-automatic-enrollment.md)
 
-## More info
+## More information
+
+For more information on Windows Autopilot user-driven hybrid Azure AD join, see the following article(s):
 
 - [Deploy hybrid Azure AD-joined devices by using Intune and Windows Autopilot](/mem/autopilot/windows-autopilot-hybrid)
