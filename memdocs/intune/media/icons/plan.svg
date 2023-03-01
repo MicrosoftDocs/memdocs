@@ -1,1 +1,22 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><defs><style>.cls-1{fill:#fff;stroke:#556a8a}.cls-1,.cls-5{stroke-miterlimit:10;stroke-width:2px}.cls-4{fill:#868787}.cls-5{fill:none;stroke:#868787}</style></defs><g id="ICONS-64x"><path class="cls-1" d="M1 7v54h62V7z"/><path class="cls-1" d="M38.5 3A7.9 7.9 0 0032 6a7.9 7.9 0 00-6.5-3H8v51h17.5a6.88 6.88 0 015 2.43C31.15 57.16 32 58 32 58s.85-.84 1.5-1.57a6.88 6.88 0 015-2.43H56V3z"/><path d="M9 4h8v49H9zm38 0h8v49h-8z" fill="#e5e5e5"/><path d="M33 6.34V55.5l-.25.27-.75.8c-.24-.25-.51-.53-.75-.8L31 55.5V6.33z" fill="#2bc7f4"/></g><g id="Layer_5" data-name="Layer 5"><circle class="cls-4" cx="14" cy="31" r="2"/><path class="cls-5" d="M19 31h9"/><circle class="cls-4" cx="14" cy="41" r="2"/><path class="cls-5" d="M19 41h9"/><circle class="cls-4" cx="38" cy="31" r="2"/><path class="cls-5" d="M43 31h9"/><circle class="cls-4" cx="38" cy="41" r="2"/><path class="cls-5" d="M43 41h9"/><path d="M15 22l11-11m0 11L15 11m37-1.5L40.5 21l-4.75-4.75" stroke="#2bc7f4" fill="none" stroke-miterlimit="10" stroke-width="2"/></g></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve" width="64px" height="64px">
+<style type="text/css">
+	.st0{fill:#C2C2C2;}
+	.st1{fill:#0078D4;}
+</style>
+<title>task_checklist_planning</title>
+<g id="Layer_2_1_">
+	<g id="SYMBOLS">
+		<g id="task_checklist_planning">
+			<path class="st0" d="M1,19.4h38V8.1H1V19.4z"/>
+			<path class="st0" d="M1,39.4h38V28.1H1V39.4z"/>
+			<path class="st0" d="M1,59.3h38V48H1V59.3z"/>
+			<polygon class="st1" points="50.6,34.6 46.8,30.8 44.4,33.1 50.6,39.4 63,27 60.6,24.6 			"/>
+			<polygon class="st1" points="50.6,54.6 46.8,50.7 44.4,53.1 50.6,59.3 63,47 60.6,44.6 			"/>
+			<polygon class="st1" points="60.6,4.7 50.6,14.7 46.8,10.8 44.4,13.2 50.6,19.4 63,7.1 			"/>
+		</g>
+	</g>
+</g>
+</svg>
