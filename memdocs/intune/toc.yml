@@ -1546,8 +1546,10 @@ items:
       href: ./fundamentals/tenant-status.md
     - name: Help users troubleshoot problems
       href: ./fundamentals/help-desk-operators.md
-    - name: Use remote help
-      href: ./remote-actions/remote-help.md
+    - name: ServiceNow integration with Microsoft Intune
+      href: service-now-integration.md
+    - name: Use Remote Help
+      href: remote-help.md      
     - name: Using the Intune docs
       href: /mem/use-docs?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
     - name: Get support
