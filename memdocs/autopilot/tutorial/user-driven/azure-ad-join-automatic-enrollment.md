@@ -31,6 +31,8 @@ For an overview of the Windows Autopilot user-driven Azure AD join workflow, see
 
 ## Set up Windows automatic enrollment
 
+[!INCLUDE [Set up Windows automatic enrollment](../includes/windows-automatic-enrollment.md)]
+
 ## Next step - Step 2 of 7: Configure device settings
 
 > [!div class="nextstepaction"]

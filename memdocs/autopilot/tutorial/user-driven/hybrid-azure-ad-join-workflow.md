@@ -49,7 +49,7 @@ Autopilot user-driven hybrid Azure AD join steps:
 >
 > Although the workflow is designed for lab or testing scenarios, it can also be used in a production environment. Some of the steps in the workflow are interchangeable and interchanging some of the steps may make more sense in a production environment. For example, the **Create a device group** step followed by the **Register devices as Autopilot devices** step may make more sense in a production environment.
 
-## Step 1 of 7: Set up Windows automatic enrollment
+## Windows Autopilot user-driven hybrid Azure AD join walkthrough
 
 > [!div class="nextstepaction"]
 > [Step 1: Set up Windows automatic enrollment](hybrid-azure-ad-join-automatic-enrollment.md)
