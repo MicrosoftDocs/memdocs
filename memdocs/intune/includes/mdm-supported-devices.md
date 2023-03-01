@@ -25,7 +25,7 @@ ms.localizationpriority: high
 - Android enterprise: [requirements](https://support.google.com/work/android/topic/9428066)
 - Android open source project devices (AOSP) supported devices
   - RealWear devices (Firmware 11.2 or later)
-  - HTC Vive Focus 3
+  - HTC Vive Focus 3 (Firmware: FOTA 5.2 - 3.0.999.624)
 
 [!INCLUDE [android-supported-os](android-supported-os.md)]
 
