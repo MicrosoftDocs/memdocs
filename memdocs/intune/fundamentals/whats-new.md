@@ -70,6 +70,14 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 ### Device configuration
 
+#### Intune add-ons <!-- 13817801 -->
+
+Microsoft Intune Suite provides mission-critical advanced endpoint management and security capabilities into Microsoft Intune. 
+
+You can find add-ons to Intune in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) under **Tenant administration** > **Intune add-ons**.
+
+For detailed information, see [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md).
+
 #### View ServiceNow Incidents in the Intune Troubleshooting workspace (Preview)<!-- 12508062 -->
 
 In public preview, you can view a list of ServiceNow incidents associated with the user you've selected in the Intune Troubleshooting workspace.  This new feature is available under **Troubleshooting + Support** > select a user > **ServiceNow Incidents**.  The list of incidents shown have a direct link back to the source incident and show key information from the incident.  All incidents listed will link the "Caller" identified in the incident with the user selected for Troubleshooting.
