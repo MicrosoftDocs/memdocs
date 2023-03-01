@@ -79,7 +79,7 @@ productDirectory:
     - title: How-to guides
       imageSrc: ./media/icons/how-to.svg
       summary: Guides to help you perform common tasks in Intune
-      url: ./index.yml#how-to-guides
+      url: ./index.yml#how-to-guides-4
     # Card
     - title: Platform and industry guides
       imageSrc: ./media/icons/platform-guide.svg
