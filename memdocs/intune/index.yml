@@ -204,9 +204,6 @@ conceptualContent:
         - url: ./fundamentals/policy-sets.md
           itemType: how-to-guide
           text: Use policy sets to group collections of management objects
-        - url: ./configuration/device-profile-troubleshoot.md
-          itemType: concept
-          text: Common policy questions, answers, and scenarios
       footerLink:
         text: Browse all articles in this area
         url: ./configuration/device-profile-troubleshoot.md

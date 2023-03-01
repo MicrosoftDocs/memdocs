@@ -7,7 +7,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: johmar
-ms.date: 01/26/2023
+ms.date: 03/01/2023
 ms.topic: article
 ms.prod:
 ms.service: microsoft-intune
@@ -54,6 +54,7 @@ Intune has two service instances:
 
 ## Feature differences in Intune GCC High and DoD
 
+- Microsoft Intune Plan 2 and Microsoft Intune Suite are not yet available for GCC, GCC-High or DoD customers. For more information on these plans, go to [Microsoft Intune Plans and Pricing](https://www.microsoft.com/security/business/microsoft-intune-pricing).
 - Intune for GCC High and DoD does not support the on-premises Exchange Connector.
 - Intune for GCC High and DoD customers doesn't support the Chrome OS Connector.
 - Windows Autopilot is not available to GCC High and DoD customers. Planning is underway.
