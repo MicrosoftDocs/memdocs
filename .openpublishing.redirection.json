@@ -1359,6 +1359,11 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "memdocs/intune/fundamentals/premium-add-ons.md",
+            "redirect_url": "/mem/intune/fundamentals/intune-add-ons",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "memdocs/intune/remote-actions/remote-help.md",
             "redirect_url": "/mem/intune/fundamentals/remote-help",
             "redirect_document_id": false            
