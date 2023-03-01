@@ -41,7 +41,7 @@ You have the following options when enrolling Windows devices:
 - [BYOD: User enrollment](#byod-user-enrollment)
 - [Co-management with Configuration Manager](#co-management-enrollment)
 
-This article provides recommendations on the Windows enrollment method to use. It also includes an overview of the administrator and user tasks for each enrollment type.  
+This article provides enrollment recommendations and includes an overview of the administrator and user tasks for each option.  
 
 There's also a visual guide of the different enrollment options for each platform:
 
@@ -56,19 +56,17 @@ For all Intune-specific prerequisites and configurations needed to prepare your 
 
 ## Windows automatic enrollment
 
-Use for personal/BYOD and organization-owned devices running Windows 10/11. Automatic enrollment:
+Use for personal and corporate-owned devices running Windows 10 and Windows 11. Azure AD Premium is required with some automatic enrollment options.  
+
+Automatic enrollment:
 
 - Uses the **Access school or work** feature on the devices.
 - Uses the enrollment options you configure in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
 
-You can use this enrollment method to:  
-* Automatically enroll personal devices that register and join in your Azure AD.  
-* Automatically [bulk enroll devices with the Windows Configuration Designer app](../enrollment/windows-bulk-enroll.md)
-* Automatically [enroll hybrid Azure AD-joined devices using group policy](/windows/client-management/enroll-a-windows-10-device-automatically-using-group-policy)
-
-Depending on the options you configure, Azure AD Premium might be required.
-
-
+You can use this enrollment option to:    
+* Enable automatic enrollment for personal devices that register and join in Azure AD.  
+* Automatically [bulk enroll devices with the Windows Configuration Designer app](../enrollment/windows-bulk-enroll.md).  
+* Automatically [enroll hybrid Azure AD-joined devices using group policy](/windows/client-management/enroll-a-windows-10-device-automatically-using-group-policy).  
 
 ---
 | Feature | Use this enrollment option when |
@@ -77,13 +75,13 @@ Depending on the options you configure, Azure AD Premium might be required.
 | You have Azure AD Premium | ✔️ |
 | You'll use Conditional Access (CA) on devices enrolled using [bulk enrollment](../enrollment/windows-bulk-enroll.md) with a provisioning package. | ✔️ On Windows 11 and Windows 10 1803+, CA is available for Windows devices enrolled using bulk enrollment. <br/><br/> ❌ On Windows 10 1709 and older, CA isn't available for Windows devices enrolled using bulk enrollment. |
 | You have remote workers. | ✔️ |
-| Devices are personal or BYOD. | ✔️ <br/><br/>  Bulk enrollment and automatic enrollment via Group Policy are for organization-owned devices, not personal/BYOD. |
+| Devices are personal or BYOD. | ✔️ <br/><br/> ❌ Bulk enrollment and automatic enrollment via Group Policy are for corporate-owned devices, not personal or BYOD. |
 | Devices are owned by the organization or school. | ✔️  |
 | You have new or existing devices. | ✔️ |
-| Need to enroll a few devices, or a large number of devices (bulk enrollment). | ✔️ <br/><br/> Bulk enrollment is for organization-owned devices, not personal/BYOD.|
+| Need to enroll a few devices, or a large number of devices (bulk enrollment). | ✔️ <br/><br/> Bulk enrollment is for organization-owned devices, not personal or BYOD.|
 | Devices are associated with a single user. | ✔️ |
 | Devices are user-less, such as kiosk, dedicated. or shared device. | ✔️ <br/><br/> These devices are organization-owned. This enrollment method requires users to sign in with their organization account. An organization admin can sign in, and automatically enroll. When the device is enrolled, create a [kiosk](../configuration/kiosk-settings.md) profile, and assign this profile to this device. You can also create a profile for [devices shared with many users](../configuration/shared-user-device-settings.md). |
-| You use the optional device enrollment manager (DEM) account. | ✔️ <br/><br/> DEM accounts don't work with Group policy. |
+| You use the optional device enrollment manager (DEM) account. | ✔️ <br/><br/> ❌ DEM accounts don't work with Group Policy. |
 | Devices are managed by another MDM provider. | ❌ <br/><br/> To be fully managed by Intune, users need to unenroll from the current MDM provider, and then enroll in Intune. |
 
 ---
@@ -113,11 +111,11 @@ Depending on the options you configure, Azure AD Premium might be required.
     - If you want to only manage the device, then choose **None**, and configure the **MDM user scope**.
     - If you want to manage the device *and* manage the organization account on the device, then choose **Some** or **All**, and configure the **MDM user scope**.
 
-  For more information on joined devices vs. registered devices, see:
+   For more information on joined devices vs. registered devices, see:
 
-  - [Azure AD device identity](/azure/active-directory/devices/overview)
-  - [Azure AD registered devices](/azure/active-directory/devices/concept-azure-ad-register)
-  - [Azure AD joined devices](/azure/active-directory/devices/concept-azure-ad-join)
+   - [Azure AD device identity](/azure/active-directory/devices/overview)
+   - [Azure AD registered devices](/azure/active-directory/devices/concept-azure-ad-register)
+   - [Azure AD joined devices](/azure/active-directory/devices/concept-azure-ad-join)
 
 - For bulk enrollment, go to the Microsoft Store, and download the Windows Configuration Designer (WCD) app. Configure the Windows Configuration Designer app, and choose to enroll devices in Azure AD. A package file is created. Put the package file on a USB drive, or on a network share.
 
@@ -134,9 +132,7 @@ Depending on the options you configure, Azure AD Premium might be required.
    In the Intune admin center, you can use [Group Policy analytics](../configuration/group-policy-analytics.md) to see your on-premises group policies settings that are supported by cloud MDM providers, including Microsoft Intune. 
   
      >[!TIP]
-     > If you want a cloud native solution to manage devices, then Windows Autopilot (in this article) might be the best enrollment option for your organization. 
-
-   For more information about Group Policy, see [Enroll a Windows client device automatically using Group Policy](/windows/client-management/enroll-a-windows-10-device-automatically-using-group-policy).  
+     > If you want a cloud native solution to manage devices, then Windows Autopilot (in this article) might be the best enrollment option for your organization.  
 
 ### Automatic enrollment end user tasks
 
