@@ -28,7 +28,7 @@ ms.reviewer: esmich
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser 
 ms.collection:
-- tier2
+- tier3
 ---
 
 # Set a device passcode on iOS device  

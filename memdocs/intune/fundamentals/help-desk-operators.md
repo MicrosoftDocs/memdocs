@@ -57,6 +57,7 @@ The **Troubleshooting** pane provides the following tabs to quickly narrow the t
 - **Updates** - Provides the name, platform, and update type.
 - **Enrollment restrictions** - Provides the policy type, name, platform, and device limit.
 - **Diagnostics** - Provides the device name or application, platform, created date, and diagnostic log.
+- **ServiceNow incidents** - Provides a list of associated incidents for the selected user. For more information, go to [ServiceNow integration with Intune](../fundamentals/service-now-integration.md).
 
 ## View user troubleshooting details
 
