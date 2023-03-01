@@ -217,9 +217,9 @@ Intune leverages Google Firebase Cloud Messaging (FCM) for push notification to 
 
 For more information on the required endpoints for endpoint analytics, see [Endpoint analytics proxy configuration](../../analytics/troubleshoot.md#bkmk_endpoints).
 
-## Microsoft Defender for Endpoint.  
+## Microsoft Defender for Endpoint
 
-For more information on configuring Defender for Endpoint connectivity, see [Connectivity Requirements] (https://learn.microsoft.com/en-us/mem/intune/protect/mde-security-integration#connectivity-requirements)
+For more information about configuring Defender for Endpoint connectivity, see [Connectivity Requirements](../protect/mde-security-integration#connectivity-requirements)
 
 Allow the following hostnames through your firewall to support Security Management for Defender for Endpoint.
 For communication between clients and the cloud service:
