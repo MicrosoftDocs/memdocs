@@ -202,7 +202,7 @@ When it deploys successfully, you can use the monitoring and reporting features 
   - Add preregistered Windows Autopilot devices to the group. Add them to the group before you enroll or apply any policies.
   - Add existing Windows client devices that are already enrolled. Microsoft recommends removing other apps and profiles targeted to these devices. After adding them to the group, reset the devices so they start fresh with just cloud config applied.
 
-  For information on the policy refresh times, see [Common questions and answers with device policies in Microsoft Intune](../configuration/device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned).
+  For information on the policy refresh times, see [Common questions and answers with device policies in Microsoft Intune](../configuration/device-profile-troubleshoot.md#policy-refresh-intervals).
 
 - Microsoft recommends only assigning cloud config settings and apps. After this guided scenario deploys, then you can add any other required resources, such as certificates, VPN profiles, line-of-business apps, and more. Be sure to deploy these policies to the same group as this guided scenario. Remember, keep the list small, and only include resources your users need.
 - Microsoft doesn't recommend using Windows 10/11 in cloud configuration with shared devices, because of a OneDrive sync issue with shared devices. Shared devices typically have multiple users that sign in and sign out.

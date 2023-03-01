@@ -37,7 +37,7 @@ The troubleshooting pane lets help desk operators and Intune administrators view
 The **Troubleshooting + support** pane provides three options:
 - [Guided scenarios](../fundamentals/guided-scenarios-overview.md) to provide a customized series of steps centered around one end-to-end use-case.
 - **Troubleshooting** to help determine any issues with **Assignments**, **App protection status**, and **Enrollment failures**.
-- [Help and support](/mem/get-support?toc=%2Fmem%2Fintune%2Ffundamentals%2Ftoc.json&bc=%2Fmem%2Fintune%2Ffundamentals%2Fbreadcrumb%2Ftoc.json) to provide global technical, pre-sales, billing, and subscription support for device management cloud-based services related to Intune.
+- [Help and support](/mem/get-support?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json) to provide global technical, pre-sales, billing, and subscription support for device management cloud-based services related to Intune.
 
 Details about the issue and suggested remediation steps can help administrators and help desk operators troubleshoot problems. Certain enrollment issues aren't captured and some errors might not have remediation suggestions.
 

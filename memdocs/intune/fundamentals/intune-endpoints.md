@@ -33,9 +33,9 @@ ms.collection:
 
 # Network endpoints for Microsoft Intune  
 
-This page lists IP addresses and port settings needed for proxy settings in your Intune deployments.
+This article lists IP addresses and port settings needed for proxy settings in your Microsoft Intune deployments.
 
-As a cloud-only service, Intune doesn't require on-premises infrastructure such as servers or gateways.
+As a cloud-only service, Intune doesn't require an on-premises infrastructure such as servers or gateways.
 
 ## Access for managed devices  
 

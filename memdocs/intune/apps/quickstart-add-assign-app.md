@@ -1,15 +1,15 @@
 ---
 # required metadata
 
-title: Quickstart - Add and assign an app
+title: Add and assign an app
 titleSuffix: Microsoft Intune
-description: In this quickstart, you will use Microsoft Intune to add and assign an app.
+description: In this topic, you will use Microsoft Intune to add and assign an app.
 keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 09/12/2022
-ms.topic: quickstart
+ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: medium
@@ -31,15 +31,15 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Quickstart: Add and assign a app
+# Step 8: Add and assign a app
 
-In this quickstart, you will use Intune to add and assign a app to your company's workforce. One of an admin's priorities is to ensure that end users have access to the apps they need to do their work.
+In this topic, you will use Intune to add and assign a app to your company's workforce. One of an admin's priorities is to ensure that end users have access to the apps they need to do their work.
 
 If you don't have an Intune subscription, [sign up for a free trial account](../fundamentals/free-trial-sign-up.md).
 
 ## Prerequisites
 
-- To complete this quickstart, you must [create a user](../fundamentals/quickstart-create-user.md), [create a group](../fundamentals/quickstart-create-group.md), and [enroll a device](../enrollment/quickstart-setup-auto-enrollment.md).
+- To complete this evaluation step, you must [create a user](../fundamentals/quickstart-create-user.md), [create a group](../fundamentals/quickstart-create-group.md), and [enroll a device](../enrollment/quickstart-setup-auto-enrollment.md).
 
 ## Sign in to Intune
 
@@ -65,7 +65,7 @@ Use the following steps to add an app to Intune:
 After you've added an app to Microsoft Intune, you can assign the app to additional groups of users or devices.
 
 > [!NOTE]
-> This quickstart builds on previous quickstarts in this series. Please see [prerequisites](quickstart-add-assign-app.md#prerequisites) in this quickstart for details.
+> This evaluation step builds on previous evaluation steps in this series. Please see [prerequisites](quickstart-add-assign-app.md#prerequisites) in this topic for details.
 
 Use the following steps to assign an app to a group:
 
@@ -89,7 +89,7 @@ End users must install and use the Company Portal app to install an app made ava
 
 2. From the **Start** menu, open the **Microsoft Store**. Then, find the **Company Portal** app and install it.
 3. Launch the **Company Portal** app.
-4. Click the app that you added using Intune. In this quickstart you added the **Microsoft 365 Apps** suite.
+4. Click the app that you added using Intune. In this topic you added the **Microsoft 365 Apps** suite.
 
     > [!NOTE]
     > If you did not successfully assign any apps to the Intune user, you will see the following message:
@@ -101,9 +101,9 @@ If your business needs require that you assign the Company Portal app to your wo
 
 ## Next steps
 
-In this quickstart, you added apps to Intune, assigned the apps to a group, and installed the apps on the enrolled Windows 10 Desktop device. For more information about managing apps in Intune, see [What is Microsoft Intune app management?](app-management.md)
+In this topic, you added apps to Intune, assigned the apps to a group, and installed the apps on the enrolled Windows 10 Desktop device. For more information about managing apps in Intune, see [What is Microsoft Intune app management?](app-management.md)
 
-To follow this series of Intune quickstarts, continue to the next quickstart.
+To continue to evaluate Microsoft Intune, go to the next step:
 
 > [!div class="nextstepaction"]
-> [Quickstart: Create and assign an app protection policy](quickstart-create-assign-app-policy.md)
+> [Step 9: Create and assign an app protection policy](quickstart-create-assign-app-policy.md)

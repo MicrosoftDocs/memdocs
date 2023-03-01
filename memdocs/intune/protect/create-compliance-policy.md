@@ -169,7 +169,7 @@ For more information about using custom compliance settings, including supported
 
 ## Refresh cycle times
 
-Intune uses different refresh cycles to check for updates to compliance policies. If the device recently enrolled, the check-in runs more frequently. [Policy and profile refresh cycles](../configuration/device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned) lists the estimated refresh times.
+Intune uses different refresh cycles to check for updates to compliance policies. If the device recently enrolled, the check-in runs more frequently. [Policy and profile refresh cycles](../configuration/device-profile-troubleshoot.md#policy-refresh-intervals) lists the estimated refresh times.
 
 At any time, users can open the Company Portal app, and sync the device to immediately check for policy updates.
 

@@ -35,20 +35,17 @@ ms.collection:
 
 # Apply features and settings on your devices using device profiles in Microsoft Intune
 
-[!INCLUDE [windows-phone-81-windows-10-mobile-support](../includes/windows-phone-81-windows-10-mobile-support.md)]
-
 Microsoft Intune includes settings and features you can enable or disable on different devices within your organization. These settings and features are added to "configuration profiles". You can create profiles for different devices and different platforms, including iOS/iPadOS, Android device administrator, Android Enterprise, and Windows. Then, use Intune to apply or "assign" the profile to the devices.
 
 As part of your mobile device management (MDM) solution, use these configuration profiles to complete different tasks. Intune has many templates that include groups of settings that are specific to a feature, such as certificates, VPN, email, and more.
 
 Some profile examples include:
 
-- On Windows 10/11 devices, use a profile template that blocks ActiveX controls in Internet Explorer.
-- On iOS/iPadOS and macOS devices, allow users to use AirPrint printers in your organization.
 - Allow or prevent access to bluetooth on the device.
 - Create a WiFi or VPN profile that gives different devices access to your corporate network.
 - Manage software updates, including when they're installed.
 - Run an Android device as dedicated kiosk device that can run one app, or run many apps.
+- On iOS/iPadOS and macOS devices, allow users to use AirPrint printers in your organization.
 
 This article gives an overview of the different types of profiles you can create. Use these profiles to allow or prevent some features on the devices.
 

@@ -50,7 +50,7 @@ Enrollment notifications are supported on these devices:
 * Devices running Windows 10/11, excluding hybrid Azure AD-joined devices      
 
 ## Example  
-The following example image shows what an enrollment notification looks like to a device user.  
+The following example image shows what an enrollment notification looks like to a device user.    
 
 > [!div class="mx-imgBorder"] 
 > ![Example image of an enrollment notification configured in Intune, notifying the recipient that a device named *Nia's iPhone" was enrolled, and includes HTML elements such as bolded font and a hyperlink, device details, contact information, and privacy statement.](./media/enrollment-notifications/enrollment-notification-message.png)  

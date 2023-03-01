@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/31/2022
+ms.date: 02/28/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -30,21 +30,20 @@ ms.collection:
 - highseo
 ---
 
-# Deployment guide: Enroll Windows client devices in Microsoft Intune
+# Enrollment guide: Enroll Windows client devices in Microsoft Intune
 
 Personal and organization-owned devices can be enrolled in Intune. Once they're enrolled, they receive the policies and profiles you create.
 
 You have the following options when enrolling Windows devices:
 
-- [Windows Automatic enrollment](#windows-automatic-enrollment)
+- [Windows automatic enrollment](#windows-automatic-enrollment)
 - [Windows Autopilot](#windows-autopilot)
 - [BYOD: User enrollment](#byod-user-enrollment)
-- [Group policy](#group-policy)
-- [Co-management](#co-management-enrollment)
+- [Co-management with Configuration Manager](#co-management-enrollment)
 
-This article provides recommendations on the Windows enrollment method to use. It also includes an overview of the administrator and user tasks for each enrollment type. 
+This article provides recommendations on the Windows enrollment method to use. It also includes an overview of the administrator and user tasks for each enrollment type.  
 
-For more specific information, see [Enroll Windows devices](../enrollment/windows-enrollment-methods.md). There's also a visual guide of the different enrollment options for each platform:
+There's also a visual guide of the different enrollment options for each platform:
 
 [![A visual representation of Intune enrollment options by platform](./media/deployment-guide-enrollment/msft-intune-enrollment-options-thumb-landscape.png)](https://download.microsoft.com/download/e/6/2/e6233fdd-a956-4f77-93a5-1aa254ee2917/msft-intune-enrollment-options.pdf) <br/> [Download PDF version](https://download.microsoft.com/download/e/6/2/e6233fdd-a956-4f77-93a5-1aa254ee2917/msft-intune-enrollment-options.pdf) | [Download Visio version](https://download.microsoft.com/download/e/6/2/e6233fdd-a956-4f77-93a5-1aa254ee2917/msft-intune-enrollment-options.vsdx)
 
@@ -53,18 +52,23 @@ For more specific information, see [Enroll Windows devices](../enrollment/window
 
 ## Before you begin
 
-For an overview, including any Intune-specific prerequisites, see [Deployment guidance: Enroll devices in Microsoft Intune](deployment-guide-enrollment.md).
+For all Intune-specific prerequisites and configurations needed to prepare your tenant for enrollment, see [Enrollment guide: Microsoft Intune enrollment](deployment-guide-enrollment.md).  
 
-## Windows Automatic enrollment
+## Windows automatic enrollment
 
 Use for personal/BYOD and organization-owned devices running Windows 10/11. Automatic enrollment:
 
 - Uses the **Access school or work** feature on the devices.
-- Uses the enrollment options you configure in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+- Uses the enrollment options you configure in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
+
+You can use this enrollment method to:  
+* Automatically enroll personal devices that register and join in your Azure AD.  
+* Automatically [bulk enroll devices with the Windows Configuration Designer app](../enrollment/windows-bulk-enroll.md)
+* Automatically [enroll hybrid Azure AD-joined devices using group policy](/windows/client-management/enroll-a-windows-10-device-automatically-using-group-policy)
 
 Depending on the options you configure, Azure AD Premium might be required.
 
-You can also use this enrollment method to automatically bulk enroll devices with the Windows Configuration Designer app.
+
 
 ---
 | Feature | Use this enrollment option when |
@@ -73,13 +77,13 @@ You can also use this enrollment method to automatically bulk enroll devices wit
 | You have Azure AD Premium | ✔️ |
 | You'll use Conditional Access (CA) on devices enrolled using [bulk enrollment](../enrollment/windows-bulk-enroll.md) with a provisioning package. | ✔️ On Windows 11 and Windows 10 1803+, CA is available for Windows devices enrolled using bulk enrollment. <br/><br/> ❌ On Windows 10 1709 and older, CA isn't available for Windows devices enrolled using bulk enrollment. |
 | You have remote workers. | ✔️ |
-| Devices are personal or BYOD. | ✔️ |
-| Devices are owned by the organization or school. | ✔️ |
+| Devices are personal or BYOD. | ✔️ <br/><br/>  Bulk enrollment and automatic enrollment via Group Policy are for organization-owned devices, not personal/BYOD. |
+| Devices are owned by the organization or school. | ✔️  |
 | You have new or existing devices. | ✔️ |
-| Need to enroll a few devices, or a large number of devices (bulk enrollment). | ✔️ <br/><br/> Bulk enrollment is available for organization-owned devices, not personal/BYOD.|
+| Need to enroll a few devices, or a large number of devices (bulk enrollment). | ✔️ <br/><br/> Bulk enrollment is for organization-owned devices, not personal/BYOD.|
 | Devices are associated with a single user. | ✔️ |
 | Devices are user-less, such as kiosk, dedicated. or shared device. | ✔️ <br/><br/> These devices are organization-owned. This enrollment method requires users to sign in with their organization account. An organization admin can sign in, and automatically enroll. When the device is enrolled, create a [kiosk](../configuration/kiosk-settings.md) profile, and assign this profile to this device. You can also create a profile for [devices shared with many users](../configuration/shared-user-device-settings.md). |
-| You use the optional device enrollment manager (DEM) account. | ✔️ |
+| You use the optional device enrollment manager (DEM) account. | ✔️ <br/><br/> DEM accounts don't work with Group policy. |
 | Devices are managed by another MDM provider. | ❌ <br/><br/> To be fully managed by Intune, users need to unenroll from the current MDM provider, and then enroll in Intune. |
 
 ---
@@ -87,7 +91,8 @@ You can also use this enrollment method to automatically bulk enroll devices wit
 ### Automatic enrollment administrator tasks
 
 - Be sure your devices are running Windows 10/11. For a complete list, see [supported device platforms](supported-devices-browsers.md).
-- Optional. Instead of users entering the Intune server name, you can create a CNAME record that's easier to enter, such as `EnterpriseEnrollment.contoso.com`. CNAME records associate a domain name with a specific server. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), test your CNAME record to make sure it's configured correctly. For more information, see [create a CNAME record](../enrollment/windows-enroll.md#simplify-windows-enrollment-without-azure-ad-premium).
+
+- Optional. Instead of users entering the Intune server name, you can create a CNAME record that's easier to enter, such as `EnterpriseEnrollment.contoso.com`. CNAME records associate a domain name with a specific server. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), test your CNAME record to make sure it's configured correctly. For more information, see [create a CNAME record](../enrollment/windows-enrollment-create-cname.md).
 - In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Windows Enrollment** > **Automatic Enrollment**. In the configuration, you set the **MDM user scope** and **MAM user scope**:
 
   - **MDM user scope**: When set to **Some** or **All**, devices are joined to Azure AD, and devices are managed by Intune. It doesn't matter who's signed in to the device, or if devices are personal or BYOD. When set to **None**, devices aren't joined to Azure AD, and aren't managed by Intune.
@@ -118,27 +123,42 @@ You can also use this enrollment method to automatically bulk enroll devices wit
 
   In the account settings on the device, users sign in with their organization account, and select this package file. Then, users are automatically enrolled.
 
-  If your end users are familiar with running a file from these locations, they can complete the enrollment. For more information, see [automatic bulk enrollment](../enrollment/windows-bulk-enroll.md).
+  If your end users are familiar with running a file from these locations, they can complete the enrollment. For more information, see [automatic bulk enrollment](../enrollment/windows-bulk-enroll.md).  
+
+- For automatic enrollments using group policy:  
+    - Be sure your Windows client devices are supported in Intune, and [supported for group policy enrollment](/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy).  
+    - Register your Active Directory in Azure AD. For more specific information, see [Azure AD integration with MDM](/windows/client-management/mdm/azure-active-directory-integration-with-mdm).
+    - Be sure your devices are hybrid Azure AD-joined devices. The devices must be registered in local AD and in Azure AD.  
+    - In local on-premises AD, create an **Enable automatic MDM enrollment using default Azure AD credentials** group policy. When group policy is refreshed, this policy is pushed to the devices, and users complete the configuration using their domain account (example: `user@contoso.com`).  
+
+   In the Intune admin center, you can use [Group Policy analytics](../configuration/group-policy-analytics.md) to see your on-premises group policies settings that are supported by cloud MDM providers, including Microsoft Intune. 
+  
+     >[!TIP]
+     > If you want a cloud native solution to manage devices, then Windows Autopilot (in this article) might be the best enrollment option for your organization. 
+
+   For more information about Group Policy, see [Enroll a Windows client device automatically using Group Policy](/windows/client-management/enroll-a-windows-10-device-automatically-using-group-policy).  
 
 ### Automatic enrollment end user tasks
 
 When users turn on the device, the next steps determine how they're enrolled. Be sure to clearly communicate the options users should choose on personal and organization-owned devices.
 
-- **Organization-owned devices**: Users turn on the device, step through the out-of-box experience (OOBE), and sign in with their organization account. This step joins the device in Azure AD, and the device is considered organization-owned. The device is fully managed, regardless of who's signed in. Users can open the **Settings** app > **Accounts** > **Access work or school**. It shows they're connected.
+- **Organization-owned devices**: Users turn on the device, step through the out-of-box experience (OOBE), and sign in with their work or school account (example: `user@contoso.com`). This step joins the device in Azure AD, and the device is considered organization-owned. The device is fully managed, regardless of who's signed in. Users can open the **Settings** app and go to **Accounts** > **Access work or school** to confirm that their work account is connected. 
 
-  If users sign in with a personal account during the OOBE, they can still join the devices to Azure AD using the following steps:
+ If users sign in with a personal account during the OOBE, they can still join the devices to Azure AD using the following steps:
 
   1. Open the **Settings** app > **Accounts** > **Access work or school** > **Connect**.
   2. In **Alternate actions**, select **Join this device to Azure Active Directory**, and enter the information they're asked.
 
-  When joined, the devices show as organization owned. In the Intune admin center, devices show as Azure AD joined. Devices are managed by Intune, regardless of who's signed in.
+  When joined, the devices show as organization owned. In the Intune admin center, devices show as Azure AD joined. Devices are managed by Intune, regardless of who's signed in.  
+
+  Users on devices enrolled via Group Policy are notified that there were configuration changes. The policy refresh may require users to sign in with their work or school account. Device enrollment automatically starts.  
 
 - **BYOD or personal devices**: Users turn on the device, step through the out-of-box experience (OOBE), and sign in with their personal account. To register the device in Azure AD:
 
   1. Open the **Settings** app > **Accounts** > **Access work or school** > **Connect**.
   2. In **Connect**, users choose to enter an **Email address**, or choose to **Join this device to Azure Active Directory**:
 
-      - **Email address**: Users enter their organization email address. They're asked for more information, including the Intune server name or [CNAME record](../enrollment/windows-enroll.md#registration-and-enrollment-cnames). Be sure to give them all the information they need to enter.
+      - **Email address**: Users enter their organization email address. They're asked for more information, including the Intune server name or [CNAME record](../enrollment/windows-enrollment-create-cname.md). Be sure to give them all the information they need to enter.
 
         This option registers the device in Azure AD. They show as personal, and show as Azure AD registered in the Intune admin center. The organization user is managed by Intune, not the device.
 
@@ -150,7 +170,7 @@ When users turn on the device, the next steps determine how they're enrolled. Be
 
         If you want to manage BYOD or personal devices, be sure users select **Join this device to Azure Active Directory**. Users should also know that their personal devices will be managed by their IT.
 
-  For more information on the end user experience, see [enroll Windows client devices](../user-help/enroll-windows-10-device.md).
+  For more information on the end user experience, see [enroll Windows client devices](../user-help/enroll-windows-10-device.md).  
 
 - If using bulk enrollment, and your end users are familiar with running files from a network share or USB drive, they can complete the enrollment. If they're not comfortable with this step, then it's recommended that the admin enrolls.
 
@@ -268,7 +288,7 @@ Other than having Intune setup, there are minimal administrator tasks with this 
 
 - Be sure your devices are running Windows 10 and newer. For a complete list, see [supported device platforms](supported-devices-browsers.md).
 
-- Optional. Instead of users entering the Intune server name, you can create a CNAME record that's easier to enter, such as `EnterpriseEnrollment.contoso.com`. CNAME records associate a domain name with a specific server. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), test your CNAME record to make sure it's configured correctly. For more information, see [create a CNAME record](../enrollment/windows-enroll.md#simplify-windows-enrollment-without-azure-ad-premium).
+- Optional. Instead of users entering the Intune server name, you can create a CNAME record that's easier to enter, such as `EnterpriseEnrollment.contoso.com`. CNAME records associate a domain name with a specific server. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), test your CNAME record to make sure it's configured correctly. For more information, see [create a CNAME record](../enrollment/windows-enrollment-create-cname.md).
 
 - Decide if users can do organization work on personal devices. On personal devices, users are typically administrators, and used a personal email account (`user@outlook.com`) to configure the device. To register these devices in Azure AD, use the Settings app. As an admin, tell users the options they should choose. Be specific.
 
@@ -315,51 +335,6 @@ Clearly communicate the options users should choose on personal and organization
 
   When joined, the devices show as organization owned, and show as Azure AD joined in the Intune admin center. Devices are managed by Intune, regardless of who's signed in.
 
-## Group policy
-
-This enrollment option is available for domain-joined devices that you want to manage using Intune. Before enrolling, the devices must be hybrid Azure AD joined. Meaning, the devices are registered in on-premises Active Directory (AD), and registered in Azure AD. Once registered in Azure AD, they're available to enroll in Intune, and receive the settings and device features you configure.
-
-> [!TIP]
-> In the Intune admin center, you can use [Group Policy analytics](../configuration/group-policy-analytics.md) to see your on-premises group policies settings that are supported by cloud MDM providers, including Microsoft Intune.
-> 
-> If you want a cloud native solution to manage devices, then [Windows Autopilot](#windows-autopilot) (in this article) might be the best option for your organization.
-
-You create a group policy on your local AD. When a group policy refresh occurs on the device, users are notified to complete the configuration. The configuration uses the user's Azure AD account to automatically enroll the device in Intune.
-
-For more specific information, see [Enroll a Windows client device automatically using Group Policy](/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy).
-
----
-| Feature | Use this enrollment option when |
-| --- | --- |
-| You use Windows client. | ✔️ <br/><br/> Configuration Manager supports Windows Server. |
-| Devices are hybrid Azure AD joined. | ✔️ <br/><br/> Hybrid Azure AD joined devices are joined to your on-premises Active Directory, and registered with your Azure AD. Devices in Azure AD are available to Intune. Devices that aren't registered in Azure AD aren't available to Intune. |
-| You have Azure AD Premium. | ✔️ <br/><br/> Group policy enrollment requires Azure AD Premium. |
-| You have remote workers. | ✔️ |
-| Devices are owned by the organization or school. | ✔️ |
-| You have new or existing devices. | ✔️ |
-| Need to enroll a few devices, or a large number of devices (bulk enrollment). | ✔️ |
-| Devices are associated with a single user. | ✔️ |
-| Devices are user-less, such as kiosk, dedicated, or shared. | ✔️ <br/><br/> These devices are organization-owned. This enrollment method requires users to sign in with their organization account. An organization administrator can sign in, and automatically enroll. When the device is enrolled, create a [kiosk](../configuration/kiosk-settings.md) profile, and assign this profile to this device. You can also create a profile for [devices shared with many users](../configuration/shared-user-device-settings.md). |
-| Devices are personal or BYOD. | ❌ <br/><br/> For BYOD or personal devices, use [Windows automatic enrollment](#windows-automatic-enrollment) (in this article) or a [User enrollment option](#byod-user-enrollment) (in this article). |
-| Devices are managed by another MDM provider. | ❌ <br/><br/> To be fully managed by Intune, users need to unenroll from the current MDM provider, and then enroll in Intune. They shouldn't be enrolled using the Intune classic agents. |
-| You use the device enrollment manager (DEM) account. | ❌ <br/><br/> DEM accounts don't apply to Group policy. |
-
----
-
-### Group policy administrator tasks
-
-For more specific information on this enrollment method, see [Enroll a Windows client device automatically using Group Policy](/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy#configure-the-auto-enrollment-group-policy-for-a-single-pc).
-
-- Be sure your Windows client devices are [supported in Intune](supported-devices-browsers.md), and [supported for group policy enrollment](/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy).
-- Register your AD into Azure AD. For more specific information, see [Azure AD integration with MDM](/windows/client-management/mdm/azure-active-directory-integration-with-mdm).
-- Be sure your devices are hybrid Azure AD joined devices. The devices must be registered in local AD and in Azure AD.
-- In local on-premises AD, create an **Enable automatic MDM enrollment using default Azure AD credentials** group policy. When group policy is refreshed, this policy is pushed to the devices, and users complete the configuration using their domain account (`user@contoso.com`).
-
-[!INCLUDE [users-dont-like-enroll](../includes/users-dont-like-enroll.md)]
-
-### Group policy end user tasks
-
-- Users are notified that there are configuration changes. The policy refresh may require users to sign in with their organization or school account (`user@contoso.com`). The enrollment automatically starts.
 
 ## Co-management enrollment
 

@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Quickstart - Create and assign a custom role in Intune
-description: Quickstart - Create and assign a custom role for a remote device manager.
+title: Create and assign a custom role in Intune
+description: Create and assign a custom role for a remote device manager.
 services: microsoft-intune
 author: Smritib17
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
-ms.topic: quickstart
+ms.topic: conceptual
 ms.date: 03/26/2019
 ms.author: smbhardwaj
 ms.assetid: 0b3ac749-4a61-4717-bf08-e0e6a15c3b0a
@@ -27,15 +27,15 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Quickstart: Create and assign a custom role
+# Step 10: Create and assign a custom role
 
-In this Intune quickstart, you'll create a custom role with specific permissions for a security operations department. Then you'll assign the role to a group of such operators. There are several default roles that you can use right away. But by creating custom roles like this one, you have precise access control to all parts of your mobile device management system.
+In this Intune topic, you'll create a custom role with specific permissions for a security operations department. Then you'll assign the role to a group of such operators. There are several default roles that you can use right away. But by creating custom roles like this one, you have precise access control to all parts of your mobile device management system.
 
 If you don't have an Intune subscription, [sign up for a free trial account](free-trial-sign-up.md).
 
 ## Prerequisites
 
-- To complete this quickstart, you must [create a group](quickstart-create-group.md).
+- To complete this evaluation step, you must [create a group](quickstart-create-group.md).
 
 ## Sign in to Intune
 
@@ -79,7 +79,7 @@ If you don't want to use the new custom role any more, you can delete it. Choose
 
 In this quickstart, you created a custom security operations role and assigned it to a group. For more information about roles in Intune, see [Role-based administration control (RBAC) with Microsoft Intune](role-based-access-control.md)
 
-To follow this series of Intune quickstarts, continue to the next quickstart.
+To continue to evaluate Microsoft Intune, go to the next step:
 
 > [!div class="nextstepaction"]
-> [Quickstart: Create an email device profile for iOS/iPadOS](../configuration/quickstart-email-profile.md)
+> [Step 11: Create an email device profile for iOS/iPadOS](../configuration/quickstart-email-profile.md)
