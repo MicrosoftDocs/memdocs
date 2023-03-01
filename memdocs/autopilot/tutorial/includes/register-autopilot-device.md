@@ -69,8 +69,3 @@ After the CSV files has been created, it can be imported into Intune via the fol
     > If another sync is attempted within 10 minutes after initiating a sync, an error will be displayed. Syncs can only occur once every 10 minutes. To attempt a sync again, wait at least 10 minutes before trying again.
 
 9. Select **Refresh** to refresh the view. The newly imported devices should display within a few minutes. If the devices aren't yet displayed, wait a few minutes and then select **Refresh** again.
-
-For more information on registering devices as Autopilot devices, see the following articles:
-
-- [Manually register devices with Windows Autopilot](/mem/autopilot/add-devices)
-- [Windows Autopilot customer consent](/mem/autopilot/registration-auth)

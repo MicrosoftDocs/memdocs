@@ -40,7 +40,3 @@ To assign an Autopilot device to a user, follow the below steps:
 > [!TIP]
 >
 > For Configuration Manager admins, assigning a user to a device is similar to user device affinity in Configuration Manager.
-
-For more information on assigning a user to an Autopilot device, see the following articles:
-
-- [Assign a user to a specific Autopilot device](/mem/autopilot/enrollment-autopilot#assign-a-user-to-a-specific-autopilot-device)

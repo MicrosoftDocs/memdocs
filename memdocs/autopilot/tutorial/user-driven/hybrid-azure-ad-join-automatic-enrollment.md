@@ -38,3 +38,8 @@ For an overview of the Windows Autopilot hybrid user-driven Azure AD join workfl
 
 > [!div class="nextstepaction"]
 > [Step 2: Increase the computer account limit in the Organizational Unit](hybrid-azure-ad-join-computer-account-limit.md)
+
+## More information
+
+- [Enable Windows automatic enrollment](/mem/intune/enrollment/windows-enroll#enable-windows-automatic-enrollment)
+- [Set up Windows automatic enrollment](/mem/autopilot/windows-autopilot-hybrid#set-up-windows-automatic-enrollment)

@@ -58,9 +58,3 @@ To create a dynamic device group for use with Autopilot, follow the below steps:
 
 > [!TIP]
 > For Configuration Manager admins, device groups are similar to device based collections. Dynamic device groups are similar to query based device collections while assigned device groups are similar to direct membership device collections.
-
-For more information on creating groups in Intune, see the following articles:
-
-- [Create device groups](/mem/autopilot/enrollment-autopilot)
-- [Add groups to organize users and devices](/mem/intune/fundamentals/groups-add)
-- [Manage Azure Active Directory groups and group membership](/azure/active-directory/fundamentals/how-to-manage-groups)

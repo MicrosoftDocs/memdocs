@@ -37,3 +37,10 @@ For an overview of the Windows Autopilot user-driven Azure AD join workflow, see
 
 > [!div class="nextstepaction"]
 > [Step 6: Create and assign Autopilot profile](azure-ad-join-autopilot-profile.md)
+
+## More information
+
+For more information on the Enrollment Status Page (ESP), see the following articles:
+
+- [Windows Autopilot Enrollment Status Page](/mem/autopilot/enrollment-status)
+- [Set up the Enrollment Status Page](/mem/intune/enrollment/windows-enrollment-status)

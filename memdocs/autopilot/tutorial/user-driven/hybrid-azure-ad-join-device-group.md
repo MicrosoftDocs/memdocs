@@ -38,3 +38,11 @@ For an overview of the Windows Autopilot hybrid user-driven Azure AD join workfl
 
 > [!div class="nextstepaction"]
 > [Step 5: Configure and assign Autopilot Enrollment Status Page (ESP)](hybrid-azure-ad-join-esp.md)
+
+## More information
+
+For more information on creating groups in Intune, see the following articles:
+
+- [Create device groups](/mem/autopilot/enrollment-autopilot)
+- [Add groups to organize users and devices](/mem/intune/fundamentals/groups-add)
+- [Manage Azure Active Directory groups and group membership](/azure/active-directory/fundamentals/how-to-manage-groups)

@@ -103,8 +103,6 @@ To create an user-driven Azure AD join Autopilot profile, follow the below steps
 
 For more information on creating and assigning Autopilot profiles, see the following articles:
 
-- [Configure Autopilot profiles](/mem/autopilot/profiles)
-
 ## Verify device has an Autopilot profile assigned to it
 
 [!INCLUDE [How to verify a device has an Autopilot profile assigned to it in Intune](../includes/verify-autopilot-profile-assignment.md)]
@@ -113,3 +111,7 @@ For more information on creating and assigning Autopilot profiles, see the follo
 
 > [!div class="nextstepaction"]
 > [Step 8: Configure and assign domain join profile](hybrid-azure-ad-join-domain-join-profile.md)
+
+## More information
+
+- [Configure Autopilot profiles](/mem/autopilot/profiles)

@@ -93,8 +93,3 @@ To configure and assign the Autopilot Enrollment Status Page (ESP) so that it sh
 
 > [!TIP]
 > For Configuration Manager admins, an ESP is similar and analogous to Configuration Manager client settings.
-
-For more information on the Enrollment Status Page (ESP), see the following articles:
-
-- [Windows Autopilot Enrollment Status Page](/mem/autopilot/enrollment-status)
-- [Set up the Enrollment Status Page](/mem/intune/enrollment/windows-enrollment-status)

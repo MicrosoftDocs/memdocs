@@ -38,3 +38,10 @@ For an overview of the Windows Autopilot hybrid user-driven Azure AD join workfl
 
 > [!div class="nextstepaction"]
 > [Step 5: Create a device group](hybrid-azure-ad-join-device-group.md)
+
+## More information
+
+For more information on registering devices as Autopilot devices, see the following articles:
+
+- [Manually register devices with Windows Autopilot](/mem/autopilot/add-devices)
+- [Windows Autopilot customer consent](/mem/autopilot/registration-auth)
