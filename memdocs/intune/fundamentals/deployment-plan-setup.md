@@ -58,7 +58,7 @@ Before you begin setting up Microsoft Intune, you should review the device platf
 
  Need-to-know information before you start. For guidance, go to [Supported configurations](supported-devices-browsers.md).
 
-## 2 - Sign up for the Microsoft Intune trial
+## 2 - Sign up for Microsoft Intune
 
 Before you sign up for Intune, determine whether you already have a Microsoft Online Services account, Enterprise Agreement, or equivalent volume licensing agreement. A Microsoft volume licensing agreement or other Microsoft cloud services subscription like Microsoft 365 usually includes a work or school account.
 
@@ -67,7 +67,7 @@ Sign in to the Microsoft Intune admin center, and sign up for Intune. If you hav
 
 ✔️ **Get started with sign up, or sign in to Intune**
 
- Sign in to your trial subscription or create a new Intune subscription. For guidance, go to [Sign in to Intune](account-sign-up.md).
+ Sign in to your subscription or create a new Intune subscription. For guidance, go to [Sign in to Intune](account-sign-up.md).
 
 ## 3 - Configure a custom domain name for your Intune tenant
 
