@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 02/15/2022
+ms.date: 02/28/2023
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -59,6 +59,10 @@ During provisioning, the Cloud PC is connected to the Azure subnet and joined to
 - Ready to accept user sign-in requests.
 
 The ANC settings are applied to the Cloud PC only at the time of provisioning.
+
+### Alternate ANCs
+
+To help make provisioning Cloud PCs more reliable in the rare case of capacity constraints in a region, you have the option to assign alternate ANCs to a provisioning policy. You can define the priority order of the ANCs that the policy will use. If the first ANC is unavailable, the policy will automatically use the second ANC in the priority list. If the second one is unavailable, it will move on to the next, and so on. This lets administrators prepare multiple ANCs in different Azure regions, making provisioning more reliable. You don't have to use multiple ANCs. For more information about using alternate ANCs when creating your provisioning policies, see [Create provisioning policies](create-provisioning-policy.md).
 
 ## First health check
 

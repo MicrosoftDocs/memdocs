@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 01/31/2023
+ms.date: 02/28/2023
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice:
@@ -112,6 +112,12 @@ Users can view and download connection details.
 2. To download a text file containing the connection details, select **Download report**.
   
      ![Screenshot of connection details.](media/end-user-access-cloud-pc/connection-details.png)
+
+### Hardware acceleration
+
+You can turn on hardware acceleration when using the web client to access your Cloud PC. This decreases network latency, improving the web client Cloud PC experience. This option is turned on by default.
+
+To turn hardware acceleration on or off, in the client, select the gear icon > **Use hardware acceleration**.
 
 ### User feedback
 

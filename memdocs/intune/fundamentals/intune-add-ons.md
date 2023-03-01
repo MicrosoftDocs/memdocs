@@ -24,10 +24,10 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: 
-  - M365-identity-device-management 
-  - highpri
-  - tier1
+ms.collection:
+- M365-identity-device-management
+- highpri
+- tier1
 ---
 
 # Use Intune Suite add-on capabilities
@@ -36,6 +36,7 @@ Microsoft Intune Suite provides mission-critical advanced endpoint management an
 
 Licenses for the Intune add-ons can be added for an additional cost to the licensing options that include Microsoft Intune or Microsoft Configuration Manager. For more information, see [Licenses available for Microsoft Intune](licenses.md).
 
+
 > [!NOTE]
 > Intune add-ons are currently not supported in Sovereign clouds.
 
@@ -43,10 +44,11 @@ Licenses for the Intune add-ons can be added for an additional cost to the licen
 
 Some capabilities are available to buy as a standalone add-on. Other capabilities are only available with Intune Plan 2 or the Intune Suite.
 
-- **Microsoft Intune Plan 2**: Offers advanced endpoint management capabilities, including Remote Help and specialized devices management.
-- **Microsoft Intune Suite**: Unifies a series of mission-critical advanced endpoint management and security capabilities. The capabilities of the suite are integrated with Microsoft 365 and Microsoft Security across endpoint platforms for both cloud and on-premises co-managed devices. The Intune Suite includes all standalone capabilities and all capabilities that come with Intune Plan 2.
+- **Microsoft Intune Suite**: Unifies a series of mission-critical advanced endpoint management and security capabilities. The capabilities of the suite are integrated with Microsoft 365 and Microsoft Security across endpoint platforms for both cloud and on-premises co-managed devices. The Intune Suite includes Remote Help (standalone) and all capabilities that come with Intune Plan 2.
+- **Microsoft Intune Plan 2**: Offers advanced endpoint management capabilities, including management and configuration of specialty devices and Microsoft Tunnel for Mobile Application Management.
+- **Standalone add-ons**: Some add-on capabilities, such as Remote Help, are available as a Standalone add-on.
 
-The following table provides a list of add-on capabilities and associated Intune Plan. For information about Microsoft Intune Plans and pricing, see [Intune Plans and pricing](https://aka.ms/IntuneSuitePricing).
+The following table provides a list of add-on capabilities and associated Intune Plans. For information about Microsoft Intune Plans and pricing, see [Intune Plans and pricing](https://aka.ms/IntuneSuitePricing).
 
 |Capability|Standalone add-on|Intune Plan 2|Intune Suite|
 |:---|:---:|:---:|:---:|
@@ -55,21 +57,27 @@ The following table provides a list of add-on capabilities and associated Intune
 |Specialized devices management| |✔️|✔️|
 |Advanced endpoint analytics| | |✔️|
 
-### Remote Help
+### Remote Help 
 
 Remote Help is a cloud-based solution for secure help desk connections with role-based access controls. For more information, see [Remote Help](../remote-actions/remote-help.md).
 
 ### Microsoft Tunnel for Mobile Application Management
 
-When you use the Microsoft Tunnel VPN Gateway, you can extend Tunnel support by adding Tunnel for Mobile Application Management (MAM). Tunnel MAM extends the Microsoft Tunnel VPN gateway to support devices that run Android or iOS, and that aren't enrolled with Microsoft Intune. For more information, see [Microsoft Tunnel for Mobile Application Management](../protect/microsoft-tunnel-mam.md).
+When you use the Microsoft Tunnel VPN Gateway, you can extend Tunnel support by adding Tunnel for Mobile Application Management (MAM). Tunnel MAM extends the Microsoft Tunnel VPN gateway to support devices that run Android or iOS, and that aren't enrolled with Microsoft Intune.
 
-### Specialized devices management
+For more information, see [Microsoft Tunnel for Mobile Application Management](../protect/microsoft-tunnel-mam.md).
 
-Specialized devices management is a set of device management, configuration, and protection capabilities for special, purpose-built devices such as AR/VR headsets, large smart-screen devices, and conference room meeting devices. For more information, see [Managing specialized devices with Microsoft Intune](specialty-devices-with-intune.md).
+### Managing Specialty devices with Microsoft Intune
+
+Specialized devices management is a set of device management, configuration, and protection capabilities for special, purpose-built devices such as AR/VR headsets, large smart-screen devices, and conference room meeting devices.
+
+For more information, see [Managing specialized devices with Microsoft Intune](specialty-devices-with-intune.md).
 
 ### Advanced endpoint analytics
 
-Microsoft Intune Advanced Endpoint analytics is set of analytics-driven capabilities that help IT admins understand, anticipate, and improve the end-user experience. For more information, see [Advanced endpoint analytics](../../analytics/overview.md).
+Microsoft Intune Advanced Endpoint analytics is set of analytics-driven capabilities that help IT admins understand, anticipate, and improve the end-user experience.
+
+For more information, see [Advanced endpoint analytics](../../analytics/overview.md).
 
 ## Try or buy Intune add-ons
 
@@ -79,7 +87,7 @@ Starting a free trial gives you a 90-day period to use the Intune add-on capabil
 
 Purchasing licenses lets you use the Intune add-on capability in your tenant for the duration in which the licenses are active on your tenant based on the option selected during the Billing process.
 
-Intune add-on capabilities are disabled in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) unless you are in the free trial period or have purchased licenses.
+Intune add-on capabilities are disabled in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) unless you are in the free trial period or have purchased licenses. 
 
 ### How to start a trial through the Microsoft 365 admin center
 
@@ -94,18 +102,18 @@ Intune add-on capabilities are disabled in [Microsoft Intune admin center](https
 ### How to purchase Intune add-ons
 
 Licenses for Intune add-ons can be purchased just as you would purchase Intune licenses through the following ways:
-
+   
 - Web direct purchase in the Microsoft 365 Admin Center
-- Microsoft Volume License Servicing Center (VLSC)
+- Microsoft Volume License Servicing Center (VLSC) 
 - Existing relationships with Microsoft partners/resellers
+ 
+After you buy licenses via any source, the licenses are available in your Tenant and the status of the Intune add-ons capability will update accordingly. 
 
-After you buy licenses via any source, the licenses are available in your Tenant and the status of the Intune add-ons capability will update accordingly.
-
-## How to assign licenses
+## How to assign licenses 
 
 For information on how to assign licenses in the Microsoft Intune admin center, see [Assign Microsoft Intune licenses](licenses-assign.md).
 
-## Monitor license use
+## Monitor license use 
 
 Each of the Intune add-ons have their own requirements for how many licenses need to be purchased.
 
@@ -113,7 +121,10 @@ Each of the Intune add-ons have their own requirements for how many licenses nee
 
 Learn more about:
 
-- [Remote Help](..\remote-actions\remote-help.md)
-- [Microsoft Tunnel for Mobile Application Management](../protect/microsoft-tunnel-mam.md)
-- [Managing specialized devices with Microsoft Intune](specialty-devices-with-intune.md)
-- [Advanced endpoint analytics](../../analytics/overview.md)
+- [Remote Help](..\remote-actions\remote-help.md).
+
+- [Microsoft Tunnel for Mobile Application Management](../protect/microsoft-tunnel-mam.md).
+
+- [Managing specialized devices with Microsoft Intune](specialty-devices-with-intune.md).
+
+- [Advanced endpoint analytics](../../analytics/overview.md).

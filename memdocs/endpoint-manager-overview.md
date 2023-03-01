@@ -28,7 +28,6 @@ ms.custom:
 ms.collection:
   - M365-identity-device-management
   - tier1
-  - highseo
 ---
 
 # Endpoint management at Microsoft
