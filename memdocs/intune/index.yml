@@ -36,7 +36,7 @@ productDirectory:
     # Card
     - title: Learn
 
-      imageSrc: ./media/icons/learn.svg
+      imageSrc: ./media/icons/education.png
       links:
         - url: ./fundamentals/what-is-intune.md
           text: Microsoft Intune overview
@@ -47,7 +47,7 @@ productDirectory:
 
     # Card
     - title: Try and evaluate
-      imageSrc: ./media/icons/getstarted.svg
+      imageSrc: ./media/icons/get-started.png
       links:
         - url: ./fundamentals/tutorial-walkthrough-endpoint-manager.md
           text: Walkthrough Microsoft Intune admin center
@@ -55,7 +55,7 @@ productDirectory:
           text: Evaluate and try Intune tasks
     # Card
     - title: Plan
-      imageSrc: ./media/icons/plan.svg
+      imageSrc: ./media/icons/plan.png
       links:
         - url: ./fundamentals/intune-planning-guide.md
           text: Microsoft Intune planning guide
@@ -66,7 +66,7 @@ productDirectory:
 
     # Card
     - title: Deploy
-      imageSrc: ./media/icons/deploy.svg
+      imageSrc: ./media/icons/deploy.png
       links:
         - url: ./fundamentals/deployment-guide-intune-setup.md
           text: "Migration guide: Set up or move to Intune"
@@ -139,7 +139,7 @@ conceptualContent:
           itemType: concept
           text: App protection policies overview
         - url: ./apps/app-protection-policies.md
-          itemType: overview
+          itemType: how-to-guide
           text: Create app protection policies
         - url: ./apps/app-protection-policies-monitor.md
           itemType: how-to-guide
