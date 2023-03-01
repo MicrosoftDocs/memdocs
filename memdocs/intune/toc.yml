@@ -192,7 +192,7 @@ items:
             href: ./apps/manage-without-gms.md      
           - name: MAM FAQ
             href: ./apps/mam-faq.yml
-            displayName: MAM
+            displayName: MAM          
            
         - name: How-to guides
           items:
@@ -1063,7 +1063,7 @@ items:
           href: ./fundamentals/filters-device-properties.md
         - name: Supported workloads
           href: ./fundamentals/filters-supported-workloads.md
-        - name: Reporting and troubleshooting (instead of troubleshooting change to conflict resolution or something)
+        - name: Reporting and conflict resolution
           href: ./fundamentals/filters-reports-troubleshoot.md
       - name: Use policy sets to group policies together
         href: ./fundamentals/policy-sets.md
@@ -1283,7 +1283,7 @@ items:
           href: ./remote-actions/devices-wipe.md
         - name: Manage Windows Fresh Start
           href: ./remote-actions/device-fresh-start.md
-        - name: Restart device (update for Windows 8.1 that is no longer supported)
+        - name: Restart device
           href: ./remote-actions/device-restart.md
       - name: Apple device actions
         items:
@@ -1321,7 +1321,7 @@ items:
           href: ./remote-actions/device-sync.md
         - name: Examine device inventory
           href: ./remote-actions/device-inventory.md
-        - name: Collect diagnostics (is this really remote actions?)
+        - name: Collect diagnostics
           href: ./remote-actions/collect-diagnostics.md
       - name: Bulk device actions
         href: ./remote-actions/bulk-device-actions.md
@@ -1363,10 +1363,8 @@ items:
         href: /intune-education/
     - name: Government
       items:
-      - name: What is Intune for US Government
-        href: ./fundamentals/introduction-intune-government.md
       - name: Intune US Government service description
-        href: ./fundamentals/ems-intune-govt-service-description.md
+        href: ./fundamentals/intune-govt-service-description.md
       - name: Intune US government endpoints
         href: ./fundamentals/intune-us-government-endpoints.md
 
@@ -1389,6 +1387,8 @@ items:
 
   - name: Scenario-based guidance
     items: 
+    - name: Manage operating system versions
+      href: ./fundamentals/manage-os-versions.md
     - name: Guided scenarios
       items: 
       - name: Guided scenarios overview
@@ -1401,10 +1401,6 @@ items:
         href: ./fundamentals/guided-scenarios-office-mobile.md              
       - name: Windows 10/11 in cloud configuration
         href: ./fundamentals/cloud-configuration.md
-    - name: Common scenarios
-      href: ./fundamentals/common-scenarios.md
-    - name: Manage operating system versions
-      href: ./fundamentals/manage-os-versions.md
     - name: Move to cloud native endpoints
       items:
       - name: Overview and benefits
@@ -1421,10 +1417,12 @@ items:
         href: ../solutions/cloud-native-endpoints/cloud-native-endpoints-planning-guide.md
       - name: Known issues
         href: ../solutions/cloud-native-endpoints/cloud-native-endpoints-known-issues.md
-    - name: "Zero Trust: Manage devices with Intune"
-      href: /microsoft-365/solutions/manage-devices-with-intune-overview
     - name: Create an administrative template
       href: ./configuration/tutorial-walkthrough-administrative-templates.md
+    - name: Common scenarios
+      href: ./fundamentals/common-scenarios.md
+    - name: "Zero Trust: Manage devices with Intune"
+      href: /microsoft-365/solutions/manage-devices-with-intune-overview
     - name: Technology decisions for BYOD with EMS
       href: ./fundamentals/byod-technology-decisions.md    
       displayName: MDM      
