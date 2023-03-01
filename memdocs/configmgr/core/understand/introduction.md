@@ -25,10 +25,10 @@ The Microsoft Intune family of products is an integrated solution for managing a
 
 The following Microsoft management solutions are all now part of the **Microsoft Intune** brand:
 
-- [Configuration Manager](/configmgr)
-- [Intune](/intune)
-- [Endpoint analytics](/analytics)
-- [Autopilot](/autopilot)
+- [Configuration Manager](../../index.yml)
+- [Intune](../../../intune/index.yml)
+- [Endpoint analytics](../../../analytics/index.yml)
+- [Autopilot](../../../autopilot/index.yml)
 
 For more information, see [Microsoft Configuration Manager FAQ](microsoft-endpoint-manager-faq.yml).
 
