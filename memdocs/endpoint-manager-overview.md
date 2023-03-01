@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/04/2022
+ms.date: 02/28/2023
 ms.topic: overview
 ms.service: mem
 ms.subservice: fundamentals
@@ -27,8 +27,7 @@ ms.custom:
   - intro-overview
 ms.collection:
   - M365-identity-device-management
-  - highpri
-  - highseo
+  - tier1
 ---
 
 # Endpoint Management at Microsoft
