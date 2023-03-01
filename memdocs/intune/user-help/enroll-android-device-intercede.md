@@ -22,12 +22,12 @@ searchScope:
 ROBOTS:  
 #audience:
 #ms.devlang:
-ms.reviewer: jeyang
+ms.reviewer: jieyan
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
 ms.collection:
-- tier2
+- tier1
 - M365-identity-device-management
 ---
 

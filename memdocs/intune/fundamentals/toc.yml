@@ -237,6 +237,11 @@ items:
       href: tenant-status.md
     - name: Help users troubleshoot problems
       href: help-desk-operators.md
+<<<<<<< HEAD
+=======
+    - name: ServiceNow integration with Microsoft Intune
+      href: service-now-integration.md 
+>>>>>>> ec15274579975ba52dc3cb0b93de4b87bd4359a0
     - name: Use Remote Help
       href: ../remote-actions/remote-help.md
     - name: Using the Intune docs

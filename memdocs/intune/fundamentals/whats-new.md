@@ -66,6 +66,31 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Scripts
 ### Tenant administration
 -->
+## Week of February 27, 2023
+
+### Device configuration
+
+#### View ServiceNow Incidents in the Intune Troubleshooting workspace (Preview)<!-- 12508062 -->
+
+In public preview, you can view a list of ServiceNow incidents associated with the user you've selected in the Intune Troubleshooting workspace.  This new feature is available under **Troubleshooting + Support** > select a user > **ServiceNow Incidents**.  The list of incidents shown have a direct link back to the source incident and show key information from the incident.  All incidents listed will link the "Caller" identified in the incident with the user selected for Troubleshooting.
+
+For more information go to [Use the troubleshooting portal to help users at your company](service-now-integration.md).
+
+### Device security
+
+#### Microsoft Tunnel for MAM is now generally available<!-- 16883728  -->
+
+Now out of preview and generally available, you can add [Microsoft Tunnel for Mobile Application Management](../protect/microsoft-tunnel-overview.md) to your tenant. Tunnel for MAM supports connections from unenrolled [Android](../protect/microsoft-tunnel-mam-android.md) and [iOS](../protect/microsoft-tunnel-mam-ios.md) devices. This solution provides your tenant with a lightweight VPN solution that allows mobile devices access to corporate resources while adhering to your security policies.
+
+In addition, MAM Tunnel for iOS now supports Microsoft Edge.
+
+Previously, Tunnel for MAM for Android and iOS was in public preview and free for use. With this release as generally available, this solution now requires an add-on license for its use.
+
+For licensing details see [Intune add-ons](../fundamentals/intune-add-ons.md).
+
+Applies to:  
+- Android
+- iOS
 
 ## Week of February 20, 2023 (Service release 2302)
 
