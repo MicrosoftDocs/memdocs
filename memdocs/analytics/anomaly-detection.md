@@ -72,7 +72,7 @@ Standard deviation and mean are calculated for a sliding window of time, using a
 
 ## Known Issues
 
-Affected Devices: The **Affected Devices** tab has the option to select which columns are displayed in the table view. If you select the **User Experience** checkbox, the **User Experience** column appears in the **Affected Devices** tab view. However, the column is greyed out. In a future release, we plan to make a change to fully resolve the issue.
+Affected Devices: The **Affected Devices** tab has the option to select which columns are displayed in the table view. If you select the **User Experience** column picker control, the **User Experience** column appears in the **Affected Devices** tab view. However, the column is greyed out. In a future release, we plan to make a change to fully resolve the issue.
 
 ## Next steps 
 
