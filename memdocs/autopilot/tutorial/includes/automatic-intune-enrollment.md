@@ -25,12 +25,12 @@ In order for Windows Autopilot to work, devices need to be able to enroll in Int
 
    - If **Some** is selected, only users specified in the group(s) next to **Groups** can automatically enroll their devices in Intune. To add groups:
 
-      1. Select the ***x* group*(s)* selected** link next to **Groups**.
-      2. In the **Select groups** page, select the desired group(s) to add. Use ctrl+select to select multiple groups.
+      1. Select the link next to **Groups**.
+      2. In the **Select groups** page, select the desired group(s) to add.
       3. Once all of the desired group(s) have been selected, select **Select**.
 
         > [!NOTE]
         >
         > The group(s) selected must be an Azure AD group that contains user objects.
 
-6. In the **Configure** screen, select **Save**.
+6. In the **Configure** screen, if any changes were made, select **Save**.

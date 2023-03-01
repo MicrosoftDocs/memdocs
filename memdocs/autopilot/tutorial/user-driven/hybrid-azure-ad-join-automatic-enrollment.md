@@ -32,7 +32,7 @@ For an overview of the Windows Autopilot hybrid user-driven Azure AD join workfl
 
 ## Set up Windows automatic Intune enrollment
 
-[!INCLUDE [Set up Windows automatic enrollment](../includes/windows-automatic-enrollment.md)]
+[!INCLUDE [Set up Windows automatic enrollment](../includes/automatic-intune-enrollment.md)]
 
 ## Next step: Increase the computer account limit in the Organizational Unit
 
