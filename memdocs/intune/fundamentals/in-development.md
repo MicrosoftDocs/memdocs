@@ -174,21 +174,6 @@ Create multiple enrollment profiles and tokens for Android Enterprise fully mana
 
 ## Device management
 
-### Add Google accounts to Android Enterprise personally owned devices with a work profile<!-- 9113561  -->  
-On Android Enterprise personally owned devices with a work profile, you can configure settings that restrict device features and settings. Currently, there is an **Add and remove accounts** setting. This setting prevents accounts from being added in the work profile, including preventing Google accounts.
-
-This setting is changing, and you will be able to add Google accounts. The **Add and remove accounts** setting options will be:
-
-- **Block all accounts types**: Prevents users from manually adding or removing accounts in the work profile. For example, when you deploy the Gmail app into the work profile, you can prevent users from adding or removing accounts in this work profile.
-- **Allow all accounts types**: Allows all accounts, including Google accounts. These Google accounts are blocked from installing apps from the **Managed Google Play Store**. This option requires Google Play app version 80970100 or higher.
-- **Allow all accounts types, except Google accounts** (default): Intune doesn't change or update this setting. By default, the OS might allow adding accounts in the work profile.
-
-For more information on the settings you can configure, go to [Android Enterprise device settings list to allow or restrict features on personally owned devices using Intune](../configuration/device-restrictions-android-enterprise-personal.md).
-
-Applies to:
-
-- Android Enterprise personally owned devices with a work profile
-
 ### Improvements to Devices area in admin center (public preview) <!-- 12775837  -->  
 The **Devices** area in the admin center will be updated to provide a more consistent UI, with more capable controls and an improved navigation structure so you can find the information you need faster. You will be able to opt in to the public preview to try out the new experience. Changes will include:  
 
