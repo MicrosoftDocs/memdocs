@@ -125,7 +125,7 @@ As you set up apps and app policies, think about your organization's requirement
 | ---- | ------ | 
 |[Add line-of-business apps ](../apps/lob-apps-windows.md)|Add macOS line-of-business (LOB) apps to Intune and assign to groups.| 
 |[Add Microsoft Edge](../apps/apps-windows-edge.md) | Add and assign Microsoft Edge for Windows. | 
-|[Add Intune Company Portal app ](../apps/store-apps-company-portal-download.md)|Add and assign the Intune Company Portal app as a required app for personal devices.    | 
+|[Add Intune Company Portal app from Microsoft Store ](../apps/store-apps-company-portal.md)|Add and assign the Intune Company Portal app as a required app.    | 
 |[Add Intune Company Portal app for Autopilot ](../apps/store-apps-company-portal-autopilot.md)|Add the Company Portal app to devices provisioned by Windows Autopilot. |
 |[Add Microsoft 365 apps](../apps/apps-add-office365.md) |Add Microsoft 365 Apps for enterprise. | 
 |[Assign apps to groups ](../apps/apps-deploy.md)|After you add apps to Intune, assign them to users and devices.|
@@ -134,13 +134,14 @@ As you set up apps and app policies, think about your organization's requirement
 
 ## Step 8: Enroll devices  
 
-During enrollment, the device is registered with Azure AD and evaluated for compliance. For information about each enrollment method and how to choose one that's right for your organization, see [Windows device enrollment guide for Microsoft Intune](../fundamentals/deployment-guide-platform-windows.md).   
+During enrollment, the device is registered with Azure AD and evaluated for compliance. For information about each enrollment method and how to choose one that's right for your organization, see [Windows device enrollment guide for Microsoft Intune](../fundamentals/deployment-guide-enrollment-windows.md).   
 
 | Task | Detail |
 | ---- | ------ |
 |[Enable MDM automatic enrollment](../enrollment/windows-enroll.md)|Simplify enrollment by enabling automatic enrollment, which automatically enrolls devices in Intune that join or register with your Azure AD. Automatic enrollment simplifies Windows Autopilot deployment, BYOD enrollment, enrollment using Group Policy, and bulk enrollment via a provisioning package.  |  
 |[Enable automatic discovery of MDM server](../enrollment/windows-enrollment-create-cname.md)| If you don't have Azure AD Premium, we recommend creating a CNAME record type for Intune enrollment servers. The CNAME record redirects enrollment requests to the right server so that enrolling users don't have to type the server name in manually. |
-|[Tutorial: Use Windows Autopilot to enroll devices](../enrollment/tutorial-use-autopilot-enroll-devices.md)| Simplify device provisioning for you and your users by setting up Microsoft Intune device enrollment to occur automatically during [Windows Autopilot](../../autopilot/windows-autopilot.md). | 
+|[Tutorial: Use Windows Autopilot to enroll devices](../enrollment/tutorial-use-autopilot-enroll-devices.md)| Simplify the user-driven or self-deploying OOBE for you and your users by setting up Microsoft Intune device enrollment to occur automatically during [Windows Autopilot](../../autopilot/windows-autopilot.md). | 
+|[Enroll hybrid Azure AD-joined devices with Windows Autopilot ](../enrollment/tutorial-use-autopilot-enroll-devices.md)| The Intune connector for Active Directory enables devices in Active Directory domain services to join to Azure AD, and then automatically enroll in Intune. We recommend this enrollment option for on-premises environments that use Active Directory domain services and can't currently move their identities to Azure AD. | 
 |[Enroll devices using Group Policy](/windows/client-management/enroll-a-windows-10-device-automatically-using-group-policy)| Trigger automatic enrollment into Intune using a group policy.   | 
 |[Bulk enroll devices](../enrollment/windows-bulk-enroll.md)| Create a provisioning package in Windows Configuration Designer that both joins large numbers of new Windows devices to Azure AD and enrolls them in Intune. |  
 |[Set up the enrollment status page (ESP)](../enrollment/windows-enrollment-status.md)| Create an enrollment status page profile with custom settings to guide users through device setup and enrollment.   |  

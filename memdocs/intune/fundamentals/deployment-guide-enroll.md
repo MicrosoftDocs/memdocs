@@ -128,11 +128,11 @@ You can enroll personal or corporate-owned Android devices in Intune. We recomme
 The following table describes the Intune-supported Android and AOSP enrollment options. 
 
 # [Corporate owned](#tab/work-profile)  
-* [Corporate-owned devices with a work profile](../enrollment/android-corporate-owned-work-profile-enroll.md): Enroll corporate-owned devices that are also approved for personal use. This method creates a separate work profile on the device so that the user can switch between their personal apps and work apps easily and securely. The device user enrolls the device through the Microsoft Intune app. As an admin, you can manage the apps and data in the work profile.  This method aligns with the *Android Enterprise corporate-owned work profile* solution.  
+* [Corporate-owned devices with a work profile](../enrollment/android-corporate-owned-work-profile-enroll.md): Enroll corporate-owned devices that are also approved for personal use. This method creates a separate work profile on the device so that the user can switch between their personal apps and work apps easily and securely. The device user enrolls the device through the Microsoft Intune app. As an admin, you can manage the apps and data in the work profile.  This method aligns with the *Android Enterprise corporate-owned work profile* management solution.  
  
-* [Fully managed](../enrollment/android-dedicated-devices-fully-managed-enroll.md): Enroll corporate-owned devices exclusively for work and not personal use. There's one user associated with the enrolled device. You can manage the entire device and enforce policy controls not available with the Android Enterprise work profile method. This method aligns with the *Android Enterprise fully managed* solution.  
+* [Fully managed](../enrollment/android-dedicated-devices-fully-managed-enroll.md): Enroll corporate-owned devices exclusively for work and not personal use. There's one user associated with the enrolled device. You can manage the entire device and enforce policy controls not available with the Android Enterprise work profile method. This method aligns with the *Android Enterprise fully managed* management solution.  
 
-* [Dedicated device](../enrollment/android-kiosk-enroll.md): Enroll corporate-owned, single use or kiosk devices used for things like digital signage, ticket printing, or inventory management. With this method, you can limit the apps and web links available on the device, and prevent people from using the device outside of the intended scope. This method aligns with the *Android Enterprise dedicated devices* solution.    
+* [Dedicated device](../enrollment/android-kiosk-enroll.md): Enroll corporate-owned, single use or kiosk devices used for things like digital signage, ticket printing, or inventory management. With this method, you can limit the apps and web links available on the device, and prevent people from using the device outside of the intended scope. This method aligns with the *Android Enterprise dedicated devices* management solution.    
 
 * [Corporate-owned, userless devices](../enrollment/android-aosp-corporate-owned-userless-enroll.md): Enroll devices that are built from the Android Open Source Project (AOSP) and absent of Google Mobile services as *corporate-owned, userless devices*. These devices don't have a user associated with them and are intended to be shared, like in a library or lab.  
 * [Corporate-owned, user associated devices](../enrollment/android-aosp-corporate-owned-user-associated-enroll.md): Enroll devices that are built from AOSP and absent of Google Mobile services as *corporate-owned, user-associated devices*. These devices are associated with a single user and intended to be exclusively for work use.  
@@ -140,13 +140,13 @@ The following table describes the Intune-supported Android and AOSP enrollment o
 * [Zero-touch enrollment](../enrollment/android-dedicated-devices-fully-managed-enroll.md#enroll-by-using-google-zero-touch): We recommend using zero-touch enrollment for bulk enrollments and to simplify enrollment for remote workers. This method lets you prepare corporate-owned devices ahead of time so that they automatically provision and enroll as fully manged devices when users turn them on.     
 
 # [User owned](#tab/user-owned-android)  
-[Personally owned devices with a work profile](../enrollment/android-work-profile-enroll.md): Support enrollment for personal devices in BYOD scenarios. This solution creates a separate work profile on the enrolling device so that people can switch between their personal apps and work apps easily and securely. The device owner enrolls their device through the Intune Company Portal app. As an admin, you can manage the apps and data in the work profile. This method aligns with the *Android Enterprise work profile for personally owned devices* solution.    
+[Personally owned devices with a work profile](../enrollment/android-work-profile-enroll.md): Support enrollment for personal devices in BYOD scenarios. During enrollment, a separate work profile is created on the device so that people can switch between their personal apps and work apps easily and securely. The device owner enrolls their device through the Intune Company Portal app. As an admin, you can manage the apps and data in the work profile. This method aligns with the *Android Enterprise work profile for personally owned devices* management solution.    
 
 
 ---
 
 >[!NOTE]
-> Android Enterprise device management capabilities supersede Android device administrator capabilities. We recommend the [Android device administrator enrollment solution](./enrollment/android-move-device-admin-work-profile.md) for these scenarios:  
+> Android Enterprise device management capabilities supersede Android device administrator capabilities so we recommend using Android Enterprise management solutions when possible. We still recommend the [Android device administrator management solution](../enrollment/android-move-device-admin-work-profile.md) for these scenarios:  
 > * For Microsoft Teams certified Android devices.
 > * When the device is in an area where Android Enterprise is unavailable.  
 > * When devices are incapable of integrating with Google Mobile Services, and the AOSP enrollment options won't work with them. For more information about using Android device administrator when Google Mobile Services is unavailable, see [How to use Intune in environments without Google Mobile Services](../apps/manage-without-gms.md).   
@@ -193,14 +193,6 @@ This section describes the enrollment solutions available for personal and corpo
 >[!NOTE]
 > Microsoft Intune enrollment is supported on devices in cloud environments. Co-management with Configuration Manager is supported in on-premises environments. 
 
-As a reminder, devices must be registered or joined to Azure AD to enroll in Microsoft Intune. The following table shows our recommended management strategy for each device identity option.   
- 
- | Identity option | Recommended management | Recommended Provisioning| Level of cloud modernization   
- | --- | --- | ---| --- |
- | Active Directory domain services | Configuration Manager + tenant attach |Operating system deployment |Low|
- | Hybrid Azure AD joined | Tenant attach + co-management |Operating system Deployment | Medium|
- | Azure Active Directory | Co-management or Microsoft Intune |Windows Autopilot | High  
-
 ### Windows enrollment methods   
 The following table describes the supported enrollment methods for devices running Windows 10 and Windows 11.   
 
@@ -226,7 +218,7 @@ Workplace join and enroll a large number of corporate-owned devices in Azure AD 
 ### More Windows enrollment features   
 There are other Windows enrollment options in Intune to help improve or simplify the device management experience for you and your employees:     
 
-* [Co-management settings](../../configmgr/comanage/autopilot-enrollment.md): Enable co-management settings to integrate Configuration Manager with Intune. Co-management gives you the option to use both Intune and Configuration Manager features.  
+* [Co-management settings](../../configmgr/comanage/autopilot-enrollment.md#configure): Enable co-management settings to integrate Configuration Manager workloads with Intune. Co-management enables you to use both Intune and Configuration Manager features to manage devices.  
 * [CNAME validation](../enrollment/windows-enrollment-create-cname.md): Validate a domain name server (DNS) alias (CNAME record type) you created to redirect enrollment requests to Intune servers. The alias simplifies enrollment for users in the absence of Azure AD Premium and automatic enrollment.    
 * [Enrollment Status Page](../enrollment/windows-enrollment-status.md): Enable the Enrollment Status Page so that people going through device setup can view and track installation progress.  
 

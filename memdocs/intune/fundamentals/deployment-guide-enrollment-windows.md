@@ -75,13 +75,13 @@ You can use this enrollment option to:
 | You have Azure AD Premium | ✔️ |
 | You'll use Conditional Access (CA) on devices enrolled using [bulk enrollment](../enrollment/windows-bulk-enroll.md) with a provisioning package. | ✔️ On Windows 11 and Windows 10 1803+, CA is available for Windows devices enrolled using bulk enrollment. <br/><br/> ❌ On Windows 10 1709 and older, CA isn't available for Windows devices enrolled using bulk enrollment. |
 | You have remote workers. | ✔️ |
-| Devices are personal or BYOD. | ✔️ <br/><br/>  Bulk enrollment and automatic enrollment via Group Policy are for corporate-owned devices, not personal or BYOD. |
+| Devices are personal or BYOD. | ✔️ <br/><br/> ❌ Bulk enrollment and automatic enrollment via Group Policy are for corporate-owned devices, not personal or BYOD. |
 | Devices are owned by the organization or school. | ✔️  |
 | You have new or existing devices. | ✔️ |
 | Need to enroll a few devices, or a large number of devices (bulk enrollment). | ✔️ <br/><br/> Bulk enrollment is for organization-owned devices, not personal or BYOD.|
 | Devices are associated with a single user. | ✔️ |
 | Devices are user-less, such as kiosk, dedicated. or shared device. | ✔️ <br/><br/> These devices are organization-owned. This enrollment method requires users to sign in with their organization account. An organization admin can sign in, and automatically enroll. When the device is enrolled, create a [kiosk](../configuration/kiosk-settings.md) profile, and assign this profile to this device. You can also create a profile for [devices shared with many users](../configuration/shared-user-device-settings.md). |
-| You use the optional device enrollment manager (DEM) account. | ✔️ <br/><br/> DEM accounts don't work with Group policy. |
+| You use the optional device enrollment manager (DEM) account. | ✔️ <br/><br/> ❌ DEM accounts don't work with Group Policy. |
 | Devices are managed by another MDM provider. | ❌ <br/><br/> To be fully managed by Intune, users need to unenroll from the current MDM provider, and then enroll in Intune. |
 
 ---
