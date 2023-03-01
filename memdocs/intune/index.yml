@@ -36,7 +36,7 @@ productDirectory:
     # Card
     - title: Learn
 
-      imageSrc: ./media/icons/learn.svg
+      imageSrc: ./media/icons/education.svg
       links:
         - url: ./fundamentals/what-is-intune.md
           text: Microsoft Intune overview
@@ -47,7 +47,7 @@ productDirectory:
 
     # Card
     - title: Try and evaluate
-      imageSrc: ./media/icons/getstarted.svg
+      imageSrc: ./media/icons/get-started.svg
       links:
         - url: ./fundamentals/tutorial-walkthrough-endpoint-manager.md
           text: Walkthrough Microsoft Intune admin center
@@ -77,17 +77,17 @@ productDirectory:
 
     # Card
     - title: How-to guides
-      imageSrc: ./media/icons/how-to.svg
+      imageSrc: ./media/icons/tasks.svg
       summary: Guides to help you perform common tasks in Intune
       url: /mem/intune/index#how-to-guides
     # Card
     - title: Platform and industry guides
-      imageSrc: ./media/icons/platform-guide.svg
+      imageSrc: ./media/icons/tasks.svg
       summary: Guides that consolidate information specific to a platform or industry.
       url: /mem/intune/index#platform-and-industry-guides
     # Card
     - title: Related services
-      imageSrc: ./media/icons/resources-device.svg
+      imageSrc: ./media/icons/cloud-services.svg
       summary: Resource to find information about related services, such as Microsoft 365.
       url: /mem/intune/index#related-services
     # Card
@@ -139,7 +139,7 @@ conceptualContent:
           itemType: concept
           text: App protection policies overview
         - url: ./apps/app-protection-policies.md
-          itemType: overview
+          itemType: how-to-guide
           text: Create app protection policies
         - url: ./apps/app-protection-policies-monitor.md
           itemType: how-to-guide
