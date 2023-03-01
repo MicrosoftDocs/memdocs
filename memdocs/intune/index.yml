@@ -394,9 +394,9 @@ additionalContent:
     - title: Intune community resources
       items:
         # Card
-        - title: Intune technical forums
-          summary: Ask technical questions in the product forums
-          url: /answers/products/mem
+        - title: Microsoft Q & A - Microsoft Intune
+          summary: The home for technical questions and answers at Microsoft
+          url: /answers/tags/415/intune
         # Card
         - title: Intune tech community conversations
           summary: Check out active conversations from the technical community
