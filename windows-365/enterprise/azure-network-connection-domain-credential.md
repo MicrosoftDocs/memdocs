@@ -34,7 +34,7 @@ ms.collection:
 
 When you create an Azure network connection (ANC) using a hybrid Azure Active Directory (Azure AD) join type, you must include on-premises domain credential information. This requirement makes it possible for the ANC to communicate with your on-premises resources.
 
-This article describes how the on-premises domain credentials are protected and managed by Windows 365 during the whole hybrid Azure AD join ANC life cycle:
+This article describes how Windows 365 protects and manages the on-premises domain credentials during the whole hybrid Azure AD join ANC life cycle:
 
 1. Providing credentials
 2. Encrypting credentials
@@ -73,7 +73,7 @@ Windows 365 service enterprise certificates are generated and renewed automatica
 
 Windows 365 uses an encrypt-then-MAC approach to encrypt the domain credential with the per tenant key as described in [RFC 7366](https://www.rfc-editor.org/rfc/rfc7366). The same key is used for both encrypting and decrypting the data.
 
-Ecryption algorithm details include:
+Encryption algorithm details include:
 
 - Encrypt algorithm: Advanced Encryption Standard symmetric-key
 - Cipher mode: Cipher-Block-Chaining
