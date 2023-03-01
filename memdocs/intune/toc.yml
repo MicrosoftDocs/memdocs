@@ -1429,6 +1429,16 @@ items:
 
   - name: Developer guidance
     items:
+    - name: Access Intune APIs in Microsoft Graph
+      items:
+      - name: Use Azure AD to access Intune APIs in Microsoft Graph
+        href: ./developer/intune-graph-apis.md
+      - name: Intune API reference
+        href: /graph/api/resources/intune-graph-overview
+      - name: Graph APIs used to configure devices
+        href: ./developer/graph-apis-used-by-intune-device-configuration-windows.md  
+    - name: Use PowerShell cmdlets to automate actions
+      href: https://github.com/Microsoft/Intune-PowerShell-SDK/
     - name: Protect apps with Intune App SDK
       href: ./developer/app-sdk.md
       items:
@@ -1497,14 +1507,7 @@ items:
             href: ./developer/reports-ref-user.md
       - name: Move your Intune Data Warehouse account data
         href: ./developer/data-warehouse-account-move.md
-    - name: Access Intune APIs in Microsoft Graph
-      items:
-      - name: Use Azure AD to access Intune APIs in Microsoft Graph
-        href: ./developer/intune-graph-apis.md
-      - name: Intune API reference
-        href: /graph/api/resources/intune-graph-overview
-      - name: Graph APIs used to configure devices
-        href: ./developer/graph-apis-used-by-intune-device-configuration-windows.md  
+
 
   - name: Privacy and personal data
     href: ./protect/privacy-personal-data.md
