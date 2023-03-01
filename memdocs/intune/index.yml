@@ -148,11 +148,11 @@ conceptualContent:
         text: Browse all apps protection policies articles
         url: ./apps/app-protection-policy.md   
 
-    - title: Protect endpoints
+    - title: Configure security for endpoints
       links:
         - url: ./protect/endpoint-security-policy.md
           itemType: concept
-          text: Manage endpoint security policies
+          text: Manage device security with endpoint security policies
         - url: ./protect/mobile-threat-defense.md
           itemType: concept
           text: Use Mobile Threat Defense software with Intune
@@ -168,7 +168,7 @@ conceptualContent:
         - url: ./protect/create-compliance-policy.md
           itemType: how-to-guide
           text: Create and deploy compliance policies
-        - url: ./protect/conditional-access.md
+        - url: ./protect/compliance-use-custom-settings.md
           itemType: concept
           text: Use custom compliance settings for Linux and Windows 
         - url: ./protect/conditional-access.md
