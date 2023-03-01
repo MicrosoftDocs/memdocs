@@ -342,18 +342,9 @@ conceptualContent:
         - url: ./fundamentals/deployment-guide-platform-ios-ipados.md
           itemType: how-to-guide
           text: Manage iOS/iPadOS devices
-        - url: ./fundamentals/deployment-guide-platform-macos.md
-          itemType: how-to-guide
-          text: Manage macOS devices
-        - url: ./fundamentals/deployment-guide-platform-linux.md
-          itemType: how-to-guide
-          text: Manage Linux devices
-        - url: ./fundamentals/windows-holographic-for-business.md
-          itemType: how-to-guide
-          text: Manage Windows Holographic and HoloLens devices
-        - url: fundamentals/surface-management-portal.md
-          itemType: how-to-guide
-          text: Microsoft Surface Management portal
+      footerLink:
+        text: Browse all platform guides
+        url:  ./fundamentals/deployment-guide-platform-windows.md
 
     - title: Education
       links:
