@@ -996,7 +996,7 @@ items:
             href: ./configuration/device-firmware-configuration-interface-windows-settings.md
           - name: Device restrictions
             href: ./configuration/device-restrictions-windows-10.md
-          - name: Device restrictions (Windows 10 Team)
+          - name: Device restrictions (Windows 10 Teams)
             href: ./configuration/device-restrictions-windows-10-teams.md
           - name: Edition upgrade and mode switch
             href: ./configuration/edition-upgrade-windows-settings.md
