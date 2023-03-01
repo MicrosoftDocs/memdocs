@@ -1274,27 +1274,14 @@
             "redirect_document_id": false
         },
         {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
             "source_path": "memdocs/intune/remote-actions/remote-help.md",
             "redirect_url": "/mem/intune/fundamentals/remote-help",
             "redirect_document_id": false            
         },
         {
->>>>>>> a55adb3ca3d69afafe8b603fe892a483cb6152f3
             "source_path": "memdocs/intune/fundamentals/premium-add-ons.md",
             "redirect_url": "/mem/intune/fundamentals/intune-add-ons",
             "redirect_document_id": false
-        }  
-<<<<<<< HEAD
-=======
-            "source_path": "memdocs/intune/remote-actions/remote-help.md",
-            "redirect_url": "/mem/intune/fundamentals/remote-help",
-            "redirect_document_id": false            
         }
->>>>>>> ec15274579975ba52dc3cb0b93de4b87bd4359a0
-=======
->>>>>>> a55adb3ca3d69afafe8b603fe892a483cb6152f3
     ]
 }
