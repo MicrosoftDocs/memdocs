@@ -201,7 +201,7 @@ A trusted certificate profile is required to establish a chain of trust with you
 Tunnel for MAM uses the public-key certificate payload contained in the Intune trusted certificate profile but doesn’t require the profile be assigned to any Azure AD user or device groups. As a result, a trusted certificate profile for any platform can be used. So, an iOS device can use a trusted certificate profile for Android, iOS, or Windows to meet this requirement.
 
 > [!IMPORTANT]
-> Tunnel for MAM iOS SDK requires that trusted certificates use the **DER encoded binary X.50** certificate format.
+> Tunnel for MAM iOS SDK requires that trusted certificates use the **DER encoded binary X.509** certificate format.
 
 During configuration of the app configuration profile for an app that will use Tunnel for MAM, you select the certificate profile that will be used.
 For information on configuring these profiles, see [Trusted root certificate profiles for Microsoft Intune](../protect/certificates-trusted-root.md).
@@ -389,11 +389,11 @@ The following are known issues or limitations for Tunnel for MAM on iOS. For kno
 
 ### MAM Tunnel not supported when using the MDM Tunnel
 
-You can choose to use MAM Tunnel with enrolled devices instead of using MDM Tunnel configurations. However, deploying both MAM and MDM Tunnel configurations including App configuration policies, to the same device isn't supported and results in client networking failures.
+You can choose to use MAM Tunnel with enrolled devices instead of using MDM Tunnel configurations.   However, deploying both MAM and MDM Tunnel App configuration policies containing Microsoft Tunnel settings, to the same device isn't supported and results in client networking failures.
 
-For example, enrolled devices can't have an app like Microsoft Edge that uses MAM tunnel configurations while other apps use MDM Tunnel configurations.
+For example, enrolled devices can't have an app like Microsoft Edge that uses MAM tunnel App configuration policy setting while other apps use MDM Tunnel configurations.
 
-**Work around**: None.
+**Work around**: To use MAM Tunnel with enrolled devices, ensure, the Defender for Endpoint iOS app does not have an App configuration policy with Microsoft Tunnel settings configured.
 
 ### Site Configuration requires DNS hostname
 
