@@ -37,7 +37,7 @@ Applies to:
 - iOS/iPadOS (In public preview)
 
 > [!NOTE]
-> While in public preview, Microsoft Tunnel for MAM is available at no additional cost. When Tunnel for MAM becomes generally available, it will be available as a [**premium add-on**](../fundamentals/premium-add-ons.md) and require an additional cost to the licensing options that include Microsoft Endpoint Manager or Intune.
+> While in public preview, Microsoft Tunnel for MAM is available at no additional cost. When Tunnel for MAM becomes generally available, it will be available as a [**Intune add-on**](../fundamentals/intune-add-ons.md) and require an additional cost to the licensing options that include Microsoft Endpoint Manager or Intune.
 
 ## Platform requirements and feature overview
 
