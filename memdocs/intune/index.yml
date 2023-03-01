@@ -172,7 +172,7 @@ conceptualContent:
           itemType: concept
           text: Use custom compliance settings for Linux and Windows 
         - url: ./protect/conditional-access.md
-          itemType: how-to-guide
+          itemType: concept
           text: Enforce compliance with Conditional Access
       footerLink:
         text: Browse all articles for compliance policies
