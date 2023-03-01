@@ -153,7 +153,7 @@ conceptualContent:
         - url: ./protect/endpoint-security-policy.md
           itemType: concept
           text: Manage endpoint security policies
-        - url: ./protect/ .md
+        - url: ./protect/mobile-threat-defense.md
           itemType: concept
           text: Use Mobile Threat Defense software with Intune
         - url: ./protect/security-baselines.md
