@@ -148,35 +148,35 @@ conceptualContent:
         text: Browse all apps protection policies articles
         url: ./apps/app-protection-policy.md   
 
-    - title: Protect data and devices
+    - title: Configure security for endpoints
       links:
-        - url: ./protect/device-protect.md
+        - url: ./protect/endpoint-security-policy.md
           itemType: concept
-          text: Device protection overview
-        - url: ./protect/device-compliance-get-started.md
-          itemType: concept
-          text: Deploy security baselines to your Windows devices
-        - url: ./protect/security-baselines.md
+          text: Manage device security with endpoint security policies
+        - url: ./protect/mobile-threat-defense.md
           itemType: concept
           text: Use Mobile Threat Defense software with Intune
-      footerLink:
-        text: Browse the articles for data and device protection capabilities
-        url: ./protect/device-compliance-get-started.md
-
-    - title: Create compliance rules for users and devices
-      links:
-        - url: ./protect/device-compliance-get-started.md
+        - url: ./protect/security-baselines.md
           itemType: concept
-          text: Compliance overview
-        - url: ./protect/actions-for-noncompliance.md
+          text: Deploy security baselines to your Windows devices
+      footerLink:
+        text:  Browse all articles for endpoint security
+        url: ./protect/endpoint-security.md
+
+    - title: Use compliance rules to protect data and devices
+      links:
+        - url: ./protect/create-compliance-policy.md
           itemType: how-to-guide
-          text: Actions for non-compliant devices
+          text: Create and deploy compliance policies
         - url: ./protect/compliance-use-custom-settings.md
           itemType: concept
-          text: Use custom compliance policies and settings for Linux and Windows devices 
-        - url: ./protect/device-compliance-partners.md
-          itemType: how-to-guide
-          text: Support third-party device compliance partners 
+          text: Use custom compliance settings for Linux and Windows 
+        - url: ./protect/conditional-access.md
+          itemType: concept
+          text: Enforce compliance with Conditional Access
+      footerLink:
+        text: Browse all articles for compliance policies
+        url: ./protect/device-compliance-get-started.md
 
     - title: Control device features and settings
       links:
