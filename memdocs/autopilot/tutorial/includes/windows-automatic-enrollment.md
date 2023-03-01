@@ -21,9 +21,9 @@ In order for Windows Autopilot to work, devices need to be able to enroll in Int
 
 5. In the **Configure** page, next to **MDM user scope**, select either **All** or **Some**:
 
-   1. If **All** is selected, all Azure AD device will be automatically enrolled in Intune regardless of the user that signs into the device.
+   - If **All** is selected, all users can automatically enroll their devices in Intune.
 
-   2. If **Some** is selected, only Azure AD devices signed into by users specified in the groups next to **Groups** will be automatically enrolled in Intune. To add groups:
+   - If **Some** is selected, only users specified in the group(s) next to **Groups** can automatically enroll their devices in Intune. To add groups:
 
       1. Select the ***x* group*(s)* selected** link next to **Groups**.
       2. In the **Select groups** page, select the desired group(s) to add. Use ctrl+select to select multiple groups.

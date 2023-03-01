@@ -18,7 +18,7 @@ ms.technology: itpro-deploy
 # User-driven Azure AD join: Create a device group
 
 Autopilot user-driven Azure AD join steps:
-- Step 1: [Set up Windows automatic enrollment in Intune](azure-ad-join-automatic-enrollment.md)
+- Step 1: [Set up Windows automatic Intune enrollment](azure-ad-join-automatic-enrollment.md)
 - Step 2: [Configure device settings](azure-ad-join-device-settings.md)
 - Step 3: [Register devices as Autopilot devices](azure-ad-join-register-device.md)
 > [!div class="checklist"]
