@@ -45,7 +45,7 @@ This article describes how Windows 365 protects and manages the on-premises doma
 
 When you [create an ANC](create-azure-network-connection.md), you must provide credentials of an on-premises Active Directory user account that will be used to domain  join Cloud PCs. You provide this information, including the on-premises user account's username and domain password, on the AD domain page:
 
-![Screenshot of AD domain page](./media/azure-network-connection-domain-credential/azure-ad-page.png)
+![Screenshot of the AD domain page.](./media/azure-network-connection-domain-credential/azure-ad-page.png)
 
 ## Encryption of domain password information
 
