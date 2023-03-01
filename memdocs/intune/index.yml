@@ -150,7 +150,7 @@ conceptualContent:
 
     - title: Protect endpoints
       links:
-        - url: ./protect/endpoint-policy.md
+        - url: ./protect/endpoint-security-policy.md
           itemType: concept
           text: Manage endpoint security policies
         - url: ./protect/ .md
