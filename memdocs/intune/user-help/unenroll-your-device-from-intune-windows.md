@@ -26,7 +26,7 @@ ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
 ms.collection:
-- tier2
+- tier1
 ---
 
 # Remove your Windows device from management  
