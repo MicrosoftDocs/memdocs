@@ -209,7 +209,7 @@ conceptualContent:
           text: Common policy questions, answers, and scenarios
       footerLink:
         text: Browse all articles in this area
-        url: ./configuration/device-profile-troubleshoot
+        url: ./configuration/device-profile-troubleshoot.md
 
     - title: Enroll devices
       links:
@@ -224,7 +224,7 @@ conceptualContent:
           text: Device enrollment restrictions overview 
       footerLink:
         text: Browse all articles in this area
-        url: ./enrollment/deployment-guide-enrollment.md
+        url: ./fundamentals/deployment-guide-enrollment.md
 
     - title: Initiate remote actions
       links:
@@ -281,7 +281,7 @@ conceptualContent:
           text: Use the Microsoft Intune Data Warehouse
       footerLink:
         text: Browse all developer articles
-        url: ./developer/developer/intune-graph-apis.md
+        url: ./developer/intune-graph-apis.md
 
 
     - title: Privacy and personal data
