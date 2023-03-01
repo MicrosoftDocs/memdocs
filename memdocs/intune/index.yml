@@ -160,7 +160,7 @@ conceptualContent:
           itemType: concept
           text: Deploy security baselines to your Windows devices
       footerLink:
-        text:  Browse articles for endpoint security
+        text:  Browse all articles for endpoint security
         url: ./protect/endpoint-security.md
 
     - title: Use compliance rules to protect data and devices
@@ -175,7 +175,7 @@ conceptualContent:
           itemType: how-to-guide
           text: Enforce compliance with Conditional Access
       footerLink:
-        text: Browse articles for compliance policies
+        text: Browse all articles for compliance policies
         url: ./protect/device-compliance-get-started.md
 
     - title: Control device features and settings
