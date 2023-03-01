@@ -35,8 +35,16 @@ When you use the Microsoft Tunnel VPN Gateway, you can extend Tunnel support by 
 
 Applies to:
 
+<<<<<<< HEAD
+- Android  (In public preview)
+- iOS/iPadOS (In public preview)
+
+> [!NOTE]
+> While in public preview, Microsoft Tunnel for MAM is available at no additional cost. When Tunnel for MAM becomes generally available, it will be available as a [**Intune add-on**](../fundamentals/intune-add-ons.md) and require an additional cost to the licensing options that include Microsoft Endpoint Manager or Intune.
+=======
 - Android
 - iOS/iPadOS
+>>>>>>> ec15274579975ba52dc3cb0b93de4b87bd4359a0
 
 ## Platform requirements and feature overview
 
