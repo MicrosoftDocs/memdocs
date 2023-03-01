@@ -146,7 +146,7 @@ For users that opted out of automatic updates, when an update to Remote Help is 
 
 Download the latest version of Remote Help direct from Microsoft at [aka.ms/downloadremotehelp](https://aka.ms/downloadremotehelp).
 
-The most recent version of Remote Help is **4.0.1.13**
+The most recent version of Remote Help is **4.1.1.0**
 
 ### Deploy Remote Help as a Win32 app
 
@@ -362,6 +362,21 @@ If a conditional access policy is configured as described above and if the devic
 ## What's New for Remote Help 
 
 Updates for Remote Help are released periodically. When we update Remote Help, you can read about the changes here.
+
+### February 6, 2023
+
+Version: 4.1.1.0 - Changes in this release:
+
+With Remote Help 4.1.1.0 a new Laser Pointer feature has been added to better assist a Helper guide a Sharer during a session. This Laser Pointer can be used by a Helper in both Full Control and View Only sessions. Additional updates include improvements to localization, and error handling.
+
+Various bug fixes included in this release:
+
+- Fixed an issue where in some cases a Helper is unable to interact with elevated applications
+
+- Resolved an accessibility issue where a Helper was unable to use some keyboard navigation hotkeys
+
+- Reliability fixes and improved logging for WebView2 integration
+
 ### September 6, 2022
 
 Version: 4.0.1.13 - Changes in this release:
