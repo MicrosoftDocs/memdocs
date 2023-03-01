@@ -32,16 +32,15 @@ ms.collection:
 
 # Managing Specialty devices with Microsoft Intune
 
-The ability to manage specialty devices in Intune will require additional licensing when Microsoft launches the Intune premium suite and it’s related add-ons. To learn more, see [Premium add-ons for Microsoft Intune](premium-add-ons.md)
+The ability to manage specialty devices in Intune will require additional licensing with Microsoft  Intune add-ons. To learn more, see [Intune add-ons for Microsoft Intune](intune-add-ons.md)
 
 ## What are specialized devices in Intune  
 
-A device managed by Microsoft Intune will be classified as a specialized device if it meets at least one of the following requirements:
+A device managed by Microsoft Intune is classified as a specialized device if it meets at least one of the following requirements:
 
 - Large smart screen devices, over 30” in size
 - AR/VR headsets
 - Wearable headsets
-- Printers
 - Conference room meeting devices, a software-based room system that provides an integrated experience for audio conferencing, wireless screen sharing, or video conferencing
 - Excludes
     - Laptops and tablet devices
@@ -54,5 +53,6 @@ A device managed by Microsoft Intune will be classified as a specialized device 
 
 ## Next Steps
 
-Learn about enrolling devices into Microsoft Intune here: 
+Learn about enrolling devices into Microsoft Intune here:
+ 
 - [Enroll devices into Microsoft Intune](../enrollment/device-enrollment.md) 
