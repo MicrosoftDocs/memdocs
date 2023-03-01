@@ -107,9 +107,6 @@ conceptualContent:
         - url: ./fundamentals/account-sign-up.md
           itemType: how-to-guide
           text: Sign up or sign in to Microsoft Intune
-        - url: ./fundamentals/users-add.md
-          itemType: how-to-guide
-          text: Add users
         - url: ./fundamentals/licenses.md
           itemType: concept
           text: Intune licensing
@@ -129,12 +126,12 @@ conceptualContent:
         - url: ./apps/apps-add.md
           itemType: how-to-guide
           text: Add apps to Intune
-        - url: ./apps/apps-deploy.md
-          itemType: how-to-guide
-          text: Assign apps to groups
         - url: ./apps/app-configuration-policies-overview.md
           itemType: overview
           text: App configuration policies
+      footerLink:
+        text: Browse all manage apps articles
+        url: ./apps/app-management.md    
     
     - title: App protection policies
       links:
@@ -144,12 +141,12 @@ conceptualContent:
         - url: ./apps/app-protection-policies.md
           itemType: overview
           text: Create app protection policies
-        - url: ./apps/app-protection-policies-validate.md
-          itemType: how-to-guide
-          text: Validate app protection policies
         - url: ./apps/app-protection-policies-monitor.md
           itemType: how-to-guide
           text: Monitor app protection policies
+      footerLink:
+        text: Browse all apps protection policies articles
+        url: ./apps/app-protection-policy.md   
 
     - title: Protect data and devices
       links:
@@ -210,19 +207,24 @@ conceptualContent:
         - url: ./configuration/device-profile-troubleshoot.md
           itemType: concept
           text: Common policy questions, answers, and scenarios
+      footerLink:
+        text: Browse all articles in this area
+        url: ./configuration/device-profile-troubleshoot.md
 
     - title: Enroll devices
       links:
         - url: ./fundamentals/deployment-guide-enrollment.md
           itemType: concept
           text: Device enrollment overview
-
         - url: ./fundamentals/deployment-guide-enrollment-ios-ipados.md
           itemType: concept
           text: Get started with iOS/iPadOS enrollment           
         - url: ./enrollment/enrollment-restrictions-set.md
           itemType: concept
           text: Device enrollment restrictions overview 
+      footerLink:
+        text: Browse all articles in this area
+        url: ./fundamentals/deployment-guide-enrollment.md
 
     - title: Initiate remote actions
       links:
@@ -235,6 +237,9 @@ conceptualContent:
         - url: ./remote-actions/devices-wipe.md
           itemType: how-to-guide
           text: Remove devices
+      footerLink:
+        text: Browse all articles in this area
+        url: ./remote-actions/device-management.md        
 
     - title: View reports and monitor status
       links:
@@ -244,9 +249,6 @@ conceptualContent:
         - url: ./fundamentals/monitor-audit-logs.md
           itemType: how-to-guide
           text: Use audit logs to track and monitor events
-        - url: ./configuration/device-profile-monitor.md
-          itemType: how-to-guide
-          text: Monitor device configuration profiles
         - url: /analytics/
           itemType: concept
           text: Endpoint analytics docs
@@ -277,13 +279,9 @@ conceptualContent:
         - url: ./developer/reports-nav-create-intune-reports.md
           itemType: concept
           text: Use the Microsoft Intune Data Warehouse
-        - url: ./developer/app-sdk.md
-          itemType: overview
-          text: Microsoft Intune App SDK overview
-        - url: ./developer/reports-nav-create-intune-reports.md
-          itemType: concept
-          text: Use the Microsoft Intune Data Warehouse
-
+      footerLink:
+        text: Browse all developer articles
+        url: ./developer/intune-graph-apis.md
 
 
     - title: Privacy and personal data
@@ -297,7 +295,9 @@ conceptualContent:
         - url: protect/privacy-data-store-process.md
           itemType: concept
           text: Data storage and processing in Intune
-
+      footerLink:
+        text: Browse all privacy and personal data articles
+        url: ./protect/privacy-personal-data.md
 
     - title: Get help and support
       links:
@@ -314,17 +314,20 @@ conceptualContent:
         text: Browse all help and support articles
         url: ./fundamentals/tenant-status.md
 
-    - title: Troubleshoot issues
+    - title: Troubleshoot
       links:
-        - url: /troubleshoot/mem/intune/troubleshoot-app-install
+        - url: /troubleshoot/mem/intune/device-enrollment/troubleshoot-device-enrollment-in-intune
+          itemType: concept
+          text: Troubleshoot device enrollment     
+        - url: /troubleshoot/mem/intune/app-management/troubleshoot-app-install
           itemType: concept
           text: Troubleshoot app installation issues
-        - url: /troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune
+        - url: /troubleshoot/mem/intune/device-configuration/troubleshoot-policies-in-microsoft-intune
           itemType: concept
           text: Troubleshoot policies and profiles in Intune
       footerLink:
         text: Browse all troubleshooting articles
-        url: /troubleshoot/mem/intune/welcome-intune/index?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+        url: /troubleshoot/mem/intune/welcome-intune/
 
   - title: Platform and industry guides
     items:
