@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Managing Specialized devices with Microsoft Intune
+title: Manage Specialized devices with Microsoft Intune
 titleSuffix: 
 description: This article provides information about specialized devices and how can you manage them with Microsoft Intune
 keywords:
@@ -30,7 +30,7 @@ ms.collection:
 - highpri
 ---
 
-# Managing Specialized devices with Microsoft Intune
+# Manage Specialized devices with Microsoft Intune
 
 [!INCLUDE [intune-add-on-note](../includes/intune-add-on-note.md)]
 

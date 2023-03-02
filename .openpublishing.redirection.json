@@ -1372,6 +1372,11 @@
             "source_path": "memdocs/configmgr/core/understand/microsoft-endpoint-manager-faq.yml",
             "redirect_url": "/mem/configmgr/core/understand/configuration-manager-faq",
             "redirect_document_id": false            
-        }       
+        },
+        {
+            "source_path": "memdocs/intune/fundamentals/specialty-devices-with-intune.md",
+            "redirect_url": "/mem/intune/fundamentals/specialized-devices-with-intune",
+            "redirect_document_id": false            
+        }     
     ]
 }
