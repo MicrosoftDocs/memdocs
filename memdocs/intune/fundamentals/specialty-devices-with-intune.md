@@ -8,7 +8,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 10/04/2022
+ms.date: 03/01/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -45,16 +45,14 @@ A device managed by Microsoft Intune is classified as a specialized device if it
 - Wearable headsets
 - Conference room meeting devices, a software-based room system that provides an integrated experience for audio conferencing, wireless screen sharing, or video conferencing
 - Excludes
-    - Laptops and tablet devices
-    - Foldable messaging devices
-    - Mobile devices extension such as wearables/watches where the data is managed through mobile apps on iOS and Android mobile phones
-    - Devices that are included in the plans for frontline workers. See [License Eligibility for Frontline Worker Licenses](https://www.microsoft.com/licensing/terms/en-US/productoffering/Microsoft365/EAEAS)
-    - IoT devices
-
-
+  - Laptops and tablet devices
+  - Foldable messaging devices
+  - Mobile devices extension such as wearables/watches where the data is managed through mobile apps on iOS and Android mobile phones
+  - Devices that are included in the plans for frontline workers. See [License Eligibility for Frontline Worker Licenses](https://www.microsoft.com/licensing/terms/en-US/productoffering/Microsoft365/EAEAS)
+  - IoT devices
 
 ## Next Steps
 
 Learn about enrolling devices into Microsoft Intune here:
- 
-- [Enroll devices into Microsoft Intune](../enrollment/device-enrollment.md) 
+
+- [Enroll devices into Microsoft Intune](../enrollment/device-enrollment.md)
