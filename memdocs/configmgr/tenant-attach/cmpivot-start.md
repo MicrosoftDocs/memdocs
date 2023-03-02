@@ -65,7 +65,7 @@ You can view all your saved favorite queries, under the **Favorites** folder on 
 
 To close CMPivot and return to the device information, use the `X` icon in the top right of CMPivot.
 
-   :::image type="content" source="media/6024392-close-cmpivot.png" alt-text="Close CMPivot with the X icon in Microsoft Intune admin center" lightbox="media/6024392-close-cmpivot.png":::
+:::image type="content" source="media/6024392-close-cmpivot.png" alt-text="Close CMPivot with the X icon in Microsoft Intune admin center" lightbox="media/6024392-close-cmpivot.png":::
 
 ## Next steps
 
