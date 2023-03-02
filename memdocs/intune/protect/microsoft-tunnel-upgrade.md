@@ -22,7 +22,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Upgrade Microsoft Tunnel for Microsoft Intune
@@ -83,7 +85,7 @@ You can view information about the status of Microsoft Tunnel servers, including
 
 For sites that don't support automatic upgrade, you can also view when upgrades to a new version are available.
 
-Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Microsoft Tunnel Gateway** > **Health status**.  Select a server and then open the **Health check** tab to view the following information about it:
+Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Microsoft Tunnel Gateway** > **Health status**.  Select a server and then open the **Health check** tab to view the following information about it:
 
 - **Server version** - The status of the Tunnel Gateway Server software, in the context of the most recent version available.
 
@@ -100,7 +102,7 @@ Sites that have the setting *Automatically upgrade servers at this site* set to 
 To understand when an upgrade is available for servers, use the [Health check](#view-tunnel-server-status) tab to review server status.
 ### To approve an upgrade
 
-1. Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Microsoft Tunnel Gateway** > **Sites**.
+1. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Microsoft Tunnel Gateway** > **Sites**.
 
 2. Select the site with an **Upgrade type** of **Manual**.
 
@@ -128,7 +130,7 @@ Use the [Health check](#view-tunnel-server-status) tab to understand when newer 
 
 #### To approve installation of an upgrade
 
-1. Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Microsoft Tunnel Gateway** > **Sites**.
+1. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Microsoft Tunnel Gateway** > **Sites**.
 
 2. Select the site with an **Upgrade type** of **Manual**.
 
@@ -143,6 +145,19 @@ Updates for the Microsoft Tunnel release periodically. When a new version is ava
 After an update releases, it rolls out to tenants over the following days. This rollout time means new updates might not be available for your tunnel servers for a few days.
 
 The Microsoft Tunnel version for a server isn’t available in the Intune UI at this time. Instead, run the following command on the Linux server that hosts the tunnel to identify the hash values of  *agentImageDigest* and *serverImageDiegest*: `cat /etc/mstunnel/images_configured`
+
+### March 1, 2023
+
+Image hash values:
+
+- **agentImageDigest**:  sha256:c4478f5e54dc1536523113885095b6eda37da1b2a31461347cd85ea8a7d487b5
+
+- **serverImageDigest**: sha256:cf706bc6a5ea8a743bab84ed8be9901733738881e2e84d0f9083654e9c5cd317
+
+Changes in this release:
+- Minor bug fixes
+- Updated Microsoft Tunnel Server Gateway EULA
+
 
 ### February 2, 2023
 

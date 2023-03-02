@@ -25,13 +25,13 @@ ms.localizationpriority: high
 - Android enterprise: [requirements](https://support.google.com/work/android/topic/9428066)
 - Android open source project devices (AOSP) supported devices
   - RealWear devices (Firmware 11.2 or later)
-  - HTC Vive Focus 3
+  - HTC Vive Focus 3 (Firmware: FOTA 5.2 - 3.0.999.624)
 
 [!INCLUDE [android-supported-os](android-supported-os.md)]
 
 ### Linux
 
-- Ubuntu Desktop 22.04.1 LTS with a GNOME graphical desktop environment
+- Ubuntu Desktop 22.04 LTS with a GNOME graphical desktop environment
 - Ubuntu Desktop 20.04 LTS with a GNOME graphical desktop environment
 
 > [!NOTE]
@@ -43,7 +43,7 @@ ms.localizationpriority: high
 - Windows 10/11 Cloud PCs on Windows 365
 
   > [!NOTE]
-  > You can continue to use Microsoft Endpoint Manager to manage devices running Windows 11 the same as with Windows 10. If another article doesn't explicitly reference Windows 11, assume that feature support for Windows 10 also includes Windows 11.
+  > You can continue to use Microsoft Intune to manage devices running Windows 11 the same as with Windows 10. If another article doesn't explicitly reference Windows 11, assume that feature support for Windows 10 also includes Windows 11.
   >
   > Some features may not be available on Windows 11. This article lists some [known issues](#windows-11-known-issues). As always, test your policies before broadly deploying them across your devices.
 

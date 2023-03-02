@@ -57,7 +57,7 @@ If you don't currently use a mobile device management (MDM) solution, or want to
 
 With the Microsoft Intune family of products and services, you have the following endpoint management options:
 
-- **[Microsoft Intune](../../intune/index.yml)**: Intune is 100% cloud-based, and uses the Endpoint Manager admin center to manage devices, manage apps on devices, create & deploy policies, review reporting data, and more.
+- **[Microsoft Intune](../../intune/index.yml)**: Intune is 100% cloud-based, and uses the Intune admin center to manage devices, manage apps on devices, create & deploy policies, review reporting data, and more.
 
   For more information on using Intune to manage your endpoints, go to:
 
@@ -365,9 +365,9 @@ For more information, go to:
 
 If you use Configuration Manager, then cloud attach your environment to Microsoft Intune. If you don't use Configuration Manager, then skip this step.
 
-When you cloud attach, you can remotely manage your client endpoints, co-manage your endpoints with Intune (cloud) and Configuration Manager (on-premises), and access the Endpoint Manager admin center.
+When you cloud attach, you can remotely manage your client endpoints, co-manage your endpoints with Intune (cloud) and Configuration Manager (on-premises), and access the Intune admin center.
 
-For more specific information, go to [Cloud attach your Configuration Manager environment](../../configmgr/cloud-attach/overview.md) and [Walk through the Microsoft Endpoint Manager admin center](../../intune/fundamentals/tutorial-walkthrough-endpoint-manager.md).
+For more specific information, go to [Cloud attach your Configuration Manager environment](../../configmgr/cloud-attach/overview.md) and [Walk through the Microsoft Intune admin center](../../intune/fundamentals/tutorial-walkthrough-endpoint-manager.md).
 
 ### ✅ Phase 4: Create an Azure AD joined proof of concept
 
@@ -416,7 +416,7 @@ This phase transitions new Windows endpoint provisioning to Azure AD joined. Onc
 
   Before resetting an existing Windows endpoint, be sure to:
   
-  1. [Delete the device in Intune](../../intune/remote-actions/devices-wipe.md#delete-devices-from-the-intune-portal).
+  1. [Delete the device in Intune](../../intune/remote-actions/devices-wipe.md#delete-devices-from-the-intune-admin-center).
   2. [Delete the Windows Autopilot device registration](../../autopilot/add-devices.md).
   3. [Delete the existing Azure AD device object](/azure/active-directory/devices/manage-stale-devices).
   
@@ -448,7 +448,7 @@ These options aren't necessarily mutually exclusive. You can migrate a subset of
 
 Intune also has built-in features that can help you configure your cloud-native endpoints:
 
-- **[Group Policy Analytics](../../intune/configuration/group-policy-analytics.md)**: You can import your GPOs in the Microsoft Endpoint Manager admin center, and run an analysis on the policies. You can see the policies that exist in Intune, and see the policies that are deprecated.
+- **[Group Policy Analytics](../../intune/configuration/group-policy-analytics.md)**: You can import your GPOs in the Microsoft Intune admin center, and run an analysis on the policies. You can see the policies that exist in Intune, and see the policies that are deprecated.
 
   If you use GPOs, then using this tool is a valuable first step.
 

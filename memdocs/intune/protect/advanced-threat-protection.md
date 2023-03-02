@@ -23,9 +23,10 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: 
-  - M365-identity-device-management
-  - highpri
+ms.collection:
+- tier1
+- M365-identity-device-management
+- highpri
 ---
 
 
@@ -79,7 +80,7 @@ To use Microsoft Defender for Endpoint with Intune, you must have the following 
 
   For Defender for Endpoint licensing options, see **Licensing requirements** in [Minimum requirements for Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/minimum-requirements) and [How to set up a Microsoft 365 E5 Trial Subscription](/microsoft-365/security/defender/setup-m365deval#enable-microsoft-365-trial-subscription).
 
-- **Microsoft Intune** – This subscription provides access to Intune and the Microsoft Endpoint Manager admin center.
+- **Microsoft Intune** – This subscription provides access to Intune and the Microsoft Intune admin center.
 
   For Intune licensing options, see [Microsoft Intune licensing](../fundamentals/licenses.md).
 

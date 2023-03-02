@@ -26,7 +26,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure 
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier1
+- M365-identity-device-management
 ---
 
 # Set up enrollment notifications   
@@ -40,8 +42,15 @@ Set up enrollment notifications in Microsoft Intune to notify employees of newly
 * Add a custom message for the user, with information about how to report an unrecognized device.  
 * Apply your tenant's branding and customization settings (email notifications only).   
 
+Enrollment notifications are supported on these devices:   
+
+* Android devices in bring-your-own-device (BYOD) scenarios    
+* iOS/iPadOS devices in BYOD scenarios      
+* Macs   
+* Devices running Windows 10/11, excluding hybrid Azure AD-joined devices      
+
 ## Example  
-The following example image shows what an enrollment notification looks like to a device user.  
+The following example image shows what an enrollment notification looks like to a device user.    
 
 > [!div class="mx-imgBorder"] 
 > ![Example image of an enrollment notification configured in Intune, notifying the recipient that a device named *Nia's iPhone" was enrolled, and includes HTML elements such as bolded font and a hyperlink, device details, contact information, and privacy statement.](./media/enrollment-notifications/enrollment-notification-message.png)  
@@ -62,7 +71,7 @@ Email notifications appear in the user's inbox. Push notifications appear in the
 > [!TIP]
 > Use the built-in HTML editor to format and style email notifications. Intune supports the following HTML tags: `<a>`, `<strong>`, `<b>`, `<u>`, `<ol>`, `<ul>`, `<li>`, `<p>`, `<br>`, `<code>`, `<table>`, `<tbody>`, `<tr>`, `<td>`, `<thead>`, and`<th>`. It also supports the `href` attribute for hyperlinks.  
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
 2. Go to **Devices** > **Enroll device** and select the platform you're creating notifications for. Your options:  
    * **Windows enrollment**  
    * **Apple enrollment**  

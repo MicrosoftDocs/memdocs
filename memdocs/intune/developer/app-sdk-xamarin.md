@@ -26,15 +26,15 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune, has-adal-ref
-ms.collection: 
-- M365-identity-device-management
+ms.collection:
 - tier3
+- M365-identity-device-management
 ---
 
 # Microsoft Intune App SDK Xamarin Bindings
 
 > [!NOTE]
-> The current Xamarin bindings for Android platform only support apps targeting Android 9.0 and lower and Xamarin Forms 4.4 and lower. Microsoft is working on improving support for newer versions on Android starting Q2CY2023. More information on the support plan to be provided in Q1CY2023.
+> The current Xamarin bindings for Android platform only support apps targeting Android 9.0 and lower and Xamarin Forms 4.4 and lower. Microsoft is working on improving support for newer versions on Android starting Q2CY2023. We anticipate having a beta release for .NET MAUI support available in March 2023. For more information about migrating your apps from Xamarin Forms to .NET MAUI, see [Migrate your app from Xamarin.Forms](/dotnet/maui/get-started/migrate). 
 
 > [!NOTE]
 > You may wish to first read the [Get Started with Intune App SDK](app-sdk-get-started.md) article, which explains how to prepare for integration on each supported platform.
@@ -84,7 +84,7 @@ for more information.
 * Secure the output directory that contains the Xamarin app. Consider using a user-level directory for the output.
 
 
-## Enabling Intune app protection polices in your iOS mobile app
+## Enabling Intune app protection policies in your iOS mobile app
 
 > [!IMPORTANT]
 > Intune regularly releases updates to the Intune App SDK. Regularly check the [Intune App SDK Xamarin Bindings](https://github.com/msintuneappsdk/intune-app-sdk-xamarin) for updates and incorporate into your software development release cycle to ensure your apps support the latest App Protection Policy settings.

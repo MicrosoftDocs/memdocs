@@ -23,6 +23,8 @@ landingContent:
         links:
           - text: KB 15582417 Summary of changes in 2211
             url: 2211/15582417.md
+          - text: 16643863 Update rollup for Configuration Manager version 2211
+            url: 2211/16643863.md
   - title: Configuration Manager 2207
     linkLists:
       - linkListType: overview

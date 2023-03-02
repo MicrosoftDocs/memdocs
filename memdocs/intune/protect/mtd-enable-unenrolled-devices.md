@@ -26,9 +26,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: 
-ms.collection: 
-- M365-identity-device-management
+ms.collection:
 - tier3
+- M365-identity-device-management
 ---
 
 # Enable the Mobile Threat Defense connector in Intune for unenrolled devices
@@ -67,7 +67,7 @@ To view classic conditional access policies, in [Azure](https://portal.azure.com
 
 ## To enable the MTD connector
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Tenant administration** > **Connectors and tokens** > **Mobile Threat Defense**. To set up an integration with a 3rd party Mobile Threat Defense vendor, you must be a Global administrator.
 

@@ -23,7 +23,10 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
+- triage
 ---
 
 # Overview of the Microsoft Intune mobile device management (MDM) lifecycle

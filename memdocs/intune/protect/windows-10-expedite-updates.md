@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/09/2022
+ms.date: 02/14/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -24,7 +24,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 #ms.custom:
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier1
+- M365-identity-device-management
 ---
 
 # Expedite Windows quality updates in Microsoft Intune
@@ -37,7 +39,7 @@ Not all updates can be expedited. Currently, only Windows 10/11 security updates
 
 With expedited updates, you can speed installation of quality updates like the most recent *patch Tuesday* release or an out-of-band security update for a zero-day flaw.
 
-To speed installation, expedite updates uses available services, like WNS and push notification channels, to deliver the message to devices that there's an expedited update to install. This process enables devices to start the download and install of an expedited update as soon as possible, without having to wait for the device to check in for updates.
+To speed installation, expedite is able to check for expedited updates more frequently than the normal Windows Update scan frequency. This process enables devices to start the download and install of an expedited update as soon as possible, without having to wait for the device to check in for updates.
 
 The actual time that a device starts to update depends on the device being online, its scan timing, whether communication channels to the device are functioning, and other factors like cloud-processing time.
 
@@ -171,7 +173,7 @@ Before you can monitor results and update status for expedited updates, your Int
  
 ## Create and assign an expedited quality update
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Devices** > **Quality updates for Windows 10 and later** > **Create profile**.
 
@@ -288,7 +290,7 @@ After a policy has been created you can monitor results, update status, and erro
 
 This report shows the current state of all devices in the profile and provides an overview of how many devices are in progress of installing an update, have completed the installation, or have an error.
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Reports** > **Windows updates**. On the **Summary** tab you can view the **Windows Expedited Quality updates** table.
 
@@ -304,7 +306,7 @@ This report shows the current state of all devices in the profile and provides a
 
 This report can help you find devices with alerts or errors and can help you troubleshoot update issues.
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431)
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431)
 
 2. Select **Devices** > **Monitor**.
 

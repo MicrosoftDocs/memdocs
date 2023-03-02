@@ -17,9 +17,9 @@ ms.reviewer: ilwu
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.collection: 
+ms.collection:
+- tier2
 - M365-identity-device-management
-- tier3
 ---
 
 # Guided scenario - Secure Microsoft Office mobile apps
@@ -108,14 +108,13 @@ When you've selected the apps, click **Next**.
 
 In this step, you must configure the requirements for accessing and sharing the corporate files and emails in these apps. By default, users can save data to your organization's OneDrive and SharePoint accounts.
 
-| Setting | Description | Default Value |
+:::image type="content" border="true" source="./media/guided-scenarios-office-mobile/guided-scenarios-office-mobile-03.png" alt-text="Screenshot of the App protection settings.":::
+
+The following settings are applied when using the **Enhanced data protection** setting shown above.
+
+| Setting | Description | Value |
 |---------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|
-| PIN type | Numeric PINs are made up of all numbers. Passcodes are made up of alphanumeric characters and special characters.  On iOS/iPadOS, to configure "Passcode" type, it requires the app to have Intune SDK version 7.1.12 or above. Numeric type has no Intune SDK version restriction. | Numeric |
-| Select minimum PIN length | Specify the minimum number of digits in a PIN sequence. | 6 |
-| Recheck the access requirements after (minutes of inactivity) | If the policy-managed app is inactive for longer than the number of minutes of inactivity specified, the app will prompt the access requirements (i.e PIN, conditional launch settings) to be rechecked after the app is launched. | 30 |
-| Printing org data | If blocked, the app cannot print protected data. | Block |
-| Open policy-managed app links in unmanaged browsers | If blocked, policy-managed app links must be opened a managed browser. | Block |
-| Copy data to unmanaged apps | If blocked, managed data will remain in managed apps. | Allow |
+|Timeout (minutes of inactivity) |Specify a time in minutes after which either a passcode or numeric (as configured) PIN will override the use of a biometric. This timeout value should be greater than the value specified under 'Recheck the access requirements after (minutes of inactivity)'. Default value: 30 | 720
 
 ## Step 5 - Assignments
 

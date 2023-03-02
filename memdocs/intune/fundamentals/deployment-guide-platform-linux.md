@@ -23,7 +23,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: get-started
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Deployment guide: Manage Linux devices in Microsoft Intune
@@ -88,7 +90,7 @@ As an Intune administrator, you don't need to do anything to enable enrollment f
 
 ## Next steps  
 
-* Check out [Walk through Intune in Microsoft Endpoint Manager](tutorial-walkthrough-endpoint-manager.md) for a tutorial about how to navigate and use Intune. Tutorials are 100 – 200 level content for people new to Intune or a specific scenario.   
+* Check out [Walk through Intune admin center](tutorial-walkthrough-endpoint-manager.md) for a tutorial about how to navigate and use Intune. Tutorials are 100 – 200 level content for people new to Intune or a specific scenario.   
 
 * Check out the [Microsoft Tech Community](https://techcommunity.microsoft.com/t5/microsoft-intune-blog/increase-security-enable-quality-collaboration-for-linux/ba-p/3640485) for the latest information and blogs about Linux desktop management.  
 

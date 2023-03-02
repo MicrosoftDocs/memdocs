@@ -24,9 +24,10 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: 
-  - M365-identity-device-management
-  - highpri
+ms.collection:
+- tier1
+- M365-identity-device-management
+- highpri
 ---
 
 # Use policy sets to group collections of management objects
@@ -65,7 +66,7 @@ When you create a policy set, you create a single unit of assignment, and manage
 
 ## How to create a policy set
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Policy Sets** > **Policy sets** > **Create**.
 3. On the **Basics** page, add the following values:
     - **Policy set name** - Provide a name for this policy set.

@@ -22,9 +22,10 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: 
-  - M365-identity-device-management
-  - highpri
+ms.collection:
+- tier1
+- M365-identity-device-management
+- highpri
 ---
 
 # Create a compliance policy in Microsoft Intune
@@ -74,7 +75,7 @@ For more information about using custom compliance settings, including supported
 
 ## Create the policy
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Devices** > **Compliance policies** > **Policies** > **Create Policy**.
 
@@ -123,14 +124,14 @@ For more information about using custom compliance settings, including supported
 
    **For Windows**:  
    1. On the *Compliance settings* page, expand **Custom Compliance** and set *Custom compliance* to **Require**.
-   2. For *Select your discovery script*, select **Click to select**, and then specify a script that’s been previously added to the Microsoft Endpoint Manager admin center. This script must have been uploaded before you begin to create the policy.
+   2. For *Select your discovery script*, select **Click to select**, and then specify a script that’s been previously added to the Microsoft Intune admin center. This script must have been uploaded before you begin to create the policy.
    3. For *Upload and validate the JSON file with your custom compliance settings*, select the folder icon and then locate and add the JSON file for Windows that you want to use with this policy. For assistance with the JSON, see [Create a JSON for custom compliance settings](compliance-custom-json.md).
 
    **For Linux**:  
    1. On the *Compliance settings* page, select **Add settings** to open the *Settings picker* pane.
    2. Select **Custom Compliance**, and then select 8.
    3. Back on the *Compliance settings* page, select the toggle for *Require Custom Compliance* to change it to be **True**.
-   4. For *Select your discovery script*, select **Set reusable settings**, and then specify a script that’s been previously added to the Microsoft Endpoint Manager admin center. This script must have been uploaded before you begin to create the policy.
+   4. For *Select your discovery script*, select **Set reusable settings**, and then specify a script that’s been previously added to the Microsoft Intune admin center. This script must have been uploaded before you begin to create the policy.
    5. For *Select your rules file*, select the folder icon and then locate and add the JSON file for Linux that you want to use with this policy. For assistance with the JSON, see [Create a JSON for custom compliance settings](compliance-custom-json.md).
 
    The JSON you enter is validated and any problems are displayed. After validation of the JSON contents, the rules from the JSON are displayed in table format.
@@ -159,7 +160,7 @@ For more information about using custom compliance settings, including supported
 
 ## Refresh cycle times
 
-Intune uses different refresh cycles to check for updates to compliance policies. If the device recently enrolled, the check-in runs more frequently. [Policy and profile refresh cycles](../configuration/device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned) lists the estimated refresh times.
+Intune uses different refresh cycles to check for updates to compliance policies. If the device recently enrolled, the check-in runs more frequently. [Policy and profile refresh cycles](../configuration/device-profile-troubleshoot.md#policy-refresh-intervals) lists the estimated refresh times.
 
 At any time, users can open the Company Portal app, and sync the device to immediately check for policy updates.
 

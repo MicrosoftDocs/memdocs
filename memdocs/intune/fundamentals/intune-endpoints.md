@@ -24,17 +24,18 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-classic; get-started
-ms.collection: 
-  - M365-identity-device-management
-  - highpri
-  - highseo
+ms.collection:
+- tier1
+- M365-identity-device-management
+- highpri
+- highseo
 ---
 
 # Network endpoints for Microsoft Intune  
 
-This page lists IP addresses and port settings needed for proxy settings in your Intune deployments.
+This article lists IP addresses and port settings needed for proxy settings in your Microsoft Intune deployments.
 
-As a cloud-only service, Intune doesn't require on-premises infrastructure such as servers or gateways.
+As a cloud-only service, Intune doesn't require an on-premises infrastructure such as servers or gateways.
 
 ## Access for managed devices  
 
@@ -147,7 +148,7 @@ The following tables list the ports and services that the Intune client accesses
 
 If you're using Intune to deploy PowerShell scripts or Win32 apps, you'll also need to grant access to endpoints in which your tenant currently resides.
 
-To find your tenant location (or Azure Scale Unit (ASU)), sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Tenant administration** > **Tenant details**. The location is under **Tenant location** as something like North America 0501 or Europe 0202. Look for the matching number in the following table. That row will tell you which storage name and CDN endpoints to grant access to. The rows are differentiated by geographic region, as indicated by the first two letters in the names (na = North America, eu = Europe, ap = Asia Pacific). Your tenant location will be one of these three regions although your organization’s actual geographic location might be elsewhere.
+To find your tenant location (or Azure Scale Unit (ASU)), sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Tenant administration** > **Tenant details**. The location is under **Tenant location** as something like North America 0501 or Europe 0202. Look for the matching number in the following table. That row will tell you which storage name and CDN endpoints to grant access to. The rows are differentiated by geographic region, as indicated by the first two letters in the names (na = North America, eu = Europe, ap = Asia Pacific). Your tenant location will be one of these three regions although your organization’s actual geographic location might be elsewhere.
 
 |Azure Scale Unit (ASU) | Storage name | CDN |
 | --- | --- |--- |

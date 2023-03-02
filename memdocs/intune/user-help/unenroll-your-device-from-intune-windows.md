@@ -25,7 +25,8 @@ ms.reviewer: jieyang
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
-ms.collection: 
+ms.collection:
+- tier1
 ---
 
 # Remove your Windows device from management  

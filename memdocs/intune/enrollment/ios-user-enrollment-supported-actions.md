@@ -26,15 +26,15 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure;seodec18
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Intune actions and options supported with Apple User Enrollment
 
 User Enrollment supports a subset of device management options. If a pre-existing configuration profile is applied to a User Enrollment device, only settings supported by User Enrollment will be applied to that device.
 
-> [!NOTE]
-> Support for Apple's User Enrollment in Intune is currently in preview for iOS and iPadOS.
 
 ## Password settings
 

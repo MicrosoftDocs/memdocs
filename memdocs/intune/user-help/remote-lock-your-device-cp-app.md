@@ -20,11 +20,12 @@ searchScope:
 ROBOTS:  
 #audience:
 
-ms.reviewer: jieyang
+ms.reviewer: jieyan
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
-ms.collection: 
+ms.collection:
+- tier2
 ---
 
 # Lock your device from the Company Portal app for Windows  

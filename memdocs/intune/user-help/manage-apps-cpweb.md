@@ -27,16 +27,17 @@ ms.reviewer:
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
-ms.collection: 
+ms.collection:
+- tier2
 ---  
 
 # Manage apps from the Company Portal website  
 
-*Applies to:* 
-* *Android*   
-* *iOS/iPadOS*   
-* *macOS*   
-* *Windows 10/11*   
+**Applies to:** 
+* Android   
+* iOS/iPadOS   
+* macOS   
+* Windows 10/11     
 
 Sign in to the [Company Portal website](https://portal.manage.microsoft.com) to view and manage apps from your organization. 
 

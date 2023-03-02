@@ -27,8 +27,9 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection:
-  - M365-identity-device-management
-  - highpri
+- tier1
+- M365-identity-device-management
+- highpri
 ---
 
 # View enrollment reports
@@ -43,7 +44,7 @@ ms.collection:
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]  
 
-Your can use the following reports in the Microsoft Endpoint Manager admin center to monitor and troubleshoot issues with enrollment restrictions and enrollment status page assignments:  
+Your can use the following reports in the Microsoft Intune admin center to monitor and troubleshoot issues with enrollment restrictions and enrollment status page assignments:  
 
 - Enrollment failures report  
 - Troubleshooting + support page  
@@ -54,7 +55,7 @@ This article describes each report and how to access them in the admin center.
 ## Enrollment failures report  
 Use the enrollment failures report to view enrollment failures for all users or for select users. This report shows each failed enrollment attempt along with the date it occurred, reason for failure, OS, OS version, username, and enrollment method.  
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Monitor** > **Enrollment failures**.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Monitor** > **Enrollment failures**.
 2. Select **All users** or **Select user**, depending on the scenario you're troubleshooting.
 3. Select a row in the table for more details about the failure and recommended remediation steps.  
 

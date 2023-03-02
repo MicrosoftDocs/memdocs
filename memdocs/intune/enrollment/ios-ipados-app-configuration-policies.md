@@ -26,7 +26,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure;seodec18
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # iOS/iPadOS security configuration framework app configuration policies
@@ -47,4 +49,8 @@ iOS/iPadOS supervised devices are designed to be used for work or school data on
     | IntuneMAMUPN | UPN of the account allowed to sign into the app. For Intune enrolled devices, the {{userprincipalname}} token may be used to represent the enrolled user account. |
 
 ## Next steps
-Apply [iOS/iPadOS device compliance security configuration settings](ios-ipados-device-compliance-security-configurations.md).
+
+1. 🡺 **Configure app configuration policies** (*You are here*)  
+2. [Configure device compliance security policies](ios-ipados-device-compliance-security-configurations.md)
+3. [Configure device security policies for personal devices](ios-ipados-personal-device-security-configurations.md)  
+4. [Configure device security policies for supervised devices](ios-ipados-supervised-device-security-configurations.md) 

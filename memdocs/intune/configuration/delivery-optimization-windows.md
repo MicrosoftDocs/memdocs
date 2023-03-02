@@ -22,7 +22,9 @@ ms.technology:
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ms.reviewer: kerimh
 ---
 
@@ -43,7 +45,7 @@ To learn about Delivery Optimization on Windows 10 and Window 11, see [Delivery 
 
 ## Create the profile
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Devices** > **Configuration profiles** > **Create profile**.
 
@@ -85,7 +87,7 @@ Delivery Optimization was previously configured as part of Software Update Rings
 
 1. Create a Delivery Optimization device configuration profile:
 
-    1. In the Microsoft Endpoint Manager admin center, select **Devices** > **Configuration profiles** > **Create profile**.
+    1. In the Microsoft Intune admin center, select **Devices** > **Configuration profiles** > **Create profile**.
     2. Enter the following properties:
 
         - **Platform**: Select **Windows 10 and later**.
@@ -114,7 +116,7 @@ Delivery Optimization was previously configured as part of Software Update Rings
 
 2. Unconfigure the existing software ring:
 
-    1. In the Microsoft Endpoint Manager admin center, go to **Devices** > **Update rings for Windows 10 and later**.
+    1. In the Microsoft Intune admin center, go to **Devices** > **Update rings for Windows 10 and later**.
     2. In the list, select your update ring.
     3. In the settings, set **Delivery Optimization download mode** to **Not configured**.
     4. **OK** > **Save** your changes.

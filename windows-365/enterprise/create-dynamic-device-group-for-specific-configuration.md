@@ -25,7 +25,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; get-started
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- tier2
 ---
 
 # Create a dynamic device group containing all Cloud PCs of a specific configuration
@@ -36,7 +38,7 @@ For the example below, we use 2 vCPU and 4-GB RAM as the configuration. Anywhere
 
 You can follow the below steps and create a dynamic group for any of the configurations that make up Cloud PC sizes. In these steps, you'll use the Device Model device property to create the dynamic device group.
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/) > **Groups** > **New Group**.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Groups** > **New Group**.
 ![Screenshot of delete policy](./media/create-dynamic-device-group-all-cloudpcs/create-group.png)
 2. Select the **New Group** page, choose **Security** for **Group type**.
 3. Enter the following information:

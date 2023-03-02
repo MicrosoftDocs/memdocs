@@ -26,13 +26,12 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection:
-  - M365-identity-device-management
-  - highpri
+- tier1
+- M365-identity-device-management
+- highpri
 ---
 
 # Create a device profile in Microsoft Intune
-
-[!INCLUDE [windows-phone-81-windows-10-mobile-support](../includes/windows-phone-81-windows-10-mobile-support.md)]
 
 Device profiles allow you to add and configure settings, and then push these settings to devices in your organization. You have some options when creating policies:
 
@@ -62,11 +61,11 @@ This article:
 - Lists the steps to create a profile.
 - Shows you how to add a scope tag to "filter" your policies.
 - Describes applicability rules on Windows client devices, and shows you how to create a rule.
-- Lists the check-in refresh cycle times when devices receive profiles and any profile updates.
+- Has more information on the check-in refresh cycle times when devices receive profiles and any profile updates.
 
 ## Create the profile
 
-Profiles are created in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). In this admin center, select **Devices**. You have the following options:
+Profiles are created in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). In this admin center, select **Devices**. You have the following options:
 
 :::image type="content" source="./media/device-profile-create/devices-overview.png" alt-text="Screenshot that shows how to select Devices to see what you can configure and manage in Microsoft Intune.":::
 
@@ -186,9 +185,9 @@ When you assign the profile to the groups, the applicability rules act as a filt
 
 4. Select **Add** to save your changes.
 
-## Refresh cycle times
+## Policy refresh cycle times
 
-Intune uses different refresh cycles to check for updates to configuration profiles. If the device recently enrolled, the check-in runs more frequently. [Policy and profile refresh cycles](device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned) lists the estimated refresh times.
+Intune uses different refresh cycles to check for updates to configuration profiles. If the device recently enrolled, the check-in runs more frequently. [Policy and profile refresh cycles](device-profile-troubleshoot.md#policy-refresh-intervals) lists the estimated refresh times.
 
 At any time, users can open the Company Portal app, and sync the device to immediately check for profile updates.
 

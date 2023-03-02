@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 01/31/2023
+ms.date: 02/28/2023
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice:
@@ -25,12 +25,14 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; get-started
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- tier1
 ---
 
 # Access a Cloud PC
 
-Users can access their Cloud PCs in two different ways:
+Users can access their Cloud PCs in these ways:
 
 - [Windows 365 app](https://support.microsoft.com/topic/cbb0d4d5-69d4-4f00-b050-6dc7a02d02d0 )
 - [windows365.microsoft.com](https://Windows365.microsoft.com)
@@ -110,6 +112,12 @@ Users can view and download connection details.
 2. To download a text file containing the connection details, select **Download report**.
   
      ![Screenshot of connection details.](media/end-user-access-cloud-pc/connection-details.png)
+
+### Hardware acceleration
+
+You can turn on hardware acceleration when using the web client to access your Cloud PC. This decreases network latency, improving the web client Cloud PC experience. This option is turned on by default.
+
+To turn hardware acceleration on or off, in the client, select the gear icon > **Use hardware acceleration**.
 
 ### User feedback
 

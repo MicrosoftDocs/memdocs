@@ -22,11 +22,12 @@ searchScope:
 ROBOTS:  
 #audience:
 
-ms.reviewer: amanh
+ms.reviewer: maholdaa
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
-ms.collection: 
+ms.collection:
+- tier1
 ---
 
 # Enroll Windows 10/11 devices in Intune    

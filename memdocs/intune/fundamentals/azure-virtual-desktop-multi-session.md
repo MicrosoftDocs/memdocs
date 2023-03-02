@@ -24,16 +24,17 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-classic; get-started; references_regions
-ms.collection: 
-  - M365-identity-device-management
-  - highpri
+ms.collection:
+- tier1
+- M365-identity-device-management
+- highpri
 ---
 
 # Windows 10 or Windows 11 Enterprise multi-session remote desktops
 
 Azure Virtual Desktop multi-session with Microsoft Intune is now generally available.
 
-You can now use Microsoft Intune to manage Windows 10 or Windows 11 Enterprise multi-session remote desktops in the Microsoft Endpoint Manager admin center just as you can manage a shared Windows 10 or Windows 11 client device. When managing such virtual machines (VMs), you'll be able to use both device-based configuration targeted to devices or user-based configuration targeted to users. 
+You can now use Microsoft Intune to manage Windows 10 or Windows 11 Enterprise multi-session remote desktops in the Microsoft Intune admin center just as you can manage a shared Windows 10 or Windows 11 client device. When managing such virtual machines (VMs), you'll be able to use both device-based configuration targeted to devices or user-based configuration targeted to users. 
 
 Windows 10 or Windows 11 Enterprise multi-session is a new Remote Desktop Session Host exclusive to [Azure Virtual Desktop](/azure/virtual-desktop/) on Azure. It provides the following benefits:
 
@@ -82,7 +83,7 @@ This feature supports Windows 10 or Windows 11 Enterprise multi-session VMs, whi
 > If you're joining session hosts to Azure Active Directory Domain Services, you can't manage them using Intune.
 
 > [!IMPORTANT]
-> If you’re using Windows 10, versions 2004, 20H2, or 21H1 builds, make sure that you install the July 2021 Windows Update or a later Windows update. Otherwise, remote actions in the Microsoft Endpoint Manager admin center, like remote sync, won’t work correctly. As a result, pending policies assigned to devices might take up to 8 hours to be applied.
+> If you’re using Windows 10, versions 2004, 20H2, or 21H1 builds, make sure that you install the July 2021 Windows Update or a later Windows update. Otherwise, remote actions in the Microsoft Intune admin center, like remote sync, won’t work correctly. As a result, pending policies assigned to devices might take up to 8 hours to be applied.
 
 See [What is Azure Virtual Desktop?](/azure/virtual-desktop/overview#requirements) for more information about Azure Virtual Desktop licensing requirements.
 
@@ -90,7 +91,7 @@ Windows 10 or Windows 11 Enterprise multi-session VMs are treated as a separate 
 
 ## Create the configuration profile
 
-To configure configuration policies for Windows 10 or Windows 11 Enterprise multi-session VMs, you'll need to use the [Settings catalog](../configuration/settings-catalog.md) in the Microsoft Endpoint Manager admin center.
+To configure configuration policies for Windows 10 or Windows 11 Enterprise multi-session VMs, you'll need to use the [Settings catalog](../configuration/settings-catalog.md) in the Microsoft Intune admin center.
 
 The existing device configuration profile templates aren't supported for Windows 10 or Windows 11 Enterprise multi-session VMs, except for the following templates:
 
@@ -106,7 +107,7 @@ Microsoft Intune won't deliver unsupported templates to multi-session devices, a
 
 ### To configure policies
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and choose **Devices** > **Windows** > **Configuration profiles** > **Create Profile**.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and choose **Devices** > **Windows** > **Configuration profiles** > **Create Profile**.
 2. For **Platform**, select **Windows 10 and later**.
 3. For **Profile type**, select **Settings catalog**, or when deploy settings by using a Template, select **Templates** and then the name of the supported Template.
 4. Select **Create**.
@@ -135,7 +136,7 @@ Windows 10 or Windows 11 Administrative Templates are supported for Windows 10 o
 
 ## Compliance and Conditional access
 
-You can secure your Windows 10 or Windows 11 Enterprise multi-session VMs by configuring compliance policies and Conditional Access policies in the Microsoft Endpoint Manager admin center. The following compliance policies are supported on Windows 10 or Windows 11 Enterprise multi-session VMs:
+You can secure your Windows 10 or Windows 11 Enterprise multi-session VMs by configuring compliance policies and Conditional Access policies in the Microsoft Intune admin center. The following compliance policies are supported on Windows 10 or Windows 11 Enterprise multi-session VMs:
 
 - Minimum OS version  
 - Maximum OS version  
@@ -220,7 +221,7 @@ The following Windows 10 or Windows 11 desktop device remote actions aren't supp
 
 ## Retirement
 
-Deleting VMs from Azure will leave orphaned device records in the Microsoft Endpoint Manager admin center. They'll be automatically cleaned up according to the cleanup rules configured for the tenant.
+Deleting VMs from Azure will leave orphaned device records in the Microsoft Intune admin center. They'll be automatically cleaned up according to the cleanup rules configured for the tenant.
 
 ## Security baselines
 

@@ -24,9 +24,10 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: 
-  - M365-identity-device-management
-  - highpri
+ms.collection:
+- tier1
+- M365-identity-device-management
+- highpri
 ---
 
 # Set the mobile device management authority
@@ -35,7 +36,7 @@ The mobile device management (MDM) authority setting determines how you manage y
 
 Possible configurations are:
 
-- **Intune Standalone** - Cloud-only management, which you configure by using the Azure portal. Includes the full set of capabilities that Intune offers. [Set the MDM authority in the Microsoft Endpoint Manager admin center](#set-mdm-authority-to-intune).
+- **Intune Standalone** - Cloud-only management, which you configure by using the Azure portal. Includes the full set of capabilities that Intune offers. [Set the MDM authority in the Microsoft Intune admin center](#set-mdm-authority-to-intune).
 
 - **Intune co-management** - Integration of the Intune cloud solution with Configuration Manager for Windows 10 devices. You configure Intune by using the Configuration Manager console. [Configure auto-enrollment of devices to Intune](/configmgr/comanage/tutorial-co-manage-clients#configure-auto-enrollment-of-devices-to-intune).
 
@@ -49,7 +50,7 @@ For tenants using the 1911 service release and later, the MDM authority is autom
 
 For pre-1911 service release tenants, if you haven't yet set the MDM authority, follow the steps below.
 
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select the orange banner to open the **Mobile Device Management Authority** setting. The orange banner is only displayed if you haven't yet set the MDM authority.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select the orange banner to open the **Mobile Device Management Authority** setting. The orange banner is only displayed if you haven't yet set the MDM authority.
 2. Under **Mobile Device Management Authority**, choose your MDM authority from the following options:
 
     - **Intune MDM Authority**
@@ -105,7 +106,7 @@ Before enabling coexistence with Basic Mobility and Security, consider the follo
 
 To enable coexistence, you must add Intune as the MDM authority for your environment:
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with Azure AD Global or Intune service administrator rights.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with Azure AD Global or Intune service administrator rights.
 2. Navigate to **Devices**.
 3. The **Add MDM Authority blade** displays.
 4. To switch the MDM authority from *Office 365* to *Intune* and enable coexistence, select **Intune MDM Authority** > **Add**.
@@ -139,7 +140,7 @@ The MDM authority can't be changed back to Unknown. The MDM authority is used by
   - Cert profile
   - Wi-Fi profile
   - Configuration profiles
-- After you change to the new MDM authority, the compliance data in the Microsoft Endpoint Manager admin center can take up to a week to accurately report. However, the compliance states in Azure Active Directory and on the device will be accurate so the device is still be protected.
+- After you change to the new MDM authority, the compliance data in the Microsoft Intune admin center can take up to a week to accurately report. However, the compliance states in Azure Active Directory and on the device will be accurate so the device is still be protected.
 - Make sure the new settings that are intended to overwrite existing settings have the same name as the previous ones to ensure that the old settings are overwritten. Otherwise, the devices might end up with redundant profiles and policies.  
 
  > [!TIP]  
@@ -148,7 +149,7 @@ The MDM authority can't be changed back to Unknown. The MDM authority is used by
 - After you change the MDM authority, perform the following steps to validate that new devices are enrolled successfully to the new authority:  
   - Enroll a new device
   - Make sure the newly enrolled device shows up in the new MDM authority.
-  - Perform an action, such as Remote Lock, from the Microsoft Endpoint Manager admin center to the device. If it's successful, the device is being managed by the new MDM authority.
+  - Perform an action, such as Remote Lock, from the Microsoft Intune admin center to the device. If it's successful, the device is being managed by the new MDM authority.
 - If you have issues with specific devices, you can unenroll and re-enroll the devices to get them connected to the new authority and managed as quickly as possible.
 
 ## Next steps

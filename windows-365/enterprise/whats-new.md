@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 02/07/2023
+ms.date: 02/28/2023
 ms.topic: reference
 ms.service: windows-365
 ms.subservice:
@@ -25,7 +25,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; get-started
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- tier2
 ---
 
 # What's new in Windows 365 Enterprise
@@ -50,6 +52,54 @@ Learn what new features are available in Windows 365 Enterprise.
 ### Windows 365 app
 -->
 
+<!-- ########################## -->
+## Week of February 27, 2023
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Apps
+
+#### Windows 365 app is now generally available<!--41929443-->
+
+The Windows 365 app has moved out of preview and into general availability. For more information, see [Installing the Windows 365 app](https://support.microsoft.com/topic/cbb0d4d5-69d4-4f00-b050-6dc7a02d02d0).
+
+#### Improved video playback by using multimedia redirection is now generally available<!--43524455-->
+
+Improved video playback performance on your Cloud PCs by using multimedia redirection (MMR) has moved out of preview and into general availability. For more information, see [Video playback improvement](troubleshooting.md#video-playback-improvements).
+
+#### Cloud PC web client: improved feedback interface for end users<!--43309221-->
+
+The Cloud PC web client (accessible from windows365.microsoft.com) has an improved feedback interface for end users to provide feedback.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Hardware acceleration for the windows365.microsoft.com web client<!--43105503-->
+
+On the windows365.microsoft.com web client, you can now benefit from hardware acceleration. This option is turned on by default and improves motion performance for activities like scrolling, moving windows, or playback of video.
+
+#### Configure installed language and region for provisioning Cloud PCs in GCC/H environments<!--43290793 -->
+
+When creating a provisioning policy, admins can now configure the installed language and region for new Cloud PCs in US Government Community Cloud (GCC) and GCC High environments. For more information, see [Provide users a localized Windows experience](provide-localized-windows-experience.md)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device provisioning
+
+#### Add more Azure Network Connections to a provisioning policy<!--42906565-->
+
+A new Azure Network Connection (ANC) option lets you add more ANCs to a provisioning policy and define a priority order for their use. By preparing multiple ANCs in different Azure regions, admins can make provisioning more reliable in the rare case capacity constraints in a region.
+
+#### GCC/H support for geography option in Windows 365 provisioning policy<!-- 41400209-->
+
+The **Geography** setting in provisioning policies is now supported for US Government Community Cloud (GCC) and GCC High environments. For more information, see [Create provisioning policies](create-provisioning-policy.md).
+
+<!-- ########################## -->
+## Week of February 20, 2023
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Partners
+
+#### Citrix HDX Plus support is now generally available<!--38310774 -->
+Windows 365 support for Citrix HDX Plus has moved out of preview and into general availability. For more information, see [Set up Citrix HDX Plus for Windows 365 Enterprise](set-up-citrix.md).
 
 <!-- ########################## -->
 ## Week of February 6, 2023
@@ -59,7 +109,7 @@ Learn what new features are available in Windows 365 Enterprise.
 
 #### Nested virtualization now supports 4vCPU Cloud PCs<!--42948140-->
 
-Windows 365 nested virtualization now supports 4vCPU Cloud PCs. For more information, see [Set up virutalization-based workloads support](nested-virtualization.md).
+Windows 365 nested virtualization now supports 4vCPU Cloud PCs. For more information, see [Set up virtualization-based workloads support](nested-virtualization.md).
 
 <!-- ########################## -->
 ## Week of January 30, 2023 (Service release 2301)
@@ -120,6 +170,13 @@ Support for custom Windows 365 role-based access control (RBAC) roles has moved 
 #### Provision Azure Active Directory Join Cloud PCs with single sign-on (public preview)<!--42104318-->
 
 Windows 365 now supports creating Azure Active Directory Join Cloud PCs that use single sign-on for Cloud PC login. Existing Cloud PCs won’t have single sign-on configured. For more information, see [Create provisioning policy](create-provisioning-policy.md) and [Edit provisioning policy](edit-provisioning-policy.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Provisioning
+
+#### Configure installed language and region for provisioning Cloud PCs generally available<!--42137636-->
+
+Language pre-configuration for Cloud PCs has moved out of preview and into general availability. Admins can select the **Language & Region pack** under **Configuration** in their provisioning policy to pre-configure the language for the endpoint devices. For more information, see [Use a provisioning policy to set up a default display language on Cloud PCs](use-provisioning-policy-default-display-language.md).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
@@ -316,9 +373,9 @@ New gallery images are now available that include support for Windows 11 version
 
 The **Azure network connection** tab has a new health check: **Localization language package readiness**. This health check verifies that the operating system and Microsoft 365 language packages can install.  It also makes sure that the localization package download link is reachable. For more information, see [Azure network connection health checks](health-checks.md).
 
-#### Review Cloud PC connectivity health checks and errors in Microsoft Endpoint Manager admin center<!--38469622 -->
+#### Review Cloud PC connectivity health checks and errors in Microsoft Intune admin center<!--38469622 -->
 
-You can now review connectivity health checks and errors in the Microsoft Endpoint Manager admin center to help you understand if your users are experiencing connectivity issues. You’ll also get a troubleshooting tool to help resolve connectivity issues. To see the checks, select **Devices** > **Windows 365** > **Azure network connections** > select a connection in the list > **Overview**. This feature is rolling out to all customers over the next few weeks.
+You can now review connectivity health checks and errors in the Microsoft Intune admin center to help you understand if your users are experiencing connectivity issues. You’ll also get a troubleshooting tool to help resolve connectivity issues. To see the checks, select **Devices** > **Windows 365** > **Azure network connections** > select a connection in the list > **Overview**. This feature is rolling out to all customers over the next few weeks.
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Provisioning
@@ -551,7 +608,7 @@ A Cloud PC’s name is now appended to the network interface name within the Azu
 
 #### New remote action: Remote Help<!--38310389-->
 
-The [Remote Help remote action](/mem/intune/remote-actions/remote-help) (in the Microsoft Endpoint Manager admin center) lets admins start a remote session into an end user’s Cloud PC.
+The [Remote Help remote action](/mem/intune/remote-actions/remote-help) (in the Microsoft Intune admin center) lets admins start a remote session into an end user’s Cloud PC.
 
 <!-- ########################## -->
 ## Week of February 28, 2022 (Service release 2202)
@@ -712,7 +769,7 @@ To improve reliability, the maximum provisioning timeout has been changed to fiv
 
 #### Custom Windows 365 RBAC roles in public preview<!--36222579  -->
 
-Custom Windows 365 role-based access control (RBAC) roles are now available in the Microsoft Endpoint Manager admin center. You can mix-and-match Windows 365 permissions to create custom roles for your organization's needs. You can also create both Windows 365 and Intune custom roles and give granular admin permissions to admins for both services. For more information, see [Custom roles](role-based-access.md#custom-roles).
+Custom Windows 365 role-based access control (RBAC) roles are now available in the Microsoft Intune admin center. You can mix-and-match Windows 365 permissions to create custom roles for your organization's needs. You can also create both Windows 365 and Intune custom roles and give granular admin permissions to admins for both services. For more information, see [Custom roles](role-based-access.md#custom-roles).
 
 <!-- ########################## -->
 ## Week of October 11, 2021 (Service release 2109)
@@ -738,7 +795,7 @@ _ldap._tcp.yourDomain.com -type SRV
 
 #### Windows 365 Administrator role<!--5827123-->
 
-The Windows 365 Administrator role is now available for admins by using role assignment in the Microsoft Endpoint Manager Admin Center and Azure Active Directory (Azure AD) for Windows. With this role, admins can broadly manage Windows 365 Enterprise Cloud PCs, users, devices, and groups. This new role is in addition to the other existing roles that Windows 365 currently supports: Azure AD Global Admin, Intune Admin, and Cloud PC granular roles in Microsoft Endpoint Manager. For more information, see [Role-based access control](role-based-access.md).
+The Windows 365 Administrator role is now available for admins by using role assignment in the Microsoft Intune admin center and Azure Active Directory (Azure AD) for Windows. With this role, admins can broadly manage Windows 365 Enterprise Cloud PCs, users, devices, and groups. This new role is in addition to the other existing roles that Windows 365 currently supports: Azure AD Global Admin, Intune Admin, and Cloud PC granular roles in Microsoft Endpoint Manager. For more information, see [Role-based access control](role-based-access.md).
 
 <!-- ########################## -->
 ## Week of October 4, 2021

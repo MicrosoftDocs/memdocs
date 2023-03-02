@@ -26,7 +26,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure;seodec18
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Android Enterprise personally-owned work profile security configurations
@@ -145,4 +147,9 @@ The policy settings enforced in level 3 include all the policy settings recommen
 
 ## Next steps
 
-Administrators can incorporate the above configuration levels within their ring deployment methodology for testing and production use by importing the sample [Android Enterprise Security Configuration Framework JSON templates](https://github.com/microsoft/Intune-Config-Frameworks/tree/master/AndroidEnterprise) with [Intune's PowerShell scripts](https://github.com/microsoftgraph/powershell-intune-samples).
+Administrators can incorporate the above configuration levels within their ring deployment methodology for testing and production use by importing the sample [Android Enterprise Security Configuration Framework JSON templates](https://github.com/microsoft/Intune-Config-Frameworks/tree/master/AndroidEnterprise) with [Intune's PowerShell scripts](https://github.com/microsoftgraph/powershell-intune-samples). 
+
+1. [Configure device enrollment restrictions for personal devices](device-enrollment-restrictions.md)
+2. [Configure app configuration policies](android-app-configuration-policies.md)
+3. 🡺 **Configure security settings for personal devices** (*You are here*) )  
+4. [Configure security settings for fully managed devices](android-fully-managed-security-settings.md)   

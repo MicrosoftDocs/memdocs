@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 02/16/2022
+ms.date: 02/28/2023
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -25,12 +25,14 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; get-started
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- tier2
 ---
 
 # Azure network connection overview
 
-An Azure network connection (ANC) is an object in the Microsoft Endpoint Manager admin center that provides Cloud PC provisioning profiles with required information to connect to network-based resources. ANCs are used:
+An Azure network connection (ANC) is an object in the Microsoft Intune admin center that provides Cloud PC provisioning profiles with required information to connect to network-based resources. ANCs are used:
 
 - When a Cloud PC is initially provisioned.
 - When Windows 365 periodically checks the connection to the on-premises infrastructure to ensure the best end-user experience.
@@ -58,6 +60,10 @@ During provisioning, the Cloud PC is connected to the Azure subnet and joined to
 
 The ANC settings are applied to the Cloud PC only at the time of provisioning.
 
+### Alternate ANCs
+
+To help make provisioning Cloud PCs more reliable in the rare case of capacity constraints in a region, you have the option to assign alternate ANCs to a provisioning policy. You can define the priority order of the ANCs that the policy will use. If the first ANC is unavailable, the policy will automatically use the second ANC in the priority list. If the second one is unavailable, it will move on to the next, and so on. This lets administrators prepare multiple ANCs in different Azure regions, making provisioning more reliable. You don't have to use multiple ANCs. For more information about using alternate ANCs when creating your provisioning policies, see [Create provisioning policies](create-provisioning-policy.md).
+
 ## First health check
 
 The information included in the ANC is used to provision a Cloud PC. For provisioning to succeed, the resources referenced in the ANC must be healthy and accessible. After an ANC object is created, Windows 365 verifies that:
@@ -84,26 +90,20 @@ ANC checks are performed once every one to six hours.
 
 The comprehensive, end-to end health check can take up to 30 minutes. The health checks are run on a temporary Azure virtual machine that is automatically created specifically for this purpose. This virtual machine is created automatically and deleted when the health checks are completed. The virtual machine is connected to your specified vNet and checks are performed to ensure provisioning should be successful.
 
-After a check is complete, the results are posted on the Azure network connection pane of the Microsoft Endpoint Manager admin center. For information about the check results, see [Azure network connections health checks](health-checks.md).  
+After a check is complete, the results are posted on the Azure network connection pane of the Microsoft Intune admin center. For information about the check results, see [Azure network connections health checks](health-checks.md).  
 
 ## Retry health check
 
-To manually trigger a full health check, sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows 365 (under Provisioning)** > **Azure network connection** > select an Azure network connection > **Retry**.
+To manually trigger a full health check, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows 365 (under Provisioning)** > **Azure network connection** > select an Azure network connection > **Retry**.
 
 ## Permissions required for Azure network connections
 
 The ANC wizard requires access to Azure and, optionally, on-premises domain resources. The following permissions are required for the ANC:
 
-- Azure
-  - [Intune Administrator](/azure/active-directory/roles/permissions-reference#intune-administrator) or [Windows 365 Administrator](/azure/active-directory/roles/permissions-reference).
-  - Active directory (Hybrid Azure AD Join ANCs only)
-  - An Active Directory user account with sufficient permissions to join the AD domain into this Organizational Unit.
+- [Intune Administrator](/azure/active-directory/roles/permissions-reference#intune-administrator), [Windows 365 Administrator](/azure/active-directory/roles/permissions-reference), or [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) role.
+- An Active Directory user account with sufficient permissions to join the AD domain into this Organizational Unit( (Hybrid Azure AD Join ANCs only).
 
-To create, edit, or delete an ANC, you'll also need to have one of the following permissions:
-
-- Intune Administrator in Azure AD
-- Cloud PC administrator
-- Global Administrator
+To create or edit an ANC, you must also have the Subscription Reader role in the Azure Subscription where the VNET associated with the ANC was located.
 
 For a full list of requirements, see [Windows 365 requirements](requirements.md).
 

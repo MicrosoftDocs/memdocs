@@ -25,13 +25,12 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; get-started
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- tier2
 ---
 
 # Set up Citrix HDX Plus for Windows 365 Enterprise
-
-> [!IMPORTANT]
-> Citrix HDX Plus is currently in tech preview and isn't officially supported by Citrix.
 
 Citrix HDX Plus for Windows 365 lets you integrate Citrix Cloud with Windows 365. This integration gives you access to Citrix HDX technologies for enhanced Cloud PC security and manageability.
 
@@ -51,9 +50,9 @@ To set up Citrix HDX Plus for Windows 365 Enterprise, follow these steps. The fi
 
 To turn on the Citrix connector, follow these steps:
 
-1. As a Global administrator, sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant administration** > **Connectors and tokens**.
+1. As a Global administrator, sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant administration** > **Connectors and tokens**.
 ![Screenshot of navigating to Connectors and tokens](./media/set-up-citrix/connectors-tokens.png)
-2. Select **Windows 365 Citrix connector (preview)** > next to **Allow people to use Citrix to connect to their Cloud PCs**, set the toggle to **On**.
+2. Select **Windows 365 Citrix connector** > next to **Allow people to use Citrix to connect to their Cloud PCs**, set the toggle to **On**.
 ![Screenshot of turning on the connector](./media/set-up-citrix/turn-on-connector.png)
 
 <!-- ########################## -->

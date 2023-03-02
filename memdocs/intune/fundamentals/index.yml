@@ -9,8 +9,9 @@ metadata:
   ms.service: microsoft-intune
   ms.subservice: fundamentals
   ms.topic: landing-page 
-  ms.collection: 
-    - collection
+  ms.collection:
+  - tier2
+  - collection
   author: dougeby
   ms.author: erikre
   manager: dougeby
@@ -83,7 +84,7 @@ landingContent:
     - linkListType: how-to-guide
       links:
       - text: Steps to set up Intune
-        url: setup-steps.md
+        url: deployment-plan-setup.md
       - text: Add users
         url: users-add.md
       - text: Add groups

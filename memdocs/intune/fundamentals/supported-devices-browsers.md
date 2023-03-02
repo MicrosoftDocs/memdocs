@@ -23,10 +23,11 @@ ms.reviewer: dougeby
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: intune-classic; get-started; seodec18
-ms.collection: 
-  - M365-identity-device-management
-  - highpri
+ms.custom: get-started; seodec18
+ms.collection:
+- tier1
+- M365-identity-device-management
+- highpri
 ---
 
 # Supported operating systems and browsers in Intune
@@ -51,7 +52,7 @@ Intune supports devices running the following operating systems (OS):
 
 ### Supported platforms for MDE Integration
 
-For more information, see [Microsoft Defender for Endpoint on devices with Microsoft Endpoint Manager](../protect/mde-security-integration.md)
+For more information, see [Microsoft Defender for Endpoint on devices with Microsoft Intune](../protect/mde-security-integration.md)
 
 ### Supported Samsung Knox Standard devices  
 
@@ -101,12 +102,12 @@ The Samsung device models in the following table don't support Knox solutions an
 
 ## Intune supported web browsers
 
-Device management and administrative tasks are done in the Microsoft Endpoint Manager admin center. Use these portals to access the admin center:  
+Device management and administrative tasks are done in the Microsoft Intune admin center. Use these portals to access the admin center:  
 
 - [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?LinkId=698854)
 - [Azure portal](https://portal.azure.com/)
 
-Microsoft Endpoint Manager is supported with the following web browsers: 
+Microsoft Intune is supported with the following web browsers: 
 
 - Microsoft Edge (latest version)
 - Safari (latest version, Mac only)

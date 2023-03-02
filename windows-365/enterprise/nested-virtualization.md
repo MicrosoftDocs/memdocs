@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 02/07/2023
+ms.date: 02/10/2023
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice:
@@ -25,7 +25,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; get-started
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- tier2
 ---
 
 # Set up virtualization-based workloads support
@@ -41,17 +43,10 @@ Virtualization-based workloads let customers use the following systems on their 
 
 To use virtualization-based workloads, the Cloud PC must meet these requirements:
 
-- 4vCPU Cloud PC (Downsizing to 2vCPU Cloud PCs will disable nested virtualization).
+- 4vCPU or higher Cloud PC (Downsizing to 2vCPU Cloud PCs will disable nested virtualization).
 - Be in one of the [supported regions](requirements.md?tabs=enterprise%2Cent#supported-azure-regions-for-cloud-pc-provisioning).
     - All regions are supported for 8vCPU.  
-    - For 4vCPU, the following regions aren't currently supported:
-        - Southeast Asia
-        - Central India
-        - Korea Central
-        - South Central US
-        - East US 2
-        - West US 2
-        - West US 3
+    - All regions are supported for 4vCPU. However, some users in certain regions might experience a decline in their 4vCPU Cloud PC performance when using nested virtualization. For more information on addressing such performance issues, see [Troubleshooting](troubleshooting.md#performance-decreases-with-nested-virtualization).
 
 ## Set up virtualization-based workloads
 
@@ -65,3 +60,5 @@ To set up a specific virtualization-based workloads system, see the following ar
 ## Next steps
 
 For more information about virtualization-based workloads, see [Run Hyper-V in a Virtual Machine with Nested Virtualization](/virtualization/hyper-v-on-windows/user-guide/nested-virtualization).
+
+If you experience any performance issues with nested virtualization, see [Troubleshooting](troubleshooting.md).
