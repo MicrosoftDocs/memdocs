@@ -1,9 +1,9 @@
 ---
 # required metadata
 
-title: Manage Specialized devices with Microsoft Intune
+title: Manage Specialty devices with Microsoft Intune
 titleSuffix: 
-description: This article provides information about specialized devices and how can you manage them with Microsoft Intune
+description: This article provides information about specialty devices and how can you manage them with Microsoft Intune
 keywords:
 author: Smritib17
 ms.author: smbhardwaj
@@ -30,15 +30,15 @@ ms.collection:
 - highpri
 ---
 
-# Manage Specialized devices with Microsoft Intune
+# Manage Specialty devices with Microsoft Intune
 
 [!INCLUDE [intune-add-on-note](../includes/intune-add-on-note.md)]
 
-The ability to manage specialized devices in Intune will require additional licensing with Microsoft  Intune add-ons. To learn more, see [Intune add-ons for Microsoft Intune](intune-add-ons.md)
+The ability to manage specialty devices in Intune will require additional licensing with Microsoft  Intune add-ons. To learn more, see [Intune add-ons for Microsoft Intune](intune-add-ons.md)
 
-## What are specialized devices in Intune  
+## What are specialty devices in Intune
 
-A device managed by Microsoft Intune is classified as a specialized device if it meets at least one of the following requirements:
+A device managed by Microsoft Intune is classified as a specialty device if it meets at least one of the following requirements:
 
 - Large smart screen devices, over 30” in size
 - AR/VR headsets
