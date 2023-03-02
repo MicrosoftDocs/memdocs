@@ -7,7 +7,7 @@ description: Step 4 to deploy device configuration profiles as part of the minim
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/08/2023
+ms.date: 03/01/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -116,7 +116,7 @@ For more information on these features, go to:
 
 ✔️ **Detect attacks and act on these threats**
 
-When you detect threats quickly, you can help minimize the impact of the threat. When you combine these policies with conditional access, you can block users and devices from accessing organization resources if a threat is detected.
+When you detect threats quickly, you can help minimize the impact of the threat. When you combine these policies with Conditional Access, you can block users and devices from accessing organization resources if a threat is detected.
 
 Your policy options:
 
@@ -442,7 +442,7 @@ Microsoft recommends the following level 2 security policies:
     - macOS
     - Windows
 
-  - **[Use the built-in administrative templates](../configuration/administrative-templates-windows.md)**, similar to configuring ADMX templates on-premises. You can use the settings catalog on the following platform:
+  - **[Use the built-in administrative templates](../configuration/administrative-templates-windows.md)**, similar to configuring ADMX templates on-premises. You can use the ADMX templates on the following platform:
 
     - Windows
 
@@ -479,13 +479,13 @@ This level expands on what you've configured in levels 1 and 2. It adds extra se
     - [Azure AD multi-factor authentication](/azure/active-directory/authentication/concept-mfa-howitworks)
     - [Require multi-factor authentication for Intune device enrollments](/enrollment/multi-factor-authentication.md)
 
-  - **Set up Microsoft Tunnel** for your Android and iOS/iPadOS devices. Microsoft Tunnel uses Linux to allow these devices access to on-premises resources using modern authentication and conditional access.
+  - **Set up Microsoft Tunnel** for your Android and iOS/iPadOS devices. Microsoft Tunnel uses Linux to allow these devices access to on-premises resources using modern authentication and Conditional Access.
 
     Microsoft Tunnel uses Intune, Azure AD, and Active Directory Federation Services (AD FS). For more information, go to [Microsoft Tunnel for Microsoft Intune](../protect/microsoft-tunnel-overview.md).
 
 - **Use Android Common Criteria mode** on Android devices that are used by highly sensitive organizations, like government establishments.
 
-  For more information on this setting, go to [Android Common Criteria mode](../configuration/device-restrictions-android-for-work.md#system-security).
+  For more information on this feature, go to [Android Common Criteria mode](../configuration/device-restrictions-android-for-work.md#system-security).
 
 - Create policies that **apply to the Windows firmware layer**. These policies can help prevent malware from communicating with the Windows OS processes.
 

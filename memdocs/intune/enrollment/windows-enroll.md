@@ -43,13 +43,13 @@ ms.collection:
 
 Simplify Windows enrollment for you and device users by enabling *automatic enrollment* in Microsoft Intune. This enrollment method enables devices to enroll automatically when they join or register in your Azure Active Directory. 
 
-Automatic enrollment can be used in the following onboarding and provisioning scenarios:
+Automatic enrollment can be used in the following device management and provisioning scenarios:
 
-* Bring-your-own-device  
+* Bring-your-own-device (BYOD), personal devices   
 * Bulk enrollment 
 * Group Policy
 * Windows Autopilot (user driven and self-deploying)
-* Co-management  
+* Co-management with Configuration Manager    
 
 This article describes how to enable MDM automatic enrollment for personal and corporate-owned devices.   
 
@@ -65,10 +65,10 @@ This article describes how to enable MDM automatic enrollment for personal and c
 
 The Microsoft Intune user-help docs provide conceptual information, tutorials, and how-to guides for employees and students setting up their devices for work. You can point people directly to the Intune docs, or use these articles as guidance when developing and updating your own device management docs.  
 
-Users on personal devices running Windows 11 or Windows 10 can automatically enroll by adding their work or school account on their device, or by using the Intune Company Portal app. Devices running earlier versions of Windows must enroll using the Intune Company Portal app.
-You can also let unlicensed admins sign in to the Intune admin center. For more information, see [Unlicensed admins](../fundamentals/unlicensed-admins.md).
+Users on personal devices running Windows 11 or Windows 10 can automatically enroll by adding their work or school account on their device, or by using the Intune Company Portal app. Devices running earlier versions of Windows must enroll using the Intune Company Portal app.  For more information, see [Enroll Windows 10/11 devices](../user-help/enroll-windows-10-device.md).  
 
-For more information, see [Enroll Windows 10/11 devices](../user-help/enroll-windows-10-device.md).    
+You can also let unlicensed admins sign in to the Intune admin center to help with troubleshooting and support. For more information, see [Unlicensed admins](../fundamentals/unlicensed-admins.md).  
+  
 
 ### Best practices and troubleshooting   
 

@@ -134,7 +134,7 @@ items:
       href: ./fundamentals/deployment-plan-protect-apps.md
     - name: Step 3 - Create compliance policies
       href: ./fundamentals/deployment-plan-compliance-policies.md
-    - name: Step 4 - Configure device features and settings
+    - name: Step 4 - Configure device features and security settings
       href: ./fundamentals/deployment-plan-configuration-profile.md
     - name: Step 5 - Enroll devices
       href: ./fundamentals/deployment-guide-enroll.md

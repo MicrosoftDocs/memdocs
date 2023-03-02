@@ -68,13 +68,17 @@ Although not required, configuring hybrid Azure AD join for AD FS enables a fast
 
 - The Intune Connector requires the [same endpoints as Intune](../intune/fundamentals/intune-endpoints.md).
 
-## Set up Windows automatic enrollment
+## Set up Windows automatic MDM enrollment
 
 1. Sign in to Azure, in the left pane, select **Azure Active Directory** > **Mobility (MDM and MAM)** > **Microsoft Intune**.
 
 2. Make sure users who deploy Azure AD-joined devices by using Intune and Windows are members of a group included in **MDM User scope**.
 
+<!-- Commenting out image since screenshot incorrectly shows the MDM user scope option set to None instead of Some or All
+
     ![The Mobility (MDM and MAM) Configure pane.](./media/windows-autopilot-hybrid/auto-enroll-scope.png)
+
+-->
 
 3. Use the default values in the **MDM Terms of use URL**, **MDM Discovery URL**, and **MDM Compliance URL** boxes, and then select **Save**.
 

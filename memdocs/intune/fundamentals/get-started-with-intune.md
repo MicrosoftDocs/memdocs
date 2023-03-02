@@ -2,12 +2,12 @@
 # required metadata
 
 title: Get started with Microsoft Intune
-description: See an overview of the steps to start using Intune. Plan your move and deployment of Intune, determine your licensing needs and any platform requirements, use compliance and conditional access, deploy apps, create device configuration profiles, and enroll your devices to be managed. Get more information on mobile application management for BYOD or personal devices.
+description: See an overview of the steps to start using Intune. Plan your move and deployment of Intune, determine your licensing needs and any platform requirements, use compliance and Conditional Access, deploy apps, create device configuration profiles, and enroll your devices to be managed. Get more information on mobile application management for BYOD or personal devices.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/31/2023
+ms.date: 03/01/2023
 ms.topic: overview
 ms.service: mem
 ms.subservice: fundamentals
@@ -41,12 +41,12 @@ This article provides an overview of the steps to start your Intune deployment, 
 
 - Step 1 - Set up Intune
 - Step 2 - Target apps for enrollment
-- Step 3 - Use compliance and conditional access
+- Step 3 - Use compliance and Conditional Access
 - Step 4 - Configure device features and settings
 - Step 5 - Enroll your devices to be managed
 - Cloud attach with Configuration Manager
 
-## Prerequisites
+## Before you begin
 
 - To help plan your Intune deployment, use the [Planning guide to move to Microsoft Intune](intune-planning-guide.md). It covers personal devices, licensing considerations, creating a rollout plan, communicating changes to your users, and more.
 
@@ -68,12 +68,12 @@ This article provides an overview of the steps to start your Intune deployment, 
   - **[Microsoft 365 apps](https://www.microsoft.com/licensing/product-licensing/microsoft-365-apps)**: Included with Microsoft 365 and is used for productivity apps, including Outlook and Teams.
   - **[Azure Active Directory (Azure AD)](https://www.microsoft.com/security/business/identity-access/azure-active-directory-pricing)**: Included with some Microsoft 365 subscriptions. Azure AD is used for the identity management for users, groups, and devices, which comes with your Intune and Microsoft 365 subscription.
 
-    Azure AD Premium, which might cost extra, gives you more features commonly used by organizations, including conditional access, multi factor authentication (MFA), and dynamic groups.
+    Azure AD Premium, which might cost extra, gives you more features commonly used by organizations, including Conditional Access, multi factor authentication (MFA), and dynamic groups.
 
   - **[Windows Autopilot](/mem/autopilot/licensing-requirements)**: Included with some Microsoft 365 subscriptions. Windows Autopilot gives you modern OS deployment for Windows 10/11 client devices.
   - **Platform specific prerequisites**: Depending on the platforms of your devices, there will probably be other requirements.
 
-    For example, if you manage iOS/iPadOS and macOS devices, you need an Apple MDM push certificate and possibly an Apple token. If you're managing Android devices, you may need a managed Google Play account. If you're using certificate authentication, you may need a SCEP or PKCS certificate.
+    For example, if you manage iOS/iPadOS and macOS devices, you need an Apple MDM push certificate and possibly an Apple token. If you manage Android devices, you may need a managed Google Play account. If you use certificate authentication, you may need a SCEP or PKCS certificate.
 
     For more information, go to:
 
@@ -117,28 +117,28 @@ If users with their own personal devices will access organization resources, the
 > - [How it works: Azure AD multi-factor authentication](/azure/active-directory/authentication/concept-mfa-howitworks)
 > - [Tutorial: Secure user sign-in events with Azure AD multi-factor authentication](/azure/active-directory/authentication/tutorial-enable-azure-mfa)
 
-## Step 3 - Check for compliance and turn on conditional access
+## Step 3 - Check for compliance and turn on Conditional Access
 
 In this step:
 
 ✔️ **Create a baseline of compliance policies** that all devices must have, and then assign these compliance policies during enrollment.
 
-✔️ **Enable conditional access** to enforce your compliance policies.
+✔️ **Enable Conditional Access** to enforce your compliance policies.
 
 For more specific information, go to [Step 3 – Plan for compliance policies](deployment-plan-compliance-policies.md).
 
-MDM solutions like Intune can set rules that devices should meet, and can report the compliance states of these rules. These rules are called compliance policies. When you combine compliance policies with conditional access, you can require devices meet certain security requirements before they can access your organization's data.
+MDM solutions like Intune can set rules that devices should meet, and can report the compliance states of these rules. These rules are called compliance policies. When you combine compliance policies with Conditional Access, you can require devices meet certain security requirements before they can access your organization's data.
 
 When users enroll their devices in Intune, the enrollment process can automatically deploy your compliance policies. When enrollment completes, admins can check the compliance status and get a list of devices that don't meet your rules.
 
 If you prefer, you can enroll your devices before checking compliance. It's your choice. At the next Intune check-in, the compliance policies are assigned.
 
 > [!NOTE]
-> Conditional access is a feature of Azure AD that must be enabled in your Azure AD tenant. Then, you can create conditional access policies for your user identities, apps, and devices. For more information, go to:
+> Conditional Access is a feature of Azure AD that must be enabled in your Azure AD tenant. Then, you can create Conditional Access policies for your user identities, apps, and devices. For more information, go to:
 >
-> - [Learn about conditional access and Intune](../protect/conditional-access.md)
-> - [App-based conditional access with Intune](../protect/app-based-conditional-access-intune.md)
-> - [Conditional access scenarios](../protect/conditional-access-intune-common-ways-use.md)
+> - [Learn about Conditional Access and Intune](../protect/conditional-access.md)
+> - [App-based Conditional Access with Intune](../protect/app-based-conditional-access-intune.md)
+> - [Conditional Access scenarios](../protect/conditional-access-intune-common-ways-use.md)
 
 ## Step 4 - Configure device features
 
@@ -148,9 +148,9 @@ In this step:
 
 For more specific information, go to [Step 4 - Create device configuration profiles to secure devices and access organization resources](deployment-plan-configuration-profile.md).
 
-Your organization may have a base set of device features that should be configured or should be blocked. These settings are added to device configuration profiles and then the profiles are assigned to your devices before users enroll. During enrollment, the device configuration profiles are automatically deployed. When enrollment completes, these device features are configured.
+Your organization may have a base set of device and security features that should be configured or should be blocked. These settings are added to device configuration and endpoint security profiles. It's recommended to assign key security and device configuration policies during enrollment. When enrollment starts, the device configuration profiles are automatically assigned. When enrollment completes, these device and security features are configured.
 
-If you prefer, you can enroll your devices before creating device configuration profiles. It's your choice. At the next Intune check-in, the profiles are assigned.
+If you prefer, you can enroll your devices before creating the configuration profiles. It's your choice. At the next Intune check-in, the profiles are assigned.
 
 In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can create different profiles based on your device platform - Android, iOS/iPadOS, macOS, and Windows.
 
@@ -170,7 +170,7 @@ In this step:
 
 For more specific information, go to [Step 5 - Deployment guidance: Enroll devices in Microsoft Intune](deployment-guide-enrollment.md).
 
-To fully manage devices, the devices must be enrolled in Intune to receive the compliance & conditional access policies, app policies, device configuration policies, and security policies you create. As an admin, you create enrollment policies for your users and devices. Each device platform (Android, iOS/iPadOS, macOS, Windows, and Linux) has different enrollment options. You choose what's best for your environment, your scenarios, and how your devices are used.
+To fully manage devices, the devices must be enrolled in Intune to receive the compliance & Conditional Access policies, app policies, device configuration policies, and security policies you create. As an admin, you create enrollment policies for your users and devices. Each device platform (Android, iOS/iPadOS, macOS, Windows, and Linux) has different enrollment options. You choose what's best for your environment, your scenarios, and how your devices are used.
 
 Depending on the enrollment option you choose, users can enroll themselves. Or, you can automate enrollment so users only need to sign in to the device with their organization account.
 
@@ -181,11 +181,11 @@ Different platforms have different enrollment requirements. The following articl
 - [What is device enrollment in Intune?](../enrollment/device-enrollment.md)
 - [Enrolled device management capabilities of Microsoft Intune](../enrollment/device-management-capabilities.md)
 - [Deployment guidance: Enroll devices in Microsoft Intune](deployment-guide-enrollment.md)
-- [Deployment guide: Enroll Android devices](deployment-guide-enrollment-android.md)
-- [Deployment guide: Enroll iOS/iPadOS devices](deployment-guide-enrollment-ios-ipados.md)
-- [Deployment guide: Enroll macOS devices](deployment-guide-enrollment-macos.md)
-- [Deployment guide: Enroll Windows devices](deployment-guide-enrollment-windows.md)
-- [Deployment guide: Enroll Linux desktop devices](deployment-guide-enrollment-linux.md)
+  - [Deployment guide: Enroll Android devices](deployment-guide-enrollment-android.md)
+  - [Deployment guide: Enroll iOS/iPadOS devices](deployment-guide-enrollment-ios-ipados.md)
+  - [Deployment guide: Enroll macOS devices](deployment-guide-enrollment-macos.md)
+  - [Deployment guide: Enroll Windows devices](deployment-guide-enrollment-windows.md)
+  - [Deployment guide: Enroll Linux desktop devices](deployment-guide-enrollment-linux.md)
 
 ## Cloud attach with Configuration Manager
 
@@ -193,9 +193,11 @@ Microsoft Configuration Manager helps protect on-premises Windows Server, device
 
 There are two steps to cloud attach your on-premises devices:
 
-1. [Tenant attach](/mem/configmgr/tenant-attach/prerequisites): Register your Intune tenant with your Configuration Manager deployment. Your Configuration Manager devices are shown in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). On these devices, you can run different actions, including installing apps and run Windows PowerShell scripts using the web-based admin center.
+1. [Tenant attach](/mem/configmgr/tenant-attach/prerequisites): Register your Intune tenant with your Configuration Manager deployment. Your Configuration Manager devices are shown in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). On these devices, you can run different actions, including installing apps and run Windows PowerShell scripts using the web-based Intune admin center.
 
-2. [Co-management](/mem/configmgr/comanage/overview): Manage Windows client devices with Configuration Manager and Microsoft Intune. Some workloads are managed by Configuration Manager, and some workloads are managed by Intune. For example, you can use Configuration Manager to manage Windows updates, and use Intune to manage conditional access policies.
+2. [Co-management](/mem/configmgr/comanage/overview): Manage Windows client devices with Configuration Manager and Microsoft Intune. Some workloads are managed by Configuration Manager, and some workloads are managed by Intune.
+
+    For example, you can use Configuration Manager to manage Windows updates, and use Intune to manage Conditional Access policies.
 
 If you currently use Configuration Manager, you get immediate value through tenant attach, and you get more value through co-management.
 

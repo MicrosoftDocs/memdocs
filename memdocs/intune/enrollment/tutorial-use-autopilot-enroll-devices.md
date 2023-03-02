@@ -58,7 +58,7 @@ To try this task, you must:
 
 ## Add devices
 
-The first step in setting up Windows Autopilot is to add the Windows devices to Intune. All you have to do is create a CSV file and import it into Intune.
+The first step in setting up Windows Autopilot is to add the Windows devices to Intune, which requires you to create a CSV file and import it to Intune.  
 
 1. In any text editor, create a list of comma-separated values (CSV) that identify the Windows devices. Use the following format:
     
