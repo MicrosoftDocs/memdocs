@@ -91,7 +91,7 @@ For more information, see CMG [Performance and scale](../../clients/manage/cmg/p
 - Each primary site supports up to 15 management points.  
 
     > [!TIP]  
-    > Don't install management points on servers that are across a slow link from the primary site server or the site database server.  
+    > Don't install management points on servers that are across a slow link from the primary site server or the site database server. If Management point is not in the same datacenter OR sometimes refer to as Fast link, you can experience latency on state and status messages. If you have requirement of having a remote management point, please consider using Secondary site instead. This will avoid backlog issues for state/status messages.
 
 - Each secondary site supports a single management point that must be installed on the secondary site server.  
 
