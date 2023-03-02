@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 02/28/2023
+ms.date: 03/02/2023
 ms.topic: reference
 ms.service: windows-365
 ms.subservice:
@@ -91,6 +91,13 @@ A new Azure Network Connection (ANC) option lets you add more ANCs to a provisio
 #### GCC/H support for geography option in Windows 365 provisioning policy<!-- 41400209-->
 
 The **Geography** setting in provisioning policies is now supported for US Government Community Cloud (GCC) and GCC High environments. For more information, see [Create provisioning policies](create-provisioning-policy.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Documentation
+
+#### New documentation article: Azure network connection domain credential life cycle
+
+We’ve published a new help documentation article. For more information, see [Azure network connection domain credential life cycle](azure-network-connection-domain-credential.md).
 
 <!-- ########################## -->
 ## Week of February 20, 2023
