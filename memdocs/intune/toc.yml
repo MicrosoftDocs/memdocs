@@ -496,7 +496,13 @@ items:
           - name: Migrate to the Defender for Endpoint app
             href: ./protect/microsoft-tunnel-migrate-app.md
           - name: Microsoft Tunnel for MAM
-            href: ./protect/microsoft-tunnel-mam.md     
+            items:
+            - name: Microsoft Tunnel for MAM Overview
+              href: ./protect/microsoft-tunnel-mam.md     
+            - name: MAM Tunnel for Android
+              href: ./protect/microsoft-tunnel-mam-android.md  
+            - name: MAM Tunnel for iOS
+              href: ./protect/microsoft-tunnel-mam-ios.md  
         - name: Identity protection
           items:
           - name: Windows Hello at device enrollment
