@@ -69,11 +69,11 @@ productDirectory:
       imageSrc: ./media/icons/deploy.svg
       links:
         - url: ./fundamentals/deployment-guide-intune-setup.md
-          text: "Migration guide: Set up or move to Intune"
+          text: "Migrate: Set up or move to Intune"
         - url: ./fundamentals/get-started-with-intune.md
-          text: "Deployment plan: Get started with your Intune deployment"
+          text: "Deploy: Steps to deploy Intune"
         - url: fundamentals/protection-configuration-levels.md
-          text: Levels of protection and configuration in Intune
+          text: Recommended levels of protection and configuration
 
     # Card
     - title: How-to guides
