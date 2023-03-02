@@ -59,7 +59,7 @@ The functionality is similar to one already present in the Configuration Manager
 To save your query, select the **Save** option after typing in your query. You can customise the name and tags for your query. 
 You can view all your saved favorite queries, under the **Favorites** folder on the left panel, along with all other CMPivot entities.
 
-:::image type="content" source="media/16702226-cmpivot-favorites" alt-text="Favorite queries folder on the left panel, above all CMPivot entities folder" lightbox="media/16702226-cmpivot-favorites":::
+:::image type="content" source="media/16702226-cmpivot-favorites.png" alt-text="Favorite queries folder on the left panel, above all CMPivot entities folder" lightbox="media/16702226-cmpivot-favorites.png":::
 
 ## Close CMPivot
 
