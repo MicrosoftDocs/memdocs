@@ -23,8 +23,9 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: 
 ms.collection: 
-  - M365-identity-device-management 
-  - highpri
+- M365-identity-device-management 
+- highpri
+- tier1
 ---
 <!-- >
 # Configure compliance policies

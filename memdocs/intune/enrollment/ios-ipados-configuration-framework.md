@@ -54,7 +54,7 @@ iOS/iPadOS supports several enrollment scenarios, two of which are covered as pa
 
 [!INCLUDE [framework methodology](../includes/framework-deployment-methodology.md)]
 
-When testing changes to iOS/iPadOS devices, be aware of the [delivery timing](../configuration/device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned). The status of compliance policies for devices can be monitored. For more information, see [Monitor Intune device compliance policies](../protect/compliance-policy-monitor.md) and [Monitor device profiles in Microsoft Intune](../configuration/device-profile-monitor.md). 
+When testing changes to iOS/iPadOS devices, be aware of the [delivery timing](../configuration/device-profile-troubleshoot.md#policy-refresh-intervals). The status of compliance policies for devices can be monitored. For more information, see [Monitor Intune device compliance policies](../protect/compliance-policy-monitor.md) and [Monitor device profiles in Microsoft Intune](../configuration/device-profile-monitor.md). 
 
 ## Next steps  
 

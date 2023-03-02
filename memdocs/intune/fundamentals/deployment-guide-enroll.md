@@ -24,9 +24,10 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom:
 ms.collection: 
-  - M365-identity-device-management
-  - highpri
-  - highseo
+- M365-identity-device-management
+- highpri
+- highseo
+- tier1
 ---
 
 # Step 5 – Enroll devices in Microsoft Intune

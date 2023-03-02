@@ -27,7 +27,7 @@ ms.custom: intune-azure; get-started
 ms.collection:
 - tier2
 - M365-identity-device-management
-  - highseo
+- highseo
 ---
 
 # What's new in Microsoft Intune

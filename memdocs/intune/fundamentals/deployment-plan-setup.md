@@ -23,8 +23,9 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: 
 ms.collection: 
-  - M365-identity-device-management 
-  - highpri
+- M365-identity-device-management 
+- highpri
+- tier1
 ---
 
 # Step 1: Set up Microsoft Intune
@@ -40,15 +41,16 @@ This article applies to:
 - Windows
 
 ## Prerequisites
+
 Before you begin setting up Microsoft Intune, review the [Planning guide](intune-planning-guide.md). Use this guide to plan your move or migration to Intune.  
-The planning guide also,
- - Lists and describes some common objectives for device management
- - Lists potential licensing needs
- - Provides guidance on handling personally owned devices
- - Recommends reviewing current policies and infrastructure
- - Gives examples of creating a rollout plan
- - And more
- 
+The planning guide also includes the following:
+
+- Lists and describes some common objectives for device management
+- Lists potential licensing needs
+- Provides guidance on handling personally owned devices
+- Recommends reviewing current policies and infrastructure
+- Gives examples of creating a rollout plan
+- And more
 
 ## 1 - Review the Supported Configurations
 

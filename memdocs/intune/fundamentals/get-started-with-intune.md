@@ -24,8 +24,8 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: 
-  - get-started
-  - intro-get-started
+- get-started
+- intro-get-started
 ms.collection:
 - tier1
 - M365-identity-device-management
