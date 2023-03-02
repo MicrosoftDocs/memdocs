@@ -104,7 +104,7 @@ For more information about the tenant attach scenario, see [Enable tenant attach
 3. On the **Tenant onboarding** page, select **AzurePublicCloud** for your environment. Azure Government cloud isn't supported.
    1. Click **Sign In**. Use your *Global Administrator* account to sign in.
 
-   2. Ensure the option **Upload to Microsoft Endpoint Manager admin center** is selected on the **Tenant onboarding** page.
+   2. Ensure the option **Upload to Microsoft Intune admin center** is selected on the **Tenant onboarding** page.
 
    3. Remove the check from **Enable automatic client enrollment for co-management**.
 
@@ -132,7 +132,7 @@ For more information about the tenant attach scenario, see [Enable tenant attach
 
 2. Right-click your co-management settings and select **Properties**.
 
-3. In the **Configure upload** tab, select **Upload to Microsoft Endpoint Manager admin center**. Click **Apply**.
+3. In the **Configure upload** tab, select **Upload to Microsoft Intune admin center**. Click **Apply**.
 
    The default setting for device upload is **All my devices managed by Microsoft Endpoint Configuration Manager**. You can also choose to limit your configuration to one or few device collections.
 
@@ -156,7 +156,7 @@ When tenant attach is configured, you can select devices to sync. If you haven't
 
 2. Right-click your co-management settings and select **Properties**.
 
-3. In the **Configure upload** tab, select **Upload to Microsoft Endpoint Manager admin center**. Click **Apply**.
+3. In the **Configure upload** tab, select **Upload to Microsoft Intune admin center**. Click **Apply**.
 
    The default setting for device upload is **All my devices managed by Microsoft Endpoint Configuration Manager**. You can also choose to limit your configuration to one or few device collections.
 

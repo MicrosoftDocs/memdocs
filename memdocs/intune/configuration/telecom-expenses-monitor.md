@@ -69,7 +69,7 @@ Intune integrates with the following telecom expense management provider:
 
 ## Deploy the Intune and Datalert solution
 
-### Step 1: Connect the Datalert service to Intune
+### Step 1 - Connect the Datalert service to Intune
 
 1. Sign in to the Datalert management console with administrator credentials.
 
@@ -109,7 +109,7 @@ Intune integrates with the following telecom expense management provider:
 
     :::image type="content" source="./media/telecom-expenses-monitor/tem-datalert-mdm-profiles.png" alt-text="[A screenshot that shows the Datalert page with the MDM Profiles management status with a successfull connection." lightbox="./media/telecom-expenses-monitor/tem-datalert-mdm-profiles.png":::
 
-### Step 2: Confirm telecom expense management is active in Intune
+### Step 2 - Confirm telecom expense management is active in Intune
 
 After you complete Step 1, your connection is automatically enabled. In Intune, the connection status shows **Active**. To confirm the status is active, use the following steps:
 
@@ -119,7 +119,7 @@ After you complete Step 1, your connection is automatically enabled. In Intune, 
 
     :::image type="content" source="./media/telecom-expenses-monitor/tem-azure-portal-enable-service.png" alt-text="[A screenshot that shows Microsoft Intune with a successful and active connection status with Datalert in the Intune admin center." lightbox="./media/telecom-expenses-monitor/tem-azure-portal-enable-service.png":::
 
-### Step 3: Deploy the Datalert app to devices
+### Step 3 - Deploy the Datalert app to devices
 
 To confirm that data usage from only organization-owned lines is collected, be sure to:
 
@@ -168,7 +168,7 @@ The following steps add the Datalert app. As an example, iOS/iPadOS is used. [Ad
 
     :::image type="content" source="./media/telecom-expenses-monitor/tem-assign-datalert-app-to-device-group.png" alt-text="[A screenshot that shows how to add an app policy in Microsoft Intune." lightbox="./media/telecom-expenses-monitor/tem-assign-datalert-app-to-device-group.png":::
 
-### Step 4: Add organization phone lines to the Datalert console
+### Step 4 - Add organization phone lines to the Datalert console
 
 Intune and Datalert services are now configured to communicate with each other. Next, add your organization paid phone lines to the Datalert console. Enter thresholds and actions for any cellular or roaming usage violations. You can manually add corporate paid phone lines to the Datalert console, or automatically add them after the device is enrolled in Intune.
 
