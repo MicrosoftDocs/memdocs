@@ -57,7 +57,9 @@ Save your frequently used queries to a **Favorites** folder in CMPivot to keep a
 The functionality is similar to one already present in the Configuration Manager console. The queries saved in the Configuration Manager console will not automatically be added to your **Favorites** folder. You will need to create new queries and add them to this folder.
 
 To save your query, select the **Save** option after typing in your query. You can customise the name and tags for your query. 
-You can view all your saved favorite queries, under the **Favorites** tab on the left panel, along with all other CMPivot entities. 
+You can view all your saved favorite queries, under the **Favorites** folder on the left panel, along with all other CMPivot entities.
+
+:::image type="content" source="media/16702226-cmpivot-favorites" alt-text="Favorite queries folder on the left panel, above all CMPivot entities folder" lightbox="media/16702226-cmpivot-favorites":::
 
 ## Close CMPivot
 
