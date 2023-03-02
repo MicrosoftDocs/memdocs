@@ -46,7 +46,7 @@ You can protect access and data on organization-owned and users personal devices
 This article lists some features and benefits of Microsoft Intune.
 
 > [!TIP]
-> 
+>
 > - To get Intune, go to [Licenses available for Microsoft Intune](licenses.md) and [Intune 30-day trial](free-trial-sign-up.md).
 > - For more information on what it means to be cloud-native, go to [Learn more about cloud-native endpoints](../../solutions/cloud-native-endpoints/cloud-native-endpoints-overview.md).
 
