@@ -93,11 +93,6 @@ Applies to:
 
 ## Device management
 
-### View ServiceNow Incidents in the Intune Troubleshooting workspace<!-- 12508062  -->  
-You'll soon be able to view a list of ServiceNow incidents associated with the user you've selected in the Intune Troubleshooting workspace. This new feature will be available under **Troubleshooting + Support** > select a user > **ServiceNow Incidents**. The list of incidents shown have a direct link back to the source incident and show key information from the incident. All incidents listed will link the "Caller" identified in the incident with the user selected for Troubleshooting.
-
-For more information go to [Use the troubleshooting portal to help users at your company](help-desk-operators.md).
-
 ### On-demand proactive remediation for a Windows device<!-- 14783338  -->  
 A new device action that is in public preview allows you to run a proactive remediation on-demand to a single Windows device. The **Run** remediation device action will allow you to resolve issues without having to wait for a proactive remediation to run on its assigned schedule. You will also be able to view the status of proactive remediations under **Remediations** in the **Monitor** section of a device.
 

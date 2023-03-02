@@ -400,11 +400,6 @@ Tunnel site settings for **Public IP address or FQDN** require a publicly resolv
  
 **Work around**: Use a certificate that includes a publicly resolvable FQDN in the subject name. Don't use a certificate that includes an IP address in the subject name.
 
-### Proxy Configuration
-
-If you enter a DNS hostname for the location of the PAC file or proxy server address, then a publicly resolvable hostname is required. Also, any proxy hostnames included in the PAC file need to be publicly resolvable.
-**Work around**: Use the IP address of the DNS hostname for the related PAC file locations and proxy servers.
-
 ### Newly created custom app not showing in UX
 
 When you create a custom app configuration policy, the newly added app may not appear in the list of targeted apps or the list of available custom apps. 
