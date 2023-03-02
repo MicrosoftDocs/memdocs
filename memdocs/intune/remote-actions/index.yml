@@ -1,0 +1,100 @@
+### YamlMime:Landing
+
+title: Remotely run device actions with Intune
+summary: Intune gives admins the ability to remotely run device actions. By using these remote actions from the Intune admin center, you can restart devices, reset passcodes, locate lost or stolen devices, and more.
+metadata:
+  title: Remotely run device actions with Intune
+  description: Intune lets you run actions remotely.
+  services: service
+  ms.service: microsoft-intune
+  ms.subservice: remote-actions
+  ms.topic: landing-page 
+  ms.collection:
+  - tier2
+  - collection
+  - highpri
+  author: Smritib17
+  ms.author: smbhardwaj
+  ms.date: 09/13/2019  
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | whats-new
+
+landingContent:
+# Cards and links should be based on top customer tasks or top subjects
+# Start card title with a verb
+  # Card (optional)
+  - title: Remotely run device actions
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Device management overview
+            url: device-management.md
+      - linkListType: how-to-guide
+        links:
+          - text: Rename device
+            url: device-rename.md
+          - text: See device details
+            url: device-inventory.md
+          - text: Send custom notifications to devices
+            url: custom-notifications.md
+          - text: Synchronize device
+            url: device-sync.md
+          - text: Collect diagnostics
+            url: collect-diagnostics.md
+          - text: Remotely administer devices with TeamViewer
+            url: teamviewer-support.md
+          - text: Use bulk device actions
+            url: bulk-device-actions.md
+
+  # Card (optional)
+  - title: Remove and restart
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Remove, wipe, retire, unenroll
+            url: devices-wipe.md
+          - text: Windows Fresh Start
+            url: device-fresh-start.md
+          - text: Restart device
+            url: device-restart.md
+
+  - title: User actions
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Sign out user
+            url: device-logout-user.md
+          - text: Find primary user
+            url: find-primary-user.md
+          - text: Remove user
+            url: device-remove-user.md
+
+# Card (optional)
+  - title: Locks and passwords
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Lock device
+            url: device-remote-lock.md
+          - text: Reset device passcode
+            url: device-passcode-reset.md
+          - text: Windows 10 PIN reset
+            url: device-lost-mode.md
+
+  # Card (optional)
+  - title: Apple device actions
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Locate iOS/iPadOS devices
+            url: device-locate.md
+          - text: Turn on iOS/iPadOS supervised mode
+            url: device-supervised-mode.md
+          - text: Turn on iOS/iPadOS lost mode
+            url: device-lost-mode.md
+          - text: Shutdown macOS and iOS/iPadOS devices
+            url: device-shutdown.md
+          - text: Erase data from macOS device
+            url: device-erase.md
+          - text: Disable Activation Lock
+            url: device-activation-lock-disable.md
