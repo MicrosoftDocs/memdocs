@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/10/2022
+ms.date: 01/31/2023
 ms.topic: tutorial
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -32,16 +32,16 @@ ms.collection:
 #Customer intent: As an administrator, I want learn and use ADMX templates in the cloud so that I can control and manage Office, Windows, and Microsoft Edge settings on Windows 10/11 devices.
 ---
 
-# Tutorial: Use the cloud to configure group policy on Windows 10/11 devices with ADMX templates and Microsoft Intune
+# Walkthrough: Use the cloud to configure group policy on Windows 10/11 devices with ADMX templates and Microsoft Intune
 
 > [!NOTE]
-> This tutorial was created as a technical workshop for Microsoft Ignite. It has more prerequisites than typical tutorials, as it compares using and configuring ADMX policies in Intune and on-premises.
+> This walkthrough was created as a technical workshop for Microsoft Ignite. It has more prerequisites than typical walkthroughs, as it compares using and configuring ADMX policies in Intune and on-premises.
 
 Group policy administrative templates, also known as ADMX templates, include settings you can configure on Windows client devices, including PCs. The ADMX template settings are available by different services. These settings are used by Mobile Device Management (MDM) providers, including Microsoft Intune. For example, you can turn on Design Ideas in PowerPoint, set a home page in Microsoft Edge, block ActiveX controls in Internet Explorer, and more.
 
 ADMX templates are available for the following services:
 
-- **Microsoft Edge**: Download at [Microsoft Edge policy file](https://www.microsoftedgeinsider.com/en-us/enterprise).
+- **Microsoft Edge**: Download at [Microsoft Edge policy file](https://www.microsoftedgeinsider.com/enterprise).
 - **Office**: Download at [Microsoft 365 Apps, Office 2019, and Office 2016](https://www.microsoft.com/download/details.aspx?id=49030).
 - **Windows**: Built in to the Windows client OS.
 
@@ -49,13 +49,14 @@ For more information on ADMX policies, see [Understanding ADMX-backed policies](
 
 These templates are built in to Microsoft Intune, and are available as **Administrative templates** profiles. In this profile, you configure the settings you want to include, and then "assign" this profile to your devices.
 
-In this tutorial, you will:
+In this walkthrough, you will:
 
 > [!div class="checklist"]
-> * Get introduced to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-> * Create user groups and create device groups.
-> * Compare the settings in Intune with on-premises ADMX settings.
-> * Create different administrative templates, and configure the settings that target the different groups.
+>
+> - Get introduced to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+> - Create user groups and create device groups.
+> - Compare the settings in Intune with on-premises ADMX settings.
+> - Create different administrative templates, and configure the settings that target the different groups.
 
 By the end of this lab, you'll have the skills to start using Intune and Microsoft 365 to manage your users, and deploy administrative templates.
 
@@ -82,9 +83,9 @@ This feature applies to:
   1. Copy the following Office and Microsoft Edge templates to the [Central Store (sysvol folder)](https://support.microsoft.com/help/3087759/how-to-create-and-manage-the-central-store-for-group-policy-administra):
 
       - [Office administrative templates](https://www.microsoft.com/download/details.aspx?id=49030)
-      - [Microsoft Edge administrative templates > Policy file](https://www.microsoftedgeinsider.com/en-us/enterprise)
+      - [Microsoft Edge administrative templates > Policy file](https://www.microsoftedgeinsider.com/enterprise)
 
-  2. Create a group policy to push these templates to a Windows 10/11 Enterprise administrator computer in the same domain as the DC. In this tutorial:
+  2. Create a group policy to push these templates to a Windows 10/11 Enterprise administrator computer in the same domain as the DC. In this walkthrough:
 
       - The group policy we created with these templates is called **OfficeandEdge**. You'll see this name in the images.
       - The Windows 10/11 Enterprise administrator computer we use is called the **Admin computer**.
@@ -138,7 +139,7 @@ In Intune, policies are applied to users and groups you create. There isn't a hi
 - If two compliance policies are in conflict, then the most restrictive policy applies.
 - If two configuration profiles are in conflict, then the setting isn't applied.
 
-For more information, see [Common questions, issues, and resolutions with device policies and profiles](device-profile-troubleshoot.md#if-multiple-policies-are-assigned-to-the-same-user-or-device-how-do-i-know-which-settings-gets-applied).
+For more information, see [Common questions, issues, and resolutions with device policies and profiles](device-profile-troubleshoot.md#compliance-and-device-configuration-policies-that-conflict).
 
 In these next steps, you create security groups, and add users to these groups. You can add a user to multiple groups. For example, it's normal for a user to have multiple devices, such as a Surface Pro for work, and an Android mobile device for personal. And, it's normal for a person to access organizational resources from these multiple devices.
 
@@ -152,7 +153,7 @@ In these next steps, you create security groups, and add users to these groups. 
 
 3. Select **Members**, and add some devices.
 
-    Adding devices is optional. The goal is to practice creating groups, and knowing how to add devices. If you're using this tutorial in a production environment, then be aware of what you're doing.
+    Adding devices is optional. The goal is to practice creating groups, and knowing how to add devices. If you're using this walkthrough in a production environment, then be aware of what you're doing.
 
 4. **Select** > **Create** to save your changes.
 
@@ -173,7 +174,7 @@ In these next steps, you create security groups, and add users to these groups. 
 
             :::image type="content" source="./media/tutorial-walkthrough-administrative-templates/dynamic-group-query.png" alt-text="Screenshot that shows how to create a dynamic query, and add expressions in a Microsoft Intune administrative template.":::
 
-            When users or devices meet the criteria you enter, they're automatically added to the dynamic groups. In this example, devices are automatically added to this group when the operating system is Windows. If you're using this tutorial in a production environment, then be careful. The goal is to practice creating dynamic groups.
+            When users or devices meet the criteria you enter, they're automatically added to the dynamic groups. In this example, devices are automatically added to this group when the operating system is Windows. If you're using this walkthrough in a production environment, then be careful. The goal is to practice creating dynamic groups.
 
         2. **Save** > **Create** to save your changes.
 
@@ -190,7 +191,7 @@ In these next steps, you create security groups, and add users to these groups. 
 
         1. Select **Add expression**. Your expression is shown in the **Rule syntax**.
 
-            When users or devices meet the criteria you enter, they're automatically added to the dynamic groups. In this example, users are automatically added to this group when their department is Teachers. You can enter the department and other properties when users are added to your organization. If you're using this tutorial in a production environment, then be careful. The goal is to practice creating dynamic groups.
+            When users or devices meet the criteria you enter, they're automatically added to the dynamic groups. In this example, users are automatically added to this group when their department is Teachers. You can enter the department and other properties when users are added to your organization. If you're using this walkthrough in a production environment, then be careful. The goal is to practice creating dynamic groups.
 
         2. **Save** > **Create** to save your changes.
 
@@ -366,11 +367,11 @@ In this template, we configure some Internet Explorer settings to lock down devi
 
 2. A list of existing users and groups is shown. Select the **All Windows 10 student devices** group you created earlier > **Select**.
 
-    If you're using this tutorial in a production environment, then consider adding groups that are empty. The goal is to practice assigning your template.
+    If you're using this walkthrough in a production environment, then consider adding groups that are empty. The goal is to practice assigning your template.
 
 3. Select **Next**. In **Review + create**, select **Create** to save your changes.
 
-As soon as the profile is saved, it applies to the devices when they check in with Intune. If the devices are connected to the internet, it can happen immediately. For more information on policy refresh times, see [How long does it take for devices to get a policy, profile, or app](device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned).
+As soon as the profile is saved, it applies to the devices when they check in with Intune. If the devices are connected to the internet, it can happen immediately. For more information on policy refresh times, see [How long does it take for devices to get a policy, profile, or app](device-profile-troubleshoot.md#policy-refresh-intervals).
 
 When assigning strict or restrictive policies and profiles, don't lock yourself out. Consider creating a group that's excluded from your policies and profiles. The idea is to have access to troubleshoot. Monitor this group to confirm it's being used as intended.
 
@@ -422,7 +423,7 @@ For more information on OneDrive client settings, see [Use Group Policy to contr
 1. In your template, select **Next** until you get to **Assignments**. Choose **Select groups to include**:
 2. A list of existing users and groups is shown. Select the **All Windows devices** group you created earlier > **Select**.
 
-    If you're using this tutorial in a production environment, then consider adding groups that are empty. The goal is to practice assigning your template.
+    If you're using this walkthrough in a production environment, then consider adding groups that are empty. The goal is to practice assigning your template.
 
 3. Select **Next**. In **Review + create**, select **Create** to save your changes.
 
@@ -446,7 +447,7 @@ This section uses the following resources. We'll install these resources in this
 
     1. Enter: `get-ExecutionPolicy`
 
-        Write down what it's set to, which may **Restricted**. When finished with the tutorial, set it back to its original value.
+        Write down what it's set to, which may **Restricted**. When finished with the walkthrough, set it back to its original value.
 
     2. Enter: `Set-ExecutionPolicy -ExecutionPolicy Unrestricted`
 

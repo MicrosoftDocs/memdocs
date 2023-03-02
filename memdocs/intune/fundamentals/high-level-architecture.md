@@ -28,6 +28,7 @@ search.appverid: MET150
 ms.collection:
 - tier2
 - M365-identity-device-management
+- triage
 ---
 # High-level architecture for Microsoft Intune
 This reference architecture shows options for integrating Microsoft Intune in your Azure environment with Azure Active Directory.  

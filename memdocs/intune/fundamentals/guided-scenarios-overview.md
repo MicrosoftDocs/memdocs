@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/16/2021
+ms.date: 01/09/2023
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -22,7 +22,7 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Intune guided scenarios overview 
+# Intune guided scenarios overview
 
 A guided scenario is a customized series of steps centered around one end-to-end use-case. Common scenarios are based on the role an admin, user, or device plays in your organization. These roles typically require a collection of carefully orchestrated profiles, settings, applications, and security controls. The goal is to provide the best user experience and security.
 
@@ -30,18 +30,18 @@ If you're not familiar with the steps and resources to implement a particular sc
 
 Guided scenarios aren't a different management space from Intune's normal workflows. These workflows are used with Intune's existing workflows for profiles, apps, and policies. Upon completing a guided scenario, all future management of the scenario must take place in the existing menus for policies, apps, and profiles. A guided scenario doesn't save a "guided scenario" resource type, or track future changes made to the resources. Every resource created by a guided scenario shows in its respective workload. All options, even those options omitted in the guided scenario, are available for editing in the existing menus.
 
-## Types of guided scenarios 
+## Types of guided scenarios
 
 For simplicity, all guided scenarios omit scoping features, such as scope tags, exclusion groups, and virtual group assignments. All resources created by a guided scenario inherit every scope tag of the admin that completes the scenario. Some scenarios offer some customization for common settings to cover closely related scenarios. These scenarios support group assignment to inclusion groups only. For other guided scenarios, the entire scenario guarantees one consistent experience by offering no customization and automatically generates a new group to receive all assignments. Once the guided scenario completes, you can use more assignment features directly through existing policy, app, and profile workloads.
 
 The following guided scenarios are available:
 
-- [Deploy Microsoft Edge for mobile](guided-scenarios-edge.md)
-- [Try out a cloud managed PC](guided-scenarios-cloud-managed-pc.md)
-- [Secure Microsoft Office for mobile](guided-scenarios-office-mobile.md)
-- [Windows 10/11 in cloud configuration](cloud-configuration.md)
+- [Secure Office apps for mobile](guided-scenarios-office-mobile.md)
+- [Deploy Edge for mobile](guided-scenarios-edge.md)
+- [Set up a test device to try out cloud management](guided-scenarios-cloud-managed-pc.md)
+- [Deploy Windows 10 and later in cloud configuration](cloud-configuration.md)
 
-## Guided scenario functionality 
+## Guided scenario functionality
 
 Guided scenarios offer specific functionality. The following details help explain what you can and can't do while following a guided scenario.
 
@@ -62,15 +62,15 @@ The next step is to deploy the scenario. Deploying a scenario creates and saves 
 
 If there's an error deploying the scenario, all changes are reverted.
 
-### Editing 
+### Editing
 
 Guided scenarios can't be used to edit existing resources. Once created, all resources, groups, and assignments must be edited using the existing workloads.
 
-### Monitoring 
+### Monitoring
 
 Guided scenarios can't be used to monitor existing resources apart from the initial creation process. Once created, all resources, groups, and assignments must be monitored using the existing workloads.
 
-### Retiring 
+### Retiring
 
 Guided scenarios can't be used to retire existing resources. Once created, all resources, groups, and assignments must be retired using the existing workloads.
 
