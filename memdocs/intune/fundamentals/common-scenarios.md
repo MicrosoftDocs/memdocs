@@ -26,7 +26,7 @@ ms.custom: intune-classic; get-started
 ms.collection:
 - tier1
 - M365-identity-device-management
-  - highpri
+- highpri
 ---
 
 # Common ways to use Microsoft Intune

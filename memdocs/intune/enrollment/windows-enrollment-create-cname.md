@@ -27,12 +27,14 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection:
-  - M365-identity-device-management
-  - highpri
+- M365-identity-device-management
+- highpri
+- tier1
 ---
 
-# Enable auto-discovery of Intune enrollment server     
-*Applies to Windows 10, Windows 11*  
+# Enable auto-discovery of Intune enrollment server
+
+*Applies to Windows 10, Windows 11*
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]  
 

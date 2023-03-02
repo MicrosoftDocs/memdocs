@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Network endpoints for US government deployments - Microsoft Intune
-titleSuffix: 
+title: Network endpoints for US government deployments
+titleSuffix: Microsoft Intune
 description: Review US government endpoints for Intune.
 keywords:
 author: Smritib17

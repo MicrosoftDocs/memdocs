@@ -27,7 +27,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier1
 - M365-identity-device-management
-  - highpri
+- highpri
 ---
 
 # Add groups to organize users and devices
