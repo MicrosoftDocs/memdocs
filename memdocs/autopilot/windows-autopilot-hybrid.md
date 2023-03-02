@@ -146,7 +146,7 @@ Before beginning the installation, make sure that all of the [Intune connector s
 
 4. Open the downloaded Connector setup file, *ODJConnectorBootstrapper.exe*, to install the Connector.
 
-5. At the end of the setup, select **Configure**.
+5. At the end of the setup, select **Configure Now**.
 
 6. Select **Sign In**.
 
