@@ -1383,7 +1383,7 @@ items:
     - name: Windows Holographic platform guide
       href: ./fundamentals/windows-holographic-for-business.md
     - name: Manage specialty devices with Intune
-      href: ./fundamentals/specialty-devices.md
+      href: ./fundamentals/specialty-devices-with-intune.md
     - name: Microsoft Surface Management Portal
       href: ./fundamentals/surface-management-portal.md
 
