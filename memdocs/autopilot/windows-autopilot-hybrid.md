@@ -133,7 +133,12 @@ Before beginning the installation, make sure that all of the [Intune connector s
 
 ### Install steps
 
-1. Turn off IE Enhanced Security Configuration. By default Windows Server has Internet Explorer Enhanced Security Configuration turned on. If you're unable to sign in to the Intune Connector for Active Directory, then turn off IE Enhanced Security Configuration for the Administrator. [How to turn off Internet Explorer enhanced security configuration](/archive/blogs/chenley/how-to-turn-off-internet-explorer-enhanced-security-configuration).
+1. Turn off Internet Explorer Enhanced Security Configuration. By default Windows Server has Internet Explorer Enhanced Security Configuration turned on. If you're unable to sign in to the Intune Connector for Active Directory, then turn off Internet Explorer Enhanced Security Configuration for the Administrator.  To turn off Internet Explorer Enhanced Security Configuration:
+
+   1. On the server where the Intune Connector will be installed, open **Server Manager**.
+   2. In the left pane of Server Manager, select **Local Server**.
+   3. In the right **PROPERTIES** pane of Server Manager, select the **On** or **Off** link next to **IE Enhanced Security Configuration**.
+   4. In the **Internet Explorer Enhanced Security Configuration** window, select **Off** under **Administrators:**, and then select **OK**.
 
 2. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows** > **Windows enrollment** > **Intune Connector for Active Directory** > **Add**.
 
@@ -141,7 +146,7 @@ Before beginning the installation, make sure that all of the [Intune connector s
 
 4. Open the downloaded Connector setup file, *ODJConnectorBootstrapper.exe*, to install the Connector.
 
-5. At the end of the setup, select **Configure**.
+5. At the end of the setup, select **Configure Now**.
 
 6. Select **Sign In**.
 
@@ -160,7 +165,7 @@ After installing the Intune Connector, it will start logging in the **Event View
 
 > [!NOTE]
 >
-> The Intune Connector originally logged in the **Event Viewer** directly under **Applications and Services Logs** in a log called **ODJ Connector Service**. However, logging for the Intune Connector has since moved to the path **Applications and Services Logs** > **Microsoft** > **Intune** > **ODJConnectorService**. If you find that the **ODJ Connector Service** log at the original location is empty or not updating, please check the new path location instead.
+> The Intune Connector originally logged in the **Event Viewer** directly under **Applications and Services Logs** in a log called **ODJ Connector Service**. However, logging for the Intune Connector has since moved to the path **Applications and Services Logs** > **Microsoft** > **Intune** > **ODJConnectorService**. If you find that the **ODJ Connector Service** log at the original location is empty or not updating, check the new path location instead.
 
 ### Configure web proxy settings
 
