@@ -367,10 +367,6 @@ additionalContent:
     - title: Related services
       items:
         # Card
-        - title: Windows Autopatch docs
-          summary: Windows Autopatch is a cloud service that automates Windows, Microsoft 365 Apps for enterprise, Microsoft Edge, and Microsoft Teams updates to improve security and productivity across your organization.
-          url: /windows/deployment/windows-autopatch/
-        # Card
         - title: Azure Active Directory
           summary: Azure Active Directory (Azure AD) is a cloud-based identity and access management service.
           url: /azure/active-directory/
@@ -382,6 +378,10 @@ additionalContent:
         - title: Windows 365 docs
           summary: Windows 365 is a cloud-based service that automatically creates a new type of Windows virtual machine (Cloud PCs) for your end users. 
           url: /windows-365/
+        # Card
+        - title: Windows Autopatch docs
+          summary: Windows Autopatch is a cloud service that automates Windows, Microsoft 365 Apps for enterprise, Microsoft Edge, and Microsoft Teams updates to improve security and productivity across your organization.
+          url: /windows/deployment/windows-autopatch/
         # Card
         - title: Microsoft Defender for Endpoint
           summary: Microsoft Defender for Endpoint delivers preventative protection, post-breach detection, automated investigation, and response.
