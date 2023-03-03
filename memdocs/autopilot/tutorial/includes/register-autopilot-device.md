@@ -9,7 +9,7 @@ ms.date: 02/23/2023
 ms.localizationpriority: medium
 ---
 
-Before a device can use Autopilot, it must be registered as an Autopilot device. Registering a devices as an Autopilot device can be thought of as importing the device into Autopilot so that Autopilot can be used on the device. It does not mean that the device has ever used the Autopilot service. It just makes the Autopilot service available to the device.
+Before a device can use Autopilot, the device must be registered as an Autopilot device. Registering a device as an Autopilot device can be thought of as importing the device into Autopilot so that Autopilot can be used on the device. Registering a device as an Autopilot device doesn't mean that the device has ever used the Autopilot service. It just makes the Autopilot service available to the device.
 
 Also note that a device registered in Autopilot doesn't mean the device is enrolled in Intune. A device may be registered as an Autopilot device but may not exist in Intune. It's not until an Autopilot registered device goes through the Autopilot process for the first time that it becomes enrolled in Intune. After the Autopilot device undergoes the Autopilot process and enrolls in Intune, the Autopilot device subsequently appears as a device in both Azure AD and Intune.
 
@@ -44,7 +44,7 @@ For most organizations, using an OEM or partner to register devices as Autopilot
 
 Several of the above methods on obtaining the hardware hash when manually registering devices as Autopilot devices will produce a CSV file that contains the hardware hash of the device. This CSV file with the hardware hash needs to be imported into Intune to register the device as an Autopilot device.
 
-After the CSV files has been created, it can be imported into Intune via the following steps:
+After the CSV file has been created, it can be imported into Intune via the following steps:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -58,7 +58,7 @@ After the CSV files has been created, it can be imported into Intune via the fol
 
 6. In the **Windows Autopilot devices** screen, select **Import**.
 
-7. In the **Add Windows Autopilot devices** pane, under **Specify the path to the list you want to import.**, select the blue select a file folder.
+7. In the **Add Windows Autopilot devices** pane, under **Specify the path to the list you want to import.**, select the blue file folder.
 
 8. Browse to the CSV file obtained using one of the above methods to obtain the hardware hash of a device.
 
@@ -72,4 +72,4 @@ After the CSV files has been created, it can be imported into Intune via the fol
     >
     > If another sync is attempted within 10 minutes after initiating a sync, an error will be displayed. Syncs can only occur once every 10 minutes. To attempt a sync again, wait at least 10 minutes before trying again.
 
-11. Select **Refresh** to refresh the view. The newly imported devices should display within a few minutes. If the devices aren't yet displayed, wait a few minutes and then select **Refresh** again.
+11. Select **Refresh** to refresh the view. The newly imported devices should display within a few minutes. If the devices aren't yet displayed, wait a few minutes, and then select **Refresh** again.

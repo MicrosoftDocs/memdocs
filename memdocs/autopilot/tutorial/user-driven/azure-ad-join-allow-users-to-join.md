@@ -31,7 +31,7 @@ For an overview of the Windows Autopilot user-driven Azure AD join workflow, see
 
 ## Allow users to join devices to Azure AD
 
-In order for Windows Autopilot to work, users need to be allowed to join devices to Azure AD. This can be configured in the Azure portal:
+In order for Windows Autopilot to work, users need to be allowed to join devices to Azure AD. Allowing users to join devices to Azure Ad can be configured in the Azure portal:
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 
@@ -45,13 +45,13 @@ In order for Windows Autopilot to work, users need to be allowed to join devices
 
    - If **All** is selected, all users can join their devices to Azure AD.
 
-   - If **Some** is selected, only users specified under **Selected** can join their devices to Azure AD. To add users::
+   - If **Some** is selected, only users specified under **Selected** can join their devices to Azure AD. To add users:
 
       1. Select the link under **Selected**.
-      2. In the **Members alowed to join devices** page, select **Add**.
+      2. In the **Members allowed to join devices** page, select **Add**.
       3. In the **Add members** pane, select the desired user(s) and/or group(s) to add.
       4. Once all of the desired users(s) and group(s) have been selected, select **Select**.
-      5. In the **Members alowed to join devices** page, select **OK**.
+      5. In the **Members allowed to join devices** page, select **OK**.
 
         > [!NOTE]
         >

@@ -35,7 +35,13 @@ While the ESP controls what is shown during device and user setup and specifies 
 
 When creating an Autopilot profile for the user-driven scenario, devices with this Autopilot profile are associated with the user enrolling the device. User credentials are required to enroll the device.
 
-To create an user-driven Azure AD join Autopilot profile, follow the below steps:
+The difference between an Autopilot user-driven Azure AD join and an Autopilot hybrid Azure AD join is that the user-driven Azure AD join scenario only joins Azure AD during Autopilot. The hybrid Azure AD join scenario joins both an on-premises domain and Azure AD during Autopilot.
+
+> [!TIP]
+>
+> For Configuration Manager admins, the Autopilot profile is similar to some of the configuration that takes place during a task sequence via an unattend.xml file. The unattend.xml file is configured during the **Apply Windows Settings** and **Apply Network Settings** steps. Note however that Autopilot does not use unattend.xml files.
+
+To create a user-driven Azure AD join Autopilot profile, follow the below steps:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -69,9 +75,9 @@ To create an user-driven Azure AD join Autopilot profile, follow the below steps
 
       - For **User account type**, select the desired account type for the user (**Administrator** or **Standard** user). If **Administrator** is chosen, the user will be added to the local Admin group.
 
-      - For **Allow pre-provisioned deployment**, select **No**..
+      - For **Allow pre-provisioned deployment**, select **No**.
 
-      - For **Language (Region)**, select **Operating system default** to use the default language for the operating system being configured. If another language is desired, select the desired language from the drop down list.
+      - For **Language (Region)**, select **Operating system default** to use the default language for the operating system being configured. If another language is desired, select the desired language from the drop-down list.
 
       - For **Automatically configure keyboard**, select **Yes** to skip the keyboard selection page.
 
@@ -92,7 +98,7 @@ To create an user-driven Azure AD join Autopilot profile, follow the below steps
 
 10. On the **Assignments** page, under **Included groups**, choose **Add groups**.
 
-11. In the **Select groups to include** page, choose the device group(s) to assign this Autopilot profile to. This is normally the device group created in the step [Create device group](azure-ad-join-device-group.md). Once done, select **Select**.
+11. In the **Select groups to include** page, choose the device group(s) to assign this Autopilot profile to. This device group(s) is normally the device group(s) created in the step [Create device group](azure-ad-join-device-group.md). Once done, select **Select**.
 
     > [!NOTE]
     >

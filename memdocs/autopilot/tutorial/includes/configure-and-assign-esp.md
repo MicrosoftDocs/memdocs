@@ -11,14 +11,17 @@ ms.localizationpriority: medium
 
 The main feature of the Enrollment Status Page (ESP) is to display progress and current status to the end user while the device is being set up and enrolled via the Autopilot process. The other main feature of the ESP is to block a user from signing in and using the device until all required policies and applications are installed. Multiple ESP profiles can be created with different settings and assigned appropriately based on different needs and scenarios.
 
-Out of box there is a default ESP that is assigned to all devices. The default settings in the default ESP is to not show app and profile progress during the Autopilot process. However, it is highly recommended to change this default via a separate custom ESP to show app and profile progress. If the device has many policies and applications that need to be installed and progress is not displayed, it may make end users think that that the device is hung during the setup process due to the amount of time it is taking for all of the policies to be applied and applications to be installed. Additionally, disabling app and profile progress will not block the user from signing into the device and using the device until all policies and applications are installed. This can cause issues if the device is not fully configured and ready for use.
+Out of box there's a default ESP that is assigned to all devices. The default setting in the default ESP is to not show app and profile progress during the Autopilot process. However, it's highly recommended to change this default via a separate custom ESP to show app and profile progress. If the device has many policies and applications that need to be installed and progress isn't displayed, it may make end users think that the device is hung during the setup process due to the amount of time it's taking for policies to be applied and applications to be installed. Additionally, disabling app and profile progress won't block the user from signing into the device and using the device until all policies and applications are installed. A user signing into the device before it's fully configured and provisioned can cause issues.
 
 The ESP has two phases:
 
 - Device ESP - ESP that runs during the OOBE process and applies device policies and installs device applications
 - User ESP - ESP that runs after Device ESP that sets up user account, applies user policies, and installs user applications
 
-The ESP configuration has the option to only display app and profile progress during the device ESP phase while disabling during the user ESP phase. This is usually done to allow a user to sign into the device sooner and reach the desktop, but at the consequence that not all of the user policies and applications may be installed. For this reason, it is recommended to show app and profile progress during both phases.
+The ESP can be configured to only display progress during the device ESP phase while disabling progress during the user ESP phase. This is usually done to allow a user to sign into the device as soon as possible enabling them to reach the desktop quicker. However, the consequence is that not all of the user policies and applications may be installed. For this reason, it's recommended to show progress during both phases.
+
+> [!TIP]
+> For Configuration Manager admins, an ESP is similar and analogous to Configuration Manager client settings.
 
 To configure and assign the Autopilot Enrollment Status Page (ESP) so that it shows progress during app and profile configurations, follow the below steps:
 
@@ -46,7 +49,7 @@ To configure and assign the Autopilot Enrollment Status Page (ESP) so that it sh
 
    - **Turn on log collection and diagnostics page for end users**:  
      - **No**: The collect logs button isn't shown to users when an installation error occurs. The Windows Autopilot diagnostics page isn't shown on devices running Windows 11.  
-     - **Yes**: The collect logs button is shown to users when an installation error occurs. The Windows Autopilot diagnostics page is shown on devices running Windows 11. Logs and diagnostics may aid with troubleshooting. For this reason. it's recommend to enable this option.
+     - **Yes**: The collect logs button is shown to users when an installation error occurs. The Windows Autopilot diagnostics page is shown on devices running Windows 11. Logs and diagnostics may aid with troubleshooting. For this reason, it's recommended to enable this option.
 
    - **Only show page to devices provisioned by out-of-box experience (OOBE)**:
      - **No**: The ESP is shown on all Intune-managed and co-managed devices that go through the out-of-box experience (OOBE), and to the first user that signs in to each device. Subsequent users who sign in won't see the ESP.
@@ -72,7 +75,7 @@ To configure and assign the Autopilot Enrollment Status Page (ESP) so that it sh
 
 10. In the **Assignments** page, select **Add groups**.
 
-11. In the the **Select groups to include** pane, select the device group(s) to target the ESP profile. This normally would be the device group(s) created in the previous step. After selecting the device group, select **Select**.
+11. In the **Select groups to include** pane, select the device group(s) to target the ESP profile. The device group(s) selected would normally be the device group(s) created in the **Create device group** step. After selecting the device group, select **Select**.
 
     > [!TIP]
     >
@@ -90,6 +93,3 @@ To configure and assign the Autopilot Enrollment Status Page (ESP) so that it sh
     > **Scope tags** are optional and are a method to control who has access to the ESP configuration. For the purpose of this tutorial, scope tags is being skipped and left at the default scope tag. However if a custom scope tag needs to be specified, do so at this screen. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](/mem/intune/fundamentals/scope-tags).
 
 14. In the **Review + create** page, review the settings and verify everything is correct and configured as desired. Once verified, select **Create** to save the changes and assign the ESP profile.
-
-> [!TIP]
-> For Configuration Manager admins, an ESP is similar and analogous to Configuration Manager client settings.

@@ -9,14 +9,14 @@ ms.date: 02/23/2023
 ms.localizationpriority: medium
 ---
 
-Device groups are a collection of devices organized into a Azure AD group. Device groups are used in Autopilot to target devices for specific configurations such what policies to apply to a device and what applications to install on the device.
+Device groups are a collection of devices organized into an Azure AD group. Device groups are used in Autopilot to target devices for specific configurations such as what policies to apply to a device and what applications to install on the device. They're also used by Autopilot to target Enrollment Status Page (ESP) configurations, Autopilot profile configurations, and domain join profiles to devices.
 
-Device groups can either by dynamic or assigned:
+Device groups can be either dynamic or assigned:
 
 - **Dynamic groups** - Devices are automatically added to the group based on rules
 - **Assigned groups** - Devices are manually added to the group and are static
 
-When configuring Autopilot, dynamic groups are primarily used since a large number of devices are usually involved. Adding the devices in automatically rules makes management of the group a lot easier. Adding a large amount of device in manually via an assigned group would be impractical. However, if there is a small number of devices, for example for testing purposes, an assigned group can also be used.
+When configuring Autopilot in an enterprise environment, dynamic groups are primarily used since a large number of devices are usually involved. Adding the devices in automatically using rules makes management of the group a lot easier. Adding a large amount of device in manually via an assigned group would be impractical. However, if there's a small number of devices, for example for testing purposes, an assigned group can also be used.
 
 To create a dynamic device group for use with Autopilot, follow the below steps:
 
@@ -41,7 +41,7 @@ To create a dynamic device group for use with Autopilot, follow the below steps:
       > [!NOTE]
       > When selecting **Dynamic Device** in step d, this field will change to **Dynamic device members**.
 
-      Rules on what devices will be added to the device group are entered in the **Dynamic membership rules** screen under **Configure Rules**. Rules can be entered in the rule builder via the drop down boxes or the rule syntax can be directly entered via the **Edit** option in the **Rule syntax** section.
+      Rules on what devices will be added to the device group are entered in the **Dynamic membership rules** screen under **Configure Rules**. Rules can be entered in the rule builder via the drop-down boxes or the rule syntax can be directly entered via the **Edit** option in the **Rule syntax** section.
 
       The most common type of dynamic device group when using Autopilot is a device group that contains all Autopilot devices. A dynamic device group that contains all Autopilot devices has the following syntax:
 

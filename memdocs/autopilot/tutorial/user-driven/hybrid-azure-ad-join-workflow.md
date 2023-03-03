@@ -32,7 +32,7 @@ Before beginning, refer to the [Plan your hybrid Azure Active Directory join imp
 
 ## Windows Autopilot user-driven hybrid Azure AD join workflow
 
-Register devices as Autopilot devices > Create a device group > Configure and assign Autopilot Enrollment Status Page (ESP) > Create and assign Autopilot profile > Configure and assign domain join profile > Verify hybrid Azure AD join
+Set up Windows automatic Intune enrollment > Install the Intune Connector > Increase the computer account limit in the Organizational Unit (OU) > Register devices as Autopilot devices > Create a device group > Configure and assign Autopilot Enrollment Status Page (ESP) > Create and assign hybrid Azure AD join Autopilot profile > Configure and assign domain join profile
 
 Autopilot user-driven hybrid Azure AD join steps:
 > [!div class="checklist"]

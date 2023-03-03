@@ -28,7 +28,7 @@ Autopilot user-driven hybrid Azure AD join steps:
 > [!div class="checklist"]
 > - Step 8: [Configure and assign domain join profile](hybrid-azure-ad-join-domain-join-profile.md)
 
-For an overview of the Windows Autopilot hybrid user-driven Azure AD join workflow, see [Windows Autopilot user-driven hybrid Azure AD join overview](hybrid-azure-ad-join-workflow.md)
+For an overview of the Windows Autopilot user-driven hybrid Azure AD join workflow, see [Windows Autopilot user-driven hybrid Azure AD join overview](hybrid-azure-ad-join-workflow.md)
 
 ## Create and assign a domain join profile
 
@@ -46,7 +46,7 @@ For an overview of the Windows Autopilot hybrid user-driven Azure AD join workfl
 
    2. Under **Profile type**, select **Templates**.
 
-   3. Once **Templates** is selected, additional options appear. Under **Template name**, select **Domain join**, and then select **Create**. If necessary, scroll through the **Template name** list until **Domain join** is visible. The list is in alphabetical order.
+   3. Once **Templates** is selected, additional options will appear. Under **Template name**, select **Domain join**, and then select **Create**. If necessary, scroll through the **Template name** list until **Domain join** is visible. The list is in alphabetical order.
 
 6. In the **Basics** page of the **Domain Join*** screen, type a **Name** and optional **Description** for the domain join profile, and then select **Next**.
 
@@ -60,7 +60,7 @@ For an overview of the Windows Autopilot hybrid user-driven Azure AD join workfl
 
    2. Next to **Domain name**, enter the FQDN of the domain that the device will be joined to. This field is required. Make sure to specify the FQDN of the domain and not the NETBIOS name of the domain. For example, enter in **contoso.com** and not just **CONTOSO**.
 
-   3. Next to **Organizational unit**, enter the full path to the Organizational Unit (OU) in the domain that the computer accounts should be created in. This field is optional. For example, **OU=OU-Name,DC=contoso,DC=com**. If the OU is not specified, the computer accounts will be created in the **Computer** container.
+   3. Next to **Organizational unit**, enter the full path to the Organizational Unit (OU) in the domain that the computer accounts should be created in. This field is optional. For example, **OU=OU-Name,DC=contoso,DC=com**. If the OU isn't specified, the computer accounts will be created in the **Computer** container.
 
         > [!NOTE]
         >
@@ -70,11 +70,11 @@ For an overview of the Windows Autopilot hybrid user-driven Azure AD join workfl
         >
         > If computers will be joining the **Computers** container, leave this field blank. Don't specify the **Computers** container in this field via **CN=Computers,DC=contoso,DC=com**. The **Computers** container is a container and not an OU. When no OU is specified, devices will automatically join the **Computers** container. If the **Computers** container is specified, it will cause domain joins to fail.
 
-8. Once the the settings in the **Configuration settings** page are complete, select **Next**.
+8. Once the settings in the **Configuration settings** page are complete, select **Next**.
 
 9. On the **Assignments** page, under **Included groups**, choose **Add groups**.
 
-10. In the **Select groups to include** page, choose the device group(s) to assign this Autopilot profile to. This is normally the device group created in the step [Create device group](hybrid-azure-ad-join-device-group.md). Once done, select **Select**.
+10. In the **Select groups to include** page, choose the device group(s) to assign this Autopilot profile to. This device group(s) is normally the device group(s) created in the step [Create device group](hybrid-azure-ad-join-device-group.md). Once done, select **Select**.
 
     > [!NOTE]
     >
