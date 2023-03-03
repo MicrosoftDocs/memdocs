@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 02/09/2023
+ms.date: 03/03/2023
 ms.topic: reference
 ms.service: windows-365
 ms.subservice: 
@@ -58,9 +58,12 @@ To help in your readiness and planning, this page lists Windows 365 updates and 
 <!-- ***********************************************-->
 ## Device provisioning
 
-### Add more Azure Network Connections to a provisioning policy<!--42906565-->
+### Windows 365 support for RDP Shortpath with TURN<!--43602619-->
 
-A new Azure Network Connection (ANC) option lets you add more ANCs to a provisioning policy and define a priority order for their use. By preparing multiple ANCs in different Azure regions, admins can make provisioning more reliable in the rare case of capacity constraints in a region.
+In a future update, Windows 365 will support Traversal Using Relays around NAT (TURN) for use with RDP Shortpath. TURN is a popular standard for device-to-device networking for low latency, high-throughput data transmission with Azure Communication Services. For more information about TURN and Azure Communication Services, see [Network Traversal Concepts](/azure/communication-services/concepts/network-traversal). For more information about RDP Shortpath, see [Use RDP Shortpath for public networks with Windows 365](rdp-shortpath-public-networks.md).
+
+<!-- ***********************************************-->
+## Device provisioning
 
 ### Cloud PC custom name template<!--42947813-->
 
