@@ -151,22 +151,22 @@ Event Viewers:
 
 Files:
 
-- `%ProgramData%\Microsoft\DiagnosticLogCSP\Collectors\*.etl`
-- `%ProgramData%\Microsoft\IntuneManagementExtension\Logs\*.*`
-- `%ProgramData%\Microsoft\Windows Defender\Support\MpSupportFiles.cab`
-- `%ProgramData%\Microsoft\Windows\WlanReport\wlan-report-latest.html`
-- `%ProgramData Microsoft Update Health Tools\Logs\*.etl`
-- `%temp%\MDMDiagnostics\battery-report.html`
-- `%temp%\MDMDiagnostics\energy-report.html`
-- `%temp%\MDMDiagnostics\mdmlogs-<Date/Time>.cab`
-- `%temp%\MDMDiagnostics\msinfo32.log`
-- `%windir%\ccm\logs\*.log`
-- `%windir%\ccmsetup\logs\*.log`
-- `%windir%\logs\CBS\cbs.log`
-- `%windir%\logs\measuredboot\*.*`
-- `%windir%\logs\WindowsUpdate\*.etl`
-- `%windir%\temp\%computername%*.log`
-- `%windir%\temp\officeclicktorun*.log`
+- %ProgramData%\Microsoft\DiagnosticLogCSP\Collectors\\*.etl
+- %ProgramData%\Microsoft\IntuneManagementExtension\Logs\\\*.*
+- %ProgramData%\Microsoft\Windows Defender\Support\MpSupportFiles.cab
+- %ProgramData%\Microsoft\Windows\WlanReport\wlan-report-latest.html
+- %ProgramData Microsoft Update Health Tools\Logs\\*.etl
+- %temp%\MDMDiagnostics\battery-report.html
+- %temp%\MDMDiagnostics\energy-report.html
+- %temp%\MDMDiagnostics\mdmlogs-<Date/Time>.cab
+- %temp%\MDMDiagnostics\msinfo32.log
+- %windir%\ccm\logs\\*.log
+- %windir%\ccmsetup\logs\\*.log
+- %windir%\logs\CBS\cbs.log
+- %windir%\logs\measuredboot\\\*.*
+- %windir%\logs\WindowsUpdate\\*.etl
+- %windir%\temp\%computername%*.log
+- %windir%\temp\officeclicktorun*.log
 
 ## Disable device diagnostics
 
