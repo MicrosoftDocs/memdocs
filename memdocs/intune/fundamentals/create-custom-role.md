@@ -164,6 +164,7 @@ The following permissions are available when creating custom roles.
 | Mobile apps/Read | View mobile applications such as store apps, line-of-business apps, web-links or built-in apps. You can also view books purchased through the Apple Volume Purchase Program or add eBook categories. You can view iOS VPP Tokens, Windows Symantec certificates, Windows side loading keys, app categories, or the Android for Work connection. | 
 | Mobile apps/Relate | Create relationships with other managed apps using Dependencies and Supersedence features. Without this permission, IT admins are not able to add App dependency or supercedence relationships when creating or editing Win32 apps. |
 | Mobile apps/Update | Manage mobile applications such as store apps, line-of-business apps, web-links or built-in apps. You can also manage books purchased through the Apple Volume Purchase Program or add eBook categories. You can manage iOS VPP Tokens, Windows Symantec certificates, Windows side loading keys, app categories, or the Android for Work connection. | 
+|Mobile apps\View reports| View Reports on mobile applications such as store apps, line-of-business apps, web-links or built-in apps. |
 | Mobile Threat Defense/Modify | Add, remove, or modify the Mobile Threat Defense connectors between Intune and your chosen MTD vendors | 
 | Mobile Threat Defense/Read | View the Mobile Threat Defense connectors between Intune and your chosen MTD vendors | 
 | Organization/Create | Create tenant settings such as device categories and Exchange connectors. | 
