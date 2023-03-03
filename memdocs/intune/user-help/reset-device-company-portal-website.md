@@ -53,9 +53,9 @@ The action may not be available on devices that your organization owns and lends
 To reset a device to its original, out-of-box settings: 
 
 1. On any device, sign in to [the Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980) with your work or school account. 
-2. Select the menu > **Devices**.  
-3. Select the device you want to reset.  
-4. Select **Reset**. If the reset option isn't visible at the top of your page, select the **More (…)** menu to see all overflow actions. Then select **Reset**.  
-5. A message warns you that you're about to erase all content on your device. Tap **Reset** to confirm.    
+1. Select the menu > **Devices**.  
+1. Select the device you want to reset.  
+1. Select **Reset**. If the reset option isn't visible at the top of your page, select the **More (…)** menu to see all overflow actions. Then select **Reset**.  
+1. A message warns you that you're about to erase all content on your device. Tap **Reset** to confirm.    
 
 Need additional help? Contact your support person. For contact details, sign in to the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980) and go to **Helpdesk**.  
