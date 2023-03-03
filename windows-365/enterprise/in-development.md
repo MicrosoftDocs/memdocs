@@ -56,7 +56,7 @@ To help in your readiness and planning, this page lists Windows 365 updates and 
 -->
 
 <!-- ***********************************************-->
-## Device provisioning
+## Device management
 
 ### Windows 365 support for RDP Shortpath with TURN<!--43602619-->
 
