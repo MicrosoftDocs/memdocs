@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 10/25/2022
+ms.date: 03/06/2022
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice:
@@ -32,15 +32,40 @@ ms.collection:
 
 # Point-in-time restore for Windows 365 Enterprise
 
-Point-in-time restore lets an administrator restore a Cloud PC to the exact state it was at an earlier point in time. Admins can also give users permission to restore their own Cloud PCs.
+Point-in-time restore lets an administrator restore a Cloud PC to the exact state it was at an earlier point in time. You can create new settings to automatically create restore points at regular intervals for groups of Cloud PCs. You can also create on-demand restore points for specific times. Admins can also give users permission to restore their own Cloud PCs.
 
 ## Restore point options
 
-You can choose to save short-term restore points every 4, 6, 12, 16, or 24 hours. Each Cloud PC will have 10 restore points saved at the intervals that you define in the user setting. For example, if you chose four hour intervals, a Cloud PC will have 10 restore points spread out every four hours over the last 40 hours.
+There are three different ways to to set restore points:
 
-In addition to these configurable short-term restore points, there are also four long-term restore points that aren't configurable. These long-term restore points are saved every seven days.
+- Short-term restore points
+- Long-term restore points
+- On-demand manual restore points
 
-As time passes and a new restore point is added, the oldest restore point is removed.
+Each type of restore point can be [restore](restore-single-cloud-pc.md) in the same way.
+
+### Short-term restore points
+
+You can choose to set short-term restore points every 4, 6, 12, 16, or 24 hours. Each Cloud PC in the assigned groups will have 10 short-term restore points saved at the intervals that you define in the user setting. For example, if you chose four hour intervals, each assigned Cloud PC will have 10 restore points spread out every four hours over the last 40 hours.
+
+### Long-term restore points
+
+In addition to the configurable short-term restore points, there are also four long-term restore points that aren't configurable. These long-term restore points are saved every seven days.
+
+### On-demand manual restore point
+
+Manual restore points let administrators create a restore point whenever they want, for both a single a Cloud PC and groups of Cloud PCs (using bulk actions). Among other uses, on-demand manual restore points are useful:
+
+- For creating a backup before taking management actions.
+- During employee offboarding in conjunction with sharing a restore point.
+
+Only administrators can create a manual restore point, and each Cloud PC can have only one manual restore point at a time.
+
+### Expiration of restore points
+
+For short- and long-term restore points, as time passes and a new restore point is added, the oldest restore point is removed.
+
+Each Cloud PC can have one manual restore point. If you create another manual restore point for a Cloud PC that already has a manual restore point, the existing restore point will be overwritten by the new restore point. If not overwritten, a manual restore point expires in approximately 28 days. Manual restore points have an expiration date shown when they are created.
 
 [!INCLUDE [Restore risks and best practices](../includes/restore-risks-best-practices.md)]
 
@@ -51,7 +76,8 @@ When a restore is started, the virtual infrastructure used for the Cloud PC rema
 <!-- ########################## -->
 ## Next steps
 
-- To get started with the restore feature, you must first [configure a new or existing user setting](restore-configure.md) to give users the right permissions. After you’ve done that, admins can:
+- To get started with the short- and long-term restore points, you must first [configure point-in-time restore settings](restore-configure.md). After you’ve done that, admins can:
   - [Restore a single Cloud PC](restore-single-cloud-pc.md) (users with permission can also restore their own Cloud PC)
   - [Bulk restore multiple Cloud PCs](restore-bulk.md)
-- Check [Known issues with restoring your Cloud PC](known-issues-enterprise.md)
+- Create an on-demand manual restore point.
+- Check [Known issues with restoring your Cloud PC](known-issues-enterprise.md).
