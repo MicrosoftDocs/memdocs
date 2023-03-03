@@ -44,7 +44,7 @@ You need to enable Windows location services in Windows Out of Box Experience (O
 
 **Locate device** - The following platforms support this capability:
 
-- **Android Enterprise dedicated devices** – Requires the device run *Google Play Services* version **20.06.16** or later and have Location services turned on.  
+- **Android Enterprise dedicated devices** – This is applicable to both fully-managed and corporate-owned work profile. Requires the device run *Google Play Services* version **20.06.16** or later and have Location services turned on.  
 - **iOS/iPadOS 9.3 and later** - Requires the device to be in supervised mode, and be in [lost mode](device-lost-mode.md).
 - **Windows 10**:
   - Version 20H2 (10.0.19042.789) or later
@@ -77,8 +77,6 @@ You need to enable Windows location services in Windows Out of Box Experience (O
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices**, and then select **All devices**.
 3. From the list of devices you manage, select a supported device, and choose **...**. Then choose the **Locate device** remote action.
-   
-   
 4. After the device is located, its location is shown in **Locate device**.  
 
    - You can select the location pin on the map to view a location address and coordinates.
@@ -86,6 +84,13 @@ You need to enable Windows location services in Windows Out of Box Experience (O
    - Android Enterprise dedicated devices that aren't currently on-line can display their [last known location](#last-known-location) when the device last checked in within seven days.
 
    ![Screenshot of Locate device using Intune in Azure](./media/device-locate/locate-device.png)
+
+Android use of **Locate device** is controlled by **Device Restrictions** in **Device Configuration**. 
+There are two separate toggles, one for dedicated and one for fully managed and corporate owned work profile devices. 
+
+For fully managed and corporate owned work profile, **Locate device** is set to **Not configured** as the default. To enable this feature, use **Device restrictions** within **Device Configuration** and configure the toggle for **Locate device** to enable.
+
+For dedicated devices, **Locate device** is set to **Enable** as the default. To turn this feature off, use device restrictions within **Device Configuration** and configure the toggle for **Locate device** to **Not configured**. When **Locate device** is enabled, users will receive a one-time notification, "Intune can access your location", indicating that Intune has the ability to use location permissions on the device.
 
 ### Last known location
 
@@ -135,6 +140,7 @@ To start a lost device sound alert:
 - The data for last known locations is stored for up to seven days, and then removed.
 - Location data is encrypted, both while stored and while being transmitted.
 - For iOS/iPadOS devices, when you configure lost mode, you can customize a message that appears on the lock screen. In this message, to help the person that finds the device, be sure to include specific details to return the lost device.
+- For fully-managed and corporate-owned work profile scenarios, end users will receive a notification when the administrator uses this feature, if notifications have been enabled.
 
 ## Next steps
 
