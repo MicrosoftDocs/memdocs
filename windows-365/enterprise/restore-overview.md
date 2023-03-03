@@ -32,17 +32,17 @@ ms.collection:
 
 # Point-in-time restore for Windows 365 Enterprise
 
-Point-in-time restore lets an administrator restore a Cloud PC to the exact state it was at an earlier point in time. You can create new settings to automatically create restore points at regular intervals for groups of Cloud PCs. You can also create on-demand restore points for specific times. Admins can also give users permission to restore their own Cloud PCs.
+Point-in-time restore lets an administrator restore a Cloud PC to the exact state it was at an earlier point in time. You can [create new or edit settings](restore-configure.md) to automatically create restore points at regular intervals for groups of Cloud PCs. You can also create on-demand restore points for specific times. Admins can also give users permission to restore their own Cloud PCs.
 
 ## Restore point options
 
-There are three different ways to to set restore points:
+There are three different ways to to [set restore points](restore-configure.md):
 
 - Short-term restore points
 - Long-term restore points
 - On-demand manual restore points
 
-Each type of restore point can be [restore](restore-single-cloud-pc.md) in the same way.
+Each type of restore point can be [restored](restore-single-cloud-pc.md) in the same way.
 
 ### Short-term restore points
 
@@ -54,10 +54,12 @@ In addition to the configurable short-term restore points, there are also four l
 
 ### On-demand manual restore point
 
-Manual restore points let administrators create a restore point whenever they want, for both a single a Cloud PC and groups of Cloud PCs (using bulk actions). Among other uses, on-demand manual restore points are useful:
+Manual restore points let administrators [create a restore point](create-manual-restore-point.md) whenever they want, for both a single a Cloud PC and groups of Cloud PCs (using bulk actions). Manual restore points are  in [public preview](../public-preview.md).
+
+Among other uses, on-demand manual restore points are useful:
 
 - For creating a backup before taking management actions.
-- During employee offboarding in conjunction with sharing a restore point.
+- During employee off-boarding in conjunction with sharing a restore point.
 
 Only administrators can create a manual restore point, and each Cloud PC can have only one manual restore point at a time.
 
@@ -79,5 +81,5 @@ When a restore is started, the virtual infrastructure used for the Cloud PC rema
 - To get started with the short- and long-term restore points, you must first [configure point-in-time restore settings](restore-configure.md). After you’ve done that, admins can:
   - [Restore a single Cloud PC](restore-single-cloud-pc.md) (users with permission can also restore their own Cloud PC)
   - [Bulk restore multiple Cloud PCs](restore-bulk.md)
-- Create an on-demand manual restore point.
+- [Create on-demand manual restore points](create-manual-restore-point.md).
 - Check [Known issues with restoring your Cloud PC](known-issues-enterprise.md).

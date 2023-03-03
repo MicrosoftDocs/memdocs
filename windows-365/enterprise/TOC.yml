@@ -179,6 +179,8 @@ items:
           href: restore-overview.md
         - name: Configure restore points and users
           href: restore-configure.md
+        - name: Manually create restore points
+          href: create-manual-restore-point.md
         - name: Restore a single Cloud PC
           href: restore-single-cloud-pc.md
         - name: Bulk restore multiple Cloud PCs
