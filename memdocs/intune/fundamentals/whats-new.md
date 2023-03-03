@@ -70,6 +70,24 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 ### Device configuration
 
+#### Support for Locate device on Android Enterprise corporate owned fully managed and Android Enterprise corporate owned work profile devices<!--12391424 -->
+
+You can now use "Locate device" on Android Enterprise corporate owned fully managed and Android Enterprise corporate owned work profile devices. With this feature, admins will be able to locate lost or stolen corporate devices on-demand.
+
+To do this, in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you will need to turn the feature on using **Device Restrictions** in **Device Configuration** for Android Enterprise.
+
+Click **Allow** on the **Locate device** toggle for fully managed and corporate owned work profile devices and select applicable groups. **Locate device** will be available when you select **Devices**, and then select **All devices**. From the list of devices you manage, select a supported device, and choose the **Locate device** remote action.
+
+For information on locating lost or stolen devices with Intune, go to:
+
+- [Locate lost or stolen devices with Intune](../remote-actions/device-locate.md)
+
+Applies to:
+
+- Android Enterprise corporate owned fully managed
+- Android Enterprise corporate owned dedicated devices
+- Android Enterprise corporate owned work profile
+
 #### Intune add-ons <!-- 13817801 -->
 
 Microsoft Intune Suite provides mission-critical advanced endpoint management and security capabilities into Microsoft Intune. 
