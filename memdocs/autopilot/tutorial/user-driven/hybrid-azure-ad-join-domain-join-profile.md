@@ -20,7 +20,7 @@ ms.technology: itpro-deploy
 Autopilot user-driven hybrid Azure AD join steps:
 - Step 1: [Set up Windows automatic Intune enrollment](hybrid-azure-ad-join-automatic-enrollment.md)
 - Step 2: [Install the Intune Connector](hybrid-azure-ad-join-intune-connector.md)
-- Step 3: [Increase the computer account limit in the Organizational Unit](hybrid-azure-ad-join-computer-account-limit.md)
+- Step 3: [Increase the computer account limit in the Organizational Unit (OU)](hybrid-azure-ad-join-computer-account-limit.md)
 - Step 4: [Register devices as Autopilot devices](hybrid-azure-ad-join-register-device.md)
 - Step 5: [Create a device group](hybrid-azure-ad-join-device-group.md)
 - Step 6: [Configure and assign Autopilot Enrollment Status Page (ESP)](hybrid-azure-ad-join-esp.md)
@@ -46,13 +46,13 @@ For an overview of the Windows Autopilot hybrid user-driven Azure AD join workfl
 
    2. Under **Profile type**, select **Templates**.
 
-   3. Once **Templates** is selected, additional options appear. Under **Template name**, select **Domain join**, and then select **Create**. If necessary, scroll through the **Template name** list until **Domain join** is visible. The list is in alpabetical order.
+   3. Once **Templates** is selected, additional options appear. Under **Template name**, select **Domain join**, and then select **Create**. If necessary, scroll through the **Template name** list until **Domain join** is visible. The list is in alphabetical order.
 
 6. In the **Basics** page of the **Domain Join*** screen, type a **Name** and optional **Description** for the domain join profile, and then select **Next**.
 
 7. In the **Configuration settings** page:
 
-   1. Next to **computer name prefix**, enter a prefix for computer names. This field is required. This prefix will be used on all computer names. The rest of the comptuer name after the prefix will be randomly generated up to 15 characters.
+   1. Next to **computer name prefix**, enter a prefix for computer names. This field is required. This prefix will be used on all computer names. The rest of the computer name after the prefix will be randomly generated up to 15 characters.
 
         > [!NOTE]
         >
@@ -64,11 +64,11 @@ For an overview of the Windows Autopilot hybrid user-driven Azure AD join workfl
 
         > [!NOTE]
         >
-        > Make sure correct permissions are specified in the OU specified in this field, or in the **Computers** container if no OU is specified.
+        > The OU specified in this step should be the same OU that permissions were set for and computer account limits increased in the step [Increase the computer account limit in the Organizational Unit (OU)](hybrid-azure-ad-join-computer-account-limit.md). Make sure that this step has been followed for the OU specified in this field. Omitting setting permissions correctly on the OU wil result in computers failing to join the domain.
 
         > [!IMPORTANT]
         >
-        > Don't specify the **Computers** container in this field via **CN=Computers,DC=contoso,DC=com**. The **Computers** container is a container and not an OU. If the **Computers** container is specified, it will cause the domain join to fail. If it's desired to add newly domain joined computers to the **Computers** container, leave this field blank.
+        > If computers will be joining the **Computers** container, leave this field blank. Don't specify the **Computers** container in this field via **CN=Computers,DC=contoso,DC=com**. The **Computers** container is a container and not an OU. When no OU is specified, devices will automatically join the **Computers** container. If the **Computers** container is specified, it will cause domain joins to fail.
 
 8. Once the the settings in the **Configuration settings** page are complete, select **Next**.
 

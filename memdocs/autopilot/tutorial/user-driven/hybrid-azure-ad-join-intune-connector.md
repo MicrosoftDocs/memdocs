@@ -21,7 +21,7 @@ Autopilot user-driven hybrid Azure AD join steps:
 - Step 1: [Set up Windows automatic Intune enrollment](hybrid-azure-ad-join-automatic-enrollment.md)
 > [!div class="checklist"]
 > - **Step 2: Install the Intune Connector**
-- Step 3: [Increase the computer account limit in the Organizational Unit](hybrid-azure-ad-join-computer-account-limit.md)
+- Step 3: [Increase the computer account limit in the Organizational Unit (OU)](hybrid-azure-ad-join-computer-account-limit.md)
 - Step 4: [Register devices as Autopilot devices](hybrid-azure-ad-join-register-device.md)
 - Step 5: [Create a device group](hybrid-azure-ad-join-device-group.md)
 - Step 6: [Configure and assign Autopilot Enrollment Status Page (ESP)](hybrid-azure-ad-join-esp.md)
@@ -73,7 +73,7 @@ For an overview of the Windows Autopilot hybrid user-driven Azure AD join workfl
 
 14. Under the **Sign In** tab, sign in with the Global administrator or with the credentials of an Intune administrator role. The user account must have an assigned Intune license. The sign in process may take a few minutes to complete.
 
-15. Once the sign in process is complete, a window will appear saying **The Intune connector for Activey Directory successfully enrolled**. Select **OK** to close the window. The **Enrollment** tab will now show **Intune conenctor for Active Directory is enrolled** and the **Sign In** button will be greyed out.
+15. Once the sign in process is complete, a window will appear saying **The Intune connector for Active Directory successfully enrolled**. Select **OK** to close the window. The **Enrollment** tab will now show **Intune connector for Active Directory is enrolled** and the **Sign In** button will be greyed out.
 
 16. Close the **Intune connector for Active Directory** window.
 
@@ -86,10 +86,10 @@ For an overview of the Windows Autopilot hybrid user-driven Azure AD join workfl
 
 After installing the Intune Connector, it will start logging in the **Event Viewer** under the path **Applications and Services Logs** > **Microsoft** > **Intune** > **ODJConnectorService**. Under this path you will find **Admin** and **Operational** logs.
 
-## Next step: Increase the computer account limit in the Organizational Unit
+## Next step: Increase the computer account limit in the Organizational Unit (OU)
 
 > [!div class="nextstepaction"]
-> [Step 3: Increase the computer account limit in the Organizational Unit](hybrid-azure-ad-join-computer-account-limit.md)
+> [Step 3: Increase the computer account limit in the Organizational Unit (OU)](hybrid-azure-ad-join-computer-account-limit.md)
 
 ## More information
 
