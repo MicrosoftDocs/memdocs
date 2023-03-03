@@ -101,8 +101,8 @@ Create and configure a message for the Get Started app.
         * **Review organization**
         * **Get started with device**
      3. **Provide a link for the message**: To include a URL link in your message:  
-       1. Enter your custom URL. Example: `www.contoso.com/SoftwareUpdate`     
-       2. Select the full generated link to make sure it works.     
+          1. Enter your custom URL. Example: `www.contoso.com/SoftwareUpdate`     
+          2. Select the full generated link to make sure it works.     
      4. Select **OK**.  
      5. Select **Add your second message**. Options include: 
         * **Organizational training**
