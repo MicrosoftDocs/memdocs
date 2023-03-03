@@ -35,7 +35,7 @@ ms.collection:
 Learn what new features are available in Windows 365 Enterprise.
 
 > [!NOTE]
-> Each monthly update may take up to a week to rollout to all customers.
+> Each monthly update may roll out over several weeks and might not be immediately available to all customers.
 
 <!-- Common categories:  
 ### App management
