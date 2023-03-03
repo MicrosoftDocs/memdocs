@@ -68,7 +68,7 @@ For an overview of the Windows Autopilot user-driven hybrid Azure AD join workfl
 
         > [!IMPORTANT]
         >
-        > If computers will be joining the **Computers** container, leave this field blank. Don't specify the **Computers** container in this field via **CN=Computers,DC=contoso,DC=com**. The **Computers** container is a container and not an OU. When no OU is specified, devices will automatically join the **Computers** container. If the **Computers** container is specified, it will cause domain joins to fail.
+        > If computers will be joining the **Computers** container, leave this field blank. Don't specify the **Computers** container in this field via **CN=Computers,DC=contoso,DC=com**. The **Computers** container is a container and not an OU. When no OU is specified in this field and it is left blank, devices will automatically join the **Computers** container. If the **Computers** container is specified, it will cause domain joins to fail.
 
 8. Once the settings in the **Configuration settings** page are complete, select **Next**.
 
