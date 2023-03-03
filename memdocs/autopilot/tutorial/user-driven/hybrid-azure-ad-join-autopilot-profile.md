@@ -63,7 +63,7 @@ To create an user-driven Azure AD join Autopilot profile, follow the below steps
 
       - For **Join to Azure AD as**, select **Hybrid Azure AD joined**. After selecting this option, several the options underneath this option wil change.
 
-      - For **Skip AD connectivity check**, select **No**. This tutorial assumes that the device undergoing Autopilot is an on-premise internal client and will have direct connectivity to the on-premise domain. For off premise/Internet/VPN devices, see VPN.
+      - For **Skip AD connectivity check**, select **No**. This section of the tutorial assumes that the device undergoing Autopilot is an on-premise internal client and will have direct connectivity to the on-premise domain and domain controllers. For off-premise/Internet scenarios where VPN connectivity is required, see [Off-premise/Internet scenarios and VPN connectivity](#user-driven-hybrid-azure-ad-join-create-and-assign-user-driven-hybrid-azure-ad-join-autopilot-profile).
 
       - For **Microsoft Software License Terms**, select **Hide** to skip the EULA page.
 
@@ -107,6 +107,28 @@ For more information on creating and assigning Autopilot profiles, see the follo
 
 [!INCLUDE [How to verify a device has an Autopilot profile assigned to it in Intune](../includes/verify-autopilot-profile-assignment.md)]
 
+## Off-premise/Internet scenarios and VPN connectivity
+
+Off-premise/Internet scenarios where direct connectivity to Active directory and domain controllers is not available are supported for user-driven hybrid Azure AD join Autopilot. However, an off-premise/Internet scenario doesn't eliminate the need for connectivity to Active Directory and a domain controller during the domain join. In an off-premise/Internet scenario, connectivity to Active Directory and a domain controller can be established via a VPN connection during the Autopilot process.
+
+For off-premise/Internet scenarios requiring VPN connectivity, the only change in the Autopilot profile would be in the setting **Skip AD connectivity check**. In the [Create and assign user-driven hybrid Azure AD join Autopilot profile](#create-and-assign-user-driven-hybrid-azure-ad-join-autopilot-profile) section, the **Skip AD connectivity check** setting should be set to **Yes** instead of **No**. This will prevent the deployment from failing since there will be no direct connectivity to Active Directory and domain controllers until the VPN connection is established.
+
+In addition to changing the **Skip AD connectivity check** setting to **Yes** in the Autopilot profile, VPN support also relies on the following prerequisites:
+
+- The VPN solution can be deployed and installed with Intune.
+- The VPN solution needs to support one of the following options:
+  - Lets the user manually establish a VPN connection from the Windows sign-in screen.
+  - Automatically establishes a VPN connection as needed.
+
+The VPN solution would need to be installed and configured via Intune during the Autopilot process. This includes deploying any required device certificates if needed by the VPN solution. Once the VPN solution is installed and configured on the device, the VPN connection can be established, either automatically or manually by the user, at which point the domain join can occur. For additional information and support on VPN solutions during Autopilot, consult the respective VPN vendor.
+
+> [!NOTE]
+>
+> Some VPN configurations aren't supported because the connection is not initiated until the user signs into Windows. These include:
+>
+> VPN solutions that use user certificates
+> Non-Microsoft UWP VPN plug-ins from the Windows Store
+
 ## Next step: Configure and assign domain join profile
 
 > [!div class="nextstepaction"]
@@ -115,3 +137,5 @@ For more information on creating and assigning Autopilot profiles, see the follo
 ## More information
 
 [!INCLUDE [More information Autopilot profile](../includes/more-info-autopilot-profile.md)]
+- [User-driven mode for hybrid Azure AD join with VPN support](/mem/autopilot/user-driven#user-driven-mode-for-hybrid-azure-ad-join-with-vpn-support)
+- [BYO VPNs](/mem/autopilot/windows-autopilot-hybrid#byo-vpns)
