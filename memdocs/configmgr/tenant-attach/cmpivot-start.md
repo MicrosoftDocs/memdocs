@@ -51,7 +51,7 @@ The user account needs the following permissions:
 1. Select **CMPivot**.
 1. Type your query in the script pane, then select **Run**.
 
-## <a name="bkmk_save_favorites"></a> Save CMPivot queries to favorites 
+## [Save CMPivot queries to favorites](#save-cmpivot-favorites)
 Save your frequently used queries to a **Favorites** folder in CMPivot to keep all your most used queries in one place. You can also add tags to your queries to help search and find queries. 
 
 The functionality is similar to one already present in the Configuration Manager console. The queries saved in the Configuration Manager console will not automatically be added to your **Favorites** folder. You will need to create new queries and add them to this folder.
