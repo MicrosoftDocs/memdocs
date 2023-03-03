@@ -487,6 +487,14 @@ items:
             href: ./protect/microsoft-tunnel-prerequisites.md
           - name: Configure Microsoft Tunnel
             href: ./protect/microsoft-tunnel-configure.md
+          - name: Microsoft Tunnel for MAM
+            items:
+            - name: Microsoft Tunnel for MAM Overview
+              href: ./protect/microsoft-tunnel-mam.md     
+            - name: MAM Tunnel for Android
+              href: ./protect/microsoft-tunnel-mam-android.md  
+            - name: MAM Tunnel for iOS
+              href: ./protect/microsoft-tunnel-mam-ios.md  
           - name: Monitor Microsoft Tunnel
             href: ./protect/microsoft-tunnel-monitor.md
           - name: Upgrade Microsoft Tunnel
@@ -495,8 +503,6 @@ items:
             href: ./protect/microsoft-tunnel-conditional-access.md
           - name: Migrate to the Defender for Endpoint app
             href: ./protect/microsoft-tunnel-migrate-app.md
-          - name: Microsoft Tunnel for MAM
-            href: ./protect/microsoft-tunnel-mam.md     
         - name: Identity protection
           items:
           - name: Windows Hello at device enrollment
