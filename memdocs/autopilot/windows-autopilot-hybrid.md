@@ -288,7 +288,9 @@ Autopilot deployment profiles are used to configure the Autopilot devices.
 
 13. Select **Next** > **Create**.
 
-It takes about 15 minutes for the device profile status to change from *Not assigned* to *Assigning* and, finally, to *Assigned*.
+> [!NOTE]
+>
+>Intune will periodically check for new devices in the assigned groups, and then begin the process of assigning profiles to those devices. Due to several different factors involved in the process of Autopilot profile assignment, an estimated time for the assignment can vary from scenario to scenario. These factors can include AAD groups, membership rules, hash of a device, Intune and Autopilot service, and internet connection. The assignment time will vary depending on all the factors and variables involved in a specific scenario.
 
 ## (Optional) Turn on the enrollment status page
 
