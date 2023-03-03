@@ -56,38 +56,41 @@ Azure AD users are standard users on these devices and receive assigned Intune p
 1. Download [Windows Configuration Designer (WCD)](https://www.microsoft.com/p/windows-configuration-designer/9nblggh4tx22) from the Microsoft Store.
    ![Screenshot of the Windows Configuration Designer app Store](./media/windows-bulk-enroll/bulk-enroll-store.png)
 
-2. Open the **Windows Configuration Designer** app and select **Provision desktop devices**.
+1. Open the **Windows Configuration Designer** app and select **Provision desktop devices**.
    ![Screenshot of selecting Provision desktop devices in the Windows Configuration Designer app](./media/windows-bulk-enroll/bulk-enroll-select.png)
 
-3. A **New project** window opens where you specify the following information:
+1. A **New project** window opens where you specify the following information:
    - **Name** - A name for your project
    - **Project folder** - Save location for the project
    - **Description** - An optional description of the project
    ![Screenshot of specifying name, project folder, and description in the Windows Configuration Designer app](./media/windows-bulk-enroll/bulk-enroll-name.png)
 
-4. Enter a unique name for your devices. Names can include a serial number (%SERIAL%) or a random set of characters. Optionally, you can also enter a product key if you are upgrading the edition of Windows, configure the device for shared use, and remove pre-installed software.
+1. Enter a unique name for your devices. Names can include a serial number (%SERIAL%) or a random set of characters. Optionally, you can also enter a product key if you are upgrading the edition of Windows, configure the device for shared use, and remove pre-installed software.
    
    ![Screenshot of specifying name and product key in the Windows Configuration Designer app](./media/windows-bulk-enroll/bulk-enroll-device.png)
 
-5. Optionally, you can configure the Wi-Fi network devices connect to when they first start.  If the network devices aren't configured, a wired network connection is required when the device is first started.
+1. Optionally, you can configure the Wi-Fi network devices connect to when they first start.  If the network devices aren't configured, a wired network connection is required when the device is first started.
    ![Screenshot of enabling Wi-Fi including Network SSID and Network type options in the Windows Configuration Designer app](./media/windows-bulk-enroll/bulk-enroll-network.png)
 
-6. Select **Enroll in Azure AD**, enter a **Bulk Token Expiry** date, and then select **Get Bulk Token**. The token validity period is 180 days.
+1. Select **Enroll in Azure AD**, enter a **Bulk Token Expiry** date, and then select **Get Bulk Token**. The token validity period is 180 days.
    ![Screenshot of account management in the Windows Configuration Designer app](./media/windows-bulk-enroll/bulk-enroll-account.png)
 
-> [!NOTE]
-> Once a provisioning package is created, it can be revoked before its expiration by removing the associated package_{GUID} user account from Azure AD.
+   > [!NOTE]
+   > Once a provisioning package is created, it can be revoked before its expiration by removing the associated package_{GUID} user account from Azure AD.
 
-7. Provide your Azure AD credentials to get a bulk token.
+1. Provide your Azure AD credentials to get a bulk token.
    ![Screenshot of signing in to the Windows Configuration Designer app](./media/windows-bulk-enroll/bulk-enroll-cred.png)
 
-8. In the **Stay signed in to all your apps** page, select **No, sign in to this app only**. If you keep the check box selected and press OK, the device you are using will become managed by your organization. If you do not intend for your device to be managed, make sure to select **No, sign in to this app only**. 
+   > [!NOTE]
+   > The account used to request the bulk token must be included in the [MDM user scope](windows-enroll.md#enable-windows-automatic-enrollment) that is specified in Azure AD.
 
-9. Click **Next** when **Bulk Token** is fetched successfully.
+1. In the **Stay signed in to all your apps** page, select **No, sign in to this app only**. If you keep the check box selected and press OK, the device you are using will become managed by your organization. If you do not intend for your device to be managed, make sure to select **No, sign in to this app only**. 
 
-10. Optionally, you can **Add applications** and **Add certificates**. These apps and certificates are provisioned on the device.
+1. Click **Next** when **Bulk Token** is fetched successfully.
 
-11. Optionally, you can password protect your provisioning package.  Click **Create**.
+1. Optionally, you can **Add applications** and **Add certificates**. These apps and certificates are provisioned on the device.
+
+1. Optionally, you can password protect your provisioning package.  Click **Create**.
     ![Screenshot of package protection in the Windows Configuration Designer app](./media/windows-bulk-enroll/bulk-enroll-create.png)
 
 ## Provision devices
