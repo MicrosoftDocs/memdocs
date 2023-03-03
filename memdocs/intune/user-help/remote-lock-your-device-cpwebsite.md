@@ -42,10 +42,10 @@ Remotely lock the screen of a lost or stolen enrolled device. The *remote lock* 
 ## Lock a device  
 
 1. On any device, sign in to the [Company Portal website](https://portal.manage.microsoft.com) with your work or school account.  
-3. Go to __Devices__.    
-4. Select the device you want to lock.  
-3. Select **Remote lock**. If the lock option isn't visible at the top of your page, select the **More (…)** menu to see all overflow actions. Then select **Remote lock**.  
-4. A message appears to warn you that you are about to lock your device. Tap **Remote lock** to confirm.  
+1. Go to __Devices__.    
+1. Select the device you want to lock.  
+1. Select **Remote lock**. If the lock option isn't visible at the top of your page, select the **More (…)** menu to see all overflow actions. Then select **Remote lock**.  
+1. A message appears to warn you that you are about to lock your device. Tap **Remote lock** to confirm.  
 
 ## Check remote lock status  
 
