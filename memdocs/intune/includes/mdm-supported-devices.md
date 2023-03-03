@@ -55,7 +55,7 @@ ms.localizationpriority: high
  
 - Windows Holographic for Business
 
-  For more information about managing devices running Windows Holographic for Business, see [Window Holographic for Business support](../fundamentals/windows-holographic-for-business.md).
+  For more information about managing devices running Windows Holographic for Business, see [Windows Holographic for Business support](../fundamentals/windows-holographic-for-business.md).
 
 - Surface Hub
 
