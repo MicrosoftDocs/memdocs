@@ -1329,6 +1329,14 @@ items:
           href: ./remote-actions/device-inventory.md
         - name: Collect diagnostics
           href: ./remote-actions/collect-diagnostics.md
+        - name: Send organizational messages  
+          items: 
+          - name: Overview 
+            href: ./remote-actions/organizational-messages-overview.md
+          - name: Prerequisites for organizational messages    
+            href: ./remote-actions/organizational-messages-prerequisites.md
+          - name: Create organizational messages  
+            href: ./remote-actions/organizational-messages-create.md
       - name: Bulk device actions
         href: ./remote-actions/bulk-device-actions.md
       - name: Troubleshooting

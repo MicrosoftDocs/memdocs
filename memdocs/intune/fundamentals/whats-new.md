@@ -116,7 +116,13 @@ For licensing details see [Intune add-ons](../fundamentals/intune-add-ons.md).
 
 Applies to:  
 - Android
-- iOS
+- iOS  
+
+### Tenant administration  
+
+#### Organizational messages now support custom destination URLs <!-- 16576068  -->
+
+You can now add any custom destination URL to organizational messages in the taskbar, notifications area, and Get Started app. This feature applies to Windows 11. Messages created with Azure AD-registered domains that are in a scheduled or active state are still supported. For more information, see [Create organizational messages](../remote-actions/organizational-messages-create.md?tabs=taskbar#step-1-create-a-message). 
 
 ## Week of February 20, 2023 (Service release 2302)
 
