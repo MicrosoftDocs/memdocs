@@ -9,6 +9,8 @@ ms.date: 02/23/2023
 ms.localizationpriority: medium
 ---
 
+<!-- This file is shared by the azure-ad-join-automatic-enrollment.md and the hybrid-azure-ad-join-automatic-enrollment.md articles. Headings are driven by article context. -->
+
 In order for Windows Autopilot to work, devices need to be able to enroll in Intune automatically. Enrolling devices in Intune automatically can be configured in the Azure portal:
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).

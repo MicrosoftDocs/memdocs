@@ -9,6 +9,8 @@ ms.date: 02/23/2023
 ms.localizationpriority: medium
 ---
 
+<!-- This file is shared by the azure-ad-join-register-device.md and the hybrid-azure-ad-join-register-device.md articles. Headings are driven by article context. -->
+
 Before a device can use Autopilot, the device must be registered as an Autopilot device. Registering a device as an Autopilot device can be thought of as importing the device into Autopilot so that Autopilot can be used on the device. Registering a device as an Autopilot device doesn't mean that the device has ever used the Autopilot service. It just makes the Autopilot service available to the device.
 
 Also note that a device registered in Autopilot doesn't mean the device is enrolled in Intune. A device may be registered as an Autopilot device but may not exist in Intune. It's not until an Autopilot registered device goes through the Autopilot process for the first time that it becomes enrolled in Intune. After the Autopilot device undergoes the Autopilot process and enrolls in Intune, the Autopilot device subsequently appears as a device in both Azure AD and Intune.

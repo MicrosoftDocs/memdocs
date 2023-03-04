@@ -9,6 +9,8 @@ ms.date: 02/23/2023
 ms.localizationpriority: medium
 ---
 
+<!-- This file is shared by the assign-autopilot-device-to-user-via-csv.md articles. Headings are driven by article context. -->
+
 Instead of manually assigning a user to an Autopilot device in the Autopilot device's properties, a user can be assigned to the Autopilot device when the device was initially imported into Autopilot as an Autopilot device. Assigning a user when the device is imported as an Autopilot device can be done by editing the hardware hash CSV file and adding the **Assigned User** column after the **Hardware Hash** column. The user's User Principal Name (UPN) should then be added as a value under the **Assigned User** column.
 
 > [!IMPORTANT]

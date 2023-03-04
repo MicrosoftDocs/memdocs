@@ -15,6 +15,8 @@ ms.collection:
 ms.technology: itpro-deploy
 ---
 
+<!-- This file is a placeholder for work in progress articles for this release branch. It will eventually contain more information describing each scenario and point to articles for each scenario. -->
+
 # Autopilot scenarios
 
 1. Windows Autopilot user-driven mode

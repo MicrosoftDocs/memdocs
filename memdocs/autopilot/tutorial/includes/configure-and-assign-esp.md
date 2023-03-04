@@ -9,6 +9,8 @@ ms.date: 02/23/2023
 ms.localizationpriority: medium
 ---
 
+<!-- This file is shared by the azure-ad-join-esp.md and the hybrid-azure-ad-join-esp.md articles. Headings are driven by article context. -->
+
 The main feature of the Enrollment Status Page (ESP) is to display progress and current status to the end user while the device is being set up and enrolled via the Autopilot process. The other main feature of the ESP is to block a user from signing in and using the device until all required policies and applications are installed. Multiple ESP profiles can be created with different settings and assigned appropriately based on different needs and scenarios.
 
 Out of box there's a default ESP that is assigned to all devices. The default setting in the default ESP is to not show app and profile progress during the Autopilot process. However, it's highly recommended to change this default via a separate custom ESP to show app and profile progress. If the device has many policies and applications that need to be installed and progress isn't displayed, it may make end users think that the device is hung during the setup process due to the amount of time it's taking for policies to be applied and applications to be installed. Additionally, disabling app and profile progress won't block the user from signing into the device and using the device until all policies and applications are installed. A user signing into the device before it's fully configured and provisioned can cause issues.

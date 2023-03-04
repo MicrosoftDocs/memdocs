@@ -9,6 +9,8 @@ ms.date: 02/23/2023
 ms.localizationpriority: medium
 ---
 
+<!-- This file is shared by the azure-ad-join-device-group.md and the hybrid-azure-ad-join-device-group.md articles. Headings are driven by article context. -->
+
 Device groups are a collection of devices organized into an Azure AD group. Device groups are used in Autopilot to target devices for specific configurations such as what policies to apply to a device and what applications to install on the device. They're also used by Autopilot to target Enrollment Status Page (ESP) configurations, Autopilot profile configurations, and domain join profiles to devices.
 
 Device groups can be either dynamic or assigned:

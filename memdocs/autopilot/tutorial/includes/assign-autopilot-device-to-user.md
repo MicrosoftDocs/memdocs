@@ -9,6 +9,8 @@ ms.date: 02/23/2023
 ms.localizationpriority: medium
 ---
 
+<!-- This file is shared by the azure-ad-join-assign-device-to-user.md articles. Headings are driven by article context. -->
+
 A device that has been registered as an Autopilot device can also be assigned to a user. If an Autopilot device is assigned to a user, then any user policies and application installs assigned to that user will also be applied to the device during the Autopilot process.
 
 > [!TIP]
