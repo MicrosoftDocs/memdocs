@@ -85,41 +85,41 @@ items:
 - name: Tutorial
   items:
     - name: Autopilot scenarios
-      href: autopilot-scenarios.md
+      href: tutorial/autopilot-scenarios.md
     - name: User-driven Azure AD join
       items:
         - name: Step 1 - Set up Windows automatic Intune enrollment
-          href: azure-ad-join-automatic-enrollment.md
+          href: tutorial/user-driven/azure-ad-join-automatic-enrollment.md
         - name: Step 2 - Allow users to join devices to Azure AD
-          href: azure-ad-join-allow-users-to-join.md
+          href: tutorial/user-driven/azure-ad-join-allow-users-to-join.md
         - name: Step 3 - Register devices as Autopilot devices
-          href: azure-ad-join-register-device.md
+          href: tutorial/user-driven/azure-ad-join-register-device.md
         - name: Step 4 - Create a device group
-          href: azure-ad-join-device-group.md
+          href: tutorial/user-driven/azure-ad-join-device-group.md
         - name: Step 5 - Configure and assign Autopilot Enrollment Status Page (ESP)
-          href: azure-ad-join-esp.md
+          href: tutorial/user-driven/azure-ad-join-esp.md
         - name: Step 6 - Create and assign Autopilot profile
-          href: azure-ad-join-autopilot-profile.md
+          href: tutorial/user-driven/azure-ad-join-autopilot-profile.md
         - name: Step 7 - Assign Autopilot device to a user (optional)
-          href: azure-ad-join-assign-device-to-user.md
+          href: tutorial/user-driven/azure-ad-join-assign-device-to-user.md
     - name: User-driven hybrid Azure AD join
       items:
         - name: Step 1 - Set up Windows automatic Intune enrollment
-          href: hybrid-azure-ad-join-automatic-enrollment.md
+          href: tutorial/user-driven/hybrid-azure-ad-join-automatic-enrollment.md
         - name: Step 2 - Install the Intune Connector
-          href: hybrid-azure-ad-join-intune-connector.md
+          href: tutorial/user-driven/hybrid-azure-ad-join-intune-connector.md
         - name: Step 3 - Increase the computer account limit in the Organizational Unit (OU)
-          href: hybrid-azure-ad-join-computer-account-limit.md
+          href: tutorial/user-driven/hybrid-azure-ad-join-computer-account-limit.md
         - name: Step 4 - Register devices as Autopilot devices
-          href: hybrid-azure-ad-join-register-device.md
+          href: tutorial/user-driven/hybrid-azure-ad-join-register-device.md
         - name: Step 5 - Create a device group
-          href: hybrid-azure-ad-join-device-group.md
+          href: tutorial/user-driven/hybrid-azure-ad-join-device-group.md
         - name: Step 6 - Configure and assign Autopilot Enrollment Status Page (ESP)
-          href: hybrid-azure-ad-join-esp.md
+          href: tutorial/user-driven/hybrid-azure-ad-join-esp.md
         - name: Step 7 - Create and assign Autopilot profile
-          href: hybrid-azure-ad-join-autopilot-profile.md
+          href: tutorial/user-driven/hybrid-azure-ad-join-autopilot-profile.md
         - name: Step 8 - Configure and assign domain join profile
-          href: hybrid-azure-ad-join-domain-join-profile.md
+          href: tutorial/user-driven/hybrid-azure-ad-join-domain-join-profile.md
 
 - name: Reference
   items:
