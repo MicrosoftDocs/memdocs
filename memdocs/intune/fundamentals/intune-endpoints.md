@@ -219,7 +219,7 @@ For more information on the required endpoints for endpoint analytics, see [Endp
 
 ## Microsoft Defender for Endpoint
 
-For more information about configuring Defender for Endpoint connectivity, see [Connectivity Requirements](../protect/mde-security-integration#connectivity-requirements)
+For more information about configuring Defender for Endpoint connectivity, see [Connectivity Requirements](../protect/mde-security-integration.md#connectivity-requirements)
 
 Allow the following hostnames through your firewall to support Security Management for Defender for Endpoint.
 For communication between clients and the cloud service:
