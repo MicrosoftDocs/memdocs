@@ -29,6 +29,10 @@ Autopilot user-driven Azure AD join steps:
 
 For an overview of the Windows Autopilot user-driven Azure AD join workflow, see [Windows Autopilot user-driven Azure AD join overview](azure-ad-join-workflow.md)
 
+> [!NOTE]
+>
+> If you've already created device groups from another Autopilot scenario, you can skip this step and move on to [Step 5: Configure and assign Autopilot Enrollment Status Page (ESP)](azure-ad-join-esp.md). However, be aware that if you're deploying multiple different Autopilot scenarios to different devices, separate device groups will be required for each Autopilot scenario.
+
 ## Create a device group
 
 [!INCLUDE [How to create a device group in Intune](../includes/create-device-group.md)]

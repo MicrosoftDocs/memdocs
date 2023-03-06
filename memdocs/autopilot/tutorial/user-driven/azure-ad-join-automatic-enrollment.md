@@ -29,6 +29,10 @@ Autopilot user-driven Azure AD join steps:
 
 For an overview of the Windows Autopilot user-driven Azure AD join workflow, see [Windows Autopilot user-driven Azure AD join overview](azure-ad-join-workflow.md)
 
+> [!NOTE]
+>
+> If you've already set up automatic Intune enrollment from another Autopilot scenario, you can skip this step and move on to [Step 2: Allow users to join devices to Azure AD](azure-ad-join-allow-users-to-join.md).
+
 ## Set up Windows automatic Intune enrollment
 
 [!INCLUDE [Set up Windows automatic enrollment](../includes/automatic-intune-enrollment.md)]

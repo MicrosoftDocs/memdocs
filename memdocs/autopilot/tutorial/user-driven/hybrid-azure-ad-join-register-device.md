@@ -30,6 +30,10 @@ Autopilot user-driven hybrid Azure AD join steps:
 
 For an overview of the Windows Autopilot user-driven hybrid Azure AD join workflow, see [Windows Autopilot user-driven hybrid Azure AD join overview](hybrid-azure-ad-join-workflow.md)
 
+> [!NOTE]
+>
+> If you've already registered devices as Autopilot devices from another Autopilot scenario, you can skip this step and move on to [Step 5: Create a device group](hybrid-azure-ad-join-device-group.md). However, be aware that if you're deploying multiple different Autopilot scenarios to different devices, separate device groups will be required for each Autopilot scenario.
+
 ## Register devices as Autopilot devices
 
 [!INCLUDE [How to register a device as an Autopilot device in Intune](../includes/register-autopilot-device.md)]
