@@ -77,9 +77,9 @@ You can now deploy Win32 apps with **Available** intent to device groups. For mo
 ### Device management  
 
 #### New URL for Microsoft Intune admin center  
-The *Microsoft Intune admin center* has a new URL: [https://intune.microsoft.com](https://intune.microsoft.com). The previously used URL, [https://endpoint.microsoft.com](https://endpoint.microsoft.com), will continue to work but will redirect to the new URL in late 2023. We recommend taking the following actions to avoid issues with Intune access and automated scripts: 
+The Microsoft Intune admin center has a new URL: [https://intune.microsoft.com](https://intune.microsoft.com). The previously used URL, [https://endpoint.microsoft.com](https://endpoint.microsoft.com), will continue to work but will redirect to the new URL in late 2023. We recommend taking the following actions to avoid issues with Intune access and automated scripts: 
 
-* Update login or automation to point to https://intune.microsoft.com. 
+* Update login or automation to point to `https://intune.microsoft.com`. 
 * Update your firewalls, as needed, to allow access to the new URL. 
 * Add the new URL to your favorites and bookmarks. 
 * Notify your helpdesk and update IT administrator documentation.  
