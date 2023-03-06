@@ -14,7 +14,7 @@ ms.reviewer: mstewart,aaroncz
 ms.collection: tier3
 ---
 
-# <a name="bkmk_cmpivot"></a> Tenant attach: Launch CMPivot from the admin center
+# Tenant attach: Launch CMPivot from the admin center
 
 *Applies to: Configuration Manager (current branch)* 
 
@@ -43,7 +43,7 @@ The user account needs the following permissions:
 - An [Intune role](../../intune/fundamentals/role-based-access-control.md) assigned to the user <!--7980141-->
 
 
-## <a name="bkmk_launch"></a> Launch CMPivot
+## Launch CMPivot
 
 1. In a browser, go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 1. Select **Devices** then **All Devices**.
@@ -51,7 +51,7 @@ The user account needs the following permissions:
 1. Select **CMPivot**.
 1. Type your query in the script pane, then select **Run**.
 
-## [Save CMPivot queries to favorites](#save-cmpivot-favorites)
+## Save CMPivot queries to favorites
 Save your frequently used queries to a **Favorites** folder in CMPivot to keep all your most used queries in one place. You can also add tags to your queries to help search and find queries. 
 
 The functionality is similar to one already present in the Configuration Manager console. The queries saved in the Configuration Manager console will not automatically be added to your **Favorites** folder. You will need to create new queries and add them to this folder.
