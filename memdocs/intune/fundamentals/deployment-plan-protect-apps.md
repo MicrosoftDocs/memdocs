@@ -29,6 +29,10 @@ ms.collection:
 ---
 # Step 2 - Add, configure, and protect apps with Intune
 
+The next step when deploying Intune is to add and protect apps that access organization data.
+
+:::image type="content" source="./media/deployment-plan-protect-apps/deployment-plan-add-apps.png" alt-text="Image that shows getting started with Microsoft Intune with step 2, which is adding and protect apps using Microsoft Intune.":::
+
 Managing applications on devices in your organization is a central part to a secure and productive enterprise ecosystem. You can use Microsoft Intune to manage the apps that your company's workforce uses. By managing apps, you help control which apps your company uses, as well as the configuration and protection of the apps. This functionality is called mobile application management (MAM). MAM in Intune is designed to protect organization data at the application level, including custom apps and store apps. App management can be used on organization-owned devices and personal devices. When it is used with personal devices, only organization-related access and data is managed. This type of app management is called MAM without enrollment (MAM-WE), or from an end-user perspective, bring your own device (BYOD).
 
 ## MAM configurations

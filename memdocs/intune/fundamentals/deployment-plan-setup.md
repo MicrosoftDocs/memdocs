@@ -30,7 +30,12 @@ ms.collection:
 
 # Step 1: Set up Microsoft Intune
 
+The first step when deploying Microsoft Intune is to set up your Intune environment.
+
+:::image type="content" source="./media/deployment-plan-setup/deployment-plan-setup-intune.png" alt-text="Image that shows getting started with intune with step 1, which is setting up Microsoft Intune.":::
+
 In this article, you'll step through the process of setting up Microsoft Intune. Also, this article will provide the choices and considerations you need to make when setting up an endpoint-management solution such as Intune.
+
 By the end of this article, you'll have a better understanding of Intune's supported configurations. You'll have signed up for the Microsoft Intune's free trial. You'll add end users, define user groups, assign licenses to users, and set up the other needed settings to begin using Microsoft Intune. All of these steps will prepare you to add and manage devices and apps using Intune.
 
 This article applies to:

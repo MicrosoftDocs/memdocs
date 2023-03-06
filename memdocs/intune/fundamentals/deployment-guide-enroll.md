@@ -32,7 +32,11 @@ ms.collection:
 
 # Step 5 – Enroll devices in Microsoft Intune
 
-In the final phase of deployment, devices are registered or joined in Azure Active Directory (Azure AD), enrolled in Microsoft Intune, and checked for compliance. During enrollment, Microsoft Intune installs a mobile device management (MDM) certificate on the device, which enables Intune to enforce enrollment profiles, enrollment restrictions, and the policies and profiles you created earlier in this guide.  
+In the final phase of deployment, devices are registered or joined in Azure Active Directory (Azure AD), enrolled in Microsoft Intune, and checked for compliance.
+
+:::image type="content" source="./media/deployment-guide-enroll/deployment-plan-enroll.png" alt-text="Image that shows getting started with Microsoft Intune with step 5, which is enrolling devices to be managed by Intune.":::
+
+During enrollment, Microsoft Intune installs a mobile device management (MDM) certificate on the device, which enables Intune to enforce enrollment profiles, enrollment restrictions, and the policies and profiles you created earlier in this guide.  
 
 This article describes:
 

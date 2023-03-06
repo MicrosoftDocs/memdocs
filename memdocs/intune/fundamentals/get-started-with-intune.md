@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/01/2023
+ms.date: 03/06/2023
 ms.topic: overview
 ms.service: mem
 ms.subservice: fundamentals
@@ -37,14 +37,9 @@ ms.collection:
 
 Microsoft Intune is a cloud-based service that helps you manage your devices and apps. For more information about what Microsoft Intune can do for your organization, go to [What is Microsoft Intune](what-is-intune.md).
 
-This article provides an overview of the steps to start your Intune deployment, including:
+This article provides an overview of the steps to start your Intune deployment.
 
-- Step 1 - Set up Intune
-- Step 2 - Target apps for enrollment
-- Step 3 - Use compliance and Conditional Access
-- Step 4 - Configure device features and settings
-- Step 5 - Enroll your devices to be managed
-- Cloud attach with Configuration Manager
+:::image type="content" source="./media/get-started-with-intune/get-started-overview.png" alt-text="Image that shows the different steps to get started with Microsoft Intune, including set up, adding apps, using compliance & conditional access, configuring device features, and then enrolling devices to be managed.":::
 
 ## Before you begin
 
@@ -90,7 +85,7 @@ In this step:
 
 This step focuses on setting up Intune and getting it ready for you to manage your user identities, apps, and devices. Intune uses many features in Azure AD, including your domain, your users, and your groups.
 
-For more specific information, go to [Step 1 - Set up Microsoft Intune](deployment-plan-setup.md).
+For more information, go to [Step 1 - Set up Microsoft Intune](deployment-plan-setup.md).
 
 ## Step 2 - Add and protect apps
 
@@ -103,7 +98,7 @@ In this step:
 - App protection policies help protect organization data on personal devices.
 - MFA helps protect your organization's data from unauthorized access.
 
-For more specific information, go to [Step 2 - Add, configure, and protect apps with Intune](deployment-plan-protect-apps.md).
+For more information, go to [Step 2 - Add, configure, and protect apps with Intune](deployment-plan-protect-apps.md).
 
 Every organization has a base set of apps that should be installed on devices. Before users enroll their devices, you can use Intune to assign these apps to their devices. During enrollment, the app policies are automatically deployed. When enrollment completes, the apps install and are ready to use.
 
@@ -125,7 +120,7 @@ In this step:
 
 ✔️ **Enable Conditional Access** to enforce your compliance policies.
 
-For more specific information, go to [Step 3 – Plan for compliance policies](deployment-plan-compliance-policies.md).
+For more information, go to [Step 3 – Plan for compliance policies](deployment-plan-compliance-policies.md).
 
 MDM solutions like Intune can set rules that devices should meet, and can report the compliance states of these rules. These rules are called compliance policies. When you combine compliance policies with Conditional Access, you can require devices meet certain security requirements before they can access your organization's data.
 
@@ -146,7 +141,7 @@ In this step:
 
 ✔️ **Create baseline of security features and device features** that should be enabled or blocked. Assign these profiles during enrollment.
 
-For more specific information, go to [Step 4 - Create device configuration profiles to secure devices and access organization resources](deployment-plan-configuration-profile.md).
+For more information, go to [Step 4 - Create device configuration profiles to secure devices and access organization resources](deployment-plan-configuration-profile.md).
 
 Your organization may have a base set of device and security features that should be configured or should be blocked. These settings are added to device configuration and endpoint security profiles. It's recommended to assign key security and device configuration policies during enrollment. When enrollment starts, the device configuration profiles are automatically assigned. When enrollment completes, these device and security features are configured.
 
@@ -191,7 +186,7 @@ Different platforms have different enrollment requirements. The following articl
 
 Microsoft Configuration Manager helps protect on-premises Windows Server, devices, apps, and data. If you need to manage a combination of cloud and on-premises endpoints, you can cloud attach your Configuration Manager environment to Intune.
 
-There are two steps to cloud attach your on-premises devices:
+If you use or will use Configuration Manager, there are two steps to cloud attach your on-premises devices:
 
 1. [Tenant attach](/mem/configmgr/tenant-attach/prerequisites): Register your Intune tenant with your Configuration Manager deployment. Your Configuration Manager devices are shown in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). On these devices, you can run different actions, including installing apps and run Windows PowerShell scripts using the web-based Intune admin center.
 

@@ -45,7 +45,11 @@ ms.collection:
 
 # Step 3 – Plan for compliance policies
 
-Previously, you’ve set up your Intune subscription and created app protection policies. Next, plan for and configure device compliance settings and policies to help protect organizational data by requiring devices to meet requirements that you set. If you’re not yet familiar with compliance policies, see [Compliance overview](../protect/device-compliance-get-started.md).
+Previously, you’ve set up your Intune subscription and created app protection policies. Next, plan for and configure device compliance settings and policies to help protect organizational data by requiring devices to meet requirements that you set. 
+
+:::image type="content" source="./media/deployment-plan-compliance-policies/deployment-plan-compliance-conditional-access.png" alt-text="Image that shows getting started with Microsoft Intune with step 3, which is creating compliance and conditional access policies.":::
+
+If you’re not yet familiar with compliance policies, see [Compliance overview](../protect/device-compliance-get-started.md).
 
 This article applies to:
 
