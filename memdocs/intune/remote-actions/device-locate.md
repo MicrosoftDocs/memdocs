@@ -60,7 +60,7 @@ You need to enable Windows location services in Windows Out of Box Experience (O
 - **Android Enterprise corporate-owned work profile devices** - Requires the Intune app running 2202.01 or later
 - **Android Enterprise corporate-owned fully managed devices** - Requires the Intune app running 2202.01 or later
 
-**Unsupported** - Device location capabilities aren't supported for the following platforms:
+**Unsupported** - Device location capabilities aren't supported for the following platforms: 
 
 - Android device administrator
 - Android Enterprise:
