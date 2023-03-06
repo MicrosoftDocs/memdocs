@@ -67,12 +67,22 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 -->
 
-## Week of March 6, 2023
+## Week of March 6, 2023  
 
 ### App management
 
 #### Deploy Win32 apps to device groups<!-- 7359954 -->
-You can now deploy Win32 apps with **Available** intent to device groups. For more information, see [Win32 app management in Microsoft Intune](../apps/apps-win32-app-management.md).
+You can now deploy Win32 apps with **Available** intent to device groups. For more information, see [Win32 app management in Microsoft Intune](../apps/apps-win32-app-management.md). 
+
+### Device management  
+
+#### New URL for Microsoft Intune admin center  
+The Microsoft Intune admin center has a new URL: [https://intune.microsoft.com](https://intune.microsoft.com). The previously used URL, [https://endpoint.microsoft.com](https://endpoint.microsoft.com), will continue to work but will redirect to the new URL in late 2023. We recommend taking the following actions to avoid issues with Intune access and automated scripts: 
+
+* Update login or automation to point to `https://intune.microsoft.com`. 
+* Update your firewalls, as needed, to allow access to the new URL. 
+* Add the new URL to your favorites and bookmarks. 
+* Notify your helpdesk and update IT administrator documentation.  
 
 ## Week of February 27, 2023
 
