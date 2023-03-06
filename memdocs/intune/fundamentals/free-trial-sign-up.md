@@ -94,7 +94,7 @@ To sign up for the Microsoft Intune free trial, follow the steps below:
 
 If you're not already signed in to the admin center, complete the following steps:
 
-1. Open a new browser window and enter **[https://endpoint.microsoft.com](https://endpoint.microsoft.com)** in the address bar.
+1. Open a new browser window and enter **[https://intune.microsoft.com](https://intune.microsoft.com)** in the address bar.
 2. Use the user ID that you were given in the steps above to sign in. The user ID will look similar to the following: *yourID@yourdomain.onmicrosoft.com*.
 
     ![Image of the Intune admin center sign-in page](./media/free-trial-sign-up/azure-portal-signin.png)
@@ -162,7 +162,7 @@ To confirm your Azure Active Directory Premium and Microsoft Intune, see [Confir
 
 There are two admin centers that you will use most often:
 
-- The Microsoft Intune admin center ([https://endpoint.microsoft.com](https://endpoint.microsoft.com/)) is where you can explore the [capabilities of Intune](what-is-intune.md). This is where an admin would work with Intune.
+- The Microsoft Intune admin center ([https://intune.microsoft.com](https://intune.microsoft.com/)) is where you can explore the [capabilities of Intune](what-is-intune.md). This is where an admin would work with Intune.
 
 - The Microsoft 365 admin center ([https://admin.microsoft.com](https://admin.microsoft.com)) is where you can add and manage users, if you are not using Azure Active Directory for this. You can also manage other aspects of your account, including billing and support.
 
