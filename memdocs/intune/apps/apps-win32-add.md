@@ -33,7 +33,7 @@ After you've [prepared a Win32 app to be uploaded to Intune](apps-win32-prepare.
 To use Win32 app management, be sure you meet the following criteria:
 
 - Use Windows 10 version 1607 or later (Enterprise, Pro, and Education versions).
-- Devices must be joined or registered to Azure Active Directory (Azure AD) and be auto-enrolled. The Intune management extension supports devices that are Azure AD joined, Azure AD registered,  hybrid domain joined, or group policy enrolled. 
+- Devices must be joined or registered to Azure Active Directory (Azure AD) and be auto-enrolled. The Intune management extension supports devices that are Azure AD joined, Azure AD registered, hybrid domain joined, or group policy enrolled. 
   > [!NOTE]
   > For the scenario of group policy enrollment, the user uses the local user account to Azure AD join their Windows 10 device. The user must log on to the device by using their Azure AD user account and enroll in Intune. Intune will install the Intune Management extension on the device if a PowerShell script or a Win32 app is targeted to the user or device.
 - Windows application size is capped at 8 GB per app.
@@ -277,7 +277,7 @@ The user will see Windows notifications indicating that dependent apps are being
 
 The following bulleted list provides additional clarity about dependency limitations:
 -	If an app has 100 dependencies, then the app graph has a total size of 101 (100 dependency apps + 1 parent app). 
--	If an app has 3 dependencies, and one of the dependency apps has 2 dependencies, then the app graph has a total size of 6 (1 parent app + 3 dependency app + 2 dependency app that are from another dependency app).
+-	If an app has 3 dependencies, and one of the dependency apps has 2 dependencies, then the app graph has a total size of 6 (1 parent app + 3 dependency app + 2 dependency apps that are from another dependency app).
 -	If an app is a dependency for multiple app “graphs”, meaning that the dependency is somewhere in the dependency chain for some app graph, then all apps from all the separate graphs are summed to calculate the dependency size. For example, if graph A has 23 apps, graph B has 62 apps, and graph C has 20 apps, and app X exist as a dependency app somewhere in the dependency chain in all 3 graphs, then the total size of the graph is 103 (app X is only counted once), which surpasses the 100 limit restriction. 
 
 #### Dependency failures
