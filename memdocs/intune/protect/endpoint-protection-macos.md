@@ -145,7 +145,7 @@ Use the firewall to control connections per-application, rather than per-port. U
 
 - **Do not allow user to override Gatekeeper**
 
-  Prevents users from overriding the Gatekeeper setting, and prevents users from Control-clicking to install an app. When enabled, users cannot Control-click any app to install it.
+  Prevents users from overriding the Gatekeeper setting, and prevents users from Control-clicking to install an app. When enabled, users can't Control-click any app to install it.
 
   - **Not configured** (*default*) - Users can Control-click to install apps.
   - **Yes** - Prevents users from using Control-click to install apps.
