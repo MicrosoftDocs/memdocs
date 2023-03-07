@@ -41,8 +41,8 @@ Support is available both online and by phone for paid and trial subscriptions. 
 
 Use one of the following links to open the Microsoft Intune admin center. The link you use depends on how your tenant is hosted:
 
-- **Public cloud**: Use [https://endpoint.microsoft.com](https://endpoint.microsoft.com)
-- **Private cloud** for government, which is also known as a sovereign cloud like Azure Government: Use [https://endpoint.microsoft.us](https://endpoint.microsoft.us)
+- **Public cloud**: Use [https://intune.microsoft.com](https://intune.microsoft.com)
+- **Private cloud** for government, which is also known as a sovereign cloud like Azure Government: Use [https://intune.microsoft.us](https://intune.microsoft.us)
 
 To access help and support in the admin center, you have some options:
 

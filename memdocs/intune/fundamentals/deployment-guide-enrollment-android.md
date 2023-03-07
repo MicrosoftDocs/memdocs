@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Android device enrollment guide for  Microsoft Intune
+title: Android device enrollment guide for Microsoft Intune
 description: Enroll Android and Android Enterprise corporate-owned work profile, personally owned devices with a work profile, fully managed, AOSP, and dedicated devices in Microsoft Intune. Decide which enrollment method to use, and get an overview of the administrator and end user tasks to enroll devices.
 keywords:
 author: MandiOhlinger
@@ -30,7 +30,7 @@ ms.collection:
 - highseo
 ---
 
-# Deployment guide: Enroll Android devices in Microsoft Intune
+# Enrollment guide: Enroll Android devices in Microsoft Intune
 
 Personal and organization-owned devices can be enrolled in Intune. Once enrolled, they receive the policies and profiles you create. You have the following options when enrolling Android devices:
 
@@ -41,9 +41,9 @@ Personal and organization-owned devices can be enrolled in Intune. Once enrolled
 - [Android Open Source Project (AOSP)](#android-open-source-project)
 - [Android device administrator](#android-device-administrator) (DA)
 
-This article provides recommendations on the Android enrollment methods. It also includes an overview of the administrator and user tasks for each enrollment type.
+This article provides enrollment recommendations and includes an overview of the administrator and user tasks for each option. 
 
-For more specific information, see [Enroll Android devices](../enrollment/android-enroll.md). There's also a visual guide of the different enrollment options for each platform:
+There's also a visual guide of the different enrollment options for each platform:
 
 [![A visual representation of Intune enrollment options by platform](./media/deployment-guide-enrollment/msft-intune-enrollment-options-thumb-landscape.png)](https://download.microsoft.com/download/e/6/2/e6233fdd-a956-4f77-93a5-1aa254ee2917/msft-intune-enrollment-options.pdf) <br/> [Download PDF version](https://download.microsoft.com/download/e/6/2/e6233fdd-a956-4f77-93a5-1aa254ee2917/msft-intune-enrollment-options.pdf) | [Download Visio version](https://download.microsoft.com/download/e/6/2/e6233fdd-a956-4f77-93a5-1aa254ee2917/msft-intune-enrollment-options.vsdx)
 
@@ -52,7 +52,7 @@ For more specific information, see [Enroll Android devices](../enrollment/androi
 
 ## Before you begin
 
-For an overview, including any Intune-specific prerequisites, see [Deployment guidance: Enroll devices in Microsoft Intune](deployment-guide-enrollment.md).
+For all Intune-specific prerequisites and configurations needed to prepare your tenant for enrollment, see [Enrollment guide: Microsoft Intune enrollment](deployment-guide-enrollment.md).  
 
 ## BYOD: Android Enterprise personally owned devices with a work profile
 

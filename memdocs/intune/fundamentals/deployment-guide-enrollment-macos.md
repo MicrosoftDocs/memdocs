@@ -30,7 +30,7 @@ ms.collection:
 - highseo
 ---
 
-# Deployment guide: Enroll macOS devices in Microsoft Intune
+# Enrollment guide: Enroll macOS devices in Microsoft Intune
 
 Personal and organization-owned devices can be enrolled in Intune. On macOS devices, the Company Portal app or the Apple Setup Assistant authenticates users, and starts the enrollment. Once they're enrolled, they receive the policies and profiles you create.
 
@@ -43,10 +43,10 @@ You have the following options when enrolling macOS devices:
 This article:
 
 - Describes your Company Portal app options for each enrollment method.
-- Provides recommendations on the macOS enrollment method to use.
-- Includes an overview of the administrator and user tasks for each enrollment type.
+- Provides enrollment recommendations for supported device management scenarios.  
+- Includes an overview of the administrator and user tasks for each enrollment type. 
 
-For more specific information, see [Enroll macOS devices](../enrollment/macos-enroll.md). There's also a visual guide of the different enrollment options for each platform:
+There's also a visual guide of the different enrollment options for each platform:  
 
 [![A visual representation of Intune enrollment options by platform](./media/deployment-guide-enrollment/msft-intune-enrollment-options-thumb-landscape.png)](https://download.microsoft.com/download/e/6/2/e6233fdd-a956-4f77-93a5-1aa254ee2917/msft-intune-enrollment-options.pdf) <br/> [Download PDF version](https://download.microsoft.com/download/e/6/2/e6233fdd-a956-4f77-93a5-1aa254ee2917/msft-intune-enrollment-options.pdf) | [Download Visio version](https://download.microsoft.com/download/e/6/2/e6233fdd-a956-4f77-93a5-1aa254ee2917/msft-intune-enrollment-options.vsdx)
 
@@ -55,7 +55,7 @@ For more specific information, see [Enroll macOS devices](../enrollment/macos-en
 
 ## Before you begin
 
-For an overview, including any Intune-specific prerequisites, see [Deployment guidance: Enroll devices in Microsoft Intune](deployment-guide-enrollment.md).
+For all Intune-specific prerequisites and configurations needed to prepare your tenant for enrollment, see [Enrollment guide: Microsoft Intune enrollment](deployment-guide-enrollment.md).  
 
 ## BYOD: Device enrollment
 

@@ -113,7 +113,7 @@ Enabling co-management itself doesn't require that you onboard your site with Az
 
 ### Intune
 
-- [Set up Intune](../../intune/fundamentals/setup-steps.md)
+- [Set up Intune](../../intune/fundamentals/deployment-plan-setup.md)
 
 - [Enable Windows automatic enrollment](../../intune/enrollment/windows-enroll.md#enable-windows-automatic-enrollment)
 

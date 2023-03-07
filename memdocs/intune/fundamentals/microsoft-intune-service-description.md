@@ -26,6 +26,7 @@ ms.custom: intune-classic; get-started
 ms.collection:
 - tier2
 - M365-identity-device-management
+- triage
 ---
 
 # Microsoft Intune service description

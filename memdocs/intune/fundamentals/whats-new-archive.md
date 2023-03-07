@@ -4069,7 +4069,7 @@ With Intune, you can now provision Android Enterprise dedicated devices with Mic
 
 The existing planning and migration guides are rewritten, and updated with new guidance. There's also some new deployment guides that focus on Intune setup, and enrollment for Android, iOS/iPadOS, macOS, and Windows devices.
 
-For more information, go to [Overview](migration-guide.md).
+For more information, go to [Microsoft Intune planning guide](intune-planning-guide.md), [Deployment guide: Setup or move to Microsoft Intune](deployment-guide-intune-setup.md), and [Deployment guidance: Enroll devices in Microsoft Intune](deployment-guide-enrollment.md).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device security
