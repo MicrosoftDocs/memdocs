@@ -54,21 +54,36 @@ Intune has two service instances:
 
 ## Feature differences in Intune GCC High and DoD
 
-- Microsoft Intune Plan 2 and Microsoft Intune Suite are not yet available for GCC, GCC-High or DoD customers. For more information on these plans, go to [Microsoft Intune Plans and Pricing](https://www.microsoft.com/security/business/microsoft-intune-pricing).
-- Intune for GCC High and DoD does not support the on-premises Exchange Connector.
-- Intune for GCC High and DoD customers doesn't support the Chrome OS Connector.
-- Windows Autopilot is not available to GCC High and DoD customers. Planning is underway.
-- Microsoft Store for Business is not available to GCC High and DoD customers.
 - Intune for GCC High only supports the Mobile Threat Defense (MTD) connectors for Android and iOS devices with MTD vendors that **also have support** in this government environment. When you sign in to a GCC-H tenant, you'll see the connectors enabled for those specific vendors.
-- Microsoft Endpoint Manager Endpoint Analytics and Log Analytics are not currently available for U.S. Government customers.
-- Intune for GCC High does not support the [TeamViewer connector](../remote-actions/teamviewer-support.md) or TeamViewer feature.
 - Intune for GCC High and DoD does not support Android (AOSP) management for corporate devices.
-- Intune for GCC High and DoD does not support [Feature updates](../protect/windows-10-feature-updates.md).
-- Intune for GCC High and DoD does not support [Expedited updates](../protect/windows-10-expedite-updates.md).
 - [Android based Teams devices](/microsoftteams/rooms/teams-devices-feature-comparison#feature-comparison-between-windows-and-android) are not fully supported in GCC High and DoD clouds. Planning is underway. 
   - Android based Teams devices may still function correctly in GCC High and DoD clouds. If a functionality issue is discovered, support is best effort.
-  - Windows based Teams devices are fully supported in GCC High and DoD clouds. 
-- Intune for GCC High and DoD doesn't support management of [Linux](../user-help/enroll-device-linux.md) devices.
+  - Windows based Teams devices are fully supported in GCC High and DoD clouds.
+
+The following features are currently not available in GCC High and DoD clouds. Planning is underway to support these features for GCC High and DoD. There is no ETA.
+
+| Feature | Available |
+| --- | --- |
+| Endpoint Analytics | **ⓘ** <br/> Endpoint Analytics is not currently available for U.S. Government customers. |
+| Log Analytics |  **ⓘ** <br/> Log Analytics is not currently available for U.S. Government customers. |
+| [Expedited updates](../protect/windows-10-expedite-updates.md) | **ⓘ** | 
+| [Feature updates](../protect/windows-10-feature-updates.md) | **ⓘ** | 
+| [Linux](../user-help/enroll-device-linux.md) devices | **ⓘ** | 
+| Microsoft Intune Plan 2 and Microsoft Intune Suite | **ⓘ** <br/> For more information on these plans, go to [Microsoft Intune Plans and Pricing](https://www.microsoft.com/security/business/microsoft-intune-pricing). |
+| Windows Autopilot | **ⓘ** |
+
+The following features are not available and will never be supported for GCC High and DoD:
+
+| Feature | Available |
+| --- | --- |
+| Chrome OS Connector | ❌ |
+| Microsoft Store for Business | ❌ |
+| On-premises Exchange Connector | ❌ |
+| [TeamViewer connector](../remote-actions/teamviewer-support.md) or TeamViewer feature | ❌ |
+
+✔️
+❌
+ⓘ
 
 ## Next steps
 
