@@ -6,7 +6,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/28/2022
+ms.date: 03/15/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -47,9 +47,11 @@ Available details include:
  * **Date created**:  Shows the date and time you created the message.   
  * **Status** Shows the status of the message, which includes: 
     * **Active**: The message is currently being shown to users according to your schedule.  
-    * **Scheduled**: The message isn't currently being shown to users but has been scheduled.  
+    * **Pending**: The message has not been scheduled yet and is currently in progress.
+    * **Scheduled**: The message isn't currently being shown to users but has been scheduled.     
     * **Canceled**: The message was canceled and is no longer scheduled to go out to users.  
     * **Completed**: The message was sent out during the scheduled time and is done being shown.  
+    * **Failed**: The message failed to schedule due to a service error.  
  * **Start date**: Shows the start date for the message.  
  * **End date** Shows the end date for the message.  
  * **Times shown**: Shows an estimate of the total number of times the message has been shown to users in the past 180 days.   
