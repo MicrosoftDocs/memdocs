@@ -207,7 +207,7 @@ Example for when you use the cloud management gateway URL: `ccmsetup.exe /mp:htt
 
 > [!NOTE]
 > 
-> The /mp command-line parameter doesn't specify the management point used by the Configuration Manager client once it is installed. To specify the initial management point used by the Configuration Manager client once it is installed, use the [SMSMP](#SMSMP) client.msi property. To specify a list of management points for the Configuration Manager client to use once it is installed, use the [SMSMPLIST](#SMSMPLIST) client.msi property.
+> The /mp command-line parameter doesn't specify the management point used by the Configuration Manager client once it is installed. To specify the initial management point used by the Configuration Manager client once it is installed, use the [SMSMP](#smsmp) client.msi property. To specify a list of management points for the Configuration Manager client to use once it is installed, use the [SMSMPLIST](#smsmplist) client.msi property.
 
 ### `/NoCRLCheck`
 
