@@ -84,7 +84,7 @@ However, sometimes you don’t want certain [Intune roles](../../intune/fundamen
 
 ## Perform device actions
 
-1. In a browser, navigate to `endpoint.microsoft.com`
+1. In a browser, navigate to `intune.microsoft.com`
 1. Select **Devices** then **All devices** to see the uploaded devices. You'll see **ConfigMgr** in the **Managed by** column for uploaded devices.
    [![All devices in Microsoft Intune admin center](./media/3555758-all-devices.png)](./media/3555758-all-devices.png#lightbox)
 1. Select a device to load its **Overview** page.
