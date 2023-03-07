@@ -29,13 +29,13 @@ ms.collection:
 - highpri
 ---
 
-# What is Microsoft Intune device management?
+# Manage devices with Microsoft Intune
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 As an IT admin, you must ensure that managed devices are providing the resources that your users need to do their work, while protecting that data from risk.
 
-The **Devices** workload gives you insights into the devices you manage, and lets you activate remote tasks on those devices.
+The **Devices** workload gives you insights into the devices you manage, and lets you activate remote actions on those devices.
 
 Not all device actions are available for every platform or device. Available actions are shown on the device's overview page (**Devices** > **All devices** > choose a device).
 
@@ -89,8 +89,3 @@ The available actions depend on the device platform and the device configuration
   - [Send custom notification](custom-notifications.md#send-a-custom-notification-to-a-single-device) (Android, iOS/iPadOS)
   - [Synchronize device](device-sync.md)
   - [Update cellular data plan](update-cellular-data-plan.md) (iOS/iPadOS)
-
-
-## Next steps
-
-[Remotely run device actions with Intune](./index.yml)

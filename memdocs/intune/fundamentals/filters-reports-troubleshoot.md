@@ -132,7 +132,7 @@ Use the following table to help understand when you include or exclude devices:
   - Time3: In the Company Portal app, the user is prompted to choose a device category. Remember, enrollment and check-in is already completed.
   - Time4: On the next device check-in, the category property updates and now returns a different filter evaluation result. Remember, the app was already installed. And, it won't be automatically removed.
 
-  For approximate check-in times, go to [How long does it take for devices to get a policy, profile, or app after they're assigned?](../configuration/device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned)
+  For approximate check-in times, go to [How long does it take for devices to get a policy, profile, or app after they're assigned?](../configuration/device-profile-troubleshoot.md#policy-refresh-intervals)
 
 - The latest filter evaluation results are stored for 30 days. If the logs are expired, you may see a **We were not able to retrieve any filter evaluation results** message.
 
