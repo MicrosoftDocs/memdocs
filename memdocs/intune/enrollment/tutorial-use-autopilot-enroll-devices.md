@@ -3,7 +3,7 @@
 
 title: Tutorial - Use Autopilot to enroll devices in Intune
 titleSuffix: Microsoft Intune
-description: In this tutorial, you'll set up Windows Autopilot to enroll devices in Intune.
+description: In this tutorial, you'll configure Windows Autopilot so that during provisioning devices can enroll in Intune. 
 keywords:
 author: Lenewsad
 ms.author: lanewsad
@@ -33,9 +33,9 @@ ms.collection:
 - highpri
 ---
 
-# Tutorial: Use Autopilot to enroll Windows devices in Intune
+# Tutorial: Use Windows Autopilot to enroll devices in Intune
 
-[Windows Autopilot](../../autopilot/index.yml) simplifies enrolling devices. With Microsoft Intune and Autopilot, you can give new devices to your end users without the need to build, maintain, and apply custom operating system images.
+Simplify device provisioning for you and your users by setting up Microsoft Intune device enrollment to occur automatically during [Windows Autopilot](../../autopilot/index.yml). This enrollment solution enables you to give new devices to your end users without the need to build, maintain, and apply custom operating system images. 
 
 In this tutorial, you'll learn how to:
 > [!div class="checklist"]
@@ -45,19 +45,20 @@ In this tutorial, you'll learn how to:
 > * Assign the Autopilot deployment profile to the device group
 > * Distribute Windows devices to users
 
-If you don't have an Intune subscription, [sign up for a free trial account](../fundamentals/free-trial-sign-up.md).
+If you don't have an Intune subscription, [sign up for a free trial account](../fundamentals/free-trial-sign-up.md).  
 
-For an overview of Autopilot benefits, scenarios, and prerequisites, see [Overview of Windows Autopilot](/windows/deployment/windows-autopilot/windows-10-autopilot).
+> [!TIP]
+> For an overview of Windows Autopilot benefits, scenarios, and prerequisites, see [Overview of Windows Autopilot](/windows/deployment/windows-autopilot/windows-10-autopilot).  
 
+## Prerequisites  
+To try this task, you must:  
 
-## Prerequisites
 - [Set up Windows automatic enrollment](quickstart-setup-auto-enrollment.md)
-- [Azure Active Directory Premium subscription](/azure/active-directory/active-directory-get-started-premium) <!--&#40;[trial subscription](https://go.microsoft.com/fwlink/?LinkID=816845)&#41;-->
-
+- [Azure Active Directory Premium subscription](/azure/active-directory/active-directory-get-started-premium) <!--&#40;[trial subscription](https://go.microsoft.com/fwlink/?LinkID=816845)&#41;-->  
 
 ## Add devices
 
-The first step in setting up Windows Autopilot is to add the Windows devices to Intune. All you have to do is create a CSV file and import it into Intune.
+The first step in setting up Windows Autopilot is to add the Windows devices to Intune, which requires you to create a CSV file and import it to Intune.  
 
 1. In any text editor, create a list of comma-separated values (CSV) that identify the Windows devices. Use the following format:
     

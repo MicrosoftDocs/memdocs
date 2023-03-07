@@ -146,7 +146,7 @@ Before beginning the installation, make sure that all of the [Intune connector s
 
 4. Open the downloaded Connector setup file, *ODJConnectorBootstrapper.exe*, to install the Connector.
 
-5. At the end of the setup, select **Configure**.
+5. At the end of the setup, select **Configure Now**.
 
 6. Select **Sign In**.
 
@@ -288,7 +288,9 @@ Autopilot deployment profiles are used to configure the Autopilot devices.
 
 13. Select **Next** > **Create**.
 
-It takes about 15 minutes for the device profile status to change from *Not assigned* to *Assigning* and, finally, to *Assigned*.
+> [!NOTE]
+>
+>Intune will periodically check for new devices in the assigned groups, and then begin the process of assigning profiles to those devices. Due to several different factors involved in the process of Autopilot profile assignment, an estimated time for the assignment can vary from scenario to scenario. These factors can include AAD groups, membership rules, hash of a device, Intune and Autopilot service, and internet connection. The assignment time will vary depending on all the factors and variables involved in a specific scenario.
 
 ## (Optional) Turn on the enrollment status page
 
@@ -335,7 +337,7 @@ It takes about 15 minutes for the device profile status to change from *Not assi
 
 6. Select **OK** > **Create**. The profile is created and displayed in the list.
 
-7. [Assign a device profile](../intune/configuration/device-profile-assign.md#assign-a-device-profile) to the same group used at the step [Create a device group](windows-autopilot-hybrid.md#create-a-device-group). Different groups can be used if there's a need to join devices to different domains or OUs.
+7. [Assign a device profile](../intune/configuration/device-profile-assign.md#assign-a-policy-to-users-or-groups) to the same group used at the step [Create a device group](windows-autopilot-hybrid.md#create-a-device-group). Different groups can be used if there's a need to join devices to different domains or OUs.
 
 > [!NOTE]
 > The naming capabilities for Windows Autopilot for Hybrid Azure AD Join don't support variables such as %SERIAL% and only support prefixes for the computer name.

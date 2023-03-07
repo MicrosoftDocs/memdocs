@@ -1,15 +1,15 @@
 ---
 # required metadata
 
-title: Quickstart - Send notifications to noncompliant devices
+title: Send notifications to noncompliant devices
 titleSuffix: Microsoft Intune
-description: In this quickstart, you use Microsoft Intune to send email notifications to noncompliant devices.
+description: In this topic, you use Microsoft Intune to send email notifications to noncompliant devices.
 keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 01/12/2022
-ms.topic: quickstart
+ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
@@ -27,13 +27,13 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection:
-- tier3
+- tier2
 - M365-identity-device-management
 ---
 
-# Quickstart: Send notifications to noncompliant devices
+# Step 7: Send notifications to noncompliant devices
 
-In this quickstart, you'll use Microsoft Intune to send an email notification to the members of your workforce that have noncompliant devices.
+In this topic, you'll use Microsoft Intune to send an email notification to the members of your workforce that have noncompliant devices.
 
 > [!NOTE]
 > The remote action to send an email notification is not supported on devices that are managed by a [device compliance partner](../protect/device-compliance-partners.md).
@@ -48,7 +48,7 @@ If you don't have an Intune subscription, [sign up for a free trial account](../
 
 ## Prerequisites
 
-When using device compliance policies to block devices from corporate resources, Azure AD Conditional Access must be set up. If you've completed the [Create a device compliance policy](quickstart-set-password-length-android.md) quickstart, you're using Azure Active Directory. For more information about Azure AD, see [Conditional Access in Azure Active Directory](/azure/active-directory/active-directory-conditional-access-azure-portal) and [common ways to use Conditional Access with Intune](../protect/conditional-access-intune-common-ways-use.md).
+When using device compliance policies to block devices from corporate resources, Azure AD Conditional Access must be set up. If you've completed the [Create a device compliance policy](quickstart-set-password-length-android.md) evaluation step, you're using Azure Active Directory. For more information about Azure AD, see [Conditional Access in Azure Active Directory](/azure/active-directory/active-directory-conditional-access-azure-portal) and [common ways to use Conditional Access with Intune](../protect/conditional-access-intune-common-ways-use.md).
 
 
 ## Sign in to Intune
@@ -137,9 +137,9 @@ When you've successfully created and saved the policy, it will appear in the lis
 
 ## Next steps
 
-In this quickstart, you used Intune to create and assign a compliance policy for your workforce's Windows 10 devices to require a password of at least six characters in length. For more information about creating compliance policies for Windows devices, see [Add a device compliance policy for Windows devices in Intune](compliance-policy-create-windows.md).
+In this topic, you used Intune to create and assign a compliance policy for your workforce's Windows 10 devices to require a password of at least six characters in length. For more information about creating compliance policies for Windows devices, see [Add a device compliance policy for Windows devices in Intune](compliance-policy-create-windows.md).
 
-To follow this series of Intune quickstarts, continue to the next quickstart.
+To continue to evaluate Microsoft Intune, go to the next step:
 
 > [!div class="nextstepaction"]
-> [Quickstart: Add and assign a client app](../apps/quickstart-add-assign-app.md)
+> [Step 8: Add and assign a client app](../apps/quickstart-add-assign-app.md)

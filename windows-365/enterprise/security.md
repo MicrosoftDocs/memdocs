@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 02/21/2023
+ms.date: 03/03/2023
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -94,6 +94,14 @@ The data of the Cloud PC data itself is secured through encryption. For more det
 Securing the data available to users on their Cloud PCs should be no different than securing the data available to users on work-assigned Windows PCs. The Cloud PC should be accessed through Remote Desktop Protocol (RDP).
 
 To manage RDP features available to the user during their Cloud PC connection, see [manage RDP device redirections for Cloud PCs](./manage-rdp-device-redirections.md).
+
+## Client update security
+
+Windows 365 Cloud PCs can be accessed from various operating system platforms and clients available in those platforms.
+
+- **Windows OS platforms**: Windows 365 can be accessed using Remote Desktop client for Windows and the Windows 365 App. Both these apps receive updates using the Windows Update service. For more information, see [Windows Update security](/windows/deployment/update/windows-update-security).
+- **Apple devices (macOS and iOS)**: Remote desktop client apps and their updates are distributed by Apple's app store. For more information about MacOS and iOS security measures, see [Apple Platform Security](https://support.apple.com/en-sg/guide/security/welcome/web).
+- **Android platforms**: Android platform apps downloaded from Google play stores conform to the Google play store terms and conditions. For more information, see [Google Play Terms of Service](https://play.google.com/about/play-terms/index.html).
 
 ## Next steps
 

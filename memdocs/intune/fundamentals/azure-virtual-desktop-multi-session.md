@@ -27,7 +27,7 @@ ms.custom: intune-classic; get-started; references_regions
 ms.collection:
 - tier1
 - M365-identity-device-management
-  - highpri
+- highpri
 ---
 
 # Windows 10 or Windows 11 Enterprise multi-session remote desktops
