@@ -97,6 +97,13 @@ End users will be able to pin their Cloud PC to the task bar in the Windows 365 
 End users will be able to manually run connectivity checks on their Cloud PCs from [windows365.microsoft.com](https://windows365.microsoft.com).
 
 <!-- ***********************************************-->
+## Miscellaneous
+
+### FQDN tags <!--43488376-->
+
+In a future update, FQDN tags will be available to help customers simplify the creation and maintenance of the necessary rules for outbound network traffic through Azure firewalls.
+
+<!-- ***********************************************-->
 <!-- ## Provisioning -->
 
 <!-- ***********************************************-->
