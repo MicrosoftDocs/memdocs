@@ -56,17 +56,13 @@ You need to enable Windows location services in Windows Out of Box Experience (O
 **Lost device sound alert** – The following platforms support this capability:
 
 - **iOS/iPadOS 9.3 and later** - Requires the device to be in supervised mode, and be in [lost mode](device-lost-mode.md)
-- **Android Enterprise dedicated devices** - Requires the Intune app running 2202.01 or later 
-- **Android Enterprise corporate-owned work profile devices** - Requires the Intune app running 2202.01 or later
-- **Android Enterprise corporate-owned fully managed devices** - Requires the Intune app running 2202.01 or later
+- **Android Enterprise dedicated devices** - Requires the Intune app running 2202.01 or later
 
 **Unsupported** - Device location capabilities aren't supported for the following platforms:
 
 - Android device administrator
 - Android Enterprise:
-  - Corporate-owned work profile
   - Personally-owned work profile
-  - Fully managed
 - macOS
 - Windows Holographic for Business
 - Windows Phone
