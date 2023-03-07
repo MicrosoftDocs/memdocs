@@ -34,7 +34,7 @@ So far, you've set up your Intune subscription, created app protection policies,
 
 In this step, you're ready to configure a minimum or baseline set of security and device features that all devices must have.
 
-:::image type="content" source="./media/deployment-plan-configuration-profile/deployment-plan-config-devices.png" alt-text="Image that shows getting started with Microsoft Intune with step 4, which is configuring devices features and security settings.":::
+:::image type="content" source="./media/deployment-plan-configuration-profile/deployment-plan-config-devices.png" alt-text="Diagram that shows getting started with Microsoft Intune with step 4, which is configuring devices features and security settings.":::
 
 This article applies to:
 
@@ -231,7 +231,7 @@ This section focuses on accessing resources in your organization. These resource
 - VPN connection for remote connectivity
 - Wi-Fi connection for on-premises connectivity
 
-:::image type="content" source="./media/deployment-plan-configuration-profile/deploy-email-vpn-wifi.png" alt-text="Image that shows an email, VPN and Wi-Fi profiles deployed from Microsoft Intune to end user devices.":::
+:::image type="content" source="./media/deployment-plan-configuration-profile/deploy-email-vpn-wifi.png" alt-text="Diagram that shows an email, VPN and Wi-Fi profiles deployed from Microsoft Intune to end user devices.":::
 
 ### Email
 

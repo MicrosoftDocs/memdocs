@@ -39,7 +39,7 @@ Microsoft Intune is a cloud-based service that helps you manage your devices and
 
 This article provides an overview of the steps to start your Intune deployment.
 
-:::image type="content" source="./media/get-started-with-intune/get-started-overview.png" alt-text="Image that shows the different steps to get started with Microsoft Intune, including set up, adding apps, using compliance & conditional access, configuring device features, and then enrolling devices to be managed.":::
+:::image type="content" source="./media/get-started-with-intune/get-started-overview.png" alt-text="Diagram that shows the different steps to get started with Microsoft Intune, including set up, adding apps, using compliance & conditional access, configuring device features, and then enrolling devices to be managed.":::
 
 ## Before you begin
 

@@ -3,7 +3,7 @@
 
 title : Set up Intune
 titleSuffix: Microsoft Intune
-description: Step 1 for deploying or setting up Intune. The starting point is to review supported configurations, sign-up for the trial, configure the custom domain name, add users and groups to Intune, assign licenses to users, manage roles, grant admin permissions , and set the MDM authority.  
+description: Step 1 for deploying or setting up Intune. The starting point is to review supported configurations, sign up for the trial, configure the custom domain name, add users and groups to Intune, assign licenses to users, manage roles, grant admin permissions, and set the MDM authority.  
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
@@ -32,7 +32,7 @@ ms.collection:
 
 The first step when deploying Microsoft Intune is to set up your Intune environment.
 
-:::image type="content" source="./media/deployment-plan-setup/deployment-plan-setup-intune.png" alt-text="Image that shows getting started with intune with step 1, which is setting up Microsoft Intune.":::
+:::image type="content" source="./media/deployment-plan-setup/deployment-plan-setup-intune.png" alt-text="Diagram that shows getting started with Intune with step 1, which is setting up Microsoft Intune.":::
 
 In this article, you'll step through the process of setting up Microsoft Intune. Also, this article will provide the choices and considerations you need to make when setting up an endpoint-management solution such as Intune.
 
