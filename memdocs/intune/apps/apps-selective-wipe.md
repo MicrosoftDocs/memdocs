@@ -76,8 +76,8 @@ By adding a user to the User-level wipe we will automatically issue wipe command
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **App selective wipe** > **User-Level Wipe**
-3. Click **Add** and **Select user** pane is displayed.
-4. Chose the user whose app data you would like to wipe and click **Select**.
+3. Select **Add**. The **Select user** pane displays.
+4. Choose the user whose app data you would like to wipe > **Select**.
 
 ## Monitor your wipe requests
 
