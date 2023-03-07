@@ -33,7 +33,7 @@ ms.collection:
 
 # Intune discovered apps
 
-Intune **discovered apps** is a list of detected apps on the Intune enrolled devices in your tenant. It acts as a software inventory for your tenant. **Discovered apps** is a separate report from the [app installation](apps-monitor.md) reports. For personal devices, Intune never collects information on applications that are unmanaged. On corporate devices, any app whether it is a managed app or not is collected for this report. Below is the table mapping the expected behavior. In general, the report refreshes every 7 days from the time of enrollment (not a weekly refresh for the entire tenant). The only exception to this refresh cycle for the **Discovered apps** report is application information collected through the Intune Management Extension for Win32 Apps, which is collected every 24 hours.
+Intune **discovered apps** is a list of detected apps on the Intune enrolled devices in your tenant. It acts as a software inventory for your tenant. **Discovered apps** is a separate report from the [app installation](apps-monitor.md) reports. For personal devices, Intune never collects information on applications that are unmanaged. On corporate devices, any app whether it's a managed app or not is collected for this report. Below is the table mapping the expected behavior. In general, the report refreshes every seven days from the time of enrollment (not a weekly refresh for the entire tenant). The only exception to this refresh cycle for the **Discovered apps** report is application information collected through the Intune Management Extension for Win32 Apps, which is collected every 24 hours.
 
 ## Monitor discovered apps with Intune
 
@@ -58,16 +58,16 @@ Intune also provides the list of discovered apps for the individual device in yo
 
 The following list provides the app platform type, the apps that are monitored for personal devices, the apps that are monitored for company-owned devices, and the refresh cycle. For more information about app types supported by Intune, see [App types in Microsoft Intune](apps-add.md#app-types-in-microsoft-intune).
 
-| Platform | For personally-owned devices | For company-owned devices | Refresh cycle |
+| Platform | For personally owned devices | For company-owned devices | Refresh cycle |
 |------------------------------------------------------------------------|----------------------------------|--------------------------------------------------|---------------------------------------|
 | Windows 10/11 (Win32 Apps) NOTE: [Requires Intune Management Extension](intune-management-extension.md) on device | Not Applicable | MSI installed apps on the device | Every 24 hours from device enrollment |
-| Windows 10/11 (Modern Apps) | Only managed modern apps | All modern apps installed on the device | Every 7 days from device enrollment |
-| Windows 8.1 | Only managed apps | Only managed apps | Every 7 days from device enrollment |
-| Windows RT | Only managed apps | Only managed apps | Every 7 days from device enrollment |
-| iOS/iPadOS | Only managed apps | All apps installed on the device | Every 7 days from device enrollment |
-| macOS | Only managed apps | All apps installed on the device | Every 7 days from device enrollment |
-| Android device administrator | Only managed apps | All apps installed on the device | Every 7 days from device enrollment |
-| Android Enterprise personally-owned enrollment | Only managed apps in the work profile | Not applicable | Every 7 days from device enrollment |
+| Windows 10/11 (Modern Apps) | Only managed modern apps | All modern apps installed on the device | Every seven days from device enrollment |
+| Windows 8.1 | Only managed apps | Only managed apps | Every seven days from device enrollment |
+| Windows RT | Only managed apps | Only managed apps | Every seven days from device enrollment |
+| iOS/iPadOS | Only managed apps | All apps installed on the device | Every seven days from device enrollment |
+| macOS | Only managed apps | All apps installed on the device | Every seven days from device enrollment |
+| Android device administrator | Only managed apps | All apps installed on the device | Every seven days from device enrollment |
+| Android Enterprise personally owned enrollment | Only managed apps in the work profile | Not applicable | Every seven days from device enrollment |
 | Android Enterprise corporate-owned enrollments | Not applicable| Not yet supported | Not Applicable |
 | AOSP enrollments | Not applicable | Not yet supported | Not applicable |
 
