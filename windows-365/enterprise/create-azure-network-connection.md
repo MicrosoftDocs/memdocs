@@ -48,7 +48,7 @@ To create an ANC, you must:
 
 - Have the [Intune Administrator](/azure/active-directory/roles/permissions-reference#intune-administrator), [Windows 365 Administrator](/azure/active-directory/roles/permissions-reference), or [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) role.
 - Have an Active Directory user account with sufficient permissions to join the AD domain into this Organizational Unit( (Hybrid Azure AD Join ANCs only).
-- Have the Subscription Reader role in the Azure Subscription where the VNET associated with the ANC was located.
+- Have the Subscription Owner role in the Azure Subscription where the VNET associated with the ANC was located.
 - For Disaster Recovery (DR) purposes, make sure that there are at least 50% of the IP addresses available in your subnet. If reprovisioning for DR is required, sufficient new IP addresses are required for each Cloud PC provisioned on the subnet.
 - For Windows 365 Government - GCC only and not GCC-H - make sure to complete the script options listed in [Set up tenants for Windows 365 Government](set-up-tenants-windows-365-gcc.md).
    - If you are not using Azure CloudShell, make sure that your PowerShell execution policy is configured to allow Unrestricted scripts. If you use Group Policy to set execution policy, make sure that the Group Policy Object (GPO) targeted at the Organizational Unit (OU) defined in the ANC is configured to allow Unrestricted scripts. For more information, see [Set-ExecutionPolicy](/powershell/module/microsoft.powershell.security/set-executionpolicy).
