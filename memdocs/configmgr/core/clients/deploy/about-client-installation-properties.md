@@ -170,7 +170,7 @@ Example: `ccmsetup.exe /logon`
 
 ### `/mp`
 
-Specifies a source management point for computers to connect to. Computers use this management point to find the nearest distribution point for the installation files. If there are no distribution points, or computers can't download the files from the distribution points after four hours, they download the files from the specified management point.
+Specifies a management point for clients to use to find the nearest distribution point for the client installation files. If there are no distribution points, or computers can't download the files from the distribution points after four hours, they download the files from the specified management point.
 
 For more information on how ccmsetup downloads content, see [Boundary groups - client installation](../../servers/deploy/configure/boundary-groups-distribution-points.md#client-installation). That article also includes details of ccmsetup behavior if you use both `/mp` and `/source` parameters.
 
@@ -201,8 +201,13 @@ This parameter can also specify the URL of a cloud management gateway (CMG). Use
 
 Example for when you use the cloud management gateway URL: `ccmsetup.exe /mp:https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72057598037248100`
 
-> [!Important]
+> [!IMPORTANT]
+>
 > When specifying the URL of a cloud management gateway for the `/mp` parameter, it must start with `https://`.
+
+> [!NOTE]
+> 
+> The /mp command-line parameter doesn't specify the management point used by the Configuration Manager client once it is installed. To specify the initial management point used by the Configuration Manager client once it is installed, use the [SMSMP](#SMSMP) client.msi property. To specify a list of management points for the Configuration Manager client to use once it is installed, use the [SMSMPLIST](#SMSMPLIST) client.msi property.
 
 ### `/NoCRLCheck`
 
