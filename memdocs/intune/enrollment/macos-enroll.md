@@ -161,12 +161,13 @@ The device user signs in to the Company Portal app to initiate enrollment. Compa
 4. From the side menu, select **Hardware**.  
 5. Check the value next to **User approved enrollment**.  
 
-## Backup and restore a macOS device with Apple's Migration Assistant tool
-When backing up a macOS device and restoring that app data to a new device with Apple's migration assistant tool, please note -  
--When using the migration assistant tool to restore from backup from one macOS device to another macOS device, the existing management profile on the initial Mac is not backed up. The device will have a new management profile sent to it as the new Mac device gets re-enrolled.
--This includes a restore from backup on ADE macOS devices and non-ADE macOS devices.
--App data, including credentials taken in the backup in the macOS Company Portal, may be restored to the new device after the device is enrolled after the migration assistant.
--In this case, we recommend for the end user or administration to sign out and sign back into the macOS Company portal app or in the Company Portal website to remove the Company Portal app data.
+## Back up and restore with Apple Migration Assistant  
+Use Apple Migraton to back up and restore a macOS device. You can use the tool to back up a Mac and restore its app data on a new device. It's important to know:  
+- The management profile on the original Mac is not backed up. The device is sent a new management profile as the new Mac re-enrolls. This happens on Macs that go through Apple automated device enrollment and Macs that don't go through automated device enrollment.  
+- App data, which includes Company Portal credentials, might be restored on the new Mac after it goes through Migration Assistant and enrolls. If this happens, we recommend that you or the device user: 
+  1. Sign out of the Company Portal app.  
+  2. Sign in to the app or Company Portal website.  
+  3. Remove the Company Portal app data.  
 
 ## Next steps
 
