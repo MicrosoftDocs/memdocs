@@ -37,11 +37,11 @@ By assigning the S mode supplemental policy in Intune, you enable the device to 
 The steps to allow Win32 apps to run on a Windows 10 device in S mode are the following:
 
 1. Enable S mode devices through Intune as part of Windows 10 S enrollment process.
-2. Create a supplemental policy to allow Win32 apps:
+1. Create a supplemental policy to allow Win32 apps:
    - You can use [Microsoft Defender Application Control (WDAC)](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control) tools to create a supplemental policy. The base policy ID within the policy must match the S mode base policy ID (which is hard coded on the client)​. Also, make sure that the policy version is higher than the previous version.
    - You use DGSS to sign your supplemental policy. For more information, see [Sign code integrity policy with Device Guard signing](/microsoft-store/sign-code-integrity-policy-with-device-guard-signing).
    - You upload the signed supplemental policy to Intune by creating a Windows 10 S mode supplemental policy (see below).
-3. You allow Win32 app catalogs through Intune:
+1. You allow Win32 app catalogs through Intune:
    - You create catalog files (1 for every app) and signs them using DGSS or other certificate infrastructure.
    - You package the signed catalog into the *.intunewin* file using the [Microsoft Win32 Content Prep Tool](https://go.microsoft.com/fwlink/?linkid=2065730). There are no naming restrictions when creating a catalog file using the [Microsoft Win32 Content Prep Tool](https://go.microsoft.com/fwlink/?linkid=2065730). When generating the *.intunewin* file from the specified source folder and setup file, you can provide a separate folder containing only catalog files by using the -a cmdline option. For more information, see [Win32 app management - Prepare the Win32 app content for upload](apps-win32-app-management.md#prepare-the-win32-app-content-for-upload).
    - Intune applies the signed app catalog to install the Win32 app on the S mode device using the [Intune Management Extension](intune-management-extension.md).
@@ -69,13 +69,13 @@ To create a Windows 10 S mode supplemental policy, use the following steps:
     | Name | The name of this policy. |
     | Description | [Optional] The description of this policy. |
 
-5. Select **Next: Scope tags**.<br>
+1. Select **Next: Scope tags**.<br>
    On the **Scope tags** page you can optionally configure scope tags to determine who can see the app policy in Intune. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md).
 
-6. Select **Next: Assignments**.<br>
+1. Select **Next: Assignments**.<br>
    The **Assignments** page allows you can assign the policy to users and devices. It's important to note that you can assign a policy to a device whether or not the device is managed by Intune.
-7. Select **Next: Review + create** to review the values you entered for the profile.
-8. When you're done, select **Create** to create the S mode supplemental policy in Intune.
+1. Select **Next: Review + create** to review the values you entered for the profile.
+1. When you're done, select **Create** to create the S mode supplemental policy in Intune.
 
 Once the policy is created, you'll see it added to the list of S mode supplemental policies in Intune. Once the policy is assigned, the policy gets deployed to the devices. Note that you must deploy the app to same security group as the supplemental policy​. You can start targeting and assigning apps to those devices. This will allow your end users to install and execute the apps on the S mode devices.
 
