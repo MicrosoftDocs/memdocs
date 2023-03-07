@@ -58,6 +58,7 @@ The following features are not yet supported for Windows 365 GCC or GCCH.
 - Resize VM
 - Citrix HDX Plus for Windows 365
 - Windows 365 app
+- Multimedia rediction for improved video playback
 
 ## Next steps
 
