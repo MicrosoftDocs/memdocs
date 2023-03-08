@@ -486,10 +486,7 @@ To delete an enrollment profile token:
 2. Delete all the devices assigned to the token.
 3. Go to **Devices** > **iOS/macOS** > **iOS/macOS enrollment** > **Enrollment Program Tokens**. Select the token, and then select **Profiles**.
 4. If there's a default profile or any other enrollment profile, they must all be deleted. 
-5. Go to **Devices** > **iOS/macOS** > **iOS/macOS enrollment** > **Enrollment Program Tokens**. Select the token, and then select **Delete**.
+5. Go to **Devices** > **iOS/macOS** > **iOS/macOS enrollment** > **Enrollment Program Tokens**. Select the token, and then select **Delete**.  
 
 ## Next steps
-
-[Backup and restore scenarios for iOS/iPadOS](backup-restore-ios.md)
-
-[iOS/iPadOS enrollment overview](ios-enroll.md)
+For an overview of what's required of device users, see [ADE end user tasks](../fundamentals/deployment-guide-enrollment-ios-ipados#ade-end-user-tasks.md).   
