@@ -107,11 +107,12 @@ Previously, device entities of the co-managed devices appeared as two separate e
 
 The issue is fixed by propagating correct AAD device ID from ConfigMgr during Intune enrollment. This leads to merged entities for co-managed devices in a short period of time (30-40 mins). We no longer have to wait for discovery cycle to run.
 
-### Starting with this version, Configuration Manager client doesn’t support the following server 
+### Starting with this version, the Configuration Manager client doesn’t support the following operating system
 
+ -	Windows Server 2008 R2 SP1 Extended Security Updates (ESU Azure Only)
  -	Windows Server 2008 SP2 Extended Security Updates (ESU Azure Only)
       
-If you have these server’s client running please don’t upgrade to 2211 client version. For more information on supported clients and devices see, [supported-operating-systems-for-clients-and-devices](../../plan-design/configs/supported-operating-systems-for-clients-and-devices.md).
+If you are running this operating system on machines in your environment, they should not be upgraded to the 2211 version of the Configuration Manager client. For more information on supported clients and devices see [supported-operating-systems-for-clients-and-devices](../../plan-design/configs/supported-operating-systems-for-clients-and-devices.md).
 
 <!--Starting with this version, the following features are no longer [pre-release](../../servers/manage/pre-release-features.md):
 -->
