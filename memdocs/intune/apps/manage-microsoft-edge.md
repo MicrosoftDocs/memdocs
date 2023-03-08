@@ -493,13 +493,11 @@ Organizations can modify their network stack preference by configuring the follo
 > [!NOTE]
 > Using the Chromium network stack is recommended. If you experience sync issues with the Chromium network stack, for example with certain per-app VPN solutions, using the iOS network stack may improve syncing.
 
-## App configuration policies and Edge
+## App configuration policies for Edge
 
-Microsoft provides deployment options, called [channels](/deployedge/microsoft-edge-channels), to control how often Microsoft Edge is updated with new features. When using the latest version of Microsoft Edge, you can use specific [Microsoft Edge policies](/deployedge/microsoft-edge-mobile-policies) to configure how Microsoft Edge mobile runs in your organization.
+The following policies originally configurable through managed apps app configuration policy is now available through managed devices app configuration policy. When using policies for managed apps, users must sign into Microsoft Edge. When using policies for managed devices, users are not required to sign into Edge to apply the policies.
 
-When using one of the below app configuration policies for managed apps with the Microsoft Edge **MAM** channel, users must sign into Edge. When using one of the below app configuration policies for managed devices with Microsoft Edge **MDM** channel, users aren't required to sign into Edge to apply the below policies.
-
-|     Policy in   MAM channel    |     Policy name in MDM channel    |
+|     MAM policy    |     MDM policy    |
 |---|---|
 |     com.microsoft.intune.mam.managedbrowser.NewTabPage.CustomURL    |     EdgeNewTabPageCustomURL    |
 |     com.microsoft.intune.mam.managedbrowser.MyApps    |     EdgeMyApps    |
