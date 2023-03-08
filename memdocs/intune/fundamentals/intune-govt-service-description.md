@@ -7,7 +7,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: johmar
-ms.date: 03/01/2023
+ms.date: 03/08/2023
 ms.topic: article
 ms.prod:
 ms.service: microsoft-intune
@@ -22,6 +22,9 @@ ms.collection:
 ---
 
 # Microsoft Intune for US Government GCC High and DoD service description
+
+> [!NOTE]
+> This article applies to Microsoft Intune features only. If you're looking for information on other features, then go to that specific documentation. For example, for Microsoft Teams devices, go to [Teams Rooms on Windows and Android](/microsoftteams/rooms/teams-devices-feature-comparison).
 
 The Intune U.S. government service description is as an overview of the service offering in the GCC High and DoD environments. It lists the feature differences compared to the commercial offering of Microsoft Intune.
 
@@ -57,7 +60,7 @@ Intune has two service instances:
 
 ## Feature differences in Intune GCC High and DoD
 
-- Intune for GCC High and DoD does not support Android (AOSP) management for corporate devices.
+- PENDING PRIYA: Intune for GCC High and DoD does not support Android (AOSP) management for corporate devices.
 
 ### Available and supported
 
@@ -65,8 +68,8 @@ The following features are available and supported in GCC High and DoD clouds:
 
 | Feature | Availability |
 | --- | --- |
+| Standard MDM features | ✔️ <br/><br/> You can use app policies, device configuration profiles, compliance policies, and more. |
 | Mobile Threat Defense (MTD) | ✔️ <br/><br/>Mobile Threat Defense (MTD) connectors for Android and iOS/iPadOS devices with MTD vendors that **also support** the government environment can be used. When you sign in to a GCC-H tenant, you'll see the connectors enabled for those specific vendors. |
-| Windows-based Teams devices | ✔️ <br/><br/> For more information on these devices, go to [Feature comparison between Windows and Android](/microsoftteams/rooms/teams-devices-feature-comparison#feature-comparison-between-windows-and-android).|
 
 ### In the planning phase
 
@@ -74,12 +77,11 @@ The following features are currently not available and aren't supported in GCC H
 
 | Feature | Availability |
 | --- | --- |
-| Android-based Teams devices | **ⓘ** <br/><br/>Android based Teams devices may still function correctly. If a functionality issue is discovered, support is best effort. <br/><br/> For more information on these devices, go to [Feature comparison between Windows and Android](/microsoftteams/rooms/teams-devices-feature-comparison#feature-comparison-between-windows-and-android). |
-| Endpoint Analytics | **ⓘ** <br/><br/> Endpoint Analytics is not currently available for U.S. Government customers. For more information on this feature, go to [Endpoint analytics overview](../../analytics/overview.md). |
+| Endpoint Analytics | **ⓘ** <br/><br/> For more information on this feature, go to [Endpoint analytics overview](../../analytics/overview.md). |
 | Expedited updates | **ⓘ** <br/><br/>For more information on this feature, go to [Expedite Windows quality updates in Microsoft Intune](../protect/windows-10-expedite-updates.md). |
 | Feature updates | **ⓘ** <br/><br/>For more information on this feature, go to [Feature updates for Windows in Intune](../protect/windows-10-feature-updates.md). |
 | Linux devices | **ⓘ** <br/><br/>For more information on Linux devices management, go to [Deployment guide: Manage Linux devices in Microsoft Intune](deployment-guide-platform-linux.md). |
-| Log Analytics |  **ⓘ** <br/><br/>Log Analytics is not currently available for U.S. Government customers. For more information on this feature, go to [Send log data to storage, event hubs, or log analytics from Intune](review-logs-using-azure-monitor.md). |
+| Log Analytics |  **ⓘ** <br/><br/>For more information on this feature, go to [Send log data to storage, event hubs, or log analytics from Intune](review-logs-using-azure-monitor.md). |
 | Microsoft Intune Plan 2 and Microsoft Intune Suite | **ⓘ** <br/><br/>For more information on these plans, go to [Microsoft Intune Plans and Pricing](https://www.microsoft.com/security/business/microsoft-intune-pricing). |
 | Windows Autopilot | **ⓘ** <br/><br/>For more information on this feature, go to [Windows Autopilot overview](../../autopilot/windows-autopilot.md). |
 
