@@ -495,7 +495,7 @@ Organizations can modify their network stack preference by configuring the follo
 
 ## App configuration policies for Edge
 
-The following policies originally configurable through managed apps app configuration policy is now available through managed devices app configuration policy. When using policies for managed apps, users must sign into Microsoft Edge. When using policies for managed devices, users are not required to sign into Edge to apply the policies.
+The following policies, originally configurable through managed apps app configuration policy, is now available through managed devices app configuration policy. When using policies for managed apps, users must sign into Microsoft Edge. When using policies for managed devices, users are not required to sign into Edge to apply the policies.
 
 |     MAM policy    |     MDM policy    |
 |---|---|
