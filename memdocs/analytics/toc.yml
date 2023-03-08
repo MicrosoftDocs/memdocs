@@ -16,9 +16,7 @@ items:
   - name: Enhanced device timeline
     href: enhanced-device-timeline.md    
   - name: Device scopes
-    href: device-scopes.md
-  - name: Run remediation on-demand
-    href: remediation-on-demand.md    
+    href: device-scopes.md    
 - name: Quickstarts
   items:
   - name: Enroll Intune devices
