@@ -1,7 +1,7 @@
 ---
-title: Anomaly detection in Endpoint Analytics
+title: Anomaly detection in Endpoint analytics
 titleSuffix: Microsoft Endpoint Manager
-description: Learn about Anomaly detection as an advanced feature in Endpoint Analytics
+description: Learn about Anomaly detection as an advanced feature in Endpoint analytics
 ms.date: 02/15/2023
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
@@ -17,7 +17,7 @@ ms.localizationpriority: high
 > [!NOTE]
 > This capability is available as an Intune add-on. For more information, see [Intune add-ons](../intune/fundamentals/intune-add-ons.md).
 
-This article explains how anomaly detection in Endpoint Analytics works as an early warning system.
+This article explains how anomaly detection in Endpoint analytics works as an early warning system.
 
 Anomaly detection monitors the health of devices in your organization for user experience and productivity regressions following configuration changes. When a failure occurs, Anomalies correlates relevant deployment objects to enable rapid troubleshooting, suggest root causes and remediation.
 
@@ -42,11 +42,11 @@ Anomaly detection aims at addressing these problems by enabling IT admins with c
 ## Anomalies tab
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Report** > **Endpoint Analytics** > **Overview**.
+2. Select **Report** > **Endpoint analytics** > **Overview**.
 3. Select **Anomalies** tab. The **Anomalies** tab provides a quick overview of the anomalies detected in your organization.
 4. In this example, the **Anomalies** tab shows an *App regression anomaly* with *high severity* impact. You can add filters to refine the list. 
 
-   :::image type="content" source="media/anomaly-detection/anomalies-tab.png" alt-text="This is a screenshot of the Anomaly tab in Overview section of Endpoint Anlaytics":::
+   :::image type="content" source="media/anomaly-detection/anomalies-tab.png" alt-text="This is a screenshot of the Anomaly tab in Overview section of Endpoint anlaytics":::
 
 5. Select an item from the list to display a detailed view with key information such as App name, affected devices, Date created and Latest occurrence (Initial and latest occurrence of the anomaly), and potential factors influencing the anomaly and suggested remediation.
 

@@ -7,7 +7,7 @@ items:
     href: overview.md
   - name: Scores, baselines, and insights
     href: scores.md
-- name: Advanced Endpoint Analytics
+- name: Advanced Endpoint analytics
   items:
   - name: What is advanced Endpoint analytics?
     href: advanced-endpoint-analytics.md
@@ -16,7 +16,9 @@ items:
   - name: Enhanced device timeline
     href: enhanced-device-timeline.md    
   - name: Device scopes
-    href: device-scopes.md    
+    href: device-scopes.md
+  - name: Run remediation on-demand
+    href: remediation-on-demand.md    
 - name: Quickstarts
   items:
   - name: Enroll Intune devices
