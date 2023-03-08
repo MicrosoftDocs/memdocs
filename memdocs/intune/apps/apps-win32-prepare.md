@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/29/2022
+ms.date: 03/07/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -69,8 +69,8 @@ If you run `IntuneWinAppUtil.exe` from the command window without parameters, th
 
 |    **Example command**    |    **Description**    |
 |-------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    `IntuneWinAppUtil -h`    |    This command will show usage information for the tool.    |
-|    `IntuneWinAppUtil -c c:\testapp\v1.0 -s c:\testapp\v1.0\setup.exe -o c:\testappoutput\v1.0 -q`    |    This command will generate the *.intunewin* file from the specified source folder and setup file. For the MSI setup file, this tool will retrieve required information for Intune. If `-q` is specified, the command will run in quiet mode. If the output file already exists, it will be overwritten. Also, if the output folder doesn't exist, it will be created automatically.    |
+|    `IntuneWinAppUtil -h`    |    This command shows usage information for the tool.    |
+|    `IntuneWinAppUtil -c c:\testapp\v1.0 -s c:\testapp\v1.0\setup.exe -o c:\testappoutput\v1.0 -q`    |    This command generates the *.intunewin* file from the specified source folder and setup file. For the MSI setup file, this tool retrieves required information for Intune. If `-q` is specified, the command runs in quiet mode. If the output file already exists, it is overwritten. Also, if the output folder doesn't exist, it's created automatically.    |
 
 When you're generating an *.intunewin* file, put any files you need to reference into a subfolder of the setup folder. Then, use a relative path to reference the specific file you need. For example:
 

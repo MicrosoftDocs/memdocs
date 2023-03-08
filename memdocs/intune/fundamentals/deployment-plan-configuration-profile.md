@@ -550,4 +550,4 @@ This level expands on what you've configured in levels 1 and 2. It adds extra se
 2. [Add, configure, and protect apps](deployment-plan-protect-apps.md)
 3. [Plan for compliance policies](deployment-plan-compliance-policies.md)
 4. 🡺 **Configure device features** (*You are here*)
-5. [Enroll devices](deployment-guide-enrollment.md)
+5. [Enroll devices](deployment-guide-enroll.md)

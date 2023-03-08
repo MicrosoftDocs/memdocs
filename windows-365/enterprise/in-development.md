@@ -62,6 +62,19 @@ To help in your readiness and planning, this page lists Windows 365 updates and 
 
 In a future update, Windows 365 will support Traversal Using Relays around NAT (TURN) for use with RDP Shortpath. TURN is a popular standard for device-to-device networking for low latency, high-throughput data transmission with Azure Communication Services. For more information about TURN and Azure Communication Services, see [Network Traversal Concepts](/azure/communication-services/concepts/network-traversal). For more information about RDP Shortpath, see [Use RDP Shortpath for public networks with Windows 365](rdp-shortpath-public-networks.md).
 
+### Move Cloud PC<!--43450234-->
+
+Today, when changing the region definition or Azure network connection (ANC) in a provisioning policy, only newly provisioned Cloud PCs are created in the new region. Existing Cloud PCs remain in the original region or ANC.
+
+In a future release, a new option will be added to provisioning policies. This new option will let you define a new region or ANC for the provisioning policy. When the provisioning policy is triggered:
+
+1. All Cloud PCs in the provisioning policy that no longer match the updated region or ANC will be shutdown.
+2. All such Cloud PCs will be moved to the new region or ANC.
+
+This move may take some time.
+
+New Cloud PCs created by the provisioning policy will be created in the new region or ANC.
+
 <!-- ***********************************************-->
 ## Device provisioning
 
@@ -70,9 +83,11 @@ In a future update, Windows 365 will support Traversal Using Relays around NAT (
 You’ll be able to create a template to automatically create unique names for new Cloud PCs.
 
 <!--***********************************************-->
-<!--
 ## End user experience
--->
+
+### Windows 365 app: pin Cloud PC to task bar<!--43470782-->
+
+End users will be able to pin their Cloud PC to the task bar in the Windows 365 app. This will let them launch the Cloud PC from the task bar icon without going into the connection center.
 
 <!-- ***********************************************-->
 ## Monitor and troubleshoot
@@ -80,6 +95,13 @@ You’ll be able to create a template to automatically create unique names for n
 ### End user manual connectivity check<!--37679345 -->
 
 End users will be able to manually run connectivity checks on their Cloud PCs from [windows365.microsoft.com](https://windows365.microsoft.com).
+
+<!-- ***********************************************-->
+## Miscellaneous
+
+### FQDN tags <!--43488376-->
+
+In a future update, FQDN tags will be available to help customers simplify the creation and maintenance of the necessary rules for outbound network traffic through Azure firewalls.
 
 <!-- ***********************************************-->
 <!-- ## Provisioning -->
