@@ -55,7 +55,7 @@ To create a user-driven Azure AD join Autopilot profile, follow the below steps:
 
 5. Under **Windows Autopilot Deployment Program**, select **Deployment Profiles**
 
-6. In the **Windows Autopilot deployment profiles** screen, select  **Create Profile** > **Windows PC**.
+6. In the **Windows Autopilot deployment profiles** screen, select **Create Profile** > **Windows PC**.
 
 7. In the **Basics** page of the **Create profile** screen, type a **Name** and optional **Description** for the Autopilot profile, and then select **Next**.
 

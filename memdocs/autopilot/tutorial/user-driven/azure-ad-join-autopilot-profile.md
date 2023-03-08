@@ -53,7 +53,7 @@ To create a user-driven Azure AD join Autopilot profile, follow the below steps:
 
 5. Under **Windows Autopilot Deployment Program**, select **Deployment Profiles**
 
-6. In the **Windows Autopilot deployment profiles** screen, select  **Create Profile** > **Windows PC**.
+6. In the **Windows Autopilot deployment profiles** screen, select **Create Profile** > **Windows PC**.
 
 7. In the **Basics** page of the **Create profile** screen, type a **Name** and optional **Description** for the Autopilot profile, and then select **Next**.
 
@@ -71,7 +71,7 @@ To create a user-driven Azure AD join Autopilot profile, follow the below steps:
 
       - For **Privacy settings**, select **Hide** to skip the privacy settings.
 
-      - For **Hide change account options**, select Choose **Hide**.
+      - For **Hide change account options**, select **Hide**.
 
       - For **User account type**, select the desired account type for the user (**Administrator** or **Standard** user). If **Administrator** is chosen, the user will be added to the local Admin group.
 
@@ -81,7 +81,7 @@ To create a user-driven Azure AD join Autopilot profile, follow the below steps:
 
       - For **Automatically configure keyboard**, select **Yes** to skip the keyboard selection page.
 
-      - For **Apply device name template**, select **No**. Alternatively, **Yes** can be chosen to apply a device name templated. Be aware of the following if the name template is selected to **Yes**:
+      - For **Apply device name template**, select **No**. Alternatively, **Yes** can be chosen to apply a device name template. Be aware of the following if the name template is selected to **Yes**:
 
         - Names must be 15 characters or less, and can have letters, numbers, and hyphens.
         - Names can't be all numbers.
