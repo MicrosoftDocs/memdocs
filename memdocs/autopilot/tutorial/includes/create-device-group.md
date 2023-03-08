@@ -24,21 +24,21 @@ To create a dynamic device group for use with Autopilot, follow the below steps:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Groups** > **New group**.
+1. Select **Groups** > **New group**.
 
-3. In the **New Group** screen, configure the following properties:
+1. In the **New Group** screen, configure the following properties:
 
     1. **Group type**: Select **Security**.
 
-    2. **Group name** and **Group description**: Enter a name and description for the device group.
+    1. **Group name** and **Group description**: Enter a name and description for the device group.
 
-    3. **Azure AD roles can be assigned to the group**: Select **No**.
+    1. **Azure AD roles can be assigned to the group**: Select **No**.
 
-    4. **Membership type**: Select **Dynamic Device**.
+    1. **Membership type**: Select **Dynamic Device**.
 
-    5. **Owners**: Select users that own the group.
+    1. **Owners**: Select users that own the group.
 
-    6. **Dynamic device members**: Select **Add dynamic query**. In the **Dynamic membership rules** screen, select **Add expression**.
+    1. **Dynamic device members**: Select **Add dynamic query**. In the **Dynamic membership rules** screen, select **Add expression**.
 
       > [!NOTE]
       > When selecting **Dynamic Device** in step d, this field will change to **Dynamic device members**.
@@ -53,7 +53,7 @@ To create a dynamic device group for use with Autopilot, follow the below steps:
 
       For more information on creating rules for dynamic groups, see [Dynamic membership rules for groups in Azure Active Directory](/azure/active-directory/enterprise-users/groups-dynamic-membership).
 
-4. Once the dynamic rule has been entered and saved, in the **New Group** screen, select **Create**. This will finish creating the dynamic group.
+1. Once the dynamic rule has been entered and saved, in the **New Group** screen, select **Create**. This will finish creating the dynamic group.
 
 > [!NOTE]
 > The above steps are creating a dynamic group in Azure AD which is used by Intune and Autopilot. Although the groups can be accessed in the Intune portal, they are Azure AD groups.

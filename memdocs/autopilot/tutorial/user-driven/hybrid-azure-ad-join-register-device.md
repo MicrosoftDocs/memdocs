@@ -7,7 +7,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 02/13/2023
+ms.date: 03/08/2023
 ms.topic: tutorial
 ms.collection: 
   - tier1
@@ -22,7 +22,7 @@ Autopilot user-driven hybrid Azure AD join steps:
 - Step 2: [Install the Intune Connector (OU)](hybrid-azure-ad-join-intune-connector.md)
 - Step 3: [Increase the computer account limit in the Organizational Unit](hybrid-azure-ad-join-computer-account-limit.md)
 > [!div class="checklist"]
-> - Step 4: [Register devices as Autopilot devices](hybrid-azure-ad-join-register-device.md)
+> - **Step 4: Register devices as Autopilot devices**
 - Step 5: [Create a device group](hybrid-azure-ad-join-device-group.md)
 - Step 6: [Configure and assign Autopilot Enrollment Status Page (ESP)](hybrid-azure-ad-join-esp.md)
 - Step 7: [Create and assign hybrid Azure AD join Autopilot profile](hybrid-azure-ad-join-autopilot-profile.md)

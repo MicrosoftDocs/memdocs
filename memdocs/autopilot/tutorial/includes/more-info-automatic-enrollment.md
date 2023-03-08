@@ -14,4 +14,4 @@ ms.localizationpriority: medium
 For more information on Windows automatic MDM/Intune enrollment, see the following article(s):
 
 - [Enable Windows automatic enrollment](/mem/intune/enrollment/windows-enroll#enable-windows-automatic-enrollment)
-- [Set up Windows automatic enrollment](/mem/autopilot/windows-autopilot-hybrid#set-up-windows-automatic-enrollment)
+- [Set up Windows automatic enrollment](/mem/autopilot/windows-autopilot-hybrid#set-up-windows-automatic-mdm-enrollment)

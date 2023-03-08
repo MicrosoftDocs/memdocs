@@ -7,7 +7,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 02/13/2023
+ms.date: 03/08/2023
 ms.topic: tutorial
 ms.collection: 
   - tier1
@@ -15,16 +15,16 @@ ms.collection:
 ms.technology: itpro-deploy
 ---
 
-<!-- This file is a placeholder for work in progress articles for this release branch. It will eventually contain more information describing each scenario and point to articles for each scenario. -->
+<!-- This file is a placeholder for work in progress articles for this release branch. It will eventually contain more information describing each scenario and point to articles for each scenario. This comment will be removed before publishing. -->
 
 # Autopilot scenarios
 
 1. Windows Autopilot user-driven mode
    1. [Azure AD join](user-driven/azure-ad-join-workflow.md)
-   2. [Hybrid Azure AD join](user-driven/hybrid-azure-ad-join-workflow.md)
-2. Windows Autopilot self-deploying mode
-3. Windows Autopilot Pre-provisioning
-4. Windows Autopilot for existing devices
-5. Windows Autopilot reset
+   1. [Hybrid Azure AD join](user-driven/hybrid-azure-ad-join-workflow.md)
+1. Windows Autopilot self-deploying mode
+1. Windows Autopilot Pre-provisioning
+1. Windows Autopilot for existing devices
+1. Windows Autopilot reset
 
 [Windows Autopilot scenarios and capabilities](/mem/autopilot/windows-autopilot-scenarios)
