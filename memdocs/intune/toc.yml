@@ -82,8 +82,9 @@ items:
       - name: Use automated device enrollment to enroll iOS/iPadOS devices 
         href: ./enrollment/tutorial-use-device-enrollment-program-enroll-ios.md
 
-      - name: Create an administrative template
-        href: ./configuration/tutorial-walkthrough-administrative-templates.md     
+      - name: Create an ADMX template
+        href: ./configuration/tutorial-walkthrough-administrative-templates.md
+        displayName: admx, administrative template
 
   - name: Plan
     items:
@@ -837,7 +838,7 @@ items:
             displayName: psk, oma-uri, eap
           - name: Troubleshoot Wi-Fi
             href: /troubleshoot/mem/intune/troubleshoot-wi-fi-profiles
-        - name: Group policy and Administrative templates
+        - name: Group policy and ADMX templates
           displayName: admx, gpo
           items:
           - name: Group Policy analytics
@@ -846,6 +847,8 @@ items:
             href: ./configuration/group-policy-analytics-migrate.md
           - name: Create administrative templates
             href: ./configuration/administrative-templates-windows.md
+          - name: Import custom ADMX and ADML
+            href: ./configuration/administrative-templates-import-custom.md
           - name: Update Office using ADMX
             href: ./configuration/administrative-templates-update-office.md
           - name: Create Microsoft Edge policy using ADMX
@@ -949,8 +952,10 @@ items:
           items:
           - name: Custom
             href: ./configuration/custom-settings-android-for-work.md
-          - name: Device restrictions
+          - name: Device restrictions - organization-owned devices
             href: ./configuration/device-restrictions-android-for-work.md
+          - name: Device restrictions - personally-owned devices
+            href: ./configuration/device-restrictions-android-enterprise-personal.md
           - name: Email
             href: ./configuration/email-settings-android-enterprise.md
           - name: VPN
@@ -1391,7 +1396,7 @@ items:
     - name: iOS/iPadOS platform guide
       href: ./fundamentals/deployment-guide-platform-ios-ipados.md    
     - name: macOS platform guide
-      href: ./fundamentals/deployment-guide-platform-macOS.md
+      href: ./fundamentals/deployment-guide-platform-macos.md
     - name: Linux platform guide
       href: ./fundamentals/deployment-guide-platform-linux.md
     - name: Windows Holographic platform guide
@@ -1433,8 +1438,9 @@ items:
         href: ../solutions/cloud-native-endpoints/cloud-native-endpoints-planning-guide.md
       - name: Known issues
         href: ../solutions/cloud-native-endpoints/cloud-native-endpoints-known-issues.md
-    - name: Create an administrative template
+    - name: Create an ADMX template
       href: ./configuration/tutorial-walkthrough-administrative-templates.md
+      displayName: admx, administrative template
     - name: Common scenarios
       href: ./fundamentals/common-scenarios.md
     - name: "Zero Trust: Manage devices with Intune"

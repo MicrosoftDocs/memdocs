@@ -56,17 +56,15 @@ You need to enable Windows location services in Windows Out of Box Experience (O
 **Lost device sound alert** – The following platforms support this capability:
 
 - **iOS/iPadOS 9.3 and later** - Requires the device to be in supervised mode, and be in [lost mode](device-lost-mode.md)
-- **Android Enterprise dedicated devices** - Requires the Intune app running 2202.01 or later 
+- **Android Enterprise dedicated devices** - Requires the Intune app running 2202.01 or later
 - **Android Enterprise corporate-owned work profile devices** - Requires the Intune app running 2202.01 or later
-- **Android Enterprise corporate-owned fully managed devices** - Requires the Intune app running 2202.01 or later
+- **Android Enterprise fully managed devices** - Requires the Intune app running 2202.01 or later
 
 **Unsupported** - Device location capabilities aren't supported for the following platforms:
 
 - Android device administrator
 - Android Enterprise:
-  - Corporate-owned work profile
   - Personally-owned work profile
-  - Fully managed
 - macOS
 - Windows Holographic for Business
 - Windows Phone
@@ -122,14 +120,14 @@ To start a lost device sound alert:
 4. On the devices *Overview* pane:
    - For **iOS/iPadOS**: select **Play Lost mode sound (supervise only)**. The sound plays on an iOS/iPadOS device until the device is removed from lost mode.
 
-   - For **Android Enterprise dedicated devices**, **Android Enterprise corporate-owned work profile devices**, and **Android Enterprise corporate-owned fully managed devices** : select **Play Lost device sound**. The sound plays on an Android Enterprise dedicated device for the set duration or if notifications are enabled, until a user on the device turns it off. 
+   - For **Android Enterprise dedicated devices**, **Android Enterprise corporate-owned work profile devices**, and **Android Enterprise fully managed devices** : select **Play Lost device sound**. The sound plays on an Android Enterprise dedicated device for the set duration or if notifications are enabled, until a user on the device turns it off. 
    
    -  For **Android Enterprise dedicated devices**:
       - devices running on operating systems below version 10, a full screen activity with a **Stop Sound** button pops up. 
       - devices running on operating systems version 10 or higher, if notifications are enabled, a notification with a **Stop Sound** button shows up.
       - To configure system notifications for devices in kiosk mode, see [Android Enterprise device settings to allow or restrict features using Intune](../configuration/device-restrictions-android-for-work.md).
      
-   - For **Android Enterprise corporate-owned work profile devices**, and **Android Enterprise corporate-owned fully managed devices** :
+   - For **Android Enterprise corporate-owned work profile devices**, and **Android Enterprise fully managed devices** :
      - To configure system notifications for devices, see [Android Enterprise device settings to allow or restrict features using Intune](../configuration/device-restrictions-android-for-work.md).
 
 ## Security and privacy information for lost mode and locate device actions
