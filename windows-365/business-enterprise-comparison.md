@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 02/08/2022
+ms.date: 03/08/2023
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -70,8 +70,8 @@ Windows 365 is available in two editions: [Windows 365 Business](./business/inde
 | --- | --- | --- |
 | Management | Users can [restart, reset, rename, and troubleshoot](./end-user-access-cloud-pc.md#user-actions) their Cloud PCs on the Windows 365 homepage. | Users can [restart, rename, and troubleshoot](end-user-access-cloud-pc.md) their Cloud PCs on the Windows 365 homepage. |
 | Role | By default, each user is a Standard User on their Cloud PC. To grant Local Administrator permissions to a specific user on a Cloud PC, see [Remote management actions](./business/remotely-manage-business-cloud-pcs.md#remote-management-actions). To grant Local Administrator permissions for Cloud PCs that you create in the future, see [Change organizational default settings](./business/change-organization-default-settings.md).| By default, each user is assigned a standard user role on their Cloud PC. This role can be changed by the admin in the Microsoft Intune admin center.|
-| Access | Users can access their Cloud PC at windows365.microsoft.com or by using Microsoft Remote Desktop. | Users can access their Cloud PC at windows365.microsoft.com or by using Microsoft Remote Desktop. |
-| Platform | Any platform that supports Microsoft Remote Desktop clients. [Learn more.](/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients)  | Any platform that supports Microsoft Remote Desktop clients. [Learn more.](/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients)  |
+| Access | Users can access their Cloud PC at windows365.microsoft.com or by using Microsoft Remote Desktop or the [Windows 365 app](https://support.microsoft.com/en-us/windows/installing-windows-365-app-cbb0d4d5-69d4-4f00-b050-6dc7a02d02d0). | Users can access their Cloud PC at windows365.microsoft.com or by using Microsoft Remote Desktop or the [Windows 365 app](https://support.microsoft.com/en-us/windows/installing-windows-365-app-cbb0d4d5-69d4-4f00-b050-6dc7a02d02d0). |
+| Platform | Any platform that supports [Microsoft Remote Desktop clients](/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients) or the [Windows 365 app](https://support.microsoft.com/en-us/windows/installing-windows-365-app-cbb0d4d5-69d4-4f00-b050-6dc7a02d02d0). | Any platform that supports [Microsoft Remote Desktop clients](/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients) or the [Windows 365 app](https://support.microsoft.com/en-us/windows/installing-windows-365-app-cbb0d4d5-69d4-4f00-b050-6dc7a02d02d0). |
 
 ## Security comparisons
 
@@ -87,7 +87,7 @@ Windows 365 is available in two editions: [Windows 365 Business](./business/inde
 | Capability | Windows 365 Business | Windows 365 Enterprise |
 | --- | --- | --- |
 | Support channels | Support tickets can be filed through the Microsoft 365 Admin Center. | Support tickets can be filed through Microsoft Endpoint Manager (recommended) and the Microsoft 365 Admin Center. |
-
+29
 <!-- ########################## -->
 ## Next steps
 
