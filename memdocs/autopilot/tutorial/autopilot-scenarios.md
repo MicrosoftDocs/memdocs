@@ -15,7 +15,7 @@ ms.collection:
 ms.technology: itpro-deploy
 ---
 
-<!-- This file is a placeholder for work in progress articles for this release branch. It will eventually contain more information describing each scenario and point to articles for each scenario. -->
+<!-- This file is a placeholder for work in progress articles for this release branch. It will eventually contain more information describing each scenario and point to articles for each scenario. This comment will be removed before publishing. -->
 
 # Autopilot scenarios
 
