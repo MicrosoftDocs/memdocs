@@ -87,7 +87,7 @@ The following features are currently not available and aren't supported in GCC H
 
 ### Not available
 
-The following features are not available and won't be supported for GCC High and DoD:
+The following features are not available and will not be supported for GCC High and DoD:
 
 | Feature | Availability |
 | --- | --- |
