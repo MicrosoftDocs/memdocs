@@ -270,4 +270,4 @@ We recommend using the following settings in your enhanced device compliance pol
 2. [Add, configure, and protect apps](deployment-plan-protect-apps.md)
 3. 🡺 **Plan for compliance policies** (*You are here*)
 4. [Configure device features](deployment-plan-configuration-profile.md)
-5. [Enroll devices](deployment-guide-enrollment.md)
+5. [Enroll devices](deployment-guide-enroll.md)
