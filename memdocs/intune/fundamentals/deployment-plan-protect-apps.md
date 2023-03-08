@@ -279,4 +279,4 @@ The following list provides the end-user requirements to use app protection poli
 2. 🡺 **Add, configure, and protect apps** (*You are here*)
 3. [Plan for compliance policies](deployment-plan-compliance-policies.md)
 4. [Configure device features](deployment-plan-configuration-profile.md)
-5. [Enroll devices](deployment-guide-enrollment.md)
+5. [Enroll devices](deployment-guide-enroll.md)
