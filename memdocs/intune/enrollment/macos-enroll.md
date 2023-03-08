@@ -164,10 +164,9 @@ The device user signs in to the Company Portal app to initiate enrollment. Compa
 ## Back up and restore with Apple Migration Assistant  
 Use Apple Migration Assistant to back up and restore a macOS device. You can use the tool to back up a Mac and restore its app data on a new device. It's important to know:  
 - The management profile on the original Mac is not backed up. The device is sent a new management profile as the new Mac re-enrolls. This happens on Macs that go through Apple automated device enrollment and Macs that don't go through automated device enrollment.  
-- Company Portal app credentials might be restored on the new Mac after it goes through Migration Assistant and enrolls. If this happens, we recommend that you or the device user: 
+- Company Portal app credentials might be restored on the new Mac after it goes through Migration Assistant and enrolls. If this happens, we recommend that you or the device user completes the following steps to clear app data: 
   1. Sign out of the Company Portal app.  
   2. Sign in to the app or Company Portal website.  
-  3. Remove the Company Portal app data.  
 
 ## Next steps
 
