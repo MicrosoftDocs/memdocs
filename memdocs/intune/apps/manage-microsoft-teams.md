@@ -131,7 +131,7 @@ Use the following options to configure your notifications on the portal through 
 
    :::image type="content" source="./media/managed-microsoft-teams/managed-microsoft-teams-03.png" alt-text="app-configuration-policies-at-a-glance" border="true" :::
 
-8. on the **Basics** page, add a **Name** and click **Select public apps**, then find and select the **Microsoft Teams** apps. Click **Next**.
+8. On the **Basics** page, add a **Name** and click **Select public apps**, then find and select the **Microsoft Teams** apps. Click **Next**.
 9. Under **General configuration settings**, set any of the following keys to **1** to turn this feature **ON** for chat, channels, all other notifications or any of these combination. And, set to **0** to turn off the feature.
 
    | Name | Value |
