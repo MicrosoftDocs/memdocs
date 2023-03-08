@@ -129,32 +129,6 @@ Proactive remediation scripts need to be encoded in UTF-8. Uploading these scrip
    > Don't mix user and device groups across include and exclude assignments. 
 1. Complete the **Review + Create** step for your deployment.
 
-## <a name="bkmk_prs_policy"></a> Client policy retrieval and client reporting
-
-The client retrieves policy for proactive remediations scripts at the following times:
-
-- After a restart of the device or Intune management extension service
-- After a user signs into the client
-- Once every 8 hours
-   - The 8 hour script retrieval schedule is fixed based on when the Intune management extension service starts. The schedule isn't altered by user sign ins.
-
-The client reports proactive remediation information at the following times:
-
-- When a script is set to run once, the results are reported after the script runs.
-- Recurring scripts follow a 7 day reporting cycle:
-  - Within the first 6 days, the client reports only if a change occurs. The first time the script runs would be considered a change.
-  - Every 7 days the client sends a report even if there wasn't a change.
-
-## <a name="bkmk_prs_monitor"></a> Monitor your script packages
-
-1. Under **Reporting** > **Endpoint analytics - Proactive remediations**, you can see an overview of your detection and remediation status.
-       [![Endpoint analytics Proactive remediations report, overview page.](media/proactive-remediations-report-overview.png)](media/proactive-remediations-report-overview.png#lightbox)
-1. Select **Device status** to get status details for each device in your deployment.
-       [![Endpoint analytics Proactive remediations device status.](media/proactive-remediations-device-status.png)](media/proactive-remediations-device-status.png#lightbox)
-
-## <a name="bkmk_prs_export"></a> Export script output
-<!-- 10198545 -->
-To help you easily analyze returned outputs, use the **Export** option to save the output as a `.csv` file. Exporting the output to a `.csv` file allows you to analyze the returned outputs when remediations run on devices with issues. Exporting also allows you to share the results with others for additional analysis.  
 
 ## Run a proactive remediation script on-demand (preview)
 
@@ -185,13 +159,42 @@ You can use the **Run remediation** device action to run a proactive remediation
 > [!NOTE]
 > The device might not receive the **Run remediation** device action if it is not online or able to successfully communicate with Intune or Windows Push Notification Service (WNS) when the device action is sent.
 
-### Monitor remediation status for a device
+## <a name="bkmk_prs_policy"></a> Client policy retrieval and client reporting
+
+The client retrieves policy for proactive remediations scripts at the following times:
+
+- After a restart of the device or Intune management extension service
+- After a user signs into the client
+- Once every 8 hours
+   - The 8 hour script retrieval schedule is fixed based on when the Intune management extension service starts. The schedule isn't altered by user sign ins.
+
+The client reports proactive remediation information at the following times:
+
+- When a script is set to run once, the results are reported after the script runs.
+- Recurring scripts follow a 7 day reporting cycle:
+  - Within the first 6 days, the client reports only if a change occurs. The first time the script runs would be considered a change.
+  - Every 7 days the client sends a report even if there wasn't a change.
+
+## <a name="bkmk_prs_monitor"></a> Monitor your script packages
+
+1. Under **Reporting** > **Endpoint analytics - Proactive remediations**, you can see an overview of your detection and remediation status.
+       [![Endpoint analytics Proactive remediations report, overview page.](media/proactive-remediations-report-overview.png)](media/proactive-remediations-report-overview.png#lightbox)
+1. Select **Device status** to get status details for each device in your deployment.
+       [![Endpoint analytics Proactive remediations device status.](media/proactive-remediations-device-status.png)](media/proactive-remediations-device-status.png#lightbox)
+
+## <a name="bkmk_prs_export"></a> Export script output
+<!-- 10198545 -->
+To help you easily analyze returned outputs, use the **Export** option to save the output as a `.csv` file. Exporting the output to a `.csv` file allows you to analyze the returned outputs when remediations run on devices with issues. Exporting also allows you to share the results with others for additional analysis.  
+
+## Monitor remediation status for a device
 
 You can view the status of proactive remediations that have been assigned or run on-demand to a device.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Navigate to  **Devices** >  **Windows** > select a supported device.
 3. Select **Remediations** in the **Monitor** section.
+
+
 ## Next steps
 
 - Get the [PowerShell scripts](powershell-scripts.md) for Proactive remediations.
