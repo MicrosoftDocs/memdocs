@@ -7,7 +7,7 @@ description: Learn how you can run a proactive remediation script on-demand to a
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 07/03/2023 
+ms.date: 3/7/2023 
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
