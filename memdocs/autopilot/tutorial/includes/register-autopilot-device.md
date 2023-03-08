@@ -68,7 +68,7 @@ After the CSV file has been created, it can be imported into Intune via the foll
 
 1. After the import is complete, in the **Windows Autopilot devices** screen, select **Sync**.
 
-       A message will display saying that the sync is in progress. The sync process might take a few minutes to complete, depending on how many devices are being synchronized.
+     A message will display saying that the sync is in progress. The sync process might take a few minutes to complete, depending on how many devices are being synchronized.
 
     > [!NOTE]
     >
