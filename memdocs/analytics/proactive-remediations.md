@@ -2,14 +2,14 @@
 title: Tutorial - Proactive remediations
 titleSuffix: Microsoft Endpoint Manager
 description: A tutorial on using Proactive remediations to enhance the user
-ms.date: 07/05/2022
+ms.date: 3/8/2023
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: tutorial
 author: smritib17
 ms.author: smbhardwaj
 manager: dougeby
-# Customer intent: As a Microsoft Endpoint Manager administrator, I want to enable and use Proactive remediations in Endpoint analytics so that I can fix common support issues before end-users notice issues.
+# Customer intent: As a Microsoft Intune administrator, I want to enable and use Proactive remediations in Endpoint analytics so that I can fix common support issues before end-users notice issues.
 ms.localizationpriority: high
 ms.collection: highpri
 ---
@@ -18,15 +18,18 @@ ms.collection: highpri
 
 Proactive remediations in Endpoint analytics helps you fix common support issues before end-users notice issues. Use Proactive remediations to help increase your [User experience score](enroll-intune.md#bkmk_view).
 
-
 In this tutorial, you learn how to:  
 
 > [!div class="checklist"]  
 > * Review prerequisites for Proactive remediations
 > * Deploy a built-in script package
 > * Deploy a custom script package
+> * Run a proactive remediation script on-demand (preview)
+> * Client policy retrieval and client reporting
 > * Monitor the script packages
-> * Run a proactive remediation script on-demand (preview)  
+> * Export script output
+> * Monitor remediation status for a device
+
 
 ## <a name="bkmk_prs"></a> About Proactive remediations
 
@@ -129,7 +132,6 @@ Proactive remediation scripts need to be encoded in UTF-8. Uploading these scrip
    > Don't mix user and device groups across include and exclude assignments. 
 1. Complete the **Review + Create** step for your deployment.
 
-
 ## Run a proactive remediation script on-demand (preview)
 
 > [!NOTE]
@@ -193,7 +195,6 @@ You can view the status of proactive remediations that have been assigned or run
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Navigate to  **Devices** >  **Windows** > select a supported device.
 3. Select **Remediations** in the **Monitor** section.
-
 
 ## Next steps
 
