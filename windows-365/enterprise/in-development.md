@@ -66,9 +66,9 @@ In a future update, Windows 365 will support Traversal Using Relays around NAT (
 
 Today, when changing the region definition or Azure network connection (ANC) in a provisioning policy, only newly provisioned Cloud PCs are created in the new region. Existing Cloud PCs remain in the original region or ANC.
 
-In a future release, a new option will be added to provisioning policies. This new option will let you define a new region or ANC for the provisioning policy, and trigger existing Cloud PC's to move to the updated region. When you initiate the move:
+In a future release, a new option will be added to provisioning policies. This new option will let you define a new region or ANC for the provisioning policy and trigger existing Cloud PCs to move to the updated region. When you initiate the move:
 
-1. All Cloud PCs in the provisioning policy that no longer match the updated region or ANC will be shutdown.
+1. All Cloud PCs in the provisioning policy that no longer match the updated region or ANC will be shut down.
 2. All such Cloud PCs will be moved to the new region or ANC.
 
 It may take several hours for the moves to complete.
