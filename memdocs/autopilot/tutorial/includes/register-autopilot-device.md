@@ -50,23 +50,23 @@ After the CSV file has been created, it can be imported into Intune via the foll
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. In the **Home** screen, select **Devices**.
+1. In the **Home** screen, select **Devices**.
 
-3. In the **Devices | Overview** screen, under **By platform**, select **Windows**.
+1. In the **Devices | Overview** screen, under **By platform**, select **Windows**.
 
-4. In the **Windows | Windows enrollment** screen, select **Windows enrollment**
+1. In the **Windows | Windows enrollment** screen, select **Windows enrollment**
 
-5. Under **Windows Autopilot Deployment Program**, select **Devices**.
+1. Under **Windows Autopilot Deployment Program**, select **Devices**.
 
-6. In the **Windows Autopilot devices** screen, select **Import**.
+1. In the **Windows Autopilot devices** screen, select **Import**.
 
-7. In the **Add Windows Autopilot devices** pane, under **Specify the path to the list you want to import.**, select the blue file folder.
+1. In the **Add Windows Autopilot devices** pane, under **Specify the path to the list you want to import.**, select the blue file folder.
 
-8. Browse to the CSV file obtained using one of the above methods to obtain the hardware hash of a device.
+1. Browse to the CSV file obtained using one of the above methods to obtain the hardware hash of a device.
 
-9. After selecting the CSV file, verify that the correct CSV file is selected under **Specify the path to the list you want to import.**, and then select **Import**. Importing can take several minutes.
+1. After selecting the CSV file, verify that the correct CSV file is selected under **Specify the path to the list you want to import.**, and then select **Import**. Importing can take several minutes.
 
-10. After the import is complete, in the **Windows Autopilot devices** screen, select **Sync**.
+1. After the import is complete, in the **Windows Autopilot devices** screen, select **Sync**.
 
        A message will display saying that the sync is in progress. The sync process might take a few minutes to complete, depending on how many devices are being synchronized.
 
@@ -74,4 +74,4 @@ After the CSV file has been created, it can be imported into Intune via the foll
     >
     > If another sync is attempted within 10 minutes after initiating a sync, an error will be displayed. Syncs can only occur once every 10 minutes. To attempt a sync again, wait at least 10 minutes before trying again.
 
-11. Select **Refresh** to refresh the view. The newly imported devices should display within a few minutes. If the devices aren't yet displayed, wait a few minutes, and then select **Refresh** again.
+1. Select **Refresh** to refresh the view. The newly imported devices should display within a few minutes. If the devices aren't yet displayed, wait a few minutes, and then select **Refresh** again.

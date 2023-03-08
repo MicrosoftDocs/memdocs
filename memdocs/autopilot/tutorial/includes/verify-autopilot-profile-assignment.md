@@ -15,17 +15,17 @@ Before deploying a device, ensure that an Autopilot profile has been assigned to
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. In the **Home** screen, select **Devices**.
+1. In the **Home** screen, select **Devices**.
 
-3. In the **Devices | Overview** screen, under **By platform**, select **Windows**.
+1. In the **Devices | Overview** screen, under **By platform**, select **Windows**.
 
-4. In the **Windows | Windows devices** screen, select > **Windows enrollment**.
+1. In the **Windows | Windows devices** screen, select > **Windows enrollment**.
 
-5. Under **Windows Autopilot Deployment Program**, select **Devices**.
+1. Under **Windows Autopilot Deployment Program**, select **Devices**.
 
-6. In the **Windows Autopilot devices** screen, find the desired device that Autopilot deployment profile assignment status needs to be checked.
+1. In the **Windows Autopilot devices** screen, find the desired device that Autopilot deployment profile assignment status needs to be checked.
 
-7. Once the device is located, its current status will be listed under the **Profile status** column. The status will be one of the following values:
+1. Once the device is located, its current status will be listed under the **Profile status** column. The status will be one of the following values:
 
     - **Not assigned**: The device hasn't been assigned an Autopilot deployment profile.
     - **Assigning**: The device is being assigned an Autopilot deployment profile.

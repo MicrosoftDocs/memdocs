@@ -29,19 +29,19 @@ To configure and assign the Autopilot Enrollment Status Page (ESP) so that it sh
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. In the **Home** screen, select **Devices**.
+1. In the **Home** screen, select **Devices**.
 
-3. In the **Devices | Overview** screen, under **By platform**, select **Windows**.
+1. In the **Devices | Overview** screen, under **By platform**, select **Windows**.
 
-4. In the **Windows | Windows devices** screen, select **Windows enrollment** > **General: Enrollment Status Page**.
+1. In the **Windows | Windows devices** screen, select **Windows enrollment** > **General: Enrollment Status Page**.
 
-5. In the **Enrollment Status Page**, select **Create**.
+1. In the **Enrollment Status Page**, select **Create**.
 
-6. In the **Basics** page of the **Create profile** screen, enter a **Name** and **Description** for the ESP profile, and then select **Next**.
+1. In the **Basics** page of the **Create profile** screen, enter a **Name** and **Description** for the ESP profile, and then select **Next**.
 
-7. In the **Settings** page, toggle the option **Show app and profile configuration progress** to **Yes**.
+1. In the **Settings** page, toggle the option **Show app and profile configuration progress** to **Yes**.
 
-8. After toggling the option **Show app and profile configuration progress** to **Yes**, several new options will appear. Configure these options based on the desired behavior for the ESP:
+1. After toggling the option **Show app and profile configuration progress** to **Yes**, several new options will appear. Configure these options based on the desired behavior for the ESP:
 
    - **Show an error when installation takes longer than specified number of minutes**: The default time-out is 60 minutes. Enter a higher value if you think more time is needed to install apps on the devices.
 
@@ -73,11 +73,11 @@ To configure and assign the Autopilot Enrollment Status Page (ESP) so that it sh
          - **All**: All assigned apps must be installed before users can use their devices.  
          - **Selected**: Selected apps must be installed before users can use their devices. After enabling this option, select **Select apps** to select the managed apps from Intune that are required to be installed before users can use their device.
 
-9. Once the different ESP options under the **Settings** page have been configured as desired, select **Next**.
+1. Once the different ESP options under the **Settings** page have been configured as desired, select **Next**.
 
-10. In the **Assignments** page, select **Add groups**.
+1. In the **Assignments** page, select **Add groups**.
 
-11. In the **Select groups to include** pane, select the device group(s) to target the ESP profile. The device group(s) selected would normally be the device group(s) created in the **Create device group** step. After selecting the device group, select **Select**.
+1. In the **Select groups to include** pane, select the device group(s) to target the ESP profile. The device group(s) selected would normally be the device group(s) created in the **Create device group** step. After selecting the device group, select **Select**.
 
     > [!TIP]
     >
@@ -87,11 +87,11 @@ To configure and assign the Autopilot Enrollment Status Page (ESP) so that it sh
     >
     > ESPs are assigned to device groups and not directly to individual devices. To assign an ESP to a specific device, the device must be a member of a device group that has an ESP assigned to it.
 
-12. Select **Next**.  
+1. Select **Next**.  
 
-13. In the **Scope tags** page, select **Next**.
+1. In the **Scope tags** page, select **Next**.
 
     > [!NOTE]
     > **Scope tags** are optional and are a method to control who has access to the ESP configuration. For the purpose of this tutorial, scope tags is being skipped and left at the default scope tag. However if a custom scope tag needs to be specified, do so at this screen. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](/mem/intune/fundamentals/scope-tags).
 
-14. In the **Review + create** page, review the settings and verify everything is correct and configured as desired. Once verified, select **Create** to save the changes and assign the ESP profile.
+1. In the **Review + create** page, review the settings and verify everything is correct and configured as desired. Once verified, select **Create** to save the changes and assign the ESP profile.
