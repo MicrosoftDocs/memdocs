@@ -24,10 +24,11 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 #ms.custom:
-ms.collection: 
-  - M365-identity-device-management
-  - highpri
-  - highseo
+ms.collection:
+- tier1
+- M365-identity-device-management
+- highpri
+- highseo
 ---
 
 # Intune compliance reports for updates
@@ -48,7 +49,7 @@ For more information, see [Monitor Windows Updates with Windows Update for Busin
 
 Intune offers integrated report views for the Windows update ring policies you deploy. These views display details about the update ring deployment and status:
 
-1. Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Devices** > **Monitor**. Then under **Software updates** select **Per update ring deployment state** and choose the deployment ring to review. 
    <!--  Recent update has muddled the locatio of the following 
@@ -136,7 +137,7 @@ This report provides you update installation status that's based on the update s
 
 To use the report:
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. To view a summary report across all Windows 10 and later feature updates policies:
 
@@ -223,7 +224,7 @@ This report provides insights to update installation status, including the numbe
 
 To use the report:
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Devices** > **Monitor**, and then below *Software updates* select **Feature update failures**.
 

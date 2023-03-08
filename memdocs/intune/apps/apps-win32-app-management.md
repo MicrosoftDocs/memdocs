@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/13/2022
+ms.date: 03/07/2023
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -19,8 +19,9 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: contperf-fy21q1
 ms.collection:
-  - M365-identity-device-management
-  - highpri
+- tier1
+- M365-identity-device-management
+- highpri
 ---
 
 # Win32 app management in Microsoft Intune
@@ -99,7 +100,7 @@ For available apps, the start time will dictate when the app is visible in the c
 
 Set the app availability based on a date and time for a required app by using the following steps:
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All apps**.
 3. In the **Windows app (Win32)** list, select an app.
 4. From the app pane, select **Properties** > **Edit** next to the **Assignments** section. Then select **Add group** below the **Required** assignment type.

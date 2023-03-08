@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/13/2022
+ms.date: 03/07/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -26,18 +26,20 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: 
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier1
+- M365-identity-device-management
 ---
 
 # Intune discovered apps
 
-Intune **discovered apps** is a list of detected apps on the Intune enrolled devices in your tenant. It acts as a software inventory for your tenant. **Discovered apps** is a separate report from the [app installation](apps-monitor.md) reports. For personal devices, Intune never collects information on applications that are unmanaged. On corporate devices, any app whether it is a managed app or not is collected for this report. Below is the table mapping the expected behavior. In general, the report refreshes every 7 days from the time of enrollment (not a weekly refresh for the entire tenant). The only exception to this refresh cycle for the **Discovered apps** report is application information collected through the Intune Management Extension for Win32 Apps, which is collected every 24 hours.
+Intune **discovered apps** is a list of detected apps on the Intune enrolled devices in your tenant. It acts as a software inventory for your tenant. **Discovered apps** is a separate report from the [app installation](apps-monitor.md) reports. For personal devices, Intune never collects information on applications that are unmanaged. On corporate devices, any app whether it's a managed app or not is collected for this report. Below is the table mapping the expected behavior. In general, the report refreshes every seven days from the time of enrollment (not a weekly refresh for the entire tenant). The only exception to this refresh cycle for the **Discovered apps** report is application information collected through the Intune Management Extension for Win32 Apps, which is collected every 24 hours.
 
 ## Monitor discovered apps with Intune
 
 Intune provides an aggregated list of detected apps on the Intune enrolled devices in your tenant.
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **Monitor** > **Discovered apps**.
 
 >[!NOTE]
@@ -47,7 +49,7 @@ Intune provides an aggregated list of detected apps on the Intune enrolled devic
 
 Intune also provides the list of discovered apps for the individual device in your tenant.
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **All Devices**.
 3. Select a device.
 4. To view detected apps for this device, select **Discovered Apps** in the **Monitor** section.
@@ -56,21 +58,24 @@ Intune also provides the list of discovered apps for the individual device in yo
 
 The following list provides the app platform type, the apps that are monitored for personal devices, the apps that are monitored for company-owned devices, and the refresh cycle. For more information about app types supported by Intune, see [App types in Microsoft Intune](apps-add.md#app-types-in-microsoft-intune).
 
-| Platform | For personally-owned devices | For company-owned devices | Refresh cycle |
+| Platform | For personally owned devices | For company-owned devices | Refresh cycle |
 |------------------------------------------------------------------------|----------------------------------|--------------------------------------------------|---------------------------------------|
 | Windows 10/11 (Win32 Apps) NOTE: [Requires Intune Management Extension](intune-management-extension.md) on device | Not Applicable | MSI installed apps on the device | Every 24 hours from device enrollment |
-| Windows 10/11 (Modern Apps) | Only managed modern apps | All modern apps installed on the device | Every 7 days from device enrollment |
-| Windows 8.1 | Only managed apps | Only managed apps | Every 7 days from device enrollment |
-| Windows RT | Only managed apps | Only managed apps | Every 7 days from device enrollment |
-| iOS/iPadOS | Only managed apps | All apps installed on the device | Every 7 days from device enrollment |
-| macOS | Only managed apps | All apps installed on the device | Every 7 days from device enrollment |
-| Android | Only managed apps | All apps installed on the device | Every 7 days from device enrollment |
-| Android Enterprise | Only managed apps | Only apps installed on the Android Enterprise work profile device | Every 7 days from device enrollment |
+| Windows 10/11 (Modern Apps) | Only managed modern apps | All modern apps installed on the device | Every seven days from device enrollment |
+| Windows 8.1 | Only managed apps | Only managed apps | Every seven days from device enrollment |
+| Windows RT | Only managed apps | Only managed apps | Every seven days from device enrollment |
+| iOS/iPadOS | Only managed apps | All apps installed on the device | Every seven days from device enrollment |
+| macOS | Only managed apps | All apps installed on the device | Every seven days from device enrollment |
+| Android device administrator | Only managed apps | All apps installed on the device | Every seven days from device enrollment |
+| Android Enterprise personally owned enrollment | Only managed apps in the work profile | Not applicable | Every seven days from device enrollment |
+| Android Enterprise corporate-owned enrollments | Not applicable| Not yet supported | Not Applicable |
+| AOSP enrollments | Not applicable | Not yet supported | Not applicable |
 
 > [!NOTE]
 > - Windows 10/11 co-managed devices, as shown in the [client apps](../../configmgr/comanage/workloads.md#client-apps) workload in Configuration Manager, do not currently collect app inventory through the Intune Management Extension (IME) as per the above schedule. To mitigate this issue, the [client apps](../../configmgr/comanage/workloads.md#client-apps) workload in Configuration Manager should be switched to Intune for the IME to be installed on the device (IME is required for Win32 inventory and PowerShell deployment). Note that any changes or updates on this behavior are announced in [in development](../fundamentals/in-development.md) and/or [what's new](../fundamentals/whats-new.md).
 > - Personally-owned macOS devices enrolled before November 2019 may continue to show all apps installed on the device until the devices are enrolled again.
-> - Android Enterprise Fully Managed, Dedicated, and Corporate-Owned Work Profile devices do not display discovered apps.
+> - Android Enterprise corporate-owned enrollments (fully managed, dedicated, and corporate-owned work profile) do not display discovered apps. 
+> - Android Open Source Project (AOSP) enrollments do not display discovered apps. 
 > - For customers using a Mobile Threat Defense partner with Intune, [App Sync data](../protect/mtd-connector-enable.md) is sent to Mobile Threat Defense partners at an interval based on device check-in, and should not be confused with the refresh interval for the Discovered Apps report.
 
 The number of discovered apps may not match the app install status count. Possibilities for inconsistencies include:

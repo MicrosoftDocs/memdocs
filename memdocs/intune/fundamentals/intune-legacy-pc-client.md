@@ -24,7 +24,10 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-classic
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
+- triage
 ---
 
 # What happened to the Intune PC software client?
@@ -37,7 +40,7 @@ ms.collection: M365-identity-device-management
 The following is information from the [original deprecation announcement](https://aka.ms/Intune_Silverlight_console) posted to the Intune Support Team blog:
 
 > [!important]
-> Microsoft Intune will retire support for the Silverlight-based Intune console on October 15, 2020. This retirement includes ending support for the Silverlight console configured PC software client (also known as the PC agent) used for Windows PC management. In addition, Intune will end the Intune Storage Add-On licensing offer which was only used for app storage in Silverlight. Move your day-to-day Intune administration from Silverlight to the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com).
+> Microsoft Intune will retire support for the Silverlight-based Intune console on October 15, 2020. This retirement includes ending support for the Silverlight console configured PC software client (also known as the PC agent) used for Windows PC management. In addition, Intune will end the Intune Storage Add-On licensing offer which was only used for app storage in Silverlight. Move your day-to-day Intune administration from Silverlight to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 >
 >**How does this affect me?**
 >
@@ -45,7 +48,7 @@ The following is information from the [original deprecation announcement](https:
 >
 >**What do I need to do?**
 >
-> 1. Open the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com).
+> 1. Open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 > 2. Recreate your existing Windows 10 policies as MDM policies. Note that many device management policies were migrated several years ago as part of the admin console migration. Check device management in Azure before you create new policies.
 > 3. Review reporting in the Microsoft Intune administration console to find the devices that are managed by the Intune PC software client.
 > 4. Determine the right modern enrollment method that's right for your organization. For details, see [Intune enrollment methods for Windows devices](../enrollment/windows-enrollment-methods.md).

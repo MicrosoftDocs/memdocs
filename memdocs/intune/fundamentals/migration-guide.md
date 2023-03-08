@@ -5,10 +5,10 @@ title: Intune mobile device management migration guide
 titleSuffix: Microsoft Intune
 description: This overview includes a summary of the planning and deployment guides for Microsoft Intune.
 keywords:
-author: dougeby
-ms.author: dougeby
+author: MandiOhlinger
+ms.author: mandia
 manager: dougeby
-ms.date: 10/26/2020
+ms.date: 11/30/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -24,21 +24,17 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 #ms.custom:
-ms.collection: 
-  - M365-identity-device-management
-  - highpri
+ms.collection:
+- tier1
+- M365-identity-device-management
+- highpri
 ---
 
 # Deploy or move to Microsoft Intune
 
-![Microsoft Intune MDM migration guide art](./media/migration-guide/MDM-migration-guide-art.PNG)
-
 A successful adoption or migration to Microsoft Intune starts with a plan. This plan depends on your current mobile device management (MDM) environment, business goals, and technical requirements. Additionally, you need to include the key stakeholders who will support and collaborate with your plan.
 
-We created some planning and deployment guides to help plan your adoption or move to Intune. 
-
-> [!TIP]
-> [!INCLUDE [tips-guidance-plan-deploy-guides](../includes/tips-guidance-plan-deploy-guides.md)]
+We created some deployment guides to help plan your adoption or move to Intune.
 
 ## Before you begin
 
@@ -48,17 +44,7 @@ We created some planning and deployment guides to help plan your adoption or mov
 
 - These guides assume you've evaluated Intune in a proof of concept (PoC) environment, and decided to use it as the MDM solution in your organization. You're familiar with Intune and its features.
 
-## Planning and deployment guides
-
-- **[Planning guide](intune-planning-guide.md)**: This guide includes recommendations, suggestions, and guidance on the different tasks associated with MDM solutions. For example, get guidance on:
-
-  - Common objectives
-  - Managing personal devices and desktop computers
-  - Costs and licensing
-  - Existing policies and group structures
-  - Creating a rollout plan
-  - Communicating changes with your users
-  - Supporting your help desk
+## Deployment guides
 
 - **Deployment plans and guides**: These guides cover several areas:
 

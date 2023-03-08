@@ -21,13 +21,15 @@ ms.assetid:
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: intune-azure 
-ms.collection: M365-identity-device-management
+ms.custom: 
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # What is Microsoft Surface Management Portal?  
 
-Microsoft Surface Management Portal is a centralized place in the Microsoft Endpoint Manager admin center where you can self-serve, manage, and monitor your organization's Intune-managed Surface devices at scale.  
+Microsoft Surface Management Portal is a centralized place in the Microsoft Intune admin center where you can self-serve, manage, and monitor your organization's Intune-managed Surface devices at scale.  
 
 Surface Management Portal offers insights about the enrolled Surface devices in your organization, such as warranty eligibility and open support requests. Use it to:
 

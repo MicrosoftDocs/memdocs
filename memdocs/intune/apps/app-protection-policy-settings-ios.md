@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/10/2022
+ms.date: 03/07/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -27,8 +27,9 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection:
-  - M365-identity-device-management
-  - highpri
+- tier1
+- M365-identity-device-management
+- highpri
 ---
 
 # iOS app protection policy settings
@@ -68,7 +69,7 @@ There are three categories of policy settings: *Data relocation*, *Access requir
 ### Encryption
 | Setting | How to use | Default value |
 |------|----------|-------|
-| **Encrypt Org data** | Choose Require to enable encryption of work or school data in this app.  Intune enforces iOS/iPadOS device-level encryption to protect app data  while the device is locked. In addition, applications may optionally encrypt app data using Intune APP SDK encryption. Intune APP SDK uses iOS/iPadOS cryptography methods to apply 256-bit AES encryption to app data. <br><br> When you enable this setting, the user may be required to set up and use a device PIN to access their device. If there's no device PIN and encryption is required, the user is prompted to set a PIN with the message "Your organization has required you to first enable a device PIN to access this app." <br><br> Go to the [official Apple documentation](https://support.apple.com/en-us/HT202739) to see which iOS/iPadOS encryption modules are FIPS 140-2 validated. | **Require**  |
+| **Encrypt Org data** | Choose Require to enable encryption of work or school data in this app.  Intune enforces iOS/iPadOS device-level encryption to protect app data  while the device is locked. In addition, applications may optionally encrypt app data using Intune APP SDK encryption. Intune APP SDK uses iOS/iPadOS cryptography methods to apply 256-bit AES encryption to app data. <br><br> When you enable this setting, the user may be required to set up and use a device PIN to access their device. If there's no device PIN and encryption is required, the user is prompted to set a PIN with the message "Your organization has required you to first enable a device PIN to access this app." <br><br> Go to the [official Apple documentation](https://support.apple.com/guide/security/secb010e978a/web) to read more about their Data Protection Classes, as part of their Apple Platform Security. | **Require**  |
 
 
 ### Functionality

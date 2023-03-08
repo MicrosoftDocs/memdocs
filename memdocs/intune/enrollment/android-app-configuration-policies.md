@@ -26,20 +26,20 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure;seodec18
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
-# Android Enterprise security configuration framework app configuration policies
+# Configure app configuration policies for fully managed devices   
 
-As part of the [Android Enterprise security configuration framework](android-configuration-framework.md), you must properly set app configuration policies for Android Enterprise devices.
+Android Enterprise fully managed devices are intended exclusively for work or school use, so we recommend blocking users from connecting their personal accounts in Microsoft apps.  
 
-Android Enterprise personally-owned/corporate-owned work profile devices are designed to isolate work and personal data from one another. Android Enterprise fully managed devices are designed work or school data only. So, Microsoft apps deployed on these devices must be configured to disallow personal accounts.
-
-## Disallow personal accounts for Microsoft apps on Android Enterprise devices
+## Block personal accounts  
 
 1. Add the apps to Managed Google Play. For more information, see [Add Managed Google Play apps to Android Enterprise devices with Intune](../apps/apps-add-android-for-work.md).
-2. Create a policy for each Managed Google Play app as described in [Add app configuration policies for managed Android Enterprise devices]().
-3. Create the following single key in each policy:
+2. Create an app configuration policy for each Managed Google Play app. For more information, see [Add app configuration policies for managed Android Enterprise devices](../apps/app-configuration-policies-use-android.md#create-an-app-configuration-policy).
+3. Create the following single key in each policy:  
 
     | Key | Values |
     | --- | --- |
@@ -47,4 +47,7 @@ Android Enterprise personally-owned/corporate-owned work profile devices are des
 
 
 ## Next steps
-Apply [Android Enterprise personally-owned/corporate-owned work profile security settings](android-work-profile-security-settings.md) or [Android Enterprise fully managed security settings](android-fully-managed-security-settings.md).
+1. [Configure device enrollment restrictions for personal devices](device-enrollment-restrictions.md)
+2. 🡺 **Configure app configuration policies** (*You are here*) 
+3. [Configure security settings for personal devices](android-work-profile-security-settings.md)  
+4. [Configure security settings for fully managed devices](android-fully-managed-security-settings.md) 

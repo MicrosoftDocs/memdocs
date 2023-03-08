@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Network endpoints for US government deployments - Microsoft Intune
-titleSuffix: 
+title: Network endpoints for US government deployments
+titleSuffix: Microsoft Intune
 description: Review US government endpoints for Intune.
 keywords:
 author: Smritib17
@@ -26,7 +26,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-classic; get-started
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # US government endpoints for Microsoft Intune
@@ -42,7 +44,7 @@ You can modify proxy server settings on individual client computers. You can als
 
 Managed devices require configurations that let **All Users** access services through firewalls.
 
-For more information about Windows 10 auto-enrollment and device registration for US government customers, see [Set up enrollment for Windows devices](../enrollment/windows-enroll.md#windows-auto-enrollment-and-device-registration).  
+For more information about Windows 10 auto-enrollment and device registration for US government customers, see [Set up automatic enrollment for Windows](../enrollment/windows-enroll.md).  
 
 The following tables list the ports and services that the Intune client accesses:
 
@@ -55,7 +57,7 @@ The following tables list the ports and services that the Intune client accesses
 - Azure portal: https:\//portal.azure.us/ 
 - Microsoft 365: https:\//portal.office365.us/ 
 - Intune Company Portal: https:\//portal.manage.microsoft.us/ 
-- Microsoft Endpoint Manager admin center: https:\//endpoint.microsoft.us/
+- Microsoft Intune admin center: https:\//intune.microsoft.us/
 
 ## Partner service endpoints that Intune depends on:
 - Azure AD Sync service: https:\//syncservice.gov.us.microsoftonline.com/DirectoryService.svc

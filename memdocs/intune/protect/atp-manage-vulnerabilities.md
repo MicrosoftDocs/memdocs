@@ -2,7 +2,7 @@
 # required metadata
 
 title: Use Intune to remediate vulnerabilities found by Microsoft Defender for Endpoint
-description: See how to manage security tasks from and Threat & vulnerability Management, part of Microsoft Defender for Endpoint from within the Microsoft Endpoint Manager admin center.
+description: See how to manage security tasks from and Threat & vulnerability Management, part of Microsoft Defender for Endpoint from within the Microsoft Intune admin center.
 keywords:
 author: brenduns 
 ms.author: brenduns
@@ -13,7 +13,7 @@ ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
 ms.technology:
-ms.reviewer: shpate
+ms.reviewer: aanavath
 
 # optional metadata
 
@@ -24,7 +24,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Use Intune to remediate vulnerabilities identified by Microsoft Defender for Endpoint
@@ -40,7 +42,7 @@ After you connect Intune to Microsoft Defender for Endpoint, Defender for Endpoi
 - Vulnerabilities that are discovered aren't based on configurations from Intune. They're based on Microsoft Defender for Endpoint configurations and scan details.
 - Not all issues that Defender for Endpoint flags for remediation support remediation through the creation of a security task for Intune.
 
-In the Microsoft Defender Security Center console, Defender for Endpoint security admins review data about endpoint vulnerabilities. The admins then use a few clicks to create security tasks that flag the vulnerable devices for remediation. The security tasks are immediately passed to the Microsoft Endpoint Manager admin center where Intune admins can view them. The security task identifies the type of vulnerability, priority, status, and the steps to take to remediate the vulnerability. The Intune admin chooses to accept or reject the task.
+In the Microsoft Defender Security Center console, Defender for Endpoint security admins review data about endpoint vulnerabilities. The admins then use a few clicks to create security tasks that flag the vulnerable devices for remediation. The security tasks are immediately passed to the Microsoft Intune admin center where Intune admins can view them. The security task identifies the type of vulnerability, priority, status, and the steps to take to remediate the vulnerability. The Intune admin chooses to accept or reject the task.
 
 When a task is accepted, the Intune admin then acts to remediate the vulnerability through Intune, using the guidance provided as part of the security task.
 
@@ -64,9 +66,9 @@ Following is an example workflow for an application. This same general workflow 
 
 - A Microsoft Defender for Endpoint scan identifies a vulnerability for an app named Contoso Media Player v4, and an admin creates a security task to update that app. The Contoso Media player is an unmanaged app that was deployed with Intune.
 
-  This security task appears in the Microsoft Endpoint Manager admin center with a status of Pending:
+  This security task appears in the Microsoft Intune admin center with a status of Pending:
 
-  ![View the list of security tasks in the Intune console](./media/atp-manage-vulnerabilities/temp-security-tasks.png)
+  ![View the list of security tasks in the Intune admin center](./media/atp-manage-vulnerabilities/temp-security-tasks.png)
 
 - The Intune admin selects the security task to view details about the task.  The admin then selects **Accept**, which updates the status in Intune, and in Defender for Endpoint to be *Accepted*.
 
@@ -98,7 +100,7 @@ Before you can work with security tasks, they must be created from within the De
 
 To manage security tasks:
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Endpoint security** > **Security tasks**.
 
@@ -115,7 +117,7 @@ To manage security tasks:
 
 5. After accepting a task, reopen the security task (if it closed), and follow the REMEDIATION details to remediate the vulnerability. The instructions provided by Defender for Endpoint in the security task details vary depending on the vulnerability involved.
 
-   When it's possible to do so, the remediation instructions include links that open the relevant configuration objects in the Microsoft Endpoint Manager admin center.
+   When it's possible to do so, the remediation instructions include links that open the relevant configuration objects in the Microsoft Intune admin center.
 
 6. After completing the remediation steps, open the security task and select **Complete Task**. This action updates the security task status in both Intune and Defender for Endpoint.
 

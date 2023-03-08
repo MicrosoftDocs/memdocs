@@ -25,7 +25,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Deploy multiple OEMConfig profiles to Zebra devices in Microsoft Intune
@@ -83,9 +85,9 @@ Let's look at some examples:
 
 ## Enhanced reporting
 
-You deploy a profile, and it’s executed by the Zebra OEMConfig app on the device. The Zebra OEMConfig app reports the profile status to Intune. In the Endpoint Manager admin center, you can see the status of deployed OEMConfig profiles, and any errors or warnings.
+You deploy a profile, and it’s executed by the Zebra OEMConfig app on the device. The Zebra OEMConfig app reports the profile status to Intune. In the Intune admin center, you can see the status of deployed OEMConfig profiles, and any errors or warnings.
 
-1. Open the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select your Zebra OEMConfig profile > **Monitor** > **Device status**. This option shows the devices that have your OEMConfig profile assigned.
 3. Select a device > **Device configuration** > Select your Zebra OEMConfig profile. This option shows the profile settings that succeeded or failed.
 

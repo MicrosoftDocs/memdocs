@@ -26,9 +26,9 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection:
+- tier3
 - M365-identity-device-management
 - Windows
-- tier3
 ---
 
 # Graph APIs and matching Windows 10 CSPs used in Intune

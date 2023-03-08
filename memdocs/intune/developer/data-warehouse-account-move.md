@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/16/2021
+ms.date: 03/06/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -24,9 +24,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: 
-ms.collection: 
-- M365-identity-device-management
+ms.collection:
 - tier3
+- M365-identity-device-management
 ---
 
 # Move your Intune Data Warehouse account data 
@@ -42,21 +42,21 @@ To back up your Data Warehouse data, you must save your Data Warehouse data into
 1. If you are a first-time user of the Data Warehouse API, follow the one-time process provided in the following article, [Get data from the Intune Data Warehouse API with a REST client](reports-proc-data-rest.md).
 2. Use the PowerShell sample titled [Access the Intune Data Warehouse with PowerShell](https://github.com/Microsoft/Intune-Data-Warehouse/tree/master/Samples/PowerShell) to download all your data into CSV files. 
 
-## Back up your trend charts from the Microsoft Endpoint Manager admin center
+## Back up your trend charts from the Microsoft Intune admin center
 
-Some trend charts in your view of the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) will reset. You may back up these charts by running the following script in **Graph**:   
+Some trend charts in your view of the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) will reset. You may back up these charts by running the following script in **Graph**:   
 
 ### Terms & Conditions Acceptance reports
-1. In the[Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant administration** > **Terms & Conditions**.
+1. In the[Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant administration** > **Terms & Conditions**.
 2. For each **Terms & Condition** item that you select, click **Acceptance Report** > **Export**.
 3. Save the report locally.
  
 ### App Protection reports  
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** -> **Monitor** -> **App protection status**.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** -> **Monitor** -> **App protection status**.
 2. Click the download icon ( ⤓ ) to save each report.
 
 ### Device Configuration charts 
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** -> **Configuration profiles** > **Export**.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** -> **Configuration profiles** > **Export**.
 2. Using Microsoft [Graph Explorer](https://developer.microsoft.com/graph/graph-explorer), download the data behind the charts. 
     - For deployment status of all device configuration profiles for all devices, see [Device deployment status](https://graph.microsoft.com/beta/reports/deviceConfigurationDeviceActivity/content).
 
@@ -68,7 +68,7 @@ Some trend charts in your view of the [Microsoft Endpoint Manager admin center](
     > You must have a valid authenticaltion token to access the device configuration and deployment status information.
 
 ## Device Enrollment charts
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Monitor** > **Assignment status** > **Export**.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Monitor** > **Assignment status** > **Export**.
 2. Using Microsoft [Graph Explorer](https://developer.microsoft.com/graph/graph-explorer), download the data behind the charts.
     - For enrollment status, copy this [enrollment status query](https://graph.microsoft.com/beta/reports/managedDeviceEnrollmentFailureTrends()/content) and paste it into [Graph Explorer](https://developer.microsoft.com/graph/graph-explorer).
     - For top enrollment failures this week, copy this [enrollment failures query](https://graph.microsoft.com/beta/reports/managedDeviceEnrollmentTopFailures(period=null)/content) and paste it into [Graph Explorer](https://developer.microsoft.com/graph/graph-explorer).

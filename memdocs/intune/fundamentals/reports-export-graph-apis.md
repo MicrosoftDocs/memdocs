@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/16/2021
+ms.date: 03/06/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -25,7 +25,9 @@ ms.reviewer:
 search.appverid: MET150
 #ms.tgt_pltfrm:
 #ms.custom:
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Export Intune reports using Graph APIs
@@ -35,7 +37,7 @@ All reports that have been migrated to the Intune reporting infrastructure will 
 > [!NOTE]
 > For information about making REST API calls, including tools for interacting with Microsoft Graph, see [Use the Microsoft Graph API](/graph/use-the-api).
 
-Microsoft Endpoint Manager will export reports using the following Microsoft Graph API endpoint:
+Microsoft Intune will export reports using the following Microsoft Graph API endpoint:
 
 ```http
 https://graph.microsoft.com/beta/deviceManagement/reports/exportJobs
@@ -54,6 +56,7 @@ The below request contains the HTTP method used on the request to Microsoft Grap
     "reportName": "Devices", 
     "filter":"(OwnerType eq '1')", 
     "localizationType": "LocalizedValuesAsAdditionalColumn", 
+    "format": "json"
     "select": [ 
         "DeviceName", 
         "managementAgent", 
@@ -138,11 +141,12 @@ You can then directly download the compressed CSV from the `url` field.
 
 ## Report parameters
 
-There are four main parameters you can submit in your request body to define the export request: 
+There are five main parameters you can submit in your request body to define the export request: 
 
 - `reportName`: Required. This parameter is the name of the report you want to specify.  
 - `filter`: Not required for most reports. Note that the filter parameter is a string.
 - `select`: Not required. Specify which columns from the report you want. Only valid column names relevant to the report you are calling will be accepted.  
+- `format`: Not required. By default, the data is output in `csv` format.  Specify `json` to output the file in JSON format.
 - `localizationType`: This parameter controls localization behavior for the report. Possible values are `LocalizedValuesAsAdditionalColumn` and `ReplaceLocalizableValues`.
 
 ## Localization behavior

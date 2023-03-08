@@ -22,11 +22,12 @@ searchScope:
 ROBOTS:  
 #audience:
 
-ms.reviewer: japoehlm
+ms.reviewer: 
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
-ms.collection: 
+ms.collection:
+- tier1
 ---
 
 # Enroll your organization-provided macOS device in management

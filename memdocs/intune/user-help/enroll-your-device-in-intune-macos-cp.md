@@ -22,11 +22,12 @@ searchScope:
 ROBOTS:  
 #audience:
 
-ms.reviewer: kakyker
+ms.reviewer: 
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
-ms.collection: 
+ms.collection:
+- tier1
 ---
 
 # Enroll your macOS device using the Company Portal app  

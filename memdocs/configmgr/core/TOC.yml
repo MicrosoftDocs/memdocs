@@ -7,8 +7,6 @@ items:
     href: understand/introduction.md
   - name: Microsoft Configuration Manager FAQ
     href: understand/microsoft-endpoint-manager-faq.yml
-  - name: What happened to SCCM?
-    href: understand/what-happened-to-sccm.md
   - name: Introduction
     items:
     - name: Find help for Configuration Manager
@@ -285,14 +283,14 @@ items:
     items:
     - name: Technical Preview overview
       href: get-started/technical-preview.md
+    - name: 2302 features
+      href: get-started/2023/technical-preview-2302.md
     - name: 2301 features
       href: get-started/2023/technical-preview-2301.md
     - name: 2211 features
       href: get-started/2022/technical-preview-2211.md
     - name: 2210 features
-      href: get-started/2022/technical-preview-2210.md
-    - name: 2209 features
-      href: get-started/2022/technical-preview-2209.md                   
+      href: get-started/2022/technical-preview-2210.md                 
   - name: Migrate data between hierarchies
     items:
     - name: Migration overview

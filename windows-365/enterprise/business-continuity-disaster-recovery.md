@@ -25,7 +25,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; get-started
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- tier1
 ---
 
 # Business continuity and disaster recovery overview
@@ -88,7 +90,7 @@ For an overview of Windows Settings, see [Windows Settings overview](/azure/acti
 
 The Cloud PC management service includes:
 
-- [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431)
+- [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431)
 - [Cloud PC end user portal](https://Windows365.microsoft.com)
 
 The Cloud PC Management Service has a regionally redundant architecture that is designed to be highly available, with a target uptime of 99.99%. If there's a Management Service outage, the service has the following target objectives:

@@ -24,7 +24,9 @@ ms.reviewer: jlynn
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 # Use the troubleshooting dashboard to help users at your company
 
@@ -33,9 +35,10 @@ ms.collection: M365-identity-device-management
 The troubleshooting pane lets help desk operators and Intune administrators view user information to address user help requests. Organizations that include a help desk can assign the [Help desk operator role](../fundamentals/role-based-access-control.md#built-in-roles) to a group of Intune users. The help desk operator role can use the **Troubleshooting + support** pane help end users.
 
 The **Troubleshooting + support** pane provides three options:
+
 - [Guided scenarios](../fundamentals/guided-scenarios-overview.md) to provide a customized series of steps centered around one end-to-end use-case.
 - **Troubleshooting** to help determine any issues with **Assignments**, **App protection status**, and **Enrollment failures**.
-- [Help and support](/mem/get-support?toc=%2Fmem%2Fintune%2Ffundamentals%2Ftoc.json&bc=%2Fmem%2Fintune%2Ffundamentals%2Fbreadcrumb%2Ftoc.json) to provide global technical, pre-sales, billing, and subscription support for device management cloud-based services related to Intune.
+- [Help and support](/mem/get-support?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json) to provide global technical, pre-sales, billing, and subscription support for device management cloud-based services related to Intune.
 
 Details about the issue and suggested remediation steps can help administrators and help desk operators troubleshoot problems. Certain enrollment issues aren't captured and some errors might not have remediation suggestions.
 
@@ -55,12 +58,13 @@ The **Troubleshooting** pane provides the following tabs to quickly narrow the t
 - **Updates** - Provides the name, platform, and update type.
 - **Enrollment restrictions** - Provides the policy type, name, platform, and device limit.
 - **Diagnostics** - Provides the device name or application, platform, created date, and diagnostic log.
+- **ServiceNow incidents** - Provides a list of associated incidents for the selected user. For more information, go to [ServiceNow integration with Intune](../fundamentals/service-now-integration.md).
 
 ## View user troubleshooting details
 
 In the **Troubleshooting** pane provides specific details for each Intune end-user. User information can help you understand the current state of users and their devices.  
 
-1. Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Troubleshooting + support** > **Troubleshoot**.
 3. Find and select a **User** by entering a display name or email.
 4. If the user has multiple devices, filter by **Device**.
@@ -108,7 +112,7 @@ The **Groups** tab provides the group membership of all Azure AD groups for a sp
 | Column           | Description                                                                                                                         |
 |--------------------|-------------------------------------------------------------------------------------------------------------------------------------|
 | Name               | The name of the group.                                                                                                     |
-| Object ID          | The Object ID is used by Azure Active Directory. Endpoint Manager commonly refers to them as Group ID.                                                                                       |
+| Object ID          | The Object ID is used by Azure Active Directory. Intune commonly refers to them as Group ID.                                                                                       |
 | Membership type    | Provides how you assign and add users. **Assigned** denotes you manually assign users or devices to the group, and manually remove users or devices. **Dynamic User** denotes you create membership rules to automatically add and remove members. **Dynamic Device** denotes you create dynamic group rules to automatically add and remove devices.                                                                                 |
 | Direct or Transitive      | Identifies whether the device is a direct member or a transitive member.                                                                                                       |
 

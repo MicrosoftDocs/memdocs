@@ -26,7 +26,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-classic; get-started
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # China endpoints for Microsoft Intune
@@ -42,7 +44,7 @@ You can modify proxy server settings on individual client computers. You can als
 
 Managed devices require configurations that let **All Users** access services through firewalls.
 
-For more information about Windows 10 auto-enrollment and device registration for U.S. customers, see [Windows auto enrollment and device registration ](../enrollment/windows-enroll.md#windows-auto-enrollment-and-device-registration).  
+For more information about Windows 10 auto-enrollment and device registration for U.S. customers, see [Windows auto enrollment and device registration ](../enrollment/windows-enrollment-create-cname.md#windows-auto-enrollment-and-device-registration).  
 
 The following tables list the ports and services that the Intune client accesses:
 
@@ -55,7 +57,7 @@ The following tables list the ports and services that the Intune client accesses
 - Azure portal: https:\//portal.azure.cn/
 - Microsoft 365: https:\//portal.partner.microsoftonline.cn/
 - Intune Company Portal: https:\//portal.manage.microsoftonline.cn/
-- Microsoft Endpoint Manager admin center: https:\//endpoint.microsoftonline.cn/
+- Microsoft Intune admin center: https:\//intune.microsoftonline.cn/
 
 
 ## Partner service endpoints

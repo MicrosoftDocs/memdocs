@@ -24,18 +24,20 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Monitor device status when you integrate Microsoft Defender for Endpoint with Intune
 
-When you integrate Microsoft Intune and Microsoft Defender for Endpoint, you can view information about device compliance and onboarding in the Microsoft Endpoint Manager admin center.
+When you integrate Microsoft Intune and Microsoft Defender for Endpoint, you can view information about device compliance and onboarding in the Microsoft Intune admin center.
 
 ## Monitor device compliance
 
 Monitor the state of devices that have the Microsoft Defender for Endpoint compliance policy.
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Devices** > **Monitor** > **Policy compliance**.
 

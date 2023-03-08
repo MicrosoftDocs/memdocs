@@ -26,7 +26,8 @@ ms.reviewer: ilwu
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
-ms.collection: 
+ms.collection:
+- tier1
 ---
 
 
@@ -37,7 +38,7 @@ Enroll your personal Linux device in Microsoft Intune to get secure access to wo
 ## System requirements  
 Enrollment is supported on devices with:  
 
-* Ubuntu Desktop 22.04 or 20.04 LTS
+* Ubuntu Desktop 22.04 or 20.04 LTS (physical or Hyper-V machine with x86/64 CPUs)
 * A GNOME graphical desktop environment (automatically included with Ubuntu Desktop 22.04 and 20.04 LTS)  
 
 We recommend enabling encryption when you first install Ubuntu Desktop on your device. Your organization may require your device to be encrypted, and it's easiest to encrypt the device during OS installation. 

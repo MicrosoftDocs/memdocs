@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 07/20/2022
+ms.date: 03/03/2023
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -25,7 +25,9 @@ ms.suite: ems
 search.appverid: 
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; get-started
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- tier2
 ---
 
 # Windows 365 security
@@ -33,13 +35,13 @@ ms.collection: M365-identity-device-management
 Windows 365 provides an end-to-end connection flow for users to do their work effectively and securely. Windows 365 is built with [Zero Trust](/security/zero-trust/zero-trust-overview) in mind, providing the foundation for you to implement controls to better secure your environment across the 6 pillars of Zero Trust. You can implement Zero Trust controls for the following categories:
 
 - Securing the access to the Cloud PC
-    - This aligns with securing the **Identity**, where you can place additional measures on who can access the Cloud PC and under which conditions.
+    - Aligns with securing the **Identity**, where you can place more measures on who can access the Cloud PC and under which conditions.
 - Securing the Cloud PC device itself
-    - This aligns with securing the **Endpoint**, where you can place additional measures on the Cloud PC devices since that is the device being used to access organizational data.
+    - Aligns with securing the **Endpoint**, where you can place more measures on the Cloud PC devices since that is the device being used to access organizational data.
 - Securing the Cloud PC data and other data available while using the Cloud PC
-    - This aligns with securing the **Data**, where you can place additional measures on the data itself or on how the Cloud PC user access the data.
+    - Aligns with securing the **Data**, where you can place more measures on the data itself or on how the Cloud PC user access the data.
 
-Take a look at the sections below to better understand the components and features available to you to secure your Cloud PC environment.
+Take a look at the following sections to better understand the components and features available to you to secure your Cloud PC environment.
 
 ## Secure Cloud PC access
 
@@ -61,7 +63,7 @@ The second consideration for securing your environment is to secure the Cloud PC
 All new Cloud PCs have the following security components enabled by default:
 
 - **vTPM**: Short for virtual Trusted Platform Module, a vTPM provides Cloud PCs their own dedicate TPM instance that acts as a secure vault for keys and measurements. For more information, see [vTPM](/azure/virtual-machines/trusted-launch#vtpm).
-- **Secure Boot**: Secure Boot is a feature that will prevent the Windows operating system from booting if untrusted rootkits or boot kits are installed on the machine. For more information, see [secure boot](/azure/virtual-machines/trusted-launch#secure-boot).
+- **Secure Boot**: Secure Boot is a feature that prevents the Windows operating system from booting if untrusted rootkits or boot kits are installed on the machine. For more information, see [secure boot](/azure/virtual-machines/trusted-launch#secure-boot).
 
 With both security components enabled, Windows 365 supports enabling the following Windows security features:
 
@@ -77,7 +79,7 @@ The following security components are enabled by default on specific Cloud PC SK
     - **Security features supported**:
         - [Microsoft Defender Application Guard](/windows/security/threat-protection/microsoft-defender-application-guard/md-app-guard-overview)
         - [Windows Sandbox](/windows/security/threat-protection/windows-sandbox/windows-sandbox-overview)
-    - **Required configuration**: Cloud PC must have 8 vCPU and 32 GB RAM. See [set up virtualization-based workloads support](nested-virtualization.md#requirements) for more information.
+    - **Required configuration**: Cloud PC must have 4 vCPU and 16-GB RAM or more. For more information, see [set up virtualization-based workloads support](nested-virtualization.md#requirements).
 
 ## Secure Cloud PC data
 
@@ -89,9 +91,17 @@ The data of the Cloud PC data itself is secured through encryption. For more det
 
 ### Security of data available on the Cloud PC
 
-Securing the data available to users on their Cloud PCs should be no different than securing the data available to users on work-assigned Windows PCs, with the caveat that the Cloud PC is being accessed through Remote Desktop Protocol (RDP).
+Securing the data available to users on their Cloud PCs should be no different than securing the data available to users on work-assigned Windows PCs. The Cloud PC should be accessed through Remote Desktop Protocol (RDP).
 
 To manage RDP features available to the user during their Cloud PC connection, see [manage RDP device redirections for Cloud PCs](./manage-rdp-device-redirections.md).
+
+## Client update security
+
+Windows 365 Cloud PCs can be accessed from various operating system platforms and clients available in those platforms.
+
+- **Windows OS platforms**: Windows 365 can be accessed using Remote Desktop client for Windows and the Windows 365 App. Both these apps receive updates using the Windows Update service. For more information, see [Windows Update security](/windows/deployment/update/windows-update-security).
+- **Apple devices (macOS and iOS)**: Remote desktop client apps and their updates are distributed by Apple's app store. For more information about MacOS and iOS security measures, see [Apple Platform Security](https://support.apple.com/en-sg/guide/security/welcome/web).
+- **Android platforms**: Android platform apps downloaded from Google play stores conform to the Google play store terms and conditions. For more information, see [Google Play Terms of Service](https://play.google.com/about/play-terms/index.html).
 
 ## Next steps
 

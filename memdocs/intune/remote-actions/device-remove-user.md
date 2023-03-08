@@ -26,9 +26,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: 
+ms.collection:
+- tier2
 - M365-identity-device-management
-- tier3
 ---
 
 # Remove a user from a shared iOS/iPadOS device
@@ -45,7 +45,7 @@ The **Remove user** action deletes a user that you select from the local cache o
 
 ## Remove a user
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **All devices**.
 3. In the list of devices that you manage, select an iOS/iPadOS device.
 4. In the pane for the device, select **Users**.

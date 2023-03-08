@@ -21,11 +21,12 @@ searchScope:
 ROBOTS:  
 #audience:
 
-ms.reviewer: elocholi
+ms.reviewer: 
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
-ms.collection: 
+ms.collection:
+- tier3
 ---
 
 # Performing actions on a macOS device managed by Jamf

@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Set up enrollment for Windows devices by using Microsoft Intune
+title: Enable MDM automatic enrollment for Windows | Microsoft Intune
 titleSuffix:
-description: Set up enrollment for Windows devices.
+description: Enable Intune automatic enrollment for Windows devices joining or registering with your Azure AD.  
 keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/04/2021
+ms.date: 02/06/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -27,11 +27,12 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection:
-  - M365-identity-device-management
-  - highpri
+- tier1
+- M365-identity-device-management
+- highpri
 ---
 
-# Set up enrollment for Windows devices  
+# Set up automatic enrollment for Windows devices  
 
 **Applies to**
 
@@ -40,129 +41,47 @@ ms.collection:
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-This article helps IT administrators simplify Windows enrollment for their users. Once you've [set up Intune](../fundamentals/setup-steps.md), users enroll Windows devices by [signing in](../user-help/sign-in-to-the-company-portal.md) with their work or school account.  
+Simplify Windows enrollment for you and device users by enabling *automatic enrollment* in Microsoft Intune. This enrollment method enables devices to enroll automatically when they join or register in your Azure Active Directory. 
 
-As an Intune admin, you can simplify enrollment in the following ways:
+Automatic enrollment can be used in the following device management and provisioning scenarios:
 
-- [Enable automatic enrollment](#enable-windows-automatic-enrollment) (Azure AD Premium required).
-- [CNAME registration](#simplify-windows-enrollment-without-azure-ad-premium).
-- [Enable bulk enrollment](windows-bulk-enroll.md) (Azure AD Premium and Windows Configuration Designer required).
+* Bring-your-own-device (BYOD), personal devices   
+* Bulk enrollment 
+* Group Policy
+* Windows Autopilot (user driven and self-deploying)
+* Co-management with Configuration Manager    
 
-Two factors determine how you can simplify Windows device enrollment:
+This article describes how to enable MDM automatic enrollment for personal and corporate-owned devices.   
 
-- **Do you use Azure Active Directory Premium?** [Azure AD Premium](/azure/active-directory/active-directory-get-started-premium) is included with Enterprise Mobility + Security and other licensing plans.
-- **What versions of Windows clients will users enroll?** Devices running Windows 11 or Windows 10 can automatically enroll by adding a work or school account. Devices running earlier versions must enroll using the Company Portal app.  
+## Prerequisites
 
-| | **Azure AD Premium** | **Other AD** |
-|----------|---------------|---------------|  
-| **Windows 10/11** | [Automatic enrollment](#enable-windows-automatic-enrollment) | User enrollment |
-| **Earlier Windows versions** | User enrollment | User enrollment |
+- Requires [Azure AD Premium](/azure/active-directory/active-directory-get-started-premium) or [Premium trial subscription](https://go.microsoft.com/fwlink/?LinkID=816845) for automatic MDM enrollment and custom company branding    
+- Microsoft Intune subscription  
+- Global Administrator permissions  
 
-Organizations that can use automatic enrollment can also configure [bulk enroll devices](windows-bulk-enroll.md) by using the Windows Configuration Designer app.
+[!INCLUDE [AAD-enrollment](../includes/win10-automatic-enrollment-aad.md)]  
 
-## Device enrollment prerequisites
+## Support for device users  
 
-Before an administrator can enroll devices to Intune for management, licenses should have already been assigned to the administrator's account. [Read about assigning licenses for device enrollment](../fundamentals/licenses-assign.md).
+The Microsoft Intune user-help docs provide conceptual information, tutorials, and how-to guides for employees and students setting up their devices for work. You can point people directly to the Intune docs, or use these articles as guidance when developing and updating your own device management docs.  
 
-You can also let unlicensed admins sign in to MEM. For more information, see [Unlicensed admins](../fundamentals/unlicensed-admins.md).
+Users on personal devices running Windows 11 or Windows 10 can automatically enroll by adding their work or school account on their device, or by using the Intune Company Portal app. Devices running earlier versions of Windows must enroll using the Intune Company Portal app.  For more information, see [Enroll Windows 10/11 devices](../user-help/enroll-windows-10-device.md).  
 
-## Multi-user support
+You can also let unlicensed admins sign in to the Intune admin center to help with troubleshooting and support. For more information, see [Unlicensed admins](../fundamentals/unlicensed-admins.md).  
+  
 
-Intune supports multiple users on devices that both:
+### Best practices and troubleshooting   
 
-- Run Windows 11 or the Windows 10 Creator's update  
-- Are Azure Active Directory domain-joined  
+* Device users must access the Company Portal website through Microsoft Edge to view Windows apps that you've assigned for specific versions of Windows. Other browsers, including Google Chrome, Mozilla Firefox, and Internet Explorer do not support this type of filtering.
 
-When standard users sign in with their Azure AD credentials, they receive apps and policies assigned to their user name. Only the device's [Primary user](../remote-actions/find-primary-user.md) can use the Company Portal for self-service scenarios like installing apps and device actions (like Remove or Reset). For shared Windows 10/11 devices that don't have a primary user assigned, the Company Portal can still be used to install Available apps.  
+* If you do not have Auto-MDM enrollment enabled, but you have Windows 10/11 devices that have been joined to Azure AD, two records will be visible in the Microsoft Intune admin center after enrollment. You can stop this by making sure that users with Azure AD joined devices go to **Accounts** > **Access work or school** and **Connect** using the same account.  
 
-[!INCLUDE [AAD-enrollment](../includes/win10-automatic-enrollment-aad.md)]
+## Next steps  
 
-## Simplify Windows enrollment without Azure AD Premium
+For information about how to integrate and use automatic enrollment when provisioning devices, see:  
 
-To simplify enrollment, create a domain name server (DNS) alias (CNAME record type) that redirects enrollment requests to Intune servers. Otherwise, users trying to connect to Intune must enter the Intune server name during enrollment.
+* [Tutorial: Use Windows Autopilot to enroll devices in Intune](../enrollment/tutorial-use-autopilot-enroll-devices.md)
+* [Enroll a Windows client device automatically using Group Policy](/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)
+* [Enable co-management in Configuration Manager](../../configmgr/comanage/how-to-enable.md)  
 
-### Step 1: Create CNAME (optional)
-
-Create CNAME DNS resource records for your company's domain. For example, if your company's website is contoso.com, you would create a CNAME in DNS that redirects EnterpriseEnrollment.contoso.com to enterpriseenrollment-s.manage.microsoft.com.
-
-Although creating CNAME DNS entries is optional, CNAME records make enrollment easier for users. If no enrollment CNAME record is found, users are prompted to manually enter the MDM server name, enrollment.manage.microsoft.com.
-
-| Type | Host name | Points to | TTL |
-|----------|---------------|---------------|---|
-| CNAME | EnterpriseEnrollment.company_domain.com | EnterpriseEnrollment-s.manage.microsoft.com | 1 hour |
-| CNAME | EnterpriseRegistration.company_domain.com | EnterpriseRegistration.windows.net | 1 hour |
-
-If the company uses more than one UPN suffix, you need to create one CNAME for each domain name and point each one to EnterpriseEnrollment-s.manage.microsoft.com. For example, users at Contoso use the following formats as their email/UPN:
-
-- name@contoso.com
-- name@us.contoso.com
-- name@eu.contoso.com
-
-The Contoso DNS admin should create the following CNAMEs:
-
-| Type | Host name | Points to | TTL |  
-|----------|---------------|---------------|---|
-| CNAME | EnterpriseEnrollment.contoso.com | EnterpriseEnrollment-s.manage.microsoft.com | 1 hour |
-| CNAME | EnterpriseEnrollment.us.contoso.com | EnterpriseEnrollment-s.manage.microsoft.com | 1 hour |
-| CNAME | EnterpriseEnrollment.eu.contoso.com | EnterpriseEnrollment-s.manage.microsoft.com | 1 hour |
-
-`EnterpriseEnrollment-s.manage.microsoft.com` – Supports a redirect to the Intune service with domain recognition from the email's domain name
-
-Changes to DNS records might take up to 72 hours to propagate. You can't verify the DNS change in Intune until the DNS record propagates.
-
-### Step 2: Verify CNAME (optional)
-
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices** > **Windows** > **Windows enrollment**.  
-2. Select **CNAME Validation**.  
-2. For **Domain**, enter the company website, and then choose **Test**.
-
-### Additional endpoints that aren't supported
-
-EnterpriseEnrollment-s.manage.microsoft.com is the preferred FQDN for enrollment. There are two other endpoints that have been used previously and still work. However, they're no longer supported. EnterpriseEnrollment.manage.microsoft.com (without the -s) and manage.microsoft.com both work as the target for the auto-discovery server, but the user will have to touch OK on a confirmation message. If you point to EnterpriseEnrollment-s.manage.microsoft.com, the user won't have to do another confirmation step, so this is the recommended configuration
-
-### Alternate methods of redirection aren't supported
-
-Using a method other than the CNAME configuration isn't supported. For example, using a proxy server to redirect enterpriseenrollment.contoso.com/EnrollmentServer/Discovery.svc to either enterpriseenrollment-s.manage.microsoft.com/EnrollmentServer/Discovery.svc or manage.microsoft.com/EnrollmentServer/Discovery.svc isn't supported.
-
-## Tell users how to enroll Windows devices
-
-The Microsoft Intune user-help docs provide conceptual information, tutorials, and how-to guides for employees and students setting up their devices. You can point people directly to them or use these articles as guidance when developing and updating your org's own device management docs.  
-
-These articles describe how to enroll devices running Windows:
-
-- [Enroll Windows 10/11 device](../user-help/enroll-windows-10-device.md)
-- [Enroll Windows 8.1 or Windows RT 8.1 device](../user-help/enroll-your-w81-or-rt81-windows.md)
-
-For information about how enrollment affects the device and the information on it, see [What information can my organization see when I enroll my device?](../user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)  
-
-> [!NOTE]
-> End users must access the Company Portal website through Microsoft Edge to view Windows apps that you've assigned for specific versions of Windows. Other browsers, including Google Chrome, Mozilla Firefox, and Internet Explorer do not support this type of filtering.
-
->[!IMPORTANT]
-> If you do not have Auto-MDM enrollment enabled, but you have Windows 10/11 devices that have been joined to Azure AD, two records will be visible in the Microsoft Endpoint Manager admin center after enrollment. You can stop this by making sure that users with Azure AD joined devices go to **Accounts** > **Access work or school** and **Connect** using the same account.
-
-## Registration and Enrollment CNAMEs
-
-Azure Active Directory has a different CNAME that it uses for device registration for iOS/iPadOS, Android, and Windows devices. Intune conditional access requires devices to be registered, also called "workplace joined". If you plan to use conditional access, you should also configure the EnterpriseRegistration CNAME for each company name you have.
-
-| Type | Host name | Points to | TTL |
-| --- | --- | --- | --- |
-| CNAME | EnterpriseRegistration.company_domain.com | EnterpriseRegistration.windows.net | 1 hour |
-
-For more information about device registration, see
-[Manage device identities using the Azure portal](/azure/active-directory/devices/device-management-azure-portal)
-
-## Windows auto enrollment and device registration  
-
-This section applies to US government cloud customers on devices running Windows 10 or Windows 11.  
-
-Although creating CNAME DNS entries is optional, CNAME records make enrollment easier for users. If no enrollment CNAME record is found, users are prompted to manually enter the MDM server name, enrollment.manage.microsoft.us.
-
-| Type | Host name | Points to | TTL |
-| --- | --- | --- | --- |
-|CNAME | EnterpriseEnrollment.company_domain.com | EnterpriseEnrollment-s.manage.microsoft.us | 1 hour |
-|CNAME | EnterpriseRegistration.company_domain.com | EnterpriseRegistration.windows.net | 1 hour |
-
-## Next steps
-
-- [Considerations when managing Windows devices using Intune on Azure](../fundamentals/intune-legacy-pc-client.md).
+If you're not using automatic enrollment as part of your enrollment or provisioning solution, we recommend creating a domain name server (DNS) alias (known as a *CNAME* record type) that redirects enrollment requests to Intune servers. For more information, see [Enable auto-discovery of Intune enrollment server](../enrollment/windows-enrollment-create-cname.md).

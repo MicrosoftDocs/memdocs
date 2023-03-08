@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/16/2021
+ms.date: 02/24/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -27,6 +27,7 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection:
+- tier1
 - M365-identity-device-management
 - iOS/iPadOS
 ---
@@ -42,11 +43,11 @@ Use the information in this article to help you add an iOS/iPadOS line-of-busine
 >
 > Bundle identifiers (for example, *com.contoso.app*) are meant to be unique identifiers of an app. For example, to install a beta version of an LOB app next to the production version for testing purposes, the beta version must have a different unique identifier (for example, *com.contoso.app-beta*). Otherwise, the beta version will overlap with the production and be treated as an upgrade. Renaming the .ipa file has no effect on this behavior.
 
-You can deploy LOB apps to Shared iPad devices. For Shared iPad devices, line-of-business apps must be assigned as **required** to a device group containing Shared iPad devices from the Microsoft Endpoint Manager admin center.
+You can deploy LOB apps to Shared iPad devices. For Shared iPad devices, line-of-business apps must be assigned as **required** to a device group containing Shared iPad devices from the Microsoft Intune admin center.
 
 ## Select the app type
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All apps** > **Add**.
 3. In the **Select app type** pane, under the **Other** app types, select **Line-of-business app**.
 4. Click **Select**. The **Add app** steps are displayed.
@@ -109,6 +110,13 @@ The update to the line-of-business app will be installed automatically.
 
 > [!NOTE]
 > For the Intune service to successfully deploy a new IPA file to the device, you must update the CFBundleVersion string in the Info.plist file in your IPA package. You are allowed to upgrade an app by increasing the value, or downgrade an app by decreasing the value, however you cannot upload a new version of CFBundleVersion if the new app is identical to the existing one.
+
+For an iOS LOB app targeted with available intent, auto-update of the application will happen as long as the following conditions are met:
+
+- The end user must request the specific Intune app from the Company Portal and the app must be successfully installed, or the app is already installed on the device.
+- The targeting for the user has not changed (app assignment with available intent is not removed and user is not removed from the group membership in the life cycle of the app assignment).
+- If the previous version of the app is installed through required intent, then the available app update will not happen. The app will be updated automatically as long as the user/device is part of required intent group.
+- If the app has both available and required deployments targeted, the resolved intent becomes 'RequiredAndAvailable'. **Note:** You cannot create **Available** and **Required** deployments to the same AAD Group, but you can use different AAD group with same members in it. If the app was installed automatically on devices after the **Required** deployment is created (not manually installed from Company Portal) and the required deployment is later removed, the **Available** app update won't happen automatically on those devices and the users have to request the app from Company Portal.
 
 ## Next steps
 

@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/16/2021
+ms.date: 03/06/2023
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,9 +18,9 @@ ms.reviewer: jamiesil
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.collection: 
-- M365-identity-device-management
+ms.collection:
 - tier3
+- M365-identity-device-management
 ---
 
 # Microsoft Intune App SDK overview

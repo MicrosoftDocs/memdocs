@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/18/2022
+ms.date: 03/07/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -27,6 +27,7 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection:
+- tier1
 - M365-identity-device-management
 - macOS
 - highpri
@@ -36,11 +37,11 @@ ms.collection:
 
 ## Why is the agent required?
 
-The Microsoft Intune management agent is necessary to be installed on managed macOS devices in order to enable advanced device management capabilities that are not supported by the native macOS operating system.
+The Microsoft Intune management agent is necessary to be installed on managed macOS devices in order to enable advanced device management capabilities that aren't supported by the native macOS operating system.
 
 ## How is the agent installed?
 
- The agent is automatically and silently installed on Intune-managed macOS devices that you assign at least one shell script to in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). The agent is installed at `/Library/Intune/Microsoft Intune Agent.app` when applicable and doesn't appear in **Finder** > **Applications** on macOS devices. The agent appears as `IntuneMdmAgent` in **Activity Monitor** when running on macOS devices.
+ The agent is automatically and silently installed on Intune-managed macOS devices that you assign at least one shell script to in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). The agent is installed at `/Library/Intune/Microsoft Intune Agent.app` when applicable and doesn't appear in **Finder** > **Applications** on macOS devices. The agent appears as `IntuneMdmAgent` in **Activity Monitor** when running on macOS devices.
 
 ## What does the agent do?
 
@@ -50,12 +51,12 @@ The Microsoft Intune management agent is necessary to be installed on managed ma
 
 ## How can I manually initiate an agent check-in from a Mac?
 
-On a managed Mac that has the agent installed, open **Company Portal**, select the local device, click on **Check settings**. This initiates an MDM check-in as well as an agent check-in.
+On a managed Mac that has the agent installed, open **Company Portal**, select the local device, select **Check settings**. This initiates an MDM check-in as well as an agent check-in.
 
-Alternatively, open **Terminal**, run the `sudo killall IntuneMdmAgent` command to terminate the `IntuneMdmAgent` process. The `IntuneMdmAgent` process will restart immediately, which will initiate a check-in with Intune.
+Alternatively, open **Terminal**, run the `sudo killall IntuneMdmAgent` command to terminate the `IntuneMdmAgent` process. The `IntuneMdmAgent` process restarts immediately, which will initiate a check-in with Intune.
 
 > [!NOTE]
-> The **Sync** action for devices in Microsoft Endpoint Manager admin center initiates an MDM check-in and does not force an agent check-in.
+> The **Sync** action for devices in Microsoft Intune admin center initiates an MDM check-in and does not force an agent check-in.
 
 ## When is the agent removed?
 
@@ -67,7 +68,7 @@ Alternatively, open **Terminal**, run the `sudo killall IntuneMdmAgent` command 
 
 ## Why are scripts running even though the Mac is no longer managed?
 
- When a Mac with assigned scripts is no longer managed, the agent is not removed immediately. The agent detects that the Mac is not managed at the next agent check-in (usually every 8 hours) and cancels scheduled script-runs. So, any locally stored scripts scheduled to run more frequently than the next scheduled agent check-in will run. When the agent is unable to check-in, it retries checking in for up to 24 hours (device-awake time) and then removes itself from the Mac.
+ When a Mac with assigned scripts is no longer managed, the agent isn't removed immediately. The agent detects that the Mac isn't managed at the next agent check-in (usually every 8 hours) and cancels scheduled script-runs. So, any locally stored scripts scheduled to run more frequently than the next scheduled agent check-in will run. When the agent is unable to check in, it retries checking in for up to 24 hours (device-awake time) and then removes itself from the Mac.
 
 ## How to turn off usage data sent to Microsoft for shell scripts?
 
@@ -75,6 +76,6 @@ Alternatively, open **Terminal**, run the `sudo killall IntuneMdmAgent` command 
 
 ## Next steps
 
-- The app you have created is displayed in the apps list. You can now assign it to the groups you choose. For help, see [How to assign apps to groups](apps-deploy.md).
+- The app you've created is displayed in the apps list. You can now assign it to the groups you choose. For help, see [How to assign apps to groups](apps-deploy.md).
 - Learn more about the ways in which you can monitor the properties and assignment of your app. For more information, see [How to monitor app information and assignments](apps-monitor.md).
 - Learn more about the context of your app in Intune. For more information, see [Overview of device and app lifecycles](../fundamentals/device-lifecycle.md)

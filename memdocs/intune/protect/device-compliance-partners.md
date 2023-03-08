@@ -24,7 +24,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Support third-party device compliance partners in Intune
@@ -67,7 +69,7 @@ The following compliance partners are supported as generally available:
 
 ## Prerequisites
 
-- A subscription to Microsoft Intune, and access to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+- A subscription to Microsoft Intune, and access to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 - Device users must be assigned a license for Intune.
 
@@ -81,7 +83,7 @@ Enable support for a device compliance partner to use compliance state data from
 
 ### Add a compliance partner to Intune
 
-1. Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Go to **Tenant Administration** > **Connectors and Tokens** > **Partner Compliance management** > **Add Compliance Partner**.
 
@@ -104,7 +106,7 @@ Your configuration now appears on the Partner compliance management page.
 
 ### Modify the configuration for a compliance partner
 
-1. Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Go to **Tenant Administration** > **Connectors and Tokens** > **Partner Compliance management**, and then select the partner configuration you want to modify. Configurations are ordered by platform type.
 
@@ -116,7 +118,7 @@ Your configuration now appears on the Partner compliance management page.
 
 6. *This step only applies when you use VMware Workspace ONE*:
 
-   From within the Workspace ONE UEM console, you must manually synchronize the changes you saved in the Microsoft Endpoint Manager admin center. Until you manually sync changes, Workspace ONE UEM isn’t aware of configuration changes, and users in new groups you’ve assigned won’t successfully report compliance.
+   From within the Workspace ONE UEM console, you must manually synchronize the changes you saved in the Microsoft Intune admin center. Until you manually sync changes, Workspace ONE UEM isn’t aware of configuration changes, and users in new groups you’ve assigned won’t successfully report compliance.
 
    To manually sync from Azure Services:
    1. Sign in to your VMware Workspace ONE UEM console.
