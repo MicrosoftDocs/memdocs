@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/15/2022
+ms.date: 03/07/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -135,6 +135,7 @@ When you unenroll or wipe the device, the certificates are removed. The certific
 
 The following third-party certification authorities support Intune:
 
+- [Cogito Group](https://cogitogroup.net/scep)
 - [DigiCert](https://knowledge.digicert.com/tutorials/microsoft-intune.html)
 - [EJBCA](https://doc.primekey.com/ejbca/ejbca-integration/integrating-with-third-party-applications/microsoft-intune-device-certificate-enrollment)
 - [Entrust](https://go.entrustdatacard.com/pki/intune/)
