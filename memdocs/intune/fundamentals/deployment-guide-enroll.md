@@ -32,7 +32,11 @@ ms.collection:
 
 # Step 5 – Enroll devices in Microsoft Intune
 
-In the final phase of deployment, devices are registered or joined in Azure Active Directory (Azure AD), enrolled in Microsoft Intune, and checked for compliance. During enrollment, Microsoft Intune installs a mobile device management (MDM) certificate on the device, which enables Intune to enforce enrollment profiles, enrollment restrictions, and the policies and profiles you created earlier in this guide.  
+In the final phase of deployment, devices are registered or joined in Azure Active Directory (Azure AD), enrolled in Microsoft Intune, and checked for compliance.
+
+:::image type="content" source="./media/deployment-guide-enroll/deployment-plan-enroll.png" alt-text="Diagram that shows getting started with Microsoft Intune with step 5, which is enrolling devices to be managed by Intune.":::
+
+During enrollment, Microsoft Intune installs a mobile device management (MDM) certificate on the device, which enables Intune to enforce enrollment profiles, enrollment restrictions, and the policies and profiles you created earlier in this guide.  
 
 This article describes:
 
@@ -104,7 +108,7 @@ If you're looking for more control, including where the terms appear, consider c
 For more information, see [Terms and conditions for user access](../enrollment/terms-and-conditions-create.md).  
 
 ### Require multifactor authentication  
-Require users to authenticate via multi-fator authentication (MFA) during enrollment. If you require MFA, people wanting to enroll devices must authenticate with a second device and two forms of credentials before they can enroll their device. This is a one-time conditional step, and ensures that the person on the device is who they say they are.  You can enable this behavior for all platforms except Linux by using a conditional access policy with a MFA policy. Azure AD Premium is required.  
+Require users to authenticate via multi-factor authentication (MFA) during enrollment. If you require MFA, people wanting to enroll devices must authenticate with a second device and two forms of credentials before they can enroll their device. This is a one-time conditional step, and ensures that the person on the device is who they say they are.  You can enable this behavior for all platforms except Linux by using a conditional access policy with an MFA policy. Azure AD Premium is required.  
 
 For more information, see [Require multifactor authentication for Intune device enrollments](../enrollment/multi-factor-authentication.md).   
 
@@ -126,7 +130,7 @@ You can enroll personal or corporate-owned Android devices in Intune. We recomme
 * Android Enterprise dedicated  
 
 ### Android enrollment methods  
-The following table describes the Intune-supported Android and AOSP enrollment options. 
+The following tabs describe the Intune-supported Android and AOSP enrollment options. 
 
 # [Corporate owned](#tab/work-profile)  
 * [Corporate-owned devices with a work profile](../enrollment/android-corporate-owned-work-profile-enroll.md): Enroll corporate-owned devices that are also approved for personal use. This method creates a separate work profile on the device so that the user can switch between their personal apps and work apps easily and securely. The device user enrolls the device through the Microsoft Intune app. As an admin, you can manage the apps and data in the work profile.  This method aligns with the *Android Enterprise corporate-owned work profile* management solution.  

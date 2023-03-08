@@ -34,6 +34,8 @@ So far, you've set up your Intune subscription, created app protection policies,
 
 In this step, you're ready to configure a minimum or baseline set of security and device features that all devices must have.
 
+:::image type="content" source="./media/deployment-plan-configuration-profile/deployment-plan-config-devices.png" alt-text="Diagram that shows getting started with Microsoft Intune with step 4, which is configuring devices features and security settings.":::
+
 This article applies to:
 
 - Android
@@ -229,7 +231,7 @@ This section focuses on accessing resources in your organization. These resource
 - VPN connection for remote connectivity
 - Wi-Fi connection for on-premises connectivity
 
-:::image type="content" source="./media/deployment-plan-configuration-profile/deploy-email-vpn-wifi.png" alt-text="Image that shows an email, VPN and Wi-Fi profiles deployed from Microsoft Intune to end user devices.":::
+:::image type="content" source="./media/deployment-plan-configuration-profile/deploy-email-vpn-wifi.png" alt-text="Diagram that shows an email, VPN and Wi-Fi profiles deployed from Microsoft Intune to end user devices.":::
 
 ### Email
 
@@ -406,23 +408,37 @@ Microsoft recommends the following level 2 security policies:
 
   You can use Intune to [create a device restrictions policy](../configuration/device-restrictions-configure.md) or a [settings catalog](../configuration/settings-catalog.md) policy that configures these settings. For more information on the password settings you can configure, go to the following articles:
 
-  - **Android**: 
-    - [Organization owned devices - Device password settings](../configuration/device-restrictions-android-for-work.md#device-password)
-    - [Organization owned devices - Work profile password settings](../configuration/device-restrictions-android-for-work.md#work-profile-password)
-    - [Personally owned devices - Work profile password settings](../configuration/device-restrictions-android-enterprise-personal.md#work-profile-password)
-    - [Personally owned devices - Device password settings](../configuration/device-restrictions-android-enterprise-personal.md#password)
+  # [Android](#tab/android-password)
 
-  - **iOS/iPadOS**: 
-    - [Device restrictions policy > Password settings](../configuration/device-restrictions-ios.md#password)
-    - [Settings catalog](../configuration/settings-catalog.md) > Search for `Passcode`
+  On Android devices, you can use device restrictions policies to set password rules:
 
-  - **macOS**: 
-    - [Device restrictions policy > Password settings](../configuration/device-restrictions-macos.md#password)
-    - [Settings catalog](../configuration/settings-catalog.md) > Search for `Passcode`
+  - [Organization owned devices - Device password settings](../configuration/device-restrictions-android-for-work.md#device-password)
+  - [Organization owned devices - Work profile password settings](../configuration/device-restrictions-android-for-work.md#work-profile-password)
+  - [Personally owned devices - Work profile password settings](../configuration/device-restrictions-android-enterprise-personal.md#work-profile-password)
+  - [Personally owned devices - Device password settings](../configuration/device-restrictions-android-enterprise-personal.md#password)
 
-  - **Windows**: 
-    - [Device restrictions policy > Password settings](../configuration/device-restrictions-windows-10.md#password)
-    - [Settings catalog](../configuration/settings-catalog.md) > Search for `Device lock`
+  # [iOS/iPadOS](#tab/ios-password)
+
+  On iOS/iPadOS devices, you can use device restrictions policies and/or the settings catalog to set password rules:
+
+  - [Device restrictions policy > Password settings](../configuration/device-restrictions-ios.md#password)
+  - [Settings catalog](../configuration/settings-catalog.md) > Search for `Passcode`
+
+  # [macOS](#tab/macos-password)
+
+  On macOS devices, you can use device restrictions policies and/or the settings catalog to set password rules:
+
+  - [Device restrictions policy > Password settings](../configuration/device-restrictions-macos.md#password)
+  - [Settings catalog](../configuration/settings-catalog.md) > Search for `Passcode`
+
+  # [Windows](#tab/windows-password)
+
+  On Windows devices, you can use device restrictions policies and/or the settings catalog to set password rules:
+
+  - [Device restrictions policy > Password settings](../configuration/device-restrictions-windows-10.md#password)
+  - [Settings catalog](../configuration/settings-catalog.md) > Search for `Device lock`
+
+---
 
 - Intune includes **hundreds of settings that can manage devices features** and settings, like disabling the built-in camera, controlling notifications, allowing bluetooth, blocking games, and more.
 
@@ -494,6 +510,8 @@ This level expands on what you've configured in levels 1 and 2. It adds extra se
 
 - **Configure kiosks, shared devices, and other specialized devices**:
 
+  # [Android](#tab/android-kiosk)
+
   - **Android device administrator**
     - [Use and manage Zebra devices with Zebra Mobility Extensions](../configuration/android-zebra-mx-overview.md)
     - [Device settings to run as a kiosk](../configuration/device-restrictions-android.md#kiosk)
@@ -502,17 +520,24 @@ This level expands on what you've configured in levels 1 and 2. It adds extra se
     - [Use and manage Android Enterprise devices with OEMConfig](../configuration/android-oem-configuration-overview.md)
     - [Dedicated devices that run as a kiosk device settings](../configuration/device-restrictions-android-for-work.md#dedicated-devices)
 
+  # [iOS/iPadOS](#tab/ios-kiosk)
+
   - **iOS/iPadOS**
     - [Device settings to run in autonomous single app mode (ASAM)](../configuration/device-restrictions-ios.md#autonomous-single-app-mode-asam)
     - [Device settings to run as a kiosk](../configuration/device-restrictions-ios.md#kiosk)
+
+  # [Windows](#tab/windows-kiosk)
 
   - **Windows**
     - [Device settings to run as a dedicated kiosk](../configuration/kiosk-settings.md)
     - [Device settings to run as a kiosk](../configuration/kiosk-settings-windows.md)
     - [Shared PC or multi-user devices](../configuration/shared-user-device-settings.md)
+
   - **Windows Holographic for Business**
     - [Device settings to run as a kiosk](../configuration/kiosk-settings-holographic.md)
     - [Device settings to run as a dedicated kiosk](../configuration/kiosk-settings.md)
+
+---
 
 - **Deploy shell scripts**:
 
@@ -525,4 +550,4 @@ This level expands on what you've configured in levels 1 and 2. It adds extra se
 2. [Add, configure, and protect apps](deployment-plan-protect-apps.md)
 3. [Plan for compliance policies](deployment-plan-compliance-policies.md)
 4. 🡺 **Configure device features** (*You are here*)
-5. [Enroll devices](deployment-guide-enrollment.md)
+5. [Enroll devices](deployment-guide-enroll.md)
