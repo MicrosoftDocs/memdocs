@@ -115,8 +115,8 @@ To authenticate a device with VPN, WiFi, or other resources, a device needs a ro
     > For iOS/iPadOS certificate templates, go to the **Extensions** tab, update **Key Usage**, and confirm that **Signature is proof of origin** isn't selected.
 
 10. In **Security**:
-    1. Add the Computer Account for the server where you install the Certificate Connector for Microsoft Intune. Allow this account **Read** and **Enroll** permissions.
-    1. Remove the Domain Users group from the list of groups or user names allowed permissions on this template by selecting the Domain Users group and selecting *Remove*.
+    1. (Required): Add the Computer Account for the server where you install the Certificate Connector for Microsoft Intune. Allow this account **Read** and **Enroll** permissions.
+    1. (Optional but recommended): Remove the Domain Users group from the list of groups or user names allowed permissions on this template by selecting the **Domain Users** group and select *Remove*. Review the other entries in *Groups or user names* for permissions and applicability to your environment.
 
 12. Select **Apply** > **OK** to save the certificate template. Close the **Certificate Templates Console**.
 13. In the **Certification Authority** console, right-click **Certificate Templates** > **New** > **Certificate Template to Issue**. Choose the template that you created in the previous steps. Select **OK**.
