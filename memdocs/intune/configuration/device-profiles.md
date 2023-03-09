@@ -8,7 +8,7 @@ author: MandiOhlinger
 
 ms.author: mandia
 manager: dougeby
-ms.date: 09/20/2022
+ms.date: 03/20/2023
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -261,12 +261,18 @@ This feature supports:
 
 - Android Enterprise (OEMConfig)
 
-## PowerShell scripts
+## Shell scripts
 
-[PowerShell scripts](../apps/intune-management-extension.md) use the Intune Management Extension to upload your PowerShell scripts in Intune, and then run these scripts on your devices. Also see what's required to use the extension, how to add them to Intune, and other important information.
+On Linux devices, you can [add existing Bash scripts](../configuration/device-profiles.md) to customize settings and features on these devices. This concept is similar to creating a device configuration profile, and deploying the policy to your devices. But with Linux, you're using existing Bash scripts to configure features and settings.
+
+On macOS devices, you can [add existing shell scripts](../apps/macos-shell-scripts.md) to configure features and settings that aren't available with Intune, or features that the OS doesn't support.
+
+On Windows devices, you can use the Intune Management Extension to upload your [PowerShell scripts](../apps/intune-management-extension.md) in Intune, and then run these scripts on your devices. Also see what's required to use the extension, how to add them to Intune, and other important information.
 
 This feature supports:
 
+- Linux
+- macOS
 - Windows 11
 - Windows 10
 
