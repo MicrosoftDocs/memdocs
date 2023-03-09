@@ -22,9 +22,10 @@ ms.technology: itpro-deploy
 1. Windows Autopilot user-driven mode
    1. [Azure AD join](user-driven/azure-ad-join-workflow.md)
    1. [Hybrid Azure AD join](user-driven/hybrid-azure-ad-join-workflow.md)
-1. Windows Autopilot self-deploying mode
+1. [Windows Autopilot self-deploying mode](self-deploying/self-deploying-workflow.md)
 1. Windows Autopilot Pre-provisioning
 1. Windows Autopilot for existing devices
 1. Windows Autopilot reset
+
 
 [Windows Autopilot scenarios and capabilities](/mem/autopilot/windows-autopilot-scenarios)
