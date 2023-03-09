@@ -67,7 +67,7 @@ To create a self-deploying mode Autopilot profile, follow the below steps:
 
       - **Hide change account options** defaults to **Hide**, is greyed out, and can't be changed.
 
-      - **User account type**  defaults to **Standard**, is greyed out, and can't be changed..
+      - **User account type**  defaults to **Standard**, is greyed out, and can't be changed.
 
       - For **Language (Region)**, select **Operating system default** to use the default language for the operating system being configured. If another language is desired, select the desired language from the drop-down list.
 
