@@ -88,7 +88,7 @@ The temporary passcode must be entered on the device. The temporary passcode for
 Instead of being reset, passcodes are removed from iOS/iPadOS devices. If there's a passcode compliance policy set, the device will prompt the user to set a new passcode in Settings.
 
 > [!IMPORTANT]
-> - If the remove passcode action failed, it's possible that the wrong unlock token is stored in Intune and the device will need to be wiped in order to regain access to it. 
+> If the Remove passcode action failed, it's possible that the wrong unlock token is stored in Intune and the device will need to be wiped in order to regain access to it. 
 
 ## Troubleshooting remote lock failures
 
