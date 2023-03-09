@@ -807,7 +807,7 @@ items:
           items:
           - name: Create custom profiles
             href: ./configuration/custom-settings-configure.md
-          - name: Linux
+          - name: Add custom Linux Bash scripts
             href: ./configuration/custom-settings-linux.md
           - name: HoloLens 2 example
             href: ./configuration/custom-profile-hololens.md
