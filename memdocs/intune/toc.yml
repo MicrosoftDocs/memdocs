@@ -803,10 +803,12 @@ items:
             displayName: printers
             href: ./configuration/settings-catalog-printer-provisioning.md
         - name: Custom settings
-          displayName: oma-uri, csp
+          displayName: oma-uri, csp, script
           items:
           - name: Create custom profiles
             href: ./configuration/custom-settings-configure.md
+          - name: Linux
+            href: ./configuration/custom-settings-linux.md
           - name: HoloLens 2 example
             href: ./configuration/custom-profile-hololens.md
         - name: Restrict device settings and features
