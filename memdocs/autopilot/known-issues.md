@@ -1,6 +1,6 @@
 ---
-title: Windows Autopilot known issues
-description: Inform yourself about known issues that may occur during Windows Autopilot deployment.
+title: Windows Autopilot known issues and behaviours
+description: Inform yourself about known issues and behaviours that may occur during Windows Autopilot deployment.
 ms.prod: windows-client
 ms.technology: itpro-deploy
 ms.localizationpriority: medium
@@ -22,9 +22,9 @@ ms.topic: troubleshooting
 - Windows 11
 - Windows 10
 
-This article describes known issues that can often be resolved by configuration changes, or might be resolved automatically in a future release. For information about issues that can be resolved by applying a cumulative update, see [Windows Autopilot - resolved issues](resolved-issues.md).
+This article describes known issues and behaviours that can often be resolved by configuration changes, might be expected, or might be resolved automatically in a future release. For information about issues that can be resolved by applying a cumulative update, see [Windows Autopilot - resolved issues](resolved-issues.md).
 
-## Known issues
+## Known issues and behaviours
 
 ### Kiosk device profile not auto logging in
 
