@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/06/2023
+ms.date: 03/09/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -83,6 +83,11 @@ The Microsoft Intune admin center has a new URL: [https://intune.microsoft.com](
 * Update your firewalls, as needed, to allow access to the new URL. 
 * Add the new URL to your favorites and bookmarks. 
 * Notify your helpdesk and update IT administrator documentation.  
+
+### Tenant administration
+
+#### Add CMPivot queries to Favorites folder<!-- 16702226 -->
+You can add your frequently used queries to a **Favorites** folder in CMPivot. CMPivot allows you to quickly assess the state of a device managed by Configuration Manager via Tenant Attach and take action. The functionality is similar to one already present in the Configuration Manager console. This addition will help you keep all your most used queries in one place. You can also add tags to your queries to help search and find queries. The queries saved in the Configuration Manager console will not automatically be added to your **Favorites** folder. You will need to create new queries and add them to this folder. For more information about CMPivot, see [Tenant attach: CMPivot usage overview](../../configmgr/tenant-attach/cmpivot-start.md).
 
 ## Week of February 27, 2023
 
