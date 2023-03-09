@@ -30,4 +30,4 @@ ms.collection:
 # Data collection and privacy for Endpoint Privilege Management 
 
 ## Next steps
-[Learn about Endpoint Privilege Management](../protect/data-overview.md)
+[Learn about Endpoint Privilege Management](../protect/epm-data-overview.md)

@@ -30,4 +30,4 @@ ms.collection:
 # Reports for Endpoint Privilege Management 
 
 ## Next steps
-[Data collection for Endpoint Privilege Management](../protect/data-collection.md)
+[Data collection for Endpoint Privilege Management](../protect/epm-data-collection.md)
