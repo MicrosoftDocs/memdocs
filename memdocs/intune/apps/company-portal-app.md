@@ -98,7 +98,7 @@ Enter your organization's support information, so employees can reach out with q
 
 ## Configuration
 
-You can configure the Company Portal experience specifically for enrollment, privacy, notifications, app sources, and self-service actions.
+You can configure the Company Portal experience specifically for enrollment, privacy, notifications, device categories, app sources, and self-service actions.
 
 ### Enrollment
 
@@ -141,11 +141,11 @@ For related information, see [Configure feedback settings for Company Portal and
 
 ### Device categories  
 
-You can allow or block device category selection in Intune Company Portal.  
+You can allow or block the device category prompt in Intune Company Portal.  
 
 | Field name | Maximum length | More information |
 |------------------------------------------------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Let users select device categories in the Company Portal| N/A | Control visibility of the device category selection prompt in Company Portal. Select **Block** to suppress the prompt in the Company Portal app across all platforms. Select **Allow** to let it appear and prompt the user to choose a category.  Category selection is only offered once to end users for each device. <br> <br> This setting is intended to be used with device categories. If there are no device categories in your tenant, the selection prompt won't appear. For more information about creating device categories, see [Categorize devices into groups](../enrollment/device-group-mapping.md).  
+| Let users select device categories in the Company Portal| N/A | If your tenant has device categories set up, users on targeted devices are prompted to choose a category when they sign in to Company Portal. Select **Block** to hide the prompt across all platforms. Select **Allow** to show the prompt.  Category selection is only offered once to end users for each device. <br> <br> This setting is intended to be used with device categories. If there are no device categories in your tenant, no selection prompt will appear. For more information about creating device categories, see [Categorize devices into groups](../enrollment/device-group-mapping.md).  
 
 ### App sources
 
