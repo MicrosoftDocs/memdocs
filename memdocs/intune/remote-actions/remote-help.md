@@ -182,12 +182,9 @@ To opt out of automatic updates, specify enableAutoUpdates=0 as part of the inst
    - For *Value*, specify the [version of Remote Help](#download-remote-help) you are deploying. For example, **10.0.22467.1000**
    - Leave *Associated with a 32-bit app on 64-bit clients* set to **No**
 
-5. Proceed to the Assignments page, and then select an applicable device group or groups that should install the Remote Help app.
+5. Proceed to the Assignments page, and then select an applicable device group or device groups that should install the Remote Help app. Remote Help works when targeting a group(s) of devices and is not applicable to User groups. 
 
 6. Complete creation of the Windows app to have Intune deploy and install Remote Help on applicable devices.
-
-> [!NOTE]
-> Remote Help only works when targeting a group of devices. Targeting a group of users will not be successful.
 
 ## Configure Remote Help for your tenant
 
