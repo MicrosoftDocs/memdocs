@@ -75,7 +75,7 @@ Each Cloud PC can have one manual restore point. If you create another manual re
 
 When a restore is started, the virtual infrastructure used for the Cloud PC remains the same. If the infrastructure is unavailable, but appropriate alternate infrastructure is available in the same Azure region, then the Cloud PC is automatically placed in the available infrastructure. This automation makes sure that, in the case of a disaster recovery scenario in an Azure zone, that the Cloud PC is resilient through recovery to a different Zone in the region. The recovery to an alternate infrastructure is automatic. There is nothing required of the administrator or user other than to start the restore.
 
-<!-- ########################## -->
+<!-- ########################## --> 
 ## Next steps
 
 - To get started with the short- and long-term restore points, you must first [configure point-in-time restore settings](restore-configure.md). After you’ve done that, admins can:

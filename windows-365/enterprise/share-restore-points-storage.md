@@ -70,7 +70,7 @@ A folder is created in the storage account. The folder name is identical to the 
 
 For each Cloud PC restore point shared, a folder is created in the storage account. The folder name is identical to the Cloud PC name. The folder contains a VHD copy of the Cloud PC device disk.
 
-<!-- ########################## -->
+<!-- ########################## --> 
 ## Next steps
 
 - [Restore a single Cloud PC](restore-single-cloud-pc.md)
