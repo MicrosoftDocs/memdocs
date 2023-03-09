@@ -1,13 +1,13 @@
 ---
 # required metadata
-title: Share Cloud PC restore points to stroage
+title: Share Cloud PC restore points to storage
 titleSuffix:
-description: Learn how share Windows 365 Cloud PC restore points to an Azure Storage Account.
+description: Learn how to share Windows 365 Cloud PC restore points to an Azure Storage Account.
 keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 03/06/2023
+ms.date: 03/09/2023
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice:
@@ -58,11 +58,11 @@ A folder is created in the storage account. The folder name is identical to the 
 2. On the **Basics** page, select the following options:
     1. **OS**: Windows
     2. **Device action**: Share Cloud PC restore point to storage (preview)
-    3. **Specify date and time**: Choose a date and time. This setting defines the Cloud PC restore point time that you’d like to share. The following options will help determine exactly which restore point that will be used for each of the Cloud PCs you select.
+    3. **Specify date and time**: Choose a date and time. This setting defines the Cloud PC restore point time that you’d like to share. The following options help determine exactly which restore point is used for each of the Cloud PCs you select.
     4. **Select restore point time range**: Choose one of the following options:
-        - **Before specified date and time**: The closest Cloud PC restore point before the date and time you specified will be shared.
-        - **After specified date and time**: The closest Cloud PC restore point after the date and time you specified will be shared.
-        - **Whichever is closest (before or after specified date and time)**: The Cloud PC restore point closest to the date and time you specified will be shared.
+        - **Before specified date and time**: Share the closest Cloud PC restore point before the date and time you specified.
+        - **After specified date and time**: Share the closest Cloud PC restore point after the date and time you specified.
+        - **Whichever is closest (before or after specified date and time)**: Share the Cloud PC restore point closest to the date and time you specified.
     5. Select a **Subscription** and **Storage account** > **Next**.
 3. On the **Devices** page, choose **Select devices to include**.
 4. In the **Select devices**, choose the Cloud PCs that you want to share restore points for > **Select** > **Next**.
