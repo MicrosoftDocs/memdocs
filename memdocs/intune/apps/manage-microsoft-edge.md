@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/04/2022
+ms.date: 03/07/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -98,7 +98,7 @@ SSO requires your device to be registered by either the Microsoft Authenticator 
 
 ## Use app configuration to manage the browsing experience
 
-Edge for iOS and Android supports app settings that allow unified endpoint management, like Microsoft Endpoint Manager, administrators to customize the behavior of the app.
+Edge for iOS and Android supports app settings that allow unified endpoint management, like Microsoft Intune, administrators to customize the behavior of the app.
 
 App configuration can be delivered either through the mobile device management (MDM) OS channel on enrolled devices ([Managed App Configuration](https://developer.apple.com/library/content/samplecode/sc2279/Introduction/Intro.html) channel for iOS or the [Android in the Enterprise](https://developer.android.com/work/managed-configurations) channel for Android) or through the Intune App Protection Policy (APP) channel. Edge for iOS and Android supports the following configuration scenarios:
 
@@ -115,7 +115,7 @@ Each configuration scenario highlights its specific requirements. For example, w
 > App configuration keys are case sensitive. Use the proper casing to ensure the configuration takes effect.
 
 > [!NOTE]
-> With Microsoft Endpoint Manager, app configuration delivered through the MDM OS channel is referred to as a **Managed Devices** App Configuration Policy (ACP); app configuration delivered through the App Protection Policy channel is referred to as a **Managed Apps** App Configuration Policy.
+> With Microsoft Intune, app configuration delivered through the MDM OS channel is referred to as a **Managed Devices** App Configuration Policy (ACP); app configuration delivered through the App Protection Policy channel is referred to as a **Managed Apps** App Configuration Policy.
 
 ## Only allow work or school accounts
 
@@ -126,7 +126,7 @@ You can learn more about configuring the org allowed accounts mode setting here:
 - [Android setting](app-configuration-policies-use-android.md#allow-only-configured-organization-accounts-in-apps)
 - [iOS setting](app-configuration-policies-use-ios.md#allow-only-configured-organization-accounts-in-apps)
 
-This configuration scenario only works with enrolled devices. However, any UEM provider is supported. If you are not using Microsoft Endpoint Manager, you need to consult with your UEM documentation on how to deploy these configuration keys.
+This configuration scenario only works with enrolled devices. However, any UEM provider is supported. If you are not using Microsoft Intune, you need to consult with your UEM documentation on how to deploy these configuration keys.
 
 ## General app configuration scenarios
 
@@ -320,7 +320,7 @@ Organizations can define which sites users can access within the work or school 
 Organizations also define what happens when a user attempts to navigate to a restricted web site. By default, transitions are allowed. If the organization allows it, restricted web sites can be opened in the personal account context, the Azure AD account’s InPrivate context, or whether the site is blocked entirely. For more information on the various scenarios that are supported, see [Restricted website transitions in Microsoft Edge mobile](https://techcommunity.microsoft.com/t5/intune-customer-success/restricted-website-transitions-in-microsoft-edge-mobile/ba-p/1381333). By allowing transitioning experiences, the organization's users stay protected, while keeping corporate resources safe.
 
 > [!NOTE]
-> Edge for iOS and Android can block access to sites only when they are accessed directly. It doesn't block access when users use intermediate services (such as a translation service) to access the site.
+> Edge for iOS and Android can block access to sites only when they are accessed directly. It doesn't block access when users use intermediate services (such as a translation service) to access the site. URL that launch Edge, such as `Edge://*`, `Edge://flags`, and `Edge://net-export`, are not supported in app configuration policy **AllowListURLs** or **BlockListURLs** for managed apps. Instead, you can use app configuration policy [URLAllowList](/deployedge/microsoft-edge-mobile-policies#urlallowlist) or [URLBlocklist](/deployedge/microsoft-edge-mobile-policies#urlblocklist) for managed devices. For related inforamtion, see [Microsoft Edge mobile policies](/deployedge/microsoft-edge-mobile-policies).
 
 Use the following key/value pairs to configure either an allowed or blocked site list for Edge for iOS and Android. 
 
@@ -417,9 +417,9 @@ Organizations can enable NTLM credential caching for particular web sites. For t
 |com.microsoft.intune.mam.managedbrowser.NTLMSSOURLs |The corresponding value for the key is a list of URLs. You enter all the URLs you want to allow as a single value, separated by a pipe `|` character. <br><br>**Examples:** <br>`URL1|URL2` <br>`http://app.contoso.com/|https://expenses.contoso.com` <br><br>For more information on the types of URL formats that are supported, see [URL formats for allowed and blocked site list](#url-formats-for-allowed-and-blocked-site-list). |
 |com.microsoft.intune.mam.managedbrowser.durationOfNTLMSSO |Number of hours to cache credentials, default is 720 hours |
 
-## Deploy app configuration scenarios with Microsoft Endpoint Manager
+## Deploy app configuration scenarios with Microsoft Intune
 
-If you are using Microsoft Endpoint Manager as your mobile app management provider, the following steps allow you to create a managed apps app configuration policy. After the configuration is created, you can assign its settings to groups of users.
+If you are using Microsoft Intune as your mobile app management provider, the following steps allow you to create a managed apps app configuration policy. After the configuration is created, you can assign its settings to groups of users.
 
 1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -492,6 +492,26 @@ Organizations can modify their network stack preference by configuring the follo
 
 > [!NOTE]
 > Using the Chromium network stack is recommended. If you experience sync issues with the Chromium network stack, for example with certain per-app VPN solutions, using the iOS network stack may improve syncing.
+
+## App configuration policies for Edge
+
+The following policies, originally configurable through managed apps app configuration policy, is now available through managed devices app configuration policy. When using policies for managed apps, users must sign into Microsoft Edge. When using policies for managed devices, users are not required to sign into Edge to apply the policies.
+
+|     MAM policy    |     MDM policy    |
+|---|---|
+|     com.microsoft.intune.mam.managedbrowser.NewTabPage.CustomURL    |     EdgeNewTabPageCustomURL    |
+|     com.microsoft.intune.mam.managedbrowser.MyApps    |     EdgeMyApps    |
+|     com.microsoft.intune.mam.managedbrowser.defaultHTTPS       |     EdgeDefaultHTTPS    |
+|     com.microsoft.intune.mam.managedbrowser.disableShareUsageData    |     EdgeDisableShareUsageData    |
+|     com.microsoft.intune.mam.managedbrowser.disableShareBrowsingHistory    |     EdgeDisableShareBrowsingHistory    |
+|     com.microsoft.intune.mam.managedbrowser.disabledFeatures    |     EdgeDisabledFeatures    |
+|     com.microsoft.intune.mam.managedbrowser.enableKioskMode    |     EdgeEnableKioskMode    |
+|     com.microsoft.intune.mam.managedbrowser.showAddressBarInKioskMode    |     EdgeShowAddressBarInKioskMode    |
+|     com.microsoft.intune.mam.managedbrowser.showBottomBarInKioskMode    |     EdgeShowBottomBarInKioskMode    |
+|     com.microsoft.intune.mam.managedbrowser.account.syncDisabled    |     EdgeSyncDisabled    |
+|     com.microsoft.intune.mam.managedbrowser.NetworkStackPref        |     EdgeNetworkStackPref    |
+
+As app configuration policies for managed devices needs device enrollment, any unified endpoint management (UEM) is supported. To find more policies under the MDM channel, see [Microsoft Edge Mobile Policies](/deployedge/microsoft-edge-mobile-policies).
 
 ## Next steps
 

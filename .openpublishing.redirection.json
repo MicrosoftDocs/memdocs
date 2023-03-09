@@ -1,6 +1,11 @@
 {
     "redirections": [
         {
+            "source_path": "memdocs/intune/fundamentals/migration-guide.md",
+            "redirect_url": "/mem/intune/fundamentals/get-started-with-intune",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "memdocs/intune/fundamentals/introduction-intune-government.md",
             "redirect_url": "/mem/intune/fundamentals/intune-govt-service-description",
             "redirect_document_id": false

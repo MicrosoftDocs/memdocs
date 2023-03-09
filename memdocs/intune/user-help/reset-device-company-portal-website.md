@@ -2,12 +2,12 @@
 # required metadata
 
 title: Reset a device from the Intune Company Portal website | Microsoft Docs
-description: Learn how to factory reset a device from the Intune Company Portal website.
+description: Learn how to factory reset a lost or stolen device from the Intune Company Portal website.  
 keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/05/2020
+ms.date: 03/03/2023
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -33,29 +33,29 @@ ms.collection:
 
 # Reset device from Company Portal website
 
-Use the Company Portal website to reset a used, lost, or stolen device back to factory settings. All apps, settings, and personal data on the device will be deleted and the device will no longer appear in Company Portal.  
+**Applies to**:     
+* iOS/iPadOS    
+* Windows 10
+* Windows 11
 
-Device reset isn't available for all iOS devices. Your organization can also choose to hide the option. If you're an IT support person and want to find out more about device reset and its limitations, see [Remove devices by using wipe, retire, or manually unenrolling the device](../remote-actions/devices-wipe.md).  
+Remotely reset a used, lost, or stolen device to factory default settings. A *reset* deletes all apps, settings, and personal data on the device, unenrolls the device, and removes it from the Company Portal apps and website.  
+
+## Supported devices  
+
+You can reset the following types of devices from the Company Portal website: 
+
+* iOS/iPadOS devices that aren't supervised   
+* Devices running Windows 10 or Windows 11  
+
+The action may not be available on devices that your organization owns and lends out for use. If you're an IT support person and want to find out more about device reset and its limitations, see [Remove devices by using wipe, retire, or manually unenrolling the device](../remote-actions/devices-wipe.md).  
 
 ## Reset device  
 To reset a device to its original, out-of-box settings: 
 
-1. Open the Company Portal website and select the __Menu__ button > __Devices__.  
+1. On any device, sign in to [the Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980) with your work or school account. 
+1. Select the menu > **Devices**.  
+1. Select the device you want to reset.  
+1. Select **Reset**. If the reset option isn't visible at the top of your page, select the **More (…)** menu to see all overflow actions. Then select **Reset**.  
+1. A message warns you that you're about to erase all content on your device. Tap **Reset** to confirm.    
 
-2. Select the device you want to reset.
-
-    ![A screenshot of the Devices page, with two tiles that show unidentified, generically named devices. A gray banner sits directly below the devices and prompts user to identify the device they're using or add a new one.](./media/rename-reset-device-step2-1808.png)  
-
-3. Select **Reset**. If the reset option isn't visible at the top of your page, select **More (…)** > **Reset**.  
-
-     ![Device details page for a selected device on the Company Portal website, with a list of links at the top showing Rename, Remove, Reset Device, Reset Passcode, and Remote Lock. ](./media/rename-reset-device-1808.png)  
-
-    ![Screenshot of the More icon, highlighted with a red arrow.](./media/rename-reset-device-step3-more-1808.png)  
-
-4. A message warns you that you're about to erase all content on your device. Tap **Reset** to confirm.  
-
-## Next steps  
-
-* You can also reset a device from the Company Portal app for [Android](reset-device-company-portal-android.md), [Windows](reset-device-company-portal-windows.md), and [iOS](effects-of-device-reset-company-portal-ios.md).  
-
-* Need help? Contact your IT support person. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).
+Need additional help? Contact your support person. For contact details, sign in to the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980) and go to **Helpdesk**.  
