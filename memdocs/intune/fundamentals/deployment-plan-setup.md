@@ -38,13 +38,6 @@ In this article, you'll step through the process of setting up Microsoft Intune.
 
 By the end of this article, you'll have a better understanding of Intune's supported configurations. You'll have signed up for the Microsoft Intune's free trial. You'll add end users, define user groups, assign licenses to users, and set up the other needed settings to begin using Microsoft Intune. All of these steps will prepare you to add and manage devices and apps using Intune.
 
-This article applies to:
-
-- Android
-- iOS/iPadOS
-- macOS
-- Windows
-
 ## Prerequisites
 
 Before you begin setting up Microsoft Intune, review the [Planning guide](intune-planning-guide.md). Use this guide to plan your move or migration to Intune.  
@@ -161,4 +154,4 @@ For guidance, go to [Configure the company portal](../apps/company-portal-app.md
 2. [Add, configure, and protect apps](deployment-plan-protect-apps.md)
 3. [Plan for compliance policies](deployment-plan-compliance-policies.md)
 4. [Configure device features](deployment-plan-configuration-profile.md)
-5. [Enroll devices](deployment-guide-enrollment.md)
+5. [Enroll devices](deployment-guide-enroll.md)
