@@ -137,7 +137,15 @@ The following table provides privacy-specific configuration details:
 | Privacy message about what support can't see or do (iOS/iPadOS) | 520 | Keep the default message or customize the message to list the items that your organization can't see on managed iOS/iPadOS devices. You can use markdown to add bullets, bolding, italics, and links.  |
 | Privacy message about what support can see or do (iOS/iPadOS) | 520 | Keep the default message or customize the message to list the items that your organization can see on managed iOS/iPadOS devices. You can use markdown to add bullets, bolding, italics, and links.  |
 
-For related information, see [Configure feedback settings for Company Portal and Microsoft Intune apps](../apps/company-portal-app.md#configure-feedback-settings-for-company-portal-and-microsoft-intune-apps).
+For related information, see [Configure feedback settings for Company Portal and Microsoft Intune apps](../apps/company-portal-app.md#configure-feedback-settings-for-company-portal-and-microsoft-intune-apps).  
+
+### Device categories  
+
+You can allow or block device category selection in Intune Company Portal.  
+
+| Field name | Maximum length | More information |
+|------------------------------------------------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Let users select device categories in the Company Portal| N/A | Control visibility of the device category selection prompt in Company Portal. Select **Block** to suppress the prompt in the Company Portal app across all platforms. Select **Allow** to let it appear and prompt the user to choose a category.  Category selection is only offered once to end users for each device. <br> <br> This setting is intended to be used with device categories. If there are no device categories in your tenant, the selection prompt won't appear. For more information about creating device categories, see [Categorize devices into groups](../enrollment/device-group-mapping.md).  
 
 ### App sources
 
