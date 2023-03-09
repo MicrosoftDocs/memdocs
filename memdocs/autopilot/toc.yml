@@ -124,6 +124,20 @@ items:
             href: tutorial/user-driven/hybrid-azure-ad-join-autopilot-profile.md
           - name: Step 8 - Configure and assign domain join profile
             href: tutorial/user-driven/hybrid-azure-ad-join-domain-join-profile.md
+    - name: Self-deploying mode
+      items:
+      - name: Self-deploying mode
+        href: tutorial/self-deploying/self-deploying-workflow.md
+      - name: Step 1 - Set up Windows automatic Intune enrollment
+        href: tutorial/self-deploying/self-deploying-automatic-enrollment.md
+      - name: Step 2 - Register devices as Autopilot devices
+        href: tutorial/self-deploying/self-deploying-register-device.md
+      - name: Step 3 - Create a device group
+        href: tutorial/self-deploying/self-deploying-device-group.md
+      - name: Step 4 - Configure and assign Autopilot Enrollment Status Page (ESP)
+        href: tutorial/self-deploying/self-deploying-esp.md
+      - name: Step 5 - Create and assign Autopilot profile
+        href: tutorial/self-deploying/self-deploying-autopilot-profile.md
 
 - name: Reference
   items:
