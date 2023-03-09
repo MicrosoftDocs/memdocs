@@ -98,7 +98,7 @@ The following table can help you understand which policies that can configure MD
 |                    | Firewall    | Firewall Rules              | ![Supported](../media/mde-security-integration/green-check.png) | ![Supported](../media/mde-security-integration/green-check.png)  |
 |                     | Endpoint detection and response | Endpoint detection and response | ![Supported](../media/mde-security-integration/green-check.png) | ![Supported](../media/mde-security-integration/green-check.png)  |
 |                     |Attack Surface Reduction | All            |  | ![Supported](../media/mde-security-integration/green-check.png)  |
-|                     |Attack Surface Reduction | Attack Surface Reduction Rules  | ![Supported](../media/mde-security-integration/green-check.png) | ![Supported](../media/mde-security-integration/green-check.png)  |
+|                     |Attack Surface Reduction | Attack Surface Reduction Rules *(In public preview)* | ![Supported](../media/mde-security-integration/green-check.png) | ![Supported](../media/mde-security-integration/green-check.png)  |
 |                     |Account Protection  | All                 |  | ![Supported](../media/mde-security-integration/green-check.png)  |
 |                     | Device Compliance  | All                 |  | ![Supported](../media/mde-security-integration/green-check.png)  |
 |                     | Conditional Access | All                 |  | ![Supported](../media/mde-security-integration/green-check.png)  |

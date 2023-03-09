@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 03/02/2023
+ms.date: 03/06/2023
 ms.topic: reference
 ms.service: windows-365
 ms.subservice:
@@ -51,6 +51,16 @@ Learn what new features are available in Windows 365 Enterprise.
 ### Windows 365 Government
 ### Windows 365 app
 -->
+
+<!-- ########################## -->
+## Week of March 6, 2023
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Role-based access control
+
+#### Permission changes for Azure network connection operations<!--43251193-->
+
+The permissions required for the editing, creating, and deleting Azure network connection (ANC) and health check retry operations have changed: You must now have [Intune Administrator](/azure/active-directory/roles/permissions-reference#intune-administrator), [Windows 365 Administrator](/azure/active-directory/roles/permissions-reference), or [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) permissions. For more informatiion, see [Azure network connections](azure-network-connections.md).
 
 <!-- ########################## -->
 ## Week of February 27, 2023

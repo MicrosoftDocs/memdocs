@@ -8668,7 +8668,7 @@ In **Device compliance** > **Policies** > select a policy > **Overview**, the fo
 - conflict
 - pending
 - not-applicable
-An image that shows the device count of a different platform is also shown. For example, if you're looking at an iOS profile, the new tile shows the count of non-iOS devices that are also assigned to this profile. See [Device compliance policies](../protect/compliance-policy-monitor.md#view-status-of-device-policies).
+A diagram that shows the device count of a different platform is also shown. For example, if you're looking at an iOS profile, the new tile shows the count of non-iOS devices that are also assigned to this profile. See [Device compliance policies](../protect/compliance-policy-monitor.md#view-status-of-device-policies).
 
 #### Device compliance supports 3rd party anti-virus solutions<!-- 2325484 -->
 When you create a device compliance policy (**Device compliance** > **Policies** > **Create policy** > **Platform: Windows 10 and later** > **Settings** > **System Security**), there are new **[Device Security](../protect/compliance-policy-create-windows.md)** options: 

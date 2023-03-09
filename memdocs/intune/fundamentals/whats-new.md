@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/17/2023
+ms.date: 03/09/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -66,6 +66,29 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Scripts
 ### Tenant administration
 -->
+
+## Week of March 6, 2023  
+
+### App management
+
+#### Deploy Win32 apps to device groups<!-- 7359954 -->
+You can now deploy Win32 apps with **Available** intent to device groups. For more information, see [Win32 app management in Microsoft Intune](../apps/apps-win32-app-management.md). 
+
+### Device management  
+
+#### New URL for Microsoft Intune admin center<!-- 17441426 -->  
+The Microsoft Intune admin center has a new URL: [https://intune.microsoft.com](https://intune.microsoft.com). The previously used URL, [https://endpoint.microsoft.com](https://endpoint.microsoft.com), will continue to work but will redirect to the new URL in late 2023. We recommend taking the following actions to avoid issues with Intune access and automated scripts: 
+
+* Update login or automation to point to `https://intune.microsoft.com`. 
+* Update your firewalls, as needed, to allow access to the new URL. 
+* Add the new URL to your favorites and bookmarks. 
+* Notify your helpdesk and update IT administrator documentation.  
+
+### Tenant administration
+
+#### Add CMPivot queries to Favorites folder<!-- 16702226 -->
+You can add your frequently used queries to a **Favorites** folder in CMPivot. CMPivot allows you to quickly assess the state of a device managed by Configuration Manager via Tenant Attach and take action. The functionality is similar to one already present in the Configuration Manager console. This addition will help you keep all your most used queries in one place. You can also add tags to your queries to help search and find queries. The queries saved in the Configuration Manager console will not automatically be added to your **Favorites** folder. You will need to create new queries and add them to this folder. For more information about CMPivot, see [Tenant attach: CMPivot usage overview](../../configmgr/tenant-attach/cmpivot-start.md).
+
 ## Week of February 27, 2023
 
 ### Device configuration
