@@ -7,7 +7,7 @@ keywords: SDK
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/24/2022
+ms.date: 03/09/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -661,6 +661,114 @@ MAMThemeManager.setAppTheme(R.style.AppTheme);
 
 In the above example, you need to replace `R.style.AppTheme` with the style theme that you want the SDK to apply.
 
+## Trusted Root Certificates Management
+
+If your application requires SSL/TLS certificates issued by an on-premise or private certificate authority to provide secure access to internal websites and applications, the Intune App SDK has added support for certificate trust management using the APIs `MAMTrustedRootCertsManager` and `MAMCertTrustWebViewClient`.
+
+> [!NOTE]
+> `MAMCertTrustWebViewClient` supports Android 10 or higher.
+
+Trusted Root Certificates Management provides support for:
+
+- SSLContext
+- SSLSocketFactory
+- TrustManager
+
+### Requirements
+
+- Trusted Root Certificates Management requires a Microsoft Tunnel for Mobile Application Management license. To learn more visit: [Microsoft Tunnel with Mobile Application Management].
+- Configure Intune App Configuration profiles to deliver trusted root certificates to line of business apps and Edge on Android. See: [Use Microsoft Tunnel VPN with Android devices that don't enroll with Microsoft Intune].
+
+> [!NOTE]
+> Trusted Root Certificates Management can be used independently of Microsoft Tunnel VPN Gateway, however you must license Microsoft MAM Tunnel for use.
+
+### Using Trusted Root Certificates from Intune to Establish Trust Anchors
+
+Trusted Root Certificates Management allows your app to use trusted root certificates from Intune in combination with certificates from the device.
+
+The `MAMTrustedRootCertsManager` and `MAMCertTrustWebViewClient` APIs use the Intune trusted root certificates delivered via Intune App configuration policy as a fallback option if the device’s trusted root certificate stores do not contain the required trusted root certificates to establish a secure connection to on-premise resources. This way, the app can use both device and Intune certificates to verify secure connections and communications with trusted sources.
+
+Refer to the code snippet examples below to learn how to use the APIs.
+
+### How Trusted Root Certificates Management Works
+
+- To enhance its network security settings, an app can use the Network Security Configuration XML file. Trusted Root Certificates Management respects this extra security by verifying if the app’s Network Security Configuration XML has any of these features:
+  - Custom trust anchors with additional CAs such as self-signed certificates.
+  - Domain-specific rules for limiting trusted CAs.
+  - Pin sets for certificates for specific domains.
+
+> [!NOTE]
+> For more information about Android Network security configuration, see [Network security configuration](https://developer.android.com/training/articles/security-config) in the Android developer documentation.
+
+If any of these applies to a domain that is being checked for trust, then Trusted Root Certificates Management will skip the trust checks for this domain and let only the platform’s default trust managers do the checks.
+
+- Trusted Root Certificates Management relies on both the platform’s default trust managers and custom trust managers that are loaded with trusted root certificates as configured in the MAM service. The default trust managers are always used first to check a server’s trust and only when this check fails then the custom trust managers are used. This behavior along with checking the Network Security Configuration in the app, the custom trust managers will be used only if it is determined that the domain being checked does not have a security setting that applies to it. This means that the Network Security Configuration always works as expected with the default trust managers and never overridden by the custom trust managers.
+
+### Example Using HttpsUrlConnection
+
+```java
+// Create an SSL socket factory using supplying the optional parameters identity and protocol
+SSLSocketFactory sslSocketFactory = MAMTrustedRootCertsManager.createSSLSocketFactory(identity, "TLSv1.3");
+
+// Create a URL object for the desired endpoint
+URL url = new URL("https://example.com");
+
+// Open a connection using the URL object
+HttpsURLConnection httpsURLConnection = (HttpsURLConnection) url.openConnection();
+
+// Set the SSL socket factory for the connection
+httpsURLConnection.setSSLSocketFactory(sslSocketFactory);
+
+// Perform any other configuration or operations on the connection as needed
+...
+
+// Open the connection
+httpsURLConnection.connect();
+```
+
+### Example Using OkHttpClient
+
+```java
+// Get the TrustManager instances for an identity from the SDK
+TrustManager[] trustManagers = MAMTrustedRootCertsManager.createX509TrustManagers(identity);
+
+// Get SSLContext from the platform
+SSLContext sslContext = SSLContext.getInstance("TLSv1.3");
+
+// Initialize the SSLContext with the trust managers from the Intune App SDK
+sslContext.init(null, trustManagers, null);  
+
+// Create an OkHttpClient.Builder object
+OkHttpClient.Builder builder = new OkHttpClient.Builder();
+
+// Set the SSLSocketFactory and the trust managers from the SDK
+builder.sslSocketFactory(sslContext.socketFactory, trustManagers[0] as X509TrustManager).build();
+
+// Build an OkHttpClient object from the builder
+OkHttpClient okHttpClient = builder.build();
+
+// Create a Request object for the desired endpoint
+Request request = new Request.Builder().url("https://example.com").build();
+
+// Execute the request using the OkHttpClient object and get a Response object
+Response response = okHttpClient.newCall(request).execute();
+
+// Perform any other operations on the response as needed
+...
+```
+
+### Example Using WebView
+
+```java
+// Get the MAM implementation of WebViewClient from the Intune App SDK
+MAMCertTrustWebViewClient certTrustWebViewClient = new MAMCertTrustWebViewClient();
+
+// Set the MAM WebViewClient from the SDK as the current handler on the instance of WebView
+webView.setWebViewClient(certTrustWebViewClient);
+
+// Perform any other operations on WebView
+...
+```
 
 ## Exit Criteria
 
