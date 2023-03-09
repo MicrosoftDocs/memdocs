@@ -46,7 +46,7 @@ The new restore point will be created. It may take up to an hour or more for the
 ## Create multiple manual restore points in bulk
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **All devices** > **Bulk Device Actions**.
-![Screenshot of bulk device actions](./media/restore-bulk/bulk-device-actions.png)
+![Screenshot of bulk device actions.](./media/restore-bulk/bulk-device-actions.png)
 2. On the **Basics** page, select the following options:
     1. **OS**: Windows
     2. **Device action**: Create Cloud PC manual restore point (preview)
