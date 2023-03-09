@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 08/24/2022
+ms.date: 03/20/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -52,12 +52,14 @@ To see a role in the **Intune admin center**, go to **Tenant administration** > 
 You can assign built-in roles to groups without further configuration. You can't delete or edit the name, description, type, or permissions of a built-in role.
 
 - **Application Manager**: Manages mobile and managed applications, can read device information and can view device configuration profiles.
+- **Endpoint Privilege Manager**: Manages Endpoint Privilege Management policies in the Intune console.
+- **Endpoint Privilege Reader**: Endpoint Privilege Readers can view Endpoint Privilege Management policies in the Intune console.
 - **Endpoint Security Manager**: Manages security and compliance features, such as security baselines, device compliance, conditional access, and Microsoft Defender for Endpoint.
-- **Read Only Operator**: Views user, device, enrollment, configuration, and application information. Can't make changes to Intune.
-- **School Administrator**: Manages Windows 10 devices in [Intune for Education](introduction-intune-education.md).
-- **Policy and Profile Manager**: Manages compliance policy, configuration profiles, Apple enrollment, corporate device identifiers, and security baselines.
 - **Help Desk Operator**: Performs remote tasks on users and devices, and can assign applications or policies to users or devices.
 - **Intune Role Administrator**: Manages custom Intune roles and adds assignments for built-in Intune roles. It's the only Intune role that can assign permissions to Administrators.
+- **Policy and Profile Manager**: Manages compliance policy, configuration profiles, Apple enrollment, corporate device identifiers, and security baselines.
+- **Read Only Operator**: Views user, device, enrollment, configuration, and application information. Can't make changes to Intune.
+- **School Administrator**: Manages Windows 10 devices in [Intune for Education](introduction-intune-education.md).
 - **Cloud PC Administrator**: A Cloud PC Administrator has read and write access to all Cloud PC features located within the Cloud PC blade.
 - **Cloud PC Reader**: A Cloud PC Reader has read access to all Cloud PC features located within the Cloud PC blade.
 

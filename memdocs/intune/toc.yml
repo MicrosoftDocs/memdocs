@@ -504,6 +504,16 @@ items:
             href: ./protect/microsoft-tunnel-conditional-access.md
           - name: Migrate to the Defender for Endpoint app
             href: ./protect/microsoft-tunnel-migrate-app.md
+        - name: Endpoint Privilege Management
+          items:
+          - name: Endpoint Privilege Management overview
+            href: ./protect/epm-overview
+          - name: Endpoint Privilege Management policies
+            href: ./protect/
+          - name: Endpoint Privilege Management reports
+            href: ./protect/epm-reports.md
+          - name: Endpoint Privilege Management data and privacy
+            href: ./protect/epm-data-collection.md
         - name: Identity protection
           items:
           - name: Windows Hello at device enrollment
