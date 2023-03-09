@@ -45,7 +45,7 @@ You must be a Global Administrator or Intune Administrator to perform these step
 
 ### Before you begin  
 
-Decide if it's neccessary to show the device category selection prompt to end users when they visit the Company Portal app or website. If you don't want the prompt to be visible, block it in a [customization profile](../apps/company-portal-app.md#device-categories) before continuing to [Step 1](device-group-mapping#step-1-create-device-category-in-intune).        
+Decide if it's necessary to show the device category selection prompt to end users when they visit the Company Portal app or website. If you don't want the prompt to be visible, block it in a [customization profile](../apps/company-portal-app.md#device-categories) first, and then create your categories.       
 
 ### Step 1: Create device category in Intune  
 
