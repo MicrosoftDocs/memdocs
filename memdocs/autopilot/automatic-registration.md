@@ -12,7 +12,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 11/17/2022
+ms.date: 03/10/2023
 ms.topic: how-to
 ms.collection: 
   - M365-modern-desktop
@@ -36,19 +36,14 @@ You can automatically register an existing device if it's:
 - Enrolled in an MDM service such as Intune
 - A corporate device that's not already registered with Autopilot
 
-> [!NOTE]
-> Converting all targeted devices to Autopilot isn't supported for transforming a hybrid Azure AD join device into an Azure AD join Autopilot device.<!-- MEMDocs#2175 -->
->
-> - Hybrid Azure AD join device = On-premise AD domain joined + Azure AD domain joined device
-> - Azure AD join device = Azure AD domain joined only device
->
-> For more information see [Windows Autopilot deployment for existing devices](existing-devices.md)
-
 For devices that meet these requirements, the MDM service can ask the device for the hardware hash. After it has that, it can automatically register the device with Windows Autopilot.
 
 For more information on how to do this with Microsoft Intune, see [Create an Autopilot deployment profile](profiles.md#create-an-autopilot-deployment-profile) and review the description of the **Convert all targeted devices to Autopilot** setting. See the following example:
 
 ![Convert all targeted devices.](images/convert-devices.png)
+
+> [!NOTE]
+> Using the option **Converting all targeted devices to Autopilot** in the Autopilot profile doesn't convert existing hybrid Azure AD device in the assigned group(s) into an Azure AD device. The option only registers the devices in the assigned group(s) for the Autopilot service. For more information, see [Create an Autopilot deployment profile](profiles.md#create-an-autopilot-deployment-profile).
 
 ## Windows Autopilot for existing devices
 
