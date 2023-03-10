@@ -802,8 +802,8 @@ items:
           - name: Universal Print policy
             displayName: printers
             href: ./configuration/settings-catalog-printer-provisioning.md
-        - name: Custom settings & scripts
-          displayName: oma-uri, csp, shell scripts, bash, powershell
+        - name: Custom settings & shell scripts
+          displayName: oma-uri, csp, bash, powershell
           items:
           - name: Create custom profiles
             href: ./configuration/custom-settings-configure.md
