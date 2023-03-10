@@ -509,7 +509,7 @@ items:
           - name: Endpoint Privilege Management overview
             href: ./protect/epm-overview.md
           - name: Endpoint Privilege Management policies
-            href: ./protect/emp-policies.md
+            href: ./protect/epm-policies.md
           - name: Endpoint Privilege Management reports
             href: ./protect/epm-reports.md
           - name: Endpoint Privilege Management data and privacy
