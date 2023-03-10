@@ -43,7 +43,7 @@ For more information on how to do this with Microsoft Intune, see [Create an Aut
 ![Convert all targeted devices.](images/convert-devices.png)
 
 > [!NOTE]
-> Using the option **Converting all targeted devices to Autopilot** in the Autopilot profile doesn't convert existing hybrid Azure AD device in the assigned group(s) into an Azure AD device. The option only registers the devices in the assigned group(s) for the Autopilot service. For more information, see [Create an Autopilot deployment profile](profiles.md#create-an-autopilot-deployment-profile).
+> Using the setting **Converting all targeted devices to Autopilot** in the Autopilot profile doesn't convert existing hybrid Azure AD device in the assigned group(s) into an Azure AD device. The setting only registers the devices in the assigned group(s) for the Autopilot service. For more information, see [Create an Autopilot deployment profile](profiles.md#create-an-autopilot-deployment-profile).
 
 ## Windows Autopilot for existing devices
 

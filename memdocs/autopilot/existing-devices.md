@@ -35,7 +35,7 @@ _Windows Autopilot for existing devices_ lets you reimage and provision a Window
 > Windows Autopilot for existing devices only supports user-driven Azure AD and hybrid Azure AD profiles. Self-deploying and pre-provisioning profiles aren't supported.
 
 > [!NOTE]
-> Using Autopilot for existing devices could be used as a method to convert existing hybrid Azure AD devices into Azure AD devices. Using the option **Converting all targeted devices to Autopilot** in the Autopilot profile doesn't convert existing hybrid Azure AD device in the assigned group(s) into an Azure AD device. The option only registers the devices in the assigned group(s) for the Autopilot service.
+> Using Autopilot for existing devices could be used as a method to convert existing hybrid Azure AD devices into Azure AD devices. Using the setting **Converting all targeted devices to Autopilot** in the Autopilot profile doesn't convert existing hybrid Azure AD device in the assigned group(s) into an Azure AD device. The setting only registers the devices in the assigned group(s) for the Autopilot service.
 
 ## Prerequisites
 
