@@ -677,7 +677,7 @@ Trusted Root Certificates Management provides support for:
 ### Requirements
 
 - Trusted Root Certificates Management requires a Microsoft Tunnel for Mobile Application Management license. To learn more visit: [Microsoft Tunnel with Mobile Application Management].
-- Configure Intune App Configuration profiles to deliver trusted root certificates to line of business apps and Edge on Android. See: [Use Microsoft Tunnel VPN with Android devices that don't enroll with Microsoft Intune].
+- Configure Intune App Configuration profiles to deliver trusted root certificates to line of business apps and Edge on Android. For more information, see [Microsoft Tunnel for Mobile Application Management for Android](..\protect\microsoft-tunnel-mam-android.md).
 
 > [!NOTE]
 > Trusted Root Certificates Management can be used independently of Microsoft Tunnel VPN Gateway, however you must license Microsoft MAM Tunnel for use.
