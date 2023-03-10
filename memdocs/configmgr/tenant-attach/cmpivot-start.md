@@ -14,7 +14,7 @@ ms.reviewer: mstewart,aaroncz
 ms.collection: tier3
 ---
 
-# <a name="bkmk_cmpivot"></a> Tenant attach: Launch CMPivot from the admin center
+# Tenant attach: Launch CMPivot from the admin center
 
 *Applies to: Configuration Manager (current branch)* 
 
@@ -43,7 +43,7 @@ The user account needs the following permissions:
 - An [Intune role](../../intune/fundamentals/role-based-access-control.md) assigned to the user <!--7980141-->
 
 
-## <a name="bkmk_launch"></a> Launch CMPivot
+## Launch CMPivot
 
 1. In a browser, go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 1. Select **Devices** then **All Devices**.
@@ -51,11 +51,21 @@ The user account needs the following permissions:
 1. Select **CMPivot**.
 1. Type your query in the script pane, then select **Run**.
 
+## Save CMPivot queries to favorites
+Save your frequently used queries to a **Favorites** folder in CMPivot to keep all your most used queries in one place. You can also add tags to your queries to help search and find queries. 
+
+The functionality is similar to one already present in the Configuration Manager console. The queries saved in the Configuration Manager console will not automatically be added to your **Favorites** folder. You will need to create new queries and add them to this folder.
+
+To save your query, select the **Save** option after typing in your query. You can customise the name and tags for your query. 
+You can view all your saved favorite queries, under the **Favorites** folder on the left panel, along with all other CMPivot entities.
+
+:::image type="content" source="media/16702226-cmpivot-favorites.png" alt-text="Favorite queries folder on the left panel, above all CMPivot entities folder" lightbox="media/16702226-cmpivot-favorites.png":::
+
 ## Close CMPivot
 
 To close CMPivot and return to the device information, use the `X` icon in the top right of CMPivot.
 
-   :::image type="content" source="media/6024392-close-cmpivot.png" alt-text="Close CMPivot with the X icon in Microsoft Intune admin center" lightbox="media/6024392-close-cmpivot.png":::
+:::image type="content" source="media/6024392-close-cmpivot.png" alt-text="Close CMPivot with the X icon in Microsoft Intune admin center" lightbox="media/6024392-close-cmpivot.png":::
 
 ## Next steps
 

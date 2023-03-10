@@ -54,6 +54,7 @@ You can assign built-in roles to groups without further configuration. You can't
 - **Application Manager**: Manages mobile and managed applications, can read device information and can view device configuration profiles.
 - **Endpoint Security Manager**: Manages security and compliance features, such as security baselines, device compliance, conditional access, and Microsoft Defender for Endpoint.
 - **Read Only Operator**: Views user, device, enrollment, configuration, and application information. Can't make changes to Intune.
+- **Organizational Messages Manager**: Manages organizational messages in Intune console.
 - **School Administrator**: Manages Windows 10 devices in [Intune for Education](introduction-intune-education.md).
 - **Policy and Profile Manager**: Manages compliance policy, configuration profiles, Apple enrollment, corporate device identifiers, and security baselines.
 - **Help Desk Operator**: Performs remote tasks on users and devices, and can assign applications or policies to users or devices.
