@@ -75,7 +75,7 @@ Create a new enrollment profile for fully managed devices.
 3. Select **Android enrollment**  > **Corporate-owned, fully managed user devices**.
 4. Under **Allow users to enroll corporate-owned user devices**, choose **Yes**. 
 5. Select **Create profile**.  
-6. Enter the basics for you profile:  
+6. Enter the basics for your profile:  
     - **Name**: Type a name that you'll use when assigning the profile to the dynamic device group.
     - **Description**: Add a profile description (optional).  
 7. Select **Next**. 
