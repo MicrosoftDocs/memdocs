@@ -138,6 +138,10 @@ items:
         href: tutorial/self-deploying/self-deploying-esp.md
       - name: Step 5 - Create and assign Autopilot profile
         href: tutorial/self-deploying/self-deploying-autopilot-profile.md
+    - name: Autopilot reset
+      items:
+      - name: Autopilot reset
+        href: tutorial/reset/reset-workflow.md
 
 - name: Reference
   items:
