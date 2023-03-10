@@ -56,7 +56,7 @@ For more information, see the description of this [content migration](../../serv
 
 ### <a name="bkmk_featured-apps-software-center"></a> Featured Apps in Software Center
 <!--3601183-->
-We are now adding the **Featured** tab in Software Center where we will be displaying the featured apps. Using this, IT admins can mark apps as "featured" and encourage end users to use the app. Currently, this feature is available only for "User Available" apps. Also, admins can make the **Featured** tab of Software Center as the default tab from Client Settings. 
+We're now adding the **Featured** tab in Software Center where we'll be displaying the featured apps. Using this, IT admins can mark apps as "featured" and encourage end users to use the app. Currently, this feature is available only for "User Available" apps. Also, admins can make the **Featured** tab of Software Center as the default tab from Client Settings. 
 
 For more information, see the [Software Center in Configuration Manager](../../understand/software-center.md).
 
@@ -83,7 +83,7 @@ For more information, see [Console changes and tips](../../servers/manage/admin-
 
 ### Dark theme is now extended to more dashboards
 
-The dark theme has been available as a pre-release feature since 2203. We've extended the dark theme to additional components such as buttons, context menus, and hyperlinks. Enable this pre-release feature to experience the dark theme.
+The dark theme has been available as a pre-release feature since 2203. We've extended the dark theme to other components such as buttons, context menus, and hyperlinks. Enable this pre-release feature to experience the dark theme.
 In this release we've extended the dark theme to more dashboards, which previously didn't display the dark theme correctly. For example, the O365 Updates Dashboard, PCM Dashboard, and Health Attestation dashboard will now display according to the dark theme, when it's enabled. Pop-ups in the Health attestation dashboard will now adhere to the dark theme.
 
 Enable this pre-release feature to experience the dark theme. For more information, see [Dark theme for the console](../../servers/manage/admin-console.md#bkmk_dark).
@@ -112,7 +112,7 @@ The issue is fixed by propagating correct AAD device ID from ConfigMgr during In
  -	Windows Server 2008 R2 SP1 Extended Security Updates (ESU Azure Only)
  -	Windows Server 2008 SP2 Extended Security Updates (ESU Azure Only)
       
-If you are running this operating system on machines in your environment, they should not be upgraded to the 2211 version of the Configuration Manager client. For more information on supported clients and devices see [supported-operating-systems-for-clients-and-devices](../../plan-design/configs/supported-operating-systems-for-clients-and-devices.md).
+If you're running this operating system on machines in your environment, they shouldn't be upgraded to the 2211 version of the Configuration Manager client. For more information on supported clients and devices, see [supported-operating-systems-for-clients-and-devices](../../plan-design/configs/supported-operating-systems-for-clients-and-devices.md).
 
 <!--Starting with this version, the following features are no longer [pre-release](../../servers/manage/pre-release-features.md):
 -->
