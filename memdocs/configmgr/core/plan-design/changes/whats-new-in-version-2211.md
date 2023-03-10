@@ -36,7 +36,7 @@ For more information, see [Synchronize collections to Azure Active Directory Gro
 
 ### Network Access Account (NAA) account usage alert
 
-If your site is configured with NAA account, you'll see this new prerequisite warning added. To improve the security of distribution points configured with NAA account, review the existing accounts and their relevant permissions. If it has more than minimal required permission, then remove and add a minimal permission account. Don't configure any administrator level permission accounts on the NAA. If the site server is configured with HTTPS / EHTTP, it's recommended to remove the NAA account, which is unused.
+If your site is configured with NAA account, you see this new prerequisite warning added. To improve the security of distribution points configured with NAA account, review the existing accounts and their relevant permissions. If it has more than minimal required permission, then remove and add a minimal permission account. Don't configure any administrator level permission accounts on the NAA. If the site server is configured with HTTPS / EHTTP, it's recommended to remove the NAA account, which is unused.
 
 For more information, see the description of this [permissions-for-the-network-access-account](../../plan-design/hierarchy/accounts.md#permissions-for-the-network-access-account)
 
@@ -56,7 +56,7 @@ For more information, see the description of this [content migration](../../serv
 
 ### <a name="bkmk_featured-apps-software-center"></a> Featured Apps in Software Center
 <!--3601183-->
-We're now adding the **Featured** tab in Software Center where we'll be displaying the featured apps. Using this, IT admins can mark apps as "featured" and encourage end users to use the app. Currently, this feature is available only for "User Available" apps. Also, admins can make the **Featured** tab of Software Center as the default tab from Client Settings. 
+We're now adding the **Featured** tab in Software Center where we are displaying the featured apps. Using this, IT admins can mark apps as "featured" and encourage end users to use the app. Currently, this feature is available only for "User Available" apps. Also, admins can make the **Featured** tab of Software Center as the default tab from Client Settings. 
 
 For more information, see the [Software Center in Configuration Manager](../../understand/software-center.md).
 
@@ -103,7 +103,7 @@ As previously announced, version 2207 drops support for the following features:
 
 ### Resolved duplicate entries for co-managed device in Intune portal 
 
-Previously, device entities of the co-managed devices appeared as two separate entries on Intune portal. One entry corresponding to Intune and another corresponding to ConfigMgr appeared after enrollment. The entries were permanent in some cases. Various scenarios like device entity counts and policy targeting were impacted. The entries were duplicated because Intune is not aware of the AAD ID of devices coming from ConfigMgr. Intune becomes aware only after the daily discovery cycle runs and reports to Intune via CMGS.
+Previously, device entities of the co-managed devices appeared as two separate entries on Intune portal. One entry corresponding to Intune and another corresponding to ConfigMgr appeared after enrollment. The entries were permanent in some cases. Various scenarios like device entity counts and policy targeting were impacted. The entries were duplicated because Intune isn't aware of the AAD ID of devices coming from ConfigMgr. Intune becomes aware only after the daily discovery cycle runs and reports to Intune via CMGS.
 
 The issue is fixed by propagating correct AAD device ID from ConfigMgr during Intune enrollment. This leads to merged entities for co-managed devices in a short period of time (30-40 mins). We no longer have to wait for discovery cycle to run.
 
