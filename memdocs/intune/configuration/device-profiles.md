@@ -8,7 +8,7 @@ author: MandiOhlinger
 
 ms.author: mandia
 manager: dougeby
-ms.date: 09/20/2022
+ms.date: 03/20/2023
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -261,15 +261,6 @@ This feature supports:
 
 - Android Enterprise (OEMConfig)
 
-## PowerShell scripts
-
-[PowerShell scripts](../apps/intune-management-extension.md) use the Intune Management Extension to upload your PowerShell scripts in Intune, and then run these scripts on your devices. Also see what's required to use the extension, how to add them to Intune, and other important information.
-
-This feature supports:
-
-- Windows 11
-- Windows 10
-
 ## Preference file
 
 [Preference files](preference-file-settings-macos.md) on macOS devices include information about apps. For example, you can use preference files to control web browser settings, customize apps, and more.
@@ -307,6 +298,21 @@ This feature supports:
 - Windows 11
 - Windows 10
 - Windows Holographic for Business
+
+## Shell scripts
+
+On Linux devices, you can [add existing Bash scripts](../configuration/device-profiles.md) to customize settings and features on these devices. This concept is similar to creating a custom device configuration profile, and deploying the policy to your devices. But with Linux, you're using existing Bash scripts to configure features and settings that aren't built into Intune.
+
+On macOS devices, you can [add existing shell scripts](../apps/macos-shell-scripts.md) to wrap or package apps. Then, deploy these app packages to your macOS devices.
+
+On Windows devices, you can use the Intune Management Extension to upload your [PowerShell scripts](../apps/intune-management-extension.md) in Intune, and then run these scripts on your devices. Also see what's required to use the extension, how to add them to Intune, and other important information.
+
+This feature supports:
+
+- Linux
+- macOS
+- Windows 11
+- Windows 10
 
 ## Update policies
 
