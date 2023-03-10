@@ -152,9 +152,10 @@ Event Viewers:
 Files:
 
 - %ProgramData%\Microsoft\DiagnosticLogCSP\Collectors\\*.etl
-- %ProgramData%\Microsoft\IntuneManagementExtension\Logs\\\*.*
+- %ProgramData%\Microsoft\IntuneManagementExtension\Logs\\*.log
 - %ProgramData%\Microsoft\Windows Defender\Support\MpSupportFiles.cab
 - %ProgramData%\Microsoft\Windows\WlanReport\wlan-report-latest.html
+- %ProgramData%\USOShared\logs\system\\*.etl
 - %ProgramData Microsoft Update Health Tools\Logs\\*.etl
 - %temp%\MDMDiagnostics\battery-report.html
 - %temp%\MDMDiagnostics\energy-report.html
@@ -164,8 +165,10 @@ Files:
 - %windir%\ccmsetup\logs\\*.log
 - %windir%\logs\CBS\cbs.log
 - %windir%\logs\measuredboot\\\*.*
+- %windir%\logs\Panther\unattendgc\setupact.log
+- %windir%\logs\SoftwareDistribution\ReportingEvent\measuredboot\\*.log
 - %windir%\logs\WindowsUpdate\\*.etl
-- %windir%\temp\%computername%*.log
+- %windir%\temp\\%computername%*.log
 - %windir%\temp\officeclicktorun*.log
 
 ## Disable device diagnostics
