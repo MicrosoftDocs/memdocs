@@ -301,9 +301,9 @@ This feature supports:
 
 ## Shell scripts
 
-On Linux devices, you can [add existing Bash scripts](../configuration/device-profiles.md) to customize settings and features on these devices. This concept is similar to creating a device configuration profile, and deploying the policy to your devices. But with Linux, you're using existing Bash scripts to configure features and settings that aren't built into Intune.
+On Linux devices, you can [add existing Bash scripts](../configuration/device-profiles.md) to customize settings and features on these devices. This concept is similar to creating a custom device configuration profile, and deploying the policy to your devices. But with Linux, you're using existing Bash scripts to configure features and settings that aren't built into Intune.
 
-On macOS devices, you can [add existing shell scripts](../apps/macos-shell-scripts.md) to configure features and settings that aren't available with Intune, or features that the OS doesn't support.
+On macOS devices, you can [add existing shell scripts](../apps/macos-shell-scripts.md) to wrap or package apps. Then, deploy these app packages to your macOS devices.
 
 On Windows devices, you can use the Intune Management Extension to upload your [PowerShell scripts](../apps/intune-management-extension.md) in Intune, and then run these scripts on your devices. Also see what's required to use the extension, how to add them to Intune, and other important information.
 

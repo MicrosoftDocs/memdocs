@@ -40,7 +40,7 @@ In Intune, you import an existing Bash script, and then assign the script policy
 
 This article lists the steps to add an existing script and has a GitHub repo with some sample scripts.
 
-## Prerequisits
+## Prerequisites
 
 - Linux Ubuntu Desktop: For a list of the supported versions, go to [Supported operating systems and browsers in Intune](../fundamentals/supported-devices-browsers.md).
 
