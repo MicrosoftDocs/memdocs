@@ -44,7 +44,7 @@ Resizing gives admins the flexibility to upgrade/downgrade the following specifi
 
 Resizing doesn't let you downsize disk space.
 
-When using OneDrive for Business, resizing preserves user data. Users will be able to access all of their data after the resizing is finished.
+When using OneDrive, resizing preserves user data. Users will be able to access all of their data after the resizing is finished.
 
 ## Requirements
 
