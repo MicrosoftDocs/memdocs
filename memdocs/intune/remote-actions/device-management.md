@@ -29,19 +29,19 @@ ms.collection:
 - highpri
 ---
 
-# What is Microsoft Intune device management?
+# Manage devices with Microsoft Intune
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 As an IT admin, you must ensure that managed devices are providing the resources that your users need to do their work, while protecting that data from risk.
 
-The **Devices** workload gives you insights into the devices you manage, and lets you activate remote tasks on those devices.
+The **Devices** workload gives you insights into the devices you manage, and lets you activate remote actions on those devices.
 
 Not all device actions are available for every platform or device. Available actions are shown on the device's overview page (**Devices** > **All devices** > choose a device).
 
 ## Get to your devices
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices**. This view shows detailed information about the individual devices, and what you can do with them, including:
 
    - **Overview**: The Overview page shows a visual snapshot of the enrolled devices, how many devices are using the different platforms, and more.
@@ -55,7 +55,7 @@ Not all device actions are available for every platform or device. Available act
    - **Device enrollment**: This option takes you to the enrollment page.
    - **Policy**: These options let you set various policies for your organization's devices.
    - **Other**:
-       - **Device cleanup rules**: This option lets you automatically remove inactive devices from Intune. For more information, see [Automatically delete devices with cleanup rules](devices-wipe.md#delete-devices-from-the-intune-portal).
+       - **Device cleanup rules**: This option lets you automatically remove inactive devices from Intune. For more information, see [Automatically delete devices with cleanup rules](devices-wipe.md#delete-devices-from-the-intune-admin-center).
        - **Device categories**: This option lets you create [device categories](../enrollment/device-group-mapping.md).
    - **Help and Support** provides a shortcut on troubleshooting tips, requesting support, or checking the status of Intune.
 
@@ -69,7 +69,7 @@ The available actions depend on the device platform and the device configuration
   - [Autopilot reset](/windows/deployment/windows-autopilot/windows-autopilot-reset#reset-devices-with-remote-windows-autopilot-reset) (Windows Only)
   - [BitLocker key rotation](../protect/encrypt-devices.md#rotate-bitlocker-recovery-keys) (Windows only)
   - [Collect diagnostics](collect-diagnostics.md) (Windows 10 only)
-  - [Delete](devices-wipe.md#delete-devices-from-the-intune-portal)
+  - [Delete](devices-wipe.md#delete-devices-from-the-intune-admin-center)
   - [Disable Activation Lock](device-activation-lock-disable.md) (iOS only)
   - [Erase](./device-erase.md) (macOS Only)
   - [Fresh Start](device-fresh-start.md) (Windows only)
@@ -89,8 +89,3 @@ The available actions depend on the device platform and the device configuration
   - [Send custom notification](custom-notifications.md#send-a-custom-notification-to-a-single-device) (Android, iOS/iPadOS)
   - [Synchronize device](device-sync.md)
   - [Update cellular data plan](update-cellular-data-plan.md) (iOS/iPadOS)
-
-
-## Next steps
-
-[Remotely run device actions with Intune](./index.yml)

@@ -91,7 +91,7 @@ Integrating the library into your products includes the following steps. These s
 7. Complete [integration testing](#integration-testing) (in this article), and address any issues
 8. Give written guidance to the customer that explains:
 
-   - How the SCEP Server needs to be onboarded in the Microsoft Endpoint Manager admin center
+   - How the SCEP Server needs to be onboarded in the Microsoft Intune admin center
    - How to get the Azure Application Identifier and Azure Application Key needed to configure the library
 
 ### Onboard SCEP server in Azure
@@ -302,11 +302,11 @@ Validating and testing that your solution is properly integrated with Intune is 
 10. Confirm the Trusted Root Certificate are installed on all the devices.
 11. Confirm the SCEP Certificates for the assigned profiles are installed on all the devices.
 12. Confirm the properties of the installed certificates match the properties set in the SCEP profile.
-13. Confirm the issued certificates are properly listed in the Intune console
+13. Confirm the issued certificates are properly listed in the Intune admin center
 
 ## See also
 
 - [Add 3rd party CA overview](certificate-authority-add-scep-overview.md)
-- [Setup Intune](../fundamentals/setup-steps.md)
+- [Setup Intune](../fundamentals/deployment-plan-setup.md)
 - [Device enrollment](../enrollment/device-enrollment.md)
 - [Configure SCEP certificate profiles](certificates-profile-scep.md) (the Microsoft NDES Server\Connector setup isn't used for this scenario)

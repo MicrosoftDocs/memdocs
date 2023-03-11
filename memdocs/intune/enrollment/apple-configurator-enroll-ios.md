@@ -56,7 +56,7 @@ Apple Configurator enrollment methods can't be used with the [device enrollment 
 
 A device enrollment profile defines the settings applied during enrollment. These settings are applied only once. Follow these steps to create an enrollment profile to enroll iOS/iPadOS devices with Apple Configurator.
 
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS/iPadOS** > **iOS/iPadOS enrollment** > **Apple Configurator**.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS/iPadOS** > **iOS/iPadOS enrollment** > **Apple Configurator**.
 
     ![Create a profile for Apple Configurator.](./media/apple-configurator-enroll-ios/apple-configurator.png)
 
@@ -106,7 +106,7 @@ Enrollment with Apple Configuration has the following limitations:
     DLXQPCWVGHMJ,device details
 
    Learn [how to find an iOS/iPadOS device serial number](https://support.apple.com/HT204073).
-2. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS/iPadOS** > **iOS/iPadOS enrollment** > **Apple Configurator** > **Devices** > **Add**.
+2. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS/iPadOS** > **iOS/iPadOS enrollment** > **Apple Configurator** > **Devices** > **Add**.
 
 5. Select an **Enrollment profile** to apply to the serial numbers you're importing. If you want the new serial number details to overwrite any existing details, choose **Overwrite details for existing identifiers**.
 6. Under **Import Devices**, browse to the csv file of serial numbers, and select **Add**.
@@ -118,18 +118,18 @@ You can assign an enrollment profile when you import iOS/iPadOS serial numbers f
 - **AC profiles**
 
 #### Assign from Apple Configurator devices
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS/iPadOS** > **iOS/iPadOS enrollment** > **Apple Configurator** > **Devices** > choose the serial numbers > **Assign profile**.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS/iPadOS** > **iOS/iPadOS enrollment** > **Apple Configurator** > **Devices** > choose the serial numbers > **Assign profile**.
 2. Under **Assign Profile**, choose the **New profile** you want to assign, and then choose **Assign**.
 
 #### Assign from profiles
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS/iPadOS** > **iOS/iPadOS enrollment** > **Apple Configurator** > **Profiles** > choose a profile.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS/iPadOS** > **iOS/iPadOS enrollment** > **Apple Configurator** > **Profiles** > choose a profile.
 2. In the profile, choose **Devices assigned**, and then choose **Assign**.
 3. Filter to find device serial numbers you want to assign to the profile, select the devices, and then choose **Assign**.
 
 ### Export the profile
 After you create the profile and assign serial numbers, you must export the profile from Intune as a URL. You then import it into Apple Configurator on a Mac for deployment to devices.
 
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS/iPadOS** > **iOS/iPadOS enrollment** > **Apple Configurator** > **Profiles** >  choose the profile to export.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS/iPadOS** > **iOS/iPadOS enrollment** > **Apple Configurator** > **Profiles** >  choose the profile to export.
 2. On the profile, select **Export Profile**.
 3. Copy the **Profile URL**. You can then add it in Apple Configurator to define the Intune profile used by iOS/iPadOS devices.
 
@@ -165,7 +165,7 @@ Apps requiring user affiliation, including the Company Portal app used for insta
 
 ### Export the profile as .mobileconfig to iOS/iPadOS devices
 
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS/iPadOS** > **iOS/iPadOS enrollment** > **Apple Configurator** > **Profiles** >  choose the profile to export > **Export Profile**.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS/iPadOS** > **iOS/iPadOS enrollment** > **Apple Configurator** > **Profiles** >  choose the profile to export > **Export Profile**.
 2. Under **Direct enrollment**, choose **Download profile**, and save the file. An enrollment profile file is only valid for two weeks at which time you must re-create it.
 3. Transfer the file to a Mac computer running [Apple Configurator](https://itunes.apple.com/us/app/apple-configurator-2/id1037126344?mt=12) to push directly as a management profile to iOS/iPadOS devices.
 4. Prepare the device with Apple Configurator by using the following steps:
@@ -190,6 +190,6 @@ Apps requiring user affiliation, including the Company Portal app used for insta
 
 ## Next steps  
 
-* Manage Intune-enrolled devices by using the device management actions and features available in the Microsoft Endpoint Manager admin center. For more information, see [What is Microsoft Intune device management?](../remote-actions/device-management.md)  
+* Manage Intune-enrolled devices by using the device management actions and features available in the Microsoft Intune admin center. For more information, see [What is Microsoft Intune device management?](../remote-actions/device-management.md)  
 
 * For information about enrolling macOS devices via direct enrollment with Apple Configurator, see [Use Direct Enrollment for macOS devices](device-enrollment-direct-enroll-macos.md).

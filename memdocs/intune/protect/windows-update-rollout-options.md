@@ -92,7 +92,7 @@ To learn more, see [Manage safeguards using the Windows Update for Business depl
 
 ### Enable intelligent rollouts
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Go to **Devices** > **Configuration profiles** > **Create profile**.
 

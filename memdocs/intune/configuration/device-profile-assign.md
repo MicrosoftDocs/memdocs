@@ -2,12 +2,12 @@
 # required metadata
 
 title: Assign device profiles in Microsoft Intune
-description: Use the Microsoft Endpoint Manager admin center to assign device configuration profiles and policies to users and devices. Learn how to exclude groups from a profile assignment in Microsoft Intune.
+description: Use the Microsoft Intune admin center to assign device configuration profiles and policies to users and devices. Learn how to exclude groups from a profile assignment in Microsoft Intune.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/10/2022
+ms.date: 02/01/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -31,47 +31,63 @@ ms.collection:
 - highpri
 ---
 
-# Assign user and device configuration profiles in Microsoft Intune
+# Assign policies in Microsoft Intune
 
-You create a device configuration profile, and it includes all the settings you entered. The next step is to deploy or "assign" the profile to your user or device groups. When it's assigned, the users and devices receive your profile, and the settings you entered are applied.
+When you create an Intune policy, it includes all the settings you added and configured within the policy. When the policy is ready to be deployed, the next step is to "assign" the policy to your user or device groups. When it's assigned, the users and devices receive your policy, and the settings you entered are applied.
 
-This article shows you how to assign a profile, and includes some information on using scope tags on your device configuration profiles. 
+In Intune, you can create and assign the following policies:
 
-For information on device configuration profiles, and what you can configure, go to [Apply features and settings on your devices using device profiles in Microsoft Intune](device-profiles.md).
+- App protection policies
+- App configuration policies
+- Compliance policies
+- Conditional access policies
+- Device configuration profiles
+- Enrollment policies
 
-> [!NOTE]  
-> When a profile is removed or no longer assigned to a device, different things can happen, depending on the settings in the profile. The settings are based on CSPs, and each CSP can handle the profile removal differently. For example, a setting might keep the existing value, and not revert back to a default value. The behavior is controlled by each CSP in the operating system. For a list of Windows CSPs, see [configuration service provider (CSP) reference](/windows/client-management/mdm/configuration-service-provider-reference).
->
-> To change a setting to a different value, create a new profile, configure the setting to **Not configured**, and assign the profile. Once applied to the device, users should have control to change the setting to their preferred value.
->
-> When configuring these settings, we suggest deploying to a pilot group. For more Intune rollout advice, see [create a rollout plan](../fundamentals/intune-planning-guide.md).
+This article shows you how to assign a policy, includes some information on using scope tags, describes when to assign policies to user groups or device groups, and more.
 
 ## Before you begin
 
-Be sure you have the correct role to assign profiles. For more information, see [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md).
+Be sure you have the correct role to assign policies and profiles. For more information, go to [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md).
 
-## Assign a device profile
+## Assign a policy to users or groups
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Configuration profiles**. All the profiles are listed.
 3. Select the profile you want to assign > **Properties** > **Assignments** > **Edit**:
 
-    :::image type="content" source="./media/device-profile-assign/properties-select-assignments.png" alt-text="Screenshot that shows how to select assignments to deploy the profile to users and groups in Microsoft Intune.":::
+    For example, to assign a device configuration profile:
 
-4. Select **Included groups** or **Excluded groups**, and then choose **Select groups to include**. When you select your groups, you're choosing an Azure AD group. To select multiple groups, hold down the **Ctrl** key, and select your groups.
+    1. Go to **Devices** > **Configuration profiles**. All the profiles are listed.
+    2. Select the profile you want to assign > **Properties** > **Assignments** > **Edit**:
 
-    :::image type="content" source="./media/device-profile-assign/select-included-excluded-groups-profile-assignment.png" alt-text="Screenshot that shows how to include or exclude users and groups when assigning or deploying a profile in Microsoft Intune.":::
+       :::image type="content" source="./media/device-profile-assign/properties-select-assignments.png" alt-text="Screenshot that shows how to select assignments to deploy the profile to users and groups in Microsoft Intune.":::
 
-5. Select **Review + Save**. This step doesn't assign your profile.
-6. Select **Save**. When you save, your profile is assigned. Your groups will receive your profile settings when the devices check in with the Intune service.
+3. Select **Included groups** or **Excluded groups**, and then choose **Select groups to include**. When you select your groups, you're choosing an Azure AD group. To select multiple groups, hold down the **Ctrl** key, and select your groups.
 
-## Use scope tags or applicability rules
+   :::image type="content" source="./media/device-profile-assign/select-included-excluded-groups-profile-assignment.png" alt-text="Screenshot that shows how to include or exclude users and groups when assigning or deploying a policy in Microsoft Intune.":::
 
-When you create or update a profile, you can also add scope tags and applicability rules to the profile.
+4. Select **Review + Save**. This step doesn't assign your policy.
+5. Select **Save**. When you save, your policy is assigned. Your groups will receive your policy settings when the devices check in with the Intune service.
 
-**Scope tags** are a great way to filter profiles to specific groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md) has more information.
+## Assignment features you should know and use
 
-On Windows 10/11 devices, you can add **applicability rules** so the profile only applies to a specific OS version or a specific Windows edition. [Applicability rules](device-profile-create.md#applicability-rules) has more information.
+- Use **[Filters](../fundamentals/filters.md)** to assign a policy based on rules you create. You can create filters for:
+
+  - App protection policies
+  - App configuration policies
+  - Compliance policies
+  - Device configuration profiles
+
+  For more information, go to [Use filters when assigning your apps, policies, and profiles in Microsoft Intune](../fundamentals/filters.md).
+
+- **[Policy sets](../fundamentals/policy-sets.md)** create a group or collection of existing apps and policies. When the policy set is created, you can assign the policy set from a single place in the Microsoft Intune admin center.
+
+  For more information, go to [Use policy sets to group collections of management objects in Microsoft Intune](../fundamentals/policy-sets.md).
+
+- **[Scope tags](../fundamentals/scope-tags.md)** are a great way to filter policies to specific groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information, go to [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
+
+- On Windows 10/11 devices, you can add **[applicability rules](device-profile-create.md#applicability-rules)** so the policy only applies to a specific OS version or a specific Windows edition. For more information, go to [Applicability rules](device-profile-create.md#applicability-rules).
 
 ## User groups vs. device groups
 
@@ -79,21 +95,21 @@ Many users ask when to use user groups and when to use device groups. The answer
 
 ### Device groups
 
-If you want to apply settings on a device, regardless of who's signed in, then assign your profiles to a devices group. Settings applied to device groups always go with the device, not the user.
+If you want to apply settings on a device, regardless of who's signed in, then assign your policies to a devices group. Settings applied to device groups always go with the device, not the user.
 
 For example:
 
-- Device groups are useful for managing devices that don't have a dedicated user. For example, you have devices that print tickets, scan inventory, are shared by shift workers, are assigned to a specific warehouse, and so on. Put these devices in a devices group, and assign your profiles to this devices group.
+- Device groups are useful for managing devices that don't have a dedicated user. For example, you have devices that print tickets, scan inventory, are shared by shift workers, are assigned to a specific warehouse, and so on. Put these devices in a devices group, and assign your policies to this devices group.
 
-- You create a [Device Firmware Configuration Interface (DFCI) Intune profile](device-firmware-configuration-interface-windows.md) that updates settings in the BIOS. For example, you configure this profile to disable the device camera, or lock down the boot options to prevent users from booting up another OS. This profile is a good scenario to assign to a devices group.
+- You create a [Device Firmware Configuration Interface (DFCI) Intune profile](device-firmware-configuration-interface-windows.md) that updates settings in the BIOS. For example, you configure this policy to disable the device camera, or lock down the boot options to prevent users from booting up another OS. This policy is a good scenario to assign to a devices group.
 
-- On some specific Windows devices, you always want to control some Microsoft Edge settings, regardless of who's using the device. For example, you want to block all downloads, limit all cookies to the current browsing session, and delete the browsing history. For this scenario, put these specific Windows devices in a devices group. Then, create an [Administrative Template in Intune](administrative-templates-windows.md), add these device settings, and then assign this profile to the devices group.
+- On some specific Windows devices, you always want to control some Microsoft Edge settings, regardless of who's using the device. For example, you want to block all downloads, limit all cookies to the current browsing session, and delete the browsing history. For this scenario, put these specific Windows devices in a devices group. Then, create an [Administrative Template in Intune](administrative-templates-windows.md), add these device settings, and then assign this policy to the devices group.
 
 To summarize, use device groups when you don't care who's signed in on the device, or if anyone signs in. You want your settings to always be on the device.
 
 ### User groups
 
-Profile settings applied to user groups always go with the user, and go with the user when signed in to their many devices. It's normal for users to have many devices, such as a Surface Pro for work, and a personal iOS/iPadOS device. And, it's normal for a person to access email and other organization resources from these devices.
+Policy settings applied to user groups always go with the user, and go with the user when signed in to their many devices. It's normal for users to have many devices, such as a Surface Pro for work, and a personal iOS/iPadOS device. And, it's normal for a person to access email and other organization resources from these devices.
 
 If a user has multiple devices on the same platform, then you can use [filters](../fundamentals/filters.md) on the group assignment. For example, a user has a personal iOS/iPadOS device, and an organization-owned iOS/iPadOS. When you assign a policy for that user, you can use [filters](../fundamentals/filters.md) to target only the organization-owned device.
 
@@ -101,36 +117,46 @@ Follow this general rule: If a feature belongs to a user, such as email or user 
 
 For example:
 
-- You want to put a Help Desk icon for all users on all their devices. In this scenario, put these users in a users group, and assign your Help Desk icon profile to this users group.
-- A user receives a new organization-owned device. The user signs in to the device with their domain account. The device is automatically registered in Azure AD, and automatically managed by Intune. This profile is a good scenario to assign to a users group.
-- Whenever a user signs in to a device, you want to control features in apps, such as OneDrive or Office. In this scenario, assign your OneDrive or Office profile settings to a users group.
+- You want to put a Help Desk icon for all users on all their devices. In this scenario, put these users in a users group, and assign your Help Desk icon policy to this users group.
+- A user receives a new organization-owned device. The user signs in to the device with their domain account. The device is automatically registered in Azure AD, and automatically managed by Intune. This policy is a good scenario to assign to a users group.
+- Whenever a user signs in to a device, you want to control features in apps, such as OneDrive or Office. In this scenario, assign your OneDrive or Office policy settings to a users group.
 
-  For example, you want to block untrusted ActiveX controls in your Office apps. You can create an [Administrative Template in Intune](administrative-templates-windows.md), configure this setting, and then assign this profile to a users group.
+  For example, you want to block untrusted ActiveX controls in your Office apps. You can create an [Administrative Template in Intune](administrative-templates-windows.md), configure this setting, and then assign this policy to a users group.
 
 To summarize, use user groups when you want your settings and rules to always go with the user, whatever device they use. 
 
-### Windows CSPs
+### Windows CSPs and their behavior
 
 The policy settings for Windows devices are based on the [configuration service providers (CSPs)](/windows/client-management/mdm/configuration-service-provider-reference). These settings map to registry keys or files on the devices.
 
-Intune exposes these CSPs so you can configure these settings and assign them to your Windows devices. These settings are configurable using the built-in templates and using the [settings catalog](settings-catalog.md). In the settings catalog, you'll see that some settings apply to the user scope and some settings apply to the device scope.
+Here's what you need to know about Windows CSPs:
 
-For information on how user scoped and device scoped settings are applied to Windows devices, go to [Settings catalog: Device scope vs. user scope settings](settings-catalog.md#device-scope-vs-user-scope-settings).
+- Intune exposes these CSPs so you can configure these settings and assign them to your Windows devices. These settings are configurable using the built-in templates and using the [settings catalog](settings-catalog.md). In the settings catalog, you'll see that some settings apply to the user scope and some settings apply to the device scope.
 
-## Exclude groups from a profile assignment
+  For information on how user scoped and device scoped settings are applied to Windows devices, go to [Settings catalog: Device scope vs. user scope settings](settings-catalog.md#device-scope-vs-user-scope-settings).
 
-Intune device configuration profiles let you include and exclude groups from profile assignment.
+- When a policy is removed or no longer assigned to a device, different things can happen, depending on the settings in the policy. Each CSP can handle the policy removal differently.
+
+  For example, a setting might keep the existing value, and not revert back to a default value. The behavior is controlled by each CSP in the operating system. For a list of Windows CSPs, see [configuration service provider (CSP) reference](/windows/client-management/mdm/configuration-service-provider-reference).
+
+  To change a setting to a different value, create a new policy, configure the setting to **Not configured**, and assign the policy. When the policy applies to the device, users should have control to change the setting to their preferred value.
+
+- When configuring these settings, we suggest deploying to a pilot group. For more Intune rollout advice, see [create a rollout plan](../fundamentals/intune-planning-guide.md).
+
+## Exclude groups from a policy assignment
+
+Intune device configuration policies let you include and exclude groups from policy assignment.
 
 As a best practice:
 
-- Create and assign profiles specifically for your user groups. Use [filters](../fundamentals/filters.md) to include or exclude devices of those users.
-- Create and assign different profiles specifically for your device groups.
+- Create and assign policies specifically for your user groups. Use [filters](../fundamentals/filters.md) to include or exclude devices of those users.
+- Create and assign different policies specifically for your device groups.
 
 For more information on groups, see [Add groups to organize users and devices](../fundamentals/groups-add.md).
 
-### Fundamentals
+### Principles of including and excluding groups
 
-When you assign your policies and profiles, apply the following general principles:
+When you assign your policies and policies, apply the following general principles:
 
 - Think of **Included groups** or **Excluded groups** as a starting point for the users and devices that will receive your policies. The Azure AD group is the limiting group, so use the smallest group scope possible. Use [filters](../fundamentals/filters.md) to limit or refine your policy assignment.
 - Assigned Azure AD groups, also known as static groups, can be added to Included groups or Excluded groups.
@@ -155,7 +181,7 @@ Use the following matrix to understand support for excluding groups:
 - ❌: Not supported
 - ❕ : Partially supported
 
-:::image type="content" source="./media/device-profile-assign/include-exclude-user-device-groups-matrix.png" alt-text="Screenshot that shows the supported options to include or exclude groups from a profile assignment.":::
+:::image type="content" source="./media/device-profile-assign/include-exclude-user-device-groups-matrix.png" alt-text="Screenshot that shows the supported options to include or exclude groups from a policy assignment.":::
 
 | Scenario | Support|
 | --- | --- |
@@ -178,4 +204,4 @@ Use the following matrix to understand support for excluding groups:
 
 ## Next steps
 
-See [monitor device profiles](device-profile-monitor.md) for guidance on monitoring your profiles, and the devices running your profiles.
+See [monitor device profiles](device-profile-monitor.md) for guidance on monitoring your policies, and the devices running your policies.

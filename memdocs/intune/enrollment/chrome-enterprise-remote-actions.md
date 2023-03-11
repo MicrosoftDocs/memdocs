@@ -2,7 +2,7 @@
 # required metadata
 
 title: Remote actions for Chrome OS devices | Microsoft Intune  
-description: Remotely run Microsoft Intune device actions on Chrome OS devices in the Microsoft Endpoint Manager admin center.   
+description: Remotely run Microsoft Intune device actions on Chrome OS devices in the Microsoft Intune admin center.   
 keywords:
 author: Lenewsad
 ms.author: lanewsad
@@ -51,7 +51,7 @@ Permission requirements are provided in the sections that follow.
 ## Deprovision  
 Select **Deprovision** to remove Google Admin policies from devices your organization no longer uses. To deprovision a Chrome OS device, you must be assigned a role that has the *Remote tasks: Retire* permission.  
 
-After you deprovision a device, it remains in the Endpoint Manager admin center and the Google Admin console. Then on the admin center **System info** page, the device status changes to **DEPROVISIONED**. The device can't be enrolled again until it's restored to factory settings. For more information about the deprovision action, such as how to select the best reason for deprovisioning, see the [Chrome Enterprise and Education Help documentation](https://support.google.com/chrome/a/answer/3523633?).  
+After you deprovision a device, it remains in the Intune admin center and the Google Admin console. Then on the admin center **System info** page, the device status changes to **DEPROVISIONED**. The device can't be enrolled again until it's restored to factory settings. For more information about the deprovision action, such as how to select the best reason for deprovisioning, see the [Chrome Enterprise and Education Help documentation](https://support.google.com/chrome/a/answer/3523633?).  
 
 ## Lost mode  
 Select **Lost mode** to prevent people from using a Chrome OS device that's lost or stolen. Devices in lost mode display the contact information and message you configured in the Google Admin console. To deprovision a device, you must be assigned a role that has the following permissions:  

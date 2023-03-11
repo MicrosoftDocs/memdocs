@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/16/2021
+ms.date: 03/06/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -66,7 +66,7 @@ When you create a policy set, you create a single unit of assignment, and manage
 
 ## How to create a policy set
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Policy Sets** > **Policy sets** > **Create**.
 3. On the **Basics** page, add the following values:
     - **Policy set name** - Provide a name for this policy set.

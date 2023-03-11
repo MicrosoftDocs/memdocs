@@ -3,7 +3,7 @@
 
 title: Tutorial - Use Autopilot to enroll devices in Intune
 titleSuffix: Microsoft Intune
-description: In this tutorial, you'll set up Windows Autopilot to enroll devices in Intune.
+description: In this tutorial, you'll configure Windows Autopilot so that during provisioning devices can enroll in Intune. 
 keywords:
 author: Lenewsad
 ms.author: lanewsad
@@ -33,9 +33,9 @@ ms.collection:
 - highpri
 ---
 
-# Tutorial: Use Autopilot to enroll Windows devices in Intune
+# Tutorial: Use Windows Autopilot to enroll devices in Intune
 
-[Windows Autopilot](../../autopilot/index.yml) simplifies enrolling devices. With Microsoft Intune and Autopilot, you can give new devices to your end users without the need to build, maintain, and apply custom operating system images.
+Simplify device provisioning for you and your users by setting up Microsoft Intune device enrollment to occur automatically during [Windows Autopilot](../../autopilot/index.yml). This enrollment solution enables you to give new devices to your end users without the need to build, maintain, and apply custom operating system images. 
 
 In this tutorial, you'll learn how to:
 > [!div class="checklist"]
@@ -45,19 +45,20 @@ In this tutorial, you'll learn how to:
 > * Assign the Autopilot deployment profile to the device group
 > * Distribute Windows devices to users
 
-If you don't have an Intune subscription, [sign up for a free trial account](../fundamentals/free-trial-sign-up.md).
+If you don't have an Intune subscription, [sign up for a free trial account](../fundamentals/free-trial-sign-up.md).  
 
-For an overview of Autopilot benefits, scenarios, and prerequisites, see [Overview of Windows Autopilot](/windows/deployment/windows-autopilot/windows-10-autopilot).
+> [!TIP]
+> For an overview of Windows Autopilot benefits, scenarios, and prerequisites, see [Overview of Windows Autopilot](/windows/deployment/windows-autopilot/windows-10-autopilot).  
 
+## Prerequisites  
+To try this task, you must:  
 
-## Prerequisites
 - [Set up Windows automatic enrollment](quickstart-setup-auto-enrollment.md)
-- [Azure Active Directory Premium subscription](/azure/active-directory/active-directory-get-started-premium) <!--&#40;[trial subscription](https://go.microsoft.com/fwlink/?LinkID=816845)&#41;-->
-
+- [Azure Active Directory Premium subscription](/azure/active-directory/active-directory-get-started-premium) <!--&#40;[trial subscription](https://go.microsoft.com/fwlink/?LinkID=816845)&#41;-->  
 
 ## Add devices
 
-The first step in setting up Windows Autopilot is to add the Windows devices to Intune. All you have to do is create a CSV file and import it into Intune.
+The first step in setting up Windows Autopilot is to add the Windows devices to Intune, which requires you to create a CSV file and import it to Intune.  
 
 1. In any text editor, create a list of comma-separated values (CSV) that identify the Windows devices. Use the following format:
     
@@ -67,7 +68,7 @@ The first step in setting up Windows Autopilot is to add the Windows devices to 
 
 2. Save the CSV file.
 
-3. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and go to **Devices** > **Windows** > **Windows Enrollment**. 
+3. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and go to **Devices** > **Windows** > **Windows Enrollment**. 
 
 4.  Under **Windows Autopilot Deployment Program**, select **Devices**.   
 
@@ -87,7 +88,7 @@ The first step in setting up Windows Autopilot is to add the Windows devices to 
 
 Next, you'll create a device group and put the Autopilot devices you just loaded into it.
 
-1. In the [admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Groups** > **New group**.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Groups** > **New group**.
 2. Configure the settings for your new **Group** as follows:    
     1. For **Group type**, select **Security**.  
     2. For **Group name**, enter *Autopilot Group*.  
@@ -100,7 +101,7 @@ Next, you'll create a device group and put the Autopilot devices you just loaded
 
 After creating a device group, you must create a deployment profile so that you can configure the Autopilot devices.
 
-1. In the [admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Windows** > **Windows enrollment**. 
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Windows** > **Windows enrollment**. 
 2. Select **Deployment Profiles**. 
 3. Select **Create profile** > **Windows PC**.  
 4. On the **Basics** page, name the profile *Autopilot Profile*. In **Description**, enter *Test profile for Autopilot devices*.
@@ -140,7 +141,7 @@ If you don't want to use Autopilot devices anymore, you can delete them.
 
 1. If the devices are enrolled in Intune, you must first [delete them from the Azure Active Directory portal](../remote-actions/devices-wipe.md#delete-devices-from-the-azure-active-directory-portal).
 
-2. In the [admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Windows** > **Windows enrollment**. 
+2. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Windows** > **Windows enrollment**. 
 
 3. Under **Windows Autopilot Deployment Program**, select **Devices**.  
 

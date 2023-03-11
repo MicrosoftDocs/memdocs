@@ -82,12 +82,12 @@ Co-management has these prerequisites in the following areas:
     > [!NOTE]
     > An Enterprise Mobility + Security (EMS) subscription includes both Azure Active Directory Premium and Microsoft Intune.
 
-- At least one Intune license for you as the administrator to access the Microsoft Endpoint Manager admin center.
+- At least one Intune license for you as the administrator to access the Microsoft Intune admin center.
 
     > [!TIP]
     > Make sure you assign an Intune license to the account that you use to sign in to your tenant. Otherwise, sign in fails with the error message *An unanticipated error occurred*.<!-- MEMDocs#691 -->
     >
-    > You may not need to purchase and assign individual Intune or EMS licenses to your users. For more information, see the [Product and licensing FAQ](../core/understand/product-and-licensing-faq.yml#what-changes-with-licensing-for-co-management-in-microsoft-endpoint-manager-).
+    > You may not need to purchase and assign individual Intune or EMS licenses to your users. For more information, see the [Product and licensing FAQ](../core/understand/product-and-licensing-faq.yml#what-changes-with-licensing-for-co-management-in-the-microsoft-intune-family-of-products-).
 
 ### Configuration Manager
 
@@ -113,7 +113,7 @@ Enabling co-management itself doesn't require that you onboard your site with Az
 
 ### Intune
 
-- [Set up Intune](../../intune/fundamentals/setup-steps.md)
+- [Set up Intune](../../intune/fundamentals/deployment-plan-setup.md)
 
 - [Enable Windows automatic enrollment](../../intune/enrollment/windows-enroll.md#enable-windows-automatic-enrollment)
 

@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/16/2021
+ms.date: 03/06/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -111,7 +111,7 @@ Here's how you sign and assign the app in this way:
     This script requires the Windows SDK for Windows 10 to be installed on the host computer. [Download the Windows SDK for Windows 10](https://go.microsoft.com/fwlink/?linkid=162443).
 2. Download the Windows 10 Company Portal app from the Microsoft Store for Business, as discussed previously.  
 3. To sign the Windows 10 Company Portal app, run the script with the input parameters detailed in the script header, as shown in the following table.  
-    Dependencies do not need to be passed into the script. They are required only when the app is being uploaded to the Microsoft Endpoint Manager admin center.
+    Dependencies do not need to be passed into the script. They are required only when the app is being uploaded to the Microsoft Intune admin center.
 
 | Parameter |  Description  |
 |---|---|

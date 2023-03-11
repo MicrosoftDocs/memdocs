@@ -7,7 +7,7 @@ keywords: Intune Data Warehouse
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/16/2021
+ms.date: 03/06/2023
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -40,7 +40,7 @@ Use the Intune Data Warehouse to build reports that provide insight into your en
 
 ## Data Warehouse benefits
 
-The Data Warehouse provides you access to more information about your mobile environment than the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). With the Intune Data Warehouse you can access:
+The Data Warehouse provides you access to more information about your mobile environment than the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). With the Intune Data Warehouse you can access:
 
 - Historical Intune data
 - Data refreshed on a daily cadence

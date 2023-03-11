@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/24/2022
+ms.date: 03/07/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -62,7 +62,7 @@ When you create an app protection policy for iOS/iPadOS and Android apps, you fo
 
 ### Create an iOS/iPadOS or Android app protection policy
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **App protection policies**. This selection opens the **App protection policies** details, where you create new policies and edit existing policies.
 3. Select **Create policy** and select either **iOS/iPadOS** or **Android**. The **Create policy** pane is displayed.
 4. On the **Basics** page, add the following values:
@@ -128,8 +128,9 @@ When you create an app protection policy for iOS/iPadOS and Android apps, you fo
     > It can take time for app protection policies to apply to existing devices. End users will see a notification on the device when the app protection policy is applied. Apply your app protection policies to devices before applying condidtional access rules.
 
 End users can download the apps from the App store or Google Play. For more information, see:
-* [Managed work and school apps for Android](../user-help/use-managed-apps-on-your-device-android.md)
-* [What to expect when your iOS/iPadOS app is managed by app protection policies](../fundamentals/end-user-mam-apps-ios.md)
+* [Where to find work or school apps for iOS/iPadOS](../user-help/use-managed-apps-on-your-device-ios.md) 
+* [Where to find work or school apps for Android](../user-help/use-managed-apps-on-your-device-android.md)
+
 
 ## Change existing policies
 You can edit an existing policy and apply it to the targeted users. However, when you change existing policies, users who are already signed in to the apps won't see the changes for an eight-hour period.
@@ -194,7 +195,7 @@ In many organizations, it's common to allow end users to use both Intune Mobile 
 
 Because Intune app protection policies target a user's identity, the protection settings for a user can apply to both enrolled (MDM managed) and non-enrolled devices (no MDM). Therefore, you can target an Intune app protection policy to either Intune enrolled or unenrolled iOS/iPadOS and Android devices. You can have one protection policy for unmanaged devices in which strict data loss prevention (DLP) controls are in place, and a separate protection policy for MDM managed devices, where the DLP controls may be a little more relaxed. For more information how this works on personal Android Enterprise devices, see [App protection policies and work profiles](android-deployment-scenarios-app-protection-work-profiles.md).
 
-To create these policies, browse to **Apps** > **App protection policies** in the Intune console, and then select **Create policy**. You can also edit an existing app protection policy. To have the app protection policy apply to both managed and un-managed devices, navigate to the **Apps** page and confirm that **Target to apps on all device types** is set to **Yes**, the default value. If you want to granularly assign based on management state, set **Target to apps on all device types**  to **No**. 
+To create these policies, browse to **Apps** > **App protection policies** in the Intune admin center, and then select **Create policy**. You can also edit an existing app protection policy. To have the app protection policy apply to both managed and un-managed devices, navigate to the **Apps** page and confirm that **Target to apps on all device types** is set to **Yes**, the default value. If you want to granularly assign based on management state, set **Target to apps on all device types**  to **No**. 
 
 ### Device types
 
@@ -227,5 +228,5 @@ To see a full list of the policy settings for iOS/iPadOS and Android, select one
 [Monitor compliance and user status](app-protection-policies-monitor.md)
 
 ## See also
-* [Managed work and school apps for Android](../user-help/use-managed-apps-on-your-device-android.md)
-* [What to expect when your iOS/iPadOS app is managed by app protection policies](../fundamentals/end-user-mam-apps-ios.md)
+* [Where to find work or school apps for Android (user help)](../user-help/use-managed-apps-on-your-device-android.md)
+- [Where to find work or school apps for iOS/iPadOS (user help)](../user-help/use-managed-apps-on-your-device-ios.md) 

@@ -26,6 +26,7 @@ ms.custom: intune-classic; get-started
 ms.collection:
 - tier2
 - M365-identity-device-management
+- triage
 ---
 
 # Microsoft Intune service description
@@ -102,4 +103,4 @@ Finally, in the rare event there's any post-incident action needed to get your s
 
 Intune runs in the Azure portal, which supports the following languages: Chinese (Simplified), Chinese (Traditional), Czech, Dutch, English, French, German, Hungarian, Indonesian, Italian, Japanese, Korean, Polish, Portuguese (Brazil), Portuguese (Portugal), Russian, Spanish, Swedish, and Turkish.
 
-In addition to all the languages that the Azure portal supports, the Microsoft Endpoint Manager admin center and the user-facing mobile experiences support Danish, Greek, Finnish, Norwegian, and Romanian.
+In addition to all the languages that the Azure portal supports, the Microsoft Intune admin center and the user-facing mobile experiences support Danish, Greek, Finnish, Norwegian, and Romanian.

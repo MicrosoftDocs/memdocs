@@ -2,7 +2,7 @@
 # required metadata
 title: Encrypt Windows devices with BitLocker in Intune 
 titleSuffix: Microsoft Intune
-description: Use policy from Microsoft Endpoint Manager admin center to encrypt devices with the BitLocker built-in encryption method, and manage the recovery keys for those encrypted devices.
+description: Use policy from Microsoft Intune admin center to encrypt devices with the BitLocker built-in encryption method, and manage the recovery keys for those encrypted devices.
 keywords:
 author: brenduns
 ms.author: brenduns
@@ -63,7 +63,7 @@ Use one of the following procedures to create the policy type you prefer.
 
 ### Create an endpoint security policy for BitLocker
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Endpoint security** > **Disk encryption** > **Create Policy**.
 
@@ -89,7 +89,7 @@ Use one of the following procedures to create the policy type you prefer.
 
 ### Create a device configuration profile for BitLocker
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Devices** > **Configuration profiles** > **Create profile**.
 
@@ -217,11 +217,11 @@ Following are the relevant settings for each profile type:
 
 ### View details for recovery keys
 
-Intune provides access to the Azure AD blade for BitLocker so you can view BitLocker Key IDs and recovery keys for your Windows 10/11 devices, from within the Microsoft Endpoint Manager admin center. Support to view recovery keys can also [extend to your tenant-attached devices](#view-recovery-keys-for-tenant-attached-devices).
+Intune provides access to the Azure AD blade for BitLocker so you can view BitLocker Key IDs and recovery keys for your Windows 10/11 devices, from within the Microsoft Intune admin center. Support to view recovery keys can also [extend to your tenant-attached devices](#view-recovery-keys-for-tenant-attached-devices).
 
 To be accessible, the device must have its keys escrowed to Azure AD.
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Devices** > **All devices**.
 
@@ -250,7 +250,7 @@ All BitLocker recovery key accesses are audited. For more information on Audit L
 
 ### View recovery keys for tenant-attached devices
 
-When you’ve configured the tenant attach scenario, Microsoft Endpoint Manager can display recovery key data for tenant attached devices.
+When you’ve configured the tenant attach scenario, Microsoft Intune can display recovery key data for tenant attached devices.
 
 - To support the display of recovery keys for tenant attached devices, your Configuration Manager sites must run version 2107 or later. For sites that run 2107, you must install an update rollup to support Azure AD joined devices: See [KB11121541](../../configmgr/hotfix/2107/11121541.md).
 
@@ -276,7 +276,7 @@ For information about BitLocker deployments and requirements, see the [BitLocker
 
 #### To rotate the BitLocker recovery key
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Devices** > **All devices**.
 

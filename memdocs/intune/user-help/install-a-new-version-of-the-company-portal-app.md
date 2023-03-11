@@ -28,7 +28,7 @@ ms.reviewer: priyar
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
 ms.collection:
-- tier2
+- tier1
 ---
 
 # Update the Company Portal app  

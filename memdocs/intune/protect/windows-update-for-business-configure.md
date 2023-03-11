@@ -71,7 +71,7 @@ Use the following process to ensure Windows Update has processed your feature up
 
 #### Switch to feature updates policy
 
-1. In the Microsoft Endpoint Manager admin center, create a [feature updates policy](../protect/windows-10-feature-updates.md) that configures your desired Windows version, and assign it to applicable devices.
+1. In the Microsoft Intune admin center, create a [feature updates policy](../protect/windows-10-feature-updates.md) that configures your desired Windows version, and assign it to applicable devices.
 
    After the saved policy is assigned to devices, it will take a few minutes for Windows Update to process the policy.
 

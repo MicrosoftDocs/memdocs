@@ -27,7 +27,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier1
 - M365-identity-device-management
-  - highpri
+- highpri
 ---
 
 # Add groups to organize users and devices
@@ -35,7 +35,7 @@ ms.collection:
 Intune uses Azure Active Directory (Azure AD) groups to manage devices and users. As an Intune admin, you can set up groups to suit your organizational needs. Create groups to organize users or devices by geographic location, department, or hardware characteristics. Use groups to manage tasks at scale. For example, you can set policies for many users or deploy apps to a set of devices.
 
 > [!NOTE]
-> Default groups created from [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?linkid=2024339) are not security enabled. You must explicitly create security enabled Microsoft 365 groups in [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?linkid=2024339), the [Azure AD admin center](https://portal.azure.com/), or [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+> Default groups created from [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?linkid=2024339) are not security enabled. You must explicitly create security enabled Microsoft 365 groups in [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?linkid=2024339), the [Azure AD admin center](https://portal.azure.com/), or [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 You can add the following types of groups:
 
@@ -48,7 +48,7 @@ You can add the following types of groups:
 
 Use the following steps to create a new group.
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Groups** > **New group**:
 
    ![Screenshot of the Azure portal with New Group selected](./media/groups-add/groups-add-new.png)
@@ -60,7 +60,7 @@ Use the following steps to create a new group.
         > [!TIP]
         > The users and groups created can also be seen in the [Microsoft 365 admin center](https://admin.microsoft.com), Azure Active Directory admin center, and [Microsoft Intune in the Azure portal](https://go.microsoft.com/fwlink/?linkid=2090973). In your organization tenant, you can create and manage groups in all these areas.
         >
-        > If your primary role is device management, we recommend you use the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+        > If your primary role is device management, we recommend you use the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
     - **Microsoft 365**: Provides collaboration opportunities by giving members access to a shared mailbox, calendar, files, SharePoint site, and more. This option also lets you give people outside of your organization access to the group. For more information, see [Learn about Microsoft 365 Groups](https://support.office.com/article/learn-about-office-365-groups-b565caa1-5c40-40ef-9915-60fdb2d97fa2).
 
@@ -103,7 +103,7 @@ When assigning policies and apps in the admin center you can choose to assign to
 
 When assigning policies and applications to large groups such as **All users** and **All devices** you may choose to use **Filters**, so that you can dynamically control which devices the policy or app deployment should apply to.
 
-For more guidance on using Filters, see [Use filters when assigning your apps, policies, and profiles in Microsoft Endpoint Manager](../fundamentals/filters.md)
+For more guidance on using Filters, see [Use filters when assigning your apps, policies, and profiles in Microsoft Intune](../fundamentals/filters.md)
 
 
 ## See also

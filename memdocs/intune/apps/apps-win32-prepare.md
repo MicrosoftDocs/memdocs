@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/29/2022
+ms.date: 03/07/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -40,7 +40,7 @@ To use Win32 app management, be sure you meet the following criteria:
 
 ## Convert the Win32 app content
 
-Use the [Microsoft Win32 Content Prep Tool](https://go.microsoft.com/fwlink/?linkid=2065730) to pre-process Windows classic (Win32) apps. The tool converts application installation files into the *.intunewin* format. The tool also detects some of the attributes that Intune requires to determine the application installation state. After you use this tool on the app installer folder, you'll be able to create a Win32 app in the Microsoft Endpoint Manager admin center.
+Use the [Microsoft Win32 Content Prep Tool](https://go.microsoft.com/fwlink/?linkid=2065730) to pre-process Windows classic (Win32) apps. The tool converts application installation files into the *.intunewin* format. The tool also detects some of the attributes that Intune requires to determine the application installation state. After you use this tool on the app installer folder, you'll be able to create a Win32 app in the Microsoft Intune admin center.
 
 > [!IMPORTANT]
 > The [Microsoft Win32 Content Prep Tool](https://go.microsoft.com/fwlink/?linkid=2065730) zips all files and subfolders when it creates the *.intunewin* file. Be sure to keep the Microsoft Win32 Content Prep Tool separate from the installer files and folders, so that you don't include the tool or other unnecessary files and folders in your *.intunewin* file.
@@ -69,8 +69,8 @@ If you run `IntuneWinAppUtil.exe` from the command window without parameters, th
 
 |    **Example command**    |    **Description**    |
 |-------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    `IntuneWinAppUtil -h`    |    This command will show usage information for the tool.    |
-|    `IntuneWinAppUtil -c c:\testapp\v1.0 -s c:\testapp\v1.0\setup.exe -o c:\testappoutput\v1.0 -q`    |    This command will generate the *.intunewin* file from the specified source folder and setup file. For the MSI setup file, this tool will retrieve required information for Intune. If `-q` is specified, the command will run in quiet mode. If the output file already exists, it will be overwritten. Also, if the output folder doesn't exist, it will be created automatically.    |
+|    `IntuneWinAppUtil -h`    |    This command shows usage information for the tool.    |
+|    `IntuneWinAppUtil -c c:\testapp\v1.0 -s c:\testapp\v1.0\setup.exe -o c:\testappoutput\v1.0 -q`    |    This command generates the *.intunewin* file from the specified source folder and setup file. For the MSI setup file, this tool retrieves required information for Intune. If `-q` is specified, the command runs in quiet mode. If the output file already exists, it is overwritten. Also, if the output folder doesn't exist, it's created automatically.    |
 
 When you're generating an *.intunewin* file, put any files you need to reference into a subfolder of the setup folder. Then, use a relative path to reference the specific file you need. For example:
 

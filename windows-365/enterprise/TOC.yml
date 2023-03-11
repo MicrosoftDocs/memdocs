@@ -27,7 +27,7 @@ items:
     href: end-of-support.md
   - name: Customer permissions
     href: customer-permissions.md  
-  - name: Device configuration with MEM
+  - name: Device configuration with Intune
     href: device-configuration.md
   - name: What is Windows 365 Government
     href: introduction-windows-365-government.md
@@ -37,6 +37,8 @@ items:
       href: security.md
     - name: Encryption
       href: encryption.md
+    - name: ANC domain credential life cycle
+      href: azure-network-connection-domain-credential.md
   - name: Privacy and data
     href: privacy-personal-data.md
 - name: How-to guides
@@ -177,10 +179,14 @@ items:
           href: restore-overview.md
         - name: Configure restore points and users
           href: restore-configure.md
+        - name: Manually create restore points
+          href: create-manual-restore-point.md
         - name: Restore a single Cloud PC
           href: restore-single-cloud-pc.md
         - name: Bulk restore multiple Cloud PCs
           href: restore-bulk.md
+        - name: Share restore points to a storage account
+          href: share-restore-points-storage.md
       - name: End grace period
         href: end-grace-period.md
       - name: Digital forensics

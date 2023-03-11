@@ -85,4 +85,7 @@ The policy settings enforced in level 3 include all the policy settings recommen
 
 ## Next steps
 
-Apply [iOS/iPadOS personal device security configurations](ios-ipados-personal-device-security-configurations.md) or [iOS/iPadOS supervised device security configurations](ios-ipados-supervised-device-security-configurations.md).
+1. [Configure app configuration policies](ios-ipados-app-configuration-policies.md)
+2. 🡺 **Configure device compliance security policies** (*You are here*) 
+3. [Configure device security policies for personal devices](ios-ipados-personal-device-security-configurations.md)  
+4. [Configure device security policies for supervised devices](ios-ipados-supervised-device-security-configurations.md) 

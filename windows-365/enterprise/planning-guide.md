@@ -25,7 +25,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; get-started
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- tier2
 ---
 
 # Planning guide for Windows 365
@@ -55,7 +57,7 @@ Determine where your end users are physically located. Windows 365 can provide C
 
 ### Objective: Management of Cloud PCs
 
-You’ll manage your Cloud PC devices by using the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Your Cloud PCs are automatically enrolled during provisioning. Evaluate who will manage the Cloud PCs and what [permissions](role-based-access.md) should be given to different management groups.
+You’ll manage your Cloud PC devices by using the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Your Cloud PCs are automatically enrolled during provisioning. Evaluate who will manage the Cloud PCs and what [permissions](role-based-access.md) should be given to different management groups.
 
 **Task**: Map out which management groups will perform the configuration of the Cloud PC service, management of the Cloud PC device, and software distribution to the devices. Determine which Microsoft Endpoint Manager and Windows 365 permissions will be assigned to different groups to manage the devices.
 

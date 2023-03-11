@@ -26,7 +26,7 @@ Use this procedure to sign in to Desktop Analytics and configure it in your subs
 
 ## Initial onboarding
 
-1. Open the [Desktop Analytics portal](https://aka.ms/desktopanalytics) in the Microsoft Endpoint Manager admin center as a user with the **Global Admin** role. Select **Start**. Alternatively, on the Configuration Manager console, go to the **Software Library** workspace, select the **Desktop Analytics Servicing** node, and select **Plan deployments**.
+1. Open the [Desktop Analytics portal](https://aka.ms/desktopanalytics) in the Microsoft Intune admin center as a user with the **Global Admin** role. Select **Start**. Alternatively, on the Configuration Manager console, go to the **Software Library** workspace, select the **Desktop Analytics Servicing** node, and select **Plan deployments**.
 
 2. On the **Accept service agreement** page, review the service agreement, and select **Accept**.  
 

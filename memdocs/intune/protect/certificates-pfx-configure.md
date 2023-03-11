@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/17/2022
+ms.date: 03/08/2023
 ms.topic: how-to 
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -114,16 +114,19 @@ To authenticate a device with VPN, WiFi, or other resources, a device needs a ro
     > [!IMPORTANT]
     > For iOS/iPadOS certificate templates, go to the **Extensions** tab, update **Key Usage**, and confirm that **Signature is proof of origin** isn't selected.
 
-10. In **Security**, add the Computer Account for the server where you install the Certificate Connector for Microsoft Intune. Allow this account **Read** and **Enroll** permissions.
-11. Select **Apply** > **OK** to save the certificate template. Close the **Certificate Templates Console**.
-12. In the **Certification Authority** console, right-click **Certificate Templates** > **New** > **Certificate Template to Issue**. Choose the template that you created in the previous steps. Select **OK**.
-13. For the server to manage certificates for enrolled devices and users, use the following steps:
+10. In **Security**:
+    1. (Required): Add the Computer Account for the server where you install the Certificate Connector for Microsoft Intune. Allow this account **Read** and **Enroll** permissions.
+    1. (Optional but recommended): Remove the Domain Users group from the list of groups or user names allowed permissions on this template by selecting the **Domain Users** group and select *Remove*. Review the other entries in *Groups or user names* for permissions and applicability to your environment.
+
+12. Select **Apply** > **OK** to save the certificate template. Close the **Certificate Templates Console**.
+13. In the **Certification Authority** console, right-click **Certificate Templates** > **New** > **Certificate Template to Issue**. Choose the template that you created in the previous steps. Select **OK**.
+14. For the server to manage certificates for enrolled devices and users, use the following steps:
 
     1. Right-click the Certification Authority, choose **Properties**.
     2. On the security tab, add the Computer account of the server where you run the connector.
     3. Grant **Issue and Manage Certificates** and **Request Certificates** Allow permissions to the computer account.
 
-14. Sign out of the Enterprise CA.
+15. Sign out of the Enterprise CA.
 
 ## Download, install, and configure the Certificate Connector for Microsoft Intune
 
@@ -131,7 +134,7 @@ For guidance, see [Install and configure the Certificate Connector for Microsoft
 
 ## Create a trusted certificate profile
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select  and go to **Devices** > **Configuration profiles** > **Create profile**.
 
@@ -179,7 +182,7 @@ For guidance, see [Install and configure the Certificate Connector for Microsoft
 
 ## Create a PKCS certificate profile
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select  and go to **Devices** > **Configuration profiles** > **Create profile**.
 
@@ -197,7 +200,7 @@ For guidance, see [Install and configure the Certificate Connector for Microsoft
    - **Profile**: Select **PKCS certificate**. Or, select **Templates** > **PKCS certificate**.
 
    > [!NOTE]
-   > On devices with an Android Enterprise profile, certificates installed using a PKCS certificate profile are not visible on the device. To confirm successful certificate deployment, check the status of the profile in the Intune console.
+   > On devices with an Android Enterprise profile, certificates installed using a PKCS certificate profile are not visible on the device. To confirm successful certificate deployment, check the status of the profile in the Intune admin center.
 
 4. Select **Create**.
 

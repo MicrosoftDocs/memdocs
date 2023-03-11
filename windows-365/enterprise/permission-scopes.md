@@ -25,7 +25,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; get-started
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- tier2
 ---
 
 # Use Azure AD to access the Windows 365 APIs in Microsoft Graph
@@ -49,7 +51,7 @@ This article:
 
 To register an app to use Microsoft Graph API:
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://admin.microsoft.com/) using administrative credentials. As appropriate, you may use:
+1. Sign in to the [Microsoft Intune admin center](https://admin.microsoft.com/) using administrative credentials. As appropriate, you may use:
     - The tenant admin account.
     - A tenant user account with the **Users can register applications setting** enabled.
 2. Select **All services** > **Azure Active Directory** > **App registrations**.

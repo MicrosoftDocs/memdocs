@@ -65,7 +65,7 @@ To create a new work profile passcode, use the Reset Passcode action. This actio
 
 ## Reset a passcode
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with any of the following roles: Azure Active Directory Global Admin, Azure Active Directory Intune Service Admin (also known as Intune Administrator), Helpdesk Operator, or Role Administrator.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with any of the following roles: Azure Active Directory Global Admin, Azure Active Directory Intune Service Admin (also known as Intune Administrator), Helpdesk Operator, or Role Administrator.
 2. Select **Devices**, and then select **All devices**.
 3. From the list of devices you manage, select a device, and choose **Reset passcode**.
 
@@ -86,6 +86,9 @@ The temporary passcode must be entered on the device. The temporary passcode for
 ## Remove iOS/iPadOS passcodes
 
 Instead of being reset, passcodes are removed from iOS/iPadOS devices. If there's a passcode compliance policy set, the device will prompt the user to set a new passcode in Settings.
+
+> [!IMPORTANT]
+> If the Remove passcode action failed, it's possible that the wrong unlock token is stored in Intune and the device will need to be wiped in order to regain access to it. 
 
 ## Troubleshooting remote lock failures
 

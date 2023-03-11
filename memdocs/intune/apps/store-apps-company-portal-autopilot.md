@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/16/2021
+ms.date: 03/06/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -56,11 +56,11 @@ For Windows 10 Autopilot provisioned devices, it is recommended that you associa
 1. Search for and then select the **Company Portal** app.
 2. Set the **License type** to **Offline**.
 3. Select **Get the app** to acquire and add the offline Company Portal app to your inventory.
-   In order for the app to be listed in Intune, you must either wait for the sync schedule to complete or do a manual sync from Microsoft Endpoint Manager admin center.
+   In order for the app to be listed in Intune, you must either wait for the sync schedule to complete or do a manual sync from Microsoft Intune admin center.
 
 ## Manually sync Company Portal app with Intune
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with your admin account.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with your admin account.
 2. Select **Tenant administration** > **Connectors and tokens** > **Microsoft Store for Business**.
 3. Click **Enable**.
 4. If you haven't already done so, click the link to sign up for the Microsoft Store for Business and associate your account as detailed previously.
@@ -69,7 +69,7 @@ For Windows 10 Autopilot provisioned devices, it is recommended that you associa
 
 ## Assign the Company Portal app
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with your admin account.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with your admin account.
 2. Select **Apps** > **Windows**.
 3. From the list of Windows apps, select **Company Portal (Offline)**.
 4. To [Assign](apps-deploy.md) the Company Portal app as a required app to your selected device groups, select **Properties** > **Edit** (next to **Assignments**) > **Add Group** (below **Required**) and then select a device group to assign the app. 

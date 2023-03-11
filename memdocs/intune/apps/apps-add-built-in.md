@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/29/2022
+ms.date: 03/07/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -27,7 +27,7 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection:
-- tier2
+- tier1
 - M365-identity-device-management
 ---
 
@@ -35,7 +35,7 @@ ms.collection:
 
 The *built-in* app type makes it easy for you to assign curated managed apps, such as Microsoft 365 apps and third-party apps, to iOS/iPadOS and Android devices. You can assign specific apps for this app type, such as Excel, OneDrive, Outlook, Skype, and others. After you add an app, the app type is displayed as either *Built-in iOS app* or *Built-in Android app*. By using the built-in app type, you can choose which of these apps to publish to device users.
 
-In earlier versions of the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), Intune provided several default managed Microsoft 365 apps, such as Outlook and OneDrive. The app types for these managed apps were tagged as *Managed iOS Store App* or *Managed Android App*. Instead of using these app types, we recommend that you use the built-in app type. By using the built-in app type, you have the additional flexibility to edit and delete Microsoft 365 apps.
+In earlier versions of the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), Intune provided several default managed Microsoft 365 apps, such as Outlook and OneDrive. The app types for these managed apps were tagged as *Managed iOS Store App* or *Managed Android App*. Instead of using these app types, we recommend that you use the built-in app type. By using the built-in app type, you have the additional flexibility to edit and delete Microsoft 365 apps.
 
 >[!NOTE]
 >Default Microsoft 365 apps that are tagged as *Managed iOS Store* and *Managed Android App* are removed from the app list when all assignments are deleted.
@@ -44,7 +44,7 @@ In earlier versions of the [Microsoft Endpoint Manager admin center](https://go.
 
 To add a built-in app to your available apps in Microsoft Intune, do the following:
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All apps** > **Add**.
 3. In the **Select app type** pane, under the available **Other** types, select **Built-In app**.
 4. Click **Select**. The **Add app** steps are displayed.

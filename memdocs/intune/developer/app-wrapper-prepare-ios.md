@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/16/2021
+ms.date: 03/06/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -264,7 +264,7 @@ Run the IntuneMAMPackager with the plist as the sole argument:
 
 After the wrapping process completes, the message "The application was successfully wrapped" will be displayed. If an error occurs, see [Error messages](#error-messages-and-log-files) for help.
 
-The wrapped app is saved in the output folder you specified previously. You can upload the app to the Intune admin console and associate it with a mobile application management policy.
+The wrapped app is saved in the output folder you specified previously. You can upload the app to the Intune admin center and associate it with a mobile application management policy.
 
 > [!IMPORTANT]
 > When uploading a wrapped app, you can try to update an older version of the app if an older (wrapped or native) version was already deployed to Intune. If you experience an error, upload the app as a new app and delete the older version.
@@ -275,7 +275,7 @@ You can now deploy the app to your user groups and target app protection policie
 
 The main scenarios in which you would need to rewrap your applications are as follows:
 
-* The application itself has released a new version. The previous version of the app was wrapped and uploaded to the Intune console.
+* The application itself has released a new version. The previous version of the app was wrapped and uploaded to the Intune admin center.
 * The Intune App Wrapping Tool for iOS has released a new version that enables key bug fixes, or new, specific Intune application protection policy features. This happens after 6-8 weeks through GitHub repo for the [Microsoft Intune App Wrapping Tool for iOS](https://github.com/msintuneappsdk/intune-app-wrapping-tool-ios).
 
 For iOS/iPadOS, while it is possible to wrap with different cert/provisioning profile than the original used to sign the app, if the entitlements specified in the app are not included in the new provisioning profile, wrapping will fail. Using the "-e" command-line option, which removes any missing entitlements from the app, to force wrapping to not fail in this scenario can cause broken functionality in the app.
@@ -429,7 +429,7 @@ Use the following security and privacy best practices when you use the App Wrapp
 
 - The signing certificate, provisioning profile, and the line-of-business app you specify must be on the same macOS machine that you use to run the app wrapping tool. If the files are on a UNC path, ensure that these are accessible from the macOS machine. The path must be secured via IPsec or SMB signing.
 
-    The wrapped application imported into the admin console should be on the same computer that you run the tool on. If the file is on a UNC path, ensure that it is accessible on the computer running the admin console. The path must be secured via IPsec or SMB signing.
+    The wrapped application imported into the admin center should be on the same computer that you run the tool on. If the file is on a UNC path, ensure that it is accessible on the computer running the admin center. The path must be secured via IPsec or SMB signing.
 
 - The environment where the App Wrapping Tool is downloaded from the GitHub repository needs to be secured via IPsec or SMB signing.
 
