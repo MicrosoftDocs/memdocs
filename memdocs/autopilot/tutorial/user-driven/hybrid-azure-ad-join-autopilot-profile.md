@@ -47,7 +47,7 @@ To create a user-driven Azure AD join Autopilot profile, follow the below steps:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-1. In the **Home** screen, select **Devices**.
+1. In the **Home** screen, select **Devices** in the left hand pane.
 
 1. In the **Devices | Overview** screen, under **By platform**, select **Windows**.
 
@@ -57,7 +57,13 @@ To create a user-driven Azure AD join Autopilot profile, follow the below steps:
 
 1. In the **Windows Autopilot deployment profiles** screen, select **Create Profile** > **Windows PC**.
 
-1. In the **Basics** page of the **Create profile** screen, type a **Name** and optional **Description** for the Autopilot profile, and then select **Next**.
+1. The **Create profile** screen will open. In the **Basics** page:
+
+   1. Next to **Name**, enter a name for the Autopilot profile.
+
+   1. Next to **Description**, enter a description.
+
+   1. Select **Next**.
 
     > [!NOTE]
     >
@@ -95,17 +101,19 @@ To create a user-driven Azure AD join Autopilot profile, follow the below steps:
 
 1. Once the options in the **Out-of-box experience (OOBE)** page are configured as desired, select **Next**.
 
-1. On the **Assignments** page, under **Included groups**, choose **Add groups**.
+1. In the **Assignments** page:
 
-1. In the **Select groups to include** page, choose the device group(s) to assign this Autopilot profile to. This device group(s) is normally the device group(s) created in the step [Create device group](hybrid-azure-ad-join-device-group.md). Once done, select **Select**.
+   1. Under **Included groups**, choose **Add groups**.
 
-    > [!NOTE]
-    >
-    > Make sure to add the correct device groups under **Included groups** and not under **Excluded groups**. Accidentally adding the desired device groups to assign the Autopilot profile to under **Excluded groups** will result in those devices being excluded and they won't receive the Autopilot profile.
+      > [!NOTE]
+      >
+      > Make sure to add the correct device groups under **Included groups** and not under **Excluded groups**. Accidentally adding the desired device groups under **Excluded groups** will result in those devices being excluded and they won't receive the Autopilot profile.
 
-1. In the **Assignments** page, verify the correct device group(s) appear under **Included groups** > **Groups** and then select **Next**.
+   1. In the **Select groups to include** window that opens, select the groups that the Autopilot profile should be assigned to. This device group(s) is normally the device group(s) created in the step [Create device group](azure-ad-join-device-group.md). Once done, select **Select**.
 
-1. On the **Review + Create** page, review and verify that all of the settings are set as desired, and then choose **Create** to create the Autopilot profile.
+   1. Under **Included groups** > **Groups**, ensure the correct group(s) are selected, and then select Next.
+
+1. In the **Review + Create** page, review and verify that all of the settings are set as desired, and then choose **Create** to create the Autopilot profile.
 
 For more information on creating and assigning Autopilot profiles, see the following articles:
 

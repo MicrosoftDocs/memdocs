@@ -29,65 +29,77 @@ To configure and assign the Autopilot Enrollment Status Page (ESP) so that it sh
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-1. In the **Home** screen, select **Devices**.
+1. In the **Home** screen, select **Devices** in the left pane.
 
 1. In the **Devices | Overview** screen, under **By platform**, select **Windows**.
 
-1. In the **Windows | Windows devices** screen, select **Windows enrollment** > **General: Enrollment Status Page**.
+1. In the **Windows | Windows devices** screen, select **Windows enrollment**.
 
-1. In the **Enrollment Status Page**, select **Create**.
+1. Under **General**, select **Enrollment Status Page**.
 
-1. In the **Basics** page of the **Create profile** screen, enter a **Name** and **Description** for the ESP profile, and then select **Next**.
+1. In the **Enrollment Status Page** screen that opens, select **Create**.
+
+1. The **Create profile** screen will open. In the **Basics** page:
+
+   1. Next to **Name**, enter a name for the ESP profile.
+
+   1. Next to **Description**, enter a description.
+
+   1. Select **Next**.
 
 1. In the **Settings** page, toggle the option **Show app and profile configuration progress** to **Yes**.
 
-1. After toggling the option **Show app and profile configuration progress** to **Yes**, several new options will appear. Configure these options based on the desired behavior for the ESP:
+   1. After toggling the option **Show app and profile configuration progress** to **Yes**, several new options will appear. Configure these options based on the desired behavior for the ESP:
 
-   - **Show an error when installation takes longer than specified number of minutes**: The default time-out is 60 minutes. Enter a higher value if you think more time is needed to install apps on the devices.
+      - **Show an error when installation takes longer than specified number of minutes**: The default time-out is 60 minutes. Enter a higher value if you think more time is needed to install apps on the devices.
 
-   - **Show custom message when time limit or error occur**:
-     - **No**: The default message is shown to users when an error occurs. That message is: **Setup could not be completed. Please try again or contact your support person for help.**
-     - **Yes**: A custom message is shown to users when an error occurs. Enter a custom message in the provided text box.  
+      - **Show custom message when time limit or error occur**:
+        - **No**: The default message is shown to users when an error occurs. That message is: **Setup could not be completed. Please try again or contact your support person for help.**
+        - **Yes**: A custom message is shown to users when an error occurs. Enter a custom message in the provided text box.
 
-   - **Turn on log collection and diagnostics page for end users**:  
-     - **No**: The collect logs button isn't shown to users when an installation error occurs. The Windows Autopilot diagnostics page isn't shown on devices running Windows 11.  
-     - **Yes**: The collect logs button is shown to users when an installation error occurs. The Windows Autopilot diagnostics page is shown on devices running Windows 11. Logs and diagnostics may aid with troubleshooting. For this reason, it's recommended to enable this option.
+      - **Turn on log collection and diagnostics page for end users**:  
+        - **No**: The collect logs button isn't shown to users when an installation error occurs. The Windows Autopilot diagnostics page isn't shown on devices running Windows 11.  
+        - **Yes**: The collect logs button is shown to users when an installation error occurs. The Windows Autopilot diagnostics page is shown on devices running Windows 11. Logs and diagnostics may aid with troubleshooting. For this reason, it's recommended to enable this option.
 
-   - **Only show page to devices provisioned by out-of-box experience (OOBE)**:
-     - **No**: The ESP is shown on all Intune-managed and co-managed devices that go through the out-of-box experience (OOBE), and to the first user that signs in to each device. Subsequent users who sign in won't see the ESP.
-     - **Yes**: The ESP is only shown on devices that go through the out-of-box experience (OOBE).
+      - **Only show page to devices provisioned by out-of-box experience (OOBE)**:
+        - **No**: The ESP is shown on all Intune-managed and co-managed devices that go through the out-of-box experience (OOBE), and to the first user that signs in to each device. Subsequent users who sign in won't see the ESP.
+        - **Yes**: The ESP is only shown on devices that go through the out-of-box experience (OOBE).
 
-   - **Block device use until all apps and profiles are installed**:
-     - **No**: Users can leave the ESP before Intune is finished setting up the device.
-     - **Yes**: Users can't leave the ESP until Intune is done setting up the device. Enabling this option unlocks the following additional options:  
+      - **Block device use until all apps and profiles are installed**:
+        - **No**: Users can leave the ESP before Intune is finished setting up the device.
+        - **Yes**: Users can't leave the ESP until Intune is done setting up the device. Enabling this option unlocks the following additional options:  
 
-       - **Allow users to reset device if installation error occurs**:  
-         - **No**: The ESP doesn't give users the option to reset theirs devices when an installation fails.  
-         - **Yes**: The ESP gives users the option to reset their devices when an installation fails.  
+          - **Allow users to reset device if installation error occurs**:  
+            - **No**: The ESP doesn't give users the option to reset theirs devices when an installation fails.  
+            - **Yes**: The ESP gives users the option to reset their devices when an installation fails.  
 
-       - **Allow users to use device if installation error occurs**:
-         - **No**: The ESP doesn't give users the option to bypass the ESP when an installation fails.  
-         - **Yes**: The ESP gives users the option to bypass the ESP and use their devices when an installation fails.
+          - **Allow users to use device if installation error occurs**:
+            - **No**: The ESP doesn't give users the option to bypass the ESP when an installation fails.  
+            - **Yes**: The ESP gives users the option to bypass the ESP and use their devices when an installation fails.
 
-       - **Block device use until these required apps are installed if they are assigned to the user/device**:  
-         - **All**: All assigned apps must be installed before users can use their devices.  
-         - **Selected**: Selected apps must be installed before users can use their devices. After enabling this option, select **Select apps** to select the managed apps from Intune that are required to be installed before users can use their device.
+          - **Block device use until these required apps are installed if they are assigned to the user/device**:  
+            - **All**: All assigned apps must be installed before users can use their devices.  
+            - **Selected**: Selected apps must be installed before users can use their devices. After enabling this option, select **Select apps** to select the managed apps from Intune that are required to be installed before users can use their device.
 
-1. Once the different ESP options under the **Settings** page have been configured as desired, select **Next**.
+   1. Once the different ESP options under the **Settings** page have been configured as desired, select **Next**.
 
-1. In the **Assignments** page, select **Add groups**.
+1. In the **Assignments** page:
 
-1. In the **Select groups to include** pane, select the device group(s) to target the ESP profile. The device group(s) selected would normally be the device group(s) created in the **Create device group** step. After selecting the device group, select **Select**.
+   1. Under **Included groups**, select **Add groups**.
+
+   1. In the **Select groups to include** window that opens, select the device group(s) to target the ESP profile. The device group(s) selected would normally be the device group(s) created in the **Create device group** step.
+
+   1. After selecting the device group, select **Select** to close the **Select groups to include** window.
 
     > [!TIP]
     >
     > After selecting the device group(s), you can select the **Edit filter** option on each device group added to the assignment to further refine what devices are targeted for the ESP profile. For example, this can be useful if you want to exclude some of the devices that are members in the device group(s) selected.
 
+   1. Select **Next**.  
+
     > [!NOTE]
     >
     > ESPs are assigned to device groups and not directly to individual devices. To assign an ESP to a specific device, the device must be a member of a device group that has an ESP assigned to it.
-
-1. Select **Next**.  
 
 1. In the **Scope tags** page, select **Next**.
 
