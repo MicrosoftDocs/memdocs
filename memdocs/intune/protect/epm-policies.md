@@ -57,7 +57,7 @@ During the public preview, you can use EPM for free. To enable support for your 
 
 2. Review the available information for EPM, and when ready, select **Activate**. Intune begins to provision EPM for your tenant, which includes making the EPM component available for your devices. These components are enabled on devices when they receive a *Windows elevation settings policy*.
 
-   :::image type="content" source="./media/epm-policy/enable-epm.png" alt-text="Activate EPM for use during the public preview.":::
+   :::image type="content" source="./media/epm-policies/enable-epm.png" alt-text="Activate EPM for use during the public preview.":::
 
 
 ## Windows elevation settings policy
@@ -107,7 +107,7 @@ A device must have an elevation settings policy that enables support for EPM bef
 
 4. On the **Scope tags** page, select any desired scope tags to apply, then select **Next**.
 
-5. For **Assignments**, select the groups that receive the policy. For more information on assigning profiles, see [Assign user and device profiles](device-profile-assign.md).
+5. For **Assignments**, select the groups that receive the policy. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
 
    Select **Next**.
 
@@ -136,7 +136,7 @@ In addition to this policy, a device must also be assigned a Windows elevation s
 
 3. On **Configuration settings**, add a rule for each file that this policy manages. When you create a new policy, the policy starts includes a blank rule with an elevation type of *User confirmed* and no rule name. Start by configuring this rule, and later you can select **Add** to add additional rules to this policy. Each new rule you add has an elevation type of User confirmed, which can be changed when you configure the rule.
 
-   :::image type="content" source="./media/epm-policies/new-elevation-rules-policy.png" alt-text="Image of the admin center UI for selecting an elevation rules policy.":::
+   :::image type="content" source="./media/epm-policies/new-elevation-rules-policy.png" alt-text="Image from the admin center UI of a new elevation rules policy.":::
 
    To configure a rule, select **Edit instance** to open its Rule properties page, and then configure the following:
 
