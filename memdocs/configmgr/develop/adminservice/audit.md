@@ -1,7 +1,7 @@
 ---
-title: How to view authorization failure message in adminstration service
+title: How to view authorization failure message in administration service
 titleSuffix: Configuration Manager
-description: Learn how to audit authorization failure message in adminstration service.
+description: Learn how to audit authorization failure message in administration service.
 ms.date: 03/30/2023
 ms.prod: configuration-manager
 ms.topic: how-to
@@ -10,7 +10,7 @@ ms.author: banreetkaur
 manager: sunitashaw
 ---
 
-# How to view authorization failure message in adminstration service.
+# How to view authorization failure message in administration service.
 
 *Applies to version 2303 or later.*
 
@@ -20,127 +20,28 @@ These messages are shown in 'All Status Message' at 'Status Message Queries' in 
 
 With the audit messages we intend to avoid inconvenience of log files rollback. Details about the user, resource access attempts and the number of attempts for all the authorized requests made by user in a day are available. You can also audit read operations for HTTPS requests and for cloud-initiated operations. This is to help admins to scope permission and roles of users while also determining if there are any malicious users.
 
-Steps to view the audit messages: 
-- Navigate to Monitoring on the console.
-
-2.	Select Status Message Queries in the System Status Folder  
-3.	From the list of all queries, right click on the "All Status Messages" query. 
-4.	From the pop up, click on Show Messages
-
-
 > [!NOTE]
-> The examples in this article all use the FQDN of the server that hosts the SMS Provider role. If you access the administration service remotely through a CMG, use the CMG endpoint instead of the SMS Provider FQDN. For more information, see [Enable internet access](set-up.md#enable-internet-access).
-## Direct query
+> All unauthorized requests are aggregated for 24 hours before being sent to the status message viewer. The status message viewer includes a count of the total number of unauthorized requests received by administration service a day before.
 
-There are several ways that you can directly query the administration service:
+## Steps to view the audit messages: 
+- Navigate to Monitoring on the console.
+- Select Status Message Queries in the System Status Folder.
+- From the list of all queries, right click on the "All Status Messages" query.
+- From the pop up, click on Show Messages.
 
-- Web browser
-- PowerShell
-- A third-party tool to send HTTPS GET or PUT requests to the web service
+:::image type="content" source="media/13022894-audit-admin-service-show-messages.png" alt-text="Pop up with Show messages option":::
 
-The next sections cover the first two methods.
+- Select the duration of status messages from the “All Status Messages” pop-up window.
 
-> [!IMPORTANT]
-> The administration service class names are case-sensitive. Make sure to use the proper capitalization. For example, `SMS_Site`.
-### Web browser
+:::image type="content" source="media/13022894-audit-admin-service-duration-of-status-messages.png" alt-text="Wizard showing option to select duration of status message":::
 
-You can use a web browser to easily query the administration service. When you specify a query URI as the browser's URL, the administration service processes the GET request, and returns the result in JSON format. Some web browsers may not display the result in an easy to read format.
+- After clicking the OK button all the messages will be shown in Status Messages viewer
+- You can then filter messages related to only Unauthorized Users. 
+- Click on funnel icon on top bar to show "Filter Status Message" popup.
+- In Filter Status Messages popup fill Message ID as **11618**
 
-<!-- screenshot -->
+:::image type="content" source="media/13022894-audit-admin-service-filter-status-message.png" alt-text="Wizard showing option to filter status messages.":::
 
-### PowerShell
+- All the messages related to unauthorized users request will be filtered out with message description. Details about the user and their action will be shown.
 
-Make direct calls to this service with the Windows PowerShell cmdlet [Invoke-RestMethod](/powershell/module/microsoft.powershell.utility/invoke-restmethod).
-
-For example:
-
-```powershell
-Invoke-RestMethod -Method 'Get' -Uri "https://SMSProviderFQDN/AdminService/wmi/SMS_Site" -UseDefaultCredentials
-```
-
-This command returns the following output:
-
-```output
-@odata.context                                                value
---------------                                                -----
-https://SMSProviderFQDN/AdminService/wmi/$metadata#SMS_Site   {@{@odata.etag=FC1; __LAZYPROPERTIES=System.Objec...
-```
-
-The following example drills down to more specific values:
-
-```powershell
-((Invoke-RestMethod -Method 'Get' -Uri "https://SMSProviderFQDN/AdminService/wmi/SMS_Site" -UseDefaultCredentials).value).Version
-```
-
-The output of this command is the specific version of the site: `5.00.8968.1000`
-
-#### Call PowerShell from a task sequence
-
-You can use the **Invoke-RestMethod** cmdlet in a PowerShell script from the **Run PowerShell Script** task sequence step. This action lets you query the administration service during a task sequence.
-
-For more information, see [Task sequence steps - Run PowerShell Script](../../osd/understand/task-sequence-steps.md#BKMK_RunPowerShellScript).
-
-## Power BI Desktop
-
-You can use Power BI Desktop to query data in Configuration Manager via the administration service. For more information, see [What is Power BI Desktop?](/power-bi/desktop-what-is-desktop)
-
-1. In Power BI Desktop, in the ribbon, select **Get Data**, and select **OData feed**.
-
-1. For the **URL**, specify the administration service route. For example, `https://smsprovider.contoso.com/AdminService/wmi/`
-
-1. Choose **Windows Authentication**.
-
-1. In the **Navigator** window, select the items to use in your Power BI dashboard or report.
-
-[![Screenshot of Navigator window in Power BI Desktop](media/powerbi-desktop-navigator.png)](media/powerbi-desktop-navigator.png#lightbox)
-
-## Example queries
-
-### Get more details about a specific device
-
-`https://<ProviderFQDN>/AdminService/wmi/SMS_R_System(<ResourceID>)`
-
-For example: `https://smsprovider.contoso.com/AdminService/wmi/SMS_R_System(16777219)`
-
-### v1 Device class examples
-
-- Get all devices: `https://<ProviderFQDN>/AdminService/v1.0/Device`
-
-- Get single device: `https://<ProviderFQDN>/AdminService/v1.0/Device(<ResourceID>)`
-
-- Run CMPivot on a device:
-
-  ```rest
-  Verb: POST
-  URI: https://<ProviderFQDN>/AdminService/v1.0/Device(<ResourceID>)/AdminService.RunCMPivot
-  Body: {"InputQuery":"<CMPivot query to run>"}
-  ```
-
-- See CMPivot job result:
-
-  ```rest
-  Verb: GET
-  URI: https://<ProviderFQDN>/AdminService/v1.0/Device(<ResourceID>)/AdminService.CMPivotResult(OperationId=<Operation ID of the CM Pivot job>)
-  ```
-
-- See which collections a device belongs to: `https://<ProviderFQDN>/AdminService/v1.0/Device(16777219)/ResourceCollectionMembership?$expand=Collection&$select=Collection`
-
-### Filter results with startswith
-
-This example URI only shows collections whose names start with `All`.
-
-`https://<ProviderFQDN>/AdminService/wmi/SMS_Collection?$filter=startswith(Name,'All') eq true`
-
-### Run a static WMI method
-
-This example invokes the **GetAdminExtendedData** method on the **SMS_AdminClass** that takes parameter named **Type** with value `1`.
-
-```rest
-Verb: Post
-URI: https://<ProviderFQDN>/AdminService/wmi/SMS_Admin.GetAdminExtendedData
-Body: {"Type":1}
-```
-
-## Next steps
-
-[Custom properties for devices](custom-properties.md)
+:::image type="content" source="media/13022894-audit-admin-service-show-filtered-messages.png" alt-text="Wizard showing filtered status messages.":::
