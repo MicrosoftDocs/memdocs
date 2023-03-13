@@ -23,7 +23,7 @@ ms.reviewer: dougeby
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: intune-classic; get-started; seodec18
+ms.custom: get-started; seodec18
 ms.collection:
 - tier1
 - M365-identity-device-management

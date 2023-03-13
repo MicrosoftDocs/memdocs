@@ -68,13 +68,17 @@ Although not required, configuring hybrid Azure AD join for AD FS enables a fast
 
 - The Intune Connector requires the [same endpoints as Intune](../intune/fundamentals/intune-endpoints.md).
 
-## Set up Windows automatic enrollment
+## Set up Windows automatic MDM enrollment
 
 1. Sign in to Azure, in the left pane, select **Azure Active Directory** > **Mobility (MDM and MAM)** > **Microsoft Intune**.
 
 2. Make sure users who deploy Azure AD-joined devices by using Intune and Windows are members of a group included in **MDM User scope**.
 
+<!-- Commenting out image since screenshot incorrectly shows the MDM user scope option set to None instead of Some or All
+
     ![The Mobility (MDM and MAM) Configure pane.](./media/windows-autopilot-hybrid/auto-enroll-scope.png)
+
+-->
 
 3. Use the default values in the **MDM Terms of use URL**, **MDM Discovery URL**, and **MDM Compliance URL** boxes, and then select **Save**.
 
@@ -129,7 +133,12 @@ Before beginning the installation, make sure that all of the [Intune connector s
 
 ### Install steps
 
-1. Turn off IE Enhanced Security Configuration. By default Windows Server has Internet Explorer Enhanced Security Configuration turned on. If you're unable to sign in to the Intune Connector for Active Directory, then turn off IE Enhanced Security Configuration for the Administrator. [How to turn off Internet Explorer enhanced security configuration](/archive/blogs/chenley/how-to-turn-off-internet-explorer-enhanced-security-configuration).
+1. Turn off Internet Explorer Enhanced Security Configuration. By default Windows Server has Internet Explorer Enhanced Security Configuration turned on. If you're unable to sign in to the Intune Connector for Active Directory, then turn off Internet Explorer Enhanced Security Configuration for the Administrator.  To turn off Internet Explorer Enhanced Security Configuration:
+
+   1. On the server where the Intune Connector will be installed, open **Server Manager**.
+   2. In the left pane of Server Manager, select **Local Server**.
+   3. In the right **PROPERTIES** pane of Server Manager, select the **On** or **Off** link next to **IE Enhanced Security Configuration**.
+   4. In the **Internet Explorer Enhanced Security Configuration** window, select **Off** under **Administrators:**, and then select **OK**.
 
 2. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows** > **Windows enrollment** > **Intune Connector for Active Directory** > **Add**.
 
@@ -137,7 +146,7 @@ Before beginning the installation, make sure that all of the [Intune connector s
 
 4. Open the downloaded Connector setup file, *ODJConnectorBootstrapper.exe*, to install the Connector.
 
-5. At the end of the setup, select **Configure**.
+5. At the end of the setup, select **Configure Now**.
 
 6. Select **Sign In**.
 
@@ -156,7 +165,7 @@ After installing the Intune Connector, it will start logging in the **Event View
 
 > [!NOTE]
 >
-> The Intune Connector originally logged in the **Event Viewer** directly under **Applications and Services Logs** in a log called **ODJ Connector Service**. However, logging for the Intune Connector has since moved to the path **Applications and Services Logs** > **Microsoft** > **Intune** > **ODJConnectorService**. If you find that the **ODJ Connector Service** log at the original location is empty or not updating, please check the new path location instead.
+> The Intune Connector originally logged in the **Event Viewer** directly under **Applications and Services Logs** in a log called **ODJ Connector Service**. However, logging for the Intune Connector has since moved to the path **Applications and Services Logs** > **Microsoft** > **Intune** > **ODJConnectorService**. If you find that the **ODJ Connector Service** log at the original location is empty or not updating, check the new path location instead.
 
 ### Configure web proxy settings
 
@@ -188,7 +197,7 @@ Select one of the following ways to enroll your Autopilot devices.
 
 ### Register Autopilot devices that are already enrolled
 
-1. Create an Autopilot deployment profile with **Convert all targeted devices to Autopilot** set to **Yes**.
+1. Create an Autopilot deployment profile with the setting **Convert all targeted devices to Autopilot** set to **Yes**.
 
 2. Assign the profile to a group that contains the members that you want to automatically register with Autopilot.
 
@@ -220,11 +229,11 @@ After your Autopilot devices are *enrolled*, they're displayed in four places:
 After your Autopilot devices are enrolled, their names become the hostname of the device. By default, the hostname begins with *DESKTOP-*.
 A device object is pre-created in Azure AD once a device is registered in Autopilot. When a device goes through a hybrid Azure AD deployment, by design, another device object is created resulting in duplicate entries.
 
-## Supported BYO VPNs
+## BYO VPNs
 
-Here's a list of VPN clients that are known to be tested and validated:
+The following is a list of VPN clients that have been tested and validated:
 
-### Supported clients
+### VPN clients
 
 - In-box Windows VPN client
 - Cisco AnyConnect (Win32 client)
@@ -235,7 +244,12 @@ Here's a list of VPN clients that are known to be tested and validated:
 - SonicWall (Win32 client)
 - FortiClient VPN (Win32 client)
 
-### Not supported clients
+> [!NOTE]
+> The above above list of VPN clients isn't a comprehensive list of all VPN clients that work with Autopilot. Contact the respective VPN vendor regarding compatibility and supportability with Autopilot or regarding any issues with using a VPN solution with Autopilot.
+
+### Not supported VPN clients
+
+The following VPN solutions are known not to work with Autopilot and therefore aren't supported for use with Autopilot:
 
 - UWP-based VPN plug-ins
 - Anything that requires a user cert
@@ -252,7 +266,7 @@ Autopilot deployment profiles are used to configure the Autopilot devices.
 
 2. On the **Basics** page, type a **Name** and optional **Description**.
 
-3. If you want all devices in the assigned groups to automatically convert to Autopilot, set **Convert all targeted devices to Autopilot** to **Yes**. All corporate owned, non-Autopilot devices in assigned groups will register with the Autopilot deployment service. Personally owned devices won't be converted to Autopilot. Allow 48 hours for the registration to be processed. When the device is unenrolled and reset, Autopilot will enroll it. After a device is registered in this way, disabling this option or removing the profile assignment won't remove the device from the Autopilot deployment service. You must instead [remove the device directly](add-devices.md#delete-autopilot-devices).
+3. If you want all devices in the assigned groups to automatically register to Autopilot, set **Convert all targeted devices to Autopilot** to **Yes**. All corporate owned, non-Autopilot devices in assigned groups will register with the Autopilot deployment service. Personally owned devices won't be registered to Autopilot. Allow 48 hours for the registration to be processed. When the device is unenrolled and reset, Autopilot will enroll it. After a device is registered in this way, disabling this setting or removing the profile assignment won't remove the device from the Autopilot deployment service. You must instead [remove the device directly](add-devices.md#delete-autopilot-devices).
 
 4. Select **Next**.
 
@@ -274,7 +288,9 @@ Autopilot deployment profiles are used to configure the Autopilot devices.
 
 13. Select **Next** > **Create**.
 
-It takes about 15 minutes for the device profile status to change from *Not assigned* to *Assigning* and, finally, to *Assigned*.
+> [!NOTE]
+>
+>Intune will periodically check for new devices in the assigned groups, and then begin the process of assigning profiles to those devices. Due to several different factors involved in the process of Autopilot profile assignment, an estimated time for the assignment can vary from scenario to scenario. These factors can include AAD groups, membership rules, hash of a device, Intune and Autopilot service, and internet connection. The assignment time will vary depending on all the factors and variables involved in a specific scenario.
 
 ## (Optional) Turn on the enrollment status page
 
@@ -321,7 +337,7 @@ It takes about 15 minutes for the device profile status to change from *Not assi
 
 6. Select **OK** > **Create**. The profile is created and displayed in the list.
 
-7. [Assign a device profile](../intune/configuration/device-profile-assign.md#assign-a-device-profile) to the same group used at the step [Create a device group](windows-autopilot-hybrid.md#create-a-device-group). Different groups can be used if there's a need to join devices to different domains or OUs.
+7. [Assign a device profile](../intune/configuration/device-profile-assign.md#assign-a-policy-to-users-or-groups) to the same group used at the step [Create a device group](windows-autopilot-hybrid.md#create-a-device-group). Different groups can be used if there's a need to join devices to different domains or OUs.
 
 > [!NOTE]
 > The naming capabilities for Windows Autopilot for Hybrid Azure AD Join don't support variables such as %SERIAL% and only support prefixes for the computer name.

@@ -26,7 +26,7 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection:
-- tier2
+- tier1
 - M365-identity-device-management
 ---
 
@@ -34,7 +34,7 @@ ms.collection:
 
 Microsoft Intune includes different email settings you can deploy to devices in your organization. Email device configuration profiles include the connection settings used by your email app to access organization email.
 
-Most platforms have a native or built-in email app on the device. Using Intune, you can configure the built-in email app or deploy other email apps that connect to your email system, such as Microsoft Exchange. End users then connect, authenticate, and synchronize their organizational email accounts on their devices.
+Most platforms have a native or built-in email app on the device. Using Intune, you can configure the built-in email app or deploy other email apps that connect to your email system, like Microsoft Exchange. End users then connect, authenticate, and synchronize their organizational email accounts on their devices.
 
 By creating and deploying an email profile, you can confirm settings are standard across many devices. And, help reduce support calls from end users who don't know the correct email settings.
 
@@ -68,7 +68,7 @@ This article shows you how to create an email profile in Microsoft Intune. It al
 
     For more information on possible issues with using device groups, see [Common issues with email profiles](/troubleshoot/mem/intune/troubleshoot-email-profiles-in-microsoft-intune).
 
-## Deploy your email app
+## Step 1 - Deploy your email app
 
 On user devices, you decide the email apps that can connect to and access organization email. You also need to determine the email apps your organization will allow, and then deploy the email app to your users.
 
@@ -123,7 +123,7 @@ After the app is deployed and installed:
 
 - On **Android Enterprise personally owned devices with a work profile**:
 
-  - If you want to customize Gmail or preconfigure it with your organization settings, then you can [create an email device configuration profile](#create-the-profile) (in this article). When the profile is ready, deploy this email device configuration profile to your users or user groups. The profile includes the settings that connect the Gmail app to your email system, such as Microsoft Exchange. Email device configuration profiles are optional.
+  - If you want to customize Gmail or preconfigure it with your organization settings, then you can [create an email device configuration profile](#step-2---create-the-profile) (in this article). When the profile is ready, deploy this email device configuration profile to your users or user groups. The profile includes the settings that connect the Gmail app to your email system, such as Microsoft Exchange. Email device configuration profiles are optional.
 
   - If you don't want to customize Gmail or preconfigure it for your users, you don't have to. After Gmail is installed, users need to enter the information that connects to their work or school account, like the email server link and more.
 
@@ -141,7 +141,7 @@ After the app is deployed and installed:
 
 - On **Android Enterprise personally owned devices with a work profile**:
 
-  - If you want to customize Nine Work or preconfigure it with your organization settings, then you can [create an email device configuration profile](#create-the-profile) (in this article). When the profile is ready, deploy this email device configuration profile to your users or user groups. The profile includes the settings that connect the Nine Work app to your email system, such as Microsoft Exchange. Email device configuration profiles are optional.
+  - If you want to customize Nine Work or preconfigure it with your organization settings, then you can [create an email device configuration profile](#step-2---create-the-profile) (in this article). When the profile is ready, deploy this email device configuration profile to your users or user groups. The profile includes the settings that connect the Nine Work app to your email system, such as Microsoft Exchange. Email device configuration profiles are optional.
 
   - If you don't want to customize Nine Work or preconfigure it for your users, you don't have to. After Nine Work is installed, users need to enter the information that connects to their work or school account, like the email server link and more.
 
@@ -199,7 +199,7 @@ After the app is deployed and installed:
 
 The **Built-in Mail app** is preinstalled with the OS and can be used to access personal email and organization email. If you don't want to use the built-in Mail app, then organizations that use conditional access (CA) can create CA policies to block native mail apps. Or, use CA to only allow specific apps.
 
-- If you want to customize the Mail app or preconfigure it with your organization settings, then you can [create an email device configuration profile](#create-the-profile) (in this article). When the profile is ready, deploy this email device configuration profile to your users or user groups. The profile includes the settings that connect the Mail app to your email system, such as Microsoft Exchange. Email device configuration profiles are optional.
+- If you want to customize the Mail app or preconfigure it with your organization settings, then you can [create an email device configuration profile](#step-2---create-the-profile) (in this article). When the profile is ready, deploy this email device configuration profile to your users or user groups. The profile includes the settings that connect the Mail app to your email system, such as Microsoft Exchange. Email device configuration profiles are optional.
 
 - If you don't want to customize the Mail app or preconfigure it for your users, you don't have to. To use the Mail app for organization email, users need to enter the information that connects to their work or school account, like the email server link and more.
 
@@ -246,7 +246,7 @@ The **Microsoft Outlook** app is available in the Microsoft 365 Apps suite. To u
 
 After the app is deployed and installed:
 
-- If you want to customize Outlook or preconfigure it with your organization settings, then you can [create an email device configuration profile](#create-the-profile) (in this article). When the profile is ready, deploy this email device configuration profile to your users or user groups. The profile includes the settings that connect the Outlook app to your email system, such as Microsoft Exchange. Email device configuration profiles are optional.
+- If you want to customize Outlook or preconfigure it with your organization settings, then you can [create an email device configuration profile](#step-2---create-the-profile) (in this article). When the profile is ready, deploy this email device configuration profile to your users or user groups. The profile includes the settings that connect the Outlook app to your email system, such as Microsoft Exchange. Email device configuration profiles are optional.
 
 - If you don't want to customize Outlook or preconfigure it for your users, you don't have to. After Outlook is installed, users need to enter the information that connects to their work or school account, like the email server link and more.
 
@@ -254,7 +254,7 @@ After the app is deployed and installed:
 
 The **Built-in Mail app** is preinstalled with the OS and can be used to access personal email and organization email. If you don't want to use the built-in Mail app, then organizations that use conditional access (CA) can create CA policies to block native mail apps. Or, use CA to only allow specific apps.
 
-- If you want to customize the Mail app or preconfigure it with your organization settings, then you can [create an email device configuration profile](#create-the-profile) (in this article). When the profile is ready, deploy this email device configuration profile to your users or user groups. The profile includes the settings that connect the Mail app to your email system, such as Microsoft Exchange. Email device configuration profiles are optional.
+- If you want to customize the Mail app or preconfigure it with your organization settings, then you can [create an email device configuration profile](#step-2---create-the-profile) (in this article). When the profile is ready, deploy this email device configuration profile to your users or user groups. The profile includes the settings that connect the Mail app to your email system, such as Microsoft Exchange. Email device configuration profiles are optional.
 
 - If you don't want to customize the Mail app or preconfigure it for your users, you don't have to. To use the Mail app for organization email, users need to enter the information that connects to their work or school account, like the email server link and more.
 
@@ -264,13 +264,13 @@ The **Built-in Mail app** is preinstalled with the OS and can be used to access 
 
 After the app is deployed and installed:
 
-- If you want to customize the email app or preconfigure it with your organization settings, then you can [create an email device configuration profile](#create-the-profile) (in this article). When the profile is ready, deploy this email device configuration profile to your users or user groups. The profile includes the settings that connect the email app to your email system, such as Microsoft Exchange. Email device configuration profiles are optional.
+- If you want to customize the email app or preconfigure it with your organization settings, then you can [create an email device configuration profile](#step-2---create-the-profile) (in this article). When the profile is ready, deploy this email device configuration profile to your users or user groups. The profile includes the settings that connect the email app to your email system, such as Microsoft Exchange. Email device configuration profiles are optional.
 
 - If you don't want to customize the app or preconfigure it for your users, you don't have to. After the app is installed, users need to enter the information that connects to their work or school account, like the email server link and more.
 
 ---
 
-## Create the profile
+## Step 2 - Create the profile
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Configuration profiles** > **Create profile**.

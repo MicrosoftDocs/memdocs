@@ -37,7 +37,7 @@ As organizations move to support hybrid and remote workforces, they're challenge
 
 To help with these challenges and tasks, use [Microsoft Intune](https://www.microsoft.com/security/business/endpoint-management/microsoft-intune).
 
-:::image type="content" source="./media/what-is-intune/what-is-intune.png" alt-text="Image that shows features and benefits of Microsoft Intune.":::
+:::image type="content" source="./media/what-is-intune/what-is-intune.png" alt-text="Diagram that shows features and benefits of Microsoft Intune.":::
 
 Microsoft Intune is a cloud-based endpoint management solution. It manages user access and simplifies app and device management across your many devices, including mobile devices, desktop computers, and virtual endpoints.
 
@@ -46,7 +46,7 @@ You can protect access and data on organization-owned and users personal devices
 This article lists some features and benefits of Microsoft Intune.
 
 > [!TIP]
-> 
+>
 > - To get Intune, go to [Licenses available for Microsoft Intune](licenses.md) and [Intune 30-day trial](free-trial-sign-up.md).
 > - For more information on what it means to be cloud-native, go to [Learn more about cloud-native endpoints](../../solutions/cloud-native-endpoints/cloud-native-endpoints-overview.md).
 

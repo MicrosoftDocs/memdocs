@@ -6,7 +6,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 12/07/2022
+ms.date: 03/03/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -67,9 +67,6 @@ Logos must meet these requirements:
     * Taskbar messages: 64 x 64 pixels  
     * Notification area messages: 48 x 48 pixels
     * Get Started app messages: 50 pixels long x 50 - 100 pixels wide  
-
-## URL requirements  
-The domain for your custom destination URLs must be added to your list of verified Azure AD custom domain names. For more information, see [Add your custom domain - Azure Active Directory](/azure/active-directory/fundamentals/add-custom-domain#add-your-custom-domain-name-to-azure-ad).  
 
 ## Policy requirements  
 There are certain experience and Windows Spotlight policies in Microsoft Intune that block the delivery of organizational messages. This section describes how to adjust all settings so that delivery is always allowed and works as intended. 

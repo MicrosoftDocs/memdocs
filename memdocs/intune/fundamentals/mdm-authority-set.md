@@ -27,7 +27,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier1
 - M365-identity-device-management
-  - highpri
+- highpri
 ---
 
 # Set the mobile device management authority
@@ -47,6 +47,8 @@ Possible configurations are:
 ## Set MDM authority to Intune
 
 For tenants using the 1911 service release and later, the MDM authority is automatically set to Intune.
+
+For tenants using the 1911 service release and later, if you activated Basic Mobility and Security, follow the steps below.
 
 For pre-1911 service release tenants, if you haven't yet set the MDM authority, follow the steps below.
 

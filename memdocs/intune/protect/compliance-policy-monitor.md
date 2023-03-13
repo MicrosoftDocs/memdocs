@@ -77,7 +77,7 @@ As you dig in to this reporting, you can also see any specific compliance polici
 The **Device compliance status** chart shows the compliance states for all Intune enrolled devices. The device compliance states are kept in two different databases: Intune and Azure Active Directory.
 
 > [!IMPORTANT]
-> Intune follows the device check-in schedule for all compliance evaluations on the device. [Learn more about the device check-in schedule](../configuration/device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned).
+> Intune follows the device check-in schedule for all compliance evaluations on the device. [Learn more about the device check-in schedule](../configuration/device-profile-troubleshoot.md#policy-refresh-intervals).
 
 Descriptions of the different device compliance policy states:
 
@@ -237,7 +237,7 @@ Policy conflicts can occur when multiple Intune policies are applied to a device
 
 - If you have deployed multiple compliance policies, Intune uses the most secure of these policies.
 
-To learn more about conflict resolution for policies, see [If multiple policies are assigned to the same user or device, how do I know which settings gets applied?](../configuration/device-profile-troubleshoot.md#if-multiple-policies-are-assigned-to-the-same-user-or-device-how-do-i-know-which-settings-gets-applied).
+To learn more about conflict resolution for policies, see [Compliance and device configuration policies that conflict](../configuration/device-profile-troubleshoot.md#compliance-and-device-configuration-policies-that-conflict).
 
 ## Next steps
 

@@ -35,9 +35,10 @@ ms.collection:
 The troubleshooting pane lets help desk operators and Intune administrators view user information to address user help requests. Organizations that include a help desk can assign the [Help desk operator role](../fundamentals/role-based-access-control.md#built-in-roles) to a group of Intune users. The help desk operator role can use the **Troubleshooting + support** pane help end users.
 
 The **Troubleshooting + support** pane provides three options:
+
 - [Guided scenarios](../fundamentals/guided-scenarios-overview.md) to provide a customized series of steps centered around one end-to-end use-case.
 - **Troubleshooting** to help determine any issues with **Assignments**, **App protection status**, and **Enrollment failures**.
-- [Help and support](/mem/get-support?toc=%2Fmem%2Fintune%2Ffundamentals%2Ftoc.json&bc=%2Fmem%2Fintune%2Ffundamentals%2Fbreadcrumb%2Ftoc.json) to provide global technical, pre-sales, billing, and subscription support for device management cloud-based services related to Intune.
+- [Help and support](/mem/get-support?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json) to provide global technical, pre-sales, billing, and subscription support for device management cloud-based services related to Intune.
 
 Details about the issue and suggested remediation steps can help administrators and help desk operators troubleshoot problems. Certain enrollment issues aren't captured and some errors might not have remediation suggestions.
 
@@ -57,6 +58,7 @@ The **Troubleshooting** pane provides the following tabs to quickly narrow the t
 - **Updates** - Provides the name, platform, and update type.
 - **Enrollment restrictions** - Provides the policy type, name, platform, and device limit.
 - **Diagnostics** - Provides the device name or application, platform, created date, and diagnostic log.
+- **ServiceNow incidents** - Provides a list of associated incidents for the selected user. For more information, go to [ServiceNow integration with Intune](../fundamentals/service-now-integration.md).
 
 ## View user troubleshooting details
 

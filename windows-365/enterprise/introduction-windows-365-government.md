@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 02/13/2023
+ms.date: 03/06/2023
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -48,7 +48,6 @@ For more information about Cloud PCs and Windows 365, see [What is Windows 365?]
 
 The following features are not yet supported for Windows 365 GCC or GCCH.
 
-- Configure installed language and region for provisioning Cloud PCs
 - Unified dashboard
 - Virtualization-based workloads
 - Endpoint analytics support (this is supported in GCC)
@@ -58,6 +57,8 @@ The following features are not yet supported for Windows 365 GCC or GCCH.
 - User initiated feedback in End User Portal and Windows 365 Web Client
 - Resize VM
 - Citrix HDX Plus for Windows 365
+- Windows 365 app
+- Multimedia rediction for improved video playback
 
 ## Next steps
 

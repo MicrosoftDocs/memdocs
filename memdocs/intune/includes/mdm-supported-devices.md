@@ -25,13 +25,13 @@ ms.localizationpriority: high
 - Android enterprise: [requirements](https://support.google.com/work/android/topic/9428066)
 - Android open source project devices (AOSP) supported devices
   - RealWear devices (Firmware 11.2 or later)
-  - HTC Vive Focus 3
+  - HTC Vive Focus 3 (Firmware: FOTA 5.2 - 3.0.999.624)
 
 [!INCLUDE [android-supported-os](android-supported-os.md)]
 
 ### Linux
 
-- Ubuntu Desktop 22.04.1 LTS with a GNOME graphical desktop environment
+- Ubuntu Desktop 22.04 LTS with a GNOME graphical desktop environment
 - Ubuntu Desktop 20.04 LTS with a GNOME graphical desktop environment
 
 > [!NOTE]
@@ -55,7 +55,7 @@ ms.localizationpriority: high
  
 - Windows Holographic for Business
 
-  For more information about managing devices running Windows Holographic for Business, see [Window Holographic for Business support](../fundamentals/windows-holographic-for-business.md).
+  For more information about managing devices running Windows Holographic for Business, see [Windows Holographic for Business support](../fundamentals/windows-holographic-for-business.md).
 
 - Surface Hub
 

@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/29/2022
+ms.date: 03/07/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -27,7 +27,7 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection:
-- tier2
+- tier1
 - M365-identity-device-management
 ---
 

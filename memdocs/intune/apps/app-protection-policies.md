@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/24/2022
+ms.date: 03/07/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -128,8 +128,9 @@ When you create an app protection policy for iOS/iPadOS and Android apps, you fo
     > It can take time for app protection policies to apply to existing devices. End users will see a notification on the device when the app protection policy is applied. Apply your app protection policies to devices before applying condidtional access rules.
 
 End users can download the apps from the App store or Google Play. For more information, see:
-* [Managed work and school apps for Android](../user-help/use-managed-apps-on-your-device-android.md)
-* [What to expect when your iOS/iPadOS app is managed by app protection policies](../fundamentals/end-user-mam-apps-ios.md)
+* [Where to find work or school apps for iOS/iPadOS](../user-help/use-managed-apps-on-your-device-ios.md) 
+* [Where to find work or school apps for Android](../user-help/use-managed-apps-on-your-device-android.md)
+
 
 ## Change existing policies
 You can edit an existing policy and apply it to the targeted users. However, when you change existing policies, users who are already signed in to the apps won't see the changes for an eight-hour period.
@@ -227,5 +228,5 @@ To see a full list of the policy settings for iOS/iPadOS and Android, select one
 [Monitor compliance and user status](app-protection-policies-monitor.md)
 
 ## See also
-* [Managed work and school apps for Android](../user-help/use-managed-apps-on-your-device-android.md)
-* [What to expect when your iOS/iPadOS app is managed by app protection policies](../fundamentals/end-user-mam-apps-ios.md)
+* [Where to find work or school apps for Android (user help)](../user-help/use-managed-apps-on-your-device-android.md)
+- [Where to find work or school apps for iOS/iPadOS (user help)](../user-help/use-managed-apps-on-your-device-ios.md) 

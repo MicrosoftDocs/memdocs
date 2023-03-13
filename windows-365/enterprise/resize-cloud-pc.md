@@ -32,12 +32,13 @@ ms.collection:
 
 # Resize a Cloud PC (preview)
 
-The **Resize** remote action lets you upgrade a Windows 365 Enterprise Cloud PC’s RAM, CPU, and storage size to meet the user’s needs. Resizing is important for users that need to:
+The **Resize** remote action lets you upgrade a Windows 365 Enterprise Cloud PC’s RAM, vCPU, and storage size to meet the user’s needs. Resizing is important for users that need to:
 
-- Upgrade a Windows 365 Enterprise Cloud PC’s RAM, CPU, and storage size to meet the user’s needs.
-- Downgrade the RAM and CPU of a Cloud PC.
+- Upgrade a Windows 365 Enterprise Cloud PC’s RAM, vCPU, and storage size to meet the user’s needs.
+- Downgrade the RAM and vCPU of a Cloud PC.
 
 Resizing gives admins the flexibility to upgrade/downgrade the following specifications without having to provision Cloud PCs from scratch:
+
 - Increase the RAM and vCPUs when a user requires CPU intensive applications.
 - Increase the disk space for file storing.
 - Decrease the RAM and vCPUs when a user doesn't need to run CPU intensive applications.
@@ -66,7 +67,7 @@ Resizing isn’t supported for Cloud PCs provisioned through group-based license
 
 Resizing is only supported for Gen 2 Cloud PCs. If you try resizing a Gen 1 Cloud PC, the resize will no start and you will be notified that this happened due to the user having a Gen 1 Cloud PC. Reprovision the Gen 1 Cloud PC to convert it to a Gen 2 Cloud PC
 
-Downsizing from a 8 vCPU Cloud PC that supports nested virtualization will disable nested virtualization support. Nested virtualization is only supported on 8 vCPU Cloud PCs. 
+Downsizing from a 8vCPU Cloud PC that supports nested virtualization will disable nested virtualization support. Nested virtualization is only supported on 8vCPU Cloud PCs. 
 
 ## Resize a Cloud PC
 

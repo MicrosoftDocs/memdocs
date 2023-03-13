@@ -7,7 +7,7 @@ keywords: configure, manage, capabilities, attack surface reduction, next-genera
 author: brenduns 
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/06/2022
+ms.date: 02/28/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -99,7 +99,7 @@ You only need to enable Microsoft Defender for Endpoint a single time per tenant
       - Set **Connect Android devices** to Microsoft Defender for Endpoint for app protection policy evaluation to **On**.  
       - Set **Connect iOS devices** to Microsoft Defender for Endpoint for app protection policy evaluation to **On**.  
 
-    For more information about both MDM Compliance Policy Settings and App Protection Policy Settings, see [Mobile Threat Defense toggle options](../protect/mtd-connector-enable.md#mobile-threat-defense-toggle-options).
+    To set up an integration Microsoft Defender for Endpoint for compliance and app protection policy evaluation, you must have a role that includes the *Mobile Threat Defense* permission in Intune. The *Endpoint Security Manager* built-in admin role for Intune has this permission included. For more information about both MDM Compliance Policy Settings and App Protection Policy Settings, see [Mobile Threat Defense toggle options](../protect/mtd-connector-enable.md#mobile-threat-defense-toggle-options).
 
 5. Select **Save**.
 
@@ -133,9 +133,11 @@ After onboarding a device using the configuration package, you don't need to do 
 
 You can also onboard devices using:
 
-- [Endpoint detection and response](../protect/endpoint-security-edr-policy.md) (EDR) policy. Intune EDR policy is part of endpoint security in Intune. Use EDR policies to configure device security without the overhead of the larger body of settings found in device configuration profiles. You can also use EDR policy with tenant attached devices, which are devices you manage with Configuration Manager.
+- [Endpoint detection and response](../protect/endpoint-security-edr-policy.md) (EDR) policy. Intune EDR policy is part of endpoint security in Intune. Use EDR policies to configure device security without the overhead of the larger body of settings found in device configuration profiles. You can also use EDR policy with tenant attached devices, which are devices you manage with Configuration Manager. 
 
-  When you configure EDR policy after connecting Intune and Microsoft Defender for Endpoint, the policy setting *Microsoft Defender for Endpoint client configuration package type* has a new configuration option: **Auto from connector**. With this option, Intune automatically gets the onboarding package (blob) from your Defender for Endpoint deployment, replacing the need to manually configure an *Onboard* package.
+To view the onboarded devices from MDE within the Microsoft Defender for Endpoint connector page, you need an Intune role with the *Microsoft Defender ATP* permission.
+
+  When you configure EDR policy after connecting Intune and Microsoft Defender for Endpoint, the policy setting *Microsoft Defender for Endpoint client configuration package type* has a new configuration option: **Auto from connector**. With this option, Intune automatically gets the onboarding package (blob) from your Defender for Endpoint deployment, replacing the need to manually configure an *Onboard* package. 
 
 - [Group policy or Microsoft Configuration Manager](/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints).
 

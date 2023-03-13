@@ -9,7 +9,7 @@ author: MandiOhlinger
   
 ms.author: mandia
 manager: dougeby
-ms.date: 09/22/2022
+ms.date: 02/28/2023
 ms.topic: conceptual
 ms.service: mem
 ms.subservice:
@@ -34,6 +34,8 @@ ms.collection:
 # Manage user and group identities in Microsoft Intune
 
 Managing and protecting user identities is a significant part of any endpoint management strategy and solution. Identity management includes the user accounts and groups that access your organization resources.
+
+:::image type="content" source="./media/manage-identities/identities-different-user-types.png" alt-text="Diagram that shows addings users to the Microsoft Intune admin center and assigning policies to different user types in Microsoft Intune." lightbox="./media/manage-identities/identities-different-user-types.png":::
 
 Admins have to manage account membership, authorize and authenticate access to resources, manage settings that affect user identities, and secure & protect the identities from malicious intent.
 
@@ -81,7 +83,7 @@ For more information and guidance, go to [Known issues and limitations with clou
 
 ## Roles and permissions control access
 
-Intune uses role-based access control (RBAC). The roles you assign determine who has access to your organization's resources and what they can do with those resources. The Intune admin center includes some built-in roles focused on endpoint management, such as Application Manager, Policy and Profile Manager, and more.
+For the different admin-type of tasks, Intune uses role-based access control (RBAC). The roles you assign determine the resources an admin can access in the Intune admin center, and what they can do with those resources. There are some built-in roles focused on endpoint management, such as Application Manager, Policy and Profile Manager, and more.
 
 Since Intune uses Azure AD, you also have access to the built-in Azure AD roles, such as Global Administrator and Intune Service Administrator.
 

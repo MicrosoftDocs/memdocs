@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 02/21/2023
+ms.date: 03/09/2023
 ms.topic: reference
 ms.service: windows-365
 ms.subservice:
@@ -35,7 +35,7 @@ ms.collection:
 Learn what new features are available in Windows 365 Enterprise.
 
 > [!NOTE]
-> Each monthly update may take up to a week to rollout to all customers.
+> Each monthly update may roll out over several weeks and might not be immediately available to all customers.
 
 <!-- Common categories:  
 ### App management
@@ -51,6 +51,70 @@ Learn what new features are available in Windows 365 Enterprise.
 ### Windows 365 Government
 ### Windows 365 app
 -->
+
+<!-- ########################## -->
+## Week of March 6, 2023
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Create on-demand Cloud PC restore points and copy them to an Azure Storage account<!--43450254-->
+
+You can now create on-demand Cloud PC restore points and copy them to an Azure Storage account. For more information, see [Create on-demand manual restore points for Cloud PCs](create-manual-restore-point.md) and [Share Cloud PC restore points to an Azure Storage Account](share-restore-points-storage.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Role-based access control
+
+#### Permission changes for Azure network connection operations<!--43251193-->
+
+The permissions required for the editing, creating, and deleting Azure network connection (ANC) and health check retry operations have changed: You must now have [Intune Administrator](/azure/active-directory/roles/permissions-reference#intune-administrator), [Windows 365 Administrator](/azure/active-directory/roles/permissions-reference), or [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) permissions. For more informatiion, see [Azure network connections](azure-network-connections.md).
+
+<!-- ########################## -->
+## Week of February 27, 2023 (Service release 2302)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Apps
+
+#### Windows 365 app is now generally available<!--41929443-->
+
+The Windows 365 app has moved out of preview and into general availability. For more information, see [Installing the Windows 365 app](https://support.microsoft.com/topic/cbb0d4d5-69d4-4f00-b050-6dc7a02d02d0).
+
+#### Improved video playback by using multimedia redirection is now generally available<!--43524455-->
+
+Improved video playback performance on your Cloud PCs by using multimedia redirection (MMR) has moved out of preview and into general availability. For more information, see [Video playback improvement](troubleshooting.md#video-playback-improvements).
+
+#### Cloud PC web client: improved feedback interface for end users<!--43309221-->
+
+The Cloud PC web client (accessible from windows365.microsoft.com) has an improved feedback interface for end users to provide feedback.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Hardware acceleration for the windows365.microsoft.com web client<!--43105503-->
+
+On the windows365.microsoft.com web client, you can now benefit from hardware acceleration. This option is turned on by default and improves motion performance for activities like scrolling, moving windows, or playback of video.
+
+#### Configure installed language and region for provisioning Cloud PCs in GCC/H environments<!--43290793 -->
+
+When creating a provisioning policy, admins can now configure the installed language and region for new Cloud PCs in US Government Community Cloud (GCC) and GCC High environments. For more information, see [Provide users a localized Windows experience](provide-localized-windows-experience.md)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device provisioning
+
+#### Add more Azure Network Connections to a provisioning policy<!--42906565-->
+
+A new Azure Network Connection (ANC) option lets you add more ANCs to a provisioning policy and define a priority order for their use. By preparing multiple ANCs in different Azure regions, admins can make provisioning more reliable in the rare case capacity constraints in a region.
+
+#### GCC/H support for geography option in Windows 365 provisioning policy<!-- 41400209-->
+
+The **Geography** setting in provisioning policies is now supported for US Government Community Cloud (GCC) and GCC High environments. For more information, see [Create provisioning policies](create-provisioning-policy.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Documentation
+
+#### New documentation article: Azure network connection domain credential life cycle
+
+We’ve published a new help documentation article. For more information, see [Azure network connection domain credential life cycle](azure-network-connection-domain-credential.md).
 
 <!-- ########################## -->
 ## Week of February 20, 2023

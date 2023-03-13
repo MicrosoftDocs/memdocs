@@ -27,7 +27,7 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection:
-- tier3
+- tier2
 - M365-identity-device-management
 ---
 
@@ -151,21 +151,24 @@ Event Viewers:
 
 Files:
 
-- %ProgramData%\Microsoft\DiagnosticLogCSP\Collectors\*.etl
-- %ProgramData%\Microsoft\IntuneManagementExtension\Logs\*.*
+- %ProgramData%\Microsoft\DiagnosticLogCSP\Collectors\\*.etl
+- %ProgramData%\Microsoft\IntuneManagementExtension\Logs\\*.log
 - %ProgramData%\Microsoft\Windows Defender\Support\MpSupportFiles.cab
 - %ProgramData%\Microsoft\Windows\WlanReport\wlan-report-latest.html
-- %ProgramData Microsoft Update Health Tools\Logs\*.etl
+- %ProgramData%\USOShared\logs\system\\*.etl
+- %ProgramData Microsoft Update Health Tools\Logs\\*.etl
 - %temp%\MDMDiagnostics\battery-report.html
 - %temp%\MDMDiagnostics\energy-report.html
 - %temp%\MDMDiagnostics\mdmlogs-<Date/Time>.cab
 - %temp%\MDMDiagnostics\msinfo32.log
-- %windir%\ccm\logs\*.log
-- %windir%\ccmsetup\logs\*.log
+- %windir%\ccm\logs\\*.log
+- %windir%\ccmsetup\logs\\*.log
 - %windir%\logs\CBS\cbs.log
-- %windir%\logs\measuredboot\*.*
-- %windir%\Logs\WindowsUpdate\*.etl
-- %windir%\temp\%computername%*.log
+- %windir%\logs\measuredboot\\\*.*
+- %windir%\logs\Panther\unattendgc\setupact.log
+- %windir%\logs\SoftwareDistribution\ReportingEvent\measuredboot\\*.log
+- %windir%\logs\WindowsUpdate\\*.etl
+- %windir%\temp\\%computername%*.log
 - %windir%\temp\officeclicktorun*.log
 
 ## Disable device diagnostics
@@ -176,7 +179,7 @@ The **Collect diagnostics** remote action is enabled by default. You can disable
 2. Navigate to **Tenant administration** > **Device diagnostics**.
 3. Change the control under **Device diagnostics are available for corporate-managed devices running Windows 10, version 1909 and later, or Windows 11.** to **Disabled**.
 
-     :::image type="content" source="./media/collect-diagnostics/disable-device-diagnostics.png" alt-text="Screenshot that shows the Device diagnostics pane with the highlighted control for device diagnostics set to Disabled.":::
+     :::image type="content" source="./media/collect-diagnostics/disable-device-diagnostics.png" alt-text="Screenshot that shows the Device diagnostics pane with the highlighted control for device diagnostics set to Disabled." lightbox="./media/collect-diagnostics/disable-device-diagnostics.png":::
 
 ## Disable Autopilot automatic collection of diagnostics
 <!--1895390-->
@@ -187,7 +190,7 @@ Autopilot automatic diagnostic capture is enabled by default. You can disable Au
 2. Navigate to **Tenant administration** > **Device diagnostics**.
 3. Change the control under **Automatically capture diagnostics when devices experience a failure during the Autopilot process on Windows 10 version 1909 or later and Windows 11. Diagnostics may include user identifiable information such as user or device name (preview).** to **Disabled**.
 
-     :::image type="content" source="./media/collect-diagnostics/disable-autopilot-diagnostics.png" alt-text="Screenshot that shows the Device diagnostics pane with the highlighted control for Autopilot automatic diagnostics collection set to Disabled.":::
+     :::image type="content" source="./media/collect-diagnostics/disable-autopilot-diagnostics.png" alt-text="Screenshot that shows the Device diagnostics pane with the highlighted control for Autopilot automatic diagnostics collection set to Disabled." lightbox="./media/collect-diagnostics/disable-autopilot-diagnostics.png":::
 
 ## WinGet troubleshooting using diagnostic files
 [WinGet](/windows/package-manager/winget/) is a command line tool that enables you to discover, install, upgrade, remove, and configure applications on Windows 10 and Windows 11 devices. When working with [Win32 app management in Intune](../apps/apps-win32-app-management.md), you can use the following files to help troubleshoot WinGet:
