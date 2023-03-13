@@ -115,7 +115,7 @@ In addition to this policy, a device must also be assigned a Windows elevation s
 
 4. On the **Scope tags** page, select any desired scope tags to apply, then select **Next**.
 
-5. For **Assignments**, select the groups that will receive the policy. For more information on assigning profiles, see [Assign user and device profiles](device-profile-assign.md).
+5. For **Assignments**, select the groups that will receive the policy. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
    Select **Next**.
 
 6. In **Review + create**, review your settings and select **Create**. When you select *Create*, your changes are saved, and the profile is assigned. The policy is also shown in the policy list.
