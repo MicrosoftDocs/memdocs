@@ -60,7 +60,7 @@ The following sections detail the requirements to use Endpoint Privilege Managem
 
 ### Licensing
 
-During the public preview, there are no licensing requirements to use Endpoint Privilege Management. After the preview ends, your tenant must be licensed for Endpoint Privilege Management, which requires purchase of an [Intune Suite add-on]( fundamentals/intune-add-ons.md) that includes Endpoint Privilege Management.
+During the public preview, there are no licensing requirements to use Endpoint Privilege Management. After the preview ends, your tenant must be licensed for Endpoint Privilege Management, which requires purchase of an [Intune Suite add-on](../fundamentals/intune-add-ons.md) that includes Endpoint Privilege Management.
 
 ### Windows 10 and Windows 11 devices
 
@@ -155,7 +155,8 @@ Each elevation rule:
   - **User confirmed** (Recommended): A user confirmed elevation always requires the user to click on a confirmation prompt to run the file. There are two additional user confirmations you can add. One require users to authenticate using their organization credentials. The second option requires the use to enter a business justification. What must be entered for justification isn't managed, but the justification text can collected for reporting when the device is configured to report elevation data as part of its Windows elevation settings policy.
   - **Automatic** elevation happens invisibly to the user. There is no prompt, and no indication that the file is running in an elevated context. 
 
-    >[!CAUTION] We recommend automatic elevation be used sparingly, and only for trusted files that are business critical. Examples include a common printer-driver which users are expected to install, or a productivity app like the setup file for Microsoft Office 365.
+    >[!CAUTION]  
+    > We recommend automatic elevation be used sparingly, and only for trusted files that are business critical. Examples include a common printer-driver which users are expected to install, or a productivity app like the setup file for Microsoft Office 365.
 
 ### Reusable settings group
 
