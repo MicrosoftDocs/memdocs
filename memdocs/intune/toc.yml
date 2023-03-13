@@ -802,7 +802,7 @@ items:
           - name: Universal Print policy
             displayName: printers
             href: ./configuration/settings-catalog-printer-provisioning.md
-        - name: Custom settings & shell scripts
+        - name: Custom settings & scripts
           displayName: oma-uri, csp, bash, powershell
           items:
           - name: Create custom profiles
@@ -811,10 +811,6 @@ items:
             href: ./configuration/custom-profile-hololens.md
           - name: Add Linux Bash scripts
             href: ./configuration/custom-settings-linux.md
-          - name: Add macOS shell scripts
-            href: ./apps/macos-shell-scripts.md
-          - name: Add Windows PowerShell scripts
-            href: ./apps/intune-management-extension.md
         - name: Restrict device settings and features
           href: ./configuration/device-restrictions-configure.md
           displayName: device restrictions
