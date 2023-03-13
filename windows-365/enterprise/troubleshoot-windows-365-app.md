@@ -65,7 +65,7 @@ The Windows 365 app supports windowed mode to work more efficiently side-by-side
 
 ## Windows 365 app doesn't show any Cloud PCs
 
-You might be signed in as the wrong user. You must be signed in with an account hat is enrolled with the Azure Active Directory (Azure AD) account that has Cloud PCs provisioned. Make sure that you sign in the Windows 365 app with the right user account.
+You might be signed in as the wrong user. You must be signed in with an account that is enrolled with the Azure Active Directory (Azure AD) account that has Cloud PCs provisioned. Make sure that you sign in the Windows 365 app with the right user account.
 
 <!-- ########################## -->
 ## Next steps
