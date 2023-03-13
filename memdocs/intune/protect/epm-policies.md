@@ -33,11 +33,18 @@ ms.collection:
 > [!NOTE]  
 > This capability is in public preview, and free to try and use. After public preview, it will be available as an Intune add-on. For more information, see [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md).
 
-Configuration of policies for Endpoint Privilege Management includes the following objects:
+Endpoint Privilege Management (EPM) is a solution you can integrate with Microsoft Intune. EPM policies empower your organizations non-administrative users to run files that require elevated permissions, and does so with zero or limited disruptions to the users workflow. Through integration with Microsoft Intune, EPM can help you to secure your organization by removing administrative permissions for most users.
+
+The information in this article can help you to configure the following policies and reusable settings groups for EPM:
 
 - Windows elevation settings policy
 - Windows elevation rules policy
 - Reusable settings groups, which are optional configurations for your elevation rules.
+
+Applies to:
+
+- Windows 10
+- Windows 11
 
 ## Windows elevation settings policy
 
@@ -76,6 +83,6 @@ To create the reusable settings group for Endpoint Privilege Management:
 
 4. In **Review + create**, review your settings and select **Add**. When you select *Add*, your configuration is saved, and group is then shown in the reusable settings group list for Endpoint Privilege Management.
 
-
 ## Next steps
+
 [Use reports for Endpoint Privilege Management](../protect/epm-reports.md)
