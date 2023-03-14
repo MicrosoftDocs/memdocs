@@ -7,7 +7,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 03/08/2023
+ms.date: 03/14/2023
 ms.topic: tutorial
 ms.collection: 
   - tier1
@@ -34,21 +34,29 @@ For an overview of the Windows Autopilot user-driven hybrid Azure AD join workfl
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-1. In the **Home** screen, select **Devices**.
+1. In the **Home** screen, select **Devices** in the left pane.
 
-1. In the **Devices | Overview** screen, under **Policy**, select **Configuration profiles**.
+1. In the **Devices | Overview** screen, under **Policy**, select **Configuration Profiles**.
 
-1. In the **Devices | Configuration profiles** screen, select **Create profile**.
+1. In the **Devices | Configuration profiles** screen, make sure **Profiles** is selected at the top, and then select **Create profile**.
 
-1. In the **Create profile** screen:
+1. In the **Create profile** window that opens:
 
    1. Under **Platform**, select **Windows 10 and later**.
 
    1. Under **Profile type**, select **Templates**.
 
-   1. Once **Templates** is selected, additional options will appear. Under **Template name**, select **Domain join**, and then select **Create**. If necessary, scroll through the **Template name** list until **Domain join** is visible. The list is in alphabetical order.
+   1. When the templates appear, under **Template name**, select **Domain join**. If **Domain join** is not visible, scroll through the **Template name** list until **Domain join** is visible. The list is in alphabetical order.
 
-1. In the **Basics** page of the **Domain Join*** screen, type a **Name** and optional **Description** for the domain join profile, and then select **Next**.
+   1. Select **Create** to close the **Create profile** window.
+
+1. The **Create profile** screen will open. In the **Basics** page:
+
+   1. Next to **Name**, enter a name for the domain join profile.
+
+   1. Next to **Description**, enter a description for the domain join profile.
+
+   1. Select **Next**.
 
 1. In the **Configuration settings** page:
 
@@ -60,31 +68,33 @@ For an overview of the Windows Autopilot user-driven hybrid Azure AD join workfl
 
    1. Next to **Domain name**, enter the FQDN of the domain that the device will be joined to. This field is required. Make sure to specify the FQDN of the domain and not the NETBIOS name of the domain. For example, enter in **contoso.com** and not just **CONTOSO**.
 
-   1. Next to **Organizational unit**, enter the full path to the Organizational Unit (OU) in the domain that the computer accounts should be created in. This field is optional. For example, **OU=OU-Name,DC=contoso,DC=com**. If the OU isn't specified, the computer accounts will be created in the **Computer** container.
+   1. Next to **Organizational unit**, enter the full path to the Organizational Unit (OU) in the domain that the computer accounts should be created in. For example, **OU=OU-Name,DC=contoso,DC=com**. This field is optional. If the OU isn't specified, the computer accounts will be created in the **Computer** container.
 
         > [!NOTE]
         >
-        > The OU specified in this step should be the same OU that permissions were set for and computer account limits increased in the step [Increase the computer account limit in the Organizational Unit (OU)](hybrid-azure-ad-join-computer-account-limit.md). Make sure that this step has been followed for the OU specified in this field. Omitting setting permissions correctly on the OU wil result in computers failing to join the domain.
+        > The OU specified in this step should be the same OU that permissions were set for and computer account limits increased in the step [Increase the computer account limit in the Organizational Unit (OU)](hybrid-azure-ad-join-computer-account-limit.md). Make sure that this step has been followed for the OU specified in this field. Skipping the step that sets permissions correctly on the OU wil result in computers failing to join the domain.
 
         > [!IMPORTANT]
         >
         > If computers will be joining the **Computers** container, leave this field blank. Don't specify the **Computers** container in this field via **CN=Computers,DC=contoso,DC=com**. The **Computers** container is a container and not an OU. When no OU is specified in this field and it is left blank, devices will automatically join the **Computers** container. If the **Computers** container is specified, it will cause domain joins to fail.
 
-1. Once the settings in the **Configuration settings** page are complete, select **Next**.
+   1. Once the settings in the **Configuration settings** page are complete, select **Next**.
 
-1. On the **Assignments** page, under **Included groups**, choose **Add groups**.
+1. In the **Assignments** page:
 
-1. In the **Select groups to include** page, choose the device group(s) to assign this Autopilot profile to. This device group(s) is normally the device group(s) created in the step [Create device group](hybrid-azure-ad-join-device-group.md). Once done, select **Select**.
+   1. Under **Included groups**, choose **Add groups**.
 
-    > [!NOTE]
-    >
-    > Make sure to add the correct device groups under **Included groups** and not under **Excluded groups**. Accidentally adding the desired device groups to assign the Autopilot profile to under **Excluded groups** will result in those devices being excluded and they won't receive the Autopilot profile.
+      > [!NOTE]
+      >
+      > Make sure to add the correct device groups under **Included groups** and not under **Excluded groups**. Accidentally adding the desired device groups under **Excluded groups** will result in those devices being excluded and they won't receive the Autopilot profile.
 
-1. In the **Assignments** page, verify the correct device group(s) appear under **Included groups** > **Groups**, and then select **Next**.
+   1. In the **Select groups to include** window that opens, select the groups that the Autopilot profile should be assigned to. This device group(s) is normally the device group(s) created in the step [Create device group](azure-ad-join-device-group.md). Once done, select **Select**.
 
-1. In the **Applicability Rules** page, select **Next**. No configuration is needed in this page.
+   1. Under **Included groups** > **Groups**, ensure the correct group(s) are selected, and then select **Next**.
 
-1. On the **Review + Create** page, review and verify that all of the settings are set as desired, and then choose **Create** to create the domain join profile.
+1. In the **Applicability Rules** page, select **Next**. For the purpose of this tutorial, applicability rules is being skipped. However if applicability rules are needed, do so at this screen. For more information about scope tags, see [Applicability rules](/mem/intune/configuration/device-profile-create#applicability-rules).
+
+1. In the **Review + Create** page, review and verify that all of the settings are set as desired, and then choose **Create** to create the domain join profile.
 
 ## More information
 

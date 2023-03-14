@@ -7,7 +7,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 03/08/2023
+ms.date: 03/14/2023
 ms.topic: tutorial
 ms.collection: 
   - tier1
@@ -43,7 +43,7 @@ The following users aren't restricted by the 10 computer domain join limitation:
 
 To fix this limitation, the server running the Intune connector needs to be delegated permissions to create and delete computer accounts in the Organizational Unit (OU) where the computers will be joined to the on-premises domain. It's also recommended to specifically set these permissions in case the server running the Intune connector doesn't have permissions to create computers in the OU, for example, the default permissions have been modified.
 
-To increase the computer account limit in the Organizational Unit (OU) that computers will be joining to during Autopilot, follow these steps:
+To increase the computer account limit in the Organizational Unit (OU) that computers will be joining to during Autopilot, follow these steps on a computer that has access to the **Active Directory Users and Computers** console:
 
 1. Open the **Active Directory Users and Computers** console by running **DSA.msc**.
 
@@ -57,7 +57,7 @@ To increase the computer account limit in the Organizational Unit (OU) that comp
 
     > [!NOTE]
     >
-    > If computers will be joining the **Computers** container, right click on the **Computers** container and select **Delegate Control**.
+    > If an OU is not being specified and computers will instead be joining the default **Computers** container, right click on the **Computers** container and select **Delegate Control**.
 
 1. In the **Welcome to the Delegation of Control Wizard** window of the **Delegation of Control Wizard**, select **Next**.
 
@@ -67,20 +67,23 @@ To increase the computer account limit in the Organizational Unit (OU) that comp
 
 1. In the **Object Types** window, select the **Computers** check box, and then select **OK**. The other items in this window can be left at their default.
 
-1. In the **Select Users, Computers, or Groups** window, in the **Enter the object names to select** box, enter the name of the computer where the Intune connector was installed during the [Install the Intune Connector](hybrid-azure-ad-join-intune-connector.md) step.
+1. In the **Select Users, Computers, or Groups** window, under the **Enter the object names to select** box, enter the name of the computer where the Intune connector was installed during the [Install the Intune Connector](hybrid-azure-ad-join-intune-connector.md) step.
 
 1. Select **Check Names** to validate your entry. Once the entry is validated, select **OK**.
 
-1. In the **Users or Groups** window, select **Next**.
+1. In the **Users or Groups** window, verify that the correct computer is shown under **Selected users and groups:**, and then select **Next**.
 
-1. In the **Task to Delegate** window, select **Create a custom task to delegate**, and then select **Next**.
+1. In the **Tasks to Delegate** window, select **Create a custom task to delegate**, and then select **Next**.
 
 1. In the **Active Directory Object Type** window:
 
     1. Select **Only the following objects in the folder**.
-    2. Under **Only the following objects in the folder**, select **Computer objects**.
-    3. Select both the **Create selected objects in this folder** and **Delete selected objects in this folder** check boxes.
-    4. Select **Next**.
+
+    1. Under **Only the following objects in the folder**, select **Computer objects**.
+
+    1. Select both the **Create selected objects in this folder** and **Delete selected objects in this folder** check boxes.
+
+    1. Select **Next**.
 
 1. In the **Permissions** window, under **Permissions:**, select the **Full Control** check box, and then select **Next**.
 

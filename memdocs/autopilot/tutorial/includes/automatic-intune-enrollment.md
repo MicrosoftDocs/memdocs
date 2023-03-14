@@ -5,37 +5,43 @@ manager: aaroncz
 ms.technology: itpro-deploy
 ms.prod: windows-client
 ms.topic: include
-ms.date: 02/23/2023
+ms.date: 03/14/2023
 ms.localizationpriority: medium
 ---
 
-<!-- This file is shared by the azure-ad-join-automatic-enrollment.md and the hybrid-azure-ad-join-automatic-enrollment.md articles. Headings are driven by article context. -->
+<!-- This file is shared by the following articles:
+
+azure-ad-join-automatic-enrollment.md
+hybrid-azure-ad-join-automatic-enrollment.md
+self-deploying-automatic-enrollment.md
+
+Headings are driven by article context. -->
 
 In order for Windows Autopilot to work, devices need to be able to enroll in Intune automatically. Enrolling devices in Intune automatically can be configured in the Azure portal:
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 
-1. Select **Azure Active Directory**.
+2. Select **Azure Active Directory**.
 
-1. In the **Overview** screen, under **Manage**, select **Mobility (MDM and MAM)**.
+3. In the **Overview** screen, under **Manage** in the left hand pane, select **Mobility (MDM and MAM)**.
 
-1. In the **Mobility (MDM and MAM)** screen, select **Microsoft Intune**.
+4. In the **Mobility (MDM and MAM)** screen, select **Microsoft Intune**.
 
-1. In the **Configure** page, next to **MDM user scope**, select either **All** or **Some**:
+5. In the **Configure** page that opens, next to **MDM user scope**, select either **All** or **Some**:
 
    - If **All** is selected, all users can automatically enroll their devices in Intune.
 
    - If **Some** is selected, only users specified in the group(s) next to **Groups** can automatically enroll their devices in Intune. To add groups:
 
       1. Select the link next to **Groups**.
-      1. In the **Select groups** page, select the desired group(s) to add.
-      1. Once all of the desired group(s) have been selected, select **Select**.
+      2. In the **Select groups** window that opens, select the desired group(s) to add.
+      3. Once all of the desired group(s) have been selected, select **Select** to close the **Select groups** window.
 
         > [!NOTE]
         >
         > The group(s) selected must be an Azure AD group that contains user objects.
 
-1. In the **Configure** screen, if any changes were made, select **Save**.
+6. In the **Configure** screen, if any changes were made, select **Save**.
 
 > [!TIP]
 >
