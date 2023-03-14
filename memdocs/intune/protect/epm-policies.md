@@ -57,8 +57,7 @@ During the public preview, you can use EPM for free. To enable support for your 
 
 2. Review the available information for EPM, and when ready, select **Activate**. Intune begins to provision EPM for your tenant, which includes making the EPM component available for your devices. These components are enabled on devices when they receive a *Windows elevation settings policy*.
 
-   :::image type="content" source="./media/epm-policies/enable-epm.png" alt-text="Activate EPM for use during the public preview.":::
-
+   :::image type="content" source="./media/epm-policies/enable-epm.png" alt-text="Activate EPM for use during the public preview." :::
 
 ## Windows elevation settings policy
 
@@ -75,7 +74,7 @@ A device must have an elevation settings policy that enables support for EPM bef
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Endpoint security** > **Endpoint Privilege Management** > select the **Policies** tab > and then select **Create Policy**.
    Set the *Platform* to **Windows 10 and later**, *Profile* to **Windows elevation settings policy**, and then select **Create**.
 
-   :::image type="content" source="./media/epm-policies/create-epm-policy-1.png" alt-text="Image of the admin center UI for selecting an elevation settings policy.":::
+   :::image type="content" source="./media/epm-policies/create-epm-policy-1.png" alt-text="Image of the admin center UI for selecting an elevation settings policy." lightbox="./media/epm-policies/create-epm-policy-1.png":::
 
 2. On **Basics**, enter the following properties:
 
@@ -84,12 +83,12 @@ A device must have an elevation settings policy that enables support for EPM bef
 
 3. On **Configuration settings**, configure the following to define default behaviors for elevation requests on a device:
 
-   :::image type="content" source="./media/epm-policies/evaluation-settings-policy.png" alt-text="Image of the evaluation settings configuration page.":::
+   :::image type="content" source="./media/epm-policies/evaluation-settings-policy.png" alt-text="Image of the evaluation settings configuration page." lightbox="./media/epm-policies/evaluation-settings-policy.png":::
 
    - **Endpoint Privilege Management**: Set to **Enabled** (default). When set to Disabled, the device doesn't use Endpoint Privilege Management.
    - **Default elevation response**: Configure how this device manages elevation requests for files that aren't directly managed by a rule:
-     - **Not Configured**: No default elevation behavior applies to the device.
-     - **Deny all requests**: EPM doesn't facilitate the elevation of files that aren't managed by an elevation rule policy. This doesn't prevent users with administrative permissions from using *Run as administrator* to run unmanaged files.
+     - **Not Configured**: This option functions the same as *Deny all requests*.
+     - **Deny all requests**: EPM won't facilitate the elevation of files and the user is shown a pop-up window with information about the denial. This configuration doesn't prevent users with administrative permissions from using *Run as administrator* to run unmanaged files.
      - **Require user confirmation**: This applies to elevation requests for files that aren't managed by an elevation rule policy. The user receives a simple prompt to confirm their intent to run the file. You can also require additional prompts that are available from the *Validation* drop down:
        - **Business justification**: Require the user to enter a justification for running the file. There's no required format for this justification. User input is saved and can be reviewed through logs if the *Reporting scope* includes collection of endpoint elevations.
        - **Windows authentication**: This option requires the user to authenticate using their organization credentials.
@@ -127,7 +126,7 @@ In addition to this policy, a device must also be assigned a Windows elevation s
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Endpoint security** > **Endpoint Privilege Management** > select the **Policies** tab > and then select **Create Policy**.
    Set the *Platform* to **Windows 10 and later**, *Profile* to **Windows elevation rules policy**, and then select **Create**.
 
-   :::image type="content" source="./media/epm-policies/create-epm-policy-1.png" alt-text="Image of the admin center UI for selecting an elevation rules policy.":::
+   :::image type="content" source="./media/epm-policies/create-epm-policy-1.png" alt-text="Image of the admin center UI for selecting an elevation rules policy." lightbox="./media/epm-policies/create-epm-policy-1.png":::
 
 2. On **Basics**, enter the following properties:
 
@@ -136,7 +135,7 @@ In addition to this policy, a device must also be assigned a Windows elevation s
 
 3. On **Configuration settings**, add a rule for each file that this policy manages. When you create a new policy, the policy starts includes a blank rule with an elevation type of *User confirmed* and no rule name. Start by configuring this rule, and later you can select **Add** to add additional rules to this policy. Each new rule you add has an elevation type of User confirmed, which can be changed when you configure the rule.
 
-   :::image type="content" source="./media/epm-policies/new-elevation-rules-policy.png" alt-text="Image from the admin center UI of a new elevation rules policy.":::
+   :::image type="content" source="./media/epm-policies/new-elevation-rules-policy.png" alt-text="Image from the admin center UI of a new elevation rules policy." lightbox="./media/epm-policies/new-elevation-rules-policy.png":::
 
    To configure a rule, select **Edit instance** to open its Rule properties page, and then configure the following:
 
@@ -192,7 +191,7 @@ To create the reusable settings group for Endpoint Privilege Management:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Endpoint security** > **Endpoint Privilege Management** > select the **Reusable settings (preview)** tab > and then select **Add**.
 
-   :::image type="content" source="./media/epm-policies/add-reusable-settings.png" alt-text="Screen capture of the UI to add a reusable settings group.":::
+   :::image type="content" source="./media/epm-policies/add-reusable-settings.png" alt-text="Screen capture of the UI to add a reusable settings group." lightbox="./media/epm-policies/add-reusable-settings.png":::
 
 2. On **Basics**, enter the following properties:
    - **Name**: Enter a descriptive name for the reusable group. Name groups so you can easily identify each later.
@@ -200,9 +199,25 @@ To create the reusable settings group for Endpoint Privilege Management:
 
 3. In **Configuration settings**, select the folder icon for *Certificate file*, and browse to a **.CER** file to add it to this reusable group. The *Base 64 value* field fills in based on the certificate selected.
 
-   :::image type="content" source="./media/epm-policies/add-a-certificate.png" alt-text="{alt-text}":::
+   :::image type="content" source="./media/epm-policies/add-a-certificate.png" alt-text="Screen capture of the UI for browsing to a certificate." lightbox="./media/epm-policies/add-a-certificate.png":::
 
 4. In **Review + create**, review your settings and select **Add**. When you select *Add*, your configuration is saved, and group is then shown in the reusable settings group list for Endpoint Privilege Management.
+
+## Policy conflict handling for Endpoint Privilege Management
+
+Except for the following situation, conflicting policies for EPM are handled like any other [policy conflict](../configuration/device-profile-troubleshoot.md#conflicts).
+
+**Windows elevation settings policy**
+If a device receives separate rules for the same file:
+
+- If the settings conflict on enabling or disabling EPM, EPM policy is enabled on the device.
+
+**Windows elevation rules policy**
+If a device receives separate rules for the same file:
+
+- If the rules are in conflict, then the policy with the most properties that most explicitly describes the file applies.
+- If the rules don't define all the same settings or options, the configurations are merged as a superset for the file on that endpoint.
+- If the elevation type for the file is in conflict, settings for *User Confirmed* will apply instead of running as *Automatic*.
 
 ## Next steps
 
