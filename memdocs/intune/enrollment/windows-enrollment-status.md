@@ -109,9 +109,9 @@ ESP uses the [EnrollmentStatusTracking configuration service provider (CSP)](/wi
          - **All**: All assigned apps must be installed before users can use their devices.  
          - **Selected**: Select-apps must be installed before users can use their devices. Choose this option to select from your managed apps.  
 
-      - **Only fail selected blocking apps in technician phase:e**: Your options:  
-         - **No**: Only blocking apps will be fail the deployment during the technician phase for pre-provisioning.   
-         - **Yes**: Required apps targeted to the device or user (if assigned and can be installed in device context) will be attempted during the technician phase of pre-provisioning. These apps will not fail the deployment if they are not successfully installed unless they are part of the blocking apps previously selected. 
+      - **Only fail selected blocking apps in technician phase**: Your options:  
+         - **No**: Only blocking apps fail deployment during the technician phase for pre-provisioning.   
+         - **Yes**: Intune will attempt to install required apps targeted to the device, or user (if assigned and installed in device context), during the technician phase of pre-provisioning. If installation is unsuccessful, these apps won't fail the deployment unless they are part of the blocking apps you previously selected. 
  
 6. Select **Next**.   
 7. In **Assignments**, select the groups that will receive your profile. Optionally, select **Edit filter** to restrict the assignment further.   
