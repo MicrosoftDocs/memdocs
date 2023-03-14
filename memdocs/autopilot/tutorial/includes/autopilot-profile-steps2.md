@@ -9,9 +9,9 @@ ms.date: 02/23/2023
 ms.localizationpriority: medium
 ---
 
-1. Once the options in the **Out-of-box experience (OOBE)** page are configured as desired, select **Next**.
+9. Once the options in the **Out-of-box experience (OOBE)** page are configured as desired, select **Next**.
 
-1. In the **Assignments** page:
+10. In the **Assignments** page:
 
    1. Under **Included groups**, choose **Add groups**.
 
@@ -23,4 +23,4 @@ ms.localizationpriority: medium
 
    1. Under **Included groups** > **Groups**, ensure the correct group(s) are selected, and then select **Next**.
 
-1. In the **Review + Create** page, review and verify that all of the settings are set as desired, and then choose **Create** to create the Autopilot profile.
+11. In the **Review + Create** page, review and verify that all of the settings are set as desired, and then choose **Create** to create the Autopilot profile.

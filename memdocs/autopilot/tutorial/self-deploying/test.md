@@ -39,7 +39,7 @@ To create a self-deploying mode Autopilot profile, follow the below steps:
 
 [!INCLUDE [Autopilot profiles steps 1](../includes/autopilot-profile-steps1.md)]
 
-1. In the **Out-of-box experience (OOBE)** page:
+8. In the **Out-of-box experience (OOBE)** page:
 
       - For **Deployment mode**, select **Self-Deploying (preview)**.
 
