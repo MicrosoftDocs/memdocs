@@ -308,7 +308,22 @@ Now that you've installed your token, you can create an enrollment profile for A
 
 15. You can specify a naming format for devices that's automatically applied when they're enrolled and upon each successive check-in. To create a naming template, select **Yes** under **Apply device name template**. Then, in the **Device Name Template** box, enter the template to use for the names that use this profile. You can specify a template format that includes the device type and serial number. This feature supports iPhone, iPad, and iPod Touch. The device name template entry cannot exceed the length of 63 characters, including the variables.
 
-16. You can activate a cellular data plan. This setting applies to devices running iOS/iPadOS 13.0 and later. Configuring this option will send a command to activate cellular data plans for your eSim-enabled cellular devices. Your carrier must provision activations for your devices before you can activate data plans using this command. To activate cellular data plan, click **Yes** and then enter your carrier’s activation server URL.
+16. You can activate a cellular data plan. This setting applies to devices running iOS/iPadOS 13.0 and later. Configuring this option will send a command to activate cellular data plans for your eSim-enabled cellular devices. Your carrier must provision activations for your devices before you can activate data plans using this command. To activate cellular data plan, click **Yes** and then enter your carrier’s activation server URL.  
+
+17. Enable *awaiting configuration* to ensure your most critical device configuration policies are installed on the device before the user accesses the home screen. Awaiting configuration enables a locked experience at the end of Setup Assistant that prevents users from accessing restricted areas or changing device settings until Intune confirms that your selected policies are on the device. Just before the home screen loads, Setup Assistant pauses and lets Intune verify that the selected policies have been installed. The end user experience locks while users await for final configurations.  To set up the locked experience:   
+
+    1. For **Require device to be connected to Wi-Fi**, select **Yes** to require targeted devices to be connected to Wi-Fi. If devices aren't connected to Wi-Fi, the awaiting configuration experience will not work. Select **No** if devices aren't required to be connected to Wi-Fi.  
+    2. Under * **Device configuration**, choose **Select device configuration**.  
+    3. In the policy picker, select up to 3 device configuration policies. When you're done, choose **Select** to save your selection and close the picker. Repeat this step as many times as needed.  
+        >![NOTE]
+        > If you remove a policy later, after deploying the enrollment profile, your changes don't affect already-enrolled devices since they already completed Setup Assistant. The saved changes will apply to new enrollments and devices re-enrolling.  
+
+  This setting is applied once during the out-of-box automated device enrollment experience.  The device user doesn't experience it again unless they re-enroll their device. The amount of time it takes to release the device to the home screen varies, and depends on the total number of policies and apps applied to the device. The experience will timeout after five minutes. Awaiting configuration is the default experience for existing profiles.  If you don't select any policies, the device is released to the home screen when Setup Assistant ends, regardless of policy installation status, and users may be able to access the home screen or change device settings before all policies are installed.  
+
+ You can utilize the locked experience on devices targeted with new and existing enrollment profiles. Supported devices include:        
+ * iOS/iPadOS 13+ devices enrolling with Setup Assistant with modern authentication  
+ * iOS/iPadOS 13+ devices enrolling without user affinity   
+ * iOS/iPadOS 13+ devices enrolling with Azure AD shared mode  
 
 17. Select **Next**.
 
@@ -368,6 +383,15 @@ The following table describes the Setup Assistant screens shown during automated
 | **Software Update Completed** | Shows the user all software updates that happen during Setup Assistant.|  
 | **Get Started**| Shows users the Get Started welcome screen.  
 | **Terms of Address**| Give the user the option to choose how they want to be addressed throughout the system: feminine, masculine, or neutral. This Apple feature is available for select languages. For more information, see [Key Features and Enhancements](https://www.apple.com/ios/ios-16/features/)(opens Apple website). For iOS/iPadOS 16.0 and later.      
+| **Apple ID**| Give the user the option to sign in with their Apple ID and use iCloud. For iOS/iPadOS 7.0 and later.  
+
+ > [!NOTE]
+ > Setup Assistant skips the Apple ID screen if your tenant is configured with all of these settings:  
+ > * Apple ID screen is set to **Show**.   
+ > * Awaiting final configuration is set to **Yes** (enabled).   
+ > * Block modifications of account settings restriction is set to **Yes** (enabled).  
+ >
+ > For the screen to work as intended, awaiting final configuration enrollment must be disabled when you're also blocking modification of account settings.   
 
 ## Sync managed devices  
 
