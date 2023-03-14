@@ -313,17 +313,17 @@ Now that you've installed your token, you can create an enrollment profile for A
 17. Enable *awaiting configuration* to ensure your most critical device configuration policies are installed on the device before the user accesses the home screen. Awaiting configuration enables a locked experience at the end of Setup Assistant that prevents users from accessing restricted areas or changing device settings until Intune confirms that your selected policies are on the device. Just before the home screen loads, Setup Assistant pauses and lets Intune verify that the selected policies have been installed. The end user experience locks while users await for final configurations.  To set up the locked experience:   
 
     1. For **Require device to be connected to Wi-Fi**, select **Yes** to require targeted devices to be connected to Wi-Fi. If devices aren't connected to Wi-Fi, the awaiting configuration experience will not work. Select **No** if devices aren't required to be connected to Wi-Fi.  
-    2. Under * **Device configuration**, choose **Select device configuration**.  
+    2. Under **Device configuration**, choose **Select device configuration**.  
     3. In the policy picker, select up to 3 device configuration policies. When you're done, choose **Select** to save your selection and close the picker. Repeat this step as many times as needed.  
         >![NOTE]
         > If you remove a policy later, after deploying the enrollment profile, your changes don't affect already-enrolled devices since they already completed Setup Assistant. The saved changes will apply to new enrollments and devices re-enrolling.  
 
-  This setting is applied once during the out-of-box automated device enrollment experience.  The device user doesn't experience it again unless they re-enroll their device. The amount of time it takes to release the device to the home screen varies, and depends on the total number of policies and apps applied to the device. The experience will timeout after five minutes. Awaiting configuration is the default experience for existing profiles.  If you don't select any policies, the device is released to the home screen when Setup Assistant ends, regardless of policy installation status, and users may be able to access the home screen or change device settings before all policies are installed.  
+       This setting is applied once during the out-of-box automated device enrollment experience.  The device user doesn't experience it again unless they re-enroll their device. The amount of time it takes to release the device to the home screen varies, and depends on the total number of policies and apps applied to the device. The experience will time out after five minutes. Awaiting configuration is the default experience for existing profiles.  If you don't select any policies, the device is released to the home screen when Setup Assistant ends, regardless of policy installation status, and users may be able to access the home screen or change device settings before all policies are installed.  
 
- You can utilize the locked experience on devices targeted with new and existing enrollment profiles. Supported devices include:        
- * iOS/iPadOS 13+ devices enrolling with Setup Assistant with modern authentication  
- * iOS/iPadOS 13+ devices enrolling without user affinity   
- * iOS/iPadOS 13+ devices enrolling with Azure AD shared mode  
+       You can utilize the locked experience on devices targeted with new and existing enrollment profiles. Supported devices include:        
+       * iOS/iPadOS 13+ devices enrolling with Setup Assistant with modern authentication  
+       * iOS/iPadOS 13+ devices enrolling without user affinity   
+       * iOS/iPadOS 13+ devices enrolling with Azure AD shared mode  
 
 17. Select **Next**.
 
