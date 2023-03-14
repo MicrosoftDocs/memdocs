@@ -148,6 +148,8 @@ Event Viewers:
 - Microsoft-Windows-Windows Firewall With Advanced Security/Firewall
 - Microsoft-Windows-WinRM/Operational
 - Microsoft-Windows-WMI-Activity/Operational
+- Microsoft-Windows-AppXDeployment/Operational
+- Microsoft-Windows-AppXDeploymentServer/Operational
 - Setup
 - System
 
@@ -174,6 +176,7 @@ Files:
 - %windir%\system32\config\systemprofile\AppData\Local\mdm\\\*.log
 - %windir%\temp\%computername%*.log
 - %windir%\temp\officeclicktorun*.log
+- %TEMP%\winget\defaultstate*.log
 
 ## Disable device diagnostics
 
@@ -195,12 +198,6 @@ Autopilot automatic diagnostic capture is enabled by default. You can disable Au
 3. Change the control under **Automatically capture diagnostics when devices experience a failure during the Autopilot process on Windows 10 version 1909 or later and Windows 11. Diagnostics may include user identifiable information such as user or device name (preview).** to **Disabled**.
 
      :::image type="content" source="./media/collect-diagnostics/disable-autopilot-diagnostics.png" alt-text="Screenshot that shows the Device diagnostics pane with the highlighted control for Autopilot automatic diagnostics collection set to Disabled." lightbox="./media/collect-diagnostics/disable-autopilot-diagnostics.png":::
-
-## WinGet troubleshooting using diagnostic files
-[WinGet](/windows/package-manager/winget/) is a command line tool that enables you to discover, install, upgrade, remove, and configure applications on Windows 10 and Windows 11 devices. When working with [Win32 app management in Intune](../apps/apps-win32-app-management.md), you can use the following files to help troubleshoot WinGet:
-- *%TEMP%\winget\defaultstate\*.log*
-- *Microsoft-Windows-AppXDeployment/Operational*
-- *Microsoft-Windows-AppXDeploymentServer/Operational*
 
 ## Known issues with device diagnostics
 
