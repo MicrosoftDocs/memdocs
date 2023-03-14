@@ -1,6 +1,6 @@
 ---
-title: Windows Autopilot self-deploying mode - Step 5 of 5 - Create and assign self-deploying mode Autopilot profile
-description: How to - Windows Autopilot self-deploying mode - Step 5 of 5 - Create and assign self-deploying mode Autopilot profile.
+title: Test
+description: Test
 ms.prod: windows-client
 ms.localizationpriority: medium
 author: frankroj
@@ -37,29 +37,7 @@ While the ESP controls what is shown during device and user setup and specifies 
 
 To create a self-deploying mode Autopilot profile, follow the below steps:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-
-1. In the **Home** screen, select **Devices** in the left hand pane.
-
-1. In the **Devices | Overview** screen, under **By platform**, select **Windows**.
-
-1. In the **Windows | Windows devices** screen, select **Windows enrollment**.
-
-1. Under **Windows Autopilot Deployment Program**, select **Deployment Profiles**.
-
-1. In the **Windows Autopilot deployment profiles** screen, select **Create Profile** > **Windows PC**.
-
-1. The **Create profile** screen will open. In the **Basics** page:
-
-   1. Next to **Name**, enter a name for the Autopilot profile.
-
-   1. Next to **Description**, enter a description.
-
-   1. Select **Next**.
-
-    > [!NOTE]
-    >
-    > For the purposes of this tutorial, leave the option **Convert all targeted devices to Autopilot** set to **No**. This tutorial is mainly concentrating on new devices while this option mainly covers existing devices.
+[!INCLUDE [Autopilot profiles steps 1](../includes/autopilot-profile-steps1.md)]
 
 1. In the **Out-of-box experience (OOBE)** page:
 
@@ -90,21 +68,7 @@ To create a self-deploying mode Autopilot profile, follow the below steps:
         - Use the [%SERIAL% macro](/windows/client-management/mdm/accounts-csp) to add a hardware-specific serial number.
         - Use the [%RAND:x% macro](/windows/client-management/mdm/accounts-csp) to add a random string of numbers, where x equals the number of digits to add.
 
-1. Once the options in the **Out-of-box experience (OOBE)** page are configured as desired, select **Next**.
-
-1. In the **Assignments** page:
-
-   1. Under **Included groups**, choose **Add groups**.
-
-      > [!NOTE]
-      >
-      > Make sure to add the correct device groups under **Included groups** and not under **Excluded groups**. Accidentally adding the desired device groups under **Excluded groups** will result in those devices being excluded and they won't receive the Autopilot profile.
-
-   1. In the **Select groups to include** window that opens, select the groups that the Autopilot profile should be assigned to. This device group(s) is normally the device group(s) created in the step [Create device group](self-deploying-device-group.md). Once done, select **Select**.
-
-   1. Under **Included groups** > **Groups**, ensure the correct group(s) are selected, and then select **Next**.
-
-1. In the **Review + Create** page, review and verify that all of the settings are set as desired, and then choose **Create** to create the Autopilot profile.
+[!INCLUDE [Autopilot profiles steps 1](../includes/autopilot-profile-steps2.md)]
 
 ## Verify device has an Autopilot profile assigned to it
 
