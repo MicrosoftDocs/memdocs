@@ -39,4 +39,4 @@ Headings are driven by article context. -->
 
     > [!NOTE]
     >
-    > For the purposes of this tutorial, leave the option **Convert all targeted devices to Autopilot** set to **No**. This tutorial is mainly concentrating on new devices while this option mainly covers existing devices.
+    > For the purposes of this tutorial, leave the option **Convert all targeted devices to Autopilot** set to **No**. This tutorial concentrates on new devices while this option mainly covers existing devices.
