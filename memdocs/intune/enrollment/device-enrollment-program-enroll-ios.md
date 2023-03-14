@@ -361,7 +361,7 @@ The following table describes the Setup Assistant screens shown during automated
 | **Passcode** | Prompt the user for a passcode. Always require a passcode for unsecured devices unless access is controlled in some other way. (For example, a kiosk mode configuration that restricts the device to one app.) For iOS/iPadOS 7.0 and later. |
 | **Location Services** | Prompt the user for their location. For macOS 10.11 and later, and iOS/iPadOS 7.0 and later. |
 | **Restore** | Display the Apps & Data screen. This screen gives users the option to restore or transfer data from iCloud Backup when they set up the device. For macOS 10.9 and later, and iOS/iPadOS 7.0 and later. |
-| **Apple ID** | Give the user the options to sign in with their Apple ID and use iCloud. For macOS 10.9 and later, and iOS/iPadOS 7.0 and later.   |
+| **Apple ID** | Give the user the options to sign in with their Apple ID and use iCloud. For iOS/iPadOS 7.0 and later.   |
 | **Terms and conditions** | Require the user to accept Apple's terms and conditions. For macOS 10.9 and later, and iOS/iPadOS 7.0 and later. |
 | **Touch ID and Face ID** | Give the user the option to set up fingerprint or facial identification on their device. For macOS 10.12.4 and later, and iOS/iPadOS 8.1 and later. On iOS/iPadOS 14.5 and later, the Passcode and Touch ID Setup Assistant screens during device setup aren’t working. If you use version 14.5+, then don't configure the Passcode or Touch ID Setup Assistant screens. If you require a passcode on devices, then use a device configuration policy or a compliance policy. After the user enrolls and they receive the policy, they're prompted for a passcode. |
 | **Apple Pay** | Give the user the option to set up Apple Pay on the device. For macOS 10.12.4 and later, and iOS/iPadOS 7.0 and later. |
@@ -382,8 +382,7 @@ The following table describes the Setup Assistant screens shown during automated
 | **Restore Completed** | Shows users the Restore Completed screen after a backup and restore is performed during Setup Assistant. |  
 | **Software Update Completed** | Shows the user all software updates that happen during Setup Assistant.|  
 | **Get Started**| Shows users the Get Started welcome screen.  
-| **Terms of Address**| Give the user the option to choose how they want to be addressed throughout the system: feminine, masculine, or neutral. This Apple feature is available for select languages. For more information, see [Key Features and Enhancements](https://www.apple.com/ios/ios-16/features/)(opens Apple website). For iOS/iPadOS 16.0 and later.      
-| **Apple ID**| Give the user the option to sign in with their Apple ID and use iCloud. For iOS/iPadOS 7.0 and later.  
+| **Terms of Address**| Give the user the option to choose how they want to be addressed throughout the system: feminine, masculine, or neutral. This Apple feature is available for select languages. For more information, see [Key Features and Enhancements](https://www.apple.com/ios/ios-16/features/)(opens Apple website). For iOS/iPadOS 16.0 and later.       
 
  > [!NOTE]
  > Setup Assistant skips the Apple ID screen if your tenant is configured with all of these settings:  
