@@ -1076,6 +1076,8 @@ items:
           href: ./fundamentals/filters-supported-workloads.md
         - name: Reporting and conflict resolution
           href: ./fundamentals/filters-reports-troubleshoot.md
+        - name: Performance recommendations
+          href: ./fundamentals/filters-performance-recommendations.md
       - name: Use policy sets to group policies together
         href: ./fundamentals/policy-sets.md
       - name: Troubleshoot policies and profiles
