@@ -100,7 +100,7 @@ To create a self-deploying mode Autopilot profile, follow the below steps:
       >
       > Make sure to add the correct device groups under **Included groups** and not under **Excluded groups**. Accidentally adding the desired device groups under **Excluded groups** will result in those devices being excluded and they won't receive the Autopilot profile.
 
-   1. In the **Select groups to include** window that opens, select the groups that the Autopilot profile should be assigned to. This device group(s) is normally the device group(s) created in the step [Create device group](azure-ad-join-device-group.md). Once done, select **Select**.
+   1. In the **Select groups to include** window that opens, select the groups that the Autopilot profile should be assigned to. This device group(s) is normally the device group(s) created in the step [Create device group](self-deploying-device-group.md). Once done, select **Select**.
 
    1. Under **Included groups** > **Groups**, ensure the correct group(s) are selected, and then select **Next**.
 
