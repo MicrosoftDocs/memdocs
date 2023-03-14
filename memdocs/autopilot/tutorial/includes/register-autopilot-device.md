@@ -9,7 +9,13 @@ ms.date: 02/23/2023
 ms.localizationpriority: medium
 ---
 
-<!-- This file is shared by the azure-ad-join-register-device.md and the hybrid-azure-ad-join-register-device.md articles. Headings are driven by article context. -->
+<!-- This file is shared by the following articles:
+
+azure-ad-join-register-device.md
+hybrid-azure-ad-join-register-device.md
+self-deploying-register-device.md
+
+Headings are driven by article context. -->
 
 Before a device can use Autopilot, the device must be registered as an Autopilot device. Registering a device as an Autopilot device can be thought of as importing the device into Autopilot so that Autopilot can be used on the device. Registering a device as an Autopilot device doesn't mean that the device has ever used the Autopilot service. It just makes the Autopilot service available to the device.
 

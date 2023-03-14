@@ -9,21 +9,27 @@ ms.date: 02/23/2023
 ms.localizationpriority: medium
 ---
 
-<!-- This file is shared by the azure-ad-join-autopilot-profile.md and the hybrid-azure-ad-join-autopilot-profile.md articles. Headings are driven by article context. -->
+<!-- This file is shared by the following articles:
+
+azure-ad-join-autopilot-profile.md
+hybrid-azure-ad-join-autopilot-profile.md
+self-deploying-autopilot-profile.md
+
+Headings are driven by article context. -->
 
 Before deploying a device, ensure that an Autopilot profile has been assigned to a device group that the device is a member of. Autopilot profile assignment to a device can take some time after the Autopilot profile has been assigned to the device group or after the device has been added to the device group. To verify that the profile has been assigned to a device, follow these steps:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-1. In the **Home** screen, select **Devices** in the left pane.
+2. In the **Home** screen, select **Devices** in the left pane.
 
-1. In the **Devices | Overview** screen, under **By platform**, select **Windows**.
+3. In the **Devices | Overview** screen, under **By platform**, select **Windows**.
 
-1. In the **Windows | Windows devices** screen, select **Windows enrollment**.
+4. In the **Windows | Windows devices** screen, select **Windows enrollment**.
 
-1. Under **Windows Autopilot Deployment Program**, select **Devices**.
+5. Under **Windows Autopilot Deployment Program**, select **Devices**.
 
-1. In the **Windows Autopilot devices** screen that opens:
+6. In the **Windows Autopilot devices** screen that opens:
 
    1. Find the desired device that Autopilot deployment profile assignment status needs to be checked.
 

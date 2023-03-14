@@ -9,7 +9,13 @@ ms.date: 02/23/2023
 ms.localizationpriority: medium
 ---
 
-<!-- This file is shared by the azure-ad-join-device-group.md and the hybrid-azure-ad-join-device-group.md articles. Headings are driven by article context. -->
+<!-- This file is shared by the following articles:
+
+azure-ad-join-device-group.md
+hybrid-azure-ad-join-device-group.md
+self-deploying-device-group.md
+
+Headings are driven by article context. -->
 
 For more information on creating groups in Intune, see the following article(s):
 

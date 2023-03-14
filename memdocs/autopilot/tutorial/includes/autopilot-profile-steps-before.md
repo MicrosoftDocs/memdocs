@@ -9,6 +9,14 @@ ms.date: 02/23/2023
 ms.localizationpriority: medium
 ---
 
+<!-- This file is shared by the following articles:
+
+azure-ad-join-autopilot-profile.md
+hybrid-azure-ad-join-autopilot-profile.md
+self-deploying-autopilot-profile.md
+
+Headings are driven by article context. -->
+
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. In the **Home** screen, select **Devices** in the left hand pane.
