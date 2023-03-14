@@ -948,8 +948,8 @@ Do continue to refer to this guide and the [Appendix] as you continue to develop
 [App Protection CA]:/mem/intune/protect/app-based-conditional-access-intune
 [issuing a selective wipe]:/mem/intune/apps/apps-selective-wipe
 [Set up app-based Conditional Access policies with Intune]:/mem/intune/protect/app-based-conditional-access-intune-create
-[Microsoft Tunnel with Mobile Application Management]:https://learn.microsoft.com/en-us/mem/intune/protect/microsoft-tunnel-mam
-[Use Microsoft Tunnel VPN with Android devices that don't enroll with Microsoft Intune]:https://learn.microsoft.com/en-us/mem/intune/protect/microsoft-tunnel-mam-android
+[Microsoft Tunnel with Mobile Application Management]:/mem/intune/protect/microsoft-tunnel-mam
+[Use Microsoft Tunnel VPN with Android devices that don't enroll with Microsoft Intune]:/mem/intune/protect/microsoft-tunnel-mam-android
 
 <!-- 3rd party links -->
 [app private storage]:https://developer.android.com/training/data-storage
