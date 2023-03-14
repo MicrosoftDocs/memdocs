@@ -37,23 +37,26 @@ For an overview of the Windows Autopilot user-driven hybrid Azure AD join workfl
 1. Turn off Internet Explorer Enhanced Security Configuration on the server. By default Windows Server has Internet Explorer Enhanced Security Configuration turned on. To turn off Internet Explorer Enhanced Security Configuration:
 
    1. On the server where the Intune Connector will be installed, open **Server Manager**.
+
    1. In the left pane of Server Manager, select **Local Server**.
+
    1. In the right **PROPERTIES** pane of Server Manager, select the **On** or **Off** link next to **IE Enhanced Security Configuration**.
+
    1. In the **Internet Explorer Enhanced Security Configuration** window, select **Off** under **Administrators:**, and then select **OK**.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) on the server where the Intune Connector will be installed.
 
-1. In the **Home** screen, select **Devices**.
+1. In the **Home** screen, select **Devices** in the left pane.
 
 1. In the **Devices | Overview** screen, under **By platform**, select **Windows**.
 
-1. In the **Windows | Windows devices** screen, select > **Windows enrollment**.
+1. In the **Windows | Windows devices** screen, select **Windows enrollment**.
 
 1. Under **Windows Autopilot Deployment Program**, select **Intune Connector for Active Directory**.
 
 1. In the **Intune Connector for Active Directory** page, select **Add**.
 
-1. In the **Add connector** page, select **Download the on-premises Intune Connector for Active Directory** under step 2 of **Configuring the Intune connector for Active Directory**.
+1. In the **Add connector** window that opens, select **Download the on-premises Intune Connector for Active Directory** under step 2 of **Configuring the Intune connector for Active Directory**. This should download a file called **ODJConnectorBootstrapper.exe**.
 
 1. Open the **ODJConnectorBootstrapper.exe** file that downloaded to launch the Intune Connector install.
 
@@ -69,15 +72,19 @@ For an overview of the Windows Autopilot user-driven hybrid Azure AD join workfl
     >
     > If **Close** is accidentally selected or the **Intune Connector for Active Directory Setup** installer window is accidentally closed, the **Intune Connector for Active Directory** configuration can be accessed by selecting **Intune connector for Active Directory** > **Intune connector for Active Directory** from the Start menu.
 
-1. In the **Intune connector for Active Directory** window, under the **Enrollment** tab, select **Sign In**.
+1. In the **Intune connector for Active Directory** window:
 
-1. Under the **Sign In** tab, sign in with the Global administrator or with the credentials of an Intune administrator role. The user account must have an assigned Intune license. The sign in process may take a few minutes to complete.
+   1. Under the **Enrollment** tab, select **Sign In**.
 
-1. Once the sign in process is complete, a **The Intune connector for Active Directory successfully enrolled** confirmation window will appear. Select **OK** to close the window. The **Enrollment** tab will now show **Intune connector for Active Directory is enrolled** and the **Sign In** button will be greyed out.
+   1. Under the **Sign In** tab, sign in with the Global administrator or with the credentials of an Intune administrator role. The user account must have an assigned Intune license. The sign in process may take a few minutes to complete.
 
-1. Close the **Intune connector for Active Directory** window.
+   1. Once the sign in process is complete, a **The Intune connector for Active Directory successfully enrolled** confirmation window will appear. Select **OK** to close the window. The **Enrollment** tab will now show **Intune connector for Active Directory is enrolled** and the **Sign In** button will be greyed out.
 
-1. In the Microsoft Intune admin center, close the **Add connector** pane if it's still displayed. In the **Intune Connector for Active Directory** page, confirm that the server is displayed under **Connector name** and shows as **Active** under **Status**. If the server isn't displayed, select **Refresh** or navigate away from the page, and then navigate back to the **Intune Connector for Active Directory** page.
+   1. Close the **Intune connector for Active Directory** window.
+
+1. In the Microsoft Intune admin center, close the **Add connector** window if it's still displayed.
+
+1. In the **Intune Connector for Active Directory** page, confirm that the server is displayed under **Connector name** and shows as **Active** under **Status**. If the server isn't displayed, select **Refresh** or navigate away from the page, and then navigate back to the **Intune Connector for Active Directory** page.
 
 > [!NOTE]
 >

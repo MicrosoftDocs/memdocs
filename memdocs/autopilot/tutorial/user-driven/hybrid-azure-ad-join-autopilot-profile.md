@@ -51,7 +51,7 @@ To create a user-driven Azure AD join Autopilot profile, follow the below steps:
 
 1. In the **Devices | Overview** screen, under **By platform**, select **Windows**.
 
-1. In the **Windows | Windows devices** screen, select > **Windows enrollment**
+1. In the **Windows | Windows devices** screen, select **Windows enrollment**
 
 1. Under **Windows Autopilot Deployment Program**, select **Deployment Profiles**
 
@@ -95,7 +95,7 @@ To create a user-driven Azure AD join Autopilot profile, follow the below steps:
 
       > [!NOTE]
       >
-      > The above settings have been selected to minimize needed user interaction during device setup. However, some of the settings that are hidden can instead be shown as desired. For example, some regions may require that **Privacy settings** always be shown.
+      > The above settings have been selected to minimize user interaction during device setup. However, some of the settings that are hidden can instead be shown as desired. For example, some regions may require that **Privacy settings** always be shown.
       >
       > Also note that if language and keyboard settings are shown instead of hidden, they require ethernet connectivity. Wi-fi connectivity isn't supported because of the requirement to choose a language, locale, and keyboard to initiate the Wi-fi connection.
 
@@ -111,11 +111,9 @@ To create a user-driven Azure AD join Autopilot profile, follow the below steps:
 
    1. In the **Select groups to include** window that opens, select the groups that the Autopilot profile should be assigned to. This device group(s) is normally the device group(s) created in the step [Create device group](azure-ad-join-device-group.md). Once done, select **Select**.
 
-   1. Under **Included groups** > **Groups**, ensure the correct group(s) are selected, and then select Next.
+   1. Under **Included groups** > **Groups**, ensure the correct group(s) are selected, and then select **Next**.
 
 1. In the **Review + Create** page, review and verify that all of the settings are set as desired, and then choose **Create** to create the Autopilot profile.
-
-For more information on creating and assigning Autopilot profiles, see the following articles:
 
 ## Verify device has an Autopilot profile assigned to it
 

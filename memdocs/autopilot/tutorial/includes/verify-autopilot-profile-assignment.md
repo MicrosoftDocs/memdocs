@@ -19,7 +19,7 @@ Before deploying a device, ensure that an Autopilot profile has been assigned to
 
 1. In the **Devices | Overview** screen, under **By platform**, select **Windows**.
 
-1. In the **Windows | Windows devices** screen, select > **Windows enrollment**.
+1. In the **Windows | Windows devices** screen, select **Windows enrollment**.
 
 1. Under **Windows Autopilot Deployment Program**, select **Devices**.
 
