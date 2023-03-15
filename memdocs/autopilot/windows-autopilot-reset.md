@@ -90,10 +90,10 @@ You can set the policy using one of these methods:
 
   - When using Intune, you can create a new device configuration profile with the following settings:
 
-   - **Platform** = **Windows 10 or later**
-   - **Profile type** = **Device restrictions**
-   - **Category** = **General**
-   - **Autopilot Reset** = **Allow**. Deploy this setting to all devices where a local reset should be permitted.
+    - **Platform** = **Windows 10 or later**
+    - **Profile type** = **Device restrictions**
+    - **Category** = **General**
+    - **Autopilot Reset** = **Allow**. Deploy this setting to all devices where a local reset should be permitted.
 
   - If you're using an MDM provider other than Intune, check your MDM provider documentation on how to set this policy.
 
