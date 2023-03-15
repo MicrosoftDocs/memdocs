@@ -23,7 +23,7 @@ A new toggle will be available in the Enrollment Status Page (ESP) profile that 
 
 ## Installing WinGet applications using Windows Autopilot
 
-The Enrollment Status Page now supports WinGet application installs during Windows Autopilot. This update enables better support for the new Microsoft Store experience. For related information, see [Set up the Enrollment Status Page](../enrollment/windows-enrollment-status.md).
+The Enrollment Status Page now supports WinGet application installs during Windows Autopilot. This update enables better support for the new Microsoft Store experience and should be rolling out to all tenants starting with Intune 2303. For related information, see [Set up the Enrollment Status Page](../enrollment/windows-enrollment-status.md).
 
 ## Bug fix: Intune Management Extension updates during Enrollment Status Page
 
