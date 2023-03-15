@@ -73,7 +73,7 @@ To select an ANC, follow these steps:
 
 2. If you select more than one ANC, you can set the priority order for those ANCs. To do so, hover over an ANC > click and drag on the three dots > drag the ANC to a different position in the list.
 
-  As long as the first ANC in the list is **Healthy**, it will always be used for provisioning Cloud PCs using this policy. If the first ANC is not healthy, the policy will use the next ANC in the list that is healthy.
+  As long as the first ANC in the list is **Healthy**, it will always be used for provisioning Cloud PCs using this policy. If the first ANC isn't healthy, the policy will use the next ANC in the list that is healthy.
 
 ### Continue creating a provisioning policy
 
@@ -86,7 +86,7 @@ To select an ANC, follow these steps:
 5. On the **Configuration** page, under **Windows settings**, choose a **Language & Region**. The selected language pack will be installed on Cloud PCs provisioned with this policy.
 6. Optional. Select **Apply device name template** to create a Cloud PC naming template to use when naming all Cloud CPs that are provisioned with this policy. Options and requirements for this template include:
     - Names must be between 4 and 15 characters.
-    - Names can contain letters, numbers, hyphens, and undescores.
+    - Names can contain letters, numbers, hyphens, and underscores.
     - Names can't include blank spaces.
     - Optional. Use the %USERNAME:X% macro to add the first X letters of the username.
     - Required. Use the %RAND:Y% macro to add a random string of numbers, where Y equals the number of digits to add. Y must be 5 or more. Names must contain a randomized string.
