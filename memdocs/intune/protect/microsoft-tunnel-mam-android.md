@@ -76,6 +76,8 @@ To support using Tunnel for MAM, create and deploy the three profiles detailed i
 
 When all three are configured and deployed to the same groups, the app protection policy will automatically trigger Tunnel to connect to the VPN whenever Microsoft Edge is launched.
 
+In addition, you can configure a [Trusted certificate profile](../protect/certificates-trusted-root.md) for use with your line-of-business apps when they must connect to on-premises resources and are protected by an SSL/TLS certificate issued by an on-premises or private certificate authority (CA). 
+
 ### App configuration policy for Microsoft Defender
 
 Create an App configuration policy to configure Microsoft Defender for Endpoint on the device for use as the tunnel client app.
@@ -106,9 +108,6 @@ Create an App configuration policy to configure Microsoft Defender for Endpoint 
    - *Proxy* is an optional setting.  Configure proxy settings to meet your on-premises network requirements.  
      > [!NOTE]  
      > Proxy server configurations are not supported with versions of Android prior to version 10.  For more information, see [VpnService.Builder](https://developer.android.com/reference/android/net/VpnService.Builder#setHttpProxy%28android.net.ProxyInfo%29) in that Android developer documentation.
-
-   > [!IMPORTANT]
-   > Microsoft Tunnel for MAM Android doesn’t support use of trusted root certificates, even though *Root Certificate* is an available option when configuring the App configuration policy. Support for root certificates will be made available in a future update. Configuration of the *Root Certificate* setting for Android should be skipped as it will not work.
 
    When ready, select **Next** to continue.
 
@@ -193,28 +192,40 @@ For more information about adding custom apps to policies, see the following art
 
 To support LOB apps on your unenrolled devices, the apps must deploy as *available apps*  from within Microsoft Intune admin center. You can’t use Intune to deploy apps as required apps to unenrolled devices.
 
+### Configure a trusted certificate profile
+
+LOB apps that use the MAM tunnel on Android are required to integrate with the Intune App SDK and must use the new Tunnel for MAM trust manager to utilize trusted root certificate support for their LOB apps.
+
+**Trusted Root Certificates Management**:
+
+If your application requires SSL/TLS certificates issued by an on-premise or private certificate authority to provide secure access to internal websites and applications, the Intune App SDK has added support for certificate trust management using the API classes [MAMTrustedRootCertsManager](https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/MAMTrustedRootCertsManager.html) and [MAMCertTrustWebViewClient](https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/MAMCertTrustWebViewClient.html).
+
+**Requirements**:
+
+- **Certificate formats** supported by Tunnel for MAM Android:
+  - DER encoded binary X.509
+  - PEM
+
+- **MAMCertTrustWebViewClient** supports:
+  - Android 10 or higher
+
+- **MAMTrustedRootCertsManager** supports:
+  - SSLContext
+  - SSLSocketFactory
+  - TrustManager
+  - WebView
+
+During configuration of the app configuration profile for an app that will use Tunnel for MAM, you select the certificate profile that will be used. For information on configuring these profiles, see [Trusted root certificate profiles for Microsoft Intune](../protect/certificates-trusted-root.md).
+
 ## Known Issues
 
 The following are known issues or limitations for MAM Tunnel for Android.
 
 ### MAM Tunnel not supported when using the MDM Tunnel
+
 You can choose to use MAM Tunnel with enrolled devices instead of using MDM Tunnel configurations. However, an enrolled device must use only the MDM Tunnel configurations or the MAM Tunnel configurations, but not both. For example, enrolled devices can't have an app like Microsoft Edge that uses MAM tunnel configurations while other apps use MDM Tunnel configurations.
 
 **Work around**: None.
-
-### Delivering trusted root certs to unenrolled devices
-
-When unenrolled devices access resources protected by SSL/TLS certificates issued by an on-premises certificate authority (CA), the devices require the trusted certificate public keychain of the issuing CA to establish a chain of trust with the on-premises endpoint (that is, web server, application web service). As a result, a  browser (Microsoft Edge or third party browser), or application won't trust the endpoint without the necessary on-premises CA keychain (trusted cert). For example, Microsoft Edge reports that the connection isn’t private or is untrusted, and SSL or https connections aren't available. Users can ignore this warning and connect to the endpoint.
-
-Microsoft Tunnel for MAM on Android doesn't provide support for delivering Trusted certificates to unenrolled devices.
-
-**Work around**: Manually deploy and install the trusted root certificate on unenrolled Android devices that will use Tunnel.
-
-### Defender for Endpoint certificate error when suing a TLS/SSL certificate from a private certificate authority
-
-When Microsoft Tunnel Gateway server uses a TLS/SSL certificate issued by a private (on-premises) CA, Microsoft Defender for Endpoint generates a certificate error when attempting to connect.
-
-**Work around**: Manually install the corresponding trusted root certificate of the private certificate authority on the Android device. A future update of the Defender for Endpoint app will provide support and remove the need to manually install the trusted root certificate.
 
 ### Microsoft Edge can't reach internal resources for a short time after being launched
 
