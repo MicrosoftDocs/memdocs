@@ -86,9 +86,9 @@ For an overview of the Windows Autopilot user-driven hybrid Azure AD join workfl
 
       > [!NOTE]
       >
-      > Make sure to add the correct device groups under **Included groups** and not under **Excluded groups**. Accidentally adding the desired device groups under **Excluded groups** will result in those devices being excluded and they won't receive the Autopilot profile.
+      > Make sure to add the correct device groups under **Included groups** and not under **Excluded groups**. Accidentally adding the desired device groups under **Excluded groups** will result in those devices being excluded and they won't receive the configuration profile.
 
-   1. In the **Select groups to include** window that opens, select the groups that the Autopilot profile should be assigned to. This device group(s) is normally the device group(s) created in the step [Create device group](azure-ad-join-device-group.md). Once done, select **Select**.
+   1. In the **Select groups to include** window that opens, select the groups that the configuration profile should be assigned to. This device group(s) is normally the device group(s) created in the step [Create device group](azure-ad-join-device-group.md). Once done, select **Select**.
 
    1. Under **Included groups** > **Groups**, ensure the correct group(s) are selected, and then select **Next**.
 
