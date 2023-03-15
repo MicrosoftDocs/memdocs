@@ -38,7 +38,6 @@ Company Portal supports devices running Android 8.0 and later, including devices
 
 > [!VIDEO https://www.youtube.com/embed/k0Q_sGLSx6o]
 
-
 > [!NOTE]
 > Samsung Knox is a type of security that certain Samsung devices use for additional 
 > protection outside of what native Android provides. To check if you have a Samsung Knox device, go to **Settings** > **About device**. If you don't see **Knox version** listed there, you have a native Android device.  
