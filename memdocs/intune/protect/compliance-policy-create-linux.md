@@ -7,7 +7,7 @@ keywords:
 author: brenduns    
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/08/2023
+ms.date: 03/15/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -90,20 +90,6 @@ Enforce common password requirements for Linux devices:
 - Minimum Digits - Specifies the minimum number of digits a password must contain.
 
 Users that fail to meet password complexity requirements can receive a message that they must use a strong password to bring the device into compliance.
-
-> [!NOTE]
-> Pending details
-
-
-Intune uses the **pam_pwquality** module to ensure password rules meet an organization’s standards. For information on how to configure the parameters in **pam_pwquality**, refer to the [Ubuntu documentation](https://manpages.ubuntu.com/manpages/focal/man8/pam_pwquality.8.html).
-
-Following is an example configuration line from the */etc/pam.d/common-password* file that enforces passwords that have at least one digit, one uppercase letter, and are at least 12 characters long: `password required pam_pwquality.so dcredit=-1 ucredit=-1 ocredit=-1 minlen=12`
-
-To make a change, update the pwquality file first, and then run the pam-auth-update tool:
-
-1. Edit **/usr/share/pam-configs/pwquality** to have the password policy settings required by your organization, and then save the file.
-2. Run `sudo pam-auth-update --enable pwquality`
-3. Verify that the common password file at */etc/pam.d/common-password* is updated to match the update made in the pwquality file.
 
 ## Refresh compliance status
 
