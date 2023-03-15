@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/01/2023
+ms.date: 03/15/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -219,13 +219,14 @@ During configuration of the app configuration profile for an app that will use T
 
 1. On the *Settings* tab of your app configuration profile, expand *Microsoft Tunnel for Mobile Application Management settings*.
    :::image type="content" source="./media/microsoft-tunnel-mam-android/settings-certificates.png" alt-text="View of the Tunnel settings in an app configuration policy."  lightbox="./media/microsoft-tunnel-mam-android/settings-certificates.png":::
+
 1. Configure the following options:
    1. Set *Use Microsoft Tunnel for MAM* to **Yes**.
    1. For *Connection name*, specify a user facing name for this connection, like *mam-tunnel-vpn*.
    1. Next, select **Select a Site**, and choose one of your Microsoft Tunnel Gateway sites. If you haven’t configured a Tunnel Gateway site, see [Configure Microsoft Tunnel](../protect/microsoft-tunnel-configure.md).
    1. If your app requires a trusted certificate, select **Root Certificate** to open the *Select Root Certificates* pane, and then select a trusted certificate profile to use.
-    :::image type="content" source="./media/microsoft-tunnel-mam-android/select-root-certificate.png" alt-text="View of the Tunnel settings in an app configuration policy."  lightbox="./media/microsoft-tunnel-mam-android/select-root-certificate.png":::
-   
+   :::image type="content" source="./media/microsoft-tunnel-mam-android/select-root-certificate.png" alt-text="View of the Tunnel settings in an app configuration policy."  lightbox="./media/microsoft-tunnel-mam-android/select-root-certificate.png":::
+
    For information about configuring root certificate profiles, see [Trusted root certificate profiles for Microsoft Intune](../protect/certificates-trusted-root.md).
 
 1. After configuring the Tunnel MAM settings, Select **Next** to open the *Assignments* tab.
