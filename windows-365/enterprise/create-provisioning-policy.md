@@ -84,7 +84,7 @@ To select an ANC, follow these steps:
     - **Custom image**:  Choose **Select** > select an image from the list > **Select**. You'll see the list of images that you uploaded using the [Add device images](add-device-images.md) workflow.
 4. Select **Next**.
 5. On the **Configuration** page, under **Windows settings**, choose a **Language & Region**. The selected language pack will be installed on Cloud PCs provisioned with this policy.
-6. Optional. Select **Apply device name template** to create a Cloud PC naming template to use when naming all Cloud CPs that are provisioned with this policy. Options and requirements for this template include:
+6. Optional. Select **Apply device name template** to create a Cloud PC naming template to use when naming all Cloud CPs that are provisioned with this policy. When creating the template, follow these rules:
     - Names must be between 4 and 15 characters.
     - Names can contain letters, numbers, hyphens, and underscores.
     - Names can't include blank spaces.
