@@ -143,8 +143,9 @@ Windows 365 manages the capacity and availability of underlying Azure resources 
 
 ### [Windows 365 Government](#tab/gov)
 
-- US Gov Virginia
-- US Gov Arizona
+- US Government
+  - Arizona
+  - Virginia
 
 ---
 

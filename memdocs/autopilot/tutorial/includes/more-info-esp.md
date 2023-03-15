@@ -5,11 +5,17 @@ manager: aaroncz
 ms.technology: itpro-deploy
 ms.prod: windows-client
 ms.topic: include
-ms.date: 02/23/2023
+ms.date: 03/14/2023
 ms.localizationpriority: medium
 ---
 
-<!-- This file is shared by the azure-ad-join-esp.md and the hybrid-azure-ad-join-esp.md articles. Headings are driven by article context. -->
+<!-- This file is shared by the following articles:
+
+azure-ad-join-esp.md
+hybrid-azure-ad-join-esp.md
+self-deploying-esp.md
+
+Headings are driven by article context. -->
 
 For more information on the Enrollment Status Page (ESP), see the following article(s):
 
