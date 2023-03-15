@@ -94,8 +94,7 @@ Return to your list of enrollment profiles for corporate-owned devices to view y
 Now that you have the enrollment token, you can use one of the following provisioning methods to enroll devices in full management: 
 
 * Near Field Communication (NFC)
-* Token string or QR code  
-* QR code 
+* Token string or QR code   
 * Zero-touch enrollment
 * Samsung Knox Mobile Enrollment  
 
