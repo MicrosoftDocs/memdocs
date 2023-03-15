@@ -34,9 +34,8 @@ ms.custom: intune-classic
 # Intune App SDK for Android - App participation features
 
 The Microsoft Intune App SDK for Android lets you incorporate Intune app protection policies (also known as **APP** or MAM policies) into your native Java/Kotlin Android app. An Intune-managed application is one that is integrated with the Intune App SDK. Intune administrators can easily deploy app protection policies to your Intune-managed app when Intune actively manages the app.
-
 > [!NOTE]
-> This guide is divided into several distinct stages. Start by reviewing [Plan the Integration](..\developer\app-sdk-android-phase1.md).
+> This guide is divided into several distinct stages. Start by reviewing [Plan the Integration].
 
 ## Stage 7: App participation features
 
@@ -72,7 +71,7 @@ The rest of this guide describes the remaining set of app participation features
 - Support App Protection CA.
 - Register for notifications from the SDK.
 - Apply custom application theming.
-- Use trusted root certificates from Intune to secure SSL/TLS connections.
+- Use trusted certificates from Intune to ensure chain of trust to on-premise endpoints.
 
 ## App Participation Feature basics
 
@@ -676,21 +675,22 @@ In the above example, you need to replace `R.style.AppTheme` with the style them
 
 ## Trusted Root Certificates Management
 
-If your application requires SSL/TLS certificates issued by an on-premise or private certificate authority to provide secure access to internal websites and applications, the Intune App SDK has added support for certificate trust management using the APIs `MAMTrustedRootCertsManager` and `MAMCertTrustWebViewClient`.
+If your application requires SSL/TLS certificates issued by an on-premise or private certificate authority to provide secure access to internal websites and applications, the Intune App SDK has added support for certificate trust management using the API classes [MAMTrustedRootCertsManager] and [MAMCertTrustWebViewClient].
 
 > [!NOTE]
-> `MAMCertTrustWebViewClient` supports Android 10 or higher.
+> [MAMCertTrustWebViewClient] supports Android 10 or higher.
 
 Trusted Root Certificates Management provides support for:
 
 - SSLContext
 - SSLSocketFactory
 - TrustManager
+- WebView
 
 ### Requirements
 
 - Trusted Root Certificates Management requires a Microsoft Tunnel for Mobile Application Management license. To learn more visit: [Microsoft Tunnel with Mobile Application Management].
-- Configure Intune App Configuration profiles to deliver trusted root certificates to line of business apps and Edge on Android. See: [Use Microsoft Tunnel VPN with Android devices that don't enroll with Microsoft Intune].
+- Configure Intune App Configuration Policies to deliver trusted root certificates to line of business apps and Edge on Android. See: [Use Microsoft Tunnel VPN with Android devices that don't enroll with Microsoft Intune].
 
 > [!NOTE]
 > Trusted Root Certificates Management can be used independently of Microsoft Tunnel VPN Gateway, however you must license Microsoft MAM Tunnel for use.
@@ -699,22 +699,35 @@ Trusted Root Certificates Management provides support for:
 
 Trusted Root Certificates Management allows your app to use trusted root certificates from Intune in combination with certificates from the device.
 
-The `MAMTrustedRootCertsManager` and `MAMCertTrustWebViewClient` APIs use the Intune trusted root certificates delivered via Intune App configuration policy as a fallback option if the device’s trusted root certificate stores do not contain the required trusted root certificates to establish a secure connection to on-premise resources. This way, the app can use both device and Intune certificates to verify secure connections and communications with trusted sources.
+The API classes [MAMTrustedRootCertsManager] and [MAMCertTrustWebViewClient] use the Intune trusted root certificates delivered via App Configuration Policy as a fallback option if the device’s trusted root certificate stores do not contain the required trusted root certificates to establish a secure connection to on-premise resources. This way, the app can use both device and Intune certificates to verify secure connections and communication with trusted sources.
 
-Refer to the code snippet examples below to learn how to use the APIs.
+To enhance its network security settings, an app can use the Network Security Configuration XML file. Trusted Root Certificates Management respects this extra security by verifying if the app’s Network Security Configuration XML has any of these features:
 
-### How Trusted Root Certificates Management Works
+- Custom trust anchors with additional CAs such as self-signed certificates.
+- Domain-specific rules for limiting trusted CAs.
+- Pin sets for certificates for specific domains.
 
-- To enhance its network security settings, an app can use the Network Security Configuration XML file. Trusted Root Certificates Management respects this extra security by verifying if the app’s Network Security Configuration XML has any of these features:
-  - Custom trust anchors with additional CAs such as self-signed certificates.
-  - Domain-specific rules for limiting trusted CAs.
-  - Pin sets for certificates for specific domains.
+> [!NOTE]
+> Learn more about Android Network Security Configuration at: [Network security configuration]
 
-If any of these applies to a domain that is being checked for trust, then Trusted Root Certificates Management will skip the trust checks for this domain and let only the platform’s default trust managers do the checks.
+If any of these applies to a domain that is being checked for trust, then Trusted Root Certificates Management will skip the custom trust checks for this domain and let only the platform’s default trust managers do the checks.
 
-- Trusted Root Certificates Management relies on both the platform’s default trust managers and custom trust managers that are loaded with trusted root certificates as configured in the MAM service. The default trust managers are always used first to check a server’s trust and only when this check fails then the custom trust managers are used. This behavior along with checking the Network Security Configuration in the app, the custom trust managers will be used only if it is determined that the domain being checked does not have a security setting that applies to it. This means that the Network Security Configuration always works as expected with the default trust managers and never overridden by the custom trust managers.
+#### Class [MAMTrustedRootCertsManager]
 
-### Example Using HttpsUrlConnection
+This class provides the following APIs:
+
+- `createSSLContext(String identity, String protocol)`: creates an `SSLContext` object that uses trusted root certificates for the specified identity and the specified SSL/TLS protocol. The returned `SSLContext` object from this class is already initialized correctly with `X509TrustManager` objects that use the combined trusted root certificates from the device and the MAM service.
+- `createSSLSocketFactory(String identity, String protocol)`: creates an `SSLSocketFactory` object that uses trusted root certificates for the specified identity and the specified SSL/TLS protocol. The returned `SSLSocketFactory` object is referenced from the same `SSLContext` object in this class.
+- `createX509TrustManagers(String identity)`: creates an array of `X509TrustManager` objects that use the combined trusted root certificates from the device and the MAM service for the specified identity.
+
+> [!NOTE]
+> The `identity` parameter is expected to be a string identifier for a particular user running the application such as their UPN. In the case the user identifier is unknown beforehand, a value of null can be passed in and MAM will attempt to discover the correct identity from the thread or process in which these APIs are invoked. The identity must be set on the process or thread correctly for MAM to discover the identity. To learn more about setting the active identity on a process or thread visit: [Stage 5: Multi-Identity]
+> [!NOTE]
+> When the `protocol` parameter is not provided, the highest supported SSL/TLS protocol on the platform is used.
+
+Here are some examples of using this class.
+
+##### Example Using HttpsUrlConnection
 
 ```java
 // Create an SSL socket factory using supplying the optional parameters identity and protocol
@@ -731,12 +744,9 @@ httpsURLConnection.setSSLSocketFactory(sslSocketFactory);
 
 // Perform any other configuration or operations on the connection as needed
 ...
-
-// Open the connection
-httpsURLConnection.connect();
 ```
 
-### Example Using OkHttpClient
+##### Example Using OkHttpClient
 
 ```java
 // Get the TrustManager instances for an identity from the SDK
@@ -767,14 +777,20 @@ Response response = okHttpClient.newCall(request).execute();
 ...
 ```
 
-### Example Using WebView
+#### Class [MAMCertTrustWebViewClient]
+
+This class provides a custom implementation of the Android class `android.webkit.WebViewClient` that provides a way to handle the SSL error `android.net.http.SslError.SSL_UNTRUSTED` in `WebView`. In handling the error, the class uses trusted root certificates that are configured in Intune and received from the MAM service to check the trustworthiness of the host from the target URL that generated the SSL error in `WebView`. If the custom implementation does not handle the SSL error, the default behavior inherited from the superclass will be invoked. When using this class, you should create an instance of it and then call `WebView.setWebViewClient(WebViewClient)` to register it with a `WebView` instance.
+
+Here is an example of using this class.
+
+##### Example Using WebView
 
 ```java
 // Get the MAM implementation of WebViewClient from the Intune App SDK
-MAMCertTrustWebViewClient certTrustWebViewClient = new MAMCertTrustWebViewClient();
+MAMCertTrustWebViewClient mamCertTrustWebViewClient = new MAMCertTrustWebViewClient();
 
 // Set the MAM WebViewClient from the SDK as the current handler on the instance of WebView
-webView.setWebViewClient(certTrustWebViewClient);
+webView.setWebViewClient(mamCertTrustWebViewClient);
 
 // Perform any other operations on WebView
 ...
@@ -948,8 +964,8 @@ Do continue to refer to this guide and the [Appendix] as you continue to develop
 [App Protection CA]:/mem/intune/protect/app-based-conditional-access-intune
 [issuing a selective wipe]:/mem/intune/apps/apps-selective-wipe
 [Set up app-based Conditional Access policies with Intune]:/mem/intune/protect/app-based-conditional-access-intune-create
-[Microsoft Tunnel with Mobile Application Management]:/mem/intune/protect/microsoft-tunnel-mam
-[Use Microsoft Tunnel VPN with Android devices that don't enroll with Microsoft Intune]:/mem/intune/protect/microsoft-tunnel-mam-android
+[Microsoft Tunnel with Mobile Application Management]: /mem/intune/protect/microsoft-tunnel-mam
+[Use Microsoft Tunnel VPN with Android devices that don't enroll with Microsoft Intune]: /mem/intune/protect/microsoft-tunnel-mam-android
 
 <!-- 3rd party links -->
 [app private storage]:https://developer.android.com/training/data-storage
@@ -964,6 +980,7 @@ Do continue to refer to this guide and the [Appendix] as you continue to develop
 [Key/Value Backup]:https://developer.android.com/guide/topics/data/keyvaluebackup.html
 [Extending BackupAgent]:https://developer.android.com/guide/topics/data/keyvaluebackup.html#BackupAgent
 [Android's official instructions for testing backup]:https://developer.android.com/guide/topics/data/testingbackup
+[Network security configuration]:https://developer.android.com/training/articles/security-config
 
 <!-- Class links -->
 [AppPolicy]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/AppPolicy.html
@@ -983,6 +1000,8 @@ Do continue to refer to this guide and the [Appendix] as you continue to develop
 [MAMPolicyManager]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/identity/MAMPolicyManager.html
 [MAMSharedPreferencesBackupHelper]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/backup/MAMSharedPreferencesBackupHelper.html
 [MAMUserNotification]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/notification/MAMUserNotification.html
+[MAMTrustedRootCertsManager]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/MAMTrustedRootCertsManager.html
+[MAMCertTrustWebViewClient]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/MAMCertTrustWebViewClient.html
 
 <!-- Method links -->
 [unregisterAccountForMAM]: https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/MAMEnrollmentManager.html#unregisterAccountForMAM(java.lang.String)
