@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/23/2022
+ms.date: 03/14/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -217,3 +217,4 @@ The following matrix explains the effect, depending on the conflict scenario:
 - [Use filters when assigning your apps, policies, and profiles](filters.md)
 - [Supported device properties when creating filters](filters-device-properties.md)
 - [Supported workloads when creating filters](filters-supported-workloads.md)
+- [Filter performance recommendations](filters-performance-recommendations.md)
