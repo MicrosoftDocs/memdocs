@@ -712,7 +712,7 @@ To enhance its network security settings, an app can use the Network Security Co
 
 If any of these applies to a domain that is being checked for trust, then Trusted Root Certificates Management will skip the custom trust checks for this domain and let only the platform’s default trust managers do the checks.
 
-#### Class [MAMTrustedRootCertsManager]
+#### Class MAMTrustedRootCertsManager
 
 This class provides the following APIs:
 
@@ -777,7 +777,7 @@ Response response = okHttpClient.newCall(request).execute();
 ...
 ```
 
-#### Class [MAMCertTrustWebViewClient]
+#### Class MAMCertTrustWebViewClient
 
 This class provides a custom implementation of the Android class `android.webkit.WebViewClient` that provides a way to handle the SSL error `android.net.http.SslError.SSL_UNTRUSTED` in `WebView`. In handling the error, the class uses trusted root certificates that are configured in Intune and received from the MAM service to check the trustworthiness of the host from the target URL that generated the SSL error in `WebView`. If the custom implementation does not handle the SSL error, the default behavior inherited from the superclass will be invoked. When using this class, you should create an instance of it and then call `WebView.setWebViewClient(WebViewClient)` to register it with a `WebView` instance.
 
