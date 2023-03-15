@@ -227,6 +227,20 @@ You can choose to use MAM Tunnel with enrolled devices instead of using MDM Tunn
 
 **Work around**: None.
 
+<!-- restored for review: How does this change now that trusted certs are supported? -->
+### Delivering trusted root certificates to Microsoft Edge on Android
+
+When unenrolled devices access resources protected by SSL/TLS certificates issued by an on-premises certificate authority (CA), the devices require the trusted certificate public keychain of the issuing CA to establish a chain of trust with the on-premises endpoint (that is, web server, application web service). As a result, a browser (Microsoft Edge or third party browser), or application won't trust the endpoint without the necessary on-premises CA keychain (trusted cert). For example, Microsoft Edge reports that the connection isn’t private or is untrusted, and SSL or https connections aren't available. Users can ignore this warning and connect to the endpoint.
+
+**Work around**: Manually deploy and install the trusted root certificate on unenrolled Android devices that will use Microsoft Edge with Tunnel.
+
+### Defender for Endpoint certificate error when using a TLS/SSL certificate from a private certificate authority
+When Microsoft Tunnel Gateway server uses a TLS/SSL certificate issued by a private (on-premises) CA, Microsoft Defender for Endpoint generates a certificate error when attempting to connect.
+
+Work around: Manually install the corresponding trusted root certificate of the private certificate authority on the Android device. A future update of the Defender for Endpoint app will provide support and remove the need to manually install the trusted root certificate.
+
+<!--end of review section -->
+
 ### Microsoft Edge can't reach internal resources for a short time after being launched
 
 Immediately after Microsoft Edge opens, the browser attempts to connect to internal resources before successfully connecting to Tunnel. This behavior results in the browser reporting that the resource or destination URL is unavailable.
