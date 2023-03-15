@@ -7,11 +7,11 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/19/2022
+ms.date: 02/08/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
-ms.reviewer: samyada
+ms.reviewer: tycast
 
 # optional metadata
 
@@ -106,19 +106,10 @@ For more information about using custom compliance settings, including supported
    - [Android (AOSP)](compliance-policy-create-android-aosp.md)
    - [Android Enterprise](compliance-policy-create-android-for-work.md)
    - [iOS/iPadOS](compliance-policy-create-ios.md)
-   - Linux - See the following information.
+   - [Linux](../protect/compliance-policy-create-linux.md)
    - [macOS](compliance-policy-create-mac-os.md)
    - [Windows 8.1 and later](compliance-policy-create-windows-8-1.md)
    - [Windows 10/11](compliance-policy-create-windows.md)  
-
-   **For Linux**, the profile type uses settings from the Settings catalog. Expand each available category and select the settings you want to include in your policy. Examples of Linux settings categories include:
-
-   - Allowed Distributions
-   - Custom Compliance
-   - Device Encryption
-   - Password Policy
-
-   Dedicated content for the settings in the settings catalog isn't available.
 
 6. Add custom settings to policies for supported platforms.
 

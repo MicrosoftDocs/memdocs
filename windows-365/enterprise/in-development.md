@@ -58,15 +58,15 @@ To help in your readiness and planning, this page lists Windows 365 updates and 
 <!-- ***********************************************-->
 ## Device management
 
-### Windows 365 support for RDP Shortpath with TURN<!--43602619-->
+### Support for symmetric NAT with RDP Shortpath<!--43602619-->
 
-In a future update, Windows 365 will support Traversal Using Relays around NAT (TURN) for use with RDP Shortpath. TURN is a popular standard for device-to-device networking for low latency, high-throughput data transmission with Azure Communication Services. For more information about TURN and Azure Communication Services, see [Network Traversal Concepts](/azure/communication-services/concepts/network-traversal). For more information about RDP Shortpath, see [Use RDP Shortpath for public networks with Windows 365](rdp-shortpath-public-networks.md).
+In a future update, RDP Shortpath in Windows 365 will support establishing an indirect UDP connection using Traversal Using Relays around NAT (TURN) for symmetric NAT.  TURN is a popular standard for device-to-device networking for low latency, high-throughput data transmission with Azure Communication Services. For more information about TURN and Azure Communication Services, see [Network Traversal Concepts](/azure/communication-services/concepts/network-traversal). For more information about RDP Shortpath, see [Use RDP Shortpath for public networks with Windows 365](rdp-shortpath-public-networks.md).
 
 ### Move Cloud PC<!--43450234-->
 
 Today, when changing the region definition or Azure network connection (ANC) in a provisioning policy, only newly provisioned Cloud PCs are created in the new region. Existing Cloud PCs remain in the original region or ANC.
 
-In a future release, a new option will be added to provisioning policies. This new option will let you define a new region or ANC for the provisioning policy and trigger existing Cloud PCs to move to the updated region. When you initiate the move:
+In a future release, a new option will be added to provisioning policies. This new option will let you define a new region or ANC for the provisioning policy, and trigger existing Cloud PCs to move to the updated region. When you initiate the move:
 
 1. All Cloud PCs in the provisioning policy that no longer match the updated region or ANC will be shut down.
 2. All such Cloud PCs will be moved to the new region or ANC.

@@ -7,7 +7,7 @@ description: Add, configure, and protect apps with Intune.
 author: erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/31/2023
+ms.date: 03/10/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -71,7 +71,7 @@ MDM, in addition to MAM, makes sure that the device is protected. For example, y
 
 There are additional benefits to using MDM with app protection policies, and companies can use app protection policies with and without MDM at the same time. For example, a member of your organization could have both a phone issued by the company and their own personal tablet. The company phone could be enrolled in MDM and protected by app protection policies while the personal device is protected by app protection policies only.
 
-On enrolled devices that use an MDM service, app protection policies can add an extra layer of protection. For example, a user signs in to a device with their organization credentials. Their organization identity allows access to data that's tied to their personal identity. As that organization data is used, app protection policies control how the data is saved and shared. When users sign in with their personal identity, those same protections (access and restrictions) aren't applied. In this way, IT has control of organization data, while end users maintain control and privacy over their personal data.
+On enrolled devices that use an MDM service, app protection policies can add an extra layer of protection. For example, a user signs in to a device with their organization credentials. As that organization data is used, app protection policies control how the data is saved and shared. When users sign in with their personal identity, those same protections (access and restrictions) aren't applied. In this way, IT has control of organization data, while end users maintain control and privacy over their personal data.
 
 The MDM solution adds value by providing the following:
 - Enrolls the device
@@ -279,4 +279,4 @@ The following list provides the end-user requirements to use app protection poli
 2. 🡺 **Add, configure, and protect apps** (*You are here*)
 3. [Plan for compliance policies](deployment-plan-compliance-policies.md)
 4. [Configure device features](deployment-plan-configuration-profile.md)
-5. [Enroll devices](deployment-guide-enrollment.md)
+5. [Enroll devices](deployment-guide-enroll.md)

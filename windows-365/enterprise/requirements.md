@@ -138,13 +138,14 @@ Windows 365 manages the capacity and availability of underlying Azure resources 
   - East US
   - East US 2
 - US West
-  - West US 2 (Restricted, contact support)
+  - West US 2 (Restricted)
   - West US 3
 
 ### [Windows 365 Government](#tab/gov)
 
-- US Gov Virginia
-- US Gov Arizona
+- US Government
+  - Arizona
+  - Virginia
 
 ---
 
