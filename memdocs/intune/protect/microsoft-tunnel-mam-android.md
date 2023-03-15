@@ -192,7 +192,7 @@ For more information about adding custom apps to policies, see the following art
 
 To support LOB apps on your unenrolled devices, the apps must deploy as *available apps*  from within Microsoft Intune admin center. You can’t use Intune to deploy apps as required apps to unenrolled devices.
 
-### Configure a trusted certificate profile
+### Use a trusted certificate profile
 
 LOB apps that use the MAM tunnel on Android are required to integrate with the Intune App SDK and must use the new Tunnel for MAM trust manager to utilize trusted root certificate support for their LOB apps.
 
@@ -215,7 +215,20 @@ If your application requires SSL/TLS certificates issued by an on-premise or pri
   - TrustManager
   - WebView
 
-During configuration of the app configuration profile for an app that will use Tunnel for MAM, you select the certificate profile that will be used. For information on configuring these profiles, see [Trusted root certificate profiles for Microsoft Intune](../protect/certificates-trusted-root.md).
+During configuration of the app configuration profile for an app that will use Tunnel for MAM, select the certificate profile that will be used:
+
+1. On the *Settings* tab of your app configuration profile, expand *Microsoft Tunnel for Mobile Application Management settings*.
+   :::image type="content" source="./media/microsoft-tunnel-mam-android/settings-certificates.png" alt-text="View of the Tunnel settings in an app configuration policy."  lightbox="./media/microsoft-tunnel-mam-android/settings-certificates.png":::
+1. Configure the following options:
+   1. Set *Use Microsoft Tunnel for MAM* to **Yes**.
+   1. For *Connection name*, specify a user facing name for this connection, like *mam-tunnel-vpn*.
+   1. Next, select **Select a Site**, and choose one of your Microsoft Tunnel Gateway sites. If you haven’t configured a Tunnel Gateway site, see [Configure Microsoft Tunnel](../protect/microsoft-tunnel-configure.md).
+   1. If your app requires a trusted certificate, select **Root Certificate** to open the *Select Root Certificates* pane, and then select a trusted certificate profile to use.
+    :::image type="content" source="./media/microsoft-tunnel-mam-android/select-root-certificate.png" alt-text="View of the Tunnel settings in an app configuration policy."  lightbox="./media/microsoft-tunnel-mam-android/select-root-certificate.png":::
+   
+   For information about configuring root certificate profiles, see [Trusted root certificate profiles for Microsoft Intune](../protect/certificates-trusted-root.md).
+
+1. After configuring the Tunnel MAM settings, Select **Next** to open the *Assignments* tab.
 
 ## Known Issues
 
@@ -237,7 +250,7 @@ When unenrolled devices access resources protected by SSL/TLS certificates issue
 ### Defender for Endpoint certificate error when using a TLS/SSL certificate from a private certificate authority
 When Microsoft Tunnel Gateway server uses a TLS/SSL certificate issued by a private (on-premises) CA, Microsoft Defender for Endpoint generates a certificate error when attempting to connect.
 
-Work around: Manually install the corresponding trusted root certificate of the private certificate authority on the Android device. A future update of the Defender for Endpoint app will provide support and remove the need to manually install the trusted root certificate.
+**Work around**: Manually install the corresponding trusted root certificate of the private certificate authority on the Android device. A future update of the Defender for Endpoint app will provide support and remove the need to manually install the trusted root certificate.
 
 <!--end of review section -->
 
