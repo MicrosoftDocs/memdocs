@@ -1518,7 +1518,7 @@ You can now use [Trend Micro Mobile Security as a Service](../protect/trend-micr
  
 For more information, see:
 - [Mobile threat defense integration with Intune](../protect/mobile-threat-defense.md)
-- [Trend Micro Mobile Security documentation](https://docs.trendmicro.com/en-us/enterprise/trend-micro-vision-one/mobile-security/getting-started-with_003.aspx)
+- [Trend Micro Mobile Security documentation](https://www.trendmicro.com/en_us/business/products/user-protection/endpoint-security.html)
 
 #### Grace period status visible on Intune Company Portal website<!-- 15025900 -->
 The Intune Company Portal website now shows a grace period status to account for devices that don't meet compliance requirements but are still within their given grace period. Users are shown the date by which they need to become compliant and the instructions for how to become compliant. If they don't update their device by the given date, their status changes to noncompliant. For more information about setting grace periods, see [Configure compliance policies with actions for noncompliance](../protect/actions-for-noncompliance.md#available-actions-for-noncompliance).
