@@ -1478,10 +1478,21 @@ items:
         href: ./developer/app-wrapper-prepare-android.md
         displayName: dex
       - name: Intune App SDK for Android
-        href: ./developer/app-sdk-android.md
         items:
-        - name: Intune App SDK for Android testing guide
-          href: ./developer/app-sdk-android-testing-guide.md        
+        - name: Plan the Integration
+          href: ./developer/app-sdk-android-phase1.md
+        - name: Understand the MSAL Prerequisite
+          href: ./developer/app-sdk-android-phase2.md
+        - name: Get started with MAM
+          href: ./developer/app-sdk-android-phase3.md
+        - name: MAM integration essentials
+          href: ./developer/app-sdk-android-phase4.md
+        - name: Multi-Identity
+          href: ./developer/app-sdk-android-phase5.md
+        - name: App configuration
+          href: ./developer/app-sdk-android-phase6.md
+        - name: App participation features
+          href: ./developer/app-sdk-android-phase7.md
       - name: Intune App SDK Xamarin Bindings
         href: ./developer/app-sdk-xamarin.md
     - name: Use the Intune Data Warehouse
@@ -1578,4 +1589,4 @@ items:
       href: /mem/get-support?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
 
   - name: Troubleshoot issues
-    href: /troubleshoot/mem/intune/welcome-intune/index?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+    href: /troubleshoot/mem/intune/welcome-intune?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
