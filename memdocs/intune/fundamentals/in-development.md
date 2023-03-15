@@ -8,7 +8,7 @@ keywords:
 author: dougeby 
 ms.author: dougeby
 manager: dougeby
-ms.date: 03/02/2023
+ms.date: 03/15/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -59,7 +59,7 @@ You can use RSS to be notified when this article is updated. For more informatio
 -->
 
 <!-- ***********************************************-->
- 
+
 ## App management
 
 ### Managed apps permission is no longer required to manage VPP apps<!-- 17205644  -->  
@@ -67,14 +67,6 @@ You'll soon be able to view and manage VPP apps with only the **Mobile apps** pe
 
 ### Install required apps during pre-provisioning<!-- 12716381   -->  
 A new toggle will be available in the Enrollment Status Page (ESP) profile that allows you to select whether you want to attempt to install required applications during pre-provisioning (white glove) technician phase. We understand that installing as many applications as possible during pre-provisioning is desired to reduce the end user set up time. To help you achieve this, we have implemented an option to attempt the installation of all the required apps assigned to a device during technician phase. In case of app install failure, ESP will continue except for the apps specified in ESP profile. To enable this function, you will need to edit your Enrollment Status Page profile by selecting **Yes** on the new setting entitled **Only fail selected apps in technician phase**. This setting will only appear if you have blocking apps selected. For information about ESP, go to [Set up the Enrollment Status Page](../enrollment/windows-enrollment-status.md).
-
-### Additional minimum OS versions for Win32 apps<!-- 16842404  -->  
-Intune will support additional minimum operating system versions for Windows 10 and 11 when installing Win32 apps. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **Windows** > **Add** > **Windows app (Win32)**. In the **Requirements** tab next to **Minimum operating system**, select one of the available operating systems. Additional OS options will include the following:
-
-- Windows 10 21H2
-- Windows 10 22H2
-- Windows 11 21H2
-- Windows 11 22H2
 
 ### Company Portal automatically installed on Android Enterprise dedicated devices<!-- 6423852  -->  
 Intune Company Portal will now be automatically installed on all Android Enterprise dedicated devices to ensure the appropriate handling of app protection policies. Users will not be able to see or launch the Company Portal, and there are no requirements for users to interact with it. Admins will notice that the Company Portal is automatically installed on their Android Enterprise dedicated devices, without the ability to uninstall.
@@ -88,49 +80,6 @@ Users will be able to uninstall Win32 apps in the Company Portal. If a Win32 app
 The global quiet time settings will allow you to create policies to schedule quiet time for your end users, which will automatically mute Microsoft Outlook email and Teams notifications on iOS/iPadOS and Android platforms. These policies can be used to limit end user notifications received after work hours. When this feature is available, you will be able to find it in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **Quiet Time** > **Policies**.
 
 ## Device configuration
-
-### New settings and setting options available in the macOS Settings Catalog <!-- 16813395  -->  
-The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
-
-New settings are available in the Settings Catalog. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can see these settings at **Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform > **Settings catalog** for profile type.
-
-New settings include:
-
-**Microsoft Defender > Tamper protection**:
-
-- Enforcement level
-
-**Microsoft Office > Microsoft OneDrive**:
-
-- Automatic upload bandwidth percentage
-- Automatically and silently enable the Folder Backup feature (aka Known Folder Move)
-- Block apps from downloading online-only files
-- Block external sync
-- Disable automatic sign in
-- Disable download toasts
-- Disable personal accounts
-- Disable tutorial
-- Display a notification to users once their folders have been redirected
-- Enable Files On-Demand
-- Enable simultaneous edits for Office apps
-- Force users to use the Folder Backup feature (aka Known Folder Move)
-- Hide dock icon
-- Ignore named files
-- Include ~/Desktop in Folder Backup (aka Known Folder Move)
-- Include ~/Documents in Folder Backup (aka Known Folder Move)
-- Open at login
-- Prevent users from using the Folder Backup feature (aka Known Folder Move)
-- Prompt users to enable the Folder Backup feature (aka Known Folder Move)
-- Set maximum download throughput
-- Set maximum upload throughput
-- SharePoint Prioritization
-- SharePoint Server Front Door URL
-- SharePoint Server Tenant Name
-
-Applies to:  
-- macOS
-
-For more information about configuring Settings Catalog profiles in Intune, go to [Create a policy using settings catalog](../configuration/settings-catalog.md).
 
 ### Support for multi-SIM iOS/iPadOS device inventory<!--16360290-->
 
@@ -198,44 +147,6 @@ We're adding two more states to organizational message reporting details to make
 
 - Pending: The message has not been scheduled yet and is currently in progress.
 - Failed: The message failed to schedule due to a service error.  
-
-### Endpoint security firewall policy support for log configurations<!-- 16730565  -->  
-We’re adding several new settings to the endpoint security Firewall policy to support configuration of firewall logging options. These settings will be added to the *Defender Firewall* profile template for the *Windows 10 and later* platform, and be available for the Domain, Private, and Public profiles in that template. [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Endpoint security** > **Firewall** > *Platform*: **Windows 10, Windows 11, and Windows Server** > *Profile*: **Microsoft Defender Firewall**.
-
-The following settings are being added:  
-- Enable Log Success Connections
-- Log File Path
-- Enable Log Dropped Packets
-- Enable Log Ignored Rules
-
-For more information about these settings, see [Firewall configuration service provider (CSP)](/windows/client-management/mdm/Firewall-csp?WT.mc_id=Portal-fx).
-
-Applies to:  
-- Windows 10
-- Windows 11
-
-### Endpoint security firewall policy support for network list manager settings<!-- 9803477  -->  
-We’re adding a pair of network list manager settings to endpoint security Firewall policy. Network list manager settings help to determine when an Azure AD device is or isn’t on your on-premises domain subnets so firewall rules can properly apply. These settings will be added to the *Microsoft Defender Firewall* profile template for the *Windows 10, Windows 11, and Windows Server* platform.
-
-The following settings will be part of a new category, *Network List Manager*:
-
-- Allowed Tls Authentication Endpoints
-- Configured Tls Authentication Network Name
-
-For information about Network Categorization settings, see [NetworkListManager CSP](/windows/client-management/mdm/policy-csp-networklistmanager).
-
-Applies to:  
-- Windows 10
-- Windows 11
-
-### Endpoint security firewall rules support for Mobile Broadband (MBB)<!-- 16730577 -->  
-We’re updating the *Microsoft Defender Firewall Rules* profiles for endpoint security Firewall policies to include **Mobile Broadband** as an option for the **Interface Types** setting.  [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Endpoint security** > **Firewall** > *Platform*: Any that support Windows > *Profile*: **Microsoft Defender Firewall Rules**.
-
-For more information, see [Firewall configuration service provider (CSP)](/windows/client-management/mdm/Firewall-csp?WT.mc_id=Portal-fx).
-
-Applies to:  
-- Windows 10
-- Windows 11
 
 ### On-demand proactive remediation for a Windows device<!-- 14783338  -->  
 A new device action that is in public preview allows you to run a proactive remediation on-demand to a single Windows device. The **Run** remediation device action will allow you to resolve issues without having to wait for a proactive remediation to run on its assigned schedule. You will also be able to view the status of proactive remediations under **Remediations** in the **Monitor** section of a device.
