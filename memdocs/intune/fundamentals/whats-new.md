@@ -67,7 +67,19 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 -->
 
-## Week of March 13, 2023  
+## Week of March 13, 2023
+
+### Device management
+
+#### Meta Quest 2 and Quest Pro are now in Open Beta (US only) on Microsoft Intune for Android Open Source Devices
+
+Microsoft Intune for Android open source project devices (AOSP) has welcomed Meta Quest 2 and Quest Pro into Open Beta for the US market.
+
+For more information go to [Operating systems and browsers supported by Microsoft Intune](../fundamentals/supported-devices-browsers.md)
+
+Applies to:
+
+- Microsoft Intune (AOSP)  
 
 ### App management
 
