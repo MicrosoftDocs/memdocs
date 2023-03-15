@@ -41,7 +41,7 @@ Company Portal supports devices running Android 8.0 and later, including devices
 
 > [!NOTE]
 > Samsung Knox is a type of security that certain Samsung devices use for additional 
-> protection outside of what native Android provides. To check if you have a Samsung Knox device,> go to **Settings** > **About device**. If you don't see **Knox version** listed there, you have a native Android device.  
+> protection outside of what native Android provides. To check if you have a Samsung Knox device, go to **Settings** > **About device**. If you don't see **Knox version** listed there, you have a native Android device.  
 
 ## Install Company Portal app  
 Install the Intune Company Portal app [from Google Play](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal). See [Install Company Portal app in People's Republic of China](install-company-portal-android-china.md) for a list of stores that offer the app in People's Republic of China.
