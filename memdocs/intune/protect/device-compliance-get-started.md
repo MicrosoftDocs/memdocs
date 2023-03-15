@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/19/2022
+ms.date: 02/08/2023
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -131,14 +131,12 @@ The following subjects link to dedicated articles for different aspects of devic
   - [Android Enterprise](compliance-policy-create-android-for-work.md)
   - [Android Open Source Project (AOSP)](compliance-policy-create-android-aosp.md)
   - [iOS](compliance-policy-create-ios.md)
-  - Linux - Support includes [Custom Compliance](../protect/compliance-use-custom-settings.md) and limited settings from the settings catalog for *Allowed Distributions*, *Device Encryptions*, and *Password Policy*.
+  - [Linux](../protect/compliance-policy-create-linux.md)
   - [macOS](compliance-policy-create-mac-os.md)
   - [Windows Holographic for Business](compliance-policy-create-windows.md#windows-holographic-for-business)
   - [Windows 8.1 and later](compliance-policy-create-windows-8-1.md)
     [!INCLUDE [windows-phone-81-windows-10-mobile-support](../includes/windows-phone-81-windows-10-mobile-support.md)]
   - [Windows 10/11](compliance-policy-create-windows.md)
-
-  Intune also supports compliance policy for Linux (Ubuntu Desktop, version 20.04 LTS and 22.04 LTS), which use the Settings catalog format instead of templates. Dedicated content for the settings in the settings catalog isn't available, but information is available from within the Settings catalog.
 
 - [**Custom compliance settings**](compliance-use-custom-settings.md) – With custom compliance settings you can expand on Intune’s built-in device compliance options.  Custom settings provide flexibility to base compliance on the settings that are available on a device without having to wait for Intune to add those settings.
 

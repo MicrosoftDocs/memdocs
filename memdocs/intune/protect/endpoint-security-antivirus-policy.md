@@ -62,7 +62,7 @@ Antivirus policies include the same settings as found *endpoint protection* or *
 
 **Support for Microsoft Defender for Endpoint clients:**
 
-- **Set up Defender for Endpoint Security Configuration Management** - To support deploying antivirus policy to devices communicating with Endpoint Manager via Defender for Endpoint, configure *Security Management for Microsoft Defender for Endpoint*.
+- **Set up Defender for Endpoint Security Configuration Management** - To support deploying antivirus policy to devices communicating with Intune via Defender for Endpoint, configure *Security Management for Microsoft Defender for Endpoint*.
   
   To set up security management for MDE, see [Manage Microsoft Defender for Endpoint on devices with Microsoft Intune](../protect/mde-security-integration.md).
 
@@ -94,7 +94,7 @@ Profiles for *Antivirus* policy that support tamper protection for [devices mana
   > [!NOTE]  
   > Beginning on April 5, 2022, the *Windows 10 and later* platform was replaced by the *Windows 10, Windows 11, and Windows Server* platform.
   >
-  > The *Windows 10, Windows 11, and Windows Server* platform supports devices communicating with Endpoint Manager through Microsoft Intune or Microsoft Defender for Endpoint. These profiles also add support for the Windows Server platform which is not supported through Microsoft Intune natively.
+  > The *Windows 10, Windows 11, and Windows Server* platform supports devices communicating with Intune through Microsoft Intune or Microsoft Defender for Endpoint. These profiles also add support for the Windows Server platform which is not supported through Microsoft Intune natively.
   >
   > Profiles for this new platform use the settings format as found in the Settings Catalog. Each new profile template for this new platform includes the same settings as the older profile template it replaces. With this change you can no longer create new versions of the old profiles. Your existing instances of the old profile remain available to use and edit.
 
@@ -136,7 +136,7 @@ The following profiles are supported for devices you manage with Intune:
   > [!NOTE]  
   > Beginning on April 5, 2022, the *Windows 10 and later* platform was replaced by the *Windows 10, Windows 11, and Windows Server* platform. 
   >
-  > The *Windows 10, Windows 11, and Windows Server* platform supports devices communicating with Endpoint Manager through Microsoft Intune or Microsoft Defender for Endpoint. These profiles also add support for the Windows Server platform which is not supported through Microsoft Intune natively.
+  > The *Windows 10, Windows 11, and Windows Server* platform supports devices communicating with Intune through Microsoft Intune or Microsoft Defender for Endpoint. These profiles also add support for the Windows Server platform which is not supported through Microsoft Intune natively.
   >
   > Profiles for this new platform use the settings format as found in the Settings Catalog. Each new profile template for this new platform includes the same settings as the older profile template it replaces. With this change you can no longer create new versions of the old profiles. Your existing instances of the old profile remain available to use and edit.
   
