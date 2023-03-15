@@ -62,8 +62,8 @@ The below apps support the Core Intune App Protection Policy settings and are al
 
 |App|Platform|[Core App Protection Policy settings](app-protection-policy.md)|[App configuration](app-configuration-policies-overview.md)|Org allowed accounts ([iOS](app-configuration-policies-use-ios.md#allow-only-configured-organization-accounts-in-apps), [Android](app-configuration-policies-use-android.md#allow-only-configured-organization-accounts-in-apps))|Sync policy managed app data with native apps ([iOS](app-protection-policy-settings-ios.md#functionality), [Android](app-protection-policy-settings-android.md#functionality))|Org data notifications ([iOS](app-protection-policy-settings-ios.md#functionality), [Android](app-protection-policy-settings-android.md#functionality))|Open data into Org documents ([iOS](app-protection-policy-settings-ios.md#data-transfer), [Android](app-protection-policy-settings-android.md#data-transfer))|Save copies of org data ([iOS](app-protection-policy-settings-ios.md#data-transfer), [Android](app-protection-policy-settings-android.md#data-transfer))|
 |--- |--- |:-: |--- |:-: |:-: |:-: |:-: |:-: |
-|Microsoft Edge|[Android](https://play.google.com/store/apps/details?id=com.microsoft.emmx)|✔|✔ see [Edge app config](manage-microsoft-edge.md)|✔|N/A|N/A|N/A|N/A|
-|Microsoft Edge|[iOS](https://apps.apple.com/us/app/microsoft-edge/id1288723196)|✔|✔ see [Edge app config](manage-microsoft-edge.md)|✔|N/A|N/A|N/A|N/A|
+|Microsoft Edge|[Android](https://play.google.com/store/apps/details?id=com.microsoft.emmx)|✔|✔ see [Edge app config](manage-microsoft-edge.md)|✔|N/A|N/A|N/A|✔|
+|Microsoft Edge|[iOS](https://apps.apple.com/us/app/microsoft-edge/id1288723196)|✔|✔ see [Edge app config](manage-microsoft-edge.md)|✔|N/A|N/A|N/A|✔|
 |Microsoft Excel|[Android](https://play.google.com/store/apps/details?id=com.microsoft.office.excel)|✔|No settings|✔|N/A|✖|✖|✔|
 |Microsoft Excel|[iOS](https://apps.apple.com/us/app/microsoft-excel/id586683407)|✔|No settings|✔|N/A|✖|✖|✔|
 |Microsoft Launcher|[Android](https://play.google.com/store/apps/details?id=com.microsoft.launcher)|✔|✔ see [Launcher app config](configure-microsoft-launcher.md)|✖|N/A|✖|✖|N/A|
@@ -91,8 +91,8 @@ The below apps support the Core Intune App Protection Policy settings and are al
 |Microsoft To-Do|[iOS](https://apps.apple.com/us/app/microsoft-to-do/id1212616790)|✔|No settings|✖|N/A|✖|✖|N/A|
 |Microsoft Word|[Android](https://play.google.com/store/apps/details?id=com.microsoft.office.word)|✔|No settings|✔|N/A|✖|✖|✔|
 |Microsoft Word|[iOS](https://apps.apple.com/us/app/microsoft-word/id586447913)|✔|No settings|✔|N/A|✖|✖|✔|
-|Microsoft Yammer|[Android](https://play.google.com/store/apps/details?id=com.yammer.v1)|✔|No settings|✖|N/A|✖|✖|N/A|
-|Microsoft Yammer|[iOS](https://apps.apple.com/us/app/yammer/id289559439)|✔|No settings|✖|N/A|✖|✖|N/A|
+|Microsoft Viva Engage|[Android](https://play.google.com/store/apps/details?id=com.yammer.v1)|✔|No settings|✖|N/A|✖|✖|N/A|
+|Microsoft Viva Engage|[iOS](https://apps.apple.com/us/app/yammer/id289559439)|✔|No settings|✖|N/A|✖|✖|N/A|
 
 The below apps support the core Intune App Protection Policy settings.
 
