@@ -91,11 +91,11 @@ Return to your list of enrollment profiles for corporate-owned devices to view y
 
 
 ## Step 3: Enroll devices  
-Now that you have the enrollment token, you can use one of the following provisioning methods to enroll devices in full management: 
+Now that you have the enrollment token, you can use any of the following provisioning methods to enroll devices as fully managed:  
 
 * Near Field Communication (NFC)
 * Token string or QR code   
 * Zero-touch enrollment
 * Samsung Knox Mobile Enrollment  
 
-For next steps, including how-to enroll devices with each provisioning methods, see see [Enroll Android Enterprise corporate-owned devices][android-dedicated-devices-fully-managed-enroll.md].  
+For next steps, including how to enroll devices with each provisioning method, see [Enroll Android Enterprise corporate-owned devices][android-dedicated-devices-fully-managed-enroll.md].  
