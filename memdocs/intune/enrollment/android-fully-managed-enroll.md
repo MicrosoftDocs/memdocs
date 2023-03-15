@@ -71,7 +71,7 @@ Enable enrollment in your Intune tenant. During this process, Intune generates t
 ## Step 3: Create new enrollment profile  
 Create a new enrollment profile for fully managed devices.  
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Android**.  
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** Create new enrollment profile> **Android**.  
 3. Select **Android enrollment**  > **Corporate-owned, fully managed user devices**.
 4. Under **Allow users to enroll corporate-owned user devices**, choose **Yes**. 
 5. Select **Create profile**.  
@@ -89,9 +89,20 @@ Return to your list of enrollment profiles for corporate-owned devices to view y
 3. Select **Properties** > **Edit** to make changes to the profile basics or scope tags.  
 4. Select **Token** to retrieve, revoke, or export the token.  
 
+## Step 3: Create dynamic Azure AD group  
+Optionally, create a dynamic Azure AD group to automatically group devices based on a certain attribute or variable. In this case, we want to use the `enrollmentProfileName` property to group devices that are enrolling with the same profile. Add these configurations to your group:    
+* **Group type**: Security
+* **Membership type**: Dynamic Device  
+* Add a dynamic query with the following rule: 
+    * **Property**: enrollmentProfileName
+    * **Operator**: Equals
+    * **Value**: Enter the name of the enrollment profile you created in [Step 2: Create new enrollment profile](#step-2-create-new-enrollment-profile). 
+
+For more information about how to create a dynamic group with rules, see [Create a group membership rule](/azure/active-directory/enterprise-users/groups-create-rule#to-create-a-group-membership-rule).  
+
 
 ## Step 3: Enroll devices  
-Now that you have the enrollment token, you can use any of the following provisioning methods to enroll devices as fully managed:  
+Now that you've set up the enrollment profile, token, and dynamic group, you can use any of these provisioning methods to enroll devices as fully managed:  
 
 * Near Field Communication (NFC)
 * Token string or QR code   
