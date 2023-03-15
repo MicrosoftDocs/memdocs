@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Setup Intune enrollment for Android Enterprise fully managed devices
+title: Set up enrollment for Android Enterprise fully managed devices
 titleSuffix: Microsoft Intune
-description: Learn how to enroll Android Enterprise fully managed devices in Intune.
+description: Learn how to set up enrollment for devices using the Android Enterprise fully managed device management solution.   
 keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/9/2020
+ms.date: 03/20/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -32,15 +32,15 @@ ms.collection:
 - highpri
 ---
 
-# Set up Intune enrollment of Android Enterprise fully managed devices
+# Set up enrollment for Android Enterprise fully managed devices  
 
-Use the *Android Enterprise fully managed device* solution with Microsoft Intune to enroll and manage corporate-owned devices that are associated with a single user. These types of devices are intended for work and not personal use. As an Intune admin, you can manage the whole device and enforce policy controls that aren't available with Android Enterprise work profile, such as: 
+Set up the *Android Enterprise fully managed device* solution in Microsoft Intune to enroll and manage corporate-owned devices. A fully managed device is associated with a single user and is intended for work, not personal use. As an Intune admin, you can manage the whole device and enforce policy controls that aren't available with Android Enterprise work profile, such as: 
 
 - Allow app installation from Managed Google Play only.
 - Block users from uninstalling managed apps.
 - Prevent users from factory resetting devices.  
 
-You and your device users can initiate enrollment by entering or scanning an enrollment token during device setup. This article describes the prerequisites for enrollment, how to create enrollment profiles and tokens, and how to enroll devices.        
+You and your device users can initiate enrollment by entering or scanning an enrollment token during device setup. This article describes the prerequisites for enrollment and how to create enrollment profiles and tokens. At the end of this article, you will be ready to enroll devices.  
 
 ## Step 1: Prerequisites  
 Complete these prerequisites to ensure a successful enrollment.     
@@ -91,29 +91,12 @@ Return to your list of enrollment profiles for corporate-owned devices to view y
 
 
 ## Step 3: Enroll devices  
-> [!IMPORTANT]
->  Device users should not restart devices until enrollment is complete. If devices restart in the middle of enrollment, they may not be able to register with Microsoft Intune. Devices that restarted may appear to be enrolled, but they won't be protected by your Intune policies.  
+Now that you have the enrollment token, you can use one of the following provisioning methods to enroll devices in full management: 
 
-Enroll new or factory-reset devices by providing device users with the enrollment token to type or scan. When you're ready for enrollment, share the token directly with targeted users or post it to your organization's support site for easy retrieval. The token works for all Intune-licensed users and doesn't expire. This enrollment method can't be used with device enrollment manager accounts.      
+* Near Field Communication (NFC)
+* Token string or QR code  
+* QR code 
+* Zero-touch enrollment
+* Samsung Knox Mobile Enrollment  
 
-1. Turn on the device.  
-2. On the **Welcome** screen, select your language.  
-3. Connect to your wireless network, and then choose **NEXT**.  
-4. Accept the Google Terms and conditions, and then choose **NEXT**.  
-5. On the Google sign-in screen, enter **afw#setup** instead of a Gmail account, and then choose **NEXT**.
-6. Choose **INSTALL** for the Android Device Policy app.  
-7. Continue to install the policy. Some devices may require additional terms acceptance.
-8. On the **Enroll this device** screen, allow your device to scan the QR code. Or, enter the token manually.
-9. Follow the on-screen prompts to complete enrollment.   
-
-As an Intune admin, you can scan the QR code directly from the enrollment profile to enroll a device.       
-1. After you wipe the device, tap the first screen you see repeatedly to launch the QR reader.    
-2. If prompted to, install a QR reader on your device. Devices running Android 9.0 and later are pre-installed with a QR reader.  
-3. Scan the enrollment profile QR code and then follow the on-screen prompts to complete enrollment.  
-    > [!TIP]
-    > Browser zoom settings may prevent your device from scanning the QR code. Zoom in and try again if your device has difficulty scanning the code. 
-
-## Next steps  
-
-- [Add Android Enterprise fully managed device configuration policies](../configuration/device-restrictions-android-for-work.md#fully-managed-dedicated-and-corporate-owned-work-profile)
-- [Configure app configuration policies for Android Enterprise fully managed devices](../apps/app-configuration-policies-use-android.md)
+For next steps, including how-to enroll devices with each provisioning methods, see see [Enroll Android Enterprise corporate-owned devices][android-dedicated-devices-fully-managed-enroll.md].  
