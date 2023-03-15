@@ -45,7 +45,7 @@ You can migrate from Basic Mobility and Security to Microsoft Intune. Migrating 
 
 2. **Evaluate and migrate your existing policies**:
 
-    Use the **Migration evaluation** in the [Microsoft Intune admin center](https://endpoint.microsoft.com/#view/Microsoft_Intune_Workflows/MifoPolicyListBlade). The output shows Intune policy and group recommendations that replace the Basic Mobility and Security policies.
+    Use the **Migration evaluation** in the [Microsoft Intune admin center](https://intune.microsoft.com/#view/Microsoft_Intune_Workflows/MifoPolicyListBlade). The output shows Intune policy and group recommendations that replace the Basic Mobility and Security policies.
 
 3. **Assign the policies and complete the migration**:
 
@@ -114,7 +114,7 @@ After the migration evaluation process activates, you can't make changes to your
 
 ## Step 2 - Evaluate and migrate your existing policies
 
-After you’ve prepared your licenses and reviewed the information in [Step 1 - Prepare](#step-1---prepare), use the [Microsoft Intune admin center Migration evaluation](https://endpoint.microsoft.com/#view/Microsoft_Intune_Workflows/MifoPolicyListBlade) to get Intune policy recommendations.
+After you’ve prepared your licenses and reviewed the information in [Step 1 - Prepare](#step-1---prepare), use the [Microsoft Intune admin center Migration evaluation](https://intune.microsoft.com/#view/Microsoft_Intune_Workflows/MifoPolicyListBlade) to get Intune policy recommendations.
 
 The tool can migrate your existing Basic Mobility and Security device security policies to Intune as [compliance policies](../protect/device-compliance-get-started.md) and [device configuration profiles](../configuration/device-profiles.md). It also makes recommendations for which groups the new policies should be assigned.
 
@@ -123,11 +123,11 @@ These Intune recommendations are designed to replicate the Basic Mobility and Se
 To evaluate and migrate policies from Basic Mobility and Security to Intune:
 
 1. Complete the steps in the [Step 1 - Prepare](#step-1---prepare) section (in this article).
-2. Open the [Migration evaluation](https://endpoint.microsoft.com/#blade/Microsoft_Intune_Workflows/MifoPolicyListBlade) > select **Start**. It will take a few minutes to complete the evaluation.
+2. Open the [Migration evaluation](https://intune.microsoft.com/#blade/Microsoft_Intune_Workflows/MifoPolicyListBlade) > select **Start**. It will take a few minutes to complete the evaluation.
 
     > [!NOTE]
     >
-    > - If you navigate away from the Migration evaluation, the only way to return is to open the [Migration evaluation](https://endpoint.microsoft.com/#blade/Microsoft_Intune_Workflows/MifoPolicyListBlade) link again.
+    > - If you navigate away from the Migration evaluation, the only way to return is to open the [Migration evaluation](https://intune.microsoft.com/#blade/Microsoft_Intune_Workflows/MifoPolicyListBlade) link again.
     > - After you start the migration evaluation, you can't create new or edit existing device security policies in the Microsoft 365 Defender portal.
 
 3. Select **Recommendations**.
@@ -221,7 +221,7 @@ This section describes what happens behind the scenes when you migrate from Basi
 
 ### Start button always appears
 
-Each time you open the [Microsoft Intune admin center Migration evaluation](https://endpoint.microsoft.com/#view/Microsoft_Intune_Workflows/MifoPolicyListBlade), the **Start** button shows, even if the evaluation is already generated. If you dismiss the **Start** prompt, then the previously generated recommendations won’t load.
+Each time you open the [Microsoft Intune admin center Migration evaluation](https://intune.microsoft.com/#view/Microsoft_Intune_Workflows/MifoPolicyListBlade), the **Start** button shows, even if the evaluation is already generated. If you dismiss the **Start** prompt, then the previously generated recommendations won’t load.
 
 **Workaround**: Start the evaluation again. It won’t create more or duplicate recommendations or policies. Rerunning the migration detects that the evaluation has already succeeded and loads the previous recommendations.
 

@@ -197,7 +197,7 @@ Select one of the following ways to enroll your Autopilot devices.
 
 ### Register Autopilot devices that are already enrolled
 
-1. Create an Autopilot deployment profile with **Convert all targeted devices to Autopilot** set to **Yes**.
+1. Create an Autopilot deployment profile with the setting **Convert all targeted devices to Autopilot** set to **Yes**.
 
 2. Assign the profile to a group that contains the members that you want to automatically register with Autopilot.
 
@@ -266,7 +266,7 @@ Autopilot deployment profiles are used to configure the Autopilot devices.
 
 2. On the **Basics** page, type a **Name** and optional **Description**.
 
-3. If you want all devices in the assigned groups to automatically convert to Autopilot, set **Convert all targeted devices to Autopilot** to **Yes**. All corporate owned, non-Autopilot devices in assigned groups will register with the Autopilot deployment service. Personally owned devices won't be converted to Autopilot. Allow 48 hours for the registration to be processed. When the device is unenrolled and reset, Autopilot will enroll it. After a device is registered in this way, disabling this option or removing the profile assignment won't remove the device from the Autopilot deployment service. You must instead [remove the device directly](add-devices.md#delete-autopilot-devices).
+3. If you want all devices in the assigned groups to automatically register to Autopilot, set **Convert all targeted devices to Autopilot** to **Yes**. All corporate owned, non-Autopilot devices in assigned groups will register with the Autopilot deployment service. Personally owned devices won't be registered to Autopilot. Allow 48 hours for the registration to be processed. When the device is unenrolled and reset, Autopilot will enroll it. After a device is registered in this way, disabling this setting or removing the profile assignment won't remove the device from the Autopilot deployment service. You must instead [remove the device directly](add-devices.md#delete-autopilot-devices).
 
 4. Select **Next**.
 
@@ -288,7 +288,9 @@ Autopilot deployment profiles are used to configure the Autopilot devices.
 
 13. Select **Next** > **Create**.
 
-It takes about 15 minutes for the device profile status to change from *Not assigned* to *Assigning* and, finally, to *Assigned*.
+> [!NOTE]
+>
+>Intune will periodically check for new devices in the assigned groups, and then begin the process of assigning profiles to those devices. Due to several different factors involved in the process of Autopilot profile assignment, an estimated time for the assignment can vary from scenario to scenario. These factors can include AAD groups, membership rules, hash of a device, Intune and Autopilot service, and internet connection. The assignment time will vary depending on all the factors and variables involved in a specific scenario.
 
 ## (Optional) Turn on the enrollment status page
 

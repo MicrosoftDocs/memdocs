@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/29/2022
+ms.date: 03/14/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -81,7 +81,7 @@ For additional details about adding a Managed Google Play app to Intune, see [Ma
 
     ![Common settings](./media/apps-configure-chrome-android/common-settings.png)
 
-    The above settings create bookmarks and block access to all URLs except `baidu.com`, `yahoo.com`, `chromium.org`, and `chrome://`.
+    The above settings create bookmarks and block access to all URLs except `baidu.com`, `youtube.com`, `chromium.org`, and `chrome://`.
 
 5. Click **OK** and **Add** to add your configuration policy to Intune.
 6. Assign this configuration policy to a user group. For more information, see [Assign apps to groups with Microsoft Intune](apps-deploy.md).
