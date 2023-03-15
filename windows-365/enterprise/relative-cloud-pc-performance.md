@@ -39,6 +39,8 @@ The [Cloud PC size recommendations article](cloud-pc-size-recommendations.md) li
 - 4 vCPU/16 GB RAM/128 GB storage
 - 8 vCPU/32 GB RAM/128 GB storage
 
+As Microsoft Cloud technology improves, the available suite of Cloud PCs will also improve. Windows 365 development includes change management and update testing to make sure that Cloud PCs consistently support improvements in availability, performance, and the end user experience. This frees you from the need to track and manage the specifications for your Cloud PCs. Instead, you can choose from a tiered set of pre-configured Cloud PCs that are managed, tested, upgraded, and improved by Microsoft.
+
 ## Test methodology
 
 For these comparisons, industry standard tests were run to measure:
