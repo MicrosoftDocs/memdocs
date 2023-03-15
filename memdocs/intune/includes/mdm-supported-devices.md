@@ -26,7 +26,8 @@ ms.localizationpriority: high
 - Android open source project devices (AOSP) supported devices
   - RealWear devices (Firmware 11.2 or later)
   - HTC Vive Focus 3 (Firmware: FOTA 5.2 - 3.0.999.624)
-
+  - Meta Quest 2 (Open Beta - US Only)
+  - Meta Quest Pro (Open Beta - US Only)
 [!INCLUDE [android-supported-os](android-supported-os.md)]
 
 ### Linux
