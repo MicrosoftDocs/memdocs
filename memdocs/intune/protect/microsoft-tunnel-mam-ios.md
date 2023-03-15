@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/01/2023
+ms.date: 03/14/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -100,6 +100,9 @@ Microsoft Tunnel for MAM iOS uses the following Intune policies and profiles:
 
 Create an app configuration policy for apps that use Tunnel for MAM. This policy configures an app to use a specific Microsoft Tunnel Gateway Site, proxy, and trusted certificate(s) for Edge and line-of-business (LOB) apps. These resources are used when connecting to on-premises resources.
 
+> [!NOTE]  
+> When your tenant uses Active Directory Federation Service (AD FS), only line-of-business are supported. Microsoft Tunnel for iOS does not support Microsoft Edge in an AD FS environment.
+
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Apps** > **App Configuration polices** > **Add** > **Managed Apps**.
 
 2. On the *Basics* tab, enter a *Name* for the policy and a *Description* (optional).
@@ -124,6 +127,17 @@ Create an app configuration policy for apps that use Tunnel for MAM. This policy
    1. Next, select **Select a Site**, and choose one of your Microsoft Tunnel Gateway sites. If you haven’t configured a Tunnel Gateway site, see [Configure Microsoft Tunnel](../protect/microsoft-tunnel-configure.md).
    1. If your app requires a trusted certificate, select **Root Certificate**, and then select a trusted certificate profile to use. For more information, see [Configure a trusted certificate profile](#configure-a-trusted-certificate-profile) later in this article.
 
+   If your tenant uses AD FS, you must make additional configurations to ensure that your applications can authenticate and access the required resources. This configuration will bypass the URL of the publicly available secure token service:
+
+   1. On the *Settings* tab, expand *General configuration settings* and then configure the *Name* and *Value* pair as follows to set up the Edge profile for Tunnel:
+
+      - **Name** =  `com.microsoft.tunnel.custom_configuration`
+      - **Value** = `{"bypassedUrls":["Company’sSTSURL"]}`
+
+      :::image type="content" source="./media/microsoft-tunnel-mam-ios/ios-bypass.png" alt-text="Image that shows the name and value pair.":::
+
+      For example, *Value* might appear as **{"bypassedUrls":["ipcustomer.com", "whatsmyip.org"]}**.
+
    After configuring the Tunnel MAM settings, Select **Next** to open the *Assignments* tab.
 
 5. On the *Assignments* tab, select **Add Groups**, and then select one or more Azure AD user groups that will receive this policy. After configuring groups, select **Next**.
@@ -135,6 +149,8 @@ The new policy appears in the list of App configuration policies.
 ### Configure an app configuration policy for Microsoft Edge
 
 Create an App configuration policy for Microsoft Edge. This policy configures Edge on the device to connect to Microsoft Tunnel.
+> [!NOTE]  
+> When your tenant uses Active Directory Federation Service (AD FS), only line-of-business are supported. Microsoft Tunnel for iOS does not support Microsoft Edge in an AD FS environment.
 
 > [!NOTE]  
 > If you already have an app configuration policy created for your LOB App, you can edit that policy to include Edge and the required *key/value pair* settings.
@@ -168,7 +184,7 @@ An App protection policy is required to configure Microsoft Tunnel for apps that
 
 This policy provides the necessary data protection and establishes a means of delivering app configuration policy to apps. To create an app protection policy, use the following steps:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Apps** > **App protection policies** > **+ Create policy** >  and select **iOS/iPadOS**. 
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Apps** > **App protection policies** > **+ Create policy** >  and select **iOS/iPadOS**.
 2. On the *Basics* tab, enter a *Name* for the policy, and a *Description* (optional), and then select **Next**.
 3. On the *Apps* tab:  
    1. Set *Target apps on all device types* to **No**.
@@ -421,7 +437,7 @@ When you have Conditional Access policies for Microsoft Tunnel Gateway that *Req
 Tunnel for MAM doesn't support:  
 
 - On-premises sites using Kerberos or NTLM integrated authentication webserver sign-in.
-- Federated Azure active directory tenants. Support for federated tenants will take place in a future update.
+- Microsoft Edge when you use Active Directory Federation Service (AD FS). LOB apps are supported today, with support for Microsoft Edge becoming  available in a future update.
 
 **Work around**: None.
 
