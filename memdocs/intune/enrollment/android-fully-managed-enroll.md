@@ -89,7 +89,7 @@ Return to your list of enrollment profiles for corporate-owned devices to view y
 3. Select **Properties** > **Edit** to make changes to the profile basics or scope tags.  
 4. Select **Token** to retrieve, revoke, or export the token.  
 
-## Step 3: Create dynamic Azure AD group  
+## Step 4: Create dynamic Azure AD group  
 Optionally, create a dynamic Azure AD group to automatically group devices based on a certain attribute or variable. In this case, we want to use the `enrollmentProfileName` property to group devices that are enrolling with the same profile. Add these configurations to your group:    
 * **Group type**: Security
 * **Membership type**: Dynamic Device  
@@ -101,7 +101,7 @@ Optionally, create a dynamic Azure AD group to automatically group devices based
 For more information about how to create a dynamic group with rules, see [Create a group membership rule](/azure/active-directory/enterprise-users/groups-create-rule#to-create-a-group-membership-rule).  
 
 
-## Step 3: Enroll devices  
+## Step 5: Enroll devices  
 Now that you've set up the enrollment profile, token, and dynamic group, you can use any of these provisioning methods to enroll devices as fully managed:  
 
 * Near Field Communication (NFC)
