@@ -128,7 +128,7 @@ bullet format:
 
 The following features are available with the most recent Configuration Manager technical preview version:
 
-### Technical preview version 2302
+### Technical preview version 2303
 
 - [SQL Server 2022 version support added for Configuration Manager](2023/technical-preview-2303.md#bkmk_SQlodbc) <!--17276757-->
 - [Dark theme extended to one customer voice(OCV) wizard](2023/technical-preview-2303.md#bkmk_dark) <!-- 17433655 -->
