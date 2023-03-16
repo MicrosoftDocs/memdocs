@@ -310,18 +310,18 @@ Now that you've installed your token, you can create an enrollment profile for A
 
 16. You can activate a cellular data plan. This setting applies to devices running iOS/iPadOS 13.0 and later. Configuring this option will send a command to activate cellular data plans for your eSim-enabled cellular devices. Your carrier must provision activations for your devices before you can activate data plans using this command. To activate cellular data plan, click **Yes** and then enter your carrier’s activation server URL.  
 
-17. For **Await configuration**, your options are:  
+17. For **Await final configuration**, your options are:  
 
-    * **Yes**: Enables a locked experience at the end of Setup Assistant to ensure your most critical device configuration policies are installed on the device before the user accesses the home screen. Just before the home screen loads, Setup Assistant pauses and lets Intune check in with the device. The end user experience locks while users await final configurations. The amount of time it takes to release the device to the home screen varies, and depends on the total number of policies and apps applied to the device. The experience times out after five minutes. 
+     * **Yes**: Enable a locked experience at the end of Setup Assistant to ensure your most critical device configuration policies are installed on the device. Just before the home screen loads, Setup Assistant pauses and lets Intune check in with the device. The end user experience locks while users await final configurations. The amount of time it takes to release the device to the home screen varies, and depends on the total number of policies and apps applied to the device. The experience times out after five minutes.   
     
-    This setting is applied once during the out-of-box automated device enrollment experience.  The device user doesn't experience it again unless they re-enroll their device. **Yes** is the default setting for existing profiles.  
+         This setting is applied once during the out-of-box automated device enrollment experience.  The device user doesn't experience it again unless they re-enroll their device. **Yes** is the default setting for existing profiles.  
 
-    * **No**: The device is released to the home screen when Setup Assistant ends, regardless of policy installation status. Device users may be able to access the home screen or change device settings before all policies are installed.   
+     * **No**: The device is released to the home screen when Setup Assistant ends, regardless of policy installation status. Device users may be able to access the home screen or change device settings before all policies are installed.   
 
-     You can enforce the locked experience on devices targeted with new and existing enrollment profiles. Supported devices include:    
-       * iOS/iPadOS 13+ devices enrolling with Setup Assistant with modern authentication  
-       * iOS/iPadOS 13+ devices enrolling without user affinity   
-       * iOS/iPadOS 13+ devices enrolling with Azure AD shared mode  
+    You can enforce the locked experience on devices targeted with new and existing enrollment profiles. Supported devices include:      
+    * iOS/iPadOS 13+ devices enrolling with Setup Assistant with modern authentication  
+    * iOS/iPadOS 13+ devices enrolling without user affinity   
+    * iOS/iPadOS 13+ devices enrolling with Azure AD shared mode  
 
 17. Select **Next**.
 
