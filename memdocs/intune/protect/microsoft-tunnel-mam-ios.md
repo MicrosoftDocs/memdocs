@@ -410,12 +410,6 @@ For example, enrolled devices can't have an app like Microsoft Edge that uses MA
 
 **Work around**: To use MAM Tunnel with enrolled devices, ensure, the Defender for Endpoint iOS app does not have an App configuration policy with Microsoft Tunnel settings configured.
 
-### Site Configuration requires DNS hostname
-
-Tunnel site settings for **Public IP address or FQDN** require a publicly resolvable fully qualified domain name. An IP address can't be used in the subject name of the TLS/SSL certificate for the tunnel server.
- 
-**Work around**: Use a certificate that includes a publicly resolvable FQDN in the subject name. Don't use a certificate that includes an IP address in the subject name.
-
 ### Newly created custom app not showing in UX
  
 When you create a custom app configuration policy, the newly added app may not appear in the list of targeted apps or the list of available custom apps. 
@@ -426,11 +420,10 @@ When you create a custom app configuration policy, the newly added app may not a
 2. Select custom apps, add a Bundle or Package ID for iOS, complete the flow, and create the app config policy. 
 3. Edit the basic settings. The newly added bundle ID should appear in the list of targeted custom apps.
 
-### Conditional Access policies might require use of Microsoft Azure Authenticator app
+### Microsoft Azure Authenticator app does not work with Tunnel for MAM iOS conditional access  
 
-When you have Conditional Access policies for Microsoft Tunnel Gateway that *Require multifactor authentication* as a *Grant Access* control, devices must use the [Microsoft Authenticator app](/azure/active-directory/authentication/concept-authentication-authenticator-app).
+**Workaround: If you have a Conditional Access policy for Microsoft Tunnel Gateway that requires multifactor authentication as a Grant Access control, you must implement the "onTokenRequiredWithCallback" method in the Microsoft Tunnel Delegate Class within your Line of Business Applications. 
 
-**Work around**: None.
 
 ### Limitations when using Edge on iOS/iPadOS
 
