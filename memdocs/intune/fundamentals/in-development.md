@@ -8,7 +8,7 @@ keywords:
 author: dougeby 
 ms.author: dougeby
 manager: dougeby
-ms.date: 03/15/2023
+ms.date: 03/16/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -122,31 +122,6 @@ Create multiple enrollment profiles and tokens for Android Enterprise fully mana
 <!-- *********************************************** -->
 
 ## Device management
-
-### Improvements to Devices area in admin center (public preview) <!-- 12775837  -->  
-The **Devices** area in the admin center will be updated to provide a more consistent UI, with more capable controls and an improved navigation structure so you can find the information you need faster. You will be able to opt in to the public preview to try out the new experience. Changes will include:  
-
-* A new scenario-focused navigation structure that brings monitoring in line with management workflows.
-* New in-line monitoring pages with easy access to key metrics and reports.
-* Reduction in journey, helping you get to your destination faster.
-* New location for platform pivots that help to create a more consistent navigation model.
-* A consistent way across list views to search, sort, and filter data.
-
-The following device pages will be updated:  
-
-* Overview
-* All devices
-* Compliance
-* Configuration
-* Windows 10 updates
-* Apple updates
-* Enrollment
-
-### View status for pending and failed organizational messages<!-- 17017707 -->  
-We're adding two more states to organizational message reporting details to make it easier to track pending and failed messages in the admin center.
-
-- Pending: The message has not been scheduled yet and is currently in progress.
-- Failed: The message failed to schedule due to a service error.  
 
 ### On-demand proactive remediation for a Windows device<!-- 14783338  -->  
 A new device action that is in public preview allows you to run a proactive remediation on-demand to a single Windows device. The **Run** remediation device action will allow you to resolve issues without having to wait for a proactive remediation to run on its assigned schedule. You will also be able to view the status of proactive remediations under **Remediations** in the **Monitor** section of a device.

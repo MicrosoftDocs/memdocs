@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/15/2023
+ms.date: 03/16/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -177,7 +177,16 @@ Applies to:
 - Windows 10
 - Windows 11
 
-<!-- ### Device security -->
+#### Improvements to Devices area in admin center (public preview) <!-- 12775837 -->  
+The Devices area in the admin center now has a more consistent UI, with more capable controls and an improved navigation structure so you can find the information you need faster. To opt in to the public preview and try out the new experience, go to **Devices** and flip the toggle at the top of the page. Improvements include:
+
+* A new scenario-focused navigation structure.
+* New location for platform pivots to create a more consistent navigation model.
+* A reduction in journey, helping you get to your destination faster.
+* Monitoring and reports are within the management workflows, giving you easy access to key metrics and reports without having to leave the workflow.
+* A consistent way across list views to search, sort, and filter data.
+
+For more information about the updated UI, see [Try new Devices experience in Microsoft Intune](microsoft-intune-admin-center-devices.md).
 
 ### Intune apps
 
@@ -206,9 +215,35 @@ To support the release of Endpoint Privilege Management, we've updated [Collect 
   - %ProgramFiles%\Microsoft EPM Agent\Logs\\\*.*
   - %windir%\system32\config\systemprofile\AppData\Local\mdm\\\*.log
 
-<!-- ### Role-based access control -->
-<!-- ### Scripts -->
-<!-- ### Tenant administration -->
+#### View status for pending and failed organizational messages<!-- 17017707  -->  
+We've added two more states to organizational message reporting details to make it easier to track pending and failed messages in the admin center.
+
+- **Pending**: The message has not been scheduled yet and is currently in progress.
+- **Failed**: The message failed to schedule due to a service error.
+
+For information about reporting details, see [View reporting details for organizational messages](../remote-actions/organizational-messages-reporting.md).  
+
+## Week of March 13, 2023
+
+### Device management
+
+#### Meta Quest 2 and Quest Pro are now in Open Beta (US only) on Microsoft Intune for Android Open Source Devices
+
+Microsoft Intune for Android open source project devices (AOSP) has welcomed Meta Quest 2 and Quest Pro into Open Beta for the US market.
+
+For more information go to [Operating systems and browsers supported by Microsoft Intune](../fundamentals/supported-devices-browsers.md)
+
+Applies to:
+
+- Microsoft Intune (AOSP)  
+
+### App management
+
+#### Trusted Root Certificates Management for Intune App SDK for Android<!-- 15135752 -->
+If your Android application requires SSL/TLS certificates issued by an on-premise or private certificate authority to provide secure access to internal websites and applications, the Intune App SDK for Android now has support for certificate trust management. For more information and examples, see [Trusted Root Certificates Management](../developer/app-sdk-android-phase7.md#trusted-root-certificates-management).
+
+#### System context support for UWP apps<!-- 16544103 -->
+In addition to user context, you will be able to deploy Universal Windows Platform (UWP) apps from the **Microsoft Store app (new)** in system context. If a provisioned *.appx* app is deployed in system context, the app will auto-install for each user that logs in. If an individual end user uninstalls the user context app, the app will still show as installed because it is still provisioned. In addition, the app must not already be installed for any users on the device. Our general recommendation is to not mix install contexts when deploying apps. Note that Win32 apps from the **Microsoft Store app (new)** already supports system context.
 
 ## Week of March 6, 2023  
 
@@ -1518,7 +1553,11 @@ You can now use [Trend Micro Mobile Security as a Service](../protect/trend-micr
  
 For more information, see:
 - [Mobile threat defense integration with Intune](../protect/mobile-threat-defense.md)
+<<<<<<< HEAD
 - [Trend Micro Mobile Security documentation](https://www.trendmicro.com/en_us/business/products/user-protection/endpoint-security.html)
+=======
+<!-- - [Trend Micro Mobile Security documentation](https://docs.trendmicro.com/en-us/enterprise/trend-micro-vision-one/mobile-security/getting-started-with_003.aspx) -->
+>>>>>>> 0e3d9e2051ebf67852c8d177ec951a0b801235d1
 
 #### Grace period status visible on Intune Company Portal website<!-- 15025900 -->
 The Intune Company Portal website now shows a grace period status to account for devices that don't meet compliance requirements but are still within their given grace period. Users are shown the date by which they need to become compliant and the instructions for how to become compliant. If they don't update their device by the given date, their status changes to noncompliant. For more information about setting grace periods, see [Configure compliance policies with actions for noncompliance](../protect/actions-for-noncompliance.md#available-actions-for-noncompliance).
