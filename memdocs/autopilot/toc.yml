@@ -143,7 +143,7 @@ items:
       - name: Autopilot reset
         href: tutorial/reset/reset-workflow.md
       - name: Enable Autopilot reset
-        href: tutorial/reset/reset-enable.md
+        href: tutorial/reset/enable-autopilot-reset.md
 
 - name: Reference
   items:
