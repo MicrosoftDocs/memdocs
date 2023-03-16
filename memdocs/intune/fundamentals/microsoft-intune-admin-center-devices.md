@@ -34,7 +34,7 @@ ms.collection:
 > [!IMPORTANT]
 > This feature is in public preview. For more information, see [Public preview in Microsoft Intune](../fundamentals/public-preview.md).  
 
-Enroll devices, manage profiles and policies, and access montioring and reports all in one place in the new and improved Devices workload in Microsoft Intune. From the admin center, you can:  
+Enroll devices, manage profiles and policies, and access monitoring and reports all in one place in the **Devices** area in Microsoft Intune. From the **Devices** area, you can:  
 
 * Get at-a-glance actionable information and key metrics about your devices.  
 * Access workloads for device onboarding, management, and monitoring.      
@@ -42,7 +42,7 @@ Enroll devices, manage profiles and policies, and access montioring and reports 
 * Manage devices by OS platform. 
 * Access, apply, and view filters at the top of every list view.  
 
-This article describes how to opt in and out of public preview, It also describes the updated areas within the Devices area, which includes:  
+This article describes how to opt in to the public preview, and describes the updated areas within Devices. Updated areas include:    
 
 * Overview
 * All devices  
@@ -58,9 +58,9 @@ You can switch back and forth between the current UI and public preview without 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices**. 
 3. On the **Overview** page, select the **Devices preview** notification: **Preview upcoming changes to Devices and provide feedback**. 
-4. The **Devices preview** page opens. Select **Try it now** to opt in.  The new experience will load and remain, even if you close the browser, until you switch it back. 
+4. The **Devices preview** page opens. Select **Try it now** to opt in.   
 
-To exit public preview and return to the current version of the admin center:  
+You remain in public preview until you switch it back, even if you close the browser.To exit public preview and return to the current version of the admin center:  
 
 1. Go to **Overview**. 
 2. Flip the **Use Devices preview** switch. Wait while Intune refreshes the UI.  
@@ -79,7 +79,7 @@ Overview contains:
 ## All devices  
 Select **Devices** > **All devices** to view a list of all Intune-managed devices in your tenant. Within this area, you can select a device to see more details and access remote actions. Use the **Export** feature to create a .zip list of all the devices, in increments of 10,000 (Internet Explorer) or 30,000 (Microsoft Edge, Chrome).  
 
-Select a device to view additional details about it, such as:
+Select a device to view more details about it, such as:  
 * Hardware details  
 * Installed apps  
 * Assigned policies  
@@ -93,7 +93,7 @@ Under **Device onboarding**, you can access these onboarding options for Microso
 * **Windows 365**  
 * **Enrollment** - *New* 
 
-Within Enrollment, you can access the following sub-workloads: 
+Within Enrollment, you can access the following subworkloads: 
 
 * **Monitor**: Access reports and list views associated with enrollment profiles, policies, and Windows Autopilot deployment. 
 * **Windows**: Set up enrollment for devices running Windows 10 or Windows 11.    
@@ -124,7 +124,7 @@ Under **Manage devices**, you can access your most essential management workload
 This section describes the public preview experience for all updated workloads.  
 
 ### Configuration 
-Select **Devices** > **Configuration** to monitor and manage device configuration policies in Microsoft Intune. Within Configuration, you can access the following sub-workloads: 
+Select **Devices** > **Configuration** to monitor and manage device configuration policies in Microsoft Intune. Within Configuration, you can access the following subworkloads: 
 
 * **Monitor**: Access reports and list views associated with device configuration profiles.          
 * **Policies**: Create, view and edit device configuration policies.      
@@ -133,7 +133,7 @@ Select **Devices** > **Configuration** to monitor and manage device configuratio
 For more information about device configuration, see [Apply features settings on your devices using device profiles in Microsoft Intune](../configuration/device-profiles.md). 
 
 ### Compliance  
-Select **Devices** > **Compliance** to monitor and manage device compliance policies in Microsoft Intune. This workload is made up of the following sub-workloads:
+Select **Devices** > **Compliance** to monitor and manage device compliance policies in Microsoft Intune. This workload is made up of the following subworkloads:
 
 * **Monitor**: Access reports and list views associated with device compliance.          
 * **Policies**: Create, view and edit device compliance policies.
