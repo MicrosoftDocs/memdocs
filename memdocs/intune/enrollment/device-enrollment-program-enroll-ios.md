@@ -304,24 +304,24 @@ Now that you've installed your token, you can create an enrollment profile for A
     >
     >If you set **Sync with computers** to **Allow Apple Configurator by certificate**, make sure you have a local copy of the certificate that you can use later. You won't be able to make changes to the uploaded copy, and it's important to retain an copy of this certificate. If you want to connect to the iOS/iPadOS device from a macOS device or PC, the same certificate must be installed on the device making the connection to the iOS/iPadOS device.
 
-14. If you selected **Allow Apple Configurator by certificate** in the previous step, choose an Apple Configurator certificate to import.
+14. If you selected **Allow Apple Configurator by certificate** in the previous step, choose an Apple Configurator certificate to import.  
 
-15. You can specify a naming format for devices that's automatically applied when they're enrolled and upon each successive check-in. To create a naming template, select **Yes** under **Apply device name template**. Then, in the **Device Name Template** box, enter the template to use for the names that use this profile. You can specify a template format that includes the device type and serial number. This feature supports iPhone, iPad, and iPod Touch. The device name template entry cannot exceed the length of 63 characters, including the variables.
+15. For **Await final configuration**, your options are:  
 
-16. You can activate a cellular data plan. This setting applies to devices running iOS/iPadOS 13.0 and later. Configuring this option will send a command to activate cellular data plans for your eSim-enabled cellular devices. Your carrier must provision activations for your devices before you can activate data plans using this command. To activate cellular data plan, click **Yes** and then enter your carrier’s activation server URL.  
-
-17. For **Await final configuration**, your options are:  
-
-     * **Yes**: Enable a locked experience at the end of Setup Assistant to ensure your most critical device configuration policies are installed on the device. Just before the home screen loads, Setup Assistant pauses and lets Intune check in with the device. The end user experience locks while users await final configurations. The amount of time it takes to release the device to the home screen varies, and depends on the total number of policies and apps applied to the device. The experience times out after five minutes.   
+     * **Yes**: Enable a locked experience at the end of Setup Assistant to ensure your most critical device configuration policies are installed on the device. Just before the home screen loads, Setup Assistant pauses and lets Intune check in with the device. The end-user experience locks while users await final configurations. The amount of time it takes to release the device to the home screen varies, and depends on the total number of policies and apps applied to the device. The experience times out after five minutes.   
     
          This setting is applied once during the out-of-box automated device enrollment experience.  The device user doesn't experience it again unless they re-enroll their device. **Yes** is the default setting for existing profiles.  
 
      * **No**: The device is released to the home screen when Setup Assistant ends, regardless of policy installation status. Device users may be able to access the home screen or change device settings before all policies are installed.   
 
-    You can enforce the locked experience on devices targeted with new and existing enrollment profiles. Supported devices include:      
+    The locked experience works on devices targeted with new and existing enrollment profiles. Supported devices include:      
     * iOS/iPadOS 13+ devices enrolling with Setup Assistant with modern authentication  
     * iOS/iPadOS 13+ devices enrolling without user affinity   
     * iOS/iPadOS 13+ devices enrolling with Azure AD shared mode  
+
+16. You can specify a naming format for devices that's automatically applied when they're enrolled and upon each successive check-in. To create a naming template, select **Yes** under **Apply device name template**. Then, in the **Device Name Template** box, enter the template to use for the names that use this profile. You can specify a template format that includes the device type and serial number. This feature supports iPhone, iPad, and iPod Touch. The device name template entry cannot exceed the length of 63 characters, including the variables.
+
+17. You can activate a cellular data plan. This setting applies to devices running iOS/iPadOS 13.0 and later. Configuring this option will send a command to activate cellular data plans for your eSim-enabled cellular devices. Your carrier must provision activations for your devices before you can activate data plans using this command. To activate cellular data plan, click **Yes** and then enter your carrier’s activation server URL.  
 
 17. Select **Next**.
 
