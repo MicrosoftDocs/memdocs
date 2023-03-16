@@ -42,15 +42,15 @@ Enroll devices, manage profiles and policies, and access monitoring and reports 
 * Manage devices by OS platform. 
 * Access, apply, and view filters at the top of every list view.  
 
-This article describes how to opt in to the public preview, and describes the updated areas within Devices. Updated areas include:    
+This article describes how to opt in to the public preview, and also describes these updated areas: 
 
-* Overview
-* All devices  
-* Configuration
-* Compliance 
-* Windows 10 updates  
-* Apple updates  
-* Enrollment  
+* Devices > Overview
+* Devices > All devices  
+* Devices > Configuration
+* Devices > Compliance 
+* Devices > Windows 10 and later updates  
+* Devices > Apple updates  
+* Devices > Enrollment  
 
 ## Opt in to public preview   
 You can switch back and forth between the current UI and public preview without impacting other admins in your tenant.  
