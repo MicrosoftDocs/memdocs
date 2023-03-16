@@ -96,7 +96,7 @@ Optionally, create a dynamic Azure AD group to automatically group devices based
 * Add a dynamic query with the following rule: 
     * **Property**: enrollmentProfileName
     * **Operator**: Equals
-    * **Value**: Enter the name of the enrollment profile you created in [Step 2: Create new enrollment profile](#step-2-create-new-enrollment-profile). 
+    * **Value**: Enter the name of the enrollment profile you created in [Step 3: Create new enrollment profile](#step-3-create-new-enrollment-profile). 
 
 For more information about how to create a dynamic group with rules, see [Create a group membership rule](/azure/active-directory/enterprise-users/groups-create-rule#to-create-a-group-membership-rule).  
 
