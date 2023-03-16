@@ -289,7 +289,7 @@ As a helper, after receiving a request from a user who wants assistance by using
 
    During assistance, helpers that have the *Elevation* permission can enter local admin permissions on your shared device. *Elevation* allows the helper to run executable programs or take similar actions when you lack sufficient permissions.
 
-5. After the issues are resolved, or at any time during the session, both the sharer and helper can end the session. To end the session, select **Leave** in the upper right corner of the Remote Help app. Upon the end of a session, the sharer is automatically signed out of their device as a security precaution to ensure all connections between the devices close.
+5. After the issues are resolved, or at any time during the session, both the sharer and helper can end the session. To end the session, select **Leave** in the upper right corner of the Remote Help app. When a helper performs elevated actions on a user's device, at the end of the session the sharer is automatically signed out of their device. When a helper performs elevated actions on a user's device and the sharer ends the session, if the helper continues, then a warning dialog box appears for the helper that if they continue they will be logged off.
 
 ## Monitoring and reports
 
