@@ -2,7 +2,7 @@
 title: Updates and servicing
 titleSuffix: Configuration Manager
 description: Learn about the in-console service method called Updates and Servicing that makes it easy to locate and install recommended updates.
-ms.date: 12/05/2022
+ms.date: 04/01/2023
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -57,15 +57,15 @@ The following supported versions of Configuration Manager are currently availabl
 
 | Version | Availability date | [Support end date](current-branch-versions-supported.md) | Baseline | In-console update |
 |-------------|-----------|------------|--------------|------------------------|
+| [**2303**](../../plan-design/changes/whats-new-in-version-2303.md)<br /> (5.00.9099) | April 1, 2023 | October 1, 2024 | Yes<sup>[Note 1](#bkmk_note1)</sup> | Yes |
 | [**2211**](../../plan-design/changes/whats-new-in-version-2211.md)<br /> (5.00.9096) | December 5, 2022 | June 5, 2024 | No | Yes |
 | [**2207**](../../plan-design/changes/whats-new-in-version-2207.md)<br /> (5.00.9088) | August 12, 2022 | February 12, 2024 | No | Yes |
 | [**2203**](../../plan-design/changes/whats-new-in-version-2203.md)<br /> (5.00.9078) | April 8, 2022 | October 8, 2023 | Yes<sup>[Note 1](#bkmk_note1)</sup> | Yes |
 | [**2111**](../../plan-design/changes/whats-new-in-version-2111.md)<br /> (5.00.9068) | December 1, 2021 | June 1, 2023 | No | Yes |
-| [**2107**](../../plan-design/changes/whats-new-in-version-2107.md)<br /> (5.00.9058) | August 2, 2021 | February 2, 2023 | No | Yes |
 
 
 > [!NOTE]
-> The **Availability date** in this table is when the [early update ring](checklist-for-installing-update-2111.md#early-update-ring) was released. Baseline media will be available on the VLSC soon after the update is globally available.
+> The **Availability date** in this table is when the [early update ring](checklist-for-installing-update-2303.md#early-update-ring) was released. Baseline media will be available on the VLSC soon after the update is globally available.
 
 ##### <a name="bkmk_note1"></a> Note 1: How to get baseline media
 
@@ -86,8 +86,9 @@ The following table lists historical versions of Configuration Manager current b
 
 | Version                          | Availability date | Support end date   | Baseline | In-console update |
 |----------------------------------|-------------------|--------------------|----------|-------------------|
-| **2010** <br /> (5.00.9040)      | November 30, 2020     | May 30, 2022    | No      | Yes               |
-| **2006** <br /> (5.00.9012)      | August 11, 2020     | February 11, 2022    | No      | Yes               |
+| **2107** <br /> (5.00.9058)      | August 2, 2021    | February 2, 2023   | No       | Yes               |
+| **2010** <br /> (5.00.9040)      | November 30, 2020 | May 30, 2022       | No       | Yes               |
+| **2006** <br /> (5.00.9012)      | August 11, 2020   | February 11, 2022  | No       | Yes               |
 | **2002** <br /> (5.00.8968)      | April 1, 2020     | October 1, 2021    | Yes      | Yes               |
 | **1910** <br /> (5.00.8913)      | November 29, 2019 | May 29, 2021       | No       | Yes               |
 | **1906** <br /> (5.00.8853)      | July 26, 2019     | January 26, 2021   | No       | Yes               |
@@ -99,7 +100,7 @@ The following table lists historical versions of Configuration Manager current b
 | **1706** <br /> (5.00.8540)      | July 31, 2017     | July 31, 2018      | No       | Yes               |
 | **1702** <br /> (5.00.8498)      | March 27, 2017    | March 27, 2018     | Yes      | Yes               |
 | **1610** <br /> (5.00.8458)      | November 18, 2016 | November 18, 2017  | No       | Yes               |
-| **1606 with KB3186654** <br /> (5.00.8412.1307) | October 12, 2016  | October 12, 2017  | Yes | No|
+| **1606 with KB3186654** <br /> (5.00.8412.1307) | October 12, 2016  | October 12, 2017  | Yes | No       |
 | **1606** <br /> (5.00.8412.1000) | July 22, 2016     | July 22, 2017      | No       | Yes               |
 | **1602** <br /> (5.00.8355)      | March 11, 2016    | March 11, 2017     | No       | Yes               |
 | **1511** <br /> (5.00.8325)      | December 8, 2015  | December 8, 2016   | Yes      | No                |
@@ -117,7 +118,7 @@ When you use a production-ready installation of Configuration Manager current br
 
 These updates include:
 
-- New versions, like version 2107, 2111, or 2203.
+- New versions, like version 2207, 2211, or 2303.
 
 - Updates that include new features for your current version.
 
