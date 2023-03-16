@@ -150,7 +150,7 @@ The new policy appears in the list of App configuration policies.
 
 Create an App configuration policy for Microsoft Edge. This policy configures Edge on the device to connect to Microsoft Tunnel.
 > [!NOTE]  
-> When your tenant uses Active Directory Federation Service (AD FS), only line-of-business are supported. Microsoft Tunnel for iOS does not support Microsoft Edge in an AD FS environment.
+> For Federated Azure active directory tenants, only line-of-business are supported. Microsoft Tunnel for iOS does not support Microsoft Edge for Federated Azure active directory tenants.
 
 > [!NOTE]  
 > If you already have an app configuration policy created for your LOB App, you can edit that policy to include Edge and the required *key/value pair* settings.
@@ -437,7 +437,7 @@ When you have Conditional Access policies for Microsoft Tunnel Gateway that *Req
 Tunnel for MAM doesn't support:  
 
 - On-premises sites using Kerberos or NTLM integrated authentication webserver sign-in.
-- Microsoft Edge when you use Active Directory Federation Service (AD FS). LOB apps are supported today, with support for Microsoft Edge becoming  available in a future update.
+- Microsoft Edge isn't supported with Federated Azure active directory tenants. LOB apps are supported today, with support for Microsoft Edge becoming available in a future update.
 
 **Work around**: None.
 
