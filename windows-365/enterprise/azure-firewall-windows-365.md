@@ -77,13 +77,13 @@ The environment in the diagram was set up using the following Azure Firewall app
 
 | Rule Description | Destination type | FQDN tag name | Protocol | TLS inspection | Required/Optional |
 | --- | --- | --- | --- | --- | --- |
-| Windows 365 FQDNs | FQDN Tag | Windows 365 | HTTP:80, HTTPS: 443 | [Not recommend](/en-us/azure/virtual-desktop/proxy-server-support#dont-use-ssl-termination-on-the-proxy-server) | Required |
-| Office 365 FQDNs | FQDN Tag | Office 365 | HTTP:80, HTTPS: 443 | [Not recommend for optimize & allow category](/microsoft-365/enterprise/microsoft-365-network-connectivity-principles?view=o365-worldwide) | Optional, but recommended|
-| Windows Update | FQDN Tag | Windows Update| HTTP:80, HTTPS: 443 | [Not recommend](/windows/deployment/update/windows-update-security#securing-metadata-connections) | Optional|
+| Windows 365 FQDNs | FQDN Tag | Windows 365 | HTTP: 80, HTTPS: 443 | [Not recommend](/en-us/azure/virtual-desktop/proxy-server-support#dont-use-ssl-termination-on-the-proxy-server) | Required |
+| Office 365 FQDNs | FQDN Tag | Office 365 | HTTP: 80, HTTPS: 443 | [Not recommend for optimize & allow category](/microsoft-365/enterprise/microsoft-365-network-connectivity-principles?view=o365-worldwide) | Optional, but recommended|
+| Windows Update | FQDN Tag | Windows Update| HTTP: 80, HTTPS: 443 | [Not recommend](/windows/deployment/update/windows-update-security#securing-metadata-connections) | Optional|
 
 ## Network rules
 
-Azure Firewall doesn’t currently handle non-standard ports in an FQDN tag. Windows 365 has a small number of nonstandard port requirements, so the following rules must be added manually as Network Rules.
+Azure Firewall doesn’t currently handle non-standard ports in an FQDN tag. Windows 365 has a few non-standard port requirements, so the following rules must be added manually as Network Rules.
 
 | Rule Description | Destination type | FQDN/IP| Protocol | Port/s | TLS inspection | Required/Optional |
 | --- | --- | --- | --- | --- | --- | --- |
