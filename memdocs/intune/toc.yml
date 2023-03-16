@@ -1343,7 +1343,9 @@ items:
           - name: Prerequisites for organizational messages    
             href: ./remote-actions/organizational-messages-prerequisites.md
           - name: Create organizational messages  
-            href: ./remote-actions/organizational-messages-create.md
+            href: ./remote-actions/organizational-messages-create.md  
+          - name: Monitor organizational messages  
+            href: ./remote-actions/organizational-messages-reporting.md  
       - name: Bulk device actions
         href: ./remote-actions/bulk-device-actions.md
       - name: Troubleshooting
