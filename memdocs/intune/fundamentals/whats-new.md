@@ -86,6 +86,9 @@ Applies to:
 #### Trusted Root Certificates Management for Intune App SDK for Android<!-- 15135752 -->
 If your Android application requires SSL/TLS certificates issued by an on-premise or private certificate authority to provide secure access to internal websites and applications, the Intune App SDK for Android now has support for certificate trust management. For more information and examples, see [Trusted Root Certificates Management](../developer/app-sdk-android-phase7.md#trusted-root-certificates-management).
 
+#### System context support for UWP apps<!-- 16544103 -->
+In addition to user context, you will be able to deploy Universal Windows Platform (UWP) apps from the **Microsoft Store app (new)** in system context. If a provisioned *.appx* app is deployed in system context, the app will auto-install for each user that logs in. If an individual end user uninstalls the user context app, the app will still show as installed because it is still provisioned. In addition, the app must not already be installed for any users on the device. Our general recommendation is to not mix install contexts when deploying apps. Note that Win32 apps from the **Microsoft Store app (new)** already supports system context.
+
 ## Week of March 6, 2023  
 
 ### App management
