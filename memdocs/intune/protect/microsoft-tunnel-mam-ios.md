@@ -417,7 +417,7 @@ Tunnel site settings for **Public IP address or FQDN** require a publicly resolv
 **Work around**: Use a certificate that includes a publicly resolvable FQDN in the subject name. Don't use a certificate that includes an IP address in the subject name.
 
 ### Newly created custom app not showing in UX
-
+ 
 When you create a custom app configuration policy, the newly added app may not appear in the list of targeted apps or the list of available custom apps. 
 
 **Work around**: This issue can be resolved by refreshing the Intune admin center and accessing the policy again:
