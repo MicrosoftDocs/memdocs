@@ -164,7 +164,9 @@ User experience settings control the end-user experience for device restart and 
   **Default**: Allow  
   Windows Update CSP: [Update/SetEDURestart](/windows/client-management/mdm/policy-csp-update#update-setedurestart)  
 
-  To skip these checks when you restart a device, select **Skip**.
+  Setting this setting to **Skip** will restrict updates to download and install outside of Active Hours. Updates will be allowed to start even if there is a signed-in user or the device is on battery power, providing there is more than 70% battery capacity. Windows will schedule the device to wake from sleep 1 hour after the [Active Hours End](/windows/client-management/mdm/policy-csp-update#activehoursend) time with a 60-minute random delay. Devices will reboot immediately after the updates are installed. If there are still pending updates, the device will continue to retry every hour for 4 hours.
+
+  These settings are designed for education devices that remain in carts overnight that are left in sleep mode. It is not designed for 1:1 devices.
 
 - **Option to pause Windows updates**  
   **Default**: Enable  
