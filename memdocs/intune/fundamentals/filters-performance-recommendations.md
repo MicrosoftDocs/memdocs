@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/14/2023
+ms.date: 03/16/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -33,7 +33,7 @@ ms.collection:
 
 This article lists and describes recommendations for Intune grouping, targeting, and filtering for your policies. The goal is to help you make architecture and design decisions for your Intune deployments.
 
-These performance recommendations and their implementation varies depending on your own environment and other factors, including manageability and simplicity.
+These performance recommendations and their implementation can be different and depend on your own environment and other factors, including manageability and simplicity.
 
 In this article:
 
@@ -61,6 +61,8 @@ Azure AD groups are an important part of Intune because these groups are:
 
 The **All users** and **All devices** assignments are Intune “virtual” groups. These virtual groups are available by default in all Intune tenants and don’t come with any management overhead. For example, you don’t need to create or adjust any Azure AD rules to keep their members populated.
 
+:::image type="content" source="./media/filters-performance-recommendations/filters-azuread-virtual-groups.png" alt-text="Screenshot that shows the Intune admin center, the Azure AD groups, virtual groups, and some filter properties in Microsoft Intune.":::
+
 The **All users** and **All devices** groups are also highly scalable and optimized, mainly because they don't need to be synced from Azure AD in the same way that other groups do.
 
 ### Filters
@@ -68,8 +70,6 @@ The **All users** and **All devices** groups are also highly scalable and optimi
 After the app or policy is assigned to a non-virtual group, you can use [filters](filters.md) to narrow the assignment scope of these apps and policies to specific user or device groups.
 
 Your filter filters devices in (or out) of that assignment based on device properties. Filtering is high performance, low latency applicability evaluation at device check-in without any need to precompute.
-
-IMAGE
 
 ## Performance recommendations
 
@@ -107,7 +107,7 @@ Behind the scenes, Intune converts Azure AD group members to assignment targetin
 
 For example, Intune grouping and targeting works best when the “Engineering” user group is targeted with 10 policies. It doesn't work best when the Engineering users are members of 10 different groups, each assigned to a different policy.
 
-We’ve seen a few designs countering this guidance. For example, IT admins create an “Install_Edge” group , create a “Deploy_Edge_Config_Policy” group, and then put the same devices in each group.
+We’ve seen a few designs countering this guidance. For example, IT admins create an “Install_Edge” group, create a “Deploy_Edge_Config_Policy” group, and then put the same devices in each group.
 
 A similar and not recommended pattern is creating “App groups”. An app group is when each app has several Azure AD groups created for it. For example, to manage the Edge application, an admin creates the following groups:
 
