@@ -210,7 +210,9 @@ items:
                   href: ./apps/store-apps-android.md
                 - name: iOS store apps
                   href: ./apps/store-apps-ios.md
-                - name: Microsoft store apps
+                - name: Microsoft store apps (new)
+                  href: ./apps/store-apps-microsoft.md
+                - name: Microsoft store apps (legacy)
                   href: ./apps/store-apps-windows.md
                 - name: Microsoft Store for Business apps
                   href: ./apps/windows-store-for-business.md
