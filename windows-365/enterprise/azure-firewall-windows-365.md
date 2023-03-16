@@ -2,7 +2,7 @@
 # required metadata
 title: Use Azure Firewall to manage and secure Windows 365 environments
 titleSuffix:
-description: Learn how ot use Azure Firewall to manage and secure Windows 365 environments.
+description: Learn how to use Azure Firewall to manage and secure Windows 365 environments.
 keywords:
 author: ErikjeMS  
 ms.author: erikje
@@ -34,10 +34,10 @@ ms.collection:
 
 This article explains how to simplify and protect your Windows 365 environment using Azure Firewall. The example architecture explained herein provides low maintenance and automated access to the required endpoints through a direct and optimized connection path. You can use Azure Firewall application rules and fully qualified domain name (FQDN) tags to replicate this architecture example in your environment.
 
-Note
-This article applies to customers who deploy Windows 365 with Azure network connections (ANC). This article doesn’t apply to environments that use Microsoft hosted networks. For more information about each, see [Windows 365 networking deployment options](deployment-options.md).
+> [!NOTE]  
+> This article applies to customers who deploy Windows 365 with Azure network connections (ANC). This article doesn’t apply to environments that use Microsoft hosted networks. For more information about each, see [Windows 365 networking deployment options](deployment-options.md).
 
-The Windows 365 service requires optimized, non-proxied connectivity to critical service endpoints, many of which reside within Microsoft’s infrastructure. Connecting to these resources using on-premises networks through the internet is not recommended. Such connections can be complex to configure and manage.
+The Windows 365 service requires optimized, nonproxied connectivity to critical service endpoints, many of which reside within Microsoft’s infrastructure. Connecting to these resources using on-premises networks through the internet isn't recommended. Such connections can be complex to configure and manage.
 
 For example, some Windows 365 customers using the ANC deployment model might have a direct connection back to an on-premises environment that uses ExpressRoute or Site-To-Site VPN. Outbound traffic might be routed using an existing proxy server in the same way as on-premises traffic. This connection strategy isn’t optimized for Windows 365 environments.
 
@@ -83,7 +83,7 @@ The environment in the diagram was set up using the following Azure Firewall app
 
 ## Network rules
 
-Azure Firewall doesn’t currently handle non-standard ports in an FQDN tag and as Windows 365 has a small number of non-standard port requirements, these rules will need to be added manually as Network Rules.
+Azure Firewall doesn’t currently handle non-standard ports in an FQDN tag. Windows 365 has a small number of nonstandard port requirements, so the following rules must be added manually as Network Rules.
 
 | Rule Description | Destination type | FQDN/IP| Protocol | Port/s | TLS inspection | Required/Optional |
 | --- | --- | --- | --- | --- | --- | --- |
