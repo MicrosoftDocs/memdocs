@@ -84,7 +84,11 @@ items:
 
       - name: Create an ADMX template
         href: ./configuration/tutorial-walkthrough-administrative-templates.md
-        displayName: admx, administrative template
+        displayName: admx, administrative template  
+
+      - name: Try new Devices experience (public preview) 
+        href: ./fundamentals/microsoft-intune-admin-center-devices.md
+        displayName: devices, admin center, microsoft intune   
 
   - name: Plan
     items:
