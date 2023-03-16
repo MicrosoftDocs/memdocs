@@ -217,7 +217,7 @@ Notifications that have been created are available in the *Compliance policies* 
 
 ## Add actions for noncompliance
 
-When you create a device compliance policy, Intune automatically creates an action for noncompliance. If a device isn't meeting your compliance policy, this action marks the device as not compliant. You can customize how long the device is marked as not compliant. This action can't be removed.
+When you create a device compliance policy, Intune automatically creates an action for noncompliance. If a device does not meet your compliance policy, this action marks the device as not compliant. You can customize how long the device is marked as not compliant. This action can't be removed.
 
 You can add optional actions when you create a compliance policy, or update an existing policy.
 
