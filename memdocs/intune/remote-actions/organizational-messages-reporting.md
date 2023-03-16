@@ -6,7 +6,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/15/2023
+ms.date: 03/20/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
