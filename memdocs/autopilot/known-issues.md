@@ -28,7 +28,7 @@ This article describes known issues that can often be resolved by configuration 
 
 ### Kiosk device profile not auto logging in
 
-There's currently a known issue in Windows Update [KB5022303](https://support.microsoft.com/topic/january-10-2023-kb5022303-os-build-22621-1105-c45956c6-4ccb-4216-832c-2ec6309c7629), which applies to both Windows 10 and Windows 11, where Kiosk device profiles that have auto log on enabled won't auto login. After Autopilot completes provisioning, the device stays on the sign-in screen prompting for credentials. To work around this known issue, you can manually enter the kiosk user credentials with the username `kioskUser0` and no password. After entering this username with no password, it should take you to the desktop. This will be reoslved in Windows 10 version 3C (March 2023) or higher or Windows 11 4B (April 2023) or higher.
+There's currently a known issue in Windows Update [KB5022303](https://support.microsoft.com/topic/january-10-2023-kb5022303-os-build-22621-1105-c45956c6-4ccb-4216-832c-2ec6309c7629), which applies to both Windows 10 and Windows 11, where Kiosk device profiles that have auto log on enabled won't auto login. After Autopilot completes provisioning, the device stays on the sign-in screen prompting for credentials. To work around this known issue, you can manually enter the kiosk user credentials with the username `kioskUser0` and no password. After entering this username with no password, it should take you to the desktop. This should be reoslved in Windows 10 version 3C (March 2023) or higher or Windows 11 4B (April 2023) or higher.
 
 ### TPM attestation isn't working on AMD platforms with ASP fTPM
 
