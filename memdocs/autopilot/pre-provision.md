@@ -54,7 +54,7 @@ In addition to [Windows Autopilot requirements](software-requirements.md), Windo
 - Windows Pro, Enterprise, or Education editions
 - An Intune subscription.
 - Physical devices that support TPM 2.0 and device attestation. Virtual machines aren't supported. The pre-provisioning process uses Windows Autopilot self-deploying capabilities, so TPM 2.0 is required. The TPM attestation process also requires access to a set of HTTPS URLs that are unique for each TPM provider. For more information, see the entry for Autopilot self-Deploying mode and Autopilot pre-provisioning in [Networking requirements](networking-requirements.md#tpm).
-- Network connectivity. Using wireless connectivity requires selecting region, language and keyboard before you are able to connect and start provisioning.
+- Network connectivity. Using wireless connectivity requires selecting region, language and keyboard before you're able to connect and start provisioning.
 
 > [!IMPORTANT]
 >
@@ -80,22 +80,22 @@ Before starting the pre-provisioning process in the provisioning service facilit
 The Windows Autopilot for pre-provisioned deployment pre-provisioning process will apply all device-targeted policies from Intune. That includes certificates, security templates, settings, apps, and more - anything targeting the device. Additionally, any Win32 or LOB apps will be installed if they meet these two conditions:
 
 - Configured to install in the device context.
-- Targeted to the user pre-assigned to the Autopilot device.
+- Targeted to the user preassigned to the Autopilot device.
 
 > [!IMPORTANT]
 > Make sure not to target both win32 and LOB apps to the same device.
 
 > [!NOTE]
-> Select the language mode as user specified in Autopilot profiles to ensure easy access into pre-provisioning mode. The pre-provisioning technician phase will install all device-targeted apps and any user-targeted, device-context apps that are targeted to the assigned user. If there is no assigned user, then it will only install the device-targeted apps. Other user-targeted policies will not apply until the user signs into the device. To verify these behaviors, be sure to create appropriate apps and policies targeted to devices and users.
+> Select the language mode as user specified in Autopilot profiles to ensure easy access into pre-provisioning mode. The pre-provisioning technician phase will install all device-targeted apps and any user-targeted, device-context apps that are targeted to the assigned user. If there's no assigned user, then it will only install the device-targeted apps. Other user-targeted policies will not apply until the user signs into the device. To verify these behaviors, be sure to create appropriate apps and policies targeted to devices and users.
 
 ## Scenarios
 
 Windows Autopilot for pre-provisioned deployment supports two distinct scenarios:
 
 - User-driven deployments with Azure AD Join. The device will be joined to an Azure AD tenant.
-- User-driven deployments with Hybrid Azure AD Join. The device will be joined to an on-premises Active Directory domain, and separately registered with Azure AD.
+- User-driven deployments with hybrid Azure AD Join. The device will be joined to an on-premises Active Directory domain, and separately registered with Azure AD.
 
-Each of these scenarios consists of two parts, a technician flow and a user flow. At a high level, these parts are the same for Azure AD Join and Hybrid Azure AD join. The differences are primarily seen by the end user in the authentication steps.
+Each of these scenarios consists of two parts, a technician flow and a user flow. At a high level, these parts are the same for Azure AD Join and hybrid Azure AD join. The differences are primarily seen by the end user in the authentication steps.
 
 ### Technician flow
 
@@ -116,7 +116,7 @@ After the customer or IT Admin has targeted all the apps and settings they want 
     > [!NOTE]
     > The QR codes can be scanned using a companion app. The app also configures the device to specify who it belongs to. An [open-source sample of the companion app](https://github.com/Microsoft/WindowsAutopilotCompanion) that integrates with Intune by using the Graph API has been published to GitHub by the Autopilot team.
 
-- Validate the information displayed. If any changes are needed, make the changes and then click **Refresh** to re-download the updated Autopilot profile details.
+- Validate the information displayed. If any changes are needed, make the changes and then click **Refresh** to redownload the updated Autopilot profile details.
 
  ![Windows Autopilot configuration screen.](images/landing.png)
 
@@ -142,10 +142,10 @@ If the pre-provisioning process completed successfully and the device was reseal
 
 - Power on the device.
 - Select the appropriate language, locale, and keyboard layout.
-- Connect to a network (if using Wi-Fi). Internet access is always required. If using Hybrid Azure AD Join, there must also be connectivity to a domain controller.
-- On the branded sign-on screen, enter the user's Azure Active Directory credentials.
-- If using Hybrid Azure AD Join, the device will reboot; after the reboot, enter the user's Active Directory credentials.
-- Additional policies and apps will be delivered to the device, as tracked by the Enrollment Status Page (ESP). Once complete, the user can access the desktop.
+- Connect to a network (if using Wi-Fi). Internet access is always required. If using hybrid Azure AD Join, there must also be connectivity to a domain controller.
+- If using Azure AD join, on the branded sign-on screen, enter the user's Azure Active Directory credentials.
+- If using hybrid Azure AD Join, the device will reboot; after the reboot, enter the user's Active Directory credentials.
+- More policies and apps will be delivered to the device, as tracked by the Enrollment Status Page (ESP). Once complete, the user can access the desktop.
 
 A change was made in the 2021.09C release to re-run the device ESP during the user flow so that both device and user ESP will be run when the user logs in. This change allows ESP to install additional policies that may have been assigned to the device after it was provisioned in the technician phase.  
 

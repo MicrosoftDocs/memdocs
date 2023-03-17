@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/24/2023
+ms.date: 03/14/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -301,4 +301,5 @@ You can use the following operators in the rule syntax editor:
 
 - [Use filters when assigning your apps, policies, and profiles](filters.md)
 - [Supported workloads when creating filters](filters-supported-workloads.md)
+- [Filter performance recommendations](filters-performance-recommendations.md)
 - [Filter reports and troubleshooting](filters-reports-troubleshoot.md)
