@@ -100,7 +100,7 @@ Go to **Enrollment** to access these subworkloads:
 * **Corporate device identifiers**: Add and manage corporate identifiers for devices that should have corporate-owned status.  
 * **Device enrollment manager**: Add and manage device enrollment managers that oversee or help with enrolling devices.            
 
-For more information about corporate identifiers, see [Identify devices as corporate-owned](../enrollment/corporate-identifiers-add.md).  
+For more information about getting started with enrollment, see [Enrollment guide: Microsoft Intune enrollment](deployment-guide-enrollment.md).   
 
 ## Manage devices    
 Under **Manage devices**, you can access these essential management workloads (workloads with UI changes are marked as *New*):      
@@ -120,46 +120,48 @@ Under **Manage devices**, you can access these essential management workloads (w
 
 Monitored data and relevant reports are located in the same place as your management tasks to help you find and act on issues quickly. This section describes the public preview experience for all updated workloads.  
 
-### Configuration workload  
+### Configuration  
 Go to **Devices** > **Configuration** to monitor and manage device configuration policies in Microsoft Intune. Within Configuration, you can access these subworkloads: 
 
-* **Monitor**: Access reports and list views associated with device configuration profiles.          
-* **Policies**: Create, view and edit device configuration policies.      
+* **Monitor**: Access key metrics, reports, and list views associated with device configuration profiles.          
+* **Policies**: Create and manage device configuration policies.      
 * **Import ADMX**: Import custom and partner ADMX and ADML templates that you can create device configuration policies from.   
 
 For more information about device configuration, see [Apply features settings on your devices using device profiles in Microsoft Intune](../configuration/device-profiles.md).  
 
-### Compliance workload   
+### Compliance   
 Go to **Devices** > **Compliance** to monitor and manage device compliance policies in Microsoft Intune. Within Compliance, you can access these subworkloads:  
 
 * **Monitor**: Access key metrics, reports, and list views associated with device compliance.          
-* **Policies**: Create, view and edit device compliance policies.
+* **Policies**: Create and manage device compliance policies.
 * **Notifications**: Create and send custom notifications to device users on managed iOS/iPadOS and Android devices.  
-* **Retire noncompliant devies**: Remove all company data from a device and remove the device from Intune management. 
+* **Retire noncompliant devices**: Remove all company data from a device and remove the device from Intune management. 
 * **Compliance settings**: Configure compliance policy settings such as enhanced jailbreak detection and compliance status validity period.      
 * **Scripts**: Add and manage scripts used for custom compliance settings.   
 
 For more information about device compliance, see [Compliance overview](../protect/device-compliance-get-started.md).  
 
 ### Windows 10 and later updates
-Go to **Devices** > **Windows 10 and later updates** to monitor and manage software update policies for devices running Windows 10 or Windows 11. This workload is made up of the following subworkloads:
+Go to **Devices** > **Windows 10 and later updates** to monitor and manage software update policies for devices running Windows 10 or Windows 11. This workload is made up of the following subworkloads:  
 
 * **Monitor**: Access key metrics and active issues associated with Windows software update policies.             
-* **Update rings**: Create and manage update ring policies for Windows 10 and Windows 11.    
-* **Feature updates**: Create and manage policies for Windows 10 and Windows 11 feature updates.   
-* **Quality updates**: Create and manage policies for Windows 10 and Windows 11 quality updates.  
-* **Driver updates**: Create and manage policies for Windows 10 and Windows 11 driver updates.    
+* **Update rings**: Create and manage update ring policies for Windows 10 and Windows 11 updates.    
+* **Feature updates**: Create and manage policies for feature updates.   
+* **Quality updates**: Create and manage policies for quality updates.  
+* **Driver updates**: Create and manage policies for driver updates.    
 
 For more information about Windows updates, see [Manage Windows 10 and Windows 11 software updates in Intune](../protect/windows-update-for-business-configure.md).   
 
 ### Apple updates   
-Select **Devices** > **Apple updates** to monitor and manage software update policies for Apple devices. This workload is made up of the following subworkloads:
+Go to **Devices** > **Apple updates** to monitor and manage software update policies for Apple devices. This workload is made up of the following subworkloads:  
 
 * **Monitor**: Access key metrics and active issues associated with Apple update policies.            
 * **iOS/iPadOS updates**: Create and manage policies for iOS/iPadOS updates.      
 * **macOS updates**: Create and manage policies for macOS updates.   
 
-For more information about Windows updates, see [Manage Windows 10 and Windows 11 software updates in Intune](../protect/windows-update-for-business-configure.md).   
+For more information about software update policies for Apple devices, see:
+* [Manage iOS/iPadOS software updates in Intune](../protect/software-updates-ios.md)  
+* [Manage macOS software updates in Intune](../protect/software-updates-macos.md)   
 
 ## Next steps  
 
