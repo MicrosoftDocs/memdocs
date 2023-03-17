@@ -16,6 +16,15 @@ ms.topic: article
 
 # Windows Autopilot: What's new
 
+## Install required apps during pre-provisioning
+
+A new toggle will be available in the Enrollment Status Page (ESP) profile that allows you to select whether you want to attempt to install required applications during pre-provisioning (white glove) technician phase. We understand that installing as many applications as possible during pre-provisioning is desired to reduce the end user set up time. To help you achieve this, we've implemented an option to attempt the installation of all the required apps assigned to a device during technician phase. In case of app install failure, ESP will continue except for the apps specified in the ESP profile. To enable this function, you'll need to edit your Enrollment Status Page profile by selecting **Yes** on the new setting entitled **Only fail selected apps in technician phase**. This setting will only appear if you have blocking apps selected. For more information, see [Update to Windows Autopilot pre-provisioning process for app installs](https://techcommunity.microsoft.com/t5/intune-customer-success/update-to-windows-autopilot-pre-provisioning-process-for-app/ba-p/3752516).
+
+
+## New Microsoft Store apps now supported with the Enrollment Status Page
+
+The Enrollment Status Page (ESP) now supports the new Microsoft store applications during Windows Autopilot. This update enables better support for the new Microsoft Store experience and should be rolling out to all tenants starting with Intune 2303. For related information, see [Set up the Enrollment Status Page](../intune/enrollment/windows-enrollment-status.md).
+
 ## Bug fix: Intune Management Extension updates during Enrollment Status Page
 
 In 2302, the Intune Management extension will no longer attempt to upgrade during an active Enrollment Status Page session. Previously, the Intune Management Extension (IME) would attempt to upgrade during the Enrollment Status Page, which can cause apps to time out and then fail the Autopilot deployment. This timeout is more commonly seen in pre-provisioning scenarios where a device may be provisioned with one version of the IME during the technician phase, and may require an update during the user phase.
