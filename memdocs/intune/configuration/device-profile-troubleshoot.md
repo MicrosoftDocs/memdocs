@@ -162,6 +162,7 @@ If fast delivery of apps and policies is important to your setup/enrollment scen
 For more information on dynamic groups, go to:
 
 - [Add groups to organize users and devices in Intune](../fundamentals/groups-add.md)
+- [Performance recommendations when using Intune to group, target, and filter](../fundamentals/filters-performance-recommendations.md)
 - [Dynamic membership rules for groups in Azure AD](/azure/active-directory/enterprise-users/groups-dynamic-membership)
 
 ## Next steps
