@@ -62,9 +62,6 @@ You can use RSS to be notified when this article is updated. For more informatio
 
 ## App management
 
-### Managed apps permission is no longer required to manage VPP apps<!-- 17205644  -->  
-You'll soon be able to view and manage VPP apps with only the **Mobile apps** permission assigned. Previously, the **Managed apps** permission was required to view and manage VPP apps. More information on permissions in Intune is available at [Custom role permissions](../fundamentals/create-custom-role.md#custom-role-permissions).
-
 ### Install required apps during pre-provisioning<!-- 12716381   -->  
 A new toggle will be available in the Enrollment Status Page (ESP) profile that allows you to select whether you want to attempt to install required applications during pre-provisioning (white glove) technician phase. We understand that installing as many applications as possible during pre-provisioning is desired to reduce the end user set up time. To help you achieve this, we have implemented an option to attempt the installation of all the required apps assigned to a device during technician phase. In case of app install failure, ESP will continue except for the apps specified in ESP profile. To enable this function, you will need to edit your Enrollment Status Page profile by selecting **Yes** on the new setting entitled **Only fail selected apps in technician phase**. This setting will only appear if you have blocking apps selected. For information about ESP, go to [Set up the Enrollment Status Page](../enrollment/windows-enrollment-status.md).
 
@@ -99,22 +96,8 @@ Applies to:
 
 ## Device enrollment
 
-#### Intune's AAD frontline worker iPad experience<!-- 6367427  -->  
+### Intune's AAD frontline worker iPad experience<!-- 6367427  -->  
 Intune will support a frontline worker (FLW) experience for iPhones and iPads. The foundation for this experience is based on support for both the Azure Active Directory (AAD) shared device mode and the Microsoft Enterprise SSO plug-in (Microsoft Azure AD SSO extension). We also will release ZTP (Zero Touch Provisioning) which allows user enrollment without any user action.
-
-### Install Intune policies during Setup Assistant with awaiting final configuration command (public preview)<!-- 13156553  -->  
-Intune will support a new setting called **Await final configuration** in specific iOS/iPadOS automated device enrollment profiles. This setting enables a locked experience in Setup Assistant to prevent device users from accessing restricted content or changing settings until the majority of Intune device configuration policies are installed. Just before the home screen loads, Setup Assistant will pause and let Intune finish installing critical device configuration policies. Device users will be locked into the experience on the **Awaiting final configuration** screen, and won't be able to access the home screen until the device is released with the [release device from await configuration](https://developer.apple.com/documentation/devicemanagement/release_device_from_await_configuration) command. The amount of time the device is on that screen until it is released to the home screen will vary depending on the number of policies and apps applied to the device.
-
-This setting is applied once during the out-of-box automated device enrollment experience.  The device user won't experience it again unless they re-enroll their device. You'll be able to utilize the locked experience on devices targeted with new and existing enrollment profiles. Supported devices include:  
-
-* iOS/iPadOS 13+ devices enrolling with Setup Assistant with modern authentication
-* iOS/iPadOS 13+ devices enrolling without user affinity
-* iOS/iPadOS 13+ devices enrolling with Azure AD shared mode
-
-You will be able to enable or disable this feature in new and existing enrollment profiles with the new setting. We recommend you set it to **Yes** to utilizing the Awaiting final configuration feature during Setup Assistant. The default for existing enrollment profiles is No, and the default for new enrollment profiles is Yes. 
-
-### New setting gives Intune admins control over device-to-category mapping<!-- 15029839  -->  
-Control visibility of the device category prompt in Intune Company Portal. Instead of making device users select the category, like they currently do, you'll be able to hide the prompt and leave the device-to-category mapping up to Intune admins. The new setting will be available in the admin center under **Tenant Administration** > **Customization** > **Device Categories**.
 
 ### Support for multiple enrollment profiles and tokens for fully managed devices <!-- 14205233 -->  
 Create multiple enrollment profiles and tokens for Android Enterprise fully managed devices. With this new functionality, you'll also be able to use the *EnrollmentProfileName* dynamic device property to automatically assign enrollment profiles to fully managed devices. The enrollment token that came with your tenant will remain in a default profile.
@@ -144,9 +127,6 @@ As a public preview, we’ll be introducing Microsoft Intune Endpoint Privilege 
 With the public preview you’ll be able to configure policies for *automatic* and *user-confirmed* workflows that elevate the run-time permissions for apps or processes you select. You then assign these policies to users or devices that have end users running without Administrator privileges. Once policy is received, Endpoint Privilege Management will broker the elevation on behalf of the user, allowing them to elevate approved applications without needing full administrator privileges. The preview also includes built-in insights and reporting for Endpoint Privilege Management.
 
 Endpoint Privilege Management is part of the [Intune Suite](../fundamentals/intune-add-ons.md) offering, and free to try while it remains in public preview.
-
-### Additional reporting information related to tenant attach devices<!-- 9220597  -->
-We're adding the ability to view information for tenant attach devices in the existing antivirus reports under the Endpoint Security workload. There will be a new column to differentiate between devices managed by Intune and devices managed by Configuration Manager. This reporting information will be available in [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Endpoint security** > **Antivirus**.
 
 ### Support for tamper protection in policies for Security settings management for Microsoft Defender for Endpoint <!-- 13204113 -->  
 You’ll soon be able to manage Tamper protection for Microsoft Defender for Endpoint on unenrolled devices as part of the [MDE Security configuration](../protect/mde-security-integration.md#which-solution-should-i-use) scenario.

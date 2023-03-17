@@ -79,6 +79,9 @@ Intune supports additional minimum operating system versions for Windows 10 and 
 - Windows 11 21H2
 - Windows 11 22H2
 
+#### Managed apps permission is no longer required to manage VPP apps<!-- 17205644  -->  
+You can view and manage VPP apps with only the **Mobile apps** permission assigned. Previously, the **Managed apps** permission was required to view and manage VPP apps. This change does not apply to Intune for Education tenants who still need to assign the **Managed apps** permission. More information about permissions in Intune is available at [Custom role permissions](../fundamentals/create-custom-role.md#custom-role-permissions).
+
 ### Device configuration
 
 ### New settings and setting options available in the macOS Settings Catalog <!-- 16813395  -->  
@@ -135,7 +138,13 @@ Applies to:
 
 - Linux Ubuntu Desktops
 
-<!--### Device enrollment -->
+### Device enrollment
+
+#### Support for the await final configuration setting for iOS/iPadOS Automated device enrollment (public preview)<!-- 13156553  -->  
+Now in public preview, Intune supports a new setting called **Await final configuration** in specific iOS/iPadOS automated device enrollment profiles. This setting enables an out-of-the-box locked experience in Setup Assistant to prevent device users from accessing restricted content or changing settings on the device until the majority of Intune device configuration policies are installed. To configure the setting, create an automated device enrollment profile (**Devices** > **iOS/iPadOS** > **iOS/iPadOS enrollment** > **Enrollment program tokens** > **Create profile**) in the admin center. For more information, see [Create an Apple enrollment profile](../enrollment/device-enrollment-program-ios.md#create-an-apple-enrollment-profile). 
+
+#### New setting gives Intune admins control over device-to-category mapping<!-- 15029839 -->  
+Control visibility of the device category prompt in Intune Company Portal. You can now hide the prompt from end users and leave the device-to-category mapping up to Intune admins. The new setting is available in the admin center under **Tenant Administration** > **Customization** > **Device Categories**. For more information, see [Device categories](../apps/company-portal-app.md#device-categories).
 
 ### Device management
 
@@ -222,6 +231,10 @@ We've added two more states to organizational message reporting details to make 
 - **Failed**: The message failed to schedule due to a service error.
 
 For information about reporting details, see [View reporting details for organizational messages](../remote-actions/organizational-messages-reporting.md).  
+
+
+#### Additional reporting information related to tenant attach devices<!-- 9220597  -->  
+You can now view information for tenant attach devices in the existing antivirus reports under the Endpoint Security workload. A new column differentiates between devices managed by Intune and devices managed by Configuration Manager. This reporting information is available in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Endpoint security** > **Antivirus**.
 
 ## Week of March 13, 2023
 
