@@ -80,7 +80,7 @@ Before starting the pre-provisioning process in the provisioning service facilit
 The Windows Autopilot for pre-provisioned deployment pre-provisioning process will apply all device-targeted policies from Intune. That includes certificates, security templates, settings, apps, and more - anything targeting the device. Additionally, any Win32 or LOB apps will be installed if they meet these two conditions:
 
 - Configured to install in the device context.
-- Targeted to the user pre-assigned to the Autopilot device.
+- Targeted to the user preassigned to the Autopilot device.
 
 > [!IMPORTANT]
 > Make sure not to target both win32 and LOB apps to the same device.
@@ -116,7 +116,7 @@ After the customer or IT Admin has targeted all the apps and settings they want 
     > [!NOTE]
     > The QR codes can be scanned using a companion app. The app also configures the device to specify who it belongs to. An [open-source sample of the companion app](https://github.com/Microsoft/WindowsAutopilotCompanion) that integrates with Intune by using the Graph API has been published to GitHub by the Autopilot team.
 
-- Validate the information displayed. If any changes are needed, make the changes and then click **Refresh** to re-download the updated Autopilot profile details.
+- Validate the information displayed. If any changes are needed, make the changes and then click **Refresh** to redownload the updated Autopilot profile details.
 
  ![Windows Autopilot configuration screen.](images/landing.png)
 
