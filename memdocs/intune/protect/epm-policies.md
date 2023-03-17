@@ -218,14 +218,14 @@ In addition to this policy, a device must also be assigned a Windows elevation s
      - **User confirmed**: We recommend this option for most rules. When a file is run, the user receives a simple prompt to confirm their intent to run the file. The rule can also include additional prompts that are available from the *Validation* drop down:
        - *Business justification*: Require the user to enter a justification for running the file. There's no required format for this, however the user input is saved and can be reviewed through logs if the *Reporting scope* includes collection of endpoint elevations.
        - *Windows authentication*: This option requires the user to authenticate using their organization credentials.
-     - **Automatic**: This elevation type automatically runs the file in question with elevated permissions. This is done invisibly to the user, without prompting for confirmation or requiring justification or authentication by the user. 
+     - **Automatic**: This elevation type automatically runs the file in question with elevated permissions. This is transparent to the user, without prompting for confirmation or requiring justification or authentication by the user.
+      >[!CAUTION]
+      >Only use the automatic elevation for files you trust. These files will automatically elevate without user interaction. Rules that are not well defined could allow unapproved applications to elevate. For more information on creating strong rules, see the [guidance for creating rules](../protect/epm-guidance-for-creating-rules.md).
 
-       Use this type of elevation for only files you trust. Examples include a common and well-known printer-driver that users are expected to install, or a productivity app like the setup file for Microsoft Office 365.
+   *File information* is where you specify the details that identify a file that this rule applies to.
 
-   *File information* is where you specify the details that identify a file and file instance that this rule applies to.
-
-   - **File name**: Specify the file name and its extension. For example: `notepad.exe`
-   - **File path** (Optional): Specify the location of the file in relation to the local device where the file is to be run. If the file can be run from any location or is unknown, you can leave this blank. You can also use a variable.
+   - **File name**: Specify the file name and its extension. For example: `myapplication.exe`
+   - **File path** (Optional): Specify the location of the file. If the file can be run from any location or is unknown, you can leave this blank. You can also use a variable.
    - **Signature source**: Choose one of the following options:
 
      - **Use a certificate file in reusable settings** (Default): This option uses a certificate file that has been added to a reusable settings group for Endpoint Privilege Management. You must [create a reusable settings group](#reusable-settings-groups) before you can use this option.
@@ -233,7 +233,7 @@ In addition to this policy, a device must also be assigned a Windows elevation s
         To identify the *Certificate*, select *Add or remove a certificate*, and then select the reusable group that contains the correct certificate. Then, specify the *Certificate type* of *Publisher* or *Certificate authority*.
 
      - **Upload a certificate file**: Add a certificate file directly to the elevation rule. For *File upload*, specify a **.cer** file that can validate the integrity of the file that this rule applies to. Then, specify the *Certificate type* of *Publisher* or *Certificate authority*.
-     - **Not configured**: Use this option when you can't use a certificate to validate the integrity of the file. When no certificate is used, you must provide a *file hash*.
+     - **Not configured**: Use this option when do not want to use a certificate to validate the integrity of the file. When no certificate is used, you must provide a *file hash*.
 
    - **File hash**: The file hash is required when Signature source is set to *Not configured*, and optional when set to use a certificate.
    - **Minimum version**: (Optional) Use the **x.x.x.x** format to specify a minimum version of the file that is supported by this rule.
@@ -275,16 +275,23 @@ To create the reusable settings group for Endpoint Privilege Management:
 Except for the following situation, conflicting policies for EPM are handled like any other [policy conflict](../configuration/device-profile-troubleshoot.md#conflicts).
 
 **Windows elevation settings policy**
-If a device receives separate rules for the same file:
 
-- If the settings conflict on enabling or disabling EPM, EPM policy is enabled on the device.
+When a device receives two separate elevation settings policies with conflicting values, the EPM client will revert to the default client behavior until the conflict is resolved.
+
+> [!Note]
+> If the *Enable Endpoint Privilege Management* is in conflict the default behavior of the client is to *Enable* EPM. This means the client components will continue to function until an explicit value is delivered to the device.
 
 **Windows elevation rules policy**
-If a device receives separate rules for the same file:
 
-- If the rules are in conflict, then the policy with the most properties that most explicitly describes the file applies.
-- If the rules don't define all the same settings or options, the configurations are merged as a superset for the file on that endpoint.
-- If the elevation type for the file is in conflict, settings for *User Confirmed* will apply instead of running as *Automatic*.
+If a device receives two rules targeting the same application, both rules are consumed on the device. When EPM goes to resolve rules that apply to an elevation, it used the following logic:
+
+- Rules deployed to a user take precedence over rules deployed to a device
+- Rules with a hash defined are always deemed the most *specific* rule
+- If more than one rule applies (with no hash defined), the rule with the most defined attributes wins (most *specific*)
+- If applying the above logic results in more than one rule, the following order determines the elevation behavior: User Confirmed, Support Approved (once available), Automatic
+ 
+> [!NOTE]
+> If a rule does not exist for an elevation and that elevation was requested through the *Run with elevated access* right-click context menu, then the *Default Elevation Behavior* will be used.
 
 ## Next steps
 
