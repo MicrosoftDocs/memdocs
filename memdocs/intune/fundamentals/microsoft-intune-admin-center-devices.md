@@ -42,7 +42,7 @@ Enroll devices, manage profiles and policies, and access monitoring and reports 
 * Manage devices by OS platform. 
 * Access, apply, and view filters at the top of every list view.  
 
-This article describes how to opt in to the public preview and describes these updated areas:    
+This article describes how to opt in to the public preview and access updated workloads, including:    
 
 * **Devices** > **Overview**
 * **Devices** > **All devices**  
