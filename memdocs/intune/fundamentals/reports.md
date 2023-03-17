@@ -8,7 +8,7 @@ keywords:
 author: erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/13/2023
+ms.date: 03/17/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -196,7 +196,7 @@ To view the Noncompliant policies report:
 > *This report is in preview.*
 
 ## Unhealthy endpoints report (Operational)
-The **Unhealthy endpoints** report surfaces data typically used by Helpdesk or admin roles to identify problems and help remediate issues with Windows endpoints. The data found in this report is timely, calls out the unhealthy device, the primary user principal name (UPN), and the status of many settings. The report is available as a tab within the primary **Antivirus** workload. This report provides filtering, searching, paging, and sorting. 
+The **Unhealthy endpoints** report surfaces data typically used by Helpdesk or admin roles to identify problems and help remediate issues with Windows endpoints. The data found in this report is timely, calls out the unhealthy device, the primary user principal name (UPN), and the status of many settings. The report is available as a tab within the primary **Antivirus** workload. This report provides filtering, searching, paging, and sorting. Additionally, this report provides the **Managed by** column. This column can be used to identity devices that are managed by Configuration Manager.
 
 You can view the **Unhealthy endpoints** report using the following steps:
 
@@ -206,7 +206,7 @@ You can view the **Unhealthy endpoints** report using the following steps:
 For information about the actions you can take with this report, see [Bulk actions for device reports](reports.md#bulk-actions-for-device-reports).
 
 ## Active malware report (Operational)
-The **Active malware** report provides data to identify devices with malware problems and help remediate issues with Windows endpoints. The data found in this report is timely, calls out the unhealthy device, the user name, and severity. The report is available as a tab within the primary **Antivirus** workload. This report provides filtering, searching, paging, and sorting. 
+The **Active malware** report provides data to identify devices with malware problems and help remediate issues with Windows endpoints. The data found in this report is timely, calls out the unhealthy device, the user name, and severity. The report is available as a tab within the primary **Antivirus** workload. This report provides filtering, searching, paging, and sorting. Additionally, this report provides the **Managed by** column. This column can be used to identity devices that are managed by Configuration Manager.
 
 You can view the **Active malware** report using the following steps:
 
