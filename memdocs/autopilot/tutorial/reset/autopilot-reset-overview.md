@@ -49,8 +49,8 @@ When Autopilot reset is used on a device, the device's primary user will be remo
 
 Windows Autopilot Reset supports two scenarios:
 
-- [Local reset](#reset-devices-with-local-windows-autopilot-reset) started by IT personnel or other administrators from the organization.
-- [Remote reset](#reset-devices-with-remote-windows-autopilot-reset) started remotely by IT personnel via an MDM service such as Microsoft Intune.
+- [Local reset](local-autopilot-reset.md) started by IT personnel or other administrators from the organization.
+- [Remote reset](remote-autopilot-reset.md) started remotely by IT personnel via an MDM service such as Microsoft Intune.
 
 Additional requirements and configuration details apply with each scenario.
 
