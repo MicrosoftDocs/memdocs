@@ -93,9 +93,9 @@ The Windows Autopilot for pre-provisioned deployment pre-provisioning process wi
 Windows Autopilot for pre-provisioned deployment supports two distinct scenarios:
 
 - User-driven deployments with Azure AD Join. The device will be joined to an Azure AD tenant.
-- User-driven deployments with Hybrid Azure AD Join. The device will be joined to an on-premises Active Directory domain, and separately registered with Azure AD.
+- User-driven deployments with hybrid Azure AD Join. The device will be joined to an on-premises Active Directory domain, and separately registered with Azure AD.
 
-Each of these scenarios consists of two parts, a technician flow and a user flow. At a high level, these parts are the same for Azure AD Join and Hybrid Azure AD join. The differences are primarily seen by the end user in the authentication steps.
+Each of these scenarios consists of two parts, a technician flow and a user flow. At a high level, these parts are the same for Azure AD Join and hybrid Azure AD join. The differences are primarily seen by the end user in the authentication steps.
 
 ### Technician flow
 
@@ -142,9 +142,9 @@ If the pre-provisioning process completed successfully and the device was reseal
 
 - Power on the device.
 - Select the appropriate language, locale, and keyboard layout.
-- Connect to a network (if using Wi-Fi). Internet access is always required. If using Hybrid Azure AD Join, there must also be connectivity to a domain controller.
-- On the branded sign-on screen, enter the user's Azure Active Directory credentials.
-- If using Hybrid Azure AD Join, the device will reboot; after the reboot, enter the user's Active Directory credentials.
+- Connect to a network (if using Wi-Fi). Internet access is always required. If using hybrid Azure AD Join, there must also be connectivity to a domain controller.
+- If using Azure AD join, on the branded sign-on screen, enter the user's Azure Active Directory credentials.
+- If using hybrid Azure AD Join, the device will reboot; after the reboot, enter the user's Active Directory credentials.
 - Additional policies and apps will be delivered to the device, as tracked by the Enrollment Status Page (ESP). Once complete, the user can access the desktop.
 
 A change was made in the 2021.09C release to re-run the device ESP during the user flow so that both device and user ESP will be run when the user logs in. This change allows ESP to install additional policies that may have been assigned to the device after it was provisioned in the technician phase.  
