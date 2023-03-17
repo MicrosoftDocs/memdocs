@@ -162,7 +162,8 @@ When there's a device with conflicting assignments for the same policy, the foll
 
 When you assign the app or policy, you choose to apply a filter:
 
-:::image type="content" source="./media/filters-reports-troubleshoot/assignment-filter-precedence.png" alt-text="Screenshot that shows filter precedence is exclude, no filter, and then include when assigning policies in Microsoft Intune.":::
+:::image type="content" source="./media/filters-reports-troubleshoot/assignment-filter-precedence.png" alt-text="Screenshot that shows filter precedence is exclude, no filter, and then include when assigning policies in Microsoft Intune."lightbox="./media/filters-reports-troubleshoot/assignment-filter-precedence.png":::
+
 
 For example:
 
