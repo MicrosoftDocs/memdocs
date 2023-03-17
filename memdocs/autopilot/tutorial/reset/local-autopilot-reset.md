@@ -102,7 +102,7 @@ A local Windows Autopilot Reset is a two-step process: trigger it and then authe
 
 **To trigger a local Autopilot Reset:**
 
-1. From the Windows device lock screen, enter the keystroke: **CTRL + ![Windows key](../images/windows_glyph.png) + R**.
+1. From the Windows device lock screen, enter the keystroke: **CTRL + ![Windows key](../../images/windows_glyph.png) + R**.
 
     These keystrokes will open up a custom login screen for the local Autopilot Reset. The screen serves two purposes:
     1. Confirm/verify that the end user has the right to trigger Local Autopilot Reset
