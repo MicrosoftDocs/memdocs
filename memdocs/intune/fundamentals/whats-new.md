@@ -67,12 +67,27 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 -->
 
-## Week of March 13, 2023  
+## Week of March 13, 2023
+
+### Device management
+
+#### Meta Quest 2 and Quest Pro are now in Open Beta (US only) on Microsoft Intune for Android Open Source Devices
+
+Microsoft Intune for Android open source project devices (AOSP) has welcomed Meta Quest 2 and Quest Pro into Open Beta for the US market.
+
+For more information go to [Operating systems and browsers supported by Microsoft Intune](../fundamentals/supported-devices-browsers.md)
+
+Applies to:
+
+- Microsoft Intune (AOSP)  
 
 ### App management
 
 #### Trusted Root Certificates Management for Intune App SDK for Android<!-- 15135752 -->
 If your Android application requires SSL/TLS certificates issued by an on-premise or private certificate authority to provide secure access to internal websites and applications, the Intune App SDK for Android now has support for certificate trust management. For more information and examples, see [Trusted Root Certificates Management](../developer/app-sdk-android-phase7.md#trusted-root-certificates-management).
+
+#### System context support for UWP apps<!-- 16544103 -->
+In addition to user context, you will be able to deploy Universal Windows Platform (UWP) apps from the **Microsoft Store app (new)** in system context. If a provisioned *.appx* app is deployed in system context, the app will auto-install for each user that logs in. If an individual end user uninstalls the user context app, the app will still show as installed because it is still provisioned. In addition, the app must not already be installed for any users on the device. Our general recommendation is to not mix install contexts when deploying apps. Note that Win32 apps from the **Microsoft Store app (new)** already supports system context.
 
 ## Week of March 6, 2023  
 
