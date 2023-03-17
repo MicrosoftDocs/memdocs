@@ -8,7 +8,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 3/20/2023
-ms.topic: overview
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: 
 ms.localizationpriority: med
@@ -57,14 +57,14 @@ You can switch back and forth between the current UI and public preview without 
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices**. 
-3. On the **Overview** page, select the **Devices preview** notification: **Preview upcoming changes to Devices and provide feedback**. 
+3. On the **Overview** page, select the notification banner that says **Preview upcoming changes to Devices and provide feedback**.  
 4. The **Devices preview** page opens. Select **Try it now** to opt in.   
 
-You remain in public preview until you switch it back, even if you close the browser.To exit public preview and return to the current version of the admin center:  
+You remain in public preview until you switch it back, even if you close the browser. To exit public preview and return to the current version of the admin center:  
 
 1. Go to **Overview**. 
 2. Flip the switch next to **Use Devices preview**. Wait while Intune refreshes the UI.  
-3. Optionally, when prompted, provide feedback about your experience with the Devices public preview. Select **x** to return to the admin center without giving feedback.      
+3. Optionally, when prompted, provide feedback about your experience with the Devices public preview. Select **x** to return to the admin center without giving feedback.       
 
 ## Overview         
 Go to **Devices** > **Overview** to access workloads by OS platform, view key metrics about assigned policies, and access associated reports.  *Overview* contains at-a-glance metrics that highlight active issues, such as enrollment failures and Windows 365 provisioning failures, happening across devices. Select a metric for more information about an active issue.   
@@ -164,4 +164,4 @@ For more information about Windows updates, see [Manage Windows 10 and Windows 1
 
 ## Next steps  
 
-For the public preview annoucement for this feature, see [What's New in Microsoft Intune](../fundamentals/whats-new.md#week-of-march-20-2023).    
+For an overview of new features and features that are ready to try in public preview, see [What's New in Microsoft Intune](../fundamentals/whats-new.md).    
