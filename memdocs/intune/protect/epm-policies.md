@@ -47,6 +47,72 @@ Applies to:
 - Windows 10
 - Windows 11
 
+## Getting started with EPM policies
+
+EPM uses the two policy types that you configure to manage how a file elevation request is handled. Together, the policies set the conditions for managed files and unmanaged files. Managed files are identified by elevation rules while unmanaged files are all other files.
+
+**Elevate requests**:  
+After EPM is enabled on a device, each file on the device includes a new right-click option for running files in an elevated context: *Elevate request*. *Elevate request* is in addition to the option *Run as administrator*, which remains available.
+
+To run a file managed by EPM in an elevated context, users need only double-click on the file. They can also choose to use the files *Elevate request* option. Both actions result in EPM evaluating the file, and if conditions are met, launching it in an elevated context.
+
+- If EPM can match the file to a rule for *Automatic* elevation, the file runs as elevated with no further user interaction.
+- WHen a file requires *User Confirmation* from either an elevation rule or by the devices elevation settings, the user must respond to the prompts before the file runs as elevated.
+- When a file can't be matched to a rule and the evaluation settings policy don't support a fallback option on the device, the file doesn't run as elevated and launches as a standard user.
+
+For users that have administrative rights, EPM doesn't facilitate the elevation request, no matter how it'ss initiated. Instead, the Windows process of *Run as administrator* is used. However, based on the devices reporting scope as configured in the elevations setting policy, EPM can report information to Intune about the files elevation.
+
+**File validation**:  
+To ensure that only the correct file and version are elevated, you specify file details and can specify a file hash. You can also use certificates to validate the files you configure for elevation, which we recommend as a best practice.
+
+If you use certificates to validate file integrity, you add a certificate directly to each policy that requires it, or add the certificate to a [reusable settings group](../protect/reusable-settings-groups.md) that you then assign to multiple policies. The use of reusable settings groups for the certificate can make it easier to manage certificate changes. If you need to update a certificate that’s in a reusable group, those changes automatically apply to each policy that includes the reusable group. This is more efficient than making separate edits to each policy to update the certificate.
+
+For guidance on how to configure the policies and reusable settings group, see [Configure policies for Endpoint Privilege Management](../protect/epm-policies.md).
+
+### Windows elevation settings policy
+
+Use *Windows elevation settings policy* when you want to:
+<!-- To enable Endpoint Privilege Management (EPM) on a device, a *Windows elevation settings policy* must be assigned to it. This policy is necessary for EPM to be enabled, and includes the following uses: -->
+
+- **Enable Endpoint Privilege Management** on devices. By default, this policy enables EPM. When first enabled for EPM, a device installs components that monitor elevation requests and enforce elevation rules.
+
+  If a device has EPM disabled, there's a delay of seven days before the EPM component is deprovisioned. The delay can reduce the time it takes to restore EPM should a device have accidentally had EPM disabled, or its elevation settings policy unassigned.
+
+- **Set a default response for an *Elevate request*** of any file that’s not managed by a *Windows elevation rule policy*. By default, this option isn't configured.  <!-- Pending details as to what happens here, does the file elevate, or is it blocked? -->
+  
+  Options include:
+  - Deny all requests - This option blocks the *elevate request* action for files that aren't defined in a Windows elevation rules policy.
+  - Require user confirmation - When confirmation is required you can choose from the same options as found for Windows elevation rules policy. 
+- **Configure what Endpoint Privilege Management reports to Intune**. You can choose to have a device:
+  - Not report any data.
+  - Report only diagnostic data.
+  - Report diagnostic data and details about elevation requests of files that are identified by an elevation rule.
+  - Report diagnostic data and details about all elevations, whether or not the file is identified by an elevation rule. This option also reports on elevation requests made by using *Run as administrator*.
+
+### Windows elevation rules policy
+
+Use profiles for *Windows elevation rules policy* to manage the identification of specific files, and how to elevation requests for those files are handled. Each *Windows elevation rule policy* includes one or more *elevation rules*. It's with elevation rules that you configure details about the file being managed and requirements for it to be elevated.
+
+Each elevation rule:
+
+- **Uses the file name and file extension to identify the file the rule applies to.** The rule also supports optional conditions like a minimum build version, product name, or internal name. Optional conditions aren't used by Intune to identify the file, but can help admins identify which actual file the rule applies to.
+- **Supports use of a certificate to validate the files integrity before its run on a device.** Certificates can be added directly to a rule, or by using a reusable settings group. We recommend the use of reusable settings groups as they can be more efficient and simplify a future change to the certificate. For more information, see the next section [Reusable settings groups](#reusable-settings-group).
+- **Supports use of a file hash to validate the file.** A file hash is required unless you use a certificate, in which case the file hash becomes optional.
+- **Configures the files evaluation type.** Evaluation type identifies what happens when an elevation request is made for the file. By default, this option is set to *User confirmed*, which is our recommendation for most managed files.
+  - **User confirmed** (Recommended): A user confirmed elevation always requires the user to click on a confirmation prompt to run the file. There are additional user confirmations you can add. One require users to authenticate using their organization credentials. Another option requires the user to enter a business justification. While the text entered for a justification is up to hte user, EPM can collect and report it when the device is configured to report elevation data as part of its Windows elevation settings policy.
+  - **Automatic** elevation happens invisibly to the user. There's no prompt, and no indication that the file is running in an elevated context. 
+
+    >[!CAUTION]  
+    > We recommend automatic elevation be used sparingly, and only for trusted files that are business critical. Examples include a common printer-driver which users are expected to install, or a productivity app like the setup file for Microsoft Office 365.
+
+### Reusable settings group
+
+Endpoint Privilege Management supports using reusable settings groups to manage the certificates in place of adding that certificate directly to an elevation rule. Like all reusable settings groups for Intune, configurations and changes made to a reusable settings group are automatically passed to the policies that reference the group.
+We recommend using a reusable settings group when you plan to use the same certificate for validating files in multiple elevation rules. This is because use of reusable settings groups is more efficient when you use the same certificate in multiple elevation rules:
+
+- Certificates you add directly to an elevation rule: Each certificate that's added directly to a rule is uploaded as a unique instance by Intune, and that certificate instance is then associated with the file for that rule. Adding the same certificate directly to two separate rules results in it uploading twice. Later, if you must change the certificate, you must edit each individual rule that contains it. This results in Intune uploading the updated certificate a single time for each rule.
+- Certificates you manage through a reusable settings group: Each time a certificate is added to a reusable settings group, Intune uploads the certificate a single time no matter how many elevation rules include that group. That instance of the certificate is then associated with the file from each rule that uses that group. Later, any change to the certificate you make can be made a single time in the reusable settings group. This change results in Intune uploading the updated file a single time, and then applying that change to each elevation rule that references the group.
+
 ## Enable your tenant for Endpoint Privilege Management
 
 Before you can use EPM to create policies and manage file elevations, you must enable support for EPM in your tenant.
