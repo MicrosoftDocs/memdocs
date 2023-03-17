@@ -70,7 +70,7 @@ Does this mean that it’s not worth moving from 4 vCPU to 8 vCPU?  It really de
 If you’d like more help in choosing a Cloud PC size for your users, check out these resources:
 
 - The [Find the right Windows 365 Cloud PC for your business](https://www.microsoft.com/en-us/windows-365/cloud-pc-chooser?) online questionnaire recommends Cloud PC sizes based on a few questions.
-- The [Cloud PC size recommendations (Enterpise)](enterprise/cloud-pc-size-recommendations.md) and [Windows 365 Business sizing options](../business/windows-365-business-sizing.md) articles suggest workloads for various sizes.
+- The [Cloud PC size recommendations (Enterpise)](enterprise/cloud-pc-size-recommendations.md) and [Windows 365 Business sizing options](business/windows-365-business-sizing.md) articles suggest workloads for various sizes.
 - The [Configure your Windows 365 Cloud PC form](https://www.microsoft.com/en-us/windows-365/enterprise/configure?sku=CFQ7TTC0HHS9%2F0012) lets you choose processor, RAM, and storage parameters. You’ll get real-time cost and supported workloads information based on your choices.
 
 ## What if I chose the wrong size for a user’s Cloud PC?
