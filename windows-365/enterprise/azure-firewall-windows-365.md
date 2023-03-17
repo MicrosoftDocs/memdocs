@@ -63,7 +63,7 @@ There are many ways to configure networking within Azure. Here, we use a single 
 - Windows 365 Cloud PCs
 - Internet or Microsoft network
 
-![Example architecture diagram](./media/azure-firewall-windows-365/architecture-diagram.png)
+![Example of a Windows 365 rchitecture diagram using Windows Firewall.](./media/azure-firewall-windows-365/architecture-diagram.png)
 
 The traffic flow in this diagram:
 
@@ -100,3 +100,4 @@ Azure Firewall doesn’t currently handle non-standard ports in an FQDN tag. Win
 <!-- ########################## -->
 ## Next steps
 
+[Learn more about Windows 365 architecture](architecture.md).
