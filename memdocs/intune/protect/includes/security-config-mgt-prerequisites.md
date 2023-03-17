@@ -15,11 +15,11 @@ Review the following sections for requirements for the Security Management for M
 
 When a device onboards to Microsoft Defender for Endpoint:
 
-- The device is surveyed for an existing Endpoint Manager presence, which is a mobile device management (MDM) enrollment to Intune
-- Devices without an Endpoint Manager presence enable the Security Management feature
+- The device is surveyed for an existing Microsoft Intune presence, which is a mobile device management (MDM) enrollment to Intune
+- Devices without an Intune presence enable the Security Management feature
 - A trust is created with Azure Active Directory if one doesn't already exist
-- Azure Active Directory trust is used to communicate with Endpoint Manager (Intune) and retrieve policies
-- Policy retrieve from Endpoint Manager is enforced on the device by Microsoft Defender for Endpoint
+- Azure Active Directory trust is used to communicate with Intune and retrieve policies
+- Policies retrieved from Microsoft Intune is enforced on the device by Microsoft Defender for Endpoint
 
 ### Active Directory requirements
 
@@ -78,7 +78,7 @@ The following diagram is a conceptual representation of the Microsoft Defender f
 1. Devices onboard to Microsoft Defender for Endpoint.
 2. A trust is established between each device and Azure AD. When a device has an existing trust, that is used. When devices haven't registered, a new trust is created.
 3. Devices use their Azure AD Identity to communicate with Intune. This identity enables Microsoft Intune to distribute policies that are targeted to the devices when they check in.
-4. Defender for Endpoint reports the status of the policy back to Endpoint Manager.
+4. Defender for Endpoint reports the status of the policy back to Microsoft Intune.
 
 ## Which solution should I use?
 
@@ -135,7 +135,7 @@ To support Microsoft Defender for Endpoint security configuration management thr
    When you set this option to *On*, all devices in the platform scope in Microsoft Defender for Endpoint that aren't managed by Microsoft Intune will qualify to onboard to Microsoft Defender for Endpoint.
 
 > [!TIP]
-> Users that are delegated the ability to manage endpoint security settings may not have the ability to implement tenant-wide configurations in Endpoint Manager.  Check with your Endpoint Manager administrator for more information on roles and permissions in your organization.
+> Users that are delegated the ability to manage endpoint security settings may not have the ability to implement tenant-wide configurations in Microsoft Intune.  Check with your Intune administrator for more information on roles and permissions in your organization.
 
 ## Onboard devices to Microsoft Defender for Endpoint
 

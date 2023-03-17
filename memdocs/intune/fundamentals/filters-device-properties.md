@@ -213,7 +213,7 @@ You can use the following device properties in your filter rules:
   | **EnterpriseNEval** | Windows 10/11 Enterprise N Evaluation (84) |
   | **EnterpriseS** | Windows 10 Enterprise LTSC (125) |
   | **EnterpriseSEval** | Windows 10 Enterprise LTSC Evaluation (129) |
-  | **EnterpriseSN** | Windows 10 Enterprise LTSC N (162) |
+  | **EnterpriseSN** | Windows 10 Enterprise LTSC N (126) |
   | **Holographic** | Windows 10 Holographic (136) |
   | **IoTUAP** | Windows 10 IoT Core (123) |
   | **IoTUAPCommercial** | Windows 10 IoT Core Commercial (131) |
