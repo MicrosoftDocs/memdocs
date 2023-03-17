@@ -33,7 +33,7 @@ ms.collection:
 
 When you add Microsoft Tunnel for Mobile Application Management (MAM) to your tenant, you can use Microsoft Tunnel VPN Gateway with unenrolled iOS devices to support MAM the following scenarios:
 
-- Provide secure access to on-premises resources using modern authentication, single sign-on (SSO), and conditional access.
+- Provide secure access to on-premises resources using modern authentication, single sign-on (SSO), and Conditional Access.
 - Allow end users to use their personal device to access company on-premises resources. MDM (Mobile Device Management) enrollment isn't required and company data stays protected.
 - Allow organizations to adopt a bring-your-own-device (BYOD) program. BYOD or personal devices reduce the overall total cost of ownership, ensure user privacy, and corporate data remains protected on these devices.
 
@@ -410,12 +410,6 @@ For example, enrolled devices can't have an app like Microsoft Edge that uses MA
 
 **Work around**: To use MAM Tunnel with enrolled devices, ensure, the Defender for Endpoint iOS app does not have an App configuration policy with Microsoft Tunnel settings configured.
 
-### Site Configuration requires DNS hostname
-
-Tunnel site settings for **Public IP address or FQDN** require a publicly resolvable fully qualified domain name. An IP address can't be used in the subject name of the TLS/SSL certificate for the tunnel server.
- 
-**Work around**: Use a certificate that includes a publicly resolvable FQDN in the subject name. Don't use a certificate that includes an IP address in the subject name.
-
 ### Newly created custom app not showing in UX
  
 When you create a custom app configuration policy, the newly added app may not appear in the list of targeted apps or the list of available custom apps. 
@@ -426,11 +420,9 @@ When you create a custom app configuration policy, the newly added app may not a
 2. Select custom apps, add a Bundle or Package ID for iOS, complete the flow, and create the app config policy. 
 3. Edit the basic settings. The newly added bundle ID should appear in the list of targeted custom apps.
 
-### Conditional Access policies might require use of Microsoft Azure Authenticator app
+### Microsoft Azure Authenticator app does not work with Tunnel for MAM iOS Conditional Access  
 
-When you have Conditional Access policies for Microsoft Tunnel Gateway that *Require multifactor authentication* as a *Grant Access* control, devices must use the [Microsoft Authenticator app](/azure/active-directory/authentication/concept-authentication-authenticator-app).
-
-**Work around**: None.
+**Workaround**: If you have a Conditional Access policy for Microsoft Tunnel Gateway that requires multifactor authentication as a Grant Access control, you must implement the "onTokenRequiredWithCallback" method in the Microsoft Tunnel Delegate Class within your Line of Business Applications. 
 
 ### Limitations when using Edge on iOS/iPadOS
 
