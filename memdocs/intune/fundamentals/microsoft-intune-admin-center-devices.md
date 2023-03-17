@@ -34,7 +34,7 @@ ms.collection:
 > [!IMPORTANT]
 > This feature is in public preview. For more information, see [Public preview in Microsoft Intune](../fundamentals/public-preview.md).  
 
-Enroll devices, manage profiles and policies, and access monitoring and reports all in one place in the **Devices** area in Microsoft Intune. From the **Devices** area, you can:  
+Enroll devices, manage profiles and policies, and access monitoring and reports all in one place in the **Devices** area in Microsoft Intune. From the Devices area, you can:  
 
 * Get at-a-glance actionable information and key metrics about your devices.  
 * Access workloads for device onboarding, management, and monitoring.      
