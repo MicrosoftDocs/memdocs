@@ -34,7 +34,7 @@ ms.collection:
 > [!IMPORTANT]
 > This feature is in public preview. For more information, see [Public preview in Microsoft Intune](../fundamentals/public-preview.md).  
 
-Enroll devices, manage profiles and policies, and access monitoring and reports all in one place in the **Devices** area in Microsoft Intune. From the Devices area, you can:  
+Enroll devices, manage profiles and policies, and access monitoring and reports all in one place in Microsoft Intune. Now in public preview, you can go to the **Devices** area in the Microsoft Intune admin center to:   
 
 * Get at-a-glance actionable information and key metrics about your devices.  
 * Access workloads for device onboarding, management, and monitoring.      
@@ -42,15 +42,15 @@ Enroll devices, manage profiles and policies, and access monitoring and reports 
 * Manage devices by OS platform. 
 * Access, apply, and view filters at the top of every list view.  
 
-This article describes how to opt in to the public preview, and also describes these updated areas: 
+This article describes how to opt in to the public preview and describes these updated areas:    
 
-* Devices > Overview
-* Devices > All devices  
-* Devices > Configuration
-* Devices > Compliance 
-* Devices > Windows 10 and later updates  
-* Devices > Apple updates  
-* Devices > Enrollment  
+* **Devices** > **Overview**
+* **Devices** > **All devices**  
+* **Devices** > **Configuration**
+* **Devices** > **Compliance** 
+* **Devices** > **Windows 10 and later updates**  
+* **Devices** > **Apple updates**  
+* **Devices** > **Enrollment**  
 
 ## Opt in to public preview   
 You can switch back and forth between the current UI and public preview without impacting other admins in your tenant.  
