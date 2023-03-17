@@ -42,9 +42,9 @@ Company Portal sends one message per password requirement, so you may receive mo
 
 The following resources describe how to update the device password, by OS platform. For steps specific to your device, refer to the device manufacturer's website.  
 
-- [Set Windows device password](https://support.microsoft.com/windows/windows-sign-in-options-and-account-protection-7b34d4cf-794f-f6bd-ddcc-e73cdf1a6fbf)(Opens Microsoft Support docs) 
-- [Set iOS device passcode](https://support.apple.com/HT204060#:~:text=%20Set%20up%20a%20passcode%20%201%20On,to%20confirm%20it%20and%20activate%20it.%20More%20)(opens Apple Support docs)  
-- [Set screen lock on Android device](https://support.google.com/android/answer/9079129)(opens Android Help docs)
+- [Set Windows device password](https://support.microsoft.com/windows/windows-sign-in-options-and-account-protection-7b34d4cf-794f-f6bd-ddcc-e73cdf1a6fbf) (opens Microsoft Support docs) 
+- [Set iOS device passcode](https://support.apple.com/HT204060#:~:text=%20Set%20up%20a%20passcode%20%201%20On,to%20confirm%20it%20and%20activate%20it.%20More%20) (opens Apple Support docs)  
+- [Set screen lock on Android device](https://support.google.com/android/answer/9079129) (opens Android Help docs)
 
 
 > [!IMPORTANT]
