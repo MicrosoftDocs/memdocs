@@ -33,18 +33,18 @@ ms.collection:
 
 This article lists and describes recommendations for Intune grouping, targeting, and filtering for your policies. The goal is to help you make architecture and design decisions for your Intune deployments.
 
-These performance recommendations and their implementation can be different and depend on your own environment and other factors, including manageability and simplicity.
+These performance recommendations and their implementation can be different and depend on your own environment & other factors, including manageability and simplicity.
 
 In this article:
 
-- Get a brief overview of Intune grouping and targeting concepts
+- Get an overview of Intune grouping and targeting concepts
 - Get some performance recommendations
 
-For more information and overview of filters, go to [Use filters when assigning your apps, policies, and profiles in Microsoft Intune](filters.md).
+For more information and an overview of filters, go to [Use filters when assigning your apps, policies, and profiles in Microsoft Intune](filters.md).
 
 ## Overview of Intune grouping and targeting concepts
 
-Before getting into the recommendations, let's briefly review the grouping, targeting, and filtering features available in Intune.
+Before getting into the recommendations, let's review the grouping, targeting, and filtering features available in Intune.
 
 ### Azure Active Directory groups
 
@@ -61,15 +61,17 @@ Azure AD groups are an important part of Intune because these groups are:
 
 The **All users** and **All devices** assignments are Intune “virtual” groups. These virtual groups are available by default in all Intune tenants and don’t come with any management overhead. For example, you don’t need to create or adjust any Azure AD rules to keep their members populated.
 
-:::image type="content" source="./media/filters-performance-recommendations/filters-azuread-virtual-groups.png" alt-text="Screenshot that shows the Intune admin center, the Azure AD groups, virtual groups, and some filter properties in Microsoft Intune.":::
-
 The **All users** and **All devices** groups are also highly scalable and optimized, mainly because they don't need to be synced from Azure AD in the same way that other groups do.
 
 ### Filters
 
 After the app or policy is assigned to a non-virtual group, you can use [filters](filters.md) to narrow the assignment scope of these apps and policies to specific user or device groups.
 
-Your filter filters devices in (or out) of that assignment based on device properties. Filtering is high performance, low latency applicability evaluation at device check-in without any need to precompute.
+Your filter filters devices in (or out) of that assignment based on device properties. 
+
+:::image type="content" source="./media/filters-performance-recommendations/filters-azuread-virtual-groups.png" alt-text="Screenshot that shows the Intune admin center, the Azure AD groups, virtual groups, and some filter properties in Microsoft Intune.":::
+
+Filtering is high performance, low latency applicability evaluation at device check-in without any need to precompute.
 
 ## Performance recommendations
 
@@ -85,10 +87,10 @@ These recommendations focus on improving performance and reducing latency in wor
 
 If you assign Intune workloads to large Azure AD groups that have many users or devices, then synchronization backlogs can happen in your Intune environment. This backlog impacts policy and app deployments, which take longer to reach managed devices.
 
-The **All users** and **All devices** groups are Intune-only grouping objects. There isn't a continuous sync between Azure AD and Intune. Similarly, filters are Intune-only design rules that evaluate devices for policy assignment dynamically during a check-in with the Intune service.
+The built-in **All users** and **All devices** groups are Intune-only grouping objects. There isn't a continuous sync between Azure AD and Intune. Similarly, filters are Intune-only design rules that evaluate devices for policy assignment dynamically during a check-in with the Intune service.
 
 > [!NOTE]
-> For information on policy refresh intervals, go to [Intune Policy refresh intervals](../configuration/device-profile-troubleshoot.md#policy-refresh-intervals).
+> For information on Intune check-in policy refresh intervals, go to [Intune Policy refresh intervals](../configuration/device-profile-troubleshoot.md#policy-refresh-intervals).
 
 When you use several large groups, like “All windows devices” and “all iOS devices”, instead of the virtual groups with filters, then it can:
 
@@ -136,7 +138,7 @@ Don't target the parent group and its child groups in a policy deployment that i
 
 This recommendation doesn’t mean you need to break-up child groups 2 and 3 to enforce a 30,000 maximum per day. The example just highlights a gradual rate of processing new groups through the grouping and targeting system.
 
-This recommendation also applies when groups are “unnested”.
+This recommendation also applies when groups are “unnested”. For more information on nested groups, go to [Manage Azure AD groups and group membership](/azure/active-directory/fundamentals/how-to-manage-groups).
 
 ### Use filters to include and exclude
 

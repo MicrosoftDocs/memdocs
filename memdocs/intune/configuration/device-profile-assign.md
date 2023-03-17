@@ -74,7 +74,6 @@ Be sure you have the correct role to assign policies and profiles. For more info
 
 - Use **[Filters](../fundamentals/filters.md)** to assign a policy based on rules you create. You can create filters for:
 
-  - App protection policies
   - App configuration policies
   - Compliance policies
   - Device configuration profiles
