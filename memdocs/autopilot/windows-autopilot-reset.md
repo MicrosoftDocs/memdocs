@@ -27,6 +27,7 @@ ms.topic: how-to
 
 - Windows 11
 - Windows 10
+
 Windows Autopilot Reset takes the device back to a business-ready state, allowing the next user to sign in and get productive quickly and simply. Specifically, Windows Autopilot Reset:
 
 - Removes personal files, apps, and settings.
@@ -120,10 +121,6 @@ A local Windows Autopilot Reset is a two-step process: trigger it and then authe
  Once the local Autopilot Reset is triggered, the reset process starts. Once provisioning is complete, the device is again ready for use.
 
 ## Reset devices with remote Windows Autopilot Reset
-
-**Applies to:**
-
-- Windows 10, version 1809 or later
 
 You can use an MDM service such a Microsoft Intune to start the remote Windows Autopilot reset process. Resetting in this way avoids the need for IT staff to visit each machine to start the process.
 
