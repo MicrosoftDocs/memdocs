@@ -50,7 +50,8 @@ Before getting into the recommendations, let's review the grouping, targeting, a
 
 Intune almost exclusively uses Azure Active Directory (Azure AD) groups for grouping and targeting. When you select **Groups** in the Microsoft Intune admin center, you're looking at Azure AD groups.
 
-:::image type="content" source="./media/filters-performance-recommendations/admin-center-all-groups.png" alt-text="Screenshot that shows the Intune admin center, groups, and all groups in Microsoft Intune.":::
+:::image type="content" source="./media/filters-performance-recommendations/admin-center-all-groups.png" alt-text="Screenshot that shows the Intune admin center, groups, and all groups in Microsoft Intune." lightbox="./media/filters-performance-recommendations/admin-center-all-groups.png":::
+
 
 Azure AD groups are an important part of Intune because these groups are:
 
@@ -69,7 +70,7 @@ After the app or policy is assigned to a non-virtual group, you can use [filters
 
 Your filter filters devices in (or out) of that assignment based on device properties. 
 
-:::image type="content" source="./media/filters-performance-recommendations/filters-azuread-virtual-groups.png" alt-text="Screenshot that shows the Intune admin center, the Azure AD groups, virtual groups, and some filter properties in Microsoft Intune.":::
+:::image type="content" source="./media/filters-performance-recommendations/filters-azuread-virtual-groups.png" alt-text="Screenshot that shows the Intune admin center, the Azure AD groups, virtual groups, and some filter properties in Microsoft Intune."lightbox="./media/filters-performance-recommendations/filters-azuread-virtual-groups.png":::
 
 Filtering is high performance, low latency applicability evaluation at device check-in without any need to precompute.
 
