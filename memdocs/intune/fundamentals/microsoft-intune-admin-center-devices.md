@@ -142,7 +142,7 @@ Go to **Devices** > **Compliance** to monitor and manage device compliance polic
 For more information about device compliance, see [Compliance overview](../protect/device-compliance-get-started.md).  
 
 ### Windows 10 and later updates
-Go to **Devices** > **Windows 10 and later updates** to monitor and manage software update policies for devices running Windows 10 or Windows 11. This workload is made up of the following subworkloads:  
+Go to **Devices** > **Windows 10 and later updates** to monitor and manage software update policies for devices running Windows 10 or Windows 11. Within this area, you can access the following subworkloads:  
 
 * **Monitor**: Access key metrics and active issues associated with Windows software update policies.             
 * **Update rings**: Create and manage update ring policies for Windows 10 and Windows 11 updates.    
@@ -153,7 +153,7 @@ Go to **Devices** > **Windows 10 and later updates** to monitor and manage softw
 For more information about Windows updates, see [Manage Windows 10 and Windows 11 software updates in Intune](../protect/windows-update-for-business-configure.md).   
 
 ### Apple updates   
-Go to **Devices** > **Apple updates** to monitor and manage software update policies for Apple devices. This workload is made up of the following subworkloads:  
+Go to **Devices** > **Apple updates** to monitor and manage software update policies for Apple devices. Within this area, you can access the following subworkloads:  
 
 * **Monitor**: Access key metrics and active issues associated with Apple update policies.            
 * **iOS/iPadOS updates**: Create and manage policies for iOS/iPadOS updates.      
