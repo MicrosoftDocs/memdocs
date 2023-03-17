@@ -61,8 +61,6 @@ items:
         href: /mem/intune/fundamentals/role-based-access-control?context=/windows-365/context/pr-context
       - name: Cloud PC sizes
         href: cloud-pc-size-recommendations.md
-      - name: Cloud PC size relative performance
-        href: relative-cloud-pc-performance.md
     - name: Deploy
       items:
       - name: Deployment overview
