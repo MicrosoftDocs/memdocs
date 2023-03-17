@@ -33,7 +33,7 @@ ms.collection:
 > [!NOTE]  
 > This capability is in public preview, and free to try and use. After public preview, it will be available as an Intune add-on. For more information, see [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md).
 
-With Endpoint Privilege Management (EPM), your organization’s users can run as nonadministrative users, yet complete tasks that require an elevation of user rights, like installing Office 365, updating device drivers, and running Task Manager or Windows diagnostics. Through integration with Microsoft Intune, EPM supports your zero-trust journey by helping your organization achieve a broad least-privilege user base that doesn't face added barriers to worker productivity.
+Microsoft Intune Endpoint Privilege Management (EPM) allows your organization’s users to run as a standard user (without administrator rights) and complete tasks that require an elevated privileges. Tasks that commonly require administrative privileges are application installs (such as Microsoft 365 Applications), updating device drivers, and running certain Windows diagnostics. Endpoint Privilege Management supports your zero-trust journey by helping your organization achieve a broad user base running with least privilege, while allowing users to still run tasks allowed by your organization to remain productive.
 
 To use EPM, you deploy *Windows elevation settings* and *Windows elevation rule* policies. Elevation settings policies define a default behavior for a device that applies to elevation requests for files not managed by a dedicated rule. Elevation rule policies contain one or more elevation rules, with each rule identifying a file that can run in an elevated context by nonadministrative users. Your elevation rules:
 
