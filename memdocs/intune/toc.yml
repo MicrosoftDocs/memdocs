@@ -956,7 +956,7 @@ items:
             href: ./configuration/custom-settings-android-for-work.md
           - name: Device restrictions - organization-owned devices
             href: ./configuration/device-restrictions-android-for-work.md
-          - name: Device restrictions - personally-owned devices
+          - name: Device restrictions - personally owned devices
             href: ./configuration/device-restrictions-android-enterprise-personal.md
           - name: Email
             href: ./configuration/email-settings-android-enterprise.md
