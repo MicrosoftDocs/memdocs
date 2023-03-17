@@ -1,6 +1,6 @@
 ---
-title: Enable Local Windows Autopilot reset in Intune
-description: Enable Local Windows Autopilot reset in Intune.
+title: Local Windows Autopilot reset in Intune
+description: Local Windows Autopilot reset in Intune.
 ms.prod: windows-client
 ms.localizationpriority: medium
 author: frankroj
@@ -17,8 +17,28 @@ ms.technology: itpro-deploy
 
 # Enable local Windows Autopilot reset
 
+## Reset devices with local Windows Autopilot Reset
+
+The Intune Service Administrator role is required for this task. For more information, see [Add users and grant administrative permission to Intune](/intune/users-add).
+
+IT admins can use a local Windows Autopilot Reset to:
+
+- Quickly remove personal files, apps, and settings.
+- Reset Windows devices from the lock screen.
+- Apply original settings and management enrollment (Azure Active Directory and device management)
+The device is then ready to use. With a local Autopilot Reset, devices are returned to a fully configured or known IT-approved state.
+
+To enable local Autopilot Reset in Windows 10:
+
+1. [Enable the policy for the feature](#enable-local-windows-autopilot-reset)
+2. [Trigger a reset for each device](#trigger-local-windows-autopilot-reset)
 
 ## Enable local Windows Autopilot reset in Intune
+
+To enable a local Windows Autopilot Reset, the **DisableAutomaticReDeploymentCredentials** policy must be configured. This policy is documented in the [Policy CSP](/windows/client-management/mdm/policy-csp-credentialproviders), **CredentialProviders/DisableAutomaticReDeploymentCredentials**. By default, local Windows Autopilot Reset is disabled. This default ensures that a local Autopilot Reset isn't triggered by accident.
+
+
+
 
 To create a configuration profile that enables local Windows Autopilot reset, follow the below steps:
 
@@ -73,6 +93,29 @@ To create a configuration profile that enables local Windows Autopilot reset, fo
 1. In the **Applicability Rules** page, select **Next**. For the purpose of this tutorial, applicability rules is being skipped. However if applicability rules are needed, do so at this screen. For more information about scope tags, see [Applicability rules](/mem/intune/configuration/device-profile-create#applicability-rules).
 
 1. In the **Review + Create** page, review and verify that all of the settings are set as desired, and then choose **Create** to create the domain join profile.
+
+
+
+### Trigger local Windows Autopilot Reset
+
+A local Windows Autopilot Reset is a two-step process: trigger it and then authenticate. Once you've done these two steps, you can let the process execute and once it is done, the device is again ready for use.
+
+**To trigger a local Autopilot Reset:**
+
+1. From the Windows device lock screen, enter the keystroke: **CTRL + ![Windows key](images/windows_glyph.png) + R**.
+
+    ![Enter CTRL+Windows key+R on the Windows lock screen](images/autopilot-reset-lockscreen.png)
+
+    These keystrokes will open up a custom login screen for the local Autopilot Reset. The screen serves two purposes:
+    1. Confirm/verify that the end user has the right to trigger Local Autopilot Reset
+    2. Notify the user in case a provisioning package, created using Windows Configuration Designer, will be used as part of the process.
+
+        ![Custom login screen for local Autopilot Reset](images/autopilot-reset-customlogin.png)
+
+2. Sign in with the admin account credentials. If you created a provisioning package, plug in the USB drive and trigger the local Autopilot Reset.
+
+ Once the local Autopilot Reset is triggered, the reset process starts. Once provisioning is complete, the device is again ready for use.
+
 
 ## More information
 
