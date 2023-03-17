@@ -210,7 +210,9 @@ items:
                   href: ./apps/store-apps-android.md
                 - name: iOS store apps
                   href: ./apps/store-apps-ios.md
-                - name: Microsoft store apps
+                - name: Microsoft store apps (new)
+                  href: ./apps/store-apps-microsoft.md
+                - name: Microsoft store apps (legacy)
                   href: ./apps/store-apps-windows.md
                 - name: Microsoft Store for Business apps
                   href: ./apps/windows-store-for-business.md
@@ -1088,6 +1090,8 @@ items:
           href: ./fundamentals/filters-supported-workloads.md
         - name: Reporting and conflict resolution
           href: ./fundamentals/filters-reports-troubleshoot.md
+        - name: Performance recommendations
+          href: ./fundamentals/filters-performance-recommendations.md
       - name: Use policy sets to group policies together
         href: ./fundamentals/policy-sets.md
       - name: Troubleshoot policies and profiles
@@ -1490,10 +1494,21 @@ items:
         href: ./developer/app-wrapper-prepare-android.md
         displayName: dex
       - name: Intune App SDK for Android
-        href: ./developer/app-sdk-android.md
         items:
-        - name: Intune App SDK for Android testing guide
-          href: ./developer/app-sdk-android-testing-guide.md        
+        - name: Plan the Integration
+          href: ./developer/app-sdk-android-phase1.md
+        - name: Understand the MSAL Prerequisite
+          href: ./developer/app-sdk-android-phase2.md
+        - name: Get started with MAM
+          href: ./developer/app-sdk-android-phase3.md
+        - name: MAM integration essentials
+          href: ./developer/app-sdk-android-phase4.md
+        - name: Multi-Identity
+          href: ./developer/app-sdk-android-phase5.md
+        - name: App configuration
+          href: ./developer/app-sdk-android-phase6.md
+        - name: App participation features
+          href: ./developer/app-sdk-android-phase7.md
       - name: Intune App SDK Xamarin Bindings
         href: ./developer/app-sdk-xamarin.md
     - name: Use the Intune Data Warehouse

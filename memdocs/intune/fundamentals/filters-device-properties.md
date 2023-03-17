@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/24/2023
+ms.date: 03/14/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -213,7 +213,7 @@ You can use the following device properties in your filter rules:
   | **EnterpriseNEval** | Windows 10/11 Enterprise N Evaluation (84) |
   | **EnterpriseS** | Windows 10 Enterprise LTSC (125) |
   | **EnterpriseSEval** | Windows 10 Enterprise LTSC Evaluation (129) |
-  | **EnterpriseSN** | Windows 10 Enterprise LTSC N (162) |
+  | **EnterpriseSN** | Windows 10 Enterprise LTSC N (126) |
   | **Holographic** | Windows 10 Holographic (136) |
   | **IoTUAP** | Windows 10 IoT Core (123) |
   | **IoTUAPCommercial** | Windows 10 IoT Core Commercial (131) |
@@ -301,4 +301,5 @@ You can use the following operators in the rule syntax editor:
 
 - [Use filters when assigning your apps, policies, and profiles](filters.md)
 - [Supported workloads when creating filters](filters-supported-workloads.md)
+- [Filter performance recommendations](filters-performance-recommendations.md)
 - [Filter reports and troubleshooting](filters-reports-troubleshoot.md)
