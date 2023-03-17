@@ -91,10 +91,6 @@ Endpoint privilege management has the following operating system requirements:
 > [!IMPORTANT]
 > Only devices with a Hybrid Azure Active Directory join or Azure Active Directory join are supported. Workplace join is not a supported trust type.
 
-## Architecture
-
-*Pending*
-
 ## Role-based access controls for Endpoint Privilege Management
 
 To manage Endpoint Privilege Management, your account must be assigned an Intune role-based access control (RBAC) role that includes the following permission with sufficient rights to complete the desired task:
