@@ -101,7 +101,7 @@ Microsoft Tunnel for MAM iOS uses the following Intune policies and profiles:
 Create an app configuration policy for apps that use Tunnel for MAM. This policy configures an app to use a specific Microsoft Tunnel Gateway Site, proxy, and trusted certificate(s) for Edge and line-of-business (LOB) apps. These resources are used when connecting to on-premises resources.
 
 > [!NOTE]  
-> When your tenant uses Active Directory Federation Service (AD FS), only line-of-business are supported. Microsoft Tunnel for iOS does not support Microsoft Edge in an AD FS environment.
+> For Federated Azure active directory tenants, only line-of-business are supported. Microsoft Tunnel for iOS does not support Microsoft Edge for Federated Azure active directory tenants.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Apps** > **App Configuration polices** > **Add** > **Managed Apps**.
 
@@ -127,7 +127,7 @@ Create an app configuration policy for apps that use Tunnel for MAM. This policy
    1. Next, select **Select a Site**, and choose one of your Microsoft Tunnel Gateway sites. If you haven’t configured a Tunnel Gateway site, see [Configure Microsoft Tunnel](../protect/microsoft-tunnel-configure.md).
    1. If your app requires a trusted certificate, select **Root Certificate**, and then select a trusted certificate profile to use. For more information, see [Configure a trusted certificate profile](#configure-a-trusted-certificate-profile) later in this article.
 
-   If your tenant uses AD FS, you must make additional configurations to ensure that your applications can authenticate and access the required resources. This configuration will bypass the URL of the publicly available secure token service:
+   For Federated Azure active directory tenants, the following configurations are required to ensure that your applications can authenticate and access the required resources. This configuration will bypass the URL of the publicly available secure token service:
 
    1. On the *Settings* tab, expand *General configuration settings* and then configure the *Name* and *Value* pair as follows to set up the Edge profile for Tunnel:
 
