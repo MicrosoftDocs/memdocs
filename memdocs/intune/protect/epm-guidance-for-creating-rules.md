@@ -31,8 +31,7 @@ ms.collection:
 
 <!-- [!INCLUDE [intune-add-on-note](../includes/intune-add-on-note.md)] -->
 > [!NOTE]  
-> This capability is in public preview, and free to try and use. After public preview, it will be available as an Intune add-on. For more information, see [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md).
-
+> This capability is in public preview and available to use without a license. After public preview, it will be available as an Intune add-on. For more information, see [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md).
 
 ## Next steps
 [Learn about Endpoint Privilege Management](../protect/epm-overview.md)
