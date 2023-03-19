@@ -1,8 +1,8 @@
 ---
 title: What's new in version 2303
 titleSuffix: Configuration Manager
-description: Get details about changes and new capabilities introduced in version 2211 of Configuration Manager current branch.
-ms.date: 12/05/2022
+description: Get details about changes and new capabilities introduced in version 2303 of Configuration Manager current branch.
+ms.date: 31/03/2023
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -18,9 +18,9 @@ ms.reviewer: mstewart,aaroncz
 
 *Applies to: Configuration Manager (current branch)*
 
-Update 2303 for Configuration Manager current branch is available as an in-console update. Apply this update on sites that run version 2111 or later. <!-- baseline only statement: When installing a new site, this version of Configuration Manager will also be available as a [baseline version](../../servers/manage/updates.md#bkmk_note1) soon after global availability of the in-console update.--> This article summarizes the changes and new features in Configuration Manager, version 2211.
+Update 2303 for Configuration Manager current branch is available as an in-console update. Apply this update on sites that run version 2111 or later. <!-- baseline only statement: When installing a new site, this version of Configuration Manager will also be available as a [baseline version](../../servers/manage/updates.md#bkmk_note1) soon after global availability of the in-console update.--> This article summarizes the changes and new features in Configuration Manager, version 2303.
 
-Always review the latest checklist for installing this update. For more information, see [Checklist for installing update 2211](../../servers/manage/checklist-for-installing-update-2211.md). After you update a site, also review the [Post-update checklist](../../servers/manage/checklist-for-installing-update-2211.md#post-update-checklist).
+Always review the latest checklist for installing this update. For more information, see [Checklist for installing update 2211](../../servers/manage/checklist-for-installing-update-2303.md). After you update a site, also review the [Post-update checklist](../../servers/manage/checklist-for-installing-update-2211.md#post-update-checklist).
 
 To take full advantage of new Configuration Manager features, after you update the site, also update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.
 
@@ -135,11 +135,11 @@ The following additional hotfixes are available to address specific issues:
 
 ## Next steps
 
-<!-- At this time, version 2211 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](../../servers/manage/checklist-for-installing-update-2211.md#early-update-ring).-->
+At this time, version 2211 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](../../servers/manage/checklist-for-installing-update-2303.md#early-update-ring).
 
-As of December 19, 2022, version 2211 is globally available for all customers to install.
+<!-- As of December 19, 2022, version 2211 is globally available for all customers to install.
 
-When you're ready to install this version, see [Installing updates for Configuration Manager](../../servers/manage/updates.md) and [Checklist for installing update 2211](../../servers/manage/checklist-for-installing-update-2211.md).
+When you're ready to install this version, see [Installing updates for Configuration Manager](../../servers/manage/updates.md) and [Checklist for installing update 2211](../../servers/manage/checklist-for-installing-update-2211.md).).-->
 
 > [!TIP]
 > To install a new site, use a baseline version of Configuration Manager.
