@@ -57,12 +57,11 @@ The following supported versions of Configuration Manager are currently availabl
 
 | Version | Availability date | [Support end date](current-branch-versions-supported.md) | Baseline | In-console update |
 |-------------|-----------|------------|--------------|------------------------|
-<!--| [**2303**](../../plan-design/changes/whats-new-in-version-2311.md)<br /> (5.00.9099) | April 1, 2023 | October 1, 2024 | Yes<sup>[Note 1](#bkmk_note1)</sup> | Yes |-->
+[**2303**](../../plan-design/changes/whats-new-in-version-2211.md)<br /> (5.00.9104) | April 1, 2023 | October 1, 2024 | Yes<sup>[Note 1](#bkmk_note1)</sup> | Yes |
 | [**2211**](../../plan-design/changes/whats-new-in-version-2211.md)<br /> (5.00.9096) | December 5, 2022 | June 5, 2024 | No | Yes |
 | [**2207**](../../plan-design/changes/whats-new-in-version-2207.md)<br /> (5.00.9088) | August 12, 2022 | February 12, 2024 | No | Yes |
 | [**2203**](../../plan-design/changes/whats-new-in-version-2203.md)<br /> (5.00.9078) | April 8, 2022 | October 8, 2023 | Yes<sup>[Note 1](#bkmk_note1)</sup> | Yes |
 | [**2111**](../../plan-design/changes/whats-new-in-version-2111.md)<br /> (5.00.9068) | December 1, 2021 | June 1, 2023 | No | Yes |
-
 
 > [!NOTE]
 > The **Availability date** in this table is when the [early update ring](checklist-for-installing-update-2303.md#early-update-ring) was released. Baseline media will be available on the VLSC soon after the update is globally available.
@@ -87,6 +86,7 @@ The following table lists historical versions of Configuration Manager current b
 | Version                          | Availability date | Support end date   | Baseline | In-console update |
 |----------------------------------|-------------------|--------------------|----------|-------------------|
 | **2107** <br /> (5.00.9058)      | August 2, 2021    | February 2, 2023   | No       | Yes               |
+| **2103** <br /> (5.00.9049)      | April 19, 2021    | october 19, 2022   | Yes      | Yes               |
 | **2010** <br /> (5.00.9040)      | November 30, 2020 | May 30, 2022       | No       | Yes               |
 | **2006** <br /> (5.00.9012)      | August 11, 2020   | February 11, 2022  | No       | Yes               |
 | **2002** <br /> (5.00.8968)      | April 1, 2020     | October 1, 2021    | Yes      | Yes               |
