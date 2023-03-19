@@ -2,7 +2,7 @@
 title: Checklist for 2303
 titleSuffix: Configuration Manager
 description: Learn about actions to take before updating to Configuration Manager version 2303.
-ms.date: 12/05/2022
+ms.date: 03/28/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -63,7 +63,7 @@ The first time you use a Configuration Manager console after the update has fini
 
 <!-- SCCMDocs#1397 -->
 
-<!-- As of December 19, 2022, version 2303 is globally available for all customers to install. If you previously opted in to the early update ring, watch for an update to this current branch version.-->
+<!-- As of April 10, 2023, version 2303 is globally available for all customers to install. If you previously opted in to the early update ring, watch for an update to this current branch version.-->
 
 At this time, version 2303 is released for the early update ring. To install this update, you need to opt in. The following PowerShell script adds your hierarchy or standalone primary site to the early update ring for version 2303:
 

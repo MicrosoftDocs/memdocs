@@ -2,7 +2,7 @@
 title: Synchronize collection members to Azure AD groups
 titleSuffix: Configuration Manager
 description: Synchronize collection members to Azure AD groups.
-ms.date: 11/30/2022
+ms.date: 03/28/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: how-to
@@ -60,6 +60,10 @@ Example synchronization scenario:
 1. Make sure that **Membership type** is **Assigned**.
 
 1. Select **Owners**, then add the identity that will create the synchronization relationship in Configuration Manager.
+
+> [!TIP]
+> The Server App (Service Principle) of Azure AD tenant will be the owner for the created Azure AD group.
+> :::image type="content" source="media/collection-aad-group-sync-owner.png" alt-text="Screenshot of Owner for Azure AD Group." lightbox="media/collection-aad-group-sync-owner.png":::
 
 1. Select **Create** to finish creating the Azure AD group.
 
@@ -153,8 +157,6 @@ Optional Columns:
 
 - Last Sync Time - Time of last sync cycle
  
-:::image type="content" source="media/collection-aad-group-sync.png" alt-text="Screenshot of Collections Cloud Sync Status." lightbox="media/collection-aad-group-sync.png":::
-
 1. On clicking each collection, you can view collection member status in the bottom tab.
 
 1. The members are categorized based on sync status - Success, Failed, In Progress.

@@ -2,7 +2,7 @@
 title: Prepare for in-console updates
 titleSuffix: Configuration Manager
 description: Prepare to install updates to Configuration Manager from the Microsoft cloud
-ms.date: 04/01/2023
+ms.date: 03/28/2023
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to

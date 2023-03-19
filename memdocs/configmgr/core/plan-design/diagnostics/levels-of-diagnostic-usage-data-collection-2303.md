@@ -2,7 +2,7 @@
 title: Diagnostic and usage data for 2303
 titleSuffix: Configuration Manager
 description: Learn about the specific data that Configuration Manager collects at each level in version 2303.
-ms.date: 04/01/2023
+ms.date: 03/28/2023
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
@@ -136,6 +136,8 @@ For Configuration Manager version 2303, this level includes the following data:
 - SQL Server Always On availability group replica information, usage, and health status
 
 ### Site infrastructure (Level 1)
+
+- ***[New]*** Count of Azure Active Directory users and Windows users requesting in Admin Service
 
 - Basic Configuration Manager site hierarchy data: site list, type, version, status, client count, time zone, and health status
 

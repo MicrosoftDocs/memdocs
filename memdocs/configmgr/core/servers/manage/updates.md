@@ -2,7 +2,7 @@
 title: Updates and servicing
 titleSuffix: Configuration Manager
 description: Learn about the in-console service method called Updates and Servicing that makes it easy to locate and install recommended updates.
-ms.date: 04/01/2023
+ms.date: 03/28/2023
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -57,7 +57,7 @@ The following supported versions of Configuration Manager are currently availabl
 
 | Version | Availability date | [Support end date](current-branch-versions-supported.md) | Baseline | In-console update |
 |-------------|-----------|------------|--------------|------------------------|
-[**2303**](../../plan-design/changes/whats-new-in-version-2211.md)<br /> (5.00.9104) | April 1, 2023 | October 1, 2024 | Yes<sup>[Note 1](#bkmk_note1)</sup> | Yes |
+[**2303**](../../plan-design/changes/whats-new-in-version-2211.md)<br /> (5.00.9104) | March 28, 2023 | September 28, 2024 | Yes<sup>[Note 1](#bkmk_note1)</sup> | Yes |
 | [**2211**](../../plan-design/changes/whats-new-in-version-2211.md)<br /> (5.00.9096) | December 5, 2022 | June 5, 2024 | No | Yes |
 | [**2207**](../../plan-design/changes/whats-new-in-version-2207.md)<br /> (5.00.9088) | August 12, 2022 | February 12, 2024 | No | Yes |
 | [**2203**](../../plan-design/changes/whats-new-in-version-2203.md)<br /> (5.00.9078) | April 8, 2022 | October 8, 2023 | Yes<sup>[Note 1](#bkmk_note1)</sup> | Yes |
