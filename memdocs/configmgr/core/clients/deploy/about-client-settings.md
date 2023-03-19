@@ -2,12 +2,12 @@
 title: Client settings
 titleSuffix: Configuration Manager
 description: Learn about the default and custom settings for controlling client behaviors
-ms.date: 02/16/2022
+ms.date: 03/28/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: reference
-author: sheetg09
-ms.author: sheetg
+author: baladelli
+ms.author: baladell
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
@@ -966,6 +966,15 @@ Use this setting to configure [Dynamic Update for Windows](https://techcommunity
 - **Yes** - Enables Dynamic Update.
 - **No** - Disables Dynamic Update.
 
+### <a name="bkmk_fserv"></a>Enable features introduced via servicing are off by default.
+
+<!--16834520-->
+To learn more about the settings: “Enable features introduced via servicing are off by default”, please read this [blog](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/commercial-control-for-continuous-innovation/ba-p/3737575). The post describes the Commercial control for continuous innovation in Windows. The setting for this policy is now integrated with the Configuration Manager 2303. More information on the Commercial control timeline and versions of Windows 11 supported by the setting can be found in the blog.
+
+- **Not Configured** - The default value, then features that are shipped via a monthly quality update (servicing) will remain off until the feature update that includes these features is installed.
+  - Enable features introduced via servicing are off by default on all supported versions of Windows 11 22621.1344 or later.
+- **Yes** - Enables Feature Update, then all features available in the latest monthly quality update installed will be on.
+- **No** - Disables Feature Update, then features that are shipped via a monthly quality update (servicing) will remain off until the feature update that includes these features is installed.
 
 ## State Messaging
 
