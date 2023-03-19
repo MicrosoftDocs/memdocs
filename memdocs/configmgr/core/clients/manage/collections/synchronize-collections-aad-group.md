@@ -89,6 +89,8 @@ Example synchronization scenario:
 
 Wait about five to seven minutes before you can verify the group memberships in the Azure portal. To start a full synchronization, select the collection, and then in the ribbon select **Synchronize Membership**.
 
+:::image type="content" source="media/3607475-sync-collection-to-azuread.png" alt-text="Screenshot of Synchronize collections to Azure AD." lightbox="media/3607475-sync-collection-to-azuread.png":::
+
 ## <a name="bkmk_powershell"></a> Use PowerShell
 
 You can use PowerShell to synchronize collections. For more information, see the following cmdlet article:
@@ -153,6 +155,14 @@ Optional Columns:
  
 :::image type="content" source="media/collection-aad-group-sync.png" alt-text="Screenshot of Collections Cloud Sync Status." lightbox="media/collection-aad-group-sync.png":::
 
+1. On clicking each collection, you can view collection member status in the bottom tab.
+
+1. The members are categorized based on sync status - Success, Failed, In Progress.
+
+1. On clicking Failed tab, you can find the reason for failure across each member.
+
+:::image type="content" source="media/collection-aad-group-sync.png" alt-text="Screenshot of Collections Cloud Sync Status." lightbox="media/collection-aad-group-sync.png":::
+
 ## Verify the Azure AD group membership
 
 1. Go to the [Azure portal](https://portal.azure.com).
@@ -162,5 +172,3 @@ Optional Columns:
 1. Find the group you created and select **Members**.
 
 1. Confirm that the members reflect the resources in the Configuration Manager collection. Only resources with Azure AD identity show in the group.
-
-:::image type="content" source="media/3607475-sync-collection-to-azuread.png" alt-text="Screenshot of Synchronize collections to Azure AD." lightbox="media/3607475-sync-collection-to-azuread.png":::

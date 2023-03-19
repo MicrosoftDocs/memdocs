@@ -60,6 +60,49 @@ To use this functionality, create an antivirus policy from the [Microsoft Intune
 
 [!INCLUDE [Device status for Configuration Manager tenant attached devices](./includes/configmgr-endpoint-security-device-status.md)]
 
+## Endpoint Security reports in Microsoft Intune admin center
+
+Starting in Configuration Manager 2303 release, you can now see Tenant Attached devices data in Endpoint Security reports available in Microsoft Intune admin center.
+
+If you are enabling cloud attach for first time, you can enable this feature in the [onboarding wizard](memdocs\configmgr\cloud-attach\enable.md)
+
+If you have enabled cloud attach currently, you need to use the cloud attach properties to enable data upload for Microsoft Defender for Endpoints reporting using the instructions below:
+
+1. In the Configuration Manager admin console, go to **Administration** > **Overview** > **Cloud Services** > **Cloud Attach**.
+   - For version 2103 and earlier, select the **Co-management** node.
+1. In the ribbon, select **Properties** for your co-management production policy.
+1. In the **Configure upload** tab, select **Upload to Microsoft Endpoint Manager admin center**. Select **Apply**.
+   - The default setting for device upload is **All my devices managed by Microsoft Endpoint Configuration Manager**. If needed, you can limit upload to a single device collection.
+   - When a single collection is selected, its child collections are also uploaded.
+1. Optionally, you can enable [Endpoint Analytics and Intune RBAC](memdocs\configmgr\tenant-attach\device-sync-actions.md#bkmk_edit)
+1. In the **Configure upload** tab, select **Enable Uploading Microsoft Defender for Endpoint data for reporting on devices uploaded to Microsoft Intune admin center**. Select **Apply**.
+
+:::image type="content" source="media/9220597_datauploadformdereports.png" alt-text="Screenshot of Collections Cloud Sync Status." lightbox="media/9220597_datauploadformdereports.png":::
+
+### Operational reports in Microsoft Intune admin center
+
+1. In the Intune admin console, go to **Endpoint Security** > **Antivirus**
+1. Click on **Unhealthy endpoints** report where you can view the operational report for the thread agent status on devices and users to outline which are in a state that requires your attention.
+    - Each record will tell you if malware protection, real-time protection and network protection are enabled or disabled.
+    - You can view the state of the device and additional information found in the extra columns to help identify next steps for troubleshooting.
+    - You can filter the devices based on management agent using the Managed By column and you can also export the report in csv format for further analysis.
+:::image type="content" source="media/9220597_ops_unhealthyendpoints_report.png" alt-text="Screenshot of Collections Cloud Sync Status." lightbox="media/9220597_ops_unhealthyendpoints_report.png":::
+1. On the **Active malware** report, you can view the operational report to see the list of devices and users with detected malware with details of the malware category. This will show the malware, state of the device and counts of malware found on the device.
+:::image type="content" source="media/9220597_ops_activemalware_report.png" alt-text="Screenshot of Collections Cloud Sync Status." lightbox="media/9220597_ops_activemalware_report.png":::
+
+### Organizational reports in Microsoft Intune admin center
+
+1. In the Intune admin console, go to **Reports**, **Endpoint Security** > **Microsoft Defender Antivirus**
+1. Under the **Summary** section, you will see summary aggregates of Antivirus Agent Status
+:::image type="content" source="media/9220597_org_summary_report.png" alt-text="Screenshot of Collections Cloud Sync Status." lightbox="media/9220597_org_summary_report.png":::
+1. Click on **Reports** to access **Antivirus agent status** and **Detected malware** organizational reports.
+1. The **Antivirus agent status** report shows the list of devices, users, and antivirus agent status information.
+:::image type="content" source="media/9220597_org_antivirusagentstatus_report.png" alt-text="Screenshot of Collections Cloud Sync Status." lightbox="media/9220597_org_antivirusagentstatus_report.png":::
+1. The **Detected malware** report shows the list of devices and users with detected malware with details of the malware category.
+:::image type="content" source="media/9220597_org_detectedmalware_report.png" alt-text="Screenshot of Collections Cloud Sync Status." lightbox="media/9220597_org_detectedmalware_report.png":::
+
+Both the reports can be filtered based on **Managed by** column and the data within these reports will remain in your console up to three days before requiring you to generate again.
+
 ## Next steps
 
 - [Antivirus policy settings for tenant attached devices](../../intune/protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json)
