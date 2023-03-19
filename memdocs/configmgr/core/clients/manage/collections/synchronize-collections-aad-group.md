@@ -63,7 +63,7 @@ Example synchronization scenario:
 
 > [!TIP]
 > The Server App (Service Principle) of Azure AD tenant will be the owner for the created Azure AD group.
-> :::image type="content" source="media/collection-aad-group-sync-owner.png" alt-text="Screenshot of Owner for Azure AD Group." lightbox="media/collection-aad-group-sync-owner.png":::
+> :::image type="content" source="media/3607475-sync-collection-to-azuread-owner.png" alt-text="Screenshot of Owner for Azure AD Group." lightbox="media/3607475-sync-collection-to-azuread-owner.png":::
 
 1. Select **Create** to finish creating the Azure AD group.
 
