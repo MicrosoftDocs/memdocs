@@ -44,7 +44,11 @@ Applies to:
 
 ## Overview of data collection
 
-Endpoint Privilege Management (EPM) collects data to support elevation usage scenarios and to provide diagnostic intelligence to Microsoft. The data collected is generally related to elevation activities that occur on a device, such as metadata about the file or user completing the elevation, as well the device that completed the elevation.
+Microsoft Intune Endpoint Privilege Management (EPM) allows your organization’s users to run as a standard user (without administrator rights) and complete tasks that require elevated privileges.
+
+Tasks that commonly require administrative privileges are application installs (like Microsoft 365 Applications), updating device drivers, and running certain Windows diagnostics.
+
+Endpoint Privilege Management supports your zero-trust journey by helping your organization achieve a broad user base running with least privilege, while allowing users to still run tasks allowed by your organization to remain productive.
 
 ## Diagnostic Data
 
