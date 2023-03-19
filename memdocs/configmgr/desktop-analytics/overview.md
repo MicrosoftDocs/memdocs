@@ -95,7 +95,7 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
     - [Desktop Analytics Administrator](/azure/active-directory/roles/permissions-reference#desktop-analytics-administrator) and [Owner](/azure/role-based-access-control/built-in-roles#owner)
     - [Contributor](/azure/role-based-access-control/built-in-roles#contributor)
 
-- [Set up Intune](../../intune/fundamentals/setup-steps.md) for your organization.
+- [Set up Intune](../../intune/fundamentals/deployment-plan-setup.md) for your organization.
 
 - A supported version of Configuration Manager.
 

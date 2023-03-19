@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/23/2022
+ms.date: 03/14/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -132,7 +132,7 @@ Use the following table to help understand when you include or exclude devices:
   - Time3: In the Company Portal app, the user is prompted to choose a device category. Remember, enrollment and check-in is already completed.
   - Time4: On the next device check-in, the category property updates and now returns a different filter evaluation result. Remember, the app was already installed. And, it won't be automatically removed.
 
-  For approximate check-in times, go to [How long does it take for devices to get a policy, profile, or app after they're assigned?](../configuration/device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned)
+  For approximate check-in times, go to [How long does it take for devices to get a policy, profile, or app after they're assigned?](../configuration/device-profile-troubleshoot.md#policy-refresh-intervals)
 
 - The latest filter evaluation results are stored for 30 days. If the logs are expired, you may see a **We were not able to retrieve any filter evaluation results** message.
 
@@ -162,7 +162,8 @@ When there's a device with conflicting assignments for the same policy, the foll
 
 When you assign the app or policy, you choose to apply a filter:
 
-:::image type="content" source="./media/filters-reports-troubleshoot/assignment-filter-precedence.png" alt-text="Screenshot that shows filter precedence is exclude, no filter, and then include when assigning policies in Microsoft Intune.":::
+:::image type="content" source="./media/filters-reports-troubleshoot/assignment-filter-precedence.png" alt-text="Screenshot that shows filter precedence is exclude, no filter, and then include when assigning policies in Microsoft Intune."lightbox="./media/filters-reports-troubleshoot/assignment-filter-precedence.png":::
+
 
 For example:
 
@@ -217,3 +218,4 @@ The following matrix explains the effect, depending on the conflict scenario:
 - [Use filters when assigning your apps, policies, and profiles](filters.md)
 - [Supported device properties when creating filters](filters-device-properties.md)
 - [Supported workloads when creating filters](filters-supported-workloads.md)
+- [Filter performance recommendations](filters-performance-recommendations.md)

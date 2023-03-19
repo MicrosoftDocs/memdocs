@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/19/2022
+ms.date: 02/08/2023
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -38,7 +38,7 @@ Compliance policies in Intune:
 - Define the rules and settings that users and devices must meet to be compliant.
 - Include actions that apply to devices that are noncompliant. Actions for noncompliance can alert users to the conditions of noncompliance and safeguard data on noncompliant devices.
 - Can be [combined with Conditional Access](#integrate-with-conditional-access), which can then block users and devices that don't meet the rules.
-- Can override the configuration of settings that you also manage through device configuration policies. To learn more about conflict resolution for policies, see [If multiple policies are assigned to the same user or device, how do I know which settings gets applied?](../configuration/device-profile-troubleshoot.md#if-multiple-policies-are-assigned-to-the-same-user-or-device-how-do-i-know-which-settings-gets-applied).
+- Can override the configuration of settings that you also manage through device configuration policies. To learn more about conflict resolution for policies, see [Compliance and device configuration policies that conflict](../configuration/device-profile-troubleshoot.md#compliance-and-device-configuration-policies-that-conflict).
 
 There are two parts to compliance policies in Intune:
 
@@ -46,7 +46,7 @@ There are two parts to compliance policies in Intune:
 
 - **Device compliance policy** – Platform-specific rules you configure and deploy to groups of users or devices.  These rules define requirements for devices, like minimum operating systems or the use of disk encryption. Devices must meet these rules to be considered compliant.
 
-Like other Intune policies, compliance policy evaluations for a device depend on when the device checks-in with Intune, and [policy and profile refresh cycles](../configuration/device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned). 
+Like other Intune policies, compliance policy evaluations for a device depend on when the device checks-in with Intune, and [policy and profile refresh cycles](../configuration/device-profile-troubleshoot.md#policy-refresh-intervals). 
  
 
 ## Compliance policy settings
@@ -131,14 +131,12 @@ The following subjects link to dedicated articles for different aspects of devic
   - [Android Enterprise](compliance-policy-create-android-for-work.md)
   - [Android Open Source Project (AOSP)](compliance-policy-create-android-aosp.md)
   - [iOS](compliance-policy-create-ios.md)
-  - Linux - Support includes [Custom Compliance](../protect/compliance-use-custom-settings.md) and limited settings from the settings catalog for *Allowed Distributions*, *Device Encryptions*, and *Password Policy*.
+  - [Linux](../protect/compliance-policy-create-linux.md)
   - [macOS](compliance-policy-create-mac-os.md)
   - [Windows Holographic for Business](compliance-policy-create-windows.md#windows-holographic-for-business)
   - [Windows 8.1 and later](compliance-policy-create-windows-8-1.md)
     [!INCLUDE [windows-phone-81-windows-10-mobile-support](../includes/windows-phone-81-windows-10-mobile-support.md)]
   - [Windows 10/11](compliance-policy-create-windows.md)
-
-  Intune also supports compliance policy for Linux (Ubuntu Desktop, version 20.04 LTS and 22.04 LTS), which use the Settings catalog format instead of templates. Dedicated content for the settings in the settings catalog isn't available, but information is available from within the Settings catalog.
 
 - [**Custom compliance settings**](compliance-use-custom-settings.md) – With custom compliance settings you can expand on Intune’s built-in device compliance options.  Custom settings provide flexibility to base compliance on the settings that are available on a device without having to wait for Intune to add those settings.
 

@@ -381,6 +381,8 @@ items:
       href: compliance-policy-create-android-for-work.md
     - name: Compliance settings - iOS
       href: compliance-policy-create-ios.md
+    - name: Compliance settings - Linux
+      href: compliance-policy-create-Linux.md
     - name: Compliance settings - macOS
       href: compliance-policy-create-mac-os.md
     - name: Compliance settings - Windows 10

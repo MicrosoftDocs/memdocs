@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 02/28/2023
+ms.date: 03/09/2023
 ms.topic: reference
 ms.service: windows-365
 ms.subservice:
@@ -35,7 +35,7 @@ ms.collection:
 Learn what new features are available in Windows 365 Enterprise.
 
 > [!NOTE]
-> Each monthly update may take up to a week to rollout to all customers.
+> Each monthly update may roll out over several weeks and might not be immediately available to all customers.
 
 <!-- Common categories:  
 ### App management
@@ -53,7 +53,24 @@ Learn what new features are available in Windows 365 Enterprise.
 -->
 
 <!-- ########################## -->
-## Week of February 27, 2023
+## Week of March 6, 2023
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Create on-demand Cloud PC restore points and copy them to an Azure Storage account<!--43450254-->
+
+You can now create on-demand Cloud PC restore points and copy them to an Azure Storage account. For more information, see [Create on-demand manual restore points for Cloud PCs](create-manual-restore-point.md) and [Share Cloud PC restore points to an Azure Storage Account](share-restore-points-storage.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Role-based access control
+
+#### Permission changes for Azure network connection operations<!--43251193-->
+
+The permissions required for the editing, creating, and deleting Azure network connection (ANC) and health check retry operations have changed: You must now have [Intune Administrator](/azure/active-directory/roles/permissions-reference#intune-administrator), [Windows 365 Administrator](/azure/active-directory/roles/permissions-reference), or [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) permissions. For more informatiion, see [Azure network connections](azure-network-connections.md).
+
+<!-- ########################## -->
+## Week of February 27, 2023 (Service release 2302)
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Apps
@@ -91,6 +108,13 @@ A new Azure Network Connection (ANC) option lets you add more ANCs to a provisio
 #### GCC/H support for geography option in Windows 365 provisioning policy<!-- 41400209-->
 
 The **Geography** setting in provisioning policies is now supported for US Government Community Cloud (GCC) and GCC High environments. For more information, see [Create provisioning policies](create-provisioning-policy.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Documentation
+
+#### New documentation article: Azure network connection domain credential life cycle
+
+We’ve published a new help documentation article. For more information, see [Azure network connection domain credential life cycle](azure-network-connection-domain-credential.md).
 
 <!-- ########################## -->
 ## Week of February 20, 2023

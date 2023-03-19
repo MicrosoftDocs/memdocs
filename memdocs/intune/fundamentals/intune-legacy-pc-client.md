@@ -27,6 +27,7 @@ ms.custom: intune-classic
 ms.collection:
 - tier2
 - M365-identity-device-management
+- triage
 ---
 
 # What happened to the Intune PC software client?

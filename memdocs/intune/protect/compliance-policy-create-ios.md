@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns 
 manager: dougeby
-ms.date: 10/20/2021
+ms.date: 03/02/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -106,6 +106,17 @@ For details about email profiles, see [configure access to organization email us
   *Supported for iOS 8.0 and later*
 
   When Apple publishes security updates, the build number is typically updated, not the OS version. Use this feature to enter a maximum allowed build number on the device.
+
+## Microsoft Defender for Endpoint
+
+- **Require the device to be at or under the machine risk score**  
+
+  Select the maximum allowed machine risk score for devices evaluated by Microsoft Defender for Endpoint. Devices that exceed this score get marked as noncompliant.
+  - **Not configured** (*default*)
+  - **Clear**
+  - **Low**
+  - **Medium**
+  - **High**
 
 ## System Security
 

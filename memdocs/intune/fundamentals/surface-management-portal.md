@@ -21,7 +21,7 @@ ms.assetid:
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: intune-azure 
+ms.custom: 
 ms.collection:
 - tier2
 - M365-identity-device-management

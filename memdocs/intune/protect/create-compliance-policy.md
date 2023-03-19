@@ -7,11 +7,11 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/19/2022
+ms.date: 02/08/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
-ms.reviewer: samyada
+ms.reviewer: tycast
 
 # optional metadata
 
@@ -106,19 +106,10 @@ For more information about using custom compliance settings, including supported
    - [Android (AOSP)](compliance-policy-create-android-aosp.md)
    - [Android Enterprise](compliance-policy-create-android-for-work.md)
    - [iOS/iPadOS](compliance-policy-create-ios.md)
-   - Linux - See the following information.
+   - [Linux](../protect/compliance-policy-create-linux.md)
    - [macOS](compliance-policy-create-mac-os.md)
    - [Windows 8.1 and later](compliance-policy-create-windows-8-1.md)
    - [Windows 10/11](compliance-policy-create-windows.md)  
-
-   **For Linux**, the profile type uses settings from the Settings catalog. Expand each available category and select the settings you want to include in your policy. Examples of Linux settings categories include:
-
-   - Allowed Distributions
-   - Custom Compliance
-   - Device Encryption
-   - Password Policy
-
-   Dedicated content for the settings in the settings catalog isn't available.
 
 6. Add custom settings to policies for supported platforms.
 
@@ -169,7 +160,7 @@ For more information about using custom compliance settings, including supported
 
 ## Refresh cycle times
 
-Intune uses different refresh cycles to check for updates to compliance policies. If the device recently enrolled, the check-in runs more frequently. [Policy and profile refresh cycles](../configuration/device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned) lists the estimated refresh times.
+Intune uses different refresh cycles to check for updates to compliance policies. If the device recently enrolled, the check-in runs more frequently. [Policy and profile refresh cycles](../configuration/device-profile-troubleshoot.md#policy-refresh-intervals) lists the estimated refresh times.
 
 At any time, users can open the Company Portal app, and sync the device to immediately check for policy updates.
 
