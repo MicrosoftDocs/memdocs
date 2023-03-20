@@ -43,7 +43,7 @@ After you install a baseline version, later versions of Configuration Manager ar
 
 When you install an update, the update stores installation files for that version on the site server in a folder named **CD.Latest**. For more information about these files, see [The CD.Latest folder](the-cd.latest-folder.md).
 
-- Use the files in the CD.Latest folder during site recovery. Also, when your hierarchy no longer runs a baseline version, use these files to install other sites.
+- Use the files in the CD. Latest folder during site recovery. Also, when your hierarchy no longer runs a baseline version, use these files to install other sites.
 
 - You can't use installation files from CD.Latest to install the first site of a new hierarchy, or to upgrade a site from System Center 2012 Configuration Manager.
 
@@ -86,7 +86,7 @@ The following table lists historical versions of Configuration Manager current b
 | Version                          | Availability date | Support end date   | Baseline | In-console update |
 |----------------------------------|-------------------|--------------------|----------|-------------------|
 | **2107** <br /> (5.00.9058)      | August 2, 2021    | February 2, 2023   | No       | Yes               |
-| **2103** <br /> (5.00.9049)      | April 19, 2021    | october 19, 2022   | Yes      | Yes               |
+| **2103** <br /> (5.00.9049)      | April 19, 2021    | October 19, 2022   | Yes      | Yes               |
 | **2010** <br /> (5.00.9040)      | November 30, 2020 | May 30, 2022       | No       | Yes               |
 | **2006** <br /> (5.00.9012)      | August 11, 2020   | February 11, 2022  | No       | Yes               |
 | **2002** <br /> (5.00.8968)      | April 1, 2020     | October 1, 2021    | Yes      | Yes               |
