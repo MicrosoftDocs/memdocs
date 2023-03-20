@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Performance recommendations for filters in Microsoft Intune
+title: Performance recommendations for Grouping, Targeting and Fitering in Microsoft Intune
 description: When using filters in Microsoft Intune, use Intune virtual groups that don’t require Azure AD syncing, reuse groups to optimize your targeting, make incremental group changes for efficient processing, and use filters to dynamically include and exclude. These recommendations improve performance.
 keywords:
 author: MandiOhlinger
@@ -29,9 +29,9 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Performance recommendations when using Intune to group, target, and filter
+# Performance recommendations for Grouping, Targeting and Fitering in large Microsoft Intune environments
 
-This article lists and describes recommendations for Intune grouping, targeting, and filtering for your policies. The goal is to help you make architecture and design decisions for your Intune deployments.
+This article lists and describes recommendations for Intune grouping, targeting, and filtering for your policies and applications. The goal is to help you make architecture and design decisions for your Intune deployments in large environments.
 
 These performance recommendations and their implementation can be different and depend on your own environment & other factors, including manageability and simplicity.
 
@@ -78,7 +78,7 @@ Filtering is high performance, low latency applicability evaluation at device ch
 
 This section includes some recommendations that can improve performance when assigning your policies in Microsoft Intune.
 
-These recommendations focus on improving performance and reducing latency in workload assignment. They have the most impact when working in large Intune environments, like environments with >10,000 devices. These recommendations should be considered with other design aspects, like manageability, ease of use, role-based administration, and simplicity.
+These recommendations focus on improving performance and reducing latency in workload assignment. They have the most impact when working in large Intune environments, like environments with >100,000 devices. These recommendations should be considered with other design aspects, like manageability, ease of use, role-based administration, and simplicity.
 
 ### Use virtual groups
 
@@ -88,7 +88,7 @@ These recommendations focus on improving performance and reducing latency in wor
 
 If you assign Intune workloads to large Azure AD groups that have many users or devices, then synchronization backlogs can happen in your Intune environment. This backlog impacts policy and app deployments, which take longer to reach managed devices.
 
-The built-in **All users** and **All devices** groups are Intune-only grouping objects. There isn't a continuous sync between Azure AD and Intune. Similarly, filters are Intune-only design rules that evaluate devices for policy assignment dynamically during a check-in with the Intune service.
+The built-in **All users** and **All devices** groups are Intune-only grouping objects that do not exist in Azure AD. There isn't a continuous sync between Azure AD and Intune. Similarly, filters are Intune-only design rules that evaluate devices for policy assignment dynamically during a check-in with the Intune service.
 
 > [!NOTE]
 > For information on Intune check-in policy refresh intervals, go to [Intune Policy refresh intervals](../configuration/device-profile-troubleshoot.md#policy-refresh-intervals).
@@ -155,12 +155,12 @@ Instead of mixed exclusions, we recommend assigning to a user group. Then, use f
 
 ## Summary
 
-When creating and managing assignments in Intune, incorporate some of these recommendations. Use virtual groups and filters to help refine the scope of your Azure AD groups, and keep the best practices in mind:
+When creating and managing assignments in Intune, incorporate some of these recommendations. Use groups or virtual groups and apply filters to help refine the targeting scope, and keep the best practices in mind:
 
-- Use Intune virtual groups that don’t require Azure AD syncing.
+- Use Intune virtual groups, instead of building your own in AAD becauese they don’t require Azure AD syncing.
 - Reuse groups to optimize your targeting.
-- Make incremental group changes for more efficient processing.
-- Use filters to dynamically include and exclude, not groups.
+- Make incremental group changes for more efficient processing, particularly when targeting a very large group for the first time.
+- Use filters to dynamically include and exclude devices, on top of group or virtual group assignments.
 
 ## Next steps
 
