@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/20/2023
+ms.date: 03/21/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -21,7 +21,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: priyar
+ms.reviewer: shthilla
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -109,4 +109,4 @@ Now that you've set up the enrollment profile, token, and dynamic group, you can
 * Zero-touch enrollment
 * Samsung Knox Mobile Enrollment  
 
-For next steps, including how to enroll devices with each provisioning method, see [Enroll Android Enterprise corporate-owned devices][android-dedicated-devices-fully-managed-enroll.md].  
+For next steps, including how to enroll devices with each provisioning method, see [Enroll Android Enterprise corporate-owned devices](android-dedicated-devices-fully-managed-enroll.md).  
