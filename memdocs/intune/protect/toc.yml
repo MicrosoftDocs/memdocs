@@ -156,17 +156,17 @@ items:
     - name: Endpoint Privilege Management
       items:
       - name: Endpoint Privilege Management overview
-        href: ./protect/epm-overview.md
+        href: epm-overview.md
       - name: Endpoint Privilege Management guidance for rules
-        href: ./protect/epm-guidance-for-creating-rules.md
+        href: epm-guidance-for-creating-rules.md
       - name: Endpoint Privilege Management policies
-        href: ./protect/epm-policies.md
+        href: epm-policies.md
       - name: Endpoint Privilege Management reports
-        href: ./protect/epm-reports.md
+        href: epm-reports.md
       - name: Endpoint Privilege Management data and privacy
-        href: ./protect/epm-data-collection.md
+        href: epm-data-collection.md
       - name: Endpoint Privilege Management deployment considerations
-        href: ./protect/epm-deployment-considerations-ki.md
+        href: epm-deployment-considerations-ki.md
   - name: Identity protection
     items:
     - name: Windows Hello at device enrollment

@@ -55,7 +55,7 @@ It is important when defining *detections* that they are defined as *descriptive
 
 File hash rules are the strongest rules that can be created with Endpoint Privilege Management, and they are *highly recommended* for ensuring the file you intend to elevate are the ones elevating.
 
-File hash can be gathered from the direct binary using the [Get-Filehash powershell method](/powershell/module/microsoft.powershell.utility/get-filehash.md) or directly from the [reports for Endpoint Privilege Management](../protect/epm-reports.md).
+File hash can be gathered from the direct binary using the [Get-Filehash powershell method](/powershell/module/microsoft.powershell.utility/get-filehash) or directly from the [reports for Endpoint Privilege Management](../protect/epm-reports.md).
 
 ### Certificate rules
 
@@ -85,7 +85,7 @@ Rules deployed to a device are applied to *all users* on that device. Rules that
 
 Endpoint Privilege Management and Windows built-in user account control (UAC) are completely separate products and functionality. 
 
-When moving to standard user and utilizing Endpoint Privilege Management, you may choose to change the default UAC behavior for standard users. This may reduce confusion when an application requires elevation and create a better end user experience. Examine [behavior of the elevation prompt for standard users](/windows/security/identity-protection/user-account-control/user-account-control-security-policy-settings.md#user-account-control-behavior-of-the-elevation-prompt-for-standard-users) for more information.
+When moving to standard user and utilizing Endpoint Privilege Management, you may choose to change the default UAC behavior for standard users. This may reduce confusion when an application requires elevation and create a better end user experience. Examine [behavior of the elevation prompt for standard users](/windows/security/identity-protection/user-account-control/user-account-control-security-policy-settings#user-account-control-behavior-of-the-elevation-prompt-for-standard-users) for more information.
 
 > [!NOTE]
 > Endpoint Privilege Management will not interfere with actions (or UAC) being executed by an Administrator on the device. It is possible to create rules that apply to Administrators on the device, so special considerations should be given to rules that are applied to all users on a device and the impact on users with Administrator.
