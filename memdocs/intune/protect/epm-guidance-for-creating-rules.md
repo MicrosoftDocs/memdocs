@@ -44,11 +44,11 @@ Endpoint Privilege Management supports your zero-trust journey by helping your o
 
 ## Defining rules for use with Endpoint Privilege Management
 
-Endpoint Privilege Management rules consist of two fundamental elements, a *detection* and an *elevation action*.
+Endpoint Privilege Management rules consist of two fundamental element: a *detection* and an *elevation action*.
 
 **Detections** are classified as the set of attributes that are used to identify an application or binary. Detections are comprised of attributes such as file name, file version, or attributes of a signature.
 
-**Elevation actions** are the resulting elevation that occurs after an application or binary has been detected. Included in the elevation action
+**Elevation actions** are the resulting elevation that occurs after an application or binary has been detected. Included in the elevation action.
 
 It's important when defining *detections* that they're defined to be as *descriptive* as possible. To be descriptive, use strong attributes, or multiple attributes to increase the strength of the detection. The goal when defining detections should be to eliminate the ability for multiple files to fall into the same rule (unless that is explicitly the intent).
 
@@ -58,19 +58,18 @@ File hash rules are the strongest rules that can be created with Endpoint Privil
 
 File hash can be gathered from the direct binary using the [Get-Filehash PowerShell method](/powershell/module/microsoft.powershell.utility/get-filehash) or directly from the [reports for Endpoint Privilege Management](../protect/epm-reports.md).
 
-
 ### Certificate rules
 
 Certificate rules are a strong type of attribute and should be paired with additional attributes. Pairing a signer with attributes like product name, internal name, description drastically improves the security of the rule. These attributes are protected by signature, and often indicate specifics about the signed file.
 
 > [!CAUTION]
-> Using just a certificate and a file name provides very limited protection for misuse of a rule. File names are able to be changed by any *standard user* provided they have access to the directory where the file resides. This might not be a concern for files that reside in a write-protected directory.
+> Using just a certificate and a file name provides very limited protection for misuse of a rule. File names can be changed by any *standard user* provided they have access to the directory where the file resides. This might not be a concern for files that reside in a write-protected directory.
 
 ### Rules containing file name
 
 File name is an attribute that can be utilized to detect an application that needs to be elevated. However, file names aren't protected by the signature of the file.
 
-This means that file names are *high susceptible* to change. Files that are signed by a certificate that you trust could have their name changed to be *detected* and subsequently *elevated*, which might not be your intended behavior.
+This means that file names are *highly susceptible* to change. Files that are signed by a certificate that you trust could have their name changed to be *detected* and subsequently *elevated*, which might not be your intended behavior.
 
 > [!IMPORTANT]
 > Always ensure that rules including a file name include other attributes that provide a strong assertion to the file's identity. Attributes like file hash or properties that are included in the files signature are good indicators that the file you intend is likely the one being elevated.
@@ -79,7 +78,7 @@ This means that file names are *high susceptible* to change. Files that are sign
 
 Endpoint Privilege Management rules are deployed like any other policy in Microsoft Intune. This means that rules can be deployed to users or devices, and rules are merged on the client side and selected at run time. Any conflicts are resolved based on the [policy conflict behavior](../protect/epm-policies.md#policy-conflict-handling-for-endpoint-privilege-management).
 
-Rules deployed to a device are applied to *all users* on that device. Rules that are deployed to a *user* apply only to that user on devices they utilize. When an elevation action occurs, rules deployed to the user are given precedence to rules deployed to a device. This allows you to deploy a set of rules to devices that might apply to all users on that device, but a more permissive set of rules to a support admin that allows them the ability to elevate a broader set of applications when they are logged in on the device temporarily.
+Rules deployed to a device are applied to *all users* on that device. Rules that are deployed to a *user* apply only to that user on devices they utilize. When an elevation action occurs, rules deployed to the user are given precedence to rules deployed to a device. This allows you to deploy a set of rules to devices that might apply to all users on that device, but a more permissive set of rules to a support admin that allows them the ability to elevate a broader set of applications when they're logged in on the device temporarily.
 
 *Default Elevation behavior* is used only when no rule match can be found. This also requires use of the *Run with elevated access* right-click menu, which is interpreted as a user *explicitly* asking for an application to be elevated.
 

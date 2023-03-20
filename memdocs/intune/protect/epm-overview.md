@@ -30,6 +30,7 @@ ms.collection:
 # Use Endpoint Privilege Management with Microsoft Intune
 
 <!-- [!INCLUDE [intune-add-on-note](../includes/intune-add-on-note.md)] -->
+
 > [!NOTE]  
 > This capability is in public preview and available to use without a license. After public preview, it will be available as an Intune add-on. For more information, see [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md).
 
@@ -50,13 +51,13 @@ Applies to:
 
 ### Licensing
 
-During the public preview, EPM won't require acquiring or provisioning a license. Instead, you can [activate EPM](../protect/epm-policies.md#enable-your-tenant-for-endpoint-privilege-management) and validate the functionality.
+During the public preview, EPM doesn't require acquiring or provisioning a license. Instead, you can [activate EPM](../protect/epm-policies.md#enable-your-tenant-for-endpoint-privilege-management) and validate the functionality.
 
 Once the product becomes generally available, your tenant must be licensed for Endpoint Privilege Management. This license is available as a part of the [Intune Suite or standalone license](../fundamentals/intune-add-ons.md).
 
 ### Windows Client requirements
 
-Endpoint privilege management has the following operating system requirements:
+Endpoint Privilege Management has the following operating system requirements:
 
 - Windows 11, version 22H2 with [KB5022913](https://support.microsoft.com/en-us/topic/february-28-2023-kb5022913-os-build-22621-1344-preview-3e38c0d9-924d-4f3f-b0b6-3bd49b2657b9)
 - Windows 11, version 22H1 with KB5023774 (Pending Optional Update Release - March 2023)
@@ -67,11 +68,11 @@ Endpoint privilege management has the following operating system requirements:
 
 ## Getting started with Endpoint Privilege Management
 
-Endpoint Privilege Management (EPM) is built in to Microsoft Intune, which means that all configuration is completed within the [Microsoft Intune Admin Center](https://intune.microsoft.com). When organizations get started with EPM, they use the high level process that's outlined as follows:
+Endpoint Privilege Management (EPM) is built into Microsoft Intune, which means that all configuration is completed within the [Microsoft Intune Admin Center](https://intune.microsoft.com). When organizations get started with EPM, they use the high-level process that's outlined as follows:
 
-- **Activate Endpoint Privilege Management** - Public Preview customers aren't be required to obtain a license for Endpoint Privilege Management to try out the product. Instead, they activate the product by navigating to the Endpoint Privilege Management node and having a *Global Administrator* or *Intune Service Admin* activate the product experience.
-- **Deploy an *elevation settings* policy** - An elevation settings policy *activates* EPM on the client device. This policy also allows you to configure settings that are specific to the client, but aren't necessarily related to the elevation of individual applications or tasks.
-- **Deploy *elevation rule* policies** - An elevation rule policy *links* an application or task to an elevation action. Use this policy to configure the elevation behavior for applications your organization allows when the applications execute on the device.
+- **Activate Endpoint Privilege Management** - Public Preview customers aren't required to obtain a license for Endpoint Privilege Management to try out the product. Instead, they activate the product by navigating to the Endpoint Privilege Management node and having a *Global Administrator* or *Intune Service Admin* activate the product experience.
+- **Deploy an *elevation settings* policy** - An elevation settings policy *activates* EPM on the client device. This policy also allows you to configure settings that are specific to the client but aren't necessarily related to the elevation of individual applications or tasks.
+- **Deploy *elevation rule* policies** - An elevation rule policy *links* an application or task to an elevation action. Use this policy to configure the elevation behavior for applications your organization allows when the applications run on the device.
 
 ## Important concepts for Endpoint Privilege Management
 
@@ -83,19 +84,17 @@ When you configure the *elevation settings* and *elevation rules* policies menti
 
   When you use Endpoint Privilege Management, there are two options for elevation behavior:
   - For automatic elevation rules, EPM *automatically* elevates these applications without input from the user. Broad rules in this category can have widespread impact to the security posture of the organization.
-  - For user confirmed rules, end users use a new right-click context menu *Run with elevated access*. User confirmed rules require the end-user to complete some additional requirements before the application is allowed to elevate. These requirements provide an additional layer of protection by adding visibility to the end user of the application prior to elevation by requiring the user to complete additional steps before the elevation occurs.
+  - For user confirmed rules, end users use a new right-click context menu *Run with elevated access*. User confirmed rules require the end-user to complete some additional requirements before the application is allowed to elevate. These requirements provide an additional layer of protection by adding visibility to the end user of the application before it's elevation by requiring the user to complete additional steps before the elevation occurs.
 
-
-- **Client-side components** – To use Endpoint Privilege Management, Intune provisions a small set of components on the device that receive elevation policies and enforces them. The components are provisioned only when an elevation settings policy is received and the policy has expressed the intent to *enable* Endpoint Privilege management.
+- **Client-side components** – To use Endpoint Privilege Management, Intune provisions a small set of components on the device that receive elevation policies and enforces them. The components are provisioned only when an elevation settings policy is received, and the policy has expressed the intent to *enable* Endpoint Privilege management.
 
 - **Disabling and deprovisioning** – As a component that installs on a device, Endpoint Privilege Management can be disabled from within an elevation settings policy. Use of the elevation settings policy is **required** to remove Endpoint Privilege Management from a device.
 
   Once the device has received an elevation settings policy requiring EPM to be disabled, Intune immediately disables the client-side components. EPM will remove the EPM component after a period of seven days. The delay is to ensure temporary or accidental changes in policy or assignments don't result in mass *de-provisioning*/*re-provisioning* events that might have a substantial impact on business operations.
 
-- **Managed elevations vs unmanaged elevations** – These terms might be used in our reporting and usage data. Generally speaking, these terms refer to the following descriptions:
+- **Managed elevations vs unmanaged elevations** – These terms might be used in our reporting and usage data. These terms refer to the following descriptions:
   - **Managed elevation**: Any elevation that Endpoint Privilege Management facilitates. Managed elevations include all elevations that EPM ends up facilitating for the standard user. This could include elevations that happen as the result of an elevation rule or as part of default elevation action.
   - **Unmanaged elevation**: All file elevations that happen without use of Endpoint Privilege Management. These elevations can happen when a user with administrative rights uses the Windows default action of *Run as administrator*.
-
 
 ## Role-based access controls for Endpoint Privilege Management
 

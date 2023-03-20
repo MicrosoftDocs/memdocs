@@ -52,9 +52,9 @@ Applies to:
 - Windows 10
 - Windows 11
 
-## Getting started with EPM policies
+## Get started with EPM policies
 
-EPM uses the two policy types that you configure to manage how a file elevation request is handled. Together, the policies configure how standard users elevate scenarios they request to *run with administrative privileges*:
+EPM uses the two policy types that you configure to manage how a file elevation request is handled. Together, the policies configure the behavior for file elevations when standard users request to *run with administrative privileges*:
 
 ### Windows elevation settings policy
 
@@ -74,26 +74,26 @@ Use *Windows elevation settings policy* when you want to:
   >[!NOTE]
   > Default responses are only processed for requests coming through the *Run with elevated access* right-click menu.  
 
-- **Validation options** - Set validation options when the default elevation response is defined as *Require user confirmation*
+- **Validation options** - Set validation options when the default elevation response is defined as *Require user confirmation*.
 
   Options include:
-  - Business justification - This option requires the end user to provide a justification before completing an elevation that is facilitated by the default elevation response
-  - Windows authentication - This option requires the end user to authenticate before completing an elevation that is facilitated by the default elevation response
+  - Business justification - This option requires the end user to provide a justification before completing an elevation that is facilitated by the default elevation response.
+  - Windows authentication - This option requires the end user to authenticate before completing an elevation that is facilitated by the default elevation response.
 
   >[!NOTE]
-  > Multiple validation options can be selected to satisfy needs of the organization. If no options are selected, then the user is only required to click *continue* to complete the elevation
+  > Multiple validation options can be selected to satisfy the needs of the organization. If no options are selected, then the user is only required to click *continue* to complete the elevation.
   
 - **Send data to Microsoft** - This setting controls whether your device shares both diagnostic and usage data with Microsoft. Diagnostic data is used by Microsoft to measure the health of the EPM client components and usage data is used to show you elevations that happen within your tenant. For more information about the types of data and how it's stored, see [Data collection and privacy for Endpoint Privilege Management](../protect/epm-data-collection.md).
 
   Options include:
-  - Yes - This option sends data to Microsoft based on the *Reporting Scope* setting
-  - No - This option does not send data to Microsoft
+  - Yes - This option sends data to Microsoft based on the *Reporting Scope* setting.
+  - No - This option does not send data to Microsoft.
 
 - **Reporting Scope** - This setting controls the amount of data being sent to Microsoft when *Send data to Microsoft* is set to *Yes*. By default, *Diagnostic data and all endpoint elevations* is selected.
 
   Options include:
-  - Diagnostic data and managed elevations only - This option only sends diagnostic data to Microsoft about the health of the client components **AND** data about elevations being facilitated by Endpoint Privilege Management
-  - Diagnostic data and all endpoint elevations - This option only sends diagnostic data to Microsoft about the health of the client components **AND** data about all elevations happening on the endpoint
+  - Diagnostic data and managed elevations only - This option only sends diagnostic data to Microsoft about the health of the client components **AND** data about elevations being facilitated by Endpoint Privilege Management.
+  - Diagnostic data and all endpoint elevations - This option only sends diagnostic data to Microsoft about the health of the client components **AND** data about all elevations happening on the endpoint.
   - Diagnostic data only - This option only sends diagnostic data to Microsoft about the health of the client components.
 
 ### Windows elevation rules policy
@@ -107,7 +107,7 @@ Each elevation rule:
 - **Supports use of a file hash to validate the file.** A file hash is required for Automatic rules. For user confirmed rules, you can choose to either use a certificate or a file hash, in which case the file hash becomes optional.
 - **Configures the files evaluation type.** Evaluation type identifies what happens when an elevation request is made for the file. By default, this option is set to *User confirmed*, which is our recommendation for elevations.
 
-  - **User confirmed** (Recommended): A user confirmed elevation always requires the user to click on a confirmation prompt to run the file. There are more user confirmations you can add. One require users to authenticate using their organization credentials. Another option requires the user to enter a business justification. While the text entered for a justification is up to the user, EPM can collect and report it when the device is configured to report elevation data as part of its Windows elevation settings policy.
+  - **User confirmed** (Recommended): A user confirmed elevation always requires the user to click on a confirmation prompt to run the file. There are more user confirmations you can add. One requires users to authenticate using their organization credentials. Another option requires the user to enter a business justification. While the text entered for a justification is up to the user, EPM can collect and report it when the device is configured to report elevation data as part of its Windows elevation settings policy.
   - **Automatic** elevation happens invisibly to the user. There's no prompt, and no indication that the file is running in an elevated context.
 
     >[!NOTE]
@@ -225,8 +225,8 @@ In addition to this policy, a device must also be assigned a Windows elevation s
        - *Business justification*: Require the user to enter a justification for running the file. There's no required format for this, however the user input is saved and can be reviewed through logs if the *Reporting scope* includes collection of endpoint elevations.
        - *Windows authentication*: This option requires the user to authenticate using their organization credentials.
      - **Automatic**: This elevation type automatically runs the file in question with elevated permissions. This is transparent to the user, without prompting for confirmation or requiring justification or authentication by the user.
-      >[!CAUTION]
-      >Only use the automatic elevation for files you trust. These files will automatically elevate without user interaction. Rules that are not well defined could allow unapproved applications to elevate. For more information on creating strong rules, see the [guidance for creating rules](../protect/epm-guidance-for-creating-rules.md).
+      > [!CAUTION]
+      > Only use automatic elevation for files you trust. These files will automatically elevate without user interaction. Rules that are not well defined could allow unapproved applications to elevate. For more information on creating strong rules, see the [guidance for creating rules](../protect/epm-guidance-for-creating-rules.md).
 
    *File information* is where you specify the details that identify a file that this rule applies to.
 
@@ -242,7 +242,7 @@ In addition to this policy, a device must also be assigned a Windows elevation s
      - **Not configured**: Use this option when do not want to use a certificate to validate the integrity of the file. When no certificate is used, you must provide a *file hash*.
 
    - **File hash**: The file hash is required when Signature source is set to *Not configured*, and optional when set to use a certificate.
-   - **Minimum version**: (Optional) Use the **x.x.x.x** format to specify a minimum version of the file that is supported by this rule.
+   - **Minimum version**: (Optional) Use **x.x.x.x** format to specify a minimum version of the file that is supported by this rule.
    - **File description**: (Optional) Provide a description of the file.
    - **Product name**: (Optional) Specify the name of the product that the file is from.
    - **Internal name**: (Optional) Specify the internal name of the file.
@@ -280,22 +280,22 @@ To create the reusable settings group for Endpoint Privilege Management:
 
 Except for the following situation, conflicting policies for EPM are handled like any other [policy conflict](../configuration/device-profile-troubleshoot.md#conflicts).
 
-**Windows elevation settings policy**
+**Windows elevation settings policy**:
 
 When a device receives two separate elevation settings policies with conflicting values, the EPM client reverts to the default client behavior until the conflict is resolved.
 
 > [!NOTE]
 > If the *Enable Endpoint Privilege Management* is in conflict the default behavior of the client is to *Enable* EPM. This means the client components will continue to function until an explicit value is delivered to the device.
 
-**Windows elevation rules policy**
+**Windows elevation rules policy**:
 
 If a device receives two rules targeting the same application, both rules are consumed on the device. When EPM goes to resolve rules that apply to an elevation, it used the following logic:
 
-- Rules deployed to a user take precedence over rules deployed to a device
-- Rules with a hash defined are always deemed the most *specific* rule
-- If more than one rule applies (with no hash defined), the rule with the most defined attributes wins (most *specific*)
-- If applying the above logic results in more than one rule, the following order determines the elevation behavior: User Confirmed, Support Approved (once available), Automatic
- 
+- Rules deployed to a user take precedence over rules deployed to a device.
+- Rules with a hash defined are always deemed the most *specific* rule.
+- If more than one rule applies (with no hash defined), the rule with the most defined attributes wins (most *specific*).
+- If applying the above logic results in more than one rule, the following order determines the elevation behavior: User Confirmed, Support Approved (once available), and then Automatic.
+
 > [!NOTE]
 > If a rule does not exist for an elevation and that elevation was requested through the *Run with elevated access* right-click context menu, then the *Default Elevation Behavior* will be used.
 

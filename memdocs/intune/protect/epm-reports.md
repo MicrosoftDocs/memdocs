@@ -27,7 +27,7 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Reports for Endpoint Privilege Management 
+# Reports for Endpoint Privilege Management
 
 <!-- [!INCLUDE [intune-add-on-note](../includes/intune-add-on-note.md)] -->
 
@@ -40,7 +40,7 @@ Tasks that commonly require administrative privileges are application installs (
 
 Endpoint Privilege Management supports your zero-trust journey by helping your organization achieve a broad user base running with least privilege, while allowing users to still run tasks allowed by your organization to remain productive.
 
-The information available in EPM reports depends on a devices *reporting scope*. The reporting scope for each device is configured as part of a [Windows elevation settings policy](../protect/epm-policies.md#windows-elevation-settings-policy), and different devices can have different reporting scope configurations.
+The information available in EPM reports depends on *reporting scope* of a device. The reporting scope for each device is configured as part of a [Windows elevation settings policy](../protect/epm-policies.md#windows-elevation-settings-policy), and different devices can have different reporting scope configurations.
 
 The following EPM reports are available from the *Reports* tab of the *Endpoint Privilege Management* node, that you can access from within the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by going to **Endpoint security** > **Endpoint Privilege Management**, and selecting the **Reports** tab:
 
@@ -49,12 +49,12 @@ The following EPM reports are available from the *Reports* tab of the *Endpoint 
 
 ## Elevation report
 
-The *Elevation report* displays a list view with details about all reported elevations. This list includes elevations that are managed by specific rules and those that aren't defined by rules but are captured by default elevation setting policies. Several columns of information are available by default, including but not limited to: 
+The *Elevation report* displays a list view with details about all reported elevations. This list includes elevations that are managed by specific rules and those that aren't defined by rules but are captured by default elevation setting policies. Several columns of information are available by default, including but not limited to:
 
 - **File name** - The name of the file that received an elevation request.
 - **User** - The user who requested elevation of the file.
 - **Device** - The name of the device on which the file request was made.
-- **Result** - Whether or not the elevation was successful.
+- **Result** - Whether the elevation was successful.
 - **Date and time** - When the elevation request was made.
 
 By selecting an entry in the report, you can drill in to view more details about the elevation request and the file involved.

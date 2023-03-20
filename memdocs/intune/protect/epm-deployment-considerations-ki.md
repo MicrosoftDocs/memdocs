@@ -34,7 +34,6 @@ ms.collection:
 > [!NOTE]  
 > This capability is in public preview and available to use without a license. After public preview, it will be available as an Intune add-on. For more information, see [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md).
 
-
 Microsoft Intune Endpoint Privilege Management (EPM) allows your organization’s users to run as a standard user (without administrator rights) and complete tasks that require elevated privileges.
 
 Tasks that commonly require administrative privileges are application installs (like Microsoft 365 Applications), updating device drivers, and running certain Windows diagnostics.
@@ -52,24 +51,24 @@ Applies to:
 
 ### Authoring files with a file name as one of the sole attributes for identification
 
-File name is an attribute that can be utilized to detect an application that needs to be elevated. However it is not protected by the signature of the file.
+File name is an attribute that can be utilized to detect an application that needs to be elevated. However, it is not protected by the signature of the file.
 
-This means that file names are *high susceptible* to change and files signed by a certificate that you trust could have their name changed to be *detected* and subsequently *elevated* which may not be your intended behavior.
+This means that file names are *highly susceptible* to change, and files signed by a certificate that you trust could have their name changed to be *detected* and subsequently *elevated* which may not be your intended behavior.
 
 > [!IMPORTANT]
 > Always ensure that rules including a file name include other attributes that provide a strong assertion to the file's identity. Attributes like file hash or properties that are included in the files signature are good indicators that the file you intend is likely the one being elevated.
 
 ### Blocked files downloaded from the internet fail to elevate
 
-Behavior exists in Windows to set an attribute on files that are downloaded directly from the internet, and prevent them from executing until validated. Windows has functionality to validate the reputation of files download from the internet. When files reputation isn't validated they may fail to elevate. To correct this behavior, unblock the file by unblocking the file from the file properties pane. *This should only be done when you trust the file*.
+Behavior exists in Windows to set an attribute on files that are downloaded directly from the internet and prevent them from executing until validated. Windows has functionality to validate the reputation of files download from the internet. When a files reputation isn't validated it might fail to elevate. To correct this behavior, unblock the file by unblocking the file from the file properties pane. *This should only be done when you trust the file*.
 
 ### Certificate rules defined with a file path may fail to elevate
 
-When defining a certificate rule with a file path, Endpoint Privilege Management may fail to elevate files signed by the certificate as the administrator intended. To workaround this issue, supply a file name in addition to the file path. This will be fixed in a future release.
+When defining a certificate rule with a file path, Endpoint Privilege Management may fail to elevate files signed by the certificate as the administrator intended. To work around this issue, supply a file name in addition to the file path. This will be fixed in a future release.
 
 ### Certificate rules defined as Issuing Certificate Authority may not allow elevation
 
-When defining a certificate rule and specifying the certificate as an 'Issuing CA', EPM may not allow elevation when the certificate is properly part of the certificate chain. To workaround this issue, specify the publisher certificate of the file instead. This will be fixed in a future release.
+When defining a certificate rule and specifying the certificate as an 'Issuing CA', EPM may not allow elevation when the certificate is properly part of the certificate chain. To work around this issue, specify the publisher certificate of the file instead. This will be fixed in a future release.
 
 ### On Windows 11, 'Run with elevated access' is shown under 'show more options' when I right-click on a file
 
@@ -77,7 +76,7 @@ Windows 11 introduced a new paradigm for right-click context menus. EPM currentl
 
 ### When creating rules for a network file, elevation fails to occur
 
-Endpoint Privilege Management supports executing files that are locally stored on disk. Executing files from a network share are not allowed.
+Endpoint Privilege Management supports executing files that are locally stored on disk. Executing files from a network share isn't allowed.
 
 ### Endpoint Privilege Management does not receive policy when I use a 'SSL-inspection' on my network infrastructure
 
