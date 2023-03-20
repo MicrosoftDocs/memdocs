@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/01/2023
+ms.date: 03/14/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -33,7 +33,7 @@ ms.reviewer: mattcall
 
 # Manage Microsoft Defender for Endpoint on devices with Microsoft Intune
 
-With Microsoft Defender for Endpoint (MDE), you can now deploy security configurations from Microsoft Intune directly to your onboarded devices without requiring a full Microsoft Intune device enrollment. This capability is known as *Security Management for Microsoft Defender for Endpoint*. With this capability, devices that aren’t managed by a Microsoft Intune service can receive security configurations for Microsoft Defender for Endpoint directly from Endpoint Manager.
+With Microsoft Defender for Endpoint (MDE), you can now deploy security configurations from Microsoft Intune directly to your onboarded devices without requiring a full Microsoft Intune device enrollment. This capability is known as *Security Management for Microsoft Defender for Endpoint*. With this capability, devices that aren’t managed by a Microsoft Intune service can receive security configurations for Microsoft Defender for Endpoint directly from Intune.
 
 When devices are managed through this capability:
 

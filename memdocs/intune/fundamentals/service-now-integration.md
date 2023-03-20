@@ -47,7 +47,7 @@ To get started, review the following steps:
 
 - During the Preview, no other licenses or subscriptions are required.  After the ServiceNow integration becomes Generally Available, an active Remote Help trial or add-on license is required. Go to [Remote Help trial or add-on license.](../fundamentals/intune-add-ons.md)
 
-- You must have the Microsoft Azure Active Directory (Azure AD) Global Admin Role or Azure AD Intune Admin role to make updates to the connector. To view the incidents, you must have the Azure AD Global Admin Role or Azure AD Intune Admin role or have an Intune Role with the Organization | Read permission. For information on  roles, see [Role-based administration control with Intune](role-based-access-control.md)
+- You must have the Microsoft Azure Active Directory (Azure AD) Global Admin Role or Azure AD Intune Admin role to make updates to the connector. To view the incidents, you must have the Azure AD Global Admin Role or Azure AD Intune Admin role or have an Intune Role with the Organization | Read permission. Admins that aren't assigned the Azure AD roles, need one of these two permissions to either modify the connector or view incidents respectively; **Update Connector** and **View Incidents**.  These permissions are part of the ServiceNow permission category. For information on  roles, see [Role-based administration control with Intune](role-based-access-control.md)
 
 - You must have ServiceNow permissions to view incidents when using the **Test connection** action. You can assign the *itil* role to grant appropriate permissions to view incidents.  A ServiceNow license needs to be assigned to admins who view incidents. 
 
@@ -88,7 +88,7 @@ To create a new OAuth application,
      |--------------------|-------------------------------------------------------------------------------------------------------------------------------------|
      | Client ID            | The ServiceNow OAuth server automatically generates the ClientID.   |
      | Client Secret         | Client Secret for the OAuth generation. Leave it empty for auto-generation. This value is used as an input in the **ServiceNow client appID** field for the ServiceNow connector configuration.                           |
-     | Redirect URL     | The authorization server redirects to this URL. They must be an absolute URL and comma separated. For example, you can set the URL to 'https://endpoint.microsoft.com/TokenAuthorize/ExtensionName/Microsoft_Intune_DeviceSettings'                       |
+     | Redirect URL     | The authorization server redirects to this URL. They must be an absolute URL and comma separated. For example, you can set the URL to 'https://intune.microsoft.com/TokenAuthorize/ExtensionName/Microsoft_Intune_DeviceSettings'                       |
      | Logo URL           | Provide the URL to the publicly hosted company logo, which is displayed when authenticating with ServiceNow. For example, you can set it to: 'https://photos.smugmug.com/photos/i-SJfnMq3/0/XL/i-SJfnMq3-XL.png'    |
      | Application        | By default, set to **Global** and isn't editable when creating the OAuth app.                           |
      | Accessible from    | By default, set to **All application scopes**.                       |

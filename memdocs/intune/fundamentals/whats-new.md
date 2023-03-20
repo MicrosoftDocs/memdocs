@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/06/2023
+ms.date: 03/14/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -67,12 +67,54 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 -->
 
-## Week of March 6, 2023
+## Week of March 13, 2023
+
+### Device management
+
+#### Meta Quest 2 and Quest Pro are now in Open Beta (US only) on Microsoft Intune for Android Open Source Devices
+
+Microsoft Intune for Android open source project devices (AOSP) has welcomed Meta Quest 2 and Quest Pro into Open Beta for the US market.
+
+For more information go to [Operating systems and browsers supported by Microsoft Intune](../fundamentals/supported-devices-browsers.md)
+
+Applies to:
+
+- Microsoft Intune (AOSP)  
+
+### App management
+
+#### Trusted Root Certificates Management for Intune App SDK for Android<!-- 15135752 -->
+If your Android application requires SSL/TLS certificates issued by an on-premise or private certificate authority to provide secure access to internal websites and applications, the Intune App SDK for Android now has support for certificate trust management. For more information and examples, see [Trusted Root Certificates Management](../developer/app-sdk-android-phase7.md#trusted-root-certificates-management).
+
+#### System context support for UWP apps<!-- 16544103 -->
+In addition to user context, you will be able to deploy Universal Windows Platform (UWP) apps from the **Microsoft Store app (new)** in system context. If a provisioned *.appx* app is deployed in system context, the app will auto-install for each user that logs in. If an individual end user uninstalls the user context app, the app will still show as installed because it is still provisioned. In addition, the app must not already be installed for any users on the device. Our general recommendation is to not mix install contexts when deploying apps. Note that Win32 apps from the **Microsoft Store app (new)** already supports system context.
+
+## Week of March 6, 2023  
 
 ### App management
 
 #### Deploy Win32 apps to device groups<!-- 7359954 -->
-You can now deploy Win32 apps with **Available** intent to device groups. For more information, see [Win32 app management in Microsoft Intune](../apps/apps-win32-app-management.md).
+You can now deploy Win32 apps with **Available** intent to device groups. For more information, see [Win32 app management in Microsoft Intune](../apps/apps-win32-app-management.md). 
+
+### Device management  
+
+#### New URL for Microsoft Intune admin center<!-- 17441426 -->  
+The Microsoft Intune admin center has a new URL: [https://intune.microsoft.com](https://intune.microsoft.com). The previously used URL, [https://endpoint.microsoft.com](https://endpoint.microsoft.com), will continue to work but will redirect to the new URL in late 2023. We recommend taking the following actions to avoid issues with Intune access and automated scripts: 
+
+* Update login or automation to point to `https://intune.microsoft.com`. 
+* Update your firewalls, as needed, to allow access to the new URL. 
+* Add the new URL to your favorites and bookmarks. 
+* Notify your helpdesk and update IT administrator documentation.  
+
+### Tenant administration
+
+#### Add CMPivot queries to Favorites folder<!-- 16702226 -->
+You can add your frequently used queries to a **Favorites** folder in CMPivot. CMPivot allows you to quickly assess the state of a device managed by Configuration Manager via Tenant Attach and take action. The functionality is similar to one already present in the Configuration Manager console. This addition will help you keep all your most used queries in one place. You can also add tags to your queries to help search and find queries. The queries saved in the Configuration Manager console will not automatically be added to your **Favorites** folder. You will need to create new queries and add them to this folder. For more information about CMPivot, see [Tenant attach: CMPivot usage overview](../../configmgr/tenant-attach/cmpivot-start.md).
+
+### Device enrollment
+
+#### New Microsoft Store apps now supported with the Enrollment Status Page
+The Enrollment Status Page (ESP) now supports the new Microsoft store applications during Windows Autopilot. This update enables better support for the new Microsoft Store experience and should be rolling out to all tenants starting with Intune 2303. For related information, see [Set up the Enrollment Status Page](../enrollment/windows-enrollment-status.md).
 
 ## Week of February 27, 2023
 
@@ -185,9 +227,12 @@ Applies to:
 #### Allow Temporary Enterprise Feature Control is available in the Settings Catalog<!-- 15752120  -->  
 In on-premises group policy, there is an **Enable features introduced via servicing that are off by default** setting.
 
-In Intune, this setting is known as **Allow Temporary Enterprise Feature Control** and is available in the Settings Catalog.
+In Intune, this setting is known as **Allow Temporary Enterprise Feature Control** and is available in the Settings Catalog. This servicing adds features that off by default. When set to **Allowed**, these features are enabled and turned on.
 
-For more information on this feature, go to [Blog: Commercial control for continuous innovation](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/commercial-control-for-continuous-innovation/ba-p/3737575).
+For more information on this feature, go to:
+
+- [AllowTemporaryEnterpriseFeatureControl](/windows/client-management/mdm/policy-csp-Update#allowtemporaryenterprisefeaturecontrol) policy CSP
+- [Blog: Commercial control for continuous innovation](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/commercial-control-for-continuous-innovation/ba-p/3737575)
 
 The Windows features that are enabled by this policy setting will be released later in 2023. Intune is releasing this policy setting now for your awareness and preparation, which is before any need to use the setting with future Windows 11 releases.
 
@@ -1352,7 +1397,7 @@ You can now use [Trend Micro Mobile Security as a Service](../protect/trend-micr
  
 For more information, see:
 - [Mobile threat defense integration with Intune](../protect/mobile-threat-defense.md)
-- [Trend Micro Mobile Security documentation](https://docs.trendmicro.com/en-us/enterprise/trend-micro-vision-one/mobile-security/getting-started-with_003.aspx)
+<!-- - [Trend Micro Mobile Security documentation](https://docs.trendmicro.com/en-us/enterprise/trend-micro-vision-one/mobile-security/getting-started-with_003.aspx) -->
 
 #### Grace period status visible on Intune Company Portal website<!-- 15025900 -->
 The Intune Company Portal website now shows a grace period status to account for devices that don't meet compliance requirements but are still within their given grace period. Users are shown the date by which they need to become compliant and the instructions for how to become compliant. If they don't update their device by the given date, their status changes to noncompliant. For more information about setting grace periods, see [Configure compliance policies with actions for noncompliance](../protect/actions-for-noncompliance.md#available-actions-for-noncompliance).

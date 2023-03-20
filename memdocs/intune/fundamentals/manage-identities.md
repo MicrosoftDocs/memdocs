@@ -35,7 +35,7 @@ ms.collection:
 
 Managing and protecting user identities is a significant part of any endpoint management strategy and solution. Identity management includes the user accounts and groups that access your organization resources.
 
-:::image type="content" source="./media/manage-identities/identities-different-user-types.png" alt-text="Image that shows addings users to the Microsoft Intune admin center and assigning policies to different user types in Microsoft Intune." lightbox="./media/manage-identities/identities-different-user-types.png":::
+:::image type="content" source="./media/manage-identities/identities-different-user-types.png" alt-text="Diagram that shows addings users to the Microsoft Intune admin center and assigning policies to different user types in Microsoft Intune." lightbox="./media/manage-identities/identities-different-user-types.png":::
 
 Admins have to manage account membership, authorize and authenticate access to resources, manage settings that affect user identities, and secure & protect the identities from malicious intent.
 
