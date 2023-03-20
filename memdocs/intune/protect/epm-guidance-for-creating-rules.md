@@ -60,7 +60,7 @@ File hash can be gathered from the direct binary using the [Get-Filehash PowerSh
 
 ### Certificate rules
 
-Certificate rules are a strong type of attribute and should be paired with additional attributes. Pairing a signer with attributes like product name, internal name, description drastically improves the security of the rule. These attributes are protected by signature, and often indicate specifics about the signed file.
+Certificate rules are a strong type of attribute and should be paired with additional attributes. Pairing a certificate with attributes like product name, internal name, description drastically improves the security of the rule. These attributes are protected by signature, and often indicate specifics about the signed file.
 
 > [!CAUTION]
 > Using just a certificate and a file name provides very limited protection for misuse of a rule. File names can be changed by any *standard user* provided they have access to the directory where the file resides. This might not be a concern for files that reside in a write-protected directory.

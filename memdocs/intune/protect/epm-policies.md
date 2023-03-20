@@ -30,7 +30,7 @@ ms.collection:
 # Configure policies for Endpoint Privilege Management
 
 <!-- [!INCLUDE [intune-add-on-note](../includes/intune-add-on-note.md)] -->
-
+ 
 > [!NOTE]  
 > This capability is in public preview and available to use without a license. After public preview, it will be available as an Intune add-on. For more information, see [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md).
 
@@ -54,7 +54,7 @@ Applies to:
 
 ## Get started with EPM policies
 
-EPM uses the two policy types that you configure to manage how a file elevation request is handled. Together, the policies configure the behavior for file elevations when standard users request to *run with administrative privileges*:
+EPM uses the two policy types that you configure to manage how a file elevation request is handled. Together, the policies configure the behavior for file elevations when standard users request to *run with administrative privileges*.
 
 ### Windows elevation settings policy
 
@@ -63,7 +63,7 @@ Use *Windows elevation settings policy* when you want to:
 
 - **Enable Endpoint Privilege Management** on devices. By default, this policy enables EPM. When first enabled for EPM, a device provisions the components that collect usage data on elevation requests and enforce elevation rules.
 
-  If a device has EPM disabled, the client components immediately disable. There's a delay of seven days before the EPM component is completely removed. The delay can reduce the time it takes to restore EPM should a device have accidentally had EPM disabled, or its elevation settings policy unassigned accidentally.
+  If a device has EPM disabled, the client components immediately disable. There's a delay of seven days before the EPM component is completely removed. The delay can reduce the time it takes to restore EPM should a device have accidentally had EPM disabled, or its elevation settings policy accidentally unassigned.
 
 - **Default elevation response** - Set a default response for an *elevation request* of any file that’s not managed by a *Windows elevation rule policy*. For this setting to have an effect, no rule can exist for the application **AND** an end user must have *explicitly requested* elevation through the *Run with elevated access* right-click menu. By default, this option isn't configured. If no setting is delivered, the EPM components fall back to their built-in default, which is **deny all requests**.
   
