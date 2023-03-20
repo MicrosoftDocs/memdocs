@@ -284,11 +284,11 @@ By default, Configuration Manager looks for computer certificates in the Persona
 
 ### Boot media and boot images for deploying operating systems
 
-The certificate is used if the task sequence includes client actions like client policy retrieval or sending inventory information. It allows the computer to connect to an HTTPS-enabled management point during the OS deployment process.
+This certificate is used by an OSD task sequence and allows the computer to connect to an HTTPS-enabled management point during the OS deployment process. This may include such as actions such as client policy retrieval.
 
-This certificate is only used during the OS deployment process. It isn't used to install the client or installed on the device. Because of this temporary use, you can use the same certificate for every OS deployment if you don't want to use multiple client certificates.
+This certificate is only used during the OS deployment process. It isn't used when the the client is installed during the **Setup Windows and ConfigMgr** task nor is it installed on the device. Because of this temporary use, you can use the same certificate for every OS deployment if you don't want to use multiple client certificates.
 
-When you have an environment that's HTTPS-only, the boot media must have a valid certificate. This certificate allows the device to communicate with the site and for the deployment to continue. After the task sequence completes, the client can automatically generate a certificate when the device is joined to Active Directory via GPO, or you can install a client certificate by using another method.
+When you have an environment that's HTTPS-only, the boot media must have a valid certificate. This certificate allows the device to communicate with the site and for the deployment to continue. After the task sequence completes, the client can automatically generate a certificate when the device is joined to Active Directory via GPO, or you can install a PKI certificate by using another method.
 
 > [!NOTE]
 > The requirements for this certificate are the same as the server certificate for site systems with the distribution point role. Because the requirements are the same, you can use the same certificate file.
@@ -307,11 +307,15 @@ Certificate requirements:
 
 - Maximum supported key length is 2,048 bits.
 
-Export this certificate in a Public Key Certificate Standard (PKCS #12) format. You need to know the password, so that you can import the certificate to the boot media properties.
+Export this certificate in a Public Key Certificate Standard (PKCS #12) format. You need to know the password, so that you can import the certificate when creating the boot media.
 
 > [!NOTE]
 >
 > Boot images don't contain PKI certificates to communicate with the site. Instead, boot images use the PKI certificate added to the boot media to communicate with the site.
+
+> [!NOTE]
+>
+> Stand-alone task sequences run from boot media use the existing PKI certificate on a client device instead of the PKI certificate in the boot media.
 
 ### macOS client computers
 
