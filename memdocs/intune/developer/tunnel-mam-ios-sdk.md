@@ -73,7 +73,7 @@ To use the Microsoft Tunnel for MAM iOS SDK, the following prerequisites are req
 
   2. **[Microsoft Authentication Library (MSAL)](https://github.com/AzureAD/microsoft-authentication-library-for-objc)** (opens a GitHub site): At a minimum, install the 1.2.3​ version.
 
-- Install and set up the [Microsoft Tunnel for MAM iOS SDK (public preview)](https://aka.ms/MAMTunneliOSGithubLink) (opens a GitHub site). This SDK is the focus of this article.
+- Install and set up the [Microsoft Tunnel for MAM iOS SDK](https://aka.ms/MAMTunneliOSGithubLink) (opens a GitHub site). This SDK is the focus of this article.
 
   > [!IMPORTANT]
   > Intune regularly releases updates to the Microsoft Tunnel for MAM iOS SDK. Regularly, check the [Microsoft Tunnel for MAM iOS SDK](https://aka.ms/MAMTunneliOSGithubLink) for updates. Add these updates into your software development release cycle. You want to make sure your apps support the Microsoft Tunnel Gateway updates and feature enhancements.
