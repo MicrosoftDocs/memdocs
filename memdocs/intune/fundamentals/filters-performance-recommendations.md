@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/16/2023
+ms.date: 03/20/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -31,7 +31,7 @@ ms.collection:
 
 # Performance recommendations for Grouping, Targeting and Fitering in large Microsoft Intune environments
 
-This article lists and describes recommendations for Intune grouping, targeting, and filtering for your policies and applications. The goal is to help you make architecture and design decisions for your Intune deployments in large environments.
+This article lists and describes recommendations for Intune grouping, targeting, and filtering for your policies and apps. The goal is to help you make architecture and design decisions for Intune deployments in large environments.
 
 These performance recommendations and their implementation can be different and depend on your own environment & other factors, including manageability and simplicity.
 
@@ -88,7 +88,7 @@ These recommendations focus on improving performance and reducing latency in wor
 
 If you assign Intune workloads to large Azure AD groups that have many users or devices, then synchronization backlogs can happen in your Intune environment. This backlog impacts policy and app deployments, which take longer to reach managed devices.
 
-The built-in **All users** and **All devices** groups are Intune-only grouping objects that do not exist in Azure AD. There isn't a continuous sync between Azure AD and Intune. Similarly, filters are Intune-only design rules that evaluate devices for policy assignment dynamically during a check-in with the Intune service.
+The built-in **All users** and **All devices** groups are Intune-only grouping objects that don't exist in Azure AD. There isn't a continuous sync between Azure AD and Intune. Similarly, filters are Intune-only design rules that evaluate devices for policy assignment dynamically during a check-in with the Intune service.
 
 > [!NOTE]
 > For information on Intune check-in policy refresh intervals, go to [Intune Policy refresh intervals](../configuration/device-profile-troubleshoot.md#policy-refresh-intervals).
@@ -155,9 +155,9 @@ Instead of mixed exclusions, we recommend assigning to a user group. Then, use f
 
 ## Summary
 
-When creating and managing assignments in Intune, incorporate some of these recommendations. Use groups or virtual groups and apply filters to help refine the targeting scope, and keep the best practices in mind:
+When creating and managing assignments in Intune, incorporate some of these recommendations. Use groups or virtual groups, and apply filters to help refine the targeting scope. Keep the best practices in mind:
 
-- Use Intune virtual groups, instead of building your own in AAD becauese they don’t require Azure AD syncing.
+- Use the Intune virtual groups, as they don’t require Azure AD syncing. Creating your own Azure AD groups can cause synchronization backlogs.
 - Reuse groups to optimize your targeting.
 - Make incremental group changes for more efficient processing, particularly when targeting a very large group for the first time.
 - Use filters to dynamically include and exclude devices, on top of group or virtual group assignments.
