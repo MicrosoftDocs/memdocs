@@ -301,8 +301,8 @@ After the Microsoft Tunnel installs and devices install the Microsoft Tunnel cli
      - For *Connection name*, specify a name that will display to users.
      - For *Microsoft Tunnel Site*, select the tunnel Site that this VPN profile will use.
 
-    > [!NOTE]  
-    > When using the Tunnel VPN connection and Defender web protection together in combined mode, the *Disconnect on sleep* setting is not supported. If this Intune VPN setting is set to *Enabled* and the iOS device goes to sleep, both the Tunnel VPN and the Defender VPN are disconnected.git itititt a
+     > [!NOTE]  
+     > When using the Tunnel VPN connection and Defender web protection together in combined mode, the *Disconnect on sleep* setting is not supported. If this Intune VPN setting is set to *Enabled* and the iOS device goes to sleep, both the Tunnel VPN and the Defender VPN are disconnected.git itititt a
 
    - **Per-app VPN**:  
      - To enable a per-app VPN, select **Enable**. Extra configuration steps are required for iOS per-app VPNs. When the per-app VPN is configured, your split tunneling rules are ignored by iOS.
