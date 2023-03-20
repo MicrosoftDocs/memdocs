@@ -45,7 +45,7 @@ When you install an update, the update stores installation files for that versio
 
 - Use the files in the CD. Latest folder during site recovery. Also, when your hierarchy no longer runs a baseline version, use these files to install other sites.
 
-- You can't use installation files from CD.Latest to install the first site of a new hierarchy, or to upgrade a site from System Center 2012 Configuration Manager.
+- You can't use installation files from CD. Latest to install the first site of a new hierarchy, or to upgrade a site from System Center 2012 Configuration Manager.
 
 ### Version details
 
