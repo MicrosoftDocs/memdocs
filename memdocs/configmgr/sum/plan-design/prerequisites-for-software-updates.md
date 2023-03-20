@@ -5,7 +5,7 @@ description: Learn about prerequisites for software updates in Configuration Man
 author: BalaDelli
 ms.author: baladell
 manager: apoorvseth
-ms.date: 10/20/2021
+ms.date: 03/20/2023
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -29,12 +29,14 @@ This article lists the prerequisites for software updates in Configuration Manag
 ### Windows Server Update Services  
  Windows Server Update Services (WSUS) is needed for software updates synchronization and for the software updates applicability scan on clients. The WSUS server must be installed before you create the software update point role. The following versions of WSUS are supported for a software update point:  
 
-- WSUS 10.0.14393 (role in Windows Server 2016)
-- WSUS 10.0.17763 (role in Windows Server 2019) (Requires Configuration Manager 1810 or later)
-- WSUS 6.2 and 6.3 (role in Windows Server 2012 and Windows Server 2012 R2)
+- WSUS 10.0.14393 (role in Windows Server 2016) (2023-02 Cumulative Update, or a later cumulative update)
+- WSUS 10.0.17763 (role in Windows Server 2019) (Requires Configuration Manager 1810 or later) (2023-02 Cumulative Update, or a later cumulative update)
+- WSUS 10.0.20348 (role in Windows Server 2022) (2023-02 Cumulative Update, or a later cumulative update)
+- WSUS 6.2 and 6.3 (role in Windows Server 2012 and Windows Server 2012 R2) (2023-03 Cumulative Update, or a later cumulative update)
   - [KB 3095113 and KB 3159706 (or an equivalent update)](#BKMK_wsus2012) are needed for WSUS 6.2 and 6.3 if you deploy Windows upgrades.
 
 > [!NOTE]
+> - Starting March 28, 2023, on-premises Windows 11, version 22H2 devices will receive quality updates via the Unified Update Platform (UUP), 2023-02 cumulative update is a must If you're unable to install these updates, you can [manually add the required MIME types for UUP](windows-server/administration/windows-server-update-services/plan/plan-your-wsus-deployment#manually-add-the-required-mime-types-for-uup) to the WSUS server.
 > - When you have multiple software update points at a site, ensure that they're all running the same version of WSUS.
 
 ### WSUS Administration Console  
