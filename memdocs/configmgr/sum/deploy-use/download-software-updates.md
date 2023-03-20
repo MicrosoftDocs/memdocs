@@ -2,7 +2,7 @@
 title: Download software updates
 titleSuffix: Configuration Manager
 description: Use the Download Software Updates Wizard to download software updates and distribute them to distribution points so they are ready to deploy to clients.
-ms.date: 01/23/2017
+ms.date: 03/20/2023
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -23,7 +23,8 @@ ms.collection: tier3
 There are several methods available to you for downloading software updates in Configuration Manager. When you create an automatic deployment rule (ADR) or manually deploy software updates, the software updates are downloaded to the content library on the site server. Then, the software updates are copied to the content library on the distribution points that are associated with the configured deployment package. If you want to download the software updates before you deploy them, you can use the Download Updates Wizard. Doing this will enable you to verify that the software updates are available on distribution points before you deploy the software updates to client computers.  
 
 > [!NOTE]  
->  For information about monitoring content status, see the [Content status monitoring](../deploy-use/monitor-software-updates.md#BKMK_ContentStatus).  
+>  - Starting March 28, 2023, on-premises Windows 11, version 22H2 devices will receive quality updates via the Unified Update Platform (UUP). On-premises update management with Unified Update Platform (UUP) requires an additional 10 GB of space per Windows version and processor architecture for each version. For more information, see the [UUP considerations](/windows-server/administration/windows-server-update-services/plan/plan-your-wsus-deployment#uup-considerations) section
+>  - For information about monitoring content status, see the [Content status monitoring](../deploy-use/monitor-software-updates.md#BKMK_ContentStatus).  
 
 Use the following procedure to download software updates by using the Download Software Updates Wizard.  
 
