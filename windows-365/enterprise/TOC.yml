@@ -31,6 +31,8 @@ items:
     href: device-configuration.md
   - name: What is Windows 365 Government
     href: introduction-windows-365-government.md
+  - name: What is Windows 365 Frontline
+    href: introduction-windows-365-frontline.md
   - name: Security
     items:
     - name: Windows 365 security
