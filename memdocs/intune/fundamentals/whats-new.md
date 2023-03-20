@@ -141,13 +141,16 @@ Applies to:
 ### Device enrollment
 
 #### Support for the await final configuration setting for iOS/iPadOS Automated device enrollment (public preview)<!-- 13156553  -->  
-Now in public preview, Intune supports a new setting called **Await final configuration** in specific iOS/iPadOS automated device enrollment profiles. This setting enables an out-of-the-box locked experience in Setup Assistant to prevent device users from accessing restricted content or changing settings on the device until the majority of Intune device configuration policies are installed. To configure the setting, create an automated device enrollment profile (**Devices** > **iOS/iPadOS** > **iOS/iPadOS enrollment** > **Enrollment program tokens** > **Create profile**) in the admin center. For more information, see [Create an Apple enrollment profile](../enrollment/device-enrollment-program-ios.md#create-an-apple-enrollment-profile). 
+Now in public preview, Intune supports a new setting called **Await final configuration** in specific iOS/iPadOS automated device enrollment profiles. This setting enables an out-of-the-box locked experience in Setup Assistant to prevent device users from accessing restricted content or changing settings on the device until the majority of Intune device configuration policies are installed. To configure the setting, create an automated device enrollment profile (**Devices** > **iOS/iPadOS** > **iOS/iPadOS enrollment** > **Enrollment program tokens** > **Create profile**) in the admin center. For more information, see [Create an Apple enrollment profile](../enrollment/device-enrollment-program-ios.md#create-an-apple-enrollment-profile).
 
 #### New setting gives Intune admins control over device-to-category mapping<!-- 15029839 -->  
 Control visibility of the device category prompt in Intune Company Portal. You can now hide the prompt from end users and leave the device-to-category mapping up to Intune admins. The new setting is available in the admin center under **Tenant Administration** > **Customization** > **Device Categories**. For more information, see [Device categories](../apps/company-portal-app.md#device-categories).
 
 #### Support for multiple enrollment profiles and tokens for fully managed devices <!-- 14205233  -->  
 Create and manage multiple enrollment profiles and tokens for Android Enterprise fully managed devices. With this new functionality, you can now use the *EnrollmentProfileName* dynamic device property to automatically assign enrollment profiles to fully managed devices. The enrollment token that came with your tenant will remain in a default profile. For more information, see [Set up Intune enrollment of Android Enterprise fully managed devices](../enrollment/android-fully-managed-enroll.md).
+
+#### New Azure AD frontline worker experience for iPad<!-- 6367427  -->  
+Intune now supports a frontline worker experience for iPhones and iPads using Apple automated device enrollment. You can now enroll devices that are in Azure AD shared mode, and you can enable user enrollment via zero-touch provisioning.  For more information, see [Set up enrollment for devices in Azure AD shared device mode](../enrollment/automated-device-enrollment-shared-device-mode.md).
 
 ### Device management
 
@@ -199,6 +202,15 @@ The Devices area in the admin center now has a more consistent UI, with more cap
 * A consistent way across list views to search, sort, and filter data.
 
 For more information about the updated UI, see [Try new Devices experience in Microsoft Intune](microsoft-intune-admin-center-devices.md).
+
+### Device security
+
+#### Microsoft Intune Endpoint Privilege Management (public preview)<!-- 15654169   -->  
+As a public preview, you can now use Microsoft Intune Endpoint Privilege Management. With Endpoint Privilege Management, admins can set policies that allow standard users to perform tasks normally reserved for an administrator. Endpoint Privilege Management can be configured in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) at **Endpoint security** > **Endpoint Privilege Management**.
+
+With the public preview you can configure policies for *automatic* and *user-confirmed* workflows that elevate the run-time permissions for apps or processes you select. You then assign these policies to users or devices that have end users running without Administrator privileges. Once policy is received, Endpoint Privilege Management will broker the elevation on behalf of the user, allowing them to elevate approved applications without needing full administrator privileges. The preview also includes built-in insights and reporting for Endpoint Privilege Management.
+
+To learn how to activate the public preview and use Endpoint Privilege Management policies, start with [Use Endpoint Privilege Management with Microsoft Intune](../protect/epm-overview.md). Endpoint Privilege Management is part of the [Intune Suite](../fundamentals/intune-add-ons.md) offering, and free to try while it remains in public preview.
 
 ### Intune apps
 
@@ -1569,11 +1581,8 @@ You can now use [Trend Micro Mobile Security as a Service](../protect/trend-micr
  
 For more information, see:
 - [Mobile threat defense integration with Intune](../protect/mobile-threat-defense.md)
-<<<<<<< HEAD
-- [Trend Micro Mobile Security documentation](https://www.trendmicro.com/en_us/business/products/user-protection/endpoint-security.html)
-=======
+
 <!-- - [Trend Micro Mobile Security documentation](https://docs.trendmicro.com/en-us/enterprise/trend-micro-vision-one/mobile-security/getting-started-with_003.aspx) -->
->>>>>>> 0e3d9e2051ebf67852c8d177ec951a0b801235d1
 
 #### Grace period status visible on Intune Company Portal website<!-- 15025900 -->
 The Intune Company Portal website now shows a grace period status to account for devices that don't meet compliance requirements but are still within their given grace period. Users are shown the date by which they need to become compliant and the instructions for how to become compliant. If they don't update their device by the given date, their status changes to noncompliant. For more information about setting grace periods, see [Configure compliance policies with actions for noncompliance](../protect/actions-for-noncompliance.md#available-actions-for-noncompliance).

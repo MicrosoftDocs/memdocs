@@ -78,8 +78,6 @@ The global quiet time settings will allow you to create policies to schedule qui
 
 ## Device configuration
 
-<<<<<<< HEAD
-=======
 ### Add Google accounts to Android Enterprise personally owned devices with a work profile<!-- 9113561 idready -->
 
 On Android Enterprise personally owned devices with a work profile, you can configure settings that restrict device features and settings. Currently, there's an **Add and remove accounts** setting. This setting prevents accounts from being added in the work profile, including preventing Google accounts. 
@@ -117,13 +115,6 @@ Applies to:
 
 <!-- *********************************************** -->
 
-## Device enrollment
-
-### Intune's AAD frontline worker iPad experience<!-- 6367427  -->  
-Intune will support a frontline worker (FLW) experience for iPhones and iPads. The foundation for this experience is based on support for both the Azure Active Directory (AAD) shared device mode and the Microsoft Enterprise SSO plug-in (Microsoft Azure AD SSO extension). We also will release ZTP (Zero Touch Provisioning) which allows user enrollment without any user action.
-
-<!-- *********************************************** -->
-
 ## Device management
 
 ### On-demand proactive remediation for a Windows device<!-- 14783338  -->  
@@ -140,13 +131,6 @@ Applies to:
 <!-- ***********************************************-->
 
 ## Device security
-
-### Microsoft Intune Endpoint Privilege Management (public preview)<!-- 15654169 -->  
-As a public preview, we’ll be introducing Microsoft Intune Endpoint Privilege Management. With Endpoint Privilege Management, admins can set policies that allow standard users to perform tasks normally reserved for an administrator. Endpoint Privilege Management can be configured in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) at **Endpoint security** > **Endpoint Privilege Management**.
-
-With the public preview you’ll be able to configure policies for *automatic* and *user-confirmed* workflows that elevate the run-time permissions for apps or processes you select. You then assign these policies to users or devices that have end users running without Administrator privileges. Once policy is received, Endpoint Privilege Management will broker the elevation on behalf of the user, allowing them to elevate approved applications without needing full administrator privileges. The preview also includes built-in insights and reporting for Endpoint Privilege Management.
-
-Endpoint Privilege Management is part of the [Intune Suite](../fundamentals/intune-add-ons.md) offering, and free to try while it remains in public preview.
 
 ### Support for tamper protection in policies for Security settings management for Microsoft Defender for Endpoint <!-- 13204113 -->  
 You’ll soon be able to manage Tamper protection for Microsoft Defender for Endpoint on unenrolled devices as part of the [MDE Security configuration](../protect/mde-security-integration.md#which-solution-should-i-use) scenario.
