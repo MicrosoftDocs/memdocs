@@ -68,6 +68,6 @@ In addition to the dedicated reports, you can view basic details about EPM polic
 
 ## Next steps
 
-[Learn about Endpoint Privilege Management](../protect/epm-overview.md)
-
-[Data collection for Endpoint Privilege Management](../protect/epm-data-collection.md)
+- [Guidance for creating Elevation Rules](../protect/epm-guidance-for-creating-rules.md)
+- [Configure policies for Endpoint Privilege Management](../protect/epm-policies.md)
+- [Data collection and privacy for Endpoint Privilege Management](../protect/epm-data-collection.md)

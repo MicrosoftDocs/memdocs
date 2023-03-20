@@ -299,4 +299,6 @@ If a device receives two rules targeting the same application, both rules are co
 
 ## Next steps
 
-[Use reports for Endpoint Privilege Management](../protect/epm-reports.md)
+- [Guidance for creating Elevation Rules](../protect/epm-guidance-for-creating-rules.md)
+- [Reports for Endpoint Privilege Management](../protect/epm-policies.md)
+- [Data collection and privacy for Endpoint Privilege Management](../protect/epm-data-collection.md)

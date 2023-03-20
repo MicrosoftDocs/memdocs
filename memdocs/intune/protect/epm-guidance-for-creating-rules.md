@@ -91,4 +91,8 @@ When moving to standard user and utilizing Endpoint Privilege Management, you ma
 > Endpoint Privilege Management will not interfere with actions (or UAC) being executed by an Administrator on the device. It is possible to create rules that apply to Administrators on the device, so special considerations should be given to rules that are applied to all users on a device and the impact on users with Administrator.
 
 ## Next steps
-[Learn about Endpoint Privilege Management](../protect/epm-overview.md)
+
+- [Learn about Endpoint Privilege Management](../protect/epm-overview.md)
+- [Configure policies for Endpoint Privilege Management](../protect/epm-policies.md)
+- [Reports for Endpoint Privilege Management](../protect/epm-policies.md)
+- [Data collection and privacy for Endpoint Privilege Management](../protect/epm-data-collection.md)
