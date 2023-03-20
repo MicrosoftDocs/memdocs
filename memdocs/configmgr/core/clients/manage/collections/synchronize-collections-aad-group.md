@@ -63,7 +63,6 @@ Example synchronization scenario:
 
 > [!TIP]
 > The Server App (Service Principle) of Azure AD tenant will be the owner for the created Azure AD group.
-> :::image type="content" source="media/3607475-sync-collection-to-azuread-owner.png" alt-text="Screenshot of Owner for Azure AD Group." lightbox="media/3607475-sync-collection-to-azuread-owner.png":::
 
 1. Select **Create** to finish creating the Azure AD group.
 
@@ -111,6 +110,14 @@ You can use PowerShell to synchronize collections. For more information, see the
 
 1. Right click on column header and add additional columns to view more information. 
 
+1. On clicking each collection, you can view collection member status in the bottom tab.
+
+1. The members are categorized based on sync status - Success, Failed, In Progress.
+
+1. On clicking Failed tab, you can find the reason for failure across each member.
+
+:::image type="content" source="media/collection-aad-group-sync.png" alt-text="Screenshot of Collections Cloud Sync Status." lightbox="media/collection-aad-group-sync.png"::: 
+
 Default Columns: 
 
 - Collection Id – Id of Collection 
@@ -156,14 +163,6 @@ Optional Columns:
 - Last Sync Status - Status of last sync cycle 
 
 - Last Sync Time - Time of last sync cycle
- 
-1. On clicking each collection, you can view collection member status in the bottom tab.
-
-1. The members are categorized based on sync status - Success, Failed, In Progress.
-
-1. On clicking Failed tab, you can find the reason for failure across each member.
-
-:::image type="content" source="media/collection-aad-group-sync.png" alt-text="Screenshot of Collections Cloud Sync Status." lightbox="media/collection-aad-group-sync.png":::
 
 ## Verify the Azure AD group membership
 
