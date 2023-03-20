@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/01/2023
+ms.date: 03/23/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -67,14 +67,14 @@ Use of a *Server configuration* lets you create a configuration a single time an
    - **IP ranges to include**
    - **IP ranges to exclude**
 
-  > [!NOTE]
-  > Do not use an IP range that specifies 0.0.0.0 in any of the include or exclude addresses, Tunnel Gateway cannot route traffic when this range is used.
-  > 
+   > [!NOTE]
+   > Do not use an IP range that specifies 0.0.0.0 in any of the include or exclude addresses, Tunnel Gateway cannot route traffic when this range is used.
 
 5. On the **Review + create** tab, review the configuration, and then select **Create** to save it.
-  > [!NOTE]
-  > By default, each VPN session will stay active for only 3,600 seconds (one hour) before it disconnects (a new session will be established immediately in case the client is set to use Always On VPN).
-  > However, you can modify the session timeout value along with other server configuration settings using [graph calls (microsoftTunnelConfiguration)](/graph/api/resources/intune-mstunnel-microsofttunnelconfiguration).
+
+   > [!NOTE]
+   > By default, each VPN session will stay active for only 3,600 seconds (one hour) before it disconnects (a new session will be established immediately in case the client is set to use Always On VPN).
+   > However, you can modify the session timeout value along with other server configuration settings using [graph calls (microsoftTunnelConfiguration)](/graph/api/resources/intune-mstunnel-microsofttunnelconfiguration).
 
 ## Create a Site
 
@@ -295,11 +295,14 @@ After the Microsoft Tunnel installs and devices install the Microsoft Tunnel cli
 
 3. On the **Basics** tab, enter a *Name* and *Description* *(optional)* and select **Next**.
 
-4. For *Connection type*, select **Microsoft Tunnel(preview)** and then configure the following items:
+4. For *Connection type*, select **Microsoft Tunnel** and then configure the following items:
 
    - **Base VPN**:  
      - For *Connection name*, specify a name that will display to users.
      - For *Microsoft Tunnel Site*, select the tunnel Site that this VPN profile will use.
+
+    > [!NOTE]  
+    > When using the Tunnel VPN connection and Defender web protection together in combined mode, the *Disconnect on sleep* setting is not supported. If this Intune VPN setting is set to *Enabled* and the iOS device goes to sleep, both the Tunnel VPN and the Defender VPN are disconnected.git itititt a
 
    - **Per-app VPN**:  
      - To enable a per-app VPN, select **Enable**. Extra configuration steps are required for iOS per-app VPNs. When the per-app VPN is configured, your split tunneling rules are ignored by iOS.
