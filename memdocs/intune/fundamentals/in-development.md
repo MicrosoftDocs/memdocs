@@ -99,9 +99,6 @@ Applies to:
 ### Intune's AAD frontline worker iPad experience<!-- 6367427  -->  
 Intune will support a frontline worker (FLW) experience for iPhones and iPads. The foundation for this experience is based on support for both the Azure Active Directory (AAD) shared device mode and the Microsoft Enterprise SSO plug-in (Microsoft Azure AD SSO extension). We also will release ZTP (Zero Touch Provisioning) which allows user enrollment without any user action.
 
-### Support for multiple enrollment profiles and tokens for fully managed devices <!-- 14205233 -->  
-Create multiple enrollment profiles and tokens for Android Enterprise fully managed devices. With this new functionality, you'll also be able to use the *EnrollmentProfileName* dynamic device property to automatically assign enrollment profiles to fully managed devices. The enrollment token that came with your tenant will remain in a default profile.
-
 <!-- *********************************************** -->
 
 ## Device management
