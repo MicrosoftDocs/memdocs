@@ -125,19 +125,10 @@ In addition to the dedicated roles, the following built-in roles for Intune also
 
  For more information, see [Role-based access control for Microsoft Intune](../fundamentals/role-based-access-control.md).
 
-## Frequently asked questions
-
-### What happens when an someone with administrative privileges uses a device that is enabled for EPM?
-
-Endpoint Privilege Management doesn’t manage elevation requests by users that have administrative permissions on a device. There might be instances where an administrator launches a file that has an elevation rule (specifically an automatic elevation rule) that's defined on the device. This application launches as it normally does for the administrator.
-
-### What files can be elevated to administrator?
-
-Endpoint Privilege Management supports executable files. Microsoft is currently working on extending support for additional file types (MSI, etc) and providing an easy method to elevate common operating system tasks.
-
 ## Next steps
 
 - [Guidance for creating Elevation Rules](../protect/epm-guidance-for-creating-rules.md)
 - [Configure policies for Endpoint Privilege Management](../protect/epm-policies.md)
 - [Reports for Endpoint Privilege Management](../protect/epm-policies.md)
 - [Data collection and privacy for Endpoint Privilege Management](../protect/epm-data-collection.md)
+- [Deployment considerations and frequently asked questions](../protect/epm-deployment-considerations-ki.md)
