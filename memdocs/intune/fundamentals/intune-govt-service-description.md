@@ -7,7 +7,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: johmar
-ms.date: 03/08/2023
+ms.date: 03/20/2023
 ms.topic: article
 ms.prod:
 ms.service: microsoft-intune
@@ -35,7 +35,7 @@ To learn more about Intune for GCC customers, go to [EMS offers for US Governmen
 
 ## Get started with Intune for US Government GCC High and DoD
 
-The Intune GCC High and DoD offering are built on the Microsoft Azure Government Cloud. It's designed to interoperate with Microsoft 365 GCC High and DoD environments. 
+The Intune GCC High and DoD offering are built on the Microsoft Azure Government Cloud. It's designed to interoperate with Microsoft 365 GCC High and DoD environments.
 
 For more information about Intune, and what you can do, go to [Microsoft Intune securely manages identities, manages apps, and manages devices](what-is-intune.md). Use this documentation as your starting point for deploying and using Microsoft Intune.
 
@@ -60,8 +60,6 @@ Intune has two service instances:
 
 ## Feature differences in Intune GCC High and DoD
 
-- PENDING PRIYA: Intune for GCC High and DoD does not support Android (AOSP) management for corporate devices.
-
 ### Available and supported
 
 The following features are available and supported in GCC High and DoD clouds:
@@ -70,6 +68,7 @@ The following features are available and supported in GCC High and DoD clouds:
 | --- | --- |
 | Standard MDM features | ✔️ <br/><br/> You can use app policies, device configuration profiles, compliance policies, and more. |
 | Mobile Threat Defense (MTD) | ✔️ <br/><br/>Mobile Threat Defense (MTD) connectors for Android and iOS/iPadOS devices with MTD vendors that **also support** the government environment can be used. When you sign in to a GCC-H tenant, you'll see the connectors enabled for those specific vendors. |
+| Android (AOSP) | ✔️ <br/><br/> For more information on the supported Android open source project (AOSP) devices, go to [Supported operating systems and browsers in Intune - AOSP](supported-devices-browsers.md#android). |
 
 ### In the planning phase
 
