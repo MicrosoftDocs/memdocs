@@ -111,7 +111,7 @@ The issue is fixed by propagating correct AAD device ID from ConfigMgr during In
 
  -	Windows Server 2008 SP2 Extended Security Updates (ESU Azure Only)
       
-If you have these server’s client running please don’t upgrade to 2211 client version. For more information on supported clients and devices see, [supported-operating-systems-for-clients-and-devices](../../plan-design/configs/supported-operating-systems-for-clients-and-devices.md).
+If you have these server’s client running, please don’t upgrade to 2211 client version. For more information on supported clients and devices, see, supported-operating-systems-for-clients-and-devices[supported-operating-systems-for-clients-and-devices](../../plan-design/configs/supported-operating-systems-for-clients-and-devices.md).
 
 <!--Starting with this version, the following features are no longer [pre-release](../../servers/manage/pre-release-features.md):
 -->
@@ -135,7 +135,7 @@ The following additional hotfixes are available to address specific issues:
 
 ## Next steps
 
-At this time, version 2211 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](../../servers/manage/checklist-for-installing-update-2303.md#early-update-ring).
+At this time, version 2211 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](../../servers/manage/checklist-for-installing-update-2211.md#early-update-ring).
 
 <!-- As of December 19, 2022, version 2211 is globally available for all customers to install.
 
