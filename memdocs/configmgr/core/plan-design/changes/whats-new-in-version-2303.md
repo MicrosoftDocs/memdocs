@@ -20,7 +20,7 @@ ms.reviewer: mstewart,aaroncz
 
 Update 2303 for Configuration Manager current branch is available as an in-console update. Apply this update on sites that run version 2111 or later. <!-- baseline only statement: When installing a new site, this version of Configuration Manager will also be available as a [baseline version](../../servers/manage/updates.md#bkmk_note1) soon after global availability of the in-console update.--> This article summarizes the changes and new features in Configuration Manager, version 2303.
 
-Always review the latest checklist for installing this update. For more information, see [Checklist for installing update 2303](../../servers/manage/checklist-for-installing-update-2303.md). After you update a site, also review the [Post-update checklist](../../servers/manage/checklist-for-installing-update-2211.md#post-update-checklist).
+Always review the latest checklist for installing this update. For more information, see [Checklist for installing update 2211](../../servers/manage/checklist-for-installing-update-2211.md). After you update a site, also review the [Post-update checklist](../../servers/manage/checklist-for-installing-update-2211.md#post-update-checklist).
 
 To take full advantage of new Configuration Manager features, after you update the site, also update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.
 
