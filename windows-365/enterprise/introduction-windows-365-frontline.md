@@ -58,7 +58,7 @@ Windows 365 Frontline Cloud PCs can be managed using Microsoft Intune, alongside
 
 You can view your Cloud PCs on two pages:
 
-- **All devices**: Turn on the **Model** column to differentiate between Frontline Cloud PCs adn others.
+- **All devices**: Turn on the **Model** column to differentiate between Frontline Cloud PCs and others.
 - **All Cloud PCs**: This list can be filtered to show only Frontline Cloud PCs using the **PC type** filter. 
 
 When inactive, Cloud PCs will be in a powered off state. This state makes sure that the license is available when another user on the same license signs in to their Cloud PC.
