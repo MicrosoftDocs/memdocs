@@ -83,7 +83,7 @@ For more information, see [Console changes and tips](../../servers/manage/admin-
 
 ### Dark theme is now extended to more dashboards
 
-The dark theme has been available as a pre-release feature since 2203. We've extended the dark theme to more components such as buttons, context menus, and hyperlinks. Enable this pre-release feature to experience the dark theme.
+The dark theme has been available as a prerelease feature since 2203. We've extended the dark theme to more components such as buttons, context menus, and hyperlinks. Enable this prerelease feature to experience the dark theme.
 In this release we've extended the dark theme to more dashboards, which previously didn't display the dark theme correctly. For example, the O365 Updates Dashboard, PCM Dashboard, and Health Attestation dashboard will now display according to the dark theme, when it's enabled. Pop-ups in the Health attestation dashboard will now adhere to the dark theme.
 
 Enable this pre-release feature to experience the dark theme. For more information, see [Dark theme for the console](../../servers/manage/admin-console.md#bkmk_dark).
@@ -134,7 +134,6 @@ The following additional hotfixes are available to address specific issues:
 -->
 
 ## Next steps
-
 At this time, version 2211 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](../../servers/manage/checklist-for-installing-update-2211.md#early-update-ring).
 
 <!-- As of December 19, 2022, version 2211 is globally available for all customers to install.
