@@ -77,7 +77,7 @@ Intune will support additional minimum operating system versions for Windows 10 
 - Windows 11 22H2
 
 ### Company Portal automatically installed on Android Enterprise dedicated devices<!-- 6423852  -->  
-Intune Company Portal will now be automatically installed on all Android Enterprise dedicated devices to ensure the appropriate handling of app protection policies. Users will not be able to see or launch the Company Portal, and there are no requirements for users to interact with it. Admins will notice that the Company Portal is automatically installed on their Android Enterprise dedicated devices, without the ability to uninstall.
+Intune Company Portal will now be automatically installed on all Android Enterprise dedicated devices to ensure the appropriate handling of app protection policies. Users won't be able to see or launch the Company Portal, and there are no requirements for users to interact with it. Admins will notice that the Company Portal is automatically installed on their Android Enterprise dedicated devices, without the ability to uninstall.
 
 ### Uninstall Win32 apps in the Company Portal<!-- 5145748 -->  
 *The time frame for the release of this update is still being determined.*
@@ -91,7 +91,7 @@ The global quiet time settings will allow you to create policies to schedule qui
 
 ### Add Google accounts to Android Enterprise personally owned devices with a work profile<!-- 9113561 idready -->
 
-On Android Enterprise personally owned devices with a work profile, you can configure settings that restrict device features and settings. Currently, there is an **Add and remove accounts** setting. This setting prevents accounts from being added in the work profile, including preventing Google accounts. 
+On Android Enterprise personally owned devices with a work profile, you can configure settings that restrict device features and settings. Currently, there's an **Add and remove accounts** setting. This setting prevents accounts from being added in the work profile, including preventing Google accounts. 
 
 This setting is changing, and you will be able to add Google accounts. The **Add and remove accounts** setting options will be: 
 
@@ -175,7 +175,7 @@ Applies to:
 Intune will support a frontline worker (FLW) experience for iPhones and iPads. The foundation for this experience is based on support for both the Azure Active Directory (AAD) shared device mode and the Microsoft Enterprise SSO plug-in (Microsoft Azure AD SSO extension). We also will release ZTP (Zero Touch Provisioning) which allows user enrollment without any user action.
 
 ### Install Intune policies during Setup Assistant with awaiting final configuration command (public preview)<!-- 13156553  -->  
-Intune will support a new setting called **Await final configuration** in specific iOS/iPadOS automated device enrollment profiles. This setting enables a locked experience in Setup Assistant to prevent device users from accessing restricted content or changing settings until the majority of Intune device configuration policies are installed. Just before the home screen loads, Setup Assistant will pause and let Intune finish installing critical device configuration policies. Device users will be locked into the experience on the **Awaiting final configuration** screen, and won't be able to access the home screen until the device is released with the [release device from await configuration](https://developer.apple.com/documentation/devicemanagement/release_device_from_await_configuration) command. The amount of time the device is on that screen until it is released to the home screen will vary depending on the number of policies and apps applied to the device.
+Intune will support a new setting called **Await final configuration** in specific iOS/iPadOS automated device enrollment profiles. This setting enables a locked experience in Setup Assistant to prevent device users from accessing restricted content or changing settings until the majority of Intune device configuration policies are installed. Just before the home screen loads, Setup Assistant will pause and let Intune finish installing critical device configuration policies. Device users will be locked into the experience on the **Awaiting final configuration** screen, and won't be able to access the home screen until the device is released with the [release device from await configuration](https://developer.apple.com/documentation/devicemanagement/release_device_from_await_configuration) command. The amount of time the device is on that screen until it's released to the home screen will vary depending on the number of policies and apps applied to the device.
 
 This setting is applied once during the out-of-box automated device enrollment experience.  The device user won't experience it again unless they re-enroll their device. You'll be able to utilize the locked experience on devices targeted with new and existing enrollment profiles. Supported devices include:  
 
@@ -297,7 +297,7 @@ Applies to:
 ## Tenant administration
 
 ### Add CMPivot queries to Favorites folder<!-- 16702226  -->  
-You will be able to add your frequently used queries to a **Favorites** folder in CMPivot. CMPivot allows you to quickly assess the state of a device managed by Configuration Manager via Tenant Attach and take action. The functionality is similar to one already present in the Configuration Manager console. This addition will help you keep all your most used queries in one place. You can also add tags to your queries to help search and find queries. The queries saved in the Configuration Manager console will not automatically be added to your **Favorites** folder. You will need to create new queries and add them to this folder. For more information about CMPivot, see [Tenant attach: CMPivot usage overview](../../configmgr/tenant-attach/cmpivot-overview-attached.md).
+You will be able to add your frequently used queries to a **Favorites** folder in CMPivot. CMPivot allows you to quickly assess the state of a device managed by Configuration Manager via Tenant Attach and take action. The functionality is similar to one already present in the Configuration Manager console. This addition will help you keep all your most used queries in one place. You can also add tags to your queries to help search and find queries. The queries saved in the Configuration Manager console won't be automatically added to your **Favorites** folder. You will need to create new queries and add them to this folder. For more information about CMPivot, see [Tenant attach: CMPivot usage overview](../../configmgr/tenant-attach/cmpivot-overview-attached.md).
 
 <!-- ***********************************************-->
 
