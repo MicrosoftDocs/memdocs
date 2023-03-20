@@ -31,16 +31,20 @@ ms.collection:
 
 <!-- [!INCLUDE [intune-add-on-note](../includes/intune-add-on-note.md)] -->
 > [!NOTE]  
-> This capability is in public preview, and free to try and use. After public preview, it will be available as an Intune add-on. For more information, see [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md).
+> This capability is in public preview and available to use without a license. After public preview, it will be available as an Intune add-on. For more information, see [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md).
 
-Endpoint Privilege Management (EPM) is a solution you can integrate with Microsoft Intune. EPM policies empower your organizations nonadministrative users to run files that require elevated permissions, and does so with zero or limited disruptions to user workflows. Through integration with Microsoft Intune, EPM can help you to secure your organization by removing administrative permissions for most users.
+Microsoft Intune Endpoint Privilege Management (EPM) allows your organization’s users to run as a standard user (without administrator rights) and complete tasks that require elevated privileges.
 
-The information available in EPM reports depends on a devices *reporting scope*. The reporting scope for each device is configured as part of a [Windows elevation setting policy](../protect/epm-policies.md#windows-elevation-settings-policy), and different devices can have different reporting scope configurations.
+Tasks that commonly require administrative privileges are application installs (like Microsoft 365 Applications), updating device drivers, and running certain Windows diagnostics.
+
+Endpoint Privilege Management supports your zero-trust journey by helping your organization achieve a broad user base running with least privilege, while allowing users to still run tasks allowed by your organization to remain productive.
+
+The information available in EPM reports depends on a devices *reporting scope*. The reporting scope for each device is configured as part of a [Windows elevation settings policy](../protect/epm-policies.md#windows-elevation-settings-policy), and different devices can have different reporting scope configurations.
 
 The following EPM reports are available from the *Reports* tab of the *Endpoint Privilege Management* node, that you can access from within the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by going to **Endpoint security** > **Endpoint Privilege Management**, and selecting the **Reports** tab:
 
 - Elevation report
-- Managed elevation report
+- Managed elevations report
 
 ## Elevation report
 
@@ -64,6 +68,7 @@ In addition to the dedicated reports, you can view basic details about EPM polic
 
 ## Next steps
 
-[Learn about Endpoint Privilege Management](../protect/epm-overview.md)
-
-<!--  [Data collection for Endpoint Privilege Management](../protect/epm-data-collection.md) -->
+- [Guidance for creating Elevation Rules](../protect/epm-guidance-for-creating-rules.md)
+- [Configure policies for Endpoint Privilege Management](../protect/epm-policies.md)
+- [Data collection and privacy for Endpoint Privilege Management](../protect/epm-data-collection.md)
+- [Deployment considerations and frequently asked questions](../protect/epm-deployment-considerations-ki.md)
