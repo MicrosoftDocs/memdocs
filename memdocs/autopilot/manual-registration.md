@@ -62,7 +62,7 @@ A summary of each platform's capabilities is provided below.
 | Platform/Portal | Register devices? | Create/Assign profile | Acceptable Device ID |
 | --- | --- | -- | -- |
 | OEM Direct API | YES - 1000 at a time max | NO | Tuple or PKID |
-| [Partner Center](/partner-center/autopilot) | YES - 1000 at a time max | YES<sup>34</sup> | Tuple or PKID or 4K HH |
+| [Partner Center](/partner-center/autopilot) | YES - 1000 at a time max | YES<sup>3</sup> | Tuple or PKID or 4K HH |
 | [Intune](add-devices.md) | YES - 500 at a time max | YES<sup>12</sup> | 4K HH |
 | [Microsoft Store for Business](/microsoft-store/add-profile-to-devices#manage-autopilot-deployment-profiles) | YES - 1000 at a time max | YES<sup>4</sup> | 4K HH |
 | [Microsoft 365 Business Premium](/microsoft-365/business/create-and-edit-autopilot-profiles) | YES - 1000 at a time max | YES<sup>3</sup> | 4K HH |
@@ -70,7 +70,7 @@ A summary of each platform's capabilities is provided below.
 ><b><sup>1</sup></b>Microsoft recommended platform to use<br>
 ><b><sup>2</sup></b>Intune license required<br>
 ><b><sup>3</sup></b>Feature capabilities are limited<br>
-><b><sup>4</sup></b>Device profile assignment will be retired from MSfB and Partner Center in the coming months<br>
+><b><sup>4</sup></b>Device profile assignment will be retired from MSfB in the coming months<br>
 
 For more information about device IDs, see the following topics:
 - [Device identification](registration-overview.md#device-identification)
