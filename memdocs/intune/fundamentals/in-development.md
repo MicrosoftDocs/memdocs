@@ -101,7 +101,7 @@ Applies to:
 
 - Android Enterprise personally owned devices with a work profile
 
-### Support for multi-SIM iOS/iPadOS device inventory<!--16360290-->
+### Support for multi-SIM iOS/iPadOS device inventory<!--17016690 (replaced 16360290 for tracking -->
 
 You'll soon be able to view the service subscription fields on devices that have multiple SIM cards installed under the per-device Hardware section. The inventory fields that are capable of reporting multiple values to Intune are:
 
