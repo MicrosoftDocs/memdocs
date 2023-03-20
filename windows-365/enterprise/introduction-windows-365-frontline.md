@@ -47,7 +47,7 @@ Windows 365 Frontline is in [public preview](../public-preview.md).
 
 ## Managing Windows 365 Frontline Cloud PCs
 
-Windows 365 Frontline Cloud PCs can be fully managed alongside your Windows 365 Enterprise Cloud PCs. Windows 365 Frontline supports:
+Windows 365 Frontline Cloud PCs can be managed using Microsoft Intune, alongside other Cloud PCs and devices in your tenant. Windows 365 Frontline supports:
 
 - Provisioning Cloud PCs after licenses are purchased.
 - Managing Cloud PCs.
@@ -55,6 +55,18 @@ Windows 365 Frontline Cloud PCs can be fully managed alongside your Windows 365 
 - Deploying applications.
 - Performing remote actions on Cloud PCs.
 - Reporting.
+
+You can view your Cloud PCs on two pages:
+
+- **All devices**: Turn on the **Model** column to differentiate between Frontline Cloud PCs adn others.
+- **All Cloud PCs**: This list can be filtered to show only Frontline Cloud PCs using the **PC type** filter. 
+
+When inactive, Cloud PCs will be in a powered off state. This state makes sure that the license is available when another user on the same license signs in to their Cloud PC.
+
+For the best user experience, make sure to:
+
+- Configure the Windows Update Ring profiles.
+- Set a time limit for idle Remote Desktop Sessions.
 
 ## Next steps
 
