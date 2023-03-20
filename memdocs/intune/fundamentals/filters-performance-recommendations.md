@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Performance recommendations for Grouping, Targeting and Fitering in Microsoft Intune
+title: Performance recommendations for Grouping, Targeting and Filtering in Microsoft Intune
 description: When using filters in Microsoft Intune, use Intune virtual groups that don’t require Azure AD syncing, reuse groups to optimize your targeting, make incremental group changes for efficient processing, and use filters to dynamically include and exclude. These recommendations improve performance.
 keywords:
 author: MandiOhlinger
@@ -29,7 +29,7 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Performance recommendations for Grouping, Targeting and Fitering in large Microsoft Intune environments
+# Performance recommendations for Grouping, Targeting and Filtering in large Microsoft Intune environments
 
 This article lists and describes recommendations for Intune grouping, targeting, and filtering for your policies and apps. The goal is to help you make architecture and design decisions for Intune deployments in large environments.
 
