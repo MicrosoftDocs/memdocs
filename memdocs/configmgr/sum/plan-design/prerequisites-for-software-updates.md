@@ -25,6 +25,9 @@ This article lists the prerequisites for software updates in Configuration Manag
 
 ### Internet Information Services  
  Internet Information Services (IIS) must be installed on the site system servers to run the software update point, the management point, and the distribution point. For more information, see [Prerequisites for site system roles](../../core/plan-design/configs/site-and-site-system-prerequisites.md).  
+ 
+> [!NOTE]
+> - If you encounter a cannot add duplicate collection entry of type 'mimeMap' error, see [WSUS Troubleshooting](/windows-server/administration/windows-server-update-services/plan/plan-your-wsus-deployment#manually-add-the-required-mime-types-for-uup) Tips. 
 
 ### Windows Server Update Services  
  Windows Server Update Services (WSUS) is needed for software updates synchronization and for the software updates applicability scan on clients. The WSUS server must be installed before you create the software update point role. The following versions of WSUS are supported for a software update point:  
@@ -36,7 +39,7 @@ This article lists the prerequisites for software updates in Configuration Manag
   - [KB 3095113 and KB 3159706 (or an equivalent update)](#BKMK_wsus2012) are needed for WSUS 6.2 and 6.3 if you deploy Windows upgrades.
 
 > [!NOTE]
-> - Starting March 28, 2023, on-premises Windows 11, version 22H2 devices will receive quality updates via the Unified Update Platform (UUP), 2023-02 cumulative update is a must If you're unable to install these updates, you can [manually add the required MIME types for UUP](windows-server/administration/windows-server-update-services/plan/plan-your-wsus-deployment#manually-add-the-required-mime-types-for-uup) to the WSUS server.
+> - Starting March 28, 2023, on-premises Windows 11, version 22H2 devices will receive quality updates via the Unified Update Platform (UUP), 2023-02 cumulative update is a must If you're unable to install these updates, you can [manually add the required MIME types for UUP](/windows-server/administration/windows-server-update-services/plan/plan-your-wsus-deployment#manually-add-the-required-mime-types-for-uup) to the WSUS server.
 > - When you have multiple software update points at a site, ensure that they're all running the same version of WSUS.
 
 ### WSUS Administration Console  
