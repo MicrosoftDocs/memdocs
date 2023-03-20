@@ -64,19 +64,19 @@ Usage data is elevation data that is used by customers to determine what elevati
 |-------- |:------------ |---------------|
 |**Usage Data** |Tenant Identifier|Identifier (GUID) unique to the tenant.|
 ||Device Identifier|Identifier (GUID) unique to the device.|
-||User Security Identifier|Identifier (GUID) unique to the user.|
+||User Name|Identifier ("AzureAd\User") of the user completing the elevation.|
 ||Justification|Justification string (if provided) provided by the user when completing the elevation|
 ||File name|Name of the file (String) that completed the elevation|
 ||Event Id|Internal identifier (Integer) used to identify the type of elevation described in the event.|
 ||Event Name|Internal Name (String) used to identify the type of elevation described in the event.|
 ||Time Created|Time the event was generated on the device.|
-||User Security Identifier|Identifier (GUID) unique to the user.|
 ||Product Name|File metadata (String) that completed the elevation.|
 ||Publisher|File metadata (String) that completed the elevation.|
 ||File Version|File metadata (String) that completed the elevation.|
 ||File Description|File metadata (String) that completed the elevation.|
 ||Internal File name|File metadata (String) that completed the elevation.|
 ||Certificate Payload|File metadata (String) that completed the elevation.|
+||Elevation Type|Type of elevation that was facilitated|
 ||Result|Exit code of elevation operation (Success/Failure)|
 ||Account Type|Type of account (local or organizational) that completed the elevation.|
 ||Product Name|File metadata (String) that completed the elevation.|
