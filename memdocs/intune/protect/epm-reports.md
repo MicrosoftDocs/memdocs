@@ -30,6 +30,7 @@ ms.collection:
 # Reports for Endpoint Privilege Management 
 
 <!-- [!INCLUDE [intune-add-on-note](../includes/intune-add-on-note.md)] -->
+
 > [!NOTE]  
 > This capability is in public preview and available to use without a license. After public preview, it will be available as an Intune add-on. For more information, see [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md).
 
@@ -48,7 +49,7 @@ The following EPM reports are available from the *Reports* tab of the *Endpoint 
 
 ## Elevation report
 
-The *Elevation report* displays a list view with details about all reported elevations. This includes elevations that are managed by specific rules and those that are not defined by rules but are captured by default elevation setting policies. Several columns of information are available by default, including but not limited to: 
+The *Elevation report* displays a list view with details about all reported elevations. This list includes elevations that are managed by specific rules and those that aren't defined by rules but are captured by default elevation setting policies. Several columns of information are available by default, including but not limited to: 
 
 - **File name** - The name of the file that received an elevation request.
 - **User** - The user who requested elevation of the file.
@@ -64,7 +65,7 @@ The *Managed elevation report* displays the same types of detail as the *Elevati
 
 ## Endpoint Privilege Management policy details
 
-In addition to the dedicated reports, you can view basic details about EPM policies from the Policies tab of the Endpoint Privilege Management node. This is the same location in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) where you create policies for EPM: In the  admin center, go to **Endpoint security** > **Endpoint Privilege Management**, and select the **Policies** node.
+In addition to the dedicated reports, you can view basic details about EPM policies from the Policies tab of the Endpoint Privilege Management node.  This node is the same location in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) where you create policies for EPM: In the  admin center, go to **Endpoint security** > **Endpoint Privilege Management**, and select the **Policies** node.
 
 ## Next steps
 
