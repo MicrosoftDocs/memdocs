@@ -59,8 +59,8 @@ Once the product becomes generally available, your tenant must be licensed for E
 Endpoint privilege management has the following operating system requirements:
 
 - Windows 11, version 22H2 with [KB5022913](https://support.microsoft.com/en-us/topic/february-28-2023-kb5022913-os-build-22621-1344-preview-3e38c0d9-924d-4f3f-b0b6-3bd49b2657b9)
-- Windows 11, version 22H1 with [KBXXXXXX](https://support.microsoft.com)
-- Windows 10, version 20H2 (or later) with [KBXXXXXX](https://support.microsoft.com)
+- Windows 11, version 22H1 with KB5023774 (Pending Optional Update Release - March 2023)
+- Windows 10, version 20H2 (or later) with KB5023773 (Pending Optional Update Release - March 2023)
 
 > [!IMPORTANT]
 > Only devices with a Hybrid Azure Active Directory join or Azure Active Directory join are supported. Workplace join is not a supported trust type.
@@ -82,18 +82,20 @@ When you configure the *elevation settings* and *elevation rules* policies menti
 - **File elevation and elevation types** – EPM allows users without administrative privileges to run processes in the administrative context. When you create an elevation rule, that rule allows EPM to proxy the target of that rule to run with administrator privileges on the device. The result is that the application has *full administrative* capability on the device.
 
   When you use Endpoint Privilege Management, there are two options for elevation behavior:
-  - For automatic elevation rules, EPM *automatically* elevates these applications without input from the user. Broad rules in this category can have wide spread impact to the security posture of the organization.
+  - For automatic elevation rules, EPM *automatically* elevates these applications without input from the user. Broad rules in this category can have widespread impact to the security posture of the organization.
   - For user confirmed rules, end users use a new right-click context menu *Run with elevated access*. User confirmed rules require the end-user to complete some additional requirements before the application is allowed to elevate. These requirements provide an additional layer of protection by adding visibility to the end user of the application prior to elevation by requiring the user to complete additional steps before the elevation occurs.
+
 
 - **Client-side components** – To use Endpoint Privilege Management, Intune provisions a small set of components on the device that receive elevation policies and enforces them. The components are provisioned only when an elevation settings policy is received and the policy has expressed the intent to *enable* Endpoint Privilege management.
 
 - **Disabling and deprovisioning** – As a component that installs on a device, Endpoint Privilege Management can be disabled from within an elevation settings policy. Use of the elevation settings policy is **required** to remove Endpoint Privilege Management from a device.
 
-  Once the device has received an elevation settings policy requiring EPM to be disabled, Intune immediately disables the client side components. EPM will remove the EPM component after a period of seven days. The delay is to ensure temporary or accidental changes in policy or assignments don't result in mass *de-provisioning*/*re-provisioning* events that might have a substantial impact on an organizations business operations.
+  Once the device has received an elevation settings policy requiring EPM to be disabled, Intune immediately disables the client-side components. EPM will remove the EPM component after a period of seven days. The delay is to ensure temporary or accidental changes in policy or assignments don't result in mass *de-provisioning*/*re-provisioning* events that might have a substantial impact on business operations.
 
-- **Managed elevations vs unmanaged elevations** – These terms might be used in our reporting and usage data. Generally speaking these terms refer to the following descriptions:
+- **Managed elevations vs unmanaged elevations** – These terms might be used in our reporting and usage data. Generally speaking, these terms refer to the following descriptions:
   - **Managed elevation**: Any elevation that Endpoint Privilege Management facilitates. Managed elevations include all elevations that EPM ends up facilitating for the standard user. This could include elevations that happen as the result of an elevation rule or as part of default elevation action.
   - **Unmanaged elevation**: All file elevations that happen without use of Endpoint Privilege Management. These elevations can happen when a user with administrative rights uses the Windows default action of *Run as administrator*.
+
 
 ## Role-based access controls for Endpoint Privilege Management
 
