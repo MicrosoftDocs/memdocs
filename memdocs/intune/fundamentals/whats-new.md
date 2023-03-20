@@ -285,8 +285,8 @@ You can add your frequently used queries to a **Favorites** folder in CMPivot. C
 
 ### Device enrollment
 
-#### Installing WinGet applications using Windows Autopilot<!-- 16280325 -->
-The Enrollment Status Page now supports WinGet application installs during Windows Autopilot. This update enables better support for the new Microsoft Store experience. For related information, see [Set up the Enrollment Status Page](../enrollment/windows-enrollment-status.md).
+#### New Microsoft Store apps now supported with the Enrollment Status Page
+The Enrollment Status Page (ESP) now supports the new Microsoft store applications during Windows Autopilot. This update enables better support for the new Microsoft Store experience and should be rolling out to all tenants starting with Intune 2303. For related information, see [Set up the Enrollment Status Page](../enrollment/windows-enrollment-status.md).
 
 ## Week of February 27, 2023
 
