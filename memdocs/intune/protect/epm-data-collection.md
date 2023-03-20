@@ -60,7 +60,7 @@ Diagnostic data is event data that is used by Microsoft to monitor the health of
 
 ## Usage Data
 
-Usage data is elevation data this is used by customers to determine what elevations have occurred in their environment. This data is stored with your Intune infrastructure and is used to populate the elevation reports. When configuring *reporting scope* you have the ability to configure what scope of data is collected. You can chose between none, only elevations completed by EPM, or all elevations that take place on a device.
+Usage data is elevation data that is used by customers to determine what elevations have occurred in their environment. This data is stored with your Intune infrastructure and is used to populate the elevation reports. When configuring *reporting scope*, you have the ability to configure what scope of data is collected. You can choose between none, only elevations completed by EPM, or all elevations that take place on a device.
 
 ### Usage data collected
 

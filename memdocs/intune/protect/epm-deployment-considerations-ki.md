@@ -29,7 +29,11 @@ ms.collection:
 
 # Deployment Considerations and frequently asked questions for Endpoint Privilege Management
 
+<!-- [!INCLUDE [intune-add-on-note](../includes/intune-add-on-note.md)] -->
+
+> [!NOTE]  
 > This capability is in public preview and available to use without a license. After public preview, it will be available as an Intune add-on. For more information, see [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md).
+
 
 Microsoft Intune Endpoint Privilege Management (EPM) allows your organization’s users to run as a standard user (without administrator rights) and complete tasks that require elevated privileges.
 
@@ -50,13 +54,13 @@ Applies to:
 
 ## Frequently asked questions
 
-### What happens when an someone with administrative privileges uses a device that is enabled for EPM?
+### What happens when someone with administrative privileges uses a device that is enabled for EPM?
 
 Endpoint Privilege Management doesn’t manage elevation requests by users that have administrative permissions on a device. There might be instances where an administrator launches a file that has an elevation rule (specifically an automatic elevation rule) that's defined on the device. This application launches as it normally does for the administrator.
 
 ### What files can be elevated to administrator?
 
-Endpoint Privilege Management supports executable files. Microsoft is currently working on extending support for additional file types (MSI, etc) and providing an easy method to elevate common operating system tasks.
+Endpoint Privilege Management supports executable files. Microsoft is currently working on extending support for additional file types (MSI, etc.) and providing an easy method to elevate common operating system tasks.
 
 ## Next steps
 
