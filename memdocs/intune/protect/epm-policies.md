@@ -114,7 +114,7 @@ Each elevation rule:
     > For more information about creating *strong rules*, see our [guidance for creating elevation rules with Endpoint Privilege Management](../protect/epm-guidance-for-creating-rules.md)
 
     >[!CAUTION]  
-    > We recommend automatic elevation be used sparingly, and only for trusted files that are business critical. End users will automatically elevation these applications at every launch of that application.
+    > We recommend automatic elevation be used sparingly, and only for trusted files that are business critical. End users will automatically elevate these applications at *every* launch of that application.
 
 ### Reusable settings group
 

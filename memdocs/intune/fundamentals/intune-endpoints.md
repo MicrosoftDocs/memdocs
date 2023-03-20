@@ -8,7 +8,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 06/23/2022
+ms.date: 03/20/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -224,6 +224,15 @@ For more information about configuring Defender for Endpoint connectivity, see [
 Allow the following hostnames through your firewall to support Security Management for Defender for Endpoint.
 For communication between clients and the cloud service:
 - \*.dm.microsoft.com - The use of a wildcard supports the cloud-service endpoints that are used for enrollment, check-in, and reporting, and which can change as the service scales.
+
+## Microsoft Intune Endpoint Privilege Management
+
+Allow the following hostnames through your firewall to support Endpoint Privilege Management.
+
+For communication between clients and the cloud service:
+- \*.dm.microsoft.com - The use of a wildcard supports the cloud-service endpoints that are used for enrollment, check-in, and reporting, and which can change as the service scales. 
+
+For more information, see the [Overview of Endpoint Privilege Management](../protect/epm-overview.md)
 
 ## Related topics
 
