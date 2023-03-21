@@ -34,6 +34,7 @@ By using the recommended default settings, your eligible devices will be cloud a
     - This option is the only one currently available for China21Vianet (Azure China Cloud).
 - Enables [Endpoint analytics](../../analytics/scores.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json)
 - Enables automatic upload of all your devices to Microsoft Intune admin center ([tenant attach](../tenant-attach/device-sync-actions.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json))
+- Enables Uploading of Microsoft Defender for Endpoint data for [reporting](../tenant-attach/deploy-antivirus-policy.md#bkmk_mdereports) on devices uploaded to Microsoft Intune admin center
 
 > [!IMPORTANT]
 > When you attach your Configuration Manager site with a Microsoft Intune tenant, the site sends more data to Microsoft. [Tenant attach data collection](../tenant-attach/data-collection.md) article summarizes the data that is sent.
@@ -88,6 +89,8 @@ Use the following steps to cloud attach your environment with custom settings:
 
      > [!IMPORTANT]
      > When this checkbox is cleared, [settings in Intune need to be configured](use-intune-rbac.md) too.
+
+1. Check the option to **Enable Uploading Microsoft Defender for Endpoint data for reporting on devices uploaded to Microsoft Intune admin center** if you want to use [Endpoint Security reports in Intune admin center](deploy-antivirus-policy.md#bkmk_mdereports)
 
 1. Select **Next** to get to the **Enablement** page for [co-management](../comanage/tutorial-co-manage-clients.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json). Co-management simplifies management by enrolling devices into Intune and allowing you to lift selected [workloads](../comanage/workloads.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json) to the cloud. For instance, you can choose to enable workloads for [Conditional Access](../comanage/quickstart-conditional-access.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json) so only trusted users can access organizational resources on trusted devices using trusted apps.
 

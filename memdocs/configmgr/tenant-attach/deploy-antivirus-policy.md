@@ -60,7 +60,7 @@ To use this functionality, create an antivirus policy from the [Microsoft Intune
 
 [!INCLUDE [Device status for Configuration Manager tenant attached devices](./includes/configmgr-endpoint-security-device-status.md)]
 
-## Endpoint Security reports in Microsoft Intune admin center
+## <a name="bkmk_mdereports"></a>Endpoint Security reports in Microsoft Intune admin center
 
 Starting in Configuration Manager 2303 release, you can now see Tenant Attached devices data in Endpoint Security reports available in Microsoft Intune admin center.
 
