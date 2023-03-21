@@ -48,7 +48,7 @@ Endpoint Privilege Management rules consist of two fundamental elements: a *dete
 
 **Detections** are classified as the set of attributes that are used to identify an application or binary. Detections are comprised of attributes such as file name, file version, or attributes of a signature.
 
-**Elevation actions** are the resulting elevation that occurs after an application or binary has been detected. Included in the elevation action.
+**Elevation actions** are the resulting elevation that occurs after an application or binary has been detected.
 
 It's important when defining *detections* that they're defined to be as *descriptive* as possible. To be descriptive, use strong attributes, or multiple attributes to increase the strength of the detection. The goal when defining detections should be to eliminate the ability for multiple files to fall into the same rule, unless that is explicitly the intent.
 

@@ -40,9 +40,9 @@ Tasks that commonly require administrative privileges are application installs (
 
 Endpoint Privilege Management supports your zero-trust journey by helping your organization achieve a broad user base running with least privilege, while allowing users to still run tasks allowed by your organization to remain productive.
 
-The information available in EPM reports depends on *reporting scope* of a device. The reporting scope for each device is configured as part of a [Windows elevation settings policy](../protect/epm-policies.md#windows-elevation-settings-policy), and different devices can have different reporting scope configurations.
+The information available in EPM reports depends on the *reporting scope* of a device. The reporting scope for each device is configured as part of a [Windows elevation settings policy](../protect/epm-policies.md#windows-elevation-settings-policy), and different devices can have different reporting scope configurations.
 
-The following EPM reports are available from the *Reports* tab of the *Endpoint Privilege Management* node, that you can access from within the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by going to **Endpoint security** > **Endpoint Privilege Management**, and selecting the **Reports** tab:
+The EPM reports are available from the *Reports* tab of the *Endpoint Privilege Management* node from within the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Go to **Endpoint security** > **Endpoint Privilege Management**, and select the **Reports** tab. Select from the following tiles to view a report:
 
 - Elevation report
 - Managed elevations report

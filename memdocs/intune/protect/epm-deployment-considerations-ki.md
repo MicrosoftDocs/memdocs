@@ -60,7 +60,7 @@ This means that file names are *highly susceptible* to change, and files signed 
 
 ### Blocked files downloaded from the internet fail to elevate
 
-Behavior exists in Windows to set an attribute on files that are downloaded directly from the internet and prevent them from executing until validated. Windows has functionality to validate the reputation of files download from the internet. When a files reputation isn't validated it might fail to elevate. To correct this behavior, unblock the file by unblocking the file from the file properties pane. *This should only be done when you trust the file*.
+Behavior exists in Windows to set an attribute on files that are downloaded directly from the internet and prevent them from executing until validated. Windows has functionality to validate the reputation of files downloaded from the internet. When a files reputation isn't validated it might fail to elevate. To correct this behavior, unblock the file by unblocking the file from the file properties pane. *This should only be done when you trust the file*.
 
 ### Certificate rules defined with a file path may fail to elevate
 
@@ -80,7 +80,7 @@ Endpoint Privilege Management supports executing files that are locally stored o
 
 ### Endpoint Privilege Management does not receive policy when I use a 'SSL-inspection' on my network infrastructure
 
-Endpoint Privilege Management does not support SSL inspection (commonly referred to as 'break and inspect'). In order to use Endpoint Privilege Management please ensure the URL's listed in the [Intune Endpoints for Endpoint Privilege Management](../fundamentals/intune-endpoints.md#microsoft-intune-endpoint-privilege-management) are exempt from inspection.
+Endpoint Privilege Management does not support SSL inspection (commonly referred to as 'break and inspect'). In order to use Endpoint Privilege Management, ensure the URL's listed in the [Intune Endpoints for Endpoint Privilege Management](../fundamentals/intune-endpoints.md#microsoft-intune-endpoint-privilege-management) are exempt from inspection.
 
 ## Frequently asked questions
 
