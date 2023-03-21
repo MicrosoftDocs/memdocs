@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/20/2023
+ms.date: 03/23/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -95,6 +95,10 @@ Endpoint Privilege Management supports executable files. Microsoft is currently 
 ### Why doesn't 'Run with elevated access" show on start menu items?
 
 Certain items that reside in the start menu or taskbar have a curated right-click menu and the EPM right-click context menu is not able to be added to those menus. We are planning to fix this in a future release.
+
+### Some applications and shortcuts fail to elevate when command-line parameters are present
+
+Certain command line compositions can cause elevations to fail on the client. This will be fixed in future release.
 
 ### Can I launch multiple files as elevated with the "Run with elevated access" right-click context menu?
 
