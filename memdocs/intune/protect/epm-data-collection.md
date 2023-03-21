@@ -52,8 +52,8 @@ Endpoint Privilege Management on devices can be configured to report on the foll
 
 - Diagnostic data
 - Usage data
-- 
-When configuring EPM, you determine which data will be reported to MIcrosoft by devices when you configure the *Reporting scope* in a [Windows elevation settings policies](../protect/epm-policies.md#about-windows-elevation-settings-policy).
+
+When configuring EPM, you configure the *Reporting scope* in a [Windows elevation settings policies](../protect/epm-policies.md#about-windows-elevation-settings-policy) to determine which data is reported to Microsoft.
 
 ## Diagnostic Data
 
@@ -93,7 +93,7 @@ Usage data is elevation data that is used by customers to determine what elevati
 ||File Version|File metadata (String) that completed the elevation.|
 ||Account Type|Type of account (local or organizational) that completed the elevation.|
 ||Error Code|Exit code of elevation operation (Success/Failure)|
-||Parent Process Id|Process Id of the parent process that facilitate the elevation|
+||Parent Process Id|Process Id of the parent process that facilitates the elevation|
 ||Policy Type|Type of policy that facilitated the elevation (if applicable)|
 ||Policy Identifier|Identifier (GUID) unique to the policy that facilitated the elevation|
 ||Policy Version|Version of the policy that facilitated the elevation|
