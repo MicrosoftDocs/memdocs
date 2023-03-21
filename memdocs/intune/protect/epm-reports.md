@@ -49,7 +49,7 @@ The EPM reports are available from the *Reports* tab of the *Endpoint Privilege 
 
 ## Elevation report
 
-The *Elevation report* displays a list view with details about all reported elevations. This list includes elevations that are managed by specific rules and those that aren't defined by rules but are captured by default elevation setting policies. Several columns of information are available by default, including but not limited to:
+The *Elevation report* displays a list view with details about all reported elevations. This list includes elevations that are managed by specific rules and elevations that are captured by default elevation setting policies. Several columns of information are available by default, including but not limited to:
 
 - **File name** - The name of the file that received an elevation request.
 - **User** - The user who requested elevation of the file.
@@ -61,7 +61,7 @@ By selecting an entry in the report, you can drill in to view more details about
 
 ## Managed elevation report
 
-The *Managed elevation report* displays the same types of detail as the *Elevation report*, but is limited to reporting on elevations that are managed by a *Windows elevation rule policy*.
+The *Managed elevation report* displays the same types of detail as the *Elevation report*, but reports on only the elevations that are managed by a *Windows elevation rule policy*.
 
 ## Endpoint Privilege Management policy details
 
