@@ -61,8 +61,8 @@ Example synchronization scenario:
 
 1. Select **Owners**, then add the identity that will create the synchronization relationship in Configuration Manager.
 
-> [!TIP]
-> The Server App (Service Principle) of Azure AD tenant will be the owner for the created Azure AD group.
+   > [!TIP]
+   > The Server App (Service Principle) of Azure AD tenant will be the owner for the created Azure AD group.
 
 1. Select **Create** to finish creating the Azure AD group.
 
