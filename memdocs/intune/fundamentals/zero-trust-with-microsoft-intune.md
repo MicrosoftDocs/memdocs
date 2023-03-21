@@ -7,7 +7,7 @@ keywords: Zero Trust, security architecture, security strategy, cyber security, 
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 02/19/2021
+ms.date: 03/21/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
