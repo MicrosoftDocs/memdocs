@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/21/2023
+ms.date: 03/22/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -55,7 +55,7 @@ Complete these prerequisites to ensure a successful enrollment.
  * [Connect your Intune tenant account to your Android Enterprise account](connect-intune-android-enterprise.md).    
 
 ## Step 2: Enable corporate owned user devices  
-Enable enrollment in your Intune tenant. During this process, Intune generates the default enrollment token and enrollment profile for your tenant. 
+Enable enrollment in your Intune tenant. During this process, Intune generates the default enrollment profile and its associated enrollment token. The enrollment profile is named **Default Fully Managed Profile**.  
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). 
 2. Select **Devices** > **Android**. 
@@ -69,7 +69,7 @@ Enable enrollment in your Intune tenant. During this process, Intune generates t
 > * The policy applies to **All Cloud apps**, **Android**, and **Browsers**.   
 
 ## Step 3: Create new enrollment profile  
-Create a new enrollment profile for fully managed devices.  
+Create a new enrollment profile for fully managed devices.    
 
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** Create new enrollment profile> **Android**.  
 3. Select **Android enrollment**  > **Corporate-owned, fully managed user devices**.
@@ -90,7 +90,9 @@ Return to your list of enrollment profiles for corporate-owned devices to view y
 4. Select **Token** to retrieve, revoke, or export the token.  
 
 ## Step 4: Create dynamic Azure AD group  
-Optionally, create a dynamic Azure AD group to automatically group devices based on a certain attribute or variable. In this case, we want to use the `enrollmentProfileName` property to group devices that are enrolling with the same profile. Add these configurations to your group:    
+Optionally, create a dynamic Azure AD group to automatically group devices based on a certain attribute or variable. In this case, we want to use the `enrollmentProfileName` property to group devices that are enrolling with the same profile. 
+
+Add these configurations to your group:    
 * **Group type**: Security
 * **Membership type**: Dynamic Device  
 * Add a dynamic query with the following rule: 
@@ -98,7 +100,7 @@ Optionally, create a dynamic Azure AD group to automatically group devices based
     * **Operator**: Equals
     * **Value**: Enter the name of the enrollment profile you created in [Step 3: Create new enrollment profile](#step-3-create-new-enrollment-profile). 
 
-For more information about how to create a dynamic group with rules, see [Create a group membership rule](/azure/active-directory/enterprise-users/groups-create-rule#to-create-a-group-membership-rule).  
+You can not use dynamic groups with the default enrollment profile. For more information about how to create a dynamic group with rules, see [Create a group membership rule](/azure/active-directory/enterprise-users/groups-create-rule#to-create-a-group-membership-rule).  
 
 
 ## Step 5: Enroll devices  
