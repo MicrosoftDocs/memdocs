@@ -54,7 +54,7 @@ landingContent:
     - linkListType: how-to-guide
       links:
       - text: Deploy or move to Intune
-        url: migration-guide.md
+        url: get-started-with-intune.md
       - text: Planning guide
         url: intune-planning-guide.md
       - text: Enrollment deployment guide
