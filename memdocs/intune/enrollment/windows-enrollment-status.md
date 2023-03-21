@@ -83,15 +83,9 @@ ESP uses the [EnrollmentStatusTracking configuration service provider (CSP)](/wi
        - **No**: The collect logs button isn't shown to users when an installation error occurs. The Windows Autopilot diagnostics page isn't shown on devices running Windows 11.  
        - **Yes**: The collect logs button is shown to users when an installation error occurs. The Windows Autopilot diagnostics page is shown on devices running Windows 11.  
  
-     - **Only show page to devices provisioned by out-of-box experience (OOBE)**: Your options:
-       - **No**: The enrollment status page is shown on all Intune-managed and co-managed devices that go through the out-of-box experience (OOBE), and to the first user that signs in to each device. So subsequent users who sign in don't see the ESP. 
-       - **Yes**: The enrollment status page is only shown on devices that go through the out-of-box experience (OOBE).   
-
-
-
-       > [!TIP]
-       > If you only want the ESP to appear on Autopilot devices during initial device setup, select the **No** option. Then create a new ESP profile, choose the **Yes** option, and target the profile to an Autopilot device group.  
-
+     - **Only show page to devices provisioned by out-of-box experience (OOBE)**: Use this setting to stop the enrollment status page from reappearing to users after device enrollment is done. Your options:
+       - **No**: The enrollment status page is shown during device ESP and the out-of-box experience (OOBE). The page is also shown during user ESP to the first user that signs into the device and all subsequent users who sign into the device. Meaning, everytime someone signs into the device, they see the enrollment status page. 
+       - **Yes**: The enrollment status page is shown during device ESP and the out-of-box experience (OOBE). The page is also shown during user ESP, but only to the first user that signs into the device. It is not shown to subsequent users who sign into the device.   
 
      - **Block device use until all apps and profiles are installed**: Your options:
        - **No**: Users can leave the ESP before Intune is finished setting up the device. 
