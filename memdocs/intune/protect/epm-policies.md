@@ -63,7 +63,7 @@ Use *Windows elevation settings policy* when you want to:
 
 - **Enable Endpoint Privilege Management** on devices. By default, this policy enables EPM. When first enabled for EPM, a device provisions the components that collect usage data on elevation requests and that enforce elevation rules.
 
-  If a device has EPM disabled, the client components immediately disable. There's a delay of seven days before the EPM component is completely removed. The delay is intended to reduce the time it takes to restore EPM should a device accidentally have EPM disabled, or have its elevation settings policy accidentally unassigned.
+  If a device has EPM disabled, the client components immediately disable. There's a delay of seven days before the EPM component is completely removed. The delay helps to reduce the time it takes to restore EPM should a device accidentally have EPM disabled or its elevation settings policy unassigned.
 
 - **Default elevation response** - Set a default response for an *elevation request* of any file that’s not managed by a *Windows elevation rule policy*. For this setting to have an effect, no rule can exist for the application **AND** an end user must have *explicitly requested* elevation through the *Run with elevated access* right-click menu. By default, this option isn't configured. If no setting is delivered, the EPM components fall back to their built-in default, which is to **deny all requests**.
   
@@ -88,8 +88,8 @@ Use *Windows elevation settings policy* when you want to:
   Diagnostic data is used by Microsoft to measure the health of the EPM client components. Usage data is used to show you elevations that happen within your tenant. For more information about the types of data and how it's stored, see [Data collection and privacy for Endpoint Privilege Management](../protect/epm-data-collection.md).
 
   Options include:
-  - Yes - This option sends data to Microsoft based on the *Reporting Scope* setting.
-  - No - This option does not send data to Microsoft.
+  - **Yes** - This option sends data to Microsoft based on the *Reporting Scope* setting.
+  - **No** - This option does not send data to Microsoft.
 
 - **Reporting Scope** - This setting controls the amount of data being sent to Microsoft when *Send data to Microsoft* is set to *Yes*. By default, *Diagnostic data and all endpoint elevations* is selected.
 
@@ -162,7 +162,7 @@ A device must have an elevation settings policy that enables support for EPM bef
 
    :::image type="content" source="./media/epm-policies/evaluation-settings-policy.png" alt-text="Image of the evaluation settings configuration page." lightbox="./media/epm-policies/evaluation-settings-policy.png":::
 
-   - **Endpoint Privilege Management**: Set to **Enabled** (default). When Enabled, a device uses Endpoint Privilege Management. When set to Disabled, the device won't use Endpoint Privilege Management, and will immediately disable EPM if it was previously enabled. After seven days, the device will deprovision the components for Endpoint Privilege Management.
+   - **Endpoint Privilege Management**: Set to **Enabled** (default). When Enabled, a device uses Endpoint Privilege Management. When set to Disabled, the device doesn't use Endpoint Privilege Management, and immediately disables EPM if it was previously enabled. After seven days, the device will deprovision the components for Endpoint Privilege Management.
    - **Default elevation response**: Configure how this device manages elevation requests for files that aren't directly managed by a rule:
      - **Not Configured**: This option functions the same as *Deny all requests*.
      - **Deny all requests**: EPM doesn't facilitate the elevation of files and the user is shown a pop-up window with information about the denial. This configuration doesn't prevent users with administrative permissions from using *Run as administrator* to run unmanaged files.
@@ -224,9 +224,9 @@ In addition to this policy, a device must also be assigned a Windows elevation s
    - **Elevation type**: By default, this option is set to *User confirmed*, which is the elevation type we recommend for most files.
 
      - **User confirmed**: We recommend this option for most rules. When a file is run, the user receives a simple prompt to confirm their intent to run the file. The rule can also include additional prompts that are available from the *Validation* drop down:
-       - *Business justification*: Require the user to enter a justification for running the file. There's no required format for this, however the user input is saved and can be reviewed through logs if the *Reporting scope* includes collection of endpoint elevations.
+       - *Business justification*: Require the user to enter a justification for running the file. There's no required format for the entry, however the user input is saved and can be reviewed through logs if the *Reporting scope* includes collection of endpoint elevations.
        - *Windows authentication*: This option requires the user to authenticate using their organization credentials.
-     - **Automatic**: This elevation type automatically runs the file in question with elevated permissions. This is transparent to the user, without prompting for confirmation or requiring justification or authentication by the user.
+     - **Automatic**: This elevation type automatically runs the file in question with elevated permissions. Automatic elevation is transparent to the user, without prompting for confirmation or requiring justification or authentication by the user.
       > [!CAUTION]
       > Only use automatic elevation for files you trust. These files will automatically elevate without user interaction. Rules that are not well defined could allow unapproved applications to elevate. For more information on creating strong rules, see the [guidance for creating rules](../protect/epm-guidance-for-creating-rules.md).
 
@@ -241,7 +241,7 @@ In addition to this policy, a device must also be assigned a Windows elevation s
         To identify the *Certificate*, select *Add or remove a certificate*, and then select the reusable group that contains the correct certificate. Then, specify the *Certificate type* of *Publisher* or *Certificate authority*.
 
      - **Upload a certificate file**: Add a certificate file directly to the elevation rule. For *File upload*, specify a **.cer** file that can validate the integrity of the file that this rule applies to. Then, specify the *Certificate type* of *Publisher* or *Certificate authority*.
-     - **Not configured**: Use this option when you do not want to use a certificate to validate the integrity of the file. When no certificate is used, you must provide a *file hash*.
+     - **Not configured**: Use this option when you don't want to use a certificate to validate the integrity of the file. When no certificate is used, you must provide a *file hash*.
 
    - **File hash**: The file hash is required when Signature source is set to *Not configured*, and optional when set to use a certificate.
    - **Minimum version**: (Optional) Use **x.x.x.x** format to specify a minimum version of the file that is supported by this rule.
@@ -260,7 +260,7 @@ In addition to this policy, a device must also be assigned a Windows elevation s
 
 ## Reusable settings groups
 
-Endpoint Privilege Management uses reusable settings groups to manage the certificates that validate the files you manage with Endpoint Privilege Management elevation rules. Like all reusable settings groups for Intune, changes to a reusable group are automatically passed to the policies that reference the group. For Endpoint Privilege Management, this means if you must update the certificate you use for file validation, you would only need to update it in the reusable settings group a single time to have that updated certificate applied to all your elevation rules that use that group.
+Endpoint Privilege Management uses reusable settings groups to manage the certificates that validate the files you manage with Endpoint Privilege Management elevation rules. Like all reusable settings groups for Intune, changes to a reusable group are automatically passed to the policies that reference the group. If you must update the certificate you use for file validation, you only need to update it in the reusable settings group a single time. Intune applies the updated certificate to all your elevation rules that use that group.
 
 To create the reusable settings group for Endpoint Privilege Management:
 

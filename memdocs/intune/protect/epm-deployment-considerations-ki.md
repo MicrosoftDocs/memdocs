@@ -51,36 +51,36 @@ Applies to:
 
 ### Authoring files with a file name as one of the sole attributes for identification
 
-File name is an attribute that can be utilized to detect an application that needs to be elevated. However, it is not protected by the signature of the file.
+File name is an attribute that can be utilized to detect an application that needs to be elevated. However, it isn't protected by the signature of the file.
 
-This means that file names are *highly susceptible* to change, and files signed by a certificate that you trust could have their name changed to be *detected* and subsequently *elevated* which may not be your intended behavior.
+This means that file names are *highly susceptible* to change, and files that are signed by a certificate that you trust could have their name changed to be *detected* and subsequently *elevated* which may not be your intended behavior.
 
 > [!IMPORTANT]
 > Always ensure that rules including a file name include other attributes that provide a strong assertion to the file's identity. Attributes like file hash or properties that are included in the files signature are good indicators that the file you intend is likely the one being elevated.
 
 ### Blocked files downloaded from the internet fail to elevate
 
-Behavior exists in Windows to set an attribute on files that are downloaded directly from the internet and prevent them from executing until validated. Windows has functionality to validate the reputation of files downloaded from the internet. When a files reputation isn't validated it might fail to elevate. To correct this behavior, unblock the file by unblocking the file from the file properties pane. *This should only be done when you trust the file*.
+Behavior exists in Windows to set an attribute on files that are downloaded directly from the internet and prevent them from executing until validated. Windows has functionality to validate the reputation of files downloaded from the internet. When a files reputation isn't validated, it might fail to elevate. To correct this behavior, unblock the file by unblocking the file from the file properties pane. *Unblocking a file should only be done when you trust the file*.
 
-### Certificate rules defined with a file path may fail to elevate
+### Certificate rules defined with a file path might fail to elevate
 
-When defining a certificate rule with a file path, Endpoint Privilege Management may fail to elevate files signed by the certificate as the administrator intended. To work around this issue, supply a file name in addition to the file path. This will be fixed in a future release.
+When you define a certificate rule with a file path, Endpoint Privilege Management might fail to elevate files signed by the certificate as the administrator intended. To work around this issue, supply a file name in addition to the file path. This issue will be fixed in a future release.
 
-### Certificate rules defined as Issuing Certificate Authority may not allow elevation
+### Certificate rules defined as Issuing Certificate Authority might not allow elevation
 
-When defining a certificate rule and specifying the certificate as an 'Issuing CA', EPM may not allow elevation when the certificate is properly part of the certificate chain. To work around this issue, specify the publisher certificate of the file instead. This will be fixed in a future release.
+When you define a certificate rule and specify the certificate as an 'Issuing CA', EPM might not allow elevation when the certificate is properly part of the certificate chain. To work around this issue, specify the publisher certificate of the file instead. This issue will be fixed in a future release.
 
 ### On Windows 11, 'Run with elevated access' is shown under 'show more options' when I right-click on a file
 
-Windows 11 introduced a new paradigm for right-click context menus. EPM currently shows under the 'show more options' selection from that menu. This will be fixed in a future release.
+Windows 11 introduced a new paradigm for right-click context menus. EPM currently shows under the 'show more options' selection from that menu. This issue will be fixed in a future release.
 
-### When creating rules for a network file, elevation fails to occur
+### Rules for a network file might fail to elevate
 
 Endpoint Privilege Management supports executing files that are locally stored on disk. Executing files from a network share isn't allowed.
 
-### Endpoint Privilege Management does not receive policy when I use a 'SSL-inspection' on my network infrastructure
+### Endpoint Privilege Management doesn't receive policy when I use a 'SSL-inspection' on my network infrastructure
 
-Endpoint Privilege Management does not support SSL inspection (commonly referred to as 'break and inspect'). In order to use Endpoint Privilege Management, ensure the URL's listed in the [Intune Endpoints for Endpoint Privilege Management](../fundamentals/intune-endpoints.md#microsoft-intune-endpoint-privilege-management) are exempt from inspection.
+Endpoint Privilege Management doesn't support SSL inspection, which is known as 'break and inspect'. In order to use Endpoint Privilege Management, ensure the URLs listed in the [Intune Endpoints for Endpoint Privilege Management](../fundamentals/intune-endpoints.md#microsoft-intune-endpoint-privilege-management) are exempt from inspection.
 
 ## Frequently asked questions
 
@@ -90,15 +90,15 @@ Endpoint Privilege Management doesn’t manage elevation requests by users that 
 
 ### What files can be elevated to administrator?
 
-Endpoint Privilege Management supports executable files. Microsoft is currently working on extending support for additional file types (MSI, etc.) and providing an easy method to elevate common operating system tasks.
+Endpoint Privilege Management supports executable files. Microsoft is currently working on extending support for other file types (MSI, etc.) and providing an easy method to elevate common operating system tasks.
 
 ### Why doesn't 'Run with elevated access" show on start menu items?
 
-Certain items that reside in the start menu or taskbar have a curated right-click menu and the EPM right-click context menu is not able to be added to those menus. We are planning to fix this in a future release.
+Certain items that reside in the start menu or taskbar have a curated right-click menu and the EPM right-click context menu is not able to be added to those menus. We plan to fix this issue in a future release.
 
 ### Some applications and shortcuts fail to elevate when command-line parameters are present
 
-Certain command line compositions can cause elevations to fail on the client. This will be fixed in future release.
+Certain command line compositions can cause elevations to fail on the client. This issue will be fixed in future release.
 
 ### Can I launch multiple files as elevated with the "Run with elevated access" right-click context menu?
 

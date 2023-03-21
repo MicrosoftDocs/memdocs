@@ -60,7 +60,7 @@ File hash can be gathered from the direct binary using the [Get-Filehash PowerSh
 
 ### Certificate rules
 
-Certificate rules are a strong type of attribute and should be paired with additional attributes. Pairing a certificate with attributes like product name, internal name, and description, drastically improves the security of the rule. These attributes are protected by a files signature, and often indicate specifics about the signed file.
+Certificate rules are a strong type of attribute and should be paired with other attributes. Pairing a certificate with attributes like product name, internal name, and description, drastically improves the security of the rule. These attributes are protected by a files signature, and often indicate specifics about the signed file.
 
 > [!CAUTION]
 > Using just a certificate and a file name provides very limited protection for misuse of a rule. File names can be changed by any *standard user* provided they have access to the directory where the file resides. This might not be a concern for files that reside in a write-protected directory.
@@ -78,7 +78,7 @@ This means that file names are *highly susceptible* to change. Files that are si
 
 Endpoint Privilege Management rules are deployed like any other policy in Microsoft Intune. This means that rules can be deployed to users or devices, and rules are merged on the client side and selected at run time. Any conflicts are resolved based on the [policy conflict behavior](../protect/epm-policies.md#policy-conflict-handling-for-endpoint-privilege-management).
 
-Rules deployed to a device are applied to *all users* on that device. Rules that are deployed to a *user* apply only to that user on devices they utilize. When an elevation action occurs, rules deployed to the user are given precedence to rules deployed to a device. This allows you to deploy a set of rules to devices that might apply to all users on that device, but a more permissive set of rules to a support admin that allows them the ability to elevate a broader set of applications when they're logged in on the device temporarily.
+Rules deployed to a device are applied to *all users* on that device. Rules that are deployed to a *user* apply only to that user on devices they utilize. When an elevation action occurs, rules deployed to the user are given precedence to rules deployed to a device. This behavior allows you to deploy a set of rules to devices that might apply to all users on that device, and a more permissive set of rules to a support admin to allow them to elevate a broader set of applications when they sign-in to the device temporarily.
 
 *Default Elevation behavior* is used only when no rule match can be found. This also requires use of the *Run with elevated access* right-click menu, which is interpreted as a user *explicitly* asking for an application to be elevated.
 
