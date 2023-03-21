@@ -111,4 +111,4 @@ Now that you've set up the enrollment profile, token, and dynamic group, you can
 * Zero-touch enrollment
 * Samsung Knox Mobile Enrollment  
 
-For next steps, including how to enroll devices with each provisioning method, see [Enroll Android Enterprise corporate-owned devices](android-dedicated-devices-fully-managed-enroll.md).  
+For the next steps, including how to enroll devices with each provisioning method, see [Enroll Android Enterprise corporate-owned devices](android-dedicated-devices-fully-managed-enroll.md).  
