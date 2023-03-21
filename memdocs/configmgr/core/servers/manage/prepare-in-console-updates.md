@@ -2,12 +2,12 @@
 title: Prepare for in-console updates
 titleSuffix: Configuration Manager
 description: Prepare to install updates to Configuration Manager from the Microsoft cloud
-ms.date: 12/05/2022
+ms.date: 03/28/2023
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to
-author: banreet
-ms.author: banreetkaur
+author: gowdhamankarthikeyan
+ms.author: gokarthi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
@@ -93,6 +93,8 @@ Review the following steps before you install an update from within the Configur
 
 Review the applicable update checklist for actions to take before you start the update:
 
+- [Checklist for installing update 2303](checklist-for-installing-update-2303.md)
+
 - [Checklist for installing update 2211](checklist-for-installing-update-2211.md)
 
 - [Checklist for installing update 2207](checklist-for-installing-update-2207.md)
@@ -100,9 +102,6 @@ Review the applicable update checklist for actions to take before you start the 
 - [Checklist for installing update 2203](checklist-for-installing-update-2203.md)
 
 - [Checklist for installing update 2111](checklist-for-installing-update-2111.md)
-
-- [Checklist for installing update 2107](checklist-for-installing-update-2107.md)
-
 
 
 ### Step 2: Run the prerequisite checker before installing an update
