@@ -149,7 +149,7 @@ sections:
       - question: |
           Is there a limit to the number of devices that can be listed in the CSV file?
         answer: |
-          Yes. The CSV file can only contain 1,000 devices to apply to a single profile. If more than 1,000 devices need to be applied to a profile, the devices need to be uploaded through multiple CSV files.
+          Yes. The CSV file can only contain 500 devices to apply to a single profile. If more than 500 devices need to be applied to a profile, the devices need to be uploaded through multiple CSV files.
 
       - question: |
           Does Microsoft have any recommendations on how an OEM should provide the CSV file to their customers?
