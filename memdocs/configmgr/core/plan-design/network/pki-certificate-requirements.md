@@ -284,11 +284,11 @@ By default, Configuration Manager looks for computer certificates in the Persona
 
 ### Task sequence media for deploying operating systems
 
-This certificate is used by an OSD task sequence and allows the computer to connect to an HTTPS-enabled management point and distribution point during the OS deployment process. This may include such as actions such as client policy retrieval from the management point and downloading of content from the distribution point.
+This certificate is used by an OSD task sequence and allows the computer to connect to an HTTPS-enabled management point and distribution point during the OS deployment process. Connections to the management point and to the distribution point may include such actions such as client policy retrieval from the management point and downloading of content from the distribution point.
 
 This certificate is only used during the OS deployment process. It isn't used as part of the client installation properties when the the client is installed during the **Setup Windows and ConfigMgr** task nor is it installed on the device. Because of this temporary use, you can use the same certificate for every OS deployment if you don't want to use multiple client certificates.
 
-When you have an environment that's HTTPS-only, the task sequence media must have a valid certificate. This certificate allows the device to communicate with the site and for the deployment to continue. After the task sequence completes, when the device is joined to Active Directory, the client can automatically generate a PKI certificate via a GPO , or you can install a PKI certificate by using another method.
+When you have an environment that's HTTPS-only, the task sequence media must have a valid certificate. This certificate allows the device to communicate with the site and for the deployment to continue. After the task sequence completes, when the device is joined to Active Directory, the client can automatically generate a PKI certificate via a GPO, or you can install a PKI certificate by using another method.
 
 > [!NOTE]
 > The requirements for this certificate are the same as the server certificate for site systems with the distribution point role. Because the requirements are the same, you can use the same certificate file.
