@@ -13,6 +13,8 @@ items:
         href: ./fundamentals/manage-devices.md
       - name: Manage apps and protect their data
         href: ./fundamentals/manage-apps.md
+      - name: Zero Trust for Microsoft Intune
+        href: ./fundamentals/zero-trust-for-microsoft-intune.md
     - name: Intune service release information
       href: ./fundamentals/intune-service-servicing-information.md
     - name: What is device management?
