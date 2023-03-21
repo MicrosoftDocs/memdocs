@@ -223,6 +223,8 @@ items:
       items:
         - name: Overview of levels
           href: plan-design/diagnostics/levels-overview.md
+        - name: Data for version 2303
+          href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-2303.md
         - name: Data for version 2211
           href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-2211.md
         - name: Data for version 2207
@@ -569,6 +571,8 @@ items:
       href: servers/manage/use-the-update-registration-tool-to-import-hotfixes.md
     - name: Use the hotfix installer
       href: servers/manage/use-the-hotfix-installer-to-install-updates.md
+    - name: Checklist for installing update 2303
+      href: servers/manage/checklist-for-installing-update-2303.md
     - name: Checklist for installing update 2211
       href: servers/manage/checklist-for-installing-update-2211.md
     - name: Checklist for installing update 2207
