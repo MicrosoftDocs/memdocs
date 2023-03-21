@@ -152,7 +152,7 @@ Your user and group accounts access organization resources. You need to keep the
 
 - **Zero trust** verifies all endpoints, including devices and apps. The idea is to help keep organization data in the organization, and prevent data leaks from accidental or malicious intent. It includes different feature areas, including Windows Hello for Business, using MFA, and more.
 
-  For more information, go to [Secure endpoints with Zero Trust](/security/zero-trust/deploy/endpoints).
+  For more information, see [Zero Trust with Microsoft Intune](zero-trust-with-microsoft-intune.md).
 
 ## Next steps
 
