@@ -90,4 +90,4 @@ If you don't intend to use the profile you created for additional tutorials or t
 In this topic, you created an email profile for iOS/iPadOS devices. Now you can use this profile to determine whether an iOS/iPadOS device is compliant by creating a compliance policy that marks as noncompliant any iOS/iPadOS devices that don't match the profile. For further protection, you can create a Conditional Access policy that blocks noncompliant iOS/iPadOS devices from accessing email. For more information about device compliance policies, see [Get started with device compliance policies in Intune](../protect/device-compliance-get-started.md).
 
 > [!div class="nextstepaction"]
-> [Deploy or move to Microsoft Intune](../fundamentals/migration-guide.md)
+> [Deploy or move to Microsoft Intune](../fundamentals/get-started-with-intune.md)
