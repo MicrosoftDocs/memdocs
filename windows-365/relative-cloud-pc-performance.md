@@ -57,13 +57,13 @@ It can be valuable for you to do to your own testing with workloads approximatin
 
 ## Test results
 
-//Section must be rewritten, also add graph.//
+![Diagram of relative Winodws 365 Cloud PC vCPU performance](./media/relative-cloud-pc-performance/relative-cloud-pc-performance.png)
 
-A common starting point for Windows 365 Cloud PC users is the 2 vCPU / 8 GB RAM / 128 GB storage size. As you can see above, the relative performance improvement of the 4 vCPU configuration over the 2 vCPU configuration is significant.
+A common starting point for Windows 365 Cloud PC users is the 2 vCPU / 8 GB RAM / 128 GB storage size. The chart shows that the relative performance improvement of the 4 vCPU configuration over the 2 vCPU configuration is up to 28% faster.  
 
-For the workloads we test, the performance improvements aren’t as significant when moving from 4 vCPU to 8 vCPU. But there still is a measurable improvement.
+For the workloads we test, the performance about the same when moving from 4 vCPU to 8 vCPU. However, more processor intensive workloads may see a greater improvement.
 
-Does this mean that it’s not worth moving from 4 vCPU to 8 vCPU?  It really depends on what workloads your users will be running. If you plan on running CPU-intensive workloads such as business analytics tools with extremely large datasets in the 64-bit version of Microsoft Excel or similar, the differences are going to be more noticeable and favor a greater number of processors. For those employees who are only using Microsoft Teams, browsers, or Microsoft 365 applications, perhaps the 4 vCPU configuration is sufficient.
+If you plan on running CPU-intensive workloads the differences are going to be more noticeable and favor a greater number of processors. For example, workloads like business analytics tools with large datasets in the 64-bit version of Microsoft Excel. For employees who are only using Microsoft Teams, browsers, or Microsoft 365 applications, the 4 vCPU configuration likely sufficient.
 
 ## Choosing the Cloud PC size for your users
 
