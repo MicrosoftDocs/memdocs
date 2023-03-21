@@ -44,13 +44,13 @@ Endpoint Privilege Management supports your zero-trust journey by helping your o
 
 ## Defining rules for use with Endpoint Privilege Management
 
-Endpoint Privilege Management rules consist of two fundamental element: a *detection* and an *elevation action*.
+Endpoint Privilege Management rules consist of two fundamental elements: a *detection* and an *elevation action*.
 
 **Detections** are classified as the set of attributes that are used to identify an application or binary. Detections are comprised of attributes such as file name, file version, or attributes of a signature.
 
 **Elevation actions** are the resulting elevation that occurs after an application or binary has been detected. Included in the elevation action.
 
-It's important when defining *detections* that they're defined to be as *descriptive* as possible. To be descriptive, use strong attributes, or multiple attributes to increase the strength of the detection. The goal when defining detections should be to eliminate the ability for multiple files to fall into the same rule (unless that is explicitly the intent).
+It's important when defining *detections* that they're defined to be as *descriptive* as possible. To be descriptive, use strong attributes, or multiple attributes to increase the strength of the detection. The goal when defining detections should be to eliminate the ability for multiple files to fall into the same rule, unless that is explicitly the intent.
 
 ### File hash rules
 
@@ -60,7 +60,7 @@ File hash can be gathered from the direct binary using the [Get-Filehash PowerSh
 
 ### Certificate rules
 
-Certificate rules are a strong type of attribute and should be paired with additional attributes. Pairing a certificate with attributes like product name, internal name, description drastically improves the security of the rule. These attributes are protected by signature, and often indicate specifics about the signed file.
+Certificate rules are a strong type of attribute and should be paired with additional attributes. Pairing a certificate with attributes like product name, internal name, and description, drastically improves the security of the rule. These attributes are protected by a files signature, and often indicate specifics about the signed file.
 
 > [!CAUTION]
 > Using just a certificate and a file name provides very limited protection for misuse of a rule. File names can be changed by any *standard user* provided they have access to the directory where the file resides. This might not be a concern for files that reside in a write-protected directory.
@@ -86,10 +86,10 @@ Rules deployed to a device are applied to *all users* on that device. Rules that
 
 Endpoint Privilege Management and Windows built-in user account control (UAC) are separate products with separate functionality. 
 
-When moving to standard user and utilizing Endpoint Privilege Management, you might choose to change the default UAC behavior for standard users. This change can reduce confusion when an application requires elevation and create a better end user experience. Examine [behavior of the elevation prompt for standard users](/windows/security/identity-protection/user-account-control/user-account-control-security-policy-settings#user-account-control-behavior-of-the-elevation-prompt-for-standard-users) for more information.
+When moving users to run as standard users and utilizing Endpoint Privilege Management, you might choose to change the default UAC behavior for standard users. This change can reduce confusion when an application requires elevation and create a better end user experience. Examine [behavior of the elevation prompt for standard users](/windows/security/identity-protection/user-account-control/user-account-control-security-policy-settings#user-account-control-behavior-of-the-elevation-prompt-for-standard-users) for more information.
 
 > [!NOTE]
-> Endpoint Privilege Management will not interfere with user account control actions (or UAC) being run by an Administrator on the device. It is possible to create rules that apply to Administrators on the device, so special considerations should be given to rules that are applied to all users on a device and the impact on users with Administrator.
+> Endpoint Privilege Management will not interfere with user account control actions (or UAC) being run by an Administrator on the device. It is possible to create rules that apply to Administrators on the device, so special considerations should be given to rules that are applied to all users on a device and the impact on users with Administrator rights.
 
 ## Next steps
 

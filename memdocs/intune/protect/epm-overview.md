@@ -84,7 +84,7 @@ When you configure the *elevation settings* and *elevation rules* policies menti
 
   When you use Endpoint Privilege Management, there are two options for elevation behavior:
   - For automatic elevation rules, EPM *automatically* elevates these applications without input from the user. Broad rules in this category can have widespread impact to the security posture of the organization.
-  - For user confirmed rules, end users use a new right-click context menu *Run with elevated access*. User confirmed rules require the end-user to complete some additional requirements before the application is allowed to elevate. These requirements provide an additional layer of protection by adding visibility to the end user of the application before it's elevation by requiring the user to complete additional steps before the elevation occurs.
+  - For user confirmed rules, end users use a new right-click context menu *Run with elevated access*. User confirmed rules require the end-user to complete some additional requirements before the application is allowed to elevate. These requirements provide an additional layer of protection by adding visibility to the app's end user before it is elevated by requiring the user to take additional steps before the elevation occurs.
 
 - **Client-side components** – To use Endpoint Privilege Management, Intune provisions a small set of components on the device that receive elevation policies and enforces them. The components are provisioned only when an elevation settings policy is received, and the policy has expressed the intent to *enable* Endpoint Privilege management.
 
@@ -100,7 +100,7 @@ When you configure the *elevation settings* and *elevation rules* policies menti
 
 To manage Endpoint Privilege Management, your account must be assigned an Intune role-based access control (RBAC) role that includes the following permission with sufficient rights to complete the desired task:
 
-- **Endpoint Privilege Management Policy Authoring** – This permission is required to manage required to work with policy or data and reports for Endpoint Privilege Management, and supports the following rights:
+- **Endpoint Privilege Management Policy Authoring** – This permission is required to work with policy or data and reports for Endpoint Privilege Management, and supports the following rights:
   - View Reports
   - Read
   - Create
