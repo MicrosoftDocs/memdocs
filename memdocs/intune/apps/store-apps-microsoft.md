@@ -56,7 +56,7 @@ To use Microsoft Store apps, be sure the following criteria are met:
 
 If you use Microsoft Intune to manage your apps (or use Group Policy), you can enable the **Only display the private store within the Microsoft Store** Group Policy setting to block the end user from using the store app.
 
-:::image type="content" source="../media/store-apps-microsoft/store-apps-microsoft-01.png" alt-text="Only display the private store setting" border="true" :::
+:::image type="content" source="./media/store-apps-microsoft/store-apps-microsoft-01.png" alt-text="Only display the private store setting" border="true" :::
 
 > [!NOTE]
 > If you blocked the Microsoft Store app at the network level, the above Group Policy will not work.
