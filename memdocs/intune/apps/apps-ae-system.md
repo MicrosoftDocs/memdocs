@@ -62,7 +62,7 @@ The **Overview** blade of the app you've created is displayed.
 >
 > You cannot create an Android Enterprise system app when there is the same app in Managed Google Play in Intune.
 > 
-> The Notes section will not appear for an Anroid Enterprise System App, and is not editable. 
+> The Notes section will not appear for an Android Enterprise system app and is not editable. 
 
 The app you've created is displayed in the apps list, where you can assign it to the groups that you select. 
 
