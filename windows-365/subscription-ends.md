@@ -44,7 +44,7 @@ Read through this important information before you contact [Windows 365 support]
 When your subscription expires, it goes through the following stages: Expired > Disabled > Deleted. The Expired stage starts immediately after the subscription has reached its end date.
 
 - **Annual subscriptions.** If you turn off recurring billing on an annual subscription, it goes through the same stages as an expired subscription. The first stage starts on the anniversary of the annual subscription, not the date that you turned off the subscription's recurring billing setting.
-- **Monthly subscriptions.** If you cancel a monthly subscription, it immediately moves to the Disabled stage on the date you cancel it. This means that your users immediately lose access to the Windows 365 assets, and only admins have access to the data for the next 90 days.
+- **Monthly subscriptions.** If you cancel a monthly subscription, it immediately moves to the Disabled stage on the date you cancel it. In the Disabled stage, your users immediately lose access to the Windows 365 assets, and only admins have access to the data for the next 90 days.
 
 The following table explains what you can expect when a paid Windows 365 subscription expires.
 
@@ -68,13 +68,13 @@ If you cancel your subscription before its term end date, the subscription skips
 If you're a partner who's an admin on behalf of (AOBO) a customer, and you've canceled a subscription, it can take up to 90 days for the admin center to reflect the status change.
 
 > [!NOTE]
-> !!!ABRAHAM is this statement true for W365?!!! If you want your subscription data to be deleted before the typical Disabled stage is over, you can [close your account](/microsoft-365/commerce/close-your-account).
+> If you want your subscription data to be deleted before the typical Disabled stage is over, you can [close your account](/microsoft-365/commerce/close-your-account).
 
 Here's what to expect for you and your users if you cancel a subscription.
   
-- **Admin access** Admins can still sign in and access the admin center, and buy other subscriptions as needed. As a global or billing admin, you have 90 days to !!!ABRAHAM is this  true for W365 Same process as for M365?!!! [reactivate the subscription](/microsoft-365/commerce/subscriptions/reactivate-your-subscription) with all data intact.
+- **Admin access** Admins can still sign in and access the admin center, and buy other subscriptions as needed. As a global or billing admin, you have 90 days to [reactivate the subscription](/microsoft-365/commerce/subscriptions/reactivate-your-subscription) with all data intact.
 
-- **User access** Users lose access to their Cloud PC and those will be deprovisioned right away. Data within the Cloud PC is deleted as well as [Unlicensed Product notifications](https://support.microsoft.com/office/0d23d3c0-c19c-4b2f-9845-5344fedc4380).
+- **User access** Users lose access to their Cloud PC which is deprovisioned right away. Data within the Cloud PC is deleted as well as [Unlicensed Product notifications](https://support.microsoft.com/office/0d23d3c0-c19c-4b2f-9845-5344fedc4380).
 
 To learn how to cancel, see  !!!ABRAHAM is this  true for W365 Same process as for M365?!!! [Cancel your subscription](/microsoft-365/commerce/subscriptions/cancel-your-subscription).
   
@@ -83,7 +83,7 @@ To learn how to cancel, see  !!!ABRAHAM is this  true for W365 Same process as f
 
 ## What are my options if my subscription is about to expire?
 
-While a subscription is active, you and your users have normal access to your data, the Windows 365 service, and users will have access to their respective Cloud PCs. As the admin, you'll receive a series of notifications via email and in the admin center as your subscription nears its expiration date.
+While a subscription is active, you and your users have normal access to your data, the Windows 365 service, and users have access to their respective Cloud PCs. As the admin, you receive a series of notifications via email and in the admin center as your subscription nears its expiration date.
   
 Before the subscription reaches its expiration date, you have a few options:
   
@@ -100,7 +100,7 @@ Before the subscription reaches its expiration date, you have a few options:
 
 ## What happens after my subscription expires?
 
-If you let your subscription expire, it goes through multiple stages before it's ultimately deleted. This gives you, as the admin, time to reactivate if you want to continue the service, or to back up your data if you decide you no longer want the subscription.
+If you let your subscription expire, it goes through multiple stages before it's ultimately deleted. These multiple stages give you time to reactivate if you want to continue the service, or to back up your data if you decide you no longer want the subscription.
   
 Here's what you can expect when your subscription is in each stage.
   
@@ -114,7 +114,7 @@ As an admin, you still have access to the admin center. Don't worry—global or 
   
 ### Stage: Disabled
 
-**What to expect:** If you don't reactivate your subscription while it is in the Expired stage, it moves into a Disabled stage, which lasts for 90 days for most subscriptions, in most countries and regions. For Volume Licensing products, the Disabled stage lasts 30 days.
+**What to expect:** If you don't reactivate your subscription while it is in the Expired stage, it moves into a Disabled stage. The Disabled stage lasts for 90 days for most subscriptions, in most countries and regions. For Volume Licensing products, the Disabled stage lasts 30 days.
 
 In this stage, your access decreases significantly. Your users can't sign in or access their Windows 365 Cloud PCs. You can still sign in and get to the admin center, but can't assign licenses to users. Your customer data, including all user data, is available only to you and other admins.
 
