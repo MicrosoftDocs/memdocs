@@ -76,7 +76,7 @@ Here's what to expect for you and your users if you cancel a subscription.
 
 - **User access** Users lose access to their Cloud PC which is deprovisioned right away. Data within the Cloud PC is deleted as well as [Unlicensed Product notifications](https://support.microsoft.com/office/0d23d3c0-c19c-4b2f-9845-5344fedc4380).
 
-To learn how to cancel, see  !!!ABRAHAM is this  true for W365 Same process as for M365?!!! [Cancel your subscription](/microsoft-365/commerce/subscriptions/cancel-your-subscription).
+To learn how to cancel, see  [Cancel your subscription](/microsoft-365/commerce/subscriptions/cancel-your-subscription).
   
 > [!IMPORTANT]
 > If you explicitly delete a subscription, it skips the Expired and Disabled stages and the SharePoint Online data and content, including OneDrive, is immediately deleted.
