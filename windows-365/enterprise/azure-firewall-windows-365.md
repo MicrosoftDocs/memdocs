@@ -77,7 +77,7 @@ The environment in the diagram was set up using the following Azure Firewall app
 | Rule Description | Destination type | FQDN tag name | Protocol | TLS inspection | Required/Optional |
 | --- | --- | --- | --- | --- | --- |
 | Windows 365 FQDNs | FQDN Tag | Windows 365 | HTTP: 80, HTTPS: 443 | [Not recommended](/en-us/azure/virtual-desktop/proxy-server-support#dont-use-ssl-termination-on-the-proxy-server) | Required |
-| Office 365 FQDNs | FQDN Tag | Office 365 | HTTP: 80, HTTPS: 443 |  | Optional, but recommended|
+| Office 365 FQDNs | FQDN Tag | Office 365 | HTTP: 80, HTTPS: 443 | [Not recommend for optimize & allow categories](/microsoft-365/enterprise/microsoft-365-network-connectivity-principles?view=o365-worldwide)  | Optional, but recommended|
 | Windows Update | FQDN Tag | Windows Update| HTTP: 80, HTTPS: 443 | [Not recommended](/windows/deployment/update/windows-update-security#securing-metadata-connections) | Optional|
 
 ## Network rules
