@@ -14,6 +14,8 @@ items:
 - name: Windows 365 privacy and data 
   href: enterprise/privacy-personal-data.md
 - name: Windows 365 Business docs
+- name: What if my subscription expires? 
+  href: subscription-ends.md
   href: business/index.yml
 - name: Windows 365 Enterprise docs
   href: enterprise/index.yml
