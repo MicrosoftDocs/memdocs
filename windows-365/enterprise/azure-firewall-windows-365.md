@@ -60,7 +60,7 @@ FQDN tags for certain services are available for Azure Firewall to help configur
 There are many ways to configure networking within Azure. Here, we use:
 
 - A single VNet with Azure Firewall managing outbound access.
-- An ExpressRoute circuit to connect the vNet back to the on-premises environment.
+- An ExpressRoute circuit to connect the VNet back to the on-premises environment.
 
 ![Example of a Windows 365 rchitecture diagram using Windows Firewall.](./media/azure-firewall-windows-365/architecture-diagram.png)
 
