@@ -22,13 +22,13 @@ ms.topic: troubleshooting
 - Windows 11
 - Windows 10
 
-This article describes known issues that can often be resolved by configuration changes, or might be resolved automatically in a future release. For information about issues that can be resolved by applying a cumulative update, see [Windows Autopilot - resolved issues](resolved-issues.md).
+This article describes known issues that can often be resolved with configuration changes, or might be resolved automatically in a future release. For information about issues that can be resolved by applying a cumulative update, see [Windows Autopilot - resolved issues](resolved-issues.md).
 
 ## Known issues
 
 ### Kiosk device profile not auto logging in
 
-There's currently a known issue in Windows Update [KB5022303](https://support.microsoft.com/topic/january-10-2023-kb5022303-os-build-22621-1105-c45956c6-4ccb-4216-832c-2ec6309c7629), which applies to both Windows 10 and Windows 11, where Kiosk device profiles that have auto log on enabled won't auto login. After Autopilot completes provisioning, the device stays on the sign-in screen prompting for credentials. To work around this known issue, you can manually enter the kiosk user credentials with the username `kioskUser0` and no password. After entering this username with no password, it should take you to the desktop. This should be reoslved in Windows 10 version 3C (March 2023) or higher or Windows 11 4B (April 2023) or higher.
+There's currently a known issue in Windows Update [KB5022303](https://support.microsoft.com/topic/january-10-2023-kb5022303-os-build-22621-1105-c45956c6-4ccb-4216-832c-2ec6309c7629), which applies to both Windows 10 and Windows 11, where Kiosk device profiles that have auto log on enabled won't auto login. After Autopilot completes provisioning, the device stays on the sign-in screen prompting for credentials. To work around this known issue, you can manually enter the kiosk user credentials with the username `kioskUser0` and no password. After entering this username with no password, it should take you to the desktop. This issue should be resolved in Windows 10 version 3C (March 2023) or higher or Windows 11 4B (April 2023) or higher.
 
 ### TPM attestation isn't working on AMD platforms with ASP fTPM
 
@@ -36,7 +36,7 @@ TPM attestation for AMD platforms with ASP firmware TPM may fail with error code
 
 ### Autopilot profile not applied after reimaging to an older OS version
 
-If you enroll a device with Windows Update [KB5015878](https://support.microsoft.com/en-us/topic/july-26-2022-kb5015878-os-builds-19042-1865-19043-1865-and-19044-1865-preview-549f5551-fcc5-4fee-8811-c5df12e04d40) or later on Windows 10 or with Windows Update [KB5017383](https://support.microsoft.com/topic/september-20-2022-kb5017383-os-build-22000-1042-preview-62753265-68e9-45d2-adcb-f996bf3ad393) or later on Windows 11 and then reimage to an older OS version, the Autopilot profile won't be applied. The device would need to be re-registered to complete a successful Autopilot deployment. You may see the message **Fix pending** in the Autopilot devices blade which indicates that there was a hardware change on the device. To fix this error, you will need to deregister and re-register the device. For more details, please see [Return of key functionality for Windows Autopilot sign-in and deployment experience](https://techcommunity.microsoft.com/t5/intune-customer-success/return-of-key-functionality-for-windows-autopilot-sign-in-and/ba-p/3583130).
+If you enroll a device with Windows Update [KB5015878](https://support.microsoft.com/en-us/topic/july-26-2022-kb5015878-os-builds-19042-1865-19043-1865-and-19044-1865-preview-549f5551-fcc5-4fee-8811-c5df12e04d40) or later on Windows 10 or with Windows Update [KB5017383](https://support.microsoft.com/topic/september-20-2022-kb5017383-os-build-22000-1042-preview-62753265-68e9-45d2-adcb-f996bf3ad393) or later on Windows 11 and then reimage to an older OS version, the Autopilot profile won't be applied. The device would need to be re-registered to complete a successful Autopilot deployment. You may see the message **Fix pending** in the Autopilot devices blade which indicates that there was a hardware change on the device. To fix this error, you'll need to deregister and re-register the device. For more details, please see [Return of key functionality for Windows Autopilot sign-in and deployment experience](https://techcommunity.microsoft.com/t5/intune-customer-success/return-of-key-functionality-for-windows-autopilot-sign-in-and/ba-p/3583130).
 
 ### TPM attestation failure with error code 0x81039001
 
@@ -52,7 +52,7 @@ Autopilot deployments that take longer than one hour may display an incomplete d
 
 ### Autopilot profile not being applied when assigned
 
-In Windows 10 April and some May update releases, there is an issue where the Autopilot profile may fail to apply to the device and the hardware hash may not be harvested. As a result, any settings made in the profile may not be configured for the user such as device renaming. To resolve this issue, the May (KB5015020) cumulative update needs to be applied to the device.
+In Windows 10 April and some May update releases, there's an issue where the Autopilot profile may fail to apply to the device and the hardware hash may not be harvested. As a result, any settings made in the profile may not be configured for the user such as device renaming. To resolve this issue, the May (KB5015020) cumulative update needs to be applied to the device.
 
 ### DefaultuserX profile not deleted
 
