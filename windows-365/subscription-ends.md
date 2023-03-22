@@ -34,7 +34,7 @@ ms.collection:
 
 If your subscription ends—either because it expires, or because you decide to upgrade or cancel it—your access to Windows 365 services and customer data go through multiple stages before the subscription is fully turned off, or *deleted*. If you're aware of this progression, you're better equipped to return your subscription to an active stage before it's too late, or, if you're leaving Windows 365, back up your data before it's ultimately deleted.
 
-Read through this important information before you contact [Windows 365 support](../../admin/get-help-support.md).
+Read through this important information before you contact [Windows 365 support](/microsoft-365/admin/get-help-support).
 
 > [!IMPORTANT]
 > For some subscriptions, you can only cancel during a limited window of time after you buy or renew your subscription. If the cancellation window has passed, turn off recurring billing to cancel the subscription at the end of its term.
@@ -59,7 +59,7 @@ The following table explains what you can expect when a paid Windows 365 subscri
   
 > [!NOTE]
 >
-> **What is "customer data"?** Customer data, as defined in the [Microsoft Online Service Terms](https://www.microsoft.com/en-us/licensing/product-licensing/products), refers to all data, including all text, sound, or image files that are provided to Microsoft by, or on behalf of, the customer through the customer's use of Windows 365 services. To learn more about the protection of customer data, see the [Get started with the Microsoft Service Trust Portal](../../compliance/get-started-with-service-trust-portal.md).
+> **What is "customer data"?** Customer data, as defined in the [Microsoft Online Service Terms](https://www.microsoft.com/en-us/licensing/product-licensing/products), refers to all data, including all text, sound, or image files that are provided to Microsoft by, or on behalf of, the customer through the customer's use of Windows 365 services. To learn more about the protection of customer data, see the [Get started with the Microsoft Service Trust Portal](/microsoft-365/compliance/get-started-with-service-trust-portal).
 
 ## What happens if I cancel a subscription?
 
