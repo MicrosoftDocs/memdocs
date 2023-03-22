@@ -20,7 +20,6 @@ ms.subservice: configuration
 ms.reviewer: 
 ms.suite:
 search.appverid: MET150
-#ms.tgt_pltfrm:
 ms.custom: 
 ms.collection: 
 - M365-identity-device-management 
@@ -494,7 +493,7 @@ This level expands on what you've configured in levels 1 and 2. It adds extra se
 
     - [Azure AD identity protection overview](/azure/active-directory/identity-protection/overview-identity-protection)
     - [Azure AD multi-factor authentication](/azure/active-directory/authentication/concept-mfa-howitworks)
-    - [Require multi-factor authentication for Intune device enrollments](/enrollment/multi-factor-authentication.md)
+    - [Require multi-factor authentication for Intune device enrollments](../enrollment/multi-factor-authentication.md)
 
   - **Set up Microsoft Tunnel** for your Android and iOS/iPadOS devices. Microsoft Tunnel uses Linux to allow these devices access to on-premises resources using modern authentication and Conditional Access.
 
