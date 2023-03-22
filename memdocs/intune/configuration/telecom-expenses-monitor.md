@@ -32,7 +32,7 @@ ms.collection:
 
 # Set up a telecom expense management service in Intune
 
-Using Intune, you can manage telecom expenses from data usage on organization-owned mobile devices. Intune integrates with Saaswedo's [Datalert telecom expense management](http://datalert.biz/get-started). Datalert is a real-time telecom expense management solution that manages telecom data usage. It can help avoid unexpected data and roaming charges for your Intune-managed devices.
+Using Intune, you can manage telecom expenses from data usage on organization-owned mobile devices. Intune integrates with Saaswedo's [Datalert telecom expense management](http://www.datalert.biz/get-started). Datalert is a real-time telecom expense management solution that manages telecom data usage. It can help avoid unexpected data and roaming charges for your Intune-managed devices.
 
 The integration with Datalert can set, monitor, and enforce roaming and domestic data usage limits. When the limits exceed your thresholds, alerts are automatically triggered. You can also configure the service to apply different actions to users or groups, such as disable roaming or exceed the threshold. The Datalert management console includes reports that show data usage and monitoring information.
 
