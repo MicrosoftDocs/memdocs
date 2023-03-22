@@ -108,11 +108,9 @@ Allowed OS versions means that user-less devices running a non-supported iOS/iPa
 
 **New user-less enrollments and feature support**
 
-User-less supported version:
-Three most recent versions (N-2): iOS/iPadOS 14.x and later
-
-User-less allowed versions:
-Up to three versions below the supported version (N-5): iOS/iPadOS 11.x and later
+|**User-less supported versions**|**User-less allowed versions**|
+|:---|:---:|
+|Three most recent versions (N-2): iOS/iPadOS 14.x and later|Up to three versions below the supported version (N-5): iOS/iPadOS 11.x and later|
 
 
 ## Intune supported web browsers
