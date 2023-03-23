@@ -104,9 +104,9 @@ A local Windows Autopilot Reset is a two-step process: trigger it and then authe
 
 **To trigger a local Autopilot Reset:**
 
-1. If you created a provisioning package, plug in the USB drive that contains the provisioning package.
+1. If you created a provisioning package, plug in the USB drive that contains the provisioning package into the device where the Windows Autopilot reset will be performed.
 
-2. From the Windows device lock screen, enter the keystroke: **CTRL + ![Windows key](images/windows_glyph.png) + R**.
+2. On the device, from the Windows device lock screen, enter the keystroke: **CTRL + ![Windows key](images/windows_glyph.png) + R**.
 
     ![Enter CTRL+Windows key+R on the Windows lock screen](images/autopilot-reset-lockscreen.png)
 
@@ -116,7 +116,7 @@ A local Windows Autopilot Reset is a two-step process: trigger it and then authe
 
         ![Custom login screen for local Autopilot Reset](images/autopilot-reset-customlogin.png)
 
-3. Trigger the local Autopilot Reset by signing in with an account that has local admin credentials. 
+3. Sign into the device with an account that has local admin credentials to trigger the local Autopilot Reset.
 
  Once the local Autopilot Reset is triggered, the reset process starts. Once provisioning is complete, the device is again ready for use.
 
