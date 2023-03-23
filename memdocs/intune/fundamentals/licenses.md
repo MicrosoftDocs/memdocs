@@ -35,7 +35,7 @@ Microsoft Intune is available for different customer needs and organization size
 
 ## Microsoft Intune
 
-The following plans are available:
+The following plans are available for Microsoft Intune. For more information about the plans and pricing, see [Discover Microsoft Intune Plans and Pricing](https://www.microsoft.com/security/business/microsoft-intune-pricing).
 
 ### Microsoft Intune Plan 1
 
@@ -61,7 +61,7 @@ An add-on to Microsoft Intune Plan 1 that offers advanced endpoint management ca
 
 For information about trial and purchasing, see [Use Intune Suite add-on capabilities](intune-add-ons.md).
 
-## Microsoft Intune Suite
+### Microsoft Intune Suite
 
 An add-on to Microsoft Intune Plan 1 that unifies mission-critical advanced endpoint management and security solutions.
 
