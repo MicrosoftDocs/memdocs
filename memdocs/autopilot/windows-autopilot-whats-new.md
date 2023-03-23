@@ -29,9 +29,6 @@ A new toggle is available in the Enrollment Status Page (ESP) profile that allow
 
 The Enrollment Status Page (ESP) now supports the new Microsoft store applications during Windows Autopilot. This update enables better support for the new Microsoft Store experience and should be rolling out to all tenants starting with Intune 2303. For related information, see [Set up the Enrollment Status Page](../intune/enrollment/windows-enrollment-status.md).
 
-## Bug fix: Intune Management Extension updates during Enrollment Status Page
-
-In 2302, the Intune Management extension no longer attempts to upgrade during an active Enrollment Status Page session. Previously, the Intune Management Extension (IME) would attempt to upgrade during the Enrollment Status Page, which can cause apps to time out and then fail the Autopilot deployment. This timeout is more commonly seen in pre-provisioning scenarios where a device may be provisioned with one version of the IME during the technician phase, and may require an update during the user phase.
 
 ## Win32 App Supersedence ESP improvements
 
