@@ -16,6 +16,10 @@ ms.topic: article
 
 # Windows Autopilot: What's new
 
+## Device rename occurs during technician phase for pre-provisioning 
+
+Starting in 2303 a new functional change forces the device rename to occur during the technician phase for pre-provisioning for AADJ devices. After the technician selects the provision button, we’ll immediately perform the device rename and reboot the device, then transition to the device ESP. During the user flow, the device rename is then skipped keeping resources that depend on device name (such as SCEP certs) intact. To apply this change, install the latest quality update of [KB5023773](https://support.microsoft.com/topic/march-21-2023-kb5023773-os-builds-19042-2788-19044-2788-and-19045-2788-preview-5850ac11-dd43-4550-89ec-9e63353fef23) or later.
+
 ## Install required apps during pre-provisioning
 
 A new toggle is available in the Enrollment Status Page (ESP) profile that allows you to select whether you want to attempt to install required applications during pre-provisioning (white glove) technician phase. We understand that installing as many applications as possible during pre-provisioning is desired to reduce the end user setup time. To help you achieve installing as many applications as possible during pre-provisioning, we've implemented an option to attempt the installation of all the required apps assigned to a device during technician phase. If there's app install failure, ESP continues except for the apps specified in the ESP profile. To enable this function, edit your Enrollment Status Page profile by selecting **Yes** on the new setting entitled **Only fail selected apps in technician phase**. This setting only appears if you have blocking apps selected. For more information, see [Update to Windows Autopilot pre-provisioning process for app installs](https://techcommunity.microsoft.com/t5/intune-customer-success/update-to-windows-autopilot-pre-provisioning-process-for-app/ba-p/3752516).
