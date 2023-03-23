@@ -32,7 +32,7 @@ ms.collection:
 
 # Assign licenses to users so they can enroll devices in Intune
 
-Whether you manually add users or synchronize from your on-premises Active Directory, you must first assign each user an Intune license before users can enroll their devices in Intune. For a list of licenses, see [Licenses that include Intune](licenses.md).
+Whether you manually add users or synchronize from your on-premises Active Directory, you must first assign each user an Intune Plan 1 license before users can enroll their devices in Intune. For a list of licenses, see [Microsoft Intune licensing](licenses.md).
 
 > [!NOTE]
 > Users assigned Intune app protection policy and not enrolling their devices into Microsoft Intune will also require an Intune license to receive policy.
