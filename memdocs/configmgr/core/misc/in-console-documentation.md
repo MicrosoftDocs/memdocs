@@ -2,7 +2,7 @@
 title: In-console documentation
 titleSuffix: Configuration Manager
 description: This article only displays in the Configuration Manager console.
-ms.date: 06/14/2021
+ms.date: 03/23/2023
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -83,4 +83,4 @@ Hotfix related articles for version 2006 and prior are still available on suppor
 
 The Microsoft knowledge base articles previously found at support.microsoft.com are published to [Microsoft Configuration Manager Troubleshooting](https://learn.microsoft.com/troubleshoot/mem/configmgr/welcome-configuration-manager). Troubleshooting articles created after October 2020 don't have a KB article ID.
 
-To subscribe to Atom or RSS notification of new Configuration Manager support articles, see [Support content updates](https://support.microsoft.com/help/4089498/) and select **Microsoft Endpoint Configuration Manager (current branch)**.
+To subscribe to Atom or RSS notification of new Configuration Manager support articles, see [Support content updates](https://support.microsoft.com/help/4089498/) and select **Microsoft Configuration Manager (current branch)**.
