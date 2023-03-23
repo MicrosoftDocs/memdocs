@@ -13,7 +13,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 03/17/2023
+ms.date: 03/23/2023
 ms.collection: 
   - M365-modern-desktop
   - highpri
@@ -60,8 +60,6 @@ Windows Autopilot Reset supports two scenarios:
 Additional requirements and configuration details apply with each scenario.
 
 ## Reset devices with local Windows Autopilot Reset
-
-The Intune Service Administrator role is required for this task. For more information, see [Add users and grant administrative permission to Intune](/intune/users-add).
 
 IT admins can use a local Windows Autopilot Reset to:
 
@@ -116,7 +114,7 @@ A local Windows Autopilot Reset is a two-step process: trigger it and then authe
 
         ![Custom login screen for local Autopilot Reset](images/autopilot-reset-customlogin.png)
 
-2. Sign in with the admin account credentials. If you created a provisioning package, plug in the USB drive and trigger the local Autopilot Reset.
+2. Sign in with an account that has local admin credentials. If you created a provisioning package, plug in the USB drive and trigger the local Autopilot Reset.
 
  Once the local Autopilot Reset is triggered, the reset process starts. Once provisioning is complete, the device is again ready for use.
 
@@ -124,7 +122,7 @@ A local Windows Autopilot Reset is a two-step process: trigger it and then authe
 
 You can use an MDM service such a Microsoft Intune to start the remote Windows Autopilot reset process. Resetting in this way avoids the need for IT staff to visit each machine to start the process.
 
-To enable a device for a remote Windows Autopilot Reset, the device must be MDM managed and joined to Azure AD.
+To enable a device for a remote Windows Autopilot Reset, the device must be MDM managed and joined to Azure AD. Additionally, for Intune, the Intune Service Administrator role is required for remote Windows Autopilot Reset. For more information, see [Add users and grant administrative permission to Intune](/intune/users-add).
 
 ### Triggering a remote Windows Autopilot Reset
 
