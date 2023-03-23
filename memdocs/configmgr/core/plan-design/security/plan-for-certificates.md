@@ -2,7 +2,7 @@
 title: Plan for PKI certificates
 titleSuffix: Configuration Manager
 description: Plan for the use of PKI digital certificates in Configuration Manager.
-ms.date: 08/02/2021
+ms.date: 03/23/2023
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
