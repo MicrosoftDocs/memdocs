@@ -246,7 +246,7 @@ conceptualContent:
         - url: ./fundamentals/monitor-audit-logs.md
           itemType: how-to-guide
           text: Use audit logs to track and monitor events
-        - url: /analytics/
+        - url: /mem/analytics/
           itemType: concept
           text: Endpoint analytics docs
       footerLink:
