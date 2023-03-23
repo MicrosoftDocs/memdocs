@@ -52,8 +52,8 @@ A cloud-based unified endpoint management solution that is included in the follo
 - Microsoft 365 Government G3
 - Microsoft Intune for Education
 
-    > [!NOTE]
-    > For additional licensing information about Intune for Education, see [Microsoft 365 Education](/office365/servicedescriptions/office-365-platform-service-description/microsoft-365-education).
+  > [!NOTE]
+  > For additional licensing information about Intune for Education, see [Microsoft 365 Education](/office365/servicedescriptions/office-365-platform-service-description/microsoft-365-education).
 
 ### Microsoft Intune Plan 2
 
