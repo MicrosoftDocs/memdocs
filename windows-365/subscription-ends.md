@@ -30,7 +30,7 @@ ms.collection:
 - tier2
 ---
 
-# What happens to my data and access when my Windows 365 for business subscription ends?
+# What happens to my data and access when my Windows 365 subscription ends?
 
 If your subscription ends—either because it expires, or because you decide to upgrade or cancel it—your access to Windows 365 services and customer data go through multiple stages before the subscription is fully turned off, or *deleted*. If you're aware of this progression, you're better equipped to return your subscription to an active stage before it's too late, or, if you're leaving Windows 365, back up your data before it's ultimately deleted.
 
