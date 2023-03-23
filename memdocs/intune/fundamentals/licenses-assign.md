@@ -37,7 +37,7 @@ Whether you manually add users or synchronize from your on-premises Active Direc
 > [!NOTE]
 > Users assigned Intune app protection policy and not enrolling their devices into Microsoft Intune will also require an Intune license to receive policy.
 
-## Assign an Intune license Microsoft Intune admin center
+## Assign an Intune license in the Microsoft Intune admin center
 
 You can use the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) to manually add cloud-based users and assign licenses to both cloud-based user accounts and accounts synchronized from your on-premises Active Directory to Azure AD.
 
@@ -51,7 +51,7 @@ You can use the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/
 
 ## Assign an Intune license by using Azure Active Directory
 
-You can also assign Intune licenses to users by using Azure Active Directory. For more information, see the [License users in Azure Active Directory article](/azure/active-directory/active-directory-licensing-group-assignment-azure-portal). 
+You can also assign Intune licenses to users by using Azure Active Directory. For more information, see the [License users in Azure Active Directory article](/azure/active-directory/active-directory-licensing-group-assignment-azure-portal).
 
 ## Use School Data Sync to assign licenses to users in Intune for Education
 
@@ -113,6 +113,7 @@ A list of the **Account ID**, the **Active Units**, and the **Consumed Units** w
 > To confirm your Azure Active Directory Premium and Microsoft Intune using Microsoft Intune admin center, see [Confirm your licenses](../fundamentals/licenses.md#confirm-your-licenses).
 
 ## Use PowerShell to selectively manage EMS user licenses
+
 Organizations that use Microsoft Enterprise Mobility + Security (formerly Enterprise Mobility Suite) might have users who only require Azure Active Directory Premium or Intune services in the EMS package. You can assign one or a subset of services using [Azure Active Directory PowerShell cmdlets](/previous-versions/azure/jj151815(v=azure.100)).
 
 To selectively assign user licenses for EMS services, open PowerShell as an administrator on a computer with the [Azure Active Directory Module for Windows PowerShell](/previous-versions/azure/jj151815(v=azure.100)#bkmk_installmodule) installed. You can install PowerShell on a local computer or on an ADFS server.
