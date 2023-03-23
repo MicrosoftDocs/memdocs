@@ -74,7 +74,7 @@ See this [overview of School Data Sync](https://support.office.com/article/Overv
 
 ## How to restore users accidentally unlicensed
 
-- If you have accidentally removed the license for one or more users, you can restore their device compliance and management by re-assigning the license for those users. For more information, see [Assign Microsoft Intune licenses](../fundamentals/licenses-assign.md#assign-an-intune-license-microsoft-intune-admin-center).
+- If you have accidentally removed the license for one or more users, you can restore their device compliance and management by re-assigning the license for those users. For more information, see [Assign Microsoft Intune licenses](#assign-an-intune-license-in-the-microsoft-intune-admin-center).
 
 ## Understanding the type of licenses you have purchased
 
