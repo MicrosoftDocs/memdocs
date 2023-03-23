@@ -102,9 +102,10 @@ The Samsung device models in the following table don't support Knox solutions an
 
 ### Supported versus allowed iOS/iPadOS versions for user-less devices
 
-Supported OS versions means that user-less devices running the three most recent iOS/iPadOS versions are fully supported by Intune. Devices running iOS/iPadOS 16.x, 15.x, and 14.x can enroll and take advantage of all Intune MDM functionality that is applicable to user-less devices, and all new eligible features will work on these devices.
+Supported OS versions means that Intune fully supports user-less devices running the three most recent iOS/iPadOS versions. 
+All Intune MDM functionality that applies to user-less devices and all new eligible features work on devices running iOS/iPadOS 16.x, 15.x, and 14.x.
 
-Allowed OS versions means that user-less devices running a non-supported iOS/iPadOS version (within three versions of the supported versions) can enroll and take advantage of Intune’s eligible features supported by the MDM protocol. However, it may come with bugs, or issues. Devices enrolled with user affinity or apps that rely on user sign-in are not supported.
+Allowed OS versions means that Intune supports eligible features that the MDM protocol supports within three versions, but supporting those allowed OS versions doesn’t guarantee the reliability of OS features, the absence of bugs, nor the absence of issues on user-less devices running non-supported iOS/iPadOS versions. As before, Intune doesn't support devices enrolled with user affinity or apps that rely on user sign-in.
 
 **New user-less enrollments and feature support**
 
