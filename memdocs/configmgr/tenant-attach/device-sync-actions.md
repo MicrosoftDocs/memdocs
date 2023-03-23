@@ -105,6 +105,19 @@ From the Microsoft Intune admin center, you can review the status of your Config
    
 :::image type="content" source="media/7138634-connector-status.png" alt-text="Microsoft Configuration Manager connector in the admin center" lightbox="media/7138634-connector-status.png":::
 
+### View recommendations and insights to enrich the Configuration Manager site health and device management experience
+<!-- 16957774 -->
+You can view recommendations and insights for your Configuration Manager sites. These recommendations can help you improve the site health and infrastructure and enrich the device management experience.
+
+Recommendations include:
+
+- How to simplify your infrastructure
+- Enhance device management
+- Provide device insights
+- Improve the health of the site
+
+To view recommendations, go to **Tenant administration > Connectors and tokens > Microsoft Endpoint Configuration Manager**, and select a _site_ to view recommendations for that . Once selected, you’ll find the _Recommendations_ tab that displays each insight along with a _Learn more_ link that opens details on how to apply that recommendation.
+
 ## <a name="bkmk_offboard"></a> Offboard from tenant attach
 
 While we know customers get enormous value by enabling tenant attach, there are rare cases where you might need to offboard a hierarchy. You can offboard from either the Configuration Manager console (recommend method) or from the Microsoft Intune admin center.
