@@ -170,7 +170,7 @@ Because of the number of configuration options and choices in Configuration Mana
 > [!NOTE]
 > For clients that also have a PKI certificate, the Configuration Manager console displays the **Client certificate** property as **Self-signed**. The client control panel **Client certificate** property shows **PKI**.<!-- 10278780 -->
 
-    You can also deploy the Configuration Manager HTTPS Readiness Assessment Tool (**CMHttpsReadiness.exe**) to computers. Then use the reports to view how many computers can use a client PKI certificate with Configuration Manager.
+You can also deploy the Configuration Manager HTTPS Readiness Assessment Tool (**CMHttpsReadiness.exe**) to computers. Then use the reports to view how many computers can use a client PKI certificate with Configuration Manager.
 
     > [!NOTE]
     > When you install the Configuration Manager client, it installs the **CMHttpsReadiness.exe** tool in the `%windir%\CCM` folder. The following command-line options are available when you run this tool:
