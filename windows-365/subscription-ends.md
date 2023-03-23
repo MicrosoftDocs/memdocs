@@ -148,5 +148,5 @@ When your trial ends, you can't continue using Windows 365 for free. You have a 
 ## Next steps
 
 [Cancel your subscription](/microsoft-365/commerce/subscriptions/cancel-your-subscription) (article)\
-[Renew Windows 365 for business](/microsoft-365/commerce/subscriptions/renew-your-subscription) (article)\
+[Renew Windows 365](/microsoft-365/commerce/subscriptions/renew-your-subscription) (article)\
 [Reactivate your subscription](/microsoft-365/commerce/subscriptions/reactivate-your-subscription) (article)
