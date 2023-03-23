@@ -1,6 +1,6 @@
 ---
-title: Remote Windows Autopilot reset in Intune
-description: Remote Windows Autopilot reset in Intune.
+title: Remote Windows Autopilot Reset in Intune
+description: Remote Windows Autopilot Reset in Intune.
 ms.prod: windows-client
 ms.localizationpriority: medium
 author: frankroj
@@ -17,7 +17,7 @@ ms.technology: itpro-deploy
 
 # Reset devices with remote Windows Autopilot Reset
 
-You can use an MDM service such a Microsoft Intune to start the remote Windows Autopilot reset process. Resetting in this way avoids the need for IT staff to visit each machine to start the process.
+You can use an MDM service such a Microsoft Intune to start the remote Windows Autopilot Reset process. Resetting in this way avoids the need for IT staff to visit each machine to start the process.
 
 To enable a device for a remote Windows Autopilot Reset, the device must be MDM managed and joined to Azure AD.
 

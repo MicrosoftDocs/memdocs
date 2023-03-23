@@ -1,6 +1,6 @@
 ---
-title: Local Windows Autopilot reset in Intune
-description: Local Windows Autopilot reset in Intune.
+title: Local Windows Autopilot Reset in Intune
+description: Local Windows Autopilot Reset in Intune.
 ms.prod: windows-client
 ms.localizationpriority: medium
 author: frankroj
@@ -15,7 +15,7 @@ ms.collection:
 ms.technology: itpro-deploy
 ---
 
-# Enable local Windows Autopilot reset
+# Enable local Windows Autopilot Reset
 
 ## Reset devices with local Windows Autopilot Reset
 
@@ -33,14 +33,14 @@ To enable local Autopilot Reset in Windows 10:
 1. [Enable the policy for the feature](#enable-local-windows-autopilot-reset)
 2. [Trigger a reset for each device](#trigger-local-windows-autopilot-reset)
 
-## Enable local Windows Autopilot reset in Intune
+## Enable local Windows Autopilot Reset in Intune
 
 To enable a local Windows Autopilot Reset, the **DisableAutomaticReDeploymentCredentials** policy must be configured. This policy is documented in the [Policy CSP](/windows/client-management/mdm/policy-csp-credentialproviders), **CredentialProviders/DisableAutomaticReDeploymentCredentials**. By default, local Windows Autopilot Reset is disabled. This default ensures that a local Autopilot Reset isn't triggered by accident.
 
 
 
 
-To create a configuration profile that enables local Windows Autopilot reset, follow the below steps:
+To create a configuration profile that enables local Windows Autopilot Reset, follow the below steps:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
