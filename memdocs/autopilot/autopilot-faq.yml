@@ -325,7 +325,7 @@ sections:
         answer: |
           No. It's not required, but you can use it together with Autopilot in the following scenarios:
 
-          - [Co-management?](../configmgr/comanage/overview.md)
+          - [Co-management](../configmgr/comanage/overview.md)
           - [Autopilot for existing devices](existing-devices.md)
 
   - name: Features
