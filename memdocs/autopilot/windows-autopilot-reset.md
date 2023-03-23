@@ -110,8 +110,9 @@ On the device where the local Windows Autopilot reset is being performed:
 2. From the Windows device lock screen, enter the keystroke: **CTRL + ![Windows key](images/windows_glyph.png) + R**.
 
     These keystrokes open up a custom sign-in screen for the local Autopilot Reset. The screen serves two purposes:
-       1. Confirm/verify that the end user has the right to trigger Local Autopilot Reset
-       2. Notify the user in case a provisioning package, created using Windows Configuration Designer, is being used as part of the process.
+    
+    1. Confirm/verify that the end user has the right to trigger Local Autopilot Reset
+    2. Notify the user in case a provisioning package, created using Windows Configuration Designer, is being used as part of the process.
 
     ![Custom login screen for local Autopilot Reset](images/autopilot-reset-customlogin.png)
 
