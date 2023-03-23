@@ -214,7 +214,7 @@ This certificate has two purposes:
     > [!NOTE]
     > For this PXE scenario, this certificate is only used during the OS deployment process. It isn't installed on the client. Because of this temporary use, you can use the same certificate for every OS deployment if you don't want to use multiple client certificates.
     >
-    > The requirements for this certificate are the same as the client certificate for boot images. Because the requirements are the same, you can use the same certificate file.
+    > The requirements for this certificate are the same as the client certificate for task sequence media. Because the requirements are the same, you can use the same certificate file.
     >
     > The certificate that you specify to HTTPS-enable a distribution point applies to all content distribution operations, not just OS deployment.
 
@@ -282,13 +282,13 @@ Certificate requirements:
 
 By default, Configuration Manager looks for computer certificates in the Personal store in the Computer certificate store.
 
-### Boot images for deploying operating systems
+### Task sequence media for deploying operating systems
 
-The certificate is used if the task sequence includes client actions like client policy retrieval or sending inventory information. It allows the computer to connect to an HTTPS-enabled management point during the OS deployment process.
+This certificate is used by an OSD task sequence and allows the computer to connect to an HTTPS-enabled management point and distribution point during the OS deployment process. Connections to the management point and to the distribution point may include such actions such as client policy retrieval from the management point and downloading of content from the distribution point.
 
-This certificate is only used during the OS deployment process. It isn't used to install the client or installed on the device. Because of this temporary use, you can use the same certificate for every OS deployment if you don't want to use multiple client certificates.
+This certificate is only used during the OS deployment process. It isn't used as part of the client installation properties when the the client is installed during the **Setup Windows and ConfigMgr** task nor is it installed on the device. Because of this temporary use, you can use the same certificate for every OS deployment if you don't want to use multiple client certificates.
 
-When you have an environment that's HTTPS-only, the boot image must have a valid certificate. This certificate allows the device to communicate with the site and for the deployment to continue. The client can automatically generate a certificate when the device is joined to Active Directory, or you can install a client certificate by using another method.
+When you have an environment that's HTTPS-only, the task sequence media must have a valid certificate. This certificate allows the device to communicate with the site and for the deployment to continue. After the task sequence completes, when the device is joined to Active Directory, the client can automatically generate a PKI certificate via a GPO, or you can install a PKI certificate by using another method.
 
 > [!NOTE]
 > The requirements for this certificate are the same as the server certificate for site systems with the distribution point role. Because the requirements are the same, you can use the same certificate file.
@@ -301,13 +301,19 @@ Certificate requirements:
 
 - The **Enhanced Key Usage** value must contain `Client Authentication (1.3.6.1.5.5.7.3.2)`
 
-- There are no specific requirements for the certificate **Subject Name** or **Subject Alternative Name** (SAN) fields. You can use the same certificate for all boot images.
+- There are no specific requirements for the certificate **Subject Name** or **Subject Alternative Name** (SAN) fields. You can use the same certificate for all task sequence media.
 
 - The private key must be exportable.
 
 - Maximum supported key length is 2,048 bits.
 
-Export this certificate in a Public Key Certificate Standard (PKCS #12) format. You need to know the password, so that you can import the certificate to the boot image properties.
+Export this certificate in a Public Key Certificate Standard (PKCS #12) format. You need to know the password, so that you can import the certificate when creating the task sequence media.
+
+> [!IMPORTANT]
+>
+> Boot images don't contain PKI certificates to communicate with the site. Instead, boot images use the PKI certificate added to the task sequence media to communicate with the site.
+
+For more information on adding a PKI certificate to task sequence media, see [Create bootable media](../../../osd/deploy-use/create-bootable-media.md#process) and [Create prestaged media](../../../osd/deploy-use/create-prestaged-media.md#process).
 
 ### macOS client computers
 
