@@ -52,7 +52,7 @@ After the hardware hashes have been captured from existing devices, they can be 
   - The Microsoft Intune admin center is used for Intune device enrollment.
 - [Partner Center](https://msdn.microsoft.com/partner-center/autopilot). This is used by CSP partners to register devices on behalf of customers.
 - [Microsoft 365 Business & Office 365 Admin](https://support.office.com/article/Create-and-edit-Autopilot-profiles-5cf7139e-cfa1-4765-8aad-001af1c74faa). This is typically used by small and medium businesses (SMBs) who manage their devices using Microsoft 365 Business.
-- [Microsoft Store for Business](/microsoft-store/add-profile-to-devices#manage-autopilot-deployment-profiles). You might already be using MSfB to manage your apps and settings.
+- [Microsoft Store for Business](/microsoft-store/add-profile-to-devices#manage-autopilot-deployment-profiles). You might already be using Microsoft Store for Business to manage your apps and settings.
 
 >[!IMPORTANT]
 >Microsoft Store for Business and Microsoft Store for Education will be retired in the first quarter of 2023. You can continue to use the current capabilities of free apps until that time. For more information about this change, see [Evolving the Microsoft Store for Business and Education](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/evolving-the-microsoft-store-for-business-and-education/ba-p/2569423).
@@ -62,7 +62,7 @@ A summary of each platform's capabilities is provided below.
 | Platform/Portal | Register devices? | Create/Assign profile | Acceptable Device ID |
 | --- | --- | -- | -- |
 | OEM Direct API | YES - 1000 at a time max | NO | Tuple or PKID |
-| [Partner Center](/partner-center/autopilot) | YES - 1000 at a time max | YES<sup>34</sup> | Tuple or PKID or 4K HH |
+| [Partner Center](/partner-center/autopilot) | YES - 1000 at a time max | YES<sup>3</sup> | Tuple or PKID or 4K HH |
 | [Intune](add-devices.md) | YES - 500 at a time max | YES<sup>12</sup> | 4K HH |
 | [Microsoft Store for Business](/microsoft-store/add-profile-to-devices#manage-autopilot-deployment-profiles) | YES - 1000 at a time max | YES<sup>4</sup> | 4K HH |
 | [Microsoft 365 Business Premium](/microsoft-365/business/create-and-edit-autopilot-profiles) | YES - 1000 at a time max | YES<sup>3</sup> | 4K HH |
@@ -70,7 +70,7 @@ A summary of each platform's capabilities is provided below.
 ><b><sup>1</sup></b>Microsoft recommended platform to use<br>
 ><b><sup>2</sup></b>Intune license required<br>
 ><b><sup>3</sup></b>Feature capabilities are limited<br>
-><b><sup>4</sup></b>Device profile assignment will be retired from MSfB and Partner Center in the coming months<br>
+><b><sup>4</sup></b>Device profile assignment will be retired from Microsoft Store for Business in the coming months<br>
 
 For more information about device IDs, see the following topics:
 - [Device identification](registration-overview.md#device-identification)
