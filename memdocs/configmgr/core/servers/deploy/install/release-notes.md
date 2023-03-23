@@ -63,6 +63,11 @@ For more information, see [internet access requirements](../../../plan-design/ne
 
 ## Software updates
 
+### Reset default value of superseding age in months for software updates
+_Applies to: version 2303_
+
+Removing SUP role in Admin Console does not reset the superseding age property in WMI. As a result, while reconfiguring the role, the previously configured value is shown in the configuration window. This property needs to be reset to default value on role removal. For more information, see [supersedence rules for installing a software update point.](../../../../sum/get-started/install-a-software-update-point.md)
+
 ### Security roles are missing for phased deployments
 
 <!--3479337, SCCMDocs-pr issue 3095-->
