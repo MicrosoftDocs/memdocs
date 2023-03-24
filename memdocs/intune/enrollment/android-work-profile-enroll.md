@@ -34,9 +34,9 @@ ms.collection:
 
 # Set up enrollment of Android Enterprise personally-owned work profile devices
 
-Enroll personal devices in Microsoft Intune using the *Android Enterprise work profile* management solution for personal-owned devices. During enrollment, a work profile, or partition, is created on the device for work apps and work data. The work profile can be managed by Microsoft Intune policies. Personal apps and data stay separate in another part of the device and remain unaffected by Intune. 
+Set up enrollment for bring-your-own-device (BYOD) and personal device scenarios using the *Android Enterprise personally-owned work profile* management solution. During enrollment, a work profile is created on the device to house work apps and work data. The work profile can be managed by Microsoft Intune policies. Personal apps and data stay separate in another part of the device and remain unaffected by Intune. 
 
-This article describes how to set up device enrollment in Microsoft Intune for work profile management on personal devices. For more information about Android Enterprise work profile features, see [Work profiles](https://support.google.com/work/android/answer/9563584) (opens Android Enterprise Help).  
+For more information about Android Enterprise work profile features, see [Work profiles](https://support.google.com/work/android/answer/9563584) (opens Android Enterprise Help).  
 
 ## Requirements  
 * [Connect your Intune tenant account to your Android Enterprise account](connect-intune-android-enterprise.md)
@@ -46,7 +46,7 @@ Any device that supports Android Enterprise personal work profiles also supports
 
 ## Set up enrollment  
 
-Complete these steps to set up enrollment and work profile management for personal devices. 
+Complete these steps to set up enrollment for Android Enterprise devices in bring-your-own-device (BYOD) scenarios.   
 
 > [!NOTE]
 > Device enrollment managers can enroll up to 10 devices per account.     
@@ -56,16 +56,16 @@ Complete these steps to set up enrollment and work profile management for person
     - **Allow (set by default)**: Personal devices that support the work profile management solution will enroll with a work profile. Android devices that don't support it are enrolled using the Android device administrator solution, unless device administrator enrollment is blocked.  
 
         > [!NOTE]
-        > **Block** is the default setting in policies that you set up prior to July 2019 and never changed.  
+        > Work profile management for personal devices is allowed by default. However, it's blocked by default in policies configured before July 2019.   
 
 2. [Tell your users how to enroll their devices](../user-help/enroll-device-android-work-profile.md). To enroll, users must be using the primary user account on their device. Enrolling with a secondary user account is not supported.  Personal devices previously enrolled with Android device administrator can unenroll, and then re-enroll using the work profile solution.  
 
-> [!TIP]
-> You can remotely return a device to a state where it's ready to enroll again by using the **Retire** function in the admin center. To use this remote action, go to **Devices** > **All devices**, and select a device. For more information, see [Retire Android device administrator](../remote-actions/devices-wipe.md#android-device-administrator).    
+    > [!TIP]
+    > You can remotely return a device to a state where it's ready to enroll again by using the **Retire** function in the admin center. To use this remote action, go to **Devices** > **All devices**, and select a device. For more information, see [Retire Android device administrator](../remote-actions/devices-wipe.md#android-device-administrator).    
 
 ## Data shared with Google  
 
-For more information, see [Data Intune sends to Google](../protect/data-intune-sends-to-google.md).  
+When Android Enterprise device management is enabled on a device, Microsoft Intune establishes a connection with Google and shares user and device information with Google.For more information, see [Data Intune sends to Google](../protect/data-intune-sends-to-google.md).  
 
 ## Next steps
 - [Deploy Android Enterprise apps](../apps/apps-add-android-for-work.md)
