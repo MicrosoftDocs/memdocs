@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 03/06/2023
+ms.date: 03/24/2023
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -49,7 +49,7 @@ For these comparisons, industry standard tests were run to measure:
 - File operations, like opening/saving documents or viewing images.
 - Apps, like video conferencing or browsers.
 
-These tests were run with identical parameters through multiple iterations with reboots between each iteration. All Cloud PC configurations were in the same production environment in the same region. The tests approximate what a typical user would experience running common workloads such as Microsoft Edge and Microsoft 365 apps.
+These tests were run with identical parameters through multiple iterations with reboots between each iteration. All Cloud PC configurations were in the same production environment in the same region. The tests approximate a typical user workload running common software such as Microsoft Edge and Microsoft 365 apps.
 
 These tests didn’t factor in various customer-specific third-party agents often deployed in customer environments. Each of these agents will have its own resource requirements that can impact performance.
 
@@ -61,9 +61,9 @@ It can be valuable for you to do to your own testing with workloads approximatin
 
 A common starting point for Windows 365 Cloud PC users is the 2 vCPU / 8-GB RAM / 128-GB storage size. The chart shows that the relative performance improvement of the 4 vCPU configuration over the 2 vCPU configuration is up to 28% faster.  
 
-For the workloads we test, the performance about the same when moving from 4 vCPU to 8 vCPU. However, more processor intensive workloads may see a greater improvement.
+For the workloads we test, the performance about the same when moving from 4 vCPU to 8 vCPU. However, more processor intensive workloads may see greater improvement.
 
-If you plan on running CPU-intensive workloads, the differences are going to be more noticeable and favor a greater number of processors. For example, workloads like business analytics tools with large datasets in the 64-bit version of Microsoft Excel. For employees who are only using Microsoft Teams, browsers, or Microsoft 365 applications, the 4 vCPU configuration likely sufficient.
+If you plan on running CPU-intensive workloads, the differences are going to be more noticeable and favor a greater number of processors. For example, workloads like business analytics tools with large datasets in the 64-bit version of Microsoft Excel. For employees who are only using Microsoft Teams, browsers, or Microsoft 365 applications, the 4 vCPU configuration is likely sufficient.
 
 ## Choosing the Cloud PC size for your users
 
