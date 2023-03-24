@@ -261,8 +261,7 @@ It also tracks the following types of apps when they're assigned to all devices,
   - Per machine LoB MSI apps   
   - LoB store apps, online store apps, and offline store apps 
 
-If you are using Hybrid Azure AD join, Win32 or UWP apps assigned to the device with user install context will not be tracked during provisioning.
-
+Win32 and UWP apps assigned to the device with user installation context aren't tracked during provisioning if you're using Hybrid Azure AD join.   
 
 ### Known issues
 
