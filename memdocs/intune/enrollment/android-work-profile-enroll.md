@@ -42,7 +42,7 @@ This article describes how to set up device enrollment in Microsoft Intune for w
 * [Connect your Intune tenant account to your Android Enterprise account](connect-intune-android-enterprise.md)
 * Review [Android Enterprise requirements](https://support.google.com/work/android/answer/6174145?hl=en&ref_topic=6151012) (opens Google support)  
 
-Support for personal work profiles varies by device type. For more information about supported devices and using Android in your organization, see [Get started with Android Enterprise](https://support.google.com/work/android/answer/6174145?hl=en&ref_topic=6151012%20style=%22target=new_window%22) (opens Android Enterprise Help). Any device that supports Android Enterprise personal work profiles also supports the Android device administrator management solution.  
+Any device that supports Android Enterprise personal work profiles also supports the Android device administrator management solution.  
 
 ## Set up enrollment  
 
