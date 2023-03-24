@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/14/2022
+ms.date: 03/24/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -56,6 +56,9 @@ The following prerequisites must be met before a macOS DMG app is installed on m
 A single DMG should only contain a single application file or multiple application files that are dependent on one another. The containing application files can be listed under the **Included apps** section in the **Detection rules** tab in order starting with the parent app to be used in reports. 
 
 It is not recommended that multiple apps that are not dependent on each other are installed using the same DMG file. If multiple independent apps are deployed using the same DMG app, failure to install one app will cause other apps to be re-installed. In this case, monitoring reports consider the DMG installation a failure as well.
+
+> [!NOTE]
+> You can update apps of type **macOS apps (DMG)** deployed using Intune. Edit a DMG app that is already created in Intune by uploading the update for the app with the same bundle identifier as the original DMG app.
 
 ## Select the app type
 
@@ -161,8 +164,6 @@ The app you have created appears in the apps list where you can assign it to the
 
 - **"Available for enrolled devices" assignment type is not available**: Only **Required** and **Uninstall** assignment types are currently supported. 
 - **"Collect logs" action is unavailable during preview**: Log collection feature on macOS apps (DMG) is unavailable during preview. 
-- **Errors might not show details during preview**: Some errors you encounter may only show "Failed" status with an error code and not provide additional details.
-- **App upgrade fails to install**: Updating an app that has the same bundle ID or same name as an existing app in Applications folder fails to install. 
 - **DMG apps report once after deployment**: Assigned DMG apps report back on initial deployment only. These apps will not report back again during preview.
 - **Some DMG apps may display a warning to end-users on launch**: Apps downloaded from the internet and deployed using Intune may show a warning to end-users when launched. End-users can click "Open" on the dialog to continue opening the app.
 
