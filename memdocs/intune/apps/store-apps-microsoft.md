@@ -122,7 +122,7 @@ The Microsoft Store provides a large variety of apps designed to work on your Mi
 
 You can choose how you want to assign Microsoft Store apps to users and devices. 
 
-The following table provide assignment type details:
+The following table provides assignment type details:
 
 |     Assignment type    |     Assignment options    |     Description    |
 |---|---|---|
