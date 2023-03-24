@@ -41,7 +41,6 @@ This table shows examples of the different sizes available for a Cloud PC.
 
 |CPUs, RAM, and storage|Example scenarios|Supported apps|
 |:-------------------------------------------------------------------------------|:----------------------------------|:----------------------------------|
-|1vCPU/2GB/64GB* |Firstline workers, call centers, education/training/CRM access.|Office light (web-based), Microsoft Edge, OneDrive, lightweight line-of-business app (call center application – web-apps), Defender support. |
 |2vCPU/4GB/256GB<br/> 2vCPU/4GB/128GB<br/> 2vCPU/4GB/64GB | Firstline workers, call centers, education/training/CRM access, mergers and acquisition, short-term and seasonal, customer services. |Microsoft 365 Apps, Microsoft Teams light (Chat and Audio only), OneDrive, Adobe Reader, Microsoft Edge, line-of-business apps, Defender support.  |
 |2vCPU/8GB/256GB<br/>2vCPU/8GB/128GB |Bring-your-own-PC, work from home, market researchers, government, consultants. |Microsoft 365 Apps, Microsoft Teams, Outlook, Excel, Access, PowerPoint, OneDrive, Adobe Reader, Microsoft Edge, line-of-business apps, Defender support.  |
 |4vCPU/16GB/512GB<br/>4vCPU/16GB/256GB<br/> 4vCPU/16GB/128GB|Finance, government, consultants, healthcare services, bring-your-own-PC, work-from-home. |Microsoft 365 Apps, Microsoft Teams, Outlook, Excel, Access, PowerPoint, Power BI, Dynamics 365, OneDrive, Adobe Reader, Microsoft Edge, line-of-business apps, Defender support. |
