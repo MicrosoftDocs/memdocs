@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/22/2023
+ms.date: 02/21/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -53,13 +53,6 @@ To use Microsoft Store apps, be sure the following criteria are met:
 - Client devices must support at least two core processors to successfully install and run Microsoft Store apps.
 - Client device need to be able to support the [Intune Management Extension (IME)](..\apps\intune-management-extension.md) to install Microsoft Store apps.
 - Client device need access to the Microsoft Store and the destination content to install Microsoft Store apps.
-
-If you use Microsoft Intune to manage your apps (or use Group Policy), you can enable the **Only display the private store within the Microsoft Store** Group Policy setting to block the end user from using the store app.
-
-:::image type="content" source="./media/store-apps-microsoft/store-apps-microsoft-01.png" alt-text="Screenshot of the only display the private store setting." border="true" :::
-
-> [!NOTE]
-> If you blocked the Microsoft Store app at the network level, the above Group Policy will not work.
 
 ## Add and deploy a Microsoft Store app
 
@@ -122,7 +115,7 @@ The Microsoft Store provides a large variety of apps designed to work on your Mi
 
 You can choose how you want to assign Microsoft Store apps to users and devices. 
 
-The following table provides assignment type details:
+The following table provide assignment type details:
 
 |     Assignment type    |     Assignment options    |     Description    |
 |---|---|---|
