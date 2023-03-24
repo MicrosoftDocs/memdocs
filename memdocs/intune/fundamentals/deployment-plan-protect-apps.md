@@ -20,7 +20,6 @@ ms.subservice: fundamentals
 ms.reviewer: 
 ms.suite:
 search.appverid: MET150
-#ms.tgt_pltfrm:
 ms.custom: 
 ms.collection: 
 - M365-identity-device-management 
@@ -40,6 +39,7 @@ Managing applications on devices in your organization is a central part to a sec
 When apps are used without restrictions, company and personal data can get intermingled. Company data can end up in locations like personal storage or transferred to apps beyond your purview and result in data loss. One of the primary reasons to use either **MAM without device enrollment** or **Intune MDM + MAM** is to help protect your organization's data.
 
 Microsoft Endpoint Manager supports two MAM configurations:
+
 - **[MAM without device management](#mam-without-device-management)**
 - **[MAM with device management](#mam-with-device-management)**
 
@@ -53,15 +53,16 @@ This configuration allows your organization's apps to be managed by Intune, but 
 Mobile Application Management (MAM) is ideal to help protect organization data on mobile devices used by members of your organization for both personal and work tasks. While making sure your members of your organization can be productive, you want to prevent data loss, intentional and unintentional. You also want to protect company data that is accessed from devices that are not managed by you. MAM allows you to manage and protect your organization's data within an application.
 
 > [!TIP]
->  Many productivity apps, such as the Microsoft Office apps, can be managed by Intune MAM. See the official list of [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md) available for public use.
+> Many productivity apps, such as the Microsoft Office apps, can be managed by Intune MAM. See the official list of [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md) available for public use.
 
 For BYOD devices not enrolled in any MDM solution, app protection policies can help protect company data at the app level.
 However, there are some limitations to be aware of, such as:
+
 - You can't deploy apps to the device. The end user has to get the apps from the store.
 - You can't provision certificate profiles on these devices.
 - You can't provision company Wi-Fi and VPN settings on these devices.
 
-For more information about app protection in Intune, see [App protection policies overview](/mem/intune/apps/app-protection-policy?azure-portal=true).
+For more information about app protection in Intune, see [App protection policies overview](../apps/app-protection-policy.md).
 
 ### MAM with device management
 
@@ -74,11 +75,13 @@ There are additional benefits to using MDM with app protection policies, and com
 On enrolled devices that use an MDM service, app protection policies can add an extra layer of protection. For example, a user signs in to a device with their organization credentials. As that organization data is used, app protection policies control how the data is saved and shared. When users sign in with their personal identity, those same protections (access and restrictions) aren't applied. In this way, IT has control of organization data, while end users maintain control and privacy over their personal data.
 
 The MDM solution adds value by providing the following:
+
 - Enrolls the device
 - Deploys the apps to the device
 - Provides ongoing device compliance and management
 
 The App protection policies add value by providing the following:
+
 - Help protect company data from leaking to consumer apps and services
 - Apply restrictions like *save-as*, *clipboard*, or *PIN*, to client apps
 - Wipe company data when needed from apps without removing those apps from the device
@@ -86,6 +89,7 @@ The App protection policies add value by providing the following:
 ### Benefits of MAM with Intune
 
 When apps are managed in Intune, administrators can do the following:
+
 - **Protect company data at the app level.** You can add and assign mobile apps to user groups and devices. This allows your company data to be protected at the app level. You can protect company data on both managed and unmanaged devices because mobile app management doesn't require device management. The management is centered on the user identity, which removes the requirement for device management.
 - **Configure apps to start or run with specific settings enabled.** In addition, you can update existing apps already on the device.
 - **Assign policies to limit access and prevent data from being used outside your organization.** You choose the setting for these policies based on your organization's requirements. For example, you can:
@@ -108,11 +112,12 @@ Before adding apps to Intune, consider reviewing the support app types and asses
 
 ### Add Microsoft apps
 
-Intune includes a number of Microsoft apps based on the Microsoft license that you use for Intune. To learn more about the different Microsoft enterprise licenses available that include Intune, see [Microsoft Intune licensing](/mem/intune/fundamentals/licenses). To compare the different Microsoft apps that are available with Microsoft 365, see the [licensing options available with Microsoft 365](/microsoft-365/compare-microsoft-365-enterprise-plans). To see all the options for each plan (including the available Microsoft apps), download the full [Microsoft subscription comparison table](https://go.microsoft.com/fwlink/?linkid=2139145) and locate the plans that include Microsoft Intune.
+Intune includes a number of Microsoft apps based on the Microsoft license that you use for Intune. To learn more about the different Microsoft enterprise licenses available that include Intune, see [Microsoft Intune licensing](/mem/intune/fundamentals/licenses). To compare the different Microsoft apps that are available with Microsoft 365, see the [licensing options available with Microsoft 365](https://www.microsoft.com/microsoft-365/compare-microsoft-365-enterprise-plans). To see all the options for each plan (including the available Microsoft apps), download the full [Microsoft subscription comparison table](https://go.microsoft.com/fwlink/?linkid=2139145) and locate the plans that include Microsoft Intune.
 
 One of the available app types is Microsoft 365 apps for Windows 10 devices. By selecting this app type in Intune, you can assign and install Microsoft 365 apps to devices you manage that run Windows 10. You can also assign and install apps for the Microsoft Project Online desktop client and Microsoft Visio Online Plan 2, if you own licenses for them. The available Microsoft 365 apps are displayed as a single entry in the list of apps in the Intune console within Azure.
 
 Add the following core Microsoft apps to Intune:
+
 - Microsoft Edge
 - Microsoft Excel
 - Microsoft Office
@@ -126,6 +131,7 @@ Add the following core Microsoft apps to Intune:
 - Microsoft Word
 
 For more information about adding Microsoft apps to Intune, go to the following topics:
+
 - [Add apps to Microsoft Intune](../apps/apps-add.md)
 - [Add Microsoft 365 Apps to Windows 10/11 devices with Microsoft Intune](../apps/apps-add-office365.md)
 
@@ -139,13 +145,14 @@ The following table provides the different categories available for store apps:
 |---|---|
 | Free store apps | You can freely add these apps to Intune and deploy them to the members of your organization. These apps do not require any additional cost to use.   |
 | Purchased apps | You must purchase licenses for these apps before adding to Intune. Each device platform (Windows, iOS, Android) offers a standard method to purchase licenses for these apps. Intune provides methods to manage the app license for each end user.  |
-| Apps requiring an account, subscription, or license from the app developer | You can freely add and deploy these apps from Intune, however the app may require an account, subscription, or license from the app vendor. For a list of apps that support Intune management functionality, see [Partner productivity apps](../apps/apps-supported-intune-apps.md#partner-productivity-apps) and [Partner UEM apps](/../apps/apps-supported-intune-apps.md#partner-uem-apps). <b>**NOTE:** For apps that may require an account, subscription, or license, you must contact the app vendor for specific app details.   |
+| Apps requiring an account, subscription, or license from the app developer | You can freely add and deploy these apps from Intune, however the app may require an account, subscription, or license from the app vendor. For a list of apps that support Intune management functionality, see [Partner productivity apps](../apps/apps-supported-intune-apps.md#partner-productivity-apps) and [Partner UEM apps](../apps/apps-supported-intune-apps.md#partner-uem-apps). <b>**NOTE:** For apps that may require an account, subscription, or license, you must contact the app vendor for specific app details.   |
 | Apps included with your Intune license | The license you use with Microsoft Intune may include the app licenses you require.  |
 
 > [!NOTE]
 > In addition to purchasing app licenses, you can create Intune policies that allow end users to add personal accounts to their devices to purchase unmanaged apps.
 
 For more information about adding Microsoft apps to Intune, go to the following topics:
+
 - [Add Microsoft Store apps to Microsoft Intune](../apps/store-apps-microsoft.md)
 - [Add iOS store apps to Microsoft Intune](../apps/store-apps-ios.md)
 - [Add Android store apps to Microsoft Intune](../apps/store-apps-android.md)
@@ -154,9 +161,10 @@ For more information about adding Microsoft apps to Intune, go to the following 
 
 App configuration policies can help you eliminate app setup problems by letting you select configuration settings for a policy. That policy is then assigned to end users before they run a specific app. The settings are then supplied automatically when the app is configured on the end user's device. End users don't need to take action. The configuration settings are unique for each app.
 
-You can create and use app configuration policies to provide configuration settings for both iOS/iPadOS or Android apps. These configuration settings allow an app to be customized by using app configuration and management. The configuration policy settings are used when the app checks for these settings, typically the first time the app is run. 
+You can create and use app configuration policies to provide configuration settings for both iOS/iPadOS or Android apps. These configuration settings allow an app to be customized by using app configuration and management. The configuration policy settings are used when the app checks for these settings, typically the first time the app is run.
 
 An app configuration setting, for example, might require you to specify any of the following details:
+
 - A custom port number
 - Language settings
 - Security settings
@@ -167,6 +175,7 @@ If end users were to enter these settings instead, they could do this incorrectl
 The available configuration parameters are ultimately decided by the developers of the app. Documentation from the application vendor should be reviewed to see if an app supports configuration and what configurations are available. For some applications, Intune will populate the available configuration settings.
 
 For more information about app configuration, go to the following topics:
+
 - [App configuration policies for Microsoft Intune](../apps/app-configuration-policies-overview.md)
 - [Add app configuration policies for managed iOS/iPadOS devices](../apps/app-configuration-policies-use-ios.md)
 - [Add app configuration policies for managed Android Enterprise devices](../apps/app-configuration-policies-use-android.md)
@@ -178,6 +187,7 @@ The Outlook for iOS and Android app is designed to enable users in your organiza
 The richest and broadest protection capabilities for Microsoft 365 data are available when you subscribe to the Enterprise Mobility + Security suite, which includes Microsoft Intune and Azure Active Directory Premium features, such as conditional access. At a minimum, you will want to deploy a conditional access policy that allows connectivity to Outlook for iOS and Android from mobile devices and an Intune app protection policy that ensures the collaboration experience is protected.
 
 For more information about configuring Microsoft Outlook, go to the following topic:
+
 - [Manage messaging collaboration access by using Outlook for iOS and Android with Microsoft Intune](../apps/app-configuration-policies-outlook.md)
 
 ### Configure Microsoft Edge
@@ -185,6 +195,7 @@ For more information about configuring Microsoft Outlook, go to the following to
 Edge for iOS and Android is designed to enable users to browse the web and supports multi-identity. Users can add a work account, as well as a personal account, for browsing. There is complete separation between the two identities, which is like what is offered in other Microsoft mobile apps.
 
 For more information about configuring Microsoft Edge, go to the following topic:
+
 - [Manage Microsoft Edge on iOS and Android with Intune](../apps/manage-microsoft-edge.md)
 
 ### Configure VPN
@@ -194,6 +205,7 @@ Virtual private networks (VPN) allow users to access organization resources remo
 You can also create VPN policies that are used by specific apps. This feature is called per-app VPN. When the app is active, it can connect to the VPN, and access resources through the VPN. When the app isn't active, the VPN isn't used.
 
 For more information about configuring email, go to the following topic:
+
 - [Use a VPN and per-app VPN policy on Android Enterprise devices in Microsoft Intune](../apps/app-configuration-vpn-ae.md)
 
 ## Protect apps using Intune
@@ -203,6 +215,7 @@ App protection policies (APP) are rules that ensure an organization's data remai
 Mobile Application Management (MAM) app protection policies allows you to manage and protect your organization's data within an application. Many productivity apps, such as the Microsoft Office apps, can be managed by Intune MAM. See the official list of Microsoft Intune protected apps available for public use.
 
 One of the primary ways that Intune provides mobile app security is through policies. App protection policies allow you to do the following actions:
+
 - Use Azure AD identity to isolate organization data from personal data. So personal information is isolated from organizational IT awareness. Data accessed using organization credentials are given additional security protection.
 - Help secure access on personal devices by restricting actions users can take with organizational data, such as copy-and-paste, save, and view.
 - Create and deploy on devices that are enrolled in Intune, enrolled in another mobile device management (MDM) service, or not enrolled in any MDM service.
@@ -213,7 +226,8 @@ One of the primary ways that Intune provides mobile app security is through poli
 Organizations can use app protection policies with and without MDM at the same time. For example, consider an employee that uses both a tablet issued by the company, and their own personal phone. The company tablet is enrolled in MDM and protected by app protection policies while their personal phone is protected by app protection policies only.
 
 For more information about app protection in Intune, go to the following topics:
-- [App protection policies overview](../apps/app-protection-policy.md) 
+
+- [App protection policies overview](../apps/app-protection-policy.md)
 - [How to create and assign app protection policies](../apps/app-protection-policies.md).
 
 ### Levels of app protection
@@ -237,6 +251,7 @@ Basic app protection in Intune (level 1) is the minimum data protection configur
 The policies in level 1 enforce a reasonable data access level while minimizing the impact to users and mirror the default data protection and access requirements settings when creating an App Protection Policy within Microsoft Endpoint Manager.
 
 For specific data protection, access requirements, and conditional launch settings for basic app protection, go to the following topic:
+
 - [Level 1 enterprise basic data protection](../apps/app-protection-framework.md#level-1-enterprise-basic-data-protection).
 
 #### Enhanced app protection (level 2)
@@ -246,6 +261,7 @@ Enhanced app protection in Intune (level 2) is the data protection configuration
 The policy settings enforced in level 2 include all the policy settings recommended for level 1 but only lists those settings below that have been added or changed to implement more controls and a more sophisticated configuration than level 1. While these settings may have a slightly higher impact to users or to applications, they enforce a level of data protection more commensurate with the risks facing users with access to sensitive information on mobile devices.
 
 For specific data protection and conditional launch settings for enhanced app protection, go to the following topic:
+
 - [Level 2 enterprise enhanced data protection](../apps/app-protection-framework.md#level-2-enterprise-enhanced-data-protection).
 
 #### High app protection (level 3)
@@ -255,6 +271,7 @@ High app protection for Intune (level 3) is the data protection configuration re
 The policy settings enforced in level 3 include all the policy settings recommended for level 2 but only lists those settings below that have been added or changed to implement more controls and a more sophisticated configuration than level 2. These policy settings can have a potentially significant impact to users or to applications, enforcing a level of security commensurate with the risks facing targeted organizations.
 
 For specific data protection, access requirements, and conditional launch settings for basic app protection, go to the following topic:
+
 - [Level 3 enterprise high data protection](../apps/app-protection-framework.md#level-3-enterprise-high-data-protection).
 
 ### Protect Exchange Online email on managed devices
@@ -262,6 +279,7 @@ For specific data protection, access requirements, and conditional launch settin
 You can use device compliance policies with Conditional Access to make sure that your organization's devices can access Exchange Online email only if they're managed by Intune and using an approved email app. You can create an Intune device compliance policy to set the conditions that a device must meet to be considered compliant. You can also create an Azure Active Directory (Azure AD) Conditional Access policy that requires devices to enroll in Intune, comply with Intune policies, and use the approved Outlook mobile app to access Exchange Online email.
 
 For more information about protecting Exchange Online, go to the following topic:
+
 - [Tutorial: Protect Exchange Online email on managed devices](../protect/tutorial-protect-email-on-enrolled-devices.md)
 
 ### End-user requirements to use app protection policies

@@ -266,8 +266,8 @@ Now that you've installed your token, you can create an enrollment profile for A
 
     > [!NOTE]
     >
-    >- A device wipe will be required if an iOS/iPadOS enrollment profile with Shared iPad enabled is sent to an unsupported device. Unsupported devices include any iPhone models, and iPads running iPadOS/iOS 13.3 and earlier. Supported devices include iPads running iPadOS 13.3 and later.  
-    >- To set up Apple Shared iPad for Business, configure these settings:
+    > - A device wipe will be required if an iOS/iPadOS enrollment profile with Shared iPad enabled is sent to an unsupported device. Unsupported devices include any iPhone models, and iPads running iPadOS/iOS 13.3 and earlier. Supported devices include iPads running iPadOS 13.3 and later.  
+    > - To set up Apple Shared iPad for Business, configure these settings:
     >   - In the **User Affinity** list, select **Enroll without User Affinity**.
     >   - In the **Supervised** list, select **Yes**.
     >   - In the **Shared iPad** list, select **Yes**.
@@ -294,25 +294,38 @@ Now that you've installed your token, you can create an enrollment profile for A
 
     > [!NOTE]
     >
-    >- If temporary sessions are enabled, all of the user's data is deleted when they sign out of the session. This means that all targeted policies and apps will come down to the user when they sign-in, and they'll be erased when the user sign outs.  
-    >-  To alter a Shared iPads configuration to not have temporary sessions, the device will need to be fully reset and a new enrollment profile with the updated configurations will need to be sent down to the iPad.
+    > - If temporary sessions are enabled, all of the user's data is deleted when they sign out of the session. This means that all targeted policies and apps will come down to the user when they sign-in, and they'll be erased when the user sign outs.  
+    > -  To alter a Shared iPads configuration to not have temporary sessions, the device will need to be fully reset and a new enrollment profile with the updated configurations will need to be sent down to the iPad.
 
 13. In the **Sync with computers** list, select an option for the devices that use this profile. If you select **Allow Apple Configurator by certificate**, you need to choose a certificate under **Apple Configurator Certificates**.
 
     > [!NOTE]
     > If you set **Sync with computers** to **Deny all**, the port will be limited on iOS and iPadOS devices. The port will be limited to only charging. It will be blocked from using iTunes or Apple Configurator 2.
     >
-    >If you set **Sync with computers** to **Allow Apple Configurator by certificate**, make sure you have a local copy of the certificate that you can use later. You won't be able to make changes to the uploaded copy, and it's important to retain an copy of this certificate. If you want to connect to the iOS/iPadOS device from a macOS device or PC, the same certificate must be installed on the device making the connection to the iOS/iPadOS device.
+    > If you set **Sync with computers** to **Allow Apple Configurator by certificate**, make sure you have a local copy of the certificate that you can use later. You won't be able to make changes to the uploaded copy, and it's important to retain an copy of this certificate. If you want to connect to the iOS/iPadOS device from a macOS device or PC, the same certificate must be installed on the device making the connection to the iOS/iPadOS device.
 
-14. If you selected **Allow Apple Configurator by certificate** in the previous step, choose an Apple Configurator certificate to import.
+14. If you selected **Allow Apple Configurator by certificate** in the previous step, choose an Apple Configurator certificate to import.  
 
-15. You can specify a naming format for devices that's automatically applied when they're enrolled and upon each successive check-in. To create a naming template, select **Yes** under **Apply device name template**. Then, in the **Device Name Template** box, enter the template to use for the names that use this profile. You can specify a template format that includes the device type and serial number. This feature supports iPhone, iPad, and iPod Touch. The device name template entry cannot exceed the length of 63 characters, including the variables.
+15. For **Await final configuration**, your options are:  
 
-16. You can activate a cellular data plan. This setting applies to devices running iOS/iPadOS 13.0 and later. Configuring this option will send a command to activate cellular data plans for your eSim-enabled cellular devices. Your carrier must provision activations for your devices before you can activate data plans using this command. To activate cellular data plan, click **Yes** and then enter your carrier’s activation server URL.
+     * **Yes**: Enable a locked experience at the end of Setup Assistant to ensure your most critical device configuration policies are installed on the device. Just before the home screen loads, Setup Assistant pauses and lets Intune check in with the device. The end-user experience locks while users await final configurations. The amount of time it takes to release the device to the home screen varies, and depends on the total number of policies and apps applied to the device. The experience times out after five minutes.   
+    
+         This setting is applied once during the out-of-box automated device enrollment experience.  The device user doesn't experience it again unless they re-enroll their device. **Yes** is the default setting for new enrollment profiles. **No** is the default setting for existing enrollment profiles.  
 
-17. Select **Next**.
+     * **No**: The device is released to the home screen when Setup Assistant ends, regardless of policy installation status. Device users may be able to access the home screen or change device settings before all policies are installed.   
 
-18. On the **Setup Assistant** tab, configure the following profile settings:
+    The locked experience works on devices targeted with new and existing enrollment profiles. Supported devices include:      
+    * iOS/iPadOS 13+ devices enrolling with Setup Assistant with modern authentication  
+    * iOS/iPadOS 13+ devices enrolling without user affinity   
+    * iOS/iPadOS 13+ devices enrolling with Azure AD shared mode  
+
+16. You can specify a naming format for devices that's automatically applied when they're enrolled and upon each successive check-in. To create a naming template, select **Yes** under **Apply device name template**. Then, in the **Device Name Template** box, enter the template to use for the names that use this profile. You can specify a template format that includes the device type and serial number. This feature supports iPhone, iPad, and iPod Touch. The device name template entry cannot exceed the length of 63 characters, including the variables.
+
+17. You can activate a cellular data plan. This setting applies to devices running iOS/iPadOS 13.0 and later. Configuring this option will send a command to activate cellular data plans for your eSim-enabled cellular devices. Your carrier must provision activations for your devices before you can activate data plans using this command. To activate cellular data plan, click **Yes** and then enter your carrier’s activation server URL.  
+
+18. Select **Next**.
+
+19. On the **Setup Assistant** tab, configure the following profile settings:
 
     | Department setting | Description |
     |---|---|
@@ -324,9 +337,9 @@ Now that you've installed your token, you can create an enrollment profile for A
     - If you select **Show**, the screen will be displayed during setup, but only if there are steps to complete after the restore or after the software update. Users can sometimes skip the screen without taking action. They can then later go to the device's **Settings** menu to set up the feature.
     - With Shared iPad, all Setup Assistant panes after activation are automatically skipped regardless of the configuration.   
 
-19. Select **Next**.
+20. Select **Next**.
 
-20. To save the profile, select **Create**.  
+21. To save the profile, select **Create**.  
 
 ### Dynamic groups in Azure Active Directory
 
@@ -346,7 +359,7 @@ The following table describes the Setup Assistant screens shown during automated
 | **Passcode** | Prompt the user for a passcode. Always require a passcode for unsecured devices unless access is controlled in some other way. (For example, a kiosk mode configuration that restricts the device to one app.) For iOS/iPadOS 7.0 and later. |
 | **Location Services** | Prompt the user for their location. For macOS 10.11 and later, and iOS/iPadOS 7.0 and later. |
 | **Restore** | Display the Apps & Data screen. This screen gives users the option to restore or transfer data from iCloud Backup when they set up the device. For macOS 10.9 and later, and iOS/iPadOS 7.0 and later. |
-| **Apple ID** | Give the user the options to sign in with their Apple ID and use iCloud. For macOS 10.9 and later, and iOS/iPadOS 7.0 and later.   |
+| **Apple ID** | Give the user the options to sign in with their Apple ID and use iCloud. For iOS/iPadOS 7.0 and later.   |
 | **Terms and conditions** | Require the user to accept Apple's terms and conditions. For macOS 10.9 and later, and iOS/iPadOS 7.0 and later. |
 | **Touch ID and Face ID** | Give the user the option to set up fingerprint or facial identification on their device. For macOS 10.12.4 and later, and iOS/iPadOS 8.1 and later. On iOS/iPadOS 14.5 and later, the Passcode and Touch ID Setup Assistant screens during device setup aren’t working. If you use version 14.5+, then don't configure the Passcode or Touch ID Setup Assistant screens. If you require a passcode on devices, then use a device configuration policy or a compliance policy. After the user enrolls and they receive the policy, they're prompted for a passcode. |
 | **Apple Pay** | Give the user the option to set up Apple Pay on the device. For macOS 10.12.4 and later, and iOS/iPadOS 7.0 and later. |
@@ -357,17 +370,17 @@ The following table describes the Setup Assistant screens shown during automated
 | **Privacy** | Display the Privacy screen. For macOS 10.13.4 and later, and iOS/iPadOS 11.3 and later. |  
 | **Android Migration** | Give the user the option to migrate data from an Android device. For iOS/iPadOS 9.0 and later.|
 | **iMessage & FaceTime** | Give the user the option to set up iMessage and FaceTime. For iOS/iPadOS 9.0 and later. |  
-| **Onboarding** | Display onboarding informational screens for user education, like Cover Sheet and Multitasking and Control Center. For iOS/iPadOS 11.0 and later. |  
+| **Onboarding** | Display onboarding informational screens for user education, like Cover Sheet and Multitasking and Control Center. For iOS/iPadOS 11.0 and later. |
 | **Screen Time** | Display the Screen Time screen. For macOS 10.15 and later, and iOS/iPadOS 12.0 and later. |  
 | **SIM Setup** | Give the user the option to add a cellular plan. For iOS/iPadOS 12.0 and later. |
 | **Software Update** | Display the mandatory software update screen. For iOS/iPadOS 12.0 and later. |  
 | **Watch Migration** | Give the user the option to migrate data from a watch device. For iOS/iPadOS 11.0 and later.|
 | **Appearance** | Display the Appearance screen. For macOS 10.14 and later, and iOS/iPadOS 13.0 and later. |  
-| **Device to Device Migration** | Give the user the option to migrate data from an old device to this device. This feature isn't available for ADE devices running iOS 13 and later, so this screen won't appear on those devices.  
+| **Device to Device Migration** | Give the user the option to migrate data from an old device to this device. This feature isn't available for ADE devices running iOS 13 and later, so this screen won't appear on those devices.  |
 | **Restore Completed** | Shows users the Restore Completed screen after a backup and restore is performed during Setup Assistant. |  
 | **Software Update Completed** | Shows the user all software updates that happen during Setup Assistant.|  
-| **Get Started**| Shows users the Get Started welcome screen.  
-| **Terms of Address**| Give the user the option to choose how they want to be addressed throughout the system: feminine, masculine, or neutral. This Apple feature is available for select languages. For more information, see [Key Features and Enhancements](https://www.apple.com/ios/ios-16/features/)(opens Apple website). For iOS/iPadOS 16.0 and later.      
+| **Get Started**| Shows users the Get Started welcome screen.  |
+| **Terms of Address**| Give the user the option to choose how they want to be addressed throughout the system: feminine, masculine, or neutral. This Apple feature is available for select languages. For more information, see [Key Features and Enhancements](https://www.apple.com/ios/ios-16/features/)(opens Apple website). For iOS/iPadOS 16.0 and later.  |
 
 ## Sync managed devices  
 
@@ -377,7 +390,7 @@ Now that Intune has permission to manage your devices, you can synchronize Intun
 
 2. Select a token in the list, and then select **Devices** > **Sync**:
 
-    :::image type="content" source="./media/device-enrollment-program-enroll-ios/image06.png" alt-text="Screenshot that shows how to sync iOS and iPadOS devices to an enrollment program token.":::
+    :::image type="content" source="./media/device-enrollment-program-enroll-ios/image06.png" alt-text="Screenshot that shows how to sync iOS and iPadOS devices to an enrollment program token." lightbox="./media/device-enrollment-program-enroll-ios/image06.png":::
 
    To follow Apple's terms for acceptable enrollment program traffic, Intune imposes the following restrictions:
 
@@ -462,7 +475,7 @@ You'll sometimes need to renew your tokens:
 
 5. Select **Renew token**. Enter the **Apple ID** used to create the original token (if it's not automatically populated):  
 
-    :::image type="content" source="./media/device-enrollment-program-enroll-ios/renewtoken.png" alt-text="Screenshot that shows the Renew token page.":::
+    :::image type="content" source="./media/device-enrollment-program-enroll-ios/renewtoken.png" alt-text="Screenshot that shows the Renew token page." lightbox="./media/device-enrollment-program-enroll-ios/renewtoken.png":::
 
 6. Upload the newly downloaded token.
 

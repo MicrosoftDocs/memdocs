@@ -113,8 +113,8 @@ You can add your frequently used queries to a **Favorites** folder in CMPivot. C
 
 ### Device enrollment
 
-#### Installing WinGet applications using Windows Autopilot<!-- 16280325 -->
-The Enrollment Status Page now supports WinGet application installs during Windows Autopilot. This update enables better support for the new Microsoft Store experience. For related information, see [Set up the Enrollment Status Page](../enrollment/windows-enrollment-status.md).
+#### New Microsoft Store apps now supported with the Enrollment Status Page
+The Enrollment Status Page (ESP) now supports the new Microsoft store applications during Windows Autopilot. This update enables better support for the new Microsoft Store experience and should be rolling out to all tenants starting with Intune 2303. For related information, see [Set up the Enrollment Status Page](../enrollment/windows-enrollment-status.md).
 
 ## Week of February 27, 2023
 
@@ -316,6 +316,8 @@ Recommendations include:
 - Improve the health of the site
 
 To view recommendations, open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Tenant administration** > **Connectors and tokens** > **Microsoft Endpoint Configuration Manager**,  and select a *site* to view recommendations for that site.  Once selected, you’ll find the *Recommendations* tab that displays each insight along with a *Learn more* link that opens details on how to apply that recommendation.
+
+For more information, see [Enable Microsoft Intune tenant attach - Configuration Manager](../../configmgr/tenant-attach/device-sync-actions.md).
 
 ## Week of January 30, 2023
 
