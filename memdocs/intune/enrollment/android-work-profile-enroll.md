@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 2/10/2021
+ms.date: 3/24/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -51,17 +51,22 @@ Complete these steps to set up enrollment for Android Enterprise devices in brin
 > [!NOTE]
 > Device enrollment managers can enroll up to 10 devices per account.     
 
-1. Go to **Devices** > **Android** to set up enrollment restrictions. While configuring [device platform restrictions](create-device-platform-restrictions.md#best-practice---android-platform-restrictions), make sure to allow Android Enterprise work profile management. Your options:    
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Go to **Devices** > **Enrollment device platform restrictions** to set up enrollment restrictions. By default, Android Enterprise work profile is marked as allowed for personal devices enrolling in Intune. While configuring [device platform restrictions](create-device-platform-restrictions.md#best-practice---android-platform-restrictions), doublecheck that it's allowed in your tenant. If you don't  Your options:    
     - **Block**: Personal devices that enroll will use the Android device administrator management solution, unless device administrator enrollment is also blocked.  
     - **Allow (set by default)**: Personal devices that support the work profile management solution will enroll with a work profile. Android devices that don't support it are enrolled using the Android device administrator solution, unless device administrator enrollment is blocked.  
 
         > [!NOTE]
-        > Work profile management for personal devices is allowed by default. However, it's blocked by default in policies configured before July 2019.   
+        > Today, work profile management for personal devices is allowed by default. It's blocked by default in policies configured before July 2019.  
 
-2. [Tell your users how to enroll their devices](../user-help/enroll-device-android-work-profile.md). To enroll, users must be using the primary user account on their device. Enrolling with a secondary user account is not supported.  Personal devices previously enrolled with Android device administrator can unenroll, and then re-enroll using the work profile solution.  
+3. Communicate enrollment steps to device users. Users typically don't like enrolling themselves, and may not be familiar with the Company Portal app. Be sure to provide guidance, including what information to enter. For some guidance on communicating with your users, see [Planning guide: Step 5 - Create a rollout plan](../fundamentals/intune-planning-guide.md#step-5---create-a-rollout-plan).  
 
-    > [!TIP]
-    > You can remotely return a device to a state where it's ready to enroll again by using the **Retire** function in the admin center. To use this remote action, go to **Devices** > **All devices**, and select a device. For more information, see [Retire Android device administrator](../remote-actions/devices-wipe.md#android-device-administrator).    
+To enroll, users must be using the primary user account on their device. Enrollment is not supported on secondary user accounts. Personal devices previously enrolled with Android device administrator can unenroll, and then re-enroll using the work profile solution.  
+
+ > [!TIP]
+ > You can remotely return a device to a state where it's ready to enroll again by using the **Retire** function in the admin center. To use this remote action, go to **Devices** > **All devices**, and select a device. For more information, see [Retire Android device administrator](../remote-actions/devices-wipe.md#android-device-administrator).    
+
+ For more information and screenshots of the end user experience, see [Enroll device with Android work profile](../user-help/enroll-device-android-work-profile.md) in the Intune user help docs.    
 
 ## Data shared with Google  
 
