@@ -56,8 +56,8 @@ Complete these steps to set up enrollment for Android Enterprise devices in BYOD
 
    Any device that supports Android Enterprise personal work profiles also supports the Android device administrator management solution, so if you don't want Android device administrator to be a part of enrollments, make sure to block the platform. For more information, see [device platform restrictions](create-device-platform-restrictions.md#best-practice---android-platform-restrictions).  
 
-        > [!NOTE]
-        > Today, work profile management for personal devices is allowed by default. In policies configured before July 2019 without any changes, the default setting blocks work profile management.    
+     > [!NOTE]
+     > Today, Android Enterprise work profile management for personal devices is allowed by default. In policies configured before July 2019 without any changes, the default setting blocks Android Enterprise work profile management.    
 
 3. Communicate enrollment steps to device users. Users typically don't like enrolling themselves, and may not be familiar with the Company Portal app. Be sure to provide guidance, including what information to enter. For some guidance on communicating with your users, see [Planning guide: Step 5 - Create a rollout plan](../fundamentals/intune-planning-guide.md#step-5---create-a-rollout-plan).  
 
