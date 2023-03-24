@@ -91,7 +91,7 @@ items:
         displayName: devices, admin center, microsoft intune   
 
       - name: Set up enrollment for Azure AD shared device mode  
-        href: ./enrollment/automated-device-enrollment-authentication.md
+        href: ./enrollment/automated-device-enrollment-shared-device-mode.md
         displayName: devices, frontline worker, automated device enrollment  
 
   - name: Plan

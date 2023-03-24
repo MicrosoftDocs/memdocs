@@ -41,7 +41,7 @@ ms.collection:
 
 Set up automated device enrollment for devices in Azure AD shared device mode. *Shared device mode* enables frontline workers to securely share a single device throughout the day, signing in and out as needed. The foundation for this experience is made up of [Azure Active Directory (Azure AD) shared device mode](/azure/active-directory/develop/msal-ios-shared-devices) and the [Microsoft Enterprise SSO plug-in](../configuration/use-enterprise-sso-plug-in-ios-ipados-with-intune.md).    
 
-Corporate-owned devices purchased through Apple Business Manager or Apple School Manager can be enrolled in Intune via automated device enrollment. Devices can be shipped directly to employees. When they turn on their devices, Apple Setup Assistant guides them through setup and enrollment. Microsoft Intune supports zero-touch provisioning for devices in Azure AD shared mode, which means that the device can be set up and enrolled in Intune with minimal interaction from the frontline worker.     
+Corporate-owned devices purchased through Apple Business Manager or Apple School Manager can be enrolled in Intune via automated device enrollment.  Microsoft Intune supports zero-touch provisioning for devices in Azure AD shared mode, which means that the device can be set up and enrolled in Intune with minimal interaction from the frontline worker.     
 
 This article describes how to enable automated device enrollment for devices in shared device mode. You will:  
 
@@ -58,19 +58,19 @@ Before you create an enrollment profile in Microsoft Intune:
 * Read [Before you begin](device-enrollment-program-enroll-ios.md#before-you-begin) for best practices and recommendations for automated device enrollment.  
 
 ## Step 1: Create an Apple enrollment profile  
-Create an Apple enrollment profile in Microsoft Intune for devices enrolling in shared device mode. Include these configurations for shared device mode:    
+Create an Apple automated device enrollment profile in Microsoft Intune for devices enrolling in shared device mode. Include these configurations:    
 * **User affinity**: Enroll with Azure AD shared mode  
 * **Locked enrollment**: Yes  
 * **Apply device name template**: Yes (optional)  
-* **Device Name Template**: {{DEVICETYPE}}-{{SERIAL}} (optional)  
-* **Toggle All**: Hide (optional) 
+* **Device Name Template** (optional): {{DEVICETYPE}}-{{SERIAL}}   
+* **Toggle All** (optional): Hide 
 
- You can configure the rest of the profile to meet your organization's needs. Although optional, we recommend applying a device name template with the recommended formatting. You can hide all or some Setup Assistant screens to speed up provisioning and user onboarding. When you're done configuring the enrollment profile, assign it to devices. 
+ Although optional, we recommend applying a device name template with the recommended formatting. You can also hide all or some Setup Assistant screens to speed up provisioning and user onboarding. When you're done configuring the rest of the enrollment profile, assign it to devices. 
 
  For more information about how-to create an enrollment profile, see [Create an Apple enrollment profile](device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile).  
 
 ## Step 2: Create a dynamic Azure AD group
-Create a dynamic Azure AD group using the `enrollmentProfileName` property to automatically group devices that enroll with a specific enrollment profile. In this case, we want to group devices that are in share device mode and enrolling with the same profile. Include these configurations:  
+Create a dynamic Azure AD group using the `enrollmentProfileName` property to automatically group devices that enroll with a specific enrollment profile. In this case, we want to group devices that are in share device mode and enrolling with the profile you created in Step 1. Include these configurations in your dynamic group policy:  
 * **Group type**: Security
 * **Membership type**: Dynamic Device  
 * Add a dynamic query with the following rule: 
@@ -91,14 +91,14 @@ For more information about how to create an assignment filter rule, see [Create 
 
 ## Step 4: Create a device configuration profile
 Configure a single-sign on (SSO) app extension policy for shared device mode. Create a device configuration profile and include these configurations:   
-    * **Profile type**: Templates
-    * **Template name**: Device features
-    * Expand **Single sign-on app extension**, and then configure:    
-        * **SSO app extension type**: Microsoft Azure AD
-        * **Enable shared device more**: Yes  
-        * **Key**: device_registration
-        * **Type**: String
-        * **Value**: {{DEVICEREGISTRATION}} 
+* **Profile type**: Templates
+* **Template name**: Device features
+* Expand **Single sign-on app extension**, and then configure:    
+    * **SSO app extension type**: Microsoft Azure AD
+    * **Enable shared device more**: Yes  
+    * **Key**: device_registration
+    * **Type**: String
+    * **Value**: {{DEVICEREGISTRATION}} 
 
 You can configure the rest of the profile to meet your organization's needs. When you're done configuring the profile, assign it to **All devices** and then add the assignment filter you created in [Step 3](#step-3-create-an-assignment-filter).  
 
@@ -107,13 +107,13 @@ For more information about creating an SSO app extension policy, see:
 * [Single-sign on (SSO) app extension settings](../configuration/device-features-configure.md#single-sign-on-app-extension)  
 
 ## Step 5: Assign the Microsoft Authenticator app
-Assign the Microsoft Authenticator app to targeted devices. Assign the app as *required* to **All devices**. Then add the assignment filter you created in [Step 3](#step-3-create-an-assignment-filter). You must have purchased the Microsoft Authenticator app through an Apple volume-purchase program, such as Apple Business Manager or Apple School Manager.    
+Assign the Microsoft Authenticator app to targeted devices. Assign the app as *required* to **All devices**. Then add the assignment filter you created in [Step 3](#step-3-create-an-assignment-filter). You must have purchased the Microsoft Authenticator app through an Apple volume-purchase program.      
 
 For more information about assigning a volume-purchased app, see [Assign a volume purchased app](../apps/vpp-apps-ios.md#assign-a-volume-purchased-app).    
 
 ## Step 6: Distribute devices   
 
-Shared devices, which are enrolled without user affinity, require minimal user interaction from the frontline worker. Upon receiving the device, the frontline work will need to open the Microsoft Authenticator app to make sure the device is in shared device mode.   
+Shared devices, which are enrolled without user affinity, require minimal user interaction from the frontline worker. Upon receiving the device, the frontline worker will need to open the Microsoft Authenticator app to make sure the device is in shared device mode.   
 
 [!INCLUDE [users-dont-like-enroll](../includes/users-dont-like-enroll.md)]  
 
