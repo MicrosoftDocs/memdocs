@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/28/2020
+ms.date: 03/23/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -364,11 +364,11 @@ Supported platforms and profiles:
     - **Not configured** (*default*) - Data can be written to non-encrypted removable drives.
     - **Yes** - Windows doesn’t allow data to be written to removable drives that aren't BitLocker protected. If an inserted removable drive isn't encrypted, the user must complete the BitLocker setup wizard before write access is granted to drive.
 
-    - **Block write access to removable data-drives not protected by BitLocker**  
-      CSP: [BitLocker - RemovableDrivesRequireEncryption](/windows/client-management/mdm/bitlocker-csp#removabledrivesrequireencryption)
+  - **Block write access to devices configured in another organization**  
+    CSP: [BitLocker - RemovableDrivesRequireEncryption](/windows/client-management/mdm/bitlocker-csp#removabledrivesrequireencryption)
 
-      - **Not configured** (*default*) - Any BitLocker encrypted drive can be used.
-      - **Yes** - Block access to removable drives unless they were encrypted on a computer owned by your organization.
+    - **Not configured** (*default*) - Any BitLocker encrypted drive can be used.
+    - **Yes** - Block write access to removable drives unless they were encrypted on a computer owned by your organization.
 
 ## Next steps
 
