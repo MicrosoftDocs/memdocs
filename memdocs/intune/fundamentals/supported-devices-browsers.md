@@ -100,6 +100,20 @@ The Samsung device models in the following table don't support Knox solutions an
 | Galaxy V Plus | SM-G318HZ |
 | Galaxy Young 2 Duos | SM-G130BU |
 
+### Supported versus allowed iOS/iPadOS versions for user-less devices
+
+Supported OS versions means that Intune fully supports user-less devices running the three most recent iOS/iPadOS versions. 
+All Intune MDM functionality that applies to user-less devices and all new eligible features work on devices running iOS/iPadOS 16.x, 15.x, and 14.x.
+
+Allowed OS versions means that Intune supports eligible features that the MDM protocol supports within three versions, but supporting those allowed OS versions doesn’t guarantee the reliability of OS features, the absence of bugs, nor the absence of issues on user-less devices running non-supported iOS/iPadOS versions. As before, Intune doesn't support devices enrolled with user affinity or apps that rely on user sign-in.
+
+**New user-less enrollments and feature support**
+
+|**User-less supported versions**|**User-less allowed versions**|
+|:---|:---:|
+|Three most recent versions (N-2): iOS/iPadOS 14.x and later|Up to three versions below the supported version (N-5): iOS/iPadOS 11.x and later|
+
+
 ## Intune supported web browsers
 
 Device management and administrative tasks are done in the Microsoft Intune admin center. Use these portals to access the admin center:  

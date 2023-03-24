@@ -65,6 +65,9 @@ You can also copy an existing role.
 
 ## Custom role permissions
 
+> [!NOTE]
+> You can view and manage VPP apps with only the **Mobile apps** permission assigned. Previously, the **Managed apps** permission was required to view and manage VPP apps. This change does not apply to Intune for Education tenants who still need to assign the **Managed apps** permission.
+
 The following permissions are available when creating custom roles.
 
 | Permission | Description |

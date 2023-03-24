@@ -179,6 +179,9 @@ Enrollment restrictions are use to prevent (block) personally owned devices from
 
 Diagnostics for devices and applications.
 
+> [!NOTE]
+> To collect and access diagnostics you must have the Collect diagnostics permission added to your role. For more information, see [Role-based administration control (RBAC) with Intune](role-based-access-control.md).
+
 | Column           | Text                                                                                                                                |
 |--------------------|-------------------------------------------------------------------------------------------------------------------------------------|
 | Device name or application       | The name of the device or application.                                                                                                     |

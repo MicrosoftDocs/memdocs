@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Setup Intune enrollment for Android Enterprise fully managed devices
+title: Set up enrollment for Android Enterprise fully managed devices
 titleSuffix: Microsoft Intune
-description: Learn how to enroll Android Enterprise fully managed devices in Intune.
+description: Learn how to set up enrollment for devices using the Android Enterprise fully managed device management solution.   
 keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/9/2020
+ms.date: 03/22/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -32,49 +32,74 @@ ms.collection:
 - highpri
 ---
 
-# Set up Intune enrollment of Android Enterprise fully managed devices
+# Set up enrollment for Android Enterprise fully managed devices  
 
-Android Enterprise fully managed devices are corporate-owned devices associated with a single user and used exclusively for work and not personal use. Admins can manage the entire device and enforce policy controls unavailable to personally-owned/corporate-owned work profiles, such as:
+Set up the *Android Enterprise fully managed device* solution in Microsoft Intune to enroll and manage corporate-owned devices. A fully managed device is associated with a single user and is intended for work, not personal use. As an Intune admin, you can manage the whole device and enforce policy controls that aren't available with Android Enterprise work profile, such as: 
 
-- Allow app installation only from Managed Google Play.
-- Block uninstallation of managed apps.
-- Prevent users from factory resetting devices, and so on.
+- Allow app installation from Managed Google Play only.
+- Block users from uninstalling managed apps.
+- Prevent users from factory resetting devices.  
 
-Microsoft Intune helps you deploy apps and settings to Android Enterprise devices, including Android Enterprise fully managed devices. For specific details about Android Enterprise, see [Android Enterprise requirements](https://support.google.com/work/android/answer/6174145?hl=en&ref_topic=6151012).
+You and your device users can initiate enrollment by entering or scanning an enrollment token during device setup. This article describes the prerequisites for enrollment and how to create enrollment profiles and tokens. At the end of this article, you will be ready to enroll devices.  
 
-## Technical requirements
+## Step 1: Prerequisites  
+Complete these prerequisites to ensure a successful enrollment.     
 
-You must have an Intune standalone tenant to manage Android Enterprise fully managed devices. Devices must meet these requirements to be managed as an Android Enterprise fully managed device:
+* You must have an Intune standalone tenant, with the [mobile device management (MDM) authority set to Microsoft Intune](../fundamentals/mdm-authority-set.md).  
+* Devices must:  
+  - Run Android OS version 8.0 and later.
+  - Run an Android build that has Google Mobile Services connectivity. 
+  - Have Google Mobile Services available and be able to connect to it.  
+  
+  There is no restriction on device manufacturer/OEM if all three requirements are met. 
+ * Make sure Android Enterprise is supported in your region. For Android Enterprise requirements, see [Get started with Android Enterprise](https://support.google.com/work/android/answer/6174145?hl=en&ref_topic=6151012).  
+ * [Connect your Intune tenant account to your Android Enterprise account](connect-intune-android-enterprise.md).    
+ * The Android setup process uses a Chrome tab to authenticate device users during enrollment. If you have an Azure AD Conditional Access policy with the following configurations, you will need to exclude the Microsoft Intune cloud app from the policy:  
+     * *Require a device to be marked as compliant* setting is used to grant or block access.  
+    * The policy applies to **All Cloud apps**, **Android**, and **Browsers**.   
 
-- Android OS version 8.0 and above.
-- Devices must run a build of Android that has Google Mobile Services (GMS) connectivity. Devices must have GMS available and must be able to connect to GMS.
+## Step 2: Create new enrollment profile  
+Intune automatically generates a default enrollment profile and enrollment token for fully managed devices. The default enrollment profile is named **Default Fully Managed Profile**. 
 
-There is no restriction on device manufacturer/OEM if the above requirements are met.
+To create a new enrollment profile:       
 
-## Set up Android Enterprise fully managed device management
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Enroll devices**.    
+3. Select **Android enrollment**  > **Corporate-owned, fully managed user devices**.
+4. Under **Allow users to enroll corporate-owned user devices**, choose **Yes**. 
+5. Select **Create profile**.  
+6. Enter the basics for your profile:  
+    - **Name**: Give the profile a name. Note the name down for later, because you'll need it when you set up the dynamic device group.   
+    - **Description**: Optionally, add a profile description.  
+7. Select **Next**. 
+8. Optionally, on the **Scope tags** page, apply any desired scope tags, and then select **Next**.  
+9. Review the summary of your profile, and then select **Create** to finalize it.    
 
-To set up Android Enterprise fully managed device management, follow these steps:
+To review, make changes, or delete the profile:  
 
-1. To prepare to manage mobile devices, you must [set the mobile device management (MDM) authority to **Microsoft Intune**](../fundamentals/mdm-authority-set.md). You set this item only once, when you're first setting up Intune for mobile device management.
-2. [Connect your Intune tenant account to your Android Enterprise account](connect-intune-android-enterprise.md).
-3. [Enable corporate-owned user devices](#enable-corporate-owned-user-devices)
-4. [Enroll the fully managed devices](#enroll-the-fully-managed-devices).
+1. Select the profile.  
+2. Select **Overview** to review profile essentials and delete the profile.    
+3. Select **Properties** > **Edit** to make changes to the profile basics or scope tags.  
+4. Select **Token** to retrieve, revoke, or export the token.  
 
-### Enable corporate owned user devices
+## Step 3: Create dynamic Azure AD group  
+Optionally, create a dynamic Azure AD group to automatically group devices based on a certain attribute or variable. In this case, we want to use the `enrollmentProfileName` property to group devices that are enrolling with the same profile. 
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and choose **Devices** > **Android** > **Android enrollment**  > **Corporate-owned, fully managed user devices**.
-2. Under **Allow users to enroll corporate-owned user devices**, choose **Yes**.
+Add these configurations to your group:    
+* **Group type**: Security
+* **Membership type**: Dynamic Device  
+* Add a dynamic query with the following rule: 
+    * **Property**: enrollmentProfileName
+    * **Operator**: Equals
+    * **Value**: Enter the name of the enrollment profile you created in [Step 2: Create new enrollment profile](#step-2-create-new-enrollment-profile). 
 
-> [!NOTE]
-> If you have an Azure AD Conditional Access policy defined that uses the *require a device to be marked as compliant* Grant control or a Block policy and applies to **All Cloud apps**, **Android**, and **Browsers**, you must exclude the **Microsoft Intune** cloud app from this policy. This is because the Android setup process uses a Chrome tab to authenticate your users during enrollment. For more information, see [Azure AD Conditional Access documentation](/azure/active-directory/conditional-access/).
+You cannot use dynamic groups with the default enrollment profile. For more information about how to create a dynamic group with rules, see [Create a group membership rule](/azure/active-directory/enterprise-users/groups-create-rule#to-create-a-group-membership-rule).  
 
-When this setting is set to **Yes**, it provides you with an enrollment token (a random string) and a QR code for your Intune tenant. This single enrollment token is valid for all your users and won't expire. Depending on the Android OS and version of the device, you can use either the token or QR code to enroll the device.
+## Step 4: Enroll devices  
+Now that you've set up the enrollment profile, token, and dynamic group, you can use any of these provisioning methods to enroll devices as fully managed:  
 
-## Enroll the fully managed devices
+* Near Field Communication (NFC)
+* Token string or QR code   
+* Zero-touch enrollment
+* Samsung Knox Mobile Enrollment  
 
-You can now [enroll your fully managed devices](android-dedicated-devices-fully-managed-enroll.md) (but not when using DEM accounts).
-
-## Next steps
-
-- [Add Android Enterprise fully managed device configuration policies](../configuration/device-restrictions-android-for-work.md#fully-managed-dedicated-and-corporate-owned-work-profile)
-- [Configure app configuration policies for Android Enterprise fully managed devices](../apps/app-configuration-policies-use-android.md)
+For the next steps, including how to enroll devices with each provisioning method, see [Enroll Android Enterprise corporate-owned devices](android-dedicated-devices-fully-managed-enroll.md).  

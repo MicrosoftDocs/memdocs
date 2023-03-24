@@ -84,7 +84,11 @@ items:
 
       - name: Create an ADMX template
         href: ./configuration/tutorial-walkthrough-administrative-templates.md
-        displayName: admx, administrative template
+        displayName: admx, administrative template  
+
+      - name: Try new Devices experience (public preview) 
+        href: ./fundamentals/microsoft-intune-admin-center-devices.md
+        displayName: devices, admin center, microsoft intune   
 
   - name: Plan
     items:
@@ -482,6 +486,20 @@ items:
               href: ./protect/encrypt-devices-filevault.md
             - name: Monitor disk encryption
               href: ./protect/encryption-monitor.md
+        - name: Endpoint Privilege Management
+          items:
+          - name: Endpoint Privilege Management overview
+            href: ./protect/epm-overview.md
+          - name: Endpoint Privilege Management guidance for rules
+            href: ./protect/epm-guidance-for-creating-rules.md
+          - name: Endpoint Privilege Management policies
+            href: ./protect/epm-policies.md
+          - name: Endpoint Privilege Management reports
+            href: ./protect/epm-reports.md
+          - name: Endpoint Privilege Management data and privacy
+            href: ./protect/epm-data-collection.md
+          - name: Endpoint Privilege Management deployment considerations
+            href: ./protect/epm-deployment-considerations-ki.md
         - name: Microsoft Tunnel
           items:
           - name: Microsoft Tunnel overview
@@ -804,13 +822,15 @@ items:
           - name: Universal Print policy
             displayName: printers
             href: ./configuration/settings-catalog-printer-provisioning.md
-        - name: Custom settings
-          displayName: oma-uri, csp
+        - name: Custom settings & scripts
+          displayName: oma-uri, csp, bash, powershell
           items:
           - name: Create custom profiles
             href: ./configuration/custom-settings-configure.md
           - name: HoloLens 2 example
             href: ./configuration/custom-profile-hololens.md
+          - name: Add Linux Bash scripts
+            href: ./configuration/custom-settings-linux.md
         - name: Restrict device settings and features
           href: ./configuration/device-restrictions-configure.md
           displayName: device restrictions
@@ -956,7 +976,7 @@ items:
             href: ./configuration/custom-settings-android-for-work.md
           - name: Device restrictions - organization-owned devices
             href: ./configuration/device-restrictions-android-for-work.md
-          - name: Device restrictions - personally-owned devices
+          - name: Device restrictions - personally owned devices
             href: ./configuration/device-restrictions-android-enterprise-personal.md
           - name: Email
             href: ./configuration/email-settings-android-enterprise.md
@@ -1345,7 +1365,9 @@ items:
           - name: Prerequisites for organizational messages    
             href: ./remote-actions/organizational-messages-prerequisites.md
           - name: Create organizational messages  
-            href: ./remote-actions/organizational-messages-create.md
+            href: ./remote-actions/organizational-messages-create.md  
+          - name: Monitor organizational messages  
+            href: ./remote-actions/organizational-messages-reporting.md  
       - name: Bulk device actions
         href: ./remote-actions/bulk-device-actions.md
       - name: Troubleshooting

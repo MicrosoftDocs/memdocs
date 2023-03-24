@@ -244,9 +244,9 @@ In the IntuneMAMPackager/Contents/MacOS folder, open `Parameters.plist` (a blank
 | Output Application Package Path |String|empty| Same as -o|
 | Provisioning Profile Path |String|empty| Same as -p|
 | SHA-1 Certificate Hash |String|empty| Same as -c|
-| ADAL Authority |String|empty| Same as -aa|
-| ADAL Client ID |String|empty| Same as -ac|
-| ADAL Reply URI |String|empty| Same as -ar|
+| MSAL Authority |String|empty| Same as -aa|
+| MSAL Client ID |String|empty| Same as -ac|
+| MSAL Reply URI |String|empty| Same as -ar|
 | Verbose Enabled |Boolean|false| Same as -v|
 | Remove Missing Entitlements |Boolean|false| Same as -e|
 | Prevent Default Build Update |Boolean|false| Equivalent to using -b without arguments|
