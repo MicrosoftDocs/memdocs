@@ -67,7 +67,7 @@ There are many ways to configure networking within Azure. Here, we use:
 The traffic flow in this diagram:
 
 1. Contoso Corporate Network: This on-premises IP subnet is advertised into the VNet through the ExpressRoute gateway. All traffic to this range (10.0.0.0/8) is sent through the ExpressRoute circuit.
-2. All other traffic from the Windows 365 subnet is sent to the Azure firewall through a User Defined Route (UDR) route of 0.0.0.0/0. The next hop IP is set to the Azure Firewall's IP.
+2. All other traffic from the Windows 365 subnet is sent to the Azure firewall through a User Defined Route (UDR) route of 0.0.0.0/0. The next hop IP is set to the Azure Firewall's private IP.
 3. The Firewall has application rules (and FQDN tags) and network rules configured for the Windows 365 required endpoints. Traffic that complies with the rules is allowed out. Any other traffic not explicitly permitted is blocked.
 
 ## Azure Firewall application rules
