@@ -50,9 +50,9 @@ Complete these steps to set up enrollment for Android Enterprise devices in BYOD
 > Device enrollment managers can enroll up to 10 devices per account.     
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Go to **Devices** > **Enrollment device platform restrictions** to set up enrollment restrictions. By default, Android Enterprise work profile is marked as allowed for personal devices enrolling in Intune. Doublecheck that work profile management is allowed. Your options:    
+2. Go to **Devices** > **Enrollment device platform restrictions** to set up enrollment restrictions. By default, Android Enterprise work profile is marked as allowed for personal devices enrolling in Intune. You can allow or block enrollment in device platform restrictions.  Your options:    
     - **Block**: Personal devices that enroll will use the Android device administrator management solution, unless device administrator enrollment is also blocked.  
-    - **Allow (set by default)**: Personal devices that support the work profile management solution will enroll with a work profile. Android devices that don't support it are enrolled using the Android device administrator solution, unless device administrator enrollment is blocked.  
+    - **Allow (set by default)**: Personal devices that support the work profile management solution will enroll with a work profile. Android devices that don't support Android Enterprise are enrolled using the Android device administrator solution, unless device administrator enrollment is blocked.  
 
    Any device that supports Android Enterprise personal work profiles also supports the Android device administrator management solution, so if you don't want Android device administrator to be a part of enrollments, make sure to block the platform. For more information, see [device platform restrictions](create-device-platform-restrictions.md#best-practice---android-platform-restrictions).  
 
@@ -70,7 +70,7 @@ Complete these steps to set up enrollment for Android Enterprise devices in BYOD
 
 ## Data shared with Google  
 
-When Android Enterprise device management is enabled on a device, Microsoft Intune shares certain user and device information with Google. For more information, see [Data Intune sends to Google](../protect/data-intune-sends-to-google.md).  
+Microsoft Intune shares certain user and device information with Google when Android Enterprise device management is enabled.  For more information, see [Data Intune sends to Google](../protect/data-intune-sends-to-google.md).  
 
 ## Next steps
 - [Deploy Android Enterprise apps](../apps/apps-add-android-for-work.md)
