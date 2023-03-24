@@ -48,7 +48,7 @@ Enrollment notifications are supported on these devices:
 * iOS/iPadOS devices in BYOD scenarios      
 * Macs   
 * Devices running Windows 10/11, excluding hybrid Azure AD-joined devices
-* Autopilot devices, excluding userless scenarios (i.e. pre-provisioning)       
+* Autopilot devices, excluding userless scenarios such as Windows Autopilot for pre-provisioned deployment    
 
 ## Example  
 The following example image shows what an enrollment notification looks like to a device user.    
