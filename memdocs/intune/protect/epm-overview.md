@@ -61,7 +61,9 @@ Endpoint Privilege Management has the following operating system requirements:
 
 - Windows 11, version 22H2 with [KB5022913](https://support.microsoft.com/en-us/topic/february-28-2023-kb5022913-os-build-22621-1344-preview-3e38c0d9-924d-4f3f-b0b6-3bd49b2657b9)
 - Windows 11, version 22H1 with KB5023774 (Pending Optional Update Release - March 2023)
-- Windows 10, version 20H2 (or later) with KB5023773 (Pending Optional Update Release - March 2023)
+- Windows 10, version 22H2 (or later) with [KB5023773](https://support.microsoft.com/en-us/topic/march-21-2023-kb5023773-os-builds-19042-2788-19044-2788-and-19045-2788-preview-5850ac11-dd43-4550-89ec-9e63353fef23)
+- Windows 10, version 21H2 (or later) with [KB5023773](https://support.microsoft.com/en-us/topic/march-21-2023-kb5023773-os-builds-19042-2788-19044-2788-and-19045-2788-preview-5850ac11-dd43-4550-89ec-9e63353fef23)
+- Windows 10, version 20H2 (or later) with [KB5023773](https://support.microsoft.com/en-us/topic/march-21-2023-kb5023773-os-builds-19042-2788-19044-2788-and-19045-2788-preview-5850ac11-dd43-4550-89ec-9e63353fef23)
 
 > [!IMPORTANT]
 > Only devices with a Hybrid Azure Active Directory join or Azure Active Directory join are supported. Workplace join is not a supported trust type.

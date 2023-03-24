@@ -58,6 +58,10 @@ This means that file names are *highly susceptible* to change, and files that ar
 > [!IMPORTANT]
 > Always ensure that rules including a file name include other attributes that provide a strong assertion to the file's identity. Attributes like file hash or properties that are included in the files signature are good indicators that the file you intend is likely the one being elevated.
 
+### Elevation settings policies may show conflict if changed in quick succession
+
+Endpoint Privilege Management reports status of individual settings applied using the *Elevation Settings* profile. If settings in this profile (Default elevation behavior for instance) are changed multiple times in quick succession, it may result device reporting conflict or falling back to the default behavior of *Denying* the elevation. This is a transient state and will resolve without further action (in less than 60 minutes). This issue will be fixed in a future release.
+
 ### Blocked files downloaded from the internet fail to elevate
 
 Behavior exists in Windows to set an attribute on files that are downloaded directly from the internet and prevent them from executing until validated. Windows has functionality to validate the reputation of files downloaded from the internet. When a files reputation isn't validated, it might fail to elevate. To correct this behavior, unblock the file by unblocking the file from the file properties pane. *Unblocking a file should only be done when you trust the file*.
