@@ -486,6 +486,20 @@ items:
               href: ./protect/encrypt-devices-filevault.md
             - name: Monitor disk encryption
               href: ./protect/encryption-monitor.md
+        - name: Endpoint Privilege Management
+          items:
+          - name: Endpoint Privilege Management overview
+            href: ./protect/epm-overview.md
+          - name: Endpoint Privilege Management guidance for rules
+            href: ./protect/epm-guidance-for-creating-rules.md
+          - name: Endpoint Privilege Management policies
+            href: ./protect/epm-policies.md
+          - name: Endpoint Privilege Management reports
+            href: ./protect/epm-reports.md
+          - name: Endpoint Privilege Management data and privacy
+            href: ./protect/epm-data-collection.md
+          - name: Endpoint Privilege Management deployment considerations
+            href: ./protect/epm-deployment-considerations-ki.md
         - name: Microsoft Tunnel
           items:
           - name: Microsoft Tunnel overview
