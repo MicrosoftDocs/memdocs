@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/14/2023
+ms.date: 03/20/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -99,6 +99,7 @@ This list below is the same order as the diagnostic zip.  Each collection contai
 Registry Keys:
 
 - HKLM\SOFTWARE\Microsoft\CloudManagedUpdate
+- HKLM\SOFTWARE\Microsoft\EPMAgent
 - HKLM\SOFTWARE\Microsoft\IntuneManagementExtension
 - HKLM\SOFTWARE\Microsoft\SystemCertificates\AuthRoot
 - HKLM\SOFTWARE\Microsoft\Windows Advanced Threat Protection
@@ -128,6 +129,7 @@ Commands:
 - %windir%\system32\netsh.exe wlan show profiles
 - %windir%\system32\netsh.exe wlan show wlanreport
 - %windir%\system32\ping.exe -n 50 localhost
+- %windir%\system32\pnputil.exe /enum-drivers
 - %windir%\system32\powercfg.exe /batteryreport /output %temp%\MDMDiagnostics\battery-report.html
 - %windir%\system32\powercfg.exe /energy /output %temp%\MDMDiagnostics\energy-report.html
 
@@ -154,7 +156,8 @@ Event Viewers:
 Files:
 
 - %ProgramData%\Microsoft\DiagnosticLogCSP\Collectors\\*.etl
-- %ProgramData%\Microsoft\IntuneManagementExtension\Logs\\*.log
+- %ProgramFiles%\Microsoft EPM Agent\Logs\\\*.*
+- %ProgramData%\Microsoft\IntuneManagementExtension\Logs\\\*.*
 - %ProgramData%\Microsoft\Windows Defender\Support\MpSupportFiles.cab
 - %ProgramData%\Microsoft\Windows\WlanReport\wlan-report-latest.html
 - %ProgramData%\USOShared\logs\system\\*.etl
@@ -170,7 +173,8 @@ Files:
 - %windir%\logs\Panther\unattendgc\setupact.log
 - %windir%\logs\SoftwareDistribution\ReportingEvent\measuredboot\\*.log
 - %windir%\logs\WindowsUpdate\\*.etl
-- %windir%\temp\\%computername%*.log
+- %windir%\system32\config\systemprofile\AppData\Local\mdm\\\*.log
+- %windir%\temp\%computername%*.log
 - %windir%\temp\officeclicktorun*.log
 - %TEMP%\winget\defaultstate*.log
 
