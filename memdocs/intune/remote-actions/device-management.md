@@ -74,7 +74,7 @@ The available actions depend on the device platform and the device configuration
   - [Erase](./device-erase.md) (macOS Only)
   - [Fresh Start](device-fresh-start.md) (Windows only)
   - [Full Scan](../configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus) (Windows 10 only)
-  - [Locate device](device-locate.md) (iOS only)
+  - [Locate device](device-locate.md)
   - [Lost mode](device-lost-mode.md) (iOS only)
   - [Quick Scan](../configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus) (Windows 10 only)
   - [Remote control for Android](teamviewer-support.md)
