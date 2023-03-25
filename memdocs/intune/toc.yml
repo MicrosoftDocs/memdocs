@@ -5,7 +5,7 @@ items:
   - name: Overview
     items:
     - name: Microsoft Intune overview
-      href: ./fundamentals/what-is-intune.md 
+      href: ./fundamentals/what-is-intune.md
       items:
       - name: Manage and secure your identities
         href: ./fundamentals/manage-identities.md
@@ -34,7 +34,7 @@ items:
   - name: Evaluate and try
     items:
     - name: Walkthrough Intune admin center
-      href: ./fundamentals/tutorial-walkthrough-endpoint-manager.md 
+      href: ./fundamentals/tutorial-walkthrough-endpoint-manager.md
     - name: Try Intune tasks
       items:
       - name: Overview
@@ -49,7 +49,7 @@ items:
       - name: Step 4 - Set up automatic enrollment
         href: ./enrollment/quickstart-setup-auto-enrollment.md
       - name: Step 5 - Enroll your Windows device
-        href: ./enrollment/quickstart-enroll-windows-device.md        
+        href: ./enrollment/quickstart-enroll-windows-device.md
       - name: Step 6 - Create a device compliance policy
         href: ./protect/quickstart-set-password-length-android.md        
       - name: Step 7 - Send notifications to noncompliant devices
