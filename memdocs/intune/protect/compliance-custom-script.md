@@ -112,7 +112,11 @@ The following are examples of syntax that is compliant vs not compliant:
 
    For example, `["$a == foo]` - Use of a double equal sign for a string comparison isn't POSIX-compliant.
 
-For more information, the following guide might be of use [POSIX Shell Tutorial (grymoire.com)](https://www.grymoire.com/Unix/Sh.html), a third-party website.
+For more information, the following guides might be of use:
+
+- [POSIX Shell Tutorial (grymoire.com)](https://www.grymoire.com/Unix/Sh.html), a third-party website.
+
+- [Intune Linux Custom Compliance Samples](https://github.com/microsoft/shell-intune-samples/tree/master/Linux).
 
 ## Add a discovery script to Intune
 
