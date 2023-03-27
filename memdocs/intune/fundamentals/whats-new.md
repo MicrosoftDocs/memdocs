@@ -71,6 +71,9 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 ### App management
 
+#### Update macOS DMG apps<!-- 13155074 -->
+You can now update apps of type **macOS apps (DMG)** deployed using Intune. Edit a DMG app that is already created in Intune by uploading the update for the app with the same bundle identifier as the original DMG app. For related information, see [Add a macOS DMG app to Microsoft Intune](../apps/lob-apps-macos-dmg.md).
+
 #### Install required apps during pre-provisioning<!-- 12716381 -->
 A new toggle is available in the Enrollment Status Page (ESP) profile that allows you to select whether you want to attempt to install required applications during the pre-provisioning (white glove) technician phase. We understand that installing as many applications as possible during pre-provisioning is desired to reduce the end user set up time. In case of an app install failure, ESP will continue except for the apps specified in the ESP profile. To enable this function, you will need to edit your Enrollment Status Page profile by selecting **Yes** on the new setting entitled **Only fail selected apps in technician phase**. This setting will only appear if you have blocking apps selected. For information about ESP, go to [Set up the Enrollment Status Page](../enrollment/windows-enrollment-status.md).
 
