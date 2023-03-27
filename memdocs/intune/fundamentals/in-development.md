@@ -8,7 +8,7 @@ keywords:
 author: dougeby 
 ms.author: dougeby
 manager: dougeby
-ms.date: 03/20/2023
+ms.date: 03/30/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -62,6 +62,15 @@ You can use RSS to be notified when this article is updated. For more informatio
 
 ## App management
 
+### Changes to app backup and restore behavior on iOS/iPadOS and macOS devices<!-- 16261392  -->  
+As an app setting, you can select to **Prevent iCloud app backup** for iOS/iPadOS and macOS devices. You will have the option to *not* back up managed App Store apps and line-of-business (LOB) apps on iOS/iPadOS, as well as managed App Store apps on macOS devices (macOS LOB apps won’t support this feature), for both user and device licensed VPP/non-VPP apps. This will include both new and existing App Store/LOB apps sent with and without VPP that are being added to Intune and targeted to users and devices.
+
+Preventing the backup of the specified managed apps will ensure that these apps can be properly deployed via Intune when the device is enrolled and restored from backup. If the admin configures the new setting for new or existing apps in their tenant, managed apps can and will be re-installed for devices, but Intune will no longer allow them to be backed up.
+
+The new setting will appear in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by modifying the properties of an app. For an existing app, you can select **Apps** > **iOS/iPadOS** or **macOS** > *select the app* > **Properties** > Assignment **Edit**. If no group assignment has been set, click **Add group** to add a group. Modify either the setting under **VPN**, **Uninstall on device removal**, or **Install as removable**. Then, select **Prevent iCloud app backup**. The **Prevent iCloud app backup** setting is used to prevent backup of app data for the application. Set to **No** to allow the app to be backed up by iCloud.
+
+For more information, see [Changes to applications’ backup and restore behavior on iOS/iPadOS and macOS devices](https://techcommunity.microsoft.com/t5/intune-customer-success/changes-to-applications-backup-and-restore-behavior-on-ios/ba-p/3692064).
+
 ### Install required apps during pre-provisioning<!-- 12716381   -->  
 A new toggle will be available in the Enrollment Status Page (ESP) profile that allows you to select whether you want to attempt to install required applications during pre-provisioning (white glove) technician phase. We understand that installing as many applications as possible during pre-provisioning is desired to reduce the end user set up time. To help you achieve this, we have implemented an option to attempt the installation of all the required apps assigned to a device during technician phase. In case of app install failure, ESP will continue except for the apps specified in ESP profile. To enable this function, you will need to edit your Enrollment Status Page profile by selecting **Yes** on the new setting entitled **Only fail selected apps in technician phase**. This setting will only appear if you have blocking apps selected. For information about ESP, go to [Set up the Enrollment Status Page](../enrollment/windows-enrollment-status.md).
 
@@ -78,7 +87,47 @@ The global quiet time settings will allow you to create policies to schedule qui
 
 ## Device configuration
 
-### Add Google accounts to Android Enterprise personally owned devices with a work profile<!-- 9113561 idready -->
+### Updates to the macOS Settings Catalog <!-- 17673709  -->  
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
+
+A new setting is available in the Settings Catalog. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can see these settings at **Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform > **Settings catalog** for profile type.
+
+The new setting is located under:
+
+**Microsoft AutoUpdate (MAU) > [targeted app]**:
+
+- Update channel override
+
+The following settings have been deprecated:
+
+**Microsoft AutoUpdate (MAU) > [targeted app]**:
+
+- Channel Name (Deprecated)
+
+**Privacy > Privacy Preferences Policy Control > Services > Listen Event or Screen Capture**:
+
+- Allowed
+
+Applies to:
+
+- macOS
+
+For more information about configuring Settings Catalog profiles in Intune, go to [Create a policy using settings catalog](../configuration/settings-catalog.md).
+
+### New Google domain allow-list settings for Android Enterprise personally owned devices with a work profile<!-- 14711684  -->  
+On Android Enterprise personally owned devices with a work profile, you can configure settings that restrict device features and settings.
+
+Currently, there is an **Add and remove accounts** setting that can allow Google accounts be added to the work profile. For this setting, when you select **Allow all accounts types**, you can also configure:
+
+- **Google domain allow-list**:  Restricts users to add only certain Google account domains in the work profile. You can import a list of allowed domains or add them in the admin center using the `contoso.com` format. When left blank, by default, the OS might allow adding all Google domains in the work profile.
+
+For more information on the settings you can configure, go to [Android Enterprise device settings list to allow or restrict features on personally owned devices using Intune](../configuration/device-restrictions-android-enterprise-personal.md).
+
+Applies to:
+
+- Android Enterprise personally owned devices with a work profile
+
+### Add Google accounts to Android Enterprise personally owned devices with a work profile<!-- 9113561  -->
 
 On Android Enterprise personally owned devices with a work profile, you can configure settings that restrict device features and settings. Currently, there's an **Add and remove accounts** setting. This setting prevents accounts from being added in the work profile, including preventing Google accounts. 
 
@@ -116,6 +165,31 @@ Applies to:
 <!-- *********************************************** -->
 
 ## Device management
+
+### Manage Windows LAPS with Intune polices (public preview)<!-- 11890571  -->  
+As a public preview, you’ll soon be able to configure devices for Windows Local Administrator Password Solution (Windows LAPS). Configuration of Windows LAPS will be supported through Intune’s [Account protection policy](../protect/endpoint-security-account-protection-policy.md).
+
+In addition, you'll be able to use [Device Actions](../remote-actions/device-management.md) for devices with Windows LAPS policy for the following tasks:
+
+- Rotate local admin password
+- Retrieve local admin password
+
+[Windows LAPS](/windows-server/identity/laps/laps-overview) is a Windows feature that automatically manages and backs up the password of a local administrator account on your Azure Active Directory-joined or Windows Server Active Directory-joined devices. You also can use Windows LAPS to automatically manage and back up the Directory Services Repair Mode (DSRM) account password on your Windows Server Active Directory domain.
+
+Applies to:
+
+- Windows 10
+- Windows 11
+
+### New settings available for macOS software update policies<!-- 16646756  -->  
+You will soon be able to configure the *Max User Deferrals* and *Priority* settings as part of your macOS software update policies.
+
+- Max User Deferrals:  When an update type is configured to *Install later*, this setting allows you to specify the maximum number of times a user can postpone a minor OS update before it’s installed. The system prompts the user once a day. Available for devices running macOS 12 and later.
+
+- Priority: When an update type is configured to *Install later*, this setting allows you to specify values of *Low* or *High* for the scheduling priority for downloading and preparing minor OS updates. Available for devices running macOS 12.3 and later.
+
+Applies to:
+- macOS
 
 ### On-demand proactive remediation for a Windows device<!-- 14783338  -->  
 A new device action that is in public preview allows you to run a proactive remediation on-demand to a single Windows device. The **Run** remediation device action will allow you to resolve issues without having to wait for a proactive remediation to run on its assigned schedule. You will also be able to view the status of proactive remediations under **Remediations** in the **Monitor** section of a device.
