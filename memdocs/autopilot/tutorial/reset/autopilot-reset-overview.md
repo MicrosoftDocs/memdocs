@@ -51,12 +51,16 @@ The Windows Autopilot Reset process automatically keeps information from the exi
 ## Windows Autopilot Reset requirements
 
 - Azure AD join devices only. Hybrid Azure AD join devices aren't supported.
+
 - [Windows Recovery Environment (WinRE)](/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference) is correctly configured and enabled on device where Windows Autopilot Reset will be used. WinRE can be enabled with the [REAgentC.exe tool](/windows-hardware/manufacture/desktop/reagentc-command-line-options) via the following command:
-      ```cmd
-      reagentc.exe /enable
-      ```
+
+  ```cmd
+  reagentc.exe /enable
+  ```
+
 - User initiating [local Windows Autopilot Reset](local-autopilot-reset.md) must be a local administrator on the device.
-- Admins initiating a [remote Windows Autopilot Reset](remote-autopilot-reset.md) must be a member of the Intune Service Administrator role. For more information, see [Add users and grant administrative permission to Intune](../../../fundamentals/users-add.md).
+
+- Admins initiating a [remote Windows Autopilot Reset](remote-autopilot-reset.md) must be a member of the Intune Service Administrator role. For more information, see [Add users and grant administrative permission to Intune](../../../intune/fundamentals/users-add.md).
 
 ## Windows Autopilot Rest Scenarios
 
@@ -64,3 +68,29 @@ Windows Autopilot Reset supports two scenarios:
 
 - [Local reset](local-autopilot-reset.md) - an Windows Autopilot Reset that is started locally on the device by the user.
 - [Remote reset](remote-autopilot-reset.md) started remotely by IT personnel via an MDM service such as Microsoft Intune.
+
+## How Windows Autopilot Reset works
+
+Windows Autopilot Reset works by using the Windows [push-button reset](/windows-hardware/manufacture/desktop/push-button-reset-overview) feature. The following actions occur during a Windows Autopilot Reset:
+
+- A new OS of the same version is created by reconstructing it from the WinSXS store.
+- Migration of some data is performed between the old OS and the new OS to preserve the items from [Information kept after an Windows Autopilot Reset](#information-kept-after-an-windows-autopilot-reset).
+- All existing user profiles and data are deleted.
+- Third-party apps are uninstalled.
+
+## Walkthrough
+
+Both local Windows Autopilot Reset and remote Windows Autopilot Reset require a minimal amount of steps to implement. Multiple step by step instructions are unneeded. Select the desired Windows Autopilot Reset scenario for instructions on how to implement:
+
+> [!div class="nextstepaction"]
+> [Local Windows Autopilot reset](local-autopilot-reset.md)
+
+> [!div class="nextstepaction"]
+> [Remote reset](remote-autopilot-reset.md)
+
+## More information
+
+For more information on Windows Autopilot Reset, see the following article(s):
+
+- [Windows Autopilot self-deploying mode](../../windows-autopilot-reset.md)
+- [Push-button reset](/windows-hardware/manufacture/desktop/push-button-reset-overview)
