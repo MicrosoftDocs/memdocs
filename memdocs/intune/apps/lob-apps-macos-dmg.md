@@ -58,7 +58,7 @@ A single DMG should only contain a single application file or multiple applicati
 It is not recommended that multiple apps that are not dependent on each other are installed using the same DMG file. If multiple independent apps are deployed using the same DMG app, failure to install one app will cause other apps to be re-installed. In this case, monitoring reports consider the DMG installation a failure as well.
 
 > [!NOTE]
-> You can update apps of type **macOS apps (DMG)** deployed using Intune. Edit a DMG app that is already created in Intune by uploading the update for the app with the same bundle identifier as the original DMG app.
+> You can update apps of type **macOS apps (DMG)** deployed using Intune. Edit a DMG app that is already created in Intune by uploading the update for the app with the same bundle identifier as the original DMG app. In addition, you must use the Microsoft Intune agent for macOS version 2304.039 or greater.
 
 ## Select the app type
 
