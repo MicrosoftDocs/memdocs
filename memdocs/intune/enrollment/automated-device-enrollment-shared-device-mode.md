@@ -116,6 +116,3 @@ For more information about assigning a volume-purchased app, see [Assign a volum
 Shared devices, which are enrolled without user affinity, require minimal user interaction from the frontline worker. Upon receiving the device, the frontline worker will need to open the Microsoft Authenticator app to make sure the device is in shared device mode.   
 
 [!INCLUDE [users-dont-like-enroll](../includes/users-dont-like-enroll.md)]  
-
->[!TIP]
-> Be sure device users don't install the Company Portal app from the Apple App Store, because that version of the app doesn't receive automatic updates from Intune.  
