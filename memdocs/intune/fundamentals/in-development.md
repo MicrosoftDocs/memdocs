@@ -148,6 +148,17 @@ Applies to:
 
 - Android Enterprise personally owned devices with a work profile
 
+### Disable Activation Lock device action for supervised macOS devices<!-- 16813146  -->  
+
+You'll soon be able to use the **Disable Activation Lock** device action in Intune to bypass Activation Lock on Mac devices without requiring the current username or password. This new action will be available in **Devices** > **macOS** > select one of your listed devices > **Disable Activation Lock**.
+
+More information on managing Activation Lock is available at [Bypass iOS/iPadOS Activation Lock with Intune](../remote-actions/device-activation-lock-disable.md) or on Apple's website at [Activation Lock for iPhone, iPad, and iPod touch - Apple Support](https://support.apple.com/en-us/HT201365).
+
+Applies to:
+
+- macOS 10.15 or later
+
+
 ### Support for multi-SIM iOS/iPadOS device inventory<!--17016690 (replaced 16360290 for tracking -->
 
 You'll soon be able to view the service subscription fields on devices that have multiple SIM cards installed under the per-device Hardware section. The inventory fields that are capable of reporting multiple values to Intune are:
