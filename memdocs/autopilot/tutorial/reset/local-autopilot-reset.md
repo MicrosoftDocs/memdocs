@@ -19,6 +19,10 @@ ms.technology: itpro-deploy
 
 To enable a local Windows Autopilot Reset, the **DisableAutomaticReDeploymentCredentials** policy must be configured. This policy is documented in the [Policy CSP](/windows/client-management/mdm/policy-csp-credentialproviders#disableautomaticredeploymentcredentials). By default, local Windows Autopilot Reset is disabled. This default ensures that a local Autopilot Reset isn't triggered by accident.
 
+## Workflow
+
+Create Windows Autopilot Reset configuration profile in Intune > Make sure WinRE is installed on device where Windows Autopilot Reset will be triggered > Trigger Windows Autopilot Reset locally on device with an account that has local administrator privileges
+
 ## Enable local Windows Autopilot Reset in Intune
 
 To create a configuration profile that sets the **DisableAutomaticReDeploymentCredentials** policy policy and enables local Windows Autopilot Reset in Intune, follow the below steps:
@@ -91,7 +95,7 @@ To trigger a local Windows Autopilot Reset on a device, follow the below steps:
 
 1. From the Windows device lock screen, enter the keystroke: **CTRL + ![Windows key](../../images/windows_glyph.png) + R**.
 
-1. To trigger the local Autopilot Reset, sign into the device with an account that has local admin credentials.
+1. To trigger the local Autopilot Reset, sign into the device with an account that has local administrator credentials.
 
 Once the local Autopilot Reset is triggered, the reset process starts. Once provisioning is complete, the device is again ready for use.
 
