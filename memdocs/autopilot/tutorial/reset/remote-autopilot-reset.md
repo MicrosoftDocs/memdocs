@@ -81,7 +81,7 @@ To force the device to obtain the latest Intune policy locally on the device, fo
 
 1. Sign into the device where the remote Autopilot Reset was initiated.
 
-2. Open **Settings** from the Start Menu.
+2. Right click on the Start Menu ![Start Menu](../../images/windows_glyph.png) and select **Settings**.
 
 3. In **Settings**, select **Accounts** in the left hand pane.
 
