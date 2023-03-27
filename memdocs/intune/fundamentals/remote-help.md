@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 12/08/2022
+ms.date: 3/27/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -362,6 +362,17 @@ If a conditional access policy is configured as described above and if the devic
 ## What's New for Remote Help 
 
 Updates for Remote Help are released periodically. When we update Remote Help, you can read about the changes here.
+
+### March 27, 2023
+
+Version: 4.2.1167.0 - Changes in this release:
+
+This release addresses a bug in the Laser Pointer and includes some updates to prepare for future releases.
+
+- Updated product name from **Remote help** to **Remote Help**
+- Updated application description to better localize it for non-US locales
+- Resolved a bug where the app would flash a white screen when launched in dark mode
+- Fixed a bug with the Laser pointer color change
 
 ### February 6, 2023
 
