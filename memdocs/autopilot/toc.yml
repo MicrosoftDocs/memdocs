@@ -138,6 +138,14 @@ items:
         href: tutorial/self-deploying/self-deploying-esp.md
       - name: Step 5 - Create and assign Autopilot profile
         href: tutorial/self-deploying/self-deploying-autopilot-profile.md
+    - name: Windows Autopilot reset
+      items:
+      - name: Windows Autopilot reset
+        href: tutorial/reset/autopilot-reset-overview.md
+      - name: Local Windows Autopilot reset
+        href: tutorial/reset/local-autopilot-reset.md
+      - name: Remote Windows Autopilot reset
+        href: tutorial/reset/remote-autopilot-reset.md
 
 - name: Reference
   items:

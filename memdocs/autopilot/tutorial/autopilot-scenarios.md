@@ -25,7 +25,6 @@ ms.technology: itpro-deploy
 1. [Windows Autopilot self-deploying mode](self-deploying/self-deploying-workflow.md)
 1. Windows Autopilot Pre-provisioning
 1. Windows Autopilot for existing devices
-1. Windows Autopilot reset
-
+1. [Windows Autopilot Reset](reset/autopilot-reset-overview.md)
 
 [Windows Autopilot scenarios and capabilities](/mem/autopilot/windows-autopilot-scenarios)
