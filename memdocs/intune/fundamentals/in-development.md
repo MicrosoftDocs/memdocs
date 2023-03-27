@@ -31,6 +31,9 @@ ms.collection:
 
 # In development for Microsoft Intune
 
+To help in your readiness and planning, this article lists Intune UI updates and features that are in development but not yet released. In addition to the information in this article:
+
+- If we anticipate that you'll need to take action before a change, we'll publish a complementary post in the Office message center.
 - When a feature enters production, whether it's in preview or generally available, the feature description will move from this article to [What's new](whats-new.md).  
 - Refer to the [Microsoft 365 roadmap](https://www.microsoft.com/microsoft-365/roadmap?rtc=2&filters=EMS) for strategic deliverables and timelines.
 
