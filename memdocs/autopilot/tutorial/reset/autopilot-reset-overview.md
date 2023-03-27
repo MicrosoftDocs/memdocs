@@ -22,7 +22,7 @@ ms.technology: itpro-deploy
 - Windows 11
 - Windows 10
 
-Windows Autopilot Reset takes the device back to a business-ready state, allowing the next user to sign in and get productive quickly and simply. In addition, Windows Autopilot Reset will also block the user from accessing the desktop until information is restored, including reapplying any provisioning packages. Windows Autopilot Reset will also block the user from accessing the desktop until an Intune sync is completed.
+Windows Autopilot Reset takes the device back to a business-ready state, allowing the next user to sign in and get productive quickly and simply. In addition, once the Windows Autopilot Reset has begun, it will block the user from accessing the desktop until information is restored, including reapplying any provisioning packages. Windows Autopilot Reset will also block the new user from accessing the desktop until an Intune sync is completed.
 
 > [!IMPORTANT]
 > Windows Autopilot Reset only supports Azure AD join devices. Windows Autopilot Reset doesn't support hybrid Azure AD join devices. For hybrid Azure AD join devices, a full device wipe is required. When a hybrid Azure AD device goes through a full device reset, it may take up to 24 hours for it to be ready to be deployed again. You can expedite this request by re-registering the device.
@@ -52,11 +52,11 @@ The Windows Autopilot Reset process automatically keeps the following informatio
 
 - Enrolled in Azure AD. Only Azure AD join devices are supported. Hybrid Azure AD join devices aren't supported.
 - Enrolled in Intune.
-- [Windows Recovery Environment (WinRE)](/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference) is correctly configured and enabled on device where Windows Autopilot Reset will be used.
+- [Windows Recovery Environment (WinRE)](/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference) is correctly configured and enabled on the device where Windows Autopilot Reset will be used.
 - User initiating [local Windows Autopilot Reset](local-autopilot-reset.md) must be a local administrator on the device.
 - Admins initiating a [remote Windows Autopilot Reset](remote-autopilot-reset.md) must be a member of the Intune Service Administrator role.
 
-## Windows Autopilot Rest Scenarios in Intune
+## Windows Autopilot Reset Scenarios in Intune
 
 Windows Autopilot Reset in Intune supports two scenarios:
 
@@ -67,20 +67,20 @@ Windows Autopilot Reset in Intune supports two scenarios:
 
 Windows Autopilot Reset works by using the [push-button reset](/windows-hardware/manufacture/desktop/push-button-reset-overview) feature in Windows. The following actions occur during a Windows Autopilot Reset:
 
-- A new OS of the same version is created by reconstructing it from the WinSXS store.
-- Migration of some data is performed between the old OS and the new OS to preserve the items from [Information kept after an Windows Autopilot Reset](#information-kept-and-migrated-after-a-windows-autopilot-reset).
+- A new OS of the same version is created by reconstructing it from the WinSxS store.
+- Migration of data is performed between the old OS and the new OS to preserve the items from [Information kept and migrated after a Windows Autopilot Reset](#information-kept-and-migrated-after-a-windows-autopilot-reset).
 - All existing user profiles and data are deleted.
 - Third-party apps are uninstalled.
 
 ## Walkthrough
 
-Both local Windows Autopilot Reset and remote Windows Autopilot Reset require a minimal amount of steps to implement. Multiple step by step instructions are unneeded. Select the desired Windows Autopilot Reset scenario for instructions on how to implement:
+Both local Windows Autopilot Reset and remote Windows Autopilot Reset require a minimal number of steps to implement. Multiple step by step instructions are unneeded. Select the desired Windows Autopilot Reset scenario for instructions on how to implement:
 
 > [!div class="nextstepaction"]
-> [Local Windows Autopilot reset](local-autopilot-reset.md)
+> [Local Windows Autopilot Reset](local-autopilot-reset.md)
 
 > [!div class="nextstepaction"]
-> [Remote reset](remote-autopilot-reset.md)
+> [Remote Windows Autopilot Reset](remote-autopilot-reset.md)
 
 ## More information
 
