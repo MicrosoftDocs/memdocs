@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 09/27/2021
+ms.date: 03/24/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -32,7 +32,7 @@ ms.collection:
 
 # Rename a device in Intune
 
-You can use the **Rename device** action to rename a device that is enrolled in Intune. When you use this action, the device's name is changed in Intune and on the device.
+You can use the **Rename device** action to rename a device that is enrolled in Intune. When you use this action, the device's name is changed in the Microsoft Intune admin center and on the device. However, this does not change the name in the Company Portal app.
 
 You can rename the following types of devices:
 
