@@ -77,13 +77,21 @@ To create a configuration profile that sets the **DisableAutomaticReDeploymentCr
 
 ## Trigger local Windows Autopilot Reset
 
-To trigger a local Windows Autopilot Reset, follow the below steps:
+To trigger a local Windows Autopilot Reset on a device, follow the below steps:
+
+1. Make sure that the [Windows Recovery Environment (WinRE)](/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference) is correctly configured and enabled on the device. WinRE can be enabled with the [REAgentC.exe tool](/windows-hardware/manufacture/desktop/reagentc-command-line-options) via the following command:
+
+  ```cmd
+  reagentc.exe /enable
+  ```
+
+1. Make sure that the device is in the device group where the Windows Autopilot Reset configuration profile was assigned to.
 
 1. If you created a provisioning package that should be applied during the local Windows Autopilot Reset, plug in the USB drive that contains the provisioning package.
 
-2. From the Windows device lock screen, enter the keystroke: **CTRL + ![Windows key](../../images/windows_glyph.png) + R**.
+1. From the Windows device lock screen, enter the keystroke: **CTRL + ![Windows key](../../images/windows_glyph.png) + R**.
 
-3. To trigger the local Autopilot Reset, sign into the device with an account that has local admin credentials.
+1. To trigger the local Autopilot Reset, sign into the device with an account that has local admin credentials.
 
 Once the local Autopilot Reset is triggered, the reset process starts. Once provisioning is complete, the device is again ready for use.
 
