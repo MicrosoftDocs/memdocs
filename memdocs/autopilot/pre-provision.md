@@ -1,23 +1,18 @@
 ---
 title: Windows Autopilot for pre-provisioned deployment
-description: Windows Autopilot for pre-provisioned deployment
-keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune, pre-provisioning, white glove, provision
+description: Windows Autopilot for pre-provisioned deployment.
 ms.prod: windows-client
 ms.technology: itpro-deploy
-ms.mktglfcycl: deploy
 ms.localizationpriority: medium
-ms.sitesec: library
-ms.pagetype: deploy
-audience: itproF
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.audience: itpro
 author: frankroj
 ms.author: frankroj
 ms.date: 11/17/2022
 ms.collection: 
   - M365-modern-desktop
   - highpri
+  - tier1
 ms.topic: how-to
 ---
 

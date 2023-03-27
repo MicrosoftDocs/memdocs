@@ -1,14 +1,9 @@
 ---
 title: Windows Autopilot Reset
 description: Windows Autopilot Reset takes the device back to a business-ready state, allowing the next user to sign in and get productive quickly and easily.
-keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune
 ms.technology: itpro-deploy
 ms.prod: windows-client
-ms.mktglfcycl: deploy
 ms.localizationpriority: medium
-ms.sitesec: library
-ms.pagetype: deploy
-audience: itpro
 author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
@@ -17,6 +12,7 @@ ms.date: 03/23/2023
 ms.collection: 
   - M365-modern-desktop
   - highpri
+  - tier1
 ms.topic: how-to
 ---
 
