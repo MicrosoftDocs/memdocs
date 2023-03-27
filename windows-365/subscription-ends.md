@@ -78,9 +78,6 @@ Here's what to expect for you and your users if you cancel a subscription.
 
 To learn how to cancel, see  [Cancel your subscription](/microsoft-365/commerce/subscriptions/cancel-your-subscription).
   
-> [!IMPORTANT]
-> If you explicitly delete a subscription, it skips the Expired and Disabled stages and the SharePoint Online data and content, including OneDrive, is immediately deleted.
-
 ## What are my options if my subscription is about to expire?
 
 While a subscription is active, you and your users have normal access to your data, the Windows 365 service, and users have access to their respective Cloud PCs. As the admin, you receive a series of notifications via email and in the admin center as your subscription nears its expiration date.
