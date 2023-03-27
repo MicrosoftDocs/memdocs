@@ -83,11 +83,11 @@ To force the device to obtain the latest Intune policy locally on the device, fo
 
 4. In the **Accounts** page, select **Access work or school**.
 
-5. In the **Accounts > Access work or school** page, select **Connected by <user@domain>** to open a new section.
+5. In the **Accounts > Access work or school** page, select **Connected by &lt;user@domain&gt;** to open a new section.
 
-6. In the new section, next to **Managed by <organization>**, select the **Info** button.
+6. In the new section, next to **Managed by &lt;organization&gt;**, select the **Info** button.
 
-7. In the **Accounts > Access work or school > Managed by <organization>** page, under **Device sync status**, select the **Sync** button.
+7. In the **Accounts > Access work or school > Managed by &lt;organization&gt;** page, under **Device sync status**, select the **Sync** button.
 
 This should force the device to obtain the latest Intune policy. The Autopilot Reset should start shortly thereafter.
 
