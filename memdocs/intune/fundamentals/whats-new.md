@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/24/2023
+ms.date: 03/27/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -66,6 +66,13 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Scripts
 ### Tenant administration
 -->
+
+## Week of March 27, 2023
+
+### App management
+
+#### Install required apps during pre-provisioning<!-- 12716381 -->
+A new toggle is available in the Enrollment Status Page (ESP) profile that allows you to select whether you want to attempt to install required applications during the pre-provisioning (white glove) technician phase. We understand that installing as many applications as possible during pre-provisioning is desired to reduce the end user set up time. In case of an app install failure, ESP will continue except for the apps specified in the ESP profile. To enable this function, you will need to edit your Enrollment Status Page profile by selecting **Yes** on the new setting entitled **Only fail selected apps in technician phase**. This setting will only appear if you have blocking apps selected. For information about ESP, go to [Set up the Enrollment Status Page](../enrollment/windows-enrollment-status.md).
 
 ## Week of March 20, 2023 (Service release 2303) 
 
@@ -150,7 +157,7 @@ Control visibility of the device category prompt in Intune Company Portal. You c
 Create and manage multiple enrollment profiles and tokens for Android Enterprise fully managed devices. With this new functionality, you can now use the *EnrollmentProfileName* dynamic device property to automatically assign enrollment profiles to fully managed devices. The enrollment token that came with your tenant will remain in a default profile. For more information, see [Set up Intune enrollment of Android Enterprise fully managed devices](../enrollment/android-fully-managed-enroll.md).
 
 #### New Azure AD frontline worker experience for iPad<!-- 6367427  -->  
-Intune now supports a frontline worker experience for iPhones and iPads using Apple automated device enrollment. You can now enroll devices that are enabled in Azure AD shared mode via zero-touch. 
+Intune now supports a frontline worker experience for iPhones and iPads using Apple automated device enrollment. You can now enroll devices that are enabled in Azure AD shared mode via zero-touch. For more information about how to configure automated device enrollment for shared device mode, see [Set up enrollment for devices in Azure AD shared device mode](../enrollment/automated-device-enrollment-shared-device-mode.md).  
 
 ### Device management
 
@@ -297,7 +304,7 @@ You can add your frequently used queries to a **Favorites** folder in CMPivot. C
 
 ### Device enrollment
 
-#### New Microsoft Store apps now supported with the Enrollment Status Page
+#### New Microsoft Store apps now supported with the Enrollment Status Page<!-- 16280325 -->
 The Enrollment Status Page (ESP) now supports the new Microsoft store applications during Windows Autopilot. This update enables better support for the new Microsoft Store experience and should be rolling out to all tenants starting with Intune 2303. For related information, see [Set up the Enrollment Status Page](../enrollment/windows-enrollment-status.md).
 
 ## Week of February 27, 2023
