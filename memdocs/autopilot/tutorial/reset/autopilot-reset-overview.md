@@ -27,21 +27,21 @@ Windows Autopilot Reset takes the device back to a business-ready state, allowin
 > [!IMPORTANT]
 > Windows Autopilot Reset only supports Azure AD join devices. Windows Autopilot Reset doesn't support hybrid Azure AD join devices. For hybrid Azure AD join devices, a full device wipe is required. When a hybrid Azure AD device goes through a full device reset, it may take up to 24 hours for it to be ready to be deployed again. You can expedite this request by re-registering the device.
 
-## Actions performed and information removed by Windows Autopilot Reset actions
+## Information removed and reset by a Windows Autopilot Reset
 
-Specifically, Windows Autopilot Reset performs the following actions and removes the following information:
+The Windows Autopilot Reset process removes or resets the following information from the existing device:
 
-- The device's primary user will be removed. The next user who signs in after the reset will be set as the primary user.
+- The device's primary user will be removed. The next user who signs in after the Windows Autopilot Reset will be set as the primary user.
 - Removes personal files, apps, and settings.
 - Reapplies a device's original settings.
 - Sets the region, language, and keyboard to the original values.
+
+## Information kept and migrated after a Windows Autopilot Reset
+
+The Windows Autopilot Reset process automatically keeps the following information from the existing device:
+
 - Maintains the device's identity connection to Azure AD.
 - Maintains the device's management connection to Intune.
-
-## Information kept after an Windows Autopilot Reset
-
-The Windows Autopilot Reset process automatically keeps information from the existing device:
-
 - Wi-Fi connection details.
 - Provisioning packages previously applied to the device.
 - A provisioning package present on a USB drive when the reset process is started.
@@ -74,7 +74,7 @@ Windows Autopilot Reset supports two scenarios:
 Windows Autopilot Reset works by using the Windows [push-button reset](/windows-hardware/manufacture/desktop/push-button-reset-overview) feature. The following actions occur during a Windows Autopilot Reset:
 
 - A new OS of the same version is created by reconstructing it from the WinSXS store.
-- Migration of some data is performed between the old OS and the new OS to preserve the items from [Information kept after an Windows Autopilot Reset](#information-kept-after-an-windows-autopilot-reset).
+- Migration of some data is performed between the old OS and the new OS to preserve the items from [Information kept after an Windows Autopilot Reset](#information-kept-and-migrated-after-a-windows-autopilot-reset).
 - All existing user profiles and data are deleted.
 - Third-party apps are uninstalled.
 

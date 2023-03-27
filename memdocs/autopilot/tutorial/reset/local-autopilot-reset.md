@@ -17,11 +17,11 @@ ms.technology: itpro-deploy
 
 # Enable local Windows Autopilot Reset
 
-To enable a local Windows Autopilot Reset, the **DisableAutomaticReDeploymentCredentials** policy must be configured. This policy is documented in the [Policy CSP](/windows/client-management/mdm/policy-csp-credentialproviders##disableautomaticredeploymentcredentials). By default, local Windows Autopilot Reset is disabled. This default ensures that a local Autopilot Reset isn't triggered by accident.
+To enable a local Windows Autopilot Reset, the **DisableAutomaticReDeploymentCredentials** policy must be configured. This policy is documented in the [Policy CSP](/windows/client-management/mdm/policy-csp-credentialproviders#disableautomaticredeploymentcredentials). By default, local Windows Autopilot Reset is disabled. This default ensures that a local Autopilot Reset isn't triggered by accident.
 
 ## Enable local Windows Autopilot Reset in Intune
 
-To create a configuration profile that sets the **DisableAutomaticReDeploymentCredentials** policy policy and enables local Windows Autopilot Reset, follow the below steps:
+To create a configuration profile that sets the **DisableAutomaticReDeploymentCredentials** policy policy and enables local Windows Autopilot Reset in Intune, follow the below steps:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
