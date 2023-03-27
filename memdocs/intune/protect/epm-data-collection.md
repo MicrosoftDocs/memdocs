@@ -39,7 +39,7 @@ Tasks that commonly require administrative privileges are application installs (
 
 Endpoint Privilege Management supports your zero-trust journey by helping your organization achieve a broad user base running with least privilege, while allowing users to still run tasks allowed by your organization to remain productive.
 
-This article provides information about the data that EMP can collect from devices.
+This article provides information about the data that EPM can collect from devices.
 
 Applies to:
 
