@@ -162,6 +162,10 @@ Create and manage multiple enrollment profiles and tokens for Android Enterprise
 #### New Azure AD frontline worker experience for iPad<!-- 6367427  -->  
 Intune now supports a frontline worker experience for iPhones and iPads using Apple automated device enrollment. You can now enroll devices that are enabled in Azure AD shared mode via zero-touch. For more information about how to configure automated device enrollment for shared device mode, see [Set up enrollment for devices in Azure AD shared device mode](../enrollment/automated-device-enrollment-shared-device-mode.md).  
 
+Applies to:
+
+- iOS/iPadOS
+
 ### Device management
 
 #### Endpoint security firewall policy support for log configurations<!-- 16730565   -->  
