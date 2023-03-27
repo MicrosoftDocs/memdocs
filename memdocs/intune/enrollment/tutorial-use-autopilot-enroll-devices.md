@@ -22,7 +22,7 @@ Customer intent: As an Intune admin, I want to set up Windows Autopilot so that 
 #ROBOTS:
 #audience:
 
-ms.reviewer: 
+ms.reviewer: jubaptis
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
