@@ -15,12 +15,20 @@ ms.subservice: enrollment
 ms.localizationpriority: high
 ms.technology:
 ms.assetid: 
-Customer intent: As an Intune admin, I want to set up automated device enrollment for iOS/iPadOS devices I purchased through Apple Business Manager and managed devices in Intune.  
+Customer intent: As an Intune admin, I want to set up automated device enrollment for iOS/iPadOS devices I purchased through Apple Business Manager.  
+
+# optional metadata
+
+#ROBOTS:
+#audience:
+
+ms.reviewer: maholdaa 
+ms.custom: intune
 ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
----
+---  
 
 # Tutorial: Set up Microsoft Intune enrollment for iOS/iPadOS devices in Apple Business Manager  
 Use Apple Business Manager with Microsoft Intune to simplify and automate device enrollment for iOS/iPadOS devices procured through Apple Business Manager. *Automated device enrollment*, which we'll set up in this tutorial, enables secure automatic enrollment the first time the user turns on the device by deploying the enrollment profile to the device over-the-air.  
