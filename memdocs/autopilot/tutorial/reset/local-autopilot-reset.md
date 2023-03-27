@@ -97,6 +97,8 @@ Once the local Autopilot Reset is triggered, the reset process starts. Once prov
 
 ## More information
 
-For more information on Windows Autopilot Reset, see the following article(s):
+For more information on local Windows Autopilot Reset, see the following article(s):
 
 - [Reset devices with local Windows Autopilot Reset](../../windows-autopilot-reset.md#reset-devices-with-local-windows-autopilot-reset)
+- [Windows Recovery Environment (WinRE)](/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference)
+- [REAgentC.exe tool](/windows-hardware/manufacture/desktop/reagentc-command-line-options)

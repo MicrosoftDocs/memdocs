@@ -50,17 +50,11 @@ The Windows Autopilot Reset process automatically keeps the following informatio
 
 ## Windows Autopilot Reset requirements
 
-- Azure AD join devices only. Hybrid Azure AD join devices aren't supported.
-
-- [Windows Recovery Environment (WinRE)](/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference) is correctly configured and enabled on device where Windows Autopilot Reset will be used. WinRE can be enabled with the [REAgentC.exe tool](/windows-hardware/manufacture/desktop/reagentc-command-line-options) via the following command:
-
-  ```cmd
-  reagentc.exe /enable
-  ```
-
+- Enrolled in Azure AD. Only Azure AD join devices are supported. Hybrid Azure AD join devices aren't supported.
+- Enrolled in Intune.
+- [Windows Recovery Environment (WinRE)](/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference) is correctly configured and enabled on device where Windows Autopilot Reset will be used.
 - User initiating [local Windows Autopilot Reset](local-autopilot-reset.md) must be a local administrator on the device.
-
-- Admins initiating a [remote Windows Autopilot Reset](remote-autopilot-reset.md) must be a member of the Intune Service Administrator role. For more information, see [Add users and grant administrative permission to Intune](../../../intune/fundamentals/users-add.md).
+- Admins initiating a [remote Windows Autopilot Reset](remote-autopilot-reset.md) must be a member of the Intune Service Administrator role.
 
 ## Windows Autopilot Rest Scenarios
 
