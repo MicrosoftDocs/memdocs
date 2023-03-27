@@ -56,16 +56,16 @@ The Windows Autopilot Reset process automatically keeps the following informatio
 - User initiating [local Windows Autopilot Reset](local-autopilot-reset.md) must be a local administrator on the device.
 - Admins initiating a [remote Windows Autopilot Reset](remote-autopilot-reset.md) must be a member of the Intune Service Administrator role.
 
-## Windows Autopilot Rest Scenarios
+## Windows Autopilot Rest Scenarios in Intune
 
-Windows Autopilot Reset supports two scenarios:
+Windows Autopilot Reset in Intune supports two scenarios:
 
-- [Local reset](local-autopilot-reset.md) - an Windows Autopilot Reset that is started locally on the device by the user.
-- [Remote reset](remote-autopilot-reset.md) started remotely by IT personnel via an MDM service such as Microsoft Intune.
+- [Local reset](local-autopilot-reset.md) - a Windows Autopilot Reset that is started locally on the device by the user.
+- [Remote reset](remote-autopilot-reset.md) - a Windows Autopilot Reset that is started remotely by an Intune admin via Microsoft Intune.
 
 ## How Windows Autopilot Reset works
 
-Windows Autopilot Reset works by using the Windows [push-button reset](/windows-hardware/manufacture/desktop/push-button-reset-overview) feature. The following actions occur during a Windows Autopilot Reset:
+Windows Autopilot Reset works by using the [push-button reset](/windows-hardware/manufacture/desktop/push-button-reset-overview) feature in Windows. The following actions occur during a Windows Autopilot Reset:
 
 - A new OS of the same version is created by reconstructing it from the WinSXS store.
 - Migration of some data is performed between the old OS and the new OS to preserve the items from [Information kept after an Windows Autopilot Reset](#information-kept-and-migrated-after-a-windows-autopilot-reset).

@@ -25,9 +25,9 @@ To trigger a remote Windows Autopilot Reset via Intune, follow these steps:
 
 1. Make sure that the [Windows Recovery Environment (WinRE)](/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference) is correctly configured and enabled on the device. WinRE can be enabled with the [REAgentC.exe tool](/windows-hardware/manufacture/desktop/reagentc-command-line-options) via the following command:
 
-  ```cmd
-  reagentc.exe /enable
-  ```
+    ```cmd
+    reagentc.exe /enable
+    ```
 
 1. Make sure the Intune admin initiating the remote Windows Autopilot Reset is a member of the Intune Service Administrator role. For more information, see [Add users and grant administrative permission to Intune](../../../intune/fundamentals/users-add.md).
 

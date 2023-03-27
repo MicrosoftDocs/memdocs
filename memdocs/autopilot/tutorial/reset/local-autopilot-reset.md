@@ -81,9 +81,9 @@ To trigger a local Windows Autopilot Reset on a device, follow the below steps:
 
 1. Make sure that the [Windows Recovery Environment (WinRE)](/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference) is correctly configured and enabled on the device. WinRE can be enabled with the [REAgentC.exe tool](/windows-hardware/manufacture/desktop/reagentc-command-line-options) via the following command:
 
-  ```cmd
-  reagentc.exe /enable
-  ```
+     ```cmd
+     reagentc.exe /enable
+     ```
 
 1. Make sure that the device is in the device group where the Windows Autopilot Reset configuration profile was assigned to.
 
