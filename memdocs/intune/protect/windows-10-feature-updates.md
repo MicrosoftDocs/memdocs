@@ -244,3 +244,4 @@ To learn more, see [Intune compliance reports](../protect/windows-update-complia
 - Use [Windows update rings in Intune](../protect/windows-10-update-rings.md)
 - Use [Windows update compatibility reports](../protect/windows-update-compatibility-reports.md)
 - Use [Intune compliance reports](../protect/windows-update-compliance-reports.md) for Windows 10/11 updates
+- Also see [Windows Autopatch](/windows/deployment/windows-autopatch/overview) as an alternative solution

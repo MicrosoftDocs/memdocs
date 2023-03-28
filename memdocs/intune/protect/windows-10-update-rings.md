@@ -203,3 +203,4 @@ There are multiple options to get in-depth reporting for Windows 10/11 updates w
 - Use [Windows feature updates in Intune](../protect/windows-10-feature-updates.md)
 - Use [Windows update compatibility reports](../protect/windows-update-compatibility-reports.md)
 - Use [Intune compliance reports](../protect/windows-update-compliance-reports.md) for Windows updates  
+- Also see [Windows Autopatch](/windows/deployment/windows-autopatch/overview) as an alternative solution
