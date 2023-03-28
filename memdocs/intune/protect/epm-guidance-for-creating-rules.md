@@ -78,7 +78,7 @@ This means that file names are *highly susceptible* to change. Files that are si
 
 Endpoint Privilege Management rules are deployed like any other policy in Microsoft Intune. This means that rules can be deployed to users or devices, and rules are merged on the client side and selected at run time. Any conflicts are resolved based on the [policy conflict behavior](../protect/epm-policies.md#policy-conflict-handling-for-endpoint-privilege-management).
 
-Rules deployed to a device are applied to *all users* on that device. Rules that are deployed to a *user* apply only to that user on devices they utilize. When an elevation action occurs, rules deployed to the user are given precedence to rules deployed to a device. This behavior allows you to deploy a set of rules to devices that might apply to all users on that device, and a more permissive set of rules to a support admin to allow them to elevate a broader set of applications when they sign-in to the device temporarily.
+Rules deployed to a device are applied to *every user* that uses that device. Rules that are deployed to a *user* apply only to that user on each device that they utilize. When an elevation action occurs, rules deployed to the user are given precedence to rules deployed to a device. This behavior allows you to deploy a set of rules to devices that might apply to all users on that device, and a more permissive set of rules to a support admin to allow them to elevate a broader set of applications when they sign-in to the device temporarily.
 
 *Default Elevation behavior* is used only when no rule match can be found. This also requires use of the *Run with elevated access* right-click menu, which is interpreted as a user *explicitly* asking for an application to be elevated.
 

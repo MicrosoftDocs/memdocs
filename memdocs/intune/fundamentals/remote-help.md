@@ -146,7 +146,7 @@ For users that opted out of automatic updates, when an update to Remote Help is 
 
 Download the latest version of Remote Help direct from Microsoft at [aka.ms/downloadremotehelp](https://aka.ms/downloadremotehelp).
 
-The most recent version of Remote Help is **4.1.1.0**
+The most recent version of Remote Help is **4.2.1167.0**
 
 ### Deploy Remote Help as a Win32 app
 
