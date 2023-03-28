@@ -117,6 +117,7 @@ Only update builds that are generally available are supported. Preview builds, i
   - WUfB-DS
 
     - devicelistenerprod.microsoft.com
+    - devicelistenerprod.eudb.microsoft.com
     - login.windows.net
     - payloadprod*.blob.core.windows.net
 

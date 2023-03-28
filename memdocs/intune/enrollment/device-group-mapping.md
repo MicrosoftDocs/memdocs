@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 01/25/2023
+ms.date: 03/09/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -43,7 +43,12 @@ This article describes how to configure and edit device categories.
 
 You must be a Global Administrator or Intune Administrator to perform these steps.  
 
+### Before you begin  
+
+Decide if it's necessary to show the device category selection prompt to end users when they visit the Company Portal app or website. If you don't want the prompt to be visible, block it in a [customization profile](../apps/company-portal-app.md#device-categories) first, and then create your categories.       
+
 ### Step 1: Create device category in Intune  
+
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Choose **Devices** > **Device categories**.
 3. Select **Create device category** to add a new category.
