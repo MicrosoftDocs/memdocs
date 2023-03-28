@@ -71,14 +71,6 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 ### App management
 
-### Prevent automatic updates for Apple VPP apps<!-- 16876430  -->  
-You'll soon be able to control the automatic update behavior for Apple VPP at the per-app assignment level using the new **Prevent automatic updates** setting. This setting will be available in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **iOS/iPadOS** or **macOS** > *Select a volume purchase program app* > **Properties** > **Assignments** > *Select an AAD group* > **App settings**.
-
-Applies to:
-
-- iOS/iPadOS
-- macOS
-
 ### Additional minimum OS versions for Win32 apps<!-- 16842404  -->  
 Intune supports additional minimum operating system versions for Windows 10 and 11 when installing Win32 apps. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **Windows** > **Add** > **Windows app (Win32)**. In the **Requirements** tab next to **Minimum operating system**, select one of the available operating systems. Additional OS options include the following:
 
