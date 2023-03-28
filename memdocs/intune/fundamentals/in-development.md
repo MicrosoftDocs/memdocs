@@ -75,6 +75,7 @@ For more information, see [Changes to applications’ backup and restore behavio
 You'll soon be able to control the automatic update behavior for Apple VPP at the per-app assignment level using the new **Prevent automatic updates** setting. This setting will be available in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **iOS/iPadOS** or **macOS** > *Select a volume purchase program app* > **Properties** > **Assignments** > *Select an AAD group* > **App settings**.
 
 Applies to:
+
 - iOS/iPadOS
 - macOS
 
