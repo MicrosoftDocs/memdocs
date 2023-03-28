@@ -5,7 +5,7 @@ manager: aaroncz
 ms.technology: itpro-deploy
 ms.prod: windows-client
 ms.topic: include
-ms.date: 03/14/2023
+ms.date: 03/27/2023
 ms.localizationpriority: medium
 ---
 
@@ -24,7 +24,7 @@ Device groups can be either dynamic or assigned:
 - **Dynamic groups** - Devices are automatically added to the group based on rules
 - **Assigned groups** - Devices are manually added to the group and are static
 
-When configuring Autopilot in an enterprise environment, dynamic groups are primarily used since a large number of devices are usually involved. Adding the devices in automatically using rules makes management of the group a lot easier. Adding a large amount of device in manually via an assigned group would be impractical. However, if there's a small number of devices, for example for testing purposes, an assigned group can also be used.
+When and admin configures Autopilot in an enterprise environment, dynamic groups are primarily used since a large number of devices are usually involved. Adding the devices in automatically using rules makes management of the group a lot easier. Adding a large amount of device in manually via an assigned group would be impractical. However, if there's only a few devices, for example for testing purposes, an assigned group can also be used.
 
 To create a dynamic device group for use with Autopilot, follow the below steps:
 
@@ -48,11 +48,11 @@ To create a dynamic device group for use with Autopilot, follow the below steps:
 
     6. For **Owners**, select users that own the group.
 
-    7. For **Dynamic device members** (available once **Dynamic Device** is selected for **Membership type**), select **Add dynamic query**. This will open the **Dynamic membership rules** screen:
+    7. For **Dynamic device members** (available once **Dynamic Device** is selected for **Membership type**), select **Add dynamic query**. Selecting **Add dynamic query** opens the **Dynamic membership rules** screen:
 
         1. Make sure that **Configure Rules** is selected at the top.
 
-        2. Select **Add expression**. Rules and expressions can be added that defines what devices will be added to the device group.
+        2. Select **Add expression**. Rules and expressions can be added that defines what devices are added to the device group.
 
             Rules can be entered in the rule builder via the drop-down boxes or the rule syntax can be directly entered via the **Edit** option in the **Rule syntax** section.
 
@@ -66,7 +66,7 @@ To create a dynamic device group for use with Autopilot, follow the below steps:
 
             For more information on creating rules for dynamic groups, see [Dynamic membership rules for groups in Azure Active Directory](/azure/active-directory/enterprise-users/groups-dynamic-membership).
 
-5. In the **New Group** screen, select **Create**. This will finish creating the dynamic group.
+5. In the **New Group** screen, select **Create** which finishes creating the dynamic group.
 
 > [!NOTE]
 > The above steps are creating a dynamic group in Azure AD which is used by Intune and Autopilot. Although the groups can be accessed in the Intune portal, they are Azure AD groups.

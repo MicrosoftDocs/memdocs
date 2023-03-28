@@ -5,7 +5,7 @@ manager: aaroncz
 ms.technology: itpro-deploy
 ms.prod: windows-client
 ms.topic: include
-ms.date: 03/14/2023
+ms.date: 03/27/2023
 ms.localizationpriority: medium
 ---
 
@@ -34,13 +34,13 @@ There are several methods to register a device as an Autopilot device in Intune:
   - [Diagnostics page hash export](/mem/autopilot/add-devices#diagnostics-page-hash-export)
   - [Desktop hash export](/mem/autopilot/add-devices#desktop-hash-export)
   
-  The above methods of obtaining the hardware hash of a device are well documented. The corresponding documentation can be viewed by selecting the appropriate link listed above.
+  These methods of obtaining the hardware hash of a device are well documented. The corresponding documentation can be viewed by selecting the appropriate link from the above list.
 
 - Automatically registering device via:
   - An [OEM](/mem/autopilot/oem-registration), including [Microsoft Surface](/surface/surface-autopilot-registration-support) devices
   - A [partner](/mem/autopilot/partner-registration)
 
-  Registering a device via an OEM or partner is also well documented. The corresponding documentation can be viewed by selecting the appropriate link listed above.
+  Registering a device via an OEM or partner is also well documented. The corresponding documentation can be viewed by selecting the appropriate link from the above list.
 
 For most organizations, using an OEM or partner to register devices as Autopilot devices is the preferred, most common, and most secure method. However for smaller organizations, for testing/lab scenarios, and for emergency scenarios, manually registering devices as Autopilot devices via the hardware hash is also used.
 
@@ -50,7 +50,7 @@ For most organizations, using an OEM or partner to register devices as Autopilot
 
 ## Importing the hardware hash CSV file for devices into Intune
 
-Several of the above methods on obtaining the hardware hash when manually registering devices as Autopilot devices will produce a CSV file that contains the hardware hash of the device. This CSV file with the hardware hash needs to be imported into Intune to register the device as an Autopilot device.
+Several of the above methods on obtaining the hardware hash when manually registering devices as Autopilot devices produces a CSV file that contains the hardware hash of the device. This CSV file with the hardware hash needs to be imported into Intune to register the device as an Autopilot device.
 
 After the CSV file has been created, it can be imported into Intune via the following steps:
 
@@ -76,7 +76,7 @@ After the CSV file has been created, it can be imported into Intune via the foll
 
    1. After the import is complete, select **Sync**.
 
-      A message will display saying that the sync is in progress. The sync process might take a few minutes to complete, depending on how many devices are being synchronized.
+      A message displays saying that the sync is in progress. The sync process might take a few minutes to complete, depending on how many devices are being synchronized.
 
       > [!NOTE]
       >

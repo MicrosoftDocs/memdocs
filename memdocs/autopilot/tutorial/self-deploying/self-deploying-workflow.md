@@ -7,7 +7,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 03/14/2023
+ms.date: 03/27/2023
 ms.topic: tutorial
 ms.collection: 
   - tier1
@@ -22,7 +22,7 @@ ms.technology: itpro-deploy
 - Windows 11
 - Windows 10
 
-This step by step tutorial will guide you through using Intune to perform a Windows Autopilot self-deploying mode scenario.
+This step by step tutorial guides you through using Intune to perform a Windows Autopilot self-deploying mode scenario.
 
 The purpose of this tutorial is to provide a step by step guide for all the steps required for the configuration for a successful Autopilot self-deploying mode deployment using Intune. The tutorial is also designed as a walkthrough in a lab or testing scenario, but can be expanded for use in a production environment.
 

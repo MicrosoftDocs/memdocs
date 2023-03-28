@@ -7,7 +7,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 03/14/2023
+ms.date: 03/27/2023
 ms.topic: tutorial
 ms.collection: 
   - tier1
@@ -32,7 +32,7 @@ For an overview of the Windows Autopilot user-driven hybrid Azure AD join workfl
 
 ## Increase the computer account limit in the Organizational Unit (OU)
 
-The purpose of the Intune connector is to join computers to an on-premises domain during the Autopilot process. The Intune connector creates computer objects in a specified Organizational Unit (OU) in Active Directory during the domain join process. For this reason, the server running the Intune connector needs to have permissions to create and delete computer accounts in the OU where the computers will be joined to the on-premises domain.
+The purpose of the Intune connector is to join computers to an on-premises domain during the Autopilot process. The Intune connector creates computer objects in a specified Organizational Unit (OU) in Active Directory during the domain join process. For this reason, the server running the Intune connector needs to have permissions to create and delete computer accounts in the OU where the computers are joined to the on-premises domain.
 
 With default permissions in Active Directory, domain joins by the Intune connector may initially work without any permission modifications to the OU in Active Directory. However after the server running the Intune connector attempts to join more than 10 computers to the on-premises domain, it would stop working because by default, Active Directory only allows any single account to join up to 10 computers to the on-premises domain.
 
@@ -41,13 +41,13 @@ The following users aren't restricted by the 10 computer domain join limitation:
 - Users in the Administrators or Domain Administrators groups.
 - Users who have delegated permissions on Organizational Unit (OUs) and containers in Active Directory to create and delete computer accounts.
 
-To fix this limitation, the server running the Intune connector needs to be delegated permissions to create and delete computer accounts in the Organizational Unit (OU) where the computers will be joined to the on-premises domain. It's also recommended to specifically set these permissions in case the server running the Intune connector doesn't have permissions to create computers in the OU, for example, the default permissions have been modified.
+To fix this limitation, the server running the Intune connector needs to be delegated permissions to create and delete computer accounts in the Organizational Unit (OU) where the computers are joined to the on-premises domain. It's also recommended to specifically set these permissions in case the server running the Intune connector doesn't have permissions to create computers in the OU, for example, the default permissions have been modified.
 
-To increase the computer account limit in the Organizational Unit (OU) that computers will be joining to during Autopilot, follow these steps on a computer that has access to the **Active Directory Users and Computers** console:
+To increase the computer account limit in the Organizational Unit (OU) that computers are joining to during Autopilot, follow these steps on a computer that has access to the **Active Directory Users and Computers** console:
 
 1. Open the **Active Directory Users and Computers** console by running **DSA.msc**.
 
-1. Expand the desired domain and navigate to the organizational unit (OU) that computers will be joining to during Autopilot.
+1. Expand the desired domain and navigate to the organizational unit (OU) that computers are joining to during Autopilot.
 
     > [!NOTE]
     >

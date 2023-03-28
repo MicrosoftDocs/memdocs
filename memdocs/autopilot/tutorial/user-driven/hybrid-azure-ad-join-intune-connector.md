@@ -7,7 +7,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 03/14/2023
+ms.date: 03/27/2023
 ms.topic: tutorial
 ms.collection: 
   - tier1
@@ -32,11 +32,11 @@ For an overview of the Windows Autopilot user-driven hybrid Azure AD join workfl
 
 ## Install the Intune Connector
 
-1. Sign into the server where the Intune Connector will be installed with an account that has local administrator rights.
+1. Sign into the server where the Intune Connector is being installed with an account that has local administrator rights.
 
 1. Turn off Internet Explorer Enhanced Security Configuration on the server. By default Windows Server has Internet Explorer Enhanced Security Configuration turned on. To turn off Internet Explorer Enhanced Security Configuration:
 
-   1. On the server where the Intune Connector will be installed, open **Server Manager**.
+   1. On the server where the Intune Connector is being installed, open **Server Manager**.
 
    1. In the left pane of Server Manager, select **Local Server**.
 
@@ -44,7 +44,7 @@ For an overview of the Windows Autopilot user-driven hybrid Azure AD join workfl
 
    1. In the **Internet Explorer Enhanced Security Configuration** window, select **Off** under **Administrators:**, and then select **OK**.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) on the server where the Intune Connector will be installed.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) on the server where the Intune Connector is being installed.
 
 1. In the **Home** screen, select **Devices** in the left pane.
 
@@ -56,7 +56,7 @@ For an overview of the Windows Autopilot user-driven hybrid Azure AD join workfl
 
 1. In the **Intune Connector for Active Directory** page, select **Add**.
 
-1. In the **Add connector** window that opens, select **Download the on-premises Intune Connector for Active Directory** under step 2 of **Configuring the Intune connector for Active Directory**. This should download a file called **ODJConnectorBootstrapper.exe**.
+1. In the **Add connector** window that opens, select **Download the on-premises Intune Connector for Active Directory** under step 2 of **Configuring the Intune connector for Active Directory**. This download should download a file called **ODJConnectorBootstrapper.exe**.
 
 1. Open the **ODJConnectorBootstrapper.exe** file that downloaded to launch the Intune Connector install.
 
@@ -78,7 +78,7 @@ For an overview of the Windows Autopilot user-driven hybrid Azure AD join workfl
 
    1. Under the **Sign In** tab, sign in with the Global administrator or with the credentials of an Intune administrator role. The user account must have an assigned Intune license. The sign in process may take a few minutes to complete.
 
-   1. Once the sign in process is complete, a **The Intune connector for Active Directory successfully enrolled** confirmation window will appear. Select **OK** to close the window. The **Enrollment** tab will now show **Intune connector for Active Directory is enrolled** and the **Sign In** button will be greyed out.
+   1. Once the sign in process is complete, a **The Intune connector for Active Directory successfully enrolled** confirmation window appears. Select **OK** to close the window. The **Enrollment** tab shows **Intune connector for Active Directory is enrolled** and the **Sign In** button is greyed out.
 
    1. Close the **Intune connector for Active Directory** window.
 
@@ -91,7 +91,7 @@ For an overview of the Windows Autopilot user-driven hybrid Azure AD join workfl
 > - The Global administrator role is a temporary requirement at the time of installation.
 > - After you sign in to the Intune connector, it can take several minutes to appear in the **Intune Connector for Active Directory** page of the Microsoft Intune admin center. It appears only if it can successfully communicate with the Intune service.
 
-After installing the Intune Connector, it will start logging in the **Event Viewer** under the path **Applications and Services Logs** > **Microsoft** > **Intune** > **ODJConnectorService**. Under this path, you'll find **Admin** and **Operational** logs.
+After the Intune Connector is installed, it will start logging in the **Event Viewer** under the path **Applications and Services Logs** > **Microsoft** > **Intune** > **ODJConnectorService**. Under this path, the **Admin** and **Operational** logs are found.
 
 ## Next step: Increase the computer account limit in the Organizational Unit (OU)
 

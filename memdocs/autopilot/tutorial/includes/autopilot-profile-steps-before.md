@@ -5,7 +5,7 @@ manager: aaroncz
 ms.technology: itpro-deploy
 ms.prod: windows-client
 ms.topic: include
-ms.date: 03/14/2023
+ms.date: 03/27/2023
 ms.localizationpriority: medium
 ---
 
@@ -29,7 +29,7 @@ Headings are driven by article context. -->
 
 6. In the **Windows Autopilot deployment profiles** screen, select **Create Profile** > **Windows PC**.
 
-7. The **Create profile** screen will open. In the **Basics** page:
+7. The **Create profile** screen opens. In the **Basics** page:
 
    1. Next to **Name**, enter a name for the Autopilot profile.
 

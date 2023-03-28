@@ -7,7 +7,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 03/14/2023
+ms.date: 03/27/2023
 ms.topic: tutorial
 ms.collection: 
   - tier1
@@ -33,7 +33,7 @@ For an overview of the Windows Autopilot user-driven Azure AD join workflow, see
 
 While the ESP controls what is shown during device and user setup and specifies how soon a user can use their device, the Autopilot profile specifies how the device is configured during Windows Setup, or during OOBE.
 
-When creating an Autopilot profile for the user-driven scenario, devices with this Autopilot profile are associated with the user enrolling the device. User credentials are required to enroll the device.
+When an admin creates an Autopilot profile for the user-driven scenario, devices with this Autopilot profile are associated with the user enrolling the device. User credentials are required to enroll the device.
 
 The difference between an Autopilot user-driven Azure AD join and an Autopilot hybrid Azure AD join is that the user-driven Azure AD join scenario only joins Azure AD during Autopilot. The hybrid Azure AD join scenario joins both an on-premises domain and Azure AD during Autopilot.
 
@@ -57,7 +57,7 @@ To create a user-driven Azure AD join Autopilot profile, follow the below steps:
 
       - For **Hide change account options**, select **Hide**.
 
-      - For **User account type**, select the desired account type for the user (**Administrator** or **Standard** user). If **Administrator** is chosen, the user will be added to the local Admin group.
+      - For **User account type**, select the desired account type for the user (**Administrator** or **Standard** user). If **Administrator** is chosen, the user is added to the local Admin group.
 
       - For **Allow pre-provisioned deployment**, select **No**.
 

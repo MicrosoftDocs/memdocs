@@ -5,7 +5,7 @@ manager: aaroncz
 ms.technology: itpro-deploy
 ms.prod: windows-client
 ms.topic: include
-ms.date: 03/14/2023
+ms.date: 03/27/2023
 ms.localizationpriority: medium
 ---
 
@@ -15,7 +15,7 @@ azure-ad-join-assign-device-to-user.md
 
 Headings are driven by article context. -->
 
-A device that has been registered as an Autopilot device can also be assigned to a user. If an Autopilot device is assigned to a user, then any user policies and application installs assigned to that user will also be applied to the device during the Autopilot process.
+A device that has been registered as an Autopilot device can also be assigned to a user. If an Autopilot device is assigned to a user, then any user policies and application installs assigned to that user is applied to the device during the Autopilot process.
 
 > [!TIP]
 >
@@ -35,7 +35,7 @@ To assign an Autopilot device to a user, follow the below steps:
 
 6. In the **Windows Autopilot devices** screen that opens, locate the device to assign a user to.
 
-7. Once the desired device has been located, select the box to the left of the device, making sure that there's check mark in the box, and then select **Assign user** in the toolbar above.
+7. Once the desired device has been located, select the box to the left of the device, making sure that there's check mark in the box, and then select **Assign user** in the toolbar at the top of page.
 
 8. In the **Select user** window that opens, find and select a user for the device, and then select **Select** to close the window. If necessary, use the **Search** box to find the desired user.
 
@@ -45,4 +45,4 @@ To assign an Autopilot device to a user, follow the below steps:
 
 9. In the Autopilot device's property window that automatically opens on the right hand side, under **User friendly name**, verify the default value. If the value is empty or a different friendly name is desired, enter the desired friendly name for the user under **User friendly name**, and then select **Save** to close the property window.
 
-10. The user assignment can be verified by selecting the Autopilot device in the **Windows Autopilot devices** screen. Once the Autopilot device is selected, it will highlight and the Autopilot device's property window will automatically open on the right hand side. The assigned user will be listed under **User** and **User friendly name**.
+10. The user assignment can be verified by selecting the Autopilot device in the **Windows Autopilot devices** screen. Once the Autopilot device is selected, it highlights and the Autopilot device's property window automatically opens on the right hand side. The assigned user is listed under **User** and **User friendly name**.
