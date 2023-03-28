@@ -129,8 +129,6 @@ The Autopilot profile not applying after a device is reimaged to an older OS ver
 
 When a device is reimaged to an older OS version after a hardware change on a device, deregister and re-register the device.
 
-### Description
-
 ## Intune enrollment issues
 
 See [this knowledge base article](https://support.microsoft.com/help/4089533/troubleshooting-windows-device-enrollment-problems-in-microsoft-intune) for assistance with Intune enrollment issues. Common issues can include"
