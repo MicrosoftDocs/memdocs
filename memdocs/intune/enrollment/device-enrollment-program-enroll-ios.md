@@ -325,6 +325,9 @@ Now that you've installed your token, you can create an enrollment profile for a
          * iOS/iPadOS 13+ devices enrolling with Setup Assistant with modern authentication  
          * iOS/iPadOS 13+ devices enrolling without user affinity   
           * iOS/iPadOS 13+ devices enrolling with Azure AD shared mode  
+          
+      > [!IMPORTANT]
+      > This feature is in public preview. For more information, see [Public preview in Microsoft Intune](../fundamentals/public-preview.md).  
 
 15. Optionally, create a device name template to quickly identify devices assigned this profile in the admin center. Intune uses your template to create and format device names. The names are given to devices when they enroll and upon each successive check-in. To create a template: 
  1. Under **Apply device name template**, select **Yes** .
