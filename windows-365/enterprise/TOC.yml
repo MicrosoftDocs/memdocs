@@ -55,6 +55,8 @@ items:
           href: requirements.md
         - name: Network requirements
           href: requirements-network.md
+      - name: Azure Firewall
+        href: azure-firewall-windows-365.md
       - name: Cloud PC role-based access control
         href: role-based-access.md
       - name: Intune role-based access control
