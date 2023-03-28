@@ -18,7 +18,7 @@ ms.topic: article
 
 ## Device rename occurs during technician phase for pre-provisioning 
 
-Starting in 2303, a new functional change forces the device rename to occur during the technician phase for pre-provisioning for Azure AD join devices. After the technician selects the provision button, we'll immediately perform the device rename and reboot the device, then transition to the device ESP. During the user flow, the device rename is then skipped keeping resources that depend on device name (such as SCEP certs) intact. To apply this change, install quality update [KB5023773](https://support.microsoft.com/topic/march-21-2023-kb5023773-os-builds-19042-2788-19044-2788-and-19045-2788-preview-5850ac11-dd43-4550-89ec-9e63353fef23) or newer.
+Starting in 2303, a new functional change forces the device rename to occur during the technician phase for pre-provisioning for Azure AD join devices. After the technician selects the provision button, we'll immediately perform the device rename and reboot the device, then transition to the device ESP. During the user flow, the device rename is then skipped keeping resources that depend on device name (such as SCEP certs) intact. To apply this change, for Windows 10, install quality update [KB5023773](https://support.microsoft.com/topic/march-21-2023-kb5023773-os-builds-19042-2788-19044-2788-and-19045-2788-preview-5850ac11-dd43-4550-89ec-9e63353fef23) or newer. Windows 11 update is pending and will be posted as soon as it is available.
 
 ## Install required apps during pre-provisioning
 
