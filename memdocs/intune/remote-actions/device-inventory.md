@@ -31,18 +31,16 @@ ms.collection:
 
 # See device details in Intune
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
+The **Devices** feature provides more details about the devices you manage, including their hardware and the apps installed.
 
-The **Devices** feature provides additional details into the devices you manage, including their hardware and the apps installed.
-
-This article shows you how to view all your devices, and their properties in the Azure portal.
+This article shows you how to view all your devices, and their properties in the Microsoft Intune admin center.
 
 ## View the device details
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **All devices** > select one of your listed devices to open its details:
 
-   - **Overview** shows the device name, and lists some key properties of the device, like whether it's a personal or corporate device, serial number, primary user, and more. You can do the following on the device (depending on the device platform):
+   - **Overview** shows the device name, and lists some key properties of the device, like whether it's a personal or corporate device, serial number, primary user, and more. You can perform the following actions on the device (depending on the device platform):
       - [Retire](devices-wipe.md#retire)
       - [Wipe](devices-wipe.md#wipe)
       - [Delete](devices-wipe.md#delete-devices-from-the-intune-admin-center)
@@ -71,55 +69,55 @@ This article shows you how to view all your devices, and their properties in the
 
 Depending on the carrier used by the devices, not all details might be collected.
 
-> [!Note]  
+> [!NOTE]  
 >Hardware and Software inventory is refreshed in the Intune service every 7 days, starting from the date of enrolment. 
 
 |Detail|Description|Platform|
 |--------------|----------------------|----|  
-|Name|The name of the device.|Windows, MacOS, iOS, Android|
-|Management name|An easily recognizable device name used only in the Intune admin center. Changing this name won't change the name on the device or in the Company Portal app. For information on how to rename a device, see [Rename a device with Microsoft Intune](device-rename.md).|Windows, MacOS, iOS, Android <br/><br/> NOTE: Management names will not automatically populate for Android Enterprise dedicated, fully managed, and corporate-owned with work profile devices that were enrolled before November 2021. However, the admin may still edit the management name.|
-|UDID|The device's Unique Device identifier.|Windows, MacOS, iOS|
-|Intune Device ID|A GUID that uniquely identifies the device.|Windows, MacOS, iOS, Android|
-|Serial number|The device's serial number from the manufacturer.|Windows, MacOS, iOS, iPadOS, Android <br/><br/> Intune doesn't display serial number for Android personally-owned work profile devices running Android 12 and newer.|
+|Name|The name of the device.|Windows, macOS, iOS, Android|
+|Management name|An easily recognizable device name used only in the Intune admin center. Changing this name does not change the device name or the name in the Company Portal. For more information on how to change the device name, see [Rename a device with Microsoft Intune](device-rename.md).|Windows, macOS, iOS, Android <br/><br/> NOTE: Management names won't automatically populate for Android Enterprise dedicated, fully managed, and corporate-owned with work profile devices that were enrolled before November 2021. However, the admin may still edit the management name.|
+|UDID|The device's Unique Device identifier.|Windows, macOS, iOS|
+|Intune Device ID|A GUID that uniquely identifies the device.|Windows, macOS, iOS, Android|
+|Serial number|The device's serial number from the manufacturer.|Windows, macOS, iOS, iPadOS, Android <br/><br/> Intune doesn't display serial number for Android personally owned work profile devices running Android 12 and newer.|
 |Shared device|If **Yes**, the device is shared by more than one user.|Windows, iOS|
 |User approved enrollment|If **Yes**, then the device has user approved enrollment that lets admins manage certain security settings on the device.|Windows, iOS|
-|Operating system|The operating system used on the device.|Windows, MacOS, iOS, Android|
+|Operating system|The operating system used on the device.|Windows, macOS, iOS, Android|
 |Operating system version|The version of the operating system on the device.|Windows, iOS, iPadOS, Android|
 |Operating system language|The language set for the operating system on the device.|Windows, iOS, Android|
 |Build number|The operating system's build number.|Android|
 |Security patch level|The security patch level for the device.|Android|
-|Total storage space|The total storage space on the device (in gigabytes).|Windows, MacOS, iOS|
+|Total storage space|The total storage space on the device (in gigabytes).|Windows, macOS, iOS|
 |Free storage space|The unused storage space on the device (in gigabytes).|Windows, iOS|
 | PowerPrecision+ Battery Health | State-of-Health rating as determined by Zebra (PowerPrecision+ batteries only). | Android |
 | PowerPrecision Battery Charge Cycles Consumed | Number of full charge cycles consumed as determined by Zebra (PowerPrecision batteries only). | Android |
 | Last Battery Check-in | Date of last check-in for battery last found in the device as determined by Zebra (PowerPrecision and PowerPrecision+ batteries only). | Android |
 | Battery Serial Number | Serial number of the battery pack last found in the device as determined by Zebra (PowerPrecision and PowerPrecision+ batteries only). | Android |
-|IMEI|The device's International Mobile Equipment Identity.|Windows, iOS/iPadOS, Android <br/><br/> NOTE: Intune doesn't display IMEI for Android personally-owned work profile devices running Android 12 and newer|
-|MEID|The device's mobile equipment identifier.|Windows, iOS/iPadOS, Android <br/><br/> NOTE: Intune doesn't display MEID for Android personally-owned work profile devices running Android 12 and newer|
-|Manufacturer|The manufacturer of the device.|Windows, MacOS, iOS/iPadOS, Android|
-|Model|The model of the device.|Windows, MacOS, iOS/iPadOS, Android|
-|Phone number|The phone number assigned to the device.|Windows, iOS/iPadOS, Android <br/><br/> NOTE: Reporting for phone number is not supported for Android Enterprise corporate-owned work profile devices. For Android Enterprise fully managed and dedicated devices, reporting for phone number is supported; however, certain SIM cards will not write the data and therefore the phone number won't get reported in those cases.|
+|IMEI|The device's International Mobile Equipment Identity.|Windows, iOS/iPadOS, Android <br/><br/> NOTE: Intune doesn't display IMEI for Android personally owned work profile devices running Android 12 and newer|
+|MEID|The device's mobile equipment identifier.|Windows, iOS/iPadOS, Android <br/><br/> NOTE: Intune doesn't display MEID for Android personally owned work profile devices running Android 12 and newer|
+|Manufacturer|The manufacturer of the device.|Windows, macOS, iOS/iPadOS, Android|
+|Model|The model of the device.|Windows, macOS, iOS/iPadOS, Android|
+|Phone number|The phone number assigned to the device.|Windows, iOS/iPadOS, Android <br/><br/> NOTE: Reporting for phone number isn't supported for Android Enterprise corporate-owned work profile devices. For Android Enterprise fully managed and dedicated devices, reporting for phone number is supported; however, certain SIM cards won't write the data and therefore the phone number isn't reported in such cases.|
 |Subscribe carrier|The device's wireless carrier.|Windows, iOS/iPadOS, Android|
 |Cellular technology|The radio system used by the device.|Windows, iOS/iPadOS, Android|
-|Wi-Fi MAC|The device's Media Access Control address.|Windows, MacOS, iOS/iPadOS, Android<br><br>**NOTE**: As of October 2021, Intune doesn't display Wi-Fi MAC addresses for newly enrolled personally-owned work profile devices and devices managed with device administrator running Android 9 and later. |
-|Ethernet MAC|The primary Ethernet MAC address for the device. For macOS devices with no ethernet, the device will report the Wi-Fi MAC address.|macOS|
+|Wi-Fi MAC|The device's Media Access Control address.|Windows, macOS, iOS/iPadOS, Android<br><br>**NOTE**: As of October 2021, Intune doesn't display Wi-Fi MAC addresses for newly enrolled personally owned work profile devices and devices managed with device administrator running Android 9 and later. |
+|Ethernet MAC|The primary Ethernet MAC address for the device. For macOS devices with no ethernet, the device reports the Wi-Fi MAC address.|macOS|
 |ICCID|The Integrated Circuit Card Identifier, which is a SIM card's unique identification number.|Windows, iOS/iPadOS, Android<br/><br/>ICCID isn't inventoried on Android Enterprise Dedicated, Fully Managed, or Corporate-Owned Work Profile devices.|
 |EID|The eSIM identifier, which is a unique identifier for the embedded SIM (eSIM) for cellular devices that have an eSIM.|iOS/iPadOS|
 |Wi-Fi IPv4 address|The device's IPv4 address.|Windows, Android Enterprise fully managed, dedicated and corp-owned work profiles.<br/><br/>**NOTE**: Any change to IPv4 or subnet ID may take up to 8 hours to reflect in Intune admin center from the time that network changes on device.|
 |Wi-Fi subnet ID|The device's subnet ID.|Android Enterprise fully managed, dedicated and corp-owned work profiles.<br/><br/>**NOTE**: Any change to IPv4 or subnet ID may take up to 8 hours to reflect in Intune admin center from the time that network changes on device.|
-|Enrolled date|The date and time that the device was enrolled in Intune.|Windows, MacOS, iOS/iPadOS, Android|
-|Last contact|The date and time that the device last connected to Intune.|Windows, MacOS, iOS/iPadOS, Android|
+|Enrolled date|The date and time that the device was enrolled in Intune.|Windows, macOS, iOS/iPadOS, Android|
+|Last contact|The date and time that the device last connected to Intune.|Windows, macOS, iOS/iPadOS, Android|
 |Activation lock bypass code|The code that can be used to disable the activation lock.|iOS|
-|Azure AD registered|If **Yes**, the device is registered with Azure Directory.|Windows, MacOS, iOS/iPadOS, Android|
-|Intune registered|If **Yes**, the device is registered with Intune|Windows, MacOS, iOS/iPadOS, Android|
-|Compliance|The device's compliance state.|Windows, MacOS, iOS/iPadOS, Android|
-|EAS activated|If **Yes**, then the device is synchronized with an Exchange mailbox.|Windows, MacOS, iOS/iPadOS, Android|
-|EAS activation ID|The device's Exchange ActiveSync identifier.|Windows, MacOS, iOS/iPadOS, Android|
+|Azure AD registered|If **Yes**, the device is registered with Azure Directory.|Windows, macOS, iOS/iPadOS, Android|
+|Intune registered|If **Yes**, the device is registered with Intune|Windows, macOS, iOS/iPadOS, Android|
+|Compliance|The device's compliance state.|Windows, macOS, iOS/iPadOS, Android|
+|EAS activated|If **Yes**, then the device is synchronized with an Exchange mailbox.|Windows, macOS, iOS/iPadOS, Android|
+|EAS activation ID|The device's Exchange ActiveSync identifier.|Windows, macOS, iOS/iPadOS, Android|
 |Supervised|If **Yes**, administrators have enhanced control over the device.|iOS/iPadOS|
-|Encrypted|If **Yes**, the data stored on the device is encrypted.|Windows, MacOS, iOS/iPadOS, Android|
-|Product Name|The product name of the device, such as iPad 8,12.|iOS/iPadOS, macOS|
-|Battery level|Shows the battery level of the device, between 0 and 100, or defaults to null if the battery level cannot be determined.|iOS/iPadOS|
-|Resident users|Shows the number of users currently on the shared iPad device, or defaults to null if the number of users cannot be determined.|iOS/iPadOS|
+|Encrypted|If **Yes**, the data stored on the device is encrypted.|Windows, macOS, iOS/iPadOS, Android|
+|Product Name|The product name of the device, such as iPad 8.|iOS/iPadOS, macOS|
+|Battery level|Shows the battery level of the device, between 0 and 100, or defaults to null if the battery level can't be determined.|iOS/iPadOS|
+|Resident users|Shows the number of users currently on the shared iPad device, or defaults to null if the number of users can't be determined.|iOS/iPadOS|
 
 >[!NOTE]
  > - For Windows 10 devices that are registered with [Windows Autopilot service](../../autopilot/add-devices.md), Enrolled date displays the time when devices were registered with Autopilot instead of the time when they were enrolled.
