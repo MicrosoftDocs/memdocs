@@ -38,7 +38,7 @@ The Cloud PC utilization report helps you make sure that your licenses are assig
 
 To get to the **Cloud PC utilization** report, sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Cloud PC performance (preview)** > **View report** (under **Cloud PCs with low utilization**).
 
-![Screenshot of getting to the Cloud PC utilization report.](./media/report-cloud-pc-utilization/view-report.png)
+:::image type="content" source="./media/report-cloud-pc-utilization/view-report.png" alt-text="Screenshot of getting to the Cloud PC utilization report." lightbox="./media/report-cloud-pc-utilization/view-report.png":::
 
 The report shows the following data aggregated for the last 28 days:
 
