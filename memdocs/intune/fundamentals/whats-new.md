@@ -90,7 +90,7 @@ This setting changed. You can now add Google accounts. The **Add and remove acco
 
   This setting requires:
 
-  - Google Play app version 80970100 or higher.
+  - Google Play app version 80970100 or higher
 
 - **Allow all accounts types, except Google accounts** (default): Intune doesn't change or update this setting. By default, the OS might allow adding accounts in the work profile.
 
