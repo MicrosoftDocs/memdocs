@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/20/2022
+ms.date: 03/28/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -250,6 +250,9 @@ Access to Apple Business Manager location token and apps (Apple VPP tokens and V
 * To allow an Intune custom role to manage Apple Business Manager location tokens, in Microsoft Intune admin center, select **Tenant administration** > **Connectors and tokens** > **Apple VPP tokens**, assign permissions for **Managed apps**.
 * To allow an Intune custom role to manage apps purchased using iOS/iPadOS VPP tokens under **Apps** > **All apps**, assign permissions for **Mobile apps**. 
 
+> [!NOTE]
+> You can view and manage VPP apps with only the **Mobile apps** permission assigned. Previously, the **Managed apps** permission was required to view and manage VPP apps. This change does not apply to Intune for Education tenants who still need to assign the **Managed apps** permission.   
+   
 ## Additional information
 
 Apple provides direct assistance to create and renew VPP tokens. For more information, see [Distribute content to your users with the Volume Purchase Program (VPP)](https://go.microsoft.com/fwlink/?linkid=2014661) as part of Apple's documentation. 
