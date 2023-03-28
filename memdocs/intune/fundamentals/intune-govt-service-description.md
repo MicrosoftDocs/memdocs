@@ -44,7 +44,7 @@ Intune has two service instances:
 - **Commercial service**: The commercial service is available to anyone with an Intune license and is used by most Intune customers.
 - **Government cloud**: This service is also known as **GCC High** or **DoD**. This instance is a datacenter that's physically separate from the commercial instances. The datacenter is locked down and is only used by government customers who purchase the appropriate license.
 
-  These government instances are also known as **IL4** and **IL5**, where **IL** refers to Impact Level.
+These government instances are also known as **IL4** and **IL5**, where **IL** refers to Impact Level.
 
 :::image type="content" source="./media/intune-govt-service-description/migration-public-government-cloud.png" alt-text="Screenshot that shows the Microsoft government cloud, including GCC High and DoD services, is physically separate from the public cloud and commercial cloud instances.":::
 
