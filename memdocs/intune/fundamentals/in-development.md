@@ -225,6 +225,18 @@ Applies to:
 
 ## Device security
 
+### Support for WDAC Application ID tagging with Intune Firewall Rules policy<!-- 17224780  -->  
+Intune's *Microsoft Defender Firewall Rules* profiles, which are available as part of endpoint security Firewall policy, will soon support Windows Defender Application Control (WDAC) Application ID tags. With this capability, you’ll be able to scope your firewall rules to an application or a group of applications and rely on your WDAC policies to define those applications. By using tags to link to and rely on WDAC policies, your Firewall Rules policy won’t need to rely on the firewall rules option of an absolute file path or use of a variable file path that can reduce security of the rule.
+
+Use of this capability requires you to have WDAC policies in place that include *AppId* tags that you can then specify in your Intune Microsoft Defender Firewall Rules.
+
+For more information, see:
+- [WDAC Application ID (AppId) Tagging guide](/windows/security/threat-protection/windows-defender-application-control/appidtagging/windows-defender-application-control-appid-tagging-guide) in the Windows defender application control documentation.
+- [Firewall policy for endpoint security in Intune](../protect/endpoint-security-firewall-policy.md)
+
+Applies to:
+- Windows 10/11
+
 ### Support for tamper protection in policies for Security settings management for Microsoft Defender for Endpoint <!-- 13204113 -->  
 You’ll soon be able to manage Tamper protection for Microsoft Defender for Endpoint on unenrolled devices as part of the [MDE Security configuration](../protect/mde-security-integration.md#which-solution-should-i-use) scenario.
 
