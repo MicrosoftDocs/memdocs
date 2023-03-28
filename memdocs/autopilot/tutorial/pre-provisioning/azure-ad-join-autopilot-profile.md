@@ -59,7 +59,7 @@ To create a user-driven Azure AD join Autopilot profile, follow the below steps:
 
       - For **User account type**, select the desired account type for the user (**Administrator** or **Standard** user). If **Administrator** is chosen, the user is added to the local Admin group.
 
-      - For **Allow pre-provisioned deployment**, select **No**.
+      - For **Allow pre-provisioned deployment**, select **Yes**.
 
       - For **Language (Region)**, select **Operating system default** to use the default language for the operating system being configured. If another language is desired, select the desired language from the drop-down list.
 
