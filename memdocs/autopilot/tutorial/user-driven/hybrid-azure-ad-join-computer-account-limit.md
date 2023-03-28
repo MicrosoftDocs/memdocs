@@ -1,6 +1,6 @@
 ---
 title: Windows Autopilot user-driven hybrid Azure AD join - Step 3 of 8 - Increase the computer account limit in the Organizational Unit (OU)
-description: How to - Windows Autopilot hybrid user-driven Azure AD join - Step 3 of 8 - Increase the computer account limit in the Organizational Unit (OU).
+description: How to - Windows Autopilot user-driven hybrid Azure AD join - Step 3 of 8 - Increase the computer account limit in the Organizational Unit (OU).
 ms.prod: windows-client
 ms.localizationpriority: medium
 author: frankroj

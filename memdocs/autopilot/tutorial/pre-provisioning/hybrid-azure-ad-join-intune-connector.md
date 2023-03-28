@@ -1,6 +1,6 @@
 ---
-title: Windows Autopilot user-driven hybrid Azure AD join with pre-provisioning - Step 2 of 10 - Install the Intune Connector
-description: How to - Windows Autopilot user-driven hybrid Azure AD join with pre-provisioning - Step 2 of 10 - Install the Intune Connector(ESP).
+title: Windows Autopilot for pre-provisioned deployment hybrid Azure AD join - Step 2 of 10 - Install the Intune Connector
+description: How to - Windows Autopilot for pre-provisioned deployment hybrid Azure AD join - Step 2 of 10 - Install the Intune Connector(ESP).
 ms.prod: windows-client
 ms.localizationpriority: medium
 author: frankroj
@@ -15,7 +15,7 @@ ms.collection:
 ms.technology: itpro-deploy
 ---
 
-# User-driven hybrid Azure AD join: Install the Intune Connector
+# Pre-provisioning hybrid Azure AD join: Install the Intune Connector
 
 Autopilot user-driven hybrid Azure AD join steps:
 - Step 1: [Set up Windows automatic Intune enrollment](hybrid-azure-ad-join-automatic-enrollment.md)

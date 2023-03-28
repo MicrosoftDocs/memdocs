@@ -1,6 +1,6 @@
 ---
 title: Windows Autopilot user-driven hybrid Azure AD join - Step 8 of 8 - Create and assign a domain join profile
-description: How to - Windows Autopilot hybrid user-driven Azure AD join - Step 8 of 8 - Create and assign a domain join profile.
+description: How to - Windows Autopilot user-driven hybrid Azure AD join - Step 8 of 8 - Create and assign a domain join profile.
 ms.prod: windows-client
 ms.localizationpriority: medium
 author: frankroj

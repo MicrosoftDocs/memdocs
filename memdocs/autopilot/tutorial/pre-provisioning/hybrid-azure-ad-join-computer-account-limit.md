@@ -1,6 +1,6 @@
 ---
-title: Windows Autopilot user-driven hybrid Azure AD join with pre-provisioning - Step 3 of 10 - Increase the computer account limit in the Organizational Unit (OU)
-description: How to - Windows Autopilot hybrid user-driven Azure AD join with pre-provisioning - Step 3 of 10 - Increase the computer account limit in the Organizational Unit (OU).
+title: Windows Autopilot for pre-provisioned deployment hybrid Azure AD join - Step 3 of 10 - Increase the computer account limit in the Organizational Unit (OU)
+description: How to - Windows Autopilot for pre-provisioned deployment hybrid Azure AD join - Step 3 of 10 - Increase the computer account limit in the Organizational Unit (OU).
 ms.prod: windows-client
 ms.localizationpriority: medium
 author: frankroj
@@ -15,7 +15,7 @@ ms.collection:
 ms.technology: itpro-deploy
 ---
 
-# User-driven hybrid Azure AD join: Increase the computer account limit in the Organizational Unit (OU)
+# Pre-provisioning hybrid Azure AD join: Increase the computer account limit in the Organizational Unit (OU)
 
 Autopilot user-driven hybrid Azure AD join steps:
 - Step 1: [Set up Windows automatic Intune enrollment](hybrid-azure-ad-join-automatic-enrollment.md)

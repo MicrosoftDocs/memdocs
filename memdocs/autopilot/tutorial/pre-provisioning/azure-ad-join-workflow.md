@@ -1,6 +1,6 @@
 ---
-title: Overview for Windows Autopilot user-driven Azure AD join with pre-provisioning in Intune
-description: Overview for Windows Autopilot user-driven Azure AD join with pre-provisioning in Intune.
+title: Overview for Windows Autopilot for pre-provisioned deployment Azure AD join with pre-provisioning in Intune
+description: Overview for Windows Autopilot for pre-provisioned deployment Azure AD join with pre-provisioning in Intune.
 ms.prod: windows-client
 ms.localizationpriority: medium
 author: frankroj
@@ -15,7 +15,7 @@ ms.collection:
 ms.technology: itpro-deploy
 ---
 
-# Step by step tutorial for Windows Autopilot user-driven Azure AD join in Intune
+# Step by step tutorial for Windows Autopilot for pre-provisioned deployment Azure AD join in Intune
 
 *Applies to:*
 

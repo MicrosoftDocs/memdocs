@@ -1,6 +1,6 @@
 ---
-title: Windows Autopilot user-driven Azure AD join with pre-provisioning - Step 3 of 9 - Register devices as Autopilot devices
-description: How to - Windows Autopilot user-driven Azure AD join with pre-provisioning - Step 3 of 9 - Register devices as Autopilot devices.
+title: Windows Autopilot for pre-provisioned deployment Azure AD join - Step 3 of 9 - Register devices as Autopilot devices
+description: How to - Windows Autopilot for pre-provisioned deployment Azure AD join - Step 3 of 9 - Register devices as Autopilot devices.
 ms.prod: windows-client
 ms.localizationpriority: medium
 author: frankroj
@@ -15,7 +15,7 @@ ms.collection:
 ms.technology: itpro-deploy
 ---
 
-# User-driven Azure AD join: Register devices as Autopilot devices
+# Pre-provisioning Azure AD join: Register devices as Autopilot devices
 
 Autopilot user-driven Azure AD join steps:
 - Step 1: [Set up Windows automatic Intune enrollment](azure-ad-join-automatic-enrollment.md)

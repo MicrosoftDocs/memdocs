@@ -1,6 +1,6 @@
 ---
-title: Windows Autopilot user-driven Azure AD join with pre-provisioning - Step 4 of 9 - Create a device group
-description: How to - Windows Autopilot user-driven Azure AD join with pre-provisioning - Step 4 of 9 - Create a device group.
+title: Windows Autopilot for pre-provisioned deployment Azure AD join - Step 4 of 9 - Create a device group
+description: How to - Windows Autopilot for pre-provisioned deployment Azure AD join - Step 4 of 9 - Create a device group.
 ms.prod: windows-client
 ms.localizationpriority: medium
 author: frankroj
@@ -15,7 +15,7 @@ ms.collection:
 ms.technology: itpro-deploy
 ---
 
-# User-driven Azure AD join: Create a device group
+# Pre-provisioning Azure AD join: Create a device group
 
 Autopilot user-driven Azure AD join steps:
 - Step 1: [Set up Windows automatic Intune enrollment](azure-ad-join-automatic-enrollment.md)

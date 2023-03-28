@@ -1,6 +1,6 @@
 ---
-title: Windows Autopilot user-driven Azure AD join with pre-provisioning - Step 5 of 9 - Configure and assign the Enrollment Status Page (ESP)
-description: How to - Windows Autopilot user-driven Azure AD join with pre-provisioning - Step 5 of 9 - Configure and assign the Enrollment Status Page (ESP).
+title: Windows Autopilot for pre-provisioned deployment Azure AD join - Step 5 of 9 - Configure and assign the Enrollment Status Page (ESP)
+description: How to - Windows Autopilot for pre-provisioned deployment Azure AD join - Step 5 of 9 - Configure and assign the Enrollment Status Page (ESP).
 ms.prod: windows-client
 ms.localizationpriority: medium
 author: frankroj
@@ -15,7 +15,7 @@ ms.collection:
 ms.technology: itpro-deploy
 ---
 
-# User-driven Azure AD join: Configure and assign the Enrollment Status Page (ESP)
+# Pre-provisioning Azure AD join: Configure and assign the Enrollment Status Page (ESP)
 
 Autopilot user-driven Azure AD join steps:
 - Step 1: [Set up Windows automatic Intune enrollment](azure-ad-join-automatic-enrollment.md)

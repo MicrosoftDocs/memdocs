@@ -1,6 +1,6 @@
 ---
-title: Windows Autopilot user-driven hybrid Azure AD join with pre-provisioning - Step 1 of 10 - Set up Windows automatic Intune enrollment
-description: How to - Windows Autopilot user-driven hybrid Azure AD join with pre-provisioning - Step 1 of 10 - Set up Windows automatic Intune enrollment.
+title: Windows Autopilot for pre-provisioned deployment hybrid Azure AD join - Step 1 of 10 - Set up Windows automatic Intune enrollment
+description: How to - Windows Autopilot for pre-provisioned deployment hybrid Azure AD join - Step 1 of 10 - Set up Windows automatic Intune enrollment.
 ms.prod: windows-client
 ms.localizationpriority: medium
 author: frankroj
@@ -15,7 +15,7 @@ ms.collection:
 ms.technology: itpro-deploy
 ---
 
-# User-driven hybrid Azure AD join: Set up Windows automatic Intune enrollment
+# Pre-provisioning hybrid Azure AD join: Set up Windows automatic Intune enrollment
 
 Autopilot user-driven hybrid Azure AD join steps:
 > [!div class="checklist"]

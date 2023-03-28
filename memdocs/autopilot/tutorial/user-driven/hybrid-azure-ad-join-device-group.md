@@ -1,6 +1,6 @@
 ---
 title: Windows Autopilot user-driven hybrid Azure AD join - Step 5 of 8 - Create a device group
-description: How to - Windows Autopilot hybrid user-driven Azure AD join - Step 5 of 8 - Create a device group.
+description: How to - Windows Autopilot user-driven hybrid Azure AD join - Step 5 of 8 - Create a device group.
 ms.prod: windows-client
 ms.localizationpriority: medium
 author: frankroj

@@ -1,6 +1,6 @@
 ---
-title: Windows Autopilot user-driven Azure AD join with pre-provisioning - Step 6 of 9 - Create and assign user-driven Azure AD join Autopilot profile
-description: How to - Windows Autopilot user-driven Azure AD join with pre-provisioning - Step 6 of 9 - Create and assign user-driven Azure AD join Autopilot profile.
+title: Windows Autopilot for pre-provisioned deployment Azure AD join - Step 6 of 9 - Create and assign user-driven Azure AD join Autopilot profile
+description: How to - Windows Autopilot for pre-provisioned deployment Azure AD join - Step 6 of 9 - Create and assign user-driven Azure AD join Autopilot profile.
 ms.prod: windows-client
 ms.localizationpriority: medium
 author: frankroj
@@ -15,7 +15,7 @@ ms.collection:
 ms.technology: itpro-deploy
 ---
 
-# User-driven Azure AD join: Create and assign user-driven Azure AD join Autopilot profile
+# Pre-provisioning Azure AD join: Create and assign user-driven Azure AD join Autopilot profile
 
 Autopilot user-driven Azure AD join steps:
 - Step 1: [Set up Windows automatic Intune enrollment](azure-ad-join-automatic-enrollment.md)

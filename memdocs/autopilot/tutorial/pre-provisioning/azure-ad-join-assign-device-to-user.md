@@ -1,6 +1,6 @@
 ---
-title: Windows Autopilot user-driven Azure AD join with pre-provisioning - Step 7 of 9 - Assign Autopilot device to a user
-description: How to - Windows Autopilot user-driven Azure AD joi with pre-provisioning - Step 7 of 9 - Assign Autopilot device to a user.
+title: Windows Autopilot for pre-provisioned deployment Azure AD join - Step 7 of 9 - Assign Autopilot device to a user
+description: How to - Windows Autopilot for pre-provisioned deployment Azure AD joi with pre-provisioning - Step 7 of 9 - Assign Autopilot device to a user.
 ms.prod: windows-client
 ms.localizationpriority: medium
 author: frankroj
@@ -15,7 +15,7 @@ ms.collection:
 ms.technology: itpro-deploy
 ---
 
-# User-driven Azure AD join: Assign Autopilot device to a user (optional)
+# Pre-provisioning Azure AD join: Assign Autopilot device to a user (optional)
 
 Autopilot user-driven Azure AD join steps:
 - Step 1: [Set up Windows automatic Intune enrollment](azure-ad-join-automatic-enrollment.md)

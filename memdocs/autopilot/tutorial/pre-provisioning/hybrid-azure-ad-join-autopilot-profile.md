@@ -1,6 +1,6 @@
 ---
-title: Windows Autopilot user-driven hybrid Azure AD join with pre-provisioning - Step 7 of 10 - Create and assign user-driven hybrid Azure AD join Autopilot profile
-description: How to - Windows Autopilot hybrid user-driven Azure AD join with pre-provisioning - Step 7 of 10 - Create and assign hybrid user-driven Azure AD join Autopilot profile.
+title: Windows Autopilot for pre-provisioned deployment hybrid Azure AD join - Step 7 of 10 - Create and assign user-driven hybrid Azure AD join Autopilot profile
+description: How to - Windows Autopilot for pre-provisioned deployment hybrid Azure AD join - Step 7 of 10 - Create and assign hybrid user-driven Azure AD join Autopilot profile.
 ms.prod: windows-client
 ms.localizationpriority: medium
 author: frankroj
@@ -15,7 +15,7 @@ ms.collection:
 ms.technology: itpro-deploy
 ---
 
-# User-driven hybrid Azure AD join: Create and assign user-driven hybrid Azure AD join Autopilot profile
+# Pre-provisioning hybrid Azure AD join: Create and assign user-driven hybrid Azure AD join Autopilot profile
 
 Autopilot user-driven hybrid Azure AD join steps:
 
