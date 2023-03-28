@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 10/12/2022
+ms.date: 03/28/2023
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -38,21 +38,22 @@ The Cloud PC utilization report helps you make sure that your licenses are assig
 
 To get to the **Cloud PC utilization** report, sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Cloud PC performance (preview)** > **View report** (under **Cloud PCs with low utilization**).
 
-![Screenshot of getting to the Cloud PC utilization report.](./media/report-cloud-pc-utilization/view-report.png)
+:::image type="content" source="./media/report-cloud-pc-utilization/view-report.png" alt-text="Screenshot of getting to the Cloud PC utilization report." lightbox="./media/report-cloud-pc-utilization/view-report.png":::
 
 The report shows the following data aggregated for the last 28 days:
 
 - This histogram shows user connection time in three sections:
-  - **High time connected**: More than 80 hours.
-  - **Average time connected**: 40-80 hours.
-  - **Low time connected**: Less than 40 hours.
+  - **High active time connected**: More than 80 hours.
+  - **Average active time connected**: 40-80 hours.
+  - **Low active time connected**: Less than 40 hours.
+  - **No active time connected**: Zero hours.
 - List of individual Cloud PCs with the following columns:
   - **Device name**
   - **Primary user UPN**
-  - **Total time connected**: The total hours that the user has been connected to the Cloud PC over the last 28 days.
-  - **Days since last sign in**
+  - **Active time connected**: The total hours that the user has been connected to the Cloud PC over the last 28 days.
+  - **Last active time**: Last time the user was active on the Cloud PC.
 
-You can use the filter to see only data for a specific usage group.
+You can use the filter options to see results for specific **Active time connected** and **Last active time** values. These options can help you understand usage patterns and identify Cloud PCs that are under-utilized (for example, those that are listed when using the filter **Last active time: No sign in for 28 days or more**.)
 
 ## Other reports
 
