@@ -160,8 +160,8 @@ The user is ***not*** required to sign into or even launch the Company Portal ap
 
 ### Android versions
 
-The SDK fully supports Android API 28 (Android 9.0) through Android API 32 (Android 12L).
-In order to target Android API 31-32 (Android 12-12L), you must use Intune App SDK `v8.0.0` or later.
+The SDK fully supports Android API 28 (Android 9.0) through Android API 33 (Android 13).
+In order to target Android API 33 (Android 13), you must use Intune App SDK `v9.0.0` or later.
 
 APIs 26 through 27 (Android 8.0 - 8.1) are in limited support.
 The Company Portal app isn't supported below Android API 26 (Android 8.0).
