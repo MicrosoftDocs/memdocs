@@ -76,16 +76,17 @@ These settings apply to Android Enterprise personally owned devices with a work 
 
 - **Add and remove accounts**: This setting allows or prevents accounts from being added in the work profile, including Google accounts. Your options:
 
-  - **Block all account types**: Prevents users from manually adding or removing accounts in the work profile. For example, when you deploy the Gmail app into the work profile, you can prevent users from adding or removing accounts in this work profile.
+  - **Allow all accounts types, except Google accounts** (default): Intune doesn't change or update this setting. By default, the OS might allow adding accounts in the work profile.
+
+    In a previous release, this setting was named **Not configured**.
+
   - **Allow all account types**: Allows all accounts, including Google accounts. These Google accounts are blocked from installing apps from the **Managed Google Play Store**.
 
     This setting requires:
 
     - Google Play app version 80970100 or higher
 
-  - **Allow all accounts types, except Google accounts** (default): Intune doesn't change or update this setting. By default, the OS might allow adding accounts in the work profile.
-
-    In a previous release, this setting was named **Not configured**.
+  - **Block all account types**: Prevents users from manually adding or removing accounts in the work profile. For example, when you deploy the Gmail app into the work profile, you can prevent users from adding or removing accounts in this work profile.
 
   > [!NOTE]
   >
