@@ -603,7 +603,7 @@ You can also **Import** a CSV file with the list of app names and their bundle I
   > [!NOTE]
   > The Intune UI for this setting doesn't separate the iOS and iPadOS supported values. The UI might be updated in a future release.
 
-- **Password expiration (days)**: Enter the number of days before the device password must be changed, from 1-65535.
+- **Password expiration (days)**: Enter the number of days before the device password must be changed, from 1-730.
 - **Prevent reuse of previous passwords**: Restrict users from creating previous passwords. Enter the number of previously used passwords that can't be used, from 1-24. For example, enter 5 so users can't set a new password to their current password or any of their previous four passwords. When the value is blank, Intune doesn't change or update this setting.
 - **Block Touch ID and Face ID unlock**: **Yes** prevents using a fingerprint or face to unlock devices. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to unlock devices using biometrics.
 

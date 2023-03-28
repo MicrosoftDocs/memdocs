@@ -21,7 +21,7 @@ ms.assetid: 7196b33e-d303-4415-ad0b-2ecdb14230fd
 #ROBOTS:
 #audience:
 
-ms.reviewer: tisilver, shthilla
+ms.reviewer: shthilla
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
