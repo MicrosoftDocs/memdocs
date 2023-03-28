@@ -17,7 +17,7 @@ ms.technology: itpro-deploy
 
 # Pre-provisioning Azure AD join: Allow users to join devices to Azure AD
 
-Autopilot user-driven Azure AD join steps:
+Windows Autopilot for pre-provisioned deployment Azure AD join steps:
 - Step 1: [Set up Windows automatic Intune enrollment](azure-ad-join-automatic-enrollment.md)
 > [!div class="checklist"]
 > - **Step 2: Allow users to join devices to Azure AD**
@@ -27,7 +27,7 @@ Autopilot user-driven Azure AD join steps:
 - Step 6: [Create and assign Autopilot profile](azure-ad-join-autopilot-profile.md)
 - Step 7: [Assign Autopilot device to a user (optional)](azure-ad-join-assign-device-to-user.md)
 
-For an overview of the Windows Autopilot user-driven Azure AD join workflow, see [Windows Autopilot user-driven Azure AD join overview](azure-ad-join-workflow.md)
+For an overview of the Windows Autopilot for pre-provisioned deployment Azure AD join workflow, see [Windows Autopilot for pre-provisioned deployment Azure AD join overview](azure-ad-join-workflow.md)
 
 ## Allow users to join devices to Azure AD
 
@@ -69,7 +69,7 @@ In order for Windows Autopilot to work, users need to be allowed to join devices
 
 > [!NOTE]
 >
-> This step of allowing users to join devices to Azure AD is only needed for the user-driven Azure AD join scenario. This setting doesn't apply to hybrid Azure AD joined devices and Azure AD joined devices using Windows Autopilot self-deployment mode as these methods work in a userless context.
+> This step of allowing users to join devices to Azure AD is only needed for the Autopilot user-driven Azure AD join and Autopilot for pre-provisioned deployment Azure AD join scenarios. This setting doesn't apply to hybrid Azure AD joined devices and Azure AD joined devices using Windows Autopilot self-deployment mode as these methods work in a userless context.
 
 ## Next step: Register devices as Autopilot devices
 

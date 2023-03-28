@@ -37,13 +37,13 @@ While the ESP controls what is shown during device and user setup and specifies 
 
 When an admin creates an Autopilot profile for the user-driven scenario, devices with this Autopilot profile are associated with the user enrolling the device. User credentials are required to enroll the device.
 
-The difference between an Autopilot user-driven Azure AD join and an Autopilot hybrid Azure AD join is that the hybrid Azure AD join scenario joins both an on-premises domain and Azure AD during Autopilot. The user-driven Azure AD join scenario only joins Azure AD during Autopilot.
+The difference between an Azure AD join and a hybrid Azure AD join is that the hybrid Azure AD join scenario joins both an on-premises domain and Azure AD during Autopilot. The user-driven Azure AD join scenario only joins Azure AD during Autopilot.
 
 > [!TIP]
 >
 > For Configuration Manager admins, the Autopilot profile is similar to some of the configuration that takes place during a task sequence via an unattend.xml file. The unattend.xml file is configured during the **Apply Windows Settings** and **Apply Network Settings** steps. Note however that Autopilot does not use unattend.xml files.
 
-To create a user-driven Azure AD join Autopilot profile, follow the below steps:
+To create a user-driven hybrid Azure AD join Autopilot profile, follow the below steps:
 
 [!INCLUDE [Autopilot profiles before steps](../includes/autopilot-profile-steps-before.md)]
 

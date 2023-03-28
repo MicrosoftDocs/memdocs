@@ -17,7 +17,7 @@ ms.technology: itpro-deploy
 
 # Pre-provisioning hybrid Azure AD join: Create and assign a domain join profile
 
-Autopilot user-driven hybrid Azure AD join steps:
+Windows Autopilot for pre-provisioned deployment hybrid Azure AD join steps:
 - Step 1: [Set up Windows automatic Intune enrollment](hybrid-azure-ad-join-automatic-enrollment.md)
 - Step 2: [Install the Intune Connector](hybrid-azure-ad-join-intune-connector.md)
 - Step 3: [Increase the computer account limit in the Organizational Unit (OU)](hybrid-azure-ad-join-computer-account-limit.md)
@@ -28,7 +28,7 @@ Autopilot user-driven hybrid Azure AD join steps:
 > [!div class="checklist"]
 > - **Step 8: Configure and assign domain join profile**
 
-For an overview of the Windows Autopilot user-driven hybrid Azure AD join workflow, see [Windows Autopilot user-driven hybrid Azure AD join overview](hybrid-azure-ad-join-workflow.md)
+For an overview of the Windows Autopilot for pre-provisioned deployment hybrid Azure AD join workflow, see [Windows Autopilot for pre-provisioned deployment hybrid Azure AD join overview](hybrid-azure-ad-join-workflow.md)
 
 ## Create and assign a domain join profile
 

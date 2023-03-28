@@ -22,7 +22,7 @@ ms.technology: itpro-deploy
 - Windows 11
 - Windows 10
 
-This step by step tutorial guides you through using Intune to perform a Windows Autopilot user-driven scenario when the devices are strictly Azure AD joined.
+This step by step tutorial guides you through using Intune to perform a Windows Autopilot for pre-provisioned deployment scenario when the devices are strictly Azure AD joined.
 
 The purpose of this tutorial is to provide a step by step guide for all the steps required for the configuration for a successful Autopilot user-driven Azure AD join deployment using Intune. The tutorial is also designed as a walkthrough in a lab or testing scenario, but can be expanded for use in a production environment.
 
@@ -32,7 +32,7 @@ Before beginning, refer to the [How to: Plan your Azure AD join implementation](
 
 Set up Windows automatic Intune enrollment > Allow users to join devices to Azure AD > Register devices as Autopilot devices > Create a device group > Configure and assign Autopilot Enrollment Status Page (ESP) > Create and assign Autopilot profile > Assign Autopilot device to a user (optional)
 
-Autopilot user-driven Azure AD join steps:
+Windows Autopilot user-driven Azure AD join steps:
 > [!div class="checklist"]
 > - Step 1: [Set up Windows automatic Intune enrollment](azure-ad-join-automatic-enrollment.md)
 > - Step 2: [Allow users to join devices to Azure AD](azure-ad-join-allow-users-to-join.md)

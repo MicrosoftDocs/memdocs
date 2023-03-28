@@ -1,6 +1,6 @@
 ---
-title: Windows Autopilot user-driven Azure AD join - Step 6 of 7 - Create and assign user-driven Azure AD join Autopilot profile
-description: How to - Windows Autopilot user-driven Azure AD join - Step 6 of 7 - Create and assign user-driven Azure AD join Autopilot profile.
+title: Windows Autopilot user-driven Azure AD join - Step 6 of 7 - Create and assign a user-driven Azure AD join Autopilot profile
+description: How to - Windows Autopilot user-driven Azure AD join - Step 6 of 7 - Create and assign a user-driven Azure AD join Autopilot profile.
 ms.prod: windows-client
 ms.localizationpriority: medium
 author: frankroj
