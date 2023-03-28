@@ -7,7 +7,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 03/14/2023
+ms.date: 03/27/2023
 ms.topic: tutorial
 ms.collection: 
   - tier1
@@ -46,11 +46,11 @@ For an overview of the Windows Autopilot user-driven hybrid Azure AD join workfl
 
    1. Under **Profile type**, select **Templates**.
 
-   1. When the templates appear, under **Template name**, select **Domain join**. If **Domain join** is not visible, scroll through the **Template name** list until **Domain join** is visible. The list is in alphabetical order.
+   1. When the templates appear, under **Template name**, select **Domain join**. If **Domain join** isn't visible, scroll through the **Template name** list until **Domain join** is visible. The list is in alphabetical order.
 
    1. Select **Create** to close the **Create profile** window.
 
-1. The **Create profile** screen will open. In the **Basics** page:
+1. The **Create profile** screen opens. In the **Basics** page:
 
    1. Next to **Name**, enter a name for the domain join profile.
 
@@ -60,15 +60,15 @@ For an overview of the Windows Autopilot user-driven hybrid Azure AD join workfl
 
 1. In the **Configuration settings** page:
 
-   1. Next to **computer name prefix**, enter a prefix for computer names. This field is required. This prefix will be used on all computer names. The rest of the computer name after the prefix will be randomly generated up to 15 characters.
+   1. Next to **computer name prefix**, enter a prefix for computer names. This field is required. This prefix is used on all computer names. The rest of the computer name after the prefix is randomly generated up to 15 characters.
 
         > [!NOTE]
         >
         > This field doesn't support the **%SERIAL%** or **%RAND:x%** variables that can be used with the **Apply device name template** in the Azure AD join scenario.
 
-   1. Next to **Domain name**, enter the FQDN of the domain that the device will be joined to. This field is required. Make sure to specify the FQDN of the domain and not the NETBIOS name of the domain. For example, enter in **contoso.com** and not just **CONTOSO**.
+   1. Next to **Domain name**, enter the FQDN of the domain that the device will join. This field is required. Make sure to specify the FQDN of the domain and not the NETBIOS name of the domain. For example, enter in **contoso.com** and not just **CONTOSO**.
 
-   1. Next to **Organizational unit**, enter the full path to the Organizational Unit (OU) in the domain that the computer accounts should be created in. For example, **OU=OU-Name,DC=contoso,DC=com**. This field is optional. If the OU isn't specified, the computer accounts will be created in the **Computer** container.
+   1. Next to **Organizational unit**, enter the full path to the Organizational Unit (OU) in the domain that the computer accounts should be created in. For example, **OU=OU-Name,DC=contoso,DC=com**. This field is optional. If the OU isn't specified, the computer accounts are created in the **Computer** container.
 
         > [!NOTE]
         >
@@ -92,7 +92,7 @@ For an overview of the Windows Autopilot user-driven hybrid Azure AD join workfl
 
    1. Under **Included groups** > **Groups**, ensure the correct group(s) are selected, and then select **Next**.
 
-1. In the **Applicability Rules** page, select **Next**. For the purpose of this tutorial, applicability rules is being skipped. However if applicability rules are needed, do so at this screen. For more information about scope tags, see [Applicability rules](/mem/intune/configuration/device-profile-create#applicability-rules).
+1. In the **Applicability Rules** page, select **Next**. For this tutorial, applicability rules are being skipped. However if applicability rules are needed, do so at this screen. For more information about scope tags, see [Applicability rules](/mem/intune/configuration/device-profile-create#applicability-rules).
 
 1. In the **Review + Create** page, review and verify that all of the settings are set as desired, and then choose **Create** to create the domain join profile.
 

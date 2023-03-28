@@ -7,7 +7,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 03/14/2023
+ms.date: 03/27/2023
 ms.topic: tutorial
 ms.collection: 
   - tier1
@@ -17,11 +17,11 @@ ms.technology: itpro-deploy
 
 # Enable local Windows Autopilot Reset
 
-To enable a local Windows Autopilot Reset, the **DisableAutomaticReDeploymentCredentials** policy must be configured. This policy is documented in the [Policy CSP](/windows/client-management/mdm/policy-csp-credentialproviders#disableautomaticredeploymentcredentials). By default, local Windows Autopilot Reset is disabled. This default ensures that a local Autopilot Reset isn't triggered by accident.
+To enable a local Windows Autopilot Reset, the **DisableAutomaticReDeploymentCredentials** policy must be configured. This policy is documented in the [Policy CSP](/windows/client-management/mdm/policy-csp-credentialproviders#disableautomaticredeploymentcredentials). By default, local Windows Autopilot Reset is disabled. This default ensures that a local Autopilot Reset isn't accidentally triggered.
 
 ## Workflow
 
-Create Windows Autopilot Reset configuration profile in Intune > Make sure WinRE is installed on device where Windows Autopilot Reset will be triggered > Trigger Windows Autopilot Reset locally on device with an account that has local administrator privileges
+Create Windows Autopilot Reset configuration profile in Intune > Make sure WinRE is installed on device where Windows Autopilot Reset is triggered > Trigger Windows Autopilot Reset locally on device with an account that has local administrator privileges
 
 ## Enable local Windows Autopilot Reset in Intune
 
@@ -41,11 +41,11 @@ To create a configuration profile that sets the **DisableAutomaticReDeploymentCr
 
    2. Under **Profile type**, select **Templates**.
 
-   3. When the templates appear, under **Template name**, select **Device restrictions**. If **Device restrictions** is not visible, scroll through the **Template name** list until **Device restrictions** is visible. The list is in alphabetical order.
+   3. When the templates appear, under **Template name**, select **Device restrictions**. If **Device restrictions** isn't visible, scroll through the **Template name** list until **Device restrictions** is visible. The list is in alphabetical order.
 
    4. Select **Create** to close the **Create profile** window.
 
-6. The **Create profile** screen will open. In the **Basics** page:
+6. The **Create profile** screen opens. In the **Basics** page:
 
    1. Next to **Name**, enter a name for the domain join profile.
 
@@ -75,7 +75,7 @@ To create a configuration profile that sets the **DisableAutomaticReDeploymentCr
 
    3. Under **Included groups** > **Groups**, ensure the correct group(s) are selected, and then select **Next**.
 
-9. In the **Applicability Rules** page, select **Next**. For the purpose of this tutorial, applicability rules is being skipped. However if applicability rules are needed, do so at this screen. For more information about scope tags, see [Applicability rules](/mem/intune/configuration/device-profile-create#applicability-rules).
+9. In the **Applicability Rules** page, select **Next**. For this tutorial, applicability rules are being skipped. However if applicability rules are needed, do so at this screen. For more information about scope tags, see [Applicability rules](/mem/intune/configuration/device-profile-create#applicability-rules).
 
 10. In the **Review + Create** page, review and verify that all of the settings are set as desired, and then choose **Create** to create the domain join profile.
 
@@ -83,7 +83,7 @@ To create a configuration profile that sets the **DisableAutomaticReDeploymentCr
 
 To trigger a local Windows Autopilot Reset on a device, follow the below steps:
 
-1. Make sure that the [Windows Recovery Environment (WinRE)](/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference) is correctly configured and enabled on the device where the Windows Autopilot Reset will be performed. WinRE can be enabled with the [REAgentC.exe tool](/windows-hardware/manufacture/desktop/reagentc-command-line-options) via the following command:
+1. Make sure that the [Windows Recovery Environment (WinRE)](/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference) is correctly configured and enabled on the device where the Windows Autopilot Reset is being performed. WinRE can be enabled with the [REAgentC.exe tool](/windows-hardware/manufacture/desktop/reagentc-command-line-options) via the following command:
 
      ```cmd
      reagentc.exe /enable

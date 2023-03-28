@@ -5,7 +5,7 @@ manager: aaroncz
 ms.technology: itpro-deploy
 ms.prod: windows-client
 ms.topic: include
-ms.date: 03/14/2023
+ms.date: 03/27/2023
 ms.localizationpriority: medium
 ---
 
@@ -33,7 +33,7 @@ Before deploying a device, ensure that an Autopilot profile has been assigned to
 
    1. Find the desired device that Autopilot deployment profile assignment status needs to be checked.
 
-   2. Once the device is located, its current status will be listed under the **Profile status** column. The status will be one of the following values:
+   2. Once the device is located, its current status is listed under the **Profile status** column. The status will have one of the following values:
 
        - **Not assigned**: The device hasn't been assigned an Autopilot deployment profile.
        - **Assigning**: The device is being assigned an Autopilot deployment profile.

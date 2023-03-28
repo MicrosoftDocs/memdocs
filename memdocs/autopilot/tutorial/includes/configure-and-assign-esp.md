@@ -5,7 +5,7 @@ manager: aaroncz
 ms.technology: itpro-deploy
 ms.prod: windows-client
 ms.topic: include
-ms.date: 03/14/2023
+ms.date: 03/27/2023
 ms.localizationpriority: medium
 ---
 
@@ -19,14 +19,14 @@ Headings are driven by article context. -->
 
 The main feature of the Enrollment Status Page (ESP) is to display progress and current status to the end user while the device is being set up and enrolled via the Autopilot process. The other main feature of the ESP is to block a user from signing in and using the device until all required policies and applications are installed. Multiple ESP profiles can be created with different settings and assigned appropriately based on different needs and scenarios.
 
-Out of box there's a default ESP that is assigned to all devices. The default setting in the default ESP is to not show app and profile progress during the Autopilot process. However, it's highly recommended to change this default via a separate custom ESP to show app and profile progress. Enabling and configuring an ESP allows end users to properly see the progress of their device being set up and prevents them using the device until it is fully configured and provisioned. A user signing into the device before it's fully configured and provisioned can cause issues.
+Out of box there's a default ESP that is assigned to all devices. The default setting in the default ESP is to not show app and profile progress during the Autopilot process. However, it's highly recommended to change this default via a separate custom ESP to show app and profile progress. Enabling and configuring an ESP allows end users to properly see the progress of their device being set up and prevents them using the device until it's fully configured and provisioned. A user signing into the device before it's fully configured and provisioned can cause issues.
 
 The ESP has two phases:
 
 - Device ESP - ESP that runs during the OOBE process and applies device policies and installs device applications
 - User ESP - ESP that runs after Device ESP that sets up user account, applies user policies, and installs user applications
 
-The ESP can be configured to only display progress during the device ESP phase while disabling progress during the user ESP phase. This is usually done to allow a user to sign into the device as soon as possible enabling them to reach the desktop quicker. However, the consequence is that not all of the user policies and applications may be installed. For this reason, it's recommended to show progress during both phases.
+The ESP can be configured to only display progress during the device ESP phase while disabling progress during the user ESP phase. Disabling of the user ESP is usually done to allow a user to sign into the device as soon as possible enabling them to reach the desktop quicker. However, the consequence is that not all of the user policies and applications may be installed. For this reason, it's recommended to show progress during both phases.
 
 > [!TIP]
 > For Configuration Manager admins, an ESP is similar and analogous to Configuration Manager client settings.
@@ -45,7 +45,7 @@ To configure and assign the Autopilot Enrollment Status Page (ESP) so that it sh
 
 6. In the **Enrollment Status Page** screen that opens, select **Create**.
 
-7. The **Create profile** screen will open. In the **Basics** page:
+7. The **Create profile** screen opens. In the **Basics** page:
 
    1. Next to **Name**, enter a name for the ESP profile.
 
@@ -68,8 +68,8 @@ To configure and assign the Autopilot Enrollment Status Page (ESP) so that it sh
         - **Yes**: The collect logs button is shown to users when an installation error occurs. The Windows Autopilot diagnostics page is shown on devices running Windows 11. Logs and diagnostics may aid with troubleshooting. For this reason, it's recommended to enable this option.
 
       - **Only show page to devices provisioned by out-of-box experience (OOBE)**:
-        - **No**: The ESP is shown on all Intune-managed and co-managed devices that go through the out-of-box experience (OOBE), and to the first user that signs in to each device. Subsequent users who sign in won't see the ESP.
-        - **Yes**: The ESP is only shown on devices that go through the out-of-box experience (OOBE).
+        - **No**: The enrollment status page (ESP) is shown during the device phase and the out-of-box experience (OOBE). The page is also shown during the user phase to every user who signs into the device for the first time.
+        - **Yes**: The enrollment status page (ESP) is shown during the device phase and the OOBE. The page is also shown during the user phase, but only to the first user who signs into the device. It isn't shown to subsequent users who sign into the device.
 
       - **Block device use until all apps and profiles are installed**:
         - **No**: Users can leave the ESP before Intune is finished setting up the device.
