@@ -4,7 +4,7 @@ description: include file
 author: brenduns
 ms.service: microsoft-intune
 ms.author: brenduns
-ms.date: 01/20/2023
+ms.date: 03/29/2023
 ms.topic: include
 ---
 ## Prerequisites
@@ -20,6 +20,8 @@ When a device onboards to Microsoft Defender for Endpoint:
 - A trust is created with Azure Active Directory if one doesn't already exist
 - Azure Active Directory trust is used to communicate with Intune and retrieve policies
 - Policies retrieved from Microsoft Intune is enforced on the device by Microsoft Defender for Endpoint
+
+Security Management for Microsoft Defender for Endpoint is not yet supported with Government clouds. For more information, see  [Feature parity with commercial](/microsoft-365/security/defender-endpoint/gov#feature-parity-with-commercial) in *Microsoft Defender for Endpoint for US Government customers*.
 
 ### Active Directory requirements
 
