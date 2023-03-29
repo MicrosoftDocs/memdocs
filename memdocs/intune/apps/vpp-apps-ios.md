@@ -131,6 +131,8 @@ Migrate existing purchased VPP content and tokens to Apps and Books in Apple Bus
         > Automatic app updates for Apple VPP apps will automatically update for both **Required** and **Available** install intents. For apps deployed with **Available** install intent, the automatic update generates a status message for the IT admin informing that a new version of the app is available. This status message is viewable by selecting the app, selecting Device Install Status, and checking the Status Details. 
         >
         > When updating a VPP app, it can take up to 24 hours for the device to receive the updated VPP app. The device must be unlocked and available to install the update successfully.
+        > 
+        > If you changed app install intents of Apple VPP apps from **Required** to **Available**, the apps that are already installed will stop updating automatically. A manual install of the app after the intent has changed to Available should resume the automatic updates.
 
     - **I grant Microsoft permission to send both user and device information to Apple.** - You must select **I agree** to proceed. To review what data Microsoft sends to Apple, see [Data Intune sends to Apple](../protect/data-intune-sends-to-apple.md).
 7. Click **Next** to display the **Scope tags** page.
