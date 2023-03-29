@@ -99,9 +99,11 @@ For guidance, go to [Configure domain name](custom-domain-name-configure.md).
 
 ✔️ **Get started with adding users to Intune**
 
-Users are stored in Azure AD, which is also included with Microsoft 365. Azure AD controls access to resources, and authenticates users. Be sure your AD admins have access to your Azure AD subscription, and are trained to complete common AD and Azure AD tasks.
+Users are stored in Azure AD, which is also included with Microsoft 365. Azure AD controls access to resources, and authenticates users.
 
-You can add users, or connect Active Directory to sync with Intune. This step is **required** unless your devices are "userless" kiosk devices. For guidance, go to [Add users](users-add.md).
+You can add users, or connect Active Directory to sync with Intune. This step is **required** unless your devices are "userless" kiosk devices.
+
+For guidance, go to [Add users](users-add.md).
 
 The people in your organization each need a user account before they can sign in and access Microsoft Intune. To create user accounts, you can add users to Intune. Once added, you can grant permissions and assign licenses to users. Then later, you can assign different types of policies to users to help and protect them.
 
@@ -113,7 +115,7 @@ You must be an admin (global, license, or a user admin) to add users to Intune. 
 
 ✔️ **Get started with adding groups to Intune**
 
-Add groups, to assign apps, settings, and other resources. For some guidance, go to [Add groups](groups-add.md).
+Add groups to assign apps, settings, and other resources. For some guidance, go to [Add groups](groups-add.md).
 
 Intune uses Azure Active Directory (Azure AD) groups to organize and manage devices and users. As an Intune admin, you can set up groups to suit your organizational needs. For instance, you can create groups to organize users or devices by geographic location, department, or hardware characteristics. Also, you can use groups to manage tasks at scale. For example, you can set policies for many users or deploy apps to a set of devices based on groups.
 
@@ -142,7 +144,9 @@ For guidance, go to [Unlicensed admins](unlicensed-admins.md).
 
 ## 7 - Manage Roles and grant admin permissions for Intune
 
-After you've added users to your Intune tenant, we recommend that you create your administrative team. Microsoft Intune includes a set of admin roles that you can assign to users in your organization using the Microsoft Intune admin center. Each admin role maps to common business functions and gives people in your organization permissions to do specific tasks in the admin centers.
+After you've added users to your Intune tenant, we recommend that you create your administrative team.
+
+Microsoft Intune includes a set of admin roles that you can assign to users in your organization using the Microsoft Intune admin center. Each admin role maps to common business functions and gives people in your organization permissions to do specific tasks in the admin centers.
 
 ✔️ **Get started with managing roles**
 

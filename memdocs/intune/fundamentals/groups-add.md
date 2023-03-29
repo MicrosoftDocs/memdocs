@@ -51,7 +51,7 @@ Use the following steps to create a new group.
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Groups** > **New group**:
 
-    ![Screenshot of the Azure portal with New Group selected](./media/groups-add/groups-add-new.png)
+    ![Screenshot that shows the Azure portal with New Group selected](./media/groups-add/groups-add-new.png)
 
 3. In **Group type**, choose one of the following options:
 
@@ -77,7 +77,7 @@ Use the following steps to create a new group.
     - **Dynamic User**: Administrators create membership rules to automatically add and remove members.
     - **Dynamic Device**: Administrators create dynamic group rules to automatically add and remove devices.
 
-      ![Screenshot of Intune group properties](./media/groups-add/groups-add-properties.png)
+      ![Screenshot that shows Intune group properties](./media/groups-add/groups-add-properties.png)
 
     For more information on these membership types, and creating dynamic expressions, see:
 
@@ -112,7 +112,7 @@ You can also use [device categories](../enrollment/device-group-mapping.md) to a
 
 When assigning policies and apps in the Intune admin center, you can choose to assign to **All users** or **All devices** groups, which are automatically created by Intune. 
 
-The **All devices** group targets all devices that are enrolled into management. Te **All users** group is a simple way to target all users that are assigned an Intune license. These groups are considered "virtual" because you don't create them or view them in Azure Active Directory. They're convenient to use because they're already in your tenant, and they're a faster targeting unit than Azure AD groups.
+The **All devices** group targets all devices that are enrolled into management. The **All users** group is a simple way to target all users that are assigned an Intune license. These groups are considered "virtual" because you don't create them or view them in Azure Active Directory. They're convenient to use because they're already in your tenant, and they're a faster targeting unit than Azure AD groups.
 
 When assigning policies and applications to large groups, such as **All users** and **All devices**, you may choose to use **Filters**, so that you can dynamically control which devices the policy or app deployment should apply to.
 
