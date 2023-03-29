@@ -77,13 +77,6 @@ FQDN tags help customers simplify the creation and maintenance of the necessary 
 Windows 365 Enterprise has been assessed by a FedRAMP authorized auditor to meet FedRAMP requirements at data centers within the Continental US.
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
-### Monitor and troubleshoot
-
-#### New data for Cloud PC utilization report<!--43931239-->
-
-The Cloud PC utilization report now includes the filer options **Active time connected** and **Last active time**. This helps you identify under-utilized Cloud PCs that can be repurposed to other users. For more information, see [Cloud PC utilizaiton report](report-cloud-pc-utilization.md).
-
-<!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Windows 365 app
 
 #### Pin Cloud PC to task bar in Windows 11<!--43470782-->
