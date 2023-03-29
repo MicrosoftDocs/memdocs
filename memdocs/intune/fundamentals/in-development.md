@@ -237,14 +237,6 @@ For more information, see:
 Applies to:
 - Windows 10/11
 
-### Support for tamper protection in policies for Security settings management for Microsoft Defender for Endpoint <!-- 13204113 -->  
-You’ll soon be able to manage Tamper protection for Microsoft Defender for Endpoint on unenrolled devices as part of the [MDE Security configuration](../protect/mde-security-integration.md#which-solution-should-i-use) scenario.
-
-When this support is available, your tamper protection configurations from *Windows Security Experience* profiles for *Antivirus* policies can apply to all devices instead of only to those that are enrolled with Intune.
-
-Applies to:  
-- Windows 10
-- Windows 11
 
 <!-- ***********************************************-->
 
