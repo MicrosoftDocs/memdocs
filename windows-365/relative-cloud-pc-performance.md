@@ -53,7 +53,7 @@ These tests were run with identical parameters through multiple iterations with 
 
 These tests didn’t factor in various customer-specific third-party agents often deployed in customer environments. Each of these agents will have its own resource requirements that can impact performance.
 
-It can be valuable for you to do your own testing with workloads approximating what your intended users require. Be sure to include the line-of-business applications that your employees run regularly. Use the results of your tests to determine the right choice for your users. For more information, see the [Planning guide for Windows 365](enterrprise/planning-guidemd).
+It can be valuable for you to do your own testing with workloads approximating what your intended users require. Be sure to include the line-of-business applications that your employees run regularly. Use the results of your tests to determine the right choice for your users. For more information, see the [Planning guide for Windows 365](enterprise/planning-guidemd).
 
 ## Test results
 
