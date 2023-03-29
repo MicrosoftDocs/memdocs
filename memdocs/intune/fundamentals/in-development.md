@@ -122,7 +122,7 @@ Applies to:
 
 For more information about configuring Settings Catalog profiles in Intune, go to [Create a policy using settings catalog](../configuration/settings-catalog.md).
 
-### New Google domain allow-list settings for Android Enterprise personally owned devices with a work profile<!-- 14711684  -->  
+### New Google domain allow-list setting for Android Enterprise personally owned devices with a work profile<!-- 14711684  -->  
 On Android Enterprise personally owned devices with a work profile, you can configure settings that restrict device features and settings.
 
 Currently, there is an **Add and remove accounts** setting that allows Google accounts be added to the work profile. For this setting, when you select **Allow all accounts types**, you can also configure:
@@ -144,7 +144,6 @@ More information on managing Activation Lock is available at [Bypass iOS/iPadOS 
 Applies to:
 
 - macOS 10.15 or later
-
 
 ### Support for multi-SIM iOS/iPadOS device inventory<!--17016690 (replaced 16360290 for tracking -->
 
