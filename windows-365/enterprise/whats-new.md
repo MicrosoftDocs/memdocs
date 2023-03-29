@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 03/28/2023
+ms.date: 03/29/2023
 ms.topic: reference
 ms.service: windows-365
 ms.subservice:
@@ -53,14 +53,14 @@ Learn what new features are available in Windows 365 Enterprise.
 -->
 
 <!-- ########################## -->
-## Week of March 228, 2023 (Service release 2303)
+## Week of March 28, 2023 (Service release 2303)
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device provisioning
 
 #### Cloud PC custom name template<!--42947813-->
 
-You can now create a template to automatically create unique names for new Cloud PCs.
+You can now create a template to automatically create unique names for new Cloud PCs. For more information, see [Create provisioning policies](create-provisioning-policy.md#continue-creating-a-provisioning-policy).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device security
@@ -79,7 +79,7 @@ Windows 365 Enterprise has been assessed by a FedRAMP authorized auditor to meet
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Windows 365 app
 
-#### Windows 365 app: pin Cloud PC to task bar in Windows 11<!--43470782-->
+#### Pin Cloud PC to task bar in Windows 11<!--43470782-->
 
 End users can now pin their Cloud PC to the task bar in the Windows 365 app for Windows 11 platforms. This lets them launch the Cloud PC from the task bar icon without going into the connection center.
 

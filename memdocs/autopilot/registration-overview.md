@@ -1,6 +1,6 @@
 ---
 title: Windows Autopilot registration overview
-description: Overview of Windows Autopilot device registration
+description: Overview of Windows Autopilot device registration.
 ms.prod: windows-client
 ms.technology: itpro-deploy
 ms.localizationpriority: medium
@@ -14,6 +14,7 @@ ms.collection:
   - M365-modern-desktop
   - m365initiative-coredeploy
   - highpri
+  - tier1
 ---
 
 # Windows Autopilot registration overview
