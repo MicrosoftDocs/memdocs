@@ -77,7 +77,7 @@ Use the following steps to create a new group.
     - **Dynamic User**: Administrators create membership rules to automatically add and remove members.
     - **Dynamic Device**: Administrators create dynamic group rules to automatically add and remove devices.
 
-      ![Screenshot that shows Intune group properties](./media/groups-add/groups-add-properties.png)
+      ![Screenshot that shows Intune group properties.](./media/groups-add/groups-add-properties.png)
 
     For more information on these membership types, and creating dynamic expressions, see:
 
