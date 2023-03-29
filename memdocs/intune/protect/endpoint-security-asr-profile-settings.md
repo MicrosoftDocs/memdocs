@@ -186,6 +186,9 @@ Supported platforms and profiles:
     - **Not configured** (*default*)
     - **Yes** - Disable Auto detection of other enterprise IP ranges.
 
+  > [!NOTE]
+> After the profile is created, any devices to which the policy should apply will have Microsoft Defender Application Guard enabled. Users might have to restart their devices in order for protection to be in place.
+
 ### Application control profile
 
 #### Microsoft Defender Application Control
