@@ -28,6 +28,9 @@ The purpose of this tutorial is to provide a step by step guide for all the step
 
 Before beginning, refer to the [Plan your hybrid Azure Active Directory join implementation](/azure/active-directory/devices/hybrid-azuread-join-plan) to make sure all prerequisites are met for joining on-premises AD devices to Azure AD.
 
+> [!NOTE]
+> Since Windows Autopilot pre-provisioned deployment hybrid Azure AD join builds on top of [Windows Autopilot hybrid user-driven Azure AD join](../user-driven/hybrid-azure-ad-join-workflow.md), it's strongly recommended that the Windows Autopilot hybrid user-driven Azure AD join scenario is setup, tested, and working first before attempting to use the Windows Autopilot pre-provisioned deployment hybrid Azure AD join scenario. If the Windows Autopilot hybrid user-driven hybrid Azure AD join doesn't work, then most likely the Windows Autopilot pre-provisioned deployment hybrid Azure AD join scenario won't work either.
+
 ## Workflow
 
 Set up Windows automatic Intune enrollment > Install the Intune Connector > Increase the computer account limit in the Organizational Unit (OU) > Register devices as Autopilot devices > Create a device group > Configure and assign Autopilot Enrollment Status Page (ESP) > Create and assign hybrid Azure AD join Autopilot profile > Configure and assign domain join profile
@@ -42,6 +45,8 @@ Windows Autopilot for pre-provisioned deployment hybrid Azure AD join steps:
 > - Step 6: [Configure and assign Autopilot Enrollment Status Page (ESP)](hybrid-azure-ad-join-esp.md)
 > - Step 7: [Create and assign hybrid Azure AD join Autopilot profile](hybrid-azure-ad-join-autopilot-profile.md)
 > - Step 8: [Configure and assign domain join profile](hybrid-azure-ad-join-domain-join-profile.md)
+> - Step 9: [Technician phase](hybrid-azure-ad-join-technician-phase.md)
+> - Step 10: [User phase](hybrid-azure-ad-join-user-phase.md)
 
 > [!NOTE]
 >
@@ -56,4 +61,5 @@ Windows Autopilot for pre-provisioned deployment hybrid Azure AD join steps:
 
 For more information on Windows Autopilot for pre-provisioned deployment hybrid Azure AD join, see the following article(s):
 
+- [Windows Autopilot for pre-provisioned deployment](/mem/autopilot/pre-provision)
 - [Deploy hybrid Azure AD-joined devices by using Intune and Windows Autopilot](/mem/autopilot/windows-autopilot-hybrid)

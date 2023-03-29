@@ -26,6 +26,8 @@ Windows Autopilot for pre-provisioned deployment Azure AD join steps:
 - Step 6: [Create and assign Autopilot profile](azure-ad-join-autopilot-profile.md)
 > [!div class="checklist"]
 > - **Step 7: Assign Autopilot device to a user (optional)**
+- Step 8: [Technician phase](azure-ad-join-technician-phase.md)
+- Step 9: [User phase](azure-ad-join-user-phase.md)
 
 For an overview of the Windows Autopilot for pre-provisioned deployment Azure AD join workflow, see [Windows Autopilot for pre-provisioned deployment Azure AD join overview](azure-ad-join-workflow.md)
 
