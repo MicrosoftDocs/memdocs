@@ -1,21 +1,18 @@
 ---
 title: Windows Autopilot scenarios and capabilities
 description: Follow along with several typical Windows Autopilot deployment scenarios, such as redeploying a device in a business-ready state.
-keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune, white glove, pre-provision
 ms.prod: windows-client
-ms.mktglfcycl: deploy
+ms.technology: itpro-deploy
 ms.localizationpriority: medium
-ms.sitesec: library
-ms.pagetype: deploy
-audience: itpro
 author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
 ms.date: 11/17/2022
-ms.collection: M365-modern-desktop
+ms.collection:
+  - M365-modern-desktop
+  - tier2
 ms.topic: conceptual
-ms.technology: itpro-deploy
 ---
 
 
