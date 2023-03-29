@@ -34,7 +34,7 @@ For an overview of the Windows Autopilot for pre-provisioned deployment hybrid A
 
 > [!NOTE]
 >
-> If you've already increased the computer account limit to the proper Organizational Unit (OU) as part of the [Windows Autopilot user driven hybrid Azure AD join](../user-driven/hybrid-azure-ad-join-workflow.md) scenario, you can skip this step and move on to [Step 4: Register devices as Autopilot devices](hybrid-azure-ad-join-register-device.md).
+> If you've already increased the computer account limit to the proper Organizational Unit (OU) as part of the [Windows Autopilot user-driven hybrid Azure AD join](../user-driven/hybrid-azure-ad-join-workflow.md) scenario, you can skip this step and move on to [Step 4: Register devices as Autopilot devices](hybrid-azure-ad-join-register-device.md).
 
 ## Increase the computer account limit in the Organizational Unit (OU)
 

@@ -34,7 +34,7 @@ For an overview of the Windows Autopilot for pre-provisioned deployment hybrid A
 
 > [!NOTE]
 >
-> If you've already created a domain join profile as part of the [Windows Autopilot user driven hybrid Azure AD join](../user-driven/hybrid-azure-ad-join-workflow.md) scenario and want to keep the same settings and assignments, you can skip this step and move on to [Step 9: Technician phase](hybrid-azure-ad-join-technician-phase.md).
+> If you've already created a domain join profile as part of the [Windows Autopilot user-driven hybrid Azure AD join](../user-driven/hybrid-azure-ad-join-workflow.md) scenario and want to keep the same settings and assignments, you can skip this step and move on to [Step 9: Technician phase](hybrid-azure-ad-join-technician-phase.md).
 
 ## Create and assign a domain join profile
 
