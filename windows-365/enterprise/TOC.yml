@@ -215,6 +215,8 @@ items:
         href: /mem/intune/protect/windows-10-update-rings?context=/windows-365/context/pr-context
       - name: Windows 10 feature updates
         href: /mem/intune/protect/windows-10-feature-updates?context=/windows-365/context/pr-context
+      - name: Windows Updates and Windows 365 Frontline
+        href: windows-update-frontline-cloud-pc.md
     - name: End-user experience
       items:
       - name: End-user hardware requirements
