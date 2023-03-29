@@ -103,7 +103,7 @@ On the device where the local Windows Autopilot reset is being performed:
 
 1. If you created a provisioning package, plug in the USB drive that contains the provisioning package.
 
-2. From the Windows device lock screen, enter the keystroke: **CTRL + ![Windows key](images/windows_glyph.png) + R**.
+2. From the Windows device lock screen, enter the keystroke <kbd>CTRL</kbd> + <kbd>WIN</kbd> + <kbd>R</kbd>.
 
     These keystrokes open up a custom sign-in screen for the local Autopilot Reset. The screen serves two purposes:
     
