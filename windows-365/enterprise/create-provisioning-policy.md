@@ -52,7 +52,10 @@ A few things to keep in mind:
    > [!TIP]
    > Your provisioning policy name cannot contain the following characters: < > & | " ^
 
-3. On the **General** page, select a **Join type**:
+3. On the  **General** page, select a **License type**:
+    - **Enterprise**: Provision Cloud PCs for Windows 365 Enterprise.
+    - **Frontline**: Provision Cloud PCs for [Windows 365 Frontline](introduction-windows-365-frontline.md).
+4. On the **General** page, select a **Join type**:
     - **Hybrid Azure AD Join**: You must select an ANC to use for this policy.
     - **Azure AD Join**: You have two options for **Network**:
         - **Azure network connection**: Select an ANC to use for this policy.
@@ -96,6 +99,12 @@ To select an ANC, follow these steps:
 8. Select **Next**.
 9. On the **Assignments** page, choose **Select groups** > choose the groups you want this policy assigned to > **Select** > **Next**. Nested groups aren't currently supported.
 1o. On the **Review + create** page, select **Create**. If you used Hybrid Azure AD Join as the join type, it can take up to 60 minutes for the policy creation process to complete. The time depends on when the Azure AD connect sync last happened.
+
+After the provisioning policy is created and assigned, Windows 365 automatically starts to provision Cloud PCs and assigns them to users in the assigned groups.
+
+Azure AD group members won't receive Cloud PCs if the number of users in the Azure AD user group exceeds the maximum number of Cloud PCs allowed to be provisioned (based on the number of purchased licenses).
+
+Admins can confirm the list of members who received Cloud PCs by reviewing the **Provisioning policy > Assignments > see users.  
 
 <!-- ########################## -->
 ## Next steps
