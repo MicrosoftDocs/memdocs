@@ -1,13 +1,9 @@
 ---
-title: Automatic registration of existing devices - Windows Autopilot
-description: Automatically add devices to Windows Autopilot
-keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune
+title: Automatic registration of existing devices
+description: Automatically add devices to Windows Autopilot.
 ms.prod: windows-client
-ms.mktglfcycl: deploy
+ms.technology: itpro-deploy
 ms.localizationpriority: medium
-ms.sitesec: library
-ms.pagetype: deploy
-audience: itpro
 author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
@@ -17,7 +13,7 @@ ms.topic: how-to
 ms.collection: 
   - M365-modern-desktop
   - m365initiative-coredeploy
-ms.technology: itpro-deploy
+  - tier2
 ---
 
 # Automatic registration of existing devices
