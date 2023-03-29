@@ -60,7 +60,7 @@ Learn what new features are available in Windows 365 Enterprise.
 
 #### Cloud PC custom name template<!--42947813-->
 
-You can now create a template to automatically create unique names for new Cloud PCs. For more information, see [Create provisioning policies](create-provisioning-policy#continue-creating-a-provisioning-policy).
+You can now create a template to automatically create unique names for new Cloud PCs. For more information, see [Create provisioning policies](create-provisioning-policy.md#continue-creating-a-provisioning-policy).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device security
@@ -81,7 +81,7 @@ Windows 365 Enterprise has been assessed by a FedRAMP authorized auditor to meet
 
 #### New data for Cloud PC utilization report<!--43931239-->
 
-The Cloud PC utilization report now includes the filer options **Active time connected** and **Last active time**. This helps you identify under-utilized Cloud PCs that can be repurposed to other users. For more information, see [Cloud PC utilizaiton report](erport-cloud-pc-utilization.md).
+The Cloud PC utilization report now includes the filer options **Active time connected** and **Last active time**. This helps you identify under-utilized Cloud PCs that can be repurposed to other users. For more information, see [Cloud PC utilizaiton report](report-cloud-pc-utilization.md).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Windows 365 app
