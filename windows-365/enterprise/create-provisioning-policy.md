@@ -104,7 +104,7 @@ After the provisioning policy is created and assigned, Windows 365 automatically
 
 Azure AD group members won't receive Cloud PCs if the number of users in the Azure AD user group exceeds the maximum number of Cloud PCs allowed to be provisioned (based on the number of purchased licenses).
 
-Admins can confirm the list of members who received Cloud PCs by reviewing the **Provisioning policy** > choose the policy > review the users in the groups under **Assignments**.  
+Admins can confirm the list of members who received Cloud PCs by reviewing the **Provisioning policy** > choose the policy > review the users in the groups under **Assignments**.
 
 <!-- ########################## -->
 ## Next steps
