@@ -11,7 +11,8 @@ ms.reviewer: jubaptis
 ms.date: 2/14/2023
 ms.collection: 
   - M365-modern-desktop
-ms.topic: article
+  - tier2
+ms.topic: conceptual
 ---
 
 # Windows Autopilot: What's new
