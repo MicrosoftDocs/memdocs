@@ -28,6 +28,6 @@ Windows Autopilot for pre-provisioned deployment hybrid Azure AD join steps:
 - Step 8: [Configure and assign domain join profile](hybrid-azure-ad-join-domain-join-profile.md)
 - Step 9: [Technician phase](hybrid-azure-ad-join-technician-phase.md)
 > [!div class="checklist"]
-> - Step 10: User phase
+> - **Step 10: User phase**
 
 For an overview of the Windows Autopilot for pre-provisioned deployment hybrid Azure AD join workflow, see [Windows Autopilot for pre-provisioned deployment hybrid Azure AD join overview](hybrid-azure-ad-join-workflow.md)
