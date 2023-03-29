@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 10/12/2022
+ms.date: 03/28/2023
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -38,7 +38,7 @@ The Cloud PC utilization report helps you make sure that your licenses are assig
 
 To get to the **Cloud PC utilization** report, sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Cloud PC performance (preview)** > **View report** (under **Cloud PCs with low utilization**).
 
-![Screenshot of getting to the Cloud PC utilization report.](./media/report-cloud-pc-utilization/view-report.png)
+:::image type="content" source="./media/report-cloud-pc-utilization/view-report.png" alt-text="Screenshot of getting to the Cloud PC utilization report." lightbox="./media/report-cloud-pc-utilization/view-report.png":::
 
 The report shows the following data aggregated for the last 28 days:
 
@@ -52,7 +52,7 @@ The report shows the following data aggregated for the last 28 days:
   - **Total time connected**: The total hours that the user has been connected to the Cloud PC over the last 28 days.
   - **Days since last sign in**
 
-You can use the filter to see only data for a specific usage group.
+You can use the filter options to see only data for a specfiic usage group.
 
 ## Other reports
 

@@ -180,6 +180,8 @@ Consider the following when you use Uninstall:
 
 - Once the feature or quality update pause elapses on an Update Ring, devices will reinstall previously uninstalled feature or quality updates if they're still applicable.
 
+- Uninstallation will not be successful when the feature update was applied using an Enablement Package. An Enablement Package is the most common way devices update to Windows 10 22H2 from Windows 10 2004, 20H2, and 21H2 via Windows Update for Business. To learn more about Enablement Packages, see [KB5015684: Featured update to Windows 10, version 22H2 by using an enablement package - Microsoft Support](https://support.microsoft.com/topic/kb5015684-featured-update-to-windows-10-version-22h2-by-using-an-enablement-package-09d43632-f438-47b5-985e-d6fd704eee61).  To learn more about using a script to uninstall Enablement Packages, see [Uninstalling Windows updates on managed devices using Intune](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/uninstalling-windows-updates-on-managed-devices-using-intune/ba-p/3778267)
+
 - For feature updates specifically, the time you can uninstall the update is limited from 2-60 days. This period is configured by the update rings Update setting **Set feature update uninstall period (2 – 60 days)**. You can't roll back a feature update that's been installed on a device after the update has been installed for longer than the configured uninstall period.
 
   For example, consider an update ring with a feature update uninstall period of 20 days. After 25 days you decide to roll back the latest feature update and use the Uninstall option.  Devices that installed the feature update over 20 days ago can't uninstall it as they've removed the necessary bits as part of their maintenance. However, devices that only installed the feature update up to 19 days ago can uninstall the update if they successfully check in to receive the uninstall command before exceeding the 20-day uninstall period.
@@ -201,3 +203,4 @@ There are multiple options to get in-depth reporting for Windows 10/11 updates w
 - Use [Windows feature updates in Intune](../protect/windows-10-feature-updates.md)
 - Use [Windows update compatibility reports](../protect/windows-update-compatibility-reports.md)
 - Use [Intune compliance reports](../protect/windows-update-compliance-reports.md) for Windows updates  
+- Also see [Windows Autopatch](/windows/deployment/windows-autopatch/overview/windows-autopatch-overview) in the Windows deployment content for an alternative solution

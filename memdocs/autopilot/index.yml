@@ -1,16 +1,15 @@
 ### YamlMime:Landing
 
 title: Windows Autopilot documentation
-summary: Windows Autopilot is a collection of technologies used to set up and pre-configure new devices, getting them ready for productive use.  
+summary: Windows Autopilot is a collection of technologies used to set up and pre-configure new devices, getting them ready for productive use.
 metadata:
   title: Windows Autopilot documentation
-  description: Windows Autopilot is a collection of technologies used to set up and pre-configure new devices, getting them ready for productive use.  
-  services: service
-  ms.service: microsoft-intune
-  ms.subservice: apps
+  description: Windows Autopilot is a collection of technologies used to set up and pre-configure new devices, getting them ready for productive use.
+  ms.prod: windows-client
+  ms.technology: itpro-deploy
   ms.topic: landing-page 
   ms.collection: 
-    - collection
+    - tier1
     - highpri
   author: frankroj
   ms.author: frankroj

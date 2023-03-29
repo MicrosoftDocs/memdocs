@@ -2,13 +2,9 @@
 metadata:
   title: Windows Autopilot FAQ
   description: This article provides OEMs, partners, administrators, and end users with answers to some frequently asked questions about deploying Windows with Autopilot.
-  keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune
-  ms.prod: w10
-  ms.mktglfcycl: deploy
+  ms.prod: windows-client
+  ms.technology: itpro-deploy
   ms.localizationpriority: medium
-  ms.sitesec: library
-  ms.pagetype: deploy
-  audience: itpro
   author: frankroj
   ms.author: frankroj
   ms.reviewer: jubaptis
@@ -17,6 +13,7 @@ metadata:
   ms.collection:
     - M365-modern-desktop
     - highpri
+    - tier1
   ms.topic: faq
 title: Windows Autopilot FAQ
 summary: |
@@ -325,7 +322,7 @@ sections:
         answer: |
           No. It's not required, but you can use it together with Autopilot in the following scenarios:
 
-          - [Co-management?](../configmgr/comanage/overview.md)
+          - [Co-management](../configmgr/comanage/overview.md)
           - [Autopilot for existing devices](existing-devices.md)
 
   - name: Features
