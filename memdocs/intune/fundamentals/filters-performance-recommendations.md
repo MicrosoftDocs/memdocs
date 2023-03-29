@@ -42,6 +42,8 @@ In this article:
 
 For more information and an overview of filters, go to [Use filters when assigning your apps, policies, and profiles in Microsoft Intune](filters.md).
 
+For guidance on dynamic groups, go to [Create simpler, more efficient rules for dynamic groups in Azure AD](/azure/active-directory/enterprise-users/groups-dynamic-rule-more-efficient).
+
 ## Overview of Intune grouping and targeting concepts
 
 Before getting into the recommendations, let's review the grouping, targeting, and filtering features available in Intune.
