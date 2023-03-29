@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/24/2023
+ms.date: 03/29/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -87,6 +87,10 @@ Endpoint Privilege Management supports executing files that are locally stored o
 Endpoint Privilege Management doesn't support SSL inspection, which is known as 'break and inspect'. In order to use Endpoint Privilege Management, ensure the URLs listed in the [Intune Endpoints for Endpoint Privilege Management](../fundamentals/intune-endpoints.md#microsoft-intune-endpoint-privilege-management) are exempt from inspection.
 
 ## Frequently asked questions
+
+### Why is my elevation settings policy showing error?
+
+The elevation settings policy controls the enablement of EPM and the configuration of the client side components. When this policy is in error it indicates the device had an issue enabling EPM. The most common reason is the [required Windows updates](/memdocs/intune/protect/epm-overview.md#windows-client-requirements) are not installed on the device.
 
 ### What happens when someone with administrative privileges uses a device that is enabled for EPM?
 
