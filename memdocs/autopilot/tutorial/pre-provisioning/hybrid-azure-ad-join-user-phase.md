@@ -31,3 +31,7 @@ Windows Autopilot for pre-provisioned deployment hybrid Azure AD join steps:
 > - **Step 10: User phase**
 
 For an overview of the Windows Autopilot for pre-provisioned deployment hybrid Azure AD join workflow, see [Windows Autopilot for pre-provisioned deployment hybrid Azure AD join overview](hybrid-azure-ad-join-workflow.md)
+
+## Next step: Deploy the device
+
+At this point, the device is ready to be deployed. Boot the device and the Autopilot deployment should begin.

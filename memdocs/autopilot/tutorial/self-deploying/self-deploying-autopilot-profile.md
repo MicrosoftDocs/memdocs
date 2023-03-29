@@ -74,6 +74,10 @@ To create a self-deploying mode Autopilot profile, follow the below steps:
 
 [!INCLUDE [How to verify a device has an Autopilot profile assigned to it in Intune](../includes/verify-autopilot-profile-assignment.md)]
 
+## Next step: Deploy the device
+
+At this point, the device is ready to be deployed. Boot the device with a fresh install of Windows and the Autopilot deployment should begin.
+
 ## More information
 
 [!INCLUDE [More information Autopilot profile](../includes/more-info-autopilot-profile.md)]

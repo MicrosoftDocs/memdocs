@@ -39,6 +39,11 @@ For an overview of the Windows Autopilot for pre-provisioned deployment Azure AD
 
 [!INCLUDE [How to assign an Autopilot device to a user via hardware hash CSV file](../includes/assign-autopilot-device-to-user-via-csv.md)]
 
+## Next step: Technician phase
+
+> [!div class="nextstepaction"]
+> [Step 8: Technician phase](azure-ad-join-technician-phase.md)
+
 ## More information
 
 For more information on assigning a user to an Autopilot device, see the following article(s):

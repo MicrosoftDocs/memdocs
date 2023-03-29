@@ -37,6 +37,10 @@ For an overview of the Windows Autopilot user-driven Azure AD join workflow, see
 
 [!INCLUDE [How to assign an Autopilot device to a user via hardware hash CSV file](../includes/assign-autopilot-device-to-user-via-csv.md)]
 
+## Next step: Deploy the device
+
+At this point, the device is ready to be deployed. Boot the device with a fresh install of Windows and the Autopilot deployment should begin.
+
 ## More information
 
 For more information on assigning a user to an Autopilot device, see the following article(s):

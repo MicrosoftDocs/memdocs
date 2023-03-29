@@ -31,3 +31,8 @@ Windows Autopilot for pre-provisioned deployment hybrid Azure AD join steps:
 - Step 10: [User phase](hybrid-azure-ad-join-user-phase.md)
 
 For an overview of the Windows Autopilot for pre-provisioned deployment hybrid Azure AD join workflow, see [Windows Autopilot for pre-provisioned deployment hybrid Azure AD join overview](hybrid-azure-ad-join-workflow.md)
+
+## Next step: User phase
+
+> [!div class="nextstepaction"]
+> [Step 10: User phase](hybrid-azure-ad-join-user-phase.md)

@@ -89,6 +89,9 @@ To create a user-driven Azure AD join Autopilot profile, follow the below steps:
 > [!div class="nextstepaction"]
 > [Step 7: Assign Autopilot device to a user (optional)](azure-ad-join-assign-device-to-user.md)
 
+> [!NOTE]
+> If you don't plant to assign a user to the device, at this point, the device is ready to be deployed. Boot the device with a fresh install of Windows and the Autopilot deployment should begin.
+
 ## More information
 
 [!INCLUDE [More information Autopilot profile](../includes/more-info-autopilot-profile.md)]

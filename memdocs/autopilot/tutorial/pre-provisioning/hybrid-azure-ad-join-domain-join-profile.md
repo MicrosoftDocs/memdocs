@@ -98,6 +98,11 @@ For an overview of the Windows Autopilot for pre-provisioned deployment hybrid A
 
 1. In the **Review + Create** page, review and verify that all of the settings are set as desired, and then choose **Create** to create the domain join profile.
 
+## Next step: Technician phase
+
+> [!div class="nextstepaction"]
+> [Step 9: Technician phase](hybrid-azure-ad-join-technician-phase.md)
+
 ## More information
 
 For more information on domain join profiles, see the following article(s):

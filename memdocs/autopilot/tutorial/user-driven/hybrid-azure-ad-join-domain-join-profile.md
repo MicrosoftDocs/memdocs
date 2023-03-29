@@ -96,6 +96,10 @@ For an overview of the Windows Autopilot user-driven hybrid Azure AD join workfl
 
 1. In the **Review + Create** page, review and verify that all of the settings are set as desired, and then choose **Create** to create the domain join profile.
 
+## Next step: Deploy the device
+
+At this point, the device is ready to be deployed. Boot the device with a fresh install of Windows and the Autopilot deployment should begin.
+
 ## More information
 
 For more information on domain join profiles, see the following article(s):
