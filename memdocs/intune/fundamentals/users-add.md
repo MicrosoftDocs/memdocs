@@ -57,6 +57,9 @@ You can manually add users to your Intune subscription via the [Microsoft 365 ad
 8. Choose **Next**.
 9. On the **Review and finish** page, select **Finish adding** to add the user. Choose **Close** to close the **Add a user** page.
 
+> [!NOTE]
+> If you're moving to Microsoft 365 from an Office 365 subscription, your users and groups are already in Azure AD. Intune uses the same Azure AD, and can use the existing users and groups.
+
 ### Add Intune users in the Microsoft Intune admin center
 
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Users** > **All users** > **New user** > **Create user**.
@@ -111,7 +114,11 @@ You can configure directory synchronization to import user accounts from your on
 
 ### How to sync on-premises users with Azure AD
 
-The only tool that you need to synchronize your user accounts with Azure AD is the [Azure AD Connect wizard](https://www.microsoft.com/download/details.aspx?id=47594). The Azure AD Connect wizard provides a simplified and guided experience for connecting your on-premises identity infrastructure to the cloud. Choose your topology and needs (single or multiple directories, password hash sync, pass-through authentication, or federation). The wizard deploys and configures all components required to get your connection up and running. Including: sync services, Active Directory Federation Services (AD FS), and the Azure AD PowerShell module.
+- To move existing users from on-premises Active Directory to Azure AD, you can set up [hybrid identity](/azure/active-directory/hybrid/whatis-hybrid-identity). Hybrid identities exist in both services - on-premises AD and Azure AD.
+
+- You can also export Active Directory users using the UI or through script. An internet search can help you find the best option for your organization.
+
+- To synchronize your user accounts with Azure AD, use the [Azure AD Connect wizard](https://www.microsoft.com/download/details.aspx?id=47594). The Azure AD Connect wizard provides a simplified and guided experience for connecting your on-premises identity infrastructure to the cloud. Choose your topology and needs (single or multiple directories, password hash sync, pass-through authentication, or federation). The wizard deploys and configures all components required to get your connection up and running. Including: sync services, Active Directory Federation Services (AD FS), and the Azure AD PowerShell module.
 
 > [!TIP]
 > Azure AD Connect encompasses functionality that was previously released as Dirsync and Azure AD Sync. Learn more about [directory integration](/previous-versions/azure/azure-services/jj573653(v=azure.100)). To learn about syncing user accounts from a local directory to Azure AD, see [Similarities between Active Directory and Azure AD](/previous-versions/azure/azure-services/dn518177(v=azure.100)).
