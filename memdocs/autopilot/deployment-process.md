@@ -1,20 +1,16 @@
 ---
 title: Windows deployment process posters
 description: View and download Windows deployment process flows for Microsoft Configuration Manager and Windows Autopilot.
-ms.audience: itpro
-keywords: upgrade, in-place, configuration, deploy
 ms.prod: windows-client
 ms.technology: itpro-deploy
-ms.mktglfcycl: deploy
 ms.localizationpriority: medium
-ms.sitesec: library
-audience: itpro
 author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
 ms.date: 11/17/2022
 ms.topic: conceptual
+ms.collection: tier2
 ---
 
 # Windows Autopilot deployment process
