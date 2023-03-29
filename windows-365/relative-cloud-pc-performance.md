@@ -61,9 +61,9 @@ It can be valuable for you to do your own testing with workloads approximating w
 
 A common starting point for Windows 365 Cloud PC users is the 2 vCPU / 8-GB RAM / 128-GB storage size. The chart shows that the relative performance improvement of the 4 vCPU configuration over the 2 vCPU configuration is up to 28% faster.  
 
-For the workloads we test, the performance improvement when moving from 4 vCPU to 8 vCPU is about 27%. However, more processor intensive workloads may see greater improvement.
+For the workloads we test, the performance improvement when moving from 4 vCPU to 8 vCPU is up to 27% faster. However, more processor intensive workloads may see greater improvement.
 
-If you plan on running CPU-intensive workloads, the differences are going to be more noticeable and favor a greater number of processors. For example, workloads like business analytics tools with large datasets in the 64-bit version of Microsoft Excel. By contrast, the 4 vCPU size is popular among Windows 365 customers with employees who only use Microsoft Teams, browsers, or Microsoft applications.
+If you plan on running CPU-intensive workloads, the differences are going to be more noticeable and favor a greater number of processors. For example, workloads like business analytics tools with large datasets in the 64-bit version of Microsoft Excel work best with 8 vCPU. By contrast, the 4 vCPU size is popular among Windows 365 customers with employees who only use Microsoft Teams, browsers, or Microsoft applications.
 
 ## Choosing the Cloud PC size for your users
 
