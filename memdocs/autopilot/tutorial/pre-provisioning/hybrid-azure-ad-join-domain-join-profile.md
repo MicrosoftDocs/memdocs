@@ -7,7 +7,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 03/27/2023
+ms.date: 03/29/2023
 ms.topic: tutorial
 ms.collection: 
   - tier1
@@ -27,14 +27,14 @@ Windows Autopilot for pre-provisioned deployment hybrid Azure AD join steps:
 - Step 7: [Create and assign hybrid Azure AD join Autopilot profile](hybrid-azure-ad-join-autopilot-profile.md)
 > [!div class="checklist"]
 > - **Step 8: Configure and assign domain join profile**
-- Step 9: [Technician phase](hybrid-azure-ad-join-technician-phase.md)
-- Step 10: [User phase](hybrid-azure-ad-join-user-phase.md)
+- Step 9: [Technician flow](hybrid-azure-ad-join-technician-flow.md)
+- Step 10: [User flow](hybrid-azure-ad-join-user-flow.md)
 
 For an overview of the Windows Autopilot for pre-provisioned deployment hybrid Azure AD join workflow, see [Windows Autopilot for pre-provisioned deployment hybrid Azure AD join overview](hybrid-azure-ad-join-workflow.md)
 
 > [!NOTE]
 >
-> If you've already created a domain join profile as part of the [Windows Autopilot user-driven hybrid Azure AD join](../user-driven/hybrid-azure-ad-join-workflow.md) scenario and want to keep the same settings and assignments, you can skip this step and move on to [Step 9: Technician phase](hybrid-azure-ad-join-technician-phase.md).
+> If you've already created a domain join profile as part of the [Windows Autopilot user-driven hybrid Azure AD join](../user-driven/hybrid-azure-ad-join-workflow.md) scenario and want to keep the same settings and assignments, you can skip this step and move on to [Step 9: Technician flow](hybrid-azure-ad-join-technician-flow.md).
 
 ## Create and assign a domain join profile
 
@@ -102,10 +102,10 @@ For an overview of the Windows Autopilot for pre-provisioned deployment hybrid A
 
 1. In the **Review + Create** page, review and verify that all of the settings are set as desired, and then choose **Create** to create the domain join profile.
 
-## Next step: Technician phase
+## Next step: Technician flow
 
 > [!div class="nextstepaction"]
-> [Step 9: Technician phase](hybrid-azure-ad-join-technician-phase.md)
+> [Step 9: Technician flow](hybrid-azure-ad-join-technician-flow.md)
 
 ## More information
 

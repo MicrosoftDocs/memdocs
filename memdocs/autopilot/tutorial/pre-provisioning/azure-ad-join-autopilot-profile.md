@@ -7,7 +7,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 03/27/2023
+ms.date: 03/29/2023
 ms.topic: tutorial
 ms.collection: 
   - tier1
@@ -26,8 +26,8 @@ Windows Autopilot for pre-provisioned deployment Azure AD join steps:
 > [!div class="checklist"]
 > - **Step 6: Create and assign Autopilot profile**
 - Step 7: [Assign Autopilot device to a user (optional)](azure-ad-join-assign-device-to-user.md)
-- Step 8: [Technician phase](azure-ad-join-technician-phase.md)
-- Step 9: [User phase](azure-ad-join-user-phase.md)
+- Step 8: [Technician flow](azure-ad-join-technician-flow.md)
+- Step 9: [User flow](azure-ad-join-user-flow.md)
 
 For an overview of the Windows Autopilot for pre-provisioned deployment Azure AD join workflow, see [Windows Autopilot for pre-provisioned deployment Azure AD join overview](azure-ad-join-workflow.md)
 
@@ -86,15 +86,15 @@ To create a pre-provisioned Azure AD join Autopilot profile, follow the below st
 
 [!INCLUDE [How to verify a device has an Autopilot profile assigned to it in Intune](../includes/verify-autopilot-profile-assignment.md)]
 
-## Next step: Assign Autopilot device to a user (optional) or Technician phase
+## Next step: Assign Autopilot device to a user (optional) or Technician flow
 
 > [!div class="nextstepaction"]
 > [Step 7: Assign Autopilot device to a user (optional)](azure-ad-join-assign-device-to-user.md)
 
-If you don't plant to assign a user to the device, then skip to **[Step 8: Technician phase](azure-ad-join-technician-phase.md)**.
+If you don't plant to assign a user to the device, then skip to **[Step 8: Technician flow](azure-ad-join-technician-flow.md)**.
 
 > [!div class="nextstepaction"]
-> [Step 8: Technician phase](azure-ad-join-technician-phase.md)
+> [Step 8: Technician flow](azure-ad-join-technician-flow.md)
 
 ## More information
 

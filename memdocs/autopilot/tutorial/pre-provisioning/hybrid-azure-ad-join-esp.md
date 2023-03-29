@@ -7,7 +7,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 03/27/2023
+ms.date: 03/29/2023
 ms.topic: tutorial
 ms.collection: 
   - tier1
@@ -27,8 +27,8 @@ Windows Autopilot for pre-provisioned deployment hybrid Azure AD join steps:
 > - **Step 6: Configure and assign Autopilot Enrollment Status Page (ESP)**
 - Step 7: [Create and assign hybrid Azure AD join Autopilot profile](hybrid-azure-ad-join-autopilot-profile.md)
 - Step 8: [Configure and assign domain join profile](hybrid-azure-ad-join-domain-join-profile.md)
-- Step 9: [Technician phase](hybrid-azure-ad-join-technician-phase.md)
-- Step 10: [User phase](hybrid-azure-ad-join-user-phase.md)
+- Step 9: [Technician flow](hybrid-azure-ad-join-technician-flow.md)
+- Step 10: [User flow](hybrid-azure-ad-join-user-flow.md)
 
 For an overview of the Windows Autopilot for pre-provisioned deployment hybrid Azure AD join workflow, see [Windows Autopilot for pre-provisioned deployment hybrid Azure AD join overview](hybrid-azure-ad-join-workflow.md)
 

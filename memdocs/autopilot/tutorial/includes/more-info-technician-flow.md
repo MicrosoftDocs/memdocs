@@ -11,11 +11,11 @@ ms.localizationpriority: medium
 
 <!-- This file is shared by the following articles:
 
-azure-ad-join-user-phase.md
-hybrid-azure-ad-join-user-phase.md
+azure-ad-join-technician-flow.md
+hybrid-azure-ad-join-technician-flow.md
 
 Headings are driven by article context. -->
 
-For more information on the user phase of a Windows Autopilot for pre-provisioned deployment, see the following article(s):
+For more information on the technician flow of a Windows Autopilot for pre-provisioned deployment, see the following article(s):
 
-- [User flow](/mem/autopilot/pre-provision#user-flow)
+- [Technician flow](/mem/autopilot/pre-provision#technician-flow)
