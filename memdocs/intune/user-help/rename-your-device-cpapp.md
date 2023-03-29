@@ -75,7 +75,7 @@ Still need help? Contact your company support. For contact information, check th
 
 Using the **Rename** action in the Company Portal website, you can modify the device name to a user-friendly and easily recognizable name. However, it's essential to note that this change only applies to the Company Portal and not to the **Device name** or the **Management name** in the Microsoft Intune admin center.
 
-For more information, go to the following resources:
+For more information, go to:
 
-- How to modify the device name from the Intune admin center, see [Rename a device with Microsoft Intune](../remote-actions/device-rename.md).
-- How to modify the Management name for a device from the Intune admin center, see [Rename a device with Microsoft Intune](../remote-actions/device-rename.md).
+- [Rename a device with Microsoft Intune](../remote-actions/device-rename.md).
+- [View device details with Microsoft Intune](../remote-actions/device-inventory.md#hardware-device-details).
