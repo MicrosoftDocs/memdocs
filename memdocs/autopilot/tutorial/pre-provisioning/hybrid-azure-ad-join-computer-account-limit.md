@@ -21,7 +21,7 @@ Windows Autopilot for pre-provisioned deployment hybrid Azure AD join steps:
 - Step 1: [Set up Windows automatic Intune enrollment](hybrid-azure-ad-join-automatic-enrollment.md)
 - Step 2: [Install the Intune Connector](hybrid-azure-ad-join-intune-connector.md)
 > [!div class="checklist"]
-> - **Step 3: **Increase the computer account limit in the Organizational Unit (OU)**
+> - **Step 3: Increase the computer account limit in the Organizational Unit (OU)**
 - Step 4: [Register devices as Autopilot devices](hybrid-azure-ad-join-register-device.md)
 - Step 5: [Create a device group](hybrid-azure-ad-join-device-group.md)
 - Step 6: [Configure and assign Autopilot Enrollment Status Page (ESP)](hybrid-azure-ad-join-esp.md)
@@ -31,6 +31,10 @@ Windows Autopilot for pre-provisioned deployment hybrid Azure AD join steps:
 - Step 10: [User phase](hybrid-azure-ad-join-user-phase.md)
 
 For an overview of the Windows Autopilot for pre-provisioned deployment hybrid Azure AD join workflow, see [Windows Autopilot for pre-provisioned deployment hybrid Azure AD join overview](hybrid-azure-ad-join-workflow.md)
+
+> [!NOTE]
+>
+> If you've already increased the computer account limit to the proper Organizational Unit (OU) as part of the [Windows Autopilot user driven hybrid Azure AD join](../user-driven/hybrid-azure-ad-join-workflow.md) scenario, you can skip this step and move on to [Step 4: Register devices as Autopilot devices](hybrid-azure-ad-join-register-device.md).
 
 ## Increase the computer account limit in the Organizational Unit (OU)
 

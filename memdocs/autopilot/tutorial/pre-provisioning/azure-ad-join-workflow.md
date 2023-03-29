@@ -29,7 +29,8 @@ The purpose of this tutorial is to provide a step by step guide for all the step
 Before beginning, refer to the [How to: Plan your Azure AD join implementation](/azure/active-directory/devices/azureadjoin-plan) to make sure all prerequisites are met for joining devices to Azure AD.
 
 > [!NOTE]
-> Since Windows Autopilot pre-provisioned deployment Azure AD join builds on top of [Windows Autopilot user-driven Azure AD join](../user-driven/azure-ad-join-workflow.md), it's strongly recommended that the Windows Autopilot user-driven Azure AD join scenario is setup, tested, and working first before attempting to use the Windows Autopilot pre-provisioned deployment Azure AD join scenario. If the Windows Autopilot user-driven Azure AD join doesn't work, then most likely the Windows Autopilot pre-provisioned deployment Azure AD join scenario won't work either.
+>
+> Since Windows Autopilot for pre-provisioned deployment Azure AD join builds on top of [Windows Autopilot user-driven Azure AD join](../user-driven/azure-ad-join-workflow.md), it's strongly recommended that the Windows Autopilot user-driven Azure AD join scenario is setup, tested, and working first before attempting to use the Windows Autopilot for pre-provisioned deployment Azure AD join scenario. If the Windows Autopilot user-driven Azure AD join doesn't work, then most likely the Windows Autopilot pre-provisioned deployment Azure AD join scenario won't work either.
 
 ## Workflow
 

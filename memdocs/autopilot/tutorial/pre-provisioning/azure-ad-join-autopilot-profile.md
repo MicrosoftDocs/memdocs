@@ -91,7 +91,7 @@ To create a pre-provisioned Azure AD join Autopilot profile, follow the below st
 > [!div class="nextstepaction"]
 > [Step 7: Assign Autopilot device to a user (optional)](azure-ad-join-assign-device-to-user.md)
 
-If you don't plant to assign a user to the device, then skip to Step 8: Technician phase.
+If you don't plant to assign a user to the device, then skip to **[Step 8: Technician phase](azure-ad-join-technician-phase.md)**.
 
 > [!div class="nextstepaction"]
 > [Step 8: Technician phase](azure-ad-join-technician-phase.md)

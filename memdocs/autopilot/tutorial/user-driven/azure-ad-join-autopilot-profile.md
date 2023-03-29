@@ -61,6 +61,10 @@ To create a user-driven Azure AD join Autopilot profile, follow the below steps:
 
       - For **Allow pre-provisioned deployment**, select **No**.
 
+        > [!NOTE]
+        >
+        > For the Windows Autopilot for pre-provisioned deployment Azure AD join scenario, see [Step by step tutorial for Windows Autopilot for pre-provisioned deployment Azure AD join in Intune](../pre-provisioning/azure-ad-join-workflow.md)
+        
       - For **Language (Region)**, select **Operating system default** to use the default language for the operating system being configured. If another language is desired, select the desired language from the drop-down list.
 
       - For **Automatically configure keyboard**, select **Yes** to skip the keyboard selection page.

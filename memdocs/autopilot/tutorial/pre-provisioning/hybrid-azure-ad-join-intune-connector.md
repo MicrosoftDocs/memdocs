@@ -32,6 +32,10 @@ Windows Autopilot for pre-provisioned deployment hybrid Azure AD join steps:
 
 For an overview of the Windows Autopilot for pre-provisioned deployment hybrid Azure AD join workflow, see [Windows Autopilot for pre-provisioned deployment hybrid Azure AD join overview](hybrid-azure-ad-join-workflow.md)
 
+> [!NOTE]
+>
+> If you've already set up the Intune Connector as part of the [Windows Autopilot user driven hybrid Azure AD join](../user-driven/hybrid-azure-ad-join-workflow.md) scenario, you can skip this step and move on to [Step 3: Increase the computer account limit in the Organizational Unit (OU)].
+
 ## Install the Intune Connector
 
 1. Sign into the server where the Intune Connector is being installed with an account that has local administrator rights.

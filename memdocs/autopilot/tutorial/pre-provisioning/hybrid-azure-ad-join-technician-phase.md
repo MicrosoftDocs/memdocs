@@ -36,3 +36,7 @@ For an overview of the Windows Autopilot for pre-provisioned deployment hybrid A
 
 > [!div class="nextstepaction"]
 > [Step 10: User phase](hybrid-azure-ad-join-user-phase.md)
+
+## More information
+
+[!INCLUDE [More information technician phase](../includes/more-info-technician-phase.md)]

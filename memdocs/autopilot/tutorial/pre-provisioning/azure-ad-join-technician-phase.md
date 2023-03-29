@@ -38,4 +38,4 @@ For an overview of the Windows Autopilot for pre-provisioned deployment Azure AD
 
 ## More information
 
-[!INCLUDE [More information user phase](../includes/more-info-user-phase.md)]
+[!INCLUDE [More information technician phase](../includes/more-info-technician-phase.md)]
