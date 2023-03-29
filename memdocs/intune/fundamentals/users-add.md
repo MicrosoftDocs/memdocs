@@ -51,7 +51,7 @@ You can manually add users to your Intune subscription via the [Microsoft 365 ad
 4. Choose **Next**.
 5. On the **Assign product licenses** page, select a **Location** and then choose a license for this user. A license including Intune is required.
 6. Choose **Next**.
-7. On the **Optional settings** page, you can:
+7. On the **Optional settings** page, you can
     - Assign the new user additional roles (by default the new user is given the User role).
     - Provide profile information.
 8. Choose **Next**.
