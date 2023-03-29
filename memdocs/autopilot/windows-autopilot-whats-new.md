@@ -11,10 +11,15 @@ ms.reviewer: jubaptis
 ms.date: 2/14/2023
 ms.collection: 
   - M365-modern-desktop
-ms.topic: article
+  - tier2
+ms.topic: conceptual
 ---
 
 # Windows Autopilot: What's new
+
+## Device rename occurs during technician phase for pre-provisioning 
+
+Starting in 2303, a new functional change forces the device rename to occur during the technician phase for pre-provisioning for Azure AD join devices. After the technician selects the provision button, we'll immediately perform the device rename and reboot the device, then transition to the device ESP. During the user flow, the device rename is then skipped keeping resources that depend on device name (such as SCEP certs) intact. To apply this change, for Windows 10, install quality update [KB5023773](https://support.microsoft.com/topic/march-21-2023-kb5023773-os-builds-19042-2788-19044-2788-and-19045-2788-preview-5850ac11-dd43-4550-89ec-9e63353fef23) or newer. Windows 11 update is pending and will be posted as soon as it is available.
 
 ## Install required apps during pre-provisioning
 
@@ -25,9 +30,6 @@ A new toggle is available in the Enrollment Status Page (ESP) profile that allow
 
 The Enrollment Status Page (ESP) now supports the new Microsoft store applications during Windows Autopilot. This update enables better support for the new Microsoft Store experience and should be rolling out to all tenants starting with Intune 2303. For related information, see [Set up the Enrollment Status Page](../intune/enrollment/windows-enrollment-status.md).
 
-## Bug fix: Intune Management Extension updates during Enrollment Status Page
-
-In 2302, the Intune Management extension no longer attempts to upgrade during an active Enrollment Status Page session. Previously, the Intune Management Extension (IME) would attempt to upgrade during the Enrollment Status Page, which can cause apps to time out and then fail the Autopilot deployment. This timeout is more commonly seen in pre-provisioning scenarios where a device may be provisioned with one version of the IME during the technician phase, and may require an update during the user phase.
 
 ## Win32 App Supersedence ESP improvements
 

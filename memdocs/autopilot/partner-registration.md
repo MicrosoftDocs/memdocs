@@ -1,23 +1,19 @@
 ---
 title: Reseller, distributor, or partner registration of Windows Autopilot devices
-description: How partners add devices to Windows Autopilot
-keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune
+description: How partners add devices to Windows Autopilot.
 ms.prod: windows-client
-ms.mktglfcycl: deploy
+ms.technology: itpro-deploy
 ms.localizationpriority: medium
-ms.sitesec: library
-ms.pagetype: deploy
-audience: itpro
 author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
 ms.date: 11/17/2022
 ms.topic: how-to
-ms.collection: 
+ms.collection:
   - M365-modern-desktop
   - m365initiative-coredeploy
-ms.technology: itpro-deploy
+  - tier2
 ---
 
 # Reseller, distributor, or partner registration

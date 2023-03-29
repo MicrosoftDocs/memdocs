@@ -12,6 +12,7 @@ ms.date: 03/10/2023
 ms.collection: 
   - M365-modern-desktop
   - highpri
+  - tier1
 ms.topic: how-to
 ---
 
