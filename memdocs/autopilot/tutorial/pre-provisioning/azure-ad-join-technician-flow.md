@@ -36,8 +36,7 @@ For an overview of the Windows Autopilot for pre-provisioned deployment Azure AD
 - Boot the device.
 - From the first OOBE screen (which could be a language selection, locale selection screen, or the Azure AD sign-in page), don't select **Next**. Instead, press the Windows key five times to view another options dialog. From that screen, choose the **Windows Autopilot provisioning** option and then select **Continue**.
 
-
- ![Windows Autopilot provisioning option.](images/choice.png)
+ ![Windows Autopilot provisioning option.](../../images/choice.png)
 
 - On the **Windows Autopilot Configuration** screen, it displays the following information about the device:
   - The Autopilot profile assigned to the device.
@@ -50,18 +49,18 @@ For an overview of the Windows Autopilot for pre-provisioned deployment Azure AD
 
 - Validate the information displayed. If any changes are needed, make the changes, and then select **Refresh** to redownload the updated Autopilot profile details.
 
- ![Windows Autopilot configuration screen.](images/landing.png)
+ ![Windows Autopilot configuration screen.](../../images/landing.png)
 
 - Select **Provision** to begin the provisioning process.
 
 If the pre-provisioning process completes successfully:
 
 - A green status screen appears with information about the device, including the same details presented previously. For example, Autopilot profile, organization name, assigned user, and QR code. The elapsed time for the pre-provisioning steps is also provided.
- ![Green configuration screen.](images/white-glove-result.png)
+ ![Green configuration screen.](../../images/white-glove-result.png)
 - Select **Reseal** to shut down the device. At that point, the device can be shipped to the end user.
 
 > [!NOTE]
-> Technician flow inherits behavior from [self-deploying mode](self-deploying.md). Per the Self-Deploying Mode documentation, it uses the Enrollment Status Page to hold the device in a provisioning state and prevent the user from proceeding to the desktop after enrollment but before software and configuration is done applying. As such, if Enrollment Status Page is disabled, the reseal button may appear before software and configuration is done applying letting you proceed to the user flow before technician flow provisioning is complete. The green screen validates that enrollment was successful, not that the technician flow is necessarily complete.
+> Technician flow inherits behavior from [self-deploying mode](../../self-deploying.md). Per the Self-Deploying Mode documentation, it uses the Enrollment Status Page to hold the device in a provisioning state and prevent the user from proceeding to the desktop after enrollment but before software and configuration is done applying. As such, if Enrollment Status Page is disabled, the reseal button may appear before software and configuration is done applying letting you proceed to the user flow before technician flow provisioning is complete. The green screen validates that enrollment was successful, not that the technician flow is necessarily complete.
 
 If the pre-provisioning process fails:
 

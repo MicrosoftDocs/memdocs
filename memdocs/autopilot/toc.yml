@@ -157,10 +157,10 @@ items:
             href: tutorial/pre-provisioning/azure-ad-join-autopilot-profile.md
           - name: Step 7 - Assign Autopilot device to a user (optional)
             href: tutorial/pre-provisioning/azure-ad-join-assign-device-to-user.md
-          - name: Step 8 - Technician phase
-            href: tutorial/pre-provisioning/azure-ad-join-technician-phase.md
-          - name: Step 9 - User phase
-            href: tutorial/pre-provisioning/azure-ad-join-user-phase.md
+          - name: Step 8 - Technician flow
+            href: tutorial/pre-provisioning/azure-ad-join-technician-flow.md
+          - name: Step 9 - User flow
+            href: tutorial/pre-provisioning/azure-ad-join-user-flow.md
       - name: Pre-provisioned hybrid Azure AD join
         href: tutorial/pre-provisioning/hybrid-azure-ad-join-workflow.md
         items:
@@ -180,10 +180,10 @@ items:
             href: tutorial/pre-provisioning/hybrid-azure-ad-join-autopilot-profile.md
           - name: Step 8 - Configure and assign domain join profile
             href: tutorial/pre-provisioning/hybrid-azure-ad-join-domain-join-profile.md
-          - name: Step 9 - Technician phase
-            href: tutorial/pre-provisioning/hybrid-azure-ad-join-technician-phase.md
-          - name: Step 10 - User phase
-            href: tutorial/pre-provisioning/hybrid-azure-ad-join-user-phase.md
+          - name: Step 9 - Technician flow
+            href: tutorial/pre-provisioning/hybrid-azure-ad-join-technician-flow.md
+          - name: Step 10 - User flow
+            href: tutorial/pre-provisioning/hybrid-azure-ad-join-user-flow.md
     - name: Windows Autopilot Reset
       items:
       - name: Windows Autopilot Reset
