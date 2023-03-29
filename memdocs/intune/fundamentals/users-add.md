@@ -51,7 +51,7 @@ You can manually add users to your Intune subscription via the [Microsoft 365 ad
 4. Choose **Next**.
 5. On the **Assign product licenses** page, select a **Location** and then choose a license for this user. A license including Intune is required.
 6. Choose **Next**.
-7. On the **Optional settings** page, you have the option to:
+7. On the **Optional settings** page, you can:
     - Assign the new user additional roles (by default the new user is given the User role).
     - Provide profile information.
 8. Choose **Next**.
@@ -110,7 +110,7 @@ To access the Microsoft 365 admin center, your account must have a **Sign-in all
 
 ## Sync Active Directory and add users to Intune
 
-You can configure directory synchronization to import user accounts from your on-premises Active Directory to Microsoft Azure Active Directory (Azure AD) which includes Intune users. Having your on-premises Active Directory service connected with all of your Azure Active Directory-based services makes managing user identity much simpler. You can also configure single sign-on features to make the authentication experience for your users familiar and easy. By linking the same [Azure AD tenant](/azure/active-directory/hybrid/whatis-hybrid-identity) with multiple services, the user accounts that you have previously synchronized are available to all cloud-based services.
+You can configure directory synchronization to import user accounts from your on-premises Active Directory to Microsoft Azure Active Directory (Azure AD) which includes Intune users. Having your on-premises Active Directory service connected with all of your Azure Active Directory-based services makes managing user identity much simpler. You can also configure single sign-on features to make the authentication experience for your users familiar and easy. When you link the same [Azure AD tenant](/azure/active-directory/hybrid/whatis-hybrid-identity) with multiple services, the user accounts that you have previously synchronized are available to all cloud-based services.
 
 Be sure your AD admins have access to your Azure AD subscription, and are trained to complete common AD and Azure AD tasks.
 
