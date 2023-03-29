@@ -125,30 +125,9 @@ For more information about configuring Settings Catalog profiles in Intune, go t
 ### New Google domain allow-list settings for Android Enterprise personally owned devices with a work profile<!-- 14711684  -->  
 On Android Enterprise personally owned devices with a work profile, you can configure settings that restrict device features and settings.
 
-Currently, there is an **Add and remove accounts** setting that can allow Google accounts be added to the work profile. For this setting, when you select **Allow all accounts types**, you can also configure:
+Currently, there is an **Add and remove accounts** setting that allows Google accounts be added to the work profile. For this setting, when you select **Allow all accounts types**, you can also configure:
 
-- **Google domain allow-list**:  Restricts users to add only certain Google account domains in the work profile. You can import a list of allowed domains or add them in the admin center using the `contoso.com` format. When left blank, by default, the OS might allow adding all Google domains in the work profile.
-
-For more information on the settings you can configure, go to [Android Enterprise device settings list to allow or restrict features on personally owned devices using Intune](../configuration/device-restrictions-android-enterprise-personal.md).
-
-Applies to:
-
-- Android Enterprise personally owned devices with a work profile
-
-### Add Google accounts to Android Enterprise personally owned devices with a work profile<!-- 9113561  -->
-
-On Android Enterprise personally owned devices with a work profile, you can configure settings that restrict device features and settings. Currently, there's an **Add and remove accounts** setting. This setting prevents accounts from being added in the work profile, including preventing Google accounts. 
-
-This setting is changing, and you will be able to add Google accounts. The **Add and remove accounts** setting options will be: 
-
-- **Block all accounts types**: Prevents users from manually adding or removing accounts in the work profile. For example, when you deploy the Gmail app into the work profile, you can prevent users from adding or removing accounts in this work profile.
-- **Allow all accounts types**: Allows all accounts, including Google accounts. These Google accounts are blocked from installing apps from the **Managed Google Play Store**.
-
-  This setting requires:
-
-  - Google Play app version 80970100 or higher.
-
-- **Allow all accounts types, except Google accounts** (default): Intune doesn't change or update this setting. By default, the OS might allow adding accounts in the work profile.
+- **Google domain allow-list**: Restricts users to add only certain Google account domains in the work profile. You can import a list of allowed domains or add them in the admin center using the `contoso.com` format. When left blank, by default, the OS might allow adding all Google domains in the work profile.
 
 For more information on the settings you can configure, go to [Android Enterprise device settings list to allow or restrict features on personally owned devices using Intune](../configuration/device-restrictions-android-enterprise-personal.md).
 
