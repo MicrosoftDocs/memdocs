@@ -290,9 +290,9 @@ Use of two or more app configuration policies for Microsoft Defender that specif
 
 **Work around**: Target each device with a single app configuration policy for Microsoft Defender, ensuring each unenrolled device is configured to use only one Site.
 
-### Fairfax Environments 
+### GCC High and FIPS support
 
-Microsoft Tunnel for MAM is not supported in fairfax environments 
+Microsoft Tunnel for MAM is supported for GGC High environments, but doesn't support Federal Information Processing Standard (FIPS).
 
 ## Next steps
 
