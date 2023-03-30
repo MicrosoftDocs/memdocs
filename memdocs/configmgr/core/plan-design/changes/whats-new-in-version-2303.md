@@ -38,9 +38,10 @@ For more information, see [Synchronize collections to Azure Active Directory Gro
 
 <!--13061435-->
 ### Endpoint Security reports in Intune admin center for Tenant Attached devices 
-Starting with Configuration Manager version 2303, you can now opt into Endpoint Security reports in Intune admin center for tenant attached devices.Once you opt in, Unhealthy endpoints report and Active malware reports under Endpoint security node in Intune admin center will start showing data from tenant attached devices. 
+Starting with Configuration Manager version 2303, you can now opt for Endpoint Security reports in Intune admin center for tenant attached devices.   
+Once you opt in, Unhealthy endpoints and Active malware operational reports under Endpoint security node in Intune admin center will start showing data from tenant attached devices. Also, Antivirus agent status and Detected malware organizational reports under Microsoft Defender Antivirus in Reports section will show data from tenant attached devices. 
 
-For more information, see [Create and deploy Antivirus policies from the admin center](/memdocs/configmgr/tenant-attach/deploy-antivirus-policy.md).
+For more details, see [Tenant attach - Create and deploy Antivirus policies from the admin center](../../../tenant-attach/deploy-antivirus-policy.md).
 
 ## Site infrastructure
 <!--13022894-->
@@ -51,7 +52,7 @@ We have introduced audit messages about authorization failure in admin service. 
 
 With the new audit messages, we intend to avoid the inconvenience of log files rollback. Details about the user, resource access attempts and the number of attempts for all the authorized requests made by user in a day will now be available. We are also auditing read operations for HTTPS requests and for cloud-initiated operations. This helps admins to scope permission and roles of users while also determining if there are any malicious users. All unauthorized requests are aggregated for 24 hours before being sent to the status message viewer. 
 
-For more information, see [Administration Service documentation](/memdocs/configmgr/develop/adminservice/overview.md).
+For more information, see [Administration Service documentation](../../../develop/adminservice/overview.md).
 
 ### SQL Server 2022 version support added for Configuration Manager 
 
@@ -61,7 +62,13 @@ You can use this version of SQL Server for the following sites:
 -	A primary site 
 -	A secondary site 
 
-For more information, see [SQL Server 2022 version support added for Configuration Manager](2023/technical-preview-2303.md#bkmk_SQlodbc)
+The following table identifies the recommended compatibility levels for Configuration Manager site databases:
+
+|SQL Server version | Supported compatibility levels | Recommended level |
+|----------------|--------------------|--------|
+| SQL Server 2022 | 150, 140, 130, 120, 110 | 150 |
+
+For more information, see [support-for-sql-server-versions.](../../plan-design/configs/support-for-sql-server-versions.md)
 
 <!--## Client management-->
 
@@ -73,26 +80,24 @@ For more information, see [SQL Server 2022 version support added for Configurati
 
 ### Unified update platform (UUP) GA release 
 
-The Unified Update Platform (UUP) servicing is for all Windows 11, version 22H2 updates delivered via Windows Server Update Services (WSUS) and Configuration Manager! Starting March 28th, on-premises Windows 11, version 22H2 devices will receive quality updates via the Unified Update Platform (UUP). Ref [blog](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/what-s-uup-new-update-style-coming-next-week/ba-p/3773065) post 
+The Unified Update Platform (UUP) servicing is finally here for all Windows 11, version 22H2 updates delivered via Windows Server Update Services (WSUS) and Configuration Manager! Starting March 28th, on-premises Windows 11, version 22H2 devices will receive quality updates via the Unified Update Platform (UUP). For more information see [What’s UUP? New update style coming next week!](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/what-s-uup-new-update-style-coming-next-week/ba-p/3773065). 
 The Unified Update Platform (UUP) is a single publishing, hosting, scan, and download model for OS quality and feature updates. It offers improved delivery technologies in response to IT admin requests for more seamless updates, more control over installation time, more battery life, and lighter download size.  
 Note:  
 A one-time 10 GB download to distribution points with your first UUP update. UUP is becoming the default and only way to download quality updates. This means that you should plan for an extra 10GB download to distribution points (not endpoint clients) with the March 28th update. That's a one-time 10GB download for updates for Windows 11, version 22H2 per architecture (AMD64 and ARM64). 
 
 ### Update to the default value of supersedence age in months for software updates
 <!--16441147-->
-With Unified Update Platform (UUP) general availability release, the feature update and non-feature update supersedence should be greater than 3. For new software update role installations we're updating this to 6, existing customer can review and update to 6. 
-Update to the default value of supersedence age in months for software updates. 
-For more information, see [Update to the default value of supersedence age in months for software updates](2023/technical-preview-2301.md#bkmk_softwareupdates) 
+With Unified Update Platform (UUP) general availability release, the feature update and non-feature update supersedence should be greater than 3. For new software update role installations, we're updating this to 6, existing customers can review and update to 6.  
+Update to the default value of supersedence age in months for software updates.  
 
-#### Known Issue
-Update to the default value of supersedence age in months for software updates. Removing SUP role in Admin Console does not reset the supersedence age property in WMI. As a result, while reconfiguring the role, the previously configured value is shown in the configuration window. This property needs to be reset to default value on role removal. 
+#### Known issue: 
+
+Update to the default value of supersedence age in months for software updates will not impact existing configurations. Removing SUP role in Admin Console does not reset the supersedence age property in WMI. As a result, while reconfiguring the role, the previously configured value is shown in the configuration window.  
 
 ### Enable Windows features introduced via Windows servicing that are off by default 
 <!--16834520-->
-To learn more about the settings: “Enable Windows features introduced via Windows servicing that are off by default”, please read this [blog](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/commercial-control-for-continuous-innovation/ba-p/3737575). The post describes the Commercial control for continuous innovation in Windows. The setting for this policy is now integrated with the Configuration Manager 2303. More information on the Commercial control timeline and versions of Windows 11 supported by the setting can be found in the blog.
-The Windows features that the policy controls are released in version 22621.1344 and above.
 
-For more information, see [Enable Windows features introduced via Windows servicing that are off by default](2023/technical-preview-2302.md#bkmk_winfeatures) 
+The Commercial control for continuous innovation in Windows is now integrated with Configuration Manager 2303 release. For More information, see [Commercial control for continuous innovation (Windows 11)](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/commercial-control-for-continuous-innovation/ba-p/3737575)
 
 <!--## OS deployment-->
 
@@ -114,6 +119,18 @@ To use the theme, select the arrow from the top left of the ribbon, then choose�
 
 ## Deprecated features
 <!--10901602-->
+
+### Removed Community hub service and integration with ConfigMgr 
+ 
+Removed Community Hub configuration from Hierarchy settings and Community Hub service integration. 
+ Learn about support changes before they're implemented in [removed and deprecated items](deprecated/removed-and-deprecated.md).
+<!--The following features are deprecated. You can still use them now, but Microsoft plans to end support in the future.-->
+
+## Other updates
+
+### Maintenance window schedules
+Offset for recurring monthly maintenance window schedules. Based upon your feedback, you can now offset monthly maintenance window schedules to better align deployments with the release of monthly security updates. For example, using a maximum offset of seven days after the second Tuesday of the month, sets the maintenance window for next Monday. 
+
 ### Removing Microsoft Store for Business and Education new config capability
 
 As part of Microsoft Store for Business deprecation, we are making these changes to the customer experience with using this feature: 
@@ -124,16 +141,7 @@ As part of Microsoft Store for Business deprecation, we are making these changes
 
 - Display a warning in the Create Application Wizard when user attempts to create a new app from Store license information. 
 
-Learn about support changes before they're implemented in [removed and deprecated items](deprecated/removed-and-deprecated.md).
-
-<!--The following features are deprecated. You can still use them now, but Microsoft plans to end support in the future.-->
-
-## Other updates
-
-### Maintenance window schedules
-Offset for recurring monthly maintenance window schedules. Based upon your feedback, you can now offset monthly maintenance window schedules to better align deployments with the release of monthly security updates. For example, using a maximum offset of seven days after the second Tuesday of the month, sets the maintenance window for next Monday. 
-
-
+For more information, see [removed and deprecated items](deprecated/removed-and-deprecated.md). 
 <!--Starting with this version, the following features are no longer [pre-release](../../servers/manage/pre-release-features.md):
 -->
 
