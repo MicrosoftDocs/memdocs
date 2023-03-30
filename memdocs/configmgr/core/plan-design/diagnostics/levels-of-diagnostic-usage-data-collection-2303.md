@@ -65,6 +65,8 @@ For Configuration Manager version 2303, this level includes the following data:
 
 ### Cloud services (Level 1)
 
+- ***[New]*** Count of existing and new devices that are cloud attached since the last data collection
+
 - Count of clients by co-management enrollment method
 
 - Error statistics for co-management enrollment
