@@ -7,7 +7,7 @@ keywords:
 author: brenduns 
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/09/2022
+ms.date: 04/18/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -78,7 +78,10 @@ By default, devices check in with Intune about every 8 hours. If an update is av
 
       - **Notify only**: Download the software update and notify the user through System Settings.
 
-      - **Install later**: Download the software update and install it later. This action is not available for major OS upgrades.
+      - **Install later**: Download the software update and install it later. This action is not available for major OS upgrades. This action supports the following configurations:
+
+        - **Max User Deferrals**:  When an update type is configured to *Install later*, this setting allows you to specify the maximum number of times a user can postpone a minor OS update before it’s installed. The system prompts the user once a day. Available for devices running macOS 12 and later.
+        - **Priority**: When an update type is configured to *Install later*, this setting allows you to specify values of *Low* or *High* for the scheduling priority for downloading and preparing minor OS updates. Available for devices running macOS 12.3 and later.
 
       - **Not configured**: No action taken on the software update.
 
