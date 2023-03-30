@@ -94,7 +94,7 @@ Currently virtual desktop infrastructure (VDI) is not supported by Endpoint Priv
 
 ### Why is my elevation settings policy showing error?
 
-The elevation settings policy controls the enablement of EPM and the configuration of the client side components. When this policy is in error it indicates the device had an issue enabling EPM. The most common reason is the [required Windows updates](/memdocs/intune/protect/epm-overview.md#windows-client-requirements) are not installed on the device.
+The elevation settings policy controls the enablement of EPM and the configuration of the client side components. When this policy is in error it indicates the device had an issue enabling EPM. The most common reason is the [required Windows updates](../protect/epm-overview.md#windows-client-requirements) are not installed on the device.
 
 ### What happens when someone with administrative privileges uses a device that is enabled for EPM?
 
