@@ -50,10 +50,11 @@ Once all of the configurations for Windows Autopilot for pre-provisioned deploym
    - The user assigned to the device if a user was assigned in the **Assign Autopilot device to a user (optional)** step.
    - A QR code containing a unique identifier for the device. You can use this code to look up the device in Intune which you might want to do to verify configurations, and if make any necessary changes.
 
-    > [!NOTE]
-    > The QR codes can be scanned using a companion app. The app also configures the device to specify who it belongs to. An [open-source sample of the companion app](https://github.com/Microsoft/WindowsAutopilotCompanion) that integrates with Intune by using the Graph API has been published to GitHub by the Autopilot team.
+      > [!NOTE]
+      >
+      > The QR codes can be scanned using a companion app. The app also configures the device to specify who it belongs to. An [open-source sample of the companion app](https://github.com/Microsoft/WindowsAutopilotCompanion) that integrates with Intune by using the Graph API has been published to GitHub by the Autopilot team.
 
-   ![Windows Autopilot configuration screen.](../../images/landing.png)
+      ![Windows Autopilot configuration screen.](../../images/landing.png)
 
 1. Validate that the information in the **Windows Autopilot Configuration** screen is correct. If any changes are needed, make the changes, and then select **Refresh** to redownload the updated Autopilot profile details.
 
@@ -63,7 +64,7 @@ Once all of the configurations for Windows Autopilot for pre-provisioned deploym
 
    - If the pre-provisioning process completes successfully, a green status screen appears with information about the device, including the same details presented previously. For example, Autopilot profile, organization name, assigned user, and QR code. The elapsed time for the pre-provisioning steps is also provided.
 
-    ![Green configuration screen.](../../images/white-glove-result.png)
+        ![Green configuration screen.](../../images/white-glove-result.png)
 
      1. Select **Reseal** to shut down the device. At that point, the device can be shipped to the end user.
 
