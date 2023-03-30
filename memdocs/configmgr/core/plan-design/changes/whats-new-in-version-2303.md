@@ -47,7 +47,7 @@ For more information, see [Create and deploy Antivirus policies from the admin c
 
 ### Authorization failure message in admin service now shown in Status message viewer 
 
-We have introduced audit messages about authorization failure in admin service. You can now view request details and status messages. These messages will be shown in “All Status Message” at “Status Message Queries” in “Monitoring” ribbon. Previously these failures were logged in log files. 
+We have introduced audit messages about authorization failure in admin service. You can now view request details and status messages. These messages are shown in “All Status Message” at “Status Message Queries” in “Monitoring” ribbon. Previously these failures were logged in log files. 
 
 With the new audit messages, we intend to avoid the inconvenience of log files rollback. Details about the user, resource access attempts and the number of attempts for all the authorized requests made by user in a day will now be available. We are also auditing read operations for HTTPS requests and for cloud-initiated operations. This will help admins to scope permission and roles of users while also determining if there are any malicious users. All unauthorized requests will be aggregated for 24 hours before being sent to the status message viewer. 
 
@@ -76,7 +76,7 @@ For more information, see [SQL Server 2022 version support added for Configurati
 The Unified Update Platform (UUP) servicing is for all Windows 11, version 22H2 updates delivered via Windows Server Update Services (WSUS) and Configuration Manager! Starting March 28th, on-premises Windows 11, version 22H2 devices will receive quality updates via the Unified Update Platform (UUP). Ref [blog](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/what-s-uup-new-update-style-coming-next-week/ba-p/3773065) post 
 The Unified Update Platform (UUP) is a single publishing, hosting, scan, and download model for OS quality and feature updates. It offers improved delivery technologies in response to IT admin requests for more seamless updates, more control over installation time, more battery life, and lighter download size.  
 Note:  
-A one-time 10GB download to distribution points with your first UUP update. UUP is becoming the default and only way to download quality updates. This means that you should plan for an additional 10GB download to distribution points (not endpoint clients) with the March 28th update. That's a one-time 10GB download for updates for Windows 11, version 22H2 per architecture (AMD64 and ARM64). 
+A one-time 10 GB download to distribution points with your first UUP update. UUP is becoming the default and only way to download quality updates. This means that you should plan for an extra 10GB download to distribution points (not endpoint clients) with the March 28th update. That's a one-time 10GB download for updates for Windows 11, version 22H2 per architecture (AMD64 and ARM64). 
 
 ### Update to the default value of supersedence age in months for software updates
 <!--16441147-->
@@ -89,8 +89,8 @@ Update to the default value of supersedence age in months for software updates. 
 
 ### Enable Windows features introduced via Windows servicing that are off by default 
 <!--16834520-->
-To learn more about the settings: “Enable Windows features introduced via Windows servicing that are off by default”, please read this blog. The post describes the Commercial control for continuous innovation in Windows. The setting for this policy is now integrated with the Configuration Manager 2303. More information on the Commercial control timeline and versions of Windows 11 supported by the setting can be found in the blog.
-The Windows features that the policy will control are released in version 22621.1344 and above.
+To learn more about the settings: “Enable Windows features introduced via Windows servicing that are off by default”, please read this [blog](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/commercial-control-for-continuous-innovation/ba-p/3737575). The post describes the Commercial control for continuous innovation in Windows. The setting for this policy is now integrated with the Configuration Manager 2303. More information on the Commercial control timeline and versions of Windows 11 supported by the setting can be found in the blog.
+The Windows features that the policy controls are released in version 22621.1344 and above.
 
 For more information, see [Enable Windows features introduced via Windows servicing that are off by default](2023/technical-preview-2302.md#bkmk_winfeatures) 
 
