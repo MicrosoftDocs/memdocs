@@ -24,7 +24,7 @@ There are several Microsoft solutions that might work best for you in different 
 
 - For a small organization, a tool like the Windows administration center may be a great fit.
 - Approximately 75% of IT organizations use Configuration Manager to manage their devices.
-- Microsoft Azure provides various solutions from the cloud or on-premises with Azure Stack that primarily target server management.
+- Microsoft Azure provides various solutions from the cloud or on-premises with Azure Arc and Azure Stack that primarily target server management.
 - Microsoft Intune provides cloud management of clients.
 - You can combine Configuration Manager and Intune with co-management.
 - You can use [Security Management for Microsoft Defender for Endpoint (MDE)](../../../intune/protect/mde-security-integration.md) to manage security settings for devices utilizing Microsoft Defender for Endpoint.
@@ -34,8 +34,8 @@ Use the following table to help compare these management technologies:
 |  | Cloud-only | Cloud-attached | On-premises | Disconnected |
 |---------|---------|---------|---------|---------|
 | **Hyper-V host** | Not applicable | - Azure Stack<br/> - Windows Admin Center<br/> - Security Management for MDE <br/>- Virtual Machine Manager | - Azure Stack<br/> - Windows Admin Center<br/> - Virtual Machine Manager | - Azure Stack<br/> - Windows Admin Center<br/> - Virtual Machine Manager |
-| **Windows Server** | - Azure management<br/> - Configuration Manager<br/> - Security Management for MDE | - Azure management<br/> - Configuration Manager <br/> - Security Management for MDE | - Azure management<br/> - Configuration Manager | Configuration Manager |
-| **Linux Server** | Azure management | Azure management | Azure management |  |
+| **Windows Server** | - Azure Arc <br/> - Configuration Manager<br/> - Security Management for MDE | - Azure Arc<br/> - Configuration Manager <br/> - Security Management for MDE | - Azure Arc<br/> - Configuration Manager | Configuration Manager |
+| **Linux Server** | Azure Arc | Azure Arc | Azure Arc |  |
 | **Windows 10/11** | - Intune<br/> - Configuration Manager<br/> - Security Management for MDE | - Intune<br/> - Configuration Manager<br/> - Security Management for MDE | - Intune<br/> - Configuration Manager<br/> - Security Management for MDE | Configuration Manager |
 | **Windows 7 or 8.1** | Configuration Manager | Configuration Manager | Configuration Manager | Configuration Manager |
 | **Azure Virtual Desktop** | Configuration Manager | Not applicable | Not applicable | Not applicable |
@@ -45,7 +45,7 @@ For more information, see the following articles:
 - [What is Azure Stack?](/azure-stack/operator/azure-stack-overview)
 - [What is Windows Admin Center?](/windows-server/manage/windows-admin-center/understand/what-is)
 - [What is Virtual Machine Manager?](/system-center/vmm/overview)
-- [Azure management products](/azure/)
+- [Azure Arc products](/azure/)
 - [What is Azure Virtual Desktop?](/azure/virtual-desktop/overview)
 - [Security Management for Microsoft Defender for Endpoint (MDE)](../../../intune/protect/mde-security-integration.md)
 
