@@ -46,6 +46,7 @@ To make it easier for you to configure and use Android Enterprise management, up
 
 >[!NOTE]
 >When an end user enrolls their Android Enterprise fully managed device, the Intune Company Portal app is automatically installed and the application icon may be visible to the end user. If the end user attempts to launch the Intune Company Portal app, the end user will be redirected to the Microsoft Intune app and the Company Portal app icon will be subsequently hidden.
+>Additionally, the Microsoft Intune and Authenticator apps will not be able to have an uninstall issued to them as they are crucial applications for multiple Android Enterprise enrollment scenarios.
 
 ## Before you start
 
