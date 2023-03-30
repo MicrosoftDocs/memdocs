@@ -32,12 +32,12 @@ ms.collection:
 
 # Set idle session time limits for Windows 365 Frontline Cloud PCs
 
-Windows 365 Frontline Cloud PCs remain active unless the user signs off from the Cloud PC through the start menu. A user who forgets to sign off might block others from their Frontline Cloud PCs if the max active session limit has been reached. To prevent users from forgetting to sign off, you can create a configuration profile to enforce idle session time limits on all your Frontline Cloud PCs.
+Windows 365 Frontline Cloud PCs remain active unless the user signs off from the Cloud PC through the start menu. A user who forgets to sign out might block others from their Frontline Cloud PCs if the max active session limit has been reached. To avoid this problem, you can create a configuration profile to enforce idle session time limits on all your Frontline Cloud PCs.
 
 1. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration profiles** > **Create profile**.
 2. Under **Create a profile**, select the following options:
 
-  - **Plaform**: Windows 10 and later
+  - **Platform**: Windows 10 and later
   - **Profile type**: Settings catalog
 
 3. Select **Create**.
@@ -45,8 +45,8 @@ Windows 365 Frontline Cloud PCs remain active unless the user signs off from the
 5. On the **Configuration settings** page, select **Add settings**.
 6. Under **Settings picker**, search for "session time limits".
 7. Select the box for **Set time limit for active but idle Desktop Services session**.
-8. Under **Create profile**, expand **Administrative Templates** > enable **Set time limit for acitve but idle Remote Desktop Services sessions**.
-9. For **Idle session limit: (Device)**, select a time limit that meets your company's compliance requirements. When a Frontline Cloud PC has been idle for this period of time, the Cloud PC will be disconnected.
+8. Under **Create profile**, expand **Administrative Templates** > enable **Set time limit for active but idle Remote Desktop Services sessions**.
+9. For **Idle session limit: (Device)**, select a time limit that meets your company's compliance requirements. When a Frontline Cloud PC has been idle for this period of time, the Cloud PC is automatically disconnected.
 10. Select **Next**.
 12. On the **Scope tags** page, select the scope tags that you want > **Next**.
 13. On the **Assignments** page, add the groups that you want to provide Frontline Cloud PCs > **Next**.
