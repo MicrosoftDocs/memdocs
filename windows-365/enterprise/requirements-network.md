@@ -204,6 +204,10 @@ You must allow traffic in your Azure network configuration to the service URLs a
 
 ---
 
+### Use FQDN tags for endpoints through Azure Firewall
+
+Windows 365 fully qualified domain name (FQDN) tags make it easier to grant access to Windows 365 required service endpoints through an Azure firewall. For more information, see [Use Azure Firewall to manage and secure Windows 365 environments](azure-firewall-windows-365.md).
+
 ### Remote Desktop Protocol (RDP) broker service endpoints
 
 Direct connectivity to Azure Virtual Desktop RDP broker service endpoints is critical for remoting performance to a Cloud PC. These endpoints affect both connectivity and latency. To align with the [Microsoft 365 network connectivity principles](/microsoft-365/enterprise/microsoft-365-network-connectivity-principles#new-office-365-endpoint-categories), you should categorize these endpoints as **Optimize** endpoints. We recommend that you use a direct path from your Azure virtual network to those endpoints.
