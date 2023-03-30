@@ -78,7 +78,7 @@ For more information about consent and Azure AD applications, see [Request the p
 5. Select **Add**.
 6. For **Select the Mobile Threat Defense connector to setup,** choose **BlackBerry Protect Mobile**. 
 7. Select **Open the BlackBerry Protect Mobile admin console**. Keep the Microsoft Intune admin center tab open for later.
-8. Sign in with your Azure AD account, and then follow the instructions in [Integrating UES with Intune to respond to mobile threats](https://docs.blackberry.com/en/unified-endpoint-security/blackberry-ues/setup/setup/Integrating-EMM-to-respond-to-mobile-threats) (opens BlackBerry UES docs) to complete setup.  
+8. Sign in with your Azure AD account, and then follow the instructions in [Integrating UES with Intune to respond to mobile threats](https://docs.blackberry.com/en/unified-endpoint-security/blackberry-ues/setup/setup/Setting-up-BlackBerry-Protect/Integrating-EMM-to-respond-to-mobile-threats) (opens BlackBerry UES docs) to complete setup.  
 9. After you finish setup in the UES management console, return to your tab in the Microsoft Intune admin center.
 10. Under **MDM Compliance Policy Settings**, turn on the following settings:
     * **Connect Android devices to BlackBerry Protect Mobile**
