@@ -75,7 +75,7 @@ Now everyone in the group is a member of the *Security operations* role and can 
 
 ## Clean up resources
 
-If you don't want to use the new custom role any more, you can delete it. Choose **Roles** > **All roles** > choose the ellipses next to the role > **Delete**.
+If you don't want to use the new custom role anymore, you can delete it. Choose **Roles** > **All roles** > choose the ellipses next to the role > **Delete**.
 
 ## Next steps
 
