@@ -97,8 +97,9 @@ To select an ANC, follow these steps:
     - **Windows Autopatch** is a cloud service that automates updates for Windows, Microsoft 365 Apps for enterprise, Microsoft Edge, and Microsoft Teams on both physical and virtual devices. For more information, see [What is What is Windows Autopatch?](/windows/deployment/windows-autopatch/overview/windows-autopatch-overview) and the [Windows Autopatch FAQ](https://go.microsoft.com/fwlink/?linkid=2200228).
     - **Microsoft Managed Desktop** is a cloud service that helps with device deployment, service management and operations, and security. For more information, see [What is Microsoft Managed Desktop?](/managed-desktop/intro/).
 8. Select **Next**.
-9. On the **Assignments** page, choose **Select groups** > choose the groups you want this policy assigned to > **Select** > **Next**. Nested groups aren't currently supported.
-1o. On the **Review + create** page, select **Create**. If you used Hybrid Azure AD Join as the join type, it can take up to 60 minutes for the policy creation process to complete. The time depends on when the Azure AD connect sync last happened.
+9. On the **Assignments** page, choose **Select groups** > choose the groups you want this policy assigned to > **Select**. Nested groups aren't currently supported.
+10. For Windows 365 Frontline, you must also select a Cloud PC size for each group in the policy. Choose **Select one** > select a size under **Available sizes** > **Select**. After you've selected a size for each group, select **Next**.
+11. On the **Review + create** page, select **Create**. If you used Hybrid Azure AD Join as the join type, it can take up to 60 minutes for the policy creation process to complete. The time depends on when the Azure AD connect sync last happened.
 
 After the provisioning policy is created and assigned, Windows 365 automatically starts to provision Cloud PCs and assigns them to users in the assigned groups.
 
