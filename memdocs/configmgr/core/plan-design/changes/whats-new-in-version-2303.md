@@ -32,7 +32,7 @@ Microsoft Configuration Manager is an integrated solution for managing all your 
 ## Cloud-attached management
 <!--14716797-->
 ### Improvements to Cloud Sync (Collections to Azure Active Directory Group Synchronization) feature
-Starting with Configuration Manager version 2303 collection member sync status (Success, In Progress, Failed - with reason for failure) will be available in the Collection Cloud Sync dashboard for the chosen collection on the bottom pane. Earlier with Configuration Manager version 2211, the scalability of this feature has been improved with better throttling and error handling. Additionally, dedicated dashboards for user collections and device collections are added in Monitoring workspace to show Cloud Sync status. The dashboard displays the Cloud Sync status per collection with the mapped Azure AD group, total member count, synced member count, status (success, failed, in progress) and last sync details. 
+Starting with Configuration Manager version 2303 collection member sync status (Success, In Progress, Failed - with reason for failure) is available in the Collection Cloud Sync dashboard for the chosen collection on the bottom pane. Earlier with Configuration Manager version 2211, the scalability of this feature has been improved with better throttling and error handling. Additionally, dedicated dashboards for user collections and device collections are added in Monitoring workspace to show Cloud Sync status. The dashboard displays the Cloud Sync status per collection with the mapped Azure AD group, total member count, synced member count, status (success, failed, in progress) and last sync details. 
 
 For more information, see [Synchronize collections to Azure Active Directory Group](../../clients/manage/collections/synchronize-collections-aad-group.md).
 
@@ -41,7 +41,7 @@ For more information, see [Synchronize collections to Azure Active Directory Gro
 Starting with Configuration Manager version 2303, you can now opt for Endpoint Security reports in Intune admin center for tenant attached devices.   
 Once you opt in, Unhealthy endpoints and Active malware operational reports under Endpoint security node in Intune admin center will start showing data from tenant attached devices. Also, Antivirus agent status and Detected malware organizational reports under Microsoft Defender Antivirus in Reports section will show data from tenant attached devices. 
 
-For more details, see [Tenant attach - Create and deploy Antivirus policies from the admin center](../../../tenant-attach/deploy-antivirus-policy.md).
+For more information, see [Tenant attach - Create and deploy Antivirus policies from the admin center](../../../tenant-attach/deploy-antivirus-policy.md).
 
 ## Site infrastructure
 <!--13022894-->
@@ -80,10 +80,10 @@ For more information, see [support-for-sql-server-versions.](../../plan-design/c
 
 ### Unified update platform (UUP) GA release 
 
-The Unified Update Platform (UUP) servicing is finally here for all Windows 11, version 22H2 updates delivered via Windows Server Update Services (WSUS) and Configuration Manager! Starting March 28th, on-premises Windows 11, version 22H2 devices will receive quality updates via the Unified Update Platform (UUP). For more information see [What’s UUP? New update style coming next week!](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/what-s-uup-new-update-style-coming-next-week/ba-p/3773065). 
+The Unified Update Platform (UUP) servicing is finally here for all Windows 11, version 22H2 updates delivered via Windows Server Update Services (WSUS) and Configuration Manager! Starting March 28, on-premises Windows 11, version 22H2 devices will receive quality updates via the Unified Update Platform (UUP). For more information, see [What’s UUP? New update style coming next week!](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/what-s-uup-new-update-style-coming-next-week/ba-p/3773065). 
 The Unified Update Platform (UUP) is a single publishing, hosting, scan, and download model for OS quality and feature updates. It offers improved delivery technologies in response to IT admin requests for more seamless updates, more control over installation time, more battery life, and lighter download size.  
 Note:  
-A one-time 10 GB download to distribution points with your first UUP update. UUP is becoming the default and only way to download quality updates. This means that you should plan for an extra 10GB download to distribution points (not endpoint clients) with the March 28th update. That's a one-time 10GB download for updates for Windows 11, version 22H2 per architecture (AMD64 and ARM64). 
+A one-time 10-GB download to distribution points with your first UUP update. UUP is becoming the default and only way to download quality updates. This means that you should plan for an extra 10GB download to distribution points (not endpoint clients) with the March 28th update. That's a one-time 10GB download for updates for Windows 11, version 22H2 per architecture (AMD64 and ARM64). 
 
 ### Update to the default value of supersedence age in months for software updates
 <!--16441147-->
