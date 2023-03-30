@@ -36,7 +36,7 @@ ms.collection:
 
 You'll receive a message from Company Portal if your device password, PIN, or passcode doesn't meet your organization's security requirements. Password requirements are put in place to prevent unauthorized individuals from gaining access to the work or school data on your enrolled device. Until you create a more secure device password, you may be blocked from accessing your org's network.  
 
-This article lists all of the password-related messages you could receive, by OS platform.     
+This article lists all of the password-related messages you could receive, by OS platform. Company Portal sends one message per password requirement, so you may receive more than one message at a time. 
 
 ## Change password, passcode, PIN  
 
