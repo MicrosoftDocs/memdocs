@@ -49,14 +49,14 @@ Windows 365 Frontline Cloud PCs rely on active hours Windows Update policies to 
 | Option to check for Windows Updates | Default |
 | Change notification update level | Turn off all notifications, including restart warnings\* |
 | Deadline for feature updates | Default (Not configured) |
-| Deadlien for quality updates | Default (Not configured) |
+| Deadline for quality updates | Default (Not configured) |
 | Grace Period | 2 |
 | Auto-restart before deadline | No |
 | [Active hours start](/windows/client-management/mdm/policy-csp-update) | Defined by IT administrator |
 | [Active hours end](/windows/client-management/mdm/policy-csp-update) | Defined by IT administrator |
 | Active hours max range | Defined by IT administrator |
 
-\* These settings are most important to make sure that users are not disrupted by a Windows Update during their work hours.
+\* These settings are most important to make sure that users aren't disrupted by a Windows Update during their work hours.
 
 <!-- ########################## -->
 ## Next steps
