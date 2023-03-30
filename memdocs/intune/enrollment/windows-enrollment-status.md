@@ -103,11 +103,13 @@ ESP uses the [EnrollmentStatusTracking configuration service provider (CSP)](/wi
          - **All**: All assigned apps must be installed before users can use their devices.  
          - **Selected**: The selected-apps must be installed before users can use their devices. Choose **Select** to start your **Blocking apps** list. This option unlocks the **Blocking apps** settings.  
 
-           - **Only fail selected blocking apps in technician phase**: Use this setting to prevent nonessential apps from causing Autopilot deployments to fail during the technician phase of pre-provisioning. This setting enables you to install as many apps as possible before employees sign in and use the device. Your options:  
-               - **No**: During the technician phase, ESP will attempt to install all assigned apps, both nonessential and required. Autopilot deployment will fail if any of the apps fail to install. If your goal is to install as many apps as possible during pre-provisioning, selecting this option could result in device resets and increased setup time for device users.    
-             - **Yes**: ESP will only fail Autopilot deployment if the blocking apps fail to install during the technician phase of pre-provisioning. An attempt will be made to install all apps. If a non-blocking app fails to install during this phase, deployment continues as normal, and installation is retried when the user signs in to the device. This is the default setting for pre-provisioning deployments.  
+      - **Only fail selected blocking apps in technician phase**: Use this setting to prioritize the installation of critical apps during the technician phase of pre-previsioning. This setting enables you to install as many apps as possible before employees sign in and use the device. Your options:  
+         - **No**: ESP will fail Autopilot deployment if any app, blocking or non-blocking, fails to install during the technician phase. 
+         - **Yes**: ESP will only fail Autopilot deployment if the blocking apps fail to install. An attempt will be made to install all apps. If a non-blocking app that's targeted to the user fails to install during this phase, deployment continues as normal, and another attempt to install the app is made when the user signs into the device. This is the default setting for pre-provisioning deployments.   
+         
          > [!TIP] 
-         >  When using this feature, expect provisioning time to increase during the technican phase. The more apps assigned, the longer it could take. If you’re using a third party to provision your devices, tell them about the potential for increased provisioning time. Increase the ESP time-out duration to prevent deployment from failing due to a time out.  
+         >  When using this feature, expect provisioning time to increase during the technican phase. The more apps assigned, the longer it could take. If you’re using a third party to provision your devices, tell them about the potential for increased provisioning time. Increase the ESP time-out duration to prevent deployment from failing due to a time out.    
+         
 6. Select **Next**.   
 7. In **Assignments**, select the groups that will receive your profile. Optionally, select **Edit filter** to restrict the assignment further.   
 
