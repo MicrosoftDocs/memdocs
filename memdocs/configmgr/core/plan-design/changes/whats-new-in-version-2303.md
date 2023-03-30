@@ -26,7 +26,7 @@ To take full advantage of new Configuration Manager features, after you update t
 
 ## Microsoft Configuration Manager product branding 
 <!--15885998-->
-Starting with Configuration Manager version 2303 Microsoft Endpoint Configuration Manager is now Microsoft Configuration Manager 
+Starting with Configuration Manager version 2303 Microsoft Endpoint Configuration Manager is now Microsoft Configuration Manager. 
 Microsoft Configuration Manager is an integrated solution for managing all your devices. Microsoft brings together Configuration Manager and Intune, without a complex migration, and with simplified licensing. Continue to use your existing Configuration Manager investments, while taking advantage of the power of the Microsoft cloud at your own pace. 
 
 ## Cloud-attached management
@@ -80,10 +80,11 @@ For more information, see [support-for-sql-server-versions.](../../plan-design/c
 
 ### Unified update platform (UUP) GA release 
 
-The Unified Update Platform (UUP) servicing is finally here for all Windows 11, version 22H2 updates delivered via Windows Server Update Services (WSUS) and Configuration Manager! Starting March 28, on-premises Windows 11, version 22H2 devices will receive quality updates via the Unified Update Platform (UUP). For more information, see [What’s UUP? New update style coming next week!](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/what-s-uup-new-update-style-coming-next-week/ba-p/3773065). 
+The Unified Update Platform (UUP) servicing is finally here for all Windows 11, version 22H2 updates delivered via Windows Server Update Services (WSUS) and Configuration Manager! Starting March 28, on-premises Windows 11, version 22H2 devices will receive quality updates via the Unified Update Platform (UUP). For more information, see [What’s UUP? New update style!](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/what-s-uup-new-update-style-coming-next-week/ba-p/3773065). 
 The Unified Update Platform (UUP) is a single publishing, hosting, scan, and download model for OS quality and feature updates. It offers improved delivery technologies in response to IT admin requests for more seamless updates, more control over installation time, more battery life, and lighter download size.  
-Note:  
-A one-time 10-GB download to distribution points with your first UUP update. UUP is becoming the default and only way to download quality updates. This means that you should plan for an extra 10GB download to distribution points (not endpoint clients) with the March 28th update. That's a one-time 10GB download for updates for Windows 11, version 22H2 per architecture (AMD64 and ARM64). 
+
+> [!NOTE]
+>A one-time 10-GB download to distribution points with your first UUP update. UUP is becoming the default and only way to download quality updates. This means that you should plan for an extra 10GB download to distribution points (not endpoint clients) with the March 28th update. That's a one-time 10GB download for updates for Windows 11, version 22H2 per architecture (AMD64 and ARM64). 
 
 ### Update to the default value of supersedence age in months for software updates
 <!--16441147-->
@@ -97,7 +98,9 @@ Update to the default value of supersedence age in months for software updates w
 ### Enable Windows features introduced via Windows servicing that are off by default 
 <!--16834520-->
 
-The Commercial control for continuous innovation in Windows is now integrated with Configuration Manager 2303 release. For More information, see [Commercial control for continuous innovation (Windows 11)](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/commercial-control-for-continuous-innovation/ba-p/3737575)
+The Commercial control for continuous innovation in Windows is now integrated with Configuration Manager 2303 release. [Commercial control for continuous innovation (Windows 11)](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/commercial-control-for-continuous-innovation/ba-p/3737575)
+
+For more information, see [client settings in Configuration Manager](../../clients/deploy/about-client-settings.md)
 
 <!--## OS deployment-->
 
@@ -123,7 +126,7 @@ To use the theme, select the arrow from the top left of the ribbon, then choose�
 ### Removed Community hub service and integration with ConfigMgr 
  
 Removed Community Hub configuration from Hierarchy settings and Community Hub service integration. 
- Learn about support changes before they're implemented in [removed and deprecated items](deprecated/removed-and-deprecated.md).
+ Learn about support changes before they're implemented in [removed and deprecated items](deprecated/removed-and-deprecated-cmfeatures.md).
 <!--The following features are deprecated. You can still use them now, but Microsoft plans to end support in the future.-->
 
 ## Other updates
@@ -141,7 +144,7 @@ As part of Microsoft Store for Business deprecation, we are making these changes
 
 - Display a warning in the Create Application Wizard when user attempts to create a new app from Store license information. 
 
-For more information, see [removed and deprecated items](deprecated/removed-and-deprecated.md). 
+For more information, see [removed and deprecated items](deprecated/removed-and-deprecated-cmfeatures.md). 
 <!--Starting with this version, the following features are no longer [pre-release](../../servers/manage/pre-release-features.md):
 -->
 
