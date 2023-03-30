@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/29/2023
+ms.date: 03/30/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -87,6 +87,10 @@ Endpoint Privilege Management supports executing files that are locally stored o
 Endpoint Privilege Management doesn't support SSL inspection, which is known as 'break and inspect'. In order to use Endpoint Privilege Management, ensure the URLs listed in the [Intune Endpoints for Endpoint Privilege Management](../fundamentals/intune-endpoints.md#microsoft-intune-endpoint-privilege-management) are exempt from inspection.
 
 ## Frequently asked questions
+
+### Why is my virtual device not onboarding to Endpoint Privilege Management?
+
+Currently virtual desktop infrastructure (VDI) is not supported by Endpoint Privilege Management (including Windows 365 and Azure Virtual Desktop). This issue will be fixed in future release.
 
 ### Why is my elevation settings policy showing error?
 
