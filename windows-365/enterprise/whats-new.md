@@ -77,11 +77,7 @@ FQDN tags help customers simplify the creation and maintenance of the necessary 
 Windows 365 Enterprise has been assessed by a FedRAMP authorized auditor to meet FedRAMP requirements at data centers within the Continental US.
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
-### Windows 365 app
-
-#### Pin Cloud PC to task bar in Windows 11<!--43470782-->
-
-End users can now pin their Cloud PC to the task bar in the Windows 365 app for Windows 11 platforms. This lets them launch the Cloud PC from the task bar icon without going into the connection center.
+<!--### Windows 365 app-->
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Windows 365 Government
