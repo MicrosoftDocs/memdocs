@@ -12,6 +12,7 @@ ms.date: 11/17/2022
 ms.collection: 
   - M365-modern-desktop
   - highpri
+  - tier2
 ms.topic: troubleshooting
 ---
 
