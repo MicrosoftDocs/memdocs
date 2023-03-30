@@ -41,7 +41,7 @@ Once all of the configurations for Windows Autopilot for pre-provisioned deploym
 
 1. From the alternative options screen, select the **Windows Autopilot provisioning** option, and then select **Continue**.
 
- ![Windows Autopilot provisioning option.](../../images/choice.png)
+    ![Windows Autopilot provisioning option.](../../images/choice.png)
 
 1. In the **Windows Autopilot Configuration** screen, it displays the following information about the device:
 
