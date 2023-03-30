@@ -27,7 +27,7 @@ To take full advantage of new Configuration Manager features, after you update t
 ## Microsoft Configuration Manager product branding 
 <!--15885998-->
 Starting with Configuration Manager version 2303 Microsoft Endpoint Configuration Manager is now Microsoft Configuration Manager 
-Microsoft Configuration Manager is an integrated solution for managing all your devices. Microsoft brings together Configuration Manager and Intune, without a complex migration, and with simplified licensing. Continue to leverage your existing Configuration Manager investments, while taking advantage of the power of the Microsoft cloud at your own pace. 
+Microsoft Configuration Manager is an integrated solution for managing all your devices. Microsoft brings together Configuration Manager and Intune, without a complex migration, and with simplified licensing. Continue to use your existing Configuration Manager investments, while taking advantage of the power of the Microsoft cloud at your own pace. 
 
 ## Cloud-attached management
 <!--14716797-->
@@ -49,7 +49,7 @@ For more information, see [Create and deploy Antivirus policies from the admin c
 
 We have introduced audit messages about authorization failure in admin service. You can now view request details and status messages. These messages are shown in “All Status Message” at “Status Message Queries” in “Monitoring” ribbon. Previously these failures were logged in log files. 
 
-With the new audit messages, we intend to avoid the inconvenience of log files rollback. Details about the user, resource access attempts and the number of attempts for all the authorized requests made by user in a day will now be available. We are also auditing read operations for HTTPS requests and for cloud-initiated operations. This will help admins to scope permission and roles of users while also determining if there are any malicious users. All unauthorized requests will be aggregated for 24 hours before being sent to the status message viewer. 
+With the new audit messages, we intend to avoid the inconvenience of log files rollback. Details about the user, resource access attempts and the number of attempts for all the authorized requests made by user in a day will now be available. We are also auditing read operations for HTTPS requests and for cloud-initiated operations. This helps admins to scope permission and roles of users while also determining if there are any malicious users. All unauthorized requests are aggregated for 24 hours before being sent to the status message viewer. 
 
 For more information, see [Administration Service documentation](/memdocs/configmgr/develop/adminservice/overview.md).
 
