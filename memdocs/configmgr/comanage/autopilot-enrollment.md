@@ -18,13 +18,13 @@ ms.collection: tier3
 
 <!-- Intune 11300628 -->
 
-When you use [Windows Autopilot](../../autopilot/windows-autopilot.md) to provision a device, it first enrolls to Azure Active Directory (Azure AD) and Microsoft Intune. If the intended end-state of the device is co-management, previously this experience was difficult because of component timing and policy delays.
+When you use [Windows Autopilot](../../autopilot/windows-autopilot.md) to provision a device, it first enrolls to Azure Active Directory (Azure AD) and Microsoft Intune. If the intended end-state of the device is co-management, previously this experience was difficult because of installation of Configuration Manager client as Win32 app which introduces component timing and policy delays.
 
-Now you can configure device enrollment in Intune to enable co-management, which happens during the Autopilot process. This behavior directs the workload authority in an orchestrated manner between Configuration Manager and Intune.
+Now you can configure co-management settings in Intune, which happens during the Autopilot process. This behavior directs the workload authority in an orchestrated manner between Configuration Manager and Intune.
 
-You no longer need to create and assign an Intune app to install the Configuration Manager client. The Intune enrollment policy automatically installs the Configuration Manager client as a first-party app. The device gets the client content from the Configuration Manager cloud management gateway (CMG), so you don't need to provide and manage the client content in Intune. You do still specify the command-line parameters. This list can optionally include the [PROVISIONTS property](../core/clients/deploy/about-client-installation-properties.md#provisionts) to specify a task sequence.
+You no longer need to create and assign an Intune app to install the Configuration Manager client. The Intune co-management settings policy automatically installs the Configuration Manager client as a first-party app. The device gets the client content from the Configuration Manager cloud management gateway (CMG), so you don't need to provide and manage the client content in Intune. You do still specify the command-line parameters. This parameter can optionally include the [PROVISIONTS](../core/clients/deploy/about-client-installation-properties.md#provisionts) property to specify a task sequence.
 
-If the device is targeted with an [Autopilot enrollment status page (ESP) policy](../../intune/enrollment/windows-enrollment-status.md), the device waits for Configuration Manager. The Configuration Manager client installs, registers with the site, and applies the production co-management policy. Then the Autopilot ESP continues.
+If the device is targeted with an [Autopilot enrollment status page (ESP) policy](../../intune/enrollment/windows-enrollment-status.md), the device waits for Configuration Manager client to be installed. The Configuration Manager client installs, registers with the site, and applies the production co-management policy. Then the Autopilot ESP continues.
 
 ## Scenarios
 
@@ -46,13 +46,13 @@ When you use this policy, the following actions happen on the device during Auto
 
     - It provides an enrollment status page policy, which configures Configuration Manager as a policy provider.
 
-    - It sets the management authority on the device:
+    - It sets the management authority on the device based on the co-management settings policy:
 
         - Intune: The process continues with those policies.
 
         - Configuration Manager: The service doesn't apply Intune policies. It waits for policy from Configuration Manager to determine the workload configuration.
 
-    - The device downloads the CCMSetup.msi bootstrap file from the Intune service, which it runs with the specified command-line parameters. These parameters specify the location of the CMG, which it uses to download the client installation content. This content is the site's production client version hosted on the CMG.
+    - If co-management settings policy is set to automatically install Configuration Manager client, then the device downloads the CCMSetup.msi bootstrap file from the Intune service, which it runs with the specified command-line parameters. These parameters specify the location of the CMG, which it uses to download the client installation content. This content is the site's production client version hosted on the CMG.
 
         > [!NOTE]
         > This step can take time depending on the network and device performance, while it downloads the content and installs. The enrollment status page will stay on the step for **Preparing your device for mobile management**. For more information, see the [Troubleshooting](#troubleshoot) section.
@@ -81,6 +81,9 @@ The following components are required to support Autopilot into co-management:
 - Windows devices running one of the following versions:
 
   - Windows 11
+
+> [!NOTE]
+  > For Windows 11 devices, if the device has no targeted co-management settings policy, the management authority is set to Intune, during the Autopilot process. Installing Configuration Manager client as Win32 app does not change the respective workload authority as per the co-management workload configuration. To mitigate this, you must create a co-management settings policy and set both the options to **No**
 
   - At least Windows 10, version 20H2, with the latest cumulative update
 
@@ -124,6 +127,9 @@ Use these recommendations for a more successful deployment:
 Autopilot into co-management currently doesn't support the following functionality:
 
 - Hybrid Azure AD-joined devices
+
+> [!NOTE]
+  > For Windows 11 devices, if the device has no targeted co-management settings policy, the management authority is set to Intune, during the Autopilot process. Installing Configuration Manager client as Win32 app does not change the respective workload authority as per the co-management workload configuration. To mitigate this, you must create a co-management settings policy and set both the options to **No**
 
 - Autopilot pre-provisioning, also known as _white glove_ provisioning
 
