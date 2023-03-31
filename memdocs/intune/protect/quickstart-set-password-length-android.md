@@ -36,6 +36,8 @@ ms.custom: intune-azure
 
 In this topic, you'll use Microsoft Intune to require your workforce's Android users to enter a password of a specific length before access is granted to information on their Android Enterprise devices.
 
+[!INCLUDE [intune-evaluate](../includes/intune-evaluate.md)]
+
 An Intune device compliance policy specifies the rules and settings that devices must meet to be considered compliant. You can use compliance policies with Conditional Access to allow or block access to company resources. You can also get device reports and take actions for non-compliance.
 
 > [!IMPORTANT]

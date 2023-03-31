@@ -101,12 +101,15 @@ ESP uses the [EnrollmentStatusTracking configuration service provider (CSP)](/wi
  
       - **Block device use until these required apps are installed if they are assigned to the user/device**: Your options:  
          - **All**: All assigned apps must be installed before users can use their devices.  
-         - **Selected**: Select-apps must be installed before users can use their devices. Choose this option to select from your managed apps.  
+         - **Selected**: The selected-apps must be installed before users can use their devices. Choose **Select apps** to start a *Blocking apps* list. This option unlocks the **Blocking apps** settings. 
 
-      - **Only fail selected blocking apps in technician phase**: Your options:  
-         - **No**: Only blocking apps will fail deployment during the technician phase of pre-provisioning.   
-         - **Yes**: Intune will attempt to install required apps targeted to the device, or user (if assigned and installed in device context), during the technician phase of pre-provisioning. If installation is unsuccessful, these apps won't fail the deployment unless they are part of the blocking apps you previously selected. 
- 
+      - **Only fail selected blocking apps in technician phase**: Use this setting with Windows Autopilot pre-provisioned deployments to control how your required apps are prioritized during the [technician flow](../../autopilot/pre-provision.md). This setting is only available if you've added *blocking apps* and only applies to devices going through pre-provisioning. Your options:  
+         - **No**: An attempt will be made to install the blocking apps. Autopilot deployment will fail if a blocking app fails to install. No attempt is made to install non-blocking apps. When the end user receives the resealed device and signs in for the first time, the ESP will attempt to install the non-blocking apps. 
+         - **Yes**: An attempt will be made to install all required apps. Autopilot deployment will fail if a blocking app fails to install. If a non-blocking app that's targeted to the user fails to install, the ESP ignores it and deployment continues as normal. When the end user signs into the resealed device for the first time, the ESP will reattempt to install the apps that it couldn't in the technician phase. This is the default setting for pre-provisioned deployments.   
+         
+         > [!TIP] 
+         >  When using this feature, expect provisioning time to increase during the technican phase. The more apps assigned, the longer it could take. If you’re using a third party to provision your devices, tell them about the potential for increased provisioning time. Increase the ESP time-out duration to prevent deployment from failing due to a time out.    
+         
 6. Select **Next**.   
 7. In **Assignments**, select the groups that will receive your profile. Optionally, select **Edit filter** to restrict the assignment further.   
 
