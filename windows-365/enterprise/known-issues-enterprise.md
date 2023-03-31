@@ -1,12 +1,12 @@
 ---
-title: Known issues for Windows 365 Enterprise
+title: Known issues for Windows 365 Enterprise and Frontline
 description: Learn about known issues for Windows 365 Enterprise.
 f1.keywords:
 - NOCSH
 ms.author: erikje
 author: ErikjeMS
 manager: dougeby
-ms.date: 01/18/2023
+ms.date: 04/06/2023
 audience: Admin
 ms.topic: troubleshooting
 ms.service: windows-365
@@ -30,7 +30,7 @@ ms.collection:
 - tier2
 ---
 
-# Known issues: Windows 365 Enterprise
+# Known issues: Windows 365 Enterprise and Frontline
 
 The following items are known issues for Windows 365 Enterprise.
 
@@ -100,6 +100,30 @@ When single sign-on is not used, users have the option to see the Cloud PC lock 
 When using single sign-on, all authentication behavior (including supported credential types and sign-in frequency) are driven through Azure AD.
 
 **Troubleshooting**: To enforce periodic re-authentication through Azure AD, create a Conditional Access policy using the [sign-in frequency control](/azure/active-directory/conditional-access/howto-conditional-access-session-lifetime#policy-1-sign-in-frequency-control).
+
+## Windows 365 Frontline known issues
+
+The following items are known issues specifically for Windows 365 Frontline.
+
+### Error tells user to wait until Cloud PC is available
+
+If you have reached the maximum number of active user sessions in your tenant, any additional users who try to start a user session will see an error message in the end user portal. The message tells them to wait until their Cloud PC becomes available.
+
+**Troubleshooting steps**:  Use the [utilization report](report-cloud-pc-utilization.md) to estimate the right amount of license for your organization.
+
+### Frontline licenses can't be purchased through Microsoft 365 Admin Center during Public Preview
+
+**Troubleshooting steps**: Contact your Microsoft representative.
+
+### Frontline licenses isn't immediately released after user signs off
+
+To ensure users can continuously use their Cloud PCs after short breaks, the license isn't immediately released.
+
+### In Microsoft 365 admin center, Frontline licenses show 0 users assigned
+
+In the Microsoft 365 admin center, Windows 365 Frontline licenses are shown as assigned to 0 users. This issue happens because the licenses are applied on a tenant level.
+
+**Troubleshooting steps**: Use the Windows 365 [utilization report](report-cloud-pc-utilization.md) to capture how many licenses are being used.
 
 ## Next steps
 
