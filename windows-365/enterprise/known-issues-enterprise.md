@@ -93,10 +93,10 @@ When using single sign-on, you'll currently be prompted to authenticate to Azure
 **Troubleshooting**: Follow the steps to [troubleshoot sign-in problems](/azure/active-directory/conditional-access/troubleshoot-conditional-access).
 
 ## Single sign-on users are immediately disconnected when the Cloud PC locks
-When single sign-on is not used, users have the option to see the Cloud PC lock screen and enter credentials to unlock their Windows session. However, when single sign-on is used, the Cloud PC fully disconnects the session so that the user can re-launch the connection through the remote desktop client and perform the Azure AD-based single sign-on authentication flow.
+When single sign-on isn't used, users have the option to see the Cloud PC lock screen and enter credentials to unlock their Windows session. However, when single sign-on is used, the Cloud PC fully disconnects the session so that the user can relaunch the connection through the remote desktop client and perform the Azure AD-based single sign-on authentication flow.
 
-## Single sign-on users are not asked to re-authenticate to Azure AD when connecting from an unmanaged device <!--35593334-->
-When using single sign-on, all authentication behavior (including supported credential types and sign-in frequency) are driven through Azure AD.
+## Single sign-on users aren't asked to re-authenticate to Azure AD when connecting from an unmanaged device <!--35593334-->
+When using single sign-on, all authentication behavior (including supported credential types and sign-in frequency) is driven through Azure AD.
 
 **Troubleshooting**: To enforce periodic re-authentication through Azure AD, create a Conditional Access policy using the [sign-in frequency control](/azure/active-directory/conditional-access/howto-conditional-access-session-lifetime#policy-1-sign-in-frequency-control).
 
@@ -106,7 +106,7 @@ The following items are known issues specifically for Windows 365 Frontline.
 
 ### Error tells user to wait until Cloud PC is available
 
-If you have reached the maximum number of active user sessions in your tenant, any additional users who try to start a user session will see an error message in the end user portal. The message tells them to wait until their Cloud PC becomes available.
+If you've reached the maximum number of active user sessions in your tenant, any more users who try to start a user session will see an error message in the end user portal. The message tells them to wait until their Cloud PC becomes available.
 
 **Troubleshooting steps**:  Use the [utilization report](report-cloud-pc-utilization.md) to estimate the right amount of license for your organization.
 
@@ -118,9 +118,9 @@ If you have reached the maximum number of active user sessions in your tenant, a
 
 To ensure users can continuously use their Cloud PCs after short breaks, the license isn't immediately released.
 
-### In Microsoft 365 admin center, Frontline licenses show 0 users assigned
+### In Microsoft 365 admin center, Frontline licenses show zero users assigned
 
-In the Microsoft 365 admin center, Windows 365 Frontline licenses are shown as assigned to 0 users. This issue happens because the licenses are applied on a tenant level.
+In the Microsoft 365 admin center, Windows 365 Frontline licenses are shown as assigned to zero users. This issue happens because the licenses are applied on a tenant level.
 
 **Troubleshooting steps**: Use the Windows 365 [utilization report](report-cloud-pc-utilization.md) to capture how many licenses are being used.
 
