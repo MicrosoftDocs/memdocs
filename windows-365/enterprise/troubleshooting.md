@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 02/28/2023
+ms.date: 03/31/2023
 ms.topic: troubleshooting
 ms.service: windows-365
 ms.subservice: 
@@ -107,7 +107,7 @@ You can improve video playback performance on your Cloud PCs by using multimedia
 
 For Cloud PCs, MMR is supported on the following platforms: Windows, macOS, ChromeOS, Linux.
 
-For more information, see [Multimedia redirection for Azure Virtual Desktop](/azure/virtual-desktop/multimedia-redirection).
+For more information, see [Multimedia redirection for Azure Virtual Desktop](/azure/virtual-desktop/multimedia-redirection) and [Troubleshoot multimedia redirection for Azure Virtual Desktop](/azure/virtual-desktop/troubleshoot-multimedia-redirection).
 
 ## Your organization hasn’t assigned you a Cloud PC
 
