@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 03/09/2023
+ms.date: 03/29/2023
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice:
@@ -51,6 +51,45 @@ Learn what new features are available in Windows 365 Enterprise.
 ### Windows 365 Government
 ### Windows 365 app
 -->
+
+<!-- ########################## -->
+## Week of March 28, 2023 (Service release 2303)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device provisioning
+
+#### Cloud PC custom name template<!--42947813-->
+
+You can now create a template to automatically create unique names for new Cloud PCs. For more information, see [Create provisioning policies](create-provisioning-policy.md#continue-creating-a-provisioning-policy).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device security
+
+#### FQDN tags <!--43488376-->
+
+FQDN tags help customers simplify the creation and maintenance of the necessary rules for outbound network traffic through Azure firewalls. For more information, see [Use Azure Firewall to manage and secure Windows 365 environments](azure-firewall-windows-365.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Miscellaneous
+
+#### Windows 365 and FedRAMP
+
+Windows 365 Enterprise has been assessed by a FedRAMP authorized auditor to meet FedRAMP requirements at data centers within the Continental US.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+<!--### Windows 365 app-->
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Windows 365 Government
+
+#### Windows 365 Gov support for transferring files from your Cloud PC by using windows365.microsoft.com web client<!--43758020-->
+
+You can use the windows365.microsoft.com web client to transfer files to and from your Windows 365 Gov Cloud PC. For more information, see [Transfer files to and from a Cloud PC](../end-user-access-cloud-pc.md#transfer-files-to-and-from-a-cloud-pc).
+
+#### Higher Cloud PC screen resolution option for Windows 365 Gov<!--43758020-->
+
+Windows 365 Gov Cloud PC users can now choose a higher screen resolution when they connect to their Cloud PC from [https://windows365.microsoft.com](https://windows365.microsoft.com).
+
 
 <!-- ########################## -->
 ## Week of March 6, 2023

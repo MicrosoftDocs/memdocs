@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 03/03/2023
+ms.date: 03/29/2023
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice: 
@@ -76,18 +76,10 @@ It may take several hours for the moves to complete.
 New Cloud PCs created by the provisioning policy will be created in the new region or ANC.
 
 <!-- ***********************************************-->
-## Device provisioning
-
-### Cloud PC custom name template<!--42947813-->
-
-You’ll be able to create a template to automatically create unique names for new Cloud PCs.
+<!--## Device provisioning-->
 
 <!--***********************************************-->
-## End user experience
-
-### Windows 365 app: pin Cloud PC to task bar<!--43470782-->
-
-End users will be able to pin their Cloud PC to the task bar in the Windows 365 app. This will let them launch the Cloud PC from the task bar icon without going into the connection center.
+<!--## End user experience-->
 
 <!-- ***********************************************-->
 ## Monitor and troubleshoot
@@ -97,11 +89,8 @@ End users will be able to pin their Cloud PC to the task bar in the Windows 365 
 End users will be able to manually run connectivity checks on their Cloud PCs from [windows365.microsoft.com](https://windows365.microsoft.com).
 
 <!-- ***********************************************-->
-## Miscellaneous
+<!--## Miscellaneous-->
 
-### FQDN tags <!--43488376-->
-
-In a future update, FQDN tags will be available to help customers simplify the creation and maintenance of the necessary rules for outbound network traffic through Azure firewalls.
 
 <!-- ***********************************************-->
 <!-- ## Provisioning -->

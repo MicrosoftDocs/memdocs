@@ -12,6 +12,7 @@ ms.date: 11/17/2022
 ms.collection: 
   - M365-modern-desktop
   - highpri
+  - tier2
 ms.topic: troubleshooting
 ---
 
@@ -33,10 +34,6 @@ There's currently a known issue in Windows Update [KB5022303](https://support.mi
 ### TPM attestation isn't working on AMD platforms with ASP fTPM
 
 TPM attestation for AMD platforms with ASP firmware TPM may fail with error code 0x80070490 on Windows 10 and Windows 11 systems. There's currently no update available to resolve this issue.
-
-### Autopilot profile not applied after reimaging to an older OS version
-
-If you enroll a device with Windows Update [KB5015878](https://support.microsoft.com/en-us/topic/july-26-2022-kb5015878-os-builds-19042-1865-19043-1865-and-19044-1865-preview-549f5551-fcc5-4fee-8811-c5df12e04d40) or later on Windows 10 or with Windows Update [KB5017383](https://support.microsoft.com/topic/september-20-2022-kb5017383-os-build-22000-1042-preview-62753265-68e9-45d2-adcb-f996bf3ad393) or later on Windows 11 and then reimage to an older OS version, the Autopilot profile isn't applied. The device would need to be re-registered to complete a successful Autopilot deployment. You may see the message **Fix pending** in the Autopilot devices blade which indicates that there was a hardware change on the device. To fix this error, deregister and re-register the device. For more details, please see [Return of key functionality for Windows Autopilot sign-in and deployment experience](https://techcommunity.microsoft.com/t5/intune-customer-success/return-of-key-functionality-for-windows-autopilot-sign-in-and/ba-p/3583130).
 
 ### TPM attestation failure with error code 0x81039001
 

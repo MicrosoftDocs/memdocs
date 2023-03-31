@@ -1,14 +1,9 @@
 ---
 title: Windows Autopilot for existing devices
 description: Modern desktop deployment with Windows Autopilot enables you to easily deploy the latest version of Windows to your existing devices.
-keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune
 ms.prod: windows-client
 ms.technology: itpro-deploy
-ms.mktglfcycl: deploy
 ms.localizationpriority: medium
-ms.sitesec: library
-ms.pagetype: deploy
-audience: itpro
 author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
@@ -17,6 +12,7 @@ ms.date: 03/10/2023
 ms.collection: 
   - M365-modern-desktop
   - highpri
+  - tier1
 ms.topic: how-to
 ---
 
@@ -199,9 +195,11 @@ The name that's automatically assigned to the computer. This name follows the na
 Save the Autopilot profile as a JSON file in ASCII or ANSI format. Windows PowerShell defaults to Unicode format. So, if you redirect output of the commands to a file, also specify the file format. The following PowerShell example saves the file in ASCII format, and creates a directory for each profile on the current user's desktop:
 
 ```powershell
+Connect-MSGraph
 $AutopilotProfile = Get-AutopilotProfile
 $AutopilotProfile | ForEach-Object {
-  $_ | ConvertTo-AutopilotConfigurationJSON | Set-Content -Encoding Ascii "~\Desktop\$($_.displayName)\AutopilotConfigurationFile.json"
+  New-Item -ItemType Directory -Path "~\Desktop\$($_.displayName)"
+  $_ | ConvertTo-AutopilotConfigurationJSON | Set-Content -Encoding Ascii "~\Desktop\$($_.displayName)\AutopilotConfigurationFile.json"
 }
 ```
 

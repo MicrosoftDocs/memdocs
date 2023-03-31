@@ -5,7 +5,7 @@ description: Learn about the workloads that you can switch from Configuration Ma
 author: gowdhamankarthikeyan
 ms.author: gokarthi
 manager: apoorvseth
-ms.date: 03/29/2022
+ms.date: 03/24/2023
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
@@ -67,17 +67,17 @@ For more information on the Intune feature, see [Deploy resource access profiles
 
 <!--1357365-->
 
-The Endpoint Protection workload includes the Windows Defender suite of antimalware protection features:
+The Endpoint Protection workload includes the Defender suite of protection features:
 
-- Windows Defender Antimalware
-- Windows Defender Application Guard
+- Microsoft Defender Antivirus
+- Microsoft Defender Application Guard
+- Microsoft Defender SmartScreen
+- Microsoft Defender for Endpoint (formally known as Windows Defender Advanced Threat Protection)
 - Windows Defender Firewall
-- Windows Defender SmartScreen
-- Windows Encryption
+- Windows Encryption (also known as BitLocker)
 - Windows Defender Exploit Guard
 - Windows Defender Application Control
 - Windows Defender Security Center
-- Windows Defender for Endpoint (now known as Microsoft Defender for Endpoint)
 
 For more information on the Intune feature, see [Windows 10 (and later) settings to protect devices using Intune](../../intune/protect/endpoint-protection-windows-10.md).
 
