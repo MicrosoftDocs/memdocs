@@ -35,6 +35,8 @@ ms.collection:
 
 In this article, you'll use Intune to create and assign an app protection policy to a client app on an end user's device. Intune uses app protection policies to confirm that your apps are meeting your organization's data protection requirements.
 
+[!INCLUDE [intune-evaluate](../includes/intune-evaluate.md)]
+
 If you don't have an Intune subscription, [sign up for a free trial account](../fundamentals/free-trial-sign-up.md).
 
 ## Prerequisites
