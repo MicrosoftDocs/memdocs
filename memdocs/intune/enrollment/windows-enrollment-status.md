@@ -101,11 +101,11 @@ ESP uses the [EnrollmentStatusTracking configuration service provider (CSP)](/wi
  
       - **Block device use until these required apps are installed if they are assigned to the user/device**: Your options:  
          - **All**: All assigned apps must be installed before users can use their devices.  
-         - **Selected**: The selected-apps must be installed before users can use their devices. Choose **Select** to start your **Blocking apps** list. This option unlocks the **Blocking apps** settings.  
+         - **Selected**: The selected-apps must be installed before users can use their devices. Choose **Select apps** to start a *Blocking apps* list. This option unlocks the **Blocking apps** settings. 
 
-      - **Only fail selected blocking apps in technician phase**: Use this setting to prioritize the installation of critical apps during the technician phase of pre-previsioning. This setting enables you to install as many apps as possible before employees sign in and use the device. Your options:  
-         - **No**: ESP will fail Autopilot deployment if any app, blocking or non-blocking, fails to install during the technician phase. 
-         - **Yes**: ESP will only fail Autopilot deployment if the blocking apps fail to install. An attempt will be made to install all apps. If a non-blocking app that's targeted to the user fails to install during this phase, deployment continues as normal, and another attempt to install the app is made when the user signs into the device. This is the default setting for pre-provisioning deployments.   
+      - **Only fail selected blocking apps in technician phase**: Use this setting with Windows Autopilot pre-provisioned deployments to prioritize the installation of critical apps, known as *blocking apps*, during the [technician phase](/autopilot/pre-provision#technician-flow). This setting is only available if you've added blocking apps and only applies to devices going through pre-provisioning. Your options:  
+         - **No**:  An attempt will be made to install all assigned apps. Autopilot deployment will fail if any app, blocking or non-blocking, fails to install during the technician phase.  
+         - **Yes**:  An attempt will be made to install all apps. Autipilot deployment will only fail if a blocking app fails to install. If a non-blocking app that's targeted to the user fails to install, deployment continues as normal, and you reseal the device for end users. When the Another attempt to install the app is made when the employee signs into the device. This is the default setting for pre-provisioned deployments.   
          
          > [!TIP] 
          >  When using this feature, expect provisioning time to increase during the technican phase. The more apps assigned, the longer it could take. If you’re using a third party to provision your devices, tell them about the potential for increased provisioning time. Increase the ESP time-out duration to prevent deployment from failing due to a time out.    
