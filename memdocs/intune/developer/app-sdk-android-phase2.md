@@ -7,7 +7,7 @@ keywords: SDK
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/08/2022
+ms.date: 03/31/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
