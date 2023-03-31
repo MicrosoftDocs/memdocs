@@ -48,7 +48,6 @@ Upgrading an existing Cloud PC between release versions of Windows 10 to Windows
 
 **Troubleshooting steps**: Find and manage the Cloud PC in Microsoft Endpoint Manager by using the unchanged Intune device name, either through the **Devices > All devices** list or the **Devices > Windows 365 > All Cloud PCs** list.
 
-
 ## Windows 365 provisioning fails<!--38483005-->
 
 Windows 365 provisioning failures may occur because both:
