@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 03/31/2023
+ms.date: 04/06/2023
 ms.topic: troubleshooting
 ms.service: windows-365
 ms.subservice: 
@@ -135,6 +135,12 @@ In certain regions, some users may experience a decline in their 4vCPU Cloud PC 
 
 - [Reprovision](reprovision-cloud-pc.md) the Cloud PC, or
 - Uninstall Hyper-V on the Cloud PC.  
+
+## Windows 365 Frontline user error tells user to wait until Cloud PC is available
+
+If you've reached the maximum number of active user sessions in your tenant, any more users who try to start a user session will see an error message in the end user portal. The message tells them to wait until their Cloud PC becomes available.
+
+**Troubleshooting steps**: Use the [utilization report](report-cloud-pc-utilization.md) to estimate the right amount of license for your organization.
 
 <!-- ########################## -->
 ## Next steps

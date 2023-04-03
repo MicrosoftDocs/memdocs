@@ -100,30 +100,6 @@ When using single sign-on, all authentication behavior (including supported cred
 
 **Troubleshooting**: To enforce periodic re-authentication through Azure AD, create a Conditional Access policy using the [sign-in frequency control](/azure/active-directory/conditional-access/howto-conditional-access-session-lifetime#policy-1-sign-in-frequency-control).
 
-## Windows 365 Frontline known issues
-
-The following items are known issues specifically for Windows 365 Frontline.
-
-### Error tells user to wait until Cloud PC is available
-
-If you've reached the maximum number of active user sessions in your tenant, any more users who try to start a user session will see an error message in the end user portal. The message tells them to wait until their Cloud PC becomes available.
-
-**Troubleshooting steps**:  Use the [utilization report](report-cloud-pc-utilization.md) to estimate the right amount of license for your organization.
-
-### Frontline licenses can't be purchased through Microsoft 365 Admin Center during Public Preview
-
-**Troubleshooting steps**: Contact your Microsoft representative.
-
-### Frontline licenses isn't immediately released after user signs off
-
-To ensure users can continuously use their Cloud PCs after short breaks, the license isn't immediately released.
-
-### In Microsoft 365 admin center, Frontline licenses show zero users assigned
-
-In the Microsoft 365 admin center, Windows 365 Frontline licenses are shown as assigned to zero users. This issue happens because the licenses are applied on a tenant level.
-
-**Troubleshooting steps**: Use the Windows 365 [utilization report](report-cloud-pc-utilization.md) to capture how many licenses are being used.
-
 ## Next steps
 
 [Troubleshoot Windows 365 Enterprise Cloud PC](troubleshooting.md)

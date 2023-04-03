@@ -45,6 +45,14 @@ The maximum number of active Windows 365 Frontline Cloud PCs in your organizatio
 
 Windows 365 Frontline is in [public preview](../public-preview.md).
 
+## Licensing
+
+During public preview, Windows 365 Frontline licenses can't be purchased through the Microsoft 365 admin center. Instead, contact your Microsoft representative.
+
+Because Windows 365 Frontline licenses are applied at the tenant level, the Microsoft 365 admin center shows Windows 365 Frontline licenses as assigned to zero users. To see how many licenses are being used, use the Windows 365 [utilization report](report-cloud-pc-utilization.md).
+
+To make sure users can continuously use their Cloud PCs after short breaks, the license isn't immediately released after a user signs off. 
+
 ## Managing Windows 365 Frontline Cloud PCs
 
 Windows 365 Frontline Cloud PCs can be managed using Microsoft Intune, alongside other Cloud PCs and devices in your tenant. Windows 365 Frontline supports:
