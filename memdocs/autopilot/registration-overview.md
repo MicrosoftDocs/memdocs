@@ -100,7 +100,7 @@ Devices that have been registered with the Windows Autopilot service are display
 
 Whenever a device permanently leaves an organization, whether it's for a repair or the end of the device life cycle, the device should always be deregistered from Autopilot.
 
-If the IT Admin registered the device, they likely did so via Intune or possibly the Microsoft Store for Business. If so, they should deregister the device from Intune or the Microsoft Store for Business because devices registered in Intune won't show up in Microsoft Partner Center (MPC).
+If the IT Admin registered the device, they likely did so via Intune. If so, they should deregister the device from Intune because devices registered in Intune won't show up in Microsoft Partner Center (MPC).
 
 Below we describe the steps an IT Admin would go through to deregister a device from Intune and Autopilot.
 
