@@ -32,7 +32,7 @@ ms.collection:
 - tier3
 ---
  
-# Secure device with lock screen or password for Company Portal  
+# Add or change device password on Intune-enrolled device    
 
  **Applies to**:  
  * Windows 10  

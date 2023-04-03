@@ -92,6 +92,7 @@ These password-related messages are sent to Mac devices.
 
 ## Android password requirements  
 These password-related messages are sent to Android devices.  
+
 | Message | How to fix |
 |-----------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Password is required. | Set a password or PIN. Your organization requires that you enter a password to unlock your device. |
