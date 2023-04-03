@@ -319,7 +319,7 @@ items:
     href: reset-your-passcode-cpwebsite.md
   - name: Reset used, lost, stolen device
     href: reset-device-company-portal-website.md
-- name: Reference guides  
+- name: Reference   
   items:
   - name: Device password messages in Company Portal  
     href: intune-company-portal-password-message-reference.md 
