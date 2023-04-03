@@ -51,6 +51,8 @@ To get started, review the following steps:
 
 - You must have ServiceNow permissions to view incidents when using the **Test connection** action. You can assign the *itil* role to grant appropriate permissions to view incidents.  A ServiceNow license needs to be assigned to admins who view incidents. 
 
+- You must have the Troubleshooting Preview enabled.  To enable the Troubleshooting Preview, select "Preview upcoming changes to Troubleshooting and provide feedback" in the Troubleshooting blade. After reviewing the Troubleshooting preview information, click "Try it now" to enable the preview. 
+
 - To configure the ServiceNow connector to establish a connection between Intune and your ServiceNow instance. See the steps outlined in [Configure the ServiceNow integration with Microsoft Intune](#configure-the-servicenow-integration-with-microsoft-intune).  
 
 ## Configure the ServiceNow integration with Microsoft Intune
