@@ -18,49 +18,89 @@ ms.reviewer: mstewart,aaroncz
 
 *Applies to: Configuration Manager (current branch)*
 
-Update 2303 for Configuration Manager current branch is available as an in-console update. Apply this update on sites that run version 2111 or later. <!-- baseline only statement: When installing a new site, this version of Configuration Manager will also be available as a [baseline version](../../servers/manage/updates.md#bkmk_note1) soon after global availability of the in-console update.--> This article summarizes the changes and new features in Configuration Manager, version 2303.
+Update 2303 for Configuration Manager current branch is available as an in-console update. Apply this update on sites that run version 2111 or later. <!-- baseline only statement:--> When installing a new site, this version of Configuration Manager will also be available as a [baseline version](../../servers/manage/updates.md#bkmk_note1) soon after global availability of the in-console update. This article summarizes the changes and new features in Configuration Manager, version 2303.
 
-Always review the latest checklist for installing this update. For more information, see [Checklist for installing update 2211](../../servers/manage/checklist-for-installing-update-2211.md). After you update a site, also review the [Post-update checklist](../../servers/manage/checklist-for-installing-update-2211.md#post-update-checklist).
+Always review the latest checklist for installing this update. For more information, see [Checklist for installing update 2303](../../servers/manage/checklist-for-installing-update-2303.md). After you update a site, also review the [Post-update checklist](../../servers/manage/checklist-for-installing-update-2303.md#post-update-checklist).
 
 To take full advantage of new Configuration Manager features, after you update the site, also update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.
 
-## Cloud-attached management
+## Microsoft Configuration Manager product branding 
+<!--15885998-->
+Starting with Configuration Manager version 2303 Microsoft Endpoint Configuration Manager is now Microsoft Configuration Manager. 
+Microsoft Configuration Manager is an integrated solution for managing all your devices. Microsoft brings together Configuration Manager and Intune, without a complex migration, and with simplified licensing. Continue to use your existing Configuration Manager investments, while taking advantage of the power of the Microsoft cloud at your own pace. 
 
+## Cloud-attached management
+<!--14716797-->
 ### Improvements to Cloud Sync (Collections to Azure Active Directory Group Synchronization) feature
-Starting Configuration Manager version 2303, the scalability of this feature has been improved with better throttling and error handling. Additionally, dedicated dashboards for user collections and device collections are added in Monitoring workspace to show Cloud Sync status. The dashboard displays the Cloud Sync status per collection with the mapped Azure AD group, total member count, synced member count, status (success, failed, in progress) and last sync details. 
+Starting with Configuration Manager version 2303 collection member sync status (Success, In Progress, Failed - with reason for failure) is available in the Collection Cloud Sync dashboard for the chosen collection on the bottom pane. Earlier with Configuration Manager version 2211, the scalability of this feature has been improved with better throttling and error handling. Additionally, dedicated dashboards for user collections and device collections are added in Monitoring workspace to show Cloud Sync status. The dashboard displays the Cloud Sync status per collection with the mapped Azure AD group, total member count, synced member count, status (success, failed, in progress) and last sync details. 
 
 For more information, see [Synchronize collections to Azure Active Directory Group](../../clients/manage/collections/synchronize-collections-aad-group.md).
 
+<!--13061435-->
+### Endpoint Security reports in Intune admin center for Tenant Attached devices 
+Starting with Configuration Manager version 2303, you can now opt for Endpoint Security reports in Intune admin center for tenant attached devices.   
+Once you opt in, Unhealthy endpoints and Active malware operational reports under Endpoint security node in Intune admin center will start showing data from tenant attached devices. Also, Antivirus agent status and Detected malware organizational reports under Microsoft Defender Antivirus in Reports section will show data from tenant attached devices. 
+
+For more information, see [Tenant attach - Create and deploy Antivirus policies from the admin center](../../../tenant-attach/deploy-antivirus-policy.md).
+
 ## Site infrastructure
-<!--14538358-->
+<!--13022894-->
 
-### Network Access Account (NAA) account usage alert
+### Authorization failure message in admin service now shown in Status message viewer 
 
-If your site is configured with NAA account, you see this new prerequisite warning added. To improve the security of distribution points configured with NAA account, review the existing accounts and their relevant permissions. If it has more than minimal required permission, then remove and add a minimal permission account. Don't configure any administrator level permission accounts on the NAA. If the site server is configured with HTTPS / EHTTP, it's recommended to remove the NAA account, which is unused.
+We have introduced audit messages about authorization failure in admin service. You can now view request details and status messages. These messages are shown in “All Status Message” at “Status Message Queries” in “Monitoring” ribbon. Previously these failures were logged in log files. 
 
-For more information, see the description of this [permissions-for-the-network-access-account](../../plan-design/hierarchy/accounts.md#permissions-for-the-network-access-account)
+With the new audit messages, we intend to avoid the inconvenience of log files rollback. Details about the user, resource access attempts and the number of attempts for all the authorized requests made by user in a day will now be available. We are also auditing read operations for HTTPS requests and for cloud-initiated operations. This helps admins to scope permission and roles of users while also determining if there are any malicious users. All unauthorized requests are aggregated for 24 hours before being sent to the status message viewer. 
 
-<!--14959706-->
+For more information, see [Administration Service documentation](../../../develop/adminservice/overview.md).
 
-### Distribution point content migration
+### SQL Server 2022 version support added for Configuration Manager 
 
-DP content migration support is now available for migrating content from one DP to another DP using PowerShell cmdlets. You can also monitor the DP migration status using these PowerShell cmdlets.
+Starting with 2303, support is added for SQL server 2022 RTM version. 
+You can use this version of SQL Server for the following sites: 
+-	A central administration site 
+-	A primary site 
+-	A secondary site 
 
-For more information, see the description of this [content migration](../../servers/deploy/configure/deploy-and-manage-content.md#bkmk_distribute)
+The following table identifies the recommended compatibility levels for Configuration Manager site databases:
+
+|SQL Server version | Supported compatibility levels | Recommended level |
+|----------------|--------------------|--------|
+| SQL Server 2022 | 150, 140, 130, 120, 110 | 150 |
+
+For more information, see [support-for-sql-server-versions](../../plan-design/configs/support-for-sql-server-versions.md).
 
 <!--## Client management-->
 
 <!--## Collections-->
 
-## Software Center
+<!--## Software Center-->
 
-### <a name="bkmk_featured-apps-software-center"></a> Featured Apps in Software Center
-<!--3601183-->
-We are now adding the **Featured** tab in Software Center where we are displaying the featured apps. Using this, IT admins can mark apps as "featured" and encourage end users to use the app. Currently, this feature is available only for "User Available" apps. Also, admins can make the **Featured** tab of Software Center as the default tab from Client Settings. 
+## Software updates
 
-For more information, see the [Software Center in Configuration Manager](../../understand/software-center.md).
+### Unified update platform (UUP) GA release 
 
-<!--## Software updates-->
+The Unified Update Platform (UUP) servicing is finally here for all Windows 11, version 22H2 updates delivered via Windows Server Update Services (WSUS) and Configuration Manager! Starting March 28, on-premises Windows 11, version 22H2 devices will receive quality updates via the Unified Update Platform (UUP). For more information, see [What’s UUP? New update style!](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/what-s-uup-new-update-style-coming-next-week/ba-p/3773065). 
+The Unified Update Platform (UUP) is a single publishing, hosting, scan, and download model for OS quality and feature updates. It offers improved delivery technologies in response to IT admin requests for more seamless updates, more control over installation time, more battery life, and lighter download size.  
+
+> [!NOTE]
+>A one-time 10-GB download to distribution points with your first UUP update. UUP is becoming the default and only way to download quality updates. This means that you should plan for an extra 10GB download to distribution points (not endpoint clients) with the March 28th update. That's a one-time 10GB download for updates for Windows 11, version 22H2 per architecture (AMD64 and ARM64). 
+
+### Update to the default value of supersedence age in months for software updates
+<!--16441147-->
+With Unified Update Platform (UUP) general availability release, the feature update and non-feature update supersedence should be greater than 3. For new software update role installations, we're updating this to 6, existing customers can review and update to 6.  
+Update to the default value of supersedence age in months for software updates.  
+
+#### Known issue: 
+
+Update to the default value of supersedence age in months for software updates will not impact existing configurations. Removing SUP role in Admin Console does not reset the supersedence age property in WMI. As a result, while reconfiguring the role, the previously configured value is shown in the configuration window.  
+
+### Enable Windows features introduced via Windows servicing that are off by default 
+<!--16834520-->
+
+The Commercial control for continuous innovation in Windows is now integrated with Configuration Manager 2303 release. [Commercial control for continuous innovation (Windows 11)](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/commercial-control-for-continuous-innovation/ba-p/3737575)
+
+For more information, see [client settings in Configuration Manager](../../clients/deploy/about-client-settings.md)
 
 <!--## OS deployment-->
 
@@ -72,47 +112,39 @@ For more information, see the [Software Center in Configuration Manager](../../u
 
 ## Configuration Manager console
 
-### Enhancements in console search experience
+### Dark theme extended to delete secondary site wizard 
+<!--15942599-->
+The Configuration Manager console now extends the dark theme for the delete secondary site wizard. This wizard will also have a new look for the normal theme. This is part of the ongoing effort to make dark theme and overall admin console experience better. 
 
-<!--14908615-->
-When performing a search on any node in the console, the hint text in the search bar will now indicate the scope of the search. Also, search experience related issues have been fixed.
- - By default, all subfolders are searched when you perform a search in any node that contains subfolders. You can narrow down the search by selecting the “Current Node” option from the search toolbar.
- - If you want to expand the search to include all nodes, then select the “All Objects” button in the ribbon.
-
-For more information, see [Console changes and tips](../../servers/manage/admin-console-tips.md#configuration-manager-console-changes-and-tips).
-
-### Dark theme is now extended to more dashboards
-
-The dark theme has been available as a prerelease feature since 2203. We've extended the dark theme to more components such as buttons, context menus, and hyperlinks. Enable this prerelease feature to experience the dark theme.
-In this release we've extended the dark theme to more dashboards, which previously didn't display the dark theme correctly. For example, the O365 Updates Dashboard, PCM Dashboard, and Health Attestation dashboard will now display according to the dark theme, when it's enabled. Pop-ups in the Health attestation dashboard will now adhere to the dark theme.
-
-Enable this prerelease feature to experience the dark theme. For more information, see [Dark theme for the console](../../servers/manage/admin-console.md#bkmk_dark).
+To use the theme, select the arrow from the top left of the ribbon, then choose the Switch console theme. Select Switch console theme again to return to the light theme. For more information, see [Dark theme for the console](../../servers/manage/admin-console.md#bkmk_dark).
   
 <!--## Tools-->
 
-<!--## Deprecated features
+## Deprecated features
+<!--10901602-->
 
-Learn about support changes before they're implemented in [removed and deprecated items](deprecated/removed-and-deprecated.md).
-
-The following features are deprecated. You can still use them now, but Microsoft plans to end support in the future.
-
-As previously announced, version 2207 drops support for the following features:
--->
+### Removed Community hub service and integration with ConfigMgr 
+ 
+Removed Community Hub configuration from Hierarchy settings and Community Hub service integration. 
+ Learn about support changes before they're implemented in [removed and deprecated items](deprecated/removed-and-deprecated-cmfeatures.md).
+<!--The following features are deprecated. You can still use them now, but Microsoft plans to end support in the future.-->
 
 ## Other updates
 
-### Resolved duplicate entries for co-managed device in Intune portal 
+### Maintenance window schedules
+Offset for recurring monthly maintenance window schedules. Based upon your feedback, you can now offset monthly maintenance window schedules to better align deployments with the release of monthly security updates. For example, using a maximum offset of seven days after the second Tuesday of the month, sets the maintenance window for next Monday. 
 
-Previously, device entities of the co-managed devices appeared as two separate entries on Intune portal. One entry corresponding to Intune and another corresponding to ConfigMgr appeared after enrollment. The entries were permanent in some cases. Various scenarios like device entity counts and policy targeting were impacted. The entries were duplicated because Intune is not aware of the AAD ID of devices coming from ConfigMgr. Intune becomes aware only after the daily discovery cycle runs and reports to Intune via CMGS.
+### Removing Microsoft Store for Business and Education new config capability
 
-The issue is fixed by propagating correct AAD device ID from ConfigMgr during Intune enrollment. This leads to merged entities for co-managed devices in a short period of time (30-40 mins). We no longer have to wait for discovery cycle to run.
+As part of Microsoft Store for Business deprecation, we are making these changes to the customer experience with using this feature: 
 
-### Starting with this version, Configuration Manager client doesn’t support the following server 
+- Removing a user's ability to create new Microsoft Store for Business in Configuration Manager. 
 
- -	Windows Server 2008 SP2 Extended Security Updates (ESU Azure Only)
-      
-If you have these server’s client running, please don’t upgrade to 2211 client version. For more information on supported clients and devices, see, supported-operating-systems-for-clients-and-devices[supported-operating-systems-for-clients-and-devices](../../plan-design/configs/supported-operating-systems-for-clients-and-devices.md).
+- Display a warning message box when user triggers a sync from Microsoft Store for Business. 
 
+- Display a warning in the Create Application Wizard when user attempts to create a new app from Store license information. 
+
+For more information, see [removed and deprecated items](deprecated/removed-and-deprecated-cmfeatures.md). 
 <!--Starting with this version, the following features are no longer [pre-release](../../servers/manage/pre-release-features.md):
 -->
 
@@ -134,7 +166,7 @@ The following additional hotfixes are available to address specific issues:
 -->
 
 ## Next steps
-At this time, version 2211 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](../../servers/manage/checklist-for-installing-update-2211.md#early-update-ring).
+At this time, version 2303 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](../../servers/manage/checklist-for-installing-update-2303.md#early-update-ring).
 
 <!-- As of December 19, 2022, version 2211 is globally available for all customers to install.
 
@@ -150,4 +182,4 @@ When you're ready to install this version, see [Installing updates for Configura
 
 For known significant issues, see the [Release notes](../../servers/deploy/install/release-notes.md).
 
-After you update a site, also review the [Post-update checklist](../../servers/manage/checklist-for-installing-update-2211.md#post-update-checklist).
+After you update a site, also review the [Post-update checklist](../../servers/manage/checklist-for-installing-update-2303.md#post-update-checklist).
