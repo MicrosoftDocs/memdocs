@@ -63,7 +63,7 @@ To get started, review the following steps:
      | Field           | Description                                                                                                                         |
      |--------------------|-------------------------------------------------------------------------------------------------------------------------------------|
      | ServiceNow Instance Host             | A URL that points to your organization's ServiceNow instance. For example, 'https://contoso.service-now.com'   |
-     | ServiceNow Incident API URL         | The table in the ServiceNow database that contains incidents. Incidents are retrieved from this table.  For example, api/now/table/incident                           |
+     | ServiceNow Incident API URL         | The table in the ServiceNow database that contains incidents. Incidents are retrieved from this table.  For example, /api/now/table/incident                           |
      | ServiceNow Client appID     | The unique identifier assigned in ServiceNow to the application used to represent Intune. Provide the client ID of the app. You need to have a client app created in ServiceNow to copy over the appID and use it here to establish the connection. Go to [How to create a ServiceNow app](#how-to-create-a-servicenow-app).                                 |
 
 5. Select **Test connection** to verify if your settings are correct. You see a verification message to connect to your ServiceNow account. Select **Allow**.
