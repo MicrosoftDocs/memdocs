@@ -96,44 +96,102 @@ Devices that have been registered with the Windows Autopilot service are display
 > - The Autopilot registration process is successful.
 > - A [licensed](licensing-requirements.md) user has signed in on the device.
 
-## Deregister a device from Autopilot
+## Deregister a device
 
-Whenever a device permanently leaves your organization, whether it's for a repair or the end of the device life cycle, the device should always be deregistered from Autopilot.
+Whenever a device permanently leaves an organization, whether it's for a repair or the end of the device life cycle, the device should always be deregistered from Autopilot.
 
 If the IT Admin registered the device, they likely did so via Intune or possibly the Microsoft Store for Business. If so, they should deregister the device from Intune or the Microsoft Store for Business because devices registered in Intune won't show up in Microsoft Partner Center (MPC).
-Below we describe the steps an IT Admin would go through to deregister a device from Intune.
 
-## Deregister from Intune
+Below we describe the steps an IT Admin would go through to deregister a device from Intune and Autopilot.
 
-To deregister an Autopilot device from Intune, an IT Admin would:
+### Deregister from Intune
 
-1. Sign in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431)
+To deregister an Autopilot device from Intune:
 
-2. Navigate to **Groups** > **All groups**
+#### Make a note of any Assigned and Direct groups the device is a member of
 
-3. Remove the device from its group
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-4. Navigate to **Devices** > **All devices**
+1. In the **Home** screen, select **Devices** in the left pane.
 
-5. Select the checkbox next to the device you want to delete, then select the **Delete** button on the top menu
+1. In the **Devices | Overview** screen, under **By platform**, select **Windows**.
 
-6. Navigate to **Devices** > **Azure AD devices**
+1. Under **Device name**, find the device that needs to be deregistered and then select the device. If necessary, use the **Search** box.
 
-7. Select the checkbox next to the device you want to delete, then select the **Delete** button along the top menu
+1. In the properties screen for the device, under **Monitor**, select **Group membership**.
 
-8. Navigate to **Device enrollment** > **Windows enrollment** > **Devices**
+1. Make a note of all of the groups the device is a member of where **Membership type** is **Assigned** and **Direct or Transitive** is **Direct**. If the device is not a member of any groups that are both **Assigned** and **Direct**, then go to the [Delete the device from Intune](#delete-the-device-from-intune) section.
 
-9. Select the checkbox next to the device you want to deregister
+#### Remove the device from any Assigned and Direct groups it's a member of
 
-10. Select the extended menu icon (`…`) on the far right end of the line containing the device you want to deregister to expose an additional menu with the option to **unassign user**
+1. In the **Home** screen, select **Groups** in the left hand pane.
 
-11. Select **Unassign user** if the device was previously assigned to a user. If not, this option will be grayed-out and can be ignored.
+1. In the **Groups | All groups** screen, make sure **All groups** is selected.
 
-12. With the unassigned device still selected, select the **Delete** button along the top menu to remove this device
+1. Under **Name**, locate and select the **Assigned** and **Direct** groups that the device is a member of as determined in the [Make a note of the device's group membership](#make-a-note-of-any-assigned-and-direct-groups-the-device-is-a-member-of) section. If necessary, use the **Search** box.
 
-These steps deregister the device from Autopilot, unenroll the device from Intune, and disjoin the device from Azure AD. It may appear that only deregistering the device from Autopilot is needed. However, there are barriers in Intune that require all the above steps to avoid problems with lost or unrecoverable devices. To prevent the possibility of orphaned devices in the Autopilot database, Intune, or Azure AD, it's best to complete all the steps.
+1. After selecting a group, in the group's property page, under **Manage**, select **Members**.
 
-The deregistration process will take about 15 minutes. You can accelerate the process by selecting the **Sync** button, then **Refresh** the display until the device is no longer present.
+1. Under **Name**, locate the device in the group. If necessary, use the **Search by name** box.
+
+1. Select the device by selecting the checkbox next to the device.
+
+1. In the toolbar at the top of the page, select **Remove**.
+
+1. A warning dialog box will appear confirming the removal of the device from the group. Select **Yes** to confirm the removal of the device from the group.
+
+#### Delete the device from Intune
+
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+
+1. In the **Home** screen, select **Devices** in the left pane.
+
+1. In the **Devices | Overview** screen, under **By platform**, select **Windows**.
+
+1. Under **Device name**, find the device that needs to be deregistered and then select the device. If necessary, use the **Search** box.
+
+1. In the properties screen for the device, make a note of the serial number listed under **Serial number**.
+
+1. After making a note of the serial number of the device, select **Delete** in the toolbar at the top of the page.
+
+1. A warning dialog box will appear confirming the deletion of the device from Intune. Select **Yes** to confirm deleting the device.
+
+## Deregister a device from Autopilot
+
+1. Make sure the device has been deregistered from Intune as described in the [Deregister from Intune](#deregister-from-intune) section.
+
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+
+1. In the **Home** screen, select **Devices** in the left pane.
+
+1. In the **Devices | Overview** screen, under **By platform**, select **Windows**.
+
+1. In the **Windows | Windows enrollment** screen, select **Windows enrollment**
+
+1. Under **Windows Autopilot Deployment Program**, select **Devices**.
+
+1. In the **Windows Autopilot devices** screen that opens, under **Serial number**, find the device that needs to be deregistered by its serial number as determined in the [Delete the device from Intune](#delete-the-device-from-intune) section. If necessary, use the **Search by serial number** box.
+
+1. Select the device by selecting the checkbox next to the device.
+
+1. Select the extended menu icon (`…`) on the far right end of the line containing the device. An menu will appear with the option **Unassign user**.
+
+   - If the **Unassign user** option is available and not greyed out, then select it. A warning dialog box will appear confirming to unassign the user from the device. Select **OK** to confirm unassigning the device from the user.
+   - If the **Unassign user** option is not available and greyed out, then move on to the next step.
+
+1. With the device still selected, select **Delete** in the toolbar at the top of the page.
+
+1. A warning dialog box will appear confirming the deletion of the device from Autopilot. Select **Yes** to confirm deleting the device.
+
+1. The deregistration process may take some time. The process can be accelerated by selecting the **Sync** button in the toolbar at the top of the page.
+
+1. Every few minutes select **Refresh** in the toolbar at the top of the page until the device is no longer present.
+
+> [!IMPORTANT]
+>
+> No additional steps are necessary to remove the device from Intune and Autopilot. Unneeded steps includes manually deleting the device from Azure AD. Manually deleting the device from Azure AD may cause unexpected problems, issues, and behavior. If needed, the device will be automatically removed from Azure AD after the steps above are followed.
+
+The steps above deregister the device from Autopilot, unenroll the device from Intune, and disjoin the device from Azure AD. It may appear that only deregistering the device from Autopilot is needed. However, there are barriers in Intune that require all the above steps to avoid problems with lost or unrecoverable devices. To prevent the possibility of orphaned devices in the Autopilot database, Intune, or Azure AD, it's best to complete all the steps.
 
 ## Deregister from Microsoft Admin Center
 
