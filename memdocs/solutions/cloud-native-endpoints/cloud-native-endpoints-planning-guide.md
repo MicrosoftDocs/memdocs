@@ -27,6 +27,7 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection:
   - M365-identity-device-management
+  - intune-scenario
 ---
 
 # High level planning guide to move to cloud-native endpoints

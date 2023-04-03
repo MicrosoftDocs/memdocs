@@ -28,6 +28,7 @@ search.appverid: MET150
 ms.collection:
 - tier2
 - M365-identity-device-management
+- intune-scenario
 ---
 
 # Manage operating system versions with Intune
