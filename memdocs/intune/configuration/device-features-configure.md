@@ -212,7 +212,7 @@ In Intune, use these settings to configure an SSO app extension created by your 
 
 For a list of the settings you can configure in Intune, see [iOS/iPadOS SSO app extension](ios-device-features-settings.md#single-sign-on-app-extension) and [macOS SSO app extension](macos-device-features-settings.md#single-sign-on-app-extension).
 
-For more information on developing an SSO app extension, watch [Extensible Enterprise SSO](https://developer.apple.com/videos/play/tech-talks/301) on Apple's web site. To read Apple's description of the feature, visit [single sign-on extensions payload settings] (https://support.apple.com/guide/deployment/single-sign-on-payload-settings-dep7a81f07b/web) (https://support.apple.com/guide/mdm/single-sign-on-extensions-mdmfd9cdf845/web). 
+For more information on developing an SSO app extension, watch [Extensible Enterprise SSO](https://developer.apple.com/videos/play/tech-talks/301) on Apple's web site. To read Apple's description of the feature, go to [single sign-on extensions payload settings](https://support.apple.com/guide/deployment/single-sign-on-payload-settings-dep7a81f07b/web). 
 
 > [!NOTE]
 > The **Single sign-on app extension** feature is different than the **Single sign-on** feature:
