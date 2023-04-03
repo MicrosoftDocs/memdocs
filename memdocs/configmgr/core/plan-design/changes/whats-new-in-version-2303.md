@@ -116,7 +116,7 @@ For more information, see [client settings in Configuration Manager](../../clien
 <!--15942599-->
 The Configuration Manager console now extends the dark theme for the delete secondary site wizard. This wizard will also have a new look for the normal theme. This is part of the ongoing effort to make dark theme and overall admin console experience better. 
 
-To use the theme, select the arrow from the top left of the ribbon, then choose the Switch console theme. Select Switch console theme again to return to the light theme.  For more information, see [Dark theme for the console](../../servers/manage/admin-console.md#bkmk_dark).
+To use the theme, select the arrow from the top left of the ribbon, then choose the Switch console theme. Select Switch console theme again to return to the light theme. For more information, see [Dark theme for the console](../../servers/manage/admin-console.md#bkmk_dark).
   
 <!--## Tools-->
 
