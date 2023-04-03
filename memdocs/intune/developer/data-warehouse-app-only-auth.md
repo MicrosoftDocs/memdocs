@@ -117,7 +117,7 @@ Using Visual Studio, create a Console App (.NET Framework) project that supports
 
     ``` csharp
      using System.Security;
-     using Microsoft.IdentityModel.Clients.ActiveDirectory;
+     using Microsoft.Identity.Client;
      using System.Configuration;
     ``` 
 
@@ -143,7 +143,7 @@ Using Visual Studio, create a Console App (.NET Framework) project that supports
     ```
 
 12. In the **Solution Explorer**, right-click on **References**, then select **Manage NuGet Packages**.
-13. Search for *Microsoft.IdentityModel.Clients.ActiveDirectory* and install the related Microsoft NuGet package.
+13. Search for *Microsoft.Identity.Client* and install the related Microsoft NuGet package.
 14. In **Solution Explorer** select and open the *App.config* file.
 15. Add the <code>appSettings</code> section so that the xml appears as follows:
 

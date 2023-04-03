@@ -162,7 +162,7 @@ The following sample contains a simple REST client. The code uses the **httpClie
 1. Open **Microsoft Visual Studio**.
 2. Choose **File** > **New Project**. Expand **Visual C#**, and choose **Console App (.NET Framework)**.
 3. Name the project `IntuneDataWarehouseSamples`, browse to where you would like to save the project, and then select **OK**.
-4. Right-click the name of the solution in the Solution Explorer, and then select **Manage NuGet Packages for Solution**. Select **Browse**, and then type `Microsoft.IdentityModel.Clients.ActiveDirectory` in the search box.
+4. Right-click the name of the solution in the Solution Explorer, and then select **Manage NuGet Packages for Solution**. Select **Browse**, and then type `Microsoft.Identity.Client` in the search box.
 
 	> [!NOTE]
 	> You must use the Microsoft Authentication Library (MSAL). For more information, see [Update your applications to use Microsoft Authentication Library (MSAL) and Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
@@ -181,7 +181,7 @@ The following sample contains a simple REST client. The code uses the **httpClie
    using System;
    using System.Net.Http;
    using System.Net.Http.Headers;
-   using Microsoft.IdentityModel.Clients.ActiveDirectory;
+   using Microsoft.Identity.Client;
 
    class Program
    {
