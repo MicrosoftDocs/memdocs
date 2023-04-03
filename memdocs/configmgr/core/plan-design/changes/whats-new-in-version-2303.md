@@ -68,7 +68,7 @@ The following table identifies the recommended compatibility levels for Configur
 |----------------|--------------------|--------|
 | SQL Server 2022 | 150, 140, 130, 120, 110 | 150 |
 
-For more information, see [support-for-sql-server-versions.](../../plan-design/configs/support-for-sql-server-versions.md)
+For more information, see [support-for-sql-server-versions](../../plan-design/configs/support-for-sql-server-versions.md).
 
 <!--## Client management-->
 
