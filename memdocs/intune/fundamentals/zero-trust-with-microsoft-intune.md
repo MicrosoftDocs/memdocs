@@ -4,11 +4,11 @@
 title: Zero Trust with Microsoft Intune
 description: Microsoft Intune contributes to a strong Zero Trust strategy and architecture.
 keywords: Zero Trust, security architecture, security strategy, cyber security, enterprise security, devices, device, identity, users, data, applications
-author: Smritib17
-ms.author: smbhardwaj
+author: brenduns
+ms.author: brenduns
 manager: dougeby
-ms.date: 03/21/2023
-ms.topic: how-to
+ms.date: 04/03/2023
+ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
@@ -18,11 +18,11 @@ ms.localizationpriority: high
 #ROBOTS:
 #audience:
 
-ms.reviewer: angerobe
+ms.reviewer: dougeby
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: intune-classic
+ms.custom: intune-azure
 ms.collection:
 - tier1
 - M365-identity-device-management
@@ -30,6 +30,7 @@ ms.collection:
 - highseo
 - zerotrust-services
 ---
+
 
 # Zero Trust with Microsoft Intune
 
