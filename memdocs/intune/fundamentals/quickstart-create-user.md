@@ -33,6 +33,8 @@ ms.collection:
 
 In this topic, you'll create a user and then assign the user an Intune license. When you use Intune, each person you want to have access to company data must have their own user account. Intune admins can configure users later to manage access control.
 
+[!INCLUDE [intune-evaluate](../includes/intune-evaluate.md)]
+
 ## Prerequisites
 
 - A Microsoft Intune subscription. [Sign up for a free trial account](../fundamentals/free-trial-sign-up.md).
