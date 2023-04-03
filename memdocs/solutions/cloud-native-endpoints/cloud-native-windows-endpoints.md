@@ -29,6 +29,7 @@ ms.collection:
   - M365-identity-device-management
   - highpri
   - highseo
+  - intune-scenario
 ---
 
 # Tutorial: Set up and configure a cloud-native Windows endpoint with Microsoft Intune
