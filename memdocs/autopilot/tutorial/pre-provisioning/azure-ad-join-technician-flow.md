@@ -80,9 +80,9 @@ Once all of the configurations for Windows Autopilot for pre-provisioned deploym
 
      - Diagnostic logs can be gathered from the device to troubleshoot the issue by selecting **View diagnostics**.
 
-     - If the issue can be fixed, for example no network connectivity, then select the **Retry** button to retry provisioning the device
+     - If the issue can be easily fixed, for example resolving no network connectivity, then select the **Retry** button to retry provisioning the device
 
-     - If the issue can't be immediately fixed or can't be fixed without a reset, then select the **Reset** button so that the process can be started over again.
+     - If the issue can't be immediately fixed or can't be fixed without a reset, then select the **Reset** button so that the process starts over again.
 
 ## Next step: User flow
 
