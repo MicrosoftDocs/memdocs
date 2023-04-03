@@ -373,8 +373,6 @@ This example shows how to use C# to retrieve a list of devices associated with y
     1. Choose **Manage NuGet Packages…** &gt; **Browse**.
     1. Select `Microsoft.Identity.Client` and then choose **Install**.
 
-    <img src="../media/aad-auth-cpp-install-package.png" width="624" height="458" alt="Selecting the Azure AD identity model module" />
-
 4. Add the following statements to the top of **Program.cs**:
 
     ``` csharp
