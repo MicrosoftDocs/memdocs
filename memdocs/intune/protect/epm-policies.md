@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/24/2023
+ms.date: 04/18/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -29,10 +29,7 @@ ms.collection:
 
 # Configure policies for Endpoint Privilege Management
 
-<!-- [!INCLUDE [intune-add-on-note](../includes/intune-add-on-note.md)] -->
- 
-> [!NOTE]  
-> This capability is in public preview and available to use without a license. After public preview, it will be available as an Intune add-on. For more information, see [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md).
+[!INCLUDE [intune-add-on-note](../includes/intune-add-on-note.md)]
 
 Microsoft Intune Endpoint Privilege Management (EPM) allows your organization’s users to run as a standard user (without administrator rights) and complete tasks that require elevated privileges.
 
@@ -128,15 +125,17 @@ We recommend using a reusable settings group when you plan to use the same certi
 
 ## Enable your tenant for Endpoint Privilege Management
 
-Before you can use EPM to create policies and manage file elevations, you must enable EPM in your tenant.
+Before you can use EPM to create policies and manage file elevations, you must license EPM in your tenant. After obtaining a license for EPM, you can begin to deploy elevation settings policies to enable EPM on devices.
+<!-- 
 
-During the public preview, you can use EPM without acquiring a license or a trial. To enable support for your tenant:
+During the public preview, you can use EPM without acquiring a license or a trial. To enable support for your tenant.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Endpoint security** > **Endpoint Privilege Management**.
 
 2. Review the available information for EPM, and when ready, select **Activate**. Intune begins to provision EPM for your tenant, which includes making the EPM component available to be deployed to your devices. These components are enabled on devices when they receive a *Windows elevation settings policy*.
 
    :::image type="content" source="./media/epm-policies/enable-epm.png" alt-text="Activate EPM for use during the public preview." :::
+-->
 
 ## Windows elevation settings policy
 

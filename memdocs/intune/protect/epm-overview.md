@@ -29,10 +29,7 @@ ms.collection:
 
 # Use Endpoint Privilege Management with Microsoft Intune
 
-<!-- [!INCLUDE [intune-add-on-note](../includes/intune-add-on-note.md)] -->
-
-> [!NOTE]  
-> This capability is in public preview and available to use without a license. After public preview, it will be available as an Intune add-on. For more information, see [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md).
+[!INCLUDE [intune-add-on-note](../includes/intune-add-on-note.md)]
 
 Microsoft Intune Endpoint Privilege Management (EPM) allows your organization’s users to run as a standard user (without administrator rights) and complete tasks that require elevated privileges.
 
@@ -51,9 +48,10 @@ Applies to:
 
 ### Licensing
 
-During the public preview, EPM doesn't require acquiring or provisioning a license. Instead, you can [activate EPM](../protect/epm-policies.md#enable-your-tenant-for-endpoint-privilege-management) and validate the functionality.
+Endpoint Privilege Management requires a license to use, which is available as part of the [Microsoft Intune Suite](../fundamentals/intune-add-ons.md).
+<!-- other license options? Plan 2 or standalone?  Is it a per device license - 1 for each device that will use EPM? -->
 
-Once the product becomes generally available, your tenant must be licensed for Endpoint Privilege Management. This license is available as a part of the [Intune Suite or standalone license](../fundamentals/intune-add-ons.md).
+While EPM was in public preview, it did not require a license. 
 
 ### Windows Client requirements
 
@@ -74,7 +72,7 @@ Endpoint Privilege Management has the following operating system requirements:
 
 Endpoint Privilege Management (EPM) is built into Microsoft Intune, which means that all configuration is completed within the [Microsoft Intune Admin Center](https://intune.microsoft.com). When organizations get started with EPM, they use the high-level process that's outlined as follows:
 
-- **Activate Endpoint Privilege Management** - Public Preview customers aren't required to obtain a license for Endpoint Privilege Management to try out the product. Instead, they activate the product by navigating to the Endpoint Privilege Management node and having a *Global Administrator* or *Intune Service Admin* activate the product experience.
+- **Activate Endpoint Privilege Management** - After you license EPM for your tenant, Intune provisions EPM on each device that receives an elevation settings policy that enables EPM. Unlike the experience when EPM was in public preview, there is no need to activate EPM.    <!-- Public Preview customers aren't required to obtain a license for Endpoint Privilege Management to try out the product. Instead, they activate the product by navigating to the Endpoint Privilege Management node and having a *Global Administrator* or *Intune Service Admin* activate the product experience.  -->
 - **Deploy an *elevation settings* policy** - An elevation settings policy *activates* EPM on the client device. This policy also allows you to configure settings that are specific to the client but aren't necessarily related to the elevation of individual applications or tasks.
 - **Deploy *elevation rule* policies** - An elevation rule policy *links* an application or task to an elevation action. Use this policy to configure the elevation behavior for applications your organization allows when the applications run on the device.
 
