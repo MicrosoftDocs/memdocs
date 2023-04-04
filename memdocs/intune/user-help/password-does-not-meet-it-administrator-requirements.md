@@ -43,6 +43,8 @@ ms.collection:
 
 You'll receive a message from Company Portal if your device password, PIN, or passcode doesn't meet your organization's security requirements. Password requirements are put in place to prevent unauthorized individuals from gaining access to the work or school data on your enrolled device. Until you create a more secure device password, you may be blocked from accessing your org's network.  
 
+Company Portal sends one message per password requirement, so you may receive more than one password-related message. For example, if your password is too short and and too simple, you will receive one message about the length and one message about the complexity.    
+
 ## Change password, passcode, PIN  
 
 The following resources describe how to secure devices running Windows 10/11, iOS/iPadOS, macOS, and Android.  
@@ -52,9 +54,11 @@ The following resources describe how to secure devices running Windows 10/11, iO
 - [Change login password on Mac](https://support.apple.com/guide/mac-help/change-the-login-password-on-mac-mchlp1550/mac#:~:text=1%20On%20your%20Mac%2C%20choose%20Apple%20menu%20%3E,next%20to%20the%20New%20Password%20field.%20See%20More)  
 - [Set screen lock on Android device](https://support.google.com/android/answer/9079129) (opens Android Help docs)  
 
+## Password-related messages  
+For a list of password-related messages in Company Portal, see [Device password messages in Company Portal](intune-company-portal-password-message-reference.md).  
+
 ## Next steps
 Still need help?  
 
 * If you still receive password-related messages after updating your password, try restarting your device.  
 * Password requirements are determined by your organization's policies. For questions about specific messages, contact your IT support person. Sign into the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980) to find your organization's helpdesk information.  
-* For a list of password-related messages in Company Portal, see [Company Portal password requirements](intune-company-portal-password-message-reference.md).  

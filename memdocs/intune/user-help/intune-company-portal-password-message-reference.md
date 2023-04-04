@@ -41,12 +41,11 @@ ms.collection:
  * iOS/iPadOS  
  * macOS    
 
-This article describes the password-related messages in the Intune Company Portal app. Messages are organized by OS platform and include resolutions, when available. For information about how to change the password or screen lock on your device, see [password-does-not-meet-it-administrator-requirements.md].  
+This article lists the password-related messages you could receive from Intune Company Portal. These messages appear on devices during and after device enrollment, and enforce your organization's device password requirements. If you receive one or more of these messages, you may be blocked from accessing your org's network until you change your password settings. This article gives a brief description on how to fix your settings to meet each requirement.  
 
->[!NOTE]
-> Company Portal sends one message per password requirement, so you could receive more than one message at a time.   
+Messages in this article are organized by operating system.  
 
-## Windows password requirements
+## Windows password messages  
 These password-related messages are sent to devices running Windows 10 or later.  
 
 | Message | How to fix |
@@ -60,7 +59,7 @@ These password-related messages are sent to devices running Windows 10 or later.
 | Password has expired. | Set a new password. Your organization requires you to change your password after a certain number of days. |
 | Your password was used too recently. | Choose a password you haven't used before. Your organization requires that a certain amount of time passes before you reuse a password. |
 
-## iOS passcode requirements  
+## iOS passcode messages   
 
 These password-related messages are sent to iOS/iPadOS devices.  
 
@@ -76,7 +75,7 @@ These password-related messages are sent to iOS/iPadOS devices.
 | Your passcode was used too recently.| Choose a passcode you haven't used before. Your organization requires that a certain amount of time passes before you reuse a passcode. |
 |Touch ID or Face ID authentication required. | Set up Touch ID or Face ID. Your organization requires you to authenticate with one of these methods before using autofill for passwords or credit card information. | 
 
-## macOS password requirements  
+## macOS password messages   
 These password-related messages are sent to Mac devices.  
 
 | Message | How to fix |
@@ -90,7 +89,7 @@ These password-related messages are sent to Mac devices.
 | Password has expired. | Set a new password. Your organization requires you to change your password after a certain number of days. |
 | Your password was used too recently. | Choose a password you haven't used before. Your organization requires that a certain amount of time passes before you reuse a password. |
 
-## Android password requirements  
+## Android password messages  
 These password-related messages are sent to Android devices.  
 
 | Message | How to fix |
@@ -107,5 +106,6 @@ These password-related messages are sent to Android devices.
 | Your password was used too recently. | Choose a password you haven't used before. Your organization requires that a certain amount of time passes before you reuse a password. |
 
 
-
+## Next steps  
+For more information about password requirements, including how to change the password or screen lock on your device, see [Secure device with lock screen or password](password-does-not-meet-it-administrator-requirements.md).  
 
