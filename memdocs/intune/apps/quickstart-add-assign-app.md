@@ -31,9 +31,11 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Step 8: Add and assign a app
+# Step 8: Add and assign an app
 
-In this topic, you will use Intune to add and assign a app to your company's workforce. One of an admin's priorities is to ensure that end users have access to the apps they need to do their work.
+In this topic, you will use Intune to add and assign an app to your company's workforce. One of an admin's priorities is to ensure that end users have access to the apps they need to do their work.
+
+[!INCLUDE [intune-evaluate](../includes/intune-evaluate.md)]
 
 If you don't have an Intune subscription, [sign up for a free trial account](../fundamentals/free-trial-sign-up.md).
 

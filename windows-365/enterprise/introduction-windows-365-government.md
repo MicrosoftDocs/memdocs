@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 03/06/2023
+ms.date: 03/29/2023
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -59,6 +59,8 @@ The following features are not yet supported for Windows 365 GCC or GCCH.
 - Citrix HDX Plus for Windows 365
 - Windows 365 app
 - Multimedia rediction for improved video playback
+- Microsoft Dev Box
+- Convert Windows 365 licenses to higher level licenses
 
 ## Next steps
 

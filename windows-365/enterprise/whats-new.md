@@ -7,8 +7,8 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 03/29/2023
-ms.topic: reference
+ms.date: 04/03/2023
+ms.topic: conceptual
 ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
@@ -53,6 +53,17 @@ Learn what new features are available in Windows 365 Enterprise.
 -->
 
 <!-- ########################## -->
+## Week of April 3, 2023
+
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Convert Windows 365 licenses to higher level licenses<!--43204652-->
+
+Customers with an active direct enterprise agreement can now convert lower-level Windows 365 licenses to higher-level licenses. Reach out to your field specialist to learn more.
+
+<!-- ########################## -->
 ## Week of March 28, 2023 (Service release 2303)
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -77,18 +88,7 @@ FQDN tags help customers simplify the creation and maintenance of the necessary 
 Windows 365 Enterprise has been assessed by a FedRAMP authorized auditor to meet FedRAMP requirements at data centers within the Continental US.
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
-### Monitor and troubleshoot
-
-#### New data for Cloud PC utilization report<!--43931239-->
-
-The Cloud PC utilization report now includes the filer options **Active time connected** and **Last active time**. This helps you identify under-utilized Cloud PCs that can be repurposed to other users. For more information, see [Cloud PC utilizaiton report](report-cloud-pc-utilization.md).
-
-<!-- vvvvvvvvvvvvvvvvvvvvvv -->
-### Windows 365 app
-
-#### Pin Cloud PC to task bar in Windows 11<!--43470782-->
-
-End users can now pin their Cloud PC to the task bar in the Windows 365 app for Windows 11 platforms. This lets them launch the Cloud PC from the task bar icon without going into the connection center.
+<!--### Windows 365 app-->
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Windows 365 Government
