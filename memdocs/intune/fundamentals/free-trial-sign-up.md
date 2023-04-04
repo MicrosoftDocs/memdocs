@@ -34,6 +34,8 @@ ms.collection:
 
 Microsoft Intune helps you protect your workforce's corporate data by managing devices and apps. In this topic, you will create a free subscription to try Intune in a test environment.
 
+[!INCLUDE [intune-evaluate](../includes/intune-evaluate.md)]
+
 Intune provides mobile device management (MDM) and mobile app management (MAM) from a secure cloud-based service that is administered using the Microsoft Intune admin center. Using Intune, you ensure your workforce's corporate resources (data, devices, and apps) are correctly configured, accessed, and updated, meeting your company's compliance policies and requirements.
 
 When you complete the signup process, you'll have a new tenant. A tenant is a dedicated instance of Azure Active Directory (Azure AD) where your subscription to Intune is hosted. You can then configure the tenant, add users and groups, and assign licenses to users. When you're ready, you can help users enroll their devices and add apps that they need to begin the modern endpoint management process. As you continue, you can set configuration and protection policies, as well as other endpoint management capabilities.

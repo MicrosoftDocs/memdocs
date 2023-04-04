@@ -150,9 +150,9 @@ Your user and group accounts access organization resources. You need to keep the
   - [Plan an Azure Active Directory Multi-Factor Authentication deployment](/azure/active-directory/authentication/howto-mfa-getstarted)
   - [Require multi-factor authentication for Intune device enrollments](../enrollment/multi-factor-authentication.md)
 
-- **Zero trust** verifies all endpoints, including devices and apps. The idea is to help keep organization data in the organization, and prevent data leaks from accidental or malicious intent. It includes different feature areas, including Windows Hello for Business, using MFA, and more.
+- **Zero Trust** verifies all endpoints, including devices and apps. The idea is to help keep organization data in the organization, and prevent data leaks from accidental or malicious intent. It includes different feature areas, including Windows Hello for Business, using MFA, and more.
 
-  For more information, go to [Secure endpoints with Zero Trust](/security/zero-trust/deploy/endpoints).
+  For more information, see [Zero Trust with Microsoft Intune](zero-trust-with-microsoft-intune.md).
 
 ## Next steps
 

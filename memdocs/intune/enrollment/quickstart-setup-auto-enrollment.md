@@ -37,6 +37,8 @@ ms.collection:
 
 In this task, you'll set up Microsoft Intune to automatically enroll corporate owned or user owned devices. You can scope automatic enrollment to some Azure AD users, all users, or none.  
 
+[!INCLUDE [intune-evaluate](../includes/intune-evaluate.md)]
+
 If you don't have an Intune subscription, [sign up for a free trial account](../fundamentals/free-trial-sign-up.md) to try out this tutorial.
 
 ## Prerequisites
