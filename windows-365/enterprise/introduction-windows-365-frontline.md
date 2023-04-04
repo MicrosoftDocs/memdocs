@@ -51,7 +51,7 @@ During public preview, Windows 365 Frontline licenses can't be purchased through
 
 Because Windows 365 Frontline licenses are applied at the tenant level, the Microsoft 365 admin center shows Windows 365 Frontline licenses as assigned to zero users. To see how many licenses are being used, use the Windows 365 [utilization report](report-cloud-pc-utilization.md).
 
-To make sure users can continuously use their Cloud PCs after short breaks, the license isn't immediately released after a user signs off. 
+To make sure users can continuously use their Cloud PCs after short breaks, the license isn't released until 20 minutes after a user signs off.
 
 ## Managing Windows 365 Frontline Cloud PCs
 
@@ -67,7 +67,7 @@ Windows 365 Frontline Cloud PCs can be managed using Microsoft Intune, alongside
 You can view your Cloud PCs on two pages:
 
 - **All devices**: Turn on the **Model** column to differentiate between Frontline Cloud PCs and others.
-- **All Cloud PCs**: This list can be filtered to show only Frontline Cloud PCs using the **PC type** filter. 
+- **All Cloud PCs**: This list can be filtered to show only Frontline Cloud PCs using the **PC type** filter.
 
 When inactive, Cloud PCs will be in a powered off state. This state makes sure that the license is available when another user on the same license signs in to their Cloud PC.
 
