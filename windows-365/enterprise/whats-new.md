@@ -68,7 +68,7 @@ Customers with an active direct enterprise agreement can now convert lower-level
 
 #### New documentation article: Relative performance for different Cloud PC sizes
 
-We’ve published a new help documentation article. For more information, see [Relative performance for different Cloud PC sizes](../relative-cloud-pc-performance.md.md).
+We’ve published a new help documentation article. For more information, see [Relative performance for different Cloud PC sizes](../relative-cloud-pc-performance.md).
 
 <!-- ########################## -->
 ## Week of March 28, 2023 (Service release 2303)
