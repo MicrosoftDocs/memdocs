@@ -48,10 +48,7 @@ Applies to:
 
 ### Licensing
 
-Endpoint Privilege Management requires a license to use, which is available as part of the [Microsoft Intune Suite](../fundamentals/intune-add-ons.md).
-<!-- other license options? Plan 2 or standalone?  Is it a per device license - 1 for each device that will use EPM? -->
-
-While EPM was in public preview, it did not require a license. 
+Endpoint Privilege Management requires an additional license beyond the *Microsoft Intune Plan 1* license. You can choose between an stand-alone license that adds only EPM, or license EPM as part of the Microsoft Intune Suite. For more information, see [Use Intune Suite add-on capabilities](../fundamentals/add-ons.md).
 
 ### Windows Client requirements
 
