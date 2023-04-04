@@ -8,7 +8,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 12/05/2022
-ms.topic: reference
+ms.topic: conceptual
 ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
@@ -34,7 +34,7 @@ ms.collection:
 
 Learn what new features are available in Windows 365 Business.
 
-> [!Note]
+> [!NOTE]
 > Each monthly update may take up to a week to rollout to all customers.
 
 <!-- Common categories:  
