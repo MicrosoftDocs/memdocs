@@ -33,22 +33,29 @@ For an overview of the Windows Autopilot for pre-provisioned deployment Azure AD
 
 ## Technician flow
 
-Once all of the configurations for Windows Autopilot for pre-provisioned deployment have been completed on the Intune and Azure AD side, the next steps is to start the Autopilot process. This steps is known as the Technician flow. To start the Technician flow, follow the below steps:
+Once all of the configurations for Windows Autopilot for pre-provisioned deployment have been completed on the Intune and Azure AD side, the next step is to start the Autopilot process. This step is known as the Technician flow. To start the Technician flow, follow the below steps:
 
 1. Boot a device that is part of the device group created in the previous **Create a device group** step.
 
-1. From the first OOBE screen, **DON'T** select **Next**. The first OOBE screen can be a language selection screen, a locale selection screen, or the Azure AD sign-in page. Instead of selecting **Next**, press the <kbd>WIN</kbd> key five times. Pressing the <kbd>WIN</kbd> key five times should display an alternative options screen.
+1. From the first OOBE screen. Once the device boots, the first OOBE (out of box experience) screen appears. The first OOBE screen can be a language selection screen, a locale selection screen, or the Azure AD sign-in page. **DON'T** select **Next** at this screen. Instead of selecting **Next**, press the <kbd>WIN</kbd> key on the keyboard five times. Pressing the <kbd>WIN</kbd> key five times should display an alternative **What would you like to do?** options screen.
 
-1. From the alternative options screen, select the **Windows Autopilot provisioning** option, and then select **Continue**.
+1. From the **What would you like to do?** options screen, select the **Windows Autopilot provisioning** option, and then select **Continue**.
 
     ![Windows Autopilot provisioning option.](../../images/choice.png)
 
 1. In the **Windows Autopilot Configuration** screen, it displays the following information about the device:
 
    - The Autopilot profile assigned to the device.
+
    - The organization name for the device.
+
    - The user assigned to the device if a user was assigned in the **Assign Autopilot device to a user (optional)** step.
-   - A QR code containing a unique identifier for the device. You can use this code to look up the device in Intune which you might want to do to verify configurations, and if make any necessary changes.
+
+      > [!NOTE]
+      >
+      > If a user is assigned to the device, the user may not always be displayed in this screen and may vary from OEM to OEM.
+
+   - A QR code containing a unique identifier for the device. You can use this code to look up the device in Intune to perform actions such as verifying configurations, make any necessary changes, etc.
 
       > [!NOTE]
       >
@@ -60,11 +67,11 @@ Once all of the configurations for Windows Autopilot for pre-provisioned deploym
 
 1. Once all information has been confirmed as correct, select **Provision** to begin the provisioning process.
 
-1. Once the provisioning process completes, a status screen will be displayed showing either success of failure:
+1. Once the provisioning process completes, a status screen is displayed showing either success of failure:
 
    - If the pre-provisioning process completes successfully, a green status screen appears with information about the device, including the same details presented previously. For example, Autopilot profile, organization name, assigned user, and QR code. The elapsed time for the pre-provisioning steps is also provided.
 
-        ![Green configuration screen.](../../images/white-glove-result.png)
+        ![Green success screen.](../../images/white-glove-result.png)
 
      1. Select **Reseal** to shut down the device. At that point, the device can be shipped to the end user.
 
@@ -80,9 +87,11 @@ Once all of the configurations for Windows Autopilot for pre-provisioned deploym
 
      - Diagnostic logs can be gathered from the device to troubleshoot the issue by selecting **View diagnostics**.
 
-     - If the issue can be easily fixed, for example resolving no network connectivity, then select the **Retry** button to retry provisioning the device
+     - If the issue can be easily fixed, for example resolving network connectivity, then select the **Retry** button to retry provisioning the device.
 
      - If the issue can't be immediately fixed or can't be fixed without a reset, then select the **Reset** button so that the process starts over again.
+
+        ![Red failure screen.](../../images/troubleshoot-device-enrollment/0x80180014-error-code-pre-provisioning-page.png)
 
 ## Next step: User flow
 
