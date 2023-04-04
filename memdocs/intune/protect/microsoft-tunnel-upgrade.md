@@ -156,9 +156,8 @@ Image hash values:
 - **serverImageDigest**: sha256:e424c4bb707d3a18c59f18259549de007f2916c995dea92212a1d3396cf05bf5
 
 Changes in this release:
-- Minor bug fixes
-- Updated container images to Ubuntu 22.04 
 
+- Minor bug fixes
 
 ### March 1, 2023
 
@@ -169,6 +168,7 @@ Image hash values:
 - **serverImageDigest**: sha256:cf706bc6a5ea8a743bab84ed8be9901733738881e2e84d0f9083654e9c5cd317
 
 Changes in this release:
+
 - Minor bug fixes
 - Updated Microsoft Tunnel Server Gateway EULA
 
@@ -182,8 +182,8 @@ Image hash values:
 - **serverImageDigest**: sha256:709219327f6aff5f81f6b6dc9f644334ccefd6af2f75ed4461ae06885bff9551
 
 Changes in this release:
-- Minor bug fixes
 
+- Minor bug fixes
 
 ### November 16, 2022
 
@@ -194,11 +194,10 @@ Image hash values:
 - **serverImageDigest**: sha256:3a367955746522fe89fc8f0fb6edc259aefe0e681db652281b1ff264fdcce6dc
 
 Changes in this release:
+
 - Minor bug fixes
 - Security improvements
 - Journalctl logging fix in mst-cli
-
-
 
 ### September 23, 2022
 
@@ -209,10 +208,11 @@ Image hash values:
 - **serverImageDigest**: sha256:0f66f2b5463e283c1621fc4250f69fac97ebda77bef8f570ed181b78000d762c
 
 Changes in this release:
+
 - Minor bug fixes
 - Security improvements
 - Mst-readiness script enhancements
-- Add Azure storage endpoint 
+- Add Azure storage endpoint
 
 
 ### August 22, 2022
@@ -224,6 +224,7 @@ Image hash values:
 - **serverImageDigest**: sha256:ec5bd023b5582e58b6b9eb6aa41a9b064003f5b2b228508115bf6d42be9564a3
 
 Changes in this release:
+
 - Security improvements
 - Mst-readiness script enhancements
 
@@ -237,6 +238,7 @@ Image hash values:
 - **serverImageDigest**: sha256:683ff13cfc16824741e961f04b94bce766777a5dcc80f019af234b4c9948fd66
 
 Changes in this release:
+
 - Minor bug fixes
 - Set process limit to 6000 in the server container 
 
@@ -281,6 +283,10 @@ Changes in this release:
 - Minor bug fixes
 - Access log enhancements
 
+
+<!-- Archive of past releases
+
+
 ### February 16, 2022
 
 Image hash values:
@@ -306,8 +312,6 @@ Changes in this release:
 - A new version of the *mst-readiness* tool is available for download. We recommend using the updated script, which now checks the Linux server build for the presence of the *ip_tables* module. While most Linux distributions load this module be default, some versions, like RHEL 8.5 and RHEL 8.6, do not.
 
   For more information including where to download the tool, see [Run the readiness tool](../protect/Microsoft-tunnel-prerequisites.md#run-the-readiness-tool).  
-
-
 
 ### October 25, 2021
 
@@ -337,7 +341,6 @@ Changes in this release:
 - Added ability to add host entries to the server container
 - Security patches applied
 - Minor bug fixes
-
 
 ### June 14, 2021
 
@@ -407,8 +410,7 @@ Changes in this release:
 
 The initial public preview release of Microsoft Tunnel.
 
-<!-- Archive of past releases
--->
+End of archive -->
 
 ## Next steps
 
