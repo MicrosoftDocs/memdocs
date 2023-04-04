@@ -60,6 +60,7 @@ The following features are not yet supported for Windows 365 GCC or GCCH.
 - Windows 365 app
 - Multimedia rediction for improved video playback
 - Microsoft Dev Box
+- Convert Windows 365 licenses to higher level licenses
 
 ## Next steps
 
