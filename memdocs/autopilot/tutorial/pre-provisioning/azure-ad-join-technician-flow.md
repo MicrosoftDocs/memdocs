@@ -37,7 +37,7 @@ Once all of the configurations for Windows Autopilot for pre-provisioned deploym
 
 1. Boot a device that is part of the device group created in the previous **Create a device group** step.
 
-1. From the first OOBE screen. Once the device boots, the first OOBE (out of box experience) screen appears. The first OOBE screen can be a language selection screen, a locale selection screen, or the Azure AD sign-in page. **DON'T** select **Next** at this screen. Instead of selecting **Next**, press the <kbd>WIN</kbd> key on the keyboard five times. Pressing the <kbd>WIN</kbd> key five times should display an alternative **What would you like to do?** options screen.
+1. Once the device boots, the first OOBE (out of box experience) screen appears. The first OOBE screen can be a language selection screen, a locale selection screen, or the Azure AD sign-in page. **DON'T** select **Next** at this screen. Instead of selecting **Next**, press the <kbd>WIN</kbd> key on the keyboard five times. Pressing the <kbd>WIN</kbd> key five times should display an alternative **What would you like to do?** options screen.
 
 1. From the **What would you like to do?** options screen, select the **Windows Autopilot provisioning** option, and then select **Continue**.
 
