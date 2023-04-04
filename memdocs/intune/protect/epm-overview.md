@@ -48,7 +48,7 @@ Applies to:
 
 ### Licensing
 
-Endpoint Privilege Management requires an additional license beyond the *Microsoft Intune Plan 1* license. You can choose between an stand-alone license that adds only EPM, or license EPM as part of the Microsoft Intune Suite. For more information, see [Use Intune Suite add-on capabilities](../fundamentals/add-ons.md).
+Endpoint Privilege Management requires an additional license beyond the *Microsoft Intune Plan 1* license. You can choose between an stand-alone license that adds only EPM, or license EPM as part of the Microsoft Intune Suite. For more information, see [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md).
 
 ### Windows Client requirements
 
@@ -71,7 +71,7 @@ Endpoint Privilege Management has the following operating system requirements:
 
 Endpoint Privilege Management (EPM) is built into Microsoft Intune, which means that all configuration is completed within the [Microsoft Intune Admin Center](https://intune.microsoft.com). When organizations get started with EPM, they use the high-level process that's outlined as follows:
 
-- **License Endpoint Privilege Management** - Before you can use Endpoint Privilege Management policies, you must license EPM in your tenant as an Intune add-on. For licensing information, see [Use Intune Suite add-on capabilities](../fundamentals/add-ons.md).
+- **License Endpoint Privilege Management** - Before you can use Endpoint Privilege Management policies, you must license EPM in your tenant as an Intune add-on. For licensing information, see [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md).
 
 - **Deploy an *elevation settings* policy** - An elevation settings policy *activates* EPM on the client device. This policy also allows you to configure settings that are specific to the client but aren't necessarily related to the elevation of individual applications or tasks.
 - **Deploy *elevation rule* policies** - An elevation rule policy *links* an application or task to an elevation action. Use this policy to configure the elevation behavior for applications your organization allows when the applications run on the device.
