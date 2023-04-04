@@ -39,7 +39,6 @@ Endpoint Privilege Management supports your zero-trust journey by helping your o
 
 The information in this article can help you to configure the following policies and reusable settings for EPM:
 
-- Enable your tenant for Endpoint Privilege Management
 - Windows elevation settings policy
 - Windows elevation rules policy
 - Reusable settings groups, which are optional configurations for your elevation rules.
@@ -51,7 +50,9 @@ Applies to:
 
 ## Get started with EPM policies
 
-EPM uses two policy types that you configure to manage how a file elevation request is handled. Together, the policies configure the behavior for file elevations when standard users request to *run with administrative privileges*.
+Endpoint Privilege Management uses two policy types that you configure to manage how a file elevation request is handled. Together, the policies configure the behavior for file elevations when standard users request to *run with administrative privileges*.
+
+Before you can create Endpoint Privilege Management policies, you must license EPM in your tenant as an Intune add-on. For licensing information, see [Use Intune Suite add-on capabilities](../fundamentals/add-ons.md).
 
 ### About Windows elevation settings policy
 
@@ -123,23 +124,9 @@ We recommend using a reusable settings group when you plan to use the same certi
 - Certificates you add directly to an elevation rule: Each certificate that's added directly to a rule is uploaded as a unique instance by Intune, and that certificate instance is then associated with that rule. Adding the same certificate directly to two separate rules results in it uploading twice. Later, if you must change the certificate, you must edit each individual rule that contains it. With each rule change, Intune uploads the updated certificate a single time for each rule.
 - Certificates you manage through a reusable settings group: Each time a certificate is added to a reusable settings group, Intune uploads the certificate a single time no matter how many elevation rules include that group. That instance of the certificate is then associated with the file from each rule that uses that group. Later, any change to the certificate you make can be made a single time in the reusable settings group. This change results in Intune uploading the updated file a single time, and then applying that change to each elevation rule that references the group.
 
-## Enable your tenant for Endpoint Privilege Management
-
-Before you can use EPM to create policies and manage file elevations, you must license EPM in your tenant. After obtaining a license for EPM, you can begin to deploy elevation settings policies to enable EPM on devices.
-<!-- 
-
-During the public preview, you can use EPM without acquiring a license or a trial. To enable support for your tenant.
-
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Endpoint security** > **Endpoint Privilege Management**.
-
-2. Review the available information for EPM, and when ready, select **Activate**. Intune begins to provision EPM for your tenant, which includes making the EPM component available to be deployed to your devices. These components are enabled on devices when they receive a *Windows elevation settings policy*.
-
-   :::image type="content" source="./media/epm-policies/enable-epm.png" alt-text="Activate EPM for use during the public preview." :::
--->
-
 ## Windows elevation settings policy
 
-After you enable Endpoint Privilege Management for your tenant, deploy *Windows elevation settings policy* to users or devices. The policy configures the following options on devices:
+Deploy *Windows elevation settings policy* to users or devices to configure the following options on devices:
 
 - Enable Endpoint Privilege Management on a device.
 - Set default rules for elevation requests for any file that isn't managed by an Endpoint Privilege Management elevation rule on that device.
