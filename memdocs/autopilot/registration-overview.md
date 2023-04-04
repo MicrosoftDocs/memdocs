@@ -25,16 +25,16 @@ ms.collection:
 - Windows 10
 - Windows Holographic, version 2004
 
-Before deploying a device using Windows Autopilot, the device must be registered with the Windows Autopilot deployment service. 
+Before a device is deployed using Windows Autopilot, the device must be registered with the Windows Autopilot deployment service.
 
 Successful registration requires that two processes are complete:
 
 1. The device's unique [hardware identity](#device-identification) (known as a hardware hash) is captured and uploaded to the Autopilot service.
-2. The device is associated to an Azure tenant ID.
+1. The device is associated to an Azure tenant ID.
 
-Ideally, both of these processes are performed by the OEM, reseller, or distributor from which the devices were purchased. An OEM or other device provider uses the [registration authorization](registration-auth.md) process to perform device registration on your behalf. 
+Ideally, the OEM, reseller, or distributor performs both of these processes from which the devices were purchased. An OEM or other device provider uses the [registration authorization](registration-auth.md) process to perform device registration on your behalf.
 
-Registration can also be performed within your organization by collecting the hardware identity from new or existing devices and [uploading it manually](manual-registration.md). If devices meet certain requirements, they can also be configured for [automatic registration](automatic-registration.md) with Windows Autopilot. For more information about the ways in which devices can be registered with Windows Autopilot, see the following overview topics:
+Registration can also be performed within your organization by collecting the hardware identity from new or existing devices and [uploading it manually](manual-registration.md). If devices meet certain requirements, they can also be configured for [automatic registration](automatic-registration.md) with Windows Autopilot. For more information about the ways in which devices can be registered with Windows Autopilot, see the following overview articles:
 
 - [OEM registration](oem-registration.md)
 - [Reseller, distributor, or partner registration](partner-registration.md)
@@ -51,7 +51,7 @@ When you register an Autopilot device, it automatically creates an Azure AD obje
 >
 > These options are intended for users to join personally-owned devices to their organization's network.
 
-Once a device is registered in Autopilot if a profile is not assigned, it will receive the default Autopilot profile. If you do not want a device to go through Autopilot, you must remove the Autopilot registration. 
+Once a device is registered in Autopilot if a profile isn't assigned, it receives the default Autopilot profile. If you don't want a device to go through Autopilot, you must remove the Autopilot registration.
 
 ## Terms
 
@@ -60,7 +60,7 @@ The following terms are used to refer to various steps in the registration proce
 | Term | Definition |
 | --- | --- |
 | device registration | Device registration happens when a device's hardware hash is associated with the Windows Autopilot service. This process can be automated for new enterprise devices manufactured by OEMs that are Windows Autopilot partners. |
-| add devices | Adding a device is the process of registering a device with the Windows Autopilot service, (if it is not already registered) **and associating it to a tenant ID**. |
+| add devices | Adding a device is the process of registering a device with the Windows Autopilot service (if it isn't already registered) **and associating it to a tenant ID**. |
 | import devices | Importing devices is the process of uploading a comma-separated-values (CSV) file that contains device information such as the model and serial number in order to manually add devices. |
 | enroll devices | Enrolling a device is the process of adding devices to Intune. |
 
@@ -79,7 +79,7 @@ The hardware hash contains details about the device, such as:
 
 The hardware hash changes each time it's generated because it includes details about when it was generated. When the Windows Autopilot deployment service attempts to match a device, it considers changes like that. It also considers large changes such as a new hard drive, and is still able to match successfully. But large changes to the hardware, such as a motherboard replacement, wouldn't match, so a new hash would need to be generated and uploaded.
 
-For more information about device IDs, see the following topics:
+For more information about device IDs, see the following articles:
 
 - [Windows Autopilot device guidelines](autopilot-device-guidelines.md)
 - [Add devices to a customer account](/partner-center/autopilot)
@@ -100,45 +100,13 @@ Devices that have been registered with the Windows Autopilot service are display
 
 Whenever a device permanently leaves an organization, whether it's for a repair or the end of the device life cycle, the device should always be deregistered from Autopilot.
 
-If the IT Admin registered the device, they likely did so via Intune. If so, they should deregister the device from Intune because devices registered in Intune won't show up in Microsoft Partner Center (MPC).
+If an admin registered a device, they likely did so via Intune. If so, they should deregister the device from Intune because devices registered in Intune don't show up in Microsoft Partner Center (MPC).
 
 Below we describe the steps an IT Admin would go through to deregister a device from Intune and Autopilot.
 
 ### Deregister from Intune
 
 To deregister an Autopilot device from Intune:
-
-#### Make a note of any Assigned and Direct groups the device is a member of
-
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-
-1. In the **Home** screen, select **Devices** in the left pane.
-
-1. In the **Devices | Overview** screen, under **By platform**, select **Windows**.
-
-1. Under **Device name**, find the device that needs to be deregistered and then select the device. If necessary, use the **Search** box.
-
-1. In the properties screen for the device, under **Monitor**, select **Group membership**.
-
-1. Make a note of all of the groups the device is a member of where **Membership type** is **Assigned** and **Direct or Transitive** is **Direct**. If the device is not a member of any groups that are both **Assigned** and **Direct**, then go to the [Delete the device from Intune](#delete-the-device-from-intune) section.
-
-#### Remove the device from any Assigned and Direct groups it's a member of
-
-1. In the **Home** screen, select **Groups** in the left hand pane.
-
-1. In the **Groups | All groups** screen, make sure **All groups** is selected.
-
-1. Under **Name**, locate and select the **Assigned** and **Direct** groups that the device is a member of as determined in the [Make a note of the device's group membership](#make-a-note-of-any-assigned-and-direct-groups-the-device-is-a-member-of) section. If necessary, use the **Search** box.
-
-1. After selecting a group, in the group's property page, under **Manage**, select **Members**.
-
-1. Under **Name**, locate the device in the group. If necessary, use the **Search by name** box.
-
-1. Select the device by selecting the checkbox next to the device.
-
-1. In the toolbar at the top of the page, select **Remove**.
-
-1. A warning dialog box will appear confirming the removal of the device from the group. Select **Yes** to confirm the removal of the device from the group.
 
 #### Delete the device from Intune
 
@@ -154,7 +122,7 @@ To deregister an Autopilot device from Intune:
 
 1. After making a note of the serial number of the device, select **Delete** in the toolbar at the top of the page.
 
-1. A warning dialog box will appear confirming the deletion of the device from Intune. Select **Yes** to confirm deleting the device.
+1. A warning dialog box appears to confirm the deletion of the device from Intune. Select **Yes** to confirm deleting the device.
 
 ## Deregister a device from Autopilot
 
@@ -174,14 +142,14 @@ To deregister an Autopilot device from Intune:
 
 1. Select the device by selecting the checkbox next to the device.
 
-1. Select the extended menu icon (`…`) on the far right end of the line containing the device. An menu will appear with the option **Unassign user**.
+1. Select the extended menu icon (`…`) on the far right end of the line containing the device. A menu appears with the option **Unassign user**.
 
-   - If the **Unassign user** option is available and not greyed out, then select it. A warning dialog box will appear confirming to unassign the user from the device. Select **OK** to confirm unassigning the device from the user.
-   - If the **Unassign user** option is not available and greyed out, then move on to the next step.
+   - If the **Unassign user** option is available and not greyed out, then select it. A warning dialog box appears confirming to unassign the user from the device. Select **OK** to confirm unassigning the device from the user.
+   - If the **Unassign user** option isn't available and greyed out, then move on to the next step.
 
 1. With the device still selected, select **Delete** in the toolbar at the top of the page.
 
-1. A warning dialog box will appear confirming the deletion of the device from Autopilot. Select **Yes** to confirm deleting the device.
+1. A warning dialog box appears to confirm the deletion of the device from Autopilot. Select **Yes** to confirm deleting the device.
 
 1. The deregistration process may take some time. The process can be accelerated by selecting the **Sync** button in the toolbar at the top of the page.
 
@@ -189,23 +157,25 @@ To deregister an Autopilot device from Intune:
 
 > [!IMPORTANT]
 >
-> No additional steps are necessary to remove the device from Intune and Autopilot. Unneeded steps includes manually deleting the device from Azure AD. Manually deleting the device from Azure AD may cause unexpected problems, issues, and behavior. If needed, the device will be automatically removed from Azure AD after the steps above are followed.
+> No additional steps are necessary to remove the device from Intune and Autopilot. Unneeded steps includes manually deleting the device from Azure AD. Manually deleting the device from Azure AD may cause unexpected problems, issues, and behavior. If needed, the device will be automatically removed from Azure AD after these steps are followed.
 
-The steps above deregister the device from Autopilot, unenroll the device from Intune, and disjoin the device from Azure AD. It may appear that only deregistering the device from Autopilot is needed. However, there are barriers in Intune that require all the above steps to avoid problems with lost or unrecoverable devices. To prevent the possibility of orphaned devices in the Autopilot database, Intune, or Azure AD, it's best to complete all the steps.
+The above steps deregister the device from Autopilot, unenroll the device from Intune, and disjoin the device from Azure AD. It may appear that only deregistering the device from Autopilot is needed. However, there are barriers in Intune that require all the above steps to avoid problems with lost or unrecoverable devices. To prevent the possibility of orphaned devices in the Autopilot database, Intune, or Azure AD, it's best to complete all the steps.
 
-## Deregister from Microsoft Admin Center
+## Deregister from Microsoft 365 admin center
 
-To deregister an Autopilot device from the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431):
+To deregister an Autopilot device from the Microsoft 365 admin center:
 
-1. Sign into to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431)
-2. Navigate to **Devices** > **Autopilot**
-3. Select the device to be deregistered and then select the **Delete device** button
+1. Sign into to the [Microsoft 365 admin center](https://admin.microsoft.com/)
+1. Navigate to **Devices** > **Autopilot**.
+1. Select the device to be deregistered and then select the **Delete device** button.
+
+## Deregister from Microsoft Partner Center (MPC)
 
 Deregistering a device from Autopilot in Microsoft Partner Center (MPC) only deregisters the device from Autopilot. It doesn't perform any of the following actions:
 
 - Unenroll the device from the MDM (Intune)
 - Disjoin the device from Azure AD
 
-## Related topics
+## Related articles
 
 [Register devices manually](add-devices.md)
