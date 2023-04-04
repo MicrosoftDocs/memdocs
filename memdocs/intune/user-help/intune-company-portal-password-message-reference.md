@@ -41,7 +41,7 @@ ms.collection:
  * iOS/iPadOS  
  * macOS    
 
-This article lists the password-related messages you could receive from Intune Company Portal. These messages appear on devices during and after device enrollment, and enforce your organization's device password requirements. If you receive one or more of these messages, you may be blocked from accessing your org's network until you change your password settings. This article gives a brief description on how to fix your settings to meet each requirement.  
+This article lists the password-related messages you could receive from Intune Company Portal. These messages appear on devices during and after device enrollment, and enforce your organization's device password requirements. If you receive one or more of these messages, you may be blocked from accessing your org's network until you change your password settings. This article gives a brief description on how to fix your settings to meet each requirement. For more specific information about your organization's policies, contact your IT support person. Sign into the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980) to find your organization's helpdesk information.  
 
 Messages in this article are organized by operating system.  
 
