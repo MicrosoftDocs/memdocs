@@ -117,7 +117,7 @@ Some considerations:
 
     If you'll use biometrics for authentication, be sure your devices support biometrics. Most modern devices do.
 
-  - Implement a Zero Trust deployment. With Zero Trust, you use the features in Azure AD and Microsoft Intune to secure all endpoints, uses password-less authentication, and more. For more information, go to the [Zero Trust Deployment Center](/security/zero-trust/zero-trust-overview).
+  - Implement a Zero Trust deployment. With Zero Trust, you use the features in Azure AD and Microsoft Intune to secure all endpoints, uses password-less authentication, and more. For more information, see [Zero Trust with Microsoft Intune](zero-trust-with-microsoft-intune.md).
 
 ### Objective: Distribute IT
 
@@ -209,7 +209,7 @@ If being mobile or supporting remote workers is important to your organization, 
 
   This option prevents personal devices.
 
-As a best practice, always assume data will leave the device. Be sure your tracking and auditing methods are in place. For more information, go to the [Zero Trust Deployment Center](/security/zero-trust/).
+As a best practice, always assume data will leave the device. Be sure your tracking and auditing methods are in place. For more information, see [Zero Trust with Microsoft Intune](zero-trust-with-microsoft-intune.md).
 
 ### Manage desktop computers
 
