@@ -57,7 +57,7 @@ It can be valuable for you to do your own testing with workloads approximating w
 
 ## Test results
 
-![Diagram of relative Winodws 365 Cloud PC vCPU performance](media/relative-cloud-pc-performance/relative-cloud-pc-performance.png)
+![Diagram of relative Windows 365 Cloud PC vCPU performance.](media/relative-cloud-pc-performance/relative-cloud-pc-performance.png)
 
 A common starting point for Windows 365 Cloud PC users is the 2 vCPU / 8-GB RAM / 128-GB storage size. The chart shows that the relative performance improvement of the 4 vCPU configuration over the 2 vCPU configuration is up to 28% faster.  
 
