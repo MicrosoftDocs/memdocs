@@ -97,7 +97,7 @@ A policy is deployed to the app and takes effect. A second policy is deployed. I
 
 When two or more policies are assigned to the same user or device, then the setting that's applied happens at the individual setting level:
 
-- Compliance policy settings always have precedence over configuration profile settings.
+- If you use Custom Compliance Policies to set device settings, then the setting within the Custom Compliance Policy will take precedence over the same setting within Device Configuration Policies.
 
 - If a compliance policy evaluates against the same setting in another compliance policy, then the most restrictive compliance policy setting applies.
 
