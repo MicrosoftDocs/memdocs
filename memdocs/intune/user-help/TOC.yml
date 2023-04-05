@@ -12,7 +12,7 @@ items:
     href: sign-in-to-the-company-portal.md
   - name: Update Intune Company Portal 
     href: install-a-new-version-of-the-company-portal-app.md
-  - name: Device password requirements
+  - name: Add device password, PIN, or passcode    
     href: password-does-not-meet-it-administrator-requirements.md
   - name: Install mobile threat defense app
     href: set-up-mobile-threat-defense.md
@@ -319,3 +319,7 @@ items:
     href: reset-your-passcode-cpwebsite.md
   - name: Reset used, lost, stolen device
     href: reset-device-company-portal-website.md
+- name: Reference   
+  items:
+  - name: Company Portal device password messages  
+    href: intune-company-portal-password-message-reference.md 
