@@ -100,9 +100,7 @@ Devices that have been registered with the Windows Autopilot service are display
 
 Whenever a device permanently leaves an organization, whether it's for a repair or the end of the device life cycle, the device should always be deregistered from Autopilot.
 
-If an admin registered a device, they likely did so via Intune. If so, they should deregister the device from Intune because devices registered in Intune don't show up in Microsoft Partner Center (MPC).
-
-Below we describe the steps an IT Admin would go through to deregister a device from Intune and Autopilot.
+Below we describe the steps an admin would go through to deregister a device from Intune and Autopilot.
 
 ### Deregister from Intune
 
@@ -175,6 +173,10 @@ Deregistering a device from Autopilot in Microsoft Partner Center (MPC) only der
 
 - Unenroll the device from the MDM (Intune)
 - Disjoin the device from Azure AD
+
+> [!NOTE]
+>
+> If an admin registered a device via another portal other than the Microsoft Partner Center (MPC) such as Intune or Microsoft 365 admin center, the device doesn't show up in Microsoft Partner Center (MPC). For a partner to register a device in the Microsoft Partner Center (MPC), the devices first needs to be deregistered using the steps outlined in the [Deregister a device](#deregister-a-device) section.
 
 ## Related articles
 
