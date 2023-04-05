@@ -104,7 +104,7 @@ Below we describe the steps an admin would go through to deregister a device fro
 
 ### Deregister from Intune
 
-To deregister an Autopilot device from Intune:
+Before a device is deregistered from Autopilot, it first has to be deregistered from Intune. To deregister an Autopilot device from Intune:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
