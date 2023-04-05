@@ -20,7 +20,7 @@ Receiving a new Windows device is exciting. However, it can take time to configu
 
 Autopilot provides a simplified experience for both you and your users in the following situations:
 
-- Set up and preconfigure new Windows 10 or later devices
+- Set up and pre-configure new Windows 10 or later devices
 - Reset, recycle, and recover existing devices
 
 Autopilot reduces the time, resources, and complexity associated with deploying, managing, and retiring devices. At the same time, the experience for your users is streamlined and easy from first boot.
@@ -70,7 +70,7 @@ Here are the steps for Autopilot for existing devices:
 
 ### Modernizing device provisioning for all types of workers
 
-With Autopilot, you can now provide a hands-free OS deployment to unmanned devices or shared devices using the self-deploying mode. This setup meets the needs of all your different types of workers. Also, the Windows Autopilot Reset function makes sure that reprovisioning of a device to a new user is simple and easy. This process simplifies what has traditionally been a difficult task when you have seasonal or contract workers.
+With Autopilot, you can now provide a hands-free OS deployment to unmanned devices or shared devices using the self-deploying mode. This setup meets the needs of all your different types of workers. Also, the Windows Autopilot Reset function makes sure that re-provisioning of a device to a new user is simple and easy. This process simplifies what has traditionally been a difficult task when you have seasonal or contract workers.
 
 ## Case study
 
