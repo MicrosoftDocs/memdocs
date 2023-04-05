@@ -41,7 +41,7 @@ Registration can also be performed within your organization by collecting the ha
 - [Automatic registration](automatic-registration.md)
 - [Manual registration](manual-registration.md)
 
-When you register an Autopilot device, it automatically creates an Azure AD object. The Autopilot deployment process needs this object to identify the device before the user signs in. If you delete this object, the device can fail to enroll through Autopilot. 
+When you register an Autopilot device, it automatically creates an Azure AD object. The Autopilot deployment process needs this object to identify the device before the user signs in. If you delete this object, the device can fail to enroll through Autopilot.
 
 > [!NOTE]
 > Don't register to Autopilot the following types of devices:
@@ -120,7 +120,7 @@ To deregister an Autopilot device from Intune:
 
 7. A warning dialog box appears to confirm the deletion of the device from Intune. Select **Yes** to confirm deleting the device.
 
-## Deregister a device from Autopilot
+## Deregister from Autopilot
 
 1. Make sure the device has been deregistered from Intune as described in the [Deregister from Intune](#deregister-from-intune) section.
 
@@ -134,7 +134,7 @@ To deregister an Autopilot device from Intune:
 
 1. Under **Windows Autopilot Deployment Program**, select **Devices**.
 
-1. In the **Windows Autopilot devices** screen that opens, under **Serial number**, find the device that needs to be deregistered by its serial number as determined in the [Delete the device from Intune](#delete-the-device-from-intune) section. If necessary, use the **Search by serial number** box.
+1. In the **Windows Autopilot devices** screen that opens, under **Serial number**, find the device that needs to be deregistered by its serial number as determined in the [Deregister from Intune](#deregister-from-intune) section. If necessary, use the **Search by serial number** box.
 
 1. Select the device by selecting the checkbox next to the device.
 
