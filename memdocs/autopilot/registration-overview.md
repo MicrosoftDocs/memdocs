@@ -120,7 +120,7 @@ To deregister an Autopilot device from Intune:
 
 7. A warning dialog box appears to confirm the deletion of the device from Intune. Select **Yes** to confirm deleting the device.
 
-## Deregister from Autopilot
+### Deregister from Autopilot
 
 1. Make sure the device has been deregistered from Intune as described in the [Deregister from Intune](#deregister-from-intune) section.
 
@@ -157,7 +157,7 @@ To deregister an Autopilot device from Intune:
 
 The above steps deregister the device from Autopilot, unenroll the device from Intune, and disjoin the device from Azure AD. It may appear that only deregistering the device from Autopilot is needed. However, there are barriers in Intune that require all the above steps to avoid problems with lost or unrecoverable devices. To prevent the possibility of orphaned devices in the Autopilot database, Intune, or Azure AD, it's best to complete all the steps.
 
-## Deregister from Microsoft 365 admin center
+### Deregister from Microsoft 365 admin center
 
 To deregister an Autopilot device from the Microsoft 365 admin center:
 
@@ -165,7 +165,7 @@ To deregister an Autopilot device from the Microsoft 365 admin center:
 1. Navigate to **Devices** > **Autopilot**.
 1. Select the device to be deregistered and then select the **Delete device** button.
 
-## Deregister from Microsoft Partner Center (MPC)
+### Deregister from Microsoft Partner Center (MPC)
 
 Deregistering a device from Autopilot in Microsoft Partner Center (MPC) only deregisters the device from Autopilot. It doesn't perform any of the following actions:
 
