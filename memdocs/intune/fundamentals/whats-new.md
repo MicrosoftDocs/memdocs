@@ -760,7 +760,7 @@ Admins can now see a preview of a PowerShell script's content for proactive reme
 ### App management
 
 #### Win32 app supersedence GA<!-- 9318154 -->
-We are in the process of rolling out the feature set for Win32 app supersedence GA, which will add support for apps with supersedence during ESP and also allow supersedence and dependency relationships to be added in the same app subgraph. For more information, see [Win32 app supersedence improvements](https://aka.ms/Intune/Win32-Supersedence). For information about Win32 app supersedence, see [Add Win32 app supersedence](../apps/apps-win32-supersedence.md).
+We have rolled out the feature set for Win32 app supersedence GA, which adds support for apps with supersedence during ESP and also allows supersedence and dependency relationships to be added in the same app subgraph. For more information, see [Win32 app supersedence improvements](https://aka.ms/Intune/Win32-Supersedence). For information about Win32 app supersedence, see [Add Win32 app supersedence](../apps/apps-win32-supersedence.md).
 
 ## Week of January 9, 2023
 
