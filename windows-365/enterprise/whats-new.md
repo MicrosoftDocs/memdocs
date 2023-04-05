@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 04/03/2023
+ms.date: 04/04/2023
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice:
@@ -62,6 +62,13 @@ Learn what new features are available in Windows 365 Enterprise.
 #### Convert Windows 365 licenses to higher level licenses<!--43204652-->
 
 Customers with an active direct enterprise agreement can now convert lower-level Windows 365 licenses to higher-level licenses. Reach out to your field specialist to learn more.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Documentation
+
+#### New documentation article: Relative performance for different Cloud PC sizes
+
+We’ve published a new help documentation article. For more information, see [Relative performance for different Cloud PC sizes](../relative-cloud-pc-performance.md).
 
 <!-- ########################## -->
 ## Week of March 28, 2023 (Service release 2303)
