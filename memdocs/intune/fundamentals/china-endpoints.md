@@ -8,7 +8,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 10/04/2021
+ms.date: 03/24/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -59,6 +59,13 @@ The following tables list the ports and services that the Intune client accesses
 - Intune Company Portal: https:\//portal.manage.microsoftonline.cn/
 - Microsoft Intune admin center: https:\//intune.microsoftonline.cn/
 
+## Network requirements for PowerShell scripts and Win32 apps  
+
+If you're using Intune to deploy PowerShell scripts or Win32 apps, you'll also need to grant access to endpoints in which your tenant currently resides.
+
+|Azure Scale Unit (ASU) | Storage name | CDN |
+| --- | --- |--- |
+|CNPASU01 | sovereignprodimedatapri<br>sovereignprodimedatasec<br>sovereignprodimedatahotfix | sovereignprodimedatapri.azureedge.net<br>sovereignprodimedatasec.azureedge.net<br>sovereignprodimedatahotfix.azureedge.net |
 
 ## Partner service endpoints
 
