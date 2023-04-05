@@ -86,4 +86,4 @@ To learn more about Cloud PC size options:
 
 - For Windows 365 Enterprise, see [Cloud PC size recommendations](enterprise/cloud-pc-size-recommendations.md).
 - For Windows 365 Business, see [Windows 365 Business sizing options](business/windows-365-business-sizing.md).
-- For more information about testing Cloud PCs, see [The challenge of Cloud PC performance testing](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/the-challenge-of-cloud-pc-performance-testing/ba-p/3787501).
+- For more information about testing Cloud PCs, see [this blog post](https://aka.ms/W365perfblog).
