@@ -33,19 +33,25 @@ For an overview of the Windows Autopilot for pre-provisioned deployment Azure AD
 
 ## User flow
 
-If the pre-provisioning process completed successfully and the device was resealed, you can deliver to the end user. The end user completes the normal Windows Autopilot user-driven process following these steps:
+Once the pre-provisioning process completes successfully and the device was resealed, the device can be delivered to the end-user. The end-user then completes the normal Windows Autopilot user-driven process. This final step is know as the user flow and involves the following steps:
 
-- Power on the device.
-- Select the appropriate language, locale, and keyboard layout.
-- Connect to a network (if using Wi-Fi). Internet access is always required. If using hybrid Azure AD Join, there must also be connectivity to a domain controller.
-- If using Azure AD join, on the branded sign-on screen, enter the user's Azure Active Directory credentials.
-- If using hybrid Azure AD Join, the device will reboot; after the reboot, enter the user's Active Directory credentials.
-- More policies and apps are delivered to the device, as tracked by the Enrollment Status Page (ESP). Once complete, the user can access the desktop.
+1. If a wired network connection is available, connect the device to the network.
 
-A change was made in the 2021.09C release to rerun the device ESP during the user flow so that both device and user ESP run when the user logs in. This change allows ESP to install other policies that may have been assigned to the device after it was provisioned in the technician flow.  
+1. Power on the device.
+
+1. Select the appropriate language, locale, and keyboard layout.
+
+1. If not connected to a wired network, a screen will prompt to connect to a Wi-Fi network. Connect to a Wi-Fi network. Internet access is always required.
+
+1. On the branded sign-on screen, enter the user's Azure Active Directory credentials.
+
+1. If using hybrid Azure AD Join, the device will reboot; after the reboot, enter the user's Active Directory credentials.
+
+At this point, any policies and apps assigned to the user are delivered to the device and are tracked by the Enrollment Status Page (ESP). Once complete, the user can access the desktop.
 
 > [!NOTE]
-> If the Microsoft Account Sign-In Assistant (wlidsvc) is disabled during the Technician Flow, the Azure AD sign in option may not show. Instead, users are asked to accept the EULA, and create a local account, which may not be what you want.
+>
+> Although device ESP ran during the [Technician flow](hybrid-azure-ad-join-technician-flow.md), during the user flow when the end-user logs in, the device ESP will rerun again . This allows ESP to install other policies that may have been assigned to the device after it was provisioned in the technician flow.
 
 ## More information
 
