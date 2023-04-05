@@ -110,35 +110,36 @@ For more information, see [Intune Data Warehouse API endpoint](reports-api-url.m
 
 To get a new access token for Postman, you must add the Azure AD authorization URL, add your Client ID, and Client Secret. Postman will load the authorization page where you will type your credentials.
 
+Before you make the call, verify that you have already added the Callback URL to your app in Azure. The Callback URL is `https://www.getpostman.com/oauth2/callback`
+
 #### Add the information used to request the token
 
 1. Download Postman if you do not already have it installed. To download Postman, see [www.getpostman](https://www.getpostman.com).
 2. Open Postman. Choose the HTTP operation **GET**.
-3. Paste the endpoint URL into the address. It should look something like:  
+3. Paste the endpoint URL into the address. It should look something like:
 
     `https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService/dates?api-version=v1.0`
 4. Choose the **Authorization** tab, and select **OAuth 2.0** from the **Type** list.
-5. Select **Get New Access Token**.
-6. Verify that you have already added the Callback URL to your app in Azure. The Callback URL is `https://www.getpostman.com/oauth2/callback`.
-7. Type Bearer for the **Token Name**.
-8. Add the **Auth URL**. It should look something like:  
+5. Scroll down to the **Configure New Token** section.
+6. Type Bearer for the **Token Name**.
+7. Select **Authorization Code** as the Grant Type.
+8. Add the **Callback URL**. The callback url is `https://www.getpostman.com/oauth2/callback`
+9. Add the **Auth URL**. It should look something like:
 
     `https://login.microsoftonline.com/common/oauth2/authorize?resource=https://api.manage.microsoft.com/`
-9. Add the **Access Token URL**. It should look something like:  
+10. Add the **Access Token URL**. It should look something like:
 
      `https://login.microsoftonline.com/common/oauth2/token`
 
-10. Add the **Client ID** from the native app that you created in Azure and named `Intune Data Warehouse Client`. It should look something like:  
+11. Add the **Client ID** from the native app that you created in Azure and named `Intune Data Warehouse Client`. It should look something like:
 
      `88C8527B-59CB-4679-A9C8-324941748BB4`
 
-11. Add the **Client Secret** you generated from within the native app that you created in Azure. It should look something like:  
+12. Add the **Client Secret** you generated from within the native app that you created in Azure. It should look something like:
 
      `Ksml3dhDJs+jfK1f8Mwc8 `
 
-12. Select **Authorization Code** as the Grant Type.
-
-13. Select **Request Token**.
+13. Select **Get New Access Token**.
 
     ![Information for the access token](./media/reports-proc-data-rest/reports-postman_getnewtoken.png)
 
@@ -156,7 +157,7 @@ To get a new access token for Postman, you must add the Azure AD authorization U
 
 The following sample contains a simple REST client. The code uses the **httpClient** class from the .NET library. Once the client gains credentials to Azure AD, the client constructs a GET REST call to retrieve the dates entity from the Data Warehouse API.
 
-> [!Note]  
+> [!Note]
 > You can access the following code [sample on GitHub](https://github.com/Microsoft/Intune-Data-Warehouse/blob/master/Samples/CSharp/Program.cs). Refer to the GitHub repo for the latest changes and updates to the sample.
 
 1. Open **Microsoft Visual Studio**.
@@ -173,7 +174,7 @@ The following sample contains a simple REST client. The code uses the **httpClie
 
     ![Program.cs and Solution Explorer in Visual Studio](./media/reports-proc-data-rest/reports-get_rest_data_in.png)
 
-8. Replace the code in *Program.cs* with the following code:  
+8. Replace the code in *Program.cs* with the following code:
 
    ```csharp
    namespace IntuneDataWarehouseSamples
