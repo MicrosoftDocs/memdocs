@@ -46,13 +46,16 @@ A few things to keep in mind:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows 365** (under **Provisioning**) > **Provisioning policies** > **Create policy**.
 
-   ![Screenshot of create policy](./media/create-provisioning-policy/create-policy.png)
+   ![Screenshot of create policy.](./media/create-provisioning-policy/create-policy.png)
 2. On the **General** page, enter a **Name** and **Description** (optional) for the new policy.
 
    > [!TIP]
    > Your provisioning policy name cannot contain the following characters: < > & | " ^
 
-3. On the **General** page, select a **Join type**:
+3. On the  **General** page, select a **License type**:
+    - **Enterprise**: Provision Cloud PCs for Windows 365 Enterprise.
+    - **Frontline**: Provision Cloud PCs for [Windows 365 Frontline](introduction-windows-365-frontline.md).
+4. On the **General** page, select a **Join type**:
     - **Hybrid Azure AD Join**: You must select an ANC to use for this policy.
     - **Azure AD Join**: You have two options for **Network**:
         - **Azure network connection**: Select an ANC to use for this policy.
@@ -94,8 +97,15 @@ To select an ANC, follow these steps:
     - **Windows Autopatch** is a cloud service that automates updates for Windows, Microsoft 365 Apps for enterprise, Microsoft Edge, and Microsoft Teams on both physical and virtual devices. For more information, see [What is What is Windows Autopatch?](/windows/deployment/windows-autopatch/overview/windows-autopatch-overview) and the [Windows Autopatch FAQ](https://go.microsoft.com/fwlink/?linkid=2200228).
     - **Microsoft Managed Desktop** is a cloud service that helps with device deployment, service management and operations, and security. For more information, see [What is Microsoft Managed Desktop?](/managed-desktop/intro/).
 8. Select **Next**.
-9. On the **Assignments** page, choose **Select groups** > choose the groups you want this policy assigned to > **Select** > **Next**. Nested groups aren't currently supported.
-1o. On the **Review + create** page, select **Create**. If you used Hybrid Azure AD Join as the join type, it can take up to 60 minutes for the policy creation process to complete. The time depends on when the Azure AD connect sync last happened.
+9. On the **Assignments** page, choose **Select groups** > choose the groups you want this policy assigned to > **Select**. Nested groups aren't currently supported.
+10. For Windows 365 Frontline, you must also select a Cloud PC size for each group in the policy. Choose **Select one** > select a size under **Available sizes** > **Select**. After you've selected a size for each group, select **Next**. 
+11. On the **Review + create** page, select **Create**. If you used Hybrid Azure AD Join as the join type, it can take up to 60 minutes for the policy creation process to complete. The time depends on when the Azure AD connect sync last happened.
+
+After the provisioning policy is created and assigned, Windows 365 automatically starts to provision Cloud PCs and assigns them to users in the assigned groups.
+
+Azure AD group members won't receive Cloud PCs if the number of users in the Azure AD user group exceeds the maximum number of Cloud PCs allowed to be provisioned (based on the number of purchased licenses).
+
+Admins can confirm the list of members who received Cloud PCs by reviewing the **Provisioning policy** > choose the policy > review the users in the groups under **Assignments**.
 
 <!-- ########################## -->
 ## Next steps

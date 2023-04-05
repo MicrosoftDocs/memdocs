@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 04/04/2023
+ms.date: 04/06/2023
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice:
@@ -54,7 +54,6 @@ Learn what new features are available in Windows 365 Enterprise.
 
 <!-- ########################## -->
 ## Week of April 3, 2023
-
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
@@ -124,7 +123,7 @@ You can now create on-demand Cloud PC restore points and copy them to an Azure S
 
 #### Permission changes for Azure network connection operations<!--43251193-->
 
-The permissions required for the editing, creating, and deleting Azure network connection (ANC) and health check retry operations have changed: You must now have [Intune Administrator](/azure/active-directory/roles/permissions-reference#intune-administrator), [Windows 365 Administrator](/azure/active-directory/roles/permissions-reference), or [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) permissions. For more informatiion, see [Azure network connections](azure-network-connections.md).
+The permissions required for the editing, creating, and deleting Azure network connection (ANC) and health check retry operations have changed: You must now have [Intune Administrator](/azure/active-directory/roles/permissions-reference#intune-administrator), [Windows 365 Administrator](/azure/active-directory/roles/permissions-reference), or [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) permissions. For more information, see [Azure network connections](azure-network-connections.md).
 
 <!-- ########################## -->
 ## Week of February 27, 2023 (Service release 2302)
