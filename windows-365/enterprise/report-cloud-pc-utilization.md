@@ -54,7 +54,7 @@ On the **All Cloud PCs** tab, the report shows the following data aggregated for
   - **Total time connected**: The total hours that the user has been connected to the Cloud PC over the last 28 days.
   - **Days since last sign in**
 
-You can use the filter options to see only data for a specfiic usage group.
+You can use the filter options to see only data for a specific usage group.
 
 ## Frontline Cloud PCs tab
 
