@@ -96,8 +96,8 @@ Once all of the configurations for Windows Autopilot for pre-provisioned deploym
          >
          > To view and hide detailed progress information in the ESP during the provisioning process:
          >
-         > - Windows 10: To show details, select **Show details** next to the phase. To hide the details, select **Hide details** next to the phase.
-         > - Windows 11: To show details, select **∨** next to the phase. To hide the details, select **∧** next to the phase.
+         > - Windows 10: To show details, next to the appropriate phase select **Show details**. To hide the details, next to the appropriate phase select **Hide details**.
+         > - Windows 11: To show details, next to the appropriate phase select **∨**. To hide the details, next to the appropriate phase select **∧**.
 
 1. Once the provisioning process completes, a status screen is displayed showing whether the provisioning process either succeeded of failed:
 

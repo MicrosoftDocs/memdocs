@@ -66,10 +66,10 @@ Once the pre-provisioning process completes successfully and the device was rese
          >
          > To view and hide detailed progress information in the ESP during the provisioning process:
          >
-         > - Windows 10: To show details, select **Show details** next to the phase. To hide the details, select **Hide details** next to the phase.
-         > - Windows 11: To show details, select **∨** next to the phase. To hide the details, select **∧** next to the phase.
+         > - Windows 10: To show details, next to the appropriate phase select **Show details**. To hide the details, next to the appropriate phase select **Hide details**.
+         > - Windows 11: To show details, next to the appropriate phase select **∨**. To hide the details, next to the appropriate phase select **∧**.
 
-1. Once the provisioning process completes, the user is dropped into the Desktop and they can start using the device.
+1. Once the provisioning process completes, the ESP finishes and the user is dropped into the Desktop and they can start using the device.
 
 ## More information
 
