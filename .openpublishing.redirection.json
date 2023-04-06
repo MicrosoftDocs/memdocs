@@ -1377,6 +1377,11 @@
             "source_path": "memdocs/configmgr/core/understand/microsoft-endpoint-manager-faq.yml",
             "redirect_url": "/mem/configmgr/core/understand/configuration-manager-faq",
             "redirect_document_id": false            
+        },
+        {
+            "source_path": "windows-365/enterprise/introduction-windows-365-frontline.md",
+            "redirect_url": "/windows-365/enterprise/overview",
+            "redirect_document_id": false
         }
     ]
 }
