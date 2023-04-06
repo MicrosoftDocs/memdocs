@@ -40,7 +40,8 @@
       "feedback_github_repo": "MicrosoftDocs/Intunedocs",      
       "contributors_to_exclude": [
         "herohua",
-        "fenxu"
+        "fenxu",
+        "beccarobins"
       ],
       "searchScope": [
         "Intune"

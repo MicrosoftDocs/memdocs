@@ -37,6 +37,9 @@ In the following video, senior program manager Danny Guillory and principal prog
 
 > [!VIDEO https://aka.ms/docs/player?id=86b3188d-1f01-4655-b001-2274f072e910]
 
+> [!NOTE]
+> [Introducing Autopilot into co-management](./autopilot-enrollment.md). When you use [Windows Autopilot](../../autopilot/windows-autopilot.md) to provision a device, it first enrolls to Azure Active Directory (Azure AD) and Microsoft Intune. If the intended end-state of the device is co-management, previously this experience was difficult because of installation of Configuration Manager client as Win32 app which introduces component timing and policy delays.
+
 ## Benefits
 
 When you use co-management and Autopilot together, you make sure that new devices entering your network end up in the same state of management. In this setup, devices are enrolled in Intune and have a Configuration Manager client. It allows you to use the new Windows provisioning model, and helps you eliminate the need to create, maintain, and update custom OS images.
@@ -85,6 +88,8 @@ Create satisfaction in your organization by creating a better user experience fo
 ## Configure
 
 For more information, see the following articles:
+
+- [Autopilot into co-management](./autopilot-enrollment.md)
 
 - [Create device groups](../../autopilot/enrollment-autopilot.md)
 
