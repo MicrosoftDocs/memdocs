@@ -73,7 +73,7 @@ The Intune management extension supplements the in-box Windows 10 MDM features. 
 > - Do not use scripts to collect PII from devices
 > - Always follow privacy best practices
 >
-> For related information, see [Proactive remediations](../../analytics/proactive-remediations#bkmk_requirements.md).
+> For related information, see [Proactive remediations](/mem/analytics/proactive-remediations).
 
 ## Prerequisites
 
