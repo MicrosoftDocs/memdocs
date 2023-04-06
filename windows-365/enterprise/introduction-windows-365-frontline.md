@@ -34,7 +34,7 @@ ms.collection:
 
 Windows 365 Frontline is a version of [Windows 365](../overview.md) that helps organizations save costs by providing a single license to provision three Cloud PC virtual machines. For each Windows 365 Frontline license that you buy, you can provision three different Cloud PCs that can’t be used concurrently. Instead, each user receives a unique Cloud PC that they can use when the other two users on the same license aren’t signed into their Cloud PCs.
 
-Windows 365 Frontline is designed specifically for workers who share computing resources and don't require 24/7 dedicated Cloud PCs. This system better supports organizations that are more elastic and distributed working across various of devices. Frontline Cloud PCs can be helpful for users who are:
+Windows 365 Frontline is designed specifically for workers who share computing resources and don't require 24/7 dedicated Cloud PCs. This system better supports organizations that are more elastic and distributed working across various devices. Frontline Cloud PCs can be helpful for users who are:
 
 - On a rotation schedule.
 - Working across time zones and regions.
