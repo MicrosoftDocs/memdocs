@@ -37,49 +37,73 @@ Once all of the configurations for Windows Autopilot for pre-provisioned deploym
 
 1. Boot a device that is part of the device group created in the previous **Create a device group** step.
 
-1. Once the device boots, the first OOBE (out of box experience) screen appears. The first OOBE screen can be a language selection screen, a locale selection screen, or the Azure AD sign-in page. **DON'T** select **Next** at this screen. Instead of selecting **Next**, press the <kbd>WIN</kbd> key on the keyboard five times. Pressing the <kbd>WIN</kbd> key five times should display an alternative **What would you like to do?** options screen.
+1. Once the device boots up, one of two things will occur depending on the state of network connectivity:
 
-1. From the **What would you like to do?** options screen, select the **Windows Autopilot provisioning** option, and then select **Continue**.
+   - If the device is connected to a wired network and has network connectivity, the device may reboot one time followed by the Azure AD sign-in page appearing. If a user was assigned to the device, their username may be pre-populated in this screen. **DON'T** sign in or select **Next** (Windows 10) or **Sign in** (Windows 11) at this screen. Instead, press the <kbd>WIN</kbd> key on the keyboard five times. Pressing the <kbd>WIN</kbd> key five times should display a **What would you like to do?** options screen instead.
 
-1. In the **Windows Autopilot Configuration** screen, it displays the following information about the device:
+   - If the device isn't connected to a wired network or if it doesn't have network connectivity:
 
-   - The Autopilot profile assigned to the device.
+     1. OOBE (out of box experience) will begin and a screen asking for a country or region will appear. Select the appropriate country or region, and then select **Yes**.
 
-   - The organization name for the device.
+     1. The keyboard screen will appear asking for the right keyboard layout. Select the appropriate keyboard layout, and then select **Yes**.
 
-   - The user assigned to the device if a user was assigned in the **Assign Autopilot device to a user (optional)** step.
+     1. An additional keyboard layouts screen will appear. If needed, select additional keyboard layouts via **Add layout**, or select **Skip** if no additional keyboard layouts are needed.
+
+     1. The **Let's connect you to a network** screen will appear. At this screen, either plug the device into a wired network (if available), or select and connect to a wireless network.
+
+     1. Once network connectivity is established, the **Next** button should become available. Select **Next**.
+
+     1. At this point the device may reboot. After it reboots, the Azure AD sign-in page should appear. If a user was assigned to the device, their username may be pre-populated in this screen. **DON'T** sign in or select **Next** (Windows 10) or **Sign in** (Windows 11) at this screen. Instead, press the <kbd>WIN</kbd> key on the keyboard five times. Pressing the <kbd>WIN</kbd> key five times should display a **What would you like to do?** options screen instead.
+
+1. From the **What would you like to do?** options screen
+
+   - For Windows 10, select the **Windows Autopilot provisioning** option and then select **Continue**.
+   - For Windows 11, select the **Pre-provision with Windows Autopilot** option (Windows 11), and then select **Next**.
+
+1. In the **Windows Autopilot Configuration** screen (Windows 10) or the **Pre-provision with Windows Autopilot** screen (Windows 11), it displays the following information about the device:
+
+   - The name of the organization for the device.
+
+   - The name of the Autopilot deployment profile assigned to the device during the [Create and assign Autopilot profile](azure-ad-join-autopilot-profile.md) step.
+
+   - The user assigned to the device if a user was assigned in the [Assign Autopilot device to a user (optional)](azure-ad-join-assign-device-to-user.md) step.
 
       > [!NOTE]
       >
       > If a user is assigned to the device, the user may not always be displayed in this screen and may vary from OEM to OEM.
 
-   - A QR code containing a unique identifier for the device. You can use this code to look up the device in Intune to perform actions such as verifying configurations, make any necessary changes, etc.
+   - A QR code containing a unique identifier for the device. This code can be used to look up the device in Intune to perform actions such as verifying configurations, make any necessary changes, etc.
 
       > [!NOTE]
       >
       > The QR codes can be scanned using a companion app. The app also configures the device to specify who it belongs to. An [open-source sample of the companion app](https://github.com/Microsoft/WindowsAutopilotCompanion) that integrates with Intune by using the Graph API has been published to GitHub by the Autopilot team.
 
-      ![Windows Autopilot configuration screen.](../../images/landing.png)
+1. Validate that the information in the **Windows Autopilot Configuration** screen is correct. Once all information has been confirmed as correct, select **Provision** (Windows 10) or **Next** (Windows 11) to begin the provisioning process.
 
-1. Validate that the information in the **Windows Autopilot Configuration** screen is correct. If any changes are needed, make the changes, and then select **Refresh** to redownload the updated Autopilot profile details.
+      - The Enrollment Status Page (ESP) will display progress during the provisioning process across three phases - **Device preparation**, **Device setup**, and **Account setup**. For Windows Autopilot for pre-provisioned deployment, only the first two phases of **Device preparation** and **Device setup** will run during the Technician flow. The last phase of **Account setup** will run during the next step of [User flow](azure-ad-join-user-flow.md).
 
-1. Once all information has been confirmed as correct, select **Provision** to begin the provisioning process.
+         > [!NOTE]
+         >
+         > To view and hide detailed progress information in the ESP during the provisioning process:
+         >
+         > - Windows 10: Select **Show details** next to the phase. To hide the details, select **Hide details**.
+         > - Windows 11: Select **∨** next to the phase. To hide the details, select **∧**.
 
-1. Once the provisioning process completes, a status screen is displayed showing either success of failure:
+1. Once the provisioning process completes, a status screen is displayed showing whether the provisioning process either succeeded of failed:
 
-   - If the pre-provisioning process completes successfully, a success status screen appears with information about the device, including the same details presented previously. For example, Autopilot profile, organization name, QR code, and if applicable, assigned user. The elapsed time for the pre-provisioning step is also provided.
+   - If the pre-provisioning process completes successfully, a success status screen appears with information about the device, including the same details presented previously. For example, organization name, Autopilot deployment profile name, QR code (Windows 10 only), and if applicable, assigned user. The elapsed time of the provisioning process is also provided.
 
-     - Select **Reseal** to shut down the device. At that point, the device can be shipped to the end user.
+     - Select **Reseal** to shut down the device. At that point, the device can be delivered to the end-user.
 
         > [!IMPORTANT]
         >
-        > Outside of testing scenarios, if the intention is to deliver the device to an end user, **DON'T** turn the device back on at this point. Instead, deliver the device to the end user where they will perform the last step of [User flow](hybrid-azure-ad-join-user-flow.md).
+        > Outside of testing scenarios, if the intention is to deliver the device to an end-user, **DON'T** turn the device back on at this point. Instead, deliver the device to the end-user where they will perform the last step of [User flow](hybrid-azure-ad-join-user-flow.md).
 
         > [!NOTE]
         >
-        > The technician flow inherits behavior from [self-deploying mode](../self-deploying/self-deploying-workflow.md). Self-deploying mode uses the Enrollment Status Page (ESP) to hold the device in a provisioning state and prevent the user from proceeding to the desktop after enrollment but before software and configuration is done applying. If the Enrollment Status Page (ESP) is disabled, the **Reseal** button may appear before software and configuration is done applying. This may advertently allow proceeding to the user flow before technician flow provisioning is complete. The green screen validates that enrollment was successful, not that the technician flow is necessarily complete. For this reason, it's strongly recommended not to disable the Enrollment Status Page (ESP). Instead enable the Enrollment Status Page (ESP) as suggested in the [Configure and assign Autopilot Enrollment Status Page (ESP)](azure-ad-join-esp.md) step.
+        > The technician flow inherits behavior from [self-deploying mode](../self-deploying/self-deploying-workflow.md). Self-deploying mode uses the Enrollment Status Page (ESP) to hold the device in a provisioning state and prevent the user from proceeding to the desktop after enrollment but before software and configuration is done applying. If the Enrollment Status Page (ESP) is disabled, the **Reseal** button may appear before software and configuration is done applying. This may advertently allow proceeding to the user flow before technician flow provisioning is complete. The success status screen validates that enrollment was successful, not that the technician flow is necessarily complete. For this reason, it's strongly recommended not to disable the Enrollment Status Page (ESP). Instead enable the Enrollment Status Page (ESP) as suggested in the [Configure and assign Autopilot Enrollment Status Page (ESP)](azure-ad-join-esp.md) step.
 
-   - If the pre-provisioning process fails, an error status screen appears with information about the device and error, including the same details presented previously.  For example, Autopilot profile, organization name, and if applicable, assigned user. The elapsed time for the pre-provisioning step is also provided.
+   - If the pre-provisioning process fails, an error status screen appears with information about the device and error, including the same details presented previously.  For example, organization name, Autopilot deployment profile name, QR code (Windows 10 only), and if applicable, assigned user. The elapsed time of the provisioning process is also provided.
 
      - From this screen diagnostic logs can be gathered from the device to troubleshoot the issue by using the following methods:
 
