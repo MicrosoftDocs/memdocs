@@ -67,7 +67,7 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 -->
 
-## Week of April 10, 2023
+## Week of April 3, 2023
 
 ### Device configuration
 
