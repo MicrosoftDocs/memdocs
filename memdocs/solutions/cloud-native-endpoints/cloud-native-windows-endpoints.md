@@ -287,7 +287,7 @@ Your cloud-native endpoint will need some applications. To get started, we recom
   You can set up a relationship between Intune and the Microsoft Store for Business (MSfB). This step gets the Company Portal app as an offline app that can be synched to Intune and targeted at devices. For more information, go to [Add and assign the Windows Company Portal app for Windows Autopilot provisioned devices](../../intune/apps/store-apps-company-portal-autopilot.md).
 
 - **Microsoft Store App** (Whiteboard)  
-  While Intune can deploy a wide variety of apps, we'll deploy a store app (Microsoft Whiteboard) to help keep things simple for this guide. Follow the steps in [Add Microsoft Store apps to Microsoft Intune](intune/apps/store-apps-microsoft.md) to install **Microsoft Whiteboard**.
+  While Intune can deploy a wide variety of apps, we'll deploy a store app (Microsoft Whiteboard) to help keep things simple for this guide. Follow the steps in [Add Microsoft Store apps to Microsoft Intune](../../intune/apps/store-apps-microsoft.md) to install **Microsoft Whiteboard**.
 
 ## Phase 2 - Build a cloud-native Windows endpoint
 
