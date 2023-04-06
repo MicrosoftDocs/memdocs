@@ -70,7 +70,10 @@ This article shows you how to view all your devices, and their properties in the
 Depending on the carrier used by the devices, not all details might be collected.
 
 > [!NOTE]  
->Hardware and Software inventory is refreshed in the Intune service every 7 days, starting from the date of enrolment. 
+> Hardware and Software inventory is refreshed in the Intune service every 7 days, starting from the date of enrolment.
+
+> [!NOTE]
+> Hardware device details are currently not supported for Linux devices. 
 
 |Detail|Description|Platform|
 |--------------|----------------------|----|  
