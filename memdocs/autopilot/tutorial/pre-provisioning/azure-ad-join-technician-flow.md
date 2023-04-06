@@ -61,14 +61,14 @@ Once all of the configurations for Windows Autopilot for pre-provisioned deploym
 
     > [!NOTE]
     >
-    > Depending on how the Autopilot profile was configured at the [Create and assign Autopilot profile](azure-ad-join-autopilot-profile.md) step and whether different screens were selected to be shown instead of hidden, additional screens such as License Terms, Privacy, Language, and Keyboard may appear before the Azure AD sign-in page.
+    > Depending on which screens were selected to be shown instead of hidden when the Autopilot profile was configured at the [Create and assign Autopilot profile](azure-ad-join-autopilot-profile.md) step, additional screens such as License Terms, Privacy, Language, and Keyboard may appear before the Azure AD sign-in page.
 
 1. If a user was assigned to the device, their username may be pre-populated in this screen. **DON'T** sign in or select **Next** (Windows 10) or **Sign in** (Windows 11) at this screen. Instead, press the <kbd>WIN</kbd> key on the keyboard five times. Pressing the <kbd>WIN</kbd> key five times should display a **What would you like to do?** options screen instead.
 
 1. From the **What would you like to do?** options screen:
 
    - For Windows 10, select the **Windows Autopilot provisioning** option and then select **Continue**.
-   - For Windows 11, select the **Pre-provision with Windows Autopilot** option (Windows 11), and then select **Next**.
+   - For Windows 11, select the **Pre-provision with Windows Autopilot** option, and then select **Next**.
 
 1. In the **Windows Autopilot Configuration** screen (Windows 10) or the **Pre-provision with Windows Autopilot** screen (Windows 11), it displays the following information about the deployment:
 
@@ -90,7 +90,9 @@ Once all of the configurations for Windows Autopilot for pre-provisioned deploym
 
 1. Validate that the information in the **Windows Autopilot Configuration** screen is correct. Once all information has been confirmed as correct, select **Provision** (Windows 10) or **Next** (Windows 11) to begin the provisioning process.
 
-      - The Enrollment Status Page (ESP) displays progress during the provisioning process across three phases - **Device preparation**, **Device setup**, and **Account setup**. The first two phases of **Device preparation** and **Device setup** are part of the Device ESP while the final phase of **Account setup** is part of the User ESP. For technician flow of the Windows Autopilot for pre-provisioned deployment, only the first two Device ESP phases of **Device preparation** and **Device setup** run. The last User ESP phase of **Account setup** will run during the next step of [User flow](azure-ad-join-user-flow.md).
+      - The Enrollment Status Page (ESP) displays progress during the provisioning process across three phases - **Device preparation**, **Device setup**, and **Account setup**. The first two phases of **Device preparation** and **Device setup** are part of the Device ESP while the final phase of **Account setup** is part of the User ESP.
+
+         For technician flow of the Windows Autopilot for pre-provisioned deployment, only the first two Device ESP phases of **Device preparation** and **Device setup** run. The last User ESP phase of **Account setup** will run during the next step of [User flow](azure-ad-join-user-flow.md).
 
          > [!NOTE]
          >
