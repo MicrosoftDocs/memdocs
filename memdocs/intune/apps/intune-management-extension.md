@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/11/2022
+ms.date: 04/06/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -65,6 +65,15 @@ The Intune management extension supplements the in-box Windows 10 MDM features. 
 - PowerShell scripts are executed before Win32 apps run. In other words, PowerShell scripts execute first. Then, Win32 apps execute.
 
 - PowerShell scripts time out after 30 minutes.
+
+> [!IMPORTANT]
+> Best practices for privacy awareness when using PowerShell scripts and proactive remediation scripts include the following:
+> - Do not include any type of sensitive information in scripts (such as passwords)
+> - Do not include Personally Identifiable Information (PII) in scripts
+> - Do not use scripts to collect PII from devices
+> - Always follow privacy best practices
+>
+> For related information, see [Proactive remediations](/mem/analytics/proactive-remediations).
 
 ## Prerequisites
 
