@@ -49,9 +49,9 @@ You can choose to install the **Company Portal** app using the steps below. The 
 4. Choose **Select** at the bottom of the page to begin creating an app from the Microsoft Store.
 5. Select **Search the Microsoft Store app (new)**.
 6. Enter the text **Company Portal**, select **Company Portal**, then choose **Select** at the bottom of the page.
-7. Change **Install behaviour** to **System**, then select **Next**.
+7. Change **Install behavior** to **System**, then select **Next**.
 8. Select scope tags as necessary, then select **Next**.
-9. To [Assign](apps-deploy.md) the Company Portal app as a required app to your selected device groups, select > **Add Group** (below **Required**) and then select a device group to assign the app. After you have created all the necessary assignments, select **Next**.
+9. To [Assign](apps-deploy.md) the Company Portal app as a required app to your selected device groups, select > **Add Group** (below **Required**) and then select a device group to assign the app. After you've created all the necessary assignments, select **Next**.
 10. Review your settings and select **Create**.
 
 ## Next steps
