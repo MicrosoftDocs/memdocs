@@ -311,7 +311,7 @@ Now that you've installed your token, you can create an enrollment profile for a
     > [!NOTE]
     > If you set **Sync with computers** to **Deny all**, the port will be limited on iOS and iPadOS devices. The port will be limited to only charging. It will be blocked from using iTunes or Apple Configurator 2.
     >
-    >If you set **Sync with computers** to **Allow Apple Configurator by certificate**, make sure you have a local copy of the certificate that you can use later. You won't be able to make changes to the uploaded copy, and it's important to retain an copy of this certificate. If you want to connect to the iOS/iPadOS device from a macOS device or PC, the same certificate must be installed on the device making the connection to the iOS/iPadOS device.
+    >If you set **Sync with computers** to **Allow Apple Configurator by certificate**, make sure you have a local copy of the certificate that you can use later. You won't be able to make changes to the uploaded copy, and it's important to retain an copy of this certificate. If you want to connect to the iOS/iPadOS device from a Mac device, the same certificate must be installed on the device making the connection to the iOS/iPadOS device.
 
 14. If you selected **Allow Apple Configurator by certificate** in the previous step, choose an Apple Configurator certificate to import.  
 15. For **Await final configuration**, your options are:  
