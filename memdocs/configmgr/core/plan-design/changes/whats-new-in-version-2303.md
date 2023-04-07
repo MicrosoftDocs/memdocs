@@ -172,7 +172,7 @@ At this time, version 2303 is released for the early update ring. To install thi
 
 <!-- As of December 19, 2022, version 2211 is globally available for all customers to install.
 
-When you're ready to install this version, see [Installing updates for Configuration Manager](../../servers/manage/updates.md) and [Checklist for installing update 2211](../../servers/manage/checklist-for-installing-update-2211.md).).-->
+When you're ready to install this version, see [Installing updates for Configuration Manager](../../servers/manage/updates.md) and [Checklist for installing update 2211](../../servers/manage/checklist-for-installing-update-2211.md).).--->
 
 > [!TIP]
 > To install a new site, use a baseline version of Configuration Manager.
