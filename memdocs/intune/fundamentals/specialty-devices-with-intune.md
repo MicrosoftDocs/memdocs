@@ -8,7 +8,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 03/02/2023
+ms.date: 04/07/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -34,38 +34,17 @@ ms.collection:
 
 [!INCLUDE [intune-add-on-note](../includes/intune-add-on-note.md)]
 
-Devices management of specialty devices provides a set of device management, configuration, and protection capabilities for purpose-built devices. in
+Specialty device management includes a set of Microsoft Intune management, configuration, and protection capabilities for purpose-built devices such as AR/VR headsets, large smart-screen devices, and select conference room meeting devices. Starting March 1, 2023, to use these advanced endpoint management capabilities and remain compliant with the licensing terms of Microsoft agreements, organizations will need a new license or promotional offer in addition to their plan that includes Microsoft Intune.
 
-## Specialty devices in Intune  
+Either a Microsoft Intune Suite, Intune Plan 2 or an alternative Microsoft plan or promotion that covers device licenses is required for users of these devices. The new Intune plans are based on a per user per month subscription model and are required to cover all the users of these specialty devices.
 
-A device managed by Microsoft Intune is classified as a specialty device if it's included in any of the following categories:
+For specialty devices such as headsets and AR/VR devices, for example **RealWear** and **HTC** devices, organizations will need to purchase either the Microsoft Intune Suite or Intune Plan 2 for the users of these devices when they are considered generally available.
 
-- Large smart screen devices, over 30 inches in size
-- AR/VR headsets
-- Wearable headsets
-- Meeting room devices, a software-based room system that provides an integrated experience for audio conferencing, wireless screen sharing, or video conferencing
+For **Microsoft Teams Rooms** devices including Microsoft Surface Hub, organizations will need to have sufficient [Microsoft Teams Room Pro licenses]( /microsoftteams/rooms/rooms-licensing), conference area phone [Teams Shared Device license]( /microsoftteams/set-up-common-area-phones) or a Teams license plan that includes Microsoft Intune Plan 1, to cover the users of these devices.  
 
-The following devices aren't considered specialized devices:
+For **Microsoft HoloLens**, subscribers of Microsoft Intune (Plan 1) will not be required to proactively add the Intune Plan 2 license. Microsoft is exploring ways to use their Microsoft 365 subscription that includes Intune to ensure licensing compliance. In the interim, there will be no disruption to their ability to manage and protect HoloLens devices.
 
-- Laptops and tablet devices
-- Foldable messaging devices
-- Mobile devices extension such as wearables/watches where the data is managed through mobile apps on iOS and Android mobile phones
-- Devices that are included in the plans for frontline workers. See [License Eligibility for Frontline Worker Licenses](https://www.microsoft.com/licensing/terms/en-US/productoffering/Microsoft365/EAEAS)
-- IoT devices
-
-## Licensing requirements
-
-Starting March 1, 2023, to use the advanced endpoint management capabilities and remain compliant with the licensing terms of Microsoft agreements you'll need a new license or promotional offer in addition to your plan that includes Microsoft Intune. 
-
-Either a Microsoft Intune Suite, Intune Plan 2, or an alternative Microsoft plan or promotion that covers device licenses is required for users of these devices. The Microsoft Intune Suite and Intune Plan 2 [plans](https://aka.ms/IntuneSuitePricing) are based on a per user per month subscription model and are required to cover all the users of these specialty devices.
-
-- For specialty devices such as headsets and AR/VR devices, you need to purchase either the Microsoft Intune Suite or Intune Plan 2 for the users of these devices. For example, RealWear, HTC, and Meta Qwest 2 devices.  
-
-- For Microsoft devices such as Microsoft Teams Rooms devices, including Microsoft Surface Hub, you must have [Microsoft Teams Room Pro licenses](/microsoftteams/rooms/rooms-licensing) to cover these devices.  
-
-- For [Microsoft HoloLens](windows-holographic-for-business.md), subscribers of Microsoft Intune (Plan1) can access an offer through their Microsoft account teams in the coming months to connect their existing and new devices to Intune Plan 2. In the interim, there's no disruption to your ability to manage and protect HoloLens devices.
-
-- For devices that can run in Microsoft Entra [Azure Active Directory (Azure AD) shared device mode]( /azure/active-directory/develop/msal-shared-devices), you need to have the same volume of Intune Suite or Intune Plan 2 licenses as your core Intune license (Intune Plan 1 for either Microsoft E or F plans) for those users. For example, if 10 frontline workers are sharing one device and they're all covered by Intune Plan 1 licenses, then you would also need to have 10 Intune Plan 2 licenses for these users.
+For specialty devices that run in Shared Device Mode (SDM), organizations will need to have the same volume of Intune Suite or Intune Plan 2 licenses as their core Intune license (Intune Plan 1 for either Microsoft E or F plans) for those users. For example, if 10 frontline workers are sharing one device and they are all covered by Intune Plan 1 core licenses, the organization would also need to have 10 Intune Plan 2 licenses.
 
 ## Next Steps
 
