@@ -1,8 +1,6 @@
 ---
-title: Create device groups for Windows Autopilot - Microsoft Intune | Microsoft Docs
-titleSuffix: Microsoft Intune
+title: Create device groups for Windows Autopilot
 description: Learn how to create device groups for Windows Autopilot.
-keywords: 
 author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
@@ -12,18 +10,14 @@ ms.topic: how-to
 ms.localizationpriority: high
 ms.prod: windows-client
 ms.technology: itpro-deploy
-ms.assetid: a2dc5594-a373-48dc-ba3d-27aff0c3f944
-#ROBOTS: 
-#audience: 
 ms.suite: ems
 search.appverid: MET150
-#ms.tgt_pltfrm: 
-ms.custom: seodec18
 ms.collection: 
   - M365-modern-desktop
   - m365initiative-coredeploy
   - M365-identity-device-management
   - highpri
+  - tier1
 ---
 
 # Create device groups
@@ -136,7 +130,7 @@ You can group Windows devices by a correlator ID when enrolling using [Autopilot
 > - Always create dynamic group rules matching against the *entire* enrollmentProfileName value
 > - Never name Autopilot or Apple ADE profiles beginning with "OfflineAutopilotprofile-".
 
-If you want all devices in the assigned groups to automatically convert to Autopilot, set **Convert all targeted devices to Autopilot** to **Yes**. All non-Autopilot devices in assigned groups will register with the Autopilot deployment service. Allow 48 hours for the registration to be processed. When the device is unenrolled and reset, Autopilot will enroll it. After a device is registered in this way, disabling this option or removing the profile assignment won't remove the device from the Autopilot deployment service. You must remove the device by deregistering the device from Autopilot.
+If you want all devices in the groups to automatically register to Autopilot, in any Autopilot profiles assigned to the groups, set the setting **Convert all targeted devices to Autopilot** to **Yes**. All non-Autopilot devices in assigned groups will register with the Autopilot deployment service. Allow 48 hours for the registration to be processed. When the device is unenrolled and reset, Autopilot will enroll it. After a device is registered in this way, disabling this setting or removing the profile assignment won't remove the device from the Autopilot deployment service. You must remove the device by deregistering the device from Autopilot.
 
 ## Next steps
 

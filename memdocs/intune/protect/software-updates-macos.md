@@ -74,11 +74,11 @@ By default, devices check in with Intune about every 8 hours. If an update is av
 
       - **Download only**: Download the software update without installing it.
 
-      - **Install immediately**: Download the software update and trigger the restart countdown notification.
+      - **Install immediately**: Download the software update and trigger the restart countdown notification. This action is recommended for userless devices. 
 
-      - **Notify only**: Download the software update and notify the user through the App Store.
+      - **Notify only**: Download the software update and notify the user through System Settings.
 
-      - **Install later**: Download the software update and install it later.
+      - **Install later**: Download the software update and install it later. This action is not available for major OS upgrades.
 
       - **Not configured**: No action taken on the software update.
 
@@ -172,17 +172,17 @@ The *Restrictions* category contains the following settings that can be used to 
 
 - *Enforced Software Update Delay*:  Sets how many days to delay a software update on the device. With this restriction in place, the user doesn’t see a software update until the specified number of days after the software update release date. This value is used by *Force Delayed App Software Updates* and *Force Delayed Software Updates*.
 
-- *Force Delayed App Software Updates*:  If true, delays user visibility of non-OS Software Updates. Requires a supervised device. The delay is 30 days unless *Enforced Software Update Delay* is set to another value.
+- *Force Delayed App Software Updates*:  If true, delays user visibility of non-OS Software Updates for built-in software like Safari, XProtect, and Gatekeeper. Requires a supervised device. The delay is 30 days unless *Enforced Software Update Delay* is set to another value.
 
 - *Enforced Software Update Non OS Deferred Install Delay*:  This restriction allows the admin to set how many days to delay an app software update on the device. When this restriction is in place, the user sees a non-OS software update only after the specified delay after the release of the software. This value controls the delay for Force Delayed App Software Updates.
 
 - *Force Delayed Major Software Updates*:  If set to true, delays user visibility of major upgrades to OS Software.
 
-- *Enforced Software Update Major OS Deferred Install Delay*:  This restriction allows the admin to set how many days to delay a major software upgrade on the device. When this restriction is in place, the user sees a software upgrade only after the specified delay after the release of the software upgrade. This value controls the delay for *Force Delayed Major Software Updates*.
+- *Enforced Software Update Major OS Deferred Install Delay*:  This restriction allows the admin to set how many days to delay a major software upgrade on the device. Major software upgrades are new major OS releases; for example, macOS 12 Monterrey and macOS 13 Ventura. When this restriction is in place, the user sees a software upgrade only after the specified delay after the release of the software upgrade. This value controls the delay for *Force Delayed Major Software Updates*.
 
 - *Force Delayed Software Updates*:  If true, delays user visibility of software updates. In macOS, seed build updates are allowed, without delay. The delay is 30 days unless *Enforced Software Update Delay* is set to another value.
 
-- *Enforced Software Update Minor OS Deferred Install Delay*:  This restriction allows the admin to set how many days to delay a minor OS software update on the device. When this restriction is in place, the user sees a software update only after the specified delay after the release of the software update. This value controls the delay for *Force Delayed Software Updates*.
+- *Enforced Software Update Minor OS Deferred Install Delay*:  This restriction allows the admin to set how many days to delay a minor OS software update on the devices. Minor software updates are intermediate updates that are released between major OS upgrades; for example, macOS 13.1 and macOS 13.2. When this restriction is in place, the user sees a software update only after the specified delay after the release of the software update. This value controls the delay for *Force Delayed Software Updates*.
 
 The Software Update category contains the following settings that can be used to configure the user experience for macOS software update options on devices (**Devices** > **macOS** > **Device configuration** > **Settings catalog** > **System Updates** > **Software Update**):
 

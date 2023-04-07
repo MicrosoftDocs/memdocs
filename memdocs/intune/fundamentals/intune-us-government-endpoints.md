@@ -57,7 +57,15 @@ The following tables list the ports and services that the Intune client accesses
 - Azure portal: https:\//portal.azure.us/ 
 - Microsoft 365: https:\//portal.office365.us/ 
 - Intune Company Portal: https:\//portal.manage.microsoft.us/ 
-- Microsoft Intune admin center: https:\//endpoint.microsoft.us/
+- Microsoft Intune admin center: https:\//intune.microsoft.us/
+## Network requirements for PowerShell scripts and Win32 apps  
+
+If you're using Intune to deploy PowerShell scripts or Win32 apps, you'll also need to grant access to endpoints in which your tenant currently resides.
+
+|Azure Scale Unit (ASU) | Storage name | CDN |
+| --- | --- |--- |
+|FXPASU01 | sovereignprodimedatapri<br>sovereignprodimedatasec<br>sovereignprodimedatahotfix | sovereignprodimedatapri.azureedge.net<br>sovereignprodimedatasec.azureedge.net<br>sovereignprodimedatahotfix.azureedge.net |
+
 
 ## Partner service endpoints that Intune depends on:
 - Azure AD Sync service: https:\//syncservice.gov.us.microsoftonline.com/DirectoryService.svc

@@ -38,9 +38,10 @@ The **Resize** remote action lets you upgrade a Windows 365 Enterprise Cloud PCâ
 - Downgrade the RAM and vCPU of a Cloud PC.
 
 Resizing gives admins the flexibility to upgrade/downgrade the following specifications without having to provision Cloud PCs from scratch:
-- Increase the RAM and vCPU when a user requires CPU intensive applications.
+
+- Increase the RAM and vCPUs when a user requires CPU intensive applications.
 - Increase the disk space for file storing.
-- Decrease the RAM and vCPU when a user doesn't need to run CPU intensive applications.
+- Decrease the RAM and vCPUs when a user doesn't need to run CPU intensive applications.
 
 Resizing doesn't let you downsize disk space.
 

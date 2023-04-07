@@ -84,7 +84,7 @@ However, sometimes you don’t want certain [Intune roles](../../intune/fundamen
 
 ## Perform device actions
 
-1. In a browser, navigate to `endpoint.microsoft.com`
+1. In a browser, navigate to `intune.microsoft.com`
 1. Select **Devices** then **All devices** to see the uploaded devices. You'll see **ConfigMgr** in the **Managed by** column for uploaded devices.
    [![All devices in Microsoft Intune admin center](./media/3555758-all-devices.png)](./media/3555758-all-devices.png#lightbox)
 1. Select a device to load its **Overview** page.
@@ -101,6 +101,19 @@ However, sometimes you don’t want certain [Intune roles](../../intune/fundamen
 From the Microsoft Intune admin center, you can review the status of your Configuration Manager connector. To display the connector status, go to **Tenant administration** > **Connectors and tokens** > **Microsoft Endpoint Configuration Manager**. Select a Configuration Manager hierarchy to display additional information about it.
    
 :::image type="content" source="media/7138634-connector-status.png" alt-text="Microsoft Configuration Manager connector in the admin center" lightbox="media/7138634-connector-status.png":::
+
+### View recommendations and insights to enrich the Configuration Manager site health and device management experience
+<!-- 16957774 -->
+You can view recommendations and insights for your Configuration Manager sites. These recommendations can help you improve the site health and infrastructure and enrich the device management experience.
+
+Recommendations include:
+
+- How to simplify your infrastructure
+- Enhance device management
+- Provide device insights
+- Improve the health of the site
+
+To view recommendations, go to **Tenant administration > Connectors and tokens > Microsoft Endpoint Configuration Manager**, and select a _site_ to view recommendations for that . Once selected, you’ll find the _Recommendations_ tab that displays each insight along with a _Learn more_ link that opens details on how to apply that recommendation.
 
 ## <a name="bkmk_offboard"></a> Offboard from tenant attach
 

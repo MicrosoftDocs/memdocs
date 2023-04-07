@@ -34,6 +34,8 @@ ms.collection:
 
 Microsoft Intune helps you protect your workforce's corporate data by managing devices and apps. In this topic, you will create a free subscription to try Intune in a test environment.
 
+[!INCLUDE [intune-evaluate](../includes/intune-evaluate.md)]
+
 Intune provides mobile device management (MDM) and mobile app management (MAM) from a secure cloud-based service that is administered using the Microsoft Intune admin center. Using Intune, you ensure your workforce's corporate resources (data, devices, and apps) are correctly configured, accessed, and updated, meeting your company's compliance policies and requirements.
 
 When you complete the signup process, you'll have a new tenant. A tenant is a dedicated instance of Azure Active Directory (Azure AD) where your subscription to Intune is hosted. You can then configure the tenant, add users and groups, and assign licenses to users. When you're ready, you can help users enroll their devices and add apps that they need to begin the modern endpoint management process. As you continue, you can set configuration and protection policies, as well as other endpoint management capabilities.
@@ -94,7 +96,7 @@ To sign up for the Microsoft Intune free trial, follow the steps below:
 
 If you're not already signed in to the admin center, complete the following steps:
 
-1. Open a new browser window and enter **[https://endpoint.microsoft.com](https://endpoint.microsoft.com)** in the address bar.
+1. Open a new browser window and enter **[https://intune.microsoft.com](https://intune.microsoft.com)** in the address bar.
 2. Use the user ID that you were given in the steps above to sign in. The user ID will look similar to the following: *yourID@yourdomain.onmicrosoft.com*.
 
     ![Image of the Intune admin center sign-in page](./media/free-trial-sign-up/azure-portal-signin.png)
@@ -162,7 +164,7 @@ To confirm your Azure Active Directory Premium and Microsoft Intune, see [Confir
 
 There are two admin centers that you will use most often:
 
-- The Microsoft Intune admin center ([https://endpoint.microsoft.com](https://endpoint.microsoft.com/)) is where you can explore the [capabilities of Intune](what-is-intune.md). This is where an admin would work with Intune.
+- The Microsoft Intune admin center ([https://intune.microsoft.com](https://intune.microsoft.com/)) is where you can explore the [capabilities of Intune](what-is-intune.md). This is where an admin would work with Intune.
 
 - The Microsoft 365 admin center ([https://admin.microsoft.com](https://admin.microsoft.com)) is where you can add and manage users, if you are not using Azure Active Directory for this. You can also manage other aspects of your account, including billing and support.
 

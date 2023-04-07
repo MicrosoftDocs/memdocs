@@ -75,7 +75,7 @@ Intune provides configuration templates for Gmail and Nine Work apps when manage
 If you are using Exchange ActiveSync Conditional Access for an Android Enterprise personally-owned or corporate-owned work profile device, consider using either the Gmail or Nine Work email app. The Microsoft Outlook for Android app, or any other email app that uses modern authentication via MSAL, is also supported. For more information, see [How to configure email settings in Microsoft Intune](../configuration/email-settings-configure.md).
 
    > [!NOTE]
-   > Azure Active Directory (Azure AD) Authentication Library (ADAL) will be deprecated, so we recommend updating apps that currently use it to MSAL. For more information, see [Update your applications to use Microsoft Authentication Library (MSAL) and Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363). 
+   > Azure Active Directory (Azure AD) Authentication Library (ADAL) has been deprecated, so we recommend updating apps that currently use it to MSAL. For more information, see [Update your applications to use Microsoft Authentication Library (MSAL) and Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363). 
 
 
 ## App protection policies

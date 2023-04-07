@@ -5,7 +5,7 @@ items:
   - name: Overview
     items:
     - name: Microsoft Intune overview
-      href: ./fundamentals/what-is-intune.md 
+      href: ./fundamentals/what-is-intune.md
       items:
       - name: Manage and secure your identities
         href: ./fundamentals/manage-identities.md
@@ -13,6 +13,8 @@ items:
         href: ./fundamentals/manage-devices.md
       - name: Manage apps and protect their data
         href: ./fundamentals/manage-apps.md
+      - name: Zero Trust with Microsoft Intune
+        href: ./fundamentals/zero-trust-with-microsoft-intune.md
     - name: Intune service release information
       href: ./fundamentals/intune-service-servicing-information.md
     - name: What is device management?
@@ -34,7 +36,7 @@ items:
   - name: Evaluate and try
     items:
     - name: Walkthrough Intune admin center
-      href: ./fundamentals/tutorial-walkthrough-endpoint-manager.md 
+      href: ./fundamentals/tutorial-walkthrough-endpoint-manager.md
     - name: Try Intune tasks
       items:
       - name: Overview
@@ -49,7 +51,7 @@ items:
       - name: Step 4 - Set up automatic enrollment
         href: ./enrollment/quickstart-setup-auto-enrollment.md
       - name: Step 5 - Enroll your Windows device
-        href: ./enrollment/quickstart-enroll-windows-device.md        
+        href: ./enrollment/quickstart-enroll-windows-device.md
       - name: Step 6 - Create a device compliance policy
         href: ./protect/quickstart-set-password-length-android.md        
       - name: Step 7 - Send notifications to noncompliant devices
@@ -82,8 +84,17 @@ items:
       - name: Use automated device enrollment to enroll iOS/iPadOS devices 
         href: ./enrollment/tutorial-use-device-enrollment-program-enroll-ios.md
 
-      - name: Create an administrative template
-        href: ./configuration/tutorial-walkthrough-administrative-templates.md     
+      - name: Create an ADMX template
+        href: ./configuration/tutorial-walkthrough-administrative-templates.md
+        displayName: admx, administrative template  
+
+      - name: Try new Devices experience (public preview) 
+        href: ./fundamentals/microsoft-intune-admin-center-devices.md
+        displayName: devices, admin center, microsoft intune   
+
+      - name: Set up enrollment for Azure AD shared device mode  
+        href: ./enrollment/automated-device-enrollment-shared-device-mode.md
+        displayName: devices, frontline worker, automated device enrollment  
 
   - name: Plan
     items:
@@ -209,7 +220,9 @@ items:
                   href: ./apps/store-apps-android.md
                 - name: iOS store apps
                   href: ./apps/store-apps-ios.md
-                - name: Microsoft store apps
+                - name: Microsoft store apps (new)
+                  href: ./apps/store-apps-microsoft.md
+                - name: Microsoft store apps (legacy)
                   href: ./apps/store-apps-windows.md
                 - name: Microsoft Store for Business apps
                   href: ./apps/windows-store-for-business.md
@@ -479,6 +492,20 @@ items:
               href: ./protect/encrypt-devices-filevault.md
             - name: Monitor disk encryption
               href: ./protect/encryption-monitor.md
+        - name: Endpoint Privilege Management
+          items:
+          - name: Endpoint Privilege Management overview
+            href: ./protect/epm-overview.md
+          - name: Endpoint Privilege Management guidance for rules
+            href: ./protect/epm-guidance-for-creating-rules.md
+          - name: Endpoint Privilege Management policies
+            href: ./protect/epm-policies.md
+          - name: Endpoint Privilege Management reports
+            href: ./protect/epm-reports.md
+          - name: Endpoint Privilege Management data and privacy
+            href: ./protect/epm-data-collection.md
+          - name: Endpoint Privilege Management deployment considerations
+            href: ./protect/epm-deployment-considerations-ki.md
         - name: Microsoft Tunnel
           items:
           - name: Microsoft Tunnel overview
@@ -487,6 +514,14 @@ items:
             href: ./protect/microsoft-tunnel-prerequisites.md
           - name: Configure Microsoft Tunnel
             href: ./protect/microsoft-tunnel-configure.md
+          - name: Microsoft Tunnel for MAM
+            items:
+            - name: Microsoft Tunnel for MAM Overview
+              href: ./protect/microsoft-tunnel-mam.md     
+            - name: MAM Tunnel for Android
+              href: ./protect/microsoft-tunnel-mam-android.md  
+            - name: MAM Tunnel for iOS
+              href: ./protect/microsoft-tunnel-mam-ios.md  
           - name: Monitor Microsoft Tunnel
             href: ./protect/microsoft-tunnel-monitor.md
           - name: Upgrade Microsoft Tunnel
@@ -495,8 +530,6 @@ items:
             href: ./protect/microsoft-tunnel-conditional-access.md
           - name: Migrate to the Defender for Endpoint app
             href: ./protect/microsoft-tunnel-migrate-app.md
-          - name: Microsoft Tunnel for MAM
-            href: ./protect/microsoft-tunnel-mam.md     
         - name: Identity protection
           items:
           - name: Windows Hello at device enrollment
@@ -795,13 +828,15 @@ items:
           - name: Universal Print policy
             displayName: printers
             href: ./configuration/settings-catalog-printer-provisioning.md
-        - name: Custom settings
-          displayName: oma-uri, csp
+        - name: Custom settings & scripts
+          displayName: oma-uri, csp, bash, powershell
           items:
           - name: Create custom profiles
             href: ./configuration/custom-settings-configure.md
           - name: HoloLens 2 example
             href: ./configuration/custom-profile-hololens.md
+          - name: Add Linux Bash scripts
+            href: ./configuration/custom-settings-linux.md
         - name: Restrict device settings and features
           href: ./configuration/device-restrictions-configure.md
           displayName: device restrictions
@@ -831,7 +866,7 @@ items:
             displayName: psk, oma-uri, eap
           - name: Troubleshoot Wi-Fi
             href: /troubleshoot/mem/intune/troubleshoot-wi-fi-profiles
-        - name: Group policy and Administrative templates
+        - name: Group policy and ADMX templates
           displayName: admx, gpo
           items:
           - name: Group Policy analytics
@@ -840,6 +875,8 @@ items:
             href: ./configuration/group-policy-analytics-migrate.md
           - name: Create administrative templates
             href: ./configuration/administrative-templates-windows.md
+          - name: Import custom ADMX and ADML
+            href: ./configuration/administrative-templates-import-custom.md
           - name: Update Office using ADMX
             href: ./configuration/administrative-templates-update-office.md
           - name: Create Microsoft Edge policy using ADMX
@@ -943,8 +980,10 @@ items:
           items:
           - name: Custom
             href: ./configuration/custom-settings-android-for-work.md
-          - name: Device restrictions
+          - name: Device restrictions - organization-owned devices
             href: ./configuration/device-restrictions-android-for-work.md
+          - name: Device restrictions - personally owned devices
+            href: ./configuration/device-restrictions-android-enterprise-personal.md
           - name: Email
             href: ./configuration/email-settings-android-enterprise.md
           - name: VPN
@@ -1065,6 +1104,8 @@ items:
           href: ./fundamentals/filters-supported-workloads.md
         - name: Reporting and conflict resolution
           href: ./fundamentals/filters-reports-troubleshoot.md
+        - name: Performance recommendations
+          href: ./fundamentals/filters-performance-recommendations.md
       - name: Use policy sets to group policies together
         href: ./fundamentals/policy-sets.md
       - name: Troubleshoot policies and profiles
@@ -1323,6 +1364,16 @@ items:
           href: ./remote-actions/device-inventory.md
         - name: Collect diagnostics
           href: ./remote-actions/collect-diagnostics.md
+        - name: Send organizational messages  
+          items: 
+          - name: Overview 
+            href: ./remote-actions/organizational-messages-overview.md
+          - name: Prerequisites for organizational messages    
+            href: ./remote-actions/organizational-messages-prerequisites.md
+          - name: Create organizational messages  
+            href: ./remote-actions/organizational-messages-create.md  
+          - name: Monitor organizational messages  
+            href: ./remote-actions/organizational-messages-reporting.md  
       - name: Bulk device actions
         href: ./remote-actions/bulk-device-actions.md
       - name: Troubleshooting
@@ -1377,7 +1428,7 @@ items:
     - name: iOS/iPadOS platform guide
       href: ./fundamentals/deployment-guide-platform-ios-ipados.md    
     - name: macOS platform guide
-      href: ./fundamentals/deployment-guide-platform-macOS.md
+      href: ./fundamentals/deployment-guide-platform-macos.md
     - name: Linux platform guide
       href: ./fundamentals/deployment-guide-platform-linux.md
     - name: Windows Holographic platform guide
@@ -1419,8 +1470,9 @@ items:
         href: ../solutions/cloud-native-endpoints/cloud-native-endpoints-planning-guide.md
       - name: Known issues
         href: ../solutions/cloud-native-endpoints/cloud-native-endpoints-known-issues.md
-    - name: Create an administrative template
+    - name: Create an ADMX template
       href: ./configuration/tutorial-walkthrough-administrative-templates.md
+      displayName: admx, administrative template
     - name: Common scenarios
       href: ./fundamentals/common-scenarios.md
     - name: "Zero Trust: Manage devices with Intune"
@@ -1458,10 +1510,21 @@ items:
         href: ./developer/app-wrapper-prepare-android.md
         displayName: dex
       - name: Intune App SDK for Android
-        href: ./developer/app-sdk-android.md
         items:
-        - name: Intune App SDK for Android testing guide
-          href: ./developer/app-sdk-android-testing-guide.md        
+        - name: Plan the Integration
+          href: ./developer/app-sdk-android-phase1.md
+        - name: Understand the MSAL Prerequisite
+          href: ./developer/app-sdk-android-phase2.md
+        - name: Get started with MAM
+          href: ./developer/app-sdk-android-phase3.md
+        - name: MAM integration essentials
+          href: ./developer/app-sdk-android-phase4.md
+        - name: Multi-Identity
+          href: ./developer/app-sdk-android-phase5.md
+        - name: App configuration
+          href: ./developer/app-sdk-android-phase6.md
+        - name: App participation features
+          href: ./developer/app-sdk-android-phase7.md
       - name: Intune App SDK Xamarin Bindings
         href: ./developer/app-sdk-xamarin.md
     - name: Use the Intune Data Warehouse
@@ -1558,4 +1621,4 @@ items:
       href: /mem/get-support?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
 
   - name: Troubleshoot issues
-    href: /troubleshoot/mem/intune/welcome-intune/index?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+    href: /troubleshoot/mem/intune/welcome-intune?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json

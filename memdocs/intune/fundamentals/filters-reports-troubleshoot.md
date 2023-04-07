@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/23/2022
+ms.date: 03/14/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -162,7 +162,8 @@ When there's a device with conflicting assignments for the same policy, the foll
 
 When you assign the app or policy, you choose to apply a filter:
 
-:::image type="content" source="./media/filters-reports-troubleshoot/assignment-filter-precedence.png" alt-text="Screenshot that shows filter precedence is exclude, no filter, and then include when assigning policies in Microsoft Intune.":::
+:::image type="content" source="./media/filters-reports-troubleshoot/assignment-filter-precedence.png" alt-text="Screenshot that shows filter precedence is exclude, no filter, and then include when assigning policies in Microsoft Intune."lightbox="./media/filters-reports-troubleshoot/assignment-filter-precedence.png":::
+
 
 For example:
 
@@ -217,3 +218,4 @@ The following matrix explains the effect, depending on the conflict scenario:
 - [Use filters when assigning your apps, policies, and profiles](filters.md)
 - [Supported device properties when creating filters](filters-device-properties.md)
 - [Supported workloads when creating filters](filters-supported-workloads.md)
+- [Filter performance recommendations](filters-performance-recommendations.md)

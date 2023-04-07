@@ -79,6 +79,9 @@ To view classic conditional access policies, in [Azure](https://portal.azure.com
 
 ## Mobile Threat Defense toggle options
 
+> [!NOTE]
+> Ensure your tenant's MDM Authority is set to Intune (and not SCCM) to see the full list of toggle options. 
+
 You can decide which MTD toggle options you need to enable according to your organization's requirements. Here are more details:
 
 **App Protection Policy Settings**

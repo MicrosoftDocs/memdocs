@@ -1,22 +1,18 @@
 ---
 title: Windows Autopilot for existing devices
 description: Modern desktop deployment with Windows Autopilot enables you to easily deploy the latest version of Windows to your existing devices.
-keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune
 ms.prod: windows-client
 ms.technology: itpro-deploy
-ms.mktglfcycl: deploy
 ms.localizationpriority: medium
-ms.sitesec: library
-ms.pagetype: deploy
-audience: itpro
 author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 11/17/2022
+ms.date: 03/10/2023
 ms.collection: 
   - M365-modern-desktop
   - highpri
+  - tier1
 ms.topic: how-to
 ---
 
@@ -32,10 +28,10 @@ Modern desktop deployment with Windows Autopilot helps you easily deploy the lat
 _Windows Autopilot for existing devices_ lets you reimage and provision a Windows 8.1 device for Autopilot user-driven mode using a single, native Configuration Manager task sequence. The existing device can be on-premises domain-joined. The end result is a Windows 10 or Windows 11 device joined to either Azure Active Directory (Azure AD) or Active Directory (hybrid Azure AD join).
 
 > [!NOTE]
-> Converting all targeted devices to Autopilot isn't supported for transforming a hybrid Azure AD join device into an Azure AD join Autopilot device.
+> Windows Autopilot for existing devices only supports user-driven Azure AD and hybrid Azure AD profiles. Self-deploying and pre-provisioning profiles aren't supported.
 
 > [!NOTE]
-> Windows Autopilot for existing devices only supports user-driven Azure AD and hybrid Azure AD profiles. Self-deploying and pre-provisioning profiles aren't supported.
+> Using Autopilot for existing devices could be used as a method to convert existing hybrid Azure AD devices into Azure AD devices. Using the setting **Converting all targeted devices to Autopilot** in the Autopilot profile doesn't automatically convert existing hybrid Azure AD device in the assigned group(s) into an Azure AD device. The setting only registers the devices in the assigned group(s) for the Autopilot service.
 
 ## Prerequisites
 
@@ -199,9 +195,11 @@ The name that's automatically assigned to the computer. This name follows the na
 Save the Autopilot profile as a JSON file in ASCII or ANSI format. Windows PowerShell defaults to Unicode format. So, if you redirect output of the commands to a file, also specify the file format. The following PowerShell example saves the file in ASCII format, and creates a directory for each profile on the current user's desktop:
 
 ```powershell
+Connect-MSGraph
 $AutopilotProfile = Get-AutopilotProfile
 $AutopilotProfile | ForEach-Object {
-  $_ | ConvertTo-AutopilotConfigurationJSON | Set-Content -Encoding Ascii "~\Desktop\$($_.displayName)\AutopilotConfigurationFile.json"
+  New-Item -ItemType Directory -Path "~\Desktop\$($_.displayName)"
+  $_ | ConvertTo-AutopilotConfigurationJSON | Set-Content -Encoding Ascii "~\Desktop\$($_.displayName)\AutopilotConfigurationFile.json"
 }
 ```
 
@@ -431,7 +429,7 @@ The task sequence runs and does the following actions:
 
 Devices provisioned with Autopilot only receive the guided OOBE Autopilot experience on first boot.
 
-After you update Windows on an existing device, make sure to register the device so it has the Autopilot experience when the PC resets. You can enable automatic registration for an assigned group using the **Convert all targeted devices to Autopilot** setting. For more information, see [Create an Autopilot deployment profile](profiles.md#create-an-autopilot-deployment-profile).
+After you update Windows on an existing device, make sure to register the device so it has the Autopilot experience when the PC resets. You can enable automatic registration for a device by using the **Convert all targeted devices to Autopilot** setting in the Autopilot profile that is assigned to a group that the device is a member of. For more information, see [Create an Autopilot deployment profile](profiles.md#create-an-autopilot-deployment-profile).
 
 Also see [Adding devices to Windows Autopilot](add-devices.md).
 

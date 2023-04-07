@@ -651,7 +651,7 @@ These settings apply specifically to operating system data drives.
     - **Backup recovery passwords only**  
 
   - **Client-driven recovery password rotation**  
-    **Default**: Key rotation enabled for Azure AD-joined devices  
+    **Default**: Not configured  
     BitLocker CSP: [ConfigureRecoveryPasswordRotation](/windows/client-management/mdm/bitlocker-csp)  
 
     This setting initiates a client-driven recovery password rotation after an OS drive recovery (either by using bootmgr or WinRE).  
@@ -1310,7 +1310,7 @@ Use these options to configure the local security settings on Windows 10/11 devi
   - **Not configured** - Pressing CTRL+ALT+DEL isn't required for users to sign in.
 
 - **Smart card removal behavior**  
-  **Default**: Lock workstation   
+  **Default**: No Action
   LocalPoliciesSecurityOptions CSP: [InteractiveLogon_SmartCardRemovalBehavior](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)  
 
   Determines what happens when the smart card for a logged-on user is removed from the smart card reader. Your options:  

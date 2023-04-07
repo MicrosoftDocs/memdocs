@@ -65,6 +65,9 @@ You can also copy an existing role.
 
 ## Custom role permissions
 
+> [!NOTE]
+> You can view and manage VPP apps with only the **Mobile apps** permission assigned. Previously, the **Managed apps** permission was required to view and manage VPP apps. This change does not apply to Intune for Education tenants who still need to assign the **Managed apps** permission.
+
 The following permissions are available when creating custom roles.
 
 | Permission | Description |
@@ -104,7 +107,7 @@ The following permissions are available when creating custom roles.
 | Device compliance policies/Assign | Assign device compliance policies to Azure AD security groups, and assign Exchange on-premises access to Azure AD security groups. | 
 | Device compliance policies/Create | Create new device compliance policies. | 
 | Device compliance policies/Delete | Delete device compliance policies or delete Exchange ActiveSync connectors. | 
-| Device compliance policies/Read | View device compliance polices and the list of Exchange Active Sync Connectors, or view the settings for Exchange on-premises access. | 
+| Device compliance policies/Read | View device compliance policies and the list of Exchange Active Sync Connectors, or view the settings for Exchange on-premises access. | 
 | Device compliance policies/Update | Change device compliance policies, Exchange ActiveSync connectors and Exchange on-premises access settings. | 
 | Device compliance policies/View reports | View, generate, and export device compliance reports. | 
 | Device configurations/Assign | Assign device configuration profiles or assign device enrollment restrictions to Azure AD security groups. | 
@@ -162,8 +165,9 @@ The following permissions are available when creating custom roles.
 | Mobile apps/Create | Add new mobile applications to Intune such as store apps, line-of-business apps, web-links or built-in apps. You can also add books purchased through the Apple Volume Purchase Program or add eBook categories. You can setup iOS VPP Tokens, Windows Symantec certificates, Windows side loading keys, app categories, or the Android for Work connection. | 
 | Mobile apps/Delete | Delete mobile applications such as store apps, line-of-business apps, web-links or built-in apps. You can also delete books purchased through the Apple Volume Purchase Program or delete eBook categories. You can delete iOS VPP Tokens, Windows Symantec certificates, Windows side loading keys, app categories, or the Android for Work connection. | 
 | Mobile apps/Read | View mobile applications such as store apps, line-of-business apps, web-links or built-in apps. You can also view books purchased through the Apple Volume Purchase Program or add eBook categories. You can view iOS VPP Tokens, Windows Symantec certificates, Windows side loading keys, app categories, or the Android for Work connection. | 
-| Mobile apps/Relate | Create relationships with other managed apps using Dependencies and Supersedence features. Without this permission, IT admins are not able to add App dependency or supercedence relationships when creating or editing Win32 apps. |
+| Mobile apps/Relate | Create relationships with other managed apps using Dependencies and Supersedence features. Without this permission, IT admins are not able to add App dependency or supersedence relationships when creating or editing Win32 apps. |
 | Mobile apps/Update | Manage mobile applications such as store apps, line-of-business apps, web-links or built-in apps. You can also manage books purchased through the Apple Volume Purchase Program or add eBook categories. You can manage iOS VPP Tokens, Windows Symantec certificates, Windows side loading keys, app categories, or the Android for Work connection. | 
+|Mobile apps/View reports| View reports on mobile applications such as store apps, line-of-business apps, web links, and built-in apps. |
 | Mobile Threat Defense/Modify | Add, remove, or modify the Mobile Threat Defense connectors between Intune and your chosen MTD vendors | 
 | Mobile Threat Defense/Read | View the Mobile Threat Defense connectors between Intune and your chosen MTD vendors | 
 | Organization/Create | Create tenant settings such as device categories and Exchange connectors. | 
@@ -192,7 +196,7 @@ The following permissions are available when creating custom roles.
 | Remote tasks/Get filevault key. | Get Mac FileVault key. | 
 | Remote tasks/Initiate Configuration Manager action | Initiate a remote action on a device managed by Configuration Manager. | 
 | Remote tasks/Locate device | View the location of a lost or stolen corporate-owned device on a map. Can locate supervised iOS/iPadOS devices, Android dedicated devices (COSU), and Windows devices. |  
-| Remote tasks/Manage shared device users | Logout the user with the current session on a shared device.  This action does not delete users from a shared device, it will only force the user with a current session to be logged out. | 
+| Remote tasks/Manage shared device users | Log out the user with the current session on a shared device.  This action does not delete users from a shared device, it will only force the user with a current session to be logged out. | 
 | Remote tasks/Offer remote assistance | Initiate a remote assistance session with a user's device by using a remote assistance provider. The remote assistance option for your provider must be enabled for your tenant. | 
 | Remote tasks/Play lost mode sound | Initiate the lost mode ring sound on a device that has been placed in MDM Lost mode. | 
 | Remote tasks/Reboot now | Initiates a device restart. This causes the device you choose to be restarted. The device owner isn't automatically notified of the restart, and they might lose work. | 

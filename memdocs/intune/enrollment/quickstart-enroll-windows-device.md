@@ -20,7 +20,7 @@ ms.assetid: 658a7655-a6df-4dbe-b56c-22c7fc60e706
 #ROBOTS:
 #audience:
 
-ms.reviewer: 
+ms.reviewer: maholdaa 
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -38,6 +38,8 @@ ms.collection:
 - Windows 11 
 
 Employees and students who want remote access to work or school resources can enroll their devices into Microsoft Intune. Enrollment ensures that all devices trying to access data within your organization are secure and compliant with your policies and requirements. Upon enrollment, the device gets access to resources like work email, files, VPN, and Wi-Fi. 
+
+[!INCLUDE [intune-evaluate](../includes/intune-evaluate.md)]
 
 In this task, you will: 
 

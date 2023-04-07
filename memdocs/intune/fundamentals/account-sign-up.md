@@ -69,7 +69,7 @@ To grant access to administer the service for users with other permissions, then
 
 ### Intune Admin portal URL
 
-Microsoft Intune admin center: `https://endpoint.microsoft.com`
+Microsoft Intune admin center: `https://intune.microsoft.com`
 
 Intune for Education: `https://intuneeducation.portal.azure.com`
 

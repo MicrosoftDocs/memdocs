@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 02/28/2023
+ms.date: 04/06/2023
 ms.topic: troubleshooting
 ms.service: windows-365
 ms.subservice: 
@@ -107,7 +107,7 @@ You can improve video playback performance on your Cloud PCs by using multimedia
 
 For Cloud PCs, MMR is supported on the following platforms: Windows, macOS, ChromeOS, Linux.
 
-For more information, see [Multimedia redirection for Azure Virtual Desktop](/azure/virtual-desktop/multimedia-redirection).
+For more information, see [Multimedia redirection for Azure Virtual Desktop](/azure/virtual-desktop/multimedia-redirection) and [Troubleshoot multimedia redirection for Azure Virtual Desktop](/azure/virtual-desktop/troubleshoot-multimedia-redirection).
 
 ## Your organization hasn’t assigned you a Cloud PC
 
@@ -135,6 +135,12 @@ In certain regions, some users may experience a decline in their 4vCPU Cloud PC 
 
 - [Reprovision](reprovision-cloud-pc.md) the Cloud PC, or
 - Uninstall Hyper-V on the Cloud PC.  
+
+## Windows 365 Frontline user message: Your Cloud PC should be available soon
+
+If you've reached the maximum number of active user sessions in your tenant, any more users who try to start a user session will see a  message in the end user portal that says: "Your Cloud PC should be available soon".
+
+**Troubleshooting steps**: Use the [utilization report](report-cloud-pc-utilization.md) to estimate the right amount of license for your organization.
 
 <!-- ########################## -->
 ## Next steps

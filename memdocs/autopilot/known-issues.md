@@ -12,6 +12,7 @@ ms.date: 11/17/2022
 ms.collection: 
   - M365-modern-desktop
   - highpri
+  - tier2
 ms.topic: troubleshooting
 ---
 
@@ -22,21 +23,17 @@ ms.topic: troubleshooting
 - Windows 11
 - Windows 10
 
-This article describes known issues that can often be resolved by configuration changes, or might be resolved automatically in a future release. For information about issues that can be resolved by applying a cumulative update, see [Windows Autopilot - resolved issues](resolved-issues.md).
+This article describes known issues that can often be resolved with configuration changes, or might be resolved automatically in a future release. For information about issues that can be resolved by applying a cumulative update, see [Windows Autopilot - resolved issues](resolved-issues.md).
 
 ## Known issues
 
 ### Kiosk device profile not auto logging in
 
-There's currently a known issue in Windows Update [KB5022303](https://support.microsoft.com/topic/january-10-2023-kb5022303-os-build-22621-1105-c45956c6-4ccb-4216-832c-2ec6309c7629), which applies to both Windows 10 and Windows 11, where Kiosk device profiles that have auto log on enabled won't auto login. After Autopilot completes provisioning, the device stays on the sign-in screen prompting for credentials. To work around this known issue, you can manually enter the kiosk user credentials with the username `kioskUser0` and no password. After entering this username with no password, it should take you to the desktop. There's a fix pending, but no estimated date for the release of the fix at this time.
+There's currently a known issue in Windows Update [KB5022303](https://support.microsoft.com/topic/january-10-2023-kb5022303-os-build-22621-1105-c45956c6-4ccb-4216-832c-2ec6309c7629), which applies to both Windows 10 and Windows 11, where Kiosk device profiles that have auto sign-in enabled won't auto sign in. After Autopilot completes provisioning, the device stays on the sign-in screen prompting for credentials. To work around this known issue, you can manually enter the kiosk user credentials with the username `kioskUser0` and no password. After you enter this username with no password, it should take you to the desktop. This issue should be resolved in Windows 10 version 3C (March 2023) or higher or Windows 11 4B (April 2023) or higher.
 
 ### TPM attestation isn't working on AMD platforms with ASP fTPM
 
 TPM attestation for AMD platforms with ASP firmware TPM may fail with error code 0x80070490 on Windows 10 and Windows 11 systems. There's currently no update available to resolve this issue.
-
-### Autopilot profile not applied after reimaging to an older OS version
-
-If you enroll a device with Windows Update [KB5017380](https://support.microsoft.com/topic/september-20-2022-kb5017380-os-builds-19042-2075-19043-2075-and-19044-2075-preview-59ab550c-105e-4481-b440-c37f07bf7897) or later on Windows 10 or with Windows Update [KB5017383](https://support.microsoft.com/topic/september-20-2022-kb5017383-os-build-22000-1042-preview-62753265-68e9-45d2-adcb-f996bf3ad393) or later on Windows 11 and then reimage to an older OS version, the Autopilot profile won't be applied. The device would need to be re-registered to complete a successful Autopilot deployment. You may see the message **fix pending** in the Autopilot devices blade which indicates that there was a hardware change on the device.
 
 ### TPM attestation failure with error code 0x81039001
 
@@ -44,7 +41,7 @@ Some devices may intermittently fail TPM attestation during Windows Autopilot pr
 
 ### Autopilot deployment report shows "failure" status on a successful deployment
 
-The Autopilot deployment report (preview) will show a failed status for any device that experiences an initial deployment failure. For subsequent deployment attempts, using the **Try again** or **Continue to desktop** options, it won't update the deployment state in the report. If the user resets the device, it will show as a new deployment row in the report with the previous attempt remaining as failed.
+The Autopilot deployment report (preview) shows a failed status for any device that experiences an initial deployment failure. For subsequent deployment attempts, using the **Try again** or **Continue to desktop** options, the deployment state in the report doesn't update. If the user resets the device, a new deployment row is shown in the report with the previous attempt remaining as failed.
 
 ### Autopilot deployment report doesn't show deployed device
 
@@ -52,7 +49,7 @@ Autopilot deployments that take longer than one hour may display an incomplete d
 
 ### Autopilot profile not being applied when assigned
 
-In Windows 10 April and some May update releases, there is an issue where the Autopilot profile may fail to apply to the device and the hardware hash may not be harvested. As a result, any settings made in the profile may not be configured for the user such as device renaming. To resolve this issue, the May (KB5015020) cumulative update needs to be applied to the device.
+In Windows 10 April and some May update releases, there's an issue where the Autopilot profile may fail to apply to the device and the hardware hash may not be harvested. As a result, any settings made in the profile may not be configured for the user such as device renaming. To resolve this issue, the May (KB5015020) cumulative update needs to be applied to the device.
 
 ### DefaultuserX profile not deleted
 
@@ -68,22 +65,22 @@ When you attempt an Autopilot reset, you see the following message: _Autopilot r
 
 2. Exceptions to Conditional Access policies to exclude **Microsoft Intune Enrollment** and **Microsoft Intune** cloud apps are needed to complete Autopilot enrollment in cases where restrictive polices are present such as:
 
-    - Conditional Access policy 1: Block all apps except those on an exclusion list.
+    - Conditional Access policy 1: Block all apps except those apps on an exclusion list.
     - Conditional Access policy 2: Require a compliant device for the apps on the exclusion list.
 
     In this case, Microsoft Intune Enrollment and Microsoft Intune should be included in that exclusion list of policy 1.
 
-    If a policy is in place such that **all cloud apps** require a compliant device (there's no exclusion list), Microsoft Intune Enrollment will already be excluded by default, so that the device can register with Azure AD and enroll with Intune and avoid a circular dependency.
+    If a policy is in place such that **all cloud apps** require a compliant device (there's no exclusion list), by default Microsoft Intune Enrollment is excluded, so that the device can register with Azure AD and enroll with Intune and avoid a circular dependency.
 
-3. **Hybrid Azure AD devices**: When Hybrid Azure AD devices are deployed with Autopilot, two device IDs are initially associated with the same device - one Azure AD and one hybrid.  The hybrid compliance state will display as **N/A** when viewed from the devices list in the Azure portal until a user signs in. Intune only syncs with the Hybrid device ID after a successful user sign-in.
+3. **Hybrid Azure AD devices**: When Hybrid Azure AD devices are deployed with Autopilot, two device IDs are initially associated with the same device - one Azure AD and one hybrid.  The hybrid compliance state displays as **N/A** when viewed from the devices list in the Azure portal until a user signs in. Intune only syncs with the Hybrid device ID after a successful user sign-in.
 
     The temporary **N/A** compliance state can cause issues with device based Conditional Access polices that block access based on compliance. In this case, Conditional Access is behaving as intended. To resolve the conflict, a user must to sign in to the device, or the device-based policy must be modified. For more information, see [Conditional Access: Require compliant or hybrid Azure AD joined device](/azure/active-directory/conditional-access/howto-conditional-access-policy-compliant-device).
 
-4. Conditional Access policies such as BitLocker compliance require a grace period for Autopilot devices, because until the device has been rebooted the status of BitLocker and Secure Boot haven't been captured, and can't be used as part of the Compliance Policy. The grace period can be as short as 0.25 days.
+4. Conditional Access policies such as BitLocker compliance require a grace period for Autopilot devices. This grace period is needed because until the device has been rebooted, the status of BitLocker and Secure Boot haven't been captured, and can't be used as part of the Compliance Policy. The grace period can be as short as 0.25 days.
 
 ### Device goes through Autopilot deployment without an assigned profile
 
-When a device is registered in Autopilot and no profile is assigned, it will take the default Autopilot profile. This behavior is by design. It makes sure that all devices that you register with Autopilot go through the Autopilot experience. If you don't want the device to go through an Autopilot deployment, remove the Autopilot registration.
+When a device is registered in Autopilot and no profile is assigned, the default Autopilot profile is taken. This behavior is by design. It makes sure that all devices that you register with Autopilot go through the Autopilot experience. If you don't want the device to go through an Autopilot deployment, remove the Autopilot registration.
 
 ### White screen during hybrid Azure AD joined deployment
 
@@ -113,7 +110,7 @@ A device object is pre-created in Azure AD once a device is registered in Autopi
 
 ### TPM attestation failure on Windows 11 error code 0x81039024
 
-Some devices may fail TPM attestation on Windows 11 during the pre-provisioning technician flow or self-deployment mode with the error code 0x81039024. This error code indicates that there are known vulnerabilities detected with the TPM and as a result will fail attestation. If you receive this error, visit your PC manufacturer's website to update the TPM firmware.
+Some devices may fail TPM attestation on Windows 11 during the pre-provisioning technician flow or self-deployment mode with the error code 0x81039024. This error code indicates that there are known vulnerabilities detected with the TPM and as a result attestation fails. If you receive this error, visit your PC manufacturer's website to update the TPM firmware.
 
 ### Delete device record in Intune before reusing devices in self-deployment mode or Pre-Provisioning mode
 
@@ -152,7 +149,7 @@ Confirm that all of your information is correct at `HKEY_LOCAL_MACHINE\SOFTWARE\
 
 ### Windows Autopilot user-driven hybrid Azure AD deployments don't grant users Administrator rights even when specified in the Windows Autopilot profile
 
-This issue will occur when there's another user on the device that already has Administrator rights. For example, a PowerShell script or policy could create another local account that is a member of the Administrators group. To ensure this works properly, don't create another account until after the Windows Autopilot process has completed.
+This issue occurs when there's another user on the device that already has Administrator rights. For example, a PowerShell script or policy could create another local account that is a member of the Administrators group. To ensure this works properly, don't create another account until after the Windows Autopilot process has completed.
 
 ### Windows Autopilot device provisioning can fail
 
@@ -193,7 +190,7 @@ For more information on this scenario, see [Windows Autopilot self-deploying mod
 
 ### Pre-provisioning gives a red screen and the **Microsoft-Windows-User Device Registration/Admin** event log displays **HResult error code 0x801C03F3**
 
-This issue can happen if Azure AD can't find an Azure AD device object for the device that you're trying to deploy. This issue will occur if you manually delete the object. To fix it, remove the device from Azure AD, Intune, and Autopilot, then re-register it with Autopilot, which will recreate the Azure AD device object
+This issue can happen if Azure AD can't find an Azure AD device object for the device that you're trying to deploy. This issue occurs if you manually delete the object. To fix it, remove the device from Azure AD, Intune, and Autopilot, then re-register it with Autopilot, which recreates the Azure AD device object
 
 To get troubleshooting logs, run the following command: `Mdmdiagnosticstool.exe -area Autopilot;TPM -cab c:\autopilot.cab`
 
