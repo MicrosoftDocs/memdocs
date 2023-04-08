@@ -1,37 +1,20 @@
 ---
-title: Windows Autopilot for pre-provisioned deployment Azure AD join - Step 8 of 9 - User flow
-description: How to - Windows Autopilot for pre-provisioned deployment Azure AD join - Step 8 of 9 - User flow.
-ms.prod: windows-client
-ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
-ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 03/29/2023
-ms.topic: tutorial
-ms.collection: 
-  - tier1
-  - highpri
 ms.technology: itpro-deploy
+ms.prod: windows-client
+ms.topic: include
+ms.date: 04/07/2023
+ms.localizationpriority: medium
 ---
 
-# Pre-provisioning Azure AD join: User flow
+<!-- This file is shared by the following articles:
 
-Windows Autopilot for pre-provisioned deployment Azure AD join steps:
-- Step 1: [Set up Windows automatic Intune enrollment](azure-ad-join-automatic-enrollment.md)
-- Step 2: [Allow users to join devices to Azure AD](azure-ad-join-allow-users-to-join.md)
-- Step 3: [Register devices as Autopilot devices](azure-ad-join-register-device.md)
-- Step 4: [Create a device group](azure-ad-join-device-group.md)
-- Step 5: [Configure and assign Autopilot Enrollment Status Page (ESP)](azure-ad-join-esp.md)
-- Step 6: [Create and assign Autopilot profile](azure-ad-join-autopilot-profile.md)
-- Step 7: [Assign Autopilot device to a user (optional)](azure-ad-join-assign-device-to-user.md)
-- Step 8: [Technician flow](azure-ad-join-technician-flow.md)
-> [!div class="checklist"]
-> - **Step 9: User flow**
+azure-ad-join-user-flow.md
+hybrid-azure-ad-join-user-flow.md
 
-For an overview of the Windows Autopilot for pre-provisioned deployment Azure AD join workflow, see [Windows Autopilot for pre-provisioned deployment Azure AD join overview](azure-ad-join-workflow.md)
-
-## User flow
+Headings are driven by article context. -->
 
 Once the technician flow step of the pre-provisioning process completes successfully and the device is resealed, the device can be delivered to the end-user. The end-user then completes the normal Windows Autopilot user-driven process. This final step is know as the user flow and involves the following steps:
 
@@ -71,7 +54,3 @@ Once the technician flow step of the pre-provisioning process completes successf
          > - Windows 11: To show details, next to the appropriate phase select **∨**. To hide the details, next to the appropriate phase select **∧**.
 
 5. Once the provisioning process completes, the ESP finishes and Desktop appears. At this point, the end-user can start using the device.
-
-## More information
-
-[!INCLUDE [More information user flow](../includes/more-info-user-flow.md)]

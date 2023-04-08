@@ -34,23 +34,44 @@ For an overview of the Windows Autopilot for pre-provisioned deployment hybrid A
 
 ## User flow
 
-Once the pre-provisioning process completes successfully and the device was resealed, the device can be delivered to the end-user. The end-user then completes the normal Windows Autopilot user-driven process. This final step is know as the user flow and involves the following steps:
+Once the technician flow step of the pre-provisioning process completes successfully and the device is resealed, the device can be delivered to the end-user. The end-user then completes the normal Windows Autopilot user-driven process. This final step is know as the user flow and involves the following steps:
 
-1. If a wired network connection is available, connect the device to the network.
+1. If a wired network connection is available, connect the device to the wired network connection.
 
-1. Power on the device.
+2. Power on the device.
 
-1. Select the appropriate language, locale, and keyboard layout.
+3. Once the device boots up, one of two things occurs depending on the state of network connectivity:
 
-1. If not connected to a wired network, a screen will prompt to connect to a Wi-Fi network. Connect to a Wi-Fi network. Internet access is always required and there must also be connectivity to a domain controller.
+   - If the device is connected to a wired network and has network connectivity, the Azure AD sign-in page appears.
 
-1. The device will reboot. After the reboot, the end-user's Active Directory credentials need to be entered.
+   - If the device isn't connected to a wired network or if it doesn't have network connectivity:
 
-At this point, any policies and apps assigned to the user are delivered to the device and are tracked by the Enrollment Status Page (ESP). Once complete, the user can access the desktop.
+     1. The **Let's connect you to a network** screen appears. At this screen, either plug the device into a wired network (if available), or select and connect to a wireless Wi-Fi network.
 
-> [!NOTE]
->
-> Although device ESP ran during the [Technician flow](hybrid-azure-ad-join-technician-flow.md), during the user flow when the end-user logs in, the device ESP will rerun again . This allows ESP to install other policies that may have been assigned to the device after it was provisioned in the technician flow.
+     2. Once network connectivity is established, the **Next** button should become available. Select **Next**. After a few minutes, the Azure AD sign-in page appears.
+
+    > [!IMPORTANT]
+    >
+    > Internet access is always required for the user flow.
+
+    > [!NOTE]
+    >
+    > Depending on which screens were selected to be shown instead of hidden when the Autopilot profile was configured at the [Create and assign Autopilot profile](azure-ad-join-autopilot-profile.md) step, additional screens such as License Terms, Privacy, Language, and Keyboard may appear before the Azure AD sign-in page.
+
+4. At the Azure AD sign-in page, if a user was assigned to the device, their username may be pre-populated in this screen. Enter the Azure AD credentials for the user and then select **Next** (Windows 10) or **Sign in** (Windows 11) to sign in. If necessary, proceed through the multi-factor authentication (MFA) screens.
+
+      - The Enrollment Status Page (ESP) displays progress during the provisioning process across three phases - **Device preparation**, **Device setup**, and **Account setup**. The first two phases of **Device preparation** and **Device setup** are part of the Device ESP while the final phase of **Account setup** is part of the User ESP.
+
+        For the user flow of Windows Autopilot for pre-provisioned deployment, the **Device setup** phase of the Device ESP and the **Account setup** phase of the User ESP runs. The **Device preparation** phase of the Device ESP doesn't run during the user flow since it already ran during the [technian flow](azure-ad-join-technician-flow.md). The **Device setup** phase of the Device ESP runs again during the user flow in case any new or additional policies or applications assigned to the device became available during the time frame that the technician flow ran and when the user flow runs after the device was delivered to the end-user.
+
+         > [!NOTE]
+         >
+         > To view and hide detailed progress information in the ESP during the provisioning process:
+         >
+         > - Windows 10: To show details, next to the appropriate phase select **Show details**. To hide the details, next to the appropriate phase select **Hide details**.
+         > - Windows 11: To show details, next to the appropriate phase select **∨**. To hide the details, next to the appropriate phase select **∧**.
+
+5. Once the provisioning process completes, the ESP finishes and Desktop appears. At this point, the end-user can start using the device.
 
 ## More information
 

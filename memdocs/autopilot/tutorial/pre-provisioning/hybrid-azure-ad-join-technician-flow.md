@@ -32,6 +32,14 @@ Windows Autopilot for pre-provisioned deployment hybrid Azure AD join steps:
 
 For an overview of the Windows Autopilot for pre-provisioned deployment hybrid Azure AD join workflow, see [Windows Autopilot for pre-provisioned deployment hybrid Azure AD join overview](hybrid-azure-ad-join-workflow.md)
 
+## Technician flow
+
+> [!IMPORTANT]
+>
+> Hybrid Azure AD join requires both connectivity to the Internet and connectivity to a domain controller. However, connectivity to a domain controller is not needed until the user [User flow](hybrid-azure-ad-join-user-flow.md) step is run. Only connectivity to the Internet is required for the technician flow step.
+
+[!INCLUDE [Technician flow](../includes/technician-flow.md)]
+
 ## Next step: User flow
 
 > [!div class="nextstepaction"]
