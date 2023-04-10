@@ -110,7 +110,7 @@ For more information, see [Intune Data Warehouse API endpoint](reports-api-url.m
 
 To get a new access token for Postman, you must add the Azure AD authorization URL, add your Client ID, and Client Secret. Postman will load the authorization page where you will type your credentials.
 
-Before you make the call, verify that you have already added the Callback URL to your app in Azure. The Callback URL is `https://www.getpostman.com/oauth2/callback`
+Before you make the call, verify that you have already added the Callback URL to your app in Azure. The Callback URL is `https://www.getpostman.com/oauth2/callback`.
 
 #### Add the information used to request the token
 
