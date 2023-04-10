@@ -123,7 +123,7 @@ Before you make the call, verify that you have already added the Callback URL to
 5. Scroll down to the **Configure New Token** section.
 6. Type Bearer for the **Token Name**.
 7. Select **Authorization Code** as the Grant Type.
-8. Add the **Callback URL**. The callback url is `https://www.getpostman.com/oauth2/callback`
+8. Add the **Callback URL**. The callback URL is `https://www.getpostman.com/oauth2/callback`.
 9. Add the **Auth URL**. It should look something like:
 
     `https://login.microsoftonline.com/common/oauth2/authorize?resource=https://api.manage.microsoft.com/`
