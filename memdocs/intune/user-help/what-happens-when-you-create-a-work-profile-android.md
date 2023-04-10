@@ -115,6 +115,7 @@ To see how quick settings appear on other Android devices, see [Examples of paus
 ### Settings app pause option 
 Open the Settings app and go to **Work profile settings**. Switch the **Work profile** toggle off.   
 
+Google Pixel 4 (Android 11)  
 ![Screenshot of Work profile toggle switch turned off in Google Pixel 4 device settings.](./media/google-pixel-4-settings-android.png)  
 
 To see how work profile settings appear on other Android devices, see [Examples of pause in the settings app](what-happens-when-you-create-a-work-profile-android.md#pause-in-settings-app).   
@@ -195,13 +196,6 @@ Surface Duo (Android 10)
    > ![Screenshot of activated work profile icon in Surface Duo quick settings.](./media/surface-duo-quick-settings-android.png)  
 
 
-Google Pixel 4 (Android 11)    
-
-
-   > [!div class="mx-imgBorder"]
-   > ![Screenshot of inactive work profile icon in Google Pixel 4 quick settings.](./media/google-pixel-4-quick-settings-android.png)  
-
-
 Samsung Galaxy S20 (Android 13)   
 
 
@@ -215,6 +209,12 @@ Nexus 5X (Android 8.1.0)
    > [!div class="mx-imgBorder"]
    > ![Screenshot of inactive work mode icon in Nexus 5X quick settings.](./media/nexus-5x-quick-settings-android.png)  
 
+Google Pixel 4 (Android 11)    
+
+
+   > [!div class="mx-imgBorder"]
+   > [![Screenshot of inactive work profile icon in Google Pixel 4 quick settings.](./media/google-pixel-4-quick-settings-android.png)](./media/google-pixel-4-quick-settings-android.png#lightbox) 
+
 
 ### Pause in Settings app 
 These images show where the pause option appears in the Settings app. For more information, see [Pause the work profile](#settings-app-pause-option).    
@@ -225,17 +225,10 @@ Surface Duo (Android 10)
    > [!div class="mx-imgBorder"]
    > ![Screenshot of Work profile toggle switch turned off in Surface Duo device settings.](./media/surface-duo-settings-android.png)  
 
-Google Pixel 4 (Android 11)  
-
-
-   > [!div class="mx-imgBorder"]
-   > ![Screenshot of Work profile toggle switch turned off in Google Pixel 4 device settings.](./media/google-pixel-4-settings-android.png)  
-
-
 Samsung Galaxy S20 (Android 13)  
 
    > [!div class="mx-imgBorder"]
-   > [![Screenshot of Work profile toggle switch turned on in Samsung Galaxy S20 device settings.](./media/work-profile-settings-on-1.png)](./media/work-profile-settings-on.png#lightbox)  
+   > [![Screenshot of Work profile toggle switch turned on in Samsung Galaxy S20 device settings.](./media/work-profile-settings-on-1.png)](./media/android-work-profile-settings-on.png#lightbox)  
 
 
 Nexus 5X (Android 8.1.0)   
@@ -244,11 +237,11 @@ Nexus 5X (Android 8.1.0)
    > ![Screenshot of Work profile toggle switch turned on in Nexus 5X device settings.](./media/nexus-5x-settings-android.png)  
 
 ### Pause in app drawer   
-These images show where the pause option appears in the app drawer on a Google Pixel 4 (Android 11). For more information, see [Pause the work profile](#app-drawer-pause-option).      
+This image shows the pause option in the app drawer on a Google Pixel 4 (Android 11). For more information, see [Pause the work profile](#app-drawer-pause-option).      
 
 
    > [!div class="mx-imgBorder"]
-   > ![Screenshot of Work profile toggle switch turned off in Samsung Galaxy S20 app drawer.](./media/samsung-galaxy-s20-pause-app-drawer.png)  
+   > ![Screenshot of Work profile switch turned off in Google Pixel 4 app drawer showing "Work profile is paused."](./media/samsung-galaxy-s20-pause-app-drawer.png)  
 
 
 ## Next steps   
