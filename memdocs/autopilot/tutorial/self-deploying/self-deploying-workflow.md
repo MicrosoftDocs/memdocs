@@ -30,7 +30,7 @@ Before beginning, refer to the [How to: Plan your Azure AD join implementation](
 
 ## Workflow
 
-Set up Windows automatic Intune enrollment > Register devices as Autopilot devices > Create a device group > Configure and assign Autopilot Enrollment Status Page (ESP) > Create and assign Autopilot profile
+Set up Windows automatic Intune enrollment > Register devices as Autopilot devices > Create a device group > Configure and assign Autopilot Enrollment Status Page (ESP) > Create and assign Autopilot profile > Deploy device
 
 Autopilot self-deploying mode steps:
 > [!div class="checklist"]

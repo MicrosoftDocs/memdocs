@@ -34,7 +34,7 @@ Before beginning, refer to the [How to: Plan your Azure AD join implementation](
 
 ## Workflow
 
-Set up Windows automatic Intune enrollment > Allow users to join devices to Azure AD > Register devices as Autopilot devices > Create a device group > Configure and assign Autopilot Enrollment Status Page (ESP) > Create and assign Autopilot profile > Assign Autopilot device to a user (optional)
+Set up Windows automatic Intune enrollment > Allow users to join devices to Azure AD > Register devices as Autopilot devices > Create a device group > Configure and assign Autopilot Enrollment Status Page (ESP) > Create and assign Autopilot profile > Assign Autopilot device to a user (optional) > Technician flow > User flow
 
 Windows Autopilot for pre-provisioned deployment Azure AD join steps:
 > [!div class="checklist"]
