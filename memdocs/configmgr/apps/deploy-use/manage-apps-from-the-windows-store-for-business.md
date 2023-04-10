@@ -17,7 +17,7 @@ ms.reviewer: mstewart,aaroncz
 # Manage apps from the Microsoft Store for Business and Education with Configuration Manager
 
 > [!IMPORTANT]
-> Starting in November 2021, this feature of Configuration Manager is [deprecated](../../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).<!-- 10884039 --> For more information, see [Update to Intune integration with the Microsoft Store on Windows](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/update-to-endpoint-manager-integration-with-the-microsoft-store/bc-p/3592470) and [Add Microsoft Store apps to Microsoft Intune](/memdocs/intune/apps/store-apps-microsoft.md).
+> Starting in November 2021, this feature of Configuration Manager is [deprecated](../../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).<!-- 10884039 --> For more information, see [Update to Intune integration with the Microsoft Store on Windows](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/update-to-endpoint-manager-integration-with-the-microsoft-store/bc-p/3592470) <!--and [Add Microsoft Store apps to Microsoft Intune](/memdocs/intune/apps/store-apps-microsoft.md).-->
 
 The [Microsoft Store for Business and Education](/microsoft-store/) is where you find and acquire Windows apps for your organization. When you connect the store to Configuration Manager, you then synchronize the list of apps you've acquired. View these apps in the Configuration Manager console, and deploy them like you deploy any other app.
 
