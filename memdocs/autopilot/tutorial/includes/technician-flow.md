@@ -44,22 +44,22 @@ Once all of the configurations for Windows Autopilot for pre-provisioned deploym
 
     > [!NOTE]
     >
-    > Depending on which screens were selected to be shown instead of hidden when the Autopilot profile was configured at the [Create and assign Autopilot profile](azure-ad-join-autopilot-profile.md) step, additional screens such as License Terms, Privacy, Language, and Keyboard may appear before the Azure AD sign-in page.
+    > Depending on which screens were selected to be shown instead of hidden when the Autopilot profile was configured at the**Create and assign Autopilot profile** step, additional screens such as License Terms, Privacy, Language, and Keyboard may appear before the Azure AD sign-in page.
 
-1. If a user was assigned to the device, their username may be pre-populated in this screen. **DON'T** sign in or select **Next** (all Windows 10/Windows 11 if no user is assigned) or **Sign in** (Windows 11 if a user is assigned) at this screen. Instead, press the <kbd>WIN</kbd> key on the keyboard five times. Pressing the <kbd>WIN</kbd> key five times should display a **What would you like to do?** options screen instead.
+2. If a user was assigned to the device, their username may be pre-populated in this screen. **DON'T** sign in or select **Next** (all Windows 10/Windows 11 if no user is assigned) or **Sign in** (Windows 11 if a user is assigned) at this screen. Instead, press the <kbd>WIN</kbd> key on the keyboard five times. Pressing the <kbd>WIN</kbd> key five times should display a **What would you like to do?** options screen instead.
 
-1. From the **What would you like to do?** options screen:
+3. From the **What would you like to do?** options screen:
 
    - For Windows 10, select the **Windows Autopilot provisioning** option and then select **Continue**.
    - For Windows 11, select the **Pre-provision with Windows Autopilot** option, and then select **Next**.
 
-1. In the **Windows Autopilot Configuration** screen (Windows 10) or the **Pre-provision with Windows Autopilot** screen (Windows 11), it displays the following information about the deployment:
+4. In the **Windows Autopilot Configuration** screen (Windows 10) or the **Pre-provision with Windows Autopilot** screen (Windows 11), it displays the following information about the deployment:
 
    - The name of the organization for the device.
 
-   - The name of the Autopilot deployment profile assigned to the device during the [Create and assign Autopilot profile](azure-ad-join-autopilot-profile.md) step.
+   - The name of the Autopilot deployment profile assigned to the device during the **Create and assign Autopilot profile** step.
 
-   - The user assigned to the device if a user was assigned to the device in the [Assign Autopilot device to a user (optional)](azure-ad-join-assign-device-to-user.md) step.
+   - The user assigned to the device if a user was assigned to the device in the **Assign Autopilot device to a user (optional)** step (if applicable).
 
       > [!NOTE]
       >
@@ -71,18 +71,17 @@ Once all of the configurations for Windows Autopilot for pre-provisioned deploym
       >
       > The QR codes can be scanned using a companion app. The app also configures the device to specify who it belongs to. An [open-source sample of the companion app](https://github.com/Microsoft/WindowsAutopilotCompanion) that integrates with Intune by using the Graph API has been published to GitHub by the Autopilot team.
 
-1. Validate that the information in the **Windows Autopilot Configuration** screen is correct. Once all information has been confirmed as correct, select **Provision** (Windows 10) or **Next** (Windows 11) to begin the provisioning process.
+5. Validate that the information in the **Windows Autopilot Configuration** screen is correct. Once all information has been confirmed as correct, select **Provision** (Windows 10) or **Next** (Windows 11) to begin the provisioning process.
 
-1. The device may reboot, followed by the Enrollment Status Page (ESP) appearing. The Enrollment Status Page (ESP) displays progress during the provisioning process across three phases:
+6. The device may reboot, followed by the Enrollment Status Page (ESP) appearing. The Enrollment Status Page (ESP) displays progress during the provisioning process across three phases:
 
    - **Device preparation** (Device ESP)
    - **Device setup** (Device ESP)
    - **Account setup** (User ESP)
 
-
    The first two phases of **Device preparation** and **Device setup** are part of the Device ESP while the final phase of **Account setup** is part of the User ESP.
 
-   For technician flow of the Windows Autopilot for pre-provisioned deployment, only the first two Device ESP phases of **Device preparation** and **Device setup** run. The last User ESP phase of **Account setup** will run during the next step of [User flow](azure-ad-join-user-flow.md).
+   For technician flow of the Windows Autopilot for pre-provisioned deployment, only the first two Device ESP phases of **Device preparation** and **Device setup** run. The last User ESP phase of **Account setup** will run during the next step of **User flow**.
 
    > [!NOTE]
    >
@@ -91,7 +90,7 @@ Once all of the configurations for Windows Autopilot for pre-provisioned deploym
    > - Windows 10: To show details, next to the appropriate phase select **Show details**. To hide the details, next to the appropriate phase select **Hide details**.
    > - Windows 11: To show details, next to the appropriate phase select **∨**. To hide the details, next to the appropriate phase select **∧**.
 
-1. Once the provisioning process completes, a status screen is displayed showing whether the provisioning process either succeeded of failed:
+7. Once the provisioning process completes, a status screen is displayed showing whether the provisioning process either succeeded of failed:
 
    - If the pre-provisioning process completes successfully, a success status screen appears with information about the deployment, including the same details presented previously. For example, organization name, Autopilot deployment profile name, QR code (Windows 10 only), and if applicable, assigned user. The elapsed time of the provisioning process is also provided.
 
@@ -99,11 +98,11 @@ Once all of the configurations for Windows Autopilot for pre-provisioned deploym
 
       > [!IMPORTANT]
       >
-      > Outside of testing scenarios, if the intention is to deliver the device to an end-user, **DON'T** turn the device back on at this point. Instead, deliver the device to the end-user where they will perform the last step of [User flow](hybrid-azure-ad-join-user-flow.md).
+      > Outside of testing scenarios, if the intention is to deliver the device to an end-user, **DON'T** turn the device back on at this point. Instead, deliver the device to the end-user where they will perform the last step of **User flow**.
 
       > [!NOTE]
       >
-      > The technician flow inherits behavior from [self-deploying mode](../self-deploying/self-deploying-workflow.md). Self-deploying mode uses the Enrollment Status Page (ESP) to hold the device in a provisioning state and prevent the user from proceeding to the desktop after enrollment but before software and configuration is done applying. If the Enrollment Status Page (ESP) is disabled, the **Reseal** button may appear before software and configuration is done applying. This may advertently allow proceeding to the user flow before technician flow provisioning is complete. The success status screen validates that enrollment was successful, not that the technician flow is necessarily complete. For this reason, it's strongly recommended not to disable the Enrollment Status Page (ESP). Instead enable the Enrollment Status Page (ESP) as suggested in the [Configure and assign Autopilot Enrollment Status Page (ESP)](azure-ad-join-esp.md) step.
+      > The technician flow inherits behavior from [self-deploying mode](../self-deploying/self-deploying-workflow.md). Self-deploying mode uses the Enrollment Status Page (ESP) to hold the device in a provisioning state and prevent the user from proceeding to the desktop after enrollment but before software and configuration is done applying. If the Enrollment Status Page (ESP) is disabled, the **Reseal** button may appear before software and configuration is done applying. This may advertently allow proceeding to the user flow before technician flow provisioning is complete. The success status screen validates that enrollment was successful, not that the technician flow is necessarily complete. For this reason, it's strongly recommended not to disable the Enrollment Status Page (ESP). Instead enable the Enrollment Status Page (ESP) as suggested in the **Configure and assign Autopilot Enrollment Status Page (ESP)** step.
 
    - If the pre-provisioning process fails, an error status screen appears with information about the error and the deployment, including the same details about the deployment presented previously.  For example, organization name, Autopilot deployment profile name, QR code (Windows 10 only), and if applicable, assigned user. The elapsed time of the provisioning process is also provided.
 
