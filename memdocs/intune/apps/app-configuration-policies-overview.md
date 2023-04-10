@@ -133,7 +133,7 @@ You can validate the app configuration policy using the following three methods:
       Device Install Status Report monitors the latest check-in's for all the devices the configuration policy has been targeted to.
       ![First screenshot of device install status](./media/app-configuration-policies-overview/device-install-status-1.png)
       
-      User Install Status Report monitors the latest changes to the user details (name, e-mail, UPN, etc...), User Report is also independent of Device Report.
+      User Install Status Report monitors the latest changes to the user details, such as name, e-mail, and UPN. User Report is also independent of Device Report.
       ![Second screenshot of device install status](./media/app-configuration-policies-overview/device-install-status-2.png)
 
       Additionally,in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **All Devices** > *select a device* > **App configuration**. The app configuration** pane will display all the assigned policies and their state:
