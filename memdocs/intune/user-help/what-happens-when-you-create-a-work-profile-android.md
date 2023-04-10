@@ -131,7 +131,7 @@ This section shows examples of how the work profile and its features appear on c
 
 * Surface Duo (Android 10)  
 * Google Pixel 4 (Android 11)  
-* Samsung Galaxy S20 FE (Android 13)  
+* Samsung Galaxy S20 (Android 13)  
 * Nexus 5X (Android 8.1.0)  
 
 Some features are not available on all devices.   
