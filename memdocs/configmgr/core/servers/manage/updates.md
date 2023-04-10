@@ -2,7 +2,7 @@
 title: Updates and servicing
 titleSuffix: Configuration Manager
 description: Learn about the in-console service method called Updates and Servicing that makes it easy to locate and install recommended updates.
-ms.date: 03/28/2023
+ms.date: 04/10/2023
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -57,7 +57,7 @@ The following supported versions of Configuration Manager are currently availabl
 
 | Version | Availability date | [Support end date](current-branch-versions-supported.md) | Baseline | In-console update |
 |-------------|-----------|------------|--------------|------------------------|
-[**2303**](../../plan-design/changes/whats-new-in-version-2303.md)<br /> (5.00.9105) | April 1, 2023 | October 1, 2024 | Yes<sup>[Note 1](#bkmk_note1)</sup> | Yes |
+[**2303**](../../plan-design/changes/whats-new-in-version-2303.md)<br /> (5.00.9106) | April 10, 2023 | October 10, 2024 | Yes<sup>[Note 1](#bkmk_note1)</sup> | Yes |
 | [**2211**](../../plan-design/changes/whats-new-in-version-2211.md)<br /> (5.00.9096) | December 5, 2022 | June 5, 2024 | No | Yes |
 | [**2207**](../../plan-design/changes/whats-new-in-version-2207.md)<br /> (5.00.9088) | August 12, 2022 | February 12, 2024 | No | Yes |
 | [**2203**](../../plan-design/changes/whats-new-in-version-2203.md)<br /> (5.00.9078) | April 8, 2022 | October 8, 2023 | Yes<sup>[Note 1](#bkmk_note1)</sup> | Yes |
@@ -70,11 +70,11 @@ The following supported versions of Configuration Manager are currently availabl
 
 The baseline media is available as part of the following releases on the [Volume License Service Center](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx) (VLSC):
 
-- `Microsoft Endpoint Configmgr (current branch)`
+- `Microsoft Configmgr (current branch)`
 - `System Center Datacenter`
 - `System Center Standard`
 
-For example, search the VLSC for `Microsoft Endpoint Configmgr (current branch)`. Find the baseline media in the list of files, and download for that release.
+For example, search the VLSC for `Microsoft Configmgr (current branch)`. Find the baseline media in the list of files, and download for that release.
 
 > [!NOTE]
 > The search string may be different on other media sites. For example, on the [Visual Studio Subscriptions Portal](https://my.visualstudio.com/), search for `Microsoft Configuration Manager`.<!-- memdocs#1962 -->

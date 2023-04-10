@@ -2,7 +2,7 @@
 title: Diagnostic and usage data for 2303
 titleSuffix: Configuration Manager
 description: Learn about the specific data that Configuration Manager collects at each level in version 2303.
-ms.date: 03/28/2023
+ms.date: 04/10/2023
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
