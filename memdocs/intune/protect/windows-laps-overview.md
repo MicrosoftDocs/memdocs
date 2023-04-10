@@ -49,8 +49,8 @@ Intune support for Windows LAPS includes the following capabilities:
 - **Set password requirements** – Define password requirements including complexity and length for the local administrator account on a device.
 - **Rotate passwords** – With policy you can have devices automatically rotate the local admin account passwords on a schedule. You can also use the Intune admin center to manually rotate the password for a device as a device action.
 - **Backup accounts and passwords** – You can choose to have devices back up their account and password in either Azure Active Directory (Azure AD) in the cloud, or your on-premises Active Directory. Passwords are stored using strong encryption.
-- **Configure post authenticating actions** – Define actions that a device takes when  its local admin account password expires. Actions range from resetting the managed account to use a new secure password, logging off the account, or doing both and then powering down the device. You can also manage how long the device waits after the password expires before taking these actions.
-- **View account details** – Intune administrators with sufficient role-based administrative control (RBAC) permissions can view information about a devices  local admin account and its current password. You can also see when that password was last rotated (reset) and when it's next scheduled to rotate. 
+- **Configure post authenticating actions** – Define actions that a device takes when its local admin account password expires. Actions range from resetting the managed account to use a new secure password, logging off the account, or doing both and then powering down the device. You can also manage how long the device waits after the password expires before taking these actions.
+- **View account details** – Intune administrators with sufficient role-based administrative control (RBAC) permissions can view information about a devices local admin account and its current password. You can also see when that password was last rotated (reset) and when it's next scheduled to rotate.
 - **View reports** – Intune provides reports on password rotation including details about past manual and scheduled password rotation.
 
 To learn about Windows LAPS in more detail, start with the following articles in the Windows documentation:
@@ -70,8 +70,8 @@ The following are requirements for Intune to support Windows LAPS in your tenant
 
 **Licensing requirements**:
 
-- **Intune subscription** - *Microsoft Intune Plan 1*, which is the basic Intune subscription.  You can also use Windows LAPS with a free trial subscription for Intune.
-- **Active Directory subscription** – *Azure Active Directory Free*, which is the free version of Azure AD that’s included when  you subscribe to Intune. With Azure AD Free, you can use all the features of LAPS.
+- **Intune subscription** - *Microsoft Intune Plan 1*, which is the basic Intune subscription. You can also use Windows LAPS with a free trial subscription for Intune.
+- **Active Directory subscription** – *Azure Active Directory Free*, which is the free version of Azure AD that’s included when you subscribe to Intune. With Azure AD Free, you can use all the features of LAPS.
 
   If you have Azure Active Directory Premium, you can improve security by using Conditional Access to enforce multifactor authentication before admins can view passwords for devices. You can also make use of Administrative Sets when working with LAPS data.
 
@@ -103,7 +103,7 @@ Devices can have any [Windows edition that Intune supports](../fundamentals/supp
 
 To manage LAPS, your account must be assigned sufficient role-based access control (RBAC) rights to complete the desired task. The following are the permissions and categories where those permissions are available.
 
-**Create and access LAPS policy** – To work with and view LAPS policies, your account must have applicable rights from the **Security baseline** category.  These permissions support working with all templates that are available through Endpoint security policies.
+**Create and access LAPS policy** – To work with and view LAPS policies, your account must have applicable rights from the **Security baseline** category. These permissions support working with all templates that are available through Endpoint security policies.
 
 **Rotate local Administrator password** – To use the Intune admin center to rotate a devices local admin account password, your account must have the **Rotate Local Admin Password** permission, which is part of the **Remote tasks** category.
 
