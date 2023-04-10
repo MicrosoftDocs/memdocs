@@ -11,47 +11,6 @@ ms.custom: include file
 
 These notices provide important information that can help you prepare for future Intune changes and features.
 
-### Plan for Change: Enable Intune features that use Windows diagnostic data
-Expected in mid-April 2023, Intune features that depend on Windows diagnostic data, such as the [app and driver compatibility reports for Windows updates](../protect/windows-update-compatibility-reports.md), will require you to enable the use of Windows diagnostic data in Intune and confirm you have the required licensing for these features.  
-
-### How does this affect you or your users?
-
-If you are using the app and driver compatibility reports for Windows updates, you will need to share Windows diagnostic data with Intune by enabling the use of Windows diagnostic data in processor configuration in your Intune tenant and confirm your licensing in the Intune admin center. 
-
-### How can you prepare?
-
-Navigate to the Intune admin center > **Tenant administration** > **Connectors and tokens** > **Windows data** and toggle on "Enable features that require Windows diagnostic data in processor configuration" and set “I confirm that my tenant owns one of these licenses” to **On**. For more information, see [Enable use of Windows diagnostic data by Intune](../protect/data-enable-windows-data.md). 
-
-### Plan for Change: Ending support for Company Portal authentication method for iOS/iPadOS ADE enrollment
-
-As we continue to invest in Setup Assistant with modern authentication, which is the Apple supported path to require enrollment during Setup Assistant with optional multi-factor authentication, we plan to remove the Company Portal authentication method from new and existing iOS/iPadOS ADE enrollment profiles. This will include removing the Run Company Portal in Single App Mode until authentication setting.
-
-**We're no longer moving forward with the change at this time, we'll notify you via the Message Center when it's time to replan for this future change.**
-
-### How does this affect you or your users?
-
-New enrollments (new devices that are targeted with an existing enrollment profile or devices re-enrolling) that are targeted with an existing enrollment profile with the Company Portal authentication method, will not be able to enroll.
-
-This will not impact existing enrolled devices unless the device is re-enrolled after this change. The device will not be able to re-enroll until the authentication method is switched in the enrollment profile to Setup Assistant with modern authentication.
-
-New iOS/iPadOS enrollment profiles will not have the option to select Company Portal as the authentication method.
-
-If you have not already, you will need to move to use Setup Assistant with modern authentication. Within the Microsoft Intune admin center, you will want to either create a new ADE enrollment profile, or edit your existing enrollment profile to use the “Setup assistant with modern authentication.”
-
-**User experience:** The Setup Assistant with modern authentication enrollment flow does change the enrollment screen order where authentication will occur prior to accessing the home screen. If you have user guides that share screenshots, you will want to update those so the guides match the experience of Setup Assistant with modern authentication.
-
-### How can you prepare?
-
-To enroll new devices (or re-enroll) after this change, you will either need to update existing profiles to move to Setup Assistant with modern authentication or create a new enrollment profile with this method.
-
-For related information, see:
-
-- [Move to Setup Assistant with Modern Authentication for Automated Device Enrollment](https://techcommunity.microsoft.com/t5/intune-customer-success/move-to-setup-assistant-with-modern-authentication-for-automated/ba-p/2556536)
-- [Setup Assistant with Modern Auth for ADE (iOS/iPadOS 13+ and macOS 10.15+)](https://aka.ms/MEM-ADEModernAuth-Blog)
-- [Using filters with Setup Assistant with modern auth for ADE for corporate iOS/iPadOS/macOS devices](https://techcommunity.microsoft.com/t5/intune-customer-success/using-filters-with-setup-assistant-with-modern-auth-for-ade-for/ba-p/2670379)
-- [Enroll iOS/iPadOS devices by using ADE](../enrollment/device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile)
-- [Upcoming changes to iOS/iPadOS Company Portal app deployment for Setup Assistant with modern auth](https://aka.ms/ADE-CP-auto-deploy)
-
 ### Plan for Change: Ending support for Windows Information Protection
 
 Microsoft Windows [announced](https://go.microsoft.com/fwlink/?linkid=2202124) they are ending support for Windows Information Protection (WIP). The Microsoft Intune family of products will be discontinuing future investments in managing and deploying WIP. In addition to limiting future investments, we will remove support for WIP *without enrollment* scenario by the end of calendar year 2022.

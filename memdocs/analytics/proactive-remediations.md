@@ -2,7 +2,7 @@
 title: Tutorial - Proactive remediations
 titleSuffix: Microsoft Endpoint Manager
 description: A tutorial on using Proactive remediations to enhance the user
-ms.date: 07/05/2022
+ms.date: 04/06/2023
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: tutorial
@@ -69,8 +69,11 @@ Proactive remediations requires the [licensing for Endpoint analytics](enroll-in
    - Scripts built into Proactive remediations are signed and the certificate is added to the **Trusted Publishers** certificate store of the device.
    - When using third-party scripts that are signed, make sure the certificate is in the **Trusted Publishers** certificate store. As with any certificate, the certificate authority must be trusted by the device.
   - Scripts without **Enforce script signature check** use the **Bypass** execution policy.
-- Don't put secrets in scripts. Consider using parameters to handle secrets instead. <!--13957089-->
 - Don't put reboot commands in detection or remediations scripts. <!--13957089-->
+- Do not include any type of sensitive information in scripts (such as passwords)
+- Do not include Personally Identifiable Information (PII) in scripts
+- Do not use scripts to collect PII from devices
+- Always follow privacy best practices
 
 ## <a name="bkmk_prs_deploy"></a> Deploy built-in script packages
 
