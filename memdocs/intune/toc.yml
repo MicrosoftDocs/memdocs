@@ -491,7 +491,7 @@ items:
             - name: Monitor disk encryption
               href: ./protect/encryption-monitor.md
           - name: Windows LAPS
-           items:
+            items:
             - name: Intune support for Windows LAPS
               href: ./protect/windows-laps-overview.md
             - name: Manage LAPS policy.md
