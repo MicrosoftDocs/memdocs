@@ -84,7 +84,7 @@ On some devices, work apps are in a work-designated folder on the home screen. T
 ![Screenshot of the Samsung Galaxy S20 work profile folder.](./media/samsung-galaxy-s20-work-folder-android.png)
 
 
-To see how it appears on other Android devices, see the [examples](what-happens-when-you-create-a-work-profile-android.md#work-profile-folder) at the bottom of this article. 
+To see how it appears on other Android devices, jump to [Examples of work profile folder](what-happens-when-you-create-a-work-profile-android.md#work-profile-folder). 
 
 
 ## Get more work apps  
@@ -110,14 +110,14 @@ Swipe down on your screen to access the quick settings menu. Tap **Work profile*
 
 ![Screenshot of inactive work profile icon in Google Pixel 4 quick settings.](./media/google-pixel-4-quick-settings-android.png)  
 
-To see how quick settings appear on other Android devices, see the [examples](what-happens-when-you-create-a-work-profile-android.md#pause-in-quick-settings) at the bottom of this article.   
+To see how quick settings appear on other Android devices, see [Examples of pause in quick settings](what-happens-when-you-create-a-work-profile-android.md#pause-in-quick-settings).   
 
 ### Settings app pause option 
 Open the Settings app and go to **Work profile settings**. Switch the **Work profile** toggle off.   
 
 ![Screenshot of Work profile toggle switch turned off in Google Pixel 4 device settings.](./media/google-pixel-4-settings-android.png)  
 
-To see how work profile settings appear on other Android devices, see the [examples](what-happens-when-you-create-a-work-profile-android.md#pause-in-settings-app) at the bottom of this article.   
+To see how work profile settings appear on other Android devices, see [Examples of pause in the settings app](what-happens-when-you-create-a-work-profile-android.md#pause-in-settings-app).   
 
 
 ### App drawer pause option 
@@ -169,7 +169,7 @@ Google Pixel 4 (Android 11)
 Samsung Galaxy S20 (Android 13)   
 
    > [!div class="mx-imgBorder"]
-   > ![Screenshot of work tab in Samsung Galaxy S20 FE app drawer.](./media/android-version-13-work-profile.png)  
+   > [![Screenshot of work tab in Samsung Galaxy S20 FE app drawer.](./media/android-version-13-work-profile-1.png)](./media/android-version-13-work-profile.png#lightbox)  
   
 
 Nexus 5X (Android 8.1.0)    
@@ -206,7 +206,7 @@ Samsung Galaxy S20 (Android 13)
 
 
    > [!div class="mx-imgBorder"]
-   > ![Screenshot of activated work profile icon in Samsung Galaxy S20 quick settings.](./media/android-work-profile-quick-settings-on.png)  
+   > [![Screenshot of activated work profile icon in Samsung Galaxy S20 quick settings.](./media/android-work-profile-quick-settings-on-1.png)](./media/android-work-profile-quick-settings-on.png#lightbox)    
 
   
 Nexus 5X (Android 8.1.0)  
@@ -235,7 +235,7 @@ Google Pixel 4 (Android 11)
 Samsung Galaxy S20 (Android 13)  
 
    > [!div class="mx-imgBorder"]
-   > ![Screenshot of Work profile toggle switch turned on in Samsung Galaxy S20 device settings.](./media/android-work-profile-settings-on.png) 
+   > [![Screenshot of Work profile toggle switch turned on in Samsung Galaxy S20 device settings.](./media/work-profile-settings-on-1.png)](./media/work-profile-settings-on.png#lightbox)  
 
 
 Nexus 5X (Android 8.1.0)   
