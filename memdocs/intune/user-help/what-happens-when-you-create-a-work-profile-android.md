@@ -53,17 +53,15 @@ Work apps are marked with a briefcase badge, while personal apps do not have a b
 |![Screenshot of typical Outlook app icon with no work profile briefcase.](./media/personal-no-briefcase-android.png)|![Screenshot of Outlook app icon with work profile briefcase.](./media/work-briefcase-badge-android.png)|  
  
 
-After you've set up the work profile, you may see duplicate apps on your device. For example, you could have two Outlook apps. Use the version that's marked with the briefcase for work-related tasks.       
+After you've set up the work profile, you may see duplicate apps on your device. For example, you could have two Outlook apps. Use the version that's marked with the briefcase whenever you're doing work-related tasks.       
 
 > [!TIP] 
 > For the best experience, always sign in to work apps with your work account, and sign in to personal apps with your personal account. 
 
-The appearance of the briefcase can vary slightly from device to device. To see how it appears on other Android devices, see the [examples](what-happens-when-you-create-a-work-profile-android.md#briefcase-badge) at the bottom of this article.   
+The appearance of the briefcase can vary slightly from device to device. To see how it appears on other Android devices, jump to [Examples of briefcase badges](what-happens-when-you-create-a-work-profile-android.md#briefcase-badge).   
 
 ## Find your work profile  
-Once you've set up a work profile, your organization can automatically install work apps on your device. 
-
-The location of the work profile varies by device manufacturer and Android version. This section describes where to find the work profile in the app drawer and on the home screen.  
+Once you've set up a work profile, your organization can automatically install work apps on your device. You can access all work apps in the work profile. The location of the work profile varies by device manufacturer and Android version. This section describes where to find the work profile in the app drawer and on the home screen. 
 
 > [!NOTE] 
 > If you're using a custom launcher, work apps can appear in places other than the app drawer or home screen folder.    
@@ -74,7 +72,7 @@ Swipe up on the home screen or select **Apps** to access the app drawer. Work ap
 
 ![Screenshot of work tab in Google Pixel 4 app drawer.](./media/google-pixel-4-app-drawer-android.png)  
 
-To see how it appears on other Android devices, see the [examples](what-happens-when-you-create-a-work-profile-android.md#work-profile-in-app-drawer) at the bottom of this article. 
+To see how it appears on other Android devices, jump to [Examples of the work profile in the app drawer](what-happens-when-you-create-a-work-profile-android.md#work-profile-in-app-drawer).   
 
 
 ### Folder  
