@@ -28,13 +28,17 @@ Once all of the configurations for Windows Autopilot for pre-provisioned deploym
 
    - If the device is connected to a wired network and has network connectivity, the device may reboot one time followed by the Azure AD sign-in page appearing.
 
-   - If the device isn't connected to a wired network or if it doesn't have network connectivity, it will prompt to connect to a network since connectivity to the Internet is required during the technician flow phase:
+   - If the device isn't connected to a wired network or if it doesn't have network connectivity, it prompts to connect to a network since connectivity to the Internet is required during the technician flow phase:
 
      1. OOBE (out of box experience) begins and a screen asking for a country or region appears. Select the appropriate country or region, and then select **Yes**.
 
      1. The keyboard screen appears to select a keyboard layout. Select the appropriate keyboard layout, and then select **Yes**.
 
      1. An additional keyboard layouts screen appears. If needed, select additional keyboard layouts via **Add layout**, or select **Skip** if no additional keyboard layouts are needed.
+
+      > [!NOTE]
+      >
+      > When there is no network connectivity, the country/region and keyboard screens appear even if these screens have been set to hidden in the Autopilot profile. Because there was no network connectivity, the device hasn't downloaded the Autopilot profile at this point to know that these screens should've been hidden.
 
      1. The **Let's connect you to a network** screen appears. At this screen, either plug the device into a wired network (if available), or select and connect to a wireless Wi-Fi network.
 
@@ -46,14 +50,14 @@ Once all of the configurations for Windows Autopilot for pre-provisioned deploym
     >
     > Depending on which screens were selected to be shown instead of hidden when the Autopilot profile was configured at the**Create and assign Autopilot profile** step, additional screens such as License Terms, Privacy, Language, and Keyboard may appear before the Azure AD sign-in page.
 
-2. If a user was assigned to the device, their username may be pre-populated in this screen. **DON'T** sign in or select **Next** (all Windows 10/Windows 11 if no user is assigned) or **Sign in** (Windows 11 if a user is assigned) at this screen. Instead, press the <kbd>WIN</kbd> key on the keyboard five times. Pressing the <kbd>WIN</kbd> key five times should display a **What would you like to do?** options screen instead.
+1. At the Azure AD sign-in page, **DON'T** sign in or select **Next** or **Sign in** at this screen. Instead, press the <kbd>WIN</kbd> key on the keyboard five times. Pressing the <kbd>WIN</kbd> key five times should display a **What would you like to do?** options screen instead.
 
-3. From the **What would you like to do?** options screen:
+1. From the **What would you like to do?** options screen:
 
    - For Windows 10, select the **Windows Autopilot provisioning** option and then select **Continue**.
    - For Windows 11, select the **Pre-provision with Windows Autopilot** option, and then select **Next**.
 
-4. In the **Windows Autopilot Configuration** screen (Windows 10) or the **Pre-provision with Windows Autopilot** screen (Windows 11), it displays the following information about the deployment:
+1. In the **Windows Autopilot Configuration** screen (Windows 10) or the **Pre-provision with Windows Autopilot** screen (Windows 11), it displays the following information about the deployment:
 
    - The name of the organization for the device.
 
@@ -71,9 +75,9 @@ Once all of the configurations for Windows Autopilot for pre-provisioned deploym
       >
       > The QR codes can be scanned using a companion app. The app also configures the device to specify who it belongs to. An [open-source sample of the companion app](https://github.com/Microsoft/WindowsAutopilotCompanion) that integrates with Intune by using the Graph API has been published to GitHub by the Autopilot team.
 
-5. Validate that the information in the **Windows Autopilot Configuration** screen is correct. Once all information has been confirmed as correct, select **Provision** (Windows 10) or **Next** (Windows 11) to begin the provisioning process.
+1. Validate that the information in the **Windows Autopilot Configuration** screen is correct. Once all information has been confirmed as correct, select **Provision** (Windows 10) or **Next** (Windows 11) to begin the provisioning process.
 
-6. The device may reboot, followed by the Enrollment Status Page (ESP) appearing. The Enrollment Status Page (ESP) displays progress during the provisioning process across three phases:
+1. The device may reboot, followed by the Enrollment Status Page (ESP) appearing. The Enrollment Status Page (ESP) displays progress during the provisioning process across three phases:
 
    - **Device preparation** (Device ESP)
    - **Device setup** (Device ESP)
@@ -90,7 +94,7 @@ Once all of the configurations for Windows Autopilot for pre-provisioned deploym
    > - Windows 10: To show details, next to the appropriate phase select **Show details**. To hide the details, next to the appropriate phase select **Hide details**.
    > - Windows 11: To show details, next to the appropriate phase select **∨**. To hide the details, next to the appropriate phase select **∧**.
 
-7. Once the provisioning process completes, a status screen is displayed showing whether the provisioning process either succeeded of failed:
+1. Once the provisioning process completes, a status screen is displayed showing whether the provisioning process either succeeded of failed:
 
    - If the pre-provisioning process completes successfully, a success status screen appears with information about the deployment, including the same details presented previously. For example, organization name, Autopilot deployment profile name, QR code (Windows 10 only), and if applicable, assigned user. The elapsed time of the provisioning process is also provided.
 
