@@ -2,7 +2,7 @@
 title: Checklist for 2303
 titleSuffix: Configuration Manager
 description: Learn about actions to take before updating to Configuration Manager version 2303.
-ms.date: 03/28/2022
+ms.date: 04/10/2023
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
