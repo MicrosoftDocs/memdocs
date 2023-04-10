@@ -35,6 +35,8 @@ ms.collection:
 
 Intune supports the enrollment of macOS devices using Direct Enrollment (DE) for corporate devices. Direct Enrollment does not wipe the device. It enrolls the device through macOS settings. This method only supports devices with **no user affinity**.
 
+Important note - Make sure that you don't have a device platform restriction targeted to your iOS/iPadOS devices (https://learn.microsoft.com/en-us/mem/intune/enrollment/create-device-platform-restrictions), otherwise this will cause a failure when exporting the enrollment profile for macOS devices. 
+
 ## Prerequisites
 
 - Physical access to macOS devices
@@ -74,7 +76,7 @@ Because Direct Enrollment only supports enrollment without user affinity, the co
 4. Under **Direct enrollment**, choose **Download profile**, and then save the file.  
 
      > [!NOTE]
-     > A downloaded enrollment profile is valid for two weeks after download. You can download as many enrollment profiles using this link as you need. Downloading a new profile does not render the previous one invalid, however it also doesn't extend the previously downloaded file expiry time.
+     > A downloaded enrollment profile is valid for two weeks after download. You can download as many enrollment profiles using this link as you need. Downloading a new profile does not render the previous one invalid, however it also doesn't extend the previously downloaded file expiry time. Additionally, make sure that you don't have a device platform restriction targeted to your iOS/iPadOS devices, otherwise this will cause a failure when exporting the enrollment profile for macOS devices.
          
 5. Transfer the file to a macOS computer to install it directly.
 6. Double-click on the saved **.mobileconfig** to open the file in Profiles.
