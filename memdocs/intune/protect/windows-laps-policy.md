@@ -141,7 +141,7 @@ To view *Device actions status* information for a device, your account must have
 
  <!-- ::: IMAGE of UI showing Device actions status ::: -->
 
-For the required permissions, see [Role based access controls for LAPS](#role-based-access-controls-for-laps).
+For the required permissions, see [Role based access controls for LAPS](../protect/windows-laps-overview.md#role-based-access-controls-for-laps).
 
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **All devices** , and select a device that has a LAPS policy that backs up a local admin account.
 
