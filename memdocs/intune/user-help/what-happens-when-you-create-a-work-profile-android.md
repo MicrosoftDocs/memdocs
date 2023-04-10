@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/31/2023
+ms.date: 04/10/2023
 ms.topic: end-user-help
 ms.prod:
 ms.localizationpriority: high
@@ -34,7 +34,7 @@ ms.collection:
 
 # Introduction to Android work profile
 
-A work profile is set up on an Android device to separate work apps and data from personal apps and data. The work profile lives on a separate part of the device so that your personal things stay private and unaffected by work. In this article, you'll learn how to:  
+A work profile separates the work-related data from the personal data on your enrolled device. The work profile lives on a separate part of the device so that your personal things stay private and unaffected by work. In this article, you'll learn how to:  
 
 * Find your work profile. 
 * Tell the difference between work apps and personal apps. 
@@ -129,10 +129,10 @@ To see how work profile settings appear on other Android devices, see the [examp
 ## Examples  
 This section shows examples of how the work profile and its features appear on common Android devices. Those devices are:
 
-* Surface Duo (Android 10)
-* Google Pixel 4 (Android 11)
-* Samsung Galaxy S20 (Android 10)
-* Nexus 5X (Android 8.1.0)
+* Surface Duo (Android 10)  
+* Google Pixel 4 (Android 11)  
+* Samsung Galaxy S20 FE (Android 13)  
+* Nexus 5X (Android 8.1.0)  
 
 Some features are not available on all devices.   
 
@@ -166,10 +166,10 @@ Google Pixel 4 (Android 11)
    > [!div class="mx-imgBorder"]
    > ![Screenshot of work tab in Google Pixel 4 app drawer.](./media/google-pixel-4-app-drawer-android.png)   
 
-Samsung Galaxy S20 (Android 10)   
+Samsung Galaxy S20 (Android 13)   
 
    > [!div class="mx-imgBorder"]
-   > ![Screenshot of work tab in Samsung Galaxy S20 app drawer.](./media/samsung-galaxy-s20-app-drawer-android.png)  
+   > ![Screenshot of work tab in Samsung Galaxy S20 FE app drawer.](./media/android-version-13-work-profile.png)  
   
 
 Nexus 5X (Android 8.1.0)    
@@ -202,11 +202,11 @@ Google Pixel 4 (Android 11)
    > ![Screenshot of inactive work profile icon in Google Pixel 4 quick settings.](./media/google-pixel-4-quick-settings-android.png)  
 
 
-Samsung Galaxy S20 (Android 10)   
+Samsung Galaxy S20 (Android 13)   
 
 
    > [!div class="mx-imgBorder"]
-   > ![Screenshot of activated work profile icon in Samsung Galaxy S20 quick settings.](./media/samsung-galaxy-s20-quick-settings-android.png)  
+   > ![Screenshot of activated work profile icon in Samsung Galaxy S20 quick settings.](./media/android-work-profile-quick-settings-on.png)  
 
   
 Nexus 5X (Android 8.1.0)  
@@ -232,10 +232,10 @@ Google Pixel 4 (Android 11)
    > ![Screenshot of Work profile toggle switch turned off in Google Pixel 4 device settings.](./media/google-pixel-4-settings-android.png)  
 
 
-Samsung Galaxy S20 (Android 10)  
+Samsung Galaxy S20 (Android 13)  
 
    > [!div class="mx-imgBorder"]
-   > ![Screenshot of Work profile toggle switch turned on in Samsung Galaxy S20 device settings.](./media/samsung-galaxy-s20-settings-android.png) 
+   > ![Screenshot of Work profile toggle switch turned on in Samsung Galaxy S20 device settings.](./media/android-work-profile-settings-on.png) 
 
 
 Nexus 5X (Android 8.1.0)   
