@@ -28,6 +28,8 @@ To take full advantage of new Configuration Manager features, after you update t
 <!--15885998-->
 Starting with Configuration Manager version 2303 Microsoft Endpoint Configuration Manager is now Microsoft Configuration Manager. 
 Microsoft Configuration Manager is an integrated solution for managing all your devices. Microsoft brings together Configuration Manager and Intune, without a complex migration, and with simplified licensing. Continue to use your existing Configuration Manager investments, while taking advantage of the power of the Microsoft cloud at your own pace. 
+>[Tip]
+>Support center tool and client must be upgraded to latest version to move program files path to new Microsoft configuration Manager start menu path.
 
 For more information, see [Microsoft Configuration Manager FAQ](../../understand/configuration-manager-faq.yml)
 
