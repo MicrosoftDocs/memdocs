@@ -28,7 +28,7 @@ Once all of the configurations for Windows Autopilot for pre-provisioned deploym
 
    - If the device is connected to a wired network and has network connectivity, the device may reboot one time followed by the Azure AD sign-in page appearing.
 
-   - If the device isn't connected to a wired network or if it doesn't have network connectivity:
+   - If the device isn't connected to a wired network or if it doesn't have network connectivity, it will prompt to connect to a network since connectivity to the Internet is required during the technician flow phase:
 
      1. OOBE (out of box experience) begins and a screen asking for a country or region appears. Select the appropriate country or region, and then select **Yes**.
 
@@ -46,7 +46,7 @@ Once all of the configurations for Windows Autopilot for pre-provisioned deploym
     >
     > Depending on which screens were selected to be shown instead of hidden when the Autopilot profile was configured at the [Create and assign Autopilot profile](azure-ad-join-autopilot-profile.md) step, additional screens such as License Terms, Privacy, Language, and Keyboard may appear before the Azure AD sign-in page.
 
-1. If a user was assigned to the device, their username may be pre-populated in this screen. **DON'T** sign in or select **Next** (Windows 10) or **Sign in** (Windows 11) at this screen. Instead, press the <kbd>WIN</kbd> key on the keyboard five times. Pressing the <kbd>WIN</kbd> key five times should display a **What would you like to do?** options screen instead.
+1. If a user was assigned to the device, their username may be pre-populated in this screen. **DON'T** sign in or select **Next** (all Windows 10/Windows 11 if no user is assigned) or **Sign in** (Windows 11 if a user is assigned) at this screen. Instead, press the <kbd>WIN</kbd> key on the keyboard five times. Pressing the <kbd>WIN</kbd> key five times should display a **What would you like to do?** options screen instead.
 
 1. From the **What would you like to do?** options screen:
 
@@ -73,16 +73,23 @@ Once all of the configurations for Windows Autopilot for pre-provisioned deploym
 
 1. Validate that the information in the **Windows Autopilot Configuration** screen is correct. Once all information has been confirmed as correct, select **Provision** (Windows 10) or **Next** (Windows 11) to begin the provisioning process.
 
-      - The Enrollment Status Page (ESP) displays progress during the provisioning process across three phases - **Device preparation**, **Device setup**, and **Account setup**. The first two phases of **Device preparation** and **Device setup** are part of the Device ESP while the final phase of **Account setup** is part of the User ESP.
+1. The device may reboot, followed by the Enrollment Status Page (ESP) appearing. The Enrollment Status Page (ESP) displays progress during the provisioning process across three phases:
 
-         For technician flow of the Windows Autopilot for pre-provisioned deployment, only the first two Device ESP phases of **Device preparation** and **Device setup** run. The last User ESP phase of **Account setup** will run during the next step of [User flow](azure-ad-join-user-flow.md).
+   - **Device preparation** (Device ESP)
+   - **Device setup** (Device ESP)
+   - **Account setup** (User ESP)
 
-         > [!NOTE]
-         >
-         > To view and hide detailed progress information in the ESP during the provisioning process:
-         >
-         > - Windows 10: To show details, next to the appropriate phase select **Show details**. To hide the details, next to the appropriate phase select **Hide details**.
-         > - Windows 11: To show details, next to the appropriate phase select **∨**. To hide the details, next to the appropriate phase select **∧**.
+
+   The first two phases of **Device preparation** and **Device setup** are part of the Device ESP while the final phase of **Account setup** is part of the User ESP.
+
+   For technician flow of the Windows Autopilot for pre-provisioned deployment, only the first two Device ESP phases of **Device preparation** and **Device setup** run. The last User ESP phase of **Account setup** will run during the next step of [User flow](azure-ad-join-user-flow.md).
+
+   > [!NOTE]
+   >
+   > To view and hide detailed progress information in the ESP during the provisioning process:
+   >
+   > - Windows 10: To show details, next to the appropriate phase select **Show details**. To hide the details, next to the appropriate phase select **Hide details**.
+   > - Windows 11: To show details, next to the appropriate phase select **∨**. To hide the details, next to the appropriate phase select **∧**.
 
 1. Once the provisioning process completes, a status screen is displayed showing whether the provisioning process either succeeded of failed:
 
@@ -107,4 +114,3 @@ Once all of the configurations for Windows Autopilot for pre-provisioned deploym
      - In Windows 11, press the <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>D</kbd> keys and then select **Export Logs**.
 
       If the issue can be easily fixed, for example resolving network connectivity, then select the **Retry** button to retry provisioning the device. Otherwise if the issue can't be immediately fixed or can't be fixed without a reset, then select the **Reset** button so that the process starts over again.
-      
