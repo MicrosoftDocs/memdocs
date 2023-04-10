@@ -209,12 +209,6 @@ Nexus 5X (Android 8.1.0)
    > [!div class="mx-imgBorder"]
    > ![Screenshot of inactive work mode icon in Nexus 5X quick settings.](./media/nexus-5x-quick-settings-android.png)  
 
-Google Pixel 4 (Android 11)    
-
-
-   > [!div class="mx-imgBorder"]
-   > [![Screenshot of inactive work profile icon in Google Pixel 4 quick settings.](./media/google-pixel-4-quick-settings-android.png)](./media/google-pixel-4-quick-settings-android.png#lightbox) 
-
 
 ### Pause in Settings app 
 These images show where the pause option appears in the Settings app. For more information, see [Pause the work profile](#settings-app-pause-option).    
