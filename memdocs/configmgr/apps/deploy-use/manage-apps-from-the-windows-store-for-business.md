@@ -17,7 +17,7 @@ ms.reviewer: mstewart,aaroncz
 # Manage apps from the Microsoft Store for Business and Education with Configuration Manager
 
 > [!IMPORTANT]
-> Starting in November 2021, this feature of Configuration Manager is [deprecated](../../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).<!-- 10884039 --> For more information, see [Evolving the Microsoft Store for Business and Education](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/evolving-the-microsoft-store-for-business-and-education/ba-p/2569423) and [Update to Intune integration with the Microsoft Store on Windows](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/update-to-endpoint-manager-integration-with-the-microsoft-store/bc-p/3592470)
+> Starting in November 2021, this feature of Configuration Manager is [deprecated](../../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).<!-- 10884039 --> For more information, see [Update to Intune integration with the Microsoft Store on Windows](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/update-to-endpoint-manager-integration-with-the-microsoft-store/bc-p/3592470) and [Add Microsoft Store apps to Microsoft Intune](/memdocs/intune/apps/store-apps-microsoft.md).
 
 The [Microsoft Store for Business and Education](/microsoft-store/) is where you find and acquire Windows apps for your organization. When you connect the store to Configuration Manager, you then synchronize the list of apps you've acquired. View these apps in the Configuration Manager console, and deploy them like you deploy any other app.
 
@@ -25,7 +25,7 @@ The [Microsoft Store for Business and Education](/microsoft-store/) is where you
 
 The Microsoft Store for Business and Education supports two types of app:
 
-- **Online**: This license type requires users and devices to connect to the store to get an app and its license. Devices running Windows 10 or later should be Azure Active Directory (Azure AD)-joined or hybrid Azure AD-joined. They can also be [Azure AD-registered](/azure/active-directory/devices/concept-azure-ad-register).<!-- MEMDocs#1587 -->
+- **Online**: This license type requires users and devices to connect to the store to get an app and its license. Devices running Windows 10 or later should be Azure Active Directory (Azure AD)-joined or hybrid Azure AD-joined. They can also be [Azure AD-registered](/azure/active-directory/devices/concept-azure-ad-register).<!-- MEMDocs#1587 --->
 
 - **Offline**: This type lets you cache apps and licenses to deploy directly within your on-premises network. Devices don't need to connect to the store or have a connection to the internet.
 
