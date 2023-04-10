@@ -157,7 +157,7 @@ Before you make the call, verify that you have already added the Callback URL to
 
 The following sample contains a simple REST client. The code uses the **httpClient** class from the .NET library. Once the client gains credentials to Azure AD, the client constructs a GET REST call to retrieve the dates entity from the Data Warehouse API.
 
-> [!Note]
+> [!NOTE]
 > You can access the following code [sample on GitHub](https://github.com/Microsoft/Intune-Data-Warehouse/blob/master/Samples/CSharp/Program.cs). Refer to the GitHub repo for the latest changes and updates to the sample.
 
 1. Open **Microsoft Visual Studio**.
