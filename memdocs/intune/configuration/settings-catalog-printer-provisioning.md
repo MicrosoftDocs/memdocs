@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/10/2022
+ms.date: 04/11/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -43,6 +43,9 @@ This feature applies to:
 - Windows 10 21H2 with [July 2022 update](https://support.microsoft.com/topic/july-12-2022-kb5015807-os-builds-19042-1826-19043-1826-and-19044-1826-8c8ea8fe-ec83-467d-86fb-a2f48a85eb41) and later
 
 This article shows you how to create a Universal Print policy in Microsoft Intune. To learn more about Universal Print and onboarding, go to [What is Universal Print](/universal-print/fundamentals/universal-print-whatis) and [Set up Universal Print](/universal-print/fundamentals/universal-print-getting-started).
+
+> [!TIP]
+> The __PrintProvisioning__ tool and the __printers.csv__ file process is deprecated. Be sure to use the steps in this article to install universal printers.
 
 ## Before you begin
 
@@ -138,44 +141,51 @@ This policy includes your printer information. When you assign the policy, the p
 
 After you assign the profile, you can monitor its status. The Intune reports show if a profile successfully applied, failed, has conflicts, and more. For more specific information, go to [Monitor device configuration profiles in Microsoft Intune](device-profile-monitor.md).
 
-If a printer is removed from the Universal Print service, unshared, or if permissions are removed, then the profile will fail.
-The following are things to be checked before enabling traces:
-1. __Can the printer be installed manually by the user on the system?__
-   If the user is unable to discover or install the printer, then the Microsoft Intune installation will fail as well. [Unable to discover printers on the client](https://supportability.visualstudio.com/WindowsUserExperience/_wiki/wikis/WindowsUserExperience?wikiVersion=GBmaster&pagePath=/UEX%20Wiki/Universal%20Print/Client/Unable%20to%20discover%20printers%20on%20the%20client)
-1. __Are the correct ShareID and PrinterID entered in the Microsoft Intune policy?__
-   In some cases, the PrinterID and ShareID are reversed, so the printer cannot be discovered. See Step 8 in the next section.
-> [!NOTE]
-> The __PrintProvisioning__ tool and the __printers.csv__ file process has been deprecated and the new Microsoft Intune steps for deployment are listed __[here](/mem/intune/configuration/settings-catalog-printer-provisioning)__.
+For information on all the reporting data you can view, go to [Intune reports](../fundamentals/reports.md).
+
+### Common issues
+
+- When you deploy the printer policy, you might get a `Error 0x8007007f (ERROR_PROC_NOT_FOUND)` message.
+
+  The `ERROR_PROC_NOT_FOUND` is a very common error, and is usually associated with the `DelayLoaded` DLLs missing or missing APIs.
+
+  To resolve this error, make sure your Windows OS client version is supported. The supported versions are listed at the top of this article.
+
+- If a printer is removed from the Universal Print service, unshared, or if permissions are removed, then the Intune policy will fail to install the printer.
+
+- Make sure the printer is discoverable on the device. If users can't discover or install the printer manually, then the Intune policy will also fail to install the printer.
+
+  For more information and possible steps, go to [Unable to discover printers on the client](https://supportability.visualstudio.com/WindowsUserExperience/_wiki/wikis/WindowsUserExperience/725155/Unable-to-discover-printers-on-the-client).  
+
+- Make sure the **SharedID** and **PrinterID** are entered correctly in the Intune policy.
+
+  In some cases, the PrinterID and SharedID are reversed, which prevents the printer from being discovered. For more information on these settings, go to [Create the policy](#create-the-policy) (in this article).
+
+- The Application event log may shows errors related to Universal Print.
+
+### Enable tracing
+
+THIS SECTION IS STILL IN DRAFT
 
 The following steps must be completed in an Administrator session on the session host to trace a user logging onto the session host and when trying to print to Universal Print.
-1. Gather [Fiddler trace](/universal-print/fundamentals/universal-print-troubleshooting-support-howto) and [Printtrace.cmd](https://supportability.visualstudio.com/WindowsUserExperience/_wiki/wikis/WindowsUserExperience?wikiVersion=GBmaster&pagePath=/UEX%20Wiki/Universal%20Print/Common%20Steps/How%20to%20run%20PrintTrace.cmd) of the client resyncing the Microsoft Intune package.
-1. Check the __Application event__ log for errors related to Universal Print.
-1. Additional things to check: 
-- Does the OS have the required CSP binaries?
-   o   Under the OS\System32 directory (usually __c:\windows\system32__), there should be __UPPrinterInstaller.exe__ and __UPPrinterInstallsCSP.dll__
-- Manually launch __UPPrinterInstaller.exe__ with the parameters and trace with __Fiddler__ and __PrintTrace.cmd.__ The source code has the following info on expected input parameters to the tool:
-   `UPPrinterInstaller.exe <[-install | -i] | [-uninstall | -u]> <[-printersharedid | -psi] [printersharedid]> <[-usersid | -sid] [usersid]> <[-omadmaccountid | -oai] [omadmacountid]> <[-correlationid | -cri] [correlationid]>\n\`
-    
-   __Required parameters:__
-   -install or -uninstall\n\
-   -printersharedid printersharedid\n\
-   -usersid usersid\n\
-   -omadmaccountid omadmaccountid\n\
-   -correlationid correlationid\n\
-    
-   __Example:__
-   UPPritnerInstaller.exe -install -printersharedid E7CBB880-A194-450A-ACC7-86AEE809B971 -omadmaccountid 8A917C42-BE97-49EA-AD77-6EF9FE143E04 -correlationid 8A7E7CDE-D0EE-4C45-86FB-3570C3D5F81F")
-#### Known issues
 
-1. __Error 0x8007007f__ (ERROR_PROC_NOT_FOUND) when deploying the printer.
-    __Description__: ERROR_PROC_NOT_FOUND is a very common error, usually associated with DelayLoaded DLLs not present or missing apis.
-    __Resolution__: Check that the Windows client is supported by the new Microsoft Intune behavior:
-- Windows 10 - 21H2 with July 2022 update.
-- Windows 11
-For information on all the reporting data you can view, go to [Intune reports](../fundamentals/reports.md).
+1. On the client device, install Fiddler. For the specific steps, go to [Universal Print troubleshooting guide](/universal-print/fundamentals/universal-print-troubleshooting-support-howto).
+2. On the client device, open a command prompt as administrator, and run `PrintTrace.cmd`.
+
+    1. Gather [Fiddler trace](/universal-print/fundamentals/universal-print-troubleshooting-support-howto) and [Printtrace.cmd](https://supportability.visualstudio.com/WindowsUserExperience/_wiki/wikis/WindowsUserExperience?wikiVersion=GBmaster&pagePath=/UEX%20Wiki/Universal%20Print/Common%20Steps/How%20to%20run%20PrintTrace.cmd) of the client resyncing the Microsoft Intune package.
+
+3. Make sure the the required CSP binaries are installed.
+
+    1. On the device, open a command prompt as administrator, and go to the `System32` directory, which is usually `c:\windows\system32`.
+    2. The `UPPrinterInstaller.exe` and `UPPrinterInstallsCSP.dll` files should be there. If they're not there, then NEED SOMETHING.
+
+    2. Manually run the `UPPrinterInstaller.exe` file with your parameters and trace with __Fiddler__ and __PrintTrace.cmd.__ 
+
+      For example, enter:
+      
+      `UPPritnerInstaller.exe -install -printersharedid E7CBB880-A194-450A-ACC7-86AEE809B971 -omadmaccountid 8A917C42-BE97-49EA-AD77-6EF9FE143E04 -correlationid 8A7E7CDE-D0EE-4C45-86FB-3570C3D5F81F")`
+
 ## Learn more
 
 - [What is Universal Print](/universal-print/fundamentals/universal-print-whatis)
 - [Use the settings catalog to configure settings on Windows and macOS devices](settings-catalog.md)
-
-
