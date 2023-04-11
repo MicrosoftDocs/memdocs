@@ -7,12 +7,14 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 03/27/2023
+ms.date: 04/11/2023
 ms.topic: tutorial
 ms.collection: 
   - tier1
   - highpri
 ms.technology: itpro-deploy
+  - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
+  - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
 ---
 
 # User-driven hybrid Azure AD join: Register devices as Autopilot devices
