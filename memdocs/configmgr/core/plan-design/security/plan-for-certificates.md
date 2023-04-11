@@ -167,12 +167,12 @@ Because of the number of configuration options and choices in Configuration Mana
 
 1. Track how many clients are using a client PKI certificate by viewing the **Client Certificate** column in the **Assets and Compliance** workspace, **Devices** node.
 
-> [!NOTE]
+    > [!NOTE]
 > For clients that also have a PKI certificate, the Configuration Manager console displays the **Client certificate** property as **Self-signed**. The client control panel **Client certificate** property shows **PKI**.<!-- 10278780 -->
 
-You can also deploy the Configuration Manager HTTPS Readiness Assessment Tool (**CMHttpsReadiness.exe**) to computers. Then use the reports to view how many computers can use a client PKI certificate with Configuration Manager.
+    You can also deploy the Configuration Manager HTTPS Readiness Assessment Tool (**CMHttpsReadiness.exe**) to computers. Then use the reports to view how many computers can use a client PKI certificate with Configuration Manager.
 
- > [!NOTE]
+     > [!NOTE]
  > When you install the Configuration Manager client, it installs the **CMHttpsReadiness.exe** tool in the `%windir%\CCM` folder. The following command-line options are available when you run this tool:
  >
  > - ```/Store:<Certificate store name>```: This option is the same as the [CCMCERTSTORE](../../clients/deploy/about-client-installation-properties.md#ccmcertstore) client.msi property
