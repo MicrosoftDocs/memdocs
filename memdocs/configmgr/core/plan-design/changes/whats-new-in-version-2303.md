@@ -46,7 +46,7 @@ For more information, see [Synchronize collections to Azure Active Directory Gro
 Starting with Configuration Manager version 2303, you can now opt for Endpoint Security reports in Intune admin center for tenant attached devices.   
 Once you opt in, Unhealthy endpoints and Active malware operational reports under Endpoint security node in Intune admin center will start showing data from tenant attached devices. Also, Antivirus agent status and Detected malware organizational reports under Microsoft Defender Antivirus in Reports section will show data from tenant attached devices. 
 
-For more information, see [Tenant attach - Create and deploy Antivirus policies from the admin center](../../../tenant-attach/deploy-antivirus-policy.md).
+For more information, see [Tenant attach - Create and deploy Antivirus policies from the admin center](../../../tenant-attach/deploy-antivirus-policy.md#bkmk_mdereports).
 
 ## Site infrastructure
 <!--13022894-->
