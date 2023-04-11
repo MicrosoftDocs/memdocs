@@ -74,13 +74,9 @@ The following table identifies the recommended compatibility levels for Configur
 | SQL Server 2022 | 150, 140, 130, 120, 110 | 150 |
 
 For more information, see [support-for-sql-server-versions](../../plan-design/configs/support-for-sql-server-versions.md).
-
 <!--## Client management-->
-
 <!--## Collections-->
-
 <!--## Software Center-->
-
 ## Software updates
 
 ### Unified update platform (UUP) GA release 
@@ -96,7 +92,7 @@ The Unified Update Platform (UUP) is a single publishing, hosting, scan, and dow
 With Unified Update Platform (UUP) general availability release, the feature update and non-feature update supersedence should be greater than 3. For new software update role installations, we're updating this to 6, existing customers can review and update to 6.  
 Update to the default value of supersedence age in months for software updates.  
 
-#### Known issue: 
+#### Known issue
 
 Update to the default value of supersedence age in months for software updates will not impact existing configurations. Removing SUP role in Admin Console does not reset the supersedence age property in WMI. As a result, while reconfiguring the role, the previously configured value is shown in the configuration window.  
 
