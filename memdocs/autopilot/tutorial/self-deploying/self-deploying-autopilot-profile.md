@@ -7,12 +7,15 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 03/27/2023
+ms.date: 04/11/2023
 ms.topic: tutorial
 ms.collection: 
   - tier1
   - highpri
 ms.technology: itpro-deploy
+appliesto:
+  - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
+  - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
 ---
 
 # Self-deploying mode: Create and assign self-deploying Autopilot profile
@@ -73,6 +76,10 @@ To create a self-deploying mode Autopilot profile, follow the below steps:
 ## Verify device has an Autopilot profile assigned to it
 
 [!INCLUDE [How to verify a device has an Autopilot profile assigned to it in Intune](../includes/verify-autopilot-profile-assignment.md)]
+
+## Next step: Deploy the device
+
+At this point, the device is ready to be deployed. If desired, deploy any additional applications, policies, and profiles to the device group that the device is a member of which should run during Autopilot. Boot the device with a fresh install of Windows and the Autopilot deployment should begin.
 
 ## More information
 

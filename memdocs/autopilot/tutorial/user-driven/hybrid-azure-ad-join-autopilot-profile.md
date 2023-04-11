@@ -1,18 +1,21 @@
 ---
 title: Windows Autopilot user-driven hybrid Azure AD join - Step 7 of 8 - Create and assign user-driven hybrid Azure AD join Autopilot profile
-description: How to - Windows Autopilot hybrid user-driven Azure AD join - Step 7 of 8 - Create and assign hybrid user-driven Azure AD join Autopilot profile.
+description: How to - Windows Autopilot user-driven hybrid Azure AD join - Step 7 of 8 - Create and assign user-driven hybrid Azure AD join Autopilot profile.
 ms.prod: windows-client
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 03/27/2023
+ms.date: 04/11/2023
 ms.topic: tutorial
 ms.collection: 
   - tier1
   - highpri
 ms.technology: itpro-deploy
+appliesto:
+  - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
+  - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
 ---
 
 # User-driven hybrid Azure AD join: Create and assign user-driven hybrid Azure AD join Autopilot profile
@@ -37,13 +40,13 @@ While the ESP controls what is shown during device and user setup and specifies 
 
 When an admin creates an Autopilot profile for the user-driven scenario, devices with this Autopilot profile are associated with the user enrolling the device. User credentials are required to enroll the device.
 
-The difference between an Autopilot user-driven Azure AD join and an Autopilot hybrid Azure AD join is that the hybrid Azure AD join scenario joins both an on-premises domain and Azure AD during Autopilot. The user-driven Azure AD join scenario only joins Azure AD during Autopilot.
+The difference between an Azure AD join and a hybrid Azure AD join is that the hybrid Azure AD join scenario joins both an on-premises domain and Azure AD during Autopilot. The user-driven Azure AD join scenario only joins Azure AD during Autopilot.
 
 > [!TIP]
 >
 > For Configuration Manager admins, the Autopilot profile is similar to some of the configuration that takes place during a task sequence via an unattend.xml file. The unattend.xml file is configured during the **Apply Windows Settings** and **Apply Network Settings** steps. Note however that Autopilot does not use unattend.xml files.
 
-To create a user-driven Azure AD join Autopilot profile, follow the below steps:
+To create a user-driven hybrid Azure AD join Autopilot profile, follow the below steps:
 
 [!INCLUDE [Autopilot profiles before steps](../includes/autopilot-profile-steps-before.md)]
 
@@ -53,7 +56,7 @@ To create a user-driven Azure AD join Autopilot profile, follow the below steps:
 
       - For **Join to Azure AD as**, select **Hybrid Azure AD joined**. After this option is selected, several the options underneath this option will change.
 
-      - For **Skip AD connectivity check**, select **No**. This section of the tutorial assumes that the device undergoing Autopilot is an on-premises internal client and that has direct connectivity to the on-premises domain and domain controllers. For off-premise/Internet scenarios where VPN connectivity is required, see [Off-premise/Internet scenarios and VPN connectivity](#user-driven-hybrid-azure-ad-join-create-and-assign-user-driven-hybrid-azure-ad-join-autopilot-profile).
+      - For **Skip AD connectivity check**, select **No**. This section of the tutorial assumes that the device undergoing Autopilot is an on-premises internal client and that has direct connectivity to the on-premises domain and domain controllers. For off-premise/Internet scenarios where VPN connectivity is required, see [Off-premise/Internet scenarios and VPN connectivity](#off-premiseinternet-scenarios-and-vpn-connectivity).
 
       - For **Microsoft Software License Terms**, select **Hide** to skip the EULA page.
 
@@ -64,6 +67,10 @@ To create a user-driven Azure AD join Autopilot profile, follow the below steps:
       - For **User account type**, select the desired account type for the user (**Administrator** or **Standard** user). If **Administrator** is chosen, the user is added to the local Admin group.
 
       - For **Allow pre-provisioned deployment**, select **No**.
+
+        > [!NOTE]
+        >
+        > For the Windows Autopilot for pre-provisioned deployment hybrid Azure AD join scenario, see [Step by step tutorial for Windows Autopilot for pre-provisioned deployment hybrid Azure AD join in Intune](../pre-provisioning/hybrid-azure-ad-join-workflow.md)
 
       - For **Language (Region)**, select **Operating system default** to use the default language for the operating system being configured. If another language is desired, select the desired language from the drop-down list.
 

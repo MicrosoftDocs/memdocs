@@ -7,20 +7,18 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 03/27/2023
+ms.date: 04/11/2023
 ms.topic: tutorial
 ms.collection: 
   - tier1
   - highpri
 ms.technology: itpro-deploy
+appliesto:
+  - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
+  - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
 ---
 
 # Step by step tutorial for Windows Autopilot user-driven hybrid Azure AD join in Intune
-
-*Applies to:*
-
-- Windows 11
-- Windows 10
 
 This step by step tutorial guides you through using Intune to perform a Windows Autopilot user-driven scenario when the devices are also joined to an on-premises domain, also known as hybrid Azure AD join.
 
@@ -30,7 +28,7 @@ Before beginning, refer to the [Plan your hybrid Azure Active Directory join imp
 
 ## Workflow
 
-Set up Windows automatic Intune enrollment > Install the Intune Connector > Increase the computer account limit in the Organizational Unit (OU) > Register devices as Autopilot devices > Create a device group > Configure and assign Autopilot Enrollment Status Page (ESP) > Create and assign hybrid Azure AD join Autopilot profile > Configure and assign domain join profile
+Set up Windows automatic Intune enrollment > Install the Intune Connector > Increase the computer account limit in the Organizational Unit (OU) > Register devices as Autopilot devices > Create a device group > Configure and assign Autopilot Enrollment Status Page (ESP) > Create and assign hybrid Azure AD join Autopilot profile > Configure and assign domain join profile > Deploy device to end-user
 
 Autopilot user-driven hybrid Azure AD join steps:
 > [!div class="checklist"]

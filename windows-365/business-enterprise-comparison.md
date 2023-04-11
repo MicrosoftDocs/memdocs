@@ -87,7 +87,7 @@ Windows 365 is available in two editions: [Windows 365 Business](./business/inde
 | Capability | Windows 365 Business | Windows 365 Enterprise |
 | --- | --- | --- |
 | Support channels | Support tickets can be filed through the Microsoft 365 Admin Center. | Support tickets can be filed through Microsoft Endpoint Manager (recommended) and the Microsoft 365 Admin Center. |
-29
+
 <!-- ########################## -->
 ## Next steps
 

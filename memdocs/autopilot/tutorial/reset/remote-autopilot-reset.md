@@ -7,12 +7,15 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 03/27/2023
+ms.date: 04/11/2023
 ms.topic: tutorial
 ms.collection: 
   - tier1
   - highpri
 ms.technology: itpro-deploy
+appliesto:
+  - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
+  - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
 ---
 
 # Reset devices with remote Windows Autopilot Reset
@@ -87,11 +90,11 @@ To force the device to obtain the latest Intune policy locally on the device, fo
 
 4. In the **Accounts** page, select **Access work or school**.
 
-5. In the **Accounts > Access work or school** page, select **Connected by &lt;user@domain&gt;** to open a new section.
+5. In the **Accounts > Access work or school** page, select **Connected by \<user@domain\>** to open a new section.
 
-6. In the new section, next to **Managed by &lt;organization&gt;**, select the **Info** button.
+6. In the new section, next to **Managed by \<organization\>**, select the **Info** button.
 
-7. In the **Accounts > Access work or school > Managed by &lt;organization&gt;** page, under **Device sync status**, select the **Sync** button.
+7. In the **Accounts > Access work or school > Managed by \<organization\>** page, under **Device sync status**, select the **Sync** button.
 
 These steps should force the device to obtain the latest Intune policy. The Autopilot Reset should start shortly thereafter.
 

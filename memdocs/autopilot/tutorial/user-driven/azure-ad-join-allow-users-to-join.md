@@ -7,12 +7,15 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 03/27/2023
+ms.date: 04/11/2023
 ms.topic: tutorial
 ms.collection: 
   - tier1
   - highpri
 ms.technology: itpro-deploy
+appliesto:
+  - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
+  - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
 ---
 
 # User-driven Azure AD join: Allow users to join devices to Azure AD
@@ -28,6 +31,10 @@ Autopilot user-driven Azure AD join steps:
 - Step 7: [Assign Autopilot device to a user (optional)](azure-ad-join-assign-device-to-user.md)
 
 For an overview of the Windows Autopilot user-driven Azure AD join workflow, see [Windows Autopilot user-driven Azure AD join overview](azure-ad-join-workflow.md)
+
+> [!NOTE]
+>
+> If you've already allowed users to join devices to Azure AD as part of the [Windows Autopilot for pre-provisioned deployment Azure AD join](../pre-provisioning/azure-ad-join-workflow.md) scenario, you can skip this step and move on to [Step 3: Register devices as Autopilot devices](azure-ad-join-register-device.md).
 
 ## Allow users to join devices to Azure AD
 
@@ -69,7 +76,7 @@ In order for Windows Autopilot to work, users need to be allowed to join devices
 
 > [!NOTE]
 >
-> This step of allowing users to join devices to Azure AD is only needed for the user-driven Azure AD join scenario. This setting doesn't apply to hybrid Azure AD joined devices and Azure AD joined devices using Windows Autopilot self-deployment mode as these methods work in a userless context.
+> This step of allowing users to join devices to Azure AD is only needed for the Autopilot user-driven Azure AD join and Autopilot for pre-provisioned deployment Azure AD join scenarios. This setting doesn't apply to hybrid Azure AD joined devices and Azure AD joined devices using Windows Autopilot self-deployment mode as these methods work in a userless context.
 
 ## Next step: Register devices as Autopilot devices
 
