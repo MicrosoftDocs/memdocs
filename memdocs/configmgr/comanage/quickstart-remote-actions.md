@@ -40,7 +40,7 @@ For more information on these actions, see [Available remote actions](#available
 
 ## Case studies
 
-The global consulting firm Avanade regularly uses remote actions to manage the devices used by their 30,000 employees. In a [blog post](https://www.microsoft.com/microsoft-365/blog/2018/02/07/the-future-is-on-the-other-side-of-this-bridge/), the CIO of Avanade noted:
+The global consulting firm Avanade regularly uses remote actions to manage the devices used by their 30,000 employees. In a blog post, the CIO of Avanade noted:
 
 > *Our immediate win from having the Intune functionality was the ability to remotely reset Windows on a machine. This is important to us for lost or stolen machines, which is more common in our highly mobile workforce.*
 > *This is functionality that we otherwise would have had to build and maintain in a custom ConfigMgr package.*
