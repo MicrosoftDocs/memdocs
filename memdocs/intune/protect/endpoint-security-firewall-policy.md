@@ -70,7 +70,7 @@ For information about configuring settings in the following profiles, see the [F
 - **Microsoft Defender Firewall rules** - Define granular Firewall rules, including specific ports, protocols, applications and networks, and to allow or block network traffic. Each instance of this profile supports up to 150 custom rules.
 
   > [!TIP]  
-  > Use  of the **Policy App Id** setting, which is described in the [*MdmStore/FirewallRules/{FirewallRuleName}/PolicyAppId*](https://learn.microsoft.com/en-us/windows/client-management/mdm/Firewall-csp?WT.mc_id=Portal-fx#mdmstorefirewallrulesfirewallrulenamepolicyappid) CSP, requires that your environment use *Windows Defender Application Control* (WDAC) tagging. For more information see the following Windows Defender articles:  
+  > Use  of the **Policy App Id** setting, which is described in the [*MdmStore/FirewallRules/{FirewallRuleName}/PolicyAppId*](/windows/client-management/mdm/Firewall-csp?WT.mc_id=Portal-fx#mdmstorefirewallrulesfirewallrulenamepolicyappid) CSP, requires that your environment use *Windows Defender Application Control* (WDAC) tagging. For more information see the following Windows Defender articles:  
   > - [About application control for Windows](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control)
   > - [WDAC Application ID (AppId) Tagging guide](/windows/security/threat-protection/windows-defender-application-control/appidtagging/windows-defender-application-control-appid-tagging-guide)
 
