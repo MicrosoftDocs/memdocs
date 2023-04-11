@@ -60,7 +60,7 @@ Learn what new features are available in Windows 365 Enterprise.
 
 #### Location redirection<!--43953213-->
 
-Users can now turn on Location redirection so that their Cloud PCs use their correct geographic location. For more information, see [Location redirection](../end-user-access-cloud-pc.md#location-redirection).
+Users can now turn on Location redirection so that their Cloud PCs use their correct geographic location. For more information, see [Location redirection](../end-user-access-cloud-pc.md#location-preview).
 
 <!-- ########################## -->
 ## Week of April 3, 2023
