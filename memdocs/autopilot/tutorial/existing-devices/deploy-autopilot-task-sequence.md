@@ -40,6 +40,11 @@ For an overview of the Windows Autopilot deployment for existing devices workflo
 > [!div class="nextstepaction"]
 > [Step 8: Speed up the deployment process (optional)](speed-up-deployment.md)
 
+If you rather use an unmodified out of box Autopilot task sequence created by the **Create Task Sequence Wizard** in Configuration Manager, then skip to [Step 9: Run Autopilot task sequence on device](run-autopilot-task-sequence.md).
+
+> [!div class="nextstepaction"]
+> [Step 9: Run Autopilot task sequence on device](run-autopilot-task-sequence.md)
+
 ## More information
 
 For more information on deploying the Autopilot task sequence, see the following article(s):
