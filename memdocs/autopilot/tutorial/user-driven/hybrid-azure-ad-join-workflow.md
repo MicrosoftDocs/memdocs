@@ -13,14 +13,12 @@ ms.collection:
   - tier1
   - highpri
 ms.technology: itpro-deploy
+appliesto:
+  - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
+  - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
 ---
 
 # Step by step tutorial for Windows Autopilot user-driven hybrid Azure AD join in Intune
-
-*Applies to:*
-
-- Windows 11
-- Windows 10
 
 This step by step tutorial guides you through using Intune to perform a Windows Autopilot user-driven scenario when the devices are also joined to an on-premises domain, also known as hybrid Azure AD join.
 
