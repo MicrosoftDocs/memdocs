@@ -1,6 +1,6 @@
 ---
-title: Overview for Windows Autopilot deployment for existing devices in Intune and Configuration Manager
-description: Overview for Windows Autopilot deployment for existing devices in Intune and Configuration Manager.
+title: Windows Autopilot deployment for existing devices in Intune and Configuration Manager - Step 2 of 10 - Install required modules to obtain Autopilot profile(s) from Intune
+description: Windows Autopilot deployment for existing devices in Intune and Configuration Manager - Step 2 of 10 - Install required modules to obtain Autopilot profile(s) from Intune.
 ms.prod: windows-client
 ms.localizationpriority: medium
 author: frankroj

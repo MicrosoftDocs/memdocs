@@ -1,6 +1,6 @@
 ---
-title: Overview for Windows Autopilot deployment for existing devices in Intune and Configuration Manager
-description: Overview for Windows Autopilot deployment for existing devices in Intune and Configuration Manager.
+title: Windows Autopilot deployment for existing devices in Intune and Configuration Manager - Step 8 of 10 - Speeding up the deployment process (optional)
+description: Windows Autopilot deployment for existing devices in Intune and Configuration Manager - Step 8 of 10 - Speeding up the deployment process (optional).
 ms.prod: windows-client
 ms.localizationpriority: medium
 author: frankroj
@@ -18,11 +18,9 @@ appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
 ---
 
-# Windows Autopilot deployment for existing devices: Allow users to join devices to Azure AD
+# Windows Autopilot deployment for existing devices: Speeding up the deployment process (optional)
 
 Autopilot user-driven Azure AD join steps:
-> [!div class="checklist"]
->
 - Step 1: [Set up a Windows Autopilot deployment](setup-autopilot-deployment.md)
 - Step 2: [Install required modules to obtain Autopilot profile(s) from Intune](install-modules.md)
 - Step 3: [Create JSON file for Autopilot profile(s)](create-json-file.md)
@@ -30,7 +28,8 @@ Autopilot user-driven Azure AD join steps:
 - Step 5: [Create Autopilot task sequence in Configuration Manager](create-autopilot-task-sequence.md)
 - Step 6: [Create collection in Configuration Manager](create-collection.md)
 - Step 7: [Deploy Autopilot task sequence to collection in Configuration Manager](deploy-autopilot-task-sequence.md)
-- Step 8: [Speeding up the deployment process (optional)](speed-up-deployment.md)
+> [!div class="checklist"]
+> - **Step 8: Speeding up the deployment process (optional)**
 - Step 9: [Run Autopilot task sequence on device](run-autopilot-task-sequence.md)
 - Step 10: [Register device for Windows Autopilot](register-device.md)
 
