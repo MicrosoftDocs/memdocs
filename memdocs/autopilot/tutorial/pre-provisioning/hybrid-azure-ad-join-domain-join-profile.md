@@ -1,6 +1,6 @@
 ---
-title: Windows Autopilot user-driven hybrid Azure AD join - Step 8 of 8 - Create and assign a domain join profile
-description: How to - Windows Autopilot user-driven hybrid Azure AD join - Step 8 of 8 - Create and assign a domain join profile.
+title: Windows Autopilot for pre-provisioned deployment hybrid Azure AD join - Step 8 of 10 - Create and assign a domain join profile
+description: How to - Windows Autopilot for pre-provisioned deployment hybrid Azure AD join - Step 8 of 10 - Create and assign a domain join profile.
 ms.prod: windows-client
 ms.localizationpriority: medium
 author: frankroj
@@ -18,9 +18,9 @@ appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
 ---
 
-# User-driven hybrid Azure AD join: Create and assign a domain join profile
+# Pre-provisioning hybrid Azure AD join: Create and assign a domain join profile
 
-Autopilot user-driven hybrid Azure AD join steps:
+Windows Autopilot for pre-provisioned deployment hybrid Azure AD join steps:
 - Step 1: [Set up Windows automatic Intune enrollment](hybrid-azure-ad-join-automatic-enrollment.md)
 - Step 2: [Install the Intune Connector](hybrid-azure-ad-join-intune-connector.md)
 - Step 3: [Increase the computer account limit in the Organizational Unit (OU)](hybrid-azure-ad-join-computer-account-limit.md)
@@ -30,12 +30,14 @@ Autopilot user-driven hybrid Azure AD join steps:
 - Step 7: [Create and assign hybrid Azure AD join Autopilot profile](hybrid-azure-ad-join-autopilot-profile.md)
 > [!div class="checklist"]
 > - **Step 8: Configure and assign domain join profile**
+- Step 9: [Technician flow](hybrid-azure-ad-join-technician-flow.md)
+- Step 10: [User flow](hybrid-azure-ad-join-user-flow.md)
 
-For an overview of the Windows Autopilot user-driven hybrid Azure AD join workflow, see [Windows Autopilot user-driven hybrid Azure AD join overview](hybrid-azure-ad-join-workflow.md)
+For an overview of the Windows Autopilot for pre-provisioned deployment hybrid Azure AD join workflow, see [Windows Autopilot for pre-provisioned deployment hybrid Azure AD join overview](hybrid-azure-ad-join-workflow.md)
 
 > [!NOTE]
 >
-> If you've already created a domain join profile as part of the [Windows Autopilot for pre-provisioned deployment hybrid Azure AD join](../user-driven/hybrid-azure-ad-join-workflow.md) scenario and want to keep the same settings and assignments, you can move on to the [Next step: Deploy the device](#next-step-deploy-the-device) section.
+> If you've already created a domain join profile as part of the [Windows Autopilot user-driven hybrid Azure AD join](../user-driven/hybrid-azure-ad-join-workflow.md) scenario and want to keep the same settings and assignments, you can skip this step and move on to [Step 9: Technician flow](hybrid-azure-ad-join-technician-flow.md).
 
 ## Create and assign a domain join profile
 
@@ -103,9 +105,10 @@ For an overview of the Windows Autopilot user-driven hybrid Azure AD join workfl
 
 1. In the **Review + Create** page, review and verify that all of the settings are set as desired, and then choose **Create** to create the domain join profile.
 
-## Next step: Deploy the device
+## Next step: Technician flow
 
-At this point, the device is ready to be deployed. If desired, deploy any additional applications, policies, and profiles that should run during Autopilot to the device group that the device is a member of. Boot the device with a fresh install of Windows and the Autopilot deployment should begin.
+> [!div class="nextstepaction"]
+> [Step 9: Technician flow](hybrid-azure-ad-join-technician-flow.md)
 
 ## More information
 

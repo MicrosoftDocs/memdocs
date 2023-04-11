@@ -7,12 +7,15 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 03/27/2023
+ms.date: 04/11/2023
 ms.topic: tutorial
 ms.collection: 
   - tier1
   - highpri
 ms.technology: itpro-deploy
+appliesto:
+  - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
+  - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
 ---
 
 # Enable local Windows Autopilot Reset
@@ -93,7 +96,7 @@ To trigger a local Windows Autopilot Reset on a device, follow the below steps:
 
 1. If you created a provisioning package that should be applied during the local Windows Autopilot Reset, plug in the USB drive that contains the provisioning package.
 
-1. From the Windows device lock screen, enter the keystroke: **CTRL + ![Windows key](../../images/windows_glyph.png) + R**.
+1. From the Windows device lock screen, enter the keystroke <kbd>CTRL</kbd> + <kbd>WIN</kbd> + <kbd>R</kbd>.
 
 1. To trigger the local Autopilot Reset, sign into the device with an account that has local administrator credentials.
 

@@ -1,6 +1,6 @@
 ---
-title: Windows Autopilot user-driven Azure AD join - Step 2 of 7 - Allow users to join devices to Azure AD
-description: How to - Windows Autopilot user-driven Azure AD join - Step 2 of 7 - Allow users to join devices to Azure AD.
+title: Windows Autopilot for pre-provisioned deployment Azure AD join - Step 2 of 9 - Allow users to join devices to Azure AD
+description: How to - Windows Autopilot for pre-provisioned deployment Azure AD join - Step 2 of 9 - Allow users to join devices to Azure AD.
 ms.prod: windows-client
 ms.localizationpriority: medium
 author: frankroj
@@ -18,9 +18,9 @@ appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
 ---
 
-# User-driven Azure AD join: Allow users to join devices to Azure AD
+# Pre-provisioning Azure AD join: Allow users to join devices to Azure AD
 
-Autopilot user-driven Azure AD join steps:
+Windows Autopilot for pre-provisioned deployment Azure AD join steps:
 - Step 1: [Set up Windows automatic Intune enrollment](azure-ad-join-automatic-enrollment.md)
 > [!div class="checklist"]
 > - **Step 2: Allow users to join devices to Azure AD**
@@ -29,12 +29,14 @@ Autopilot user-driven Azure AD join steps:
 - Step 5: [Configure and assign Autopilot Enrollment Status Page (ESP)](azure-ad-join-esp.md)
 - Step 6: [Create and assign Autopilot profile](azure-ad-join-autopilot-profile.md)
 - Step 7: [Assign Autopilot device to a user (optional)](azure-ad-join-assign-device-to-user.md)
+- Step 8: [Technician flow](azure-ad-join-technician-flow.md)
+- Step 9: [User flow](azure-ad-join-user-flow.md)
 
-For an overview of the Windows Autopilot user-driven Azure AD join workflow, see [Windows Autopilot user-driven Azure AD join overview](azure-ad-join-workflow.md)
+For an overview of the Windows Autopilot for pre-provisioned deployment Azure AD join workflow, see [Windows Autopilot for pre-provisioned deployment Azure AD join overview](azure-ad-join-workflow.md)
 
 > [!NOTE]
 >
-> If you've already allowed users to join devices to Azure AD as part of the [Windows Autopilot for pre-provisioned deployment Azure AD join](../pre-provisioning/azure-ad-join-workflow.md) scenario, you can skip this step and move on to [Step 3: Register devices as Autopilot devices](azure-ad-join-register-device.md).
+> If you've already allowed users to join devices to Azure AD as part of the [Windows Autopilot user-driven Azure AD join](../user-driven/azure-ad-join-workflow.md) scenario, you can skip this step and move on to [Step 3: Register devices as Autopilot devices](azure-ad-join-register-device.md).
 
 ## Allow users to join devices to Azure AD
 
