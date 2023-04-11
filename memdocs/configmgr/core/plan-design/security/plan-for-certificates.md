@@ -170,19 +170,19 @@ Because of the number of configuration options and choices in Configuration Mana
   > [!NOTE]
 > For clients that also have a PKI certificate, the Configuration Manager console displays the **Client certificate** property as **Self-signed**. The client control panel **Client certificate** property shows **PKI**.<!-- 10278780 -->
 
-    You can also deploy the Configuration Manager HTTPS Readiness Assessment Tool (**CMHttpsReadiness.exe**) to computers. Then use the reports to view how many computers can use a client PKI certificate with Configuration Manager.
-    
+You can also deploy the Configuration Manager HTTPS Readiness Assessment Tool (**CMHttpsReadiness.exe**) to computers. Then use the reports to view how many computers can use a client PKI certificate with Configuration Manager.
+
     > [!NOTE]
-    > When you install the Configuration Manager client, it installs the **CMHttpsReadiness.exe** tool in the `%windir%\CCM` folder. The following command-line options are available when you run this tool:
-    >
-    > - ```/Store:<Certificate store name>```: This option is the same as the [CCMCERTSTORE](../../clients/deploy/about-client-installation-properties.md#ccmcertstore) client.msi property
-    > -```/Issuers:<Case-sensitive issuer common name>```: This option is the same as the [CCMCERTISSUERS](../../clients/deploy/about-client-installation-properties.md#ccmcertissuers) client.msi property
-    > - ```/Criteria:<Selection criteria>```: This option is the same as the [CCMCERTSEL](../../clients/deploy/about-client-installation-properties.md#ccmcertsel) client.msi property
-    > - ```/SelectFirstCert```: This option is the same as the [CCMFIRSTCERT](../../clients/deploy/about-client-installation-properties.md#ccmfirstcert) client.msi property
-    >
-    > The tool outputs information to the CMHttpsReadiness.log in the ```CCM\Logs``` directory.
-    >
-    > For more information, see [About client installation properties](../../clients/deploy/about-client-installation-properties.md).
+> When you install the Configuration Manager client, it installs the **CMHttpsReadiness.exe** tool in the `%windir%\CCM` folder. The following command-line options are available when you run this tool:
+>
+> - ```/Store:<Certificate store name>```: This option is the same as the [CCMCERTSTORE](../../clients/deploy/about-client-installation-properties.md#ccmcertstore) client.msi property
+> -```/Issuers:<Case-sensitive issuer common name>```: This option is the same as the [CCMCERTISSUERS](../../clients/deploy/about-client-installation-properties.md#ccmcertissuers) client.msi property
+> - ```/Criteria:<Selection criteria>```: This option is the same as the [CCMCERTSEL](../../clients/deploy/about-client-installation-properties.md#ccmcertsel) client.msi property
+> - ```/SelectFirstCert```: This option is the same as the [CCMFIRSTCERT](../../clients/deploy/about-client-installation-properties.md#ccmfirstcert) client.msi property
+>
+> The tool outputs information to the CMHttpsReadiness.log in the ```CCM\Logs``` directory.
+>
+> For more information, see [About client installation properties](../../clients/deploy/about-client-installation-properties.md).
 
 1. When you're confident that enough clients are successfully using their client PKI certificate for authentication over HTTP, follow these steps:
 
