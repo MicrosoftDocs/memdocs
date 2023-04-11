@@ -72,7 +72,7 @@ Before you create a policy, you can review details about the available settings 
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Endpoint security** > **Account protection**, and then select **Create Policy**.
 
-   <!-- ::: IMAGE of UI showing path to policy (orientation in console):::  -->
+   :::image type="content" source="./media/windows-laps-policy/create-laps-policy.png" alt-text="Screen shot that shows where in the admin center you create a LAPS policy.":::
 
    Set the *Platform* to **Windows 10 and later**, *Profile* to **Local admin password solution (Windows LAPS) (preview)**, and then select **Create**.
 
@@ -83,7 +83,7 @@ Before you create a policy, you can review details about the available settings 
 
 3. On **Configuration settings**, Configure a choice for **Backup Directory** to define the type of Directory to use to back up the local admin account. You can also choose not to back up an account and password. The type of Directory also determines which additional settings are available in this policy.
 
-    <!-- ::: IMAGE of UI showing policy configuration settings view ::: -->
+   :::image type="content" source="./media/windows-laps-policy/specify-the-backup-directory.png" alt-text="Screen shot that shows the options for the Backup Directory setting.":::
 
    > [!IMPORTANT]  
    > When configuring a policy, keep in mind that the backup directory type in the policy must be supported by the join type of the device the policy is assigned to. For example, if you set the directory to Active Directory and the device isn’t domain joined (but a member of Azure AD), the device can apply the policy settings from Intune without error, but LAPS on the device will not be able to successfully use that configuration to back up the account.
@@ -104,9 +104,9 @@ Before you create a policy, you can review details about the available settings 
 
 6. In **Review + create**, review your settings and then select **Create**. When you select *Create*, your changes are saved, and the profile is assigned. The policy is also shown in the policy list.
 
-## View account details and password rotation history
+## View account and password details
 
-When your account has sufficient permissions, you can use the Intune admin center to view the password rotation history for the devices managed account. Separate permissions grant you access to view the account name, and its password.
+When your account has sufficient permissions, you can use the Intune admin center to view details about the backed up local admin account and its current password.
 
 For required permissions, see [Role based access controls for LAPS](../protect/windows-laps-overview.md#role-based-access-controls-for-laps).
 
@@ -116,13 +116,13 @@ For required permissions, see [Role based access controls for LAPS](../protect/w
 
 2. On the devices Overview pane, below *Monitor* select **Local admin password**. If your account has sufficient permissions, the Local admin password pane for the device opens, which is the same view that’s available from within the Azure portal.
 
-    <!--  ::: IMAGE of UI showing Local admin password view of a device ::: -->
+   :::image type="content" source="./media/windows-laps-policy/view-password.md" alt-text="Screen shot that shows the local admin password pane for a Windows device.":::
 
    The following information can be viewed from within the admin center. However, the *Local admin password* can only be viewed when the account was backed up to Azure AD. It can’t be viewed for an account that’s backed up to an on-premises Active Directory (Windows Server Active Directory):
 
-   - **Local admin account** – The name of the local admin account that was backed up from the device.
+   - **Account name** – The name of the local admin account that was backed up from the device.
    - **Security ID** – The well-known SID for the account that is backed up from the device.
-   - **Local admin password** – Obscured by default. If your account has permission, you can select *Show local administrator password* to reveal the password. You can then use the *Copy* option to copy the password to your clipboard. This information isn't available for devices that back up to an on-premises Active Directory.
+   - **Local admin password** – Obscured by default. If your account has permission, you can select **Show** to reveal the password. You can then use the *Copy* option to copy the password to your clipboard. This information isn't available for devices that back up to an on-premises Active Directory.
    - **Last password rotation** – In UTC, the date and time that the password was last changed or rotated by policy.
    - **Next password rotation** – In UTC, the next date and time when the password will be rotated per policy.
 
@@ -135,19 +135,11 @@ The following are considerations for viewing a devices account and password info
   - Devices that have their local admin account backed up to an on-premises Active Directory
   - Devices that are set to use Active Directory to back up the account password.
 
-### To view account and password details
+## View Device actions status
 
-To view *Device actions status* information for a device, your account must have the <***PENDING***> permission, which is part of the <***PENDING***> category.
+When your account has sufficient permissions, you can use the Intune admin center to view the the status of device actions that have been requested for the device.   
 
- <!-- ::: IMAGE of UI showing Device actions status ::: -->
 
-For the required permissions, see [Role based access controls for LAPS](../protect/windows-laps-overview.md#role-based-access-controls-for-laps).
-
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **All devices** , and select a device that has a LAPS policy that backs up a local admin account.
-
-2. <***PENDING*** *It's not clear what is shown at this point, or what you select. Perhaps a device actions status? > 
-
-3. When your account has the required permissions, you can select **Show local administrator password** to then display the account.
 
 ## Manually rotate passwords
 
