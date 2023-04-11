@@ -72,7 +72,7 @@ For information about configuring settings in the following profiles, see the [F
   > [!TIP]  
   > Use  of the **Policy App Id** setting, which is described in the [*MdmStore/FirewallRules/{FirewallRuleName}/PolicyAppId*](https://learn.microsoft.com/en-us/windows/client-management/mdm/Firewall-csp?WT.mc_id=Portal-fx#mdmstorefirewallrulesfirewallrulenamepolicyappid) CSP, requires that your environment use *Windows Defender Application Control* (WDAC) tagging. For more information see the following Windows Defender articles:  
   > - [About application control for Windows](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control)
-  > - [WDAC Application ID (AppId) Tagging guide](/windows/security/threat-protection/windows-defender-application-control/appidtagging/windows-defender-application-control-appid-tagging-guide) 
+  > - [WDAC Application ID (AppId) Tagging guide](/windows/security/threat-protection/windows-defender-application-control/appidtagging/windows-defender-application-control-appid-tagging-guide)
 
 #### Add reusable settings groups to profiles for Firewall rules
 
