@@ -102,6 +102,10 @@ items:
       href: ./fundamentals/intune-planning-guide.md
     - name: Supported operating systems and browsers
       href: ./fundamentals/supported-devices-browsers.md
+    - name: Software updates admin checklist
+      items:
+      - name: iOS/iPadOS
+        href: ./protect/software-updates-guide-ios-ipados.md
     - name: Network configuration
       href: ./fundamentals/network-bandwidth-use.md
     - name: Using Windows 10 VMs with Intune
