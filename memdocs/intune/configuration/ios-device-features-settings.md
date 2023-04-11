@@ -219,8 +219,8 @@ When you assign the policy to an iPhone, the page looks similar to the following
     - **Show on Lock Screen**: **Enable** shows app notifications on the device lock screen. **Disable** prevents the app from showing notifications on the lock screen.
     - **Alert type**: When devices are unlocked, choose how the notification is shown. Your options:
       - **None**: No notification is shown.
-      - **Temporary Banner**: A banner is briefly shown with the notification.
-      - **Persistent Banner**: The notification is shown and users must manually dismiss it before continuing to use the device.
+      - **Banner**: A banner is briefly shown with the notification. This setting might also be known as Temporary Banner.
+      - **Modal**: The notification is shown and users must manually dismiss it before continuing to use the device. This setting might also be known as Persistent Banner.
     - **Badge on app icon**: Select **Enable** to add a badge to the app icon. The badge means the app sent a notification.
     - **Enable sounds**: Select **Enable** to play a sound when a notification is delivered.
     - **Show previews**: Shows a preview of recent app notifications. Select when to show the preview. The value you choose overrides the user configured value on the device (Settings > Notifications > Show Previews). Your options:
