@@ -76,7 +76,7 @@ Unless specified otherwise, the following versions of SQL Server are supported w
 
 ### SQL Server 2022: Standard, Enterprise
 
-Starting with current branch 2303, support is added for SQL server 2022 version
+Starting with current branch 2303, support is added for SQL server 2022 version.
 
 You can use this version of SQL Server for the following sites:
 
