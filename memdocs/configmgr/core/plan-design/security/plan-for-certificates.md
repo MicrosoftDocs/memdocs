@@ -172,7 +172,7 @@ Because of the number of configuration options and choices in Configuration Mana
 
 You can also deploy the Configuration Manager HTTPS Readiness Assessment Tool (**CMHttpsReadiness.exe**) to computers. Then use the reports to view how many computers can use a client PKI certificate with Configuration Manager.
 
-    > [!NOTE]
+  > [!NOTE]
 > When you install the Configuration Manager client, it installs the **CMHttpsReadiness.exe** tool in the `%windir%\CCM` folder. The following command-line options are available when you run this tool:
 >
 > - ```/Store:<Certificate store name>```: This option is the same as the [CCMCERTSTORE](../../clients/deploy/about-client-installation-properties.md#ccmcertstore) client.msi property
