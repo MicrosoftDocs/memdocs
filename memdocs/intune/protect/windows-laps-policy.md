@@ -60,7 +60,7 @@ Windows LAPS allows for the management of a single local administrator account p
 > [!NOTE]  
 > Intune’s LAPS policies do not create new accounts or passwords. Instead, they manage an account that’s already on the device.
 
-Configure and assign LAPS policies carefully. The Windows LAPS CSP supports a single configuration for each LAPS setting. Devices that receive multiple policies that include conflicting settings can fail to process policy or apply the more restrictive settings from the two policies. Conflicts can also prevent the backup of the managed local admin account and password to your tenants Directory.
+Configure and assign LAPS policies carefully. The Windows LAPS CSP supports a single configuration for each LAPS setting on a device. Devices that receive multiple Intune policies that include conflicting settings can fail to process policy. Conflicts can also prevent the backup of the managed local admin account and password to your tenants Directory.
 
 To help reduce potential conflicts, we recommend assigning a single LAPS policy to each device through device groups, and not through user groups. While LAPS policy supports user group assignments, they can result in a cycle of changing LAPS configurations each time a different user signs-in to a device. Frequently changing policies can introduce conflicts, a lack of device compliance with requirements, and create confusion around which local admin account from a device is currently being managed.
 
@@ -188,8 +188,6 @@ After a successful rotation, the confirmation will be visible in the Device acti
  ## Avoid policy conflicts
 
 The following details can help you avoid conflicts and understand the expected behavior from devices managed by LAPS policy.
-
-When a device is assigned more than a single LAPS policy from Intune, they might not conflict however the most restrictive policy applies.
 
 When a device with successful policy is assigned an two or more policies that introduce a conflict:
 
