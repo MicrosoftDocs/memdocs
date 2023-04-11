@@ -26,7 +26,7 @@ The purpose of this tutorial is to provide a step by step guide for all the step
 
 ## Workflow
 
-Set up a Windows Autopilot deployment > Install required modules to obtain Autopilot profile(s) from Intune > Create JSON file for Autopilot profile(s) > Create package for JSON file in Configuration Manager > Distribute JSON package to distribution points in Configuration Manager > Create Autopilot task sequence in Configuration Manager > Create collection in Configuration Manager > Deploy Autopilot task sequence to collection in Configuration Manager > Speeding up the deployment process (optional) > Run Autopilot task sequence on device > Register device for Windows Autopilot
+Set up a Windows Autopilot deployment > Install required modules to obtain Autopilot profile(s) from Intune > Create JSON file for Autopilot profile(s) > Create package for JSON file in Configuration Manager > Distribute JSON package to distribution points in Configuration Manager > Create Autopilot task sequence in Configuration Manager > Create collection in Configuration Manager > Deploy Autopilot task sequence to collection in Configuration Manager > Speed up the deployment process (optional) > Run Autopilot task sequence on device > Register device for Windows Autopilot
 
 Autopilot user-driven Azure AD join steps:
 > [!div class="checklist"]
@@ -37,17 +37,17 @@ Autopilot user-driven Azure AD join steps:
 > - Step 5: [Create Autopilot task sequence in Configuration Manager](create-autopilot-task-sequence.md)
 > - Step 6: [Create collection in Configuration Manager](create-collection.md)
 > - Step 7: [Deploy Autopilot task sequence to collection in Configuration Manager](deploy-autopilot-task-sequence.md)
-> - Step 8: [Speeding up the deployment process (optional)](speed-up-deployment.md)
+> - Step 8: [Speed up the deployment process (optional)](speed-up-deployment.md)
 > - Step 9: [Run Autopilot task sequence on device](run-autopilot-task-sequence.md)
 > - Step 10: [Register device for Windows Autopilot](register-device.md)
 
 ## Walkthrough
 
 > [!div class="nextstepaction"]
-> [Set up a Windows Autopilot deployment](setup-autopilot-deployment.md)
+> [Step 1: Set up a Windows Autopilot deployment](setup-autopilot-deployment.md)
 
 ## More information
 
 For more information on Windows Autopilot deployment for existing devices, see the following article(s):
 
-- [User-driven mode for Azure AD join](/mem/autopilot/existing-devices)
+- [Windows Autopilot deployment for existing devices](/mem/autopilot/existing-devices)

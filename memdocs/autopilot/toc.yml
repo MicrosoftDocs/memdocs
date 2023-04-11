@@ -192,7 +192,30 @@ items:
         href: tutorial/reset/local-autopilot-reset.md
       - name: Remote Windows Autopilot Reset
         href: tutorial/reset/remote-autopilot-reset.md
-
+    - name: Windows Autopilot deployment for existing devices
+      items:
+      - name: Windows Autopilot deployment for existing devices
+        href: tutorial/existing-devices/create-autopilot-task-sequence.md
+      - name: Step 1 - Set up a Windows Autopilot deployment
+        href: tutorial/existing-devices/setup-autopilot-deployment.md
+      - name: Step 2 - Install required modules to obtain Autopilot profile(s) from Intune
+        href: tutorial/existing-devices/install-modules.md
+      - name: Step 3 - Create JSON file for Autopilot profile(s)
+        href: tutorial/existing-devices/create-json-file.md
+      - name: Step 4 - Create and distribute package for JSON file in Configuration Manager
+        href: tutorial/existing-devices/create-json-package.md
+      - name: Step 5 - Create Autopilot task sequence in Configuration Manager
+        href: tutorial/existing-devices/create-autopilot-task-sequence.md
+      - name: Step 6 - Create collection in Configuration Manager
+        href: tutorial/existing-devices/create-collection.md
+      - name: Step 7 - Deploy Autopilot task sequence to collection in Configuration Manager
+        href: tutorial/existing-devices/deploy-autopilot-task-sequence.md
+      - name: Step 8 - Speed up the deployment process (optional)
+        href: tutorial/existing-devices/speed-up-deployment.md
+      - name: Step 9 - Run Autopilot task sequence on device
+        href: tutorial/existing-devices/run-autopilot-task-sequence.md
+      - name: Step 10 - Register device for Windows Autopilot
+        href: tutorial/existing-devices/register-device.md
 - name: Reference
   items:
     - name: Deployment processes

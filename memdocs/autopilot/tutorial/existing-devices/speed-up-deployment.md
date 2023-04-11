@@ -1,6 +1,6 @@
 ---
-title: Windows Autopilot deployment for existing devices in Intune and Configuration Manager - Step 8 of 10 - Speeding up the deployment process (optional)
-description: Windows Autopilot deployment for existing devices in Intune and Configuration Manager - Step 8 of 10 - Speeding up the deployment process (optional).
+title: Windows Autopilot deployment for existing devices in Intune and Configuration Manager - Step 8 of 10 - Speed up the deployment process (optional)
+description: Windows Autopilot deployment for existing devices in Intune and Configuration Manager - Step 8 of 10 - Speed up the deployment process (optional).
 ms.prod: windows-client
 ms.localizationpriority: medium
 author: frankroj
@@ -18,7 +18,7 @@ appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
 ---
 
-# Windows Autopilot deployment for existing devices: Speeding up the deployment process (optional)
+# Windows Autopilot deployment for existing devices: Speed up the deployment process (optional)
 
 Autopilot user-driven Azure AD join steps:
 - Step 1: [Set up a Windows Autopilot deployment](setup-autopilot-deployment.md)
@@ -29,8 +29,19 @@ Autopilot user-driven Azure AD join steps:
 - Step 6: [Create collection in Configuration Manager](create-collection.md)
 - Step 7: [Deploy Autopilot task sequence to collection in Configuration Manager](deploy-autopilot-task-sequence.md)
 > [!div class="checklist"]
-> - **Step 8: Speeding up the deployment process (optional)**
+> - **Step 8: Speed up the deployment process (optional)**
 - Step 9: [Run Autopilot task sequence on device](run-autopilot-task-sequence.md)
 - Step 10: [Register device for Windows Autopilot](register-device.md)
 
 For an overview of the Windows Autopilot deployment for existing devices workflow, see [Windows Autopilot deployment for existing devices in Intune and Configuration Manager](existing-devices-workflow.md)
+
+## Next step: Run Autopilot task sequence on device
+
+> [!div class="nextstepaction"]
+> [Step 9: Run Autopilot task sequence on device](run-autopilot-task-sequence.md)
+
+## More information
+
+For more information on speeding up the deployment process, see the following article(s):
+
+- [Speeding up Windows Autopilot for existing devices](/archive/blogs/mniehaus/speeding-up-windows-autopilot-for-existing-devices)

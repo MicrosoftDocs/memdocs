@@ -29,8 +29,20 @@ Autopilot user-driven Azure AD join steps:
 - Step 5: [Create Autopilot task sequence in Configuration Manager](create-autopilot-task-sequence.md)
 - Step 6: [Create collection in Configuration Manager](create-collection.md)
 - Step 7: [Deploy Autopilot task sequence to collection in Configuration Manager](deploy-autopilot-task-sequence.md)
-- Step 8: [Speeding up the deployment process (optional)](speed-up-deployment.md)
+- Step 8: [Speed up the deployment process (optional)](speed-up-deployment.md)
 - Step 9: [Run Autopilot task sequence on device](run-autopilot-task-sequence.md)
 - Step 10: [Register device for Windows Autopilot](register-device.md)
 
 For an overview of the Windows Autopilot deployment for existing devices workflow, see [Windows Autopilot deployment for existing devices in Intune and Configuration Manager](existing-devices-workflow.md)
+
+## Next step: Create and distribute package for JSON file in Configuration Manager
+
+> [!div class="nextstepaction"]
+> [Step 4: Create and distribute package for JSON file in Configuration Manager](create-json-package.md)
+
+## More information
+
+For more information on creating the JSON file, see the following article(s):
+
+- [Create the JSON file](/mem/autopilot/existing-devices#create-the-json-file)
+- [Get Autopilot profiles for existing devices](/mem/autopilot/existing-devices#get-autopilot-profiles-for-existing-devices)
