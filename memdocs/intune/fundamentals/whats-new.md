@@ -66,6 +66,22 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Scripts
 ### Tenant administration
 -->
+## Week of April 10, 2023
+
+### Device configuration
+
+#### User configuration support for Windows 10 multi-session VMs is now GA<!-- 17060455 -->
+
+User configuration support for Windows 10 multi-session VMs is now GA. With this, you can:
+
+- Configure user scope policies using **Settings catalog** and assign to groups of users.
+- Configure user certificates and assign to users.
+- Configure PowerShell scripts to install in the user context and assign to users.
+
+Applies to:
+
+- **Windows 10**
+- Virtual machines created in [Azure Public and Azure Government clouds](../fundamentals/intune-govt-service-description.md)
 
 ## Week of April 3, 2023
 
