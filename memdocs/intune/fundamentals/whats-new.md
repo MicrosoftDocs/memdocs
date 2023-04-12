@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/30/2023
+ms.date: 03/27/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -77,29 +77,6 @@ You can now update apps of type **macOS apps (DMG)** deployed using Intune. Edit
 #### Install required apps during pre-provisioning<!-- 12716381 -->
 A new toggle is available in the Enrollment Status Page (ESP) profile that allows you to select whether you want to attempt to install required applications during the pre-provisioning (white glove) technician phase. We understand that installing as many applications as possible during pre-provisioning is desired to reduce the end user set up time. In case of an app install failure, ESP will continue except for the apps specified in the ESP profile. To enable this function, you will need to edit your Enrollment Status Page profile by selecting **Yes** on the new setting entitled **Only fail selected apps in technician phase**. This setting will only appear if you have blocking apps selected. For information about ESP, go to [Set up the Enrollment Status Page](../enrollment/windows-enrollment-status.md).
 
-### Device configuration
-
-#### Add Google accounts to Android Enterprise personally owned devices with a work profile<!-- 9113561 -->
-
-On Android Enterprise personally owned devices with a work profile, you can configure settings that restrict device features and settings. Currently, there's an **Add and remove accounts** setting. This setting prevents accounts from being added in the work profile, including preventing Google accounts.
-
-This setting changed. You can now add Google accounts. The **Add and remove accounts** setting options are:
-
-- **Block all accounts types**: Prevents users from manually adding or removing accounts in the work profile. For example, when you deploy the Gmail app into the work profile, you can prevent users from adding or removing accounts in this work profile.
-- **Allow all accounts types**: Allows all accounts, including Google accounts. These Google accounts are blocked from installing apps from the **Managed Google Play Store**.
-
-  This setting requires:
-
-  - Google Play app version 80970100 or higher
-
-- **Allow all accounts types, except Google accounts** (default): Intune doesn't change or update this setting. By default, the OS might allow adding accounts in the work profile.
-
-For more information on the settings you can configure, go to [Android Enterprise device settings list to allow or restrict features on personally owned devices using Intune](../configuration/device-restrictions-android-enterprise-personal.md).
-
-Applies to:
-
-- Android Enterprise personally owned devices with a work profile
-
 ## Week of March 20, 2023 (Service release 2303) 
 
 ### App management
@@ -117,7 +94,7 @@ You can view and manage VPP apps with only the **Mobile apps** permission assign
 
 ### Device configuration
 
-#### New settings and setting options available in the macOS Settings Catalog <!-- 16813395  -->  
+### New settings and setting options available in the macOS Settings Catalog <!-- 16813395  -->  
 The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
 
 New settings are available in the Settings Catalog. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can see these settings at **Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform > **Settings catalog** for profile type.
@@ -183,6 +160,8 @@ Control visibility of the device category prompt in Intune Company Portal. You c
 Create and manage multiple enrollment profiles and tokens for Android Enterprise fully managed devices. With this new functionality, you can now use the *EnrollmentProfileName* dynamic device property to automatically assign enrollment profiles to fully managed devices. The enrollment token that came with your tenant will remain in a default profile. For more information, see [Set up Intune enrollment of Android Enterprise fully managed devices](../enrollment/android-fully-managed-enroll.md).
 
 #### New Azure AD frontline worker experience for iPad<!-- 6367427  -->  
+*This capability will begin to roll out to tenants in mid-April.*
+
 Intune now supports a frontline worker experience for iPhones and iPads using Apple automated device enrollment. You can now enroll devices that are enabled in Azure AD shared mode via zero-touch. For more information about how to configure automated device enrollment for shared device mode, see [Set up enrollment for devices in Azure AD shared device mode](../enrollment/automated-device-enrollment-shared-device-mode.md).  
 
 Applies to:
@@ -781,7 +760,7 @@ Admins can now see a preview of a PowerShell script's content for proactive reme
 ### App management
 
 #### Win32 app supersedence GA<!-- 9318154 -->
-We are in the process of rolling out the feature set for Win32 app supersedence GA, which will add support for apps with supersedence during ESP and also allow supersedence and dependency relationships to be added in the same app subgraph. For more information, see [Win32 app supersedence improvements](https://aka.ms/Intune/Win32-Supersedence). For information about Win32 app supersedence, see [Add Win32 app supersedence](../apps/apps-win32-supersedence.md).
+We have rolled out the feature set for Win32 app supersedence GA, which adds support for apps with supersedence during ESP and also allows supersedence and dependency relationships to be added in the same app subgraph. For more information, see [Win32 app supersedence improvements](https://aka.ms/Intune/Win32-Supersedence). For information about Win32 app supersedence, see [Add Win32 app supersedence](../apps/apps-win32-supersedence.md).
 
 ## Week of January 9, 2023
 

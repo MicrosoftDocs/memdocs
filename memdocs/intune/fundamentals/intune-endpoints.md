@@ -8,7 +8,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 03/20/2023
+ms.date: 03/30/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -48,7 +48,7 @@ To manage devices behind firewalls and proxy servers, you must enable communicat
 - For some tasks (like downloading software updates for the classic pc agent), Intune requires unauthenticated proxy server access to manage.microsoft.com
 
 > [!NOTE]
-> The inspection of SSL traffic is not supported to 'manage.microsoft.com' endpoint.
+> The inspection of SSL traffic is not supported to 'manage.microsoft.com' or 'dm.microsoft.com' endpoints.
 
 You can modify proxy server settings on individual client computers. You can also use Group Policy settings to change settings for all client computers located behind a specified proxy server.
 
@@ -225,12 +225,18 @@ Allow the following hostnames through your firewall to support Security Manageme
 For communication between clients and the cloud service:
 - \*.dm.microsoft.com - The use of a wildcard supports the cloud-service endpoints that are used for enrollment, check-in, and reporting, and which can change as the service scales.
 
+> [!IMPORTANT]
+> SSL Inspection is not supported on the 'dm.microsoft.com' endpoint.
+
 ## Microsoft Intune Endpoint Privilege Management
 
 Allow the following hostnames through your firewall to support Endpoint Privilege Management.
 
 For communication between clients and the cloud service:
 - \*.dm.microsoft.com - The use of a wildcard supports the cloud-service endpoints that are used for enrollment, check-in, and reporting, and which can change as the service scales. 
+
+> [!IMPORTANT]
+> SSL Inspection is not supported on the 'dm.microsoft.com' endpoint.
 
 For more information, see the [Overview of Endpoint Privilege Management](../protect/epm-overview.md)
 

@@ -32,18 +32,28 @@ ms.collection:
 
 # Rename your device from the Company Portal website  
 
-**Applies to:** 
-* Android   
-* iOS/iPadOS    
-* macOS   
-* Windows 10/11    
+**Applies to:**
+
+* Android
+* iOS/iPadOS
+* macOS
+* Windows 10/11
 
 Remotely change the names of your enrolled devices from the Company Portal website.  
 
 1. On any device, sign in to the [Company Portal website](https://portal.manage.microsoft.com) with your work or school account.  
-2. Select the menu > **Devices**.   
+2. Select the menu > **Devices**.
 3. Select the device you want to rename.  
-4. Select **Rename**. If the rename option isn't visible at the top of your page, select the **More (…)** menu to see all overflow actions. Then choose **Rename**.   
-5. Enter a new name for your device. Then select **Rename** to save your changes.   
+4. Select **Rename**. If the rename option isn't visible at the top of your page, select the **More (…)** menu to see all overflow actions. Then choose **Rename**.
+5. Enter a new name for your device. Then select **Rename** to save your changes.
 
-Need additional help? Contact your support person. For contact details, sign in to the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980) and go to **Helpdesk**.    
+Need additional help? Contact your support person. For contact details, sign in to the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980) and go to **Helpdesk**.
+
+## Intune administrator resources
+
+Using the **Rename** action in the Company Portal website, you can modify the device name to a user-friendly and easily recognizable name. However, it's essential to note that this change only applies to the Company Portal and not to the **Device name** or the **Management name** in the Microsoft Intune admin center.
+
+For more information, go to:
+
+- [Rename a device with Microsoft Intune](../remote-actions/device-rename.md).
+- [View device details with Microsoft Intune](../remote-actions/device-inventory.md#hardware-device-details).

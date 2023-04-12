@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/03/2022
+ms.date: 03/31/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -117,7 +117,7 @@ Using Visual Studio, create a Console App (.NET Framework) project that supports
 
     ``` csharp
      using System.Security;
-     using Microsoft.IdentityModel.Clients.ActiveDirectory;
+     using Microsoft.Identity.Client;
      using System.Configuration;
     ``` 
 
@@ -143,7 +143,7 @@ Using Visual Studio, create a Console App (.NET Framework) project that supports
     ```
 
 12. In the **Solution Explorer**, right-click on **References**, then select **Manage NuGet Packages**.
-13. Search for *Microsoft.IdentityModel.Clients.ActiveDirectory* and install the related Microsoft NuGet package.
+13. Search for *Microsoft.Identity.Client* and install the related Microsoft NuGet package.
 14. In **Solution Explorer** select and open the *App.config* file.
 15. Add the <code>appSettings</code> section so that the xml appears as follows:
 

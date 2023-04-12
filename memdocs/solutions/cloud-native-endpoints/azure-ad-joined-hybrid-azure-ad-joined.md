@@ -27,6 +27,7 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection:
   - M365-identity-device-management
+  - intune-scenario
 ---
 
 # Azure AD joined vs. Hybrid Azure AD joined in cloud-native endpoints

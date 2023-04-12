@@ -31,6 +31,8 @@ ms.collection:
 
 In this Intune topic, you'll create a custom role with specific permissions for a security operations department. Then you'll assign the role to a group of such operators. There are several default roles that you can use right away. But by creating custom roles like this one, you have precise access control to all parts of your mobile device management system.
 
+[!INCLUDE [intune-evaluate](../includes/intune-evaluate.md)]
+
 If you don't have an Intune subscription, [sign up for a free trial account](free-trial-sign-up.md).
 
 ## Prerequisites
@@ -73,7 +75,7 @@ Now everyone in the group is a member of the *Security operations* role and can 
 
 ## Clean up resources
 
-If you don't want to use the new custom role any more, you can delete it. Choose **Roles** > **All roles** > choose the ellipses next to the role > **Delete**.
+If you don't want to use the new custom role anymore, you can delete it. Choose **Roles** > **All roles** > choose the ellipses next to the role > **Delete**.
 
 ## Next steps
 

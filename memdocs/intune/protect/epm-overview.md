@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/29/2023
+ms.date: 03/30/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -38,7 +38,7 @@ Microsoft Intune Endpoint Privilege Management (EPM) allows your organization’
 
 Tasks that commonly require administrative privileges are application installs (like Microsoft 365 Applications), updating device drivers, and running certain Windows diagnostics.
 
-Endpoint Privilege Management supports your zero-trust journey by helping your organization achieve a broad user base running with least privilege, while allowing users to still run tasks allowed by your organization to remain productive.
+Endpoint Privilege Management supports your [Zero Trust](/security/zero-trust/zero-trust-overview) journey by helping your organization achieve a broad user base running with least privilege, while allowing users to still run tasks allowed by your organization to remain productive. For more information, see [Zero Trust with Microsoft Intune](../fundamentals/zero-trust-with-microsoft-intune.md)
 
 The following sections of this article discuss requirements to use EPM, provide a functional overview of how this capability works, and introduce important concepts for EPM.
 
@@ -67,6 +67,8 @@ Endpoint Privilege Management has the following operating system requirements:
 
 > [!IMPORTANT]
 > Elevation settings policy will show error if a device is not at the minimum version specified above.
+>
+> Endpoint Privilege Management has some new networking requirements, see [Network Endpoints for Intune](../../intune/fundamentals/intune-endpoints.md#microsoft-intune-endpoint-privilege-management).
 >
 > Only devices with a Hybrid Azure Active Directory join or Azure Active Directory join are supported. Workplace join is not a supported trust type.
 

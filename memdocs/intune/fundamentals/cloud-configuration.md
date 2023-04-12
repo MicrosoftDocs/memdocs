@@ -28,6 +28,7 @@ ms.custom: intune-azure; get-started
 ms.collection:
 - tier2
 - M365-identity-device-management
+- intune-scenario
 ---
 
 # Guided scenario - Windows 10/11 in cloud configuration

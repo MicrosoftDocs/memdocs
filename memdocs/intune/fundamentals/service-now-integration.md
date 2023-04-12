@@ -51,6 +51,8 @@ To get started, review the following steps:
 
 - You must have ServiceNow permissions to view incidents when using the **Test connection** action. You can assign the *itil* role to grant appropriate permissions to view incidents.  A ServiceNow license needs to be assigned to admins who view incidents. 
 
+- You must have the Troubleshooting Preview enabled. To enable the Troubleshooting Preview, select **Preview upcoming changes to Troubleshooting and provide feedback** in the Troubleshooting pane. After reviewing the Troubleshooting preview information, select **Try it now** to enable the preview. 
+
 - To configure the ServiceNow connector to establish a connection between Intune and your ServiceNow instance. See the steps outlined in [Configure the ServiceNow integration with Microsoft Intune](#configure-the-servicenow-integration-with-microsoft-intune).  
 
 ## Configure the ServiceNow integration with Microsoft Intune
@@ -63,7 +65,7 @@ To get started, review the following steps:
      | Field           | Description                                                                                                                         |
      |--------------------|-------------------------------------------------------------------------------------------------------------------------------------|
      | ServiceNow Instance Host             | A URL that points to your organization's ServiceNow instance. For example, 'https://contoso.service-now.com'   |
-     | ServiceNow Incident API URL         | The table in the ServiceNow database that contains incidents. Incidents are retrieved from this table.  For example, api/now/table/incident                           |
+     | ServiceNow Incident API URL         | The table in the ServiceNow database that contains incidents. Incidents are retrieved from this table.  For example, /api/now/table/incident                           |
      | ServiceNow Client appID     | The unique identifier assigned in ServiceNow to the application used to represent Intune. Provide the client ID of the app. You need to have a client app created in ServiceNow to copy over the appID and use it here to establish the connection. Go to [How to create a ServiceNow app](#how-to-create-a-servicenow-app).                                 |
 
 5. Select **Test connection** to verify if your settings are correct. You see a verification message to connect to your ServiceNow account. Select **Allow**.
