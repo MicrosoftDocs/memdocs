@@ -30,29 +30,27 @@ ms.collection:
 
 # Reports for LAPS policy in Intune
 
-After your managed devices successfully process a Microsoft Intune policy for Windows LAPS, you can view details about those devices from within the Microsoft Intune admin center. The details that your Intune administrator account can view depends on the permissions it has been assigned. For information about the different permissions, see [Role based access controls for LAPS](../protect/windows-laps-overview.md#role-based-access-controls-for-laps).
+After devices have successfully process a Microsoft Intune policy for Windows LAPS, you can view details about those devices from within the Microsoft Intune admin center. Reports that are specific to LAPS policy as well as standard details similar to those for other policies, can all be found in the Microsoft Intune admin center where you create policies to manage Windows LAPS:
 
-Available information includes:
-
-- **Policy details** - These are the standard details you can view for any Intune policies, that show details like how many devices have succeeded in processing a policy, have errors or conflicts, and so forth.  To view policy details, in the Microsoft Intune admin center go to **Endpoint security** > **Account protection**, and select a policy for Windows LAPS:
+In the Microsoft Intune admin center go to **Endpoint security** > **Account protection**, and select a policy for Windows LAPs. 
 
   :::image type="content" source="./media/windows-laps-reports/device-policy-1.png" alt-text="Screen shot of basic policy details for a Windows LAPS policy.":::
 
-  While viewing a policy, you can select from two report tiles:
-  - **Device assignment status** - A report that shows status for all the devices targeted by the policy.
-  - **Per setting status** - View the configuration status of this policy across all devices and users.
+In addition to the standard policy details similar to other policy types, like how many devices have succeeded in processing a policy, have errors or conflicts, and so forth, you'll find the following two tiles that provide access to rep;orts for LAPS:  
 
-***PENDING - functional details about reports, drill in, and details that are not universal to reports or need more explinatino to be provided to the admin.***
+- **Device assignment status** - A report that shows status for all the devices targeted by the policy.
+- **Per setting status** - View the configuration status of this policy across all devices and users.
+ 
+## Device assignment status
 
-## Event Audit logs
+## Per setting status
 
-***Pending - Information needed:***
 
-- In which log on the device (?) do the Audit events appear?
-- Where in the Intune admin center to audit events appear? (Is this Device action status when viewing a devices Overview page?)
-- Which actions cause audit events (compile a central list here, even though we mention this action in various places)
-- List of audit events/ID’s (Would this be of use)?
+## Events and Audit logs
 
+Audit events are logged to your Azure Active Directory (Azure AD) each time an account password is rotated either by policy or manually. An event is also logged when a password is viewed for an account.
+
+For information about Azure AD event logs, see [Audit logs in Azure Active Directory](/azure/active-directory/reports-monitoring/concept-audit-logs).
 
 ## Next steps
 
