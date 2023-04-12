@@ -7,7 +7,11 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
+<<<<<<< HEAD
 ms.date: 12/14/2022
+=======
+ms.date: 04/18/2023
+>>>>>>> c800684d76f8c07927c3d2cecd76c7648aab048f
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -74,7 +78,27 @@ These settings apply to Android Enterprise personally owned devices with a work 
 
   You can also use an app configuration policy to grant permissions for individual apps (**Apps** > **App configuration policies**).
 
+<<<<<<< HEAD
 - **Add and remove accounts**: **Block** prevents users from manually adding or removing accounts in the work profile. For example, when you deploy the Gmail app into the work profile, you can prevent users from adding or removing accounts in this work profile. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow adding accounts in the work profile.  
+=======
+- **Add and remove accounts**: This setting allows or prevents accounts from being added in the work profile, including Google accounts. Your options:
+
+  - **Allow all accounts types, except Google accounts** (default): Intune doesn't change or update this setting. By default, the OS might allow adding accounts in the work profile.
+
+    In a previous release, this setting was named **Not configured**.
+
+  - **Allow all account types**: Allows all accounts, including Google accounts. These Google accounts are blocked from installing apps from the **Managed Google Play Store**.
+
+    You can also configure:
+
+    - **Google domain allow-list**:  Restricts users to add only certain Google account domains in the work profile. You can import a list of allowed domains or add them using the `contoso.com` format. When left blank, by default, the OS might allow adding all Google domains in the work profile.
+
+    This setting requires:
+
+    - Google Play app version 80970100 or higher
+
+  - **Block all account types**: Prevents users from manually adding or removing accounts in the work profile. For example, when you deploy the Gmail app into the work profile, you can prevent users from adding or removing accounts in this work profile.
+>>>>>>> c800684d76f8c07927c3d2cecd76c7648aab048f
 
   > [!NOTE]
   > On personally owned devices with a work profile (BYOD) and corporate owned devices with work profile (COPE), Google accounts can't be added to the **Settings** app > **Accounts** > **Work**.
