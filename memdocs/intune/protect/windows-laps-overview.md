@@ -71,6 +71,7 @@ The following are requirements for Intune to support Windows LAPS in your tenant
 **Licensing requirements**:
 
 - **Intune subscription** - *Microsoft Intune Plan 1*, which is the basic Intune subscription. You can also use Windows LAPS with a free trial subscription for Intune.
+
 - **Active Directory subscription** – *Azure Active Directory Free*, which is the free version of Azure AD that’s included when you subscribe to Intune. With Azure AD Free, you can use all the features of LAPS.
 
   If you have Azure Active Directory Premium, you can improve security by using Conditional Access to enforce multifactor authentication before admins can view passwords for devices. You can also make use of Administrative Sets when working with LAPS data.
@@ -86,7 +87,7 @@ Intune policy for Windows LAPS can configure a device to back up a local adminis
   > [!NOTE]  
   > Devices that are workplace-joined (WPJ) are not supported by Intune for LAPS.
 
-- **On-premises** – On-premises supports back up to Windows Server Active Directory.
+- **On-premises** – On-premises supports back up to Windows Server Active Directory (on-premises Active Directory).
 
   > [!IMPORTANT]  
   > LAPS on Windows devices can be configured to use one directory type or the other, but not both. Also consider, the backup directory must be supported by the devices join type – if you set the directory to an on-premises Active Directory and the device is not domain joined, it will accept the policy settings from Intune, but LAPS cannot successfully use that configuration.
