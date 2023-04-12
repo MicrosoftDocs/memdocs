@@ -68,7 +68,7 @@ Before you can enroll corporate-owned iOS/iPadOS devices with Apple School Manag
 
 4. Choose **Upload File...** in the Apple portal, browse to the .pem file, and choose **Save MDM Server** (lower right).
 5. Choose **Get Token** and then download the server token (.p7m) file to your computer.
-6. Go to  **Device Assignments**, and **Choose Device** by manual entry of **Serial Numbers**, **Order Number**, or **Upload CSV File**.
+6. Go to  **Device Assignments**, and **Choose Device** by manual entry of **Serial Numbers** or **Order Number**.
      ![Screenshot of Apple School Manager portal with Device Assignment option selected](./media/apple-school-manager-set-up-ios/asm-device-assignment.png)
 7. Choose the action **Assign to Server**, and choose the **MDM Server** you created.
 8. Specify how to **Choose Devices**, then provide device information and details.
@@ -98,17 +98,12 @@ Now that you've installed your token, you can create an enrollment profile for A
 
     - **Enroll without User Affinity** - Choose this option for devices unaffiliated with a single user, such as a shared device. Use this option for devices that perform tasks without accessing local user data. Apps like the Company Portal app don't work.
 
-5. If you chose **Enroll with User Affinity**, you can let users authenticate with Company Portal instead of the Apple Setup Assistant.
+5. If you chose **Enroll with User Affinity**, you can let users authenticate with Company Portal, Setup Assistant (legacy), and Setup Assistant with modern authntication.
 
-    ![Authenticate with Company Portal.](./media/apple-school-manager-set-up-ios/authenticatewithcompanyportal.png)
+    ![Authenticate with Company Portal.](./media/apple-school-manager-set-up-ios/authenticatewithcompanyportal.png) <-This screenshot needs to be updated.
 
     > [!NOTE]
-    > If you want do any of the following, set **Authenticate with Company Portal instead of Apple Setup Assistant** to **Yes**.
-    >    - use multifactor authentication
-    >    - prompt users who need to change their password when they first sign in
-    >    - prompt users to reset their expired passwords during enrollment
-    >
-    > These aren't supported when authenticating with Apple Setup Assistant.
+    > Refer to https://learn.microsoft.com/en-us/mem/intune/enrollment/automated-device-enrollment-authentication, for more details on authentication options.
 
 6. Choose **Device Management Settings** and choose if you want devices using this profile to be supervised.
     **Supervised** devices give you more management options and disabled Activation Lock by default. Microsoft recommends using ADE as the mechanism for enabling Intune's supervised mode, especially for organizations that are deploying large numbers of iOS/iPadOS devices.
