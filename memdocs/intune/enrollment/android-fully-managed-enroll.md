@@ -71,11 +71,13 @@ To create a new enrollment profile:
     - **Name**: Give the profile a name. Note the name down for later, because you'll need it when you set up the dynamic device group.   
     - **Description**: Optionally, add a profile description.  
 7. Select **Next**. 
-8. Optionally, on the **Scope tags** page, apply scope tages to limit profile visibility and management to select administrators in Intune.  Then select **Next**.  
+8. Optionally, on the **Scope tags** page, apply one or more scope tags to limit profile visibility and management to select admins in Intune. Admins associated with these scope tags will be able to access the profile. 
 
     >[!IMPORTANT]
-    > Admins who are assigned the Android for work custom role permission don't get automatic access to the enrollment profile, because their roles aren't included within the enrollment profile's default scope. If they're supposed to have access to the profile, add the applicable scope tags for them now. For more information about creating scope tags for custom roles, see [Create a custom role in Intune](../fundamentals/create-custom-role.md#to-create-a-custom-role).  
+    > During testing, we noticied that custom admin roles that are assigned the Android for work permission don't get automatic access to the default enrollment profile. To enable access for them, you have to add the enrollment profile's default scope tag to the custom role. You can add the scope tag when you create the role or you can add it on to an existing role. For more information about adding scope tags to custom roles, see [Create a custom role in Intune](../fundamentals/create-custom-role.md#to-create-a-custom-role).  
+9. Select **Next**.  
 10. Review the summary of your profile, and then select **Create** to finalize it.    
+
 
 To review, make changes, or delete the profile:  
 
