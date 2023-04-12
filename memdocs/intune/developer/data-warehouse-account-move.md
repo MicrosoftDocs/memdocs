@@ -33,7 +33,7 @@ ms.collection:
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-By requesting an account move, you are requesting that your data center is changed to another location. After the move, your Data Warehouse will reset and begin recording data at the new location based on the specified the day your move begins. To back up your previous Data Warehouse data, please complete the following steps **prior** to your account move. Most Data Warehouse tables retain data for 30 days, so any data gap in these tables will no longer be available 30 days after your account move. To learn more about the retention periods for specific tables, see [Data Warehouse data model](reports-ref-data-model.md). 
+By requesting an account move, you are requesting that your data center is changed to another location. After the move, your Data Warehouse will reset and begin recording data at the new location based on the specified day your move begins. To back up your previous Data Warehouse data, please complete the following steps **prior** to your account move. Most Data Warehouse tables retain data for 30 days, so any data gap in these tables will no longer be available 30 days after your account move. To learn more about the retention periods for specific tables, see [Data Warehouse data model](reports-ref-data-model.md). 
 
 ## Back up your Data Warehouse data 
 
@@ -78,7 +78,7 @@ Some trend charts in your view of the [Microsoft Intune admin center](https://go
 
 ## After a Data Warehouse account move
 
-After the Data Warehouse account move, you'll see in Intune that the Data Warehouse was reset and your data is now stored in the new location. The charts and export options will reset, and you'll see a notification, which upon clicking will direct you to a article explaining why the charts have reset.  
+After the Data Warehouse account move, you'll see in Intune that the Data Warehouse was reset and your data is now stored in the new location. The charts and export options will reset, and you'll see a notification, which upon clicking will direct you to an article explaining why the charts have reset.  
 
 ## Data Warehouse move example 
 
