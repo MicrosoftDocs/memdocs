@@ -1,10 +1,10 @@
 ---
 title: Admin checklist for iOS/iPadOS software updates in Microsoft Intune
-description: 
+description: Guidance and advice for administrators that create and manage software updated for iOS/iPadOS devices using Microsoft Intune. See sample policy for different industry scenarios, including shared devices, kiosk, manufacturing, and information worker.
 ms.author: mandia
 author: MandiOhlinger
 manager: dougeby
-ms.date: 04/11/2023
+ms.date: 04/12/2023
 audience: ITPro
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -23,7 +23,7 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# iOS/iPadOS software updates admin checklist and scenarios in Microsoft Intune
+# Software updates admin checklist and scenarios for iOS/iPadOS devices in Microsoft Intune
 
 Keeping your mobile devices current with software updates is critical. You need to reduce the risk of security events and have minimal disruption to your organization and your users. On iOS/iPadOS supervised devices, Intune has built-in policies that can manage software updates.
 
@@ -73,7 +73,7 @@ If these automatic update settings are disabled, then:
 
 Automatic updates work together with other update policies, which can provide a positive experience for admins and end users.
 
-Using Intune policies, you can force users to update their devices:
+Using Intune policies, you can also force users to update their devices:
 
 - Use [Enrollment Restrictions](../enrollment/create-device-platform-restrictions.md) to prevent users from enrolling devices that aren't current.
 - Create [compliance policies](../protect/compliance-policy-create-ios.md) to determine the devices that aren't updated.
@@ -87,7 +87,7 @@ To manage updates, Apple has the following options:
 
 - **Software update policies**
 
-  These policies offer a controlled roll-out of a specific version. You can also force devices on older versions to upgrade. Admins can specify the iOS/iPadOS version to install and schedule the installation.
+  These policies offer a controlled roll-out of a specific version. You can also force devices on older versions to upgrade. Admins can enter the iOS/iPadOS version to install and schedule the installation.
 
 - **Software update deferral policies**
 
@@ -109,9 +109,11 @@ For example, in the United States, there are four primary time zones: Pacific (U
 
 When you create software update policies, be aware of the broader impact of the version details in all your policies.
 
-For example, you configure a policy that delays updates for 90 days. If there's an enrollment restriction policy that requires devices have a recent iOS/iPadOS version, then after a device reset, devices could be blocked from enrolling.
+For example:
 
-In another example, you create a compliance policy that requires a minimum iOS/iPadOS version that's recent. With this policy, devices on older releases become noncompliant. If you use conditional access to enforce compliance, then users are blocked and can't work.
+- You configure a policy that delays updates for 90 days. If there's an enrollment restriction policy that requires devices have a recent iOS/iPadOS version, then after a device reset, devices could be blocked from enrolling.
+
+- You create a compliance policy that requires a minimum iOS/iPadOS version that's recent. With this policy, devices on older releases become noncompliant. If you use conditional access to enforce compliance, then users are blocked and can't work.
 
 ## Common industry scenarios
 
@@ -140,7 +142,7 @@ This group is people with gained knowledge. This knowledge and their thinking ab
 
 Knowledge workers typically have their own device that's only used by them. It's not shared with other users or other knowledge workers.
 
-In scenarios like knowledge worker devices, the primary goal is for the update process be as simple and quick as possible. Their apps are mostly store-based, and the apps should remain compatible with the latest OS version. On these devices, users are typically tolerant of prompts for updates and/or choosing a convenient time for reboots.
+In scenarios like knowledge worker devices, the primary goal is for the update process to be as simple and quick as possible. Their apps are mostly store-based, and the apps should remain compatible with the latest OS version. On these devices, users are typically tolerant of prompts for updates and/or choosing a convenient time for reboots.
 
 An update strategy and priorities for these devices typically include:
 
@@ -164,9 +166,9 @@ To accomplish these goals, you can use a policy with the following default setti
 
 ### Kiosks
 
-These devices are typically in-store devices, and can be a desktop computer or a mobile device. They're typically used by employees to serve customers and directly by customers for self-service tasks. They can also be a visual display that all customers see when they're on-premises.
+These devices are typically in-store devices, and can be a desktop computer or a mobile device. They're typically used by employees to serve customers and used directly by customers for self-service tasks. They can also be a visual display that all customers see when they're on-premises.
 
-In Kiosk-like scenarios, the primary goals for updating the devices are:
+In kiosk-like scenarios, the primary goals for updating the devices are:
 
 - Make sure devices are current with approved OS updates.
 - Admins manage the updates and any versioning.
@@ -182,19 +184,19 @@ An update strategy and priorities for these devices typically include:
 
 You're configuring an iOS/iPadOS update profile for the kiosk devices at Contoso. These devices operate in a retail outlet. Your staff uses the devices to serve customers 7 days a week, including extended retail hours. The devices run a single Line of Business (LOB) kiosk app, which was developed in-house by Contoso. This internal application is only tested and validated on a quarterly basis.
 
-You want to deploy the specific iOS/iPadOS version that this LOB app was recently tested with, which is iOS 16.3. If this kiosk application doesn't work correctly, the retail outlet can't serve customers. The devices are connected to Wi-Fi and charge overnight when the retail outlet is closed to customers.
+You want to deploy the specific iOS/iPadOS version that this LOB app was recently tested with, which is iOS 16.3. If this kiosk application doesn't work correctly, then the retail outlet can't serve customers. The devices are connected to Wi-Fi and charge overnight when the retail outlet is closed to customers.
 
-You chose an overnight servicing window of 10 hours where updates can be downloaded and applied, before the store opens each morning.
+You chose an overnight servicing window of 10 hours where updates can be downloaded and applied, before the store opens.
 
 To accomplish this task, create a policy with the following settings:
 
-:::image type="content" source="./media/software-updates-guide-ios-ipados/kiosks-policy-settings.png" alt-text="Screenshot that shows the select version to install and scheduled time window software update settings for iOS/iPadOS devices in the Microsoft Intune admin center.":::
+:::image type="content" source="./media/software-updates-guide-ios-ipados/kiosks-policy-settings.png" alt-text="Screenshot that shows the specific version to install and installing the updates on Monday nights for iOS/iPadOS devices in the Microsoft Intune admin center.":::
 
 ### Factory machines
 
 ??Need some text on what factory machines are, and examples.??
 
-In Factory Machine scenarios, the primary goal is to make sure devices behave in a consistent manner. Updates may need to be delayed so all application compatibility testing has been completed. Installation and reboots occur at specific times and are typically deployed in a phased approach.
+In factory machine scenarios, the primary goal is to make sure devices behave in a consistent manner. Updates may need to be delayed so all application compatibility testing has been completed. Installation and reboots occur at specific times and are typically deployed in a phased approach.
 
 An update strategy and priorities for these devices typically include:
 
@@ -208,11 +210,13 @@ You're configuring an update profile for devices on the manufacturing floor at C
 
 These devices run two vendor apps. To remain in a supported configuration, both apps are updated infrequently, and must run a specific version of the app and operating system.
 
-You want to deploy a specific, older iOS/iPadOS version (15) to these devices, as the app vendor doesn't support later releases yet. Since the devices are nearly always in use, you only have a small maintenance window once a week on Sunday. So, you want to schedule updates during a 2-hour downtime window overnight on a Sunday.
+You want to deploy a specific, older iOS/iPadOS version (15) to these devices, as the app vendor doesn't support later releases yet. Since the devices are nearly always in use, you only have a small maintenance window once a week on Sunday.
+
+You want to schedule updates during a 2-hour downtime window overnight on a Sunday.
 
 To accomplish this task, create a policy with the following settings:
 
-:::image type="content" source="./media/software-updates-guide-ios-ipados/factory-machines-policy-settings.png" alt-text="Screenshot that shows the select version to install and scheduled time window software update settings for iOS/iPadOS devices in the Microsoft Intune admin center.":::
+:::image type="content" source="./media/software-updates-guide-ios-ipados/factory-machines-policy-settings.png" alt-text="Screenshot that shows the specific version to install and installing the updates on Sundays for iOS/iPadOS devices in the Microsoft Intune admin center.":::
 
 ### Shared devices
 
@@ -240,9 +244,9 @@ To accomplish this task, this scenario involves two policies:
 
   :::image type="content" source="./media/software-updates-guide-ios-ipados/shared-devices-outside-scheduled-time-policy-settings.png" alt-text="Screenshot that shows installing the latest version and outside scheduled time software update settings for iOS/iPadOS devices in the Microsoft Intune admin center.":::
 
-- You want all users signed out or reboot the device. In the second policy, you can create an Apple Business Manager enrollment profile to sign out any users who are idle for more than 15 minutes (900 seconds):
+- You want all users signed out or reboot the device. In the second policy, you can create an Apple Business Manager enrollment profile to sign out any users who are idle for more than 15 minutes (900 seconds): ??Should this policy be listed first, since it's an enrollment policy?
 
-  :::image type="content" source="./media/software-updates-guide-ios-ipados/shared-devices-maximum-seconds-policy-settings.png" alt-text="Screenshot that shows installing the latest version and outside scheduled time software update settings for iOS/iPadOS devices in the Microsoft Intune admin center.":::
+  :::image type="content" source="./media/software-updates-guide-ios-ipados/shared-devices-maximum-seconds-policy-settings.png" alt-text="Screenshot that shows enrolling without user affinity and setting the inactivity value for iOS/iPadOS devices in the Microsoft Intune admin center.":::
 
 ## Next steps
 
