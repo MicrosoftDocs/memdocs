@@ -41,7 +41,7 @@ This article describes the requirements and steps to connect Trend Micro Mobile 
 
 The following subscriptions and accounts are required to integrate Trend Micro Mobile Security as a Service with Microsoft Intune.
 
-- Microsoft Intune subscription
+- Microsoft Intune Plan 1 subscription
 - Azure Active Directory (Azure AD) account with Global Administrator rights to grant the following permissions:
   - Sign in and read user profile
   - Access the directory as the signed-in user

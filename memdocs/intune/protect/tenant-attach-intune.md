@@ -51,7 +51,7 @@ To support using Intune endpoint security policies with Configuration Manager de
 
 - **Permissions to Azure AD** - To complete setup of tenant attach, you’ll need an account with Global Administrator permissions to your Azure subscription.
 
-- **Tenant for Microsoft Defender for Endpoint** – Your Microsoft Defender for Endpoint tenant must be integrated with your Microsoft Intune tenant (Intune subscription).  See [Use Microsoft Defender for Endpoint](advanced-threat-protection.md) in the Intune documentation.
+- **Tenant for Microsoft Defender for Endpoint** – Your Microsoft Defender for Endpoint tenant must be integrated with your Microsoft Intune tenant (Microsoft Intune Plan 1 subscription).  See [Use Microsoft Defender for Endpoint](advanced-threat-protection.md) in the Intune documentation.
 
 ### Configuration Manager version requirements for Intune endpoint security policies
 
