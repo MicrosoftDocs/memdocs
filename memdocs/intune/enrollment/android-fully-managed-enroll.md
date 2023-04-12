@@ -74,7 +74,7 @@ To create a new enrollment profile:
 8. Optionally, on the **Scope tags** page, apply one or more scope tags to limit profile visibility and management to select admins in Intune. Admins associated with these scope tags will be able to access the profile. 
 
     >[!IMPORTANT]
-    > During testing, we noticied that custom admin roles that are assigned the Android for work permission don't get automatic access to the default enrollment profile. To enable access for them, you have to add the enrollment profile's default scope tag to the custom role. You can add the scope tag when you create the role or you can add it on to an existing role. For more information about adding scope tags to custom roles, see [Create a custom role in Intune](../fundamentals/create-custom-role.md#to-create-a-custom-role).  
+    > Custom admin roles that are assigned the Android for work permission don't get automatic access to the default enrollment profile. To enable access for them, you have to add the enrollment profile's default scope tag to the custom role. You can add the scope tag when you create the role or you can add it on to an existing role. For more information about adding scope tags to custom roles, see [Create a custom role in Intune](../fundamentals/create-custom-role.md#to-create-a-custom-role).  
 9. Select **Next**.  
 10. Review the summary of your profile, and then select **Create** to finalize it.    
 
