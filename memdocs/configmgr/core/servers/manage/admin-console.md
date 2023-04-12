@@ -202,16 +202,15 @@ The **Documentation** node has no explicit proxy configuration. It uses any OS-d
 <!--9070525-->
 *(Introduced in version 2203)*
 
-Starting in version 2203, the Configuration Manager console offers a dark theme. Using a console theme can help you easily distinguish a test environment from a production environment or one hierarchy from another. To use the theme, select the arrow from the top left of the ribbon, then choose **Switch console theme**. Select **Switch console theme** again to return to the light theme.
-
-> [!Note]
-> The console dark theme is a [pre-release](pre-release-features.md) feature. Currently, there are certain locations in the console that may not display the dark theme correctly.  
+Starting in version 2203, the Configuration Manager console offers a dark theme. To use the theme, select the arrow from the top left of the ribbon, then choose **Switch console theme**. Select **Switch console theme** again to return to the light theme. As of version 2303, the main screen of the console and delete secondary site wizards adhere to the dark theme.  
 
 :::image type="content" source="./media/9070525-console-dark-theme.png" alt-text="Screenshot of the Configuration Manager using the dark theme for the console. The 'Switch console theme' option is displayed in the upper right corner of the image.":::
 
 ### Known issue
 
-When you first switch to a different theme, you may notice the node navigation pane doesn't properly render when you move to a new workspace. To work around this issue, restart the console.
+- Console restart is required on doing the theme switch, as the node navigation pane might not properly render when you move to a new workspace.
+- Currently, there are locations in the console that may not display the dark theme correctly. We are continuosly working to improve the dark theme. 
+
 
 ## Connect via Windows PowerShell
 

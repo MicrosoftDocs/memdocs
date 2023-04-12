@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 04/06/2023
+ms.date: 04/11/2023
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice:
@@ -51,6 +51,16 @@ Learn what new features are available in Windows 365 Enterprise.
 ### Windows 365 Government
 ### Windows 365 app
 -->
+
+<!-- ########################## -->
+## Week of April 10, 2023
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### End user experience
+
+#### Location redirection<!--43953213-->
+
+Users can now turn on Location redirection so that their Cloud PCs use their correct geographic location. For more information, see [Location redirection](../end-user-access-cloud-pc.md#location-preview).
 
 <!-- ########################## -->
 ## Week of April 3, 2023
