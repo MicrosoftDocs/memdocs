@@ -8,11 +8,7 @@ keywords:
 author: dougeby 
 ms.author: dougeby
 manager: dougeby
-<<<<<<< HEAD
-ms.date: 03/20/2023
-=======
 ms.date: 04/06/2023
->>>>>>> c800684d76f8c07927c3d2cecd76c7648aab048f
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -67,18 +63,6 @@ You can use RSS to be notified when this article is updated. For more informatio
 ## App management
 
 ### Changes to app backup and restore behavior on iOS/iPadOS and macOS devices<!-- 16261392  -->  
-<<<<<<< HEAD
-As an app setting, you can select to **Prevent iCloud app backup** for iOS/iPadOS and macOS devices. You will have the option to *not* back up managed App Store apps and line-of-business (LOB) apps on iOS/iPadOS, as well as managed App Store apps on macOS devices (macOS LOB apps won’t support this feature), for both user and device licensed VPP/non-VPP apps. This will include both new and existing App Store/LOB apps sent with and without VPP that are being added to Intune and targeted to users and devices.
-
-Preventing the backup of the specified managed apps will ensure that these apps can be properly deployed via Intune when the device is enrolled and restored from backup. If the admin configures the new setting for new or existing apps in their tenant, managed apps can and will be re-installed for devices, but Intune will no longer allow them to be backed up.
-
-The new setting will appear in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by modifying the properties of an app. For an existing app, you can select **Apps** > **iOS/iPadOS** or **macOS** > *select the app* > **Properties** > Assignment **Edit**. If no group assignment has been set, click **Add group** to add a group. Modify either the setting under **VPN**, **Uninstall on device removal**, or **Install as removable**. Then, select **Prevent iCloud app backup**. The **Prevent iCloud app backup** setting is used to prevent backup of app data for the application. Set to **No** to allow the app to be backed up by iCloud.
-
-For more information, see [Changes to applications’ backup and restore behavior on iOS/iPadOS and macOS devices](https://techcommunity.microsoft.com/t5/intune-customer-success/changes-to-applications-backup-and-restore-behavior-on-ios/ba-p/3692064).
-
-### Prevent automatic updates for Apple VPP apps<!-- 16876430   -->  
-You'll soon be able to control the automatic update behavior for Apple VPP at the per-app assignment level using the new **Prevent automatic updates** setting. This setting will be available in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **iOS/iPadOS** or **macOS** > *Select a volume purchase program app* > **Properties** > **Assignments** > *Select an AAD group* > **App settings**.
-=======
 As an app setting, you can select to **Prevent iCloud app backup** for iOS/iPadOS and macOS devices. You'll have the option to *not* back up managed App Store apps and line-of-business (LOB) apps on iOS/iPadOS, as well as managed App Store apps on macOS devices (macOS LOB apps won't support this feature), for both user and device licensed VPP/non-VPP apps. This feature will include both new and existing App Store/LOB apps sent with and without VPP that are being added to Intune and targeted to users and devices.
 
 Preventing the backup of the specified managed apps will ensure that these apps can be properly deployed via Intune when the device is enrolled and restored from backup. If the admin configures the new setting for new or existing apps in their tenant, then managed apps can and will be reinstalled for devices. But, Intune won't allow them to be backed up.
@@ -89,7 +73,6 @@ For more information, see [Changes to applications' backup and restore behavior 
 
 ### Prevent automatic updates for Apple VPP apps<!-- 16876430   -->  
 You'll be able to control the automatic update behavior for Apple VPP at the per-app assignment level using the new **Prevent automatic updates** setting. This setting will be available in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **iOS/iPadOS** or **macOS** > *Select a volume purchase program app* > **Properties** > **Assignments** > *Select an AAD group* > **App settings**.
->>>>>>> c800684d76f8c07927c3d2cecd76c7648aab048f
 
 Applies to:
 
@@ -139,26 +122,6 @@ Applies to:
 
 For more information about configuring Settings Catalog profiles in Intune, go to [Create a policy using settings catalog](../configuration/settings-catalog.md).
 
-<<<<<<< HEAD
-### Add Google accounts to Android Enterprise personally owned devices with a work profile<!-- 9113561, 14711684 -->
-
-On Android Enterprise personally owned devices with a work profile, you can configure settings that restrict device features and settings. Currently, there's an **Add and remove accounts** setting. This setting prevents accounts from being added in the work profile, including preventing Google accounts. 
-
-This setting is changing, and you will be able to add Google accounts. The **Add and remove accounts** setting options will be: 
-
-- **Block all accounts types**: Prevents users from manually adding or removing accounts in the work profile. For example, when you deploy the Gmail app into the work profile, you can prevent users from adding or removing accounts in this work profile.
-- **Allow all accounts types**: Allows all accounts, including Google accounts. These Google accounts are blocked from installing apps from the **Managed Google Play Store**.
-
-  You can also configure: <!-- 14711684 -->
-
-  - **Google domain allow-list**: Restricts users to add only certain Google account domains in the work profile. You can import a list of allowed domains or add them in the admin center using the `contoso.com` format. When left blank, by default, the OS might allow adding all Google domains in the work profile.
-
-  This setting requires:
-
-  - Google Play app version 80970100 or higher.
-
-- **Allow all accounts types, except Google accounts** (default): Intune doesn't change or update this setting. By default, the OS might allow adding accounts in the work profile.
-=======
 ### New Google domain allow-list settings for Android Enterprise personally owned devices with a work profile<!-- 14711684 -->
 
 On Android Enterprise personally owned devices with a work profile, you can configure settings that restrict device features and settings.
@@ -166,7 +129,6 @@ On Android Enterprise personally owned devices with a work profile, you can conf
 Currently, there's an **Add and remove accounts** setting that can allow Google accounts be added to the work profile. For this setting, when you select **Allow all accounts types**, you can also configure:
 
 - **Google domain allow-list**:  Restricts users to add only certain Google account domains in the work profile. You can import a list of allowed domains or add them in the admin center using the `contoso.com` format. When left blank, by default, the OS might allow adding all Google domains in the work profile.
->>>>>>> c800684d76f8c07927c3d2cecd76c7648aab048f
 
 For more information on the settings you can configure, go to [Android Enterprise device settings list to allow or restrict features on personally owned devices using Intune](../configuration/device-restrictions-android-enterprise-personal.md).
 
@@ -176,11 +138,7 @@ Applies to:
 
 ### Disable Activation Lock device action for supervised macOS devices<!-- 16813146  -->  
 
-<<<<<<< HEAD
-You'll soon be able to use the **Disable Activation Lock** device action in Intune to bypass Activation Lock on Mac devices without requiring the current username or password. This new action will be available in **Devices** > **macOS** > select one of your listed devices > **Disable Activation Lock**.
-=======
 You'll be able to use the **Disable Activation Lock** device action in Intune to bypass Activation Lock on Mac devices without requiring the current username or password. This new action will be available in **Devices** > **macOS** > select one of your listed devices > **Disable Activation Lock**.
->>>>>>> c800684d76f8c07927c3d2cecd76c7648aab048f
 
 More information on managing Activation Lock is available at [Bypass iOS/iPadOS Activation Lock with Intune](../remote-actions/device-activation-lock-disable.md) or on Apple's website at [Activation Lock for iPhone, iPad, and iPod touch - Apple Support](https://support.apple.com/en-us/HT201365).
 
@@ -206,13 +164,8 @@ Applies to:
 
 ## Device management
 
-<<<<<<< HEAD
-### Manage Windows LAPS with Intune polices (public preview)<!-- 11890571  -->  
-As a public preview, you’ll soon be able to configure devices for Windows Local Administrator Password Solution (Windows LAPS). Configuration of Windows LAPS will be supported through Intune’s [Account protection policy](../protect/endpoint-security-account-protection-policy.md).
-=======
 ### Manage Windows LAPS with Intune policies (public preview)<!-- 11890571  -->  
 As a public preview, you'll soon be able to configure devices for Windows Local Administrator Password Solution (Windows LAPS). Configuration of Windows LAPS will be supported through Intune's [Account protection policy](../protect/endpoint-security-account-protection-policy.md).
->>>>>>> c800684d76f8c07927c3d2cecd76c7648aab048f
 
 In addition, you'll be able to use [Device Actions](../remote-actions/device-management.md) for devices with Windows LAPS policy for the following tasks:
 
@@ -227,19 +180,11 @@ Applies to:
 - Windows 11
 
 ### New settings available for macOS software update policies<!-- 16646756  -->  
-<<<<<<< HEAD
-You will soon be able to configure the *Max User Deferrals* and *Priority* settings as part of your macOS software update policies.
-
-- Max User Deferrals:  When an update type is configured to *Install later*, this setting allows you to specify the maximum number of times a user can postpone a minor OS update before it’s installed. The system prompts the user once a day. Available for devices running macOS 12 and later.
-
-- Priority: When an update type is configured to *Install later*, this setting allows you to specify values of *Low* or *High* for the scheduling priority for downloading and preparing minor OS updates. Available for devices running macOS 12.3 and later.
-=======
 You'll soon be able to configure the *Max User Deferrals* and *Priority* settings as part of your macOS software update policies.
 
 - Max User Deferrals:  When an update type is configured to *Install later*, this setting allows you to specify the maximum number of times a user can postpone a minor OS update before it's installed. The system prompts the user once a day. Available for devices running macOS 12 and later.
 
 - Priority: When an update type is configured to *Install later*, this setting allows you to specify *Low* or *High* values for the scheduling priority for downloading and preparing minor OS updates. Available for devices running macOS 12.3 and later.
->>>>>>> c800684d76f8c07927c3d2cecd76c7648aab048f
 
 Applies to:
 - macOS
@@ -260,11 +205,7 @@ Applies to:
 ## Device security
 
 ### Support for WDAC Application ID tagging with Intune Firewall Rules policy<!-- 17224780  -->  
-<<<<<<< HEAD
-Intune's *Microsoft Defender Firewall Rules* profiles, which are available as part of endpoint security Firewall policy, will soon support Windows Defender Application Control (WDAC) Application ID tags. With this capability, you’ll be able to scope your firewall rules to an application or a group of applications and rely on your WDAC policies to define those applications. By using tags to link to and rely on WDAC policies, your Firewall Rules policy won’t need to rely on the firewall rules option of an absolute file path or use of a variable file path that can reduce security of the rule.
-=======
 Intune's *Microsoft Defender Firewall Rules* profiles, which are available as part of endpoint security Firewall policy, will soon support Windows Defender Application Control (WDAC) Application ID tags. With this capability, you'll be able to scope your firewall rules to an application or a group of applications and rely on your WDAC policies to define those applications. By using tags to link to and rely on WDAC policies, your Firewall Rules policy won't need to rely on the firewall rules option of an absolute file path or use of a variable file path that can reduce security of the rule.
->>>>>>> c800684d76f8c07927c3d2cecd76c7648aab048f
 
 Use of this capability requires you to have WDAC policies in place that include *AppId* tags that you can then specify in your Intune Microsoft Defender Firewall Rules.
 
