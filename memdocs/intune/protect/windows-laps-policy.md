@@ -144,7 +144,7 @@ For more information, see [Role based access controls for LAPS](../protect/windo
 
 The following are considerations for viewing a devices account and password information:
 
-- Retrieving (viewing) the password for a local admin account triggers an audit event.
+- Retrieving (viewing) the password for a local admin account triggers an [audit event](../protect/windows-laps-reports.md#events-and-audit-logs).
 
 - You cannot view password details for the following devices:
 
@@ -153,7 +153,7 @@ The following are considerations for viewing a devices account and password info
 
 ## Manually rotate passwords
 
-You can use the Intune [device action](../remote-actions/device-management.md) of **Rotate local admin password** to manually rotate a devices password independent of the rotation schedule set by the devices LAPS Policy.
+LAPS policy includes a schedule for automatically rotating account passwords. In addition to a scheduled rotation, you can use the Intune [device action](../remote-actions/device-management.md) of **Rotate local admin password** to manually rotate a devices password independent of the rotation schedule set by the devices LAPS Policy.
 
 To use this device action, your account must have the **Rotate local admin password** permission that is part of the **Remote tasks** category. See [Role based access controls for LAPS](../protect/windows-laps-overview.md#role-based-access-controls-for-laps).
 
@@ -169,15 +169,13 @@ To use this device action, your account must have the **Rotate local admin passw
 
     After you confirm the intent to rotate the password, Intune initiates the process, which can take a few minutes to complete. During this time, the device details pane displays a banner and a *Device actions status* that indicate the action is *Pending*.
 
-
-
 After a successful rotation, the confirmation will be visible in the Device actions status as *Complete*.
 
 The following are considerations for manual password rotation:
 
 - The **Rotate local admin password** device action is available for all Windows devices, but any device that hasn’t successfully backed up its account and password data fails to complete a rotate request.
 
-- Each manual rotation attempt results in an audit event.
+- Each manual rotation attempt results in an [audit event](../protect/windows-laps-reports.md#events-and-audit-logs). Scheduled password rotations also log an audit event.
 
 - When a password is manually rotated, the time to the next scheduled password rotation is reset. The time to the next scheduled rotation is managed through the *PasswordAgeDays* setting in the LAPS policy.
 
