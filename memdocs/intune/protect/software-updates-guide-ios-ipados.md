@@ -15,7 +15,7 @@ ms.localizationpriority: high
 
 #ROBOTS:
 
-ms.reviewer: ahamil, brenduns
+ms.reviewer: ahamil, rogerso, brenduns
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection:
@@ -30,6 +30,10 @@ Keeping your mobile devices current with software updates is critical. You need 
 This article includes an admin checklist to help you get started with software updates on iOS/iPadOS supervised devices. It also lists common industry scenarios and sample policies that you can configure in your environment.
 
 For the specific steps to create a software update policy, go to [Manage iOS/iPadOS software update policies in Intune](software-updates-ios.md).
+
+This article applies to:
+
+- iOS/iPadOS supervised devices
 
 ## Admin checklist
 
@@ -120,7 +124,7 @@ For example:
 Apple devices are used in various industries, including enterprise, retail, manufacturing, and education. Most device use cases can be categorized into the following types:
 
 - **1:1**: Devices are used by only one person.
-- **Shared**: Devices are used by more than one person.  
+- **Shared**: Devices are used by more than one person.
 - **Dedicated**: Devices are used for a specific business purpose, like a kiosk or digital signage.
 
 This section describes some common industry scenarios and gives examples of Intune policies.
@@ -208,7 +212,7 @@ An update strategy and priorities for these devices typically include:
 
 You're configuring an update profile for devices on the manufacturing floor at Contoso's industrial facility. The facility runs 24x7, 365 days a year, except for a few hours of mandatory stoppage for safety inspections. These inspections happen early Sunday morning every week.
 
-These devices run two vendor apps. To remain in a supported configuration, both apps are updated infrequently, and must run a specific version of the app and operating system.
+These devices run two vendor apps. To remain in a supported configuration, both apps are updated infrequently, and must run a specific version of the app and OS.
 
 You want to deploy a specific, older iOS/iPadOS version (15) to these devices, as the app vendor doesn't support later releases yet. Since the devices are nearly always in use, you only have a small maintenance window once a week on Sunday.
 
@@ -221,6 +225,8 @@ To accomplish this task, create a policy with the following settings:
 ### Shared devices
 
 Shared devices are used by many users who typically sign in and out of the device. These devices can be terminal/desktop computers, tablets, laptops, and smartphones. They're often used in offices, classrooms, and retail stores.
+
+For more information on managing shared iOS/iPadOS devices, go to [Shared device solutions for iOS/iPadOS](../enrollment/device-enrollment-shared-ios.md).
 
 For iOS/iPadOS shared devices, to apply updates, all users must be signed out. The users can be signed out or the device can be rebooted, which automatically signs out users.
 
