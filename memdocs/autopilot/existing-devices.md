@@ -350,7 +350,7 @@ Next distribute all content required for the task sequence to distribution point
 
 1. Select the **Autopilot for existing devices** task sequence, and in the ribbon select **Distribute Content**.
 
-1. On the **Specify the content distribution** page, select **Add** to specify either a **Distribution Point** or **Distribution Point Group**.
+1. On the **Specify the content destination** page, select **Add** to specify either a **Distribution Point** or **Distribution Point Group**.
 
 1. Specify content destinations that let the devices get the content.
 
