@@ -132,9 +132,6 @@ This configuration scenario only works with enrolled devices. However, any UEM p
 
 Edge for iOS and Android offers administrators the ability to customize the default configuration for several in-app settings. This capability is currently only offered when Edge for iOS and Android has an Intune App Protection Policy applied to the work or school account that is signed into the app and the policy settings are delivered only through a managed apps App Configuration Policy.
 
-> [!IMPORTANT]
-> Edge for Android does not support Chromium settings that are available in Managed Google Play.
-
 Edge supports the following settings for configuration:
 
 - New Tab Page experiences
