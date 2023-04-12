@@ -53,7 +53,7 @@ This feature applies to:
 - Windows 11
 - Windows 10
 
-This article shows you how export your GPOs, import the GPOs into Intune, and review the analysis and results. To migrate or transfer your imported GPOs to an Intune policy, go to [Create a Settings Catalog policy using your imported GPOs in Microsoft Intune (public preview)](group-policy-analytics-migrate.md).
+This article shows you how to export your GPOs, import the GPOs into Intune, and review the analysis and results. To migrate or transfer your imported GPOs to an Intune policy, go to [Create a Settings Catalog policy using your imported GPOs in Microsoft Intune (public preview)](group-policy-analytics-migrate.md).
 
 ## Before you begin
 

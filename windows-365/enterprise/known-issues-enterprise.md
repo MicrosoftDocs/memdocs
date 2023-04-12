@@ -1,12 +1,12 @@
 ---
-title: Known issues for Windows 365 Enterprise
+title: Known issues for Windows 365 Enterprise and Frontline
 description: Learn about known issues for Windows 365 Enterprise.
 f1.keywords:
 - NOCSH
 ms.author: erikje
 author: ErikjeMS
 manager: dougeby
-ms.date: 01/18/2023
+ms.date: 04/06/2023
 audience: Admin
 ms.topic: troubleshooting
 ms.service: windows-365
@@ -30,7 +30,7 @@ ms.collection:
 - tier2
 ---
 
-# Known issues: Windows 365 Enterprise
+# Known issues: Windows 365 Enterprise and Frontline
 
 The following items are known issues for Windows 365 Enterprise.
 
@@ -47,7 +47,6 @@ While a Windows PC (physical or Cloud PC) sits idle before the first user signs 
 Upgrading an existing Cloud PC between release versions of Windows 10 to Windows 11 may cause the computer name to be changed to a name with a prefix of "pps" while leaving the Intune device name unchanged.
 
 **Troubleshooting steps**: Find and manage the Cloud PC in Microsoft Endpoint Manager by using the unchanged Intune device name, either through the **Devices > All devices** list or the **Devices > Windows 365 > All Cloud PCs** list.
-
 
 ## Windows 365 provisioning fails<!--38483005-->
 
@@ -94,10 +93,10 @@ When using single sign-on, you'll currently be prompted to authenticate to Azure
 **Troubleshooting**: Follow the steps to [troubleshoot sign-in problems](/azure/active-directory/conditional-access/troubleshoot-conditional-access).
 
 ## Single sign-on users are immediately disconnected when the Cloud PC locks
-When single sign-on is not used, users have the option to see the Cloud PC lock screen and enter credentials to unlock their Windows session. However, when single sign-on is used, the Cloud PC fully disconnects the session so that the user can re-launch the connection through the remote desktop client and perform the Azure AD-based single sign-on authentication flow.
+When single sign-on isn't used, users have the option to see the Cloud PC lock screen and enter credentials to unlock their Windows session. However, when single sign-on is used, the Cloud PC fully disconnects the session so that the user can relaunch the connection through the remote desktop client and perform the Azure AD-based single sign-on authentication flow.
 
-## Single sign-on users are not asked to re-authenticate to Azure AD when connecting from an unmanaged device <!--35593334-->
-When using single sign-on, all authentication behavior (including supported credential types and sign-in frequency) are driven through Azure AD.
+## Single sign-on users aren't asked to re-authenticate to Azure AD when connecting from an unmanaged device <!--35593334-->
+When using single sign-on, all authentication behavior (including supported credential types and sign-in frequency) is driven through Azure AD.
 
 **Troubleshooting**: To enforce periodic re-authentication through Azure AD, create a Conditional Access policy using the [sign-in frequency control](/azure/active-directory/conditional-access/howto-conditional-access-session-lifetime#policy-1-sign-in-frequency-control).
 

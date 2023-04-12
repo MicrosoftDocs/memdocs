@@ -27,6 +27,7 @@ ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
+- intune-scenario
 ---
 
 # Common ways to use Microsoft Intune
