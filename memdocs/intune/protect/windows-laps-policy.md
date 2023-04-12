@@ -104,6 +104,18 @@ Before you create a policy, you can review details about the available settings 
 
 6. In **Review + create**, review your settings and then select **Create**. When you select *Create*, your changes are saved, and the profile is assigned. The policy is also shown in the policy list.
 
+## View Device actions status
+
+When your account has sufficient permissions, you can use the Intune admin center to view the status of device actions that have been requested for the device.
+
+For the required permissions, see [Role based access controls for LAPS](../protect/windows-laps-overview.md#role-based-access-controls-for-laps).
+
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **All devices** , and select a device that has a LAPS policy that backs up a local admin account.
+
+2. On the device Overview pane, you can view *Device actions status*. Previously requested actions and pending actions display, including the time of the request, and if the action failed or was successful. In the following example screenshot, a device has had its Local Admin account Password successfully rotated. 
+
+   :::image type="content" source="./media/windows-laps-policy/view-device-actions-status.png" alt-text="Screen shot of the device actions status for a device, with one action completed, and a current action pending. ":::
+
 ## View account and password details
 
 When your account has sufficient permissions, you can use the Intune admin center to view details about the backed up local admin account and its current password.
@@ -135,25 +147,27 @@ The following are considerations for viewing a devices account and password info
   - Devices that have their local admin account backed up to an on-premises Active Directory
   - Devices that are set to use Active Directory to back up the account password.
 
-## View Device actions status
-
-When your account has sufficient permissions, you can use the Intune admin center to view the status of device actions that have been requested for the device.
-
- <!-- ::: IMAGE of UI showing Device actions status ::: -->
-
-For the required permissions, see [Role based access controls for LAPS](../protect/windows-laps-overview.md#role-based-access-controls-for-laps).
-
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **All devices** , and select a device that has a LAPS policy that backs up a local admin account.
-
-2. <***PENDING*** *It's not clear what is shown at this point, or what you select. Perhaps a device actions status? > 
-
-3. When your account has the required permissions, you can select **Show local administrator password** to then display the account.
-
 ## Manually rotate passwords
 
 You can use the Intune [device action](../remote-actions/device-management.md) of **Rotate local admin password** to manually rotate a devices password independent of the rotation schedule set by the devices LAPS Policy.
 
 To use this device action, your account must have the **Rotate local admin password** permission that is part of the **Remote tasks** category. See [Role based access controls for LAPS](../protect/windows-laps-overview.md#role-based-access-controls-for-laps).
+
+### To rotate a password
+
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **All devices**, and select the Windows device with the account you want to rotate.
+
+2. While viewing the device details, expand the ellipsis (…) on the right side of the menu bar to reveal the available options, and then select Rotate Local admin password.
+
+   :::image type="content" source="./media/windows-laps-policy/manually-rotate-password.png" alt-text="Screen shot of the expanded menu options for device actions.":::
+
+3. When you select **Rotate Local admin password**, Intune displays a warning that requires confirmation before the password is rotated.
+
+    After you confirm the intent to rotate the password, Intune initiates the process, which can take a few minutes to complete. During this time, the device details pane displays a banner and a *Device actions status* that indicate the action is *Pending*.
+
+
+
+After a successful rotation, the confirmation will be visible in the Device actions status as *Complete*.
 
 The following are considerations for manual password rotation:
 
@@ -168,22 +182,6 @@ The following are considerations for manual password rotation:
 - For Azure AD Joined devices, the device must be online at the time the manual rotation is requested. If the device isn’t online at the time of the request, it results in a failure.
 
 - Password rotation isn't supported as *Bulk Action*. You can only rotate a single device at a time.
-
-### To rotate a password
-
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **All devices**, and select the Windows device with the account you want to rotate.
-
-2. While viewing the device details, expand the ellipsis (…) on the right side of the menu bar to reveal the available options, and then select Rotate Local admin password.
-
-    <!-- ::: IMAGE of UI showing a view of the password details pane. ::: -->
-
-3. When you select **Rotate Local admin password**, Intune displays a warning that requires confirmation before the password is rotated.
-
-    After you confirm the intent to rotate the password, Intune initiates the process, which can take a few minutes to complete. During this time, the device details pane displays a banner and a *Device actions status* that indicate the action is *Pending*.
-
-    <!-- ::: IMAGE HERE (Might not be needed) Showing the pending device status action, or completed action ::: -->
-
-After a successful rotation, the confirmation will be visible in the Device actions status as *Complete*.
 
 ## Avoid policy conflicts
 
