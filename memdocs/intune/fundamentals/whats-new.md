@@ -85,8 +85,6 @@ Applies to:
 
 ## Week of April 3, 2023
 
-<<<<<<< HEAD
-=======
 ### Device configuration
 
 #### Add Google accounts to Android Enterprise personally owned devices with a work profile<!-- 9113561 -->
@@ -120,7 +118,6 @@ You can now update apps of type **macOS apps (DMG)** deployed using Intune. Edit
 #### Install required apps during pre-provisioning<!-- 12716381 -->
 A new toggle is available in the Enrollment Status Page (ESP) profile that allows you to select whether you want to attempt to install required applications during the pre-provisioning (white glove) technician phase. We understand that installing as many applications as possible during pre-provisioning is desired to reduce the end user setup time. If there's an app install failure, ESP continues except for the apps specified in the ESP profile. To enable this function, you need to edit your Enrollment Status Page profile by selecting **Yes** on the new setting entitled **Only fail selected apps in technician phase**. This setting only appears if you have blocking apps selected. For information about ESP, go to [Set up the Enrollment Status Page](../enrollment/windows-enrollment-status.md).
 
->>>>>>> c800684d76f8c07927c3d2cecd76c7648aab048f
 ## Week of March 20, 2023 (Service release 2303) 
 
 ### App management

@@ -116,7 +116,7 @@ For required permissions, see [Role based access controls for LAPS](../protect/w
 
 2. On the devices Overview pane, below *Monitor* select **Local admin password**. If your account has sufficient permissions, the Local admin password pane for the device opens, which is the same view that’s available from within the Azure portal.
 
-   :::image type="content" source="./media/windows-laps-policy/view-password.md" alt-text="Screen shot that shows the local admin password pane for a Windows device.":::
+   :::image type="content" source="./media/windows-laps-policy/view-password.png" alt-text="Screen shot that shows the local admin password pane for a Windows device.":::
 
    The following information can be viewed from within the admin center. However, the *Local admin password* can only be viewed when the account was backed up to Azure AD. It can’t be viewed for an account that’s backed up to an on-premises Active Directory (Windows Server Active Directory):
 
