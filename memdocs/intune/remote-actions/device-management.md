@@ -83,7 +83,7 @@ The available actions depend on the device platform and the device configuration
   - [Reset passcode](device-passcode-reset.md)
   - [Restart](device-restart.md) (Windows only)
   - [Retire](devices-wipe.md#retire)
-  - [Rotate Local admin password](../protect/windows-laps-policy.md##manually-rotate-passwords) (Windows only)
+  - [Rotate Local admin password](../protect/windows-laps-policy.md#manually-rotate-passwords) (Windows only)
   - [Update Windows Defender Security Intelligence](/windows/security/threat-protection/windows-defender-antivirus/manage-protection-updates-windows-defender-antivirus)
   - [Windows 10 PIN reset](device-windows-pin-reset.md)
   - [Wipe](devices-wipe.md#wipe)
