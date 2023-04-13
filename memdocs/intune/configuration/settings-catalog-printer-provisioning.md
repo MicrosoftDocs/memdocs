@@ -167,75 +167,32 @@ For information on all the reporting data you can view, go to [Intune reports](.
 
 THIS SECTION IS STILL IN DRAFT
 
-If the [common issues](#common-issues) (in this article) don't resolve your issue, you can use Fiddler tracing, the Print-Collect script, and `UPPrinterInstaller.exe` to resync the Intune installation. The tracing can be evaluated and/or sent to the Intune support team.
+If the [common issues](#common-issues) (in this article) don't resolve your issue, you can use Fiddler tracing, the Print-Collect script, and `UPPrinterInstaller.exe` to resync the Intune installation of the universal printer. You can review these logs for possible issues. You can aslo work with the Intune support team to review and analyze these logs.
+
+To use these tools, you need:
+
+- Windows PowerShell app
+- The Printer Shared ID
+- The omadm account ID: What is this ID? How do users get this ID?
+- The Correlation ID: What is this ID? How do users get this ID?
 
 The following steps must be completed in an Administrator session on the session host to trace a user logging onto the session host and when trying to print to Universal Print.
 
 1. On the client device, install Fiddler. For the specific steps, go to [Universal Print troubleshooting guide](/universal-print/fundamentals/universal-print-troubleshooting-support-howto).
-2. Download [Print-Collect](https://aka.ms/Print-Collect) and extract the files. Open a command prompt as administrator, and run `Print-Collect.ps1` with the following paramters:
+2. Download [Print-Collect](https://aka.ms/Print-Collect) and extract the files. Open the Windows PowerShell app as administrator, and run `Print-Collect.ps1` with your paramters. For example, you can enter:
 
     ```powershell
-    NEED PARAMETERS
-    
-    -AcceptEula
-Allows accepting the EULA without generating a GUI pop-up, for executing the script in non-interactive scenarios. For example, when running the script remotely on a different machine through a console.
-
--DataPath
-The script saves the collected data in the folder where the script exists by default. If you want to save the data in another specific location, pass this parameter along with a destination.
-
--Logs
-Get the 'classic' Print-Collect dataset -> dumps, event logs, registry keys, cmd outputs, etc.
-
--NoDumps
-The script collects some memory dumps too by default. If you don't want to get the memory dumps, because that will significantly increase the size of the resulting dataset, use this flag.
-
--Trace
-Collect live printing traces (very detailed), plus others, depending on the other flags used.
-
--Network
-Collect live network packets capture, along with the printing trace.
-
--RPC
-Collect live RPC trace, on top of the printing trace.
-
--ProcMon
-Collect live Process Monitor capture.
-
--PSR
-Activate the Problem Steps Recorder tool during the live tracing.
-
-
-Examples:
-PS> .\Print-Collect.ps1
-Displays the help info.
-
-PS> .\Print-Collect.ps1 -Logs [-NoDumps]
-Collects the 'classic' static dataset, with or without dumps.
-
-PS> .\Print-Collect.ps1 -Trace [-RPC] [-Network] [-ProcMon] [-PSR]
-Collects Print + other optional traces, without the 'classic' static dataset.
-
-PS> .\Print-Collect.ps1 -Trace [-RPC] [-Network] [-ProcMon] [-PSR] -Logs [-NoDumps]
-Collects traces (default or optionals too) and after that a 'classic' static dataset (with or without dumps).
+    .\Print-Collect.ps1 -Trace [-RPC] [-Network] [-ProcMon] [-PSR] -Logs [-NoDumps]
     ```
 
+    For a description of these parameters and other parameters you can enter, open the `Print-Collect.ps1` file in a text editor.
+
 3. Start the Fiddler trace.
-4. Open another command prompt as administrator, go to the `System32` directory, which is typically `C:\windows\system32`. Enter the followng syntax:
+4. Open another command prompt as administrator, go to the `System32` directory, which is typically `C:\windows\system32`. Enter syntax similar to the following:
 
-      `UPPritnerInstaller.exe -install -printersharedid E7CBB880-A194-450A-ACC7-86AEE809B971 -omadmaccountid 8A917C42-BE97-49EA-AD77-6EF9FE143E04 -correlationid 8A7E7CDE-D0EE-4C45-86FB-3570C3D5F81F")`
+      `UPPrinterInstaller.exe -install -printersharedid E7CBB880-A194-450A-ACC7-86AEE809B971 -omadmaccountid 8A917C42-BE97-49EA-AD77-6EF9FE143E04 -correlationid 8A7E7CDE-D0EE-4C45-86FB-3570C3D5F81F")`
 
-    1. Gather [Fiddler trace](/universal-print/fundamentals/universal-print-troubleshooting-support-howto) and [Printtrace.cmd](https://supportability.visualstudio.com/WindowsUserExperience/_wiki/wikis/WindowsUserExperience?wikiVersion=GBmaster&pagePath=/UEX%20Wiki/Universal%20Print/Common%20Steps/How%20to%20run%20PrintTrace.cmd) of the client resyncing the Microsoft Intune package.
-
-3. Make sure the the required CSP binaries are installed.
-
-    1. On the device, open a command prompt as administrator, and go to the `System32` directory, which is typically `C:\windows\system32`.
-    2. The `UPPrinterInstaller.exe` and `UPPrinterInstallsCSP.dll` files should be there. If they're not there, then NEED SOMETHING.
-
-    2. Manually run the `UPPrinterInstaller.exe` file with your parameters and trace with __Fiddler__ and __PrintTrace.cmd.__ 
-
-      For example, enter:
-      
-      `UPPritnerInstaller.exe -install -printersharedid E7CBB880-A194-450A-ACC7-86AEE809B971 -omadmaccountid 8A917C42-BE97-49EA-AD77-6EF9FE143E04 -correlationid 8A7E7CDE-D0EE-4C45-86FB-3570C3D5F81F")`
+    The GUIDs are specific to your universal printer and environment. Be sure to replace the example GUIDs with your universal printer values.
 
 ## Learn more
 
