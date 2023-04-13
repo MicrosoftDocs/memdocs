@@ -121,5 +121,5 @@ Once the package containing the Autopilot profile JSON file is created, the pack
 For more information on creating and distributing the JSON package in Configuration Manager, see the following article(s):
 
 - [Create a package containing the JSON file](/mem/autopilot/existing-devices#create-a-package-containing-the-json-file)
-- [Packages and programs in Configuration Manager](/mem/configmgr/apps/deploy-use/packages-and-programs.md).
+- [Packages and programs in Configuration Manager](/mem/configmgr/apps/deploy-use/packages-and-programs).
 - [Distribute content to distribution points](/mem/autopilot/existing-devices#distribute-content-to-distribution-points)
