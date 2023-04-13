@@ -52,7 +52,7 @@ For more information about how to integrate BlackBerry UES with Microsoft Intune
 
 - Azure Active Directory Premium
 
-- Microsoft Intune subscription
+- Microsoft Intune Plan 1 subscription
 
 - BlackBerry UES account with access to UES management console 
 

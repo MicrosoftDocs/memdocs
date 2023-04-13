@@ -43,7 +43,7 @@ In this tutorial, you'll learn how to use app protection policies with Condition
 You'll need a test tenant with the following subscriptions for this tutorial:
 
 - Azure Active Directory Premium ([free trial](https://azure.microsoft.com/free/?WT.mc_id=A261C142F))
-- Intune subscription ([free trial](../fundamentals/free-trial-sign-up.md))
+- Microsoft Intune Plan 1 subscription ([free trial](../fundamentals/free-trial-sign-up.md))
 - Microsoft 365 Apps for business subscription that includes Exchange ([free trial](https://go.microsoft.com/fwlink/p/?LinkID=510938))
 
 ## Sign in to Intune

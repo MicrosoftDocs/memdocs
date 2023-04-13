@@ -42,7 +42,7 @@ The following steps are done in the [SentinelOne Management Console](https://con
 
 Before starting the process of integrating SentinelOne with Intune, make sure you have the following subscription and credentials:
 
-- Microsoft Intune subscription
+- Microsoft Intune Plan 1 subscription
 
 - Azure Active Directory Global Administrator admin credentials to grant the following permissions:
 

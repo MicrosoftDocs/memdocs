@@ -84,7 +84,7 @@ Following is an example workflow for an application. This same general workflow 
 
 **Subscriptions**:
 
-- Microsoft Intune  
+- Microsoft Intune Plan 1
 - Microsoft Defender for Endpoint ([Sign up for a free trial](https://www.microsoft.com/WindowsForBusiness/windows-atp?ocid=docs-wdatp-main-abovefoldlink).)
 
 **Intune configurations for Defender for Endpoint**:
