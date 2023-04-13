@@ -176,6 +176,47 @@ The following steps must be completed in an Administrator session on the session
 
     ```powershell
     NEED PARAMETERS
+    
+    -AcceptEula
+Allows accepting the EULA without generating a GUI pop-up, for executing the script in non-interactive scenarios. For example, when running the script remotely on a different machine through a console.
+
+-DataPath
+The script saves the collected data in the folder where the script exists by default. If you want to save the data in another specific location, pass this parameter along with a destination.
+
+-Logs
+Get the 'classic' Print-Collect dataset -> dumps, event logs, registry keys, cmd outputs, etc.
+
+-NoDumps
+The script collects some memory dumps too by default. If you don't want to get the memory dumps, because that will significantly increase the size of the resulting dataset, use this flag.
+
+-Trace
+Collect live printing traces (very detailed), plus others, depending on the other flags used.
+
+-Network
+Collect live network packets capture, along with the printing trace.
+
+-RPC
+Collect live RPC trace, on top of the printing trace.
+
+-ProcMon
+Collect live Process Monitor capture.
+
+-PSR
+Activate the Problem Steps Recorder tool during the live tracing.
+
+
+Examples:
+PS> .\Print-Collect.ps1
+Displays the help info.
+
+PS> .\Print-Collect.ps1 -Logs [-NoDumps]
+Collects the 'classic' static dataset, with or without dumps.
+
+PS> .\Print-Collect.ps1 -Trace [-RPC] [-Network] [-ProcMon] [-PSR]
+Collects Print + other optional traces, without the 'classic' static dataset.
+
+PS> .\Print-Collect.ps1 -Trace [-RPC] [-Network] [-ProcMon] [-PSR] -Logs [-NoDumps]
+Collects traces (default or optionals too) and after that a 'classic' static dataset (with or without dumps).
     ```
 
 3. Start the Fiddler trace.
