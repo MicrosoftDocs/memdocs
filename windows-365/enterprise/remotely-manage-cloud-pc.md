@@ -45,6 +45,7 @@ Cloud PCs support the following remote management actions:
 - [Reprovisioning](provisioning.md#reprovisioning) (this remote action is specific to Cloud PC devices)
 - [Resize](resize-cloud-pc.md#resize-a-cloud-pc) (this remote action is specific to Cloud PC devices)
 - [Collect diagnostics](/mem/intune/remote-actions/collect-diagnostics)
+- [Place Cloud PC Under Review](/https://learn.microsoft.com/en-us/windows-365/enterprise/place-cloud-pc-under-review)
 
 ## Windows 365 Frontline Cloud PCs
 
