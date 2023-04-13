@@ -41,7 +41,7 @@ The following steps are to be completed in the [Better Mobile admin console](htt
 
 Before starting the process of integrating Better Mobile with Intune, make sure you have the following:
 
-- Microsoft Intune subscription
+- Microsoft Intune Plan 1 subscription
 
 - Azure Active Directory admin credentials to grant the following permissions:
 

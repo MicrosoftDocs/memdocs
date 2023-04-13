@@ -45,7 +45,7 @@ Complete the following steps to integrate the Pradeo Mobile Threat Defense solut
 
 Before starting the process of integrating Pradeo with Intune, make sure you have the following:
 
-- Microsoft Intune subscription
+- Microsoft Intune Plan 1 subscription
 
 - Azure Active Directory admin credentials to grant the following permissions:
 
