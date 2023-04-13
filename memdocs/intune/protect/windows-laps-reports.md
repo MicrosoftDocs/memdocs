@@ -60,7 +60,7 @@ When you select any row from the list of policies, Intune displays details for t
 
 In the following image, we’ve selected the policy named *LAPSSHTest*. We use this policy as we examine what you can learn by using the **View report** button to drill in for more information:
 
-:::image type="content" source="./media/windows-laps-reports/check-in-status.png" alt-text="Screen shot of the Device and user check-in status view for a Windows LAPS policy." lightbox="./media/windows-laps-reports/"check-in-status.png:::
+:::image type="content" source="./media/windows-laps-reports/check-in-status.png" alt-text="Screen shot of the Device and user check-in status view for a Windows LAPS policy." lightbox="./media/windows-laps-reports/check-in-status.png":::
 
 While viewing the details for a policy, select the **View report** button to view a list that identifies each device that has been assigned the policy. The device list includes the following information:
 

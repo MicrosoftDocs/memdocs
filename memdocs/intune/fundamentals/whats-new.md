@@ -135,7 +135,7 @@ You can view and manage VPP apps with only the **Mobile apps** permission assign
 
 ### Device configuration
 
-### New settings and setting options available in the macOS Settings Catalog <!-- 16813395  -->  
+#### New settings and setting options available in the macOS Settings Catalog <!-- 16813395  -->  
 The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
 
 New settings are available in the Settings Catalog. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can see these settings at **Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform > **Settings catalog** for profile type.
