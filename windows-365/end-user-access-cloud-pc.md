@@ -68,7 +68,7 @@ While on windows365.microsoft.com, users can take actions on their Cloud PCs by 
 
 ![Card menu.](business/media/get-started-windows-365-business/cloud-pc-gear.png)
 
-- **Rename**: Changes the name of the Cloud PC shown to the user on the web site. This action won’t affect any name in Microsoft Endpoint Manager, Azure Active Directory, on the device, or in the Remote Desktop Apps.
+- **Rename**: Changes the name of the Cloud PC shown to the user on the web site. This action doesn't affect any name in Microsoft Endpoint Manager, Azure Active Directory, on the device, or in the Remote Desktop Apps.
 - **Reset**:
   - Reinstalls Windows (with the option to choose between Windows 11 and Windows 10).
   - Removes your personal files.
@@ -93,7 +93,7 @@ While on windows365.microsoft.com, users can take actions on their Cloud PCs by 
 
 ## Windows 365 web client
 
-When you select **Open in browser** for a Cloud PC on the windows365.microsoft.com [web site](#windows-365-web-site), you'll see the **In Session Settings**, where you can choose multiple options before connecting to your Cloud PC:
+When you select **Open in browser** for a Cloud PC on the windows365.microsoft.com [web site](#windows-365-web-site), the **In Session Settings** window appears, where you can choose multiple options before connecting to your Cloud PC:
 
 1. Select which devices and features on your physical device that your Cloud PC can access:
     - Printer
@@ -102,7 +102,7 @@ When you select **Open in browser** for a Cloud PC on the windows365.microsoft.c
     - [Location (preview)](#location-preview)
 2. Select **Show advanced settings** to see the following options:
     - [Alternative keyboard layout](#alternative-keyboard-layout)
-3. Select **Connect**. The Cloud PC opens in the web client (browser)..
+3. Select **Connect**. The Cloud PC opens in the web client (browser).
 
 ### User feedback
 
@@ -140,22 +140,22 @@ To turn on log collection, in the client, select the gear icon > **Capture logs*
 
 ### Hardware acceleration
 
-You can turn on hardware acceleration when using the web client to access your Cloud PC. This decreases network latency, improving the web client Cloud PC experience. This option is turned on by default.
+You can turn on hardware acceleration when using the web client to access your Cloud PC. This option decreases network latency, improving the web client Cloud PC experience. This option is turned on by default.
 
 To turn hardware acceleration on or off, in the client, select the gear icon > **Use hardware acceleration**.
 
 ### Alternative keyboard layout
 
-Use this option if you're using a non-standard keyboard that includes special characters (like Chinese (Tradiitional) or Spanish (Mexico)).
+Use this option if you're using a nonstandard keyboard that includes special characters (like Chinese (Traditional) or Spanish (Mexico)).
 
-1. In the Windows 365 web client **In Session Settings** window, choose **Show advanced settings** > **Altnernative keyboard layout** > **On**.
+1. In the Windows 365 web client **In Session Settings** window, choose **Show advanced settings** > **Alternative keyboard layout** > **On**.
 2. In the drop-down list, select the language that matches the keyboard.
 
-By default, **Alternative keyboard layour** is turned off. If using a standard keyboard that doesn't require special layouts, the user can deselect this option. Deselecting the option in the middle of a session will require a reconnect.
+By default, **Alternative keyboard layout** is turned off. If using a standard keyboard that doesn't require special layouts, the user can deselect this option. Deselecting the option in the middle of a session requires a reconnect.
 
 ### Location (preview)
 
-Location redirection lets Cloud PCs access your approximate location safely without privacy concerns. By turning on the location service, your Cloud PC will use the location of your physical device for most apps (the Weather widget isn’t currently supported).
+Location redirection lets Cloud PCs access your approximate location safely without privacy concerns. By turning on the location service, your Cloud PC uses the location of your physical device for most apps (the Weather widget isn’t currently supported).
 
 For more information about location services, see [Windows location service and privacy](https://support.microsoft.com/en-us/windows/windows-location-service-and-privacy-3a8eee0a-5b0b-dc07-eede-2a5ca1c49088).
 
