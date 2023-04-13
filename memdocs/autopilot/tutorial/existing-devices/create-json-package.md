@@ -35,6 +35,82 @@ Autopilot user-driven Azure AD join steps:
 
 For an overview of the Windows Autopilot deployment for existing devices workflow, see [Windows Autopilot deployment for existing devices in Intune and Configuration Manager](existing-devices-workflow.md)
 
+## Create package(s) for JSON file(s) in Configuration Manager
+
+Once the JSON files have been created for the Autopilot profile(s), a package needs to be created in Configuration Manager that contains the contents of the JSON file(s). To create a package containing the JSON file in Configuration Manager, follow these steps:
+
+1. Copy the folder(s) containing the JSON file(s) created in the [Create JSON file for Autopilot profile(s)](create-json-file.md) step to a new empty folder in the organization's UNC network path that contains package sources for Configuration Manager packages.
+
+1. On a device where the Configuration Manager console is installed, such as a Configuration Manager site server, open the Configuration Manager console.
+
+1. In the left hand pane of the Configuration Manager console, navigate to **Software Library** > **Overview** > **Application Management**.
+
+1. Select **Packages** and then on the ribbon, select **Create Package**. Alternatively, right-click **Packages** and select **Create Package**.
+
+1. The **Create Package and Program Wizard** window appears:
+
+   1. In the **Specify information about this package** page , enter the following details for the package:
+
+      1. Next to **Name**, enter an identifiable name for the Autopilot scenario that the JSON file is for.
+
+      1. Next to **Description**, enter a description for the Autopilot scenario that the JSON file is for.
+
+      1. Select the checkbox **This package contains source files**, and then select **Browse** next to **Source folder:**.
+
+      1. The **Set Source Folder** window appears. In the **Set Source Folder** window:
+
+         1. Select **Browse** and navigate to the folder containing the individual **`AutopilotConfigurationFile.json`** JSON file from the UNC path in Step 1.
+
+         1. Once in the folder containing the **`AutopilotConfigurationFile.json`** JSON file, select **Select Folder**.
+
+         1. Confirm the path under **Source folder** is correct, and then select **OK**.
+
+            > [!IMPORTANT]
+            >
+            > When multiple Autopilot profiles were exported as part of the [Create JSON file for Autopilot profile(s)](create-json-file.md) step and then copied to the organization's UNC network path that contains package sources for Configuration Manager packages, make sure to select the folder that contains the individual  **`AutopilotConfigurationFile.json`** JSON file and not the parent folder that contains all of the folders that contain the various Autopilot JSON files. Each Autopilot JSON files requires an individual package in Configuration Manager.
+
+   1. Select the **Next >** button.
+
+   1. In the **Choose the program type that you want to create** page, select the **Do not create a program** option and then select the **Next >** button.
+
+   1. In the **Confirm the settings** page, verify all settings are correct and then select the **Next >** button.
+
+   1. When the **Create Package and Program Wizard** completes with **The task "Create Package and Program Wizard" completed successfully** message, select the **Close** button.
+
+1. If there are multiple Autopilot JSON files, repeat the above steps for any additional Autopilot profile JSON files that were exported as part of the [Create JSON file for Autopilot profile(s)](create-json-file.md) step, making sure that each package has a unique identifiable name.
+
+## Distribute package(s) for JSON file(s) in Configuration Manager
+
+Once the package containing the Autopilot profile JSON file is created, the package needs to be distributed to Configuration Manager distribution points. To distribute the package containing the Autopilot profile JSON file in Configuration Manager, follow these steps:
+
+1. On a device where the Configuration Manager console is installed, such as a Configuration Manager site server, open the Configuration Manager console.
+
+1. In the left hand pane of the Configuration Manager console, navigate to **Software Library** > **Overview** > **Application Management**.
+
+1. Expand **Packages** and locate the Autopilot profile JSON packages created in the section [Create package(s) for JSON file(s) in Configuration Manager](#create-packages-for-json-files-in-configuration-manager).
+
+1. Select the Autopilot profile JSON package and in the ribbon select **Distribute Content**. As an alternative, right-click the Autopilot profile JSON package and select **Distribute Content**.
+
+1. The **Distribute Content Wizard** appears:
+
+   1. In the **Review selected content** page, verify the correct package is selected and then select the **Next >** button.
+
+   1. In the **Specify the content destination** page, select **Add**, and then select either **Distribution Point** or **Distribution Point Group**.
+
+      - The **Add Distribution Points** or **Add Distribution Point Groups** window appears. Select the desired distribution points or distribution point groups to distribute the package to and then select **OK**.
+
+   1. Select the **Next >** button.
+
+   1. In the **Confirm the settings** page, verify all settings are correct and then select the **Next >** button.
+
+   1. When the **Distribute Content Wizard** completes with **The task "Distribute Content Wizard" completed successfully** message, select the **Close** button.
+
+1. With the package still selected under **Packages**, in the lower pane of the Configuration Manager console under **Related Objects**, select **Content Status** .
+
+1. Monitor the distribution of the package until it successfully distributes to all distribution points. For details of the distribution status to each distribution point, under **Completion Statistics** in the lower pane of the Configuration Manager console, select the **View Status** option.
+
+1. If there are multiple Autopilot JSON file packages, repeat the above steps for any additional Autopilot profile JSON file packages created in the section [Create package(s) for JSON file(s) in Configuration Manager](#create-packages-for-json-files-in-configuration-manager).
+
 ## Next step: Create Autopilot task sequence in Configuration Manager
 
 > [!div class="nextstepaction"]
@@ -45,4 +121,5 @@ For an overview of the Windows Autopilot deployment for existing devices workflo
 For more information on creating and distributing the JSON package in Configuration Manager, see the following article(s):
 
 - [Create a package containing the JSON file](/mem/autopilot/existing-devices#create-a-package-containing-the-json-file)
+- [Packages and programs in Configuration Manager](/mem/configmgr/apps/deploy-use/packages-and-programs.md).
 - [Distribute content to distribution points](/mem/autopilot/existing-devices#distribute-content-to-distribution-points)

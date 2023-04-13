@@ -35,6 +35,33 @@ Autopilot user-driven Azure AD join steps:
 
 For an overview of the Windows Autopilot deployment for existing devices workflow, see [Windows Autopilot deployment for existing devices in Intune and Configuration Manager](existing-devices-workflow.md)
 
+## Create JSON file for Autopilot profile(s)
+
+Once the proper modules have been installed to allow exporting of Autopilot profile(s) from Intune, the next step is to export the Autopilot profiles as JSON files. The JSON files will then be used to create a package in Configuration Manager.
+
+To export the Autopilot profiles as JSON files, follow these steps:
+
+1. Sign into the Configuration Manager site server or other device where the required modules were installed in the [Install required modules to obtain Autopilot profile(s) from Intune](install-modules.md) step.
+
+1. On the device, open a PowerShell window as an administrator by right clicking on the Start menu and selecting **Windows PowerShell (Admin)**/**Windows Terminal (Admin)** and then selecting **Yes** at the **User Account Control** (UAC) prompt.
+
+1. Copy the following commands by selecting **Copy** at the top right corner of the below **PowerShell** code block:
+
+    ```powershell
+    Connect-MSGraph
+    $AutopilotProfile = Get-AutopilotProfile
+    $AutopilotProfile | ForEach-Object {
+    New-Item -ItemType Directory -Path "~\Desktop\$($_.displayName)"
+    $_ | ConvertTo-AutopilotConfigurationJSON | Set-Content -Encoding Ascii "~\Desktop\$($_.displayName)\AutopilotConfigurationFile.json"
+    }
+    ```
+
+1. Paste the commands into the elevated PowerShell window and then select **Enter** on the keyboard to run the commands. If the elevated PowerShell command window is not already signed into Intune, a **Sign in to your account** window appears. Sign in with an Azure AD account that has access to Intune and the Autopilot profiles.
+
+1. Once signed into Intune, you may need to select **Enter** a second time to run the last command in the code block.
+
+1. Once all the commands have run successfully, the Autopilot profile(s) appears on the Desktop in a folder with the name of the Autopilot profile from Intune. If there are multiple Autopilot profiles, each profile will have its own folder on the Desktop. In each folder there will be a JSON file named **`AutopilotConfigurationFile.json`**.
+
 ## Next step: Create and distribute package for JSON file in Configuration Manager
 
 > [!div class="nextstepaction"]

@@ -84,9 +84,9 @@ Once the technician flow step of the pre-provisioning process completes successf
 
 1. Once the **Device setup** phase of the Device ESP is complete, the Windows sign-on screen appears:
 
-   1. Select <kbd>CTRL</kbd> + <kbd>ALT</kbd> + <kbd>DEL</kbd> on the keyboard to initiate Windows
-   2. Enter the on-premises domain credentials for the end-user
-   3. Select <kbd>ENTER</kbd> on the keyboard to sign the end-user into the device
+   1. Select <kbd>CTRL</kbd> + <kbd>ALT</kbd> + <kbd>DEL</kbd> on the keyboard to initiate Windows sign on.
+   2. Enter the on-premises domain credentials for the end-user.
+   3. Select <kbd>ENTER</kbd> on the keyboard to sign the end-user into the device.
 
     > [!IMPORTANT]
     >
@@ -96,21 +96,21 @@ Once the technician flow step of the pre-provisioning process completes successf
 
    1. After a short period of time, the Azure AD sign-in page may appear. Sign in with the end-user's Azure AD credentials.
 
-    > [!IMPORTANT]
-    >
-    > If on-premises domain end-user credentials are different from Azure AD end-user credentials, make sure that Azure AD end-user credentials are used to sign in at this step. Don't use on-premises credentials to sign in at this step.
+      > [!IMPORTANT]
+      >
+      > If on-premises domain end-user credentials are different from Azure AD end-user credentials, make sure that Azure AD end-user credentials are used to sign in at this step. Don't use on-premises credentials to sign in at this step.
+
+      > [!NOTE]
+      >
+      > Under certain circumstances, the Azure AD sign-in page may not appear and the end-user may be automatically signed into Azure AD. For example, if using Active Directory Federation Services (ADFS) and single sign-on (SSO).
 
    1. The **Stay signed in to all your apps** screen appears. Make sure that the option **Allow my organization to manage my device** is selected, and then select **OK**.
 
    1. The **You're all set!** screen appears. Select **Done**.
 
-    > [!NOTE]
-    >
-    > Under certain circumstances, the Azure AD sign-in page may not appear and the end-user may be automatically signed into Azure AD. For example, if using Active Directory Federation Services (ADFS) and single sign-on (SSO).
-
-    > [!NOTE]
-    >
-    > If the device is left alone with no interaction during the **Account setup** and the user ESP process, the device may enter the Windows lock screen. If the device does enter the Windows lock screen during **Account setup** and the user ESP process, unlock the device by selecting <kbd>CTRL</kbd> + <kbd>ALT</kbd> + <kbd>DEL</kbd> on the keyboard, entering the on-premises domain credentials for the end-user, and then selecting <kbd>ENTER</kbd> on the keyboard. Unlocking the device should go back to the Enrollment Status Page (ESP) and display the current progress of **Account setup**.
+      > [!NOTE]
+      >
+      > If the device is left alone with no interaction during the **Account setup** and the user ESP process, the device may enter the Windows lock screen. If the device does enter the Windows lock screen during **Account setup** and the user ESP process, unlock the device by selecting <kbd>CTRL</kbd> + <kbd>ALT</kbd> + <kbd>DEL</kbd> on the keyboard, entering the on-premises domain credentials for the end-user, and then selecting <kbd>ENTER</kbd> on the keyboard. Unlocking the device should go back to the Enrollment Status Page (ESP) and display the current progress of **Account setup**.
 
 1. Once **Account setup** and the user ESP process completes, the provisioning process completes and the ESP finishes. Select the **Sign out** button to dismiss the ESP and go to the Windows sign on screen. At this point, the end-user can sign into the device using their on-premises domain end-user credentials and start using the device.
 

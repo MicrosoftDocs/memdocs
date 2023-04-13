@@ -35,6 +35,8 @@ Autopilot user-driven Azure AD join steps:
 
 For an overview of the Windows Autopilot deployment for existing devices workflow, see [Windows Autopilot deployment for existing devices in Intune and Configuration Manager](existing-devices-workflow.md)
 
+## Create collection in Configuration Manager
+
 ## Next step: Deploy Autopilot task sequence to collection in Configuration Manager
 
 > [!div class="nextstepaction"]

@@ -31,7 +31,7 @@ The ESP can be configured to only display progress during the device ESP phase w
 > [!TIP]
 > For Configuration Manager admins, an ESP is similar and analogous to Configuration Manager client settings.
 
-To configure and assign the Autopilot Enrollment Status Page (ESP) so that it shows progress during app and profile configurations, follow the below steps:
+To configure and assign the Autopilot Enrollment Status Page (ESP) so that it shows progress during app and profile configurations, follow these steps:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
