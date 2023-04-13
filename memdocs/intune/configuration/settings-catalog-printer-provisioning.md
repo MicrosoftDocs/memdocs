@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/11/2023
+ms.date: 04/13/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -167,16 +167,27 @@ For information on all the reporting data you can view, go to [Intune reports](.
 
 THIS SECTION IS STILL IN DRAFT
 
+If the [common issues](#common-issues) (in this article) don't resolve your issue, you can use Fiddler tracing, the Print-Collect script, and `UPPrinterInstaller.exe` to resync the Intune installation. The tracing can be evaluated and/or sent to the Intune support team.
+
 The following steps must be completed in an Administrator session on the session host to trace a user logging onto the session host and when trying to print to Universal Print.
 
 1. On the client device, install Fiddler. For the specific steps, go to [Universal Print troubleshooting guide](/universal-print/fundamentals/universal-print-troubleshooting-support-howto).
-2. On the client device, open a command prompt as administrator, and run `PrintTrace.cmd`.
+2. Download [Print-Collect](https://aka.ms/Print-Collect) and extract the files. Open a command prompt as administrator, and run `Print-Collect.ps1` with the following paramters:
+
+    ```powershell
+    NEED PARAMETERS
+    ```
+
+3. Start the Fiddler trace.
+4. Open another command prompt as administrator, go to the `System32` directory, which is typically `C:\windows\system32`. Enter the followng syntax:
+
+      `UPPritnerInstaller.exe -install -printersharedid E7CBB880-A194-450A-ACC7-86AEE809B971 -omadmaccountid 8A917C42-BE97-49EA-AD77-6EF9FE143E04 -correlationid 8A7E7CDE-D0EE-4C45-86FB-3570C3D5F81F")`
 
     1. Gather [Fiddler trace](/universal-print/fundamentals/universal-print-troubleshooting-support-howto) and [Printtrace.cmd](https://supportability.visualstudio.com/WindowsUserExperience/_wiki/wikis/WindowsUserExperience?wikiVersion=GBmaster&pagePath=/UEX%20Wiki/Universal%20Print/Common%20Steps/How%20to%20run%20PrintTrace.cmd) of the client resyncing the Microsoft Intune package.
 
 3. Make sure the the required CSP binaries are installed.
 
-    1. On the device, open a command prompt as administrator, and go to the `System32` directory, which is usually `c:\windows\system32`.
+    1. On the device, open a command prompt as administrator, and go to the `System32` directory, which is typically `C:\windows\system32`.
     2. The `UPPrinterInstaller.exe` and `UPPrinterInstallsCSP.dll` files should be there. If they're not there, then NEED SOMETHING.
 
     2. Manually run the `UPPrinterInstaller.exe` file with your parameters and trace with __Fiddler__ and __PrintTrace.cmd.__ 
