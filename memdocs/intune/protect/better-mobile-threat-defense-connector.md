@@ -61,7 +61,7 @@ The Better Mobile app is installed and run on mobile devices. This app captures 
 
 - Azure Active Directory Premium
 
-- Microsoft Intune subscription
+- Microsoft Intune Plan 1 subscription
 
 - Better Mobile Threat Defense subscription
 

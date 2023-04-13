@@ -58,7 +58,7 @@ You can enable SEP Mobile risk assessment through Intune device compliance polic
 
 - Azure Active Directory Premium
 
-- Microsoft Intune subscription
+- Microsoft Intune Plan 1 subscription
 
 - Symantec Endpoint Protection Mobile subscription
 
