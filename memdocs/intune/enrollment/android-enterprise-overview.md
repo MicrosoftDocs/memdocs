@@ -108,5 +108,5 @@ For more information, see [Configure a certificate profile for your devices in M
 Wi-Fi profiles managed by Android Enterprise are removed when the device is retired from Intune and the work profile is deleted. For more information, see [How to configure Wi-Fi settings in Microsoft Intune](../configuration/wi-fi-settings-configure.md).
 
 ## Next steps
-- [Enroll Android devices](android-enroll.md)
+- [Enroll Android devices](/mem/intune/fundamentals/deployment-guide-enrollment-android)
 - [Assign apps to Android Enterprise work profile devices with Intune](../apps/apps-add-android-for-work.md)
