@@ -47,7 +47,7 @@ You can configure Conditional Access policies based on SentinelOne risk assessme
 
 - Azure Active Directory Premium
 
-- Microsoft Intune subscription
+- Microsoft Intune Plan 1 subscription
 
 - SentinelOne Mobile Threat Defense subscription
 

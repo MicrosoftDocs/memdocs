@@ -195,20 +195,19 @@ The **Setting compliance** chart shows you all device compliance policy settings
 
 ## View compliance reports
 
-In addition to using the charts on *Compliance status*, you can go to **Reports** > **Device compliance**.
+In addition to using the charts on *Compliance status*, you can:
+* Go to **Reports** > **Device compliance** to view historical and organizational compliance reports
+* Go to **Devices** > **Monitor** to view operational reports as described below.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Devices** > **Monitor**, and then from below **Compliance** select the report you want to view. Some of the available compliance reports include:
+2. Select **Devices** > **Monitor**, and then from below **Compliance** select the report you want to view. The available compliance reports include:
 
-   - Device compliance
    - Noncompliant devices
-   - Devices without compliance policy
    - Setting compliance
    - Policy compliance
    - Noncompliant policies (preview)
    - Windows health attestation report
-   - Threat agent status
 
 For more information about reports, see [Intune reports](../fundamentals/reports.md)
 

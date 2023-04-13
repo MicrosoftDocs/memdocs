@@ -141,5 +141,5 @@ CALLERID, NAME, NUMBER, UNIVERSAL PRINCIPAL NAME, URGENCY, IMPACT, SEVERITY, ASS
 
 - [Get support in Microsoft Intune admin center](../../get-support.md)
 
-- [Use Remote Help](../remote-actions/remote-help.md)
+- [Use Remote Help](/mem/intune/fundamentals/remote-help)
 
