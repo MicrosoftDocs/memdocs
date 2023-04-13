@@ -39,16 +39,16 @@ Complete the following steps to integrate the Wandera Mobile Threat Defense solu
 
 Before you start the process to integrate Wandera with Intune, make sure you have the following prerequisites in place:
 
-- Intune subscription
+- Microsoft Intune Plan 1 subscription
 - Azure Active Directory administrator credentials and assigned role that is able to grant the following permissions:
 
-    - Sign in and read user profile
-    - Access the directory as the signed-in user
-    - Read directory data
-    - Send device risk information to Intune
- 
+  - Sign in and read user profile
+  - Access the directory as the signed-in user
+  - Read directory data
+  - Send device risk information to Intune
+
 - A valid Wandera subscription
-    - An administrator account with super admin privileges
+  - An administrator account with super admin privileges
 
 ## Integration overview
 

@@ -47,7 +47,7 @@ You can configure Conditional Access policies based on MVISION Mobile risk asses
 
 - Azure Active Directory Premium
 
-- Microsoft Intune subscription
+- Microsoft Intune Plan 1 subscription
 
 - MVISION Mobile subscription
 
