@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 04/10/2023
+ms.date: 04/13/2023
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice:
@@ -35,7 +35,7 @@ ms.collection:
 Users can access their Cloud PCs in these ways:
 
 - [Windows 365 app](https://support.microsoft.com/topic/cbb0d4d5-69d4-4f00-b050-6dc7a02d02d0 )
-- [windows365.microsoft.com](https://Windows365.microsoft.com)
+- [windows365.microsoft.com](https://Windows365.microsoft.com) web client
 - Microsoft Remote Desktop
 
 For information on hardware requirements, see [End user hardware requirements](end-user-hardware-requirements.md).
@@ -57,10 +57,10 @@ On their Windows 365 home page, users see the Cloud PCs they have access to in t
 
 ![Windows 365 home.](business/media/get-started-windows-365-business/cloud-pc-home.png)
 
-Users can select **Open in browser** or **Open in Remote Desktop app** to open their Cloud PC.
+From this page, users have two options to connect to your Cloud PC:
 
-> [!NOTE]  
-> Mobile devices aren’t currently supported for using a browser to open Cloud PC. The Remote Desktop app is supported.
+- Select **Open in browser** to open their Cloud PC in the web client (not available for mobile devices). For more information, see [Windows 265 web client](#windows-365-web-client).
+- Select **Open in Remote Desktop app** to open their Cloud PC in Remote Desktop. For more information, see [Remote Desktop](#remote-desktop).
 
 ### User actions
 
@@ -68,7 +68,7 @@ While on windows365.microsoft.com, users can take actions on their Cloud PCs by 
 
 ![Card menu.](business/media/get-started-windows-365-business/cloud-pc-gear.png)
 
-- **Rename**: Changes the name of the Cloud PC shown to the user on the web site. This action won’t affect any name in Microsoft Endpoint Manager, Azure Active Directory, on the device, or in the Remote Desktop Apps.
+- **Rename**: Changes the name of the Cloud PC shown to the user on the web site. This action doesn't affect any name in Microsoft Endpoint Manager, Azure Active Directory, on the device, or in the Remote Desktop Apps.
 - **Reset**:
   - Reinstalls Windows (with the option to choose between Windows 11 and Windows 10).
   - Removes your personal files.
@@ -91,15 +91,22 @@ While on windows365.microsoft.com, users can take actions on their Cloud PCs by 
   | We couldn’t fix issues with your Cloud PC. Contact your administrator. | An issue was detected but it couldn't be fixed. This issue exists because of an ongoing Windows update or another issue. If this error persists for an extended period of time, the Cloud PC may need to be reset. |
 - **System Information**: Displays information about the Cloud PC specification.
 
-### Transfer files to and from a Cloud PC
+## Windows 365 web client
 
-To transfer files from the local device to the Cloud PC, select the upload icon to launch File Explorer. Select the files to transfer them to the \This PC\Windows365 virtual drive\Uploads folder on the Cloud PC.
+When you select **Open in browser** for a Cloud PC on the windows365.microsoft.com [web site](#windows-365-web-site), the **In Session Settings** window appears, where you can choose multiple options before connecting to your Cloud PC:
 
-To transfer files from the Cloud PC to the local device, copy the files to the Downloads folder on the Cloud PC. The files will be copied to the \This PC\Windows365 virtual drive\Downloads folder of the local device.
+1. Select which devices and features on your physical device that your Cloud PC can access:
+    - Printer
+    - Microphone
+    - Clipboard
+    - [Location (preview)](#location-preview)
+2. Select **Show advanced settings** to see the following options:
+    - [Alternative keyboard layout](#alternative-keyboard-layout)
+3. Select **Connect**. The Cloud PC opens in the web client (browser).
 
-#### Restrict users from transferring files to and from Cloud PCs
+### User feedback
 
-You can restrict users from transferring files by using RDP drive redirection. For more information, see [Manage RDP device redirections for Cloud PCs](./enterprise/manage-rdp-device-redirections.md).
+Users can provide feedback about their Cloud PC experience by using the feedback icon in the upper right corner.
 
 ### Connection details
 
@@ -113,15 +120,15 @@ Users can view and download connection details.
   
      ![Screenshot of connection details.](media/end-user-access-cloud-pc/connection-details.png)
 
-### Hardware acceleration
+### Transfer files to and from a Cloud PC
 
-You can turn on hardware acceleration when using the web client to access your Cloud PC. This decreases network latency, improving the web client Cloud PC experience. This option is turned on by default.
+To transfer files from the local device to the Cloud PC, select the upload icon to launch File Explorer. Select the files to transfer them to the \This PC\Windows365 virtual drive\Uploads folder on the Cloud PC.
 
-To turn hardware acceleration on or off, in the client, select the gear icon > **Use hardware acceleration**.
+To transfer files from the Cloud PC to the local device, copy the files to the Downloads folder on the Cloud PC. The files will be copied to the \This PC\Windows365 virtual drive\Downloads folder of the local device.
 
-### User feedback
+#### Restrict users from transferring files to and from Cloud PCs
 
-Users can provide feedback about their Cloud PC experience by using the feedback icon in the upper right corner.
+You can restrict users from transferring files by using RDP drive redirection. For more information, see [Manage RDP device redirections for Cloud PCs](./enterprise/manage-rdp-device-redirections.md).
 
 ### Collect user logs
 
@@ -131,9 +138,24 @@ To turn on log collection, in the client, select the gear icon > **Capture logs*
 
    ![Capture logs.](media/get-users-started/settings-logs.png)
 
+### Hardware acceleration
+
+You can turn on hardware acceleration when using the web client to access your Cloud PC. This option decreases network latency, improving the web client Cloud PC experience. This option is turned on by default.
+
+To turn hardware acceleration on or off, in the client, select the gear icon > **Use hardware acceleration**.
+
+### Alternative keyboard layout
+
+Use this option if you're using a nonstandard keyboard that includes special characters (like Chinese (Traditional) or Spanish (Mexico)).
+
+1. In the Windows 365 web client **In Session Settings** window, choose **Show advanced settings** > **Alternative keyboard layout** > **On**.
+2. In the drop-down list, select the language that matches the keyboard.
+
+By default, **Alternative keyboard layout** is turned off. If using a standard keyboard that doesn't require special layouts, the user can deselect this option. Deselecting the option in the middle of a session requires a reconnect.
+
 ### Location (preview)
 
-Location redirection lets Cloud PCs access your location accurately and safely without privacy concerns. By turning on the location service, your Cloud PC will use the location of your physical device for most apps (the Weather widget isn’t currently supported).
+Location redirection lets Cloud PCs access your approximate location safely without privacy concerns. By turning on the location service, your Cloud PC uses the location of your physical device for most apps (the Weather widget isn’t currently supported).
 
 For more information about location services, see [Windows location service and privacy](https://support.microsoft.com/en-us/windows/windows-location-service-and-privacy-3a8eee0a-5b0b-dc07-eede-2a5ca1c49088).
 
@@ -145,7 +167,10 @@ To turn on location redirection, follow these steps:
 4. For each app that you want your Cloud PC to have location information, set the toggle to **On**.
 5. Go to windows365.microsoft.com.
 6. Under **Your Cloud PCs**, select **Open in a browser** for your Cloud PC.
-7. Under **In Session Settings**, select **Location (Preview**) > **Connect**.
+7. Under **In Session Settings**, select **Location (Preview)** > **Connect**.
+8. In the **windows365.microsoft.com wants to Know your location** confirmation box, select **Allow**.
+
+Organizational settings might override the location settings for your device. For example, your organization might disable location redirection for all Cloud PCs they manage.
 
 ## Remote Desktop
 
