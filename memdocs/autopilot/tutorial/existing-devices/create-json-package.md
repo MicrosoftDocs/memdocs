@@ -67,7 +67,7 @@ Once the JSON files have been created for the Autopilot profile(s), a package ne
 
             > [!IMPORTANT]
             >
-            > When multiple Autopilot profiles were exported as part of the [Create JSON file for Autopilot profile(s)](create-json-file.md) step and then copied to the organization's UNC network path that contains package sources for Configuration Manager packages, make sure to select the folder that contains the individual  **`AutopilotConfigurationFile.json`** JSON file and not the parent folder that contains all of the folders that contain the various Autopilot JSON files. Each Autopilot JSON files requires an individual package in Configuration Manager.
+            > If Autopilot profiles were copied to the organization's UNC network path that contains package sources for Configuration Manager packages, make sure to select the folder that contains the individual  **`AutopilotConfigurationFile.json`** JSON file and not the parent folder that contains all of the different Autopilot profiles. Each Autopilot JSON files requires an individual package in Configuration Manager.
 
    1. Select the **Next >** button.
 

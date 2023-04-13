@@ -90,7 +90,7 @@ Once the technician flow step of the pre-provisioning process completes successf
 
     > [!IMPORTANT]
     >
-    > If on-premises domain end-user credentials are different from Azure AD end-user credentials, make sure that the on-premises domain end-user credentials are used to sign into the device at this step. Don't use the Azure AD end-user credentials to attempt to sign into the device at this step.
+    > If on-premises domain end-user credentials are different from Azure AD end-user credentials, make sure that the **on-premises domain end-user credentials** are used to sign into the device at this step. Don't use the Azure AD end-user credentials to attempt to sign into the device at this step.
 
 1. The Enrollment Status Page (ESP) appears again and the **Account setup** of the user ESP begins.
 
@@ -98,21 +98,21 @@ Once the technician flow step of the pre-provisioning process completes successf
 
       > [!IMPORTANT]
       >
-      > If on-premises domain end-user credentials are different from Azure AD end-user credentials, make sure that Azure AD end-user credentials are used to sign in at this step. Don't use on-premises credentials to sign in at this step.
+      > If on-premises domain end-user credentials are different from Azure AD end-user credentials, make sure that **Azure AD end-user credentials** are used to sign in at this step. Don't use on-premises credentials to sign in at this step.
 
       > [!NOTE]
       >
-      > Under certain circumstances, the Azure AD sign-in page may not appear and the end-user may be automatically signed into Azure AD. For example, if using Active Directory Federation Services (ADFS) and single sign-on (SSO).
+      > Under certain circumstances, the Azure AD sign-in page may not appear and the end-user may be automatically signed into Azure AD. For example, if using Active Directory Federation Services (ADFS) and single sign-on (SSO). If the end-user is automatically signed into Azure AD, then the Autopilot deployment will proceed on to the next step automatically.
 
-   1. The **Stay signed in to all your apps** screen appears. Make sure that the option **Allow my organization to manage my device** is selected, and then select **OK**.
+   2. The **Stay signed in to all your apps** screen appears. Make sure that the option **Allow my organization to manage my device** is selected, and then select **OK**.
 
-   1. The **You're all set!** screen appears. Select **Done**.
+   3. The **You're all set!** screen appears. Select **Done**.
 
       > [!NOTE]
       >
       > If the device is left alone with no interaction during the **Account setup** and the user ESP process, the device may enter the Windows lock screen. If the device does enter the Windows lock screen during **Account setup** and the user ESP process, unlock the device by selecting <kbd>CTRL</kbd> + <kbd>ALT</kbd> + <kbd>DEL</kbd> on the keyboard, entering the on-premises domain credentials for the end-user, and then selecting <kbd>ENTER</kbd> on the keyboard. Unlocking the device should go back to the Enrollment Status Page (ESP) and display the current progress of **Account setup**.
 
-1. Once **Account setup** and the user ESP process completes, the provisioning process completes and the ESP finishes. Select the **Sign out** button to dismiss the ESP and go to the Windows sign on screen. At this point, the end-user can sign into the device using their on-premises domain end-user credentials and start using the device.
+2. Once **Account setup** and the user ESP process completes, the provisioning process completes and the ESP finishes. Select the **Sign out** button to dismiss the ESP and go to the Windows sign on screen. At this point, the end-user can sign into the device using their on-premises domain end-user credentials and start using the device.
 
 ## More information
 

@@ -41,11 +41,11 @@ Windows Autopilot deployment for existing devices isn't an Autopilot deployment 
 
 The first step in a Windows Autopilot deployment for existing devices is to make sure there is already an existing valid Autopilot deployment in place assigned to the device. One of the following five workflows can be used to create and assign a valid Autopilot deployment:
 
-[Windows Autopilot user-driven Azure AD join](../user-driven/azure-ad-join-workflow.md)
-[Windows Autopilot user-driven hybrid Azure AD join](../user-driven/hybrid-azure-ad-join-workflow.md)
-[Windows Autopilot for pre-provisioned deployment Azure AD join](../pre-provisioning/azure-ad-join-workflow.md)
-[Windows Autopilot for pre-provisioned deployment hybrid Azure AD join](../pre-provisioning/hybrid-azure-ad-join-workflow.md)
-[Windows Autopilot self-deploying mode](../self-deploying/self-deploying-workflow.md)
+- [Windows Autopilot user-driven Azure AD join](../user-driven/azure-ad-join-workflow.md)
+- [Windows Autopilot user-driven hybrid Azure AD join](../user-driven/hybrid-azure-ad-join-workflow.md)
+- [Windows Autopilot for pre-provisioned deployment Azure AD join](../pre-provisioning/azure-ad-join-workflow.md)
+- [Windows Autopilot for pre-provisioned deployment hybrid Azure AD join](../pre-provisioning/hybrid-azure-ad-join-workflow.md)
+- [Windows Autopilot self-deploying mode](../self-deploying/self-deploying-workflow.md)
 
 Once a valid Windows Autopilot deployment has been created, assigned, and confirmed working, then proceed to [Step 2: Install required modules to obtain Autopilot profile(s) from Intune](install-modules.md).
 
