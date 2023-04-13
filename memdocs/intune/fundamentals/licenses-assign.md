@@ -68,7 +68,7 @@ See this [overview of School Data Sync](https://support.office.com/article/Overv
 ## How user and device licenses affect access to services
 
 - Each **user** that you assign a user software license to may access and use the online services and related software (including System Center software) to manage applications and up to 15 MDM devices.
-- You can purchase licenses for any devices separately from user licenses. Device licenses do not need to be assigned to the devices. Each device that accesses and uses the online services and related software (including System Center software) must have a device license.
+- You can purchase licenses for any devices separately from user licenses. Device licenses do not need to be assigned to the devices. Each device that accesses and uses the online services and related software (including System Center software) must have a device license available in the Microsoft 365 tenant.
 - If a device is used by more than one user, each device requires a device based software license or all users require a user software license.
 - If you remove a license from a user that has managed devices, it may affect the compliance or management of those devices.  
 
