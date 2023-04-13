@@ -71,7 +71,7 @@ To create a new enrollment profile:
     - **Name**: Give the profile a name. Note the name down for later, because you'll need it when you set up the dynamic device group.   
     - **Description**: Optionally, add a profile description.  
 7. Select **Next**. 
-8. Optionally, on the **Scope tags** page, apply one or more scope tags to limit profile visibility and management to select admins in Intune. Admins who are assigned roles with these scope tags and have the proper permissions will be able to access the profile. For more information about how to use scope tags, see [Use role-based access control (RBAC) and scope tags for distributed IT](../fundamentals/scope-tags.md).  
+8. Optionally, on the **Scope tags** page, apply one or more scope tags to limit profile visibility and management to certain admin users in Intune. Admin users who are assigned roles with these scope tags and have the proper permissions will be able to access the profile. For more information about how to use scope tags, see [Use role-based access control (RBAC) and scope tags for distributed IT](../fundamentals/scope-tags.md).  
 9. Select **Next**.  
 10. Review the summary of your profile, and then select **Create** to finalize it.    
 
