@@ -134,7 +134,7 @@ Depending on your organizational needs, create at least two device categories, s
 
 To create device categories in Intune, see [map devices to groups](../enrollment/device-group-mapping.md).
 
-These categories are shown to users during enrollment ([enroll Android devices](../enrollment/android-enroll.md)). Depending on the category users choose, the enrolled device is moved to the corresponding device group.
+These categories are shown to users during enrollment ([enroll Android devices](/mem/intune/fundamentals/deployment-guide-enrollment-android)). Depending on the category users choose, the enrolled device is moved to the corresponding device group.
 
 :::image type="content" source="./media/telecom-expenses-monitor/tem-dynamic-membership-rules.png" alt-text="[A screenshot that shows the Corporate device group Dynamic membership rules page in Microsoft Intune." lightbox="./media/telecom-expenses-monitor/tem-dynamic-membership-rules.png":::
 

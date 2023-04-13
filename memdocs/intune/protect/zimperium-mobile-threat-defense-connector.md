@@ -47,7 +47,7 @@ You can configure Conditional Access policies based on Zimperium risk assessment
 
 - Azure Active Directory Premium
 
-- Microsoft Intune subscription
+- Microsoft Intune Plan 1 subscription
 
 - Zimperium Mobile Threat Defense subscription
 

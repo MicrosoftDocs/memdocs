@@ -50,4 +50,4 @@ For specialty devices that run in Shared Device Mode (SDM), organizations need t
 
 Learn about enrolling devices into Microsoft Intune here:
 
-- [Enroll devices into Microsoft Intune](../enrollment/device-enrollment.md)
+- [Enroll devices into Microsoft Intune](/mem/intune/fundamentals/deployment-guide-enrollment)

@@ -61,7 +61,7 @@ For more information about Google's Android Enterprise features, see these artic
 After a user has enrolled, you can begin managing their devices in Intune, including [assigning compliance policies](../protect/compliance-policy-create-android.md), [managing apps](../apps/app-management.md), and more.
 
 For information about other user tasks, see these articles:
-- [Resources about the end-user experience with Microsoft Intune](../fundamentals/end-user-educate.md)
+- [Resources about the end-user experience with Microsoft Intune](/mem/intune/fundamentals/intune-planning-guide)
 - [Using your Android device with Intune](../user-help/why-enroll-android-device.md)
 
 

@@ -50,7 +50,7 @@ You can configure Conditional Access policies based on Pradeo risk assessment en
 
 - Azure Active Directory Premium
 
-- Microsoft Intune subscription
+- Microsoft Intune Plan 1 subscription
 
 - Pradeo Security for Mobile Threat Defense subscription
 

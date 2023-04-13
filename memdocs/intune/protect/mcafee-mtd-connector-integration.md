@@ -41,7 +41,7 @@ The following steps are done in the MVISION Mobile console <!-- Link pending -->
 
 Before starting the process of integrating MVISION Mobile with Intune, make sure you have the following subscription and credentials:
 
-- Microsoft Intune subscription
+- Microsoft Intune Plan 1 subscription
 
 - Azure Active Directory Global Administrator admin credentials to grant the following permissions:
 
