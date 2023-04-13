@@ -144,6 +144,7 @@ The following third-party certification authorities support Intune:
 - [HID Global](https://help.hydrantid.com/HydrantID_Intune_Integration.pdf)
 - [IDnomic](https://www.idnomic.com/)
 - [KeyTalk](https://keytalk.com/our-services)
+- [Keytos](https://docs.keytos.io/azure-pki/intune-certificate-authority/how-intune-scep-works/)
 - [Nexus Certificate Manager](https://doc.nexusgroup.com/display/PUB/Example%3A+SCEP+Intune+configuration+in+Protocol+Gateway)
 - [SCEPman](https://azuremarketplace.microsoft.com/marketplace/apps/glueckkanja-gabag.scepman)
 - [Sectigo](https://sectigo.com/products)
