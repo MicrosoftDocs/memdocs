@@ -55,7 +55,7 @@ With Apple's release of macOS 13 Ventura, Microsoft Intune, the Company Portal a
 
 With Remote Help 4.0.1.13 fixes were introduced to address an issue that prevented people from having multiple sessions open at the same time. The fixes also addressed an issue where the app was launching without focus, and prevented keyboard navigation and screen readers from working on launch.
 
-For more information, go to [Use Remote Help with Intune and Microsoft Intune](../remote-actions/remote-help.md)
+For more information, go to [Use Remote Help with Intune and Microsoft Intune](/mem/intune/fundamentals/remote-help)
 
 ## Week of August 29, 2022
 
@@ -353,7 +353,7 @@ Applies to:
 #### Remote Help Version: 4.0.1.12 release<!-- 14999203 -->
 With Remote Help 4.0.1.12 various fixes were introduced to address the 'Try again later' message that appears when not authenticated. The fixes also include an improved auto-update capability. 
 
-For more information, see [Use Remote Help with Intune](../remote-actions/remote-help.md)
+For more information, see [Use Remote Help with Intune](/mem/intune/fundamentals/remote-help)
 
 ### Device enrollment
 
@@ -1446,7 +1446,7 @@ When elevation permissions are assigned, the log off behavior for the sharer has
  - If the admin (helper) ends the Remote Help session, the user (sharer) will not be logged off.
  - If the sharer tries to end the session, they will be prompted that they will be logged off if they continue.
  - If the sharer is a local admin on their device, the access UAC prompt option will not be available to the helper as they can guide the sharer to perform elevated actions under their own profile.
-For more information about Remote Help, see [Use Remote Help](../remote-actions/remote-help.md)
+For more information about Remote Help, see [Use Remote Help](/mem/intune/fundamentals/remote-help)
 
 ## Week of May 2, 2022
 
@@ -2231,7 +2231,7 @@ For corporate devices, data about managed and unmanaged apps continues to be inc
 
 #### Remote Help is moving in the Microsoft Intune admin center<!-- 12868177 -->
 The Remote Help page in the Microsoft Intune admin center has moved and its now available directly under **Tenant administration** instead of **Connectors and tokens**. 
-For more information about Remote Help, see [Use Remote Help](../remote-actions/remote-help.md).
+For more information about Remote Help, see [Use Remote Help](/mem/intune/fundamentals/remote-help).
 
 ## January 2022
 
@@ -2430,7 +2430,7 @@ Filters allow you to include or exclude devices in policy or app assignments bas
 ### Device management
 
 #### Launch Remote Help from within the admin center<!-- 12773983 -->
-You can now [launch Remote Help from within the Microsoft Intune admin center](../remote-actions/remote-help.md#how-to-use-remote-help). To do so, in the admin center go to **All devices** and select the device on which assistance is needed. Then select **New Remote Help session**, which is available from the remote actions bar across the top of the devices view. 
+You can now [launch Remote Help from within the Microsoft Intune admin center](/mem/intune/fundamentals/remote-help#how-to-use-remote-help). To do so, in the admin center go to **All devices** and select the device on which assistance is needed. Then select **New Remote Help session**, which is available from the remote actions bar across the top of the devices view. 
 
 #### Endpoint analytics filtering<!--7207888 -->
 You can now [add filters](../../analytics/scores.md#filter-reports) to the tables in [Endpoint analytics](../../analytics/overview.md) reports. Using filters enables you to discover trends in your environment or spot potential issues.  
@@ -2663,7 +2663,7 @@ With permissions in Remote Help managed by Intune role-based access controls, yo
 - **Elevation of privilege** - When needed, a helper with the correct RBAC permissions can interact with the UAC prompt on the sharer's machine to enter credentials.
 - **Monitor active Remote Help sessions, and view details about past sessions** – In the Microsoft Intune admin center you can view reports that include details about who helped who, on what device, and for how long. You’ll also find details about active sessions.
 
-This feature is rolling out over the next week and should soon be available for your tenant. For more information, see [Use Remote Help](../remote-actions/remote-help.md).
+This feature is rolling out over the next week and should soon be available for your tenant. For more information, see [Use Remote Help](/mem/intune/fundamentals/remote-help).
 
 #### MDM support data to refresh automatically in Group Policy analytics tool<!-- 7852080 -->
 Now whenever Microsoft makes changes to the mappings in Intune, the **MDM Support** column in the GP analytics tool automatically updates to reflect the changes. The automation is an improvement over the previous behavior, which required you to reimport your Group Policy object (GPO) to refresh the data. For more information about Group Policy analytics, see [Use Group Policy analytics](../configuration/group-policy-analytics.md).  
@@ -2752,7 +2752,7 @@ You can use Microsoft Intune to manage corporate-owned devices that run on the A
 * Provision devices as user-associated devices or shared devices.  
 * Deploy device configuration and compliance profiles.  
 
-For more information about how to set up Android (AOSP) management, see [Enroll Android devices](../enrollment/android-enroll.md).  
+For more information about how to set up Android (AOSP) management, see [Enroll Android devices](/mem/intune/fundamentals/deployment-guide-enrollment-android).  
 
 ### Device security
 
@@ -11082,7 +11082,7 @@ You can now assign iOS volume-purchased (VPP) apps as **Available** installs to 
 You can now [synchronize books](../apps/vpp-apps-ios.md) you purchased from the Apple volume-purchase program store with Intune, and assign the books to users.
 
 #### Multi-user management for Samsung Knox Standard devices<!-- 971988 -->
-Devices that run Samsung Knox Standard are now supported for [multi-user management](../enrollment/android-enroll.md) by Intune. This means that end users can sign in and out of the device with their Azure Active Directory credentials, and the device is centrally managed whether it's in use or not.  When end-users sign-in, they have access to apps and get any policies applied to them. When users sign out, all app data is cleared.
+Devices that run Samsung Knox Standard are now supported for [multi-user management](/mem/intune/fundamentals/deployment-guide-enrollment-android) by Intune. This means that end users can sign in and out of the device with their Azure Active Directory credentials, and the device is centrally managed whether it's in use or not.  When end-users sign-in, they have access to apps and get any policies applied to them. When users sign out, all app data is cleared.
 
 #### Additional Windows device restriction settings<!-- 818566 -->
 We've added support for additional [Windows device restriction settings](../configuration/device-restrictions-windows-10.md) like additional Microsoft Edge browser support, device lock screen customization, start menu customizations, Windows Spotlight search set wallpaper, and proxy setting.
@@ -11171,7 +11171,7 @@ Intune is adding new enrollment restrictions that control which mobile device pl
 - Restricting mobile device enrollment does not restrict PC client enrollment.  
 - For iOS and Android only, there is one additional option to block the enrollment of personally owned devices.
 
-Intune marks all new devices as personal unless the IT admin takes action to mark them as corporate-owned, as explained in [this article](../enrollment/device-enrollment.md).
+Intune marks all new devices as personal unless the IT admin takes action to mark them as corporate-owned, as explained in [this article](/mem/intune/fundamentals/deployment-guide-enrollment).
 
 #### View all actions on managed devices<!--677150-->
 A new __Device Actions__ report shows who has performed remote actions like factory reset on devices, and additionally shows the status of that action. See [What is device management?](../remote-actions/device-management.md).

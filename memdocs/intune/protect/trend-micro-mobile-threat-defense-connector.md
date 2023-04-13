@@ -56,7 +56,7 @@ For more information about how to integrate Trend Micro with Microsoft Intune, s
 ## Prerequisites
 
 - Azure Active Directory Premium
-- Microsoft Intune subscription
+- Microsoft Intune Plan 1 subscription
 - Trend Micro account with administrative access to the Trend Micro Vision One console
 
 ## How do Intune and the Trend Micro MTD connector help protect your company resources?

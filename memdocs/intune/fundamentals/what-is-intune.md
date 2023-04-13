@@ -196,7 +196,7 @@ You can also use MDM and MAM together. If your devices are enrolled and there ar
 
 For more information, go to:
 
-- [What is device enrollment in Intune?](../enrollment/device-enrollment.md)
+- [What is device enrollment in Intune?](/mem/intune/fundamentals/deployment-guide-enrollment)
 - [App protection policies overview](../apps/app-protection-policy.md)
 - [Create and assign app protection policies](../apps/app-protection-policies.md)
 

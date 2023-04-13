@@ -51,7 +51,7 @@ The following is information from the [original deprecation announcement](https:
 > 1. Open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 > 2. Recreate your existing Windows 10 policies as MDM policies. Note that many device management policies were migrated several years ago as part of the admin console migration. Check device management in Azure before you create new policies.
 > 3. Review reporting in the Microsoft Intune administration console to find the devices that are managed by the Intune PC software client.
-> 4. Determine the right modern enrollment method that's right for your organization. For details, see [Intune enrollment methods for Windows devices](../enrollment/windows-enrollment-methods.md).
+> 4. Determine the right modern enrollment method that's right for your organization. For details, see [Intune enrollment methods for Windows devices](/mem/intune/fundamentals/deployment-guide-enroll).
 > 5. Unenroll devices with the Intune PC software client and re-enroll the devices using Intune MDM. We strongly recommend you update to the latest version of Windows 10. As of January 14, 2020, Intune no longer supports Windows 7.
 > 6. Add apps to Intune MDM. For details, see [Add apps to Microsoft Intune](../apps/apps-add.md).
 >
@@ -134,4 +134,4 @@ rd /s /q %ProgramFiles%\Microsoft\OnlineManagement
 [Deprecation announcement on the Intune Support Blog](https://techcommunity.microsoft.com/t5/intune-customer-success/take-action-microsoft-intune-ending-support-for-the-silverlight/ba-p/916249).
 
 ## Next steps
-[Intune enrollment methods for Windows devices](../enrollment/windows-enrollment-methods.md)
+[Intune enrollment methods for Windows devices](/mem/intune/fundamentals/deployment-guide-enroll)
