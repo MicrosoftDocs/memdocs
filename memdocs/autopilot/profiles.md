@@ -97,6 +97,8 @@ Autopilot deployment profiles are used to configure the Autopilot devices. You c
 <br>
 Before deploying a device, ensure that this process has completed. You can check under **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program** where you should see the profile status change from "Unassigned" to "Assigning" and finally to "Assigned."
 
+However, in the case in which you assign the Autopilot profile to "All Devices" group, you will notice that the "Profile status" has changed immediately to "Assigned", in this case you will need to wait until the "Date Assigned" is also populated before proceeding with the deployment.
+
 ## Edit an Autopilot deployment profile
 
 After you've created an Autopilot deployment profile, you can edit certain parts of the deployment profile.
