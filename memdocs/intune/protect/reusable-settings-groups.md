@@ -63,7 +63,7 @@ The following profiles support use of reusable settings groups:
 **Endpoint security policy**
 
 - **Antivirus** > **Microsoft Defender Firewall rules**:  
-  - Platforms: Windows 10, Windows 11, and Windows Server
+  - Platforms: Windows 10 and Windows 11
   - Windows versions: Devices must run Windows 10 20H2 or later, or Windows 11.
 
 - **Attack surface reduction** > **Device control**:
