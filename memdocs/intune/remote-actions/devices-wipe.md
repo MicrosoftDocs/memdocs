@@ -229,4 +229,4 @@ Applicable for Windows 10 devices. Read more about [Fresh Start](device-fresh-st
 
 ## Next steps
 
-If you want to reenroll a deleted device, see [Enrollment options](../enrollment/enrollment-options.md).
+If you want to reenroll a deleted device, see [Enrollment options](/mem/intune/enrollment/device-enrollment).

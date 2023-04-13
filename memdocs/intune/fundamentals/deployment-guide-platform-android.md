@@ -74,7 +74,7 @@ For more information about the security framework, see the articles listed in th
 
 | Task | Detail | 
 | ---- | ------ | 
-| [Learn about the Android Enterprise framework deployment methodology](../enrollment/framework-deployment-methodology.md)|Learn about the Microsoft-recommended methodology for deploying the security configuration framework. |      
+| [Learn about the Android Enterprise framework deployment methodology](/mem/intune/enrollment/android-configuration-framework)|Learn about the Microsoft-recommended methodology for deploying the security configuration framework. |      
 | [Configure device enrollment restrictions for personally owned devices](../enrollment/android-work-profile-security-settings.md)|Apply these restrictions to configure a basic or high security level for devices that are personally owned with work profile. | 
 | [Disallow personal accounts on Android Enterprise devices](../enrollment/android-app-configuration-policies.md) |Prevent people on work or school devices from signing into Microsoft apps with a personal account. |  
 |[Configure security settings for personally owned devices ](../enrollment/android-work-profile-security-settings.md)  | Apply these settings to configure a basic or high security level on devices that are personally owned with work profile. | 

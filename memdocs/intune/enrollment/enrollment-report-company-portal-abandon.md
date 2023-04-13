@@ -120,4 +120,4 @@ The following tables list the user actions that indicate enrollment is incomplet
 
 ## Next steps
 
-After checking on your incomplete enrollment rates, you can review the [enrollment options](enrollment-options.md) to see if you can make any changes to improve enrollment.
+After checking on your incomplete enrollment rates, you can review the [enrollment options](/mem/intune/enrollment/device-enrollment) to see if you can make any changes to improve enrollment.
