@@ -53,7 +53,7 @@ To create the Autopilot for existing devices task sequence in Configuration Mana
 
 1. In the ribbon, select **Create**, and then select **Create Device Collection**. As an alternative, right-click on **Device Collections**, and then select **Create Device Collection**.
 
-1. The **Create Device Collection Wizard** windows appears:
+1. In the **Create Device Collection Wizard** window that appears:
 
    1. In the **Specify details for this collection** page, configure the following settings:
 
@@ -61,13 +61,13 @@ To create the Autopilot for existing devices task sequence in Configuration Mana
 
       1. Next to **Comment:**, if desired, add an optional comment to further describe the collection
 
-      1. Next to **Limiting collection**, select the **Browse** button. In the **Select Collection** window that appears, select a desired collection to limit this collection to. To not limit this collection, select the **All Systems** collection. Once the desired collection is selected, select the **OK** button.
+      1. Next to **Limiting collection:**, select the **Browse** button. In the **Select Collection** window that appears, select a desired collection to limit this collection to. To not limit this collection, select the **All Systems** collection. Once the desired collection is selected, select the **OK** button.
 
       1. Select the **Next >** button.
 
    1. In the **Define membership rules for this collection** page, via the **Add Rule** drop down menu, create a rule(s) that will include the desired devices to run the Autopilot for existing devices task sequence. For more information on creating rules for a collection to include the desired devices, see [How to create collections in Configuration Manager](/mem/configmgr/core/clients/manage/collections/create-collections). Once the appropriate rules have been created that include the desired devices, select the **Next >** button.
 
-   1. In the **Confirm the settings** page, verify that everything configured as desired, and then select the **Next >** button.
+   1. In the **Confirm the settings** page, verify that everything is configured as desired, and then select the **Next >** button.
 
    1. When the **Create Device Collection Wizard** completes with **The task "Create Device Collection Wizard" completed successfully** message, select the **Close** button.
 

@@ -37,6 +37,22 @@ For an overview of the Windows Autopilot deployment for existing devices workflo
 
 ## Run Autopilot task sequence on device
 
+Once the Autopilot for existing devices has been created, modified as needed, and deployed, the task sequence can be run on a device by following these steps:
+
+1. Start the task sequence using the desired method based on how the task sequence deployment was configured:
+
+   - Configuration Manager Software Center
+   - PXE enabled distribution point
+   - Task sequence bootable media
+
+2. Allow the task sequence to complete.
+
+3. Once the task sequence completes, depending on the shut down or restart behavior selected in the [Create Autopilot task sequence in Configuration Manager](create-autopilot-task-sequence.md#modify-the-task-sequence-to-account-for-sysprep-command-line-configuration) step or the optional [Speed up the deployment process](run-autopilot-task-sequence.md)step, the device will either restart or shut down:
+
+   - **Restart**: the device will restart as soon as the task sequence completes and then immediately boot into Windows for the first time and run OOBE. When OOBE runs, the Autopilot JSON file will be processed and the Autopilot deployment will start.
+
+   - **Shut down**: the device will shut down and power off  as soon as the task sequence completes. This gives the option to further prepare the device and then deliver it to an end-user. OOBE and the Autopilot deployment will then start when the end-user turns on the device for the first time.
+
 ## Next step: Register device for Windows Autopilot
 
 > [!div class="nextstepaction"]

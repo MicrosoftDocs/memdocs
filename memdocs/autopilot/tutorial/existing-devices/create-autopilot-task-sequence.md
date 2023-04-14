@@ -134,7 +134,7 @@ To resolve the issue, the **Prepare Windows for Capture** task needs to be remov
 
 1. Once the Autopilot for existing devices task sequence is located, select it and then on the ribbon, select **Edit**. Alternatively, right-click on the the Autopilot for existing devices task sequence and select **Edit**.
 
-1. The **Task Sequence Editor** window opens:
+1. In the **Task Sequence Editor** window that opens:
 
    1. Select the **Prepare Windows for Capture** task.
 
@@ -164,7 +164,7 @@ To resolve the issue, the **Prepare Windows for Capture** task needs to be remov
       >
       > - **Restarting** the device will cause the device to restart as soon as the task sequence completes and then immediately boot into Windows for the first time and run OOBE. When OOBE runs, the Autopilot JSON file will be processed and the Autopilot deployment will start.
       >
-      > - **Shutting down** the device instead of restarting the device gives the option to further prepare the device and then deliver it to an end-user. OOBE and the Autopilot deployment will then start when the end-user turns on the device for the first time.
+      > - **Shutting down** the device will shut down and power off the device as soon as the task sequence completes. This gives the option to further prepare the device and then deliver it to an end-user. OOBE and the Autopilot deployment will then start when the end-user turns on the device for the first time.
 
    1. Select the **Prepare Windows for Capture** task again and then select the **Remove** option in the top left of the task sequence editor. A confirmation dialog box will appear confirming to delete the step. Select the **Yes** button to remove the **Prepare Windows for Capture** task.
 
