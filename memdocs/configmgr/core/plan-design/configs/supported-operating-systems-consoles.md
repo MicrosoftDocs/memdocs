@@ -34,8 +34,6 @@ Configuration Manager supports the installation of the console on the following 
 
 - **Windows 10** (x86, x64): Pro, Enterprise
 
-- **Windows 8.1** (x86, x64): Professional, Enterprise
-
 For more information about the Configuration Manager console, see the following articles:
 
 - [Install consoles](../../servers/deploy/install/install-consoles.md)

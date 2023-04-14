@@ -73,6 +73,7 @@ You can also [change existing DFCI settings](/intune/configuration/device-firmwa
 - Acer
 - Panasonic
 - Fujitsu
+- Dynabook
 
 Other OEMs are pending.
 

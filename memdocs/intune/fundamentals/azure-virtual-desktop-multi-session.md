@@ -8,7 +8,7 @@ keywords:
 author: smbhardwaj  
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 08/03/2022
+ms.date: 04/10/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -61,9 +61,6 @@ User configuration support in Microsoft Intune for Windows 11 multi-session VMs 
  - Configure user certificates and assign to users.
 
  - Configure PowerShell scripts to install in the user context and assign to users.
-
-> [!NOTE]
-> User configuration support for Windows 10 multi-session builds will be available in the future.
 
 
 ## Prerequisites
@@ -132,7 +129,6 @@ Windows 10 or Windows 11 Administrative Templates are supported for Windows 10 o
 
 - ADMX-backed policies are supported. Some policies aren't yet available in the Settings catalog.
 - ADMX-ingested policies are supported, including Office and Microsoft Edge settings available in Office administrative template files and Microsoft Edge administrative template files. For a complete list of ADMX-ingested policy categories, see [Win32 and Desktop Bridge app policy configuration](/windows/client-management/mdm/win32-and-centennial-app-policy-configuration#overview). Some ADMX ingested settings won't be applicable to Windows 10 or Windows 11 Enterprise multi-session.
-- ADMX-ingested policies are supported for user targeting only on Windows 11 at this time.
 
 ## Compliance and Conditional access
 
@@ -191,7 +187,7 @@ All Windows 10 or Windows 11 apps can be deployed to Windows 10 or Windows 11 En
 
 Scripts configured to run in the system context and assigned to devices are supported on Windows 10 or Windows 11 Enterprise multi-session. This can be configured under Script settings by setting **Run this script using the logged on credentials** to **No**.
 
-Scripts configured to run in the user context and assigned to users are supported on Windows 11 Enterprise multi-session. This can be configured under Script settings by setting **Run this script using the logged on credentials** to **Yes**.
+Scripts configured to run in the user context and assigned to users are supported on Windows 10 and Windows 11 Enterprise multi-session. This can be configured under Script settings by setting **Run this script using the logged on credentials** to **Yes**.
 
 ## Windows Update for Business
 

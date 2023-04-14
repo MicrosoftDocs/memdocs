@@ -35,8 +35,6 @@ ms.collection:
 **Applies to**:  
 * Android   
 * iOS/iPadOS  
-* Windows 10  
-* Windows 11  
 
 Remotely reset an enrolled device's PIN or passcode. Sign in to the [Company Portal website](https://portal.manage.microsoft.com) on any device to access the *reset passcode* option. The reset passcode option can't be used on all corporate-owned devices. Contact your support person for help if the option is missing and you need to reset a device.  
 
@@ -75,10 +73,10 @@ Remotely reset an enrolled device's PIN or passcode. Sign in to the [Company Por
 
    ![Example screenshot showing second reset passcode message. Includes link to learn more about setting a new passcode in the documentation, and individual buttons to reset passcode and cancel.](./media/iwp-reset-passcode-popup2-1808.png) 
 
-6. If you're resetting the passcode for an iOS device, its existing passcode will be removed. For Windows or Android devices, you'll be issued a temporary passcode to unlock the device and set a new passcode. 
+6. If you're resetting the passcode for an iOS device, its existing passcode will be removed. For Android devices, you'll be issued a temporary passcode to unlock the device and set a new passcode. 
 
    > [!NOTE]
-   > You can find the temporary password for Windows and Android devices in the Company Portal, under the device's details page. See the section [Set up a new passcode](reset-your-passcode-cpwebsite.md#set-up-a-new-passcode) for more OS-specific passcode descriptions.  
+   > You can find the temporary password for Android devices in the Company Portal, under the device's details page. See the section [Set up a new passcode](reset-your-passcode-cpwebsite.md#set-up-a-new-passcode) for more OS-specific passcode descriptions.  
    
 7. On your device, go to **Settings** and change the temporary passcode. 
 
@@ -91,7 +89,5 @@ This section describes the passcode reset and the temporary password behavior fo
 **Android**: Removes the existing passcode and creates a temporary passcode made up of letters and numbers.
 
 **iOS**: Removes the existing passcode and doesn't create a temporary passcode. If you use Touch ID to open your device or make purchases, you must set it up again.  
-
-**Windows 10/11**: Removes the existing passcode and creates a temporary passcode made up of letters and numbers. If set up, Windows Hello facial recognition will still work with the device.  
 
 Still need help? Contact your company support. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).  

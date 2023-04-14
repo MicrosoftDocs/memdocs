@@ -49,7 +49,7 @@ A device enrollment manager can use the following methods to enroll devices in I
 - DEM-initiated via Azure AD-join  
 
 > [!TIP]
-> To compare DEM best practices and capabilities alongside other Windows enrollment methods, see [Intune enrollment method capabilities for Windows devices](./enrollment-method-capab.md).  
+> To compare DEM best practices and capabilities alongside other Windows enrollment methods, see [Intune enrollment method capabilities for Windows devices](/mem/intune/fundamentals/deployment-guide-enrollment-windows).  
 
 
 ## Account permissions 

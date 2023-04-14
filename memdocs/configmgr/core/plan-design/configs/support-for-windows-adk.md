@@ -31,7 +31,7 @@ When you deploy operating systems with Configuration Manager, the Windows Assess
 
 The following table lists the versions of the Windows ADK that you can use with different versions of Configuration Manager.
 
-| Windows ADK version         | ConfigMgr 2107 | ConfigMgr 2111 | ConfigMgr 2203| ConfigMgr 2207 | ConfigMgr 2211 | 
+| Windows ADK version            | ConfigMgr 2111 | ConfigMgr 2203| ConfigMgr 2207 | ConfigMgr 2211 | ConfigMgr 2303  |
 |--------------------------------|----------------|----------------|----------------|----------------|----------------|
 | **Windows 11**<br>(10.1.22621.1)| ![Not supported](media/red-x.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png)| ![Supported](media/green-check.png) |
 | **Windows 11**<br>(10.1.22000) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png)|![Supported](media/green-check.png) |

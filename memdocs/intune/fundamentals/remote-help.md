@@ -394,7 +394,7 @@ Version: 4.0.1.13 - Changes in this release:
 
 With Remote Help 4.0.1.13 fixes were introduced to address an issue that prevented people from having multiple sessions open at the same time. The fixes also addressed an issue where the app was launching without focus, and prevented keyboard navigation and screen readers from working on launch.
 
-For more information, go to [Use Remote Help with Intune and Microsoft Endpoint Manager](../remote-actions/remote-help.md)
+For more information, go to [Use Remote Help with Intune and Microsoft Endpoint Manager](/mem/intune/fundamentals/remote-help)
 
 ### July 26, 2022
 

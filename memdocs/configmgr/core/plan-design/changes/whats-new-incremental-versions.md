@@ -28,11 +28,12 @@ Different update versions are identified by year and month. For example, version
 
 Use the following links to discover what's new with each supported version:
 
+- [What's new in version 2303](whats-new-in-version-2303.md)
 - [What's new in version 2211](whats-new-in-version-2211.md)
 - [What's new in version 2207](whats-new-in-version-2207.md)
 - [What's new in version 2203](whats-new-in-version-2203.md)
 - [What's new in version 2111](whats-new-in-version-2111.md)
-- [What's new in version 2107](whats-new-in-version-2107.md)
+
 
 
 

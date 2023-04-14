@@ -41,7 +41,7 @@ This article describes the requirements and steps to connect the MTD connector i
 
 The following subscriptions and accounts are required to integrate UES with Microsoft Intune.
 
-- Microsoft Intune subscription
+- Microsoft Intune Plan 1 subscription
 
 - Azure Active Directory (Azure AD) account with Global Administrator rights to grant the following permissions:
 

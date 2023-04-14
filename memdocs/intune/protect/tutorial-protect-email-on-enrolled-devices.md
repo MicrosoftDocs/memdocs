@@ -41,7 +41,7 @@ In this tutorial, you'll learn how to:
 > * Create an Intune iOS device compliance policy to set the conditions that a device must meet to be considered compliant.
 > * Create an Azure Active Directory (Azure AD) Conditional Access policy that requires iOS devices to enroll in Intune, comply with Intune policies, and use the approved Outlook mobile app to access Exchange Online email.
 
-If you don't have an Intune subscription, [sign up for a free trial account](../fundamentals/free-trial-sign-up.md).
+If you don't have an Microsoft Intune Plan 1 subscription, [sign up for a free trial account](../fundamentals/free-trial-sign-up.md).
 
 ## Prerequisites
 

@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/09/2023
+ms.date: 04/10/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -83,25 +83,38 @@ The following table lists the various options for *assigning* apps to users and 
      > - To configure what happens to managed apps when devices are no longer managed, you can select the intended setting under **Uninstall on device removal**. For more information, see [App uninstall setting for iOS/iPadOS managed apps](apps-deploy.md#app-uninstall-setting-for-ios-managed-apps).
      > - If you have created an iOS/iPadOS VPN profile that contains per-app VPN settings, you can select the VPN profile under **VPN**. When the app is run, the VPN connection is opened. For more information, see [VPN settings for iOS/iPadOS devices](../configuration/vpn-settings-ios.md).
      > - To configure whether a required iOS/iPadOS app is installed as a removable app by end users, you can select the setting under **Install as removable**. 
-	 >
+     > - To configure a way to prevent the iCloud backup of the managed iOS/iPadOS app, you can click on one of the following settings after adding a group assignment - VPN, or Uninstall on device removal, or Install as removable. Then, configure the setting called Prevent iCloud app backup. For more information, see [Prevent iCloud app backup setting for iOS/iPadOS and macOS apps](#prevent-icloud-app-backup-setting-for-iosipados-and-macos-apps).
+	  >
+     > **For macOS apps only**: 
+     > - To configure a way to prevent the iCloud backup of the managed macOS app, you can click on one of the following settings after adding a group assignment - VPN, or Uninstall on device removal, or Install as removable. Then, configure the setting called Prevent iCloud app backup. For more information, see [Prevent iCloud app backup setting for iOS/iPadOS and macOS apps](#prevent-icloud-app-backup-setting-for-iosipados-and-macos-apps).
+	  >
      > **For Android apps only**: 
-	 > - If you deploy an Android app as **Available with or without enrollment**, reporting status will only be available on enrolled devices.
+	  > - If you deploy an Android app as **Available with or without enrollment**, reporting status will only be available on enrolled devices.
      >
      > **For Available for enrolled devices**: 
-	 > - The app is only displayed as available if the user logged into the Company Portal is the primary user who enrolled the device and the app is applicable to the device.
+	  > - The app is only displayed as available if the user logged into the Company Portal is the primary user who enrolled the device and the app is applicable to the device.
 
-7. To select the groups of users that are affected by this app assignment, select **Included Groups**.
-8. After you have selected one or more groups to include, select **Select**.
-9. In the **Assign** pane, select **OK** to complete the included groups selection.
-10. If you want to exclude any groups of users from being affected by this app assignment, select **Exclude Groups**.
-11. If you have chosen to exclude any groups, in **Select groups**, select **Select**.
-12. In the **Add group** pane, select **OK**.
-13. In the app **Assignments** pane, select **Save**.
+8. To select the groups of users that are affected by this app assignment, select **Included Groups**.
+9. After you have selected one or more groups to include, select **Select**.
+10. In the **Assign** pane, select **OK** to complete the included groups selection.
+11. If you want to exclude any groups of users from being affected by this app assignment, select **Exclude Groups**.
+12. If you have chosen to exclude any groups, in **Select groups**, select **Select**.
+13. In the **Add group** pane, select **OK**.
+14. In the app **Assignments** pane, select **Save**.
 
 The app is now assigned to the groups that you selected. For more information about including and excluding app assignments, see [Include and exclude app assignments](apps-inc-exl-assignments.md).
 
 > [!Tip]
 > Intune supports assigning apps to nested groups too. For example, if you assigned an app to the "Engineering Global" group and have "Engineering APAC", "Engineering EMEA" and "Engineering US" nested as child groups, the members of those child groups will also be targeted with the assignment.
+
+## Prevent iCloud app backup setting for iOS/iPadOS and macOS apps
+
+Admins will have the option to no longer backup managed App Store apps and line-of-business (LOB) apps on iOS/iPadOS and managed App Store apps on macOS devices, for both user and device licensed VPP/non-VPP apps. macOS LOB apps won’t support this setting. This functionality will include both new and existing App Store/LOB apps sent with and without VPP that are being added to Intune and targeted to users and devices. Preventing the backup of the specified managed apps will ensure that these apps can be properly deployed via Intune when the device is enrolled and restored from backup. If you configure the new setting for new/existing apps in your tenant, managed apps can and will be re-installed for devices, but Intune will no longer allow them to be backed up.
+
+> [!NOTE]
+> While we don't expect managed apps on devices to backup data to iCloud, note that data saved locally for managed apps may not be available after a backup and restore.
+
+For existing devices, when **Prevent iCloud app backup** is set to **Yes** for an app/apps, the new behavior will be automatically updated for all required App Store/LOB apps (with or without VPP). Required apps previously installed on devices will be automatically re-configured for all devices once the setting value is saved to **Yes**. Available apps will require the user to re-download the available app from the Company Portal app or the Company Portal website. Additionally, depending on the app’s configurations and licensing, a sync between Intune and the device may be needed. 
 
 ## How conflicts between app intents are resolved
 
