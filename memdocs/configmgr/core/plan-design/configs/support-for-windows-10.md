@@ -46,7 +46,7 @@ The following table lists the versions of Windows 10 that you can use as a clien
 
 | Windows 10 version                         | ConfigMgr 2111 | ConfigMgr 2203 | ConfigMgr 2207 | ConfigMgr 2211 | ConfigMgr 2303 |
 |--------------------------------------------|----------------|----------------|----------------|----------------|----------------|
-| **22H2**<br>(10.0.19045) <!--2025-05-13--> |  ![Not supported](media/red-x.png)  |  ![Not supported](media/red-x.png)  |   ![Not supported](media/red-x.png)  |![Supported](media/green-check.png) |![Supported](media/green-check.png) | 
+| **22H2**<br>(10.0.19045) <!--2025-05-13--> |  ![Not supported](media/red-x.png)  |  ![Not supported](media/red-x.png)  |   ![Supported](media/green-check.png) |![Supported](media/green-check.png) |![Supported](media/green-check.png) | 
 | **21H2**<br>(10.0.19044) <!--06/11/2024--> | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) |  ![Supported](media/green-check.png) |![Supported](media/green-check.png) | ![Supported](media/green-check.png) | 
 | **Enterprise LTSC 2021**<br>(10.0.19044) <!--01/12/2027-->| ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | 
 | **21H1**<br>(10.0.19043) <!--12/13/2022--> | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | 
