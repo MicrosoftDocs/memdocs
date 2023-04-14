@@ -94,10 +94,8 @@ Autopilot deployment profiles are used to configure the Autopilot devices. You c
 
 > [!NOTE]
 > Intune will periodically check for new devices in the assigned groups, and then begin the process of assigning profiles to those devices. Due to several different factors involved in the process of Autopilot profile assignment, an estimated time for the assignment can vary from scenario to scenario. These factors can include AAD groups, membership rules, hash of a device, Intune and Autopilot service, and internet connection. The assignment time will vary depending on all the factors and variables involved in a specific scenario.<br>
-<br>
-Before deploying a device, ensure that this process has completed. You can check under **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program** where you should see the profile status change from "Unassigned" to "Assigning" and finally to "Assigned."
-
-However, in the case in which you assign the Autopilot profile to "All Devices" group, you will notice that the "Profile status" has changed immediately to "Assigned", in this case you will need to wait until the "Date Assigned" is also populated before proceeding with the deployment.
+>
+> Before deploying a device, ensure that this process has completed. You can check under **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program**) where you should see the profile status change from **Unassigned** to **Assigning** and finally to **Assigned**. Once the device is showing **Assigned**, open the properties of the device by selecting it, and then ensuring that **Date assigned** is populated. If **Date assigned** is not yet populated, wait until it is populated before deploying the device.
 
 ## Edit an Autopilot deployment profile
 
