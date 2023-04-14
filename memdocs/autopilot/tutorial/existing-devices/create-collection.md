@@ -37,6 +37,46 @@ For an overview of the Windows Autopilot deployment for existing devices workflo
 
 ## Create collection in Configuration Manager
 
+Once the Autopilot for existing devices task sequence has been created, the next step is to create a collection in Configuration Manager to deploy the task sequence to the target devices.
+
+> [!NOTE]
+>
+> If a collection with the desired devices to target already exists, then this step can be skipped. Proceed to the step [Deploy Autopilot task sequence to collection in Configuration Manager](deploy-autopilot-task-sequence.md).
+
+To create the Autopilot for existing devices task sequence in Configuration Manager, follow these steps:
+
+1. On a device where the Configuration Manager console is installed, such as a Configuration Manager site server, open the Configuration Manager console.
+
+1. In the left hand pane of the Configuration Manager console, navigate to **Assets and Compliance** > **Overview**.
+
+1. Select **Device Collections**.
+
+1. In the ribbon, select **Create**, and then select **Create Device Collection**. As an alternative, right-click on **Device Collections**, and then select **Create Device Collection**.
+
+1. The **Create Device Collection Wizard** windows appears:
+
+   1. In the **Specify details for this collection** page, configure the following settings:
+
+      1. Next to **Name:**, enter a desired name for the collection. For example, **Autopilot for existing devices**.
+
+      1. Next to **Comment:**, if desired, add an optional comment to further describe the collection
+
+      1. Next to **Limiting collection**, select the **Browse** button. In the **Select Collection** window that appears, select a desired collection to limit this collection to. To not limit this collection, select the **All Systems** collection. Once the desired collection is selected, select the **OK** button.
+
+      1. Select the **Next >** button.
+
+   1. In the **Define membership rules for this collection** page, via the **Add Rule** drop down menu, create a rule(s) that will include the desired devices to run the Autopilot for existing devices task sequence. For more information on creating rules for a collection to include the desired devices, see [How to create collections in Configuration Manager](/mem/configmgr/core/clients/manage/collections/create-collections). Once the appropriate rules have been created that include the desired devices, select the **Next >** button.
+
+   1. In the **Confirm the settings** page, verify that everything configured as desired, and then select the **Next >** button.
+
+   1. When the **Create Device Collection Wizard** completes with **The task "Create Device Collection Wizard" completed successfully** message, select the **Close** button.
+
+1. With **Device Collections** still selected, select <kbd>F5</kbd> on the keyboard to refresh the list of collections in the right pane. Verify that the newly created collection appears. If it doesn't appear, wait a few minutes and then try to refresh again. Depending on the environment, it may take some time for the newly created collection to appear.
+
+1. Once the newly created collection appears, open it by double-clicking on it. Alternatively, to open the collection, right-click on the collection and then select **Show Members**. The members of the collection will appear in the right pane.
+
+1. Verify that the listed devices are the expected devices for the collection that should receive the Autopilot for existing devices task sequence.
+
 ## Next step: Deploy Autopilot task sequence to collection in Configuration Manager
 
 > [!div class="nextstepaction"]

@@ -37,6 +37,10 @@ For an overview of the Windows Autopilot deployment for existing devices workflo
 
 ## Speed up the deployment process
 
+      > [!NOTE]
+      >
+      > The Configuration Manager client is installed as part of the Autopilot for existing devices task sequence to support running certain tasks such as the **Install Application** or **Install Software Updates** tasks later on in the task sequence. The Configuration Manager client though is uninstalled at the end of the task sequence. If no additional tasks are needed after the **Setup Windows and ConfigMgr** task, consider following the step [Speed up the deployment process (optional)](speed-up-deployment.md) later in the tutorial. This optional step will skip installing the Configuration Manager client which will save time and avoid potential problems with the Configuration Manager having been installed on the device (despite being uninstalled).
+
 ## Next step: Run Autopilot task sequence on device
 
 > [!div class="nextstepaction"]
