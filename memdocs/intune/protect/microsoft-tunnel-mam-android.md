@@ -111,7 +111,7 @@ Create an App configuration policy to configure Microsoft Defender for Endpoint 
 
    When ready, select **Next** to continue.
 
-   :::image type="content" source="./media/microsoft-tunnel-mam-android/settings-configuration-defender.png " alt-text="Screen shot of the app configuration policies settings configuration.":::
+   :::image type="content" source="./media/microsoft-tunnel-mam-android/settings-configuration-defender.png" alt-text="Screen shot of the app configuration policies settings configuration.":::
 
 4. On the *Assignments* tab, select **Add Groups**, and then select the same Azure Active Directory groups that you deployed the Microsoft Edge App configuration profile to, and then select **Next**.
 
