@@ -33,7 +33,11 @@ ms.collection:
 
 # Categorize devices into groups
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
+**Applies to**:
+* Android
+* iOS/iPadOS
+* Windows 10
+* Windows 11
 
 Device categories allow you to easily manage and group devices in Microsoft Intune. Create a category, such as *sales* or *accounting*, and Intune will automatically add all devices that fall within that category to the corresponding device group in Intune. To enable categories in your tenant, you must create a category in the Microsoft Intune admin center and set up dynamic Azure Active Directory (Azure AD) security groups.  
  
