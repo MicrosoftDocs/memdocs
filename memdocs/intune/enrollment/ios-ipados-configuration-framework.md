@@ -37,7 +37,7 @@ The iOS/iPadOS security configuration framework is a series of recommendations f
 
 This taxonomy is explained in the following articles:
 
-- [iOS/iPadOS framework deployment methodology](ios-ipados-framework-deployment-methodology.md): A recommended methodology for deploying the security configuration framework.
+- [iOS/iPadOS framework deployment methodology](/mem/intune/enrollment/ios-ipados-configuration-framework): A recommended methodology for deploying the security configuration framework.
 -  [Set app configuration policies for iOS/iPadOS devices](ios-ipados-app-configuration-policies.md): Configure apps on the devices to disallow personal accounts.
 - [iOS/iPadOS device compliance security settings](ios-ipados-device-compliance-security-configurations.md): Specific configuration settings for ensuring personally owned and corporate owned devices are healthy and compliant.
 - [iOS/iPadOS personal device security settings](ios-ipados-personal-device-security-configurations.md): Specific configuration settings for basic, enhanced, and high security on personally owned devices.
@@ -47,7 +47,7 @@ This taxonomy is explained in the following articles:
 
 iOS/iPadOS supports several enrollment scenarios, two of which are covered as part of this framework:
 
-- [Device enrollment for personally owned devices](ios-enroll.md): These devices are personally owned and used for both work and personal use.
+- [Device enrollment for personally owned devices](/mem/intune/fundamentals/deployment-guide-enrollment-ios-ipados): These devices are personally owned and used for both work and personal use.
 - [Supervised automated device enrollment for corporate-owned devices](device-enrollment-program-enroll-ios.md): These devices are corporate-owned, associated with a single user, and used exclusively for work and not personal use.  
 
 ## iOS/iPadOS framework deployment methodology
