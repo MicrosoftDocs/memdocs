@@ -35,6 +35,8 @@ This article applies to:
 
 - iOS/iPadOS supervised devices
 
+??What about personal devices??
+
 ## Admin checklist
 
 This section lists the Microsoft-recommended guidance and strategies to install software updates on your devices.
@@ -73,7 +75,7 @@ If these automatic update settings are disabled, then:
 
 - Admins can't change these settings with policies.
 - Users need to manually change these settings on their devices.
-- If users can't change these settings for whatever reason, then you must reset and reprovision the device. ??Why? This seems extreme? Remote actions?
+- If users can't change these settings for whatever reason (??What are some reasons??), then you must reset and reprovision the device. ??Why? This seems extreme? Remote actions?
 
 Automatic updates work together with other update policies, which can provide a positive experience for admins and end users.
 
@@ -170,7 +172,7 @@ To accomplish these goals, you can use a policy with the following default setti
 
 ### Kiosks
 
-These devices are typically in-store devices, and can be a desktop computer or a mobile device. They're typically used by employees to serve customers and used directly by customers for self-service tasks. They can also be a visual display that all customers see when they're on-premises.
+These devices are typically in-store devices, and can be a desktop computer or a mobile device. They're used by employees to serve customers and used directly by customers for self-service tasks. They can also be a visual display that all customers see when they're on-premises.
 
 In kiosk-like scenarios, the primary goals for updating the devices are:
 
