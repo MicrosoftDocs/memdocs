@@ -47,7 +47,6 @@ Applies to:
 
 - Windows 10
 - Windows 11
-- Windows Server
 
 ## About Intune LAPS policy
 
@@ -110,11 +109,13 @@ When your account has permissions equivalent to the *Security Baselines* permiss
 
 For more information, see [Role based access controls for LAPS](../protect/windows-laps-overview.md#role-based-access-controls-for-laps).
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **All devices** , and select a device that has a LAPS policy that backs up a local admin account.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **All devices** , and select a device that has a LAPS policy that backs up a local admin account. Intune displays that devices Overview pane.
 
-2. On the device Overview pane, you can view *Device actions status*. Previously requested actions and pending actions display, including the time of the request, and if the action failed or was successful. In the following example screenshot, a device has had its Local Admin account Password successfully rotated. 
+2. On the device Overview pane, you can view *Device actions status*. Previously requested actions and pending actions display, including the time of the request, and if the action failed or was successful. In the following example screenshot, a device has had its Local Admin account Password successfully rotated.
 
    :::image type="content" source="./media/windows-laps-policy/view-device-actions-status.png" alt-text="Screen shot of the device actions status for a device, with one action completed, and a current action pending." lightbox="./media/windows-laps-policy/view-device-actions-status.png":::
+
+3. Selecting an action from the list opens the *Device action status* pane, which can display additional details about that action.
 
 ## View account and password details
 

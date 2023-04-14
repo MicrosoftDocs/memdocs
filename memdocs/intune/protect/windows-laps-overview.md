@@ -42,7 +42,7 @@ You can also view details about the managed local admin accounts in the Intune A
 
 Use of Intune LAPS policies helps you protect Windows devices from attacks that are aimed at exploiting local user accounts like pass-the-hash or lateral-traversal attacks. Managing LAPS with Intune can also help improve security for remote help desk scenarios and recover devices that are otherwise inaccessible.
 
-Intune LAPS policy manages the settings available from the Windows [LAPS CSP](/windows/client-management/mdm/LAPS-csp). Intune's use of the CSP replaces the use of [Legacy Microsoft LAPS](https://www.microsoft.com/en-us/download/details.aspx?id=46899) or other LAPS management solutions, with CSP based [taking precedence](/windows-server/identity/laps/laps-management-policy-settings#supported-policy-roots) over other LAPS management sources.
+Intune LAPS policy manages the settings available from the Windows [LAPS CSP](/windows/client-management/mdm/LAPS-csp). Intune's use of the CSP replaces the use of [Legacy Microsoft LAPS](https://www.microsoft.com/download/details.aspx?id=46899) or other LAPS management solutions, with CSP based [taking precedence](/windows-server/identity/laps/laps-management-policy-settings#supported-policy-roots) over other LAPS management sources.
 
 Intune support for Windows LAPS includes the following capabilities:
 
@@ -62,7 +62,6 @@ Applies to:
 
 - Windows 10
 - Windows 11
-- Windows Server
 
 ## Prerequisites
 
@@ -73,8 +72,8 @@ The following are requirements for Intune to support Windows LAPS in your tenant
 - **Intune subscription** - *Microsoft Intune Plan 1*, which is the basic Intune subscription. You can also use Windows LAPS with a free trial subscription for Intune.
 
 - **Active Directory subscription** – *Azure Active Directory Free*, which is the free version of Azure AD that’s included when you subscribe to Intune. With Azure AD Free, you can use all the features of LAPS.
-
-  If you have Azure Active Directory Premium, you can improve security by using Conditional Access to enforce multifactor authentication before admins can view passwords for devices. You can also make use of Administrative Sets when working with LAPS data.
+  
+  <!--  If you have Azure Active Directory Premium, you can improve security by using Conditional Access to enforce multifactor authentication before admins can view passwords for devices. You can also make use of Administrative Sets when working with LAPS data. -->
 
 **Active Directory support**:
 
@@ -96,23 +95,27 @@ Intune policy for Windows LAPS can configure a device to back up a local adminis
 
 Devices can have any [Windows edition that Intune supports](../fundamentals/supported-devices-browsers.md#microsoft), but must run of one of the following versions to support the Windows LAPS CSP:
 
-- Windows 10 version 20H2 and later, with 2303C patch
-- Windows 11 version 21H2 and later with 2303D patch
-- Windows Server 2019 and later with 2304B patch
+- Windows 10, version 22H2 (19045.2846 or later) with [KB5025221 ](https://support.microsoft.com/topic/april-11-2023-kb5025221-os-builds-19042-2846-19044-2846-and-19045-2846-b00c3356-baac-4a41-8342-7f97ec83445a)
+- Windows 10, version 21H2 (19044.2846 or later) with [KB5025221 ](https://support.microsoft.com/topic/april-11-2023-kb5025221-os-builds-19042-2846-19044-2846-and-19045-2846-b00c3356-baac-4a41-8342-7f97ec83445a)
+- Windows 10, version 20H2 (19042.2846 or later) with [KB5025221 ](https://support.microsoft.com/topic/april-11-2023-kb5025221-os-builds-19042-2846-19044-2846-and-19045-2846-b00c3356-baac-4a41-8342-7f97ec83445a)
+- Windows 11, version 22H2 (22621.1555 or later) with [KB5025239](https://support.microsoft.com/en-us/topic/april-11-2023-kb5025239-os-build-22621-1555-5eaaaf42-bc4d-4881-8d38-97e0082a6982)
+- Windows 11, version 21H2 (22000.1817 or later) with [KB5025224](https://support.microsoft.com/en-us/topic/april-11-2023-kb5025224-os-build-22000-1817-ebc75372-608d-4a77-a6e0-cb1e15f117fc)
 
 ## Role based access controls for LAPS
 
 To manage LAPS, your account must be assigned sufficient role-based access control (RBAC) rights to complete the desired task. The following are the permissions and categories where those permissions are available.
 
-**Create and access LAPS policy** – To work with and view LAPS policies, your account must have applicable rights from the **Security baseline** category. These permissions support working with all templates that are available through Endpoint security policies.
+**Create and access LAPS policy** – To work with and view LAPS policies, your account must rights equal to those found in the built-in **Endpoint Security Administrator** role. This role includes sufficient permissions to work with all templates that are available through Endpoint security policies, and to view and manage devices related to your LAPS policies.
 
-**Rotate local Administrator password** – To use the Intune admin center to rotate a devices local admin account password, your account must have the **Rotate Local Admin Password** permission, which is part of the **Remote tasks** category.
+**Rotate local Administrator password** – To use the Intune admin center to rotate a devices local admin account password, your account must have the following additional permission:
+
+- **Rotate Local Admin Password** - This permission is found in the **Remote tasks** category.
 
 **Retrieve local Administrator password** – To view password details, your account must have permissions equal to one of the following:
 
 - Global Administrator
 - Cloud Device Administrator
-- Intune Service Administrator with *deviceLocalCredentials.Read.All* permissions, which adds the permission to recover LAPS passwords.
+- Intune Service Administrator with *deviceLocalCredentials.Read.All* permissions, which adds the permission to recover LAPS passwords. 
 
 **View Azure AD audit logs and events** – To view details about LAPS policies and recent device actions such as password rotation events, your account must permissions equivalent to the built-in Intune role **Read Only Operator**.
 
@@ -134,7 +137,7 @@ Yes. Intune LAPS policy can be used to manage any local administrator account on
 
 ### What if I deploy LAPS policy with Intune to a device that already has LAPS configurations from a different source?
 
-The CSP-based policy from Intune overrides all other sources of LAPS policy, such as from GPOs or a configuration from [Legacy Microsoft LAPS](https://www.microsoft.com/en-us/download/details.aspx?id=46899). For more information, see [Supported Policy roots](/windows-server/identity/laps/laps-management-policy-settings#supported-policy-roots) in the Windows LAPS documentation.
+The CSP-based policy from Intune overrides all other sources of LAPS policy, such as from GPOs or a configuration from [Legacy Microsoft LAPS](https://www.microsoft.com/download/details.aspx?id=46899). For more information, see [Supported Policy roots](/windows-server/identity/laps/laps-management-policy-settings#supported-policy-roots) in the Windows LAPS documentation.
 
 ### Can Windows LAPS create local admin accounts based on the administrator account name that’s configured using LAPS policy?
 
@@ -154,15 +157,16 @@ The following built-in roles Azure AD roles have permission to recover LAPS pass
 
 ### What roles are needed to read LAPS metadata?
 
-The following built-in roles are supported to view metadata about LAPS including the device name, last password rotation, and next password rotation: Global Admin, Cloud Device Admin, Intune Service Admin, Helpdesk Admin, Security Reader, Security Admin, and Global Reader with the *deviceLocalCredentials.ReadBasic.All* permission.
+The following built-in roles are supported to view metadata about LAPS including the device name, last password rotation, and next password rotation: Global Admin, Cloud Device Admin, Intune Service Admin, Helpdesk Admin, Security Reader, Security Admin, and Global Reader.
 
+<!--  REMOVED until this is validated as accurate: 
 ### Are custom roles supported?
 
 Yes. If you have Azure AD Premium, you can create a custom role with the following RBAC permissions:
 
 - To read LAPS metadata: *microsoft.directory/deviceLocalCredentials/standard/read*
 - To read LAPS passwords: *microsoft.directory/deviceLocalCredentials/password/read*
-
+-->
 ### What happens when the account specified by policy is changed?
 
 Because Windows LAPS can only manage one local admin account on a device at a time, the original account is no longer managed by LAPS policy. If policy has the device back up that account, the new account is backed up and details about the previous account are no longer available from within the Intune admin center or from the Directory that is specified to store the account information.
