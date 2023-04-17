@@ -63,10 +63,6 @@ Endpoint Privilege Management reports status of individual settings applied usin
 
 Behavior exists in Windows to set an attribute on files that are downloaded directly from the internet and prevent them from executing until validated. Windows has functionality to validate the reputation of files downloaded from the internet. When a files reputation isn't validated, it might fail to elevate. To correct this behavior, unblock the file by unblocking the file from the file properties pane. *Unblocking a file should only be done when you trust the file*.
 
-### Certificate rules defined with a file path might fail to elevate
-
-When you define a certificate rule with a file path, Endpoint Privilege Management might fail to elevate files signed by the certificate as the administrator intended. To work around this issue, supply a file name in addition to the file path. This issue will be fixed in a future release.
-
 ### Certificate rules defined as Issuing Certificate Authority might not allow elevation
 
 When you define a certificate rule and specify the certificate as an 'Issuing CA', EPM might not allow elevation when the certificate is properly part of the certificate chain. To work around this issue, specify the publisher certificate of the file instead. This issue will be fixed in a future release.
