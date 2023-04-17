@@ -84,7 +84,7 @@ In a future update, both single and bulk resizing will support Cloud PCs that we
 <!--## Device provisioning-->
 
 <!--***********************************************-->
-## End user experienc
+## End user experience
 
 ### Windows 365 web client keyboard shortcut redirection<!--43951825-->
 
