@@ -235,7 +235,6 @@ When you enable Connected Cache on your Configuration Manager distribution point
   - **Use Configuration Manager Boundary Groups for Delivery Optimization Group ID:**
     This option is required only if you use Delivery Optimization peer-to-peer. You do not need to set this option to use Microsoft Connected Cache.
   - **Enable devices managed by Configuration Manger to use Microsoft Connected Cache servers for content download**
-    
 
 - Enable co-management, and switch the **Client apps** workload to **Pilot Intune** or **Intune**. For more information, see the following articles:
 
