@@ -65,15 +65,15 @@ To create the Autopilot for existing devices task sequence in Configuration Mana
 
       1. Select the **Next >** button.
 
-   1. In the **Define membership rules for this collection** page, via the **Add Rule** drop down menu, create a rule(s) that will include the desired devices to run the Autopilot for existing devices task sequence. For more information on creating rules for a collection to include the desired devices, see [How to create collections in Configuration Manager](/mem/configmgr/core/clients/manage/collections/create-collections). Once the appropriate rules have been created that include the desired devices, select the **Next >** button.
+   1. In the **Define membership rules for this collection** page, via the **Add Rule** drop-down menu, create a rule(s) that includes the desired devices to run the Autopilot for existing devices task sequence. For more information on creating rules for a collection to include the desired devices, see [How to create collections in Configuration Manager](/mem/configmgr/core/clients/manage/collections/create-collections). Once the appropriate rules have been created that include the desired devices, select the **Next >** button.
 
    1. In the **Confirm the settings** page, verify that everything is configured as desired, and then select the **Next >** button.
 
    1. When the **Create Device Collection Wizard** completes with **The task "Create Device Collection Wizard" completed successfully** message, select the **Close** button.
 
-1. With **Device Collections** still selected, select <kbd>F5</kbd> on the keyboard to refresh the list of collections in the right pane. Verify that the newly created collection appears. If it doesn't appear, wait a few minutes and then try to refresh again. Depending on the environment, it may take some time for the newly created collection to appear.
+1. With **Device Collections** still selected, select <kbd>F5</kbd> on the keyboard to refresh the list of collections in the right pane. Verify that the newly created collection appears. If it doesn't appear, wait a few minutes, and then try to refresh again. Depending on the environment, it may take some time for the newly created collection to appear.
 
-1. Once the newly created collection appears, open it by double-clicking on it. Alternatively, to open the collection, right-click on the collection and then select **Show Members**. The members of the collection will appear in the right pane.
+1. Once the newly created collection appears, open it by double-clicking on it. Alternatively, to open the collection, right-click on the collection and then select **Show Members**. The members of the collection appear in the right pane.
 
 1. Verify that the listed devices are the expected devices for the collection that should receive the Autopilot for existing devices task sequence.
 

@@ -49,7 +49,7 @@ Once the JSON files have been created for the Autopilot profile(s), a package ne
 
 1. The **Create Package and Program Wizard** window appears:
 
-   1. In the **Specify information about this package** page , enter the following details for the package:
+   1. In the **Specify information about this package** page, enter the following details for the package:
 
       1. Next to **Name**, enter an identifiable name for the Autopilot scenario that the JSON file is for.
 

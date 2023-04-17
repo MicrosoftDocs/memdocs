@@ -47,11 +47,11 @@ Once the Autopilot for existing devices has been created, modified as needed, an
 
 2. Allow the task sequence to complete.
 
-3. Once the task sequence completes, depending on the shut down or restart behavior selected in the [Create Autopilot task sequence in Configuration Manager](create-autopilot-task-sequence.md#modify-the-task-sequence-to-account-for-sysprep-command-line-configuration) step or the optional [Speed up the deployment process](run-autopilot-task-sequence.md)step, the device will either restart or shut down:
+3. Once the task sequence completes, the device either restarts or shuts down depending on the shutdown or restart behavior selected in the [Create Autopilot task sequence in Configuration Manager](create-autopilot-task-sequence.md#modify-the-task-sequence-to-account-for-sysprep-command-line-configuration) step or the optional [Speed up the deployment process](run-autopilot-task-sequence.md)step:
 
-   - **Restart**: the device will restart as soon as the task sequence completes and then immediately boot into Windows for the first time and run OOBE. When OOBE runs, the Autopilot JSON file will be processed and the Autopilot deployment will start.
+   - **Restart**: the device restarts as soon as the task sequence completes and then immediately boot into Windows for the first time and run OOBE. When OOBE runs, the Autopilot JSON file is processed and the Autopilot deployment starts.
 
-   - **Shut down**: the device will shut down and power off  as soon as the task sequence completes. This gives the option to further prepare the device and then deliver it to an end-user. OOBE and the Autopilot deployment will then start when the end-user turns on the device for the first time.
+   - **Shutdown**: the device shuts down and power off  as soon as the task sequence completes. Shutting down the device gives the option to further prepare the device and then deliver it to an end-user. OOBE and the Autopilot deployment start when the end-user turns on the device for the first time.
 
 ## Next step: Register device for Windows Autopilot
 

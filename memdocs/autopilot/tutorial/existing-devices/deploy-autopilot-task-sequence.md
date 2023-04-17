@@ -45,7 +45,7 @@ Once the Autopilot for existing devices task sequence and the collection with de
 
 1. Expand **Task Sequences** and then locate the Autopilot for existing devices task sequence created in the [Create Autopilot task sequence for existing devices in Configuration Manager](create-autopilot-task-sequence.md) step.
 
-1. Once the Autopilot for existing devices task sequence is located, select it and then on the ribbon, select **Deploy**. Alternatively, right-click on the the Autopilot for existing devices task sequence and select **Deploy**.
+1. Once the Autopilot for existing devices task sequence is located, select it and then on the ribbon, select **Deploy**. Alternatively, right-click on the Autopilot for existing devices task sequence and select **Deploy**.
 
 1. In the **Deploy Software Wizard** window that appears:
 
@@ -59,7 +59,11 @@ Once the Autopilot for existing devices task sequence and the collection with de
 
    1. In the **Deployment Settings**/**Specify settings to control this deployment** page, configure the settings as desired:
 
-      1. For **Purpose:**, **Available** is normally selected. Making the deployment available usually means that someone such as an admin or end-user has to manually trigger and start the deployment by selecting the task sequence through methods such as the Configuration Manager Software Center, booting from a PXE enabled distribution point, or booting from task sequence bootable media.
+      1. For **Purpose:**, **Available** is normally selected. Making the deployment available usually means that someone such as an admin or end-user has to manually trigger and start the deployment by selecting the task sequence through methods such:
+
+         - The Configuration Manager Software Center.
+         - Booting from a PXE enabled distribution point
+         - Booting from task sequence bootable media.
 
         > [!WARNING]
         >
@@ -67,9 +71,9 @@ Once the Autopilot for existing devices task sequence and the collection with de
 
       1. Under **Make available to the following:**, select the desired methods where the task sequence appears and when the task sequence can run:
 
-        - **Only Configuration Manager clients**: The task sequence will only appear in the Configuration Manager Software Center on existing devices that has Windows already installed and has the Configuration Manager client installed. The task sequence doesn't appear when booting from a PXE enabled distribution point or when booting from task sequence bootable media.
+        - **Only Configuration Manager clients**: The task sequence appears in the Configuration Manager Software Center on existing devices that has Windows already installed and has the Configuration Manager client installed. The task sequence doesn't appear when booting from a PXE enabled distribution point or when booting from task sequence bootable media.
 
-        - **Only media and PXE**: The task sequence will only appear when booting from a PXE enabled distribution point or when booting from task sequence bootable media. The task sequence doesn't appear in the Configuration Manager Software Center on existing devices that has Windows already installed and has the Configuration Manager client installed.
+        - **Only media and PXE**: The task sequence appears when booting from a PXE enabled distribution point or when booting from task sequence bootable media. The task sequence doesn't appear in the Configuration Manager Software Center on existing devices that has Windows already installed and has the Configuration Manager client installed.
 
         - **Configuration Manager clients, media and PXE**: The task sequence appears when booting from a PXE enabled distribution point or when booting from task sequence bootable media, and it also appears in the Configuration Manager Software Center on existing devices that has Windows already installed and has the Configuration Manager client installed.
 
@@ -81,11 +85,11 @@ Once the Autopilot for existing devices task sequence and the collection with de
 
    1. In the **Scheduling**/**Specify the schedule for this deployment** page, schedule when the deployment should occur:
 
-      1. Select the checkbox next to **Schedule when this deployment will become available:** and then select a date and time. This is the time that the task sequence will start to appear in the Configuration Manager Software Center, when booting from a PXE enabled distribution point, or when booting from task sequence bootable media.
+      1. Select the checkbox next to **Schedule when this deployment will become available:** and then select a date and time. This date and time is the date and time that the task sequence starts to appear in the Configuration Manager Software Center, when booting from a PXE enabled distribution point, or when booting from task sequence bootable media.
 
-      2. If the deployment is required, next to **Assignment schedule:**, select the **New** button. In the **Assignment Schedule** window that appears, configure the settings as needed. The settings selected here will determine when the task sequence runs automatically without end-user intervention. Once complete. Once complete, select the **OK** button.
+      1. If the deployment is required, next to **Assignment schedule:**, select the **New** button. In the **Assignment Schedule** window that appears, configure the settings as needed. The settings selected here determine when the task sequence runs automatically without end-user intervention. Once complete. Once complete, select the **OK** button.
 
-      3. Select the **Next >** button.
+      1. Select the **Next >** button.
 
    1. In the **User Experience**/**Specify the user experience for the installation of this software** page, select the options as desired, and then select the **Next >** button.
 
@@ -97,7 +101,7 @@ Once the Autopilot for existing devices task sequence and the collection with de
 
    1. When the **Deploy Software Wizard** completes with **The task "Deploy Software Wizard" completed successfully** message, select the **Close** button.
 
-1. If there are multiple task sequence with different Autopilot profiles, repeat the above steps for each task sequence.
+1. If there are multiple task sequences with different Autopilot profiles, repeat the above steps for each task sequence.
 
 > [!NOTE]
 >

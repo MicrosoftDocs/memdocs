@@ -37,9 +37,9 @@ For an overview of the Windows Autopilot deployment for existing devices workflo
 
 ## Set up a Windows Autopilot deployment
 
-Windows Autopilot deployment for existing devices isn't an Autopilot deployment that applies an Autopilot profile to a device during the the out of box experience (OOBE) of Windows Setup. Instead, it prepares a device to receive an Autopilot profile via an Autopilot deployment by first wiping the device and then installing a fresh copy of Windows. The Windows Autopilot deployment for existing devices process itself isn't an Autopilot profile that is processed during OOBE. For this reason, when Windows boots for the first time and goes into OOBE after being freshly installed, it needs an existing valid Autopilot deployment to complete the Autopilot process.
+Windows Autopilot deployment for existing devices isn't an Autopilot deployment that applies an Autopilot profile to a device during the out of box experience (OOBE) of Windows Setup. Instead, it prepares a device to receive an Autopilot profile via an Autopilot deployment by first wiping the device and then installing a fresh copy of Windows. The Windows Autopilot deployment for existing devices process itself isn't an Autopilot profile that is processed during OOBE. For this reason, when Windows boots for the first time and goes into OOBE after being freshly installed, it needs an existing valid Autopilot deployment to complete the Autopilot process.
 
-The first step in a Windows Autopilot deployment for existing devices is to make sure there is already an existing valid Autopilot deployment in place assigned to the device. One of the following five workflows can be used to create and assign a valid Autopilot deployment:
+The first step in a Windows Autopilot deployment for existing devices is to make sure there's already an existing valid Autopilot deployment in place assigned to the device. One of the following five workflows can be used to create and assign a valid Autopilot deployment:
 
 - [Windows Autopilot user-driven Azure AD join](../user-driven/azure-ad-join-workflow.md)
 - [Windows Autopilot user-driven hybrid Azure AD join](../user-driven/hybrid-azure-ad-join-workflow.md)
