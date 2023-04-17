@@ -38,7 +38,9 @@ This feature applies to:
 - macOS 12 and later (supervised)
 
 > [!NOTE]
-> Prior to the macOS 12.5 release, devices may download and install additional updates before installing the latest update. 
+> Prior to the macOS 12.5 release, devices may download and install additional updates before installing the latest update.
+>
+> This feature is only available on MacOS devices that have been enrolled in Intune using Automated Device Enrollment (ADE) (supervised).
 
 With policies for macOS software updates, you can:
 
