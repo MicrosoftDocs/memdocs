@@ -59,15 +59,15 @@ Once the Autopilot for existing devices task sequence and the collection with de
 
    1. In the **Deployment Settings**/**Specify settings to control this deployment** page, configure the settings as desired:
 
-      1. For **Purpose:**, **Available** is normally selected. Making the deployment available usually means that someone such as an admin or end-user has to manually trigger and start the deployment by selecting the task sequence through methods such:
+      1. For **Purpose:**, normally **Available** is selected. Making the deployment available usually means that someone such as an admin or end-user has to manually trigger and start the deployment by selecting the task sequence through methods such:
 
          - The Configuration Manager Software Center.
          - Booting from a PXE enabled distribution point
          - Booting from task sequence bootable media.
 
-        > [!WARNING]
-        >
-        > The deployment can instead be set to **Required** which will cause the deployment to start automatically without any end-user intervention when the deployment assignment time is reached. However, it's not recommended to make a deployment required due to the potential destructive behavior that a required task sequence can have. For example, if a required task sequence is accidentally deployed to the wrong collection, or the wrong devices are added to the collection that the task sequence is deployed to, it can wipe those devices without any user interaction. If using the option of **Required**, do so with extreme caution making sure the task sequence is deployed to the correct collection that contains expected devices.
+          > [!WARNING]
+          >
+          > The deployment can instead be set to **Required** which will cause the deployment to start automatically without any end-user intervention when the deployment assignment time is reached. However, it's not recommended to make a deployment required due to the potential destructive behavior that a required task sequence can have. For example, if a required task sequence is accidentally deployed to the wrong collection, or the wrong devices are added to the collection that the task sequence is deployed to, it can wipe those devices without any user interaction. If using the option of **Required**, do so with extreme caution making sure the task sequence is deployed to the correct collection that contains expected devices.
 
       1. Under **Make available to the following:**, select the desired methods where the task sequence appears and when the task sequence can run:
 
