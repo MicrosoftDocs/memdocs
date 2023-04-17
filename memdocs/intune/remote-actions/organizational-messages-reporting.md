@@ -63,7 +63,7 @@ Message details include:
  ## Access audit logs  
  Use audit logs to track and monitor organizational message events in Microsoft Intune. Audit logs contain a record of activities that generate a change in Microsoft Intune. Create, update (edit), delete, and assign actions all create audit events for organizational messages that administrator can review.    
  
- To access the logs, go to **Tenant administration** > **Audit logs**. For more information, see [Use audit logs to track and monitor events](monitor-audit-logs.md).   
+ To access the logs, go to **Tenant administration** > **Audit logs**. For more information, see [Use audit logs to track and monitor events](../fundamentals/monitor-audit-logs.md).   
 
  ## Next steps  
 You can send audit logs to Azure Monitor services, including storage accounts, event hubs, and log analytics. For more information, see [Review logs with Azure Monitor](../fundamentals/review-logs-using-azure-monitor.md).  
