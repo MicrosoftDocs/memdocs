@@ -342,4 +342,4 @@ You can now build reports and data visualizations using the user device associat
 
 ## Next steps
 - Learn [what's new each week in Intune](../fundamentals/whats-new.md). You can also find out about upcoming changes, important notices about the service, and information about past releases.
-- Read the [Microsoft Intune Blog](https://www.microsoft.com/microsoft-365/blog/microsoft-intune/).
+- Read the [Microsoft Intune Blog](https://techcommunity.microsoft.com/t5/microsoft-intune-blog/bg-p/MicrosoftEndpointManagerBlog).

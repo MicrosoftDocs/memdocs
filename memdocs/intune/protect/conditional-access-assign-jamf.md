@@ -100,7 +100,7 @@ To complete the following procedure, you need access to a macOS device and the J
 
 After you [deploy the Company Portal](conditional-access-assign-jamf.md#deploy-the-company-portal-app-for-macos-in-jamf-pro) for macOS through Jamf Pro Self-Service, you can create the Jamf Pro policy that registers a user's device with Azure AD.
 
-Device registration requires a device user to manually select the Intune Company Portal app from within Jamf Self Service. We recommend you [contact your end users](../fundamentals/end-user-educate.md) through email, Jamf Pro notifications, or any other method your organization uses to direct them to complete this action to get their devices registered.
+Device registration requires a device user to manually select the Intune Company Portal app from within Jamf Self Service. We recommend you [contact your end users](/mem/intune/fundamentals/intune-planning-guide) through email, Jamf Pro notifications, or any other method your organization uses to direct them to complete this action to get their devices registered.
 
 > [!WARNING]
 > Launching the Company Portal app manually (such as from the Applications or Downloads folders) won't register the device. If device user launches the Company Portal manually, they'll see a warning, **'AccountNotOnboarded'**.

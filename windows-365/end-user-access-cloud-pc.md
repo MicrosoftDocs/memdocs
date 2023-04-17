@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 02/28/2023
+ms.date: 04/10/2023
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice:
@@ -130,6 +130,22 @@ Users can collect logs of their Cloud PC sessions. The logs are collected from t
 To turn on log collection, in the client, select the gear icon > **Capture logs**.
 
    ![Capture logs.](media/get-users-started/settings-logs.png)
+
+### Location (preview)
+
+Location redirection lets Cloud PCs access your location accurately and safely without privacy concerns. By turning on the location service, your Cloud PC will use the location of your physical device for most apps (the Weather widget isn’t currently supported).
+
+For more information about location services, see [Windows location service and privacy](https://support.microsoft.com/en-us/windows/windows-location-service-and-privacy-3a8eee0a-5b0b-dc07-eede-2a5ca1c49088).
+
+To turn on location redirection, follow these steps:
+
+1. On your physical device, go to **Settings** > **Privacy & Security** > **Location**.
+2. For **Location services**, set the toggle to **On**.
+3. For **Let apps access your location**, set the toggle to **On**.
+4. For each app that you want your Cloud PC to have location information, set the toggle to **On**.
+5. Go to windows365.microsoft.com.
+6. Under **Your Cloud PCs**, select **Open in a browser** for your Cloud PC.
+7. Under **In Session Settings**, select **Location (Preview**) > **Connect**.
 
 ## Remote Desktop
 

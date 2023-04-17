@@ -63,6 +63,10 @@ Endpoint Privilege Management reports status of individual settings applied usin
 
 Behavior exists in Windows to set an attribute on files that are downloaded directly from the internet and prevent them from executing until validated. Windows has functionality to validate the reputation of files downloaded from the internet. When a files reputation isn't validated, it might fail to elevate. To correct this behavior, unblock the file by unblocking the file from the file properties pane. *Unblocking a file should only be done when you trust the file*.
 
+### Windows devices that are "work place joined" fail to enable Endpoint Privilege Management
+
+Devices that are workplace joined are not supported by Endpoint Privilege Management. These devices will not show success or process EPM policies (elevation settings or elevation rules) when deployed to the device.
+
 ### Certificate rules defined as Issuing Certificate Authority might not allow elevation
 
 When you define a certificate rule and specify the certificate as an 'Issuing CA', EPM might not allow elevation when the certificate is properly part of the certificate chain. To work around this issue, specify the publisher certificate of the file instead. This issue will be fixed in a future release.
@@ -73,7 +77,7 @@ Windows 11 introduced a new paradigm for right-click context menus. EPM currentl
 
 ### Rules for a network file might fail to elevate
 
-Endpoint Privilege Management supports executing files that are locally stored on disk. Executing files from a network share isn't allowed.
+Endpoint Privilege Management supports executing files that are locally stored on disk. Executing files from a network location, such as a network share or mapped drive, is not supported.
 
 ### Endpoint Privilege Management doesn't receive policy when I use a 'SSL-inspection' on my network infrastructure
 
@@ -85,9 +89,9 @@ Endpoint Privilege Management doesn't support SSL inspection, which is known as 
 
 Currently virtual desktop infrastructure (VDI) is not supported by Endpoint Privilege Management (including Windows 365 and Azure Virtual Desktop). This issue will be fixed in future release.
 
-### Why is my elevation settings policy showing error?
+### Why is my elevation settings policy showing error/not applicable?
 
-The elevation settings policy controls the enablement of EPM and the configuration of the client side components. When this policy is in error it indicates the device had an issue enabling EPM. The most common reason is the [required Windows updates](../protect/epm-overview.md#windows-client-requirements) are not installed on the device.
+The elevation settings policy controls the enablement of EPM and the configuration of the client side components. When this policy is in error or shows not applicable, it indicates the device had an issue enabling EPM. The two most common reasons are missing the [required Windows updates](../protect/epm-overview.md#windows-client-requirements) or failure to communicate with required [Intune Endpoints for Endpoint Privilege Management](../fundamentals/intune-endpoints.md#microsoft-intune-endpoint-privilege-management).
 
 ### What happens when someone with administrative privileges uses a device that is enabled for EPM?
 

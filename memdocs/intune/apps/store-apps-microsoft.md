@@ -156,6 +156,9 @@ The Microsoft Store supports Win32 app types including **.exe** and **.msi** ins
 ## Microsoft Store UWP apps
 In addition to user context, you can deploy Universal Windows Platform (UWP) apps from the **Microsoft Store app (new)** in system context. If a provisioned *.appx* app is deployed in system context, the app will auto-install for each user that logs in. If an individual end user uninstalls the user context app, the app will still show as installed because it is still provisioned. In addition, the app must not already be installed for any users on the device. Our general recommendation is to not mix install contexts when deploying apps.
 
+> [!NOTE]
+> Assigning a UWP app using the "Microsoft Store app (new)" type with the installation behavior set as "System" to a device which already has that app installed will result in this error: "The application was not detected after installation completed successfully (0x87D1041C)". Uninstalling all previous installations of the app from the device, and then re-installing the app to the device will resolve this.
+
 ## Store group policies restrictions
 
 Some **Store Group Policies** may affect app deployments from the Microsoft Store. 
@@ -177,8 +180,7 @@ The following table provides details about how app deployment may be affected by
 
 The following capabilities aren't supported by Microsoft Store apps:
 
-1. Ability to install Microsoft Store apps during Enrollment Status Page. Apps deployed using Microsoft Store app will install after enrollment status page has completed. The ability to install Microsoft Store apps during Enrolment Status Page is coming in a future release.
-2. Any app that has an ARM64 installer is not supported.
+1. Any app that has an ARM64 installer is not supported.
 
 ## Next steps
 

@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 04/03/2023
+ms.date: 04/11/2023
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice:
@@ -53,15 +53,35 @@ Learn what new features are available in Windows 365 Enterprise.
 -->
 
 <!-- ########################## -->
-## Week of April 3, 2023
+## Week of April 10, 2023
 
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### End user experience
+
+#### Location redirection<!--43953213-->
+
+Users can now turn on Location redirection so that their Cloud PCs use their correct geographic location. For more information, see [Location redirection](../end-user-access-cloud-pc.md#location-preview).
+
+<!-- ########################## -->
+## Week of April 3, 2023
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
 
+#### Windows 365 Frontline<!-- 43452892-->
+
+Windows 365 Frontline is a new version of Windows 365 that helps organizations save costs by providing a single license to provision three Cloud PC virtual machines. For each Windows 365 Frontline license that you buy, you can provision three different Cloud PCs that can’t be used concurrently. Instead, each user receives a unique Cloud PC that they can use when the other two users on the same license aren’t signed into their Cloud PCs. For more information, see [What is Windows 365 Frontline?](introduction-windows-365-frontline.md)
+
 #### Convert Windows 365 licenses to higher level licenses<!--43204652-->
 
 Customers with an active direct enterprise agreement can now convert lower-level Windows 365 licenses to higher-level licenses. Reach out to your field specialist to learn more.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Documentation
+
+#### New documentation article: Relative performance for different Cloud PC sizes
+
+We’ve published a new help documentation article. For more information, see [Relative performance for different Cloud PC sizes](../relative-cloud-pc-performance.md).
 
 <!-- ########################## -->
 ## Week of March 28, 2023 (Service release 2303)
@@ -117,7 +137,7 @@ You can now create on-demand Cloud PC restore points and copy them to an Azure S
 
 #### Permission changes for Azure network connection operations<!--43251193-->
 
-The permissions required for the editing, creating, and deleting Azure network connection (ANC) and health check retry operations have changed: You must now have [Intune Administrator](/azure/active-directory/roles/permissions-reference#intune-administrator), [Windows 365 Administrator](/azure/active-directory/roles/permissions-reference), or [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) permissions. For more informatiion, see [Azure network connections](azure-network-connections.md).
+The permissions required for the editing, creating, and deleting Azure network connection (ANC) and health check retry operations have changed: You must now have [Intune Administrator](/azure/active-directory/roles/permissions-reference#intune-administrator), [Windows 365 Administrator](/azure/active-directory/roles/permissions-reference), or [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) permissions. For more information, see [Azure network connections](azure-network-connections.md).
 
 <!-- ########################## -->
 ## Week of February 27, 2023 (Service release 2302)
