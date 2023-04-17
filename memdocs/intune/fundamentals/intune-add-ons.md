@@ -134,12 +134,9 @@ Each of the Intune add-ons have their own requirements for how many licenses nee
 
 Learn more about:
 
-<<<<<<< HEAD
-=======
 - [Remote Help](/mem/intune/fundamentals/remote-help)
 - [Microsoft Tunnel for Mobile Application Management](../protect/microsoft-tunnel-mam.md)
 - [Managing specialized devices with Microsoft Intune](specialty-devices-with-intune.md)
->>>>>>> 0fa343e3482e437d21f341d246deb6424793472b
 - [Advanced endpoint analytics](../../analytics/overview.md)
 - [Endpoint Privilege Management](../protect/epm-overview.md).
 - [Microsoft Tunnel for Mobile Application Management](../protect/microsoft-tunnel-mam.md)
