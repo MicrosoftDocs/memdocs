@@ -71,15 +71,15 @@ Once the Autopilot for existing devices task sequence and the collection with de
 
       1. Under **Make available to the following:**, select where the task sequence appears and when the task sequence can run:
 
-        - **Only Configuration Manager clients**: The task sequence appears in the Configuration Manager Software Center on existing devices that has Windows already installed and has the Configuration Manager client installed. The task sequence doesn't appear when booting from a PXE enabled distribution point or when booting from task sequence bootable media.
+         - **Only Configuration Manager clients**: The task sequence appears in the Configuration Manager Software Center on existing devices that has Windows already installed and has the Configuration Manager client installed. The task sequence doesn't appear when booting from a PXE enabled distribution point or when booting from task sequence bootable media.
 
-        - **Only media and PXE**: The task sequence appears when booting from a PXE enabled distribution point or when booting from task sequence bootable media. The task sequence doesn't appear in the Configuration Manager Software Center on existing devices that has Windows already installed and has the Configuration Manager client installed.
+         - **Only media and PXE**: The task sequence appears when booting from a PXE enabled distribution point or when booting from task sequence bootable media. The task sequence doesn't appear in the Configuration Manager Software Center on existing devices that has Windows already installed and has the Configuration Manager client installed.
 
-        - **Configuration Manager clients, media and PXE**: The task sequence appears when booting from a PXE enabled distribution point or when booting from task sequence bootable media, and it also appears in the Configuration Manager Software Center on existing devices that has Windows already installed and has the Configuration Manager client installed.
+         - **Configuration Manager clients, media and PXE**: The task sequence appears when booting from a PXE enabled distribution point or when booting from task sequence bootable media, and it also appears in the Configuration Manager Software Center on existing devices that has Windows already installed and has the Configuration Manager client installed.
 
-            > [!WARNING]
-            >
-            > When the deployment is set to **Required**, the above options are the scenarios when the deployment can automatically run when the deployment assignment time is reached. For example, if the deployment is set to **Required** and **Only media and PXE**, the task sequence won't ever run automatically while in Windows. However, it will run automatically when the device is booted from a PXE enabled distribution point or when booted from task sequence bootable media.
+          > [!WARNING]
+          >
+          > When the deployment is set to **Required**, the above options are the scenarios when the deployment can automatically run when the deployment assignment time is reached. For example, if the deployment is set to **Required** and **Only media and PXE**, the task sequence won't ever run automatically while in Windows. However, it will run automatically when the device is booted from a PXE enabled distribution point or when booted from task sequence bootable media.
 
       1. Select the **Next >** button.
 
