@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 08/24/2022
+ms.date: 04/17/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -173,7 +173,13 @@ The following permissions are available when creating custom roles.
 | Organization/Create | Create tenant settings such as device categories and Exchange connectors. | 
 | Organization/Delete | Delete tenant settings such as device categories and Exchange Connectors. | 
 | Organization/Read | View tenant settings such as device categories and Exchange Connectors. This permission is required to activate all enrollment workflows. | 
-| Organization/Update | Manage tenant settings, device categories and Exchange Connectors. | 
+| Organization/Update | Manage tenant settings, device categories and Exchange Connectors. |
+| Organizational messages/Create | Create and assign organizational messages. |
+| Organizational messages/Read | Read organizational messages. |
+| Organizational messages/Update | Cancel organizational messages. |
+| Organizational messages/Delete | Delete organizational messages. |
+| Organization messages/Assign | Assign organizational messages. |
+| Organizational messages/Update organizational message control | Enable or block organizational messages directly from Microsoft, while allowing admin messages to display. | 
 | Partner Device Management/Modify | Configure the Compliance Connector for Jamf. | 
 | Partner Device Management/Read | View the Compliance Connector for Jamf. | 
 | Policy Sets/Assign | Assign Policy Sets to Azure AD security groups. | 
