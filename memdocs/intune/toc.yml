@@ -1372,6 +1372,8 @@ items:
             href: ./remote-actions/organizational-messages-prerequisites.md
           - name: Create organizational messages  
             href: ./remote-actions/organizational-messages-create.md  
+          - name: Cancel or delete organizational message 
+            href: ./remote-actions/organizational-messages-cancel.md
           - name: Monitor organizational messages  
             href: ./remote-actions/organizational-messages-reporting.md  
       - name: Bulk device actions
