@@ -207,7 +207,7 @@ Additionally, the new profile includes the following changes for the settings it
 
 ### Intune apps
 
-#### Newly available protected apps for Intune<!-- 17318943, 17319737, 17624650  -->
+#### Newly available protected apps for Intune<!-- 17318943, 17319737, 17457189, 17624650  -->
 The following protected apps are now available for Microsoft Intune:
 - ixArma by INAX-APPS (iOS)
 - myBLDNG by Bldng.ai (iOS)
@@ -220,7 +220,7 @@ For more information about protected apps, see [Microsoft Intune protected apps]
 
 ### Device configuration
 
-#### User configuration support for Windows 10 multi-session VMs is now GA<!-- 17060455 -->
+#### User configuration support for Windows 10 multi-session VMs is now GA<!-- 17060455 -->git 
 
 User configuration support for Windows 10 multi-session VMs is now GA. With this, you can:
 
