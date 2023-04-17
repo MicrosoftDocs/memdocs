@@ -59,7 +59,7 @@ On their Windows 365 home page, users see the Cloud PCs they have access to in t
 
 From this page, users have two options to connect to your Cloud PC:
 
-- Select **Open in browser** to open their Cloud PC in the web client (not available for mobile devices). For more information, see [Windows 265 web client](#windows-365-web-client).
+- Select **Open in browser** to open their Cloud PC in the web client (not available for mobile devices). For more information, see [Windows 365 web client](#windows-365-web-client).
 - Select **Open in Remote Desktop app** to open their Cloud PC in Remote Desktop. For more information, see [Remote Desktop](#remote-desktop).
 
 ### User actions
