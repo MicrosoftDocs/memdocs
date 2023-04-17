@@ -37,6 +37,30 @@ For an overview of the Windows Autopilot deployment for existing devices workflo
 
 ## Windows Autopilot for existing devices task sequence process
 
+When the Windows Autopilot for existing devices task sequence runs on a device, the Autopilot deployment doesn't run when the device boots into Windows for the first time during the **Setup Windows and ConfigMgr** task. The Autopilot deployment normally runs when Windows boots for the first time and Windows Setup and OOBE run. However, even though the task sequence injected the Autopilot profile JSON file into the offline Windows installation, the file is not processed because the task sequence also creates and injects an `unattend.xml` file. When there is both an `unattend.xml` and an Autopilot profile JSON file during Windows Setup, Windows Setup ignores the Autopilot profile JSON file and is only processes the `unattend.xml` file.
+
+During the **Setup Windows and ConfigMgr** task of the task sequence, the task sequence deletes the existing `unattend.xml` after it has been processed by Windows Setup. When the task sequence later Syspreps the device, it doesn't specify or add a new `unattend.xml` file. Once the task sequence finishes running Sysprep, the task sequence completes and the device is rebooted. When the device reboots, Windows starts and runs Windows Setup and OOBE for a second time. Since there is no `unattend.xml` file and only the Autopilot profile JSON file exists, Windows Setup processes the Windows Autopilot profile JSON file and the Autopilot deployment starts.
+
+An overview of the Windows Autopilot for existing devices task sequence process is as follows:
+
+1. Task sequence starts in Windows PE.
+2. Task sequence formats and partitions the disk.
+3. Task sequence applies the Windows OS and creates the `unattend.xml` file.
+4. Task sequence injects the Autopilot profile JSON file.
+5. Task sequence boots into Windows for the first time.
+6. Windows setup runs for the first time and processes the `unattend.xml` file. Windows Autopilot profile JSON file is ignored.
+7. Task sequence resumes in the newly installed Windows OS.
+8. Task sequence deletes the unattend.xml file.
+9. Task sequence installs the Configuration Manager client.
+10. Task sequence runs additional tasks (**Install Application**, **Install Software Updates**, **Install Package**, **Enable BitLocker**, etc.)
+11. Task sequence uninstalls the Configuration Manager client.
+12. Task sequence Syspreps the device.
+13. Task sequence completes and device reboots.
+14. Windows setup runs for the second time and processes the Autopilot profile JSON file since there is no `unattend.xml` file.
+15. Autopilot deployment starts.
+
+## Additional tasks run during a Windows Autopilot for existing devices task sequence
+
 When using the **Create Task Sequence Wizard** in Configuration Manager to create the Windows Autopilot for existing devices task sequence, it assumes that additional tasks need to be run via the task sequence before the Autopilot deployment runs. Examples of additional tasks running via the task sequence before the Autopilot deployment runs include:
 
 - Installing applications via the **Install Application** task.
@@ -45,7 +69,7 @@ When using the **Create Task Sequence Wizard** in Configuration Manager to creat
 - Enabling BitLocker via the **Enable BitLocker** task.
 - Other customizations.
 
-In order for these additional tasks to run, the task sequence deployment process perform the following processes after it boots out of Windows PE:
+In order for these additional tasks to run, the task sequence deployment process performs the following processes after it boots out of Windows PE:
 
 - Boots into the Windows OS for the first time and runs Windows Setup and OOBE.
 - Continues the task sequence in the full Windows OS.
@@ -54,36 +78,12 @@ In order for these additional tasks to run, the task sequence deployment process
 - Removes the Configuration Manager client.
 - Syspreps the device so that after the task sequence completes and the device reboots, it can rerun Windows Setup and OOBE which then launches the Autopilot deployment.
 
-The above steps are necessary if additional tasks need to run during the task sequence. However, if additional tasks don't need to run during the task sequence, then most of the above tasks aren't needed. Running the above tasks when they aren't needed can potentially cause several issues including:
+The above steps are necessary if additional tasks need to run during the task sequence. However, if additional tasks don't need to run during the task sequence, then several of the above steps aren't needed. Running the above steps when they aren't needed can potentially cause several issues including:
 
 - Needlessly adding a lot of time to the deployment process.
 - Needlessly installing the Configuration Manager client on the device. It's best practice to avoid installing the Configuration Manager client if it's never needed during the task sequence and if it's eventually going to be uninstalled.
 - Needlessly running Windows Setup and OOBE multiple times.
 - Needlessly running Sysprep.
-
-### When does the Autopilot deployment run during a Windows Autopilot for existing devices task sequence
-
-When the Windows Autopilot for existing devices task sequence runs on a device, the Autopilot deployment doesn't run when the device boots into Windows for the first time during the **Setup Windows and ConfigMgr** task. The Autopilot deployment would normally run during this time frame when Windows Setup and OOBE run. However, even though the task sequence injected the Autopilot profile JSON file into the offline Windows installation, the file is not processed because the task sequence also creates and injects an `unattend.xml` file. When there is both an `unattend.xml` and an Autopilot profile JSON file during Windows Setup and OOBE, Windows Setup ignores the Autopilot profile JSON file and is only processes the `unattend.xml` file.
-
-During the **Setup Windows and ConfigMgr** task of the task sequence, the task sequence deletes the existing `unattend.xml` after it has been processed by Windows Setup. When the task sequence later Syspreps the device, it doesn't specify or add a new `unattend.xml` file. After the task sequence runs Sysprep, the task sequence completes and the device is rebooted. When the device reboots, Windows starts and runs Windows Setup and OOBE for a second time. Since there is no `unattend.xml` file and only the Autopilot profile JSON file exists, Windows Setup processes the Windows Autopilot profile JSON file and the Autopilot deployment starts.
-
-Overview of the Windows Autopilot for existing devices task sequence process is as follows:
-
-1. Task sequence starts in Windows PE.
-1. Task sequence formats and partitions the disk.
-1. Task sequence applies the Windows OS and creates the `unattend.xml` file.
-1. Task sequence injects the Autopilot profile JSON file.
-1. Task sequence boots into Windows for the first time.
-1. Windows setup runs for the first time and processes the `unattend.xml` file. Windows Autopilot profile JSON file is ignored.
-1. Task sequence resumes in the newly installed Windows OS.
-1. Task sequence deletes the unattend.xml file.
-1. Task sequence installs the Configuration Manager client.
-1. Task sequence runs additional tasks (**Install Application**, **Install Software Updates**, **Install Package**, **Enable BitLocker**, etc.)
-1. Task sequence uninstalls the Configuration Manager client.
-1. Task sequence Syspreps the device.
-1. Task sequence completes and device reboots.
-1. Windows setup runs for the second time and processes the Autopilot profile JSON file since there is no `unattend.xml` file.
-1. Autopilot deployment starts.
 
 ## Speed up the deployment process
 
