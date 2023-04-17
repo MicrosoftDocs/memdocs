@@ -119,11 +119,10 @@ For more information, see [Role based access controls for LAPS](../protect/windo
 
 ## View account and password details
 
-When your account has the *deviceLocalCredentials.Read.All* permissions, you can use the Intune admin center to view details about the backed up local admin account and its current password. These permissions are specific to the following roles. and allow the account to recover the Windows LAPS password:
+During the public preview, your account must be assigned one of the following built-in Azure AD roles that grant access to view an account name and password:
 
 - Global Admin
 - Cloud Device Admin
-- Intune Service Admin
 
 For more information, see [Role based access controls for LAPS](../protect/windows-laps-overview.md#role-based-access-controls-for-laps).
 
@@ -156,7 +155,13 @@ The following are considerations for viewing a devices account and password info
 
 LAPS policy includes a schedule for automatically rotating account passwords. In addition to a scheduled rotation, you can use the Intune [device action](../remote-actions/device-management.md) of **Rotate local admin password** to manually rotate a devices password independent of the rotation schedule set by the devices LAPS Policy.
 
-To use this device action, your account must have the **Rotate local admin password** permission that is part of the **Remote tasks** category. See [Role based access controls for LAPS](../protect/windows-laps-overview.md#role-based-access-controls-for-laps).
+To use this device action, your account must have the following three Intune permissions:
+
+- Managed devices: **Read**
+- Organization: **Read**
+- Remote tasks:  **Rotate Local Admin Password**
+
+See [Role based access controls for LAPS](../protect/windows-laps-overview.md#role-based-access-controls-for-laps).
 
 ### To rotate a password
 

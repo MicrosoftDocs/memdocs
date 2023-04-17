@@ -103,21 +103,29 @@ Devices can have any [Windows edition that Intune supports](../fundamentals/supp
 
 ## Role based access controls for LAPS
 
-To manage LAPS, your account must be assigned sufficient role-based access control (RBAC) rights to complete the desired task. The following are the permissions and categories where those permissions are available.
+To manage LAPS, an account must be have sufficient role-based access control (RBAC) permissions to complete a desired task. The following are the available tasks with their required permissions:
 
-**Create and access LAPS policy** – To work with and view LAPS policies, your account must rights equal to those found in the built-in **Endpoint Security Administrator** role. This role includes sufficient permissions to work with all templates that are available through Endpoint security policies, and to view and manage devices related to your LAPS policies.
+- **Create and access LAPS policy** – To work with and view LAPS policies, your account must rights equal to those found in Intune's built-in **Endpoint Security Administrator** role. This role includes sufficient permissions to work with all templates that are available through Endpoint security policies, and to view and manage devices related to your LAPS policies.
 
-**Rotate local Administrator password** – To use the Intune admin center to rotate a devices local admin account password, your account must have the following additional permission:
+- **Rotate local Administrator password** – To use the Intune admin center to rotate a devices local admin account password, your account must be assigned the following Intune permissions:
 
-- **Rotate Local Admin Password** - This permission is found in the **Remote tasks** category.
+  - Managed devices: **Read**
+  - Organization: **Read**
+  - Remote tasks:  **Rotate Local Admin Password**
 
-**Retrieve local Administrator password** – To view password details, your account must have permissions equal to one of the following:
+- **Retrieve local Administrator password** – To view password details, your account must have one of the following Azure Active Directory permissions:
 
-- Global Administrator
-- Cloud Device Administrator
-- Intune Service Administrator with *deviceLocalCredentials.Read.All* permissions, which adds the permission to recover LAPS passwords. 
+  - `microsoft.directory/deviceLocalCredentials/password/read`
+  - `microsoft.directory/deviceLocalCredentials/standard/read`
+  
+  During the public preview, these permissions aren't available to add to custom Azure AD roles. Instead, your account must be assigned one of the following Azure AD built-in rules, which include these permissions by default:
 
-**View Azure AD audit logs and events** – To view details about LAPS policies and recent device actions such as password rotation events, your account must permissions equivalent to the built-in Intune role **Read Only Operator**.
+  - **Global Administrator**
+  - **Cloud Device Administrator**
+
+  In the future, Azure AD will add support for assigning the required permissions to custom Azure AD roles.
+
+- **View Azure AD audit logs and events** – To view details about LAPS policies and recent device actions such as password rotation events, your account must permissions equivalent to the built-in Intune role **Read Only Operator**.
 
 For more information, see [Role-based access control for Microsoft Intune](../fundamentals/role-based-access-control.md).
 
