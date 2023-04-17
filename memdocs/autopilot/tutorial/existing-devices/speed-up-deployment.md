@@ -37,9 +37,85 @@ For an overview of the Windows Autopilot deployment for existing devices workflo
 
 ## Speed up the deployment process
 
-      > [!NOTE]
-      >
-      > The Configuration Manager client is installed as part of the Autopilot for existing devices task sequence to support running certain tasks such as the **Install Application** or **Install Software Updates** tasks later on in the task sequence. The Configuration Manager client though is uninstalled at the end of the task sequence. If no additional tasks are needed after the **Setup Windows and ConfigMgr** task, consider following the step [Speed up the deployment process (optional)](speed-up-deployment.md) later in the tutorial. This optional step will skip installing the Configuration Manager client which will save time and avoid potential problems with the Configuration Manager having been installed on the device (despite being uninstalled).
+When using the **Create Task Sequence Wizard** in Configuration Manager to create the Windows Autopilot for existing devices task sequence, it assumes that additional tasks need to be run before the Autopilot deployment such as:
+
+- Installing applications via the **Install Application** task.
+- Installing software updates via the **Install Software Updates** task.
+- Installing packages via the **Install Package** task.
+- Enabling Bitlocker via the **Enable Bitlocker** task.
+- Other customizations.
+
+In order for these tasks to run, the device needs to perform the following:
+
+- Boot into the Windows OS and run Windows Setup and OOBE without Autopilot.
+- Continue the task sequence in the full OS.
+- Installs the Configuration Manager client to support running certain tasks such as the **Install Application** or **Install Software Updates** tasks later on in the task sequence.
+- Run the additional tasks.
+- Remove the Configuration Manager client.
+- Sysprep the device so that after the task sequence completes and the device reboots, it can rerun Windows Setup and OOBE with Autopilot.
+
+All of the above steps are necessary if additional tasks are needed. However, if the additional tasks are not needed, then these tasks cause several issues:
+
+- Needlessly adds a lot of time to the deployment process.
+- Needlessly installs the Configuration Manager client on the device - it's always best practice to avoid installing the Configuration Manager client if it's eventually going to be uninstalled.
+- Needlessly runs through Windows Setup and OOBE multiple times.
+- Needlessly runs Sysprep.
+
+Additionally, it's recommended that several of the tasks run during the task sequence can be performed via other methods. For example:
+
+- Install applications via Intune.
+- Enable BitLocker via Intune.
+- Install software updates via offline servicing and Configuration Manager [Scheduled Updates](/mem/configmgr/osd/get-started/manage-operating-system-images#apply-software-updates-to-an-image).
+
+If no additional tasks are needed before running the Autopilot deployment, the Windows Autopilot for existing devices task sequence can be modified to eliminate tasks and processes that are needed. This will speed up the deployment process and avoid potential issues. To modify the Windows Autopilot for existing devices task sequence to speed up the deployment process, follow these steps:
+
+1. On a device where the Configuration Manager console is installed, such as a Configuration Manager site server, open the Configuration Manager console.
+
+1. In the left hand pane of the Configuration Manager console, navigate to **Software Library** > **Overview** > **Operating Systems**.
+
+1. Expand **Task Sequences** and then locate the Autopilot for existing devices task sequence created in the [Create Autopilot task sequence for existing devices in Configuration Manager](#create-autopilot-task-sequence-for-existing-devices-in-configuration-manager) section.
+
+1. Once the Autopilot for existing devices task sequence is located, select it and then on the ribbon, select **Edit**. Alternatively, right-click on the the Autopilot for existing devices task sequence and select **Edit**.
+
+1. In the **Task Sequence Editor** window that opens:
+
+   1. Select the **Prepare device for Windows Autopilot** group and then select the **Remove** option in the top left of the task sequence editor. A confirmation dialog box will appear confirming to delete the step. Select the **Yes** button to remove the **Prepare device for Windows Autopilot** group.
+
+   1. Select the **Setup Operating System** group and then select the **Remove** option in the top left of the task sequence editor. A confirmation dialog box will appear confirming to delete the step. Select the **Yes** button to remove the **Setup Operating System** group.
+
+    > [!NOTE]
+    >
+    > If there were any additional tasks or groups after the **Setup Windows and Configuration Manager** task in the **Setup Operating System** group, select the **Remove** option in the top left of the task sequence editor for each one of those task or group to remove the tasks or groups. For each removal, a confirmation dialog box will appear confirming to delete the step or group. Select the **Yes** button to remove each additional tasks or groups.
+
+   1. Select the last task in the task sequence.
+
+   1. Select the **Add** drop down menu in the top left of the task sequence editor and then select **General** > **Run Command Line**. This will add a **Run Command Line** task as the last task in the task sequence.
+
+   1. Select the **Run Command Line** task and then configure with the following settings:
+
+      - **Name**: Remove unattend.xml from Panther
+
+      - **Command Line**: Select **Copy** at the top right corner of the below **Windows Command Prompt** code block and then paste into the **Command Line** text box:
+
+          ```cmd
+          cmd.exe /c del %OSDTargetSystemDrive%\Windows\Panther\unattend.xml /s
+          ```
+
+   1. When the task sequence finishes running and is complete, the device will restart and then immediately boot into Windows for the first time and run Windows Setup and OOBE. When Windows Setup and OOBE runs, the Autopilot JSON file will be processed and the Autopilot deployment will start. However, if it's preferred to have the device shut down instead of restarting when the task sequence completes, for example to give the option to further prepare the device and then deliver it to an end-user, the device can be shut down instead when the task sequence completes instead of restarting. Windows Setup, OOBE, and the Autopilot deployment will then start when the end-user turns on the device for the first time.
+
+    If a restart is desired instead of a shutting down when the task sequence completes, then skip to the next step. Otherwise, to shut down the device instead of restarting when the task sequence completes, follow these steps:
+
+      1. Make sure that the **Remove unattend.xml from Panther** task is selected
+
+      2. Select the **Add** drop down menu in the top left of the task sequence editor and then select **General** > **Run Command Line**. This will add a **Run Command Line** task as the last task in the task sequence.
+
+      3. Select the **Run Command Line** task and then configure with the following settings:
+
+      - **Name**: Shutdown
+
+      - **Command Line**: Select **Copy** at the top right corner of the below **Windows Command Prompt** code block and then paste into the **Command Line** text box::
+
+   1. Select the **OK** button in the **Task Sequence Editor** to save the changes to the task sequence.
 
 ## Next step: Run Autopilot task sequence on device
 

@@ -122,9 +122,13 @@ To create the Autopilot for existing devices task sequence in Configuration Mana
 
 ## Modify the task sequence to account for Sysprep command line configuration
 
-The Autopilot for existing devices task sequence adds the **Prepare Windows for Capture** task to the task sequence. The **Prepare Windows for Capture** task is the task that runs Sysprep. Sysprep needs to run so that on the next boot, OOBE runs and processes the Autopilot profile JSON file. However, the **Prepare Windows for Capture** task adds the `/Generalize` parameter to the Sysprep command line. The `/Generalize` parameter causes Sysprep to delete the Autopilot profile JSON file. The `/Generalize` parameter for Sysprep is normal for traditional build and capture task sequences not associated with Autopilot, but it breaks Autopilot deployments since the Autopilot profile JSON file is deleted. This will cause Autopilot to never run during OOBE.
+The Autopilot for existing devices task sequence adds the **Prepare Windows for Capture** task to the task sequence. The **Prepare Windows for Capture** task is the task that runs Sysprep. Sysprep needs to run so that on the next boot, OOBE runs and processes the Autopilot profile JSON file. However, the **Prepare Windows for Capture** task adds the `/Generalize` parameter to the Sysprep command line. The `/Generalize` parameter causes Sysprep to delete the Autopilot profile JSON file. The `/Generalize` parameter for Sysprep is normal for traditional build and capture task sequences not associated with Autopilot, but it breaks Autopilot deployments since the Autopilot profile JSON file is deleted. This will cause Autopilot to never run during Windows Setup and OOBE.
 
 To resolve the issue, the **Prepare Windows for Capture** task needs to be removed from the task sequence and replaced with a **Run Command Line** task that runs Sysprep without the `/Generalize` parameter. This resolution can be accomplished by following these steps:
+
+> [!NOTE]
+>
+> If you're planning to follow the optional step of [Speed up the deployment process (optional)](speed-up-deployment.md), then you can skip this section and proceed to the next step of [Step 6: Create collection in Configuration Manager](create-collection.md).
 
 1. On a device where the Configuration Manager console is installed, such as a Configuration Manager site server, open the Configuration Manager console.
 
@@ -162,9 +166,9 @@ To resolve the issue, the **Prepare Windows for Capture** task needs to be remov
       >
       > When Sysprep finishes running, it has the option to either shut down or restart the device:
       >
-      > - **Restarting** the device will cause the device to restart as soon as the task sequence completes and then immediately boot into Windows for the first time and run OOBE. When OOBE runs, the Autopilot JSON file will be processed and the Autopilot deployment will start.
+      > - **Restarting** the device will cause the device to restart as soon as the task sequence completes and then immediately boot into Windows for the first time and run Windows Setup and OOBE. When Windows Setup and OOBE runs, the Autopilot JSON file will be processed and the Autopilot deployment will start.
       >
-      > - **Shutting down** the device will shut down and power off the device as soon as the task sequence completes. This gives the option to further prepare the device and then deliver it to an end-user. OOBE and the Autopilot deployment will then start when the end-user turns on the device for the first time.
+      > - **Shutting down** the device will shut down and power off the device as soon as the task sequence completes. This gives the option to further prepare the device and then deliver it to an end-user. Windows Setup, OOBE, and the Autopilot deployment will then start when the end-user turns on the device for the first time.
 
    1. Select the **Prepare Windows for Capture** task again and then select the **Remove** option in the top left of the task sequence editor. A confirmation dialog box will appear confirming to delete the step. Select the **Yes** button to remove the **Prepare Windows for Capture** task.
 

@@ -43,7 +43,7 @@ Once the Autopilot for existing devices task sequence and the collection with de
 
 1. In the left hand pane of the Configuration Manager console, navigate to **Software Library** > **Overview** > **Operating Systems**.
 
-1. Expand **Task Sequences** and then locate the Autopilot for existing devices task sequence created in the [Create Autopilot task sequence for existing devices in Configuration Manager](#create-autopilot-task-sequence-for-existing-devices-in-configuration-manager) section.
+1. Expand **Task Sequences** and then locate the Autopilot for existing devices task sequence created in the [Create Autopilot task sequence for existing devices in Configuration Manager](create-autopilot-task-sequence.md) step.
 
 1. Once the Autopilot for existing devices task sequence is located, select it and then on the ribbon, select **Deploy**. Alternatively, right-click on the the Autopilot for existing devices task sequence and select **Deploy**.
 
