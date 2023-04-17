@@ -4,16 +4,43 @@ description: include file
 author: ErikjeMS  
 ms.service: microsoft-intune
 ms.topic: include
-ms.date: 08/09/2022
+ms.date: 04/17/2023
 ms.author: erikje
 ms.custom: include file
 ---
 
 These notices provide important information that can help you prepare for future Intune changes and features.
 
+### Plan for Change: Ending support for Microsoft Store for Business and Education apps
+
+In April 2023, we'll begin ending support for the Microsoft Store for Business experience in Intune. This will occur in several stages. For more details, read: [Adding your Microsoft Store for Business and Education apps to the Microsoft Store in Intune](https://aka.ms/Intune/MSfB-support)
+
+### How does this affect you or your users?
+
+If you're using Microsoft Store for Business and Education apps:
+
+1. On April 30, 2023, Intune will disconnect Microsoft Store for Business services. Microsoft Store for Business and Education apps will no longer be able to sync with Intune and the connector page will be removed from the Intune admin center.
+2. On June 15, 2023, Intune will stop enforcing online and offline Microsoft Store for Business and Education apps on devices. Downloaded applications will remain on the device with limited support. Users may still be able to access the app from their device, but the app will no longer be managed. Existing synced Intune app objects will remain to allow admins to view the apps that had been synced and their assignments. Additionally, you'll longer be able to sync apps via the Microsoft Graph API syncMicrosoftStoreForBusinessApps and related API properties will display stale data.
+3. On September 15, 2023, Microsoft Store for Business and Education apps will be removed from the Intune admin center. Apps on the device will remain until intentionally removed. The Microsoft Graph API microsoftStoreForBusinessApp will no longer be available about a month later.
+
+**Note:** The retirement of Microsoft Store for Business and Education was [announced in 2021](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/evolving-the-microsoft-store-for-business-and-education/ba-p/2569423). When the Microsoft Store for Business and Education portals are retired, admins will no longer be able to manage the list of Microsoft Store for Business and Education apps that are synced or download offline content from the Microsoft Store for Business and Education portals.
+
+### How can you prepare?
+
+We recommend adding your apps through the new Microsoft Store app experience in Intune. If an app is not available in the Microsoft Store, you will need to retrieve an app package from the vendor and install it as a line-of-business (LOB) app or Win32 app. For instructions read the following articles:
+
+- [Add Microsoft Store apps to Microsoft Intune](../apps/store-apps-microsoft.md)
+- [Add a Windows line-of-business app to Microsoft Intune](../apps/lob-apps-windows.md)
+- [Add, assign, and monitor a Win32 app in Microsoft Intune](../apps/apps-win32-add.md)
+
+Related information
+
+- [Update to Endpoint Manager integration with the Microsoft Store on Windows](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/update-to-endpoint-manager-integration-with-the-microsoft-store/ba-p/3585077)
+- [Unpacking Endpoint Management: The future of app management in Intune](https://techcommunity.microsoft.com/t5/endpoint-management-events/unpacking-endpoint-management-the-future-of-app-management-in/ev-p/3724878)
+
 ### Plan for Change: Ending support for Windows Information Protection
 
-Microsoft Windows [announced](https://go.microsoft.com/fwlink/?linkid=2202124) they are ending support for Windows Information Protection (WIP). The Microsoft Intune family of products will be discontinuing future investments in managing and deploying WIP. In addition to limiting future investments, we will remove support for WIP *without enrollment* scenario by the end of calendar year 2022.
+Microsoft Windows [announced](https://go.microsoft.com/fwlink/?linkid=2202124) they're ending support for Windows Information Protection (WIP). The Microsoft Intune family of products will be discontinuing future investments in managing and deploying WIP. In addition to limiting future investments, we will remove support for WIP *without enrollment* scenario by the end of calendar year 2022.
 
 ### How does this affect you or your users?
 
