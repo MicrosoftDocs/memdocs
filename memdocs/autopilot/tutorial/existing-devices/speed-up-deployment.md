@@ -41,7 +41,7 @@ When the Windows Autopilot for existing devices task sequence runs on a device, 
 
 The Autopilot deployment normally runs when Windows boots for the first time and Windows Setup and OOBE run. However, during an Windows Autopilot for existing devices task sequence, even though the task sequence injected an Autopilot profile JSON file into the offline Windows installation, the file is not processed when Windows first boots because the task sequence also creates and injects an `unattend.xml` file. When there is both an `unattend.xml` and an Autopilot profile JSON file during Windows Setup, Windows Setup ignores the Autopilot profile JSON file and it only processes the `unattend.xml` file.
 
-After Windows Setup is done, the task sequence resumes and deletes the existing `unattend.xml`. Later in the task sequence when the task sequence runs Sysprep on the device, it doesn't specify or add a new `unattend.xml` file. Once the task sequence finishes running Sysprep, the task sequence completes and the device is rebooted. When the device reboots, Windows starts and runs Windows Setup. Since there is no `unattend.xml` file and only the Autopilot profile JSON file exists, Windows Setup processes the Windows Autopilot profile JSON file and the Autopilot deployment starts.
+After Windows Setup is done, the task sequence resumes and deletes the existing `unattend.xml`. Later in the task sequence when the task sequence runs Sysprep on the device, it doesn't specify or add a new `unattend.xml` file. Once the task sequence finishes running Sysprep, the task sequence completes and the device is rebooted. When the device reboots, Windows starts and Windows Setup runs for a second time. Since there is no `unattend.xml` file and only the Autopilot profile JSON file exists, Windows Setup processes the Windows Autopilot profile JSON file and the Autopilot deployment starts.
 
 An overview of the Windows Autopilot for existing devices task sequence process is as follows:
 
@@ -99,13 +99,13 @@ If a task sequence is needed to run additional tasks before running the Autopilo
 > - Enable BitLocker via Intune.
 > - Install software updates via offline servicing and [Configuration Manager Scheduled Updates](/mem/configmgr/osd/get-started/manage-operating-system-images#apply-software-updates-to-an-image).
 >
-> When possible, Microsoft recommends using the above methods to run the additional tasks instead of running them via the task sequence. Using the above methods will allow you to use the below steps to speed up the deployment.
+> When possible, Microsoft recommends using the above methods to run the additional tasks instead of running them via the task sequence. Using the above methods will allow you to use the solution to speed up the deployment.
 
 If no additional tasks are needed via a task sequence before running the Autopilot deployment, to speed up the deployment, the Windows Autopilot for existing devices task sequence can be modified to eliminate unneeded tasks and processes. Examples of processes that can be eliminated to speed up the deployment include:
 
-- Deleting the `unattend.xml` files so that the Autopilot profile JSON file is processed at first Windows boot and Windows Setup doesn't run multiple times
-- Installing the Configuration Manager client via the **Setup Windows and ConfigMgr**
-- Uninstalling the Configuration Manager client via the **Prepare ConfigMgr Client for Capture** task
+- Running Windows Setup additional times via the **Setup Windows and ConfigMgr** task.
+- Installing the Configuration Manager client via the **Setup Windows and ConfigMgr**.
+- Uninstalling the Configuration Manager client via the **Prepare ConfigMgr Client for Capture** task.
 - Running Sysprep via the **Prepare Windows for Capture**/**Sysprep** tasks.
 
 The solution to speed up the deployment deletes the `unattend.xml` file and eliminates the unnecessary tasks so that the Autopilot profile JSON file is processed during the first boot into Windows. After the solution has been applied, the updated overview of the Windows Autopilot for existing devices task sequence process is as follows:
@@ -163,29 +163,29 @@ To modify the Windows Autopilot for existing devices task sequence to speed up t
 
 1. If there are multiple Windows Autopilot for existing devices task sequences, then repeat the above steps for each task sequence.
 
-## Shut down device after the task sequence completes
+## Shut down device after the task sequence completes (optional)
 
-When the modified task sequence designed to speed up the deployment process finishes running and is complete, the device will restart and then immediately boot into Windows for the first time where it will run Windows Setup and OOBE. When Windows Setup and OOBE runs, the Autopilot JSON file will be processed and the Autopilot deployment will start.
+When the task sequence modified to speed up the deployment process finishes running and is complete, the device will restart and then immediately boot into Windows for the first time. After booting into Windows for the first time, it will run Windows Setup and OOBE. When Windows Setup and OOBE runs, the Autopilot JSON file will be processed and the Autopilot deployment will begin.
 
-However, if it's preferred to have the device shut down instead of restarting when the task sequence completes, for example to give the option to further prepare the device and then deliver it to an end-user, the device can be shut down instead of restarting when the task sequence completes. Windows Setup, OOBE, and the Autopilot deployment will then start when the end-user turns on the device for the first time.
+However, the device can be shut down instead of restarting when the task sequence completes. Shutting down the device instead of restarting it when the task sequence completes can be useful for example to give the option to further prepare the device and then deliver it to an end-user. Windows Setup, OOBE, and the Autopilot deployment will then instead start when the end-user turns on the device for the first time.
 
 If a restart of the device is desired instead of shutting it down when the task sequence completes, then proceed to the next step of [Run Autopilot task sequence on device](run-autopilot-task-sequence.md). Otherwise, to shut down the device instead of restarting it when the task sequence completes, follow these steps:
 
 1. On a device where the Configuration Manager console is installed, such as a Configuration Manager site server, open the Configuration Manager console.
 
-1. In the left hand pane of the Configuration Manager console, navigate to **Software Library** > **Overview** > **Operating Systems**.
+2. In the left hand pane of the Configuration Manager console, navigate to **Software Library** > **Overview** > **Operating Systems**.
 
-1. Expand **Task Sequences** and then locate the Autopilot for existing devices task sequence modified in the [Speed up the deployment process](#speed-up-the-deployment-process) section.
+3. Expand **Task Sequences** and then locate the Autopilot for existing devices task sequence modified in the [Speed up the deployment process](#speed-up-the-deployment-process) section.
 
-1. Once the Autopilot for existing devices task sequence is located, select it and then on the ribbon, select **Edit**. Alternatively, right-click on the the Autopilot for existing devices task sequence and select **Edit**.
+4. Once the Autopilot for existing devices task sequence is located, select it and then on the ribbon, select **Edit**. Alternatively, right-click on the the Autopilot for existing devices task sequence and select **Edit**.
 
-1. In the **Task Sequence Editor** window that opens:
+5. In the **Task Sequence Editor** window that opens:
 
    1. Select the last task in the task sequence.
 
-   1. Select the **Add** drop down menu in the top left of the task sequence editor and then select **General** > **Run Command Line**. This will add a **Run Command Line** task as the last task in the task sequence.
+   2. Select the **Add** drop down menu in the top left of the task sequence editor and then select **General** > **Run Command Line**. This will add a **Run Command Line** task as the last task in the task sequence.
 
-   1. Select the **Run Command Line** task and then configure with the following settings:
+   3. Select the **Run Command Line** task and then configure with the following settings:
 
       - **Name**: Shutdown
 
@@ -194,9 +194,9 @@ If a restart of the device is desired instead of shutting it down when the task 
          ```cmd
          wpeutil.exe shutdown
 
-   1. Select the **OK** button in the **Task Sequence Editor** to save the changes to the task sequence.
+   4. Select the **OK** button in the **Task Sequence Editor** to save the changes to the task sequence.
 
-1. If there are multiple Windows Autopilot for existing devices task sequences, then repeat the above steps for each task sequence.
+6. If there are multiple Windows Autopilot for existing devices task sequences, then repeat the above steps for each task sequence.
 
 ## Next step: Run Autopilot task sequence on device
 
