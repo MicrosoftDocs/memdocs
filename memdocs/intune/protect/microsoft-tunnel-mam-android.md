@@ -249,9 +249,16 @@ When unenrolled devices access resources protected by SSL/TLS certificates issue
 
 **Work around**: Manually deploy and install the trusted root certificate on unenrolled Android devices that will use Microsoft Edge with Tunnel.
 
-### Line of business application using WebView and Intune SDK for Trusted root support, internal endpoints are unrenderable. 
+### Line of business application using WebView and Intune SDK for Trusted root support, internal endpoints are unrenderable
 
 **Work around**: Manually deploy and install the trusted root certificate on unenrolled Android devices that will use LOB Apps with WebView on Tunnel.
+
+### Android fails to build the certificate chain when you use private certification authority
+
+To support MAM Tunnel, Android uses the [MAMCertTrustWebViewClient](https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/MAMCertTrustWebViewClient.html) to validate certificates and to build a certificate chain from the certificates provided. When a server that uses private certificates provides the full chain to WebView, but only the root certificate is deployed to devices, Android can fail successfully build the certificate chain and validate the server trust.
+
+**Work around**: In addition to deploying the root certificate, deploy the full chain of certificates including intermediate certificates to your applicable Android devices. 
+
 
 ### Defender for Endpoint certificate error when using a TLS/SSL certificate from a private certificate authority
 When Microsoft Tunnel Gateway server uses a TLS/SSL certificate issued by a private (on-premises) CA, Microsoft Defender for Endpoint generates a certificate error when attempting to connect.
