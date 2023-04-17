@@ -233,7 +233,7 @@ When you enable Connected Cache on your Configuration Manager distribution point
 - Enable the following client settings in the [**Delivery Optimization**](../../clients/deploy/about-client-settings.md#delivery-optimization) group:
 
   - **Use Configuration Manager Boundary Groups for Delivery Optimization Group ID:**
-    This option is required only if you are using Delivery Optimization's Peer-to-peer. You do not need to set this option to use Microsoft Connected Cache.
+    This option is required only if you use Delivery Optimization peer-to-peer. You do not need to set this option to use Microsoft Connected Cache.
   - **Enable devices managed by Configuration Manger to use Microsoft Connected Cache servers for content download**
     
 
