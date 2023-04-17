@@ -69,7 +69,7 @@ Once the Autopilot for existing devices task sequence and the collection with de
           >
           > The deployment can instead be set to **Required** which will cause the deployment to start automatically without any end-user intervention when the deployment assignment time is reached. However, it's not recommended to make a deployment required due to the potential destructive behavior that a required task sequence can have. For example, if a required task sequence is accidentally deployed to the wrong collection, or the wrong devices are added to the collection that the task sequence is deployed to, it can wipe those devices without any user interaction. If using the option of **Required**, do so with extreme caution making sure the task sequence is deployed to the correct collection that contains expected devices.
 
-      1. Under **Make available to the following:**, select the desired methods where the task sequence appears and when the task sequence can run:
+      1. Under **Make available to the following:**, select where the task sequence appears and when the task sequence can run:
 
         - **Only Configuration Manager clients**: The task sequence appears in the Configuration Manager Software Center on existing devices that has Windows already installed and has the Configuration Manager client installed. The task sequence doesn't appear when booting from a PXE enabled distribution point or when booting from task sequence bootable media.
 
@@ -77,9 +77,9 @@ Once the Autopilot for existing devices task sequence and the collection with de
 
         - **Configuration Manager clients, media and PXE**: The task sequence appears when booting from a PXE enabled distribution point or when booting from task sequence bootable media, and it also appears in the Configuration Manager Software Center on existing devices that has Windows already installed and has the Configuration Manager client installed.
 
-          > [!WARNING]
-          >
-          > When the deployment is set to **Required**, the above options are the scenarios when the deployment can automatically run when the deployment assignment time is reached. For example, if the deployment is set to **Required** and **Only media and PXE**, the task sequence won't ever run automatically while in Windows. However, it will run automatically when the device is booted from a PXE enabled distribution point or when booted from task sequence bootable media.
+            > [!WARNING]
+            >
+            > When the deployment is set to **Required**, the above options are the scenarios when the deployment can automatically run when the deployment assignment time is reached. For example, if the deployment is set to **Required** and **Only media and PXE**, the task sequence won't ever run automatically while in Windows. However, it will run automatically when the device is booted from a PXE enabled distribution point or when booted from task sequence bootable media.
 
       1. Select the **Next >** button.
 
