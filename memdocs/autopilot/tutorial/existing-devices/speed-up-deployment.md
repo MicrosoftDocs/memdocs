@@ -37,41 +37,41 @@ For an overview of the Windows Autopilot deployment for existing devices workflo
 
 ## Speed up the deployment process
 
-When using the **Create Task Sequence Wizard** in Configuration Manager to create the Windows Autopilot for existing devices task sequence, it assumes that additional tasks need to be run before the Autopilot deployment such as:
+When using the **Create Task Sequence Wizard** in Configuration Manager to create the Windows Autopilot for existing devices task sequence, it assumes that additional tasks need to be run via the task sequence before the Autopilot deployment such as:
 
 - Installing applications via the **Install Application** task.
 - Installing software updates via the **Install Software Updates** task.
 - Installing packages via the **Install Package** task.
-- Enabling Bitlocker via the **Enable Bitlocker** task.
+- Enabling BitLocker via the **Enable BitLocker** task.
 - Other customizations.
 
 In order for these tasks to run, the device needs to perform the following:
 
-- Boot into the Windows OS and run Windows Setup and OOBE without Autopilot.
+- Boot into the Windows OS and run Windows Setup and OOBE (without Autopilot).
 - Continue the task sequence in the full OS.
-- Installs the Configuration Manager client to support running certain tasks such as the **Install Application** or **Install Software Updates** tasks later on in the task sequence.
+- Installs the Configuration Manager client to support running tasks such as the **Install Application** or **Install Software Updates** tasks.
 - Run the additional tasks.
 - Remove the Configuration Manager client.
 - Sysprep the device so that after the task sequence completes and the device reboots, it can rerun Windows Setup and OOBE with Autopilot.
 
-All of the above steps are necessary if additional tasks are needed. However, if the additional tasks are not needed, then these tasks cause several issues:
+All of the above steps are necessary if additional tasks are needed. However, if the additional tasks are not needed, then these tasks can cause several issues:
 
 - Needlessly adds a lot of time to the deployment process.
-- Needlessly installs the Configuration Manager client on the device - it's always best practice to avoid installing the Configuration Manager client if it's eventually going to be uninstalled.
+- Needlessly installs the Configuration Manager client on the device - it's best practice to avoid installing the Configuration Manager client in the first place if it's eventually going to be uninstalled.
 - Needlessly runs through Windows Setup and OOBE multiple times.
 - Needlessly runs Sysprep.
 
-Additionally, it's recommended that several of the tasks run during the task sequence can be performed via other methods. For example:
+Additionally, if the additional tasks are needed, instead of using a task sequence to run these tasks, it's recommended to run these tasks using alternate methods. For example:
 
 - Install applications via Intune.
 - Enable BitLocker via Intune.
-- Install software updates via offline servicing and Configuration Manager [Scheduled Updates](/mem/configmgr/osd/get-started/manage-operating-system-images#apply-software-updates-to-an-image).
+- Install software updates via offline servicing and [Configuration Manager Scheduled Updates](/mem/configmgr/osd/get-started/manage-operating-system-images#apply-software-updates-to-an-image).
 
-If additional tasks are needed before running the Autopilot deployment, then go ahead and skip to the next step of [Run Autopilot task sequence on device](run-autopilot-task-sequence.md). Otherwise, if no additional tasks are needed before running the Autopilot deployment, the Windows Autopilot for existing devices task sequence can be modified to eliminate tasks and processes that are needed. This will speed up the deployment process and avoid potential issues.
+If a task sequence is needed to run additional tasks are needed before running the Autopilot deployment, the skip to the next step of [Run Autopilot task sequence on device](run-autopilot-task-sequence.md). Otherwise, if no additional tasks are needed via a task sequence before running the Autopilot deployment, the Windows Autopilot for existing devices task sequence can be modified to eliminate tasks and processes that aren't needed. This will speed up the deployment process and avoid potential issues.
 
 > [!NOTE]
 >
-> These steps are optional even if there are no additional steps that need to be run before the Autopilot deployment. The Windows Autopilot for existing devices task sequence will still work if there are no additional steps that need to run before the Autopilot deployment. These steps will just reduce the time it takes to run the deployment and potentially avoid some possible issues. If you don't want to modify the existing Windows Autopilot for existing devices task sequence, then skip to the next step of [Run Autopilot task sequence on device](run-autopilot-task-sequence.md).
+> These steps are optional even if there are no additional steps that need to be run via a task sequence before the Autopilot deployment. The Windows Autopilot for existing devices task sequence will still work if there are no additional steps that need to run via a task sequence before the Autopilot deployment. The below steps will just reduce the time it takes to run the deployment and potentially avoid some possible issues. If you don't want to modify the existing Windows Autopilot for existing devices task sequence, then skip to the next step of [Run Autopilot task sequence on device](run-autopilot-task-sequence.md).
 
 To modify the Windows Autopilot for existing devices task sequence to speed up the deployment process, follow these steps:
 
@@ -87,17 +87,17 @@ To modify the Windows Autopilot for existing devices task sequence to speed up t
 
    1. Select the **Prepare device for Windows Autopilot** group and then select the **Remove** option in the top left of the task sequence editor. A confirmation dialog box will appear confirming to delete the step. Select the **Yes** button to remove the **Prepare device for Windows Autopilot** group.
 
-   1. Select the **Setup Operating System** group and then select the **Remove** option in the top left of the task sequence editor. A confirmation dialog box will appear confirming to delete the step. Select the **Yes** button to remove the **Setup Operating System** group.
+   2. Select the **Setup Operating System** group and then select the **Remove** option in the top left of the task sequence editor. A confirmation dialog box will appear confirming to delete the step. Select the **Yes** button to remove the **Setup Operating System** group.
 
       > [!NOTE]
       >
       > If there were any additional tasks or groups after the **Setup Windows and Configuration Manager** task, then also remove those tasks and groups by selecting the **Remove** option in the top left of the task sequence editor for each one of those task or group. For each removal, a confirmation dialog box will appear confirming to delete the step or group. Select the **Yes** button to remove each additional task or group.
 
-   1. Select the last task in the task sequence.
+   3. Select the last task in the task sequence.
 
-   1. Select the **Add** drop down menu in the top left of the task sequence editor and then select **General** > **Run Command Line**. This will add a **Run Command Line** task as the last task in the task sequence.
+   4. Select the **Add** drop down menu in the top left of the task sequence editor and then select **General** > **Run Command Line**. This will add a **Run Command Line** task as the last task in the task sequence.
 
-   1. Select the **Run Command Line** task and then configure with the following settings:
+   5. Select the **Run Command Line** task and then configure with the following settings:
 
       - **Name**: Remove unattend.xml from Panther
 
@@ -107,7 +107,7 @@ To modify the Windows Autopilot for existing devices task sequence to speed up t
           cmd.exe /c del %OSDTargetSystemDrive%\Windows\Panther\unattend.xml /s
           ```
 
-   1. Select the **OK** button in the **Task Sequence Editor** to save the changes to the task sequence.
+   6. Select the **OK** button in the **Task Sequence Editor** to save the changes to the task sequence.
 
 ## Shut down device after the task sequence completes
 
@@ -137,7 +137,8 @@ If a restart is desired instead of a shutting down when the task sequence comple
 
          ```cmd
          wpeutil.exe shutdown
-         ```
+
+   1. Select the **OK** button in the **Task Sequence Editor** to save the changes to the task sequence.
 
 ## Next step: Run Autopilot task sequence on device
 
