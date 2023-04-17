@@ -34,7 +34,7 @@ ms.collection:
 > [!IMPORTANT]
 > This feature is in public preview. For more information, see [Public preview in Microsoft Intune](../fundamentals/public-preview.md).  
 
-Cancel or delete an organizational message that you no longer need. If the message is active at time of cancellation or deletion, it will be removed from wherever it is in the user's notifications area, taskbar, or Get started app.
+Cancel or delete an organizational message that you no longer need. If the message is active at time of cancellation or deletion, it is removed from wherever it is in the user's notifications area, taskbar, or Get started app.
 
 ## Cancel organizational message  
 Cancel a scheduled or active organizational message.   
@@ -46,7 +46,7 @@ Cancel a scheduled or active organizational message.
 3. Select the (**...**) context menu > **Cancel**.   
 
 ## Delete organizational message  
-Remove an organizational messsage from the admin center. After you delete an active message, Intune automatically cancels it and removes record of it from the admin center.    
+Remove an organizational message from the admin center. After you delete an active message, Intune automatically cancels it and removes record of it from the admin center.    
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Go to **Tenant administration** > **Organizational messages (preview)**.  
