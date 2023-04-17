@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/24/2023
+ms.date: 04/19/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -35,9 +35,6 @@ ms.collection:
 # Set up enrollment for devices in Azure AD shared device mode  
 
 *Applies to iOS/iPadOS*  
-
-> [!IMPORTANT]
-> This feature is in public preview. For more information, see [Public preview in Microsoft Intune](../fundamentals/public-preview.md). 
 
 Set up automated device enrollment for devices in Azure AD shared device mode. *Shared device mode* enables frontline workers to securely share a single device throughout the day, signing in and out as needed. The foundation for this experience is made up of [Azure Active Directory (Azure AD) shared device mode](/azure/active-directory/develop/msal-ios-shared-devices) and the [Microsoft Enterprise SSO plug-in](../configuration/use-enterprise-sso-plug-in-ios-ipados-with-intune.md).    
 

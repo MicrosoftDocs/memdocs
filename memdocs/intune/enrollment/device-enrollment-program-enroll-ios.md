@@ -88,9 +88,6 @@ Corporate-owned devices running iOS/iPadOS 11+ and enrolled via automated device
 
 ### Enrolling devices in Azure AD shared device mode  
 
-> [!IMPORTANT]
-> This feature is in public preview. For more information, see [Public preview in Microsoft Intune](../fundamentals/public-preview.md).  
-
 You can set up automated device enrollment for devices in [Azure AD shared device mode](/azure/active-directory/develop/msal-ios-shared-devices). Shared device mode enables frontline workers to share a single device throughout the day, signing in and out as needed. For more information about how to enable enrollment for devices in shared device mode, see [Automated device enrollment for Azure AD shared device mode](automated-device-enrollment-shared-device-mode.md).  
 
 ### Deploying the Company Portal app  
