@@ -13,21 +13,21 @@ These notices provide important information that can help you prepare for future
 
 ### Plan for Change: Ending support for Microsoft Store for Business and Education apps
 
-In April 2023, we'll begin ending support for the Microsoft Store for Business experience in Intune. This will occur in several stages. For more details, read: [Adding your Microsoft Store for Business and Education apps to the Microsoft Store in Intune](https://aka.ms/Intune/MSfB-support)
+In April 2023, we'll begin ending support for the Microsoft Store for Business experience in Intune. This occurs in several stages. For more information, see: [Adding your Microsoft Store for Business and Education apps to the Microsoft Store in Intune](https://aka.ms/Intune/MSfB-support)
 
 ### How does this affect you or your users?
 
 If you're using Microsoft Store for Business and Education apps:
 
-1. On April 30, 2023, Intune will disconnect Microsoft Store for Business services. Microsoft Store for Business and Education apps will no longer be able to sync with Intune and the connector page will be removed from the Intune admin center.
-2. On June 15, 2023, Intune will stop enforcing online and offline Microsoft Store for Business and Education apps on devices. Downloaded applications will remain on the device with limited support. Users may still be able to access the app from their device, but the app will no longer be managed. Existing synced Intune app objects will remain to allow admins to view the apps that had been synced and their assignments. Additionally, you'll longer be able to sync apps via the Microsoft Graph API syncMicrosoftStoreForBusinessApps and related API properties will display stale data.
-3. On September 15, 2023, Microsoft Store for Business and Education apps will be removed from the Intune admin center. Apps on the device will remain until intentionally removed. The Microsoft Graph API microsoftStoreForBusinessApp will no longer be available about a month later.
+1. On April 30, 2023, Intune will disconnect Microsoft Store for Business services. Microsoft Store for Business and Education apps won't be able to sync with Intune and the connector page will be removed from the Intune admin center.
+2. On June 15, 2023, Intune will stop enforcing online and offline Microsoft Store for Business and Education apps on devices. Downloaded applications remain on the device with limited support. Users may still be able to access the app from their device, but the app won't be managed. Existing synced Intune app objects remain to allow admins to view the apps that had been synced and their assignments. Additionally, you'll not be able to sync apps via the Microsoft Graph API syncMicrosoftStoreForBusinessApps and related API properties will display stale data.
+3. On September 15, 2023, Microsoft Store for Business and Education apps will be removed from the Intune admin center. Apps on the device remain until intentionally removed. The Microsoft Graph API microsoftStoreForBusinessApp will no longer be available about a month later.
 
-**Note:** The retirement of Microsoft Store for Business and Education was [announced in 2021](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/evolving-the-microsoft-store-for-business-and-education/ba-p/2569423). When the Microsoft Store for Business and Education portals are retired, admins will no longer be able to manage the list of Microsoft Store for Business and Education apps that are synced or download offline content from the Microsoft Store for Business and Education portals.
+Note that the retirement of Microsoft Store for Business and Education was [announced in 2021](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/evolving-the-microsoft-store-for-business-and-education/ba-p/2569423). When the Microsoft Store for Business and Education portals are retired, admins will no longer be able to manage the list of Microsoft Store for Business and Education apps that are synced or download offline content from the Microsoft Store for Business and Education portals.
 
 ### How can you prepare?
 
-We recommend adding your apps through the new Microsoft Store app experience in Intune. If an app is not available in the Microsoft Store, you will need to retrieve an app package from the vendor and install it as a line-of-business (LOB) app or Win32 app. For instructions read the following articles:
+We recommend adding your apps through the new Microsoft Store app experience in Intune. If an app isn't available in the Microsoft Store, you need to retrieve an app package from the vendor and install it as a line-of-business (LOB) app or Win32 app. For instructions read the following articles:
 
 - [Add Microsoft Store apps to Microsoft Intune](../apps/store-apps-microsoft.md)
 - [Add a Windows line-of-business app to Microsoft Intune](../apps/lob-apps-windows.md)
@@ -40,7 +40,7 @@ Related information
 
 ### Plan for Change: Ending support for Windows Information Protection
 
-Microsoft Windows [announced](https://go.microsoft.com/fwlink/?linkid=2202124) they're ending support for Windows Information Protection (WIP). The Microsoft Intune family of products will be discontinuing future investments in managing and deploying WIP. In addition to limiting future investments, we will remove support for WIP *without enrollment* scenario by the end of calendar year 2022.
+Microsoft Windows [announced](https://go.microsoft.com/fwlink/?linkid=2202124) they're ending support for Windows Information Protection (WIP). The Microsoft Intune family of products will be discontinuing future investments in managing and deploying WIP. In addition to limiting future investments, we removed support for WIP *without enrollment* scenario at the end of calendar year 2022.
 
 ### How does this affect you or your users?
 
@@ -48,17 +48,17 @@ If you have enabled WIP policies, you should turn off or disable these policies.
 
 ### How can you prepare?
 
-We recommend that you take action to disable WIP to ensure users in your organization do not lose access to documents that have been protected by WIP policy. Read the blog [Support tip: End of support guidance for Windows Information Protection](https://aka.ms/Intune-WIP-support) for more details and options for removing WIP from your devices.
+We recommend disabling WIP to ensure users in your organization do not lose access to documents that have been protected by WIP policy. Read the blog [Support tip: End of support guidance for Windows Information Protection](https://aka.ms/Intune-WIP-support) for more details and options for removing WIP from your devices.
 
 ### Plan for Change: Ending support for Windows 8.1 <!-- 14740233 -->
 
-Microsoft Intune will be ending support for devices running Windows 8.1 on **October 21, 2022**. Additionally, the sideloading key scenario for line-of-business apps will stop being supported since it is only applicable to Windows 8.1 devices. 
+Microsoft Intune will be ending support for devices running Windows 8.1 on **October 21, 2022**. Additionally, the sideloading key scenario for line-of-business apps will stop being supported since it's only applicable to Windows 8.1 devices. 
 
 Microsoft strongly recommends that you move to a supported version of Windows 10 or Windows 11, to avoid a scenario where you need service or support that is no longer available.
 
 ### How does this affect you or your users?
 
-If you are managing Windows 8.1 devices those devices should be upgraded to a supported version of Windows 10 or Windows 11. There is no impact to existing devices and policies, however, you will not be able to enroll new devices if they are running Windows 8.1.
+If you're managing Windows 8.1 devices those devices should be upgraded to a supported version of Windows 10 or Windows 11. There is no impact to existing devices and policies, however, you'll not be able to enroll new devices if they are running Windows 8.1.
 
 ### How can you prepare?
 
@@ -69,7 +69,7 @@ Upgrade your Windows 8.1 devices, if applicable. To determine which users’ dev
 
 ### Update your certificate connector for Microsoft Intune
 
-As of June 1, 2022, Intune certificate connectors earlier than version 6.2101.13.0 may no longer work as expected and stop connecting to the Intune service. See [Certificate Connectors for Microsoft Intune](../protect/certificate-connector-overview.md) for additional information on the certificate connector lifecycle and support.
+As of June 1, 2022, Intune certificate connectors earlier than version 6.2101.13.0 may no longer work as expected and stop connecting to the Intune service. For more information on the certificate connector lifecycle and support see, [Certificate Connectors for Microsoft Intune](../protect/certificate-connector-overview.md).
 
 #### How does this affect you or your users?
 
@@ -83,7 +83,7 @@ To check which version of the certificate connector you are using, follow these 
 
 1. On a Windows Server running the Intune Certificate Connector, launch "Add or Remove programs".
 2. A list of installed programs and applications will be displayed.
-3. Look for an entry related to the Microsoft Intune Certificate Connector. There will be a "Version" associated with the connector. **Note:** Names for older connectors may vary.
+3. Look for an entry related to the Microsoft Intune Certificate Connector. There will be a "Version" associated with the connector. Note that names for older connectors may vary.
 
 ### Plan for change: Intune is moving to support macOS 11.6 and higher later this year<!--14766663-->
 
@@ -91,7 +91,7 @@ Apple is expected to release macOS 13 (Ventura) later this year, Microsoft Intun
 
 #### How does this affect you or your users?
 
-This change will affect you only if you currently manage, or plan to manage, macOS devices with Intune. This change might not affect you because your users have likely already upgraded their macOS devices. For a list of supported devices, see [macOS Big Sur is compatible with these computers](https://support.apple.com/HT211238).
+This change only affects you if you currently manage, or plan to manage, macOS devices with Intune. This change might not affect you because your users have likely already upgraded their macOS devices. For a list of supported devices, see [macOS Big Sur is compatible with these computers](https://support.apple.com/HT211238).
 
 > [!NOTE]
 > Devices that are currently enrolled on macOS 10.15 or earlier will continue to remain enrolled even when those versions are no longer supported. New devices will be unable to enroll if they are running macOS 10.15 or earlier.
@@ -130,7 +130,7 @@ Microsoft Intune will be moving to support Android version 8.0 (Oreo) and later 
 
 #### How does this affect you or your users?
 
-After January 7, 2022, MDM enrolled devices running Android version 7.x or earlier will no longer receive updates to the Android Company Portal or the Intune App. Enrolled devices will continue to have Intune policies applied but are no longer supported for any Intune scenarios. Company Portal and the Intune App will not be available for devices running Android 7.x and lower beginning mid-February; however, these devices will not be blocked from completing enrollment if the requisite app has been installed prior to this change. If you have MDM enrolled devices running Android 7.x or below, update them to Android version 8.0 (Oreo) or higher or replace them with a device on Android version 8.0 or higher.  
+After January 7, 2022, MDM enrolled devices running Android version 7.x or earlier will no longer receive updates to the Android Company Portal or the Intune App. Enrolled devices will continue to have Intune policies applied but are no longer supported for any Intune scenarios. Company Portal and the Intune App will not be available for devices running Android 7.x and lower beginning mid-February; however, these devices won't be blocked from completing enrollment if the requisite app has been installed prior to this change. If you have MDM enrolled devices running Android 7.x or below, update them to Android version 8.0 (Oreo) or higher or replace them with a device on Android version 8.0 or higher.  
 
 > [!NOTE]
 > [Microsoft Teams devices](https://www.microsoft.com/en-us/microsoft-teams/across-devices/devices?rtc=2) are not impacted by this announcement and will continue to be supported regardless of their Android OS version.  
@@ -142,12 +142,12 @@ Notify your helpdesk, if applicable, of this upcoming change in support. You can
 Here's how you can warn users:
 
 - Create an app protection policy and configure [conditional launch](../apps/app-protection-policy-settings-android.md#conditional-launch) with a min OS version requirement that warns users.  
-- Utilize a device compliance policy for [Android device administrator](../protect/compliance-policy-create-android.md) or [Android Enterprise](../protect/compliance-policy-create-android-for-work.md) and set the action for non-compliance to send an email or push notification to users before marking them noncompliant.  
+- Utilize a device compliance policy for [Android device administrator](../protect/compliance-policy-create-android.md) or [Android Enterprise](../protect/compliance-policy-create-android-for-work.md) and set the action for noncompliance to send an email or push notification to users before marking them noncompliant.  
 
 Here's how you can block devices running on versions earlier than Android 8.0:  
 
 - Create an app protection policy and configure conditional launch with a min OS version requirement that blocks users from app access.  
-- Utilize a device compliance policy for Android device administrator or Android Enterprise to make devices running Android 7.x or earlier non-compliant. 
+- Utilize a device compliance policy for Android device administrator or Android Enterprise to make devices running Android 7.x or earlier noncompliant. 
 -  Set [enrollment restrictions](../fundamentals/manage-os-versions.md) that prevent devices running Android 7.x or earlier from enrolling.  
 
 > [!NOTE]
@@ -197,7 +197,7 @@ Previously, when you configured a [Windows security profile](../protect/antiviru
 
 Previously configured settings that were set to **Not configured** remain as **Not configured**. When you create new profiles or edit an existing profile, you can now explicitly specify **No**.
 
-In addition, the setting **Hide the Virus and threat protection area in the Windows Security app** has a child setting, **Hide the Ransomware data recovery option in the Windows Security app**. If the parent setting is set to **Not configured** and the child setting is set to **Yes**, both the parent and child settings will be set to **Not configured**. That change will take effect when you edit the profile.
+In addition, the setting **Hide the Virus and threat protection area in the Windows Security app** has a child setting, **Hide the Ransomware data recovery option in the Windows Security app**. If the parent setting is set to **Not configured** and the child setting is set to **Yes**, both the parent and child settings are set to **Not configured**. That change takes effect when you edit the profile.
 
 #### How can you prepare?
 
@@ -209,7 +209,7 @@ Intune follows the Windows 10 lifecycle for supported Windows 10 versions. We're
 
 #### How does this affect you or your users?
 
-Because Microsoft no longer supports these operating systems, this change might not affect you. You've likely already upgraded your OS or devices. This change will affect you only if you're still managing unsupported Windows 10 versions. 
+Because Microsoft no longer supports these operating systems, this change might not affect you. You've likely already upgraded your OS or devices. This change only affects you if you're still managing unsupported Windows 10 versions. 
 
 Windows and Company Portal versions that this change affects include:
 
