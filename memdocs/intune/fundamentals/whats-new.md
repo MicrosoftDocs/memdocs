@@ -66,6 +66,149 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Scripts
 ### Tenant administration
 -->
+
+## Week of April 17, 2023 (Service release 2304)
+
+### App management
+
+#### Changes to iCloud app backup and restore behavior on iOS/iPadOS and macOS devices<!-- 16261392  -->  
+As an app setting, you can select to **Prevent iCloud app backup** for iOS/iPadOS and macOS devices. You have the option to *not* back up managed App Store apps and line-of-business (LOB) apps on iOS/iPadOS, as well as managed App Store apps on macOS devices (macOS LOB apps won’t support this feature), for both user and device licensed VPP/non-VPP apps. This update includes both new and existing App Store/LOB apps sent with and without VPP that are being added to Intune and targeted to users and devices.
+
+Preventing the backup of the specified managed apps will ensure that these apps can be properly deployed via Intune when the device is enrolled and restored from backup. If the admin configures this new setting for new or existing apps in their tenant, managed apps can and will be re-installed for devices, but Intune will no longer allow them to be backed up.
+
+This new setting appears in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by modifying the properties of an app. For an existing app, you can select **Apps** > **iOS/iPadOS** or **macOS** > *select the app* > **Properties** > Assignment **Edit**. If no group assignment has been set, click **Add group** to add a group. Modify either the setting under **VPN**, **Uninstall on device removal**, or **Install as removable**. Then, select **Prevent iCloud app backup**. The **Prevent iCloud app backup** setting is used to prevent backup of app data for the application. Set to **No** to allow the app to be backed up by iCloud.
+
+For more information, see [Changes to applications’ backup and restore behavior on iOS/iPadOS and macOS devices](https://techcommunity.microsoft.com/t5/intune-customer-success/changes-to-applications-backup-and-restore-behavior-on-ios/ba-p/3692064) and [Assign apps to groups with Microsoft Intune](../apps/apps-deploy.md).
+
+### Prevent automatic updates for Apple VPP apps<!-- 16876430   -->  
+You can control the automatic update behavior for Apple VPP at the per-app assignment level using the **Prevent automatic updates** setting. This setting is available in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **iOS/iPadOS** or **macOS** > *Select a volume purchase program app* > **Properties** > **Assignments** > *Select an AAD group* > **App settings**.
+
+Applies to:
+
+- iOS/iPadOS
+- macOS
+
+
+### Device configuration
+
+#### Updates to the macOS Settings Catalog <!-- 17673709  -->  
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
+
+A new setting is available in the Settings Catalog. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can see these settings at **Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform > **Settings catalog** for profile type.
+
+The new setting is located under:
+
+**Microsoft AutoUpdate (MAU) > [targeted app]**:
+
+- Update channel override
+
+The following settings have been deprecated:
+
+**Microsoft AutoUpdate (MAU) > [targeted app]**:
+
+- Channel Name (Deprecated)
+
+**Privacy > Privacy Preferences Policy Control > Services > Listen Event or Screen Capture**:
+
+- Allowed
+
+Applies to:
+
+- macOS
+
+For more information about configuring Settings Catalog profiles in Intune, go to [Create a policy using settings catalog](../configuration/settings-catalog.md).
+
+#### The Microsoft Enterprise SSO plug-in for Apple devices is now generally available<!-- 17826329  -->  
+In Microsoft Intune, there's a Microsoft Enterprise SSO plug-in. This plug-in provides single sign-on (SSO) to iOS/iPadOS and macOS apps and websites that use Microsoft Azure AD for authentication.
+
+This plug-in is now generally available (GA).
+
+For more information about configuring the Microsoft Enterprise SSO plug-in for Apple devices in Intune, go to [Microsoft Enterprise SSO plug-in in Microsoft Intune](../configuration/use-enterprise-sso-plug-in-ios-ipados-macos.md).
+
+Applies to:
+
+- iOS/iPadOS
+- macOS
+
+### Device management
+
+#### Endpoint security firewall rules support for ICMP type<!-- 5653356  -->  
+You can now use the **IcmpTypesAndCodes** setting to configure inbound and outbound rules for [Internet Control Message Protocol](/windows/security/threat-protection/windows-firewall/create-an-inbound-icmp-rule) (ICMP) as part of a firewall rule. This setting is available in the [*Microsoft Defender Firewall rules*](../protect/endpoint-security-firewall-policy.md#devices-managed-by-intune) profile for the *Windows 10, Windows 11, and Windows Server* platform.
+
+Applies to:
+
+- Windows 10, Windows 11, and Windows Server
+
+#### New settings available for macOS software update policies<!-- 16646756  -->  
+MacOS software update policies now include the following settings to help manage when updates install on a device. These are available when the *All other updates* update type is configured to *Install later*:
+
+- **Max User Deferrals**:  When the *All other updates* update type is configured to *Install later*, this setting allows you to specify the maximum number of times a user can postpone a minor OS update before it’s installed. The system prompts the user once a day. Available for devices running macOS 12 and later. 
+
+- **Priority**: When the *All other updates* update type is configured to *Install later*, this setting allows you to specify values of *Low* or *High* for the scheduling priority for downloading and preparing minor OS updates. Available for devices running macOS 12.3 and later.
+
+For more information, see [Use Microsoft Intune policies to manage macOS software updates](../protect/software-updates-macos.md).
+
+Applies to:
+
+- macOS
+
+#### Introducing the new partner portals page<!-- 17829024  -->  
+You can now manage hardware specific information on your HP or Surface devices from our partner portals page.
+
+The HP link will take you to HP Connect where you can update, configure, and secure the BIOS on your HP devices.
+The Microsoft Surface link will take you to the Surface Management Portal where you can get insights into device compliance, support activity, and warranty coverage. 
+To access the Partner portals page, you must enable the Devices pane preview and then navigate to **Devices** > **Partner Portals**.
+
+#### Windows Update compatibility reports for Apps and Drivers are now generally available<!-- 17917026  -->  
+The following Microsoft Intune reports for [Windows Update compatibility](../protect/windows-update-compatibility-reports.md) are out of preview and now generally available:
+
+- **Windows feature update device readiness report** - This report provides per-device information about compatibility risks that are associated with an upgrade or update to a chosen version of Windows.
+
+- **Windows feature update compatibility risks report** - This report provides a summary view of the top compatibility risks across your organization for a chosen version of Windows. You can use this report to understand which compatibility risks impact the greatest number of devices in your organization.
+
+These reports can help you plan an upgrade from Windows 10 to 11, or for installing the latest Windows feature update.
+
+### Device security
+
+### Support for WDAC Application ID tagging with Intune Firewall Rules policy<!-- 17224780  -->  
+Intune's *Microsoft Defender Firewall Rules* profiles, which are available as part of [endpoint security Firewall policy](../protect/endpoint-security-firewall-policy.md), now include the Policy App Id setting. This setting is described by the [*MdmStore/FirewallRules/{FirewallRuleName}/PolicyAppId*](/windows/client-management/mdm/Firewall-csp?WT.mc_id=Portal-fx#mdmstorefirewallrulesfirewallrulenamepolicyappid) CSP and supports specifying a Windows Defender Application Control (WDAC) Application ID tag.
+
+With this capability, you’ll be able to scope your firewall rules to an application or a group of applications and rely on your WDAC policies to define those applications. By using tags to link to and rely on WDAC policies, your Firewall Rules policy won’t need to rely on the firewall rules option of an absolute file path or use of a variable file path that can reduce security of the rule.
+
+Use of this capability requires you to have WDAC policies in place that include *AppId* tags that you can then specify in your Intune Microsoft Defender Firewall Rules.
+
+For more information, see the following articles in the Windows Defender Application Control documentation:
+
+- [About application control for Windows](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control)
+- [WDAC Application ID (AppId) Tagging guide](/windows/security/threat-protection/windows-defender-application-control/appidtagging/windows-defender-application-control-appid-tagging-guide)
+
+Applies to:
+
+- Windows 10/11
+
+#### New App and browser isolation profile for Intune’s endpoint security Attack Surface Reduction policy<!-- 17392386  -->  
+We have released a new experience creating new *App and Browser Isolation* profiles for endpoint security Attack Surface Reduction policy. The experience for editing your previously created App and Browser isolation policies remains the same, and you can continue to use them. This update applies only for the new [App and Browser Isolation](../protect/endpoint-security-asr-policy.md#attack-surface-reduction-profiles) policies you create for the *Windows 10 and later* platform.
+
+This update is part of the continuing [rollout of new profiles for endpoint security policies](../fundamentals/whats-new-archive.md#new-profile-templates-and-settings-structure-for-endpoint-security-policies), which began in April 2022.
+
+Additionally, the new profile includes the following changes for the settings it includes:
+
+- **Block external content from non-enterprise approved sites** - This setting is removed from the updated profile as it was supported only by Microsoft Edge Legacy. Microsoft Edge Legacy support ended in March 2021. [Microsoft 365 apps say farewell to Internet Explorer 11 and Windows 10 sunsets Microsoft Edge Legacy - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/microsoft-365-blog/microsoft-365-apps-say-farewell-to-internet-explorer-11-and/ba-p/1591666).
+
+- **Clipboard file type** – This setting is added to the updated profile and determines the type of content that can be copied from the host to Application Guard environment and vice versa. You can view the CSP for this new setting at [Settings/ClipboardFileType](/windows/client-management/mdm/windowsdefenderapplicationguard-csp#settingsclipboardfiletype) in the WindowsDefenderApplicationGuard CSP documentation.
+
+
+### Intune apps
+
+#### Newly available protected apps for Intune<!-- 17318943, 17319737, 17624650  -->
+The following protected apps are now available for Microsoft Intune:
+- ixArma by INAX-APPS (iOS)
+- myBLDNG by Bldng.ai (iOS)
+- RICOH Spaces V2 by Ricoh Digital Services
+- Firstup - Intune by Firstup, Inc. (iOS)
+
+For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
+
 ## Week of April 10, 2023
 
 ### Device configuration
@@ -1483,6 +1626,178 @@ You can now use the `?` icon in the Microsoft Intune admin center to open a [hel
 
 When you select `?`, the admin center opens the help and support view in a new and separate side-by-side pane. By opening this separate pane, you're free to navigate the support experience without affecting your original location and focus on the admin center.
 
+## Week of September 19, 2022 (Service release 2209)
+
+### App management
+
+#### New app types for Microsoft Intune<!-- 7210233 -->
+As an admin, you can create and assign two new types of Intune apps:
+- **iOS/iPadOS web clip** 
+- **Windows web link**
+
+These new app types work in a similar way to the existing **web link** application type, however they apply only for their specific platform, whereas web link applications apply across all platforms. With these new app types, you can assign to groups and also use assignment filters to limit the scope of assignment. This functionality is in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Apps** > **All Apps** > **Add**.
+
+### Device management
+
+#### Microsoft Intune is ending support for Windows 8.1<!-- 14740233 -->
+Microsoft Intune is ending support on October 21, 2022 for devices running Windows 8.1. After that date, technical assistance and automatic updates that help protect your devices running Windows 8.1 will no longer be available. Additionally, because the sideloading scenario for line-of-business apps is only applicable to Windows 8.1 devices, Intune no longer supports Windows 8.1 sideloading. Sideloading is installing, and then running or testing an app that isn't certified by the Microsoft Store. In Windows 10/11, "sideloading" is simply setting a device config policy to include "Trusted app installation". For more information, see [Plan for Change: Ending support for Windows 8.1](../fundamentals/whats-new.md#plan-for-change-ending-support-for-windows-81-).
+
+#### Group member count visible in assignments<!-- 13434676 -->
+When assigning policies in the admin center, you can now see the number of users and devices in a group. Having both counts help you pinpoint the right group and understand the impact the assignment has before you apply it.
+
+### Device configuration
+
+#### New lock screen message when adding custom support information to Android Enterprise devices<!-- 13158348 -->
+On Android Enterprise devices, you can create a device restrictions configuration profile that shows a custom support message on the devices (**Devices** > **Configuration profiles** > **Create profile** > **Android Enterprise** > **Fully managed, dedicated, and corporate-owned work profile** for platform > **Device restrictions** for profile type > **Custom support information**).
+
+There's a new setting you can configure:
+- **Lock screen message**: Add a message that's shown on the device lock screen. 
+
+When you configure the **Lock screen message**, you can also use the following device tokens to show device-specific information:
+- `{{AADDeviceId}}`: Azure AD device ID
+- `{{AccountId}}`: Intune tenant ID or account ID
+- `{{DeviceId}}`: Intune device ID
+- `{{DeviceName}}`: Intune device name
+- `{{domain}}`: Domain name
+- `{{EASID}}`: Exchange Active Sync ID
+- `{{IMEI}}`: IMEI of the device
+- `{{mail}}`: Email address of the user
+- `{{MEID}}`: MEID of the device
+- `{{partialUPN}}`: UPN prefix before the `@` symbol
+- `{{SerialNumber}}`: Device serial number
+- `{{SerialNumberLast4Digits}}`: Last four digits of the device serial number
+- `{{UserId}}`: Intune user ID
+- `{{UserName}}`: User name
+- `{{userPrincipalName}}`: UPN of the user
+
+> [!NOTE]
+> Variables aren't validated in the UI and are case sensitive. As a result, you may see profiles saved with incorrect input. For example, if you enter `{{DeviceID}}`, instead of `{{deviceid}}` or `{{DEVICEID}}`, then the literal string is shown instead of the device's unique ID. Be sure to enter the correct information. All lowercase or all uppercase variables are supported, but not a mix.
+
+For more information on this setting, go to [Android Enterprise device settings to allow or restrict features using Intune](../configuration/device-restrictions-android-for-work.md#custom-support-information).
+
+Applies to:
+- Android 7.0 and newer
+- Android Enterprise corporate owned fully managed
+- Android Enterprise corporate owned dedicated devices
+- Android Enterprise corporate owned work profile
+
+#### Filter on the user scope or device scope in the settings catalog for Windows devices<!-- 13949975 -->
+When you create a settings catalog policy, you can use **Add settings** > **Add filter** to filter settings based on the Windows OS edition (**Devices** > **Configuration profiles** > **Create profile** > **Windows 10 and later** for platform > **Settings catalog** for profile type).
+
+When you **Add filter**, you can also filter on the settings by user scope or device scope.
+
+For more information on the settings catalog, go to [Use the settings catalog to configure settings on Windows, iOS/iPadOS and macOS devices](../configuration/settings-catalog.md).
+
+Applies to:
+- Windows 10
+- Windows 11
+
+#### Android Open Source Project (AOSP) platform is generally available<!-- 15027949 -->
+Microsoft Intune management of corporate-owned devices that run on the Android Open Source Project (AOSP) platform is now generally available (GA). This feature includes the full suite of capabilities that are available as part of the public preview.
+
+Currently, Microsoft Intune only supports the new Android (AOSP) management option for RealWear devices.
+- [Deployment guide: Manage Android devices in Microsoft Intune](deployment-guide-platform-android.md)
+- [Deployment guide: Enroll Android devices in Microsoft Intune](deployment-guide-enrollment-android.md)
+
+Applies to:
+- Android Open Source Project (AOSP)
+
+#### Device Firmware Configuration Interface (DFCI) now supports Acer devices<!-- 15240661 -->
+For Windows 10/11 devices, you can create a DFCI profile to manage UEFI (BIOS) settings (**Devices** > **Configuration profiles** > **Create profile** > **Windows 10 and later** for platform > **Templates** > **Device Firmware Configuration Interface** for profile type).
+
+New Acer devices running Windows 10/11 will be enabled for DFCI in later 2022. So, admins can create DFCI profiles to manage the BIOS and then deploy the profiles to these Acer devices.
+
+Contact your device vendor or device manufacturer to ensure you get eligible devices.
+
+For more information about DFCI profiles in Intune, go to [Use Device Firmware Configuration Interface (DFCI) profiles on Windows devices in Microsoft Intune](../configuration/device-firmware-configuration-interface-windows.md).
+
+Applies to:
+- Windows 10
+- Windows 11
+
+#### New settings available in the iOS/iPadOS and macOS settings catalog<!-- 15349701 -->
+The [settings catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. 
+
+There are new settings available in the settings catalog. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can see these settings at **Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type.
+
+New settings include:
+
+**Accounts > LDAP**:
+
+- LDAP Account Description
+- LDAP Account Host Name
+- LDAP Account Password
+- LDAP Account Use SSL
+- LDAP Account User Name
+- LDAP Search Settings
+
+Applies to:
+- iOS/iPadOS
+- macOS
+
+The following settings are also in settings catalog. Previously, they were only available in Templates:
+
+**Privacy > Privacy Preferences Policy Control**:
+
+- Accessibility
+- Address Book
+- Apple Events
+- Calendar
+- Camera
+- File Provider Presence
+- Listen Event
+- Media Library
+- Microphone
+- Photos
+- Post Event
+- Reminders
+- Screen Capture
+- Speech Recognition
+- System Policy All Files
+- System Policy Desktop Folder
+- System Policy Documents Folder
+- System Policy Downloads Folder
+- System Policy Network Volumes
+- System Policy Removable Volumes
+- System Policy Sys Admin Files
+
+Applies to:
+
+- macOS
+
+For more information about configuring settings catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
+
+### Device enrollment
+
+#### Set up enrollment notifications (public preview)<!-- 9283605 -->
+Enrollment notifications inform device users, via email or push notification, when a new device has been enrolled in Microsoft Intune. You can use enrollment notifications for security purposes to notify users and help them report devices enrolled in error, or for communicating to employees during the hiring or onboarding process. Enrollment notifications are available to try now in public preview for Windows, Apple, and Android devices. This feature is only supported with user-driven enrollment methods.
+
+### Device security
+
+#### Assign compliance policies to the All devices group<!-- 2213410 -->
+The **All devices** option is now available for [compliance policy](../protect/create-compliance-policy.md) assignments. With this option, you can assign a compliance policy to all enrolled devices in your organization that match the policy's platform, without needing to create an Azure Active Directory group that contains all devices. 
+ 
+When you include the *All devices* group you can then exclude individual groups of devices to further refine the assignment scope.
+
+#### Trend Micro – New mobile threat defense partner<!-- 11017779 -->
+You can now use [Trend Micro Mobile Security as a Service](../protect/trend-micro-mobile-threat-defense-connector.md) as an integrated mobile threat defense (MTD) partner with Intune. By configuring the Trend MTD connector in Intune, you can control mobile device access to corporate resources using conditional access that's based on risk assessment.
+ 
+For more information, see:
+- [Mobile threat defense integration with Intune](../protect/mobile-threat-defense.md)
+
+<!-- - [Trend Micro Mobile Security documentation](https://docs.trendmicro.com/en-us/enterprise/trend-micro-vision-one/mobile-security/getting-started-with_003.aspx) -->
+
+#### Grace period status visible on Intune Company Portal website<!-- 15025900 -->
+The Intune Company Portal website now shows a grace period status to account for devices that don't meet compliance requirements but are still within their given grace period. Users are shown the date by which they need to become compliant and the instructions for how to become compliant. If they don't update their device by the given date, their status changes to noncompliant. For more information about setting grace periods, see [Configure compliance policies with actions for noncompliance](../protect/actions-for-noncompliance.md#available-actions-for-noncompliance).
+
+### Intune apps
+
+#### Newly available protected apps for Intune<!-- 15007580, 15235927 -->
+The following protected apps are now available for Microsoft Intune:
+- RingCentral for Intune by RingCentral, Inc.
+- MangoApps, Work from Anywhere by MangoSpring, Inc.
+
+For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
 
 ## What's new archive
 <!-- Past announcements that are older than six months will be moved to the archive -->
