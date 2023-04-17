@@ -6,7 +6,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/20/2023
+ms.date: 04/19/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -40,7 +40,9 @@ View the details of your organizational messages in the Microsoft Intune admin c
 2. Go to **Tenant administration** > **Organizational messages (preview)**.
 3. Select the **Message** tab to see a list of all existing messages and message details.  
 
-Available details include:  
+## Available details  
+
+Message details include:    
 
  * **Message type**: Shows whether the message is for the taskbar, notification area, or Get Started app. Select the hyperlink to see your message, schedule, and assignment settings.    
  * **Message theme**: Shows the theme you chose for the message.     
@@ -57,6 +59,14 @@ Available details include:
  * **Times shown**: Shows an estimate of the total number of times the message has been shown to users in the past 180 days.   
  * **Times clicked**: Shows an estimate of the total number of times users clicked the message in the past 180 days.   
  * **Click-through rate**: Shows how often, in percentage, that users clicked the message when shown. This data is determined by dividing times clicked by times shown.   
+
+ ## Access audit logs  
+ Use audit logs to track and monitor organizational message events in Microsoft Intune. Audit logs contain a record of activities that generate a change in Microsoft Intune. Create, update (edit), delete, and assign actions all create audit events for organizational messages that administrator can review.    
+ 
+ To access the logs, go to **Tenant administration** > **Audit logs**. For more information, see [Use audit logs to track and monitor events](monitor-audit-logs.md).   
+
+ ## Next steps  
+You can send audit logs to Azure Monitor services, including storage accounts, event hubs, and log analytics. For more information, see [Review logs with Azure Monitor](../fundamentals/review-logs-using-azure-monitor.md).  
 
 For frequently asked questions, known issues, and limitations, see [Overview of organizational messages](organizational-messages-overview.md).  
 
