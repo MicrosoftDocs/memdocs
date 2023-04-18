@@ -140,6 +140,9 @@ If the pre-provisioning process completed successfully and the device was reseal
 - Connect to a network (if using Wi-Fi). Internet access is always required. If using hybrid Azure AD Join, there must also be connectivity to a domain controller.
 - If using Azure AD join, on the branded sign-on screen, enter the user's Azure Active Directory credentials.
 - If using hybrid Azure AD Join, the device will reboot; after the reboot, enter the user's Active Directory credentials.
+  > [!NOTE]
+  > 
+  > In certain circumstances, Azure AD credentials may also be prompted for during a hybrid Azure AD join scenario. For example, if ADFS isn't being used.
 - More policies and apps are delivered to the device, as tracked by the Enrollment Status Page (ESP). Once complete, the user can access the desktop.
 
 A change was made in the 2021.09C release to rerun the device ESP during the user flow so that both device and user ESP run when the user logs in. This change allows ESP to install other policies that may have been assigned to the device after it was provisioned in the technician phase.  
