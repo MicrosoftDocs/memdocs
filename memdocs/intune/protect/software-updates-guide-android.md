@@ -4,7 +4,7 @@ description: Guidance and advice for administrators that create and manage softw
 ms.author: mandia
 author: MandiOhlinger
 manager: dougeby
-ms.date: 04/12/2023
+ms.date: 04/17/2023
 audience: ITPro
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -35,7 +35,7 @@ This article applies to:
 
 - Android Enterprise
 
-## Scenarios
+## Scenarios - TO DO
 
 Most Android use cases in organizations fall into one of the following scenarios:  
 
@@ -65,9 +65,9 @@ To avoid delays in devices receiving updates, make sure devices are frequently:
 
 It's normal for users to not enroll their personal devices in Intune. These devices are considered unmanaged.
 
-By default, when a new update is available for unmanaged devices, users receive notifications and/or see the latest updates available on their devices (Settings > Software Updates). The timing of these updates varies depending on the carrier, OEM, and the device itself.
+By default, when a new update is available for unmanaged devices, users receive notifications and/or see the latest updates available on their devices (Settings > Software Updates). The timing of these updates varies depending on the carrier, OEM, and the device itself. At anytime, users can check for updates themselves.
 
-To control the OS versions on unmanaged devices, there are other Intune policies available.
+To control the OS versions on unmanaged devices, there are Intune policies available.
 
 This section lists the Microsoft-recommended policies to install software updates on unmanaged Android devices.
 
@@ -75,9 +75,11 @@ This section lists the Microsoft-recommended policies to install software update
 
 Users can enroll their personal Android Enterprise devices in Microsoft Intune. When they enroll, these personal or bring-your-own-devices (BYOD) automatically get a work profile. Any policies you create apply to the work profile.
 
-It's recommended to create an enrollment restrictions policy that requires a minimum and maximum operating system version. When they enroll their personal devices, the
+It's recommended to create an enrollment restrictions policy that requires a minimum and maximum operating system version. This policy helps create a good baseline for new enrollments:
 
 :::image type="content" source="./media/software-updates-guide-android/android-enrollment-restrictions-policy.png" alt-text="Screenshot that shows enrollment restrictions policy for Android devices in the Microsoft Intune admin center.":::
+
+When they enroll their personal devices, this policy will check the version info. If the devices is outside the versions you enter, then they're prevented from enrolling. ??Is this true? Not sure if CA (?) is built-in to enrollment restrictions policies??
 
 For more information on this feature, go to [Device platform restrictions in Intune](../enrollment/create-device-platform-restrictions.md).
 
@@ -104,17 +106,21 @@ For more information on compliance policies, go to:
 
 ### ✔️ **Use app protection policies**
 
-On personal devices that access organization resources, it's recommended to use app protection policies.
+On unmanaged personal devices that access organization resources, it's recommended to use app protection policies.
 
 At the app level, you can use app protection policies to determine the minimum OS and patch versions.
 
-When users open or resume an app that's managed by you, the app protection policy can prompt users to upgrade the OS. In the policy, if the version they're running doesn't met your requirements, then you can warn the user, or block access:
+When users open or resume an app that's managed by you, the app protection policy can prompt users to upgrade the OS. In the policy, if the version they're running doesn't met your requirements, then you can warn users that a new OS version is required, or block access:
 
 :::image type="content" source="./media/software-updates-guide-android/app-protection-policy-device-conditions.png" alt-text="Screenshot that shows device-based conditions in an app protection policy in the Microsoft Intune admin center.":::
 
-If the OS updates can't be forced or controlled, which is common on personal devices, then end users need to upgrade their own devices.You can create a custom notification to alert users of upcoming OS version requirements and guide them to proactively update so they don't lose access:
+### ✔️ **Use custom notifications**
+
+You can create a custom notification to alert users of upcoming OS version requirements. Use this feature to proactively update their devices so they don't lose access:
 
 :::image type="content" source="./media/software-updates-guide-android/custom-notification.png" alt-text="Screenshot that shows a custom notification message in the Microsoft Intune admin center.":::
+
+Remember, if the OS updates can't be forced or controlled, which is common on personal devices, then end users need to upgrade their own devices.
 
 For more information on these features, go to:
 
@@ -123,13 +129,19 @@ For more information on these features, go to:
 
 ## Admin checklist for corporate devices
 
-- Dedicated
-- Fully Managed
-- Fully Managed with a work profile
+Corporate or organization-owned devices should be enrolled and managed by the organization. For Android Enterprise, you can manage software updates on the following device types:
+
+- Dedicated devices
+- Fully managed devices
+- Fully managed devices with a work profile
+
+This section lists the Microsoft-recommended policies to install software updates on managed Android devices.
 
 ### ✔️ Manage updates with policies
 
-It's recommended you create policies that update your devices. It's not recommended to put this responsibility on end users. 
+??This section is also in the iOS version. We can remove it if you like. I added it so there was consistency.??
+
+It's recommended you create policies that update your devices. It's not recommended to put this responsibility on end users.
 
 When users install their own updates (instead of admins managing the updates), it can disrupt user productivity and business tasks. For example:
 
@@ -141,35 +153,40 @@ When users install their own updates (instead of admins managing the updates), i
 
 ### ✔️ Configure the system update setting
 
-For Android Enterprise Dedicated, Fully Managed and Corporate-Owned with a Work Profile, you can manage operating system updates via a Device Restrictions configuration profile by configuring the "System update" setting. You can choose from the following options. 
+For enrolled Android Enterprise devices, you can manage OS updates using the **System update** setting. This setting is configurable in an Intune device restrictions configuration profile.
 
-- **Device default** – default behavior is to update automatically if the device is connected to wi-fi, is charging and is idle. For app updates, it also validates if the app is not running in the foreground.  
+When you configure this setting, you choose when the updates are installed. For example, you can:
 
-- **Automatic** – updates are automatically installed without user interaction. When choosing this option, any pending updates will be installed immediately.  
+- Use the device's default behavior, which automatically installs updates if the device is connected to Wi-Fi, is charging, and is idle.
+- Automatically install updates without user interaction. Pending updates immediately install.
+- Postpone updates for 30 days and then prompts users to install updates. Expect your device manufacturer and/or carrier to prevent important security updates from being postponed.
+- Create a maintenance window to automatically install updates during a specific time frame.
 
-- **Postponed** – postpones updates for 30 days, after that time, users are prompted to install the update. However, device manufacturers and carriers can exempt important security updates from being postponed. If that happens, the user will see a system notification on the device. 
+:::image type="content" source="./media/software-updates-guide-android/system-update-maintenance-window.png" alt-text="Screenshot that shows the system update setting with a maintenance window for Android Enterprise devices in the Microsoft Intune admin center.":::
 
-- **Maintenance window** – updates are installed automatically within a maintenance window you define. If certain conditions are not met (insufficient space or battery levels, for example) it keeps trying daily for 30 days. After that time, the user is prompted to install the update. If you're using dedicated devices, such as kiosks or digital signage, you may want to consider this option as single-app foreground apps can be updated. This setting is valid for both operating system and app updates. Maintenance windows takes precedence over the device being changed.
+For more specific information on this setting and the values you can configure, go to [Android Enterprise device settings list to allow or restrict features on corporate-owned devices using Intune](../configuration/device-restrictions-android-for-work.md#general).
 
-### ✔️ Add a freeze period
+### ✔️ Use freeze periods during critical times
 
-Optionally, you can also configure freeze periods for system updates, up to a maximum of 90 days. This setting allows to specific a start and end date for updates during critical periods of the year (like holidays and other events). When you specify this setting, during that time frame, the device will not receive system updates, security patches or notifications about pending updates. Manually checking for updates is also unavailable. There's a mandatory period of 60 days you can set between freezes. This is for security reasons,  to avoid the device from being under update freeze indefinitely. The freeze period settings requires Android 9.0 and newer.
+During critical periods of the year, like holidays and other events, you can configure a freeze period for system updates. During this time, the devices don't receive system updates, security patches, and notifications about pending updates. Users can't manually checking for updates:
 
 :::image type="content" source="./media/software-updates-guide-android/android-enterprise-freeze-period-settings.png" alt-text="Screenshot that shows the freeze period start date and end date for Android Enterprise devices in the Microsoft Intune admin center.":::
 
-[General Android Enterprise device settings list to allow or restrict features on corporate-owned devices using Intune](../configuration/device-restrictions-android-for-work#general.md)
+For more information on this setting, go to [Android Enterprise device settings list to allow or restrict features on corporate-owned devices using Intune](../configuration/device-restrictions-android-for-work.md#general).
 
 ### ✔️ Use OEMConfig for firmware updates
 
-For some rugged Android devices, you may also leverage OEMConfig to configure firmware updates, among other settings that are specific to that OEM. If an OEM provides an OEMConfig app, you may deploy the apps and the configuration profile from Intune. To see what OEMConfig apps are supported today in Microsoft Intune, refer to this doc. To confirm what firmware and other settings are available in the configuration schema from a specific OEM, please reach out to the manufacturer.
+For some rugged Android devices, you can use OEMConfig to configure firmware updates and other settings that are specific to that OEM. If an OEM provides an OEMConfig app, then in Intune, you can deploy the app and configure its settings using a configuration profile.
 
-[Use and manage Android Enterprise devices with OEMConfig in Microsoft Intune](../configuration/android-oem-configuration-overview.md)
+To see the Intune-supported OEMConfig apps, go to [Supported OEMConfig apps in Microsoft Intune](..configuration/android-oem-configuration-overview.md#supported-oemconfig-apps). Contact the manufacturer for the firmware and other settings available in the configuration schema.
+
+For more information on OEMConfig in Microsoft Intune, go to [Use and manage Android Enterprise devices with OEMConfig in Microsoft Intune](../configuration/android-oem-configuration-overview.md)
 
 ## Upgrade older devices
 
-In January 7, 2022 we moved to support Android 8.0 for device management and 9.0 for MAM as the minimum supported versions. Devices running Android 7.0 or below that are currently enrolled in Intune will not receive updates to the Android Company Portal or the Intune app moving forward. These apps will no longer be available in the Google Play Store, however, if they were downloaded prior to this change, the devices will not be blocked from enrolment. Policies applied to those devices will continue to be deployed however the devices will no longer be in a supported state.     
+As of January 7, 2022, the minimum supported versions are Android 8.0 for device management and 9.0 for mobile application management (MAM). Devices running Android 7.0 or older that are currently enrolled in Intune don't receive updates to the Android Company Portal or the Intune app. These apps aren't available in the Google Play Store. If these apps were downloaded before this change, then then devices aren't blocked from enrollment. Policies applied to these devices continue to be deployed, but the devices aren't in a supported state.
 
-If you currently have devices running Android 7.0 or below in your organization, plan to upgrade or replace them soon. Use the information on this article to help you define an update strategy. Leveraging newer OS versions will provide better productivity and security to your users and your organization.
+If you currently have devices running Android 7.0 or older in your organization, then upgrade or replace them soon. Use the information in this article to help you define an update strategy. Using newer OS versions provide better productivity and security to your users and your organization.
 
 ## Next steps
 
