@@ -86,11 +86,11 @@ The below tables describes the pros and cons of each Windows Autopilot scenario 
 
 | Scenario | Pros | Cons |
 | --- | --- | --- |
-| User-driven | • Requires no interaction from admin/OEM/reseller | • Takes longer for user since user has to go through both device ESP and user ESP |
-| Pre-provisioned | • Faster for user since bulk of device ESP is handled by IT admin/OEM/reseller  | • Requires interaction by IT admin/OEM/reseller |
-| Self-deploying | • Requires no interaction from user or admin/OEM/reseller | • Can't assign a user to the device <br> • User ESP doesn't run since no user is assigned |
-| Existing devices | • Can use custom images <br> • Can use ConfigMgr task sequences <br> • Can reinstall a fresh copy of Windows in cases of severe corruption in Windows installation <br> • Good scenario to upgrade a device from domain joined/hybrid Azure AD join to Azure AD join | • Requires Microsoft Configuration Manager <br> • Takes much longer since device has to undergo task sequence and Autopilot deployment |
-| Reset | • Easily allows resetting an existing device to a business ready state | • Doesn't work if there is severe corruption in Windows installation |
+| **User-driven** | • Requires no interaction from admin/OEM/reseller <br> • Doesn't Require TPM attestation so works on physical devices and VMs | • Takes longer for user since user has to go through both device ESP and user ESP |
+| **Pre-provisioned** | • Faster for user since bulk of device ESP is handled by IT admin/OEM/reseller  | • Requires interaction by IT admin/OEM/reseller <br> • Requires TPM attestation so only works on physical devices (doesn't work in VMs even with virtual TPM) |
+| **Self-deploying** | • Requires no interaction from user or admin/OEM/reseller | • Can't assign a user to the device <br> • User ESP doesn't run since no user is assigned <br> • Requires TPM attestation so only works on physical devices (doesn't work in VMs even with virtual TPM) <br> • Doesn't support hybrid Azure AD join devices |
+| **Existing devices** | • Can use custom images <br> • Can use ConfigMgr task sequences <br> • Can reinstall a fresh copy of Windows in cases of severe corruption in Windows installation <br> • Good scenario to upgrade a device from domain joined/hybrid Azure AD join to Azure AD join | • Requires Microsoft Configuration Manager <br> • Takes much longer since device has to undergo task sequence and Autopilot deployment |
+| **Reset** | • Easily allows resetting an existing device to a business ready state | • Doesn't work if there is severe corruption in Windows installation <br> • Doesn't support hybrid Azure AD join devices |
 
 ## More information
 
