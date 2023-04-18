@@ -92,16 +92,6 @@ Applies to:
 
 - Android Enterprise personally owned devices with a work profile
 
-### Disable Activation Lock device action for supervised macOS devices<!-- 16813146  -->  
-
-You'll be able to use the **Disable Activation Lock** device action in Intune to bypass Activation Lock on Mac devices without requiring the current username or password. This new action will be available in **Devices** > **macOS** > select one of your listed devices > **Disable Activation Lock**.
-
-More information on managing Activation Lock is available at [Bypass iOS/iPadOS Activation Lock with Intune](../remote-actions/device-activation-lock-disable.md) or on Apple's website at [Activation Lock for iPhone, iPad, and iPod touch - Apple Support](https://support.apple.com/en-us/HT201365).
-
-Applies to:
-
-- macOS 10.15 or later
-
 ### Support for multi-SIM iOS/iPadOS device inventory<!--17016690 (replaced 16360290 for tracking -->
 
 You'll be able to view the service subscription fields on devices that have multiple SIM cards installed under the per-device Hardware section. The inventory fields that are capable of reporting multiple values to Intune are:
@@ -119,21 +109,6 @@ Applies to:
 <!-- *********************************************** -->
 
 ## Device management
-
-### Manage Windows LAPS with Intune policies (public preview)<!-- 11890571  -->  
-As a public preview, you'll soon be able to configure devices for Windows Local Administrator Password Solution (Windows LAPS). Configuration of Windows LAPS will be supported through Intune's [Account protection policy](../protect/endpoint-security-account-protection-policy.md).
-
-In addition, you'll be able to use [Device Actions](../remote-actions/device-management.md) for devices with Windows LAPS policy for the following tasks:
-
-- Rotate local admin password
-- Retrieve local admin password
-
-[Windows LAPS](/windows-server/identity/laps/laps-overview) is a Windows feature that automatically manages and backs up the password of a local administrator account on your Azure Active Directory-joined or Windows Server Active Directory-joined devices. You also can use Windows LAPS to automatically manage and back up the Directory Services Repair Mode (DSRM) account password on your Windows Server Active Directory domain.
-
-Applies to:
-
-- Windows 10
-- Windows 11
 
 ### On-demand proactive remediation for a Windows device<!-- 14783338  -->  
 A new device action that is in public preview allows you to run a proactive remediation on-demand to a single Windows device. The **Run** remediation device action will allow you to resolve issues without having to wait for a proactive remediation to run on its assigned schedule. You'll also be able to view the status of proactive remediations under **Remediations** in the **Monitor** section of a device.

@@ -80,14 +80,13 @@ This new setting appears in [Microsoft Intune admin center](https://go.microsoft
 
 For more information, see [Changes to applications’ backup and restore behavior on iOS/iPadOS and macOS devices](https://techcommunity.microsoft.com/t5/intune-customer-success/changes-to-applications-backup-and-restore-behavior-on-ios/ba-p/3692064) and [Assign apps to groups with Microsoft Intune](../apps/apps-deploy.md).
 
-### Prevent automatic updates for Apple VPP apps<!-- 16876430   -->  
+#### Prevent automatic updates for Apple VPP apps<!-- 16876430   -->  
 You can control the automatic update behavior for Apple VPP at the per-app assignment level using the **Prevent automatic updates** setting. This setting is available in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **iOS/iPadOS** or **macOS** > *Select a volume purchase program app* > **Properties** > **Assignments** > *Select an AAD group* > **App settings**.
 
 Applies to:
 
 - iOS/iPadOS
 - macOS
-
 
 ### Device configuration
 
@@ -130,6 +129,21 @@ Applies to:
 - iOS/iPadOS
 - macOS
 
+#### Disable Activation Lock device action for supervised macOS devices<!-- 16813146  -->  
+
+You can now use the **Disable Activation Lock** device action in Intune to bypass Activation Lock on Mac devices without requiring the current username or password. This new action is available in **Devices** > **macOS** > select one of your listed devices > **Disable Activation Lock**.
+
+More information on managing Activation Lock is available at [Bypass iOS/iPadOS Activation Lock with Intune](../remote-actions/device-activation-lock-disable.md) or on Apple's website at [Activation Lock for iPhone, iPad, and iPod touch - Apple Support](https://support.apple.com/en-us/HT201365).
+
+Applies to:
+
+- macOS 10.15 or later
+
+#### Device configuration<!-- 18163832  -->  
+Now generally available, you can view a list of ServiceNow incidents associated with the user you've selected in the Intune Troubleshooting workspace.  This new feature will be available under **Troubleshooting + Support** > select a user > **ServiceNow Incidents**.  The list of incidents shown have a direct link back to the source incident and show key information from the incident.  All incidents listed will link the "Caller" identified in the incident with the user selected for Troubleshooting.
+
+For more information go to [Use the troubleshooting portal to help users at your company](service-now-integration.md).
+
 ### Device management
 
 #### Endpoint security firewall rules support for ICMP type<!-- 5653356  -->  
@@ -139,10 +153,28 @@ Applies to:
 
 - Windows 10, Windows 11, and Windows Server
 
+#### Manage Windows LAPS with Intune polices (public preview)<!-- 11890571  -->  
+Now available in a public preview, manage Windows Local Administrator Password Solution (Windows LAPS) with Microsoft Intune [Account protection policies](../protect/endpoint-security-account-protection-policy.md). To get started, see [Intune support for Windows LAPS](../protect/windows-laps-overview.md).
+
+[Windows LAPS](/windows-server/identity/laps/laps-overview) is a Windows feature that allows you to manage and backs up the password of a local administrator account on your Azure Active Directory-joined or Windows Server Active Directory-joined devices.
+
+To manage LAPS, Intune configures the Windows [LAPS configuration service provider](/windows/client-management/mdm/LAPS-csp) (CSP) that is built-in to Windows devices, and which takes precedence over other sources of Windows LAPS configurations, like GPOs or the Microsoft Legacy LAPS tool. Some of the capabilities you can use when Intune to manages Windows LAPS include:
+
+- Define password requirements like complexity and length that apply to the local administrator accounts on a device.
+- Configure devices to rotate their local admin account passwords on a schedule, and backup the account and password in your Azure Active Directory or on-premises Active Directory.
+- Use an Intune device action from the admin center to manually rotate the password for an account on your own schedule.
+- View account details from within the Intune admin center, like the account name and password. This can help you recover devices that are otherwise inaccessible.
+- Use Intune reports to monitor your LAPS policies, and when devices last rotated passwords manually or by schedule.  
+
+Applies to:
+
+- Windows 10
+- Windows 11
+
 #### New settings available for macOS software update policies<!-- 16646756  -->  
 MacOS software update policies now include the following settings to help manage when updates install on a device. These are available when the *All other updates* update type is configured to *Install later*:
 
-- **Max User Deferrals**:  When the *All other updates* update type is configured to *Install later*, this setting allows you to specify the maximum number of times a user can postpone a minor OS update before it’s installed. The system prompts the user once a day. Available for devices running macOS 12 and later. 
+- **Max User Deferrals**:  When the *All other updates* update type is configured to *Install later*, this setting allows you to specify the maximum number of times a user can postpone a minor OS update before it’s installed. The system prompts the user once a day. Available for devices running macOS 12 and later.
 
 - **Priority**: When the *All other updates* update type is configured to *Install later*, this setting allows you to specify values of *Low* or *High* for the scheduling priority for downloading and preparing minor OS updates. Available for devices running macOS 12.3 and later.
 
@@ -156,7 +188,8 @@ Applies to:
 You can now manage hardware specific information on your HP or Surface devices from our partner portals page.
 
 The HP link will take you to HP Connect where you can update, configure, and secure the BIOS on your HP devices.
-The Microsoft Surface link will take you to the Surface Management Portal where you can get insights into device compliance, support activity, and warranty coverage. 
+The Microsoft Surface link will take you to the Surface Management Portal where you can get insights into device compliance, support activity, and warranty coverage.
+
 To access the Partner portals page, you must enable the Devices pane preview and then navigate to **Devices** > **Partner Portals**.
 
 #### Windows Update compatibility reports for Apps and Drivers are now generally available<!-- 17917026  -->  
@@ -177,7 +210,7 @@ With [Endpoint Privilege Management](../protect/epm-overview.md), admins can set
 
 Now that EPM is out of preview, it requires an additional license to use. You can choose between an stand-alone license that adds only EPM, or license EPM as part of the Microsoft Intune Suite. For more information, see [Use Intune Suite add-on capabilities](../fundamentals/add-ons.md).
 
-### Support for WDAC Application ID tagging with Intune Firewall Rules policy<!-- 17224780  -->  
+#### Support for WDAC Application ID tagging with Intune Firewall Rules policy<!-- 17224780  -->  
 Intune's *Microsoft Defender Firewall Rules* profiles, which are available as part of [endpoint security Firewall policy](../protect/endpoint-security-firewall-policy.md), now include the Policy App Id setting. This setting is described by the [*MdmStore/FirewallRules/{FirewallRuleName}/PolicyAppId*](/windows/client-management/mdm/Firewall-csp?WT.mc_id=Portal-fx#mdmstorefirewallrulesfirewallrulenamepolicyappid) CSP and supports specifying a Windows Defender Application Control (WDAC) Application ID tag.
 
 With this capability, you’ll be able to scope your firewall rules to an application or a group of applications and rely on your WDAC policies to define those applications. By using tags to link to and rely on WDAC policies, your Firewall Rules policy won’t need to rely on the firewall rules option of an absolute file path or use of a variable file path that can reduce security of the rule.
@@ -204,7 +237,6 @@ Additionally, the new profile includes the following changes for the settings it
 
 - **Clipboard file type** – This setting is added to the updated profile and determines the type of content that can be copied from the host to Application Guard environment and vice versa. You can view the CSP for this new setting at [Settings/ClipboardFileType](/windows/client-management/mdm/windowsdefenderapplicationguard-csp#settingsclipboardfiletype) in the WindowsDefenderApplicationGuard CSP documentation.
 
-
 ### Intune apps
 
 #### Newly available protected apps for Intune<!-- 17318943, 17319737, 17457189, 17624650  -->
@@ -215,6 +247,11 @@ The following protected apps are now available for Microsoft Intune:
 - Firstup - Intune by Firstup, Inc. (iOS)
 
 For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
+
+### Tenant administration
+
+#### Delete organizational messages<!-- 15273028  -->  
+You can now delete organizational messages from Microsoft Intune.  After you delete a message, it's removed from Intune and no longer appears in the admin center. You can delete a message anytime, regardless of its status. Intune automatically cancels active messages after you delete them. For more information, see [Delete organizational messages](../remote-actions/organizational-messages-cancel.md#delete-organizational-message).
 
 ## Week of April 10, 2023
 
