@@ -1121,6 +1121,9 @@ items:
       - name: Device enrollment overview        
         href: ./fundamentals/deployment-guide-enrollment.md  
         displayName: COD; BYOD; DEM; ADE; USB-SA; USB-Direct; co-management; GPO
+      - name: MAM for unenrolled devices       
+        href: ./fundamentals/deployment-guide-enrollment-mamwe.md
+        displayName: mobile application management, mam-we, mamwe
       - name: Configure enrollment features      
         items:
         - name: Get Apple MDM push certificate   
