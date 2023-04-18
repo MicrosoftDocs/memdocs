@@ -639,10 +639,10 @@ items:
               - name: Symantec and Intune integration
                 href: ./protect/skycure-mtd-connector-integration.md
             - name: Set up Trend Micro Mobile Security as a Service
-              href: trend-micro-mobile-threat-defense-connector.md
+              href: ./protect/trend-micro-mobile-threat-defense-connector.md
               items:
               - name: Trend Micro Mobile Security as a Service and Intune integration
-                href: trend-micro-mtd-connector-integration.md 
+                href: ./protect/trend-micro-mtd-connector-integration.md 
             - name: Set up Wandera
               href: ./protect/wandera-mtd-connector.md
               items:
