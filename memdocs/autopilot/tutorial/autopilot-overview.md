@@ -60,27 +60,27 @@ Unlike traditional Windows deployment methods that apply Windows images to devic
 
 Due to different environments, different configurations, and different needs, Windows Autopilot supports several different scenarios. The following scenarios are available in Windows Autopilot:
 
-| Scenario | Purpose | Description |
+| **Scenario** | **Purpose** | **Description** |
 | --- | --- |
-| Windows Autopilot user-driven mode | Device for a single user | Deployment is completely run by end-user |
-| Windows Autopilot for pre-provisioned | Device for a single user | Deployment is split between IT admin/OEM/reseller and end-user |
-| Windows Autopilot self-deploying mode | Kiosk device or device for multiple users | Deployment is completely automated |
-| Windows Autopilot for existing devices | Prepare device where Windows OS needs to be completely reinstalled for a Windows Autopilot deployment | Utilizes Microsoft Configuration Manager to install a fresh Windows OS on an existing device before running a Windows Autopilot deployment |
-| Windows Autopilot Reset | Resets an existing device back to the factory default installation of Windows | Utilizes the existing installation of Windows on a device to rebuild Windows and restore it back to the factory installation of Windows |
+| **Windows Autopilot user-driven mode** | Device for a single user | Deployment is completely run by end-user |
+| **Windows Autopilot for pre-provisioned** | Device for a single user | Deployment is split between IT admin/OEM/reseller and end-user |
+| **Windows Autopilot self-deploying mode** | Kiosk device or device for multiple users | Deployment is completely automated |
+| **Windows Autopilot for existing devices** | Prepare device where Windows OS needs to be completely reinstalled for a Windows Autopilot deployment | Utilizes Microsoft Configuration Manager to install a fresh Windows OS on an existing device before running a Windows Autopilot deployment |
+| **Windows Autopilot Reset** | Resets an existing device back to the factory default installation of Windows | Utilizes the existing installation of Windows on a device to rebuild Windows and restore it back to the factory installation of Windows |
 
 ## Windows Autopilot scenarios capabilities
 
-| Scenario | User-driven | Pre-provisioned | Self-deploying | Existing devices | Reset |
+| Scenario | **User-driven** | **Pre-provisioned** | **Self-deploying** | **Existing devices** | **Reset** |
 | --- | --- | --- | --- | --- | --- |
-| Supports Azure AD join | Yes | Yes | Yes | Yes | Yes |
-| Supports hybrid Azure AD join | Yes | Yes | No | Yes | No |
-| Deployment requires interaction by user | Yes | Yes | No | NA | Local reset |
-| Deployment requires interaction by IT admin/OEM/reseller | No | Yes | No | Yes | Remote reset |
-| Supports assigning user to device | Yes | Yes | No | NA | NA |
-| Minimizes time user interacts with deployment | No | Yes | Yes | NA | NA |
-| User authenticates | Yes | User flow | No | NA | Local reset |
-| TPM authenticates | No | Technician flow | Yes | NA | NA |
-| Registered as Autopilot device before deployment | Yes | Yes | Yes | No | Yes |
+| **Supports Azure AD join** | Yes | Yes | Yes | Yes | Yes |
+| **Supports hybrid Azure AD join** | Yes | Yes | No | Yes | No |
+| **Deployment requires interaction by user** | Yes | Yes | No | NA | Local reset |
+| **Deployment requires interaction by IT admin/OEM/reseller** | No | Yes | No | Yes | Remote reset |
+| **Supports assigning user to device** | Yes | Yes | No | NA | NA |
+| **Minimizes time user interacts with deployment** | No | Yes | Yes | NA | NA |
+| **User authenticates** | Yes | User flow | No | NA | Local reset |
+| **TPM authenticates** | No | Technician flow | Yes | NA | NA |
+| **Registered as Autopilot device before deployment** | Yes | Yes | Yes | No | Yes |
 
 > [!NOTE]
 >
@@ -90,7 +90,7 @@ Due to different environments, different configurations, and different needs, Wi
 
 The below tables describes the pros and cons of each Windows Autopilot scenario during the deployment process.
 
-| Scenario | Pros | Cons |
+| **Scenario** | **Pros** | **Cons** |
 | --- | --- | --- |
 | **User-driven** | • Requires no interaction from admin/OEM/reseller <br> • Doesn't require [TPM attestation](/windows-server/identity/ad-ds/manage/component-updates/tpm-key-attestation) so works on physical devices and VMs | • Takes longer for user than the pre-provisioned scenario since user has to go through both device ESP and user ESP |
 | **Pre-provisioned** | • Faster for user since bulk of device ESP is handled by IT admin/OEM/reseller during the technician flow  | • Requires interaction by IT admin/OEM/reseller <br> • Requires [TPM attestation](/windows-server/identity/ad-ds/manage/component-updates/tpm-key-attestation) during technician flow so only works on physical devices with supported TPM (doesn't work in VMs even with virtual TPM) |
