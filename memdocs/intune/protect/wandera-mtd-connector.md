@@ -68,7 +68,7 @@ For more information about platform and device, see the [Wandera website](https:
 
 ## Prerequisites  
 
-- Microsoft Intune subscription  
+- Microsoft Intune Plan 1 subscription  
 - Azure Active Directory  
 - Wandera Mobile Threat Defense (formerly Wandera Secure)  
 

@@ -98,7 +98,7 @@ When using Intune MDM, you can supply apps by either requiring their automatic i
 
 ### Task 6: Enable device enrollment
 
-Device enrollment is necessary to manage the device. Learn [how to get ready to enroll corporate-owned and user personal's devices](../enrollment/device-enrollment.md).
+Device enrollment is necessary to manage the device. Learn [how to get ready to enroll corporate-owned and user personal's devices](/mem/intune/fundamentals/deployment-guide-enrollment).
 
 ## Next steps
 

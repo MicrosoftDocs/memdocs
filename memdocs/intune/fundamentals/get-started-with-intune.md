@@ -173,8 +173,8 @@ When a device enrolls, it's issued a secure MDM certificate. This certificate co
 
 Different platforms have different enrollment requirements. The following articles can help you learn more about device enrollment, including platform-specific guidance:
 
-- [What is device enrollment in Intune?](../enrollment/device-enrollment.md)
-- [Enrolled device management capabilities of Microsoft Intune](../enrollment/device-management-capabilities.md)
+- [What is device enrollment in Intune?](/mem/intune/fundamentals/deployment-guide-enrollment)
+- [Enrolled device management capabilities of Microsoft Intune](/mem/intune/enrollment/device-enrollment)
 - [Deployment guidance: Enroll devices in Microsoft Intune](deployment-guide-enrollment.md)
   - [Deployment guide: Enroll Android devices](deployment-guide-enrollment-android.md)
   - [Deployment guide: Enroll iOS/iPadOS devices](deployment-guide-enrollment-ios-ipados.md)

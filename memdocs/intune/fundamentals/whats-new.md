@@ -66,6 +66,22 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Scripts
 ### Tenant administration
 -->
+## Week of April 10, 2023
+
+### Device configuration
+
+#### User configuration support for Windows 10 multi-session VMs is now GA<!-- 17060455 -->
+
+User configuration support for Windows 10 multi-session VMs is now GA. With this, you can:
+
+- Configure user scope policies using **Settings catalog** and assign to groups of users.
+- Configure user certificates and assign to users.
+- Configure PowerShell scripts to install in the user context and assign to users.
+
+Applies to:
+
+- **Windows 10**
+- Virtual machines created in [Azure Public and Azure Government clouds](../fundamentals/intune-govt-service-description.md)
 
 ## Week of April 3, 2023
 
@@ -562,7 +578,7 @@ Applies to:
 
 In Remote Help, you can now use a laser pointer when you're providing assistance on Windows.
 
-For more information on Remote Help, go to [Remote Help](../remote-actions/remote-help.md).
+For more information on Remote Help, go to [Remote Help](/mem/intune/fundamentals/remote-help).
 
 Applies to:
 
@@ -827,7 +843,7 @@ For more information about protected apps, see [Microsoft Intune protected apps]
 #### Remote Help client app includes a new option to disable chat functionality in the Tenant level setting<!-- 14685052 -->  
 In the Remote Help app, admins can disable chat functionality from the new tenant level setting. Turning on the disable chat feature removes the chat button in the Remote Help app. This setting can be found in the Remote Help **Settings** tab under **Tenant Administration** in Microsoft Intune.
 
-For more information, see [Configure Remote Help for your tenant](../remote-actions/remote-help.md#configure-remote-help-for-your-tenant).
+For more information, see [Configure Remote Help for your tenant](/mem/intune/fundamentals/remote-help#configure-remote-help-for-your-tenant).
 
 **Applies to**: Windows 10/11
 
@@ -1451,7 +1467,7 @@ In Remote Help, a link has been added to the non-compliance warning notification
 
 For more information, go to:
 
-- [Microsoft Intune Remote Help](../remote-actions/remote-help.md)
+- [Microsoft Intune Remote Help](/mem/intune/fundamentals/remote-help)
 
 - [Monitor Device compliance](../protect/compliance-policy-monitor.md)
 

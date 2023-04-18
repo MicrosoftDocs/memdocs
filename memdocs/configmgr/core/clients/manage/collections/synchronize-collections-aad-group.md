@@ -2,7 +2,7 @@
 title: Synchronize collection members to Azure AD groups
 titleSuffix: Configuration Manager
 description: Synchronize collection members to Azure AD groups.
-ms.date: 11/30/2022
+ms.date: 03/28/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: how-to
@@ -61,6 +61,9 @@ Example synchronization scenario:
 
 1. Select **Owners**, then add the identity that will create the synchronization relationship in Configuration Manager.
 
+   > [!TIP]
+   > The Server App (Service Principle) of Azure AD tenant will be the owner for the created Azure AD group.
+
 1. Select **Create** to finish creating the Azure AD group.
 
 ## Enable collection synchronization for the Azure service
@@ -89,6 +92,8 @@ Example synchronization scenario:
 
 Wait about five to seven minutes before you can verify the group memberships in the Azure portal. To start a full synchronization, select the collection, and then in the ribbon select **Synchronize Membership**.
 
+:::image type="content" source="media/3607475-sync-collection-to-azuread.png" alt-text="Screenshot of Synchronize collections to Azure AD." lightbox="media/3607475-sync-collection-to-azuread.png":::
+
 ## <a name="bkmk_powershell"></a> Use PowerShell
 
 You can use PowerShell to synchronize collections. For more information, see the following cmdlet article:
@@ -104,6 +109,14 @@ You can use PowerShell to synchronize collections. For more information, see the
 1. The view lists all the collections that are enabled for cloud sync and relevant details.
 
 1. Right click on column header and add additional columns to view more information. 
+
+1. On clicking each collection, you can view collection member status in the bottom tab.
+
+1. The members are categorized based on sync status - Success, Failed, In Progress.
+
+1. On clicking Failed tab, you can find the reason for failure across each member.
+
+:::image type="content" source="media/collection-aad-group-sync.png" alt-text="Screenshot of Collections Cloud Sync Status." lightbox="media/collection-aad-group-sync.png"::: 
 
 Default Columns: 
 
@@ -150,8 +163,6 @@ Optional Columns:
 - Last Sync Status - Status of last sync cycle 
 
 - Last Sync Time - Time of last sync cycle
- 
-:::image type="content" source="media/collection-aad-group-sync.png" alt-text="Screenshot of Collections Cloud Sync Status." lightbox="media/collection-aad-group-sync.png":::
 
 ## Verify the Azure AD group membership
 
@@ -162,5 +173,3 @@ Optional Columns:
 1. Find the group you created and select **Members**.
 
 1. Confirm that the members reflect the resources in the Configuration Manager collection. Only resources with Azure AD identity show in the group.
-
-:::image type="content" source="media/3607475-sync-collection-to-azuread.png" alt-text="Screenshot of Synchronize collections to Azure AD." lightbox="media/3607475-sync-collection-to-azuread.png":::

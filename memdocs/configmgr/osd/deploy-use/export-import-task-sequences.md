@@ -69,6 +69,9 @@ The wizard creates the following output files:
 
 If you include content when you export a task sequence, make sure that you copy the .zip file and the *export*_files folder, or the import fails.
 
+> [!NOTE]
+> If you have a multi-site hierarchy, the export of task sequences should be done from the central administration site because the primary site may not have the required permissions to all the artifacts.
+
 ## Import
 
 1. In the Configuration Manager console, go to the **Software Library** workspace, expand **Operating Systems**, and then select the **Task Sequences** node.

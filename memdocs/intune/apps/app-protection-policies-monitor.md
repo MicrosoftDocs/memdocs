@@ -183,7 +183,7 @@ Follow these steps to generate App Protection .csv file or App Configuration .cs
     ![Screenshot of the Save report confirmation box](./media/app-protection-policies-monitor/app-protection-report-csv-1.png)
    
 > [!NOTE]
-> Intune provides additional device reporting fields, including App Registration ID, Android manufacturer, model, and security patch version, as well as iOS/iPadOS model. In Intune, you access these fields by selecting **Apps** > **App protection status** > **App Protection Report: iOS/iPadOS, Android**. In addition, these parameters help you configure the **Allow** list for the device manufacturer (Android), the **Allow** list for the device model (Android and iOS/iPadOS), and the **minimum Android security patch version** setting.   
+> Intune provides additional device reporting fields, including App Registration ID, Android manufacturer, model, and security patch version, as well as iOS/iPadOS model. In Intune, you access these fields by selecting **Apps** > **Monitor** > **App protection status** > **App Protection Report: iOS/iPadOS, Android**. In addition, these parameters help you configure the **Allow** list for the device manufacturer (Android), the **Allow** list for the device model (Android and iOS/iPadOS), and the **minimum Android security patch version** setting.   
  
 ## See also
 - [Manage data transfer between iOS/iPadOS apps](data-transfer-between-apps-manage-ios.md)

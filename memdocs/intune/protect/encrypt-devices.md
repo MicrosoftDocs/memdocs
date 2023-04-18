@@ -139,15 +139,49 @@ Depending on the type of policy that you use to silently enable BitLocker, confi
 
 - **Hide prompt about third-party encryption** = *Yes*
 - **Allow standard users to enable encryption during Autopilot** = *Yes*
-- **Require Key File Creation** = *Blocked or Allowed*
+- **Require Key File Creation** = *Allowed or Blocked*
+- **Recovery Password Creation** = *Allowed or Required*
+
+> [!WARNING]  
+> In the Endpoint Security policy, some of these settings are not visible if **Startup Authentication Required*,  **System Drive Recovery**, or **Fixed Drive Recovery** are set to *Not Configured* 
 
 **Device configuration policy** - Configure the following settings in the *Endpoint protection* template or a *custom settings* profile:
 
 - **Warning for other disk encryption** = *Block*.
 - **Allow standard users to enable encryption during Azure AD Join** = *Allow*
+- **User creation of recovery key** = *Allow or Do not allow 256-bit recovery key*
+- **User creation of recovery password** = *Allow or Require 48-digit recovery password*
 
 > [!TIP]  
 > While the setting labels and options in the following two policy types are different from each other, they both apply the same configuration to Windows encryption CSPs that manage BitLocker on Windows devices.
+
+#### TPM startup PIN or key
+
+A device **must not be set to require** a startup PIN or startup key.
+
+When a TPM startup PIN or startup key is required on a device, BitLocker can't silently enable on the device and instead requires interaction from the end user. Settings to configure the TPM startup PIN or key are available in both the endpoint protection template and the BitLocker policy. By default, these policies do not configure these settings.
+
+Following are the relevant settings for each profile type:
+
+**Endpoint security disk encryption policy** - In the BitLocker profile you'll find the following settings in the *BitLocker - OS Drive Settings* category when *BitLocker system drive policy* is set to *Configure*, and then *Startup authentication required* is set to *Yes*.
+
+- **Compatible TPM startup** - Configure this as *Allowed* or *Required*
+- **Compatible TPM startup PIN** - Configure this as *Blocked*
+- **Compatible TPM startup key** - Configure this as *Blocked*
+- **Compatible TPM startup key and PIN** - Configure this as *Blocked*
+
+**Device configuration policy** - In the endpoint protection template you'l find the following settings in the *Windows Encryption* category:
+
+- **Compatible TPM startup** - Configure this as *Allow TPM* or *Require TPM*
+- **Compatible TPM startup PIN** - Configure this as *Do not allow startup PIN with TPM*
+- **Compatible TPM startup key** - Configure this as *Do not allow startup Key with TPM*
+- **Compatible TPM startup key and PIN** - Configure this as *Do not allow startup Key and PIN with TPM*
+
+> [!WARNING]  
+> While neither the endpoint security or device configuration policies configure the TPM settings by default, some versions of the [security baseline for Microsoft Defender for Endpoint](../protect/security-baselines.md#available-security-baselines) will configure both *Compatible TPM startup PIN* and *Compatible TPM startup key* by default. These configurations might block silent enablement of BitLocker.
+>
+> If you deploy this baseline to devices on which you want to silently enable BitLocker, review your baseline configurations for possible conflicts. To remove conflicts, either reconfigure the settings in the baselines to remove the conflict, or remove applicable devices from receiving the baseline instances that configure TPM settings that block silent enablement of BitLocker.
+
 
 ### Full disk vs Used Space only encryption 
 
@@ -187,33 +221,6 @@ The 'Conversion Status' field will reflect the encryption type as either Used Sp
 To change the disk encryption type between full disk encryption and used space only encryption, leverage the'Enforce drive encryption type on operating system drives' setting within settings catalog.
 
 :::image type="content" source="./media/encrypt-devices/docs_bl_settingscatalog_control_encryption.png" alt-text="Screenshot of Intune settings catalog displaying Enforce drive encryption type on operating system drives setting and drop-down list to select from full or used space only encryption types.":::
-
-#### TPM startup PIN or key
-
-A device **must not be set to require** a startup PIN or startup key.
-
-When a TPM startup PIN or startup key is required on a device, BitLocker can't silently enable on the device and instead requires interaction from the end user. Settings to configure the TPM startup PIN or key are available in both the endpoint protection template and the BitLocker policy. By default, these policies do not configure these settings.
-
-Following are the relevant settings for each profile type:
-
-**Endpoint security disk encryption policy** - In the BitLocker profile you'll find the following settings in the *BitLocker - OS Drive Settings* category when *BitLocker system drive policy* is set to *Configure*, and then *Startup authentication required* is set to *Yes*.
-
-- **Compatible TPM startup** - Configure this as *Allowed* or *Required*
-- **Compatible TPM startup PIN** - Configure this as *Blocked*
-- **Compatible TPM startup key** - Configure this as *Blocked*
-- **Compatible TPM startup key and PIN** - Configure this as *Blocked*
-
-**Device configuration policy** - In the endpoint protection template you'l find the following settings in the *Windows Encryption* category:
-
-- **Compatible TPM startup** - Configure this as *Allow TPM* or *Require TPM*
-- **Compatible TPM startup PIN** - Configure this as *Do not allow startup PIN with TPM*
-- **Compatible TPM startup key** - Configure this as *Do not allow startup Key with TPM*
-- **Compatible TPM startup key and PIN** - Configure this as *Do not allow startup Key and PIN with TPM*
-
-> [!WARNING]  
-> While neither the endpoint security or device configuration policies configure the TPM settings by default, some versions of the [security baseline for Microsoft Defender for Endpoint](../protect/security-baselines.md#available-security-baselines) will configure both *Compatible TPM startup PIN* and *Compatible TPM startup key* by default. These configurations might block silent enablement of BitLocker.
->
-> If you deploy this baseline to devices on which you want to silently enable BitLocker, review your baseline configurations for possible conflicts. To remove conflicts, either reconfigure the settings in the baselines to remove the conflict, or remove applicable devices from receiving the baseline instances that configure TPM settings that block silent enablement of BitLocker.
 
 ### View details for recovery keys
 

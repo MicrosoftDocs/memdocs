@@ -183,4 +183,4 @@ The `.apks` output file is a ZIP archive containing a single universal APK file.
 
 - [Decide how to prepare apps for mobile application management with Microsoft Intune](../developer/apps-prepare-mobile-application-management.md)
 
-- [Microsoft Intune App SDK for Android developer guide](../developer/app-sdk-android.md)
+- [Microsoft Intune App SDK for Android developer guide](/mem/intune/developer/app-sdk-android-phase1)

@@ -164,6 +164,10 @@ For more information, see [Integration with Windows Update for Business](../depl
 
 Clients need to download the content files for software updates in order to install them. Configuration Manager provides several technologies to support management and delivery of this content. Or configure software update deployments to allow or require clients to get content directly from the Microsoft Update cloud service.
 
+> [!NOTE]  
+> Starting March 28, 2023, on-premises Windows 11, version 22H2 devices will receive quality updates via the Unified Update Platform (UUP). UUP on-premises interoperates with WSUS and Microsoft Configuration Manager. UUP quality updates continue to be cumulative and include all released Windows quality and security fixes. 
+On-premises update management with Unified Update Platform (UUP) requires an additional 10 GB of space per Windows version and processor architecture for each version. For more information, see the [UUP considerations](/windows-server/administration/windows-server-update-services/plan/plan-your-wsus-deployment#uup-considerations) section.
+
 #### Download and distribute content
 
 By default, the software update management process in Configuration Manager uses the built-in content management features. These features include the centralized, single-instance store content library, and the distributed design of the distribution point site system role. You use these features when you download and distribute software update deployment packages.

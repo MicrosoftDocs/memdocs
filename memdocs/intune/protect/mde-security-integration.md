@@ -81,7 +81,9 @@ Devices must have access to the following endpoints:
 - `*.dm.microsoft.com` - The use of a wildcard supports the cloud-service endpoints that are used for enrollment, check-in, and reporting, and which can change as the service scales.
 
 > [!Note]
-> If your organization users Secure Socket Layer (SSL) inspection, the endpoints should be excluded from inspection.
+>  You need to configure endpoint system-wide proxy in the Internet-disconnected environment. It is not enough to use only the EDR static proxy configuration.
+>
+>  If your organization users Secure Socket Layer (SSL) inspection, the endpoints should be excluded from inspection.
 
 ### Supported platforms
 
