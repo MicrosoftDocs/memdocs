@@ -6,7 +6,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/23/2022
+ms.date: 04/06/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -64,8 +64,7 @@ For all tenant, role, and policy requirements for organizational messages see [P
 
 Organizational messages have the following known issues and limitations:  
 
-* Assigning messages to devices and mixed groups isn't supported. If an assigned group includes both users and devices, Intune will only send the message to the users.    
-* Organizational messages aren't supported for users who belong to more than 200 groups. 
+* Assigning messages to devices and mixed groups isn't supported. If an assigned group includes both users and devices, Intune will only send the message to the users. 
 * If you recently onboarded your tenant to Azure AD, it can take 36 to 64 hours before you're able to use the organizational messages feature.
 * When you create an organizational message for the Get Started app, Microsoft Intune automatically sets the delivery end date to 12/31/2035, which is shown in the profile summary. The message will be delivered to targeted groups until that date or until you cancel the message. 
 * Scope groups and scope tags aren't available in organizational messages.   

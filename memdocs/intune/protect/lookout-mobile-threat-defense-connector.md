@@ -66,7 +66,7 @@ For additional information about platform and language support, visit the [Looko
 ## Prerequisites
 
 - Lookout Mobile Endpoint Security enterprise subscription  
-- Microsoft Intune subscription
+- Microsoft Intune Plan 1 subscription
 - Azure Active Directory Premium
 - Enterprise Mobility and Security (EMS) E3 or E5, with licenses assigned to users.  
 

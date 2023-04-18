@@ -8,7 +8,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 03/20/2023
+ms.date: 03/30/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -48,7 +48,7 @@ To manage devices behind firewalls and proxy servers, you must enable communicat
 - For some tasks (like downloading software updates for the classic pc agent), Intune requires unauthenticated proxy server access to manage.microsoft.com
 
 > [!NOTE]
-> The inspection of SSL traffic is not supported to 'manage.microsoft.com' endpoint.
+> The inspection of SSL traffic is not supported to 'manage.microsoft.com' or 'dm.microsoft.com' endpoints.
 
 You can modify proxy server settings on individual client computers. You can also use Group Policy settings to change settings for all client computers located behind a specified proxy server.
 
@@ -154,7 +154,7 @@ To find your tenant location (or Azure Scale Unit (ASU)), sign in to the [Micros
 | --- | --- |--- |
 |AMSUA0601<br>AMSUA0602<br>AMSUA0101<br>AMSUA0102<br>AMSUA0201<br>AMSUA0202<br>AMSUA0401<br>AMSUA0402<br>AMSUA0501<br>AMSUA0502<br>AMSUA0601<br>AMSUA0701<br>AMSUA0702<br>AMSUA0801<br>AMSUA0901 | naprodimedatapri<br>naprodimedatasec<br>naprodimedatahotfix | naprodimedatapri.azureedge.net<br>naprodimedatasec.azureedge.net<br>naprodimedatahotfix.azureedge.net |
 | AMSUB0101<br>AMSUB0102<br>AMSUB0201<br>AMSUB0202<br>AMSUB0301<br>AMSUB0302<br>AMSUB0501<br>AMSUB0502<br>AMSUB0601<br>AMSUB0701 | euprodimedatapri<br>euprodimedatasec<br>euprodimedatahotfix | euprodimedatapri.azureedge.net<br>euprodimedatasec.azureedge.net<br>euprodimedatahotfix.azureedge.net |
-| AMSUC0101<br>AMSUC0201<br>AMSUC0301<br>AMSUC0501<br>AMSUD0101| approdimedatapri<br>approdimedatasec<br>approdimedatahotifx | approdimedatapri.azureedge.net<br>approdimedatasec.azureedge.net<br>approdimedatahotfix.azureedge.net |
+| AMSUC0101<br>AMSUC0201<br>AMSUC0301<br>AMSUC0501<br>AMSUC0601<br>AMSUD0101| approdimedatapri<br>approdimedatasec<br>approdimedatahotifx | approdimedatapri.azureedge.net<br>approdimedatasec.azureedge.net<br>approdimedatahotfix.azureedge.net |
 
 ## Windows Push Notification Services (WNS)  
 
@@ -193,7 +193,7 @@ For more information, see [Use Apple products on enterprise networks](https://su
 
 ## Android port information
 
-Depending on how you choose to manage Android devices, you may need to open the Google Android Enterprise ports and/or the Android push notification. For more information on Android management methods supported, see the [Android enrollment documentation](../enrollment/android-enroll.md). 
+Depending on how you choose to manage Android devices, you may need to open the Google Android Enterprise ports and/or the Android push notification. For more information on Android management methods supported, see the [Android enrollment documentation](/mem/intune/fundamentals/deployment-guide-enrollment-android). 
 
 > [!NOTE]
 > Because Google Mobile Services isn't available in China, devices in China managed by Intune can't use features that require Google Mobile Services. These features include: Google Play Protect capabilities such as SafetyNet device attestation, Managing apps from the Google Play Store, 
@@ -225,12 +225,18 @@ Allow the following hostnames through your firewall to support Security Manageme
 For communication between clients and the cloud service:
 - \*.dm.microsoft.com - The use of a wildcard supports the cloud-service endpoints that are used for enrollment, check-in, and reporting, and which can change as the service scales.
 
+> [!IMPORTANT]
+> SSL Inspection is not supported on the 'dm.microsoft.com' endpoint.
+
 ## Microsoft Intune Endpoint Privilege Management
 
 Allow the following hostnames through your firewall to support Endpoint Privilege Management.
 
 For communication between clients and the cloud service:
 - \*.dm.microsoft.com - The use of a wildcard supports the cloud-service endpoints that are used for enrollment, check-in, and reporting, and which can change as the service scales. 
+
+> [!IMPORTANT]
+> SSL Inspection is not supported on the 'dm.microsoft.com' endpoint.
 
 For more information, see the [Overview of Endpoint Privilege Management](../protect/epm-overview.md)
 

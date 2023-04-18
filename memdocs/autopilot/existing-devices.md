@@ -195,9 +195,11 @@ The name that's automatically assigned to the computer. This name follows the na
 Save the Autopilot profile as a JSON file in ASCII or ANSI format. Windows PowerShell defaults to Unicode format. So, if you redirect output of the commands to a file, also specify the file format. The following PowerShell example saves the file in ASCII format, and creates a directory for each profile on the current user's desktop:
 
 ```powershell
+Connect-MSGraph
 $AutopilotProfile = Get-AutopilotProfile
 $AutopilotProfile | ForEach-Object {
-  $_ | ConvertTo-AutopilotConfigurationJSON | Set-Content -Encoding Ascii "~\Desktop\$($_.displayName)\AutopilotConfigurationFile.json"
+  New-Item -ItemType Directory -Path "~\Desktop\$($_.displayName)"
+  $_ | ConvertTo-AutopilotConfigurationJSON | Set-Content -Encoding Ascii "~\Desktop\$($_.displayName)\AutopilotConfigurationFile.json"
 }
 ```
 
@@ -348,7 +350,7 @@ Next distribute all content required for the task sequence to distribution point
 
 1. Select the **Autopilot for existing devices** task sequence, and in the ribbon select **Distribute Content**.
 
-1. On the **Specify the content distribution** page, select **Add** to specify either a **Distribution Point** or **Distribution Point Group**.
+1. On the **Specify the content destination** page, select **Add** to specify either a **Distribution Point** or **Distribution Point Group**.
 
 1. Specify content destinations that let the devices get the content.
 

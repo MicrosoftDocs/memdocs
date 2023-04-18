@@ -59,6 +59,8 @@ When a device onboards to Microsoft Defender for Endpoint:
 - Azure Active Directory trust is used to communicate with Intune and retrieve policies
 - Policies retrieved from Microsoft Intune is enforced on the device by Microsoft Defender for Endpoint
 
+Security Management for Microsoft Defender for Endpoint is not yet supported with Government clouds. For more information, see [Feature parity with commercial](/microsoft-365/security/defender-endpoint/gov#feature-parity-with-commercial) in *Microsoft Defender for Endpoint for US Government customers*.
+
 ### Active Directory requirements
 
 When a device that is domain joined creates a trust with Azure Active Directory, this scenario is referred to as a *Hybrid Azure Active Directory Join* scenario. The Security Management for Microsoft Defender for Endpoint fully supports this scenario with the following requirements:

@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/29/2022
+ms.date: 03/31/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -35,7 +35,7 @@ ms.collection:
 
 Intune provides policies specifically for Microsoft Office apps. You can select specific options to create mobile app management policies for Office mobile apps that connect to Microsoft 365 services. There are many policies for Office apps that you can add to Microsoft Intune and apply to groups of end users.
 
-Examples of just a few of the Office app polices include the following:
+Examples of just a few of the Office app policies include the following:
 - Microsoft Word: *Turn off Protected View for attachments opened from Outlook*
 - Microsoft Visio: *Block macros from running in Office files from the Internet*
 - Microsoft Project: *Allow Trusted Locations on the network*
