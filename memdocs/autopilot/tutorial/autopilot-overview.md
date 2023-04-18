@@ -32,7 +32,7 @@ Configurations that can be performed by Windows Autopilot include:
 
 Windows Autopilot is a separate technology from Intune and can be used with various MDM solutions other than Intune. However, for the purposes of this tutorial, the tutorial will focus on using Windows Autopilot with Intune.
 
-> [!VIDEO https://www.youtube.com/watch?v=zqwkaWTzsRo]
+> [!VIDEO https://www.youtube.com/embed/zqwkaWTzsRo]
 
 ## Benefits of Windows Autopilot
 
@@ -66,16 +66,31 @@ Due to different environments, different configurations, and different needs, Wi
 | Windows Autopilot for existing devices | Prepare device where Windows OS needs to be completely reinstalled for a Windows Autopilot deployment | Utilizes Microsoft Configuration Manager to install a fresh Windows OS on an existing device before running a Windows Autopilot deployment |
 | Windows Autopilot Reset | Resets an existing device back to the factory default installation of Windows | Utilizes the existing installation of Windows on a device to rebuild Windows and restore it back to the factory installation of Windows |
 
-## Windows Autopilot scenarios capabilities and pros/cons
+## Windows Autopilot scenarios capabilities
 
 | Scenario | User-driven | Pre-provisioned | Self-deploying | Existing devices | Reset |
 | --- | --- | --- | --- | --- | --- |
 | Supports Azure AD join | Yes | Yes | Yes | Yes | Yes |
 | Supports hybrid Azure AD join | Yes | Yes | No | Yes | No |
-| Deployment requires interaction by end-user | Yes | Yes | No | NA | Only for local Windows Autopilot Reset |
-| Deployment requires interaction by IT admin/OEM/reseller | No | Yes | No | Yes | Only for remote Windows Autopilot Reset |
+| Deployment requires interaction by user | Yes | Yes | No | NA | Local reset |
+| Deployment requires interaction by IT admin/OEM/reseller | No | Yes | No | Yes | Remote reset |
 | Supports assigning user to device | Yes | Yes | No | NA | NA |
-| Minimizes time end-user interacts with deployment | No | Yes | Yes | NA | NA |
+| Minimizes time user interacts with deployment | No | Yes | Yes | NA | NA |
+| User authenticates | Yes | User flow | No | NA | Local reset |
+| TPM authenticates | No | Technician flow | Yes | NA | NA |
+| Registered as Autopilot device before deployment | Yes | Yes | Yes | No | Yes |
+
+## Windows Autopilot pros and cons
+
+The below tables describes the pros and cons of each Windows Autopilot scenario during the deployment process.
+
+| Scenario | Pros | Cons |
+| --- | --- | --- |
+| User-driven | Requires no interaction from admin/OEM/reseller | Takes longer for user than other methods such as pre-provisioning since user has to go through both device ESP and user ESP |
+| Pre-provisioned | Faster for user since bulk of device ESP is handled by IT admin/OEM/reseller  | Requires interaction by IT admin/OEM/reseller |
+| Self-deploying | Requires no interaction from user or admin/OEM/reseller | Can't assign a user to the device |
+| Existing devices | Can use custom images; can use ConfigMgr task sequences | Requires Microsoft Configuration Manager; takes much longer since device has to undergo task sequence and Autopilot deployment |
+| Reset | Easily allows resetting an existing device to a business ready state | Doesn't work if there is severe corruption in Windows installation |
 
 ## More information
 
