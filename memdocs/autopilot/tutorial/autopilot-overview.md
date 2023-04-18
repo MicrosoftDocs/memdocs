@@ -86,11 +86,11 @@ The below tables describes the pros and cons of each Windows Autopilot scenario 
 
 | Scenario | Pros | Cons |
 | --- | --- | --- |
-| User-driven | Requires no interaction from admin/OEM/reseller | Takes longer for user than other methods such as pre-provisioning since user has to go through both device ESP and user ESP |
-| Pre-provisioned | Faster for user since bulk of device ESP is handled by IT admin/OEM/reseller  | Requires interaction by IT admin/OEM/reseller |
-| Self-deploying | Requires no interaction from user or admin/OEM/reseller | Can't assign a user to the device |
-| Existing devices | Can use custom images; can use ConfigMgr task sequences | Requires Microsoft Configuration Manager; takes much longer since device has to undergo task sequence and Autopilot deployment |
-| Reset | Easily allows resetting an existing device to a business ready state | Doesn't work if there is severe corruption in Windows installation |
+| User-driven | - Requires no interaction from admin/OEM/reseller | - Takes longer for user than other methods such as pre-provisioning since user has to go through both device ESP and user ESP |
+| Pre-provisioned | - Faster for user since bulk of device ESP is handled by IT admin/OEM/reseller  | Requires interaction by IT admin/OEM/reseller |
+| Self-deploying | - Requires no interaction from user or admin/OEM/reseller | - Can't assign a user to the device |
+| Existing devices | - Can use custom images <br> - Can use ConfigMgr task sequences | - Requires Microsoft Configuration Manager <br> - Takes much longer since device has to undergo task sequence and Autopilot deployment |
+| Reset | - Easily allows resetting an existing device to a business ready state | - Doesn't work if there is severe corruption in Windows installation |
 
 ## More information
 
