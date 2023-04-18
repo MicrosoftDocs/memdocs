@@ -37,18 +37,24 @@ For an overview of the Windows Autopilot deployment for existing devices workflo
 
 ## Register device for Windows Autopilot
 
-Running the Autopilot for existing devices task sequence and the Autopilot deployment on a device doesn't automatically register the device for Windows Autopilot. The Autopilot profile JSON makes the Autopilot deployment available to the device and allows the device to run that particular Autopilot deployment, but it doesn't register the device for Windows Autopilot. If the device ever undergoes a reset, when it runs OOBE for the first time after the reset, it wouldn't run the Autopilot deployment even though it has previously run an Autopilot deployment.
+Running the Autopilot for existing devices task sequence and the Autopilot deployment on a device doesn't automatically register the device for Windows Autopilot. The Autopilot profile JSON makes the Autopilot deployment available to the device and allows the device to run that particular Autopilot deployment, but it doesn't register the device for Windows Autopilot. If the device ever undergoes a reset, when it runs Windows Setup and OOBE for the first time after the reset, it won't run the Autopilot deployment again even though it has previously run an Autopilot deployment.
 
-To ensure that the device can run an Autopilot deployment after a reset, you must register the device for Windows Autopilot. You can register a device by using the following methods:
+To ensure that the device can run an Autopilot deployment after a reset, you must register the device for Windows Autopilot. You can register a device by using one of the following methods:
 
-1. [Manually register devices with Windows Autopilot](../../add-devices.md). Manually registering a device includes manually registering devices into Intune as an Autopilot device via the hardware hash. The hardware hash of a device can be collected via one of the following methods:
+1. [Manually register devices with Windows Autopilot](../../add-devices.md): Manually registering a device includes manually registering devices into Intune as an Autopilot device via the hardware hash. The hardware hash of a device can be collected via one of the following methods:
 
    - [Configuration Manager](/mem/configmgr/comanage/how-to-prepare-Win10#windows-autopilot)
    - [PowerShell script](/mem/autopilot/add-devices#powershell)
    - [Diagnostics page hash export](/mem/autopilot/add-devices#diagnostics-page-hash-export)
    - [Desktop hash export](/mem/autopilot/add-devices#desktop-hash-export)
 
+2. In an Autopilot profile that is deployed to a device group that the device is a member of, make sure the option **Convert all targeted devices to Autopilot** is set to **Yes**. For more information on creating and assigning Autopilot profiles, see one of the following articles on creating and assigning an Autopilot profile for each of the different Autopilot scenarios:
 
+   - [User-driven Azure AD join: Create and assign user-driven Azure AD join Autopilot profile](../user-driven/azure-ad-join-autopilot-profile.md)
+   - [User-driven hybrid Azure AD join: Create and assign user-driven hybrid Azure AD join Autopilot profile](../user-driven/hybrid-azure-ad-join-autopilot-profile.md)
+   - [Pre-provisioning Azure AD join: Create and assign a pre-provisioned Azure AD join Autopilot profile](../pre-provisioning/azure-ad-join-autopilot-profile.md)
+   - [Pre-provisioning hybrid Azure AD join: Create and assign a pre-provisioned hybrid Azure AD join Autopilot profile](../pre-provisioning/hybrid-azure-ad-join-autopilot-profile.md)
+   - [Self-deploying mode: Create and assign self-deploying Autopilot profile](../self-deploying/self-deploying-autopilot-profile.md)
 
 ## More information
 
@@ -56,3 +62,4 @@ For more information on registering the device for Windows Autopilot, see the fo
 
 - [Register the device for Windows Autopilot](/mem/autopilot/existing-devices#register-the-device-for-windows-autopilot)
 - [Manually register devices with Windows Autopilot](/mem/autopilot/add-devices)
+- [Create an Autopilot deployment profile](/mem/autopilot/profiles#create-an-autopilot-deployment-profile)
