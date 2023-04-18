@@ -73,10 +73,7 @@ Follow these steps to set up Shared iPad in your environment.
    * Turn on new devices and follow the onscreen prompts to set up Shared iPad. 
    * Reset existing devices to factory settings and follow the onscreen prompts to set up Shared iPad.  
 
-## Configure settings for Shared iPads  
-
-> [!IMPORTANT]
-> This feature is in public preview. For more information, see [Public preview in Microsoft Intune](../fundamentals/public-preview.md).  
+## Configure settings for Shared iPads   
 
 You can configure Shared iPad settings in a device configuration profile for both device and user context. In general:
 
