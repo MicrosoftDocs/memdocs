@@ -174,7 +174,7 @@ The following permissions are available when creating custom roles.
 | Organization/Delete | Delete tenant settings such as device categories and Exchange Connectors. | 
 | Organization/Read | View tenant settings such as device categories and Exchange Connectors. This permission is required to activate all enrollment workflows. | 
 | Organization/Update | Manage tenant settings, device categories and Exchange Connectors. |
-| Organizational messages/Create | Create and assign organizational messages. |
+| Organizational messages/Create | Create organizational messages. |
 | Organizational messages/Read | Read organizational messages. |
 | Organizational messages/Update | Cancel organizational messages. |
 | Organizational messages/Delete | Delete organizational messages. |
