@@ -104,7 +104,7 @@ Users must unenroll their devices from the current MDM provider before they enro
 
     Give users specific unenroll steps. Include guidance from your existing MDM provider on how to unenroll devices. Clear and helpful communication minimizes end user downtime, dissatisfaction, and helpdesk calls.
 
-4. Optional, but recommended. If you have Azure AD Premium, also **use [conditional access](migration-guide-drive-adoption.md)** to block devices until they enroll in Intune.
+4. Optional, but recommended. If you have Azure AD Premium, also **use [conditional access](../protect/conditional-access.md)** to block devices until they enroll in Intune.
 
     For more information, go to [Step 3 – Plan for compliance policies](deployment-plan-compliance-policies.md).
 
@@ -271,7 +271,7 @@ This section shows how to use the Microsoft Graph scripts for a tenant to tenant
 >
 > - These steps use the [Intune beta Graph samples](https://github.com/microsoftgraph/powershell-intune-samples) on GitHub. The sample scripts make changes to your tenant. They're available as-is, and should be validated using a non-production or "test" tenant account. Be sure the scripts meet your organization security guidelines.
 > - The scripts don't export and import every policy, such as certificate profiles. Expect to do more tasks than what's available in these scripts. You will have to recreate some policies.
-> - To migrate a user’s device, the user must unenroll the device from the old tenant, and then re-enroll in the new tenant.
+> - To migrate a user's device, the user must unenroll the device from the old tenant, and then re-enroll in the new tenant.
 
 ### Download the samples, and run the script
 
