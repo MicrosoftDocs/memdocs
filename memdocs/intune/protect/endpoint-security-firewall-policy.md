@@ -74,6 +74,7 @@ For information about configuring settings in the following profiles, see the [F
   > - [About application control for Windows](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control)
   > - [WDAC Application ID (AppId) Tagging guide](/windows/security/threat-protection/windows-defender-application-control/appidtagging/windows-defender-application-control-appid-tagging-guide)
 
+
 #### Add reusable settings groups to profiles for Firewall rules
 
 In public preview, Microsoft Defender Firewall rule profiles support use of [reusable settings groups](../protect/reusable-settings-groups.md) for the following platforms:
