@@ -92,7 +92,7 @@ Once all of the configurations for Windows Autopilot for pre-provisioned deploym
 
 1. Once **Device setup** and the device ESP process completes, a status screen is displayed showing whether the provisioning process either succeeded of failed:
 
-   - If the pre-provisioning process completes successfully, a success status screen appears with information about the deployment, including the previously presented information of organization name, Autopilot deployment profile name, QR code (Windows 10 only), and if applicable, assigned user The elapsed time of the provisioning process is also provided.
+   - If the pre-provisioning process completes successfully, a success status screen appears with information about the deployment, including the previously presented information of organization name, Autopilot deployment profile name, QR code (Windows 10 only), and if applicable, assigned user. The elapsed time of the provisioning process is also provided.
 
       Select **Reseal** to shut down the device. At that point, the device can be delivered to the end-user.
 
