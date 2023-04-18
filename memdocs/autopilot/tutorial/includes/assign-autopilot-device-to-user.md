@@ -21,7 +21,7 @@ A device that has been registered as an Autopilot device can also be assigned to
 >
 > For Configuration Manager admins, assigning a user to a device is similar to user device affinity in Configuration Manager.
 
-To assign an Autopilot device to a user, follow the below steps:
+To assign an Autopilot device to a user, follow these steps:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 

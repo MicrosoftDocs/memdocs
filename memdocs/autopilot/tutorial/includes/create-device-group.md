@@ -26,7 +26,7 @@ Device groups can be either dynamic or assigned:
 
 When and admin configures Autopilot in an enterprise environment, dynamic groups are primarily used since a large number of devices are usually involved. Adding the devices in automatically using rules makes management of the group a lot easier. Adding a large amount of device in manually via an assigned group would be impractical. However, if there's only a few devices, for example for testing purposes, an assigned group can also be used.
 
-To create a dynamic device group for use with Autopilot, follow the below steps:
+To create a dynamic device group for use with Autopilot, follow these steps:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 

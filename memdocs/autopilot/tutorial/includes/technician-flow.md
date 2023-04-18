@@ -16,7 +16,7 @@ hybrid-azure-ad-join-technician-flow.md
 
 Headings are driven by article context. -->
 
-Once all of the configurations for Windows Autopilot for pre-provisioned deployment have been completed on the Intune and Azure AD side, the next step is to start the Autopilot process. This step is known as the technician flow. To start the technician flow, follow the below steps:
+Once all of the configurations for Windows Autopilot for pre-provisioned deployment have been completed on the Intune and Azure AD side, the next step is to start the Autopilot process. This step is known as the technician flow. To start the technician flow, follow these steps:
 
 1. Select a device that is part of the device group created in the previous **Create a device group** step.
 
@@ -92,7 +92,7 @@ Once all of the configurations for Windows Autopilot for pre-provisioned deploym
 
 1. Once **Device setup** and the device ESP process completes, a status screen is displayed showing whether the provisioning process either succeeded of failed:
 
-   - If the pre-provisioning process completes successfully, a success status screen appears with information about the deployment, including the previously presented information of organization name, Autopilot deployment profile name, QR code (Windows 10 only), and if applicable, assigned user The elapsed time of the provisioning process is also provided.
+   - If the pre-provisioning process completes successfully, a success status screen appears with information about the deployment, including the previously presented information of organization name, Autopilot deployment profile name, QR code (Windows 10 only), and if applicable, assigned user. The elapsed time of the provisioning process is also provided.
 
       Select **Reseal** to shut down the device. At that point, the device can be delivered to the end-user.
 

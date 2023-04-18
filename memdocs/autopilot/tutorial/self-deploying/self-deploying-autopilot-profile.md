@@ -38,7 +38,7 @@ While the ESP controls what is shown during device and user setup and specifies 
 >
 > For Configuration Manager admins, the Autopilot profile is similar to some of the configuration that takes place during a task sequence via an unattend.xml file. The unattend.xml file is configured during the **Apply Windows Settings** and **Apply Network Settings** steps. Note however that Autopilot does not use unattend.xml files.
 
-To create a self-deploying mode Autopilot profile, follow the below steps:
+To create a self-deploying mode Autopilot profile, follow these steps:
 
 [!INCLUDE [Autopilot profiles before steps](../includes/autopilot-profile-steps-before.md)]
 

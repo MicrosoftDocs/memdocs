@@ -26,7 +26,7 @@ ms.technology: itpro-deploy
 1. Windows Autopilot for pre-provisioned deployment
    1. [Azure AD join](pre-provisioning/azure-ad-join-workflow.md)
    1. [Hybrid Azure AD join](pre-provisioning/hybrid-azure-ad-join-workflow.md)
-1. Windows Autopilot for existing devices
+1. [Windows Autopilot for existing devices](existing-devices/existing-devices-workflow.md)
 1. [Windows Autopilot Reset](reset/autopilot-reset-overview.md)
 
 [Windows Autopilot scenarios and capabilities](/mem/autopilot/windows-autopilot-scenarios)

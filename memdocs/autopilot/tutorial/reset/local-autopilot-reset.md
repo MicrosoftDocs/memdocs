@@ -28,7 +28,7 @@ Create Windows Autopilot Reset configuration profile in Intune > Make sure WinRE
 
 ## Enable local Windows Autopilot Reset in Intune
 
-To create a configuration profile that sets the **DisableAutomaticReDeploymentCredentials** policy and enables local Windows Autopilot Reset in Intune, follow the below steps:
+To create a configuration profile that sets the **DisableAutomaticReDeploymentCredentials** policy and enables local Windows Autopilot Reset in Intune, follow these steps:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -84,7 +84,7 @@ To create a configuration profile that sets the **DisableAutomaticReDeploymentCr
 
 ## Trigger local Windows Autopilot Reset
 
-To trigger a local Windows Autopilot Reset on a device, follow the below steps:
+To trigger a local Windows Autopilot Reset on a device, follow these steps:
 
 1. Make sure that the [Windows Recovery Environment (WinRE)](/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference) is correctly configured and enabled on the device where the Windows Autopilot Reset is being performed. WinRE can be enabled with the [REAgentC.exe tool](/windows-hardware/manufacture/desktop/reagentc-command-line-options) via the following command:
 

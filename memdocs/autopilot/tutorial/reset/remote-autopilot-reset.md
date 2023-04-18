@@ -62,7 +62,7 @@ A Windows Autopilot Reset can be forced to start sooner on a device by forcing t
 
 ### Remotely force a device to start the remote Windows Autopilot Reset
 
-To force the device to obtain the latest Intune policy remotely, follow the below steps:
+To force the device to obtain the latest Intune policy remotely, follow these steps:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -80,7 +80,7 @@ These steps should force the device to obtain the latest Intune policy. The Auto
 
 ### Locally force a device to start the remote Windows Autopilot Reset
 
-To force the device to obtain the latest Intune policy locally on the device, follow the below steps:
+To force the device to obtain the latest Intune policy locally on the device, follow these steps:
 
 1. Sign into the device where the remote Autopilot Reset was initiated.
 

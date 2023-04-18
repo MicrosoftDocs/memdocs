@@ -1,6 +1,6 @@
 ---
-title: Overview for Windows Autopilot for pre-provisioned deployment hybrid Azure AD join with pre-provisioning in Intune
-description: Overview for Windows Autopilot for pre-provisioned deployment hybrid Azure AD join with pre-provisioning in Intune.
+title: Overview for Windows Autopilot for pre-provisioned deployment hybrid Azure AD join in Intune
+description: Overview for Windows Autopilot for pre-provisioned deployment hybrid Azure AD join in Intune.
 ms.prod: windows-client
 ms.localizationpriority: medium
 author: frankroj
