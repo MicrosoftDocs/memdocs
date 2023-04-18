@@ -201,7 +201,7 @@ Control visibility of the device category prompt in Intune Company Portal. You c
 #### Support for multiple enrollment profiles and tokens for fully managed devices <!-- 14205233  -->  
 Create and manage multiple enrollment profiles and tokens for Android Enterprise fully managed devices. With this new functionality, you can now use the *EnrollmentProfileName* dynamic device property to automatically assign enrollment profiles to fully managed devices. The enrollment token that came with your tenant remains in a default profile. For more information, see [Set up Intune enrollment of Android Enterprise fully managed devices](../enrollment/android-fully-managed-enroll.md).
 
-#### New Azure AD frontline worker experience for iPad<!-- 6367427  -->  
+#### New Azure AD frontline worker experience for iPad (public preview)<!-- 6367427  -->  
 *This capability will begin to roll out to tenants in mid-April.*
 
 Intune now supports a frontline worker experience for iPhones and iPads using Apple automated device enrollment. You can now enroll devices that are enabled in Azure AD shared mode via zero-touch. For more information about how to configure automated device enrollment for shared device mode, see [Set up enrollment for devices in Azure AD shared device mode](../enrollment/automated-device-enrollment-shared-device-mode.md).  
