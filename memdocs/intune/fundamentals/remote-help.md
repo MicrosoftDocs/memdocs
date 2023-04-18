@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 12/08/2022
+ms.date: 3/27/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -146,7 +146,7 @@ For users that opted out of automatic updates, when an update to Remote Help is 
 
 Download the latest version of Remote Help direct from Microsoft at [aka.ms/downloadremotehelp](https://aka.ms/downloadremotehelp).
 
-The most recent version of Remote Help is **4.1.1.0**
+The most recent version of Remote Help is **4.2.1167.0**
 
 ### Deploy Remote Help as a Win32 app
 
@@ -185,7 +185,7 @@ To opt out of automatic updates, specify enableAutoUpdates=0 as part of the inst
    - For *Value*, specify the [version of Remote Help](#download-remote-help) you are deploying. For example, **10.0.22467.1000**
    - Leave *Associated with a 32-bit app on 64-bit clients* set to **No**
 
-5. Proceed to the Assignments page, and then select an applicable device group or groups that should install the Remote Help app.
+5. Proceed to the Assignments page, and then select an applicable device group or device groups that should install the Remote Help app. Remote Help is applicable when targeting group(s) of devices and not for User groups.
 
 6. Complete creation of the Windows app to have Intune deploy and install Remote Help on applicable devices.
 
@@ -265,7 +265,7 @@ As a sharer, when you’ve requested help and both you and the helper are ready 
 
    During assistance, helpers that have the *Elevation* permission can enter local admin permissions on your shared device. *Elevation* allows the helper to run executable programs or take similar actions when you lack sufficient permissions.
 
-5. After the issues are resolved, or at any time during the session, both the sharer and helper can end the session. To end the session, select **Leave** in the upper right corner of the Remote Help app. Upon the end of a session, the sharer is automatically signed out of their device as a security precaution to ensure all connections between the devices close.
+5. After the issues are resolved, or at any time during the session, both the sharer and helper can end the session. To end the session, select **Leave** in the upper right corner of the Remote Help app. When a helper performs elevated actions on a user's device, at the end of the session the sharer is automatically signed out of their device. When a helper performs elevated actions on a user's device and the sharer ends the session, if the helper continues, then a warning dialog box appears for the helper that if they continue they will be logged off.
 
 ### Provide help
 
@@ -289,7 +289,7 @@ As a helper, after receiving a request from a user who wants assistance by using
 
    During assistance, helpers that have the *Elevation* permission can enter local admin permissions on your shared device. *Elevation* allows the helper to run executable programs or take similar actions when you lack sufficient permissions.
 
-5. After the issues are resolved, or at any time during the session, both the sharer and helper can end the session. To end the session, select **Leave** in the upper right corner of the Remote Help app. Upon the end of a session, the sharer is automatically signed out of their device as a security precaution to ensure all connections between the devices close.
+5. After the issues are resolved, or at any time during the session, both the sharer and helper can end the session. To end the session, select **Leave** in the upper right corner of the Remote Help app. When a helper performs elevated actions on a user's device, at the end of the session the sharer is automatically signed out of their device. When a helper performs elevated actions on a user's device and the sharer ends the session, if the helper continues, then a warning dialog box appears for the helper that if they continue they will be logged off.
 
 ## Monitoring and reports
 
@@ -363,6 +363,17 @@ If a conditional access policy is configured as described above and if the devic
 
 Updates for Remote Help are released periodically. When we update Remote Help, you can read about the changes here.
 
+### March 27, 2023
+
+Version: 4.2.1167.0 - Changes in this release:
+
+This release addresses a bug in the Laser Pointer and includes some updates to prepare for future releases.
+
+- Updated product name from **Remote help** to **Remote Help**
+- Updated application description to better localize it for non-US locales
+- Resolved a bug where the app would flash a white screen when launched in dark mode
+- Fixed a bug with the Laser pointer color change
+
 ### February 6, 2023
 
 Version: 4.1.1.0 - Changes in this release:
@@ -383,7 +394,7 @@ Version: 4.0.1.13 - Changes in this release:
 
 With Remote Help 4.0.1.13 fixes were introduced to address an issue that prevented people from having multiple sessions open at the same time. The fixes also addressed an issue where the app was launching without focus, and prevented keyboard navigation and screen readers from working on launch.
 
-For more information, go to [Use Remote Help with Intune and Microsoft Endpoint Manager](../remote-actions/remote-help.md)
+For more information, go to [Use Remote Help with Intune and Microsoft Endpoint Manager](/mem/intune/fundamentals/remote-help)
 
 ### July 26, 2022
 

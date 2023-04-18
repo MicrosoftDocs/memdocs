@@ -99,7 +99,7 @@ Only update builds that are generally available are supported. Preview builds, i
 
 **Devices must**:
 
-- Be [enrolled in Intune](../enrollment/device-enrollment.md) MDM, or be [co-managed](../../configmgr/comanage/overview.md) with the [Windows Update policies](../../configmgr/comanage/workloads.md#windows-update-policies) workload set to Intune or Pilot Intune.
+- Be [enrolled in Intune](/mem/intune/fundamentals/deployment-guide-enrollment) MDM, or be [co-managed](../../configmgr/comanage/overview.md) with the [Windows Update policies](../../configmgr/comanage/workloads.md#windows-update-policies) workload set to Intune or Pilot Intune.
 
 - Be Azure Active Directory (AD) Joined, or Hybrid Azure AD Joined. Workplace Join isn't supported.
 
@@ -117,6 +117,7 @@ Only update builds that are generally available are supported. Preview builds, i
   - WUfB-DS
 
     - devicelistenerprod.microsoft.com
+    - devicelistenerprod.eudb.microsoft.com
     - login.windows.net
     - payloadprod*.blob.core.windows.net
 

@@ -31,6 +31,8 @@ items:
     href: device-configuration.md
   - name: What is Windows 365 Government
     href: introduction-windows-365-government.md
+  - name: What is Windows 365 Frontline
+    href: introduction-windows-365-frontline.md
   - name: Security
     items:
     - name: Windows 365 security
@@ -55,6 +57,8 @@ items:
           href: requirements.md
         - name: Network requirements
           href: requirements-network.md
+      - name: Azure Firewall
+        href: azure-firewall-windows-365.md
       - name: Cloud PC role-based access control
         href: role-based-access.md
       - name: Intune role-based access control
@@ -173,6 +177,8 @@ items:
         href: reprovision-cloud-pc.md
       - name: Resize a Cloud PC
         href: resize-cloud-pc.md
+      - name: Set idle session time limits
+        href: frontline-cloud-pc-session-time-limits.md
       - name: Restore a Cloud PC
         items:
         - name: Overview
@@ -211,6 +217,8 @@ items:
         href: /mem/intune/protect/windows-10-update-rings?context=/windows-365/context/pr-context
       - name: Windows 10 feature updates
         href: /mem/intune/protect/windows-10-feature-updates?context=/windows-365/context/pr-context
+      - name: Windows Updates and Windows 365 Frontline
+        href: windows-update-frontline-cloud-pc.md
     - name: End-user experience
       items:
       - name: End-user hardware requirements

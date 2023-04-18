@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/01/2023
+ms.date: 04/13/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -28,6 +28,10 @@ ms.collection:
 ---
 
 # Configure Microsoft Tunnel for Intune
+
+To Install Microsoft Tunnel Gateway, you’ll need at least one Linux server with Docker installed, which runs either on-premises or in the cloud. Depending on your environment and infrastructure, additional configurations and software like Azure ExpressRoute might be needed.
+
+Before you start installation be sure to complete the following tasks:
 
 - Review and [Configure prerequisites for Microsoft Tunnel](microsoft-tunnel-prerequisites.md).
 - Run the Microsoft Tunnel [readiness tool](../protect/microsoft-tunnel-prerequisites.md#run-the-readiness-tool) to confirm your environment is ready to support use of the tunnel.
@@ -67,14 +71,14 @@ Use of a *Server configuration* lets you create a configuration a single time an
    - **IP ranges to include**
    - **IP ranges to exclude**
 
-  > [!NOTE]
-  > Do not use an IP range that specifies 0.0.0.0 in any of the include or exclude addresses, Tunnel Gateway cannot route traffic when this range is used.
-  > 
+   > [!NOTE]
+   > Do not use an IP range that specifies 0.0.0.0 in any of the include or exclude addresses, Tunnel Gateway cannot route traffic when this range is used.
 
 5. On the **Review + create** tab, review the configuration, and then select **Create** to save it.
-  > [!NOTE]
-  > By default, each VPN session will stay active for only 3,600 seconds (one hour) before it disconnects (a new session will be established immediately in case the client is set to use Always On VPN).
-  > However, you can modify the session timeout value along with other server configuration settings using [graph calls (microsoftTunnelConfiguration)](/graph/api/resources/intune-mstunnel-microsofttunnelconfiguration).
+
+   > [!NOTE]
+   > By default, each VPN session will stay active for only 3,600 seconds (one hour) before it disconnects (a new session will be established immediately in case the client is set to use Always On VPN).
+   > However, you can modify the session timeout value along with other server configuration settings using [graph calls (microsoftTunnelConfiguration)](/graph/api/resources/intune-mstunnel-microsofttunnelconfiguration).
 
 ## Create a Site
 
@@ -295,11 +299,14 @@ After the Microsoft Tunnel installs and devices install the Microsoft Tunnel cli
 
 3. On the **Basics** tab, enter a *Name* and *Description* *(optional)* and select **Next**.
 
-4. For *Connection type*, select **Microsoft Tunnel(preview)** and then configure the following items:
+4. For *Connection type*, select **Microsoft Tunnel** and then configure the following items:
 
    - **Base VPN**:  
      - For *Connection name*, specify a name that will display to users.
      - For *Microsoft Tunnel Site*, select the tunnel Site that this VPN profile will use.
+
+     > [!NOTE]  
+     > When using the Tunnel VPN connection and Defender web protection together in combined mode, the *Disconnect on sleep* setting is not supported. If this Intune VPN setting is set to *Enabled* and the iOS device goes to sleep, both the Tunnel VPN and the Defender VPN are disconnected.
 
    - **Per-app VPN**:  
      - To enable a per-app VPN, select **Enable**. Extra configuration steps are required for iOS per-app VPNs. When the per-app VPN is configured, your split tunneling rules are ignored by iOS.
@@ -318,7 +325,7 @@ After the Microsoft Tunnel installs and devices install the Microsoft Tunnel cli
 
 Intune supports Microsoft Defender for Endpoint as both an MTD app and as the Microsoft Tunnel client application on Android Enterprise devices. If you use Defender for Endpoint for both the Microsoft Tunnel client application and as an MTD app, you can use *custom settings* in your VPN profile for Microsoft Tunnel to simplify your configurations. Use of custom settings in the VPN profile replaces the need to use a separate app configuration profile.
 
-For devices [enrolled](../enrollment/android-enroll.md) as *Android Enterprise personally-owned work profile* that use Defender for Endpoint for both purposes, you must use custom settings instead of an app configuration profile. On these devices, the app configuration profile for Defender for Endpoint conflicts with Microsoft Tunnel and can prevent the device from connecting to Microsoft Tunnel.
+For devices [enrolled](/mem/intune/fundamentals/deployment-guide-enrollment-android) as *Android Enterprise personally-owned work profile* that use Defender for Endpoint for both purposes, you must use custom settings instead of an app configuration profile. On these devices, the app configuration profile for Defender for Endpoint conflicts with Microsoft Tunnel and can prevent the device from connecting to Microsoft Tunnel.
 
 If you use Microsoft Defender for Endpoint for Microsoft Tunnel but not MTD , then you continue to use the app tunnel configuration profile to configure Microsoft Defender for Endpoint as a Tunnel Client.
 
@@ -345,7 +352,6 @@ Use the following information to configure the custom settings in a VPN profile 
 | AutoOnboard       | **True** – If Web Protection is enabled, the Defender for Endpoint app is automatically granted permissions for adding VPN connections and the user isn’t prompted to allow this. <br><br> **False** *(default)* – If Web Protection is enabled, the user is prompted to allow the Defender for Endpoint app to add VPN configurations.  | Determines whether Defender for Endpoint Web Protection is enabled without prompting the user to add a VPN connection (because a local VPN is needed for Web Protection functionality). This setting only applies if *WebProtection* is set to **True**.   |
 
 ## Configure TunnelOnly mode to comply with the European Union Data Boundary
- <!-- Configure Tunnelonly mode and the European Union Data Boundary (EUDB)  -->
 
 By end of calendar year 2022, all personal data, including customer Content (CC), EUII, EUPI and Support Data must be stored and processed in the European Union (EU) for EU tenants.  
 
@@ -358,6 +364,8 @@ In the meantime, Microsoft Tunnel customers with EU tenants can enable *TunnelOn
 2. Create a key called **TunnelOnly** and set the value to **True**.
 
 By configuring TunnelOnly mode, all Defender for Endpoint functionality is disabled while Tunnel functionality remains available for use in the app.
+
+Guest accounts and Microsoft Accounts (MSA) that are not specific to your organization's tenant are not supported for cross-tenant access using Microsoft Tunnel VPN. This means that these types of accounts cannot be used to access internal resources securely through the VPN. It is important to keep this limitation in mind when setting up secure access to internal resources using Microsoft Tunnel VPN.
 
 For more information about the EU Data Boundary, see [EU Data Boundary for the Microsoft Cloud | Frequently Asked Questions](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/eu-data-boundary-for-the-microsoft-cloud-frequently-asked/ba-p/2329098) on the Microsoft security and compliance blog.
 

@@ -97,7 +97,7 @@ A policy is deployed to the app and takes effect. A second policy is deployed. I
 
 When two or more policies are assigned to the same user or device, then the setting that's applied happens at the individual setting level:
 
-- Compliance policy settings always have precedence over configuration profile settings.
+- Compliance policy settings always have precedence over configuration profile settings. If you use Custom Compliance Policies to set device settings, then the setting within the Custom Compliance Policy will take precedence over the same setting within Device Configuration Policies.
 
 - If a compliance policy evaluates against the same setting in another compliance policy, then the most restrictive compliance policy setting applies.
 
@@ -162,6 +162,7 @@ If fast delivery of apps and policies is important to your setup/enrollment scen
 For more information on dynamic groups, go to:
 
 - [Add groups to organize users and devices in Intune](../fundamentals/groups-add.md)
+- [Performance recommendations when using Intune to group, target, and filter](../fundamentals/filters-performance-recommendations.md)
 - [Dynamic membership rules for groups in Azure AD](/azure/active-directory/enterprise-users/groups-dynamic-membership)
 
 ## Next steps

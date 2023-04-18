@@ -36,7 +36,6 @@ Microsoft Intune Suite provides mission-critical advanced endpoint management an
 
 Licenses for the Intune add-ons can be added for an additional cost to the licensing options that include Microsoft Intune or Microsoft Configuration Manager. For more information, see [Licenses available for Microsoft Intune](licenses.md).
 
-
 > [!NOTE]
 > Intune add-ons are currently not supported in Sovereign clouds.
 
@@ -44,9 +43,9 @@ Licenses for the Intune add-ons can be added for an additional cost to the licen
 
 Some capabilities are available to buy as a standalone add-on. Other capabilities are only available with Intune Plan 2 or the Intune Suite.
 
-- **Microsoft Intune Suite**: Unifies a series of mission-critical advanced endpoint management and security capabilities. The capabilities of the suite are integrated with Microsoft 365 and Microsoft Security across endpoint platforms for both cloud and on-premises co-managed devices. The Intune Suite includes Remote Help (standalone) and all capabilities that come with Intune Plan 2.
-- **Microsoft Intune Plan 2**: Offers advanced endpoint management capabilities, including management and configuration of specialty devices and Microsoft Tunnel for Mobile Application Management.
 - **Standalone add-ons**: Some add-on capabilities, such as Remote Help, are available as a Standalone add-on.
+- **Microsoft Intune Plan 2**: Offers advanced endpoint management capabilities, including management and configuration of specialty devices and Microsoft Tunnel for Mobile Application Management.
+- **Microsoft Intune Suite**: Unifies a series of mission-critical advanced endpoint management and security capabilities. The capabilities of the suite are integrated with Microsoft 365 and Microsoft Security across endpoint platforms for both cloud and on-premises co-managed devices. The Intune Suite includes Remote Help (standalone) and all capabilities that come with Intune Plan 2.
 
 The following table provides a list of add-on capabilities and associated Intune Plans. For information about Microsoft Intune Plans and pricing, see [Intune Plans and pricing](https://aka.ms/IntuneSuitePricing).
 
@@ -57,9 +56,9 @@ The following table provides a list of add-on capabilities and associated Intune
 |Specialized devices management| |✔️|✔️|
 |Advanced endpoint analytics| | |✔️|
 
-### Remote Help 
+### Remote Help
 
-Remote Help is a cloud-based solution for secure help desk connections with role-based access controls. For more information, see [Remote Help](../remote-actions/remote-help.md).
+Remote Help is a cloud-based solution for secure help desk connections with role-based access controls. For more information, see [Remote Help](/mem/intune/fundamentals/remote-help).
 
 ### Microsoft Tunnel for Mobile Application Management
 
@@ -87,7 +86,7 @@ Starting a free trial gives you a 90-day period to use the Intune add-on capabil
 
 Purchasing licenses lets you use the Intune add-on capability in your tenant for the duration in which the licenses are active on your tenant based on the option selected during the Billing process.
 
-Intune add-on capabilities are disabled in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) unless you are in the free trial period or have purchased licenses. 
+Intune add-on capabilities are disabled in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) unless you are in the free trial period or have purchased licenses.
 
 ### How to start a trial through the Microsoft 365 admin center
 
@@ -101,19 +100,19 @@ Intune add-on capabilities are disabled in [Microsoft Intune admin center](https
 
 ### How to purchase Intune add-ons
 
-Licenses for Intune add-ons can be purchased just as you would purchase Intune licenses through the following ways:
-   
-- Web direct purchase in the Microsoft 365 Admin Center
-- Microsoft Volume License Servicing Center (VLSC) 
-- Existing relationships with Microsoft partners/resellers
- 
-After you buy licenses via any source, the licenses are available in your Tenant and the status of the Intune add-ons capability will update accordingly. 
+Licenses for Intune add-ons can be purchased just as you would purchase Intune Plan 1 licenses through the following ways:
 
-## How to assign licenses 
+- Web direct purchase in the Microsoft 365 Admin Center
+- Microsoft Volume License Servicing Center (VLSC)
+- Existing relationships with Microsoft partners/resellers
+
+After you buy licenses via any source, the licenses are available in your tenant and the status of the Intune add-ons capability will update accordingly.
+
+## How to assign licenses
 
 For information on how to assign licenses in the Microsoft Intune admin center, see [Assign Microsoft Intune licenses](licenses-assign.md).
 
-## Monitor license use 
+## Monitor license use
 
 Each of the Intune add-ons have their own requirements for how many licenses need to be purchased.
 
@@ -121,10 +120,7 @@ Each of the Intune add-ons have their own requirements for how many licenses nee
 
 Learn more about:
 
-- [Remote Help](..\remote-actions\remote-help.md).
-
-- [Microsoft Tunnel for Mobile Application Management](../protect/microsoft-tunnel-mam.md).
-
-- [Managing specialized devices with Microsoft Intune](specialty-devices-with-intune.md).
-
-- [Advanced endpoint analytics](../../analytics/overview.md).
+- [Remote Help](/mem/intune/fundamentals/remote-help)
+- [Microsoft Tunnel for Mobile Application Management](../protect/microsoft-tunnel-mam.md)
+- [Managing specialized devices with Microsoft Intune](specialty-devices-with-intune.md)
+- [Advanced endpoint analytics](../../analytics/overview.md)

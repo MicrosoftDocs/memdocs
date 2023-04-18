@@ -51,6 +51,7 @@ The following table shows the features and scenarios supported with automated de
 | Need to enroll a few devices, or a large number of devices (bulk enrollment). | ✔️ |
 | Devices are associated with a single user. | ✔️ |
 | Devices are user-less, such as kiosk or dedicated device. | ✔️ |
+| Devices are in Azure AD shared mode. | ✔️ |
 | Devices are personal or BYOD. | ❌ <br/><br/> Not recommended. Applications on BYOD or personal devices can be managed using [MAM](../fundamentals/deployment-guide-enrollment-mamwe.md), or [User and Device enrollment](../enrollment/ios-user-enrollment.md). |
 | Devices are managed by another MDM provider. | ❌ <br/><br/> To be fully managed by Intune, users must unenroll from the current MDM provider, and then enroll in Intune. Or, you can use MAM to manage specifics apps on the device. Since these devices are owned by the organization, we recommend enrolling them in Intune. |  
 | You use the device enrollment manager (DEM) account. | ❌ <br/><br/> The DEM account isn't supported. |  
@@ -84,6 +85,13 @@ For more information about your authentication options, see [Authentication meth
 Supervised mode provides more management control over corporate-owned devices, so you can do things like block screen captures and restrict AirDrop. 
 
 Corporate-owned devices running iOS/iPadOS 11+ and enrolled via automated device enrollment should always be in supervised mode, which you can turn on in the enrollment profile. For more information about supervised mode, see [Turn on iOS/iPadOS supervised mode](../remote-actions/device-supervised-mode.md). Microsoft Intune ignores the *is_supervised* flag for devices running iOS/iPadOS 13.0 and later because these devices are automatically put in supervised mode at the time of enrollment. 
+
+### Enrolling devices in Azure AD shared device mode  
+
+> [!IMPORTANT]
+> This feature is in public preview. For more information, see [Public preview in Microsoft Intune](../fundamentals/public-preview.md).  
+
+You can set up automated device enrollment for devices in [Azure AD shared device mode](/azure/active-directory/develop/msal-ios-shared-devices). Shared device mode enables frontline workers to share a single device throughout the day, signing in and out as needed. For more information about how to enable enrollment for devices in shared device mode, see [Automated device enrollment for Azure AD shared device mode](automated-device-enrollment-shared-device-mode.md).  
 
 ### Deploying the Company Portal app  
 
@@ -149,14 +157,14 @@ Use [Apple Business Manager (ABM)](https://business.apple.com/) or [Apple School
         - You have to repeat steps.
         - On the **Review + create** tab, the **Create** button isn't available, and you can't complete this procedure.
 
-### Step 2: Go to the Apple Business Manager portal
+### Step 2: Go to the Apple Business Manager portal  
 
 Use the Apple Business Manager portal to create and renew your ADE token (MDM server). This token is added to Intune and communicates between Intune and Apple.
 
 > [!NOTE]
 > The following steps describe what you need to do in Apple Business Manager. For the specific steps, refer to Apple's documentation. [Apple Business Manager User Guide](https://support.apple.com/guide/apple-business-manager/welcome/web) (on Apple's website) might be helpful.
 
-#### Download the Apple token
+#### Download the Apple token  
 
 1. In [Apple Business Manager](https://business.apple.com), sign in with your company's Apple ID.
 2. In this portal, complete the following steps.
@@ -167,19 +175,19 @@ Use the Apple Business Manager portal to create and renew your ADE token (MDM se
 
     - After you save the MDM server, select it, and then download the token (.p7m file). You'll upload this .p7m token in Intune in [Step 4: Upload your token and finish](#step-4-upload-your-token-and-finish) (in this article).
 
-#### Assign devices to the Apple token (MDM server)
+#### Assign devices to the Apple token (MDM server)  
 
 1. In [Apple Business Manager](https://business.apple.com) > **Devices**, select the devices you want to assign to this token. You can sort by various device properties, like serial number. You can also select multiple devices simultaneously.
 2. Edit device management, and select the MDM server you just added. This step assigns devices to the token.
 
-### Step 3: Save the Apple ID
+### Step 3: Save the Apple ID  
 
 1. In your web browser, go back to the **Add enrollment program token** page in Intune. You should have kept this page open, as noted in [Step 1: Download the Intune public key certificate](#step-1-download-the-intune-public-key-certificate) (in this article).
 2. In **Apple ID**, enter your ID. This step saves the ID. The ID can be used in the future.
 
     :::image type="content" source="./media/device-enrollment-program-enroll-ios/image03.png" alt-text="Sreenshot that shows the Apple ID box on the Basics tab.":::
 
-### Step 4: Upload your token and finish
+### Step 4: Upload your token and finish  
 
 1. In **Apple token**, browse to the .p7m certificate file, and then select **Open**.
 
@@ -197,12 +205,12 @@ Use the Apple Business Manager portal to create and renew your ADE token (MDM se
 
 With the push certificate, Intune can enroll and manage iOS/iPadOS devices by pushing policies to enrolled mobile devices. Intune automatically synchronizes with Apple to access your enrollment program account.
 
-## Create an Apple enrollment profile
+## Create an Apple enrollment profile  
 
-Now that you've installed your token, you can create an enrollment profile for ADE devices. A device enrollment profile defines the settings applied to a group of devices during enrollment. There's a limit of 1,000 enrollment profiles per ADE token.
+Now that you've installed your token, you can create an enrollment profile for automated device enrollment. A device enrollment profile defines the settings applied to a group of devices during enrollment. There's a limit of 1,000 enrollment profiles per enrollment token.  
 
 > [!NOTE]
-> Devices will be blocked if there aren't enough Company Portal licenses for a VPP token or if the token is expired. Intune alerts you when a token is about to expire or licenses are running low.
+> Devices will be blocked from enrolling if there aren't enough Company Portal licenses for a VPP token, or if the token expires. Intune alerts you when a token is about to expire or licenses are running low.  
 
 1. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **iOS/iPadOS** > **iOS/iPadOS enrollment** > **Enrollment program tokens**.
 2. Select a token, and then select **Profiles**.
@@ -215,12 +223,13 @@ Now that you've installed your token, you can create an enrollment profile for A
 
 6. In the **User Affinity** list, select an option that determines whether devices with this profile must enroll with or without an assigned user.
 
-    - **Enroll with User Affinity**. Select this option for devices that belong to users who want to use Company Portal for services like installing apps.
-    - **Enroll without User Affinity**. Select this option for devices that aren't affiliated with a single user. Use this option for devices that don't access local user data. This option is typically used for kiosk, point of sale (POS), or shared-utility devices.
+    - **Enroll with User Affinity**: Select this option for devices that belong to users who want to use Company Portal for services like installing apps.
+    - **Enroll without User Affinity**: Select this option for devices that aren't affiliated with a single user. Use this option for devices that don't access local user data. This option is typically used for kiosk, point of sale (POS), or shared-utility devices.  
 
       In some situations, you might want to associate a primary user on devices enrolled without user affinity. To do this task, you can send the `IntuneUDAUserlessDevice` key to the Company Portal app in an app configuration policy for managed devices. The first user that signs in to the Company Portal app is established as the primary user. If the first user signs out and a second user signs in, the first user remains the primary user of the device. For more information, see [Configure the Company Portal app to support iOS and iPadOS ADE devices](../apps/app-configuration-policies-use-ios.md#configure-the-company-portal-app-to-support-ios-and-ipados-devices-enrolled-with-automated-device-enrollment).
+    - **Enroll with Azure AD shared mode**: Select this option to enroll devices that will be in shared mode. 
 
-7. If you selected **Enroll with User Affinity** for the **User Affinity** field, you now have the option to choose the authentication method employees must use. For more information about each authentication method, see [Authentication methods for automated device enrollment](automated-device-enrollment-authentication.md).   
+7. If you selected **Enroll with User Affinity** for the **User Affinity** field, you have the option to choose the authentication method employees must use. For more information about each authentication method, see [Authentication methods for automated device enrollment](automated-device-enrollment-authentication.md).   
 
    ![Screenshot of authentication method options.](./media/device-enrollment-program-enroll-ios/authentication-method.png)
 
@@ -255,7 +264,7 @@ Now that you've installed your token, you can create an enrollment profile for A
      > [!NOTE]
      > If a device is enrolled without supervision, you need to use Apple Configurator if you want to set it to supervised. To reset the device in this way, you need to connect it to a Mac with a USB cable. For more information, see [Apple Configurator Help](https://support.apple.com/guide/apple-configurator-mac).
 
-11. In the **Locked enrollment** list, select **Yes** or **No**. Locked enrollment disables iOS/iPadOS settings that allow the management profile to be removed. If you enable locked enrollment, the button in the Settings app that lets users remove a management profile will be hidden and users won't be able to unenroll their device.   
+11. In the **Locked enrollment** list, select **Yes** or **No**. Locked enrollment disables iOS/iPadOS settings that allow the management profile to be removed. If you enable locked enrollment, the button in the Settings app that lets users remove a management profile will be hidden and users won't be able to unenroll their device. If you're setting up devices in Azure AD shared mode, select **Yes**.    
 
     Locked enrollment works a little differently, at first, on devices not originally purchased through Apple Business Manager but later added to be a part of automated device enrollment: users on these devices will see the remove management button in the Settings app for the first 30 days after activating their device. After that provisional period, the option will be hidden. For more information, see [Prepare devices manually](https://help.apple.com/configurator/mac/2.8/#/cad99bc2a859) (opens Apple Configurator Help docs). 
   
@@ -302,11 +311,27 @@ Now that you've installed your token, you can create an enrollment profile for A
     > [!NOTE]
     > If you set **Sync with computers** to **Deny all**, the port will be limited on iOS and iPadOS devices. The port will be limited to only charging. It will be blocked from using iTunes or Apple Configurator 2.
     >
-    >If you set **Sync with computers** to **Allow Apple Configurator by certificate**, make sure you have a local copy of the certificate that you can use later. You won't be able to make changes to the uploaded copy, and it's important to retain an copy of this certificate. If you want to connect to the iOS/iPadOS device from a macOS device or PC, the same certificate must be installed on the device making the connection to the iOS/iPadOS device.
+    >If you set **Sync with computers** to **Allow Apple Configurator by certificate**, make sure you have a local copy of the certificate that you can use later. You won't be able to make changes to the uploaded copy, and it's important to retain an copy of this certificate. If you want to connect to the iOS/iPadOS device from a Mac device, the same certificate must be installed on the device making the connection to the iOS/iPadOS device.
 
-14. If you selected **Allow Apple Configurator by certificate** in the previous step, choose an Apple Configurator certificate to import.
+14. If you selected **Allow Apple Configurator by certificate** in the previous step, choose an Apple Configurator certificate to import.  
+15. For **Await final configuration**, your options are:  
+      * **Yes**: Enable a locked experience at the end of Setup Assistant to ensure your most critical device configuration policies are installed on the device. Just before the home screen loads, Setup Assistant pauses and lets Intune check in with the device. The end-user experience locks while users await final configurations. The amount of time it takes to release the device to the home screen varies, and depends on the total number of policies and apps applied to the device. The experience times out after five minutes.  
 
-15. You can specify a naming format for devices that's automatically applied when they're enrolled and upon each successive check-in. To create a naming template, select **Yes** under **Apply device name template**. Then, in the **Device Name Template** box, enter the template to use for the names that use this profile. You can specify a template format that includes the device type and serial number. This feature supports iPhone, iPad, and iPod Touch. The device name template entry cannot exceed the length of 63 characters, including the variables.
+         This setting is applied once during the out-of-box automated device enrollment experience. The device user doesn't experience it again unless they re-enroll their device. **Yes** is the default setting for new enrollment profiles. **No** is the default setting for existing enrollment profiles.  
+
+      * **No**: The device is released to the home screen when Setup Assistant ends, regardless of policy installation status. Device users may be able to access the home screen or change device settings before all policies are installed.   
+
+         The locked experience works on devices targeted with new and existing enrollment profiles. Supported devices include:      
+         * iOS/iPadOS 13+ devices enrolling with Setup Assistant with modern authentication  
+         * iOS/iPadOS 13+ devices enrolling without user affinity   
+          * iOS/iPadOS 13+ devices enrolling with Azure AD shared mode  
+          
+      > [!IMPORTANT]
+      > This feature is in public preview. For more information, see [Public preview in Microsoft Intune](../fundamentals/public-preview.md).  
+
+15. Optionally, create a device name template to quickly identify devices assigned this profile in the admin center. Intune uses your template to create and format device names. The names are given to devices when they enroll and upon each successive check-in. To create a template: 
+ 1. Under **Apply device name template**, select **Yes** .
+ 2. In the **Device Name Template** box, enter the template you want to use to construct device names. The template can include the device type and serial number. It can't contain more than 63 characters, including the variables. Example: `{{DEVICETYPE}}-{{SERIAL}}`    
 
 16. You can activate a cellular data plan. This setting applies to devices running iOS/iPadOS 13.0 and later. Configuring this option will send a command to activate cellular data plans for your eSim-enabled cellular devices. Your carrier must provision activations for your devices before you can activate data plans using this command. To activate cellular data plan, click **Yes** and then enter your carrier’s activation server URL.
 
@@ -373,11 +398,11 @@ The following table describes the Setup Assistant screens shown during automated
 
 Now that Intune has permission to manage your devices, you can synchronize Intune with Apple to see your managed devices in Intune in the Azure portal.
 
-1. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **iOS/iPadOS** > **iOS/iPadOS enrollment** > **Enrollment Program Tokens**.
+1. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **iOS/iPadOS** > **iOS/iPadOS enrollment** > **Enrollment Program Tokens**.  
 
 2. Select a token in the list, and then select **Devices** > **Sync**:
 
-    :::image type="content" source="./media/device-enrollment-program-enroll-ios/image06.png" alt-text="Screenshot that shows how to sync iOS and iPadOS devices to an enrollment program token.":::
+    :::image type="content" source="./media/device-enrollment-program-enroll-ios/image06.png" alt-text="Screenshot that shows how to sync iOS and iPadOS devices to an enrollment program token." lightbox="./media/device-enrollment-program-enroll-ios/image06.png":::
 
    To follow Apple's terms for acceptable enrollment program traffic, Intune imposes the following restrictions:
 
@@ -389,21 +414,25 @@ Now that Intune has permission to manage your devices, you can synchronize Intun
 
 ## Assign an enrollment profile to devices
 
-Before devices can be enrolled, you need to assign an enrollment program profile to them.
+Before devices can be enrolled, you need to assign an enrollment profile to them.
 
 >[!NOTE]
 >You can also assign serial numbers to profiles in the **Apple Serial Numbers** pane.
 
-1. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **iOS/iPadOS** > **iOS/iPadOS enrollment** > **Enrollment Program Tokens**. Select a token in the list.
-2. Select **Devices**. Select devices in the list, and then select **Assign profile**.
-3. Under **Assign profile**, choose a profile for the devices, and then select **Assign**.
+1. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **iOS/iPadOS** > **iOS/iPadOS enrollment** > **Enrollment Program Tokens**. 
+2. Select an enrollment token.
+3. Select **Devices**. 
+5. Select all devices you want to assign, and then select **Assign profile**.
+4. Under **Assign profile**, choose the automated device enrollment profile you created for the devices, and then select **Assign**.  
 
 ### Assign a default profile
 
 You can pick a default profile to be applied to all devices that enroll with a specific token.
 
-1. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **iOS/iPadOS** > **iOS/iPadOS enrollment** > **Enrollment Program Tokens**. Select a token in the list.
-2. Select **Set Default Profile**, select a profile in the list, and then select **Save**. The profile will be applied to all devices that enroll with the token.
+1. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **iOS/iPadOS** > **iOS/iPadOS enrollment** > **Enrollment Program Tokens**. 
+2. Select an enrollment token.  
+2. Select **Set Default Profile**.
+4. Select a profile in the list, and then select **Save**. The profile will be applied to all devices that enroll with the selected enrollment token.  
 
 > [!NOTE]
 > Ensure that **Device Type Restrictions** under **Enrollment Restrictions** does not have the default **All Users** policy set to block the iOS/iPadOS platform. This setting will cause automated enrollment to fail and your device will show as Invalid Profile, regardless of user attestation. To permit enrollment only by company-managed devices, block only personally owned devices, which will permit corporate devices to enroll. Microsoft defines a corporate device as a device that's enrolled via a Device Enrollment Program or a device that's manually entered under **Corporate device identifiers**.
@@ -462,7 +491,7 @@ You'll sometimes need to renew your tokens:
 
 5. Select **Renew token**. Enter the **Apple ID** used to create the original token (if it's not automatically populated):  
 
-    :::image type="content" source="./media/device-enrollment-program-enroll-ios/renewtoken.png" alt-text="Screenshot that shows the Renew token page.":::
+    :::image type="content" source="./media/device-enrollment-program-enroll-ios/renewtoken.png" alt-text="Screenshot that shows the Renew token page." lightbox="./media/device-enrollment-program-enroll-ios/renewtoken.png":::
 
 6. Upload the newly downloaded token.
 

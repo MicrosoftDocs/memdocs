@@ -707,6 +707,6 @@ These are the plans for ways we will be improving the user experience by updatin
 
 
 ## See also
-* [Microsoft Intune Blog](https://www.microsoft.com/microsoft-365/blog/microsoft-intune/)
+* [Microsoft Intune Blog](https://techcommunity.microsoft.com/t5/microsoft-intune-blog/bg-p/MicrosoftEndpointManagerBlog)
 * [Cloud Platform roadmap](https://www.microsoft.com/cloud-platform/roadmap)
 * [What's new in Intune](whats-new.md)

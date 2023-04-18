@@ -40,6 +40,13 @@ Microsoft Defender for Endpoint works with devices that run:
 - iOS/iPadOS
 - Windows 10
 - Windows 11
+- Windows Server 2008 R2
+- Windows Server 2012 R2
+- Windows Server 2016
+- Windows Server Semi-Annual Enterprise Channel
+- Windows Server 2019 and later
+- Windows Server 2019 Core edition
+- Windows Server 2022
 
 To be successful, you'll use the following configurations in concert:
 
@@ -80,7 +87,7 @@ To use Microsoft Defender for Endpoint with Intune, you must have the following 
 
   For Defender for Endpoint licensing options, see **Licensing requirements** in [Minimum requirements for Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/minimum-requirements) and [How to set up a Microsoft 365 E5 Trial Subscription](/microsoft-365/security/defender/setup-m365deval#enable-microsoft-365-trial-subscription).
 
-- **Microsoft Intune** – This subscription provides access to Intune and the Microsoft Intune admin center.
+- **Microsoft Intune** – A *Microsoft Intune Plan 1* subscription provides access to Intune and the Microsoft Intune admin center.
 
   For Intune licensing options, see [Microsoft Intune licensing](../fundamentals/licenses.md).
 

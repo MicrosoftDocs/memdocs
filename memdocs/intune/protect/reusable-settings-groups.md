@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/16/2023
+ms.date: 03/20/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -58,14 +58,23 @@ After creating reusable groups, you use an option in a profiles *Configuration s
 
 ## Prerequisites
 
-The following are prerequisites to use reusable settings groups:
+The following profiles support use of reusable settings groups:
 
-- **Device control**:
-  - **Platforms**: Windows 10 and later
+**Endpoint security policy**
 
-- **Microsoft Defender Firewall rules**:  
-  - **Platforms**: Windows 10, Windows 11, and Windows Server
-  - **Windows versions**: Devices must run Windows 10 20H2 or later, or Windows 11.
+- **Antivirus** > **Microsoft Defender Firewall rules**:  
+  - Platforms: Windows 10 and Windows 11
+  - Windows versions: Devices must run Windows 10 20H2 or later, or Windows 11.
+
+- **Attack surface reduction** > **Device control**:
+  - Platforms: Windows 10 and later
+
+**Endpoint Privilege Management**
+
+- Windows elevation rules policy
+
+
+
 
 ## Create a reusable group
 
@@ -166,6 +175,10 @@ The following shows a configuration with only one group selected for Excluded ID
 6. After adding reusable groups to a profile, complete the policy configuration. When saved, Intune includes the settings from the reusable groups and deploys the profile to devices based on the profile’s assignments. A maximum of 100 reusable groups can be added per profile.
 
 If you have an E5 license, you can use Microsoft Defender for Endpoint to view device control events under the *Device Control report* and *Advanced hunting*. See [Protect your organization's data with device control | Microsoft Docs](/microsoft-365/security/defender-endpoint/device-control-report) in the Defender for Endpoint documentation.
+
+## Use reusable groups for Endpoint Privilege Manager
+
+For information about support for using reusable groups for Endpoint Privilege Manager, see [Policies for Endpoint Privilege Manager](../protect/epm-policies.md)
 
 ## About policy conflicts
 

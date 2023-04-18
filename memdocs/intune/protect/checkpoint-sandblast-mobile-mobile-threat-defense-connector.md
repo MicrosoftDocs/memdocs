@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/19/2022
+ms.date: 03/15/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -37,9 +37,6 @@ You can control mobile device access to corporate resources using Conditional Ac
 
 You can configure Conditional Access policies based on Check Point Harmony Mobile risk assessment enabled through Intune device compliance policies, which you can use to allow or block noncompliant devices to access corporate resources based on detected threats.
 
-> [!NOTE]
-> This Mobile Threat Defense vendor is not supported for unenrolled devices.
-
 ## Supported platforms
 
 - **Android 8 and later**
@@ -50,7 +47,7 @@ You can configure Conditional Access policies based on Check Point Harmony Mobil
 
 - Azure Active Directory Premium
 
-- Microsoft Intune subscription
+- Microsoft Intune Plan 1 subscription
 
 - Check Point Harmony Mobile Threat Defense subscription
   - See the [CheckPoint Harmony website](https://www.checkpoint.com/harmony).

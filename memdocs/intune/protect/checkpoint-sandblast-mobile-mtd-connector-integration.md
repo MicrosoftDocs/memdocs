@@ -45,7 +45,7 @@ The instructions in this article are done in the [Check Point Harmony Mobile con
 
 Before starting the process of integrating Check Point Harmony Mobile with Intune, make sure you've the following configurations:
 
-- Microsoft Intune subscription
+- Microsoft Intune Plan 1 subscription
 
 - Azure Active Directory admin credentials to grant the following permissions:
 

@@ -17,7 +17,7 @@ ms.date: 01/30/2023
 #ROBOTS:
 #audience:
 
-ms.reviewer: 
+ms.reviewer: maholdaa
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -36,6 +36,8 @@ ms.collection:
 - Windows 11  
 
 In this task, you'll set up Microsoft Intune to automatically enroll corporate owned or user owned devices. You can scope automatic enrollment to some Azure AD users, all users, or none.  
+
+[!INCLUDE [intune-evaluate](../includes/intune-evaluate.md)]
 
 If you don't have an Intune subscription, [sign up for a free trial account](../fundamentals/free-trial-sign-up.md) to try out this tutorial.
 

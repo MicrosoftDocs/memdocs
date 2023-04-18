@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 09/27/2021
+ms.date: 03/24/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -32,7 +32,14 @@ ms.collection:
 
 # Rename a device in Intune
 
-You can use the **Rename device** action to rename a device that is enrolled in Intune. When you use this action, the device's name is changed in Intune and on the device.
+You can use the **Rename device** action to change the **Device name** in the Microsoft Intune admin center for a device enrolled in Intune. The Rename action doesn't change the **Management name** in the Intune admin center or the **Device name** in the Company Portal.
+
+For more information, on modifying the Management name and renaming in the Company Portal go to:
+
+- [View device details with Microsoft Intune](../remote-actions/device-inventory.md#hardware-device-details).
+- [Rename device from the Intune Company Portal app for Windows](../user-help/rename-your-device-cpapp.md). 
+
+If a device isn't listed here, it's not supported. This feature doesn't support renaming hybrid Azure AD Windows devices.
 
 You can rename the following types of devices:
 
@@ -45,18 +52,16 @@ You can rename the following types of devices:
 - Windows - Corporate-owned devices
 - Corporate-owned co-managed devices that are Azure AD joined
 
-If a device isn't listed here, it's not supported.
-
-This feature doesn't support renaming hybrid Azure AD Windows devices.
-
 > [!NOTE]
-> Renaming of Android Enterprise devices will only change the name in Intune and not on the device itself. The Device name in Intune is a friendly name that users are free to change.
+> Renaming of Android Enterprise devices will only change the **Device name** in the Intune admin center and not on the device itself. The Device name in Intune is a friendly name that users are free to change.
 
 ## Rename a device
 
+Use the **Rename** action to give your device a new name. If you already renamed the device but don't see its new name, the device may need to check in to Intune. Check the status of your rename in device **Overview** before attempting to rename again.
+
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Choose **Devices** > **All devices** > choose a device > **...** > **Rename device**.
-3. In the **Rename device** pane, type the new name in the text box. You can use letters, numbers, and hyphens. The name must contain at least one letter or hyphen. Android Enterprise dedicated, fully managed, and corporate-owned work profile devices are an exception, and don’t require a letter or hyphen.
+3. In the **Rename device** pane, type the new name in the text box. You can use letters, numbers, and hyphens. The name must contain at least one letter or hyphen. Android Enterprise dedicated, fully managed, and corporate-owned work profile devices are an exception, and don't require a letter or hyphen.
 4. If you want to restart the device after renaming it, choose **Yes** next to **Restart after rename**.
 5. Choose **Rename**.
 
@@ -68,7 +73,7 @@ This feature doesn't support renaming hybrid Azure AD Windows devices.
 
 ## Windows device rename rules
 
-When renaming a Windows device, the new name must follow these rules:
+When you rename a Windows device, the new name must follow these rules:
 
 - Less than or equal to 63 bytes, not including trailing NULL
 - Not null or an empty string

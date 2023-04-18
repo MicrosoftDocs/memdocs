@@ -21,7 +21,7 @@ ms.assetid: 8518d8fa-a0de-449d-89b6-8a33fad7b3eb
 #ROBOTS:
 #audience:
 
-ms.reviewer: ericor
+ms.reviewer: jubaptis
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -83,15 +83,9 @@ ESP uses the [EnrollmentStatusTracking configuration service provider (CSP)](/wi
        - **No**: The collect logs button isn't shown to users when an installation error occurs. The Windows Autopilot diagnostics page isn't shown on devices running Windows 11.  
        - **Yes**: The collect logs button is shown to users when an installation error occurs. The Windows Autopilot diagnostics page is shown on devices running Windows 11.  
  
-     - **Only show page to devices provisioned by out-of-box experience (OOBE)**: Your options:
-       - **No**: The enrollment status page is shown on all Intune-managed and co-managed devices that go through the out-of-box experience (OOBE), and to the first user that signs in to each device. So subsequent users who sign in don't see the ESP. 
-       - **Yes**: The enrollment status page is only shown on devices that go through the out-of-box experience (OOBE).   
-
-
-
-       > [!TIP]
-       > If you only want the ESP to appear on Autopilot devices during initial device setup, select the **No** option. Then create a new ESP profile, choose the **Yes** option, and target the profile to an Autopilot device group.  
-
+     - **Only show page to devices provisioned by out-of-box experience (OOBE)**: Use this setting to stop the enrollment status page from reappearing to every new user who signs into the device. Your options:  
+       - **No**: The enrollment status page is shown during the device phase and the out-of-box experience (OOBE). The page is also shown during the [user phase](#account-setup) to every user who signs into the device for the first time.  
+       - **Yes**: The enrollment status page is shown during the device phase and the OOBE. The page is also shown during the user phase, but only to the first user who signs into the device. It is not shown to subsequent users who sign into the device.   
 
      - **Block device use until all apps and profiles are installed**: Your options:
        - **No**: Users can leave the ESP before Intune is finished setting up the device. 
@@ -107,12 +101,15 @@ ESP uses the [EnrollmentStatusTracking configuration service provider (CSP)](/wi
  
       - **Block device use until these required apps are installed if they are assigned to the user/device**: Your options:  
          - **All**: All assigned apps must be installed before users can use their devices.  
-         - **Selected**: Select-apps must be installed before users can use their devices. Choose this option to select from your managed apps.  
+         - **Selected**: The selected-apps must be installed before users can use their devices. Choose **Select apps** to start a *Blocking apps* list. This option unlocks the **Blocking apps** settings. 
 
-      - **Only fail selected blocking apps in technician phase**: Your options:  
-         - **No**: Only blocking apps will fail deployment during the technician phase of pre-provisioning.   
-         - **Yes**: Intune will attempt to install required apps targeted to the device, or user (if assigned and installed in device context), during the technician phase of pre-provisioning. If installation is unsuccessful, these apps won't fail the deployment unless they are part of the blocking apps you previously selected. 
- 
+      - **Only fail selected blocking apps in technician phase**: Use this setting with Windows Autopilot pre-provisioned deployments to control how your required apps are prioritized during the [technician flow](../../autopilot/pre-provision.md). This setting is only available if you've added *blocking apps* and only applies to devices going through pre-provisioning. Your options:  
+         - **No**: An attempt will be made to install the blocking apps. Autopilot deployment will fail if a blocking app fails to install. No attempt is made to install non-blocking apps. When the end user receives the resealed device and signs in for the first time, the ESP will attempt to install the non-blocking apps. 
+         - **Yes**: An attempt will be made to install all required apps. Autopilot deployment will fail if a blocking app fails to install. If a non-blocking app that's targeted to the user fails to install, the ESP ignores it and deployment continues as normal. When the end user signs into the resealed device for the first time, the ESP will reattempt to install the apps that it couldn't in the technician phase. This is the default setting for pre-provisioned deployments.   
+         
+         > [!TIP] 
+         >  When using this feature, expect provisioning time to increase during the technican phase. The more apps assigned, the longer it could take. If you’re using a third party to provision your devices, tell them about the potential for increased provisioning time. Increase the ESP time-out duration to prevent deployment from failing due to a time out.    
+         
 6. Select **Next**.   
 7. In **Assignments**, select the groups that will receive your profile. Optionally, select **Edit filter** to restrict the assignment further.   
 
@@ -233,6 +230,7 @@ The ESP tracks the installation of apps deployed in a device context, and includ
   - Win32 applications for Windows 10, version 1903 and later, and Windows 11.
   - Winget application installed during Windows Autopilot
 
+
   > [!NOTE]
   > Don't mix LOB and Win32 apps. Both LOB (MSI) and Win32 installers use TrustedInstaller, which doesn't allow simultaneous installations. If the OMA DM agent starts an MSI installation, the Intune Management Extension plugin starts a Win32 app installation by using the same TrustedInstaller. In this situation, Win32 app installation fails and returns an **Another installation is in progress, please try again later** error message. In this situation, ESP fails. Therefore, don't mix LOB and Win32 apps in any type of Autopilot enrollment.  
 
@@ -265,6 +263,8 @@ It also tracks the following types of apps when they're assigned to all devices,
   - Per user LoB MSI apps     
   - Per machine LoB MSI apps   
   - LoB store apps, online store apps, and offline store apps 
+
+Win32 and UWP apps assigned to the device with user installation context aren't tracked during provisioning if you're using Hybrid Azure AD join.   
 
 ### Known issues
 

@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/21/2022
+ms.date: 03/20/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -21,7 +21,7 @@ ms.assetid: 7196b33e-d303-4415-ad0b-2ecdb14230fd
 #ROBOTS:
 #audience:
 
-ms.reviewer: tisilver, shthilla
+ms.reviewer: shthilla
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -49,7 +49,7 @@ A device enrollment manager can use the following methods to enroll devices in I
 - DEM-initiated via Azure AD-join  
 
 > [!TIP]
-> To compare DEM best practices and capabilities alongside other Windows enrollment methods, see [Intune enrollment method capabilities for Windows devices](./enrollment-method-capab.md).  
+> To compare DEM best practices and capabilities alongside other Windows enrollment methods, see [Intune enrollment method capabilities for Windows devices](/mem/intune/fundamentals/deployment-guide-enrollment-windows).  
 
 
 ## Account permissions 
@@ -94,7 +94,7 @@ DEM isn't compatible with Apple Automated Device Enrollment (ADE).
 DEM-enrolled devices can install VPP apps if they have Apple VPP device licenses. You can't use apps purchased through Apple VPP with Apple VPP user licenses, because of per-user Apple ID requirements for app management.  
 
 ### Azure AD  
-Applying an Azure AD device restriction to a DEM account will prevent you from reaching the 1,000 device limit that the DEM account can enroll.  
+Applying an Azure AD maximum device limit of less than 1,000 to a DEM account will prevent you from reaching the 1,000 device limit that the DEM account can enroll.  
 
 ### Certificates  
 You must use device-level certificates to manage Wi-Fi and email connections.  

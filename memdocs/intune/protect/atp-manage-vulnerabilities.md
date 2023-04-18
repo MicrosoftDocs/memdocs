@@ -7,7 +7,7 @@ keywords:
 author: brenduns 
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/30/2021
+ms.date: 04/14/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -64,7 +64,7 @@ Common actions for remediation include:
 
 Following is an example workflow for an application. This same general workflow applies for configuration issues:
 
-- A Microsoft Defender for Endpoint scan identifies a vulnerability for an app named Contoso Media Player v4, and an admin creates a security task to update that app. The Contoso Media player is an unmanaged app that was deployed with Intune.
+- A Microsoft Defender for Endpoint scan identifies a vulnerability for an app named Contoso Media Player v4, and an admin creates a security task to update that app. The Contoso Media player is an unmanaged app that was not deployed with Intune.
 
   This security task appears in the Microsoft Intune admin center with a status of Pending:
 
@@ -84,7 +84,7 @@ Following is an example workflow for an application. This same general workflow 
 
 **Subscriptions**:
 
-- Microsoft Intune  
+- Microsoft Intune Plan 1
 - Microsoft Defender for Endpoint ([Sign up for a free trial](https://www.microsoft.com/WindowsForBusiness/windows-atp?ocid=docs-wdatp-main-abovefoldlink).)
 
 **Intune configurations for Defender for Endpoint**:

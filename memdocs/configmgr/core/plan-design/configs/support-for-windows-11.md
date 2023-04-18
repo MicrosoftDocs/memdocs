@@ -46,9 +46,9 @@ A Configuration Manager version drops from the matrix after [support for that ve
 
 The following table lists the versions of Windows 11 that you can use as a client with different versions of Configuration Manager.
 
-| Windows 11 version                         | ConfigMgr 2107 | ConfigMgr 2111 | ConfigMgr 2203 | ConfigMgr 2207 | ConfigMgr 2211 | 
+| Windows 11 version                         | ConfigMgr 2111 | ConfigMgr 2203 | ConfigMgr 2207 | ConfigMgr 2211 | ConfigMgr 2303 |
 |--------------------------------------------|----------------|----------------|----------------|----------------|----------------|
-| **22H2**<br>(10.0.22621) <!--2025-10-14--> | ![Not supported](media/red-x.png)  | ![Not supported](media/red-x.png)  | ![Not supported](media/red-x.png)   | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) |
+| **22H2**<br>(10.0.22621) <!--2025-10-14--> | ![Not supported](media/red-x.png)  | ![Not supported](media/red-x.png)  | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) |
 | **21H2**<br>(10.0.22000) <!--2024-10-08--> | ![Supported](media/green-check.png)| ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) |
 <!--
 All currently supported versions of Configuration Manager current branch support the following Windows 11 LTSC editions:

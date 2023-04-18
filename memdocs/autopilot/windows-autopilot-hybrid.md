@@ -9,11 +9,12 @@ ms.reviewer: jubaptis
 ms.date: 11/17/2022
 ms.topic: how-to
 ms.prod: windows-client
+ms.technology: itpro-deploy
 ms.localizationpriority: medium
 ms.collection: 
   - M365-identity-device-management
   - highpri
-ms.technology: itpro-deploy
+  - tier1
 ---
  
 # Deploy hybrid Azure AD-joined devices by using Intune and Windows Autopilot
@@ -27,7 +28,8 @@ You can use Intune and Windows Autopilot to set up hybrid Azure Active Directory
 
 ## Prerequisites
 
-Successfully configure your [hybrid Azure AD-joined devices](/azure/active-directory/devices/hybrid-azuread-join-plan). Be sure to [verify your device registration](/azure/active-directory/devices/howto-hybrid-join-verify) by using the Get-MsolDevice cmdlet.
+- Successfully configured your [hybrid Azure AD-joined devices](/azure/active-directory/devices/hybrid-azuread-join-plan). Be sure to [verify your device registration](/azure/active-directory/devices/howto-hybrid-join-verify) by using the Get-MsolDevice cmdlet.
+- If you have configured [Domain and OU-based filtering](/azure/active-directory/hybrid/how-to-connect-install-custom#domain-and-ou-filtering) as part of Azure Active Directory Connect, ensure that the default organizational unit (OU) or container intended for the Autopilot devices is included in the sync scope.
 
 ### Device enrollment prerequisites
 

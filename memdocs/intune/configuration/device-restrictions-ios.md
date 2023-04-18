@@ -56,7 +56,7 @@ The available levels and settings in each level vary by device type:
 When you're ready to proceed, create an [iOS/iPadOS device restrictions configuration profile](device-restrictions-configure.md).
 
 > [!NOTE]
-> These settings apply to different enrollment types, with some settings applying to all enrollment options. For more information on the different enrollment types, see [iOS/iPadOS enrollment](../enrollment/ios-enroll.md).
+> These settings apply to different enrollment types, with some settings applying to all enrollment options. For more information on the different enrollment types, see [iOS/iPadOS enrollment](/mem/intune/fundamentals/deployment-guide-enrollment-ios-ipados).
 
 ## App Store, Doc Viewing, Gaming
 
@@ -603,7 +603,7 @@ You can also **Import** a CSV file with the list of app names and their bundle I
   > [!NOTE]
   > The Intune UI for this setting doesn't separate the iOS and iPadOS supported values. The UI might be updated in a future release.
 
-- **Password expiration (days)**: Enter the number of days before the device password must be changed, from 1-65535.
+- **Password expiration (days)**: Enter the number of days before the device password must be changed, from 1-730.
 - **Prevent reuse of previous passwords**: Restrict users from creating previous passwords. Enter the number of previously used passwords that can't be used, from 1-24. For example, enter 5 so users can't set a new password to their current password or any of their previous four passwords. When the value is blank, Intune doesn't change or update this setting.
 - **Block Touch ID and Face ID unlock**: **Yes** prevents using a fingerprint or face to unlock devices. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to unlock devices using biometrics.
 
