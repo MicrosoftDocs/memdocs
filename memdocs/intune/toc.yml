@@ -192,6 +192,11 @@ items:
         - name: App management overview
           href: ./apps/app-management.md  
 
+        - name: App solutions
+          items:
+          - name: Purchase and add apps for Microsoft Intune
+            href: /microsoft-365/solutions/apps-guide-overview?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+
         - name: Concepts
           items:
           - name: App lifecycle
