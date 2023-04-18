@@ -144,6 +144,10 @@ You can turn on hardware acceleration when using the web client to access your C
 
 To turn hardware acceleration on or off, in the client, select the gear icon > **Use hardware acceleration**.
 
+### High DPI
+
+You can use the **High DPI** toggle to render the web client using the native resolution of hte end user device.
+
 ### Alternative keyboard layout
 
 Use this option if you're using a nonstandard keyboard that includes special characters (like Chinese (Traditional) or Spanish (Mexico)).
