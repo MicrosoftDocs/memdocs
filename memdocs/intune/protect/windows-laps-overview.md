@@ -105,7 +105,7 @@ Devices can have any [Windows edition that Intune supports](../fundamentals/supp
 
 To manage LAPS, an account must be have sufficient role-based access control (RBAC) permissions to complete a desired task. The following are the available tasks with their required permissions:
 
-- **Create and access LAPS policy** – To work with and view LAPS policies, your account must rights equal to those found in Intune's built-in **Endpoint Security Administrator** role. This role includes sufficient permissions to work with all templates that are available through Endpoint security policies, and to view and manage devices related to your LAPS policies.
+- **Create and access LAPS policy** – To work with and view LAPS policies, your account must be assigned sufficient permissions from the Intune RBAC category for **Security baselines**. By default, these are included in the built-in role **Endpoint Security Manager**.  To use custom roles, ensure the custom role includes the rights from the *Security baselines* category.
 
 - **Rotate local Administrator password** – To use the Intune admin center to rotate a devices local admin account password, your account must be assigned the following Intune permissions:
 
