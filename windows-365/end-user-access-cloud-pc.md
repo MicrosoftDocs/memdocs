@@ -144,11 +144,17 @@ You can turn on hardware acceleration when using the web client to access your C
 
 To turn hardware acceleration on or off, in the client, select the gear icon > **Use hardware acceleration**.
 
+### High DPI
+
+You can use the **High DPI** toggle to render the web client using the native resolution of hte end user device.
+
 ### Alternative keyboard layout
 
 Use this option if you're using a nonstandard keyboard that includes special characters (like Chinese (Traditional) or Spanish (Mexico)).
 
 1. In the Windows 365 web client **In Session Settings** window, choose **Show advanced settings** > **Alternative keyboard layout** > **On**.
+
+   ![Screencap of In Sessions Settings window Alternative Keyboard Layout.](media/end-user-access-cloud-pc/alternative-keyboard-layout.png)
 2. In the drop-down list, select the language that matches the keyboard.
 
 By default, **Alternative keyboard layout** is turned off. If using a standard keyboard that doesn't require special layouts, the user can deselect this option. Deselecting the option in the middle of a session requires a reconnect.
