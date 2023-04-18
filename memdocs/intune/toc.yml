@@ -200,7 +200,7 @@ items:
           - name: Purchase and add apps for Microsoft Intune
             items: 
             - name: Overview
-              href: /microsoft-365/solutions/solutions/apps-guide-overview?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+              href: /microsoft-365/solutions/apps-guide-overview?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
             - name: Understand app types
               items:
               - name: App types overview        
