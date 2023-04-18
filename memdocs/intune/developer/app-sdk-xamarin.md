@@ -34,7 +34,7 @@ ms.collection:
 # Microsoft Intune App SDK Xamarin Bindings
 
 > [!NOTE]
-> The current Xamarin bindings for Android platform only support apps targeting Android 9.0 and lower and Xamarin Forms 4.4 and lower. Microsoft is working on improving support for newer versions on Android by providing Intune support on .NET MAUI. The beta release for .NET MAUI support is now available. For more information, see [Intune App SDK for .NET MAUI - Android](https://www.nuget.org/packages/Microsoft.Intune.Maui.Essentials.android/9.5.2-beta). For more information about migrating your apps from Xamarin Forms to .NET MAUI, see [Migrate your app from Xamarin.Forms](/dotnet/maui/get-started/migrate). 
+> The current Xamarin bindings for Android platform only support apps targeting Android 9.0 and lower and Xamarin Forms 4.4 and lower. Microsoft is working on improving support for newer versions on Android by providing Intune support on .NET MAUI. The beta release for .NET MAUI support is now available. For more information, see [Intune App SDK for .NET MAUI - Android](https://www.nuget.org/packages/Microsoft.Intune.Maui.Essentials.android/9.5.2-beta2). For more information about migrating your apps from Xamarin Forms to .NET MAUI, see [Migrate your app from Xamarin.Forms](/dotnet/maui/get-started/migrate). 
 
 > [!NOTE]
 > You may wish to first read the [Get Started with Intune App SDK](app-sdk-get-started.md) article, which explains how to prepare for integration on each supported platform.
