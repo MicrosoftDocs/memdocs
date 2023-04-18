@@ -18,7 +18,7 @@ ms.collection: tier3
 
 <!-- Intune 11300628 -->
 
-When you use [Windows Autopilot](../../autopilot/windows-autopilot.md) to provision a device, it first enrolls to Azure Active Directory (Azure AD) and Microsoft Intune. If the intended end-state of the device is co-management, previously this experience was difficult because of installation of Configuration Manager client as Win32 app which introduces component timing and policy delays.
+When you use [Windows Autopilot](../../autopilot/windows-autopilot.md) to provision a device, it first enrolls to Azure Active Directory (Azure AD) and Microsoft Intune. If the intended end-state of the device is co-management, previously this experience was difficult because of installation of Configuration Manager client as Win32 app introduces component timing and policy delays.
 
 Now you can configure co-management settings in Intune, which happens during the Autopilot process. This behavior directs the workload authority in an orchestrated manner between Configuration Manager and Intune.
 
@@ -126,7 +126,7 @@ Use these recommendations for a more successful deployment:
 
 Autopilot into co-management currently doesn't support the following functionality:
 
-- Hybrid Azure AD-joined devices - If the devices are targeted with co-management settings policy, in Hybrid Azure AD-Join scenario, the autopilot provisioning will time out during ESP phase.
+- Hybrid Azure AD-joined devices - If the devices are targeted with co-management settings policy, in Hybrid Azure AD-Join scenario, the autopilot provisioning times out during ESP phase.
 
 > [!NOTE]
   > For Windows 11 devices in Hybrid Azure AD-joined scenario, the management authority will be set to Intune, during the Autopilot process. Installing Configuration Manager client as Win32 app does not change management authority to Configuration Manager and thus Intune will continue to manage all the co-management workloads. To mitigate this, along with Configuration Manager client installation, registry value **ConfigInfo** in registry path **HKLM\SOFTWARE\Microsoft\DeviceManageabilityCSP\Provider\MS DM Server** must be set to 2 which will set the management authority as Configuration Manager.
