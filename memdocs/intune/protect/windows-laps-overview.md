@@ -101,6 +101,10 @@ Devices can have any [Windows edition that Intune supports](../fundamentals/supp
 - Windows 11, version 22H2 (22621.1555 or later) with [KB5025239](https://support.microsoft.com/en-us/topic/april-11-2023-kb5025239-os-build-22621-1555-5eaaaf42-bc4d-4881-8d38-97e0082a6982)
 - Windows 11, version 21H2 (22000.1817 or later) with [KB5025224](https://support.microsoft.com/en-us/topic/april-11-2023-kb5025224-os-build-22000-1817-ebc75372-608d-4a77-a6e0-cb1e15f117fc)
 
+**GCC High support**:
+
+Intune policy for Windows LAPS is supported for GCC High environments.
+
 ## Role based access controls for LAPS
 
 To manage LAPS, an account must be have sufficient role-based access control (RBAC) permissions to complete a desired task. The following are the available tasks with their required permissions:
