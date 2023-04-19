@@ -146,7 +146,7 @@ To turn hardware acceleration on or off, in the client, select the gear icon > *
 
 ### High DPI
 
-You can use the **High DPI** toggle to render the web client using the native resolution of hte end user device.
+You can use the **High DPI** toggle to render the web client using the native resolution of the end user device.
 
 ### Alternative keyboard layout
 
@@ -157,11 +157,11 @@ Use this option if you're using a nonstandard keyboard that includes special cha
    ![Screencap of In Sessions Settings window Alternative Keyboard Layout.](media/end-user-access-cloud-pc/alternative-keyboard-layout.png)
 2. In the drop-down list, select the language that matches the keyboard.
 
-By default, **Alternative keyboard layout** is turned off. If using a standard keyboard that doesn't require special layouts, the user can deselect this option. Deselecting the option in the middle of a session requires a reconnect.
+By default, **Alternative keyboard layout** is turned off. If using a standard keyboard that doesn't require special layouts, the user can deselect this option. Deselecting the option in the middle of a session requires reconnecting.
 
 ### Location (preview)
 
-Location redirection lets Cloud PCs access your approximate location safely without privacy concerns. By turning on the location service, your Cloud PC uses the location of your physical device for most apps (the Weather widget isn’t currently supported).
+Location redirection lets Cloud PCs access your approximate location safely without privacy concerns. By turning on the location service, you let your Cloud PC use the location of your physical device for most apps (the Weather widget isn’t currently supported).
 
 For more information about location services, see [Windows location service and privacy](https://support.microsoft.com/en-us/windows/windows-location-service-and-privacy-3a8eee0a-5b0b-dc07-eede-2a5ca1c49088).
 
