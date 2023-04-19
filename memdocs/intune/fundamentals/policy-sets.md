@@ -89,8 +89,7 @@ When you create a policy set, you create a single unit of assignment, and manage
 
 Policy sets, new to 1910, have the following known issues.
 
-
-    - When creating a policy set, if a scoped admin tries to create a policy set without any scope tags selected, upon reaching the **Review + Create** page, validation will fail and an error will be displayed on the status bar. The admin must switch to a different page in the process, then return to the **Review + Create** page. This will enable the **Create** option.  
+- When creating a policy set, if a scoped admin tries to create a policy set without any scope tags selected, upon reaching the **Review + Create** page, validation will fail and an error will be displayed on the status bar. The admin must switch to a different page in the process, then return to the **Review + Create** page. This will enable the **Create** option.  
 
 - The following app types are currently supported by policy sets:
   - iOS/iPadOS store app
@@ -105,7 +104,7 @@ Policy sets, new to 1910, have the following known issues.
   - Built-in Android app
     
 > [!NOTE]
-> Policy sets supports a  subset of Intune App, Policy and Platform types. If an app or policy type is not available in the Policy Set picker experience it is not officially supported.
+> Policy sets supports a  subset of Intune App, Policy and Platform types. If an app or policy type is not available in the Policy Set picker experience, it is not officially supported.
 
 - Setting a policy set assignment of **All Users** to **Autopilot Profile** is unsupported.
 
