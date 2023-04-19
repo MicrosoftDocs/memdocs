@@ -30,7 +30,7 @@ ms.collection:
 zone_pivot_groups: apple-enterprise-sso
 ---
 
-# Deploy the Microsoft Enterprise SSO plug-in for Apple Devices (preview)
+# Deploy the Microsoft Enterprise SSO plug-in for Apple Devices
 
 In Microsoft Intune, there's a Microsoft Enterprise SSO plug-in. This plug-in provides single sign-on (SSO) to iOS/iPadOS and macOS apps and websites that use Microsoft Azure Active Directory (Azure AD) for authentication.
 
@@ -53,6 +53,6 @@ The Enterprise SSO plug-in can be used in Microsoft Intune, Jamf Pro, or other M
 
 ## Next steps
 
-- For information about the Microsoft Enterprise SSO plug-in and Azure AD, go to [Microsoft Enterprise SSO plug-in for Apple devices (preview)](/azure/active-directory/develop/apple-sso-plugin).
+- For information about the Microsoft Enterprise SSO plug-in and Azure AD, go to [Microsoft Enterprise SSO plug-in for Apple devices](/azure/active-directory/develop/apple-sso-plugin).
 
 - For information from Apple on the single sign-on extension payload, go to [single sign-on extensions payload settings](https://support.apple.com/guide/deployment/single-sign-on-payload-settings-dep7a81f07b/web) (opens Apple's web site).
