@@ -126,10 +126,10 @@ Use these recommendations for a more successful deployment:
 
 Autopilot into co-management currently doesn't support the following functionality:
 
-- Hybrid Azure AD-joined devices - If the devices are targeted with co-management settings policy, in Hybrid Azure AD-Join scenario, the autopilot provisioning times out during ESP phase.
+- Hybrid Azure AD-joined devices - If the device is targeted with co-management settings policy, in Hybrid Azure AD-Join scenario, the autopilot provisioning times out during ESP phase.
 
 > [!NOTE]
-  > For Windows 11 devices in Hybrid Azure AD-joined scenario, the management authority will be set to Intune, during the Autopilot process. Installing Configuration Manager client as Win32 app does not change management authority to Configuration Manager and thus Intune will continue to manage all the co-management workloads. To mitigate this, along with Configuration Manager client installation, registry value **ConfigInfo** in registry path **HKLM\SOFTWARE\Microsoft\DeviceManageabilityCSP\Provider\MS DM Server** must be set to 2 which will set the management authority as Configuration Manager.
+  > For Windows 11 devices in Hybrid Azure AD-joined scenario, the management authority will be set to Intune, during the Autopilot process. Installing Configuration Manager client as Win32 app does not change management authority to Configuration Manager and thus Intune will continue to manage all the co-management workloads. To mitigate this, along with Configuration Manager client installation, registry value **ConfigInfo** in registry path **HKLM\SOFTWARE\Microsoft\DeviceManageabilityCSP\Provider\MS DM Server** must be set to **2** which will set the management authority as Configuration Manager.
 
 - Autopilot pre-provisioning, also known as _white glove_ provisioning
 

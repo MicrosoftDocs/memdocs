@@ -83,7 +83,7 @@ Devices must have access to the following endpoints:
 > [!Note]
 >  You need to configure endpoint system-wide proxy in the Internet-disconnected environment. It is not enough to use only the EDR static proxy configuration.
 >
->  If your organization users Secure Socket Layer (SSL) inspection, the endpoints should be excluded from inspection.
+>  If your organization uses Secure Socket Layer (SSL) inspection, the endpoints should be excluded from inspection.
 
 ### Supported platforms
 
