@@ -32,7 +32,7 @@ Before beginning, refer to the [Plan your hybrid Azure Active Directory join imp
 
 ## Workflow
 
-Set up Windows automatic Intune enrollment > Install the Intune Connector > Increase the computer account limit in the Organizational Unit (OU) > Register devices as Autopilot devices > Create a device group > Configure and assign Autopilot Enrollment Status Page (ESP) > Create and assign hybrid Azure AD join Autopilot profile > Configure and assign domain join profile > Technician flow > User flow
+Set up Windows automatic Intune enrollment > Install the Intune Connector > Increase the computer account limit in the Organizational Unit (OU) > Register devices as Autopilot devices > Create a device group > Configure and assign Autopilot Enrollment Status Page (ESP) > Create and assign hybrid Azure AD join Autopilot profile > Configure and assign domain join profile > Assign Autopilot device to a user (optional) > Technician flow > User flow
 
 Windows Autopilot for pre-provisioned deployment hybrid Azure AD join steps:
 > [!div class="checklist"]
@@ -44,8 +44,9 @@ Windows Autopilot for pre-provisioned deployment hybrid Azure AD join steps:
 > - Step 6: [Configure and assign Autopilot Enrollment Status Page (ESP)](hybrid-azure-ad-join-esp.md)
 > - Step 7: [Create and assign hybrid Azure AD join Autopilot profile](hybrid-azure-ad-join-autopilot-profile.md)
 > - Step 8: [Configure and assign domain join profile](hybrid-azure-ad-join-domain-join-profile.md)
-> - Step 9: [Technician flow](hybrid-azure-ad-join-technician-flow.md)
-> - Step 10: [User flow](hybrid-azure-ad-join-user-flow.md)
+> - Step 9: [Assign Autopilot device to a user (optional)](hybrid-azure-ad-join-assign-device-to-user.md)
+> - Step 10: [Technician flow](hybrid-azure-ad-join-technician-flow.md)
+> - Step 11: [User flow](hybrid-azure-ad-join-user-flow.md)
 
 > [!NOTE]
 >

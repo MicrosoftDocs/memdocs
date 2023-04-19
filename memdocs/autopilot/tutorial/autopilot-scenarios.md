@@ -119,7 +119,7 @@ The following guide makes general suggestions on which Autopilot scenario to use
 
 ### Reset
 
-- Windows Autopilot Rest isn't a Windows Autopilot deployment itself, but a method to reset an existing Autopilot device to a business ready state.
+- Windows Autopilot Reset isn't a Windows Autopilot deployment itself, but a method to reset an existing Autopilot device to a business ready state.
 - The device needs to be registered as an Autopilot device.
 - Windows Autopilot Reset only supports existing Azure AD join devices. It doesn't support existing hybrid Azure AD join devices.
 - When the current Windows installation is in a stable non-corrupted state. If the Windows installation is in a corrupted state, use Windows Autopilot for existing devices instead.
