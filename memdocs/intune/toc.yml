@@ -191,6 +191,58 @@ items:
       items:
         - name: App management overview
           href: ./apps/app-management.md  
+        - name: MAM for unenrolled devices       
+          href: ./fundamentals/deployment-guide-enrollment-mamwe.md
+          displayName: mobile application management, mam-we, mamwe
+
+        - name: App solutions
+          items:
+          - name: Purchase and add apps for Microsoft Intune
+            items: 
+            - name: Overview
+              href: /microsoft-365/solutions/apps-guide-overview?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+            - name: Understand app types
+              items:
+              - name: App types overview        
+                href: /microsoft-365/solutions/apps-type-overview?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+              - name: Understand store apps        
+                href: /microsoft-365/solutions/apps-type-store?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+              - name: Understand line-of-business apps        
+                href: /microsoft-365/solutions/apps-type-lob?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+              - name: Understand built-in apps        
+                href: /microsoft-365/solutions/apps-type-built-in?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json          
+              - name: Understand web apps
+                href: /microsoft-365/solutions/apps-type-web?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+              - name: Understand Microsoft apps
+                href: /microsoft-365/solutions/apps-type-microsoft?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json          
+            - name: Understand app purchases
+              items:
+              - name: Purchase apps overview
+                href: /microsoft-365/solutions/apps-purchase-overview?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+              - name: Purchase store apps
+                href: /microsoft-365/solutions/apps-purchase-store?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+              - name: Purchase apps in-volume
+                href: /microsoft-365/solutions/apps-purchase-volume?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+            - name: Understand app licenses
+              items:
+              - name: App licenses overview
+                href: /microsoft-365/solutions/apps-license-overview?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+              - name: Manage app licenses
+                href: /microsoft-365/solutions/apps-license-manage?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+            - name: Add apps to Intune
+              items:
+              - name: Add apps overview
+                href: /microsoft-365/solutions/apps-add-overview?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+              - name: Step 1. Assess app requirements
+                href: /microsoft-365/solutions/apps-add-step-1?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+              - name: Step 2. Create categories for apps
+                href: /microsoft-365/solutions/apps-add-step-2?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+              - name: Step 3. Purchase apps
+                href: /microsoft-365/solutions/apps-add-step-3?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+              - name: Step 4. Add apps to Intune
+                href: /microsoft-365/solutions/apps-add-step-4?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+              - name: Step 5. Manage apps and licenses
+                href: /microsoft-365/solutions/apps-add-step-5?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json    
 
         - name: Concepts
           items:
@@ -456,6 +508,8 @@ items:
             items:
               - name: Manage security policies
                 href: ./protect/endpoint-security-policy.md
+              - name: Use reusable settings groups
+                href: ./protect/reusable-settings-groups.md
               - name: Antivirus
                 href: ./protect/endpoint-security-antivirus-policy.md
               - name: Disk encryption
@@ -492,6 +546,14 @@ items:
               href: ./protect/encrypt-devices-filevault.md
             - name: Monitor disk encryption
               href: ./protect/encryption-monitor.md
+          - name: Windows LAPS
+            items:
+            - name: Intune support for Windows LAPS
+              href: ./protect/windows-laps-overview.md
+            - name: Manage LAPS policy
+              href: ./protect/windows-laps-policy.md
+            - name: Reports for LAPS policy
+              href: ./protect/windows-laps-reports.md
         - name: Endpoint Privilege Management
           items:
           - name: Endpoint Privilege Management overview
@@ -616,6 +678,11 @@ items:
               items:
               - name: Pradeo and Intune integration
                 href: ./protect/pradeo-mtd-connector-integration.md
+            - name: Set up SentinelOne Mobile
+              href: ./protect/sentinelone-mobile-threat-defense-connector.md
+              items:
+              - name: SentinelOne Mobile and Intune integration
+                href: ./protect/sentinelone-mtd-connector-integration.md
             - name: Set up Sophos Mobile
               href: ./protect/sophos-mtd-connector.md
               items:
@@ -626,6 +693,11 @@ items:
               items:
               - name: Symantec and Intune integration
                 href: ./protect/skycure-mtd-connector-integration.md
+            - name: Set up Trend Micro Mobile Security as a Service
+              href: ./protect/trend-micro-mobile-threat-defense-connector.md
+              items:
+              - name: Trend Micro Mobile Security as a Service and Intune integration
+                href: ./protect/trend-micro-mtd-connector-integration.md 
             - name: Set up Wandera
               href: ./protect/wandera-mtd-connector.md
               items:
@@ -697,7 +769,9 @@ items:
             - name: Windows Update compliance reports
               href: ./protect/windows-update-compliance-reports.md         
           - name: iOS update policies
-            href: ./protect/software-updates-ios.md 
+            href: ./protect/software-updates-ios.md
+          - name: macOS update policies
+            href: ./protect/software-updates-macos.md
         - name: Troubleshoot
           items:
           - name: Troubleshoot policies and profiles
@@ -746,6 +820,8 @@ items:
             href: ./protect/compliance-policy-create-android-for-work.md
           - name: Compliance settings - iOS
             href: ./protect/compliance-policy-create-ios.md
+          - name: Compliance settings - Linux
+            href: ./protect/compliance-policy-create-Linux.md
           - name: Compliance settings - macOS
             href: ./protect/compliance-policy-create-mac-os.md
           - name: Compliance settings - Windows 10
@@ -1372,6 +1448,8 @@ items:
             href: ./remote-actions/organizational-messages-prerequisites.md
           - name: Create organizational messages  
             href: ./remote-actions/organizational-messages-create.md  
+          - name: Cancel or delete organizational message 
+            href: ./remote-actions/organizational-messages-cancel.md
           - name: Monitor organizational messages  
             href: ./remote-actions/organizational-messages-reporting.md  
       - name: Bulk device actions
@@ -1527,6 +1605,8 @@ items:
           href: ./developer/app-sdk-android-phase7.md
       - name: Intune App SDK Xamarin Bindings
         href: ./developer/app-sdk-xamarin.md
+    - name: Microsoft Tunnel for MAM iOS SDK 
+      href: ./developer/tunnel-mam-ios-sdk.md
     - name: Use the Intune Data Warehouse
       href: ./developer/reports-nav-create-intune-reports.md
       items:

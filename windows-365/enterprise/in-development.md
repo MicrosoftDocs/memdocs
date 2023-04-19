@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 03/29/2023
+ms.date: 04/13/2023
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice: 
@@ -75,11 +75,20 @@ It may take several hours for the moves to complete.
 
 New Cloud PCs created by the provisioning policy will be created in the new region or ANC.
 
+### Group-based license support for Cloud PC resizing<!--41357690-->
+
+In a future update, both single and bulk resizing will support Cloud PCs that were provisioned with group-based licenses.
+
+
 <!-- ***********************************************-->
 <!--## Device provisioning-->
 
 <!--***********************************************-->
-<!--## End user experience-->
+## End user experience
+
+### Windows 365 web client keyboard shortcut redirection<!--43951825-->
+
+Windows 365 web client users will be able to use keyboard shortcuts (like Alt + Tab) on their Cloud PC. These shortcuts would normally be intercepted by the host operating system and not sent to the Cloud PC.
 
 <!-- ***********************************************-->
 ## Monitor and troubleshoot
@@ -89,8 +98,11 @@ New Cloud PCs created by the provisioning policy will be created in the new regi
 End users will be able to manually run connectivity checks on their Cloud PCs from [windows365.microsoft.com](https://windows365.microsoft.com).
 
 <!-- ***********************************************-->
-<!--## Miscellaneous-->
+## Miscellaneous
 
+### Windows 365 Government setup tool<!--43461105-->
+
+A new Windows 365 Government setup tool will replace the current PowerShell scripts that are used to setup tenant mapping and permissions.
 
 <!-- ***********************************************-->
 <!-- ## Provisioning -->

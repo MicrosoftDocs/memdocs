@@ -35,7 +35,7 @@ ms.collection:
 Intune integrates with network access control (NAC) partners to help organizations secure corporate data when devices try to access on-premises resources.
 
 >[!NOTE]
-> A new NAC service was released in July 2021 and many of our NAC partners are transitioning to this new service. Currently, the following NAC partner product supports the new NAC service:
+> A new NAC service (CR service) was released in July 2021 and many of our NAC partners are transitioning to this new service. While we have extended the timeline for supporting the legacy NAC service through **December 31, 2023**, we recommend you to migrate to the new CR serivce to avoid service disruption.Currently, the following NAC partner product supports the new NAC service:
 >
 > - Cisco ISE 3.1 and later
 > - Citrix Gateway 13.0-84.11 and later

@@ -114,7 +114,7 @@ Admins will have the option to no longer backup managed App Store apps and line-
 > [!NOTE]
 > While we don't expect managed apps on devices to backup data to iCloud, note that data saved locally for managed apps may not be available after a backup and restore.
 
-For existing devices, when **Prevent iCloud app backup** is set to **Yes** for an app/apps, the new behavior will be automatically updated for all required App Store/LOB apps (with or without VPP). Required apps previously installed on devices will be automatically re-configured for all devices once the setting value is saved to **Yes**. Available apps will require the user to re-download the available app from the Company Portal app or the Company Portal website. Additionally, depending on the app’s configurations and licensing, a sync between Intune and the device may be needed. 
+For existing devices, when **Prevent iCloud app backup** is set to **Yes** for an app/apps, the new behavior will be automatically updated for all required App Store/LOB apps (with or without VPP). Required apps previously installed on devices will be automatically re-configured for all devices once the setting value is saved to **Yes**. Available apps will require the user to re-download the available app from the Company Portal app or the [Company Portal website](https://portal.manage.microsoft.com). Additionally, depending on the app’s configurations and licensing, a sync between Intune and the device may be needed. 
 
 ## How conflicts between app intents are resolved
 

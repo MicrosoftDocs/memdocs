@@ -111,7 +111,7 @@ Create an App configuration policy to configure Microsoft Defender for Endpoint 
 
    When ready, select **Next** to continue.
 
-   :::image type="content" source="./media/microsoft-tunnel-mam-android/settings-configuration-defender.png " alt-text="Screen shot of the app configuration policies settings configuration.":::
+   :::image type="content" source="./media/microsoft-tunnel-mam-android/settings-configuration-defender.png" alt-text="Screen shot of the app configuration policies settings configuration.":::
 
 4. On the *Assignments* tab, select **Add Groups**, and then select the same Azure Active Directory groups that you deployed the Microsoft Edge App configuration profile to, and then select **Next**.
 
@@ -292,7 +292,7 @@ Use of two or more app configuration policies for Microsoft Defender that specif
 
 ### GCC High and FIPS support
 
-Microsoft Tunnel for MAM is supported for GGC High environments, but doesn't support Federal Information Processing Standard (FIPS).
+Microsoft Tunnel for MAM is supported for GCC High environments, but doesn't support Federal Information Processing Standard (FIPS).
 
 ## Next steps
 

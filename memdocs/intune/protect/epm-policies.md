@@ -81,7 +81,7 @@ Use *Windows elevation settings policy* when you want to:
   >[!NOTE]
   > Multiple validation options can be selected to satisfy the needs of the organization. If no options are selected, then the user is only required to click *continue* to complete the elevation.
   
-- **Send data to Microsoft** - This setting controls whether your device shares diagnostic and usage data with Microsoft. When enabled to share data, the type of data is configured by the *Reporting scope* setting.
+- **Send elevation data for reporting** - This setting controls whether your device shares diagnostic and usage data with Microsoft. When enabled to share data, the type of data is configured by the *Reporting scope* setting.
 
   Diagnostic data is used by Microsoft to measure the health of the EPM client components. Usage data is used to show you elevations that happen within your tenant. For more information about the types of data and how it's stored, see [Data collection and privacy for Endpoint Privilege Management](../protect/epm-data-collection.md).
 
@@ -89,7 +89,7 @@ Use *Windows elevation settings policy* when you want to:
   - **Yes** - This option sends data to Microsoft based on the *Reporting Scope* setting.
   - **No** - This option does not send data to Microsoft.
 
-- **Reporting Scope** - This setting controls the amount of data being sent to Microsoft when *Send data to Microsoft* is set to *Yes*. By default, *Diagnostic data and all endpoint elevations* is selected.
+- **Reporting Scope** - This setting controls the amount of data being sent to Microsoft when *Send elevation data for reporting* is set to *Yes*. By default, *Diagnostic data and all endpoint elevations* is selected.
 
   Options include:
   - **Diagnostic data and managed elevations only** - This option sends diagnostic data to Microsoft about the health of the client components **AND** data about elevations being facilitated by Endpoint Privilege Management.
@@ -156,7 +156,7 @@ A device must have an elevation settings policy that enables support for EPM bef
        - **Business justification**: Require the user to enter a justification for running the file. There's no required format for this justification. User input is saved and can be reviewed through logs if the *Reporting scope* includes collection of endpoint elevations.
        - **Windows authentication**: This option requires the user to authenticate using their organization credentials.
 
-   - **Send data to Microsoft**: By default, this behavior is set to **Yes**. When set to yes, you can then configure a *Reporting scope*. When set to **No**, a device doesn’t report diagnostic data or information about file elevations to Intune.
+   - **Send elevation data for reporting**: By default, this behavior is set to **Yes**. When set to yes, you can then configure a *Reporting scope*. When set to **No**, a device doesn’t report diagnostic data or information about file elevations to Intune.
    - **Reporting scope**: Choose what type of information a device reports to Intune:
      - **Diagnostic data and all endpoint elevations** (Default): The device reports diagnostic data and details about all file elevations that are facilitated by EPM.
 

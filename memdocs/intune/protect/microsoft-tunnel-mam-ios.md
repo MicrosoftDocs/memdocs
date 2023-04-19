@@ -43,7 +43,7 @@ Applies to:
 
 Tunnel for MAM iOS is a powerful tool that allows organizations to securely manage and protect their mobile applications. The VPN connection for this solution is provided through the [Microsoft Tunnel for MAM iOS SDK](../developer/tunnel-mam-ios-sdk.md).
 
-In addition to using MAM Tunnel with unenrolled devices, you can also use it with enrolled devices. However, an enrolled device must use only the MDM Tunnel configurations or the MAM Tunnel configurations, but not both. For example, enrolled devices can't have an app like Microsoft Edge that uses MAM tunnel configurations while other apps use MDM Tunnel configurations.
+In addition to using MAM Tunnel with unenrolled devices, you can also use it with enrolled devices. However, an enrolled device must use either the MDM Tunnel configurations or the MAM Tunnel configurations, but not both. For example, enrolled devices can't have an app like Microsoft Edge that uses MAM tunnel configurations while other apps use MDM Tunnel configurations.
 
 To use the Microsoft Tunnel for MAM iOS, you must update your Line of Business (LOB) apps to integrate the following three SDKs. Find guidance for integrating each SDK later in this article:
 
@@ -53,7 +53,7 @@ To use the Microsoft Tunnel for MAM iOS, you must update your Line of Business (
 
 ## Tunnel for MAM iOS SDK Architecture
 
-The following diagram describes the flow from a managed app that has successfully been integrated with Tunnel for MAM SKD for iOS.
+The following diagram describes the flow from a managed app that has successfully been integrated with Tunnel for MAM SDK for iOS.
 
 :::image type="content" source="./media/microsoft-tunnel-mam-ios/tunnel-for-mam-ios-flow.png" alt-text="Drawing of the Microsoft Tunnel Gateway for MAM on iOS architecture.":::
 

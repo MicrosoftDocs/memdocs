@@ -621,7 +621,7 @@ Example: `CCMSetup.exe IGNOREAPPVVERSIONCHECK=TRUE`
 
 If you set this property to `1` then ccmsetup.exe and client.msi are set as managed installers. For more information, see [Automatically allow apps deployed by a managed installer with Windows Defender Application Control](/windows/security/threat-protection/windows-defender-application-control/configure-authorized-apps-deployed-with-a-managed-installer).
 
-Example: `CCMSetup.exe MANGEDINSTALLER=1`
+Example: `CCMSetup.exe MANAGEDINSTALLER=1`
 
 ### `NOTIFYONLY`
 
