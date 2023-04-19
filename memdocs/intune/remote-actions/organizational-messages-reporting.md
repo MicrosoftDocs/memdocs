@@ -49,7 +49,7 @@ Message details include:
  * **Date created**:  Shows the date and time you created the message.   
  * **Status** Shows the status of the message, which includes: 
     * **Active**: The message is currently being shown to users according to your schedule.  
-    * **Pending**: The message has not been scheduled yet and is currently in progress.
+    * **Pending**: The message hasn't been scheduled yet and is currently in progress.
     * **Scheduled**: The message isn't currently being shown to users but has been scheduled.     
     * **Canceled**: The message was canceled and is no longer scheduled to go out to users.  
     * **Completed**: The message was sent out during the scheduled time and is done being shown.  
@@ -72,7 +72,7 @@ Message details include:
  
  For more information about audit logs, see [Use audit logs to track and monitor events in Microsoft Intune](../fundamentals/monitor-audit-logs.md).    
 
-## Learn more about organiztional messages 
+## Learn more about organizational messages 
 For frequently asked questions, known issues, and limitations, see [Overview of organizational messages](organizational-messages-overview.md).  
 
 
