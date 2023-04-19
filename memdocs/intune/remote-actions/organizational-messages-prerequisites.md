@@ -43,8 +43,8 @@ The organizational message feature is included with the following licenses:
 
 * Microsoft 365 E3  
 * Microsoft 365 E5  
-* Enterprise Mobility + Security E3 and Windows 10/11 Enterprise E3    
-* Enterprise Mobility + Security E5 and Windows 10/11 Enterprise E5  
+* Windows 10/11 Enterprise E3 with Microsoft Intune Plan 1    
+* Windows 10/11 Enterprise E5 with Microsoft Intune Plan 1 
 
 For more information about license options, see [Microsoft Intune licensing](../fundamentals/licenses.md).  
 
