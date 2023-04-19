@@ -184,14 +184,6 @@ items:
         href: tutorial/self-deploying/self-deploying-esp.md
       - name: Step 5 - Create and assign Autopilot profile
         href: tutorial/self-deploying/self-deploying-autopilot-profile.md
-    - name: Windows Autopilot Reset
-      items:
-      - name: Windows Autopilot Reset
-        href: tutorial/reset/autopilot-reset-overview.md
-      - name: Local Windows Autopilot Reset
-        href: tutorial/reset/local-autopilot-reset.md
-      - name: Remote Windows Autopilot Reset
-        href: tutorial/reset/remote-autopilot-reset.md
     - name: Windows Autopilot deployment for existing devices
       items:
       - name: Windows Autopilot deployment for existing devices
@@ -216,6 +208,14 @@ items:
         href: tutorial/existing-devices/run-autopilot-task-sequence.md
       - name: Step 10 - Register device for Windows Autopilot
         href: tutorial/existing-devices/register-device.md
+    - name: Windows Autopilot Reset
+      items:
+      - name: Windows Autopilot Reset
+        href: tutorial/reset/autopilot-reset-overview.md
+      - name: Local Windows Autopilot Reset
+        href: tutorial/reset/local-autopilot-reset.md
+      - name: Remote Windows Autopilot Reset
+        href: tutorial/reset/remote-autopilot-reset.md
 - name: Reference
   items:
     - name: Deployment processes

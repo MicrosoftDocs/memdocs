@@ -98,7 +98,7 @@ To create a user-driven Azure AD join Autopilot profile, follow these steps:
 
 > [!NOTE]
 >
-> If you don't plant to assign a user to the device, at this point, the device is ready to be deployed. If desired, deploy any additional applications, policies, and profiles that should run during Autopilot to the device group that the device is a member of. Boot the device with a fresh install of Windows and the Autopilot deployment should begin.Boot the device with a fresh install of Windows and the Autopilot deployment should begin.
+> If you don't plant to assign a user to the device, at this point, the device is ready to be deployed. If desired, deploy any additional applications, policies, and profiles that should run during Autopilot to the device group that the device is a member of. Boot the device with a fresh install of Windows and the Autopilot deployment should begin.
 
 ## More information
 

@@ -48,9 +48,9 @@ The following table compares the different capabilities for each Autopilot scena
 
 > [!NOTE]
 >
-> The **Windows Autopilot for existing devices** scenario is a method to completely reinstall Windows on a device in preparation to run another Autopilot deployment, but isn't technically an Autopilot deployment itself. After the Windows Autopilot for existing devices process completes, it automatically runs either the **User-driven**, **Pre-provisioned**, or **Self-deploying**. Keep this in mind when reviewing the above capabilities table.
+> The **Windows Autopilot for existing devices** scenario is a method to completely reinstall Windows on a device in preparation to run an Autopilot deployment. However the Windows Autopilot for existing devices scenario itself isn't technically an Autopilot deployment. After the Windows Autopilot for existing devices process completes, it automatically runs either the **User-driven**, **Pre-provisioned**, or **Self-deploying** Autopilot scenario.
 >
-> For example, the above table lists Windows Autopilot for existing devices as supporting hybrid Azure AD join, but it only does so if the Autopilot scenario that runs afterward supports hybrid Azure AD join. If the Autopilot scenario that runs after the Windows Autopilot for existing devices completes is the **Self-deploying** Autopilot deployment, then it wouldn't support hybrid Azure AD join.
+> The above table lists what the Windows Autopilot for existing devices scenario can potentially support, but may not always support depending on the Autopilot scenario that runs once it completes. For example, if the Autopilot scenario that runs after the Windows Autopilot for existing devices completes is the **Self-deploying** Autopilot deployment, then it wouldn't support hybrid Azure AD join since the **Self-deploying** Autopilot deployment doesn't support hybrid Azure AD join.
 
 ## Scenario pros and cons
 
@@ -129,7 +129,7 @@ The following guide makes general suggestions on which Autopilot scenario to use
 > [Step 3: Register devices as Autopilot devices](azure-ad-join-register-device.md)
 -->
 
-The below list contains links to Autopilot scenario walkthroughs. The walkthroughs contain step by step instructions on how to configure each of the Autopilot scenarios:
+The following list contains links to Autopilot scenario walkthroughs. The walkthroughs contain step by step instructions on how to configure each of the Autopilot scenarios:
 
 1. Windows Autopilot user-driven mode:
    1. [Azure AD join](user-driven/azure-ad-join-workflow.md).
@@ -146,3 +146,4 @@ The below list contains links to Autopilot scenario walkthroughs. The walkthroug
 For more information on Autopilot scenarios, see the following article(s):
 
 - [Windows Autopilot scenarios and capabilities](/mem/autopilot/windows-autopilot-scenarios).
+- [Windows Autopilot deployment process](/mem/autopilot/deployment-process).
