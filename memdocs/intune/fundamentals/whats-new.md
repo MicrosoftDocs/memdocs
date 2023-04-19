@@ -139,10 +139,21 @@ Applies to:
 
 - macOS 10.15 or later
 
-#### Device configuration<!-- 18163832  -->  
+#### ServiceNow Integration is now Generally Available (GA)<!-- 18163832  -->  
 Now generally available, you can view a list of ServiceNow incidents associated with the user you've selected in the Intune Troubleshooting workspace.  This new feature will be available under **Troubleshooting + Support** > select a user > **ServiceNow Incidents**.  The list of incidents shown have a direct link back to the source incident and show key information from the incident.  All incidents listed will link the "Caller" identified in the incident with the user selected for Troubleshooting.
 
 For more information go to [Use the troubleshooting portal to help users at your company](service-now-integration.md).
+
+#### Additional permissions to support administrators in controlling delivery of organization messages<!-- 16982298  -->  
+
+With additional permissions administrators can control delivery of content created and deployed from Organizational messages as well as the delivery of content from Microsoft to users.
+
+The **Update organizational message control** RBAC permission for organizational messages, determines who can change the Organizational Messages toggle to allow or block Microsoft direct messages. This permission is also added to the **Organizational Messages Manager** built-in role.
+
+Existing custom roles for managing Organizational Messages must be modified to add this permission for users to modify this setting.
+
+- For more information, about role-based access control (RBAC), see [RBAC with Microsoft Intune](../fundamentals/role-based-access-control.md).
+- For more information, about prerequisites for organization messages, see [Organizational messages prerequisites](../remote-actions/organizational-messages-prerequisites.md#role-based-access-control-requirements).
 
 ### Device management
 
@@ -247,6 +258,16 @@ The following protected apps are now available for Microsoft Intune:
 - Firstup - Intune by Firstup, Inc. (iOS)
 
 For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
+
+### Role-based access control
+
+#### New Assign (RBAC) permissions for organizational messages<!-- 16872833  -->  
+The **Assign** RBAC permissions for organizational messages determines who can assign target Azure AD groups to an organizational message. To access RBAC permissions, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Tenant administration** > **Roles**.
+
+This permission is also added to the **Organizational Messages Manager** built-in role.  Existing custom roles for managing Organizational Messages must be modified to add this permission for users to modify this setting.
+
+- For more information, about role-based access control (RBAC), see [RBAC with Microsoft Intune](../fundamentals/role-based-access-control.md).
+- For more information, about prerequisites for organization messages, see [Organizational messages prerequisites](../remote-actions/organizational-messages-prerequisites.md#role-based-access-control-requirements).
 
 ### Tenant administration
 
