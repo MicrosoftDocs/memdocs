@@ -20,7 +20,7 @@ appliesto:
 
 # Windows Autopilot scenarios
 
-Due to different environments, different configurations, and different needs, Windows Autopilot supports several different scenarios. The following scenarios are available in Windows Autopilot:
+Due to different environments, different configurations, and different needs, Windows Autopilot supports several different scenarios. The following table summarizes the scenarios that are available in Windows Autopilot:
 
 | **Scenario** | **Purpose** | **Description** |
 | --- | --- |
@@ -30,7 +30,9 @@ Due to different environments, different configurations, and different needs, Wi
 | **Windows Autopilot for existing devices** | Prepare device where Windows OS needs to be completely reinstalled for a Windows Autopilot deployment | Utilizes Microsoft Configuration Manager to install a fresh Windows OS on an existing device before running a Windows Autopilot deployment |
 | **Windows Autopilot Reset** | Resets an existing device back to the factory default installation of Windows | Utilizes the existing installation of Windows on a device to rebuild Windows and restore it back to the factory installation of Windows |
 
-## Scenarios capabilities
+## Scenario capabilities
+
+The following table compares the different capabilities for each Autopilot scenario:
 
 | Scenario | **User-driven** | **Pre-provisioned** | **Self-deploying** | **Existing devices** | **Reset** |
 | --- | --- | --- | --- | --- | --- |
@@ -46,11 +48,13 @@ Due to different environments, different configurations, and different needs, Wi
 
 > [!NOTE]
 >
-> The **Windows Autopilot for existing devices** scenario is a method to completely reinstall Windows on a device but isn't technically an Autopilot deployment. The Windows Autopilot for existing devices process pre-installs a JSON file on the device that allows it to then run one of the other Autopilot scenarios - **User-driven**, **Pre-provisioned**, or **Self-deploying** - once the Windows Autopilot for existing devices process is complete. Keep this in mind when reviewing the above capabilities table. For example, the above table lists Windows Autopilot for existing devices as supporting hybrid Azure AD join, but it only does so if the Autopilot profile specified in the JSON file also supports hybrid Azure AD join. If the JSON file being specified was for a **Self-deploying** Autopilot deployment, then it would not support hybrid Azure AD join.
+> The **Windows Autopilot for existing devices** scenario is a method to completely reinstall Windows on a device in preparation to run another Autopilot deployment, but isn't technically an Autopilot deployment itself. After the Windows Autopilot for existing devices process completes, it automatically runs either the **User-driven**, **Pre-provisioned**, or **Self-deploying**. Keep this in mind when reviewing the above capabilities table.
+>
+> For example, the above table lists Windows Autopilot for existing devices as supporting hybrid Azure AD join, but it only does so if the Autopilot scenario that runs afterward supports hybrid Azure AD join. If the Autopilot scenario that runs after the Windows Autopilot for existing devices completes is the **Self-deploying** Autopilot deployment, then it wouldn't support hybrid Azure AD join.
 
-## Scenarios pros and cons
+## Scenario pros and cons
 
-The below tables describes the pros and cons of each Windows Autopilot scenario during the deployment process.
+The following table describes the pros and cons of each Windows Autopilot scenario during the deployment process.
 
 | **Scenario** | **Pros** | **Cons** |
 | --- | --- | --- |
@@ -64,15 +68,15 @@ The below tables describes the pros and cons of each Windows Autopilot scenario 
 
 Azure AD join and hybrid Azure AD join aren't Autopilot scenarios, but instead [device identity](/azure/active-directory/devices/overview) options. All Autopilot scenarios support Azure AD join, while only the **User-driven**, **Pre-provisioned**, and **Existing devices** scenarios support hybrid Azure AD join. When deciding which Autopilot scenario to use, keep in mind which device identity is currently being used in the environment, which device identity will be used going forward, and which device identity will be used in the future.
 
-If possible, Microsoft recommends using only Azure AD join. Azure AD join gives the cleanest and best user experience. However, current environment configurations and restrictions may require the continued use of on-premises Active Directory. In scenarios where on-premises Active Directory is still needed, hybrid Azure AD join can be used, but consider possibly moving new devices to Azure AD join while keeping existing devices on hybrid Azure AD join. Hybrid Azure AD join can also be seen as a way to transition from on-premises Active Directory to purely Azure AD.
+If possible, Microsoft recommends using only Azure AD join. Azure AD join provides the best user experience. However, current environment configurations and restrictions may require the continued use of on-premises Active Directory. In scenarios where on-premises Active Directory is still needed, hybrid Azure AD join can be used. However, consider moving new devices to Azure AD join while keeping existing devices on hybrid Azure AD join. Hybrid Azure AD join can also be seen as a way to transition from on-premises Active Directory to purely Azure AD.
 
-Also keep in mind that hybrid Azure AD join requires connectivity to a domain controller. If the device undergoing an Autopilot deployment is not able to connect to a domain controller either on-premises or via a VPN connection, then only Azure AD join is an option.
+Also keep in mind that for the Autopilot deployments that support hybrid Azure AD join, hybrid Azure AD join requires connectivity to a domain controller. If the device undergoing an Autopilot deployment is a remote device and is not able to connect to a domain controller either on-premises or via a VPN connection, then only Azure AD join is an option.
 
 ## Which Autopilot scenario to use
 
 Which Autopilot scenarios to use depends on the environment and the needs of the organization. As mentioned in the previous section of [Azure AD join and Hybrid Azure AD join vs. Autopilot scenarios](#azure-ad-join-and-hybrid-azure-ad-join-vs-autopilot-scenarios), the first thing to account for is which type of device identity is currently be used. This may restrict which Autopilot scenarios can be used in the environment.
 
-The following lists makes general suggestions of which Autopilot scenario to use:
+The following guide makes general suggestions on which Autopilot scenario to use:
 
 ### User-driven
 
@@ -112,7 +116,7 @@ The following lists makes general suggestions of which Autopilot scenario to use
 ### Reset
 
 - Windows Autopilot Rest isn't a Windows Autopilot deployment itself, but a method to reset an existing Autopilot device to a business ready state.
-- The device needs to be a current Autopilot device.
+- The device needs currently be an Autopilot device.
 - Windows Autopilot Reset only supports existing Azure AD join devices. It doesn't support existing hybrid Azure AD join devices.
 - When the current Windows installation is in a stable non-corrupted state. If the Windows installation is in a corrupted state, use Windows Autopilot for existing devices instead.
 - When the device needs to repurposed, for example to a new user.
