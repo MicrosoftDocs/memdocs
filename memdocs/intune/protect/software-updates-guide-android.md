@@ -171,7 +171,7 @@ For more information on this setting, go to [Android Enterprise device settings 
 
 For some rugged Android devices, you can use OEMConfig to configure firmware updates and other settings that are specific to that OEM. If an OEM provides an OEMConfig app, then in Intune, you can deploy the app and configure its settings using a configuration profile.
 
-To see the Intune-supported OEMConfig apps, go to [Supported OEMConfig apps in Microsoft Intune](..configuration/android-oem-configuration-overview.md#supported-oemconfig-apps). Contact the manufacturer for the firmware and other settings available in the configuration schema.
+To see the Intune-supported OEMConfig apps, go to [Supported OEMConfig apps in Microsoft Intune](../configuration/android-oem-configuration-overview.md#supported-oemconfig-apps). Contact the manufacturer for the firmware and other settings available in the configuration schema.
 
 For more information on OEMConfig in Microsoft Intune, go to [Use and manage Android Enterprise devices with OEMConfig in Microsoft Intune](../configuration/android-oem-configuration-overview.md)
 
