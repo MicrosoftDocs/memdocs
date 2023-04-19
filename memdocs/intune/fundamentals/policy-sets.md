@@ -37,7 +37,7 @@ Policy sets allow you to create a bundle of references to already existing manag
 > [!IMPORTANT]
 > For a list of known issues related to policy sets, [Policy sets known issues](policy-sets.md#policy-sets-known-issues).
 
-Policy sets do not replace existing concepts or objects. You can continue to assign individual objects and you can also reference individual objects as part of a policy set. Therefore, any changes to those individual objects will be reflected in the policy set.​
+Policy sets don't replace existing concepts or objects. You can continue to assign individual objects and you can also reference individual objects as part of a policy set. Therefore, any changes to those individual objects will be reflected in the policy set.​
 
 You can use policy sets to:
 
@@ -81,9 +81,9 @@ When you create a policy set, you create a single unit of assignment, and manage
 6. Click **Next: Device enrollment**.<br>
    The **Device enrollment** page allows you to add device enrollment objects to your policy set, such as [device type restrictions](../enrollment/enrollment-restrictions-set.md), [Windows Autopilot deployment profiles](../../autopilot/enrollment-autopilot.md), and [enrollment status page profiles](../enrollment/windows-enrollment-status.md).
 7. Click **Next: Assignments**.<br>
-   The **Assignments** page allows you can assign the policy set to users and devices. It is important to note that you can assign a policy set to a device whether or not the device is managed by Intune.
+   The **Assignments** page allows you can assign the policy set to users and devices. It's important to note that you can assign a policy set to a device whether or not the device is managed by Intune.
 8. Click **Next: Review + create** to review the values you entered for the profile.
-9. When you are done, click **Create** to create the policy set in Intune.
+9. When you're done, click **Create** to create the policy set in Intune.
 
 ## Policy sets known issues
 
@@ -109,10 +109,10 @@ Policy sets, new to 1910, have the following known issues.
 - Setting a policy set assignment of **All Users** to **Autopilot Profile** is unsupported.
 
 - Policy sets have the following enrollment restrictions and Enrollment Status Page (ESP) issues:
-  - Restrictions and ESP do not support virtual group assignments.
-  - Restrictions and ESP do not strictly support exclusion group assignments. 
+  - Restrictions and ESP don't support virtual group assignments.
+  - Restrictions and ESP don't strictly support exclusion group assignments. 
   - Restrictions and ESP use priority-based conflict resolution. Restrictions and ESP might not be applied to the same users as the rest of a policy set's payloads if the restrictions and ESP are also targeted by a higher priority restriction and ESP.  
-  - The default restrictions and ESP cannot be added to a policy set.  
+  - The default restrictions and ESP can't be added to a policy set.  
 
 - MAM policy types that support policy sets include the following: 
   - MAM WIP (Windows) MDM targeted managed app protection 
@@ -121,7 +121,7 @@ Policy sets, new to 1910, have the following known issues.
   - MAM iOS/iPadOS targeted managed app configuration
   - MAM Android targeted managed app configuration
 
-- MAM policy types that do not support policy sets include the following: 
+- MAM policy types that don't support policy sets include the following: 
   - MAM WIP (Windows) targeted managed app protection
 
 - MAM processes policy set assignments as direct assignments for the following policy types:
@@ -130,10 +130,10 @@ Policy sets, new to 1910, have the following known issues.
   - MAM iOS/iPadOS targeted managed app configuration
   - MAM Android targeted managed app configuration
 
-    If a policy is added to a policy set that is deployed to a group, the group would show as directly assigned in the workload, not "assigned via the policy set". As a result of this, MAM does not process group assignment deletions coming from policy sets.
+    If a policy is added to a policy set that is deployed to a group, the group would show as directly assigned in the workload, not "assigned via the policy set". As a result of this, MAM doesn't process group assignment deletions coming from policy sets.
 
-- MAM does not support deployment to **All Users** and **All Devices** virtual groups for any policy types.
-- The Device Configuration Profile of type "Administrative Templates" cannot be selected as part of a policy set.
+- MAM doesn't support deployment to **All Users** and **All Devices** virtual groups for any policy types.
+- The Device Configuration Profile of type "Administrative Templates" can't be selected as part of a policy set.
 
 ## Next steps
 
