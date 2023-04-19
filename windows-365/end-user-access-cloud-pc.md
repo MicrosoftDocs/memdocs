@@ -174,6 +174,8 @@ To turn on location redirection, follow these steps:
 5. Go to windows365.microsoft.com.
 6. Under **Your Cloud PCs**, select **Open in a browser** for your Cloud PC.
 7. Under **In Session Settings**, select **Location (Preview)** > **Connect**.
+
+     ![Screenshot of Location redirection option.](media/end-user-access-cloud-pc/location.png)
 8. In the **windows365.microsoft.com wants to Know your location** confirmation box, select **Allow**.
 
 Organizational settings might override the location settings for your device. For example, your organization might disable location redirection for all Cloud PCs they manage.
