@@ -255,10 +255,9 @@ When unenrolled devices access resources protected by SSL/TLS certificates issue
 
 ### Android fails to build the certificate chain when you use private certification authority
 
-To support MAM Tunnel, Android uses the [MAMCertTrustWebViewClient](https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/MAMCertTrustWebViewClient.html) to validate certificates and to build a certificate chain from the certificates provided. When a server that uses private certificates provides the full chain to WebView, but only the root certificate is deployed to devices, Android can fail successfully build the certificate chain and validate the server trust.
+When using WebView with [MAMCertTrustWebViewClient](https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/MAMCertTrustWebViewClient.html) in MAM to validate certificates, MAM delegates to Android to build a certificate chain from certificates provided by the admins and the server. If a server that uses private certificates provides the full chain to the connecting WebView but the admin deploys only the root certificate, Android may fail building the cert chain and will fail checking the server trust. This is because Android requires intermediate certificates to build the chain to an acceptable level.
 
-**Work around**: In addition to deploying the root certificate, deploy the full chain of certificates including intermediate certificates to your applicable Android devices. 
-
+**Work around**: To ensure proper certificate validation, admins must deploy the root certificate and all intermediate certificates in Intune. If the root certificate along with all intermediate certificates are not deployed, Android can fail to build the certificate chain and fail to trust the server.
 
 ### Defender for Endpoint certificate error when using a TLS/SSL certificate from a private certificate authority
 When Microsoft Tunnel Gateway server uses a TLS/SSL certificate issued by a private (on-premises) CA, Microsoft Defender for Endpoint generates a certificate error when attempting to connect.
