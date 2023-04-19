@@ -320,16 +320,19 @@ Now that you've installed your token, you can create an enrollment profile for a
          This setting is applied once during the out-of-box automated device enrollment experience. The device user doesn't experience it again unless they re-enroll their device. **Yes** is the default setting for new enrollment profiles. **No** is the default setting for existing enrollment profiles.  
 
       * **No**: The device is released to the home screen when Setup Assistant ends, regardless of policy installation status. Device users may be able to access the home screen or change device settings before all policies are installed.   
+      
+> [!IMPORTANT]
+> This feature is in public preview. For more information, see [Public preview in Microsoft Intune](../fundamentals/public-preview.md).
 
-         The locked experience works on devices targeted with new and existing enrollment profiles. Supported devices include:      
-         * iOS/iPadOS 13+ devices enrolling with Setup Assistant with modern authentication  
-         * iOS/iPadOS 13+ devices enrolling without user affinity   
-          * iOS/iPadOS 13+ devices enrolling with Azure AD shared mode  
+> [!NOTE]
+> The locked experience works on devices targeted with new and existing enrollment profiles. Supported devices include:      
+> * iOS/iPadOS 13+ devices enrolling with Setup Assistant with modern authentication  
+> * iOS/iPadOS 13+ devices enrolling without user affinity   
+> * iOS/iPadOS 13+ devices enrolling with Azure AD shared mode  
 
-This setting is not available for iOS/iPadOS devices enrolling without user affinity that have Shared iPad set to Yes.
-          
-      > [!IMPORTANT]
-      > This feature is in public preview. For more information, see [Public preview in Microsoft Intune](../fundamentals/public-preview.md).  
+> The await configuration setting is unavailable in profiles with this combination of configurations:
+> * User affinity: **Enroll without user affinity** (Step 6 in this section)
+> * Shared iPad: **Yes**  (Step 12 in this section)  
 
 15. Optionally, create a device name template to quickly identify devices assigned this profile in the admin center. Intune uses your template to create and format device names. The names are given to devices when they enroll and upon each successive check-in. To create a template: 
  1. Under **Apply device name template**, select **Yes** .
