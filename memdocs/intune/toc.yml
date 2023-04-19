@@ -748,6 +748,14 @@ items:
           href: ./protect/derived-credentials.md
         - name: Software updates
           items:
+          - name: Android admin checklist
+            href: ./protect/software-updates-guide-android.md
+          - name: iOS/iPadOS
+            items:
+            - name: Admin checklist & industry scenarios
+              href: ./protect/software-updates-guide-ios-ipados.md
+            - name: Update policy and settings
+              href: ./protect/software-updates-ios.md 
           - name: Windows updates
             items:
             - name: Use Windows Update for Business
@@ -764,10 +772,6 @@ items:
               href: ./protect/windows-update-compatibility-reports.md
             - name: Windows Update compliance reports
               href: ./protect/windows-update-compliance-reports.md         
-          - name: iOS update policies
-            href: ./protect/software-updates-ios.md
-          - name: macOS update policies
-            href: ./protect/software-updates-macos.md
         - name: Troubleshoot
           items:
           - name: Troubleshoot policies and profiles
