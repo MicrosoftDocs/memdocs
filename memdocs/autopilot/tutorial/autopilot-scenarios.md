@@ -20,7 +20,7 @@ appliesto:
 
 # Windows Autopilot scenarios
 
-Due to different environments, different configurations, and different needs, Windows Autopilot supports several different scenarios. The following table summarizes the scenarios that are available in Windows Autopilot:
+Due to different environments, different configurations, and different needs, Windows Autopilot offers several different scenarios. The following table summarizes the scenarios that are available in Windows Autopilot:
 
 | **Scenario** | **Purpose** | **Description** |
 | --- | --- |
@@ -122,7 +122,12 @@ The following guide makes general suggestions on which Autopilot scenario to use
 - When the device needs to repurposed, for example to a new user.
 - When the device needs to be reset to resolve ongoing problems on the device. Sometimes it's better and quicker to reset a device than to troubleshoot and fix on going problems on the device.
 
-## Scenario walkthroughs
+## Next steps: Scenario walkthroughs
+
+<!--
+> [!div class="nextstepaction"]
+> [Step 3: Register devices as Autopilot devices](azure-ad-join-register-device.md)
+-->
 
 The below list contains links to Autopilot scenario walkthroughs. The walkthroughs contain step by step instructions on how to configure each of the Autopilot scenarios:
 
