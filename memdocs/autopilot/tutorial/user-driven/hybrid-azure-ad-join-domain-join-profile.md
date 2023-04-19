@@ -36,7 +36,7 @@ For an overview of the Windows Autopilot user-driven hybrid Azure AD join workfl
 
 > [!NOTE]
 >
-> If you've already created a domain join profile as part of the [Windows Autopilot for pre-provisioned deployment hybrid Azure AD join](../user-driven/hybrid-azure-ad-join-workflow.md) scenario and want to keep the same settings and assignments, you can move on to the [Next step: Deploy the device](#next-step-deploy-the-device) section.
+> If you've already created a domain join profile as part of the [Windows Autopilot for pre-provisioned deployment hybrid Azure AD join](../pre-provisioning/hybrid-azure-ad-join-domain-join-profile.md) scenario and want to keep the same settings and assignments, you can move on to the [Next step: Assign Autopilot device to a user (optional)](#next-step-assign-autopilot-device-to-a-user-optional) section.
 
 ## Create and assign a domain join profile
 
@@ -104,9 +104,14 @@ For an overview of the Windows Autopilot user-driven hybrid Azure AD join workfl
 
 1. In the **Review + Create** page, review and verify that all of the settings are set as desired, and then choose **Create** to create the domain join profile.
 
-## Next step: Deploy the device
+## Next step: Assign Autopilot device to a user (optional)
 
-At this point, the device is ready to be deployed. If desired, deploy any additional applications, policies, and profiles that should run during Autopilot to the device group that the device is a member of. Boot the device with a fresh install of Windows and the Autopilot deployment should begin.
+> [!div class="nextstepaction"]
+> [Step 7: Assign Autopilot device to a user (optional)](azure-ad-join-assign-device-to-user.md)
+
+> [!NOTE]
+>
+> If you don't plan to assign a user to the device, at this point, the device is ready to be deployed. If desired, deploy any additional applications, policies, and profiles that should run during Autopilot to the device group that the device is a member of. Boot the device with a fresh install of Windows and the Autopilot deployment should begin.
 
 ## More information
 
