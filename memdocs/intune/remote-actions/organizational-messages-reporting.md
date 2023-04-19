@@ -61,13 +61,18 @@ Message details include:
  * **Click-through rate**: Shows how often, in percentage, that users clicked the message when shown. This data is determined by dividing times clicked by times shown.   
 
  ## Access audit logs  
- Use audit logs to track and monitor organizational message events in Microsoft Intune. Audit logs contain a record of activities that generate a change in Microsoft Intune. Create, update (edit), delete, and assign actions all create audit events for organizational messages that administrator can review.    
+ Use audit logs to track and monitor organizational message events in Microsoft Intune. Audit logs contain a record of activities that generate a change in Microsoft Intune. The following organizational message actions create audit events:  
+
+ * Assign  
+ * Create  
+ * Delete  
+ * Update (edit)  
  
- To access the logs, go to **Tenant administration** > **Audit logs**. For more information, see [Use audit logs to track and monitor events](../fundamentals/monitor-audit-logs.md).   
+ To access audit logs, go to **Tenant administration** > **Audit logs**. Available logs are shown in the table. Select **Filter** to filter logs by category. The category for organizational messages is **Other**. 
+ 
+ For more information about audit logs, see [Use audit logs to track and monitor events in Microsoft Intune](../fundamentals/monitor-audit-logs.md).    
 
- ## Next steps  
-You can send audit logs to Azure Monitor services, including storage accounts, event hubs, and log analytics. For more information, see [Review logs with Azure Monitor](../fundamentals/review-logs-using-azure-monitor.md).  
-
+## Learn more about organiztional messages 
 For frequently asked questions, known issues, and limitations, see [Overview of organizational messages](organizational-messages-overview.md).  
 
 
