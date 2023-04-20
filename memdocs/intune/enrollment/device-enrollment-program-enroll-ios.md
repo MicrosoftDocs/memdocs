@@ -324,12 +324,12 @@ Now that you've installed your token, you can create an enrollment profile for a
 > [!IMPORTANT]
 > This feature is in public preview. For more information, see [Public preview in Microsoft Intune](../fundamentals/public-preview.md).
 
-> [!NOTE]
-> The locked experience works on devices targeted with new and existing enrollment profiles. Supported devices include:      
-> * iOS/iPadOS 13+ devices enrolling with Setup Assistant with modern authentication  
-> * iOS/iPadOS 13+ devices enrolling without user affinity   
-> * iOS/iPadOS 13+ devices enrolling with Azure AD shared mode  
+The locked experience works on devices targeted with new and existing enrollment profiles. Supported devices include:      
+* iOS/iPadOS 13+ devices enrolling with Setup Assistant with modern authentication  
+* iOS/iPadOS 13+ devices enrolling without user affinity   
+* iOS/iPadOS 13+ devices enrolling with Azure AD shared mode  
 
+> [!NOTE]
 > The await configuration setting is unavailable in profiles with this combination of configurations:
 > * User affinity: **Enroll without user affinity** (Step 6 in this section)
 > * Shared iPad: **Yes**  (Step 12 in this section)  
