@@ -114,7 +114,7 @@ For an overview of the Windows Autopilot for pre-provisioned deployment hybrid A
 ## Next step: Assign Autopilot device to a user (optional)
 
 > [!div class="nextstepaction"]
-> [Step 9: Assign Autopilot device to a user (optional)](azure-ad-join-assign-device-to-user.md)
+> [Step 9: Assign Autopilot device to a user (optional)](hybrid-azure-ad-join-assign-device-to-user.md)
 
 If you don't plan to assign a user to the device, then skip to [Step 10: Technician flow](hybrid-azure-ad-join-technician-flow.md).
 

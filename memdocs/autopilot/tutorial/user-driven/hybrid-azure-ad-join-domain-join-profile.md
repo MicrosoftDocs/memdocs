@@ -30,7 +30,7 @@ Autopilot user-driven hybrid Azure AD join steps:
 - Step 7: [Create and assign hybrid Azure AD join Autopilot profile](hybrid-azure-ad-join-autopilot-profile.md)
 > [!div class="checklist"]
 > - **Step 8: Configure and assign domain join profile**
-- Step 9: [Assign Autopilot device to a user (optional)](azure-ad-join-assign-device-to-user.md)
+- Step 9: [Assign Autopilot device to a user (optional)](hybrid-azure-ad-join-assign-device-to-user.md)
 
 For an overview of the Windows Autopilot user-driven hybrid Azure AD join workflow, see [Windows Autopilot user-driven hybrid Azure AD join overview](hybrid-azure-ad-join-workflow.md)
 
@@ -107,7 +107,7 @@ For an overview of the Windows Autopilot user-driven hybrid Azure AD join workfl
 ## Next step: Assign Autopilot device to a user (optional)
 
 > [!div class="nextstepaction"]
-> [Step 7: Assign Autopilot device to a user (optional)](azure-ad-join-assign-device-to-user.md)
+> [Step 7: Assign Autopilot device to a user (optional)](hybrid-azure-ad-join-assign-device-to-user.md)
 
 > [!NOTE]
 >
