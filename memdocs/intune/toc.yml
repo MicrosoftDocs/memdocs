@@ -550,6 +550,14 @@ items:
               href: ./protect/encrypt-devices-filevault.md
             - name: Monitor disk encryption
               href: ./protect/encryption-monitor.md
+          - name: Windows LAPS
+            items:
+            - name: Intune support for Windows LAPS
+              href: ./protect/windows-laps-overview.md
+            - name: Manage LAPS policy
+              href: ./protect/windows-laps-policy.md
+            - name: Reports for LAPS policy
+              href: ./protect/windows-laps-reports.md
         - name: Endpoint Privilege Management
           items:
           - name: Endpoint Privilege Management overview
@@ -1448,6 +1456,8 @@ items:
             href: ./remote-actions/organizational-messages-prerequisites.md
           - name: Create organizational messages  
             href: ./remote-actions/organizational-messages-create.md  
+          - name: Cancel or delete organizational message 
+            href: ./remote-actions/organizational-messages-cancel.md
           - name: Monitor organizational messages  
             href: ./remote-actions/organizational-messages-reporting.md  
       - name: Bulk device actions

@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/06/2023
+ms.date: 04/12/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -89,9 +89,7 @@ These settings apply to Android Enterprise personally owned devices with a work 
   - **Block all account types**: Prevents users from manually adding or removing accounts in the work profile. For example, when you deploy the Gmail app into the work profile, you can prevent users from adding or removing accounts in this work profile.
 
   > [!NOTE]
-  >
-  > - On corporate owned devices with work profile (COPE), Google accounts can't be added to the **Settings** app > **Accounts** > **Work**.
-  > - This setting uses the [Restrict accounts in Google Play](https://developer.android.com/work/dpc/security#google-play-accounts) feature (opens Android's web site).
+  > On personally owned devices with a work profile (BYOD) and corporate owned devices with work profile (COPE), Google accounts can't be added to the **Settings** app > **Accounts** > **Work**.
 
 - **Contact sharing via Bluetooth**: **Enable** allows sharing and access to personally owned devices with a work profile contacts from another device, including a car, that's paired using Bluetooth. Enabling this setting may allow certain Bluetooth devices to cache work contacts upon first connection. Disabling this policy after an initial pairing/sync may not remove work contacts from a Bluetooth device.
 
@@ -111,7 +109,7 @@ These settings apply to Android Enterprise personally owned devices with a work 
 
 - **Search work contacts from personal profile**: **Block** prevents users from searching for work contacts in apps in the personal profile. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow searching for work contacts in the personal profile.
 
-- **Camera**: **Block** prevents access to the camera on the device in the personally owned work profile. This setting doesn't affect the camera on the personal side. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow access to the camera.
+- **Camera**: **Block** prevents access to the camera on the device in the personally owned work profile. The camera on the personal side isn't affected by the setting. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow access to the camera.
 
 - **Allow widgets from work profile apps**: **Enable** allows users to put widgets exposed by apps on the home screen. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might disable this feature.
 
