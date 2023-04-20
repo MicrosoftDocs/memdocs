@@ -18,7 +18,7 @@ appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
 ---
 
-# Pre-provisioning hybrid Azure AD join: Create and assign a pre-provisioned hybrid Azure AD join Autopilot profile
+# Pre-provision hybrid Azure AD join: Create and assign a pre-provisioned hybrid Azure AD join Autopilot profile
 
 Windows Autopilot for pre-provisioned deployment hybrid Azure AD join steps:
 

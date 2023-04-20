@@ -21,7 +21,7 @@ appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/windows-server-release-info" target="_blank">Windows Server 2016</a>
 ---
 
-# Pre-provisioning hybrid Azure AD join: Install the Intune Connector
+# Pre-provision hybrid Azure AD join: Install the Intune Connector
 
 Windows Autopilot for pre-provisioned deployment hybrid Azure AD join steps:
 - Step 1: [Set up Windows automatic Intune enrollment](hybrid-azure-ad-join-automatic-enrollment.md)

@@ -18,7 +18,7 @@ appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
 ---
 
-# Pre-provisioning hybrid Azure AD join: Create and assign a domain join profile
+# Pre-provision hybrid Azure AD join: Create and assign a domain join profile
 
 Windows Autopilot for pre-provisioned deployment hybrid Azure AD join steps:
 - Step 1: [Set up Windows automatic Intune enrollment](hybrid-azure-ad-join-automatic-enrollment.md)
@@ -106,11 +106,6 @@ For an overview of the Windows Autopilot for pre-provisioned deployment hybrid A
 
 1. In the **Review + Create** page, review and verify that all of the settings are set as desired, and then choose **Create** to create the domain join profile.
 
-## Next step: Technician flow
-
-> [!div class="nextstepaction"]
-> [Step 9: Technician flow](hybrid-azure-ad-join-technician-flow.md)
-
 ## Next step: Assign Autopilot device to a user (optional)
 
 > [!div class="nextstepaction"]
@@ -120,7 +115,6 @@ If you don't plan to assign a user to the device, then skip to [Step 10: Technic
 
 > [!div class="nextstepaction"]
 > [Step 10: Technician flow](hybrid-azure-ad-join-technician-flow.md)
-
 
 ## More information
 

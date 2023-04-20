@@ -18,7 +18,7 @@ appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
 ---
 
-# Pre-provisioning hybrid Azure AD join: Create a device group
+# Pre-provision hybrid Azure AD join: Create a device group
 
 Windows Autopilot for pre-provisioned deployment hybrid Azure AD join steps:
 - Step 1: [Set up Windows automatic Intune enrollment](hybrid-azure-ad-join-automatic-enrollment.md)

@@ -18,7 +18,7 @@ appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
 ---
 
-# Pre-provisioning Azure AD join: User flow
+# Pre-provision Azure AD join: User flow
 
 Windows Autopilot for pre-provisioned deployment Azure AD join steps:
 - Step 1: [Set up Windows automatic Intune enrollment](azure-ad-join-automatic-enrollment.md)
