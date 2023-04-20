@@ -47,6 +47,9 @@ Use this guide to determine the best migration approach, and get some guidance &
 > [!TIP]
 > [!INCLUDE [tips-guidance-plan-deploy-guides](../includes/tips-guidance-plan-deploy-guides.md)]
 
+> [!TIP]
+> As a companion to this article, we recommend using the [Microsoft Intune setup guide](https://go.microsoft.com/fwlink/?linkid=2224812) when signed in to the Microsoft 365 Admin Center. This guide will customize your experience based on your environment.  To review best practices without signing in and activating automated setup features, go to the [M365 Setup portal](https://go.microsoft.com/fwlink/?linkid=2223058).
+
 ## Before you begin
 
 - Microsoft Intune is a cloud native solution that helps manage identities, devices, and apps. If your goal is to become cloud native, then you can learn more at the following articles:
