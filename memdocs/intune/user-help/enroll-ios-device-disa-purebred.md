@@ -75,7 +75,7 @@ You'll also need to contact a Purebred agent or representative during setup.
     ![Example image of Company Portal app with onscreen message and code.](./media/copy-code-intercede.png)  
 3. Switch to your smart card-enabled device and go to https://microsoft.com/devicelogin. 
 > [!NOTE]
-> Government users signing in from another device will need to manually select the government cloud for authentication. For more info see [Troubleshoot iOS/iPadOS enrollment errors](https://learn.microsoft.com/troubleshoot/mem/intune/device-enrollment/troubleshoot-ios-enrollment-errors#authentication-doesnt-redirect-to-the-government-cloud)
+> Government users signing in from another device will need to manually select the government cloud for authentication. For more info see [Troubleshoot iOS/iPadOS enrollment errors](/troubleshoot/mem/intune/device-enrollment/troubleshoot-ios-enrollment-errors#authentication-doesnt-redirect-to-the-government-cloud)
 
 4. Enter the code you previously wrote down.  
 
