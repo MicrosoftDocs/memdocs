@@ -36,6 +36,7 @@ This article applies to:
 - iOS/iPadOS supervised devices
 
 ??What about personal devices??
+!!These policies and configurations are not supported on non supervised devices. Do we need to be specific here?  Generally we have similar headings where policies/configuration are only supported on supervised devices.  We could add a simple blurb that administrators cannot control the update policies on unsupervised/BYO devices due to platform limitations.!!
 
 ## Admin checklist
 
@@ -76,6 +77,7 @@ If these automatic update settings are disabled, then:
 - Admins can't change these settings with policies.
 - Users need to manually change these settings on their devices.
 - If users can't change these settings for whatever reason (??What are some reasons??), then you must reset and reprovision the device. ??Why? This seems extreme? Remote actions?
+!!This is a OS/platform limitation.  It's available for configuration during the OOB, but not via policy.!!
 
 Automatic updates work together with other update policies, which can provide a positive experience for admins and end users.
 
@@ -86,6 +88,7 @@ Using Intune policies, you can also force users to update their devices:
 - Create [Conditional Access (CA) policies](../protect/create-conditional-access-intune.md) to block devices that aren't updated. The CA policies can also prompt users to install current updates so they regain access.
 
 ?? What about iOS/iPadOS 11 and older??
+!!These policies/configuration items were not available prior to iOS 12, and we only support iOS N-2 (iOS 14 at this point).  Do we need to add that info?!!
 
 ### ✔️ Use the built-in settings
 
@@ -132,6 +135,7 @@ Apple devices are used in various industries, including enterprise, retail, manu
 This section describes some common industry scenarios and gives examples of Intune policies.
 
 ??Not sure the following table is needed??
+!!It's just an attempt to help list jargon that's often used in the industry, if it's low value we can probably remove!!
 
 This table can help map your industry specific terminology to use cases presented in this section:
 
@@ -201,6 +205,7 @@ To accomplish this task, create a policy with the following settings:
 ### Factory machines
 
 ??Need some text on what factory machines are, and examples.??
+!!Factory Machines are often single purpose devices used in mission critical areas like manufacturing lines or specialized equipment control and monitoring.  For example, an Android tablet running control or monitoring software for a device that welds two components.!!
 
 In factory machine scenarios, the primary goal is to make sure devices behave in a consistent manner. Updates may need to be delayed so all application compatibility testing has been completed. Installation and reboots occur at specific times and are typically deployed in a phased approach.
 
