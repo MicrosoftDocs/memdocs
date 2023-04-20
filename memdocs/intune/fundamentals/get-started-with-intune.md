@@ -41,6 +41,9 @@ This article provides an overview of the steps to start your Intune deployment.
 
 :::image type="content" source="./media/get-started-with-intune/get-started-overview.png" alt-text="Diagram that shows the different steps to get started with Microsoft Intune, including set up, adding apps, using compliance & conditional access, configuring device features, and then enrolling devices to be managed.":::
 
+> [!TIP]
+> As a companion to this article, we recommend using the [Microsoft Intune setup guide](https://go.microsoft.com/fwlink/?linkid=2224812) when signed in to the Microsoft 365 Admin Center. This guide will customize your experience based on your environment.  To review best practices without signing in and activating automated setup features, go to the [M365 Setup portal](https://go.microsoft.com/fwlink/?linkid=2223058).
+
 ## Before you begin
 
 - To help plan your Intune deployment, use the [Planning guide to move to Microsoft Intune](intune-planning-guide.md). It covers personal devices, licensing considerations, creating a rollout plan, communicating changes to your users, and more.
