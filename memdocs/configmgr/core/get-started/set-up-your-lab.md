@@ -87,12 +87,12 @@ Once you have installed all of these components, there are additional steps you 
 
 -   Domain user: **ConfigUser**  
 
-     Under normal circumstances, you would not grant universal access to all users within your environment. You are doing so with this user in order to streamline bringing your lab online.  
+     Under normal circumstances, you wouldn't grant universal access to all users within your environment. You are doing so with this user in order to streamline bringing your lab online.  
 
 The next steps required to enable Configuration Manager clients to query Active Directory Domain Services to locate site resources are listed over the next procedures.  
 
 ##  <a name="BKMK_CreateSysMgmtLab"></a> Create the System Management container  
- Configuration Manager will not automatically create the required System Management container in Active Directory Domain Services when the schema is extended. Therefore, you will create this for your lab. This step will require you to [install ADSI Edit](/previous-versions/windows/it-pro/windows-server-2003/cc773354(v=ws.10)).
+ Configuration Manager won't automatically create the required System Management container in Active Directory Domain Services when the schema is extended. Therefore, you will create this for your lab. This step will require you to [install ADSI Edit](/previous-versions/windows/it-pro/windows-server-2003/cc773354(v=ws.10)).
 
  Ensure that you are logged on as an account that has **Create All Child Objects** permission on the **System** Container in Active Directory Domain Services.  
 
