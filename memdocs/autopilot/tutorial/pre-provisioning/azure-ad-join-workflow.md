@@ -30,7 +30,34 @@ Before beginning, refer to the [How to: Plan your Azure AD join implementation](
 >
 > Since Windows Autopilot for pre-provisioned deployment Azure AD join builds on top of [Windows Autopilot user-driven Azure AD join](../user-driven/azure-ad-join-workflow.md), it's strongly recommended that the Windows Autopilot user-driven Azure AD join scenario is setup, tested, and working first before attempting to use the Windows Autopilot for pre-provisioned deployment Azure AD join scenario. If the Windows Autopilot user-driven Azure AD join doesn't work, then most likely the Windows Autopilot pre-provisioned deployment Azure AD join scenario won't work either.
 
+## Windows Autopilot for pre-provisioned deployment Azure AD join overview
+
+Windows Autopilot for pre-provisioned deployment Azure AD join is an Autopilot solution that automates the configuration of Windows for the end-user on a new device delivered directly from an IT department, OEM, or reseller. Windows Autopilot for pre-provisioned deployment deployments uses the existing Windows installation installed by the OEM at the factory. The end-user only needs to perform a minimal amount of actions during the deployment process such as:
+
+- Powering on the device.
+- In certain scenarios, selecting the language, locale, and keyboard layout.
+- Connecting to a wireless network if the device is not connected to a wired network.
+- Signing into Azure AD with the end-user's Azure AD credentials.
+
+Windows Autopilot for pre-provisioned deployment can perform the following tasks during the deployment:
+
+- Joins the device to Azure AD.
+- Enrolls the device in Intune.
+- Installs applications.
+- Applies device configuration policies such as BitLocker and Windows Hello for Business.
+- Checks for compliance.
+- Enrollment Status Page (ESP) can be used to prevent an end-user from using the device until it is fully configured.
+
+Windows Autopilot for pre-provisioned deployment consist of two phases:
+
+- Device ESP phase: Windows is configured and applications and policies assigned to the device are applied.
+- User ESP phase: Applications and policies assigned to the user are applied.
+
+Once the Windows Autopilot for pre-provisioned deployment is complete, the device is ready for the end-user to use and the're immediately sent to the Desktop.
+
 ## Workflow
+
+The following steps are needed to configure and then perform a Windows Autopilot for pre-provisioned deployment Azure AD join in Intune:
 
 Set up Windows automatic Intune enrollment > Allow users to join devices to Azure AD > Register devices as Autopilot devices > Create a device group > Configure and assign Autopilot Enrollment Status Page (ESP) > Create and assign Autopilot profile > Assign Autopilot device to a user (optional) > Technician flow > User flow
 

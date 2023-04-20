@@ -26,7 +26,36 @@ The purpose of this tutorial is to provide a step by step guide for all the step
 
 Before beginning, refer to the [Plan your hybrid Azure Active Directory join implementation](/azure/active-directory/devices/hybrid-azuread-join-plan) to make sure all prerequisites are met for joining on-premises AD devices to Azure AD.
 
+## Windows Autopilot user-driven hybrid Azure AD join overview
+
+Windows Autopilot user-driven hybrid Azure AD join is an Autopilot solution that automates the configuration of Windows for the end-user on a new device delivered directly from an OEM or reseller without the need for IT intervention. Windows Autopilot user-driven deployments uses the existing Windows installation installed by the OEM at the factory. The end-user only needs to perform a minimal amount of actions during the deployment process such as:
+
+- Powering on the device.
+- In certain scenarios, selecting the language, locale, and keyboard layout.
+- Connecting to a wireless network if the device is not connected to a wired network.
+- Signing into the device with the end-user's on-premises domain credentials.
+- In certain scenarios, signing into Azure AD with the end-user's AAD credentials.
+
+Windows Autopilot user-driven deployments can perform the following tasks during the deployment:
+
+- Joins the device to an on-premises domain.
+- Registers the device with Azure AD.
+- Enrolls the device in Intune.
+- Installs applications.
+- Applies device configuration policies such as BitLocker and Windows Hello for Business.
+- Checks for compliance.
+- Enrollment Status Page (ESP) can be used to prevent an end-user from using the device until it is fully configured.
+
+Windows Autopilot user-driven deployments consist of two phases:
+
+- Device ESP phase: Windows is configured and applications and policies assigned to the device are applied.
+- User ESP phase: End-user signs into the device for the first time using on-premises domain credentials and applications and policies assigned to the user are applied.
+
+Once the Windows Autopilot user-driven deployment is complete, the device is ready for the end-user to use. The Autopilot deployment will prompt the end-user to sign out of the device. Once signed out, the end-user can sign in with their on-premises domain credentials and begin to use the device.
+
 ## Workflow
+
+The following steps are needed to configure and then perform a Windows Autopilot user-driven hybrid Azure AD join in Intune:
 
 Set up Windows automatic Intune enrollment > Install the Intune Connector > Increase the computer account limit in the Organizational Unit (OU) > Register devices as Autopilot devices > Create a device group > Configure and assign Autopilot Enrollment Status Page (ESP) > Create and assign hybrid Azure AD join Autopilot profile > Configure and assign domain join profile > Assign Autopilot device to a user (optional) > Deploy device to end-user
 
