@@ -21,7 +21,7 @@ ms.reviewer: mstewart,aaroncz
 Following the guidance in this topic will enable you to set up a lab for evaluating Configuration Manager with simulated real-life activities.  
 
 > [!NOTE]
-> Microsoft offers a pre-configured version of this lab using an evaluation version of Configuration Manager. For more information, see [Windows and Office deployment and management lab kit](/microsoft-365/enterprise/modern-desktop-deployment-and-management-lab). 
+> Microsoft offers a pre-configured version of this lab using an evaluation version of Configuration Manager. For more information, see [Microsoft Intune and Configuration Manager Evaluation Lab Kit](https://www.microsoft.com/en-us/evalcenter/evaluate-mem-evaluation-lab-kit). 
 
 ##  <a name="BKMK_LabCore"></a> Core components  
  Setting up your environment for Configuration Manager requires some core components to support the installation of Configuration Manager.    
