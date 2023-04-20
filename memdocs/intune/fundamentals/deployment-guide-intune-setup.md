@@ -7,7 +7,7 @@ keywords: migrate from configuration manager to intune, move from airwatch to in
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/29/2023
+ms.date: 04/20/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -45,10 +45,12 @@ This migration guide lists and describes your options to adopt or move to Intune
 Use this guide to determine the best migration approach, and get some guidance & recommendations.
 
 > [!TIP]
-> [!INCLUDE [tips-guidance-plan-deploy-guides](../includes/tips-guidance-plan-deploy-guides.md)]
-
-> [!TIP]
-> As a companion to this article, we recommend using the [Microsoft Intune setup guide](https://go.microsoft.com/fwlink/?linkid=2224812) when signed in to the Microsoft 365 Admin Center. This guide will customize your experience based on your environment.  To review best practices without signing in and activating automated setup features, go to the [M365 Setup portal](https://go.microsoft.com/fwlink/?linkid=2223058).
+> 
+> - [!INCLUDE [tips-guidance-plan-deploy-guides](../includes/tips-guidance-plan-deploy-guides.md)]
+>
+> - As a companion to this article, the Microsoft 365 admin center also has some setup guidance. The guide customizes your experience based on your environment. At [Microsoft Intune setup guide](https://go.microsoft.com/fwlink/?linkid=2224812), sign in with the **Global Reader** (at a minimum) to access the deployment guides. For more information on these deployment guides and the roles needed, go to [Advanced deployment guides for Microsoft 365 and Office 365 products](/microsoft-365/enterprise/setup-guides-for-microsoft-365).
+>
+>   To review best practices without signing in and activating the automated setup features, go to the [M365 Setup portal](https://go.microsoft.com/fwlink/?linkid=2223058).
 
 ## Before you begin
 
