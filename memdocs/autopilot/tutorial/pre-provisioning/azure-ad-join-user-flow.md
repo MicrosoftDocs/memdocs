@@ -38,7 +38,7 @@ For an overview of the Windows Autopilot for pre-provisioned deployment Azure AD
 
 > [!IMPORTANT]
 >
-> The user flow Azure AD join process requires connectivity to the Internet.
+> The user flow portion of the Azure AD join process requires connectivity to the Internet.
 
 Once the technician flow step of the pre-provisioning process completes successfully and the device is resealed, the device can be delivered to the end-user. The end-user then completes the normal Windows Autopilot user-driven process. This final step is know as the user flow and involves the following steps:
 
@@ -70,7 +70,7 @@ Once the technician flow step of the pre-provisioning process completes successf
 
     The first two phases of **Device preparation** and **Device setup** are part of the Device ESP while the final phase of **Account setup** is part of the User ESP.
 
-    For the user flow of Windows Autopilot for pre-provisioned deployment, the **Device setup** phase of the Device ESP and the **Account setup** phase of the User ESP runs. The **Device preparation** phase of the Device ESP doesn't run during the user flow since it already ran during the [Technian flow](azure-ad-join-technician-flow.md).
+    For the user flow of Windows Autopilot for pre-provisioned deployment, the **Device setup** phase of the Device ESP and the **Account setup** phase of the User ESP runs. The **Device preparation** phase of the Device ESP doesn't run during the user flow since it already ran during the [Technician flow](azure-ad-join-technician-flow.md).
 
     > [!NOTE]
     >

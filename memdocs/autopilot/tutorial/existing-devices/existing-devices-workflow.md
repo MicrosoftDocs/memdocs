@@ -35,8 +35,8 @@ For scenarios where Windows needs to be reinstalled or updated to a newer versio
 
 Windows Autopilot deployment for existing devices is useful for the following scenarios:
 
-- Repurpose an existing device that is not yet an Autopilot device.
-- Migrate an on-premises domain joined device that is not part of Azure AD to an Azure AD join device.
+- Repurpose an existing device that isn't yet an Autopilot device.
+- Migrate an on-premises domain joined device that isn't part of Azure AD to an Azure AD join device.
 - Convert an on-premises domain joined device that is hybrid Azure AD joined to an Azure AD join device.
 - Reinstall Windows on devices that need to be repaired. For example, a device that has a corrupted Windows installation or where the hard drive was replaced.
 - Upgrade older versions of Windows that don't support Azure AD (Windows 8.1) to a version of Windows that does support Azure AD (Windows 10/Windows 11).

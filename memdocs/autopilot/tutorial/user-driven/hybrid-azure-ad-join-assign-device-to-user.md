@@ -44,7 +44,7 @@ For an overview of the Windows Autopilot user-driven hybrid Azure AD join workfl
 
 ## Next step: Deploy the device
 
-At this point, the device is ready to be deployed. If desired, deploy any additional applications, policies, and profiles that should run during Autopilot to the device group that the device is a member of. Boot the device with a fresh install of Windows and the Autopilot deployment should begin.
+At this point, the device is ready to be deployed. If desired, deploy additional applications, policies, and profiles that should run during Autopilot to the device group that the device is a member of. Boot the device with a fresh install of Windows and the Autopilot deployment should begin.
 
 ## More information
 

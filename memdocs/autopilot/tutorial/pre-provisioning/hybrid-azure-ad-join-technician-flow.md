@@ -40,7 +40,7 @@ For an overview of the Windows Autopilot for pre-provisioned deployment hybrid A
 
 > [!IMPORTANT]
 >
-> The technician flow hybrid Azure AD join process requires connectivity to the Internet. It doesn't require connectivity to a domain controller. Connectivity to a domain controller to perform an on-premises domain join is not needed until the next step of [User flow](hybrid-azure-ad-join-user-flow.md) is run.
+> The technician flow portion of the hybrid Azure AD join process requires connectivity to the Internet. It doesn't require connectivity to a domain controller. Connectivity to a domain controller to perform an on-premises domain join isn't needed until the next step of [User flow](hybrid-azure-ad-join-user-flow.md) is run.
 
 [!INCLUDE [Technician flow](../includes/technician-flow.md)]
 

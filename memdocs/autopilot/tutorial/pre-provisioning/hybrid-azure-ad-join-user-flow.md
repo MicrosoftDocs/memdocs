@@ -40,7 +40,7 @@ For an overview of the Windows Autopilot for pre-provisioned deployment hybrid A
 
 > [!IMPORTANT]
 >
-> The user flow hybrid Azure AD join process requires connectivity to both the Internet and a domain controller.
+> The user flow hybrid portion of the Azure AD join process requires connectivity to both the Internet and a domain controller.
 
 Once the technician flow step of the pre-provisioning process completes successfully and the device is resealed, the device can be delivered to the end-user. The end-user then completes the normal Windows Autopilot user-driven process. This final step is know as the user flow and involves the following steps:
 

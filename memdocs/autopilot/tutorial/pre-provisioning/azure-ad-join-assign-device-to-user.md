@@ -1,6 +1,6 @@
 ---
 title: Windows Autopilot for pre-provisioned deployment Azure AD join - Step 7 of 9 - Assign Autopilot device to a user
-description: How to - Windows Autopilot for pre-provisioned deployment Azure AD joi with pre-provisioning - Step 7 of 9 - Assign Autopilot device to a user.
+description: How to - Windows Autopilot for pre-provisioned deployment Azure AD join with pre-provisioning - Step 7 of 9 - Assign Autopilot device to a user.
 ms.prod: windows-client
 ms.localizationpriority: medium
 author: frankroj
