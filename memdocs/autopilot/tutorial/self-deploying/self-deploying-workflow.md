@@ -45,7 +45,7 @@ Windows Autopilot self-deploying mode can perform the following tasks during the
 - Applies device configuration policies such as BitLocker and Windows Hello for Business.
 - Checks for compliance.
 
-Once the Windows Autopilot self-deploying mode is complete, the device goes to the Windows sign-on screen and is ready for use. Any end-user signing into the device needs to sign on with their Azure AD credentials. For devices such as kiosks, it's also possible to configure Intune policies that automatically signs a user into the device.
+Once the Windows Autopilot self-deploying mode is complete, the device goes to the Windows sign-on screen and is ready for use. Any end-user signing into the device needs to sign on with their Azure AD credentials. For devices such as kiosks, it's also possible to configure Intune policies that automatically sign a user into the device.
 
 ## Workflow
 
