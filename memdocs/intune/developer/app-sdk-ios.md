@@ -224,10 +224,8 @@ Alternatively, apps can override these Azure AD settings at runtime. To do this,
 4. Ensure the steps to give your iOS app permissions to the app protection policy (APP) service are followed. Use the instructions in the [getting started with the Intune SDK guide](app-sdk-get-started.md#next-steps-after-integration) under "[Give your app access to the Intune app protection service (optional)](app-sdk-get-started.md#give-your-app-access-to-the-intune-app-protection-service-optional)".  
 
 > [!NOTE]
-> If the App Protection Policy is related to Managed Devices, it is necessary to create an App Configuration Profile of the application that has Intune integrated.
-
-
-> [!NOTE]
+> If the app protection policy is related to managed devices, creating an app configuration profile of the application that has Intune integrated is also necessary.
+>
 > The Info.plist approach is recommended for all settings which are static and do not need to be determined at runtime. Values assigned to the `IntuneMAMSettings` class properties at runtime take precedence over any corresponding values specified in the Info.plist, and will persist even after the app is restarted. The SDK will continue to use them for policy check-ins until the user is unenrolled or the values are cleared or changed.
 
 ### Special considerations when using MSAL for app-initiated authentication
