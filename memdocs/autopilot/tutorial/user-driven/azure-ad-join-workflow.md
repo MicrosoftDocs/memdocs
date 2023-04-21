@@ -28,11 +28,11 @@ Before beginning, refer to the [How to: Plan your Azure AD join implementation](
 
 ## Windows Autopilot user-driven Azure AD join overview
 
-Windows Autopilot user-driven Azure AD join is an Autopilot solution that automates the configuration of Windows for the end-user on a new device delivered directly from an OEM or reseller without the need for IT intervention. Windows Autopilot user-driven deployments uses the existing Windows installation installed by the OEM at the factory. The end-user only needs to perform a minimal amount of actions during the deployment process such as:
+Windows Autopilot user-driven Azure AD join is an Autopilot solution that automates the configuration of Windows on a new device delivered directly from an OEM or reseller without the need for IT intervention. Windows Autopilot user-driven deployments use the existing Windows installation installed by the OEM at the factory. The end-user only needs to perform a minimal number of actions during the deployment process such as:
 
 - Powering on the device.
 - In certain scenarios, selecting the language, locale, and keyboard layout.
-- Connecting to a wireless network if the device is not connected to a wired network.
+- Connecting to a wireless network if the device isn't connected to a wired network.
 - Signing into Azure AD with the end-user's Azure AD credentials.
 
 Windows Autopilot user-driven deployments can perform the following tasks during the deployment:
@@ -42,14 +42,14 @@ Windows Autopilot user-driven deployments can perform the following tasks during
 - Installs applications.
 - Applies device configuration policies such as BitLocker and Windows Hello for Business.
 - Checks for compliance.
-- Enrollment Status Page (ESP) can be used to prevent an end-user from using the device until it is fully configured.
+- Enrollment Status Page (ESP) can be used to prevent an end-user from using the device until it's fully configured.
 
 Windows Autopilot user-driven deployments consist of two phases:
 
 - Device ESP phase: Windows is configured and applications and policies assigned to the device are applied.
 - User ESP phase: Applications and policies assigned to the user are applied.
 
-Once the Windows Autopilot user-driven deployment is complete, the device is ready for the end-user to use and the're immediately sent to the Desktop.
+Once the Windows Autopilot user-driven deployment is complete, the device is ready for the end-user to use and they're immediately sent to the Desktop.
 
 ## Workflow
 

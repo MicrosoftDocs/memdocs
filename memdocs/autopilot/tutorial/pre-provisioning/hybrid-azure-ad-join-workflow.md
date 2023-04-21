@@ -32,13 +32,13 @@ Before beginning, refer to the [Plan your hybrid Azure Active Directory join imp
 
 ## Windows Autopilot for pre-provisioned deployment hybrid Azure AD join overview
 
-Windows Autopilot for pre-provisioned deployment hybrid Azure AD join is an Autopilot solution that automates the configuration of Windows for the end-user on a new device delivered directly from an IT department, OEM, or reseller. Windows Autopilot for pre-provisioned deployment deployments uses the existing Windows installation installed by the OEM at the factory. The end-user only needs to perform a minimal amount of actions during the deployment process such as:
+Windows Autopilot for pre-provisioned deployment hybrid Azure AD join is an Autopilot solution that automates the configuration of Windows on a new device delivered directly from an IT department, OEM, or reseller. Windows Autopilot for pre-provisioned deployment uses the existing Windows installation installed by the OEM at the factory. The end-user only needs to perform a minimal number of actions during the deployment process such as:
 
 - Powering on the device.
 - In certain scenarios, selecting the language, locale, and keyboard layout.
-- Connecting to a wireless network if the device is not connected to a wired network.
+- Connecting to a wireless network if the device isn't connected to a wired network.
 - Signing into the device with the end-user's on-premises domain credentials.
-- In certain scenarios, signing into Azure AD with the end-user's AAD credentials.
+- In certain scenarios, signing into Azure AD with the end-user's Azure AD credentials.
 
 Windows Autopilot for pre-provisioned deployment can perform the following tasks during the deployment:
 
@@ -48,28 +48,28 @@ Windows Autopilot for pre-provisioned deployment can perform the following tasks
 - Installs applications.
 - Applies device configuration policies such as BitLocker and Windows Hello for Business.
 - Checks for compliance.
-- Enrollment Status Page (ESP) can be used to prevent an end-user from using the device until it is fully configured.
+- Enrollment Status Page (ESP) can be used to prevent an end-user from using the device until it's fully configured.
 
-Windows Autopilot for pre-provisioned deployment consist of two phases:
+Windows Autopilot for pre-provisioned deployment consists of two phases:
 
 - Device ESP phase: Windows is configured and applications and policies assigned to the device are applied.
 - User ESP phase: End-user signs into the device for the first time using on-premises domain credentials and applications and policies assigned to the user are applied.
 
-The main difference between Windows Autopilot user-driven deployment and Windows Autopilot are:
+The main difference between Windows Autopilot user-driven deployment and Windows Autopilot is:
 
 - Windows Autopilot user-driven deployment: Both the Device ESP phase and the User ESP phase occur when the end-user goes through the Autopilot deployment after turning on the device for the first time.
 
-- Windows Autopilot for for pre-provisioned deployment: Device ESP phase and User ESP phase are split and occur at two different points in time.
+- Windows Autopilot for pre-provisioned deployment: Device ESP phase and user ESP phase are split and occur at two different points in time.
 
-  - The Device ESP phase is handled by the IT department, OEM, or reseller. This phase is known as the **Technician flow**.
+  - The IT department, OEM, or reseller handles the device ESP phase. This phase is known as the **Technician flow**. Once the Technician flow is complete, the device is powered down and delivered to the end-user.
 
-  - User ESP phase occurs when the end-user goes through the Autopilot deployment after turning on the device for the first time. A portion of Device ESP also reruns to ensure there are no new applications or policies assigned to the device since the Technician flow ran. This phase is knows as the **User flow**.
+  - When the end-user receives the device, they turn it on for the first time, and the device undergoes the user ESP phase. A portion of device ESP also reruns to ensure there are no new applications or policies assigned to the device since the Technician flow ran. This phase is known as the **User flow**.
 
-The deployment is split up between the Technician flow and User flow phases so that the deployment is faster when the end-user receives the device and turns it on for the first time. The deployment is faster when the end-user receives the device because a portion of the deployment has already been run by the IT department, OEM, or reseller during the Technician flow.
+The deployment is split up between the Technician flow and User flow phases so that the deployment is faster when the end-user receives the device. The deployment is faster when the end-user receives the device because the IT department, OEM, or reseller has completed the first portion of the deployment during the Technician flow.
 
-The one possible disadvantage of Windows Autopilot for pre-provisioned deployment over Windows Autopilot user-driven deployment is that if the OEM or reseller is unable to perform the Technician flow, then the device may need to first go to the organization's IT department where they will run the Technician flow. This prevents the device from being shipped and delivered to the end-user directly from the OEM or reseller which can lengthen the amount of time before the end-user receives the device.
+The one possible disadvantage of Windows Autopilot for pre-provisioned deployment over Windows Autopilot user-driven deployment is that if the OEM or reseller is unable to perform the Technician flow, then the device may need to first go to the organization's IT department where they'll run the Technician flow. This extra step prevents the device from being shipped and delivered to the end-user directly from the OEM or reseller. This extra step can lengthen the amount of time before the end-user receives the device.
 
-Once the Windows Autopilot for pre-provisioned deployment is complete, the device is ready for the end-user to use. The Autopilot deployment will prompt the end-user to sign out of the device. Once signed out, the end-user can sign in with their on-premises domain credentials and begin to use the device.
+Once the Windows Autopilot for pre-provisioned deployment is complete, the device is ready for the end-user to use. The Autopilot deployment prompts the end-user to sign out of the device. Once the device is signed out, the end-user can sign back in with their on-premises domain credentials and begin to use the device.
 
 ## Workflow
 
