@@ -40,7 +40,7 @@ For an overview of the Windows Autopilot user-driven hybrid Azure AD join workfl
 
 ## Create and assign a domain join profile
 
-[!INCLUDE [Create and assign a domain join profile](../includes/domain-join-profile.md)
+[!INCLUDE [Create and assign a domain join profile](../includes/domain-join-profile.md)]
 
 ## Next step: Assign Autopilot device to a user (optional)
 

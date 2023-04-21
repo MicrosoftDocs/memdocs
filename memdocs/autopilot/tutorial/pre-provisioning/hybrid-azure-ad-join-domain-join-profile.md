@@ -42,7 +42,7 @@ For an overview of the Windows Autopilot for pre-provisioned deployment hybrid A
 
 ## Create and assign a domain join profile
 
-[!INCLUDE [Create and assign a domain join profile](../includes/domain-join-profile.md)
+[!INCLUDE [Create and assign a domain join profile](../includes/domain-join-profile.md)]
 
 ## Next step: Assign Autopilot device to a user (optional)
 
