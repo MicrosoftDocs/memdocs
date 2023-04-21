@@ -56,6 +56,16 @@ To ensure that the device can run an Autopilot deployment after a reset, you mus
    - [Pre-provisioning hybrid Azure AD join: Create and assign a pre-provisioned hybrid Azure AD join Autopilot profile](../pre-provisioning/hybrid-azure-ad-join-autopilot-profile.md)
    - [Self-deploying mode: Create and assign self-deploying Autopilot profile](../self-deploying/self-deploying-autopilot-profile.md)
 
+## Ensure domain join profile is assigned to all devices
+
+For Autopilot scenarios that utilize hybrid Azure AD join and run after the Windows Autopilot deployment for existing devices task sequence completes, at [Step 8: Configure and assign domain join profile](../user-driven/hybrid-azure-ad-join-domain-join-profile.md) for the [Windows Autopilot user-driven hybrid Azure AD join](../user-driven/hybrid-azure-ad-join-workflow.md) scenario or [Step 8: Configure and assign domain join profile](../pre-provisioning/hybrid-azure-ad-join-domain-join-profile.md) for the [Windows Autopilot for pre-provisioned deployment hybrid Azure AD join](../pre-provisioning/hybrid-azure-ad-join-workflow.md) scenario, make sure that the domain join profile is assigned to **All devices**. The domain join profile needs to be assigned to **All devices** because:
+
+- If the existing device hasn't ever joined Azure AD or been registered in Azure AD before the Autopilot deployment runs, then there isn't any Azure AD device for the device in Intune. The Azure AD device is created in Intune when the device joins or registers with Azure AD as part of the Autopilot deployment.
+
+- If the existing device hasn't ever registered as an Autopilot device before the Autopilot deployment runs, then there isn't any Autopilot device for the device in Intune. Normally a device has to be an Autopilot device before the Autopilot deployment can run on it. However, for the Windows Autopilot deployment for existing devices scenario, registering the device as an Autopilot device isn't required since it uses the Autopilot profile JSON file instead. The device is instead registered as an Autopilot device after the Autopilot deployment completes via the methods in the [Register device for Windows Autopilot](#register-device-for-windows-autopilot) section.
+
+In both of the above scenarios, there's no device that can be added to a device group before the Autopilot deployment begins. Since there's no device group that contains the device, there's no device group that the domain join profile can be assigned to before the Autopilot deployment begins. Assigning the domain join profile to **All devices** resolves this problem and ensures that the device can pick up the domain join profile before it's either an Azure AD device or Autopilot device.
+
 ## More information
 
 For more information on registering the device for Windows Autopilot, see the following article(s):
