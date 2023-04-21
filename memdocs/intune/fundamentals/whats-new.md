@@ -162,7 +162,7 @@ You can now use the **IcmpTypesAndCodes** setting to configure inbound and outbo
 
 Applies to:
 
-- Windows 10, Windows 11, and Windows Server
+- Windows 11 and later
 
 #### Manage Windows LAPS with Intune polices (public preview)<!-- 11890571  -->  
 Now available in a public preview, manage Windows Local Administrator Password Solution (Windows LAPS) with Microsoft Intune [Account protection policies](../protect/endpoint-security-account-protection-policy.md). To get started, see [Intune support for Windows LAPS](../protect/windows-laps-overview.md).
