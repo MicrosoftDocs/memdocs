@@ -26,7 +26,30 @@ The purpose of this tutorial is to provide a step by step guide for all the step
 
 Before beginning, refer to the [How to: Plan your Azure AD join implementation](/azure/active-directory/devices/azureadjoin-plan) to make sure all prerequisites are met for joining devices to Azure AD.
 
+## Windows Autopilot self-deploying mode overview
+
+Windows Autopilot self-deploying mode is an Autopilot solution that automates the configuration of Windows on a new device delivered directly from an IT department, OEM, or reseller. Windows Autopilot for pre-provisioned deployment uses the existing Windows installation installed by the OEM at the factory. Windows Autopilot self-deploying mode is designed for kiosk like devices or devices shared by multiple users. For this reason, Windows Autopilot self-deploying mode doesn't support assigning users to the device. Additionally, Windows Autopilot self-deploying mode only supports Azure AD join. It doesn't support hybrid Azure AD join.
+
+The main advantage of Windows Autopilot self-deploying mode over other Autopilot deployments methods is that it minimizes the interaction needed during the initial deployment of the device because there's no single user assigned to the device. After first powering on the device, usually the only interactions needed, if any, are:
+
+- In certain scenarios, selecting the language, locale, and keyboard layout.
+- Connecting to a wireless network if the device isn't connected to a wired network.
+
+In certain scenarios after first turning on the device, such as when the device is on a wired network connection, zero interaction may be possible.
+
+Windows Autopilot self-deploying mode can perform the following tasks during the deployment:
+
+- Joins the device to Azure AD.
+- Enrolls the device in Intune.
+- Installs applications.
+- Applies device configuration policies such as BitLocker and Windows Hello for Business.
+- Checks for compliance.
+
+Once the Windows Autopilot self-deploying mode is complete, the device goes to the Windows sign-on screen and is ready for use. Any end-user signing into the device needs to sign on with their Azure AD credentials. For devices such as kiosks, it's also possible to configure Intune policies that automatically sign a user into the device.
+
 ## Workflow
+
+The following steps are needed to configure and then perform a Windows Autopilot for pre-provisioned deployment hybrid Azure AD join in Intune:
 
 Set up Windows automatic Intune enrollment > Register devices as Autopilot devices > Create a device group > Configure and assign Autopilot Enrollment Status Page (ESP) > Create and assign Autopilot profile > Deploy device
 

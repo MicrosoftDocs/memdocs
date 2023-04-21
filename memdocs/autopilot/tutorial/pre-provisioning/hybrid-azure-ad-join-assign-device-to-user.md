@@ -1,6 +1,6 @@
 ---
-title: Windows Autopilot for pre-provisioned deployment hybrid Azure AD join - Step 9 of 11 - Technician flow
-description: How to - Windows Autopilot for pre-provisioned deployment hybrid Azure AD join - Step 9 of 11 - Technician flow.
+title: Windows Autopilot for pre-provisioned deployment hybrid Azure AD join - Step 9 of 11 - Assign Autopilot device to a user
+description: How to - Windows Autopilot for pre-provisioned deployment hybrid Azure AD join with pre-provisioning - Step 9 of 11 - Assign Autopilot device to a user.
 ms.prod: windows-client
 ms.localizationpriority: medium
 author: frankroj
@@ -18,7 +18,7 @@ appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
 ---
 
-# Pre-provision hybrid Azure AD join: Technician flow
+# Pre-provision hybrid Azure AD join: Assign Autopilot device to a user (optional)
 
 Windows Autopilot for pre-provisioned deployment hybrid Azure AD join steps:
 - Step 1: [Set up Windows automatic Intune enrollment](hybrid-azure-ad-join-automatic-enrollment.md)
@@ -29,26 +29,28 @@ Windows Autopilot for pre-provisioned deployment hybrid Azure AD join steps:
 - Step 6: [Configure and assign Autopilot Enrollment Status Page (ESP)](hybrid-azure-ad-join-esp.md)
 - Step 7: [Create and assign hybrid Azure AD join Autopilot profile](hybrid-azure-ad-join-autopilot-profile.md)
 - Step 8: [Configure and assign domain join profile](hybrid-azure-ad-join-domain-join-profile.md)
-- Step 9: [Assign Autopilot device to a user (optional)](hybrid-azure-ad-join-assign-device-to-user.md)
 > [!div class="checklist"]
-> - **Step 10: Technician flow**
+> - **Step 9: Assign Autopilot device to a user (optional)**
+- Step 10: [Technician flow](hybrid-azure-ad-join-technician-flow.md)
 - Step 11: [User flow](hybrid-azure-ad-join-user-flow.md)
 
 For an overview of the Windows Autopilot for pre-provisioned deployment hybrid Azure AD join workflow, see [Windows Autopilot for pre-provisioned deployment hybrid Azure AD join overview](hybrid-azure-ad-join-workflow.md)
 
-## Technician flow
+## Assign Autopilot device to a user (optional)
 
-> [!IMPORTANT]
->
-> The technician flow portion of the hybrid Azure AD join process requires connectivity to the Internet. It doesn't require connectivity to a domain controller. Connectivity to a domain controller to perform an on-premises domain join isn't needed until the next step of [User flow](hybrid-azure-ad-join-user-flow.md) is run.
+[!INCLUDE [How to assign an Autopilot device to a user](../includes/assign-autopilot-device-to-user.md)]
 
-[!INCLUDE [Technician flow](../includes/technician-flow.md)]
+## Assigning Autopilot device to a user via hardware hash CSV file
 
-## Next step: User flow
+[!INCLUDE [How to assign an Autopilot device to a user via hardware hash CSV file](../includes/assign-autopilot-device-to-user-via-csv.md)]
+
+## Next step: Technician flow
 
 > [!div class="nextstepaction"]
-> [Step 11: User flow](hybrid-azure-ad-join-user-flow.md)
+> [Step 10: Technician flow](hybrid-azure-ad-join-technician-flow.md)
 
 ## More information
 
-[!INCLUDE [More information technician flow](../includes/more-info-technician-flow.md)]
+For more information on assigning a user to an Autopilot device, see the following article(s):
+
+- [Assign a user to a specific Autopilot device](/mem/autopilot/enrollment-autopilot#assign-a-user-to-a-specific-autopilot-device)

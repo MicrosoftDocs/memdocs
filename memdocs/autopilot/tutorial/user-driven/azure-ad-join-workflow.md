@@ -26,7 +26,34 @@ The purpose of this tutorial is to provide a step by step guide for all the step
 
 Before beginning, refer to the [How to: Plan your Azure AD join implementation](/azure/active-directory/devices/azureadjoin-plan) to make sure all prerequisites are met for joining devices to Azure AD.
 
+## Windows Autopilot user-driven Azure AD join overview
+
+Windows Autopilot user-driven Azure AD join is an Autopilot solution that automates the configuration of Windows on a new device delivered directly from an OEM or reseller without the need for IT intervention. Windows Autopilot user-driven deployments use the existing Windows installation installed by the OEM at the factory. The end-user only needs to perform a minimal number of actions during the deployment process such as:
+
+- Powering on the device.
+- In certain scenarios, selecting the language, locale, and keyboard layout.
+- Connecting to a wireless network if the device isn't connected to a wired network.
+- Signing into Azure AD with the end-user's Azure AD credentials.
+
+Windows Autopilot user-driven deployments can perform the following tasks during the deployment:
+
+- Joins the device to Azure AD.
+- Enrolls the device in Intune.
+- Installs applications.
+- Applies device configuration policies such as BitLocker and Windows Hello for Business.
+- Checks for compliance.
+- Enrollment Status Page (ESP) can be used to prevent an end-user from using the device until it's fully configured.
+
+Windows Autopilot user-driven deployments consist of two phases:
+
+- Device ESP phase: Windows is configured and applications and policies assigned to the device are applied.
+- User ESP phase: Applications and policies assigned to the user are applied.
+
+Once the Windows Autopilot user-driven deployment is complete, the device is ready for the end-user to use and they're immediately sent to the Desktop.
+
 ## Workflow
+
+The following steps are needed to configure and then perform a Windows Autopilot user-driven Azure AD join in Intune:
 
 Set up Windows automatic Intune enrollment > Allow users to join devices to Azure AD > Register devices as Autopilot devices > Create a device group > Configure and assign Autopilot Enrollment Status Page (ESP) > Create and assign Autopilot profile > Assign Autopilot device to a user (optional) > Deploy device to end-user
 

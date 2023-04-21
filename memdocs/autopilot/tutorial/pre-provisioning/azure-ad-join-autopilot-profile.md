@@ -18,7 +18,7 @@ appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
 ---
 
-# Pre-provisioning Azure AD join: Create and assign a pre-provisioned Azure AD join Autopilot profile
+# Pre-provision Azure AD join: Create and assign a pre-provisioned Azure AD join Autopilot profile
 
 Windows Autopilot for pre-provisioned deployment Azure AD join steps:
 - Step 1: [Set up Windows automatic Intune enrollment](azure-ad-join-automatic-enrollment.md)
@@ -94,7 +94,7 @@ To create a pre-provisioned Azure AD join Autopilot profile, follow these steps:
 > [!div class="nextstepaction"]
 > [Step 7: Assign Autopilot device to a user (optional)](azure-ad-join-assign-device-to-user.md)
 
-If you don't plant to assign a user to the device, then skip to **[Step 8: Technician flow](azure-ad-join-technician-flow.md)**.
+If you don't plan to assign a user to the device, then skip to **[Step 8: Technician flow](azure-ad-join-technician-flow.md)**.
 
 > [!div class="nextstepaction"]
 > [Step 8: Technician flow](azure-ad-join-technician-flow.md)

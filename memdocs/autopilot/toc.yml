@@ -124,20 +124,8 @@ items:
             href: tutorial/user-driven/hybrid-azure-ad-join-autopilot-profile.md
           - name: Step 8 - Configure and assign domain join profile
             href: tutorial/user-driven/hybrid-azure-ad-join-domain-join-profile.md
-    - name: Windows Autopilot self-deploying mode
-      items:
-      - name: Windows Autopilot self-deploying mode
-        href: tutorial/self-deploying/self-deploying-workflow.md
-      - name: Step 1 - Set up Windows automatic Intune enrollment
-        href: tutorial/self-deploying/self-deploying-automatic-enrollment.md
-      - name: Step 2 - Register devices as Autopilot devices
-        href: tutorial/self-deploying/self-deploying-register-device.md
-      - name: Step 3 - Create a device group
-        href: tutorial/self-deploying/self-deploying-device-group.md
-      - name: Step 4 - Configure and assign Autopilot Enrollment Status Page (ESP)
-        href: tutorial/self-deploying/self-deploying-esp.md
-      - name: Step 5 - Create and assign Autopilot profile
-        href: tutorial/self-deploying/self-deploying-autopilot-profile.md
+          - name: Step 9 - Assign Autopilot device to a user (optional)
+            href: tutorial/user-driven/hybrid-azure-ad-join-assign-device-to-user.md
     - name: Windows Autopilot for pre-provisioned deployment
       items:
       - name: Pre-provisioned Azure AD join
@@ -180,18 +168,26 @@ items:
             href: tutorial/pre-provisioning/hybrid-azure-ad-join-autopilot-profile.md
           - name: Step 8 - Configure and assign domain join profile
             href: tutorial/pre-provisioning/hybrid-azure-ad-join-domain-join-profile.md
-          - name: Step 9 - Technician flow
+          - name: Step 9 - Assign Autopilot device to a user (optional)
+            href: tutorial/pre-provisioning/hybrid-azure-ad-join-assign-device-to-user.md
+          - name: Step 10 - Technician flow
             href: tutorial/pre-provisioning/hybrid-azure-ad-join-technician-flow.md
-          - name: Step 10 - User flow
+          - name: Step 11 - User flow
             href: tutorial/pre-provisioning/hybrid-azure-ad-join-user-flow.md
-    - name: Windows Autopilot Reset
+    - name: Windows Autopilot self-deploying mode
       items:
-      - name: Windows Autopilot Reset
-        href: tutorial/reset/autopilot-reset-overview.md
-      - name: Local Windows Autopilot Reset
-        href: tutorial/reset/local-autopilot-reset.md
-      - name: Remote Windows Autopilot Reset
-        href: tutorial/reset/remote-autopilot-reset.md
+      - name: Windows Autopilot self-deploying mode
+        href: tutorial/self-deploying/self-deploying-workflow.md
+      - name: Step 1 - Set up Windows automatic Intune enrollment
+        href: tutorial/self-deploying/self-deploying-automatic-enrollment.md
+      - name: Step 2 - Register devices as Autopilot devices
+        href: tutorial/self-deploying/self-deploying-register-device.md
+      - name: Step 3 - Create a device group
+        href: tutorial/self-deploying/self-deploying-device-group.md
+      - name: Step 4 - Configure and assign Autopilot Enrollment Status Page (ESP)
+        href: tutorial/self-deploying/self-deploying-esp.md
+      - name: Step 5 - Create and assign Autopilot profile
+        href: tutorial/self-deploying/self-deploying-autopilot-profile.md
     - name: Windows Autopilot deployment for existing devices
       items:
       - name: Windows Autopilot deployment for existing devices
@@ -216,6 +212,14 @@ items:
         href: tutorial/existing-devices/run-autopilot-task-sequence.md
       - name: Step 10 - Register device for Windows Autopilot
         href: tutorial/existing-devices/register-device.md
+    - name: Windows Autopilot Reset
+      items:
+      - name: Windows Autopilot Reset
+        href: tutorial/reset/autopilot-reset-overview.md
+      - name: Local Windows Autopilot Reset
+        href: tutorial/reset/local-autopilot-reset.md
+      - name: Remote Windows Autopilot Reset
+        href: tutorial/reset/remote-autopilot-reset.md
 - name: Reference
   items:
     - name: Deployment processes

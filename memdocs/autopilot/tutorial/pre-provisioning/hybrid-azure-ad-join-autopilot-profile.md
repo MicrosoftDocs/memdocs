@@ -1,6 +1,6 @@
 ---
-title: Windows Autopilot for pre-provisioned deployment hybrid Azure AD join - Step 7 of 10 - Create and assign pre-provisioned hybrid Azure AD join Autopilot profile
-description: How to - Windows Autopilot for pre-provisioned deployment hybrid Azure AD join - Step 7 of 10 - Create and assign hybrid pre-provisioned Azure AD join Autopilot profile.
+title: Windows Autopilot for pre-provisioned deployment hybrid Azure AD join - Step 7 of 11 - Create and assign pre-provisioned hybrid Azure AD join Autopilot profile
+description: How to - Windows Autopilot for pre-provisioned deployment hybrid Azure AD join - Step 7 of 11 - Create and assign hybrid pre-provisioned Azure AD join Autopilot profile.
 ms.prod: windows-client
 ms.localizationpriority: medium
 author: frankroj
@@ -18,7 +18,7 @@ appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
 ---
 
-# Pre-provisioning hybrid Azure AD join: Create and assign a pre-provisioned hybrid Azure AD join Autopilot profile
+# Pre-provision hybrid Azure AD join: Create and assign a pre-provisioned hybrid Azure AD join Autopilot profile
 
 Windows Autopilot for pre-provisioned deployment hybrid Azure AD join steps:
 
@@ -31,8 +31,9 @@ Windows Autopilot for pre-provisioned deployment hybrid Azure AD join steps:
 > [!div class="checklist"]
 > - **Step 7: Create and assign hybrid Azure AD join Autopilot profile**
 - Step 8: [Configure and assign domain join profile](hybrid-azure-ad-join-domain-join-profile.md)
-- Step 9: [Technician flow](hybrid-azure-ad-join-technician-flow.md)
-- Step 10: [User flow](hybrid-azure-ad-join-user-flow.md)
+- Step 9: [Assign Autopilot device to a user (optional)](hybrid-azure-ad-join-assign-device-to-user.md)
+- Step 10: [Technician flow](hybrid-azure-ad-join-technician-flow.md)
+- Step 11: [User flow](hybrid-azure-ad-join-user-flow.md)
 
 For an overview of the Windows Autopilot for pre-provisioned deployment hybrid Azure AD join workflow, see [Windows Autopilot for pre-provisioned deployment hybrid Azure AD join overview](hybrid-azure-ad-join-workflow.md)
 
