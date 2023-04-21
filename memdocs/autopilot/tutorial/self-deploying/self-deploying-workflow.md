@@ -49,11 +49,8 @@ Once the Windows Autopilot self-deploying mode is complete, the device goes to t
 
 ## Workflow
 
-The following steps are needed to configure and then perform a Windows Autopilot for pre-provisioned deployment hybrid Azure AD join in Intune:
+The following steps are needed to configure and then perform a Windows Autopilot self-deploying mode in Intune:
 
-Set up Windows automatic Intune enrollment > Register devices as Autopilot devices > Create a device group > Configure and assign Autopilot Enrollment Status Page (ESP) > Create and assign Autopilot profile > Deploy device
-
-Autopilot self-deploying mode steps:
 > [!div class="checklist"]
 > - Step 1: [Set up Windows automatic Intune enrollment](self-deploying-automatic-enrollment.md)
 > - Step 2: [Register devices as Autopilot devices](self-deploying-register-device.md)

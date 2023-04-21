@@ -48,9 +48,6 @@ Windows Autopilot deployment for existing devices can be viewed as a method to p
 
 The following steps are needed to configure and then perform a Windows Autopilot deployment for existing devices deployment using Intune and Microsoft Configuration Manager:
 
-Set up a Windows Autopilot deployment > Install required modules to obtain Autopilot profile(s) from Intune > Create JSON file for Autopilot profile(s) > Create package for JSON file in Configuration Manager > Distribute JSON package to distribution points in Configuration Manager > Create Autopilot task sequence in Configuration Manager > Create collection in Configuration Manager > Deploy Autopilot task sequence to collection in Configuration Manager > Speed up the deployment process (optional) > Run Autopilot task sequence on device > Register device for Windows Autopilot
-
-Autopilot user-driven Azure AD join steps:
 > [!div class="checklist"]
 > - Step 1: [Set up a Windows Autopilot deployment](setup-autopilot-deployment.md)
 > - Step 2: [Install required modules to obtain Autopilot profile(s) from Intune](install-modules.md)
