@@ -58,9 +58,9 @@ Once the Autopilot for existing devices has been created, modified as needed, an
 
    - **Shutdown**: the device shuts down and power off  as soon as the task sequence completes. Shutting down the device gives the option to further prepare the device and then deliver it to an end-user. OOBE and the Autopilot deployment start when the end-user turns on the device for the first time.
 
-  > [!IMPORTANT]
-  >
-  > If the following conditions are met when the device starts back up after the task sequence completes:
+    > [!IMPORTANT]
+    >
+    > If the following conditions are met when the device starts back up after the task sequence completes:
     >
     > - Device is registered as an Autopilot device in Intune.
     > - Device has an Autopilot profile assigned to it in Intune.
