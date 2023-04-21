@@ -75,13 +75,13 @@ While viewing the details for a policy, select the **View report** button to vie
 
 In the following image, we see that our example policy is assigned to a single device. The view also shows that there's a conflict for the devices *Check-in status*:
 
-:::image type="content" source="./media/windows-laps-reports/check-in-status.png" alt-text="Screen shot of the list of devices that are assigned a Windows LAPS policy." lightbox="./media/windows-laps-reports/check-in-status.png":::
+:::image type="content" source="./media/windows-laps-reports/view-report-details.png" alt-text="Screen shot of the list of devices that are assigned a Windows LAPS policy." lightbox="./media/windows-laps-reports/view-report-details.png":::
 
-When you select the name of a device from the *Device name* column Intune displays details about the settings assigned to that device. IN the following image, we see that the device we selected has two assigned settings. Of the twos settings, *Password Age Days* is identified as being in conflict per the Setting status column. When you select a setting from the setting name column, Intune opens the *Settings Details* pane where you can view details about that setting.
+When you select the name of a device from the *Device name* column Intune displays details about the settings assigned to that device. In the following image, we see that the device we selected has two assigned settings. Of the twos settings, *Password Age Days* is identified as being in conflict per the Setting status column. When you select a setting from the setting name column, Intune opens the *Settings Details* pane where you can view details about that setting.
 
 In the following image, we’ve selected *Password Age Days* so we can learn more about its conflict:
 
-:::image type="content" source="./media/windows-laps-reports/check-in-status.png" alt-text="Screen shot of settings from a LAPS policy, with the Settings Details pane." lightbox="./media/windows-laps-reports/check-in-status.png":::
+:::image type="content" source="./media/windows-laps-reports/profile-settings.png" alt-text="Screen shot of settings from a LAPS policy, with the Settings Details pane." lightbox="./media/windows-laps-reports/profile-settings.png":::
 
 The Settings Details pane shows us that the selected setting, *Password Age Days*,  is configured through two profiles, one named *LAPSSHTest* (the profile we have been viewing), and the other named *Lapsshtestapril*.
 
