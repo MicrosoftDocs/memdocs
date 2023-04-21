@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/06/2023
+ms.date: 04/19/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -66,6 +66,207 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Scripts
 ### Tenant administration
 -->
+
+## Week of April 17, 2023 (Service release 2304)
+
+### App management
+
+#### Changes to iCloud app backup and restore behavior on iOS/iPadOS and macOS devices<!-- 16261392  -->  
+As an app setting, you can select to **Prevent iCloud app backup** for iOS/iPadOS and macOS devices. You have the option to *not* back up managed App Store apps and line-of-business (LOB) apps on iOS/iPadOS, as well as managed App Store apps on macOS devices (macOS LOB apps won’t support this feature), for both user and device licensed VPP/non-VPP apps. This update includes both new and existing App Store/LOB apps sent with and without VPP that are being added to Intune and targeted to users and devices.
+
+Preventing the backup of the specified managed apps will ensure that these apps can be properly deployed via Intune when the device is enrolled and restored from backup. If the admin configures this new setting for new or existing apps in their tenant, managed apps can and will be re-installed for devices, but Intune will no longer allow them to be backed up.
+
+This new setting appears in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by modifying the properties of an app. For an existing app, you can select **Apps** > **iOS/iPadOS** or **macOS** > *select the app* > **Properties** > Assignment **Edit**. If no group assignment has been set, click **Add group** to add a group. Modify either the setting under **VPN**, **Uninstall on device removal**, or **Install as removable**. Then, select **Prevent iCloud app backup**. The **Prevent iCloud app backup** setting is used to prevent backup of app data for the application. Set to **No** to allow the app to be backed up by iCloud.
+
+For more information, see [Changes to applications’ backup and restore behavior on iOS/iPadOS and macOS devices](https://techcommunity.microsoft.com/t5/intune-customer-success/changes-to-applications-backup-and-restore-behavior-on-ios/ba-p/3692064) and [Assign apps to groups with Microsoft Intune](../apps/apps-deploy.md).
+
+#### Prevent automatic updates for Apple VPP apps<!-- 16876430   -->  
+You can control the automatic update behavior for Apple VPP at the per-app assignment level using the **Prevent automatic updates** setting. This setting is available in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **iOS/iPadOS** or **macOS** > *Select a volume purchase program app* > **Properties** > **Assignments** > *Select an AAD group* > **App settings**.
+
+Applies to:
+
+- iOS/iPadOS
+- macOS
+
+### Device configuration
+
+#### Updates to the macOS Settings Catalog <!-- 17673709  -->  
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
+
+A new setting is available in the Settings Catalog. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can see these settings at **Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform > **Settings catalog** for profile type.
+
+The new setting is located under:
+
+**Microsoft AutoUpdate (MAU) > [targeted app]**:
+
+- Update channel override
+
+The following settings have been deprecated:
+
+**Microsoft AutoUpdate (MAU) > [targeted app]**:
+
+- Channel Name (Deprecated)
+
+**Privacy > Privacy Preferences Policy Control > Services > Listen Event or Screen Capture**:
+
+- Allowed
+
+Applies to:
+
+- macOS
+
+For more information about configuring Settings Catalog profiles in Intune, go to [Create a policy using settings catalog](../configuration/settings-catalog.md).
+
+#### The Microsoft Enterprise SSO plug-in for Apple devices is now generally available<!-- 17826329  -->  
+In Microsoft Intune, there's a Microsoft Enterprise SSO plug-in. This plug-in provides single sign-on (SSO) to iOS/iPadOS and macOS apps and websites that use Microsoft Azure AD for authentication.
+
+This plug-in is now generally available (GA).
+
+For more information about configuring the Microsoft Enterprise SSO plug-in for Apple devices in Intune, go to [Microsoft Enterprise SSO plug-in in Microsoft Intune](../configuration/use-enterprise-sso-plug-in-ios-ipados-macos.md).
+
+Applies to:
+
+- iOS/iPadOS
+- macOS
+
+#### Disable Activation Lock device action for supervised macOS devices<!-- 16813146  -->  
+
+You can now use the **Disable Activation Lock** device action in Intune to bypass Activation Lock on Mac devices without requiring the current username or password. This new action is available in **Devices** > **macOS** > select one of your listed devices > **Disable Activation Lock**.
+
+More information on managing Activation Lock is available at [Bypass iOS/iPadOS Activation Lock with Intune](../remote-actions/device-activation-lock-disable.md) or on Apple's website at [Activation Lock for iPhone, iPad, and iPod touch - Apple Support](https://support.apple.com/en-us/HT201365).
+
+Applies to:
+
+- macOS 10.15 or later
+
+#### ServiceNow Integration is now Generally Available (GA)<!-- 18163832  -->  
+Now generally available, you can view a list of ServiceNow incidents associated with the user you've selected in the Intune Troubleshooting workspace.  This new feature will be available under **Troubleshooting + Support** > select a user > **ServiceNow Incidents**.  The list of incidents shown have a direct link back to the source incident and show key information from the incident.  All incidents listed will link the "Caller" identified in the incident with the user selected for Troubleshooting.
+
+For more information go to [Use the troubleshooting portal to help users at your company](service-now-integration.md).
+
+#### Additional permissions to support administrators in controlling delivery of organization messages<!-- 16982298  -->  
+
+With additional permissions administrators can control delivery of content created and deployed from Organizational messages as well as the delivery of content from Microsoft to users.
+
+The **Update organizational message control** RBAC permission for organizational messages, determines who can change the Organizational Messages toggle to allow or block Microsoft direct messages. This permission is also added to the **Organizational Messages Manager** built-in role.
+
+Existing custom roles for managing Organizational Messages must be modified to add this permission for users to modify this setting.
+
+- For more information, about role-based access control (RBAC), see [RBAC with Microsoft Intune](../fundamentals/role-based-access-control.md).
+- For more information, about prerequisites for organization messages, see [Organizational messages prerequisites](../remote-actions/organizational-messages-prerequisites.md#role-based-access-control-requirements).
+
+### Device management
+
+#### Endpoint security firewall rules support for ICMP type<!-- 5653356  -->  
+You can now use the **IcmpTypesAndCodes** setting to configure inbound and outbound rules for [Internet Control Message Protocol](/windows/security/threat-protection/windows-firewall/create-an-inbound-icmp-rule) (ICMP) as part of a firewall rule. This setting is available in the [*Microsoft Defender Firewall rules*](../protect/endpoint-security-firewall-policy.md#devices-managed-by-intune) profile for the *Windows 10, Windows 11, and Windows Server* platform.
+
+Applies to:
+
+- Windows 11 and later
+
+#### Manage Windows LAPS with Intune polices (public preview)<!-- 11890571  -->  
+Now available in a public preview, manage Windows Local Administrator Password Solution (Windows LAPS) with Microsoft Intune [Account protection policies](../protect/endpoint-security-account-protection-policy.md). To get started, see [Intune support for Windows LAPS](../protect/windows-laps-overview.md).
+
+[Windows LAPS](/windows-server/identity/laps/laps-overview) is a Windows feature that allows you to manage and backs up the password of a local administrator account on your Azure Active Directory-joined or Windows Server Active Directory-joined devices.
+
+To manage LAPS, Intune configures the Windows [LAPS configuration service provider](/windows/client-management/mdm/LAPS-csp) (CSP) that is built-in to Windows devices, and which takes precedence over other sources of Windows LAPS configurations, like GPOs or the Microsoft Legacy LAPS tool. Some of the capabilities you can use when Intune to manages Windows LAPS include:
+
+- Define password requirements like complexity and length that apply to the local administrator accounts on a device.
+- Configure devices to rotate their local admin account passwords on a schedule, and backup the account and password in your Azure Active Directory or on-premises Active Directory.
+- Use an Intune device action from the admin center to manually rotate the password for an account on your own schedule.
+- View account details from within the Intune admin center, like the account name and password. This can help you recover devices that are otherwise inaccessible.
+- Use Intune reports to monitor your LAPS policies, and when devices last rotated passwords manually or by schedule.  
+
+Applies to:
+
+- Windows 10
+- Windows 11
+
+#### New settings available for macOS software update policies<!-- 16646756  -->  
+MacOS software update policies now include the following settings to help manage when updates install on a device. These are available when the *All other updates* update type is configured to *Install later*:
+
+- **Max User Deferrals**:  When the *All other updates* update type is configured to *Install later*, this setting allows you to specify the maximum number of times a user can postpone a minor OS update before it’s installed. The system prompts the user once a day. Available for devices running macOS 12 and later.
+
+- **Priority**: When the *All other updates* update type is configured to *Install later*, this setting allows you to specify values of *Low* or *High* for the scheduling priority for downloading and preparing minor OS updates. Available for devices running macOS 12.3 and later.
+
+For more information, see [Use Microsoft Intune policies to manage macOS software updates](../protect/software-updates-macos.md).
+
+Applies to:
+
+- macOS
+
+#### Introducing the new partner portals page<!-- 17829024  -->  
+You can now manage hardware specific information on your HP or Surface devices from our partner portals page.
+
+The HP link will take you to HP Connect where you can update, configure, and secure the BIOS on your HP devices.
+The Microsoft Surface link will take you to the Surface Management Portal where you can get insights into device compliance, support activity, and warranty coverage.
+
+To access the Partner portals page, you must enable the Devices pane preview and then navigate to **Devices** > **Partner Portals**.
+
+#### Windows Update compatibility reports for Apps and Drivers are now generally available<!-- 17917026  -->  
+The following Microsoft Intune reports for [Windows Update compatibility](../protect/windows-update-compatibility-reports.md) are out of preview and now generally available:
+
+- **Windows feature update device readiness report** - This report provides per-device information about compatibility risks that are associated with an upgrade or update to a chosen version of Windows.
+
+- **Windows feature update compatibility risks report** - This report provides a summary view of the top compatibility risks across your organization for a chosen version of Windows. You can use this report to understand which compatibility risks impact the greatest number of devices in your organization.
+
+These reports can help you plan an upgrade from Windows 10 to 11, or for installing the latest Windows feature update.
+
+### Device security
+
+#### Support for WDAC Application ID tagging with Intune Firewall Rules policy<!-- 17224780  -->  
+Intune's *Microsoft Defender Firewall Rules* profiles, which are available as part of [endpoint security Firewall policy](../protect/endpoint-security-firewall-policy.md), now include the Policy App Id setting. This setting is described by the [*MdmStore/FirewallRules/{FirewallRuleName}/PolicyAppId*](/windows/client-management/mdm/Firewall-csp?WT.mc_id=Portal-fx#mdmstorefirewallrulesfirewallrulenamepolicyappid) CSP and supports specifying a Windows Defender Application Control (WDAC) Application ID tag.
+
+With this capability, you’ll be able to scope your firewall rules to an application or a group of applications and rely on your WDAC policies to define those applications. By using tags to link to and rely on WDAC policies, your Firewall Rules policy won’t need to rely on the firewall rules option of an absolute file path or use of a variable file path that can reduce security of the rule.
+
+Use of this capability requires you to have WDAC policies in place that include *AppId* tags that you can then specify in your Intune Microsoft Defender Firewall Rules.
+
+For more information, see the following articles in the Windows Defender Application Control documentation:
+
+- [About application control for Windows](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control)
+- [WDAC Application ID (AppId) Tagging guide](/windows/security/threat-protection/windows-defender-application-control/appidtagging/windows-defender-application-control-appid-tagging-guide)
+
+Applies to:
+
+- Windows 10/11
+
+#### New App and browser isolation profile for Intune’s endpoint security Attack Surface Reduction policy<!-- 17392386  -->  
+We have released a new experience creating new *App and Browser Isolation* profiles for endpoint security Attack Surface Reduction policy. The experience for editing your previously created App and Browser isolation policies remains the same, and you can continue to use them. This update applies only for the new [App and Browser Isolation](../protect/endpoint-security-asr-policy.md#attack-surface-reduction-profiles) policies you create for the *Windows 10 and later* platform.
+
+This update is part of the continuing [rollout of new profiles for endpoint security policies](../fundamentals/whats-new-archive.md#new-profile-templates-and-settings-structure-for-endpoint-security-policies), which began in April 2022.
+
+Additionally, the new profile includes the following changes for the settings it includes:
+
+- **Block external content from non-enterprise approved sites** - This setting is removed from the updated profile as it was supported only by Microsoft Edge Legacy. Microsoft Edge Legacy support ended in March 2021. [Microsoft 365 apps say farewell to Internet Explorer 11 and Windows 10 sunsets Microsoft Edge Legacy - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/microsoft-365-blog/microsoft-365-apps-say-farewell-to-internet-explorer-11-and/ba-p/1591666).
+
+- **Clipboard file type** – This setting is added to the updated profile and determines the type of content that can be copied from the host to Application Guard environment and vice versa. You can view the CSP for this new setting at [Settings/ClipboardFileType](/windows/client-management/mdm/windowsdefenderapplicationguard-csp#settingsclipboardfiletype) in the WindowsDefenderApplicationGuard CSP documentation.
+
+### Intune apps
+
+#### Newly available protected apps for Intune<!-- 17318943, 17319737, 17457189, 17624650  -->
+The following protected apps are now available for Microsoft Intune:
+- ixArma by INAX-APPS (iOS)
+- myBLDNG by Bldng.ai (iOS)
+- RICOH Spaces V2 by Ricoh Digital Services
+- Firstup - Intune by Firstup, Inc. (iOS)
+
+For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
+
+### Role-based access control
+
+#### New Assign (RBAC) permissions for organizational messages<!-- 16872833  -->  
+The **Assign** RBAC permissions for organizational messages determines who can assign target Azure AD groups to an organizational message. To access RBAC permissions, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Tenant administration** > **Roles**.
+
+This permission is also added to the **Organizational Messages Manager** built-in role.  Existing custom roles for managing Organizational Messages must be modified to add this permission for users to modify this setting.
+
+- For more information, about role-based access control (RBAC), see [RBAC with Microsoft Intune](../fundamentals/role-based-access-control.md).
+- For more information, about prerequisites for organization messages, see [Organizational messages prerequisites](../remote-actions/organizational-messages-prerequisites.md#role-based-access-control-requirements).
+
+### Tenant administration
+
+#### Delete organizational messages<!-- 15273028  -->  
+You can now delete organizational messages from Microsoft Intune.  After you delete a message, it's removed from Intune and no longer appears in the admin center. You can delete a message anytime, regardless of its status. Intune automatically cancels active messages after you delete them. For more information, see [Delete organizational messages](../remote-actions/organizational-messages-cancel.md#delete-message).
+
 ## Week of April 10, 2023
 
 ### Device configuration
