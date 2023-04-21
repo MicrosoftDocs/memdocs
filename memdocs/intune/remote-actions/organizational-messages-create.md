@@ -118,7 +118,7 @@ Create and configure a message for the Get Started app.
 ## Step 2: Schedule a message  
 
 # [Taskbar / Notification area](#tab/taskbar+notification) 
-On the **Schedule** page, schedule the delivery of your message. 
+On the **Schedule** page, schedule the delivery of your message. If you schedule multiple messages to arrive within the same time period on the same device, the messages will arrive in random order.   
 1. Configure the delivery time window. Your options:  
 
    * **First day to show message**: Select when to first show the message. To ensure that delivery begins when you want it to, configure this setting 24 hours before you want the message to appear.   
@@ -126,7 +126,7 @@ On the **Schedule** page, schedule the delivery of your message.
 2. Select **Next: Assignments** to continue to assignment options.   
 
 # [Get Started app](#tab/get-started)  
-On the **Schedule** page, schedule the delivery of your message.  
+On the **Schedule** page, schedule the delivery of your message. If you schedule multiple messages to arrive within the same time period on the same device, the messages will arrive in random order.   
 
 1. Configure the **Message repeat frequency**. Select how often you want the message to reappear after employees dismiss it. The message will initially go away when the employee dismisses it or completes the call-to-action, but will reappear at the frequency you select here. Your options: 
    * **Once a week**
@@ -134,10 +134,6 @@ On the **Schedule** page, schedule the delivery of your message.
    * **Once a month**  
 2. Turn on the **Always on** toggle to make messages visible in the Get Started app.  
 3. Select **Next: Assignments** to continue to assignment options.     
-
-# [Need to know](#tab/need-to-know)  
-If you schedule multiple messages to arrive within the same time period on the same device, the messages will arrive in random order.  
-
 ---  
 ## Step 3: Assign message  
 Assign the message to Azure AD-registered users in your organization. You can only assign messages to Azure AD user groups, not Azure AD device groups. If a group includes both users and devices, Intune will only send the message to the users. 
