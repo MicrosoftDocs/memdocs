@@ -40,7 +40,7 @@ For an overview of the Windows Autopilot for pre-provisioned deployment hybrid A
 >
 > If you've already configured and assigned an ESP from another Autopilot scenario and want to keep the same settings for the ESP for the pre-provisioned hybrid Azure AD join scenario, you can skip this step and move on to [Step 7: Create and assign hybrid Azure AD join Autopilot profile](hybrid-azure-ad-join-autopilot-profile.md).
 
-## Configure and assign the Enrollment Status Page (ESP)
+## The Enrollment Status Page (ESP)
 
 [!INCLUDE [How to configure and assign an Enrollment Status Page (ESP) in Intune](../includes/configure-and-assign-esp.md)]
 
