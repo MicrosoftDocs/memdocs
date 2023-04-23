@@ -58,7 +58,7 @@ To ensure that the device can run an Autopilot deployment after a reset, you mus
 
 ## Importing the hardware hash CSV file for devices into Intune
 
-[!INCLUDE [Importing the hardware hash CSV file for devices into Intune](import-hardware-hash.md)]
+[!INCLUDE [Importing the hardware hash CSV file for devices into Intune](../includes/import-hardware-hash.md)]
 
 ## Ensure domain join profile is assigned to all devices
 
