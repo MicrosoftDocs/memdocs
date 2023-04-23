@@ -11,8 +11,8 @@ ms.localizationpriority: medium
 
 <!-- This file is shared by the following articles:
 
-azure-ad-join-technician-flow.md
-hybrid-azure-ad-join-technician-flow.md
+pre-provisioning/azure-ad-join-technician-flow.md
+pre-provisioning/hybrid-azure-ad-join-technician-flow.md
 
 Headings are driven by article context. -->
 

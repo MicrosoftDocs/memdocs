@@ -56,6 +56,10 @@ To ensure that the device can run an Autopilot deployment after a reset, you mus
    - [Pre-provisioning hybrid Azure AD join: Create and assign a pre-provisioned hybrid Azure AD join Autopilot profile](../pre-provisioning/hybrid-azure-ad-join-autopilot-profile.md)
    - [Self-deploying mode: Create and assign self-deploying Autopilot profile](../self-deploying/self-deploying-autopilot-profile.md)
 
+## Importing the hardware hash CSV file for devices into Intune
+
+[!INCLUDE [Importing the hardware hash CSV file for devices into Intune](import-hardware-hash.md)]
+
 ## Ensure domain join profile is assigned to all devices
 
 For Autopilot scenarios that utilize hybrid Azure AD join and run after the Windows Autopilot deployment for existing devices task sequence completes, at [Step 8: Configure and assign domain join profile](../user-driven/hybrid-azure-ad-join-domain-join-profile.md) for the [Windows Autopilot user-driven hybrid Azure AD join](../user-driven/hybrid-azure-ad-join-workflow.md) scenario or [Step 8: Configure and assign domain join profile](../pre-provisioning/hybrid-azure-ad-join-domain-join-profile.md) for the [Windows Autopilot for pre-provisioned deployment hybrid Azure AD join](../pre-provisioning/hybrid-azure-ad-join-workflow.md) scenario, make sure that the domain join profile is assigned to **All devices**. The domain join profile needs to be assigned to **All devices** because:

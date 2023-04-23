@@ -11,9 +11,11 @@ ms.localizationpriority: medium
 
 <!-- This file is shared by the following articles:
 
-azure-ad-join-device-group.md
-hybrid-azure-ad-join-device-group.md
-self-deploying-device-group.md
+pre-provisioning/azure-ad-join-device-group.md
+pre-provisioning/hybrid-azure-ad-join-device-group.md
+self-deploying/self-deploying-device-group.md
+user-driven/azure-ad-join-device-group.md
+user-driven/hybrid-azure-ad-join-device-group.md
 
 Headings are driven by article context. -->
 

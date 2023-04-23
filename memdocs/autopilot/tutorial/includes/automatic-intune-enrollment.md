@@ -11,9 +11,11 @@ ms.localizationpriority: medium
 
 <!-- This file is shared by the following articles:
 
-azure-ad-join-automatic-enrollment.md
-hybrid-azure-ad-join-automatic-enrollment.md
-self-deploying-automatic-enrollment.md
+pre-provisioning/azure-ad-join-automatic-enrollment.md
+pre-provisioning/hybrid-azure-ad-join-automatic-enrollment.md
+self-deploying/self-deploying-automatic-enrollment.md
+user-driven/azure-ad-join-automatic-enrollment.md
+user-driven/hybrid-azure-ad-join-automatic-enrollment.md
 
 Headings are driven by article context. -->
 

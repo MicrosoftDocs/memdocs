@@ -11,9 +11,11 @@ ms.localizationpriority: medium
 
 <!-- This file is shared by the following articles:
 
-azure-ad-join-esp.md
-hybrid-azure-ad-join-esp.md
-self-deploying-esp.md
+pre-provisioning/azure-ad-join-esp.md
+pre-provisioning/hybrid-azure-ad-join-esp.md
+self-deploying/self-deploying-esp.md
+user-driven/azure-ad-join-esp.md
+user-driven/hybrid-azure-ad-join-esp.md
 
 Headings are driven by article context. -->
 

@@ -11,10 +11,10 @@ ms.localizationpriority: medium
 
 <!-- This file is shared by the following articles:
 
-pre-provisioning\azure-ad-join-assign-device-to-user.md
-pre-provisioning\hybrid-azure-ad-join-assign-device-to-user.md
-user-driven\hybrid-azure-ad-join-assign-device-to-user.md
-user-driven\hybrid-azure-ad-join-assign-device-to-user.md
+pre-provisioning/azure-ad-join-assign-device-to-user.md
+pre-provisioning/hybrid-azure-ad-join-assign-device-to-user.md
+user-driven/hybrid-azure-ad-join-assign-device-to-user.md
+user-driven/hybrid-azure-ad-join-assign-device-to-user.md
 
 Headings are driven by article context. -->
 

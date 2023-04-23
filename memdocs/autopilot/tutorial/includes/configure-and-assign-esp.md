@@ -11,11 +11,11 @@ ms.localizationpriority: medium
 
 <!-- This file is shared by the following articles:
 
-user-driven/azure-ad-join-esp.md
-user-driven/hybrid-azure-ad-join-esp.md
 pre-provisioning/azure-ad-join-esp.md
 pre-provisioning/hybrid-azure-ad-join-esp.md
-self-deploying-esp.md
+self-deploying/self-deploying-esp.md
+user-driven/azure-ad-join-esp.md
+user-driven/hybrid-azure-ad-join-esp.md
 
 Headings are driven by article context. -->
 
@@ -89,51 +89,51 @@ To configure and assign the Autopilot Enrollment Status Page (ESP), follow these
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. In the **Home** screen, select **Devices** in the left pane.
+1. In the **Home** screen, select **Devices** in the left pane.
 
-3. In the **Devices | Overview** screen, under **By platform**, select **Windows**.
+1. In the **Devices | Overview** screen, under **By platform**, select **Windows**.
 
-4. In the **Windows | Windows devices** screen, select **Windows enrollment**.
+1. In the **Windows | Windows devices** screen, select **Windows enrollment**.
 
-5. Under **General**, select **Enrollment Status Page**.
+1. Under **General**, select **Enrollment Status Page**.
 
-6. In the **Enrollment Status Page** screen that opens, select **Create**.
+1. In the **Enrollment Status Page** screen that opens, select **Create**.
 
-7. The **Create profile** screen opens. In the **Basics** page:
+1. The **Create profile** screen opens. In the **Basics** page:
 
    1. Next to **Name**, enter a name for the ESP profile.
 
-   2. Next to **Description**, enter a description.
+   1. Next to **Description**, enter a description.
 
-   3. Select **Next**.
+   1. Select **Next**.
 
-8. In the **Settings** page, toggle the option **Show app and profile configuration progress** to **Yes**.
+1. In the **Settings** page, toggle the option **Show app and profile configuration progress** to **Yes**.
 
-   1. After toggling the option **Show app and profile configuration progress** to **Yes**, several new options will appear. Configure these options based on the desired behavior for the ESP:
+   1. After toggling the option **Show app and profile configuration progress** to **Yes**, several new options will appear. Configure these options based on the desired behavior for the ESP as described in the section [Autopilot Enrollment Status Page (ESP) configuration options](#autopilot-enrollment-status-page-esp-configuration-options):
 
-   2. Once the different ESP options under the **Settings** page have been configured as desired, select **Next**.
+   1. Once the different ESP options under the **Settings** page have been configured as desired, select **Next**.
 
-9. In the **Assignments** page:
+1. In the **Assignments** page:
 
    1. Under **Included groups**, select **Add groups**.
 
-   2. In the **Select groups to include** window that opens, select the device group(s) to target the ESP profile. The device group(s) selected would normally be the device group(s) created in the **Create device group** step.
+   1. In the **Select groups to include** window that opens, select the device group(s) to target the ESP profile. The device group(s) selected would normally be the device group(s) created in the **Create device group** step.
 
-   3. After selecting the device group, select **Select** to close the **Select groups to include** window.
+   1. After selecting the device group, select **Select** to close the **Select groups to include** window.
 
-    > [!TIP]
-    >
-    > After selecting the device group(s), you can select the **Edit filter** option on each device group added to the assignment to further refine what devices are targeted for the ESP profile. For example, this can be useful if you want to exclude some of the devices that are members in the device group(s) selected.
+      > [!TIP]
+      >
+      > After selecting the device group(s), you can select the **Edit filter** option on each device group added to the assignment to further refine what devices are targeted for the ESP profile. For example, this can be useful if you want to exclude some of the devices that are members in the device group(s) selected.
 
-   4. Select **Next**.  
+   1. Select **Next**.  
 
     > [!NOTE]
     >
     > ESPs are assigned to device groups and not directly to individual devices. To assign an ESP to a specific device, the device must be a member of a device group that has an ESP assigned to it.
 
-10. In the **Scope tags** page, select **Next**.
+1. In the **Scope tags** page, select **Next**.
 
     > [!NOTE]
     > **Scope tags** are optional and are a method to control who has access to the ESP configuration. For the purpose of this tutorial, scope tags is being skipped and left at the default scope tag. However if a custom scope tag needs to be specified, do so at this screen. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](/mem/intune/fundamentals/scope-tags).
 
-11. In the **Review + create** page, review the settings and verify everything is correct and configured as desired. Once verified, select **Create** to save the changes and assign the ESP profile.
+1. In the **Review + create** page, review the settings and verify everything is correct and configured as desired. Once verified, select **Create** to save the changes and assign the ESP profile.

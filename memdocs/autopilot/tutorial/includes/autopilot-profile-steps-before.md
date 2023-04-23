@@ -11,9 +11,11 @@ ms.localizationpriority: medium
 
 <!-- This file is shared by the following articles:
 
-azure-ad-join-autopilot-profile.md
-hybrid-azure-ad-join-autopilot-profile.md
-self-deploying-autopilot-profile.md
+pre-provisioning/azure-ad-join-autopilot-profile.md
+pre-provisioning/hybrid-azure-ad-join-autopilot-profile.md
+self-deploying/self-deploying-autopilot-profile.md
+user-driven/azure-ad-join-autopilot-profile.md
+user-driven/hybrid-azure-ad-join-autopilot-profile.md
 
 Headings are driven by article context. -->
 
@@ -37,6 +39,6 @@ Headings are driven by article context. -->
 
    1. Select **Next**.
 
-    > [!NOTE]
-    >
-    > Set the option **Convert all targeted devices to Autopilot** to **Yes**. While this tutorial concentrates on new devices where the device is manually imported as an Autopilot device using the hardware hash, this option can be helpful when assigning Autopilot profiles to device groups that contain existing devices. For example, this option is very helpful when using the [Windows Autopilot for existing devices](../existing-devices/existing-devices-workflow.md) scenario where existing devices may need to be registered as an Autopilot device after the Autopilot deployment is finished.
+      > [!NOTE]
+      >
+      > Set the option **Convert all targeted devices to Autopilot** to **Yes**. While this tutorial concentrates on new devices where the device is manually imported as an Autopilot device using the hardware hash, this option can be helpful when assigning Autopilot profiles to device groups that contain existing devices. For example, this option is helpful when using the [Windows Autopilot for existing devices](../existing-devices/existing-devices-workflow.md) scenario where existing devices may need to be registered as an Autopilot device after the Autopilot deployment has completed. For more information, see [Register device for Windows Autopilot](../existing-devices/register-device.md).
