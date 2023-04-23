@@ -28,7 +28,7 @@ Autopilot self-deploying mode steps:
 > [!div class="checklist"]
 > - **Step 5: Create and assign Autopilot profile**
 
-For an overview of the Windows Autopilot self-deploying mode workflow, see [Windows Autopilot self-deploying overview](self-deploying-workflow.md)
+For an overview of the Windows Autopilot self-deploying mode workflow, see [Windows Autopilot self-deploying overview](self-deploying-workflow.md#workflow)
 
 ## Create and assign self-deploying Autopilot profile
 

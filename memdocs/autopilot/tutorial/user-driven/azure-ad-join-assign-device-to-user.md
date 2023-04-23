@@ -30,7 +30,7 @@ Autopilot user-driven Azure AD join steps:
 > [!div class="checklist"]
 > - **Step 7: Assign Autopilot device to a user (optional)**
 
-For an overview of the Windows Autopilot user-driven Azure AD join workflow, see [Windows Autopilot user-driven Azure AD join overview](azure-ad-join-workflow.md)
+For an overview of the Windows Autopilot user-driven Azure AD join workflow, see [Windows Autopilot user-driven Azure AD join overview](azure-ad-join-workflow.md#workflow)
 
 ## Assign Autopilot device to a user (optional)
 

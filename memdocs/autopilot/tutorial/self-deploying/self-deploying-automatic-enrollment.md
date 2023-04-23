@@ -28,7 +28,7 @@ Autopilot self-deploying mode steps:
 - Step 4: [Configure and assign Autopilot Enrollment Status Page (ESP)](self-deploying-esp.md)
 - Step 5: [Create and assign Autopilot profile](self-deploying-autopilot-profile.md)
 
-For an overview of the Windows Autopilot self-deploying mode workflow, see [Windows Autopilot self-deploying overview](self-deploying-workflow.md)
+For an overview of the Windows Autopilot self-deploying mode workflow, see [Windows Autopilot self-deploying overview](self-deploying-workflow.md#workflow)
 
 > [!NOTE]
 >

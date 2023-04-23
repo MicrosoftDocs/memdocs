@@ -33,7 +33,7 @@ Autopilot user-driven Azure AD join steps:
 > [!div class="checklist"]
 > - **Step 10: Register device for Windows Autopilot**
 
-For an overview of the Windows Autopilot deployment for existing devices workflow, see [Windows Autopilot deployment for existing devices in Intune and Configuration Manager](existing-devices-workflow.md)
+For an overview of the Windows Autopilot deployment for existing devices workflow, see [Windows Autopilot deployment for existing devices in Intune and Configuration Manager](existing-devices-workflow.md#workflow)
 
 ## Register device for Windows Autopilot
 

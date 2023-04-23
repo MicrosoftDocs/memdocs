@@ -32,7 +32,7 @@ Autopilot for pre-provisioned deployment Azure AD join steps:
 - Step 8: [Technician flow](azure-ad-join-technician-flow.md)
 - Step 9: [User flow](azure-ad-join-user-flow.md)
 
-For an overview of the Windows Autopilot for pre-provisioned deployment Azure AD join workflow, see [Windows Autopilot for pre-provisioned deployment Azure AD join overview](azure-ad-join-workflow.md)
+For an overview of the Windows Autopilot for pre-provisioned deployment Azure AD join workflow, see [Windows Autopilot for pre-provisioned deployment Azure AD join overview](azure-ad-join-workflow.md#workflow)
 
 > [!NOTE]
 >
