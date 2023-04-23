@@ -22,6 +22,10 @@ A device that has been registered as an Autopilot device can also be assigned to
 
 > [!TIP]
 >
+> For testing purposes, especially for hybrid Azure AD scenarios, it may be better to first test an Autopilot deployment before assigning the device to a user. This will limit the scope of applications, policies, and configurations assigned during the Autopilot process.
+
+> [!TIP]
+>
 > For Configuration Manager admins, assigning a user to a device is similar to user device affinity in Configuration Manager.
 
 To assign an Autopilot device to a user, follow these steps:
