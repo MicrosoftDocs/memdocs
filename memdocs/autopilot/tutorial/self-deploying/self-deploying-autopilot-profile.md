@@ -36,7 +36,7 @@ The Autopilot profile specifies how the device is configured during Windows Setu
 
 > [!TIP]
 >
-> For Configuration Manager admins, the Autopilot profile is similar to some of the configuration that takes place during a task sequence via an unattend.xml file. The unattend.xml file is configured during the **Apply Windows Settings** and **Apply Network Settings** steps. Note however that Autopilot does not use unattend.xml files.
+> For Configuration Manager admins, the Autopilot profile is similar to some of the configuration that takes place during a task sequence via an `unattend.xml` file. The `unattend.xml` file is configured during the **Apply Windows Settings** and **Apply Network Settings** steps. Note however that Autopilot does not use `unattend.xml` files.
 
 To create a self-deploying mode Autopilot profile, follow these steps:
 
@@ -62,7 +62,7 @@ To create a self-deploying mode Autopilot profile, follow these steps:
 
         > [!NOTE]
         >
-        > If you want users to be able to select their keyboard layout, then select **No** instead. However, be aware that the purpose of Autopilot self-deploying mode is to deploy a device with minimal to no user interaction. Setting **Automatically configure keyboard** to **No** will require additional user interaction.
+        > If you want users to be able to select their keyboard layout, then select **No** instead. However, the purpose of Autopilot self-deploying mode is to deploy a device with minimal to no user interaction. Setting **Automatically configure keyboard** to **No** requires additional user interaction.
 
       - For **Apply device name template**, select **No**. Alternatively, **Yes** can be chosen to apply a device name template. Be aware of the following if the name template is selected to **Yes**:
 
@@ -89,7 +89,7 @@ At this point, the device is ready to be deployed. If desired, deploy any additi
 
 > [!NOTE]
 >
-> Although a user isn't assigned to a device for Windows Autopilot self-deploying mode, for testing purposes assigning at least one policy and at least one application to users is still recommended since User ESP still runs when a user first signs into the device.
+> Although a user isn't assigned to a device for Windows Autopilot self-deploying mode, for testing purposes, assigning at least one policy and at least one application to users is still recommended since User ESP still runs when a user first signs into the device.
 
 ## More information
 

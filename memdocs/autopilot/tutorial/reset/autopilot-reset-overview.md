@@ -72,7 +72,7 @@ Windows Autopilot Reset works by using the [push-button reset](/windows-hardware
 
 ## Walkthrough
 
-Both local Windows Autopilot Reset and remote Windows Autopilot Reset require a minimal number of steps to implement. Multiple step by step instructions are unneeded. Select the desired Windows Autopilot Reset scenario for instructions on how to implement:
+Both local Windows Autopilot Reset and remote Windows Autopilot Reset require a minimal number of steps to implement. Unlike other Autopilot scenarios, multiple step by step instructions aren't unneeded. Select the desired Windows Autopilot Reset scenario for instructions on how to implement the scenario:
 
 > [!div class="nextstepaction"]
 > [Local Windows Autopilot Reset](local-autopilot-reset.md)

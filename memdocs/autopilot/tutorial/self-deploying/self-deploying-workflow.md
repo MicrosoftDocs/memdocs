@@ -30,7 +30,7 @@ Before beginning, refer to the [How to: Plan your Azure AD join implementation](
 
 Windows Autopilot self-deploying mode is an Autopilot solution that automates the configuration of Windows on a new device delivered directly from an IT department, OEM, or reseller. Windows Autopilot for pre-provisioned deployment uses the existing Windows installation installed by the OEM at the factory. Windows Autopilot self-deploying mode is designed for kiosk like devices or devices shared by multiple users. For this reason, Windows Autopilot self-deploying mode doesn't support assigning users to the device. Additionally, Windows Autopilot self-deploying mode only supports Azure AD join. It doesn't support hybrid Azure AD join.
 
-The main advantage of Windows Autopilot self-deploying mode over other Autopilot deployments methods is that it minimizes the interaction needed during the initial deployment of the device because there's no single user assigned to the device. After first powering on the device, usually the only interactions needed, if any, are:
+The main advantage of Windows Autopilot self-deploying mode over other Autopilot deployments methods is that it minimizes the interaction needed during the initial deployment of the device. Interactions are minimized because there's no single user assigned to the device. After first powering on the device, usually the only interactions needed, if any, are:
 
 - In certain scenarios, selecting the language, locale, and keyboard layout.
 - Connecting to a wireless network if the device isn't connected to a wired network.
