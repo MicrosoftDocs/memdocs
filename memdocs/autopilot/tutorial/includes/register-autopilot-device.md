@@ -21,7 +21,7 @@ Headings are driven by article context. -->
 
 Before a device can use Autopilot, the device must be registered as an Autopilot device. Registering a device as an Autopilot device can be thought of as importing the device into Autopilot so that Autopilot service can be used on the device. Registering a device as an Autopilot device doesn't mean that the device has ever used the Autopilot service. It just makes the Autopilot service available to the device.
 
-Also note that a device registered in Autopilot doesn't mean the device is enrolled in Intune. A device may be registered as an Autopilot device but may not exist in Intune. It's not until an Autopilot registered device goes through the Autopilot process for the first time that it becomes enrolled in Intune. After the Autopilot device undergoes the Autopilot process and enrolls in Intune, the Autopilot device subsequently appears as a device in both Azure AD and Intune.
+Also note that a device registered in Autopilot doesn't mean the device is enrolled in Intune. A device may be registered as an Autopilot device but may not exist in Intune. It's not until an Autopilot registered device goes through the Autopilot process for the first time that it becomes enrolled in Intune. After the Autopilot device undergoes the Autopilot process and enrolls in Intune, the Autopilot device appears as a device in both Azure AD and Intune.
 
 > [!TIP]
 >
@@ -49,7 +49,7 @@ For most organizations, using an OEM or partner to register devices as Autopilot
 
 > [!IMPORTANT]
 >
-> Assuming that a device isn't currently enrolled Intune, remember that registering a device in Autopilot doesn't make it an Intune enrolled device. That device won't enroll into Intune until Autopilot runs on the device for the first time.
+> Assuming that a device isn't currently enrolled Intune, remember that registering a device in Autopilot doesn't make it an Intune enrolled device. That device doesn't enroll into Intune until Autopilot runs on the device for the first time.
 
 ## Importing the hardware hash CSV file for devices into Intune
 

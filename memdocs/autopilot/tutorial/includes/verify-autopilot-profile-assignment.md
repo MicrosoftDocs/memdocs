@@ -36,7 +36,7 @@ Before deploying a device, ensure that an Autopilot profile has been assigned to
 
    1. Find the desired device that Autopilot deployment profile assignment status needs to be checked.
 
-   2. Once the device is located, its current status is listed under the **Profile status** column. The status will have one of the following values:
+   2. Once the device is located, its current status is listed under the **Profile status** column. The status has one of the following values:
 
        - **Not assigned**: The device hasn't been assigned an Autopilot deployment profile.
        - **Assigning**: The device is being assigned an Autopilot deployment profile.
@@ -56,4 +56,4 @@ Before deploying a device, ensure that an Autopilot profile has been assigned to
 
 > [!NOTE]
 >
-> Intune will periodically check for new devices in the assigned device groups, and then begin the process of assigning profiles to those devices. Due to several different factors involved in the process of Autopilot profile assignment, an estimated time for the assignment can vary from scenario to scenario. These factors can include AAD groups, membership rules, hash of a device, Intune and Autopilot service, and internet connection. The assignment time will vary depending on all the factors and variables involved in a specific scenario.
+> Intune periodically checks for new devices in the assigned device groups, and then begin the process of assigning profiles to those devices. Due to several different factors involved in the process of Autopilot profile assignment, an estimated time for the assignment can vary from scenario to scenario. These factors can include Azure AD groups, membership rules, hash of a device, Intune and Autopilot service, and internet connection. The assignment time varies depending on all the factors and variables involved in a specific scenario.

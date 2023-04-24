@@ -27,4 +27,4 @@ Headings are driven by article context. -->
 > - At least one type of policy and at least one application assigned to the device(s).
 > - At least one type of policy and at least one application assigned to the user(s).
 >
-> This will ensure proper testing of the Autopilot deployment during both the Device ESP phase and User ESP phase of the ESP. It may also prevent possible issues when there are either no policies or no applications assigned to the device(s) or the user(s).
+> These assignments ensure proper testing of the Autopilot deployment during both the Device ESP phase and User ESP phase of the ESP. It may also prevent possible issues when there are either no policies or no applications assigned to the device(s) or the user(s).

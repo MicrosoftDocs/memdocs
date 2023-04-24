@@ -25,17 +25,17 @@ Out of box there's a default ESP that is assigned to all devices. The default se
 
 The ESP has two phases:
 
-- Device ESP - ESP that runs during the OOBE process and applies device policies and installs device applications
-- User ESP - ESP that runs after Device ESP that sets up user account, applies user policies, and installs user applications
+- **Device ESP** - The portion of the ESP that runs during the OOBE process and applies device policies and installs device applications
+- **User ESP** - The portion of the ESP that sets up user account, applies user policies, and installs user applications
 
-The ESP can be configured to only display progress during the device ESP phase while disabling progress during the user ESP phase. Disabling of the user ESP is usually done to allow a user to sign into the device as soon as possible enabling them to reach the desktop quicker. However, the consequence is that not all of the user policies and applications may be installed. For this reason, it's recommended to show progress during both phases.
+Device ESP runs first followed by the User ESP.
 
 > [!TIP]
 > For Configuration Manager admins, an ESP is similar and analogous to Configuration Manager client settings.
 
 ## Autopilot Enrollment Status Page (ESP) configuration options
 
-When configuring the the Enrollment Status Page (ESP), it has several options that can be configured to meet the needs of the organization. The following lists the different options and their possible configurations:
+When the Enrollment Status Page (ESP) is configured, it has several options that can be configured to meet the needs of the organization. The following lists the different options and their possible configurations:
 
 - **Show an error when installation takes longer than specified number of minutes**:
 
@@ -109,7 +109,7 @@ To configure and assign the Autopilot Enrollment Status Page (ESP), follow these
 
 1. In the **Settings** page, toggle the option **Show app and profile configuration progress** to **Yes**.
 
-   1. After toggling the option **Show app and profile configuration progress** to **Yes**, several new options will appear. Configure these options based on the desired behavior for the ESP as described in the section [Autopilot Enrollment Status Page (ESP) configuration options](#autopilot-enrollment-status-page-esp-configuration-options):
+   1. After the option **Show app and profile configuration progress** is toggled to **Yes**, several new options will appear. Configure these options based on the desired behavior for the ESP as described in the section [Autopilot Enrollment Status Page (ESP) configuration options](#autopilot-enrollment-status-page-esp-configuration-options):
 
    1. Once the different ESP options under the **Settings** page have been configured as desired, select **Next**.
 
@@ -123,7 +123,7 @@ To configure and assign the Autopilot Enrollment Status Page (ESP), follow these
 
       > [!TIP]
       >
-      > After selecting the device group(s), you can select the **Edit filter** option on each device group added to the assignment to further refine what devices are targeted for the ESP profile. For example, this can be useful if you want to exclude some of the devices that are members in the device group(s) selected.
+      > After selecting the device group(s), you can select the **Edit filter** option on each device group added to the assignment to further refine what devices are targeted for the ESP profile. For example, further filtering can be useful if you want to exclude some of the devices that are members in the device group(s) selected.
 
    1. Select **Next**.  
 
@@ -134,6 +134,7 @@ To configure and assign the Autopilot Enrollment Status Page (ESP), follow these
 1. In the **Scope tags** page, select **Next**.
 
     > [!NOTE]
+    >
     > **Scope tags** are optional and are a method to control who has access to the ESP configuration. For the purpose of this tutorial, scope tags is being skipped and left at the default scope tag. However if a custom scope tag needs to be specified, do so at this screen. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](/mem/intune/fundamentals/scope-tags).
 
 1. In the **Review + create** page, review the settings and verify everything is correct and configured as desired. Once verified, select **Create** to save the changes and assign the ESP profile.

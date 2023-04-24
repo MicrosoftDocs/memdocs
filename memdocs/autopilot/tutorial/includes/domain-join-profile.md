@@ -50,17 +50,17 @@ Headings are driven by article context. -->
         >
         > This field doesn't support the **%SERIAL%** or **%RAND:x%** variables that can be used with the **Apply device name template** in the Azure AD join scenario.
 
-   1. Next to **Domain name**, enter the FQDN of the domain that the device will join. This field is required. Make sure to specify the FQDN of the domain and not the NETBIOS name of the domain. For example, enter in **contoso.com** and not just **CONTOSO**.
+   1. Next to **Domain name**, enter the FQDN of the domain that devices should join. This field is required. Make sure to specify the FQDN of the domain and not the NETBIOS name of the domain. For example, enter in **contoso.com** and not just **CONTOSO**.
 
    1. Next to **Organizational unit**, enter the full path to the Organizational Unit (OU) in the domain that the computer accounts should be created in. For example, **OU=OU-Name,DC=contoso,DC=com**. This field is optional. If the OU isn't specified, the computer accounts are created in the **Computer** container.
 
         > [!NOTE]
         >
-        > The OU specified in this step should be the same OU that permissions were set for and computer account limits increased in the step **Increase the computer account limit in the Organizational Unit (OU)**. Make sure that the step **Increase the computer account limit in the Organizational Unit (OU)** has been followed for the OU specified in this field. Skipping the step that sets permissions correctly on the OU wil result in computers failing to join the domain.
+        > The OU specified in this step should be the same OU that permissions were set for and computer account limits increased in the step **Increase the computer account limit in the Organizational Unit (OU)**. Make sure that the step **Increase the computer account limit in the Organizational Unit (OU)** has been followed for the OU specified in this field. Skipping the step that sets permissions correctly on the OU results in computers failing to join the domain.
 
         > [!IMPORTANT]
         >
-        > If computers will be joining the **Computers** container, leave this field blank. Don't specify the **Computers** container in this field via **CN=Computers,DC=contoso,DC=com**. The **Computers** container is a container and not an OU. When no OU is specified in this field and it is left blank, devices will automatically join the **Computers** container. If the **Computers** container is specified, it will cause domain joins to fail.
+        > If computers are joining the **Computers** container, leave this field blank. Don't specify the **Computers** container in this field via **CN=Computers,DC=contoso,DC=com**. The **Computers** container is a container and not an OU. When no OU is specified in this field and the field is left blank, devices automatically join the **Computers** container. If the **Computers** container is specified, it causes domain joins to fail.
 
    1. Once the settings in the **Configuration settings** page are complete, select **Next**.
 
@@ -70,11 +70,11 @@ Headings are driven by article context. -->
 
         > [!NOTE]
         >
-        > It's recommended to select and assign to **Add all devices** instead of selecting and assigning to the device group created in the **Create device group** step. This will ensure that the domain join profile will work when using the [Windows Autopilot deployment for existing devices](../existing-devices/existing-devices-workflow.md) scenario in conjunction with an Autopilot deployment that utilizes hybrid Azure AD join.
+        > It's recommended to select and assign to **Add all devices** instead of selecting and assigning to the device group created in the **Create device group** step. Assigning to all devices ensures that the domain join profile works when using the [Windows Autopilot deployment for existing devices](../existing-devices/existing-devices-workflow.md) scenario with an Autopilot deployment that utilizes hybrid Azure AD join.
 
         > [!NOTE]
         >
-        > Make sure to add the correct device groups under **Included groups** and not under **Excluded groups**. Accidentally adding the desired device groups under **Excluded groups** will result in those devices being excluded and they won't receive the configuration profile.
+        > Make sure to add the correct device groups under **Included groups** and not under **Excluded groups**. Accidentally adding the desired device groups under **Excluded groups** results in those devices being excluded and they don't receive the configuration profile.
 
    1. Under **Included groups** > **Groups**, ensure that **All devices** is selected, and then select **Next**.
 
