@@ -93,27 +93,9 @@ To create a user-driven hybrid Azure AD join Autopilot profile, follow these ste
 
 [!INCLUDE [How to verify a device has an Autopilot profile assigned to it in Intune](../includes/verify-autopilot-profile-assignment.md)]
 
-## Off-premise/Internet scenarios and VPN connectivity
+## Off-premises/Internet scenarios and VPN connectivity
 
-Off-premise/Internet scenarios where direct connectivity to Active directory and domain controllers isn't available are supported for user-driven hybrid Azure AD join Autopilot. However, an off-premise/Internet scenario doesn't eliminate the need for connectivity to Active Directory and a domain controller during the domain join. In an off-premise/Internet scenario, connectivity to Active Directory and a domain controller can be established via a VPN connection during the Autopilot process.
-
-For off-premise/Internet scenarios requiring VPN connectivity, the only change in the Autopilot profile would be in the setting **Skip AD connectivity check**. In the [Create and assign user-driven hybrid Azure AD join Autopilot profile](#create-and-assign-user-driven-hybrid-azure-ad-join-autopilot-profile) section, the **Skip AD connectivity check** setting should be set to **Yes** instead of to **No**. Setting this option to **Yes** prevents the deployment from failing since there's no direct connectivity to Active Directory and domain controllers until the VPN connection is established.
-
-In addition to changing the **Skip AD connectivity check** setting to **Yes** in the Autopilot profile, VPN support also relies on the following prerequisites:
-
-- The VPN solution can be deployed and installed with Intune.
-- The VPN solution needs to support one of the following options:
-  - Lets the user manually establish a VPN connection from the Windows sign-in screen.
-  - Automatically establishes a VPN connection as needed.
-
-The VPN solution would need to be installed and configured via Intune during the Autopilot process. Configuration would need to include deploying any required device certificates if needed by the VPN solution. Once the VPN solution is installed and configured on the device, the VPN connection can be established, either automatically or manually by the user, at which point the domain join can occur. For more information and support on VPN solutions during Autopilot, consult the respective VPN vendor.
-
-> [!NOTE]
->
-> Some VPN configurations aren't supported because the connection is not initiated until the user signs into Windows. These include:
->
-> VPN solutions that use user certificates
-> Non-Microsoft UWP VPN plug-ins from the Windows Store
+[!INCLUDE [VPN](../includes/vpn.md)]
 
 ## Next step: Configure and assign domain join profile
 

@@ -59,13 +59,13 @@ To increase the computer account limit in the Organizational Unit (OU) that comp
 
     > [!NOTE]
     >
-    > The OU that computers will be joining during Autopilot will be specified later during the [Configure and assign domain join profile](hybrid-azure-ad-join-domain-join-profile.md) step.
+    > The OU that computers join during Autopilot is specified later during the [Configure and assign domain join profile](hybrid-azure-ad-join-domain-join-profile.md) step.
 
 1. Right-click on the OU and select **Delegate Control**.
 
     > [!NOTE]
     >
-    > If an OU is not being specified and computers will instead be joining the default **Computers** container, right click on the **Computers** container and select **Delegate Control**.
+    > If an OU isn't being specified and computers instead join the default **Computers** container, right click on the **Computers** container and select **Delegate Control**.
 
 1. In the **Welcome to the Delegation of Control Wizard** window of the **Delegation of Control Wizard**, select **Next**.
 
@@ -97,7 +97,7 @@ To increase the computer account limit in the Organizational Unit (OU) that comp
 
     > [!NOTE]
     >
-    > After selecting the **Full Control** check box, all other options under **Permissions:** will be automatically selected. This is normal and expected. Do not unselect any of the check boxes after they have been automatically checked.
+    > After selecting the **Full Control** check box, all other options under **Permissions:** are automatically selected. The automatic selection of the checkboxes is normal and expected. Don't unselect any of the check boxes after they have been automatically selected.
 
 1. In the **Completing the Delegation of Control Wizard** window, select **Finish**.
 

@@ -32,7 +32,7 @@ Before beginning, refer to the [Plan your hybrid Azure Active Directory join imp
 
 ## Windows Autopilot for pre-provisioned deployment hybrid Azure AD join overview
 
-Windows Autopilot for pre-provisioned deployment hybrid Azure AD join is an Autopilot solution that automates the configuration of Windows on a new device delivered directly from an IT department, OEM, or reseller. Windows Autopilot for pre-provisioned deployment uses the existing Windows installation installed by the OEM at the factory. The end-user only needs to perform a minimal number of actions during the deployment process such as:
+Windows Autopilot for pre-provisioned deployment hybrid Azure AD join is an Autopilot solution that automates the configuration of Windows on a new device delivered directly from an IT department, OEM, or reseller to the end-user. Windows Autopilot for pre-provisioned deployment uses the existing Windows installation installed by the OEM at the factory. The end-user only needs to perform a minimal number of actions during the deployment process such as:
 
 - Powering on the device.
 - In certain scenarios, selecting the language, locale, and keyboard layout.

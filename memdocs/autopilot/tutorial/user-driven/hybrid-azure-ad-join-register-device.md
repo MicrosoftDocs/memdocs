@@ -36,7 +36,7 @@ For an overview of the Windows Autopilot user-driven hybrid Azure AD join workfl
 
 > [!NOTE]
 >
-> If you have already registered devices as Autopilot devices from another Autopilot scenario, you can skip this step and move on to [Step 5: Create a device group](hybrid-azure-ad-join-device-group.md). However, be aware that if you're deploying multiple different Autopilot scenarios to different devices, separate device groups will be required for each Autopilot scenario.
+> If you have already registered devices as Autopilot devices from another Autopilot scenario, you can skip this step and move on to [Step 5: Create a device group](hybrid-azure-ad-join-device-group.md). However, if you're deploying multiple different Autopilot scenarios to different devices, separate device groups are required for each Autopilot scenario.
 
 ## Register devices as Autopilot devices
 

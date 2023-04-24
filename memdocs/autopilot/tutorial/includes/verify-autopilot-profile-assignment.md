@@ -17,7 +17,6 @@ self-deploying/self-deploying-autopilot-profile.md
 user-driven/azure-ad-join-autopilot-profile.md
 user-driven/hybrid-azure-ad-join-autopilot-profile.md
 
-
 Headings are driven by article context. -->
 
 Before deploying a device, ensure that an Autopilot profile has been assigned to a device group that the device is a member of. Autopilot profile assignment to a device can take some time after the Autopilot profile has been assigned to the device group or after the device has been added to the device group. To verify that the profile has been assigned to a device, follow these steps:

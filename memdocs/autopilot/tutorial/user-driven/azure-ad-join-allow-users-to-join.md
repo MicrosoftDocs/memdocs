@@ -57,7 +57,7 @@ In order for Windows Autopilot to work, users need to be allowed to join devices
       1. Select the link under **Selected**.
 
       1. In the **Members allowed to join devices** page that opens:
- 
+
          1. Select **Add**.
 
          2. In the **Add members** window that opens:

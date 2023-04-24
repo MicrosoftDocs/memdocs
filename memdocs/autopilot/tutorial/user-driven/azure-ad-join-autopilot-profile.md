@@ -42,7 +42,7 @@ The difference between an Autopilot user-driven Azure AD join and an Autopilot h
 
 > [!TIP]
 >
-> For Configuration Manager admins, the Autopilot profile is similar to some of the configuration that takes place during a task sequence via an unattend.xml file. The unattend.xml file is configured during the **Apply Windows Settings** and **Apply Network Settings** steps. Note however that Autopilot does not use unattend.xml files.
+> For Configuration Manager admins, the Autopilot profile is similar to some of the configuration that takes place during a task sequence via an `unattend.xml` file. The `unattend.xml` file is configured during the **Apply Windows Settings** and **Apply Network Settings** steps. Note however that Autopilot doesn't use `unattend.xml` files.
 
 To create a user-driven Azure AD join Autopilot profile, follow these steps:
 
@@ -67,7 +67,7 @@ To create a user-driven Azure AD join Autopilot profile, follow these steps:
         > [!NOTE]
         >
         > For the Windows Autopilot for pre-provisioned deployment Azure AD join scenario, see [Step by step tutorial for Windows Autopilot for pre-provisioned deployment Azure AD join in Intune](../pre-provisioning/azure-ad-join-workflow.md)
-        
+
       - For **Language (Region)**, select **Operating system default** to use the default language for the operating system being configured. If another language is desired, select the desired language from the drop-down list.
 
       - For **Automatically configure keyboard**, select **Yes** to skip the keyboard selection page.
