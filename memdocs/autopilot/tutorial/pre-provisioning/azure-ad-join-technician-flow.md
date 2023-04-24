@@ -36,10 +36,6 @@ For an overview of the Windows Autopilot for pre-provisioned deployment Azure AD
 
 ## Technician flow
 
-> [!IMPORTANT]
->
-> The technician flow portion of the Azure AD join process requires connectivity to the Internet.
-
 [!INCLUDE [Technician flow](../includes/technician-flow.md)]
 
 ## Next step: User flow

@@ -16,9 +16,9 @@ pre-provisioning/hybrid-azure-ad-join-technician-flow.md
 
 Headings are driven by article context. -->
 
-Once all of the configurations for Windows Autopilot for pre-provisioned deployment have been completed on the Intune and Azure AD side, the next step is to start the Autopilot process. This step is known as the technician flow.
-
 [!INCLUDE [Assignment tip](../includes/assignment-tip.md)]
+
+Once all of the configurations for Windows Autopilot for pre-provisioned deployment have been completed on the Intune and Azure AD side, the next step is to start the Autopilot process. This step is known as the technician flow.
 
 To start the technician flow, follow these steps:
 
@@ -112,8 +112,8 @@ To start the technician flow, follow these steps:
 
       From this screen, diagnostic logs can be gathered from the device to troubleshoot the issue by using the following methods:
 
-    - In Windows 10, select **View diagnostics**.
+      - In Windows 10, select **View diagnostics**.
 
-    - In Windows 11, press the <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>D</kbd> keys and then select **Export Logs**.
+      - In Windows 11, press the <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>D</kbd> keys and then select **Export Logs**.
 
       If the issue can be easily fixed, for example resolving network connectivity, then select the **Retry** button to retry provisioning the device. Otherwise if the issue can't be immediately fixed or can't be fixed without a reset, then select the **Reset** button so that the process starts over again.
