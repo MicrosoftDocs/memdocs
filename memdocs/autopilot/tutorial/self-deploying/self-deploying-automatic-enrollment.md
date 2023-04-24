@@ -32,7 +32,7 @@ For an overview of the Windows Autopilot self-deploying mode workflow, see [Wind
 
 > [!NOTE]
 >
-> If you've already set up automatic Intune enrollment from another Autopilot scenario, you can skip this step and move on to [Step 2: Register devices as Autopilot devices](self-deploying-register-device.md).
+> If you have already set up automatic Intune enrollment from another Autopilot scenario, you can skip this step and move on to [Step 2: Register devices as Autopilot devices](self-deploying-register-device.md).
 
 ## Set up Windows automatic Intune enrollment
 

@@ -52,7 +52,7 @@ Once the technician flow step of the pre-provisioning process completes successf
 
    - If the device is connected to a wired network and has network connectivity, the Enrollment Status Page (ESP) appears.
 
-   - If the device isn't connected to a wired network or if it doesn't have network connectivity, it prompts to connect to a network since connectivity to the Internet and a domain controller is required during the user flow phase of a hybrid Azure AD join:
+   - If the device isn't connected to a wired network or if it doesn't have network connectivity, it prompts to connect to a network. Connectivity to the Internet and a domain controller is required during the user flow phase of a hybrid Azure AD join:
 
      1. The **Let's connect you to a network** screen appears. At this screen, either plug the device into a wired network (if available), or select and connect to a wireless Wi-Fi network.
 
@@ -64,7 +64,7 @@ Once the technician flow step of the pre-provisioning process completes successf
 
     > [!NOTE]
     >
-    > Depending on which screens were selected to be shown instead of hidden when the Autopilot profile was configured at the [Create and assign Autopilot profile](azure-ad-join-autopilot-profile.md) step, additional screens such as License Terms, Privacy, Language, and Keyboard may appear before the Enrollment Status Page (ESP) appears.
+    > Additional screens such as License Terms, Privacy, Language, and Keyboard may appear before the Enrollment Status Page (ESP) depending on how the Autopilot profile was configured at the [Create and assign Autopilot profile](hybrid-azure-ad-join-autopilot-profile.md) step.
 
 1. The Enrollment Status Page (ESP) displays progress during the provisioning process across three phases:
 
@@ -74,7 +74,7 @@ Once the technician flow step of the pre-provisioning process completes successf
 
     The first two phases of **Device preparation** and **Device setup** are part of the Device ESP while the final phase of **Account setup** is part of the User ESP.
 
-    For the user flow of Windows Autopilot for pre-provisioned deployment, the **Device setup** phase of the Device ESP and the **Account setup** phase of the User ESP runs. The **Device preparation** phase of the Device ESP doesn't run during the user flow since it already ran and completed during the [Technician flow](azure-ad-join-technician-flow.md). The **Device setup** phase of the Device ESP runs again during the user flow in case any new or additional policies or applications assigned to the device became available during the time frame that the technician flow ran and when the user flow runs after the device was delivered to the end-user.
+    For the user flow of Windows Autopilot for pre-provisioned deployment, the **Device setup** phase of the Device ESP and the **Account setup** phase of the User ESP runs. The **Device preparation** phase of the Device ESP doesn't run during the user flow since it already ran and completed during the [Technician flow](hybrid-azure-ad-join-technician-flow.md). The **Device setup** phase of the Device ESP runs again during the user flow in case any new or additional policies or applications assigned to the device became available during the time frame that the technician flow ran and when the user flow runs after the device was delivered to the end-user.
 
     > [!NOTE]
     >
@@ -103,7 +103,7 @@ Once the technician flow step of the pre-provisioning process completes successf
 
       > [!NOTE]
       >
-      > Under certain circumstances, the Azure AD sign-in page may not appear and the end-user may be automatically signed into Azure AD. For example, if using Active Directory Federation Services (ADFS) and single sign-on (SSO). If the end-user is automatically signed into Azure AD, then the Autopilot deployment will proceed on to the next step automatically.
+       Under certain circumstances, the Azure AD sign-in page may not appear and the end-user may be automatically signed into Azure AD. For example, if using Active Directory Federation Services (ADFS) and single sign-on (SSO). If the end-user is automatically signed into Azure AD, then the Autopilot deployment will proceed on to the next step automatically.
 
    1. The **Stay signed in to all your apps** screen appears. Make sure that the option **Allow my organization to manage my device** is selected, and then select **OK**.
 

@@ -22,7 +22,7 @@ appliesto:
 
 This step by step tutorial guides you through using Intune to perform a Windows Autopilot user-driven scenario when the devices are strictly Azure AD joined.
 
-The purpose of this tutorial is to provide a step by step guide for all the steps required for the configuration for a successful Autopilot user-driven Azure AD join deployment using Intune. The tutorial is also designed as a walkthrough in a lab or testing scenario, but can be expanded for use in a production environment.
+The purpose of this tutorial is a step by step guide for all the configuration steps required for a successful Autopilot user-driven Azure AD join deployment using Intune. The tutorial is also designed as a walkthrough in a lab or testing scenario, but can be expanded for use in a production environment.
 
 Before beginning, refer to the [How to: Plan your Azure AD join implementation](/azure/active-directory/devices/azureadjoin-plan) to make sure all prerequisites are met for joining devices to Azure AD.
 

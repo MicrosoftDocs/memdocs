@@ -36,7 +36,7 @@ For an overview of the Windows Autopilot user-driven hybrid Azure AD join workfl
 
 > [!NOTE]
 >
-> If you've already configured and assigned an ESP from another Autopilot scenario and want to keep the same settings for the ESP for the user-driven hybrid Azure AD join scenario, you can skip this step and move on to [Step 7: Create and assign hybrid Azure AD join Autopilot profile](hybrid-azure-ad-join-autopilot-profile.md).
+> If you have already configured and assigned an ESP from another Autopilot scenario and want to keep the same settings for the ESP for the user-driven hybrid Azure AD join scenario, you can skip this step and move on to [Step 7: Create and assign hybrid Azure AD join Autopilot profile](hybrid-azure-ad-join-autopilot-profile.md).
 
 ## The Enrollment Status Page (ESP)
 

@@ -32,7 +32,7 @@ For an overview of the Windows Autopilot self-deploying mode workflow, see [Wind
 
 ## Create and assign self-deploying Autopilot profile
 
-While the ESP controls what is shown during device and user setup and specifies how soon a user can use their device, the Autopilot profile specifies how the device is configured during Windows Setup, or during OOBE.
+The Autopilot profile specifies how the device is configured during Windows Setup and what is shown during the out of box experience (OOBE).
 
 > [!TIP]
 >
@@ -70,6 +70,10 @@ To create a self-deploying mode Autopilot profile, follow these steps:
         - Names can't be all numbers.
         - Use the [%SERIAL% macro](/windows/client-management/mdm/accounts-csp) to add a hardware-specific serial number.
         - Use the [%RAND:x% macro](/windows/client-management/mdm/accounts-csp) to add a random string of numbers, where x equals the number of digits to add.
+
+      > [!NOTE]
+      >
+      > If the language/region and keyboard screens are set to hidden, they may still be displayed if there's no network connectivity at the start of the Autopilot deployment. These screens are displayed because there's no network connectivity at the start of the deployment to download the Autopilot profile where the settings to hide these screens are specified. Once network connectivity is established, the Autopilot profile is downloaded and any additional screen settings should work as expected.
 
 [!INCLUDE [Autopilot profiles after steps](../includes/autopilot-profile-steps-after.md)]
 

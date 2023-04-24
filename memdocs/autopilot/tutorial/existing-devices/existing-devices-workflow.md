@@ -22,7 +22,7 @@ appliesto:
 
 This step by step tutorial guides you through using Intune and Microsoft Configuration Manager to perform a Windows Autopilot deployment for existing devices.
 
-The purpose of this tutorial is to provide a step by step guide for all the steps required for the configuration for a successful Autopilot deployment for existing devices using Intune and Microsoft Configuration Manager. The tutorial is also designed as a walkthrough in a lab or testing scenario, but can be expanded for use in a production environment. This tutorial assumes familiarity with Microsoft Configuration Manager and that Microsoft Configuration Manager is already set up and configured to support operating system deployments.
+The purpose of this tutorial is a step by step guide for all the configuration steps required for a successful Autopilot deployment for existing devices using Intune and Microsoft Configuration Manager. The tutorial is also designed as a walkthrough in a lab or testing scenario, but can be expanded for use in a production environment. This tutorial assumes familiarity with Microsoft Configuration Manager and that Microsoft Configuration Manager is already set up and configured to support operating system deployments.
 
 ## Windows Autopilot deployment for existing devices overview
 

@@ -30,7 +30,7 @@ Windows Autopilot for pre-provisioned deployment Azure AD join steps:
 - Step 7: [Assign Autopilot device to a user (optional)](azure-ad-join-assign-device-to-user.md)
 > [!div class="checklist"]
 > - **Step 8: Technician flow**
-- Step 9: [User flow](hybrid-azure-ad-join-user-flow.md)
+- Step 9: [User flow](azure-ad-join-user-flow.md)
 
 For an overview of the Windows Autopilot for pre-provisioned deployment Azure AD join workflow, see [Windows Autopilot for pre-provisioned deployment Azure AD join overview](azure-ad-join-workflow.md#workflow)
 

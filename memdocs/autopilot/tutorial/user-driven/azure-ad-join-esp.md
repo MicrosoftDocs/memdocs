@@ -34,7 +34,7 @@ For an overview of the Windows Autopilot user-driven Azure AD join workflow, see
 
 > [!NOTE]
 >
-> If you've already configured and assigned an ESP from another Autopilot scenario and want to keep the same settings for the ESP for the user-driven Azure AD join scenario, you can skip this step and move on to [Step 6: Create and assign Autopilot profile](azure-ad-join-autopilot-profile.md).
+> If you have already configured and assigned an ESP from another Autopilot scenario and want to keep the same settings for the ESP for the user-driven Azure AD join scenario, you can skip this step and move on to [Step 6: Create and assign Autopilot profile](azure-ad-join-autopilot-profile.md).
 
 ## The Enrollment Status Page (ESP)
 

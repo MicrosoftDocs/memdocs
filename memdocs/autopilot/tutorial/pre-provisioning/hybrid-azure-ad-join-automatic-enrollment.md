@@ -38,7 +38,7 @@ For an overview of the Windows Autopilot for pre-provisioned deployment hybrid A
 
 > [!NOTE]
 >
-> If you've already set up automatic Intune enrollment from another Autopilot scenario, you can skip this step and move on to [Step 2: Install the Intune Connector](hybrid-azure-ad-join-intune-connector.md).
+> If you have already set up automatic Intune enrollment from another Autopilot scenario, you can skip this step and move on to [Step 2: Install the Intune Connector](hybrid-azure-ad-join-intune-connector.md).
 
 ## Set up Windows automatic Intune enrollment
 

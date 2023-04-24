@@ -22,13 +22,13 @@ appliesto:
 
 This step by step tutorial guides you through using Intune to perform a Windows Autopilot for pre-provisioned deployment scenario when the devices are also joined to an on-premises domain, also known as hybrid Azure AD join.
 
-The purpose of this tutorial is to provide a step by step guide for all the steps required for the configuration for a successful Autopilot for pre-provisioned deployment hybrid Azure AD join deployment using Intune. The tutorial is also designed as a walkthrough in a lab or testing scenario, but can be expanded for use in a production environment.
+The purpose of this tutorial is a step by step guide for all the configuration steps required for a successful Autopilot for pre-provisioned deployment hybrid Azure AD join deployment using Intune. The tutorial is also designed as a walkthrough in a lab or testing scenario, but can be expanded for use in a production environment.
 
 Before beginning, refer to the [Plan your hybrid Azure Active Directory join implementation](/azure/active-directory/devices/hybrid-azuread-join-plan) to make sure all prerequisites are met for joining on-premises AD devices to Azure AD.
 
 > [!NOTE]
 >
-> Since Windows Autopilot for pre-provisioned deployment hybrid Azure AD join builds on top of [Windows Autopilot hybrid user-driven Azure AD join](../user-driven/hybrid-azure-ad-join-workflow.md), it's strongly recommended that the Windows Autopilot hybrid user-driven Azure AD join scenario is setup, tested, and working first before attempting to use the Windows Autopilot for pre-provisioned deployment hybrid Azure AD join scenario. If the Windows Autopilot user-driven hybrid Azure AD join doesn't work, then most likely the Windows Autopilot pre-provisioned deployment hybrid Azure AD join scenario won't work either.
+> Since Windows Autopilot for pre-provisioned deployment hybrid Azure AD join builds on top of [Windows Autopilot hybrid user-driven Azure AD join](../user-driven/hybrid-azure-ad-join-workflow.md), it's recommended that the Windows Autopilot hybrid user-driven Azure AD join scenario is set up, tested, and working first before attempting to use the Windows Autopilot for pre-provisioned deployment hybrid Azure AD join scenario. If the Windows Autopilot user-driven hybrid Azure AD join doesn't work, then most likely the Windows Autopilot pre-provisioned deployment hybrid Azure AD join scenario won't work either.
 
 ## Windows Autopilot for pre-provisioned deployment hybrid Azure AD join overview
 
@@ -55,7 +55,11 @@ Windows Autopilot for pre-provisioned deployment consists of two phases:
 - Device ESP phase: Windows is configured and applications and policies assigned to the device are applied.
 - User ESP phase: End-user signs into the device for the first time using on-premises domain credentials and applications and policies assigned to the user are applied.
 
-The main difference between Windows Autopilot user-driven deployment and Windows Autopilot is:
+Once the Windows Autopilot for pre-provisioned deployment is complete, the device is ready for the end-user to use. The Autopilot deployment prompts the end-user to sign out of the device. Once the device is signed out, the end-user can sign back in with their on-premises domain credentials and begin to use the device.
+
+## Differences between Windows Autopilot user-driven deployment and Windows Autopilot for pre-provisioned deployment
+
+The main difference between Windows Autopilot user-driven deployment and Windows Autopilot for pre-provisioned deployment is:
 
 - Windows Autopilot user-driven deployment: Both the Device ESP phase and the User ESP phase occur when the end-user goes through the Autopilot deployment after turning on the device for the first time.
 
@@ -67,9 +71,7 @@ The main difference between Windows Autopilot user-driven deployment and Windows
 
 The deployment is split up between the Technician flow and User flow phases so that the deployment is faster when the end-user receives the device. The deployment is faster when the end-user receives the device because the IT department, OEM, or reseller has completed the first portion of the deployment during the Technician flow.
 
-The one possible disadvantage of Windows Autopilot for pre-provisioned deployment over Windows Autopilot user-driven deployment is that if the OEM or reseller is unable to perform the Technician flow, then the device may need to first go to the organization's IT department where they'll run the Technician flow. This extra step prevents the device from being shipped and delivered to the end-user directly from the OEM or reseller. This extra step can lengthen the amount of time before the end-user receives the device.
-
-Once the Windows Autopilot for pre-provisioned deployment is complete, the device is ready for the end-user to use. The Autopilot deployment prompts the end-user to sign out of the device. Once the device is signed out, the end-user can sign back in with their on-premises domain credentials and begin to use the device.
+One possible disadvantage of Windows Autopilot for pre-provisioned deployment over Windows Autopilot user-driven deployment is that if the OEM or reseller is unable to perform the Technician flow, then the device may need to first go to the organization's IT department. The organization's IT department then needs to run the Technician flow once they receive the device followed by delivering the device to the end-user. This extra step prevents the device from being shipped and delivered to the end-user directly from the OEM or reseller. This extra step can lengthen the amount of time before the end-user receives the device.
 
 ## Workflow
 

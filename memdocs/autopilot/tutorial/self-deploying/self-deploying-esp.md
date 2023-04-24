@@ -32,7 +32,7 @@ For an overview of the Windows Autopilot self-deploying mode workflow, see [Wind
 
 > [!NOTE]
 >
-> If you've already configured and assigned an ESP from another Autopilot scenario and want to keep the same settings for the ESP for the self-deploying mode scenario, you can skip this step and move on to [Step 5: Create and assign Autopilot profile](self-deploying-autopilot-profile.md).
+> If you have already configured and assigned an ESP from another Autopilot scenario and want to keep the same settings for the ESP for the self-deploying mode scenario, you can skip this step and move on to [Step 5: Create and assign Autopilot profile](self-deploying-autopilot-profile.md).
 
 ## The Enrollment Status Page (ESP)
 

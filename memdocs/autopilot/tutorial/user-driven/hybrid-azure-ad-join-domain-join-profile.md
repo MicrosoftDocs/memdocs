@@ -36,7 +36,7 @@ For an overview of the Windows Autopilot user-driven hybrid Azure AD join workfl
 
 > [!NOTE]
 >
-> If you've already created a domain join profile as part of the [Windows Autopilot for pre-provisioned deployment hybrid Azure AD join](../pre-provisioning/hybrid-azure-ad-join-domain-join-profile.md) scenario and want to keep the same settings and assignments, you can move on to the [Next step: Assign Autopilot device to a user (optional)](#next-step-assign-autopilot-device-to-a-user-optional) section.
+> If you have already created a domain join profile as part of the [Windows Autopilot for pre-provisioned deployment hybrid Azure AD join](../pre-provisioning/hybrid-azure-ad-join-domain-join-profile.md) scenario and want to keep the same settings and assignments, you can move on to the [Next step: Assign Autopilot device to a user (optional)](#next-step-assign-autopilot-device-to-a-user-optional) section.
 
 ## Create and assign a domain join profile
 

@@ -36,7 +36,7 @@ For an overview of the Windows Autopilot for pre-provisioned deployment Azure AD
 
 > [!NOTE]
 >
-> If you've already allowed users to join devices to Azure AD as part of the [Windows Autopilot user-driven Azure AD join](../user-driven/azure-ad-join-workflow.md) scenario, you can skip this step and move on to [Step 3: Register devices as Autopilot devices](azure-ad-join-register-device.md).
+> If you have already allowed users to join devices to Azure AD as part of the [Windows Autopilot user-driven Azure AD join](../user-driven/azure-ad-join-workflow.md) scenario, you can skip this step and move on to [Step 3: Register devices as Autopilot devices](azure-ad-join-register-device.md).
 
 ## Allow users to join devices to Azure AD
 
@@ -59,16 +59,16 @@ In order for Windows Autopilot to work, users need to be allowed to join devices
       1. Select the link under **Selected**.
 
       1. In the **Members allowed to join devices** page that opens:
- 
+
          1. Select **Add**.
 
-         2. In the **Add members** window that opens:
+         1. In the **Add members** window that opens:
 
             1. select the desired user(s) and/or group(s) to add.
 
-            2. Once all of the desired users(s) and group(s) have been selected, select **Select** to close the **Add members** window.
+            1. Once all of the desired users(s) and group(s) have been selected, select **Select** to close the **Add members** window.
 
-         3. Select **OK**.
+         1. Select **OK**.
 
         > [!NOTE]
         >
