@@ -65,8 +65,8 @@ Be sure you have the correct role to assign policies and profiles. For more info
 
 3. Under **Included groups** or **Excluded groups**, choose **Add groups** to select one or more Azure AD groups. If you intend to deploy the policy broadly to all applicable devices, select **Add all users** or **Add all devices**.
 
-> [!NOTE]
-> If you select "All Devices" and "All Users", the option to add additional Azure AD groups will become disabled. 
+    > [!NOTE]
+    > If you select "All Devices" and "All Users", the option to add additional Azure AD groups disables. 
 
 4. Select **Review + Save**. This step doesn't assign your policy.
 5. Select **Save**. When you save, your policy is assigned. Your groups will receive your policy settings when the devices check in with the Intune service.
