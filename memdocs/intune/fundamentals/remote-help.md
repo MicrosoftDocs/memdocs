@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 3/27/2023
+ms.date: 4/24/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -323,46 +323,64 @@ Automatic firewall rule creation from the Remote Help installer has been removed
 
 Depending on the environment that Remote Help is utilized in, it may be necessary to create firewall rules to allow Remote Help through the Windows Defender Firewall. In situations where this is necessary, these are the Remote Help executables that should be allowed through the firewall:
 
- - C:\Program Files\Remote help\RemoteHelp.exe
- - C:\Program Files\Remote help\RHService.exe
- - C:\Program Files\Remote help\RemoteHelpRDP.exe
+- C:\Program Files\Remote help\RemoteHelp.exe
+- C:\Program Files\Remote help\RHService.exe
+- C:\Program Files\Remote help\RemoteHelpRDP.exe
 
 ## Languages Supported
 
 Remote Help is supported in the following languages:
+
+- Arabic
+- Bulgarian
+- Chinese (Simplified)
+- Chinese (Traditional)
+- Croatian
 - Czech
 - Danish
 - Dutch
 - English
+- Estonian
 - Finnish
 - French
 - German
 - Greek
+- Hebrew
 - Hungarian
 - Italian
 - Japanese
 - Korean
+- Latvian
+- Lithuanian
 - Norwegian
 - Polish
 - Portuguese (Portugal)
 - Romanian
 - Russian
+- Serbian
+- Slovak
+- Slovenian
 - Spanish
 - Swedish
+- Thai
 - Turkish
-
-> [!NOTE] 
-> The Message function in Remote Help only supports single byte characters.
+- Ukrainian
 
 ## Known Issues
 
 - When setting a conditional access policy for apps **Office 365** and **Office 365 SharePoint Online** with the grant set to **Require device to be marked as compliant**, if a user's device is either unenrolled or non-compliant, then the Remote Help session won’t be established. 
-If a conditional access policy is configured as described above and if the devices participating in the remote assistance session are unenrolled or non-compliant, the tenant will not be able to use Remote Help. 
+If a conditional access policy is configured as described above and if the devices participating in the remote assistance session are unenrolled or non-compliant, the tenant will not be able to use Remote Help.
 
-## What's New for Remote Help 
+## What's New for Remote Help
 
 Updates for Remote Help are released periodically. When we update Remote Help, you can read about the changes here.
 
+### May 2, 2023
+
+Version: (need to add) - Changes in this release:
+
+With this release Remote Help includes a new enhanced chat that maintains a continuous thread of all messages. This chat now supports special characters and additional languages including Chinese and Arabic.
+ 
 ### March 27, 2023
 
 Version: 4.2.1167.0 - Changes in this release:
