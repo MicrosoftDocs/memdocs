@@ -5,7 +5,7 @@ manager: aaroncz
 ms.technology: itpro-deploy
 ms.prod: windows-client
 ms.topic: include
-ms.date: 04/11/2023
+ms.date: 04/24/2023
 ms.localizationpriority: medium
 ---
 
@@ -22,7 +22,7 @@ A device that has been registered as an Autopilot device can also be assigned to
 
 > [!TIP]
 >
-> For testing purposes, especially for hybrid Azure AD scenarios, it may be better to first test an Autopilot deployment before assigning the device to a user. This will limit the scope of applications, policies, and configurations assigned during the Autopilot process.
+> For testing purposes, especially for hybrid Azure AD scenarios, it may be better to first test an Autopilot deployment before assigning the device to a user. This will limit the scope of applications, policies, and configurations processed during the Autopilot process.
 
 > [!TIP]
 >

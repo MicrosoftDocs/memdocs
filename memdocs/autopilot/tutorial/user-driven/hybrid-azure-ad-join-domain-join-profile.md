@@ -7,7 +7,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 04/11/2023
+ms.date: 04/24/2023
 ms.topic: tutorial
 ms.collection: 
   - tier1
@@ -50,6 +50,8 @@ For an overview of the Windows Autopilot user-driven hybrid Azure AD join workfl
 > [!NOTE]
 >
 > If you don't plan to assign a user to the device, at this point, the device is ready to be deployed. If desired, deploy any additional applications, policies, and profiles that should run during Autopilot to the device group that the device is a member of. Boot the device with a fresh install of Windows and the Autopilot deployment should begin.
+
+[!INCLUDE [Assignment tip](../includes/assignment-tip.md)]
 
 ## More information
 
