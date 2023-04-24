@@ -7,7 +7,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 04/11/2023
+ms.date: 04/24/2023
 ms.topic: tutorial
 ms.collection: 
   - tier1
@@ -24,7 +24,12 @@ You can use Intune to start the remote Windows Autopilot Reset process. Resettin
 
 ## Workflow
 
-Make sure WinRE is installed on device where Windows Autopilot Reset is triggered > Make sure Intune admin has appropriate privileges in Intune to perform remote Windows Autopilot Resets > In Intune remotely trigger Windows Autopilot Reset on device > Force device to start the remote Windows Autopilot Reset (optional)
+The following steps are required to enable and trigger local Windows Autopilot Reset:
+
+1. Make sure WinRE is installed on device where Windows Autopilot Reset is triggered.
+1. Make sure Intune admin has appropriate privileges in Intune to perform remote Windows Autopilot Resets.
+1. In Intune, remotely trigger Windows Autopilot Reset on device.
+1. Force device to start the remote Windows Autopilot Reset (optional).
 
 ## Triggering a remote Windows Autopilot Reset
 
@@ -84,17 +89,17 @@ To force the device to obtain the latest Intune policy locally on the device, fo
 
 1. Sign into the device where the remote Autopilot Reset was initiated.
 
-2. Right click on the Start Menu and select **Settings**.
+1. Right click on the Start Menu and select **Settings**.
 
-3. In **Settings**, select **Accounts** in the left hand pane.
+1. In **Settings**, select **Accounts** in the left hand pane.
 
-4. In the **Accounts** page, select **Access work or school**.
+1. In the **Accounts** page, select **Access work or school**.
 
-5. In the **Accounts > Access work or school** page, select **Connected by \<user@domain\>** to open a new section.
+1. In the **Accounts > Access work or school** page, select **Connected by \<user@domain\>** to open a new section.
 
-6. In the new section, next to **Managed by \<organization\>**, select the **Info** button.
+1. In the new section, next to **Managed by \<organization\>**, select the **Info** button.
 
-7. In the **Accounts > Access work or school > Managed by \<organization\>** page, under **Device sync status**, select the **Sync** button.
+1. In the **Accounts > Access work or school > Managed by \<organization\>** page, under **Device sync status**, select the **Sync** button.
 
 These steps should force the device to obtain the latest Intune policy. The Autopilot Reset should start shortly thereafter.
 

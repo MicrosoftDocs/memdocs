@@ -7,7 +7,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 04/11/2023
+ms.date: 04/24/2023
 ms.topic: tutorial
 ms.collection: 
   - tier1
@@ -32,13 +32,9 @@ Windows Autopilot for pre-provisioned deployment Azure AD join steps:
 > [!div class="checklist"]
 > - **Step 9: User flow**
 
-For an overview of the Windows Autopilot for pre-provisioned deployment Azure AD join workflow, see [Windows Autopilot for pre-provisioned deployment Azure AD join overview](azure-ad-join-workflow.md)
+For an overview of the Windows Autopilot for pre-provisioned deployment Azure AD join workflow, see [Windows Autopilot for pre-provisioned deployment Azure AD join overview](azure-ad-join-workflow.md#workflow)
 
 ## User flow
-
-> [!IMPORTANT]
->
-> The user flow portion of the Azure AD join process requires connectivity to the Internet.
 
 Once the technician flow step of the pre-provisioning process completes successfully and the device is resealed, the device can be delivered to the end-user. The end-user then completes the normal Windows Autopilot user-driven process. This final step is know as the user flow and involves the following steps:
 
@@ -50,7 +46,7 @@ Once the technician flow step of the pre-provisioning process completes successf
 
    - If the device is connected to a wired network and has network connectivity, the Azure AD sign-in page appears.
 
-   - If the device isn't connected to a wired network or if it doesn't have network connectivity, it prompts to connect to a network since connectivity to the Internet is required during the user flow phase of an Azure AD join:
+   - If the device isn't connected to a wired network or if it doesn't have network connectivity, it prompts to connect to a network. Connectivity to the Internet is required during the user flow phase of an Azure AD join:
 
      1. The **Let's connect you to a network** screen appears. At this screen, either plug the device into a wired network (if available), or select and connect to a wireless Wi-Fi network.
 
@@ -58,7 +54,7 @@ Once the technician flow step of the pre-provisioning process completes successf
 
     > [!NOTE]
     >
-    > Depending on which screens were selected to be shown instead of hidden when the Autopilot profile was configured at the [Create and assign Autopilot profile](azure-ad-join-autopilot-profile.md) step, additional screens such as License Terms, Privacy, Language, and Keyboard may appear before the Azure AD sign-in page.
+    > Additional screens such as License Terms, Privacy, Language, and Keyboard may appear before the Enrollment Status Page (ESP) depending on how the Autopilot profile was configured at the [Create and assign Autopilot profile](azure-ad-join-autopilot-profile.md) step.
 
 1. At the Azure AD sign-in page, if a user was assigned to the device, their username may be pre-populated in this screen. Enter the Azure AD credentials for the user and then select **Next** (Windows 10) or **Sign in** (Windows 11) to sign in. If necessary, proceed through the multi-factor authentication (MFA) screens.
 

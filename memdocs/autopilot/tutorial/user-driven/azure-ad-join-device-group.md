@@ -7,7 +7,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 04/11/2023
+ms.date: 04/24/2023
 ms.topic: tutorial
 ms.collection: 
   - tier1
@@ -30,11 +30,11 @@ Autopilot user-driven Azure AD join steps:
 - Step 6: [Create and assign Autopilot profile](azure-ad-join-autopilot-profile.md)
 - Step 7: [Assign Autopilot device to a user (optional)](azure-ad-join-assign-device-to-user.md)
 
-For an overview of the Windows Autopilot user-driven Azure AD join workflow, see [Windows Autopilot user-driven Azure AD join overview](azure-ad-join-workflow.md)
+For an overview of the Windows Autopilot user-driven Azure AD join workflow, see [Windows Autopilot user-driven Azure AD join overview](azure-ad-join-workflow.md#workflow)
 
 > [!NOTE]
 >
-> If you've already created device groups from another Autopilot scenario, you can skip this step and move on to [Step 5: Configure and assign Autopilot Enrollment Status Page (ESP)](azure-ad-join-esp.md). However, be aware that if you're deploying multiple different Autopilot scenarios to different devices, separate device groups will be required for each Autopilot scenario.
+> If you have already created device groups from another Autopilot scenario, you can skip this step and move on to [Step 5: Configure and assign Autopilot Enrollment Status Page (ESP)](azure-ad-join-esp.md). However, if you're deploying multiple different Autopilot scenarios to different devices, separate device groups are required for each Autopilot scenario.
 
 ## Create a device group
 

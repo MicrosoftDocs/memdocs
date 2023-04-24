@@ -7,7 +7,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 04/11/2023
+ms.date: 04/24/2023
 ms.topic: tutorial
 ms.collection: 
   - tier1
@@ -32,11 +32,11 @@ Autopilot user-driven hybrid Azure AD join steps:
 - Step 8: [Configure and assign domain join profile](hybrid-azure-ad-join-domain-join-profile.md)
 - Step 9: [Assign Autopilot device to a user (optional)](hybrid-azure-ad-join-assign-device-to-user.md)
 
-For an overview of the Windows Autopilot user-driven hybrid Azure AD join workflow, see [Windows Autopilot user-driven hybrid Azure AD join overview](hybrid-azure-ad-join-workflow.md)
+For an overview of the Windows Autopilot user-driven hybrid Azure AD join workflow, see [Windows Autopilot user-driven hybrid Azure AD join overview](hybrid-azure-ad-join-workflow.md#workflow)
 
 > [!NOTE]
 >
-> If you've already set up automatic Intune enrollment from another Autopilot scenario, you can skip this step and move on to [Step 2: Install the Intune Connector](hybrid-azure-ad-join-intune-connector.md).
+> If you have already set up automatic Intune enrollment from another Autopilot scenario, you can skip this step and move on to [Step 2: Install the Intune Connector](hybrid-azure-ad-join-intune-connector.md).
 
 ## Set up Windows automatic Intune enrollment
 

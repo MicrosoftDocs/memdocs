@@ -7,7 +7,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 04/11/2023
+ms.date: 04/24/2023
 ms.topic: tutorial
 ms.collection: 
   - tier1
@@ -28,13 +28,13 @@ Autopilot self-deploying mode steps:
 > **Step 4: Configure and assign Autopilot Enrollment Status Page (ESP)**
 - Step 5: [Create and assign Autopilot profile](self-deploying-autopilot-profile.md)
 
-For an overview of the Windows Autopilot self-deploying mode workflow, see [Windows Autopilot self-deploying overview](self-deploying-workflow.md)
+For an overview of the Windows Autopilot self-deploying mode workflow, see [Windows Autopilot self-deploying overview](self-deploying-workflow.md#workflow)
 
 > [!NOTE]
 >
-> If you've already configured and assigned an ESP from another Autopilot scenario and want to keep the same settings for the ESP for the self-deploying mode scenario, you can skip this step and move on to [Step 5: Create and assign Autopilot profile](self-deploying-autopilot-profile.md).
+> If you have already configured and assigned an ESP from another Autopilot scenario and want to keep the same settings for the ESP for the self-deploying mode scenario, you can skip this step and move on to [Step 5: Create and assign Autopilot profile](self-deploying-autopilot-profile.md).
 
-## Configure and assign the Enrollment Status Page (ESP)
+## The Enrollment Status Page (ESP)
 
 [!INCLUDE [How to configure and assign an Enrollment Status Page (ESP) in Intune](../includes/configure-and-assign-esp.md)]
 

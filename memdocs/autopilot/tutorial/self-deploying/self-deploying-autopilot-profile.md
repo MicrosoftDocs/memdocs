@@ -7,7 +7,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 04/11/2023
+ms.date: 04/24/2023
 ms.topic: tutorial
 ms.collection: 
   - tier1
@@ -28,15 +28,15 @@ Autopilot self-deploying mode steps:
 > [!div class="checklist"]
 > - **Step 5: Create and assign Autopilot profile**
 
-For an overview of the Windows Autopilot self-deploying mode workflow, see [Windows Autopilot self-deploying overview](self-deploying-workflow.md)
+For an overview of the Windows Autopilot self-deploying mode workflow, see [Windows Autopilot self-deploying overview](self-deploying-workflow.md#workflow)
 
 ## Create and assign self-deploying Autopilot profile
 
-While the ESP controls what is shown during device and user setup and specifies how soon a user can use their device, the Autopilot profile specifies how the device is configured during Windows Setup, or during OOBE.
+The Autopilot profile specifies how the device is configured during Windows Setup and what is shown during the out of box experience (OOBE).
 
 > [!TIP]
 >
-> For Configuration Manager admins, the Autopilot profile is similar to some of the configuration that takes place during a task sequence via an unattend.xml file. The unattend.xml file is configured during the **Apply Windows Settings** and **Apply Network Settings** steps. Note however that Autopilot does not use unattend.xml files.
+> For Configuration Manager admins, the Autopilot profile is similar to some of the configuration that takes place during a task sequence via an `unattend.xml` file. The `unattend.xml` file is configured during the **Apply Windows Settings** and **Apply Network Settings** steps. Note however that Autopilot does not use `unattend.xml` files.
 
 To create a self-deploying mode Autopilot profile, follow these steps:
 
@@ -62,7 +62,7 @@ To create a self-deploying mode Autopilot profile, follow these steps:
 
         > [!NOTE]
         >
-        > If you want users to be able to select their keyboard layout, then select **No** instead. However, be aware that the purpose of Autopilot self-deploying mode is to deploy a device with minimal to no user interaction. Setting **Automatically configure keyboard** to **No** will require additional user interaction.
+        > If you want users to be able to select their keyboard layout, then select **No** instead. However, the purpose of Autopilot self-deploying mode is to deploy a device with minimal to no user interaction. Setting **Automatically configure keyboard** to **No** requires additional user interaction.
 
       - For **Apply device name template**, select **No**. Alternatively, **Yes** can be chosen to apply a device name template. Be aware of the following if the name template is selected to **Yes**:
 
@@ -70,6 +70,10 @@ To create a self-deploying mode Autopilot profile, follow these steps:
         - Names can't be all numbers.
         - Use the [%SERIAL% macro](/windows/client-management/mdm/accounts-csp) to add a hardware-specific serial number.
         - Use the [%RAND:x% macro](/windows/client-management/mdm/accounts-csp) to add a random string of numbers, where x equals the number of digits to add.
+
+      > [!NOTE]
+      >
+      > If the language/region and keyboard screens are set to hidden, they may still be displayed if there's no network connectivity at the start of the Autopilot deployment. These screens are displayed because there's no network connectivity at the start of the deployment to download the Autopilot profile where the settings to hide these screens are specified. Once network connectivity is established, the Autopilot profile is downloaded and any additional screen settings should work as expected.
 
 [!INCLUDE [Autopilot profiles after steps](../includes/autopilot-profile-steps-after.md)]
 
@@ -80,6 +84,12 @@ To create a self-deploying mode Autopilot profile, follow these steps:
 ## Next step: Deploy the device
 
 At this point, the device is ready to be deployed. If desired, deploy any additional applications, policies, and profiles to the device group that the device is a member of which should run during Autopilot. Boot the device with a fresh install of Windows and the Autopilot deployment should begin.
+
+[!INCLUDE [Assignment tip](../includes/assignment-tip.md)]
+
+> [!NOTE]
+>
+> Although a user isn't assigned to a device for Windows Autopilot self-deploying mode, for testing purposes, assigning at least one policy and at least one application to users is still recommended since User ESP still runs when a user first signs into the device.
 
 ## More information
 

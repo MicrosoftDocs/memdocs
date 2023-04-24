@@ -7,7 +7,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 04/11/2023
+ms.date: 04/24/2023
 ms.topic: tutorial
 ms.collection: 
   - tier1
@@ -22,15 +22,15 @@ appliesto:
 
 This step by step tutorial guides you through using Intune to perform a Windows Autopilot self-deploying mode scenario.
 
-The purpose of this tutorial is to provide a step by step guide for all the steps required for the configuration for a successful Autopilot self-deploying mode deployment using Intune. The tutorial is also designed as a walkthrough in a lab or testing scenario, but can be expanded for use in a production environment.
+The purpose of this tutorial is a step by step guide for all the configuration steps required for a successful Autopilot self-deploying mode deployment using Intune. The tutorial is also designed as a walkthrough in a lab or testing scenario, but can be expanded for use in a production environment.
 
 Before beginning, refer to the [How to: Plan your Azure AD join implementation](/azure/active-directory/devices/azureadjoin-plan) to make sure all prerequisites are met for joining devices to Azure AD.
 
 ## Windows Autopilot self-deploying mode overview
 
-Windows Autopilot self-deploying mode is an Autopilot solution that automates the configuration of Windows on a new device delivered directly from an IT department, OEM, or reseller. Windows Autopilot for pre-provisioned deployment uses the existing Windows installation installed by the OEM at the factory. Windows Autopilot self-deploying mode is designed for kiosk like devices or devices shared by multiple users. For this reason, Windows Autopilot self-deploying mode doesn't support assigning users to the device. Additionally, Windows Autopilot self-deploying mode only supports Azure AD join. It doesn't support hybrid Azure AD join.
+Windows Autopilot self-deploying mode is an Autopilot solution that automates the configuration of Windows on a new device delivered directly from an IT department, OEM, or reseller to the end-user. Windows Autopilot for pre-provisioned deployment uses the existing Windows installation installed by the OEM at the factory. Windows Autopilot self-deploying mode is designed for kiosk like devices or devices shared by multiple users. For this reason, Windows Autopilot self-deploying mode doesn't support assigning users to the device. Additionally, Windows Autopilot self-deploying mode only supports Azure AD join. It doesn't support hybrid Azure AD join.
 
-The main advantage of Windows Autopilot self-deploying mode over other Autopilot deployments methods is that it minimizes the interaction needed during the initial deployment of the device because there's no single user assigned to the device. After first powering on the device, usually the only interactions needed, if any, are:
+The main advantage of Windows Autopilot self-deploying mode over other Autopilot deployments methods is that it minimizes the interaction needed during the initial deployment of the device. Interactions are minimized because there's no single user assigned to the device. After first powering on the device, usually the only interactions needed, if any, are:
 
 - In certain scenarios, selecting the language, locale, and keyboard layout.
 - Connecting to a wireless network if the device isn't connected to a wired network.
@@ -49,11 +49,8 @@ Once the Windows Autopilot self-deploying mode is complete, the device goes to t
 
 ## Workflow
 
-The following steps are needed to configure and then perform a Windows Autopilot for pre-provisioned deployment hybrid Azure AD join in Intune:
+The following steps are needed to configure and then perform a Windows Autopilot self-deploying mode in Intune:
 
-Set up Windows automatic Intune enrollment > Register devices as Autopilot devices > Create a device group > Configure and assign Autopilot Enrollment Status Page (ESP) > Create and assign Autopilot profile > Deploy device
-
-Autopilot self-deploying mode steps:
 > [!div class="checklist"]
 > - Step 1: [Set up Windows automatic Intune enrollment](self-deploying-automatic-enrollment.md)
 > - Step 2: [Register devices as Autopilot devices](self-deploying-register-device.md)

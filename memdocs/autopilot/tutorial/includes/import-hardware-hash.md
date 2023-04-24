@@ -11,12 +11,12 @@ ms.localizationpriority: medium
 
 <!-- This file is shared by the following articles:
 
-register-autopilot-device.md
-register-device.md
+includes/register-autopilot-device.md
+existing-devices/register-device.md
 
 Headings are driven by article context. -->
 
-Several of the above methods on obtaining the hardware hash when manually registering devices as Autopilot devices produces a CSV file that contains the hardware hash of the device. This CSV file with the hardware hash needs to be imported into Intune to register the device as an Autopilot device.
+Several of the methods in the previous section on obtaining the hardware hash when manually registering devices as Autopilot devices produces a CSV file that contains the hardware hash of the device. This CSV file with the hardware hash needs to be imported into Intune to register the device as an Autopilot device.
 
 After the CSV file has been created, it can be imported into Intune via the following steps:
 

@@ -7,7 +7,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 04/19/2023
+ms.date: 04/24/2023
 ms.topic: tutorial
 ms.collection: 
   - tier1
@@ -78,7 +78,7 @@ Also keep in mind that for the Autopilot deployments that support hybrid Azure A
 
 ## Which Autopilot scenario to use
 
-Which Autopilot scenario should be used depends on various factors including the environment and the needs of the organization. As mentioned in the previous section of [Azure AD join and Hybrid Azure AD join vs. Autopilot scenarios](#azure-ad-join-and-hybrid-azure-ad-join-vs-autopilot-scenarios), the first thing to account for is which type of device identity is currently being used in the environment. Which device identity is being used may restrict which Autopilot scenarios can be used in the environment.
+Which Autopilot scenario should be used depends on various factors including the environment and the needs of the organization. The first thing to account for is which type of device identity (Azure AD or hybrid Azure AD) is currently being used in the environment. Which device identity is being used may restrict which Autopilot scenarios can be used in the environment.
 
 The following guide makes general suggestions on which Autopilot scenario to use:
 
@@ -95,7 +95,7 @@ The following guide makes general suggestions on which Autopilot scenario to use
 - Windows Autopilot for pre-provisioned supports both Azure AD join and hybrid Azure AD join.
 - The device is intended to be used primarily by a single user.
 - The deployment time that the end-user experiences needs to be minimized.
-- Can an IT admin, an OEM, or a reseller handle the technician flow and the first half of the deployment. If an IT admin handles the technician flow, then the device may need to be first shipped to the IT admin to perform the technician flow, followed by the device shipped or delivered to the end-user.
+- Is an IT admin, an OEM, or a reseller able to handle the technician flow and the first half of the deployment. If an IT admin handles the technician flow, then the device may need to be first shipped to the IT admin to perform the technician flow, followed by the device shipped or delivered to the end-user.
 - In hybrid Azure AD join scenarios, if the OEM or reseller is performing the technician flow, their environment must have connectivity to a domain controller for the organization.
 - Windows Autopilot for pre-provisioned uses [TPM attestation](/windows-server/identity/ad-ds/manage/component-updates/tpm-key-attestation) for authentication during the technician flow so only devices that have a supported TPM are supported. For this reason, virtual machines (VMs) aren't supported even when the VM has a virtual TPM.
 
@@ -109,7 +109,7 @@ The following guide makes general suggestions on which Autopilot scenario to use
 
 ### Existing devices
 
-- Windows Autopilot for existing devices isn't a Windows Autopilot deployment itself, but a method to prepare an existing device for an Autopilot deployment. As part of the Windows Autopilot for existing devices deployment, a JSON file is added to the device that defines which Autopilot deployment to run once the Windows Autopilot for existing devices deployment is complete.
+- Windows Autopilot for existing devices isn't a Windows Autopilot deployment itself, but a method to prepare an existing device for an Autopilot deployment. As part of the Windows Autopilot for existing devices deployment, a JSON file is added to the device that defines which Autopilot deployment to run once the Windows Autopilot for existing devices deployment completes.
 - The device doesn't need to be a current Autopilot device.
 - On existing devices that are already part of the environment. For example, when repurposing a device and the Windows OS need to be reinstalled.
 - On existing devices where the Windows OS needs to be reinstalled. For example, the previous Windows OS installation is corrupted and needs to be reinstalled, or if the hard drive of the device is replaced.

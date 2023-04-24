@@ -7,7 +7,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 04/11/2023
+ms.date: 04/24/2023
 ms.topic: tutorial
 ms.collection: 
   - tier1
@@ -33,13 +33,13 @@ Autopilot user-driven Azure AD join steps:
 - Step 9: [Run Autopilot task sequence on device](run-autopilot-task-sequence.md)
 - Step 10: [Register device for Windows Autopilot](register-device.md)
 
-For an overview of the Windows Autopilot deployment for existing devices workflow, see [Windows Autopilot deployment for existing devices in Intune and Configuration Manager](existing-devices-workflow.md)
+For an overview of the Windows Autopilot deployment for existing devices workflow, see [Windows Autopilot deployment for existing devices in Intune and Configuration Manager](existing-devices-workflow.md#workflow)
 
 ## Create package(s) for JSON file(s) in Configuration Manager
 
 Once the JSON files have been created for the Autopilot profile(s), a package needs to be created in Configuration Manager that contains the contents of the JSON file(s). To create a package containing the JSON file in Configuration Manager, follow these steps:
 
-1. Copy the folder(s) containing the JSON file(s) created in the [Create JSON file for Autopilot profile(s)](create-json-file.md) step to a new empty folder in the organization's UNC network path that contains package sources for Configuration Manager packages.
+1. Copy the folder(s) containing the JSON file(s) created in the [Create JSON file for Autopilot profile(s)](create-json-file.md) step to a new empty folder in the organization's UNC network path. The UNC network path should be the path that contains package sources for Configuration Manager packages.
 
 1. On a device where the Configuration Manager console is installed, such as a Configuration Manager site server, open the Configuration Manager console.
 
@@ -67,7 +67,7 @@ Once the JSON files have been created for the Autopilot profile(s), a package ne
 
             > [!IMPORTANT]
             >
-            > If Autopilot profiles were copied to the organization's UNC network path that contains package sources for Configuration Manager packages, make sure to select the folder that contains the individual  **`AutopilotConfigurationFile.json`** JSON file and not the parent folder that contains all of the different Autopilot profiles. Each Autopilot JSON files requires an individual package in Configuration Manager.
+            > If multiple Autopilot profiles were copied to a UNC network path, make sure to select the folder that contains the individual  **`AutopilotConfigurationFile.json`** JSON file and not the parent folder that contains all of the different Autopilot profiles. Each Autopilot JSON file requires an individual package in Configuration Manager.
 
    1. Select the **Next >** button.
 
@@ -77,7 +77,7 @@ Once the JSON files have been created for the Autopilot profile(s), a package ne
 
    1. When the **Create Package and Program Wizard** completes with **The task "Create Package and Program Wizard" completed successfully** message, select the **Close** button.
 
-1. If there are multiple Autopilot JSON files, repeat the above steps for any additional Autopilot profile JSON files that were exported as part of the [Create JSON file for Autopilot profile(s)](create-json-file.md) step, making sure that each package has a unique identifiable name.
+1. If there are multiple Autopilot JSON files, repeat the above steps for any additional Autopilot profile JSON files that were exported as part of the [Create JSON file for Autopilot profile(s)](create-json-file.md) step. Make sure that each package has a unique identifiable name.
 
 ## Distribute package(s) for JSON file(s) in Configuration Manager
 

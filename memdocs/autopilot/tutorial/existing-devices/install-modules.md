@@ -7,7 +7,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 04/11/2023
+ms.date: 04/24/2023
 ms.topic: tutorial
 ms.collection: 
   - tier1
@@ -33,13 +33,13 @@ Autopilot user-driven Azure AD join steps:
 - Step 9: [Run Autopilot task sequence on device](run-autopilot-task-sequence.md)
 - Step 10: [Register device for Windows Autopilot](register-device.md)
 
-For an overview of the Windows Autopilot deployment for existing devices workflow, see [Windows Autopilot deployment for existing devices in Intune and Configuration Manager](existing-devices-workflow.md)
+For an overview of the Windows Autopilot deployment for existing devices workflow, see [Windows Autopilot deployment for existing devices in Intune and Configuration Manager](existing-devices-workflow.md#workflow)
 
 ## Install required modules to obtain Autopilot profile(s) from Intune
 
 After making sure there's a valid Autopilot deployment assigned to the device, the next step is to download existing Autopilot profiles from Intune. These Autopilot profiles are downloaded as JSON files. The JSON files contain all of the information regarding the Intune tenant and the Autopilot deployment. The JSON file is pre-installed on the device to the offline Windows installation during the WinPE portion of the Configuration Manager task sequence. The pre-installed JSON file makes the Autopilot profile available to Windows OOBE so that it can run the Autopilot deployment when Windows is started for the first time.
 
-However, before downloading the Autopilot profile as a JSON file from Intune, certain modules need to be installed on the device where the Autopilot profile will be downloaded. These modules are required to obtain the Autopilot profile from Intune. These modules can be installed on any device that can access to Intune, but for this tutorial and to simplify the process, it guides through installing these modules on the Configuration Manager site server.
+However, before downloading the Autopilot profile as a JSON file from Intune, certain modules need to be installed on the device where the Autopilot profile will be downloaded. These modules are required to obtain the Autopilot profile from Intune. These modules can be installed on any device that can access to Intune. However, for this tutorial and to simplify the process, it guides through installing these modules on the Configuration Manager site server.
 
 To install the necessary modules to download the Autopilot profile(s) as a JSON file, follow these steps:
 

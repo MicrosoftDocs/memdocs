@@ -7,7 +7,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 04/11/2023
+ms.date: 04/24/2023
 ms.topic: tutorial
 ms.collection: 
   - tier1
@@ -33,7 +33,7 @@ Autopilot user-driven Azure AD join steps:
 > [!div class="checklist"]
 > - **Step 10: Register device for Windows Autopilot**
 
-For an overview of the Windows Autopilot deployment for existing devices workflow, see [Windows Autopilot deployment for existing devices in Intune and Configuration Manager](existing-devices-workflow.md)
+For an overview of the Windows Autopilot deployment for existing devices workflow, see [Windows Autopilot deployment for existing devices in Intune and Configuration Manager](existing-devices-workflow.md#workflow)
 
 ## Register device for Windows Autopilot
 
@@ -48,13 +48,17 @@ To ensure that the device can run an Autopilot deployment after a reset, you mus
    - [Diagnostics page hash export](/mem/autopilot/add-devices#diagnostics-page-hash-export)
    - [Desktop hash export](/mem/autopilot/add-devices#desktop-hash-export)
 
-2. In an Autopilot profile that is deployed to a device group that the device is a member of, make sure the option **Convert all targeted devices to Autopilot** is set to **Yes**. For more information on creating and assigning Autopilot profiles, see one of the following articles on creating and assigning an Autopilot profile for each of the different Autopilot scenarios:
+1. In an Autopilot profile that is deployed to a device group that the device is a member of, make sure the option **Convert all targeted devices to Autopilot** is set to **Yes**. For more information on creating and assigning Autopilot profiles, see one of the following articles on creating and assigning an Autopilot profile for each of the different Autopilot scenarios:
 
    - [User-driven Azure AD join: Create and assign user-driven Azure AD join Autopilot profile](../user-driven/azure-ad-join-autopilot-profile.md)
    - [User-driven hybrid Azure AD join: Create and assign user-driven hybrid Azure AD join Autopilot profile](../user-driven/hybrid-azure-ad-join-autopilot-profile.md)
    - [Pre-provisioning Azure AD join: Create and assign a pre-provisioned Azure AD join Autopilot profile](../pre-provisioning/azure-ad-join-autopilot-profile.md)
    - [Pre-provisioning hybrid Azure AD join: Create and assign a pre-provisioned hybrid Azure AD join Autopilot profile](../pre-provisioning/hybrid-azure-ad-join-autopilot-profile.md)
    - [Self-deploying mode: Create and assign self-deploying Autopilot profile](../self-deploying/self-deploying-autopilot-profile.md)
+
+## Importing the hardware hash CSV file for devices into Intune
+
+[!INCLUDE [Importing the hardware hash CSV file for devices into Intune](../includes/import-hardware-hash.md)]
 
 ## Ensure domain join profile is assigned to all devices
 

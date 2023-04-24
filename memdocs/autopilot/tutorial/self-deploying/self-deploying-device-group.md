@@ -7,7 +7,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 04/11/2023
+ms.date: 04/24/2023
 ms.topic: tutorial
 ms.collection: 
   - tier1
@@ -28,11 +28,11 @@ Autopilot self-deploying mode steps:
 - Step 4: [Configure and assign Autopilot Enrollment Status Page (ESP)](self-deploying-esp.md)
 - Step 5: [Create and assign Autopilot profile](self-deploying-autopilot-profile.md)
 
-For an overview of the Windows Autopilot self-deploying mode workflow, see [Windows Autopilot self-deploying overview](self-deploying-workflow.md)
+For an overview of the Windows Autopilot self-deploying mode workflow, see [Windows Autopilot self-deploying overview](self-deploying-workflow.md#workflow)
 
 > [!NOTE]
 >
-> If you've already created device groups from another Autopilot scenario, you can skip this step and move on to [Step 4: Configure and assign Autopilot Enrollment Status Page (ESP)](self-deploying-esp.md). However, be aware that if you're deploying multiple different Autopilot scenarios to different devices, separate device groups will be required for each Autopilot scenario.
+> If you have already created device groups from another Autopilot scenario, you can skip this step and move on to [Step 4: Configure and assign Autopilot Enrollment Status Page (ESP)](self-deploying-esp.md). However, if you're deploying multiple different Autopilot scenarios to different devices, separate device groups are required for each Autopilot scenario.
 
 ## Create a device group
 

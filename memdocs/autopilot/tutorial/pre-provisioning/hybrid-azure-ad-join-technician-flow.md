@@ -7,7 +7,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 04/11/2023
+ms.date: 04/24/2023
 ms.topic: tutorial
 ms.collection: 
   - tier1
@@ -34,13 +34,13 @@ Windows Autopilot for pre-provisioned deployment hybrid Azure AD join steps:
 > - **Step 10: Technician flow**
 - Step 11: [User flow](hybrid-azure-ad-join-user-flow.md)
 
-For an overview of the Windows Autopilot for pre-provisioned deployment hybrid Azure AD join workflow, see [Windows Autopilot for pre-provisioned deployment hybrid Azure AD join overview](hybrid-azure-ad-join-workflow.md)
+For an overview of the Windows Autopilot for pre-provisioned deployment hybrid Azure AD join workflow, see [Windows Autopilot for pre-provisioned deployment hybrid Azure AD join overview](hybrid-azure-ad-join-workflow.md#workflow)
 
 ## Technician flow
 
 > [!IMPORTANT]
 >
-> The technician flow portion of the hybrid Azure AD join process requires connectivity to the Internet. It doesn't require connectivity to a domain controller. Connectivity to a domain controller to perform an on-premises domain join isn't needed until the next step of [User flow](hybrid-azure-ad-join-user-flow.md) is run.
+> The technician flow portion of the hybrid Azure AD join process only requires connectivity to the Internet. It doesn't require connectivity to a domain controller. Connectivity to a domain controller to perform an on-premises domain join isn't needed until the next step of [User flow](hybrid-azure-ad-join-user-flow.md) is run.
 
 [!INCLUDE [Technician flow](../includes/technician-flow.md)]
 

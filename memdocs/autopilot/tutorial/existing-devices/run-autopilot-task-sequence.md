@@ -7,7 +7,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 04/11/2023
+ms.date: 04/24/2023
 ms.topic: tutorial
 ms.collection: 
   - tier1
@@ -33,7 +33,7 @@ Autopilot user-driven Azure AD join steps:
 > - **Step 9: Run Autopilot task sequence on device**
 - Step 10: [Register device for Windows Autopilot](register-device.md)
 
-For an overview of the Windows Autopilot deployment for existing devices workflow, see [Windows Autopilot deployment for existing devices in Intune and Configuration Manager](existing-devices-workflow.md)
+For an overview of the Windows Autopilot deployment for existing devices workflow, see [Windows Autopilot deployment for existing devices in Intune and Configuration Manager](existing-devices-workflow.md#workflow)
 
 ## Run Autopilot task sequence on device
 
@@ -45,13 +45,27 @@ Once the Autopilot for existing devices has been created, modified as needed, an
    - PXE enabled distribution point
    - Task sequence bootable media
 
-2. Allow the task sequence to complete.
+1. Allow the task sequence to complete.
 
-3. Once the task sequence completes, the device either restarts or shuts down depending on the shutdown or restart behavior selected in the [Create Autopilot task sequence in Configuration Manager](create-autopilot-task-sequence.md#modify-the-task-sequence-to-account-for-sysprep-command-line-configuration) step or the optional [Speed up the deployment process](run-autopilot-task-sequence.md)step:
+1. Once the task sequence completes, the device either restarts or shuts down depending on the shutdown or restart behavior selected in one of the following two steps:
+
+   - [Create Autopilot task sequence in Configuration Manager](create-autopilot-task-sequence.md#modify-the-task-sequence-to-account-for-sysprep-command-line-configuration).
+   - [Speed up the deployment process](run-autopilot-task-sequence.md).
+
+    The behavior of the device after the task sequence completes depends on whether the device restarted or shut down:
 
    - **Restart**: the device restarts as soon as the task sequence completes and then immediately boot into Windows for the first time and run OOBE. When OOBE runs, the Autopilot JSON file is processed and the Autopilot deployment starts.
 
    - **Shutdown**: the device shuts down and power off  as soon as the task sequence completes. Shutting down the device gives the option to further prepare the device and then deliver it to an end-user. OOBE and the Autopilot deployment start when the end-user turns on the device for the first time.
+
+    > [!IMPORTANT]
+    >
+    > If the following conditions are met when the device starts back up after the task sequence completes:
+    >
+    > - Device is registered as an Autopilot device in Intune.
+    > - Device has an Autopilot profile assigned to it in Intune.
+    >
+     then the Autopilot profile from Intune is downloaded to the device and is used instead of the Autopilot profile from the JSON file staged by the task sequence. The downloaded Autopilot profile from Intune has priority over the local Autopilot profile from the JSON file.
 
 ## Next step: Register device for Windows Autopilot
 

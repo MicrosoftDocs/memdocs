@@ -5,14 +5,14 @@ manager: aaroncz
 ms.technology: itpro-deploy
 ms.prod: windows-client
 ms.topic: include
-ms.date: 04/11/2023
+ms.date: 04/24/2023
 ms.localizationpriority: medium
 ---
 
 <!-- This file is shared by the following articles:
 
-azure-ad-join-user-flow.md
-hybrid-azure-ad-join-user-flow.md
+pre-provisioning/azure-ad-join-user-flow.md
+pre-provisioning/hybrid-azure-ad-join-user-flow.md
 
 Headings are driven by article context. -->
 

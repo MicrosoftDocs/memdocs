@@ -7,7 +7,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 04/11/2023
+ms.date: 04/24/2023
 ms.topic: tutorial
 ms.collection: 
   - tier1
@@ -32,11 +32,11 @@ Windows Autopilot for pre-provisioned deployment Azure AD join steps:
 - Step 8: [Technician flow](azure-ad-join-technician-flow.md)
 - Step 9: [User flow](azure-ad-join-user-flow.md)
 
-For an overview of the Windows Autopilot for pre-provisioned deployment Azure AD join workflow, see [Windows Autopilot for pre-provisioned deployment Azure AD join overview](azure-ad-join-workflow.md)
+For an overview of the Windows Autopilot for pre-provisioned deployment Azure AD join workflow, see [Windows Autopilot for pre-provisioned deployment Azure AD join overview](azure-ad-join-workflow.md#workflow)
 
 ## Create and assign a pre-provisioned Azure AD join Autopilot profile
 
-While the ESP controls what is shown during device and user setup and specifies how soon a user can use their device, the Autopilot profile specifies how the device is configured during Windows Setup, or during OOBE.
+The Autopilot profile specifies how the device is configured during Windows Setup and what is shown during the out of box experience (OOBE).
 
 When an admin creates an Autopilot profile for the pre-provisioned scenario, devices with this Autopilot profile are associated with the user enrolling the device. User credentials are required to enroll the device.
 
@@ -44,7 +44,7 @@ The difference between an Autopilot pre-provisioned Azure AD join and an Autopil
 
 > [!TIP]
 >
-> For Configuration Manager admins, the Autopilot profile is similar to some of the configuration that takes place during a task sequence via an unattend.xml file. The unattend.xml file is configured during the **Apply Windows Settings** and **Apply Network Settings** steps. Note however that Autopilot does not use unattend.xml files.
+> For Configuration Manager admins, the Autopilot profile is similar to some of the configuration that takes place during a task sequence via an `unattend.xml` file. The `unattend.xml` file is configured during the **Apply Windows Settings** and **Apply Network Settings** steps. Note however that Autopilot doesn't use `unattend.xml` files.
 
 To create a pre-provisioned Azure AD join Autopilot profile, follow these steps:
 
@@ -80,8 +80,10 @@ To create a pre-provisioned Azure AD join Autopilot profile, follow these steps:
       > [!NOTE]
       >
       > The above settings have been selected to minimize needed user interaction during device setup. However, some of the settings that are hidden can instead be shown as desired. For example, some regions may require that **Privacy settings** always be shown.
+
+      > [!NOTE]
       >
-      > Also note that if language and keyboard settings are shown instead of hidden, they require ethernet connectivity. Wi-fi connectivity isn't supported because of the requirement to choose a language, locale, and keyboard to initiate the Wi-fi connection.
+      > If the language/region and keyboard screens are set to hidden, they may still be displayed if there's no network connectivity at the start of the Autopilot deployment. These screens are displayed because there's no network connectivity at the start of the deployment to download the Autopilot profile where the settings to hide these screens are specified. Once network connectivity is established, the Autopilot profile is downloaded and any additional screen settings should work as expected.
 
 [!INCLUDE [Autopilot profiles after steps](../includes/autopilot-profile-steps-after.md)]
 

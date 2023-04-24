@@ -7,7 +7,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 04/11/2023
+ms.date: 04/24/2023
 ms.topic: tutorial
 ms.collection: 
   - tier1
@@ -34,11 +34,11 @@ Windows Autopilot for pre-provisioned deployment hybrid Azure AD join steps:
 - Step 10: [Technician flow](hybrid-azure-ad-join-technician-flow.md)
 - Step 11: [User flow](hybrid-azure-ad-join-user-flow.md)
 
-For an overview of the Windows Autopilot for pre-provisioned deployment hybrid Azure AD join workflow, see [Windows Autopilot for pre-provisioned deployment hybrid Azure AD join overview](hybrid-azure-ad-join-workflow.md)
+For an overview of the Windows Autopilot for pre-provisioned deployment hybrid Azure AD join workflow, see [Windows Autopilot for pre-provisioned deployment hybrid Azure AD join overview](hybrid-azure-ad-join-workflow.md#workflow)
 
 > [!NOTE]
 >
-> If you've already registered devices as Autopilot devices from another Autopilot scenario, you can skip this step and move on to [Step 5: Create a device group](hybrid-azure-ad-join-device-group.md). However, be aware that if you're deploying multiple different Autopilot scenarios to different devices, separate device groups will be required for each Autopilot scenario.
+> If you have already registered devices as Autopilot devices from another Autopilot scenario, you can skip this step and move on to [Step 5: Create a device group](hybrid-azure-ad-join-device-group.md). However, if you're deploying multiple different Autopilot scenarios to different devices, separate device groups are required for each Autopilot scenario.
 
 ## Register devices as Autopilot devices
 

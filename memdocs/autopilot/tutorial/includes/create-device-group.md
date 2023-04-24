@@ -5,15 +5,17 @@ manager: aaroncz
 ms.technology: itpro-deploy
 ms.prod: windows-client
 ms.topic: include
-ms.date: 04/11/2023
+ms.date: 04/24/2023
 ms.localizationpriority: medium
 ---
 
 <!-- This file is shared by the following articles:
 
-azure-ad-join-device-group.md
-hybrid-azure-ad-join-device-group.md
-self-deploying-device-group.md
+pre-provisioning/azure-ad-join-device-group.md
+pre-provisioning/hybrid-azure-ad-join-device-group.md
+self-deploying/self-deploying-device-group.md
+user-driven/azure-ad-join-device-group.md
+user-driven/hybrid-azure-ad-join-device-group.md
 
 Headings are driven by article context. -->
 
@@ -24,7 +26,7 @@ Device groups can be either dynamic or assigned:
 - **Dynamic groups** - Devices are automatically added to the group based on rules
 - **Assigned groups** - Devices are manually added to the group and are static
 
-When and admin configures Autopilot in an enterprise environment, dynamic groups are primarily used since a large number of devices are usually involved. Adding the devices in automatically using rules makes management of the group a lot easier. Adding a large amount of device in manually via an assigned group would be impractical. However, if there's only a few devices, for example for testing purposes, an assigned group can also be used.
+When an admin configures Autopilot in an enterprise environment, dynamic groups are primarily used since a large number of devices are usually involved. Adding the devices in automatically using rules makes management of the group a lot easier. Adding a large amount of device in manually via an assigned group would be impractical. However, if there's only a few devices, for example for testing purposes, an assigned group can be used instead.
 
 To create a dynamic device group for use with Autopilot, follow these steps:
 

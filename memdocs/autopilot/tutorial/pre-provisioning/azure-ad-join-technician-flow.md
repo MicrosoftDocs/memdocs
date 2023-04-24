@@ -7,7 +7,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 04/11/2023
+ms.date: 04/24/2023
 ms.topic: tutorial
 ms.collection: 
   - tier1
@@ -30,15 +30,11 @@ Windows Autopilot for pre-provisioned deployment Azure AD join steps:
 - Step 7: [Assign Autopilot device to a user (optional)](azure-ad-join-assign-device-to-user.md)
 > [!div class="checklist"]
 > - **Step 8: Technician flow**
-- Step 9: [User flow](hybrid-azure-ad-join-user-flow.md)
+- Step 9: [User flow](azure-ad-join-user-flow.md)
 
-For an overview of the Windows Autopilot for pre-provisioned deployment Azure AD join workflow, see [Windows Autopilot for pre-provisioned deployment Azure AD join overview](azure-ad-join-workflow.md)
+For an overview of the Windows Autopilot for pre-provisioned deployment Azure AD join workflow, see [Windows Autopilot for pre-provisioned deployment Azure AD join overview](azure-ad-join-workflow.md#workflow)
 
 ## Technician flow
-
-> [!IMPORTANT]
->
-> The technician flow portion of the Azure AD join process requires connectivity to the Internet.
 
 [!INCLUDE [Technician flow](../includes/technician-flow.md)]
 

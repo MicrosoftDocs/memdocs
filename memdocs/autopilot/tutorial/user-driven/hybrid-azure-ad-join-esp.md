@@ -7,7 +7,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 04/11/2023
+ms.date: 04/24/2023
 ms.topic: tutorial
 ms.collection: 
   - tier1
@@ -32,13 +32,13 @@ Autopilot user-driven hybrid Azure AD join steps:
 - Step 8: [Configure and assign domain join profile](hybrid-azure-ad-join-domain-join-profile.md)
 - Step 9: [Assign Autopilot device to a user (optional)](hybrid-azure-ad-join-assign-device-to-user.md)
 
-For an overview of the Windows Autopilot user-driven hybrid Azure AD join workflow, see [Windows Autopilot user-driven hybrid Azure AD join overview](hybrid-azure-ad-join-workflow.md)
+For an overview of the Windows Autopilot user-driven hybrid Azure AD join workflow, see [Windows Autopilot user-driven hybrid Azure AD join overview](hybrid-azure-ad-join-workflow.md#workflow)
 
 > [!NOTE]
 >
-> If you've already configured and assigned an ESP from another Autopilot scenario and want to keep the same settings for the ESP for the user-driven hybrid Azure AD join scenario, you can skip this step and move on to [Step 7: Create and assign hybrid Azure AD join Autopilot profile](hybrid-azure-ad-join-autopilot-profile.md).
+> If you have already configured and assigned an ESP from another Autopilot scenario and want to keep the same settings for the ESP for the user-driven hybrid Azure AD join scenario, you can skip this step and move on to [Step 7: Create and assign hybrid Azure AD join Autopilot profile](hybrid-azure-ad-join-autopilot-profile.md).
 
-## Configure and assign the Enrollment Status Page (ESP)
+## The Enrollment Status Page (ESP)
 
 [!INCLUDE [How to configure and assign an Enrollment Status Page (ESP) in Intune](../includes/configure-and-assign-esp.md)]
 

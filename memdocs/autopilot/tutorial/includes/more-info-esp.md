@@ -5,15 +5,17 @@ manager: aaroncz
 ms.technology: itpro-deploy
 ms.prod: windows-client
 ms.topic: include
-ms.date: 04/11/2023
+ms.date: 04/24/2023
 ms.localizationpriority: medium
 ---
 
 <!-- This file is shared by the following articles:
 
-azure-ad-join-esp.md
-hybrid-azure-ad-join-esp.md
-self-deploying-esp.md
+pre-provisioning/azure-ad-join-esp.md
+pre-provisioning/hybrid-azure-ad-join-esp.md
+self-deploying/self-deploying-esp.md
+user-driven/azure-ad-join-esp.md
+user-driven/hybrid-azure-ad-join-esp.md
 
 Headings are driven by article context. -->
 

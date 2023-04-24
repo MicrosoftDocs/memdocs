@@ -7,7 +7,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 04/11/2023
+ms.date: 04/24/2023
 ms.topic: tutorial
 ms.collection: 
   - tier1
@@ -22,13 +22,13 @@ appliesto:
 
 This step by step tutorial guides you through using Intune and Microsoft Configuration Manager to perform a Windows Autopilot deployment for existing devices.
 
-The purpose of this tutorial is to provide a step by step guide for all the steps required for the configuration for a successful Autopilot deployment for existing devices using Intune and Microsoft Configuration Manager. The tutorial is also designed as a walkthrough in a lab or testing scenario, but can be expanded for use in a production environment. This tutorial assumes familiarity with Microsoft Configuration Manager and that Microsoft Configuration Manager is already set up and configured to support operating system deployments.
+The purpose of this tutorial is a step by step guide for all the configuration steps required for a successful Autopilot deployment for existing devices using Intune and Microsoft Configuration Manager. The tutorial is also designed as a walkthrough in a lab or testing scenario, but can be expanded for use in a production environment. This tutorial assumes familiarity with Microsoft Configuration Manager and that Microsoft Configuration Manager is already set up and configured to support operating system deployments.
 
 ## Windows Autopilot deployment for existing devices overview
 
-One of the main use case scenarios for Windows Autopilot is to automate the configuration of Windows for the end-user on a new device delivered directly from an IT department, OEM, or reseller. However, sometimes existing devices in an environment need to be repurposed, fixed, or updated to a newer version of Windows by reinstalling Windows on the device via a reimage of the device. Windows Autopilot isn't able to perform a fresh install of Windows if the version of Windows is different than the one that is currently installed on the device. There may also be other conditions that prevent Windows Autopilot from performing a fresh install of Windows on the device even if the version of Windows is the same as the one that is currently installed on the device, for example corruption of the current Windows install or a hard drive failure.
+The main use case scenario for Windows Autopilot is to automate the configuration of Windows on a new device delivered directly from an IT department, OEM, or reseller. However, sometimes existing devices in an environment need to be repurposed, fixed, or updated to a newer version of Windows by reinstalling Windows on the device. Reinstalling of Windows is usually performed via a reimage of the device, which is outside the capabilities of Windows Autopilot. Windows Autopilot also isn't able to perform a fresh install of Windows if the version of Windows is different than the one that is currently installed on the device. There may also be other conditions that prevent Windows Autopilot from performing a fresh install of Windows on the device. For example, corruption of the current Windows install or a hard drive failure.
 
-For scenarios where Windows needs to be reinstalled or updated to a newer version of Windows using a fresh installation of Windows, Windows Autopilot can utilize Microsoft Configuration Manager task sequences to perform the reimage of the device and perform a fresh installation of Windows. The Configuration Manager task sequence can also pre-install a Windows Autopilot profile on the device via a JSON file. Once the Configuration Manager task sequence is done, the device can then automatically run the Windows Autopilot deployment defined in the Windows Autopilot profile JSON file. When the Windows Autopilot profile JSON file is pre-installed on the device, the Windows Autopilot deployment can run on the device without having to first perform the following actions:
+For scenarios where Windows needs to be reinstalled or updated to a newer version of Windows using a fresh installation of Windows, Windows Autopilot can utilize Microsoft Configuration Manager task sequences.  Microsoft Configuration Manager task sequences can reimage a device and perform a fresh installation of Windows. The Configuration Manager task sequence can also pre-install a Windows Autopilot profile on the device via a JSON file. Once the Configuration Manager task sequence is done, the device can then automatically run the Windows Autopilot deployment defined in the Windows Autopilot profile JSON file. When the Windows Autopilot profile JSON file is pre-installed on the device, the Windows Autopilot deployment can run on the device without having to first perform the following actions:
 
 - Import the device into Intune as an Autopilot device.
 - Assign an Autopilot profile to the device.
@@ -48,9 +48,6 @@ Windows Autopilot deployment for existing devices can be viewed as a method to p
 
 The following steps are needed to configure and then perform a Windows Autopilot deployment for existing devices deployment using Intune and Microsoft Configuration Manager:
 
-Set up a Windows Autopilot deployment > Install required modules to obtain Autopilot profile(s) from Intune > Create JSON file for Autopilot profile(s) > Create package for JSON file in Configuration Manager > Distribute JSON package to distribution points in Configuration Manager > Create Autopilot task sequence in Configuration Manager > Create collection in Configuration Manager > Deploy Autopilot task sequence to collection in Configuration Manager > Speed up the deployment process (optional) > Run Autopilot task sequence on device > Register device for Windows Autopilot
-
-Autopilot user-driven Azure AD join steps:
 > [!div class="checklist"]
 > - Step 1: [Set up a Windows Autopilot deployment](setup-autopilot-deployment.md)
 > - Step 2: [Install required modules to obtain Autopilot profile(s) from Intune](install-modules.md)

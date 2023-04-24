@@ -7,7 +7,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 04/11/2023
+ms.date: 04/24/2023
 ms.topic: tutorial
 ms.collection: 
   - tier1
@@ -37,11 +37,11 @@ Windows Autopilot for pre-provisioned deployment hybrid Azure AD join steps:
 - Step 10: [Technician flow](hybrid-azure-ad-join-technician-flow.md)
 - Step 11: [User flow](hybrid-azure-ad-join-user-flow.md)
 
-For an overview of the Windows Autopilot for pre-provisioned deployment hybrid Azure AD join workflow, see [Windows Autopilot for pre-provisioned deployment hybrid Azure AD join overview](hybrid-azure-ad-join-workflow.md)
+For an overview of the Windows Autopilot for pre-provisioned deployment hybrid Azure AD join workflow, see [Windows Autopilot for pre-provisioned deployment hybrid Azure AD join overview](hybrid-azure-ad-join-workflow.md#workflow)
 
 > [!NOTE]
 >
-> If you've already set up the Intune Connector as part of the [Windows Autopilot user-driven hybrid Azure AD join](../user-driven/hybrid-azure-ad-join-workflow.md) scenario, you can skip this step and move on to [Step 3: Increase the computer account limit in the Organizational Unit (OU)].
+> If you have already set up the Intune Connector as part of the [Windows Autopilot user-driven hybrid Azure AD join](../user-driven/hybrid-azure-ad-join-workflow.md) scenario, you can skip this step and move on to [Step 3: Increase the computer account limit in the Organizational Unit (OU)].
 
 ## Install the Intune Connector
 
