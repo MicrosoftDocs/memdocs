@@ -75,7 +75,7 @@ Once the Autopilot for existing devices task sequence and the collection with de
 
          - **Only media and PXE**: The task sequence appears when booting from a PXE enabled distribution point or when booting from task sequence bootable media. The task sequence doesn't appear in the Configuration Manager Software Center on existing devices that has Windows already installed and has the Configuration Manager client installed.
 
-         - **Configuration Manager clients, media and PXE**: The task sequence appears when booting from a PXE enabled distribution point or when booting from task sequence bootable media, and it also appears in the Configuration Manager Software Center on existing devices that has Windows already installed and has the Configuration Manager client installed.
+         - **Configuration Manager clients, media and PXE**: The task sequence appears when booting from a PXE enabled distribution point or when booting from task sequence bootable media. It also appears in the Configuration Manager Software Center on existing client devices that has the Configuration Manager client installed.
 
           > [!WARNING]
           >
@@ -85,11 +85,15 @@ Once the Autopilot for existing devices task sequence and the collection with de
 
    1. In the **Scheduling**/**Specify the schedule for this deployment** page, schedule when the deployment should occur:
 
-      1. Select the checkbox next to **Schedule when this deployment will become available:** and then select a date and time. This date and time is the date and time that the task sequence starts to appear in the Configuration Manager Software Center, when booting from a PXE enabled distribution point, or when booting from task sequence bootable media.
+      1. Select the checkbox next to **Schedule when this deployment will become available:** and then select a date and time. This date and time is the date and time that the task sequence starts to appear:
 
-      1. If the deployment is required, next to **Assignment schedule:**, select the **New** button. In the **Assignment Schedule** window that appears, configure the settings as needed. The settings selected here determine when the task sequence runs automatically without end-user intervention. Once complete. Once complete, select the **OK** button.
+         - In the Configuration Manager Software Center.
+         - When booting from a PXE enabled distribution point.
+         - When booting from task sequence bootable media.
 
-      1. Select the **Next >** button.
+      2. If the deployment is required, next to **Assignment schedule:**, select the **New** button. In the **Assignment Schedule** window that appears, configure the settings as needed. The settings selected here determine when the task sequence runs automatically without end-user intervention. Once complete. Once complete, select the **OK** button.
+
+      3. Select the **Next >** button.
 
    1. In the **User Experience**/**Specify the user experience for the installation of this software** page, select the options as desired, and then select the **Next >** button.
 

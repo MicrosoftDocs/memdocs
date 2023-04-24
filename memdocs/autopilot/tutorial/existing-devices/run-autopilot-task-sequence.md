@@ -45,9 +45,9 @@ Once the Autopilot for existing devices has been created, modified as needed, an
    - PXE enabled distribution point
    - Task sequence bootable media
 
-2. Allow the task sequence to complete.
+1. Allow the task sequence to complete.
 
-3. Once the task sequence completes, the device either restarts or shuts down depending on the shutdown or restart behavior selected in one of the following two steps:
+1. Once the task sequence completes, the device either restarts or shuts down depending on the shutdown or restart behavior selected in one of the following two steps:
 
    - [Create Autopilot task sequence in Configuration Manager](create-autopilot-task-sequence.md#modify-the-task-sequence-to-account-for-sysprep-command-line-configuration).
    - [Speed up the deployment process](run-autopilot-task-sequence.md).
@@ -65,7 +65,7 @@ Once the Autopilot for existing devices has been created, modified as needed, an
     > - Device is registered as an Autopilot device in Intune.
     > - Device has an Autopilot profile assigned to it in Intune.
     >
-    > then the Autopilot profile from Intune is downloaded to the device and is used instead of the Autopilot profile from the JSON file staged by the task sequence. The downloaded Autopilot profile from Intune has priority over the local Autopilot profile from the JSON file.
+     then the Autopilot profile from Intune is downloaded to the device and is used instead of the Autopilot profile from the JSON file staged by the task sequence. The downloaded Autopilot profile from Intune has priority over the local Autopilot profile from the JSON file.
 
 ## Next step: Register device for Windows Autopilot
 

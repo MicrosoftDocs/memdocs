@@ -37,7 +37,13 @@ For an overview of the Windows Autopilot deployment for existing devices workflo
 
 ## Create Autopilot task sequence for existing devices in Configuration Manager
 
-Once the packages containing the Autopilot profile JSON files have been created and distributed in Configuration Manager, the next step is to create a task sequence that wipes the device, installs a fresh copy of Windows on the device, and then copies the Autopilot profile JSON file to the device. Copying of the Autopilot profile JSON file is done in WinPE when the newly installed Windows OS is offline. When the task sequence completes, the device boots into the newly installed Windows OS for the first time and run the out of box experience (OOBE). The OOBE process then processes the Autopilot profile JSON file, which initiates the Autopilot deployment.
+Once the packages containing the Autopilot profile JSON files have been created and distributed in Configuration Manager, the next step is to create a task sequence that performs the following functions:
+
+- Wipes the device.
+- Installs a fresh copy of Windows on the device
+- Copies the Autopilot profile JSON file to the device.
+
+Copying of the Autopilot profile JSON file is done in WinPE when the newly installed Windows OS is offline. When the task sequence completes, the device boots into the newly installed Windows OS for the first time and run the out of box experience (OOBE). The OOBE process then processes the Autopilot profile JSON file, which initiates the Autopilot deployment.
 
 > [!NOTE]
 >
@@ -63,7 +69,7 @@ To create the Autopilot for existing devices task sequence in Configuration Mana
 
       1. Next to **Boot image:**, select the **Browse** button.
 
-        - In the **Select a Boot Image** windows that appears, under **Boot images:**, select a boot image, and then select the **OK** button.
+         - In the **Select a Boot Image** windows that appears, under **Boot images:**, select a boot image, and then select the **OK** button.
 
       1. Select the **Next >** button.
 
@@ -79,7 +85,7 @@ To create the Autopilot for existing devices task sequence in Configuration Mana
 
           > [!NOTE]
           >
-          > Although BitLocker encryption could technically be enabled via the task sequence, it may result in undesired outcomes. For example, BitLocker recovery keys being saved to Configuration Manager BitLocker Management or on-premise Active Directory instead of Intune or Azure AD. Additionally, if certain BitLocker settings specified in the task sequence, such as BitLocker encryption method and strength, doesn't match the BitLocker policy settings in Intune, then this could cause the device to show as non-compliant. Resolving issues like this could mean having to decrypt and then re-encrypt the drive to resolve. Therefore it's recommended not to enable BitLocker as part of the task sequence and instead enable BitLocker as part of Intune policies deployed during Autopilot.
+          > Although BitLocker encryption could technically be enabled via the task sequence, it may result in undesired outcomes. For example, BitLocker recovery keys being saved to Configuration Manager BitLocker Management or on-premises Active Directory instead of Intune or Azure AD. Additionally, if certain BitLocker settings specified in the task sequence, such as BitLocker encryption method and strength, doesn't match the BitLocker policy settings in Intune, then this mis-match could cause the device to show as non-compliant. Resolving issues like this could mean having to decrypt and then re-encrypt the drive to resolve. Therefore it's recommended not to enable BitLocker as part of the task sequence and instead enable BitLocker as part of Intune policies deployed during Autopilot.
 
       1. Leave **Product key** blank. The Autopilot for existing devices task sequence runs the [Windows System Preparation Tool (Sysprep)](/windows-hardware/manufacture/desktop/sysprep--system-preparation--overview) at the end of the task sequence. Sysprep clears any product key that is specified.
   
@@ -89,7 +95,7 @@ To create the Autopilot for existing devices task sequence in Configuration Mana
 
       > [!NOTE]
       >
-      > If using the alternate [Speed up the deployment process (optional)](speed-up-deployment.md) step later in this tutorial, Sysprep never runs as part of the task sequence. However, the product key and local administrator password never gets processed since the `unattend.xml` file that contains the product key and local administrator password is deleted as part of this optional step. For this reason, when using the alternate [Speed up the deployment process (optional)](speed-up-deployment.md) step, the settings specified for these two options are irrelevant since they're never processed.
+      > If using the alternate [Speed up the deployment process (optional)](speed-up-deployment.md) step later in this tutorial, Sysprep never runs as part of the task sequence. However, the product key and local administrator password never get processed since the `unattend.xml` file that contains the product key and local administrator password is deleted as part of this optional step. For this reason, when using the alternate [Speed up the deployment process (optional)](speed-up-deployment.md) step, the settings specified for these two options are irrelevant since they're never processed.
 
    1. In the **Install the Configuration Manager client** page, add any necessary Configuration Manager client installation properties for the environment. For example, since the device is a Workgroup device and not domain joined during the Autopilot for existing devices task sequence, the [SMSMP](/mem/configmgr/core/clients/deploy/about-client-installation-properties#smsmp) or [SMSMPLIST](/mem/configmgr/core/clients/deploy/about-client-installation-properties#smsmplist) parameters may be needed to run certain tasks such as the **Install Application** or **Install Software Updates** tasks. Once finished adding any Configuration Manager client installation properties, select the **Next >** button.
 
@@ -97,10 +103,10 @@ To create the Autopilot for existing devices task sequence in Configuration Mana
 
       > [!TIP]
       >
-      > It's recommended not to install software updates during the Autopilot for existing devices task sequence because doing so will significantly increase the time for the task sequence to complete. Instead, consider installing updates using one of the following two options:
+      > It's recommended not to install software updates during the Autopilot for existing devices task sequence because doing so significantly increases the time for the task sequence to complete. Instead, consider installing updates using one of the following two options:
       >
       > - The Configuration Manager offline image servicing feature of [Scheduled Updates](/mem/configmgr/osd/get-started/manage-operating-system-images#apply-software-updates-to-an-image)
-      > - Every month download the latest monthly ISO for the version of Windows that you're installing and then update the **Operating System Images** package in Configuration Manager with the new updated `install.wim` image from the ISO. The ISOs are updated monthly and have the latest updates in them.
+      > - Every month, download the latest monthly ISO for the version of Windows that you're installing and then update the **Operating System Images** package in Configuration Manager with the new updated `install.wim` image from the ISO. The ISOs are updated monthly and have the latest updates in them.
 
    1. In the **Install applications** page, select the desired applications to install during the task sequence. Once the desired applications have been added, select the **Next >** button. If no applications need to be installed, then select the **Next >** button without selecting any applications.
 
@@ -112,7 +118,7 @@ To create the Autopilot for existing devices task sequence in Configuration Mana
 
       > [!NOTE]
       >
-      > Leave the option **Shutdown computer after this task sequence completes** unchecked. This option is configured later in the section [Modify the task sequence to account for Sysprep command line configuration](#modify-the-task-sequence-to-account-for-sysprep-command-line-configuration)
+      > Leave the option **Shutdown computer after this task sequence completes** unchecked. This option is configured later in the section [Modify the task sequence to account for Sysprep command line configuration](#modify-the-task-sequence-to-account-for-sysprep-command-line-configuration).
 
    1. On the **Confirm the settings** page, verify that all settings are correct, and then select the **Next >** button.
 
@@ -164,11 +170,11 @@ To resolve the issue, the **Prepare Windows for Capture** task needs to be remov
 
       > [!NOTE]
       >
-      > When Sysprep finishes running, it has the option to either shut down or restart the device:
+      > Sysprep can either shut down or restart the device when it's finished running:
       >
-      > - **Restarting** the device will cause the device to restart as soon as the task sequence completes and then immediately boot into Windows for the first time and run Windows Setup and OOBE. When Windows Setup and OOBE runs, the Autopilot JSON file will be processed and the Autopilot deployment will start.
+      > - **Restarting** the device causes the device to restart as soon as the task sequence completes and then immediately boot into Windows for the first time and run Windows Setup and OOBE. When Windows Setup and OOBE run, the Autopilot JSON file is processed and the Autopilot deployment starts.
       >
-      > - **Shutting down** the device will shut down and power off the device as soon as the task sequence completes. This gives the option to further prepare the device and then deliver it to an end-user. Windows Setup, OOBE, and the Autopilot deployment will then start when the end-user turns on the device for the first time.
+      > - **Shutting down** the device shuts down and power off the device as soon as the task sequence completes. Shutting down and powering off the device gives the option to further prepare the device and then deliver it to an end-user. Windows Setup, OOBE, and the Autopilot deployment then starts when the end-user turns on the device for the first time.
 
    1. Select the **Prepare Windows for Capture** task again and then select the **Remove** option in the top left of the task sequence editor. A confirmation dialog box appears confirming to delete the step. Select the **Yes** button to remove the **Prepare Windows for Capture** task.
 

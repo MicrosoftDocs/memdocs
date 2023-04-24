@@ -91,7 +91,7 @@ The above steps are necessary if additional tasks need to run during the task se
 
 > [!TIP]
 >
-> If a task sequence is needed to run additional tasks before running the Autopilot deployment, the skip to the next step of [Run Autopilot task sequence on device](run-autopilot-task-sequence.md).
+> If a task sequence is needed to run additional tasks before running the Autopilot deployment, then skip to the next step of [Run Autopilot task sequence on device](run-autopilot-task-sequence.md).
 >
 > However, even if additional tasks are needed, instead of using the task sequence to run these tasks, consider running the additional tasks using alternate methods. For example:
 >
@@ -99,7 +99,7 @@ The above steps are necessary if additional tasks need to run during the task se
 > - Enable BitLocker via Intune.
 > - Install software updates via offline servicing and [Configuration Manager Scheduled Updates](/mem/configmgr/osd/get-started/manage-operating-system-images#apply-software-updates-to-an-image).
 >
-> When possible, Microsoft recommends using the above methods to run the additional tasks instead of running them via the task sequence. Using the above methods will allow you to use the solution to speed up the deployment.
+> When possible, Microsoft recommends using the above methods to run the additional tasks instead of running them via the task sequence. Using the above methods allows you to use the solution to speed up the deployment.
 
 If no additional tasks are needed via a task sequence before running the Autopilot deployment, then the Windows Autopilot for existing devices task sequence can be modified to eliminate unneeded tasks and processes. Eliminating unneeded tasks and processes speeds up the deployment process and the time it takes for the deployment to finish. Examples of processes that can be eliminated to speed up the deployment include:
 
@@ -114,7 +114,7 @@ The solution to speed up the deployment deletes the `unattend.xml` file and elim
 1. Task sequence formats and partitions the disk.
 1. Task sequence applies the Windows OS and creates the unattend.xml file.
 1. Task sequence injects the Autopilot profile JSON file.
-1. Task sequence deletes the `unaattend.xml` file.
+1. Task sequence deletes the `unattend.xml` file.
 1. Task sequence boots into Windows for the first time.
 1. Windows setup runs for the first time and processes the Autopilot profile JSON file since there's no `unattend.xml` file.
 1. Autopilot deployment starts.
@@ -123,7 +123,7 @@ The solution to speed up the deployment reduces the number of steps in the deplo
 
 > [!NOTE]
 >
-> The steps for the solution to speed up the deployment are optional. The out of box Windows Autopilot for existing devices task sequence will still work without any modification. The below steps are only designed to reduce the time it takes to run the deployment and potentially avoid some issues. If you don't want to modify the existing Windows Autopilot for existing devices task sequence, then skip to the next step of [Run Autopilot task sequence on device](run-autopilot-task-sequence.md).
+> The steps for the solution to speed up the deployment are optional. The out of box Windows Autopilot for existing devices task sequence still work without any modification. The below steps are only designed to reduce the time it takes to run the deployment and potentially avoid some issues. If you don't want to modify the existing Windows Autopilot for existing devices task sequence, then skip to the next step of [Run Autopilot task sequence on device](run-autopilot-task-sequence.md).
 
 To modify the Windows Autopilot for existing devices task sequence to speed up the deployment process, follow these steps:
 
@@ -143,7 +143,7 @@ To modify the Windows Autopilot for existing devices task sequence to speed up t
 
       > [!NOTE]
       >
-      > If there were any additional tasks or groups after the **Setup Windows and Configuration Manager** task, then also remove those tasks and groups by selecting the **Remove** option in the top left of the task sequence editor for each one of those task or group. For each removal, a confirmation dialog box will appear confirming to delete the step or group. Select the **Yes** button to remove each additional task or group.
+      > If there were any additional tasks or groups after the **Setup Windows and Configuration Manager** task, then also remove those tasks and groups by selecting the **Remove** option in the top left of the task sequence editor for each one of those tasks or groups. For each removal, a confirmation dialog box appears confirming to delete the step or group. Select the **Yes** button to remove each additional task or group.
 
    1. Select the last task in the task sequence.
 

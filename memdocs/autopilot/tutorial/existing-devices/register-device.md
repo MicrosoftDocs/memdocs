@@ -48,7 +48,7 @@ To ensure that the device can run an Autopilot deployment after a reset, you mus
    - [Diagnostics page hash export](/mem/autopilot/add-devices#diagnostics-page-hash-export)
    - [Desktop hash export](/mem/autopilot/add-devices#desktop-hash-export)
 
-2. In an Autopilot profile that is deployed to a device group that the device is a member of, make sure the option **Convert all targeted devices to Autopilot** is set to **Yes**. For more information on creating and assigning Autopilot profiles, see one of the following articles on creating and assigning an Autopilot profile for each of the different Autopilot scenarios:
+1. In an Autopilot profile that is deployed to a device group that the device is a member of, make sure the option **Convert all targeted devices to Autopilot** is set to **Yes**. For more information on creating and assigning Autopilot profiles, see one of the following articles on creating and assigning an Autopilot profile for each of the different Autopilot scenarios:
 
    - [User-driven Azure AD join: Create and assign user-driven Azure AD join Autopilot profile](../user-driven/azure-ad-join-autopilot-profile.md)
    - [User-driven hybrid Azure AD join: Create and assign user-driven hybrid Azure AD join Autopilot profile](../user-driven/hybrid-azure-ad-join-autopilot-profile.md)
