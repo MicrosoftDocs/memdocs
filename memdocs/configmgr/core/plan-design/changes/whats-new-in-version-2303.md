@@ -171,7 +171,7 @@ The following additional hotfixes are available to address specific issues:
 
  As of April 24, 2023, version 2303 is globally available for all customers to install.
 
-When you're ready to install this version, see [Installing updates for Configuration Manager](../../servers/manage/updates.md) and [Checklist for installing update 2211](../../servers/manage/checklist-for-installing-update-2211.md).).--->
+When you're ready to install this version, see [Installing updates for Configuration Manager](../../servers/manage/updates.md) and [Checklist for installing update 2303](../../servers/manage/checklist-for-installing-update-2303.md).).
 
 > [!TIP]
 > To install a new site, use a baseline version of Configuration Manager.
