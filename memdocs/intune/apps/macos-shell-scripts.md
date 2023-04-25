@@ -67,7 +67,7 @@ Ensure that the following prerequisites are met when composing shell scripts and
    - **Upload script**: Browse to the shell script. The script file must be less than 200 KB in size.
    - **Run script as signed-in user**: Select **Yes** to run the script with the user's credentials on the device. Choose **No** (default) to run the script as the root user.
    - **Hide script notifications on devices:** By default, script notifications are shown for each script that is run. End users see a *IT is configuring your computer* notification from Intune on macOS devices.
-   - **Script frequency:** Select how often the script is to be run. Choose **Not configured** (default) to run a script only once. Scripts with a frequency set will also run after a device reboot.
+   - **Script frequency:** Select how often the script is to be run. Choose **Not configured** (default) to run a script only once. Scripts with a frequency set will also run after a device restart.
    - **Max number of times to retry if script fails:** Select how many times the script should be run if it returns a non-zero exit code (zero meaning success). Choose **Not configured** (default) to not retry when a script fails.
 5. In **Scope tags**, optionally add scope tags for the script, and select **Next**. You can use scope tags to determine who can see scripts in Intune. For full details about scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md).
 6. Select **Assignments** > **Select groups to include**. An existing list of Azure AD groups is shown. Select one or more user or device groups that are to receive the script. Choose **Select**. The groups you choose are shown in the list, and will receive your script policy.
