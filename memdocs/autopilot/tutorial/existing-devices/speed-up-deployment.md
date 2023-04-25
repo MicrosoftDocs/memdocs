@@ -123,7 +123,7 @@ The solution to speed up the deployment reduces the number of steps in the deplo
 
 > [!NOTE]
 >
-> The steps for the solution to speed up the deployment are optional. The out of box Windows Autopilot for existing devices task sequence still work without any modification. The below steps are only designed to reduce the time it takes to run the deployment and potentially avoid some issues. If you don't want to modify the existing Windows Autopilot for existing devices task sequence, then skip to the next step of [Run Autopilot task sequence on device](run-autopilot-task-sequence.md).
+> The steps for the solution to speed up the deployment are optional. The out-of-box Windows Autopilot for existing devices task sequence still works without any modification. The below steps are only designed to reduce the time it takes to run the deployment and potentially avoid some issues. If you don't want to modify the existing Windows Autopilot for existing devices task sequence, then skip to the next step of [Run Autopilot task sequence on device](run-autopilot-task-sequence.md).
 
 To modify the Windows Autopilot for existing devices task sequence to speed up the deployment process, follow these steps:
 
