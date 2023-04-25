@@ -53,13 +53,25 @@ Learn what new features are available in Windows 365 Enterprise.
 -->
 
 <!-- ########################## -->
-## Week of April 27, 2023 (Service release 2304)
+## Week of April 24, 2023 (Service release 2304)
 
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### End user experience
 
 #### Windows 365 web client keyboard shortcut redirection<!--43951825-->
 
 Windows 365 web client users can now use keyboard shortcuts (like Alt + Tab) on their Cloud PC. These shortcuts would normally be intercepted by the host operating system and not sent to the Cloud PC. For more information about these keyboard shortcuts, see [Access a Cloud PC](end-user-access-cloud-pc.md).
+
+#### Windows 365 app: pin Cloud PC to task bar<!--43470782-->
+
+End users can now pin their Cloud PC to the task bar in the Windows 365 app. This lets them launch the Cloud PC from the task bar icon without going into the connection center.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Provisioning
+
+#### Windows 365 now supports South Africa North and Sweden Central<!--44267264-->
+
+Windows 365 Cloud PC now supports the South Africa North and Sweden Central regions. For more informaton, see [Supported Azure regions for Cloud PC provisioning](requirements.md?tabs=enterprise%2Cent#supported-azure-regions-for-cloud-pc-provisioning).
 
 <!-- ########################## -->
 ## Week of April 10, 2023
