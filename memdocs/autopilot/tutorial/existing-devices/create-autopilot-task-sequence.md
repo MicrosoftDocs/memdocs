@@ -40,10 +40,10 @@ For an overview of the Windows Autopilot deployment for existing devices workflo
 Once the packages containing the Autopilot profile JSON files have been created and distributed in Configuration Manager, the next step is to create a task sequence that performs the following functions:
 
 - Wipes the device.
-- Installs a fresh copy of Windows on the device
+- Installs a fresh copy of Windows on the device.
 - Copies the Autopilot profile JSON file to the device.
 
-Copying of the Autopilot profile JSON file is done in WinPE when the newly installed Windows OS is offline. When the task sequence completes, the device boots into the newly installed Windows OS for the first time and run the out of box experience (OOBE). The OOBE process then processes the Autopilot profile JSON file, which initiates the Autopilot deployment.
+Copying of the Autopilot profile JSON file is done in WinPE when the newly installed Windows OS is offline. When the task sequence completes, the device boots into the newly installed Windows OS for the first time and runs the out of box experience (OOBE). The OOBE process then processes the Autopilot profile JSON file, which initiates the Autopilot deployment.
 
 > [!NOTE]
 >
@@ -172,9 +172,9 @@ To resolve the issue, the **Prepare Windows for Capture** task needs to be remov
       >
       > Sysprep can either shut down or restart the device when it's finished running:
       >
-      > - **Restarting** the device causes the device to restart as soon as the task sequence completes and then immediately boot into Windows for the first time and run Windows Setup and OOBE. When Windows Setup and OOBE run, the Autopilot JSON file is processed and the Autopilot deployment starts.
+      > - **Restarting** the device causes the device to restart as soon as the task sequence completes and then immediately boots into Windows for the first time and runs Windows Setup and OOBE. When Windows Setup and OOBE run, the Autopilot JSON file is processed and the Autopilot deployment starts.
       >
-      > - **Shutting down** the device shuts down and power off the device as soon as the task sequence completes. Shutting down and powering off the device gives the option to further prepare the device and then deliver it to an end-user. Windows Setup, OOBE, and the Autopilot deployment then starts when the end-user turns on the device for the first time.
+      > - **Shutting down** the device shuts down and powers off the device as soon as the task sequence completes. Shutting down and powering off the device give the option to further prepare the device and then deliver it to an end-user. Windows Setup, OOBE, and the Autopilot deployment then start when the end-user turns on the device for the first time.
 
    1. Select the **Prepare Windows for Capture** task again and then select the **Remove** option in the top left of the task sequence editor. A confirmation dialog box appears confirming to delete the step. Select the **Yes** button to remove the **Prepare Windows for Capture** task.
 
