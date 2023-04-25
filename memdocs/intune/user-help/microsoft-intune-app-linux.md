@@ -45,7 +45,7 @@ Run the following commands in a command line to manually install the Intune app 
 2. Install the Microsoft package signing key.  
 
    For Ubuntu 20.04:  
-    `$ curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg`  
+    `$ sudo curl https://packages.microsoft.com/keys/microsoft.asc | sudo gpg --dearmor > microsoft.gpg`  
  
     `$ sudo install -o root -g root -m 644 microsoft.gpg /usr/share/keyrings/` 
 
@@ -54,7 +54,7 @@ Run the following commands in a command line to manually install the Intune app 
     `sudo rm microsoft.gpg` 
     
     For Ubuntu 22.04:  
-     `$ curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg`  
+     `$ sudo curl https://packages.microsoft.com/keys/microsoft.asc | sudo gpg --dearmor > microsoft.gpg`  
      
      `$ sudo install -o root -g root -m 644 microsoft.gpg /usr/share/keyrings/`  
      
