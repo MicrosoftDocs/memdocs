@@ -171,7 +171,7 @@ On the *Compliance status* page, next to the *Policy compliance* chart, you can 
 When you select the tile, it shows all devices without a compliance policy. It also shows the user of the device, the policy deployment status, and the device model.
 
 > [!TIP]  
-> In public preview, there is a new organizational report that identifies all devices in your tenant that have not been assigned a compliance report. See [Devices without compliance policy (Organizational)](../fundamentals/reports.md#devices-without-compliance-policy-organizational).
+> There is an organizational report that identifies all devices in your tenant that have not been assigned a compliance report. See [Devices without compliance policy (Organizational)](../fundamentals/reports.md#devices-without-compliance-policy-organizational).
 
 #### What you need to know
 
