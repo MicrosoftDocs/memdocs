@@ -95,7 +95,7 @@ Import the VPN server's root certificate issued by the CA into a profile created
 
 6. Select **Next**.
 7. In **Configuration settings**, select the folder icon, and browse to your VPN certificate (`.cer` file) that you exported from your VPN administration console.
-8. Select **Next**, and continue creating your profile. For more information, see [Create a VPN profile](vpn-settings-configure.md#create-the-profile).
+8. Select **Next**, and continue creating your profile. For more information, see [Create a VPN profile](vpn-settings-configure.md#step-2---create-the-profile).
 
     :::image type="content" source="./media/vpn-setting-configure-per-app/vpn-per-app-create-trusted-cert.png" alt-text="Create a trusted certificate profile for iOS/iPadOS devices in Microsoft Intune and Intune admin center.":::
 
@@ -146,7 +146,7 @@ This VPN profile includes the SCEP or PKCS certificate that has the client crede
 
       :::image type="content" source="./media/vpn-setting-configure-per-app/vpn-per-app-automatic.png" alt-text="In Intune and Intune admin center, set Automatic VPN to per-app VPN on iOS/iPadOS devices.":::
 
-7. Select **Next**, and continue creating your profile. For more information, see [Create a VPN profile](vpn-settings-configure.md#create-the-profile).
+7. Select **Next**, and continue creating your profile. For more information, see [Create a VPN profile](vpn-settings-configure.md#step-2---create-the-profile).
 
 ## Associate an app with the VPN profile
 

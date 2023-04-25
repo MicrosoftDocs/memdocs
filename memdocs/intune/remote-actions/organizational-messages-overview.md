@@ -87,6 +87,9 @@ Contact someone in your organization who is an Azure AD Global Administrator, In
 ### Why do I need to update other policies before I create a message?  
 The required policies described in [Prerequisites](organizational-messages-prerequisites.md) control access to the taskbar, notification area, and Get Started app. If the settings are blocked or not configured as described, employees will not receive the messages.   
 
+### Can I control the order in which messages are delivered? 
+You can schedule messages to arrive at different times on a device by selecting a unique delivery window for each message. If you schedule the same time for multiple messages, the messages will arrive in random order.  
+
 ### Where can I share an idea for organizational messages or suggest an improvement?  
 In the Microsoft Intune admin center, select the **Feedback** icon that's next to your account name at the top of the page. Rate your experience and then describe your experience or idea. If you're okay with getting a response from Microsoft, select **Microsoft can email you about your feedback.**  
 

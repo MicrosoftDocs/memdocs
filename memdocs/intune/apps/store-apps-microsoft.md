@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/21/2023
+ms.date: 04/24/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -149,15 +149,20 @@ Apps that are deployed from the Microsoft Store are automatically kept up to dat
 
 When a Microsoft Store Win32 app is published to a device as **Required**, but it is already installed (either manually or via the [Microsoft Store for Business](../apps/windows-store-for-business.md)), Intune will take over the management of the application. 
 
-For available Microsoft Store Win32 apps, as well as UWP apps, the end user must click install in the Company Portal before Intune takes over the management of the application. Intune will not attempt to re-install the app.
+For available Microsoft Store Win32 apps, the end user must click install in the Company Portal before Intune takes over management and automatic updates for the app. Intune will not attempt to re-install the app.
 
 The Microsoft Store supports Win32 app types including **.exe** and **.msi** installers. These apps have external content sourcing hosted by the app publisher. Based on their installer definition in the store, each Win32 app supports either **User** or **System** context installation.For related information, see [Traditional desktop apps in the Microsoft Store on Windows](https://developer.microsoft.com/microsoft-store/desktop-apps).
+
+> [!NOTE]
+> Microsoft Store Win32 apps are kept up to date by Intune, therefore in order for the app to be updated it must be assigned in Intune. App updates are not affected by the Store's update group policy.
 
 ## Microsoft Store UWP apps
 In addition to user context, you can deploy Universal Windows Platform (UWP) apps from the **Microsoft Store app (new)** in system context. If a provisioned *.appx* app is deployed in system context, the app will auto-install for each user that logs in. If an individual end user uninstalls the user context app, the app will still show as installed because it is still provisioned. In addition, the app must not already be installed for any users on the device. Our general recommendation is to not mix install contexts when deploying apps.
 
 > [!NOTE]
 > Assigning a UWP app using the "Microsoft Store app (new)" type with the installation behavior set as "System" to a device which already has that app installed will result in this error: "The application was not detected after installation completed successfully (0x87D1041C)". Uninstalling all previous installations of the app from the device, and then re-installing the app to the device will resolve this.
+> 
+> UWP apps are kept up to date by the Store. The UWP app will stay up to date with or without Intune assignment once it is installed, unless the Store group policy is set to block auto-update.
 
 ## Store group policies restrictions
 
