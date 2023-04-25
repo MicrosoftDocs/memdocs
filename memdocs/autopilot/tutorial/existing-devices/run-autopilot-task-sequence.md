@@ -62,10 +62,10 @@ Once the Autopilot for existing devices has been created, modified as needed, an
     >
     > If the following conditions are met when the device starts back up after the task sequence completes:
     >
-    > - Device is registered as an Autopilot device in Intune.
-    > - Device has an Autopilot profile assigned to it in Intune.
+    > - Device is registered as an Autopilot device in Intune
+    > - Device has an Autopilot profile assigned to it in Intune
     >
-     then the Autopilot profile from Intune is downloaded to the device and is used instead of the Autopilot profile from the JSON file staged by the task sequence. The downloaded Autopilot profile from Intune has priority over the local Autopilot profile from the JSON file.
+    > then the Autopilot profile from Intune is downloaded to the device and is used instead of the Autopilot profile from the JSON file staged by the task sequence. The downloaded Autopilot profile from Intune has priority over the local Autopilot profile from the JSON file.
 
 ## Next step: Register device for Windows Autopilot
 
