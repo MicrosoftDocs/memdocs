@@ -8,7 +8,7 @@ keywords:
 author: smritib17 
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 02/24/2023
+ms.date: 04/18/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -51,14 +51,30 @@ The following table provides a list of add-on capabilities and associated Intune
 
 |Capability|Standalone add-on|Intune Plan 2|Intune Suite|
 |:---|:---:|:---:|:---:|
+|Advanced endpoint analytics| | |✔️|
+|Endpoint Privilege Management |✔️| |✔️|
+|Microsoft Tunnel for Mobile Application Management| |✔️|✔️|
+|Remote help|✔️| |✔️|
+|Specialized devices management| |✔️|✔️|
+
+<!-- original sequence >
 |Remote help|✔️| |✔️|
 |Microsoft Tunnel for Mobile Application Management| |✔️|✔️|
 |Specialized devices management| |✔️|✔️|
 |Advanced endpoint analytics| | |✔️|
+-->
 
-### Remote Help
+### Advanced endpoint analytics
 
-Remote Help is a cloud-based solution for secure help desk connections with role-based access controls. For more information, see [Remote Help](../remote-actions/remote-help.md).
+Microsoft Intune advanced Endpoint analytics is set of analytics-driven capabilities that help IT admins understand, anticipate, and improve the end-user experience.
+
+For more information, see [Advanced endpoint analytics](../../analytics/advanced-endpoint-analytics.md).
+
+### Endpoint Privilege Management
+
+Endpoint Privilege Management supports your zero-trust journey by helping your organization achieve a broad user base running with least privilege, while allowing users to still run tasks allowed by your organization to remain productive.
+
+For more information, see [Endpoint Privilege Management](../protect/epm-overview.md).
 
 ### Microsoft Tunnel for Mobile Application Management
 
@@ -66,17 +82,15 @@ When you use the Microsoft Tunnel VPN Gateway, you can extend Tunnel support by 
 
 For more information, see [Microsoft Tunnel for Mobile Application Management](../protect/microsoft-tunnel-mam.md).
 
+### Remote Help
+
+Remote Help is a cloud-based solution for secure help desk connections with role-based access controls. For more information, see [Remote Help](../fundamentals/remote-help.md).
+
 ### Managing Specialty devices with Microsoft Intune
 
 Specialized devices management is a set of device management, configuration, and protection capabilities for special, purpose-built devices such as AR/VR headsets, large smart-screen devices, and conference room meeting devices.
 
 For more information, see [Managing specialized devices with Microsoft Intune](specialty-devices-with-intune.md).
-
-### Advanced endpoint analytics
-
-Microsoft Intune advanced Endpoint analytics is set of analytics-driven capabilities that help IT admins understand, anticipate, and improve the end-user experience.
-
-For more information, see [Advanced endpoint analytics](../../analytics/advanced-endpoint-analytics.md).
 
 ## Try or buy Intune add-ons
 
@@ -120,7 +134,11 @@ Each of the Intune add-ons have their own requirements for how many licenses nee
 
 Learn more about:
 
-- [Remote Help](..\remote-actions\remote-help.md)
+- [Remote Help](/mem/intune/fundamentals/remote-help)
 - [Microsoft Tunnel for Mobile Application Management](../protect/microsoft-tunnel-mam.md)
 - [Managing specialized devices with Microsoft Intune](specialty-devices-with-intune.md)
 - [Advanced endpoint analytics](../../analytics/overview.md)
+- [Endpoint Privilege Management](../protect/epm-overview.md).
+- [Microsoft Tunnel for Mobile Application Management](../protect/microsoft-tunnel-mam.md)
+- [Remote Help](..\fundamentals\remote-help.md)
+- [Managing specialized devices with Microsoft Intune](specialty-devices-with-intune.md)

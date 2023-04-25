@@ -621,7 +621,7 @@ Example: `CCMSetup.exe IGNOREAPPVVERSIONCHECK=TRUE`
 
 If you set this property to `1` then ccmsetup.exe and client.msi are set as managed installers. For more information, see [Automatically allow apps deployed by a managed installer with Windows Defender Application Control](/windows/security/threat-protection/windows-defender-application-control/configure-authorized-apps-deployed-with-a-managed-installer).
 
-Example: `CCMSetup.exe MANGEDINSTALLER=1`
+Example: `CCMSetup.exe MANAGEDINSTALLER=1`
 
 ### `NOTIFYONLY`
 
@@ -638,7 +638,7 @@ For more information, see [How to configure client status](configure-client-stat
 Use this property to start a task sequence on a client after it successfully registers with the site.
 
 > [!NOTE]
-> If the task sequence installs software updates or applications, clients need a valid client authentication certificate. Token authentication alone doesn't work. For more information, see [Release notes - OS deployment](../../servers/deploy/install/release-notes.md#os-deployment).<!--7527072-->
+> If the task sequence installs software updates or applications, clients need a valid client authentication certificate. Token authentication alone doesn't work. <!--7527072-->
 
 For example, you provision a new Windows device with Windows Autopilot, auto-enroll it to Microsoft Intune, and then install the Configuration Manager client for co-management. If you specify this new option, the newly provisioned client then runs a task sequence. This process gives you additional flexibility to install applications and software updates, or configure settings.
 

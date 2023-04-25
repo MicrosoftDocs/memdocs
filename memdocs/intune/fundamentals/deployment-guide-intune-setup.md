@@ -7,7 +7,7 @@ keywords: migrate from configuration manager to intune, move from airwatch to in
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/29/2023
+ms.date: 04/20/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -45,7 +45,12 @@ This migration guide lists and describes your options to adopt or move to Intune
 Use this guide to determine the best migration approach, and get some guidance & recommendations.
 
 > [!TIP]
-> [!INCLUDE [tips-guidance-plan-deploy-guides](../includes/tips-guidance-plan-deploy-guides.md)]
+> 
+> - [!INCLUDE [tips-guidance-plan-deploy-guides](../includes/tips-guidance-plan-deploy-guides.md)]
+>
+> - As a companion to this article, the Microsoft 365 admin center also has some setup guidance. The guide customizes your experience based on your environment. At [Microsoft Intune setup guide](https://go.microsoft.com/fwlink/?linkid=2224812), sign in with the **Global Reader** (at a minimum) to access the deployment guides. For more information on these deployment guides and the roles needed, go to [Advanced deployment guides for Microsoft 365 and Office 365 products](/microsoft-365/enterprise/setup-guides-for-microsoft-365).
+>
+>   To review best practices without signing in and activating the automated setup features, go to the [M365 Setup portal](https://go.microsoft.com/fwlink/?linkid=2223058).
 
 ## Before you begin
 
@@ -104,7 +109,7 @@ Users must unenroll their devices from the current MDM provider before they enro
 
     Give users specific unenroll steps. Include guidance from your existing MDM provider on how to unenroll devices. Clear and helpful communication minimizes end user downtime, dissatisfaction, and helpdesk calls.
 
-4. Optional, but recommended. If you have Azure AD Premium, also **use [conditional access](migration-guide-drive-adoption.md)** to block devices until they enroll in Intune.
+4. Optional, but recommended. If you have Azure AD Premium, also **use [conditional access](../protect/conditional-access.md)** to block devices until they enroll in Intune.
 
     For more information, go to [Step 3 – Plan for compliance policies](deployment-plan-compliance-policies.md).
 
@@ -271,7 +276,7 @@ This section shows how to use the Microsoft Graph scripts for a tenant to tenant
 >
 > - These steps use the [Intune beta Graph samples](https://github.com/microsoftgraph/powershell-intune-samples) on GitHub. The sample scripts make changes to your tenant. They're available as-is, and should be validated using a non-production or "test" tenant account. Be sure the scripts meet your organization security guidelines.
 > - The scripts don't export and import every policy, such as certificate profiles. Expect to do more tasks than what's available in these scripts. You will have to recreate some policies.
-> - To migrate a user’s device, the user must unenroll the device from the old tenant, and then re-enroll in the new tenant.
+> - To migrate a user's device, the user must unenroll the device from the old tenant, and then re-enroll in the new tenant.
 
 ### Download the samples, and run the script
 

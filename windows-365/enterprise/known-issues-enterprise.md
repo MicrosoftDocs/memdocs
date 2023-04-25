@@ -6,7 +6,7 @@ f1.keywords:
 ms.author: erikje
 author: ErikjeMS
 manager: dougeby
-ms.date: 04/06/2023
+ms.date: 04/21/2023
 audience: Admin
 ms.topic: troubleshooting
 ms.service: windows-365
@@ -99,6 +99,12 @@ When single sign-on isn't used, users have the option to see the Cloud PC lock s
 When using single sign-on, all authentication behavior (including supported credential types and sign-in frequency) is driven through Azure AD.
 
 **Troubleshooting**: To enforce periodic re-authentication through Azure AD, create a Conditional Access policy using the [sign-in frequency control](/azure/active-directory/conditional-access/howto-conditional-access-session-lifetime#policy-1-sign-in-frequency-control).
+
+## I don’t see the Cloud PC reports on the Intune admin center Devices > Overview page
+
+If you’ve turned on the **Use Devices preview** setting in the Intune admin center, the **Cloud PC performance (preview)** tab, **Cloud PCs with connection quality issues** report, and **Cloud PCs with low utilization** report won’t be on the **Overview** page.
+
+**Troubleshooting steps**: Turn off the **Use Devices preview** toggle in the upper right corner of the **Devices** > **Overview** page.
 
 ## Next steps
 

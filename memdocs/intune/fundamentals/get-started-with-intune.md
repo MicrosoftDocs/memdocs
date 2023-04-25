@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/06/2023
+ms.date: 04/20/2023
 ms.topic: overview
 ms.service: mem
 ms.subservice: fundamentals
@@ -40,6 +40,11 @@ Microsoft Intune is a cloud-based service that helps you manage your devices and
 This article provides an overview of the steps to start your Intune deployment.
 
 :::image type="content" source="./media/get-started-with-intune/get-started-overview.png" alt-text="Diagram that shows the different steps to get started with Microsoft Intune, including set up, adding apps, using compliance & conditional access, configuring device features, and then enrolling devices to be managed.":::
+
+> [!TIP]
+> As a companion to this article, the Microsoft 365 admin center also has some setup guidance. The guide customizes your experience based on your environment. At [Microsoft Intune setup guide](https://go.microsoft.com/fwlink/?linkid=2224812), sign in with the **Global Reader** (at a minimum) to access the deployment guides. For more information on these deployment guides and the roles needed, go to [Advanced deployment guides for Microsoft 365 and Office 365 products](/microsoft-365/enterprise/setup-guides-for-microsoft-365).
+>
+> To review best practices without signing in and activating the automated setup features, go to the [M365 Setup portal](https://go.microsoft.com/fwlink/?linkid=2223058).
 
 ## Before you begin
 
@@ -173,8 +178,8 @@ When a device enrolls, it's issued a secure MDM certificate. This certificate co
 
 Different platforms have different enrollment requirements. The following articles can help you learn more about device enrollment, including platform-specific guidance:
 
-- [What is device enrollment in Intune?](../enrollment/device-enrollment.md)
-- [Enrolled device management capabilities of Microsoft Intune](../enrollment/device-management-capabilities.md)
+- [What is device enrollment in Intune?](/mem/intune/fundamentals/deployment-guide-enrollment)
+- [Enrolled device management capabilities of Microsoft Intune](/mem/intune/enrollment/device-enrollment)
 - [Deployment guidance: Enroll devices in Microsoft Intune](deployment-guide-enrollment.md)
   - [Deployment guide: Enroll Android devices](deployment-guide-enrollment-android.md)
   - [Deployment guide: Enroll iOS/iPadOS devices](deployment-guide-enrollment-ios-ipados.md)

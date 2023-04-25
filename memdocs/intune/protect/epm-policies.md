@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/24/2023
+ms.date: 04/18/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -29,10 +29,7 @@ ms.collection:
 
 # Configure policies for Endpoint Privilege Management
 
-<!-- [!INCLUDE [intune-add-on-note](../includes/intune-add-on-note.md)] -->
- 
-> [!NOTE]  
-> This capability is in public preview and available to use without a license. After public preview, it will be available as an Intune add-on. For more information, see [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md).
+[!INCLUDE [intune-add-on-note](../includes/intune-add-on-note.md)]
 
 Microsoft Intune Endpoint Privilege Management (EPM) allows your organization’s users to run as a standard user (without administrator rights) and complete tasks that require elevated privileges.
 
@@ -42,7 +39,6 @@ Endpoint Privilege Management supports your zero-trust journey by helping your o
 
 The information in this article can help you to configure the following policies and reusable settings for EPM:
 
-- Enable your tenant for Endpoint Privilege Management
 - Windows elevation settings policy
 - Windows elevation rules policy
 - Reusable settings groups, which are optional configurations for your elevation rules.
@@ -54,7 +50,9 @@ Applies to:
 
 ## Get started with EPM policies
 
-EPM uses two policy types that you configure to manage how a file elevation request is handled. Together, the policies configure the behavior for file elevations when standard users request to *run with administrative privileges*.
+Endpoint Privilege Management uses two policy types that you configure to manage how a file elevation request is handled. Together, the policies configure the behavior for file elevations when standard users request to *run with administrative privileges*.
+
+Before you can create Endpoint Privilege Management policies, you must license EPM in your tenant as an Intune add-on. For licensing information, see [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md).
 
 ### About Windows elevation settings policy
 
@@ -83,7 +81,7 @@ Use *Windows elevation settings policy* when you want to:
   >[!NOTE]
   > Multiple validation options can be selected to satisfy the needs of the organization. If no options are selected, then the user is only required to click *continue* to complete the elevation.
   
-- **Send data to Microsoft** - This setting controls whether your device shares diagnostic and usage data with Microsoft. When enabled to share data, the type of data is configured by the *Reporting scope* setting.
+- **Send elevation data for reporting** - This setting controls whether your device shares diagnostic and usage data with Microsoft. When enabled to share data, the type of data is configured by the *Reporting scope* setting.
 
   Diagnostic data is used by Microsoft to measure the health of the EPM client components. Usage data is used to show you elevations that happen within your tenant. For more information about the types of data and how it's stored, see [Data collection and privacy for Endpoint Privilege Management](../protect/epm-data-collection.md).
 
@@ -91,7 +89,7 @@ Use *Windows elevation settings policy* when you want to:
   - **Yes** - This option sends data to Microsoft based on the *Reporting Scope* setting.
   - **No** - This option does not send data to Microsoft.
 
-- **Reporting Scope** - This setting controls the amount of data being sent to Microsoft when *Send data to Microsoft* is set to *Yes*. By default, *Diagnostic data and all endpoint elevations* is selected.
+- **Reporting Scope** - This setting controls the amount of data being sent to Microsoft when *Send elevation data for reporting* is set to *Yes*. By default, *Diagnostic data and all endpoint elevations* is selected.
 
   Options include:
   - **Diagnostic data and managed elevations only** - This option sends diagnostic data to Microsoft about the health of the client components **AND** data about elevations being facilitated by Endpoint Privilege Management.
@@ -126,21 +124,9 @@ We recommend using a reusable settings group when you plan to use the same certi
 - Certificates you add directly to an elevation rule: Each certificate that's added directly to a rule is uploaded as a unique instance by Intune, and that certificate instance is then associated with that rule. Adding the same certificate directly to two separate rules results in it uploading twice. Later, if you must change the certificate, you must edit each individual rule that contains it. With each rule change, Intune uploads the updated certificate a single time for each rule.
 - Certificates you manage through a reusable settings group: Each time a certificate is added to a reusable settings group, Intune uploads the certificate a single time no matter how many elevation rules include that group. That instance of the certificate is then associated with the file from each rule that uses that group. Later, any change to the certificate you make can be made a single time in the reusable settings group. This change results in Intune uploading the updated file a single time, and then applying that change to each elevation rule that references the group.
 
-## Enable your tenant for Endpoint Privilege Management
-
-Before you can use EPM to create policies and manage file elevations, you must enable EPM in your tenant.
-
-During the public preview, you can use EPM without acquiring a license or a trial. To enable support for your tenant:
-
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Endpoint security** > **Endpoint Privilege Management**.
-
-2. Review the available information for EPM, and when ready, select **Activate**. Intune begins to provision EPM for your tenant, which includes making the EPM component available to be deployed to your devices. These components are enabled on devices when they receive a *Windows elevation settings policy*.
-
-   :::image type="content" source="./media/epm-policies/enable-epm.png" alt-text="Activate EPM for use during the public preview." :::
-
 ## Windows elevation settings policy
 
-After you enable Endpoint Privilege Management for your tenant, deploy *Windows elevation settings policy* to users or devices. The policy configures the following options on devices:
+Deploy *Windows elevation settings policy* to users or devices to configure the following options on devices:
 
 - Enable Endpoint Privilege Management on a device.
 - Set default rules for elevation requests for any file that isn't managed by an Endpoint Privilege Management elevation rule on that device.
@@ -170,7 +156,7 @@ A device must have an elevation settings policy that enables support for EPM bef
        - **Business justification**: Require the user to enter a justification for running the file. There's no required format for this justification. User input is saved and can be reviewed through logs if the *Reporting scope* includes collection of endpoint elevations.
        - **Windows authentication**: This option requires the user to authenticate using their organization credentials.
 
-   - **Send data to Microsoft**: By default, this behavior is set to **Yes**. When set to yes, you can then configure a *Reporting scope*. When set to **No**, a device doesn’t report diagnostic data or information about file elevations to Intune.
+   - **Send elevation data for reporting**: By default, this behavior is set to **Yes**. When set to yes, you can then configure a *Reporting scope*. When set to **No**, a device doesn’t report diagnostic data or information about file elevations to Intune.
    - **Reporting scope**: Choose what type of information a device reports to Intune:
      - **Diagnostic data and all endpoint elevations** (Default): The device reports diagnostic data and details about all file elevations that are facilitated by EPM.
 

@@ -6,7 +6,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 02/09/2023
+ms.date: 04/19/2023
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -45,9 +45,9 @@ The Intune ServiceNow Connector Integration focuses on creating a basic ticketin
 
 To get started, review the following steps:
 
-- During the Preview, no other licenses or subscriptions are required.  After the ServiceNow integration becomes Generally Available, an active Remote Help trial or add-on license is required. Go to [Remote Help trial or add-on license.](../fundamentals/intune-add-ons.md)
+- ServiceNow integration is now Generally Available. An active Intune Suite or Remote Help trial or add-on license is required. Go to [Remote Help trial or add-on license.](../fundamentals/intune-add-ons.md)
 
-- You must have the Microsoft Azure Active Directory (Azure AD) Global Admin Role or Azure AD Intune Admin role to make updates to the connector. To view the incidents, you must have the Azure AD Global Admin Role or Azure AD Intune Admin role or have an Intune Role with the Organization | Read permission. Admins that aren't assigned the Azure AD roles, need one of these two permissions to either modify the connector or view incidents respectively; **Update Connector** and **View Incidents**.  These permissions are part of the ServiceNow permission category. For information on  roles, see [Role-based administration control with Intune](role-based-access-control.md)
+- You must have the Microsoft Azure Active Directory (Azure AD) Global Admin Role or Azure AD Intune Admin role to make updates to the connector. To view the incidents, you must have the Azure AD Global Admin Role or Azure AD Intune Admin role or have an Intune Role with the Organization | Read permission. Admins that aren't assigned the Azure AD roles, need one of these two permissions to either modify the connector or view incidents respectively; **Update Connector** and **View Incidents**. These permissions are part of the ServiceNow permission category. For information on  roles, see [Role-based administration control with Intune](role-based-access-control.md)
 
 - You must have ServiceNow permissions to view incidents when using the **Test connection** action. You can assign the *itil* role to grant appropriate permissions to view incidents.  A ServiceNow license needs to be assigned to admins who view incidents. 
 
@@ -141,5 +141,5 @@ CALLERID, NAME, NUMBER, UNIVERSAL PRINCIPAL NAME, URGENCY, IMPACT, SEVERITY, ASS
 
 - [Get support in Microsoft Intune admin center](../../get-support.md)
 
-- [Use Remote Help](../remote-actions/remote-help.md)
+- [Use Remote Help](/mem/intune/fundamentals/remote-help)
 

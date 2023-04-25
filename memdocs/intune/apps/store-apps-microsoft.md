@@ -180,8 +180,7 @@ The following table provides details about how app deployment may be affected by
 
 The following capabilities aren't supported by Microsoft Store apps:
 
-1. Ability to install Microsoft Store apps during Enrollment Status Page. Apps deployed using Microsoft Store app will install after enrollment status page has completed. The ability to install Microsoft Store apps during Enrolment Status Page is coming in a future release.
-2. Any app that has an ARM64 installer is not supported.
+1. Any app that has an ARM64 installer is not supported.
 
 ## Next steps
 

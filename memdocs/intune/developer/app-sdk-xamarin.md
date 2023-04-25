@@ -34,7 +34,7 @@ ms.collection:
 # Microsoft Intune App SDK Xamarin Bindings
 
 > [!NOTE]
-> The current Xamarin bindings for Android platform only support apps targeting Android 9.0 and lower and Xamarin Forms 4.4 and lower. Microsoft is working on improving support for newer versions on Android by providing Intune support on .NET MAUI. The beta release for .NET MAUI support is now available. For more information, see [Intune App SDK for .NET MAUI - Android](https://www.nuget.org/packages/Microsoft.Intune.Maui.Essentials.android/9.5.2-beta). For more information about migrating your apps from Xamarin Forms to .NET MAUI, see [Migrate your app from Xamarin.Forms](/dotnet/maui/get-started/migrate). 
+> The current Xamarin bindings for Android platform only support apps targeting Android 9.0 and lower and Xamarin Forms 4.4 and lower. Microsoft is working on improving support for newer versions on Android by providing Intune support on .NET MAUI. The beta release for .NET MAUI support is now available. For more information, see [Intune App SDK for .NET MAUI - Android](https://www.nuget.org/packages/Microsoft.Intune.Maui.Essentials.android/9.5.2-beta2). For more information about migrating your apps from Xamarin Forms to .NET MAUI, see [Migrate your app from Xamarin.Forms](/dotnet/maui/get-started/migrate). 
 
 > [!NOTE]
 > You may wish to first read the [Get Started with Intune App SDK](app-sdk-get-started.md) article, which explains how to prepare for integration on each supported platform.
@@ -128,14 +128,14 @@ Sample applications highlighting MAM functionality in Xamarin.iOS apps are avail
 ## Enabling Intune app protection policies in your Android mobile app
 1. Add the [Microsoft.Intune.MAM.Xamarin.Android NuGet package](https://www.nuget.org/packages/Microsoft.Intune.MAM.Xamarin.Android) to your Xamarin.Android project.
     1. For a Xamarin.Forms app, add the [Microsoft.Intune.MAM.Remapper.Tasks NuGet package](https://www.nuget.org/packages/Microsoft.Intune.MAM.Remapper.Tasks) to your Xamarin.Android project as well. 
-2. Follow the general steps required for [integrating the Intune App SDK](app-sdk-android.md) into an Android mobile app while referring to this document for additional details.
+2. Follow the general steps required for [integrating the Intune App SDK](/mem/intune/developer/app-sdk-android-phase1) into an Android mobile app while referring to this document for additional details.
 
 ### Xamarin.Android integration
 
-A complete overview for integrating the Intune App SDK can be found in the [Microsoft Intune App SDK for Android developer guide](app-sdk-android.md). As you read through the guide and integrate the Intune App SDK with your Xamarin app the following sections are intended to highlight differences between the implementation for a native Android app developed in Java and a Xamarin app developed in C#. These sections should be treated as supplemental and cannot act as a substitute for reading the guide in its entirety.
+A complete overview for integrating the Intune App SDK can be found in the [Microsoft Intune App SDK for Android developer guide](/mem/intune/developer/app-sdk-android-phase1). As you read through the guide and integrate the Intune App SDK with your Xamarin app the following sections are intended to highlight differences between the implementation for a native Android app developed in Java and a Xamarin app developed in C#. These sections should be treated as supplemental and cannot act as a substitute for reading the guide in its entirety.
 
 #### Remapper
-Beginning with the 1.4428.1 release, the `Microsoft.Intune.MAM.Remapper` package can be added to a Xamarin.Android application as [build tooling](app-sdk-android.md#build-tooling) to perform the MAM class, method, and systems services replacements. If the Remapper is included, the MAM equivalent replacement portions of the Renamed Methods and MAM Application sections will be automatically performed when the application is built.
+Beginning with the 1.4428.1 release, the `Microsoft.Intune.MAM.Remapper` package can be added to a Xamarin.Android application as [build tooling](/mem/intune/developer/app-sdk-android-phase1#build-tooling) to perform the MAM class, method, and systems services replacements. If the Remapper is included, the MAM equivalent replacement portions of the Renamed Methods and MAM Application sections will be automatically performed when the application is built.
 
 To exclude a class from MAM-ification by the Remapper the following property can be added in your projects `.csproj` file.
 
@@ -148,10 +148,10 @@ To exclude a class from MAM-ification by the Remapper the following property can
 > [!NOTE]
 > The Remapper currently prevents debugging in Xamarin.Android apps. Manual integration is recommended to debug your application.
 
-#### [Renamed Methods](app-sdk-android.md#renamed-methods)
+#### [Renamed Methods](/mem/intune/developer/app-sdk-android-phase1#renamed-methods)
 In many cases, a method available in the Android class has been marked as final in the MAM replacement class. In this case, the MAM replacement class provides a similarly named method (suffixed with `MAM`) that you should override instead. For example, when deriving from `MAMActivity`, instead of overriding `OnCreate()` and calling `base.OnCreate()`, `Activity` must override `OnMAMCreate()` and call `base.OnMAMCreate()`.
 
-#### [MAM Application](app-sdk-android.md#mamapplication)
+#### [MAM Application](/mem/intune/developer/app-sdk-android-phase1#mamapplication)
 Your app must define an `Android.App.Application` class. If manually integrating MAM, it must inherit from `MAMApplication`. Be sure that your subclass is properly decorated with the `[Application]` attribute and overrides the `(IntPtr, JniHandleOwnership)` constructor.
 
 ```csharp
@@ -165,7 +165,7 @@ Your app must define an `Android.App.Application` class. If manually integrating
 > [!NOTE]
 > An issue with the MAM Xamarin bindings can cause the application to crash when deployed in Debug mode. As a workaround, the `Debuggable=false` attribute must be added to the `Application` class and the `android:debuggable="true"` flag must be removed from the manifest if it was manually set.
 
-#### [Enable features that require app participation](app-sdk-android.md#enable-features-that-require-app-participation)
+#### [Enable features that require app participation](/mem/intune/developer/app-sdk-android-phase1#enable-features-that-require-app-participation)
 Example: Determine if PIN is required for the app
 
 ```csharp
@@ -185,7 +185,7 @@ Example: Determine if saving to device or cloud storage is permitted
 MAMPolicyManager.GetPolicy(currentActivity).GetIsSaveToLocationAllowed(SaveLocation service, String username);
 ```
 
-#### [Register for notifications from the SDK](app-sdk-android.md#register-for-notifications-from-the-sdk)
+#### [Register for notifications from the SDK](/mem/intune/developer/app-sdk-android-phase1#register-for-notifications-from-the-sdk)
 Your app must register for notifications from the SDK by creating a `MAMNotificationReceiver` and registering it with `MAMNotificationReceiverRegistry`. This is done by providing the receiver and the type of notification desired in `App.OnMAMCreate`, as the example below illustrates:
 
 ```csharp
@@ -200,7 +200,7 @@ public override void OnMAMCreate()
     ...
 ```
 
-#### [MAM Enrollment Manager](app-sdk-android.md#mamenrollmentmanager)
+#### [MAM Enrollment Manager](/mem/intune/developer/app-sdk-android-phase1#mamenrollmentmanager)
 
 ```csharp
 IMAMEnrollmentManager mgr = MAMComponents.Get<IMAMEnrollmentManager>();

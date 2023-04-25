@@ -47,7 +47,7 @@ You can configure Conditional Access policies based on Check Point Harmony Mobil
 
 - Azure Active Directory Premium
 
-- Microsoft Intune subscription
+- Microsoft Intune Plan 1 subscription
 
 - Check Point Harmony Mobile Threat Defense subscription
   - See the [CheckPoint Harmony website](https://www.checkpoint.com/harmony).

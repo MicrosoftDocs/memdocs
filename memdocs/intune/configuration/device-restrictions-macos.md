@@ -169,7 +169,12 @@ Create a [macOS device restrictions configuration profile](device-restrictions-c
   - **Delay visibility of non-OS software updates**: Enter the number of days to delay all non-OS software updates, from 1-90. If you don't enter anything, updates will be deferred for 30 days, by default. This value overrides the value in **Delay default visibility of software updates**.
 
      This feature applies to:  
-    - macOS 11.0 and newer  
+    - macOS 11.0 and newer
+  
+  - **Allow activation lock**: **Yes**, enables Activation Lock on supervised macOS devices. Activation Lock makes it harder for a lost or stolen device to be reactivated. When set to **Not configured** (default), Intune doesn't change or update this setting.
+
+     This feature applies to:  
+    - macOS 10.15 or later  
 
 ### Settings apply to: Automated device enrollment  
 
