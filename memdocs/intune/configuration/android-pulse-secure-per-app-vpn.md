@@ -68,7 +68,7 @@ After you assign the policy to your Android device or user groups, users should 
 
     Take note of the **Connection Name** value you enter when creating the VPN profile. This name is needed in the next step. In this example, the connection name is **MyAppVpnProfile**.
 
-8. Select **Next**, and continue creating your profile. For more information, see [Create a VPN profile](vpn-settings-configure.md#create-the-profile).
+8. Select **Next**, and continue creating your profile. For more information, see [Create a VPN profile](vpn-settings-configure.md#step-2---create-the-profile).
 
 ## Step 2: Create a custom configuration policy
 
@@ -99,7 +99,7 @@ After you assign the policy to your Android device or user groups, users should 
 
     :::image type="content" source="./media/android-pulse-secure-per-app-vpn/android_per_app_vpn_oma_uri.png" alt-text="Android device administrator per-app VPN custom policy in Microsoft Intune":::
 
-8. Select **Next**, and continue creating your profile. For more information, see [Create a VPN profile](vpn-settings-configure.md#create-the-profile).
+8. Select **Next**, and continue creating your profile. For more information, see [Create a VPN profile](vpn-settings-configure.md#step-2---create-the-profile).
 
 ### Set your blocked and allowed app list (optional)
 

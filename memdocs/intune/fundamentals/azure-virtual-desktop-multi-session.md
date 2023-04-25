@@ -80,11 +80,11 @@ This feature supports Windows 10 or Windows 11 Enterprise multi-session VMs, whi
 > If you're joining session hosts to Azure Active Directory Domain Services, you can't manage them using Intune.
 
 > [!IMPORTANT]
-> If you’re using Windows 10, versions 2004, 20H2, or 21H1 builds, make sure that you install the July 2021 Windows Update or a later Windows update. Otherwise, remote actions in the Microsoft Intune admin center, like remote sync, won’t work correctly. As a result, pending policies assigned to devices might take up to 8 hours to be applied.
+> If you're using Windows 10, versions 2004, 20H2, or 21H1 builds, make sure that you install the July 2021 Windows Update or a later Windows update. Otherwise, remote actions in the Microsoft Intune admin center, like remote sync, won't work correctly. As a result, pending policies assigned to devices might take up to 8 hours to be applied.
 
 See [What is Azure Virtual Desktop?](/azure/virtual-desktop/overview#requirements) for more information about Azure Virtual Desktop licensing requirements.
 
-Windows 10 or Windows 11 Enterprise multi-session VMs are treated as a separate OS edition and some Windows 10 or Windows 11 Enterprise configurations won’t be supported for this edition. Using Microsoft Intune doesn't depend on or interfere with Azure Virtual Desktop management of the same VM.
+Windows 10 or Windows 11 Enterprise multi-session VMs are treated as a separate OS edition and some Windows 10 or Windows 11 Enterprise configurations won't be supported for this edition. Using Microsoft Intune doesn't depend on or interfere with Azure Virtual Desktop management of the same VM.
 
 ## Create the configuration profile
 
@@ -95,7 +95,7 @@ The existing device configuration profile templates aren't supported for Windows
 - [Trusted certificate](../protect/certificates-trusted-root.md#create-trusted-certificate-profiles) - Device (machine) when targeting devices and User when targeting users
 - [SCEP certificate](../protect/certificates-profile-scep.md#create-a-scep-certificate-profile) - Device (machine) when targeting devices and User when targeting users
 - [PKCS certificate](../protect/certificates-pfx-configure.md#create-a-pkcs-certificate-profile) - Device (machine) when targeting devices and User when targeting users
-- [VPN](../configuration/vpn-settings-configure.md#create-the-profile) - Device Tunnel only
+- [VPN](../configuration/vpn-settings-configure.md#step-2---create-the-profile) - Device Tunnel only
 
 Microsoft Intune won't deliver unsupported templates to multi-session devices, and those policies appear as *Not applicable* in reports.
 
@@ -118,7 +118,7 @@ Microsoft Intune won't deliver unsupported templates to multi-session devices, a
 8. From the filtered list, pick the categories that you want.
     - For each category you pick, select the settings that you want to apply to your new configuration profile.
     - For each setting, select the value that you want for this configuration profile.
-9. Select **Next** when you’re done adding settings.
+9. Select **Next** when you're done adding settings.
 10. On the **Assignments** page, choose the Azure AD groups containing the devices to which you want this profile assigned > **Next**.
 11. On the **Scope tags** page, optionally add the scope tags you want to apply to this profile > **Next**. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md).
 12. On the **Review + create** page, choose **Create** to create the profile.
@@ -155,7 +155,7 @@ You can secure your Windows 10 or Windows 11 Enterprise multi-session VMs by con
 All other policies report as **Not applicable**.
 
 > [!Important]
-> You’ll need to create a new compliance policy and target it to the device group containing your multi-session VMs. User-targeted compliance configurations aren’t supported.
+> You'll need to create a new compliance policy and target it to the device group containing your multi-session VMs. User-targeted compliance configurations aren't supported.
 
 [Conditional Access policies](../protect/conditional-access.md) support both user and device based configurations for Windows 10 or Windows 11 Enterprise multi-session.
 
@@ -228,7 +228,7 @@ Security baselines aren't available for Windows 10 or Windows 11 Enterprise mult
 Out of Box Experience (OOBE) enrollment isn't supported for Window 10 or Windows 11 Enterprise multi-session. This restriction means that:
 
 - Windows Autopilot and Commercial OOBE aren't supported.
-- Enrollment status page isn’t supported.
+- Enrollment status page isn't supported.
 
 Windows 10 or Windows 11 Enterprise multi-session managed by Microsoft Intune isn't currently supported for China Sovereign Cloud.
 ## Troubleshooting
@@ -239,8 +239,8 @@ The following sections provide troubleshooting guidance for common issues.
 
 |Issue|Detail|
 |---------------|---------------------------------|
-|Enrollment of hybrid Azure AD joined virtual machine fails|<ul><li>Auto-enrollment is configured to use user credentials. Windows 10 or Windows 11 Enterprise multi-session virtual machines must be enrolled using device credentials.<li>The Azure Virtual Desktop agent you’re using must be version 2944.1400 or later.<li>You've more than one MDM provider, which isn't supported.<li>Windows 10 or Windows 11 Enterprise multi-session VM is configured outside of a host pool. Microsoft Intune only supports VMs provisioned as part of a host pool.<li>The Azure Virtual Desktop host pool wasn't created through the Azure Resource Manager template.|
-|Enrollment of Azure AD joined virtual machine fails|<ul><li>The Azure Virtual Desktop agent you’re using isn't updated. The agent must be version 2944.1400 or above.<li>Azure Virtual Desktop host pool wasn't created through the Azure Resource Manager template.|
+|Enrollment of hybrid Azure AD joined virtual machine fails|<ul><li>Auto-enrollment is configured to use user credentials. Windows 10 or Windows 11 Enterprise multi-session virtual machines must be enrolled using device credentials.<li>The Azure Virtual Desktop agent you're using must be version 2944.1400 or later.<li>You've more than one MDM provider, which isn't supported.<li>Windows 10 or Windows 11 Enterprise multi-session VM is configured outside of a host pool. Microsoft Intune only supports VMs provisioned as part of a host pool.<li>The Azure Virtual Desktop host pool wasn't created through the Azure Resource Manager template.|
+|Enrollment of Azure AD joined virtual machine fails|<ul><li>The Azure Virtual Desktop agent you're using isn't updated. The agent must be version 2944.1400 or above.<li>Azure Virtual Desktop host pool wasn't created through the Azure Resource Manager template.|
 
 ### Configuration issues
 
