@@ -44,7 +44,7 @@ The difference between an Autopilot pre-provisioned Azure AD join and an Autopil
 
 > [!TIP]
 >
-> For Configuration Manager admins, the Autopilot profile is similar to some of the configuration that takes place during a task sequence via an `unattend.xml` file. The `unattend.xml` file is configured during the **Apply Windows Settings** and **Apply Network Settings** steps. Note however that Autopilot doesn't use `unattend.xml` files.
+> For Configuration Manager admins, the Autopilot profile is similar to some of the configuration that takes place during a task sequence via an `unattend.xml` file. The `unattend.xml` file is configured during the **Apply Windows Settings** and **Apply Network Settings** steps. Autopilot doesn't use `unattend.xml` files.
 
 To create a pre-provisioned Azure AD join Autopilot profile, follow these steps:
 
