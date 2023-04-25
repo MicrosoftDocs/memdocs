@@ -55,14 +55,11 @@ Learn what new features are available in Windows 365 Enterprise.
 <!-- ########################## -->
 ## Week of April 27, 2023 (Service release 2304)
 
-### Device management
+### End user experience
 
-#### Cloud PC on-demand restore points and copy to Azure Storage account are now generally available<!--43450254-->
+#### Windows 365 web client keyboard shortcut redirection<!--43951825-->
 
-Cloud PC on-demand restore points and copy copy to  an Azure Storage account have moved out of preview and into general availability. For more information, see [Create on-demand manual restore points for Cloud PCs](create-manual-restore-point.md) and [Share Cloud PC restore points to an Azure Storage Account](share-restore-points-storage.md).
-
-
-
+Windows 365 web client users can now use keyboard shortcuts (like Alt + Tab) on their Cloud PC. These shortcuts would normally be intercepted by the host operating system and not sent to the Cloud PC. For more information about these keyboard shortcuts, see [Access a Cloud PC](end-user-access-cloud-pc.md).
 
 <!-- ########################## -->
 ## Week of April 10, 2023
