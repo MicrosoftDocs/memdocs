@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/20/2022
+ms.date: 04/25/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -53,7 +53,7 @@ This feature applies to:
   > - Two new VPN profiles apply to the device at the same time.
   > - An active VPN profile is removed at the same time a new VPN profile is assigned.
   >
-  > This issue doesn’t apply when:
+  > This issue doesn't apply when:
   >
   > - A Windows 11 device doesn't have an existing VPN profile assigned, and it receives one Intune VPN profile.
   > - Windows 11 devices with a VPN profile assigned, and are assigned another VPN profile with no other profile changes.
@@ -65,7 +65,7 @@ This feature applies to:
 
 For example, you want to configure all iOS/iPadOS devices with the required settings to connect to a file share on the organization network. You create a VPN profile that includes these settings. You assign this profile to all users who have iOS/iPadOS devices. The users see the VPN connection in the list of available networks, and can connect with minimal effort.
 
-This article lists the VPN apps you can use, shows you how to create a VPN profile, and includes guidance on securing your VPN profiles. You must deploy the VPN app before you create the VPN profile. If you need help deploying apps using Microsoft Intune, see [What is app management in Microsoft Intune?](../apps/app-management.md).
+This article lists the VPN apps you can use, shows you how to create a VPN profile, and includes guidance on securing your VPN profiles. You must deploy the VPN app before you create the VPN profile. If you need help with deploying apps using Microsoft Intune, see [What is app management in Microsoft Intune?](../apps/app-management.md).
 
 ## Before you begin
 
@@ -82,12 +82,19 @@ This article lists the VPN apps you can use, shows you how to create a VPN profi
   - Enrolled devices that run Windows 10/11
   - Windows Holographic for Business
 
-## VPN connection types
+## Step 1 - Deploy your VPN app
 
-> [!IMPORTANT]
-> Before you can use VPN profiles assigned to a device, you must install the VPN app for the profile. To help you assign the app using Intune, see [Add apps to Microsoft Intune](../apps/apps-add.md).  
+Before you can use VPN profiles assigned to a device, you must install the VPN app. This VPN app connects to your VPN server.
 
-You can create VPN profiles using the following connection types:
+There are different VPN apps available. On user devices, you deploy the VPN app your organization uses. After the VPN app is deployed, then you create and deploy a VPN device configuration profile that configures the VPN server settings, including the VPN server name (or FQDN) and authentication method.
+
+Some platforms and VPN apps require an app configuration policy to preconfigure the VPN app, instead of a VPN device configuration profile. This section also lists the platforms and VPN apps that must use an app configuration policy.
+
+To help you assign the app using Intune, see [Add apps to Microsoft Intune](../apps/apps-add.md).
+
+### VPN connection types
+
+You can create VPN profiles using the following VPN connection types:
 
 - Automatic
   - Windows 10/11
@@ -142,24 +149,22 @@ You can create VPN profiles using the following connection types:
   - Windows 10/11
 
 - Microsoft Tunnel  
-  - Android Enterprise personally owned devices with a work profile.
-  - Android Enterprise fully managed and corporate-owned work profile.
-
-  > [!Important]  
-  > As of June 14, 2021, both the standalone tunnel app and standalone client connection type for Android are deprecated and drop from support after October 26, 2021.
-
-- Microsoft Tunnel
+  - Android Enterprise personally owned devices with a work profile
+  - Android Enterprise fully managed and corporate-owned work profile
   - iOS/iPadOS
 
 - Microsoft Tunnel (standalone client)(preview)
   - iOS/iPadOS
 
-  > [!Important]
+  > [!IMPORTANT]
   > **Plan for change**. On April 29, 2022 both the *Microsoft Tunnel* connection type and *Microsoft Defender for Endpoint* as the tunnel client app became generally available. With this general availability, the use of the *Microsoft Tunnel (standalone client)(preview)* connection type and the standalone tunnel client app are deprecated and soon will drop from support.  
+  >
   > - On July 29, 2022, the  standalone tunnel client app will no longer be available for download. Only the generally available version of *Microsoft Defender for Endpoint* will be available as the tunnel client app.  
   > - On August 1, 2022, the *Microsoft Tunnel (standalone client) (preview)* connection type will cease to connect to Microsoft Tunnel.  
   >
   > To avoid a disruption in service for Microsoft Tunnel, plan to migrate your use of the deprecated tunnel client app and connection type to those that are now generally available.
+  >
+  >- As of June 14, 2021, both the standalone tunnel app and standalone client connection type for Android are deprecated and drop from support after October 26, 2021.
 
 - NetMotion Mobility
   - Android Enterprise personally owned devices with a work profile
@@ -198,7 +203,9 @@ You can create VPN profiles using the following connection types:
   - Android Enterprise fully managed and corporate-owned work profile: Use [app configuration policy](../apps/app-configuration-vpn-ae.md)
   - iOS/iPadOS
 
-## Create the profile
+## Step 2 - Create the profile
+
+After the VPN app is assigned to the device, this next step creates the device configuration policy that configures the VPN connection. If your VPN app connection type uses an app configuration policy to configure the app, then skip this step.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Configuration profiles** > **Create profile**.
@@ -235,7 +242,7 @@ You can create VPN profiles using the following connection types:
 
     Select **Next**.
 
-10. In **Assignments**, select the user or groups that will receive your profile. For more information on assigning profiles, see [Assign user and device profiles](device-profile-assign.md).
+10. In **Assignments**, select the user or groups that receive your profile. For more information on assigning profiles, see [Assign user and device profiles](device-profile-assign.md).
 
     Select **Next**.
 
