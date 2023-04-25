@@ -33,7 +33,7 @@ There's currently a known issue in Windows Update [KB5022303](https://support.mi
 
 ### TPM attestation isn't working on AMD platforms with ASP fTPM
 
-TPM attestation for AMD platforms with ASP firmware TPM may fail with error code 0x80070490 on Windows 10 and Windows 11 systems. This issue is resolved on newer versions of AMD firmware. You can check with your device manufacturers for which firmware versions contains the update, this should be found in the firmware release notes.
+TPM attestation for AMD platforms with ASP firmware TPM may fail with error code 0x80070490 on Windows 10 and Windows 11 systems. This issue is resolved on newer versions of AMD firmware. Consult with device manufacturers and firmware release notes for which firmware versions contain the update.
 
 ### TPM attestation failure with error code 0x81039001
 
