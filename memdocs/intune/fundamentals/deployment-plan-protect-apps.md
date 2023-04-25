@@ -7,7 +7,7 @@ description: Add, configure, and protect apps with Intune.
 author: erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/10/2023
+ms.date: 04/25/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -109,6 +109,9 @@ The first step when providing apps to your organization is to add the apps to In
 The users of apps and devices at your company (your company's workforce) might have several app requirements. Before adding apps to Intune and making them available to your workforce, you may find it helpful to assess and understand a few app fundamentals. There are various types of apps that are available for Intune. You must determine app requirements that are needed by the users at your company, such as the platforms and capabilities that your workforce needs. You must determine whether to use Intune to manage the devices (including apps) or have Intune manage the apps without managing the devices. Also, you must determine the apps and capabilities that your workforce needs, and who needs them. The information in this article helps you get started.
 
 Before adding apps to Intune, consider reviewing the support app types and assess your app requirements. For more information, see [Add apps to Microsoft Intune](../apps/apps-add.md).
+
+> [!TIP]
+> To better understand app types, app purchases, and app licenses for Intune, see the solution [Purchase and add apps for Microsoft Intune](/microsoft-365/solutions/apps-guide-overview?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json&view=o365-worldwide). This solution content also provides recommended steps to assess app requirements, create app categories, purchases apps, add apps. Additionally, this solution content explains how to manage apps and app licenses.
 
 ### Add Microsoft apps
 
