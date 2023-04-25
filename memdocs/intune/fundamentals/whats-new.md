@@ -750,7 +750,7 @@ You can find the troubleshooting pane in [Microsoft Intune admin center](https:/
 #### New report for devices without compliance policy (preview)<!--14911124 --> 
 We've added a new report named **Devices without compliance policy** to the Device compliance reports you can access through the *Reports* node of the Microsoft Intune admin center.  This report, which is in preview, uses a  newer reporting format that provides for more capabilities.
 
-To learn about this new organizational report, see [Devices without compliance policy (preview) (Organizational)](../fundamentals/reports.md#devices-without-compliance-policy-preview-organizational).
+To learn about this new organizational report, see [Devices without compliance policy (Organizational)](../fundamentals/reports.md#devices-without-compliance-policy-organizational).
 
 An older version of this report remains available through the *Devices > Monitor* page of the admin center. Eventually, that older report version will be retired, though it remains available for now.  
 
