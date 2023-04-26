@@ -204,6 +204,8 @@ To switch the windows365.microsoft.com site to dark mode:
 1. Go to windows365.microsoft.com.
 2. Select the settings icon and select **Dark Mode**.
 
+     ![Screenshot of dark mode option.](media/end-user-access-cloud-pc/dark-mode.png)
+
 ## Remote Desktop
 
 The Microsoft Remote Desktop app lets users access and control a remote PC, including a Cloud PC.
