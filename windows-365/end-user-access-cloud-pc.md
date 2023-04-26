@@ -191,7 +191,7 @@ To turn on keyboard shortcuts for your Cloud PC:
 1. Go to windows365.microsoft.com.
 2. Under **Your Cloud PCs**, select **Open in a browser** for your Cloud PC.
 3. Under **In Session Settings**, select **Keyboard shortcuts (Preview)** > **Connect**.
-   ![Screencap of In Sessions Settings Keyboard shortcuts.](media/end-user-access-cloud-pc/keyboard-shortcuts.png)
+   :::image type="content" source="media/end-user-access-cloud-pc/keyboard-shortcuts.png" alt-text="Screencap of In-Sessions Settings Keyboard shortcuts." lightbox="media/end-user-access-cloud-pc/keyboard-shortcuts.png":::
 
 When **Keyboard shortcuts** is turned on, the web client opens in full-screen mode. Keyboard shortcuts only work in full-screen mode. Full screen using F11 isn't supported. You must use the full screen mode from the toolbar.
 
