@@ -23,7 +23,7 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Software updates admin checklist and scenarios for iOS/iPadOS devices in Microsoft Intune
+# Software updates admin checklist and scenarios for supervised iOS/iPadOS devices in Microsoft Intune
 
 Keeping your mobile devices current with software updates is critical. You need to reduce the risk of security events and have minimal disruption to your organization and your users. On iOS/iPadOS supervised devices, Intune has built-in policies that can manage software updates.
 
@@ -35,7 +35,10 @@ This article applies to:
 
 - iOS/iPadOS supervised devices
 
-## Admin checklist
+> [!TIP]
+> If your devices are personally owned, then go to the [software updates admin checklist for personal devices](software-updates-guide-personal-byod.md).
+
+## Admin checklist for organization owned devices
 
 This section lists the Microsoft-recommended guidance and strategies to install software updates on your devices.
 
@@ -55,7 +58,7 @@ When users install their own updates (instead of admins managing the updates), i
 
 ### ✔️ Keep automatic updates enabled
 
-Starting with iOS/iPadOS 12, when updates are available, Apple devices automatically install the updates. By default, this feature is enabled on new devices. **Keep this feature enabled**. If Automatic updates have been disabled, then due to an OS limitation, they can't be changed using policies. The setting must be manually changed on the device or have the device reset and reprovisioned.
+Starting with iOS/iPadOS 12, when updates are available, Apple devices automatically install the updates. By default, this feature is enabled on new devices. **Keep this feature enabled**. If Automatic updates have been disabled, then due to an OS limitation, they can't be changed using policies. The setting must be manually changed on the device or the device must be reset & reprovisioned.
 
 To use this automatic patching and install updates faster, make sure the devices are:
 
@@ -190,7 +193,7 @@ To accomplish this task, create a policy with the following settings:
 
 These devices are often single purpose devices. They're used in mission critical areas, like manufacturing lines or specialized equipment control & monitoring. For example, it could be an Android tablet running control or monitoring software for a device that welds components.
 
-In factory machine scenarios, the primary goal is to make sure devices behave in a consistent manner. Updates may need to be delayed so all application compatibility testing has been completed. Installation and reboots occur at specific times and are typically deployed in a phased approach.
+In factory machine scenarios, the primary goal is to make sure devices behave in a consistent manner. Updates may need to be delayed so all application compatibility testing can complete. Installation and reboots occur at specific times and are typically deployed in a phased approach.
 
 An update strategy and priorities for these devices typically include:
 

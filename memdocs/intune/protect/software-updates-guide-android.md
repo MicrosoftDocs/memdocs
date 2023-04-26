@@ -27,7 +27,7 @@ ms.collection:
 
 Patches, major & minor updates, and new operating system versions are released frequently. Organizations must keep devices updated to get the latest security updates.
 
-Devices with Android Google Mobile Services (GMS) include all the Google apps and services. These apps and services are on top of the OEMs own firmware features and apps. These devices receive different type of updates and they're updated randomly, depending on the behaviors by Google, the OEM, and the service carriers/telecommunication company.
+Devices with Android Google Mobile Services (GMS) include all the Google apps and services. These apps and services are on top of the OEMs own firmware features and apps. These devices receive a different type of updates and they're updated randomly, depending on the behaviors by Google, the OEM, and the service carriers/telecommunication company.
 
 Intune has built-in policies that can manage software updates.
 
@@ -36,6 +36,9 @@ This article includes an admin checklist for enrolled and managed Android Enterp
 This article applies to:
 
 - Android Enterprise
+
+> [!TIP]
+> If your devices are personally owned, then go to the [software updates admin checklist for personal devices](software-updates-guide-personal-byod.md).
 
 ?? Do we need the following information? This article doesn't include any additional info on these different types.??
 
@@ -116,7 +119,7 @@ As of January 7, 2022, the minimum supported versions are:
 - Android 8.0 for device management
 - Android 9.0 for mobile application management (MAM)
 
-Devices running Android 7.0 or older that are currently enrolled in Intune don't receive updates to the Android Company Portal app or the Intune app. These apps aren't available in the Google Play Store. If these apps were downloaded before this change, then the devices aren't blocked from enrollment. Policies applied to these devices continue to be deployed, but the devices aren't in an unsupported state.
+Devices running Android 7.0 or older that are currently enrolled in Intune don't receive updates to the Android Company Portal app or the Intune app. These apps aren't available in the Google Play Store. If these apps were downloaded before this change, then the devices aren't blocked from enrollment. Policies applied to these devices continue to be deployed, but the devices aren't in a supported state.
 
 If you currently have devices running Android 7.0 or older in your organization, then upgrade or replace them. Use the information in this article to help you define an update strategy. Using newer OS versions provide better productivity and security to your users and your organization.
 
