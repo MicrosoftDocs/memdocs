@@ -21,7 +21,7 @@ ms.reviewer: lacranda; rimarram
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: intune-azure; seodec1
+ms.custom: intune-azure; seodec18
 
 ms.collection:
 - tier2
