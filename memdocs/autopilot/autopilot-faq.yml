@@ -366,12 +366,12 @@ sections:
 
   - name: General
     questions:
-    - question: |
+      - question: |
           Which manufacturers are enabled for pre-population of username and automatic re-enrollment of pre-provisioning devices? 
         answer: |
           Current manufacturers enabled for this change are Dell, HP, Lenovo and Microsoft Surface. We are working to other manufacturers and will update this list once they are onboarded.
-    
-    - question: |
+
+      - question: |
           If I wipe the machine and restart, will I still receive Windows Autopilot?
         answer: |
           Yes. If the device is still registered for Autopilot and is running a supported version of Windows, it will receive the Autopilot experience.
