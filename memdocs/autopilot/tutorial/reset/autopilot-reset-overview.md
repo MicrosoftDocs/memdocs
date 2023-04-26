@@ -23,7 +23,7 @@ appliesto:
 Windows Autopilot Reset takes the device back to a business-ready state, allowing the next user to sign in and get productive quickly and simply. In addition, once the Windows Autopilot Reset has begun, it blocks the user from accessing the desktop until information is restored, including reapplying any provisioning packages. Windows Autopilot Reset also blocks the new user from accessing the desktop until an Intune sync is completed.
 
 > [!IMPORTANT]
-> Windows Autopilot Reset only supports Azure AD join devices. Windows Autopilot Reset doesn't support hybrid Azure AD join devices. For hybrid Azure AD join devices, a full device wipe is required. When a hybrid Azure AD device goes through a full device reset, it may take up to 24 hours for it to be ready to be deployed again. You can expedite this request by re-registering the device.
+> Windows Autopilot Reset only supports Azure AD join devices. Windows Autopilot Reset doesn't support hybrid Azure AD join devices. For hybrid Azure AD join devices, a [full device wipe](/mem/intune/remote-actions/devices-wipe) is required. When a hybrid Azure AD device goes through a full device reset, it may take up to 24 hours for it to be ready to be deployed again. You can expedite this request by re-registering the device. You can also consider using the [Windows Autopilot deployment for existing devices](/mem/autopilot/tutorial/existing-devices/existing-devices-workflow) scenario to wipe the device.
 
 ## Information removed and reset by a Windows Autopilot Reset
 
