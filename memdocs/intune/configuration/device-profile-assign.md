@@ -59,13 +59,14 @@ Be sure you have the correct role to assign policies and profiles. For more info
     For example, to assign a device configuration profile:
 
     1. Go to **Devices** > **Configuration profiles**. All the profiles are listed.
-    2. Select the profile you want to assign > **Properties** > **Assignments** > **Edit**:
+    2. Select the policy you want to assign > **Properties** > **Assignments** > **Edit**:
 
        :::image type="content" source="./media/device-profile-assign/properties-select-assignments.png" alt-text="Screenshot that shows how to select assignments to deploy the profile to users and groups in Microsoft Intune.":::
 
-3. Select **Included groups** or **Excluded groups**, and then choose **Select groups to include**. When you select your groups, you're choosing an Azure AD group. To select multiple groups, hold down the **Ctrl** key, and select your groups.
+3. Under **Included groups** or **Excluded groups**, choose **Add groups** to select one or more Azure AD groups. If you intend to deploy the policy broadly to all applicable devices, select **Add all users** or **Add all devices**.
 
-   :::image type="content" source="./media/device-profile-assign/select-included-excluded-groups-profile-assignment.png" alt-text="Screenshot that shows how to include or exclude users and groups when assigning or deploying a policy in Microsoft Intune.":::
+    > [!NOTE]
+    > If you select "All Devices" and "All Users", the option to add additional Azure AD groups disables. 
 
 4. Select **Review + Save**. This step doesn't assign your policy.
 5. Select **Save**. When you save, your policy is assigned. Your groups will receive your policy settings when the devices check in with the Intune service.
@@ -75,6 +76,7 @@ Be sure you have the correct role to assign policies and profiles. For more info
 - Use **[Filters](../fundamentals/filters.md)** to assign a policy based on rules you create. You can create filters for:
 
   - App configuration policies
+  - App assignments
   - Compliance policies
   - Device configuration profiles
 

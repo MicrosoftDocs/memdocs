@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/24/2023
+ms.date: 04/18/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -29,10 +29,7 @@ ms.collection:
 
 # Guidance for creating elevation rules with Endpoint Privilege Management
 
-<!-- [!INCLUDE [intune-add-on-note](../includes/intune-add-on-note.md)] -->
-
-> [!NOTE]  
-> This capability is in public preview and available to use without a license. After public preview, it will be available as an Intune add-on. For more information, see [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md).
+[!INCLUDE [intune-add-on-note](../includes/intune-add-on-note.md)]
 
 ## Overview
 
@@ -84,7 +81,7 @@ Rules deployed to a device are applied to *every user* that uses that device. Ru
 
 ## Endpoint Privilege Management and User Account Control
 
-Endpoint Privilege Management and Windows built-in user account control (UAC) are separate products with separate functionality. 
+Endpoint Privilege Management and Windows built-in user account control (UAC) are separate products with separate functionality.
 
 When moving users to run as standard users and utilizing Endpoint Privilege Management, you might choose to change the default UAC behavior for standard users. This change can reduce confusion when an application requires elevation and create a better end user experience. Examine [behavior of the elevation prompt for standard users](/windows/security/identity-protection/user-account-control/user-account-control-security-policy-settings#user-account-control-behavior-of-the-elevation-prompt-for-standard-users) for more information.
 
