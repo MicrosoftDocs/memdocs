@@ -4,7 +4,7 @@ description: Guidance and advice for administrators that create and manage softw
 ms.author: mandia
 author: MandiOhlinger
 manager: dougeby
-ms.date: 04/12/2023
+ms.date: 04/26/2023
 audience: ITPro
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -35,9 +35,6 @@ This article applies to:
 
 - iOS/iPadOS supervised devices
 
-??What about personal devices??
-!!These policies and configurations are not supported on non supervised devices. Do we need to be specific here?  Generally we have similar headings where policies/configuration are only supported on supervised devices.  We could add a simple blurb that administrators cannot control the update policies on unsupervised/BYO devices due to platform limitations.!!
-
 ## Admin checklist
 
 This section lists the Microsoft-recommended guidance and strategies to install software updates on your devices.
@@ -58,7 +55,7 @@ When users install their own updates (instead of admins managing the updates), i
 
 ### ✔️ Keep automatic updates enabled
 
-Starting with iOS/iPadOS 12, when updates are available, Apple devices automatically install the updates. By default, this feature is enabled on new devices. It's recommended to keep this feature enabled.
+Starting with iOS/iPadOS 12, when updates are available, Apple devices automatically install the updates. By default, this feature is enabled on new devices. **Keep this feature enabled**. If Automatic updates have been disabled, then due to an OS limitation, they can't be changed using policies. The setting must be manually changed on the device or have the device reset and reprovisioned.
 
 To use this automatic patching and install updates faster, make sure the devices are:
 
@@ -72,13 +69,6 @@ To keep your devices on the most current version and with minimal effort from yo
 
 :::image type="content" source="./media/software-updates-guide-ios-ipados/apple-automatic-update-settings.png" alt-text="Screenshot that shows automatic update settings on iOS/iPadOS Apple devices.":::
 
-If these automatic update settings are disabled, then:
-
-- Admins can't change these settings with policies.
-- Users need to manually change these settings on their devices.
-- If users can't change these settings for whatever reason (??What are some reasons??), then you must reset and reprovision the device. ??Why? This seems extreme? Remote actions?
-!!This is a OS/platform limitation.  It's available for configuration during the OOB, but not via policy.!!
-
 Automatic updates work together with other update policies, which can provide a positive experience for admins and end users.
 
 Using Intune policies, you can also force users to update their devices:
@@ -86,9 +76,6 @@ Using Intune policies, you can also force users to update their devices:
 - Use [Enrollment Restrictions](../enrollment/create-device-platform-restrictions.md) to prevent users from enrolling devices that aren't current.
 - Create [compliance policies](../protect/compliance-policy-create-ios.md) to determine the devices that aren't updated.
 - Create [Conditional Access (CA) policies](../protect/create-conditional-access-intune.md) to block devices that aren't updated. The CA policies can also prompt users to install current updates so they regain access.
-
-?? What about iOS/iPadOS 11 and older??
-!!These policies/configuration items were not available prior to iOS 12, and we only support iOS N-2 (iOS 14 at this point).  Do we need to add that info?!!
 
 ### ✔️ Use the built-in settings
 
@@ -132,23 +119,20 @@ Apple devices are used in various industries, including enterprise, retail, manu
 - **Shared**: Devices are used by more than one person.
 - **Dedicated**: Devices are used for a specific business purpose, like a kiosk or digital signage.
 
-This section describes some common industry scenarios and gives examples of Intune policies.
-
-??Not sure the following table is needed??
-!!It's just an attempt to help list jargon that's often used in the industry, if it's low value we can probably remove!!
-
-This table can help map your industry specific terminology to use cases presented in this section:
+The following table includes common industry terminology that's used in this article:
 
 | Industry | Terminology | Use case |
 | --- | --- | --- |
 | Enterprise | Knowledge worker | 1:1 |
 | Retail | Kiosk  | Dedicated |
 | Manufacturing | Factory machine | Mission critical |
-| Education | Assigned Device | Shared |
+| Education | Assigned device | Shared |
+
+This section describes some common industry scenarios and gives examples of Intune policies.
 
 ### Knowledge workers
 
-This group is people with gained knowledge. This knowledge and their thinking ability are their job. Some examples include engineers, content developers, programmers, accountants, communications, consultants, and so on.
+This group is people with gained knowledge that work in enterprise businesses and organizations. Their knowledge and thinking ability are their job. Some examples include engineers, content developers, programmers, accountants, communications, consultants, and so on.
 
 Knowledge workers typically have their own device that's only used by them. It's not shared with other users or other knowledge workers.
 
@@ -176,7 +160,7 @@ To accomplish these goals, you can use a policy with the following default setti
 
 ### Kiosks
 
-These devices are typically in-store devices, and can be a desktop computer or a mobile device. They're used by employees to serve customers and used directly by customers for self-service tasks. They can also be a visual display that all customers see when they're on-premises.
+These devices are typically in-store retail devices, and can be a desktop computer or a mobile device. They're used by employees to serve customers and used directly by customers for self-service tasks. They can also be a visual display that all customers see when they're on-premises.
 
 In kiosk-like scenarios, the primary goals for updating the devices are:
 
@@ -204,8 +188,7 @@ To accomplish this task, create a policy with the following settings:
 
 ### Factory machines
 
-??Need some text on what factory machines are, and examples.??
-!!Factory Machines are often single purpose devices used in mission critical areas like manufacturing lines or specialized equipment control and monitoring.  For example, an Android tablet running control or monitoring software for a device that welds two components.!!
+These devices are often single purpose devices. They're used in mission critical areas, like manufacturing lines or specialized equipment control & monitoring. For example, it could be an Android tablet running control or monitoring software for a device that welds components.
 
 In factory machine scenarios, the primary goal is to make sure devices behave in a consistent manner. Updates may need to be delayed so all application compatibility testing has been completed. Installation and reboots occur at specific times and are typically deployed in a phased approach.
 
@@ -231,7 +214,7 @@ To accomplish this task, create a policy with the following settings:
 
 ### Shared devices
 
-Shared devices are used by many users who typically sign in and out of the device. These devices can be terminal/desktop computers, tablets, laptops, and smartphones. They're often used in offices, classrooms, and retail stores.
+Shared devices are used by many users who typically sign in and out of the device, including education environments. These devices can be terminal/desktop computers, tablets, laptops, and smartphones. They're often used in offices, classrooms, and retail stores.
 
 For more information on managing shared iOS/iPadOS devices, go to [Shared device solutions for iOS/iPadOS](../enrollment/device-enrollment-shared-ios.md).
 
@@ -253,14 +236,16 @@ To keep the policy as simple as possible, you want the updates to install outsid
 
 To accomplish this task, this scenario involves two policies:
 
-- In the first policy, you schedule the update using the following settings:
-
-  :::image type="content" source="./media/software-updates-guide-ios-ipados/shared-devices-outside-scheduled-time-policy-settings.png" alt-text="Screenshot that shows installing the latest version and outside scheduled time software update settings for iOS/iPadOS devices in the Microsoft Intune admin center.":::
-
-- You want all users signed out or reboot the device. In the second policy, you can create an Apple Business Manager enrollment profile to sign out any users who are idle for more than 15 minutes (900 seconds): ??Should this policy be listed first, since it's an enrollment policy?
+- In the first policy, you want all users signed out or want to reboot the device after a set amount of time. You can create an Apple Business Manager enrollment profile to sign out any users who are idle for more than 15 minutes (900 seconds):
 
   :::image type="content" source="./media/software-updates-guide-ios-ipados/shared-devices-maximum-seconds-policy-settings.png" alt-text="Screenshot that shows enrolling without user affinity and setting the inactivity value for iOS/iPadOS devices in the Microsoft Intune admin center.":::
 
+- In the second policy, schedule the update using the following settings:
+
+  :::image type="content" source="./media/software-updates-guide-ios-ipados/shared-devices-outside-scheduled-time-policy-settings.png" alt-text="Screenshot that shows installing the latest version and outside scheduled time software update settings for iOS/iPadOS devices in the Microsoft Intune admin center.":::
+
 ## Next steps
 
-[Manage iOS/iPadOS software update policies in Intune](software-updates-ios.md)
+- [Manage iOS/iPadOS software update policies in Intune](software-updates-ios.md)
+- [Software updates admin checklist and scenarios for BYOD and personal devices](software-updates-guide-personal-byod.md)
+- [Software updates admin checklist for managed Android devices](software-updates-guide-android.md)

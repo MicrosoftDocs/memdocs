@@ -102,8 +102,12 @@ items:
       href: ./fundamentals/intune-planning-guide.md
     - name: Supported operating systems and browsers
       href: ./fundamentals/supported-devices-browsers.md
-    - name: Software updates admin checklist
+    - name: Software updates admin checklists
       items:
+      - name: BYOD and personal devices
+        href: ./protect/software-updates-guide-personal-byod.md
+      - name: Android
+        href: ./protect/software-updates-guide-android.md
       - name: iOS/iPadOS
         href: ./protect/software-updates-guide-ios-ipados.md
     - name: Network configuration
@@ -756,6 +760,8 @@ items:
           href: ./protect/derived-credentials.md
         - name: Software updates
           items:
+          - name: BYOD and personal devices admin checklist
+            href: ./protect/software-updates-guide-personal-byod.md
           - name: Android admin checklist
             href: ./protect/software-updates-guide-android.md
           - name: iOS/iPadOS
