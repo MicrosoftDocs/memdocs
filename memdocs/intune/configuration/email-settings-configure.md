@@ -8,7 +8,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/01/2023
+ms.date: 04/25/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -70,7 +70,7 @@ This article shows you how to create an email profile in Microsoft Intune. It al
 
 ## Step 1 - Deploy your email app
 
-On user devices, you decide the email apps that can connect to and access organization email. You also need to determine the email apps your organization will allow, and then deploy the email app to your users.
+On user devices, you decide the email apps that can connect to and access organization email. You also need to determine the email apps your organization allows, and then deploy the email app to your users.
 
 After the email app is deployed, then you can create and deploy an email device configuration profile, if it's needed. Depending on the platform and email app you choose, you can use an app configuration policy **or** an email device configuration profile to preconfigure the email app with your organization settings.
 
@@ -271,6 +271,8 @@ After the app is deployed and installed:
 ---
 
 ## Step 2 - Create the profile
+
+After the email app is assigned to the device, this next step creates the device configuration policy that configures the email connection. If your email app uses an app configuration policy to configure the app, then skip this step.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Configuration profiles** > **Create profile**.
