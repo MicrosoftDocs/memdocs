@@ -89,7 +89,7 @@ Corporate-owned devices running iOS/iPadOS 11+ and enrolled via automated device
 ### Enrolling devices in Azure AD shared device mode  
 
 > [!IMPORTANT]
-> This feature is in public preview. For more information, see [Public preview in Microsoft Intune](../fundamentals/public-preview.md).  
+> This feature is in public preview. For more information, see [Public preview in Microsoft Intune](../fundamentals/public-preview.md).
 
 You can set up automated device enrollment for devices in [Azure AD shared device mode](/azure/active-directory/develop/msal-ios-shared-devices). Shared device mode enables frontline workers to share a single device throughout the day, signing in and out as needed. For more information about how to enable enrollment for devices in shared device mode, see [Automated device enrollment for Azure AD shared device mode](automated-device-enrollment-shared-device-mode.md).  
 
@@ -317,17 +317,22 @@ Now that you've installed your token, you can create an enrollment profile for a
 15. For **Await final configuration**, your options are:  
       * **Yes**: Enable a locked experience at the end of Setup Assistant to ensure your most critical device configuration policies are installed on the device. Just before the home screen loads, Setup Assistant pauses and lets Intune check in with the device. The end-user experience locks while users await final configurations. The amount of time it takes to release the device to the home screen varies, and depends on the total number of policies and apps applied to the device. The experience times out after five minutes.  
 
-         This setting is applied once during the out-of-box automated device enrollment experience. The device user doesn't experience it again unless they re-enroll their device. **Yes** is the default setting for new enrollment profiles. **No** is the default setting for existing enrollment profiles.  
-
-      * **No**: The device is released to the home screen when Setup Assistant ends, regardless of policy installation status. Device users may be able to access the home screen or change device settings before all policies are installed.   
-
          The locked experience works on devices targeted with new and existing enrollment profiles. Supported devices include:      
          * iOS/iPadOS 13+ devices enrolling with Setup Assistant with modern authentication  
          * iOS/iPadOS 13+ devices enrolling without user affinity   
-          * iOS/iPadOS 13+ devices enrolling with Azure AD shared mode  
-          
-      > [!IMPORTANT]
-      > This feature is in public preview. For more information, see [Public preview in Microsoft Intune](../fundamentals/public-preview.md).  
+         * iOS/iPadOS 13+ devices enrolling with Azure AD shared mode  
+
+         This setting is applied once during the out-of-box automated device enrollment experience. The device user doesn't experience it again unless they re-enroll their device. **Yes** is the default setting for new enrollment profiles.
+
+      * **No**: The device is released to the home screen when Setup Assistant ends, regardless of policy installation status. Device users may be able to access the home screen or change device settings before all policies are installed. **No** is the default setting for existing enrollment profiles.  
+     
+The await configuration setting is unavailable in profiles with this combination of configurations:  
+* User affinity: **Enroll without user affinity** (Step 6 in this section)
+* Shared iPad: **Yes**  (Step 12 in this section) 
+      
+> [!IMPORTANT]
+> This feature is in public preview. For more information, see [Public preview in Microsoft Intune](../fundamentals/public-preview.md).  
+ 
 
 15. Optionally, create a device name template to quickly identify devices assigned this profile in the admin center. Intune uses your template to create and format device names. The names are given to devices when they enroll and upon each successive check-in. To create a template: 
  1. Under **Apply device name template**, select **Yes** .
