@@ -197,6 +197,13 @@ When **Keyboard shortcuts** is turned on, the web client opens in full-screen mo
 
 To turn off keyboard shortcuts, in your web client, select **Settings** > **In session** > deselect **Keyboard shortcuts** > **Update**.
 
+### Dark mode
+
+To switch the windows365.microsoft.com site to dark mode:
+
+1. Go to windows365.microsoft.com.
+2. Select the settings icon and select **Dark Mode**.
+
 ## Remote Desktop
 
 The Microsoft Remote Desktop app lets users access and control a remote PC, including a Cloud PC.
