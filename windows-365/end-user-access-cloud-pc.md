@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 04/13/2023
+ms.date: 04/27/2023
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice:
@@ -180,11 +180,11 @@ To turn on location redirection, follow these steps:
 
 Organizational settings might override the location settings for your device. For example, your organization might disable location redirection for all Cloud PCs they manage.
 
-### Keyboard shortcuts (Preview)
+### Keyboard shortcuts (preview)
 
 While accessing your Cloud PC using the web client, you can set your Cloud PCs to use special keyboard shortcuts (combination keys with the Windows key, ESC, and so on). For a full list of shortcuts, see [Keyboard shortcuts in Windows](https://support.microsoft.com/en-us/windows/keyboard-shortcuts-in-windows-dcc61a57-8ff0-cffe-9796-cb9706c75eec).
 
-Keyboard shortcuts are  in [public preview](../public-preview.md).
+Keyboard shortcuts are  in [public preview](public-preview.md).
 
 To turn on keyboard shortcuts for your Cloud PC:
 
