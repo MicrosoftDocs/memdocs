@@ -66,6 +66,10 @@ Windows 365 web client users can now use keyboard shortcuts (like Alt + Tab) on 
 
 End users can now pin their Cloud PC to the task bar in the Windows 365 app. This lets them launch the Cloud PC from the task bar icon without going into the connection center.
 
+#### Windows 365 web client dark mode<!--44269253-->
+
+You now have the option to use dark mode on windows365.microsoft.com. For more information, see [Access a Cloud PC](../end-user-access-cloud-pc.md).
+
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Provisioning
 
