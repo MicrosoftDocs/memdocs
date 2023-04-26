@@ -107,7 +107,7 @@ Intune policy for Windows LAPS is supported for GCC High environments.
 
 ## Role based access controls for LAPS
 
-To manage LAPS, an account must be have sufficient role-based access control (RBAC) permissions to complete a desired task. The following are the available tasks with their required permissions:
+To manage LAPS, an account must have sufficient role-based access control (RBAC) permissions to complete a desired task. The following are the available tasks with their required permissions:
 
 - **Create and access LAPS policy** – To work with and view LAPS policies, your account must be assigned sufficient permissions from the Intune RBAC category for **Security baselines**. By default, these are included in the built-in role **Endpoint Security Manager**.  To use custom roles, ensure the custom role includes the rights from the *Security baselines* category.
 
