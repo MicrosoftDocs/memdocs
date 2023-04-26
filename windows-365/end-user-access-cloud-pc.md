@@ -180,6 +180,22 @@ To turn on location redirection, follow these steps:
 
 Organizational settings might override the location settings for your device. For example, your organization might disable location redirection for all Cloud PCs they manage.
 
+### Keyboard shortcuts (Preview)
+
+While accessing your Cloud PC using the web client, you can set your Cloud PCs to use special keyboard shortcuts (combination keys with the Windows key, ESC, and so on). For a full list of shortcuts, see [Keyboard shortcuts in Windows](https://support.microsoft.com/en-us/windows/keyboard-shortcuts-in-windows-dcc61a57-8ff0-cffe-9796-cb9706c75eec).
+
+Keyboard shortcuts are  in [public preview](../public-preview.md).
+
+To turn on keyboard shortcuts for your Cloud PC:
+
+1. Go to windows365.microsoft.com.
+2. Under **Your Cloud PCs**, select **Open in a browser** for your Cloud PC.
+3. Under **In Session Settings**, select **Keyboard shortcuts (Preview)** > **Connect**.
+
+When **Keyboard shortcuts** is turned on, the web client opens in full-screen mode. Keyboard shortcuts only work in full-screen mode. Full screen using F11 isn't supported. You must use the full screen mode from the toolbar.
+
+To turn off keyboard shortcuts, in your web client, select **Settings** > **In session** > deselect **Keyboard shortcuts** > **Update**.
+
 ## Remote Desktop
 
 The Microsoft Remote Desktop app lets users access and control a remote PC, including a Cloud PC.
