@@ -102,6 +102,14 @@ items:
       href: ./fundamentals/intune-planning-guide.md
     - name: Supported operating systems and browsers
       href: ./fundamentals/supported-devices-browsers.md
+    - name: Software updates admin checklists
+      items:
+      - name: BYOD and personal devices
+        href: ./protect/software-updates-guide-personal-byod.md
+      - name: Android
+        href: ./protect/software-updates-guide-android.md
+      - name: iOS/iPadOS
+        href: ./protect/software-updates-guide-ios-ipados.md
     - name: Network configuration
       href: ./fundamentals/network-bandwidth-use.md
     - name: Using Windows 10 VMs with Intune
@@ -752,6 +760,16 @@ items:
           href: ./protect/derived-credentials.md
         - name: Software updates
           items:
+          - name: BYOD and personal devices admin checklist
+            href: ./protect/software-updates-guide-personal-byod.md
+          - name: Android admin checklist
+            href: ./protect/software-updates-guide-android.md
+          - name: iOS/iPadOS
+            items:
+            - name: Admin checklist & industry scenarios
+              href: ./protect/software-updates-guide-ios-ipados.md
+            - name: Update policy and settings
+              href: ./protect/software-updates-ios.md 
           - name: Windows updates
             items:
             - name: Use Windows Update for Business
@@ -768,10 +786,6 @@ items:
               href: ./protect/windows-update-compatibility-reports.md
             - name: Windows Update compliance reports
               href: ./protect/windows-update-compliance-reports.md         
-          - name: iOS update policies
-            href: ./protect/software-updates-ios.md
-          - name: macOS update policies
-            href: ./protect/software-updates-macos.md
         - name: Troubleshoot
           items:
           - name: Troubleshoot policies and profiles
