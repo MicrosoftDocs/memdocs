@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/17/2022
+ms.date: 04/27/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -284,8 +284,7 @@ To learn more about the DigiCert Import tool, including how to obtain the tool, 
 
 If you use EverTrust as your PKI solution, standalone or combined to an existing PKI, you can configure EverTrust Horizon to import PFX certificates to Intune. After you complete the integration, you won’t need to follow the instructions in the section [Import PFX Certificates to Intune](#import-pfx-certificates-to-intune) that's detailed earlier in this article.
 
-To learn more about EverTrust’s integration with Intune, see https://evertrust.fr/horizon. 
-<!-- The original Intune-specific content destination for the preceding link was removed by EverTrust and this link is pending an updated content destinatino from EverTrust. -->
+To learn more about EverTrust’s integration with Intune, see https://evertrust.fr/horizon-and-intune-integration/.
 
 ### KeyTalk
 
