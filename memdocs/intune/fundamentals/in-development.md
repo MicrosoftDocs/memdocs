@@ -123,6 +123,66 @@ Applies to:
 
 - macOS
 
+#### Turn on/off Personal data encryption on Windows 11 devices using the settings catalog<!-- 10346018  -->  
+The setting catalog includes hundreds of settings that you can configure and deploy to your devices.
+
+In the settings catalog, you can turn on/off **Personal data encryption** (PDE). PDE is a security feature introduced in Windows 11 version 22H2 that provides more encryption features for Windows.
+
+It's different than BitLocker. PDE encrypts individual files and content, instead of whole volumes and disks. You can use PDE with other encryption methods, such as BitLocker.
+
+For more information on the settings catalog, go to:
+
+- [Use the settings catalog to configure settings on Windows, iOS/iPadOS and macOS devices](../configuration/settings-catalog.md)
+- [Common Tasks you can complete using the Settings Catalog in Intune](../configuration/settings-catalog-common-features.md)
+
+This feature applies to:
+
+- Windows 11
+
+#### Group policy analytics supports scope tags<!-- 12714882  -->  
+In Group Policy analytics, you import your on-premises GPO. The tool analyzes your GPOs and shows the settings that can (and can't) be used in Intune. 
+
+When you import your GPO XML file in Intune, you can also select an existing scope tag. Only admins within that scope tag can see the imported policies. Admins not in that scope tag can't see the imported policies.
+
+Group Policy analytics can't also migrate your imported GPO into a Settings Catalog policy if you don't have the scope tag associated with that object. Admins within their scope tag can only migrate the imported policies that they have permissions to see.
+
+If no Scope Tag is selected, a default Scope Tag is automatically applied.
+
+For more information on scope tags and Group Policy analytics, go to:
+
+- [Use role-based access control (RBAC) and scope tags for distributed IT](scope-tags.md)
+- [Analyze your on-premises GPOs using Group Policy analytics in Microsoft Intune](../configuration/group-policy-analytics.md)
+
+#### New settings available in the macOS settings catalog <!-- 18430228  -->  
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
+
+A new setting is available in the Settings Catalog. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can see these settings at **Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform > **Settings catalog** for profile type.
+
+**Microsoft Defender > Antivirus engine**:
+
+- Scanning inside archive files
+- Enable file hash computation
+
+Applies to:  
+
+- macOS
+
+For more information about configuring Settings Catalog profiles in Intune, go to [Create a policy using settings catalog](../configuration/settings-catalog.md).
+
+### Remote Help administrators will be able to reference audit log sessions<!-- 9052185   -->  
+For Remote Help, in addition to existing session reports, administrators can now reference audit logs sessions created in Intune. This enables administrators to reference past events for troubleshooting and analyzing log activities.
+
+For more information on Remote Help, go to [Remote Help](../fundamentals/remote-help.md).
+
+Applies to:
+
+- Windows 10/11
+
+### Introducing Intune integration with the Zebra Lifeguard Over-the-Air service (public preview)<!-- 14340034  -->
+Intune will be adding integration with Zebra Lifeguard Over-the-Air service, which allows you to deliver OS updates and security patches over-the-air to eligible Zebra devices that are enrolled with Intune. You can select the firmware version you want to deploy, set a schedule, and stagger update downloads and installs. You can also set minimum battery, charging status, and network conditions requirements for when the update can happen.
+
+Available for Android Enterprise Zebra devices that are running Android 8 or later, and requires an account with Zebra.
+
 ### New Google domain allow-list settings for Android Enterprise personally owned devices with a work profile<!-- 14711684 -->
 
 On Android Enterprise personally owned devices with a work profile, you can configure settings that restrict device features and settings.
@@ -163,7 +223,27 @@ A new device action that is in public preview allows you to run a proactive reme
 
 <!-- *********************************************** -->
 
-<!-- ## Device security -->
+## Device security
+
+### Security baseline update for Microsoft Edge version 107<!-- 3408610  -->  
+We’re working on an update for the Intune security baseline for Microsoft Edge version 107. In addition to releasing this new version for Microsoft Edge, the new baseline uses an updated template experience that leverages the unified settings platform seen in the Intune settings catalog.
+
+The new Intune security baseline format aligns the presentation of settings that are available to those found in the Intune settings catalog. This alignment helps resolve past issues for setting names and implementations for settings that could create conflicts. The new format also improves the reporting experience for baselines in the Intune admin center.
+
+Once the new baseline version is available, all new profiles you create for Microsoft Edge will use the new baseline format and version. While the new version becomes the default baseline version, you’ll still be able to use the profiles you’ve previously created for older versions of Microsoft Edge, but not create new profiles for those older versions of Microsoft Edge.
+
+To learn more, see [Security baselines overview](../protect/security-baselines.md).
+
+### New security baseline for Microsoft 356 Office Apps<!-- 9587103 -->  
+We’re working to add a new security baseline to help you manage security configurations for **M365 Office Apps**. This new baseline will be released in a new format for security baselines that uses an uses an updated template and experience that leverages the unified settings platform seen in the Intune settings catalog.
+
+The new Intune security baseline format aligns the presentation of settings that are available to those found in the Intune settings catalog. This alignment helps resolve past issues for setting names and implementations for settings that could create conflicts. The new format also improves the reporting experience for baselines in the Intune admin center.
+
+The M365 Office Apps baseline can help you rapidly deploy configurations to your Office Apps that meet the security recommendations of the Office and security teams at Microsoft. As with all baselines, the default baseline represents the recommended configurations and you’ll be free to modify the default baseline to meet the requirements of your organization.
+
+To learn more, see [Security baselines overview](../protect/security-baselines.md).
+
+
 <!-- *********************************************** -->
 
 <!-- ## Intune apps -->
