@@ -242,8 +242,8 @@ Example:
     - **Force tunnel**: All network traffic in this rule goes through the VPN. No network traffic in this rule goes directly to the Internet.
 
   - **Direction**: Select the flow of network traffic your VPN connection allows. Your options:
-    - **Inbound**: Only allows traffic from external sites through the VPN.
-    - **Outbound** (default): Only allows traffic to external sites through the VPN.
+    - **Inbound**: Only allows traffic from external sites through the VPN. Outbound traffic is blocked from entering the VPN
+    - **Outbound** (default): Only allows traffic to external sites through the VPN. Inbound traffic is blocked from entering the VPN
 
     To allow inbound and outbound, create two separate rules. Create one rule for inbound, and another rule for outbound.
 
@@ -265,7 +265,7 @@ Example:
 
     You can also **Import** a `.csv` file with this information.
 
-  - **Local address ranges**: Enter the allowed local network IPv4 address ranges that can use the VPN. Only client device IP addresses in this range use this VPN. Client device IP addresses not in this range can't use this VPN.
+  - **Local address ranges**: Enter the allowed local network IPv4 address ranges that can use the VPN. Only client device IP addresses in this range use this VPN.
 
     For example, enter `10.0.0.22` for the lower port and `10.0.0.122` for the upper port.
 
@@ -273,7 +273,7 @@ Example:
 
     You can also **Import** a `.csv` file with this information.
 
-  - **Remote address ranges**: Enter the allowed remote network IPv4 address ranges that can use the VPN. Only IP addresses in this range use this VPN. IP addresses not in this range can't use this VPN.
+  - **Remote address ranges**: Enter the allowed remote network IPv4 address ranges that can use the VPN. Only IP addresses in this range use this VPN.
 
     For example, enter `10.0.0.22` for the lower port and `10.0.0.122` for the upper port.
 
