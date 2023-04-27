@@ -8,7 +8,7 @@ keywords:
 author: dougeby 
 ms.author: dougeby
 manager: dougeby
-ms.date: 04/06/2023
+ms.date: 05/03/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -62,6 +62,27 @@ You can use RSS to be notified when this article is updated. For more informatio
 
 ## App management
 
+### View app report for Android Enterprise corporate-owned devices<!-- 2055436  -->  
+You'll be able to view a report containing all apps found on a device for Android Enterprise corporate-owned scenarios, including system apps. This report will be available in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **Monitor** > **Discovered apps**. You will see **Application Name** and **Version** for all apps detected as installed on the device.
+
+### Update to MAM reporting in Intune<!-- 10100428  -->  
+MAM reporting will be simplified and overhauled to leverage Intune's newest reporting infrastructure. Benefits of these changes will include improved data accuracy and instantaneous updating. You will be able to find these streamlined MAM reports in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **Monitor**. All MAM data available to you will be contained within the new **App protection status** report and **App configuration status** report.
+
+### Assignment filters will support app protection policies and app configuration policies<!-- 7476247  -->  
+Assignment filters will support MAM app protection policies and app configuration policies. When you create a new filter, you will be able to fine tune MAM policy targeting using the following properties:
+
+- Device Management Type
+- Device Manufacturer
+- Device Model
+- OS Version
+- Application Version
+- MAM Client Version
+
+> [!IMPORTANT]
+> All new and edited app protection policies that use **Device Type** targeting will be replaced with assignment filters.
+
+For more information on filters, go to [Use filters when assigning your apps, policies, and profiles in Microsoft Intune](filters.md).
+
 ### Install required apps during pre-provisioning<!-- 12716381   -->  
 A new toggle will be available in the Enrollment Status Page (ESP) profile that allows you to select whether you want to attempt to install required applications during pre-provisioning (white glove) technician phase. We understand that installing as many applications as possible during pre-provisioning is desired to reduce the end user setup time. To help, we've implemented an option to attempt the installation of all the required apps assigned to a device during technician phase. If there's an app install failure, ESP will continue except for the apps specified in ESP profile. To enable this function, you'll need to edit your Enrollment Status Page profile by selecting **Yes** on the new setting entitled **Only fail selected apps in technician phase**. This setting will only appear if you have blocking apps selected. For information about ESP, go to [Set up the Enrollment Status Page](../enrollment/windows-enrollment-status.md).
 
@@ -77,6 +98,30 @@ Users will be able to uninstall Win32 apps in the Company Portal. If a Win32 app
 The global quiet time settings will allow you to create policies to schedule quiet time for your end users, which will automatically mute Microsoft Outlook email and Teams notifications on iOS/iPadOS and Android platforms. These policies can be used to limit end user notifications received after work hours. When this feature is available, you'll be able to find it in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **Quiet Time** > **Policies**.
 
 ## Device configuration
+
+### Visual Studio ADMX settings are in the Settings Catalog and Administrative Templates <!-- 10875730  -->  
+Visual Studio settings are included in the Settings Catalog and Administrative Templates (ADMX). Previously, to configure Visual Studio settings on Windows devices, you imported them with ADMX import.
+
+For more information on these policy types, go to:
+
+- [Use the settings catalog to configure settings](../configuration/settings-catalog.md)
+- [Use Windows 10/11 templates to configure group policy settings in Microsoft Intune](../configuration/administrative-templates-windows.md)
+- [Visual Studio Administrative Templates (ADMX)](/visualstudio/install/administrative-templates)
+
+Applies to:
+
+- Windows 10/11
+
+### Wipe device action and new obliteration behavior setting available for macOS<!-- 16647226  -->  
+You'll soon be able to use the **Wipe** device action instead of Erase for macOS devices. Additionally, you'll be able to configure the **Obliteration Behavior** setting as part of the **Wipe** action.
+
+This new key allows you to control the wipe fallback behavior on Macs that have Apple Silicon or the T2 Security Chip. To find this setting, navigate to **Devices** > **macOS** > [Select a device] > **Overview** > **Wipe** in the **Device action** area.
+
+For more information on the Obliteration Behavior setting, go to Apple's Platform Deployment site [Erase Apple devices - Apple Support](https://support.apple.com/guide/deployment/erase-devices-dep0a819891e/web).
+
+Applies to:
+
+- macOS
 
 ### New Google domain allow-list settings for Android Enterprise personally owned devices with a work profile<!-- 14711684 -->
 
@@ -108,12 +153,30 @@ Applies to:
 
 <!-- *********************************************** -->
 
+<!-- ## Device enrollment -->
+<!-- *********************************************** -->
+
 ## Device management
 
 ### On-demand proactive remediation for a Windows device<!-- 14783338  -->  
 A new device action that is in public preview allows you to run a proactive remediation on-demand to a single Windows device. The **Run** remediation device action will allow you to resolve issues without having to wait for a proactive remediation to run on its assigned schedule. You'll also be able to view the status of proactive remediations under **Remediations** in the **Monitor** section of a device.
 
-<!-- ***********************************************-->
+<!-- *********************************************** -->
+
+<!-- ## Device security -->
+<!-- *********************************************** -->
+
+<!-- ## Intune apps -->
+<!-- *********************************************** -->
+
+<!-- ## Monitor and troubleshoot -->
+<!-- *********************************************** -->
+
+<!-- ## Role-based access control -->
+<!-- *********************************************** -->
+
+<!-- ## Tenant administration -->
+<!-- *********************************************** -->
 
 ## Notices
 
