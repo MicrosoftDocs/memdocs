@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/22/2022
+ms.date: 04/26/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -228,7 +228,17 @@ Example:
   > [!IMPORTANT]
   > We recommend that you secure all app lists created for per-app VPNs. If an unauthorized user changes this list, and you import it into the per-app VPN app list, then you potentially authorize VPN access to apps that shouldn't have access. One way you can secure app lists is using an access control list (ACL).
 
-- **Network traffic rules for this VPN connection**: Select the protocols, and the local & remote port and address ranges, are enabled for the VPN connection. If you don't create a network traffic rule, then all protocols, ports, and address ranges are enabled. After you create a rule, the VPN connection uses only the protocols, ports, and address ranges that you enter in that rule.
+- **Network traffic rules for this VPN connection**: You can add network rules that apply to this VPN connection. The VPN connection is limited to any rules you enter.
+
+  Select **Add** to use Split tunnel or Force tunnel, enter the protocols, and enter the local & remote port and address ranges that you want enabled for the VPN connection.
+
+  When adding traffic rules, make sure to add a catch-all rule that is least restrictive, to avoid VPN issues.
+
+  If you do create a network traffic rule, then the VPN connection uses only the protocols, ports, and address ranges that you enter in that rule.
+
+  You can also **Import** a `.csv` file with this information.
+
+  If you don't create a network traffic rule, then all protocols, ports, and address ranges are enabled.
 
 ## Conditional Access
 

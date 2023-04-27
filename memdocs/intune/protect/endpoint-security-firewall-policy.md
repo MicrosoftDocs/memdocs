@@ -84,7 +84,7 @@ For information about configuring settings in the following profiles, see the [F
 
 In public preview, Microsoft Defender Firewall rule profiles support use of [reusable settings groups](../protect/reusable-settings-groups.md) for the following platforms:
 
-- *Windows 10, Windows 11, and Windows Server platform*
+- *Windows 10 and Windows 11*
 
 The following firewall rule profile settings are available in reusable settings groups:
 
