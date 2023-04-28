@@ -183,6 +183,11 @@ Intune will be adding integration with Zebra Lifeguard Over-the-Air service, whi
 
 Available for Android Enterprise Zebra devices that are running Android 8 or later, and requires an account with Zebra.
 
+### Renaming Proactive remediation to Remediations and moving to a new location<!-- 16526263  -->  
+Going forward Proactive remediations will be known as Remediations and will be available from Devices > Remediations. You will still be able to find Remediations in both the new location and the existing Reports > Endpoint Analytics location until the next Intune service update. Remediations are not currently available in the new [Devices experience preview](../fundamentals/microsoft-intune-admin-center-devices.md).
+
+Remediations will now use the Windows license verification category in Tenant administration > Connectors and tokens > Windows data to verify that you own the Windows E3 or equivalent licenses required to use the feature. Customers who previously verified licensing for Remediations prior to this change will automatically be migrated to this category.
+
 ### New Google domain allow-list settings for Android Enterprise personally owned devices with a work profile<!-- 14711684 -->
 
 On Android Enterprise personally owned devices with a work profile, you can configure settings that restrict device features and settings.
