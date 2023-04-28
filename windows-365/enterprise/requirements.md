@@ -121,10 +121,14 @@ Windows 365 manages the capacity and availability of underlying Azure resources 
   - Japan East
 - Norway
   - Norway East
+- South Africa
+  - North
 - South America
   - Brazil South (Restricted, request your Commercial Executive to engage Deal Manager for exception)
 - South Korea
   - Korea Central
+- Sweden
+  - Central
 - Switzerland
   - Switzerland North
 - UAE
