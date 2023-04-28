@@ -77,6 +77,9 @@ The following are requirements for Intune to support Windows LAPS in your tenant
 
 Intune policy for Windows LAPS can configure a device to back up a local administrator account and password to one of the following Directory types:
 
+  > [!NOTE]  
+  > Devices that are workplace-joined (WPJ) are not supported by Intune for LAPS.
+
 - **Cloud** – Cloud supports back up to your Azure AD for the following scenarios:
 
   - Hybrid (Hybrid Azure AD join)
@@ -89,8 +92,7 @@ Intune policy for Windows LAPS can configure a device to back up a local adminis
     1. Browse to **Azure Active Directory** > **Devices** > **Device settings**.
     1. Select **Yes** for the *Enable Local Administrator Password Solution (LAPS)* setting and select **Save**. You may also use the Microsoft Graph API [Update deviceRegistrationPolicy](/graph/api/deviceregistrationpolicy-update?view=graph-rest-beta&preserve-view=true)
 
-  > [!NOTE]  
-  > Devices that are workplace-joined (WPJ) are not supported by Intune for LAPS.
+
 
 - **On-premises** – On-premises supports back up to Windows Server Active Directory (on-premises Active Directory).
 
