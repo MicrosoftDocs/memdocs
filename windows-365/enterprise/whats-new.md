@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 04/11/2023
+ms.date: 04/28/2023
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice:
@@ -76,6 +76,16 @@ You now have the option to use dark mode on windows365.microsoft.com. For more i
 #### Windows 365 now supports South Africa North and Sweden Central<!--44267264-->
 
 Windows 365 Cloud PC now supports the South Africa North and Sweden Central regions. For more information, see [Supported Azure regions for Cloud PC provisioning](requirements.md?tabs=enterprise%2Cent#supported-azure-regions-for-cloud-pc-provisioning).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Windows 365 Government
+
+#### Windows 365 Government with custom images or Azure network connections<!--43667715-->
+
+For Windows 365 Government customers, the **Custom images** and **Azure network connection**  pages have been updated to make it clear that:
+
+- Before using custom images with Windows 365 Government, you must link your Azure Commercial tenant with your Azure Government tenant.
+- Before using Azure network connections with Windows 365 Government, you must link your Azure Commercial tenant with your Azure Government tenant.
 
 <!-- ########################## -->
 ## Week of April 10, 2023
