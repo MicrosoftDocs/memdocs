@@ -146,18 +146,6 @@ It's possible some of your older policies aren't available, or don't apply to cl
 
   Instead of doing what you've always done, focus on what you actually want to achieve.
 
-## Local Administrator Password Solution (LAPS) aren't supported
-
-Currently, cloud-native endpoints don't support the [Microsoft Local Administrator Password Solution (LAPS)](/defender-for-identity/cas-isp-laps) (opens another Microsoft website).
-
-LAPS manages local administrator account passwords for domain-joined devices. Passwords are randomized and stored in on-premises AD, and protected by ACLs. So, only eligible users can read the password or request a password reset.
-
-Microsoft will release an update to provide LAPS for Azure AD joined devices (no ETA). When it's released, you can use it to manage local administrator account passwords on cloud-native endpoints.
-
-**Resolution**: 
-
-Azure AD joined devices use Azure AD to configure users and groups that will have local administrator privileges. For more information and guidance, go to [How to manage local administrators on Azure AD joined devices](/azure/active-directory/devices/assign-local-admin).
-
 ## Synchronized user accounts can't complete first sign-in
 
 Synchronized user accounts are on-premises AD domain users that are synchronized to Azure AD using Azure AD Connect.
