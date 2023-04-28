@@ -144,9 +144,7 @@ In Group Policy analytics, you import your on-premises GPO. The tool analyzes yo
 
 When you import your GPO XML file in Intune, you can also select an existing scope tag. Only admins within that scope tag can see the imported policies. Admins not in that scope tag can't see the imported policies.
 
-Group Policy analytics can't also migrate your imported GPO into a Settings Catalog policy if you don't have the scope tag associated with that object. Admins within their scope tag can only migrate the imported policies that they have permissions to see.
-
-If no Scope Tag is selected, a default Scope Tag is automatically applied.
+Also, admins within their scope tag can migrate the imported policies that they have permissions to see. To migrate an imported GPO into a Settings Catalog policy, a scope tag must be associated with the imported GPO. If a scope tag isn't associated, then it can't migrate to a Settings Catalog policy. If no scope tag is selected, then a default scope tag is automatically applied.
 
 For more information on scope tags and Group Policy analytics, go to:
 
