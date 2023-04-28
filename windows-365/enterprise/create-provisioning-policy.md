@@ -93,6 +93,10 @@ To select an ANC, follow these steps:
     - Names can't include blank spaces.
     - Optional. Use the %USERNAME:X% macro to add the first X letters of the username.
     - Required. Use the %RAND:Y% macro to add a random string of numbers, where Y equals the number of digits to add. Y must be 5 or more. Names must contain a randomized string.
+    Examples of custom naming templates:
+    - %RAND:4%
+    - ABC-%RAND:5%
+    - ABC-%USERNAME:5%-%RAND:6%
 7. Optional. Under **Additional services**, choose a service to be installed on Cloud PCs provisioned with this policy:
     - **Windows Autopatch** is a cloud service that automates updates for Windows, Microsoft 365 Apps for enterprise, Microsoft Edge, and Microsoft Teams on both physical and virtual devices. For more information, see [What is What is Windows Autopatch?](/windows/deployment/windows-autopatch/overview/windows-autopatch-overview) and the [Windows Autopatch FAQ](https://go.microsoft.com/fwlink/?linkid=2200228).
     - **Microsoft Managed Desktop** is a cloud service that helps with device deployment, service management and operations, and security. For more information, see [What is Microsoft Managed Desktop?](/managed-desktop/intro/).
