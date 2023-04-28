@@ -60,7 +60,7 @@ Learn what new features are available in Windows 365 Enterprise.
 
 #### Windows 365 web client keyboard shortcut redirection<!--43951825-->
 
-Windows 365 web client users can now use keyboard shortcuts (like Alt + Tab) on their Cloud PC. These shortcuts would normally be intercepted by the host operating system and not sent to the Cloud PC. For more information about these keyboard shortcuts, see [Access a Cloud PC](end-user-access-cloud-pc.md).
+Windows 365 web client users can now use keyboard shortcuts (like Alt + Tab) on their Cloud PC. These shortcuts would normally be intercepted by the host operating system and not sent to the Cloud PC. For more information about these keyboard shortcuts, see [Access a Cloud PC](../end-user-access-cloud-pc.md).
 
 #### Windows 365 app: pin Cloud PC to task bar<!--43470782-->
 
