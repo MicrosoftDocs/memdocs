@@ -85,9 +85,9 @@ Intune policy for Windows LAPS can configure a device to back up a local adminis
     Support for *Azure AD Join* requires you to enable LAPS in your Azure AD. The following steps can help you complete this configuration. For the larger context, view these steps in the Azure AD documentation at [Enabling Windows LAPS with Azure AD](/azure/active-directory/devices/howto-manage-local-admin-passwords#enabling-windows-laps-with-azure-ad). *Hybrid Azure AD Join* does not require LAPS to be enabled in Azure AD.
 
     **Enable LAPS in Azure AD**:  
-    1. Sign in to the Azure portal as a Cloud Device Administrator.
-    1. Browse to Azure Active Directory > Devices > Device settings.
-    1. Select Yes for the Enable Local Administrator Password Solution (LAPS) setting and select Save. You may also use the Microsoft Graph API Update deviceRegistrationPolicy
+    1. Sign in to the **Azure portal** as a [Cloud Device Administrator](/azure/active-directory/roles/permissions-reference#cloud-device-administrator).
+    1. Browse to **Azure Active Directory** > **Devices** > **Device settings**.
+    1. Select **Yes** for the *Enable Local Administrator Password Solution (LAPS)* setting and select **Save**. You may also use the Microsoft Graph API [Update deviceRegistrationPolicy](/graph/api/deviceregistrationpolicy-update?view=graph-rest-beta&preserve-view=true)
 
   > [!NOTE]  
   > Devices that are workplace-joined (WPJ) are not supported by Intune for LAPS.
