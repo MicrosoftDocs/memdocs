@@ -57,6 +57,8 @@ Intune policies manage LAPS by using the Windows LAPS configuration service prov
 Windows LAPS allows for the management of a single local administrator account per device. Intune policy can specify which local admin account it applies to by use of the policy setting **Administrator Account Name**. If the account name specified in the policy isn’t present on the device, no account is managed. However, when **Administrator Account Name** is left blank, the policy defaults to the devices built-in local admin account that is identified by its well-known relative identifier (RID).
 
 > [!NOTE]  
+> Please ensure the [prerequisites](https://learn.microsoft.com/en-us/mem/intune/protect/windows-laps-overview#prerequisites) for Intune to support Windows LAPS in your tenant are met before creating policies.
+
 > Intune’s LAPS policies do not create new accounts or passwords. Instead, they manage an account that’s already on the device.
 
 Configure and assign LAPS policies carefully. The Windows LAPS CSP supports a single configuration for each LAPS setting on a device. Devices that receive multiple Intune policies that include conflicting settings can fail to process policy. Conflicts can also prevent the backup of the managed local admin account and password to your tenants Directory.
