@@ -51,7 +51,7 @@ See the list of [available security baselines](../protect/security-baselines.md#
 
 Common tasks when working with security baselines include:
 
-- [Create a profile](#create-the-profile) – Configure the settings you want to use and assign the baseline to groups.
+- [Create a profile](#create-a-profile-for-a-security-baseline) – Configure the settings you want to use and assign the baseline to groups.
 - [Change the profile version](#update-a-profile-to-the-latest-version) – Change the baseline version in use by a profile.
 - [Remove a baseline assignment](#remove-a-security-baseline-assignment) - Learn what happens when you stop managing settings with a security baseline.
 
@@ -114,7 +114,7 @@ The information in this section applies to updating a baseline instance created 
 > [!NOTE]  
 > In May 2023, Intune began rollout of a new security baseline format for each new baseline release or update.  Intune also introduced a new update process for migrating an existing security baseline profile to a newly released security baseline. This new behavior replaces existing  behavior when moving to a baseline version released in May 2023 or later.
 >
-> The previous behavior remains available for use when updating baselines that have not yet received a new version that uses the new format. For guidance, see [Update baselines that use the previous format](#update-baselines-that-use-the-previoius-format).
+> The previous behavior remains available for use when updating baselines that have not yet received a new version that uses the new format. For guidance, see [Update baselines that use the previous format](#update-baselines-that-use-the-previous-format).
 
 After May 2023, when a new version for a baseline is released, plan to update your existing profiles to the new version. When moving from an older format to the new baseline format (from a version released prior to May 2023 to one released in May 2023 or later):
 
@@ -161,7 +161,7 @@ With the information from the export, you can rapidly reconfigure the new baseli
 
    The following screen capture shows an export for the Microsoft Edge profile version 85, as viewed in Microsoft Excel. Of the Microsoft Edge baselines 17 settings found in the older profile, only one has been changed the baselines default: **Enable site isolation for every site** was set to **Disabled**. The baseline default was **Enabled**:
 
-   :::image type="content" source="./media/security-baselines-configure/csv-export-of-baseline-configuration.png" alt-text="Screen shot that shows an export of the Microsoft Edge baseline profile as a .csv file." lightbox="./media/security-baselines-configure/csv-export-of-baseline-configuration":::
+   :::image type="content" source="./media/security-baselines-configure/csv-export-of-baseline-configuration.png" alt-text="Screen shot that shows an export of the Microsoft Edge baseline profile as a .csv file." lightbox="./media/security-baselines-configure/csv-export-of-baseline-configuration.png":::
 
    In the preceding image, there are three columns of information. The information identifies the settings in the new profile, and the configuration for each of them that you had in the old profile.
 
@@ -309,6 +309,6 @@ When using co-managed devices, you must switch the **Device configuration** work
 - View the settings in the latest versions of the available baselines:
   - [Windows 10 and later - MDM security baseline](security-baseline-settings-mdm-all.md)
   - [Microsoft Defender for Endpoint baseline](security-baseline-settings-defender-atp.md)
-  - [Microsoft 365 Apps for Enterprise (Office baseline)](security-baseline-settings-office)
-  - [Microsoft Edge (Version 107 and later)](security-baseline-settings-edge?pivots-edge-may-2023)
+  - [Microsoft 365 Apps for Enterprise (Office baseline)](security-baseline-settings-office.md)
+  - [Microsoft Edge (Version 107 and later)](security-baseline-settings-edge.md?pivots-edge-may-2023)
   - [Windows 365 Security Baseline](security-baseline-settings-windows-365.md)

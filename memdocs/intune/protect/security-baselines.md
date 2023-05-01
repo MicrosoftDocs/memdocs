@@ -103,20 +103,20 @@ The following security baseline instances are available for use with Intune. Use
   > The Microsoft Defender for Endpoint security baseline has been optimized for physical devices and is currently not recommended for use on virtual machines (VMs) or VDI endpoints. Certain baseline settings can impact remote interactive sessions on virtualized environments.  For more information, see [Increase compliance to the Microsoft Defender for Endpoint security baseline](/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) in the Windows documentation.
 
 - **Microsoft 365 Apps for Enterprise**  
-  - [May 2023 (Office baseline)](security-baseline-settings-office)
+  - [May 2023 (Office baseline)](../protect/security-baseline-settings-office.md)
 
 - **Microsoft Edge Baseline**
-  - [May 2023 (Edge Version 107 and later)](security-baseline-settings-edge?pivots-edge-may-2023)
-  - [September 2020 (Edge version 85 and later)](security-baseline-settings-edge.md?pivots-edge-sept-2020)
-  - [April 2020 (Edge version 80 and later)](security-baseline-settings-edge.md?pivots-edge-april-2020)
-  - [Preview: October 2019 (Edge version 77 and later)](security-baseline-settings-edge.md?pivots=edge-october-2019)
+  - [May 2023 (Edge Version 107 and later)](../protect/security-baseline-settings-edge.md?pivots-edge-may-2023)
+  - [September 2020 (Edge version 85 and later)](../protect/security-baseline-settings-edge.md?pivots-edge-sept-2020)
+  - [April 2020 (Edge version 80 and later)](../protect/security-baseline-settings-edge.md?pivots-edge-april-2020)
+  - [Preview: October 2019 (Edge version 77 and later)](../protect/security-baseline-settings-edge.md?pivots=edge-october-2019)
 
 - **Windows 365 Security Baseline**
   - [October 2021](security-baseline-settings-windows-365.md)
 
 When a new version for a profile becomes available, settings in profiles based on the older versions become read-only. You can continue to use those older profiles. You can also edit the profile names, description, and assignments, but they don't support a change to their settings configuration and you can't create new profiles based on the older versions.
 
-When you're ready to use the more recent baseline version, you can create new profiles or update your existing profiles to the new version. See [Change the baseline version for a profile](security-baselines-configure#update-a-profile-to-the-latest-version) in the *Manage security baseline profiles* article.
+When you're ready to use the more recent baseline version, you can create new profiles or update your existing profiles to the new version. See [Change the baseline version for a profile](../protect/security-baselines-configure.md#update-a-profile-to-the-latest-version) in the *Manage security baseline profiles* article.
 
 ## About baseline versions and instances
 
@@ -131,7 +131,7 @@ You can view the list of available baselines in the [Microsoft Intune admin cent
 
 To view more information about the baseline versions you use, select a baseline type, like *MDM Security Baseline* to open its *Profiles* pane, and then select **Versions**. Intune displays details about the versions of that baseline that are in use by your profiles. The details include the most recent and current baseline version. You can select a single version to view deeper details about the profiles that use that version.
 
-You can choose to [change of the version](security-baselines-configure#update-a-profile-to-the-latest-version) of a baseline that's in use with a given profile. When you change the version, you don't have to create a new baseline profile to take advantage of updated versions. Instead you can select a baseline profile and use the built-in option to change the instance version for that profile to a new one.
+You can choose to [change of the version](../protect/security-baselines-configure.md#update-a-profile-to-the-latest-version) of a baseline that's in use with a given profile. When you change the version, you don't have to create a new baseline profile to take advantage of updated versions. Instead you can select a baseline profile and use the built-in option to change the instance version for that profile to a new one.
 
 ## Avoid conflicts
 
@@ -183,6 +183,6 @@ Within the Intune security baseline policy UI, Intune provides information text 
 - View the settings in the latest versions of the available baselines:
   - [Windows 10 and later - MDM security baseline](security-baseline-settings-mdm-all.md)
   - [Microsoft Defender for Endpoint baseline](security-baseline-settings-defender-atp.md)
-  - [Microsoft 365 Apps for Enterprise (Office baseline)](security-baseline-settings-office)
-  - [Microsoft Edge (Version 107 and later)](security-baseline-settings-edge?pivots-edge-may-2023)
+  - [Microsoft 365 Apps for Enterprise (Office baseline)](security-baseline-settings-office.md)
+  - [Microsoft Edge (Version 107 and later)](security-baseline-settings-edge.md?pivots-edge-may-2023)
   - [Windows 365 Security Baseline](security-baseline-settings-windows-365.md)
