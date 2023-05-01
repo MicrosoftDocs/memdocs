@@ -255,7 +255,7 @@ You can use a proxy server with Microsoft Tunnel.
 > [!NOTE]  
 > Proxy server configurations are not supported with versions of Android prior to version 10.  For more information, see [VpnService.Builder](https://developer.android.com/reference/android/net/VpnService.Builder#setHttpProxy%28android.net.ProxyInfo%29) in that Android developer documentation.
 > 
-> To support use with Tunnel, Android LOB apps must support both proxy and proxy.pac.
+> To support use with Tunnel, Android Line of Business (LOB) apps must support both proxy and proxy.pac.
 
 The following considerations can help you configure the Linux server and your environment for success:
 
