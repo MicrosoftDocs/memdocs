@@ -4,7 +4,7 @@ description: Guidance and advice for administrators that create and manage softw
 ms.author: mandia
 author: MandiOhlinger
 manager: dougeby
-ms.date: 04/26/2023
+ms.date: 05/01/2023
 audience: ITPro
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -25,11 +25,9 @@ ms.collection:
 
 # Software updates admin checklist for BYOD and personal devices in Microsoft Intune
 
-As organizations embrace a hybrid and remote workforce, admins are challenged with controlling and managing software updates on devices owned by users. These devices are often called BYOD (bring your own device) or personally owned devices. When devices are organization owned, software updates are managed by IT admins. On personal devices, IT admins typically don't have any control of software updates.
+As organizations embrace a hybrid and remote workforce, admins are challenged with controlling and managing software updates on devices owned by users. These devices are often called BYOD (bring your own device) or personally owned devices. When devices are organization owned, IT admins manage software updates. On personal devices, IT admins typically don't have any control of software updates.
 
-When devices aren't enrolled in Intune, they're considered unmanaged.
-
-By default, when a new update is available for unmanaged devices, users receive notifications and/or see the latest updates available on their devices (Settings > Software Updates). The timing of these updates varies depending on the carrier, OEM, and the device itself. At any time, users can check for updates themselves.
+By default, when a new update is available for unmanaged devices (not enrolled in Intune), users receive notifications and/or see the latest updates available on their devices (Settings > Software Updates). The timing of these updates varies depending on the carrier, OEM, and the device itself. At any time, users can check for updates themselves.
 
 To help manage the software updates on unmanaged devices, there are Intune policies and features that can help. This section lists the Microsoft-recommended policies to install software updates on unmanaged devices.
 
@@ -58,13 +56,13 @@ The following example shows an enrollment device platform restrictions policy fo
 
 :::image type="content" source="./media/software-updates-guide-android/android-enrollment-restrictions-policy.png" alt-text="Screenshot that shows enrollment restrictions policy for Android devices in the Microsoft Intune admin center.":::
 
-When users enroll their personal devices, this policy checks the version info. If the devices are outside the versions you enter, then they're prevented from enrolling. ??Is this true? Not sure if CA (?) is built in to enrollment restrictions policies??
+When users enroll their personal devices, this policy checks the version info. If the devices are outside the versions you enter, then they're prevented from enrolling.
 
 For more information on this feature, go to [Device platform restrictions in Intune](../enrollment/create-device-platform-restrictions.md).
 
 ## Create compliance policies
 
-Compliance policies are a great tool to help keep devices up-to-date. If a device isn't using a version you define, then the device is marked as noncompliant. Noncompliant devices are shown in the Microsoft Intune admin center.
+Compliance policies help keep devices up-to-date. If a device isn't using a version you define, then the device is marked as noncompliant. Noncompliant devices are shown in the Microsoft Intune admin center.
 
 ✔️ Create compliance policies. Use the built-in reporting to see noncompliant devices and see the individual settings that aren't compliant.
 
@@ -79,9 +77,9 @@ If you combine your compliance policies with Conditional Access (CA), then you c
 
 For more information on compliance policies, go to:
 
-- [Create a compliance policy in Microsoft Intune](create-compliance-policy.md)
+- [Create a compliance policy in Intune](create-compliance-policy.md)
 - [Configure actions for noncompliant devices in Intune](actions-for-noncompliance.md)
-- [Monitor results of your compliance policies](compliance-policy-monitor.md)
+- [Monitor results of your compliance policies in Intune](compliance-policy-monitor.md)
 
 ## Use app protection policies
 
