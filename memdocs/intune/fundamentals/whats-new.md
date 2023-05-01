@@ -67,7 +67,12 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 -->
 
-## Week of May 1. 2023
+## Week of May 1, 2023
+
+### App management
+
+#### DMG app installation for macOS<!-- 13911806 -->
+The DMG app installation feature for macOS is now generally available. Intune supports **required** and **uninstall** assignment types for DMG apps. The Intune agent for macOS is used to deploy DMG apps. For related information, see [Deploy DMG-type applications to managed macOS devices](../fundamentals/whats-new-archive.md#deploy-dmg-type-applications-to-managed-macos-devices).
 
 ### Device management
 
