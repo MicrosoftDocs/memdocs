@@ -131,5 +131,5 @@ Also, the data returned will be limited if:
 - [Integrate Cisco ISE with Intune](https://www.cisco.com/c/en/us/td/docs/security/ise/UEM-MDM-Server-Integration/b_MDM_UEM_Servers_CiscoISE/chapter.html#task_og1_5zx_cqb)
 - [Integrate Citrix Gateway with Intune](https://docs.citrix.com/en-us/citrix-gateway/current-release/microsoft-intune-integration/configuring-network-access-control-device-check-for-citrix-gateway-virtual-server-for-single-factor-authentication-deployment.html)
 - [Integrate F5 BIG-IP Access Policy Manager with Intune](https://techdocs.f5.com/en-us/edge-client-7-1-8/big-ip-access-policy-manager-edge-client-and-application-configuration-7-1-8/configuring-access-policy-manager-for-mdm-applications.html)
-- [Integrate HPE Aruba ClearPass with Intune](https://asp.arubanetworks.com/downloads;search=Intune;products=Aruba%20ClearPass%20Policy%20Manager%20%28CPPM%29)
+- [Integrate HPE Aruba ClearPass with Intune](https://asp.arubanetworks.com/downloads/documents/RmlsZTowMTg2ZmY0Yy05MGE5LTExZWItODRiZC0yZjM5OWFjNzc5YTY%3D)
 - [Integrate Squadra security Removable Media Manager (secRMM) with Intune](https://www.squadratechnologies.com/StaticContent/ProductDownload/secRMM/9.10.0.0/secRMMIntune.pdf)
