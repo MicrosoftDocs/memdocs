@@ -186,6 +186,22 @@ Going forward Proactive remediations will be known as Remediations and will be a
 
 Remediations will now use the Windows license verification category in Tenant administration > Connectors and tokens > Windows data to verify that you own the Windows E3 or equivalent licenses required to use the feature. Customers who previously verified licensing for Remediations prior to this change will automatically be migrated to this category.
 
+#### Create inbound and outbound network traffic rules for VPN profiles on Windows devices<!-- 17943658  -->  
+You can create a device configuration profile that deploys a VPN connection to devices (**Devices** > **Configuration profiles** > **Create profile** > **Windows 10 and later** for platform > **Templates** > **VPN** for profile type).
+
+In this VPN connection, you can use the **Apps and Traffic rules** settings to create network traffic rules.
+
+There's a new **Direction** setting you can configure. Use this setting to allow Inbound and Outbound traffic from the VPN connection:
+
+- **Outbound** (default): Allows only traffic to external networks/destinations to flow using the VPN. Inbound traffic is blocked from entering the VPN.
+- **Inbound**: Allows only traffic coming from external networks/ sources to flow using the VPN. Outbound traffic is blocked from entering the VPN.
+
+For more information on the VPN settings you can configure, including the network traffic rule settings, go to [Windows device settings to add VPN connections using Intune](../configuration/vpn-settings-windows-10.md).
+
+Applies to:
+
+- Windows 10 and later
+
 ### New Google domain allow-list settings for Android Enterprise personally owned devices with a work profile<!-- 14711684 -->
 
 On Android Enterprise personally owned devices with a work profile, you can configure settings that restrict device features and settings.
@@ -197,6 +213,7 @@ Currently, there's an **Add and remove accounts** setting that can allow Google 
 For more information on the settings you can configure, go to [Android Enterprise device settings list to allow or restrict features on personally owned devices using Intune](../configuration/device-restrictions-android-enterprise-personal.md).
 
 Applies to:
+
 
 - Android Enterprise personally owned devices with a work profile
 
