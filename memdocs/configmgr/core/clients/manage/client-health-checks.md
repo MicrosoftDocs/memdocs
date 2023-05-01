@@ -36,6 +36,10 @@ Verify that the [client prerequisites](../deploy/prerequisites-for-deploying-cli
 
 Most client prerequisites are available by default in Windows, or installed automatically by the Configuration Manager client. To remediate problems with prerequisites, you can try to install them manually, or reinstall the client.
 
+### Verify that there is sufficient disk space
+
+Verify that there is greater that 1% disk space remaining on C drive.
+
 ### Verify the client service
 
 There are three checks for the **SMS Agent Host** client service (`CcmExec`):
