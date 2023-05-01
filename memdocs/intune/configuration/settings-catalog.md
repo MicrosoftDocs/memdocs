@@ -31,7 +31,7 @@ ms.collection:
 
 # Use the settings catalog to configure settings on Windows, iOS/iPadOS and macOS devices
 
-Settings catalog lists all the settings you can configure, and all in one place. This feature simplifies how you create a policy, and how you see all the available settings. More settings are continually being added. 
+Settings catalog lists all the settings you can configure, and all in one place. This feature simplifies how you create a policy, and how you see all the available settings. More settings are continually being added. For a list of the settings in the settings catalog, go to the [IntunePMFiles / DeviceConfig GitHub repository](https://github.com/IntunePMFiles/DeviceConfig).
 
 If you prefer to configure settings at a granular level, similar to on-premises GPO, then the settings catalog is a natural transition to cloud-based policy.
 
