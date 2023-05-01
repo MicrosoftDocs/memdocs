@@ -198,12 +198,22 @@ To identify devices that have enrolled with Microsoft Defender for Endpoint but 
 
 1. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Go to **Devices** > **All devices**, and then select the column **Managed by** to sort the view of devices.
+
    Devices that onboard to Microsoft Defender for Endpoint and have registered but aren't managed by Intune display **Microsoft Defender for Endpoint** in the *Managed by* column. These are the devices that can receive policy for security management for Microsoft Defender for Endpoint.
+
    You'll also find two labels for devices that are using security management for Microsoft Defender for Endpoint:
    - **MDEJoined** - Added to devices that are joined to the directory as part of this scenario.
    - **MDEManaged** - Added to devices that are actively using the security management scenario. This tag is removed from the device if Defender for Endpoint stops managing the security configuration.
 
-You can create groups for these devices [in Azure AD](/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal) or [from within the Microsoft Intune admin center](/mem/intune/fundamentals/groups-add).
+You can create groups for these devices [in Azure AD](/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal) or [from within the Microsoft Intune admin center](/mem/intune/fundamentals/groups-add). When creating groups, you can use the **OS** value for a device if you are deploying policies to devices running Windows Server vs devices that run a client version of Windows:  
+
+- **Windows 10 and Windows 11** - The deviceType or OS displays as *Windows*
+- **Windows Server** - The deviceType or OS displays as *Windows Server*
+
+> [!IMPORTANT]
+> In May 2023, *deviceType* updated to distinguish between *Windows clients* and *Windows Servers*.
+>
+> Custom scripts and [Azure AD dynamic device groups](/azure/active-directory/enterprise-users/groups-dynamic-membership) created before this change that specify rules that reference only *Windows* will now exclude Windows Servers when used with the Security Management for Microsoft Defender for Endpoint solution. For example, if you have rules that use the `equals` or `not equals` operator, then you must explicitly update the rule to reference **Windows Server**. If you have rules that use the `contains` or `like` operator, then the rule won’t be affected by this change.
 
 ## Deploy policy
 
