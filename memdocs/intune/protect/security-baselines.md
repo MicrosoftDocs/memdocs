@@ -170,7 +170,7 @@ Migrating from on-premises Active Directory group policies to a pure cloud solut
 
 ### Where can I find details about using or configuring the settings that are available in a security baseline?
 
-Each security baseline manages device configurations by applying the options found in a configuration service provider on a device. For example, settings that apply to Microsoft Defender are taken from th Microsoft Defender CSP.  Because Intune is a configuration vehicle for those options and doesn’t determine their functionality or scope, the CSP documentation owns the content for how to configure each option.
+Each security baseline manages device configurations by applying the options found in a configuration service provider on a device. For example, settings that apply to Microsoft Defender are taken from th Microsoft Defender CSP. Because Intune is a configuration vehicle for those options and doesn’t determine their functionality or scope, the CSP documentation owns the content for how to configure each option.
 
 Within the Intune security baseline policy UI, Intune provides information text that is taken from the source CSP and provides a link to that CSP. In some cases, the CSP might be part of a larger content set that includes proactive guidance that remains beyond the scope of Intune to include or duplicate in our content.  However, Intune does document the list of settings in each security baseline version and its default configuration.
 
