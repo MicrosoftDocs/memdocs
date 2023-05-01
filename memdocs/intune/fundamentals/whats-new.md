@@ -67,7 +67,12 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 -->
 
-## Week of May 1. 2023
+## Week of May 1, 2023
+
+### App management
+
+#### macOS shell scripts maximum running time limit<!-- 19396575 -->
+We have fixed an issue that caused Intune tenants with long-running shell scripts to not report back on the script run status. macOS shell scripts that are running for longer than 15 minutes will be stopped by the macOS Intune agent and report as failed. The new behavior is enforced from macOS Intune agent version 2305.019.
 
 ### Device management
 
