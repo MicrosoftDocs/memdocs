@@ -4,7 +4,7 @@ description: Guidance and advice for administrators that create and manage softw
 ms.author: mandia
 author: MandiOhlinger
 manager: dougeby
-ms.date: 04/26/2023
+ms.date: 05/01/2023
 audience: ITPro
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -68,7 +68,7 @@ To use this automatic patching and install updates faster, make sure the devices
 
 When the devices are powered on, plugged in, and connected to the Internet, then the updates automatically download & install, and the device reboots. If the device doesn't meet these conditions, then the updates won't automatically download and install.
 
-To keep your devices on the most current version and with minimal effort from you, keep the Automatic updates feature enabled:
+To keep your devices on the most current version and with minimal effort from you, keep the automatic updates feature enabled:
 
 :::image type="content" source="./media/software-updates-guide-ios-ipados/apple-automatic-update-settings.png" alt-text="Screenshot that shows automatic update settings on iOS/iPadOS Apple devices.":::
 
@@ -112,7 +112,7 @@ For example:
 
 - You configure a policy that delays updates for 90 days. If there's an enrollment restriction policy that requires devices have a recent iOS/iPadOS version, then after a device reset, devices could be blocked from enrolling.
 
-- You create a compliance policy that requires a minimum iOS/iPadOS version that's recent. With this policy, devices on older releases become noncompliant. If you use conditional access to enforce compliance, then users are blocked and can't work.
+- You create a compliance policy that requires a minimum iOS/iPadOS version that's recent. With this policy, devices on older releases become noncompliant. If you use Conditional Access to enforce compliance, then users are blocked and can't work.
 
 ## Common industry scenarios
 
