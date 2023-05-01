@@ -41,6 +41,7 @@ This article applies to:
 > If your devices are personally owned, then go to the [software updates admin checklist for personal devices](software-updates-guide-personal-byod.md).
 
 ?? Do we need the following information? This article doesn't include any additional info on these different types.??
+[tania] this was here just for consistency with the other platforms, we can remove
 
 - **1:1**: Devices are used by only one person.
 - **Shared**: Devices are used by more than one person.
@@ -53,7 +54,7 @@ To avoid delays in devices receiving updates, make sure devices are:
 - Powered on
 - Plugged in
 - Connected to the Internet
-- Idle ??Can we expand on this? By idle, do we mean not running any apps? Or, not currently being used by users/customers?
+- Idle ??Can we expand on this? By idle, do we mean not running any apps? Or, not currently being used by users/customers? [tania] not being actively used by a user
 
 ## Admin checklist for corporate devices
 
@@ -68,6 +69,7 @@ This section lists the Microsoft-recommended policies to install software update
 ### ✔️ Manage updates with policies
 
 ??This section is also in the iOS article version. We can remove it if you like. I added it so there was consistency.??
+[tania] this one we should keep because it also applies to Android and for consistency
 
 It's recommended you create policies that update your devices. It's not recommended to put this responsibility on end users.
 
@@ -93,6 +95,7 @@ When you configure this setting, you choose when the updates are installed. For 
   :::image type="content" source="./media/software-updates-guide-android/system-update-maintenance-window.png" alt-text="Screenshot that shows the system update setting with a maintenance window for Android Enterprise devices in the Microsoft Intune admin center.":::
 
 ??Possibly replace image with all options for **System Update** setting, not just the Maintenance window option.??
+[tania] the only additional setting that is not on this image is the freeze period that is already shown in the section below. 
 
 For more specific information on this setting and the values you can configure, go to [Android Enterprise device settings list to allow or restrict features on corporate-owned devices using Intune](../configuration/device-restrictions-android-for-work.md#general).
 
