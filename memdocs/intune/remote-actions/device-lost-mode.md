@@ -58,6 +58,8 @@ This feature is not supported for the following:
 6. Select **OK** to save your changes.
 
 When you enable lost mode, all use of the device is blocked. The end user cannot access the device until you disable lost mode. While lost mode is enabled, use the [Locate device](device-locate.md) action to find the device.
+[!NOTE]
+Some built-in device functionalities may still work, e.g., Siri may be used to make calls unless it is disabled. 
 
 ## Security and privacy information for the lost mode and locate device actions
 - No device location information is sent to Intune until you turn on this action.
