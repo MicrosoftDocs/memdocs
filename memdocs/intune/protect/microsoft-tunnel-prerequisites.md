@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/07/2023
+ms.date: 05/01/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -254,6 +254,8 @@ You can use a proxy server with Microsoft Tunnel.
 
 > [!NOTE]  
 > Proxy server configurations are not supported with versions of Android prior to version 10.  For more information, see [VpnService.Builder](https://developer.android.com/reference/android/net/VpnService.Builder#setHttpProxy%28android.net.ProxyInfo%29) in that Android developer documentation.
+> 
+> To support use with Tunnel, Android LOB apps must support both proxy and proxy.pac.
 
 The following considerations can help you configure the Linux server and your environment for success:
 
