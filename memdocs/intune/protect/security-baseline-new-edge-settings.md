@@ -27,13 +27,14 @@ ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management
-zone_pivot_groups: baseline-versions-edge
+zone_pivot_groups: dcv2-edge-baselines
 ---
 
-# Microsoft Edge security baseline settings reference for Microsoft Intune 
-This article is a reference for the settings that are available in the Microsoft Edge security baseline for Microsoft Intune and applies to versions of that baseline that released in May 2023 or later. 
-If you use a security baseline for Edge version 85 or earlier, see the following article:
- - [List of the settings in the Microsoft Edge security baseline in Intune](../protect/security-baseline-settings-edge.md).
+# Microsoft Edge security baseline settings reference for Microsoft Intune
+
+This article is a reference for the settings that are available in the Microsoft Edge security baseline for Microsoft Intune and applies to versions of that baseline that released in May 2023 or later.
+
+If you use a security baseline for Edge version 85 or earlier, see [List of the settings in the Microsoft Edge security baseline in Intune](../protect/security-baseline-settings-edge.md).
 
 > [!NOTE]  
 > Beginning in May 2023, all new security baseline versions use a new settings format that replaces previous versions. While the last version instance for a baseline that uses the older setting format remains available to use, the older format will no longer receive updates for new settings, or updated default configurations.
@@ -44,7 +45,7 @@ Each security baseline is a group of preconfigured Windows settings that help yo
 
 The details that are displayed in this article are based on baseline version that is selected at the top of the article. For each selection, this article displays:
 
-- A list of each setting in that baseline version. 
+- A list of each setting in that baseline version.
 - The default configuration of each setting in that baseline version.
 - When available, a link to the underlying configuration service provider (CSP) documentation, or other related content from the relevant product group that provides context and possibly additional details for the settings use.
 
@@ -57,15 +58,13 @@ When a new version of a baseline becomes available, it replaces the previous ver
 - Can be updated to the latest version. After you update a profile to the current baseline version, you can edit the profile to modify settings.
 
 To learn more about using security baselines, see:
+
 - [Use security baselines](../protect/security-baselines.md)
 - [Manage security baselines](../protect/security-baselines-configure.md).
-
-
 
 ::: zone pivot="edge-may2023-112"
 **Microsoft Edge baseline for May 2023 (Edge version 112)**  
 ::: zone-end
-
 
 ## Microsoft Edge
 
@@ -118,8 +117,8 @@ To learn more about using security baselines, see:
   [Learn more](URL)
 
   - **Extension IDs the user should be prevented from installing (or * for all) (Device)**  
-  Baseline default: *\**   <!-- * -->  
-  [Learn more](URL)
+    Baseline default: *\**  
+    [Learn more](URL)
   
 **HTTP authentication**:
 
