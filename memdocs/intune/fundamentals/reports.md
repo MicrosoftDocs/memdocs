@@ -86,7 +86,7 @@ To see a generated report of device state, you can use the following steps:
 
 For related information, see [Enforce compliance for Microsoft Defender for Endpoint with Conditional Access in Intune](../protect/advanced-threat-protection.md).
 
-### Device compliance trend report (Historical)
+### Device compliance trends report (Historical)
 
 Device compliance trend reports are more likely to be used by admins and architects to identify long term trends for device compliance. The aggregated data is displayed over a period of time. It's useful for making future investment decisions, driving process improvements, or prompting investigation into any anomalies. Filters can also be applied to see specific trends. The data provided by this report is a snapshot of the current tenant state (near real-time). 
 
@@ -132,11 +132,9 @@ In this report, you can also:
 - Sort the columns in ascending and descending order.
 - Page through the results using the **Previous** and **Next** buttons.
 
-### Devices without compliance policy (preview) (Organizational)
+### Devices without compliance policy (Organizational)
 
-*This report is in preview.*
-
-In public preview, this report allows admins to:
+This report allows admins to:
 
 - Identify devices that haven't been assigned a compliance policy.
   
@@ -149,10 +147,10 @@ In public preview, this report allows admins to:
 To generate the report, use the following steps:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Reports** > **Device compliance** > **Reports** tab > **Devices without compliance policy (preview)**.
+2. Select **Reports** > **Device compliance** > **Reports** tab > **Devices without compliance policy**.
 3. Select **Generate report**. In the report, look at the following information:
 
-The report generates one row per device that hasn't been assigned a compliance policy. In the report, you'll find the following columns of information that can be used to sort the results. The report also supports search:
+The report generates one row per device that hasn't been assigned a compliance policy. In the report, you'll find the following columns of information that can be used to sort the results. The report also supports search on:
 
 - **Device name** - The name of the device as it appears when viewing Devices and creating groups.
 - **User Principal Name** - The primary user of the device.

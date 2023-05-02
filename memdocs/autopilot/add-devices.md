@@ -90,6 +90,7 @@ To install the script directly and capture the hardware hash from the local comp
 1. Use the following commands from an elevated Windows PowerShell prompt:
 
    ```powershell
+   [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
    New-Item -Type Directory -Path "C:\HWID"
    Set-Location -Path "C:\HWID"
    $env:Path += ";C:\Program Files\WindowsPowerShell\Scripts"
@@ -106,6 +107,7 @@ To install the script directly and capture the hardware hash from the local comp
 2. While OOBE is running, you can start uploading the hardware hash by opening a command prompt (Shift+F10 at the sign-in prompt) and using the following commands:
 
    ```powershell
+   [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
    PowerShell.exe -ExecutionPolicy Bypass
    Install-Script -name Get-WindowsAutopilotInfo -Force
    Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned
