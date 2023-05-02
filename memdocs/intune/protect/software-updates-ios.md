@@ -51,11 +51,16 @@ With policies for iOS software updates, you can:
   By default, devices check in with Intune about every 8 hours. If an update is available through an update policy, the device downloads the update. The device then installs the update upon next check-in within your schedule configuration.
 
 > [!NOTE]
-> iOS/iPadOS software updates that you send to a [Shared iPad](../enrollment/device-enrollment-shared-ipad.md), can install only when there is no user signed in to a Shared iPad session and the device is charging. The iPad must be signed out of all user accounts and plugged into a power source for the device to update successfully. 
-
-> [!NOTE]
-> If using [Autonomous Single App Mode (ASAM)](../configuration/device-restrictions-ios.md#autonomous-single-app-mode-asam), the impact of OS updates should be considered as the resulting behavior may be undesirable.
+>
+> - iOS/iPadOS software updates that you send to a [Shared iPad](../enrollment/device-enrollment-shared-ipad.md), can install only when there is no user signed in to a Shared iPad session and the device is charging. The iPad must be signed out of all user accounts and plugged into a power source for the device to update successfully. 
+>
+> - If using [Autonomous Single App Mode (ASAM)](../configuration/device-restrictions-ios.md#autonomous-single-app-mode-asam), the impact of OS updates should be considered as the resulting behavior may be undesirable.
 Consider testing to assess the impact of OS updates on the app you are running in ASAM. ASAM can be configured through Intune [device restriction profiles](../configuration/device-restrictions-ios.md#general).
+
+> [!TIP]
+> If you're new to configuring software updates or want some guidance based on common scenarios, go to:
+> - [Software updates admin checklist and scenarios for supervised iOS/iPadOS devices](software-updates-guide-ios-ipados.md)
+> - [Software updates admin checklist for BYOD and personal devices](software-updates-guide-personal-byod.md)
 
 ## Configure the policy
 
@@ -159,4 +164,5 @@ For each device on the list, the *Installation Status* displays the error that w
 
 ## Next steps
 
-[Monitor device profiles](../configuration/device-profile-monitor.md)
+- [Monitor device profiles](../configuration/device-profile-monitor.md)
+- [Software updates admin checklist and scenarios for supervised iOS/iPadOS devices in Intune](software-updates-guide-ios-ipados.md)
