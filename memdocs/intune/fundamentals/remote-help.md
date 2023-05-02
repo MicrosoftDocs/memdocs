@@ -72,6 +72,8 @@ The Remote Help app supports the following capabilities:
 
   For unenrolled devices, auditing and reporting about the Remote Help sessions is limited.
 
+- **Enhanced chat** - Remote Help includes enhanced chat that maintains a continuous thread of all messages. This chat supports special characters and additional languages including Chinese and Arabic. For more information on languages supported, see [Languages Supported](#languages-supported).
+
 ## Prerequisites
 
 - [Intune subscription](../fundamentals/licenses.md)
@@ -206,7 +208,8 @@ To configure your tenant to support Remote Help, review and complete the followi
 
 > [!NOTE] 
 > When you purchase licenses or start a trial, it could take a while to become active (anywhere between 30 minutes to 8 hours). 
-> When you try to create a Remote Help session you may continue to see messages indicating that Remote Help isn't enabled for the tenant even if you enabled Remote Help in the tenant after activation. 
+> When you try to create a Remote Help session you may continue to see messages indicating that Remote Help isn't enabled for the tenant even if you enabled Remote Help in the tenant after activation.
+ 
 ### Task 2 – Configure permissions for Remote Help
 
 The following Intune RBAC permissions manage the use of the Remote Help app. Set each to *Yes* to grant the permission:
@@ -354,7 +357,7 @@ Remote Help is supported in the following languages:
 - Lithuanian
 - Norwegian
 - Polish
-- Portuguese (Portugal)
+- Portuguese
 - Romanian
 - Russian
 - Serbian
@@ -374,12 +377,6 @@ If a conditional access policy is configured as described above and if the devic
 ## What's New for Remote Help
 
 Updates for Remote Help are released periodically. When we update Remote Help, you can read about the changes here.
-
-### May 2, 2023
-
-Version: (need to add) - Changes in this release:
-
-With this release Remote Help includes a new enhanced chat that maintains a continuous thread of all messages. This chat now supports special characters and additional languages including Chinese and Arabic.
  
 ### March 27, 2023
 
