@@ -184,7 +184,7 @@ Available for Android Enterprise Zebra devices that are running Android 8 or lat
 ### Renaming Proactive remediation to Remediations and moving to a new location<!-- 16526263  -->  
 Going forward Proactive remediations will be known as Remediations and will be available from Devices > Remediations. You will still be able to find Remediations in both the new location and the existing Reports > Endpoint Analytics location until the next Intune service update. Remediations are not currently available in the new [Devices experience preview](../fundamentals/microsoft-intune-admin-center-devices.md).
 
-Remediations will now use the Windows license verification category in Tenant administration > Connectors and tokens > Windows data to verify that you own the Windows E3 or equivalent licenses required to use the feature. Customers who previously verified licensing for Remediations prior to this change will automatically be migrated to this category.
+Remediations will now use the [Windows license verification](../protect/data-enable-windows-data.md#windows-license-verification) category in Tenant administration > Connectors and tokens > Windows data to verify that you own the Windows E3 or equivalent licenses required to use the feature. Customers who previously verified licensing for Remediations prior to this change will automatically be migrated to this category.
 
 #### Create inbound and outbound network traffic rules for VPN profiles on Windows devices<!-- 17943658  -->  
 You can create a device configuration profile that deploys a VPN connection to devices (**Devices** > **Configuration profiles** > **Create profile** > **Windows 10 and later** for platform > **Templates** > **VPN** for profile type).
