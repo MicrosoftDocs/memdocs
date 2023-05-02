@@ -86,7 +86,7 @@ Using Intune policies, you can also force users to update their devices:
 
 - If devices are configured with a PIN, then to start the software update, you must enter the PIN. Entering the PIN typically isn't an issue for information worker 1:1 devices.
 
-  When planning for updates on kiosks, factory floor or userless scenarios, you may need to adjust your processes to accomodate for the PIN behavior.
+  When planning for updates on kiosks, factory floor or userless scenarios, you may need to adjust your processes to accommodate for the PIN behavior.
 
 ### ✔️ Use the built-in settings
 
