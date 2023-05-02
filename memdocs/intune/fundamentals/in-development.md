@@ -83,6 +83,9 @@ Assignment filters will support MAM app protection policies and app configuratio
 
 For more information on filters, go to [Use filters when assigning your apps, policies, and profiles in Microsoft Intune](filters.md).
 
+### Advanced application management<!-- 10986080  -->  
+Advanced application management provides you with an enterprise catalog of applications that are easily accessible. It also provides application update capabilities. The enterprise catalog is planned to be available in public preview in June 2023. The application update capabilities are planned to be available in June/July 2023.
+
 ### Install required apps during pre-provisioning<!-- 12716381   -->  
 A new toggle will be available in the Enrollment Status Page (ESP) profile that allows you to select whether you want to attempt to install required applications during pre-provisioning (white glove) technician phase. We understand that installing as many applications as possible during pre-provisioning is desired to reduce the end user setup time. To help, we've implemented an option to attempt the installation of all the required apps assigned to a device during technician phase. If there's an app install failure, ESP will continue except for the apps specified in ESP profile. To enable this function, you'll need to edit your Enrollment Status Page profile by selecting **Yes** on the new setting entitled **Only fail selected apps in technician phase**. This setting will only appear if you have blocking apps selected. For information about ESP, go to [Set up the Enrollment Status Page](../enrollment/windows-enrollment-status.md).
 
