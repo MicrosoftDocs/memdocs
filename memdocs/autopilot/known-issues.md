@@ -25,6 +25,8 @@ ms.topic: troubleshooting
 
 This article describes known issues that can often be resolved with configuration changes, or might be resolved automatically in a future release. For information about issues that can be resolved by applying a cumulative update, see [Windows Autopilot - resolved issues](resolved-issues.md).
 
+If you are experiencing issues with Autopilot with Co-management, see [Windows Autopilot with co-management](autopilot-enrollment.md).
+
 ## Known issues
 
 ### Kiosk device profile not auto logging in
