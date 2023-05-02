@@ -4,7 +4,7 @@ description: Guidance and advice for administrators that create and manage softw
 ms.author: brenduns
 author: Brenduns
 manager: dougeby
-ms.date: 05/01/2023
+ms.date: 05/02/2023
 audience: ITPro
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -58,7 +58,7 @@ When users install their own updates (instead of admins managing the updates), i
 
 ### ✔️ Keep automatic updates enabled
 
-Starting with iOS/iPadOS 12, when updates are available, Apple devices automatically install the updates. By default, this feature is enabled on new devices. **Keep this feature enabled**. If Automatic updates have been disabled, then due to an OS limitation, they can't be changed using policies. The setting must be manually changed on the device or the device must be reset & reprovisioned.
+Starting with iOS/iPadOS 12, when updates are available, Apple devices automatically install the updates. By default, this feature is enabled on new devices. **Keep this feature enabled**.
 
 To use this automatic patching and install updates faster, make sure the devices are:
 
@@ -79,6 +79,14 @@ Using Intune policies, you can also force users to update their devices:
 - Use [Enrollment Restrictions](../enrollment/create-device-platform-restrictions.md) to prevent users from enrolling devices that aren't current.
 - Create [compliance policies](../protect/compliance-policy-create-ios.md) to determine the devices that aren't updated.
 - Create [Conditional Access (CA) policies](../protect/create-conditional-access-intune.md) to block devices that aren't updated. The CA policies can also prompt users to install current updates so they regain access.
+
+#### What you need to know
+
+- If the automatic updates feature is disabled, then due to an OS limitation, it can't be changed using policies. The setting must be manually changed on the device or the device must be reset & reprovisioned.
+
+- If devices are configured with a PIN, then to start the software update, you must enter the PIN. Entering the PIN typically isn't an issue for information worker 1:1 devices.
+
+  When planning for updates on kiosks, factory floor or userless scenarios, you may need to adjust your processes to accomodate for the PIN behavior.
 
 ### ✔️ Use the built-in settings
 
