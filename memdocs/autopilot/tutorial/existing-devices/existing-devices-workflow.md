@@ -44,6 +44,17 @@ Windows Autopilot deployment for existing devices is useful for the following sc
 
 Windows Autopilot deployment for existing devices can be viewed as a method to prepare an existing device for an Autopilot deployment.
 
+> [!NOTE]
+>
+> The JSON file for Windows Autopilot for existing devices only supports user-driven Azure AD and user-driven hybrid Azure AD Autopilot profiles. Self-deploying and pre-provisioning Autopilot profiles aren't supported with JSON files due to these scenarios requiring TPM attestation. TPM attestation only works where there's an existing Autopilot device since the TPM attestation information is stored in the Autopilot device object.
+>
+> However, during the Windows Autopilot for existing devices deployment, if the following conditions are true:
+>
+> - Device is already a Windows Autopilot device before the deployment begins
+> - Device has an Autopilot profile assigned to it
+>
+> then the assigned Autopilot profile takes precedence over the JSON file installed by the task sequence. In this scenario, if the assigned Autopilot profile is either a self-deploying or pre-provisioning Autopilot profile, then the self-deploying and pre-provisioning scenarios are supported.
+
 ## Workflow
 
 The following steps are needed to configure and then perform a Windows Autopilot deployment for existing devices deployment using Intune and Microsoft Configuration Manager:
