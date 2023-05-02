@@ -309,6 +309,6 @@ When using co-managed devices, you must switch the **Device configuration** work
 - View the settings in the latest versions of the available baselines:
   - [Windows 10 and later - MDM security baseline](security-baseline-settings-mdm-all.md)
   - [Microsoft Defender for Endpoint baseline](security-baseline-settings-defender-atp.md)
-  - [Microsoft 365 Apps for Enterprise (Office baseline)](security-baseline-settings-office.md)
+  - [Microsoft 365 Apps for Enterprise (Office baseline)](security-baseline-new-office-settings.md)
   - [Microsoft Edge (Version 107 and later)](security-baseline-settings-edge.md?pivots-edge-may-2023)
   - [Windows 365 Security Baseline](security-baseline-settings-windows-365.md)

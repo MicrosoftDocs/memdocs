@@ -166,7 +166,7 @@ To learn more about using security baselines, see:
 
 - **Prevent bypassing of Microsoft Defender SmartScreen warnings about downloads**  
   Baseline default: *Enabled*  
-  [Learn more](windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles)
+  [Learn more](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles)
 
 <!-- ::: zone-end  -->
 
