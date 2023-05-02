@@ -330,10 +330,10 @@ Now that you've installed your token, you can create an enrollment profile for a
      
       The await configuration setting is unavailable in profiles with this combination of configurations:  
       * User affinity: **Enroll without user affinity** (Step 6 in this section)
-      * Shared iPad: **Yes**  (Step 12 in this section) 
+      * Shared iPad: **Yes**  (Step 12 in this section)  
       
-   > [!IMPORTANT]
-   > This feature is in public preview. For more information, see [Public preview in Microsoft Intune](../fundamentals/public-preview.md).  
+      > [!IMPORTANT]
+      > This feature is in public preview. For more information, see [Public preview in Microsoft Intune](../fundamentals/public-preview.md).  
  
 
 16. Optionally, create a device name template to quickly identify devices assigned this profile in the admin center. Intune uses your template to create and format device names. The names are given to devices when they enroll and upon each successive check-in. To create a template: 
