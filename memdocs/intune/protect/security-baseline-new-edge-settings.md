@@ -69,106 +69,90 @@ To learn more about using security baselines, see:
 ## Microsoft Edge
 
 ::: zone pivot="edge-may2023-112"
+**Microsoft Edge baseline for May 2023 (Edge version 112)**  
 
 - **Allow unconfigured sites to be reloaded in Internet Explorer mode**  
   Baseline default: *Disabled*  
-  [Learn more](URL)
   
 - **Allow users to proceed from the HTTPS warning page**  
   Baseline default: *Disabled*  
-  [Learn more](URL)
 
 - **Enable browser legacy extension point blocking**  
   Baseline default: *Enabled*  
-  [Learn more](URL)
 
 - **Enable site isolation for every site**  
   Baseline default: *Enabled*  
-  [Learn more](URL)
 
 - **Enhance images enabled**  
   Baseline default: *Disabled*  
-  [Learn more](URL)
 
 - **Force WebSQL to be enabled**  
   Baseline default: *Disabled*  
-  [Learn more](URL)
 
 - **Minimum TLS version enabled**  
   Baseline default: *Enabled*  
-  [Learn more](URL)
 
   - **Minimum SSL version enabled (Device)**  
     Baseline default: *TLS 1.2*  
-    [Learn more](URL)
 
 - **Show the Reload in Internet Explorer mode button in the toolbar**  
   Baseline default: *Disabled*  
-  [Learn more](URL)
 
 - **Specifies whether SharedArrayBuffers can be used in a non cross-origin-isolated context**  
   Baseline default: *Disabled*  
-  [Learn more](URL)
 
 **Extensions**:
 
 - **Control which extensions cannot be installed**  
   Baseline default: *Enabled*  
-  [Learn more](URL)
 
   - **Extension IDs the user should be prevented from installing (or * for all) (Device)**  
     Baseline default: *\**  
-    [Learn more](URL)
   
 **HTTP authentication**:
 
 - **Allow Basic authentication for HTTP**  
   Baseline default: *Disabled*  
-  [Learn more](URL)
 
 - **Supported authentication schemes**  
   Baseline default: *Enabled*  
-  [Learn more](URL)
+  [Learn more](/deployedge/microsoft-edge-policies#authschemes)
 
 - **Supported authentication schemes (Device)**  
     Baseline default: *ntlm,negotiate*  
-    [Learn more](URL)
 
 **Native Messaging**:
 
 - **Allow user-level native messaging hosts (installed without admin permissions)**  
   Baseline default: *Disabled*  
-  [Learn more](URL)
 
 **Password manager and protection**:
 
 - **Enable saving passwords to the password manager**  
   Baseline default: *Disabled*  
-  [Learn more](URL)
+  [Learn more](/windows/client-management/mdm/policy-csp-browser#browser-allowpasswordmanager)
 
 **Private Network Request Settings**:
 
 - **Specifies whether to allow insecure websites to make requests to more-private network endpoints**  
   Baseline default: *Disabled*  
-  [Learn more](URL)
 
 **SmartScreen settings**:
 
 - **Configure Microsoft Defender SmartScreen**  
   Baseline default: *Enabled*  
-  [Learn more](URL)
+  [Learn more](/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen)
 
 - **Configure Microsoft Defender SmartScreen to block potentially unwanted apps**  
   Baseline default: *Enabled*  
-  [Learn more](URL)
 
 - **Prevent bypassing Microsoft Defender SmartScreen prompts for sites**  
   Baseline default: *Enabled*  
-  [Learn more](URL)
+  [Learn more](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride)
 
 - **Prevent bypassing of Microsoft Defender SmartScreen warnings about downloads**  
   Baseline default: *Enabled*  
-  [Learn more](URL)
+  [Learn more](windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles)
 
 ::: zone-end
 
