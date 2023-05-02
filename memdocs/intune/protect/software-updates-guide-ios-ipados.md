@@ -66,6 +66,9 @@ To use this automatic patching and install updates faster, make sure the devices
 - Plugged in
 - Connected to the Internet  
 
+> [!NOTE]
+> If devices are configured with a PIN, it will be required to initiate the software update. While this is less likely to be an issue for information worker 1:1 devices, take this into consideration when planning for updates on kiosks, factory floor or userless scenarios. You may need to adjust your processes to accomodate for this.
+
 When the devices are powered on, plugged in, and connected to the Internet, then the updates automatically download & install, and the device reboots. If the device doesn't meet these conditions, then the updates won't automatically download and install.
 
 To keep your devices on the most current version and with minimal effort from you, keep the automatic updates feature enabled:
