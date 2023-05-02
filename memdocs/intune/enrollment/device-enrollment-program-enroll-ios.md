@@ -315,24 +315,25 @@ Now that you've installed your token, you can create an enrollment profile for a
 
 14. If you selected **Allow Apple Configurator by certificate** in the previous step, choose an Apple Configurator certificate to import.  
 15. For **Await final configuration**, your options are:  
-      * **Yes**: Enable a locked experience at the end of Setup Assistant to ensure your most critical device configuration policies are installed on the device. Just before the home screen loads, Setup Assistant pauses and lets Intune check in with the device. The end-user experience locks while users await final configurations. 
-      * The amount of time it takes to release the device to the home screen varies, and depends on the total number of policies and apps applied to the device. The more policies and apps assigned to the device, the longer the end user could be on the "Awaiting final cofniguration" screen in Setup Assistant. There are no minimum or maximum time limits that the end user can be held in Setup Assistant, but most devices will be released by 15 minutes. Some devices may be on the Awaiting final configuration screen longer depending on the volume of targeted apps and policies. If you’re using a third party to provision your devices, tell them about the potential for increased provisioning time if this feature is configured. 
+      * **Yes**: Enable a locked experience at the end of Setup Assistant to ensure your most critical device configuration policies are installed on the device. Just before the home screen loads, Setup Assistant pauses and lets Intune check in with the device. The end-user experience locks while users await final configurations.  
+      
+         The amount of time that users are held on the Awaiting final configuration screen varies, and depends on the total number of policies and apps you apply to the device. The more policies and apps assigned to the device, the longer the waiting time. Neither Setup Assistant nor Intune enforce a minimum or maximum time limit during this portion of setup. During product validation, the majority of devices we tested were released from the screen within fifteen minutes. If you enable this feature and are using a third party to help you provision devices, tell them about the potential for increased provisioning time.     
 
          The locked experience works on devices targeted with new and existing enrollment profiles. Supported devices include:      
          * iOS/iPadOS 13+ devices enrolling with Setup Assistant with modern authentication  
          * iOS/iPadOS 13+ devices enrolling without user affinity   
-         * iOS/iPadOS 13+ devices enrolling with Azure AD shared mode  
+         * iOS/iPadOS 13+ devices enrolling with Azure AD shared mode   
 
-         This setting is applied once during the out-of-box automated device enrollment experience during Setup Assistant. The device user doesn't experience it again unless they re-enroll their device. **Yes** is the default setting for new enrollment profiles.
+         This setting is applied once during the out-of-box automated device enrollment experience in Setup Assistant. The device user doesn't experience it again unless they re-enroll their device. **Yes** is the default setting for new enrollment profiles.  
 
       * **No**: The device is released to the home screen when Setup Assistant ends, regardless of policy installation status. Device users may be able to access the home screen or change device settings before all policies are installed. **No** is the default setting for existing enrollment profiles.  
      
-The await configuration setting is unavailable in profiles with this combination of configurations:  
-* User affinity: **Enroll without user affinity** (Step 6 in this section)
-* Shared iPad: **Yes**  (Step 12 in this section) 
+      The await configuration setting is unavailable in profiles with this combination of configurations:  
+      * User affinity: **Enroll without user affinity** (Step 6 in this section)
+      * Shared iPad: **Yes**  (Step 12 in this section) 
       
-> [!IMPORTANT]
-> This feature is in public preview. For more information, see [Public preview in Microsoft Intune](../fundamentals/public-preview.md).  
+   > [!IMPORTANT]
+   > This feature is in public preview. For more information, see [Public preview in Microsoft Intune](../fundamentals/public-preview.md).  
  
 
 16. Optionally, create a device name template to quickly identify devices assigned this profile in the admin center. Intune uses your template to create and format device names. The names are given to devices when they enroll and upon each successive check-in. To create a template: 
