@@ -43,12 +43,3 @@ groups:
       title: iOS/iPadOS
     - id: macos
       title: macOS
-
-- id: dcv2-edge-baselines
-  title: Microsoft Edge baseline versions
-  prompt: Choose a version
-  pivots:
-    - id: edge-may2023-112
-      title: May 2023 v112
-    - id: edge-future
-      title: Future version

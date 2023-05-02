@@ -27,9 +27,24 @@ ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management
-zone_pivot_groups: dcv2-edge-baselines
+
 ---
 
+<!-- Add when pivots are needed:
+ 
+Metadata:
+zone_pivot_groups: dcv2-edge-baselines
+
+Pivot yml: 
+- id: dcv2-edge-baselines
+  title: Microsoft Edge baseline versions
+  prompt: Choose a version
+  pivots:
+    - id: edge-may2023-112
+      title: May 2023 v112
+    - id: edge-future
+      title: Future version
+-->
 # Microsoft Edge security baseline settings reference for Microsoft Intune
 
 This article is a reference for the settings that are available in the Microsoft Edge security baseline for Microsoft Intune and applies to versions of that baseline that released in May 2023 or later.
@@ -62,14 +77,13 @@ To learn more about using security baselines, see:
 - [Use security baselines](../protect/security-baselines.md)
 - [Manage security baselines](../protect/security-baselines-configure.md).
 
-::: zone pivot="edge-may2023-112"
-**Microsoft Edge baseline for May 2023 (Edge version 112)**  
-::: zone-end
+
 
 ## Microsoft Edge
 
-::: zone pivot="edge-may2023-112"
-**Microsoft Edge baseline for May 2023 (Edge version 112)**  
+<!-- >::: zone pivot="edge-may2023-112" -->
+
+**Microsoft Edge baseline for May 2023 (Edge version 112)**
 
 - **Allow unconfigured sites to be reloaded in Internet Explorer mode**  
   Baseline default: *Disabled*  
@@ -154,7 +168,7 @@ To learn more about using security baselines, see:
   Baseline default: *Enabled*  
   [Learn more](windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles)
 
-::: zone-end
+<!-- ::: zone-end  -->
 
 
 ## Next steps
