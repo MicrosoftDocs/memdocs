@@ -54,7 +54,7 @@ Device configuration support in Microsoft Intune for Windows 10 or Windows 11 En
 > [!NOTE]
 > Device-based configuration cannot be assigned to users and user-based configuration cannot be assigned to devices. It will be reported as **Error** or **Not applicable**.
 
-User configuration support in Microsoft Intune for Windows 11 multi-session VMs is generally available. With this you are able to:
+User configuration support in Microsoft Intune for Windows 10 or Windows 11 multi-session VMs is generally available. With this you are able to:
 
  - Configure user scope policies using **Settings catalog** and assign to groups of users. You can use the search bar to search all configurations with scope set to "user".
  
