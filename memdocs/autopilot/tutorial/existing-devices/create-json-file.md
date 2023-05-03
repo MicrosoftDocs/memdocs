@@ -21,7 +21,7 @@ appliesto:
 # Windows Autopilot deployment for existing devices: Create JSON file for Autopilot profile(s)
 
 Autopilot user-driven Azure AD join steps:
-- Step 1: [Set up a Windows Autopilot deployment](setup-autopilot-deployment.md)
+- Step 1: [Set up a Windows Autopilot profile](setup-autopilot-profile.md)
 - Step 2: [Install required modules to obtain Autopilot profile(s) from Intune](install-modules.md)
 > [!div class="checklist"]
 > - **Step 3: Create JSON file for Autopilot profile(s)**
