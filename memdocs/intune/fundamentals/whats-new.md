@@ -67,7 +67,18 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 -->
 
-## Week of May 1 2023
+## Week of May 1, 2023
+
+### Device configuration
+
+#### Remote Help now supports conditional access capability<!--16108299 -->
+
+Administrators can now utilize conditional access capability when setting up policies and conditions for Remote Help. For example, multi-factor authentication, installing security updates, and locking access to Remote Help for a specific region or IP addresses.
+
+For more information, go to:
+
+- [Conditional access](../protect/conditional-access.md)
+- [Remote Help](../fundamentals/remote-help.md#setup-conditional-access-for-remote-help)
 
 ### Device security
 
