@@ -67,7 +67,6 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 -->
 
-
 ## Week of April 17, 2023 (Service release 2304)
 
 ### App management

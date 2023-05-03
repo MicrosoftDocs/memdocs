@@ -29,16 +29,6 @@ This issue impacts custom client settings objects that include the **Computer Ag
 **Mitigation:**
 To properly configure devices governed by custom client settings for Endpoint analytics, manually set the **Enable Endpoint analytics data collection** setting to **No** and select **OK** to close the settings. Then, reopen the custom client settings and change the **Enable Endpoint analytics data collection** setting back to **Yes** and select **OK**. This change will force the custom client settings to update on targeted devices.
 
-### User experience blade not available in All Devices report for some devices
-
-When viewing the **Devices** > **All Devices** report in Intune, the **User experience** blade may not be available for some devices that are enrolled in Endpoint analytics.
-
-**Impacted devices:**
-This issue impacts co-managed devices. Devices enrolled only via Intune or only via Configuration Manager are not affected.
-
-**Workaround:**
-The User experience blade is available for all devices, including co-managed devices, within the Endpoint analytics solution. Navigate to **Startup performance** > **Device performance**, then click to drill down into a device.
-
 ### <a name="bkmk_2016281112"></a> Error code -2016281112 (Remediation failed)
 
 Customers may see profile assignment errors, where affected devices show an error code of `-2016281112 (Remediation failed)` if they can't correctly be assigned the [Intune data collection](settings.md#bkmk_profile) policy. Startup performance insights are only available for devices running Windows 10 version 1903 or later Enterprise, Education, or Pro. Long-term servicing channel (LTSC) isn't supported.
