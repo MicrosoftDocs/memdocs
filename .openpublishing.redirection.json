@@ -949,6 +949,11 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "memdocs/autopilot/tutorial/existing-devices/setup-autopilot-deployment.md",
+            "redirect_url": "memdocs/autopilot/tutorial/existing-devices/setup-autopilot-profile.md",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "memdocs/configmgr/hotfix/2103/KB9603111.md",
             "redirect_url": "/mem/configmgr/hotfix/2103/9603111",
             "redirect_document_id": false
