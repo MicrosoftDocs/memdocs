@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/14/2023
+ms.date: 05/02/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -33,16 +33,16 @@ ms.collection:
 
 When you create an app, compliance policy, or configuration profile, you assign the policy to groups (users or devices). When you assign the app or policy, you can also use filters. For example, you can assign policies to Windows 10/11 devices running a specific OS version. For more information, see [Use filters when assigning your apps, policies, and profiles](filters.md).
 
-Devices are evaluated against these filters to meet the rules you configure. The results of the filter evaluations are logged, and reported in the Microsoft Intune admin center.
+Managed apps and managed devices are evaluated against these filters to meet the rules you configure. The results of the filter evaluations are logged, and reported in the Microsoft Intune admin center.
 
 Use this article to learn more about the reporting features, and to help troubleshoot filters and conflicts.
 
 > [!IMPORTANT]
 > From evaluation time, the filter evaluation results can take up to 30 minutes to show in the Intune admin center.
 
-## Reports
+## Reports for managed devices
 
-The Intune admin center has per-device and per-app reporting information. Use this information to help troubleshoot filter evaluation, and determine why a policy applied or didn’t apply.
+The Intune admin center has per-device and per-app reporting information. Use this information to help troubleshoot filter evaluation, and determine why a policy applied or didn't apply.
 
 You can use the following reports to get more information on your filters:
 
@@ -103,18 +103,28 @@ In the following example, you can see this information for the **Microsoft Word*
 > - When assigning a policy, you can add devices to the "Excluded groups". These excluded devices aren't shown in the workload device status reports.
 > - In the **Apps** and **Settings Catalog** device status reports, there's a column that shows any filter evaluation. Currently, the filter evaluation information isn't available for all Intune workloads.
 
+## Reports for managed apps  
+
+Note: There is no conflict resolution available between managed device and managed app filters as they cannot be targeted to the same workloads.
+
+The Intune admin center has per-device and per-platform reporting information for managed apps. Use this information to help troubleshoot filter evaluation, and determine why a policy applied or didn't apply.
+
+You can use the following reports to get more information on properties used for the assignmnet filter action:
+
+- App Protection Status Report (in this article)
+- App Configuration Status Report (in this article)
 
 ## Include vs. Exclude
 
-When you create a filter, you choose to include or exclude devices based on some properties, such as `device.model -equals “Surface pro”`, or `device.model -notEquals “Surface pro”`. It can be difficult to understand the evaluation results, especially when including or excluding devices.
+When you create a filter, you choose to include or exclude devices based on some properties, such as `device.model -equals "Surface pro"`, or `device.model -notEquals "Surface pro"`. It can be difficult to understand the evaluation results, especially when including or excluding devices.
 
 Use the following table to help understand when you include or exclude devices:
 
 | Filter mode | Filter result | Overall result |
 | --- | --- | --- |
 | Include | Match | Apply policy or app assignment |
-| Include | Not Match | Don’t apply policy or app assignment |
-| Exclude | Match | Don’t apply policy or app assignment |
+| Include | Not Match | Don't apply policy or app assignment |
+| Exclude | Match | Don't apply policy or app assignment |
 | Exclude | Not Match | Apply policy or app assignment |
 
 ### What you need to know
@@ -136,7 +146,7 @@ Use the following table to help understand when you include or exclude devices:
 
 - The latest filter evaluation results are stored for 30 days. If the logs are expired, you may see a **We were not able to retrieve any filter evaluation results** message.
 
-## Filters and assignment conflict resolution
+## Filters and assignment conflict resolution for managed devices
 
 When you assign a policy to a group (users or devices), it's possible to overlap assignments. It's not recommended, as the overlapping can cause conflicts.
 

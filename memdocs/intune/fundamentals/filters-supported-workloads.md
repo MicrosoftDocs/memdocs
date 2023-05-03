@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/27/2022
+ms.date: 05/02/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -33,18 +33,19 @@ ms.collection:
 
 When you create an app, compliance policy, configuration profile, or app configuration policy, you assign the policy to groups (users or devices). When you assign the policy, you can also use filters. For example, you can assign policies to Windows client devices running a specific OS version. For more information, see [Use filters when assigning your apps, policies, and profiles](filters.md).
 
-Filters support some of the different workloads available in Microsoft Intune. This article lists the app types, compliance policies, device configuration profiles, and app configuration policies that support filters. It also lists the workloads that aren't supported.
+You can use filters on managed devices and managed apps. Filters support some of the different workloads available in Microsoft Intune. This article lists the app types, compliance policies, device configuration profiles, and app configuration policies that support filters. It also lists the workloads that aren't supported.
+
+This article assumes you're familiar with filters. If not, you can learn more at [Use filters when assigning your apps, policies, and profiles](filters.md).
 
 ## Before you begin
 
-- This article assume you're familiar with filters. If not, you can learn more at [Use filters when assigning your apps, policies, and profiles](filters.md).
 - ✔️: Supports filters.
 - ❌: Doesn't support filters
 - N/A: Doesn't apply to the platform.
 
-## App types
+## Supported app types for managed devices
 
-You can use filters for some common app policies on the following platforms. For a list of what's not supported, see [not supported](#not-supported) (in this article).
+You can use filters for some common app policies on the following platforms. For a list of what's not supported on managed devices, go to [not supported](#not-supported-on-managed-devices) (in this article).
 
 ### Android device administrator
 
@@ -112,23 +113,34 @@ You can use filters for some common app policies on the following platforms. For
 | Microsoft Store for Business | ✔️ |
 
 ## App configuration policies
-You can use filters for app configuration policies for managed devices on the following platforms:
-- Android Enterprise
-- iOS/iPadOS
+
+- For **managed devices**, you can use filters for app configuration policies on the following platforms:
+
+  - Android Enterprise
+  - iOS/iPadOS
+
+- For **managed apps**, you can use filters for app configuration policies on the following platforms:
+
+  - Android
+  - iOS/iPadOS
 
 ## Compliance policies
 
-You can use filters for all compliance policies on the following platforms:
+- For **managed devices**, you can use filters for all compliance policies on the following platforms:
 
-- Android device administrator
-- Android Enterprise
-- iOS/iPadOS
-- macOS
-- Windows 10 and later
+  - Android device administrator
+  - Android Enterprise
+  - iOS/iPadOS
+  - macOS
+  - Windows 10 and later
+
+- For **managed apps**, filters aren't supported for compliance policies.
 
 ## Device configuration profiles and Endpoint security
 
-You can use filters for some common device configuration policies on the following platforms. For a list of what's not supported, see [not supported](#not-supported) (in this article).
+On **managed devices**, you can use filters for some common device configuration policies on the following platforms. For a list of what's not supported, see [not supported](#not-supported-on-managed-devices) (in this article).
+
+For **managed apps**, filters aren't supported for device configuration profiles and endpoint security policies.
 
 > [!NOTE]
 > Some profile types are only available for specific platforms. For example, the **Device features** profile type includes settings that are only available for iOS/iPadOS and macOS devices. 
@@ -300,12 +312,12 @@ You can use filters for some common device configuration policies on the followi
 | Firewall | ✔️ |
 | Security Baselines | ❌ |
 
-## Not supported
+## Not supported on managed devices
 
-The following features don't support using filters:
+The following features on managed devices don't support using filters:
 
 - Custom compliance policies for Windows 10/11 (preview)
-- App protection policies for Android, iOS/iPadOS, and Windows
+- App protection policies for Android and iOS/iPadOS
 - End user experiences customization policies
 - iOS/iPadOS app provisioning profiles
 - Partner device management

@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/14/2023
+ms.date: 05/02/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -33,27 +33,42 @@ ms.collection:
 
 When you create a policy, you can use filters to assign a policy based on rules you create. A filter allows you to narrow the assignment scope of a policy. For example, use filters to target devices with a specific OS version or a specific manufacturer, target only personal devices or only organization-owned devices, and more.
 
-For example, you can use filters in the following scenarios:
+Filters are available for:
+
+- Devices enrolled in Intune, which are **managed devices**.
+- Apps that are managed by Intune, which are **managed apps**.
+
+  Managed apps are common in mobile application management (MAM) scenarios that involve managing apps on devices that aren't enrolled in Intune, which is common with personally owned devices. For more ifnormation on MAM in Intune, go to [What is Microsoft Intune app management?](../apps/app-management.md).
+
+You can use filters in the following scenarios:
 
 - Deploy a Windows device restriction policy to only the corporate devices in the Marketing department, while excluding personal devices.
 - Deploy an iOS/iPadOS app to only the iPad devices in the Finance users group.
 - Deploy an Android mobile phone compliance policy to all users in the company, and exclude Android meeting room devices that don't support the mobile phone compliance policy settings.
+- On unmanaged devices, deploy an app configuration policy for a specific app manufacturer or an app protection policy that runs a specific OS version.
 
 Filters include the following features and benefits:
 
 - Improve flexibility and granularity when assigning Intune policies and apps.
-- Are used when assigning app, policies, and profiles. They dynamically target devices based on device properties you enter.
-- Can include or exclude devices in a specific group based on criteria you enter.
-- Create a query of device properties based on the device platform, including Android, iOS/iPadOS, macOS, and Windows client.
-- Can be used and reused in multiple scenarios in “Include” or “Exclude” mode.
+- Are used when assigning app, policies, and profiles. They dynamically target managed devices based on device properties and target managed apps based on app properties you enter.
+- Can include or exclude devices or apps in a specific group based on criteria you enter.
+- Can create a query of device or app properties based on different properties, like device platform or application version.
+- Can be used and reused in multiple scenarios in "Include" or "Exclude" mode.
 
 This feature applies to:
 
-- Android device administrator
-- Android Enterprise
-- iOS/iPadOS
-- macOS
-- Windows 10/11
+- Managed devices on the following platforms:
+
+  - Android device administrator
+  - Android Enterprise
+  - iOS/iPadOS
+  - macOS
+  - Windows 10/11
+
+- Managed apps on the following platforms:
+
+  - Android
+  - iOS/iPadOS
 
 This article describes the filter architecture, and shows you how to create, update, and delete a filter.
 
@@ -61,7 +76,7 @@ This article describes the filter architecture, and shows you how to create, upd
 
 :::image type="content" source="./media/filters/admin-creates-filter.png" alt-text="Screenshot that shows how the admin creates a filter, and uses the filter in a policy in Microsoft Intune." lightbox="./media/filters/admin-creates-filter.png":::
 
-Before a policy is applied to a device, filters dynamically evaluate applicability. Looking at the image, here's an overview:
+Before a policy is applied to an app or device, filters dynamically evaluate applicability. Looking at the image, here's an overview:
 
 1. You create a reusable filter for any platform based on some device properties. In the example, the filter is for personal devices.
 
@@ -77,9 +92,10 @@ There are some restrictions when creating filters:
 
 - For each tenant, there can be up to 200 filters.
 - Each filter is limited to 3072 characters.
-- Devices must be enrolled in Intune. Filters can't be evaluated on devices that aren't enrolled. This behavior includes:
+- For managed devices, the devices must be enrolled in Intune. Filters can't be evaluated on devices that aren't enrolled. This behavior includes:
   - A restriction on the **Available with or without enrollment** app assignment intent
   - Devices that are targeted with Endpoint Security configuration using Microsoft Defender for Endpoint integration, such as servers.
+- For managed apps, filters apply to app protection policies and app configuration policies.
 
 ## Prerequisites
 
@@ -95,16 +111,26 @@ There are some restrictions when creating filters:
     - **Devices** > **Filters**
     - **Apps** > **Filters**
 
+3. Select **Managed devices** or **Managed apps**:
+
+    :::image type="content" source="./media/filters/managed-apps-managed-devices.png" alt-text="Screenshot that shows selecting Managed apps or Managed devices when creating a filter in the Microsoft Intune admin center.":::
+
 3. In **Basics**, enter the following properties:
 
     - **Filter name**: Enter a descriptive name for the filter. Name your filters so you can easily identify them later. For example, a good filter name is **Windows OS version filter**.
     - **Description**: Enter a description for the filter. This setting is optional, but recommended.
     - **Platform**: Select your platform. Your options:
-      - Android device administrator
-      - Android Enterprise
-      - iOS/iPadOS
-      - macOS
-      - Windows 10 and later
+
+      - **Managed devices**:
+        - Android device administrator
+        - Android Enterprise
+        - iOS/iPadOS
+        - macOS
+        - Windows 10 and later
+
+      - **Managed apps**:
+        - Android
+        - iOS/iPadOS
 
 4. Select **Next**.
 5. In **Rules**, there are two ways to create a rule: Use the **rule builder**, or use the **rule syntax**.
@@ -131,7 +157,7 @@ There are some restrictions when creating filters:
 
     :::image type="content" source="./media/filters/rule-syntax-example.png" alt-text="Screenshot that shows how to use the expression builder to enter your rule syntax in Microsoft Intune.":::
 
-    For more information on writing your own expressions, see [Device properties, operators, and rule editing when creating filters](filters-device-properties.md).
+    For more information on writing your own expressions, see [Device and app properties, operators, and rule editing when creating filters](filters-device-properties.md).
 
     Select **OK** to save your expression.
 
