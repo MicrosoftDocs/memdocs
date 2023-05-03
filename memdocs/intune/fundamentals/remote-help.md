@@ -336,9 +336,8 @@ Depending on the environment that Remote Help is utilized in, it may be necessar
 
 This section outlines the steps for provisioning the Remote Help service on the tenant for conditional access.
 
-1. Open PowerShell in admin mode.  
-
-2. It may be necessary to install [AzureADPreview](https://www.powershellgallery.com/packages/AzureADPreview/2.0.2.149)  
+1. Open PowerShell in admin mode.
+    - It may be necessary to install [AzureADPreview](https://www.powershellgallery.com/packages/AzureADPreview/2.0.2.149)  
 3. Within PowerShell enter the following commands:
 
     - Install-Module -Name AzureADPreview
