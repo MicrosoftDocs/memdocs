@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/19/2023
+ms.date: 05/02/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -66,6 +66,42 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Scripts
 ### Tenant administration
 -->
+
+## Week of May 1 2023
+
+### Device security
+
+#### Updated settings for Microsoft Defender in endpoint security Antivirus policy<!-- 19991301 Wnready wnstaged -->  
+We’ve updated the available settings in the *Microsoft Defender Antivirus* profile for endpoint security Antivirus policy.  You can find this profile in the Intune admin center at **Endpoint security** > **Antivirus** > *Platform:* **Windows 10, Windows 11, and Windows Server**  > *Profile:* **Microsoft Defender Antivirus**.  
+- **The following settings have been added**:
+
+  - Metered Connection Updates
+  - Disable Tls Parsing
+  - Disable Http Parsing
+  - Disable Dns Parsing
+  - Disable Dns Over Tcp Parsing
+  - Disable Ssh Parsing
+  - Platform Updates Channel
+  - Engine Updates Channel
+  - Security Intelligence Updates Channel
+  - Allow Network Protection Down Level
+  - Allow Datagram Processing On Win Server
+  - Enable Dns Sinkhole
+
+  For more information about these settings, see the [Defender CSP]( /windows/client-management/mdm/Defender-csp?WT.mc_id=Portal-fx).
+The new settings are also available through the Intune [Settings Catalog](../configuration/settings-catalog.md).
+
+- **The following setting has been deprecated**:
+
+  - Allow Intrusion Prevention System
+
+  This setting now appears with the *Deprecated* tag. If this deprecated setting was previously applied on a device, the setting value is updated to *NotApplicable* and has no effect on the device. If this setting is subsequently set on a device, there will be no effect on the device.
+
+Applies to:
+
+- Windows 10
+- Windows 11
+
 
 ## Week of April 17, 2023 (Service release 2304)
 
