@@ -48,8 +48,8 @@ ELSE IF @RetentionUnit = 2
 ELSE IF @RetentionUnit = 3
     SET @CTCutOffTime = DATEADD(DAY,-@RetentionPeriod,GETUTCDATE())
 
--- give a buffer of two days
-SET @CTCutOffTime = DATEADD(DAY, -2, @CTCutOffTime)
+-- give a buffer of five days
+SET @CTCutOffTime = DATEADD(DAY, -5, @CTCutOffTime)
 select top 1 @CTMinTime=commit_time from sys.dm_tran_commit_table order by commit_ts asc
 IF @CTMinTime < @CTCutOffTime
     PRINT 'there is change tracking backlog, please contact Microsoft support'
