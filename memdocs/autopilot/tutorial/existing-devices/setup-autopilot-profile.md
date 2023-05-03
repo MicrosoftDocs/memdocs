@@ -37,20 +37,20 @@ For an overview of the Windows Autopilot deployment for existing devices workflo
 
 ## Set up a Windows Autopilot profile
 
-Windows Autopilot deployment for existing devices isn't an Autopilot deployment profile that is downloaded and applied to a device during the out of box experience (OOBE) of Windows Setup. Instead, it prepares a device to receive an Autopilot profile by performing the following actions:
+Windows Autopilot deployment for existing devices isn't an Autopilot deployment where an Autopilot profile is downloaded and applied to a device during the out of box experience (OOBE) of Windows Setup. Instead, it prepares a device to receive an Autopilot profile by performing the following actions:
 
 - Wipes the device.
 - Installs a fresh copy of Windows.
 - Installs a JSON file that contains the information for an existing Autopilot profile.
 
-The first step in a Windows Autopilot for existing devices deployment is to make sure there's already an existing valid Autopilot profile so that the JSON file can be created. Since the JSON file only supports the user-driven Azure AD join and user-driven hybrid Azure AD join Autopilot scenarios, one of the following steps from the respective scenario workflows can be used to create a valid Autopilot profile:
+The first step in a Windows Autopilot for existing devices deployment is to make sure there's already an existing valid Autopilot profile in Intune so that the JSON file can be created. Since the JSON file only supports the user-driven Azure AD join and user-driven hybrid Azure AD join Autopilot scenarios, one of the following steps from the respective scenario workflows can be used to create a valid Autopilot profile:
 
 - [User-driven Azure AD join: Create and assign user-driven Azure AD join Autopilot profile](../user-driven/azure-ad-join-autopilot-profile.md)
 - [User-driven hybrid Azure AD join: Create and assign user-driven hybrid Azure AD join Autopilot profile](../user-driven/hybrid-azure-ad-join-autopilot-profile.md)
 
 > [!NOTE]
 >
-> In the above steps, it's not necessary to assign the Autopilot profile for Windows Autopilot deployment for existing devices to work. The Autopilot profile only needs to be created so that the JSON file can then be created.
+> In the above steps, it's not necessary to assign the Autopilot profile for Windows Autopilot deployment for existing devices scenario to work. The Autopilot profile only needs to be created so that the JSON file can then be created.
 
 Once a valid Windows Autopilot profile has been created and confirmed working on an existing Autopilot device, then proceed to [Step 2: Install required modules to obtain Autopilot profile(s) from Intune](install-modules.md).
 

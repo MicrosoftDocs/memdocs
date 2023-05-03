@@ -62,6 +62,10 @@ To export the Autopilot profiles as JSON files, follow these steps:
 
 1. Once all the commands have run successfully, the Autopilot profile(s) appears on the Desktop in a folder with the name of the Autopilot profile from Intune. If there are multiple Autopilot profiles, each profile has its own folder on the Desktop. In each folder, there's a JSON file named **`AutopilotConfigurationFile.json`**.
 
+> [!NOTE]
+>
+> The above script exports all Autopilot profiles from Intune. In addition to supported user-driven Autopilot profiles, it will also download unsupported pre-provisioning Autopilot profiles and self-deploying Autopilot profiles if they exist in the environment.
+
 ## Next step: Create and distribute package for JSON file in Configuration Manager
 
 > [!div class="nextstepaction"]
