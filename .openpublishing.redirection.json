@@ -950,7 +950,7 @@
         },
         {
             "source_path": "memdocs/autopilot/tutorial/existing-devices/setup-autopilot-deployment.md",
-            "redirect_url": "memdocs/autopilot/tutorial/existing-devices/setup-autopilot-profile.md",
+            "redirect_url": "memdocs/autopilot/tutorial/existing-devices/setup-autopilot-profile",
             "redirect_document_id": false
         },
         {
