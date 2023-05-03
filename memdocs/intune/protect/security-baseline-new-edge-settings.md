@@ -170,7 +170,6 @@ To learn more about using security baselines, see:
 
 <!-- ::: zone-end  -->
 
-
 ## Next steps
 
 - [Learn about security baselines](../protect/security-baselines.md)

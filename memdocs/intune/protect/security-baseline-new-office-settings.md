@@ -255,8 +255,7 @@ To learn more about using security baselines, see:
 
   - **Checked: Allow edit. Unchecked: Do not allow edit. (User)**  
     Baseline default: *False*  
-  
-    Baseline default: *Open in Protected View*
+    - Baseline default: *Open in Protected View*
 
 - **Turn off Protected View for attachments opened from Outlook (User)**  
   Baseline default: *Disabled*
@@ -963,100 +962,395 @@ To learn more about using security baselines, see:
   - **winproj.exe (Device)**  
     Baseline default: *True*
 
- 
-
-
 ### Microsoft Outlook 2016
 
 *Security > Security Form Settings*
 
 The "Outlook Security Mode" policy controls how security settings in Outlook are enforced. To manage any of the dependent Outlook security policies using Microsoft Endpoint Manager, Office cloud policy service, or Group policy this policy must be enabled and the Outlook Security Policy dropdown set to "Use Outlook Security Group Policy".
 
-- **Outlook Security Mode (User)**
-    *Enabled*
-  - **Outlook Security Policy: (User)**
-     *Use Outlook Security Group Policy*
-    - **Guard behavior: (User)**
-Automatically Deny
-Configure Outlook object model prompt When accessing the Formula property of a UserProperty object (User)
-Enabled
-Guard behavior: (User)
-Automatically Deny
-Authentication with Exchange Server (User)
-Enabled
-Select the authentication with Exchange server. (User)
-Kerberos Password Authentication
-Configure Outlook object model prompt when reading address information (User)
-Enabled
-Guard behavior: (User)
-Automatically Deny
-Enable RPC encryption (User)
-Enabled
-Allow hyperlinks in suspected phishing e-mail messages (User)
-Disabled
-Configure Outlook object model prompt when sending mail (User)
-Enabled
-Allow users to demote attachments to Level 2 (User)
-Disabled
-Allow Active X One Off Forms (User)
-Enabled
-Sets which ActiveX controls to allow. 
-Load only Outlook Controls
-Allow scripts in one-off Outlook forms (User)
-Disabled
-Prevent users from customizing attachment security settings (User)
-Enabled
-Remove file extensions blocked as Level 2 (User)
-Enabled
-Removed Extensions: (User)
- 
-Retrieving CRLs (Certificate Revocation Lists) (User)
-Enabled
-When online always retreive the CRL
-Configure Outlook object model prompt when accessing an address book (User)
-Enabled
-Guard behavior: (User)
-Automatically Deny
-Do not allow Outlook object model scripts to run for public folders (User)
-Enabled
-Include Internet in Safe Zones for Automatic Picture Download (User)
-Disabled
-Signature Warning (User)
-Enabled
-Signature Warning (User)
-Always warn about invalid signatures
-Use Unicode format when dragging e-mail message to file system (User)
-Disabled
-Set Outlook object model custom actions execution prompt (User)
-Enabled
-When executing a custom action: (User)
-Automatically Deny
-Security setting for macros (User)
-Enabled
-Security Level (User)
-Warn for signed, disable unsigned
-Remove file extensions blocked as Level 1 (User)
-Enabled
-Removed Extensions: (User)
- 
-Junk E-mail protection level (User)
-Disabled
-Display Level 1 attachments (User)
-Disabled
-Minimum encryption settings (User)
-Enabled
-Minimum key size (in bits): (User)
- 
-Do not allow Outlook object model scripts to run for shared folders (User)
-Enabled
-Configure Outlook object model prompt when executing Save As (User)
-Enabled
-Guard behavior: (User)
-Automatically Deny
-Configure Outlook object model prompt when responding to meeting and task requests (User)
-Enabled
-Guard behavior: (User)
-Automatically Deny
+- **Outlook Security Mode (User)**  
+  Baseline default: *Enabled*  
+  - **Outlook Security Policy: (User)**  
+    Baseline default: *Use Outlook Security Group Policy*  
+    - **Guard behavior: (User)**  
+      Baseline default: *Automatically Deny*
 
+  - **Configure Outlook object model prompt When accessing the Formula property of a UserProperty object (User)**  
+    Baseline default: *Enabled*  
+    - **Guard behavior: (User)**  
+      Baseline default: *Automatically Deny*
 
+  - **Authentication with Exchange Server (User)**  
+    Baseline default: *Enabled*  
+    - **Select the authentication with Exchange server. (User)**  
+      Baseline default: *Kerberos Password Authentication*
 
+  - **Configure Outlook object model prompt when reading address information (User)**  
+    Baseline default: *Enabled*  
+    - **Guard behavior: (User)**  
+      Baseline default: *Automatically Deny*
+
+  - **Enable RPC encryption (User)**  
+    Baseline default: *Enabled*
+
+  - **Allow hyperlinks in suspected phishing e-mail messages (User)**  
+    Baseline default: *Disabled*
+
+  - **Configure Outlook object model prompt when sending mail (User)**  
+    Baseline default: *Enabled*
+
+  - **Allow users to demote attachments to Level 2 (User)**  
+    Baseline default: *Disabled*
+
+  - **Allow Active X One Off Forms (User)**  
+    Baseline default: *Enabled*  
+    - **Sets which ActiveX controls to allow.**  
+      Baseline default: *Load only Outlook Controls*
+
+  - **Allow scripts in one-off Outlook forms (User)**  
+    Baseline default: *Disabled*
+
+  - **Prevent users from customizing attachment security settings (User)**  
+    Baseline default: *Enabled*
+
+  - **Remove file extensions blocked as Level 2 (User)**  
+    Baseline default: *Enabled*  
+    - **Removed Extensions: (User)**  
+      Baseline default: *;*
+
+  - **Retrieving CRLs (Certificate Revocation Lists) (User)**  
+    Baseline default: *Enabled*  
+    - Baseline default: *When online always retrieve the CRL*
+
+  - **Configure Outlook object model prompt when accessing an address book (User)**  
+    Baseline default: *Enabled*  
+    - **Guard behavior: (User)**  
+      Baseline default: *Automatically Deny*
+
+  - **Do not allow Outlook object model scripts to run for public folders (User)**  
+    Baseline default: *Enabled*
+
+  - **Include Internet in Safe Zones for Automatic Picture Download (User)**  
+    Baseline default: *Disabled*
+
+  - **Signature Warning (User)**  
+    Baseline default: *Enabled*  
+    - **Signature Warning (User)**  
+      Baseline default: *Always warn about invalid signatures*
+
+  - **Use Unicode format when dragging e-mail message to file system (User)**  
+    Baseline default: *Disabled*  
+
+  - **Set Outlook object model custom actions execution prompt (User)**  
+    Baseline default: *Enabled*  
+    - **When executing a custom action: (User)**  
+      Baseline default: *Automatically Deny*
+
+  - **Security setting for macros (User)**  
+    Baseline default: *Enabled*  
+    - **Security Level (User)**  
+      Baseline default: *Warn for signed, disable unsigned*
+
+  - **Remove file extensions blocked as Level 1 (User)**  
+    Baseline default: *Enabled*  
+    - **Removed Extensions: (User)**  
+      Baseline default: *;*
+
+  - **Junk E-mail protection level (User)**  
+    Baseline default: *Disabled*
+
+  - **Display Level 1 attachments (User)**  
+    Baseline default: *Disabled*
+
+  - **Minimum encryption settings (User)**  
+    Baseline default: *Enabled*
+    - **Minimum key size (in bits): (User)**  
+      Baseline default: *168*
+
+  - **Do not allow Outlook object model scripts to run for shared folders (User)**  
+    Baseline default: *Enabled*
+
+  - **Configure Outlook object model prompt when executing Save As (User)**  
+    Baseline default: *Enabled*  
+    - **Guard behavior: (User)**  
+      Baseline default: *Automatically Deny*
+
+  - **Configure Outlook object model prompt when responding to meeting and task requests (User)**  
+    Baseline default: *Enabled*  
+    - **Guard behavior: (User)**  
+      Baseline default: *Automatically Deny*
+
+### Microsoft PowerPoint 2016
+
+*PowerPoint Options > Security*
+
+- **Run Programs (User)**  
+  Baseline default: *Enabled*  
+  - *disable (don't run any programs)*
+
+- **Scan encrypted macros in PowerPoint Open XML presentations (User)**  
+  Baseline default: *Enabled*  
+  - Baseline default: *Scan encrypted macros (default)*
+
+- **Turn off file validation (User)**  
+  Baseline default: *Disabled*
+
+*PowerPoint Options > Security > Trust Center*
+
+- **Block macros from running in Office files from the Internet (User**)  
+  Baseline default: *Enabled*
+
+- **Require that application add-ins are signed by Trusted Publisher (User)**  
+  Baseline default: *Enabled*  
+  - **Disable Trust Bar Notification for unsigned application add-ins and block them (User)**  
+  Baseline default: *Enabled*
+
+- **VBA Macro Notification Settings (User)**  
+  Baseline default: *Enabled*  
+  - Baseline default: *Disable all except digitally signed macros*
+
+*PowerPoint Options > Security > Trust Center > File Block Settings*
+
+- **PowerPoint 97-2003 presentations, shows, templates and add-in files (User)**  
+  Baseline default: *Enabled*  
+  - **File block setting: (User)**  
+    Baseline default: *Open/Save blocked, use open policy*
+
+- **Set default file block behavior (User)**  
+  Baseline default: *Enabled*  
+  - Baseline default: *Blocked files are not opened*
+
+*PowerPoint Options > Security > Trust Center > Protected View*
+
+- **Do not open files from the Internet zone in Protected View (User)**  
+  Baseline default: *Disabled*
+
+- **Do not open files in unsafe locations in Protected View (User)**  
+  Baseline default: *Disabled*
+
+- **Set document behavior if file validation fails (User)**  
+  Baseline default: *Enabled*  
+  - Baseline default: *Open in Protected View*  
+  - **Checked: Allow edit. Unchecked: Do not allow edit. (User)**  
+    Baseline default: *False*
+
+- **Turn off Protected View for attachments opened from Outlook (User)**  
+  Baseline default: *Disabled*
+
+*PowerPoint Options > Security > Trust Center > Trusted Locations*
+
+- **Allow Trusted Locations on the network (User)**  
+  Baseline default: *Disabled*
+
+### Microsoft Project 2016
+
+*Project Options > Security > Trust Center*
+
+- **Allow Trusted Locations on the network (User)**  
+  Baseline default: *Disabled*
+
+- **Require that application add-ins are signed by Trusted Publisher (User)**  
+  Baseline default: *Enabled*  
+  - **Disable Trust Bar Notification for unsigned application add-ins and block them (User)**  
+    Baseline default: *Enabled*
+
+- **VBA Macro Notification Settings (User)**  
+  Baseline default: *Enabled*  
+  - Baseline default: *Disable all except digitally signed macros*
+
+### Microsoft Publisher 2016
+
+*Security*
+
+- **Publisher Automation Security Level (User)**  
+  Baseline default: *Enabled*  
+  - Baseline default: *By UI (prompted)*
+
+*Security > Trust Center*
+
+- **Require that application add-ins are signed by Trusted Publisher (User)**  
+  Baseline default: *Enabled*
+
+  - **Disable Trust Bar Notification for unsigned application add-ins (User)**  
+  Baseline default: Enabled*
+
+- **VBA Macro Notification Settings (User)**  
+  Baseline default: *Enabled*  
+  - Baseline default: *Disable all except digitally signed macros*
+
+### Microsoft Visio 2016
+
+*Visio Options > Security > Trust Center*
+
+- **Allow Trusted Locations on the network (User)**  
+  Baseline default: *Disabled*
+
+- **Block macros from running in Office files from the Internet (User)**  
+  Baseline default: *Enabled*
+
+- **Require that application add-ins are signed by Trusted Publisher (User)**  
+  Baseline default: *Enabled*  
+  - **Disable Trust Bar Notification for unsigned application add-ins and block them (User)**  
+    Baseline default: *Enabled*
+
+- **VBA Macro Notification Settings (User)**  
+  Baseline default: *Enabled*  
+  - Baseline default: *Disable all except digitally signed macros*
+
+*Visio Options > Security > Trust Center > File Block Settings*
+
+- **Visio 2000-2002 Binary Drawings, Templates and Stencils (User)**  
+  Baseline default: *Enabled*  
+  - **File block setting: (User)**  
+    Baseline default: *Open/Save blocked*
+
+- **Visio 2003-2010 Binary Drawings, Templates and Stencils (User)**  
+  Baseline default: *Enabled*  
+  - **File block setting: (User)**  
+    Baseline default: *Open/Save blocked*
+
+- **Visio 5.0 or earlier Binary Drawings, Templates and Stencils (User)**  
+  Baseline default: *Enabled*  
+  - **File block setting: (User)**  
+    Baseline default: *Open/Save blocked*
+
+### Microsoft Word 2016
+
+*Word Options > Security > Trust Center*
+
+- **Block macros from running in Office files from the Internet (User)**  
+  Baseline default: *Enabled*
+
+- **Dynamic Data Exchange (User)**  
+  Baseline default: *Disabled*
+
+- **Require that application add-ins are signed by Trusted Publisher (User)**  
+  Baseline default: *Enabled*
+
+  - **Disable Trust Bar Notification for unsigned application add-ins and block them (User)**  
+  Baseline default: *Enabled*
+
+- **Scan encrypted macros in Word Open XML documents (User)**  
+  Baseline default: *Enabled*
+  - Baseline default: *Scan encrypted macros (default)*
+
+- **VBA Macro Notification Settings (User)**  
+  Baseline default: *Enabled*
+  - Baseline default: *Disable all except digitally signed macros*
+
+*Word Options > Security > Trust Center > File Block Settings*
+
+- **Set default file block behavior (User)**  
+  Baseline default: *Enabled*
+  - Baseline default: *Blocked files are not opened*
+
+- **Word 2 and earlier binary documents and templates (User)**  
+  Baseline default: *Enabled*
+  - **File block setting: (User)**  
+    Baseline default: *Open/Save blocked, use open policy*
+
+- **Word 2000 binary documents and templates (User)**  
+  Baseline default: *Enabled*
+  - **File block setting: (User)**  
+    Baseline default: *Open/Save blocked, use open policy*
+
+- **Word 2003 binary documents and templates (User)**  
+  Baseline default: *Enabled*
+  - **File block setting: (User)**  
+    Baseline default: *Open/Save blocked, use open policy*
+
+- **Word 2007 and later binary documents and templates (User)**  
+  Baseline default: *Enabled*
+  - **File block setting: (User)**  
+    Baseline default: *Open/Save blocked, use open policy*
+
+- **Word 6.0 binary documents and templates (User)**  
+  Baseline default: *Enabled*
+  - **File block setting: (User)**  
+    Baseline default: *Open/Save blocked, use open policy*
+
+- **Word 95 binary documents and templates (User)**  
+  Baseline default: *Enabled*
+  - **File block setting: (User)**  
+    Baseline default: *Open/Save blocked, use open policy*
+
+- **Word 97 binary documents and templates (User)**  
+  Baseline default: *Enabled*
+  - **File block setting: (User)**  
+    Baseline default: *Open/Save blocked, use open policy*
+
+- **Word XP binary documents and templates (User)**  
+  Baseline default: *Enabled*
+  - **File block setting: (User)**  
+    Baseline default: *Open/Save blocked, use open policy*
+
+*Word Options > Security > Trust Center > Protected View*
+
+- **Do not open files from the Internet zone in Protected View (User)**  
+  Baseline default: *Disabled*
+
+- **Do not open files in unsafe locations in Protected View (User)**  
+  Baseline default: *Disabled*
+- **Set document behavior if file validation fails (User)**  
+  Baseline default: *Enabled*
+  - Baseline default: *Open in Protected View*
+  - **Checked: Allow edit. Unchecked: Do not allow edit. (User)**  
+    Baseline default: *False*
+
+- **Turn off Protected View for attachments opened from Outlook (User)**  
+  Baseline default: *Disabled*
+
+*Word Options > Security > Trust Center > Trusted Locations*
+
+- **Allow Trusted Locations on the network (User)**  
+  Baseline default: *Disabled*
+
+*Word Options > Security*
+
+- **Turn off file validation (User)**  
+  Baseline default: *Disabled*
+
+### Administrative Templates
+
+*MS Security Guide*
+
+- **Block Flash activation in Office documents**  
+  Baseline default: *Enabled*  
+  - **Block Flash player in Office (Device)**  
+    Baseline default: Block all activation*
+
+- **Restrict legacy JScript execution for Office**  
+  Baseline default: *Enabled*
+
+  - **Outlook: (Device)**  
+    Baseline default: *69632*
+
+  - **Excel: (Device)**  
+    Baseline default: *69632*
+
+  - **PowerPoint: (Device)**  
+    Baseline default: *69632*
+
+  - **OneNote: (Device)**  
+    Baseline default: *69632*
+
+  - **Publisher: (Device)**  
+    Baseline default: *69632*
+
+  - **Access: (Device)**  
+    Baseline default: *69632*
+
+  - **Visio: (Device)**  
+    Baseline default: *69632*
+
+  - **Project: (Device)**  
+    Baseline default: *69632*
+  
+  - **Word: (Device)**  
+    Baseline default: *69632*
+
+## Next steps
+
+- [Learn about security baselines](../protect/security-baselines.md)
+- [Avoid conflicts](../protect/security-baselines.md#avoid-conflicts)
+- [Troubleshoot policies and profiles in Intune](/troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune)
