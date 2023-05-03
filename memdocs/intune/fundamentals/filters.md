@@ -38,7 +38,7 @@ Filters are available for:
 - Devices enrolled in Intune, which are **managed devices**.
 - Apps that are managed by Intune, which are **managed apps**.
 
-  Managed apps are common in mobile application management (MAM) scenarios that involve managing apps on devices that aren't enrolled in Intune, which is common with personally owned devices. For more ifnormation on MAM in Intune, go to [What is Microsoft Intune app management?](../apps/app-management.md).
+  Managed apps are common in mobile application management (MAM) scenarios. MAM involves managing apps on devices that aren't enrolled in Intune, which is common with personally owned devices. For more information on MAM in Intune, go to [What is Microsoft Intune app management?](../apps/app-management.md).
 
 You can use filters in the following scenarios:
 
@@ -67,7 +67,7 @@ This feature applies to:
 
 - Managed apps on the following platforms:
 
-  - Android ??DA and/or Enterprise or both??
+  - Android
   - iOS/iPadOS
 
 This article describes the filter architecture, and shows you how to create, update, and delete a filter.
@@ -76,13 +76,11 @@ This article describes the filter architecture, and shows you how to create, upd
 
 :::image type="content" source="./media/filters/admin-creates-filter.png" alt-text="Screenshot that shows how the admin creates a filter, and uses the filter in a policy in Microsoft Intune." lightbox="./media/filters/admin-creates-filter.png":::
 
-??Need a new image. ScottDuf provided the last image.??
+Before a policy is applied to an app or device, filters dynamically evaluate applicability. Here's an overview of the image:
 
-Before a policy is applied to an app or device, filters dynamically evaluate applicability. Looking at the image, here's an overview:
+1. You create a reusable filter based on an app or device property. In the example, the device filter is for iPhone XR devices.
 
-1. You create a reusable filter for any platform based on some device properties. In the example, the filter is for personal devices.
-
-2. You assign a policy or app to the group. In the assignment, you add the filter in include or exclude mode. For example, you "include" personal devices, or you "exclude" personal devices from the policy.
+2. You assign a policy to the group. In the assignment, you add the filter in include or exclude mode. For example, you "include" iPhone XR devices, or you "exclude" iPhone XR devices from the policy.
 
 3. The filter is evaluated when the device enrolls, checks in with the Intune service, or at any other time a policy evaluates.
 
@@ -90,13 +88,11 @@ Before a policy is applied to an app or device, filters dynamically evaluate app
 
 ### Restrictions
 
-There are some restrictions when creating filters:
+There are some general restrictions when creating filters:
 
 - For each tenant, there can be up to 200 filters.
 - Each filter is limited to 3072 characters.
-- For managed devices, the devices must be enrolled in Intune. Filters can't be evaluated on devices that aren't enrolled. This behavior includes:
-  - A restriction on the **Available with or without enrollment** app assignment intent ??Need clarification??
-  - Devices that are targeted with Endpoint Security configuration using Microsoft Defender for Endpoint integration, such as servers.??Need clarification??
+- For managed devices, the devices must be enrolled in Intune.
 - For managed apps, filters apply to app protection policies and app configuration policies. They don't apply to other policies, like compliance or device configuration.
 
 ## Prerequisites
@@ -117,7 +113,7 @@ There are some restrictions when creating filters:
 
     :::image type="content" source="./media/filters/managed-apps-managed-devices.png" alt-text="Screenshot that shows selecting Managed apps or Managed devices when creating a filter in the Microsoft Intune admin center.":::
 
-3. In **Basics**, enter the following properties:
+4. In **Basics**, enter the following properties:
 
     - **Filter name**: Enter a descriptive name for the filter. Name your filters so you can easily identify them later. For example, a good filter name is **Windows OS version filter**.
     - **Description**: Enter a description for the filter. This setting is optional, but recommended.
@@ -134,8 +130,8 @@ There are some restrictions when creating filters:
         - Android
         - iOS/iPadOS
 
-4. Select **Next**.
-5. In **Rules**, there are two ways to create a rule: Use the **rule builder**, or use the **rule syntax**.
+5. Select **Next**.
+6. In **Rules**, there are two ways to create a rule: Use the **rule builder**, or use the **rule syntax**.
 
     **Rule builder**:
 
@@ -168,18 +164,18 @@ There are some restrictions when creating filters:
     > - When you create a rule, it's validated for the correct syntax, and any errors are shown.
     > - If you enter syntax that's not supported by the basic rule builder, then the rule builder is disabled. For example, using nested parenthesis disables the basic rule builder.
 
-6. Select **Preview devices**. A list of enrolled devices that match your filter criteria is shown.
+7. Select **Preview devices**. A list of enrolled devices that match your filter criteria is shown.
 
-    In this list, you can also search for devices by the device name, OS version, device model, device manufacturer, the user principal name of the primary user, and device ID:
+    In this list, you can also search for devices by the device name, OS version, device model, device manufacturer, and more:
 
     :::image type="content" source="./media/filters/preview-search.png" alt-text="Screenshot that shows how to search for devices when creating a filter in Microsoft Intune.":::
 
-7. Select **Next**.
-8. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
+8. Select **Next**.
+9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
 
     Select **Next**.
 
-9. In **Review + create**, review your settings. When you select **Create**, your changes are saved. The filter is created, and ready to be used. The filter is also shown in the filters list.
+10. In **Review + create**, review your settings. When you select **Create**, your changes are saved. The filter is created, and ready to be used. The filter is also shown in the filters list.
 
 ## Use a filter
 
@@ -255,7 +251,7 @@ After a filter is created, it can also be changed or updated.
 
     :::image type="content" source="./media/filters/delete-filter.png" alt-text="Screenshot that shows how to delete a filter in Microsoft Intune.":::
 
-To delete a filter, you must remove the filter from any policy assignments. Otherwise, when trying to delete the filter, you'll get the following error:
+To delete a filter, you must remove the filter from any policy assignments. Otherwise, when trying to delete the filter, the following error is shown:
 
 `Unable to delete assignment filter – An assignment filter is associated with existing assignments. Delete all the assignments for the filter and try again.`
 
