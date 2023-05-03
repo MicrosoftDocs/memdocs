@@ -34,7 +34,7 @@ ms.collection:
 
 App Assure is a service that helps customers with application issues that might occur when using apps on Cloud PCs. If you experience any issues with your apps, Microsoft will help you fix them at no cost.
 
-App Assure is available to eligible customers with 150+ seats at no extra cost. For more information on eligibility requirements, see [Eligibility](/fasttrack/eligibility).
+App Assure is available to eligible customers at no extra cost. For more information on eligibility requirements, see [Eligibility](/fasttrack/eligibility).
 
 Visit the [App Assure page](https://fasttrack.microsoft.com/dl/daa) and sign in to submit your request for assistance from a dedicated App Assure Manager. If you experience any issues while submitting your request, contact ACHELP@microsoft.com and our team members will reach out to you.
 

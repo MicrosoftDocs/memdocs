@@ -65,6 +65,9 @@ To help reduce potential conflicts, we recommend assigning a single LAPS policy 
 
 ### Create a LAPS policy
 
+  > [!IMPORTANT]  
+  > Ensure that you have enabled LAPS in Azure AD, as covered in the [Enabling WindowsLAPS with Azure AD](/azure/active-directory/devices/howto-manage-local-admin-passwords#enabling-windows-laps-with-azure-ad) documentation.
+
 To create or manage LAPS policy, your account must have applicable rights from the **Security baseline** category. By default, these permissions are included in the built-in role *Endpoint Security Manager*. To use custom roles, ensure the custom role includes the rights from the *Security baselines* category. See [Role based access controls for LAPS](../protect/windows-laps-overview.md#role-based-access-controls-for-laps).
 
 Before you create a policy, you can review details about the available settings in the [Windows LAPS CSP](/windows-server/identity/laps/laps-management-policy-settings#windows-laps-csp) documentation.
