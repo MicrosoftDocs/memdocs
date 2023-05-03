@@ -33,7 +33,7 @@ ms.collection:
 
 When you create an app, compliance policy, or configuration profile, you assign the policy to groups (users or devices). When you assign the app or policy, you can also use filters. For example, you can assign policies to Windows 10/11 devices running a specific OS version.
 
-You can use filters on managed devices (devices enrolled in Intune) and managed apps (apps managed by Intune). For more information, go to [Use filters when assigning your apps, policies, and profiles](filters.md).
+You can use filters on **managed devices** (devices enrolled in Intune) and **managed apps** (apps managed by Intune). For more information, go to [Use filters when assigning your apps, policies, and profiles](filters.md).
 
 Managed apps and managed devices are evaluated against these filters to meet the rules you configure. The results of the filter evaluations are logged, and reported in the Microsoft Intune admin center.
 
@@ -72,7 +72,7 @@ To see this report, use the following steps:
 
 In the following example, you can see this information for the **TestDevice**:
 
-:::image type="content" source="./media/filters-reports-troubleshoot/filter-properties-single-device.png" alt-text="Screenshot that shows how to see the date, time, evaluation results, and other device filter assignment properties in Microsoft Intune.":::
+:::image type="content" source="./media/filters-reports-troubleshoot/filter-properties-single-device.png" alt-text="Screenshot that shows how to see the date, time, evaluation results, and other device filter assignment properties in Microsoft Intune." lightbox="./media/filters-reports-troubleshoot/filter-properties-single-device.png":::
 
 > [!IMPORTANT]
 > Filter evaluation reports for devices don't show the results of any Azure AD conditional access evaluations. To troubleshoot conditional access issues, use the  Azure AD sign-in logs. For more information, go to [Sign-in logs in Azure Active Directory](/azure/active-directory/reports-monitoring/concept-sign-ins).
@@ -96,7 +96,7 @@ To see these reports, use the following steps:
 
 In the following example, you can see this information for the **Microsoft Word** store app:
 
-:::image type="content" source="./media/filters-reports-troubleshoot/filter-properties-single-app.png" alt-text="Screenshot that shows how to see the date, time, evaluation results, and other app filter properties in Microsoft Intune.":::
+:::image type="content" source="./media/filters-reports-troubleshoot/filter-properties-single-app.png" alt-text="Screenshot that shows how to see the date, time, evaluation results, and other app filter properties in Microsoft Intune." lightbox="./media/filters-reports-troubleshoot/filter-properties-single-app.png":::
 
 > [!IMPORTANT]
 > 
@@ -168,7 +168,7 @@ Intune prevents you from creating multiple assignments to the same Azure AD grou
 
 An overlap can occur when a user or device is in multiple targeted groups. Conflicting assignments aren't recommended. For more information, go to [conflicts between app intents](../apps/apps-deploy.md#how-conflicts-between-app-intents-are-resolved).
 
-:::image type="content" source="./media/filters-reports-troubleshoot/device-multiple-groups.png" alt-text="Screenshot that shows how conflicts can occur when a device is in multiple groups in Microsoft Intune.":::
+:::image type="content" source="./media/filters-reports-troubleshoot/device-multiple-groups.png" alt-text="Screenshot that shows how conflicts can occur when a device is in multiple groups in Microsoft Intune." lightbox="./media/filters-reports-troubleshoot/device-multiple-groups.png":::
 
 When you use filters, conflict resolution is handled using the following methods:
 
@@ -186,7 +186,7 @@ When there's a device with conflicting assignments for the same policy, the foll
 
 When you assign the app or policy, you choose to apply a filter:
 
-:::image type="content" source="./media/filters-reports-troubleshoot/assignment-filter-precedence.png" alt-text="Screenshot that shows filter precedence is excluded, no filter, and then include when assigning policies in Microsoft Intune."lightbox="./media/filters-reports-troubleshoot/assignment-filter-precedence.png":::
+:::image type="content" source="./media/filters-reports-troubleshoot/assignment-filter-precedence.png" alt-text="Screenshot that shows filter precedence is excluded, no filter, and then include when assigning policies in Microsoft Intune." lightbox="./media/filters-reports-troubleshoot/assignment-filter-precedence.png":::
 
 For example:
 
@@ -234,7 +234,7 @@ In the following example, there's a conflict between assignments because the sam
 
 The following matrix explains the effect, depending on the conflict scenario:
 
-:::image type="content" source="./media/filters-reports-troubleshoot/conflict-matrix.png" alt-text="Screenshot that shows that the conflict effect depends on the setting configured when using filters in Microsoft Intune.":::
+:::image type="content" source="./media/filters-reports-troubleshoot/conflict-matrix.png" alt-text="Screenshot that shows that the conflict effect depends on the setting configured when using filters in Microsoft Intune." lightbox="./media/filters-reports-troubleshoot/conflict-matrix.png":::
 
 ## Next steps
 

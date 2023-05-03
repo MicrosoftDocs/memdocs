@@ -31,9 +31,9 @@ ms.collection:
 
 # List of platforms, policies, and app types supported by filters in Microsoft Intune
 
-When you create an app, compliance policy, configuration profile, or app configuration policy, you assign the policy to groups (users or devices). When you assign the policy, you can also use filters. For example, you can assign policies to Windows client devices running a specific OS version.
+When you create an app, compliance policy, device configuration profile, or app configuration policy, you assign the policy to groups (users or devices). When you assign the policy, you can also use [filters](filters.md). For example, you can assign policies to Windows client devices running a specific OS version.
 
-You can use filters on managed devices (devices enrolled in Intune) and managed apps (apps managed by Intune).
+You can use filters on **managed devices** (devices enrolled in Intune) and **managed apps** (apps managed by Intune).
 
 Filters support some of the different workloads available in Microsoft Intune. This article lists the app types, compliance policies, device configuration profiles, and app configuration policies that support filters. It also lists the workloads that aren't supported.
 
@@ -133,7 +133,7 @@ You can use filters for some common app policies on the following platforms. For
   - Android
   - iOS/iPadOS
 
-- For **managed devices**, filters aren't supported for app protection policies. For other features not supported on managed devices, [not supported](#not-supported-on-managed-devices) (in this article).
+- For **managed devices**, filters aren't supported for app protection policies. For other features not supported on managed devices, go to [not supported](#not-supported-on-managed-devices) (in this article).
 
 ## Compliance policies
 
@@ -151,7 +151,7 @@ You can use filters for some common app policies on the following platforms. For
 
 - For **managed apps**, filters aren't supported for device configuration profiles and endpoint security policies.
 
-- On **managed devices**, you can use filters for some common device configuration policies on the following platforms. For a list of what's not supported, go to [not supported](#not-supported-on-managed-devices) (in this article).
+- On **managed devices**, you can use filters for some common device configuration policies on the platforms listed in the following tables. For a list of what's not supported, go to [not supported](#not-supported-on-managed-devices) (in this article).
 
 > [!NOTE]
 > Some profile types are only available for specific platforms. For example, the **Device features** profile type includes settings that are only available for iOS/iPadOS and macOS devices.
@@ -330,7 +330,7 @@ The following features on managed devices don't support using filters:
 - Custom compliance policies for Windows 10/11 (preview)
 - App protection policies for Android, iOS/iPadOS, and Windows
 
-  You can use app protection policies for managed apps. For more information on managed apps, go to [Use filters when assigning your apps, policies, and profiles in Intune](filters.md).
+  You can use filters on app protection policies for managed apps. For more information on managed apps, go to [Use filters when assigning your apps, policies, and profiles in Intune](filters.md).
 
 - End user experiences customization policies
 - iOS/iPadOS app provisioning profiles

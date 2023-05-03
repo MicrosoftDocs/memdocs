@@ -31,14 +31,14 @@ ms.collection:
 
 # App and device properties, operators, and rule editing when creating filters in Microsoft Intune
 
-When you create an app, compliance policy, or configuration profile, you assign that app or policy to groups (users or devices). When you assign the app or policy, you can also use filters. For more information on filters, go to [Use filters when assigning your apps, policies, and profiles](filters.md).
+When you create an app, compliance policy, or configuration profile, you assign that app or policy to groups (users or devices). When you assign the app or policy, you can also use [assignment filters](filters.md).
 
-You can use filters on managed devices (devices enrolled in Intune) and managed apps (apps managed by Intune).
+You can use filters on **managed devices** (devices enrolled in Intune) and **managed apps** (apps managed by Intune).
 
 When you create a filter, you enter the app or device properties to use in your filter. For example:
 
 - In your managed device filter, enter the device manufacturer so the policy only applies to Microsoft devices.
-- In your managed app filter, enter the OS version so the policy only applies to unmanaged devices with that specific OS version.
+- In your managed app filter, enter the OS version so the policy only applies to devices with that specific OS version.
 
 Advanced rule editing is also available. You can use common operators, such as `and`, `contains`, and `startsWith` to create expressions. These expressions are saved and used in your filter.
 
@@ -46,7 +46,7 @@ This article describes the different [managed device properties](#managed-device
 
 ## Managed device properties
 
-You can use the following device properties in your filter rules:
+You can use the following device properties in your managed device filter rules:
 
 - **`deviceName` (Device Name)**: Create a filter rule based on the Intune device name property. Enter a string value for the device's full name (using `-eq`, `-ne`, `-in`, `-notIn` operators), or partial value (using `-startswith`, `-contains`, `-notcontains` operators).
 
@@ -242,7 +242,7 @@ You can use the following device properties in your filter rules:
 
 ## Managed app properties
 
-You can use the following app properties in your filter rules:
+You can use the following app properties in your managed app filter rules:
 
 - **`appVersion` (App Version)**: Create a filter rule based on the client reported application version. Enter the full string value (using `-eq`, `-ne`, `-in`, `-notIn` operators), or partial value (using `-startswith`, `-contains`, `-notcontains` operators).
 
@@ -311,11 +311,6 @@ You can use the following app properties in your filter rules:
   Example:
 
   - `(app.deviceManagementType -eq "Unmanaged")`
-
-  This property applies to:
-
-  - Android
-  - iOS/iPadOS
 
 - **`deviceManufacturer` (Manufacturer)**: Create a filter rule based on the client reported device manufacturer. Enter the full string value (using `-eq`, `-ne`, `-in`, `-notIn` operators), or partial value (using `-startswith`, `-contains`, `-notcontains` operators).
 

@@ -2,7 +2,7 @@
 # required metadata
 
 title: Create filters in Microsoft Intune
-description: Learn more about policy assignment filters, and see the steps to create, update, or delete a filter in Microsoft Intune.
+description: Learn more about policy assignment filters, and see the steps to create, update, or delete a filter in Microsoft Intune. Create an assignment filter for managed devices or managed apps sceanrios.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
@@ -38,7 +38,7 @@ Filters are available for:
 - Devices enrolled in Intune, which are **managed devices**.
 - Apps that are managed by Intune, which are **managed apps**.
 
-  Managed apps are common in mobile application management (MAM) scenarios. MAM involves managing apps on devices that aren't enrolled in Intune, which is common with personally owned devices. For more information on MAM in Intune, go to [What is Microsoft Intune app management?](../apps/app-management.md).
+  Managed apps are used in mobile application management (MAM) scenarios. MAM involves managing apps on devices that aren't enrolled in Intune, which is common with personally owned devices. For more information on MAM in Intune, go to [What is Microsoft Intune app management?](../apps/app-management.md).
 
 You can use filters in the following scenarios:
 
@@ -57,7 +57,7 @@ Filters include the following features and benefits:
 
 This feature applies to:
 
-- Managed devices on the following platforms:
+- **Managed devices** on the following platforms:
 
   - Android device administrator
   - Android Enterprise
@@ -65,7 +65,7 @@ This feature applies to:
   - macOS
   - Windows 10/11
 
-- Managed apps on the following platforms:
+- **Managed apps** on the following platforms:
 
   - Android
   - iOS/iPadOS
@@ -84,7 +84,7 @@ Before a policy is applied to an app or device, filters dynamically evaluate app
 
 3. The filter is evaluated when the device enrolls, checks in with the Intune service, or at any other time a policy evaluates.
 
-4. You see the filter results based on the evaluation. For example, the app or policy applies, or they don't apply.
+4. You see the filter results based on the evaluation. For example, the app or policy applies, or it doesn't apply.
 
 ### Restrictions
 
@@ -93,7 +93,7 @@ There are some general restrictions when creating filters:
 - For each tenant, there can be up to 200 filters.
 - Each filter is limited to 3072 characters.
 - For managed devices, the devices must be enrolled in Intune.
-- For managed apps, filters apply to app protection policies and app configuration policies. They don't apply to other policies, like compliance or device configuration.
+- For managed apps, filters apply to app protection policies and app configuration policies. They don't apply to other policies, like compliance or device configuration profiles.
 
 ## Prerequisites
 
@@ -112,6 +112,8 @@ There are some general restrictions when creating filters:
 3. Select **Managed devices** or **Managed apps**:
 
     :::image type="content" source="./media/filters/managed-apps-managed-devices.png" alt-text="Screenshot that shows selecting Managed apps or Managed devices when creating a filter in the Microsoft Intune admin center.":::
+
+    Remember, managed devices are devices enrolled in Intune and are typically owned by the organizations. Managed apps are for devices that aren't enrolled in Intune and are typically owned by end users.
 
 4. In **Basics**, enter the following properties:
 
