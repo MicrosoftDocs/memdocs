@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/02/2023
+ms.date: 05/03/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -31,7 +31,9 @@ ms.collection:
 
 # Filter reports and troubleshooting in Microsoft Intune
 
-When you create an app, compliance policy, or configuration profile, you assign the policy to groups (users or devices). When you assign the app or policy, you can also use filters. For example, you can assign policies to Windows 10/11 devices running a specific OS version. For more information, see [Use filters when assigning your apps, policies, and profiles](filters.md).
+When you create an app, compliance policy, or configuration profile, you assign the policy to groups (users or devices). When you assign the app or policy, you can also use filters. For example, you can assign policies to Windows 10/11 devices running a specific OS version.
+
+You can use filters on managed devices (devices enrolled in Intune) and managed apps (apps managed by Intune). For more information, go to [Use filters when assigning your apps, policies, and profiles](filters.md).
 
 Managed apps and managed devices are evaluated against these filters to meet the rules you configure. The results of the filter evaluations are logged, and reported in the Microsoft Intune admin center.
 
@@ -73,7 +75,6 @@ In the following example, you can see this information for the **TestDevice**:
 :::image type="content" source="./media/filters-reports-troubleshoot/filter-properties-single-device.png" alt-text="Screenshot that shows how to see the date, time, evaluation results, and other device filter assignment properties in Microsoft Intune.":::
 
 > [!IMPORTANT]
-> 
 > Filter evaluation reports for devices don't show the results of any Azure AD conditional access evaluations. To troubleshoot conditional access issues, use the  Azure AD sign-in logs. For more information, go to [Sign-in logs in Azure Active Directory](/azure/active-directory/reports-monitoring/concept-sign-ins).
 
 ### Workload filter evaluation reports
@@ -105,6 +106,8 @@ In the following example, you can see this information for the **Microsoft Word*
 
 ## Reports for managed apps  
 
+HERE
+
 Note: There is no conflict resolution available between managed device and managed app filters as they cannot be targeted to the same workloads.
 
 The Intune admin center has per-device and per-platform reporting information for managed apps. Use this information to help troubleshoot filter evaluation, and determine why a policy applied or didn't apply.
@@ -129,7 +132,7 @@ Use the following table to help understand when you include or exclude devices:
 
 ### What you need to know
 
-- A **Not evaluated** filter result may show when a policy has a conflicting assignment on the device. For more information, see [Filters and assignment conflict resolution](#filters-and-assignment-conflict-resolution) (in this article).
+- A **Not evaluated** filter result may show when a policy has a conflicting assignment on the device. For more information, go to [Filters and assignment conflict resolution](#filters-and-assignment-conflict-resolution) (in this article).
 - Filters are evaluated at enrollment and when the device checks in with the Intune service. The evaluation can also run at other times, such as a compliance check. In some scenarios, you can experience race conditions.
 
   For example, consider the following sequence of events, where each time is a different point in time:
@@ -152,7 +155,7 @@ When you assign a policy to a group (users or devices), it's possible to overlap
 
 Intune helps avoid conflicts. It prevents you from creating multiple assignments to the same Azure AD group. It's not recommended to assign apps or policies to the same target user or device with more than one intent. For example, when you deploy an app, you can't select a group for an **Available** assignment, and then the same group for a **Required** assignment.
 
-An overlap can occur when a user or device is in multiple targeted groups. Conflicting assignments aren't recommended. For more information, see [conflicts between app intents](../apps/apps-deploy.md#how-conflicts-between-app-intents-are-resolved).
+An overlap can occur when a user or device is in multiple targeted groups. Conflicting assignments aren't recommended. For more information, go to [conflicts between app intents](../apps/apps-deploy.md#how-conflicts-between-app-intents-are-resolved).
 
 :::image type="content" source="./media/filters-reports-troubleshoot/device-multiple-groups.png" alt-text="Screenshot that shows how conflicts can occur when a device is in multiple groups in Microsoft Intune.":::
 
@@ -209,7 +212,7 @@ For example:
 - The GroupB assignment uses the **Uninstall** intent. The GroupB assignment uses FilterB, which uses Include mode.
 - DeviceA is a member of both groups: GroupA and GroupB.
 
-In this scenario, the winning app intent is **Required**. For more information, see [conflicts between app intents](../apps/apps-deploy.md#how-conflicts-between-app-intents-are-resolved). So, DeviceA must only evaluate FilterA. If DeviceA matches the rules in FilterA, DeviceA receives AppA as a required app.
+In this scenario, the winning app intent is **Required**. For more information, go to [conflicts between app intents](../apps/apps-deploy.md#how-conflicts-between-app-intents-are-resolved). So, DeviceA must only evaluate FilterA. If DeviceA matches the rules in FilterA, DeviceA receives AppA as a required app.
 
 Apps use special behavior when resolving conflicts between **Required** and **Available** assignments. If a user or device is targeted with both **Available** and **Required** assignments, then it receives a merged intent called **Required and Available**. The device must evaluate filters used in both assignments. When it evaluates both filters, the device implements the same conflict resolution: [Filter mode](#filter-mode) and ["OR" logic when filter modes are the same](#use-or-logic-when-filter-modes-are-the-same).
 

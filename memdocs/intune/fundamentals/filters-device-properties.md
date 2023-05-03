@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/02/2023
+ms.date: 05/03/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -31,9 +31,14 @@ ms.collection:
 
 # App and device properties, operators, and rule editing when creating filters in Microsoft Intune
 
-When you create an app, compliance policy, or configuration profile, you assign that app or policy to groups (users or devices). When you assign the app or policy, you can also use filters. For more information on this feature, see [Use filters when assigning your apps, policies, and profiles](filters.md).
+When you create an app, compliance policy, or configuration profile, you assign that app or policy to groups (users or devices). When you assign the app or policy, you can also use filters. For more information on filters, go to [Use filters when assigning your apps, policies, and profiles](filters.md).
 
-When you create a filter, you enter the app or device properties to use in your filter. For example, in your managed device filter, enter the device manufacturer so the policy only applies to Microsoft devices. In your managed app filter, enter the OS version so the policy only applies to unmanaged devices with that specific OS version.
+You can use filters on managed devices (devices enrolled in Intune) and managed apps (apps managed by Intune).
+
+When you create a filter, you enter the app or device properties to use in your filter. For example:
+
+- In your managed device filter, enter the device manufacturer so the policy only applies to Microsoft devices.
+- In your managed app filter, enter the OS version so the policy only applies to unmanaged devices with that specific OS version.
 
 Advanced rule editing is also available. You can use common operators, such as `and`, `contains`, and `startsWith` to create expressions. These expressions are saved and used in your filter.
 
@@ -361,7 +366,7 @@ When you create a filter, you can manually create simple or complex rules in the
 - You can use `Null` or `$Null` as a value with the `-Equals` and `-NotEquals` operators.
 - Some advanced syntax options, such as nested parentheses, are only available in the rule syntax editor. If you use advanced expressions in the rule syntax editor, then the rule builder is disabled.
 
-  For more information on the rule syntax editor and the rule builder, see [Use filters when assigning your apps, policies, and profiles](filters.md)
+  For more information on the rule syntax editor and the rule builder, go to [Use filters when assigning your apps, policies, and profiles](filters.md)
 
 ### Supported operators
 

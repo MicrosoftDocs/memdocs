@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/02/2023
+ms.date: 05/03/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -45,12 +45,12 @@ You can use filters in the following scenarios:
 - Deploy a Windows device restriction policy to only the corporate devices in the Marketing department, while excluding personal devices.
 - Deploy an iOS/iPadOS app to only the iPad devices in the Finance users group.
 - Deploy an Android mobile phone compliance policy to all users in the company, and exclude Android meeting room devices that don't support the mobile phone compliance policy settings.
-- On unmanaged devices, deploy an app configuration policy for a specific app manufacturer or an app protection policy that runs a specific OS version.
+- On personally owned devices, deploy an app configuration policy for a specific app manufacturer or an app protection policy that runs a specific OS version.
 
 Filters include the following features and benefits:
 
 - Improve flexibility and granularity when assigning Intune policies and apps.
-- Are used when assigning app, policies, and profiles. They dynamically target managed devices based on device properties and target managed apps based on app properties you enter.
+- Are used when assigning apps, policies, and profiles. They dynamically target managed devices based on device properties and target managed apps based on app properties you enter.
 - Can include or exclude devices or apps in a specific group based on criteria you enter.
 - Can create a query of device or app properties based on different properties, like device platform or application version.
 - Can be used and reused in multiple scenarios in "Include" or "Exclude" mode.
@@ -67,7 +67,7 @@ This feature applies to:
 
 - Managed apps on the following platforms:
 
-  - Android
+  - Android ??DA and/or Enterprise or both??
   - iOS/iPadOS
 
 This article describes the filter architecture, and shows you how to create, update, and delete a filter.
@@ -75,6 +75,8 @@ This article describes the filter architecture, and shows you how to create, upd
 ## How filters work
 
 :::image type="content" source="./media/filters/admin-creates-filter.png" alt-text="Screenshot that shows how the admin creates a filter, and uses the filter in a policy in Microsoft Intune." lightbox="./media/filters/admin-creates-filter.png":::
+
+??Need a new image. ScottDuf provided the last image.??
 
 Before a policy is applied to an app or device, filters dynamically evaluate applicability. Looking at the image, here's an overview:
 
@@ -93,9 +95,9 @@ There are some restrictions when creating filters:
 - For each tenant, there can be up to 200 filters.
 - Each filter is limited to 3072 characters.
 - For managed devices, the devices must be enrolled in Intune. Filters can't be evaluated on devices that aren't enrolled. This behavior includes:
-  - A restriction on the **Available with or without enrollment** app assignment intent
-  - Devices that are targeted with Endpoint Security configuration using Microsoft Defender for Endpoint integration, such as servers.
-- For managed apps, filters apply to app protection policies and app configuration policies.
+  - A restriction on the **Available with or without enrollment** app assignment intent ??Need clarification??
+  - Devices that are targeted with Endpoint Security configuration using Microsoft Defender for Endpoint integration, such as servers.??Need clarification??
+- For managed apps, filters apply to app protection policies and app configuration policies. They don't apply to other policies, like compliance or device configuration.
 
 ## Prerequisites
 
