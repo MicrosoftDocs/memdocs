@@ -56,7 +56,7 @@ The Remote Help app supports the following capabilities:
 
 - **Requires Organization login** - To use Remote Help, both the helper and the sharer must sign in with an Azure Active Directory (Azure AD) account from your organization. You can’t use Remote Help to assist users who aren’t members of your organization.
 
-- Administrators can now utilize conditional access capability when setting up policies and conditions for Remote Help. For example, multi-factor authentication, installing security updates, and locking access to Remote Help for a specific region or IP addresses. For more information on conditional access, go to [Conditional access](../protect/conditional-access.md) 
+- **Conditional access** - Administrators can now utilize conditional access capability when setting up policies and conditions for Remote Help. For example, multi-factor authentication, installing security updates, and locking access to Remote Help for a specific region or IP addresses. For more information on setting up conditional access, go to [Set up Conditional Access for Remote Help](../protect/conditional-access.md#setup-conditional-access-for-remote-help) 
 
 - **Compliance Warnings** - Before connecting to a user's device, a helper will see a non-compliance warning about that device if it’s not compliant with its assigned policies. This warning doesn’t block access but provides transparency about the risk of using sensitive data like administrative credentials during the session. 
     
