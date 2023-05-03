@@ -44,13 +44,13 @@ The following table compares the different capabilities for each Autopilot scena
 | **Minimizes time user interacts with deployment** | No | Yes | Yes | NA | NA |
 | **User authenticates** | Yes | User flow | No | NA | Local reset |
 | **TPM authenticates** | No | Technician flow | Yes | NA | NA |
-| **Registered as Autopilot device before deployment** | Yes | Yes | Yes | No | Yes |
+| **Needs to be registered as Autopilot device before deployment** | Yes | Yes | Yes | No | Yes |
 
 > [!NOTE]
 >
-> The **Windows Autopilot for existing devices** scenario is a method to completely reinstall Windows on a device in preparation to run an Autopilot deployment. However the Windows Autopilot for existing devices scenario itself isn't technically an Autopilot deployment. After the Windows Autopilot for existing devices process completes, it automatically runs either the **User-driven**, **Pre-provisioned**, or **Self-deploying** Autopilot scenario.
+> The **Windows Autopilot for existing devices** scenario is a method to completely reinstall Windows on a device in preparation to run an Autopilot deployment. However the Windows Autopilot for existing devices scenario itself isn't technically an Autopilot deployment. After the Windows Autopilot for existing devices process completes, it automatically runs an Autopilot scenario.
 >
-> The above table lists what the Windows Autopilot for existing devices scenario can potentially support, but may not always support depending on the Autopilot scenario that runs once it completes. For example, if the Autopilot scenario that runs after the Windows Autopilot for existing devices completes is the **Self-deploying** Autopilot deployment, then it wouldn't support hybrid Azure AD join since the **Self-deploying** Autopilot deployment doesn't support hybrid Azure AD join.
+> The above table lists what the Windows Autopilot for existing devices scenario can potentially support, but may not always support depending on the Autopilot scenario that runs once it completes.
 
 ## Scenario pros and cons
 
@@ -58,11 +58,11 @@ The following table describes the pros and cons of each Windows Autopilot scenar
 
 | **Scenario** | **Pros** | **Cons** |
 | --- | --- | --- |
-| **User-driven** | • Requires no interaction from admin/OEM/reseller <br> • Doesn't require [TPM attestation](/windows-server/identity/ad-ds/manage/component-updates/tpm-key-attestation) so works on physical devices and VMs | • Takes longer for user than the pre-provisioned scenario since user has to go through both device ESP and user ESP |
-| **Pre-provisioned** | • Faster for user since IT admin/OEM/reseller handles bulk of device ESP during the technician flow  | • Requires interaction by IT admin/OEM/reseller <br> • Requires [TPM attestation](/windows-server/identity/ad-ds/manage/component-updates/tpm-key-attestation) during technician flow so only works on physical devices with supported TPM (doesn't work in VMs even with virtual TPM) |
-| **Self-deploying** | • Requires no interaction from user or admin/OEM/reseller | • Can't assign a user to the device <br> • User ESP doesn't run since no user is assigned <br> • Requires [TPM attestation](/windows-server/identity/ad-ds/manage/component-updates/tpm-key-attestation) so only works on physical devices with supported TPM (doesn't work in VMs even with virtual TPM) <br> • Doesn't support hybrid Azure AD join devices |
-| **Existing devices** | • Can use custom images <br> • Can use ConfigMgr task sequences <br> • Can reinstall a fresh copy of Windows in cases of severe corruption in Windows installation <br> • Good scenario to upgrade a device from domain joined/hybrid Azure AD join to Azure AD join | • Requires Microsoft Configuration Manager <br> • Not an actual Autopilot deployment so doesn't work on its own - only works alongside one of the other Autopilot scenarios <br> •  Takes longer since device has to undergo both task sequence and Autopilot deployment |
-| **Reset** | • Easily allows resetting an existing broken or repurposed device to a business ready state | • Doesn't work if there's severe corruption in Windows installation <br> • Doesn't support hybrid Azure AD join devices |
+| **User-driven** | • Requires no interaction from admin/OEM/reseller. <br> • Doesn't require [TPM attestation](/windows-server/identity/ad-ds/manage/component-updates/tpm-key-attestation) so works on physical devices and VMs. | • Takes longer for user than the pre-provisioned scenario since user has to go through both device ESP and user ESP. |
+| **Pre-provisioned** | • Faster for user since IT admin/OEM/reseller handles bulk of device ESP during the technician flow.  | • Requires interaction by IT admin/OEM/reseller. <br> • Requires [TPM attestation](/windows-server/identity/ad-ds/manage/component-updates/tpm-key-attestation) during technician flow so only works on physical devices with supported TPM (doesn't work in VMs even with virtual TPM). |
+| **Self-deploying** | • Requires no interaction from user or admin/OEM/reseller. | • Can't assign a user to the device. <br> • User ESP doesn't run during the Autopilot deployment since no user is assigned. <br> • Requires [TPM attestation](/windows-server/identity/ad-ds/manage/component-updates/tpm-key-attestation) so only works on physical devices with supported TPM (doesn't work in VMs even with virtual TPM). <br> • Doesn't support hybrid Azure AD join devices. |
+| **Existing devices** | • Can use custom images. <br> • Can use ConfigMgr task sequences. <br> • Can reinstall a fresh copy of Windows in cases of severe corruption in Windows installation. <br> • Good scenario to upgrade a device from domain joined/hybrid Azure AD join to Azure AD join. | • Requires Microsoft Configuration Manager. <br> • Not an actual Autopilot deployment so doesn't work on its own - only works alongside one a supported Autopilot scenario. <br> •  Takes longer since device has to undergo both task sequence and Autopilot deployment. <br> • JSON file only supports user-driven Autopilot scenarios. <br> • Pre-provisioning and self-deploying Autopilot scenarios are only supported when the device is already an Autopilot device and there is an Autopilot profile assigned to the device. |
+| **Reset** | • Easily allows resetting an existing broken or repurposed device to a business ready state. | • Doesn't work if there's severe corruption in Windows installation. <br> • Doesn't support hybrid Azure AD join devices. |
 
 ## Azure AD join and Hybrid Azure AD join vs. Autopilot scenarios
 

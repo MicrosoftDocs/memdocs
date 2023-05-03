@@ -56,7 +56,9 @@ The Remote Help app supports the following capabilities:
 
 - **Requires Organization login** - To use Remote Help, both the helper and the sharer must sign in with an Azure Active Directory (Azure AD) account from your organization. You can’t use Remote Help to assist users who aren’t members of your organization.
 
-- **Compliance Warnings** - Before connecting to a user's device, a helper will see a noncompliance warning about that device if it’s not compliant with its assigned policies. This warning doesn’t block access but provides transparency about the risk of using sensitive data like administrative credentials during the session. 
+- **Conditional access** - Administrators can now utilize conditional access capability when setting up policies and conditions for Remote Help. For example, multi-factor authentication, installing security updates, and locking access to Remote Help for a specific region or IP addresses. For more information on setting up conditional access, go to [Set up Conditional Access for Remote Help](remote-help.md#setup-conditional-access-for-remote-help) 
+
+- **Compliance Warnings** - Before connecting to a user's device, a helper will see a non-compliance warning about that device if it’s not compliant with its assigned policies. This warning doesn’t block access but provides transparency about the risk of using sensitive data like administrative credentials during the session. 
     
     - Helpers who have access to device views in Intune will see a link in the warning to the device properties page in the Microsoft Intune admin center. This allows a helper to learn more about why the device isn't compliant.
  
@@ -329,6 +331,21 @@ Depending on the environment that Remote Help is utilized in, it may be necessar
 - C:\Program Files\Remote help\RemoteHelp.exe
 - C:\Program Files\Remote help\RHService.exe
 - C:\Program Files\Remote help\RemoteHelpRDP.exe
+
+## Setup Conditional Access for Remote Help
+
+This section outlines the steps for provisioning the Remote Help service on the tenant for conditional access.
+
+1. Open PowerShell in admin mode.
+    - It may be necessary to install [AzureADPreview](https://www.powershellgallery.com/packages/AzureADPreview/2.0.2.149)  
+3. Within PowerShell enter the following commands:
+
+    - Install-Module -Name AzureADPreview
+    - Connect-AzureAD
+       - Enter in the appropriate credentials for your Azure admin account
+    - New-AzureADServicePrincipal -AppId 1dee7b72-b80d-4e56-933d-8b6b04f9a3e2
+       - The ID corresponds to the app ID for Remote Assistance Service
+       - The display name is **Remote Assistance Service**, which is the backend service for Remote Help  
 
 ## Languages Supported
 
