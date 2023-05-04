@@ -83,13 +83,11 @@ Make sure that the file is less than 4 MB and has a proper Unicode encoding. If 
 
     You can select multiple files at the same time.
 
-    Check the sizes of your individual GPO XML files. A single GPO can't be bigger than 4 MB. If a single GPO is larger than 4 MB, then the import fails. XML files without the appropriate unicode ending also fails.
+    Check the sizes of your individual GPO XML files. A single GPO can't be bigger than 4 MB. If a single GPO is larger than 4 MB, then the import fails. XML files without the appropriate unicode ending also fail.
 
-3. In **Scope tags**, select the existing scope tag you want to apply to the imported GPO:
+3. In **Scope tags**, select the existing scope tag you want to apply to the imported GPO. If you don't select an existing scope tag, then the **Default** scope tag is automatically used:
 
     :::image type="content" source="./media/group-policy-analytics/import-gpo-select-scope-tag.png" alt-text="Screenshot that shows how to import a group policy object (GPO) and select a scope tag in Microsoft Intune and Intune admin center.":::
-
-    If you don't select an existing scope tag, then the **Default** scope tag is automatically used.
 
     Only admins included in the scope tags you select can see the imported GPO. For more information on scope tags on your imported GPOs, go to [Select a scope tag when you import](#select-a-scope-tag-when-you-import) (in this article).
 
@@ -141,12 +139,12 @@ Make sure that the file is less than 4 MB and has a proper Unicode encoding. If 
 
 When you import a GPO, you can select existing scope tags. If you don't select a scope tag, then the **Default** scope tag is automatically used. Only admins scoped to the **Default** scope tag can see the imported GPO. Admins that aren't scoped to the **Default** scope tag don't see the imported GPO.
 
-This behavior applies to any scope tag you select when you import a GPO. Admins only see the imported GPOs if they have one of the same scope tags selected during the import. If an admin doesn't have the same scope tag, then they don't see the imported GPO in the reporting or in the list of GPOs.
+This behavior applies to any scope tag you select when you import a GPO. Admins only see the imported GPOs if they have one of the same scope tags selected during the import. If an admin doesn't have the scope tag, then they don't see the imported GPO in the reporting or in the list of GPOs.
 
 For example, admins have "Charlotte", "London", or "Boston" scope tags assigned to their role:
 
-- An admin with the "Charlotte" scope tag imports a GPO. During the import, they select the "Charlotte" scope tag.
-- The "Charlotte" scope tag is automatically applied to the imported GPO.
+- An admin with the "Charlotte" scope tag imports a GPO.
+- During the import, they select the "Charlotte" scope tag. The "Charlotte" scope tag is applied to the imported GPO.
 - All admins with the "Charlotte" scope tag can see the imported object.
 - Admins with only the "London" or only the "Boston" scope tags can't see the imported object from the "Charlotte" admin.
 
