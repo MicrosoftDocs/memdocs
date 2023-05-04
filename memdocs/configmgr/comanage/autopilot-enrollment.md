@@ -272,6 +272,6 @@ The enrollment status page tracks the task sequence as an app during the **Devic
 
 ## Next steps
 
-[Tutorial: Use Autopilot to enroll Windows devices in Intune](../../autopilot/tutorial/autopilot-scenarios.md)
+[Windows Autopilot scenarios and tutorials](../../autopilot/tutorial/autopilot-scenarios.md)
 
 [Windows Autopilot user-driven mode](../../autopilot/user-driven.md)
