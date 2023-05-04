@@ -8,7 +8,7 @@ ms.reviewer: jubaptis
 manager: aaroncz
 author: frankroj
 ms.author: frankroj
-ms.date: 04/27/2023
+ms.date: 05/04/2023
 ms.collection: 
   - M365-modern-desktop
   - highpri
@@ -75,8 +75,7 @@ Before starting the pre-provisioning process in the provisioning service facilit
 The pre-provisioning process applies all device-targeted policies from Intune during the device ESP phase that runs both during the technician flow and the user flow. Those policies include certificates, security templates, settings, apps, and more - anything targeting the device. Additionally, any Win32 or LOB apps are installed if they meet the following conditions:
 
 - Configured to install in the device context.
-- Targeted to the device: Installs during device ESP during both the technician flow and the user flow.
-- Targeted to the user preassigned to the Autopilot device: Installs during the user ESP during the user flow.
+- Assigned to either the device or to the user preassigned to the Autopolot device.
 
 > [!IMPORTANT]
 > Make sure not to target both win32 and LOB apps to the same device. For more information, see [Add a Windows line-of-business app to Microsoft Intune](/mem/intune/apps/lob-apps-windows).
