@@ -2,13 +2,13 @@
 # required metadata
 
 title: Migrate your imported group policy to a policy in Microsoft Intune
-description: After you import your group policy objects in Microsoft Intune, use the migrate feature to transfer your GPOs to a Settings Catalog policy. This policy will use your imported GPOs, and can be assigned to users and devices managed by your organizations.
+description: After you import your group policy objects in Microsoft Intune, use the migrate feature to transfer your GPOs to a Settings Catalog policy. This policy uses your imported GPOs, and can be assigned to users and devices managed by your organizations.
 keywords:
 author: MandiOhlinger
 
 ms.author: mandia
 manager: dougeby
-ms.date: 01/26/2023
+ms.date: 05/04/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -55,6 +55,8 @@ This article shows you how to create the policy from your imported GPOs. For mor
 - Import your on-premises GPOs, and review the results.
 
   For the specific steps, go to [Analyze your on-premises group policy objects (GPO) using Group Policy analytics in Microsoft Intune](group-policy-analytics.md).
+
+- To create a settings catalog policy from an imported GPO, when you import the GPO, a scope tag must be selected. If a scope tag isn't or wasn't selected during the GPO import, then the **Default** scope tag is automatically used. Only admins scoped to the scope tag can see the imported GPO.
 
 - This feature is in public preview. For more information, go to [Public preview in Microsoft Intune](../fundamentals/public-preview.md).
 
@@ -117,7 +119,7 @@ The next time any device within your assigned groups checks for configuration up
 
 ## Conflicting settings are detected early
 
-It's possible you have multiple GPOs that include the same setting, and that the setting is set to different values. When you're creating a policy, and selecting your settings in the **Settings to migrate** tab, any conflicting settings will show the following error:
+It's possible you have multiple GPOs that include the same setting, and that the setting is set to different values. When you're creating a policy, and selecting your settings in the **Settings to migrate** tab, any conflicting settings show the following error:
 
 `Conflicts are detected for the following settings: <setting name>. Select only one version with the value you prefer in order to continue.`
 
@@ -131,7 +133,7 @@ The **Migrate** feature takes the parsed data from the imported Group Policy obj
 
 **Migrate** is best effort. 
 
-When you create the Settings Catalog profile, any settings that can be included in the profile will be included. There can be some differences with the imported settings and the settings in Settings Catalog.
+When you create the Settings Catalog profile, any settings that can be included in the profile are included. There can be some differences with the imported settings and the settings in Settings Catalog.
 
 - **Some settings have a better configuration experience in Endpoint Security**
 
@@ -147,13 +149,13 @@ When you create the Settings Catalog profile, any settings that can be included 
 
 - **Some settings don't migrate exactly, and may use a different setting**
 
-  In some scenarios, some GPO settings won't migrate to the exact same setting in the Settings Catalog. Intune will show an alternate setting that has a similar effect.
+  In some scenarios, some GPO settings don't migrate to the exact same setting in the Settings Catalog. Intune shows an alternate setting that has a similar effect.
 
   For example, you may see this behavior if you import GPOs that include older Office Administrative Template settings or older Google Chrome settings.
 
 - **Some settings fail to migrate**
 
-  It's possible there will be some errors when the settings are migrating. When the profile is being created, settings that return an error are shown in **Notifications**:
+  It's possible some errors can happen when the settings are migrating. When the profile is being created, settings that return an error are shown in **Notifications**:
 
   :::image type="content" source="./media/group-policy-analytics-migrate/notifications.png" alt-text="Screenshot that shows notifications with additional information when the policy is being created in Microsoft Intune.":::
 
