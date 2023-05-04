@@ -341,7 +341,7 @@ Use audit logs to track and monitor organizational message events in Microsoft I
 
 #### User configuration support for Windows 10 multi-session VMs is now GA<!-- 17060455 -->
 
-User configuration support for Windows 10 multi-session VMs is now GA. With this, you can:
+You can now:
 
 - Configure user scope policies using **Settings catalog** and assign to groups of users.
 - Configure user certificates and assign to users.
