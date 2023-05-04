@@ -56,6 +56,8 @@ This article shows you how to create the policy from your imported GPOs. For mor
 
   For the specific steps, go to [Analyze your on-premises group policy objects (GPO) using Group Policy analytics in Microsoft Intune](group-policy-analytics.md).
 
+- To create a settings catalog policy from an imported GPO, when you import the GPO, a scope tag must be selected. If a scope tag isn't or wasn't selected during the GPO import, then the **Default** scope tag is automatically used. Only admins scoped to the scope tag can see the imported GPO.
+
 - This feature is in public preview. For more information, go to [Public preview in Microsoft Intune](../fundamentals/public-preview.md).
 
 ## Review and migrate your GPOs to a Settings Catalog policy
