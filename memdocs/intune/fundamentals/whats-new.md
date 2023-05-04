@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/02/2023
+ms.date: 05/04/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -68,6 +68,15 @@ You can use RSS to be notified when this page is updated. For more information, 
 -->
 
 ## Week of May 1, 2023
+
+### App management
+
+#### Microsoft Store for Business deprecation<!-- 19677954 wndraft -->
+The Microsoft Store for Business connector is no longer accessible in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Apps added from the Microsoft Store for Business or Microsoft Store for Education will no longer sync with Intune. Apps that have previously synced will continue to be available and deploy to devices and users.
+
+It is now also possible to delete Microsoft Store for Business apps from the **Apps** pane in the Microsoft Intune admin center so that you can clean up your environment as you move to the new Microsoft Store app type.
+
+For related information, see [Plan for Change: Ending support for Microsoft Store for Business and Education apps](../fundamentals/whats-new.md#plan-for-change-ending-support-for-microsoft-store-for-business-and-education-apps) for upcoming dates when Microsoft Store for Business apps will no longer deploy and Microsoft Store for Business apps will be removed.
 
 ### Device configuration
 
@@ -321,7 +330,10 @@ This permission is also added to the **Organizational Messages Manager** built-i
 ### Tenant administration
 
 #### Delete organizational messages<!-- 15273028  -->  
-You can now delete organizational messages from Microsoft Intune.  After you delete a message, it's removed from Intune and no longer appears in the admin center. You can delete a message anytime, regardless of its status. Intune automatically cancels active messages after you delete them. For more information, see [Delete organizational messages](../remote-actions/organizational-messages-cancel.md#delete-message).
+You can now delete organizational messages from Microsoft Intune.  After you delete a message, it's removed from Intune and no longer appears in the admin center. You can delete a message anytime, regardless of its status. Intune automatically cancels active messages after you delete them. For more information, see [Delete organizational messages](../remote-actions/organizational-messages-cancel.md#delete-message).  
+
+#### Review audit logs for organizational messages<!-- 16576073 -->  
+Use audit logs to track and monitor organizational message events in Microsoft Intune. To access the logs, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Tenant administration** > **Audit logs**. For more information, see [Audit logs for Intune activities](../fundamentals/monitor-audit-logs.md#audit-logs-for-intune-workloads).  
 
 ## Week of April 10, 2023
 
@@ -329,7 +341,7 @@ You can now delete organizational messages from Microsoft Intune.  After you del
 
 #### User configuration support for Windows 10 multi-session VMs is now GA<!-- 17060455 -->
 
-User configuration support for Windows 10 multi-session VMs is now GA. With this, you can:
+You can now:
 
 - Configure user scope policies using **Settings catalog** and assign to groups of users.
 - Configure user certificates and assign to users.

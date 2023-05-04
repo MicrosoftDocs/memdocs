@@ -15,6 +15,9 @@ items:
         href: ./fundamentals/manage-apps.md
       - name: Zero Trust with Microsoft Intune
         href: ./fundamentals/zero-trust-with-microsoft-intune.md
+      - name: Intune architecture diagram
+        href: ./fundamentals/high-level-architecture.md
+        displayName: architecture, diagram, components, design, svg
     - name: Intune service release information
       href: ./fundamentals/intune-service-servicing-information.md
     - name: What is device management?
