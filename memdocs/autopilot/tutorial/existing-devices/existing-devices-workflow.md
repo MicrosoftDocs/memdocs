@@ -44,12 +44,23 @@ Windows Autopilot deployment for existing devices is useful for the following sc
 
 Windows Autopilot deployment for existing devices can be viewed as a method to prepare an existing device for an Autopilot deployment.
 
+> [!NOTE]
+>
+> The JSON file for Windows Autopilot for existing devices only supports user-driven Azure AD and user-driven hybrid Azure AD Autopilot profiles. Self-deploying and pre-provisioning Autopilot profiles aren't supported with JSON files due to these scenarios requiring TPM attestation. TPM attestation only works where there's an existing Autopilot device since the TPM attestation information is stored in the Autopilot device object.
+>
+> However, during the Windows Autopilot for existing devices deployment, if the following conditions are true:
+>
+> - Device is already a Windows Autopilot device before the deployment begins
+> - Device has an Autopilot profile assigned to it
+>
+> then the assigned Autopilot profile takes precedence over the JSON file installed by the task sequence. In this scenario, if the assigned Autopilot profile is either a self-deploying or pre-provisioning Autopilot profile, then the self-deploying and pre-provisioning scenarios are supported.
+
 ## Workflow
 
 The following steps are needed to configure and then perform a Windows Autopilot deployment for existing devices deployment using Intune and Microsoft Configuration Manager:
 
 > [!div class="checklist"]
-> - Step 1: [Set up a Windows Autopilot deployment](setup-autopilot-deployment.md)
+> - Step 1: [Set up a Windows Autopilot profile](setup-autopilot-profile.md)
 > - Step 2: [Install required modules to obtain Autopilot profile(s) from Intune](install-modules.md)
 > - Step 3: [Create JSON file for Autopilot profile(s)](create-json-file.md)
 > - Step 4: [Create and distribute package for JSON file in Configuration Manager](create-json-package.md)
@@ -63,7 +74,7 @@ The following steps are needed to configure and then perform a Windows Autopilot
 ## Walkthrough
 
 > [!div class="nextstepaction"]
-> [Step 1: Set up a Windows Autopilot deployment](setup-autopilot-deployment.md)
+> [Step 1: Set up a Windows Autopilot profile](setup-autopilot-profile.md)
 
 ## More information
 

@@ -21,7 +21,7 @@ appliesto:
 # Windows Autopilot deployment for existing devices: Create JSON file for Autopilot profile(s)
 
 Autopilot user-driven Azure AD join steps:
-- Step 1: [Set up a Windows Autopilot deployment](setup-autopilot-deployment.md)
+- Step 1: [Set up a Windows Autopilot profile](setup-autopilot-profile.md)
 - Step 2: [Install required modules to obtain Autopilot profile(s) from Intune](install-modules.md)
 > [!div class="checklist"]
 > - **Step 3: Create JSON file for Autopilot profile(s)**
@@ -61,6 +61,10 @@ To export the Autopilot profiles as JSON files, follow these steps:
 1. Once signed into Intune, you may need to select **Enter** a second time to run the last command in the code block.
 
 1. Once all the commands have run successfully, the Autopilot profile(s) appears on the Desktop in a folder with the name of the Autopilot profile from Intune. If there are multiple Autopilot profiles, each profile has its own folder on the Desktop. In each folder, there's a JSON file named **`AutopilotConfigurationFile.json`**.
+
+> [!NOTE]
+>
+> The above script exports all Autopilot profiles from Intune. In addition to supported user-driven Autopilot profiles, it will also download unsupported pre-provisioning Autopilot profiles and self-deploying Autopilot profiles if they exist in the environment.
 
 ## Next step: Create and distribute package for JSON file in Configuration Manager
 
