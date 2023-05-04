@@ -72,7 +72,7 @@ Before starting the pre-provisioning process in the provisioning service facilit
 
 :::image type="content" source="images/allow-white-glove-oobe.png" alt-text="Screenshot of the Out-of-box experience (OOBE) portal and the highlighted setting to allow pre-provisioning":::
 
-The pre-provisioning process applies all device-targeted policies from Intune during the device ESP phase that runs both during the technician flow and the user flow. Those policies include certificates, security templates, settings, apps, and more - anything targeting the device. Additionally, any Win32 or LOB apps are installed if they meet the following conditions:
+The pre-provisioning process applies all device-targeted policies from Intune. Those policies include certificates, security templates, settings, apps, and more - anything targeting the device. Additionally, any Win32 or LOB apps are installed if they meet the following conditions:
 
 - Configured to install in the device context.
 - Assigned to either the device or to the user preassigned to the Autopilot device.
