@@ -1,7 +1,7 @@
 {
     "redirections": [
         {
-            "source_path": "memdocs/intune/fundamentals/tutorial-use-autopilot-enroll-devices.md",
+            "source_path": "memdocs/intune/enrollment/tutorial-use-autopilot-enroll-devices.md",
             "redirect_url": "/mem/autopilot/tutorial/autopilot-scenarios",
             "redirect_document_id": false
         },
