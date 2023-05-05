@@ -71,6 +71,12 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 ### App management
 
+#### macOS shell scripts maximum running time limit<!-- 19396575 -->
+We have fixed an issue that caused Intune tenants with long-running shell scripts to not report back on the script run status. macOS shell scripts that are running for longer than 15 minutes will be stopped by the macOS Intune agent and report as failed. The new behavior is enforced from macOS Intune agent version 2305.019.
+
+#### DMG app installation for macOS<!-- 13911806 -->
+The DMG app installation feature for macOS is now generally available. Intune supports **required** and **uninstall** assignment types for DMG apps. The Intune agent for macOS is used to deploy DMG apps. For related information, see [Deploy DMG-type applications to managed macOS devices](../fundamentals/whats-new-archive.md#deploy-dmg-type-applications-to-managed-macos-devices).
+
 #### Deprecation of Microsoft Store for Business and Education<!-- 19677954 -->
 The Microsoft Store for Business connector is no longer accessible in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Apps added from the Microsoft Store for Business or Microsoft Store for Education will no longer sync with Intune. Apps that have previously synced will continue to be available and deploy to devices and users.
 
