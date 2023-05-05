@@ -36,7 +36,7 @@ ms.collection:
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 > [!IMPORTANT]
-> The Microsoft Store for Business connector is no longer accessible in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Apps added from the Microsoft Store for Business or Microsoft Store for Education will no longer sync with Intune. Apps that have previously synced will continue to be available and deploy to devices and users. For related information, see [Microsoft Store for Business deprecation](../fundamentals/whats-new.md#microsoft-store-for-business-deprecation).
+> The Microsoft Store for Business connector is no longer accessible in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Apps added from the Microsoft Store for Business or Microsoft Store for Education will no longer sync with Intune. Apps that have previously synced will continue to be available and deploy to devices and users. For related information, see [Deprecation of Microsoft Store for Business and Education](../fundamentals/whats-new.md#deprecation-of-microsoft-store-for-business-and-education).
 
 The [Microsoft Store for Business](https://www.microsoft.com/business-store) gives you a place to find and purchase apps for your organization, individually, or in volume. By connecting the store to Microsoft Intune, you can manage volume-purchased apps from the portal. For example:
 

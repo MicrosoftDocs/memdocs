@@ -81,9 +81,6 @@ items:
       - name: Protect email on unmanaged devices
         href: ./protect/tutorial-protect-email-on-unmanaged-devices.md
 
-      - name: Use Autopilot to enroll Windows devices
-        href: ./enrollment/tutorial-use-autopilot-enroll-devices.md
-        displayName: OOBE
       - name: Use automated device enrollment to enroll iOS/iPadOS devices 
         href: ./enrollment/tutorial-use-device-enrollment-program-enroll-ios.md
 

@@ -178,7 +178,7 @@ When users turn on the device, the next steps determine how they're enrolled. Be
 
 Use on organization-owned devices running Windows 10/11. Windows Autopilot uses the Windows client OEM version preinstalled on the device. You don't have to wipe the devices or use custom OS images. It also requires Automatic enrollment, and uses the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) to create an enrollment profile. When users sign in with their organization account, they're automatically enrolled.
 
-For more information on Windows Autopilot, see [Windows Autopilot overview](../../autopilot/windows-autopilot.md) or [Tutorial: Use Autopilot to enroll Windows devices](../enrollment/tutorial-use-autopilot-enroll-devices.md).
+For more information about Windows Autopilot, see [Windows Autopilot overview](../../autopilot/windows-autopilot.md) or [Windows Autopilot scenarios](../../autopilot/tutorial/autopilot-scenarios.md).  
 
 ---
 | Feature | Use this enrollment option when |

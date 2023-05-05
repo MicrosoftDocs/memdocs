@@ -71,7 +71,7 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 ### App management
 
-#### Microsoft Store for Business deprecation<!-- 19677954 wndraft -->
+#### Deprecation of Microsoft Store for Business and Education<!-- 19677954 -->
 The Microsoft Store for Business connector is no longer accessible in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Apps added from the Microsoft Store for Business or Microsoft Store for Education will no longer sync with Intune. Apps that have previously synced will continue to be available and deploy to devices and users.
 
 It is now also possible to delete Microsoft Store for Business apps from the **Apps** pane in the Microsoft Intune admin center so that you can clean up your environment as you move to the new Microsoft Store app type.
