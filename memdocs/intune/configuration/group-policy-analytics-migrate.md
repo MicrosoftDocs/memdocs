@@ -109,7 +109,7 @@ After you import your GPOs, review the settings that can be migrated. Remember, 
     
     Select **Next**.
 
-8. In **Scope tags**, optionally assign a tag to filter the profile to specific IT groups, such as US-NC IT Team or JohnGlenn_ITDepartment. For more information about scope tags, see [Use RBAC roles and scope tags for distributed IT](https://learn.microsoft.com/mem/intune/fundamentals/scope-tags).
+8. In **Scope tags**, optionally assign a tag to filter the profile to specific IT groups, such as US-NC IT Team or JohnGlenn_ITDepartment. For more information about scope tags, go to [Use RBAC roles and scope tags for distributed IT](../fundamentals/scope-tags.md).
 
 9. In **Assignments**, select the user or groups that will receive your profile. For more information on assigning profiles, including advice and guidance, go to [Assign user and device profiles in Intune](device-profile-assign.md).
 
