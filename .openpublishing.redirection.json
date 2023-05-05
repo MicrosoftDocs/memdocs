@@ -1,6 +1,11 @@
 {
     "redirections": [
         {
+            "source_path": "memdocs/intune/enrollment/tutorial-use-autopilot-enroll-devices.md",
+            "redirect_url": "/mem/autopilot/tutorial/autopilot-scenarios",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "memdocs/intune/fundamentals/policy-map-between-basic-mobility-security-intune.md",
             "redirect_url": "/mem/intune/fundamentals/migrate-to-intune",
             "redirect_document_id": false
@@ -946,6 +951,11 @@
         {
             "source_path": "memdocs/autopilot/enrollment-autopilot.md#add-devices",
             "redirect_url": "/mem/autopilot/add-devices#add-devices",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/autopilot/tutorial/existing-devices/setup-autopilot-deployment.md",
+            "redirect_url": "/mem/autopilot/tutorial/existing-devices/setup-autopilot-profile",
             "redirect_document_id": false
         },
         {

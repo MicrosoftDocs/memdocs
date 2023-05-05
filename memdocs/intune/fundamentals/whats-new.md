@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/01/2023
+ms.date: 05/04/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -74,14 +74,60 @@ You can use RSS to be notified when this page is updated. For more information, 
 #### macOS shell scripts maximum running time limit<!-- 19396575 -->
 We have fixed an issue that caused Intune tenants with long-running shell scripts to not report back on the script run status. macOS shell scripts that are running for longer than 15 minutes will be stopped by the macOS Intune agent and report as failed. The new behavior is enforced from macOS Intune agent version 2305.019.
 
-### Device management
+#### DMG app installation for macOS<!-- 13911806 -->
+The DMG app installation feature for macOS is now generally available. Intune supports **required** and **uninstall** assignment types for DMG apps. The Intune agent for macOS is used to deploy DMG apps. For related information, see [Deploy DMG-type applications to managed macOS devices](../fundamentals/whats-new-archive.md#deploy-dmg-type-applications-to-managed-macos-devices).
 
-### Intune UI displays Windows Server devices as distinct from Windows clients for the Security Management for Microsoft Defender for Endpoint scenario<!-- 16882836  -->  
-To support the [Security Management for Microsoft Defender for Endpoint](../protect/mde-security-integration.md) (MDE security configuration) scenario, Intune now differentiates Windows devices in Azure Active Directory as either *Windows Server* for devices that run Windows Server, or as *Windows* for devices that run Windows 10 or Windows 11.
+#### Deprecation of Microsoft Store for Business and Education<!-- 19677954 -->
+The Microsoft Store for Business connector is no longer accessible in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Apps added from the Microsoft Store for Business or Microsoft Store for Education will no longer sync with Intune. Apps that have previously synced will continue to be available and deploy to devices and users.
 
-With this change, you'll be able to improve policy targeting for MDE security configuration. For example, you can use dynamic groups that consist of only Windows Server devices, or only Windows client devices (Windows 10/11).
+It is now also possible to delete Microsoft Store for Business apps from the **Apps** pane in the Microsoft Intune admin center so that you can clean up your environment as you move to the new Microsoft Store app type.
 
-For more information about this change, see the Intune customer success blog [Support tip: Windows Server devices will now be identified as a new OS platform in Microsoft Intune](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-windows-server-devices-will-now-be-identified-as-a/ba-p/3767773)
+For related information, see [Plan for Change: Ending support for Microsoft Store for Business and Education apps](../fundamentals/whats-new.md#plan-for-change-ending-support-for-microsoft-store-for-business-and-education-apps) for upcoming dates when Microsoft Store for Business apps will no longer deploy and Microsoft Store for Business apps will be removed.
+
+### Device configuration
+
+#### Remote Help now supports conditional access capability<!--16108299 -->
+
+Administrators can now utilize conditional access capability when setting up policies and conditions for Remote Help. For example, multi-factor authentication, installing security updates, and locking access to Remote Help for a specific region or IP addresses.
+
+For more information, go to:
+
+- [Conditional access](../protect/conditional-access.md)
+- [Remote Help](../fundamentals/remote-help.md#setup-conditional-access-for-remote-help)
+
+### Device security
+
+#### Updated settings for Microsoft Defender in endpoint security Antivirus policy<!-- 19991301 Wnready wnstaged -->  
+We’ve updated the available settings in the *Microsoft Defender Antivirus* profile for endpoint security Antivirus policy.  You can find this profile in the Intune admin center at **Endpoint security** > **Antivirus** > *Platform:* **Windows 10, Windows 11, and Windows Server**  > *Profile:* **Microsoft Defender Antivirus**.  
+- **The following settings have been added**:
+
+  - Metered Connection Updates
+  - Disable Tls Parsing
+  - Disable Http Parsing
+  - Disable Dns Parsing
+  - Disable Dns Over Tcp Parsing
+  - Disable Ssh Parsing
+  - Platform Updates Channel
+  - Engine Updates Channel
+  - Security Intelligence Updates Channel
+  - Allow Network Protection Down Level
+  - Allow Datagram Processing On Win Server
+  - Enable Dns Sinkhole
+
+  For more information about these settings, see the [Defender CSP]( /windows/client-management/mdm/Defender-csp?WT.mc_id=Portal-fx).
+The new settings are also available through the Intune [Settings Catalog](../configuration/settings-catalog.md).
+
+- **The following setting has been deprecated**:
+
+  - Allow Intrusion Prevention System
+
+  This setting now appears with the *Deprecated* tag. If this deprecated setting was previously applied on a device, the setting value is updated to *NotApplicable* and has no effect on the device. If this setting is subsequently set on a device, there will be no effect on the device.
+
+Applies to:
+
+- Windows 10
+- Windows 11
+
 
 ## Week of April 17, 2023 (Service release 2304)
 
@@ -290,7 +336,10 @@ This permission is also added to the **Organizational Messages Manager** built-i
 ### Tenant administration
 
 #### Delete organizational messages<!-- 15273028  -->  
-You can now delete organizational messages from Microsoft Intune.  After you delete a message, it's removed from Intune and no longer appears in the admin center. You can delete a message anytime, regardless of its status. Intune automatically cancels active messages after you delete them. For more information, see [Delete organizational messages](../remote-actions/organizational-messages-cancel.md#delete-message).
+You can now delete organizational messages from Microsoft Intune.  After you delete a message, it's removed from Intune and no longer appears in the admin center. You can delete a message anytime, regardless of its status. Intune automatically cancels active messages after you delete them. For more information, see [Delete organizational messages](../remote-actions/organizational-messages-cancel.md#delete-message).  
+
+#### Review audit logs for organizational messages<!-- 16576073 -->  
+Use audit logs to track and monitor organizational message events in Microsoft Intune. To access the logs, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Tenant administration** > **Audit logs**. For more information, see [Audit logs for Intune activities](../fundamentals/monitor-audit-logs.md#audit-logs-for-intune-workloads).  
 
 ## Week of April 10, 2023
 
@@ -298,7 +347,7 @@ You can now delete organizational messages from Microsoft Intune.  After you del
 
 #### User configuration support for Windows 10 multi-session VMs is now GA<!-- 17060455 -->
 
-User configuration support for Windows 10 multi-session VMs is now GA. With this, you can:
+You can now:
 
 - Configure user scope policies using **Settings catalog** and assign to groups of users.
 - Configure user certificates and assign to users.
