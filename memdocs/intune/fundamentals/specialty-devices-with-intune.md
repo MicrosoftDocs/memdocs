@@ -40,7 +40,7 @@ Either a Microsoft Intune Suite, Intune Plan 2 or an alternative Microsoft plan 
 
 For specialty devices such as headsets and AR/VR devices, for example **RealWear** and **HTC** devices, organizations need to purchase either the Microsoft Intune Suite or Intune Plan 2 for the users of these devices when they're considered generally available.
 
-For **Microsoft Teams Rooms** devices including Microsoft Surface Hub, organizations need to have sufficient [Microsoft Teams Room Pro licenses](/microsoftteams/rooms/rooms-licensing), conference area phone [Teams Shared Device license](/microsoftteams/set-up-common-area-phones) or a Teams license plan that includes Microsoft Intune Plan 1, to cover the users of these devices.  
+For **Microsoft Teams Rooms** devices including Microsoft Surface Hub, organizations need to have sufficient [Microsoft Teams Rooms Pro licenses](/microsoftteams/rooms/rooms-licensing), conference area phone [Teams Shared Device license](/microsoftteams/set-up-common-area-phones) or a Teams license plan that includes Microsoft Intune Plan 1, to cover the users of these devices.  
 
 For **Microsoft HoloLens**, subscribers of Microsoft Intune (Plan 1) aren't required to proactively add the Intune Plan 2 license. Microsoft is exploring ways to use their Microsoft 365 subscription that includes Intune to ensure licensing compliance. In the interim, there won't be any disruption to their ability to manage and protect HoloLens devices.
 
