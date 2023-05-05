@@ -56,7 +56,7 @@ This article shows you how to create the policy from your imported GPOs. For mor
 
   For the specific steps, go to [Analyze your on-premises group policy objects (GPO) using Group Policy analytics in Microsoft Intune](group-policy-analytics.md).
 
-- To create a settings catalog policy from an imported GPO, when you import the GPO, a scope tag must be selected. If a scope tag isn't or wasn't selected during the GPO import, then the **Default** scope tag is automatically used. Only admins scoped to the scope tag can see the imported GPO.
+- Only admins scoped to the GPO can create a settings catalog policy from that imported GPO. Scope tags are first applied during import of the GPO and can be edited. If a scope tag isn't or wasn't selected during the GPO import, then the **Default** scope tag is automatically used.
 
 - This feature is in public preview. For more information, go to [Public preview in Microsoft Intune](../fundamentals/public-preview.md).
 
@@ -94,7 +94,8 @@ After you import your GPOs, review the settings that can be migrated. Remember, 
     > [!TIP]
     > If you haven't already, review your Group Policy settings. It's possible some settings don't apply to cloud-based policy management or don't apply to cloud native endpoints, like Windows 10/11 devices. It's not recommended to include all your Group Policy settings without reviewing them.
 
-5. Select **Next**.
+    Select **Next**.
+
 6. In **Configuration**, your settings and their values are shown. The values are the same values in the on-premises Group Policy. Review these settings and their values.
 
     After you create the Settings Catalog policy, you can change any values.
@@ -105,8 +106,11 @@ After you import your GPOs, review the settings that can be migrated. Remember, 
 
     - **Name**: Enter a descriptive name for the Setting Catalog profile. Name your profiles so you can easily identify them later. For example, a good profile name is **Windows 10/11: Imported Microsoft Edge GPOs**.
     - **Description**: Enter a description for the profile. This setting is optional, but recommended.
+    
+    Select **Next**.
 
-8. Select **Next**.
+8. In **Scope tags**, optionally assign a tag to filter the profile to specific IT groups, such as US-NC IT Team or JohnGlenn_ITDepartment. For more information about scope tags, go to [Use RBAC roles and scope tags for distributed IT](../fundamentals/scope-tags.md).
+
 9. In **Assignments**, select the user or groups that will receive your profile. For more information on assigning profiles, including advice and guidance, go to [Assign user and device profiles in Intune](device-profile-assign.md).
 
     Select **Next**.
