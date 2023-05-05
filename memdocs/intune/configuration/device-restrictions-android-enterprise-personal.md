@@ -86,7 +86,7 @@ These settings apply to Android Enterprise personally owned devices with a work 
 
     - **Google domain allow-list**:  Restricts users to add only certain Google account domains in the work profile. You can import a list of allowed domains in the following format:
 
-      ```
+      ```csv
       contoso.com
       microsoft.com
       ```
