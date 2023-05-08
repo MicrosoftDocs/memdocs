@@ -67,7 +67,7 @@ Users of devices that aren't enrolled with Intune must install the following app
 For your Line of Business (LOB) apps, integrate them with the MAM SDK. Later, you’ll need to [add your LOB apps](#configure-line-of-business-applications) to your app protection policy and app configuration polices for MAM Tunnel. See [Getting started with MAM for Android](../developer/app-sdk-android-phase3.md).
 
 > [!NOTE]
-> To support use with Tunnel for MAM, Android LOB apps must support both proxy and proxy.pac. 
+> Customer must ensure that their Android LOB applications support direct proxy or Proxy Auto-Configuration (PAC) for both MDM and MAM.
 
 ## Configure policies to support Microsoft Tunnel for MAM
 
