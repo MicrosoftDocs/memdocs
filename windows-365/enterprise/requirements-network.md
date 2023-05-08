@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 09/27/2022 
+ms.date: 05/02/2023
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -56,7 +56,7 @@ To use your own network and provision Hybrid Azure AD joined Cloud PCs, you must
 
 ### [Windows 365 Government](#tab/government)
 
-All of the Windows 365 Enterprise requirements apply to [Windows 365 Government](introduction-windows-365-government.md) with the following additions:
+All of the Windows 365 Enterprise **General network requirements** apply to [Windows 365 Government](introduction-windows-365-government.md) with the following additions:
 
 #### Azure Active Directory joined Cloud PCs
 
@@ -140,7 +140,12 @@ All endpoints connect over port 443.
 
 ### [Windows 365 Government](#tab/gov)
 
-You must allow traffic in your Azure network configuration to the service URLs and ports listed in this section. All endpoints connect over port 443 unless specified otherwise.
+You must allow traffic in your Azure network configuration to:
+
+- The service URLs and ports listed in this section.
+- The endpoints for Microsoft Intune and Azure Virtual Desktop.
+
+All endpoints connect over port 443 unless specified otherwise.
 
 - GCC: [Network endpoints for Microsoft Intune](/mem/intune/fundamentals/intune-endpoints).
 - GCC: [Azure Virtual Desktop required URL list](/azure/virtual-desktop/safe-url-list).
@@ -151,13 +156,8 @@ You must allow traffic in your Azure network configuration to the service URLs a
 
 | Address:Port | Required for |
 | --- | --- | --- |
-| 168.63.129.16:80 | GCC, GCCH |
-| 168.63.129.16:32526 | GCC, GCCH |
-| 168.63.129.16:53 | GCC, GCCH |
 | `https://ghp01.ghp.cpcgateway.usgovtrafficmanager.net` | GCCH |
 | `https://gcp01.gcp.cpcgateway.usgovtrafficmanager.net` | GCC |
-| TBD cmd agents / hermes related endpoint | |
-| 168.63.129.16:80 | GCC, GCCH |
 | cpcstprovghpghp01.blob.core.usgovcloudapi.net:443<br>cpcsaamssa1ghpghp01.blob.core.usgovcloudapi.net:443<br>cpcstcnryghpghp01.blob.core.usgovcloudapi.net:443<br>cpcsacnrysa1ghpghp01.blob.core.usgovcloudapi.net:443<br> | GCCH |
 | cpcstprovgcpgcp01.blob.core.usgovcloudapi.net:443<br>cpcsaamssa1gcpgcp01.blob.core.usgovcloudapi.net:443<br>cpcstcnrygcpgcp01.blob.core.usgovcloudapi.net:443<br>cpcsacnrysa1gcpgcp01.blob.core.usgovcloudapi.net:443 | GCC |
 
@@ -181,10 +181,16 @@ You must allow traffic in your Azure network configuration to the service URLs a
 | Address:Port | Required for |
 | --- | --- | --- |
 | login.microsoftonline.us | GCCH |
-| enterpriseregistration.microsoftonline.us:443 | GCCH |
 | login.live.com:443 | GCCH, GCC |
 | login.microsoftonline.com:443 | GCC |
-| enterpriseregistration.windows.net:443 | GCC |
+| global.azure-devices-provisioning.us (port 443 and 5671) | GCC, GCCH |
+| hm-iot-in-ghp-ghp01.azure-devices.us (port 443 and 5671) | GCCH |
+| hm-iot-in-gcp-gcp01.azure-devices.us (port 443 and 5671) | GCC |
+| endpointdiscovery.ghp.cmdagent.usgovtrafficmanager.net (port 443) | GCCH |
+| endpointdiscovery.gcp.cmdagent.usgovtrafficmanager.net (port 443) | GCC |
+| registration.ghp01.cmdagent.usgovtrafficmanager.net (port 443) | GCCH |
+| registration.gcp01.cmdagent.usgovtrafficmanager.net (port 443) | GCC |
+|
 
 #### Azure Virtual Device-dependent URLs
 
@@ -199,7 +205,7 @@ You must allow traffic in your Azure network configuration to the service URLs a
 
 | Address:Port | Required for |
 | --- | --- | --- |
-|  download.microsoft.com:443 | GCCH, GCC |
+| download.microsoft.com:443 | GCCH, GCC |
 | software-download.microsoft.com:443 | GCCH, GCC |
 
 ---
