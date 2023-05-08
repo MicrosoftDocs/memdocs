@@ -30,13 +30,13 @@ ms.collection:
 ---
 
 The identity of a cellular-enabled device, such as a Windows Connected PC, has traditionally been encapsulated in a device called SIM (Subscriber Identity Module), and packaged as a discrete SIM card. Management of SIM cards for a fleet of devices can be costly and time-consuming. Therefore, Windows 10 and Windows 11 support eSIM (embedded Subscriber Identity Module) technology as a digital alternative to discrete SIM cards.
-Windows 11 provides additional capabilities for the deployment and management of eSIM content using Mobile Device Management (MDM) such as Microsoft Intune.
+Windows 11 provides more capabilities for the deployment and management of eSIM content using Mobile Device Management (MDM) such as Microsoft Intune.
 
 ## About eSIM technology
 
-eSIM technology has created a worldwide ecosystem of cellular devices and mobile operators based upon a common specification from the GSM Association (GSMA), and its adoption has been growing significantly recently due to its incorporation in popular smart phones. Windows has supported eSIM for PCs since 2017.
+eSIM technology has created a worldwide ecosystem of cellular devices and mobile operators based upon a common specification from the GSM Association (GSMA). The adoption of eSIM technology has been growing due to its incorporation in popular smart phones. Windows has supported eSIM for PCs since 2017.
 
-eSIM decouples the secure execution environment of the plastic SIM card from the SIM credentials it contains. The secure container is called an eUICC (embedded Universal Integrated Circuit Card). In the same way that each physical SIM card has a unique identity, each eUICC has a unique identity called its eUICC Identifier (EID).
+eSIM decouples the secure execution environment of the plastic SIM card from the SIM credentials it contains. The secure container is called an eUICC (embedded Universal Integrated Circuit Card). In the same way that each physical SIM card has a unique identity, each eUICC has a unique identity called eUICC Identifier (EID).
 
 The credentials and associated other configuration that uniquely identify a cellular subscription are contained in a digital (software) package called an eSIM Profile. Multiple eSIM Profiles may be installed into an eUICC. One of the installed eSIM Profiles is enabled (and the rest are disabled). The combination of the enabled eSIM Profile and its eUICC container behaves exactly like a traditional SIM card.
 
@@ -44,22 +44,23 @@ The credentials and associated other configuration that uniquely identify a cell
 
 eSIM digitizes the delivery of SIMs to devices such as PCs, eliminating the need to obtain and deploy physical SIM cards. The [Mobile Plans](/windows-hardware/drivers/mobilebroadband/mobile-plans) application in Windows further reduces friction by providing a user-friendly interface for a user to interact with a chosen mobile operator and coordinate the download and installation of the corresponding eSIM profile.
 
-The Mobile Plans application is well suited to the needs of consumers and businesses with a small number of PCs. However, it requires user interaction on each device that is provisioned, an effort and cost that may become significant at large scale. To support larger-scale managed environments (such as an enterprise or an educational organization), Windows provides eSIM provisioning through mobile device management (MDM) such as Microsoft Intune.
+The Mobile Plans application is well suited to the needs of consumers and businesses with a few PCs. However, it requires user interaction on each device that is provisioned, an effort and cost that may become significant at large scale. To support larger-scale managed environments (such as an enterprise or an educational organization), Windows provides eSIM provisioning through mobile device management (MDM) such as Microsoft Intune.
 
-When provisioning an eSIM through an MDM such as Microsoft Intune, the enterprise configures the eSIM deployment along with other enterprise settings and policies, and the MDM server pushes these to the PC when it is enrolled to the end user’s work or school account and throughout its lifecycle. After it is configured with the eSIM information, the PC downloads the eSIM profile from the mobile operator’s download server (SM-DP+).
-Within Windows, eSIM configuration is handled by the [eUICCs Configuration Service Provider (CSP)](/windows/client-management/mdm/euiccs-csp), through which the enterprise can configure some eSIM policies as well as where each PC will obtain its eSIM profile.
+When an enterprise provisions an eSIM through an MDM such as Microsoft Intune, it also configures the eSIM deployment along with other enterprise settings and policies. When the MDM server is enrolled to the end user's work or school account, it pushes the configuration to the PC throughout its lifecycle. After the PC is configured with the eSIM information, it downloads the eSIM profile from the mobile operator's download server (SM-DP+).
+
+Within Windows, the [eUICCs Configuration Service Provider (CSP)](/windows/client-management/mdm/euiccs-csp) handles eSIM configuration. In addition, the enterprise can also configure some eSIM policies through the CSP and each PC obtains its eSIM profile from the CSP.
 
 ## Prerequisites
 
-In addition to a Windows 11 Connected PC (eSIM-capable PC) managed through Microsoft Intune, you need the following:
+In addition to a Windows 11 Connected PC (eSIM-capable PC) managed through Microsoft Intune, you need the following information:
 
-A mobile operator who can provide eSIM profiles to a set of known devices based upon their EIDs. This, in turn, requires a way for the enterprise (or school) to provide the EIDs of their PCs to the operator as part of setting up their contract with the mobile operator.
+A mobile operator who can provide eSIM profiles to a set of known devices based upon their EIDs. This, in turn, requires some way through which an enterprise (or school) should be able to provide the EIDs of their PCs to the operator as part of their contract with the mobile operator.
 
 - One option is for the enterprise to obtain the EIDs of their PCs from PC packaging and send it to the operator directly.
 
-- Alternatively, for bulk device purchases, the EIDs of their PCs could come in a manifest file created by the device OEM or a reseller/distributor and delivered to the enterprise with the devices (to pass along to the operator) or directly to the mobile operator.
+- Alternatively, for bulk device purchases, the EIDs of their PCs could come in a manifest file created by the device OEM or a reseller/distributor and delivered to the enterprise with the devices or directly to the mobile operator.
 
-After the mobile operator knows the EIDs of the customer’s PCs, the mobile operator will set up eSIM profiles for each PC on its download server (SM-DP+). The enterprise needs to know the fully qualified domain name (FQDN) of the download server (SM-DP+). For example, smdp.example.com. However, it does not need individual activation codes. Every PC connects to the same server. When each PC contacts the download server (SM-DP+), the download server (SM-DP+) will authenticate the PC by its EID and provide it with the eSIM profile that is specific to that device.
+After the mobile operator knows the EIDs of the customer's PCs, the mobile operator will set up eSIM profiles for each PC on its download server (SM-DP+). The enterprise needs to know the fully qualified domain name (FQDN) of the download server (SM-DP+). For example, smdp.example.com. However, it doesn't need individual activation codes. Every PC connects to the same server. When each PC contacts the download server (SM-DP+), the download server (SM-DP+) authenticates the PC by its EID and provides it with the eSIM profile that is specific to that device.
 
 ## Process flow
 
@@ -67,13 +68,13 @@ After the mobile operator knows the EIDs of the customer’s PCs, the mobile ope
 
 The overall process flow is as follows:
 
-1. To set up a managed eSIM deployment, the enterprise customer must have a contract with a mobile operator and obtain information from the operator about its eSIM download server (SM-DP+). The enterprise then configures the policies and settings to be applied to all of their eSIM-capable Connected PCs. This includes the fully qualified domain name of the operator's SM-DP+.
+1. To set up a managed eSIM deployment, the enterprise customer must have a contract with a mobile operator and obtain information from the operator about its eSIM download server (SM-DP+). The enterprise then configures the policies and settings to be applied to all of their eSIM-capable Connected PCs, including the fully qualified domain name of the operator's SM-DP+.
 
     > [!NOTE]
     > The MDM administrator creates the eSIM configuration profile pointing to the download server (SM-DP+) provided by the mobile operator and assigns the profile to the required group(s).
 
 2. As described earlier, the enterprise or its supplier (PC manufacturer or distributor) provides the EIDs of the Connected PCs to the operator. For each EID, the operator creates an eSIM profile on its download server (SM-DP+) for that device.
-After the initial configuration is complete, the following will occur for each PC:
+After the initial configuration is complete, the following process unfolds for each PC:
 
 3. The end user unboxes the PC, powers it on, and goes through the initial Windows **out of box experience**. As part of this process, the end user connects the PC to a Wi-Fi network, and signs into their **work or school** account.
 
@@ -81,7 +82,7 @@ After the initial configuration is complete, the following will occur for each P
 
 5. After configuration is complete, the PC connects to the download server (SM-DP+) according to the standard eSIM download protocol. As part of this process, the download server (SM-DP+) receives and authenticates the EID of the PC. The download server (SM-DP+) looks up the eSIM profile for that EID (created in step 2) and downloads that eSIM profile to the PC.
 
-6. The PC installs and enables the eSIM profile. Windows recognizes the mobile operator and configures the cellular settings such as access point name (APNs) , and the PC is now connected over cellular.
+6. The PC installs and enables the eSIM profile. Windows recognizes the mobile operator and configures the cellular settings such as access point name (APNs), and the PC is now connected over cellular.
 
 > [!NOTE]
 > The process flow described focuses on the initial device setup experience. However, eSIM provisioning can also be done anytime throughout the lifecycle of the device for managed devices.
@@ -119,9 +120,9 @@ Create a Device group that includes the eSIM capable devices. [Add groups](../fu
 
 2. Select **Devices** > **Configuration profiles** > **Create Profile**.
 
-3. For the **Platform** field select **Windows 10 and later**.
+3. For the **Platform** field, select **Windows 10 and later**.
 
-4. For the **Profile type** field select **Settings catalog**.
+4. For the **Profile type** field, select **Settings catalog**.
 
 5. Select **Create** and follow the wizard to complete the steps.
 
@@ -133,15 +134,15 @@ Create a Device group that includes the eSIM capable devices. [Add groups](../fu
 
   - **Auto Enable**: It indicates whether the discovered profile must be automatically enabled after installation. The default value of the dropdown list is *Enable*. Select **Auto Enable** if the eSIM profile should be automatically enabled (independently of any other eSIM profiles stored in eUICC).
 
-  - **Server Name**: It is the fully qualified domain name of the SM-DP+ server that will be used for profile discovery. DO NOT INCLUDE **<https://>**.
+  - **Server Name**: It's the fully qualified domain name of the SM-DP+ server that is used for profile discovery. DO NOT INCLUDE **<https://>**.
 
   - **Display Local UI**: Determines whether eSIM settings can be viewed and changed in the Settings app on the eSIM capable devices that are being provisioned. True if available, false otherwise. If **Display Local UI** is set to Disabled, **Auto Enable** must be checked.
 
-  - Enter the Server Name , select the desired settings, and then select **Next**.
+  - Enter the Server Name, select the desired settings, and then select **Next**.
 
 8. In the **Scope tags** tab, add the required tags, and select **Next**.
 
-9. In the **Assignments** tab, select the user or device group(s) to assign your profile. For more information on assigning the profile to a user or device group , go to [Assign device profiles](device-profile-assign.md#user-groups-vs-device-groups) in Microsoft Intune.
+9. In the **Assignments** tab, select the user or device group(s) to assign your profile. For more information on assigning the profile to a user or device group, go to [Assign device profiles](device-profile-assign.md#user-groups-vs-device-groups) in Microsoft Intune.
 Also, before creating the profile, you need to have your group(s) set up. For more information, go to Add groups to organize users and devices.
 
 10. In the **Review + create** tab, review all the details and select **Create**.
@@ -150,19 +151,19 @@ Also, before creating the profile, you need to have your group(s) set up. For mo
 
 - Create a device Azure AD group that only includes the targeted eSIM devices.
 
-- If the policy is deployed to a non-eSIM capable device, the **Assignment Status** will display an Error.
+- If the policy is deployed to a non-eSIM capable device, the **Assignment Status** displays an Error.
 
 - The current implementation only supports a single Server Name. Even if more Server Names are added, only the first one is used.
 
-- If the **Local UI** is not disabled as part of the Configuration Profile, you will have the option to change the active profile, stop using, or remove any of the eSIM profiles stored in the device.
+- If the **Local UI** isn't disabled as part of the Configuration Profile, you can change the active profile, stop using, or remove any of the eSIM profiles stored in the device.
 
-- As with other settings in Intune, when the deployment status shows as *successful* it simply means that the setting is now applied, but the eSIM is not activated.
+- As with other settings in Intune, when the deployment status shows as *successful* it simply means that the setting is now applied, but the eSIM isn't activated.
 
-- There is no way to remove the eSIM profile using Intune. The profile must be manually removed from the device.
+- There's no way to remove the eSIM profile using Intune. The profile must be manually removed from the device.
 
-- There is no way to distinguish between an eSIM and a non-eSIM device in Microsoft Intune.
+- There's no way to distinguish between an eSIM and a non-eSIM device in Microsoft Intune.
 
-- EIDs cannot be collected via Intune and are not exposed programmatically. Some OEM/resellers have the capability of providing this information.
+- EIDs can't be collected via Intune and aren't exposed programmatically. Some OEM/resellers have the capability of providing this information.
 
 ## Next steps
 
