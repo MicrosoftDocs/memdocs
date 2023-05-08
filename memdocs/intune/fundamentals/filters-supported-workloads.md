@@ -114,7 +114,7 @@ You can use filters for some common app policies on the following platforms. For
 | Windows app (Win32) | ✔️ |
 | Microsoft Store for Business | ✔️ |
 
-## App configuration policies
+## [App configuration policies](../apps/app-configuration-policies-overview.md)
 
 - For **managed apps**, you can use filters for app configuration policies on the following platforms:
 
@@ -126,7 +126,7 @@ You can use filters for some common app policies on the following platforms. For
   - Android Enterprise
   - iOS/iPadOS
 
-## App protection policies
+## [App protection policies](../apps/app-protection-policy.md)
 
 - For **managed apps**, you can use filters for app protection policies on the following platforms:
 
@@ -328,7 +328,7 @@ You can use filters for some common app policies on the following platforms. For
 The following features on managed devices don't support using filters:
 
 - Custom compliance policies for Windows 10/11 (preview)
-- App protection policies for Android, iOS/iPadOS, and Windows
+- App protection policies for Android and iOS/iPadOS
 
   You can use filters on app protection policies for managed apps. For more information on managed apps, go to [Use filters when assigning your apps, policies, and profiles in Intune](filters.md).
 
