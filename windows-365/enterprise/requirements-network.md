@@ -56,7 +56,7 @@ To use your own network and provision Hybrid Azure AD joined Cloud PCs, you must
 
 ### [Windows 365 Government](#tab/government)
 
-All of the Windows 365 Enterprise requirements apply to [Windows 365 Government](introduction-windows-365-government.md) with the following additions:
+All of the Windows 365 Enterprise **General network requirements** apply to [Windows 365 Government](introduction-windows-365-government.md) with the following additions:
 
 #### Azure Active Directory joined Cloud PCs
 
