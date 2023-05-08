@@ -126,6 +126,9 @@ You can use the following device properties in your filter rules:
   - macOS
   - Windows 11
   - Windows 10
+  
+> [!NOTE]
+> For Apple devices, the OSversion property does not include Apple's Security Patch Version (SPV) information, which is designated by a letter after the version number (eg. 14.1.2a). When creating filters of Apple devices, you should not include this as part of the OSversion rule syntax.
 
 - **`IsRooted` (Rooted or jailbroken)**: Create a filter rule based on the device's rooted (Android) or jailbroken (iOS/iPadOS) device property. Select `True`, `False`, or unknown values using the `-eq` and `-ne` operators.
 
