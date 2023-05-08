@@ -57,7 +57,7 @@ Use for personal or bring your own devices (BYOD). Or, use on organization-owned
 
 | Feature | Use this enrollment option when |
 | --- | --- |
-| You want to configure specifics apps, and control access to these apps, such as Outlook or Microsoft Teams. | ✔️ |
+| You want to configure specific apps, and control access to these apps, such as Outlook or Microsoft Teams. | ✔️ |
 | Devices are personal or BYOD. | ✔️ |
 | You have new or existing devices. | ✔️ |
 | Need to manage a few devices, or a large number of devices (bulk enrollment). | ✔️ |
