@@ -2,12 +2,12 @@
 # required metadata
 
 title: Enable eSIM data connections in Microsoft Intune via download server
-description: Add or use eSIM to get internet and data access using different data plans. In Intune, add or import activation codes, and then assign these activation codes using a configuration profile. You can also monitor the eSIM profiles and check the status of the eSIM-enabled devices. 
+description:  
 keywords:
 author: Smriti Bhardwaj
 ms.author: smritib17
 manager: dougeby
-ms.date: 05/04/2023
+ms.date: 05/08/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -29,147 +29,140 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Configure eSIM cellular profiles in Intune (public preview)
+The identity of a cellular-enabled device, such as a Windows Connected PC, has traditionally been encapsulated in a device called SIM (Subscriber Identity Module), and packaged as a discrete SIM card. Management of SIM cards for a fleet of devices can be costly and time-consuming. Therefore, Windows 10 and Windows 11 support eSIM (embedded Subscriber Identity Module) technology as a digital alternative to discrete SIM cards.
+Windows 11 provides additional capabilities for the deployment and management of eSIM content using Mobile Device Management (MDM) such as Microsoft Intune.
 
-eSIM is an embedded SIM chip, and lets you connect to the Internet over a cellular data connection on an eSIM-capable device, such as the [Surface LTE Pro](https://www.microsoft.com/surface/business/surface-pro). With an eSIM, you don't need to get a SIM card from your mobile operator. As a global traveler, you can also switch between mobile operators and data plans to always stay connected.
+## About eSIM technology
 
-For example, you have a cellular data plan for work, and another data plan with a different mobile operator for personal use. When traveling, you can get Internet access by finding mobile operators with data plans in that area.
+eSIM technology has created a worldwide ecosystem of cellular devices and mobile operators based upon a common specification from the GSM Association (GSMA), and its adoption has been growing significantly recently due to its incorporation in popular smart phones. Windows has supported eSIM for PCs since 2017.
+
+eSIM decouples the secure execution environment of the plastic SIM card from the SIM credentials it contains. The secure container is called an eUICC (embedded Universal Integrated Circuit Card). In the same way that each physical SIM card has a unique identity, each eUICC has a unique identity called its eUICC Identifier (EID).
+
+The credentials and associated other configuration that uniquely identify a cellular subscription are contained in a digital (software) package called an eSIM Profile. Multiple eSIM Profiles may be installed into an eUICC. One of the installed eSIM Profiles is enabled (and the rest are disabled). The combination of the enabled eSIM Profile and its eUICC container behaves exactly like a traditional SIM card.
+
+## At-Scale Configuration of eSIM PCs
+
+eSIM digitizes the delivery of SIMs to devices such as PCs, eliminating the need to obtain and deploy physical SIM cards. The [Mobile Plans](/windows-hardware/drivers/mobilebroadband/mobile-plans) application in Windows further reduces friction by providing a user-friendly interface for a user to interact with a chosen mobile operator and coordinate the download and installation of the corresponding eSIM profile.
+
+The Mobile Plans application is well suited to the needs of consumers and businesses with a small number of PCs. However, it requires user interaction on each device that is provisioned, an effort and cost that may become significant at large scale. To support larger-scale managed environments (such as an enterprise or an educational organization), Windows provides eSIM provisioning through mobile device management (MDM) such as Microsoft Intune.
+
+When provisioning an eSIM through an MDM such as Microsoft Intune, the enterprise configures the eSIM deployment along with other enterprise settings and policies, and the MDM server pushes these to the PC when it is enrolled to the end user’s work or school account and throughout its lifecycle. After it is configured with the eSIM information, the PC downloads the eSIM profile from the mobile operator’s download server (SM-DP+).
+Within Windows, eSIM configuration is handled by the [eUICCs Configuration Service Provider (CSP)](/windows/client-management/mdm/euiccs-csp), through which the enterprise can configure some eSIM policies as well as where each PC will obtain its eSIM profile.
+
+## Prerequisites
+
+In addition to a Windows 11 Connected PC (eSIM-capable PC) managed through Microsoft Intune, you need the following:
+
+A mobile operator who can provide eSIM profiles to a set of known devices based upon their EIDs. This, in turn, requires a way for the enterprise (or school) to provide the EIDs of their PCs to the operator as part of setting up their contract with the mobile operator.
+
+- One option is for the enterprise to obtain the EIDs of their PCs from PC packaging and send it to the operator directly.
+
+- Alternatively, for bulk device purchases, the EIDs of their PCs could come in a manifest file created by the device OEM or a reseller/distributor and delivered to the enterprise with the devices (to pass along to the operator) or directly to the mobile operator.
+
+After the mobile operator knows the EIDs of the customer’s PCs, the mobile operator will set up eSIM profiles for each PC on its download server (SM-DP+). The enterprise needs to know the fully qualified domain name (FQDN) of the download server (SM-DP+). For example, smdp.example.com. However, it does not need individual activation codes. Every PC connects to the same server. When each PC contacts the download server (SM-DP+), the download server (SM-DP+) will authenticate the PC by its EID and provide it with the eSIM profile that is specific to that device.
+
+## Process flow
+
+:::image type="content" source="./media/esim-device-configuration/device-settings-cellular-profiles.png" alt-text="Process flow.":::
+
+The overall process flow is as follows:
+
+1. To set up a managed eSIM deployment, the enterprise customer must have a contract with a mobile operator and obtain information from the operator about its eSIM download server (SM-DP+). The enterprise then configures the policies and settings to be applied to all of their eSIM-capable Connected PCs. This includes the fully qualified domain name of the operator's SM-DP+.
+
+    > [!NOTE]
+    > The MDM administrator creates the eSIM configuration profile pointing to the download server (SM-DP+) provided by the mobile operator and assigns the profile to the required group(s).
+
+2. As described earlier, the enterprise or its supplier (PC manufacturer or distributor) provides the EIDs of the Connected PCs to the operator. For each EID, the operator creates an eSIM profile on its download server (SM-DP+) for that device.
+After the initial configuration is complete, the following will occur for each PC:
+
+3. The end user unboxes the PC, powers it on, and goes through the initial Windows **out of box experience**. As part of this process, the end user connects the PC to a Wi-Fi network, and signs into their **work or school** account.
+
+4. After the user has authenticated to the enterprise's (or school's) Azure Active Directory, the work or school account is set up on the device. As part of this process, the PC is enrolled to MDM, which then provisions it as configured by the enterprise (in step 1). This configuration includes the FQDN of the operator's download server (SM-DP+).
+
+5. After configuration is complete, the PC connects to the download server (SM-DP+) according to the standard eSIM download protocol. As part of this process, the download server (SM-DP+) receives and authenticates the EID of the PC. The download server (SM-DP+) looks up the eSIM profile for that EID (created in step 2) and downloads that eSIM profile to the PC.
+
+6. The PC installs and enables the eSIM profile. Windows recognizes the mobile operator and configures the cellular settings such as access point name (APNs) , and the PC is now connected over cellular.
+
+> [!NOTE]
+> The process flow described focuses on the initial device setup experience. However, eSIM provisioning can also be done anytime throughout the lifecycle of the device for managed devices.
+
+## Intune configuration of an eSIM download server
+
+The Intune configuration of a mobile operator's eSIM download server is done via a Configuration Profile assigned to a Group.
 
 This feature applies to:
 
 - Windows 11
-- Windows 10
-
-In Intune, you can import one time use activation codes provided by your mobile operator. To configure cellular data plans on the eSIM module, deploy those activation codes to your eSIM-capable devices. When Intune installs the activation code, the eSIM hardware module uses the data in the activation code to contact the mobile operator. Once complete, the eSIM profile is downloaded on the device, and configured for cellular activation.
 
 To deploy eSIM to your devices using Intune, the following are needed:
 
-- **eSIM capable devices**, such as the Surface LTE: See [if your device supports eSIM](https://support.microsoft.com/help/4020763/windows-10-use-esim-for-cellular-data). Or, see a list of [some of the known eSIM capable devices](#esim-capable-devices) (in this article).
-- **Windows 10 Fall creators update PC** (1709 or later) that is enrolled and MDM managed by Intune
-- **Activation codes** provided by your mobile operator. These one time-use activation codes are added to Intune, and deployed to your eSIM capable devices. Contact your mobile operator to acquire eSIM activation codes.
-
-> [!NOTE]
-> You can create a custom OMA-URI profile using the [eUICCs CSP](/windows/client-management/mdm/euiccs-csp). Be sure to deploy one custom profile for each device. The profile must include the device ICCID and matching activation code from the carrier for each device.
-
-## Deploy eSIM to devices - overview
-
-To deploy eSIM to devices, an Administrator completes the following tasks:
-
-1. Import activation codes provided by your mobile operator
-2. Create an Azure Active Directory (Azure AD) device group that includes your eSIM capable devices
-3. Assign the Azure AD group to your imported subscription pool
-4. Monitor the deployment
-
-This article guides you through these steps.
+- **eSIM capable devices**, such as the [Surface Pro 9 with 5G](https://www.microsoft.com/surface/business/surface-pro-9): See [if your device supports eSIM](https://support.microsoft.com/help/4020763/windows-10-use-esim-for-cellular-data).
+- **Windows 11** (version 22H2 (Build 22621) or higher) that is enrolled and MDM managed by Intune
+- **eSIM Download Server (SM-DP+ or SM-DS) fully qualified domain name (FQDN)** provided by your mobile operator. Contact your mobile operator for details.
 
 ## eSIM capable devices
 
-If you’re unsure if your devices support eSIM, then contact your device manufacturer. On Windows devices, you can confirm eSIM supportability. For more information, see [Use an eSIM to get a cellular data connection on your Windows client device](https://support.microsoft.com/help/4020763/windows-10-use-esim-for-cellular-data).
+If you're unsure that your devices support eSIM, then contact your device manufacturer. On Windows devices, you can confirm eSIM supportability. For more information, see [Use an eSIM to get a cellular data connection on your Windows client device](https://support.microsoft.com/help/4020763/windows-10-use-esim-for-cellular-data).
 
-## Step 1: Add cellular activation codes
+After your mobile operator confirms that you need to create eSIM profiles on the download server (SM-DP+), go to Microsoft Intune and create a profile for the EIDs tied to the eSIM-capable Windows devices that you want to enable with eSIM.
 
-Cellular activation codes are provided by your mobile operator in a comma-separated file (csv). When you have this file, add it to Intune using the following steps:
-
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **eSIM cellular profiles** > **Add**.
-3. Select the CSV file that has your activation codes.
-4. Select **OK** to save your changes.
-
-
-
-
-## Step 2: Create an Azure AD device group
+## Create an Azure AD device group
 
 Create a Device group that includes the eSIM capable devices. [Add groups](../fundamentals/groups-add.md) lists the steps.
 
 > [!NOTE]
->
-> - Only devices are targeted, users aren't targeted.
-> - We recommend creating a static Azure AD device group that includes your eSIM devices. Using a group confirms you target only eSIM devices.
+> We recommend creating a static Azure AD device group that includes your eSIM devices. Using a group confirms you target only eSIM devices.
 
-## Step 3: Assign eSIM activation codes to devices
-
-Assign the profile to the Azure AD group that includes your eSIM devices.
+## Create a profile
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **eSIM cellular profiles**.
-3. In the list of profiles, select the eSIM cellular subscription pool you want to assign, and then select **Assignments**.
-4. Choose to **Include** groups or **Exclude**  groups, and then select the groups.
 
-    :::image type="content" source="./media/esim-device-configuration/include-exclude-groups.png" alt-text="Include the device group to assign the profile in Microsoft Intune.":::
+2. Select **Devices** > **Configuration profiles** > **Create Profile**.
 
-5. When you select your groups, you're choosing an Azure AD group. To select multiple groups, use the **Ctrl** key, and select the groups.
-6. When done, **Save** your changes.
+3. For the **Platform** field select **Windows 10 and later**.
 
+4. For the **Profile type** field select **Settings catalog**.
 
-## Step 4: Monitor deployment
+5. Select **Create** and follow the wizard to complete the steps.
 
-### Review the deployment status
+6. In the **Basic** tab, enter the **Name** and **Description** of the profile, and select **Next**.
 
-After you assign the profile, you can monitor the deployment status of a subscription pool.
+7. In the **Configuration Settings** tab, select **+ Add** settings and search for *eSIM* in the Settings Picker. After you select eSIM, you can select the settings that you want to make available on your policy.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **eSIM cellular profiles**. All of your existing eSIM cellular subscription pools are listed.
-3. Select a subscription, and review the **Deployment Status**.
+- In the **Download Servers** area:
 
-### Check the profile status
+  - **Auto Enable**: It indicates whether the discovered profile must be automatically enabled after installation. The default value of the dropdown list is *Enable*. Select **Auto Enable** if the eSIM profile should be automatically enabled (independently of any other eSIM profiles stored in eUICC).
 
-After you create your device profile, Intune provides graphical charts. These charts display the status of a profile, such as it being successfully assigned to devices, or if the profile shows a conflict.
+  - **Server Name**: It is the fully qualified domain name of the SM-DP+ server that will be used for profile discovery. DO NOT INCLUDE **<https://>**.
 
-1. Select **Devices** > **eSIM cellular profiles** > Select an existing subscription.
-2. In the **Overview** tab, the top graphical chart shows the number of devices assigned to the specific eSIM cellular subscription pool deployment.
+  - **Display Local UI**: Determines whether eSIM settings can be viewed and changed in the Settings app on the eSIM capable devices that are being provisioned. True if available, false otherwise. If **Display Local UI** is set to Disabled, **Auto Enable** must be checked.
 
-    It also shows the number of devices for other platforms that are assigned the same device profile.
+  - Enter the Server Name , select the desired settings, and then select **Next**.
 
-    Intune shows the delivery and installation status for the activation code targeted to devices.
+8. In the **Scope tags** tab, add the required tags, and select **Next**.
 
-    - **Device not synced**: The targeted device hasn't contacted Intune since the eSIM deployment policy was created
-    - **Activation pending**: A transient state when Intune is actively installing the activation code on the device
-    - **Active**: Activation code installation successful
-    - **Activation fail**: Activation code installation failed – see troubleshooting guide.
+9. In the **Assignments** tab, select the user or device group(s) to assign your profile. For more information on assigning the profile to a user or device group , go to [Assign device profiles](device-profile-assign.md#user-groups-vs-device-groups) in Microsoft Intune.
+Also, before creating the profile, you need to have your group(s) set up. For more information, go to Add groups to organize users and devices.
 
-#### View the detailed device status
-
-You can monitor and view a detailed list of devices you can view in Device Status.**
-
-1. Select **Devices** > **eSIM cellular profiles** > Select an existing subscription.
-2. Select **Device Status**. Intune shows more details about the device:
-
-    - **Device Name**: Name of the device that is targeted
-    - **User**: User of the enrolled device
-    - **ICCID**: Unique code provided by the mobile operate within the activation code installed on the device
-    - **Activation Status**: Intune delivery and installation status of the activation code on the device
-    - **Cellular status**: State provided by the mobile operator. Follow up with mobile operator to troubleshoot.
-    - **Last Check-In**: Date the device last communicated with Intune
-
-### Monitor eSIM profile details on the actual device
-
-1. On your device, open **Settings** > go to **Network & Internet**.
-2. Select **Cellular** > **Manage eSIM profiles**
-3. The eSIM profiles are listed:
-
-    :::image type="content" source="./media/esim-device-configuration/device-settings-cellular-profiles.png" alt-text="View the eSIM profiles in your device settings.":::
-
-## Remove the eSIM profile from device
-
-When you remove the device from the Azure AD group, the eSIM profile is also removed. Be sure to:
-
-1. Confirm you're using the eSIM devices Azure AD group.
-2. Go to the Azure AD group, and remove the device from the group.
-3. When the removed device contacts Intune, the updated policy is evaluated, and the eSIM profile removed.
-
-The eSIM profile is also removed when the device is [retired](../remote-actions/devices-wipe.md#retire) or unenrolled by the user, or when the [reset device remote action](../remote-actions/devices-wipe.md#wipe) runs on the device.
-
-> [!NOTE]
-> Removing the profile may not stop billing. Contact your mobile operator to check the billing status for your device.
+10. In the **Review + create** tab, review all the details and select **Create**.
 
 ## Best practices & troubleshooting
 
-- Be sure your `.csv` file is properly formatted. Confirm the file doesn't include duplicate codes, doesn't include multiple mobile operators, or doesn't include different data plans. Remember, each file must be unique to a mobile operator and cellular data plan.
-- Create a static device Azure AD group that only includes the eSIM devices that are targeted.
-- If there's an issue with the deployment status, check the following settings:
-  - **File format not proper**: See **Step 1: Add cellular activation codes** (in this article) on how to properly format your file.
-  - **Cellular activation failure, contact mobile operator**: The activation code may not be activated within their network. Or, the profile download and cellular activation failed.
+- Create a device Azure AD group that only includes the targeted eSIM devices.
+
+- If the policy is deployed to a non-eSIM capable device, the **Assignment Status** will display an Error.
+
+- The current implementation only supports a single Server Name. Even if more Server Names are added, only the first one is used.
+
+- If the **Local UI** is not disabled as part of the Configuration Profile, you will have the option to change the active profile, stop using, or remove any of the eSIM profiles stored in the device.
+
+- As with other settings in Intune, when the deployment status shows as *successful* it simply means that the setting is now applied, but the eSIM is not activated.
+
+- There is no way to remove the eSIM profile using Intune. The profile must be manually removed from the device.
+
+- There is no way to distinguish between an eSIM and a non-eSIM device in Microsoft Intune.
+
+- EIDs cannot be collected via Intune and are not exposed programmatically. Some OEM/resellers have the capability of providing this information.
 
 ## Next steps
 
