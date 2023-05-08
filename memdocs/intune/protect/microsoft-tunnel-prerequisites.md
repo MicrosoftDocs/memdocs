@@ -1,4 +1,4 @@
-Make sure your---
+---
 title: Identify the prerequisites to install and use the Microsoft Tunnel VPN solution for Microsoft Intune
 description: Learn what is required to support use of the Microsoft Tunnel Gateway in your environment, including Linux servers, network, and firewall configurations.
 keywords:
