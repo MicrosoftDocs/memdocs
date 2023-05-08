@@ -106,7 +106,7 @@ For more information on OEMConfig in Intune, go to [Use and manage Android Enter
 
 As of January 7, 2022, the minimum supported versions are:
 
-- Android 8.0 for device management
+- Android 8.0 for mobile device management (MDM)
 - Android 9.0 for mobile application management (MAM)
 
 Android devices running older versions that are currently enrolled in Intune don't receive updates to the Android Company Portal app or the Intune app. These apps aren't available in the Google Play Store. If these apps were downloaded before this change, then the devices aren't blocked from enrollment. Policies applied to these devices continue to be deployed, but the devices aren't in a supported state.

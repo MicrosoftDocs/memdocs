@@ -1,4 +1,4 @@
----
+Make sure your---
 title: Identify the prerequisites to install and use the Microsoft Tunnel VPN solution for Microsoft Intune
 description: Learn what is required to support use of the Microsoft Tunnel Gateway in your environment, including Linux servers, network, and firewall configurations.
 keywords:
@@ -31,7 +31,7 @@ ms.collection:
 
 Before you can install the Microsoft Tunnel VPN gateway for Microsoft Intune, you must configure prerequisites. Prerequisites include use of a Linux server that runs containers to host the Tunnel server software. You'll also need to configure your network, firewalls, and proxies to support communications for the Microsoft Tunnel.
 
-At a high level, you’ll need the following to use the Microsoft Tunnel:
+At a high level, you'll need the following to use the Microsoft Tunnel:
 
 - An Azure subscription.
 - A *Microsoft Intune Plan 1* subscription
@@ -41,7 +41,7 @@ At a high level, you’ll need the following to use the Microsoft Tunnel:
 - A Transport Layer Security (TLS) certificate for the Linux server to secure connections from devices to the Tunnel Gateway server.
 - Devices that run Android or iOS/iPadOS.
 
-Prerequisites you’ll configure include preparing your network, firewalls, and proxy to support the use of the Microsoft Tunnel.
+Prerequisites you'll configure include preparing your network, firewalls, and proxy to support the use of the Microsoft Tunnel.
 
 After configuring prerequisites, we recommend you then run the [readiness tool](#run-the-readiness-tool) to help validate that your environment is well configured for a successful installation.
 
@@ -58,7 +58,7 @@ Set up a Linux based virtual machine or a physical server on which Microsoft Tun
 
   |Distribution version   | Container requirements   | Considerations     |
   |-----------------------|--------------------------|--------------------|
-  | CentOS 7.4+           | Docker CE                | CentOS 8+ isn’t supported |
+  | CentOS 7.4+           | Docker CE                | CentOS 8+ isn't supported |
   | Red Hat (RHEL) 7.4+   | Docker CE                |                    |
   | Red Hat (RHEL) 8.4    | Podman 3.0               |                    |
   | Red Hat (RHEL) 8.5    | Podman 3.0               | This version of RHEL doesn't automatically load the *ip_tables* module into the Linux kernel. When you use this version, plan to [manually load the ip_tables](#manually-load-ip_tables) before Tunnel is installed.|
@@ -101,13 +101,13 @@ Set up a Linux based virtual machine or a physical server on which Microsoft Tun
   - [Install Podman on Red Hat Enterprise Linux 8.4 and later (scroll down to RHEL8)](https://podman.io/get-started)  
     These versions of RHEL don't support Docker. Instead, these versions use Podman, and *podman* is part of a module called "container-tools". In this context, a module is a set of RPM packages that represent a component and that usually install together. A typical module contains packages with an application, packages with the application-specific dependency libraries, packages with documentation for the application, and packages with helper utilities. For more information, see [Introduction to modules](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/installing_managing_and_removing_user-space_components/introduction-to-modules_using-appstream) in the Red Hat documentation.
 
-- **Transport Layer Security (TLS) certificate**: The Linux server requires a trusted TLS certificate to secure the connection between devices and the Tunnel Gateway server. You’ll add the TLS certificate, including the full trusted certificate chain, to the server during installation of the Tunnel Gateway.
+- **Transport Layer Security (TLS) certificate**: The Linux server requires a trusted TLS certificate to secure the connection between devices and the Tunnel Gateway server. You'll add the TLS certificate, including the full trusted certificate chain, to the server during installation of the Tunnel Gateway.
 
   - The Subject Alternative Name (SAN) of the TLS certificate you use to secure the Tunnel Gateway endpoint must match the IP address or FQDN of the Tunnel Gateway server.
 
   - TLS certificate can't have an expiration date longer than two years. If the date is longer than two years, it won't be accepted on iOS devices.
 
-  - Use of wildcards has limited support. For example, **\*.contoso.com** is supported. **cont\*.com** isn’t supported.
+  - Use of wildcards has limited support. For example, **\*.contoso.com** is supported. **cont\*.com** isn't supported.
 
   - During installation of the Tunnel Gateway server, you must copy the entire trusted certificate chain to your Linux server. The installation script provides the location where you copy the certificate files and prompts you to do so.
 
@@ -115,11 +115,11 @@ Set up a Linux based virtual machine or a physical server on which Microsoft Tun
 
   - The TLS certificate can be in **PEM** or **pfx** format.
 
-- **TLS version**: By default, connections between Microsoft Tunnel clients and servers use TLS 1.3. When TLS 1.3 isn’t available, the connection can fall back to use TLS 1.2.
+- **TLS version**: By default, connections between Microsoft Tunnel clients and servers use TLS 1.3. When TLS 1.3 isn't available, the connection can fall back to use TLS 1.2.
 
 ### Default bridge network
 
-Both Podman and Docker containers use a bridge network to forward traffic through the Linux host. When the containers bridge network conflicts with a corporate network, Tunnel Gateway can’t successfully route traffic to that corporate network.
+Both Podman and Docker containers use a bridge network to forward traffic through the Linux host. When the containers bridge network conflicts with a corporate network, Tunnel Gateway can't successfully route traffic to that corporate network.
 
 The default bridge networks are:
 
@@ -144,10 +144,10 @@ Docker uses the file **/etc/docker/daemon.json** to configure a new default brid
 
 3. If the file **/etc/docker/daemon.json** is present on your server, use a file editor like *vi* or *nano* to modify the file. Run the file editor with root or sudo permissions:
 
-   - When the **“bip”:** entry is present with an IP address, modify it by adding a new IP address in CIDR notation.
-   - When the **“bip”:** entry isn't present, you must add both the value **"bip":** and the new IP address in CIDR notation.
+   - When the **"bip":** entry is present with an IP address, modify it by adding a new IP address in CIDR notation.
+   - When the **"bip":** entry isn't present, you must add both the value **"bip":** and the new IP address in CIDR notation.
 
-   The following example shows the structure of a *daemon.json* file with an updated **“bip”:** entry that uses a modified IP address of **“192.168.128.1/24”**.
+   The following example shows the structure of a *daemon.json* file with an updated **"bip":** entry that uses a modified IP address of **"192.168.128.1/24"**.
 
    Example of daemon.json:
 
@@ -157,7 +157,7 @@ Docker uses the file **/etc/docker/daemon.json** to configure a new default brid
    }
    ```
 
-4. If the file **/etc/docker/daemon.json** isn’t present on your server, run a command similar to the following example to create the file and define the bridge IP that you want to use.
+4. If the file **/etc/docker/daemon.json** isn't present on your server, run a command similar to the following example to create the file and define the bridge IP that you want to use.
 
    Example: `sudo echo '{ "bip":"192.168.128.1/24" }' > /etc/docker/daemon.json`
 
@@ -173,7 +173,7 @@ Podman uses the file **/etc/cni/net.d as 87-podman-bridge.conflist** to configur
 
 2. Next, run the following command to remove the existing Podman bridge device: `sudo ip link del cni-podman0`
 
-3. Using root permissions and a file editor like *vi* or *nano*, modify **/etc/cni/net.d as 87-podman-bridge.conflist** to update the defaults for **“subnet:”** and **“gateway:”** by replacing the Podman default values with your desired subnet and gateway addresses. The *subnet* address must be specified in CIDR notation.
+3. Using root permissions and a file editor like *vi* or *nano*, modify **/etc/cni/net.d as 87-podman-bridge.conflist** to update the defaults for **"subnet:"** and **"gateway:"** by replacing the Podman default values with your desired subnet and gateway addresses. The *subnet* address must be specified in CIDR notation.
 
    The Podman defaults are:
 
@@ -256,7 +256,7 @@ You can use a proxy server with Microsoft Tunnel.
 > Proxy server configurations are not supported with versions of Android prior to version 10.  For more information, see [VpnService.Builder](https://developer.android.com/reference/android/net/VpnService.Builder#setHttpProxy%28android.net.ProxyInfo%29) in that Android developer documentation.
 
 > [!NOTE]  
-> Customer must ensure that their Android LOB applications support direct proxy or Proxy Auto-Configuration (PAC) for both MDM and MAM.
+> Make sure your Android LOB applications support direct proxy or Proxy Auto-Configuration (PAC) for both MDM and MAM.
 
 The following considerations can help you configure the Linux server and your environment for success:
 
@@ -269,7 +269,7 @@ The following considerations can help you configure the Linux server and your en
 
 - Authenticated proxies aren't supported.
 
-- The proxy can’t perform break and inspect because the Linux server uses TLS mutual authentication when connecting to Intune.
+- The proxy can't perform break and inspect because the Linux server uses TLS mutual authentication when connecting to Intune.
 
 - Configure Docker to use the proxy to pull images. To do so, edit the **/etc/systemd/system/docker.service.d/http-proxy.conf** file on the Linux server and add the following lines:
 
@@ -281,7 +281,7 @@ The following considerations can help you configure the Linux server and your en
   ```
 
   > [!NOTE]  
-  > Microsoft Tunnel doesn’t support Azure AD App Proxy, or similar proxy solutions.
+  > Microsoft Tunnel doesn't support Azure AD App Proxy, or similar proxy solutions.
 
 ### Configure an outbound proxy for Podman
 
@@ -289,7 +289,7 @@ The following details can help you configure an internal proxy when using Podmam
 
 - Authenticated proxies aren't supported.
 
-- The proxy can’t perform break and inspect because the Linux server uses TLS mutual authentication when connecting to Intune.
+- The proxy can't perform break and inspect because the Linux server uses TLS mutual authentication when connecting to Intune.
 
 - Podman reads HTTP Proxy information stored in **/etc/profile.d/http_proxy.sh**. If this file doesn't exist on your server, create it. Edit **http_proxy.sh** to add the following two lines. In the following lines, *10.10.10.1:3128* is an example address:port entry. When you add these lines, replace *10.10.10.1:3128* with the values for your proxy IP *address:port*:
 
@@ -310,7 +310,7 @@ The following details can help you configure an internal proxy when using Podmam
 
   3. Restart the Tunnel Gateway server: Run `mst-cli server restart`
 
-  Be aware that RHEL uses SELinux. Because a proxy that doesn't run on a SELinux port for *http_port_t* can require extra configuration, check on the use of SELinux managed ports for http. Run the following command to view the configurations: `sudo semanage port -l | grep “http_port_t”`
+  Be aware that RHEL uses SELinux. Because a proxy that doesn't run on a SELinux port for *http_port_t* can require extra configuration, check on the use of SELinux managed ports for http. Run the following command to view the configurations: `sudo semanage port -l | grep "http_port_t"`
   
   Example of the results of the port check command. In this example, the proxy uses 3128 and isn't listed:
 
@@ -319,25 +319,25 @@ The following details can help you configure an internal proxy when using Podmam
   - If your proxy runs on one of the SELinux ports for **http_port_t**, then you can continue with the Tunnel Gateway install process.
   - If your proxy does't run on a SELunux port for **http_port_t** as in the preceding example, you'll need to make extra configurations.
 
-    **If your proxy port is not listed for** ***http_port_t***, check if the proxy port is used by another service. Use the *semnage* command to first check the port that your proxy uses and then later if needed, to change it. To check the port your proxy uses, run: `sudo semanage port -l | grep “your proxy port”`
+    **If your proxy port is not listed for** ***http_port_t***, check if the proxy port is used by another service. Use the *semnage* command to first check the port that your proxy uses and then later if needed, to change it. To check the port your proxy uses, run: `sudo semanage port -l | grep "your proxy port"`
   
     Example of the results of checking for a service that might use the port:
 
     :::image type="content" source="./media/microsoft-tunnel-prerequisites/check-service.png" alt-text="Screen shot of the service check.":::
 
-    - In the example, the port we expect (3128) is used by *squid*, which happens to be an OSS proxy service. Squid proxy SELinux policies are part of many common distributions. Because *squid* uses port 3128 (our example port), we must modify the **http_port_t** ports and add port 3128 to be allowed via SELinux for the proxy used by Tunnel. To modify the port use, run the following command: `sudo semanage port -m -t http_port_t -p tcp “your proxy port”`
+    - In the example, the port we expect (3128) is used by *squid*, which happens to be an OSS proxy service. Squid proxy SELinux policies are part of many common distributions. Because *squid* uses port 3128 (our example port), we must modify the **http_port_t** ports and add port 3128 to be allowed via SELinux for the proxy used by Tunnel. To modify the port use, run the following command: `sudo semanage port -m -t http_port_t -p tcp "your proxy port"`
 
       Example of the command to modify the port:
 
       :::image type="content" source="./media/microsoft-tunnel-prerequisites/modify-port.png" alt-text="Screen shot of the port modification.":::
 
-      After running the command to change the port, run the following command to check if the port is used by another service: `sudo semanage port -l | grep “your proxy port”`
+      After running the command to change the port, run the following command to check if the port is used by another service: `sudo semanage port -l | grep "your proxy port"`
 
       Example of the command to check the port after modifying the port:
 
       :::image type="content" source="./media/microsoft-tunnel-prerequisites/review-results-for-port.png" alt-text="Screen shot of checking the port after modification.":::
 
-      In this example, port 3128 is now associated with both *http_port-t* and *squid_port_t*. That result is expected. If your proxy port isn't listed when running the *sudo semanage port -l | grep "your_proxy_port"* command, then run the command to modify the port again, but the **-m** in the *semanage* command with **-a**: `sudo semanage port -a -t http_port_t -p tcp “your proxy port”`
+      In this example, port 3128 is now associated with both *http_port-t* and *squid_port_t*. That result is expected. If your proxy port isn't listed when running the *sudo semanage port -l | grep "your_proxy_port"* command, then run the command to modify the port again, but the **-m** in the *semanage* command with **-a**: `sudo semanage port -a -t http_port_t -p tcp "your proxy port"`
 
 ### Update the proxy server in use by the tunnel server
 
@@ -346,7 +346,7 @@ To change the proxy server configuration that is in use by the Linux host of the
 1. On the tunnel server, edit */etc/mstunnel/env.sh* and specify the new proxy server.
 2. Run `mst-cli install`.
 
-   This command rebuilds the containers with the new proxy server details. During this process, you’re asked to verify the contents of */etc/mstunnel/env.sh* and to make sure that the certificate is installed. The certificate should already be present from the previous proxy server configuration.
+   This command rebuilds the containers with the new proxy server details. During this process, you're asked to verify the contents of */etc/mstunnel/env.sh* and to make sure that the certificate is installed. The certificate should already be present from the previous proxy server configuration.
 
    To confirm both and complete the configuration, enter **yes**.
 
@@ -430,7 +430,7 @@ To use the readiness tool:
 
    - `sudo ./mst-readiness utils` - This command validates that utilities that are used by Tunnel like Docker or Podman and ip_tables are available.
 
-3. To validate that the account you’ll use to install Microsoft Tunnel has the required roles and permissions to complete enrollment, run the script with the following command line: `./mst-readiness account`
+3. To validate that the account you'll use to install Microsoft Tunnel has the required roles and permissions to complete enrollment, run the script with the following command line: `./mst-readiness account`
 
    The script prompts you to use a different machine with a web browser, which you use to authenticate to Azure AD and to Intune. The tool will report success or an error.
 
@@ -442,7 +442,7 @@ While most Linux distributions automatically load the ip_tables module, some dis
 
 To check for the presence of this module, run the most recent version of mst-readiness tool on the Linux server. The check for ip_tables was added to the readiness tools script on February 11 2022.
 
-If the module isn’t present, the tool stops on the ip_tables module check. In this scenario, you can run the following commands to manually load the module.
+If the module isn't present, the tool stops on the ip_tables module check. In this scenario, you can run the following commands to manually load the module.
 
 #### Manually load the ip_tables module
 
