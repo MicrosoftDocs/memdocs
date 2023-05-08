@@ -1,11 +1,11 @@
 ---
 # required metadata
 
-title: Enable eSIM data connections in Microsoft Intune via download server
-description:  
+title: eSIM configuration of a download server
+description: Learn about configuration of an eSIM Download Server from Microsoft Intune.  
 keywords:
-author: Smriti Bhardwaj
-ms.author: smritib17
+author: Smritib17
+ms.author: smbhardwaj
 manager: dougeby
 ms.date: 05/08/2023
 ms.topic: how-to
@@ -28,7 +28,8 @@ ms.collection:
 - tier2
 - M365-identity-device-management
 ---
-
+# Configure eSIM download server using Microsoft Intune
+ 
 The identity of a cellular-enabled device, such as a Windows Connected PC, has traditionally been encapsulated in a device called SIM (Subscriber Identity Module), and packaged as a discrete SIM card. Management of SIM cards for a fleet of devices can be costly and time-consuming. Therefore, Windows 10 and Windows 11 support eSIM (embedded Subscriber Identity Module) technology as a digital alternative to discrete SIM cards.
 Windows 11 provides more capabilities for the deployment and management of eSIM content using Mobile Device Management (MDM) such as Microsoft Intune.
 
@@ -134,7 +135,7 @@ Create a Device group that includes the eSIM capable devices. [Add groups](../fu
 
   - **Auto Enable**: It indicates whether the discovered profile must be automatically enabled after installation. The default value of the dropdown list is *Enable*. Select **Auto Enable** if the eSIM profile should be automatically enabled (independently of any other eSIM profiles stored in eUICC).
 
-  - **Server Name**: It's the fully qualified domain name of the SM-DP+ server that is used for profile discovery. DO NOT INCLUDE **<https://>**.
+  - **Server Name**: It's the fully qualified domain name of the SM-DP+ server that is used for profile discovery. DO NOT INCLUDE *https://*.
 
   - **Display Local UI**: Determines whether eSIM settings can be viewed and changed in the Settings app on the eSIM capable devices that are being provisioned. True if available, false otherwise. If **Display Local UI** is set to Disabled, **Auto Enable** must be checked.
 
