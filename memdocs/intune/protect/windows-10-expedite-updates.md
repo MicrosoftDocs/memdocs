@@ -103,26 +103,11 @@ Only update builds that are generally available are supported. Preview builds, i
 
 - Be Azure Active Directory (AD) Joined, or Hybrid Azure AD Joined. Workplace Join isn't supported.
 
-- Have access to the following endpoints:
+- Have access to endpoints. To get a detailed list of endpoints required for the associated service listed here, go to [Network endpoints](../fundamentals/intune-endpoints.md#access-for-managed-devices).  
 
   - [Windows Update](/windows/privacy/manage-windows-1809-endpoints#windows-update)
-
-    - *.prod.do.dsp.mp.microsoft.com
-    - *.windowsupdate.com
-    - *.dl.delivery.mp.microsoft.com
-    - *.update.microsoft.com
-    - *.delivery.mp.microsoft.com
-    - tsfe.trafficshaping.dsp.mp.microsoft.com
-
   - WUfB-DS
-
-    - devicelistenerprod.microsoft.com
-    - devicelistenerprod.eudb.microsoft.com
-    - login.windows.net
-    - payloadprod*.blob.core.windows.net
-
   - [Windows Push Notification Services](/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config): *(Recommended, but not required. Without this access, devices might not expedite updates until their next daily check for updates.)*
-    - *.notify.windows.com
 
 - Be configured to get Quality Updates directly from the Windows Update service.
 

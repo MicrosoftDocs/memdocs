@@ -74,7 +74,7 @@ The following are prerequisites for Intune's Feature updates for Windows 10 and 
 
    Beginning in November of 2022, the Windows Update for Business deployment service (WUfB DS) license will be checked and enforced.
   
-   Capabilities supported by client policies on Professional SKU devices will not require a license.  That includes basic controls for deploying a specified feature update and when to start making the update available to devices.   The [Gradual Rollout](/mem/intune/protect/windows-update-rollout-options#make-updates-available-gradually) capability is a cloud only feature, requiring a license that includes the Windows Update for Business deployment service.
+   Capabilities supported by client policies on Professional SKU devices will not require a license.  That includes basic controls for deploying a specified feature update and when to start making the update available to devices. The [Gradual Rollout](/mem/intune/protect/windows-update-rollout-options#make-updates-available-gradually) capability is a cloud only feature, requiring a license that includes the Windows Update for Business deployment service.
   
   If you’re blocked when creating new policies for capabilities that require WUfB DS and you get your licenses to use WUfB through an Enterprise Agreement (EA), contact the source of your licenses such as your Microsoft account team or the partner who sold you the licenses. The account team or partner can confirm that your tenants licenses meet the WUfB DS license requirements. See [Enable subscription activation with an existing EA](/windows/deployment/deploy-enterprise-licenses#enable-subscription-activation-with-an-existing-ea).
 
@@ -88,6 +88,12 @@ The following are prerequisites for Intune's Feature updates for Windows 10 and 
     Configure Telemetry as part of a [Device Restriction policy](../configuration/device-restrictions-configure.md) for Windows 10/11. In the device restriction profile, under *Reporting and Telemetry*, configure the **Share usage data** with a minimum value of **Required**. Values of **Enhanced (1903 and earlier)** or **Optional** are also supported.
 
   - The *Microsoft Account Sign-In Assistant* (wlidsvc) must be able to run. If the service is blocked or set to *Disabled*, it fails to receive the update. For more information, see [Feature updates aren't being offered while other updates are](/windows/deployment/update/windows-update-troubleshooting#feature-updates-are-not-being-offered-while-other-updates-are). By default, the service is set to *Manual (Trigger Start)*, which allows it to run when needed.
+
+  - Have access to endpoints. To get a detailed list of endpoints required for the associated service listed here, go to [Network endpoints](../fundamentals/intune-endpoints.md#access-for-managed-devices).
+
+    - [Windows Update](/windows/privacy/manage-windows-1809-endpoints#windows-update)
+    - WUfB-DS
+    - [Windows Push Notification Services](/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config): *(Recommended, but not required. Without this access, devices might not expedite updates until their next daily check for updates.)*
 
 - Feature updates are supported for the following Windows 10/11 editions:  
   - Pro
