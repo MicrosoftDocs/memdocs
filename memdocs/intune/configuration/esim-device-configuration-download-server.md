@@ -39,6 +39,8 @@ eSIM technology has created a worldwide ecosystem of cellular devices and mobile
 
 eSIM decouples the secure execution environment of the plastic SIM card from the SIM credentials it contains. The secure container is called an eUICC (embedded Universal Integrated Circuit Card). In the same way that each physical SIM card has a unique identity, each eUICC has a unique identity called eUICC Identifier (EID).
 
+:::image type="content" source="./media/esim-device-configuration/euicc-chip-download-server.png" alt-text="eUICC and eSIM technology.":::
+
 The credentials and associated other configuration that uniquely identify a cellular subscription are contained in a digital (software) package called an eSIM Profile. Multiple eSIM Profiles may be installed into an eUICC. One of the installed eSIM Profiles is enabled (and the rest are disabled). The combination of the enabled eSIM Profile and its eUICC container behaves exactly like a traditional SIM card.
 
 ## At-Scale Configuration of eSIM PCs
@@ -61,11 +63,11 @@ A mobile operator who can provide eSIM profiles to a set of known devices based 
 
 - Alternatively, for bulk device purchases, the EIDs of their PCs could come in a manifest file created by the device OEM or a reseller/distributor and delivered to the enterprise with the devices or directly to the mobile operator.
 
-After the mobile operator knows the EIDs of the customer's PCs, the mobile operator will set up eSIM profiles for each PC on its download server (SM-DP+). The enterprise needs to know the fully qualified domain name (FQDN) of the download server (SM-DP+). For example, smdp.example.com. However, it doesn't need individual activation codes. Every PC connects to the same server. When each PC contacts the download server (SM-DP+), the download server (SM-DP+) authenticates the PC by its EID and provides it with the eSIM profile that is specific to that device.
+After the mobile operator knows the EIDs of the customer's PCs, the mobile operator will set up eSIM profiles for each PC on its download server (SM-DP+). The enterprise needs to know the fully qualified domain name (FQDN) of the download server (SM-DP+). For example, smdp.example.com. However, it doesn't need individual activation codes. When each PC contacts the download server (SM-DP+), the download server (SM-DP+) authenticates the PC's EID and provides it with the eSIM profile that is specific to that device.
 
 ## Process flow
 
-:::image type="content" source="./media/esim-device-configuration/device-settings-cellular-profiles.png" alt-text="Process flow.":::
+:::image type="content" source="./media/esim-device-configuration/esim-download-server-process.png" alt-text="Process flow for eSIM bulk activation via download server.":::
 
 The overall process flow is as follows:
 
@@ -131,13 +133,15 @@ Create a Device group that includes the eSIM capable devices. [Add groups](../fu
 
 7. In the **Configuration Settings** tab, select **+ Add** settings and search for *eSIM* in the Settings Picker. After you select eSIM, you can select the settings that you want to make available on your policy.
 
+    :::image type="content" source="./media/esim-device-configuration/create-profile-configuration-settings.png" alt-text="Configuration settings tab in the Create Profile process.":::
+
 - In the **Download Servers** area:
 
-  - **Auto Enable**: It indicates whether the discovered profile must be automatically enabled after installation. The default value of the dropdown list is *Enable*. Select **Auto Enable** if the eSIM profile should be automatically enabled (independently of any other eSIM profiles stored in eUICC).
+  - **1 - Auto Enable**: It indicates whether the discovered profile must be automatically enabled after installation. The default value of the dropdown list is *Enable*. Select **Auto Enable** if the eSIM profile should be automatically enabled (independently of any other eSIM profiles stored in eUICC).
 
-  - **Server Name**: It's the fully qualified domain name of the SM-DP+ server that is used for profile discovery. DO NOT INCLUDE *https://*.
+  - **2 - Server Name**: It's the fully qualified domain name of the SM-DP+ server that is used for profile discovery. For example, *smdp.example.com* (do not include *https://*)
 
-  - **Display Local UI**: Determines whether eSIM settings can be viewed and changed in the Settings app on the eSIM capable devices that are being provisioned. True if available, false otherwise. If **Display Local UI** is set to Disabled, **Auto Enable** must be checked.
+  - **3 - Display Local UI**: Determines whether eSIM settings can be viewed and changed in the Settings app on the eSIM capable devices that are being provisioned. True if available, false otherwise. If **Display Local UI** is set to Disabled, **Auto Enable** must be checked.
 
   - Enter the Server Name, select the desired settings, and then select **Next**.
 
@@ -150,21 +154,17 @@ Also, before creating the profile, you need to have your group(s) set up. For mo
 
 ## Best practices & troubleshooting
 
-- Create a device Azure AD group that only includes the targeted eSIM devices.
-
-- If the policy is deployed to a non-eSIM capable device, the **Assignment Status** displays an Error.
+- Create a device Azure AD group that only includes the targeted eSIM devices. (Note: if the policy is deployed to a non-eSIM-capable device, the **Assignment Status** will display an Error.)
 
 - The current implementation only supports a single Server Name. Even if more Server Names are added, only the first one is used.
 
 - If the **Local UI** isn't disabled as part of the Configuration Profile, you can change the active profile, stop using, or remove any of the eSIM profiles stored in the device.
 
-- As with other settings in Intune, when the deployment status shows as *successful* it simply means that the setting is now applied, but the eSIM isn't activated.
+- As with other settings in Intune, when the deployment status shows as *successful* it simply means that the settings is now applied, not necessarily that the eSIM Profile has also been downloaded and activated.
 
-- There's no way to remove the eSIM profile using Intune. The profile must be manually removed from the device.
+- There's currently no method to remove an eSIM profile using Intune. The profile must be manually removed from the device.
 
-- There's no way to distinguish between an eSIM and a non-eSIM device in Microsoft Intune.
-
-- EIDs can't be collected via Intune and aren't exposed programmatically. Some OEM/resellers have the capability of providing this information.
+- Intune cannot distinguish between an eSIM and a non-eSIM device.
 
 ## Next steps
 
