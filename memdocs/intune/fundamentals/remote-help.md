@@ -150,7 +150,7 @@ For users that opted out of automatic updates, when an update to Remote Help is 
 
 Download the latest version of Remote Help direct from Microsoft at [aka.ms/downloadremotehelp](https://aka.ms/downloadremotehelp).
 
-The most recent version of Remote Help is **4.2.1167.0**
+The most recent version of Remote Help is **4.2.1270.0**
 
 ### Deploy Remote Help as a Win32 app
 
@@ -244,7 +244,7 @@ After creating the custom roles that you'll use to provide different users with 
 5. On the **Scope (Groups)** page, choose a group containing the users/devices that the member above will be allowed to manage. You also can choose all users or all devices. Choose **Next** to continue.
 
    >[!IMPORTANT]
-   >If a sharer’s device isn’t in the scope of a helper, that helper cannot provide assistance.
+   >If a sharer's device isn't in the scope of a helper, that helper cannot provide assistance.
 
 6. On the **Review + Create** page, when you're done, choose **Create**. The new assignment is displayed in the list of assignments.
 
@@ -256,7 +256,7 @@ The use of Remote Help depends on whether you're requesting help or providing he
 
 To request help, you must reach out to your support staff to request assistance. You can reach out through a call, chat, email, and so on, and you'll be the sharer during the session. Be prepared to enter a security code that you'll get from the individual who is assisting you. You'll enter the code in your Remote Help instance to establish a connection to the helper's instance of Remote Help.
 
-As a sharer, when you’ve requested help and both you and the helper are ready to start:
+As a sharer, when you've requested help and both you and the helper are ready to start:
 
 1. Start the Remote Help app on the device and sign in to authenticate to your organization. The device might not need to be enrolled to Intune if your administrator allows you to get help on unenrolled devices.
 
@@ -284,7 +284,7 @@ As a helper, after receiving a request from a user who wants assistance by using
 
    Alternately, or for devices not enrolled in Intune, locate the Remote Help app on your device and manually start it. After Remote Helps opens, you'll need to sign in to authenticate to your organization.
 
-2. When Remote Help opens you must sign in to authenticate to your organization. After signing into the app, under *Give help* select **Get a security code**. Remote Help generates a security code that you’ll share with the person who has requested assistance. They'll enter this code in their instance of Remote Help to establish a connection to your Remote Help instance.
+2. When Remote Help opens you must sign in to authenticate to your organization. After signing into the app, under *Give help* select **Get a security code**. Remote Help generates a security code that you'll share with the person who has requested assistance. They'll enter this code in their instance of Remote Help to establish a connection to your Remote Help instance.
 
 3. After the sharer enters the security code, as the helper you'll see information about the sharer, including their full name, job title, company, profile picture, and verified domain. The sharer will see similar information about you.
 
@@ -302,9 +302,9 @@ You can monitor the use of Remote Help from within the Microsoft Intune admin ce
 
 1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Tenant admin** > **Remote Help**.
 
-2. On the Monitor tab, you’ll see a count of active sessions and historical data about past sessions.
+2. On the Monitor tab, you'll see a count of active sessions and historical data about past sessions.
 
-3. On the Remote Help sessions tab, you’ll see the records of past sessions, including:
+3. On the Remote Help sessions tab, you'll see the records of past sessions, including:
    - The helper (Provider ID) and sharer (Recipient ID) of each session.
    - The device that received assistance.
    - The start and end time of the Remote Assistance session.
