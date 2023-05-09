@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/13/2023
+ms.date: 05/09/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -165,34 +165,9 @@ For information on all the reporting data you can view, go to [Intune reports](.
 
 ### Enable tracing
 
-THIS SECTION IS STILL IN DRAFT
+If the [common issues](#common-issues) (in this article) don't resolve your issue, you can use Fiddler tracing, the Print-Collect script, and `UPPrinterInstaller.exe` to resync the Intune installation of the universal printer. You can review these logs for possible issues. You can also work with the Intune support team to review and analyze these logs.  
 
-If the [common issues](#common-issues) (in this article) don't resolve your issue, you can use Fiddler tracing, the Print-Collect script, and `UPPrinterInstaller.exe` to resync the Intune installation of the universal printer. You can review these logs for possible issues. You can aslo work with the Intune support team to review and analyze these logs.
-
-To use these tools, you need:
-
-- Windows PowerShell app
-- The Printer Shared ID
-- The omadm account ID: What is this ID? How do users get this ID?
-- The Correlation ID: What is this ID? How do users get this ID?
-
-The following steps must be completed in an Administrator session on the session host to trace a user logging onto the session host and when trying to print to Universal Print.
-
-1. On the client device, install Fiddler. For the specific steps, go to [Universal Print troubleshooting guide](/universal-print/fundamentals/universal-print-troubleshooting-support-howto).
-2. Download [Print-Collect](https://aka.ms/Print-Collect) and extract the files. Open the Windows PowerShell app as administrator, and run `Print-Collect.ps1` with your paramters. For example, you can enter:
-
-    ```powershell
-    .\Print-Collect.ps1 -Trace [-RPC] [-Network] [-ProcMon] [-PSR] -Logs [-NoDumps]
-    ```
-
-    For a description of these parameters and other parameters you can enter, open the `Print-Collect.ps1` file in a text editor.
-
-3. Start the Fiddler trace.
-4. Open another command prompt as administrator, go to the `System32` directory, which is typically `C:\windows\system32`. Enter syntax similar to the following:
-
-      `UPPrinterInstaller.exe -install -printersharedid E7CBB880-A194-450A-ACC7-86AEE809B971 -omadmaccountid 8A917C42-BE97-49EA-AD77-6EF9FE143E04 -correlationid 8A7E7CDE-D0EE-4C45-86FB-3570C3D5F81F")`
-
-    The GUIDs are specific to your universal printer and environment. Be sure to replace the example GUIDs with your universal printer values.
+For more information and specific steps, go to [Universal Print troubleshooting guide - Use PrintCollect, Fiddler, and UPPrinterInstaller](/universal-print/fundamentals/universal-print-troubleshooting-support-howto#use-printcollect-fiddler-and-upprinterinstaller).
 
 ## Learn more
 
