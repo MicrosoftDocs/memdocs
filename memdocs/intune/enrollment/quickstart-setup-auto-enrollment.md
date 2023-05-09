@@ -82,7 +82,7 @@ For this example, you'll configure MDM enrollment settings so that both corporat
 9. Choose **Save**.
 
 > [!IMPORTANT]
-> For Windows BYOD devices, the MAM user scope takes precedence if both the MAM user scope and the MDM user scope (automatic MDM enrollment) are enabled for all users (or the same groups of users). The device will not be MDM enrolled, and Windows Information Protection (WIP) policies will be applied if you have configured them.
+> For Windows BYOD devices, the MAM user scope takes precedence if both the MAM user scope and the MDM user scope (automatic MDM enrollment) are enabled for all users (or the same groups of users). The device will not be MDM enrolled, and Microsoft Purview Information Protection policies will be applied if you have configured them.
 
 If your intent is to enable automatic enrollment for Windows BYOD devices to an MDM, configure the MDM user scope to All (or Some, and specify a group) and configure the MAM user scope to None (or Some, and specify a group–ensuring that users are not members of a group targeted by both MDM and MAM user scopes).
 

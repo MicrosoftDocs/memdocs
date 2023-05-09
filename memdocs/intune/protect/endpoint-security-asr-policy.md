@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/16/2023
+ms.date: 04/18/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -62,7 +62,7 @@ Find the endpoint security policies for attack surface reduction under *Manage* 
 > - Attack surface reduction rules (April 5, 2022)
 > - Exploit protection (April 5, 2022)
 > - Device control (May 23, 2022)
- 
+> - App and browser isolation (April 18, 2023)
 
 ### Devices managed by Intune
 

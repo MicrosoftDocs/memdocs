@@ -21,7 +21,7 @@ ms.reviewer: mstewart,aaroncz
 Following the guidance in this topic will enable you to set up a lab for evaluating Configuration Manager with simulated real-life activities.  
 
 > [!NOTE]
-> Microsoft offers a pre-configured version of this lab using an evaluation version of Configuration Manager. For more information, see [Windows and Office deployment and management lab kit](/microsoft-365/enterprise/modern-desktop-deployment-and-management-lab). 
+> Microsoft offers a pre-configured version of this lab using an evaluation version of Configuration Manager. For more information, see [Microsoft Intune and Configuration Manager evaluation lab kit](https://www.microsoft.com/evalcenter/evaluate-mem-evaluation-lab-kit). 
 
 ##  <a name="BKMK_LabCore"></a> Core components  
  Setting up your environment for Configuration Manager requires some core components to support the installation of Configuration Manager.    
@@ -87,12 +87,12 @@ Once you have installed all of these components, there are additional steps you 
 
 -   Domain user: **ConfigUser**  
 
-     Under normal circumstances, you would not grant universal access to all users within your environment. You are doing so with this user in order to streamline bringing your lab online.  
+     Under normal circumstances, you wouldn't grant universal access to all users within your environment. You are doing so with this user in order to streamline bringing your lab online.  
 
 The next steps required to enable Configuration Manager clients to query Active Directory Domain Services to locate site resources are listed over the next procedures.  
 
 ##  <a name="BKMK_CreateSysMgmtLab"></a> Create the System Management container  
- Configuration Manager will not automatically create the required System Management container in Active Directory Domain Services when the schema is extended. Therefore, you will create this for your lab. This step will require you to [install ADSI Edit](/previous-versions/windows/it-pro/windows-server-2003/cc773354(v=ws.10)).
+ Configuration Manager won't automatically create the required System Management container in Active Directory Domain Services when the schema is extended. Therefore, you will create this for your lab. This step will require you to [install ADSI Edit](/previous-versions/windows/it-pro/windows-server-2003/cc773354(v=ws.10)).
 
  Ensure that you are logged on as an account that has **Create All Child Objects** permission on the **System** Container in Active Directory Domain Services.  
 

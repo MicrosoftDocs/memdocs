@@ -8,7 +8,7 @@ ms.reviewer: jubaptis
 manager: aaroncz
 author: frankroj
 ms.author: frankroj
-ms.date: 11/17/2022
+ms.date: 05/04/2023
 ms.collection: 
   - M365-modern-desktop
   - highpri
@@ -72,13 +72,13 @@ Before starting the pre-provisioning process in the provisioning service facilit
 
 :::image type="content" source="images/allow-white-glove-oobe.png" alt-text="Screenshot of the Out-of-box experience (OOBE) portal and the highlighted setting to allow pre-provisioning":::
 
-The pre-provisioning process applies all device-targeted policies from Intune. Those policies include certificates, security templates, settings, apps, and more - anything targeting the device. Additionally, any Win32 or LOB apps are installed if they meet these two conditions:
+The pre-provisioning process applies all device-targeted policies from Intune. Those policies include certificates, security templates, settings, apps, and more - anything targeting the device. Additionally, any Win32 or LOB apps are installed if they meet the following conditions:
 
 - Configured to install in the device context.
-- Targeted to the user preassigned to the Autopilot device.
+- Assigned to either the device or to the user preassigned to the Autopilot device.
 
 > [!IMPORTANT]
-> Make sure not to target both win32 and LOB apps to the same device.
+> Make sure not to target both win32 and LOB apps to the same device. For more information, see [Add a Windows line-of-business app to Microsoft Intune](/mem/intune/apps/lob-apps-windows).
 
 > [!NOTE]
 > Select the language mode as user specified in Autopilot profiles to ensure easy access into pre-provisioning mode. The pre-provisioning technician phase will install all device-targeted apps and any user-targeted, device-context apps that are targeted to the assigned user. If there's no assigned user, then it will only install the device-targeted apps. Other user-targeted policies will not apply until the user signs into the device. To verify these behaviors, be sure to create appropriate apps and policies targeted to devices and users.
@@ -140,6 +140,9 @@ If the pre-provisioning process completed successfully and the device was reseal
 - Connect to a network (if using Wi-Fi). Internet access is always required. If using hybrid Azure AD Join, there must also be connectivity to a domain controller.
 - If using Azure AD join, on the branded sign-on screen, enter the user's Azure Active Directory credentials.
 - If using hybrid Azure AD Join, the device will reboot; after the reboot, enter the user's Active Directory credentials.
+  > [!NOTE]
+  > 
+  > In certain circumstances, Azure AD credentials may also be prompted for during a hybrid Azure AD join scenario. For example, if ADFS isn't being used.
 - More policies and apps are delivered to the device, as tracked by the Enrollment Status Page (ESP). Once complete, the user can access the desktop.
 
 A change was made in the 2021.09C release to rerun the device ESP during the user flow so that both device and user ESP run when the user logs in. This change allows ESP to install other policies that may have been assigned to the device after it was provisioned in the technician phase.  

@@ -416,7 +416,7 @@ Create the account in any domain that provides the necessary access to resources
 #### Actions that require the network access account
 
 <!-- 4640345 -->
-The network access account is still required for the following actions:
+The network access account is still required for the following actions (including eHTTP & PKI scenarios):
 
 - Multicast. For more information, see [Use multicast to deploy Windows over the network](../../../osd/deploy-use/use-multicast-to-deploy-windows-over-the-network.md).
 

@@ -4,9 +4,9 @@
 title: Configure iOS/iPadOS Enterprise SSO plug-in with MDM
 description: Learn more about the Microsoft Enterprise SSO plug-in. Add or create an iOS or iPadOS device configuration profile using the Microsoft Enterprise SSO plug-in in Microsoft Intune, Jamf Pro, and other MDM solution providers.
 keywords: Enterprise SSO plug-in, Microsoft Intune
-author: TBC
-ms.author: alessanc
-manager: ianfarr
+author: MandiOhlinger
+ms.author: mandia
+manager: dougeby
 ms.date: 01/30/2023
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -19,7 +19,7 @@ ms.technology:
 #ROBOTS:
 #audience:
 
-ms.reviewer: miepping, tbc
+ms.reviewer: miepping, tbc, alessanc
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -37,9 +37,7 @@ This article applies to:
 
 - iOS/iPadOS
 
-This article shows how to deploy the Microsoft Enterprise SSO plug-in (preview) for iOS/iPadOS Apple devices with Intune, Jamf Pro, and other MDM solutions.
-
-[!INCLUDE [Apple SSO Disclaimer Boilerplate](../includes/apple-enterprise-sso-disclaimer-boilerplate.md)]
+This article shows how to deploy the Microsoft Enterprise SSO plug-in for iOS/iPadOS Apple devices with Intune, Jamf Pro, and other MDM solutions.
 
 ## Prerequisites
 
@@ -233,6 +231,6 @@ When the device checks in with the MDM service, it receives this profile.
 
 ## Next steps
 
-- For information about the Microsoft Enterprise SSO plug-in, go to [Microsoft Enterprise SSO plug-in for Apple devices (preview)](/azure/active-directory/develop/apple-sso-plugin).
+- For information about the Microsoft Enterprise SSO plug-in, go to [Microsoft Enterprise SSO plug-in for Apple devices](/azure/active-directory/develop/apple-sso-plugin).
 
 - For information from Apple on the single sign-on extension payload, go to [single sign-on extensions payload settings](https://support.apple.com/guide/deployment/single-sign-on-payload-settings-dep7a81f07b/web) (opens Apple's web site).

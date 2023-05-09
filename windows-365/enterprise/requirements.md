@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 11/21/2022
+ms.date: 05/05/2023
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice:
@@ -121,10 +121,64 @@ Windows 365 manages the capacity and availability of underlying Azure resources 
   - Japan East
 - Norway
   - Norway East
+- Qatar
+  - Qatar Central
+- South Africa
+  - South Africa North
 - South America
   - Brazil South (Restricted, request your Commercial Executive to engage Deal Manager for exception)
 - South Korea
   - Korea Central
+- Sweden
+  - Sweden Central
+- Switzerland
+  - Switzerland North
+- UAE
+  - UAE North
+- United Kingdom
+  - UK South
+- US Central
+  - Central US
+  - South Central US
+- US East
+  - East US
+  - East US 2
+- US West
+  - West US 2 (Restricted)
+  - West US 3
+
+### [Windows 365 Frontline](#tab/frontline)
+
+- Asia
+  - East Asia
+  - Southeast Asia
+- Australia
+  - Australia East
+- Brazil
+  - Brazil South (Restricted)
+- Canada
+  - Canada Central
+- European Union
+  - North Europe
+  - West Europe
+- France
+  - France Central
+- India
+  - Central India
+- Japan
+  - Japan East
+- Norway
+  - Norway East
+- Qatar
+  - Qatar Central (Restricted)
+- South Africa
+  - South Africa North
+- South America
+  - Brazil South (Restricted, request your Commercial Executive to engage Deal Manager for exception)
+- South Korea
+  - Korea Central
+- Sweden
+  - Sweden Central
 - Switzerland
   - Switzerland North
 - UAE

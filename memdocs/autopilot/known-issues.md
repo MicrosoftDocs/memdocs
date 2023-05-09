@@ -25,6 +25,10 @@ ms.topic: troubleshooting
 
 This article describes known issues that can often be resolved with configuration changes, or might be resolved automatically in a future release. For information about issues that can be resolved by applying a cumulative update, see [Windows Autopilot - resolved issues](resolved-issues.md).
 
+> [!NOTE]
+>
+> If you are experiencing issues with Autopilot with Co-management, see [Windows Autopilot with co-management](../configmgr/comanage/autopilot-enrollment.md).
+
 ## Known issues
 
 ### Kiosk device profile not auto logging in
@@ -33,7 +37,7 @@ There's currently a known issue in Windows Update [KB5022303](https://support.mi
 
 ### TPM attestation isn't working on AMD platforms with ASP fTPM
 
-TPM attestation for AMD platforms with ASP firmware TPM may fail with error code 0x80070490 on Windows 10 and Windows 11 systems. There's currently no update available to resolve this issue.
+TPM attestation for AMD platforms with ASP firmware TPM may fail with error code 0x80070490 on Windows 10 and Windows 11 systems. This issue is resolved on newer versions of AMD firmware. Consult with device manufacturers and firmware release notes for which firmware versions contain the update.
 
 ### TPM attestation failure with error code 0x81039001
 

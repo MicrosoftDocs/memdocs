@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/28/2023
+ms.date: 04/07/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -225,6 +225,10 @@ To renew an Apple Business Manager location token (Apple VPP token), use the fol
 
 > [!NOTE]
 > You must renew the existing Apple VPP token or location token when the user who set up the token in Apple Business Manager changes their password or the user leaves your Apple Business Manager organization. Tokens that are not renewed will show "invalid" status in Intune.
+
+## Configure updates for VPP apps
+
+You can control the automatic update behavior for Apple VPP at the per-app assignment level using the **Prevent automatic updates** setting. The **Prevent automatic updates** setting is dependent on the token-level **Allow automatic updates** setting. To use the **Prevent automatic updates**, the **Allow automatic updates** setting must be set to **Yes**. This setting is available in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **iOS/iPadOS** or **macOS** > *Select a volume purchase program app* > **Properties** > **Assignments**.
 
 ## Deleting a VPP app
 You can delete purchased apps that don't have any available or used licenses associated with them. This may be necessary to clean up apps that are no longer assigned.

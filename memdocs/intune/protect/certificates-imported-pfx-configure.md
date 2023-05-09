@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/17/2022
+ms.date: 04/27/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -284,7 +284,7 @@ To learn more about the DigiCert Import tool, including how to obtain the tool, 
 
 If you use EverTrust as your PKI solution, standalone or combined to an existing PKI, you can configure EverTrust Horizon to import PFX certificates to Intune. After you complete the integration, you won’t need to follow the instructions in the section [Import PFX Certificates to Intune](#import-pfx-certificates-to-intune) that's detailed earlier in this article.
 
-To learn more about EverTrust’s integration with Intune, see https://evertrust.fr/horizon/integrations/intune/.
+To learn more about EverTrust’s integration with Intune, see https://evertrust.fr/horizon-and-intune-integration/.
 
 ### KeyTalk
 
@@ -295,3 +295,8 @@ To learn more about KeyTalk’s integration with Intune, see https://keytalk.com
 ## Next steps
 
 [Use SCEP for certificates](certificates-scep-configure.md)
+### Intune UI displays Windows Server devices as distinct from Windows clients for the Security Management for Microsoft Defender for Endpoint scenario<!-- 16882836  iddraft -->
+
+To support the [Security Management for Microsoft Defender for Endpoint](../protect/mde-security-integration.md) (MDE security configuration) scenario, Intune will soon differentiate Windows devices in Azure Active Directory as either *Windows Server* for devices that run Windows Server, or as *Windows* for devices that run Windows 10 or Windows 11.
+
+With this change, you'll be able to improve policy targeting for MDE security configuration. For example, you'll be able to use dynamic groups that consist of only Windows Server devices, or only Windows client devices (Windows 10/11).

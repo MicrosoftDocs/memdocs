@@ -118,8 +118,7 @@ Create and configure a message for the Get Started app.
 ## Step 2: Schedule a message  
 
 # [Taskbar / Notification area](#tab/taskbar+notification) 
-On the **Schedule** page, schedule the delivery of your message. 
-
+On the **Schedule** page, schedule the delivery of your message.  
 1. Configure the delivery time window. Your options:  
 
    * **First day to show message**: Select when to first show the message. To ensure that delivery begins when you want it to, configure this setting 24 hours before you want the message to appear.   
@@ -127,7 +126,7 @@ On the **Schedule** page, schedule the delivery of your message.
 2. Select **Next: Assignments** to continue to assignment options.   
 
 # [Get Started app](#tab/get-started)  
-On the **Schedule** page, schedule the delivery of your message.  
+On the **Schedule** page, schedule the delivery of your message. 
 
 1. Configure the **Message repeat frequency**. Select how often you want the message to reappear after employees dismiss it. The message will initially go away when the employee dismisses it or completes the call-to-action, but will reappear at the frequency you select here. Your options: 
    * **Once a week**

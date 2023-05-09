@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/29/2022
+ms.date: 05/01/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -61,6 +61,8 @@ The **Overview** blade of the app you've created is displayed.
 > You will need to work with the OEM of your device to find the package name of the app you would like to enable/disable.
 >
 > You cannot create an Android Enterprise system app when there is the same app in Managed Google Play in Intune.
+> 
+> The Notes section will not appear for an Android Enterprise system app and is not editable. 
 
 The app you've created is displayed in the apps list, where you can assign it to the groups that you select. 
 
