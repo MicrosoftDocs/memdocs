@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/03/2023
+ms.date: 05/09/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -257,7 +257,7 @@ You can use the following app properties in your managed app filter rules:
   - Android
   - iOS/iPadOS
 
-- **`deviceManagementType` (Device Management Type)**: Create a filter rule based on the Intune device management type. Select from the following values using the `-eq` and `-ne` operators: 
+- **`deviceManagementType` (Device Management Type)**: On Intune enrolled devices, create a filter rule based on the Intune device management type. Devices must be Intune enrolled to use this app property. Select from the following values using the `-eq` and `-ne` operators: 
 
   - `Unmanaged`
 
@@ -319,7 +319,7 @@ You can use the following app properties in your managed app filter rules:
   - `(app.deviceManufacturer -eq "Microsoft")`
   - `(app.deviceManufacturer -startsWith "Micro")`
 
-  This property applies to:
+  This property applies:
 
   - Android
   - iOS/iPadOS
