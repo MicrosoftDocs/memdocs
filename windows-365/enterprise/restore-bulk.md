@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 03/02/2022
+ms.date: 05/08/2023
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice:
@@ -38,9 +38,10 @@ You can use the Microsoft Intune admin center to bulk restore multiple Cloud PCs
 ![Screenshot of bulk device actions](./media/restore-bulk/bulk-device-actions.png)
 2. On the **Basics** page, select the following options:
     1. **OS**: Windows
-    2. **Device action**: Restore (preview)
-    3. **Specify date and time**: Choose a date and time. This setting defines the time that you’d like to restore the Cloud PCs to. The following options will help determine exactly which restore point that will be used.
-    4. **Select restore point time range**: Choose one of the following options:
+    2. **Device type**: Cloud PCs
+    3. **Device action**: Restore
+    4. **Specify date and time**: Choose a date and time. This setting defines the time that you’d like to restore the Cloud PCs to. The following options will help determine exactly which restore point that will be used.
+    5. **Select restore point time range**: Choose one of the following options:
         - **Before specified date and time**: If you choose this option, the Cloud PCs will be restored to the closest restore point before the date and time you specified.
         - **After specified date and time**: If you choose this option, the Cloud PCs will be restored to the closest restore point after the date and time you specified.
         - **Whichever is closest (before or after specified date and time)**: If you choose this option, the Cloud PCs will be restored to the closest restore point to the date and time you specified.
