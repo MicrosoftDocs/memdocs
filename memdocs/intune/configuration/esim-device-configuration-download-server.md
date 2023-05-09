@@ -39,7 +39,7 @@ eSIM technology has created a worldwide ecosystem of cellular devices and mobile
 
 eSIM decouples the secure execution environment of the plastic SIM card from the SIM credentials it contains. The secure container is called an eUICC (embedded Universal Integrated Circuit Card). In the same way that each physical SIM card has a unique identity, each eUICC has a unique identity called eUICC Identifier (EID).
 
-:::image type="content" source="./media/esim-device-configuration/euicc-chip-download-server.png" alt-text="eUICC and eSIM technology.":::
+:::image type="content" source="./media/esim-device-configuration/euicc-tech-download-server.png" alt-text="eUICC and eSIM technology.":::
 
 The credentials and associated other configuration that uniquely identify a cellular subscription are contained in a digital (software) package called an eSIM Profile. Multiple eSIM Profiles may be installed into an eUICC. One of the installed eSIM Profiles is enabled (and the rest are disabled). The combination of the enabled eSIM Profile and its eUICC container behaves exactly like a traditional SIM card.
 
