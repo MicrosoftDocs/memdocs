@@ -394,6 +394,13 @@ If a conditional access policy is configured as described above and if the devic
 ## What's New for Remote Help
 
 Updates for Remote Help are released periodically. When we update Remote Help, you can read about the changes here.
+
+### May 1, 2023
+
+Version: 4.2.1270.0
+This version includes a minor update that enables future functionality.
+
+- Added support for slashes within the Remote Help URI (to enable future functionality)
  
 ### March 27, 2023
 
