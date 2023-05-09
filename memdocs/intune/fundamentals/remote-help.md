@@ -398,6 +398,7 @@ Updates for Remote Help are released periodically. When we update Remote Help, y
 ### May 1, 2023
 
 Version: 4.2.1270.0
+
 This version includes a minor update that enables future functionality.
 
 - Added support for slashes within the Remote Help URI (to enable future functionality)
