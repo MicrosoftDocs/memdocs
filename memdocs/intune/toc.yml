@@ -955,7 +955,7 @@ items:
           items:
           - name: Group Policy analytics
             href: ./configuration/group-policy-analytics.md
-          - name: Create policy using imported GPOs
+          - name: Import GPOs to create a policy
             href: ./configuration/group-policy-analytics-migrate.md
           - name: Create administrative templates
             href: ./configuration/administrative-templates-windows.md
