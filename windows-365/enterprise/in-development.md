@@ -79,7 +79,7 @@ New Cloud PCs created by the provisioning policy will be created in the new regi
 
 In a future update, both single and bulk resizing will support Cloud PCs that were provisioned with group-based licenses.
 
-### Admin alert when a Cloud PC enters the grace period<!--44188012-->
+### Admin alert when a Cloud PC enters the grace period (preview)<!--44188012-->
 
 In an upcoming release, admins will be alerted when a Cloud PC enters the grace period. For more information about grace periods, see [Device management overview for Cloud PCs](device-management-overview.md).
 
@@ -104,7 +104,7 @@ A new Windows 365 Government setup tool will replace the current PowerShell scri
 
 In an upcoming release, a **Provide feedback** button will be added to several Windows 365 admin pages in the Intune admin center.
 
-### Single sign on option per tenant<!--43751308-->
+### Single sign on option per tenant (preview)<!--43751308-->
 
 Each tenant will be able to decide if you want to turn on Single Sign On. We'll also add a new Azure Network Connection check will be added to make sure that the network is properly configured for single sign on.
 
@@ -122,7 +122,7 @@ End users will be able to manually run connectivity checks on their Cloud PCs fr
 
 During Azure network connection (ANC) creation or editing, instead of copying and pasting details (like Subscription ID, and VNET name) for the ANC, you'll be able to select options from a drop down menu. For more information, see [Set up tenants for Windows 365 Government](set-up-tenants-windows-365-gcc.md).
 
-### New health check: UDP TURN<!--44505391-->
+### New health check: UDP TURN (preview)<!--44505391-->
 
 A new UDP TURN check will be added to the Azure Network Connections health checks. For more information about health checks, see [Azure network connections health checks](health-checks.md).
 
