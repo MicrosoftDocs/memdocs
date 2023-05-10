@@ -67,6 +67,21 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 -->
 
+## Week of May 8, 2023
+
+### Device configuration
+
+#### eSIM bulk activation for Windows PCs via download server is now available on the Settings Catalog<!-- 19809114 wndraft wnready wnstaged-->
+You can now perform at-scale configuration of Windows eSIM PCs using the Settings Catalog. A download server (SM-DP+) is configured using a configuration profile. 
+
+Once the devices receive the configuration, they automatically download the eSIM profile. For more information go to [eSIM configuration of a download server](../configuration/esim-device-configuration-download-server.md)
+
+Applies to:
+
+ - Windows 11
+ - eSIM capable devices 
+
+
 ## Week of May 1, 2023
 
 ### App management

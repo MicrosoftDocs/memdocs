@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 08/02/2021
+ms.date: 05/09/2023
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice:
@@ -51,8 +51,6 @@ The following redirections can be managed by using the appropriate setting:
 | Smartcards | Do not allow smart card device redirection |
 | USB drives| Do not allow supported Plug and Play device redirection |
 
-
-
 There are two ways to manage these redirections:
 
 - Settings Catalog: Use a device configuration policy in Microsoft Endpoint Manager. Supports both Azure Active Directory (Azure AD) join and hybrid Azure AD join Cloud PCs.
@@ -66,7 +64,7 @@ To manage any of the redirections by using the Settings Catalog, create and assi
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration profiles** > **Create profile**.
 
-2. Select the **Windows 10 and later** platform, the **Settings catalog (preview)** profile type, then **Create**.
+2. Select the **Windows 10 and later** platform, the **Settings catalog** profile type, then **Create**.
 
 3. On the **Basics** page, enter a **Name** and **Description** (optional) for the new policy.
 
@@ -77,9 +75,9 @@ To manage any of the redirections by using the Settings Catalog, create and assi
 
 5. After you've selected all the redirection settings that you want to manage, close the **Settings picker** view, configure the settings on the **Configuration settings** page, then select **Next**.
 
-6. On the **Assignments** page, select the users or groups that will receive the redirection policy, then select **Next**.
+6. On the **Scope tags** page, select any desired scope tags to apply, then select **Next**.
 
-7. On the **Scope tags** page, select any desired scope tags to apply, then select **Next**.
+7. On the **Assignments** page, select the users or groups that will receive the redirection policy, then select **Next**.
 
 8. On the *Review + create** page, select **Create**.
 
