@@ -51,7 +51,7 @@ The following table explains what you can expect when a paid Windows 365 subscri
 | Active | Expired <br/>(30 days\*) | Disabled <br/>(90 days\*) | Deleted |
 |---|---|---|---|
 | *Data accessible to all* | *Data accessible to all* | *Data accessible to admins only* | **Data deleted<br/>Azure Active Directory is removed, if not in use by other services** |
-| User has normal access to Windows 365 Cloud PCs and its data. | User has normal access to Windows 365 Cloud PC and its data. Cloud PC is deprovisioned. | User can't access Windows 365 or its data. | Users can't access Windows 365 or its data |
+| User has normal access to Windows 365 Cloud PCs and its data. | User has normal access to Windows 365 Cloud PC and its data. | User can't access Windows 365 or its data. | Users can't access Windows 365 or its data |
 | Admins have normal access to Windows 365 service and data | Admins can access the Windows 365 service and data. | Admins can't access the Windows 365 service. | Admins can access the admin center to buy and manage other subscriptions. |
 | | Global or billing admins can reactivate the subscription. | Global or billing admins can reactivate the subscription. | |
 
