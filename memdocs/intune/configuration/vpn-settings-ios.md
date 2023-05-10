@@ -33,6 +33,10 @@ ms.collection:
 
 Microsoft Intune includes many VPN settings that can be deployed to your iOS/iPadOS devices. These settings are used to create and configure VPN connections to your organization's network. This article describes these settings. Some settings are only available for some VPN clients, such as Citrix, Zscaler, and more.
 
+This feature applies to:
+
+- iOS/iPadOS
+
 ## Before you begin
 
 - Create an [iOS/iPadOS VPN device configuration profile](vpn-settings-configure.md).
@@ -194,7 +198,7 @@ These settings apply when you choose **Connection type** > **IKEv2**.
 
 - **Remote identifier**: Enter the network IP address, FQDN, UserFQDN, or ASN1DN of the IKEv2 server. For example, enter `10.0.0.3` or `vpn.contoso.com`. Typically, you enter the same value as the [**Connection name**](#base-vpn-settings) (in this article). But, it does depend on your IKEv2 server settings.
 
-- **Local identifier**: Enter the device FQDN or subject common name of the IKEv2 VPN client on the device. Or, you can leave this value empty (default). Typically, the local identifier should match the user or device certificate’s identity. The IKEv2 server may require the values to match so it can validate the client’s identity.
+- **Local identifier**: Enter the device FQDN or subject common name of the IKEv2 VPN client on the device. Or, you can leave this value empty (default). Typically, the local identifier should match the user or device certificate's identity. The IKEv2 server may require the values to match so it can validate the client's identity.
 
 - **Client Authentication type**: Choose how the VPN client authenticates to the VPN. Your options:
   - **User authentication** (default): User credentials authenticate to the VPN.
@@ -305,7 +309,7 @@ These settings apply when you choose **Connection type** > **IKEv2**.
               > 
               > - If the **When users try to access these domains** setting is empty, then the device uses the DNS servers configured on the network connection service (Wi-Fi/ethernet) to resolve the domain. The idea is that these DNS servers are public servers.
               > 
-              >   The domains in the **When users try to access these domains** list are internal resources. Internal resources aren’t on public DNS servers and can't be resolved. So, the device connects to the VPN. Now, the domain is resolved using the VPN connection’s DNS servers and the internal resource is available. 
+              >   The domains in the **When users try to access these domains** list are internal resources. Internal resources aren't on public DNS servers and can't be resolved. So, the device connects to the VPN. Now, the domain is resolved using the VPN connection's DNS servers and the internal resource is available. 
               > 
               >   If the device is on the internal network, then the domain resolves, and a VPN connection isn't created because the internal domain is already available. You don't want to waste VPN resources on devices already on the internal network.
               > 

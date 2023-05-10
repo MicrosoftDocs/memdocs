@@ -35,6 +35,10 @@ This article shows you the Intune settings you can use to configure VPN connecti
 
 Depending on the settings you choose, not all values in the following list are configurable.
 
+This feature applies to:
+
+- macOS
+
 ## Before you begin
 
 - Create a [macOS VPN device configuration profile](vpn-settings-configure.md).
