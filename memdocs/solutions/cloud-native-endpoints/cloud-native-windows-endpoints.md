@@ -307,7 +307,7 @@ This phase is designed to help you build out security settings for your organiza
 - [Microsoft Defender Antivirus (MDAV)](#microsoft-defender-antivirus-mdav)
 - [Microsoft Defender Firewall](#microsoft-defender-firewall)
 - [BitLocker Encryption](#bitlocker-encryption)
-- [Windows Local Administrator Password Solution (LAPS)](#laps)
+- [Windows Local Administrator Password Solution (LAPS)](#windows-local-administrator-password-solution-laps)
 - [Security baselines](#security-baselines)
 - [Windows Update for Business](#windows-update-for-business)
 
@@ -426,21 +426,21 @@ Configuring the following BitLocker settings specified results in silently enabl
 
 ### Windows Local Administrator Password Solution (LAPS)
 
-By default, the built-in local administrator account ([well known SID](https://learn.microsoft.com/windows-server/identity/ad-ds/manage/understand-security-identifiers#well-known-sids) S-1-5-500) is disabled. There might be scenarios such as troubleshooting, end-user support and device recovery where a local administrator account can be beneficial. If you decide to enable the built-in administrator account, or create a new local administrator account, it is important to secure the password for that account. Windows Local Administrator Password Solution (LAPS) is one of the features you can leverage to randomise and securely store the password in Azure Active Directory. If you're using Intune as your MDM, follow these steps to enable [Windows LAPS](https://learn.microsoft.com/windows-server/identity/laps/laps-overview): 
+By default, the built-in local administrator account ([well known SID](/windows-server/identity/ad-ds/manage/understand-security-identifiers#well-known-sids) S-1-5-500) is disabled. There might be scenarios such as troubleshooting, end-user support and device recovery where a local administrator account can be beneficial. If you decide to enable the built-in administrator account, or create a new local administrator account, it is important to secure the password for that account. Windows Local Administrator Password Solution (LAPS) is one of the features you can leverage to randomise and securely store the password in Azure Active Directory. If you're using Intune as your MDM, follow these steps to enable [Windows LAPS](/windows-server/identity/laps/laps-overview): 
 
 > [!NOTE]
 >
 > Windows LAPS assumes that the default local administrator account is enabled (even if renamed), or that you have created another local admin account to be managed. Windows LAPS does not create or enable any local
 > accounts for you. You'll need to perform these actions seperatly from configuring Windows LAPS, using either scripting or Configuration Service Providers (CSP's) such as the [Accounts CSP]
-> (https://learn.microsoft.com/windows/client-management/mdm/accounts-csp) or [Policy CSP](https://learn.microsoft.com/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions
+> (/windows/client-management/mdm/accounts-csp) or [Policy CSP](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions).
 
 1. Ensure your Windows 10 (20H2 or later) or Windows 11 devices have the April 2023 (or later) security update installed.
-   For more information, go to [Operating system updates](https://learn.microsoft.com/en-us/azure/active-directory/devices/howto-manage-local-admin-passwords#operating-system-updates)
+   For more information, go to [Operating system updates](/azure/active-directory/devices/howto-manage-local-admin-passwords#operating-system-updates)
 2. Enable Windows LAPS in Azure Active Directory
    Sign-in to the [Azure AD device settings blade](https://aka.ms/aaddevice) and select **Yes** for the **'Enable Local Administrator Password Solution (LAPS) setting'** and select **Save** at the top of the page.
-   For more information, go to [Enabling Windows LAPS with Azure AD](https://learn.microsoft.com/azure/active-directory/devices/howto-manage-local-admin-passwords#enabling-windows-laps-with-azure-ad)
+   For more information, go to [Enabling Windows LAPS with Azure AD](/azure/active-directory/devices/howto-manage-local-admin-passwords#enabling-windows-laps-with-azure-ad)
 3. Create an Endpoint Security Policy in Intune
-   Sign-in to the [Intune portal](https://aka.ms/in), click on **Endpoint Security** > **Account Protection** > **Create Policy** > **Windows 10 and later** > **Local admin password solution (Windows LAPS)** > **Create**. For more information, go to [Create a LAPS Policy](https://learn.microsoft.com/mem/intune/protect/windows-laps-policy#create-a-laps-policy).
+   Sign-in to the [Intune portal](https://aka.ms/in), click on **Endpoint Security** > **Account Protection** > **Create Policy** > **Windows 10 and later** > **Local admin password solution (Windows LAPS)** > **Create**. For more information, go to [Create a LAPS Policy](../protect/windows-laps-policy.md#create-a-laps-policy).
 
 ### Security Baselines
 
