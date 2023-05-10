@@ -440,7 +440,7 @@ By default, the built-in local administrator account ([well known SID](/windows-
    Sign-in to the [Azure AD device settings blade](https://aka.ms/aaddevice) and select **Yes** for the **'Enable Local Administrator Password Solution (LAPS) setting'** and select **Save** at the top of the page.
    For more information, go to [Enabling Windows LAPS with Azure AD](/azure/active-directory/devices/howto-manage-local-admin-passwords#enabling-windows-laps-with-azure-ad)
 3. Create an Endpoint Security Policy in Intune
-   Sign-in to the [Intune portal](https://aka.ms/in), click on **Endpoint Security** > **Account Protection** > **Create Policy** > **Windows 10 and later** > **Local admin password solution (Windows LAPS)** > **Create**. For more information, go to [Create a LAPS Policy](../protect/windows-laps-policy.md#create-a-laps-policy).
+   Sign-in to the [Intune portal](https://aka.ms/in), click on **Endpoint Security** > **Account Protection** > **Create Policy** > **Windows 10 and later** > **Local admin password solution (Windows LAPS)** > **Create**. For more information, go to [Create a LAPS Policy](/mem/intune/protect/windows-laps-policy#create-a-laps-policy).
 
 ### Security Baselines
 
