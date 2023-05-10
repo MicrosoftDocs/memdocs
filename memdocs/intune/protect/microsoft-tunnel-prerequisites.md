@@ -258,17 +258,6 @@ You can use a proxy server with Microsoft Tunnel.
 > [!NOTE]  
 > Make sure your Android LOB applications support direct proxy or Proxy Auto-Configuration (PAC) for both MDM and MAM.
 
-> [!NOTE]  
-> Known Issue: Users who are trying to sign in to Edge using their personal or corporate accounts may face issues when a Proxy Auto-Configuration (PAC) is configured. In this scenario, the sign-in process may fail, preventing the user from accessing >internal resources.
->
->Workaround:To resolve this issue, Microsoft Tunnel offers two options.
->
->Split tunneling allows users to include only the routes that require a proxy while excluding login servers and authentication paths from routing through the Tunnel. This workaround ensures that the sign-in process is not affected by the PAC >configuration, allowing the user to access internal resources.
->
->Direct proxy is also an option without split tunneling for sign in to work in Edge using personal/corp accounts. This involves configuring the Edge browser to use a direct proxy instead of a PAC file.
->Once the user signs in to Edge using the workaround, PAC is supported for accessing internal resources.
-
-
 The following considerations can help you configure the Linux server and your environment for success:
 
 ### Configure an outbound proxy for Docker
