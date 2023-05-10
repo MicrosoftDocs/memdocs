@@ -39,6 +39,8 @@ The **Sync** device action forces the selected device to immediately check in wi
 - macOS
 - Android (Device administrator and Android for Work only)
 
+The **Sync** device action is not needed for Android Enterprise devices, because the devices will get new configurations/applications almost immediately after you have assigned them to Android Enterprise devices. 
+
 ## Sync a device
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). 
