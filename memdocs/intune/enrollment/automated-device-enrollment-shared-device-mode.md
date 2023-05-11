@@ -95,7 +95,7 @@ Configure a single-sign on (SSO) app extension policy for shared device mode. Cr
 * **Template name**: Device features
 * Expand **Single sign-on app extension**, and then configure:    
     * **SSO app extension type**: Microsoft Azure AD
-    * **Enable shared device more**: Yes  
+    * **Enable shared device mode**: Yes  
     * **Key**: device_registration
     * **Type**: String
     * **Value**: {{DEVICEREGISTRATION}} 
