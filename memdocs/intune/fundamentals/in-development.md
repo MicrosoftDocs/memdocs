@@ -261,7 +261,7 @@ Once the new baseline version is available, all new profiles you create for Micr
 
 To learn more, see [Security baselines overview](../protect/security-baselines.md).
 
-### New security baseline for Microsoft 356 Office Apps<!-- 9587103 -->  
+### New security baseline for Microsoft 365 Office Apps<!-- 9587103 -->  
 We’re working to add a new security baseline to help you manage security configurations for **M365 Office Apps**. This new baseline will be released in a new format for security baselines that uses an updated template and experience that leverages the unified settings platform seen in the Intune settings catalog.
 
 The new Intune security baseline format aligns the presentation of settings that are available to those found in the Intune settings catalog. This alignment helps resolve past issues for setting names and implementations for settings that could create conflicts. The new format also improves the reporting experience for baselines in the Intune admin center.
