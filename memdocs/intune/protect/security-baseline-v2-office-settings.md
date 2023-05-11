@@ -78,6 +78,8 @@ To learn more about using security baselines, see:
 
 **Microsoft 365 Apps for Enterprise security baseline for May 2023**  
 
+For more information about the following settings that are included in this baseline, download the [Microsoft Security Compliance Toolkit 1.0](https://www.microsoft.com/download/details.aspx?id=55319) from the Microsoft Download Center, and review the *Microsoft 365 Apps for Enterprise-2206-FINAL.zip* file.
+
 ### Microsoft Access 2016
 
 *Application Settings > Security > Trust Center*

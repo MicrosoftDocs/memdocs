@@ -52,9 +52,9 @@ This feature applies to:
 ## Intune security baseline overview
 
 > [!NOTE]
-> In May 2023, Intune began rollout of a new security baseline format for each new baseline release or version update.  The new format updates the baseline settings to directly take their name and configuration options from the configuration service provider (CSP) that the baseline setting manages. In addition, the information text in the Intune UI is also taken directly from the CSP and includes a link to the relevant CSP where you can review the source CSP content for additional details about using the CSP setting.
+> In May 2023, Intune began rollout of a new security baseline format for each new baseline release or version update. The new format updates the baseline settings to directly take their name and configuration options from the configuration service provider (CSP) that the baseline setting manages.
 >
-> Intune also introduced a new update process for migrating an existing security baseline profile to a newly released baseline version. This new behavior replaces the previous update behavior when you update a baseline to a newer version that became available in May 2023 or later.
+> Intune also introduced a new process to help you migrate an existing security baseline profile to the newer baseline version. This new behavior is a one-time process that replaces the normal update behavior when you move from the most recent version of an older profile to a newer version that became available in May 2023 or later.
 
 You deploy security baselines to groups of users or devices in Intune, and the settings apply to devices that run Windows 10 or 11. For example, the default configuration of the *MDM Security Baseline* automatically enables BitLocker for removable drives, automatically requires a password to unlock a device, automatically disables basic authentication, and more. When a default value doesn't work for your environment, customize the baseline to apply the settings you need.
 

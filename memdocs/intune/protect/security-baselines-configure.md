@@ -132,14 +132,13 @@ After May 2023, when a new version for a baseline is released, plan to update yo
   We recommend planning to discontinue use of the older format and deploying a profile based on the latest version as soon as possible. The older profiles don't receive updates while the newer versions released in May 2023:
 
   - Use the new settings format in the Intune UI that directly aligns to the configuration service provider (CSP) source for each setting.
-  - Include only settings found in the current CSP, which can include new settings that are added to the CSP since the last baseline version was created.
   - Are preconfigured with default configurations that the relevant security teams recommend.
 
 ### Update a baseline to the new format
 
 To update a baseline that was created before May 2023 to the new format, you must create a new baseline instance. To assist you in recreating the original baselines configuration, you can have Intune export your current baselines configuration as a .CSV file. The export includes:
 
-- Each setting from the older baseline is identified by using the name of the setting as it appears in the new baseline.
+- Each setting from the older baseline is identified by using the name of the setting as it appears in the new baseline. While the name of the setting isn't presented verbatim in the .csv, you will find the path for the setting, which contains part of the setting name in it.
 - How each setting in the older baseline was configured.
 - If the configuration of a setting from the old baseline matches the default configuration from the new baseline.
 
@@ -171,7 +170,7 @@ With the information from the export, you can rapidly reconfigure the new baseli
 
    - **defaultJson** – This column identifies the default configuration for this setting as seen in the new baseline format. Our sample setting for the **SitePerProcess** CSP is set to **enabled** by default.
 
-   - **customziedJson** – The final column displays the configuration of each setting from the older profile version. This information helps you understand which settings in the new profile require modification to match the older profiles’ configuration. Our sample setting was set to **disabled**. All other settings display “NotApplicable” as they weren't modified from the default configuration in the older baseline version we have been using.
+   - **customizedJson** – The final column displays the configuration of each setting from the older profile version. This information helps you understand which settings in the new profile require modification to match the older profiles’ configuration. Our sample setting was set to **disabled**. All other settings display “NotApplicable” as they weren't modified from the default configuration in the older baseline version we have been using.
 
    You might note that the updated Microsoft Edge baseline profile has more than the 17 settings found in the older profile. The baseline export doesn’t identify these new settings, as they weren't available in the older baseline version you're reviewing.
 
