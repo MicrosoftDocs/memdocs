@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/30/2023
+ms.date: 05/15/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -213,7 +213,10 @@ You can create groups for these devices [in Azure AD](/azure/active-directory/fu
 > [!IMPORTANT]
 > In May 2023, *deviceType* updated to distinguish between *Windows clients* and *Windows Servers*.
 >
-> Custom scripts and [Azure AD dynamic device groups](/azure/active-directory/enterprise-users/groups-dynamic-membership) created before this change that specify rules that reference only *Windows* will now exclude Windows Servers when used with the Security Management for Microsoft Defender for Endpoint solution. For example, if you have rules that use the `equals` or `not equals` operator, then you must explicitly update the rule to reference **Windows Server**. If you have rules that use the `contains` or `like` operator, then the rule won’t be affected by this change.
+> Custom scripts and [Azure AD dynamic device groups](/azure/active-directory/enterprise-users/groups-dynamic-membership) created before this change that specify rules that reference only *Windows* might exclude *Windows Servers* when used with the Security Management for Microsoft Defender for Endpoint solution. For example:
+>
+> - If you have a rule that uses the `equals` or `not equals` operator to identify *Windows*, this change will affect your rule. That is because previously both *Windows* and *Windows Server* were reported as *Windows*. To continue to include both, you must update the rule to also reference *Windows Server*.
+> - If you have a rule that use the `contains` or `like` operator to specify *Windows*, then the rule won’t be affected by this change. These operators can find both *Windows* and *Windows Server*.
 
 ## Deploy policy
 
