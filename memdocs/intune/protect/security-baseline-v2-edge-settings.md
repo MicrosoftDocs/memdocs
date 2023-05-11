@@ -83,10 +83,7 @@ To learn more about using security baselines, see:
 
 **Microsoft Edge baseline for May 2023 (Edge version 112)**
 
-For more information about the following settings that are included in this baseline, see the [Browser policy reference](deployedge/microsoft-edge-policies) in the Microsoft Edge documentation.
-
 For more information about the following settings that are included in this baseline, download the [Microsoft Security Compliance Toolkit 1.0](https://www.microsoft.com/download/details.aspx?id=55319) from the Microsoft Download Center, and review the *Microsoft Edge v112 Security Baseline.zip* file.
-
 
 - **Allow unconfigured sites to be reloaded in Internet Explorer mode**  
   Baseline default: *Disabled*  
