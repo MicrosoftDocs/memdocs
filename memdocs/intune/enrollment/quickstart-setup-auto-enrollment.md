@@ -77,9 +77,8 @@ For this example, you'll configure MDM enrollment settings so that both corporat
     ![Screenshot of the "Select groups" assignment pane, highlighting the Contoso Testers example group.](./media/quickstart-setup-auto-enrollment/quickstart-setup-auto-enrollment-05.png)
 
 6. For **MAM User scope**, select **None**.  
-7. Choose **Select groups** > **Contoso Testers** > **Select** as the assigned group. 
-8. Use the default values for the remaining configuration values on the page.    
-9. Choose **Save**.
+7. Use the default values for the remaining configuration values on the page.    
+8. Choose **Save**.
 
 > [!IMPORTANT]
 > For Windows BYOD devices, the MAM user scope takes precedence if both the MAM user scope and the MDM user scope (automatic MDM enrollment) are enabled for all users (or the same groups of users). The device will not be MDM enrolled, and Microsoft Purview Information Protection policies will be applied if you have configured them.
