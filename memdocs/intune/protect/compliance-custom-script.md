@@ -84,7 +84,7 @@ PS C:\Users\apervaiz\Documents> .\sample.ps1
 ## Sample discovery script for Linux
 
 > [!NOTE]  
-> Discovery scripts in Linux are run in the User's context and as such they cannot check for System level settings that require elevation. An example of this is the state/hash of the `/etc/sudoers` file.
+> Discovery scripts in Linux are run in the User's context and as such they cannot check for System level settings that require elevation. An example of this is the `state/hash` of the `/etc/sudoers` file.
 
 Discovery scripts for Linux must be POSIX-compliant shell scripts, such as Bash. However, the scripts can call more complex interpreters from inside the script, like Python. To successfully use other interpreters, they must be correctly installed and configured on the devices in advance of receiving the discovery script.  
 
