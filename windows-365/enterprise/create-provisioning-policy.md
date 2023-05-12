@@ -88,7 +88,7 @@ To select an ANC, follow these steps:
 4. Select **Next**.
 5. On the **Configuration** page, under **Windows settings**, choose a **Language & Region**. The selected language pack will be installed on Cloud PCs provisioned with this policy.
 6. Optional. Select **Apply device name template** to create a Cloud PC naming template to use when naming all Cloud CPs that are provisioned with this policy. When creating the template, follow these rules:
-    - Names must be between 4 and 15 characters.
+    - Names must be between 5 and 15 characters.
     - Names can contain letters, numbers, and hyphens.
     - Names can't include blank spaces.
     - Optional. Use the %USERNAME:X% macro to add the first X letters of the username.
