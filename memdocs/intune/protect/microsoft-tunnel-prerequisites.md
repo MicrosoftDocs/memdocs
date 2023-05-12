@@ -349,7 +349,7 @@ The following details can help you configure an internal proxy when using Podmam
 
       In this example, port 3128 is now associated with both *http_port-t* and *squid_port_t*. That result is expected. If your proxy port isn't listed when running the *sudo semanage port -l | grep "your_proxy_port"* command, then run the command to modify the port again, but the **-m** in the *semanage* command with **-a**: `sudo semanage port -a -t http_port_t -p tcp "your proxy port"`
 
-### Configure Podman to use proxy to download image updates
+### Configure Podman to use the proxy to download image updates
 
 You can configure Podman to use the proxy to download (pull) updated images for Podman:
 
