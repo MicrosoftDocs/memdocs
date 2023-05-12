@@ -3,7 +3,7 @@
 
 title: Data Intune sends to Zebra
 titleSuffix: Microsoft Intune
-description: List of data that Intune sends to Zebra when Android enterprise device management is enabled with Intune.
+description: List of data that Intune sends to Zebra.
 keywords:
 author: Smritib17
 ms.author: smbhardwaj
