@@ -245,13 +245,6 @@ You can choose to use MAM Tunnel with enrolled devices instead of using MDM Tunn
 
 **Work around**: None.
 
-<!-- restored for review: How does this change now that trusted certs are supported? -->
-### Delivering trusted root certificates to Microsoft Edge on Android
-
-When unenrolled devices access resources protected by SSL/TLS certificates issued by an on-premises certificate authority (CA), the devices require the trusted certificate public keychain of the issuing CA to establish a chain of trust with the on-premises endpoint (that is, web server, application web service). As a result, a browser (Microsoft Edge or third party browser), or application won't trust the endpoint without the necessary on-premises CA keychain (trusted cert). For example, Microsoft Edge reports that the connection isn't private or is untrusted, and SSL or https connections aren't available. Users can ignore this warning and connect to the endpoint.
-
-**Work around**: Manually deploy and install the trusted root certificate on unenrolled Android devices that will use Microsoft Edge with Tunnel.
-
 ### Line of business application using WebView and Intune SDK for Trusted root support, internal endpoints are unrenderable
 
 **Work around**: Manually deploy and install the trusted root certificate on unenrolled Android devices that will use LOB Apps with WebView on Tunnel.
