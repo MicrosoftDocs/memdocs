@@ -351,7 +351,7 @@ The following details can help you configure an internal proxy when using Podmam
 
 ### Configure Podman to use proxy to download image updates
 
-To configure Podman to use the proxy to download (pull) updated images for Podman:
+You can configure Podman to use the proxy to download (pull) updated images for Podman:
 
 1. On the tunnel server, use a command prompt to run the following command to open an editor for the override file for the Microsoft Tunnel service:
 
