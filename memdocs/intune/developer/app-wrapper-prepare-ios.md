@@ -320,7 +320,7 @@ Use the following steps to get logs for your wrapped applications during trouble
 3. Toggle the **Display Diagnostics Console** setting to **On**.
 4. Launch your LOB application.
 5. Click on the "Get Started" link.
-6. You can now share logs through email or copying them to a OneDrive location.
+6. You can now send logs directly to Microsoft or share them via another application on the device.
 
 > [!NOTE]
 > The logging functionality is enabled for apps that have wrapped with the Intune App Wrapping Tool version 7.1.13 or above.

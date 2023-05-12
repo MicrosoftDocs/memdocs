@@ -11,6 +11,7 @@ ms.localizationpriority: medium
 
 <!-- This file is shared by the following articles:
 
+existing-devices/setup-autopilot-deployment.md
 pre-provisioning/azure-ad-join-autopilot-profile.md
 pre-provisioning/hybrid-azure-ad-join-autopilot-profile.md
 self-deploying/self-deploying-autopilot-profile.md

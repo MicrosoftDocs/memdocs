@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 02/08/2022
+ms.date: 05/09/2023
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -57,9 +57,9 @@ With the Windows 365 service, you can:
 - Use device groups, policies, and security baselines to customize your Cloud PC configurations to support different user needs.
 - Pre-install [apps](app-overview.md) in your custom Cloud PC image and push more apps to them through Microsoft Intune.
 
-### Windows 365 Business
+### Other versions of Windows 365
 
-Windows 365 Business is a version of Windows 365 that is made specifically for use in smaller companies (up to 300 seats). For more information, see [Getting started with Windows 365 Business and Cloud PCs](/en-us/microsoft-365/admin/setup/get-started-windows-365-business).
+There are other versions available for Windows 365. For more information, see [What is Windows 365?](../overview.md).
 
 [!INCLUDE [What is a Cloud PC?](../includes/what-is-cloud-pc.md)]
 

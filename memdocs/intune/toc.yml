@@ -15,6 +15,9 @@ items:
         href: ./fundamentals/manage-apps.md
       - name: Zero Trust with Microsoft Intune
         href: ./fundamentals/zero-trust-with-microsoft-intune.md
+      - name: Intune architecture diagram
+        href: ./fundamentals/high-level-architecture.md
+        displayName: architecture, diagram, components, design, svg
     - name: Intune service release information
       href: ./fundamentals/intune-service-servicing-information.md
     - name: What is device management?
@@ -78,9 +81,6 @@ items:
       - name: Protect email on unmanaged devices
         href: ./protect/tutorial-protect-email-on-unmanaged-devices.md
 
-      - name: Use Autopilot to enroll Windows devices
-        href: ./enrollment/tutorial-use-autopilot-enroll-devices.md
-        displayName: OOBE
       - name: Use automated device enrollment to enroll iOS/iPadOS devices 
         href: ./enrollment/tutorial-use-device-enrollment-program-enroll-ios.md
 
@@ -1030,8 +1030,12 @@ items:
         - name: Education Take a Test app
           href: ./configuration/education-settings-configure.md
         - name: eSIM cellular on Windows
-          href: ./configuration/esim-device-configuration.md
           displayName: embedded sim
+          items:
+          - name: eSIM bulk activation via download server
+            href: ./configuration/esim-device-configuration-download-server.md
+          - name: eSIM bulk activation via activation codes
+            href: ./configuration/esim-device-configuration.md
         - name: Telecom expenses on Android, iOS/iPadOS
           href: ./configuration/telecom-expenses-monitor.md
           displayName: saaswedo datalert

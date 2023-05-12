@@ -192,8 +192,8 @@ items:
       items:
       - name: Windows Autopilot deployment for existing devices
         href: tutorial/existing-devices/existing-devices-workflow.md
-      - name: Step 1 - Set up a Windows Autopilot deployment
-        href: tutorial/existing-devices/setup-autopilot-deployment.md
+      - name: Step 1 - Set up a Windows Autopilot profile
+        href: tutorial/existing-devices/setup-autopilot-profile.md
       - name: Step 2 - Install required modules to obtain Autopilot profile(s) from Intune
         href: tutorial/existing-devices/install-modules.md
       - name: Step 3 - Create JSON file for Autopilot profile(s)
