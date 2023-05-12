@@ -49,13 +49,13 @@ The diagnostic collection is stored for 28 days and then deleted. Each device ca
 
 The *Collect diagnostics* remote action is supported for:
 
-- Intune or co-managed devices.
-- Windows 10 version 1909 and later.
+- Intune or co-managed devices
+- Windows 10 version 1909 and later
 - Windows 11
-- Microsoft HoloLens 2 2004 and later.
-- Global Admins, Intune Admins, or a role with **Collect diagnostics** (under **Remote tasks**) and **Read** (under **Device compliance policies**) permissions.
-- Corporate-owned devices.
-- Devices that are online and able to communicate with the service during diagnostics. 
+- Microsoft HoloLens 2 2004 and later
+- Global Admins, Intune Admins, or a role with **Collect diagnostics** (under **Remote tasks**) and **Read** (under **Device compliance policies**) permissions
+- Corporate-owned devices
+- Devices that are online and able to communicate with the service during diagnostics
 
 > [!NOTE]
 > For diagnostics to be able to upload successfully from the client, make sure that the URL `lgmsapeweu.blob.core.windows.net` is not blocked on the network.
