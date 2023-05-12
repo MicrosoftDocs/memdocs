@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/01/2023
+ms.date: 05/12/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -348,6 +348,38 @@ The following details can help you configure an internal proxy when using Podmam
       :::image type="content" source="./media/microsoft-tunnel-prerequisites/review-results-for-port.png" alt-text="Screen shot of checking the port after modification.":::
 
       In this example, port 3128 is now associated with both *http_port-t* and *squid_port_t*. That result is expected. If your proxy port isn't listed when running the *sudo semanage port -l | grep "your_proxy_port"* command, then run the command to modify the port again, but the **-m** in the *semanage* command with **-a**: `sudo semanage port -a -t http_port_t -p tcp "your proxy port"`
+
+### Configure Podman to use proxy to download image updates
+
+To configure Podman to use the proxy to download (pull) updated images for Podman:
+
+1. On the tunnel server, use a command prompt to run the following command to open an editor for the override file for the Microsoft Tunnel service:
+
+   `systemctl edit --force mstunnel_monitor`  
+
+2. Add the following four lines to the file. Replace each instance of *[address]* with your proxy DN or address, and then save the file:
+
+   ```
+   [Service]
+   Environment="http_proxy=[address]"
+   Environment="https_proxy=[address]"
+   PassEnvironment=http_proxy, https_proxy
+   ```
+
+3. Next, run the following at the command prompt:
+
+   `systemctl restart mstunnel_monitor`
+
+4. Finally, run the following at the command prompt to confirm the configuration is successful:
+
+   `systemctl show mstunnel_monitor | grep http_proxy`
+
+   If configuration is successfully, the results will resemble the following information:
+   ```
+   Environment="http_proxy=address:port"
+   Environment="https_proxy=address:port"
+   PassEnvironment=http_proxy https_proxy
+   ```
 
 ### Update the proxy server in use by the tunnel server
 
