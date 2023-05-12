@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/06/2023
+ms.date: 05/04/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -43,8 +43,7 @@ Microsoft Intune helps you manage apps and books that you purchased through such
 
 ## Which types of apps and books can you manage?
 
-With Intune, you can manage apps and books that you purchased in volume from the iOS store, and manage apps that you purchased from the Microsoft Store for Business. To discover how to manage licensed apps from each store, choose one of the following topics:
+With Intune, you can manage apps and books that you purchased in volume from the iOS store. To discover how to manage licensed store apps, choose one of the following topics:
 
 - [Manage iOS/iPadOS volume-purchased apps](vpp-apps-ios.md)
-- [Manage volume-purchased apps from the Microsoft Store for Business](windows-store-for-business.md)
 - [How to manage iOS/iPadOS eBooks](vpp-ebooks-ios.md)

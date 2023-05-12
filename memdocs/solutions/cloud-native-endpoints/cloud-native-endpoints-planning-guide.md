@@ -507,7 +507,6 @@ For more information on Windows Autopilot, go to:
 
 - [Overview of Windows Autopilot](../../autopilot/windows-autopilot.md)
 - [Windows Autopilot scenarios and features](../../autopilot/windows-autopilot-scenarios.md)
-- [Tutorial - Use Autopilot to enroll devices in Intune](../../intune/enrollment/tutorial-use-autopilot-enroll-devices.md)
 - [Windows Autopilot FAQ](../../autopilot/autopilot-faq.yml)
 
 ## Follow the cloud-native endpoints guidance

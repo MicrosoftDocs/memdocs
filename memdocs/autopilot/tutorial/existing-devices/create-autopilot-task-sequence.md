@@ -21,7 +21,7 @@ appliesto:
 # Windows Autopilot deployment for existing devices: Create Autopilot task sequence in Configuration Manager
 
 Autopilot user-driven Azure AD join steps:
-- Step 1: [Set up a Windows Autopilot deployment](setup-autopilot-deployment.md)
+- Step 1: [Set up a Windows Autopilot profile](setup-autopilot-profile.md)
 - Step 2: [Install required modules to obtain Autopilot profile(s) from Intune](install-modules.md)
 - Step 3: [Create JSON file for Autopilot profile(s)](create-json-file.md)
 - Step 4: [Create and distribute package for JSON file in Configuration Manager](create-json-package.md)

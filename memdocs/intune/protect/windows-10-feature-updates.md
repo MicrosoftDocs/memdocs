@@ -223,6 +223,8 @@ For each profile you can view:
   - **Not supported** – Support for the feature update has expired and it no longer deploys to devices.
 
 - **Support End Date** – The end of support date for the feature update version.
+> [!NOTE]
+> The date provided is for the Enterprise and Education editions of Windows.  To find the support dates for other editions supported by Windows Update for Business deployment service, see the [Microsoft Product Lifecycle site](https://aka.ms/lifecycle).
 
 Selecting a profile from the list opens the profiles **Overview** pane where you can:
 
