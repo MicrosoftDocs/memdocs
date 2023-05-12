@@ -40,7 +40,7 @@ The following table lists the data that Microsoft Intune sends to Google when de
 
 
 | Data sent to Zebra | Used for | Example |
-|:---:|:---:|---|
+|---|---|----------------|
 | Serial number | Used to prove ownership of device against a known service contract with Zebra, determine current state of the device, and for the Android update process. | Unique identifier, example format: 124411614K0593 |
 | Deployment settings | Used to deliver Android updates. |<li>Device Model: TC8300</li><li>Update type: Custom Time zone offset in minutes: 300</li><li>BSP (Board Support Package): 11.15.05.00</li><li>OS Version: 11</li><li>Patch Number: U20</li><li>Schedule mode: Latest</li><li>Schedule duration in days: 20</li><li>Download network type: Wifi</li><li>Download start date and time:</li><li>2022-03-25T15:04:51.8607086Z</li><li>Installation start date and time:</li><li>2022-03-25T15:04:51.8607086Z</li><li>Installation window start time: 19:00:00</li><li>Installation window end time: 19:00:00</li><li>Minimum Battery level percentage: 30</li><li>Require device to be on charger: true</li>|
 

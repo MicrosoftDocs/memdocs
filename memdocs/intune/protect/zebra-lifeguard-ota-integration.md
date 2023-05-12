@@ -183,7 +183,7 @@ After synchronization is complete, the devices that support LG OTA will contact 
 
         1. Select when the update is deployed.
         1. **Schedule Mode**: Choose when you want the deployment to start running.
-            1. **Run as soon as possible**: The deployment starts running immediately and last for 28 days after you select **Create** at the end of this flow.
+            1. **Run as soon as possible**: The deployment starts running immediately and lasts for 28 days after you select **Create** at the end of this flow.
             1. **Scheduled**: More options are available when you select **Scheduled**.
         1. **Time zone**: Select a time zone for the devices being updated.
         1. **Start**: Specify when the deployment must start running.
@@ -212,12 +212,12 @@ After synchronization is complete, the devices that support LG OTA will contact 
     If devices are later removed from an assigned group after the deployment is created, those devices may still be updated if they were already part of this deployment request sent to the LG OTA service. You should assume that all eligible Zebra devices that were ever added to the assigned groups are updated, even if they're removed from the group afterwards.
 
     **Example**
-    - You have a dynamic group, G that contains three TC57 devices A, B, and C. Every time a new TC57 device is enrolled in your tenant, it's automatically added to the dynamic group. A, B, and C devices start off running firmware version v1.  
+    - You have a dynamic group, G, that contains three TC57 devices A, B, and C. Every time a new TC57 device is enrolled in your tenant, it's automatically added to the dynamic group. A, B, and C devices start off running firmware version v1.  
     - On January 1, you use Intune and LG OTA to update devices in G from v1 to v2. All three devices are now on v2.
     - On February 1, a new TC57 device, D, is enrolled in the tenant. D is automatically added to the group, and now there are four devices in group G.
     - On February 15, you create a deployment that runs as soon as possible, to update devices in G from v2 to v3. Now, devices A, B, C, and D are all on v3.
     - On March 1, you use Intune and LG OTA to create a deployment that starts on April 1 and will update devices in G from v3 to v4. Intune sends this deployment to the Zebra service on March 1 after you select **Create**.
-    - On March 15, you remove devices A and B from the group G.  
+    - On March 15, you remove devices A and B from group G.  
     - On April 1, the deployment starts running as scheduled. Now, devices A, B, C, D are updated from v3 to v4.
 
     > [!NOTE]
@@ -240,7 +240,7 @@ Each deployment displays details related to:
 
 - **Deployment status**: The status of the deployment. For more information, see the following table.  
 
-- **Completed devices**: The number of eligible devices where the update has completed.  
+- **Completed devices**: The number of eligible devices where the update is completed.  
 
 - **Failed devices**: The number of devices where the update failed.
 
