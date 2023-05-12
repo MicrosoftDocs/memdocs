@@ -28,6 +28,7 @@ ms.collection:
 - M365-identity-device-management
 - highpri
 ---
+# Zebra LifeGuard Over-the-Air Integration with Microsoft Intune
 
 Microsoft Intune supports/provides integration with Zebra LifeGuard Over-the-Air (LG OTA), so that you can have a single area for managing firmware updates for supported Zebra devices. Zebra LifeGuard Over-the-Air (LG OTA) is a service offered by Zebra Technologies that allows deployment of updates to their Android devices in a hands-free and automated manner.
 
@@ -114,7 +115,7 @@ Next, assign **Zebra Enrollment Manager** and **Zebra Common Transport Layer** a
 |11-20-18.00-RG-U00 or 11-20-18.00-RG-U02|com.zebra.devicemanager|
 |Any build of Android 11 that is later than 11-20-18.00-RG-U02 |(None required)|
 
-### 2b: [Create app configuration policy]((https://go.microsoft.com/fwlink/?linkid=2210453))
+### 2b: [Create app configuration policy](https://go.microsoft.com/fwlink/?linkid=2210453)
 
 From the context panel in the Set up Zebra connector screen, select the link - **Go to app configuration policies**. You need to create an app configuration policy for managed devices for each of the two required apps.
 
