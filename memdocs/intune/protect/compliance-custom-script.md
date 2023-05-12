@@ -100,7 +100,7 @@ The following are examples of syntax that is compliant vs not compliant:
     }
   ```
 
-   For example, `["$a = foo]` - Use of a single equal sign for a string comparison is POSIX-compliant.
+   For example, `[ "$a" = foo ]` - Use of a single equal sign for a string comparison is POSIX-compliant.
 
 - Not compliant:
 
@@ -110,7 +110,7 @@ The following are examples of syntax that is compliant vs not compliant:
     }
   ```
 
-   For example, `["$a == foo]` - Use of a double equal sign for a string comparison isn't POSIX-compliant.
+   For example, `[ "$a" == foo ]` - Use of a double equal sign for a string comparison isn't POSIX-compliant.
 
 For more information, the following guides might be of use:
 
