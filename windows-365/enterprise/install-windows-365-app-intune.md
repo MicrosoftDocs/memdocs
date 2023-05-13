@@ -30,12 +30,12 @@ ms.collection:
 - tier2
 ---
 
-# Using Intune, install the Windows 365 app on devices
+# Using Intune, install the Windows 365 app on physical devices
 
 Some of your users might have physical devices that don't have access to the Microsoft Store to install the Windows 365 app. In these cases, you can install the Windows 365 app to their devices by using Intune app assignment process. By assigning the app to device groups, you can automatically install the Windows 365 app on their devices.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Apps** > **All apps** > **Add**.
-![Screenshot of add an app](./media/deploy-windows-365-app-intune/add-app.png)
+    ![Screenshot of add an app](./media/install-windows-365-app-intune/add-app.png)
 2. On the **Select app type** pane, in the **App type** box, select **Microsoft Store app (new)** > **Select**.
 3. On the **Add App** page, select **Search the Microsoft Store app (new)**, search for **Windows 365** and select it > choose **Select**.
 4. On the **App information** page, you can leave all the settings as is or change them > **Next**. For more information about these settings, see [Add Microsoft Store apps to Microsoft Intune](/mem/intune/apps/store-apps-microsoft.md).
