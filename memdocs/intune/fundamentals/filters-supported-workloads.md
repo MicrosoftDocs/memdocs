@@ -313,6 +313,7 @@ You can use filters for some common app policies on the following platforms. For
 | Trusted certificate | ✔️ |
 | VPN | ✔️ |
 | Wi-Fi | ✔️ |
+| Wired network | ✔️ |
 | Windows health monitoring | ✔️ |
 | **Endpoint Security profile** | &nbsp; |
 | Account protection | ✔️ <br/> **Local user group membership** only |
