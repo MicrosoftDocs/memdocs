@@ -5,13 +5,17 @@ items:
   - name: Overview
     items:
     - name: Microsoft Intune overview
+      displayName: what is intune, mdm, mam, android, ios, ipados, macos, windows
       href: ./fundamentals/what-is-intune.md
       items:
       - name: Manage and secure your identities
+        displayName: what is intune, mdm, mam, android, ios, ipados, macos, windows
         href: ./fundamentals/manage-identities.md
       - name: Manage devices and control features
+        displayName: what is intune, mdm, mam, android, ios, ipados, macos, windows
         href: ./fundamentals/manage-devices.md
       - name: Manage apps and protect their data
+        displayName: what is intune, mdm, mam, android, ios, ipados, macos, windows
         href: ./fundamentals/manage-apps.md
       - name: Zero Trust with Microsoft Intune
         href: ./fundamentals/zero-trust-with-microsoft-intune.md
@@ -86,7 +90,7 @@ items:
 
       - name: Create an ADMX template
         href: ./configuration/tutorial-walkthrough-administrative-templates.md
-        displayName: admx, administrative template  
+        displayName: admx, administrative template, gpo, windows
 
       - name: Try new Devices experience (public preview) 
         href: ./fundamentals/microsoft-intune-admin-center-devices.md
@@ -99,16 +103,20 @@ items:
   - name: Plan
     items:
     - name: Planning guide
+      displayName: help, get started, mdm, mam, android, ios, ipados, macos, windows
       href: ./fundamentals/intune-planning-guide.md
     - name: Supported operating systems and browsers
       href: ./fundamentals/supported-devices-browsers.md
     - name: Software updates admin checklists
       items:
       - name: BYOD and personal devices
+        displayName: software updates, android, ios, ipados
         href: ./protect/software-updates-guide-personal-byod.md
       - name: Android
+        displayName: software updates
         href: ./protect/software-updates-guide-android.md
       - name: iOS/iPadOS
+        displayName: software updates
         href: ./protect/software-updates-guide-ios-ipados.md
     - name: Network configuration
       href: ./fundamentals/network-bandwidth-use.md
@@ -128,34 +136,46 @@ items:
   - name: Migrate to Intune
     items: 
     - name: Move to Intune
+      displayName: help, get started, migrate, mdm, mam, android, ios, ipados, macos, windows
       href: ./fundamentals/deployment-guide-intune-setup.md
     - name: Migrate from Basic Mobility and Security
       items: 
       - name: Move from Microsoft 365 device management
+        displayName: migrate, mdm, office, windows
         href: ./fundamentals/migrate-to-intune.md
       - name: Policy mapping
         items: 
         - name: Access requirements policy mapping
+          displayName: migrate, mdm, office, windows
           href: ./fundamentals/policy-map-access-requirements.md
         - name: Configurations policy mapping
+          displayName: migrate, mdm, office, windows
           href: ./fundamentals/policy-map-configurations.md
         - name: Miscellaneous policy mapping
+          displayName: migrate, mdm, office, windows
           href: ./fundamentals/policy-map-miscellaneous.md
   - name: Deploy Intune
     items:
     - name: Get started with your deployment
+      displayName: mdm, mam, android, ios, ipados, macos, windows
       href: ./fundamentals/get-started-with-intune.md
     - name: Protection and configuration levels
+      displayName: deployment, mdm, mam, android, ios, ipados, macos, windows
       href: ./fundamentals/protection-configuration-levels.md
     - name: Step 1 - Set up Intune subscription
+      displayName: deployment, mdm, mam, android, ios, ipados, macos, windows
       href: ./fundamentals/deployment-plan-setup.md
     - name: Step 2 - Add, configure, and protect apps
+      displayName: deployment, mdm, mam, android, ios, ipados, macos, windows
       href: ./fundamentals/deployment-plan-protect-apps.md
     - name: Step 3 - Create compliance policies
+      displayName: deployment, mdm, mam, android, ios, ipados, macos, windows
       href: ./fundamentals/deployment-plan-compliance-policies.md
     - name: Step 4 - Configure device features and security settings
+      displayName: deployment, mdm, mam, android, ios, ipados, macos, windows
       href: ./fundamentals/deployment-plan-configuration-profile.md
     - name: Step 5 - Enroll devices
+      displayName: deployment, mdm, android, ios, ipados, macos, windows
       href: ./fundamentals/deployment-guide-enroll.md
 
   - name: How-to guides
@@ -1068,7 +1088,7 @@ items:
         items:
         - name: Android device administrator
           items: 
-          - name: Custom
+          - name: Custom (OMA-URI)
             items:
             - name: Custom settings
               displayName: oma uri, android, device administrator, da
@@ -1098,7 +1118,7 @@ items:
             href: ./configuration/wi-fi-settings-android-aosp.md
         - name: Android Enterprise
           items:
-          - name: Custom
+          - name: Custom (OMA-URI)
             displayName: oma uri, byod, work profile, android, android enterprise, ae
             href: ./configuration/custom-settings-android-for-work.md
           - name: Device restrictions - organization-owned devices
@@ -1167,7 +1187,7 @@ items:
             href: ./configuration/wired-network-settings-macos.md
         - name: Windows 10/11
           items:
-          - name: Custom
+          - name: Custom (OMA-URI)
             displayName: oma uri, windows
             href: ./configuration/custom-settings-windows-10.md
           - name: Delivery optimization
@@ -1192,72 +1212,95 @@ items:
             displayName: windows
             href: ./protect/endpoint-protection-windows-10.md
           - name: Identity protection
-            displayName: hello, windows HERE
+            displayName: hello, windows
             href: ./protect/identity-protection-windows-settings.md
           - name: Kiosk
+            displayName: single app, multi app, dedicated device, windows
             href: ./configuration/kiosk-settings-windows.md
           - name: Secure assessment
+            displayName: take a test, windows
             href: ./configuration/education-settings-windows.md
           - name: Shared multi-user device
+            displayName: windows
             href: ./configuration/shared-user-device-settings-windows.md
           - name: VPN
+            displayName: windows
             href: ./configuration/vpn-settings-windows-10.md
           - name: Wi-Fi
+            displayName: wifi, wireless, windows
             href: ./configuration/wi-fi-settings-windows.md
           - name: Wired network
+            displayName: windows
             href: ./configuration/wired-network-settings-windows.md
         - name: Windows Holographic for Business
           items:
-          - name: Custom
+          - name: Custom (OMA-URI)
+            displayName: oma uri, windows holographic, hololens
             href: ./configuration/custom-settings-windows-holographic.md
           - name: Device restrictions
+            displayName: windows holographic, hololens
             href: ./configuration/device-restrictions-windows-holographic.md
           - name: Edition upgrade and mode switch
+            displayName: windows holographic, hololens
             href: ./configuration/holographic-upgrade.md
           - name: Kiosk
+            displayName: single app, multi app, dedicated device, windows holographic, hololens
             href: ./configuration/kiosk-settings-holographic.md
           - name: Shared multi-user device
+            displayName: windows holographic, hololens
             href: ./configuration/shared-user-device-settings-windows-holographic.md 
         - name: Windows 8.1
           items:
           - name: Device restrictions
+            displayName: windows
             href: ./configuration/device-restrictions-windows-8-1.md
           - name: VPN
+            displayName: windows
             href: ./configuration/vpn-settings-windows-8-1.md
 
     - name: Assign and deploy policies
       items: 
       - name: Assign policies to users & groups
-        displayName: deploy, push
+        displayName: deploy, push, android, ios, ipados, macos, windows
         href: ./configuration/device-profile-assign.md
         items:
         - name: Assign apps to groups
           href: ./apps/apps-deploy.md
-          displayName: app assignment; assignment
+          displayName: app assignment, android, ios, ipados
         - name: Include and exclude apps
           href: ./apps/apps-inc-exl-assignments.md
-          displayName: app assignment
+          displayName: assign apps, app assignment, android, ios, ipados
         - name: Deploy Windows 10/11 apps
+          displayName: assign apps, app assignment, windows
           href: ./apps/apps-windows-10-app-deploy.md
         - name: Deploy apps to Government environments
+          displayName: assign apps, app assignment, gcc, dod, windows
           href: ./apps/apps-deploy-gcc-dod.md
       - name: Common questions and answers
+        displayName: faq, frequently asked questions, android, ios, ipados, macos, windows
         href: ./configuration/device-profile-troubleshoot.md
       - name: Use filters when assigning policies
         items:
         - name: Create a filter
+          displayName: assignment filter, android, ios, ipados, macos, windows
           href: ./fundamentals/filters.md
         - name: Filter properties
+          displayName: assignment filter, android, ios, ipados, macos, windows
           href: ./fundamentals/filters-device-properties.md
         - name: Supported workloads
+          displayName: assignment filter, android, ios, ipados, macos, windows
           href: ./fundamentals/filters-supported-workloads.md
         - name: Reporting and conflict resolution
+          displayName: assignment filter, android, ios, ipados, macos, windows
           href: ./fundamentals/filters-reports-troubleshoot.md
         - name: Performance recommendations
+          displayName: assignment filter, android, ios, ipados, macos, windows
           href: ./fundamentals/filters-performance-recommendations.md
       - name: Use policy sets to group policies together
+        displayName: android, ios, ipados, macos, windows
         href: ./fundamentals/policy-sets.md
       - name: Troubleshoot policies and profiles
+        displayName: android, ios, ipados, macos, windows
         href: /troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune
 
     - name: Enroll devices in Microsoft Intune  
@@ -1608,22 +1651,28 @@ items:
     - name: Move to cloud native endpoints
       items:
       - name: Overview and benefits
+        displayName: cloud native endpoints, windows
         href: ../solutions/cloud-native-endpoints/cloud-native-endpoints-overview.md
       - name: Tutorial-Get started with cloud native Windows endpoints
+        displayName: cloud native endpoints, windows
         href: ../solutions/cloud-native-endpoints/cloud-native-windows-endpoints.md
       - name: Azure AD concepts and on-premises resources
         items:
         - name: Azure AD joined vs. Hybrid Azure AD joined
+          displayName: cloud native endpoints, windows
           href: ../solutions/cloud-native-endpoints/azure-ad-joined-hybrid-azure-ad-joined.md
         - name: Access on-premises resources
+          displayName: cloud native endpoints, windows
           href: ../solutions/cloud-native-endpoints/cloud-native-endpoints-on-premises.md
       - name: Planning guide
+        displayName: cloud native endpoints, windows
         href: ../solutions/cloud-native-endpoints/cloud-native-endpoints-planning-guide.md
       - name: Known issues
+        displayName: cloud native endpoints, windows
         href: ../solutions/cloud-native-endpoints/cloud-native-endpoints-known-issues.md
     - name: Create an ADMX template
       href: ./configuration/tutorial-walkthrough-administrative-templates.md
-      displayName: admx, administrative template
+      displayName: admx, administrative template, windows, gpo
     - name: Common scenarios
       href: ./fundamentals/common-scenarios.md
     - name: "Zero Trust: Manage devices with Intune"
