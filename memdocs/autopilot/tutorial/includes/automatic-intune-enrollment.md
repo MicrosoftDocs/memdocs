@@ -47,4 +47,4 @@ In order for Windows Autopilot to work, devices need to be able to enroll in Int
 
 > [!TIP]
 >
-> For Configuration Admins, this process is similar to the Configuration Manager client automatically registering with a site so that the device can be managed.
+> For Configuration Manager Admins, this process is similar to the Configuration Manager client automatically registering with a site so that the device can be managed.

@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/04/2023
+ms.date: 05/12/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -66,6 +66,34 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Scripts
 ### Tenant administration
 -->
+
+## Week of May 8, 2023
+
+### Device configuration
+
+#### Device Firmware Configuration Interface (DFCI) supports Dynabook devices<!-- 10249859 wndraft -->
+For Windows 10/11 devices, you can create a DFCI profile to manage UEFI (BIOS) settings. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration profiles** > **Create profile** > **Windows 10 and later** for platform > **Templates** > **Device Firmware Configuration Interface** for profile type.
+
+Some Dynabook devices running Windows 10/11 are enabled for DFCI. Contact your device vendor or device manufacturer for eligible devices.
+
+For more information about DFCI profiles, go to:
+- [Configure Device Firmware Configuration Interface (DFCI) profiles on Windows devices in Microsoft Intune](../configuration/device-firmware-configuration-interface-windows.md)
+- [Device Firmware Configuration Interface (DFCI) management with Windows Autopilot](../../autopilot/dfci-management.md)
+
+Applies to:
+- Windows 10
+- Windows 11
+
+#### eSIM bulk activation for Windows PCs via download server is now available on the Settings Catalog<!-- 19809114 wndraft wnready wnstaged-->
+You can now perform at-scale configuration of Windows eSIM PCs using the Settings Catalog. A download server (SM-DP+) is configured using a configuration profile. 
+
+Once the devices receive the configuration, they automatically download the eSIM profile. For more information go to [eSIM configuration of a download server](../configuration/esim-device-configuration-download-server.md)
+
+Applies to:
+
+ - Windows 11
+ - eSIM capable devices 
+
 
 ## Week of May 1, 2023
 
