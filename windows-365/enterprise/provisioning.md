@@ -69,7 +69,7 @@ Changing these configurations won’t impact any previously provisioned Cloud PC
 
 ### Changes to provisioning policies
 
-After the provisioning a Cloud PC is complete, it doesn't reoccur unless you manually perform a [reprovision](reprovision-cloud-pc.md).
+After the provisioning of a Cloud PC is complete, it doesn't reoccur unless you manually perform a [reprovision](reprovision-cloud-pc.md).
 
 Changes made to any part of a provisioning policy don't trigger a reprovision. Such changes won’t be applied to previously provisioned Cloud PCs. Changes to a provisioning policy will only be applied to Cloud PCs that are provisioned or reprovisioned after the changes.
 
