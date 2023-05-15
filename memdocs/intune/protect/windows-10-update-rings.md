@@ -46,8 +46,6 @@ The following prerequisites must be met to use Windows updates for Windows 10/11
   - Have access to endpoints. To get a detailed list of endpoints required for the associated service listed here, go to [Network endpoints](../fundamentals/intune-endpoints.md#access-for-managed-devices).
 
     - [Windows Update](/windows/privacy/manage-windows-1809-endpoints#windows-update)
-    - WUfB-DS
-    - [Windows Push Notification Services](/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config): *(Recommended, but not required. Without this access, devices might not expedite updates until their next daily check for updates.)*  
 
   - Run Windows 10 version 1607 or later, or Windows 11.
   

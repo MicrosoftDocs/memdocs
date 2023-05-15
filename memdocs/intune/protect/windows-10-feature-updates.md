@@ -92,8 +92,7 @@ The following are prerequisites for Intune's Feature updates for Windows 10 and 
   - Have access to endpoints. To get a detailed list of endpoints required for the associated service listed here, go to [Network endpoints](../fundamentals/intune-endpoints.md#access-for-managed-devices).
 
     - [Windows Update](/windows/privacy/manage-windows-1809-endpoints#windows-update)
-    - WUfB-DS
-    - [Windows Push Notification Services](/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config): *(Recommended, but not required. Without this access, devices might not expedite updates until their next daily check for updates.)*
+    - Windows Update for Business -deployment service (WUfB-DS)
 
 - Feature updates are supported for the following Windows 10/11 editions:  
   - Pro
