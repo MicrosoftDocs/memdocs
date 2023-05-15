@@ -115,7 +115,7 @@ Next, assign **Zebra Enrollment Manager** and **Zebra Common Transport Layer** a
 |11-20-18.00-RG-U00 or 11-20-18.00-RG-U02|com.zebra.devicemanager|
 |Any build of Android 11 that is later than 11-20-18.00-RG-U02 |(None required)|
 
-### 2b: [Create app configuration policy](https://go.microsoft.com/fwlink/?linkid=2210453)
+### 2b: Create app configuration policy
 
 From the context panel in the Set up Zebra connector screen, select the link - **Go to app configuration policies**. You need to create an app configuration policy for managed devices for each of the two required apps.
 
@@ -152,7 +152,7 @@ For more information, see [Add app configuration policies for managed Android En
 4. Assign this configuration policy to all the same devices that you assigned the app earlier.
 5. Navigate through the tabs and complete the fields.  
 
-Wait at least 15 minutes for the required apps and app configuration policy to reach the devices. If needed, use the Intune app on the device to force a sync by navigating to the Intune app > select the ellipses (**...**), and select **Sync**.  
+Wait at least 15 minutes for the required apps and app configuration policy to reach the devices. If needed, use the Intune app on the device to force a sync by navigating to the Intune app > select the **More** menu (**...**), and select **Sync**.  
 
 After synchronization is complete, the devices that support LG OTA will contact Zebra LG OTA service to be enrolled in the LG OTA service and are associated with the  Microsoft Intune/Zebra accounts. You can then deploy firmware updates to these LG OTA enrolled devices.
 
@@ -191,7 +191,7 @@ After synchronization is complete, the devices that support LG OTA will contact 
 
     1. In the **Installation Schedule** area, configure the following options:
 
-        1. Select when the installation can take place. If you don't specify, devices are updated as soon as they receive the deployment.
+        1. Select when the installation can take place. If you don't specify, devices start installing updates once the deployment starts running.
             1. **Time zone**: select the time zone for the devices being updated. The time zone you select must match the time zone selected in **Deployment schedule**, if you defined a deployment schedule.
         1. **Start/End**: Specify when you want to allow the updates to be installed. Once installation begins, a complete installation is attempted even if it's past the end time.
         1. **Delay installation until**: On devices Android 10 and earlier, Zebra supports delaying installation to a specific time after the device downloads an update. On Android 11 and later, this setting doesn't do anything, as updates are installed in the background while being downloaded.
@@ -203,11 +203,11 @@ After synchronization is complete, the devices that support LG OTA will contact 
             1. **Require device to be connected to charger**: yes/no
             1. **Network type**: choose the type of network the device must be connected to for downloading and installation to take place.
 1. When ready, select **Next** to continue to *Assignments*.
-1. On the **Assignments** tab, choose **+ Select groups to include** and then assign your deployments to one or more groups. Use **+ Select groups to exclude** to fine-tune the assignment. When ready, select **Next** to continue.
+1. On the **Assignments** tab, choose **+ Select groups to include** and then assign your deployments to one or more groups. When ready, select **Next** to continue.
 
     When you create an LG OTA deployment, Intune sends information about the deployment to the Zebra LG OTA service, which processes the request and updates eligible devices accordingly. Eligible refers to a Zebra device that is successfully enrolled with the LG OTA service. Deployments can't be modified after they're created. As a result, these deployments have different assignment behavior from many other policies in Intune.
 
-    When you assign a deployment to a group, only eligible Zebra devices, at the time the deployment was created, are included in the deployment request that Intune sends to Zebra for processing by the Zebra LG OTA service. So, the dynamic group membership updates aren't reflected in LG OTA deployments.
+    When you assign a deployment to a group, only eligible Zebra devices, at the time the deployment was created, are included in the deployment request that Intune sends to Zebra for processing by the Zebra LG OTA service. So, dynamic group membership updates may not be reflected in LG OTA deployments.
 
     If devices are later removed from an assigned group after the deployment is created, those devices may still be updated if they were already part of this deployment request sent to the LG OTA service. You should assume that all eligible Zebra devices that were ever added to the assigned groups are updated, even if they're removed from the group afterwards.
 
@@ -228,13 +228,13 @@ After synchronization is complete, the devices that support LG OTA will contact 
     > If you assigned to or targeted an empty group, it will fail.
 
 1. On the **Review + create** tab, review your settings.
-1. When ready, select **Create** to create the deployment. The deployment is created with Zebra, and Intune sends Zebra the request to create a deployment for the list of assigned devices.  
+1. When ready, select **Create** to create the deployment. The deployment is created with Zebra for the list of assigned devices.  
 
 ## Step 4: View and Manage Deployments
 
 After deployments are completed, you can view them from Devices > Android > Android FOTA deployments (Preview).  
 
-Reporting displays information for eligible devices only. For example, if you assign a deployment to a group containing non-Zebra devices, those devices aren't included in the Android FOTA deployments reports.
+Reporting displays information for eligible devices only. For example, if you assign a deployment to a group containing non-Zebra devices, or Zebra devices that aren't enrolled with the LG OTA service, those devices aren't included in the Android FOTA deployments reports.
 
 Each deployment displays details related to:  
 
