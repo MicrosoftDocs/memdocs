@@ -429,7 +429,6 @@ When you create a custom app configuration policy, the newly added app may not a
 Tunnel for MAM doesn't support:  
 
 - On-premises sites using Kerberos or NTLM integrated authentication webserver sign-in.
-- Microsoft Edge isn't supported with Federated Azure active directory tenants. LOB apps are supported today, with support for Microsoft Edge becoming available in a future update.
 
 **Work around**: None.
 
