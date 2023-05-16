@@ -31,7 +31,7 @@ This content can assist you in learning and supporting Configuration Manager.
 
 For more information, see the following articles:
 
-- [Configuration Manager documentation library](../configmgr)
+- [Configuration Manager documentation library](https://learn.microsoft.com/mem/configmgr)
 - [Get started with Configuration Manager PowerShell cmdlets](https://learn.microsoft.com/powershell/sccm/overview)
 - [How to use the Configuration Manager docs](https://learn.microsoft.com/mem/use-docs)
 
