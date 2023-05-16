@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 05/05/2023
+ms.date: 05/16/2023
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice:
@@ -121,8 +121,6 @@ Windows 365 manages the capacity and availability of underlying Azure resources 
   - Japan East
 - Norway
   - Norway East
-- Qatar
-  - Qatar Central
 - South Africa
   - South Africa North
 - South America
