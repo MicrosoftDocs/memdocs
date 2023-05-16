@@ -216,7 +216,7 @@ A trusted certificate profile is required to establish a chain of trust with you
 Tunnel for MAM uses the public-key certificate payload contained in the Intune trusted certificate profile but doesn’t require the profile be assigned to any Azure AD user or device groups. As a result, a trusted certificate profile for any platform can be used. So, an iOS device can use a trusted certificate profile for Android, iOS, or Windows to meet this requirement.
 
 > [!IMPORTANT]
-> Tunnel for MAM iOS SDK requires that trusted certificates use the **DER encoded binary X.509** certificate format.
+> Tunnel for MAM iOS SDK requires that trusted certificates use the **DER encoded binary X.509 or PEM ** certificate format.
 
 During configuration of the app configuration profile for an app that will use Tunnel for MAM, you select the certificate profile that will be used.
 For information on configuring these profiles, see [Trusted root certificate profiles for Microsoft Intune](../protect/certificates-trusted-root.md).
@@ -429,7 +429,6 @@ When you create a custom app configuration policy, the newly added app may not a
 Tunnel for MAM doesn't support:  
 
 - On-premises sites using Kerberos or NTLM integrated authentication webserver sign-in.
-- Microsoft Edge isn't supported with Federated Azure active directory tenants. LOB apps are supported today, with support for Microsoft Edge becoming available in a future update.
 
 **Work around**: None.
 
