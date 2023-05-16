@@ -1207,18 +1207,23 @@ items:
       - name: Configure enrollment features      
         items:
         - name: Get Apple MDM push certificate   
-          href: ./enrollment/apple-mdm-push-certificate-get.md 
+          href: ./enrollment/apple-mdm-push-certificate-get.md
+          displayName: digital; certificates; notifications; token; PEM; automated device enrollment; user enrollment; device enrollment  
         - name: Add corporate identifiers
           href: ./enrollment/corporate-identifiers-add.md
-          displayName: COD   
+          displayName: COD; corporate owned; IMEI; device ownership; serial   
         - name: Add device enrollment manager  
           href: ./enrollment/device-enrollment-manager-enroll.md   
+          displayName: DEM; bulk enrollment; company portal; Azure AD; join; limitations
         - name: Add device categories  
-          href: ./enrollment/device-group-mapping.md  
+          href: ./enrollment/device-group-mapping.md
+          displayName: group; category; categorize; security group;   
         - name: Require multifactor authentication  
           href: ./enrollment/multi-factor-authentication.md   
+          displayName: multi-factor; enrollment; MFA; verification; conditional access
         - name: Create terms and conditions policy  
           href: ./enrollment/terms-and-conditions-create.md
+          displayName: 
         - name: Set up enrollment notifications  
           href: ./enrollment/enrollment-notifications.md
         - name: Configure device enrollment restrictions
