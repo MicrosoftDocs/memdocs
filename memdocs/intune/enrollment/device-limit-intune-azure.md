@@ -53,22 +53,22 @@ Azure device limit restrictions set the maximum number of devices that either Az
 
 If you enforce both Intune and Azure device limit restrictions, the following table shows you how each limitation is applied.   
 
-| Management solution or identity option | With user affinity? | Azure AD limitation applies? | Intune limitation applies? |  
+| Device management solution | Has user affinity | Does Azure AD limitation apply? | Does Intune limitation apply? |  
 | ----- | ----- | ----- | ----- |
 | Android Enterprise personally-owned work profile | Yes | Yes | Yes|  
 | Android Enterprise dedicated device | No | No | No |  
 | Android Enterprise fully managed | Yes | Yes | Yes |  
 | Android Enterprise corporate-owned work profile | Yes | Yes | Yes |  
 | Android device administrator | Yes | Yes | Yes |  
-| Android device administrator DEM | No | | No | 
+| Android device administrator + device enrollment manager | No | Yes | No | 
 | iOS/macOS BYOD | Yes | Yes | Yes |  
 | iOS/macOS Automated Device Enrollment (ADE) | Yes | Yes | Yes |  
-| Windows BYOD | Yes | Yes | Yes |   
+| Windows BYOD: User enrollment | Yes | Yes | Yes |   
 | Windows Azure AD joined| Yes | Yes | No |  
 | Windows Autopilot | Yes | Yes | No |  
-| Windows hybrid Azure AD joined | No | No | Yes |  
-| Windows co-management | No | Yes | No |  
-| Windows DEM | No | Yes | No |  
+| Windows automatic enrollment + Group policy | No | No | Yes |  
+| Co-management (Intune + Configuration Manager) | No | Yes | No |  
+| Windows enrollment methods + device enrollment manager | No | Yes | No |  
 | Windows bulk enrollment | No | Yes | No |  
 
 
