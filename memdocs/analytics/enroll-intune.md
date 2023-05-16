@@ -43,7 +43,7 @@ To enroll devices to Endpoint analytics, they need to send required functional d
 
 ### Licensing Prerequisites
 
-Devices enrolled in Endpoint analytics need a valid license for the use of Microsoft Endpoint Manager. For more information, see [Microsoft Intune licensing](../intune/fundamentals/licenses.md) or [Microsoft Configuration Manager licensing](../configmgr/core/understand/learn-more-editions.md). Proactive remediations has an additional licensing requirement, for more information see, the [Endpoint analytics licensing requirements overview](overview.md#licensing-prerequisites).
+Devices enrolled in Endpoint analytics need a valid license for the use of Microsoft Endpoint Manager. For more information, see [Microsoft Intune licensing](../intune/fundamentals/licenses.md) or [Microsoft Configuration Manager licensing](../configmgr/core/understand/learn-more-editions.md). Remediations has an additional licensing requirement, for more information see, the [Endpoint analytics licensing requirements overview](overview.md#licensing-prerequisites).
 
 ### Endpoint analytics permissions
 

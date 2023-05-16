@@ -67,13 +67,13 @@ The Intune management extension supplements the in-box Windows 10 MDM features. 
 - PowerShell scripts time out after 30 minutes.
 
 > [!IMPORTANT]
-> Best practices for privacy awareness when using PowerShell scripts and proactive remediation scripts include the following:
+> Best practices for privacy awareness when using PowerShell scripts and Remediation scripts include the following:
 > - Do not include any type of sensitive information in scripts (such as passwords)
 > - Do not include Personally Identifiable Information (PII) in scripts
 > - Do not use scripts to collect PII from devices
 > - Always follow privacy best practices
 >
-> For related information, see [Proactive remediations](/mem/analytics/proactive-remediations).
+> For related information, see [Remediations](/mem/analytics/remediations).
 
 ## Prerequisites
 

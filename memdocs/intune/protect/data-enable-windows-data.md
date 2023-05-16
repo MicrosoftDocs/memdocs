@@ -67,6 +67,7 @@ Use the *Windows license verification* category to enable use of Intune features
 The following features require you to attest to having Windows E3 or equivalent licenses:
 
 - [Windows update app and driver compatibility reports](../protect/windows-update-compatibility-reports.md)
+- [Remediations](../../analytics/remediations.md)
 
 Supported licenses include the following options:
 

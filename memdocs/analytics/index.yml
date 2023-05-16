@@ -43,8 +43,8 @@ landingContent:
             url: enroll-configmgr.md
       - linkListType: tutorial
         links:
-          - text: Proactive remediations
-            url: proactive-remediations.md
+          - text: Remediations
+            url: remediations.md
 
   # Card
   - title: Top tasks
