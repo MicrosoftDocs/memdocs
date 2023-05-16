@@ -579,7 +579,7 @@ When sharing documents via the `UIActivityViewController` and `UIDocumentInterac
 
 4. Name the action extension "Open in" followed by the application name. Localize the Info.plist as needed.
 
-5. Provide a template icon for the extension as described by [Apple's developer documentation](https://developer.apple.com/ios/human-interface-guidelines/extensions/sharing-and-actions/). Alternatively, the IntuneMAMConfigurator tool can be used to generate these images from the application .app directory. To do this, run:
+5. Provide a template icon for the extension as described by [Apple's developer documentation](https://developer.apple.com/ios/human-interface-guidelines). Alternatively, the IntuneMAMConfigurator tool can be used to generate these images from the application .app directory. To do this, run:
 
     ```bash
     IntuneMAMConfigurator -generateOpenInIcons /path/to/app.app -o /path/to/output/directory
