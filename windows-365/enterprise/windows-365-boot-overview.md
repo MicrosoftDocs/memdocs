@@ -32,9 +32,42 @@ ms.collection:
 
 # What is Windows 365 Boot?
 
-Windows 365 Boot is 
+Windows 365 Boot is in [public preview](public-preview.md). During this preview, Windows 365 Boot is designed for Shared PC scenarios.
+
+Windows 365 Boot lets admins configure physical devices so that users can both:
+
+- Bypass their physical device's sign in process.
+- Sign in directly to their Windows 365 Cloud PC on their physical device.
+
+When a user turns on their physical device, Windows 365 Boot takes them to the Cloud PC's Windows 11 sign-in experience. After sign in, they're directly connected to their Windows 365 Cloud PC with no additional steps in between.
+
+Bypassing the physical device sign-in reduces the time it takes the user to access their Cloud PC.
+
+Multiple users can use the same physical device to sign in to their own personal Cloud PCs. When each user signs in to the physical device, their unique identity takes them to their assigned and secure Cloud PC. This flexibility makes Windows 365 Boot a good solution for shift workers, like nurses,  salespeople, and call centers, who share company physical devices. Such workers can:
+
+1. Sign out from their Cloud PC on the physical device.
+2. Pass the physical device over to the next employee during a shift change.
+3. The next shift worker can use the same physical device to sign in to their Cloud PC.
+
+Signing out of the Windows 365 Cloud PC brings the device back to the Windows 11 login screen, ready for the next user.
+
+## Process overview
+
+1. Using Intune's [Windows 365 Boot guided scenario](), the IT administrator configures the physical device for Windows 365 Boot.  
+2. After the device is configured, multiple users can access their dedicated Cloud PCs from the same Windows 365 Boot physical device.  
+
+> [!NOTE]
+>
+> Windows 365 Boot is currently in preview and doesn't fully restrict end users from accessing certain resources on the physical device. Additional configuration profiles can be applied to your Windows 365 Boot devices to meet your organization’s security needs. For more information about these additional configuration profiles, see [](). 
 
 <!-- ########################## -->
 ## Next steps
 
+[Windows 365 Boot physical device setup]()
+
+[Windows 365 Boot guided scenario]()
+
+[Known limitations]()
+
 [Troubleshoot Windows 365 Boot](troubleshoot-windows-365-boot.md).
+
