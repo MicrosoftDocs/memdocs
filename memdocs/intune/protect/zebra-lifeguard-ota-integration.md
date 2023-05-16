@@ -106,8 +106,9 @@ Use Managed Google Play to add them to your tenant. For information on how to ad
 
 Next, assign **Zebra Enrollment Manager** and **Zebra Common Transport Layer** as Required apps for all the Zebra devices you want to update and use with LG OTA. The apps are deployed automatically to those devices.
 
-> [!NOTE]
-> If you're planning to use LG OTA to update a device running on a version higher than Android 11, you need to enable an additional Zebra package as a system app. For more information on how to enable system apps, see [Manage Android Enterprise system apps in Microsoft Intune](../apps/apps-ae-system.md)
+#### Enabling a Zebra package as a system app
+
+If you're planning to use LG OTA to update a device running on a version higher than Android 11, you need to enable an additional Zebra package as a system app. For more information on how to enable system apps, see [Manage Android Enterprise system apps in Microsoft Intune](../apps/apps-ae-system.md)
 
 |Build|System app to be enabled|
 |--------|------------------------------|
@@ -203,32 +204,34 @@ After synchronization is complete, the devices that support LG OTA will contact 
             1. **Require device to be connected to charger**: yes/no
             1. **Network type**: choose the type of network the device must be connected to for downloading and installation to take place.
 1. When ready, select **Next** to continue to *Assignments*.
-1. On the **Assignments** tab, choose **+ Select groups to include** and then assign your deployments to one or more groups. When ready, select **Next** to continue.
-
-    When you create an LG OTA deployment, Intune sends information about the deployment to the Zebra LG OTA service, which processes the request and updates eligible devices accordingly. Eligible refers to a Zebra device that is successfully enrolled with the LG OTA service. Deployments can't be modified after they're created. As a result, these deployments have different assignment behavior from many other policies in Intune.
-
-    When you assign a deployment to a group, only eligible Zebra devices, at the time the deployment was created, are included in the deployment request that Intune sends to Zebra for processing by the Zebra LG OTA service. So, dynamic group membership updates may not be reflected in LG OTA deployments.
-
-    If devices are later removed from an assigned group after the deployment is created, those devices may still be updated if they were already part of this deployment request sent to the LG OTA service. You should assume that all eligible Zebra devices that were ever added to the assigned groups are updated, even if they're removed from the group afterwards.
-
-    **Example**
-    - You have a dynamic group, G, that contains three TC57 devices A, B, and C. Every time a new TC57 device is enrolled in your tenant, it's automatically added to the dynamic group. A, B, and C devices start off running firmware version v1.  
-    - On January 1, you use Intune and LG OTA to update devices in G from v1 to v2. All three devices are now on v2.
-    - On February 1, a new TC57 device, D, is enrolled in the tenant. D is automatically added to the group, and now there are four devices in group G.
-    - On February 15, you create a deployment that runs as soon as possible, to update devices in G from v2 to v3. Now, devices A, B, C, and D are all on v3.
-    - On March 1, you use Intune and LG OTA to create a deployment that starts on April 1 and will update devices in G from v3 to v4. Intune sends this deployment to the Zebra service on March 1 after you select **Create**.
-    - On March 15, you remove devices A and B from group G.  
-    - On April 1, the deployment starts running as scheduled. Now, devices A, B, C, D are updated from v3 to v4.
-
-    > [!NOTE]
-    > A device can only be part of one deployment at a time.
-    > Deployments are only supported for devices, not users. For example, if you assign a deployment to a group containing a device A and a user B who is associated with device B, only device A will receive the deployment.  
-    > Assignment filters are not currently supported.
-    > Deployments that are assigned to empty groups, or groups containing no eligible devices, will fail.
-    > If you assigned to or targeted an empty group, it will fail.
-
+1. On the **Assignments** tab, choose **+ Select groups to include** and then assign your deployments to one or more groups. Review these [important guidelines for assignment](#important-guidelines-for-assignment). When ready, select **Next** to continue.
 1. On the **Review + create** tab, review your settings.
-1. When ready, select **Create** to create the deployment. The deployment is created with Zebra for the list of assigned devices.  
+1. When ready, select **Create** to create the deployment. The deployment is created with Zebra for the list of assigned devices.
+
+### Important guidelines for assignment
+
+When you create an LG OTA deployment, Intune sends information about the deployment to the Zebra LG OTA service, which processes the request and updates eligible devices accordingly. Eligible refers to a Zebra device that is successfully enrolled with the LG OTA service. Deployments can't be modified after they're created. As a result, these deployments have different assignment behavior from many other policies in Intune.
+
+When you assign a deployment to a group, only eligible Zebra devices, at the time the deployment was created, are included in the deployment request that Intune sends to Zebra for processing by the Zebra LG OTA service. So, dynamic group membership updates may not be reflected in LG OTA deployments.
+
+If devices are later removed from an assigned group after the deployment is created, those devices may still be updated if they were already part of this deployment request sent to the LG OTA service. You should assume that all eligible Zebra devices that were ever added to the assigned groups are updated, even if they're removed from the group afterwards.
+
+**Example**
+
+- You have a dynamic group, G, that contains three TC57 devices A, B, and C. Every time a new TC57 device is enrolled in your tenant, it's automatically added to the dynamic group. A, B, and C devices start off running firmware version v1.  
+- On January 1, you use Intune and LG OTA to update devices in G from v1 to v2. All three devices are now on v2.
+- On February 1, a new TC57 device, D, is enrolled in the tenant. D is automatically added to the group, and now there are four devices in group G.
+- On February 15, you create a deployment that runs as soon as possible, to update devices in G from v2 to v3. Now, devices A, B, C, and D are all on v3.
+- On March 1, you use Intune and LG OTA to create a deployment that starts on April 1 and will update devices in G from v3 to v4. Intune sends this deployment to the Zebra service on March 1 after you select **Create**.
+- On March 15, you remove devices A and B from group G.  
+- On April 1, the deployment starts running as scheduled. Now, devices A, B, C, D are updated from v3 to v4.
+
+> [!NOTE]
+> A device can only be part of one deployment at a time.
+> Deployments are only supported for devices, not users. For example, if you assign a deployment to a group containing a device A and a user B who is associated with device B, only device A will receive the deployment.  
+> Assignment filters are not currently supported.
+> Deployments that are assigned to empty groups, or groups containing no eligible devices, will fail.
+> If you assigned to or targeted an empty group, it will fail.  
 
 ## Step 4: View and Manage Deployments
 
