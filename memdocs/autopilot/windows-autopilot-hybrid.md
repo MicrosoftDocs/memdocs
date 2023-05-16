@@ -43,7 +43,7 @@ The device to be enrolled must follow these requirements:
 - Undergo the out-of-box experience (OOBE).
 - Use an authorization type that Azure Active Directory supports in OOBE.
 
-Although not required, configuring hybrid Azure AD join for AD FS enables a faster Windows Autopilot Azure AD registration process during deployments.
+Although not required, configuring hybrid Azure AD join for Active Directory Federated Services (AD FS) enables a faster Windows Autopilot Azure AD registration process during deployments. Federated customers that are not supporting the use of passwords and using AD FS need to follow [these steps](https://learn.microsoft.com/windows-server/identity/ad-fs/operations/ad-fs-prompt-login) to properly configure the authentication experience.  
 
 ### Intune connector server prerequisites
 
