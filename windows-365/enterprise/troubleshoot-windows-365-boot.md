@@ -41,13 +41,13 @@ If the user can't access the Cloud PC from the Windows 365 Boot physical device,
 1. Check to see if you can sign in to the Cloud PC from either:
     - The browser at windows365.microsoft.com.
     - The Windows 365 App on another (non-Windows 365 Boot) device.
-2. If you can log into the Cloud PC from either method, then there is an issue with the Windows 365 Boot physical device. In this case, confirm that the physical device is correctly configured and has the requisite software vesrions installed as explained in the following sections.
+2. If you can log into the Cloud PC from either method, then there's an issue with the Windows 365 Boot physical device. In this case, confirm that the physical device is correctly configured and has the requisite software versions installed as explained in the following sections.
 
-## Physical device's registery key configuration
+## Physical device registry key configuration
 
-Confirm that the physical device has been correctly configured to run Windows 365 Boot. Make sure that the follow registry keys are set:
+Confirm that the physical device has been correctly configured to run Windows 365 Boot. Make sure that the following registry keys are set:
 
-| Registery key name | Registry value name | Registery value |
+| Registry key name | Registry value name | Registry value |
 | --- | --- | --- |
 | HKLM\Software\Microsoft\PolicyManager\current\device\CloudDesktop | BootToCloudMode | 1 |
 | HKLM\Software\Microsoft\PolicyManager\current\device\WindowsLogon | OverrideShellProgram | 1 |
@@ -56,7 +56,7 @@ Confirm that the physical device has been correctly configured to run Windows 36
 
 ## Physical device's versions of Windows 365, Azure Virtual Desktop Apps, and Windows
 
-Windows 365 Boot requires that the physical device have specific versions of both Windows 365 and Azure Virtual Desktop (Azure AD) (HostApp) apps. To see which versions are installed, run the following PowerShell command in Admin mode:
+Windows 365 Boot requires that the physical device runs specific versions of both Windows 365 and Azure Virtual Desktop (Azure AD) (HostApp) apps. To see which versions are installed, run the following PowerShell command in Admin mode:
 
 ```azurepowershell
 Get-AppxPackage –AllUsers -name *MicrosoftCorporationII*
@@ -65,7 +65,7 @@ Get-AppxPackage –AllUsers -name *MicrosoftCorporationII*
 This command shows all the Microsoft-maintained apps (like QuickAssist, Microsoft Family, and so on) on the physical device. In order for Windows 365 Boot to work correctly, confirm the following versions:
 
 - Windows 365 app version 1.1.162.0 or later.
-- Azure Virtural Desktop (HostApp) app version 1.2.4159. or later.
+- Azure Virtual Desktop (HostApp) app version 1.2.4159. or later.
 
 Windows 365 Boot also requires that the physical device is in the **Beta channel of the Windows Insider Program**.
 
@@ -80,14 +80,14 @@ If you're unable to identify the source of the issue, you can try to removing an
 3. Select the physical device > **Remove** > **Yes**.
 4. Select **Devices** > **All devices** > select the physical device > **Overview** > **Sync**.
 
-It will take about ten minuets for the removal to finalize. After that, the physical device will no longer be set up for Windows 365 Boot.
+It takes about 10 minuets for the removal to finalize. After that, the physical device will no longer be set up for Windows 365 Boot.
 
 ### Add Windows 365 Boot back onto the physical device
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Groups** > **All groups**.
 2. Select the group for your Windows 365 boot devices > **Members**.
 3. Select **Add members** > select the physical device.
-4. Wait about ten minutes.
+4. Wait about 10 minutes.
 5. Select **Devices** > **All devices** > select the physical device > **Overview** > **Sync**.
 
 The physical device will again be set up for Windows 365 Boot. Retest it to see if it's working.
@@ -98,7 +98,7 @@ If you're still unable to troubleshoot the problem, you can contact Microsoft su
 
 ## Collect local logs
 
-Windows 365 and Azure AD log information will be very helpful to Microsoft support. Collect it beforehand from the following locations:
+Windows 365 and Azure AD log information is helpful to Microsoft support. Collect it beforehand from the following locations:
 
 - C:\Users\{username}\AppData\Local\Temp\DiagOutputDir\Windows365\Logs  
 - C:\Users\{username}\AppData\Local\Temp\DiagOutputDir\RdClientAutoTrace
