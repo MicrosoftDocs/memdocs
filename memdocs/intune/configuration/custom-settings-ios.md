@@ -8,7 +8,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/30/2021
+ms.date: 05/16/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -43,7 +43,7 @@ This feature applies to:
 
 - iOS/iPadOS
 
-When using iOS/iPadOS devices, there are two ways to get custom settings into Intune:
+When you use iOS/iPadOS devices, there are two ways to get custom settings into Intune:
 
 - [Apple Configurator](https://itunes.apple.com/app/apple-configurator-2/id1037126344?mt=12)
 - [Apple Profile Manager](https://support.apple.com/profile-manager)
@@ -66,14 +66,16 @@ Create an [iOS/iPadOS custom device configuration profile](custom-settings-confi
   - Add [iOS/iPadOS devices](https://help.apple.com/profilemanager/mac/5.7/#/pm9onzap1984) in Profile Manager.
   - After you add a device in Profile Manager, go to **Under the Library** > **Devices** > select your device > **Settings**. Enter the general settings for the device.
 
-    Download and save this file. You'll enter this file in the Intune profile.
+    Download and save this file. You enter this file in the Intune profile.
 
   - Be sure the settings you export from the Apple Profile Manager are compatible with the iOS/iPadOS version on the devices. For information on resolving incompatible settings, search for **Configuration Profile Reference** and **Mobile Device Management Protocol Reference** on the [Apple Developer](https://developer.apple.com/) website.
 
 ## Custom configuration profile settings
 
+When you configure the profile, enter the following settings:
+
 - **Custom configuration profile name**: Enter a name for the policy. This name is shown on the device, and in the Intune status.
-- **Configuration profile file**: Browse to the configuration profile you created using the Apple Configurator or Apple Profile Manager. The max file size is `1000000` bytes (just under 1MB). The file you imported is shown in the **File contents** area.
+- **Configuration profile file**: Browse to the configuration profile you created using the Apple Configurator or Apple Profile Manager. The max file size is `1000000` bytes (just under 1 MB). The imported file is shown in the **File contents** area.
 
   You can also add device tokens to your custom configuration files. Device tokens are used to add device-specific information. For example, to show the serial number, enter `{{serialnumber}}`. On the device, the text shows similar to `123456789ABC`, which is unique to each device. When entering variables, be sure to use curly brackets `{{ }}`. [App configuration tokens](../apps/app-configuration-policies-use-ios.md#tokens-used-in-the-property-list) includes a list of variables that can be used. You can also use `deviceid` or any other device-specific value.
 
