@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/12/2023
+ms.date: 05/16/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -244,11 +244,9 @@ When creating the Server configuration for the tunnel, you can specify a differe
   - Additional storage endpoint urls: 
   - `*.blob.storage.azure.net`
 
-
-
 - The Tunnel shares the same requirements as [Network endpoints for Microsoft Intune](../fundamentals/intune-endpoints.md), with the addition of port TCP 22, and graph.microsoft.com.
 
-- Configure firewall rules to support the configurations detailed in  [Microsoft Container Registry (MCR) Client Firewall Rules Configuration](https://github.com/microsoft/containerregistry/blob/master/client-firewall-rules.md).
+- Configure firewall rules to support the configurations detailed in  [Microsoft Artifact Registry (MAR) Client Firewall Rules Configuration](https://github.com/microsoft/containerregistry/blob/main/docs/client-firewall-rules.md).
 
 ## Proxy
 
