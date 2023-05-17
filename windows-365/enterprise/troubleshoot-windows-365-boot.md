@@ -123,9 +123,6 @@ You can find the Correlation ID in the interstitial screen displayed during a tw
 
 ![Screenshot Connection issue with your Cloud PC dialog box.](./media/troubleshoot-windows-365-boot/connection-issue.png)
 
-
-
-
 <!-- ########################## -->
 ## Next steps
 

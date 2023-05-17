@@ -71,6 +71,4 @@ Touchscreen devices require the touch screen keyboard to show during user sign-i
 <!-- ########################## -->
 ## Next steps
 
-[Windows 365 Boot known limitations](windows-365-boot-known-limitations.md)
-
 [Troubleshoot Windows 365 Boot](troubleshoot-windows-365-boot.md).

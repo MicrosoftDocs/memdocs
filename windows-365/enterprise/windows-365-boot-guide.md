@@ -63,7 +63,7 @@ Choose how your devices are named when they enroll, and choose the prefix of all
 1. **Autopilot device name template**: This guided scenario enrolls your devices in Windows Autopilot. When they enroll, you can optionally name your devices using a unique pattern that applies to all devices. Your options:
 
    - **Apply device name template**: If you don't check this box, then no template or pattern is created when naming your devices. The device will have the OEM name, such as DESKTOP-, followed by some random characters. Select the box to create a unique pattern to name your devices. For example, enter Contoso-%RAND:7% to name all your devices Contoso- followed by seven random characters.
- 
+
      The names:
 
      - Must be 15 characters or less.
@@ -114,11 +114,9 @@ When you're satisfied with the settings, select **Create**.
 <!-- ########################## -->
 ## Next steps
 
-[Windows 365 Boot physical device setup](windows-365-boot-device-setup.md)
+[Windows 365 Boot physical device requirements](windows-365-boot-physical-device-requirements.md).
 
-[Windows 365 Boot guided scenario](windows-365-boot-guided-scenario.md)
-
-[Known limitations](windows-365-boot-known-limitations.md)
+[Restrict user access to Windows 365 Boot physical device](windows-365-boot-restrict-user-access-physical-device.md).
 
 [Troubleshoot Windows 365 Boot](troubleshoot-windows-365-boot.md).
 

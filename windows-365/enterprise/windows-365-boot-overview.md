@@ -59,18 +59,18 @@ During the preview, Windows 365 Boot doesn't automatically set these policies to
 
 ## Process overview
 
-1. Using Intune's [Windows 365 Boot guided scenario](windows-365-boot-guided-scenario.md), configure the physical device for Windows 365 Boot.
+1. Using Intune's [Windows 365 Boot guided scenario](windows-365-boot-guided.md), configure the physical device for Windows 365 Boot.
 2. Set up each physical device for Windows 365 Boot configuration.
-3. [Restrict user access to Windows 365 Boot physical devices](windows-365-boot-restrict-user-access-physical-device.md)
+3. [Restrict user access to Windows 365 Boot physical devices](windows-365-boot-restrict-user-access-physical-device.md).
 4. After the device is configured, multiple users can access their dedicated Cloud PCs from the same Windows 365 Boot physical device.  
 
 <!-- ########################## -->
 ## Next steps
 
-[Windows 365 Boot physical device setup](windows-365-boot-device-setup.md)
+[Windows 365 Boot guided scenario](windows-365-boot-guide.md).
 
-[Windows 365 Boot guided scenario](windows-365-boot-guided-scenario.md)
+[Windows 365 Boot physical device requirements](windows-365-boot-physical-device-requirements.md).
 
-[Known limitations](windows-365-boot-known-limitations.md)
+[Restrict user access to Windows 365 Boot physical device](windows-365-boot-restrict-user-access-physical-device.md).
 
 [Troubleshoot Windows 365 Boot](troubleshoot-windows-365-boot.md).
