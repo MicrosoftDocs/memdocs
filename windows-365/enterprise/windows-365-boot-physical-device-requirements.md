@@ -41,7 +41,7 @@ Each device must be running the **latest Beta Channel** Windows Insider Preview 
 1. To install this build, follow the instructions in the [Get started with the Windows Insider Program article](/windows-insider/get-started).
 2. After installation, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **All devices**.
 3. Select the device in the list > **Wipe** > **Wipe**. Don't select any of the boxes in the wipe confirmation box.
-4. The next time the device connects to the internet, it will be wiped. This can take several minutes.
+4. The next time the device connects to the internet, it will be wiped. This process can take several minutes.
 5. Complete the Windows Autopilot steps in the next section.
 
 ## Register the physical device with Windows Autopilot
@@ -68,13 +68,13 @@ If the device is already registered with Autopilot, skip this section.
 3. On the group page, select **Members** > **Add members** > search physical device's serial number > select the physical device > **Select**.
 4. Wait several minutes while the resource assignments complete.
 
-During this time, review your other device configurations that may apply to the device. Make sure that they are appropriate for a device that will only directly connect to a Windows 365 Cloud PC. Unassign unnecessary apps and configuration profiles to make sure the Windows 365 Boot connection experience is seamless connection experience. Also see [Restrict user access to Windows 365 Boot physical devices](windows-365-boot-restrict-user-access-physical-device.md).
+During this time, review your other device configurations that may apply to the device. Make sure that they're appropriate for a device that only directly connects to a Windows 365 Cloud PC. Unassign unnecessary apps and configuration profiles to make sure the Windows 365 Boot connection experience is seamless connection experience. Also see [Restrict user access to Windows 365 Boot physical devices](windows-365-boot-restrict-user-access-physical-device.md).
 
 ## Sign in to the device
 
 1. Complete the Out-of-Box-Experience (OOBE) for the physical device as you would with any user.
 2. After OOBE, restart the device.
-3. When signing in to the device, the user will go directly to their Windows 365 Cloud PC.
+3. When the user signs in to the device, they're taken directly to their Windows 365 Cloud PC.
 
 <!-- ########################## -->
 ## Next steps

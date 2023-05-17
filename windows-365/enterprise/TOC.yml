@@ -105,6 +105,8 @@ items:
           href: windows-365-boot-guide.md
         - name: Restrict access to physical device
           href: windows-365-boot-restrict-user-access-physical-device.md
+        - name: Restrict access to physical device
+          href: windows-365-boot-restrict-user-access-physical-device.md
       - name: Citrix HDX Plus for Windows 365
         items:
         - name: Requirements

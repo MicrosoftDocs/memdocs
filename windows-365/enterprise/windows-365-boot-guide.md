@@ -32,7 +32,7 @@ ms.collection:
 
 # Guided scenario - deploy Windows 365 Boot to shared physical devices
 
-By following this [guided scenario](/en-us/mem/intune/fundamentals/guided-scenarios-overview), you can deploy [Windows 365 Boot](windows-365-boot-overview.md) to shared Windows 11 Pro physical devices. Windows 365 Boot lets phyysical device users sign in directly to their Cloud PCs, completely bypassing the physical devices sign-in process.
+By following this [guided scenario](/en-us/mem/intune/fundamentals/guided-scenarios-overview), you can deploy [Windows 365 Boot](windows-365-boot-overview.md) to shared Windows 11 Pro physical devices. Windows 365 Boot lets physical device users sign in directly to their Cloud PCs, completely bypassing the physical devices sign-in process.
 
 The guide steps you through defining:
 
@@ -48,7 +48,7 @@ The guide steps you through defining:
 
 Before adding physical devices to the group, you must ensure that they meet the Windows 365 Boot requirements.
 
-You can complete the guided scenario before there are any devices in the group. After devices are added to the group, and have internet access, they'll automatically get updated with the Windows 365 Boot settings defined in the guided guided scenario.
+You can complete the guided scenario before there are any devices in the group. After devices are added to the group, and have internet access, they'll automatically get updated with the Windows 365 Boot settings defined in the guided scenario.
 
 ## Step 1 - Introduction
 
@@ -74,7 +74,7 @@ Choose how your devices are named when they enroll, and choose the prefix of all
 
    - **Resource name prefix**: When you deploy this guided scenario, several resources are automatically created. To distinguish the items used in this deployment, add a prefix:
 
-     - **Enter a resource prefix name**: Enter some text that will be at the beginning of the items created. For example, enter `Windows 365 Boot`. All resources created will be named something like **Windows 365 Boot Boot to Cloud Autopilot**.
+     - **Enter a resource prefix name**: Enter some text to put at the beginning of the items created. For example, enter `Windows 365 Boot`. All resources created will be named something like **Windows 365 Boot Boot to Cloud Autopilot**.
 
 2. Select **Next**.
 
@@ -93,7 +93,7 @@ Windows 365 Boot supports Windows Autopatch to automate patch management to Wind
 
 Select the groups that will receive this guided scenario, and all the resources it creates. You can assign existing groups, or create new ones and assign them.
 
-- **Create new group**: Creates a new group, and deploys the guided scenario policies to this group. As devices are added to this group, they'll start to receive this guided scenario.
+- **Create new group**: Creates a new group, and deploys the guided scenario policies to this group. As devices are added to this group, they start to receive this guided scenario.
 
   - **Group name**: Enter the group name. For example, enter `Windows 365 boot physical devices`.
 
@@ -101,7 +101,7 @@ Select the groups that will receive this guided scenario, and all the resources 
 
 When you're done assigning groups, select **Next**.
 
-You can complete the guided scenario before there are any devices in the group. When devices are added to the group, and have internet access, then they'll automatically start receiving the policies in this guided scenario.
+You can complete the guided scenario before there are any devices in the group. When devices are added to the group, and have internet access, they automatically start receiving the policies in this guided scenario.
 
 You can also add preregistered Windows Autopilot devices to the group. Add them to the group before you enroll or apply any policies. For steps to set up new devices with Autopilot, see  New Device Setup documentation.
 
