@@ -67,7 +67,7 @@ The automated encryption steps proceed as follows:
 
 ### Windows 365 Enterprise certificates
 
-Windows 365 service enterprise certificates are generated and renewed automatically by the Azure Key Vault. This certificate expires after one year. The Windows 365 service regularly checks the status of the certificate. Three months before the expiration date, the Windows 365 automatically regenerates a new certificate. After the new certificate is generated, it's used by the Windows 365 service to re-encrypt the tenant keys.
+Windows 365 service enterprise certificates are generated and renewed automatically by the Azure Key Vault. This certificate expires after one year. The Windows 365 service regularly checks the status of the certificate. Three months before the expiration date, the Windows 365 service automatically regenerates a new certificate. After the new certificate is generated, it's used by the Windows 365 service to re-encrypt the tenant keys.
 
 ### Password encryption/decryption algorithm
 
