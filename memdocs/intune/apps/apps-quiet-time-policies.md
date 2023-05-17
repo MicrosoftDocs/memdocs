@@ -45,18 +45,18 @@ To create a quiet time policy:
 1. Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **Quiet Time** > **Policies**.
 3. Select **Create policy**.
-4. Select **Policy Type**. You can choose **Date Range**, **Days of the week**, or **Non-working time** policy types. For more information see, [Quiet time policy types](#quiet-time-policy-types).
-5. Click **Create** to display the **Basics** page.
-6. On the **Basics** page, add a **Name** and optional **Description** for the quiet time policy. The **Platform** value is pre-populated with “Android; iOS/iPadOS.”<br>Click **Next** to display the **Configuration settings** page. 
-7. On the **Configuration settings** page, select how you want to apply quiet time settings. Each type of Quiet Time policy has different configuration values. For more information, see [Quiet time policy configuration settings](#quiet-time-policy-configuration-settings).<br>Click **Next** to display the **Scope tags** page.
-8. The **Scope tags** page allows you to optionally add scope tags for the app. For more information, see [Use role-based access control (RBAC) and scope tags for distributed IT](../intune/fundamentals/scope-tags.md).<br>Click **Next** to display the **Assignments** page.
-9. The **Assignments** page allows you to assign the app protection policy to groups of users. You must apply the policy to a group of users to have the policy take effect.<br>Click **Next** to display the **Review + create** page.
+4. Select **Policy Type**. You can choose **Date Range**, **Days of the week**, or **Non-working time** policy types. For more information, see, [Quiet time policy types](#quiet-time-policy-types).
+5. Select **Create** to display the **Basics** page.
+6. On the **Basics** page, add a **Name** and optional **Description** for the quiet time policy. The **Platform** value is prepopulated with “Android; iOS/iPadOS.”<br>Select **Next** to display the **Configuration settings** page. 
+7. On the **Configuration settings** page, select how you want to apply quiet time settings. Each type of Quiet Time policy has different configuration values. For more information, see [Quiet time policy configuration settings](#quiet-time-policy-configuration-settings).<br>Select **Next** to display the **Scope tags** page.
+8. The **Scope tags** page allows you to optionally add scope tags for the app. For more information, see [Use role-based access control (RBAC) and scope tags for distributed IT](../intune/fundamentals/scope-tags.md).<br>Select **Next** to display the **Assignments** page.
+9. The **Assignments** page allows you to assign the app protection policy to groups of users. You must apply the policy to a group of users to have the policy take effect.<br>Select **Next** to display the **Review + create** page.
 10. The **Review + create** page allows you to review the values and settings you entered for this quiet time policy.
 12. When you're ready, click **Create** to create the quiet time policy in Intune.
 
 ## Change existing quiet time policies
 
-You can edit an existing quiet time policy and apply it to the targeted users. However, when you change existing policies, users will not see the changes for a 24-hour period.
+You can edit an existing quiet time policy and apply it to the targeted users. However, when you change existing policies, users won't see the changes for a 24-hour period.
 
 To change the list of user groups:
 
@@ -65,15 +65,15 @@ To change the list of user groups:
 3. To add a new user group to the policy, under the **Included groups** section, choose **Add groups**. Then, find and select the user group. Choose **Select** to add the group.
 4. To exclude a user group, under the **Excluded groups** section, choose **Add groups**. Then, find and select the user group.Choose **Select** to exclude the user group.
 5. To delete groups that were previously added, in either the **Included groups** or **Excluded groups** section, select **Remove**.
-6. Click **Review + save** to review the user groups selected for this policy.
-7. After your changes to the assignments are ready, select **Save** to save the configuration and deploy the policy to the new set of users. If you select **Cancel** before you save your configuration, you will discard all changes you have made to the **Included groups** and **Excluded groups** sections.
+6. Select **Review + save** to review the user groups selected for this policy.
+7. After your changes to the assignments are ready, select **Save** to save the configuration and deploy the policy to the new set of users. If you select **Cancel** before you save your configuration, you'll discard all changes you have made to the **Included groups** and **Excluded groups** sections.
 
 To change policy configuration settings
 
 1. In the **Quiet Time** > **Policies** pane, select the policy you want to change.
 2. Next to the section titled **Configuration settings**, select **Edit**. Then change the settings to new values.
-3. Click **Review + save** to review the updated settings for this policy.
-4. Select **Save** to save your changes. If you select **Cancel** before you save your configuration, you will discard all changes you have made to the Configuration settings pane.
+3. Select **Review + save** to review the updated settings for this policy.
+4. Select **Save** to save your changes. If you select **Cancel** before you save your configuration, you'll discard all changes you have made to the Configuration settings pane.
 
 ## Quiet time policy configuration settings
 
@@ -120,7 +120,7 @@ The **Days of week** policy has the **Allday**, **Certain Hours**, and **End Use
 
 ### Non-working time policy
 
-The **Non-working time** policy has a **Non-working time** configuration settings sections.
+The **Non-working time** policy has a **Non-working time** configuration settings section.
 
 **Non-working time** section:
 
