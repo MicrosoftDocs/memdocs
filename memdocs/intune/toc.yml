@@ -402,6 +402,8 @@ items:
                 href: ./apps/app-configuration-policies-managed-app.md
               - name: Use iOS app provisioning profiles
                 href: ./apps/app-provisioning-profile-ios.md
+              - name: Quiet time policies
+                href: ./apps/apps-quiet-time-policies.md                
               - name: Configure specific apps
                 items:
                 - name: Configure the Managed Home Screen

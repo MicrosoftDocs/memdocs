@@ -30,7 +30,7 @@ The global quiet time settings allow you to create policies to schedule quiet ti
 
 ## Quiet time policy types
 
-There are three quiet time policy types available.
+There are three quiet time policy types available. The following table describes each policy type.
 
 |      Policy Type     |      Description     |
 |---|---|
@@ -40,7 +40,7 @@ There are three quiet time policy types available.
 
 ## Create an iOS/iPadOS and Android quiet time policy
 
-To create a quiet time policy:
+To create a quiet time policy, use the following steps:
 
 1. Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **Quiet Time** > **Policies**.
@@ -58,7 +58,7 @@ To create a quiet time policy:
 
 You can edit an existing quiet time policy and apply it to the targeted users. However, when you change existing policies, users won't see the changes for a 24-hour period.
 
-To change the list of user groups:
+To change the list of user groups, use the following steps:
 
 1. In the **Quiet Time** > **Policies** pane, select the policy you want to change.
 2. Next to the section titled **Assignments**, select **Edit**.
@@ -68,7 +68,7 @@ To change the list of user groups:
 6. Select **Review + save** to review the user groups selected for this policy.
 7. After your changes to the assignments are ready, select **Save** to save the configuration and deploy the policy to the new set of users. If you select **Cancel** before you save your configuration, you'll discard all changes you have made to the **Included groups** and **Excluded groups** sections.
 
-To change policy configuration settings
+To change policy configuration settings, use the following steps:
 
 1. In the **Quiet Time** > **Policies** pane, select the policy you want to change.
 2. Next to the section titled **Configuration settings**, select **Edit**. Then change the settings to new values.
