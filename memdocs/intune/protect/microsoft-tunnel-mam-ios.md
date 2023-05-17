@@ -100,9 +100,6 @@ Microsoft Tunnel for MAM iOS uses the following Intune policies and profiles:
 
 Create an app configuration policy for apps that use Tunnel for MAM. This policy configures an app to use a specific Microsoft Tunnel Gateway Site, proxy, and trusted certificate(s) for Edge and line-of-business (LOB) apps. These resources are used when connecting to on-premises resources.
 
-> [!NOTE]  
-> For Federated Azure active directory tenants, only line-of-business are supported. Microsoft Tunnel for iOS does not support Microsoft Edge for Federated Azure active directory tenants.
-
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Apps** > **App Configuration polices** > **Add** > **Managed Apps**.
 
 2. On the *Basics* tab, enter a *Name* for the policy and a *Description* (optional).
@@ -134,6 +131,9 @@ Create an app configuration policy for apps that use Tunnel for MAM. This policy
       - **Name** =  `com.microsoft.tunnel.custom_configuration`
       - **Value** = `{"bypassedUrls":["Company’sSTSURL"]}`
 
+   > [!NOTE]  
+   > The bypassedUrl should include the federation STS endpoint.
+
       :::image type="content" source="./media/microsoft-tunnel-mam-ios/ios-bypass.png" alt-text="Image that shows the name and value pair.":::
 
       For example, *Value* might appear as **{"bypassedUrls":["ipcustomer.com", "whatsmyip.org"]}**.
@@ -149,8 +149,6 @@ The new policy appears in the list of App configuration policies.
 ### Configure an app configuration policy for Microsoft Edge
 
 Create an App configuration policy for Microsoft Edge. This policy configures Edge on the device to connect to Microsoft Tunnel.
-> [!NOTE]  
-> For Federated Azure active directory tenants, only line-of-business are supported. Microsoft Tunnel for iOS does not support Microsoft Edge for Federated Azure active directory tenants.
 
 > [!NOTE]  
 > If you already have an app configuration policy created for your LOB App, you can edit that policy to include Edge and the required *key/value pair* settings.
@@ -169,6 +167,20 @@ Create an App configuration policy for Microsoft Edge. This policy configures Ed
 
    > [!NOTE]  
    > Ensure there are no trailing spaces at the end of the General configuration settings. These settings provide *Identity switch* support to Microsoft Edge on iOS. This enables Edge on iOS to automatically connect the VPN when signing in with a *Work account or School account* and to disconnect the VPN when switching to a *Personal account* enabling in-Private browsing.
+
+   For Federated Azure active directory tenants, the following configurations are required to ensure that Edge can authenticate and access the required resources. This configuration will bypass the URL of the publicly available secure token service:
+
+   1. On the *Settings* tab, expand *General configuration settings* and then configure the *Name* and *Value* pair as follows to set up the Edge profile for Tunnel:
+
+      - **Name** =  `com.microsoft.tunnel.custom_configuration`
+      - **Value** = `{"bypassedUrls":["Company’sSTSURL"]}`
+
+   > [!NOTE]  
+   > The bypassedUrl should include the federation STS endpoint.
+
+      :::image type="content" source="./media/microsoft-tunnel-mam-ios/ios-bypass.png" alt-text="Image that shows the name and value pair.":::
+
+      For example, *Value* might appear as **{"bypassedUrls":["ipcustomer.com", "whatsmyip.org"]}**.
 
    If you have other Microsoft Edge specific configurations to configure, do so with this same policy including configurations in the *Edge configuration settings* category.
 
@@ -398,6 +410,7 @@ The following are requirements for using Xcode to successfully integrate an iOS 
 
 For guidance on integrating the SDK, see [Tunnel for MAM iOS SDK developer guide](../developer/tunnel-mam-ios-sdk.md).
 
+
 ## Known Issues
 
 The following are known issues or limitations for Tunnel for MAM on iOS. For known issues with the Microsoft Tunnel for MAM iOS SDK, go to [Tunnel for MAM iOS SDK developer guide](../developer/tunnel-mam-ios-sdk.md#known-issues).
@@ -423,6 +436,22 @@ When you create a custom app configuration policy, the newly added app may not a
 ### Microsoft Azure Authenticator app does not work with Tunnel for MAM iOS Conditional Access  
 
 **Workaround**: If you have a Conditional Access policy for Microsoft Tunnel Gateway that requires multifactor authentication as a Grant Access control, you must implement the "onTokenRequiredWithCallback" method in the Microsoft Tunnel Delegate Class within your Line of Business Applications. 
+
+
+### Federated Azure active directory tenants
+Create a General configuration setting in App config to exclude the customers STS (federated server URL) to address the MAM-Tunnel connect login issue:
+
+Experienced in Edge browser when users sign-in with work account.Also experienced when users sign-in to LOB app for the 1st time.
+
+**Workaround**: 
+Create a "General configuration setting": 
+
+key: com.microsoft.tunnel.custom_configuration
+
+value: {"bypassedUrls":["ipchicken.com", "whatsmyip.org"]}
+
+> [!NOTE]  
+> The bypassedUrl should include the federation STS endpoint.
 
 ### Limitations when using Edge on iOS/iPadOS
 
