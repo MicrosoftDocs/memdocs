@@ -36,7 +36,7 @@ Microsoft Intune releases features in "public preview". These features are being
 
 Preview features have a **(preview)** tag in the Microsoft Intune admin center:
 
-:::image type="content" source="./media/public-preview/preview-example.png" alt-text="Image that shows the sample public preview tag in Microsoft Intune admin center and Microsoft Intune.":::
+:::image type="content" source="./media/public-preview/preview-example.png" alt-text="Screenshot that shows the sample public preview tag in Microsoft Intune admin center and Microsoft Intune.":::
 
 ## What you need to know
 

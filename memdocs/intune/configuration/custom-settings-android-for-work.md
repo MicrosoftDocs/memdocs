@@ -125,7 +125,7 @@ In this example, you create a custom profile that restricts copy and paste actio
 
     Your settings look similar to the following image:
 
-    :::image type="content" source="./media/custom-settings-android-for-work/custom-oma-uri-android-enterprise.png" alt-text="Block copy and paste for Android Enterprise personally owned devices with a custom work profile in Microsoft Intune.":::
+    :::image type="content" source="./media/custom-settings-android-for-work/custom-oma-uri-android-enterprise.png" alt-text="Screenshot of a setting in a Microsoft Intune custom work profile that blocks copy and paste for Android Enterprise personally owned devices.":::
 
 7. Select **Save** to save your changes. Continue to add more settings as needed. After you add some settings, you can select **Export**. **Export** creates a list of all the values you added in a comma-separated values (.csv) file.
 

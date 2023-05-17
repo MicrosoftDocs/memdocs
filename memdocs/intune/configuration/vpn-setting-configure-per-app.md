@@ -138,13 +138,13 @@ This VPN profile includes the SCEP or PKCS certificate that has the client crede
       - **Authentication certificate**: Select an existing SCEP or PKCS certificate > **OK**.
       - **Split tunneling**: Select **Disable** to force all traffic to use the VPN tunnel when the VPN connection is active. 
 
-      :::image type="content" source="./media/vpn-setting-configure-per-app/vpn-per-app-create-vpn-profile.png" alt-text="Image that shows a per-app VPN profile, IP address or FQDN, authentication method, and split tunneling in Microsoft Intune and Intune admin center.":::
+      :::image type="content" source="./media/vpn-setting-configure-per-app/vpn-per-app-create-vpn-profile.png" alt-text="Screenshot that shows a per-app VPN profile, IP address or FQDN, authentication method, and split tunneling in Microsoft Intune and Intune admin center.":::
 
       For information on the other settings, go to [iOS/iPadOS VPN settings](vpn-settings-ios.md).
 
     - **Automatic VPN** > **Type of automatic VPN** > **Per-app VPN**
 
-      :::image type="content" source="./media/vpn-setting-configure-per-app/vpn-per-app-automatic.png" alt-text="Image that shows the Automatic VPN set to per-app VPN on iOS/iPadOS devices in Microsoft Intune.":::
+      :::image type="content" source="./media/vpn-setting-configure-per-app/vpn-per-app-automatic.png" alt-text="Screenshot that shows the Automatic VPN set to per-app VPN on iOS/iPadOS devices in Microsoft Intune.":::
 
 7. Select **Next**, and continue creating your profile. For more information, go to [Create a VPN profile](vpn-settings-configure.md#step-2---create-the-profile).
 
@@ -158,7 +158,7 @@ After adding your VPN profile, associate the app and Azure AD group to the profi
 4. Select **Add group** > Select the group [you created](#create-a-group-for-your-vpn-users) (in this article) > **Select**.
 5. In **VPNs**, select the per-app VPN profile [you created](#create-a-per-app-vpn-profile) (in this article).
 
-    :::image type="content" source="./media/vpn-setting-configure-per-app/vpn-per-app-app-to-vpn.png" alt-text="Image that shows assigning an app to the per-app VPN profile in Microsoft Intune and Intune admin center.":::
+    :::image type="content" source="./media/vpn-setting-configure-per-app/vpn-per-app-app-to-vpn.png" alt-text="Two screenshots that show assigning an app to the per-app VPN profile in Microsoft Intune and Intune admin center.":::
 
 6. Select **OK** > **Save**.
 
