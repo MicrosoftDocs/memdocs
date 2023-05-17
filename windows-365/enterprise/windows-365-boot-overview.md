@@ -32,7 +32,7 @@ ms.collection:
 
 # What is Windows 365 Boot?
 
-Windows 365 Boot is in [public preview](public-preview.md). During this preview, Windows 365 Boot is designed for shared PC scenarios.
+Windows 365 Boot is in [public preview](..\public-preview.md). During this preview, Windows 365 Boot is designed for shared PC scenarios.
 
 Windows 365 Boot lets admins configure physical devices so that users can both:
 
@@ -61,7 +61,7 @@ During the preview, Windows 365 Boot doesn't automatically set these policies to
 
 1. Set up each physical device for Windows 365 Boot configuration.
 2. Using Intune's [Windows 365 Boot guided scenario](windows-365-boot-guided-scenario.md), configure the physical device for Windows 365 Boot.
-3. [Configure CSPs to restrict user access to Windows 365 Boot physical devices](windows-365-boot-restrict-physical-device-access.md).
+3. [Restrict user access to Windows 365 Boot physical device](windows-365-boot-restrict-user-access-physical-device.md)
 4. After the device is configured, multiple users can access their dedicated Cloud PCs from the same Windows 365 Boot physical device.  
 
 <!-- ########################## -->
