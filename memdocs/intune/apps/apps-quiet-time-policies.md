@@ -48,7 +48,7 @@ To create a quiet time policy:
 4. Select **Policy Type**. You can choose **Date Range**, **Days of the week**, or **Non-working time** policy types. For more information see, [Quiet time policy types](#quiet-time-policy-types).
 5. Click **Create** to display the **Basics** page.
 6. On the **Basics** page, add a **Name** and optional **Description** for the quiet time policy. The **Platform** value is pre-populated with “Android; iOS/iPadOS.”<br>Click **Next** to display the **Configuration settings** page. 
-7. On the **Configuration settings** page, select how you want to apply quiet time settings. Each type of Quiet Time policy has different configuration values. For more information, see [Quiet time policy configuration settings]().<br>Click **Next** to display the **Scope tags** page.
+7. On the **Configuration settings** page, select how you want to apply quiet time settings. Each type of Quiet Time policy has different configuration values. For more information, see [Quiet time policy configuration settings](#quiet-time-policy-configuration-settings).<br>Click **Next** to display the **Scope tags** page.
 8. The **Scope tags** page allows you to optionally add scope tags for the app. For more information, see [Use role-based access control (RBAC) and scope tags for distributed IT](../intune/fundamentals/scope-tags.md).<br>Click **Next** to display the **Assignments** page.
 9. The **Assignments** page allows you to assign the app protection policy to groups of users. You must apply the policy to a group of users to have the policy take effect.<br>Click **Next** to display the **Review + create** page.
 10. The **Review + create** page allows you to review the values and settings you entered for this quiet time policy.
@@ -82,6 +82,7 @@ To change policy configuration settings
 The **Date Range** policy has a **Range Settings** configuration section. 
 
 **Range Settings** section:
+
 |      Policy setting     |      Description     |
 |---|---|
 |    Start   |     Specify **Start** date and time to mute notifications.    | 
@@ -94,12 +95,14 @@ The **Date Range** policy has a **Range Settings** configuration section.
 The **Days of week** policy has the **Allday**, **Certain Hours**, and **End User Overrides** configuration settings sections.
 
 **Allday** section:
+
 |      Policy setting     |      Description     |
 |---|---|
 |     Mute notifications all day    |     Set to **Require** to enable muting notifications for a full 24 hours on specific days of the week.    |
 |     Days of the week    |     Set to **Configured** and then select one or more days of the week that notifications must be muted for a full 24 hours.    |
 
 **Certain Hours** section:
+
 |      Policy setting     |      Description     |
 |---|---|
 |     Mute notifications daily    |     Set to **Require** to enable muting notifications for certain hours on specific days of the week.    |
@@ -108,6 +111,7 @@ The **Days of week** policy has the **Allday**, **Certain Hours**, and **End Use
 |     Days of the week    |     Set to **Configured** and then select one or more days of the week that notifications must be muted for certain hours.    |
 
 **End User Overrides** section:
+
 |      Policy setting     |      Description     |
 |---|---|
 |     Allow user to change settings    |     Select **Yes** to allow end users to make changes to this setting by editing their global quiet time settings. Select **No** to disallow end users from changing this setting by editing their global quiet time settings.   |
@@ -119,11 +123,10 @@ The **Days of week** policy has the **Allday**, **Certain Hours**, and **End Use
 The **Non-working time** policy has a **Non-working time** configuration settings sections.
 
 **Non-working time** section:
+
 |      Policy setting     |      Description     |
 |---|---|
 |     Mute notifications    |    This will automatically mute Microsoft Teams notifications when managed account is in non-working time.<br> **Note**: Configuring this setting will prevent end users from editing their global quiet time settings.   |
 
 :::image type="content" source="./media/apps-quiet-time-policies/apps-quiet-time-policies-03.png" alt-text="Screenshot of the Microsoft Intune quiet time - Non-working time policy" border="true":::  
-
-
 
