@@ -1,0 +1,2 @@
+Preferred MP option allow PXE clients to communicate to an initial Lookup MP and receive the list of MP(s) to communicate. When enabled, 
+PXE behavior will be similar to the Dynamic Bootable Media. This allows PXE clients to dynamically prioritize communication MP based on boundaries and location. 
