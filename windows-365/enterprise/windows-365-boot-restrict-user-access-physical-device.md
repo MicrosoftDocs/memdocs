@@ -50,7 +50,7 @@ Changing user passwords isn't supported for Windows 365 Boot physical devices. I
 
 ## Set default credential provider
 
-The public preview version of Windows 365 Boot is designed to for shared PC mode. This mode requires the username and password authentication method. Depending on your environment, other authentication providers might be configured and could confuse your users. To avoid this confusion, consider setting the default credential provider to username and password. To set this default, use the [DefaultCredentialProvider CSP policy](/windows/client-management/mdm/policy-csp-admx-credentialproviders#defaultcredentialprovider).  
+The public preview version of Windows 365 Boot is designed for shared PC mode. This mode requires the username and password authentication method. Depending on your environment, other authentication providers might be configured and could confuse your users. To avoid this confusion, consider setting the default credential provider to username and password. To set this default, use the [DefaultCredentialProvider CSP policy](/windows/client-management/mdm/policy-csp-admx-credentialproviders#defaultcredentialprovider).  
 
 ## Remove Notifications and Action Center from the task bar
 
