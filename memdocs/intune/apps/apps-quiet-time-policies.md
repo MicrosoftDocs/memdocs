@@ -36,7 +36,6 @@ There are three quiet time policy types available. The following table describes
 |---|---|
 |     Date Range    |     Select this option to automatically mute Microsoft Outlook  email and Teams notifications on iOS/iPadOS and Android platforms during the   specified range.    |
 |     Days of the week    |     Select this option to automatically mute Microsoft Outlook   email and Teams notifications on iOS/iPadOS and Android platforms during   certain hours or all day on selected days of the week.    |
-|     Non-working time    |     Select this option to automatically mute Microsoft Teams notifications when managed account is in non-working time.    |
 
 ## Create an iOS/iPadOS and Android quiet time policy
 
@@ -45,7 +44,7 @@ To create a quiet time policy, use the following steps:
 1. Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **Quiet Time** > **Policies**.
 3. Select **Create policy**.
-4. Select **Policy Type**. You can choose **Date Range**, **Days of the week**, or **Non-working time** policy types. For more information, see, [Quiet time policy types](#quiet-time-policy-types).
+4. Select **Policy Type**. You can choose the **Date Range** or the **Days of the week** policy types. For more information, see, [Quiet time policy types](#quiet-time-policy-types).
 5. Select **Create** to display the **Basics** page.
 6. On the **Basics** page, add a **Name** and optional **Description** for the quiet time policy. The **Platform** value is prepopulated with “Android; iOS/iPadOS.”<br>Select **Next** to display the **Configuration settings** page. 
 7. On the **Configuration settings** page, select how you want to apply quiet time settings. Each type of Quiet Time policy has different configuration values. For more information, see [Quiet time policy configuration settings](#quiet-time-policy-configuration-settings).<br>Select **Next** to display the **Scope tags** page.
@@ -117,16 +116,4 @@ The **Days of week** policy has the **Allday**, **Certain Hours**, and **End Use
 |     Allow user to change settings    |     Select **Yes** to allow end users to make changes to this setting by editing their global quiet time settings. Select **No** to disallow end users from changing this setting by editing their global quiet time settings.   |
 
 :::image type="content" source="./media/apps-quiet-time-policies/apps-quiet-time-policies-02.png" alt-text="Screenshot of the Microsoft Intune quiet time - Configure days of the week policy" border="true":::  
-
-### Non-working time policy
-
-The **Non-working time** policy has a **Non-working time** configuration settings section.
-
-**Non-working time** section:
-
-|      Policy setting     |      Description     |
-|---|---|
-|     Mute notifications    |    This will automatically mute Microsoft Teams notifications when managed account is in non-working time.<br> **Note**: Configuring this setting will prevent end users from editing their global quiet time settings.   |
-
-:::image type="content" source="./media/apps-quiet-time-policies/apps-quiet-time-policies-03.png" alt-text="Screenshot of the Microsoft Intune quiet time - Non-working time policy" border="true":::  
 
