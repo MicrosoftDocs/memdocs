@@ -97,6 +97,12 @@ items:
         items:
         - name: Set up tenants for Windows 365 Government
           href: set-up-tenants-windows-365-gcc.md
+      - name: Windows 365 Boot
+        items:
+        - name: Windows 365 Boot overview
+          href: windows-365-boot-overview.md
+        - name: Restrict access to physical device
+          href: windows-365-boot-restrict-user-access-physical-device.md
       - name: Citrix HDX Plus for Windows 365
         items:
         - name: Requirements
