@@ -30,6 +30,9 @@ ms.collection:
 ---
 # Zebra LifeGuard Over-the-Air Integration with Microsoft Intune
 
+> [!IMPORTANT]
+> This feature is in public preview. For more information, see [Public preview in Microsoft Intune](../fundamentals/public-preview.md).
+
 Microsoft Intune supports/provides integration with Zebra LifeGuard Over-the-Air (LG OTA), so that you can have a single area for managing firmware updates for supported Zebra devices. Zebra LifeGuard Over-the-Air (LG OTA) is a service offered by Zebra Technologies that allows deployment of updates to their Android devices in a hands-free and automated manner.
 
 Microsoft Intune allows you to manage firmware updates for supported Zebra devices directly through the Intune admin center.  
