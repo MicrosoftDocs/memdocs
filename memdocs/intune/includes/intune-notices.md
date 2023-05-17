@@ -4,7 +4,7 @@ description: include file
 author: ErikjeMS  
 ms.service: microsoft-intune
 ms.topic: include
-ms.date: 04/17/2023
+ms.date: 05/17/2023
 ms.author: erikje
 ms.custom: include file
 ---
@@ -85,9 +85,9 @@ To check which version of the certificate connector you are using, follow these 
 2. A list of installed programs and applications will be displayed.
 3. Look for an entry related to the Microsoft Intune Certificate Connector. There will be a "Version" associated with the connector. Note that names for older connectors may vary.
 
-### Plan for change: Intune is moving to support macOS 11.6 and higher later this year<!--14766663-->
+### Plan for change: Intune is moving to support macOS 11.0 and higher later this year<!--14766663-->
 
-Apple is expected to release macOS 13 (Ventura) later this year, Microsoft Intune, the Company Portal app and the Intune mobile device management agent will be moving to support macOS 11.6 (Big Sur) and later. Since the Company Portal app for iOS and macOS are a unified app, this change will occur shortly after the release of iOS/iPadOS 16.
+Apple is expected to release macOS 13 (Ventura) later this year, Microsoft Intune, the Company Portal app and the Intune mobile device management agent will be moving to support macOS 11.0 and later. Since the Company Portal app for iOS and macOS are a unified app, this change will occur shortly after the release of iOS/iPadOS 16.
 
 #### How does this affect you or your users?
 
