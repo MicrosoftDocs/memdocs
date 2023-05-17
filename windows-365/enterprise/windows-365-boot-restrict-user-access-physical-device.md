@@ -32,17 +32,17 @@ ms.collection:
 
 # Restrict user access to Windows 365 Boot physical device
 
-Windows 365 Boot is in [public preview](public-preview.md). During this preview, Windows 365 Boot is designed for shared PC scenarios.
+Windows 365 Boot is in [public preview](../public-preview.md). During this preview, Windows 365 Boot is designed for shared PC scenarios.
 
-Windows 365 Boot physical devices are intended to let users interact with their Cloud PCs without the ability to interact with the physical device. To meet this goal, you must set some additional configuration service provider (CSP) policies.
+Windows 365 Boot physical devices are intended to let users interact with their Cloud PCs without the ability to interact with the physical device. To meet this goal, you must set some configuration service provider (CSP) policies.
 
-During the preview, Windows 365 Boot doesn't automatically set these policies to fully restrict end users from accessing certain resources on the physical device. Admins should review the CSPs listed below and decide which ones to implement on the physical device to meet your organization's security requirements.
+During the preview, Windows 365 Boot doesn't automatically set these policies to fully restrict end users from accessing certain resources on the physical device. Admins should review the following CSPs and decide which ones to implement on the physical device to meet your organization's security requirements.
 
 ## Prevent access to physical device's Task Manager
 
 In the public preview version of Windows 365 Boot feature, the local device’s Task Manager can still be accessed when users press Ctrl+Alt+Delete. The Task Manager can be disabled by using the [DisableTaskMgr CSP policy](/windows/client-management/mdm/policy-csp-admx-ctrlaltdel#disabletaskmgr).
 
-This policy prevents the use of the Task Manager in the system for all users including admins. It also prevents the launch of Task Manager using shortcut keys on the physical device. While increasing the security of the device, this lack of access to the physical device makes it harder to troubleshoot issues on the device.
+This policy prevents the use of the Task Manager in the system for all users including admins. It also prevents the launch of Task Manager using shortcut keys on the physical device. While this policy increases the security of the device, this lack of access to the physical device makes it harder to troubleshoot issues on the device.
 
 ## Prevent users from changing the physical device's password
 

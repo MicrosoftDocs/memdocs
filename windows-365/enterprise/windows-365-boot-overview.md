@@ -34,12 +34,12 @@ ms.collection:
 
 Windows 365 Boot is in [public preview](..\public-preview.md). During this preview, Windows 365 Boot is designed for shared PC scenarios.
 
-Windows 365 Boot lets admins configure physical devices so that users can both:
+Windows 365 Boot lets admins configure physical devices so that users can:
 
 - Bypass their physical device's sign in process.
 - Sign in directly to their Windows 365 Cloud PC on their physical device.
 
-When a user turns on their physical device, Windows 365 Boot takes them to the Cloud PC's Windows 11 sign-in experience. After sign in, they're directly connected to their Windows 365 Cloud PC with no additional steps in between.
+When a user turns on their physical device, Windows 365 Boot takes them to the Cloud PC's Windows 11 sign-in experience. After sign in, they're directly connected to their Windows 365 Cloud PC with no extra steps in between.
 
 Bypassing the physical device sign-in reduces the time it takes the user to access their Cloud PC.
 
@@ -53,7 +53,7 @@ Signing out of the Windows 365 Cloud PC brings the device back to the Windows 11
 
 ## Access to the physical device
 
-Windows 365 Boot physical devices are intended to let users interact with their Cloud PCs without the ability to interact with the physical device. To meet this goal, you must set some additional configuration service provider (CSP) policies.
+Windows 365 Boot physical devices are intended to let users interact with their Cloud PCs without the ability to interact with the physical device. To meet this goal, you must set some configuration service provider (CSP) policies.
 
 During the preview, Windows 365 Boot doesn't automatically set these policies to fully restrict end users from accessing certain resources on the physical device. You should review the  configuration policies that can be applied to your Windows 365 Boot devices to meet your organization’s security needs for preventing access to the physical device. For more information about these configuration profiles, see [Restrict user access to Windows 365 Boot physical device](windows-365-boot-restrict-user-access-physical-device.md).
 
