@@ -32,7 +32,7 @@ ms.collection:
 
 # Set up per-app Virtual Private Network (VPN) for iOS/iPadOS devices in Intune
 
-In Microsoft Intune, you can create and use Virtual Private Networks (VPNs) assigned to an app. This feature is called "per-app VPN". You choose the managed apps that can use your VPN on devices managed by Intune. When you  use per-app VPNs, end users automatically connect through the VPN, and get access to organizational resources, such as documents.
+In Microsoft Intune, you can create and use Virtual Private Networks (VPNs) assigned to an app. This feature is called "per-app VPN". You choose the managed apps that can use your VPN on devices managed by Intune. When you use per-app VPNs, end users automatically connect through the VPN, and get access to organizational resources, such as documents.
 
 This feature applies to:
 
