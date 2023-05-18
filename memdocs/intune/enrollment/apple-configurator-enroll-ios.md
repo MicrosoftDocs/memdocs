@@ -102,10 +102,10 @@ Enrollment with Apple Configuration has the following limitations:
 
 1. In a text editor, create a two-column, comma-separated value (.csv) list without a header. Add the serial number in the left column, and device details in the right column, using the following format:  <br/><br/>
 
-        `Serial number,device details`  
-    
-     You can include any kind of detail about the device. For example: <br/><br/>
-        `F7TLWCLBX196,iPad Air (5th generation) - Blue`  
+   `Serial number,device details`  
+   
+   You can include any kind of detail about the device. For example: <br/><br/>
+   `F7TLWCLBX196,iPad Air (5th generation) - Blue`  
     
    The current maximum for the list is 5,000 rows. For information about how to find an iOS/iPadOS device serial number, see [Find the serial number or IMEI on your iPhone, iPad, or iPod touch](https://support.apple.com/HT204073) (opens Apple Support website).  
 2. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS/iPadOS** > **iOS/iPadOS enrollment** > **Apple Configurator** > **Devices** > **Add**.
