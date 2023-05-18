@@ -66,7 +66,7 @@ When using single sign-on, users are prompted to authenticate to Azure Active Di
 
 ## User can't launch the web browser to sign-in to WI-FI network
 
-Windows 365 Boot is designed for Ethernet connections or WiFi connections managed through the [WiFI CSP](/windows/client-management/mdm/wifi-csp).
+Windows 365 Boot is designed for Ethernet connections or WiFi connections managed through the [WiFi CSP](/windows/client-management/mdm/wifi-csp).
 
 **Troubleshooting steps**: Configure the Windows 365 Boot physical device's Wi-Fi profile through Intune. For more information, see [Add Wi-Fi settings for Windows 10/11 devices in Intune](/mem/intune/configuration/wi-fi-settings-windows).
 
