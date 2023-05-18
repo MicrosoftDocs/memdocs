@@ -107,9 +107,9 @@ The **Microsoft Intune Management Extension** service gets the scripts from Intu
 
 Remediation scripts need to be encoded in UTF-8. Uploading these scripts rather than editing them directly in your browser helps ensure that the script encoding is correct so your devices can execute them. 
 
-1. In the Intune admin center, go to **Reports** > **Remediations**.
-1. Choose **+ Add** and then select **Create script package** button to create a script package.
-     [![Endpoint analytics Remediations page. Select the create link.](media/proactive-remediations-create.png)](media/proactive-remediations-create.png#lightbox)
+1. In the Intune admin center, go to **Devices** > **Remediations**.
+1. Choose **Create script package** button to create a script package.
+     [![Endpoint analytics Remediations page. Select the create link.](media/remediations-create.png)](media/remediations-create.png#lightbox)
 1. In the **Basics** step, give the script package a **Name** and optionally, a **Description**. The **Publisher** field can be edited, but defaults to your name. **Version** can't be edited.
 1. On the **Settings** step, upload both the **Detection script file** and the **Remediation script file** by doing the following steps:
    1. Select the folder icon.
@@ -119,7 +119,7 @@ Remediation scripts need to be encoded in UTF-8. Uploading these scripts rather 
     The detection script must use exit code `exit 1` if the target issue is detected. The remediation script won't run when there's any other exit code, including an empty output, since it results in an *issue is not found* state. Review the [Sample detection script](powershell-scripts.md#bkmk_ps_scripts) for an example of exit code usage.
 
    You need the corresponding detection and remediation script to be in the same package. For example, the `Detect_Expired_User_Certificates.ps1` detection script corresponds with the `Remediate_Expired_User_Certificates.ps1` remediation script.
-       [![Endpoint analytics Remediations script settings page.](media/proactive-remediations-script-settings.png)](media/proactive-remediations-script-settings.png#lightbox)
+       [![Endpoint analytics Remediations script settings page.](media/remediations-script-settings.png)](media/remediations-script-settings.png#lightbox)
 1. Finish the options on the **Settings** page with the following recommended configurations:
    - **Run this script using the logged-on credentials**: This setting is dependent on the script. For more information, see the [Script descriptions](powershell-scripts.md#bkmk_scripts).
    - **Enforce script signature check**: No
@@ -150,10 +150,10 @@ The client reports Remediation information at the following times:
 
 ## <a name="bkmk_prs_monitor"></a> Monitor your script packages
 
-1. In the Intune admin center, go to **Reports** > **Endpoint analytics - Proactive remediations**, you can see an overview of your detection and remediation status.
-       [![Endpoint analytics Proactive remediations report, overview page.](media/proactive-remediations-report-overview.png)](media/proactive-remediations-report-overview.png#lightbox)
+1. In the Intune admin center, go to **Devices** > **Remediations**, you can see an overview of your detection and remediation status.
+       [![Endpoint analytics Proactive remediations report, overview page.](media/remediations-report-overview.png)](media/remediations-report-overview.png#lightbox)
 1. Select **Device status** to get status details for each device in your deployment.
-       [![Endpoint analytics Proactive remediations device status.](media/proactive-remediations-device-status.png)](media/proactive-remediations-device-status.png#lightbox)
+       [![Endpoint analytics Proactive remediations device status.](media/remediations-device-status.png)](media/remediations-device-status.png#lightbox)
 
 ## <a name="bkmk_prs_export"></a> Export script output
 <!-- 10198545 -->
