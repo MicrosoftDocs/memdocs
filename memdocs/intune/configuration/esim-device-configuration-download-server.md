@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 05/08/2023
+ms.date: 05/17/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -19,7 +19,7 @@ ms.technology:
 #ROBOTS:
 #audience:
 
-ms.reviewer: 
+ms.reviewer: hejimenez
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
