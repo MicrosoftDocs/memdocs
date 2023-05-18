@@ -1,11 +1,11 @@
 ---
-title: Tutorial - Remediations
+title: Remediations
 titleSuffix: Microsoft Endpoint Manager
-description: A tutorial on using Remediations.
+description: Lear about how to use Remediations in Endpoint analytics.
 ms.date: 04/06/2023
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
-ms.topic: tutorial
+ms.topic: conceptual
 author: smritib17
 ms.author: smbhardwaj
 manager: dougeby
@@ -14,11 +14,14 @@ ms.localizationpriority: high
 ms.collection: highpri
 ---
 
-# Tutorial: Remediations
+# Remediations
+
+> [!IMPORTANT]
+> **Proactive Remediations** is renamed to **Remediations** and is now available from **Devices** > **Remediations**. All references to Proactive Remediations in this documentation are replaced with **Remediations**. However, the term Proactive Remediations might still appear in some blogs and other articles.
 
 Remediations in Endpoint analytics helps you fix common support issues before end-users notice issues. Use Remediations to help increase your [User experience score](enroll-intune.md#bkmk_view).
 
-In this tutorial, you learn how to:  
+In this article, you learn how to:  
 
 > [!div class="checklist"]  
 > * Review prerequisites for Remediations
@@ -151,9 +154,9 @@ The client reports Remediation information at the following times:
 ## <a name="bkmk_prs_monitor"></a> Monitor your script packages
 
 1. In the Intune admin center, go to **Devices** > **Remediations**, you can see an overview of your detection and remediation status.
-       [![Endpoint analytics Proactive remediations report, overview page.](media/remediations-report-overview.png)](media/remediations-report-overview.png#lightbox)
+       [![Remediations report, overview page.](media/remediations-report-overview.png)](media/remediations-report-overview.png#lightbox)
 1. Select **Device status** to get status details for each device in your deployment.
-       [![Endpoint analytics Proactive remediations device status.](media/remediations-device-status.png)](media/remediations-device-status.png#lightbox)
+       [![Remediations device status.](media/remediations-device-status.png)](media/remediations-device-status.png#lightbox)
 
 ## <a name="bkmk_prs_export"></a> Export script output
 <!-- 10198545 -->
