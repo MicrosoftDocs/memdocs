@@ -25,21 +25,6 @@ Review the [technical preview](../technical-preview.md) article before installin
 
 The following sections describe the new features to try out in this version:
 
-<!-- [!INCLUDE [Example feature name](includes/2201/1234567.md)] -->
-
-
-
-<!--## General known issues-->
-<!--16822959-->
-<!--Update to the default value of supersedence age in months for software updates.-->
-
-<!--Removing SUP role in Admin Console does not reset the supersedence age property in WMI. As a result, while reconfiguring the role, the previously configured value is shown in the configuration window. This property needs to be reset to default value on role removal.-->
-<!--  [!INCLUDE [11018755](includes/2112/known-issue-11018755.md)] -->
-<!--## Other Updates
-<!--15358429-->
-<!--Offset for recurring monthly maintenance window schedules.-->
-<!--Based upon your feedback, you can now offset monthly maintenance window schedules to better align deployments with the release of monthly security updates. For example, using a maximum offset of seven days after the second Tuesday of the month, sets the maintenance window for next Monday.-->  
-
 ## Next steps
 
 For more information about installing or updating the technical preview branch, see [Technical preview](../technical-preview.md).
