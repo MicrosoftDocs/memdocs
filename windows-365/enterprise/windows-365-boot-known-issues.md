@@ -34,9 +34,9 @@ ms.collection:
 
 This page lists recent known issues with [Windows 365 Boot](windows-365-boot-overview.md).
 
-## Additional sign-in options besides username/password are displayed on the sign-in screen
+## Other sign-in options besides username/password are displayed on the sign-in screen
 
-The Windows 365 Boot feature is designed to be used with the Shared PC configuration service provider (CSP). This CSP doesn't support sign-in methods other than username/password.
+Windows 365 Boot is used with the Shared PC configuration service provider (CSP). This CSP doesn't support sign-in methods other than username/password.
 
 **Troubleshooting steps**:
 
@@ -46,15 +46,15 @@ If the Windows 365 Boot physical device lets users sign in using a convenience P
 
 ## Default credential provider is set to Security Key on the sign-in screen
 
-When the **Use security keys for sign-in** policy setting enabled, it can be configured to be the default credential provider. This might result in the user seeing a sign-in for the physical device.  
+When the **Use security keys for sign-in** policy setting enabled, it can be configured to be the default credential provider. This policy might result in the user seeing a sign-in for the physical device.  
 
 **Troubleshooting steps**: Check to see if you have this policy setting configured in Intune. For more information on how to check, see [Enable security keys for Windows sign-in](/azure/active-directory/authentication/howto-authentication-passwordless-security-key-windows#enable-security-keys-for-windows-sign-in).
 
-If it is set, exclude your Windows 365 Boot devices from the policy.
+If it's set, exclude your Windows 365 Boot devices from the policy.
 
 ## Local device has background apps and previous policy configurations that impact the user’s Windows 365 Boot experience
 
-Windows 365 Boot is designed to be used with “clean” Windows 11 devices that don't have pre-configured applications or policies assigned to the device.  
+Windows 365 Boot uses “clean” Windows 11 devices that don't have preconfigured applications or policies assigned to the device.  
 
 **Troubleshooting steps**: Reset the device to a clean state. For more information, see [Windows 365 Boot physical device requirements](windows-365-boot-physical-device-requirements.md).
 
@@ -66,13 +66,13 @@ When using single sign-on, users are prompted to authenticate to Azure Active Di
 
 ## User can't launch the web browser to sign-in to WI-FI network
 
-Windows 365 Boot is designed for Ethernet connections or WIFI connections managed through the [WiFI CSP](/windows/client-management/mdm/wifi-csp).
+Windows 365 Boot is designed for Ethernet connections or WiFi connections managed through the [WiFI CSP](/windows/client-management/mdm/wifi-csp).
 
 **Troubleshooting steps**: Configure the Windows 365 Boot physical device's Wi-Fi profile through Intune. For more information, see [Add Wi-Fi settings for Windows 10/11 devices in Intune](/mem/intune/configuration/wi-fi-settings-windows).
 
 ## User sees black screen after using Disconnect/Sign-out/Lock command from Cloud PC
 
-This is a known issue that is being actively investigated.
+This known issue is under investigation.
 
 **Troubleshooting steps**: Use the Ctrl-Alt-Del shortcut and selecting the **Sign out** option.
 
@@ -93,7 +93,7 @@ Camera permissions must be granted to the Azure Virtual Desktop (HostApp) applic
 
 ## Users can still interact with physical device features like Settings, Task Manager, and Notifications
 
-During [public preview](../public-preview.md), users are generally unable to access features on their Widnows 365 Boot physical devices. However, to assist with troubleshooting, some features are not blocked.
+During [public preview](../public-preview.md), users are mostly unable to access features on their Windows 365 Boot physical devices. However, to assist with troubleshooting, some features aren't blocked.
 
 **Troubleshooting steps**: To learn how to restrict user access to the physical device, see [Restrict user access to Windows 365 Boot physical device](windows-365-boot-restrict-user-access-physical-device.md).
 
@@ -103,11 +103,11 @@ During [public preview](../public-preview.md), users are generally unable to acc
 
 **Troubleshooting steps**: Using an Intune device configuration profile, change or configure the [DeviceLock CSP policy (MaxInactivityTimeDeviceLock)](/windows/client-management/mdm/policy-csp-devicelock?WT.mc_id=Portal-fx#maxinactivitytimedevicelock). Make these changes for both the physical device and the Cloud PC.
 
-## Users see multiple authentication dialogs despite Single Sign-On being enabled
+## Users see multiple authentication dialogs despite single sign-on being enabled
 
-**Troubleshooting steps**: Check the Windows 365 Provisioning policy associated with the Cloud PC to see if single sign-on is enabled. If it isn't, enable single sign-on for the provisioning policy. This policy change requires re-provisioning the Cloud PC.
+**Troubleshooting steps**: Check the Windows 365 Provisioning policy associated with the Cloud PC to see if single sign-on is enabled. If it isn't, enable single sign-on for the provisioning policy. This policy change requires reprovisioning the Cloud PC.
 
-Your Conditional Access policies might also be causing additional authentication dialogs. For more information, see [Troubleshooting sign-in problems with Conditional Access](/azure/active-directory/conditional-access/troubleshoot-conditional-access).
+Your Conditional Access policies might also be causing other authentication dialogs. For more information, see [Troubleshooting sign-in problems with Conditional Access](/azure/active-directory/conditional-access/troubleshoot-conditional-access).
 
 When using single sign-on, users are prompted to:
 
@@ -120,12 +120,12 @@ If you see this dialog, select **Yes** to connect.
 
 ## Users see a black screen after sign-on
 
-Windows 365 Boot is configured by using the [CloudDesktop CSP](windows/client-management/mdm/policy-csp-clouddesktop#boottocloudmode).
+Windows 365 Boot is configured by using the [CloudDesktop CSP](/windows/client-management/mdm/policy-csp-clouddesktop#boottocloudmode).
 
 **Troubleshooting steps**: If you configured your device for Windows 365 Boot using the [Windows 365 Boot Guided Scenario](windows-365-boot-guide.md):
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Policy** > **Policy sets** > **Manage** > **Policy sets**.
-2. Search for the policy sets whose names contain “Boot To Cloud Policy Set”.  One of these is the policy associated with the Windows 365 Boot device.
+2. Search for the policy sets whose names contain “Boot To Cloud Policy Set”.  One of the results is the policy associated with the Windows 365 Boot device.
 3. In the **Device management properties** section, select the Device configuration profile that contains “Boot to Cloud Device Configuration Policy”.
 4. Make sure that the “Cloud Desktop” configuration is configured with the **Boot to Cloud Mode** setting set to **Enable Boot to Cloud Desktop**.
 5. Select **Device assignment status** and make sure that the configuration policy has been successfully applied to it.
@@ -140,7 +140,7 @@ Windows 365 Boot is configured through the [Windowslogon CSP](/windows/client-ma
 **Troubleshooting steps**: If you configured your device for Windows 365 Boot using the [Windows 365 Boot Guided Scenario](windows-365-boot-guide.md):
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Policy** > **Policy sets** > **Manage** > **Policy sets**.
-2. Search for the policy sets whose names contain “Boot To Cloud Policy Set”.  One of these is the policy associated with the Windows 365 Boot device.
+2. Search for the policy sets whose names contain “Boot To Cloud Policy Set”.  One of the results is the policy associated with the Windows 365 Boot device.
 3. In the **Device management properties** section, select the Device configuration profile that contains “Boot to Cloud Device Configuration Policy”.
 4. Make sure that the "Windows Logon" configuration is configured with the **Override Shell Program** setting set to **Apply Lightweight shell**.
 5. Select **Device assignment status** and make sure that the configuration policy has been successfully applied to it.
@@ -150,7 +150,7 @@ If the problem persists, reinstall the physical device's operating system as exp
 
 ## Error message: Windows 365 cannot connect to the resources it uses to run properly
 
-**Troubleshooting steps**: Check your device’s network connection and try again. If you are using an Azure network connection (ANC) for your Cloud PC, check the ANC status as explained in [Azure network connection status](/windows-365/enterprise/health-checks#azure-network-connection-status).
+**Troubleshooting steps**: Check your device’s network connection and try again. If you're using an Azure network connection (ANC) for your Cloud PC, check the ANC status as explained in [Azure network connection status](/windows-365/enterprise/health-checks#azure-network-connection-status).
 
 For more information, see [Troubleshoot Cloud PC connection errors](/windows-365/enterprise/connection-errors).
 
@@ -176,9 +176,9 @@ Windows 365 Boot requires users to have a Windows 365 Cloud PC provisioned for t
 
 ## When users sign into a device for the first time, they see an error screen
 
-This is a known issue related to application registration that is under investigation.
+This known issue is related to application registration that is under investigation.
 
-**Troubleshooting steps**: Users should try logging in a second time on the device. In most instances, they should be able to connect to their Windows 365 Cloud PC. If they still see the error screen, please contact Microsoft support with the displayed correlation id.
+**Troubleshooting steps**: Users should try logging in a second time on the device. In most instances, they should be able to connect to their Windows 365 Cloud PC. If they still see the error screen, contact Microsoft support with the displayed correlation ID.
 
 ## Resources created by the Windows 365 Boot guided scenario are showing as “not applicable” in Intune
 
