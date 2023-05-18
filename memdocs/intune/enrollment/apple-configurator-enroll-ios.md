@@ -101,7 +101,6 @@ Enrollment with Apple Configuration has the following limitations:
 ### Add Apple Configurator serial numbers
 
 1. In a text editor, create a two-column, comma-separated value (.csv) list without a header. Add the serial number in the left column, and device details in the right column, using the following format:  <br/><br/>
-
    `Serial number,device details`  
    
    You can include any kind of detail about the device. For example: <br/><br/>
