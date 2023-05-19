@@ -37,7 +37,7 @@ Windows 365 Boot is in [public preview](..\public-preview.md). During this previ
 Windows 365 Boot lets admins configure Windows 11 Pro physical devices so that users can:
 
 - Bypass their physical device's sign in process.
-- Sign in directly to their Windows 365 Cloud PC on their physical device.
+- Sign in directly to their Windows 365 Cloud PC on their physical device. 
 
 When a user turns on their physical device, Windows 365 Boot takes them to the Cloud PC's Windows 11 sign-in experience. After sign in, they're directly connected to their Windows 365 Cloud PC with no extra steps in between.
 
