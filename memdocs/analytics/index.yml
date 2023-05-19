@@ -41,7 +41,7 @@ landingContent:
             url: enroll-intune.md
           - text: Enroll Configuration Manager devices
             url: enroll-configmgr.md
-      - linkListType: tutorial
+      - linkListType: concept
         links:
           - text: Remediations
             url: remediations.md
