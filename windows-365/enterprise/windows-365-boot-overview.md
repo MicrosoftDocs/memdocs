@@ -37,13 +37,15 @@ Windows 365 Boot is in [public preview](..\public-preview.md). During this previ
 Windows 365 Boot lets admins configure Windows 11 Pro physical devices so that users can:
 
 - Bypass their physical device's sign in process.
-- Sign in directly to their Windows 365 Cloud PC on their physical device.
+- Sign in directly to their Windows 365 Cloud PC on their physical device. 
 
 When a user turns on their physical device, Windows 365 Boot takes them to the Cloud PC's Windows 11 sign-in experience. After sign in, they're directly connected to their Windows 365 Cloud PC with no extra steps in between.
 
 Bypassing the physical device sign-in reduces the time it takes the user to access their Cloud PC.
 
-Multiple users can use the same physical device to sign in to their own personal Cloud PCs. When each user signs in to the physical device, their unique identity takes them to their assigned and secure Cloud PC. This flexibility makes Windows 365 Boot a good solution for shift workers, like nurses,  salespeople, and call centers, who share company physical devices. Such workers can:
+Multiple users can use the same physical device to sign in to their own personal Cloud PCs. When each user signs in to the physical device, their unique identity takes them to their assigned and secure Cloud PC. This flexibility makes Windows 365 Boot a good solution for workers such as nursing, salespeople, and call centers, who share company physical devices. Such workers might frequently switch between physical tasks and computer interaction. Windows 365 Boot lets them bypass the lengthy startup process and boot directly into their secure Cloud PC to pick up right where they left off.
+
+Such workers can:
 
 1. Sign out from their Cloud PC on the physical device.
 2. Pass the physical device over to the next employee during a shift change.
@@ -74,3 +76,5 @@ During the preview, Windows 365 Boot doesn't automatically set these policies to
 [Restrict user access to Windows 365 Boot physical device](windows-365-boot-restrict-user-access-physical-device.md).
 
 [Troubleshoot Windows 365 Boot](troubleshoot-windows-365-boot.md).
+
+[Visit the Microsoft tech community blog](https://aka.ms/W365BootPublicPreview).
