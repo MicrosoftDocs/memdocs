@@ -125,9 +125,9 @@ Windows 365 Boot is configured by using the [CloudDesktop CSP](/windows/client-m
 **Troubleshooting steps**: If you configured your device for Windows 365 Boot using the [Windows 365 Boot Guided Scenario](windows-365-boot-guide.md):
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Policy** > **Policy sets** > **Manage** > **Policy sets**.
-2. Search for the policy sets whose names contain “Boot To Cloud Policy Set”.  One of the results is the policy associated with the Windows 365 Boot device.
-3. In the **Device management properties** section, select the Device configuration profile that contains “Boot to Cloud Device Configuration Policy”.
-4. Make sure that the “Cloud Desktop” configuration is configured with the **Boot to Cloud Mode** setting set to **Enable Boot to Cloud Desktop**.
+2. Search for the policy sets whose names contain “Window 365 Boot Policy Set”.  One of the results is the policy associated with the Windows 365 Boot device.
+3. In the **Device management properties** section, select the Device configuration profile that contains “Windows 365 Boot Device Configuration Policy”.
+4. Make sure that the “Cloud Desktop” configuration is configured with the **Windows 365 Boot Mode** setting set to **Enable Windows 365 Boot Desktop**.
 5. Select **Device assignment status** and make sure that the configuration policy has been successfully applied to it.
 6. If the check-in status isn't successful, see [Troubleshooting policies and profiles in Microsoft Intune](/troubleshoot/mem/intune/device-configuration/troubleshoot-policies-in-microsoft-intune).
 
@@ -140,8 +140,8 @@ Windows 365 Boot is configured through the [Windowslogon CSP](/windows/client-ma
 **Troubleshooting steps**: If you configured your device for Windows 365 Boot using the [Windows 365 Boot Guided Scenario](windows-365-boot-guide.md):
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Policy** > **Policy sets** > **Manage** > **Policy sets**.
-2. Search for the policy sets whose names contain “Boot To Cloud Policy Set”.  One of the results is the policy associated with the Windows 365 Boot device.
-3. In the **Device management properties** section, select the Device configuration profile that contains “Boot to Cloud Device Configuration Policy”.
+2. Search for the policy sets whose names contain “Windows 365 Boot Policy Set”.  One of the results is the policy associated with the Windows 365 Boot device.
+3. In the **Device management properties** section, select the Device configuration profile that contains “Windows 365 Boot Device Configuration Policy”.
 4. Make sure that the "Windows Logon" configuration is configured with the **Override Shell Program** setting set to **Apply Lightweight shell**.
 5. Select **Device assignment status** and make sure that the configuration policy has been successfully applied to it.
 6. If the check-in status isn't successful, see [Troubleshooting policies and profiles in Microsoft Intune](/troubleshoot/mem/intune/device-configuration/troubleshoot-policies-in-microsoft-intune).

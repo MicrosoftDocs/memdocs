@@ -41,7 +41,7 @@ If the user can't access the Cloud PC from the Windows 365 Boot physical device,
 1. Check to see if you can sign in to the Cloud PC from either:
     - The browser at windows365.microsoft.com.
     - The Windows 365 app on another (non-Windows 365 Boot) device.
-2. If you can log into the Cloud PC from either method, then there's an issue with the Windows 365 Boot physical device. In this case, confirm that the physical device is correctly configured and has the requisite software versions installed as explained in the following sections.
+2. If you can log into the Cloud PC from either method, then there's an issue with the Windows 365 Boot physical device. In this case, confirm that the physical device is correctly configured and has the requisite software versions. For more information, see [Windows 365 Boot physical device requirements](windows-365-boot-physical-device-requirements.md).
 
 ## Physical device registry key configuration
 
@@ -73,7 +73,7 @@ Windows 365 Boot also requires that the physical device is in the **Beta channel
 
 If you're unable to identify the source of the issue, you can try to removing and re-adding Windows 365 Boot from the physical device.
 
-### Remove Windows 365 from the physical device
+### Remove Windows 365 Boot from the physical device
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Groups** > **All groups**.
 2. Select the group for your Windows 365 boot devices > **Members**.
@@ -100,8 +100,8 @@ If you're still unable to troubleshoot the problem, you can contact Microsoft su
 
 Windows 365 and Azure AD log information is helpful to Microsoft support. Collect it beforehand from the following locations:
 
-- C:\Users\{username}\AppData\Local\Temp\DiagOutputDir\Windows365\Logs  
-- C:\Users\{username}\AppData\Local\Temp\DiagOutputDir\RdClientAutoTrace
+- C:\Users\\{username}\AppData\Local\Temp\DiagOutputDir\Windows365\Logs  
+- C:\Users\\{username}\AppData\Local\Temp\DiagOutputDir\RdClientAutoTrace
 
 Put these logs in a zip file and provide it to the Microsoft support team for further investigation.
 
@@ -113,7 +113,7 @@ On the physical device, get the CorrelationId, SessionIDd, or ActivityID.
 
 ### Session ID
 
-You can find the Windows 365 Session ID in error dialog boxes, like **Something went wrong**.
+You can find the Windows 365 Session ID in error dialog boxes. For example, the error dialog box that says **Something went wrong** includes and ID.
 
 ### Correlation ID
 

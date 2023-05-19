@@ -36,12 +36,10 @@ Windows 365 Boot is in [public preview](..\public-preview.md). During this previ
 
 Windows 365 Boot lets admins configure Windows 11 Pro physical devices so that users can:
 
-- Bypass their physical device's sign in process.
-- Sign in directly to their Windows 365 Cloud PC on their physical device. 
+- Avoid signing in to their physical device.
+- Sign in directly to their Windows 365 Cloud PC on their physical device.
 
-When a user turns on their physical device, Windows 365 Boot takes them to the Cloud PC's Windows 11 sign-in experience. After sign in, they're directly connected to their Windows 365 Cloud PC with no extra steps in between.
-
-Bypassing the physical device sign-in reduces the time it takes the user to access their Cloud PC.
+When a user turns on their physical device and signs in, Windows 365 Boot signs them in directly to their Cloud PC, not their physical device. If single sign-on is turned on for their Cloud PC, they don't have to sign in again to their Cloud PC. This expedited sign in process reduces the time it takes the user to access their Cloud PC.
 
 Multiple users can use the same physical device to sign in to their own personal Cloud PCs. When each user signs in to the physical device, their unique identity takes them to their assigned and secure Cloud PC. This flexibility makes Windows 365 Boot a good solution for workers such as nursing, salespeople, and call centers, who share company physical devices. Such workers might frequently switch between physical tasks and computer interaction. Windows 365 Boot lets them bypass the lengthy startup process and boot directly into their secure Cloud PC to pick up right where they left off.
 
@@ -61,7 +59,7 @@ During the preview, Windows 365 Boot doesn't automatically set these policies to
 
 ## Process overview
 
-1. Using Intune's [Windows 365 Boot guided scenario](windows-365-boot-guide.md), configure the physical device for Windows 365 Boot.
+1. Using the [Windows 365 Boot guided scenario](windows-365-boot-guide.md) in the Microsoft Intune admin center, configure the physical device for Windows 365 Boot.
 2. Set up each physical device for Windows 365 Boot configuration.
 3. [Restrict user access to Windows 365 Boot physical devices](windows-365-boot-restrict-user-access-physical-device.md).
 4. After the device is configured, multiple users can access their dedicated Cloud PCs from the same Windows 365 Boot physical device.  
