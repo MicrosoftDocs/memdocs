@@ -35,12 +35,7 @@ The following tables lists the built-in roles for Microsoft Intune. The tables a
 > [!NOTE]
 > This article was partially created with the help of artificial intelligence. Before publishing, an author reviewed and revised the content as needed. See [Our principles for using AI-generated content in Microsoft Learn](https://aka.ms/ai-content-principles).
 
-## Permissions for built-in roles
-
-</br>
-
-<details>
-<summary><b>Application Manager</b></summary>
+## Application Manager
 
 Application Managers manage mobile and managed applications, can read device information and can view device configuration profiles.
 
@@ -88,9 +83,8 @@ Application Managers manage mobile and managed applications, can read device inf
 | Policy Sets | Update |
 | Windows Enterprise Certificate | Read |
 
-</details>
-<details>
-<summary><b>Endpoint Security Manager</b></summary>
+
+## Endpoint Security Manager
 
 Manages security and compliance features such as security baselines, device compliance, conditional access, and Microsoft Defender ATP.
 
@@ -169,9 +163,8 @@ Manages security and compliance features such as security baselines, device comp
 | Terms and conditions | Read |
 | Windows Enterprise Certificate | Read |
 
-</details>
-<details>
-<summary><b>Endpoint Privilege Manager</b></summary>
+
+## Endpoint Privilege Manager
 
 Endpoint Privilege Managers can manage Endpoint Privilege Management (EPM) policies in the Intune console.
 
@@ -185,9 +178,8 @@ Endpoint Privilege Managers can manage Endpoint Privilege Management (EPM) polic
 | Endpoint Privilege Management Policy Authoring | View Reports |
 | Organization | Read |
 
-</details>
-<details>
-<summary><b>Read Only Operator</b></summary>
+
+## Read Only Operator
 
 Read Only Operators view user, device, enrollment, configuration and application information and cannot make changes to Intune.
 
@@ -244,9 +236,8 @@ Read Only Operators view user, device, enrollment, configuration and application
 | Terms and conditions | Read |
 | Windows Enterprise Certificate | Read |
 
-</details>
-<details>
-<summary><b>Organizational Messages Manager</b></summary>
+
+## Organizational Messages Manager
 
 Organizational Messages Managers can manage organizational messages in Intune console.
 
@@ -260,9 +251,8 @@ Organizational Messages Managers can manage organizational messages in Intune co
 | Organizational Messages | Update |
 | Organizational Messages | Update organizational message control |
 
-</details>
-<details>
-<summary><b>School Administrator</b></summary>
+
+## School Administrator
 
 School Administrators can manage apps and settings for their groups. They can take remote actions on devices, including remotely locking them, restarting them, and retiring them from management.
 
@@ -374,9 +364,8 @@ School Administrators can manage apps and settings for their groups. They can ta
 | Windows Enterprise Certificate | Modify |
 | Windows Enterprise Certificate | Read |
 
-</details>
-<details>
-<summary><b>Policy and Profile manager</b></summary>
+
+## Policy and Profile manager
 
 Policy and Profile Managers manage compliance policy, configuration profiles, Apple enrollment and corporate device identifiers.
 
@@ -450,9 +439,8 @@ Policy and Profile Managers manage compliance policy, configuration profiles, Ap
 | Quiet Time policies | Update |
 | Quiet Time policies | View Reports |
 
-</details>
-<details>
-<summary><b>Help Desk Operator</b></summary>
+
+## Help Desk Operator
 
 Help Desk Operators perform remote tasks on users and devices and can assign applications or policies to users or devices.
 
@@ -541,9 +529,8 @@ Help Desk Operators perform remote tasks on users and devices and can assign app
 | Terms and conditions | Read |
 | Windows Enterprise Certificate | Read |
 
-</details>
-<details>
-<summary><b>Endpoint Privilege Reader</b></summary>
+
+## Endpoint Privilege Reader
 
 Organizational Messages Readers can view Endpoint Privilege Management (EPM) policies in the Intune console.
 
@@ -553,9 +540,8 @@ Organizational Messages Readers can view Endpoint Privilege Management (EPM) pol
 | Endpoint Privilege Management Policy Authoring | View Reports |
 | Organization | Read |
 
-</details>
-<details>
-<summary><b>Intune Role Administrator</b></summary>
+
+## Intune Role Administrator
 
 Intune Role Administrators manage custom Intune roles and add assignments for built-in Intune roles. It is the only Intune role that can assign permissions to Administrators.
 
@@ -568,4 +554,4 @@ Intune Role Administrators manage custom Intune roles and add assignments for bu
 | Roles | Read |
 | Roles | Update |
 
-</details> 
+ 
