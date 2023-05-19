@@ -34,7 +34,7 @@ ms.collection:
 
 By following this [guided scenario](/en-us/mem/intune/fundamentals/guided-scenarios-overview), you can deploy [Windows 365 Boot](windows-365-boot-overview.md) to shared Windows 11 Pro physical devices. Windows 365 Boot lets physical device users sign in directly to their Cloud PCs, completely bypassing the physical devices sign-in process.
 
-The guide steps you through defining:
+This guide steps you through defining:
 
 1. Autopilot device name templates and resource name prefixes.
 2. Windows update settings.
@@ -44,15 +44,15 @@ The guide steps you through defining:
 ## Prerequisites
 
 - Each physical device must be running Windows 11 Pro.
-- You must have a Group or Intune admin role.
+- You must have the Intune Service Administrator role.
 
-Before adding physical devices to the group, you must ensure that they meet the Windows 365 Boot requirements.
+Before adding physical devices to the group, you must ensure that they meet the [Windows 365 Boot requirements](windows-365-boot-physical-device-requirements.md).
 
 You can complete the guided scenario before there are any devices in the group. After devices are added to the group, and have internet access, they'll automatically get updated with the Windows 365 Boot settings defined in the guided scenario.
 
 ## Step 1 - Introduction
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as a user with at least a Group and Intune Admin role.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as a user with the Intune Service Administrator role.
 2. Select **Devices** > **Windows 365** (under **Provisioning**) > **Windows 365 Boot** (under Windows 365 guides).
 3. On the **Introduction** page, select **Next: Basics**.
 
@@ -86,8 +86,7 @@ On the **Endpoint updates** page, set the options that you want to use for Windo
 
 ![Screenshot of Windows 365 Boot guided scenario Endpoint updates tab.](./media/windows-365-boot-guide/endpoint-updates-tab.png)
 
-
-Windows 365 Boot supports Windows Autopatch to automate patch management to Windows 365 Boot physical devices.
+Windows 365 Boot supports [Windows Autopatch](/windows/deployment/windows-autopatch/overview/windows-autopatch-overview) to automate patch management to Windows 365 Boot physical devices. If you use this automation, it should be configured outside this guided scenario.  
 
 ## Step 4 - Settings
 
@@ -100,17 +99,17 @@ Windows 365 Boot supports Windows Autopatch to automate patch management to Wind
 
 Select the groups that will receive this guided scenario, and all the resources it creates. You can assign existing groups, or create new ones and assign them.
 
-- **Create new group**: Creates a new group, and deploys the guided scenario policies to this group. As devices are added to this group, they start to receive this guided scenario.
+- **Create new group**: Creates a new group, and deploys the guided scenario policies to this group. As devices are added to this group, they receive the resources from this guided scenario.
 
   - **Group name**: Enter the group name. For example, enter `Windows 365 boot physical devices`.
 
-- **Choose an existing group**: Select an existing group. You guided scenario policies are deployed to this group.
+- **Choose an existing group**: Select an existing group. You guided scenario resources are deployed to this group.
 
 When you're done assigning groups, select **Next: Review + create**.
 
 You can complete the guided scenario before there are any devices in the group. When devices are added to the group, and have internet access, they automatically start receiving the policies in this guided scenario.
 
-You can also add preregistered Windows Autopilot devices to the group. Add them to the group before you enroll or apply any policies. For steps to set up new devices with Autopilot, see  New Device Setup documentation.
+You can also add preregistered Windows Autopilot devices to the group. Add them to the group before you enroll or apply any policies. For steps to set up new devices with Windows Autopilot, see [Windows 365 Boot physical device requirements](windows-365-boot-physical-device-requirements.md).
 
 ## Step 6 - Review + create
 

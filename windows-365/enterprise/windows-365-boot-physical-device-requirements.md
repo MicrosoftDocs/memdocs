@@ -30,9 +30,9 @@ ms.collection:
 - tier2
 ---
 
-# Windows 365 Boot physical device requirements
+# Windows 365 Boot physical device setup and requirements
 
-Shared physical devices for Windows 365 Boot have the following requirements.
+Follow these steps and requirements to setup shared physical devices for Windows 365 Boot.
 
 ## Install Windows Insider Program Preview Build
 
@@ -63,12 +63,12 @@ If the device is already registered with Autopilot, skip this section.
 
 ## Add the physical device to the Azure Active Directory group
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as a user with at least a Group and Intune Admin role.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as a user with the Intune Service Administrator role.
 2. Select **Groups** > **All groups** > search for the Azure Active Directory (Azure AD) group that you used in the [Windows 365 Boot guided scenario](windows-365-boot-guide.md) > select the group.
 3. On the group page, select **Members** > **Add members** > search physical device's serial number > select the physical device > **Select**.
 4. Wait several minutes while the resource assignments complete.
 
-During this time, review your other device configurations that may apply to the device. Make sure that they're appropriate for a device that only directly connects to a Windows 365 Cloud PC. Unassign unnecessary apps and configuration profiles to make sure the Windows 365 Boot connection experience is seamless connection experience. Also see [Restrict user access to Windows 365 Boot physical devices](windows-365-boot-restrict-user-access-physical-device.md).
+During this time, review your other device configurations that may apply to the device. Make sure that they're appropriate for a device that only directly connects to a Windows 365 Cloud PC. Unassign unnecessary apps and configuration profiles to make sure the Windows 365 Boot connection is a seamless connection experience. Also see [Restrict user access to Windows 365 Boot physical devices](windows-365-boot-restrict-user-access-physical-device.md).
 
 ## Sign in to the device
 
