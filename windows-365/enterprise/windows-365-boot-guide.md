@@ -54,11 +54,13 @@ You can complete the guided scenario before there are any devices in the group. 
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as a user with at least a Group and Intune Admin role.
 2. Select **Devices** > **Windows 365** (under **Provisioning**) > **Windows 365 Boot** (under Windows 365 guides).
-3. On the **Introduction** page, select **Next**.
+3. On the **Introduction** page, select **Next: Basics**.
 
 ## Step 2 - Basics
 
 Choose how your devices are named when they enroll, and choose the prefix of all the resources created.
+
+![Screenshot of Windows 365 Boot guided scenario Basics tab.](./media/windows-365-boot-guide/basics-tab.png)
 
 1. **Autopilot device name template**: This guided scenario enrolls your devices in Windows Autopilot. When they enroll, you can optionally name your devices using a unique pattern that applies to all devices. Your options:
 
@@ -76,18 +78,23 @@ Choose how your devices are named when they enroll, and choose the prefix of all
 
      - **Enter a resource prefix name**: Enter some text to put at the beginning of the items created. For example, enter `Windows 365 Boot`. All resources created will be named something like **Windows 365 Boot Azure Virtual Desktop (HostApp)**.
 
-2. Select **Next**.
+2. Select **Next: Endpoint updates**.
 
 ## Step 3 - Endpoint updates
 
-On the **Endpoint updates** page, set the options that you want to use for Windows Updates on the physical devices. Make sure that your choices comply with your organization's security requirements. Select **Next**.
+On the **Endpoint updates** page, set the options that you want to use for Windows Updates on the physical devices. Make sure that your choices comply with your organization's security requirements. Select **Next: Settings**.
+
+![Screenshot of Windows 365 Boot guided scenario Endpoint updates tab.](./media/windows-365-boot-guide/endpoint-updates-tab.png)
+
 
 Windows 365 Boot supports Windows Autopatch to automate patch management to Windows 365 Boot physical devices.
 
 ## Step 4 - Settings
 
+![Screenshot of Windows 365 Boot guided scenario Settings tab.](./media/windows-365-boot-guide/settings-tab.png)
+
 1. (Optional) On the **Settings** page, select the **VPN profile** and **Wifi profile** to use for Windows 365 Boot physical devices.
-1. (Optional) If you don't want to use the operating system's default language, select a specific **Language (region)** > **Next**.
+2. (Optional) If you don't want to use the operating system's default language, select a specific **Language (region)** > **Next: Assignments**.
 
 ## Step 5 - Assignments
 
@@ -99,7 +106,7 @@ Select the groups that will receive this guided scenario, and all the resources 
 
 - **Choose an existing group**: Select an existing group. You guided scenario policies are deployed to this group.
 
-When you're done assigning groups, select **Next**.
+When you're done assigning groups, select **Next: Review + Create**.
 
 You can complete the guided scenario before there are any devices in the group. When devices are added to the group, and have internet access, they automatically start receiving the policies in this guided scenario.
 
