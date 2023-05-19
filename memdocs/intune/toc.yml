@@ -1528,8 +1528,8 @@ items:
           href: ./remote-actions/device-supervised-mode.md
         - name: Shutdown macOS and iOS/iPadOS devices
           href: ./remote-actions/device-shutdown.md
-        - name: Erase macOS device
-          href: ./remote-actions/device-erase.md
+        - name: Wipe macOS device
+          href: ./remote-actions/device-wipe-macos.md
         - name: Disable Activation Lock
           href: ./remote-actions/device-activation-lock-disable.md
         - name: Update cellular data plan
