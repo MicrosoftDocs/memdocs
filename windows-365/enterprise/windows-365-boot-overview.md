@@ -66,6 +66,8 @@ During the preview, Windows 365 Boot doesn't automatically set these policies to
 3. [Restrict user access to Windows 365 Boot physical devices](windows-365-boot-restrict-user-access-physical-device.md).
 4. After the device is configured, multiple users can access their dedicated Cloud PCs from the same Windows 365 Boot physical device.  
 
+![Diagram of the Windows 365 Boot workflow.](./media/windows-365-boot-overview/workflow.png)
+
 <!-- ########################## -->
 ## Next steps
 

@@ -106,7 +106,7 @@ Select the groups that will receive this guided scenario, and all the resources 
 
 - **Choose an existing group**: Select an existing group. You guided scenario policies are deployed to this group.
 
-When you're done assigning groups, select **Next: Review + Create**.
+When you're done assigning groups, select **Next: Review + create**.
 
 You can complete the guided scenario before there are any devices in the group. When devices are added to the group, and have internet access, they automatically start receiving the policies in this guided scenario.
 
