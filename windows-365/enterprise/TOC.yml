@@ -259,6 +259,8 @@ items:
       href: troubleshoot-windows-365-app.md
     - name: Windows 365 Boot
       href: troubleshoot-windows-365-boot.md
+    - name: Windows 365 Boot known issues
+      href: windows-365-boot-known-issues.md
 - name: Reference
   items:
     - name: Get audit logs by using PowerShell
