@@ -32,7 +32,7 @@ ms.collection:
 
 # Guided scenario - deploy Windows 365 Boot to shared physical devices
 
-By following this [guided scenario](/en-us/mem/intune/fundamentals/guided-scenarios-overview), you can deploy [Windows 365 Boot](windows-365-boot-overview.md) to shared Windows 11 Pro physical devices. Windows 365 Boot lets physical device users sign in directly to their Cloud PCs, completely bypassing the physical devices sign-in process.
+By following this guided scenario, you can deploy [Windows 365 Boot](windows-365-boot-overview.md) to shared Windows 11 Pro physical devices. Windows 365 Boot lets physical device users sign in directly to their Cloud PCs, without signing in to their physical devices.
 
 This guide steps you through defining:
 
@@ -40,6 +40,8 @@ This guide steps you through defining:
 2. Windows update settings.
 3. VPN profile, Wifi profile, and language settings.
 4. Group assignments to identify which physical devices are set up for Windows 365 Boot.
+
+For more information about guided scenarios in general, see [Intune guided scenarios overview](/en-us/mem/intune/fundamentals/guided-scenarios-overview).
 
 ## Prerequisites
 
@@ -76,9 +78,9 @@ Choose how your devices are named when they enroll, and choose the prefix of all
 
    - **Resource name prefix**: When you deploy this guided scenario, several resources are automatically created. To distinguish the items used in this deployment, add a prefix:
 
-     - **Enter a resource prefix name**: Enter some text to put at the beginning of the items created. For example, enter `Windows 365 Boot`. All resources created will be named something like **Windows 365 Boot Azure Virtual Desktop (HostApp)**.
+2. **Enter a resource prefix name**: Enter some text to put at the beginning of the items created. For example, enter `Windows 365 Boot`. All resources created will be named something like **Windows 365 Boot Azure Virtual Desktop (HostApp)**.
 
-2. Select **Next: Endpoint updates**.
+3. Select **Next: Endpoint updates**.
 
 ## Step 3 - Endpoint updates
 
