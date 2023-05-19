@@ -33,13 +33,16 @@ ms.collection:
 
 # Wipe all data from a macOS device
 
-Intune gives you the ability to use the **Wipe** remote device action to wipe data from macOS devices, including the operating system. It's important to note that the device is also  removed from Intune management and no warning is given to the end user once a wipe is initiated.
+Intune gives you the ability to use the **Wipe** remote device action to wipe data from macOS devices, including the operating system.
+
+> [!IMPORTANT] 
+> When you use **Wipe**, the device is also removed from Intune management and no warning is given to the end user once a wipe is initiated.
 
 ## Before you start
 
 - For devices running macOS 12.0.1 and later, review the requirements for erasing devices available on the [Apple Support site](https://support.apple.com/en-ph/guide/deployment/dep0a819891e/web).
 
-- For devices running a version of macOS below 12.0.1, macOS will need to be reinstalled. Steps covering how to reinstall macOS are available on the [Apple Support site](https://support.apple.com/en-us/HT204904).
+- For devices running a version of macOS earlier to 12.0.1, macOS must be reinstalled. Steps covering how to reinstall macOS are available on the [Apple Support site](https://support.apple.com/en-us/HT204904).
 
 ## How to use Wipe
 
@@ -47,9 +50,9 @@ Intune gives you the ability to use the **Wipe** remote device action to wipe da
 
     :::image type="content" source="./media/device-wipe-mac-os/wipeaction-mac-os.png" alt-text="Screen shot that shows where in the Intune admin center you select Wipe." lightbox="./media/device-wipe-mac-os/wipeaction-mac-os.png":::
 
-2. Provide a 6-digit number for the **Recovery PIN**. The six-digit PIN is required to reinstall the operating system on the device if the device is not equipped with T2 security chip enabled (i.e. the model year of the device is 2018 and earlier, or the device is running macOS 10.14 or earlier). Be sure to make a note of this PIN and give it to the device owner as it won't be visible after the wipe action completes.
+2. Provide a 6-digit number for the **Recovery PIN**. The six-digit PIN is required to reinstall the operating system on the device, if the device isn't equipped with T2 security chip enabled (that is, the model year of the device is 2018 and earlier, or the device is running macOS 10.14 or earlier). Be sure to make a note of this PIN and give it to the device owner as it won't be visible after the wipe action completes.
 
-    :::image type="content" source="./media/device-wipe-mac-os/obliteration-behavior.png" alt-text="Screen shot that shows where in the Intune admin center you select Wipe." lightbox="./media/device-wipe-mac-os/obliteration-behavior.png":::
+    :::image type="content" source="./media/device-wipe-mac-os/obliteration-behavior.png" alt-text="Screen shot that shows where to provide a pin and select an option for obliteration behavior." lightbox="./media/device-wipe-mac-os/obliteration-behavior.png":::
 
 3. Select an option from **Obliteration Behavior**, which is used to define the fallback for devices when Erase All Contents and Settings (EACS) fails. The following options can be configured:
 
