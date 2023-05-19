@@ -1402,6 +1402,11 @@
             "source_path": "memdocs/configmgr/core/understand/microsoft-endpoint-manager-faq.yml",
             "redirect_url": "/mem/configmgr/core/understand/configuration-manager-faq",
             "redirect_document_id": false            
+        },
+        {
+            "source_path": "memdocs/intune/remote-actions/device-erase.md",
+            "redirect_url": "/mem/intune/remote-actions/device-wipe-macos.md",
+            "redirect_document_id": false            
         }
     ]
 }
