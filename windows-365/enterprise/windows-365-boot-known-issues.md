@@ -71,12 +71,6 @@ The user is automatically signed in to the first available Cloud PC from the lis
 
 Windows 365 Boot doesn't completely restrict the user from accessing the physical device. For more information on how to secure the physical device see [Restrict user access to Windows 365 Boot physical device](windows-365-boot-restrict-user-access-physical-device.md).
 
-## Camera access is denied in Cloud PC
-
-The user gets a prompt to let the Azure Virtual Desktop (HostApp) access the camera. If the user doesn't grant access at that time, there is no way for the end user to grant such camera access after the device is configured for Windows 365 Boot.
-
-**Troublehsooting steps**: The Admin must un-enroll the device, configure the camera permissions for the app, and then re-enroll the device for Windows 365 Boot.
-
 ## Other sign-in options besides username/password are displayed on the sign-in screen
 
 Windows 365 Boot is used with the Shared PC configuration service provider (CSP). This CSP doesn't support sign-in methods other than username/password.
