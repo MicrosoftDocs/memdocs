@@ -68,7 +68,7 @@ During the preview, Windows 365 Boot doesn't automatically set these policies to
 
 ## User sign-in authentication modes
 
-Windows 365 Boot supports username/password-based authentication for user sign in to their Cloud PC. Windows Hello for Business, convenience PIN, and FIDO key authentication modes are not supported.
+Windows 365 Boot supports username/password-based authentication for user sign in to their Cloud PC. Windows Hello for Business, convenience PIN, and FIDO key authentication modes aren't supported.
 
 <!-- ########################## -->
 ## Next steps

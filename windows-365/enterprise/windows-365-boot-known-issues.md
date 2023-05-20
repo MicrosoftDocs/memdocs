@@ -38,15 +38,15 @@ This page lists recent known issues with [Windows 365 Boot](windows-365-boot-ove
 
 Wi-fi connections that require captive browser-based authentication or consent aren't supported.
 
-User-based wi-fi profiles that require the user to sign-in to connect to wi-fi aren't supported. New users who've never signed in before converting the device to a Windows 365 Boot device won't be able to use the device to connect it to the network.
+User-based wi-fi profiles that require the user to sign-in to connect to wi-fi aren't supported. New users who have never signed in before converting the device to a Windows 365 Boot device can't use the device to connect it to the network.
 
-## VPN support support
+## VPN support
 
-Windows 365 Boot only supports VPN clients that don't require application installation. App-based VPN clients that require users to sign in aren't supported because users on't be able to intereact with the VPN client from a Windows 365 Boot device.
+Windows 365 Boot only supports VPN clients that don't require application installation. App-based VPN clients that require users to sign in aren't supported because users can't interact with the VPN client from a Windows 365 Boot device.
 
 ## Exiting the session on sleep or closing the device
 
-The user isn't completely signed out after closing the laptop lid. When they open the laptop, they'll see the app trying to disconnect or a black screen. Eventually, it will sign out the user from session.
+The user isn't completely signed out after closing the laptop lid. When they open the laptop, they see the app trying to disconnect or a black screen. Eventually, it signs the user out from the session.
 
 ## Wireless peripheral devices not supported
 
@@ -69,7 +69,7 @@ The user is automatically signed in to the first available Cloud PC from the lis
 
 ## Restricted access to physical device
 
-Windows 365 Boot doesn't completely restrict the user from accessing the physical device. For more information on how to secure the physical device see [Restrict user access to Windows 365 Boot physical device](windows-365-boot-restrict-user-access-physical-device.md).
+Windows 365 Boot doesn't completely restrict the user from accessing the physical device. For more information, see [Restrict user access to Windows 365 Boot physical device](windows-365-boot-restrict-user-access-physical-device.md).
 
 ## Other sign-in options besides username/password are displayed on the sign-in screen
 
