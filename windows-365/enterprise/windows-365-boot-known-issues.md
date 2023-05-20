@@ -34,6 +34,43 @@ ms.collection:
 
 This page lists recent known issues with [Windows 365 Boot](windows-365-boot-overview.md).
 
+## Wi-fi connectivity
+
+Wi-fi connections that require captive browser-based authentication or consent aren't supported.
+
+User-based wi-fi profiles that require the user to sign-in to connect to wi-fi aren't supported. New users who have never signed in before converting the device to a Windows 365 Boot device can't use the device to connect it to the network.
+
+## VPN support
+
+Windows 365 Boot only supports VPN clients that don't require application installation. App-based VPN clients that require users to sign in aren't supported because users can't interact with the VPN client from a Windows 365 Boot device.
+
+## Exiting the session on sleep or closing the device
+
+The user isn't completely signed out after closing the laptop lid. When they open the laptop, they see the app trying to disconnect or a black screen. Eventually, it signs the user out from the session.
+
+## Wireless peripheral devices not supported
+
+Only wired peripheral devices (like headphones, keyboard, mouse, and printer) are currently supported.
+
+## Duplicate dialog boxes for some shortcut and sticky keys
+
+Duplicate dialog boxes might display for the physical device and the Cloud PC. This issue can happen for:
+
+- Some shortcut keys, like Win + G or sticky keys.
+- Enabling accessibility key settings, like High Contrast, Num Keys, or Toggle Key.
+
+## Kiosk mode not supported
+
+Windows 365 Boot isn't currently supported in Kiosk mode on Windows.
+
+## User has multiple Cloud PCs
+
+The user is automatically signed in to the first available Cloud PC from the list of Cloud PCs assigned to the user. The user can't choose the Cloud PC that they want to sign in to.
+
+## Restricted access to physical device
+
+Windows 365 Boot doesn't completely restrict the user from accessing the physical device. For more information, see [Restrict user access to Windows 365 Boot physical device](windows-365-boot-restrict-user-access-physical-device.md).
+
 ## Other sign-in options besides username/password are displayed on the sign-in screen
 
 Windows 365 Boot is used with the Shared PC configuration service provider (CSP). This CSP doesn't support sign-in methods other than username/password.

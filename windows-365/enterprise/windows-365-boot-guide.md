@@ -45,7 +45,7 @@ For more information about guided scenarios in general, see [Intune guided scena
 
 ## Prerequisites
 
-- Each physical device must be running Windows 11 Pro.
+- Each physical device must be running Windows 11 Enterprise or Professional.
 - You must have the Intune Service Administrator role.
 
 Before adding physical devices to the group, you must ensure that they meet the [Windows 365 Boot requirements](windows-365-boot-physical-device-requirements.md).
