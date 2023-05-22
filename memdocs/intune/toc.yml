@@ -891,7 +891,11 @@ items:
             href: ./protect/security-baseline-settings-mdm-all.md
           - name: Microsoft Defender for Endpoint baseline settings 
             href: ./protect/security-baseline-settings-defender-atp.md
-          - name: Microsoft Edge baseline settings
+          - name: Microsoft 365 Apps for Enterprise baseline settings (Office) 
+            href: ./protect/security-baseline-v2-office-settings.md
+          - name: Microsoft Edge baseline settings (version 112 and higher)
+            href: ./protect/security-baseline-v2-edge-settings.md
+          - name: Microsoft Edge baseline settings (version 85 and older)
             href: ./protect/security-baseline-settings-edge.md
           - name: Windows 365 baseline settings
             href: ./protect/security-baseline-settings-windows-365.md
