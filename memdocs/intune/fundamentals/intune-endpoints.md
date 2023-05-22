@@ -135,6 +135,8 @@ This provides a convenient method to list and review all services required by In
 |edge.skype.com| Remote Help |
 |remoteassistanceprodacs.communication.azure.com| Remote Help |
 |lgmsapeweu.blob.core.windows.net | Collect Diagnostics |
+|fd.api.orgmsg.microsoft.com | Organizational messages |
+|ris.prod.api.personalization.ideas.microsoft.com | Organizational messages |
 
 The following tables list the ports and services that the Intune client accesses:
 
