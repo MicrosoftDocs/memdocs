@@ -8,7 +8,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/22/2022
+ms.date: 05/15/2023
 ms.topic: conceptual
 ms.service: mem
 ms.subservice:
@@ -32,9 +32,11 @@ ms.collection:
 
 # Manage your apps and app data in Microsoft Intune
 
-Managing and protecting apps and their data is a significant part of any endpoint management strategy and solution. In most environments, user can install public retail apps and possibly access organization data from these apps. Many organizations also have their own private apps and line-of-business apps that need to be deployed & managed, and make sure this app data stays within the organization.
+Managing and protecting apps and their data is a significant part of any endpoint management strategy and solution. In most environments, users can install public retail apps and possibly access organization data from these apps. Many organizations also have their own private apps and line-of-business apps that need to be deployed & managed, and make sure this app data stays within the organization.
 
 App management can be challenging and Intune can help. Microsoft Intune is a cloud-based service that can manage many apps types. Using Intune, admins can deploy, configure, protect, and update apps that access your organization resources. For more information on Intune and its benefits, go to [What is Microsoft Intune?](what-is-intune.md).
+
+:::image type="content" source="./media/manage-apps/manage-apps-with-intune.png" alt-text="Diagram that shows app management in the Microsoft Intune admin center, including deploying apps, and using app configuration policies & app protection policies for managed apps & personal apps." lightbox="./media/manage-apps/manage-apps-with-intune.png":::
 
 Microsoft Intune supports Android, iOS/iPadOS, macOS and Windows client devices. So, you can use Intune's app management features across your many devices.
 
@@ -131,7 +133,7 @@ The app features in the Intune admin center make it easier to deploy these diffe
 
 When an app is deployed to your users and devices, your users may be prompted for configuration information. Users might not know what to enter or you may have organization settings you want configured a certain way.
 
-App configuration policies give you these features. You can create app configuration policies that automatically configure apps. Depending on your policy settings, users might not need to enter any configuration information.
+App configuration policies give you these features. You can create app configuration policies that automatically configure apps. Depending on your policy settings, users might not need to enter any configuration information when they open the app.
 
 For example, in an app configuration policy, you can enter the app language, add your organization's logo, block apps from using personal accounts, and more.
 
