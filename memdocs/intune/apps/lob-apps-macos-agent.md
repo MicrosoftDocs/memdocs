@@ -51,7 +51,7 @@ The Microsoft Intune management agent is necessary to be installed on managed ma
 
 ## How can I manually initiate an agent check-in from a Mac?
 
-On a managed Mac that has the agent installed, open **Company Portal**, select the local device, select **Check settings**. This initiates an MDM check-in as well as an agent check-in.
+On a managed Mac that has the agent installed, open **Company Portal**, select the local device, select **Check status**. This initiates an MDM check-in as well as an agent check-in.
 
 Alternatively, open **Terminal**, run the `sudo killall IntuneMdmAgent` command to terminate the `IntuneMdmAgent` process. The `IntuneMdmAgent` process restarts immediately, which will initiate a check-in with Intune.
 
