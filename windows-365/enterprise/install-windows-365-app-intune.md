@@ -50,7 +50,7 @@ Some of your users might have physical devices that don't have access to the Mic
 
 If you want to prevent users from accessing the Microsoft Store, you should create a settings catalog configuration profile policy. In the **Settings picker**, search for **Microsoft App Store**, and select **Require Private Store Only**.
 
-For more help using the settings catalog to create a configuration profile policies, see [Use the settings catalog to configure settings on Windows and macOS devices](/mem/intune/configuration/settings-catalog).
+For more help using the settings catalog to create a configuration profile policy, see [Use the settings catalog to configure settings on Windows and macOS devices](/mem/intune/configuration/settings-catalog).
 
 <!-- ########################## -->
 ## Next steps
