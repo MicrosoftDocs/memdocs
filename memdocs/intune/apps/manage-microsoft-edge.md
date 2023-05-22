@@ -100,11 +100,12 @@ SSO requires your device to be registered by either the Microsoft Authenticator 
 
 Edge for iOS and Android supports app settings that allow unified endpoint management, like Microsoft Intune, administrators to customize the behavior of the app.
 
-App configuration can be delivered either through the mobile device management (MDM) OS channel on enrolled devices ([Managed App Configuration](https://developer.apple.com/library/content/samplecode/sc2279/Introduction/Intro.html) channel for iOS or the [Android in the Enterprise](https://developer.android.com/work/managed-configurations) channel for Android) or through the Intune App Protection Policy (APP) channel. Edge for iOS and Android supports the following configuration scenarios:
+App configuration can be delivered either through the mobile device management (MDM) OS channel on enrolled devices ([Managed App Configuration](https://developer.apple.com/library/content/samplecode/sc2279/Introduction/Intro.html) channel for iOS or the [Android in the Enterprise](https://developer.android.com/work/managed-configurations) channel for Android) or through the MAM (Mobile Application Management) channel. Edge for iOS and Android supports the following configuration scenarios:
 
 - Only allow work or school accounts
 - General app configuration settings
 - Data protection settings
+- Additional app configuration for managed devices
 
 > [!IMPORTANT]
 > For configuration scenarios that require device enrollment on Android, the devices must be enrolled in Android Enterprise and Edge for Android must be deployed via the Managed Google Play store. For more information, see [Set up enrollment of Android Enterprise personally-owned work profile devices](../enrollment/android-work-profile-enroll.md) and [Add app configuration policies for managed Android Enterprise devices](app-configuration-policies-use-android.md).
@@ -282,6 +283,21 @@ Edge for Android can be enabled as a kiosk app with the following settings:
 |com.microsoft.intune.mam.managedbrowser.enableKioskMode |**true** enables kiosk mode for Edge for Android <br>**false** (default) disables kiosk mode |
 |com.microsoft.intune.mam.managedbrowser.showAddressBarInKioskMode |**true** shows the address bar in kiosk mode <br>**false** (default) hides the address bar when kiosk mode is enabled|
 |com.microsoft.intune.mam.managedbrowser.showBottomBarInKioskMode |**true** shows the bottom action bar in kiosk mode <br>**false** (default) hides the bottom bar when kiosk mode is enabled |
+
+### Switch network stack between Chromium and iOS 
+
+The layers of the network architecture are called the network stack. The layers of a network stack are broadly divided into sections, such as Network Interface, Network Driver Interface Specification (NDIS), Protocol Stack, System Drivers, and User-Mode Applications.
+
+By default, Microsoft Edge for both iOS and Android use the Chromium network stack for Microsoft Edge service communication, including sync services, auto search suggestions and sending feedback. Microsoft Edge for iOS also provides the iOS network stack as a configurable option for Microsoft Edge service communication.
+
+Organizations can modify their network stack preference by configuring the following setting.
+
+|Key  |Value  |
+|:---------|:---------|
+|com.microsoft.intune.mam.managedbrowser.NetworkStackPref |**0** (default) use the Chromium network stack <br> **1** use the iOS network stack | 
+
+> [!NOTE]
+> Using the Chromium network stack is recommended. If you experience sync issues or failure when sending feedback with the Chromium network stack, for example with certain per-app VPN solutions, using the iOS network stack may solve the issues.
 
 ## Data protection app configuration scenarios
 
@@ -475,24 +491,12 @@ You can retrieve logs from Microsoft Support by giving them the user's incident 
 
 For a list of the settings stored in the app logs, see [Review client app protection logs](app-protection-policy-settings-log.md). 
 
-## Switch network stack between Chromium and iOS 
 
-The layers of the network architecture are called the network stack. The layers of a network stack are broadly divided into sections, such as Network Interface, Network Driver Interface Specification (NDIS), Protocol Stack, System Drivers, and User-Mode Applications.
-
-By default, Microsoft Edge for both iOS and Android use the Chromium network stack for Microsoft Edge service communication, including sync services and auto search suggestions. Microsoft Edge for iOS also provides the iOS network stack as a configurable option for Microsoft Edge service communication.
-
-Organizations can modify their network stack preference by configuring the following setting.
-
-|Key  |Value  |
-|:---------|:---------|
-|com.microsoft.intune.mam.managedbrowser.NetworkStackPref |**0** (default) use the Chromium network stack <br> **1** use the iOS network stack | 
-
-> [!NOTE]
-> Using the Chromium network stack is recommended. If you experience sync issues with the Chromium network stack, for example with certain per-app VPN solutions, using the iOS network stack may improve syncing.
-
-## App configuration policies for Edge
+## Additional app configuration for managed devices
 
 The following policies, originally configurable through managed apps app configuration policy, is now available through managed devices app configuration policy. When using policies for managed apps, users must sign into Microsoft Edge. When using policies for managed devices, users are not required to sign into Edge to apply the policies.
+
+As app configuration policies for managed devices needs device enrollment, any unified endpoint management (UEM) is supported. To find more policies under the MDM channel, see [Microsoft Edge Mobile Policies](/deployedge/microsoft-edge-mobile-policies). 
 
 |     MAM policy    |     MDM policy    |
 |---|---|
@@ -507,8 +511,6 @@ The following policies, originally configurable through managed apps app configu
 |     com.microsoft.intune.mam.managedbrowser.showBottomBarInKioskMode    |     EdgeShowBottomBarInKioskMode    |
 |     com.microsoft.intune.mam.managedbrowser.account.syncDisabled    |     EdgeSyncDisabled    |
 |     com.microsoft.intune.mam.managedbrowser.NetworkStackPref        |     EdgeNetworkStackPref    |
-
-As app configuration policies for managed devices needs device enrollment, any unified endpoint management (UEM) is supported. To find more policies under the MDM channel, see [Microsoft Edge Mobile Policies](/deployedge/microsoft-edge-mobile-policies).
 
 ## Next steps
 

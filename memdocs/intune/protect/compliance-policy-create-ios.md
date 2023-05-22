@@ -100,12 +100,12 @@ For details about email profiles, see [configure access to organization email us
 - **Minimum OS build version**  
   *Supported for iOS 8.0 and later*
 
-  When Apple publishes security updates, the build number is typically updated, not the OS version. Use this feature to enter a minimum allowed build number on the device.
+  When Apple publishes security updates, the build number is typically updated, not the OS version. Use this feature to specify a minimum allowed build number on the device. For Apple Rapid Security Response updates, enter the supplemental build version, such as `20E772520a`.
 
 - **Maximum OS build version**  
   *Supported for iOS 8.0 and later*
 
-  When Apple publishes security updates, the build number is typically updated, not the OS version. Use this feature to enter a maximum allowed build number on the device.
+  When Apple publishes security updates, the build number is typically updated, not the OS version. Use this feature to enter a maximum allowed build number on the device. For Apple Rapid Security Response updates, enter the supplemental build version, such as `20E772520a`.
 
 ## Microsoft Defender for Endpoint
 

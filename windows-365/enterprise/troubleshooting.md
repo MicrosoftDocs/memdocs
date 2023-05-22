@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 04/06/2023
+ms.date: 05/02/2023
 ms.topic: troubleshooting
 ms.service: windows-365
 ms.subservice: 
@@ -122,14 +122,7 @@ When accessing windows365.microsoft.com, the user receives a message "Your organ
 
 ## Performance decreases with nested virtualization
 
-In certain regions, some users may experience a decline in their 4vCPU Cloud PC performance when using nested virtualization. These regions include:
-
-- Southeast Asia
-- Central India
-- South Central US
-- East US 2
-- West US 2
-- West US 3
+Some users may experience a decline in their 4vCPU Cloud PC performance when using nested virtualization.
 
 **Troubleshooting steps:**
 

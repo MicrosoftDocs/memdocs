@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/27/2023
+ms.date: 05/04/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -34,6 +34,9 @@ ms.collection:
 # How to manage volume purchased apps from the Microsoft Store for Business with Microsoft Intune
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
+
+> [!IMPORTANT]
+> The Microsoft Store for Business connector is no longer accessible in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Apps added from the Microsoft Store for Business or Microsoft Store for Education will no longer sync with Intune. Apps that have previously synced will continue to be available and deploy to devices and users. For related information, see [Deprecation of Microsoft Store for Business and Education](../fundamentals/whats-new.md#deprecation-of-microsoft-store-for-business-and-education).
 
 The [Microsoft Store for Business](https://www.microsoft.com/business-store) gives you a place to find and purchase apps for your organization, individually, or in volume. By connecting the store to Microsoft Intune, you can manage volume-purchased apps from the portal. For example:
 
