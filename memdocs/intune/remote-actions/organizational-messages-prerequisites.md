@@ -6,7 +6,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/03/2023
+ms.date: 05/21/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -29,10 +29,7 @@ ms.collection:
 
 # Organizational messages prerequisites   
 
-*Applies to Windows 11*  
-
-> [!IMPORTANT]
-> This feature is in public preview. For more information, see [Public preview in Microsoft Intune](../fundamentals/public-preview.md).  
+*Applies to Windows 11*   
 
 This article describes the tenant, message, and configuration requirements for organizational messages. Employees will not receive messages until you complete all prerequisites.  
 ## Version requirements  
@@ -56,7 +53,7 @@ To create organizational messages in Microsoft Intune, you must be assigned one 
 * Organizational messages manager (Microsoft Intune role)  
 * Organizational messages writer (Azure AD role)  
 
-For more information about role-based access control (RBAC), see [RBAC with Microsoft Intune](../fundamentals/role-based-access-control.md).  
+You can also create a custom role for people managing organization messages using role-based access control (RBAC). For more information about how to use built-in roles and custom roles, see [RBAC with Microsoft Intune](../fundamentals/role-based-access-control.md).    
 
 ## Logo requirements  
 Logos must meet these requirements:  

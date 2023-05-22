@@ -6,7 +6,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/03/2023
+ms.date: 05/31/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -31,9 +31,6 @@ ms.collection:
 
 *Applies to Windows 11*  
 
-> [!IMPORTANT]
-> This feature is in public preview. For more information, see [Public preview in Microsoft Intune](../fundamentals/public-preview.md).  
-
 Create, edit, and monitor [organizational messages](organizational-messages-overview.md) in the Microsoft Intune admin center. You can send important messages and call-to-actions to employees on Windows 11 devices managed by Microsoft Intune. 
 
 This article describes how to create the following types of organizational messages: 
@@ -43,12 +40,17 @@ This article describes how to create the following types of organizational messa
  * Get Started app messages  
 
 ## Before you create a message   
-Complete these steps before creating a message.  
+Complete these steps before creating a message. 
+
+### Review overview and prerequisites    
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Go to  **Tenant administration** > **Organizational messages (preview)**. 
 3. Spend some time in the **Overview** tab to learn about messaging options and prerequisites. 
 
-For more information about the steps you need to take before you create a message, see [Prerequisites](organizational-messages-prerequisites.md).   
+### Confirm license requirements  
+1. Go to the **Message** tab.  
+2. Review licensing requirements ad verify that your tenant meets the requirements. Then select **I confirm that my organization owns the appropriate license and I undestand the Windows device requirements.** 
+3. Select **Confirm**.  
 
 ## Step 1: Create a message  
 

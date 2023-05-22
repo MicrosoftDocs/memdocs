@@ -6,7 +6,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/06/2023
+ms.date: 05/31/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -29,10 +29,7 @@ ms.collection:
 
 # Organizational messages in Microsoft Intune 
 
-*Applies to Windows 11*  
-
-> [!IMPORTANT]
-> This feature is in public preview. For more information, see [Public preview in Microsoft Intune](../fundamentals/public-preview.md).  
+*Applies to Windows 11*   
 
 Use organizational messages to send important messages to employees on Intune-managed Windows 11 devices.  Organizational messages can be used to communicate in remote and hybrid work scenarios and is intended to help employees:  
 
