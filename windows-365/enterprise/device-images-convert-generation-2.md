@@ -117,7 +117,7 @@ There are four main steps to this process:
 2. Go to the [Azure portal](https://portal.azure.com), open **Images** > **Create**.
 3. Fill in the required fields and make sure to select **Gen 2** for **VM generation**.
 4. Select **Review + Create**.
-5. [Optional] After the image is created, you can upload it to the Shared Image Gallery. For instructions on how to upload, see [Upload the custom image to a shared image gallery](/azure/lab-services/upload-custom-image-shared-image-gallery#upload-the-custom-image-to-a-shared-image-gallery).
+5. (Optional) After the image is created, you can upload it to the Shared Image Gallery. For instructions on how to upload, see [Upload the custom image to a shared image gallery](/azure/lab-services/upload-custom-image-shared-image-gallery#upload-the-custom-image-to-a-shared-image-gallery).
 6. You can now add the device image to Windows 365. For information on how to upload custom images, see [Add a custom device image](add-device-images.md#add-a-custom-device-image).
 
 <!-- ########################## -->
