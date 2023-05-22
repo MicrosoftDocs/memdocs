@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 5/24/2023
+ms.date: 5/23/2023
 ms.topic: troubleshooting
 ms.service: windows-365
 ms.subservice: 
@@ -109,11 +109,11 @@ Put these logs in a zip file and provide it to the Microsoft support team for fu
 
 When contacting Microsoft support about Windows 365 Boot issues, make sure to collect relevant IDs to help in the investigation.
 
-On the physical device, get the CorrelationId, SessionIDd, or ActivityID.
+On the physical device, get the CorrelationId, SessionID, or ActivityID.
 
 ### Session ID
 
-You can find the Windows 365 Session ID in error dialog boxes. For example, the error dialog box that says **Something went wrong** includes and ID.
+You can find the Windows 365 Session ID in error dialog boxes. For example, the error dialog box that says **Something went wrong** and includes an ID.
 
 ### Correlation ID
 
