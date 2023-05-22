@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 05/15/2023
+ms.date: 05/23/2023
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice:
@@ -45,6 +45,12 @@ Some of your users might have physical devices that don't have access to the Mic
     2. Under **Available for enrolled devices**, select **Add group** and add the user groups. The Windows 365 app is displayed in the Company Portal app and website for users to optionally install.
     3. After you've selected all the groups, select **Next**
 7. On the **Review + create** page, select **Create**.
+
+## Block access to the Microsoft Store
+
+If you want to prevent users from accessing the Microsoft Store, you should create a catalog configuration profile policy. In the **Settings picker**, search for **Microsoft App Store, and select **Require Private Store Only**.
+
+For more help using the settings catalog to create a configuration profile policies, see [Use the settings catalog to configure settings on Windows and macOS devices](/mem/intune/configuration/settings-catalog).
 
 <!-- ########################## -->
 ## Next steps
