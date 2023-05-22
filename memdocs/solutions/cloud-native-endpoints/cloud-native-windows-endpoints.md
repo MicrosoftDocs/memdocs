@@ -431,8 +431,7 @@ By default, the built-in local administrator account ([well known SID](/windows-
 > [!NOTE]
 >
 > Windows LAPS assumes that the default local administrator account is enabled (even if renamed), or that you have created another local admin account to be managed. Windows LAPS does not create or enable any local
-> accounts for you. You'll need to perform these actions seperatly from configuring Windows LAPS, using either scripting or Configuration Service Providers (CSP's) such as the [Accounts CSP]
-> (/windows/client-management/mdm/accounts-csp) or [Policy CSP](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions).
+> accounts for you. You'll need to perform these actions seperatly from configuring Windows LAPS, using either scripting or Configuration Service Providers (CSP's) such as the [Accounts CSP](/windows/client-management/mdm/accounts-csp) or [Policy CSP](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions).
 
 1. Ensure your Windows 10 (20H2 or later) or Windows 11 devices have the April 2023 (or later) security update installed.
    For more information, go to [Operating system updates](/azure/active-directory/devices/howto-manage-local-admin-passwords#operating-system-updates)

@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/29/2022
+ms.date: 05/19/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -49,28 +49,27 @@ Intune device limit restrictions set the maximum number of devices that a user c
 
 Azure device limit restrictions set the maximum number of devices that either Azure AD joins or Azure AD registers. To set the **Maximum number of devices per user**, go to the Azure portal > **Azure Active Directory** > **Devices**. For more information, see [Configure device settings](/azure/active-directory/devices/device-management-azure-portal)
 
-## Settings applied based on user affinity
+## Settings applied based on user affinity  
 
 If you enforce both Intune and Azure device limit restrictions, the following table shows you how each limitation is applied.   
 
-| Management solution or identity option | With user affinity? | Azure AD limitation applies? | Intune limitation applies? |  
-| ----- | ----- | ----- | ----- |
-| Android Enterprise personally-owned work profile | Yes | Yes | Yes|  
-| Android Enterprise dedicated device | No | No | No |  
-| Android Enterprise fully managed | Yes | Yes | Yes |  
-| Android Enterprise corporate-owned work profile | Yes | Yes | Yes |  
-| Android device administrator | Yes | Yes | Yes |  
-| Android device administrator DEM | No | | No | 
-| iOS/macOS BYOD | Yes | Yes | Yes |  
-| iOS/macOS Automated Device Enrollment (ADE) | Yes | Yes | Yes |  
-| Windows BYOD | Yes | Yes | Yes |   
-| Windows Azure AD joined| Yes | Yes | No |  
-| Windows Autopilot | Yes | Yes | No |  
-| Windows hybrid Azure AD joined | No | No | Yes |  
-| Windows co-management | No | Yes | No |  
-| Windows DEM | No | Yes | No |  
-| Windows bulk enrollment | No | Yes | No |  
-
+|Platform| Device management solution | User affinity | Does Azure AD limitation apply? | Does Intune limitation apply? |  
+| -----| ----- | ----- | ----- | ----- |
+|Android| Android Enterprise personally-owned work profile | Yes | Yes | Yes|  
+|Android| Android Enterprise dedicated device | No | No | No |  
+|Android| Android Enterprise fully managed | Yes | Yes | Yes |  
+|Android| Android Enterprise corporate-owned work profile | Yes | Yes | Yes |  
+|Android| Android device administrator | Yes | Yes | Yes |  
+|Android| Android device administrator + device enrollment manager | No | Yes | No | 
+|iOS and macOS| BYOD: Apple User Enrollment | Yes | Yes | Yes |  
+|iOS and macOS| BYOD: Apple Device Enrollment | Yes | Yes | Yes |  
+|iOS and macOS| Apple Automated Device Enrollment | Yes | Yes | Yes |  
+|Windows 10/11| BYOD: User enrollment | Yes | Yes | Yes |   
+|Windows 10/11| Automatic enrollment + group policy | No | No | Yes |  
+|Windows 10/11| Automatic enrollment + device enrollment manager | No | Yes | No | 
+|Windows 10/11| Automatic enrollment + bulk device enrollment | No | Yes | No |
+|Windows 10/11| Windows Autopilot | Yes | Yes | No |  
+|Windows 10/11| Co-management with Configuration Manager | No | Yes | No |  
 
 ## Android and iOS devices
 
