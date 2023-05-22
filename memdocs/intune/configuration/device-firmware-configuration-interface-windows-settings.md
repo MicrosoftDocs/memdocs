@@ -226,7 +226,7 @@ These settings are added to a device configuration profile in Intune, and then a
   - **Enabled**: UEFI (BIOS) allows waking a device using the LAN.
   - **Disabled**: UEFI (BIOS) prevents waking a device using the LAN.
 
-- **Wake on power**: Wake on power lets you manage whether eligible devices can be automatically started from hibernation or powered-off states when connected to power. Your options:
+- **Wake on power**: When the device is connected to a power source, this setting manages if eligible devices can be automatically started from hibernation or powered-off states. Your options:
 
   - **Not configured**: Intune doesn't change or update this setting. By default, the OS might prevent waking a device when it's connected to a power source.
   - **Enabled**: UEFI (BIOS) allows waking a device when it's connected to a power source.
