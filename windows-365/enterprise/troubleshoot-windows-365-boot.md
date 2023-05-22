@@ -56,7 +56,7 @@ Confirm that the physical device has been correctly configured to run Windows 36
 
 ## Physical device's versions of Windows 365, Azure Virtual Desktop Apps, and Windows
 
-Windows 365 Boot requires that the physical device runs specific versions of both Windows 365 and Azure Virtual Desktop (Azure AD) (HostApp) apps. To see which versions are installed, run the following PowerShell command in Admin mode:
+Windows 365 Boot requires that the physical device runs specific versions of both Windows 365 and Azure Virtual Desktop (HostApp) apps. To see which versions are installed, run the following PowerShell command in Admin mode:
 
 ```azurepowershell
 Get-AppxPackage –AllUsers -name *MicrosoftCorporationII*
@@ -113,7 +113,7 @@ On the physical device, get the CorrelationId, SessionID, or ActivityID.
 
 ### Session ID
 
-You can find the Windows 365 Session ID in error dialog boxes. For example, the error dialog box that says **Something went wrong** and includes an ID.
+You can find the Windows 365 Session ID in error dialog boxes. For example, the error dialog box that says **Something went wrong**.
 
 ### Correlation ID
 
