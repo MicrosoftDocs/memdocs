@@ -288,7 +288,7 @@ Edge for Android can be enabled as a kiosk app with the following settings:
 
 The layers of the network architecture are called the network stack. The layers of a network stack are broadly divided into sections, such as Network Interface, Network Driver Interface Specification (NDIS), Protocol Stack, System Drivers, and User-Mode Applications.
 
-By default, Microsoft Edge for both iOS and Android use the Chromium network stack for Microsoft Edge service communication, including sync services and auto search suggestions. Microsoft Edge for iOS also provides the iOS network stack as a configurable option for Microsoft Edge service communication.
+By default, Microsoft Edge for both iOS and Android use the Chromium network stack for Microsoft Edge service communication, including sync services, auto search suggestions and sending feedback. Microsoft Edge for iOS also provides the iOS network stack as a configurable option for Microsoft Edge service communication.
 
 Organizations can modify their network stack preference by configuring the following setting.
 
@@ -297,7 +297,7 @@ Organizations can modify their network stack preference by configuring the follo
 |com.microsoft.intune.mam.managedbrowser.NetworkStackPref |**0** (default) use the Chromium network stack <br> **1** use the iOS network stack | 
 
 > [!NOTE]
-> Using the Chromium network stack is recommended. If you experience sync issues with the Chromium network stack, for example with certain per-app VPN solutions, using the iOS network stack may improve syncing.
+> Using the Chromium network stack is recommended. If you experience sync issues or failure when sending feedback with the Chromium network stack, for example with certain per-app VPN solutions, using the iOS network stack may solve the issues.
 
 ## Data protection app configuration scenarios
 
