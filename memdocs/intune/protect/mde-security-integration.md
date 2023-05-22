@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/30/2023
+ms.date: 05/22/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -292,11 +292,11 @@ You can manually sync a device on-demand from the [Microsoft 365 Defender portal
 
 :::image type="content" source="./media/mde-security-integration/policy-sync-from-mde.png" alt-text="Manually sync devices managed by MDE." lightbox="./media/mde-security-integration/policy-sync-from-mde.png":::
 
-The Policy sync button only appears for devices that are successfully managed by MDE. 
+The Policy sync button only appears for devices that are successfully managed by MDE.
 
 ### Devices protected by Tamper Protection
 
-If a device has Tamper Protection turned on, it will not be possible to edit its settings without turning off Tamper Protection. 
+If a device has Tamper Protection turned on, it will not be possible to edit the values of [Tamper Protected settings](/microsoft-365/security/defender-endpoint/prevent-changes-to-security-settings-with-tamper-protection?view=o365-worldwide#what-happens-when-tamper-protection-is-turned-on) without disabling Tamper Protection first.
 
 ### Assignment Filters and Security Management for Microsoft Defender for Endpoint
 
