@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 05/19/2022
+ms.date: 05/24/2022
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice:
@@ -49,7 +49,7 @@ To use RDP Shortpath for public networks with Windows 365, you must meet these r
 
 If you're using other VPN types to connect to Azure, a UDP-based VPN provides better performance. While most TCP-based VPN solutions support nested UDP, they add inherited overhead of TCP congestion control, which slows down RDP performance.
 
-## Enable RDP Shortpath for public networks
+## Enable RDP Shortpath for private networks
 
 To enable RDP Shortpath for private networks, visit the following Azure Virtual Desktop documentation page and follow the instructions:
 
