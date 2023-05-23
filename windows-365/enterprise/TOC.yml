@@ -175,6 +175,8 @@ items:
         href: remotely-manage-cloud-pc.md
       - name: RDP Shortpath for public networks 
         href: rdp-shortpath-public-networks.md
+      - name: RDP Shortpath for private networks 
+        href: rdp-shortpath-private-networks.md
       - name: Reprovision a Cloud PC
         href: reprovision-cloud-pc.md
       - name: Resize a Cloud PC
