@@ -195,12 +195,6 @@ Use the Apple Business Manager portal to create and renew your ADE token (MDM se
 
 2. Select **Next**.
 
-3. (Optional.) If you want to apply [scope tags](../fundamentals/scope-tags.md) to this ADE token, click **Select scope tags**, and then select existing scope tags. Scope tags applied to a token are inherited by profiles and ADE enrolled devices added to the token. The devices that are being referred to are the devices that have synced over from ABM/ASM, and are enrolled through Automated Device Enrollment and show up within the specific token. 
-
-    For more information on scope tags, see [Use role-based access control (RBAC) and scope tags for distributed IT](../fundamentals/scope-tags.md).
-
-    Select **Next**.
-
 4. On the **Review + create** tab, select **Create**.
 
 With the push certificate, Intune can enroll and manage iOS/iPadOS devices by pushing policies to enrolled mobile devices. Intune automatically synchronizes with Apple to access your enrollment program account.
