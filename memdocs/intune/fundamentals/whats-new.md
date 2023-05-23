@@ -217,6 +217,17 @@ Applies to:
 
 For more information about configuring Settings Catalog profiles in Intune, go to [Create a policy using settings catalog](../configuration/settings-catalog.md).
 
+#### Wipe device action and new obliteration behavior setting available for macOS<!-- 16647226 -->  
+You can now use the **Wipe** device action instead of Erase for macOS devices. Additionally, you can configure the **Obliteration Behavior** setting as part of the **Wipe** action.
+
+This new key allows you to control the wipe fallback behavior on Macs that have Apple Silicon or the T2 Security Chip. To find this setting, navigate to **Devices** > **macOS** > [Select a device] > **Overview** > **Wipe** in the **Device action** area.
+
+For more information on the Obliteration Behavior setting, go to Apple's Platform Deployment site [Erase Apple devices - Apple Support](https://support.apple.com/guide/deployment/erase-devices-dep0a819891e/web).
+
+Applies to:
+
+- macOS
+
 ### Device security
 
 #### New security baseline for Microsoft 356 Office Apps<!-- 9587103  -->  

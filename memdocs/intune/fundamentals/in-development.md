@@ -76,19 +76,6 @@ Intune Company Portal will now be automatically installed on all Android Enterpr
 
 Users will be able to uninstall Win32 apps in the Company Portal. If a Win32 app can be uninstalled by the user, the user will be able to select **Uninstall** for the Win32 app in the Company Portal. For more information about Win32 apps, go to [Win32 app management in Microsoft Intune](../apps/apps-win32-app-management.md).
 
-## Device configuration
-
-### Wipe device action and new obliteration behavior setting available for macOS<!-- 16647226  -->  
-You'll soon be able to use the **Wipe** device action instead of Erase for macOS devices. Additionally, you'll be able to configure the **Obliteration Behavior** setting as part of the **Wipe** action.
-
-This new key allows you to control the wipe fallback behavior on Macs that have Apple Silicon or the T2 Security Chip. To find this setting, navigate to **Devices** > **macOS** > [Select a device] > **Overview** > **Wipe** in the **Device action** area.
-
-For more information on the Obliteration Behavior setting, go to Apple's Platform Deployment site [Erase Apple devices - Apple Support](https://support.apple.com/guide/deployment/erase-devices-dep0a819891e/web).
-
-Applies to:
-
-- macOS
-
 ### Support for multi-SIM iOS/iPadOS device inventory<!--17016690 (replaced 16360290 for tracking -->
 
 You'll be able to view the service subscription fields on devices that have multiple SIM cards installed under the per-device Hardware section. The inventory fields that are capable of reporting multiple values to Intune are:
