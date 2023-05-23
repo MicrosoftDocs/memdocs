@@ -33,7 +33,7 @@ ms.collection:
 # Set up a telecom expense management service in Intune
 
 > [!IMPORTANT]
-> This feature is deprecated and will be removed from the Microsoft Intune admin center in a future release. Do not use this feature.
+> This feature is deprecated. In an upcoming release, it will be removed from the Microsoft Intune admin center. Do not use this feature.
 
 Using Intune, you can manage telecom expenses from data usage on organization-owned mobile devices. Intune integrates with Saaswedo's [Datalert telecom expense management](http://www.datalert.biz/get-started). Datalert is a real-time telecom expense management solution that manages telecom data usage. It can help avoid unexpected data and roaming charges for your Intune-managed devices.
 
