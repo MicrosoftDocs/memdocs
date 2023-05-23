@@ -1,8 +1,8 @@
 ---
 title: Technical preview 2305
 titleSuffix: Configuration Manager
-description: Learn about new features available in the Configuration Manager technical preview branch version 2303.
-ms.date: 05/19/2023
+description: Learn about new features available in the Configuration Manager technical preview branch version 2305.
+ms.date: 05/24/2023
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -24,6 +24,15 @@ This article introduces the features that are available in the technical preview
 Review the [technical preview](../technical-preview.md) article before installing this update. That article familiarizes you with the general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback.
 
 The following sections describe the new features to try out in this version:
+
+[!INCLUDE [OSD preferred MP option for PXE boot scenario](includes/2305/2839966.md)]
+[!INCLUDE [New Site Maintenance task “Delete Aged Task Execution Status Messages” is now available on primary servers to cleanup data older than 30 days or configured number of days](includes/2305/6167745.md)]
+[!INCLUDE [CMG creation using 3rd PartyApp via Console.](includes/2305/15627214.md)]
+[!INCLUDE [CMG creation using 3rd Party ServerApp via PowerShell.](includes/2305/17186203.md)]
+[!INCLUDE [Attack Surface Reduction (ASR) capability now marks Server SKU as compliant only after enforcement.](includes/2305/9217349.md)]
+[!INCLUDE [Enhancing security for External service notifications URL.](includes/2305/10060597.md)]
+[!INCLUDE [Enable Bitlocker through ProvisionTS](includes/2305/15620822.md)]
+
 
 ## Next steps
 
