@@ -42,7 +42,7 @@ This feature applies to:
 
 - macOS
 
-When you use macOS devices, there are two ways to get custom settings into Intune:
+When using macOS devices, there are two ways to get custom settings into Intune:
 
 - [Apple Configurator](https://itunes.apple.com/app/apple-configurator-2/id1037126344?mt=12)
 - [Apple Profile Manager](https://support.apple.com/profile-manager)
