@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 5/23/2023
+ms.date: 5/24/2023
 ms.topic: troubleshooting
 ms.service: windows-365
 ms.subservice: 
@@ -115,9 +115,13 @@ On the physical device, get the CorrelationId, SessionID, or ActivityID.
 
 You can find the Windows 365 Session ID in error dialog boxes. For example, the error dialog box that says **Something went wrong**.
 
+![Screenshot of error dialog box.](./media/troubleshoot-windows-365-boot/something-went-wrong.png)
+
 ### Correlation ID
 
 You can find the Correlation ID in the interstitial screen displayed during a two-minute timeout.
+
+![Screenshot of connection issue dialog box.](./media/troubleshoot-windows-365-boot/connection-issue.png)
 
 <!-- ########################## -->
 ## Next steps
