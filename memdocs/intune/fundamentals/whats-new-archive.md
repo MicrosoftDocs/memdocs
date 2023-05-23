@@ -2611,7 +2611,7 @@ You can now [add filters](../../analytics/scores.md#filter-reports) to the table
 
 In the Intune admin center, you can create filters, and then use these filters when assigning apps and policies. You'll be able to use filters to assign the following policy:
 
-* [Endpoint analytics proactive remediations Windows PowerShell scripts](../../analytics/proactive-remediations.md) (**Reports** > **Endpoint analytics** > **Proactive remediations**)   
+* [Endpoint analytics proactive remediations Windows PowerShell scripts](../../analytics/remediations.md) (**Reports** > **Endpoint analytics** > **Proactive remediations**)   
 
 For more information on filters, see [Use filters when assigning your apps, policies, and profiles](../fundamentals/filters.md).  
 
@@ -2733,7 +2733,7 @@ We have a pair of updates for [security baselines](../protect/security-baselines
   - **Scan scripts that are used in Microsoft browsers** is added to the *Microsoft Defender* category.
   - **Enable tamper protection to prevent Microsoft Defender being disabled** is added to *Windows Security*, which is a new category added with this baseline version.
 
-Plan to [update your baselines](../protect/security-baselines-configure.md#change-the-baseline-version-for-a-profile) to the latest version. To understand what's changed between versions, see [Compare baseline versions](../protect/security-baselines.md) to learn how to export a .CSV file that shows the changes.
+Plan to [update your baselines](../protect/security-baselines-configure.md) to the latest version. To understand what's changed between versions, see [Compare baseline versions](../protect/security-baselines.md) to learn how to export a .CSV file that shows the changes.
 
 #### Use custom settings for Device Compliance for Windows 10/11 devices (public preview)<!-- 7536730 -->
 As a public preview, device compliance policy for Windows 10 and Windows 11 devices supports the addition of custom settings to a device compliance policy. Results from custom settings appear in the Microsoft Intune admin center along with other compliance policy details.
@@ -3621,7 +3621,7 @@ The standalone tunnel app for iOS remains in preview.
 ### Monitor and troubleshoot
 
 #### Export option for Proactive remediations<!-- 10198545 -->  
-[Proactive remediations](../../analytics/proactive-remediations.md) are script packages that can detect and fix common support issues on a user's device before they even realize there's a problem. To help you easily analyze returned outputs, an **Export** option was added that allows you to save the output as a `.csv` file. For more information, see [Proactive remediations](../../analytics/proactive-remediations.md).
+[Proactive remediations](../../analytics/remediations.md) are script packages that can detect and fix common support issues on a user's device before they even realize there's a problem. To help you easily analyze returned outputs, an **Export** option was added that allows you to save the output as a `.csv` file. For more information, see [Proactive remediations](../../analytics/remediations.md).
 
 #### Updated certificates report<!-- 10034112  -->  
 The **Certificates** report, which shows the current device certificates in use, has been updated to include better capabilities to search, page, sort, and export the report. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Monitor** > **Certificates**. For more information about reports in Intune, see [Intune reports](../fundamentals/reports.md).
@@ -5962,7 +5962,7 @@ During the next week, this feature will be rolled out. Endpoint analytics aims t
 
 #### Proactively remediate end user device issues using script packages<!-- 5933328 -->
 
-You can create and run script packages on end user devices to proactively find and fix the top support issues in your organization. Deploying script packages will help you reduce support calls. Choose to create your own script packages or deploy one of the script packages we've written and used in our environment to reduce support tickets. Intune allows you to see the status of your deployed script packages and to monitor the detection and remediation results. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Reports** > **Endpoint analytics** > **Proactive remediations**. For more information, see [Proactive remediations](../../analytics/proactive-remediations.md).
+You can create and run script packages on end user devices to proactively find and fix the top support issues in your organization. Deploying script packages will help you reduce support calls. Choose to create your own script packages or deploy one of the script packages we've written and used in our environment to reduce support tickets. Intune allows you to see the status of your deployed script packages and to monitor the detection and remediation results. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Reports** > **Endpoint analytics** > **Proactive remediations**. For more information, see [Proactive remediations](../../analytics/remediations.md).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Scripts
@@ -6285,7 +6285,7 @@ A third provider, DISA Purebred, will be available for Android in a future relea
 
 A new version of the [Microsoft Edge security baseline](../protect/security-baselines.md#available-security-baselines) is now available, and is released as generally available (GA). The previous Microsoft Edge baseline was in Preview.  The new baseline version is April 2020 (Microsoft Edge version 80 and later). 
 
-With the release of this new baseline, you'll no longer be able to create profiles based on the previous baseline versions, but you can continue to use profiles you created with those versions. You can also choose to [update your existing profiles to use the latest baseline version](../protect/security-baselines-configure.md#change-the-baseline-version-for-a-profile). 
+With the release of this new baseline, you'll no longer be able to create profiles based on the previous baseline versions, but you can continue to use profiles you created with those versions. You can also choose to [update your existing profiles to use the latest baseline version](../protect/security-baselines-configure.md). 
 
 <!-- ########################## -->
 ## March 2020
@@ -7808,7 +7808,7 @@ You can zoom in to the exact coordinates of a device using the **Locate device**
 Use Intune to manage [custom firewall rules as part of a device configuration profile](../protect/endpoint-protection-configure.md#add-custom-firewall-rules-for-windows-1011-devices) for endpoint protection on Windows 10. Rules can specify inbound and outbound behavior to applications, network addresses, and ports. 
 
 #### Updated UI for managing security baselines<!-- 4091125     -->
-We've updated the [create and edit experience](../protect/security-baselines-configure.md#create-the-profile) in the Intune console for our security baselines. Changes include:
+We've updated the [create and edit experience](../protect/security-baselines-configure.md) in the Intune console for our security baselines. Changes include:
 
 A simpler wizard-style format that's been condensed to a single blade. within one blade. This new design does away with blade sprawl that requires IT Pros to drill down into several separate panes.  
 You can now create Assignments as part of the create and edit experience, instead of having to return later to assign baselines. 
@@ -7923,7 +7923,7 @@ You can now assign scope tags to a security group and all devices in the securit
 ### Device security
 
 #### Use keyword search with Security Baselines<!--  -->
-When you create or edit [Security Baseline profiles](../protect/security-baselines-configure.md#create-the-profile), you can specify keywords in the new *Search* bar to filter the available groups of settings to those that contain your search criteria.
+When you create or edit [Security Baseline profiles](../protect/security-baselines-configure.md), you can specify keywords in the new *Search* bar to filter the available groups of settings to those that contain your search criteria.
 
 #### The Security Baselines feature is now generally available<!-- 3785395 -->
 The **Security Baselines** feature is out of preview and is now generally available (GA).  This means the feature is ready for use in production. However, the individual baseline templates can remain in preview and are evaluated and released to GA on their own schedules.

@@ -297,7 +297,7 @@ You can use filters for some common app policies on the following platforms. For
 | Domain Join | ✔️ |
 | Edition upgrade and S mode switch | ✔️ |
 | Email | ✔️ |
-| Endpoint analytics proactive remediations scripts|✔️ |
+| Endpoint analytics Remediations scripts|✔️ |
 | Endpoint Protection | ✔️ |
 | Enrollment device platform restrictions | ✔️ <br/> Support for a subset of filter properties including device `osVersion`, `operatingSystemSKU`, and `enrollmentProfileName` |
 | Identity Protection | ✔️ |

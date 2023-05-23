@@ -474,7 +474,9 @@ items:
               - name: Review app protection logs
                 href: ./apps/app-protection-policy-settings-log.md
             - name: Policies for Office apps
-              href: ./apps/app-office-policies.md        
+              href: ./apps/app-office-policies.md 
+            - name: Quiet time policies
+              href: ./apps/apps-quiet-time-policies.md                       
             - name: Troubleshoot
               items:
               - name: Help users troubleshoot problems
@@ -895,7 +897,11 @@ items:
             href: ./protect/security-baseline-settings-mdm-all.md
           - name: Microsoft Defender for Endpoint baseline settings 
             href: ./protect/security-baseline-settings-defender-atp.md
-          - name: Microsoft Edge baseline settings
+          - name: Microsoft 365 Apps for Enterprise baseline settings (Office) 
+            href: ./protect/security-baseline-v2-office-settings.md
+          - name: Microsoft Edge baseline settings (version 112 and higher)
+            href: ./protect/security-baseline-v2-edge-settings.md
+          - name: Microsoft Edge baseline settings (version 85 and older)
             href: ./protect/security-baseline-settings-edge.md
           - name: Windows 365 baseline settings
             href: ./protect/security-baseline-settings-windows-365.md
@@ -1532,8 +1538,8 @@ items:
           href: ./remote-actions/device-supervised-mode.md
         - name: Shutdown macOS and iOS/iPadOS devices
           href: ./remote-actions/device-shutdown.md
-        - name: Erase macOS device
-          href: ./remote-actions/device-erase.md
+        - name: Wipe macOS device
+          href: ./remote-actions/device-wipe-macos.md
         - name: Disable Activation Lock
           href: ./remote-actions/device-activation-lock-disable.md
         - name: Update cellular data plan
