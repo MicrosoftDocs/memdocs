@@ -56,7 +56,7 @@ In the context of FOTA, a deployment is an update policy that includes instructi
 
 In addition, Microsoft Intune supports FOTA update management for supported devices from the following manufacturers. Manufacturer-specific FOTA support may offer more controls beyond what Device restrictions profiles offer.  
 
-- **Zebra**: Go to [Zebra LifeGuard Over-the-Air Integration with Microsoft Intune](zebra-lifegaurd-ota-integration.md). This feature is in public preview. For more information, see [Public preview in Microsoft Intune](../fundamentals/public-preview.md).  
+- **Zebra**: Go to [Zebra LifeGuard Over-the-Air Integration with Microsoft Intune](../protect/zebra-lifegaurd-ota-integration.md). This feature is in public preview. For more information, see [Public preview in Microsoft Intune](../fundamentals/public-preview.md).  
 - **Samsung**: Go to [Samsung E-FOTA Update Management with Microsoft Endpoint Manager](https://techcommunity.microsoft.com/t5/intune-customer-success/samsung-e-fota-update-management-with-microsoft-endpoint-manager/ba-p/2002552)
 
 
