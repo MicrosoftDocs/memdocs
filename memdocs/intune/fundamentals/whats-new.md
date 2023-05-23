@@ -168,7 +168,7 @@ Applies to:
 - Android Enterprise personally owned devices with a work profile
 
 #### Renaming Proactive remediation to Remediations and moving to a new location<!-- 16526263  -->  
-Proactive remediations is now Remediations and is available from **Devices** > **Remediations**. You will still be able to find Remediations in both the new location and the existing Reports > Endpoint Analytics location until the next Intune service update.
+Proactive remediations is now Remediations and is available from **Devices** > **Remediations**. You will still be able to find Remediations in both the new location and the existing **Reports** > **Endpoint Analytics** location until the next Intune service update.
 
 Remediations are currently not available in the new [Devices experience preview](../fundamentals/microsoft-intune-admin-center-devices.md).
 
