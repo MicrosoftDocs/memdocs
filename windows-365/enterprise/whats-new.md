@@ -58,7 +58,7 @@ Learn what new features are available in Windows 365 Enterprise.
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
 
-#### Windows 365 Boot: users can sign in directly to their Cloud PC from their physical device<!--42936537-->
+#### Windows 365 Boot: users can sign in directly to their Cloud PC from their physical device (preview)<!--42936537-->
 
 Windows 365 Boot lets admins configure Windows 11 physical devices so that users can:
 
