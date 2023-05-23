@@ -61,7 +61,11 @@ The default connectivity to a Windows 365 Cloud PC is through a TCP connection t
 
 RDP Shortpath builds on the TCP connection and provides, when possible, another direct connection between the Remote Desktop client and the Windows 365 Cloud PC. This connection uses UDP as the underlying  transport protocol. The direct path and protocol deliver improved connection reliability, lower latency, and higher available bandwidth.
 
-![Diagram of RDP Shortpath process](./media/rdp-shortpath-public-networks/rdp-shortpath-diagram.png)
+![Diagram of RDP Shortpath process](./media/rdp-shortpath-private-networks/private-rdp-diagram.png)
+
+A. After authentication, a WebSocket reverse connect  using TCP is established over port 443.
+
+B. UDP over private network using port 3390. If UDP connection is established successfully, the RDP session switches to this path.
 
 For more information about RDP Shortpath benefits, see [Key benefits](/azure/virtual-desktop/shortpath-public#key-benefits).
 
