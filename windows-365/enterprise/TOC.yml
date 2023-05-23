@@ -149,6 +149,8 @@ items:
         href: app-overview.md
       - name: Assign apps
         href: assign-apps.md
+      - name: Install Windows 365 app
+        href: install-windows-365-app-intune.md
       - name: Microsoft Teams
         items:
         - name: Teams on Cloud PCs
