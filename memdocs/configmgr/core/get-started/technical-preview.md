@@ -130,14 +130,14 @@ The following features are available with the most recent Configuration Manager 
 
 ### Technical preview version 2305
 
--[OSD preferred MP option for PXE boot scenario](2023/technical-preview-2305.md) <!--2839966-->
--[New Site Maintenance task “Delete Aged Task Execution Status Messages” is now available on primary servers to cleanup data older than 30 days or configured number of days](2023/technical-preview-2305.md) <!-- 6167745 -->
--[CMG creation using 3rd PartyApp via Console](2023/technical-preview-2305.md) <!--15627214 -->
--[CMG creation using 3rd Party ServerApp via PowerShell](2023/technical-preview-2305.md) <!--17186203 -->
--[Attack Surface Reduction (ASR) capability now marks Server SKU as compliant only after enforcement](2023/technical-preview-2305.md) <!--9217349-->
--[Enhancing security for External service notifications URL](2023/technical-preview-2305.md) <!--10060597-->
--[Enable Bitlocker through ProvisionTS](2023/technical-preview-2305.md) <!--15620822-->
--[Client certificate state in console (self-signed) to match state in control panel(PKI)](2023/technical-preview-2305.md) <!--10278780-->
+- [OSD preferred MP option for PXE boot scenario](2023/technical-preview-2305.md) <!--2839966-->
+- [New Site Maintenance task “Delete Aged Task Execution Status Messages” is now available on primary servers to cleanup data older than 30 days or configured number of days](2023/technical-preview-2305.md) <!-- 6167745 -->
+- [CMG creation using 3rd PartyApp via Console](2023/technical-preview-2305.md) <!--15627214 -->
+- [CMG creation using 3rd Party ServerApp via PowerShell](2023/technical-preview-2305.md) <!--17186203 -->
+- [Attack Surface Reduction (ASR) capability now marks Server SKU as compliant only after enforcement](2023/technical-preview-2305.md) <!--9217349-->
+- [Enhancing security for External service notifications URL](2023/technical-preview-2305.md) <!--10060597-->
+- [Enable Bitlocker through ProvisionTS](2023/technical-preview-2305.md) <!--15620822-->
+- [Client certificate state in console (self-signed) to match state in control panel(PKI)](2023/technical-preview-2305.md) <!--10278780-->
 
 
 > [!NOTE]
