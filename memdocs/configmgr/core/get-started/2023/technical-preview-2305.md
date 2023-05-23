@@ -25,8 +25,6 @@ Review the [technical preview](../technical-preview.md) article before installin
 
 The following sections describe the new features to try out in this version:
 
-<!-- [!INCLUDE [Example feature name](includes/2201/1234567.md)] -->
-
 [!INCLUDE [OSD preferred MP option for PXE boot scenario](includes/2305/2839966.md)]
 [!INCLUDE [New Site Maintenance task “Delete Aged Task Execution Status Messages” is now available on primary servers to cleanup data older than 30 days or configured number of days](includes/2305/6167745.md)]
 [!INCLUDE [CMG creation using 3rd PartyApp via Console.](includes/2305/15627214.md)]
