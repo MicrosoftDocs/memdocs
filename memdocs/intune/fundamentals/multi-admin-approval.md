@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/17/2022
+ms.date: 05/23/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -94,11 +94,11 @@ You can cancel a request before it’s approved by selecting it from the My requ
 
 1. To find requests to approve, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) go to **Tenant administration** > **Multi Admin Administration** > **Received requests**.
 
-2. Select the *Business justification* link for a request to open the review page where you can learn more about the request, and manage approval or rejection. 
+2. Select the *Business justification* link for a request to open the review page where you can learn more about the request, and manage approval or rejection.
 
 3. After reviewing the details, enter relevant details in the Approver notes field, and then select **Approve request** or **Reject request**.
 
-4. After you approve a request, Intune processes the change and updates the status to *Completed* after it’s successfully applied. The request status might change to *Approved* for a limited time if the update to the resource takes time to process.
+4. After you approve a request, the requestor needs select **Complete**.  Intune will process the change, and changes the status to *Completed.*
 
 ## More considerations
 
