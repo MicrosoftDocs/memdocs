@@ -6,8 +6,8 @@ ms.date: 12/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: overview
-author: banreet
-ms.author: banreetkaur
+author: gowdhamankarthikeyan
+ms.author: gokarthi
 manager: apoorvseth
 ms.localizationpriority: high
 ms.collection: tier3
@@ -31,9 +31,9 @@ Tenant attach provides immediate value by having your device records in the clou
 ### Endpoint Security Reports in Intune for Tenant Attached devices:
 Starting with Configuration Manager version 2303, you can now opt for Endpoint Security reports in Intune admin center for tenant attached devices.  Once you opt in, Unhealthy endpoints and Active malware operational reports under Endpoint security node in Intune admin center will start showing data from tenant attached devices. Also, Antivirus agent status and Detected malware organizational reports under Microsoft Defender Antivirus in Reports section will show data from tenant attached devices.
 
-:::image type="content" source="../tenant-attach/media/9220597-org-antivirus-agent-status-report.png" alt-text="Screenshot of Antivirus agent status organizational report in Intune admin center." lightbox="media/9220597-org-antivirus-agent-status-report.png":::
+:::image type="content" source="../tenant-attach/media/9220597-org-antivirus-agent-status-report.png" alt-text="Screenshot of Antivirus agent status organizational report in Intune admin center." lightbox="../tenant-attach/media/9220597-org-antivirus-agent-status-report.png":::
 
-:::image type="content" source="../tenant-attach/media/9220597-org-detected-malware-report.png" alt-text="Screenshot of detected malware organizational report in Intune admin center." lightbox="media/9220597-org-detected-malware-report.png":::
+:::image type="content" source="../tenant-attach/media/9220597-org-detected-malware-report.png" alt-text="Screenshot of detected malware organizational report in Intune admin center." lightbox="../tenant-attach/media/9220597-org-detected-malware-report.png":::
 
 For more information, see [Tenant attach - Create and deploy Antivirus policies from the admin center](../tenant-attach/deploy-antivirus-policy.md).
 
@@ -54,29 +54,29 @@ Endpoint analytics gives you insights for measuring the quality of the experienc
 
 - [Work from anywhere](../../analytics/work-from-anywhere.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json) - The ability for employees to work from anywhere productively is essential in today’s world. This report offers insights into how prepared your workforce is to be productive from anywhere.
 
-:::image type="content" source="media/ea-work-from-anywhere.png" alt-text="Screenshot of endpoint analytics work from anywhere report in Intune admin center." lightbox="media/ea-work-from-anywhere.png":::
+:::image type="content" source="../analytics/media/8668496-work-from-anywhere-score.png" alt-text="Screenshot of endpoint analytics work from anywhere report in Intune admin center." lightbox="../analytics/media/8668496-work-from-anywhere-score.png":::
 
 - [Startup performance](../../analytics/startup-performance.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json) - The startup performance score helps IT get users from power-on to productivity quickly, without lengthy boot and sign-in delays.
 
-:::image type="content" source="media/ea-startup-performance.png" alt-text="Screenshot of endpoint analytics startup performance report in Intune admin center." lightbox="media/ea-startup-performance.png":::
+:::image type="content" source="../analytics/media/8529842-startup-performance-metrics.png" alt-text="Screenshot of endpoint analytics startup performance report in Intune admin center." lightbox="../analytics/media/8529842-startup-performance-metrics.png":::
 
 - [Application reliability](../../analytics/app-reliability.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json) - The application reliability report provides insight into potential issues for desktop applications on managed devices.
 
-:::image type="content" source="media/ea-application-reliability.png" alt-text="Screenshot of endpoint analytics application reliability report in Intune admin center." lightbox="media/ea-application-reliability.png":::
+:::image type="content" source="../analytics/media/8529842-application-reliability.png" alt-text="Screenshot of endpoint analytics application reliability report in Intune admin center." lightbox="../analytics/media/8529842-application-reliability.png":::
 
 - [Restart Frequency](../../analytics/restart-frequency.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json) – provides insights into restart frequencies within your organization to help you identify problematic devices.
 
-:::image type="content" source="media/ea-restart-frequency.png" alt-text="Screenshot of endpoint analytics restart frequency report in Intune admin center." lightbox="media/ea-restart-frequency.png":::
+:::image type="content" source="../analytics/media/restart-frequency-tab.png" alt-text="Screenshot of endpoint analytics restart frequency report in Intune admin center." lightbox="../analytics/media/restart-frequency-tab.png":::
 
 - [Proactive Remediation](../../analytics/proactive-remediations.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json) - Proactive remediations in Endpoint analytics helps you fix common support issues before end-users notice issues. Use Proactive remediations to help increase your [User experience score](../../analytics/scores.md#bkmk_per-device)
 
-:::image type="content" source="media/ea-proactive-remediations.png" alt-text="Screenshot of endpoint analytics restart frequency report in Intune admin center." lightbox="media/ea-proactive-remediations.png":::
+:::image type="content" source="../analytics/media/proactive-remediations-create.png" alt-text="Screenshot of endpoint analytics proactive remediations in Intune admin center." lightbox="../analytics/media/proactive-remediations-create.png":::
 
 ## Co-management
 
 Co-management transforms your on-premises Configuration Manager environment without having to go through a large migration effort. Co-management helps simplify device management by giving you the ability to manage workloads from the cloud. 
 
-:::image type="content" source="media/comanagement-workloads.png" alt-text="Screenshot of endpoint analytics restart frequency report in Intune admin center." lightbox="media/comanagement-workloads.png":::
+:::image type="content" source="media/comanagement-workloads.png" alt-text="Screenshot of comanagement workload tab in cloud attach properties in configuration manager admin console." lightbox="media/comanagement-workloads.png":::
 
 Once you co-manage the devices, you can specify which workloads to move, such as compliance policy to enable Conditional Access. [Conditional Access](../comanage/quickstart-conditional-access.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json) combines granular control over organizational data while maintaining a consistent user experience on any device from any location. Enforcing compliance policy from Intune is a critical part of developing your [Zero Trust](/security/zero-trust/) architecture. Additionally, you can Use [Windows Autopilot](../../autopilot/windows-autopilot.md) with co-management to simplify the complex process of provisioning devices from the cloud.  
 
