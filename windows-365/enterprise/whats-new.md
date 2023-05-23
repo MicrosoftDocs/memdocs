@@ -60,7 +60,7 @@ Learn what new features are available in Windows 365 Enterprise.
 
 #### New documentation article: Using Intune, install the Windows 365 app on physical devices
 
-We’ve published a new help documentation article. For more information, see [Using Intune, install the Windows 365 app on physical devices](isntall-windows-365-app-intune.md).
+We’ve published a new help documentation article. For more information, see [Using Intune, install the Windows 365 app on physical devices](install-windows-365-app-intune.md).
 
 <!-- ########################## -->
 ## Week of April 24, 2023 (Service release 2304)
