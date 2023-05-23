@@ -32,6 +32,7 @@ The following sections describe the new features to try out in this version:
 [!INCLUDE [Attack Surface Reduction (ASR) capability now marks Server SKU as compliant only after enforcement.](includes/2305/9217349.md)]
 [!INCLUDE [Enhancing security for External service notifications URL.](includes/2305/10060597.md)]
 [!INCLUDE [Enable Bitlocker through ProvisionTS](includes/2305/15620822.md)]
+[!INCLUDE [Client certificate state in console (self-signed) to match state in control panel(PKI)](includes/2305/10278780.md)]
 
 
 ## Next steps
