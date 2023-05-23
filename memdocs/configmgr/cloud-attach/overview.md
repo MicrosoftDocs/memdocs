@@ -54,23 +54,23 @@ Endpoint analytics gives you insights for measuring the quality of the experienc
 
 - [Work from anywhere](../../analytics/work-from-anywhere.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json) - The ability for employees to work from anywhere productively is essential in today’s world. This report offers insights into how prepared your workforce is to be productive from anywhere.
 
-:::image type="content" source="../analytics/media/8668496-work-from-anywhere-score.png" alt-text="Screenshot of endpoint analytics work from anywhere report in Intune admin center." lightbox="../analytics/media/8668496-work-from-anywhere-score.png":::
+:::image type="content" source="../../analytics/media/8668496-work-from-anywhere-score.png" alt-text="Screenshot of endpoint analytics work from anywhere report in Intune admin center." lightbox="../../analytics/media/8668496-work-from-anywhere-score.png":::
 
 - [Startup performance](../../analytics/startup-performance.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json) - The startup performance score helps IT get users from power-on to productivity quickly, without lengthy boot and sign-in delays.
 
-:::image type="content" source="../analytics/media/8529842-startup-performance-metrics.png" alt-text="Screenshot of endpoint analytics startup performance report in Intune admin center." lightbox="../analytics/media/8529842-startup-performance-metrics.png":::
+:::image type="content" source="../../analytics/media/8529842-startup-performance-metrics.png" alt-text="Screenshot of endpoint analytics startup performance report in Intune admin center." lightbox="../../analytics/media/8529842-startup-performance-metrics.png":::
 
 - [Application reliability](../../analytics/app-reliability.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json) - The application reliability report provides insight into potential issues for desktop applications on managed devices.
 
-:::image type="content" source="../analytics/media/8529842-application-reliability.png" alt-text="Screenshot of endpoint analytics application reliability report in Intune admin center." lightbox="../analytics/media/8529842-application-reliability.png":::
+:::image type="content" source="../../analytics/media/8529842-application-reliability.png" alt-text="Screenshot of endpoint analytics application reliability report in Intune admin center." lightbox="../../analytics/media/8529842-application-reliability.png":::
 
 - [Restart Frequency](../../analytics/restart-frequency.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json) – provides insights into restart frequencies within your organization to help you identify problematic devices.
 
-:::image type="content" source="../analytics/media/restart-frequency-tab.png" alt-text="Screenshot of endpoint analytics restart frequency report in Intune admin center." lightbox="../analytics/media/restart-frequency-tab.png":::
+:::image type="content" source="../../analytics/media/restart-frequency-tab.png" alt-text="Screenshot of endpoint analytics restart frequency report in Intune admin center." lightbox="../../analytics/media/restart-frequency-tab.png":::
 
 - [Proactive Remediation](../../analytics/proactive-remediations.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json) - Proactive remediations in Endpoint analytics helps you fix common support issues before end-users notice issues. Use Proactive remediations to help increase your [User experience score](../../analytics/scores.md#bkmk_per-device)
 
-:::image type="content" source="../analytics/media/proactive-remediations-create.png" alt-text="Screenshot of endpoint analytics proactive remediations in Intune admin center." lightbox="../analytics/media/proactive-remediations-create.png":::
+:::image type="content" source="../../analytics/media/proactive-remediations-create.png" alt-text="Screenshot of endpoint analytics proactive remediations in Intune admin center." lightbox="../../analytics/media/proactive-remediations-create.png":::
 
 ## Co-management
 
