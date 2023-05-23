@@ -121,7 +121,7 @@ The configuration service provider (CSP) policies available for Windows 11 inclu
 If you currently block messages that come from Microsoft, you can continue to do so while also allowing organizational messages to come through.  
 
 1.  Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Go to **Tenant administration** > **Organizational messages (preview)**.    
+2. Go to **Tenant administration** > **Organizational messages**.    
 2. In the **Overview** tab, go to step 2 under **Before you create a message**.      
 3. **Decide whether to block messages directly from Microsoft, while allowing admin messages to display**: Switch the toggle to **Allow** to allow both Microsoft messages and organizational messages. Switch the toggle to **Block** to block Microsoft messages and allow organizational messages.   
 

@@ -30,16 +30,12 @@ ms.collection:
 # View reporting details for organizational messages  
 
 *Applies to Windows 11*  
-
-> [!IMPORTANT]
-> This feature is in public preview. For more information, see [Public preview in Microsoft Intune](../fundamentals/public-preview.md).  
-
 View the details of your organizational messages in the Microsoft Intune admin center. 
 
 ## Access message details  
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Go to **Tenant administration** > **Organizational messages (preview)**.
+2. Go to **Tenant administration** > **Organizational messages**.
 3. Select the **Message** tab to see a list of all existing messages and message details.  
 
 ### Available details  
