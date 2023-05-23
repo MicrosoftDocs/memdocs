@@ -32,7 +32,7 @@ ms.collection:
 
 # Set conditional access policies
 
-Conditional Access is the protection of regulated content in a system by requiring certain criteria to be met before granting access to the content. Conditional Access policies at their simplest are if-then statements. If a user wants to access a resource, then they must complete an action. For example, a payroll manager wants to access the payroll application and is required to perform multi-factor authentication to do so.
+Conditional Access is the protection of regulated content in a system by requiring certain criteria to be met before granting access to the content. Conditional Access policies at their simplest are if-then statements. If a user wants to access a resource, then they must complete an action. For example, a payroll manager wants to access the payroll application and is required to perform multi-factor authentication (MFA) to do so.
 
 Using Conditional Access, you can achieve two primary goals:
 
