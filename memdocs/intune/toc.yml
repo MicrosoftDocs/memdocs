@@ -214,6 +214,8 @@ items:
           href: ./fundamentals/create-custom-role.md
         - name: Use scope tags to determine what admins can see
           href: ./fundamentals/scope-tags.md
+        - name: Distributed IT environment with many admins in the same Intune tenant
+          href: ./fundamentals/intune-scale-guidelines.md
 
     - name: Manage apps
       items:
