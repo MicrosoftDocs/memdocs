@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 11/10/2022
+ms.date: 05/31/2023
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -94,6 +94,64 @@ If you want to use Azure AD join or hybrid Azure AD join, consider these prepara
 
 **Hybrid Azure AD joined Cloud PCs**: If you want to use a hybrid Azure AD join infrastructure, you'll need to configure your commercial (.com) tenant and your government (.us) tenants before creating your Azure Virtual Networks.
 
+## Get started with the Windows 365 GCC Setup Tool
+
+Follow these steps to configure tenant mapping using the Windows 365 GCC Setup Tool.
+
+1. Launch the GCCSetupTool.exe.
+2. On the **Let's get you started** page, select **Next**.
+3. Sign in with your Azure Commercial account. This account must have Global Administrator permissions.
+4. Confirm that you want to continue with your commerical account > **Next**.
+5. Sign in with your Azure Government account > **Next** > type your credentials.
+6. Confirm that you want to continue with your government account > **Next**.
+7. On the **Select feature to enable screen**, make sure **Custom Images** is selected.
+8. Select **Azure network connections** and then select the **Subscription**, **Virtual network**, and **Subnet** that you want to configure. Select **Next**.
+
+    > [!NOTE]
+    > ANC includes the permissions for custom images.
+
+9. On the **Review settings** page, review the selections you made and select **Grant**.
+10. After setup is complete, you can close the tool.
+
+### Troubleshooting
+
+If you have issues running the Windows 365 GCC Setup Tool:
+
+1. In the same folder where the GCCSetupTool.exe is run, navigate to the **Log** folder and review the `GCCAdminTool.log` file.
+2. If you continue to have issues, [contact support](/mem/get-support#contact-support).
+
+### Subsequent use of hte GCC Setup Tool
+
+The Windows 365 GCC Setup Tool can be run again after the initial setup. You might want to use it again if you want to use ANC or expand the use of ANC to other networks. You can also use the following script to set up permissions for additional ANCs.
+
+#### If you have a CloudShell account that requires an Azure Storage account
+
+1. Copy the following script.
+
+```powershell
+Azure PowerShellCopy  
+Open Cloudshell  
+connect-azaccount -usedeviceauthentication  
+curl https://raw.githubusercontent.com/microsoft/Windows365-PSScripts/main/Windows%20365%20GCC/Grant%20Service%20Principal%20Roles%20in%20Tenant/Grant%20W365%20SP%20Roles%20In%20Tenant.ps1 -o GrantW365SProles.ps1 & ./GrantW365SProles.ps1
+```
+
+2. Paste the script into your Azure Government subscription's CloudShell session and run it.
+
+#### If you don't have a CloudShell account that requires an Azure Storage account
+
+1. Go to the [Windows 365 PowerShell GitHub repository](https://github.com/microsoft/Windows365-PSScripts).
+2. Navigate to the **Windows 365 GCC** > **Grant Service Principal Roles in Tenant** folder.
+3. Select **Grant W365 SP Roles in Tenant.ps1** > **Raw** > save the raw file to a location on your computer as a .ps1 file.  
+4. Open Windows PowerShell 5.1 (x64) as an Administrator > run the PowerShell script.
+5. Continue with the following section **Follow scripot instructions**.  
+
+#### Follow script instructions
+
+1. After running the script, at the prompt, select option **2**. This option sets up permissions for the ANC.
+2. From the list of Azure Government subscriptions, select the subscription that you want to grant permissions to.
+3. From the list of resource groups, select the resource group that you want to use.
+4. Select your vNET.
+5. The script grants permissions and lists what was configured.
 
 ## Map the commercial and government tenants
 
