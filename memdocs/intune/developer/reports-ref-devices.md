@@ -276,7 +276,7 @@ The **devices** entity lists all enrolled devices under management and their cor
 | IpAddressV4Wifi           | The IP address for IPV4 Wifi connection.                                                                                                                             |
 
 > [!NOTE]
-> For more information about Windows SKU enum values,  see [Device properties](../fundamentals/filters-device-properties.md#managed-device-properties).
+> For more information about Windows SKU enum values,  see [Device properties](../fundamentals/filters-device-properties.md#device-properties).
 
 ## devicePropertyHistories
 

@@ -45,7 +45,7 @@ When a new version of a baseline becomes available, it replaces the previous ver
 To learn more about using security baselines, see [Use security baselines](security-baselines.md). In that article you'll also find information about how to:
 
 <!-- - [Compare baselines](../protect/security-baselines.md) to discover what's changed from version to version.  -->
-- [Change the baseline version for a profile](../protect/security-baselines-configure.md#update-baselines-that-use-the-previous-format) to update a profile to use the latest version of that baseline.
+- [Change the baseline version for a profile](../protect/security-baselines-configure.md#change-the-baseline-version-for-a-profile) to update a profile to use the latest version of that baseline.
 
 ::: zone pivot="mdm-november-2021"
 **Security Baseline for Windows 10/11 for November 2021**
