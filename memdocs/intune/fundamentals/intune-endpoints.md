@@ -88,10 +88,10 @@ This provides a convenient method to list and review all services required by In
 |*.emdl.ws.microsoft.com| Delivery Optimization |
 |*.notify.windows.com| Push Notifications |
 |*.wns.windows.com| Push Notifications |
-|devicelistenerprod.microsoft.com| Windows Update for Business -deployment service (WUfB-DS) |
-|devicelistenerprod.eudb.microsoft.com| WUfB-DS |
-|login.windows.net| WUfB-DS |
-|payloadprod*.blob.core.windows.net| WUfB-DS |
+|devicelistenerprod.microsoft.com| Windows Update for Business deployment service (WUfB-DS) |
+|devicelistenerprod.eudb.microsoft.com| Windows Update for Business deployment service |
+|login.windows.net| Windows Update for Business deployment service |
+|payloadprod*.blob.core.windows.net| Windows Update for Business deployment service |
 |time.windows.com| NTP Sync |
 |www.msftconnecttest.com| NTP Sync |
 |www.msftncsi.com| NTP Sync |
