@@ -51,9 +51,8 @@ If you're using other VPN types to connect to Azure, a UDP-based VPN provides be
 
 ## Enable RDP Shortpath for private networks
 
-To enable RDP Shortpath for private networks, visit the following Azure Virtual Desktop documentation page and follow the instructions:
+To (configure and enable RDP Shortpath for private networks, visit the Azure Virtual Desktop documentation page)(/azure/virtual-desktop/configure-rdp-shortpath?tabs=managed-networks) and follow the instructions.
 
-[Configure RDP Shortpath for Azure Virtual Desktop](/azure/virtual-desktop/configure-rdp-shortpath?tabs=managed-networks).
 
 ## RDP Shortpath benefits
 
@@ -61,9 +60,9 @@ The default connectivity to a Windows 365 Cloud PC is through a TCP connection t
 
 RDP Shortpath builds on the TCP connection and provides, when possible, another direct connection between the Remote Desktop client and the Windows 365 Cloud PC. This connection uses UDP as the underlying transport protocol. This UDP connection is a direct connection over the network that is managed by the customer.
 
-![Diagram of RDP Shortpath process](./media/rdp-shortpath-private-networks/private-rdp-diagram.png)
+:::image type="content" alt-text="Diagram of RDP Shortpath process." source="./media/rdp-shortpath-private-networks/private-rdp-diagram.png":::
 
-A. After authentication, a WebSocket reverse connect  using TCP is established over port 443.
+A. After authentication, a WebSocket reverse connect using TCP is established over port 443.
 
 B. UDP over private network using port 3390. If UDP connection is established successfully, the RDP session switches to this path.
 
