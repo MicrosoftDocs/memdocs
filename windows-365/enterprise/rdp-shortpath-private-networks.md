@@ -51,7 +51,7 @@ If you're using other VPN types to connect to Azure, a UDP-based VPN provides be
 
 ## Enable RDP Shortpath for private networks
 
-To (configure and enable RDP Shortpath for private networks, visit the Azure Virtual Desktop documentation page)(/azure/virtual-desktop/configure-rdp-shortpath?tabs=managed-networks) and follow the instructions.
+To [configure and enable RDP Shortpath for private networks, visit the Azure Virtual Desktop documentation page](/azure/virtual-desktop/configure-rdp-shortpath?tabs=managed-networks) and follow the instructions.
 
 
 ## RDP Shortpath benefits
