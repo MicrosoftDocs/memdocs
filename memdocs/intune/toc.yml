@@ -791,7 +791,7 @@ items:
             - name: Android FOTA update
               href: ./protect/fota-updates-android.md
             - name: Zebra LG OTA Integration
-              href: ./protect/zebra-lifeguard-ota-integration.md
+              href: ./protect/zebra-lifeguard-ota-integration.md            
           - name: Windows updates
             items:
             - name: Use Windows Update for Business
@@ -1786,7 +1786,6 @@ items:
             href: ./developer/reports-ref-user.md
       - name: Move your Intune Data Warehouse account data
         href: ./developer/data-warehouse-account-move.md
-
 
   - name: Privacy and personal data
     href: ./protect/privacy-personal-data.md
