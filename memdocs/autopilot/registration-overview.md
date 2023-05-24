@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 11/17/2022
+ms.date: 05/24/2023
 ms.topic: how-to
 ms.collection: 
   - M365-modern-desktop
@@ -44,6 +44,7 @@ Registration can also be performed within your organization by collecting the ha
 When you register an Autopilot device, it automatically creates an Azure AD object. The Autopilot deployment process needs this object to identify the device before the user signs in. If you delete this object, the device can fail to enroll through Autopilot.
 
 > [!NOTE]
+>
 > Don't register to Autopilot the following types of devices:
 >
 > - [Azure AD registered](/azure/active-directory/devices/concept-azure-ad-register), also known as "workplace joined"
@@ -91,7 +92,8 @@ Devices that have been registered with the Windows Autopilot service are display
 ![Autopilot devices](images/ap-devices.png)
 
 > [!NOTE]
-> Devices that are listed in Intune under **Devices** > **Windows** > **Windows devices** are not the same as Windows Autopilot devices (**Devices** > **Enroll devices** > **Windows enrollment** > **Windows Autopilot Deployment Program** > **Devices**). Windows Autopilot devices are added to the list of **Windows devices** when both of the following are complete:
+>
+> Devices that are listed in Intune under **Devices** > **Windows** > **Windows devices** aren't the same as Windows Autopilot devices **Devices** > **Enroll devices** > **Windows enrollment** > **Windows Autopilot Deployment Program** > **Devices**. Windows Autopilot devices are added to the list of **Windows devices** when both of the following are complete:
 
 > - The Autopilot registration process is successful.
 > - A [licensed](licensing-requirements.md) user has signed in on the device.
@@ -155,7 +157,9 @@ Once the device has been deregistered from Intune, it can then be deregistered f
 
 > [!IMPORTANT]
 >
-> No additional steps are necessary to remove the device from Intune and Autopilot. Unneeded steps includes manually deleting the device from Azure AD. Manually deleting the device from Azure AD may cause unexpected problems, issues, and behavior. If needed, the device will be automatically removed from Azure AD after these steps are followed.
+> - For Azure AD join devices, no additional steps are necessary to remove the device from Intune and Autopilot. Unneeded steps include manually deleting the device from Azure AD. Manually deleting the device from Azure AD may cause unexpected problems, issues, and behavior. If needed, the device will be automatically removed from Azure AD after these steps are followed.
+>
+> - For hybrid Azure AD join devices, delete the computer object from the on-premises Active Directory Domain Services (AD DS) environment. Deleting the computer object from the on-premises AD DS ensures that the computer object isn't resynced back to Azure AD. After the computer object is deleted from the on-premises AD DS environment, no additional steps are necessary to remove the device from Intune and Autopilot. Unneeded steps include manually deleting the device from Azure AD. Manually deleting the device from Azure AD may cause unexpected problems, issues, and behavior. If needed, the device will be automatically removed from Azure AD after these steps are followed.
 
 The above steps deregister the device from Autopilot, unenroll the device from Intune, and disjoin the device from Azure AD. It may appear that only deregistering the device from Autopilot is needed. However, there are barriers in Intune that require all the above steps to avoid problems with lost or unrecoverable devices. To prevent the possibility of orphaned devices in the Autopilot database, Intune, or Azure AD, it's best to complete all the steps.
 
@@ -165,7 +169,7 @@ The device can be deregistered from Autopilot in Microsoft 365 admin center if u
 
 1. Sign into to the [Microsoft 365 admin center](https://admin.microsoft.com/)
 1. Navigate to **Devices** > **Autopilot**.
-1. Select the device to be deregistered and then select the **Delete device** button.
+1. Select the device to be deregistered and then select **Delete device**.
 
 ### Deregister from Autopilot in Microsoft Partner Center (MPC)
 
