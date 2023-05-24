@@ -44,7 +44,7 @@ The best time to perform moves is over the weekend to make sure the impact to us
 
 New Cloud PCs created by the edited provisioning policy are assigned to the new region or ANC.
 
-Moving a Cloud PC  in [public preview](public-preview.md).
+Moving a Cloud PC  in [public preview](..\public-preview.md).
 
 ## Move a Cloud PC
 
