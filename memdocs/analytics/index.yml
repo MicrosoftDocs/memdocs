@@ -41,10 +41,10 @@ landingContent:
             url: enroll-intune.md
           - text: Enroll Configuration Manager devices
             url: enroll-configmgr.md
-      - linkListType: tutorial
+      - linkListType: concept
         links:
-          - text: Proactive remediations
-            url: proactive-remediations.md
+          - text: Remediations
+            url: remediations.md
 
   # Card
   - title: Top tasks
