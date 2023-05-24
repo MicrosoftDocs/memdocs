@@ -1442,10 +1442,12 @@ items:
               href: ./enrollment/apple-school-manager-set-up-ios.md
           - name: Set up Apple User Enrollment
             items:
-            - name: Overview 
+            - name: Overview   
               href: ./enrollment/ios-user-enrollment-supported-actions.md 
-            - name: Set up User Enrollment   
-              href: ./enrollment/ios-user-enrollment.md  
+            - name: Set up account driven user enrollment   
+              href: ./enrollment/apple-account-driven-user-enrollment.md  
+            - name: Set up user enrollment with Company Portal   
+              href: ./enrollment/apple-user-enrollment-with-company-portal.md 
           - name: Set up Shared iPad      
             items:
             - name: Overview of shared device solutions
