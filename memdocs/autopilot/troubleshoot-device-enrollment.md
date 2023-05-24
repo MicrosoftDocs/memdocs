@@ -130,7 +130,7 @@ When a device is reimaged to an older OS version after a hardware change on a de
 
 ## Intune enrollment issues
 
-See [Troubleshooting Windows device enrollment errors in Intune](/intune/device-enrollment/troubleshoot-windows-enrollment-errors) for assistance with Intune enrollment issues. Common issues can include:
+See [Troubleshooting Windows device enrollment errors in Intune](/troubleshoot/mem/intune/device-enrollment/troubleshoot-windows-enrollment-errors) for assistance with Intune enrollment issues. Common issues can include:
 
 - Incorrect or missing licenses assigned to the user.
 - Too many devices enrolled for the user.
