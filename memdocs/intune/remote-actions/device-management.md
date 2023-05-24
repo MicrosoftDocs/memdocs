@@ -71,7 +71,6 @@ The available actions depend on the device platform and the device configuration
   - [Collect diagnostics](collect-diagnostics.md) (Windows 10 only)
   - [Delete](devices-wipe.md#delete-devices-from-the-intune-admin-center)
   - [Disable Activation Lock](device-activation-lock-disable.md) (iOS only)
-  - [Erase](./device-erase.md) (macOS Only)
   - [Fresh Start](device-fresh-start.md) (Windows only)
   - [Full Scan](../configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus) (Windows 10 and 11 only)
   - [Locate device](device-locate.md) (iOS only)

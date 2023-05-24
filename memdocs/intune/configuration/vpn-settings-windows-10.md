@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/01/2023
+ms.date: 05/03/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -240,6 +240,12 @@ Example:
     - **None** (default)
     - **Split tunnel**: This option gives client devices two connections simultaneously. One connection is secure and is designed to keep the network traffic private. The second connection is open to the network and lets Internet traffic go through.
     - **Force tunnel**: All network traffic in this rule goes through the VPN. No network traffic in this rule goes directly to the Internet.
+
+  - **Direction**: Select the flow of network traffic your VPN connection allows. Your options:
+    - **Inbound**: Only allows traffic from external sites through the VPN. Outbound traffic is blocked from entering the VPN.
+    - **Outbound** (default): Only allows traffic to external sites through the VPN. Inbound traffic is blocked from entering the VPN.
+
+    To allow inbound and outbound, create two separate rules. Create one rule for inbound, and another rule for outbound.
 
   - **Protocol**: Enter the port number of the network protocol you want the VPN to use, from 0-255. For example, enter `6` for TCP, or `17` for UDP.
 
