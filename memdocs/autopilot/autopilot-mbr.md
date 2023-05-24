@@ -61,7 +61,7 @@ Before the device arrives at the repair facility, the entity that registered the
 
 - If the **OEM or CSP partner** registered the device, they likely did so via the Microsoft Partner Center (MPC). In that case, they should deregister the device from MPC, which also removes it from the customer IT Admin's Intune account.
 
-Below we describe the steps an IT Admin would go through to deregister a device from Intune, and the steps an OEM or CSP would go through to deregister a device from MPC.
+The below steps describe what an IT Admin would go through to deregister a device from Intune and the steps an OEM or CSP would go through to deregister a device from MPC.
 
 To avoid problems, an OEM or CSP should register Autopilot devices whenever possible. If the customer registers the devices, OEMs or CSPs can't deregister them if, for example, a customer leasing a device goes out of business before deregistering it themselves.
 
@@ -230,208 +230,27 @@ In the following table:
 | --- | --- | --- |
 | **Motherboard Replacement (MBR) in general** | Yes | The recommended course of action for MBR scenarios is: <br> 1. Autopilot device is deregistered from the Autopilot program. <br> 2. The motherboard is replaced. <br> 3. The device is reimaged (with BIOS info and DPK reinjected). <br> 4. A new Autopilot device ID (4K HH) is captured off the device. <br> 5. The repaired device is reregistered for the Autopilot program using the new device ID. <br> 6. The repaired device is reset to boot to OOBE. <br> 7. The repaired device is shipped back to the customer. <br><br> Note that it's not necessary to reimage the device if the repair technician has access to the customer's sign-in credentials. It's technically possible to successfully re-enable MBR and Autopilot without keys or certain BIOS info (serial #, model name, etc.) However, doing so is only recommended for testing/educational purposes. |
 | **MBR when motherboard has a TPM chip enabled and only one onboard network card that also gets replaced** | Yes  | 1. Deregister damaged device. <br> 2. Replace motherboard. <br> 3. To gain access, reimage device or sign-in using customer's credentials. <br> 4. Write device info into BIOS. <br> 5. Capture new 4K HH. <br> 6. Reregister repaired device. <br> 7. Reset device back to OOBE. <br> 8. Go through Autopilot OOBE (customer). <br> 9. Autopilot successfully enabled. |
-| **MBR when motherboard has an enabled TPM chip enabled and a second network interface that isn't replaced along with the motherboard** | No | This scenario breaks the Autopilot experience. The resulting Device ID won't be stable until after TPM attestation has completed. Even then registration may give incorrect results because of ambiguity with MAC Address resolution. Therefore, we don't recommend this scenario. |
+| **MBR when motherboard has an enabled TPM chip enabled and a second network interface that isn't replaced along with the motherboard** | No | This scenario breaks the Autopilot experience. The resulting Device ID won't be stable until after TPM attestation has completed. Even then registration may give incorrect results because of ambiguity with MAC Address resolution. Therefore, this scenario isn't recommended. |
 | **MBR where the NIC card, HDD, and WLAN all remain the same after the repair** | Yes | 1. Deregister damaged device. <br> 2. Replace motherboard with a new Replacement Digital Product Key (RDPK) preinjected in BIOS. <br> 3. To gain access, reimage device or sign-in using customer's credentials. <br> 4. Write old device info into BIOS (same s/n, model, etc.) <br> 5. Capture new 4K HH. <br> 6. Reregister repaired device. <br> 7. Reset device back to OOBE. <br> 8. Go through Autopilot OOBE (customer). <br> 9. Autopilot successfully enabled. <br><br> For this and later scenarios, rewriting old device info wouldn't include the TPM 2.0 endorsement key, as the associated private key is locked to the TPM device. |
 | **MBR where the NIC card remains the same, but the HDD and WLAN are replaced** | Yes | 1. Deregister damaged device. <br> 2. Replace motherboard (with new RDPK preinjected in BIOS). <br> 3. Insert new HDD and WLAN. <br> 4. Write old device info into BIOS (same s/n, model, etc.) <br> 5. Capture new 4K HH. <br> 6. Reregister repaired device. <br> 7. Reset device back to OOBE. <br> 8. Go through Autopilot OOBE (customer). <br> 9. Autopilot successfully enabled. |
 | **MBR where the NIC card and WLAN remains the same, but the HDD is replaced** | Yes | 1. Deregister damaged device. <br> 2. Replace motherboard (with new RDPK preinjected in BIOS). <br> 3. Insert new HDD. <br> 4. Write old device info into BIOS (same s/n, model, etc.) <br> 5. Capture new 4K HH. <br> 6. Reregister repaired device. <br> 7. Reset device back to OOBE. <br> 8. Go through Autopilot OOBE (customer). <br> 9. Autopilot successfully enabled. |
 | **MBR where only the MB is replaced. All other parts remain same. The new MB was taken from a previously used device that has never been enabled for Autopilot.** | Yes | 1. Deregister damaged device. <br> 2. Replace motherboard (with new RDPK preinjected in BIOS). <br> 3. To gain access, reimage device or sign-in using customer's credentials. <br> 4. Write old device info into BIOS (same s/n, model, etc.) <br> 5. Capture new 4K HH. <br> 6. Reregister repaired device. <br> 7. Reset device back to OOBE. <br> 8. Go through Autopilot OOBE (customer). <br> 9. Autopilot successfully enabled. |
 | **MBR where only the MB is replaced. All other parts remain same. The new MB was taken from a previously used device that has been Autopilot-enabled before.** | Yes | 1. Deregister old device from which MB will be taken. <br> 2. Deregister damaged device that needs to be repaired. <br> 3. Replace motherboard in repair device with MB from other Autopilot device (with new RDPK preinjected in BIOS). <br> 4. To gain access, reimage device or sign-in using customer's credentials. <br> 5. Write old device info into BIOS (same s/n, model, etc.) <br> 6. Capture new 4K HH. <br> 7. Reregister repaired device. <br> 8. Reset device back to OOBE. <br> 9. Go through Autopilot OOBE (customer). <br> 10. Autopilot successfully enabled. <br><br> The repaired device can also be used successfully as a normal, non-Autopilot device. |
-|  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
+| **BIOS info excluded from MBR device** | No | Repair facility doesn't have BIOS tool to write device info into BIOS after MBR. <br><br> 1. Deregister damaged device. <br> 2. Replace motherboard (BIOS does NOT contain device info). <br> 3. Reimage and write DPK into image. <br> 4. Capture new 4K HH. <br> 5. Reregister repaired device. <br> 6. Create Autopilot profile for device. <br> 7. Go through Autopilot OOBE (customer). <br> 8. Autopilot FAILS to recognize repaired device. |
+| **MBR when there's no TPM** | Yes | It's not recommend enabling Autopilot devices without a TPM. However, it's possible to enable an Autopilot device that doesn't have a TPM via user-driven mode (pre-provision and self-deploying modes aren't supported without a TPM). In this case, you would: <br><br> 1. Deregister damaged device. <br> 2. Replace motherboard. <br> 3. To gain access, reimage device or sign-in using customer's credentials. <br> 4. Write old device info into BIOS (same s/n, model, etc.) <br> 5. Capture new 4K HH. <br> 6. Reregister repaired device. <br> 7. Reset device back to OOBE. <br> 8. Go through Autopilot OOBE (customer). <br> 9. Autopilot successfully enabled. |
+| **New DPK written into image on repaired Autopilot device with a new MB** | Yes | Repair facility replaces normal MB on damaged device. MB doesn't contain any DPK in the BIOS. Repair facility writes DPK into image after MBR. <br><br> 1. Deregister damaged device. <br> 2. Replace motherboard - BIOS does NOT contain DPK info. <br> 3. To gain access, reimage device or sign-in using customer's credentials. <br> 4. Write device info into BIOS (same s/n, model, etc.) <br> 5. Capture new 4K HH. <br> 6. Reset or reimage device to pre-OOBE and write DPK into image. <br> 7. Reregister repaired device. <br> 8. Go through Autopilot OOBE. <br> 9. Autopilot successfully enabled. |
+| **New Repair Product Key (RDPK)** | Yes | Using a motherboard with a new RDPK preinjected results in a successful Autopilot refurbishment scenario. <br><br> 1. Deregister damaged device. <br> 2. Replace motherboard (with new RDPK preinjected in BIOS). <br> 3. Reimage or rest image to pre-OOBE. <br> 4. Write device info into BIOS. <br> 5. Capture new 4K HH. <br> 6. Reregister repaired device. <br> 7. Reimage or reset image to pre-OOBE. <br> 8. Go through Autopilot OOBE. <br> 9. Autopilot successfully enabled. |
+| **No Repair Product Key (RDPK) injected** | No | This scenario violates Microsoft policy and breaks the Windows Autopilot experience. |
+| **Reimage damaged Autopilot device that wasn't deregistered before repair** | Yes, but the device is still associated with previous tenant ID, so should only be returned to same customer. | 1. Reimage damaged device. <br> 2. Write DPK into image. <br> 3. Go through Autopilot OOBE. <br> 4. Autopilot successfully enabled to same tenant ID as before. |
+| **Disk replacement from a non-Autopilot device to an Autopilot device** | Yes | 1. Don't deregister damaged device before repair. <br> 2. Replace HDD on damaged device. <br> 3. Reimage or reset image back to OOBE. <br> 4. Go through Autopilot OOBE (customer). <br> 5. Autopilot successfully enabled (repaired device recognized as its previous self). |
+| **Disk replacement from one Autopilot device to another Autopilot device** | Maybe | If the device from which the HDD is taken was itself previously deregistered from Autopilot, then that HDD can be used in a repair device. The newly repaired device won't have the proper Autopilot experience if the HDD wasn't previously deregistered from Autopilot before being used in the repaired device. <br><br> Assuming the used HDD was previously deregistered (before being used in this repair): <br> <br> 1. Deregister damaged device. <br> 2. Replace HDD on damaged device using an HDD from another deregistered Autopilot device. <br> 3. Reimage or rest the repaired device back to a pre-OOBE state. <br> 4. Go through Autopilot OOBE (customer). <br> 5. Autopilot successfully enabled. |
+| **Non-Microsoft network card replacement** | No | Any scenario where a third party non-onboard network card is replaced breaks the Autopilot experience. These scenarios include the following scenarios: <br><br> • From a non-Autopilot device to an Autopilot device. <br> • From one Autopilot device to another Autopilot device. <br> • From an Autopilot device to a non-Autopilot device. <br><br> These scenarios aren't recommended. |
+| **Memory replacement** | Yes | Replacing the memory on a damaged device doesn't negatively affect the Autopilot experience on the device. No deregistration/reregistration is needed. The repair technician simply needs to replace the memory. |
+| GPU replacement | Yes | Replacing the GPU(s) on a damaged device doesn't negatively affect the Autopilot experience on that device. No deregistration/reregistration is needed. The repair technician simply needs to replace the GPU. |
 
-
-<table>
-<th>Scenario<th>Supported<th>Microsoft Recommendation
-
-<!--
-<tr><td>Motherboard Replacement (MBR) in general<td>Yes<td>The recommended course of action for MBR scenarios is:
-
-1. Autopilot device is deregistered from the Autopilot program
-2. The motherboard is replaced
-3. The device is reimaged (with BIOS info and DPK reinjected)
-4. A new Autopilot device ID (4K HH) is captured off the device
-5. The repaired device is reregistered for the Autopilot program using the new device ID
-6. The repaired device is reset to boot to OOBE
-7. The repaired device is shipped back to the customer
-
-Note that it's not necessary to reimage the device if the repair technician has access to the customer's sign-in credentials. It's technically possible to successfully re-enable MBR and Autopilot without keys or certain BIOS info (serial #, model name, etc.) However, doing so is only recommended for testing/educational purposes.
-
-<tr><td>MBR when motherboard has a TPM chip enabled and only one onboard network card that also gets replaced<td>Yes<td>
-
-1. Deregister damaged device
-2. Replace motherboard
-3. Reimage device (to gain access), unless you have access to customers' sign-in credentials
-4. Write device info into BIOS
-5. Capture new 4K HH
-6. Reregister repaired device
-7. Reset device back to OOBE
-8. Go through Autopilot OOBE (customer)
-9. Autopilot successfully enabled
-
-<tr><td>MBR when motherboard has a TPM chip (enabled) and a second network card (or network interface) that isn't replaced along with the motherboard<td>No<td>This scenario breaks the Autopilot experience. The resulting Device ID won't be stable until after TPM attestation has completed. Even then registration may give incorrect results because of ambiguity with MAC Address resolution. Therefore, we don't recommend this scenario.
-
-<tr><td>MBR where the NIC card, HDD, and WLAN all remain the same after the repair<td>Yes<td>
-
-1. Deregister damaged device
-2. Replace motherboard with a new Replacement Digital Product Key (RDPK) preinjected in BIOS
-3. Reimage device (to gain access), unless you have access to customers' sign-in credentials
-4. Write old device info into BIOS (same s/n, model, etc.)*
-5. Capture new 4K HH
-6. Reregister repaired device
-7. Reset device back to OOBE
-8. Go through Autopilot OOBE (customer)
-9. Autopilot successfully enabled
-
-*For this and later scenarios, rewriting old device info wouldn't include the TPM 2.0 endorsement key, as the associated private key is locked to the TPM device
-
-<tr><td>MBR where the NIC card remains the same, but the HDD and WLAN are replaced<td>Yes<td>
-
-1. Deregister damaged device
-2. Replace motherboard (with new RDPK preinjected in BIOS)
-3. Insert new HDD and WLAN
-4. Write old device info into BIOS (same s/n, model, etc.)
-5. Capture new 4K HH
-6. Reregister repaired device
-7. Reset device back to OOBE
-8. Go through Autopilot OOBE (customer)
-9. Autopilot successfully enabled
-
-<tr><td>MBR where the NIC card and WLAN remains the same, but the HDD is replaced<td>Yes<td>
-
-1. Deregister damaged device
-2. Replace motherboard (with new RDPK preinjected in BIOS)
-3. Insert new HDD
-4. Write old device info into BIOS (same s/n, model, etc.)
-5. Capture new 4K HH
-6. Reregister repaired device
-7. Reset device back to OOBE
-8. Go through Autopilot OOBE (customer)
-9. Autopilot successfully enabled
-
-<tr><td>MBR where only the MB is replaced (all other parts remain same). The new MB was taken from a previously used device that has never been enabled for Autopilot.<td>Yes<td>
-
-1. Deregister damaged device
-2. Replace motherboard (with new RDPK preinjected in BIOS)
-3. Reimage device (to gain access), unless you have access to customers' sign-in credentials
-4. Write old device info into BIOS (same s/n, model, etc.)
-5. Capture new 4K HH
-6. Reregister repaired device
-7. Reset device back to OOBE
-8. Go through Autopilot OOBE (customer)
-9. Autopilot successfully enabled
-
-<tr><td>MBR where only the MB is replaced (all other parts remain same). The new MB was taken from a previously used device that **has** been Autopilot-enabled before.<td>Yes<td>
-
-1. Deregister old device from which MB will be taken
-2. Deregister damaged device (that you want to repair)
-3. Replace motherboard in repair device with MB from other Autopilot device (with new RDPK preinjected in BIOS)
-4. Reimage device (to gain access), unless you have access to customers' sign-in credentials
-5. Write old device info into BIOS (same s/n, model, etc.)
-6. Capture new 4K HH
-7. Reregister repaired device
-8. Reset device back to OOBE
-9. Go through Autopilot OOBE (customer)
-10. Autopilot successfully enabled
-
-The repaired device can also be used successfully as a normal, non-Autopilot device.
-
---->
-
-<tr><td>BIOS info excluded from MBR device<td>No<td>Repair facility doesn't have BIOS tool to write device info into BIOS after MBR.
-
-1. Deregister damaged device.
-2. Replace motherboard (BIOS does NOT contain device info).
-3. Reimage and write DPK into image.
-4. Capture new 4K HH.
-5. Reregister repaired device.
-6. Create Autopilot profile for device.
-7. Go through Autopilot OOBE (customer).
-8. Autopilot FAILS to recognize repaired device.
-
-<tr><td>MBR when there's no TPM chip<td>Yes<td>We don't recommend enabling Autopilot devices without a TPM chip (which is recommended for BitLocker encryption). However, it's possible to enable an Autopilot device in "standard user" mode (but NOT Self-deploying mode) that doesn't have a TPM chip. In this case, you would:
-
-1. Deregister damaged device.
-2. Replace motherboard.
-3. To gain access, reimage device or sign-in using customer's credentials.
-4. Write old device info into BIOS (same s/n, model, etc.)
-5. Capture new 4K HH.
-6. Reregister repaired device.
-7. Reset device back to OOBE.
-8. Go through Autopilot OOBE (customer).
-9. Autopilot successfully enabled.
-
-<tr><td>New DPK written into image on repaired Autopilot device with a new MB<td>Yes<td>Repair facility replaces normal MB on damaged device. MB doesn't contain any DPK in the BIOS. Repair facility writes DPK into image after MBR. 
-
-1. Deregister damaged device.
-2. Replace motherboard - BIOS does NOT contain DPK info.
-3. To gain access, reimage device or sign-in using customer's credentials.
-4. Write device info into BIOS (same s/n, model, etc.)
-5. Capture new 4K HH.
-6. Reset or reimage device to pre-OOBE and write DPK into image.
-7. Reregister repaired device.
-8. Go through Autopilot OOBE.
-9. Autopilot successfully enabled.
-
-<tr><td>New Repair Product Key (RDPK)<td>Yes<td>Using a motherboard with a new RDPK preinjected results in a successful Autopilot refurbishment scenario. 
-
-1. Deregister damaged device.
-2. Replace motherboard (with new RDPK preinjected in BIOS).
-3. Reimage or rest image to pre-OOBE.
-4. Write device info into BIOS.
-5. Capture new 4K HH.
-6. Reregister repaired device.
-7. Reimage or reset image to pre-OOBE.
-8. Go through Autopilot OOBE.
-9. Autopilot successfully enabled.
-
-<tr><td>No Repair Product Key (RDPK) injected<td>No<td>This scenario violates Microsoft policy and breaks the Windows Autopilot experience.
-<tr><td>Reimage damaged Autopilot device that wasn't deregistered before repair<td>Yes, but the device is still associated with previous tenant ID, so should only be returned to same customer<td>
-
-1. Reimage damaged device.
-2. Write DPK into image.
-3. Go through Autopilot OOBE.
-4. Autopilot successfully enabled (to previous tenant ID).
-
-<tr><td>Disk replacement from a non-Autopilot device to an Autopilot device<td>Yes<td>
-
-1. don't deregister damaged device before repair.
-2. Replace HDD on damaged device.
-3. Reimage or reset image back to OOBE.
-4. Go through Autopilot OOBE (customer).
-5. Autopilot successfully enabled (repaired device recognized as its previous self).
-
-<tr><td>Disk replacement from one Autopilot device to another Autopilot device<td>Maybe<td>If the device from which the HDD is taken was itself previously deregistered from Autopilot, then that HDD can be used in a repair device. The newly repaired device won't have the proper Autopilot experience if the HDD wasn't previously deregistered from Autopilot before being used in the repaired device.
-
-Assuming the used HDD was previously deregistered (before being used in this repair):
-
-1. Deregister damaged device.
-2. Replace HDD on damaged device using an HDD from another deregistered Autopilot device.
-3. Reimage or rest the repaired device back to a pre-OOBE state.
-4. Go through Autopilot OOBE (customer).
-5. Autopilot successfully enabled.
-
-<tr><td>Non-Microsoft network card replacement <td>No<td>Any scenario where a third party non-onboard network card is replaced breaks the Autopilot experience. These scenarios include the following scenarios:
-
-- From a non-Autopilot device to an Autopilot device.
-- From one Autopilot device to another Autopilot device.
-- From an Autopilot device to a non-Autopilot device.
-
-We don't recommend any of these scenarios.
-
-<tr><td>Memory replacement<td>Yes<td>Replacing the memory on a damaged device doesn't negatively affect the Autopilot experience on that device. No de/reregistration is needed. The repair technician simply needs to replace the memory.
-<tr><td>GPU replacement<td>Yes<td>Replacing the GPU(s) on a damaged device doesn't negatively affect the Autopilot experience on that device. No de/reregistration is needed. The repair technician simply needs to replace the GPU.
-</table>
-
->When scavenging parts from another Autopilot device, we recommend unregistering the scavenged device from Autopilot, scavenging it, and then NEVER REGISTERING THE SCAVENGED DEVICE (AGAIN) FOR AUTOPILOT, because reusing parts this way may cause two active devices to end up with the same ID, with no possibility of distinguishing between the two.
+> [!IMPORTANT]
+>
+> When scavenging parts from another Autopilot device, it's recommended to unregister the scavenged device from Autopilot, scavenge it, and then **never register the scavenged device again for Autopilot**. Reusing parts in this way may cause two active devices to end up with the same ID with no possibility of distinguishing between the two.
 
 The following parts may be replaced without compromising Autopilot enablement or requiring special additional repair steps:
 
