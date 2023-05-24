@@ -38,7 +38,7 @@ You can use Remote Desktop Protocol (RDP) Shortpath for private networks with yo
 
 To use RDP Shortpath for public networks with Windows 365, you must meet these requirements:
 
-- Cloud PCs provisioned on the customer's private network.
+- Cloud PCs provisioned on the customer's private network. Private networks are supported with [Azure network connections](deployment-options.md). Microsoft hosted networks aren't supported.
 - Session Host (Cloud PC)
   - Enable a UDP listener on the UDP port 3390.
 - Direct line-of-sight connectivity between the client and the session host. This means that the client can connect directly to the session host on port 3390 (default):
@@ -59,7 +59,7 @@ To enable RDP Shortpath for private networks, visit the following Azure Virtual 
 
 The default connectivity to a Windows 365 Cloud PC is through a TCP connection that traverses a gateway using the [reverse connect](/azure/virtual-desktop/network-connectivity) transport. The reverse transport means that there’s no need for inbound connectivity to the session host (Cloud PC) to connect RDP traffic.
 
-RDP Shortpath builds on the TCP connection and provides, when possible, another direct connection between the Remote Desktop client and the Windows 365 Cloud PC. This connection uses UDP as the underlying  transport protocol. The direct path and protocol deliver improved connection reliability, lower latency, and higher available bandwidth.
+RDP Shortpath builds on the TCP connection and provides, when possible, another direct connection between the Remote Desktop client and the Windows 365 Cloud PC. This connection uses UDP as the underlying transport protocol. This UDP connection is a direct connection over the network that is managed by the customer.
 
 ![Diagram of RDP Shortpath process](./media/rdp-shortpath-private-networks/private-rdp-diagram.png)
 
