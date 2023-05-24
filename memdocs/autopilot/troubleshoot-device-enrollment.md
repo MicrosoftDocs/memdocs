@@ -126,11 +126,11 @@ The Autopilot profile not applying after a device is reimaged to an older OS ver
 
 ### Resolution of Autopilot profile not applied after reimaging to an older OS version
 
-When a device is reimaged to an older OS version after a hardware change on a device, deregister and re-register the device. For more information on how to properly deregister a device, see [Deregister a device](registration-overview.md#deregister-a-device)
+When a device is reimaged to an older OS version after a hardware change on a device, deregister and re-register the device. For more information on how to properly deregister a device, see [Deregister a device](registration-overview.md#deregister-a-device).
 
 ## Intune enrollment issues
 
-See [Troubleshooting Windows device enrollment errors in Intune](/mem/intune/device-enrollment/troubleshoot-windows-enrollment-errors) for assistance with Intune enrollment issues. Common issues can include:
+See [Troubleshooting Windows device enrollment errors in Intune](/intune/device-enrollment/troubleshoot-windows-enrollment-errors) for assistance with Intune enrollment issues. Common issues can include:
 
 - Incorrect or missing licenses assigned to the user.
 - Too many devices enrolled for the user.
