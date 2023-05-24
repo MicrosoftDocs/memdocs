@@ -33,12 +33,15 @@ ms.collection:
 
 # Overview of Apple User Enrollment in Microsoft Intune 
 
+> [!IMPORTANT]
+> The account driven user enrollment feature is in public preview. For more information, see [Public preview in Microsoft Intune](../fundamentals/public-preview.md).  
+
 You can utilize Apple User Enrollment to enroll and manage user-owned iOS/iPadOS devices in Microsoft Intune. *Apple User Enrollment* is an enrollment solution specifically for bring-your-own-device (BYOD) scenarios. It sets up the personal device so that work data is stored on a separate volume and in managed apps, away from the user's personal data and apps. Supervised mode isn't available with this enrollment type. As the admin, you get access to a limited but appropriate subset of Intune management options and restrictions to ensure that your organization's data stays safe.  
 
 This article provides an overview of the Apple User Enrollment features and functionality supported by Microsoft Intune. 
 
 ## User enrollment options  
-Microsoft Intune supports account driven user enrollment and user enrollment with Company Portal.   
+Microsoft Intune supports account driven Apple User Enrollment and Apple User Enrollment with Company Portal.   
 
 * Account driven user enrollment: Also referred to as *account-based enrollment*. The device user initiates enrollment by going to the **Settings** app > **VPN & Device Management** and adding their work or school account. After the device user approves device management, the enrollment profile silently installs, and Intune policies are applied.      
 * User enrollment with Company Portal: Also referred to as *profile based enrollment*. The device user initiates enrollment by signing into the Intune Company Portal app and following a series of screens and prompts. They are redirected from the app to Safari to download a preconfigured enrollment profile, and then go to the **Settings** app to install the profile.   
@@ -51,12 +54,12 @@ The following table provides a side-by-side comparison of each method.
 | BYOD and personal devices | ✔️ |✔️ |
 | Devices associated with single user | ✔️ |✔️| 
 | Enrollment initiated by device user | ✔️ |✔️|
-| Enrollment location | User is prompted to enroll device when they sign into an app with their work account. Enrollment takes place within a single screen in the device settings app. |User is prompted to enroll device when they sign into an app with their work account. Enrollment takes place over a series of screens in the Company Portal app and device settings app.|
+| Enrollment location | User is prompted to enroll device when they sign into an app with their work account. Enrollment takes place within a single screen in the device settings app. |User is prompted to enroll device when they sign into an app with their work account. Enrollment takes place over a series of screens in the Company Portal app, Safari web browser, and device settings app.|
 | Supervision|❌|❌| 
 | BYOD and personal devices | ✔️ |✔️ |
-| BYOD and personal devices | ✔️ |✔️ |✔️<br/><br/> Enrollment takes place within a series of screens in the Company Portal app and device settings app.|
+| BYOD and personal devices | ✔️ |✔️ |
 | Version | iOS/iPadOS 15 or later |iOS 13 or later <br/><br/> iPadOS 13.1 or later |
-| Apps required for enrollment | Microsoft Authenticator |Intune Company Portal app for iOS <br> </br> Microsoft Authenticator |  
+| Required apps | Microsoft Authenticator |Intune Company Portal app for iOS <br> </br> Microsoft Authenticator |  
 
 ## Supported settings 
 
@@ -86,7 +89,7 @@ You can apply these Microsoft Intune remote actions, which are available in the 
 
 ### App deployment options  
 You can deploy these app types to devices enrolled via User Enrollment:  
-- User-licensed apps and custom apps purchased through an Apple Volume Purchasing Plan (VPP) 
+- User-licensed apps and custom apps purchased through an Apple Volume Purchase Program (VPP) 
 - Line-of-business (LOB) apps  
 - Web apps  
 
