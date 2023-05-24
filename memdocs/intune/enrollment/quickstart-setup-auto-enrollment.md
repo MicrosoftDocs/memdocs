@@ -79,10 +79,9 @@ For this example, you'll configure MDM enrollment settings so that both corporat
 
     ![Screenshot of the "Select groups" assignment pane, highlighting the Contoso Testers example group.](./media/quickstart-setup-auto-enrollment/quickstart-setup-auto-enrollment-05.png)
 
-6. For **MAM User scope**, select **None**.  
-7. Choose **Select groups** > **Contoso Testers** > **Select** as the assigned group. 
-8. Use the default values for the remaining configuration values on the page.    
-9. Choose **Save**.  
+8. For **MAM User scope**, select **None**.  
+9. Use the default values for the remaining configuration values on the page.    
+10. Choose **Save**.  
 
 ## Clean up resources
 
