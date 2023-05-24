@@ -42,7 +42,7 @@ To use RDP Shortpath for public networks with Windows 365, you must meet these r
 - Session Host (Cloud PC)
   - Enable a UDP listener on the UDP port 3390.
 - Direct line-of-sight connectivity between the client and the session host. This means that the client can connect directly to the session host on port 3390 (default):
-  - Without being blocked by firewalls (including the Windows Firewall) or Network Security Group
+  - Without being blocked by firewalls (including the Windows Firewall) or Network Security Group.
   - Using a managed network such as:
     - [ExpressRoute private peering](/azure/expressroute/expressroute-circuit-peerings).
     - Site-to-site or Point-to-site VPN (IPsec), like [Azure VPN Gateway](/azure/vpn-gateway/vpn-gateway-about-vpngateways).
