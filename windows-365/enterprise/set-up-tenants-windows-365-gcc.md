@@ -128,12 +128,12 @@ The Windows 365 GCC Setup Tool can be run again after the initial setup. You mig
 
 1. Copy the following script.
 
-```powershell
-Azure PowerShellCopy  
-Open Cloudshell  
-connect-azaccount -usedeviceauthentication  
-curl https://raw.githubusercontent.com/microsoft/Windows365-PSScripts/main/Windows%20365%20GCC/Grant%20Service%20Principal%20Roles%20in%20Tenant/Grant%20W365%20SP%20Roles%20In%20Tenant.ps1 -o GrantW365SProles.ps1 & ./GrantW365SProles.ps1
-```
+   ```powershell
+   Azure PowerShellCopy  
+   Open Cloudshell  
+   connect-azaccount -usedeviceauthentication  
+   curl https://raw.githubusercontent.com/microsoft/Windows365-PSScripts/main/Windows%20365%20GCC/Grant%20Service%20Principal%20Roles%20in%20Tenant/Grant%20W365%20SP%20Roles%20In%20Tenant.ps1 -o     GrantW365SProles.ps1 & ./GrantW365SProles.ps1
+   ```
 
 2. Paste the script into your Azure Government subscription's Cloud Shell session and run it.
 
