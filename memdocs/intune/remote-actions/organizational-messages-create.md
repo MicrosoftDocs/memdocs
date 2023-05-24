@@ -152,12 +152,9 @@ On the **Schedule** page, schedule the delivery of your message.
 ---  
 
 ## Step 3: Add scope tags  
-Optionally, add scope tags to organizational messages.  Roles that are assigned the same scope tags can view, create, edit, and delete organizational messages. Global administrators can always view and manage organizational messages, regardless of the scope you add in this step.   
+Optionally, assign scope tags to organizational messages. Scope tags allow you to control which administrators can see, edit, cancel, or delete messages in Intune. For more information about scope tags, see [Use role-based access control (RBAC) and scope tags for distributed IT in Intune](../fundamentals/scope-tags.md). 
 
->[!NOTE]
-> Prior to June 2023, scope tags were unavailable for organizational messages. Intune has since added the default scope tag to every message created before June 2023. Admins that want access to those messages must be associated with a role that has the same tag.  
-
-Choose **Select scope tags** to add scope tags to your message. Select **Remove** to delete the scope tag from the message.  
+Choose **Select scope tags** to add scope tags to your message. Select **Remove** to delete the scope tag from the message. Intune only enforces scope tags and scope groups for messages created in Intune, and for admins with Intune roles.   
 
 ## Step 4: Assign message  
 Assign the message to Azure AD-registered users in your organization. You can only assign messages to Azure AD user groups, not Azure AD device groups. If a group includes both users and devices, Intune will only send the message to the users. 
@@ -166,9 +163,7 @@ Assign the message to Azure AD-registered users in your organization. You can on
    * **Add groups**: Select this option to individually choose from a list of Azure AD groups.  
    * **Include all users**: Select the option to assign the message to all Azure AD-registered users.  
 2. If needed, exclude Azure AD groups from the assignment. Under **Exclude**, select **Add groups** and choose the Azure AD groups to leave out.  
-3. Optionally, add scope groups. Intune doesn't support or enforce scope tags on people assigned Azure AD built-in roles.  
-4. Select **Next: Review + Create** to review and finalize your message.  
-
+3. Select **Next: Review + Create** to review and finalize your message.  
 
 ## Step 4: Review and create message  
 Review your message, scheduling details, and assignments before creating your message. When you're ready to send the message, select **Create**. 
