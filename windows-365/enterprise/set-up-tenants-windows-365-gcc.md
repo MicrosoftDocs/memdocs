@@ -40,7 +40,7 @@ The fastest way to use Windows 365 is to use AADJ, gallery images and the Micros
 - **Custom images**. Windows 365 provides optimized gallery images, including images with Microsoft 365 apps preinstalled(/windows-365/enterprise/device-images). After the gallery image is deployed, Intune can be used for further customization of [common settings](/mem/intune/configuration/settings-catalog-common-features) and [application deployment](/mem/intune/apps/apps-windows-10-app-deploy). If you must use your existing custom image, for more information, see [add a custom image](./add-device-images.md).
 - **Azure Network Connections (ANC)**. ANC lets you provision Cloud PCs that are attached to a virtual network that you manage. For more information, see [create an Azure network connection](./create-azure-network-connection.md).
 
-For Government Community Cloud (GCC) customers only, the instructions below lets Intune running in Azure Commercial to manage Cloud PCs running in Azure Government regions.
+For Government Community Cloud (GCC) customers only, the following instructions let Intune running in Azure Commercial to manage Cloud PCs running in Azure Government regions.
 
 > [!NOTE]
 > These instructions are specifically for GCC.  The instructions on this page don't apply to GCC High.
@@ -90,7 +90,7 @@ The Azure Government subscription includes a tenant (which ends in onmicrosoft.u
 
 If you want to use Azure AD join or hybrid Azure AD join, consider these preparations:
 
-**Azure AD joined Cloud PCs**: If you want to use an Azure AD join infrastructure and your own network, you need a tenant and Azure subscription in the Azure Government cloud. The tenant in the Azure commercial .com domain must be mapped to the tenant in the Azure Government .us domain.
+**Azure AD joined Cloud PCs**: If you want to use an Azure AD join infrastructure and your own network, you need a tenant and Azure subscription in the Azure Government cloud. The tenant in the Azure commercial .com domain must be mapped to the tenant in the Azure Government (.us) domain.
 
 **Hybrid Azure AD joined Cloud PCs**: If you want to use a hybrid Azure AD join infrastructure, you must configure your commercial (.com) tenant and your government (.us) tenants before creating your Azure Virtual Networks.
 
@@ -141,7 +141,7 @@ curl https://raw.githubusercontent.com/microsoft/Windows365-PSScripts/main/Windo
 
 1. Go to the [Windows 365 PowerShell GitHub repository](https://github.com/microsoft/Windows365-PSScripts).
 2. Navigate to the **Windows 365 GCC** > **Grant Service Principal Roles in Tenant** folder.
-3. Select **Grant W365 SP Roles in Tenant.ps1** > **Raw** > save the raw file to a location on your computer as a .ps1 file.  
+3. Select **Grant W365 SP Roles in Tenant.ps1** > **Raw** > save the raw file to a location on your computer as a ps1 file.  
 4. Open Windows PowerShell 5.1 (x64) as an Administrator > run the PowerShell script.
 5. Continue with the following section **Follow script instructions**.  
 
@@ -161,15 +161,15 @@ To connect the two tenants, the **AAD Tenant Mapping.ps1** PowerShell script mus
 - Define Azure Network Connections so that the Windows 365 Government Cloud PCs can access on-premises or Microsoft-hosted resources.
 
 1. Go to the [Windows 365 PowerShell GitHub repository](https://github.com/microsoft/Windows365-PSScripts).
-2. Navigate to the **Windows 365 GCC** folder > **AAD Tenant Mapping** > select **AAD Tenant Mapping.ps1** > **Raw** > save the raw file to a location on your computer as a .ps1 file.
+2. Navigate to the **Windows 365 GCC** folder > **AAD Tenant Mapping** > select **AAD Tenant Mapping.ps1** > **Raw** > save the raw file to a location on your computer as a ps1 file.
 3. Open Windows PowerShell 5.1 (x64) as Administrator and run the PowerShell script. It downloads missing modules if needed.
     >[!NOTE]
     >If the script was previously run successfully, you'll see the error **HttpStatusCode Conflict**. This warning can be ignored to execute the script functions Add and Get.
 4. In PowerShell 5.1, type **A** to add tenant mapping.
 5. A web browser prompt opens.  Enter your **Azure Commercial** credentials (for example, GlobalAdmin@contoso.onmicrosoft.com). The window closes after successful authentication. 
-6. A second web browser prompt opens, you're asked for your **Azure Commercial** credentials again, after that another prompt asks you to grant permissions.  Check the box **Consent on behalf of your organization** and then click on the **Accept** button. The window will then close.
+6. A second web browser prompt opens, you're asked for your **Azure Commercial** credentials again, after that another prompt asks you to grant permissions.  Check the box **Consent on behalf of your organization** and then click on the **Accept** button. The window closes.
 7. A third browser prompt opens. Enter your **Azure Government** credentials (for example, GlobalAdmin@fabrikam.onmicrosoft.us). The window closes after successful authentication.
-8. A fourth web browser prompt opens, you're asked for your **Azure Government** credentials again, after that another prompt asks you to grant permissions.  Check the box **Consent on behalf of your organization** and then click on the **Accept** button. The window will then close.
+8. A fourth web browser prompt opens, you're asked for your **Azure Government** credentials again, after that another prompt asks you to grant permissions.  Check the box **Consent on behalf of your organization** and then click on the **Accept** button. The window closes.
 8. After the mapping completes, you'll see **Added tenant mapping successfully!**
 
 ## Common tenant mapping issues
@@ -194,17 +194,17 @@ When provisioning Windows 365 Cloud PCs without the Microsoft-hosted network, yo
 > [!NOTE]
 > Tenant mapping must be successful before you proceed.
 
-Copy the following script, then paste the command into your Azure Government subscription's CloudShell session for execution.  Next, go to the section **Script instructions**.
+Copy the following script, then paste the command into your Azure Government subscription's Cloud Shell session for execution.  Next, go to the section **Script instructions**.
 
 ```azurepowershell-interactive
 connect-azaccount -usedeviceauthentication
 curl https://raw.githubusercontent.com/microsoft/Windows365-PSScripts/main/Windows%20365%20GCC/Grant%20Service%20Principal%20Roles%20in%20Tenant/Grant%20W365%20SP%20Roles%20In%20Tenant.ps1 -o GrantW365SProles.ps1 & ./GrantW365SProles.ps1
 ```
 
-OR use the following instructions if you don't have a CloudShell account that requires an Azure Storage account.
+OR use the following instructions if you don't have a Cloud Shell account that requires an Azure Storage account.
 
 1. Go to the [Windows 365 PowerShell GitHub repository](https://github.com/microsoft/Windows365-PSScripts).
-2. Navigate to the **Windows 365 GCC** folder > **Grant Service Principal Roles in Tenant** folder > select **Grant W365 SP Roles in Tenant.ps1** > **Raw** > save the raw file to a location on your computer as a .ps1 file.
+2. Navigate to the **Windows 365 GCC** folder > **Grant Service Principal Roles in Tenant** folder > select **Grant W365 SP Roles in Tenant.ps1** > **Raw** > save the raw file to a location on your computer as a ps1 file.
 3. Open Windows PowerShell 5.1 (x64) as Administrator and run the PowerShell script and then go to the section **Script instructions**.
 
 **Script instructions:**
