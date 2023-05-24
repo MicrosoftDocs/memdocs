@@ -76,7 +76,7 @@ You can also disable clipboard and drive redirection to ensure a foundation of d
 
 A key requirement of Cloud PCs is making sure that the virtual hardware is the right size for the needs of the end user. Windows 365 integrates with the [Endpoint analytics](/mem/analytics/overview) in [Microsoft Productivity Score](/microsoft-365/admin/productivity/productivity-score). Endpoint analytics provide measurement of the compute and memory load on your Cloud PCs. You can then use Windows 365 to [resize](resize-cloud-pc.md) those Cloud PCs to match the demands of your users and their apps. This resize action is surfaced in Microsoft Endpoint Manager along with other device actions to provide a seamless experience between your Cloud PCs and other endpoints.
 
-You can also use [Remediation](/mem/analytics/proactive-remediations) in Endpoint analytics to improve Cloud PC monitoring and remediation. Remediation lets you extend the built-in Microsoft 365 optimizations that Windows 365 provides, including optimizations for a heterogenous IT environment.
+You can also use [Remediation](/mem/analytics/remediations) in Endpoint analytics to improve Cloud PC monitoring and remediation. Remediation lets you extend the built-in Microsoft 365 optimizations that Windows 365 provides, including optimizations for a heterogenous IT environment.
 
 ## Deprovision
 
