@@ -68,9 +68,9 @@ Endpoint analytics gives you insights for measuring the quality of the experienc
 
 :::image type="content" source="../../analytics/media/restart-frequency-tab.png" alt-text="Screenshot of endpoint analytics restart frequency report in Intune admin center." lightbox="../../analytics/media/restart-frequency-tab.png":::
 
-- [Proactive Remediation](../../analytics/proactive-remediations.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json) - Proactive remediations in Endpoint analytics helps you fix common support issues before end-users notice issues. Use Proactive remediations to help increase your [User experience score](../../analytics/scores.md#bkmk_per-device)
+- [Remediation](../../analytics/remediations.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json) - Remediation in Endpoint analytics helps you fix common support issues before end-users notice issues. Use Remediation to help increase your [User experience score](../../analytics/scores.md#bkmk_per-device)
 
-:::image type="content" source="../../analytics/media/proactive-remediations-create.png" alt-text="Screenshot of endpoint analytics proactive remediations in Intune admin center." lightbox="../../analytics/media/proactive-remediations-create.png":::
+:::image type="content" source="../../analytics/media/remediations-create.png" alt-text="Screenshot of Endpoint analytics Remediation in Intune admin center." lightbox="../../analytics/media/remediations-create.png":::
 
 ## Co-management
 
