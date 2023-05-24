@@ -34,12 +34,6 @@ ms.collection:
 
 By editing a provisioning policy, you can move an existing Cloud PC from its current region or Azure network connection (ANC) to a new one. You can move up to 100 Cloud PCs at a time.
 
-When you start a Cloud PC move:
-
-- All Cloud PCs in the provisioning policy that no longer match the updated region or ANC will be shutdown.
-- All such Cloud PCs will be moved to the new region or ANC.
-- It may take several hours for the moves to complete.
-
 The best time to perform moves is over the weekend to make sure the impact to users is minimized. Also, you should notify your users before the move so that they can save their work and sign-off.
 
 New Cloud PCs created by the edited provisioning policy are assigned to the new region or ANC.
@@ -62,7 +56,7 @@ Moving a Cloud PC  in [public preview](..\public-preview.md).
 4. Select **Next** > **Update**.
 5. When ready to move the existing Cloud PCs, select **Apply region change to existing Cloud PCs**.
 
-\* The domain defined in the new ANC must match that of the Cloud PCs that you want to move. The domain used in hte original ANC must be reachable from the new ANC.
+\* The domain defined in the new ANC must match that of the Cloud PCs that you want to move. The domain used in the original ANC must be reachable from the new ANC.
 
 All Cloud PCs provisioned after these changes are created in the new region.
 
