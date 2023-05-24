@@ -29,7 +29,8 @@ ms.collection:
 - Windows Holographic, version 2004 or later
 
 > [!NOTE]
-> HoloLens 2 devices require Windows Autopilot self-deploying mode. For more information about using Windows Autopilot to deploy HoloLens 2 devices, see [Windows Autopilot for HoloLens 2](/hololens/hololens2-autopilot). **Assign to User** is not applicable for self-deployment Autopilot mode on Hololens 2.
+>
+> HoloLens 2 devices require Windows Autopilot self-deploying mode. For more information about using Windows Autopilot to deploy HoloLens 2 devices, see [Windows Autopilot for HoloLens 2](/hololens/hololens2-autopilot). **Assign to User** isn't applicable for self-deployment Autopilot mode on HoloLens 2.
 
 ## Create an Autopilot device group using Intune
 
@@ -66,7 +67,8 @@ ms.collection:
 3. Select **Create**.
 
 > [!NOTE]
-> Anything assigned to these attributes will only be assigned if the device is Autopilot registered.
+>
+> Anything assigned to these attributes is only assigned if the device is registered with Autopilot.
 
 ## Add devices
 
@@ -74,24 +76,26 @@ For information about formatting and using a CSV file to manually add Windows Au
 
 ## Assign a user to a specific Autopilot device
 
+You can assign a licensed Intune user to a specific Autopilot device. For supported OEMs, this assignment will:
+
+- Pre-populate the Azure Active Directory (Azure AD) User Principal Name (UPN) under the pre-provisioning landing page and Azure AD sign in page.
+- Allows setting of a custom greeting name.
+
+For more information including a list of supported OEMs, see [Return of key functionality for Windows Autopilot sign-in and deployment experience](https://techcommunity.microsoft.com/t5/intune-customer-success/return-of-key-functionality-for-windows-autopilot-sign-in-and/ba-p/3583130).
+
 > [!NOTE]
-> Assigning a licensed user to a registered Autopilot device using Microsoft Endpoint Manager no longer pre-fills any user information as described below. Please see [Updates to the Windows Autopilot sign-in and deployment experience](https://techcommunity.microsoft.com/t5/intune-customer-success/updates-to-the-windows-autopilot-sign-in-and-deployment/ba-p/2848452) for details on this change. This change does not impact user assigned policies and apps which are still deployed to the device when a licensed user is assigned. See [Windows Autopilot for pre-provisioned deployment](pre-provision.md#preparation) for details on this.
-
-You can assign a licensed Intune user to a specific Autopilot device. This assignment:
-
-- Pre-fills a user from Azure Active Directory in the [company-branded](/azure/active-directory/fundamentals/customize-branding) sign-in page during Windows setup.
-- Lets you set a custom greeting name.
-- Doesn't pre-fill or modify Windows sign-in.
+>
+> Assigning a licensed user to a specific Autopilot device only impacts pre-populating the UPN and setting of a custom greeting name. It doesn't impact assigned policies and applications that are deployed to the device or to the user. The assigned policies and applications are still deployed regardless of the OEM. For more information, see [Windows Autopilot for pre-provisioned deployment](pre-provision.md#preparation).
 
 Prerequisites:
 
-- Azure Active Directory Company Branding has been configured.
-- Windows 10, version 1809 or later.
+- Azure Active Directory [Company Branding](/azure/active-directory/fundamentals/customize-branding) has been configured.
 
-> [!NOTE]
-> Assigning a user to a specific Autopilot device doesn't work if you are using ADFS.
+> [!IMPORTANT]
+>
+> Assigning a user to a specific Autopilot device doesn't work if you're using ADFS.
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program** > choose the device > **Assign user**.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Windows** > **Windows enrollment** > **Windows Autopilot Deployment Program** > **Devices** > choose the device > **Assign user**.
 
     ![Screenshot of Assign user](./media/enrollment-autopilot/assign-user.png)
 
@@ -99,14 +103,7 @@ Prerequisites:
 
     ![Screenshot of select user](./media/enrollment-autopilot/select-user.png)
 
-3. In the **User Friendly Name** box, type a friendly name or just accept the default. This string is the friendly name that displays when the user signs in during Windows setup.
-
-<!--
-
-Removing screenshot since the UI has changed and it may be confusing (Save instead of OK)
-
-     ![Screenshot of friendly name](./media/enrollment-autopilot/friendly-name.png)
--->
+3. In the **User Friendly Name** box, type a friendly name or just accept the default.
 
 4. Choose **Save**.
 
@@ -130,7 +127,7 @@ You can group Windows devices by a correlator ID when enrolling using [Autopilot
 > - Always create dynamic group rules matching against the *entire* enrollmentProfileName value
 > - Never name Autopilot or Apple ADE profiles beginning with "OfflineAutopilotprofile-".
 
-If you want all devices in the groups to automatically register to Autopilot, in any Autopilot profiles assigned to the groups, set the setting **Convert all targeted devices to Autopilot** to **Yes**. All non-Autopilot devices in assigned groups will register with the Autopilot deployment service. Allow 48 hours for the registration to be processed. When the device is unenrolled and reset, Autopilot will enroll it. After a device is registered in this way, disabling this setting or removing the profile assignment won't remove the device from the Autopilot deployment service. You must remove the device by deregistering the device from Autopilot.
+If you want all devices in the groups to automatically register to Autopilot, in any Autopilot profiles assigned to the groups, set the setting **Convert all targeted devices to Autopilot** to **Yes**. All non-Autopilot devices in assigned groups register with the Autopilot deployment service. Allow 48 hours for the registration to be processed. When the device is unenrolled and reset, Autopilot enrolls it. After a device is registered in this way, disabling this setting or removing the profile assignment won't remove the device from the Autopilot deployment service. You must remove the device by deregistering the device from Autopilot. For more information, see [Deregister a device](registration-overview.md#deregister-a-device).
 
 ## Next steps
 
