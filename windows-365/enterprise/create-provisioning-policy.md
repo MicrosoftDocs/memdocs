@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 02/28/2023
+ms.date: 05/09/2023
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice:
@@ -87,18 +87,18 @@ To select an ANC, follow these steps:
     - **Custom image**:  Choose **Select** > select an image from the list > **Select**. You'll see the list of images that you uploaded using the [Add device images](add-device-images.md) workflow.
 4. Select **Next**.
 5. On the **Configuration** page, under **Windows settings**, choose a **Language & Region**. The selected language pack will be installed on Cloud PCs provisioned with this policy.
-6. Optional. Select **Apply device name template** to create a Cloud PC naming template to use when naming all Cloud CPs that are provisioned with this policy. When creating the template, follow these rules:
-    - Names must be between 4 and 15 characters.
-    - Names can contain letters, numbers, hyphens, and underscores.
+6. Optional. Select **Apply device name template** to create a Cloud PC naming template to use when naming all Cloud CPs that are provisioned with this policy. This naming template updates the NETBIOS name and does not affect the display name of the Cloud PC.  When creating the template, follow these rules:
+    - Names must be between 5 and 15 characters.
+    - Names can contain letters, numbers, and hyphens.
     - Names can't include blank spaces.
     - Optional. Use the %USERNAME:X% macro to add the first X letters of the username.
     - Required. Use the %RAND:Y% macro to add a random string of numbers, where Y equals the number of digits to add. Y must be 5 or more. Names must contain a randomized string.
   
     Examples of custom naming templates:
 
-    - %RAND:4%
+    - %RAND:5%
     - ABC-%RAND:5%
-    - ABC-%USERNAME:5%-%RAND:6%
+    - ABC-%USERNAME:5%-%RAND:5%
 7. Optional. Under **Additional services**, choose a service to be installed on Cloud PCs provisioned with this policy:
     - **Windows Autopatch** is a cloud service that automates updates for Windows, Microsoft 365 Apps for enterprise, Microsoft Edge, and Microsoft Teams on both physical and virtual devices. For more information, see [What is What is Windows Autopatch?](/windows/deployment/windows-autopatch/overview/windows-autopatch-overview) and the [Windows Autopatch FAQ](https://go.microsoft.com/fwlink/?linkid=2200228).
     - **Microsoft Managed Desktop** is a cloud service that helps with device deployment, service management and operations, and security. For more information, see [What is Microsoft Managed Desktop?](/managed-desktop/intro/).

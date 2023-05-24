@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 04/05/2022
+ms.date: 05/09/2023
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice:
@@ -32,7 +32,7 @@ ms.collection:
 
 # Add or delete custom device images
 
-If you want to use a custom device image, you can add it into your Azure subscription and then use it for provisioning Cloud PCs. You can use standard Azure Marketplace gallery images or [create your own custom managed image](/azure/virtual-machines/windows/capture-image-resource). If you currently use a Shared Image Gallery in Microsoft Azure, you can convert one of those images into a managed image. To convert, use the steps to [export an image version to a managed disk](/azure/virtual-machines/managed-disk-from-image-version) and then [create an image from a managed disk](/azure/virtual-machines/windows/capture-image-resource#create-an-image-from-a-snapshot-using-powershell).
+If you want to use a custom device image, you can add it into your Azure subscription and then use it for provisioning Cloud PCs. You can use standard Azure Marketplace gallery images or [create your own custom managed image](/azure/virtual-machines/windows/capture-image-resource). If you currently use an Azure Compute Gallery in Microsoft Azure, you can convert one of those images into a managed image. To convert, use the steps to [export an image version to a managed disk](/azure/virtual-machines/managed-disk-from-image-version) and then [create an image from a managed disk](/azure/virtual-machines/windows/capture-image-resource#create-an-image-from-a-snapshot-using-powershell).
 
 > [!NOTE]
 >

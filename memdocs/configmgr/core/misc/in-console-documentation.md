@@ -81,6 +81,6 @@ The complete list of all hotfix and update rollup related articles, starting wit
 The short form URL for version 2010 and newer hotfix related articles is `https://aka.ms/KB#######`. For example, [https://aka.ms/KB9210721](https://aka.ms/KB9210721).
 Hotfix related articles for version 2006 and prior are still available on support.microsoft.com.
 
-The Microsoft knowledge base articles previously found at support.microsoft.com are published to [Microsoft Configuration Manager Troubleshooting](https://learn.microsoft.com/troubleshoot/mem/configmgr/welcome-configuration-manager). Troubleshooting articles created after October 2020 don't have a KB article ID.
+The Microsoft knowledge base articles previously found at support.microsoft.com are published to [Microsoft Configuration Manager Troubleshooting](/troubleshoot/mem/configmgr/welcome-configuration-manager). Troubleshooting articles created after October 2020 don't have a KB article ID.
 
 To subscribe to Atom or RSS notification of new Configuration Manager support articles, see [Support content updates](https://support.microsoft.com/help/4089498/) and select **Microsoft Configuration Manager (current branch)**.

@@ -4,7 +4,7 @@ description: include file
 author: MandiOhlinger
 ms.service: microsoft-intune
 ms.topic: include
-ms.date: 04/14/2022
+ms.date: 05/18/2023
 ms.author: mandia
 ms.custom: include file
 ms.collection:
@@ -20,7 +20,7 @@ If removing the VPN resolves the behavior, then you can:
 
 - Work with the third party or partner VPN for possible resolutions. Microsoft doesn't provide technical support for third party or partner VPNs.
 - Don't use a VPN with Outlook traffic.
-- If you need to use a VPN, then [use a split-tunnel VPN, such as Microsoft Tunnel](../protect/microsoft-tunnel-overview.md). And, allow the Outlook traffic to bypass the VPN.
+- If you need to use a VPN, then use a split-tunnel VPN. And, allow the Outlook traffic to bypass the VPN.
 
 For more information, go to:
 

@@ -764,6 +764,12 @@ items:
             href: ./protect/software-updates-ios.md
           - name: macOS update policies
             href: ./protect/software-updates-macos.md
+          - name: Android Enterprise updates
+            items:
+            - name: Android FOTA update
+              href: ./protect/fota-updates-android.md
+            - name: Zebra LG OTA Integration
+              href: ./protect/zebra-lifeguard-ota-integration.md            
           - name: Windows updates
             items:
             - name: Use Windows Update for Business
@@ -1030,8 +1036,12 @@ items:
         - name: Education Take a Test app
           href: ./configuration/education-settings-configure.md
         - name: eSIM cellular on Windows
-          href: ./configuration/esim-device-configuration.md
           displayName: embedded sim
+          items:
+          - name: eSIM bulk activation via download server
+            href: ./configuration/esim-device-configuration-download-server.md
+          - name: eSIM bulk activation via activation codes
+            href: ./configuration/esim-device-configuration.md
         - name: Telecom expenses on Android, iOS/iPadOS
           href: ./configuration/telecom-expenses-monitor.md
           displayName: saaswedo datalert
@@ -1682,6 +1692,8 @@ items:
         href: ./protect/data-intune-sends-to-apple.md
       - name: Data Intune sends to Google
         href: ./protect/data-intune-sends-to-google.md
+      - name: Data Intune sends to Zebra
+        href: ./protect/data-intune-sends-to-zebra.md        
       - name: Enable Windows diagnostic data 
         href: ./protect/data-enable-windows-data.md
       - name: Information shared from Jamf Pro to Intune
