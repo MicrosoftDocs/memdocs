@@ -226,8 +226,16 @@ In the following table:
 - Supported = **Yes**: the device can be reenabled for Autopilot
 - Supported = **No**: the device can't be reenabled for Autopilot
 
+| **Scenario** | **Supported** | **Microsoft Recommendation** |
+| --- | --- |
+| **Motherboard Replacement (MBR) in general** | Yes | The recommended course of action for MBR scenarios is: <br> 1. Autopilot device is deregistered from the Autopilot program <br> 2. The motherboard is replaced <br> 3. The device is reimaged (with BIOS info and DPK reinjected) <br> 4. A new Autopilot device ID (4K HH) is captured off the device <br> 5. The repaired device is reregistered for the Autopilot program using the new device ID <br> 6. The repaired device is reset to boot to OOBE <br> 7. The repaired device is shipped back to the customer <br> Note that it's not necessary to reimage the device if the repair technician has access to the customer's sign-in credentials. It's technically possible to successfully re-enable MBR and Autopilot without keys or certain BIOS info (serial #, model name, etc.) However, doing so is only recommended for testing/educational purposes.|
+| **MBR when motherboard has a TPM chip enabled and only one onboard network card that also gets replaced** | Yes  | 1. Deregister damaged device <br> 2. Replace motherboard <br> 3. Reimage device (to gain access), unless you have access to customers' sign-in credentials <br> 4. Write device info into BIOS <br> 5. Capture new 4K HH <br> 6. Reregister repaired device <br> 7. Reset device back to OOBE <br> 8. Go through Autopilot OOBE (customer) <br> 9. Autopilot successfully enabled |
+
+
 <table>
 <th>Scenario<th>Supported<th>Microsoft Recommendation
+
+<!--
 <tr><td>Motherboard Replacement (MBR) in general<td>Yes<td>The recommended course of action for MBR scenarios is:
 
 1. Autopilot device is deregistered from the Autopilot program
@@ -238,11 +246,9 @@ In the following table:
 6. The repaired device is reset to boot to OOBE
 7. The repaired device is shipped back to the customer
 
-> [!NOTE]
->
-> For item 3, it's not necessary to reimage the device if the repair technician has access to the customer's sign-in credentials. It's technically possible to successfully re-enable MBR and Autopilot without keys or certain BIOS info (like serial #, model name, and so on). But doing so is only recommended for testing/educational purposes.
+Note that it's not necessary to reimage the device if the repair technician has access to the customer's sign-in credentials. It's technically possible to successfully re-enable MBR and Autopilot without keys or certain BIOS info (serial #, model name, etc.) However, doing so is only recommended for testing/educational purposes.
 
-<tr><td>MBR when motherboard has a TPM chip (enabled) and only one onboard network card (that also gets replaced)<td>Yes<td>
+<tr><td>MBR when motherboard has a TPM chip enabled and only one onboard network card that also gets replaced<td>Yes<td>
 
 1. Deregister damaged device
 2. Replace motherboard
@@ -253,6 +259,8 @@ In the following table:
 7. Reset device back to OOBE
 8. Go through Autopilot OOBE (customer)
 9. Autopilot successfully enabled
+
+--->
 
 <tr><td>MBR when motherboard has a TPM chip (enabled) and a second network card (or network interface) that isn't replaced along with the motherboard<td>No<td>This scenario breaks the Autopilot experience. The resulting Device ID won't be stable until after TPM attestation has completed. Even then registration may give incorrect results because of ambiguity with MAC Address resolution. Therefore, we don't recommend this scenario.
 
