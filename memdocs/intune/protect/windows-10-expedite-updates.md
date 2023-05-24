@@ -105,7 +105,7 @@ Only update builds that are generally available are supported. Preview builds, i
 - Have access to endpoints. To get a detailed list of endpoints required for the associated service listed here, go to [Network endpoints](../fundamentals/intune-endpoints.md#access-for-managed-devices).  
 
   - [Windows Update](/windows/privacy/manage-windows-1809-endpoints#windows-update)
-  - Windows Update for Business -deployment service
+  - Windows Update for Business deployment service
   - [Windows Push Notification Services](/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config): *(Recommended, but not required. Without this access, devices might not expedite updates until their next daily check for updates.)*
 
 - Be configured to get Quality Updates directly from the Windows Update service.
