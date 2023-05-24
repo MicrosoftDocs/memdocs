@@ -43,14 +43,18 @@ Microsoft Intune supports account driven user enrollment and user enrollment wit
 * Account driven user enrollment: Also referred to as *account-based enrollment*. The device user initiates enrollment by going to the **Settings** app > **VPN & Device Management** and adding their work or school account. After the device user approves device management, the enrollment profile silently installs, and Intune policies are applied.      
 * User enrollment with Company Portal: Also referred to as *profile based enrollment*. The device user initiates enrollment by signing into the Intune Company Portal app and following a series of screens and prompts. They are redirected from the app to Safari to download a preconfigured enrollment profile, and then go to the **Settings** app to install the profile.   
 
-The following table provides a side-by-side comparison of each method, and the features and scenarios they support.  
+The following table provides a side-by-side comparison of each method.   
 
 | Feature or scenario | Account driven user enrollment | User enrollment with Company Portal|
 | --- | --- | --- | 
 | Just-in-time registration | ✔️ |❌ |
 | BYOD and personal devices | ✔️ |✔️ |
 | Devices associated with single user | ✔️ |✔️| 
-| Enrollment initiated by device user | ✔️<br/><br/>Enrollment takes place within a single screen in the device settings app. |✔️<br/><br/> Enrollment takes place within a series of screens in the Company Portal app and device settings app.|
+| Enrollment initiated by device user | ✔️ |✔️|
+| Enrollment location | User is prompted to enroll device when they sign into an app with their work account. Enrollment takes place within a single screen in the device settings app. |User is prompted to enroll device when they sign into an app with their work account. Enrollment takes place over a series of screens in the Company Portal app and device settings app.|
+| Supervision|❌|❌| 
+| BYOD and personal devices | ✔️ |✔️ |
+| BYOD and personal devices | ✔️ |✔️ |✔️<br/><br/> Enrollment takes place within a series of screens in the Company Portal app and device settings app.|
 | Version | iOS/iPadOS 15 or later |iOS 13 or later <br/><br/> iPadOS 13.1 or later |
 | Apps required for enrollment | Microsoft Authenticator |Intune Company Portal app for iOS <br> </br> Microsoft Authenticator |  
 

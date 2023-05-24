@@ -34,26 +34,28 @@ ms.collection:
 
 # Set up user enrollment with Company Portal  
 
-Set up user enrollment with Company Portal for iOS/iPadOS personal devices enrolling in Microsoft Intune. This Apple user enrollment method, also referred to as *profile-based user enrollment* gives you access to a limited but appropriate set of device management settings and actions, so you can protect your organization's data without affecting the device user's personal data or apps. Device users initiate enrollment by downloading a pre-configured enrollment profile onto their device. Both device enrollment and authentication takes place in the Intune Company Portal app. 
+Set up user enrollment with Company Portal for iOS/iPadOS personal devices enrolling in Microsoft Intune. This Apple User Enrollment method, also referred to as *profile-based user enrollment* gives you access to a limited but appropriate set of device management settings and actions, so you can protect work data without affecting the device user's personal data or apps. 
 
-This article describes how to set up an enrollment profile in the Microsoft Intune admin center for user enrollment with Company Portal. 
+When the device owner attempts to sign into an app with their work or school account, Intune prompts them to enroll their device and provides instructions for next steps. The device user authenticates and initiates enrollment by signing into the Intune Company Portal app. From there, they're redirected to Safari and the device settings app, where they download and install the enrollment profile. 
 
 For more information about Apple User Enrollment, see [User Enrollment and MDM](https://support.apple.com/guide/deployment/user-enrollment-and-mdm-dep23db2037d/web) on the Apple support website.   
+
+This article describes how to set up an enrollment profile in the Microsoft Intune admin center for Apple User Enrollment with Company Portal. 
 
 ## Prerequisites
 The user enrollment option is supported on devices running iOS 13 or later, and iPadOS version 13.1 or later. Before beginning setup, complete the following tasks:    
 
 - [Set mobile device management (MDM) authority](../fundamentals/mdm-authority-set.md)
 - [Get Apple MDM Push certificate](apple-mdm-push-certificate-get.md)
-- [Create Managed Apple IDs for device users](https://support.apple.com/en-us/HT210737) 
+- [Create Managed Apple IDs for device users](https://support.apple.com/en-us/HT210737) (Opens Apple Support website)  
 
 ## You should know  
 
 Review this information before you begin:    
 
-* Apple released iPadOS in September 2019, which introduced a change that can affect Microsoft Azure Active Directory (Azure AD) and Intune customers who use Conditional Access policies in their organization. For more information about how this affects your policies and what actions to take, see [Evaluate and update Conditional Access policies after new iPadOS release](https://support.microsoft.com/topic/action-required-evaluate-and-update-conditional-access-policies-after-new-ipados-release-23795067-9048-62ad-a5bd-ad63995fc488).  **For PM: Confirming it's OK to remove this note from 2019?**
-
 * User enrollment requires you to provide managed Apple IDs to your enrolling users. You can create the IDs manually, but we recommend using federated authentication to link Apple Business Manager with Azure AD. This lets users use their Azure AD usernames and passwords in place of the Managed Apple IDs to sign in to their device. For more information, see [Federated Authentication with Apple Business Manager](https://support.apple.com/en-euro/guide/apple-business-manager/axmb19317543/1/web/1) (opens Apple Business Manager User Guide).  
+
+* Apple released iPadOS in September 2019, which introduced a change that can affect Microsoft Azure Active Directory (Azure AD) and Intune customers who use Conditional Access policies in their organization. For more information about how this affects your policies and what actions to take, see [Evaluate and update Conditional Access policies after new iPadOS release](https://support.microsoft.com/topic/action-required-evaluate-and-update-conditional-access-policies-after-new-ipados-release-23795067-9048-62ad-a5bd-ad63995fc488).  
 
 ## Create enrollment profile   
 
