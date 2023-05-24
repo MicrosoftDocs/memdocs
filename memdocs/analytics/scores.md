@@ -89,4 +89,4 @@ Use the **Add filter** option on tables to display items that match your criteri
 
 ## Next steps
 
-- Use [Proactive remediations](proactive-remediations.md) to gather more data and take action on devices
+- Use [Remediations](remediations.md) to gather more data and take action on devices
