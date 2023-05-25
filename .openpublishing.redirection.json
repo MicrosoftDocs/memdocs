@@ -1,7 +1,7 @@
 {
     "redirections": [
         {
-            "source_path": "memdocs/autopilot/autopilot-mbr",
+            "source_path": "memdocs/autopilot/autopilot-mbr.md",
             "redirect_url": "/mem/autopilot/autopilot-motherboard-replacement",
             "redirect_document_id": false
         },
