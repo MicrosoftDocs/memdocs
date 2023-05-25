@@ -50,7 +50,7 @@ To use RDP Shortpath for public networks with Windows 365, you must meet these r
 
 To enable RDP Shortpath for public networks, visit the following Azure Virtual Desktop documentation page and follow the instructions:
 
-[Enable RDP Shortpath for public networks](/azure/virtual-desktop/shortpath-public#enabling-the-preview-of-rdp-shortpath-for-public-networks).
+[Enable RDP Shortpath for public networks](/azure/virtual-desktop/rdp-shortpath?tabs=public-networks#enabling-the-preview-of-rdp-shortpath-for-public-networks).
 
 ## Verify UDP connectivity
 

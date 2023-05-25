@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 11/17/2022
+ms.date: 05/25/2023
 ms.collection: 
   - M365-modern-desktop
   - highpri
@@ -86,11 +86,13 @@ The "A" characters at the end of the hash are effectively empty data. Each chara
 To fix this issue, the hash needs to be modified, then the new value tested, until PowerShell succeeds in decoding the hash. The result is mostly illegible, which is fine. We're just looking for it to not throw the error "Invalid length for a Base-64 char array or string". 
 
 To test the base64, you can use the following PowerShell:
+
 ```powershell
 [System.Text.Encoding]::ascii.getstring( [System.Convert]::FromBase64String("DEVICE HASH"))
 ```
 
 So, as an example (this example isn't a device hash, but it's misaligned unpadded Base64 so it's good for testing):
+
 ```powershell
 [System.Text.Encoding]::ascii.getstring( [System.Convert]::FromBase64String("Q29udG9zbwAAA"))
 ```
@@ -98,12 +100,13 @@ So, as an example (this example isn't a device hash, but it's misaligned unpadde
 Now for the padding rules. The padding character is "=". The padding character can only be at the end of the hash, and there can only be a maximum of two padding characters. Here's the basic logic.
 
 - Does decoding the hash fail?
- - Yes: Are the last two characters "="?
-   - Yes: Replace both "=" with a single "A" character, then try again
-   - No: Add another "=" character at the end, then try again
- - No: That hash is valid
+  - Yes: Are the last two characters "="?
+    - Yes: Replace both "=" with a single "A" character, then try again
+    - No: Add another "=" character at the end, then try again
+- No: That hash is valid
 
 Looping the above logic on the previous example hash, we get the following permutations:
+
 - Q29udG9zbwAAA
 - Q29udG9zbwAAA=
 - Q29udG9zbwAAA==
@@ -132,9 +135,10 @@ When a device is reimaged to an older OS version after a hardware change on a de
 
 ## Intune enrollment issues
 
-See [this knowledge base article](https://support.microsoft.com/help/4089533/troubleshooting-windows-device-enrollment-problems-in-microsoft-intune) for assistance with Intune enrollment issues. Common issues can include"
-- incorrect or missing licenses assigned to the user.
-- too many devices enrolled for the user.
+See [Troubleshooting Windows device enrollment errors in Intune](/troubleshoot/mem/intune/device-enrollment/troubleshoot-windows-enrollment-errors) for assistance with Intune enrollment issues. Common issues can include:
+
+- Incorrect or missing licenses assigned to the user.
+- Too many devices enrolled for the user.
 
 Error code 80180018 is typically reported on an error page titled **Something went wrong**. This error means that the MDM enrollment failed.
 

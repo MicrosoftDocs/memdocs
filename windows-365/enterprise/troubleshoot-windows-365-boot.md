@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 5/24/2023
+ms.date: 5/25/2023
 ms.topic: troubleshooting
 ms.service: windows-365
 ms.subservice: 
@@ -42,6 +42,7 @@ If the user can't access the Cloud PC from the Windows 365 Boot physical device,
     - The browser at windows365.microsoft.com.
     - The Windows 365 app on another (non-Windows 365 Boot) device.
 2. If you can log into the Cloud PC from either method, then there's an issue with the Windows 365 Boot physical device. In this case, confirm that the physical device is correctly configured and has the requisite software versions. For more information, see [Windows 365 Boot physical device requirements](windows-365-boot-physical-device-requirements.md).
+3. Admins can try to manually click on **Device sync** to get the policies delivered faster on the device. Users cany try to restart the device.
 
 ## Physical device registry key configuration
 
