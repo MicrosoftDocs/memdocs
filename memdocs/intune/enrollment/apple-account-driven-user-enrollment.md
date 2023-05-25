@@ -119,7 +119,7 @@ Create an enrollment profile for devices enrolling via account driven user enrol
 9. Select **Next**.  
 10. On the **Review + create** page, review your choices, and then select **Create** to finish creating the profile.  
 
-## Enroll personal devices     
+## Step 3: Prepare employees for device enrollment      
 To initiate device enrollment on a personal device, the device owner must go to the Settings app and sign in with their work or school account. If they attempt to sign into an app with their work or school account, the app will alert them to the enrollment requirement and instruct them how to proceed. 
 
 This section describes the enrollment steps for device users. We recommend using this information in your organization's device onboarding documentation or for troubleshooting and support. 

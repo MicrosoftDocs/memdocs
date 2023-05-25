@@ -67,21 +67,19 @@ Microsoft Intune supports a specific subset of device management options for use
 
 ### Password settings   
 
-Microsoft Intune enforces the following settings when you configure any password setting in Microsoft Intune:   
-
-* The **Simple passwords** setting is automatically set to **Block**.
-* A six-digit PIN is enforced.
+If you configure any password settings, Microsoft Intune automatically sets the **Simple passwords** setting to **Block**. Microsoft Intune also enforces a six-digit device PIN.  
 
 For example:  
-1. You configure the **Password expiration** setting in an enrollment profile. 
-2. You assign the enrollment profile to devices enrolled via User Enrollment.
+1. You create an enrollment profile for user enrollment with Company Portal. 
+2. Within the profile you you configure **Password expiration**.  
+2. You assign the enrollment profile.  
 3. Microsoft Intune applies the password settings in the following ways:    
   - The **Password expiration** setting is ignored.  
   - Simple passwords such as `111111` or `123456` are prohibited.  
   - A six-digit pin is enforced.  
 
 ### Remote actions for Intune admins    
-You can apply these Microsoft Intune remote actions, which are available in the admin center, to devices enrolled via User Enrollment:    
+You can apply these Microsoft Intune remote actions, which are available in the admin center, to devices enrolled via Apple User Enrollment:    
 - Retire  
 - Delete  
 - Remote Lock  
