@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 05/24/2022
+ms.date: 05/24/2023
 ms.collection:
   - M365-modern-desktop
   - tier2
@@ -24,7 +24,7 @@ ms.topic: how-to
 
 This document offers guidance for Windows Autopilot device repair scenarios that Microsoft partners can use in motherboard replacement (MBR) situations, and other servicing scenarios.
 
-Repairing Autopilot enrolled devices is complex, as it tries to balance OEM requirements with Windows Autopilot requirements. Specifically, OEM requirements include strict uniqueness across motherboards, MAC addresses, etc.. Windows Autopilot requires strict uniqueness at the hardware hash level for each device to enable successful registration. The hardware hash doesn't always accommodate all the OEM hardware component requirements. So these requirements are sometimes at odds, causing issues with some repair scenarios. The hardware hash is also known as the hardware ID.
+Repairing Autopilot enrolled devices is complex, as it tries to balance OEM requirements with Windows Autopilot requirements. Specifically, OEM requirements include strict uniqueness across motherboards, MAC addresses, etc. Windows Autopilot requires strict uniqueness at the hardware hash level for each device to enable successful registration. The hardware hash doesn't always accommodate all the OEM hardware component requirements. These requirements are sometimes at odds which can cause issues with some repair scenarios. The hardware hash is also known as the hardware ID.
 
 If a motherboard is replaced on an Autopilot registered device with the following versions of Windows:
 
@@ -121,6 +121,7 @@ Those repair facilities with access to the OA3 Tool (which is part of the ADK) c
 Instead, the [WindowsAutopilotInfo PowerShell script](https://www.powershellgallery.com/packages/Get-WindowsAutopilotInfo) can be used to capture the 4K HH.
 
 > [!NOTE]
+>
 > Other methods in addition to Windows PowerShell are also available to capture the hardware hash. For more information, see [Collect the hardware hash](add-devices.md#collect-the-hardware-hash).
 
 To use the **WindowsAutopilotInfo** PowerShell script, follow these steps:
@@ -231,8 +232,9 @@ The repaired device can now be returned to the customer. The device will be auto
 
 > [!IMPORTANT]
 >
-> If the repair facility did NOT reimage the device, they could be sending it back in a potentially broken state. For example, there's no way to log into the device because it's been dissociated from the only known user account. So, they should tell the organization that they need to fix the registration and OS themselves.
-> A device can be "registered" for Autopilot before being powered-on. But the device isn't actually "deployed" to Autopilot until it goes through OOBE. Therefore, resetting the device back to a pre-OOBE state is a required step.
+> If the repair facility did **not** reimage the device, they could be sending it back in a potentially broken state. For example, there's no way to log into the device because it's been dissociated from the only known user account.
+>
+> A device can be **registered** for Autopilot before being powered-on. However, the device isn't actually **deployed** to Autopilot until it goes through OOBE. Therefore, resetting the device back to a pre-OOBE state is a required step.
 
 ## Specific repair scenarios
 
@@ -262,7 +264,7 @@ For the **Supported** column in the following table:
 | **MBR where only the motherboard is replaced. All other parts remain same. The new motherboard was taken from a previously used device that has never been enabled for Autopilot.** | Yes | 1. Deregister damaged device. <br> 2. Replace motherboard (with new RDPK preinjected in BIOS). <br> 3. To gain access, reimage device or sign-in using customer's credentials. <br> 4. Write old device info into BIOS (same s/n, model, etc.) <br> 5. Capture new 4K HH. <br> 6. Reregister repaired device. <br> 7. Reset device back to OOBE. <br> 8. Go through Autopilot OOBE (customer). <br> 9. Autopilot successfully enabled. |
 | **MBR where only the motherboard is replaced. All other parts remain same. The new motherboard was taken from a previously used device that has been Autopilot-enabled before.** | Yes | 1. Deregister old device from which motherboard will be taken. <br> 2. Deregister damaged device that needs to be repaired. <br> 3. Replace motherboard in repair device with motherboard from other Autopilot device (with new RDPK preinjected in BIOS). <br> 4. To gain access, reimage device or sign-in using customer's credentials. <br> 5. Write old device info into BIOS (same s/n, model, etc.) <br> 6. Capture new 4K HH. <br> 7. Reregister repaired device. <br> 8. Reset device back to OOBE. <br> 9. Go through Autopilot OOBE (customer). <br> 10. Autopilot successfully enabled. <br><br> The repaired device can also be used successfully as a normal, non-Autopilot device. |
 | **BIOS info excluded from MBR device** | No | Repair facility doesn't have BIOS tool to write device info into BIOS after MBR. <br><br> 1. Deregister damaged device. <br> 2. Replace motherboard (BIOS does NOT contain device info). <br> 3. Reimage and write DPK into image. <br> 4. Capture new 4K HH. <br> 5. Reregister repaired device. <br> 6. Create Autopilot profile for device. <br> 7. Go through Autopilot OOBE (customer). <br> 8. Autopilot FAILS to recognize repaired device. |
-| **MBR when there's no TPM** | Yes | It's not recommend enabling Autopilot devices without a TPM. However, it's possible to enable an Autopilot device that doesn't have a TPM via user-driven mode (pre-provision and self-deploying modes aren't supported without a TPM). In this case, you would: <br><br> 1. Deregister damaged device. <br> 2. Replace motherboard. <br> 3. To gain access, reimage device or sign-in using customer's credentials. <br> 4. Write old device info into BIOS (same s/n, model, etc.) <br> 5. Capture new 4K HH. <br> 6. Reregister repaired device. <br> 7. Reset device back to OOBE. <br> 8. Go through Autopilot OOBE (customer). <br> 9. Autopilot successfully enabled. |
+| **MBR when there's no TPM** | Yes | It's not recommend to enable Autopilot devices without a TPM. However, it's possible to enable an Autopilot device that doesn't have a TPM via user-driven mode. Pre-provision and self-deploying modes aren't supported without a TPM. When using user-driven mode, you would: <br><br> 1. Deregister damaged device. <br> 2. Replace motherboard. <br> 3. To gain access, reimage device or sign-in using customer's credentials. <br> 4. Write old device info into BIOS (same s/n, model, etc.) <br> 5. Capture new 4K HH. <br> 6. Reregister repaired device. <br> 7. Reset device back to OOBE. <br> 8. Go through Autopilot OOBE (customer). <br> 9. Autopilot successfully enabled. |
 | **New DPK written into image on repaired Autopilot device with a new MB** | Yes | Repair facility replaces normal motherboard on damaged device. motherboard doesn't contain any DPK in the BIOS. Repair facility writes DPK into image after MBR. <br><br> 1. Deregister damaged device. <br> 2. Replace motherboard - BIOS does NOT contain DPK info. <br> 3. To gain access, reimage device or sign-in using customer's credentials. <br> 4. Write device info into BIOS (same s/n, model, etc.) <br> 5. Capture new 4K HH. <br> 6. Reset or reimage device to pre-OOBE and write DPK into image. <br> 7. Reregister repaired device. <br> 8. Go through Autopilot OOBE. <br> 9. Autopilot successfully enabled. |
 | **New Repair Product Key (RDPK)** | Yes | Using a motherboard with a new RDPK preinjected results in a successful Autopilot refurbishment scenario. <br><br> 1. Deregister damaged device. <br> 2. Replace motherboard (with new RDPK preinjected in BIOS). <br> 3. Reimage or rest image to pre-OOBE. <br> 4. Write device info into BIOS. <br> 5. Capture new 4K HH. <br> 6. Reregister repaired device. <br> 7. Reimage or reset image to pre-OOBE. <br> 8. Go through Autopilot OOBE. <br> 9. Autopilot successfully enabled. |
 | **No Repair Product Key (RDPK) injected** | No | This scenario violates Microsoft policy and breaks the Windows Autopilot experience. |
