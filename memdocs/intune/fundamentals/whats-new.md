@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/12/2023
+ms.date: 05/25/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -67,11 +67,18 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 -->
 
+## Week of May 22, 2023
+
+### App management
+
+#### Update to macOS shell scripts maximum running time limit<!-- 23187517 -->
+Based on customer feedback, we're updating the Intune agent for macOS (version 2305.019) to extend the maximum script run time to 60 minutes. Previously, the Intune agent for macOS only allowed shell scripts to run for up to 15 minutes before reporting the script as a failure. The Intune agent for macOS 2206.014 and higher supports the 60-minute timeout.
+
 ## Week of May 8, 2023
 
 ### Device configuration
 
-#### Device Firmware Configuration Interface (DFCI) supports Dynabook devices<!-- 10249859 wndraft -->
+#### Device Firmware Configuration Interface (DFCI) supports Dynabook devices<!-- 10249859 -->
 For Windows 10/11 devices, you can create a DFCI profile to manage UEFI (BIOS) settings. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration profiles** > **Create profile** > **Windows 10 and later** for platform > **Templates** > **Device Firmware Configuration Interface** for profile type.
 
 Some Dynabook devices running Windows 10/11 are enabled for DFCI. Contact your device vendor or device manufacturer for eligible devices.
