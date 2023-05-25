@@ -42,7 +42,7 @@ Before deploying a device, ensure that an Autopilot profile has been assigned to
        - **Assigned**: The device has been assigned an Autopilot deployment profile.
        - **Fix pending**:  When a hardware change occurs on a device, this status will display while Intune tries to register the new hardware. When selecting the link for the **Fix pending** status, the following message appears:
 
-        `We've detected a hardware change on this device. We're trying to automatically register the new hardware. You don't need to do anything now; the status will be updated at the next check in with the result.`
+        **We've detected a hardware change on this device. We're trying to automatically register the new hardware. You don't need to do anything now; the status will be updated at the next check in with the result.**
 
           If Intune is able to successfully register the new hardware, Intune updates the profile status at the next check-in. For more information on this status, see the following articles:
 
