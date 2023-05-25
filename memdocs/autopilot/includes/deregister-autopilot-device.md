@@ -12,7 +12,7 @@ ms.localizationpriority: medium
 <!-- This file is shared by the following articles:
 
 registration-overview.md
-autopilot-mbr.md
+autopilot-motherboard-replacement.md
 
 Headings are driven by article context. -->
 

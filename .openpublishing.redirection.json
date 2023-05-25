@@ -1,6 +1,11 @@
 {
     "redirections": [
         {
+            "source_path": "memdocs/autopilot/autopilot-mbr",
+            "redirect_url": "/mem/autopilot/autopilot-motherboard-replacement",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "memdocs/intune/enrollment/tutorial-use-autopilot-enroll-devices.md",
             "redirect_url": "/mem/autopilot/tutorial/autopilot-scenarios",
             "redirect_document_id": false
