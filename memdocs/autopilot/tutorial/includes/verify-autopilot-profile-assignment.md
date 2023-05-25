@@ -40,18 +40,26 @@ Before deploying a device, ensure that an Autopilot profile has been assigned to
        - **Not assigned**: The device hasn't been assigned an Autopilot deployment profile.
        - **Assigning**: The device is being assigned an Autopilot deployment profile.
        - **Assigned**: The device has been assigned an Autopilot deployment profile.
-       - **Fix pending**:  Intune tries to register the new hardware. If successful, Intune updates the profile status at the next check-in. For more information on this status, see the following articles:
+       - **Fix pending**:  When a hardware change occurs on a device, this status will display while Intune tries to register the new hardware. When selecting the link for the **Fix pending** status, the following message appears:
+
+        `We've detected a hardware change on this device. We're trying to automatically register the new hardware. You don't need to do anything now; the status will be updated at the next check in with the result.`
+
+          If Intune is able to successfully register the new hardware, Intune updates the profile status at the next check-in. For more information on this status, see the following articles:
+
+           - [Autopilot profile not applied after reimaging to an older OS version](../../troubleshoot-device-enrollment.md#autopilot-profile-not-applied-after-reimaging-to-an-older-os-version).
+           - [Return of key functionality for Windows Autopilot sign-in and deployment experience](https://techcommunity.microsoft.com/t5/intune-customer-success/return-of-key-functionality-for-windows-autopilot-sign-in-and/ba-p/3583130).
+
+       - **Attention required**: After a hardware change occurs on a device, if Intune is unable to register the new hardware, the device can't receive the Autopilot profile until you reset and re-register the device. For more information on this status, see the following articles:
+
          - [Autopilot profile not applied after reimaging to an older OS version](../../troubleshoot-device-enrollment.md#autopilot-profile-not-applied-after-reimaging-to-an-older-os-version).
-         - [Hardware change detection](/mem/intune/enrollment/tutorial-use-autopilot-enroll-devices#hardware-change-detection).
-         - [Return of key functionality for Windows Autopilot sign-in and deployment experience](https://techcommunity.microsoft.com/t5/intune-customer-success/return-of-key-functionality-for-windows-autopilot-sign-in-and/ba-p/3583130).
-       - **Attention required**: The device can't receive the Autopilot profile until you reset and re-register the device. For more information on this status, see the following articles:
-         - [Hardware change detection](/mem/intune/enrollment/tutorial-use-autopilot-enroll-devices#hardware-change-detection).
+
          - [Return of key functionality for Windows Autopilot sign-in and deployment experience](https://techcommunity.microsoft.com/t5/intune-customer-success/return-of-key-functionality-for-windows-autopilot-sign-in-and/ba-p/3583130).
 
         Before starting the Autopilot deployment process on a device, make sure that in the **Windows Autopilot devices** page:
 
         - The device's **Profile status** status is **Assigned**.
         - In the properties of the device, **Date assigned** has a value.
+        - In the properties of the device, **Assigned profile** displays the expected Autopilot profile.
 
 > [!NOTE]
 >

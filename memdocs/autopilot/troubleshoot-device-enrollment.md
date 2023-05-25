@@ -115,7 +115,9 @@ Replace the collected hash with this new padded hash then try to import again.
 
 ## Autopilot profile not applied after reimaging to an older OS version
 
-If you enroll a device with Windows Update [KB5015878](https://support.microsoft.com/topic/july-26-2022-kb5015878-os-builds-19042-1865-19043-1865-and-19044-1865-preview-549f5551-fcc5-4fee-8811-c5df12e04d40) or later on Windows 10 or with Windows Update [KB5017383](https://support.microsoft.com/topic/september-20-2022-kb5017383-os-build-22000-1042-preview-62753265-68e9-45d2-adcb-f996bf3ad393) or later on Windows 11 and then reimage to an older OS version, the Autopilot profile isn't applied. The device would need to be re-registered to complete a successful Autopilot deployment. You may see the message **Fix pending** in the Autopilot devices page, which indicates that there was a hardware change on the device.
+If you enroll a device with Windows Update [KB5015878](https://support.microsoft.com/topic/july-26-2022-kb5015878-os-builds-19042-1865-19043-1865-and-19044-1865-preview-549f5551-fcc5-4fee-8811-c5df12e04d40) or later on Windows 10 or with Windows Update [KB5017383](https://support.microsoft.com/topic/september-20-2022-kb5017383-os-build-22000-1042-preview-62753265-68e9-45d2-adcb-f996bf3ad393) or later on Windows 11 and then reimage to an older OS version, the Autopilot profile isn't applied. The device would need to be re-registered to complete a successful Autopilot deployment. You may see the message **Fix pending** or **Attention required** in the Autopilot devices page, which indicates that there was a hardware change on the device. When selecting the link for the **Fix pending** status, the following message appears:
+
+`We've detected a hardware change on this device. We're trying to automatically register the new hardware. You don't need to do anything now; the status will be updated at the next check in with the result.`
 
 ### Cause of Autopilot profile not applied after reimaging to an older OS version
 
