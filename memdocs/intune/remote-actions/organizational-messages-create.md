@@ -176,8 +176,9 @@ Return to **Organizational messages** and select the **Message** tab to view or 
 ## Edit scheduled message  
 You can edit the properties of a message that's in a scheduled state. 
 
-1. Select a scheduled message. 
-2. Next to **Summary**, select **Edit**.  
+1. Go to **Organizational messages** > **Messages**. 
+2. Select the name of the message you want to edit.  
+2. A summary of the message opens, and shows the message properties. Next to **Summary**, select **Edit**.  
 3. Make changes to the properties. 
 4. Select **Save**.  
 
