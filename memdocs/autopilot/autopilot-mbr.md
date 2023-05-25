@@ -187,18 +187,43 @@ When including the 4K HH in the csv file, you don't also need to include the PKI
 
 ## Reset the device
 
-The repair facility must reset the image back to a pre-OOBE state before returning it to the customer. This reset is needed because the device was required to be in Full OS or Audit Mode to capture the 4K HH. One way to reset the image is by using the built-in reset feature in Windows, as follows:
+The repair facility must reset the image back to a pre-OOBE state before returning it to the customer. This reset is needed because the device was required to be in Full OS or Audit Mode to capture the 4K HH. One way to reset the image is by using the built-in reset feature in Windows.
 
-On the device:
+To use the reset feature in Windows on a device:
+
+**Windows 10**:
 
 1. Go to **Settings** > **Update & Security** > **Recovery**.
+
 2. Select **Get started**.
-3. Under **Reset this PC**, select **Remove everything and Just remove my files.
-4. Select **Reset**.
 
-![Screenshot of rest this PC](images/reset.png)
+3. In the **Reset this PC** window:
 
-However, it's likely the repair facility doesn't have access to Windows because they lack the user credentials to sign in. In this case they need to use other means to reimage the device, such as the [Deployment Image Servicing and Management tool](/windows-hardware/manufacture/desktop/oem-deployment-of-windows-10-for-desktop-editions#use-a-deployment-script-to-apply-your-image).
+   1. Under **Choose an option**, select **Remove everything**.
+
+   2. Under **How would you like to reinstall Windows?**, select either option.
+
+   3. Under **Additional settings**, select the **Next** button.
+
+   4. Under **Ready to reset this PC**, select the **Reset** button.
+
+**Windows 11**:
+
+1. Go to **Settings** > **System** > **Recovery**.
+
+2. Under **Recovery options**, select the **Reset PC** button next to **Reset this PC**.
+
+3. In the **Reset this PC** window:
+
+   1. Under **Choose an option**, select **Remove everything**.
+
+   2. Under **How would you like to reinstall Windows?**, select either option.
+
+   3. Under **Additional settings**, select the **Next** button.
+
+   4. Under **Ready to reset this PC**, select the **Reset** button.
+
+However, the repair facility most likely doesn't have access to Windows because they lack the user credentials to sign in. In this case they need to use other means to reimage the device, such as the [Deployment Image Servicing and Management tool](/windows-hardware/manufacture/desktop/oem-deployment-of-windows-10-for-desktop-editions#use-a-deployment-script-to-apply-your-image).
 
 ## Return the repaired device to the customer
 
@@ -228,10 +253,10 @@ For the **Supported** column in the following table:
 
 | **Scenario** | **Supported** | **Microsoft Recommendation** |
 | --- | --- | --- |
-| **Motherboard Replacement (MBR) in general** | Yes | The recommended course of action for MBR scenarios is: <br> 1. Autopilot device is deregistered from the Autopilot program. <br> 2. The motherboard is replaced. <br> 3. The device is reimaged (with BIOS info and DPK reinjected). [^1] <br> 4. A new Autopilot device ID (4K HH) is captured off the device. <br> 5. The repaired device is reregistered for the Autopilot program using the new device ID. <br> 6. The repaired device is reset to boot to OOBE. <br> 7. The repaired device is shipped back to the customer. <br><br> [^1] It's not necessary to reimage the device if the repair technician has access to the customer's sign-in credentials. It's technically possible to successfully re-enable MBR and Autopilot without keys or certain BIOS info (serial #, model name, etc.) However, doing so is only recommended for testing/educational purposes. |
+| **Motherboard Replacement (MBR) in general** | Yes | The recommended course of action for MBR scenarios is: <br> 1. Autopilot device is deregistered from the Autopilot program. <br> 2. The motherboard is replaced. <br> 3. The device is reimaged (with BIOS info and DPK reinjected). <sup>1</sup> <br> 4. A new Autopilot device ID (4K HH) is captured off the device. <br> 5. The repaired device is reregistered for the Autopilot program using the new device ID. <br> 6. The repaired device is reset to boot to OOBE. <br> 7. The repaired device is shipped back to the customer. <br><br> <sup>1</sup> It's not necessary to reimage the device if the repair technician has access to the customer's sign-in credentials. It's technically possible to successfully re-enable MBR and Autopilot without keys or certain BIOS info (serial #, model name, etc.) However, doing so is only recommended for testing/educational purposes. |
 | **MBR when motherboard has a TPM chip enabled and only one onboard network card that also gets replaced** | Yes  | 1. Deregister damaged device. <br> 2. Replace motherboard. <br> 3. To gain access, reimage device or sign-in using customer's credentials. <br> 4. Write device info into BIOS. <br> 5. Capture new 4K HH. <br> 6. Reregister repaired device. <br> 7. Reset device back to OOBE. <br> 8. Go through Autopilot OOBE (customer). <br> 9. Autopilot successfully enabled. |
 | **MBR when motherboard has an enabled TPM chip enabled and a second network interface that isn't replaced along with the motherboard** | No | This scenario breaks the Autopilot experience. The resulting Device ID won't be stable until after TPM attestation has completed. Even then registration may give incorrect results because of ambiguity with MAC Address resolution. Therefore, this scenario isn't recommended. |
-| **MBR where the NIC card, HDD, and WLAN all remain the same after the repair** | Yes | 1. Deregister damaged device. <br> 2. Replace motherboard with a new Replacement Digital Product Key (RDPK) preinjected in BIOS. <br> 3. To gain access, reimage device or sign-in using customer's credentials. <br> 4. Write old device info into BIOS (same s/n, model, etc.) [^2] <br> 5. Capture new 4K HH. <br> 6. Reregister repaired device. <br> 7. Reset device back to OOBE. <br> 8. Go through Autopilot OOBE (customer). <br> 9. Autopilot successfully enabled. <br><br> [^2] For this and later scenarios, rewriting old device info wouldn't include the TPM 2.0 endorsement key, as the associated private key is locked to the TPM device. |
+| **MBR where the NIC card, HDD, and WLAN all remain the same after the repair** | Yes | 1. Deregister damaged device. <br> 2. Replace motherboard with a new Replacement Digital Product Key (RDPK) preinjected in BIOS. <br> 3. To gain access, reimage device or sign-in using customer's credentials. <br> 4. Write old device info into BIOS (same s/n, model, etc.) <sup>2</sup> <br> 5. Capture new 4K HH. <br> 6. Reregister repaired device. <br> 7. Reset device back to OOBE. <br> 8. Go through Autopilot OOBE (customer). <br> 9. Autopilot successfully enabled. <br><br> <sup>2</sup> For this and later scenarios, rewriting old device info wouldn't include the TPM 2.0 endorsement key, as the associated private key is locked to the TPM device. |
 | **MBR where the NIC card remains the same, but the HDD and WLAN are replaced** | Yes | 1. Deregister damaged device. <br> 2. Replace motherboard (with new RDPK preinjected in BIOS). <br> 3. Insert new HDD and WLAN. <br> 4. Write old device info into BIOS (same s/n, model, etc.) <br> 5. Capture new 4K HH. <br> 6. Reregister repaired device. <br> 7. Reset device back to OOBE. <br> 8. Go through Autopilot OOBE (customer). <br> 9. Autopilot successfully enabled. |
 | **MBR where the NIC card and WLAN remains the same, but the HDD is replaced** | Yes | 1. Deregister damaged device. <br> 2. Replace motherboard (with new RDPK preinjected in BIOS). <br> 3. Insert new HDD. <br> 4. Write old device info into BIOS (same s/n, model, etc.) <br> 5. Capture new 4K HH. <br> 6. Reregister repaired device. <br> 7. Reset device back to OOBE. <br> 8. Go through Autopilot OOBE (customer). <br> 9. Autopilot successfully enabled. |
 | **MBR where only the motherboard is replaced. All other parts remain same. The new motherboard was taken from a previously used device that has never been enabled for Autopilot.** | Yes | 1. Deregister damaged device. <br> 2. Replace motherboard (with new RDPK preinjected in BIOS). <br> 3. To gain access, reimage device or sign-in using customer's credentials. <br> 4. Write old device info into BIOS (same s/n, model, etc.) <br> 5. Capture new 4K HH. <br> 6. Reregister repaired device. <br> 7. Reset device back to OOBE. <br> 8. Go through Autopilot OOBE (customer). <br> 9. Autopilot successfully enabled. |
