@@ -193,6 +193,9 @@ In the Jamf Pro portal, you create a Computer configuration profile. This prof
 
 When the device checks in with the Jamf Pro service, it receives this profile.
 
+> [!TIP]
+> If you use Jamf Connect, it is recommended that you follow the [latest Jamf guidance on integrating Jamf Connect with Azure AD](https://learn.jamf.com/bundle/jamf-connect-documentation-current/page/Jamf_Connect_and_Microsoft_Conditional_Access.html). The recommended integration pattern ensures that Jamf Connect works properly with your Conditional Access policies and Azure AD Identity Protection.
+
 # [Other MDMs](#tab/create-profile-other-mdm)
 
 In the MDM portal, create a device configuration profile. This profile includes the settings to configure the SSO app extension on devices.
