@@ -97,6 +97,16 @@ items:
         items:
         - name: Set up tenants for Windows 365 Government
           href: set-up-tenants-windows-365-gcc.md
+      - name: Windows 365 Boot
+        items:
+        - name: Windows 365 Boot overview
+          href: windows-365-boot-overview.md
+        - name: Windows 365 Boot guided scenario
+          href: windows-365-boot-guide.md
+        - name: Physical device requirements
+          href: windows-365-boot-physical-device-requirements.md
+        - name: Restrict access to physical device
+          href: windows-365-boot-restrict-user-access-physical-device.md
       - name: Citrix HDX Plus for Windows 365
         items:
         - name: Requirements
@@ -175,6 +185,8 @@ items:
         href: remotely-manage-cloud-pc.md
       - name: RDP Shortpath for public networks 
         href: rdp-shortpath-public-networks.md
+      - name: RDP Shortpath for private networks  
+        href: rdp-shortpath-private-networks.md
       - name: Reprovision a Cloud PC
         href: reprovision-cloud-pc.md
       - name: Resize a Cloud PC
@@ -249,6 +261,10 @@ items:
       href: troubleshoot-citrix-hdx-plus.md
     - name: Windows 365 app
       href: troubleshoot-windows-365-app.md
+    - name: Windows 365 Boot
+      href: troubleshoot-windows-365-boot.md
+    - name: Windows 365 Boot known issues
+      href: windows-365-boot-known-issues.md
 - name: Reference
   items:
     - name: Get audit logs by using PowerShell

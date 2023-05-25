@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/01/2023
+ms.date: 05/16/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -68,6 +68,10 @@ For your Line of Business (LOB) apps, integrate them with the MAM SDK. Later, yo
 
 > [!NOTE]
 > Make sure your Android LOB applications support direct proxy or Proxy Auto-Configuration (PAC) for both MDM and MAM.
+
+**MAM SDK Version**:
+
+To use the Android Trusted Roots Functionality for Microsoft Tunnel for MAM require a MAM SDK version of 9.5.0 or later. See [Release Version 9.5.0 · msintuneappsdk/ms-intune-app-sdk-android](https://github.com/msintuneappsdk/ms-intune-app-sdk-android/releases/tag/9.5.0) on github.com.
 
 ## Configure policies to support Microsoft Tunnel for MAM
 
@@ -197,7 +201,7 @@ To support LOB apps on your unenrolled devices, the apps must deploy as *availab
 
 ### Use a trusted certificate profile
 
-LOB apps that use the MAM tunnel on Android are required to integrate with the Intune App SDK and must use the new Tunnel for MAM trust manager to utilize trusted root certificate support for their LOB apps.
+LOB apps that use the MAM tunnel on Android are required to integrate with the Intune App SDK and must use the new Tunnel for MAM trust manager to utilize trusted root certificate support for their LOB apps. To support trusted root certificates, you must use the minimum SDK version (or later) as detailed in the [Prerequisites](#prerequisites) section of this article.
 
 **Trusted Root Certificates Management**:
 
