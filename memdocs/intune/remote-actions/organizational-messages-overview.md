@@ -48,11 +48,11 @@ Messages are assigned to Azure AD users and scheduled in the admin center. After
 ## Message types  
 You can create the following types of messages:  
 
-* Taskbar messages: These messages appear just above the desktop taskbar. Taskbar messages are disruptive and good to use when you need to deliver an important notification, like a critical software update. After the user selects the included URL, the message goes away and doesn't appear again.   
+* Taskbar messages: These messages appear just above the desktop taskbar. Taskbar messages are disruptive and good to use when you need to deliver an important notification, like a critical software update. A device user can dismiss the message, but it reappears at the frequency you configure in Intune until they go to the included URL.     
 
-* Notification area messages: These messages appear in the Notification Center. These notifications typically pop up and then disappear. Use them to link employees to informational messages, such as new and available training or optional updates. After the user selects the URL, the notification goes away and doesn't appear again. The device user's Windows 11 Focus Assist settings may disrupt the visibility of these messages. 
+* Notification area messages: These messages appear in the Notification Center. They typically pop up and then disappear, and are good for linking employees to informational resources, such as new and available trainings or optional updates. The message reappears at the frequency you configure in Intune until the user goes to the included URL. The device user's Windows 11 Focus Assist settings may disrupt the visibility of notification area messages. 
 
-* Get Started app messages: These messages appear in the Get Started app. The device user sees this message after they enroll their device, and then open the Get Started app.    Use this type of message to welcome new employees and link them to resources like benefits information, essential employee trainings, device tips, policies, and support information. After the user selects the included URL, the message goes away and doesn't appear again.  
+* Get Started app messages: These messages appear in the Get Started app. The device user sees this message after they enroll their device, and then open the Get Started app. Use this type of message to welcome new employees and link them to resources like benefits information, essential employee trainings, device tips, policies, and support information. The message keeps showing up at the frequency you configure in Intune until the user goes to the included URL. 
 
 ## Prerequisites  
 For all tenant, role, and policy requirements for organizational messages see [Prerequisites](organizational-messages-prerequisites.md).    

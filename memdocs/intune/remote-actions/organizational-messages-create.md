@@ -74,7 +74,7 @@ Create and configure a message for the taskbar area.
 
 4. Select **OK**.  
 5. On the **Message** page, select **Add a logo**, and then choose an image file. For requirements, see [Logo requirements](organizational-messages-prerequisites.md#logo-requirements).  
-6. (Optional) **Provide a link for the message**: To include a URL link in your message:  
+6. **Provide a link for the message**: To include a URL link in your message:  
    1. Enter your custom URL. Example: `www.contoso.com/SoftwareUpdate`     
    2. Select the full generated link to make sure it works.     
 7. **Choose language to preview**: Select a language to preview the localized version of your message. The message is shown to employees in the [display language](https://support.microsoft.com/windows/manage-the-input-and-display-language-settings-in-windows-12a10cb4-8626-9b77-0ccb-5013e0c7c7a2) they've selected on their device. Organizational messages are supported in 15 languages. If the employee's preferred language isn't supported, the message will appear in their preferred fallback language.  
@@ -96,7 +96,7 @@ Create and configure a message for the notification area.
 
 3. Select **OK**.  
 4. On the **Message** page, select **Add a logo**, and then choose an image file. For requirements, see [Logo requirements](organizational-messages-prerequisites.md#logo-requirements).  
-5. (Optional) **Provide a link for the message**: To include a URL link in your message:  
+5. **Provide a link for the message**: To include a URL link in your message:  
     1. Enter your custom URL. Example: `www.contoso.com/SoftwareUpdate`     
     2. Select the full generated link to make sure it works.  
 6. **Choose language to preview**: Select a language to preview the localized version of your message. The message is shown to employees in the [display language](https://support.microsoft.com/windows/manage-the-input-and-display-language-settings-in-windows-12a10cb4-8626-9b77-0ccb-5013e0c7c7a2) they've selected on their device. Organizational messages are supported in 15 languages. If the employee's preferred language isn't supported, the message will appear in their preferred fallback language.  
@@ -152,12 +152,15 @@ On the **Schedule** page, schedule the delivery of your message.
 ---  
 
 ## Step 3: Add scope tags  
-Optionally, assign scope tags to organizational messages. Scope tags allow you to control which administrators can see, edit, cancel, or delete messages in Intune. For more information about scope tags, see [Use role-based access control (RBAC) and scope tags for distributed IT in Intune](../fundamentals/scope-tags.md). 
+Optionally, add scope tags to control which administrators can see, edit, cancel, or delete messages in Intune. Choose **Select scope tags** to add scope tags to the message. Select **Remove** to delete scope tags from the message. 
 
-Choose **Select scope tags** to add scope tags to your message. Select **Remove** to delete the scope tag from the message. Intune only enforces scope tags and scope groups for messages created in Intune, and for admins with Intune roles.   
+For more information about scope tags, see [Use role-based access control (RBAC) and scope tags for distributed IT in Intune](../fundamentals/scope-tags.md). 
+
+>[!NOTE]
+> Intune only enforces scope tags and scope groups for messages created in Intune, and for admins with Intune roles.   
 
 ## Step 4: Assign message  
-Assign the message to Azure AD-registered users in your organization. You can only assign messages to Azure AD user groups, not Azure AD device groups. If a group includes both users and devices, Intune will only send the message to the users. 
+Assign the message to Azure AD-registered users in your organization. You can assign the message to Azure AD user groups, not Azure AD device groups. If a group includes both users and devices, Intune will only send the message to the users. 
 
 1. To include groups in the assignment, you have two options:    
    * **Add groups**: Select this option to individually choose from a list of Azure AD groups.  
@@ -165,7 +168,7 @@ Assign the message to Azure AD-registered users in your organization. You can on
 2. If needed, exclude Azure AD groups from the assignment. Under **Exclude**, select **Add groups** and choose the Azure AD groups to leave out.  
 3. Select **Next: Review + Create** to review and finalize your message.  
 
-## Step 4: Review and create message  
+## Step 5: Review and create message  
 Review your message, scheduling details, and assignments before creating your message. When you're ready to send the message, select **Create**. 
 
 Return to **Organizational messages** and select the **Message** tab to view or edit your new message. 

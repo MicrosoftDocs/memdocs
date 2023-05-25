@@ -53,7 +53,7 @@ To create organizational messages in Microsoft Intune, you must be assigned one 
 * Organizational messages manager (Microsoft Intune role)  
 * Organizational messages writer (Azure AD role)  
 
-You can also create a custom role for people managing organization messages using role-based access control (RBAC). For more information about how to use built-in roles and custom roles, see [RBAC with Microsoft Intune](../fundamentals/role-based-access-control.md).    
+You can also create a custom role for people managing organization messages by using role-based access control (RBAC). For more information about how to use built-in roles and custom roles, see [RBAC with Microsoft Intune](../fundamentals/role-based-access-control.md).    
 
 ## Logo requirements  
 Logos must meet these requirements:  
