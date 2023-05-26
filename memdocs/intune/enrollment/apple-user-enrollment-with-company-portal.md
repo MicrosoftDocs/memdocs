@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Enable Apple User Enrollment for iOS/iPadOS in Microsoft Intune | Microsoft Docs
+title: Set up user enrollment with Company Portal for iOS | Microsoft Docs
 titleSuffix: Microsoft Intune
-description: Enable Apple User Enrollment in Microsoft Intune for iOS/iPadOS devices.  
+description: Set up the profile based Apple User Enrollment option for personal devices enrolling in Microsoft Intune.    
 keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 01/26/2022
+ms.date: 05/24/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -21,7 +21,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: jayeren
+ms.reviewer: amanhaq
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -32,38 +32,42 @@ ms.collection:
 - highpri
 ---
 
-# Set up Apple User Enrollment for iOS/iPadOS  
+# Set up user enrollment with Company Portal  
 
-Set up Intune to enroll user-owned iOS/iPadOS devices via Apple User Enrollment. *User Enrollment* enrolls devices that are a part of BYOD scenarios. Devices enrolled this way do not become supervised. Work data is securely kept on a separate volume on the device and in managed apps, away from the user's personal data.  As the admin, you get access to a limited but appropriate subset of Intune management options and restrictions to ensure that your organization's data stays safe. 
+Set up user enrollment with Company Portal for iOS/iPadOS personal devices enrolling in Microsoft Intune. This Apple User Enrollment method, also referred to as *profile-based user enrollment* gives you access to a limited but appropriate set of device management settings and actions, so you can protect work data without affecting the device user's personal data or apps. 
 
-For more information about User Enrollment, see [User Enrollment and MDM](https://support.apple.com/guide/deployment/dep23db2037d/web) (opens Apple support website).  
+When the device owner attempts to sign into an app with their work or school account, Intune prompts them to enroll their device and provides instructions for next steps. The device user authenticates and initiates enrollment by signing into the Intune Company Portal app. From there, they're redirected to Safari and the device settings app, where they download and install the enrollment profile. 
+
+For more information about Apple User Enrollment, see [User Enrollment and MDM](https://support.apple.com/guide/deployment/user-enrollment-and-mdm-dep23db2037d/web) on the Apple support website.   
+
+This article describes how to set up an enrollment profile in the Microsoft Intune admin center for Apple User Enrollment with Company Portal. 
 
 ## Prerequisites
 The user enrollment option is supported on devices running iOS 13 or later, and iPadOS version 13.1 or later. Before beginning setup, complete the following tasks:    
 
 - [Set mobile device management (MDM) authority](../fundamentals/mdm-authority-set.md)
 - [Get Apple MDM Push certificate](apple-mdm-push-certificate-get.md)
-- [Create Managed Apple IDs for device users](https://support.apple.com/en-us/HT210737) 
+- [Create Managed Apple IDs for device users](https://support.apple.com/en-us/HT210737) (Opens Apple Support website)  
 
 ## You should know  
 
 Review this information before you begin:    
 
-* Apple released iPadOS in September 2019, which introduced a change that can affect Microsoft Azure Active Directory (Azure AD) and Intune customers who use Conditional Access policies in their organization. For more information about how this affects your policies and what actions to take, see [Evaluate and update Conditional Access policies after new iPadOS release](https://support.microsoft.com/topic/action-required-evaluate-and-update-conditional-access-policies-after-new-ipados-release-23795067-9048-62ad-a5bd-ad63995fc488).  
+* User enrollment requires you to provide managed Apple IDs to your enrolling users. You can create the IDs manually, but we recommend using federated authentication to link Apple Business Manager with Azure AD. This lets users use their Azure AD usernames and passwords in place of the Managed Apple IDs to sign in to their device. For more information, see [Federated Authentication with Apple Business Manager](https://support.apple.com/en-euro/guide/apple-business-manager/axmb19317543/1/web/1) (opens Apple Business Manager User Guide).  
 
-* User enrollment requires you to provide managed Apple IDs to your enrolling users. You can create the IDs manually, but we strongly recommend using federated authentication to link Apple Business Manager with Azure AD. This lets users use their Azure AD usernames and passwords in place of the Managed Apple IDs to sign in to their device. For more information, see [Federated Authentication with Apple Business Manager](https://support.apple.com/en-euro/guide/apple-business-manager/axmb19317543/1/web/1) (opens Apple Business Manager User Guide).  
+* Apple released iPadOS in September 2019, which introduced a change that can affect Microsoft Azure Active Directory (Azure AD) and Intune customers who use Conditional Access policies in their organization. For more information about how this affects your policies and what actions to take, see [Evaluate and update Conditional Access policies after new iPadOS release](https://support.microsoft.com/topic/action-required-evaluate-and-update-conditional-access-policies-after-new-ipados-release-23795067-9048-62ad-a5bd-ad63995fc488).  
 
 ## Create enrollment profile   
 
 > [!NOTE]
-> An iOS User Enrollment profile overrides an enrollment restriction policy.  
+> A user enrollment profile overrides an Intune enrollment restriction policy.  
 
-Complete these steps to create an enrollment profile for devices enrolling with the user enrollment option.  
+Complete these steps to create an enrollment profile for devices enrolling via user enrollment with Company Portal.  
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Go to **Devices** > **iOS/iPadOS** > **iOS/iPadOS enrollment**. 
 2. Select **Enrollment types**. 
-3. Select **Create profile** > **iOS/iPadOS**. In this profile,  you'll configure the enrollment experience for devices that aren't enrolled via an Apple enrollment program method, such as Apple Business Manager. You can edit this profile after you've created it.  
+3. Select **Create profile** > **iOS/iPadOS**. 
 2. On the **Basics** page, enter a name and description for the profile so that you can distinguish it from other profiles in the admin center. Device users don't see these details. 
 
      >[!TIP]
@@ -71,7 +75,7 @@ Complete these steps to create an enrollment profile for devices enrolling with 
 
 3. Select **Next**.
   
-4. On the **Settings** page, select **User enrollment**. All users assigned this profile will enroll via user enrollment. 
+4. On the **Settings** page, select **User enrollment with Company Portal**. 
   
   Alternatively, you can select **Determine based on user choice**, which lets assigned users select the enrollment type. If you select this option, users will be presented with these options during enrollment: 
 
@@ -88,10 +92,9 @@ Complete these steps to create an enrollment profile for devices enrolling with 
 
 8. On the **Review + create** page, review your choices, and then select **Create** to finish creating the profile.  
 
-## Profile priority
+## Profile priority  
 
-After you've created more than one enrollment type profile, you can change the priority order in which they're applied. Intune applies the profiles in the order you prioritize them.  
-
+Intune applies enrollment profiles in the order you prioritize them. To change the order in which they're applied:    
 1. Go back to **Enrollment types** to view your profiles.  
 2. Drag and drop the profiles in the list to reorder their priority.  
 
@@ -101,9 +104,7 @@ If a conflict occurs because a user is assigned more than one profile, Intune ap
 The volume and cryptographic keys created to manage the work data on the device are erased when the device unenrolls from Intune.  
 
 ## Next steps  
-* Device users sign into the Intune Company Portal app with their work or school account to initiate the enrollment process. For a look at their experience, see [Set up iOS device access to your company resources](../user-help/enroll-your-device-in-intune-ios.md). Remember, if you don't set up federated authentication with Apple Business Manager, you'll need to provide Managed Apple ID credentials to your users so that they can complete enrollment. 
-
-* For supported management actions, see [User Enrollment supported actions, passwords, and other options](ios-user-enrollment-supported-actions.md).  
+* For an overview of supported user enrollment methods and management actions, see [Overview of Apple User Enrollment in Microsoft Intune ](ios-user-enrollment-supported-actions.md).   
 
 * For troubleshooting, see [Troubleshooting iOS/iPadOS device enrollment errors in Microsoft Intune](/troubleshoot/mem/intune/device-enrollment/troubleshoot-ios-enrollment-errors).  
 
