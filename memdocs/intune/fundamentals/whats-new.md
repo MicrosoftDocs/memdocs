@@ -180,7 +180,7 @@ Applies to:
 - Windows 10
 - Windows 11
 
-#### Remdiations are now available in Intune for US Government GCC High and DoD<!-- 16526300 -->  
+#### Remediations are now available in Intune for US Government GCC High and DoD<!-- 16526300 -->  
 Remediations (previously known as proactive remediations) are now available in [Microsoft Intune for US Government GCC High and DoD](../fundamentals/intune-govt-service-description.md)
 
 Applies to:
