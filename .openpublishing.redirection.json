@@ -1,8 +1,13 @@
 {
     "redirections": [
+        { 
+           "source_path": "memdocs/intune/enrollment/ios-user-enrollment.md",
+           "redirect_url": "/mem/intune/enrollment/apple-user-enrollment-with-company-portal",
+           "redirect_document_id": false
+        },
         {
-            "source_path": "memdocs/intune/enrollment/ios-user-enrollment.md",
-            "redirect_url": "/mem/intune/enrollment/apple-user-enrollment-with-company-portal",
+            "source_path": "memdocs/autopilot/autopilot-mbr.md",
+            "redirect_url": "/mem/autopilot/autopilot-motherboard-replacement",
             "redirect_document_id": false
         },
         {
