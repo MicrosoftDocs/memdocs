@@ -71,6 +71,9 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 ### App management
 
+#### Update to macOS shell scripts maximum running time limit<!-- 23187517 -->
+Based on customer feedback, we're updating the Intune agent for macOS (version 2305.019) to extend the maximum script run time to 60 minutes. Previously, the Intune agent for macOS only allowed shell scripts to run for up to 15 minutes before reporting the script as a failure. The Intune agent for macOS 2206.014 and higher supports the 60-minute timeout.
+
 #### Assignment filters support app protection policies and app configuration policies<!-- 7476247 -->  
 Assignment filters support MAM app protection policies and app configuration policies. When you create a new filter, you can fine tune MAM policy targeting using the following properties:
 
@@ -280,7 +283,7 @@ For more information about protected apps, see [Microsoft Intune protected apps]
 
 ### Device configuration
 
-#### Device Firmware Configuration Interface (DFCI) supports Dynabook devices<!-- 10249859  -->  
+#### Device Firmware Configuration Interface (DFCI) supports Dynabook devices<!-- 10249859 -->
 For Windows 10/11 devices, you can create a DFCI profile to manage UEFI (BIOS) settings. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration profiles** > **Create profile** > **Windows 10 and later** for platform > **Templates** > **Device Firmware Configuration Interface** for profile type.
 
 Some Dynabook devices running Windows 10/11 are enabled for DFCI. Contact your device vendor or device manufacturer for eligible devices.
