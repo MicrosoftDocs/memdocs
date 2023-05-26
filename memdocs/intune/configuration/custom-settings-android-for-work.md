@@ -2,12 +2,12 @@
 # required metadata
 
 title: Add custom settings to Android Enterprise devices in Microsoft Intune
-description: Add or create a custom profile for Android Enterprise devices to create  in Microsoft Intune
+description: Add or create a custom profile for Android Enterprise devices in Microsoft Intune. Create a WiFi profile with a preshared key, create a per-app VPN profile, or block copy and paste.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/13/2020
+ms.date: 05/16/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -29,7 +29,7 @@ ms.collection:
 
 # Use custom settings for Android Enterprise devices in Microsoft Intune
 
-Using Microsoft Intune, you can add or create custom settings for your Android Enterprise personally owned devices with a work profile using a "custom profile". Custom profiles are a feature in Intune. They are designed to add device settings and features that aren't built in to Intune.
+Using Microsoft Intune, you can add or create custom settings for your Android Enterprise personally owned devices with a work profile using a "custom profile". Custom profiles are a feature in Intune. They're designed to add device settings and features that aren't built in to Intune.
 
 This feature applies to:
 
@@ -39,11 +39,11 @@ Android Enterprise custom profiles use Open Mobile Alliance Uniform Resource Ide
 
 Intune supports the following limited number of Android Enterprise custom profiles:
 
-- ./Vendor/MSFT/WiFi/Profile/SSID/Settings: [Create a Wi-Fi profile with a pre-shared key](wi-fi-profile-shared-key.md) has some examples.
-- ./Vendor/MSFT/VPN/Profile/Name/PackageList: [Create a per-app VPN profile](android-pulse-secure-per-app-vpn.md) has some examples.
-- ./Vendor/MSFT/WorkProfile/DisallowCrossProfileCopyPaste: See the [example](#example) in this article. This setting is also available in the user interface. For more information, see [Android Enterprise device settings to allow or restrict features](device-restrictions-android-for-work.md).
+- `./Vendor/MSFT/WiFi/Profile/SSID/Settings`: [Create a Wi-Fi profile with a pre-shared key](wi-fi-profile-shared-key.md) has some examples.
+- `./Vendor/MSFT/VPN/Profile/Name/PackageList`: [Create a per-app VPN profile](android-pulse-secure-per-app-vpn.md) has some examples.
+- `./Vendor/MSFT/WorkProfile/DisallowCrossProfileCopyPaste`: See the [example](#example) in this article. This setting is also available in the user interface. For more information, see [Android Enterprise device settings to allow or restrict features](device-restrictions-android-for-work.md).
 
-If you need additional settings, see [OEMConfig for Android Enterprise](android-oem-configuration-overview.md).
+If you need to add more settings, then use [OEMConfig for Android Enterprise](android-oem-configuration-overview.md).
 
 This article shows you how to create a custom profile for Android Enterprise devices. It also provides an example of a custom profile that blocks copy-and-paste.
 
@@ -68,7 +68,7 @@ This article shows you how to create a custom profile for Android Enterprise dev
     - **Name**: Enter a unique name for the OMA-URI setting so you can easily find it.
     - **Description**: Enter a description that gives an overview of the setting, and any other important details.
     - **OMA-URI**: Enter the OMA-URI you want to use as a setting.
-    - **Data type**: Select the data type you'll use for this OMA-URI setting. Your options:
+    - **Data type**: Select the data type for this OMA-URI setting. Your options:
 
       - String
       - String (XML file)
@@ -125,7 +125,7 @@ In this example, you create a custom profile that restricts copy and paste actio
 
     Your settings look similar to the following image:
 
-    :::image type="content" source="./media/custom-settings-android-for-work/custom-oma-uri-android-enterprise.png" alt-text="Block copy and paste for Android Enterprise personally owned devices with a work profile in Microsoft Intune.":::
+    :::image type="content" source="./media/custom-settings-android-for-work/custom-oma-uri-android-enterprise.png" alt-text="Screenshot of a setting in a Microsoft Intune custom work profile that blocks copy and paste for Android Enterprise personally owned devices.":::
 
 7. Select **Save** to save your changes. Continue to add more settings as needed. After you add some settings, you can select **Export**. **Export** creates a list of all the values you added in a comma-separated values (.csv) file.
 
@@ -144,7 +144,7 @@ In this example, you create a custom profile that restricts copy and paste actio
 
 11. In **Review + create**, when you're done, choose **Create**. The profile is created and is shown in the list.
 
-    When you assign this profile to Android Enterprise devices you manage, copy and paste is blocked between apps in the work and personal profiles.
+    When you assign this profile to Android Enterprise devices you manage, copy and paste are blocked between apps in the work and personal profiles.
 
     You can also [monitor its status](device-profile-monitor.md).
 

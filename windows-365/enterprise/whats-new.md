@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 04/28/2023
+ms.date: 05/24/2023
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice:
@@ -51,6 +51,28 @@ Learn what new features are available in Windows 365 Enterprise.
 ### Windows 365 Government
 ### Windows 365 app
 -->
+
+<!-- ########################## -->
+## Week of May 22, 2023
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Windows 365 Boot: users can sign in directly to their Cloud PC from their physical device (preview)<!--42936537-->
+
+Windows 365 Boot lets admins configure Windows 11 physical devices so that users can:
+
+- Avoid signing in to their physical device.
+- Sign in directly to their Windows 365 Cloud PC on their physical device.
+
+For more information, see [What is Windows 365 Boot?](windows-365-boot-overview.md)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Documentation
+
+#### New documentation article: Using Intune, install the Windows 365 app on physical devices
+
+We’ve published a new help documentation article. For more information, see [Using Intune, install the Windows 365 app on physical devices](install-windows-365-app-intune.md).
 
 <!-- ########################## -->
 ## Week of April 24, 2023 (Service release 2304)
