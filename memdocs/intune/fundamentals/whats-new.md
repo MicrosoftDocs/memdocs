@@ -71,6 +71,9 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 ### App management
 
+#### Update to macOS shell scripts maximum running time limit<!-- 23187517 -->
+Based on customer feedback, we're updating the Intune agent for macOS (version 2305.019) to extend the maximum script run time to 60 minutes. Previously, the Intune agent for macOS only allowed shell scripts to run for up to 15 minutes before reporting the script as a failure. The Intune agent for macOS 2206.014 and higher supports the 60-minute timeout.
+
 #### Assignment filters support app protection policies and app configuration policies<!-- 7476247 -->  
 Assignment filters support MAM app protection policies and app configuration policies. When you create a new filter, you can fine tune MAM policy targeting using the following properties:
 
@@ -275,13 +278,6 @@ The following protected apps are now available for Microsoft Intune:
 - Klaxoon for Intune by Klaxoon (iOS)
 
 For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
-
-## Week of May 22, 2023
-
-### App management
-
-#### Update to macOS shell scripts maximum running time limit<!-- 23187517 -->
-Based on customer feedback, we're updating the Intune agent for macOS (version 2305.019) to extend the maximum script run time to 60 minutes. Previously, the Intune agent for macOS only allowed shell scripts to run for up to 15 minutes before reporting the script as a failure. The Intune agent for macOS 2206.014 and higher supports the 60-minute timeout.
 
 ## Week of May 8, 2023
 
