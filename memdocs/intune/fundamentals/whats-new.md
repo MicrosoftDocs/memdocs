@@ -180,7 +180,7 @@ Applies to:
 - Windows 10
 - Windows 11
 
-#### Remdiations are now available in Intune for US Government GCC High and DoD<!-- 16526300 -->  
+#### Remediations are now available in Intune for US Government GCC High and DoD<!-- 16526300 -->  
 Remediations (previously known as proactive remediations) are now available in [Microsoft Intune for US Government GCC High and DoD](../fundamentals/intune-govt-service-description.md)
 
 Applies to:
@@ -229,7 +229,9 @@ For more information on the Obliteration Behavior setting, go to Apple's Platfor
 
 Applies to:
 
-- macOS
+- macOS  
+
+### Device enrollment  
 
 #### Account driven Apple User Enrollment available for iOS/iPadOS 15+ devices (public preview)<!-- 14161683  -->  
 Intune supports account driven user enrollment, a new and improved variation of Apple User Enrollment for iOS/iPadOS 15+ devices. Now available for public preview, the new option utilizes just-in-time registration, which eliminates the need for the Company Portal app during enrollment. Device users can initiate enrollment directly in the Settings app, resulting in a shorter and more efficient onboarding experience. You can continue to target iOS/iPadOS devices using the existing profile-based user enrollment method that uses Company Portal. Devices running iOS/iPadOS, version 14.8.1 and earlier remain unaffected by this update and can continue to use the existing method. For more information, see [Set up account driven Apple User Enrollment](../enrollment/apple-account-driven-user-enrollment.md).  
