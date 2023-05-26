@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/24/2023
+ms.date: 05/26/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -63,35 +63,26 @@ The following table provides a side-by-side comparison of each method.
 
 ## Supported settings 
 
-Microsoft Intune supports a specific subset of device management options for user enrollment. If a pre-existing configuration profile is applied to a device set up via user enrollment, only the settings supported by user enrollment take effect. This section describes the supported settings.  
+Microsoft Intune supports a specific subset of device management options for devices enrolled via Apple User Enrollment. If a pre-existing configuration profile is applied to one of these, only the settings supported by Apple User Enrollment take effect. This section describes the supported options, and includes limitations and nonsupported capabilities. This list is not exhaustive and will continue to be updated.   
 
-### Password settings   
+### Device configuration and management 
+Supported device configuration policies and management capabilities include: 
 
-If you configure any password settings, Microsoft Intune automatically sets the **Simple passwords** setting to **Block**. Microsoft Intune also enforces a six-digit device PIN.  
+- VPN: User enrollment is limited to per-app VPN. For more information, see [Set up per-app Virtual Private Network (VPN) for iOS/iPadOS devices in Intune](../configuration/vpn-setting-configure-per-app.md). Safari domains are not supported. 
+- Wi-Fi: For more information, see [Add Wi-Fi settings for iOS and iPadOS devices in Microsoft Intune](../configuration/wi-fi-settings-ios.md).  
+- Enhanced jailbreak detection: For more information about enabling jailbreak detection in a compliance policy, see [Compliance policy settings](../protect/device-compliance-get-started.md#compliance-policy-settings).   
+- Device restrictions: For a list of supported device restrictions, see [iOS and iPadOS device settings to allow or restrict features using Intune](../configuration/device-restrictions-ios.md). 
+- Remote actions for admins: You can retire, delete, remote lock, and sync devices. For more information about these actions and how they work, see [Manage devices with Microsoft Intune](../remote-actions/device-management.md).  
 
-For example:  
-1. You create an enrollment profile for user enrollment with Company Portal. 
-2. Within the profile you you configure **Password expiration**.  
-2. You assign the enrollment profile.  
-3. Microsoft Intune applies the password settings in the following ways:    
-  - The **Password expiration** setting is ignored.  
-  - Simple passwords such as `111111` or `123456` are prohibited.  
-  - A six-digit pin is enforced.  
-
-### Remote actions for Intune admins    
-You can apply these Microsoft Intune remote actions, which are available in the admin center, to devices enrolled via Apple User Enrollment:    
-- Retire  
-- Delete  
-- Remote Lock  
-- Sync  
-
-### App deployment options  
-You can deploy these app types to devices enrolled via User Enrollment:  
+### App deployment and management    
+Supported app types include:   
 - User-licensed apps and custom apps purchased through an Apple Volume Purchase Program (VPP) 
 - Line-of-business (LOB) apps  
 - Web apps  
 
-### Supported actions for device users 
+You can configure Intune to remove managed apps after the user unenrolls their device. For more information, see []
+
+### Company Portal actions   
 Employees and students can access management options for their personal devices in the Intune Company Portal app or on the Company Portal website. Supported actions include:  
 - Rename   
 - Remove  
@@ -101,52 +92,33 @@ Employees and students can access management options for their personal devices 
 >[!NOTE]
 > The *rename* action that's available to device users changes the display name in Company Portal. It doesn't rename the device in the Microsoft Intune admin center.  
 
-## Other supported options
+For more information about how employees and students can access these actions, see:
 
-The following options are supported in Intune for devices enrolled by using Apple User enrollment:
-- Per-App VPN. This support excludes Safari Domains as User Enrollment doesn't support configuring Safari settings.
-- WiFi 
-- Corporate app removal upon unenrollment
-- Jailbreak Detection
+* [Using the Intune Company Portal website](../user-help/using-the-intune-company-portal-website.md) 
+* [Check status, or sync device, in Company Portal app](../user-help/sync-your-device-manually-ios.md)
+* [Reset device in Company Portal app](../user-help/effects-of-device-reset-company-portal-ios.md)  
+* [Remove or unenroll device in Company Portal app](../user-help/unenroll-your-device-from-intune-ios.md)
 
-The following restrictions are supported:
-- View corporate documents in unmanaged apps
-- Viewing noncorporate documents in corporate apps
-- Allow unmanaged apps to read from managed contacts accounts
-- AirDrop as an unmanaged destination
-- Required encrypted backup
-- Managed apps sync to cloud
-- Control Center access while device locked
-- Notification Center access while device locked
-- Today view while device locked
-- Block screenshots
-- Block Enterprise Book backup
-- Block Enterprise Book metadata sync
-- Require encrypted backup
-- Require watch wrist detection
-- Block Siri
-- Block Siri while device is locked
-- Require Safari fraud warnings
-- Block diagnostics submission to Apple  
+### Limitations and capabilities not supported    
 
-## Options not supported
-The following device management options aren't supported on devices enrolled via Apple User Enrollment. If you need these options, we recommend using Apple Device Enrollment for BYOD scenarios or Apple Automated Device Enrollment for corporate-owned devices.
-- Collect app inventory for apps outside of the managed APFS volume.
-- Collect inventory of certificates and provisioning profiles outside of the managed APFS volume.
-- Collect UDID and other persistent device identifiers, such as phone number, serial number, and IMEI
-- User Enrollment supports a unique enrollment ID for each device enrolled, but this ID doesn't persist after unenrollment. 
-- SCEP User profiles with Subject Name Format of Serial Number.
-- Device-level VPN.
-- Device-licensed VPP app deployment.
-- Install App Store apps as managed apps.
-- MDM control of applications outside of the managed APFS volume.
-  - App protection policies still apply to these apps. However, you can't take over management or deploy a managed version of these apps unless the user deletes them from their device.
-- Actions, configurations, settings, and commands requiring supervision. 
-- Customized privacy text in the Company Portal. If you customize the text explaining what your organization can and can't see, then users will see the same text for User and Device Enrollment in the Company Portal. 
-- Devices running iOS 15.5 can't enroll with User Enrollment if MFA text or call is needed on the same device during enrollment. 
-- Devices running iOS 15.7 through iOS 16.3 can't enroll with User Enrollment with MFA text. MFA call must be used in order to enroll with User Enrollment if MFA is needed on the same device during enrollment. 
-- Application reporting for app types unsupported with User Enrollment. 
+When using Apple User Enrollment to enroll devices, Intune doesn't collect:  
+  - App inventory for apps outside of the managed Apple File System volume.  
+  - Certificate and provisioning profile inventory outside of the managed APFS volume.  
+  - UDID and other persistent device identifiers, such as phone number, serial number, and IMEI.  
 
+Intune doesn't support:  
+  - SCEP user profiles with Subject Name Format of Serial Number.  
+  - Installation of Apple App Store apps as managed apps.  
+  - MDM control of apps outside of the managed APFS volume. App protection policies still apply to these apps. However, you can't take over management or deploy a managed version of these apps unless the user deletes them from their device.  
+  - Custom privacy text in the Company Portal that's exclusively for user enrollment workflows. If you customize the text explaining what your organization can and can't see, users see the same text in the Company Portal during both Apple Device Enrollment and Apple User Enrollment. 
+  - Reporting for app types that aren't supported.   
+
+Limitations include: 
+- User enrollment supports a unique enrollment ID for each device enrolled, but this ID doesn't persist after the user unenrolls the device.  
+- Devices running iOS version 15.5 can't enroll with Apple User Enrollment if a mutli-factor authentication text or call is needed on the same device during enrollment.  
+- Devices running iOS versions 15.7 through iOS 16.3 can't enroll with Apple User Enrollment while utilizing multi-factor authentication (MFA) via text. The phone call option must be used to enroll if MFA is needed on the same device during enrollment.  
+
+If these capabilities are important to you, we recommend using Apple Device Enrollment for BYOD scenarios or Apple Automated Device Enrollment for corporate-owned devices.  
 
 ## Next steps  
 
