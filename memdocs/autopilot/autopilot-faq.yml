@@ -391,7 +391,7 @@ sections:
       - question: |
           Does Windows Autopilot work after MBR or image reinstallation?
         answer: |
-          Yes. For more information, see [Windows Autopilot motherboard replacement scenario guidance](autopilot-mbr.md).
+          Yes. For more information, see [Windows Autopilot motherboard replacement scenario guidance](autopilot-motherboard-replacement.md).
 
       - question: |
           What does this error message mean? This user isn't authorized to enroll, error code 801c0003.

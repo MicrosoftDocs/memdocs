@@ -38,11 +38,14 @@ This page lists the US Government, US Government Community (GCC) High, and Depar
 To manage devices behind firewalls and proxy servers, you must enable communication for Intune.
 
 - The proxy server must support both **HTTP (80)** and **HTTPS (443)** because Intune clients use both protocols
-- For some tasks (like downloading software updates), Intune requires unauthenticated proxy server access to manage.microsoft.com
+- For some tasks (like downloading software updates), Intune requires unauthenticated proxy server access to manage.microsoft.us
 
 You can modify proxy server settings on individual client computers. You can also use Group Policy settings to change settings for all client computers located behind a specified proxy server.
 
 Managed devices require configurations that let **All Users** access services through firewalls.
+
+> [!NOTE]
+> The inspection of SSL traffic is not supported on 'manage.microsoft.us' endpoint.
 
 For more information about Windows 10 auto-enrollment and device registration for US government customers, see [Set up automatic enrollment for Windows](../enrollment/windows-enroll.md).  
 

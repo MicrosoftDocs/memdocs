@@ -46,4 +46,4 @@ The following best practices ensure that devices can easily be provisioned as pa
 ## Next steps
 
 [Windows Autopilot customer consent](registration-auth.md)<br>
-[Motherboard replacement scenario guidance](autopilot-mbr.md)<br>
+[Motherboard replacement scenario guidance](autopilot-motherboard-replacement.md)<br>

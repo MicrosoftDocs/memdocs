@@ -77,12 +77,21 @@ This provides a convenient method to list and review all services required by In
 |-----------|----------------|
 |*.manage.microsoft.com| Intune Service |
 |manage.microsoft.com| Intune Service |
-|*.delivery.mp.microsoft.com| Delivery Optimization |
-|*.prod.do.dsp.mp.microsoft.com| Delivery Optimization |
-|*.update.microsoft.com| Delivery Optimization |
-|*.windowsupdate.com| Delivery Optimization |
+|*.prod.do.dsp.mp.microsoft.com| Windows Update and Delivery Optimization |
+|*.windowsupdate.com| Windows Update and Delivery Optimization |
+|*.dl.delivery.mp.microsoft.com| Windows Update and Delivery Optimization |
+|*.update.microsoft.com| Windows Update and Delivery Optimization |
+|*.delivery.mp.microsoft.com| Windows Update and Delivery Optimization |
+|tsfe.trafficshaping.dsp.mp.microsoft.com| Windows Update and Delivery Optimization |
 |emdl.ws.microsoft.com| Delivery Optimization |
-|tsfe.trafficshaping.dsp.mp.microsoft.com| Delivery Optimization |
+|*.do.dsp.mp.microsoft.com| Delivery Optimization |
+|*.emdl.ws.microsoft.com| Delivery Optimization |
+|*.notify.windows.com| Push Notifications |
+|*.wns.windows.com| Push Notifications |
+|devicelistenerprod.microsoft.com| Windows Update for Business deployment service |
+|devicelistenerprod.eudb.microsoft.com| Windows Update for Business deployment service |
+|login.windows.net| Windows Update for Business deployment service |
+|payloadprod*.blob.core.windows.net| Windows Update for Business deployment service |
 |time.windows.com| NTP Sync |
 |www.msftconnecttest.com| NTP Sync |
 |www.msftncsi.com| NTP Sync |
@@ -107,11 +116,6 @@ This provides a convenient method to list and review all services required by In
 |swdd02-mscdn.azureedge.net| Scripts & Win32 Apps |
 |swdin01-mscdn.azureedge.net| Scripts & Win32 Apps |
 |swdin02-mscdn.azureedge.net| Scripts & Win32 Apps |
-|*.notify.windows.com| Push Notifications |
-|*.wns.windows.com| Push Notifications |
-|*.dl.delivery.mp.microsoft.com| Delivery Optimization |
-|*.do.dsp.mp.microsoft.com| Delivery Optimization |
-|*.emdl.ws.microsoft.com| Delivery Optimization |
 |ekcert.spserv.microsoft.com| Autopilot Self-deploy |
 |ekop.intel.com| Autopilot Self-deploy |
 |ftpm.amd.com| Autopilot Self-deploy |
@@ -135,6 +139,8 @@ This provides a convenient method to list and review all services required by In
 |edge.skype.com| Remote Help |
 |remoteassistanceprodacs.communication.azure.com| Remote Help |
 |lgmsapeweu.blob.core.windows.net | Collect Diagnostics |
+|fd.api.orgmsg.microsoft.com | Organizational messages |
+|ris.prod.api.personalization.ideas.microsoft.com | Organizational messages |
 
 The following tables list the ports and services that the Intune client accesses:
 

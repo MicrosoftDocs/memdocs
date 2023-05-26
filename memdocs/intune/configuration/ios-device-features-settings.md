@@ -35,6 +35,10 @@ ms.collection:
 
 Intune includes some built-in settings to allow iOS/iPadOS users to use different Apple features on their devices. For example, you can control AirPrint printers, add apps and folders to the dock and home screen pages, show app notifications, show asset tag details on the lock screen, use single sign-on authentication, and use certificate authentication.
 
+This feature applies to:
+
+- iOS/iPadOS
+
 Use these features to control iOS/iPadOS devices as part of your mobile device management (MDM) solution.
 
 This article lists these settings, and describes what each setting does. For more information on these features, go to [Add iOS/iPadOS or macOS device feature settings](device-features-configure.md).
@@ -462,7 +466,7 @@ This feature applies to:
 
   - Have access to the Kerberos Ticket Granting Ticket
   - Have access to the authentication ticket
-  - Authenticate users to services they’re authorized to access
+  - Authenticate users to services they're authorized to access
 
 - **Domain realm mapping** (Kerberos only): Enter the domain DNS suffixes that should map to your realm. Use this setting when the DNS names of the hosts don't match the realm name. You most likely don't need to create this custom domain-to-realm mapping.
 - **PKINIT certificate** (Kerberos only): **Select** the Public Key Cryptography for Initial Authentication (PKINIT) certificate that can be used for Kerberos authentication. You can choose from [PKCS](../protect/certificates-pfx-configure.md) or [SCEP](../protect/certificates-scep-configure.md) certificates that you've added in Intune. For more information about certificates, see [Use certificates for authentication in Microsoft Intune](../protect/certificates-configure.md).
