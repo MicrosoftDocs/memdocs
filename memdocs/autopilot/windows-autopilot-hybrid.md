@@ -327,7 +327,7 @@ Autopilot deployment profiles are used to configure the Autopilot devices.
     - If you leave this blank, the computer object will be created in the Active Directory default container (`CN=Computers` if you never [changed it](/troubleshoot/windows-server/identity/redirect-users-computers-containers)).
 
     Here are some valid examples:
-      - `OU=Sub OU,OU=TopLevel OU,DC=contoso,DC=com`
+      - `OU=SubOU,OU=TopLevelOU,DC=contoso,DC=com`
       - `OU=Mine,DC=contoso,DC=com`
 
     Here are some examples that aren't valid:
