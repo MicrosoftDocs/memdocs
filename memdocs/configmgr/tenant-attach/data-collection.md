@@ -17,7 +17,7 @@ ms.collection: tier3
 # Tenant attach data collection
 
 *Applies to: Configuration Manager (current branch)*
-
+f
 <!-- 6505626 -->
 When you attach your Configuration Manager site with a Microsoft Intune tenant, the site sends more data to Microsoft. This article summarizes the data that's sent.
 
