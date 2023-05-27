@@ -63,7 +63,7 @@ The following table provides a side-by-side comparison of each method.
 
 ## Supported settings 
 
-Microsoft Intune supports a specific subset of device management options for devices enrolled via Apple User Enrollment. If a pre-existing configuration profile is applied to one of these, only the settings supported by Apple User Enrollment take effect. This section describes the supported options, and includes limitations and nonsupported capabilities. This list is not exhaustive and will continue to be updated.   
+Microsoft Intune supports a specific subset of device management options for devices enrolled via Apple User Enrollment. If a pre-existing configuration profile is applied to a device, only the settings supported by Apple User Enrollment take effect. This section lists the supported configurations and policies, and also includes limitations and nonsupported capabilities. This list is not exhaustive and will continue to be updated.   
 
 ### Device configuration and management 
 Supported device configuration policies and management capabilities include: 
@@ -79,8 +79,6 @@ Supported app types include:
 - User-licensed apps and custom apps purchased through an Apple Volume Purchase Program (VPP) 
 - Line-of-business (LOB) apps  
 - Web apps  
-
-You can configure Intune to remove managed apps after the user unenrolls their device. For more information, see []
 
 ### Company Portal actions   
 Employees and students can access management options for their personal devices in the Intune Company Portal app or on the Company Portal website. Supported actions include:  
@@ -127,6 +125,6 @@ After considering supported settings and enrollment features, choose the user en
 * [Set up user enrollment with Company Portal](apple-user-enrollment-with-company-portal.md)   
 * [Set up account driven user enrollment](apple-account-driven-user-enrollment.md)   
 
-For more information about Apple User Enrollment features and functionality, see [User Enrollment and MDM](https://support.apple.com/guide/deployment/dep23db2037d/web) on the Apple support website.  
+For more details about Apple User Enrollment features and functionality, see [User Enrollment and MDM](https://support.apple.com/guide/deployment/dep23db2037d/web) on the Apple support website.  
 
 

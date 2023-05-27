@@ -57,18 +57,18 @@ You also need to set up service discovery so that Apple can reach the Intune ser
 
 Create the file in JSON format, with the content type set to `application/json`.  We've provided the following JSON samples that you can copy and paste into your file. Use the one that aligns with your environment. Replace the *aadTenantID* variable in the sample with your organization's Azure AD tenant ID.   
 
-   Microsoft Intune environments:  <br> </br>
+   Microsoft Intune environments:  
    ```json
       {"Servers":[{"Version":"mdm-byod", "BaseURL":"https://manage.microsoft.com/EnrollmentServer/PostReportDeviceInfoForUEV2?aadTenantId=*aadTenantID*"}]}
    ```
 
-   Microsoft Intune for US Government environments: <br> </br>  
+   Microsoft Intune for US Government environments: 
 
    ```json      
    {"Servers":[{"Version":"mdm-byod", "BaseURL":"https://manage.microsoft.us/EnrollmentServer/PostReportDeviceInfoForUEV2?aadTenantId=*aadTenantID*"}]}
    ``` 
 
-   Microsoft Intune operated by 21 Vianet in China environments: <br> </br>  
+   Microsoft Intune operated by 21 Vianet in China environments:   
    ```json
       `{"Servers":[{"Version":"mdm-byod", "BaseURL":"https://manage.microsoft.cn/EnrollmentServer/PostReportDeviceInfoForUEV2?aadTenantId=*aadTenantID*"}]}
    ```  
