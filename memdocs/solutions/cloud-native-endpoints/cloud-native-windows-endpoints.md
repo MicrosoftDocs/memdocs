@@ -254,22 +254,7 @@ The following screenshot shows an example of a settings catalog profile with eac
 
 :::image type="content" source="../media/cloud-native-windows-endpoints/settings-catalog-example.png" alt-text="Image that shows an example of a settings catalog profile in Microsoft Intune.":::
 
-### Step 9 - Set up Microsoft Store for Business (or Education)
-
-Before you enable synchronization in the Intune admin center, you must configure your store account to use Intune as a management tool.
-
-1. Ensure that you sign into the [**Microsoft Store for Business (or Education)**](https://www.microsoft.com/business-store) using the same tenant account you use to sign into Intune.
-
-2. In the [**Business Store**](https://www.microsoft.com/business-store), choose the **Manage** tab, select **Settings**, and choose the **Distribute** tab.
-
-3. Activate **Microsoft Intune**
-    - If you don't specifically have **Microsoft Intune** available as a mobile device management tool, choose **Add management tool** to add **Microsoft Intune**.
-    - If you don't have **Microsoft Intune** activated as your mobile device management tool, select **Activate** next to **Microsoft Intune**.
-
-      > [!NOTE]
-      > Pay careful attention to the exact names used - you should activate **Microsoft Intune** rather than **Microsoft Intune Enrollment**.
-
-### Step 10 - Create and assign some applications
+### Step 9 - Create and assign some applications
 
 Your cloud-native endpoint will need some applications. To get started, we recommend configuring the following applications and targeting them at the **Autopilot Cloud-Native Windows Endpoints** group created previously.
 
@@ -322,6 +307,7 @@ This phase is designed to help you build out security settings for your organiza
 - [Microsoft Defender Antivirus (MDAV)](#microsoft-defender-antivirus-mdav)
 - [Microsoft Defender Firewall](#microsoft-defender-firewall)
 - [BitLocker Encryption](#bitlocker-encryption)
+- [Windows Local Administrator Password Solution (LAPS)](#windows-local-administrator-password-solution-laps)
 - [Security baselines](#security-baselines)
 - [Windows Update for Business](#windows-update-for-business)
 
@@ -437,6 +423,23 @@ Configuring the following BitLocker settings specified results in silently enabl
   - Configure encryption method for removable data-drives: **Not configured**
   - Block write access to removable data-drives not protected by BitLocker: **Not configured**
   - Block write access to devices configured in another organization: **Not configured**
+
+### Windows Local Administrator Password Solution (LAPS)
+
+By default, the built-in local administrator account ([well known SID](/windows-server/identity/ad-ds/manage/understand-security-identifiers#well-known-sids) S-1-5-500) is disabled. There might be scenarios such as troubleshooting, end-user support and device recovery where a local administrator account can be beneficial. If you decide to enable the built-in administrator account, or create a new local administrator account, it is important to secure the password for that account. Windows Local Administrator Password Solution (LAPS) is one of the features you can leverage to randomise and securely store the password in Azure Active Directory. If you're using Intune as your MDM, follow these steps to enable [Windows LAPS](/windows-server/identity/laps/laps-overview): 
+
+> [!NOTE]
+>
+> Windows LAPS assumes that the default local administrator account is enabled (even if renamed), or that you have created another local admin account to be managed. Windows LAPS does not create or enable any local
+> accounts for you. You'll need to perform these actions seperatly from configuring Windows LAPS, using either scripting or Configuration Service Providers (CSP's) such as the [Accounts CSP](/windows/client-management/mdm/accounts-csp) or [Policy CSP](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions).
+
+1. Ensure your Windows 10 (20H2 or later) or Windows 11 devices have the April 2023 (or later) security update installed.
+   For more information, go to [Operating system updates](/azure/active-directory/devices/howto-manage-local-admin-passwords#operating-system-updates)
+2. Enable Windows LAPS in Azure Active Directory
+   Sign-in to the [Azure AD device settings blade](https://aka.ms/aaddevice) and select **Yes** for the **'Enable Local Administrator Password Solution (LAPS) setting'** and select **Save** at the top of the page.
+   For more information, go to [Enabling Windows LAPS with Azure AD](/azure/active-directory/devices/howto-manage-local-admin-passwords#enabling-windows-laps-with-azure-ad)
+3. Create an Endpoint Security Policy in Intune
+   Sign-in to the [Intune portal](https://aka.ms/in), click on **Endpoint Security** > **Account Protection** > **Create Policy** > **Windows 10 and later** > **Local admin password solution (Windows LAPS)** > **Create**. For more information, go to [Create a LAPS Policy](/mem/intune/protect/windows-laps-policy#create-a-laps-policy).
 
 ### Security Baselines
 

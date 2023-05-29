@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/26/2023
+ms.date: 05/03/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -21,7 +21,7 @@ ms.technology:
 
 ms.suite: ems
 search.appverid: MET150
-ms.reviewer: tycast
+ms.reviewer: abalwan, tycast
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; seodec18
 ms.collection:
@@ -216,10 +216,8 @@ Example:
 
     - **Associated Apps**: Select **Import** to import a `.csv` file with your list of apps. Your `.csv` looks similar to the following file:
 
-      ```csv
-      %windir%\system32\notepad.exe,desktop
-      Microsoft.Office.OneNote_8wekyb3d8bbwe,universal
-      ```
+      `%windir%\system32\notepad.exe,desktop
+      Microsoft.Office.OneNote_8wekyb3d8bbwe,universal`
 
       The type of app determines the app identifier. For a universal app, enter the package family name, such as `Microsoft.Office.OneNote_8wekyb3d8bbwe`. For a desktop app, enter the file path of the app, such as `%windir%\system32\notepad.exe`.
 
@@ -228,17 +226,60 @@ Example:
   > [!IMPORTANT]
   > We recommend that you secure all app lists created for per-app VPNs. If an unauthorized user changes this list, and you import it into the per-app VPN app list, then you potentially authorize VPN access to apps that shouldn't have access. One way you can secure app lists is using an access control list (ACL).
 
-- **Network traffic rules for this VPN connection**: You can add network rules that apply to this VPN connection. The VPN connection is limited to any rules you enter.
+- **Network traffic rules for this VPN connection**: You can add network rules that apply to this VPN connection. Use this feature to filter network traffic to this VPN connection.
 
-  Select **Add** to use Split tunnel or Force tunnel, enter the protocols, and enter the local & remote port and address ranges that you want enabled for the VPN connection.
+  - If you do create a network traffic rule, then the VPN only uses the protocols, ports, and IP address ranges that you enter in this rule.
+  - If you don't create a network traffic rule, then all protocols, ports, and address ranges are enabled for this VPN connection.
 
-  When adding traffic rules, make sure to add a catch-all rule that is least restrictive, to avoid VPN issues.
+  When adding traffic rules, to avoid VPN issues, it's recommended to add a catch-all rule that is least restrictive.
 
-  If you do create a network traffic rule, then the VPN connection uses only the protocols, ports, and address ranges that you enter in that rule.
+  Select **Add** to create a rule and enter the following information. You can also **Import** a `.csv` file with this information.
 
-  You can also **Import** a `.csv` file with this information.
+  - **Name**: Enter a name for the network traffic rule.
+  - **Rule type**: Enter the tunnel method for this rule. This setting only applies when this rule is associated with an app. Your options:
+    - **None** (default)
+    - **Split tunnel**: This option gives client devices two connections simultaneously. One connection is secure and is designed to keep the network traffic private. The second connection is open to the network and lets Internet traffic go through.
+    - **Force tunnel**: All network traffic in this rule goes through the VPN. No network traffic in this rule goes directly to the Internet.
 
-  If you don't create a network traffic rule, then all protocols, ports, and address ranges are enabled.
+  - **Direction**: Select the flow of network traffic your VPN connection allows. Your options:
+    - **Inbound**: Only allows traffic from external sites through the VPN. Outbound traffic is blocked from entering the VPN.
+    - **Outbound** (default): Only allows traffic to external sites through the VPN. Inbound traffic is blocked from entering the VPN.
+
+    To allow inbound and outbound, create two separate rules. Create one rule for inbound, and another rule for outbound.
+
+  - **Protocol**: Enter the port number of the network protocol you want the VPN to use, from 0-255. For example, enter `6` for TCP, or `17` for UDP.
+
+    When you enter a protocol, you're connecting two networks over this same protocol. If you use the TPC (`6`) or UDP (`17`) protocols, you also need to enter the allowed local & remote port ranges and the allowed local & remote IP address ranges.
+
+    You can also **Import** a `.csv` file with this information.
+
+  - **Local port ranges**: If you use the TPC (`6`) or UDP (`17`) protocols, then enter the allowed local network port ranges. For example, enter `100` for the lower port and `120` for the upper port.
+
+    You can create a list of allowed port ranges, such as 100-120, 200, 300-320. For a single port, enter the same port number in both fields.
+
+    You can also **Import** a `.csv` file with this information.
+
+  - **Remote port ranges**: If you use the TPC (`6`) or UDP (`17`) protocols, then enter the allowed remote network port ranges. For example, enter `100` for the lower port and `120` for the upper port.
+
+    You can create a list of allowed port ranges, such as 100-120, 200, 300-320. For a single port, enter the same port number in both fields.
+
+    You can also **Import** a `.csv` file with this information.
+
+  - **Local address ranges**: Enter the allowed local network IPv4 address ranges that can use the VPN. Only client device IP addresses in this range use this VPN.
+
+    For example, enter `10.0.0.22` for the lower port and `10.0.0.122` for the upper port.
+
+    You can create a list of allowed IP addresses. For a single IP address, enter the same IP address in both fields.
+
+    You can also **Import** a `.csv` file with this information.
+
+  - **Remote address ranges**: Enter the allowed remote network IPv4 address ranges that can use the VPN. Only IP addresses in this range use this VPN.
+
+    For example, enter `10.0.0.22` for the lower port and `10.0.0.122` for the upper port.
+
+    You can create a list of allowed IP addresses. For a single IP address, enter the same IP address in both fields.
+
+    You can also **Import** a `.csv` file with this information.
 
 ## Conditional Access
 

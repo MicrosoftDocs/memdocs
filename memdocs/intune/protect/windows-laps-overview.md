@@ -67,31 +67,39 @@ Applies to:
 
 The following are requirements for Intune to support Windows LAPS in your tenant:
 
-**Licensing requirements**:
+### Licensing requirements
 
 - **Intune subscription** - *Microsoft Intune Plan 1*, which is the basic Intune subscription. You can also use Windows LAPS with a free trial subscription for Intune.
 
 - **Active Directory subscription** – *Azure Active Directory Free*, which is the free version of Azure AD that’s included when you subscribe to Intune. With Azure AD Free, you can use all the features of LAPS.
   
-  <!--  If you have Azure Active Directory Premium, you can improve security by using Conditional Access to enforce multifactor authentication before admins can view passwords for devices. You can also make use of Administrative Sets when working with LAPS data. -->
-
-**Active Directory support**:
+### Active Directory support
 
 Intune policy for Windows LAPS can configure a device to back up a local administrator account and password to one of the following Directory types:
 
-- **Cloud** – Cloud supports back up to your Azure AD for the following scenarios:
-  - Azure AD Join
-  - Hybrid (Hybrid Azure AD join)
-
   > [!NOTE]  
   > Devices that are workplace-joined (WPJ) are not supported by Intune for LAPS.
+
+- **Cloud** – Cloud supports back up to your Azure AD for the following scenarios:
+
+  - Hybrid (Hybrid Azure AD join)
+  - Azure AD Join
+
+    Support for *Azure AD Join* requires you to enable LAPS in your Azure AD. The following steps can help you complete this configuration. For the larger context, view these steps in the Azure AD documentation at [Enabling Windows LAPS with Azure AD](/azure/active-directory/devices/howto-manage-local-admin-passwords#enabling-windows-laps-with-azure-ad). *Hybrid Azure AD Join* does not require LAPS to be enabled in Azure AD.
+
+    **Enable LAPS in Azure AD**:  
+    1. Sign in to the **Azure portal** as a [Cloud Device Administrator](/azure/active-directory/roles/permissions-reference#cloud-device-administrator).
+    1. Browse to **Azure Active Directory** > **Devices** > **Device settings**.
+    1. Select **Yes** for the *Enable Local Administrator Password Solution (LAPS)* setting and select **Save**. You may also use the Microsoft Graph API [Update deviceRegistrationPolicy](/graph/api/deviceregistrationpolicy-update?view=graph-rest-beta&preserve-view=true)
+
+
 
 - **On-premises** – On-premises supports back up to Windows Server Active Directory (on-premises Active Directory).
 
   > [!IMPORTANT]  
   > LAPS on Windows devices can be configured to use one directory type or the other, but not both. Also consider, the backup directory must be supported by the devices join type – if you set the directory to an on-premises Active Directory and the device is not domain joined, it will accept the policy settings from Intune, but LAPS cannot successfully use that configuration.
 
-**Device Edition and Platform**:
+### Device Edition and Platform
 
 Devices can have any [Windows edition that Intune supports](../fundamentals/supported-devices-browsers.md#microsoft), but must run of one of the following versions to support the Windows LAPS CSP:
 
@@ -101,7 +109,7 @@ Devices can have any [Windows edition that Intune supports](../fundamentals/supp
 - Windows 11, version 22H2 (22621.1555 or later) with [KB5025239](https://support.microsoft.com/en-us/topic/april-11-2023-kb5025239-os-build-22621-1555-5eaaaf42-bc4d-4881-8d38-97e0082a6982)
 - Windows 11, version 21H2 (22000.1817 or later) with [KB5025224](https://support.microsoft.com/en-us/topic/april-11-2023-kb5025224-os-build-22000-1817-ebc75372-608d-4a77-a6e0-cb1e15f117fc)
 
-**GCC High support**:
+### GCC High support
 
 Intune policy for Windows LAPS is supported for GCC High environments.
 
@@ -111,7 +119,7 @@ To manage LAPS, an account must have sufficient role-based access control (RBAC)
 
 - **Create and access LAPS policy** – To work with and view LAPS policies, your account must be assigned sufficient permissions from the Intune RBAC category for **Security baselines**. By default, these are included in the built-in role **Endpoint Security Manager**.  To use custom roles, ensure the custom role includes the rights from the *Security baselines* category.
 
-- **Rotate local Administrator password** – To use the Intune admin center to rotate a devices local admin account password, your account must be assigned the following Intune permissions:
+- **Rotate local Administrator password** – To use the Intune admin center to view or rotate a devices local admin account password, your account must be assigned the following Intune permissions:
 
   - Managed devices: **Read**
   - Organization: **Read**
@@ -170,6 +178,9 @@ The following built-in roles Azure AD roles have permission to recover LAPS pass
 ### What roles are needed to read LAPS metadata?
 
 The following built-in roles are supported to view metadata about LAPS including the device name, last password rotation, and next password rotation: Global Admin, Cloud Device Admin, Intune Service Admin, Helpdesk Admin, Security Reader, Security Admin, and Global Reader.
+
+### Why is the Local admin password button greyed out and inaccessible?
+Currently, access to this area requires the Rotate local Administrator password Intune permission. See [Role-based access control for Microsoft Intune](../fundamentals/role-based-access-control.md).
 
 <!--  REMOVED until this is validated as accurate: 
 ### Are custom roles supported?

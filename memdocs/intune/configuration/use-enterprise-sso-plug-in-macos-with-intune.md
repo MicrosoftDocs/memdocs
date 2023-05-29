@@ -4,9 +4,9 @@
 title: Configure macOS Enterprise SSO plug-in with MDM
 description: Learn more about the Microsoft Enterprise SSO plug-in. Add or create an macOS device profile using the Microsoft Enterprise SSO plug-in in Microsoft Intune, Jamf Pro, and other MDM solution providers.
 keywords:
-author: TBC
-ms.author: alessanc
-manager: ianfarr
+author: MandiOhlinger
+ms.author: mandia
+manager: dougeby
 ms.date: 01/30/2023
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -19,7 +19,7 @@ ms.technology:
 #ROBOTS:
 #audience:
 
-ms.reviewer: miepping, tbc
+ms.reviewer: miepping, tbc, alessanc
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -193,6 +193,9 @@ In the Jamf Pro portal, you create a Computer configuration profile. This prof
 
 When the device checks in with the Jamf Pro service, it receives this profile.
 
+> [!TIP]
+> If you use Jamf Connect, it is recommended that you follow the [latest Jamf guidance on integrating Jamf Connect with Azure AD](https://learn.jamf.com/bundle/jamf-connect-documentation-current/page/Jamf_Connect_and_Microsoft_Conditional_Access.html). The recommended integration pattern ensures that Jamf Connect works properly with your Conditional Access policies and Azure AD Identity Protection.
+
 # [Other MDMs](#tab/create-profile-other-mdm)
 
 In the MDM portal, create a device configuration profile. This profile includes the settings to configure the SSO app extension on devices.
@@ -222,8 +225,13 @@ When the device checks in with the MDM service, it receives this profile.
 
 [!INCLUDE [Apple iOS End User Experience Boilerplate](../includes/apple-enterprise-sso-macos-end-user-experience-boilerplate.md)]
 
+> [!TIP]
+> Learn more about how the SSO plug-in works and how to troubleshoot the Microsoft Enterprise SSO Extension with the [SSO troubleshooting guide for Apple devices](/azure/active-directory/devices/troubleshoot-mac-sso-extension-plugin).
+
 ## Next steps
 
 - For information about the Microsoft Enterprise SSO plug-in, go to [Microsoft Enterprise SSO plug-in for Apple devices](/azure/active-directory/develop/apple-sso-plugin).
 
 - For information from Apple on the single sign-on extension payload, go to [single sign-on extensions payload settings](https://support.apple.com/guide/mdm/single-sign-on-extensions-mdmfd9cdf845/web) (opens Apple's web site).
+
+- For information on troubleshooting the Microsoft Enterprise SSO Extension, go to [Troubleshooting the Microsoft Enterprise SSO Extension plugin on Apple devices](/azure/active-directory/devices/troubleshoot-mac-sso-extension-plugin).

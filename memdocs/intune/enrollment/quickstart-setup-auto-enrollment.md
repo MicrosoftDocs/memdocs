@@ -54,7 +54,10 @@ To access Microsoft Intune, sign in to the [Microsoft Intune admin center](https
 
 ## Set up automatic enrollment
 
-For this example, you'll configure MDM enrollment settings so that both corporate and bring-your-own-devices can be automatically enrolled in Intune.
+For this example, you'll configure MDM enrollment settings so that both corporate and bring-your-own-devices can be automatically enrolled in Intune. If your intent is to enable automatic enrollment for Windows BYOD devices to an MDM, configure the MDM user scope to All (or Some, and specify a group) and configure the MAM user scope to None (or Some, and specify a group, ensuring that users are not members of a group targeted by both MDM and MAM user scopes). For corporate devices, the MDM user scope takes precedence if both MDM and MAM user scopes are enabled. The device will be automatically enrolled in the configured MDM.  
+
+> [!IMPORTANT]
+> For Windows BYOD devices, the MAM user scope takes precedence if both the MAM user scope and the MDM user scope (automatic MDM enrollment) are enabled for all users or the same groups of users. The device will not be MDM enrolled, and Microsoft Purview Information Protection policies will apply if you configured them.  
 
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **All services** > **M365 Azure Active Directory** > **Azure Active Directory** > **Mobility (MDM and MAM)**.
 2. Select **Get a free Premium trial to use this feature**. Selecting this option will allow auto enrollment using the Azure Active Directory free Premium trial. 
@@ -76,17 +79,9 @@ For this example, you'll configure MDM enrollment settings so that both corporat
 
     ![Screenshot of the "Select groups" assignment pane, highlighting the Contoso Testers example group.](./media/quickstart-setup-auto-enrollment/quickstart-setup-auto-enrollment-05.png)
 
-6. For **MAM User scope**, select **None**.  
-7. Choose **Select groups** > **Contoso Testers** > **Select** as the assigned group. 
-8. Use the default values for the remaining configuration values on the page.    
-9. Choose **Save**.
-
-> [!IMPORTANT]
-> For Windows BYOD devices, the MAM user scope takes precedence if both the MAM user scope and the MDM user scope (automatic MDM enrollment) are enabled for all users (or the same groups of users). The device will not be MDM enrolled, and Windows Information Protection (WIP) policies will be applied if you have configured them.
-
-If your intent is to enable automatic enrollment for Windows BYOD devices to an MDM, configure the MDM user scope to All (or Some, and specify a group) and configure the MAM user scope to None (or Some, and specify a group–ensuring that users are not members of a group targeted by both MDM and MAM user scopes).
-
-For corporate devices, the MDM user scope takes precedence if both MDM and MAM user scopes are enabled. The device will get automatically enrolled in the configured MDM.
+8. For **MAM User scope**, select **None**.  
+9. Use the default values for the remaining configuration values on the page.    
+10. Choose **Save**.  
 
 ## Clean up resources
 

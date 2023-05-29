@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 08/02/2021
+ms.date: 05/09/2023
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice:
@@ -44,7 +44,7 @@ In these steps, you’ll use the Device Model device property to create the dyna
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Groups** > **New Group**.
 ![Screenshot of delete policy](./media/create-dynamic-device-group-all-cloudpcs/create-group.png)
-2. Select the **New Group** page, choose **Security** for **Group type**.
+2. Select **Security** for **Group type**.
 3. Enter the following information:
     1. **Group name** = "All Cloud PCs" (or some other name indicating it will contain all Cloud PCs).
     2. **Group description** = "A dynamic device group containing all Cloud PC devices"
@@ -65,7 +65,7 @@ In these steps, you’ll use the Enrollment Profile Name device property to crea
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Groups** > **New Group**.
 ![Screenshot of delete policy](./media/create-dynamic-device-group-all-cloudpcs/create-group.png)
-2. Select the **New Group** page, choose **Security** for **Group type**.
+2. Select **Security** for **Group type**.
 3. Enter the following information:
     1. **Group name** = "All UX Engineering Cloud PC devices"
     2. **Group description** = "A dynamic device group containing all UX Engineering Cloud PC devices."
@@ -86,7 +86,7 @@ In these steps, you'll use the Device Model device property to create the dynami
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Groups** > **New Group**.
 ![Screenshot of delete policy](./media/create-dynamic-device-group-all-cloudpcs/create-group.png)
-2. Select the **New Group** page, choose **Security** for **Group type**.
+2. Select **Security** for **Group type**.
 3. Enter the following information:
     1. **Group name** = “All 2vCPU/4GB RAM Cloud PCs".
     2. **Group description** = “A dynamic device group containing all Cloud PCs with the 2vCPU/4GB RAM configuration.

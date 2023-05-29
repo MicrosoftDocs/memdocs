@@ -8,7 +8,7 @@ author: MandiOhlinger
 
 ms.author: mandia
 manager: dougeby
-ms.date: 01/20/2022
+ms.date: 05/17/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -70,11 +70,11 @@ When the profile is created in Intune, you deploy or assign the profile to devic
 
 8. Select **Next**.
 
-9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
+9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, go to [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
 
     Select **Next**.
 
-10. In **Assignments**, select the devices group that will receive your profile. For more information on assigning profiles, see [Assign user and device profiles](device-profile-assign.md).
+10. In **Assignments**, select the devices group that will receive your profile. For more information on assigning profiles, go to [Assign user and device profiles](device-profile-assign.md).
 
     Select **Next**.
 

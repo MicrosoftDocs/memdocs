@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 11/17/2022
+ms.date: 05/25/2023
 ms.collection: 
   - M365-modern-desktop
   - highpri
@@ -24,6 +24,10 @@ ms.topic: troubleshooting
 - Windows 10
 
 This article describes known issues that can often be resolved with configuration changes, or might be resolved automatically in a future release. For information about issues that can be resolved by applying a cumulative update, see [Windows Autopilot - resolved issues](resolved-issues.md).
+
+> [!NOTE]
+>
+> If you are experiencing issues with Autopilot with Co-management, see [Windows Autopilot with co-management](../configmgr/comanage/autopilot-enrollment.md).
 
 ## Known issues
 
@@ -114,11 +118,11 @@ Some devices may fail TPM attestation on Windows 11 during the pre-provisioning 
 
 ### Delete device record in Intune before reusing devices in self-deployment mode or Pre-Provisioning mode
 
-You have devices enrolled using Autopilot self-deployment mode or pre-provisioning mode. If you redeploy an Autopilot profile, it fails with a `0x80180014` error code.
+You have devices enrolled using Autopilot self-deployment mode or pre-provisioning mode. If you redeploy a device so that it reruns the Autopilot deployment again, it fails with a `0x80180014` error code.
 
 To resolve this error, use one of the following work around methods:
 
-- Delete the device record in Intune, and then redeploy the profile.
+- Delete the device record in Intune, and then redeploy the device so that it reruns the Autopilot deployment. For more information, see [Deregister a device](registration-overview.md#deregister-a-device).
 - Remove the device enrollment restriction for **Windows (MDM)** personally owned devices. For more information, see [Set enrollment restrictions in Microsoft Intune](../intune/enrollment/enrollment-restrictions-set.md).<!-- MEMDocs #2748 -->
 
 For more information on this issue, see [Troubleshoot Autopilot device import and enrollment](troubleshoot-device-enrollment.md).

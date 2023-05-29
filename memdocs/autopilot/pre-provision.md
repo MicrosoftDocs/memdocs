@@ -8,7 +8,7 @@ ms.reviewer: jubaptis
 manager: aaroncz
 author: frankroj
 ms.author: frankroj
-ms.date: 11/17/2022
+ms.date: 05/04/2023
 ms.collection: 
   - M365-modern-desktop
   - highpri
@@ -40,9 +40,6 @@ Pre-provisioned deployments use Microsoft Intune in Windows 10, version 1903 and
 
 ## Prerequisites
 
-> [!IMPORTANT]
-> You cannot automatically re-enroll a device through Windows Autopilot after an initial deployment in pre-provisioning mode. Instead, delete the device record in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). From the admin center, choose **Devices** &gt; **All devices** &gt; choose the devices you want to delete &gt; **Delete**. User assigned policies and apps will still be deployed to the device. For more information, see [Updates to the Windows Autopilot sign-in and deployment experience](https://techcommunity.microsoft.com/t5/intune-customer-success/updates-to-the-windows-autopilot-sign-in-and-deployment/ba-p/2848452).
-
 In addition to [Windows Autopilot requirements](software-requirements.md), Windows Autopilot for pre-provisioned deployment also requires:
 
 - Windows 10, version 1903 or later, or Windows 11
@@ -72,10 +69,10 @@ Before starting the pre-provisioning process in the provisioning service facilit
 
 :::image type="content" source="images/allow-white-glove-oobe.png" alt-text="Screenshot of the Out-of-box experience (OOBE) portal and the highlighted setting to allow pre-provisioning":::
 
-The pre-provisioning process applies all device-targeted policies from Intune. Those policies include certificates, security templates, settings, apps, and more - anything targeting the device. Additionally, any Win32 or LOB apps are installed if they meet these two conditions:
+The pre-provisioning process applies all device-targeted policies from Intune. Those policies include certificates, security templates, settings, apps, and more - anything targeting the device. Additionally, any Win32 or LOB apps are installed if they meet the following conditions:
 
 - Configured to install in the device context.
-- Targeted to the user preassigned to the Autopilot device.
+- Assigned to either the device or to the user preassigned to the Autopilot device.
 
 > [!IMPORTANT]
 > Make sure not to target both win32 and LOB apps to the same device. For more information, see [Add a Windows line-of-business app to Microsoft Intune](/mem/intune/apps/lob-apps-windows).

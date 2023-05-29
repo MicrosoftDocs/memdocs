@@ -1,5 +1,20 @@
 {
     "redirections": [
+        { 
+           "source_path": "memdocs/intune/enrollment/ios-user-enrollment.md",
+           "redirect_url": "/mem/intune/enrollment/apple-user-enrollment-with-company-portal",
+           "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/autopilot/autopilot-mbr.md",
+            "redirect_url": "/mem/autopilot/autopilot-motherboard-replacement",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/enrollment/tutorial-use-autopilot-enroll-devices.md",
+            "redirect_url": "/mem/autopilot/tutorial/autopilot-scenarios",
+            "redirect_document_id": false
+        },
         {
             "source_path": "memdocs/intune/fundamentals/policy-map-between-basic-mobility-security-intune.md",
             "redirect_url": "/mem/intune/fundamentals/migrate-to-intune",
@@ -949,6 +964,11 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "memdocs/autopilot/tutorial/existing-devices/setup-autopilot-deployment.md",
+            "redirect_url": "/mem/autopilot/tutorial/existing-devices/setup-autopilot-profile",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "memdocs/configmgr/hotfix/2103/KB9603111.md",
             "redirect_url": "/mem/configmgr/hotfix/2103/9603111",
             "redirect_document_id": false
@@ -1391,6 +1411,16 @@
         {
             "source_path": "memdocs/configmgr/core/understand/microsoft-endpoint-manager-faq.yml",
             "redirect_url": "/mem/configmgr/core/understand/configuration-manager-faq",
+            "redirect_document_id": false            
+        },
+        {
+            "source_path": "memdocs/intune/remote-actions/device-erase.md",
+            "redirect_url": "/mem/intune/remote-actions/device-wipe-macos.md",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/analytics/proactive-remediations.md",
+            "redirect_url": "/mem/analytics/remediations",
             "redirect_document_id": false            
         }
     ]

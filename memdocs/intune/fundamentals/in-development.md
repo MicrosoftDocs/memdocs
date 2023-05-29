@@ -8,7 +8,7 @@ keywords:
 author: dougeby 
 ms.author: dougeby
 manager: dougeby
-ms.date: 04/06/2023
+ms.date: 05/25/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -62,8 +62,11 @@ You can use RSS to be notified when this article is updated. For more informatio
 
 ## App management
 
-### Install required apps during pre-provisioning<!-- 12716381   -->  
-A new toggle will be available in the Enrollment Status Page (ESP) profile that allows you to select whether you want to attempt to install required applications during pre-provisioning (white glove) technician phase. We understand that installing as many applications as possible during pre-provisioning is desired to reduce the end user setup time. To help, we've implemented an option to attempt the installation of all the required apps assigned to a device during technician phase. If there's an app install failure, ESP will continue except for the apps specified in ESP profile. To enable this function, you'll need to edit your Enrollment Status Page profile by selecting **Yes** on the new setting entitled **Only fail selected apps in technician phase**. This setting will only appear if you have blocking apps selected. For information about ESP, go to [Set up the Enrollment Status Page](../enrollment/windows-enrollment-status.md).
+### View app report for Android Enterprise corporate-owned devices<!-- 2055436  -->  
+You'll be able to view a report containing all apps found on a device for Android Enterprise corporate-owned scenarios, including system apps. This report will be available in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **Monitor** > **Discovered apps**. You will see **Application Name** and **Version** for all apps detected as installed on the device.
+
+### Advanced application management<!-- 10986080  -->  
+Advanced application management provides you with an enterprise catalog of applications that are easily accessible. It also provides application update capabilities. The enterprise catalog is planned to be available in public preview in late Q2 2023. The application update capabilities are planned to be available in early Q3 2023.
 
 ### Company Portal automatically installed on Android Enterprise dedicated devices<!-- 6423852  -->  
 Intune Company Portal will now be automatically installed on all Android Enterprise dedicated devices to ensure the appropriate handling of app protection policies. Users won't be able to see or launch the Company Portal, and there are no requirements for users to interact with it. Admins will notice that the Company Portal is automatically installed on their Android Enterprise dedicated devices, without the ability to uninstall.
@@ -72,25 +75,6 @@ Intune Company Portal will now be automatically installed on all Android Enterpr
 *The time frame for the release of this update is still being determined.*
 
 Users will be able to uninstall Win32 apps in the Company Portal. If a Win32 app can be uninstalled by the user, the user will be able to select **Uninstall** for the Win32 app in the Company Portal. For more information about Win32 apps, go to [Win32 app management in Microsoft Intune](../apps/apps-win32-app-management.md).
-
-### Global quiet time app policy settings<!-- 15424417 -->  
-The global quiet time settings will allow you to create policies to schedule quiet time for your end users, which will automatically mute Microsoft Outlook email and Teams notifications on iOS/iPadOS and Android platforms. These policies can be used to limit end user notifications received after work hours. When this feature is available, you'll be able to find it in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **Quiet Time** > **Policies**.
-
-## Device configuration
-
-### New Google domain allow-list settings for Android Enterprise personally owned devices with a work profile<!-- 14711684 -->
-
-On Android Enterprise personally owned devices with a work profile, you can configure settings that restrict device features and settings.
-
-Currently, there's an **Add and remove accounts** setting that can allow Google accounts be added to the work profile. For this setting, when you select **Allow all accounts types**, you can also configure:
-
-- **Google domain allow-list**:  Restricts users to add only certain Google account domains in the work profile. You can import a list of allowed domains or add them in the admin center using the `contoso.com` format. When left blank, by default, the OS might allow adding all Google domains in the work profile.
-
-For more information on the settings you can configure, go to [Android Enterprise device settings list to allow or restrict features on personally owned devices using Intune](../configuration/device-restrictions-android-enterprise-personal.md).
-
-Applies to:
-
-- Android Enterprise personally owned devices with a work profile
 
 ### Support for multi-SIM iOS/iPadOS device inventory<!--17016690 (replaced 16360290 for tracking -->
 
@@ -108,12 +92,35 @@ Applies to:
 
 <!-- *********************************************** -->
 
+## Device enrollment
+
+### Apple Account Driven User Enrollment available for iOS/iPadOS 15+ devices<!-- 14161683  -->  
+Intune will support Apple Account Driven User Enrollment, a new and improved variation of Apple User Enrollment for iOS/iPadOS 15+ devices. The new option will utilize just-in-time-registration, which eliminates the need for the Company Portal app during enrollment. Device users can initiate enrollment directly in the Settings app, resulting in a shorter and more efficient onboarding experience. You can continue to target iOS/iPadOS devices using the existing profile-based User Enrollment method with Company Portal. Devices running iOS/iPadOS, version 14.8.1 and earlier will be unaffected by this update and can also continue to use the existing method.
+
+<!-- *********************************************** -->
+
 ## Device management
 
 ### On-demand proactive remediation for a Windows device<!-- 14783338  -->  
 A new device action that is in public preview allows you to run a proactive remediation on-demand to a single Windows device. The **Run** remediation device action will allow you to resolve issues without having to wait for a proactive remediation to run on its assigned schedule. You'll also be able to view the status of proactive remediations under **Remediations** in the **Monitor** section of a device.
 
-<!-- ***********************************************-->
+<!-- *********************************************** -->
+
+<!-- ## Device security  -->
+
+<!-- *********************************************** -->
+
+<!-- ## Intune apps -->
+<!-- *********************************************** -->
+
+<!-- ## Monitor and troubleshoot -->
+<!-- *********************************************** -->
+
+<!-- ## Role-based access control -->
+<!-- *********************************************** -->
+
+<!-- ## Tenant administration -->
+<!-- *********************************************** -->
 
 ## Notices
 

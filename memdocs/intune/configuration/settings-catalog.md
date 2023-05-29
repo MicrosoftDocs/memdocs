@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/21/2022
+ms.date: 05/01/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -31,7 +31,9 @@ ms.collection:
 
 # Use the settings catalog to configure settings on Windows, iOS/iPadOS and macOS devices
 
-Settings catalog lists all the settings you can configure, and all in one place. This feature simplifies how you create a policy, and how you see all the available settings. More settings are continually being added. If you prefer to configure settings at a granular level, similar to on-premises GPO, then the settings catalog is a natural transition.
+Settings catalog lists all the settings you can configure, and all in one place. This feature simplifies how you create a policy, and how you see all the available settings. More settings are continually being added. For a list of the settings in the settings catalog, go to the [IntunePMFiles / DeviceConfig GitHub repository](https://github.com/IntunePMFiles/DeviceConfig).
+
+If you prefer to configure settings at a granular level, similar to on-premises GPO, then the settings catalog is a natural transition to cloud-based policy.
 
 When you create the policy, you start from scratch. You add only the settings you want to control and manage. For example, you can use the settings catalog to create a BitLocker policy with all BitLocker settings, and all in one place in Intune.
 
@@ -43,7 +45,7 @@ This feature applies to:
 
   Includes device settings that are directly generated from Apple Profile-Specific Payload Keys. More settings and keys are continually being added. To learn more about profile-specific payload keys, go to [Profile-Specific Payload Keys](https://developer.apple.com/documentation/devicemanagement/profile-specific_payload_keys) (opens Apple's website).
 
-  Apple's declarative device management (DDM) is built into the settings catalog. When you configure settings from the settings catalog on iOS/iPadOS 15+ devices enrolled using [User Enrollment](../enrollment/ios-user-enrollment.md), you're automatically using DDM. If DDM doesn't work for any reason, then these devices use Apple’s standard MDM protocol. All other iOS/iPadOS devices continue to use Apple’s standard MDM protocol.
+  Apple's declarative device management (DDM) is built into the settings catalog. When you configure settings from the settings catalog on iOS/iPadOS 15+ devices enrolled using [User Enrollment](../enrollment/ios-user-enrollment.md), you're automatically using DDM. If DDM doesn't work for any reason, then these devices use Apple's standard MDM protocol. All other iOS/iPadOS devices continue to use Apple's standard MDM protocol.
 
 - **macOS**
 
@@ -54,7 +56,9 @@ This feature applies to:
   There are thousands of settings, including settings that haven't been available before. These settings are directly generated from the Windows configuration service providers (CSPs). You can also configure Administrative Templates, and have more Administrative Template settings available. As Windows adds or exposes more settings to MDM providers, these settings are added quicker to Microsoft Intune for you to configure.
 
 > [!TIP]
-> To see the Microsoft Edge policies you have configured, open Microsoft Edge, and go to `edge://policy`.
+>
+> - For a list of the settings in the settings catalog, go to the [IntunePMFiles / DeviceConfig GitHub repository](https://github.com/IntunePMFiles/DeviceConfig).
+> - To see the Microsoft Edge policies you have configured, open Microsoft Edge, and go to `edge://policy`.
 
 This article lists the steps to create a policy, and shows how to search and filter the settings in Intune. When you create the policy, it creates a device configuration profile. You can then assign or deploy this profile to devices in your organization.
 

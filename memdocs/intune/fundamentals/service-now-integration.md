@@ -89,8 +89,8 @@ To create a new OAuth application,
 
      | Field           | Description                                                                                                                         |
      |--------------------|-------------------------------------------------------------------------------------------------------------------------------------|
-     | Client ID            | The ServiceNow OAuth server automatically generates the ClientID.   |
-     | Client Secret         | Client Secret for the OAuth generation. Leave it empty for auto-generation. This value is used as an input in the **ServiceNow client appID** field for the ServiceNow connector configuration.                           |
+     | Client ID            | The ServiceNow OAuth server automatically generates the ClientID.  This value is used as an input in the **ServiceNow client appID** field for the ServiceNow connector configuration. |
+     | Client Secret         | Client Secret for the OAuth generation. Leave it empty for auto-generation.                            |
      | Redirect URL     | The authorization server redirects to this URL. They must be an absolute URL and comma separated. For example, you can set the URL to 'https://endpoint.microsoft.com/TokenAuthorize/ExtensionName/Microsoft_Intune_DeviceSettings,https://endpoint.microsoft.com/TokenAuthorize/ExtensionName/Microsoft_Intune_Workflows'                       |
      | Logo URL           | Provide the URL to the publicly hosted company logo, which is displayed when authenticating with ServiceNow. For example, you can set it to: 'https://photos.smugmug.com/photos/i-SJfnMq3/0/XL/i-SJfnMq3-XL.png'    |
      | Application        | By default, set to **Global** and isn't editable when creating the OAuth app.                           |

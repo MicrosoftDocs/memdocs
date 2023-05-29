@@ -23,10 +23,6 @@ items:
     href: enroll-intune.md
   - name: Enroll Configuration Manager devices
     href: enroll-configmgr.md
-- name: Tutorials
-  items:
-  - name: Proactive remediations
-    href: proactive-remediations.md
 - name: Concepts
   items:
   - name: Startup performance
@@ -39,6 +35,8 @@ items:
     href: work-from-anywhere.md
   - name: Endpoint analytics in Microsoft Adoption Score
     href: adoption-score.md
+  - name: Remediations
+    href: remediations.md
 - name: How-to guides
   items:
   - name: Manage settings

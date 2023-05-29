@@ -57,6 +57,8 @@ Intune policies manage LAPS by using the Windows LAPS configuration service prov
 Windows LAPS allows for the management of a single local administrator account per device. Intune policy can specify which local admin account it applies to by use of the policy setting **Administrator Account Name**. If the account name specified in the policy isn’t present on the device, no account is managed. However, when **Administrator Account Name** is left blank, the policy defaults to the devices built-in local admin account that is identified by its well-known relative identifier (RID).
 
 > [!NOTE]  
+> Ensure the [prerequisites](../protect/windows-laps-overview.md#prerequisites) for Intune to support Windows LAPS in your tenant are met before creating policies.
+
 > Intune’s LAPS policies do not create new accounts or passwords. Instead, they manage an account that’s already on the device.
 
 Configure and assign LAPS policies carefully. The Windows LAPS CSP supports a single configuration for each LAPS setting on a device. Devices that receive multiple Intune policies that include conflicting settings can fail to process policy. Conflicts can also prevent the backup of the managed local admin account and password to your tenants Directory.
@@ -64,6 +66,9 @@ Configure and assign LAPS policies carefully. The Windows LAPS CSP supports a si
 To help reduce potential conflicts, we recommend assigning a single LAPS policy to each device through device groups, and not through user groups. While LAPS policy supports user group assignments, they can result in a cycle of changing LAPS configurations each time a different user signs-in to a device. Frequently changing policies can introduce conflicts, a lack of device compliance with requirements, and create confusion around which local admin account from a device is currently being managed.
 
 ### Create a LAPS policy
+
+  > [!IMPORTANT]  
+  > Ensure that you have enabled LAPS in Azure AD, as covered in the [Enabling WindowsLAPS with Azure AD](/azure/active-directory/devices/howto-manage-local-admin-passwords#enabling-windows-laps-with-azure-ad) documentation.
 
 To create or manage LAPS policy, your account must have applicable rights from the **Security baseline** category. By default, these permissions are included in the built-in role *Endpoint Security Manager*. To use custom roles, ensure the custom role includes the rights from the *Security baselines* category. See [Role based access controls for LAPS](../protect/windows-laps-overview.md#role-based-access-controls-for-laps).
 
