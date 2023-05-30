@@ -30,7 +30,7 @@ The global quiet time settings allow you to create policies to schedule quiet ti
 
 ## Quiet time policy types
 
-There are three quiet time policy types available. The following table describes each policy type.
+There are two quiet time policy types available. The following table describes each policy type.
 
 |      Policy Type     |      Description     |
 |---|---|
