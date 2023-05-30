@@ -97,6 +97,9 @@ Applies to:
 
 ## Device configuration
 
+### Intelligent recommendations within Intune Security Baselines<!-- 11127203 -->
+We are adding tailored insights powered by Machine Learning models that help choose the right security settings from Security Baselines for your organization. These recommendations are based on best practices that similar organizations have adopted. Navigate to **Endpoint security** > **Security baselines** . While creating and editing the workflow these insights will be available for you in the form of a light bulb. 
+
 ### New settings available in the Apple settings catalog<!-- 19951554  -->  
 The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
 
@@ -183,7 +186,19 @@ A new device action that is in public preview allows you to run a proactive reme
 <!-- ## Intune apps -->
 <!-- *********************************************** -->
 
-<!-- ## Monitor and troubleshoot -->
+## Monitor and troubleshoot
+
+### Microsoft Intune troubleshooting pane is now generally available<!-- 18099474 -->
+The Intune troubleshooting pane is now generally available.  It will provide details about user's devices, policies, applications, and status. The troubleshooting pane will include the following information:
+- A summary of policy, compliance, and application deployment status.
+- Support for exporting, filtering, and sorting all reports.
+- Support to filter by excluding policies and applications.
+- Support to filter to a user’s single device.
+- Details about available device diagnostics and disabled devices.
+- Details about offline devices that haven't checked-in to the service for three or more days.
+
+You can find the troubleshooting pane in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Troubleshooting + support** > **Troubleshoot**. 
+
 <!-- *********************************************** -->
 
 <!-- ## Role-based access control -->
