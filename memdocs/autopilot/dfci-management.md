@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 11/17/2022
+ms.date: 05/25/2023
 ms.collection:
   - M365-modern-desktop
   - tier2
@@ -32,6 +32,7 @@ For an overview of DFCI benefits, scenarios, and prerequisites, see [Device Firm
 ## DFCI management lifecycle
 
 The DFCI management lifecycle includes the following processes:
+
 - UEFI integration
 - Device registration
 - Profile creation
@@ -52,6 +53,7 @@ See the following figure.
 - The device must be registered for Windows Autopilot by a [Microsoft Cloud Solution Provider (CSP) partner](https://partner.microsoft.com/membership/cloud-solution-provider), or registered directly by the OEM. For Surface devices, Microsoft registration support is available at [Microsoft Devices Autopilot Support](https://prod.support.services.microsoft.com/supportrequestform/0d8bf192-cab7-6d39-143d-5a17840b9f5f). 
 
 > [!IMPORTANT]
+>
 > Devices manually registered for Autopilot (such as by [importing from a csv file](/intune/enrollment/enrollment-autopilot#add-devices)) are not allowed to use DFCI. By design, DFCI management requires external attestation of the device's commercial acquisition through an OEM or a Microsoft CSP partner registration to Windows Autopilot. When your device is registered, its serial number is displayed in the list of Windows Autopilot devices.
 
 ## Managing DFCI profile with Windows Autopilot

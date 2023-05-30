@@ -48,7 +48,7 @@ Important scenarios exist when including or excluding app assignments:
     For example, if you assign a device group to the **All corporate users user** group, but exclude members in the **Senior Management Staff** user group, **All corporate users** except the **Senior Management staff** get the assignment, because both groups are user groups.
 - Intune doesn't evaluate user-to-device group relationships. If you assign apps to mixed groups, the results may not be what you want or expect.
 
-    For example, if you assign a device group to the **All Users** user group, but exclude an **All personal devices** device group. In this mixed group app assignment, **All users** get the app. The exclusion does not apply.
+For example, if you assign a device group to the **All Users** user group, but exclude an **All personal devices** device group, **All users** get the app. The exclusion does not apply.
 
 As a result, it's not recommended to assign apps to mixed groups.
 
