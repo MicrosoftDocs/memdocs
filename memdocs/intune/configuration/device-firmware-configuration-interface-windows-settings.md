@@ -215,9 +215,6 @@ These settings are added to a device configuration profile in Intune, and then a
 
 ## Wake settings
 
-> [!WARNING]
-> Disabling all external boot options or all external ports significantly complicates OS recovery. To recover a device that can no longer boot Windows, you may have to physically open the device and replace the hardware storage.
-
 - **Wake on LAN**: Wake on LAN allows a network administrator to remotely wake a device in sleep mode using the LAN.
 
   Your options:
