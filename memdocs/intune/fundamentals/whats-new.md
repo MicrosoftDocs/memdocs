@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/25/2023
+ms.date: 05/31/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -66,6 +66,22 @@ You can use RSS to be notified when this page is updated. For more information, 
 <!-- ### Role-based access control -->
 <!-- ### Scripts -->
 <!-- ### Tenant administration -->
+
+## Week of May 30, 2023  
+
+### Tenant administration  
+
+#### Organizational messages for Windows 11 now generally available <-- 15272978 -->  
+Use organizational messages to deliver branded, personalized call-to-actions to employees. Select from more than 25 messages that support employees through device onboarding and lifecycle management, in 15 different languages. Messages can be assigned to Azure AD user groups, and delivered just above the taskbar, in the notifications area, or in the Get started app on devices running Windows 11. Messages persist according to your configured frequency until the device user goes to the included link.  
+
+Additional features and functionality added for this release include: 
+* Choose from eight new themes for taskbar messages.   
+* Edit the details of a scheduled message.  
+* Add scope groups and scope tags.  
+* Confirm licensing requirements prior to first message.  
+
+For more information about available features and how to set up organizational messages, see:
+[Overview of organizational messages](../remote-actions/organizational-messages-overview.md).   
 
 ## Week of May 22, 2023 (Service release 2305)
 
