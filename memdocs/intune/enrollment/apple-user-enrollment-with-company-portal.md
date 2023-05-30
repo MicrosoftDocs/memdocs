@@ -76,7 +76,7 @@ Complete these steps to create an enrollment profile for devices enrolling via u
    Alternatively, you can select **Determine based on user choice**, which lets assigned users select the enrollment type. If you select this option, users will be presented with these options during enrollment: 
 
    * **I own this device**: The user will need to select whether they want to secure the entire device or only secure work-related apps and data. 
-   * **(Company) owns this device**: The device will be enrolled via Device Enrollment. 
+   * **(Company) owns this device**: The device will be enrolled via Apple Device Enrollment. For more information about this enrollment method, see [Device Enrollment and MDM](https://support.apple.com/guide/deployment/device-enrollment-and-mdm-depd1c27dfe6/web) on the Apple Support website.   
 
    The device user's selection determines which enrollment process is carried out. Their choice is also reflected in the device ownership attribute shown in Intune. To learn more about the user experience and what they see onscreen during enrollment, see [Set up iOS/iPadOS device access to your company resources](../user-help/enroll-your-device-in-intune-ios.md).  
     
