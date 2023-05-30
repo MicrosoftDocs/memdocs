@@ -72,15 +72,16 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration  
 
 #### Organizational messages for Windows 11 now generally available<!-- 15272978 -->  
-Use organizational messages to deliver branded, personalized call-to-actions to employees. Select from more than 25 messages that support employees through device onboarding and lifecycle management, in 15 different languages. Messages can be assigned to Azure AD user groups, and delivered just above the taskbar, in the notifications area, or in the Get started app on devices running Windows 11. Messages persist according to your configured frequency until the device user goes to the included link.  
+Use organizational messages to deliver branded, personalized call-to-actions to employees. Select from more than 25 messages that support employees through device onboarding and lifecycle management, in 15 different languages. Messages can be assigned to Azure AD user groups, and delivered just above the taskbar, in the notifications area, or in the Get started app on devices running Windows 11. Messages keep appearing at the frequency you select in Intune until employees visit the included link.  
 
-Additional features and functionality added for this release include: 
-* Choose from eight new themes for taskbar messages.   
-* Edit the details of a scheduled message.  
-* Add scope groups and scope tags.  
+Other features and functionality available to you in this release: 
 * Confirm licensing requirements prior to first message.  
+* Choose from eight new themes for taskbar messages.  
+* Give messages a custom name. 
+* Add scope groups and scope tags. 
+* Edit the details of a scheduled message.   
 
-For more information about available features and how to set up organizational messages, see:
+For more information about available features and how to set up organizational messages, see
 [Overview of organizational messages](../remote-actions/organizational-messages-overview.md).   
 
 ## Week of May 22, 2023 (Service release 2305)
