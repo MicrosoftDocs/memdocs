@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/26/2023
+ms.date: 05/30/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -55,22 +55,23 @@ Before beginning setup, complete the following tasks:
 
 You also need to set up service discovery so that Apple can reach the Intune service and retrieve enrollment information. To do this, set up and publish an HTTP well-known resource file on the same domain that employees sign into. Apple retrieves the file via an HTTP GET request to `“https://contoso.com/.well-known/com.apple.remotemanagement”`, with your organization's domain in place of `contoso.com`. Publish the file on a domain that can handle HTTP GET requests.    
 
-Create the file in JSON format, with the content type set to `application/json`.  We've provided the following JSON samples that you can copy and paste into your file. Use the one that aligns with your environment. Replace the *aadTenantID* variable in the sample with your organization's Azure AD tenant ID.   
+Create the file in JSON format, with the content type set to `application/json`.  We've provided the following JSON samples that you can copy and paste into your file. Use the one that aligns with your environment. Replace the *YourAADTenantID* variable in the base URL with your organization's Azure AD tenant ID.   
 
    Microsoft Intune environments:  
    ```json
-      {"Servers":[{"Version":"mdm-byod", "BaseURL":"https://manage.microsoft.com/EnrollmentServer/PostReportDeviceInfoForUEV2?aadTenantId=*aadTenantID*"}]}
+   {"Servers":[{"Version":"mdm-byod", "BaseURL":"https://manage.microsoft.com/EnrollmentServer/PostReportDeviceInfoForUEV2?aadTenantId=YourAADTenantID"}]}
    ```
 
    Microsoft Intune for US Government environments: 
 
    ```json      
-   {"Servers":[{"Version":"mdm-byod", "BaseURL":"https://manage.microsoft.us/EnrollmentServer/PostReportDeviceInfoForUEV2?aadTenantId=*aadTenantID*"}]}
+   {"Servers":[{"Version":"mdm-byod", "BaseURL":"https://manage.microsoft.us/EnrollmentServer/PostReportDeviceInfoForUEV2?aadTenantId=YourAADTenantID"}]}
    ``` 
 
-   Microsoft Intune operated by 21 Vianet in China environments:   
+   Microsoft Intune operated by 21 Vianet in China environments:  
+
    ```json
-      `{"Servers":[{"Version":"mdm-byod", "BaseURL":"https://manage.microsoft.cn/EnrollmentServer/PostReportDeviceInfoForUEV2?aadTenantId=*aadTenantID*"}]}
+   {"Servers":[{"Version":"mdm-byod", "BaseURL":"https://manage.microsoft.cn/EnrollmentServer/PostReportDeviceInfoForUEV2?aadTenantId=YourAADTenantID"}]}
    ```  
 
 The rest of the JSON sample is populated with all of the information you need, including:   
