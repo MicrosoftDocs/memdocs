@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/24/2023
+ms.date: 05/30/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -36,7 +36,7 @@ ms.collection:
 > [!IMPORTANT]
 > This feature is in public preview. For more information, see [Public preview in Microsoft Intune](../fundamentals/public-preview.md).  
 
-Set up account driven Apple User Enrollment for personal devices enrolling in Microsoft Intune. Account driven user enrollment provides a faster and more user-friendly enrollment experience than [user enrollment with Company Portal](apple-user-enrollment-with-company-portal.md). The device user initiates enrollment by signing into their work account in the Settings app. After the user approves device management, the enrollment profile installs silently in the background and Intune policies are applied. Intune uses just-in-time registration and the Microsoft Authenticator app for authentication to reduce the number of times users have to sign in during enrollment and when accessing work apps.      
+Set up account driven Apple User Enrollment for personal devices enrolling in Microsoft Intune. Account driven user enrollment provides a faster and more user-friendly enrollment experience than [user enrollment with Company Portal](apple-user-enrollment-with-company-portal.md). The device user initiates enrollment by signing into their work account in the Settings app. After the user approves device management, the enrollment profile silently installs and Intune policies are applied. Intune uses just-in-time registration and the Microsoft Authenticator app for authentication to reduce the number of times users have to sign in during enrollment and when accessing work apps.      
 
 This article describes how to set up account driven Apple User Enrollment in Microsoft Intune. You will:   
 
@@ -55,16 +55,24 @@ Before beginning setup, complete the following tasks:
 
 You also need to set up service discovery so that Apple can reach the Intune service and retrieve enrollment information. To do this, set up and publish an HTTP well-known resource file on the same domain that employees sign into. Apple retrieves the file via an HTTP GET request to `“https://contoso.com/.well-known/com.apple.remotemanagement”`, with your organization's domain in place of `contoso.com`. Publish the file on a domain that can handle HTTP GET requests.    
 
-Create the file in JSON format, with the content type set to `application/json`.  We've provided the following JSON samples that you can copy and paste into your file. Use the one that aligns with your environment. Replace the *aadTenantID* variable in the sample with your organization's Azure AD tenant ID.   
+Create the file in JSON format, with the content type set to `application/json`.  We've provided the following JSON samples that you can copy and paste into your file. Use the one that aligns with your environment. Replace the *YourAADTenantID* variable in the base URL with your organization's Azure AD tenant ID.   
 
-   Microsoft Intune environments:  <br> </br>
-      `{"Servers":[{"Version":"mdm-byod", "BaseURL":"https://manage.microsoft.com/EnrollmentServer/PostReportDeviceInfoForUEV2?aadTenantId=*aadTenantID*" }]}` 
+   Microsoft Intune environments:  
+   ```json
+   {"Servers":[{"Version":"mdm-byod", "BaseURL":"https://manage.microsoft.com/EnrollmentServer/PostReportDeviceInfoForUEV2?aadTenantId=YourAADTenantID"}]}
+   ```
 
-   Microsoft Intune for US Government environments: <br> </br>
-      `{"Servers":[{"Version":"mdm-byod", "BaseURL":"https://manage.microsoft.us/EnrollmentServer/PostReportDeviceInfoForUEV2?aadTenantId=*aadTenantID*" }]}` 
+   Microsoft Intune for US Government environments: 
 
-   Microsoft Intune operated by 21 Vianet in China environments: <br> </br>
-      `{"Servers":[{"Version":"mdm-byod", "BaseURL":"https://manage.microsoft.cn/EnrollmentServer/PostReportDeviceInfoForUEV2?aadTenantId=*aadTenantID*" }]}` 
+   ```json      
+   {"Servers":[{"Version":"mdm-byod", "BaseURL":"https://manage.microsoft.us/EnrollmentServer/PostReportDeviceInfoForUEV2?aadTenantId=YourAADTenantID"}]}
+   ``` 
+
+   Microsoft Intune operated by 21 Vianet in China environments:  
+
+   ```json
+   {"Servers":[{"Version":"mdm-byod", "BaseURL":"https://manage.microsoft.cn/EnrollmentServer/PostReportDeviceInfoForUEV2?aadTenantId=YourAADTenantID"}]}
+   ```  
 
 The rest of the JSON sample is populated with all of the information you need, including:   
 * Version: The server version is `mdm-byod`.     
@@ -74,16 +82,16 @@ The rest of the JSON sample is populated with all of the information you need, i
 We recommend extra configurations to help improve the enrollment experience for device users. This section provides more information about each recommendation.   
 
 ### Deploy Company Portal web app 
-Deploy the web app version of the Intune Company Portal website so that users have quick access to device status, device actions, and compliance information. The web app appears on the employees home screen and functions as a link to the [Company Portal website](https://portal.manage.microsoft.com/). Without the web app, devices users can still access the Company Portal website but have to open the browser and type the address into the search field. For more information about how to add a web app, see [Add web apps to Microsoft Intune](../apps/web-app.md).  
+Deploy the web app version of the Intune Company Portal website so that users have quick access to device status, device actions, and compliance information. The web app appears on the home screen and functions as a link to the [Company Portal website](https://portal.manage.microsoft.com/). Without the web app, devices users can still access the Company Portal website but have to open the browser and type the address into the search field. For more information about how to add a web app, see [Add web apps to Microsoft Intune](../apps/web-app.md).  
 
 ### Enable federated authentication  
-Use federated authentication to link Apple Business Manager with Azure AD. Apple User Enrollment typically requires you to create and provide managed Apple IDs to enrolling users. If you enable federated authentication, you won't have to create and provide unique Apple IDs to each user. Instead, a device user can sign in to their apps with the same credentials they use for their work account. For more information, see [Federated Authentication with Apple Business Manager](https://support.apple.com/en-euro/guide/apple-business-manager/axmb19317543/1/web/1) in the Apple Business Manager User Guide.  
+Apple User Enrollment requires you to create and provide managed Apple IDs to enrolling users. If you enable federated authentication, which consists of linking Apple Business Manager with Azure AD, you don't have to create and provide unique Apple IDs to each user. Instead, a device user can sign in to their apps with the same credentials they use for their work account. For more information, see [Intro to federated authentication with Apple Business Manager](https://support.apple.com/guide/apple-business-manager/intro-to-federated-authentication-axmb19317543/1/web/1) in the Apple Business Manager User Guide.  
 
 ## Step 1: Set up just-in-time registration and assign Microsoft Authenticator     
 > [!IMPORTANT]
 > This feature is in public preview. For more information, see [Public preview in Microsoft Intune](../fundamentals/public-preview.md).  
 
-During account driven user enrollment, Microsoft Intune uses Microsoft Authenticator as the authentication authority for apps. Complete these steps in the Microsoft Intune admin center to configure just-in-time registration and assign Microsoft Authenticator as a required app.    
+During account driven user enrollment, Microsoft Authenticator acts as the authentication authority for apps. Complete these steps in the Microsoft Intune admin center to configure just-in-time registration and assign Microsoft Authenticator as a required app.    
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
 2. [Create an iOS/iPadOS device configuration policy](../configuration/device-features-configure.md) under **Device features** > **Category** > [**Single sign-on app extension**](../configuration/device-features-configure.md#single-sign-on-app-extension).  
@@ -95,7 +103,7 @@ During account driven user enrollment, Microsoft Intune uses Microsoft Authentic
     * **Key**: device_registration
     * **Type**: String
     * **Value**: {{DEVICEREGISTRATION}}
-4. (Recommended) Add the key-value pair that enables SSO in the Safari browser for all apps in the policy. Remove trailing spaces before and after the value and key. Otherwise JIT registration won't work.    
+4. (Recommended) Add the key-value pair that enables SSO in the Safari browser for all apps in the policy. Remove trailing spaces before and after the value and key. Otherwise just-in-time registration won't work.    
     * **Key**: browser_sso_interaction_enabled
     * **Type**: Integer
     * **Value**: 1
@@ -119,8 +127,8 @@ Create an enrollment profile for devices enrolling via account driven user enrol
 9. Select **Next**.  
 10. On the **Review + create** page, review your choices, and then select **Create** to finish creating the profile.  
 
-## Step 3: Prepare employees for device enrollment      
-To initiate device enrollment on a personal device, the device owner must go to the Settings app and sign in with their work or school account. If they attempt to sign into an app with their work or school account, the app will alert them to the enrollment requirement and instruct them how to proceed. 
+## Step 3: Prepare employees for enrollment  
+To initiate device enrollment on a personal device, the device owner must go to the Settings app and sign in with their work or school account. If they attempt to sign into an app with their work or school account, the app alerts them to the enrollment requirement and tells them how to proceed. 
 
 This section describes the enrollment steps for device users. We recommend using this information in your organization's device onboarding documentation or for troubleshooting and support. 
 
@@ -134,7 +142,7 @@ This section describes the enrollment steps for device users. We recommend using
 8. Wait a few minutes while your device is configured and the management profile is installed.  
 9. To confirm your device is ready to use for work, go to **VPN & Device Management**. Confirm that your work account is listed under **MANAGED ACCOUNT**.  
 10. Microsoft Authenticator is required to access work apps. Wait a few minutes after enrollment for Authenticator to install on your device. An error message appears if you try to sign in to a work app without Authenticator.  
-11. You might receive additional prompts asking for your approval to install work apps. Select **Install** to approve installation.  
+11. You might receive more prompts asking for your approval to install work apps. Select **Install** to approve installation.  
 
 ## Profile priority 
 
@@ -149,6 +157,7 @@ The volume and cryptographic keys created to manage the work data on the device 
 
 ## Next steps  
 * For an overview of supported Apple User Enrollment features and management actions in Microsoft Intune, see [Overview of Apple User Enrollment in Microsoft Intune](ios-user-enrollment-supported-actions.md).  
+* For more details about Apple User Enrollment features and functionality, see [User Enrollment and MDM](https://support.apple.com/guide/deployment/user-enrollment-and-mdm-dep23db2037d/web) on the Apple support website.  
 * For troubleshooting, see [Troubleshooting iOS/iPadOS device enrollment errors in Microsoft Intune](/troubleshoot/mem/intune/device-enrollment/troubleshoot-ios-enrollment-errors).  
 * For supported settings in Intune device configurations profiles, see:   
 
