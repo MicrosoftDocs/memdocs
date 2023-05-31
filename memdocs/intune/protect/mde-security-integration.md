@@ -296,7 +296,7 @@ The Policy sync button only appears for devices that are successfully managed by
 
 ### Devices protected by Tamper Protection
 
-If a device has Tamper Protection turned on, it will not be possible to edit the values of [Tamper Protected settings](/microsoft-365/security/defender-endpoint/prevent-changes-to-security-settings-with-tamper-protection?view=o365-worldwide#what-happens-when-tamper-protection-is-turned-on) without disabling Tamper Protection first.
+If a device has Tamper Protection turned on, it will not be possible to edit the values of [Tamper Protected settings](/microsoft-365/security/defender-endpoint/prevent-changes-to-security-settings-with-tamper-protection#what-happens-when-tamper-protection-is-turned-on) without disabling Tamper Protection first.
 
 ### Assignment Filters and Security Management for Microsoft Defender for Endpoint
 
