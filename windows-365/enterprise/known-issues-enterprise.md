@@ -6,7 +6,7 @@ f1.keywords:
 ms.author: erikje
 author: ErikjeMS
 manager: dougeby
-ms.date: 04/21/2023
+ms.date: 05/31/2023
 audience: Admin
 ms.topic: troubleshooting
 ms.service: windows-365
@@ -85,17 +85,21 @@ The following device compliance settings may report as **Not Compliant** when be
 3. Create a new device compliance policy without either of the **Not Compliant** settings and use this new filter to include Cloud PCs for the policy assignment.
 
 ## Single sign-on users see a dialog to allow remote desktop connection during the connection attempt <!--42499792-->
+
 When using single sign-on, you'll currently be prompted to authenticate to Azure AD and allow the Remote Desktop connection when launching a connection to a new Cloud PC. Azure AD remembers up to 15 devices for 30 days before prompting again. If you see this dialog, select **Yes** to connect.
 
 ## Single sign-on user connections are being denied through Azure AD Conditional Access <!--42317382-->
+
 **Possible cause**: To log in through single sign-on, the remote desktop client requests an access token to the **Microsoft Remote Desktop** app in Azure AD which may be the cause of the failed connection.
 
 **Troubleshooting**: Follow the steps to [troubleshoot sign-in problems](/azure/active-directory/conditional-access/troubleshoot-conditional-access).
 
 ## Single sign-on users are immediately disconnected when the Cloud PC locks
+
 When single sign-on isn't used, users have the option to see the Cloud PC lock screen and enter credentials to unlock their Windows session. However, when single sign-on is used, the Cloud PC fully disconnects the session so that the user can relaunch the connection through the remote desktop client and perform the Azure AD-based single sign-on authentication flow.
 
 ## Single sign-on users aren't asked to re-authenticate to Azure AD when connecting from an unmanaged device <!--35593334-->
+
 When using single sign-on, all authentication behavior (including supported credential types and sign-in frequency) is driven through Azure AD.
 
 **Troubleshooting**: To enforce periodic re-authentication through Azure AD, create a Conditional Access policy using the [sign-in frequency control](/azure/active-directory/conditional-access/howto-conditional-access-session-lifetime#policy-1-sign-in-frequency-control).
@@ -105,6 +109,35 @@ When using single sign-on, all authentication behavior (including supported cred
 If you’ve turned on the **Use Devices preview** setting in the Intune admin center, the **Cloud PC performance (preview)** tab, **Cloud PCs with connection quality issues** report, and **Cloud PCs with low utilization** report won’t be on the **Overview** page.
 
 **Troubleshooting steps**: Turn off the **Use Devices preview** toggle in the upper right corner of the **Devices** > **Overview** page.
+
+## Cloud PC is stuck in a restart loop after a restore or resize action
+
+**Possible cause**: This issue might occur For Cloud PCs provisioned before July 2022 that use either:
+
+- MSFT Attack Surface Reduction rules (e.g. Manage attack surface reduction settings with endpoint security policies in Microsoft Intune | Microsoft Learn), or
+- 3rd party solutions that block the install language script execution during the post-provisioning process.  
+
+Cloud PCs provisioned after July 2022 won’t not encounter this issue.
+
+**Troubleshooting steps**: Determine the root cause: 
+
+1. Search the Windows Event log. If the system shows the following reboot event (1074), continue to step 2.
+
+  ```The process C:\WINDOWS\system32\wbem\wmiprvse.exe (<CPC Name>) has initiated the restart of computer <CPC Name> on behalf of user NT AUTHORITY\SYSTEM for the following reason: Application: Maintenance (Planned)
+  Reason Code: 0x80040001
+  Shutdown Type: restart
+  Comment: DSC is restarting the computer.
+  ```
+
+2. Run `Get-DscConfigurationStatus` in an elevated command window. If the result shows a reboot pending for a job, continue to step 3.
+3. Run `Get-DscConfiguration` in an elevated command window. If the results show the DSC that installs the language, continue to the **Resolution** section.
+
+**Resolution**: To stop the restart loop, try either of these options:
+
+- Remove the ASR policies, or switch policies to Audit mode, and then apply the new policies to the Cloud PC.
+- In an elevated command window, run the following command to reboot the job:
+
+    `Remove-DSCConfiguration -Stage Pending,Current,Previous -Verbose`
 
 ## Next steps
 
