@@ -50,7 +50,7 @@ Intune supports devices running the following operating systems (OS):
 
 [!INCLUDE [mdm-supported-devices](../includes/mdm-supported-devices.md)]
 
-### Supported platforms for MDE Integration
+### Supported platforms for Microsoft Defender for Endpoint Integration
 
 For more information, see [Microsoft Defender for Endpoint on devices with Microsoft Intune](../protect/mde-security-integration.md)
 

@@ -181,8 +181,8 @@ A new device action that is in public preview allows you to run a proactive reme
 
 ## Device security
 
-### MDE Settings Management enhancements<!-- 14743017, 15319901, 18713045, 18713050 -->
-MDE Settings Management ("MDE Attach") will expand platform support for Linux Servers and macOS channel. This applies to the Linux and macOS Antivirus policy templates found in **Endpoint Security** > **Antivirus**. In addition, MDE attach onboarding will be simplified to no longer have AAD Hybrid Join be a management pre-requisite for existing and new MDE attach policies. You'll also be able to create, edit, and find all Intune Endpoint Security policies through MDE portal.
+### Microsoft Defender for Endpoint Settings Management enhancements<!-- 14743017, 15319901, 18713045, 18713050 -->
+Microsoft Defender for Endpoint Settings Management will expand platform support for Linux Servers and macOS channel. This applies to the Linux and macOS Antivirus policy templates found in **Endpoint Security** > **Antivirus**. In addition, onboarding devices to Microsoft Defender for Endpoint settings management will be simplified to no longer have Azure AD Hybrid Join be a management pre-requisite for existing and new policies. You'll also be able to create, edit, and find all Intune Endpoint Security policies through the Microsoft Defender for Endpoint portal.
 
 <!-- *********************************************** -->
 

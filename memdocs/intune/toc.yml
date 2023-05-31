@@ -564,7 +564,7 @@ items:
               href: ./protect/advanced-threat-protection-manage-android.md
             - name: Monitor Defender for Endpoint
               href: ./protect/advanced-threat-protection-monitor.md
-            - name: MDE Security Configuration Management
+            - name: Microsoft Defender for Endpoint Security Configuration Management
               href: ./protect/mde-security-integration.md
           - name: Firewall rule migration
             href: ./protect/endpoint-security-firewall-rule-tool.md  
