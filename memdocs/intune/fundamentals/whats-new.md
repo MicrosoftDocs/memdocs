@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/25/2023
+ms.date: 05/31/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -66,6 +66,23 @@ You can use RSS to be notified when this page is updated. For more information, 
 <!-- ### Role-based access control -->
 <!-- ### Scripts -->
 <!-- ### Tenant administration -->
+
+## Week of May 30, 2023  
+
+### Tenant administration  
+
+#### Organizational messages for Windows 11 now generally available<!-- 15272978 -->  
+Use organizational messages to deliver branded, personalized call-to-actions to employees. Select from more than 25 messages that support employees through device onboarding and lifecycle management, in 15 different languages. Messages can be assigned to Azure AD user groups, and delivered just above the taskbar, in the notifications area, or in the Get started app on devices running Windows 11. Messages continue to appear or reappear based on the frequency you configure in Intune, and until the user has visited the customized URL.    
+
+Other features and functionality added in this release include:  
+* Confirm licensing requirements prior to first message.  
+* Choose from eight new themes for taskbar messages.  
+* Give messages a custom name. 
+* Add scope groups and scope tags. 
+* Edit the details of a scheduled message.   
+
+Scope tags were previously unavailable for organizational messages. With the addition of scope tag support, Intune will add the default scope tag to every message created before June 2023. Admins that want access to those messages must be associated with a role that has the same tag. For more information about available features and how to set up organizational messages, see
+[Overview of organizational messages](../remote-actions/organizational-messages-overview.md).   
 
 ## Week of May 22, 2023 (Service release 2305)
 
@@ -238,7 +255,7 @@ Intune supports account driven user enrollment, a new and improved variation of 
 
 ### Device security
 
-#### New security baseline for Microsoft 356 Office Apps<!-- 9587103  -->  
+#### New security baseline for Microsoft 365 Office Apps<!-- 9587103  -->  
 We’ve released a new security baseline to help you manage security configurations for **M365 Office Apps**. This new baseline uses an updated template and experience that leverages the unified settings platform seen in the Intune settings catalog. You can view the list of settings in the new baseline at [Microsoft 365 Apps for Enterprise baseline settings (Office)](../protect/security-baseline-v2-office-settings.md).
 
 The new Intune security baseline format aligns the presentation of settings that are available to those found in the Intune settings catalog. This alignment helps resolve past issues for setting names and implementations for settings that could create conflicts. The new format also improves the reporting experience for baselines in the Intune admin center.

@@ -299,4 +299,4 @@ To learn more about KeyTalk’s integration with Intune, see https://keytalk.com
 
 To support the [Security Management for Microsoft Defender for Endpoint](../protect/mde-security-integration.md) (MDE security configuration) scenario, Intune will soon differentiate Windows devices in Azure Active Directory as either *Windows Server* for devices that run Windows Server, or as *Windows* for devices that run Windows 10 or Windows 11.
 
-With this change, you'll be able to improve policy targeting for MDE security configuration. For example, you'll be able to use dynamic groups that consist of only Windows Server devices, or only Windows client devices (Windows 10/11).
+With this change, you'll be able to improve policy targeting for Microsoft Defender for Endpoint security configuration. For example, you'll be able to use dynamic groups that consist of only Windows Server devices, or only Windows client devices (Windows 10/11).
