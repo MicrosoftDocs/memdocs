@@ -53,7 +53,7 @@ Learn what new features are available in Windows 365 Enterprise.
 -->
 
 <!-- ########################## -->
-## Week of May 29, 2023 (Service release 2304)
+## Week of May 29, 2023 (Service release 2305)
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
@@ -85,7 +85,7 @@ A **Provide feedback** button is now available in several Windows 365 admin page
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Windows 365 app
 
-### Windows 365 app supports dark mode<!--44828612-->
+#### Windows 365 app supports dark mode<!--44828612-->
 
 The Windows 365 app now supports dark mode. End users have the option to set the Windows 365 app to light or dark mode, or to match system settings.
 
