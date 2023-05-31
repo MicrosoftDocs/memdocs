@@ -51,7 +51,7 @@ Android management is no different and this is where Intune enters the discussio
 
 Intune supports different enrollment options for Android devices, as shown in the following image:
 
-:::image type="content" source="./media/frontline-worker-overview/android-flw-enrollment-options.png" alt-text="Diagram that shows all the Intune enrollment options for Android frontline worker devices in Microsoft Intune.":::
+:::image type="content" source="./media/frontline-worker-overview/android-flw-enrollment-options.png" alt-text="Diagram that shows all the Intune enrollment options for Android frontline worker devices in Microsoft Intune." lightbox="./media/frontline-worker-overview/android-flw-enrollment-options.png":::
 
 When using Android devices for frontline workers, use the following steps. These steps help you determine the best enrollment option and the best device management experience for you and your end users.
 
@@ -187,6 +187,8 @@ For more information on Azure AD SDM, and to get started, go to:
 
 ### What about?
 
+**??** 
+
 - OEMConfig
 - Zebra
 
@@ -198,7 +200,7 @@ It's more common to use iPad devices than iOS devices for FLW scenarios. This se
 
 For FLW iPad devices, there are two options available - **Shared iPad** or **Azure AD shared device mode**, as shown in the following image:
 
-:::image type="content" source="./media/frontline-worker-overview/ios-ipados-flw-enrollment-options.png" alt-text="Diagram that shows all the Intune enrollment options for iPadOS frontline worker devices in Microsoft Intune.":::
+:::image type="content" source="./media/frontline-worker-overview/ios-ipados-flw-enrollment-options.png" alt-text="Diagram that shows all the Intune enrollment options for iPadOS frontline worker devices in Microsoft Intune." lightbox="./media/frontline-worker-overview/ios-ipados-flw-enrollment-options.png":::
 
 When using iPad devices for FLW, use the following information to help you decide which option is best for your organization.
 
@@ -273,7 +275,7 @@ The next decision is to determine if the Shared iPads will be used for guest acc
 
   The number of users that can sign in also varies by the amount of storage on the device. So, it's recommended to plan accordingly and configure the enrollment profile to accommodate your needs.
 
-For more information on these options, go to [Set up Shared iPad in Intune](/enrollment/device-enrollment-shared-ipad.md).
+For more information on these options, go to [Set up Shared iPad in Intune](../enrollment/device-enrollment-shared-ipad.md).
 
 #### Step 3 - Home screen layout and device experience
 
@@ -281,7 +283,7 @@ So far, you're using ADE enrollment and determined access. Next, consider what e
 
 In Intune, you can create device configuration profiles that configure the home screen and run apps in kiosk mode.
 
-For a list of the Shared iPad settings you can configure, go to [Configure settings for Shared iPads](../enrollment/device-enrollment-shared-ipad#configure-settings-for-shared-ipads.md).
+For a list of the Shared iPad settings you can configure, go to [Configure settings for Shared iPads](../enrollment/device-enrollment-shared-ipad.md#configure-settings-for-shared-ipads).
 
 For a list of all the device configuration settings, go to:
 
