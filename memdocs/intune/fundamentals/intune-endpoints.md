@@ -141,6 +141,11 @@ This provides a convenient method to list and review all services required by In
 |lgmsapeweu.blob.core.windows.net | Collect Diagnostics |
 |fd.api.orgmsg.microsoft.com | Organizational messages |
 |ris.prod.api.personalization.ideas.microsoft.com | Organizational messages |
+|contentauthassetscdn-prod.azureedge.net | Organizational messages |
+|contentauthassetscdn-prodeur.azureedge.net | Organizational messages |
+|contentauthrafcontentcdn-prod.azureedge.net | Organizational messages |
+|contentauthrafcontentcdn-prodeur.azureedge.net | Organizational messages |
+
 
 The following tables list the ports and services that the Intune client accesses:
 
