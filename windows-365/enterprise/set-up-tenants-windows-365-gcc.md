@@ -36,9 +36,9 @@ ms.collection:
 > You do not need an Azure Government subscription to use Windows 365 Government.
 
 The fastest way to use Windows 365 is to use AADJ, gallery images and the Microsoft Hosted Network option. The instructions on this page are only if you must use either or both:
+
 - **Custom images**. Windows 365 provides optimized gallery images, including images with M365 apps pre-installed(/windows-365/enterprise/device-images); Intune can be used for further customization of [common settings](/mem/intune/configuration/settings-catalog-common-features) and [application deployment](/mem/intune/apps/apps-windows-10-app-deploy) after the gallery image is deployed. If you must use your existing custom image, for more information, see [add a custom image](./add-device-images.md).
 - **Azure Network Connections (ANC)**. ANC lets you provision Cloud PCs that are attached to a virtual network that you manage. For more information, see [create an Azure network connection](./create-azure-network-connection.md).
-
 
 For Government Community Cloud (GCC) customers only, the instructions below lets Intune running in Azure Commercial to manage Cloud PCs running in Azure Government regions.
 
@@ -151,6 +151,7 @@ OR use the instructions below if you do not have a CloudShell account which requ
 
 **Script instructions:**
 You will be asked to enter the Azure subscription ID from a list of subscriptions you have access to, where the W365 app permissions will be granted.
+
 1. At the prompt, type one of the following options to grant permissions:
     - **1** to only upload custom images. For Azure AD join infrastructures, you don't need to create an ANC just to upload custom images.
     - **2** to only create ANCs.
@@ -159,7 +160,6 @@ You will be asked to enter the Azure subscription ID from a list of subscription
         - The resource groups for that subscription are then listed. Select the group that you want to use.
         - Select your vNet.
 2. The script will then grant the permissions and lists what was configured.
-
 
 ## Next steps
 
