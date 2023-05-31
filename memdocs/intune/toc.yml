@@ -1652,6 +1652,8 @@ items:
     items: 
     - name: Manage operating system versions
       href: ./fundamentals/manage-os-versions.md
+    - name: Frontline worker (FLW)
+      href: ./fundamentals/frontline-worker-intune-overview.md
     - name: Guided scenarios
       items: 
       - name: Guided scenarios overview
