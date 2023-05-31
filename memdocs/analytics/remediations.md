@@ -1,7 +1,7 @@
 ---
 title: Remediations
 titleSuffix: Microsoft Endpoint Manager
-description: Lear about how to use Remediations in Endpoint analytics.
+description: Learn about how to use Remediations in Endpoint analytics.
 ms.date: 04/06/2023
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
@@ -9,7 +9,7 @@ ms.topic: conceptual
 author: smritib17
 ms.author: smbhardwaj
 manager: dougeby
-# Customer intent: As a Microsoft Endpoint Manager administrator, I want to enable and use remediations in Endpoint analytics so that I can fix common support issues before end-users notice issues.
+# Customer intent: As a Microsoft Intune administrator, I want to enable and use remediations in Endpoint analytics so that I can fix common support issues before end-users notice issues.
 ms.localizationpriority: high
 ms.collection: highpri
 ---
@@ -27,7 +27,11 @@ In this article, you learn how to:
 > * Review prerequisites for Remediations
 > * Deploy a built-in script package
 > * Deploy a custom script package
-> * Monitor the script packages  
+> * Run a Remediation script on-demand (preview)
+> * Client policy retrieval and client reporting
+> * Monitor the script packages
+> * Export script output
+> * Monitor remediation status for a device  
 
 ## <a name="bkmk_prs"></a> About Remediations
 
@@ -131,9 +135,38 @@ Remediation scripts need to be encoded in UTF-8. Uploading these scripts rather 
    For information about enforcing script signature checks, see [Script requirements](#bkmk_requirements).
 1. Click **Next** then assign any **Scope tags** you need.
 1. In the **Assignments** step, select the device groups to which you want to deploy the script package. When you're ready to deploy the packages to your users or devices, you can also use filters. For more information, see [Create filters in Microsoft Intune](../intune/fundamentals/filters.md). 
+ 
    >[!NOTE]
    > Don't mix user and device groups across include and exclude assignments.
+
 1. Complete the **Review + Create** step for your deployment.
+
+## Run a remediation script on-demand (preview)
+
+> [!NOTE]
+> While in public preview, run remediation is available at no additional cost. When run remediation becomes generally available, it will be available as [Intune add-ons](../intune/fundamentals/intune-add-ons.md) and require an additional cost to the licensing options that include Microsoft Endpoint Manager or Intune.
+You can use the **Run remediation** device action to run a remediation script on-demand to a single Windows device.
+
+### Prerequisites
+
+- Remediations must already be configured before a remediation script can be used on-demand.
+- The built-in or custom script packages must be available for users to run a remediation on-demand, however they do not need to be assigned to a user or device. You can use **Scope tags** to limit which remediation script packages a user can see.
+- Users must be Global Admins, Intune Admins, or have a role with the **Run remediation** permission (available under  **Remote tasks**).
+- Devices are online and able to communicate with Intune and [Windows Push Notification Service (WNS)](../intune/fundamentals/intune-endpoints.md#windows-push-notification-services-wns) during the remote action.
+- The [Intune Management Extension](../intune/apps/intune-management-extension.md) must be installed on devices. The installation is done automatically when a Win32 app, PowerShell script, or Remediation is assigned to a user or device.
+
+### How to run a Remediation script on-demand
+
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Navigate to  **Devices** >  **Windows** > select a supported device.
+3. On the device's  **Overview**  page, select  **…** > **Run remediation (preview).**
+4. In the **Run remediation (preview)** pane, select the **Script package** you want to run from the list. Select **View details** to see properties of the script package like detection and remediation script contents, description, and configured settings.
+5. To run the remediation on-demand, select **Run remediation**.
+
+> [!NOTE]
+> Only a single **Run remediation** device action can be issued at a time for the same device. If you run multiple **Run remediation** device actions in a short period of time to a device, they may overwrite each other.
+> [!NOTE]
+> The device might not receive the **Run remediation** device action if it is not online or able to successfully communicate with Intune or Windows Push Notification Service (WNS) when the device action is sent.
 
 ## <a name="bkmk_prs_policy"></a> Client policy retrieval and client reporting
 
@@ -161,6 +194,14 @@ The client reports Remediation information at the following times:
 ## <a name="bkmk_prs_export"></a> Export script output
 <!-- 10198545 -->
 To help you easily analyze returned outputs, use the **Export** option to save the output as a `.csv` file. Exporting the output to a `.csv` file allows you to analyze the returned outputs when remediations run on devices with issues. Exporting also allows you to share the results with others for additional analysis.  
+
+## Monitor remediation status for a device
+
+You can view the status of Remediations that have been assigned or run on-demand to a device.
+
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Navigate to  **Devices** >  **Windows** > select a supported device.
+3. Select **Remediations** in the **Monitor** section.
 
 ## Next steps
 
