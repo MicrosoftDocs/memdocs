@@ -71,7 +71,7 @@ By using the following PowerShell script, you can retrieve the list of FQDNs use
 (invoke-restmethod -Uri ("https://endpoints.office.com/endpoints/WorldWide?ServiceAreas=MEM`&clientrequestid=" + ([GUID]::NewGuid()).Guid)) | ?{$_.ServiceArea -eq "MEM" -and $_.urls} | select -unique -ExpandProperty urls
 ```
 
-This provides a convenient method to list and review all services required by Intune and autopilot in one location. You will also need FQDN's that are covered as part of M365 Requirements. For reference this is the list of URL's returned, and the service they are tied to.
+This provides a convenient method to list and review all services required by Intune and autopilot in one location. You will also need FQDNs that are covered as part of M365 Requirements. For reference, this is the list of URLs returned, and the service they are tied to.
 
 |FQDN    |Associated Service      |
 |-----------|----------------|
