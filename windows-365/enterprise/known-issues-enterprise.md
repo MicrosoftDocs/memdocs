@@ -86,7 +86,7 @@ The following device compliance settings may report as **Not Compliant** when be
 
 ## Single sign-on users see a dialog to allow remote desktop connection during the connection attempt <!--42499792-->
 
-When using single sign-on, you'll currently be prompted to authenticate to Azure AD and allow the Remote Desktop connection when launching a connection to a new Cloud PC. Azure AD remembers up to 15 devices for 30 days before prompting again. If you see this dialog, select **Yes** to connect.
+When using single sign-on, you're currently be prompted to authenticate to Azure AD and allow the Remote Desktop connection when launching a connection to a new Cloud PC. Azure AD remembers up to 15 devices for 30 days before prompting again. If you see this dialog, select **Yes** to connect.
 
 ## Single sign-on user connections are being denied through Azure AD Conditional Access <!--42317382-->
 
@@ -98,11 +98,11 @@ When using single sign-on, you'll currently be prompted to authenticate to Azure
 
 When single sign-on isn't used, users have the option to see the Cloud PC lock screen and enter credentials to unlock their Windows session. However, when single sign-on is used, the Cloud PC fully disconnects the session so that the user can relaunch the connection through the remote desktop client and perform the Azure AD-based single sign-on authentication flow.
 
-## Single sign-on users aren't asked to re-authenticate to Azure AD when connecting from an unmanaged device <!--35593334-->
+## Single sign-on users aren't asked to reauthenticate to Azure AD when connecting from an unmanaged device <!--35593334-->
 
 When using single sign-on, all authentication behavior (including supported credential types and sign-in frequency) is driven through Azure AD.
 
-**Troubleshooting**: To enforce periodic re-authentication through Azure AD, create a Conditional Access policy using the [sign-in frequency control](/azure/active-directory/conditional-access/howto-conditional-access-session-lifetime#policy-1-sign-in-frequency-control).
+**Troubleshooting**: To enforce periodic reauthentication through Azure AD, create a Conditional Access policy using the [sign-in frequency control](/azure/active-directory/conditional-access/howto-conditional-access-session-lifetime#policy-1-sign-in-frequency-control).
 
 ## I don’t see the Cloud PC reports on the Intune admin center Devices > Overview page
 
@@ -112,18 +112,19 @@ If you’ve turned on the **Use Devices preview** setting in the Intune admin ce
 
 ## Cloud PC is stuck in a restart loop after a restore or resize action
 
-**Possible cause**: This issue might occur For Cloud PCs provisioned before July 2022 that use either:
+**Possible cause**: This issue might occur for Cloud PCs provisioned before July 2022 that use either:
 
-- MSFT Attack Surface Reduction rules (e.g. Manage attack surface reduction settings with endpoint security policies in Microsoft Intune | Microsoft Learn), or
-- 3rd party solutions that block the install language script execution during the post-provisioning process.  
+- MSFT Attack Surface Reduction rules (for example, Manage attack surface reduction settings with endpoint security policies in Microsoft Intune | Microsoft Learn), or
+- Third party solutions that block the install language script execution during the post-provisioning process.  
 
-Cloud PCs provisioned after July 2022 won’t not encounter this issue.
+Cloud PCs provisioned after July 2022 won’t encounter this issue.
 
-**Troubleshooting steps**: Determine the root cause: 
+**Troubleshooting steps**: Determine the root cause:
 
 1. Search the Windows Event log. If the system shows the following reboot event (1074), continue to step 2.
 
-  ```The process C:\WINDOWS\system32\wbem\wmiprvse.exe (<CPC Name>) has initiated the restart of computer <CPC Name> on behalf of user NT AUTHORITY\SYSTEM for the following reason: Application: Maintenance (Planned)
+  ```
+  The process C:\WINDOWS\system32\wbem\wmiprvse.exe (<CPC Name>) has initiated the restart of computer <CPC Name> on behalf of user NT AUTHORITY\SYSTEM for the following reason: Application: Maintenance (Planned)
   Reason Code: 0x80040001
   Shutdown Type: restart
   Comment: DSC is restarting the computer.
