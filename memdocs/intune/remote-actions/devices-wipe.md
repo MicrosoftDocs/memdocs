@@ -47,6 +47,10 @@ The **Wipe** action restores a device to its factory default settings. The user 
 > [!NOTE]
 > The Wipe action is not available for iOS/iPadOS devices enrolled with User Enrollment. To create a User Enrollment profile: [Set up iOS/iPadOS and iPadOS User Enrollment](../enrollment/ios-user-enrollment.md)
 
+> [!IMPORTANT]
+>
+> The Wipe action doesn't remove the Autopilot registration from the device. To remove the Autopilot registration from the device, see [Deregister from Autopilot using Intune](/mem/autopilot/registration-overview#deregister-from-autopilot-using-intune)
+
 The **Retain enrollment state and user account** option is only available for Windows 10 version 1709 or later.
 
 MDM policies will be reapplied the next time the device connects to Intune.

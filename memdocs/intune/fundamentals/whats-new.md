@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/25/2023
+ms.date: 05/31/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -67,9 +67,29 @@ You can use RSS to be notified when this page is updated. For more information, 
 <!-- ### Scripts -->
 <!-- ### Tenant administration -->
 
+## Week of May 30, 2023  
+
+### Tenant administration  
+
+#### Organizational messages for Windows 11 now generally available<!-- 15272978 -->  
+Use organizational messages to deliver branded, personalized call-to-actions to employees. Select from more than 25 messages that support employees through device onboarding and lifecycle management, in 15 different languages. Messages can be assigned to Azure AD user groups, and delivered just above the taskbar, in the notifications area, or in the Get started app on devices running Windows 11. Messages continue to appear or reappear based on the frequency you configure in Intune, and until the user has visited the customized URL.    
+
+Other features and functionality added in this release include:  
+* Confirm licensing requirements prior to first message.  
+* Choose from eight new themes for taskbar messages.  
+* Give messages a custom name. 
+* Add scope groups and scope tags. 
+* Edit the details of a scheduled message.   
+
+Scope tags were previously unavailable for organizational messages. With the addition of scope tag support, Intune will add the default scope tag to every message created before June 2023. Admins that want access to those messages must be associated with a role that has the same tag. For more information about available features and how to set up organizational messages, see
+[Overview of organizational messages](../remote-actions/organizational-messages-overview.md).   
+
 ## Week of May 22, 2023 (Service release 2305)
 
 ### App management
+
+#### Update to macOS shell scripts maximum running time limit<!-- 23187517 -->
+Based on customer feedback, we're updating the Intune agent for macOS (version 2305.019) to extend the maximum script run time to 60 minutes. Previously, the Intune agent for macOS only allowed shell scripts to run for up to 15 minutes before reporting the script as a failure. The Intune agent for macOS 2206.014 and higher supports the 60-minute timeout.
 
 #### Assignment filters support app protection policies and app configuration policies<!-- 7476247 -->  
 Assignment filters support MAM app protection policies and app configuration policies. When you create a new filter, you can fine tune MAM policy targeting using the following properties:
@@ -177,7 +197,7 @@ Applies to:
 - Windows 10
 - Windows 11
 
-#### Remdiations are now available in Intune for US Government GCC High and DoD<!-- 16526300 -->  
+#### Remediations are now available in Intune for US Government GCC High and DoD<!-- 16526300 -->  
 Remediations (previously known as proactive remediations) are now available in [Microsoft Intune for US Government GCC High and DoD](../fundamentals/intune-govt-service-description.md)
 
 Applies to:
@@ -226,12 +246,13 @@ For more information on the Obliteration Behavior setting, go to Apple's Platfor
 
 Applies to:
 
-- macOS
+- macOS  
 
-<!--  
+### Device enrollment  
+
 #### Account driven Apple User Enrollment available for iOS/iPadOS 15+ devices (public preview)<!-- 14161683  -->  
-<!--Intune supports account driven user enrollment, a new and improved variation of Apple User Enrollment for iOS/iPadOS 15+ devices. Now available for public preview, the new option utilizes just-in-time registration, which eliminates the need for the Company Portal app during enrollment. Device users can initiate enrollment directly in the Settings app, resulting in a shorter and more efficient onboarding experience. You can continue to target iOS/iPadOS devices using the existing profile-based user enrollment method that uses Company Portal. Devices running iOS/iPadOS, version 14.8.1 and earlier remain unaffected by this update and can continue to use the existing method. For more information, see [Set up account driven Apple User Enrollment](../enrollment/apple-account-driven-user-enrollment.md).
--->
+Intune supports account driven user enrollment, a new and improved variation of Apple User Enrollment for iOS/iPadOS 15+ devices. Now available for public preview, the new option utilizes just-in-time registration, which eliminates the need for the Company Portal app during enrollment. Device users can initiate enrollment directly in the Settings app, resulting in a shorter and more efficient onboarding experience. You can continue to target iOS/iPadOS devices using the existing profile-based user enrollment method that uses Company Portal. Devices running iOS/iPadOS, version 14.8.1 and earlier remain unaffected by this update and can continue to use the existing method. For more information, see [Set up account driven Apple User Enrollment](../enrollment/apple-account-driven-user-enrollment.md).  
+
 ### Device security
 
 #### New security baseline for Microsoft 356 Office Apps<!-- 9587103  -->  
@@ -280,7 +301,7 @@ For more information about protected apps, see [Microsoft Intune protected apps]
 
 ### Device configuration
 
-#### Device Firmware Configuration Interface (DFCI) supports Dynabook devices<!-- 10249859  -->  
+#### Device Firmware Configuration Interface (DFCI) supports Dynabook devices<!-- 10249859 -->
 For Windows 10/11 devices, you can create a DFCI profile to manage UEFI (BIOS) settings. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration profiles** > **Create profile** > **Windows 10 and later** for platform > **Templates** > **Device Firmware Configuration Interface** for profile type.
 
 Some Dynabook devices running Windows 10/11 are enabled for DFCI. Contact your device vendor or device manufacturer for eligible devices.
