@@ -62,6 +62,10 @@ Learn what new features are available in Windows 365 Enterprise.
 
 Cloud PC on-demand restore points and copy copy to  an Azure Storage account have moved out of preview and into general availability. For more information, see [Create on-demand manual restore points for Cloud PCs](create-manual-restore-point.md) and [Share Cloud PC restore points to an Azure Storage Account](share-restore-points-storage.md).
 
+#### Shortpath for managed/private networks<!--44356711-->
+
+Managed network RDP Shortpath is available for Windows 365. For more information about RDP Shortpath in Windows 365, see [Use RDP Shortpath for private networks with Windows 365 ](rdp-shortpath-private-networks.md).
+
 #### Move Cloud PC<!--43450234-->
 
 A new provisioning policy option lets you define a new region or ANC for the provisioning policy. When you initiate the move:
