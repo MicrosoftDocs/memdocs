@@ -98,7 +98,7 @@ You can cancel a request before it’s approved by selecting it from the My requ
 
 3. After reviewing the details, enter relevant details in the Approver notes field, and then select **Approve request** or **Reject request**.
 
-4. After you approve a request, the requestor needs select **Complete**.  Intune will process the change, and changes the status to *Completed.*
+4. After you approve a request, the requestor needs select **Complete**.  Intune will process the change, and changes the status to *Completed.* Verify the approval succeeded (or failed) by reviewing the console notification upon completion. 
 
 ## More considerations
 
