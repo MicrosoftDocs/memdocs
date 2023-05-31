@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 03/06/2023
+ms.date: 05/31/2023
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice:
@@ -33,8 +33,6 @@ ms.collection:
 # Create on-demand manual restore points for Cloud PCs
 
 Cloud PC [restore points](restore-overview.md) can be manually created both singly and in bulk.
-
-Manual restore points are  in [public preview](../public-preview.md).
 
 ## Create a single manual restore point
 

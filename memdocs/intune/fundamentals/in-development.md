@@ -8,7 +8,7 @@ keywords:
 author: dougeby 
 ms.author: dougeby
 manager: dougeby
-ms.date: 05/25/2023
+ms.date: 05/31/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -62,6 +62,9 @@ You can use RSS to be notified when this article is updated. For more informatio
 
 ## App management
 
+### Intune migrating from SafetyNet Attestation API to Google Play Integrity API<!-- 15571389   -->  
+Google has deprecated the [SafetyNet Attestation API](https://developer.android.com/training/safetynet/attestation) and replaced it with the [Play Integrity API](https://developer.android.com/google/play/integrity). Intune will be migrating to the new API for app protection policies. The “SafetyNet device attestation” setting name will be updated to align with the new Google Play Integrity API for all policies in the Intune user interface (UI). For related information, see [Discontinuing the SafetyNet Attestation API](https://developer.android.com/training/safetynet/deprecation-timeline) and [Migrating from the SafetyNet Attestation API](https://developer.android.com/google/play/integrity/migrate).
+
 ### View app report for Android Enterprise corporate-owned devices<!-- 2055436  -->  
 You'll be able to view a report containing all apps found on a device for Android Enterprise corporate-owned scenarios, including system apps. This report will be available in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **Monitor** > **Discovered apps**. You will see **Application Name** and **Version** for all apps detected as installed on the device.
 
@@ -92,6 +95,73 @@ Applies to:
 
 <!-- *********************************************** -->
 
+## Device configuration
+
+### Intelligent recommendations within Intune Security Baselines<!-- 11127203 -->
+We are adding tailored insights powered by Machine Learning models that help choose the right security settings from Security Baselines for your organization. These recommendations are based on best practices that similar organizations have adopted. Navigate to **Endpoint security** > **Security baselines** . While creating and editing the workflow these insights will be available for you in the form of a light bulb. 
+
+### New settings available in the Apple settings catalog<!-- 19951554  -->  
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
+
+A new setting is available in the Settings Catalog. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can see these settings at **Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type.
+
+**Authentication > Extensible Single Sign On (SSO)**:
+
+- Denied Bundle Identifiers
+
+Applies to:
+
+- iOS/iPadOS
+- macOS
+
+**Login > Login Window Behavior**:
+
+- Disable FDE Auto Login
+
+Applies to:
+
+- macOS
+
+**Networking > Network Usage Rules**:
+
+- SIM Rules
+
+Applies to:
+
+- iOS/iPadOS
+
+For more information about configuring Settings Catalog profiles in Intune, go to [Create a policy using settings catalog](../configuration/settings-catalog.md).
+
+### Android Enterprise 11+ devices can use Zebra's latest OEMConfig app version<!-- 8675347  -->  
+On Android Enterprise devices, you can use OEMConfig to add, create, and customize OEM-specific settings in Microsoft Intune (**Devices** > **Configuration profiles** > **Create profile** > **Android Enterprise** for platform > **OEMConfig**).
+
+There's a new **Zebra OEMConfig Powered by MX** OEMConfig app that aligns more closely to Google’s standards. You'll be required to use this new app on Android Enterprise 11.0 and newer devices.
+
+The older **Legacy Zebra OEMConfig** app continues to support devices with Android 11 and earlier. In your Managed Google Play, you'll see two versions of Zebra OEMConfig app. Be sure to select the correct app that applies to your Android device versions.
+
+For more information on OEMConfig and Intune, go to [Use and manage Android Enterprise devices with OEMConfig in Microsoft Intune](../configuration/android-oem-configuration-overview.md).
+
+Applies to:
+
+- Android Enterprise 11.0 and newer
+
+### Device Firmware Configuration Interface (DFCI) supports Asus devices <!-- 10249874  -->  
+For Windows 10/11 devices, you can create a DFCI profile to manage UEFI (BIOS) settings. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration profiles** > **Create profile** > **Windows 10 and later** for platform > **Templates** > **Device Firmware Configuration Interface** for profile type.
+
+Some Asus devices running Windows 10/11 are enabled for DFCI. Contact your device vendor or device manufacturer for eligible devices.
+
+For more information about DFCI profiles, go to:
+
+- [Configure Device Firmware Configuration Interface (DFCI) profiles on Windows devices in Microsoft Intune](../configuration/device-firmware-configuration-interface-windows.md)
+- [Device Firmware Configuration Interface (DFCI) management with Windows Autopilot](/mem/autopilot/dfci-management)
+
+Applies to:
+
+- Windows 10
+- Windows 11
+
+<!-- *********************************************** -->
+
 ## Device enrollment
 
 ### Apple Account Driven User Enrollment available for iOS/iPadOS 15+ devices<!-- 14161683  -->  
@@ -101,19 +171,37 @@ Intune will support Apple Account Driven User Enrollment, a new and improved var
 
 ## Device management
 
+### Update to Endpoint Privilege Management reports<!-- 17727222  -->  
+Intune's Endpoint Privilege Management (EPM) reports will support exporting the full reporting payload to a CSV file. This will allow you to export all events from an elevation report in Intune.
+
 ### On-demand proactive remediation for a Windows device<!-- 14783338  -->  
 A new device action that is in public preview allows you to run a proactive remediation on-demand to a single Windows device. The **Run** remediation device action will allow you to resolve issues without having to wait for a proactive remediation to run on its assigned schedule. You'll also be able to view the status of proactive remediations under **Remediations** in the **Monitor** section of a device.
 
 <!-- *********************************************** -->
 
-<!-- ## Device security  -->
+## Device security
+
+### MDE Settings Management enhancements<!-- 14743017, 15319901, 18713045, 18713050 -->
+MDE Settings Management ("MDE Attach") will expand platform support for Linux Servers and macOS channel. This applies to the Linux and macOS Antivirus policy templates found in **Endpoint Security** > **Antivirus**. In addition, MDE attach onboarding will be simplified to no longer have AAD Hybrid Join be a management pre-requisite for existing and new MDE attach policies. You'll also be able to create, edit, and find all Intune Endpoint Security policies through MDE portal.
 
 <!-- *********************************************** -->
 
 <!-- ## Intune apps -->
 <!-- *********************************************** -->
 
-<!-- ## Monitor and troubleshoot -->
+## Monitor and troubleshoot
+
+### Microsoft Intune troubleshooting pane is now generally available<!-- 18099474 -->
+The Intune troubleshooting pane is now generally available.  It will provide details about user's devices, policies, applications, and status. The troubleshooting pane will include the following information:
+- A summary of policy, compliance, and application deployment status.
+- Support for exporting, filtering, and sorting all reports.
+- Support to filter by excluding policies and applications.
+- Support to filter to a user’s single device.
+- Details about available device diagnostics and disabled devices.
+- Details about offline devices that haven't checked-in to the service for three or more days.
+
+You can find the troubleshooting pane in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Troubleshooting + support** > **Troubleshoot**. 
+
 <!-- *********************************************** -->
 
 <!-- ## Role-based access control -->
