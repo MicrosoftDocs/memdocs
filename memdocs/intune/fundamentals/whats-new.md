@@ -255,7 +255,7 @@ Intune supports account driven user enrollment, a new and improved variation of 
 
 ### Device security
 
-#### New security baseline for Microsoft 356 Office Apps<!-- 9587103  -->  
+#### New security baseline for Microsoft 365 Office Apps<!-- 9587103  -->  
 We’ve released a new security baseline to help you manage security configurations for **M365 Office Apps**. This new baseline uses an updated template and experience that leverages the unified settings platform seen in the Intune settings catalog. You can view the list of settings in the new baseline at [Microsoft 365 Apps for Enterprise baseline settings (Office)](../protect/security-baseline-v2-office-settings.md).
 
 The new Intune security baseline format aligns the presentation of settings that are available to those found in the Intune settings catalog. This alignment helps resolve past issues for setting names and implementations for settings that could create conflicts. The new format also improves the reporting experience for baselines in the Intune admin center.
