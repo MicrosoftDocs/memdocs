@@ -87,7 +87,7 @@ Create and configure a message for the notification area.
 2. For **Message type**, select **Notification area**.   
 3. For **Message theme**, select the type of message you want to create. Your options:  
 
-      * **Organizational HR training**: Prompt users to complete  HR training.   
+     * **Organizational HR training**: Prompt users to complete HR training.   
      * **Organizational skills training**: Prompt users to complete skill-specific training. 
      * **Organizational training**: Prompt users to complete training provided by your organization.     
      * **Organizational update**: Prompt users to install an update from your organization.  
@@ -181,9 +181,6 @@ You can edit the properties of a message that's in a scheduled state.
 2. A summary of the message opens, and shows the message properties. Next to **Summary**, select **Edit**.  
 3. Make changes to the properties. 
 4. Select **Save**.  
-
->[!NOTE]
-> You can also edit the name of a message that was scheduled but failed to deliver. Select **Retry** to put the message back into a scheduled state, and then follow the editing instructions to make changes to the name.  
 
 ## Next steps  
 * Monitor and track the status and user engagement details for scheduled organizational messages. For more information, see [View reporting details for organizational messages](organizational-messages-reporting.md).  

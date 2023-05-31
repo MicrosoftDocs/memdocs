@@ -65,7 +65,6 @@ Organizational messages have the following known issues and limitations:
 * If you recently onboarded your tenant to Azure AD, it can take 36 to 64 hours before you're able to use the organizational messages feature.
 * When you create an organizational message for the Get Started app, Microsoft Intune automatically sets the delivery end date to 12/31/2035, which is shown in the profile summary. The message will be delivered to targeted groups until that date or until you cancel the message.  
 * Message priority isn't supported. If you schedule multiple messages of the same type for the same time window, targeted employees will receive the messages in a random order.  
-* We observed that sometimes after admins create a message and receive a success confirmation, a background task fails and limits functionality. The failure isn't communicated in the UI, and the status for the message still appears as **Scheduled**. You'll know this happened if the cancellation option and user engagement details are unavailable. 
 
 ## Frequently asked questions    
 This section answers frequently asked questions (FAQ) for organizational messages.  
