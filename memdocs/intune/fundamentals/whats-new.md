@@ -72,9 +72,9 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration  
 
 #### Organizational messages for Windows 11 now generally available<!-- 15272978 -->  
-Use organizational messages to deliver branded, personalized call-to-actions to employees. Select from more than 25 messages that support employees through device onboarding and lifecycle management, in 15 different languages. Messages can be assigned to Azure AD user groups, and delivered just above the taskbar, in the notifications area, or in the Get started app on devices running Windows 11. Messages persist according to your configured frequency until the device user goes to the included link.  
+Use organizational messages to deliver branded, personalized call-to-actions to employees. Select from more than 25 messages that support employees through device onboarding and lifecycle management, in 15 different languages. Messages can be assigned to Azure AD user groups, and delivered just above the taskbar, in the notifications area, or in the Get started app on devices running Windows 11. Messages continue to appear or reappear based on the frequency you configure in Intune, and until the user has visited the customized URL.    
 
-Other features and functionality available to you in this release: 
+Other features and functionality added in this release include:  
 * Confirm licensing requirements prior to first message.  
 * Choose from eight new themes for taskbar messages.  
 * Give messages a custom name. 
