@@ -124,7 +124,7 @@ This table lists the settings that are enabled if an app uses the App SDK or the
 |Require minimum operating system|X|X|
 |Require minimum Android security patch version (Android only)|X|X|
 |Require minimum Intune SDK for iOS (iOS only)|X|X|
-|SafetyNet device attestation (Android only)|X|X|
+|Device integrity check (Android only)|X|X|
 |Threat scan on apps (Android only)|X|X|
 |Require maximum Mobile Threat Defense vendor device risk level|X||
 |Configure app notification content for organization accounts|X|X|

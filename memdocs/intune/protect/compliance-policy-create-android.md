@@ -102,8 +102,8 @@ As an Intune administrator, use these compliance settings to help protect your o
   > [!NOTE]
   > On the legacy Android platform, this feature is a compliance setting. Intune can only check whether this setting is enabled at the device level.
 
-- **SafetyNet device attestation**  
-  Enter the level of [SafetyNet attestation](https://developer.android.com/training/safetynet/attestation.html) that must be met. Your options:
+- **Play Integrity device attestation**  
+  Enter the level of Google's [Play Integrity](https://developer.android.com/google/play/integrity) that must be met. Your options:
 
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or non-compliance.
   - **Check basic integrity**
