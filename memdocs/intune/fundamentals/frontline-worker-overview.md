@@ -29,7 +29,7 @@ A frontline worker (FLW) is a person that works in a critical or essential role.
 
 This article provides guidance on managing and configuring devices that play a key role in running business operations.
 
-Frontline workers rely on process and/or devices to enable their productivity, like scanning concert tickets, medical patient wrist bands, and inventory. If these devices fail, productivity and business can stop. These device types can be business or mission critical to operations.
+Frontline workers rely on process and/or devices to enable their productivity, like scanning concert tickets, medical patient wrist bands, and inventory scanning. If these devices fail, productivity and business can stop. These device types can be business or mission critical to operations.
 
 This article applies to:
 
@@ -40,15 +40,6 @@ This article applies to:
 
 Android devices are in almost every industry across the globe, including healthcare, aviation, manufacturing, and government. This section focuses on Android devices used by frontline workers. It includes decisions admins need to make, including determining how the device is used, and configuring the home screen & device experience.
 
----
-**??**  Is the following paragraph needed? It's kind of confusing. ??
-
-Often, a comparison of management capability enters the discussion and can lead to a checkbox exercise where organizations look at the incumbent solution and compare it to the solution of interest.  Having worked with 1000s of customers, this may lead to a biased form of mindset.  For example, x solution does foo where y solution does bar. However the questions that needs to be answered is, regardless of the haw, is the outcome the same?  It's a matter of disjoining the "how" vs the end result.
-
-Android management is no different and this is where Intune enters the discussion.
-
----
-
 Intune supports different enrollment options for Android devices, as shown in the following image:
 
 :::image type="content" source="./media/frontline-worker-overview/android-flw-enrollment-options.png" alt-text="Diagram that shows all the Intune enrollment options for Android frontline worker devices in Microsoft Intune." lightbox="./media/frontline-worker-overview/android-flw-enrollment-options.png":::
@@ -57,7 +48,7 @@ When using Android devices for frontline workers, use the following steps. These
 
 There are other Android enrollment options available. This article focuses on the enrollment options commonly used for FLW. For more information on all the Android enrollment options, go to [Enrollment guide: Enroll Android devices in Microsoft Intune](../fundamentals/deployment-guide-enrollment-android.md).
 
-### Step 1 - Select your enrollment platform
+### Step 1 - Select your enrollment option
 
 The first step is to determine the enrollment platform that's best for your organization and device needs. For FLW devices using the Android platform, the most common enrollment options are **Android Enterprise** and **Android Open Source Project (AOSP)**. This section focuses on these enrollment options.
 
@@ -65,7 +56,7 @@ The first step is to determine the enrollment platform that's best for your orga
 
   ✔️ If the device is GMS enabled and is in the [Android Enterprise recommended list](https://www.android.com/enterprise/recommended/) (opens Android's web site), then use Android Enterprise enrollment.
 
-  ❌ If these devices are used in a country/region that blocks GMS, then don't use this enrollment option. Use AOSP.
+  ❌ If these devices are used in a country/region that blocks GMS, then Android Enterprise enrollment is not supported. Look into AOSP enrollment (provided devices are supported for AOSP management with Intune).
 
 - **AOSP** devices don't offer or include Google Mobile Services (GMS). These devices:
 
@@ -108,7 +99,7 @@ The next decision is to determine if the devices are shared with many users or a
 
   - If you're using Android Enterprise, then you can enroll your devices as **fully managed** devices. These devices have one user, and are used exclusively for organization work; not personal use.
 
-  - If you're using AOSP, then you can enroll your devices as a **user-associated** device. Remember, these devices don't use Google Mobile Services (GMS).
+  - If you're using AOSP, then you can enroll your devices as a **user-associated** device. Remember, these devices don't support Google Mobile Services (GMS).
 
 ### Step 3 - Home screen and device experience
 
@@ -118,7 +109,7 @@ The following scenarios describe some commonly used scenarios:
 
 - **Scenario 1: Device wide access with multiple apps**
 
-  The device is enrolled in Intune as a **fully managed** device. Users have access to the apps and settings on the device. You can restrict users from different features, such as debugging, factory reset, and more.
+  The device is enrolled in Intune as a **dedicated enrollment** device. Users have access to the apps and settings on the device. You can restrict users from different features, such as debugging, factory reset, and more.
 
   To configure devices for this scenario, you deploy the apps to the devices, and then use device configuration policies to allow or block device features.
 
@@ -127,18 +118,16 @@ The following scenarios describe some commonly used scenarios:
   1. [Add apps to Microsoft Intune](../apps/apps-add.md)
   2. [Allow or restrict features on corporate-owned devices using Intune](../configuration/device-restrictions-android-for-work.md)
 
-  **??** I assumed this scenario is meant for fully managed. ??
-
+  
   **??** What about Microsoft Launcher app? If it doesn't apply to this scenario, we should state that info and why. ??
+  **a** Launcher isn't applicable in this scenario
 
 - **Scenario 2: Locked screen device with multiple pinned apps**
 
-  For this scenario, you install an enterprise launcher, which allows you to customize managed device home screens. You can pin apps, select a wallpaper, set icon positions, and more. This scenario is often used for **dedicated devices**, such as kiosks.
+  For this scenario, you install the Intune Managed Home Screen, which allows you to customize managed device experience. You can pin apps, select a wallpaper, set icon positions, and more. This scenario is often used for **dedicated devices**, such as shared devices.
 
-  Only features added to the enterprise launcher are available to end users. So, you can restrict end users from accessing settings and other device features.
-
-  Intune uses the Managed Home Screen (MHS) for the enterprise launcher. You don't need to install another enterprise launcher app. Using the MHS, you pin 1 app or several apps.
-
+  Only features added to the Managed Home Screen are available to end users. So, you can restrict end users from accessing settings and other device features.
+  
   For more information on the MHS on dedicated devices, go to the [How to setup Microsoft Managed Home Screen on Dedicated devices in multi-app kiosk mode](https://techcommunity.microsoft.com/t5/intune-customer-success/how-to-setup-microsoft-managed-home-screen-on-dedicated-devices/ba-p/1388060) blog post.
 
   To get started, use the following links:
@@ -152,12 +141,14 @@ The following scenarios describe some commonly used scenarios:
 - **Scenario 3: Locked screen device with one pinned app** 
 
   **??** This whole scenario. I copied the text from scenario 2, but what's the other solution, besides MHS? ??
+  **a** scenario 1
 
   In this scenario, a single app is opened and it's the only app users can access. This is often used for kiosk devices.
 
-  You can use the Managed Home Screen (MHS) for the enterprise launcher. You don't need to install another enterprise launcher app. Using the MHS, you pin 1 app.
+  Use the Managed Home Screen (MHS) for the enterprise launcher. You don't need to install another enterprise launcher app. Using the MHS, you pin one app.
 
   **??** The difference is that the single app can be closed in **Scenario 2** but not the launcher thus still restricting the end user from accessing settings.??
+  **a** there is no difference, in scenario 2 multiple apps are pinned to the MHS whereas in scenario 3 only one app is.  The reason I present the scenario this way is the "single app" kiosk is extreamly restrictive and doesn't allow admin to troubleshoot the device.  I'll add another scenario to address single app kiosk on Android Enterprise as well.
 
   To get started, use the following links:
 
@@ -167,6 +158,11 @@ The following scenarios describe some commonly used scenarios:
   > [!TIP]
   > If you're using this scenario, then configure the MHS using the app policy. Don't configure the MHS using a device configuration policy. The app policy has more configuration settings than the device configuration policy.
   > **??** Does this tip still apply to this scenario? In the word doc, it says to use a device config profile for scenario 3. If there's another option, we can add that too. ??
+  > **a** yes, identical
+
+- **Scenario 4: Single app kiosk** 
+In this scenario a single app is assigned to the device and when the device boots the app is lauched, thus making the device dedicated to a certain scenario such as scanning inventory.  Users are locked to the single app and may not close the app.
+
 
 [Android Enterprise device experience settings on organization owned devices](../configuration/device-restrictions-android-for-work.md#device-experience)
 
@@ -188,15 +184,16 @@ For more information on Azure AD SDM, and to get started, go to:
 ### What about?
 
 **??** 
+**a** out of scope for this
 
 - OEMConfig
 - Zebra
 
 ## iOS/iPadOS
 
-iPad devices are a popular device type for frontline workers (FLW). iPads are used in different scenarios and industries, including in the field, office, and warehouse.
+iPad devices are a popular device type for frontline workers (FLW). iPads are used in different scenarios and industries, including in field operations, office, and warehouse.
 
-It's more common to use iPad devices than iOS devices for FLW scenarios. This section focuses on iPad devices.
+This section focuses on iPad devices.
 
 For FLW iPad devices, there are two options available - **Shared iPad** or **Azure AD shared device mode**, as shown in the following image:
 
@@ -226,7 +223,7 @@ For iPad devices, admins must pick one option - **Shared iPad** or **Azure AD sh
 
   ✔️ If the device is an iOS device, then use Azure AD shared device mode.
 
-  ✔️ If the device is an iPad, then you can use Azure AD shared device mode. However, Shared iPad is the preferred option for iPad devices.
+  ✔️ If the device is an iPad, then you can use Azure AD shared device mode. However, Shared iPad is also an option.
 
   ❌ If you configured an iPad to be a Shared iPad in Intune, then don't use Azure AD shared device mode. It's not supported.
 
@@ -247,9 +244,10 @@ If you're not using Shared iPads, then you can skip this section.
 
 #### Step 1 - Use Automated Device Enrollment (ADE)
 
-For Shared iPad FLW devices, the first step is to enroll devices using **Automated Device Enrollment (ADE) without user affinity**. ADE syncs the devices from Apple Business Manager or Apple School Manager.
+For Shared iPad FLW devices, the first step is to create an **Automated Device Enrollment (ADE) profile without user affinity**. ADE syncs the devices from Apple Business Manager or Apple School Manager.
 
 **??** Is this the correct first step? Do admins configure an ADE enrollment policy *and* a Shared iPad enrollment policy? Or, do they set up Shared iPad as the enrollment option? Maybe Shared iPad enrollment uses ADE 'behind-the-scenes'? ??
+**a** yes correct first step, they just need to create an enrollment profile selecting shared iPad in the profile as an option.
 
 From an Intune perspective, you configure the enrollment profile and assign the profile to the device.
 
@@ -258,14 +256,15 @@ For more information on ADE enrollment, and to get started, go to [Set up automa
 #### Step 2 - Guest access or Partitioned user access
 
 **??** This section depends on the question in step 1. ??
+**a** yes
 
 The next decision is to determine if the Shared iPads will be used for guest access or partitioned user access.
 
 - **Guest access**
 
-  Use this option for temporary sessions. Users sign in to the device as a guest. They don't enter a Managed Apple ID or password. All user data, including browsing history, is deleted when the user signs out of the session.
+  Use this option for temporary sessions whers users sign into the device as a guest. They don't enter a Managed Apple ID or password. All user data, login info, including browsing history, is deleted when the user signs out of the session.
 
-  For example, in healthcare, a medical patient is assigned a shared iPad to check in or fill out forms. Or, in hospitality setting, guests can utilize without having to sign-in. **??**  The hospitality example is confusing. Need to clarify. ??
+  For example, in healthcare, a medical patient is assigned a shared iPad to check in or fill out forms.
 
 - **Partitioned user access**
 
