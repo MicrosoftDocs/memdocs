@@ -201,11 +201,11 @@ For more information about Windows Update policies, see [Update CSP](/windows/cl
 
 ## Validation and reporting
 
-There are multiple options to get in-depth reporting for Windows 10/11 updates with Intune. To learn more, see [Intune compliance reports](../protect/windows-update-compliance-reports.md).
+There are multiple options to get in-depth reporting for Windows 10/11 updates with Intune. To learn more, see [Windows update reports](../protect/windows-update-reports.md).
 
 ## Next steps
 
 - Use [Windows feature updates in Intune](../protect/windows-10-feature-updates.md)
 - Use [Windows update compatibility reports](../protect/windows-update-compatibility-reports.md)
-- Use [Intune compliance reports](../protect/windows-update-compliance-reports.md) for Windows updates  
+- Use [Windows update reports](../protect/windows-update-reports.md) for Windows updates  
 - Also see [Windows Autopatch](/windows/deployment/windows-autopatch/overview/windows-autopatch-overview) in the Windows deployment content for an alternative solution
