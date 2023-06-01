@@ -166,6 +166,8 @@ When you assign your policies and policies, apply the following general principl
 
 - Dynamic Azure AD user groups can be added to Included groups or Excluded groups.
 
+- Excluded groups can be groups with users or devices or a combination of both. 
+
 - Dynamic Azure AD device groups can be added to Included groups. But, there can be latency when populating the dynamic group membership. In latency-sensitive scenarios, use [filters](../fundamentals/filters.md) to target specific devices, and assign your policies to user groups.
 
   For example, you want policies assigned to devices as soon as they enroll. In this latency-sensitive situation, create a [filter](../fundamentals/filters.md) to target the devices you want, and assign the policy with this filter to user groups. Don't assign to device groups.
