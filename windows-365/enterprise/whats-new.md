@@ -89,7 +89,7 @@ A **Provide feedback** button is now available in several Windows 365 admin page
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Monitor and troubleshoot
 
-### Admin alert when a Cloud PC enters the grace period<!--44188012-->
+#### Admin alert when a Cloud PC enters the grace period<!--44188012-->
 
 Admins are now alerted when a Cloud PC enters the grace period. For more information about grace periods, see [Device management overview for Cloud PCs](device-management-overview.md). For information about how to view and customize alerts, see [Alerts in Windows 365](alerts.md).
 
