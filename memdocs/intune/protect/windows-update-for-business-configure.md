@@ -75,14 +75,14 @@ Use the following process to ensure Windows Update has processed your feature up
 
    After the saved policy is assigned to devices, it will take a few minutes for Windows Update to process the policy.
 
-2. View the [Windows 10 feature updates (Organizational)](../protect/windows-update-compliance-reports.md#use-the-windows-10-feature-updates-organizational-report) report for the feature update policy, and verify devices have a state of **OfferReady** before you proceed.  Once all devices show **OfferReady**, Windows Update has completed processing the policy.
+2. View the [Windows 10 feature updates (Organizational)](../protect/windows-update-reports.md#use-the-windows-10-feature-updates-organizational-report) report for the feature update policy, and verify devices have a state of **OfferReady** before you proceed.  Once all devices show **OfferReady**, Windows Update has completed processing the policy.
 
 3. After devices are verified to be in the **OfferReady** state you can safely reconfigure the [Windows 10 and later update ring policy](../protect/windows-10-update-rings.md) for that same set of devices to change the setting **Feature update deferral period (days)** to a value of **0**.
 
 
 ## Reporting on updates
 
-To learn about report options for Update rings policy and Windows feature updates policy, see [Intune compliance reports for updates](windows-update-compliance-reports.md).
+To learn about report options for Update rings policy and Windows feature updates policy, see [Windows update reports](windows-update-reports.md).
 
 ## Next steps
 
