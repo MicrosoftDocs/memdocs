@@ -76,11 +76,15 @@ Be sure you have the correct role to assign policies and profiles. For more info
 - Use **[Filters](../fundamentals/filters.md)** to assign a policy based on rules you create. You can create filters for:
 
   - App configuration policies
+  - App protection policies
   - App assignments
   - Compliance policies
   - Device configuration profiles
 
-  For more information, go to [Use filters when assigning your apps, policies, and profiles in Microsoft Intune](../fundamentals/filters.md).
+  For more information, go to:
+  
+  - [Use filters when assigning your apps, policies, and profiles in Microsoft Intune](../fundamentals/filters.md)
+  - [Platforms, policies, and app types supported by filters in Microsoft Intune](../fundamentals/filters-supported-workloads.md)
 
 - **[Policy sets](../fundamentals/policy-sets.md)** create a group or collection of existing apps and policies. When the policy set is created, you can assign the policy set from a single place in the Microsoft Intune admin center.
 
